@@ -18,6 +18,11 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary SemaphoreManagementParameters
  * @description
  * 
+ * Semaphore CIS parameter
+ * (Table 36): method of processing &priority. SCI configuration/initialization
+ * encoding (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.2.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +39,11 @@ class SemaphoreManagementParameters {
     constructor (
         /**
          * @summary `algorithm`.
+         * @description
+         *
+         * Method of processing Semaphore-Entry &priority. ISO 9506-1:2003
+         * §16.1.3.8; ISO 9506-2:2003 Annex B.2.7.
+         *
          * @public
          * @readonly
          */

@@ -19,7 +19,13 @@ import { FileAttributes, _decode_FileAttributes, _encode_FileAttributes } from "
 /**
  * @summary DirectoryEntry
  * @description
- * 
+ *
+ * One file in a FileDirectory Result(+). Same
+ * attributes as FileOpen. Informative Annex D.
+ *
+ * [ISO 9506-1:2003 Annex D, D.8.1.2.1]
+ * [ISO 9506-2:2003 Annex D, D.7.2.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +42,25 @@ class DirectoryEntry {
     constructor (
         /**
          * @summary `fileName`.
+         * @description
+         *
+         * Name of the file whose attributes follow.
+         *
+         * [ISO 9506-1:2003 Annex D, D.8.1.2.1.1]
+         *
          * @public
          * @readonly
          */
         readonly fileName: FileName,
         /**
          * @summary `fileAttributes`.
+         * @description
+         *
+         * Size and last-modified of the selected
+         * file. See D.9.
+         *
+         * [ISO 9506-1:2003 Annex D, D.8.1.2.1.2]
+         *
          * @public
          * @readonly
          */

@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ObjectClass_csObjectClass
  * @description
- * 
+ *
+ * Extended Object Class values, used when CBB `cspi` is negotiated
+ * (ISO 9506-1:2003 §7.6.3; ISO 9506-2:2003 §7.5.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +36,9 @@ type ObjectClass_csObjectClass = INTEGER;
 
 /**
  * @summary ObjectClass_csObjectClass_eventConditionList
+ * @description
+ *
+ * Event Condition List (ISO 9506-1:2003 §7.6.3).
  * @constant
  * @type {number}
  */
@@ -41,6 +47,9 @@ const ObjectClass_csObjectClass_eventConditionList: ObjectClass_csObjectClass = 
 
 /**
  * @summary ObjectClass_csObjectClass_eventConditionList
+ * @description
+ *
+ * Event Condition List (ISO 9506-1:2003 §7.6.3).
  * @constant
  * @type {number}
  */
@@ -49,6 +58,9 @@ const eventConditionList: ObjectClass_csObjectClass = ObjectClass_csObjectClass_
 
 /**
  * @summary ObjectClass_csObjectClass_unitControl
+ * @description
+ *
+ * Unit Control (ISO 9506-1:2003 §7.6.3).
  * @constant
  * @type {number}
  */
@@ -57,6 +69,9 @@ const ObjectClass_csObjectClass_unitControl: ObjectClass_csObjectClass = 1; /* L
 
 /**
  * @summary ObjectClass_csObjectClass_unitControl
+ * @description
+ *
+ * Unit Control (ISO 9506-1:2003 §7.6.3).
  * @constant
  * @type {number}
  */

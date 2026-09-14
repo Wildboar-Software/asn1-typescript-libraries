@@ -20,7 +20,11 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
 /**
  * @summary VariableAccessSpecification_listOfVariable_Item
  * @description
- * 
+ *
+ * One element of a Variable Access Specification list:
+ * the variable plus optional Alternate Access.
+ * ISO 9506-1:2003 §14.5.1.2. ISO 9506-2:2003 §14.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,23 @@ class VariableAccessSpecification_listOfVariable_Item {
     constructor (
         /**
          * @summary `variableSpecification`.
+         * @description
+         *
+         * Variable to read, write, or that was read (report).
+         * ISO 9506-1:2003 §14.5.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly variableSpecification: VariableSpecification,
         /**
          * @summary `alternateAccess`.
+         * @description
+         *
+         * Alternate view for this access (`valt` CBB). Omit
+         * for full access as defined, and if Kind of Type is
+         * SIMPLE. ISO 9506-1:2003 §14.5.1.2.2, §14.3.
+         *
          * @public
          * @readonly
          */

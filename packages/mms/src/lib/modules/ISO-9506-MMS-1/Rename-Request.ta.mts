@@ -22,6 +22,12 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary Rename_Request
  * @description
  * 
+ * Confirmed Rename request: change an object's identifier. Intended to augment
+ * commissioning; indiscriminate use can break clients. Preconditions: object
+ * exists; VMD and object EDIT ACL conditions succeed; no object of the same
+ * class, scope, and new identifier exists. Result(+) has no service-specific
+ * parameters. ISO 9506-1:2003 §10.7; ISO 9506-2:2003 §10.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,18 +44,31 @@ class Rename_Request {
     constructor (
         /**
          * @summary `objectClass`.
+         * @description
+         *
+         * Class of the object to rename. ISO 9506-1:2003 §10.7.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly objectClass: ObjectClass,
         /**
          * @summary `currentName`.
+         * @description
+         *
+         * Current object name. ISO 9506-1:2003 §10.7.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly currentName: ObjectName,
         /**
          * @summary `newIdentifier`.
+         * @description
+         *
+         * New identifier part of the object name (scope unchanged).
+         * ISO 9506-1:2003 §10.7.1.1.3.
+         *
          * @public
          * @readonly
          */
@@ -79,7 +98,8 @@ class Rename_Request {
  * @summary The Leading Root Component Types of Rename_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -94,7 +114,8 @@ const _root_component_type_list_1_spec_for_Rename_Request: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of Rename_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -107,7 +128,8 @@ const _root_component_type_list_2_spec_for_Rename_Request: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of Rename_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

@@ -24,6 +24,11 @@ import { type ACCESS_CONTROL_LIST } from "../MMS-Object-Module-1/ACCESS-CONTROL-
  * @summary m_ReadOnly
  * @description
  * 
+ * MMS Standardized Name `M_ReadOnly` (prefix
+ * `M_`). ACL for Variable objects: write, delete, and edit conditions
+ * are never. Lists `M_ELT` and `M_DAYTIME` when vnam is supported.
+ * ISO 9506-1:2003 §25.3.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

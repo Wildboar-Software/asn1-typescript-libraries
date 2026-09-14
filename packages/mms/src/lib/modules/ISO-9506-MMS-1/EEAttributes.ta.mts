@@ -37,7 +37,15 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary EEAttributes
  * @description
- * 
+ *
+ * One GetEventEnrollmentAttributes entry. `enrollmentClass` is `modifier`
+ * (AttachToEventCondition; invokeID/delay) or `notification` (duration,
+ * client, optional Event Action, ack rule). `accessControlList` iff `aco` (not
+ * minor version 1 or 2). Display Enhancement is CS (`cspi`).
+ *
+ * [ISO 9506-1:2003 §21.4.1.2.1]
+ * [ISO 9506-2:2003 §21.4.2.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,66 +80,138 @@ class EEAttributes {
     constructor (
         /**
          * @summary `eventEnrollmentName`.
+         * @description
+         *
+         * Enrollment `&name`.
+         *
+         * [ISO 9506-1:2003 §21.4.1.2.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventEnrollmentName: ObjectName,
         /**
          * @summary `eventConditionName`.
+         * @description
+         *
+         * Referenced Event Condition, or `undefined` if unavailable.
+         *
+         * [ISO 9506-1:2003 §21.4.1.2.1.2]
+         * [ISO 9506-2:2003 §21.4.2.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionName: EEAttributes_eventConditionName,
         /**
          * @summary `eventActionName`.
+         * @description
+         *
+         * Referenced Event Action if any; `undefined` if unavailable. Omitted if none.
+         *
+         * [ISO 9506-1:2003 §21.4.1.2.1.3]
+         * [ISO 9506-2:2003 §21.4.2.1.2]
+         *
          * @public
          * @readonly
          */
         readonly eventActionName: OPTIONAL<EEAttributes_eventActionName>,
         /**
          * @summary `clientApplication`.
+         * @description
+         *
+         * Notification enrollments: enrolled client. Requires `tpy`.
+         *
+         * [ISO 9506-1:2003 §21.4.1.2.1.4]
+         *
          * @public
          * @readonly
          */
         readonly clientApplication: OPTIONAL<Nullable<ApplicationReference>>,
         /**
          * @summary `mmsDeletable`.
+         * @description
+         *
+         * Whether DeleteEventEnrollment may delete this object. Default false.
+         * Modifier enrollments are not deletable this way.
+         *
+         * [ISO 9506-1:2003 §21.4.1.2.1.5]
+         *
          * @public
          * @readonly
          */
         readonly mmsDeletable: OPTIONAL<BOOLEAN>,
         /**
          * @summary `enrollmentClass`.
+         * @description
+         *
+         * `modifier` or `notification`.
+         *
+         * [ISO 9506-1:2003 §21.4.1.2.1.6]
+         *
          * @public
          * @readonly
          */
         readonly enrollmentClass: EE_Class,
         /**
          * @summary `duration`.
+         * @description
+         *
+         * Notification only: `current` (this AA) or `permanent` (until deleted).
+         * Default `current`.
+         *
+         * [ISO 9506-1:2003 §21.4.1.2.1.7]
+         *
          * @public
          * @readonly
          */
         readonly duration: OPTIONAL<EE_Duration>,
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Modifier only: invoke ID of the delayed confirmed service.
+         *
+         * [ISO 9506-1:2003 §21.4.1.2.1.8]
+         *
          * @public
          * @readonly
          */
         readonly invokeID: OPTIONAL<Unsigned32>,
         /**
          * @summary `remainingAcceptableDelay`.
+         * @description
+         *
+         * Modifier only: remaining wait in seconds, if not forever.
+         *
+         * [ISO 9506-1:2003 §21.4.1.2.1.9]
+         *
          * @public
          * @readonly
          */
         readonly remainingAcceptableDelay: OPTIONAL<Unsigned32>,
         /**
          * @summary `displayEnhancement`.
+         * @description
+         *
+         * CS Display Enhancement if `cspi`. Not transmitted if NULL.
+         *
+         * [ISO 9506-1:2003 §21.4.1.2.1.10]
+         *
          * @public
          * @readonly
          */
         readonly displayEnhancement: EEAttributes_displayEnhancement,
         /**
          * @summary `accessControlList`.
+         * @description
+         *
+         * Access Control List name. Iff `aco`. Shall not appear in minor version 1 or
+         * 2.
+         *
+         * [ISO 9506-1:2003 §21.4.1.2.1.11]
+         * [ISO 9506-2:2003 §21.4.2.1.3]
+         *
          * @public
          * @readonly
          */

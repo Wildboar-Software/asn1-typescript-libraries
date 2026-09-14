@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AlterEventConditionMonitoring_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): monitoring attributes updated. Empty.
+ *
+ * [ISO 9506-1:2003 §19.6.1.2]
+ * [ISO 9506-2:2003 §19.6.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -23,7 +23,12 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary Input_Request
  * @description
- * 
+ *
+ * Confirmed request for one line of operator input from an
+ * Operator Station of type `entry` or `entry-display`. Prompt
+ * data requires `entry-display` and CBB `output`.
+ * ISO 9506-1:2003 §17.1, §17.2. ISO 9506-2:2003 §17.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,24 +46,47 @@ class Input_Request {
     constructor (
         /**
          * @summary `operatorStationName`.
+         * @description
+         *
+         * Operator Station from which input is requested.
+         * ISO 9506-1:2003 §17.2.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly operatorStationName: Identifier,
         /**
          * @summary `echo`.
+         * @description
+         *
+         * True (default) displays the Input String on the station.
+         * Requires `entry-display`. Ignored for type `entry`.
+         * ISO 9506-1:2003 §17.2.1.1.2, §17.2.2.2.
+         *
          * @public
          * @readonly
          */
         readonly echo: OPTIONAL<BOOLEAN>,
         /**
          * @summary `listOfPromptData`.
+         * @description
+         *
+         * Prompt lines (one per display line). Only if station type
+         * is `entry-display` and CBB `output` is supported.
+         * ISO 9506-1:2003 §17.2.1.1.3. ISO 9506-2:2003 §17.2.
+         *
          * @public
          * @readonly
          */
         readonly listOfPromptData: OPTIONAL<MMSString[]>,
         /**
          * @summary `inputTimeOut`.
+         * @description
+         *
+         * Operator timeout in seconds (0..2^31-1). Absent means
+         * unlimited. Zero fails unless input is already in the
+         * buffer. ISO 9506-1:2003 §17.2.1.1.4, §17.2.2.2.
+         *
          * @public
          * @readonly
          */

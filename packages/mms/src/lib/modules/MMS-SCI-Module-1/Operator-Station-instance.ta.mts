@@ -20,6 +20,10 @@ import { Operator_Station_instance_definition, _decode_Operator_Station_instance
  * @summary Operator_Station_instance
  * @description
  * 
+ * SCI record for a predefined OPERATOR-STATION (ISO 9506-1:2003 §17.1.1). SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003 Annex B.1.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,12 +47,21 @@ class Operator_Station_instance {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         *
+         * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly name: Identifier,
         /**
          * @summary `definition`.
+         * @description
+         *
+         * Standardized Name OID (`reference`) or inline `details`. ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */

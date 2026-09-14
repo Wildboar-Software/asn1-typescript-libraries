@@ -20,7 +20,15 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary DeleteEventCondition_Request
  * @description
- * 
+ *
+ * Confirmed request: delete Event Conditions in the selected scope. `specific`
+ * names; `aa-specific` current AA; `domain` Domain-scoped; `vmd` VMD-scoped.
+ * Objects with enrollments or referencing Event Condition Lists are counted as
+ * Candidates Not Deleted.
+ *
+ * [ISO 9506-1:2003 §19.3]
+ * [ISO 9506-2:2003 §19.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

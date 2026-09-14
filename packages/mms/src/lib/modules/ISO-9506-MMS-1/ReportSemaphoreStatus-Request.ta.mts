@@ -17,7 +17,11 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary ReportSemaphoreStatus_Request
  * @description
- * 
+ *
+ * Confirmed request for token/pool semaphore status. The value is
+ * the semaphore name. ISO 9506-1:2003 §16.6. ISO 9506-2:2003
+ * §16.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -1,7 +1,10 @@
 /**
  * @description
  *
- * ASN.1 module `ISO-9506-MMS-1`.
+ * Abstract syntax `ISO-9506-MMS-1`: MMS PDUs and the types they carry.
+ * Context-tagged `MMSpdu` alternatives map confirmed, unconfirmed,
+ * reject, cancel, initiate, and conclude exchanges onto the association
+ * (ISO 9506-2:2003 §7–§8). Service semantics are ISO 9506-1:2003.
  */
 export * from "./AccessResult.ta.mjs";
 export * from "./AcknowledgeEventNotification-Request.ta.mjs";

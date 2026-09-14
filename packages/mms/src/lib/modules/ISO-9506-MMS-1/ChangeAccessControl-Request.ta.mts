@@ -20,6 +20,15 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary ChangeAccessControl_Request
  * @description
  * 
+ * Confirmed request of ChangeAccessControl: retarget `&accessControl` of the
+ * VMD or of a set of objects of one class to a named ACL. Cannot “remove”
+ * access control; use `M_Deletable` or `M_NonDeletable` instead. Result(+)
+ * gives Number Matched and Number Changed. Result(-) also returns Number
+ * Changed. Preconditions include that the named ACL exists and VMD EDIT
+ * conditions succeed. Shall not appear in minor version 1 or 2 of the
+ * confirmed-service PDUs (ISO 9506-2:2003 ConfirmedServiceRequest/Response).
+ * ISO 9506-1:2003 §9.7; ISO 9506-2:2003 §9.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,12 +62,23 @@ class ChangeAccessControl_Request {
     constructor (
         /**
          * @summary `scopeOfChange`.
+         * @description
+         *
+         * Either the VMD itself (`vMDOnly`) or a List of Objects of one class.
+         * ISO 9506-1:2003 §9.7.1.1.
+         *
          * @public
          * @readonly
          */
         readonly scopeOfChange: ChangeAccessControl_Request_scopeOfChange,
         /**
          * @summary `accessControlListName`.
+         * @description
+         *
+         * VMD-specific Identifier of the ACL that will become the new
+         * `&accessControl` reference. ISO 9506-1:2003 §9.7.1.1.5;
+         * ISO 9506-2:2003 §9.7.
+         *
          * @public
          * @readonly
          */
@@ -69,7 +89,8 @@ class ChangeAccessControl_Request {
      * @summary Restructures an object into a ChangeAccessControl_Request
      * @description
      * 
-     * This takes an `object` and converts it to a `ChangeAccessControl_Request`.
+     * This takes an `object` and converts it to a
+     * `ChangeAccessControl_Request`.
      * 
      * @public
      * @static
@@ -88,7 +109,8 @@ class ChangeAccessControl_Request {
  * @summary The Leading Root Component Types of ChangeAccessControl_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -102,7 +124,8 @@ const _root_component_type_list_1_spec_for_ChangeAccessControl_Request: $.Compon
  * @summary The Trailing Root Component Types of ChangeAccessControl_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -115,7 +138,8 @@ const _root_component_type_list_2_spec_for_ChangeAccessControl_Request: $.Compon
  * @summary The Extension Addition Component Types of ChangeAccessControl_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

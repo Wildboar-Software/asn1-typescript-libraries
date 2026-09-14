@@ -26,6 +26,12 @@ import { type NAMED_VARIABLE, anythingElse } from "../MMS-Object-Module-1/NAMED-
  * @summary m_powerProblem
  * @description
  * 
+ * MMS Standardized Name `M_powerProblem`
+ * (prefix `M_`). VMD-specific Named Variable (BOOLEAN). True means the
+ * power system needs attention; then VMD &physicalStatus shall be
+ * partially-operational or inoperable. ACL `M_ReadOnly`.
+ * ISO 9506-1:2003 §25.3.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

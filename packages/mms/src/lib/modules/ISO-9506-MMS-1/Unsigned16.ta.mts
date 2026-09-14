@@ -18,7 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Unsigned16
  * @description
- * 
+ *
+ * Unsigned integer restricted to 0..32 767 (ISO 9506-2:2003 §7.5.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

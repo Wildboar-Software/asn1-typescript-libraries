@@ -17,7 +17,11 @@ import { ServiceError, _decode_ServiceError, _encode_ServiceError } from "../ISO
 /**
  * @summary Initiate_ErrorPDU
  * @description
- * 
+ *
+ * Failed Initiate (Result(−)). Error Type is ServiceError (ISO 9506-1:2003
+ * §8.2.1.3, clause 24; ISO 9506-2:2003 §8.2.3). The MMS environment is not
+ * established.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

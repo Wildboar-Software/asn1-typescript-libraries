@@ -18,6 +18,9 @@ import { CS_Resume_Request_controlling_modeType, _decode_CS_Resume_Request_contr
  * @summary CS_Resume_Request_controlling
  * @description
  * 
+ * Controlling-PI Resume Type. ISO 9506-1:2003 §12.6.1.1.3. ISO 9506-2:2003
+ * §12.6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +39,11 @@ class CS_Resume_Request_controlling {
     constructor (
         /**
          * @summary `modeType`.
+         * @description
+         *
+         * Continue with current `&running-Mode`, or change it via StartCount.
+         * ISO 9506-1:2003 §12.6.1.1.3.
+         *
          * @public
          * @readonly
          */

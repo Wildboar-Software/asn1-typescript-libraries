@@ -20,6 +20,10 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary OPERATOR_STATION
  * @description
  * 
+ * Model of Input/Output to an operator
+ * device. Type entry, display, or entry-display. Flow control is local;
+ * ACL/semaphore may serialize competing clients. ISO 9506-1:2003 §17.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,26 +70,54 @@ interface OPERATOR_STATION {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * Unique Operator Station name within the VMD. ISO 9506-1:2003 §17.1.1.1.
+     *
      */
     readonly "&name"?: Identifier;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating read, write, and ACL change. ISO 9506-1:2003 §17.1.1.2.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &stationType
+     * @description
+     *
+     * entry, display, or entry-display. ISO 9506-1:2003 §17.1.1.3.
+     *
      */
     readonly "&stationType"?: OPERATOR_STATION_stationType;
     /**
      * @summary &inputBuffer
+     * @description
+     *
+     * Input String of the Input response. Present for entry or entry-display.
+     * ISO 9506-1:2003 §17.1.1.4.
+     *
      */
     readonly "&inputBuffer"?: MMSString;
     /**
      * @summary &outputBuffers
+     * @description
+     *
+     * Output Data (Output) or Prompt Data (Input). Present for display or
+     * entry-display. ISO 9506-1:2003 §17.1.1.5.
+     *
      */
     readonly "&outputBuffers"?: MMSString[];
     /**
      * @summary &state
+     * @description
+     *
+     * idle, display-prompt-data, waiting-for-input, input-buffer-filled,
+     * output-buffers-filled. Non-idle means busy; extra requests depend on
+     * local flow control. ISO 9506-1:2003 §17.1.1.6.
+     *
      */
     readonly "&state"?: OPERATOR_STATION_state;
 }
@@ -93,6 +125,10 @@ interface OPERATOR_STATION {
 /**
  * @summary OPERATOR_STATION_stationType
  * @description
+ *
+ * Model of Input/Output to an operator
+ * device. Type entry, display, or entry-display. Flow control is local;
+ * ACL/semaphore may serialize competing clients. ISO 9506-1:2003 §17.1.
  *
  * ### ASN.1 Definition:
  *
@@ -153,6 +189,10 @@ const OPERATOR_STATION_stationType_entry_display: OPERATOR_STATION_stationType =
 /**
  * @summary OPERATOR_STATION_state
  * @description
+ *
+ * Model of Input/Output to an operator
+ * device. Type entry, display, or entry-display. Flow control is local;
+ * ACL/semaphore may serialize competing clients. ISO 9506-1:2003 §17.1.
  *
  * ### ASN.1 Definition:
  *

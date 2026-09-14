@@ -21,6 +21,10 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
  * @summary TypeDescription_structure_components_Item
  * @description
  * 
+ * One structure
+ * component: optional Identifier plus TypeSpecification.
+ * ISO 9506-1:2003 §14.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,20 @@ class TypeDescription_structure_components_Item {
     constructor (
         /**
          * @summary `componentName`.
+         * @description
+         *
+         * Optional component Identifier. ISO 9506-1:2003 §14.2.2.
+         *
          * @public
          * @readonly
          */
         readonly componentName: OPTIONAL<Identifier>,
         /**
          * @summary `componentType`.
+         * @description
+         *
+         * Component TypeSpecification. ISO 9506-1:2003 §14.2.2.
+         *
          * @public
          * @readonly
          */

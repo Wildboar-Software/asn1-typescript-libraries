@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete
  * @description
- * 
+ *
+ * Scope of Delete for DeleteVariableAccess.
+ * ISO 9506-1:2003 §14.11.1.1.1. ISO 9506-2:2003 §14.11.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +38,11 @@ type DeleteVariableAccess_Request_scopeOfDelete = INTEGER;
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_specific
+ * @description
+ *
+ * Delete the Named Variables named in List of Name, if
+ * deletion is permitted. ISO 9506-1:2003 §14.11.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -43,6 +51,11 @@ const DeleteVariableAccess_Request_scopeOfDelete_specific: DeleteVariableAccess_
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_specific
+ * @description
+ *
+ * Delete the Named Variables named in List of Name, if
+ * deletion is permitted. ISO 9506-1:2003 §14.11.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +64,12 @@ const specific: DeleteVariableAccess_Request_scopeOfDelete = DeleteVariableAcces
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_aa_specific
+ * @description
+ *
+ * Delete all Named Variables in the current AA scope
+ * for which deletion is permitted.
+ * ISO 9506-1:2003 §14.11.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +78,12 @@ const DeleteVariableAccess_Request_scopeOfDelete_aa_specific: DeleteVariableAcce
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_aa_specific
+ * @description
+ *
+ * Delete all Named Variables in the current AA scope
+ * for which deletion is permitted.
+ * ISO 9506-1:2003 §14.11.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +92,12 @@ const aa_specific: DeleteVariableAccess_Request_scopeOfDelete = DeleteVariableAc
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_domain
+ * @description
+ *
+ * Delete all Named Variables in the named Domain for
+ * which deletion is permitted.
+ * ISO 9506-1:2003 §14.11.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +106,12 @@ const DeleteVariableAccess_Request_scopeOfDelete_domain: DeleteVariableAccess_Re
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_domain
+ * @description
+ *
+ * Delete all Named Variables in the named Domain for
+ * which deletion is permitted.
+ * ISO 9506-1:2003 §14.11.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +120,11 @@ const domain: DeleteVariableAccess_Request_scopeOfDelete = DeleteVariableAccess_
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_vmd
+ * @description
+ *
+ * Delete all VMD-scoped Named Variables for which
+ * deletion is permitted. ISO 9506-1:2003 §14.11.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +133,11 @@ const DeleteVariableAccess_Request_scopeOfDelete_vmd: DeleteVariableAccess_Reque
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_vmd
+ * @description
+ *
+ * Delete all VMD-scoped Named Variables for which
+ * deletion is permitted. ISO 9506-1:2003 §14.11.1.1.1.
+ *
  * @constant
  * @type {number}
  */

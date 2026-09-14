@@ -18,6 +18,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LogicalStatus
  * @description
  * 
+ * VMD logical functionality visible to MMS.
+ * state-changes-allowed = all supported services; no-state-changes-
+ * allowed = inquiry/status services only; limited-services-permitted =
+ * Abort, Conclude, Status, Identify; support-services-allowed = all
+ * except Start/Stop/Reset/Resume/Kill and UnitControl start/stop.
+ * ISO 9506-1:2003 §7.2.1.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +41,11 @@ type LogicalStatus = INTEGER;
 
 /**
  * @summary LogicalStatus_state_changes_allowed
+ * @description
+ *
+ * All MMS services this VMD supports may be performed. ISO 9506-1:2003
+ * §7.2.1.9.1.
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +54,11 @@ const LogicalStatus_state_changes_allowed: LogicalStatus = 0; /* LONG_NAMED_INTE
 
 /**
  * @summary LogicalStatus_state_changes_allowed
+ * @description
+ *
+ * All MMS services this VMD supports may be performed. ISO 9506-1:2003
+ * §7.2.1.9.1.
+ *
  * @constant
  * @type {number}
  */
@@ -50,6 +67,11 @@ const state_changes_allowed: LogicalStatus = LogicalStatus_state_changes_allowed
 
 /**
  * @summary LogicalStatus_no_state_changes_allowed
+ * @description
+ *
+ * Only inquiry/status services (Get*, Report*, Read, Identify, Initiate,
+ * Conclude, Abort, Cancel, Status, …). ISO 9506-1:2003 §7.2.1.9.2.
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +80,11 @@ const LogicalStatus_no_state_changes_allowed: LogicalStatus = 1; /* LONG_NAMED_I
 
 /**
  * @summary LogicalStatus_no_state_changes_allowed
+ * @description
+ *
+ * Only inquiry/status services (Get*, Report*, Read, Identify, Initiate,
+ * Conclude, Abort, Cancel, Status, …). ISO 9506-1:2003 §7.2.1.9.2.
+ *
  * @constant
  * @type {number}
  */
@@ -66,6 +93,10 @@ const no_state_changes_allowed: LogicalStatus = LogicalStatus_no_state_changes_a
 
 /**
  * @summary LogicalStatus_limited_services_permitted
+ * @description
+ *
+ * Only Abort, Conclude, Status, and Identify. ISO 9506-1:2003 §7.2.1.9.3.
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +105,10 @@ const LogicalStatus_limited_services_permitted: LogicalStatus = 2; /* LONG_NAMED
 
 /**
  * @summary LogicalStatus_limited_services_permitted
+ * @description
+ *
+ * Only Abort, Conclude, Status, and Identify. ISO 9506-1:2003 §7.2.1.9.3.
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +117,11 @@ const limited_services_permitted: LogicalStatus = LogicalStatus_limited_services
 
 /**
  * @summary LogicalStatus_support_services_allowed
+ * @description
+ *
+ * All supported services except Start, Stop, Reset, Resume, Kill,
+ * StartUnitControl, StopUnitControl. ISO 9506-1:2003 §7.2.1.9.4.
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +130,11 @@ const LogicalStatus_support_services_allowed: LogicalStatus = 3; /* LONG_NAMED_I
 
 /**
  * @summary LogicalStatus_support_services_allowed
+ * @description
+ *
+ * All supported services except Start, Stop, Reset, Resume, Kill,
+ * StartUnitControl, StopUnitControl. ISO 9506-1:2003 §7.2.1.9.4.
+ *
  * @constant
  * @type {number}
  */

@@ -18,7 +18,15 @@ import { DataAccessError, _decode_DataAccessError, _encode_DataAccessError } fro
 /**
  * @summary Write_Response_Item
  * @description
- * 
+ *
+ * One Write Result(+) element. `success` confirms that
+ * variable's write; `failure` is the Data Access Error.
+ * ISO 9506-1:2003 §14.7.1.2.1. ISO 9506-2:2003 §14.7.2.
+ *
+ * - `success`: write of this variable succeeded.
+ * - `failure`: write of this variable failed; reason is
+ *   DataAccessError (ISO 9506-1:2003 §14.4.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

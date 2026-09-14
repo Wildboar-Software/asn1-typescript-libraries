@@ -30,7 +30,14 @@ import { CS_AlterEventEnrollment_Request, _decode_CS_AlterEventEnrollment_Reques
 /**
  * @summary Request_Detail
  * @description
- * 
+ *
+ * Companion-standard request extension in Confirmed-RequestPDU `service-ext`
+ * [79]. Select `otherRequests` (NULL) when the ConfirmedServiceRequest tag does
+ * not match a named alternative. Named tags match createProgramInvocation,
+ * start, resume, and event condition/enrollment services. Omit the whole
+ * `service-ext` if the value would be a tagged NULL (ISO 9506-1:2003 Annex B;
+ * ISO 9506-2:2003 §7.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

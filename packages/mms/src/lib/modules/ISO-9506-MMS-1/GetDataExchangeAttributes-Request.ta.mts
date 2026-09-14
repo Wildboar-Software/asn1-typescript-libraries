@@ -17,7 +17,11 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary GetDataExchangeAttributes_Request
  * @description
- * 
+ *
+ * Confirmed request for attributes of a Data Exchange
+ * object. The ObjectName is Data Exchange Name (`&name`).
+ * ISO 9506-1:2003 §15.3. ISO 9506-2:2003 §15.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

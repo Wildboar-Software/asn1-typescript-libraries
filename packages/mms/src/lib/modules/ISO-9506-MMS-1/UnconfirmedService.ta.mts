@@ -22,7 +22,13 @@ import { EventNotification, _decode_EventNotification, _encode_EventNotification
 /**
  * @summary UnconfirmedService
  * @description
- * 
+ *
+ * CHOICE of unconfirmed MMS services: informationReport, unsolicitedStatus, and
+ * eventNotification. Context tags select the service; unsupported alternatives
+ * are tagged NULL (ISO 9506-2:2003 §7.2.1). Support means accepting the
+ * indication and passing parameters to the service interface (ISO 9506-1:2003
+ * §8.2.1.1.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

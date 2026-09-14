@@ -35,7 +35,16 @@ import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-M
 /**
  * @summary AlarmEnrollmentSummary
  * @description
- * 
+ *
+ * One GetAlarmEnrollmentSummary Result(+) entry for a
+ * notification Event Enrollment whose `&aaRule` is not
+ * `none`. Combines enrollment ack state with the referenced
+ * monitored Event Condition. Display Enhancement is CS
+ * (`cspi`). `enrollmentState` follows the EE-State mapping
+ * of ISO 9506-1:2003 §21.5.1.2.5.
+ *
+ * [ISO 9506-1:2003 §18.6.1.2.1] [ISO 9506-2:2003 §18.6.2.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,72 +70,156 @@ class AlarmEnrollmentSummary {
     constructor (
         /**
          * @summary `eventEnrollmentName`.
+         * @description
+         *
+         * `&name` of the notification Event Enrollment.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventEnrollmentName: ObjectName,
         /**
          * @summary `clientApplication`.
+         * @description
+         *
+         * Enrollment `&clientApplication`. Omitted if it
+         * specifies the requesting client. Requires `tpy`.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.1.2]
+         *
          * @public
          * @readonly
          */
         readonly clientApplication: OPTIONAL<Nullable<ApplicationReference>>,
         /**
          * @summary `severity`.
+         * @description
+         *
+         * `&severity` of the referenced Event Condition.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.1.3]
+         *
          * @public
          * @readonly
          */
         readonly severity: Unsigned8,
         /**
          * @summary `currentState`.
+         * @description
+         *
+         * `&ecState` of the referenced Event Condition.
+         * Disabled conditions do not notify.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.1.4]
+         *
          * @public
          * @readonly
          */
         readonly currentState: EC_State,
         /**
          * @summary `displayEnhancement`.
+         * @description
+         *
+         * Present only if `cspi` was negotiated. Enrollment
+         * `&displayEnhancement` if defined; otherwise the
+         * Event Condition's.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.1.5]
+         *
          * @public
          * @readonly
          */
         readonly displayEnhancement: OPTIONAL<Nullable<EN_Additional_Detail>>,
         /**
          * @summary `notificationLost`.
+         * @description
+         *
+         * Enrollment `&notificationLost`. True if prior
+         * notifications were dropped due to resource limits.
+         * Default false.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.1.6]
+         *
          * @public
          * @readonly
          */
         readonly notificationLost: OPTIONAL<BOOLEAN>,
         /**
          * @summary `alarmAcknowledgmentRule`.
+         * @description
+         *
+         * Enrollment `&aaRule`: `none`, `simple`,
+         * `ack-active`, or `ack-all`. Enrollments with
+         * `none` are excluded from this summary.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.1.7]
+         *
          * @public
          * @readonly
          */
         readonly alarmAcknowledgmentRule: AlarmAckRule,
         /**
          * @summary `enrollmentState`.
+         * @description
+         *
+         * Combined EE-State from Event Condition `&ecState`
+         * and enrollment `&ackState` per ISO 9506-1:2003
+         * §21.5.1.2.5.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.1.8]
+         *
          * @public
          * @readonly
          */
         readonly enrollmentState: OPTIONAL<EE_State>,
         /**
          * @summary `timeOfLastTransitionToActive`.
+         * @description
+         *
+         * Referenced Event Condition `&timeToActive`.
+         * Omitted if undefined.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.1.9]
+         *
          * @public
          * @readonly
          */
         readonly timeOfLastTransitionToActive: OPTIONAL<EventTime>,
         /**
          * @summary `timeActiveAcknowledged`.
+         * @description
+         *
+         * Enrollment `&timeActiveAck`. Omitted if undefined.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.1.10]
+         *
          * @public
          * @readonly
          */
         readonly timeActiveAcknowledged: OPTIONAL<EventTime>,
         /**
          * @summary `timeOfLastTransitionToIdle`.
+         * @description
+         *
+         * Referenced Event Condition `&timeToIdle`. Omitted
+         * if undefined.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.1.11]
+         *
          * @public
          * @readonly
          */
         readonly timeOfLastTransitionToIdle: OPTIONAL<EventTime>,
         /**
          * @summary `timeIdleAcknowledged`.
+         * @description
+         *
+         * Enrollment `&timeIdleAck`. Omitted if undefined.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.1.12]
+         *
          * @public
          * @readonly
          */

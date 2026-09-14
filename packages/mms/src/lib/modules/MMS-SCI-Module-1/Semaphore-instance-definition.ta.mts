@@ -19,6 +19,11 @@ import { Semaphore_instance_definition_details, _decode_Semaphore_instance_defin
  * @summary Semaphore_instance_definition
  * @description
  * 
+ * CHOICE of Standardized
+ * Name OID or inline Semaphore details. SCI configuration/initialization
+ * encoding (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.1.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

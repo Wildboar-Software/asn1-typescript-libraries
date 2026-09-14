@@ -41,6 +41,13 @@ import { ChangeAccessControl_Error, _decode_ChangeAccessControl_Error, _encode_C
  * @summary ServiceError_serviceSpecificInfo
  * @description
  * 
+ * Service-specific Result(-) information. Present only when the error is from
+ * confirmed-service processing, not modifier processing. INTEGER/structured
+ * alternatives apply when the corresponding service CBB is selected; otherwise
+ * the same tag is NULL (ISO 9506-2:2003 §7.4.1). `changeAccessControl` carries
+ * Number Changed (ISO 9506-1:2003 §9.7.1.3). Tag [9] is reserved for annex D
+ * when FileRename is not used.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

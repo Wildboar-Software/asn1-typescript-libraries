@@ -21,7 +21,11 @@ import { ReportSemaphoreEntryStatus_Request_state, _decode_ReportSemaphoreEntryS
 /**
  * @summary ReportSemaphoreEntryStatus_Request
  * @description
- * 
+ *
+ * Confirmed request for semaphore-entries of one state (`queued`,
+ * `owner`, or `hung`). Paginate with `entryIDToStartAfter`.
+ * ISO 9506-1:2003 §16.8. ISO 9506-2:2003 §16.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +45,35 @@ class ReportSemaphoreEntryStatus_Request {
     constructor (
         /**
          * @summary `semaphoreName`.
+         * @description
+         *
+         * Semaphore whose entries are reported.
+         * ISO 9506-1:2003 §16.8.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly semaphoreName: ObjectName,
         /**
          * @summary `state`.
+         * @description
+         *
+         * `queued` (0) requesters; `owner` (1) owners with AA up;
+         * `hung` (2) owners after AA lost. ISO 9506-1:2003
+         * §16.1.3.9, §16.8.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly state: ReportSemaphoreEntryStatus_Request_state,
         /**
          * @summary `entryIDToStartAfter`.
+         * @description
+         *
+         * Resume after this `&entryID`. If unmatched, start at the
+         * first numerically greater ID. Omit to start at the first.
+         * ISO 9506-1:2003 §16.8.1.1.3.
+         *
          * @public
          * @readonly
          */

@@ -17,7 +17,16 @@ import { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS
 /**
  * @summary FileClose_Request
  * @description
- * 
+ *
+ * Confirmed request: FRSM ID from a prior
+ * FileOpen on the same association. Successful
+ * close deletes the FRSM and releases the ID.
+ * Client issues this after FileRead with
+ * `moreFollows` false. Informative Annex D.
+ *
+ * [ISO 9506-1:2003 Annex D, D.5]
+ * [ISO 9506-2:2003 Annex D, D.4.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

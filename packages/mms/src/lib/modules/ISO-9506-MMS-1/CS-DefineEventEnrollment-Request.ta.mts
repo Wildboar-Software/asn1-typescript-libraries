@@ -19,7 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CS_DefineEventEnrollment_Request
  * @description
- * 
+ *
+ * Request-Detail for DefineEventEnrollment: Display Enhancement. `cspi`.
+ * `string`/`index`/`noEnhancement`.
+ *
+ * [ISO 9506-1:2003 §21.2.1.1.6.1]
+ * [ISO 9506-2:2003 §21.2.4]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -20,7 +20,11 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary ReportPoolSemaphoreStatus_Request
  * @description
- * 
+ *
+ * Confirmed request for the names and states of named-tokens of a
+ * pool semaphore. Paginate with `nameToStartAfter`.
+ * ISO 9506-1:2003 §16.7. ISO 9506-2:2003 §16.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,22 @@ class ReportPoolSemaphoreStatus_Request {
     constructor (
         /**
          * @summary `semaphoreName`.
+         * @description
+         *
+         * Pool semaphore to report. ISO 9506-1:2003 §16.7.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly semaphoreName: ObjectName,
         /**
          * @summary `nameToStartAfter`.
+         * @description
+         *
+         * Resume after this named-token. If unmatched, the sublist
+         * starts at the next name in collation order. Omit to start
+         * at the first. ISO 9506-1:2003 §16.7.1.1.2.
+         *
          * @public
          * @readonly
          */

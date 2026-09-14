@@ -18,7 +18,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FileRename_Error
  * @description
- * 
+ *
+ * File In Error on Result(-). Present when it is
+ * necessary to distinguish whether an error
+ * pertains to the source (current) or
+ * destination (new) file. Not present if failure
+ * is due to a modifier (see 24.5). Informative
+ * Annex D.
+ *
+ * [ISO 9506-1:2003 Annex D, D.6.1.3.1]
+ * [ISO 9506-2:2003 Annex D, D.5.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +43,12 @@ type FileRename_Error = INTEGER;
 
 /**
  * @summary FileRename_Error_source_file
+ * @description
+ *
+ * SOURCE-FILE: the error pertains to the current
+ * (source) file.
+ *
+ * [ISO 9506-1:2003 Annex D, D.6.1.3.1]
  * @constant
  * @type {number}
  */
@@ -41,6 +57,12 @@ const FileRename_Error_source_file: FileRename_Error = 0; /* LONG_NAMED_INTEGER_
 
 /**
  * @summary FileRename_Error_source_file
+ * @description
+ *
+ * SOURCE-FILE: the error pertains to the current
+ * (source) file.
+ *
+ * [ISO 9506-1:2003 Annex D, D.6.1.3.1]
  * @constant
  * @type {number}
  */
@@ -49,6 +71,12 @@ const source_file: FileRename_Error = FileRename_Error_source_file; /* SHORT_NAM
 
 /**
  * @summary FileRename_Error_destination_file
+ * @description
+ *
+ * DESTINATION-FILE: the error pertains to the
+ * new (destination) file.
+ *
+ * [ISO 9506-1:2003 Annex D, D.6.1.3.1]
  * @constant
  * @type {number}
  */
@@ -57,6 +85,12 @@ const FileRename_Error_destination_file: FileRename_Error = 1; /* LONG_NAMED_INT
 
 /**
  * @summary FileRename_Error_destination_file
+ * @description
+ *
+ * DESTINATION-FILE: the error pertains to the
+ * new (destination) file.
+ *
+ * [ISO 9506-1:2003 Annex D, D.6.1.3.1]
  * @constant
  * @type {number}
  */

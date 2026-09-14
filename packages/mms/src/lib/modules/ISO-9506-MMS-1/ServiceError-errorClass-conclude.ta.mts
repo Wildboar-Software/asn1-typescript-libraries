@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceError_errorClass_conclude
  * @description
  * 
+ * Error Class CONCLUDE: problems with the Conclude service. ISO 9506-1:2003
+ * §24.2.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +36,10 @@ type ServiceError_errorClass_conclude = INTEGER;
 
 /**
  * @summary ServiceError_errorClass_conclude_other
+ * @description
+ *
+ * Reason other than those identified for CONCLUDE. ISO 9506-1:2003 §24.2.10.2.
+ *
  * @constant
  * @type {number}
  */
@@ -41,6 +48,10 @@ const ServiceError_errorClass_conclude_other: ServiceError_errorClass_conclude =
 
 /**
  * @summary ServiceError_errorClass_conclude_other
+ * @description
+ *
+ * Reason other than those identified for CONCLUDE. ISO 9506-1:2003 §24.2.10.2.
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +60,11 @@ const other: ServiceError_errorClass_conclude = ServiceError_errorClass_conclude
 
 /**
  * @summary ServiceError_errorClass_conclude_further_communication_required
+ * @description
+ *
+ * Confirmed requests still await responses, or an Upload state machine exists.
+ * ISO 9506-1:2003 §24.2.10.1.
+ *
  * @constant
  * @type {number}
  */
@@ -57,6 +73,11 @@ const ServiceError_errorClass_conclude_further_communication_required: ServiceEr
 
 /**
  * @summary ServiceError_errorClass_conclude_further_communication_required
+ * @description
+ *
+ * Confirmed requests still await responses, or an Upload state machine exists.
+ * ISO 9506-1:2003 §24.2.10.1.
+ *
  * @constant
  * @type {number}
  */

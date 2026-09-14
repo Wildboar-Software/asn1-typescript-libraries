@@ -17,7 +17,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Nullable
  * @description
- * 
+ *
+ * Compiler helper, not a named type in ISO 9506-2. Encodes a
+ * value that ISO 9506 presents as either `T` or `NULL` (for
+ * example event-enrollment `clientApplication` and CS
+ * `displayEnhancement` when the attribute is omitted). `absent`
+ * is ASN.1 NULL; `present` is `T`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

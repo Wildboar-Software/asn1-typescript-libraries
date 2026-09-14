@@ -24,7 +24,18 @@ import { ScatteredAccessDescription, _decode_ScatteredAccessDescription, _encode
 /**
  * @summary VariableSpecification
  * @description
- * 
+ *
+ * Access to a single MMS variable.
+ * ISO 9506-1:2003 §14.5.2. ISO 9506-2:2003 §14.5.2.
+ *
+ * - `name`: Named Variable (`vnam` CBB).
+ * - `address`: Unnamed Variable (`vadr` CBB).
+ * - `variableDescription`: temporarily created Named
+ *   Variable (SINGLE); deleted after the access (`vadr`).
+ * - `scatteredAccessDescription`: annex E only (`vsca`).
+ * - `invalidated`: attempted access to an invalidated
+ *   variable; responses/confirms only.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

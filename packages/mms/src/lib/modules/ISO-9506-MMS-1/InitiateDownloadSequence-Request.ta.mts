@@ -21,6 +21,12 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary InitiateDownloadSequence_Request
  * @description
  * 
+ * Client request to create a named Domain and begin a download sequence.
+ * Sequence: this service, then N× DownloadSegment (server-requested), then
+ * TerminateDownloadSequence. Domain name must be unused. On success the Domain
+ * is `loading` and bound to this association; abort before `ready` deletes it.
+ * ISO 9506-1:2003 §11.1.4.1, §11.2. ISO 9506-2:2003 §11.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +43,34 @@ class InitiateDownloadSequence_Request {
     constructor (
         /**
          * @summary `domainName`.
+         * @description
+         *
+         * Domain to create and load. Must not already exist. ISO 9506-1:2003
+         * §11.2.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly domainName: Identifier,
         /**
          * @summary `listOfCapabilities`.
+         * @description
+         *
+         * Implementation-specific VMD resource limits for this Domain. Empty
+         * list is preferred for interoperability; invalid or unavailable
+         * capabilities fail. ISO 9506-1:2003 §11.2.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly listOfCapabilities: MMSString[],
         /**
          * @summary `sharable`.
+         * @description
+         *
+         * True: Domain may be used by more than one Program Invocation. False:
+         * at most one. ISO 9506-1:2003 §11.2.1.1.3.
+         *
          * @public
          * @readonly
          */

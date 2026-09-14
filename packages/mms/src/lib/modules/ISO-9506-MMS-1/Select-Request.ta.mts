@@ -19,6 +19,11 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary Select_Request
  * @description
  * 
+ * `csr` additional service: select a controlling Program Invocation as the
+ * VMD's selected PI, or omit `controlling` to deselect. Controlling PI and any
+ * currently selected PI must be `idle`. Listed controlled PIs must be
+ * `controlled` with controlling-PI null or already the selected PI. ISO 9506-1:2003 §12.10. ISO 9506-2:2003 §12.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,23 @@ class Select_Request {
     constructor (
         /**
          * @summary `controlling`.
+         * @description
+         *
+         * Controlling PI to select (`&control` = controlling, must be `idle`).
+         * Absent: deselect the current controlling PI. ISO 9506-1:2003
+         * §12.10.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly controlling: OPTIONAL<Identifier>,
         /**
          * @summary `controlled`.
+         * @description
+         *
+         * Controlled PIs to place under that controlling PI. Present only if
+         * `controlling` is present. ISO 9506-1:2003 §12.10.1.1.2. ISO 9506-2:2003 §12.10.
+         *
          * @public
          * @readonly
          */

@@ -19,7 +19,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EN_Additional_Detail
  * @description
- * 
+ *
+ * Display Enhancement used in alarm summaries. Present only
+ * if `cspi` was negotiated. `string` if `des`; `index` if
+ * `dei`; `noEnhancement` is NULL (no enhancement). Shall not
+ * be transmitted if the value is NULL in AlarmSummary when
+ * `csr`/`cspi` apply.
+ *
+ * [ISO 9506-1:2003 §18.5.1.2.1.4]
+ * [ISO 9506-2:2003 §18.5.2.1.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

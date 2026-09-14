@@ -20,6 +20,10 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary Identify_Response
  * @description
  * 
+ * Confirmed Result(+) of Identify: vendor, model, and revision from the VMD,
+ * plus optional abstract syntax OIDs. ISO 9506-1:2003 §10.6; ISO 9506-2:2003
+ * §10.6.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,24 +42,41 @@ class Identify_Response {
     constructor (
         /**
          * @summary `vendorName`.
+         * @description
+         *
+         * VMD `&vendorName`. ISO 9506-1:2003 §10.6.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly vendorName: MMSString,
         /**
          * @summary `modelName`.
+         * @description
+         *
+         * VMD `&modelName`. ISO 9506-1:2003 §10.6.1.2.2.
+         *
          * @public
          * @readonly
          */
         readonly modelName: MMSString,
         /**
          * @summary `revision`.
+         * @description
+         *
+         * VMD `&revision`. ISO 9506-1:2003 §10.6.1.2.3.
+         *
          * @public
          * @readonly
          */
         readonly revision: MMSString,
         /**
          * @summary `listOfAbstractSyntaxes`.
+         * @description
+         *
+         * VMD `&AbstractSyntaxes`. Shall not be included if the list is empty.
+         * ISO 9506-1:2003 §10.6.1.2.4.
+         *
          * @public
          * @readonly
          */
@@ -85,7 +106,8 @@ class Identify_Response {
  * @summary The Leading Root Component Types of Identify_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -101,7 +123,8 @@ const _root_component_type_list_1_spec_for_Identify_Response: $.ComponentSpec[] 
  * @summary The Trailing Root Component Types of Identify_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -114,7 +137,8 @@ const _root_component_type_list_2_spec_for_Identify_Response: $.ComponentSpec[] 
  * @summary The Extension Addition Component Types of Identify_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

@@ -20,7 +20,12 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary RelinquishControl_Request
  * @description
- * 
+ *
+ * Confirmed request to give up control held on a semaphore. For a
+ * pool semaphore, `namedToken` shall be the name returned when
+ * control was granted. ISO 9506-1:2003 §16.3. ISO 9506-2:2003
+ * §16.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,23 @@ class RelinquishControl_Request {
     constructor (
         /**
          * @summary `semaphoreName`.
+         * @description
+         *
+         * Semaphore for which control is relinquished.
+         * ISO 9506-1:2003 §16.3.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly semaphoreName: ObjectName,
         /**
          * @summary `namedToken`.
+         * @description
+         *
+         * Required for a pool semaphore; shall not appear for a token
+         * semaphore. Same named-token as in TakeControl Result(+).
+         * ISO 9506-1:2003 §16.3.1.1.2.
+         *
          * @public
          * @readonly
          */

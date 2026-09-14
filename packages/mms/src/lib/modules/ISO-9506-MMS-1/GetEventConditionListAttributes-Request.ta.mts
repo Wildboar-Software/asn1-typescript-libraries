@@ -17,7 +17,12 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary GetEventConditionListAttributes_Request
  * @description
- * 
+ *
+ * Confirmed request: Event Condition List Name whose membership is returned.
+ *
+ * [ISO 9506-1:2003 §22.6]
+ * [ISO 9506-2:2003 §22.6.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

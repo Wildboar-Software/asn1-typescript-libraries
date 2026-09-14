@@ -22,7 +22,14 @@ import { AlarmAckRule, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS
 /**
  * @summary AlterEventEnrollment_Request
  * @description
- * 
+ *
+ * Confirmed request: replace `&ecTransitions`, `&aaRule`, and/or Display
+ * Enhancement of a `notification` enrollment. Modifier enrollments are not
+ * alterable. Disabled conditions do not notify.
+ *
+ * [ISO 9506-1:2003 §21.6]
+ * [ISO 9506-2:2003 §21.6]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +46,36 @@ class AlterEventEnrollment_Request {
     constructor (
         /**
          * @summary `eventEnrollmentName`.
+         * @description
+         *
+         * Notification enrollment to alter.
+         *
+         * [ISO 9506-1:2003 §21.6.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventEnrollmentName: ObjectName,
         /**
          * @summary `eventConditionTransitions`.
+         * @description
+         *
+         * Replacement `&ecTransitions`. Omitted: unchanged.
+         *
+         * [ISO 9506-1:2003 §21.6.1.1.2]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionTransitions: OPTIONAL<Transitions>,
         /**
          * @summary `alarmAcknowledgmentRule`.
+         * @description
+         *
+         * Replacement `&aaRule`. Omitted: unchanged.
+         *
+         * [ISO 9506-1:2003 §21.6.1.1.3]
+         *
          * @public
          * @readonly
          */

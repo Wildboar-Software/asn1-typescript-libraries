@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DefineNamedVariable_Response
  * @description
- * 
+ *
+ * Result(+) of DefineNamedVariable. No service-specific
+ * parameters. ISO 9506-1:2003 §14.10.1.2.
+ * ISO 9506-2:2003 §14.10.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

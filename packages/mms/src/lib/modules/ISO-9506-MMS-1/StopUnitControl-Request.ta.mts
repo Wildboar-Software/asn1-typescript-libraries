@@ -18,6 +18,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary StopUnitControl_Request
  * @description
  * 
+ * Client request to stop running/starting constituent Program Invocations
+ * (`running`/`starting` → Stop procedure). Already stopped/stopping/idle/
+ * resetting/unrunnable are left. Failure returns StopUnitControl-Error. ISO 9506-1:2003 §13.7. ISO 9506-2:2003 §13.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

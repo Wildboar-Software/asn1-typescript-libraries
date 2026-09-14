@@ -22,6 +22,10 @@ import { ProgramInvocationState, _decode_ProgramInvocationState, _encode_Program
  * @summary ControlElement_piDefinition
  * @description
  * 
+ * Program Invocation definition in a Control Element. Named Domains must be
+ * `ready`, or `in-use` and sharable; they become `in-use`. ISO 9506-1:2003
+ * §13.2.1.4, §13.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,30 +45,53 @@ class ControlElement_piDefinition {
     constructor (
         /**
          * @summary `piName`.
+         * @description
+         *
+         * Program Invocation to define. ISO 9506-1:2003 §13.2.1.4.1.
+         *
          * @public
          * @readonly
          */
         readonly piName: Identifier,
         /**
          * @summary `listOfDomains`.
+         * @description
+         *
+         * Domains in `&Domains` of the PI. ISO 9506-1:2003 §13.2.1.4.2.
+         *
          * @public
          * @readonly
          */
         readonly listOfDomains: Identifier[],
         /**
          * @summary `reusable`.
+         * @description
+         *
+         * `&reusable` of the PI. Default true. ISO 9506-1:2003 §13.2.1.4.3.
+         *
          * @public
          * @readonly
          */
         readonly reusable: OPTIONAL<BOOLEAN>,
         /**
          * @summary `monitorType`.
+         * @description
+         *
+         * If present, Monitor is true; value is Monitor Type (permanent vs
+         * current) as in CreateProgramInvocation. ISO 9506-1:2003 §13.2.1.4.4.
+         * ISO 9506-2:2003 §13.2.1.
+         *
          * @public
          * @readonly
          */
         readonly monitorType: OPTIONAL<BOOLEAN>,
         /**
          * @summary `pIState`.
+         * @description
+         *
+         * On load: target PI state (else `idle`). On upload: actual
+         * `&programInvocationState`. ISO 9506-1:2003 §13.2.1.4.5.
+         *
          * @public
          * @readonly
          */

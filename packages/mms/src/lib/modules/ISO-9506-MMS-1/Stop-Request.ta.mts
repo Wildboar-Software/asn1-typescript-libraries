@@ -18,6 +18,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary Stop_Request
  * @description
  * 
+ * Client request to move a Program Invocation from `running` to `stopped` (via
+ * transitory `stopping`). Result(-) returns Stop-Error (current PI state:
+ * previous if possible, else `unrunnable`). ISO 9506-1:2003 §12.5. ISO 9506-2:2003 §12.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +36,11 @@ class Stop_Request {
     constructor (
         /**
          * @summary `programInvocationName`.
+         * @description
+         *
+         * Program Invocation to stop; must be `running`. ISO 9506-1:2003
+         * §12.5.1.1.1.
+         *
          * @public
          * @readonly
          */

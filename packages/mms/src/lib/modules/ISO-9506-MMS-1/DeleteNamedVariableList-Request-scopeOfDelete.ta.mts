@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete
  * @description
- * 
+ *
+ * Scope of Delete for DeleteNamedVariableList.
+ * ISO 9506-1:2003 §14.14.1.1.1. ISO 9506-2:2003 §14.14.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +38,11 @@ type DeleteNamedVariableList_Request_scopeOfDelete = INTEGER;
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_specific
+ * @description
+ *
+ * Delete the Named Variable Lists named in List of
+ * Variable List Name. ISO 9506-1:2003 §14.14.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -43,6 +51,11 @@ const DeleteNamedVariableList_Request_scopeOfDelete_specific: DeleteNamedVariabl
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_specific
+ * @description
+ *
+ * Delete the Named Variable Lists named in List of
+ * Variable List Name. ISO 9506-1:2003 §14.14.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +64,11 @@ const specific: DeleteNamedVariableList_Request_scopeOfDelete = DeleteNamedVaria
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_aa_specific
+ * @description
+ *
+ * Delete all MMS-defined Named Variable Lists in the
+ * current AA scope. ISO 9506-1:2003 §14.14.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +77,11 @@ const DeleteNamedVariableList_Request_scopeOfDelete_aa_specific: DeleteNamedVari
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_aa_specific
+ * @description
+ *
+ * Delete all MMS-defined Named Variable Lists in the
+ * current AA scope. ISO 9506-1:2003 §14.14.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +90,11 @@ const aa_specific: DeleteNamedVariableList_Request_scopeOfDelete = DeleteNamedVa
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_domain
+ * @description
+ *
+ * Delete all MMS-defined Named Variable Lists in the
+ * named Domain. ISO 9506-1:2003 §14.14.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +103,11 @@ const DeleteNamedVariableList_Request_scopeOfDelete_domain: DeleteNamedVariableL
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_domain
+ * @description
+ *
+ * Delete all MMS-defined Named Variable Lists in the
+ * named Domain. ISO 9506-1:2003 §14.14.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +116,11 @@ const domain: DeleteNamedVariableList_Request_scopeOfDelete = DeleteNamedVariabl
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_vmd
+ * @description
+ *
+ * Delete all MMS-defined VMD-scoped Named Variable
+ * Lists. ISO 9506-1:2003 §14.14.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +129,11 @@ const DeleteNamedVariableList_Request_scopeOfDelete_vmd: DeleteNamedVariableList
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_vmd
+ * @description
+ *
+ * Delete all MMS-defined VMD-scoped Named Variable
+ * Lists. ISO 9506-1:2003 §14.14.1.1.1.
+ *
  * @constant
  * @type {number}
  */

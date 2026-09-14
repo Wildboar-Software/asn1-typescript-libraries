@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EC_Class
  * @description
  * 
+ * Event Condition class. network-triggered (0)
+ * or monitored (1). ISO 9506-1:2003 §19.1.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +36,11 @@ type EC_Class = INTEGER;
 
 /**
  * @summary EC_Class_network_triggered
+ * @description
+ *
+ * Raised by TriggerEvent or autonomous server action. ISO 9506-1:2003 §19.1,
+ * §19.1.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -41,6 +49,11 @@ const EC_Class_network_triggered: EC_Class = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_Class_network_triggered
+ * @description
+ *
+ * Raised by TriggerEvent or autonomous server action. ISO 9506-1:2003 §19.1,
+ * §19.1.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +62,11 @@ const network_triggered: EC_Class = EC_Class_network_triggered; /* SHORT_NAMED_I
 
 /**
  * @summary EC_Class_monitored
+ * @description
+ *
+ * Server watches a boolean variable (or unspecified local condition). ISO
+ * 9506-1:2003 §19.1, §19.1.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -57,6 +75,11 @@ const EC_Class_monitored: EC_Class = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_Class_monitored
+ * @description
+ *
+ * Server watches a boolean variable (or unspecified local condition). ISO
+ * 9506-1:2003 §19.1, §19.1.1.3.
+ *
  * @constant
  * @type {number}
  */

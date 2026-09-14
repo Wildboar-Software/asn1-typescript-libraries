@@ -26,6 +26,11 @@ import { Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-
  * @summary NAMED_VARIABLE
  * @description
  * 
+ * Application name for a real (possibly
+ * computed) variable. Scope may be VMD, Domain, or AA. Requires vnam.
+ * May optionally expose a public address (vadr) and a semantic alias
+ * (sem). ISO 9506-1:2003 §14.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,30 +77,60 @@ interface NAMED_VARIABLE {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * ObjectName unique in its VMD/Domain/AA scope. ISO 9506-1:2003 §14.1.3.1.
+     *
      */
     readonly "&name"?: ObjectName;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating read, write, delete, and ACL change. ISO 9506-1:2003
+     * §14.1.3.2.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &typeDescription
+     * @description
+     *
+     * Type of this named variable. ISO 9506-1:2003 §14.1.3.3, §14.2.
+     *
      */
     readonly "&typeDescription"?: TypeDescription;
     /**
      * @summary &value
+     * @description
+     *
+     * Current value (Data). ISO 9506-1:2003 §14.1.3.
+     *
      */
     readonly "&value"?: Data;
     /**
      * @summary &accessMethod
+     * @description
+     *
+     * public (address visible), anythingElse, or extension. ISO 9506-1:2003
+     * §14.1.3.
+     *
      */
     readonly "&accessMethod"?: NAMED_VARIABLE_accessMethod;
     /**
      * @summary &address
+     * @description
+     *
+     * Present iff &accessMethod is public (vadr). ISO 9506-1:2003 §14.1.3.
+     *
      */
     readonly "&address"?: Address;
     /**
      * @summary &meaning
+     * @description
+     *
+     * Optional semantic alias (sem CBB). ISO 9506-1:2003 §14.1.3.
+     *
      */
     readonly "&meaning"?: ObjectName;
 }
@@ -103,6 +138,11 @@ interface NAMED_VARIABLE {
 /**
  * @summary NAMED_VARIABLE_accessMethod
  * @description
+ *
+ * Application name for a real (possibly
+ * computed) variable. Scope may be VMD, Domain, or AA. Requires vnam.
+ * May optionally expose a public address (vadr) and a semantic alias
+ * (sem). ISO 9506-1:2003 §14.1.3.
  *
  * ### ASN.1 Definition:
  *

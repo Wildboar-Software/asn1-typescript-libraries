@@ -19,7 +19,17 @@ import { FileAttributes, _decode_FileAttributes, _encode_FileAttributes } from "
 /**
  * @summary FileOpen_Response
  * @description
- * 
+ *
+ * Result(+): FRSM ID and attributes of the
+ * opened file. The FRSM is unique among active
+ * FRSMs on the association. Once open, the
+ * server shall prevent actions that would alter
+ * FileRead responses for that file. Informative
+ * Annex D.
+ *
+ * [ISO 9506-1:2003 Annex D, D.3.1.2, D.2.3]
+ * [ISO 9506-2:2003 Annex D, D.2.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +46,27 @@ class FileOpen_Response {
     constructor (
         /**
          * @summary `frsmID`.
+         * @description
+         *
+         * Identifies the FRSM created for this
+         * transfer. Used on subsequent FileRead and
+         * FileClose over the same association.
+         *
+         * [ISO 9506-1:2003 Annex D, D.3.1.2.1]
+         *
          * @public
          * @readonly
          */
         readonly frsmID: Integer32,
         /**
          * @summary `fileAttributes`.
+         * @description
+         *
+         * Size and last-modified of the file being
+         * opened. See D.9.
+         *
+         * [ISO 9506-1:2003 Annex D, D.3.1.2.2]
+         *
          * @public
          * @readonly
          */

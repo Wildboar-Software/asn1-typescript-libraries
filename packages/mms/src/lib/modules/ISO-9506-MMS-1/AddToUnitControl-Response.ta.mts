@@ -18,6 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AddToUnitControl_Response
  * @description
  * 
+ * Confirmed success; no parameters. ISO 9506-1:2003 §13.9.1.2
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

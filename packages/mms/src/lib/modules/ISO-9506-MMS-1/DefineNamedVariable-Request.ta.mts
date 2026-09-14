@@ -22,7 +22,15 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
 /**
  * @summary DefineNamedVariable_Request
  * @description
- * 
+ *
+ * Confirmed request to create a Named Variable that maps
+ * to a real VMD variable via an Unnamed Variable address.
+ * Intended for systems that cannot define Named Variables
+ * locally. Requires `vnam` with `vadr`. Duplicate `&name`
+ * or failed VMD LOAD ACL yields Result(-). Created object
+ * is MMS Deletable; `&accessMethod` is public.
+ * ISO 9506-1:2003 §14.10. ISO 9506-2:2003 §14.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +47,37 @@ class DefineNamedVariable_Request {
     constructor (
         /**
          * @summary `variableName`.
+         * @description
+         *
+         * Unique `&name` among Named Variables of this scope.
+         * ISO 9506-1:2003 §14.10.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly variableName: ObjectName,
         /**
          * @summary `address`.
+         * @description
+         *
+         * Base `&address` of the Unnamed Variable. Extra
+         * addresses for the type are contiguous.
+         * ISO 9506-1:2003 §14.10.1.1.2, §14.5.3.
+         *
          * @public
          * @readonly
          */
         readonly address: Address,
         /**
          * @summary `typeSpecification`.
+         * @description
+         *
+         * Optional `&typeDescription`. If omitted, inherit the
+         * Unnamed Variable's type. Simple elements shall be
+         * compatible with spanned Unnamed Variables (local
+         * criteria). Type Names are resolved at definition.
+         * ISO 9506-1:2003 §14.10.1.1.3, §14.2.3.
+         *
          * @public
          * @readonly
          */

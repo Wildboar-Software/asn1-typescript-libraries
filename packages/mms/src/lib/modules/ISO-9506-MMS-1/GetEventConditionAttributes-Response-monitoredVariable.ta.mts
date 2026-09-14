@@ -18,7 +18,13 @@ import { VariableSpecification, _decode_VariableSpecification, _encode_VariableS
 /**
  * @summary GetEventConditionAttributes_Response_monitoredVariable
  * @description
- * 
+ *
+ * `variableReference` is the Named/Unnamed Variable key. `undefined` if the
+ * referenced object is unavailable (Domain delete or AA loss).
+ *
+ * [ISO 9506-1:2003 §19.4.1.2.6]
+ * [ISO 9506-2:2003 §19.4.2.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

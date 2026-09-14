@@ -19,6 +19,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary UnitControlUpload_Response_nextElement
  * @description
  * 
+ * Continuation hint. `domain`: next Domain name. `ulsmID`: active Domain ULSM.
+ * `programInvocation`: next PI. ISO 9506-1:2003 §13.5.1.2.2. ISO 9506-2:2003
+ * §13.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

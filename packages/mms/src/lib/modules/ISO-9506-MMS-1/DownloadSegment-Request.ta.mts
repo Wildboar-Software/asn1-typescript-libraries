@@ -18,6 +18,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary DownloadSegment_Request
  * @description
  * 
+ * Server-issued request for the next load segment. Names the Domain, which must
+ * be `loading`. Client must have accepted InitiateDownloadSequence and not yet
+ * seen TerminateDownloadSequence. ISO 9506-1:2003 §11.3. ISO 9506-2:2003 §11.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

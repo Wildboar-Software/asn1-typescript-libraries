@@ -23,6 +23,13 @@ import { ServiceError_serviceSpecificInfo, _decode_ServiceError_serviceSpecificI
  * @summary ServiceError
  * @description
  * 
+ * Generic Error Type returned in Result(-) / Confirmed-ErrorPDU. Error Class
+ * plus Error Code identify why a service could not execute; optional locally
+ * defined additional code and human-readable description; optional
+ * service-specific extras. Modifier Position is carried on the
+ * Confirmed-ErrorPDU, not here, and is present iff the error occurred during
+ * modifier processing. ISO 9506-1:2003 §24.1–§24.2; ISO 9506-2:2003 §7.4.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -157,24 +164,47 @@ class ServiceError {
     constructor (
         /**
          * @summary `errorClass`.
+         * @description
+         *
+         * Error Class (CHOICE) plus Error Code (named INTEGER). Class from the
+         * Error Type primitive; code is the Error Code of that class.
+         * ISO 9506-1:2003 §24.2; ISO 9506-2:2003 §7.4.1.
+         *
          * @public
          * @readonly
          */
         readonly errorClass: ServiceError_errorClass,
         /**
          * @summary `additionalCode`.
+         * @description
+         *
+         * Locally defined integer option. ISO 9506-1:2003 §24.2(c), §24.3;
+         * ISO 9506-2:2003 §7.4.1.
+         *
          * @public
          * @readonly
          */
         readonly additionalCode: OPTIONAL<INTEGER>,
         /**
          * @summary `additionalDescription`.
+         * @description
+         *
+         * Locally defined character string; may be a human-readable error
+         * description. ISO 9506-1:2003 §24.2(d), §24.4; ISO 9506-2:2003 §7.4.1.
+         *
          * @public
          * @readonly
          */
         readonly additionalDescription: OPTIONAL<VisibleString>,
         /**
          * @summary `serviceSpecificInfo`.
+         * @description
+         *
+         * Per-service Result(-) extras (e.g. ChangeAccessControl Number
+         * Changed). Shall not be present if `modifierPosition` is present on
+         * the Confirmed-ErrorPDU. ISO 9506-1:2003 §24.2 note; ISO 9506-2:2003
+         * §7.4.1.
+         *
          * @public
          * @readonly
          */
@@ -204,7 +234,8 @@ class ServiceError {
  * @summary The Leading Root Component Types of ServiceError
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -220,7 +251,8 @@ const _root_component_type_list_1_spec_for_ServiceError: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of ServiceError
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -233,7 +265,8 @@ const _root_component_type_list_2_spec_for_ServiceError: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of ServiceError
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

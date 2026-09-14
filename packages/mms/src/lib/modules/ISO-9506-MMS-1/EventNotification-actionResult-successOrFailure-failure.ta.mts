@@ -20,7 +20,14 @@ import { ServiceError, _decode_ServiceError, _encode_ServiceError } from "../ISO
 /**
  * @summary EventNotification_actionResult_successOrFailure_failure
  * @description
- * 
+ *
+ * Event Action Result(-). Either a modifier in the Event
+ * Action `&Modifiers` failed (`modifierPosition`) or the
+ * confirmed service itself failed (`serviceError`).
+ *
+ * [ISO 9506-1:2003 §18.3.1.1.8.4]
+ * [ISO 9506-2:2003 §18.3.1.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +44,26 @@ class EventNotification_actionResult_successOrFailure_failure {
     constructor (
         /**
          * @summary `modifierPosition`.
+         * @description
+         *
+         * Index of the Event Action modifier that failed, if
+         * failure occurred during modifier execution.
+         *
+         * [ISO 9506-2:2003 §18.3.1.1]
+         *
          * @public
          * @readonly
          */
         readonly modifierPosition: OPTIONAL<Unsigned32>,
         /**
          * @summary `serviceError`.
+         * @description
+         *
+         * Result(-) of the confirmed service when Event Action
+         * execution failed in the requested service itself.
+         *
+         * [ISO 9506-1:2003 §18.3.1.1.8.4]
+         *
          * @public
          * @readonly
          */

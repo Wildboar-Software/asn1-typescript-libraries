@@ -21,6 +21,11 @@ import { GeneralManagementParameters_supportForTime, _decode_GeneralManagementPa
  * @summary GeneralManagementParameters
  * @description
  * 
+ * Environment & General
+ * Management CIS parameters (Table 21). SCI configuration/initialization
+ * encoding (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +46,30 @@ class GeneralManagementParameters {
     constructor (
         /**
          * @summary `localDetail`.
+         * @description
+         *
+         * Implementation-local CIS detail string. ISO 9506-2:2003 Annex B.2.
+         *
          * @public
          * @readonly
          */
         readonly localDetail: MMSString,
         /**
          * @summary `supportForTime`.
+         * @description
+         *
+         * Supported time forms. ISO 9506-2:2003 Annex B.2.1.
+         *
          * @public
          * @readonly
          */
         readonly supportForTime: GeneralManagementParameters_supportForTime,
         /**
          * @summary `granularityOfTime`.
+         * @description
+         *
+         * Time granularity. ISO 9506-2:2003 Annex B.2.1.
+         *
          * @public
          * @readonly
          */

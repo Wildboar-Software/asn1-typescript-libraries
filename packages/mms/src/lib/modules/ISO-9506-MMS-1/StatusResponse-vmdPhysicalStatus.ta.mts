@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary StatusResponse_vmdPhysicalStatus
  * @description
  * 
+ * VMD `&physicalStatus`: gross operational state of the hardware associated
+ * with the device (not communications). ISO 9506-1:2003 §7.2.1.11, §10.2.2;
+ * ISO 9506-2:2003 §10.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +39,11 @@ type StatusResponse_vmdPhysicalStatus = INTEGER;
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_operational
+ * @description
+ *
+ * The real device has no known deficiencies and can perform its intended tasks.
+ * ISO 9506-1:2003 §7.2.1.11.1.
+ *
  * @constant
  * @type {number}
  */
@@ -43,6 +52,11 @@ const StatusResponse_vmdPhysicalStatus_operational: StatusResponse_vmdPhysicalSt
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_operational
+ * @description
+ *
+ * The real device has no known deficiencies and can perform its intended tasks.
+ * ISO 9506-1:2003 §7.2.1.11.1.
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +65,11 @@ const operational: StatusResponse_vmdPhysicalStatus = StatusResponse_vmdPhysical
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_partially_operational
+ * @description
+ *
+ * One or more functions cannot be performed due to hardware malfunctions or
+ * limitations. ISO 9506-1:2003 §7.2.1.11.2.
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +78,11 @@ const StatusResponse_vmdPhysicalStatus_partially_operational: StatusResponse_vmd
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_partially_operational
+ * @description
+ *
+ * One or more functions cannot be performed due to hardware malfunctions or
+ * limitations. ISO 9506-1:2003 §7.2.1.11.2.
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +91,11 @@ const partially_operational: StatusResponse_vmdPhysicalStatus = StatusResponse_v
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_inoperable
+ * @description
+ *
+ * One or more significant problems prevent any useful task. ISO 9506-1:2003
+ * §7.2.1.11.3.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +104,11 @@ const StatusResponse_vmdPhysicalStatus_inoperable: StatusResponse_vmdPhysicalSta
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_inoperable
+ * @description
+ *
+ * One or more significant problems prevent any useful task. ISO 9506-1:2003
+ * §7.2.1.11.3.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +117,11 @@ const inoperable: StatusResponse_vmdPhysicalStatus = StatusResponse_vmdPhysicalS
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_needs_commissioning
+ * @description
+ *
+ * A local commissioning process must be performed before useful tasks. VMDStop
+ * sets `&physicalStatus` to this value. ISO 9506-1:2003 §7.2.1.11.4, §10.9.2.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +130,11 @@ const StatusResponse_vmdPhysicalStatus_needs_commissioning: StatusResponse_vmdPh
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_needs_commissioning
+ * @description
+ *
+ * A local commissioning process must be performed before useful tasks. VMDStop
+ * sets `&physicalStatus` to this value. ISO 9506-1:2003 §7.2.1.11.4, §10.9.2.
+ *
  * @constant
  * @type {number}
  */

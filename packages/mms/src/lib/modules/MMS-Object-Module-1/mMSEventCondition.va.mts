@@ -18,6 +18,10 @@ import {
  * @summary mMSEventCondition
  * @description
  * 
+ * OID root for Standardized Event
+ * Condition definitions: { iso standard 9506 part(1)
+ * symbols-version1(5) event-condition(3) }. ISO 9506-1:2003 §25.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

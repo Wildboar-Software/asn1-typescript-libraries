@@ -24,6 +24,12 @@ import { Event_Enrollment_instance, _decode_Event_Enrollment_instance, _encode_E
  * @summary Event_Action_instance_definition_details
  * @description
  * 
+ * Inline Event
+ * Action attributes in the SCI file. SCI configuration/initialization encoding
+ * (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex
+ * B.1.13; ISO 9506-1:2003
+ * §20.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,24 +48,43 @@ class Event_Action_instance_definition_details {
     constructor (
         /**
          * @summary `accessControl`.
+         * @description
+         *
+         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly accessControl: Access_Control_List_instance,
         /**
          * @summary `confirmedServiceRequest`.
+         * @description
+         *
+         * Confirmed service executed on transition. ISO 9506-1:2003 §20.1.1.3;
+         * ISO 9506-2:2003 Annex B.1.13.
+         *
          * @public
          * @readonly
          */
         readonly confirmedServiceRequest: ConfirmedServiceRequest,
         /**
          * @summary `modifiers`.
+         * @description
+         *
+         * Modifiers applied to the Event Action. ISO 9506-1:2003 §20.1.1.4; ISO
+         * 9506-2:2003 Annex B.1.13.
+         *
          * @public
          * @readonly
          */
         readonly modifiers: Modifier[],
         /**
          * @summary `eventEnrollments`.
+         * @description
+         *
+         * Configured Event Enrollment instances. ISO 9506-2:2003 Annex B.1.14.
+         *
          * @public
          * @readonly
          */

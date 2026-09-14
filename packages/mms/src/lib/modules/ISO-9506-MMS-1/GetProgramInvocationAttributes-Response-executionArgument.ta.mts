@@ -20,6 +20,9 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary GetProgramInvocationAttributes_Response_executionArgument
  * @description
  * 
+ * Reported `&executionArgument`. `simpleString`: locally interpreted.
+ * `encodedString` / `enmbeddedString`: EXTERNAL or EMBEDDED PDV coding. ISO 9506-1:2003 §12.9.1.2.6. ISO 9506-2:2003 §12.9.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -20,13 +20,18 @@ import { Unconfirmed_Detail, _decode_Unconfirmed_Detail, _encode_Unconfirmed_Det
 /**
  * @summary Unconfirmed_PDU
  * @description
- * 
+ *
+ * Unconfirmed MMS PDU: no invokeID and no response. Carries InformationReport,
+ * UnsolicitedStatus, or EventNotification. `service-ext` is companion-standard
+ * Unconfirmed-Detail when `cspi` is negotiated; omit when the value would be a
+ * tagged NULL (ISO 9506-2:2003 §7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
  * Unconfirmed-PDU ::= SEQUENCE {
  *     service          UnconfirmedService,
- *     ...,
+ *    ...,
  *     service-ext      [79] Unconfirmed-Detail OPTIONAL
  *     -- shall not be transmitted if value is the value
  *     -- of a tagged type derived from NULL
@@ -40,12 +45,20 @@ class Unconfirmed_PDU {
     constructor (
         /**
          * @summary `service`.
+         * @description
+         *
+         * Selects the unconfirmed service and its argument (ISO 9506-2:2003
+         * §7.2.1).
          * @public
          * @readonly
          */
         readonly service: UnconfirmedService,
         /**
          * @summary `service_ext`.
+         * @description
+         *
+         * Companion-standard Unconfirmed-Detail (`cspi`). Do not transmit if
+         * the value is a tagged NULL (ISO 9506-2:2003 §7.2).
          * @public
          * @readonly
          */
@@ -81,8 +94,8 @@ class Unconfirmed_PDU {
  * @summary The Leading Root Component Types of Unconfirmed_PDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -94,8 +107,8 @@ const _root_component_type_list_1_spec_for_Unconfirmed_PDU: $.ComponentSpec[] = 
  * @summary The Trailing Root Component Types of Unconfirmed_PDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -107,8 +120,8 @@ const _root_component_type_list_2_spec_for_Unconfirmed_PDU: $.ComponentSpec[] = 
  * @summary The Extension Addition Component Types of Unconfirmed_PDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -169,7 +182,7 @@ function _encode_Unconfirmed_PDU (value: Unconfirmed_PDU, elGetter: $.ASN1Encode
             /* IF_ABSENT  */ ((value.service_ext === undefined) ? undefined : $._encode_explicit(_TagClass.context, 79, () => _encode_Unconfirmed_Detail, $.BER)(value.service_ext, $.BER))
         ],
         (value._unrecognizedExtensionsList ? value._unrecognizedExtensionsList : []),
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+   ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
     return _cached_encoder_for_Unconfirmed_PDU(value, elGetter);
 }

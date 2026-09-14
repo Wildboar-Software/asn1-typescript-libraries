@@ -18,6 +18,12 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary VMDSupportParameters
  * @description
  * 
+ * VMD Support CIS parameters
+ * (Table 25), including extended-derivation method. SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,21 @@ class VMDSupportParameters {
     constructor (
         /**
          * @summary `localDetail`.
+         * @description
+         *
+         * Implementation-local CIS detail string. ISO 9506-2:2003 Annex B.2.
+         *
          * @public
          * @readonly
          */
         readonly localDetail: MMSString,
         /**
          * @summary `extendedDerivation`.
+         * @description
+         *
+         * Method used to perform extended derivation. ISO 9506-2:2003 Annex
+         * B.2.2.
+         *
          * @public
          * @readonly
          */

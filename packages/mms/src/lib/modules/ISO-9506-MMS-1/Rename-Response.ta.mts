@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Rename_Response
  * @description
  * 
+ * Confirmed Result(+) of Rename. Success returns no service-specific
+ * parameters. ISO 9506-1:2003 §10.7.1.2; ISO 9506-2:2003 §10.7.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

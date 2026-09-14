@@ -21,6 +21,11 @@ import { Resume_Request_executionArgument, _decode_Resume_Request_executionArgum
  * @summary Resume_Request
  * @description
  * 
+ * Client request to move a Program Invocation from `stopped` to `running` (via
+ * transitory `resuming`). Optional `executionArgument` updates
+ * `&executionArgument` if present. Controlling PIs use CS-Resume for mode.
+ * Result(-) returns Resume-Error (current PI state). ISO 9506-1:2003 §12.6. ISO 9506-2:2003 §12.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +45,23 @@ class Resume_Request {
     constructor (
         /**
          * @summary `programInvocationName`.
+         * @description
+         *
+         * Program Invocation to resume; must be `stopped`. ISO 9506-1:2003
+         * §12.6.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly programInvocationName: Identifier,
         /**
          * @summary `executionArgument`.
+         * @description
+         *
+         * Optional data passed into the resuming PI; sets `&executionArgument`
+         * if present. ISO 9506-1:2003 §12.1.1.10, §12.6.1.1.2. ISO 9506-2:2003
+         * §12.6.1.1.
+         *
          * @public
          * @readonly
          */

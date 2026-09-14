@@ -19,6 +19,10 @@ import { CS_GetProgramInvocationAttributes_Response_control, _decode_CS_GetProgr
  * @summary CS_GetProgramInvocationAttributes_Response
  * @description
  * 
+ * `csr` Response-Detail for GetProgramInvocationAttributes: last error code and
+ * controlling/controlled/normal extras. ISO 9506-1:2003
+ * §12.9.1.2.8–§12.9.1.2.19. ISO 9506-2:2003 §12.9.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,12 +51,22 @@ class CS_GetProgramInvocationAttributes_Response {
     constructor (
         /**
          * @summary `errorCode`.
+         * @description
+         *
+         * `&errorCode`: last recorded execution error; zero means none. Other
+         * values are a local matter. ISO 9506-1:2003 §12.1.1.11, §12.9.1.2.8.
+         *
          * @public
          * @readonly
          */
         readonly errorCode: INTEGER,
         /**
          * @summary `control`.
+         * @description
+         *
+         * `&control`: controlling, controlled, or normal, with matching extras.
+         * ISO 9506-1:2003 §12.9.1.2.9.
+         *
          * @public
          * @readonly
          */

@@ -18,6 +18,13 @@ import { StatusResponse, _decode_StatusResponse, _encode_StatusResponse } from "
  * @summary VMDReset_Response
  * @description
  * 
+ * Confirmed Result(+) of VMDReset: Status Response after initialization.
+ * Procedure: if local conditions prevent completion, Result(-); else delete
+ * Program Invocations and Domains whose `&accessControl` allows deletion; then
+ * perform Status using Extended Derivation. Any step failure yields Result(-).
+ * Validates `&physicalStatus` information. ISO 9506-1:2003 §10.10;
+ * ISO 9506-2:2003 §10.10.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

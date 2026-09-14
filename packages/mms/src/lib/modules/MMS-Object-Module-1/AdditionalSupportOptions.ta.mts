@@ -19,6 +19,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AdditionalSupportOptions
  * @description
  * 
+ * Extended services (csr/cspi)
+ * negotiated at Initiate: VMDStop/Reset/Select/AlterPIAttributes and
+ * Unit Control / Event Condition List services. SIZE(23).
+ * ISO 9506-1:2003 §8.1.3.18, §8.2; ISO 9506-2:2003 Initiate PDUs.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,6 +59,10 @@ type AdditionalSupportOptions = BIT_STRING;
 
 /**
  * @summary AdditionalSupportOptions_vMDStop
+ * @description
+ *
+ * csr: VMDStop service. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -61,6 +70,10 @@ const AdditionalSupportOptions_vMDStop: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary vMDStop
+ * @description
+ *
+ * csr: VMDStop service. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -68,6 +81,10 @@ const vMDStop: number = AdditionalSupportOptions_vMDStop; /* SHORT_NAMED_BIT */
 
 /**
  * @summary AdditionalSupportOptions_vMDReset
+ * @description
+ *
+ * csr: VMDReset service. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -75,6 +92,10 @@ const AdditionalSupportOptions_vMDReset: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary vMDReset
+ * @description
+ *
+ * csr: VMDReset service. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -82,6 +103,10 @@ const vMDReset: number = AdditionalSupportOptions_vMDReset; /* SHORT_NAMED_BIT *
 
 /**
  * @summary AdditionalSupportOptions_select
+ * @description
+ *
+ * csr: Select service. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -89,6 +114,10 @@ const AdditionalSupportOptions_select: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary select
+ * @description
+ *
+ * csr: Select service. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -96,6 +125,10 @@ const select: number = AdditionalSupportOptions_select; /* SHORT_NAMED_BIT */
 
 /**
  * @summary AdditionalSupportOptions_alterProgramInvocationAttributes
+ * @description
+ *
+ * csr: AlterProgramInvocationAttributes. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -103,6 +136,10 @@ const AdditionalSupportOptions_alterProgramInvocationAttributes: number = 3; /* 
 
 /**
  * @summary alterProgramInvocationAttributes
+ * @description
+ *
+ * csr: AlterProgramInvocationAttributes. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -110,6 +147,10 @@ const alterProgramInvocationAttributes: number = AdditionalSupportOptions_alterP
 
 /**
  * @summary AdditionalSupportOptions_initiateUnitControlLoad
+ * @description
+ *
+ * cspi: InitiateUnitControlLoad. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -117,6 +158,10 @@ const AdditionalSupportOptions_initiateUnitControlLoad: number = 4; /* LONG_NAME
 
 /**
  * @summary initiateUnitControlLoad
+ * @description
+ *
+ * cspi: InitiateUnitControlLoad. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -124,6 +169,10 @@ const initiateUnitControlLoad: number = AdditionalSupportOptions_initiateUnitCon
 
 /**
  * @summary AdditionalSupportOptions_unitControlLoadSegment
+ * @description
+ *
+ * cspi: UnitControlLoadSegment. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -131,6 +180,10 @@ const AdditionalSupportOptions_unitControlLoadSegment: number = 5; /* LONG_NAMED
 
 /**
  * @summary unitControlLoadSegment
+ * @description
+ *
+ * cspi: UnitControlLoadSegment. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -138,6 +191,10 @@ const unitControlLoadSegment: number = AdditionalSupportOptions_unitControlLoadS
 
 /**
  * @summary AdditionalSupportOptions_unitControlUpload
+ * @description
+ *
+ * cspi: UnitControlUpload. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -145,6 +202,10 @@ const AdditionalSupportOptions_unitControlUpload: number = 6; /* LONG_NAMED_BIT 
 
 /**
  * @summary unitControlUpload
+ * @description
+ *
+ * cspi: UnitControlUpload. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -152,6 +213,10 @@ const unitControlUpload: number = AdditionalSupportOptions_unitControlUpload; /*
 
 /**
  * @summary AdditionalSupportOptions_startUnitControl
+ * @description
+ *
+ * cspi: StartUnitControl. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -159,6 +224,10 @@ const AdditionalSupportOptions_startUnitControl: number = 7; /* LONG_NAMED_BIT *
 
 /**
  * @summary startUnitControl
+ * @description
+ *
+ * cspi: StartUnitControl. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -166,6 +235,10 @@ const startUnitControl: number = AdditionalSupportOptions_startUnitControl; /* S
 
 /**
  * @summary AdditionalSupportOptions_stopUnitControl
+ * @description
+ *
+ * cspi: StopUnitControl. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -173,6 +246,10 @@ const AdditionalSupportOptions_stopUnitControl: number = 8; /* LONG_NAMED_BIT */
 
 /**
  * @summary stopUnitControl
+ * @description
+ *
+ * cspi: StopUnitControl. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -180,6 +257,10 @@ const stopUnitControl: number = AdditionalSupportOptions_stopUnitControl; /* SHO
 
 /**
  * @summary AdditionalSupportOptions_createUnitControl
+ * @description
+ *
+ * cspi: CreateUnitControl. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -187,6 +268,10 @@ const AdditionalSupportOptions_createUnitControl: number = 9; /* LONG_NAMED_BIT 
 
 /**
  * @summary createUnitControl
+ * @description
+ *
+ * cspi: CreateUnitControl. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -194,6 +279,10 @@ const createUnitControl: number = AdditionalSupportOptions_createUnitControl; /*
 
 /**
  * @summary AdditionalSupportOptions_addToUnitControl
+ * @description
+ *
+ * cspi: AddToUnitControl. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -201,6 +290,10 @@ const AdditionalSupportOptions_addToUnitControl: number = 10; /* LONG_NAMED_BIT 
 
 /**
  * @summary addToUnitControl
+ * @description
+ *
+ * cspi: AddToUnitControl. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -208,6 +301,10 @@ const addToUnitControl: number = AdditionalSupportOptions_addToUnitControl; /* S
 
 /**
  * @summary AdditionalSupportOptions_removeFromUnitControl
+ * @description
+ *
+ * cspi: RemoveFromUnitControl. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -215,6 +312,10 @@ const AdditionalSupportOptions_removeFromUnitControl: number = 11; /* LONG_NAMED
 
 /**
  * @summary removeFromUnitControl
+ * @description
+ *
+ * cspi: RemoveFromUnitControl. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -222,6 +323,10 @@ const removeFromUnitControl: number = AdditionalSupportOptions_removeFromUnitCon
 
 /**
  * @summary AdditionalSupportOptions_getUnitControlAttributes
+ * @description
+ *
+ * cspi: GetUnitControlAttributes. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -229,6 +334,10 @@ const AdditionalSupportOptions_getUnitControlAttributes: number = 12; /* LONG_NA
 
 /**
  * @summary getUnitControlAttributes
+ * @description
+ *
+ * cspi: GetUnitControlAttributes. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -236,6 +345,10 @@ const getUnitControlAttributes: number = AdditionalSupportOptions_getUnitControl
 
 /**
  * @summary AdditionalSupportOptions_loadUnitControlFromFile
+ * @description
+ *
+ * cspi: LoadUnitControlFromFile. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -243,6 +356,10 @@ const AdditionalSupportOptions_loadUnitControlFromFile: number = 13; /* LONG_NAM
 
 /**
  * @summary loadUnitControlFromFile
+ * @description
+ *
+ * cspi: LoadUnitControlFromFile. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -250,6 +367,10 @@ const loadUnitControlFromFile: number = AdditionalSupportOptions_loadUnitControl
 
 /**
  * @summary AdditionalSupportOptions_storeUnitControlToFile
+ * @description
+ *
+ * cspi: StoreUnitControlToFile. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -257,6 +378,10 @@ const AdditionalSupportOptions_storeUnitControlToFile: number = 14; /* LONG_NAME
 
 /**
  * @summary storeUnitControlToFile
+ * @description
+ *
+ * cspi: StoreUnitControlToFile. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -264,6 +389,10 @@ const storeUnitControlToFile: number = AdditionalSupportOptions_storeUnitControl
 
 /**
  * @summary AdditionalSupportOptions_deleteUnitControl
+ * @description
+ *
+ * cspi: DeleteUnitControl. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -271,6 +400,10 @@ const AdditionalSupportOptions_deleteUnitControl: number = 15; /* LONG_NAMED_BIT
 
 /**
  * @summary deleteUnitControl
+ * @description
+ *
+ * cspi: DeleteUnitControl. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -278,6 +411,10 @@ const deleteUnitControl: number = AdditionalSupportOptions_deleteUnitControl; /*
 
 /**
  * @summary AdditionalSupportOptions_defineEventConditionList
+ * @description
+ *
+ * cspi: DefineEventConditionList. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -285,6 +422,10 @@ const AdditionalSupportOptions_defineEventConditionList: number = 16; /* LONG_NA
 
 /**
  * @summary defineEventConditionList
+ * @description
+ *
+ * cspi: DefineEventConditionList. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -292,6 +433,10 @@ const defineEventConditionList: number = AdditionalSupportOptions_defineEventCon
 
 /**
  * @summary AdditionalSupportOptions_deleteEventConditionList
+ * @description
+ *
+ * cspi: DeleteEventConditionList. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -299,6 +444,10 @@ const AdditionalSupportOptions_deleteEventConditionList: number = 17; /* LONG_NA
 
 /**
  * @summary deleteEventConditionList
+ * @description
+ *
+ * cspi: DeleteEventConditionList. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -306,6 +455,10 @@ const deleteEventConditionList: number = AdditionalSupportOptions_deleteEventCon
 
 /**
  * @summary AdditionalSupportOptions_addEventConditionListReference
+ * @description
+ *
+ * cspi: AddEventConditionListReference. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -313,6 +466,10 @@ const AdditionalSupportOptions_addEventConditionListReference: number = 18; /* L
 
 /**
  * @summary addEventConditionListReference
+ * @description
+ *
+ * cspi: AddEventConditionListReference. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -320,6 +477,10 @@ const addEventConditionListReference: number = AdditionalSupportOptions_addEvent
 
 /**
  * @summary AdditionalSupportOptions_removeEventConditionListReference
+ * @description
+ *
+ * cspi: RemoveEventConditionListReference. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -327,6 +488,10 @@ const AdditionalSupportOptions_removeEventConditionListReference: number = 19; /
 
 /**
  * @summary removeEventConditionListReference
+ * @description
+ *
+ * cspi: RemoveEventConditionListReference. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -334,6 +499,10 @@ const removeEventConditionListReference: number = AdditionalSupportOptions_remov
 
 /**
  * @summary AdditionalSupportOptions_getEventConditionListAttributes
+ * @description
+ *
+ * cspi: GetEventConditionListAttributes. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -341,6 +510,10 @@ const AdditionalSupportOptions_getEventConditionListAttributes: number = 20; /* 
 
 /**
  * @summary getEventConditionListAttributes
+ * @description
+ *
+ * cspi: GetEventConditionListAttributes. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -348,6 +521,10 @@ const getEventConditionListAttributes: number = AdditionalSupportOptions_getEven
 
 /**
  * @summary AdditionalSupportOptions_reportEventConditionListStatus
+ * @description
+ *
+ * cspi: ReportEventConditionListStatus. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -355,6 +532,10 @@ const AdditionalSupportOptions_reportEventConditionListStatus: number = 21; /* L
 
 /**
  * @summary reportEventConditionListStatus
+ * @description
+ *
+ * cspi: ReportEventConditionListStatus. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -362,6 +543,10 @@ const reportEventConditionListStatus: number = AdditionalSupportOptions_reportEv
 
 /**
  * @summary AdditionalSupportOptions_alterEventConditionListMonitoring
+ * @description
+ *
+ * cspi: AlterEventConditionListMonitoring. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export
@@ -369,6 +554,10 @@ const AdditionalSupportOptions_alterEventConditionListMonitoring: number = 22; /
 
 /**
  * @summary alterEventConditionListMonitoring
+ * @description
+ *
+ * cspi: AlterEventConditionListMonitoring. ISO 9506-1:2003 §8.1.3.18.
+ *
  * @constant
  */
 export

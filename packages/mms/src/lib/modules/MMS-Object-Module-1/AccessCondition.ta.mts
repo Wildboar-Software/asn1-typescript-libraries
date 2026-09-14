@@ -23,6 +23,13 @@ import { Authentication_value, _decode_Authentication_value, _encode_Authenticat
  * @summary AccessCondition
  * @description
  * 
+ * Predicate evaluated before an
+ * access-controlled service. NEVER always fails; SEMAPHORE succeeds if
+ * the client owns the named semaphore; USER matches the association
+ * client (NONE succeeds for Event-Action transactions); PASSWORD matches
+ * the association authentication value; JOINT requires all listed
+ * conditions; ALTERNATE requires any. ISO 9506-1:2003 §9.1.2–§9.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

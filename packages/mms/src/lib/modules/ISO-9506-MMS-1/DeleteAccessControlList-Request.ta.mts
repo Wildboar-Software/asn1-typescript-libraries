@@ -18,6 +18,14 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary DeleteAccessControlList_Request
  * @description
  * 
+ * Confirmed request of DeleteAccessControlList: VMD-specific Identifier of the
+ * ACL to delete. Preconditions: object exists; VMD ACL and the target ACL both
+ * satisfy DELETE; all Controlled Object lists are empty. Else Result(-) with
+ * ACCESS / OBJECT-ACCESS-DENIED. On success the server deletes the object.
+ * Shall not appear in minor version 1 or 2 of the confirmed-service PDUs
+ * (ISO 9506-2:2003 ConfirmedServiceRequest/Response). ISO 9506-1:2003 §9.6;
+ * ISO 9506-2:2003 §9.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

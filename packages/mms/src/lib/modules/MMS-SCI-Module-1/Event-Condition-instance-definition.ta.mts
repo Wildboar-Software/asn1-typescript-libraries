@@ -19,6 +19,12 @@ import { Event_Condition_instance_definition_details, _decode_Event_Condition_in
  * @summary Event_Condition_instance_definition
  * @description
  * 
+ * CHOICE of
+ * Standardized Name OID or inline Event Condition details. SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU.
+ * ISO 9506-2:2003 Annex B.1.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

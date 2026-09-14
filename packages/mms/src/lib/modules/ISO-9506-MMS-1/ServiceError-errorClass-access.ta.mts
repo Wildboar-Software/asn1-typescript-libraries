@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceError_errorClass_access
  * @description
  * 
+ * Error Class ACCESS: the requested service on an object was incorrectly
+ * specified, or access was denied. Used when an Access Condition fails
+ * (OBJECT-ACCESS-DENIED). ISO 9506-1:2003 §9.1.3, §24.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +40,10 @@ type ServiceError_errorClass_access = INTEGER;
 
 /**
  * @summary ServiceError_errorClass_access_other
+ * @description
+ *
+ * Reason other than those identified for ACCESS. ISO 9506-1:2003 §24.2.8.5.
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +52,10 @@ const ServiceError_errorClass_access_other: ServiceError_errorClass_access = 0; 
 
 /**
  * @summary ServiceError_errorClass_access_other
+ * @description
+ *
+ * Reason other than those identified for ACCESS. ISO 9506-1:2003 §24.2.8.5.
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +64,11 @@ const other: ServiceError_errorClass_access = ServiceError_errorClass_access_oth
 
 /**
  * @summary ServiceError_errorClass_access_object_access_unsupported
+ * @description
+ *
+ * The object is not defined to allow the requested access. ISO 9506-1:2003
+ * §24.2.8.1.
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +77,11 @@ const ServiceError_errorClass_access_object_access_unsupported: ServiceError_err
 
 /**
  * @summary ServiceError_errorClass_access_object_access_unsupported
+ * @description
+ *
+ * The object is not defined to allow the requested access. ISO 9506-1:2003
+ * §24.2.8.1.
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +90,10 @@ const object_access_unsupported: ServiceError_errorClass_access = ServiceError_e
 
 /**
  * @summary ServiceError_errorClass_access_object_non_existent
+ * @description
+ *
+ * The object is non-existent. ISO 9506-1:2003 §24.2.8.2.
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +102,10 @@ const ServiceError_errorClass_access_object_non_existent: ServiceError_errorClas
 
 /**
  * @summary ServiceError_errorClass_access_object_non_existent
+ * @description
+ *
+ * The object is non-existent. ISO 9506-1:2003 §24.2.8.2.
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +114,12 @@ const object_non_existent: ServiceError_errorClass_access = ServiceError_errorCl
 
 /**
  * @summary ServiceError_errorClass_access_object_access_denied
+ * @description
+ *
+ * The MMS client has insufficient privilege. Also returned when an Access
+ * Condition evaluation fails (ISO 9506-1:2003 §9.1.3). ISO 9506-1:2003
+ * §24.2.8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +128,12 @@ const ServiceError_errorClass_access_object_access_denied: ServiceError_errorCla
 
 /**
  * @summary ServiceError_errorClass_access_object_access_denied
+ * @description
+ *
+ * The MMS client has insufficient privilege. Also returned when an Access
+ * Condition evaluation fails (ISO 9506-1:2003 §9.1.3). ISO 9506-1:2003
+ * §24.2.8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +142,11 @@ const object_access_denied: ServiceError_errorClass_access = ServiceError_errorC
 
 /**
  * @summary ServiceError_errorClass_access_object_invalidated
+ * @description
+ *
+ * Access references a defined object that has an undefined reference attribute.
+ * Permanent error for that object. ISO 9506-1:2003 §24.2.8.4.
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +155,11 @@ const ServiceError_errorClass_access_object_invalidated: ServiceError_errorClass
 
 /**
  * @summary ServiceError_errorClass_access_object_invalidated
+ * @description
+ *
+ * Access references a defined object that has an undefined reference attribute.
+ * Permanent error for that object. ISO 9506-1:2003 §24.2.8.4.
+ *
  * @constant
  * @type {number}
  */

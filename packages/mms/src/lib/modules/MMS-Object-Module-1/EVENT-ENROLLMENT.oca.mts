@@ -39,6 +39,11 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary EVENT_ENROLLMENT
  * @description
  * 
+ * Request to be notified of Event
+ * Condition transitions, or to delay a confirmed service until those
+ * transitions (modifier class). notification enrollments persist;
+ * modifier enrollments are one-shot. ISO 9506-1:2003 §21.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -102,74 +107,157 @@ interface EVENT_ENROLLMENT {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * ObjectName unique in VMD/Domain/AA scope. ISO 9506-1:2003 §21.1.1.1.
+     *
      */
     readonly "&name"?: ObjectName;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating attribute change, delete, and ACL change. ISO 9506-1:2003
+     * §21.1.1.2.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &eeClass
+     * @description
+     *
+     * modifier or notification. ISO 9506-1:2003 §21.1.1.3.
+     *
      */
     readonly "&eeClass"?: EE_Class;
     /**
      * @summary &eventCondition
+     * @description
+     *
+     * Event Condition that drives Event-Transition Processing; undefined if
+     * that object becomes unavailable. ISO 9506-1:2003 §21.1.1.4.
+     *
      */
     readonly "&eventCondition"?: Identifier;
     /**
      * @summary &ecTransitions
+     * @description
+     *
+     * Monitored: non-empty set of transitions. Network- triggered: empty
+     * (TriggerEvent / autonomous). ISO 9506-1:2003 §21.1.1.5.
+     *
      */
     readonly "&ecTransitions"?: Transitions;
     /**
      * @summary &aAssociation
+     * @description
+     *
+     * AA used for EventNotifications (notification class). Not reported by MMS.
+     * ISO 9506-1:2003 §21.1.1.6.
+     *
      */
     readonly "&aAssociation"?: INTEGER;
     /**
      * @summary &invokeID
+     * @description
+     *
+     * modifier class: Transaction invokeID of the modified service. ISO
+     * 9506-1:2003 §21.1.1.7.
+     *
      */
     readonly "&invokeID"?: INTEGER;
     /**
      * @summary &remainingDelay
+     * @description
+     *
+     * modifier class: seconds the client will wait, or forever. ISO 9506-1:2003
+     * §21.1.1.8.
+     *
      */
     readonly "&remainingDelay"?: ({ time: INTEGER } | { forever: NULL });
     /**
      * @summary &notificationLost
+     * @description
+     *
+     * notification class: true if a notification was dropped (resources or AA
+     * failure for permanent enrollments). ISO 9506-1:2003 §21.1.1.9.
+     *
      */
     readonly "&notificationLost"?: BOOLEAN;
     /**
      * @summary &eventAction
+     * @description
+     *
+     * notification class: Event Action to run, or undefined (notification
+     * only). ISO 9506-1:2003 §21.1.1.10.
+     *
      */
     readonly "&eventAction"?: ObjectName;
     /**
      * @summary &duration
+     * @description
+     *
+     * notification class: current or permanent. ISO 9506-1:2003 §21.1.1.11.
+     *
      */
     readonly "&duration"?: EE_Duration;
     /**
      * @summary &clientApplication
+     * @description
+     *
+     * notification class: enrolled client. ISO 9506-1:2003 §21.1.1.12.
+     *
      */
     readonly "&clientApplication"?: ApplicationReference;
     /**
      * @summary &aaRule
+     * @description
+     *
+     * notification + monitored: acknowledgement rule. ISO 9506-1:2003
+     * §21.1.1.13.
+     *
      */
     readonly "&aaRule"?: AlarmAckRule;
     /**
      * @summary &timeActiveAck
+     * @description
+     *
+     * Time the last active-transition ack was received, or undefined (aaRule ≠
+     * none). ISO 9506-1:2003 §21.1.1.14.
+     *
      */
     readonly "&timeActiveAck"?: EventTime;
     /**
      * @summary &timeIdleAck
+     * @description
+     *
+     * Time the last idle-transition ack was received, or undefined (aaRule ≠
+     * none). ISO 9506-1:2003 §21.1.1.15.
+     *
      */
     readonly "&timeIdleAck"?: EventTime;
     /**
      * @summary &ackState
+     * @description
+     *
+     * acked / noAckA / noAckI for alarm-ack tracking. ISO 9506-1:2003 §21.1.1.
+     *
      */
     readonly "&ackState"?: EVENT_ENROLLMENT_ackState;
     /**
      * @summary &lastState
+     * @description
+     *
+     * Last observed EC-State. ISO 9506-1:2003 §21.1.1.
+     *
      */
     readonly "&lastState"?: EC_State;
     /**
      * @summary &displayEnhancement
+     * @description
+     *
+     * cspi: text (des), number (dei), or none. ISO 9506-1:2003 §21.1.1.
+     *
      */
     readonly "&displayEnhancement"?: ({ text: MMSString } | { number_: INTEGER } | { none: NULL });
 }
@@ -177,6 +265,11 @@ interface EVENT_ENROLLMENT {
 /**
  * @summary EVENT_ENROLLMENT_ackState
  * @description
+ *
+ * Request to be notified of Event
+ * Condition transitions, or to delay a confirmed service until those
+ * transitions (modifier class). notification enrollments persist;
+ * modifier enrollments are one-shot. ISO 9506-1:2003 §21.1.
  *
  * ### ASN.1 Definition:
  *

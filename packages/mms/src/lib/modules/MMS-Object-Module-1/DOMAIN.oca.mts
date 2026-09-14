@@ -40,6 +40,12 @@ import { JOURNAL } from "../MMS-Object-Module-1/JOURNAL.oca.mjs";
  * @summary DOMAIN
  * @description
  * 
+ * A subset of VMD capabilities used for a specific
+ * purpose; also a Domain-specific name space. Created by download, by a
+ * Program Invocation, locally, or predefined. State covers loading
+ * through in-use; lost AA during download deletes the Domain.
+ * ISO 9506-1:2003 §11.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,66 +97,137 @@ interface DOMAIN {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * Unique Domain name within the VMD. ISO 9506-1:2003 §11.1.1.1.
+     *
      */
     readonly "&name"?: Identifier;
     /**
      * @summary &Capabilities
+     * @description
+     *
+     * Implementation-specific resource strings (memory, processors, I/O
+     * bindings). ISO 9506-1:2003 §11.1.1.2.
+     *
      */
     readonly "&Capabilities"?: MMSString;
     /**
      * @summary &state
+     * @description
+     *
+     * Domain lifecycle state. ISO 9506-1:2003 §11.1.1.3.
+     *
      */
     readonly "&state"?: DomainState;
     /**
      * @summary &aAssociation
+     * @description
+     *
+     * AA used for download. Present iff state is loading, complete, incomplete,
+     * d1, d2, d3, or d9. Lost AA before ready deletes the Domain. Not reported
+     * by MMS. ISO 9506-1:2003 §11.1.1.4.
+     *
      */
     readonly "&aAssociation"?: INTEGER;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating upload, delete, and ACL/name change. ISO 9506-1:2003
+     * §11.1.1.5.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &sharable
+     * @description
+     *
+     * Whether more than one PI may use this Domain at once. Sharable does not
+     * imply read-only. ISO 9506-1:2003 §11.1.1.6.
+     *
      */
     readonly "&sharable"?: BOOLEAN;
     /**
      * @summary &ProgramInvocations
+     * @description
+     *
+     * PIs currently using this Domain. At most one if not sharable; non-empty
+     * if in-use. ISO 9506-1:2003 §11.1.1.7.
+     *
      */
     readonly "&ProgramInvocations"?: Identifier;
     /**
      * @summary &uploadsInProgress
+     * @description
+     *
+     * Count of ULSMs for this Domain; 0 = none. ISO 9506-1:2003 §11.1.1.8.
+     *
      */
     readonly "&uploadsInProgress"?: INTEGER;
     /**
      * @summary &NamedVariables
+     * @description
+     *
+     * Domain-specific Named Variables (vnam). ISO 9506-1:2003 §11.1.1.9.
+     *
      */
     readonly "&NamedVariables"?: NAMED_VARIABLE[];
     /**
      * @summary &NamedVariableLists
+     * @description
+     *
+     * Domain-specific Named Variable Lists (vnam+vlis). ISO 9506-1:2003
+     * §11.1.1.10.
+     *
      */
     readonly "&NamedVariableLists"?: NAMED_VARIABLE_LIST[];
     /**
      * @summary &NamedTypes
+     * @description
+     *
+     * Domain-specific Named Types (vnam). ISO 9506-1:2003 §11.1.1.11.
+     *
      */
     readonly "&NamedTypes"?: NAMED_TYPE[];
     /**
      * @summary &EventConditions
+     * @description
+     *
+     * Domain-specific Event Conditions. ISO 9506-1:2003 §11.1.1.12.
+     *
      */
     readonly "&EventConditions"?: EVENT_CONDITION[];
     /**
      * @summary &EventActions
+     * @description
+     *
+     * Domain-specific Event Actions. ISO 9506-1:2003 §11.1.1.13.
+     *
      */
     readonly "&EventActions"?: EVENT_ACTION[];
     /**
      * @summary &EventEnrollments
+     * @description
+     *
+     * Domain-specific Event Enrollments. ISO 9506-1:2003 §11.1.1.14.
+     *
      */
     readonly "&EventEnrollments"?: EVENT_ENROLLMENT[];
     /**
      * @summary &EventConditionLists
+     * @description
+     *
+     * Domain-specific Event Condition Lists (cspi). ISO 9506-1:2003 §11.1.1.15.
+     *
      */
     readonly "&EventConditionLists"?: EVENT_CONDITION_LIST[];
     /**
      * @summary &Journals
+     * @description
+     *
+     * Domain-specific Journals. ISO 9506-1:2003 §11.1.1.16.
+     *
      */
     readonly "&Journals"?: JOURNAL[];
 };

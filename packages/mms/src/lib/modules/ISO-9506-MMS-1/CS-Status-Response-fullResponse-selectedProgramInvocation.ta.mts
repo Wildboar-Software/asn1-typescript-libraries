@@ -19,6 +19,11 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary CS_Status_Response_fullResponse_selectedProgramInvocation
  * @description
  * 
+ * Selected Program Invocation of CS-Status fullResponse. `programInvocation` is
+ * the Identifier of the selected Controlling Program Invocation; `noneSelected`
+ * if none has been selected. `csr` only. ISO 9506-1:2003 §10.2.7;
+ * ISO 9506-2:2003 §10.2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

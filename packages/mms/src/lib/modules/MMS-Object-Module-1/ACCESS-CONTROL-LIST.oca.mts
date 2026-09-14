@@ -24,6 +24,13 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  * @summary ACCESS_CONTROL_LIST
  * @description
  * 
+ * Specifies conditions under which
+ * named MMS services on controlled objects are required to fail. Does
+ * not require any service to succeed. Service-class conditions
+ * (read/store/write/load/execute/delete/edit) are AccessCondition
+ * values. Controlled-object lists record objects under this ACL.
+ * ISO 9506-1:2003 §9.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -83,102 +90,211 @@ interface ACCESS_CONTROL_LIST {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * VMD-specific Identifier of this ACL. ISO 9506-1:2003 §9.1.1.1.
+     *
      */
     readonly "&name"?: Identifier;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL that governs access to this ACL object. ISO 9506-1:2003 §9.1.1.2.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &readAccessCondition
+     * @description
+     *
+     * Condition for read-class services (Read, Output). ISO 9506-1:2003
+     * §9.1.1.3.
+     *
      */
     readonly "&readAccessCondition"?: AccessCondition;
     /**
      * @summary &storeAccessCondition
+     * @description
+     *
+     * Condition for store-class services (upload/store Domain or Unit Control,
+     * ReadJournal). ISO 9506-1:2003 §9.1.1.4.
+     *
      */
     readonly "&storeAccessCondition"?: AccessCondition;
     /**
      * @summary &writeAccessCondition
+     * @description
+     *
+     * Condition for write-class services (Write, Input, ExchangeData). ISO
+     * 9506-1:2003 §9.1.1.5.
+     *
      */
     readonly "&writeAccessCondition"?: AccessCondition;
     /**
      * @summary &loadAccessCondition
+     * @description
+     *
+     * Condition for load-class services (define/create/alter objects,
+     * TakeControl, TriggerEvent, …). Create-style services are also gated by
+     * the VMD ACL. ISO 9506-1:2003 §9.1.1.6.
+     *
      */
     readonly "&loadAccessCondition"?: AccessCondition;
     /**
      * @summary &executeAccessCondition
+     * @description
+     *
+     * Condition for execute-class services (Start/Stop/Resume/ Reset/Kill,
+     * Select, UnitControl start/stop, VMDStop/ VMDReset). ISO 9506-1:2003
+     * §9.1.1.7.
+     *
      */
     readonly "&executeAccessCondition"?: AccessCondition;
     /**
      * @summary &deleteAccessCondition
+     * @description
+     *
+     * Condition for Delete* services. NEVER here makes MMS Deletable report
+     * false. ISO 9506-1:2003 §9.1.1.8, §9.1.4.
+     *
      */
     readonly "&deleteAccessCondition"?: AccessCondition;
     /**
      * @summary &editAccessCondition
+     * @description
+     *
+     * Condition for changing access control (ChangeAccessControl). ISO
+     * 9506-1:2003 §9.1.1.9.
+     *
      */
     readonly "&editAccessCondition"?: AccessCondition;
     /**
      * @summary &AccessControlLists
+     * @description
+     *
+     * Controlled ACL objects. ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&AccessControlLists"?: Identifier;
     /**
      * @summary &Domains
+     * @description
+     *
+     * Controlled Domain objects. ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&Domains"?: Identifier;
     /**
      * @summary &ProgramInvocations
+     * @description
+     *
+     * Controlled Program Invocations. ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&ProgramInvocations"?: Identifier;
     /**
      * @summary &UnitControls
+     * @description
+     *
+     * Controlled Unit Controls. ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&UnitControls"?: Identifier;
     /**
      * @summary &UnnamedVariables
+     * @description
+     *
+     * Controlled Unnamed Variables (vadr). ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&UnnamedVariables"?: Address;
     /**
      * @summary &NamedVariables
+     * @description
+     *
+     * Controlled Named Variables (vnam). ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&NamedVariables"?: ObjectName;
     /**
      * @summary &NamedVariableLists
+     * @description
+     *
+     * Controlled Named Variable Lists (vnam+vlis). ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&NamedVariableLists"?: ObjectName;
     /**
      * @summary &NamedTypes
+     * @description
+     *
+     * Controlled Named Types (vnam). ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&NamedTypes"?: ObjectName;
     /**
      * @summary &DataExchanges
+     * @description
+     *
+     * Controlled Data Exchanges. ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&DataExchanges"?: ObjectName;
     /**
      * @summary &Semaphores
+     * @description
+     *
+     * Controlled Semaphores. ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&Semaphores"?: Identifier;
     /**
      * @summary &OperatorStations
+     * @description
+     *
+     * Controlled Operator Stations. ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&OperatorStations"?: Identifier;
     /**
      * @summary &EventConditions
+     * @description
+     *
+     * Controlled Event Conditions. ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&EventConditions"?: ObjectName;
     /**
      * @summary &EventActions
+     * @description
+     *
+     * Controlled Event Actions. ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&EventActions"?: ObjectName;
     /**
      * @summary &EventEnrollments
+     * @description
+     *
+     * Controlled Event Enrollments. ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&EventEnrollments"?: ObjectName;
     /**
      * @summary &Journals
+     * @description
+     *
+     * Controlled Journals. ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&Journals"?: ObjectName;
     /**
      * @summary &EventConditionLists
+     * @description
+     *
+     * Controlled Event Condition Lists (cspi). ISO 9506-1:2003 §9.1.1.
+     *
      */
     readonly "&EventConditionLists"?: ObjectName;
 };

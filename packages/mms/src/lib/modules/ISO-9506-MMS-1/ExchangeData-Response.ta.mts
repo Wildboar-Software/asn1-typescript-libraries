@@ -17,7 +17,11 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
 /**
  * @summary ExchangeData_Response
  * @description
- * 
+ *
+ * Result(+) of ExchangeData: output of D-Exchange after
+ * `&inUse` is cleared. ISO 9506-1:2003 §15.2.1.2.
+ * ISO 9506-2:2003 §15.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +36,12 @@ class ExchangeData_Response {
     constructor (
         /**
          * @summary `listOfResponseData`.
+         * @description
+         *
+         * Output values matching `&response` in type and
+         * number. Empty list if there is no response data.
+         * ISO 9506-1:2003 §15.2.1.2.1.
+         *
          * @public
          * @readonly
          */

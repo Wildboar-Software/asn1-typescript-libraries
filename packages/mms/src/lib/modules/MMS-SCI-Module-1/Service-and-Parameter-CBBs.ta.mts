@@ -45,6 +45,14 @@ import { FileManagementParameters, _decode_FileManagementParameters, _encode_Fil
  * @summary Service_and_Parameter_CBBs
  * @description
  * 
+ * SCI Part Two (Tables 20–52):
+ * client/server ServiceSupportOptions, ParameterSupportOptions, nest,
+ * optional extended services/CBBs, plus CIS parameter groups. SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU.
+ * ISO 9506-2:2003 Annex B.2; CBB bits ISO 9506-1:2003 §8.1.3.14–§8.1.3.19,
+ * §8.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -88,12 +96,22 @@ class Service_and_Parameter_CBBs {
         readonly services_Server: ServiceSupportOptions,
         /**
          * @summary `parameters`.
+         * @description
+         *
+         * Parameter CBB bits. ISO 9506-1:2003 §8.1.3.15; ISO 9506-2:2003 Annex
+         * B.2.
+         *
          * @public
          * @readonly
          */
         readonly parameters: ParameterSupportOptions,
         /**
          * @summary `nest`.
+         * @description
+         *
+         * Max type-tree nest depth. ISO 9506-1:2003 §8.1.3.16; ISO 9506-2:2003
+         * Annex B.2.
+         *
          * @public
          * @readonly
          */
@@ -112,66 +130,112 @@ class Service_and_Parameter_CBBs {
         readonly extendedServices_Server: NullableAdditionalSupportOptions,
         /**
          * @summary `extendedParameters`.
+         * @description
+         *
+         * AdditionalCBBOptions, or NULL if not cspi. ISO 9506-1:2003 §8.1.3.19;
+         * ISO 9506-2:2003 Annex B.2.
+         *
          * @public
          * @readonly
          */
         readonly extendedParameters: NullableAdditionalCBBOptions,
         /**
          * @summary `generalManagement`.
+         * @description
+         *
+         * Table 21 CIS parameters. ISO 9506-2:2003 Annex B.2.1.
+         *
          * @public
          * @readonly
          */
         readonly generalManagement: GeneralManagementParameters,
         /**
          * @summary `vMDSupport`.
+         * @description
+         *
+         * Table 25 CIS parameters. ISO 9506-2:2003 Annex B.2.2.
+         *
          * @public
          * @readonly
          */
         readonly vMDSupport: VMDSupportParameters,
         /**
          * @summary `domainManagement`.
+         * @description
+         *
+         * Table 27 CIS parameters. ISO 9506-2:2003 Annex B.2.3.
+         *
          * @public
          * @readonly
          */
         readonly domainManagement: DomainManagementParameters,
         /**
          * @summary `programInvocation`.
+         * @description
+         *
+         * Table 28 CIS parameters, or a linked PI instance in object records.
+         * ISO 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly programInvocation: ProgramInvocationManagementParameters,
         /**
          * @summary `variableAccess`.
+         * @description
+         *
+         * Table 32 CIS parameters. ISO 9506-2:2003 Annex B.2.5.
+         *
          * @public
          * @readonly
          */
         readonly variableAccess: VariableAccessParameters,
         /**
          * @summary `dataParameters`.
+         * @description
+         *
+         * Table 33 CIS parameters. ISO 9506-2:2003 Annex B.2.6.
+         *
          * @public
          * @readonly
          */
         readonly dataParameters: DataParameters,
         /**
          * @summary `semaphoreManagement`.
+         * @description
+         *
+         * Table 36 CIS parameters. ISO 9506-2:2003 Annex B.2.7.
+         *
          * @public
          * @readonly
          */
         readonly semaphoreManagement: SemaphoreManagementParameters,
         /**
          * @summary `operatorCommunication`.
+         * @description
+         *
+         * Table 37 CIS parameters. ISO 9506-2:2003 Annex B.2.8.
+         *
          * @public
          * @readonly
          */
         readonly operatorCommunication: OperatorCommunicationParameters,
         /**
          * @summary `errors`.
+         * @description
+         *
+         * Table 47 CIS parameters. ISO 9506-2:2003 Annex B.2.9.
+         *
          * @public
          * @readonly
          */
         readonly errors: ErrorParameters,
         /**
          * @summary `fileManagement`.
+         * @description
+         *
+         * Table 50 CIS parameters. ISO 9506-2:2003 Annex B.2.10.
+         *
          * @public
          * @readonly
          */

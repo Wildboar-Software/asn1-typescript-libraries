@@ -18,7 +18,13 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary AddEventConditionListReference_Request
  * @description
- * 
+ *
+ * Confirmed request: add Event Condition (and, if `recl`, Event Condition
+ * List) references to an existing list. Result(+) empty.
+ *
+ * [ISO 9506-1:2003 §22.4]
+ * [ISO 9506-2:2003 §22.4]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +43,36 @@ class AddEventConditionListReference_Request {
     constructor (
         /**
          * @summary `eventConditionListName`.
+         * @description
+         *
+         * List to update.
+         *
+         * [ISO 9506-1:2003 §22.4]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionListName: ObjectName,
         /**
          * @summary `listOfEventConditionName`.
+         * @description
+         *
+         * Event Conditions to add (skipped if already present).
+         *
+         * [ISO 9506-1:2003 §22.4]
+         *
          * @public
          * @readonly
          */
         readonly listOfEventConditionName: ObjectName[],
         /**
          * @summary `listOfEventConditionListName`.
+         * @description
+         *
+         * Nested lists to add. Iff `recl`.
+         *
+         * [ISO 9506-2:2003 §22.4]
+         *
          * @public
          * @readonly
          */

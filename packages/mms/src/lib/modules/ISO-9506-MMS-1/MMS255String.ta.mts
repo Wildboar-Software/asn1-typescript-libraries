@@ -19,7 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MMS255String
  * @description
- * 
+ *
+ * User string of length 1..255. Same `char` CBB choice as MMSString
+ * (ISO 9506-2:2003 §7.5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

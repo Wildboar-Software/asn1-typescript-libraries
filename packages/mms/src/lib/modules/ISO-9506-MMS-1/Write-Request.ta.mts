@@ -19,7 +19,13 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
 /**
  * @summary Write_Request
  * @description
- * 
+ *
+ * Confirmed request that the server replace one or more
+ * variables with supplied values. `listOfData` is parallel
+ * to the Variable Access Specification (same order and
+ * types). Mismatch of type or count yields Result(-).
+ * ISO 9506-1:2003 §14.7. ISO 9506-2:2003 §14.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,23 @@ class Write_Request {
     constructor (
         /**
          * @summary `variableAccessSpecification`.
+         * @description
+         *
+         * Variables to write. ISO 9506-1:2003 §14.7.1.1.1,
+         * §14.5.1.
+         *
          * @public
          * @readonly
          */
         readonly variableAccessSpecification: VariableAccessSpecification,
         /**
          * @summary `listOfData`.
+         * @description
+         *
+         * Values in VAS order. Abstract syntax follows each
+         * variable's type and alternate access.
+         * ISO 9506-1:2003 §14.7.1.1.2, §14.4.2.
+         *
          * @public
          * @readonly
          */

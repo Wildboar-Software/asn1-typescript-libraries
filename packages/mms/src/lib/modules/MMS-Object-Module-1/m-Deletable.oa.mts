@@ -24,6 +24,10 @@ import { type ACCESS_CONTROL_LIST } from "../MMS-Object-Module-1/ACCESS-CONTROL-
  * @summary m_Deletable
  * @description
  * 
+ * MMS Standardized Name `M_Deletable` (prefix
+ * `M_`). ACL for objects that may be deleted by the corresponding MMS
+ * Delete service. Itself governed by `M_Never`. ISO 9506-1:2003 §25.3.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

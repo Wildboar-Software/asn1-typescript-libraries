@@ -22,6 +22,11 @@ import { TypeDescription, _decode_TypeDescription, _encode_TypeDescription } fro
  * @summary Named_Type_instance_definition_details
  * @description
  * 
+ * Inline Named Type
+ * attributes in the SCI file. SCI configuration/initialization encoding (ISO
+ * 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.1.8; ISO
+ * 9506-1:2003 §14.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +44,33 @@ class Named_Type_instance_definition_details {
     constructor (
         /**
          * @summary `accessControl`.
+         * @description
+         *
+         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly accessControl: Access_Control_List_instance,
         /**
          * @summary `typeDescription`.
+         * @description
+         *
+         * Configured TypeDescription. ISO 9506-1:2003 §14.2; ISO 9506-2:2003
+         * Annex B.
+         *
          * @public
          * @readonly
          */
         readonly typeDescription: TypeDescription,
         /**
          * @summary `meaning`.
+         * @description
+         *
+         * Semantic alias (sem CBB). ISO 9506-1:2003 §14.1.3 / §14.1.5; ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */

@@ -23,6 +23,10 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
  * @summary StoreDomainContent_Request
  * @description
  * 
+ * Client request that the server store a Domain so it can later be loaded with
+ * LoadDomainContent. Domain must exist. ISO 9506-1:2003 §11.11. ISO 9506-2:2003
+ * §11.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +44,32 @@ class StoreDomainContent_Request {
     constructor (
         /**
          * @summary `domainName`.
+         * @description
+         *
+         * Existing Domain whose content is stored. ISO 9506-1:2003
+         * §11.11.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly domainName: Identifier,
         /**
          * @summary `fileName`.
+         * @description
+         *
+         * Destination file. ISO 9506-1:2003 §11.11.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly fileName: FileName,
         /**
          * @summary `thirdParty`.
+         * @description
+         *
+         * Application whose filestore receives the Domain. Requires `tpy` CBB.
+         * Absent: local store method. ISO 9506-1:2003 §11.11.1.1.3. ISO 9506-2:2003 §11.11.1.1.
+         *
          * @public
          * @readonly
          */

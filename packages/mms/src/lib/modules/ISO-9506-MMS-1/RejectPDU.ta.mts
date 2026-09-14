@@ -20,7 +20,12 @@ import { RejectPDU_rejectReason, _decode_RejectPDU_rejectReason, _encode_RejectP
 /**
  * @summary RejectPDU
  * @description
- * 
+ *
+ * Provider-initiated protocol-error notification. `originalInvokeID` is present
+ * only if it could be determined. `rejectReason` names the PDU kind and a
+ * reject code. The user may Abort as a local matter (ISO 9506-1:2003 §8.6;
+ * ISO 9506-2:2003 §8.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -112,12 +117,20 @@ class RejectPDU {
     constructor (
         /**
          * @summary `originalInvokeID`.
+         * @description
+         *
+         * Invoke ID of the PDU found in error, if determinable. Omit when the
+         * rejected PDU has no invoke ID (ISO 9506-1:2003 §8.6.1.2).
          * @public
          * @readonly
          */
         readonly originalInvokeID: OPTIONAL<Unsigned32>,
         /**
          * @summary `rejectReason`.
+         * @description
+         *
+         * Rejected PDU type plus reject code (ISO 9506-1:2003
+         * §8.6.1.3–8.6.1.4).
          * @public
          * @readonly
          */
@@ -147,8 +160,8 @@ class RejectPDU {
  * @summary The Leading Root Component Types of RejectPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -161,8 +174,8 @@ const _root_component_type_list_1_spec_for_RejectPDU: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of RejectPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -174,8 +187,8 @@ const _root_component_type_list_2_spec_for_RejectPDU: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of RejectPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -231,7 +244,7 @@ function _encode_RejectPDU (value: RejectPDU, elGetter: $.ASN1Encoder<any>): _El
             /* IF_ABSENT  */ ((value.originalInvokeID === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_Unsigned32, $.BER)(value.originalInvokeID, $.BER)),
             /* REQUIRED   */ _encode_RejectPDU_rejectReason(value.rejectReason, $.BER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+   ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
     return _cached_encoder_for_RejectPDU(value, elGetter);
 }

@@ -19,7 +19,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FileRead_Response
  * @description
- * 
+ *
+ * Result(+): a contiguous portion of file
+ * content from the FRSM position, plus whether
+ * more remains. Informative Annex D.
+ *
+ * [ISO 9506-1:2003 Annex D, D.4.1.2]
+ * [ISO 9506-2:2003 Annex D, D.3.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +43,29 @@ class FileRead_Response {
     constructor (
         /**
          * @summary `fileData`.
+         * @description
+         *
+         * If the FRSM position is before EOF, a
+         * non-zero contiguous portion starting at
+         * that position toward EOF. If at EOF, a
+         * zero-length octet string.
+         *
+         * [ISO 9506-1:2003 Annex D, D.4.1.2.1]
+         *
          * @public
          * @readonly
          */
         readonly fileData: OCTET_STRING,
         /**
          * @summary `moreFollows`.
+         * @description
+         *
+         * True if additional content remains; false
+         * if `fileData` is empty or this is the last
+         * portion. Default true.
+         *
+         * [ISO 9506-1:2003 Annex D, D.4.1.2.2]
+         *
          * @public
          * @readonly
          */

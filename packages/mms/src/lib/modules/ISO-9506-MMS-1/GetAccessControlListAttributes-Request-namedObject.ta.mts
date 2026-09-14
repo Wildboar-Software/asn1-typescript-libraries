@@ -20,6 +20,10 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  * @summary GetAccessControlListAttributes_Request_namedObject
  * @description
  * 
+ * Specific Object choice of GetAccessControlListAttributes: identify the object
+ * whose `&accessControl` names the ACL to return. ISO 9506-1:2003 §9.4.1.1.3;
+ * ISO 9506-2:2003 §9.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,22 @@ class GetAccessControlListAttributes_Request_namedObject {
     constructor (
         /**
          * @summary `objectClass`.
+         * @description
+         *
+         * Object class of the object whose `&accessControl` is followed.
+         * ISO 9506-1:2003 §9.4.1.1.3.1.
+         *
          * @public
          * @readonly
          */
         readonly objectClass: ObjectClass,
         /**
          * @summary `objectName`.
+         * @description
+         *
+         * The named object whose `&accessControl` is followed. ISO 9506-1:2003
+         * §9.4.1.1.3.2.
+         *
          * @public
          * @readonly
          */
@@ -52,7 +66,8 @@ class GetAccessControlListAttributes_Request_namedObject {
      * @summary Restructures an object into a GetAccessControlListAttributes_Request_namedObject
      * @description
      * 
-     * This takes an `object` and converts it to a `GetAccessControlListAttributes_Request_namedObject`.
+     * This takes an `object` and converts it to a
+     * `GetAccessControlListAttributes_Request_namedObject`.
      * 
      * @public
      * @static
@@ -71,7 +86,8 @@ class GetAccessControlListAttributes_Request_namedObject {
  * @summary The Leading Root Component Types of GetAccessControlListAttributes_Request_namedObject
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -85,7 +101,8 @@ const _root_component_type_list_1_spec_for_GetAccessControlListAttributes_Reques
  * @summary The Trailing Root Component Types of GetAccessControlListAttributes_Request_namedObject
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -98,7 +115,8 @@ const _root_component_type_list_2_spec_for_GetAccessControlListAttributes_Reques
  * @summary The Extension Addition Component Types of GetAccessControlListAttributes_Request_namedObject
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

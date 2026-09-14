@@ -17,7 +17,12 @@ import { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS
 /**
  * @summary GetAlarmEnrollmentSummary_Request_severityFilter
  * @description
- * 
+ *
+ * Inclusive `&severity` range of the referenced Event
+ * Condition. Default `{0, 127}`.
+ *
+ * [ISO 9506-1:2003 §18.6.1.1.4]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +39,26 @@ class GetAlarmEnrollmentSummary_Request_severityFilter {
     constructor (
         /**
          * @summary `mostSevere`.
+         * @description
+         *
+         * Upper bound of severity (smaller integer = more
+         * severe). Inclusive.
+         *
+         * [ISO 9506-1:2003 §18.6.1.1.4]
+         *
          * @public
          * @readonly
          */
         readonly mostSevere: Unsigned8,
         /**
          * @summary `leastSevere`.
+         * @description
+         *
+         * Lower bound of severity (larger integer = less
+         * severe). Inclusive.
+         *
+         * [ISO 9506-1:2003 §18.6.1.1.4]
+         *
          * @public
          * @readonly
          */

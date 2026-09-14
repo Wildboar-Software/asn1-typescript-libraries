@@ -19,7 +19,13 @@ import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-M
 /**
  * @summary AlterEventEnrollment_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): current EE-State after the alter, plus the time of the
+ * last relevant transition. `undefined` if the Event Condition is unavailable.
+ *
+ * [ISO 9506-1:2003 §21.6.1.2]
+ * [ISO 9506-2:2003 §21.6.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +43,25 @@ class AlterEventEnrollment_Response {
     constructor (
         /**
          * @summary `currentState`.
+         * @description
+         *
+         * EE-State, or `undefined` if the Event Condition is UNDEFINED.
+         *
+         * [ISO 9506-1:2003 §21.6.1.2.1]
+         * [ISO 9506-2:2003 §21.6.2.1]
+         *
          * @public
          * @readonly
          */
         readonly currentState: AlterEventEnrollment_Response_currentState,
         /**
          * @summary `transitionTime`.
+         * @description
+         *
+         * Time of the last transition used to derive current state.
+         *
+         * [ISO 9506-1:2003 §21.6.1.2.2]
+         *
          * @public
          * @readonly
          */

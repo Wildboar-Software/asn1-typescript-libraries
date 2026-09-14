@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceError_errorClass_cancel
  * @description
  * 
+ * Error Class CANCEL: problems with the Cancel service. Encoded as INTEGER when
+ * the `cancel` CBB is selected; otherwise the `cancel` Error Class alternative
+ * is NULL. ISO 9506-1:2003 §24.2.11; ISO 9506-2:2003 §7.4.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +38,10 @@ type ServiceError_errorClass_cancel = INTEGER;
 
 /**
  * @summary ServiceError_errorClass_cancel_other
+ * @description
+ *
+ * Reason other than those identified for CANCEL. ISO 9506-1:2003 §24.2.11.3.
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +50,10 @@ const ServiceError_errorClass_cancel_other: ServiceError_errorClass_cancel = 0; 
 
 /**
  * @summary ServiceError_errorClass_cancel_other
+ * @description
+ *
+ * Reason other than those identified for CANCEL. ISO 9506-1:2003 §24.2.11.3.
+ *
  * @constant
  * @type {number}
  */
@@ -50,6 +62,11 @@ const other: ServiceError_errorClass_cancel = ServiceError_errorClass_cancel_oth
 
 /**
  * @summary ServiceError_errorClass_cancel_invoke_id_unknown
+ * @description
+ *
+ * No confirmed request / protocol machine exists with the specified Invoke ID.
+ * ISO 9506-1:2003 §24.2.11.1.
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +75,11 @@ const ServiceError_errorClass_cancel_invoke_id_unknown: ServiceError_errorClass_
 
 /**
  * @summary ServiceError_errorClass_cancel_invoke_id_unknown
+ * @description
+ *
+ * No confirmed request / protocol machine exists with the specified Invoke ID.
+ * ISO 9506-1:2003 §24.2.11.1.
+ *
  * @constant
  * @type {number}
  */
@@ -66,6 +88,11 @@ const invoke_id_unknown: ServiceError_errorClass_cancel = ServiceError_errorClas
 
 /**
  * @summary ServiceError_errorClass_cancel_cancel_not_possible
+ * @description
+ *
+ * Cancel cannot be performed according to the service requirements.
+ * ISO 9506-1:2003 §24.2.11.2.
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +101,11 @@ const ServiceError_errorClass_cancel_cancel_not_possible: ServiceError_errorClas
 
 /**
  * @summary ServiceError_errorClass_cancel_cancel_not_possible
+ * @description
+ *
+ * Cancel cannot be performed according to the service requirements.
+ * ISO 9506-1:2003 §24.2.11.2.
+ *
  * @constant
  * @type {number}
  */

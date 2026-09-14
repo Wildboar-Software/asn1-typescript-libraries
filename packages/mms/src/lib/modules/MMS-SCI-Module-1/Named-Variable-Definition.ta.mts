@@ -19,6 +19,12 @@ import { Named_Variable_Definition_Details, _decode_Named_Variable_Definition_De
  * @summary Named_Variable_Definition
  * @description
  * 
+ * CHOICE of Standardized Name
+ * OID or inline Named Variable details in the SCI file. SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.1.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

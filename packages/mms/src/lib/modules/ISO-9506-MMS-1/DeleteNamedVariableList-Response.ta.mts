@@ -17,7 +17,10 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary DeleteNamedVariableList_Response
  * @description
- * 
+ *
+ * Result(+) of DeleteNamedVariableList.
+ * ISO 9506-1:2003 §14.14.1.2. ISO 9506-2:2003 §14.14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +36,22 @@ class DeleteNamedVariableList_Response {
     constructor (
         /**
          * @summary `numberMatched`.
+         * @description
+         *
+         * Named Variable Lists that matched the name
+         * specification. ISO 9506-1:2003 §14.14.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly numberMatched: Unsigned32,
         /**
          * @summary `numberDeleted`.
+         * @description
+         *
+         * Named Variable Lists actually deleted.
+         * ISO 9506-1:2003 §14.14.1.2.2.
+         *
          * @public
          * @readonly
          */

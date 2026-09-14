@@ -22,7 +22,20 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary AttachToEventCondition
  * @description
- * 
+ *
+ * Confirmed-service modifier: delay the requested service
+ * until the named Event Condition undergoes one of the
+ * specified transitions. Creates a `modifier` Event
+ * Enrollment (not `notification`; not alterable or
+ * deletable by the enrollment services). If
+ * `acceptableDelay` is zero, Result(-). Timeout yields
+ * Result(-) (acceptable delay expired) and deletes the
+ * enrollment. Disabled conditions do not notify; a
+ * transition into/out of disabled still fires this
+ * modifier if selected in `causingTransitions`.
+ *
+ * [ISO 9506-1:2003 §18.7] [ISO 9506-2:2003 §18.7]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,24 +53,55 @@ class AttachToEventCondition {
     constructor (
         /**
          * @summary `eventEnrollmentName`.
+         * @description
+         *
+         * `&name` of the modifier Event Enrollment to create.
+         * Unique among Event Enrollment names of the same
+         * scope.
+         *
+         * [ISO 9506-1:2003 §18.7.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventEnrollmentName: ObjectName,
         /**
          * @summary `eventConditionName`.
+         * @description
+         *
+         * Event Condition whose transitions release the
+         * delayed service (`&eventCondition` of the
+         * enrollment).
+         *
+         * [ISO 9506-1:2003 §18.7.1.1.2]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionName: ObjectName,
         /**
          * @summary `causingTransitions`.
+         * @description
+         *
+         * Set of Event Condition transitions that cause the
+         * delayed service to continue (`&ecTransitions`).
+         *
+         * [ISO 9506-1:2003 §18.7.1.1.3]
+         *
          * @public
          * @readonly
          */
         readonly causingTransitions: Transitions,
         /**
          * @summary `acceptableDelay`.
+         * @description
+         *
+         * Initial `&remainingDelay` in seconds. Omitted:
+         * wait forever. Zero: Result(-) immediately. Each
+         * modifier on a request may have a different delay.
+         *
+         * [ISO 9506-1:2003 §18.7.1.1.4]
+         *
          * @public
          * @readonly
          */

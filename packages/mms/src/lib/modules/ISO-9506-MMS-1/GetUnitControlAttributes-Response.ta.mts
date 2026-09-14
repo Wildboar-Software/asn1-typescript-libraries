@@ -17,7 +17,12 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary GetUnitControlAttributes_Response
  * @description
- * 
+ *
+ * Result(+) of GetUnitControlAttributes: names of Domains and
+ * Program Invocations referenced by the Unit Control.
+ * `getUCAttributes` in AdditionalService-Response.
+ * ISO 9506-1:2003 §13.11.1.2; ISO 9506-2:2003 §13.11.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,22 @@ class GetUnitControlAttributes_Response {
     constructor (
         /**
          * @summary `domains`.
+         * @description
+         *
+         * Names of Domains in the Unit Control `&Domains` field.
+         * ISO 9506-1:2003 §13.11.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly domains: Identifier[],
         /**
          * @summary `programInvocations`.
+         * @description
+         *
+         * Names of Program Invocations in `&ProgramInvocations`.
+         * ISO 9506-1:2003 §13.11.1.2.2.
+         *
          * @public
          * @readonly
          */

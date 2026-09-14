@@ -39,6 +39,12 @@ import { Event_Condition_List_instance, _decode_Event_Condition_List_instance, _
  * @summary Event_Condition_instance_definition_details
  * @description
  * 
+ * Inline
+ * Event Condition attributes in the SCI file. SCI configuration/initialization
+ * encoding (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003
+ * Annex
+ * B.1.12; ISO 9506-1:2003 §19.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -80,66 +86,119 @@ class Event_Condition_instance_definition_details {
     constructor (
         /**
          * @summary `accessControl`.
+         * @description
+         *
+         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly accessControl: Access_Control_List_instance,
         /**
          * @summary `ecClass`.
+         * @description
+         *
+         * network-triggered or monitored. ISO 9506-1:2003 §19.1.1.3; ISO
+         * 9506-2:2003 Annex B.1.12.
+         *
          * @public
          * @readonly
          */
         readonly ecClass: EC_Class,
         /**
          * @summary `ecState`.
+         * @description
+         *
+         * disabled, idle, or active. ISO 9506-1:2003 §19.1.1.4; ISO 9506-2:2003
+         * Annex B.1.12.
+         *
          * @public
          * @readonly
          */
         readonly ecState: EC_State,
         /**
          * @summary `priority`.
+         * @description
+         *
+         * 0..127 (0 highest, 64 normal). ISO 9506-1:2003 §19.1.1.5; ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly priority: Priority,
         /**
          * @summary `severity`.
+         * @description
+         *
+         * 0..127 (0 most severe, 64 normal). ISO 9506-1:2003 §19.1.1.6; ISO
+         * 9506-2:2003 Annex B.1.12.
+         *
          * @public
          * @readonly
          */
         readonly severity: Severity,
         /**
          * @summary `eventEnrollments`.
+         * @description
+         *
+         * Configured Event Enrollment instances. ISO 9506-2:2003 Annex B.1.14.
+         *
          * @public
          * @readonly
          */
         readonly eventEnrollments: Event_Enrollment_instance[],
         /**
          * @summary `enabled`.
+         * @description
+         *
+         * Whether monitored-variable changes are processed. ISO 9506-1:2003
+         * §19.1.1.8; ISO 9506-2:2003 Annex B.1.12.
+         *
          * @public
          * @readonly
          */
         readonly enabled: OPTIONAL<BOOLEAN>,
         /**
          * @summary `alarmSummaryReports`.
+         * @description
+         *
+         * Include in GetAlarmSummary regardless of state. ISO 9506-1:2003
+         * §19.1.1.9; ISO 9506-2:2003 Annex B.1.12.
+         *
          * @public
          * @readonly
          */
         readonly alarmSummaryReports: OPTIONAL<BOOLEAN>,
         /**
          * @summary `monitoredVariable`.
+         * @description
+         *
+         * Named, unnamed, or unspecified. ISO 9506-1:2003 §19.1.1.10; ISO
+         * 9506-2:2003 Annex B.1.12.
+         *
          * @public
          * @readonly
          */
         readonly monitoredVariable: OPTIONAL<Event_Condition_instance_definition_details_monitoredVariable>,
         /**
          * @summary `evaluationInterval`.
+         * @description
+         *
+         * Max ms between &ecState evaluations. ISO 9506-1:2003 §19.1.1.11; ISO
+         * 9506-2:2003 Annex B.1.12.
+         *
          * @public
          * @readonly
          */
         readonly evaluationInterval: OPTIONAL<INTEGER>,
         /**
          * @summary `displayEnhancement`.
+         * @description
+         *
+         * text / number / none (cspi, des/dei). ISO 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
@@ -152,6 +211,11 @@ class Event_Condition_instance_definition_details {
         readonly group_Priority_Override: OPTIONAL<Event_Condition_instance_definition_details_group_Priority_Override>,
         /**
          * @summary `referencingEventConditionLists`.
+         * @description
+         *
+         * ECLs that include this condition. ISO 9506-1:2003 §19.1.1; ISO
+         * 9506-2:2003 Annex B.1.12.
+         *
          * @public
          * @readonly
          */

@@ -34,7 +34,11 @@ import { LoadUnitControlFromFile_Error, _decode_LoadUnitControlFromFile_Error, _
 /**
  * @summary AdditionalService_Error
  * @description
- * 
+ *
+ * Service-specific error information for AdditionalService Result(−). Present
+ * only for those additional services that define it (ISO 9506-1:2003 Annex B;
+ * ISO 9506-2:2003 §7.4.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

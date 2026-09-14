@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceError_errorClass_vmd_state
  * @description
  * 
+ * Error Class VMD-STATE: the VMD state does not allow the requested service.
+ * ISO 9506-1:2003 §24.2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +39,10 @@ type ServiceError_errorClass_vmd_state = INTEGER;
 
 /**
  * @summary ServiceError_errorClass_vmd_state_other
+ * @description
+ *
+ * Reason other than those identified for VMD-STATE. ISO 9506-1:2003 §24.2.1.5.
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +51,10 @@ const ServiceError_errorClass_vmd_state_other: ServiceError_errorClass_vmd_state
 
 /**
  * @summary ServiceError_errorClass_vmd_state_other
+ * @description
+ *
+ * Reason other than those identified for VMD-STATE. ISO 9506-1:2003 §24.2.1.5.
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +63,11 @@ const other: ServiceError_errorClass_vmd_state = ServiceError_errorClass_vmd_sta
 
 /**
  * @summary ServiceError_errorClass_vmd_state_vmd_state_conflict
+ * @description
+ *
+ * The request would alter VMD state in a way that conflicts with the current
+ * state. ISO 9506-1:2003 §24.2.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +76,11 @@ const ServiceError_errorClass_vmd_state_vmd_state_conflict: ServiceError_errorCl
 
 /**
  * @summary ServiceError_errorClass_vmd_state_vmd_state_conflict
+ * @description
+ *
+ * The request would alter VMD state in a way that conflicts with the current
+ * state. ISO 9506-1:2003 §24.2.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +89,11 @@ const vmd_state_conflict: ServiceError_errorClass_vmd_state = ServiceError_error
 
 /**
  * @summary ServiceError_errorClass_vmd_state_vmd_operational_problem
+ * @description
+ *
+ * The request may not be honoured because of an operational problem with the
+ * VMD. ISO 9506-1:2003 §24.2.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +102,11 @@ const ServiceError_errorClass_vmd_state_vmd_operational_problem: ServiceError_er
 
 /**
  * @summary ServiceError_errorClass_vmd_state_vmd_operational_problem
+ * @description
+ *
+ * The request may not be honoured because of an operational problem with the
+ * VMD. ISO 9506-1:2003 §24.2.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +115,11 @@ const vmd_operational_problem: ServiceError_errorClass_vmd_state = ServiceError_
 
 /**
  * @summary ServiceError_errorClass_vmd_state_domain_transfer_problem
+ * @description
+ *
+ * Load Data contains an inconsistency that prevents it from being used.
+ * ISO 9506-1:2003 §24.2.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +128,11 @@ const ServiceError_errorClass_vmd_state_domain_transfer_problem: ServiceError_er
 
 /**
  * @summary ServiceError_errorClass_vmd_state_domain_transfer_problem
+ * @description
+ *
+ * Load Data contains an inconsistency that prevents it from being used.
+ * ISO 9506-1:2003 §24.2.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +141,11 @@ const domain_transfer_problem: ServiceError_errorClass_vmd_state = ServiceError_
 
 /**
  * @summary ServiceError_errorClass_vmd_state_state_machine_id_invalid
+ * @description
+ *
+ * No state machine is associated with the given state-machine ID.
+ * ISO 9506-1:2003 §24.2.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +154,11 @@ const ServiceError_errorClass_vmd_state_state_machine_id_invalid: ServiceError_e
 
 /**
  * @summary ServiceError_errorClass_vmd_state_state_machine_id_invalid
+ * @description
+ *
+ * No state machine is associated with the given state-machine ID.
+ * ISO 9506-1:2003 §24.2.1.4.
+ *
  * @constant
  * @type {number}
  */

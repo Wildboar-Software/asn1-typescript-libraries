@@ -19,7 +19,18 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary VariableAccessSpecification
  * @description
- * 
+ *
+ * How a Read, Write, or InformationReport names the
+ * variables to access: an enumerated list, or a Named
+ * Variable List (`vlis` CBB).
+ * ISO 9506-1:2003 §14.5.1. ISO 9506-2:2003 §14.5.1.
+ *
+ * - `listOfVariable`: one or more Variable
+ *   Specifications, each with optional Alternate Access
+ *   (`valt` CBB).
+ * - `variableListName`: `&name` of a Named Variable List
+ *   (`vlis` CBB).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

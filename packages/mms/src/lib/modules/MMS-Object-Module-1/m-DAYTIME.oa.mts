@@ -26,6 +26,11 @@ import { type NAMED_VARIABLE, anythingElse } from "../MMS-Object-Module-1/NAMED-
  * @summary m_DAYTIME
  * @description
  * 
+ * MMS Standardized Name `M_DAYTIME` (prefix
+ * `M_`). VMD-specific Named Variable (GeneralizedTime): current time of
+ * day, initialized to VMD start time. ACL `M_NonDeletable`.
+ * ISO 9506-1:2003 §25.3.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

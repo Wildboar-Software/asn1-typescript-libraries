@@ -21,7 +21,11 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary ReportJournalStatus_Response
  * @description
- * 
+ *
+ * Current entry count, whether DeleteJournal may delete the
+ * Journal, and optional ACL. ISO 9506-1:2003 §23.5.1.2.
+ * ISO 9506-2:2003 §23.5.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +44,34 @@ class ReportJournalStatus_Response {
     constructor (
         /**
          * @summary `currentEntries`.
+         * @description
+         *
+         * How many Journal Entry objects the Journal currently
+         * references. ISO 9506-1:2003 §23.5.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly currentEntries: Unsigned32,
         /**
          * @summary `mmsDeletable`.
+         * @description
+         *
+         * True if DeleteJournal may delete this Journal.
+         * ISO 9506-1:2003 §23.5.1.2.2.
+         *
          * @public
          * @readonly
          */
         readonly mmsDeletable: BOOLEAN,
         /**
          * @summary `accessControlList`.
+         * @description
+         *
+         * ACL name. Present iff CBB `aco` was negotiated. Shall not
+         * appear in minor version one or two. ISO 9506-1:2003
+         * §23.5.1.2.3. ISO 9506-2:2003 §23.5.2.1.
+         *
          * @public
          * @readonly
          */

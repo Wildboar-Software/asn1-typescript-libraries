@@ -19,6 +19,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProgramInvocationState
  * @description
  * 
+ * Principal PI states, plus
+ * non-existent before creation. idle = ready but not started; running =
+ * executing; stopped = paused mid-execution; unrunnable = finished and
+ * not reusable. starting/stopping/resuming/resetting are transitory
+ * service states. ISO 9506-1:2003 §12.1.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,6 +46,10 @@ type ProgramInvocationState = INTEGER;
 
 /**
  * @summary ProgramInvocationState_non_existent
+ * @description
+ *
+ * Before the PI is created. ISO 9506-1:2003 §12.1.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -48,6 +58,10 @@ const ProgramInvocationState_non_existent: ProgramInvocationState = 0; /* LONG_N
 
 /**
  * @summary ProgramInvocationState_non_existent
+ * @description
+ *
+ * Before the PI is created. ISO 9506-1:2003 §12.1.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -56,6 +70,11 @@ const non_existent: ProgramInvocationState = ProgramInvocationState_non_existent
 
 /**
  * @summary ProgramInvocationState_unrunnable
+ * @description
+ *
+ * May no longer execute but is not yet deleted (non-reusable completion, MMS,
+ * or local). ISO 9506-1:2003 §12.1.1.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -64,6 +83,11 @@ const ProgramInvocationState_unrunnable: ProgramInvocationState = 1; /* LONG_NAM
 
 /**
  * @summary ProgramInvocationState_unrunnable
+ * @description
+ *
+ * May no longer execute but is not yet deleted (non-reusable completion, MMS,
+ * or local). ISO 9506-1:2003 §12.1.1.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -72,6 +96,10 @@ const unrunnable: ProgramInvocationState = ProgramInvocationState_unrunnable; /*
 
 /**
  * @summary ProgramInvocationState_idle
+ * @description
+ *
+ * Ready for execution but not yet started. ISO 9506-1:2003 §12.1.1.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +108,10 @@ const ProgramInvocationState_idle: ProgramInvocationState = 2; /* LONG_NAMED_INT
 
 /**
  * @summary ProgramInvocationState_idle
+ * @description
+ *
+ * Ready for execution but not yet started. ISO 9506-1:2003 §12.1.1.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -88,6 +120,11 @@ const idle: ProgramInvocationState = ProgramInvocationState_idle; /* SHORT_NAMED
 
 /**
  * @summary ProgramInvocationState_running
+ * @description
+ *
+ * Executing; usually changing subordinate Domain contents. ISO 9506-1:2003
+ * §12.1.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -96,6 +133,11 @@ const ProgramInvocationState_running: ProgramInvocationState = 3; /* LONG_NAMED_
 
 /**
  * @summary ProgramInvocationState_running
+ * @description
+ *
+ * Executing; usually changing subordinate Domain contents. ISO 9506-1:2003
+ * §12.1.1.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -104,6 +146,11 @@ const running: ProgramInvocationState = ProgramInvocationState_running; /* SHORT
 
 /**
  * @summary ProgramInvocationState_stopped
+ * @description
+ *
+ * Paused mid-execution; Domains no longer changing due to this PI. ISO
+ * 9506-1:2003 §12.1.1.2.4.
+ *
  * @constant
  * @type {number}
  */
@@ -112,6 +159,11 @@ const ProgramInvocationState_stopped: ProgramInvocationState = 4; /* LONG_NAMED_
 
 /**
  * @summary ProgramInvocationState_stopped
+ * @description
+ *
+ * Paused mid-execution; Domains no longer changing due to this PI. ISO
+ * 9506-1:2003 §12.1.1.2.4.
+ *
  * @constant
  * @type {number}
  */
@@ -120,6 +172,11 @@ const stopped: ProgramInvocationState = ProgramInvocationState_stopped; /* SHORT
 
 /**
  * @summary ProgramInvocationState_starting
+ * @description
+ *
+ * Transitory idle→running (Start indication until response). ISO 9506-1:2003
+ * §12.1.1.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -128,6 +185,11 @@ const ProgramInvocationState_starting: ProgramInvocationState = 5; /* LONG_NAMED
 
 /**
  * @summary ProgramInvocationState_starting
+ * @description
+ *
+ * Transitory idle→running (Start indication until response). ISO 9506-1:2003
+ * §12.1.1.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -136,6 +198,11 @@ const starting: ProgramInvocationState = ProgramInvocationState_starting; /* SHO
 
 /**
  * @summary ProgramInvocationState_stopping
+ * @description
+ *
+ * Transitory running→stopped (Stop indication until response). ISO 9506-1:2003
+ * §12.1.1.2.6.
+ *
  * @constant
  * @type {number}
  */
@@ -144,6 +211,11 @@ const ProgramInvocationState_stopping: ProgramInvocationState = 6; /* LONG_NAMED
 
 /**
  * @summary ProgramInvocationState_stopping
+ * @description
+ *
+ * Transitory running→stopped (Stop indication until response). ISO 9506-1:2003
+ * §12.1.1.2.6.
+ *
  * @constant
  * @type {number}
  */
@@ -152,6 +224,11 @@ const stopping: ProgramInvocationState = ProgramInvocationState_stopping; /* SHO
 
 /**
  * @summary ProgramInvocationState_resuming
+ * @description
+ *
+ * Transitory stopped→running (Resume indication until response). ISO
+ * 9506-1:2003 §12.1.1.2.7.
+ *
  * @constant
  * @type {number}
  */
@@ -160,6 +237,11 @@ const ProgramInvocationState_resuming: ProgramInvocationState = 7; /* LONG_NAMED
 
 /**
  * @summary ProgramInvocationState_resuming
+ * @description
+ *
+ * Transitory stopped→running (Resume indication until response). ISO
+ * 9506-1:2003 §12.1.1.2.7.
+ *
  * @constant
  * @type {number}
  */
@@ -168,6 +250,11 @@ const resuming: ProgramInvocationState = ProgramInvocationState_resuming; /* SHO
 
 /**
  * @summary ProgramInvocationState_resetting
+ * @description
+ *
+ * Transitory stopped→idle (Reset indication until response). ISO 9506-1:2003
+ * §12.1.1.2.8.
+ *
  * @constant
  * @type {number}
  */
@@ -176,6 +263,11 @@ const ProgramInvocationState_resetting: ProgramInvocationState = 8; /* LONG_NAME
 
 /**
  * @summary ProgramInvocationState_resetting
+ * @description
+ *
+ * Transitory stopped→idle (Reset indication until response). ISO 9506-1:2003
+ * §12.1.1.2.8.
+ *
  * @constant
  * @type {number}
  */

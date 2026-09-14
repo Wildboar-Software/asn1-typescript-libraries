@@ -17,7 +17,12 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary DeleteEventAction_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): count of candidates not deleted.
+ *
+ * [ISO 9506-1:2003 §20.3.1.2.1]
+ * [ISO 9506-2:2003 §20.3.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

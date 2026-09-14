@@ -19,7 +19,15 @@ import { ObjectName_domain_specific, _decode_ObjectName_domain_specific, _encode
 /**
  * @summary ObjectName
  * @description
- * 
+ *
+ * Named-object reference. Name is unique within its scope and object class.
+ * `vmd-specific`: visible on every association, persists after the association.
+ * `domain-specific`: unique within the named Domain (two-level name).
+ * `aa-specific`: visible only on the defining association and deleted when it
+ * ends, unless deleted earlier (ISO 9506-1:2003 §7.4–7.5;
+ * ISO 9506-2:2003 §7.5.3). Not every class permits every scope
+ * (ISO 9506-1:2003 Table 7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -26,6 +26,11 @@ import { type NAMED_VARIABLE, anythingElse } from "../MMS-Object-Module-1/NAMED-
  * @summary m_ELT
  * @description
  * 
+ * MMS Standardized Name `M_ELT` (prefix `M_`).
+ * VMD-specific Named Variable (INTEGER 32): seconds of continuous
+ * operation since last power reset. ACL `M_ReadOnly`. ISO 9506-1:2003
+ * §25.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

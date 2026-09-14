@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AlarmSummary_unacknowledgedState
  * @description
- * 
+ *
+ * Acknowledgement status of Event Enrollments that reference
+ * this Event Condition, for GetAlarmSummary.
+ *
+ * [ISO 9506-1:2003 §18.5.1.2.1.5]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +40,12 @@ type AlarmSummary_unacknowledgedState = INTEGER;
 
 /**
  * @summary AlarmSummary_unacknowledgedState_none
+ * @description
+ *
+ * No Event Enrollment has an acknowledgement outstanding.
+ *
+ * [ISO 9506-1:2003 §18.5.1.2.1.5]
+ *
  * @constant
  * @type {number}
  */
@@ -43,6 +54,12 @@ const AlarmSummary_unacknowledgedState_none: AlarmSummary_unacknowledgedState = 
 
 /**
  * @summary AlarmSummary_unacknowledgedState_none
+ * @description
+ *
+ * Short name of {@link AlarmSummary_unacknowledgedState_none}.
+ *
+ * [ISO 9506-1:2003 §18.5.1.2.1.5]
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +68,13 @@ const none: AlarmSummary_unacknowledgedState = AlarmSummary_unacknowledgedState_
 
 /**
  * @summary AlarmSummary_unacknowledgedState_active
+ * @description
+ *
+ * At least one enrollment has an outstanding ack for the
+ * most recent transition to `active`.
+ *
+ * [ISO 9506-1:2003 §18.5.1.2.1.5]
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +83,12 @@ const AlarmSummary_unacknowledgedState_active: AlarmSummary_unacknowledgedState 
 
 /**
  * @summary AlarmSummary_unacknowledgedState_active
+ * @description
+ *
+ * Short name of {@link AlarmSummary_unacknowledgedState_active}.
+ *
+ * [ISO 9506-1:2003 §18.5.1.2.1.5]
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +97,13 @@ const active: AlarmSummary_unacknowledgedState = AlarmSummary_unacknowledgedStat
 
 /**
  * @summary AlarmSummary_unacknowledgedState_idle
+ * @description
+ *
+ * At least one enrollment has an outstanding ack for the
+ * most recent transition to `idle`.
+ *
+ * [ISO 9506-1:2003 §18.5.1.2.1.5]
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +112,12 @@ const AlarmSummary_unacknowledgedState_idle: AlarmSummary_unacknowledgedState = 
 
 /**
  * @summary AlarmSummary_unacknowledgedState_idle
+ * @description
+ *
+ * Short name of {@link AlarmSummary_unacknowledgedState_idle}.
+ *
+ * [ISO 9506-1:2003 §18.5.1.2.1.5]
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +126,13 @@ const idle: AlarmSummary_unacknowledgedState = AlarmSummary_unacknowledgedState_
 
 /**
  * @summary AlarmSummary_unacknowledgedState_both
+ * @description
+ *
+ * Outstanding acks for both the most recent `active` and
+ * `idle` transitions (on one or more enrollments).
+ *
+ * [ISO 9506-1:2003 §18.5.1.2.1.5]
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +141,12 @@ const AlarmSummary_unacknowledgedState_both: AlarmSummary_unacknowledgedState = 
 
 /**
  * @summary AlarmSummary_unacknowledgedState_both
+ * @description
+ *
+ * Short name of {@link AlarmSummary_unacknowledgedState_both}.
+ *
+ * [ISO 9506-1:2003 §18.5.1.2.1.5]
+ *
  * @constant
  * @type {number}
  */

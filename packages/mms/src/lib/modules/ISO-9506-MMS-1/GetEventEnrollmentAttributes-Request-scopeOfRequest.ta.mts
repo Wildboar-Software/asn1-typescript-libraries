@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest
  * @description
- * 
+ *
+ * Scope of GetEventEnrollmentAttributes. Default `client`.
+ *
+ * [ISO 9506-1:2003 §21.4.1.1.1]
+ * [ISO 9506-2:2003 §21.4.1.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +40,13 @@ type GetEventEnrollmentAttributes_Request_scopeOfRequest = INTEGER;
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_specific
+ * @description
+ *
+ * Named list of Event Enrollment objects.
+ *
+ * [ISO 9506-1:2003 §21.4.1.1.1]
+ * [ISO 9506-2:2003 §21.4.1.1]
+ *
  * @constant
  * @type {number}
  */
@@ -43,6 +55,12 @@ const GetEventEnrollmentAttributes_Request_scopeOfRequest_specific: GetEventEnro
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_specific
+ * @description
+ *
+ * Short name of GetEventEnrollmentAttributes_Request_scopeOfRequest_specific.
+ *
+ * [ISO 9506-1:2003 §21.4.1.1.1]
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +69,13 @@ const specific: GetEventEnrollmentAttributes_Request_scopeOfRequest = GetEventEn
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_client
+ * @description
+ *
+ * Enrollments of a client application (default).
+ *
+ * [ISO 9506-1:2003 §21.4.1.1.1]
+ * [ISO 9506-2:2003 §21.4.1.1]
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +84,12 @@ const GetEventEnrollmentAttributes_Request_scopeOfRequest_client: GetEventEnroll
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_client
+ * @description
+ *
+ * Short name of GetEventEnrollmentAttributes_Request_scopeOfRequest_client.
+ *
+ * [ISO 9506-1:2003 §21.4.1.1.1]
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +98,13 @@ const client: GetEventEnrollmentAttributes_Request_scopeOfRequest = GetEventEnro
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_ec
+ * @description
+ *
+ * Enrollments of a named Event Condition.
+ *
+ * [ISO 9506-1:2003 §21.4.1.1.1]
+ * [ISO 9506-2:2003 §21.4.1.1]
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +113,12 @@ const GetEventEnrollmentAttributes_Request_scopeOfRequest_ec: GetEventEnrollment
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_ec
+ * @description
+ *
+ * Short name of GetEventEnrollmentAttributes_Request_scopeOfRequest_ec.
+ *
+ * [ISO 9506-1:2003 §21.4.1.1.1]
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +127,13 @@ const ec: GetEventEnrollmentAttributes_Request_scopeOfRequest = GetEventEnrollme
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_ea
+ * @description
+ *
+ * Enrollments of a named Event Action.
+ *
+ * [ISO 9506-1:2003 §21.4.1.1.1]
+ * [ISO 9506-2:2003 §21.4.1.1]
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +142,12 @@ const GetEventEnrollmentAttributes_Request_scopeOfRequest_ea: GetEventEnrollment
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_ea
+ * @description
+ *
+ * Short name of GetEventEnrollmentAttributes_Request_scopeOfRequest_ea.
+ *
+ * [ISO 9506-1:2003 §21.4.1.1.1]
+ *
  * @constant
  * @type {number}
  */

@@ -19,6 +19,11 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
  * @summary AccessCondition_user
  * @description
  * 
+ * USER arm of AccessCondition:
+ * match a specific ApplicationReference, or NONE (succeeds only for
+ * Event-Action transactions in the VMD's &EATransactions set).
+ * ISO 9506-1:2003 §9.1.2, §9.1.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

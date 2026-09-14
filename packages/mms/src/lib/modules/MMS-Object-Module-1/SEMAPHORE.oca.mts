@@ -25,6 +25,12 @@ import { SEMAPHORE_ENTRY } from "../MMS-Object-Module-1/SEMAPHORE-ENTRY.oca.mjs"
  * @summary SEMAPHORE
  * @description
  * 
+ * Queue processor with owners and requesters
+ * (Semaphore-Entry objects). token = identical tokens with a max owner
+ * count; pool = named tokens mapped to real resources (predefined only).
+ * Always has a matching network-triggered Event Condition of the same
+ * name. ISO 9506-1:2003 §16.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,38 +72,78 @@ interface SEMAPHORE {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * VMD-specific semaphore name. ISO 9506-1:2003 §16.1.1.1.
+     *
      */
     readonly "&name"?: ObjectName;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating TakeControl, delete, and ACL change. ISO 9506-1:2003
+     * §16.1.1.2.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &class
+     * @description
+     *
+     * token or pool. ISO 9506-1:2003 §16.1.1.3.
+     *
      */
     readonly "&class"?: SEMAPHORE_class;
     /**
      * @summary &numberOfTokens
+     * @description
+     *
+     * Token class: maximum owners. ISO 9506-1:2003 §16.1.1.4.
+     *
      */
     readonly "&numberOfTokens"?: INTEGER;
     /**
      * @summary &numberOfOwnedTokens
+     * @description
+     *
+     * Token class: currently owned tokens. ISO 9506-1:2003 §16.1.1.5.
+     *
      */
     readonly "&numberOfOwnedTokens"?: INTEGER;
     /**
      * @summary &NamedTokens
+     * @description
+     *
+     * Pool class: named tokens. ISO 9506-1:2003 §16.1.1.6.
+     *
      */
     readonly "&NamedTokens"?: NAMED_TOKEN[];
     /**
      * @summary &Owners
+     * @description
+     *
+     * Semaphore-Entry objects that own this semaphore. ISO 9506-1:2003
+     * §16.1.1.7.
+     *
      */
     readonly "&Owners"?: SEMAPHORE_ENTRY[];
     /**
      * @summary &Requesters
+     * @description
+     *
+     * Semaphore-Entry objects waiting for control. ISO 9506-1:2003 §16.1.1.8.
+     *
      */
     readonly "&Requesters"?: SEMAPHORE_ENTRY[];
     /**
      * @summary &eventCondition
+     * @description
+     *
+     * Matching network-triggered Event Condition of the same name; delete =
+     * never; disabled; normalPriority/ normalSeverity. ISO 9506-1:2003
+     * §16.1.1.9.
+     *
      */
     readonly "&eventCondition"?: ObjectName;
 }
@@ -105,6 +151,12 @@ interface SEMAPHORE {
 /**
  * @summary SEMAPHORE_class
  * @description
+ *
+ * Queue processor with owners and requesters
+ * (Semaphore-Entry objects). token = identical tokens with a max owner
+ * count; pool = named tokens mapped to real resources (predefined only).
+ * Always has a matching network-triggered Event Condition of the same
+ * name. ISO 9506-1:2003 §16.1.1.
  *
  * ### ASN.1 Definition:
  *

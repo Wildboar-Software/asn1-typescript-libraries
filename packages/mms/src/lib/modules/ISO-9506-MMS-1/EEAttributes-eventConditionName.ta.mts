@@ -18,7 +18,13 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary EEAttributes_eventConditionName
  * @description
- * 
+ *
+ * `eventCondition` is the Event Condition name. `undefined` if the object is
+ * unavailable (Domain delete or AA loss).
+ *
+ * [ISO 9506-1:2003 §21.4.1.2.1.2]
+ * [ISO 9506-2:2003 §21.4.2.1.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

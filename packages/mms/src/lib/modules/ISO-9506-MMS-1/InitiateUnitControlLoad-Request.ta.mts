@@ -18,6 +18,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary InitiateUnitControlLoad_Request
  * @description
  * 
+ * Client request to create a Unit Control object and start loading. Name must
+ * be unused. Server then issues UnitControlLoadSegment until `moreFollows` is
+ * false, then completes this confirmed service. ISO 9506-1:2003 §13.3. ISO 9506-2:2003 §13.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

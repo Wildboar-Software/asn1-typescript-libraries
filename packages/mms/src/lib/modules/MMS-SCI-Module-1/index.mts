@@ -1,7 +1,11 @@
 /**
  * @description
  *
- * ASN.1 module `MMS-SCI-Module-1`.
+ * ASN.1 module `MMS-SCI-Module-1`: the ISO 9506-2:2003 Annex B
+ * abstract format for Configuration and Initialization. `SCI-Information`
+ * is a file/record encoding of a VMD's configured objects (`VMD-File`)
+ * and negotiated CBBs (`Service-and-Parameter-CBBs`). It is not a
+ * runtime MMS PDU.
  */
 export * from "./Access-Control-List-instance-definition-details.ta.mjs";
 export * from "./Access-Control-List-instance-definition.ta.mjs";

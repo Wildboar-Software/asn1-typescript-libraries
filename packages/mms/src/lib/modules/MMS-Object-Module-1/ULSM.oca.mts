@@ -21,6 +21,10 @@ import { ULState, _decode_ULState, _encode_ULState } from "../MMS-Object-Module-
  * @summary ULSM
  * @description
  * 
+ * Upload State Machine: one Domain-upload sequence
+ * on an application association. Identified by &ulsmID unique on that
+ * AA. ISO 9506-1:2003 §11.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,14 +58,26 @@ interface ULSM {
     }>;
     /**
      * @summary &ulsmID
+     * @description
+     *
+     * Upload id unique among ULSMs on this AA. ISO 9506-1:2003 §11.1.2.1.
+     *
      */
     readonly "&ulsmID"?: INTEGER;
     /**
      * @summary &domain
+     * @description
+     *
+     * Domain being uploaded. ISO 9506-1:2003 §11.1.2.2.
+     *
      */
     readonly "&domain"?: Identifier;
     /**
      * @summary &ulsmState
+     * @description
+     *
+     * State of this upload sequence. ISO 9506-1:2003 §11.1.2.3.
+     *
      */
     readonly "&ulsmState"?: ULState;
 };

@@ -21,6 +21,10 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  * @summary EventTime
  * @description
  * 
+ * Time of an event-related instant: TimeOfDay,
+ * a Time Sequence Identifier, or undefined (never occurred).
+ * ISO 9506-1:2003 §19.1.1.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

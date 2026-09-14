@@ -25,7 +25,14 @@ import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-M
 /**
  * @summary EventConditionStatus
  * @description
- * 
+ *
+ * One ReportEventConditionListStatus entry. Same fields as
+ * ReportEventConditionStatus. `enabled` omitted for network-triggered.
+ * Disabled monitored conditions do not notify.
+ *
+ * [ISO 9506-1:2003 §22.7.1.2.1]
+ * [ISO 9506-2:2003 §22.7]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,36 +52,72 @@ class EventConditionStatus {
     constructor (
         /**
          * @summary `eventConditionName`.
+         * @description
+         *
+         * Member Event Condition `&name`.
+         *
+         * [ISO 9506-2:2003 §22.7]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionName: ObjectName,
         /**
          * @summary `currentState`.
+         * @description
+         *
+         * `&ecState`.
+         *
+         * [ISO 9506-1:2003 §22.7.1.2.1.1]
+         *
          * @public
          * @readonly
          */
         readonly currentState: EC_State,
         /**
          * @summary `numberOfEventEnrollments`.
+         * @description
+         *
+         * Count of `&EventEnrollments`.
+         *
+         * [ISO 9506-1:2003 §22.7.1.2.1.2]
+         *
          * @public
          * @readonly
          */
         readonly numberOfEventEnrollments: Unsigned32,
         /**
          * @summary `enabled`.
+         * @description
+         *
+         * Monitored `&enabled`. Omitted for network-triggered.
+         *
+         * [ISO 9506-1:2003 §22.7.1.2.1.3]
+         *
          * @public
          * @readonly
          */
         readonly enabled: OPTIONAL<BOOLEAN>,
         /**
          * @summary `timeOfLastTransitionToActive`.
+         * @description
+         *
+         * Monitored `&timeToActive` if not undefined.
+         *
+         * [ISO 9506-1:2003 §22.7.1.2.1.4]
+         *
          * @public
          * @readonly
          */
         readonly timeOfLastTransitionToActive: OPTIONAL<EventTime>,
         /**
          * @summary `timeOfLastTransitionToIdle`.
+         * @description
+         *
+         * Monitored `&timeToIdle` if not undefined.
+         *
+         * [ISO 9506-1:2003 §22.7.1.2.1.5]
+         *
          * @public
          * @readonly
          */

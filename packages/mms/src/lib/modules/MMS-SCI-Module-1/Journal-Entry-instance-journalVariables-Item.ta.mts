@@ -20,6 +20,11 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
  * @summary Journal_Entry_instance_journalVariables_Item
  * @description
  * 
+ * One
+ * tagged Journal Variable. SCI configuration/initialization encoding (ISO
+ * 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.1.16;
+ * ISO 9506-1:2003 §23.1.2.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,22 @@ class Journal_Entry_instance_journalVariables_Item {
     constructor (
         /**
          * @summary `variableTag`.
+         * @description
+         *
+         * Variable tag, length ≤ 255. ISO 9506-1:2003 §23.1.2.9; ISO
+         * 9506-2:2003 Annex B.1.16.
+         *
          * @public
          * @readonly
          */
         readonly variableTag: MMS255String,
         /**
          * @summary `valueSpecification`.
+         * @description
+         *
+         * Recorded Data value. ISO 9506-1:2003 §23.1.2.9; ISO 9506-2:2003 Annex
+         * B.1.16.
+         *
          * @public
          * @readonly
          */

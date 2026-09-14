@@ -19,6 +19,10 @@ import { ChangeAccessControl_Request_scopeOfChange_listOfObjects, _decode_Change
  * @summary ChangeAccessControl_Request_scopeOfChange
  * @description
  * 
+ * Scope of Change for ChangeAccessControl. `vMDOnly` changes the VMD's
+ * `&accessControl`. `listOfObjects` changes named objects of one class.
+ * ISO 9506-1:2003 §9.7.1.1.1–§9.7.1.1.2; ISO 9506-2:2003 §9.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

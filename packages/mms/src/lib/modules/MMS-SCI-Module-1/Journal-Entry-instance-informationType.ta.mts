@@ -17,6 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Journal_Entry_instance_informationType
  * @description
  * 
+ * annotation,
+ * event-data, or data. SCI configuration/initialization encoding (ISO
+ * 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.1.16;
+ * ISO 9506-1:2003 §23.1.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,6 +45,11 @@ enum _enum_for_Journal_Entry_instance_informationType {
  * @summary Journal_Entry_instance_informationType
  * @description
  * 
+ * annotation,
+ * event-data, or data. SCI configuration/initialization encoding (ISO
+ * 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.1.16;
+ * ISO 9506-1:2003 §23.1.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,6 +69,11 @@ type Journal_Entry_instance_informationType = _enum_for_Journal_Entry_instance_i
  * @summary Journal_Entry_instance_informationType
  * @description
  * 
+ * annotation,
+ * event-data, or data. SCI configuration/initialization encoding (ISO
+ * 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.1.16;
+ * ISO 9506-1:2003 §23.1.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,6 +91,10 @@ const Journal_Entry_instance_informationType = _enum_for_Journal_Entry_instance_
 
 /**
  * @summary Journal_Entry_instance_informationType_annotation
+ * @description
+ *
+ * Text comment. ISO 9506-1:2003 §23.1.2.6; ISO 9506-2:2003 Annex B.1.16.
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +103,10 @@ const Journal_Entry_instance_informationType_annotation: Journal_Entry_instance_
 
 /**
  * @summary annotation
+ * @description
+ *
+ * Text comment. ISO 9506-1:2003 §23.1.2.6; ISO 9506-2:2003 Annex B.1.16.
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +115,11 @@ const annotation: Journal_Entry_instance_informationType = Journal_Entry_instanc
 
 /**
  * @summary Journal_Entry_instance_informationType_event_data
+ * @description
+ *
+ * Event occurrence plus optional variables. ISO 9506-1:2003 §23.1.2.6; ISO
+ * 9506-2:2003 Annex B.1.16.
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +128,11 @@ const Journal_Entry_instance_informationType_event_data: Journal_Entry_instance_
 
 /**
  * @summary event_data
+ * @description
+ *
+ * Event occurrence plus optional variables. ISO 9506-1:2003 §23.1.2.6; ISO
+ * 9506-2:2003 Annex B.1.16.
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +141,11 @@ const event_data: Journal_Entry_instance_informationType = Journal_Entry_instanc
 
 /**
  * @summary Journal_Entry_instance_informationType_data
+ * @description
+ *
+ * Variable values only. ISO 9506-1:2003 §23.1.2.6; ISO 9506-2:2003 Annex
+ * B.1.16.
+ *
  * @constant
  * @type {number}
  */
@@ -116,6 +154,11 @@ const Journal_Entry_instance_informationType_data: Journal_Entry_instance_inform
 
 /**
  * @summary data
+ * @description
+ *
+ * Variable values only. ISO 9506-1:2003 §23.1.2.6; ISO 9506-2:2003 Annex
+ * B.1.16.
+ *
  * @constant
  * @type {number}
  */

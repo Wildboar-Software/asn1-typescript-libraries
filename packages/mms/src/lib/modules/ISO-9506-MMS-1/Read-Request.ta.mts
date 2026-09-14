@@ -19,7 +19,13 @@ import { VariableAccessSpecification, _decode_VariableAccessSpecification, _enco
 /**
  * @summary Read_Request
  * @description
- * 
+ *
+ * Confirmed request that the server return values of one or
+ * more VMD variables. Result(+) means the request was
+ * acceptable and the server attempted each access; a per-
+ * variable failure is an AccessResult, not Result(-).
+ * ISO 9506-1:2003 §14.6. ISO 9506-2:2003 §14.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,24 @@ class Read_Request {
     constructor (
         /**
          * @summary `specificationWithResult`.
+         * @description
+         *
+         * If true and Result(+) is issued, echo the request's
+         * Variable Access Specification in the response. Default
+         * false. ISO 9506-1:2003 §14.6.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly specificationWithResult: OPTIONAL<BOOLEAN>,
         /**
          * @summary `variableAccessSpecification`.
+         * @description
+         *
+         * Variables to read: enumerated list (optional `valt`
+         * alternate access) or a Named Variable List (`vlis`).
+         * ISO 9506-1:2003 §14.6.1.1.2, §14.5.1.
+         *
          * @public
          * @readonly
          */

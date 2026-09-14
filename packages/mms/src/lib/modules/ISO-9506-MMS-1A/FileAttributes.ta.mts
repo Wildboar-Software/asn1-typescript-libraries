@@ -19,7 +19,16 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary FileAttributes
  * @description
- * 
+ *
+ * Attribute information describing a file in a
+ * virtual filestore. Returned by FileOpen and
+ * FileDirectory. MMS files are sequential
+ * unstructured binary (a sequence of octets).
+ * Informative Annex D.
+ *
+ * [ISO 9506-1:2003 Annex D, D.2.2, D.9]
+ * [ISO 9506-2:2003 Annex D, D.8]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +45,31 @@ class FileAttributes {
     constructor (
         /**
          * @summary `sizeOfFile`.
+         * @description
+         *
+         * Approximate size of the file in octets.
+         * Exact in principle (count octets on read);
+         * only an approximation need be reported.
+         *
+         * [ISO 9506-1:2003 Annex D, D.9.1.1, D.2.2.3]
+         *
          * @public
          * @readonly
          */
         readonly sizeOfFile: Unsigned32,
         /**
          * @summary `lastModified`.
+         * @description
+         *
+         * Time of day and date when last modified, as
+         * known to the virtual filestore (FTAM Date
+         * And Time Of Last Modification). Present if
+         * available. MMS services only create files,
+         * so this is creation time unless modified
+         * by other means.
+         *
+         * [ISO 9506-1:2003 Annex D, D.9.1.2, D.2.2.4]
+         *
          * @public
          * @readonly
          */

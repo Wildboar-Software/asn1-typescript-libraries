@@ -19,6 +19,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AdditionalCBBOptions
  * @description
  * 
+ * Extended parameter CBBs (cspi):
+ * des = string Display Enhancement; dei = integer Display Enhancement;
+ * recl = nested Event Condition Lists. SIZE(3). ISO 9506-1:2003 §8.1.3.19,
+ * §8.2;
+ * ISO 9506-2:2003 Initiate PDUs.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +40,11 @@ type AdditionalCBBOptions = BIT_STRING;
 
 /**
  * @summary AdditionalCBBOptions_des
+ * @description
+ *
+ * String form of Display Enhancement wherever it occurs. ISO 9506-1:2003
+ * §8.1.3.19.1.
+ *
  * @constant
  */
 export
@@ -41,6 +52,11 @@ const AdditionalCBBOptions_des: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary des
+ * @description
+ *
+ * String form of Display Enhancement wherever it occurs. ISO 9506-1:2003
+ * §8.1.3.19.1.
+ *
  * @constant
  */
 export
@@ -48,6 +64,11 @@ const des: number = AdditionalCBBOptions_des; /* SHORT_NAMED_BIT */
 
 /**
  * @summary AdditionalCBBOptions_dei
+ * @description
+ *
+ * Integer form of Display Enhancement wherever it occurs. ISO 9506-1:2003
+ * §8.1.3.19.2.
+ *
  * @constant
  */
 export
@@ -55,6 +76,11 @@ const AdditionalCBBOptions_dei: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary dei
+ * @description
+ *
+ * Integer form of Display Enhancement wherever it occurs. ISO 9506-1:2003
+ * §8.1.3.19.2.
+ *
  * @constant
  */
 export
@@ -62,6 +88,11 @@ const dei: number = AdditionalCBBOptions_dei; /* SHORT_NAMED_BIT */
 
 /**
  * @summary AdditionalCBBOptions_recl
+ * @description
+ *
+ * List of Event Condition List names (nested ECLs). ISO 9506-1:2003
+ * §8.1.3.19.3.
+ *
  * @constant
  */
 export
@@ -69,6 +100,11 @@ const AdditionalCBBOptions_recl: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary recl
+ * @description
+ *
+ * List of Event Condition List names (nested ECLs). ISO 9506-1:2003
+ * §8.1.3.19.3.
+ *
  * @constant
  */
 export

@@ -20,7 +20,10 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
 /**
  * @summary DefineNamedVariableList_Request_listOfVariable_Item
  * @description
- * 
+ *
+ * One DefineNamedVariableList list element.
+ * ISO 9506-1:2003 §14.12.1.1.2. ISO 9506-2:2003 §14.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +40,23 @@ class DefineNamedVariableList_Request_listOfVariable_Item {
     constructor (
         /**
          * @summary `variableSpecification`.
+         * @description
+         *
+         * NAMED, UNNAMED, or SINGLE variable for this element.
+         * ISO 9506-1:2003 §14.12.1.1.2.1, §14.5.2.
+         *
          * @public
          * @readonly
          */
         readonly variableSpecification: VariableSpecification,
         /**
          * @summary `alternateAccess`.
+         * @description
+         *
+         * Alternate Access when this element is accessed
+         * (`valt`). Omit for full access.
+         * ISO 9506-1:2003 §14.12.1.1.2.2, §14.3.
+         *
          * @public
          * @readonly
          */

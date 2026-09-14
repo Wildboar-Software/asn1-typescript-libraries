@@ -17,7 +17,12 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary DeleteVariableAccess_Response
  * @description
- * 
+ *
+ * Result(+) of DeleteVariableAccess. Difference between
+ * matched and deleted is objects not deleted (ACL DELETE
+ * not satisfied, or other reasons).
+ * ISO 9506-1:2003 §14.11.1.2. ISO 9506-2:2003 §14.11.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,22 @@ class DeleteVariableAccess_Response {
     constructor (
         /**
          * @summary `numberMatched`.
+         * @description
+         *
+         * Named Variables that matched the name specification.
+         * ISO 9506-1:2003 §14.11.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly numberMatched: Unsigned32,
         /**
          * @summary `numberDeleted`.
+         * @description
+         *
+         * Named Variables actually deleted.
+         * ISO 9506-1:2003 §14.11.1.2.2.
+         *
          * @public
          * @readonly
          */

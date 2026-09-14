@@ -17,7 +17,11 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary GetNamedVariableListAttributes_Request
  * @description
- * 
+ *
+ * Confirmed request for attributes of a Named Variable
+ * List. The ObjectName is Variable List Name (`&name`).
+ * ISO 9506-1:2003 §14.13. ISO 9506-2:2003 §14.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -20,6 +20,17 @@ import { DefineAccessControlList_Request_accessControlListElements, _decode_Defi
  * @summary DefineAccessControlList_Request
  * @description
  * 
+ * Confirmed request of the DefineAccessControlList service: the client defines
+ * conditions that will govern access to MMS objects. Result(+) returns no
+ * service-specific parameters. Result(-) returns Error Type (clause 24).
+ * Preconditions: VMD ACL LOAD conditions succeed, and no ACL object of this
+ * name exists. On success the server creates the ACL, sets `&accessControl` to
+ * an ACL that reports MMS Deletable true (e.g. `M_Deletable`), and leaves
+ * Controlled Object lists empty. Shall not appear in minor version 1 or 2 of
+ * the confirmed-service PDUs (ISO 9506-2:2003
+ * ConfirmedServiceRequest/Response). ISO 9506-1:2003 §9.3; ISO 9506-2:2003
+ * §9.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,12 +55,22 @@ class DefineAccessControlList_Request {
     constructor (
         /**
          * @summary `accessControlListName`.
+         * @description
+         *
+         * Name of the Access Control List object to create. ACL names are
+         * always VMD-specific. ISO 9506-1:2003 §9.3.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly accessControlListName: Identifier,
         /**
          * @summary `accessControlListElements`.
+         * @description
+         *
+         * Zero or more Access Control Elements (service class + Access
+         * Condition). ISO 9506-1:2003 §9.3.1.1.2; ISO 9506-2:2003 §9.3.1.1.
+         *
          * @public
          * @readonly
          */
@@ -60,7 +81,8 @@ class DefineAccessControlList_Request {
      * @summary Restructures an object into a DefineAccessControlList_Request
      * @description
      * 
-     * This takes an `object` and converts it to a `DefineAccessControlList_Request`.
+     * This takes an `object` and converts it to a
+     * `DefineAccessControlList_Request`.
      * 
      * @public
      * @static
@@ -79,7 +101,8 @@ class DefineAccessControlList_Request {
  * @summary The Leading Root Component Types of DefineAccessControlList_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -93,7 +116,8 @@ const _root_component_type_list_1_spec_for_DefineAccessControlList_Request: $.Co
  * @summary The Trailing Root Component Types of DefineAccessControlList_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -106,7 +130,8 @@ const _root_component_type_list_2_spec_for_DefineAccessControlList_Request: $.Co
  * @summary The Extension Addition Component Types of DefineAccessControlList_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

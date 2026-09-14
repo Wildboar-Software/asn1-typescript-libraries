@@ -18,7 +18,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DataAccessError
  * @description
- * 
+ *
+ * Reason an attempted variable access failed. Does not
+ * mean the service request failed: OBJECT-INVALIDATED
+ * means a Named Variable List mapping is no longer valid;
+ * other values are V-Get/V-Put failure.
+ * ISO 9506-1:2003 §14.4.3. ISO 9506-2:2003 §14.4.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,6 +49,12 @@ type DataAccessError = INTEGER;
 
 /**
  * @summary DataAccessError_object_invalidated
+ * @description
+ *
+ * Defined object has an undefined reference attribute.
+ * Permanent error for access attempts to that object.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +63,12 @@ const DataAccessError_object_invalidated: DataAccessError = 0; /* LONG_NAMED_INT
 
 /**
  * @summary DataAccessError_object_invalidated
+ * @description
+ *
+ * Defined object has an undefined reference attribute.
+ * Permanent error for access attempts to that object.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +77,11 @@ const object_invalidated: DataAccessError = DataAccessError_object_invalidated; 
 
 /**
  * @summary DataAccessError_hardware_fault
+ * @description
+ *
+ * Access failed due to a hardware fault.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +90,11 @@ const DataAccessError_hardware_fault: DataAccessError = 1; /* LONG_NAMED_INTEGER
 
 /**
  * @summary DataAccessError_hardware_fault
+ * @description
+ *
+ * Access failed due to a hardware fault.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +103,11 @@ const hardware_fault: DataAccessError = DataAccessError_hardware_fault; /* SHORT
 
 /**
  * @summary DataAccessError_temporarily_unavailable
+ * @description
+ *
+ * Variable is temporarily unavailable for this access.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +116,11 @@ const DataAccessError_temporarily_unavailable: DataAccessError = 2; /* LONG_NAME
 
 /**
  * @summary DataAccessError_temporarily_unavailable
+ * @description
+ *
+ * Variable is temporarily unavailable for this access.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +129,11 @@ const temporarily_unavailable: DataAccessError = DataAccessError_temporarily_una
 
 /**
  * @summary DataAccessError_object_access_denied
+ * @description
+ *
+ * Client has insufficient privilege (Access Control List
+ * READ/WRITE). ISO 9506-1:2003 §14.4.3, §14.1.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +142,11 @@ const DataAccessError_object_access_denied: DataAccessError = 3; /* LONG_NAMED_I
 
 /**
  * @summary DataAccessError_object_access_denied
+ * @description
+ *
+ * Client has insufficient privilege (Access Control List
+ * READ/WRITE). ISO 9506-1:2003 §14.4.3, §14.1.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +155,11 @@ const object_access_denied: DataAccessError = DataAccessError_object_access_deni
 
 /**
  * @summary DataAccessError_object_undefined
+ * @description
+ *
+ * No object exists with the desired name.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +168,11 @@ const DataAccessError_object_undefined: DataAccessError = 4; /* LONG_NAMED_INTEG
 
 /**
  * @summary DataAccessError_object_undefined
+ * @description
+ *
+ * No object exists with the desired name.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +181,11 @@ const object_undefined: DataAccessError = DataAccessError_object_undefined; /* S
 
 /**
  * @summary DataAccessError_invalid_address
+ * @description
+ *
+ * Unnamed Variable address format is incorrect or out of
+ * range. ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +194,11 @@ const DataAccessError_invalid_address: DataAccessError = 5; /* LONG_NAMED_INTEGE
 
 /**
  * @summary DataAccessError_invalid_address
+ * @description
+ *
+ * Unnamed Variable address format is incorrect or out of
+ * range. ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +207,11 @@ const invalid_address: DataAccessError = DataAccessError_invalid_address; /* SHO
 
 /**
  * @summary DataAccessError_type_unsupported
+ * @description
+ *
+ * Inappropriate or unsupported type for a variable.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +220,11 @@ const DataAccessError_type_unsupported: DataAccessError = 6; /* LONG_NAMED_INTEG
 
 /**
  * @summary DataAccessError_type_unsupported
+ * @description
+ *
+ * Inappropriate or unsupported type for a variable.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +233,11 @@ const type_unsupported: DataAccessError = DataAccessError_type_unsupported; /* S
 
 /**
  * @summary DataAccessError_type_inconsistent
+ * @description
+ *
+ * Specified type is inconsistent with the service or
+ * referenced object. ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -163,6 +246,11 @@ const DataAccessError_type_inconsistent: DataAccessError = 7; /* LONG_NAMED_INTE
 
 /**
  * @summary DataAccessError_type_inconsistent
+ * @description
+ *
+ * Specified type is inconsistent with the service or
+ * referenced object. ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -171,6 +259,11 @@ const type_inconsistent: DataAccessError = DataAccessError_type_inconsistent; /*
 
 /**
  * @summary DataAccessError_object_attribute_inconsistent
+ * @description
+ *
+ * Object is specified with inconsistent attributes.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -179,6 +272,11 @@ const DataAccessError_object_attribute_inconsistent: DataAccessError = 8; /* LON
 
 /**
  * @summary DataAccessError_object_attribute_inconsistent
+ * @description
+ *
+ * Object is specified with inconsistent attributes.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -187,6 +285,11 @@ const object_attribute_inconsistent: DataAccessError = DataAccessError_object_at
 
 /**
  * @summary DataAccessError_object_access_unsupported
+ * @description
+ *
+ * Variable is not defined to allow the requested access.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -195,6 +298,11 @@ const DataAccessError_object_access_unsupported: DataAccessError = 9; /* LONG_NA
 
 /**
  * @summary DataAccessError_object_access_unsupported
+ * @description
+ *
+ * Variable is not defined to allow the requested access.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -203,6 +311,11 @@ const object_access_unsupported: DataAccessError = DataAccessError_object_access
 
 /**
  * @summary DataAccessError_object_non_existent
+ * @description
+ *
+ * The variable is nonexistent.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -211,6 +324,11 @@ const DataAccessError_object_non_existent: DataAccessError = 10; /* LONG_NAMED_I
 
 /**
  * @summary DataAccessError_object_non_existent
+ * @description
+ *
+ * The variable is nonexistent.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -219,6 +337,11 @@ const object_non_existent: DataAccessError = DataAccessError_object_non_existent
 
 /**
  * @summary DataAccessError_object_value_invalid
+ * @description
+ *
+ * Proposed value is not in the set of allowable values.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -227,6 +350,11 @@ const DataAccessError_object_value_invalid: DataAccessError = 11; /* LONG_NAMED_
 
 /**
  * @summary DataAccessError_object_value_invalid
+ * @description
+ *
+ * Proposed value is not in the set of allowable values.
+ * ISO 9506-1:2003 §14.4.3.
+ *
  * @constant
  * @type {number}
  */

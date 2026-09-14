@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ObjectClass_basicObjectClass
  * @description
- * 
+ *
+ * Basic Object Class values (ISO 9506-1:2003 §7.6.2). Some values depend on
+ * CBBs or minor version (ISO 9506-2:2003 §7.5.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,6 +50,9 @@ type ObjectClass_basicObjectClass = INTEGER;
 
 /**
  * @summary ObjectClass_basicObjectClass_namedVariable
+ * @description
+ *
+ * Named Variable. CBB `vnam` (ISO 9506-1:2003 §7.6.2; ISO 9506-2:2003 §7.5.4).
  * @constant
  * @type {number}
  */
@@ -55,6 +61,9 @@ const ObjectClass_basicObjectClass_namedVariable: ObjectClass_basicObjectClass =
 
 /**
  * @summary ObjectClass_basicObjectClass_namedVariable
+ * @description
+ *
+ * Named Variable. CBB `vnam` (ISO 9506-1:2003 §7.6.2; ISO 9506-2:2003 §7.5.4).
  * @constant
  * @type {number}
  */
@@ -63,6 +72,10 @@ const namedVariable: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass
 
 /**
  * @summary ObjectClass_basicObjectClass_scatteredAccess
+ * @description
+ *
+ * Scattered Access (Annex E). CBB `vsca`. ASN.1 notes value 1 as reserved for
+ * Annex E (ISO 9506-1:2003 §7.6.2; ISO 9506-2:2003 §7.5.4).
  * @constant
  * @type {number}
  */
@@ -71,6 +84,10 @@ const ObjectClass_basicObjectClass_scatteredAccess: ObjectClass_basicObjectClass
 
 /**
  * @summary ObjectClass_basicObjectClass_scatteredAccess
+ * @description
+ *
+ * Scattered Access (Annex E). CBB `vsca`. ASN.1 notes value 1 as reserved for
+ * Annex E (ISO 9506-1:2003 §7.6.2; ISO 9506-2:2003 §7.5.4).
  * @constant
  * @type {number}
  */
@@ -79,6 +96,10 @@ const scatteredAccess: ObjectClass_basicObjectClass = ObjectClass_basicObjectCla
 
 /**
  * @summary ObjectClass_basicObjectClass_namedVariableList
+ * @description
+ *
+ * Named Variable List. CBB `vlis` (ISO 9506-1:2003 §7.6.2;
+ * ISO 9506-2:2003 §7.5.4).
  * @constant
  * @type {number}
  */
@@ -87,6 +108,10 @@ const ObjectClass_basicObjectClass_namedVariableList: ObjectClass_basicObjectCla
 
 /**
  * @summary ObjectClass_basicObjectClass_namedVariableList
+ * @description
+ *
+ * Named Variable List. CBB `vlis` (ISO 9506-1:2003 §7.6.2;
+ * ISO 9506-2:2003 §7.5.4).
  * @constant
  * @type {number}
  */
@@ -95,6 +120,9 @@ const namedVariableList: ObjectClass_basicObjectClass = ObjectClass_basicObjectC
 
 /**
  * @summary ObjectClass_basicObjectClass_namedType
+ * @description
+ *
+ * Named Type. CBB `vnam` (ISO 9506-1:2003 §7.6.2; ISO 9506-2:2003 §7.5.4).
  * @constant
  * @type {number}
  */
@@ -103,6 +131,9 @@ const ObjectClass_basicObjectClass_namedType: ObjectClass_basicObjectClass = 3; 
 
 /**
  * @summary ObjectClass_basicObjectClass_namedType
+ * @description
+ *
+ * Named Type. CBB `vnam` (ISO 9506-1:2003 §7.6.2; ISO 9506-2:2003 §7.5.4).
  * @constant
  * @type {number}
  */
@@ -111,6 +142,10 @@ const namedType: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_nam
 
 /**
  * @summary ObjectClass_basicObjectClass_semaphore
+ * @description
+ *
+ * Semaphore (ISO 9506-1:2003 §7.6.2). Creating a semaphore also creates an
+ * Event Condition of the same name (§7.4.2).
  * @constant
  * @type {number}
  */
@@ -119,6 +154,10 @@ const ObjectClass_basicObjectClass_semaphore: ObjectClass_basicObjectClass = 4; 
 
 /**
  * @summary ObjectClass_basicObjectClass_semaphore
+ * @description
+ *
+ * Semaphore (ISO 9506-1:2003 §7.6.2). Creating a semaphore also creates an
+ * Event Condition of the same name (§7.4.2).
  * @constant
  * @type {number}
  */
@@ -127,6 +166,9 @@ const semaphore: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_sem
 
 /**
  * @summary ObjectClass_basicObjectClass_eventCondition
+ * @description
+ *
+ * Event Condition (ISO 9506-1:2003 §7.6.2).
  * @constant
  * @type {number}
  */
@@ -135,6 +177,9 @@ const ObjectClass_basicObjectClass_eventCondition: ObjectClass_basicObjectClass 
 
 /**
  * @summary ObjectClass_basicObjectClass_eventCondition
+ * @description
+ *
+ * Event Condition (ISO 9506-1:2003 §7.6.2).
  * @constant
  * @type {number}
  */
@@ -143,6 +188,9 @@ const eventCondition: ObjectClass_basicObjectClass = ObjectClass_basicObjectClas
 
 /**
  * @summary ObjectClass_basicObjectClass_eventAction
+ * @description
+ *
+ * Event Action (ISO 9506-1:2003 §7.6.2).
  * @constant
  * @type {number}
  */
@@ -151,6 +199,9 @@ const ObjectClass_basicObjectClass_eventAction: ObjectClass_basicObjectClass = 6
 
 /**
  * @summary ObjectClass_basicObjectClass_eventAction
+ * @description
+ *
+ * Event Action (ISO 9506-1:2003 §7.6.2).
  * @constant
  * @type {number}
  */
@@ -159,6 +210,9 @@ const eventAction: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_e
 
 /**
  * @summary ObjectClass_basicObjectClass_eventEnrollment
+ * @description
+ *
+ * Event Enrollment (ISO 9506-1:2003 §7.6.2).
  * @constant
  * @type {number}
  */
@@ -167,6 +221,9 @@ const ObjectClass_basicObjectClass_eventEnrollment: ObjectClass_basicObjectClass
 
 /**
  * @summary ObjectClass_basicObjectClass_eventEnrollment
+ * @description
+ *
+ * Event Enrollment (ISO 9506-1:2003 §7.6.2).
  * @constant
  * @type {number}
  */
@@ -175,6 +232,9 @@ const eventEnrollment: ObjectClass_basicObjectClass = ObjectClass_basicObjectCla
 
 /**
  * @summary ObjectClass_basicObjectClass_journal
+ * @description
+ *
+ * Journal (ISO 9506-1:2003 §7.6.2).
  * @constant
  * @type {number}
  */
@@ -183,6 +243,9 @@ const ObjectClass_basicObjectClass_journal: ObjectClass_basicObjectClass = 8; /*
 
 /**
  * @summary ObjectClass_basicObjectClass_journal
+ * @description
+ *
+ * Journal (ISO 9506-1:2003 §7.6.2).
  * @constant
  * @type {number}
  */
@@ -191,6 +254,9 @@ const journal: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_journ
 
 /**
  * @summary ObjectClass_basicObjectClass_domain
+ * @description
+ *
+ * Domain (ISO 9506-1:2003 §7.6.2).
  * @constant
  * @type {number}
  */
@@ -199,6 +265,9 @@ const ObjectClass_basicObjectClass_domain: ObjectClass_basicObjectClass = 9; /* 
 
 /**
  * @summary ObjectClass_basicObjectClass_domain
+ * @description
+ *
+ * Domain (ISO 9506-1:2003 §7.6.2).
  * @constant
  * @type {number}
  */
@@ -207,6 +276,11 @@ const domain: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_domain
 
 /**
  * @summary ObjectClass_basicObjectClass_programInvocation
+ * @description
+ *
+ * Program Invocation (ISO 9506-1:2003 §7.6.2). With monitor, creation also
+ * creates Event Condition, Event Action, and Event Enrollment of the same name
+ * (§7.4.2).
  * @constant
  * @type {number}
  */
@@ -215,6 +289,11 @@ const ObjectClass_basicObjectClass_programInvocation: ObjectClass_basicObjectCla
 
 /**
  * @summary ObjectClass_basicObjectClass_programInvocation
+ * @description
+ *
+ * Program Invocation (ISO 9506-1:2003 §7.6.2). With monitor, creation also
+ * creates Event Condition, Event Action, and Event Enrollment of the same name
+ * (§7.4.2).
  * @constant
  * @type {number}
  */
@@ -223,6 +302,9 @@ const programInvocation: ObjectClass_basicObjectClass = ObjectClass_basicObjectC
 
 /**
  * @summary ObjectClass_basicObjectClass_operatorStation
+ * @description
+ *
+ * Operator Station (ISO 9506-1:2003 §7.6.2).
  * @constant
  * @type {number}
  */
@@ -231,6 +313,9 @@ const ObjectClass_basicObjectClass_operatorStation: ObjectClass_basicObjectClass
 
 /**
  * @summary ObjectClass_basicObjectClass_operatorStation
+ * @description
+ *
+ * Operator Station (ISO 9506-1:2003 §7.6.2).
  * @constant
  * @type {number}
  */
@@ -239,6 +324,10 @@ const operatorStation: ObjectClass_basicObjectClass = ObjectClass_basicObjectCla
 
 /**
  * @summary ObjectClass_basicObjectClass_dataExchange
+ * @description
+ *
+ * Data Exchange. Shall not appear in minor version 1 (ISO 9506-1:2003 §7.6.2;
+ * ISO 9506-2:2003 §7.5.4).
  * @constant
  * @type {number}
  */
@@ -247,6 +336,10 @@ const ObjectClass_basicObjectClass_dataExchange: ObjectClass_basicObjectClass = 
 
 /**
  * @summary ObjectClass_basicObjectClass_dataExchange
+ * @description
+ *
+ * Data Exchange. Shall not appear in minor version 1 (ISO 9506-1:2003 §7.6.2;
+ * ISO 9506-2:2003 §7.5.4).
  * @constant
  * @type {number}
  */
@@ -255,6 +348,10 @@ const dataExchange: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_
 
 /**
  * @summary ObjectClass_basicObjectClass_accessControlList
+ * @description
+ *
+ * Access Control List. Shall not appear in minor version 1 or 2
+ * (ISO 9506-1:2003 §7.6.2; ISO 9506-2:2003 §7.5.4).
  * @constant
  * @type {number}
  */
@@ -263,6 +360,10 @@ const ObjectClass_basicObjectClass_accessControlList: ObjectClass_basicObjectCla
 
 /**
  * @summary ObjectClass_basicObjectClass_accessControlList
+ * @description
+ *
+ * Access Control List. Shall not appear in minor version 1 or 2
+ * (ISO 9506-1:2003 §7.6.2; ISO 9506-2:2003 §7.5.4).
  * @constant
  * @type {number}
  */

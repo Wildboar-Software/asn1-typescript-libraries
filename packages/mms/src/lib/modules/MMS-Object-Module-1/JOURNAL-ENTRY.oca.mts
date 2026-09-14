@@ -31,6 +31,11 @@ import { Journal_Variable, _decode_Journal_Variable, _encode_Journal_Variable } 
  * @summary JOURNAL_ENTRY
  * @description
  * 
+ * One Journal record: annotation text,
+ * event-data (transition plus optional variables), or data (variables
+ * only). &entry plus &timeStamp uniquely identify it within the Journal.
+ * ISO 9506-1:2003 §23.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -81,38 +86,80 @@ interface JOURNAL_ENTRY {
     }>;
     /**
      * @summary &journal
+     * @description
+     *
+     * Containing Journal. ISO 9506-1:2003 §23.1.2.1.
+     *
      */
     readonly "&journal"?: ObjectName;
     /**
      * @summary &entry
+     * @description
+     *
+     * Server-assigned id unique within the Journal; used when timestamps
+     * collide. Never changed. ISO 9506-1:2003 §23.1.2.2.
+     *
      */
     readonly "&entry"?: OCTET_STRING;
     /**
      * @summary &clientApplication
+     * @description
+     *
+     * AP that caused creation of this entry. ISO 9506-1:2003 §23.1.2.3.
+     *
      */
     readonly "&clientApplication"?: ApplicationReference;
     /**
      * @summary &timeStamp
+     * @description
+     *
+     * Time of day the entry was created (intended as time of the recorded
+     * condition). ISO 9506-1:2003 §23.1.2.4.
+     *
      */
     readonly "&timeStamp"?: TimeOfDay;
     /**
      * @summary &orderOfReceipt
+     * @description
+     *
+     * Monotonic order among entries with the same timestamp and journal. ISO
+     * 9506-1:2003 §23.1.2.5.
+     *
      */
     readonly "&orderOfReceipt"?: INTEGER;
     /**
      * @summary &informationType
+     * @description
+     *
+     * annotation (text), event-data (event + optional variables), or data
+     * (variables). ISO 9506-1:2003 §23.1.2.6.
+     *
      */
     readonly "&informationType"?: JOURNAL_ENTRY_informationType;
     /**
      * @summary &textComment
+     * @description
+     *
+     * annotation only: comment, 0..255 characters. ISO 9506-1:2003 §23.1.2.7.
+     *
      */
     readonly "&textComment"?: MMS255String;
     /**
      * @summary &eventTransitionRecord
+     * @description
+     *
+     * event-data only: Event Condition name and resulting EC-State. ISO
+     * 9506-1:2003 §23.1.2.8.
+     *
      */
     readonly "&eventTransitionRecord"?: { name: OPTIONAL<ObjectName>; currentState: OPTIONAL<EC_State> };
     /**
      * @summary &journalVariables
+     * @description
+     *
+     * data or event-data: zero or more tagged values. ISO 9506-1:2003
+     * §23.1.2.9.
+     *
      */
     readonly "&journalVariables"?: Journal_Variable[];
 }
@@ -120,6 +167,11 @@ interface JOURNAL_ENTRY {
 /**
  * @summary JOURNAL_ENTRY_informationType
  * @description
+ *
+ * One Journal record: annotation text,
+ * event-data (transition plus optional variables), or data (variables
+ * only). &entry plus &timeStamp uniquely identify it within the Journal.
+ * ISO 9506-1:2003 §23.1.2.
  *
  * ### ASN.1 Definition:
  *

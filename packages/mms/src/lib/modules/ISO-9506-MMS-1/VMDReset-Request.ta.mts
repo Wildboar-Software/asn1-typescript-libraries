@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary VMDReset_Request
  * @description
  * 
+ * Confirmed VMDReset request: Extended Derivation. True means perform
+ * self-diagnostics as part of initializing the VMD. Conformance `csr`.
+ * Association should be maintained if possible. ISO 9506-1:2003 §10.10;
+ * ISO 9506-2:2003 §10.10.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

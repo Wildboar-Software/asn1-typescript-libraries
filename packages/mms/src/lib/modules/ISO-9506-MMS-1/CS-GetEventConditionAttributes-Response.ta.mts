@@ -22,7 +22,15 @@ import { CS_GetEventConditionAttributes_Response_displayEnhancement, _decode_CS_
 /**
  * @summary CS_GetEventConditionAttributes_Response
  * @description
- * 
+ *
+ * Response-Detail for GetEventConditionAttributes. Companion-standard fields:
+ * groupPriorityOverride (used instead of `&priority` when defined; ECL
+ * support), list of referencing Event Condition Lists, and Display Enhancement
+ * (`cspi`; `des`/`dei`).
+ *
+ * [ISO 9506-1:2003 §19.4.1.2.9]
+ * [ISO 9506-2:2003 §19.4.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,18 +53,38 @@ class CS_GetEventConditionAttributes_Response {
     constructor (
         /**
          * @summary `groupPriorityOverride`.
+         * @description
+         *
+         * Replacement priority for this condition when defined; else use `&priority`.
+         * Present only if `cspi`. Need not be implemented without ECL support.
+         *
+         * [ISO 9506-1:2003 §19.1.1.15]
+         *
          * @public
          * @readonly
          */
         readonly groupPriorityOverride: OPTIONAL<CS_GetEventConditionAttributes_Response_groupPriorityOverride>,
         /**
          * @summary `listOfReferencingECL`.
+         * @description
+         *
+         * Event Condition Lists that reference this condition. `cspi`. Need not be
+         * implemented without ECL support.
+         *
+         * [ISO 9506-1:2003 §19.1.1.16]
+         *
          * @public
          * @readonly
          */
         readonly listOfReferencingECL: OPTIONAL<ObjectName[]>,
         /**
          * @summary `displayEnhancement`.
+         * @description
+         *
+         * Event Condition `&displayEnhancement`. `string`/`index`/`noEnhancement`.
+         *
+         * [ISO 9506-1:2003 §19.4.1.2.11]
+         *
          * @public
          * @readonly
          */

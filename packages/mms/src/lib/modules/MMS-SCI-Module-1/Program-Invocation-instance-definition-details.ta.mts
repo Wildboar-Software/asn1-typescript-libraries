@@ -36,6 +36,11 @@ import { Program_Invocation_instance, _decode_Program_Invocation_instance, _enco
  * @summary Program_Invocation_instance_definition_details
  * @description
  * 
+ * Inline
+ * PI attributes in the SCI file. SCI configuration/initialization encoding (ISO
+ * 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.1.3; ISO
+ * 9506-1:2003 §12.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -70,60 +75,109 @@ class Program_Invocation_instance_definition_details {
     constructor (
         /**
          * @summary `programInvocationState`.
+         * @description
+         *
+         * Configured PI state. ISO 9506-1:2003 §12.1.1.2; ISO 9506-2:2003 Annex
+         * B.1.3.
+         *
          * @public
          * @readonly
          */
         readonly programInvocationState: ProgramInvocationState,
         /**
          * @summary `domains`.
+         * @description
+         *
+         * Configured Domain instances. ISO 9506-2:2003 Annex B.1.2.
+         *
          * @public
          * @readonly
          */
         readonly domains: Domain_instance[],
         /**
          * @summary `accessControl`.
+         * @description
+         *
+         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly accessControl: Access_Control_List_instance[],
         /**
          * @summary `reusable`.
+         * @description
+         *
+         * Whether the PI returns to idle after completion. ISO 9506-1:2003
+         * §12.1.1.5; ISO 9506-2:2003 Annex B.1.3.
+         *
          * @public
          * @readonly
          */
         readonly reusable: BOOLEAN,
         /**
          * @summary `monitor`.
+         * @description
+         *
+         * Whether PI-exit monitoring objects are configured. ISO 9506-1:2003
+         * §12.1.1.6; ISO 9506-2:2003 Annex B.1.3.
+         *
          * @public
          * @readonly
          */
         readonly monitor: BOOLEAN,
         /**
          * @summary `eventCondition`.
+         * @description
+         *
+         * Configured Event Condition (PI monitor or semaphore match). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly eventCondition: OPTIONAL<Event_Condition_instance[]>,
         /**
          * @summary `eventAction`.
+         * @description
+         *
+         * Configured Event Action (PI monitor). ISO 9506-1:2003 §12.1.1.8; ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly eventAction: OPTIONAL<Event_Action_instance[]>,
         /**
          * @summary `eventEnrollment`.
+         * @description
+         *
+         * Configured Event Enrollment (PI monitor). ISO 9506-1:2003 §12.1.1.9;
+         * ISO 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly eventEnrollment: OPTIONAL<Event_Enrollment_instance[]>,
         /**
          * @summary `executionArgument`.
+         * @description
+         *
+         * Configured execution argument. ISO 9506-1:2003 §12.1.1; ISO
+         * 9506-2:2003 Annex B.1.3.
+         *
          * @public
          * @readonly
          */
         readonly executionArgument: MMSString,
         /**
          * @summary `control`.
+         * @description
+         *
+         * csr Control-State. ISO 9506-1:2003 §12.1.1.12; ISO 9506-2:2003 Annex
+         * B.1.3.
+         *
          * @public
          * @readonly
          */

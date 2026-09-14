@@ -26,6 +26,10 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
  * @summary LoadDomainContent_Request
  * @description
  * 
+ * Client request that the server load a file (local or via third party) into a
+ * new Domain. Domain name must not exist. Success leaves the Domain `ready`.
+ * ISO 9506-1:2003 §11.10. ISO 9506-2:2003 §11.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,30 +49,54 @@ class LoadDomainContent_Request {
     constructor (
         /**
          * @summary `domainName`.
+         * @description
+         *
+         * Name of the Domain to create and load. Must not already exist. ISO 9506-1:2003 §11.10.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly domainName: Identifier,
         /**
          * @summary `listOfCapabilities`.
+         * @description
+         *
+         * If present, used when creating the Domain; empty SEQUENCE OF if
+         * empty. Omitted if the parameter is absent. ISO 9506-1:2003
+         * §11.10.1.1.2. ISO 9506-2:2003 §11.10.1.
+         *
          * @public
          * @readonly
          */
         readonly listOfCapabilities: OPTIONAL<MMSString[]>,
         /**
          * @summary `sharable`.
+         * @description
+         *
+         * True if several Program Invocations may use the Domain concurrently.
+         * ISO 9506-1:2003 §11.10.1.1.3.
+         *
          * @public
          * @readonly
          */
         readonly sharable: BOOLEAN,
         /**
          * @summary `fileName`.
+         * @description
+         *
+         * File containing the Domain content. ISO 9506-1:2003 §11.10.1.1.4.
+         *
          * @public
          * @readonly
          */
         readonly fileName: FileName,
         /**
          * @summary `thirdParty`.
+         * @description
+         *
+         * Application that holds the file. Requires `tpy` CBB; use is optional.
+         * Absent: local file access. ISO 9506-1:2003 §11.10.1.1.5. ISO 9506-2:2003 §11.10.1.1.
+         *
          * @public
          * @readonly
          */

@@ -44,7 +44,14 @@ import { Conclude_ErrorPDU, _decode_Conclude_ErrorPDU, _encode_Conclude_ErrorPDU
 /**
  * @summary MMSpdu
  * @description
- * 
+ *
+ * Outer CHOICE of the MMS abstract syntax: fourteen PDU kinds tagged [0]–[13]
+ * for confirmed request/response/error, unconfirmed, reject, cancel, initiate,
+ * and conclude (ISO 9506-2:2003 §7). NULL alternatives for unconfirmed and
+ * cancel appear when those services are not supported. Abort has no MMS PDU; it
+ * maps to M-U-ABORT (ISO 9506-1:2003 §8.4; ISO 9506-2:2003 §8.4). Initiate
+ * must succeed before other MMS PDUs on the association (ISO 9506-1:2003 §8.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

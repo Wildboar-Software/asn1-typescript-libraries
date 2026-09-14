@@ -17,7 +17,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ImplicitNullable
  * @description
- * 
+ *
+ * Compiler helper, not a named type in ISO 9506-2. Models the
+ * duplicated CHOICE tags where an alternative is either `T` or
+ * `IMPLICIT NULL` (zero content octets), as on several
+ * AdditionalService-Error choices (ISO 9506-2:2003 §7.4.2).
+ * Omit `present` for the NULL encoding.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +39,11 @@ class ImplicitNullable<T> {
     constructor (
         /**
          * @summary `present`.
+         * @description
+         *
+         * The non-NULL alternative. Absent encodes as empty
+         * (IMPLICIT NULL) under the same context tag.
+         *
          * @public
          * @readonly
          */

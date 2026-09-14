@@ -17,7 +17,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Conclude_RequestPDU
  * @description
- * 
+ *
+ * Conclude request has no parameters (ISO 9506-1:2003 §8.3;
+ * ISO 9506-2:2003 §8.3). After sending, the requester issues no further
+ * requests except Abort until Conclude confirms. Do not request if a Domain on
+ * this association is loading/complete/incomplete (or d1, d2, d3, d9). Success
+ * deletes AA-specific objects; failure leaves the environment unchanged.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

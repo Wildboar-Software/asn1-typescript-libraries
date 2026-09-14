@@ -19,6 +19,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Event_Enrollment_instance_definition_details_remainingDelay
  * @description
  * 
+ * modifier class: wait time in seconds, or forever. SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.1.14; ISO 9506-1:2003 §21.1.1.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

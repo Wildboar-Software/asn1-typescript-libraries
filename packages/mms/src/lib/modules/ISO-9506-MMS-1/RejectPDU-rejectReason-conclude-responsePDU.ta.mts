@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RejectPDU_rejectReason_conclude_responsePDU
  * @description
- * 
+ *
+ * Reject codes when the rejected PDU is a Conclude-ResponsePDU (ISO 9506-1:2003
+ * §8.6.1.4.10).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +36,10 @@ type RejectPDU_rejectReason_conclude_responsePDU = INTEGER;
 
 /**
  * @summary RejectPDU_rejectReason_conclude_responsePDU_other
+ * @description
+ *
+ * Error other than those identified for this PDU type (ISO 9506-1:2003
+ * §8.6.1.4.10.1).
  * @constant
  * @type {number}
  */
@@ -41,6 +48,10 @@ const RejectPDU_rejectReason_conclude_responsePDU_other: RejectPDU_rejectReason_
 
 /**
  * @summary RejectPDU_rejectReason_conclude_responsePDU_other
+ * @description
+ *
+ * Error other than those identified for this PDU type (ISO 9506-1:2003
+ * §8.6.1.4.10.1).
  * @constant
  * @type {number}
  */
@@ -49,6 +60,10 @@ const other: RejectPDU_rejectReason_conclude_responsePDU = RejectPDU_rejectReaso
 
 /**
  * @summary RejectPDU_rejectReason_conclude_responsePDU_invalid_result
+ * @description
+ *
+ * Service result does not meet ISO 9506-1 requirements (ISO 9506-1:2003
+ * §8.6.1.4.10.2).
  * @constant
  * @type {number}
  */
@@ -57,6 +72,10 @@ const RejectPDU_rejectReason_conclude_responsePDU_invalid_result: RejectPDU_reje
 
 /**
  * @summary RejectPDU_rejectReason_conclude_responsePDU_invalid_result
+ * @description
+ *
+ * Service result does not meet ISO 9506-1 requirements (ISO 9506-1:2003
+ * §8.6.1.4.10.2).
  * @constant
  * @type {number}
  */

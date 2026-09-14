@@ -18,7 +18,13 @@ import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Modu
 /**
  * @summary CS_GetEventConditionAttributes_Response_groupPriorityOverride
  * @description
- * 
+ *
+ * `priority`: integer 0–127 used instead of `&priority`. `undefined`: use the
+ * Event Condition `&priority`. CS field; `cspi`.
+ *
+ * [ISO 9506-1:2003 §19.1.1.15]
+ * [ISO 9506-2:2003 §19.4.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

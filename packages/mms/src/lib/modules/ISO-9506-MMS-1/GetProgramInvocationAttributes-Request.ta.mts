@@ -18,6 +18,9 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary GetProgramInvocationAttributes_Request
  * @description
  * 
+ * Client request for attributes of a named Program Invocation. PI must exist.
+ * ISO 9506-1:2003 §12.9. ISO 9506-2:2003 §12.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

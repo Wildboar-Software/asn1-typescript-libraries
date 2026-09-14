@@ -23,6 +23,12 @@ import { TypeDescription, _decode_TypeDescription, _encode_TypeDescription } fro
  * @summary Nullable_Unnamed_Variable_instance
  * @description
  * 
+ * Unnamed Variable SCI
+ * fields, each optional (vadr omitted → empty). SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003 Annex
+ * B.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +46,33 @@ class Nullable_Unnamed_Variable_instance {
     constructor (
         /**
          * @summary `address`.
+         * @description
+         *
+         * Unnamed-variable or public address. ISO 9506-1:2003 §14.1.2.1; ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly address: OPTIONAL<Address>,
         /**
          * @summary `accessControl`.
+         * @description
+         *
+         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly accessControl: OPTIONAL<Access_Control_List_instance>,
         /**
          * @summary `typeDescription`.
+         * @description
+         *
+         * Configured TypeDescription. ISO 9506-1:2003 §14.2; ISO 9506-2:2003
+         * Annex B.
+         *
          * @public
          * @readonly
          */

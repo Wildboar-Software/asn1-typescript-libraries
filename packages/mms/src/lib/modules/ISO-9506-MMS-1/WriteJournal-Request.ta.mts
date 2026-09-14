@@ -19,7 +19,12 @@ import { EntryContent, _decode_EntryContent, _encode_EntryContent } from "../ISO
 /**
  * @summary WriteJournal_Request
  * @description
- * 
+ *
+ * Confirmed request to append one or more Journal Entry objects.
+ * Each `EntryContent` is data form (event and/or variables) or
+ * annotation. ISO 9506-1:2003 §23.1, §23.3. ISO 9506-2:2003
+ * §23.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +40,23 @@ class WriteJournal_Request {
     constructor (
         /**
          * @summary `journalName`.
+         * @description
+         *
+         * Journal to which entries are added. ISO 9506-1:2003
+         * §23.3.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly journalName: ObjectName,
         /**
          * @summary `listOfJournalEntry`.
+         * @description
+         *
+         * One or more entries. Occurrence time and form (data vs
+         * annotation) are in each `EntryContent`. ISO 9506-1:2003
+         * §23.3.1.1.2. ISO 9506-2:2003 §23.8.
+         *
          * @public
          * @readonly
          */

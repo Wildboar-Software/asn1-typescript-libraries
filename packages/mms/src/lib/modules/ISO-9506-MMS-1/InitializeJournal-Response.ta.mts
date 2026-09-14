@@ -17,7 +17,10 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary InitializeJournal_Response
  * @description
- * 
+ *
+ * Number of Journal Entry objects deleted. ISO 9506-1:2003
+ * §23.4.1.2.1. ISO 9506-2:2003 §23.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -20,6 +20,12 @@ import { AttachToSemaphore, _decode_AttachToSemaphore, _encode_AttachToSemaphore
  * @summary Modifier
  * @description
  * 
+ * Confirmed-service pre-condition. eventModifier
+ * = AttachToEventCondition (§18.7); semaphoreModifier =
+ * AttachToSemaphore (§16.9). Listed on every confirmed primitive
+ * (§5.6); processed by the Transaction object (§7.3). ISO 9506-1:2003 §5.6,
+ * §7.3.1.2, §16.9, §18.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

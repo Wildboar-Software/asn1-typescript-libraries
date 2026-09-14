@@ -21,6 +21,10 @@ import { ServiceError, _decode_ServiceError, _encode_ServiceError } from "../ISO
  * @summary TerminateDownloadSequence_Request
  * @description
  * 
+ * Server-issued end of the download sequence. Domain must be `loading`,
+ * `complete`, or `incomplete`. Absent `discard`: Domain goes to `ready`.
+ * Present `discard`: Domain is deleted and partial content dropped. ISO 9506-1:2003 §11.4. ISO 9506-2:2003 §11.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,23 @@ class TerminateDownloadSequence_Request {
     constructor (
         /**
          * @summary `domainName`.
+         * @description
+         *
+         * Domain whose download is ending. Must be `loading`, `complete`, or
+         * `incomplete`. ISO 9506-1:2003 §11.4.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly domainName: Identifier,
         /**
          * @summary `discard`.
+         * @description
+         *
+         * If present, abort: delete the Domain and report why. If absent,
+         * retain content and place Domain in `ready`. ISO 9506-1:2003
+         * §11.4.1.1.2. ISO 9506-2:2003 §11.4.1.1.
+         *
          * @public
          * @readonly
          */

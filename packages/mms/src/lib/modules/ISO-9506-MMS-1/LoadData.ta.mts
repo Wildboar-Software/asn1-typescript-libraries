@@ -20,6 +20,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LoadData
  * @description
  * 
+ * Domain content for download/upload segments and Control Elements.
+ * `non-coded`: octets with locally defined meaning. `coded` / `embedded`:
+ * abstract syntax of the EXTERNAL or EMBEDDED PDV supplies the coding rules.
+ * ISO 9506-1:2003 §11.3.1.2.1. ISO 9506-2:2003 §11.3.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

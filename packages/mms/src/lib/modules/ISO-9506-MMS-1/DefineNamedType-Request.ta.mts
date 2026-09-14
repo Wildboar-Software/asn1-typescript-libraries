@@ -19,7 +19,12 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
 /**
  * @summary DefineNamedType_Request
  * @description
- * 
+ *
+ * Confirmed request to store a type description for later
+ * Named Variable or Named Type definitions. Type Names in
+ * the specification are resolved at creation.
+ * ISO 9506-1:2003 §14.15. ISO 9506-2:2003 §14.15.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +40,22 @@ class DefineNamedType_Request {
     constructor (
         /**
          * @summary `typeName`.
+         * @description
+         *
+         * Unique `&name` of the Named Type.
+         * ISO 9506-1:2003 §14.15.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly typeName: ObjectName,
         /**
          * @summary `typeSpecification`.
+         * @description
+         *
+         * Abstract type associated with Type Name.
+         * ISO 9506-1:2003 §14.15.1.1.2, §14.2.3.
+         *
          * @public
          * @readonly
          */

@@ -21,6 +21,10 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary Address
  * @description
  * 
+ * Location of a real variable. numericAddress is
+ * an Unsigned32; symbolicAddress is an MMSString; unconstrainedAddress
+ * is an octet string. ISO 9506-1:2003 §14.1.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

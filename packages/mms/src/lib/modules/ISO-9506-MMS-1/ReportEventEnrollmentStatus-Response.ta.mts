@@ -25,7 +25,13 @@ import { EE_State, _decode_EE_State, _encode_EE_State } from "../ISO-9506-MMS-1/
 /**
  * @summary ReportEventEnrollmentStatus_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): enrollment status including EE-State (combined
+ * `&ecState` and `&ackState`). Disabled conditions do not notify.
+ *
+ * [ISO 9506-1:2003 §21.5.1.2]
+ * [ISO 9506-2:2003 §21.5.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,30 +50,61 @@ class ReportEventEnrollmentStatus_Response {
     constructor (
         /**
          * @summary `eventConditionTransitions`.
+         * @description
+         *
+         * Current `&ecTransitions`.
+         *
+         * [ISO 9506-1:2003 §21.5.1.2.1]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionTransitions: Transitions,
         /**
          * @summary `notificationLost`.
+         * @description
+         *
+         * `&notificationLost`. True if prior notifications were dropped. Default
+         * false.
+         *
+         * [ISO 9506-1:2003 §21.5.1.2.2]
+         *
          * @public
          * @readonly
          */
         readonly notificationLost: OPTIONAL<BOOLEAN>,
         /**
          * @summary `duration`.
+         * @description
+         *
+         * `current` or `permanent`.
+         *
+         * [ISO 9506-1:2003 §21.5.1.2.3]
+         *
          * @public
          * @readonly
          */
         readonly duration: EE_Duration,
         /**
          * @summary `alarmAcknowledgmentRule`.
+         * @description
+         *
+         * `&aaRule` if present (notification + monitored).
+         *
+         * [ISO 9506-1:2003 §21.5.1.2.4]
+         *
          * @public
          * @readonly
          */
         readonly alarmAcknowledgmentRule: OPTIONAL<AlarmAckRule>,
         /**
          * @summary `currentState`.
+         * @description
+         *
+         * EE-State mapping of ISO 9506-1:2003 §21.5.1.2.5.
+         *
+         * [ISO 9506-1:2003 §21.5.1.2.5]
+         *
          * @public
          * @readonly
          */

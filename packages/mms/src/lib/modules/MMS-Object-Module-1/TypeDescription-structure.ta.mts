@@ -20,6 +20,10 @@ import { TypeDescription_structure_components_Item, _decode_TypeDescription_stru
  * @summary TypeDescription_structure
  * @description
  * 
+ * Structure arm of
+ * TypeDescription (str2): named components, each with a type.
+ * ISO 9506-1:2003 §14.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +43,21 @@ class TypeDescription_structure {
     constructor (
         /**
          * @summary `packed`.
+         * @description
+         *
+         * If true, packed storage for this structure sub-tree. ISO 9506-1:2003
+         * §14.2.2.
+         *
          * @public
          * @readonly
          */
         readonly packed: OPTIONAL<BOOLEAN>,
         /**
          * @summary `components`.
+         * @description
+         *
+         * Ordered named components. ISO 9506-1:2003 §14.2.2.
+         *
          * @public
          * @readonly
          */

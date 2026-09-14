@@ -20,6 +20,9 @@ import { StartCount, _decode_StartCount, _encode_StartCount } from "../ISO-9506-
  * @summary CS_Start_Request_controlling
  * @description
  * 
+ * Controlling-PI extras on Start: where to begin and how execution is limited.
+ * ISO 9506-1:2003 §12.4.1.1.3–§12.4.1.1.4. ISO 9506-2:2003 §12.4.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,22 @@ class CS_Start_Request_controlling {
     constructor (
         /**
          * @summary `startLocation`.
+         * @description
+         *
+         * Start of execution for a controlling PI; same format as
+         * `&program-Location` (CSI). Absent: first/default step. ISO 9506-1:2003 §12.4.1.1.3.
+         *
          * @public
          * @readonly
          */
         readonly startLocation: OPTIONAL<VisibleString>,
         /**
          * @summary `startCount`.
+         * @description
+         *
+         * Sets `&running-Mode` and remaining cycle/step count. Default
+         * `cycleCount: 1`. ISO 9506-1:2003 §12.4.1.1.4.
+         *
          * @public
          * @readonly
          */

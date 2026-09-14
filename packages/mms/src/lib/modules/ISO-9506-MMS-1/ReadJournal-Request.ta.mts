@@ -25,7 +25,13 @@ import { ReadJournal_Request_entryToStartAfter, _decode_ReadJournal_Request_entr
 /**
  * @summary ReadJournal_Request
  * @description
- * 
+ *
+ * Confirmed request to retrieve Journal Entry objects that pass
+ * the filters. Range start/stop bound the search; omit start for
+ * the beginning of the journal, omit stop for the end.
+ * `entryToStartAfter` resumes a later page. ISO 9506-1:2003
+ * §23.1, §23.2. ISO 9506-2:2003 §23.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,30 +57,58 @@ class ReadJournal_Request {
     constructor (
         /**
          * @summary `journalName`.
+         * @description
+         *
+         * Journal whose entries are read. ISO 9506-1:2003
+         * §23.2.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly journalName: ObjectName,
         /**
          * @summary `rangeStartSpecification`.
+         * @description
+         *
+         * Inclusive start of the range. `startingTime` vs
+         * `&timeStamp`, or `startingEntry` as an entry identifier.
+         * Absent means start of the journal. ISO 9506-1:2003
+         * §23.2.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly rangeStartSpecification: OPTIONAL<ReadJournal_Request_rangeStartSpecification>,
         /**
          * @summary `rangeStopSpecification`.
+         * @description
+         *
+         * Inclusive end of the range. `endingTime` vs `&timeStamp`,
+         * or `numberOfEntries` (sign is search direction). Absent
+         * means end of the journal. ISO 9506-1:2003 §23.2.1.1.3.
+         *
          * @public
          * @readonly
          */
         readonly rangeStopSpecification: OPTIONAL<ReadJournal_Request_rangeStopSpecification>,
         /**
          * @summary `listOfVariables`.
+         * @description
+         *
+         * Filter: include only entries whose Journal Variable tags
+         * match. ISO 9506-1:2003 §23.2.1.1.4.
+         *
          * @public
          * @readonly
          */
         readonly listOfVariables: OPTIONAL<VisibleString[]>,
         /**
          * @summary `entryToStartAfter`.
+         * @description
+         *
+         * Resume after this time/`&entry` among entries that already
+         * pass the other filters. ISO 9506-1:2003 §23.2.1.1.5.
+         *
          * @public
          * @readonly
          */

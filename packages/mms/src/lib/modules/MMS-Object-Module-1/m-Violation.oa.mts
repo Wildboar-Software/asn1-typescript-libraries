@@ -38,6 +38,11 @@ import { type EVENT_CONDITION } from "../MMS-Object-Module-1/EVENT-CONDITION.oca
  * @summary m_Violation
  * @description
  * 
+ * MMS Standardized Name `M_Violation` (prefix
+ * `M_`). Predefined network-triggered Event Condition raised when a
+ * client attempts access it does not have. Enrollments on this name are
+ * notified of such attempts. ISO 9506-1:2003 §25.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

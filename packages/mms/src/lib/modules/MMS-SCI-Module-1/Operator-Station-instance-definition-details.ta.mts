@@ -20,6 +20,12 @@ import { Operator_Station_instance_definition_details_stationType, _enum_for_Ope
  * @summary Operator_Station_instance_definition_details
  * @description
  * 
+ * Inline
+ * Operator Station attributes in the SCI file. SCI configuration/initialization
+ * encoding (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003
+ * Annex
+ * B.1.11; ISO 9506-1:2003 §17.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +46,22 @@ class Operator_Station_instance_definition_details {
     constructor (
         /**
          * @summary `accessControl`.
+         * @description
+         *
+         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly accessControl: Access_Control_List_instance,
         /**
          * @summary `stationType`.
+         * @description
+         *
+         * entry, display, or entry-display. ISO 9506-1:2003 §17.1.1.3; ISO
+         * 9506-2:2003 Annex B.1.11.
+         *
          * @public
          * @readonly
          */

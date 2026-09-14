@@ -20,6 +20,10 @@ import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/
  * @summary RequestDomainUpload_Request
  * @description
  * 
+ * Server-issued request that the client upload a Domain into a named client
+ * file (InitiateUploadSequence … TerminateUploadSequence). File must be
+ * accessible. ISO 9506-1:2003 §11.9. ISO 9506-2:2003 §11.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,21 @@ class RequestDomainUpload_Request {
     constructor (
         /**
          * @summary `domainName`.
+         * @description
+         *
+         * Domain at the server whose content is uploaded. ISO 9506-1:2003
+         * §11.9.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly domainName: Identifier,
         /**
          * @summary `fileName`.
+         * @description
+         *
+         * Client file that will store the upload. ISO 9506-1:2003 §11.9.1.1.2.
+         *
          * @public
          * @readonly
          */

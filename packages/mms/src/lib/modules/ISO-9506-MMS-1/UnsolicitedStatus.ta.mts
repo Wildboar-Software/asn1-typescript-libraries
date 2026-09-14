@@ -18,6 +18,13 @@ import { StatusResponse, _decode_StatusResponse, _encode_StatusResponse } from "
  * @summary UnsolicitedStatus
  * @description
  * 
+ * Unconfirmed UnsolicitedStatus: an MMS-user may spontaneously report status
+ * when it can detect a change. Parameter meaning matches Status Result(+).
+ * Shall not be sent if the peer did not indicate support in Initiate Services
+ * Supported. Association selection is a local matter. Functionally similar to
+ * an Event Notification with a Status Event Action, but conditions are not
+ * visible or modifiable via MMS. ISO 9506-1:2003 §10.4; ISO 9506-2:2003 §10.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

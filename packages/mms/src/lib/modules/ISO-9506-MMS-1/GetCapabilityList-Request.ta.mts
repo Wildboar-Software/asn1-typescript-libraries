@@ -19,6 +19,11 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary GetCapabilityList_Request
  * @description
  * 
+ * Confirmed GetCapabilityList request: return (part of) the VMD `&Capabilities`
+ * list. A capability is a locally defined resource identified by a string;
+ * definition and management are outside ISO 9506-1:2003.
+ * ISO 9506-1:2003 §7.2.1.10, §10.8; ISO 9506-2:2003 §10.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +39,12 @@ class GetCapabilityList_Request {
     constructor (
         /**
          * @summary `continueAfter`.
+         * @description
+         *
+         * If present, the returned list begins after this capability string. If
+         * it does not match, the server uses ISO 9506-1:2003 §5.4.2 collating.
+         * ISO 9506-1:2003 §10.8.1.1.1.
+         *
          * @public
          * @readonly
          */
@@ -63,7 +74,8 @@ class GetCapabilityList_Request {
  * @summary The Leading Root Component Types of GetCapabilityList_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -76,7 +88,8 @@ const _root_component_type_list_1_spec_for_GetCapabilityList_Request: $.Componen
  * @summary The Trailing Root Component Types of GetCapabilityList_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -89,7 +102,8 @@ const _root_component_type_list_2_spec_for_GetCapabilityList_Request: $.Componen
  * @summary The Extension Addition Component Types of GetCapabilityList_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

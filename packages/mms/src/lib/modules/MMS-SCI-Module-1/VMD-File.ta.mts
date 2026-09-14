@@ -61,6 +61,13 @@ import { VMD_File_selected_Program_Invocation, _decode_VMD_File_selected_Program
  * @summary VMD_File
  * @description
  * 
+ * SCI Part One: initialization of the VMD
+ * (Table 1). Encodes VMD identity, status, capabilities, and nested
+ * predefined objects. Transactions and application associations are
+ * omitted. SCI configuration/initialization encoding (ISO 9506-2:2003 Annex B),
+ * not a runtime MMS PDU. ISO 9506-2:2003 Annex B.1; VMD model ISO 9506-1:2003
+ * §7.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -113,54 +120,99 @@ class VMD_File {
     constructor (
         /**
          * @summary `executiveFunction`.
+         * @description
+         *
+         * VMD identity (ApplicationReference). ISO 9506-1:2003 §7.2.1.1; ISO
+         * 9506-2:2003 Annex B.1.
+         *
          * @public
          * @readonly
          */
         readonly executiveFunction: ApplicationReference,
         /**
          * @summary `vendorName`.
+         * @description
+         *
+         * Vendor of the supporting system. ISO 9506-1:2003 §7.2.1.2; ISO
+         * 9506-2:2003 Annex B.1.
+         *
          * @public
          * @readonly
          */
         readonly vendorName: MMSString,
         /**
          * @summary `modelName`.
+         * @description
+         *
+         * Model of the supporting system. ISO 9506-1:2003 §7.2.1.3; ISO
+         * 9506-2:2003 Annex B.1.
+         *
          * @public
          * @readonly
          */
         readonly modelName: MMSString,
         /**
          * @summary `revision`.
+         * @description
+         *
+         * Revision of the supporting system. ISO 9506-1:2003 §7.2.1.4; ISO
+         * 9506-2:2003 Annex B.1.
+         *
          * @public
          * @readonly
          */
         readonly revision: MMSString,
         /**
          * @summary `abstractSyntaxes`.
+         * @description
+         *
+         * Abstract syntax OID(s) this configured VMD supports. ISO 9506-1:2003
+         * §7.2.1.5; ISO 9506-2:2003 Annex B.1.
+         *
          * @public
          * @readonly
          */
         readonly abstractSyntaxes: OBJECT_IDENTIFIER,
         /**
          * @summary `accessControl`.
+         * @description
+         *
+         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly accessControl: Access_Control_List_instance,
         /**
          * @summary `logicalStatus`.
+         * @description
+         *
+         * Configured LogicalStatus. ISO 9506-1:2003 §7.2.1.9; ISO 9506-2:2003
+         * Annex B.1.
+         *
          * @public
          * @readonly
          */
         readonly logicalStatus: LogicalStatus,
         /**
          * @summary `capabilities`.
+         * @description
+         *
+         * Configured capability strings. ISO 9506-1:2003 §7.2.1.10; ISO
+         * 9506-2:2003 Annex B.1.
+         *
          * @public
          * @readonly
          */
         readonly capabilities: MMSString[],
         /**
          * @summary `physicalStatus`.
+         * @description
+         *
+         * Configured PhysicalStatus. ISO 9506-1:2003 §7.2.1.11; ISO 9506-2:2003
+         * Annex B.1.
+         *
          * @public
          * @readonly
          */
@@ -173,96 +225,165 @@ class VMD_File {
         readonly local_detail: BIT_STRING,
         /**
          * @summary `accessControlLists`.
+         * @description
+         *
+         * Configured ACL instances. ISO 9506-2:2003 Annex B.1.1.
+         *
          * @public
          * @readonly
          */
         readonly accessControlLists: Access_Control_List_instance[],
         /**
          * @summary `domains`.
+         * @description
+         *
+         * Configured Domain instances. ISO 9506-2:2003 Annex B.1.2.
+         *
          * @public
          * @readonly
          */
         readonly domains: Domain_instance[],
         /**
          * @summary `programInvocations`.
+         * @description
+         *
+         * Configured Program Invocation instances. ISO 9506-2:2003 Annex B.1.3.
+         *
          * @public
          * @readonly
          */
         readonly programInvocations: Program_Invocation_instance[],
         /**
          * @summary `unitControls`.
+         * @description
+         *
+         * Configured Unit Control instances. ISO 9506-2:2003 Annex B.1.4.
+         *
          * @public
          * @readonly
          */
         readonly unitControls: Unit_Control_instance[],
         /**
          * @summary `unnamedVariables`.
+         * @description
+         *
+         * Configured Unnamed Variables (or NULL if not vadr). ISO 9506-2:2003
+         * Annex B.1.5.
+         *
          * @public
          * @readonly
          */
         readonly unnamedVariables: Unnamed_Variable_instance[] | NULL,
         /**
          * @summary `namedVariables`.
+         * @description
+         *
+         * Configured Named Variables (or NULL if not vnam). ISO 9506-2:2003
+         * Annex B.1.6.
+         *
          * @public
          * @readonly
          */
         readonly namedVariables: Named_Variable_instance[] | NULL,
         /**
          * @summary `namedVariableLists`.
+         * @description
+         *
+         * Configured Named Variable Lists (or NULL if not vlis). ISO
+         * 9506-2:2003 Annex B.1.7.
+         *
          * @public
          * @readonly
          */
         readonly namedVariableLists: Named_Variable_List_instance[] | NULL,
         /**
          * @summary `namedTypes`.
+         * @description
+         *
+         * Configured Named Types (or NULL if not vnam). ISO 9506-2:2003 Annex
+         * B.1.8.
+         *
          * @public
          * @readonly
          */
         readonly namedTypes: Named_Type_instance[] | NULL,
         /**
          * @summary `dataExchanges`.
+         * @description
+         *
+         * Configured Data Exchange instances. ISO 9506-2:2003 Annex B.1.9.
+         *
          * @public
          * @readonly
          */
         readonly dataExchanges: Data_Exchange_instance[],
         /**
          * @summary `semaphores`.
+         * @description
+         *
+         * Configured Semaphore instances. ISO 9506-2:2003 Annex B.1.10.
+         *
          * @public
          * @readonly
          */
         readonly semaphores: Semaphore_instance[],
         /**
          * @summary `operatorStations`.
+         * @description
+         *
+         * Configured Operator Station instances. ISO 9506-2:2003 Annex B.1.11.
+         *
          * @public
          * @readonly
          */
         readonly operatorStations: Operator_Station_instance[],
         /**
          * @summary `eventConditions`.
+         * @description
+         *
+         * Configured Event Condition instances. ISO 9506-2:2003 Annex B.1.12.
+         *
          * @public
          * @readonly
          */
         readonly eventConditions: Event_Condition_instance[],
         /**
          * @summary `eventActions`.
+         * @description
+         *
+         * Configured Event Action instances. ISO 9506-2:2003 Annex B.1.13.
+         *
          * @public
          * @readonly
          */
         readonly eventActions: Event_Action_instance[],
         /**
          * @summary `eventEnrollments`.
+         * @description
+         *
+         * Configured Event Enrollment instances. ISO 9506-2:2003 Annex B.1.14.
+         *
          * @public
          * @readonly
          */
         readonly eventEnrollments: Event_Enrollment_instance[],
         /**
          * @summary `eventConditionLists`.
+         * @description
+         *
+         * Configured Event Condition Lists (or NULL if not cspi). ISO
+         * 9506-2:2003 Annex B.1.15.
+         *
          * @public
          * @readonly
          */
         readonly eventConditionLists: Event_Condition_List_instance[] | NULL,
         /**
          * @summary `journals`.
+         * @description
+         *
+         * Configured Journal instances. ISO 9506-2:2003 Annex B.1.16.
+         *
          * @public
          * @readonly
          */

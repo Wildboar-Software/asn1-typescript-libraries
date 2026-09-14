@@ -17,6 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Operator_Station_instance_definition_details_stationType
  * @description
  * 
+ * entry, display, or entry-display. SCI configuration/initialization encoding
+ * (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex
+ * B.1.11;
+ * ISO 9506-1:2003 §17.1.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,6 +45,11 @@ enum _enum_for_Operator_Station_instance_definition_details_stationType {
  * @summary Operator_Station_instance_definition_details_stationType
  * @description
  * 
+ * entry, display, or entry-display. SCI configuration/initialization encoding
+ * (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex
+ * B.1.11;
+ * ISO 9506-1:2003 §17.1.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,6 +69,11 @@ type Operator_Station_instance_definition_details_stationType = _enum_for_Operat
  * @summary Operator_Station_instance_definition_details_stationType
  * @description
  * 
+ * entry, display, or entry-display. SCI configuration/initialization encoding
+ * (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex
+ * B.1.11;
+ * ISO 9506-1:2003 §17.1.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,6 +91,10 @@ const Operator_Station_instance_definition_details_stationType = _enum_for_Opera
 
 /**
  * @summary Operator_Station_instance_definition_details_stationType_entry
+ * @description
+ *
+ * Input-only station. ISO 9506-1:2003 §17.1.1.3; ISO 9506-2:2003 Annex B.1.11.
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +103,10 @@ const Operator_Station_instance_definition_details_stationType_entry: Operator_S
 
 /**
  * @summary entry
+ * @description
+ *
+ * Input-only station. ISO 9506-1:2003 §17.1.1.3; ISO 9506-2:2003 Annex B.1.11.
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +115,10 @@ const entry: Operator_Station_instance_definition_details_stationType = Operator
 
 /**
  * @summary Operator_Station_instance_definition_details_stationType_display
+ * @description
+ *
+ * Output-only station. ISO 9506-1:2003 §17.1.1.3; ISO 9506-2:2003 Annex B.1.11.
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +127,10 @@ const Operator_Station_instance_definition_details_stationType_display: Operator
 
 /**
  * @summary display
+ * @description
+ *
+ * Output-only station. ISO 9506-1:2003 §17.1.1.3; ISO 9506-2:2003 Annex B.1.11.
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +139,11 @@ const display: Operator_Station_instance_definition_details_stationType = Operat
 
 /**
  * @summary Operator_Station_instance_definition_details_stationType_entry_display
+ * @description
+ *
+ * Combined entry and display. ISO 9506-1:2003 §17.1.1.3; ISO 9506-2:2003 Annex
+ * B.1.11.
+ *
  * @constant
  * @type {number}
  */
@@ -116,6 +152,11 @@ const Operator_Station_instance_definition_details_stationType_entry_display: Op
 
 /**
  * @summary entry_display
+ * @description
+ *
+ * Combined entry and display. ISO 9506-1:2003 §17.1.1.3; ISO 9506-2:2003 Annex
+ * B.1.11.
+ *
  * @constant
  * @type {number}
  */

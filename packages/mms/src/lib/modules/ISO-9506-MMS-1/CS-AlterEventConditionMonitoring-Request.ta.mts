@@ -18,7 +18,13 @@ import { CS_AlterEventConditionMonitoring_Request_changeDisplay, _decode_CS_Alte
 /**
  * @summary CS_AlterEventConditionMonitoring_Request
  * @description
- * 
+ *
+ * Request-Detail for AlterEventConditionMonitoring: Display Enhancement iff
+ * that parameter is present in the indication. `cspi`.
+ *
+ * [ISO 9506-1:2003 §19.6.1.1.5.1]
+ * [ISO 9506-2:2003 §19.6.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +43,13 @@ class CS_AlterEventConditionMonitoring_Request {
     constructor (
         /**
          * @summary `changeDisplay`.
+         * @description
+         *
+         * New `&displayEnhancement`. Omitted: leave display unchanged.
+         * `string`/`index`/`noEnhancement`.
+         *
+         * [ISO 9506-1:2003 §19.6.1.1.5.1]
+         *
          * @public
          * @readonly
          */

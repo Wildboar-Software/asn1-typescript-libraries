@@ -22,6 +22,9 @@ import { CS_GetProgramInvocationAttributes_Response_control_controlling_runningM
  * @summary CS_GetProgramInvocationAttributes_Response_control_controlling
  * @description
  * 
+ * Extras when `&control` is controlling. ISO 9506-1:2003 §12.9.1.2.10–
+ * §12.9.1.2.16.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,18 +46,32 @@ class CS_GetProgramInvocationAttributes_Response_control_controlling {
     constructor (
         /**
          * @summary `controlledPI`.
+         * @description
+         *
+         * Names in `&Controlled-Program-Invocations` (may be empty). ISO 9506-1:2003 §12.9.1.2.11.
+         *
          * @public
          * @readonly
          */
         readonly controlledPI: Identifier[],
         /**
          * @summary `programLocation`.
+         * @description
+         *
+         * `&program-Location` for sequential languages; omit otherwise. CSI
+         * describes use. ISO 9506-1:2003 §12.9.1.2.12.
+         *
          * @public
          * @readonly
          */
         readonly programLocation: OPTIONAL<VisibleString>,
         /**
          * @summary `runningMode`.
+         * @description
+         *
+         * `&running-Mode`: free-run, remaining cycle count, or remaining step
+         * count. ISO 9506-1:2003 §12.9.1.2.13–§12.9.1.2.16.
+         *
          * @public
          * @readonly
          */

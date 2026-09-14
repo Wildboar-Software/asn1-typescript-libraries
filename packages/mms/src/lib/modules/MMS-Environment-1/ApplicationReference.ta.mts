@@ -24,7 +24,12 @@ import { AE_invocation_identifier, _decode_AE_invocation_identifier, _encode_AE_
 /**
  * @summary ApplicationReference
  * @description
- * 
+ *
+ * Names an application entity other than the peer of the current association,
+ * using the underlying communication system's addressing (ISO 9506-1:2003
+ * §6.6). OSI form maps AP title, AP invocation, AE qualifier, and AE invocation
+ * from A-ASSOCIATE (ISO 9506-2:2003 §7.5.5 and Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,24 +48,41 @@ class ApplicationReference {
     constructor (
         /**
          * @summary `ap_title`.
+         * @description
+         *
+         * AP-title of the referenced AE. Optional; omit when the communication
+         * system does not supply it (ISO 9506-1:2003 §6.6; ISO 9506-2:2003
+         * Annex A).
          * @public
          * @readonly
          */
         readonly ap_title: OPTIONAL<AP_title>,
         /**
          * @summary `ap_invocation_id`.
+         * @description
+         *
+         * AP-invocation-identifier of the referenced AE. Optional
+         * (ISO 9506-1:2003 §6.6; ISO 9506-2:2003 Annex A).
          * @public
          * @readonly
          */
         readonly ap_invocation_id: OPTIONAL<AP_invocation_identifier>,
         /**
          * @summary `ae_qualifier`.
+         * @description
+         *
+         * AE-qualifier of the referenced AE. Optional (ISO 9506-1:2003 §6.6;
+         * ISO 9506-2:2003 Annex A).
          * @public
          * @readonly
          */
         readonly ae_qualifier: OPTIONAL<AE_qualifier>,
         /**
          * @summary `ae_invocation_id`.
+         * @description
+         *
+         * AE-invocation-identifier of the referenced AE. Optional
+         * (ISO 9506-1:2003 §6.6; ISO 9506-2:2003 Annex A).
          * @public
          * @readonly
          */
@@ -90,8 +112,8 @@ class ApplicationReference {
  * @summary The Leading Root Component Types of ApplicationReference
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -106,8 +128,8 @@ const _root_component_type_list_1_spec_for_ApplicationReference: $.ComponentSpec
  * @summary The Trailing Root Component Types of ApplicationReference
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -119,8 +141,8 @@ const _root_component_type_list_2_spec_for_ApplicationReference: $.ComponentSpec
  * @summary The Extension Addition Component Types of ApplicationReference
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -184,7 +206,7 @@ function _encode_ApplicationReference (value: ApplicationReference, elGetter: $.
             /* IF_ABSENT  */ ((value.ae_qualifier === undefined) ? undefined : $._encode_explicit(_TagClass.context, 2, () => _encode_AE_qualifier, $.BER)(value.ae_qualifier, $.BER)),
             /* IF_ABSENT  */ ((value.ae_invocation_id === undefined) ? undefined : $._encode_explicit(_TagClass.context, 3, () => _encode_AE_invocation_identifier, $.BER)(value.ae_invocation_id, $.BER))
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+   ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
     return _cached_encoder_for_ApplicationReference(value, elGetter);
 }

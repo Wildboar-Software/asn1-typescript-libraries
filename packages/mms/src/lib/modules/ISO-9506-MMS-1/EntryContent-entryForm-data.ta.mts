@@ -20,7 +20,13 @@ import { Journal_Variable, _decode_Journal_Variable, _encode_Journal_Variable } 
 /**
  * @summary EntryContent_entryForm_data
  * @description
- * 
+ *
+ * Data form of a journal entry. `event` present ⇒
+ * `&informationType` `event-data`; otherwise `data`. At least one
+ * of `event` and `listOfVariables` shall appear on write.
+ * ISO 9506-1:2003 §23.1.2.6, §23.3.1.1.2.2.1.
+ * ISO 9506-2:2003 §23.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +46,24 @@ class EntryContent_entryForm_data {
     constructor (
         /**
          * @summary `event`.
+         * @description
+         *
+         * Event transition record: Event Condition name and
+         * `&ecState` after processing. Sets `&informationType` to
+         * `event-data`. ISO 9506-1:2003 §23.1.2.8, §23.3.1.1.2.2.1.
+         *
          * @public
          * @readonly
          */
         readonly event: OPTIONAL<EntryContent_entryForm_data_event>,
         /**
          * @summary `listOfVariables`.
+         * @description
+         *
+         * Journal variables (tag ≤ 255 chars plus value). Present
+         * only for `data` or `event-data`. ISO 9506-1:2003
+         * §23.1.2.9, §23.3.1.1.2.2.1.
+         *
          * @public
          * @readonly
          */

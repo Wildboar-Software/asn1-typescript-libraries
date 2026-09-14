@@ -19,7 +19,12 @@ import { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS
 /**
  * @summary ReadJournal_Request_rangeStopSpecification
  * @description
- * 
+ *
+ * Inclusive range end. `endingTime` is compared to `&timeStamp`.
+ * `numberOfEntries` is the max count to search; its sign is the
+ * return order. Absent from the request means end of the journal.
+ * ISO 9506-1:2003 §23.2.1.1.3. ISO 9506-2:2003 §23.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

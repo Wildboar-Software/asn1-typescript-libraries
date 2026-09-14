@@ -23,6 +23,12 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  * @summary ReportAccessControlledObjects_Request
  * @description
  * 
+ * Confirmed request of ReportAccessControlledObjects: (partial) list of objects
+ * whose `&accessControl` references a named ACL, of one object class. Result(-)
+ * if the ACL does not exist. Shall not appear in minor version 1 or 2 of the
+ * confirmed-service PDUs (ISO 9506-2:2003 ConfirmedServiceRequest/Response).
+ * ISO 9506-1:2003 §9.5; ISO 9506-2:2003 §9.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +46,32 @@ class ReportAccessControlledObjects_Request {
     constructor (
         /**
          * @summary `accessControlList`.
+         * @description
+         *
+         * VMD-specific Identifier of the ACL. ISO 9506-1:2003 §9.5.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly accessControlList: Identifier,
         /**
          * @summary `objectClass`.
+         * @description
+         *
+         * Object class of names to return. ISO 9506-1:2003 §9.5.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly objectClass: ObjectClass,
         /**
          * @summary `continueAfter`.
+         * @description
+         *
+         * Optional start-after name. If it does not match an existing name of
+         * the class, the server uses the collating sequence of ISO 9506-1:2003
+         * §5.4.2. ISO 9506-1:2003 §9.5.1.1.3.
+         *
          * @public
          * @readonly
          */
@@ -62,7 +82,8 @@ class ReportAccessControlledObjects_Request {
      * @summary Restructures an object into a ReportAccessControlledObjects_Request
      * @description
      * 
-     * This takes an `object` and converts it to a `ReportAccessControlledObjects_Request`.
+     * This takes an `object` and converts it to a
+     * `ReportAccessControlledObjects_Request`.
      * 
      * @public
      * @static
@@ -81,7 +102,8 @@ class ReportAccessControlledObjects_Request {
  * @summary The Leading Root Component Types of ReportAccessControlledObjects_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -96,7 +118,8 @@ const _root_component_type_list_1_spec_for_ReportAccessControlledObjects_Request
  * @summary The Trailing Root Component Types of ReportAccessControlledObjects_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -109,7 +132,8 @@ const _root_component_type_list_2_spec_for_ReportAccessControlledObjects_Request
  * @summary The Extension Addition Component Types of ReportAccessControlledObjects_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

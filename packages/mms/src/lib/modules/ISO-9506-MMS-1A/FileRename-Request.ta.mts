@@ -17,7 +17,15 @@ import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/
 /**
  * @summary FileRename_Request
  * @description
- * 
+ *
+ * Confirmed request: change the name of a file
+ * in the server's virtual filestore. The new
+ * name must not already exist. Informative
+ * Annex D.
+ *
+ * [ISO 9506-1:2003 Annex D, D.6]
+ * [ISO 9506-2:2003 Annex D, D.5]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +42,27 @@ class FileRename_Request {
     constructor (
         /**
          * @summary `currentFileName`.
+         * @description
+         *
+         * Identifies a single file to rename in the
+         * server's virtual filestore. Wildcard
+         * resolution should yield a single name.
+         *
+         * [ISO 9506-1:2003 Annex D, D.6.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly currentFileName: FileName,
         /**
          * @summary `newFileName`.
+         * @description
+         *
+         * New name of the designated file in the
+         * server's virtual filestore.
+         *
+         * [ISO 9506-1:2003 Annex D, D.6.1.1.2]
+         *
          * @public
          * @readonly
          */

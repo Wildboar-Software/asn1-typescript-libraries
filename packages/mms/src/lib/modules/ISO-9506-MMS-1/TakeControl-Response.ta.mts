@@ -18,7 +18,12 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary TakeControl_Response
  * @description
- * 
+ *
+ * Confirmed success. `namedToken` is the allocated named-token for a
+ * pool semaphore (the requested name, or a server choice if the
+ * request omitted it). `noResult` is used for a token semaphore.
+ * ISO 9506-1:2003 §16.2.1.2. ISO 9506-2:2003 §16.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

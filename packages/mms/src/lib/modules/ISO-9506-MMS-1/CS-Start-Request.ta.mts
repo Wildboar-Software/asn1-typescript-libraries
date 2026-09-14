@@ -19,6 +19,10 @@ import { CS_Start_Request_controlling, _decode_CS_Start_Request_controlling, _en
  * @summary CS_Start_Request
  * @description
  * 
+ * `csr` Request-Detail for Start. `normal`: no extras. `controlling`: start
+ * location and StartCount for a controlling PI (must be selected). Start
+ * Location / Running Mode must not appear unless `&control` is controlling. ISO 9506-1:2003 §12.4.1.1.3–§12.4.1.1.4. ISO 9506-2:2003 §12.4.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

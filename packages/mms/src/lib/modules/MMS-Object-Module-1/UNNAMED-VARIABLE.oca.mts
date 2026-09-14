@@ -24,6 +24,10 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
  * @summary UNNAMED_VARIABLE
  * @description
  * 
+ * Maps a real variable at a known, fixed
+ * VMD address. Exists with the VMD (never created/destroyed). Requires
+ * the vadr CBB. Access method is always public. ISO 9506-1:2003 §14.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,22 +63,44 @@ interface UNNAMED_VARIABLE {
     }>;
     /**
      * @summary &address
+     * @description
+     *
+     * Location of the real variable. ISO 9506-1:2003 §14.1.2.1.
+     *
      */
     readonly "&address"?: Address;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating read/write of this unnamed variable. ISO 9506-1:2003
+     * §14.1.2.2.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &typeDescription
+     * @description
+     *
+     * TypeDescription of this address. ISO 9506-1:2003 §14.1.2.3, §14.2.2.
+     *
      */
     readonly "&typeDescription"?: TypeDescription;
     /**
      * @summary &value
+     * @description
+     *
+     * Current value; Data choice matches &typeDescription. ISO 9506-1:2003
+     * §14.1.2.4.
+     *
      */
     readonly "&value"?: Data;
     /**
      * @summary &accessMethod
+     * @description
+     *
+     * Always public for Unnamed Variables. ISO 9506-1:2003 §14.1.2.5.
+     *
      */
     readonly "&accessMethod"?: UNNAMED_VARIABLE_accessMethod;
 }
@@ -82,6 +108,10 @@ interface UNNAMED_VARIABLE {
 /**
  * @summary UNNAMED_VARIABLE_accessMethod
  * @description
+ *
+ * Maps a real variable at a known, fixed
+ * VMD address. Exists with the VMD (never created/destroyed). Requires
+ * the vadr CBB. Access method is always public. ISO 9506-1:2003 §14.1.2.
  *
  * ### ASN.1 Definition:
  *

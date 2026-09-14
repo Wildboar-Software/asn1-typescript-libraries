@@ -24,7 +24,15 @@ import { Request_Detail, _decode_Request_Detail, _encode_Request_Detail } from "
 /**
  * @summary DefineEventAction_Request
  * @description
- * 
+ *
+ * Confirmed request: create an Event Action (confirmed service plus optional
+ * modifiers executed during event transition processing). The responder role
+ * for that service must have been negotiated. Result(+) empty. `cs-extension`
+ * is CS Request-Detail (`csr`/`cspi`); not transmitted if a tagged NULL.
+ *
+ * [ISO 9506-1:2003 §20.2]
+ * [ISO 9506-2:2003 §20.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,24 +53,50 @@ class DefineEventAction_Request {
     constructor (
         /**
          * @summary `eventActionName`.
+         * @description
+         *
+         * `&name` of the Event Action to create.
+         *
+         * [ISO 9506-1:2003 §20.2.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventActionName: ObjectName,
         /**
          * @summary `listOfModifier`.
+         * @description
+         *
+         * Modifiers applied on each execution of this action, not of DefineEventAction
+         * itself.
+         *
+         * [ISO 9506-1:2003 §20.2.1.1.2]
+         *
          * @public
          * @readonly
          */
         readonly listOfModifier: OPTIONAL<Modifier[]>,
         /**
          * @summary `confirmedServiceRequest`.
+         * @description
+         *
+         * Confirmed service and argument to execute on a matching transition.
+         *
+         * [ISO 9506-1:2003 §20.2.1.1.3]
+         *
          * @public
          * @readonly
          */
         readonly confirmedServiceRequest: ConfirmedServiceRequest,
         /**
          * @summary `cs_extension`.
+         * @description
+         *
+         * CS Request-Detail matching the confirmed-service choice. `csr`/`cspi`. Not
+         * sent if tagged NULL.
+         *
+         * [ISO 9506-2:2003 §20.2.1.1]
+         *
          * @public
          * @readonly
          */

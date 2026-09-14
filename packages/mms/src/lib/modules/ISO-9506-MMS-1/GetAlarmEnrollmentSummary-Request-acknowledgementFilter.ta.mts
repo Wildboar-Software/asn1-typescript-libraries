@@ -18,7 +18,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary GetAlarmEnrollmentSummary_Request_acknowledgementFilter
  * @description
- * 
+ *
+ * Filter GetAlarmEnrollmentSummary by enrollment
+ * `&ackState`. Unacknowledged: `noAckI` or `noAckA`.
+ * Acknowledged: `acked`.
+ *
+ * [ISO 9506-1:2003 §18.6.1.1.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +40,13 @@ type GetAlarmEnrollmentSummary_Request_acknowledgementFilter = INTEGER;
 
 /**
  * @summary GetAlarmEnrollmentSummary_Request_acknowledgementFilter_not_acked
+ * @description
+ *
+ * Report only unacknowledged notification enrollments
+ * (`&ackState` is `noAckI` or `noAckA`).
+ *
+ * [ISO 9506-1:2003 §18.6.1.1.3]
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +55,13 @@ const GetAlarmEnrollmentSummary_Request_acknowledgementFilter_not_acked: GetAlar
 
 /**
  * @summary GetAlarmEnrollmentSummary_Request_acknowledgementFilter_not_acked
+ * @description
+ *
+ * Short name of
+ * {@link GetAlarmEnrollmentSummary_Request_acknowledgementFilter_not_acked}.
+ *
+ * [ISO 9506-1:2003 §18.6.1.1.3]
+ *
  * @constant
  * @type {number}
  */
@@ -50,6 +70,13 @@ const not_acked: GetAlarmEnrollmentSummary_Request_acknowledgementFilter = GetAl
 
 /**
  * @summary GetAlarmEnrollmentSummary_Request_acknowledgementFilter_acked
+ * @description
+ *
+ * Report only acknowledged notification enrollments
+ * (`&ackState` is `acked`).
+ *
+ * [ISO 9506-1:2003 §18.6.1.1.3]
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +85,13 @@ const GetAlarmEnrollmentSummary_Request_acknowledgementFilter_acked: GetAlarmEnr
 
 /**
  * @summary GetAlarmEnrollmentSummary_Request_acknowledgementFilter_acked
+ * @description
+ *
+ * Short name of
+ * {@link GetAlarmEnrollmentSummary_Request_acknowledgementFilter_acked}.
+ *
+ * [ISO 9506-1:2003 §18.6.1.1.3]
+ *
  * @constant
  * @type {number}
  */
@@ -66,6 +100,13 @@ const acked: GetAlarmEnrollmentSummary_Request_acknowledgementFilter = GetAlarmE
 
 /**
  * @summary GetAlarmEnrollmentSummary_Request_acknowledgementFilter_all
+ * @description
+ *
+ * Report notification enrollments without regard to
+ * acknowledgement status.
+ *
+ * [ISO 9506-1:2003 §18.6.1.1.3]
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +115,13 @@ const GetAlarmEnrollmentSummary_Request_acknowledgementFilter_all: GetAlarmEnrol
 
 /**
  * @summary GetAlarmEnrollmentSummary_Request_acknowledgementFilter_all
+ * @description
+ *
+ * Short name of
+ * {@link GetAlarmEnrollmentSummary_Request_acknowledgementFilter_all}.
+ *
+ * [ISO 9506-1:2003 §18.6.1.1.3]
+ *
  * @constant
  * @type {number}
  */

@@ -19,6 +19,13 @@ import { AccessCondition, _decode_AccessCondition, _encode_AccessCondition } fro
  * @summary GetAccessControlListAttributes_Response_accessControlListElements
  * @description
  * 
+ * List of Access Control Element: zero or one Access Condition per service
+ * class (READ, STORE, WRITE, LOAD, EXECUTE, DELETE, EDIT). Each condition, if
+ * present and not satisfied, requires the matching services to fail.
+ * ISO 9506-1:2003 §9.3.1.1.2; ISO 9506-2:2003 §9.3.1.1 / §9.4.2.1. Returned in
+ * GetAccessControlListAttributes Result(+). ISO 9506-1:2003 §9.4.1.2.2;
+ * ISO 9506-2:2003 §9.4.2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,42 +47,91 @@ class GetAccessControlListAttributes_Response_accessControlListElements {
     constructor (
         /**
          * @summary `readAccessCondition`.
+         * @description
+         *
+         * Access Condition for service class READ. If unsatisfied, Read and
+         * Output shall fail with ACCESS / OBJECT-ACCESS-DENIED. ISO 9506-1:2003
+         * §9.1.1.3, §9.1.3, §9.3.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly readAccessCondition: OPTIONAL<AccessCondition>,
         /**
          * @summary `storeAccessCondition`.
+         * @description
+         *
+         * Access Condition for service class STORE. Affects
+         * InitiateUploadSequence, StoreDomainContent, ReadJournal,
+         * UnitControlUpload, and StoreUnitControlToFile. ISO 9506-1:2003
+         * §9.1.1.4, §9.3.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly storeAccessCondition: OPTIONAL<AccessCondition>,
         /**
          * @summary `writeAccessCondition`.
+         * @description
+         *
+         * Access Condition for service class WRITE. Affects Write, Input, and
+         * ExchangeData. ISO 9506-1:2003 §9.1.1.5, §9.3.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly writeAccessCondition: OPTIONAL<AccessCondition>,
         /**
          * @summary `loadAccessCondition`.
+         * @description
+         *
+         * Access Condition for service class LOAD. Affects
+         * download/define/create and related services listed in ISO 9506-1:2003
+         * §9.1.1.6. Services that create objects (marked * there) are
+         * constrained only by the VMD's Access Control List. ISO 9506-1:2003
+         * §9.3.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly loadAccessCondition: OPTIONAL<AccessCondition>,
         /**
          * @summary `executeAccessCondition`.
+         * @description
+         *
+         * Access Condition for service class EXECUTE. Affects Start, Stop,
+         * Resume, Reset, Kill, VMDStop, VMDReset, Select, StartUnitControl, and
+         * StopUnitControl. ISO 9506-1:2003 §9.1.1.7, §9.3.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly executeAccessCondition: OPTIONAL<AccessCondition>,
         /**
          * @summary `deleteAccessCondition`.
+         * @description
+         *
+         * Access Condition for service class DELETE. Affects DeleteDomain,
+         * DeleteProgramInvocation, DeleteVariableAccess,
+         * DeleteNamedVariableList, DeleteNamedType, DeleteSemaphore,
+         * DeleteEventCondition, DeleteEventAction, DeleteEventEnrollment,
+         * DeleteJournal, DeleteAccessControlList, DeleteUnitControl, and
+         * DeleteEventConditionList. ISO 9506-1:2003 §9.1.1.8, §9.3.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly deleteAccessCondition: OPTIONAL<AccessCondition>,
         /**
          * @summary `editAccessCondition`.
+         * @description
+         *
+         * Access Condition for service class EDIT (change access control).
+         * Affects ChangeAccessControl, Rename, AddToUnitControl,
+         * RemoveFromUnitControl, AddEventConditionListReference, and
+         * RemoveEventConditionListReference. ISO 9506-1:2003 §9.1.1.9,
+         * §9.3.1.1.2.
+         *
          * @public
          * @readonly
          */
@@ -86,7 +142,8 @@ class GetAccessControlListAttributes_Response_accessControlListElements {
      * @summary Restructures an object into a GetAccessControlListAttributes_Response_accessControlListElements
      * @description
      * 
-     * This takes an `object` and converts it to a `GetAccessControlListAttributes_Response_accessControlListElements`.
+     * This takes an `object` and converts it to a
+     * `GetAccessControlListAttributes_Response_accessControlListElements`.
      * 
      * @public
      * @static
@@ -105,7 +162,8 @@ class GetAccessControlListAttributes_Response_accessControlListElements {
  * @summary The Leading Root Component Types of GetAccessControlListAttributes_Response_accessControlListElements
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -124,7 +182,8 @@ const _root_component_type_list_1_spec_for_GetAccessControlListAttributes_Respon
  * @summary The Trailing Root Component Types of GetAccessControlListAttributes_Response_accessControlListElements
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -137,7 +196,8 @@ const _root_component_type_list_2_spec_for_GetAccessControlListAttributes_Respon
  * @summary The Extension Addition Component Types of GetAccessControlListAttributes_Response_accessControlListElements
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

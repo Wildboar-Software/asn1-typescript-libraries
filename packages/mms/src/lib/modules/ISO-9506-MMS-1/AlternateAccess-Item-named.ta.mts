@@ -19,7 +19,12 @@ import { AlternateAccessSelection, _decode_AlternateAccessSelection, _encode_Alt
 /**
  * @summary AlternateAccess_Item_named
  * @description
- * 
+ *
+ * Named Alternate Access Selection: Component Name plus
+ * the selection. Present only when the list has more than
+ * one element (`str2` CBB).
+ * ISO 9506-1:2003 §14.3.1.1.1. ISO 9506-2:2003 §14.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,23 @@ class AlternateAccess_Item_named {
     constructor (
         /**
          * @summary `componentName`.
+         * @description
+         *
+         * Name of this derived-structure component for further
+         * alternate access. Forbidden if the list has one
+         * element. ISO 9506-1:2003 §14.3.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly componentName: Identifier,
         /**
          * @summary `access`.
+         * @description
+         *
+         * SELECT-ALTERNATE-ACCESS or SELECT-ACCESS.
+         * ISO 9506-1:2003 §14.3.1.1.2.
+         *
          * @public
          * @readonly
          */

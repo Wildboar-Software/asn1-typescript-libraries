@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary VMDStop_Request
  * @description
  * 
+ * Confirmed VMDStop request. No argument parameters. Conformance `csr`. Stops
+ * all motion and associated control as soon as possible and requires manual
+ * intervention. ISO 9506-1:2003 §10.9; ISO 9506-2:2003 §10.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

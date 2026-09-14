@@ -26,7 +26,12 @@ import { AdditionalCBBOptions, _decode_AdditionalCBBOptions, _encode_AdditionalC
 /**
  * @summary Initiate_RequestPDU_initRequestDetail
  * @description
- * 
+ *
+ * Calling user's proposed minor version, parameter CBBs, and service support.
+ * Additional fields require `csr`/`cspi`. A proposed minor version N means
+ * support for all minor versions 1..N (ISO 9506-1:2003 §8.2;
+ * ISO 9506-2:2003 §8.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +39,7 @@ import { AdditionalCBBOptions, _decode_AdditionalCBBOptions, _encode_AdditionalC
  *     proposedVersionNumber [0] IMPLICIT Integer16,
  *     proposedParameterCBB [1] IMPLICIT ParameterSupportOptions,
  *     servicesSupportedCalling [2] IMPLICIT ServiceSupportOptions,
- *     ...,
+ *    ...,
  *     additionalSupportedCalling [3] IMPLICIT AdditionalSupportOptions,
  *     additionalCbbSupportedCalling [4] IMPLICIT AdditionalCBBOptions,
  *     privilegeClassIdentityCalling [5] IMPLICIT VisibleString
@@ -48,36 +53,65 @@ class Initiate_RequestPDU_initRequestDetail {
     constructor (
         /**
          * @summary `proposedVersionNumber`.
+         * @description
+         *
+         * Proposed minor version of ISO 9506-1/2. Provider may reduce, not
+         * below 1. Major versions are distinct abstract syntaxes
+         * (ISO 9506-1:2003 §8.2.1.1.5).
          * @public
          * @readonly
          */
         readonly proposedVersionNumber: Integer16,
         /**
          * @summary `proposedParameterCBB`.
+         * @description
+         *
+         * Parameter CBBs the calling user supports. Indication is the
+         * intersection with the calling provider. Bit 1 = support. Encode all
+         * bits; ignore extra received bits (ISO 9506-1:2003 §8.2.1.1.6).
          * @public
          * @readonly
          */
         readonly proposedParameterCBB: ParameterSupportOptions,
         /**
          * @summary `servicesSupportedCalling`.
+         * @description
+         *
+         * Services (and modifiers) the calling user supports. Indication is the
+         * intersection with the calling provider. Unsupported receipt shall be
+         * Rejected UNRECOGNIZED-SERVICE (ISO 9506-1:2003 §8.2.1.1.8).
          * @public
          * @readonly
          */
         readonly servicesSupportedCalling: ServiceSupportOptions,
         /**
          * @summary `additionalSupportedCalling`.
+         * @description
+         *
+         * Extended services supported by the calling user. Present only if
+         * `csr` or `cspi` was offered in Proposed Parameter CBB
+         * (ISO 9506-1:2003 §8.2.1.1.9).
          * @public
          * @readonly
          */
         readonly additionalSupportedCalling: AdditionalSupportOptions,
         /**
          * @summary `additionalCbbSupportedCalling`.
+         * @description
+         *
+         * Additional parameter CBBs. Present only if `cspi` was offered in
+         * Proposed Parameter CBB (ISO 9506-1:2003 §8.2.1.1.7).
          * @public
          * @readonly
          */
         readonly additionalCbbSupportedCalling: AdditionalCBBOptions,
         /**
          * @summary `privilegeClassIdentityCalling`.
+         * @description
+         *
+         * Present in the abstract syntax when `cspi` is offered
+         * (ISO 9506-2:2003 §8.2). ISO 9506-1:2003 does not specify the semantics of
+         * this field.
          * @public
          * @readonly
          */
@@ -113,8 +147,8 @@ class Initiate_RequestPDU_initRequestDetail {
  * @summary The Leading Root Component Types of Initiate_RequestPDU_initRequestDetail
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -128,8 +162,8 @@ const _root_component_type_list_1_spec_for_Initiate_RequestPDU_initRequestDetail
  * @summary The Trailing Root Component Types of Initiate_RequestPDU_initRequestDetail
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -141,8 +175,8 @@ const _root_component_type_list_2_spec_for_Initiate_RequestPDU_initRequestDetail
  * @summary The Extension Addition Component Types of Initiate_RequestPDU_initRequestDetail
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -221,7 +255,7 @@ function _encode_Initiate_RequestPDU_initRequestDetail (value: Initiate_RequestP
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 5, () => $._encodeVisibleString, $.BER)(value.privilegeClassIdentityCalling, $.BER)
         ],
         (value._unrecognizedExtensionsList ? value._unrecognizedExtensionsList : []),
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+   ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
     return _cached_encoder_for_Initiate_RequestPDU_initRequestDetail(value, elGetter);
 }

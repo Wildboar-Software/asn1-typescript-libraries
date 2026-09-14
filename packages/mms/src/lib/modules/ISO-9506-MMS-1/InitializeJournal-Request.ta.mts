@@ -20,7 +20,12 @@ import { InitializeJournal_Request_limitSpecification, _decode_InitializeJournal
 /**
  * @summary InitializeJournal_Request
  * @description
- * 
+ *
+ * Confirmed request to delete all or some Journal Entries. Omit
+ * `limitSpecification` to delete every entry. With a limit, delete
+ * entries up to that time (and optionally that `&entry`).
+ * ISO 9506-1:2003 §23.4. ISO 9506-2:2003 §23.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +44,22 @@ class InitializeJournal_Request {
     constructor (
         /**
          * @summary `journalName`.
+         * @description
+         *
+         * Journal to initialize. ISO 9506-1:2003 §23.4.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly journalName: ObjectName,
         /**
          * @summary `limitSpecification`.
+         * @description
+         *
+         * If absent, all entries are deleted. If present, entries
+         * through `limitingTime` (and optionally `limitingEntry`)
+         * are deleted. ISO 9506-1:2003 §23.4.1.1.2.
+         *
          * @public
          * @readonly
          */

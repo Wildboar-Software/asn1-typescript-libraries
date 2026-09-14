@@ -188,7 +188,14 @@ import { ChangeAccessControl_Request, _decode_ChangeAccessControl_Request, _enco
 /**
  * @summary ConfirmedServiceRequest
  * @description
- * 
+ *
+ * CHOICE of confirmed MMS service requests. The context tag selects the
+ * service; the alternative carries that service's argument. Each alternative is
+ * a confirmed service from ISO 9506-1:2003 clauses 8–23 or a companion-standard
+ * AdditionalService (tag [78]). Unsupported services appear as tagged NULL;
+ * receipt of an unsupported service shall be Rejected with UNRECOGNIZED-SERVICE
+ * (ISO 9506-1:2003 §8.2; ISO 9506-2:2003 §7.1.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -353,7 +360,7 @@ import { ChangeAccessControl_Request, _decode_ChangeAccessControl_Request, _enco
  *     fileDelete  [76] IMPLICIT NULL,
  *     fileDirectory   [77] IMPLICIT FileDirectory-Request,
  *     fileDirectory   [77] IMPLICIT NULL,
- *     ...,
+ *    ...,
  *     additionalService   [78] AdditionalService-Request,
  *     -- choice [79] is reserved
  *     getDataExchangeAttributes   [80] GetDataExchangeAttributes-Request,
@@ -370,7 +377,7 @@ import { ChangeAccessControl_Request, _decode_ChangeAccessControl_Request, _enco
  *     -- Shall not appear in minor version 1 or 2
  *     changeAccessControl [86] IMPLICIT ChangeAccessControl-Request,
  *     -- Shall not appear in minor version 1 or 2
- *     ...
+ *    ...
  * }
  * ```
  */

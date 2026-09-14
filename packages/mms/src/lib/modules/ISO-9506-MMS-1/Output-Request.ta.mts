@@ -19,7 +19,11 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
 /**
  * @summary Output_Request
  * @description
- * 
+ *
+ * Confirmed request to display lines on an Operator Station of
+ * type `display` or `entry-display`. ISO 9506-1:2003 §17.1,
+ * §17.3. ISO 9506-2:2003 §17.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,22 @@ class Output_Request {
     constructor (
         /**
          * @summary `operatorStationName`.
+         * @description
+         *
+         * Operator Station on which to display.
+         * ISO 9506-1:2003 §17.3.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly operatorStationName: Identifier,
         /**
          * @summary `listOfOutputData`.
+         * @description
+         *
+         * Lines to display; each element is one display line.
+         * ISO 9506-1:2003 §17.3.1.1.2.
+         *
          * @public
          * @readonly
          */

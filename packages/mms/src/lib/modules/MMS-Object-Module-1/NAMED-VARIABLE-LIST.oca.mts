@@ -22,6 +22,11 @@ import { VARIABLE_LIST_ITEM } from "../MMS-Object-Module-1/VARIABLE-LIST-ITEM.oc
  * @summary NAMED_VARIABLE_LIST
  * @description
  * 
+ * Named list of variable-list items
+ * (named or unnamed, each with optional Alternate Access). Requires vnam
+ * and vlis. Read/Write/InformationReport apply to every item.
+ * ISO 9506-1:2003 §14.1.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,14 +60,27 @@ interface NAMED_VARIABLE_LIST {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * ObjectName unique in its VMD/Domain/AA scope. ISO 9506-1:2003 §14.1.4.1.
+     *
      */
     readonly "&name"?: ObjectName;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating read, write, delete, and ACL change. ISO 9506-1:2003
+     * §14.1.4.2.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &listOfVariables
+     * @description
+     *
+     * One or more VARIABLE-LIST-ITEM objects. ISO 9506-1:2003 §14.1.4.3.
+     *
      */
     readonly "&listOfVariables"?: VARIABLE_LIST_ITEM;
 };

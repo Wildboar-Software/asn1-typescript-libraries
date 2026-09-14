@@ -18,6 +18,10 @@ import { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS
  * @summary TerminateUploadSequence_Request
  * @description
  * 
+ * Client request to delete the ULSM, whether or not upload finished.
+ * Terminating before `moreFollows` false is an error but still deletes the
+ * ULSM. ISO 9506-1:2003 §11.7. ISO 9506-2:2003 §11.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AlterEventConditionListMonitoring_Request_priorityChange
  * @description
- * 
+ *
+ * `priorityValue`: new `&groupPriorityOverride` (0 highest, 127 lowest).
+ * `priorityReset`: set override to undefined (use `&priority`).
+ *
+ * [ISO 9506-1:2003 §22.8.1.1.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

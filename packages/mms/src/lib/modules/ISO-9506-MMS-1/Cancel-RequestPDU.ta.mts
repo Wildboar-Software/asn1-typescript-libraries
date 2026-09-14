@@ -17,7 +17,12 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary Cancel_RequestPDU
  * @description
- * 
+ *
+ * Cancel request: the Original Invoke ID of a still-outstanding confirmed
+ * service. Only confirmed services may be cancelled. Success returns this ID
+ * and a Result(−) SERVICE-PREEMPT/CANCEL for the target; failure leaves the
+ * original service running (ISO 9506-1:2003 §8.5; ISO 9506-2:2003 §8.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

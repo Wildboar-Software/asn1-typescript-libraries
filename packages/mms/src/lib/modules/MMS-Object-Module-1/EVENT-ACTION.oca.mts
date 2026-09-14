@@ -24,6 +24,11 @@ import { Modifier, _decode_Modifier, _encode_Modifier } from "../MMS-Object-Modu
  * @summary EVENT_ACTION
  * @description
  * 
+ * A confirmed MMS service (plus optional
+ * modifiers) executed when a referenced Event Condition takes a
+ * specified transition. Component of Event-Transition Processing.
+ * ISO 9506-1:2003 §20.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,22 +64,44 @@ interface EVENT_ACTION {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * ObjectName unique in VMD/Domain/AA scope. ISO 9506-1:2003 §20.1.1.1.
+     *
      */
     readonly "&name"?: ObjectName;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating delete and ACL change. ISO 9506-1:2003 §20.1.1.2.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &confirmedServiceRequest
+     * @description
+     *
+     * Confirmed service and argument executed during Event- Transition
+     * Processing. ISO 9506-1:2003 §20.1.1.3.
+     *
      */
     readonly "&confirmedServiceRequest"?: ConfirmedServiceRequest;
     /**
      * @summary &Modifiers
+     * @description
+     *
+     * Ordered modifiers applied to each execution. ISO 9506-1:2003 §20.1.1.4,
+     * §5.6.
+     *
      */
     readonly "&Modifiers"?: Modifier;
     /**
      * @summary &EventEnrollments
+     * @description
+     *
+     * Enrollments that refer to this action. ISO 9506-1:2003 §20.1.1.5.
+     *
      */
     readonly "&EventEnrollments"?: Identifier;
 };

@@ -20,6 +20,11 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary DomainManagementParameters
  * @description
  * 
+ * Domain Management CIS
+ * parameters (Table 27): Load Data format/syntax and max uploads.
+ * SCI configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003 Annex B.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +44,31 @@ class DomainManagementParameters {
     constructor (
         /**
          * @summary `loadDataOctet`.
+         * @description
+         *
+         * Format of Load Data if the octet-string form is used. ISO 9506-2:2003
+         * Annex B.2.3.
+         *
          * @public
          * @readonly
          */
         readonly loadDataOctet: MMSString,
         /**
          * @summary `loadDataSyntax`.
+         * @description
+         *
+         * Abstract syntaxes used for Load Data. ISO 9506-2:2003 Annex B.2.3.
+         *
          * @public
          * @readonly
          */
         readonly loadDataSyntax: OBJECT_IDENTIFIER[],
         /**
          * @summary `maxUploads`.
+         * @description
+         *
+         * Maximum concurrent uploads. ISO 9506-2:2003 Annex B.2.3.
+         *
          * @public
          * @readonly
          */

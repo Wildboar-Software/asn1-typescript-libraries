@@ -19,7 +19,14 @@ import { EventNotification_actionResult_successOrFailure, _decode_EventNotificat
 /**
  * @summary EventNotification_actionResult
  * @description
- * 
+ *
+ * Result of executing the Event Action named by the
+ * enrollment. Present only when the enrollment references an
+ * Event Action. Omitted if the action is unavailable or the
+ * transition is `any-to-deleted`.
+ *
+ * [ISO 9506-1:2003 §18.3.1.1.8] [ISO 9506-2:2003 §18.3.1.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,12 +53,28 @@ class EventNotification_actionResult {
     constructor (
         /**
          * @summary `eventActionName`.
+         * @description
+         *
+         * `&name` of the Event Action referenced by the
+         * enrollment's `&eventAction`.
+         *
+         * [ISO 9506-1:2003 §18.3.1.1.8.1]
+         *
          * @public
          * @readonly
          */
         readonly eventActionName: ObjectName,
         /**
          * @summary `successOrFailure`.
+         * @description
+         *
+         * Whether Event Action execution succeeded. `success`
+         * carries Result(+); `failure` carries Result(-) or
+         * the failing modifier position.
+         *
+         * [ISO 9506-1:2003 §18.3.1.1.8.2]
+         * [ISO 9506-2:2003 §18.3.1.1]
+         *
          * @public
          * @readonly
          */

@@ -22,6 +22,10 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
  * @summary TypeDescription_array
  * @description
  * 
+ * Array arm of TypeDescription
+ * (str1): ordered elements of one type, indexed from 0.
+ * ISO 9506-1:2003 §14.2.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +43,31 @@ class TypeDescription_array {
     constructor (
         /**
          * @summary `packed`.
+         * @description
+         *
+         * If true, storage-optimization rules apply to this array sub-tree
+         * (vadr; else false). ISO 9506-1:2003 §14.2.2.2.1.
+         *
          * @public
          * @readonly
          */
         readonly packed: OPTIONAL<BOOLEAN>,
         /**
          * @summary `numberOfElements`.
+         * @description
+         *
+         * Element count; indices 0 .. n-1. ISO 9506-1:2003 §14.2.2.2.2.
+         *
          * @public
          * @readonly
          */
         readonly numberOfElements: Unsigned32,
         /**
          * @summary `elementType`.
+         * @description
+         *
+         * Type of every element. ISO 9506-1:2003 §14.2.2.2.3.
+         *
          * @public
          * @readonly
          */

@@ -19,6 +19,10 @@ import { Modifier, _decode_Modifier, _encode_Modifier } from "../MMS-Object-Modu
  * @summary ModifierStep
  * @description
  * 
+ * One modifier in a Transaction's ordered
+ * pre- or post-execution list. modifierID identifies the step (1 = first
+ * pre-execution modifier). ISO 9506-1:2003 §7.3.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,22 @@ class ModifierStep {
     constructor (
         /**
          * @summary `modifierID`.
+         * @description
+         *
+         * Step index; 1 is the first pre-execution modifier. ISO 9506-1:2003
+         * §7.3.1.2, §7.3.3.
+         *
          * @public
          * @readonly
          */
         readonly modifierID: INTEGER,
         /**
          * @summary `modifier`.
+         * @description
+         *
+         * AttachToEventCondition or AttachToSemaphore. ISO 9506-1:2003
+         * §7.3.1.2.
+         *
          * @public
          * @readonly
          */

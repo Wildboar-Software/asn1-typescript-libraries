@@ -17,7 +17,14 @@ import { Write_Response_Item, _decode_Write_Response_Item, _encode_Write_Respons
 /**
  * @summary Write_Response
  * @description
- * 
+ *
+ * Result(+) of Write: SEQUENCE OF success/failure, one
+ * element per requested variable, in VAS order. Result(+)
+ * means the request was acceptable and the server
+ * attempted each write; per-variable failure is
+ * `failure`/`DataAccessError`, not Result(-).
+ * ISO 9506-1:2003 §14.7.1.2. ISO 9506-2:2003 §14.7.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

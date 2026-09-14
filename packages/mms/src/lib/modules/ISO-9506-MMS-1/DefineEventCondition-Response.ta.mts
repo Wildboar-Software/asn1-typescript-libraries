@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DefineEventCondition_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): Event Condition created. Empty.
+ *
+ * [ISO 9506-1:2003 §19.2.1.2]
+ * [ISO 9506-2:2003 §19.2.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

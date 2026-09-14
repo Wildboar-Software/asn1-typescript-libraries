@@ -18,6 +18,11 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  * @summary ChangeAccessControl_Error
  * @description
  * 
+ * Result(-) Number Changed: how many objects had `&accessControl` changed
+ * before the service failed. Also the `changeAccessControl` alternative of
+ * `ServiceError.serviceSpecificInfo`. ISO 9506-1:2003 §9.7.1.3; ISO 9506-2:2003
+ * §9.7.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

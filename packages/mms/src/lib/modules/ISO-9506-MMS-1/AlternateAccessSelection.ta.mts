@@ -19,7 +19,15 @@ import { AlternateAccessSelection_selectAccess, _decode_AlternateAccessSelection
 /**
  * @summary AlternateAccessSelection
  * @description
- * 
+ *
+ * Kind Of Selection for one alternate-access element.
+ * ISO 9506-1:2003 §14.3.1.1.2. ISO 9506-2:2003 §14.3.1.
+ *
+ * - `selectAlternateAccess`: further recursion on a
+ *   selected sub-tree (component, index, or index range).
+ * - `selectAccess`: access the entire selected sub-tree
+ *   (read or write).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RejectPDU_rejectReason_cancel_responsePDU
  * @description
- * 
+ *
+ * Reject codes when the rejected PDU is a Cancel-ResponsePDU (ISO 9506-1:2003
+ * §8.6.1.4.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +36,10 @@ type RejectPDU_rejectReason_cancel_responsePDU = INTEGER;
 
 /**
  * @summary RejectPDU_rejectReason_cancel_responsePDU_other
+ * @description
+ *
+ * Error other than those identified for this PDU type (ISO 9506-1:2003
+ * §8.6.1.4.7.1).
  * @constant
  * @type {number}
  */
@@ -41,6 +48,10 @@ const RejectPDU_rejectReason_cancel_responsePDU_other: RejectPDU_rejectReason_ca
 
 /**
  * @summary RejectPDU_rejectReason_cancel_responsePDU_other
+ * @description
+ *
+ * Error other than those identified for this PDU type (ISO 9506-1:2003
+ * §8.6.1.4.7.1).
  * @constant
  * @type {number}
  */
@@ -49,6 +60,10 @@ const other: RejectPDU_rejectReason_cancel_responsePDU = RejectPDU_rejectReason_
 
 /**
  * @summary RejectPDU_rejectReason_cancel_responsePDU_invalid_invokeID
+ * @description
+ *
+ * Invoke ID invalid, or no Cancel was requested with it (ISO 9506-1:2003
+ * §8.6.1.4.7.2).
  * @constant
  * @type {number}
  */
@@ -57,6 +72,10 @@ const RejectPDU_rejectReason_cancel_responsePDU_invalid_invokeID: RejectPDU_reje
 
 /**
  * @summary RejectPDU_rejectReason_cancel_responsePDU_invalid_invokeID
+ * @description
+ *
+ * Invoke ID invalid, or no Cancel was requested with it (ISO 9506-1:2003
+ * §8.6.1.4.7.2).
  * @constant
  * @type {number}
  */

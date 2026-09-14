@@ -19,6 +19,12 @@ import { Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-
  * @summary MaybeAddress
  * @description
  * 
+ * Optional Address wrapper used in Named
+ * Variable SCI details (vadr). SCI configuration/initialization encoding (ISO
+ * 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.1.6; ISO
+ * 9506-1:2003
+ * §14.1.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +40,11 @@ class MaybeAddress {
     constructor (
         /**
          * @summary `address`.
+         * @description
+         *
+         * Unnamed-variable or public address. ISO 9506-1:2003 §14.1.2.1; ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */

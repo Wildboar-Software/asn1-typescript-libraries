@@ -20,7 +20,12 @@ import { AccessResult, _decode_AccessResult, _encode_AccessResult } from "../ISO
 /**
  * @summary Read_Response
  * @description
- * 
+ *
+ * Result(+) of Read. The request was acceptable and the
+ * server attempted each access. Per-variable failure is
+ * AccessResult, not this PDU's absence.
+ * ISO 9506-1:2003 §14.6.1.2. ISO 9506-2:2003 §14.6.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,24 @@ class Read_Response {
     constructor (
         /**
          * @summary `variableAccessSpecification`.
+         * @description
+         *
+         * Echo of the request VAS when
+         * `specificationWithResult` was true; otherwise omitted.
+         * ISO 9506-1:2003 §14.6.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly variableAccessSpecification: OPTIONAL<VariableAccessSpecification>,
         /**
          * @summary `listOfAccessResult`.
+         * @description
+         *
+         * Value or DataAccessError per requested variable, in
+         * VAS order, after type and alternate access.
+         * ISO 9506-1:2003 §14.6.1.2.2, §14.4.1.
+         *
          * @public
          * @readonly
          */

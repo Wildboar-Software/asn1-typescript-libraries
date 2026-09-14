@@ -23,6 +23,11 @@ import { CS_Status_Response_fullResponse_selectedProgramInvocation, _decode_CS_S
  * @summary CS_Status_Response_fullResponse
  * @description
  * 
+ * `csr` full companion-standard Status Response: Operation State, Extended
+ * Status, optional mask (default all ones), and Selected Program Invocation.
+ * Fields present only if `csr` has been negotiated. ISO 9506-1:2003
+ * §10.2.4–§10.2.7; ISO 9506-2:2003 §10.2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,24 +49,46 @@ class CS_Status_Response_fullResponse {
     constructor (
         /**
          * @summary `operationState`.
+         * @description
+         *
+         * VMD `&operationState`. `csr` only. ISO 9506-1:2003 §10.2.4.
+         *
          * @public
          * @readonly
          */
         readonly operationState: OperationState,
         /**
          * @summary `extendedStatus`.
+         * @description
+         *
+         * Four booleans: safety interlocks violated, any resource power-on, all
+         * resources calibrated, local control. `csr` only. ISO 9506-1:2003
+         * §10.2.5.
+         *
          * @public
          * @readonly
          */
         readonly extendedStatus: ExtendedStatus,
         /**
          * @summary `extendedStatusMask`.
+         * @description
+         *
+         * Significance of corresponding Extended Status bits: one =
+         * significant, zero = ignore. Default all ones. `csr` only; use is a
+         * user option. ISO 9506-1:2003 §10.2.6; ISO 9506-2:2003 §10.2.1.
+         *
          * @public
          * @readonly
          */
         readonly extendedStatusMask: OPTIONAL<ExtendedStatus>,
         /**
          * @summary `selectedProgramInvocation`.
+         * @description
+         *
+         * VMD `&selected-Program-Invocation`: Controlling Program Invocation
+         * for the system, or NONE if none selected. `csr` only. ISO 9506-1:2003
+         * §7.2.1.34, §10.2.7.
+         *
          * @public
          * @readonly
          */
@@ -72,7 +99,8 @@ class CS_Status_Response_fullResponse {
      * @summary Restructures an object into a CS_Status_Response_fullResponse
      * @description
      * 
-     * This takes an `object` and converts it to a `CS_Status_Response_fullResponse`.
+     * This takes an `object` and converts it to a
+     * `CS_Status_Response_fullResponse`.
      * 
      * @public
      * @static
@@ -97,7 +125,8 @@ class CS_Status_Response_fullResponse {
  * @summary The Leading Root Component Types of CS_Status_Response_fullResponse
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -113,7 +142,8 @@ const _root_component_type_list_1_spec_for_CS_Status_Response_fullResponse: $.Co
  * @summary The Trailing Root Component Types of CS_Status_Response_fullResponse
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -126,7 +156,8 @@ const _root_component_type_list_2_spec_for_CS_Status_Response_fullResponse: $.Co
  * @summary The Extension Addition Component Types of CS_Status_Response_fullResponse
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

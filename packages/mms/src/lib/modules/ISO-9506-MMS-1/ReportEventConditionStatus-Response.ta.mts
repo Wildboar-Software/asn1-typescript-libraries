@@ -23,7 +23,14 @@ import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-M
 /**
  * @summary ReportEventConditionStatus_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): current Event Condition status. `enabled` and
+ * transition times apply to monitored objects only. Disabled monitored
+ * conditions do not notify.
+ *
+ * [ISO 9506-1:2003 §19.5.1.2]
+ * [ISO 9506-2:2003 §19.5.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +49,62 @@ class ReportEventConditionStatus_Response {
     constructor (
         /**
          * @summary `currentState`.
+         * @description
+         *
+         * `&ecState`: `disabled`, `idle`, or `active`. Network-triggered is always
+         * `disabled`.
+         *
+         * [ISO 9506-1:2003 §19.5.1.2.1]
+         *
          * @public
          * @readonly
          */
         readonly currentState: EC_State,
         /**
          * @summary `numberOfEventEnrollments`.
+         * @description
+         *
+         * Count of `&EventEnrollments`.
+         *
+         * [ISO 9506-1:2003 §19.5.1.2.2]
+         *
          * @public
          * @readonly
          */
         readonly numberOfEventEnrollments: Unsigned32,
         /**
          * @summary `enabled`.
+         * @description
+         *
+         * Monitored: `&enabled`. Omitted for network-triggered. False: no transition
+         * processing.
+         *
+         * [ISO 9506-1:2003 §19.5.1.2.3]
+         *
          * @public
          * @readonly
          */
         readonly enabled: OPTIONAL<BOOLEAN>,
         /**
          * @summary `timeOfLastTransitionToActive`.
+         * @description
+         *
+         * Monitored `&timeToActive` if not undefined.
+         *
+         * [ISO 9506-1:2003 §19.5.1.2.4]
+         *
          * @public
          * @readonly
          */
         readonly timeOfLastTransitionToActive: OPTIONAL<EventTime>,
         /**
          * @summary `timeOfLastTransitionToIdle`.
+         * @description
+         *
+         * Monitored `&timeToIdle` if not undefined.
+         *
+         * [ISO 9506-1:2003 §19.5.1.2.5]
+         *
          * @public
          * @readonly
          */

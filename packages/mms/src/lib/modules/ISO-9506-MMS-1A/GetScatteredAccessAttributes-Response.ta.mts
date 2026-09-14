@@ -21,7 +21,15 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary GetScatteredAccessAttributes_Response
  * @description
- * 
+ *
+ * Result(+): attributes of a Scattered Access
+ * object. GetVariableAccessAttributes yields the
+ * derived Type Specification instead.
+ * Informative Annex E.
+ *
+ * [ISO 9506-1:2003 Annex E, E.4.1.2]
+ * [ISO 9506-2:2003 Annex E, E.3.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +48,44 @@ class GetScatteredAccessAttributes_Response {
     constructor (
         /**
          * @summary `mmsDeletable`.
+         * @description
+         *
+         * MMS Deletable attribute of the referenced
+         * Scattered Access object. Subclause 9.1.4
+         * specifies the value returned.
+         *
+         * [ISO 9506-1:2003 Annex E, E.4.1.2.1]
+         *
          * @public
          * @readonly
          */
         readonly mmsDeletable: BOOLEAN,
         /**
          * @summary `scatteredAccessDescription`.
+         * @description
+         *
+         * Component variables (one or more) accessed
+         * using the object. See E.2.1.
+         *
+         * [ISO 9506-1:2003 Annex E, E.4.1.2.2]
+         *
          * @public
          * @readonly
          */
         readonly scatteredAccessDescription: ScatteredAccessDescription,
         /**
          * @summary `accessControlList`.
+         * @description
+         *
+         * Name of the Access Control List that
+         * controls access to this object. Shall
+         * appear if and only if CBB `aco` has been
+         * negotiated. Shall not appear in minor
+         * version one or two.
+         *
+         * [ISO 9506-1:2003 Annex E, E.4.1.2.3]
+         * [ISO 9506-2:2003 Annex E, E.3.2.1]
+         *
          * @public
          * @readonly
          */

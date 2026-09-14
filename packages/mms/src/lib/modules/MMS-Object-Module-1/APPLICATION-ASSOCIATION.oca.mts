@@ -49,6 +49,11 @@ import { AdditionalCBBOptions, _decode_AdditionalCBBOptions, _encode_AdditionalC
  * @summary APPLICATION_ASSOCIATION
  * @description
  * 
+ * One MMS application association
+ * between this VMD and an MMS client. Created by Initiate. Holds
+ * AA-scoped objects, negotiated service/parameter CBBs, and the
+ * association's transactions. ISO 9506-1:2003 §8.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -98,78 +103,162 @@ interface APPLICATION_ASSOCIATION {
     }>;
     /**
      * @summary &aaIdentifier
+     * @description
+     *
+     * Identifies the AA. Never communicated; form is a local matter. ISO
+     * 9506-1:2003 §8.1.3.1.
+     *
      */
     readonly "&aaIdentifier"?: INTEGER;
     /**
      * @summary &client
+     * @description
+     *
+     * MMS client of this association. ISO 9506-1:2003 §8.1.3.2.
+     *
      */
     readonly "&client"?: ApplicationReference;
     /**
      * @summary &abstractSyntax
+     * @description
+     *
+     * Abstract syntax in use on this association. ISO 9506-1:2003 §8.1.3.3.
+     *
      */
     readonly "&abstractSyntax"?: ABSTRACT_SYNTAX;
     /**
      * @summary &authenticationValue
+     * @description
+     *
+     * Authentication presented by the client at AA establishment (user
+     * password). ISO 9506-1:2003 §8.1.3.4.
+     *
      */
     readonly "&authenticationValue"?: Authentication_value;
     /**
      * @summary &Transactions
+     * @description
+     *
+     * Transactions on this AA. Max count set by Initiate; may be empty. ISO
+     * 9506-1:2003 §8.1.3.5.
+     *
      */
     readonly "&Transactions"?: TRANSACTION[];
     /**
      * @summary &NamedVariables
+     * @description
+     *
+     * AA-specific Named Variables (vnam). ISO 9506-1:2003 §8.1.3.6, clause 14.
+     *
      */
     readonly "&NamedVariables"?: NAMED_VARIABLE[];
     /**
      * @summary &NamedVariableLists
+     * @description
+     *
+     * AA-specific Named Variable Lists (vnam+vlis). ISO 9506-1:2003 §8.1.3.7,
+     * clause 14.
+     *
      */
     readonly "&NamedVariableLists"?: NAMED_VARIABLE_LIST[];
     /**
      * @summary &NamedTypes
+     * @description
+     *
+     * AA-specific Named Types (vnam). ISO 9506-1:2003 §8.1.3.8, clause 14.
+     *
      */
     readonly "&NamedTypes"?: NAMED_TYPE[];
     /**
      * @summary &EventConditions
+     * @description
+     *
+     * AA-specific Event Conditions. ISO 9506-1:2003 §8.1.3.9, clauses 18–19.
+     *
      */
     readonly "&EventConditions"?: EVENT_CONDITION[];
     /**
      * @summary &EventActions
+     * @description
+     *
+     * AA-specific Event Actions. ISO 9506-1:2003 §8.1.3.10, clauses 18, 20.
+     *
      */
     readonly "&EventActions"?: EVENT_ACTION[];
     /**
      * @summary &EventEnrollments
+     * @description
+     *
+     * AA-specific Event Enrollments. ISO 9506-1:2003 §8.1.3.11, clauses 18, 21.
+     *
      */
     readonly "&EventEnrollments"?: EVENT_ENROLLMENT[];
     /**
      * @summary &EventConditionLists
+     * @description
+     *
+     * AA-specific Event Condition Lists. ISO 9506-1:2003 §8.1.3.12, clauses 18,
+     * 22.
+     *
      */
     readonly "&EventConditionLists"?: EVENT_CONDITION_LIST[];
     /**
      * @summary &Journals
+     * @description
+     *
+     * AA-specific Journals. ISO 9506-1:2003 §8.1.3.13, clause 23.
+     *
      */
     readonly "&Journals"?: JOURNAL[];
     /**
      * @summary &services
+     * @description
+     *
+     * MMS services supported on this AA (Initiate). ISO 9506-1:2003 §8.1.3.14, §8.2.
+     *
      */
     readonly "&services"?: ServiceSupportOptions;
     /**
      * @summary &parameters
+     * @description
+     *
+     * Parameter CBBs negotiated at Initiate. ISO 9506-1:2003 §8.1.3.15, §8.2.
+     *
      */
     readonly "&parameters"?: ParameterSupportOptions;
     /**
      * @summary &nest
+     * @description
+     *
+     * Max non-leaf nodes of a type tree between root and deepest leaf. 0 if
+     * neither str1 nor str2; otherwise > 0. ISO 9506-1:2003 §8.1.3.16.
+     *
      */
     readonly "&nest"?: INTEGER;
     /**
      * @summary &Ulsms
+     * @description
+     *
+     * Upload State Machines on this AA. ISO 9506-1:2003 §8.1.3.17, clause 11.
+     *
      */
     readonly "&Ulsms"?: ULSM[];
     /**
      * @summary &extendedServices
+     * @description
+     *
+     * Extended services (csr/csnc/csplc/cspi) negotiated at Initiate. ISO
+     * 9506-1:2003 §8.1.3.18, §8.2.
+     *
      */
     readonly "&extendedServices"?: AdditionalSupportOptions;
     /**
      * @summary &extendedParameters
+     * @description
+     *
+     * Extended parameter CBBs (cspi) from Initiate. ISO 9506-1:2003 §8.1.3.19,
+     * §8.2.
+     *
      */
     readonly "&extendedParameters"?: AdditionalCBBOptions;
 };

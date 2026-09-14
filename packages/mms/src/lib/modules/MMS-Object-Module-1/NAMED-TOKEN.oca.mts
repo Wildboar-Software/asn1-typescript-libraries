@@ -18,6 +18,9 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary NAMED_TOKEN
  * @description
  * 
+ * One named token of a pool semaphore: free
+ * or owned. Name is unique within that semaphore. ISO 9506-1:2003 §16.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,10 +52,18 @@ interface NAMED_TOKEN {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * Token name unique within its pool semaphore. ISO 9506-1:2003 §16.1.2.1.
+     *
      */
     readonly "&name"?: Identifier;
     /**
      * @summary &state
+     * @description
+     *
+     * free or owned. ISO 9506-1:2003 §16.1.2.2.
+     *
      */
     readonly "&state"?: NAMED_TOKEN_state;
 }
@@ -60,6 +71,9 @@ interface NAMED_TOKEN {
 /**
  * @summary NAMED_TOKEN_state
  * @description
+ *
+ * One named token of a pool semaphore: free
+ * or owned. Name is unique within that semaphore. ISO 9506-1:2003 §16.1.2.
  *
  * ### ASN.1 Definition:
  *

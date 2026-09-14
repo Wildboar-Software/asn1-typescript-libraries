@@ -19,7 +19,14 @@ import { Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-
 /**
  * @summary GetVariableAccessAttributes_Request
  * @description
- * 
+ *
+ * Confirmed request for attributes of a Named Variable
+ * (`vnam`) or Unnamed Variable (`vadr`).
+ * ISO 9506-1:2003 §14.9. ISO 9506-2:2003 §14.9.
+ *
+ * - `name`: Named Variable `&name` (`vnam`).
+ * - `address`: Unnamed Variable `&address` (`vadr`).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

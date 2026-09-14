@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceError_errorClass_file
  * @description
  * 
+ * Error Class FILE: errors from file operations. Encoded as INTEGER when
+ * file-management / ObtainFile CBBs are selected; otherwise the `file` Error
+ * Class alternative is NULL. ISO 9506-1:2003 §24.2.13; ISO 9506-2:2003 §7.4.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,6 +45,10 @@ type ServiceError_errorClass_file = INTEGER;
 
 /**
  * @summary ServiceError_errorClass_file_other
+ * @description
+ *
+ * Reason other than those identified for FILE. ISO 9506-1:2003 §24.2.13.10.
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +57,10 @@ const ServiceError_errorClass_file_other: ServiceError_errorClass_file = 0; /* L
 
 /**
  * @summary ServiceError_errorClass_file_other
+ * @description
+ *
+ * Reason other than those identified for FILE. ISO 9506-1:2003 §24.2.13.10.
+ *
  * @constant
  * @type {number}
  */
@@ -57,6 +69,11 @@ const other: ServiceError_errorClass_file = ServiceError_errorClass_file_other; 
 
 /**
  * @summary ServiceError_errorClass_file_filename_ambiguous
+ * @description
+ *
+ * Wildcard filename matches more than one file. Cannot occur on FileDirectory,
+ * which allows multi-file names. ISO 9506-1:2003 §24.2.13.1.
+ *
  * @constant
  * @type {number}
  */
@@ -65,6 +82,11 @@ const ServiceError_errorClass_file_filename_ambiguous: ServiceError_errorClass_f
 
 /**
  * @summary ServiceError_errorClass_file_filename_ambiguous
+ * @description
+ *
+ * Wildcard filename matches more than one file. Cannot occur on FileDirectory,
+ * which allows multi-file names. ISO 9506-1:2003 §24.2.13.1.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +95,10 @@ const filename_ambiguous: ServiceError_errorClass_file = ServiceError_errorClass
 
 /**
  * @summary ServiceError_errorClass_file_file_busy
+ * @description
+ *
+ * The file is busy. ISO 9506-1:2003 §24.2.13.2.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +107,10 @@ const ServiceError_errorClass_file_file_busy: ServiceError_errorClass_file = 2; 
 
 /**
  * @summary ServiceError_errorClass_file_file_busy
+ * @description
+ *
+ * The file is busy. ISO 9506-1:2003 §24.2.13.2.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +119,10 @@ const file_busy: ServiceError_errorClass_file = ServiceError_errorClass_file_fil
 
 /**
  * @summary ServiceError_errorClass_file_filename_syntax_error
+ * @description
+ *
+ * The file name is syntactically incorrect. ISO 9506-1:2003 §24.2.13.3.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +131,10 @@ const ServiceError_errorClass_file_filename_syntax_error: ServiceError_errorClas
 
 /**
  * @summary ServiceError_errorClass_file_filename_syntax_error
+ * @description
+ *
+ * The file name is syntactically incorrect. ISO 9506-1:2003 §24.2.13.3.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +143,10 @@ const filename_syntax_error: ServiceError_errorClass_file = ServiceError_errorCl
 
 /**
  * @summary ServiceError_errorClass_file_content_type_invalid
+ * @description
+ *
+ * The file is not unstructured binary. ISO 9506-1:2003 §24.2.13.4.
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +155,10 @@ const ServiceError_errorClass_file_content_type_invalid: ServiceError_errorClass
 
 /**
  * @summary ServiceError_errorClass_file_content_type_invalid
+ * @description
+ *
+ * The file is not unstructured binary. ISO 9506-1:2003 §24.2.13.4.
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +167,10 @@ const content_type_invalid: ServiceError_errorClass_file = ServiceError_errorCla
 
 /**
  * @summary ServiceError_errorClass_file_position_invalid
+ * @description
+ *
+ * The initial position is past the end of the file. ISO 9506-1:2003 §24.2.13.5.
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +179,10 @@ const ServiceError_errorClass_file_position_invalid: ServiceError_errorClass_fil
 
 /**
  * @summary ServiceError_errorClass_file_position_invalid
+ * @description
+ *
+ * The initial position is past the end of the file. ISO 9506-1:2003 §24.2.13.5.
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +191,10 @@ const position_invalid: ServiceError_errorClass_file = ServiceError_errorClass_f
 
 /**
  * @summary ServiceError_errorClass_file_file_access_denied
+ * @description
+ *
+ * Access to the file is denied. ISO 9506-1:2003 §24.2.13.6.
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +203,10 @@ const ServiceError_errorClass_file_file_access_denied: ServiceError_errorClass_f
 
 /**
  * @summary ServiceError_errorClass_file_file_access_denied
+ * @description
+ *
+ * Access to the file is denied. ISO 9506-1:2003 §24.2.13.6.
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +215,10 @@ const file_access_denied: ServiceError_errorClass_file = ServiceError_errorClass
 
 /**
  * @summary ServiceError_errorClass_file_file_non_existent
+ * @description
+ *
+ * The file does not exist. ISO 9506-1:2003 §24.2.13.7.
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +227,10 @@ const ServiceError_errorClass_file_file_non_existent: ServiceError_errorClass_fi
 
 /**
  * @summary ServiceError_errorClass_file_file_non_existent
+ * @description
+ *
+ * The file does not exist. ISO 9506-1:2003 §24.2.13.7.
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +239,11 @@ const file_non_existent: ServiceError_errorClass_file = ServiceError_errorClass_
 
 /**
  * @summary ServiceError_errorClass_file_duplicate_filename
+ * @description
+ *
+ * Create would use a filename that already exists in the filestore.
+ * ISO 9506-1:2003 §24.2.13.8.
+ *
  * @constant
  * @type {number}
  */
@@ -177,6 +252,11 @@ const ServiceError_errorClass_file_duplicate_filename: ServiceError_errorClass_f
 
 /**
  * @summary ServiceError_errorClass_file_duplicate_filename
+ * @description
+ *
+ * Create would use a filename that already exists in the filestore.
+ * ISO 9506-1:2003 §24.2.13.8.
+ *
  * @constant
  * @type {number}
  */
@@ -185,6 +265,10 @@ const duplicate_filename: ServiceError_errorClass_file = ServiceError_errorClass
 
 /**
  * @summary ServiceError_errorClass_file_insufficient_space_in_filestore
+ * @description
+ *
+ * No additional filestore space to add a file. ISO 9506-1:2003 §24.2.13.9.
+ *
  * @constant
  * @type {number}
  */
@@ -193,6 +277,10 @@ const ServiceError_errorClass_file_insufficient_space_in_filestore: ServiceError
 
 /**
  * @summary ServiceError_errorClass_file_insufficient_space_in_filestore
+ * @description
+ *
+ * No additional filestore space to add a file. ISO 9506-1:2003 §24.2.13.9.
+ *
  * @constant
  * @type {number}
  */

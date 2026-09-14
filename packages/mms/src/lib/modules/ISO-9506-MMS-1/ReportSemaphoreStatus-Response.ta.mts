@@ -23,7 +23,11 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary ReportSemaphoreStatus_Response
  * @description
- * 
+ *
+ * Status of a token or pool semaphore: class, token counts, hung
+ * owners, and optional ACL. ISO 9506-1:2003 §16.6.1.2.
+ * ISO 9506-2:2003 §16.6.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,36 +51,66 @@ class ReportSemaphoreStatus_Response {
     constructor (
         /**
          * @summary `mmsDeletable`.
+         * @description
+         *
+         * True if DeleteSemaphore may delete this semaphore.
+         * ISO 9506-1:2003 §16.6.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly mmsDeletable: BOOLEAN,
         /**
          * @summary `class_`.
+         * @description
+         *
+         * `token` (0) identical tokens, or `pool` (1) named tokens.
+         * ISO 9506-1:2003 §16.1.1.3, §16.6.1.2.2.
+         *
          * @public
          * @readonly
          */
         readonly class_: ReportSemaphoreStatus_Response_class,
         /**
          * @summary `numberOfTokens`.
+         * @description
+         *
+         * Maximum owners allowed. ISO 9506-1:2003 §16.6.1.2.3.
+         *
          * @public
          * @readonly
          */
         readonly numberOfTokens: Unsigned16,
         /**
          * @summary `numberOfOwnedTokens`.
+         * @description
+         *
+         * Owned tokens whose semaphore-entry is not hung.
+         * ISO 9506-1:2003 §16.6.1.2.4.
+         *
          * @public
          * @readonly
          */
         readonly numberOfOwnedTokens: Unsigned16,
         /**
          * @summary `numberOfHungTokens`.
+         * @description
+         *
+         * Owned tokens whose semaphore-entry is hung.
+         * ISO 9506-1:2003 §16.6.1.2.5.
+         *
          * @public
          * @readonly
          */
         readonly numberOfHungTokens: Unsigned16,
         /**
          * @summary `accessControlList`.
+         * @description
+         *
+         * ACL name. Present iff CBB `aco` was negotiated. Shall not
+         * appear in minor version one or two. ISO 9506-1:2003
+         * §16.6.1.2.6. ISO 9506-2:2003 §16.6.2.1.
+         *
          * @public
          * @readonly
          */

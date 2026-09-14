@@ -18,6 +18,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary CreateUnitControl_Request
  * @description
  * 
+ * Client request to create a Unit Control object naming zero or more existing
+ * Domains and Program Invocations. ISO 9506-1:2003 §13.8. ISO 9506-2:2003
+ * §13.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +38,33 @@ class CreateUnitControl_Request {
     constructor (
         /**
          * @summary `unitControl`.
+         * @description
+         *
+         * Name assigned to the new Unit Control object. ISO 9506-1:2003
+         * §13.8.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly unitControl: Identifier,
         /**
          * @summary `domains`.
+         * @description
+         *
+         * Zero or more Domains referenced by `&Domains`. ISO 9506-1:2003
+         * §13.8.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly domains: Identifier[],
         /**
          * @summary `programInvocations`.
+         * @description
+         *
+         * Zero or more Program Invocations referenced by `&ProgramInvocations`.
+         * ISO 9506-1:2003 §13.8.1.1.3.
+         *
          * @public
          * @readonly
          */

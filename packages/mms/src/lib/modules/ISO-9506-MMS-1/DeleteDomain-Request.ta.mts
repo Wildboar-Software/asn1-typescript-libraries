@@ -18,6 +18,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary DeleteDomain_Request
  * @description
  * 
+ * Client request to delete a Domain. Domain must exist, be `ready` (no bound
+ * Program Invocation), and have no upload in progress. Subordinate objects are
+ * deleted with it. ISO 9506-1:2003 §11.12. ISO 9506-2:2003 §11.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

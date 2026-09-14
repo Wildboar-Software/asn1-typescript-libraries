@@ -17,7 +17,12 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item
  * @description
- * 
+ *
+ * One named-token: `freeNamedToken` (state free);
+ * `ownedNamedToken` (owned, entry not hung); `hungNamedToken`
+ * (owned, entry hung). ISO 9506-1:2003 §16.7.1.2.1.
+ * ISO 9506-2:2003 §16.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

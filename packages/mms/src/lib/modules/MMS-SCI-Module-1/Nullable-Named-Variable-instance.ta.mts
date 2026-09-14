@@ -21,6 +21,12 @@ import { Named_Variable_Definition, _decode_Named_Variable_Definition, _encode_N
  * @summary Nullable_Named_Variable_instance
  * @description
  * 
+ * Named Variable SCI
+ * fields, each optional (vnam omitted → empty). SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003 Annex
+ * B.1.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +43,21 @@ class Nullable_Named_Variable_instance {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         *
+         * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly name: OPTIONAL<ObjectName>,
         /**
          * @summary `definition`.
+         * @description
+         *
+         * Standardized Name OID (`reference`) or inline `details`. ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */

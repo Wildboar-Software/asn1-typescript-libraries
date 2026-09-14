@@ -17,7 +17,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FileClose_Response
  * @description
- * 
+ *
+ * Result(+): empty. Close succeeded; FRSM
+ * deleted. Informative Annex D.
+ *
+ * [ISO 9506-1:2003 Annex D, D.5.1.2]
+ * [ISO 9506-2:2003 Annex D, D.4.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

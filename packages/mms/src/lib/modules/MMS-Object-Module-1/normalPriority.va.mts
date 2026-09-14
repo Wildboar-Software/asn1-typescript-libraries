@@ -17,6 +17,9 @@ import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Modu
  * @summary normalPriority
  * @description
  * 
+ * Priority value 64: normal priority
+ * (range 0..127). ISO 9506-1:2003 §16.1.3.8, §25.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

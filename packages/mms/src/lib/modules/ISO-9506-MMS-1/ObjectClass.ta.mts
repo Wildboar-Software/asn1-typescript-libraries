@@ -19,7 +19,12 @@ import { ObjectClass_csObjectClass, _decode_ObjectClass_csObjectClass, _encode_O
 /**
  * @summary ObjectClass
  * @description
- * 
+ *
+ * Object class of a named MMS object. `basicObjectClass` covers the classes in
+ * ISO 9506-1:2003 §7.6.2 ; `csObjectClass` is the extended set
+ * (EventConditionList, UnitControl) when CBB `cspi` is used (ISO 9506-1:2003
+ * §7.6; ISO 9506-2:2003 §7.5.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +48,7 @@ import { ObjectClass_csObjectClass, _decode_ObjectClass_csObjectClass, _encode_O
  *        accessControlList      (13)
  *    -- Shall not appear in minor version 1 or 2
  *        } (0..13),
- *    ...
+ *   ...
  * ,  csObjectClass          [1] IMPLICIT INTEGER {
  *        eventConditionList     (0),
  *        unitControl            (1) } (0..1)

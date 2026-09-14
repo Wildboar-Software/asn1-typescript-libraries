@@ -19,7 +19,17 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
 /**
  * @summary AccessResult
  * @description
- * 
+ *
+ * Result of reading one MMS variable (Read and
+ * InformationReport). Success is not the Read service
+ * Result(+); it is this choice.
+ * ISO 9506-1:2003 §14.4.1. ISO 9506-2:2003 §14.4.1.
+ *
+ * - `failure`: access failed; DataAccessError reason.
+ * - `success`: access succeeded; Data is the value after
+ *   type and alternate access. Abstract syntax is the
+ *   derived or defined type.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

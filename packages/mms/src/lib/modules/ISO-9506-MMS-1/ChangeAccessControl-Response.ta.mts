@@ -18,6 +18,14 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  * @summary ChangeAccessControl_Response
  * @description
  * 
+ * Confirmed Result(+) of ChangeAccessControl. After processing each indicated
+ * object (EDIT must succeed; DELETE=NEVER cannot be replaced by a non-NEVER
+ * ACL), returns how many matched and how many actually changed. Failure of
+ * EDIT/NEVER checks on an object is not an error. ISO 9506-1:2003 §9.7.1.2,
+ * §9.7.2; ISO 9506-2:2003 §9.7.2. Shall not appear in minor version 1 or 2 of
+ * the confirmed-service PDUs (ISO 9506-2:2003
+ * ConfirmedServiceRequest/Response).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +42,23 @@ class ChangeAccessControl_Response {
     constructor (
         /**
          * @summary `numberMatched`.
+         * @description
+         *
+         * Count of named objects that matched the request. One if the VMD
+         * choice was selected. ISO 9506-1:2003 §9.7.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly numberMatched: Unsigned32,
         /**
          * @summary `numberChanged`.
+         * @description
+         *
+         * Count whose `&accessControl` was actually changed. Difference from
+         * Number Matched is objects skipped for unsatisfied EDIT or because
+         * DELETE=NEVER would have been lost. ISO 9506-1:2003 §9.7.1.2.2.
+         *
          * @public
          * @readonly
          */
@@ -50,7 +69,8 @@ class ChangeAccessControl_Response {
      * @summary Restructures an object into a ChangeAccessControl_Response
      * @description
      * 
-     * This takes an `object` and converts it to a `ChangeAccessControl_Response`.
+     * This takes an `object` and converts it to a
+     * `ChangeAccessControl_Response`.
      * 
      * @public
      * @static
@@ -69,7 +89,8 @@ class ChangeAccessControl_Response {
  * @summary The Leading Root Component Types of ChangeAccessControl_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -83,7 +104,8 @@ const _root_component_type_list_1_spec_for_ChangeAccessControl_Response: $.Compo
  * @summary The Trailing Root Component Types of ChangeAccessControl_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -96,7 +118,8 @@ const _root_component_type_list_2_spec_for_ChangeAccessControl_Response: $.Compo
  * @summary The Extension Addition Component Types of ChangeAccessControl_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

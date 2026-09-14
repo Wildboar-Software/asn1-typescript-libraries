@@ -19,7 +19,20 @@ import { TypeDescription, _decode_TypeDescription, _encode_TypeDescription } fro
 /**
  * @summary TypeSpecification
  * @description
- * 
+ *
+ * How a variable's type or a Named Type definition is
+ * given. Named Type references are resolved when the MMS
+ * object is created; Type Descriptions never depend on
+ * Named Types after that. `typeName` requires `vnam` and
+ * shall not appear in a response, confirm, or
+ * InformationReport.indication.
+ * ISO 9506-1:2003 §14.2.3. ISO 9506-2:2003 §14.2.1.
+ *
+ * - `typeName`: inherit `&typeDescription` of that Named
+ *   Type (`vnam`).
+ * - `typeDescription`: explicit type tree (array `str1`,
+ *   structure `str2`).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

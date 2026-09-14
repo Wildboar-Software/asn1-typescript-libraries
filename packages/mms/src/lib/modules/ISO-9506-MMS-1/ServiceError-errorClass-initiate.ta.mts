@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceError_errorClass_initiate
  * @description
  * 
+ * Error Class INITIATE: problems with the Initiate service. Values 1 and 2 are
+ * reserved. ISO 9506-1:2003 §24.2.9; ISO 9506-2:2003 §7.4.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +41,10 @@ type ServiceError_errorClass_initiate = INTEGER;
 
 /**
  * @summary ServiceError_errorClass_initiate_other
+ * @description
+ *
+ * Reason other than those identified for INITIATE. ISO 9506-1:2003 §24.2.9.6.
+ *
  * @constant
  * @type {number}
  */
@@ -46,6 +53,10 @@ const ServiceError_errorClass_initiate_other: ServiceError_errorClass_initiate =
 
 /**
  * @summary ServiceError_errorClass_initiate_other
+ * @description
+ *
+ * Reason other than those identified for INITIATE. ISO 9506-1:2003 §24.2.9.6.
+ *
  * @constant
  * @type {number}
  */
@@ -54,6 +65,11 @@ const other: ServiceError_errorClass_initiate = ServiceError_errorClass_initiate
 
 /**
  * @summary ServiceError_errorClass_initiate_max_services_outstanding_calling_insufficient
+ * @description
+ *
+ * Proposed Max Services Outstanding Calling is too small. ISO 9506-1:2003
+ * §24.2.9.1.
+ *
  * @constant
  * @type {number}
  */
@@ -62,6 +78,11 @@ const ServiceError_errorClass_initiate_max_services_outstanding_calling_insuffic
 
 /**
  * @summary ServiceError_errorClass_initiate_max_services_outstanding_calling_insufficient
+ * @description
+ *
+ * Proposed Max Services Outstanding Calling is too small. ISO 9506-1:2003
+ * §24.2.9.1.
+ *
  * @constant
  * @type {number}
  */
@@ -70,6 +91,11 @@ const max_services_outstanding_calling_insufficient: ServiceError_errorClass_ini
 
 /**
  * @summary ServiceError_errorClass_initiate_max_services_outstanding_called_insufficient
+ * @description
+ *
+ * Proposed Max Services Outstanding Called is too small. ISO 9506-1:2003
+ * §24.2.9.2.
+ *
  * @constant
  * @type {number}
  */
@@ -78,6 +104,11 @@ const ServiceError_errorClass_initiate_max_services_outstanding_called_insuffici
 
 /**
  * @summary ServiceError_errorClass_initiate_max_services_outstanding_called_insufficient
+ * @description
+ *
+ * Proposed Max Services Outstanding Called is too small. ISO 9506-1:2003
+ * §24.2.9.2.
+ *
  * @constant
  * @type {number}
  */
@@ -86,6 +117,11 @@ const max_services_outstanding_called_insufficient: ServiceError_errorClass_init
 
 /**
  * @summary ServiceError_errorClass_initiate_service_CBB_insufficient
+ * @description
+ *
+ * A service CBB necessary for communication is missing from the proposed list.
+ * ISO 9506-1:2003 §24.2.9.5.
+ *
  * @constant
  * @type {number}
  */
@@ -94,6 +130,11 @@ const ServiceError_errorClass_initiate_service_CBB_insufficient: ServiceError_er
 
 /**
  * @summary ServiceError_errorClass_initiate_service_CBB_insufficient
+ * @description
+ *
+ * A service CBB necessary for communication is missing from the proposed list.
+ * ISO 9506-1:2003 §24.2.9.5.
+ *
  * @constant
  * @type {number}
  */
@@ -102,6 +143,11 @@ const service_CBB_insufficient: ServiceError_errorClass_initiate = ServiceError_
 
 /**
  * @summary ServiceError_errorClass_initiate_parameter_CBB_insufficient
+ * @description
+ *
+ * A parameter CBB necessary for communication is not present in the proposed
+ * list. ISO 9506-1:2003 §24.2.9.3.
+ *
  * @constant
  * @type {number}
  */
@@ -110,6 +156,11 @@ const ServiceError_errorClass_initiate_parameter_CBB_insufficient: ServiceError_
 
 /**
  * @summary ServiceError_errorClass_initiate_parameter_CBB_insufficient
+ * @description
+ *
+ * A parameter CBB necessary for communication is not present in the proposed
+ * list. ISO 9506-1:2003 §24.2.9.3.
+ *
  * @constant
  * @type {number}
  */
@@ -118,6 +169,11 @@ const parameter_CBB_insufficient: ServiceError_errorClass_initiate = ServiceErro
 
 /**
  * @summary ServiceError_errorClass_initiate_nesting_level_insufficient
+ * @description
+ *
+ * Proposed Data Structure Nesting Level is too small. ISO 9506-1:2003
+ * §24.2.9.4.
+ *
  * @constant
  * @type {number}
  */
@@ -126,6 +182,11 @@ const ServiceError_errorClass_initiate_nesting_level_insufficient: ServiceError_
 
 /**
  * @summary ServiceError_errorClass_initiate_nesting_level_insufficient
+ * @description
+ *
+ * Proposed Data Structure Nesting Level is too small. ISO 9506-1:2003
+ * §24.2.9.4.
+ *
  * @constant
  * @type {number}
  */

@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU
  * @description
- * 
+ *
+ * Reject codes when the rejected PDU is a Confirmed-RequestPDU (ISO 9506-1:2003
+ * §8.6.1.4.1). Value 7 is reserved.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,6 +44,10 @@ type RejectPDU_rejectReason_confirmed_requestPDU = INTEGER;
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_other
+ * @description
+ *
+ * Error other than those identified for this PDU type (ISO 9506-1:2003
+ * §8.6.1.4.1.1).
  * @constant
  * @type {number}
  */
@@ -49,6 +56,10 @@ const RejectPDU_rejectReason_confirmed_requestPDU_other: RejectPDU_rejectReason_
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_other
+ * @description
+ *
+ * Error other than those identified for this PDU type (ISO 9506-1:2003
+ * §8.6.1.4.1.1).
  * @constant
  * @type {number}
  */
@@ -57,6 +68,9 @@ const other: RejectPDU_rejectReason_confirmed_requestPDU = RejectPDU_rejectReaso
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_unrecognized_service
+ * @description
+ *
+ * Service not supported or not recognized (ISO 9506-1:2003 §8.6.1.4.1.2).
  * @constant
  * @type {number}
  */
@@ -65,6 +79,9 @@ const RejectPDU_rejectReason_confirmed_requestPDU_unrecognized_service: RejectPD
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_unrecognized_service
+ * @description
+ *
+ * Service not supported or not recognized (ISO 9506-1:2003 §8.6.1.4.1.2).
  * @constant
  * @type {number}
  */
@@ -73,6 +90,9 @@ const unrecognized_service: RejectPDU_rejectReason_confirmed_requestPDU = Reject
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_unrecognized_modifier
+ * @description
+ *
+ * Modifier not supported or not recognized (ISO 9506-1:2003 §8.6.1.4.1.3).
  * @constant
  * @type {number}
  */
@@ -81,6 +101,9 @@ const RejectPDU_rejectReason_confirmed_requestPDU_unrecognized_modifier: RejectP
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_unrecognized_modifier
+ * @description
+ *
+ * Modifier not supported or not recognized (ISO 9506-1:2003 §8.6.1.4.1.3).
  * @constant
  * @type {number}
  */
@@ -89,6 +112,9 @@ const unrecognized_modifier: RejectPDU_rejectReason_confirmed_requestPDU = Rejec
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_invalid_invokeID
+ * @description
+ *
+ * Invoke ID does not meet ISO 9506 requirements (ISO 9506-1:2003 §8.6.1.4.1.4).
  * @constant
  * @type {number}
  */
@@ -97,6 +123,9 @@ const RejectPDU_rejectReason_confirmed_requestPDU_invalid_invokeID: RejectPDU_re
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_invalid_invokeID
+ * @description
+ *
+ * Invoke ID does not meet ISO 9506 requirements (ISO 9506-1:2003 §8.6.1.4.1.4).
  * @constant
  * @type {number}
  */
@@ -105,6 +134,10 @@ const invalid_invokeID: RejectPDU_rejectReason_confirmed_requestPDU = RejectPDU_
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_invalid_argument
+ * @description
+ *
+ * Service argument does not meet ISO 9506-1 requirements (ISO 9506-1:2003
+ * §8.6.1.4.1.5).
  * @constant
  * @type {number}
  */
@@ -113,6 +146,10 @@ const RejectPDU_rejectReason_confirmed_requestPDU_invalid_argument: RejectPDU_re
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_invalid_argument
+ * @description
+ *
+ * Service argument does not meet ISO 9506-1 requirements (ISO 9506-1:2003
+ * §8.6.1.4.1.5).
  * @constant
  * @type {number}
  */
@@ -121,6 +158,10 @@ const invalid_argument: RejectPDU_rejectReason_confirmed_requestPDU = RejectPDU_
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_invalid_modifier
+ * @description
+ *
+ * Modifier does not meet ISO 9506-1 requirements (ISO 9506-1:2003
+ * §8.6.1.4.1.6).
  * @constant
  * @type {number}
  */
@@ -129,6 +170,10 @@ const RejectPDU_rejectReason_confirmed_requestPDU_invalid_modifier: RejectPDU_re
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_invalid_modifier
+ * @description
+ *
+ * Modifier does not meet ISO 9506-1 requirements (ISO 9506-1:2003
+ * §8.6.1.4.1.6).
  * @constant
  * @type {number}
  */
@@ -137,6 +182,10 @@ const invalid_modifier: RejectPDU_rejectReason_confirmed_requestPDU = RejectPDU_
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_max_serv_outstanding_exceeded
+ * @description
+ *
+ * Negotiated maximum outstanding confirmed services exceeded (ISO 9506-1:2003
+ * §8.6.1.4.1.7).
  * @constant
  * @type {number}
  */
@@ -145,6 +194,10 @@ const RejectPDU_rejectReason_confirmed_requestPDU_max_serv_outstanding_exceeded:
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_max_serv_outstanding_exceeded
+ * @description
+ *
+ * Negotiated maximum outstanding confirmed services exceeded (ISO 9506-1:2003
+ * §8.6.1.4.1.7).
  * @constant
  * @type {number}
  */
@@ -153,6 +206,9 @@ const max_serv_outstanding_exceeded: RejectPDU_rejectReason_confirmed_requestPDU
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_max_recursion_exceeded
+ * @description
+ *
+ * PDU exceeds negotiated data-structure nesting (ISO 9506-1:2003 §8.6.1.4.1.8).
  * @constant
  * @type {number}
  */
@@ -161,6 +217,9 @@ const RejectPDU_rejectReason_confirmed_requestPDU_max_recursion_exceeded: Reject
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_max_recursion_exceeded
+ * @description
+ *
+ * PDU exceeds negotiated data-structure nesting (ISO 9506-1:2003 §8.6.1.4.1.8).
  * @constant
  * @type {number}
  */
@@ -169,6 +228,10 @@ const max_recursion_exceeded: RejectPDU_rejectReason_confirmed_requestPDU = Reje
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_value_out_of_range
+ * @description
+ *
+ * One or more parameter values exceed the allowed range (ISO 9506-1:2003
+ * §8.6.1.4.1.9).
  * @constant
  * @type {number}
  */
@@ -177,6 +240,10 @@ const RejectPDU_rejectReason_confirmed_requestPDU_value_out_of_range: RejectPDU_
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_requestPDU_value_out_of_range
+ * @description
+ *
+ * One or more parameter values exceed the allowed range (ISO 9506-1:2003
+ * §8.6.1.4.1.9).
  * @constant
  * @type {number}
  */

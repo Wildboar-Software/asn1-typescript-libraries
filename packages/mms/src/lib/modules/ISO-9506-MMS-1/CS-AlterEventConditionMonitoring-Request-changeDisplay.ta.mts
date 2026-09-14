@@ -19,7 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CS_AlterEventConditionMonitoring_Request_changeDisplay
  * @description
- * 
+ *
+ * Replacement Display Enhancement. `string` requires `des`; `index` requires
+ * `dei`; `noEnhancement` if neither.
+ *
+ * [ISO 9506-1:2003 §19.6.1.1.5.1]
+ * [ISO 9506-2:2003 §19.6.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

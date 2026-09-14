@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary StatusResponse_vmdLogicalStatus
  * @description
  * 
+ * VMD `&logicalStatus`: one of four levels of MMS functionality. Interrelated
+ * with `&local-Control` and `&operationState` (ISO 9506-1:2003 Table 6).
+ * ISO 9506-1:2003 §7.2.1.9, §10.2.1; ISO 9506-2:2003 §10.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +39,11 @@ type StatusResponse_vmdLogicalStatus = INTEGER;
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_state_changes_allowed
+ * @description
+ *
+ * All MMS services supported by this VMD may be performed. ISO 9506-1:2003
+ * §7.2.1.9.1.
+ *
  * @constant
  * @type {number}
  */
@@ -43,6 +52,11 @@ const StatusResponse_vmdLogicalStatus_state_changes_allowed: StatusResponse_vmdL
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_state_changes_allowed
+ * @description
+ *
+ * All MMS services supported by this VMD may be performed. ISO 9506-1:2003
+ * §7.2.1.9.1.
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +65,12 @@ const state_changes_allowed: StatusResponse_vmdLogicalStatus = StatusResponse_vm
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_no_state_changes_allowed
+ * @description
+ *
+ * Only Abort, Conclude, Cancel, Initiate, Status, Identify, Read, ReadJournal,
+ * and the Get*/Report* services listed in ISO 9506-1:2003 §7.2.1.9.2 may be
+ * performed (if supported).
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +79,12 @@ const StatusResponse_vmdLogicalStatus_no_state_changes_allowed: StatusResponse_v
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_no_state_changes_allowed
+ * @description
+ *
+ * Only Abort, Conclude, Cancel, Initiate, Status, Identify, Read, ReadJournal,
+ * and the Get*/Report* services listed in ISO 9506-1:2003 §7.2.1.9.2 may be
+ * performed (if supported).
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +93,11 @@ const no_state_changes_allowed: StatusResponse_vmdLogicalStatus = StatusResponse
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_limited_services_permitted
+ * @description
+ *
+ * Only Abort, Conclude, Status, and Identify may be performed. ISO 9506-1:2003
+ * §7.2.1.9.3.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +106,11 @@ const StatusResponse_vmdLogicalStatus_limited_services_permitted: StatusResponse
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_limited_services_permitted
+ * @description
+ *
+ * Only Abort, Conclude, Status, and Identify may be performed. ISO 9506-1:2003
+ * §7.2.1.9.3.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +119,11 @@ const limited_services_permitted: StatusResponse_vmdLogicalStatus = StatusRespon
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_support_services_allowed
+ * @description
+ *
+ * All supported MMS services except Start, Stop, Reset, Resume, Kill,
+ * StartUnitControl, and StopUnitControl. ISO 9506-1:2003 §7.2.1.9.4.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +132,11 @@ const StatusResponse_vmdLogicalStatus_support_services_allowed: StatusResponse_v
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_support_services_allowed
+ * @description
+ *
+ * All supported MMS services except Start, Stop, Reset, Resume, Kill,
+ * StartUnitControl, and StopUnitControl. ISO 9506-1:2003 §7.2.1.9.4.
+ *
  * @constant
  * @type {number}
  */
