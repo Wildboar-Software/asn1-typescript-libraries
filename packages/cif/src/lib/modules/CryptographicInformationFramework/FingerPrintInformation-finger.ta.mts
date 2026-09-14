@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,7 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FingerPrintInformation-finger ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * FingerPrintInformation-finger ::= ENUMERATED {
+ *     thumb,
+ *     pointerFinger,
+ *     middleFinger,
+ *     ringFinger,
+ *     littleFinger
+ * }
  * ```
  * 
  * @enum {number}
@@ -97,7 +47,13 @@ enum _enum_for_FingerPrintInformation_finger {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FingerPrintInformation-finger ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * FingerPrintInformation-finger ::= ENUMERATED {
+ *     thumb,
+ *     pointerFinger,
+ *     middleFinger,
+ *     ringFinger,
+ *     littleFinger
+ * }
  * ```
  * 
  * @enum {number}
@@ -112,7 +68,13 @@ type FingerPrintInformation_finger = _enum_for_FingerPrintInformation_finger;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FingerPrintInformation-finger ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * FingerPrintInformation-finger ::= ENUMERATED {
+ *     thumb,
+ *     pointerFinger,
+ *     middleFinger,
+ *     ringFinger,
+ *     littleFinger
+ * }
  * ```
  * 
  * @enum {number}
@@ -199,35 +161,8 @@ const FingerPrintInformation_finger_littleFinger: FingerPrintInformation_finger 
  */
 export
 const littleFinger: FingerPrintInformation_finger = FingerPrintInformation_finger.littleFinger; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_FingerPrintInformation_finger: $.ASN1Decoder<FingerPrintInformation_finger> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FingerPrintInformation_finger
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FingerPrintInformation_finger (el: _Element): FingerPrintInformation_finger {
-    if (!_cached_decoder_for_FingerPrintInformation_finger) { _cached_decoder_for_FingerPrintInformation_finger = $._decodeEnumerated; }
-    return _cached_decoder_for_FingerPrintInformation_finger(el);
-}
-
-let _cached_encoder_for_FingerPrintInformation_finger: $.ASN1Encoder<FingerPrintInformation_finger> | null = null;
-
-/**
- * @summary Encodes a(n) FingerPrintInformation_finger into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FingerPrintInformation_finger, encoded as an ASN.1 Element.
- */
-export
-function _encode_FingerPrintInformation_finger (value: FingerPrintInformation_finger, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FingerPrintInformation_finger) { _cached_encoder_for_FingerPrintInformation_finger = $._encodeEnumerated; }
-    return _cached_encoder_for_FingerPrintInformation_finger(value, elGetter);
-}
+export const _decode_FingerPrintInformation_finger = $._decodeEnumerated;
+export const _encode_FingerPrintInformation_finger = $._encodeEnumerated;
 
 
 /* eslint-enable */

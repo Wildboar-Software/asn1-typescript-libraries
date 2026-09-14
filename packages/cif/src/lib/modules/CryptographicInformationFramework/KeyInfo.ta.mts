@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -93,7 +37,6 @@ type KeyInfo<ParameterType, OperationsType> =
     { paramsAndOps: KeyInfo_paramsAndOps<ParameterType, OperationsType> } /* CHOICE_ALT_ROOT */
     | { reference: Reference } /* CHOICE_ALT_ROOT */;
 
-let _cached_decoder_for_KeyInfo: $.ASN1Decoder<KeyInfo<ParameterType, OperationsType>> | null = null;
 
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) KeyInfo
@@ -109,7 +52,6 @@ function _get_decoder_for_KeyInfo<ParameterType, OperationsType>(_decode_Paramet
 });
 }
 
-let _cached_encoder_for_KeyInfo: $.ASN1Encoder<KeyInfo<ParameterType, OperationsType>> | null = null;
 
 /**
  * @summary Returns a function that will encode a(n) KeyInfo into an ASN.1 Element.

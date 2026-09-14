@@ -1,0 +1,25 @@
+{
+  "name": "cif",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/cif/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/cif",
+        "tsConfig": "packages/cif/tsconfig.lib.json",
+        "packageJson": "packages/cif/package.json",
+        "main": "packages/cif/src/index.mts",
+        "assets": [
+          "packages/cif/*.md",
+          "packages/cif/LICENSE.txt",
+          "packages/cif/package.json"
+        ]
+      }
+    }
+  }
+}

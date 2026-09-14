@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,11 +8,13 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FingerPrintInformation, _decode_FingerPrintInformation, _encode_FingerPrintInformation } from "../CryptographicInformationFramework/FingerPrintInformation.ta.mjs";
 // export { FingerPrintInformation, _decode_FingerPrintInformation, _encode_FingerPrintInformation } from "../CryptographicInformationFramework/FingerPrintInformation.ta.mjs";
 import { IrisInformation, _decode_IrisInformation, _encode_IrisInformation } from "../CryptographicInformationFramework/IrisInformation.ta.mjs";
+import { cia_ub_biometricTypes } from "../CryptographicInformationFramework/cia-ub-biometricTypes.va.mjs";
 // export { IrisInformation, _decode_IrisInformation, _encode_IrisInformation } from "../CryptographicInformationFramework/IrisInformation.ta.mjs";
 
 
@@ -110,7 +56,13 @@ function _decode_BiometricType (el: _Element): BiometricType {
     "CONTEXT 0": [ "iris", $._decode_implicit<IrisInformation>(() => _decode_IrisInformation) ],
     "CONTEXT 1": [ "chained", $._decode_implicit<BiometricType[]>(() => $._decodeSequenceOf<BiometricType>(() => _decode_BiometricType)) ]
 }); }
-    return _cached_decoder_for_BiometricType(el);
+    const value = _cached_decoder_for_BiometricType(el);
+    if ("chained" in value) {
+        if (value.chained.length < 2 || value.chained.length > cia_ub_biometricTypes) {
+            throw new ASN1SizeError("BiometricType.chained violates SIZE constraint");
+        }
+    }
+    return value;
 }
 
 let _cached_encoder_for_BiometricType: $.ASN1Encoder<BiometricType> | null = null;

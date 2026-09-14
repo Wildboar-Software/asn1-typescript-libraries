@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
     GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,9 +15,9 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
 // export { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
-import { KeyUsageFlags, KeyUsageFlags_encipher /* IMPORTED_LONG_NAMED_BIT */, encipher /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_decipher /* IMPORTED_LONG_NAMED_BIT */, decipher /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_sign /* IMPORTED_LONG_NAMED_BIT */, sign /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_signRecover /* IMPORTED_LONG_NAMED_BIT */, signRecover /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_keyEncipher /* IMPORTED_LONG_NAMED_BIT */, keyEncipher /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_keyDecipher /* IMPORTED_LONG_NAMED_BIT */, keyDecipher /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_verify /* IMPORTED_LONG_NAMED_BIT */, verify /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_verifyRecover /* IMPORTED_LONG_NAMED_BIT */, verifyRecover /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_derive /* IMPORTED_LONG_NAMED_BIT */, derive /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_nonRepudiation /* IMPORTED_LONG_NAMED_BIT */, nonRepudiation /* IMPORTED_SHORT_NAMED_BIT */, _decode_KeyUsageFlags, _encode_KeyUsageFlags } from "../CryptographicInformationFramework/KeyUsageFlags.ta.mjs";
+import { KeyUsageFlags, _decode_KeyUsageFlags, _encode_KeyUsageFlags } from "../CryptographicInformationFramework/KeyUsageFlags.ta.mjs";
 // export { KeyUsageFlags, KeyUsageFlags_encipher /* IMPORTED_LONG_NAMED_BIT */, encipher /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_decipher /* IMPORTED_LONG_NAMED_BIT */, decipher /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_sign /* IMPORTED_LONG_NAMED_BIT */, sign /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_signRecover /* IMPORTED_LONG_NAMED_BIT */, signRecover /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_keyEncipher /* IMPORTED_LONG_NAMED_BIT */, keyEncipher /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_keyDecipher /* IMPORTED_LONG_NAMED_BIT */, keyDecipher /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_verify /* IMPORTED_LONG_NAMED_BIT */, verify /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_verifyRecover /* IMPORTED_LONG_NAMED_BIT */, verifyRecover /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_derive /* IMPORTED_LONG_NAMED_BIT */, derive /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_nonRepudiation /* IMPORTED_LONG_NAMED_BIT */, nonRepudiation /* IMPORTED_SHORT_NAMED_BIT */, _decode_KeyUsageFlags, _encode_KeyUsageFlags } from "../CryptographicInformationFramework/KeyUsageFlags.ta.mjs";
-import { KeyAccessFlags, KeyAccessFlags_sensitive /* IMPORTED_LONG_NAMED_BIT */, sensitive /* IMPORTED_SHORT_NAMED_BIT */, KeyAccessFlags_extractable /* IMPORTED_LONG_NAMED_BIT */, extractable /* IMPORTED_SHORT_NAMED_BIT */, KeyAccessFlags_alwaysSensitive /* IMPORTED_LONG_NAMED_BIT */, alwaysSensitive /* IMPORTED_SHORT_NAMED_BIT */, KeyAccessFlags_neverExtractable /* IMPORTED_LONG_NAMED_BIT */, neverExtractable /* IMPORTED_SHORT_NAMED_BIT */, KeyAccessFlags_cardGenerated /* IMPORTED_LONG_NAMED_BIT */, cardGenerated /* IMPORTED_SHORT_NAMED_BIT */, _decode_KeyAccessFlags, _encode_KeyAccessFlags } from "../CryptographicInformationFramework/KeyAccessFlags.ta.mjs";
+import { KeyAccessFlags, _decode_KeyAccessFlags, _encode_KeyAccessFlags } from "../CryptographicInformationFramework/KeyAccessFlags.ta.mjs";
 // export { KeyAccessFlags, KeyAccessFlags_sensitive /* IMPORTED_LONG_NAMED_BIT */, sensitive /* IMPORTED_SHORT_NAMED_BIT */, KeyAccessFlags_extractable /* IMPORTED_LONG_NAMED_BIT */, extractable /* IMPORTED_SHORT_NAMED_BIT */, KeyAccessFlags_alwaysSensitive /* IMPORTED_LONG_NAMED_BIT */, alwaysSensitive /* IMPORTED_SHORT_NAMED_BIT */, KeyAccessFlags_neverExtractable /* IMPORTED_LONG_NAMED_BIT */, neverExtractable /* IMPORTED_SHORT_NAMED_BIT */, KeyAccessFlags_cardGenerated /* IMPORTED_LONG_NAMED_BIT */, cardGenerated /* IMPORTED_SHORT_NAMED_BIT */, _decode_KeyAccessFlags, _encode_KeyAccessFlags } from "../CryptographicInformationFramework/KeyAccessFlags.ta.mjs";
 import { KeyReference, _decode_KeyReference, _encode_KeyReference } from "../CryptographicInformationFramework/KeyReference.ta.mjs";
 // export { KeyReference, _decode_KeyReference, _encode_KeyReference } from "../CryptographicInformationFramework/KeyReference.ta.mjs";
@@ -181,7 +128,7 @@ class CommonKeyAttributes {
      * @static
      * @method
      */
-    public static get _default_value_for_native () { return true; }
+    public static get _default_value_for_native (): BOOLEAN { return true; }
 }
 
 /**
@@ -292,7 +239,7 @@ let _cached_encoder_for_CommonKeyAttributes: $.ASN1Encoder<CommonKeyAttributes> 
  */
 export
 function _encode_CommonKeyAttributes (value: CommonKeyAttributes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CommonKeyAttributes) { _cached_encoder_for_CommonKeyAttributes = function (value: CommonKeyAttributes, elGetter: $.ASN1Encoder<CommonKeyAttributes>): _Element {
+    if (!_cached_encoder_for_CommonKeyAttributes) { _cached_encoder_for_CommonKeyAttributes = function (value: CommonKeyAttributes): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Identifier(value.iD, $.BER),

@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthMethod, AuthMethod_secureMessaging /* IMPORTED_LONG_NAMED_BIT */, secureMessaging /* IMPORTED_SHORT_NAMED_BIT */, AuthMethod_extAuthentication /* IMPORTED_LONG_NAMED_BIT */, extAuthentication /* IMPORTED_SHORT_NAMED_BIT */, AuthMethod_userAuthentication /* IMPORTED_LONG_NAMED_BIT */, userAuthentication /* IMPORTED_SHORT_NAMED_BIT */, AuthMethod_always /* IMPORTED_LONG_NAMED_BIT */, always /* IMPORTED_SHORT_NAMED_BIT */, _decode_AuthMethod, _encode_AuthMethod } from "../CryptographicInformationFramework/AuthMethod.ta.mjs";
+import { AuthMethod, _decode_AuthMethod, _encode_AuthMethod } from "../CryptographicInformationFramework/AuthMethod.ta.mjs";
 // export { AuthMethod, AuthMethod_secureMessaging /* IMPORTED_LONG_NAMED_BIT */, secureMessaging /* IMPORTED_SHORT_NAMED_BIT */, AuthMethod_extAuthentication /* IMPORTED_LONG_NAMED_BIT */, extAuthentication /* IMPORTED_SHORT_NAMED_BIT */, AuthMethod_userAuthentication /* IMPORTED_LONG_NAMED_BIT */, userAuthentication /* IMPORTED_SHORT_NAMED_BIT */, AuthMethod_always /* IMPORTED_LONG_NAMED_BIT */, always /* IMPORTED_SHORT_NAMED_BIT */, _decode_AuthMethod, _encode_AuthMethod } from "../CryptographicInformationFramework/AuthMethod.ta.mjs";
 
 
@@ -203,7 +149,7 @@ let _cached_encoder_for_AuthReference: $.ASN1Encoder<AuthReference> | null = nul
  */
 export
 function _encode_AuthReference (value: AuthReference, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthReference) { _cached_encoder_for_AuthReference = function (value: AuthReference, elGetter: $.ASN1Encoder<AuthReference>): _Element {
+    if (!_cached_encoder_for_AuthReference) { _cached_encoder_for_AuthReference = function (value: AuthReference): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_AuthMethod(value.authMethod, $.BER),

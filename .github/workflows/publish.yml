@@ -23,6 +23,7 @@ jobs:
           - "casscam"
           - "cbeff"
           - "ccr"
+          - "cif"
           - "cinf"
           - "clacse"
           - "clearance-sponsor-attribute"

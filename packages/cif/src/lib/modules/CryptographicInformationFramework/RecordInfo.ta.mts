@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,8 +10,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { cia_ub_recordLength } from "../CryptographicInformationFramework/cia-ub-recordLength.va.mjs";
 
 
 
@@ -134,7 +82,25 @@ class RecordInfo {
          * @readonly
          */
         readonly aODRecordLength: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+        for (const [name, value] of [
+            ["oDRecordLength", oDRecordLength],
+            ["prKDRecordLength", prKDRecordLength],
+            ["puKDRecordLength", puKDRecordLength],
+            ["sKDRecordLength", sKDRecordLength],
+            ["cDRecordLength", cDRecordLength],
+            ["dCODRecordLength", dCODRecordLength],
+            ["aODRecordLength", aODRecordLength],
+        ] as const) {
+            if (value === undefined) {
+                continue;
+            }
+            const n = typeof value === "bigint" ? value : BigInt(value);
+            if (n < 0n || n > BigInt(cia_ub_recordLength)) {
+                throw new ASN1OverflowError(`RecordInfo.${name} violates INTEGER range`);
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a RecordInfo
@@ -257,7 +223,7 @@ let _cached_encoder_for_RecordInfo: $.ASN1Encoder<RecordInfo> | null = null;
  */
 export
 function _encode_RecordInfo (value: RecordInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RecordInfo) { _cached_encoder_for_RecordInfo = function (value: RecordInfo, elGetter: $.ASN1Encoder<RecordInfo>): _Element {
+    if (!_cached_encoder_for_RecordInfo) { _cached_encoder_for_RecordInfo = function (value: RecordInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.oDRecordLength === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.oDRecordLength, $.BER)),

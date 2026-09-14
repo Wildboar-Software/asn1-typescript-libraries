@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -89,7 +34,6 @@ import { CommonCertificateAttributes, _decode_CommonCertificateAttributes, _enco
 export
 type CertificateObject <CertAttributes> = CIO<CommonCertificateAttributes, NULL, CertAttributes>; // DefinedType
 
-let _cached_decoder_for_CertificateObject: $.ASN1Decoder<CertificateObject<CertAttributes>> | null = null;
 
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) CertificateObject
@@ -101,7 +45,6 @@ function _get_decoder_for_CertificateObject<CertAttributes>(_decode_CertAttribut
     return _get_decoder_for_CIO<CommonCertificateAttributes, NULL, CertAttributes>(_decode_CommonCertificateAttributes, $._decodeNull, _decode_CertAttributes);
 }
 
-let _cached_encoder_for_CertificateObject: $.ASN1Encoder<CertificateObject<CertAttributes>> | null = null;
 
 /**
  * @summary Returns a function that will encode a(n) CertificateObject into an ASN.1 Element.

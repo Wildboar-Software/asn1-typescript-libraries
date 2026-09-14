@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,6 +10,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
@@ -102,7 +49,11 @@ class DigestInfoWithDefault {
          * @readonly
          */
         readonly digest: OCTET_STRING
-    ) {}
+    ) {
+        if (digest.length < 8 || digest.length > 128) {
+            throw new ASN1SizeError("DigestInfoWithDefault.digest violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a DigestInfoWithDefault
@@ -126,7 +77,7 @@ class DigestInfoWithDefault {
      * @static
      * @method
      */
-    public static get _default_value_for_digestAlg () { return alg_id_sha1; }
+    public static get _default_value_for_digestAlg (): AlgorithmIdentifier { return alg_id_sha1; }
 }
 
 /**
@@ -211,7 +162,7 @@ let _cached_encoder_for_DigestInfoWithDefault: $.ASN1Encoder<DigestInfoWithDefau
  */
 export
 function _encode_DigestInfoWithDefault (value: DigestInfoWithDefault, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DigestInfoWithDefault) { _cached_encoder_for_DigestInfoWithDefault = function (value: DigestInfoWithDefault, elGetter: $.ASN1Encoder<DigestInfoWithDefault>): _Element {
+    if (!_cached_encoder_for_DigestInfoWithDefault) { _cached_encoder_for_DigestInfoWithDefault = function (value: DigestInfoWithDefault): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.digestAlg === undefined || $.deepEq(value.digestAlg, DigestInfoWithDefault._default_value_for_digestAlg) ? undefined : _encode_AlgorithmIdentifier(value.digestAlg, $.BER)),

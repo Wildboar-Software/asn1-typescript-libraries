@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,13 +11,15 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
 // export { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
-import { CommunicationMode, CommunicationMode_contact /* IMPORTED_LONG_NAMED_BIT */, contact /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_contactLess /* IMPORTED_LONG_NAMED_BIT */, contactLess /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_usb /* IMPORTED_LONG_NAMED_BIT */, usb /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_nfc /* IMPORTED_LONG_NAMED_BIT */, nfc /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_contactC6 /* IMPORTED_LONG_NAMED_BIT */, contactC6 /* IMPORTED_SHORT_NAMED_BIT */, _decode_CommunicationMode, _encode_CommunicationMode } from "../CryptographicInformationFramework/CommunicationMode.ta.mjs";
+import { CommunicationMode, _decode_CommunicationMode, _encode_CommunicationMode } from "../CryptographicInformationFramework/CommunicationMode.ta.mjs";
 // export { CommunicationMode, CommunicationMode_contact /* IMPORTED_LONG_NAMED_BIT */, contact /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_contactLess /* IMPORTED_LONG_NAMED_BIT */, contactLess /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_usb /* IMPORTED_LONG_NAMED_BIT */, usb /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_nfc /* IMPORTED_LONG_NAMED_BIT */, nfc /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_contactC6 /* IMPORTED_LONG_NAMED_BIT */, contactC6 /* IMPORTED_SHORT_NAMED_BIT */, _decode_CommunicationMode, _encode_CommunicationMode } from "../CryptographicInformationFramework/CommunicationMode.ta.mjs";
 import { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFramework/Path.ta.mjs";
+import { cia_ub_index } from "../CryptographicInformationFramework/cia-ub-index.va.mjs";
 // export { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFramework/Path.ta.mjs";
 
 
@@ -146,7 +95,17 @@ class SecurityFileOrObject {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        for (const [name, value] of [["index", index], ["precondition", precondition]] as const) {
+            if (value === undefined) {
+                continue;
+            }
+            const n = typeof value === "bigint" ? value : BigInt(value);
+            if (n < 0n || n > BigInt(cia_ub_index)) {
+                throw new ASN1OverflowError(`SecurityFileOrObject.${name} violates INTEGER range`);
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a SecurityFileOrObject
@@ -271,7 +230,7 @@ let _cached_encoder_for_SecurityFileOrObject: $.ASN1Encoder<SecurityFileOrObject
  */
 export
 function _encode_SecurityFileOrObject (value: SecurityFileOrObject, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SecurityFileOrObject) { _cached_encoder_for_SecurityFileOrObject = function (value: SecurityFileOrObject, elGetter: $.ASN1Encoder<SecurityFileOrObject>): _Element {
+    if (!_cached_encoder_for_SecurityFileOrObject) { _cached_encoder_for_SecurityFileOrObject = function (value: SecurityFileOrObject): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.label === undefined) ? undefined : _encode_Label(value.label, $.BER)),

@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -64,9 +10,12 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Path_efidOrTagChoice, _decode_Path_efidOrTagChoice, _encode_Path_efidOrTagChoice } from "../CryptographicInformationFramework/Path-efidOrTagChoice.ta.mjs";
+import { cia_ub_index } from "../CryptographicInformationFramework/cia-ub-index.va.mjs";
 // export { Path_efidOrTagChoice, _decode_Path_efidOrTagChoice, _encode_Path_efidOrTagChoice } from "../CryptographicInformationFramework/Path-efidOrTagChoice.ta.mjs";
 
 
@@ -126,7 +75,22 @@ class Path {
          * @readonly
          */
         readonly length: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+        const indexPresent = index !== undefined;
+        const lengthPresent = length !== undefined;
+        if (indexPresent !== lengthPresent) {
+            throw new ASN1ConstructionError("Path.index and Path.length must be both present or both absent");
+        }
+        for (const [name, value] of [["index", index], ["length", length]] as const) {
+            if (value === undefined) {
+                continue;
+            }
+            const n = typeof value === "bigint" ? value : BigInt(value);
+            if (n < 0n || n > BigInt(cia_ub_index)) {
+                throw new ASN1OverflowError(`Path.${name} violates INTEGER range`);
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a Path
@@ -233,7 +197,7 @@ let _cached_encoder_for_Path: $.ASN1Encoder<Path> | null = null;
  */
 export
 function _encode_Path (value: Path, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Path) { _cached_encoder_for_Path = function (value: Path, elGetter: $.ASN1Encoder<Path>): _Element {
+    if (!_cached_encoder_for_Path) { _cached_encoder_for_Path = function (value: Path): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Path_efidOrTagChoice(value.efidOrTagChoice, $.BER),
