@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
     PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,11 +13,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CIAInfo_version, CIAInfo_version_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, CIAInfo_version_v2 /* IMPORTED_LONG_NAMED_INTEGER */, v2 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CIAInfo_version, _encode_CIAInfo_version } from "../CryptographicInformationFramework/CIAInfo-version.ta.mjs";
+import { CIAInfo_version, _decode_CIAInfo_version, _encode_CIAInfo_version } from "../CryptographicInformationFramework/CIAInfo-version.ta.mjs";
 // export { CIAInfo_version, CIAInfo_version_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, CIAInfo_version_v2 /* IMPORTED_LONG_NAMED_INTEGER */, v2 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CIAInfo_version, _encode_CIAInfo_version } from "../CryptographicInformationFramework/CIAInfo-version.ta.mjs";
 import { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
 // export { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
-import { CardFlags, CardFlags_readonly /* IMPORTED_LONG_NAMED_BIT */, readonly /* IMPORTED_SHORT_NAMED_BIT */, CardFlags_authRequired /* IMPORTED_LONG_NAMED_BIT */, authRequired /* IMPORTED_SHORT_NAMED_BIT */, CardFlags_prnGeneration /* IMPORTED_LONG_NAMED_BIT */, prnGeneration /* IMPORTED_SHORT_NAMED_BIT */, _decode_CardFlags, _encode_CardFlags } from "../CryptographicInformationFramework/CardFlags.ta.mjs";
+import { CardFlags, _decode_CardFlags, _encode_CardFlags } from "../CryptographicInformationFramework/CardFlags.ta.mjs";
 // export { CardFlags, CardFlags_readonly /* IMPORTED_LONG_NAMED_BIT */, readonly /* IMPORTED_SHORT_NAMED_BIT */, CardFlags_authRequired /* IMPORTED_LONG_NAMED_BIT */, authRequired /* IMPORTED_SHORT_NAMED_BIT */, CardFlags_prnGeneration /* IMPORTED_LONG_NAMED_BIT */, prnGeneration /* IMPORTED_SHORT_NAMED_BIT */, _decode_CardFlags, _encode_CardFlags } from "../CryptographicInformationFramework/CardFlags.ta.mjs";
 import { SecurityEnvironmentInfo, _decode_SecurityEnvironmentInfo, _encode_SecurityEnvironmentInfo } from "../CryptographicInformationFramework/SecurityEnvironmentInfo.ta.mjs";
 // export { SecurityEnvironmentInfo, _decode_SecurityEnvironmentInfo, _encode_SecurityEnvironmentInfo } from "../CryptographicInformationFramework/SecurityEnvironmentInfo.ta.mjs";
@@ -347,7 +294,7 @@ let _cached_encoder_for_CIAInfo: $.ASN1Encoder<CIAInfo> | null = null;
  */
 export
 function _encode_CIAInfo (value: CIAInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CIAInfo) { _cached_encoder_for_CIAInfo = function (value: CIAInfo, elGetter: $.ASN1Encoder<CIAInfo>): _Element {
+    if (!_cached_encoder_for_CIAInfo) { _cached_encoder_for_CIAInfo = function (value: CIAInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_CIAInfo_version(value.version, $.BER),

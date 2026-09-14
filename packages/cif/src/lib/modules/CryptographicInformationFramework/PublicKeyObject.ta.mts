@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -91,7 +35,6 @@ import { CommonPublicKeyAttributes, _decode_CommonPublicKeyAttributes, _encode_C
 export
 type PublicKeyObject <KeyAttributes> = CIO<CommonKeyAttributes, CommonPublicKeyAttributes, KeyAttributes>; // DefinedType
 
-let _cached_decoder_for_PublicKeyObject: $.ASN1Decoder<PublicKeyObject<KeyAttributes>> | null = null;
 
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) PublicKeyObject
@@ -103,7 +46,6 @@ function _get_decoder_for_PublicKeyObject<KeyAttributes>(_decode_KeyAttributes: 
     return _get_decoder_for_CIO<CommonKeyAttributes, CommonPublicKeyAttributes, KeyAttributes>(_decode_CommonKeyAttributes, _decode_CommonPublicKeyAttributes, _decode_KeyAttributes);
 }
 
-let _cached_encoder_for_PublicKeyObject: $.ASN1Encoder<PublicKeyObject<KeyAttributes>> | null = null;
 
 /**
  * @summary Returns a function that will encode a(n) PublicKeyObject into an ASN.1 Element.

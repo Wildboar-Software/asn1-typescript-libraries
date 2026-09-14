@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
     GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BiometricFlags, BiometricFlags_local /* IMPORTED_LONG_NAMED_BIT */, local /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_change_disabled /* IMPORTED_LONG_NAMED_BIT */, change_disabled /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_unblock_disabled /* IMPORTED_LONG_NAMED_BIT */, unblock_disabled /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_initialized /* IMPORTED_LONG_NAMED_BIT */, initialized /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_disable_allowed /* IMPORTED_LONG_NAMED_BIT */, disable_allowed /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_integrity_protected /* IMPORTED_LONG_NAMED_BIT */, integrity_protected /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_confidentiality_protected /* IMPORTED_LONG_NAMED_BIT */, confidentiality_protected /* IMPORTED_SHORT_NAMED_BIT */, _decode_BiometricFlags, _encode_BiometricFlags } from "../CryptographicInformationFramework/BiometricFlags.ta.mjs";
+import { BiometricFlags, _decode_BiometricFlags, _encode_BiometricFlags } from "../CryptographicInformationFramework/BiometricFlags.ta.mjs";
 // export { BiometricFlags, BiometricFlags_local /* IMPORTED_LONG_NAMED_BIT */, local /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_change_disabled /* IMPORTED_LONG_NAMED_BIT */, change_disabled /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_unblock_disabled /* IMPORTED_LONG_NAMED_BIT */, unblock_disabled /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_initialized /* IMPORTED_LONG_NAMED_BIT */, initialized /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_disable_allowed /* IMPORTED_LONG_NAMED_BIT */, disable_allowed /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_integrity_protected /* IMPORTED_LONG_NAMED_BIT */, integrity_protected /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_confidentiality_protected /* IMPORTED_LONG_NAMED_BIT */, confidentiality_protected /* IMPORTED_SHORT_NAMED_BIT */, _decode_BiometricFlags, _encode_BiometricFlags } from "../CryptographicInformationFramework/BiometricFlags.ta.mjs";
 import { BiometricTemplateIdentifier, _decode_BiometricTemplateIdentifier, _encode_BiometricTemplateIdentifier } from "../CryptographicInformationFramework/BiometricTemplateIdentifier.ta.mjs";
 // export { BiometricTemplateIdentifier, _decode_BiometricTemplateIdentifier, _encode_BiometricTemplateIdentifier } from "../CryptographicInformationFramework/BiometricTemplateIdentifier.ta.mjs";
@@ -270,7 +216,7 @@ let _cached_encoder_for_BiometricTemplateAttributes: $.ASN1Encoder<BiometricTemp
  */
 export
 function _encode_BiometricTemplateAttributes (value: BiometricTemplateAttributes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BiometricTemplateAttributes) { _cached_encoder_for_BiometricTemplateAttributes = function (value: BiometricTemplateAttributes, elGetter: $.ASN1Encoder<BiometricTemplateAttributes>): _Element {
+    if (!_cached_encoder_for_BiometricTemplateAttributes) { _cached_encoder_for_BiometricTemplateAttributes = function (value: BiometricTemplateAttributes): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_BiometricFlags(value.bioFlags, $.BER),
