@@ -1,0 +1,254 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { ValidationParms, _decode_ValidationParms, _encode_ValidationParms } from "../ANSI-X9-42/ValidationParms.ta.mjs";
+// export { ValidationParms, _decode_ValidationParms, _encode_ValidationParms } from "../ANSI-X9-42/ValidationParms.ta.mjs";
+
+
+/**
+ * @summary DomainParameters
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * DomainParameters ::= SEQUENCE {  -- Galois field group parameters
+ * p    INTEGER,    -- odd prime, p = jq + 1
+ * g    INTEGER,    -- generator, g ^ q = 1 mod p
+ * q    INTEGER,    -- prime factor of p-1
+ * j    INTEGER OPTIONAL,    -- cofactor, j ? 2
+ * validationParms ValidationParms OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class DomainParameters {
+    constructor (
+        /**
+         * @summary `p`.
+         * @public
+         * @readonly
+         */
+        readonly p: INTEGER,
+        /**
+         * @summary `g`.
+         * @public
+         * @readonly
+         */
+        readonly g: INTEGER,
+        /**
+         * @summary `q`.
+         * @public
+         * @readonly
+         */
+        readonly q: INTEGER,
+        /**
+         * @summary `j`.
+         * @public
+         * @readonly
+         */
+        readonly j: OPTIONAL<INTEGER>,
+        /**
+         * @summary `validationParms`.
+         * @public
+         * @readonly
+         */
+        readonly validationParms: OPTIONAL<ValidationParms>
+    ) {}
+
+    /**
+     * @summary Restructures an object into a DomainParameters
+     * @description
+     * 
+     * This takes an `object` and converts it to a `DomainParameters`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `DomainParameters`.
+     * @returns {DomainParameters}
+     */
+    public static _from_object (_o: { [_K in keyof (DomainParameters)]: (DomainParameters)[_K] }): DomainParameters {
+        return new DomainParameters(_o.p, _o.g, _o.q, _o.j, _o.validationParms);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of DomainParameters
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_DomainParameters: $.ComponentSpec[] = [
+    new $.ComponentSpec("p", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("g", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("q", false, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("j", true, $.hasTag(_TagClass.universal, 2)),
+    new $.ComponentSpec("validationParms", true, $.hasTag(_TagClass.universal, 16))
+];
+
+/**
+ * @summary The Trailing Root Component Types of DomainParameters
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_DomainParameters: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of DomainParameters
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_DomainParameters: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_DomainParameters: $.ASN1Decoder<DomainParameters> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) DomainParameters
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_DomainParameters (el: _Element): DomainParameters {
+    if (!_cached_decoder_for_DomainParameters) { _cached_decoder_for_DomainParameters = function (el: _Element): DomainParameters {
+    let p!: INTEGER;
+    let g!: INTEGER;
+    let q!: INTEGER;
+    let j: OPTIONAL<INTEGER>;
+    let validationParms: OPTIONAL<ValidationParms>;
+    const callbacks: $.DecodingMap = {
+        "p": (_el: _Element): void => { p = $._decodeInteger(_el); },
+        "g": (_el: _Element): void => { g = $._decodeInteger(_el); },
+        "q": (_el: _Element): void => { q = $._decodeInteger(_el); },
+        "j": (_el: _Element): void => { j = $._decodeInteger(_el); },
+        "validationParms": (_el: _Element): void => { validationParms = _decode_ValidationParms(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_DomainParameters,
+        _extension_additions_list_spec_for_DomainParameters,
+        _root_component_type_list_2_spec_for_DomainParameters,
+        undefined,
+    );
+    return new DomainParameters(
+        p,
+        g,
+        q,
+        j,
+        validationParms
+    );
+}; }
+    return _cached_decoder_for_DomainParameters(el);
+}
+
+let _cached_encoder_for_DomainParameters: $.ASN1Encoder<DomainParameters> | null = null;
+
+/**
+ * @summary Encodes a(n) DomainParameters into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The DomainParameters, encoded as an ASN.1 Element.
+ */
+export
+function _encode_DomainParameters (value: DomainParameters, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_DomainParameters) { _cached_encoder_for_DomainParameters = function (value: DomainParameters, elGetter: $.ASN1Encoder<DomainParameters>): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* REQUIRED   */ $._encodeInteger(value.p, $.BER),
+            /* REQUIRED   */ $._encodeInteger(value.g, $.BER),
+            /* REQUIRED   */ $._encodeInteger(value.q, $.BER),
+            /* IF_ABSENT  */ ((value.j === undefined) ? undefined : $._encodeInteger(value.j, $.BER)),
+            /* IF_ABSENT  */ ((value.validationParms === undefined) ? undefined : _encode_ValidationParms(value.validationParms, $.BER))
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_DomainParameters(value, elGetter);
+}
+
+
+/* eslint-enable */
