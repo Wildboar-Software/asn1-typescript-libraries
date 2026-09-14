@@ -220,6 +220,7 @@ function selectFromEntry (
         ? groupByOID(eis.contextSelection.selectedContexts, (sc) => sc.type_)
         : undefined;
 
+    // FIXME: You split attributes into values... only to regroup them back into attributes.
     const selectedAttributes: ATVAC[] = (entry.information ?? [])
         .filter((info): boolean => {
             let attributeType!: OBJECT_IDENTIFIER;
@@ -404,6 +405,7 @@ function selectFromEntry (
         : selectedAttributes;
 
     const protoAttributes = groupByOID(attributesSelectedByContext, (atvac) => atvac[0]);
+    // TODO: Iterate over protoAttributes.values() in for-of instead.
     const infos: EntryInformation_information_Item[] = Array.from(protoAttributes.values())
         .map((attrs: ATVAC[]): EntryInformation_information_Item | undefined => {
             if (eis.infoTypes === EntryInformationSelection_infoTypes_attributeTypesOnly) {
