@@ -27,7 +27,13 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary AttachToSemaphore
  * @description
- * 
+ *
+ * Modifier on another confirmed service (`listOfModifiers`). The
+ * attached request waits until this semaphore is granted, then
+ * proceeds; control is released when that request finishes. Unlike
+ * TakeControl, a pool `namedToken` is required (no server
+ * allocation). ISO 9506-1:2003 §16.9. ISO 9506-2:2003 §16.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,42 +54,81 @@ class AttachToSemaphore {
     constructor (
         /**
          * @summary `semaphoreName`.
+         * @description
+         *
+         * Semaphore under which the modified request is queued.
+         * ISO 9506-1:2003 §16.9.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly semaphoreName: ObjectName,
         /**
          * @summary `namedToken`.
+         * @description
+         *
+         * Required for a pool semaphore; shall not appear for a token
+         * semaphore. Server allocation is not allowed.
+         * ISO 9506-1:2003 §16.9.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly namedToken: OPTIONAL<Identifier>,
         /**
          * @summary `priority`.
+         * @description
+         *
+         * Queue rank vs TakeControl and other AttachToSemaphore
+         * waiters. 0 highest, 64 normal, 127 lowest. Default
+         * `normalPriority`. ISO 9506-1:2003 §16.9.1.1.3.
+         *
          * @public
          * @readonly
          */
         readonly priority: OPTIONAL<Priority>,
         /**
          * @summary `acceptableDelay`.
+         * @description
+         *
+         * Max wait for control. Zero fails at once if not free.
+         * Absent means forever. ISO 9506-1:2003 §16.9.1.1.4.
+         *
          * @public
          * @readonly
          */
         readonly acceptableDelay: OPTIONAL<Unsigned32>,
         /**
          * @summary `controlTimeOut`.
+         * @description
+         *
+         * Max hold time in milliseconds after control is granted.
+         * Absent means hold indefinitely. ISO 9506-1:2003
+         * §16.9.1.1.5.
+         *
          * @public
          * @readonly
          */
         readonly controlTimeOut: OPTIONAL<Unsigned32>,
         /**
          * @summary `abortOnTimeOut`.
+         * @description
+         *
+         * Present iff `controlTimeOut` is present. True aborts the
+         * association on timeout; false signals the Event Condition.
+         * ISO 9506-1:2003 §16.9.1.1.6.
+         *
          * @public
          * @readonly
          */
         readonly abortOnTimeOut: OPTIONAL<BOOLEAN>,
         /**
          * @summary `relinquishIfConnectionLost`.
+         * @description
+         *
+         * True (default) releases control if the association is lost;
+         * false leaves the entry hung. ISO 9506-1:2003 §16.9.1.1.7.
+         *
          * @public
          * @readonly
          */

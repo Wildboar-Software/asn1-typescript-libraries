@@ -17,7 +17,14 @@ import { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS
 /**
  * @summary FileRead_Request
  * @description
- * 
+ *
+ * Confirmed request: FRSM ID assigned by
+ * FileOpen, identifying the open file being
+ * read. Informative Annex D.
+ *
+ * [ISO 9506-1:2003 Annex D, D.4.1.1.1]
+ * [ISO 9506-2:2003 Annex D, D.3.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

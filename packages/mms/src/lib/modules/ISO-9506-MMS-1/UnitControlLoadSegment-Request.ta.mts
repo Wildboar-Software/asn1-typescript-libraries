@@ -18,6 +18,9 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary UnitControlLoadSegment_Request
  * @description
  * 
+ * Server-issued request for the next Control Elements of a Unit Control load.
+ * ISO 9506-1:2003 §13.4. ISO 9506-2:2003 §13.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

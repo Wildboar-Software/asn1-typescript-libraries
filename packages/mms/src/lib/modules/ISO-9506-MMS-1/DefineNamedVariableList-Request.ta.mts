@@ -19,7 +19,13 @@ import { DefineNamedVariableList_Request_listOfVariable_Item, _decode_DefineName
 /**
  * @summary DefineNamedVariableList_Request
  * @description
- * 
+ *
+ * Confirmed request to create a Named Variable List.
+ * Requires `vlis`. Alternate Access on list items needs
+ * `valt`. SINGLE items create an unnamed (UNDEFINED)
+ * Named Variable deleted with the list.
+ * ISO 9506-1:2003 §14.12. ISO 9506-2:2003 §14.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +44,22 @@ class DefineNamedVariableList_Request {
     constructor (
         /**
          * @summary `variableListName`.
+         * @description
+         *
+         * Unique `&name` of the Named Variable List.
+         * ISO 9506-1:2003 §14.12.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly variableListName: ObjectName,
         /**
          * @summary `listOfVariable`.
+         * @description
+         *
+         * Variables accessed via this list, in stored order.
+         * ISO 9506-1:2003 §14.12.1.1.2.
+         *
          * @public
          * @readonly
          */

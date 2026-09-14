@@ -21,6 +21,11 @@ import { Start_Request_executionArgument, _decode_Start_Request_executionArgumen
  * @summary Start_Request
  * @description
  * 
+ * Client request to move a Program Invocation from `idle` to `running` (via
+ * transitory `starting`). Optional `executionArgument` is stored on the PI if
+ * present. Controlling PIs (`csr`) also need Select and CS-Start extras.
+ * Result(-) returns Start-Error (current PI state). ISO 9506-1:2003 §12.4. ISO 9506-2:2003 §12.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +44,23 @@ class Start_Request {
     constructor (
         /**
          * @summary `programInvocationName`.
+         * @description
+         *
+         * Program Invocation to start; must be `idle`. ISO 9506-1:2003
+         * §12.4.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly programInvocationName: Identifier,
         /**
          * @summary `executionArgument`.
+         * @description
+         *
+         * Optional data passed into the PI; sets `&executionArgument` if
+         * present, else that field is unchanged. String or externally encoded.
+         * ISO 9506-1:2003 §12.1.1.10, §12.4.1.1.2. ISO 9506-2:2003 §12.4.1.1.
+         *
          * @public
          * @readonly
          */

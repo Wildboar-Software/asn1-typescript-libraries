@@ -17,7 +17,13 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary DeleteEventConditionList_Request
  * @description
- * 
+ *
+ * Confirmed request: delete the named Event Condition List. Fails if
+ * `&ReferencingEventConditionLists` is not empty.
+ *
+ * [ISO 9506-1:2003 §22.3]
+ * [ISO 9506-2:2003 §22.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

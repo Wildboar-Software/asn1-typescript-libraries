@@ -18,7 +18,13 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary GetEventConditionListAttributes_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): member Event Conditions and, iff `recl`, nested Event
+ * Condition Lists.
+ *
+ * [ISO 9506-1:2003 §22.6]
+ * [ISO 9506-2:2003 §22.6.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +42,24 @@ class GetEventConditionListAttributes_Response {
     constructor (
         /**
          * @summary `listOfEventConditionName`.
+         * @description
+         *
+         * Event Conditions in `&EventConditions`.
+         *
+         * [ISO 9506-1:2003 §22.1.1.3]
+         *
          * @public
          * @readonly
          */
         readonly listOfEventConditionName: ObjectName[],
         /**
          * @summary `listOfEventConditionListName`.
+         * @description
+         *
+         * Nested lists. Present iff `recl`.
+         *
+         * [ISO 9506-1:2003 §22.1.1.4]
+         *
          * @public
          * @readonly
          */

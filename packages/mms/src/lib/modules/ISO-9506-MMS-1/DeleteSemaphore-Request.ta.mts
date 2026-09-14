@@ -17,7 +17,11 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary DeleteSemaphore_Request
  * @description
- * 
+ *
+ * Confirmed request to delete a semaphore. Succeeds only if
+ * `&Owners` is empty. Also deletes the associated Event Condition.
+ * ISO 9506-1:2003 §16.5. ISO 9506-2:2003 §16.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

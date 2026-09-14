@@ -19,7 +19,12 @@ import { ServiceError, _decode_ServiceError, _encode_ServiceError } from "../ISO
 /**
  * @summary Cancel_ErrorPDU
  * @description
- * 
+ *
+ * Failed Cancel. The original confirmed service continues and will still
+ * produce a response. Typical causes: request not received, response already
+ * issued, Transaction `&cancelable` false, or non-destructive cancel impossible
+ * (ISO 9506-1:2003 §8.5; ISO 9506-2:2003 §8.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,19 @@ class Cancel_ErrorPDU {
     constructor (
         /**
          * @summary `originalInvokeID`.
+         * @description
+         *
+         * Invoke ID of the confirmed service whose cancellation was requested
+         * (ISO 9506-1:2003 §8.5.1.3.1).
          * @public
          * @readonly
          */
         readonly originalInvokeID: Unsigned32,
         /**
          * @summary `serviceError`.
+         * @description
+         *
+         * Why Cancel failed (ISO 9506-1:2003 clause 24; ISO 9506-2:2003 §8.5).
          * @public
          * @readonly
          */
@@ -71,8 +83,8 @@ class Cancel_ErrorPDU {
  * @summary The Leading Root Component Types of Cancel_ErrorPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -85,8 +97,8 @@ const _root_component_type_list_1_spec_for_Cancel_ErrorPDU: $.ComponentSpec[] = 
  * @summary The Trailing Root Component Types of Cancel_ErrorPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -98,8 +110,8 @@ const _root_component_type_list_2_spec_for_Cancel_ErrorPDU: $.ComponentSpec[] = 
  * @summary The Extension Addition Component Types of Cancel_ErrorPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -154,7 +166,7 @@ function _encode_Cancel_ErrorPDU (value: Cancel_ErrorPDU, elGetter: $.ASN1Encode
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_Unsigned32, $.BER)(value.originalInvokeID, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_ServiceError, $.BER)(value.serviceError, $.BER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+   ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
     return _cached_encoder_for_Cancel_ErrorPDU(value, elGetter);
 }

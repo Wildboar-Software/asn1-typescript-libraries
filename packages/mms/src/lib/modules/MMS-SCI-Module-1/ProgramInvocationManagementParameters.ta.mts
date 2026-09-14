@@ -21,6 +21,11 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary ProgramInvocationManagementParameters
  * @description
  * 
+ * Program Invocation
+ * Management CIS parameters (Table 28). `programLoction` spelling
+ * matches the spec. SCI configuration/initialization encoding (ISO 9506-2:2003
+ * Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +47,53 @@ class ProgramInvocationManagementParameters {
     constructor (
         /**
          * @summary `executionArgMaxSize`.
+         * @description
+         *
+         * Max Execution Argument size. ISO 9506-2:2003 Annex B.2.4.
+         *
          * @public
          * @readonly
          */
         readonly executionArgMaxSize: INTEGER,
         /**
          * @summary `executionArgParseRules`.
+         * @description
+         *
+         * Execution Argument parse rules. ISO 9506-2:2003 Annex B.2.4.
+         *
          * @public
          * @readonly
          */
         readonly executionArgParseRules: MMSString,
         /**
          * @summary `executionArgSyntaxes`.
+         * @description
+         *
+         * Abstract syntaxes for Execution Argument. ISO 9506-2:2003 Annex
+         * B.2.4.
+         *
          * @public
          * @readonly
          */
         readonly executionArgSyntaxes: OBJECT_IDENTIFIER[],
         /**
          * @summary `programLoction`.
+         * @description
+         *
+         * Syntax of program-location notation (spec spelling). ISO 9506-2:2003
+         * Annex B.2.4; ISO 9506-1:2003 §12.1.1.15.
+         *
          * @public
          * @readonly
          */
         readonly programLoction: MMSString,
         /**
          * @summary `stepMode`.
+         * @description
+         *
+         * true if step-limited running mode is supported. ISO 9506-2:2003 Annex
+         * B.2.4; ISO 9506-1:2003 §12.1.1.16.
+         *
          * @public
          * @readonly
          */

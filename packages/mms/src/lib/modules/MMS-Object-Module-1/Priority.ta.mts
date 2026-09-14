@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Priority
  * @description
  * 
+ * Integer 0..127. 0 = highest, 64 = normal, 127
+ * = lowest. Used on Event Conditions and Semaphore Entries. Server
+ * treatment is a local matter. ISO 9506-1:2003 §16.1.3.8, §19.1.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

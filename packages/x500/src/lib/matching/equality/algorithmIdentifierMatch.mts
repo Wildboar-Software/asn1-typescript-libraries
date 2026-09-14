@@ -6,6 +6,14 @@ import {
 } from "../../modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier.mjs";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 13.3.7
+ * `algorithmIdentifierMatch`.
+ *
+ * Equality for `SupportedAlgorithms`. TRUE iff the presented
+ * `AlgorithmIdentifier` equals the `algorithmIdentifier` component
+ * of the stored value.
+ */
 export
 const algorithmIdentifierMatch: EqualityMatcher = (
     assertion: ASN1Element,

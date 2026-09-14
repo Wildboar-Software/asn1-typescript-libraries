@@ -20,6 +20,10 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
  * @summary Journal_Variable
  * @description
  * 
+ * Tagged value in a Journal Entry
+ * (informationType data or event-data). Tag length ≤ 255.
+ * ISO 9506-1:2003 §23.1.2.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,20 @@ class Journal_Variable {
     constructor (
         /**
          * @summary `variableTag`.
+         * @description
+         *
+         * Tag, length ≤ 255. ISO 9506-1:2003 §23.1.2.9.
+         *
          * @public
          * @readonly
          */
         readonly variableTag: MMS255String,
         /**
          * @summary `valueSpecification`.
+         * @description
+         *
+         * Recorded Data value. ISO 9506-1:2003 §23.1.2.9.
+         *
          * @public
          * @readonly
          */

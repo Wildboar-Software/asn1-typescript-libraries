@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceError_errorClass_service_preempt
  * @description
  * 
+ * Error Class SERVICE-PREEMPT: a service was preempted by cancel or local
+ * reasons. ISO 9506-1:2003 §24.2.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +38,11 @@ type ServiceError_errorClass_service_preempt = INTEGER;
 
 /**
  * @summary ServiceError_errorClass_service_preempt_other
+ * @description
+ *
+ * Reason other than those identified for SERVICE-PREEMPT. ISO 9506-1:2003
+ * §24.2.6.4.
+ *
  * @constant
  * @type {number}
  */
@@ -43,6 +51,11 @@ const ServiceError_errorClass_service_preempt_other: ServiceError_errorClass_ser
 
 /**
  * @summary ServiceError_errorClass_service_preempt_other
+ * @description
+ *
+ * Reason other than those identified for SERVICE-PREEMPT. ISO 9506-1:2003
+ * §24.2.6.4.
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +64,11 @@ const other: ServiceError_errorClass_service_preempt = ServiceError_errorClass_s
 
 /**
  * @summary ServiceError_errorClass_service_preempt_timeout
+ * @description
+ *
+ * The service was cancelled due to a user-defined time-out. ISO 9506-1:2003
+ * §24.2.6.1.
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +77,11 @@ const ServiceError_errorClass_service_preempt_timeout: ServiceError_errorClass_s
 
 /**
  * @summary ServiceError_errorClass_service_preempt_timeout
+ * @description
+ *
+ * The service was cancelled due to a user-defined time-out. ISO 9506-1:2003
+ * §24.2.6.1.
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +90,11 @@ const timeout: ServiceError_errorClass_service_preempt = ServiceError_errorClass
 
 /**
  * @summary ServiceError_errorClass_service_preempt_deadlock
+ * @description
+ *
+ * The VMD cancelled the service to prevent a deadlock. ISO 9506-1:2003
+ * §24.2.6.2.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +103,11 @@ const ServiceError_errorClass_service_preempt_deadlock: ServiceError_errorClass_
 
 /**
  * @summary ServiceError_errorClass_service_preempt_deadlock
+ * @description
+ *
+ * The VMD cancelled the service to prevent a deadlock. ISO 9506-1:2003
+ * §24.2.6.2.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +116,10 @@ const deadlock: ServiceError_errorClass_service_preempt = ServiceError_errorClas
 
 /**
  * @summary ServiceError_errorClass_service_preempt_cancel
+ * @description
+ *
+ * The service was cancelled. ISO 9506-1:2003 §24.2.6.3.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +128,10 @@ const ServiceError_errorClass_service_preempt_cancel: ServiceError_errorClass_se
 
 /**
  * @summary ServiceError_errorClass_service_preempt_cancel
+ * @description
+ *
+ * The service was cancelled. ISO 9506-1:2003 §24.2.6.3.
+ *
  * @constant
  * @type {number}
  */

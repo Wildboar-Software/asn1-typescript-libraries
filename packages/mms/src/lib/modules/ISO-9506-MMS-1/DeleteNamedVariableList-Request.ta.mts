@@ -22,7 +22,13 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary DeleteNamedVariableList_Request
  * @description
- * 
+ *
+ * Confirmed request to delete MMS-defined Named Variable
+ * List objects whose deletion is allowed. Deleting a list
+ * that references UNDEFINED Named Variables also deletes
+ * those objects (not counted in matched/deleted).
+ * ISO 9506-1:2003 §14.14. ISO 9506-2:2003 §14.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,18 +50,35 @@ class DeleteNamedVariableList_Request {
     constructor (
         /**
          * @summary `scopeOfDelete`.
+         * @description
+         *
+         * Extent: `specific`, `aa-specific`, `domain`, or
+         * `vmd`. Default `specific`.
+         * ISO 9506-1:2003 §14.14.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly scopeOfDelete: OPTIONAL<DeleteNamedVariableList_Request_scopeOfDelete>,
         /**
          * @summary `listOfVariableListName`.
+         * @description
+         *
+         * Lists to delete when scope is `specific`; otherwise
+         * omitted. ISO 9506-1:2003 §14.14.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly listOfVariableListName: OPTIONAL<ObjectName[]>,
         /**
          * @summary `domainName`.
+         * @description
+         *
+         * Domain whose Named Variable Lists are deleted when
+         * scope is `domain`; otherwise omitted.
+         * ISO 9506-1:2003 §14.14.1.1.3.
+         *
          * @public
          * @readonly
          */

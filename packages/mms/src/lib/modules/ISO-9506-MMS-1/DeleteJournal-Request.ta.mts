@@ -17,7 +17,10 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary DeleteJournal_Request
  * @description
- * 
+ *
+ * Confirmed request to delete a Journal object.
+ * ISO 9506-1:2003 §23.7. ISO 9506-2:2003 §23.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +35,10 @@ class DeleteJournal_Request {
     constructor (
         /**
          * @summary `journalName`.
+         * @description
+         *
+         * Journal to delete. ISO 9506-1:2003 §23.7.1.1.1.
+         *
          * @public
          * @readonly
          */

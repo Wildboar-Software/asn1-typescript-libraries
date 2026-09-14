@@ -20,6 +20,12 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary GetNameList_Response
  * @description
  * 
+ * Confirmed Result(+) of GetNameList: identifiers of the requested class and
+ * scope, ordered per ISO 9506-1:2003 §5.4.2, possibly reduced by Continue
+ * After. Protocol DEFAULT of `moreFollows` is TRUE (ISO 9506-2:2003 §10.5); the
+ * service requires FALSE when the list is empty. ISO 9506-1:2003 §10.5.1.2,
+ * §10.5.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,24 @@ class GetNameList_Response {
     constructor (
         /**
          * @summary `listOfIdentifier`.
+         * @description
+         *
+         * Zero or more names, sorted per ISO 9506-1:2003 §5.4.2. Starts at the
+         * first name, or the first after Continue After. ISO 9506-1:2003
+         * §10.5.1.2.1, §10.5.2.
+         *
          * @public
          * @readonly
          */
         readonly listOfIdentifier: Identifier[],
         /**
          * @summary `moreFollows`.
+         * @description
+         *
+         * True if further GetNameList requests are needed. Shall be false if
+         * the list is empty or contains the last name. ASN.1 DEFAULT TRUE.
+         * ISO 9506-1:2003 §10.5.1.2.2; ISO 9506-2:2003 §10.5.
+         *
          * @public
          * @readonly
          */
@@ -76,7 +94,8 @@ class GetNameList_Response {
  * @summary The Leading Root Component Types of GetNameList_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -90,7 +109,8 @@ const _root_component_type_list_1_spec_for_GetNameList_Response: $.ComponentSpec
  * @summary The Trailing Root Component Types of GetNameList_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -103,7 +123,8 @@ const _root_component_type_list_2_spec_for_GetNameList_Response: $.ComponentSpec
  * @summary The Extension Addition Component Types of GetNameList_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

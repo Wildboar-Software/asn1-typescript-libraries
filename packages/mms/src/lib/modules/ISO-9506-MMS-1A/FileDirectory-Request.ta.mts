@@ -18,7 +18,15 @@ import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/
 /**
  * @summary FileDirectory_Request
  * @description
- * 
+ *
+ * Confirmed request: obtain names and attributes
+ * of a file or group of files in the server's
+ * filestore. A complete listing may require
+ * multiple requests. Informative Annex D.
+ *
+ * [ISO 9506-1:2003 Annex D, D.8]
+ * [ISO 9506-2:2003 Annex D, D.7]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +43,30 @@ class FileDirectory_Request {
     constructor (
         /**
          * @summary `fileSpecification`.
+         * @description
+         *
+         * When present, identifies a file or group
+         * (directory or wildcard notation permitted)
+         * whose attributes are desired. Omitted:
+         * implementation-defined default group.
+         *
+         * [ISO 9506-1:2003 Annex D, D.8.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly fileSpecification: OPTIONAL<FileName>,
         /**
          * @summary `continueAfter`.
+         * @description
+         *
+         * Starting point in the ordered list selected
+         * by File Specification. Entries preceding
+         * and including this point are omitted from
+         * the result.
+         *
+         * [ISO 9506-1:2003 Annex D, D.8.1.1.2]
+         *
          * @public
          * @readonly
          */

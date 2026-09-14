@@ -23,7 +23,16 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary AlterEventConditionMonitoring_Request
  * @description
- * 
+ *
+ * Confirmed request: alter monitoring attributes of a monitored Event
+ * Condition. At least one of enabled, priority, alarmSummaryReports, or
+ * evaluationInterval shall be present. Enabling/disabling changes `&ecState`;
+ * disabled conditions do not notify. `evaluationInterval` requires `cei`.
+ * Display Enhancement is CS (`cspi`). Result(+) empty.
+ *
+ * [ISO 9506-1:2003 §19.6]
+ * [ISO 9506-2:2003 §19.6]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,30 +54,62 @@ class AlterEventConditionMonitoring_Request {
     constructor (
         /**
          * @summary `eventConditionName`.
+         * @description
+         *
+         * Event Condition to alter.
+         *
+         * [ISO 9506-1:2003 §19.6.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionName: ObjectName,
         /**
          * @summary `enabled`.
+         * @description
+         *
+         * Replacement `&enabled`. Omitted: unchanged. True starts monitoring; false
+         * forces `disabled`.
+         *
+         * [ISO 9506-1:2003 §19.6.1.1.2]
+         *
          * @public
          * @readonly
          */
         readonly enabled: OPTIONAL<BOOLEAN>,
         /**
          * @summary `priority`.
+         * @description
+         *
+         * Replacement `&priority`. Omitted: unchanged. Takes effect immediately.
+         *
+         * [ISO 9506-1:2003 §19.6.1.1.3]
+         *
          * @public
          * @readonly
          */
         readonly priority: OPTIONAL<Priority>,
         /**
          * @summary `alarmSummaryReports`.
+         * @description
+         *
+         * Replacement `&alarmSummaryReports`. Omitted: unchanged.
+         *
+         * [ISO 9506-1:2003 §19.6.1.1.4]
+         *
          * @public
          * @readonly
          */
         readonly alarmSummaryReports: OPTIONAL<BOOLEAN>,
         /**
          * @summary `evaluationInterval`.
+         * @description
+         *
+         * Proposed `&evaluationInterval` ms. Requires `cei`. Server may return
+         * TIME-RESOLUTION.
+         *
+         * [ISO 9506-1:2003 §19.6.1.1.5]
+         *
          * @public
          * @readonly
          */

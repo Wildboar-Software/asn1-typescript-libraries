@@ -18,6 +18,9 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary DeleteUnitControl_Error
  * @description
  * 
+ * Result(-) of DeleteUnitControl: Domain or Program Invocation whose deletion
+ * failed; remaining constituents stay listed. ISO 9506-1:2003 §13.14.1.3. ISO 9506-2:2003 §13.14.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

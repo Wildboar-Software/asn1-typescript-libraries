@@ -17,7 +17,13 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary DefineEventConditionList_Error
  * @description
- * 
+ *
+ * Result(-) Object in error: Event Condition or Event Condition List that does
+ * not exist or is scope-inconsistent.
+ *
+ * [ISO 9506-1:2003 §22.2.1.3.1]
+ * [ISO 9506-2:2003 §22.2.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

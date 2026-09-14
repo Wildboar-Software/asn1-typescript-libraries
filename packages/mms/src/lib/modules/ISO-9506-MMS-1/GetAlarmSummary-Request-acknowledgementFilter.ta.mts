@@ -18,7 +18,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary GetAlarmSummary_Request_acknowledgementFilter
  * @description
- * 
+ *
+ * Filter GetAlarmSummary by enrollment acknowledgement
+ * status. Unacknowledged: `&ackState` is `noAckI` or
+ * `noAckA`. Acknowledged: `&ackState` is `acked`.
+ *
+ * [ISO 9506-1:2003 §18.5.1.1.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +40,13 @@ type GetAlarmSummary_Request_acknowledgementFilter = INTEGER;
 
 /**
  * @summary GetAlarmSummary_Request_acknowledgementFilter_not_acked
+ * @description
+ *
+ * Report only monitored conditions that reference at least
+ * one unacknowledged Event Enrollment.
+ *
+ * [ISO 9506-1:2003 §18.5.1.1.3]
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +55,13 @@ const GetAlarmSummary_Request_acknowledgementFilter_not_acked: GetAlarmSummary_R
 
 /**
  * @summary GetAlarmSummary_Request_acknowledgementFilter_not_acked
+ * @description
+ *
+ * Short name of
+ * {@link GetAlarmSummary_Request_acknowledgementFilter_not_acked}.
+ *
+ * [ISO 9506-1:2003 §18.5.1.1.3]
+ *
  * @constant
  * @type {number}
  */
@@ -50,6 +70,13 @@ const not_acked: GetAlarmSummary_Request_acknowledgementFilter = GetAlarmSummary
 
 /**
  * @summary GetAlarmSummary_Request_acknowledgementFilter_acked
+ * @description
+ *
+ * Report only monitored conditions whose referenced
+ * enrollments are all acknowledged.
+ *
+ * [ISO 9506-1:2003 §18.5.1.1.3]
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +85,13 @@ const GetAlarmSummary_Request_acknowledgementFilter_acked: GetAlarmSummary_Reque
 
 /**
  * @summary GetAlarmSummary_Request_acknowledgementFilter_acked
+ * @description
+ *
+ * Short name of
+ * {@link GetAlarmSummary_Request_acknowledgementFilter_acked}.
+ *
+ * [ISO 9506-1:2003 §18.5.1.1.3]
+ *
  * @constant
  * @type {number}
  */
@@ -66,6 +100,13 @@ const acked: GetAlarmSummary_Request_acknowledgementFilter = GetAlarmSummary_Req
 
 /**
  * @summary GetAlarmSummary_Request_acknowledgementFilter_all
+ * @description
+ *
+ * Report monitored conditions without regard to enrollment
+ * acknowledgement status.
+ *
+ * [ISO 9506-1:2003 §18.5.1.1.3]
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +115,13 @@ const GetAlarmSummary_Request_acknowledgementFilter_all: GetAlarmSummary_Request
 
 /**
  * @summary GetAlarmSummary_Request_acknowledgementFilter_all
+ * @description
+ *
+ * Short name of
+ * {@link GetAlarmSummary_Request_acknowledgementFilter_all}.
+ *
+ * [ISO 9506-1:2003 §18.5.1.1.3]
+ *
  * @constant
  * @type {number}
  */

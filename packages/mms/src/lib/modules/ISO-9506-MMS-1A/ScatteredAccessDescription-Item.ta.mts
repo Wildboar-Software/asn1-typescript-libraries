@@ -22,7 +22,15 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
 /**
  * @summary ScatteredAccessDescription_Item
  * @description
- * 
+ *
+ * One List Of Component entry of a Scattered
+ * Access Description. Access using the object
+ * appears as a single real variable. Informative
+ * Annex E.
+ *
+ * [ISO 9506-1:2003 Annex E, E.2.1.1]
+ * [ISO 9506-2:2003 Annex E, E.1.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +48,45 @@ class ScatteredAccessDescription_Item {
     constructor (
         /**
          * @summary `componentName`.
+         * @description
+         *
+         * If omitted, this component may not be
+         * referenced by alternate access. If present,
+         * the name used if alternate access is
+         * requested. CBB `valt`.
+         *
+         * [ISO 9506-1:2003 Annex E, E.2.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly componentName: OPTIONAL<Identifier>,
         /**
          * @summary `variableSpecification`.
+         * @description
+         *
+         * Named Variable, Unnamed Variable, or
+         * Scattered Access object that defines
+         * location, type, and grouping of this
+         * component's data elements.
+         *
+         * [ISO 9506-1:2003 Annex E, E.2.1.1.2]
+         *
          * @public
          * @readonly
          */
         readonly variableSpecification: VariableSpecification,
         /**
          * @summary `alternateAccess`.
+         * @description
+         *
+         * Desired access to the data elements of the
+         * variable specification. Omitted: full
+         * access. Omit if Variable Specification is
+         * a single simple data element. CBB `valt`.
+         *
+         * [ISO 9506-1:2003 Annex E, E.2.1.1.3]
+         *
          * @public
          * @readonly
          */

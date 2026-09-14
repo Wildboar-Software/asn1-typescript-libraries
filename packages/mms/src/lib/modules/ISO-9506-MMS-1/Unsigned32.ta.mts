@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Unsigned32
  * @description
- * 
+ *
+ * Unsigned integer restricted to 0..2**31−1. Used for invoke IDs
+ * (ISO 9506-2:2003 §7.5.2, §7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

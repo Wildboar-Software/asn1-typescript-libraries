@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceError_errorClass_resource
  * @description
  * 
+ * Error Class RESOURCE: the service requested resources that are not available
+ * for assignment. ISO 9506-1:2003 §24.2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +40,10 @@ type ServiceError_errorClass_resource = INTEGER;
 
 /**
  * @summary ServiceError_errorClass_resource_other
+ * @description
+ *
+ * Reason other than those identified for RESOURCE. ISO 9506-1:2003 §24.2.4.6.
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +52,10 @@ const ServiceError_errorClass_resource_other: ServiceError_errorClass_resource =
 
 /**
  * @summary ServiceError_errorClass_resource_other
+ * @description
+ *
+ * Reason other than those identified for RESOURCE. ISO 9506-1:2003 §24.2.4.6.
+ *
  * @constant
  * @type {number}
  */
@@ -53,6 +64,11 @@ const other: ServiceError_errorClass_resource = ServiceError_errorClass_resource
 
 /**
  * @summary ServiceError_errorClass_resource_memory_unavailable
+ * @description
+ *
+ * Memory resources (tables for names, event actions, journals, files, etc.) are
+ * not available. ISO 9506-1:2003 §24.2.4.1.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +77,11 @@ const ServiceError_errorClass_resource_memory_unavailable: ServiceError_errorCla
 
 /**
  * @summary ServiceError_errorClass_resource_memory_unavailable
+ * @description
+ *
+ * Memory resources (tables for names, event actions, journals, files, etc.) are
+ * not available. ISO 9506-1:2003 §24.2.4.1.
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +90,11 @@ const memory_unavailable: ServiceError_errorClass_resource = ServiceError_errorC
 
 /**
  * @summary ServiceError_errorClass_resource_processor_resource_unavailable
+ * @description
+ *
+ * CPU resources to support maintenance of states are not available.
+ * ISO 9506-1:2003 §24.2.4.2.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +103,11 @@ const ServiceError_errorClass_resource_processor_resource_unavailable: ServiceEr
 
 /**
  * @summary ServiceError_errorClass_resource_processor_resource_unavailable
+ * @description
+ *
+ * CPU resources to support maintenance of states are not available.
+ * ISO 9506-1:2003 §24.2.4.2.
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +116,10 @@ const processor_resource_unavailable: ServiceError_errorClass_resource = Service
 
 /**
  * @summary ServiceError_errorClass_resource_mass_storage_unavailable
+ * @description
+ *
+ * Storage for additional file data is lost. ISO 9506-1:2003 §24.2.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +128,10 @@ const ServiceError_errorClass_resource_mass_storage_unavailable: ServiceError_er
 
 /**
  * @summary ServiceError_errorClass_resource_mass_storage_unavailable
+ * @description
+ *
+ * Storage for additional file data is lost. ISO 9506-1:2003 §24.2.4.3.
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +140,10 @@ const mass_storage_unavailable: ServiceError_errorClass_resource = ServiceError_
 
 /**
  * @summary ServiceError_errorClass_resource_capability_unavailable
+ * @description
+ *
+ * One or more capabilities is insufficient. ISO 9506-1:2003 §24.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +152,10 @@ const ServiceError_errorClass_resource_capability_unavailable: ServiceError_erro
 
 /**
  * @summary ServiceError_errorClass_resource_capability_unavailable
+ * @description
+ *
+ * One or more capabilities is insufficient. ISO 9506-1:2003 §24.2.4.4.
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +164,10 @@ const capability_unavailable: ServiceError_errorClass_resource = ServiceError_er
 
 /**
  * @summary ServiceError_errorClass_resource_capability_unknown
+ * @description
+ *
+ * One or more capabilities are unknown. ISO 9506-1:2003 §24.2.4.5.
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +176,10 @@ const ServiceError_errorClass_resource_capability_unknown: ServiceError_errorCla
 
 /**
  * @summary ServiceError_errorClass_resource_capability_unknown
+ * @description
+ *
+ * One or more capabilities are unknown. ISO 9506-1:2003 §24.2.4.5.
+ *
  * @constant
  * @type {number}
  */

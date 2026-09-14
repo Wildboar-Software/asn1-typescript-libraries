@@ -19,6 +19,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary CS_GetProgramInvocationAttributes_Response_control_controlled
  * @description
  * 
+ * Extras when `&control` is controlled. `controllingPI`: referenced controlling
+ * PI. `none`: no controlling PI referenced. ISO 9506-1:2003
+ * §12.9.1.2.17–§12.9.1.2.18.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

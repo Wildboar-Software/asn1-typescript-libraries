@@ -22,7 +22,22 @@ import { AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRan
 /**
  * @summary AlternateAccessSelection_selectAlternateAccess_accessSelection
  * @description
- * 
+ *
+ * Access Selection under SELECT-ALTERNATE-ACCESS.
+ * Component requires `str2`; index/indexRange require
+ * `str1`. `allElements` may replace indexRange when Low
+ * Index and Number Of Elements are both zero.
+ * ISO 9506-1:2003 §14.3.1.1.3.1.
+ * ISO 9506-2:2003 §14.3.1.
+ *
+ * - `component`: one structure component; must be array
+ *   or structure.
+ * - `index`: one array element; must be array or
+ *   structure.
+ * - `indexRange`: range of array/structure elements;
+ *   derived type is an array of the recursive result.
+ * - `allElements`: whole array; same as indexRange 0/0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

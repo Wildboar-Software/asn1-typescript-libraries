@@ -19,7 +19,13 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
 /**
  * @summary EntryContent_entryForm
  * @description
- * 
+ *
+ * DATA vs ANNOTATION. `data` records an Event Condition
+ * transition and/or journal variables (`event-data` if `event` is
+ * present, else `data`). `annotation` is a text comment.
+ * ISO 9506-1:2003 §23.1.2.6, §23.3.1.1.2.2. ISO 9506-2:2003
+ * §23.8.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

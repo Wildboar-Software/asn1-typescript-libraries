@@ -19,7 +19,11 @@ import { ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item, _decode_Repo
 /**
  * @summary ReportPoolSemaphoreStatus_Response
  * @description
- * 
+ *
+ * Named-tokens of a pool semaphore, ordered by name. `moreFollows`
+ * true means another request is needed. ISO 9506-1:2003 §16.7.1.2.
+ * ISO 9506-2:2003 §16.7.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +43,23 @@ class ReportPoolSemaphoreStatus_Response {
     constructor (
         /**
          * @summary `listOfNamedTokens`.
+         * @description
+         *
+         * Possibly empty. Each item is free, owned (not hung), or
+         * hung. ISO 9506-1:2003 §16.7.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly listOfNamedTokens: ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item[],
         /**
          * @summary `moreFollows`.
+         * @description
+         *
+         * True if more named-tokens remain. False if this list holds
+         * the last item or is empty. Default true.
+         * ISO 9506-1:2003 §16.7.1.2.2.
+         *
          * @public
          * @readonly
          */

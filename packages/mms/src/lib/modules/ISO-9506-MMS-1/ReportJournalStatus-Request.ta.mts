@@ -17,7 +17,11 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary ReportJournalStatus_Request
  * @description
- * 
+ *
+ * Confirmed request for the number of entries in a Journal. The
+ * value is the journal name. ISO 9506-1:2003 §23.5.
+ * ISO 9506-2:2003 §23.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,15 @@ import type {
 import { DERElement } from "@wildboar/asn1";
 import compareNameConstraintsSyntax from "../../comparators/compareNameConstraintsSyntax.mjs";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 17.5.2.2.2
+ * `delegatedNameConstraintsMatch`.
+ *
+ * TRUE iff the stored AC contains delegated name constraints
+ * (`delegatedNameConstraints` / the spec also names
+ * `attributeNameConstraints`) and every component present in the
+ * presented `NameConstraintsSyntax` matches the stored extension.
+ */
 export
 const delegatedNameConstraintsMatch: EqualityMatcher = (
     assertion: ASN1Element,

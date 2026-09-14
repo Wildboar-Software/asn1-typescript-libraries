@@ -25,7 +25,13 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary GetEventActionAttributes_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): Event Action attributes. `accessControlList` iff `aco`
+ * (not in minor version 1 or 2). `cs-extension` is CS Request-Detail.
+ *
+ * [ISO 9506-1:2003 §20.4.1.2]
+ * [ISO 9506-2:2003 §20.4.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,30 +54,62 @@ class GetEventActionAttributes_Response {
     constructor (
         /**
          * @summary `mmsDeletable`.
+         * @description
+         *
+         * Whether DeleteEventAction may delete this object. Default false.
+         *
+         * [ISO 9506-1:2003 §20.4.1.2.1]
+         *
          * @public
          * @readonly
          */
         readonly mmsDeletable: OPTIONAL<BOOLEAN>,
         /**
          * @summary `listOfModifier`.
+         * @description
+         *
+         * `&Modifiers` applied on each Event Action execution.
+         *
+         * [ISO 9506-1:2003 §20.4.1.2.2]
+         *
          * @public
          * @readonly
          */
         readonly listOfModifier: Modifier[],
         /**
          * @summary `confirmedServiceRequest`.
+         * @description
+         *
+         * `&confirmedServiceRequest` executed on a matching transition.
+         *
+         * [ISO 9506-1:2003 §20.4.1.2.3]
+         *
          * @public
          * @readonly
          */
         readonly confirmedServiceRequest: ConfirmedServiceRequest,
         /**
          * @summary `cs_extension`.
+         * @description
+         *
+         * CS Request-Detail for the stored confirmed service. `csr`/`cspi`.
+         *
+         * [ISO 9506-2:2003 §20.4.2.1]
+         *
          * @public
          * @readonly
          */
         readonly cs_extension: OPTIONAL<Request_Detail>,
         /**
          * @summary `accessControlList`.
+         * @description
+         *
+         * Access Control List name. Iff `aco`. Shall not appear in minor version 1 or
+         * 2.
+         *
+         * [ISO 9506-1:2003 §20.4.1.2.4]
+         * [ISO 9506-2:2003 §20.4.2.2]
+         *
          * @public
          * @readonly
          */

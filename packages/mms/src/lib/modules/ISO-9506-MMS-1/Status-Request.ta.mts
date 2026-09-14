@@ -18,6 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Status_Request
  * @description
  * 
+ * Confirmed Status request: Extended Derivation. True selects the more
+ * extensive derivation when the server supports two methods (e.g.
+ * self-diagnostics); false selects the other. Ignored if the server has only
+ * one method. Result(+) is a Status Response; Result(-) is Error Type.
+ * ISO 9506-1:2003 §10.3; ISO 9506-2:2003 §10.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

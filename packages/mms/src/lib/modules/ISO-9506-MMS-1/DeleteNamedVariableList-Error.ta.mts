@@ -17,7 +17,12 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary DeleteNamedVariableList_Error
  * @description
- * 
+ *
+ * Result(-) of DeleteNamedVariableList: number of lists
+ * deleted before the error. ACL DELETE failure on an
+ * object is not an error.
+ * ISO 9506-1:2003 §14.14.1.3. ISO 9506-2:2003 §14.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,6 +19,12 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary ErrorParameters_additionalDetial
  * @description
  * 
+ * Additional error-detail
+ * size and syntax from Table 47. Identifier `additionalDetial` is the
+ * ISO 9506-2:2003 Annex B spelling (spec typo for “Detail”); do not rename.
+ * SCI configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003 Annex B.2.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,20 @@ class ErrorParameters_additionalDetial {
     constructor (
         /**
          * @summary `size`.
+         * @description
+         *
+         * Size of additional error detail. ISO 9506-2:2003 Annex B.2.9.
+         *
          * @public
          * @readonly
          */
         readonly size: INTEGER,
         /**
          * @summary `syntax`.
+         * @description
+         *
+         * Syntax of additional error detail. ISO 9506-2:2003 Annex B.2.9.
+         *
          * @public
          * @readonly
          */

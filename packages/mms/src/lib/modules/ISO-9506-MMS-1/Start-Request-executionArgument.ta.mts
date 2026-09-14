@@ -20,6 +20,11 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary Start_Request_executionArgument
  * @description
  * 
+ * Start execution argument. `simpleString`: locally interpreted MMSString.
+ * `encodedString` / `embeddedString`: EXTERNAL or EMBEDDED PDV whose abstract
+ * syntax defines the encoding. ISO 9506-1:2003 §12.4.1.1.2. ISO 9506-2:2003
+ * §12.4.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,16 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary GetScatteredAccessAttributes_Request
  * @description
- * 
+ *
+ * Confirmed request: Scattered Access Name of
+ * the object whose attributes are requested. If
+ * this name refers to a Named Variable instead,
+ * Error Class ACCESS / OBJECT-NON-EXISTENT.
+ * CBB `vsca`. Informative Annex E.
+ *
+ * [ISO 9506-1:2003 Annex E, E.4.1.1.1]
+ * [ISO 9506-2:2003 Annex E, E.3.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

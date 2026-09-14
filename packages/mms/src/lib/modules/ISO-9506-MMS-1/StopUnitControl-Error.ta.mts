@@ -21,6 +21,10 @@ import { ProgramInvocationState, _decode_ProgramInvocationState, _encode_Program
  * @summary StopUnitControl_Error
  * @description
  * 
+ * Result(-) when a derived Stop fails: Program Invocation name and its
+ * resulting state (previous if possible, else `unrunnable`). ISO 9506-1:2003
+ * §13.7.1.3. ISO 9506-2:2003 §13.7.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,20 @@ class StopUnitControl_Error {
     constructor (
         /**
          * @summary `programInvocationName`.
+         * @description
+         *
+         * PI whose Stop failed. ISO 9506-1:2003 §13.7.1.3.1.1.
+         *
          * @public
          * @readonly
          */
         readonly programInvocationName: OPTIONAL<Identifier>,
         /**
          * @summary `programInvocationState`.
+         * @description
+         *
+         * That PI's state after the failed Stop. ISO 9506-1:2003 §13.7.1.3.1.2.
+         *
          * @public
          * @readonly
          */

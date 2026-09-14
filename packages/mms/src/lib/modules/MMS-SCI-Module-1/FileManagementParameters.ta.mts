@@ -18,6 +18,10 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary FileManagementParameters
  * @description
  * 
+ * File Management CIS parameter
+ * (Table 50): fileName. SCI configuration/initialization encoding (ISO
+ * 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.2.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +37,10 @@ class FileManagementParameters {
     constructor (
         /**
          * @summary `fileName`.
+         * @description
+         *
+         * File-name format description. ISO 9506-2:2003 Annex B.2.10.
+         *
          * @public
          * @readonly
          */

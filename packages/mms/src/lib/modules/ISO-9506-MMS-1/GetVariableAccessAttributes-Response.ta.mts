@@ -24,7 +24,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary GetVariableAccessAttributes_Response
  * @description
- * 
+ *
+ * Result(+) of GetVariableAccessAttributes.
+ * ISO 9506-1:2003 §14.9.1.2. ISO 9506-2:2003 §14.9.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,30 +48,61 @@ class GetVariableAccessAttributes_Response {
     constructor (
         /**
          * @summary `mmsDeletable`.
+         * @description
+         *
+         * MMS Deletable of the referenced object
+         * (ISO 9506-1:2003 §9.1.4).
+         * ISO 9506-1:2003 §14.9.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly mmsDeletable: BOOLEAN,
         /**
          * @summary `address`.
+         * @description
+         *
+         * Present iff `vadr` was negotiated and the object is
+         * a Named Variable with `&accessMethod` public; then
+         * it is that `&address`. Otherwise omitted.
+         * ISO 9506-1:2003 §14.9.1.2.2.
+         *
          * @public
          * @readonly
          */
         readonly address: OPTIONAL<Address>,
         /**
          * @summary `typeDescription`.
+         * @description
+         *
+         * `&typeDescription` of the Named or Unnamed Variable.
+         * ISO 9506-1:2003 §14.9.1.2.3.
+         *
          * @public
          * @readonly
          */
         readonly typeDescription: TypeDescription,
         /**
          * @summary `accessControlList`.
+         * @description
+         *
+         * `&accessControl`. Present iff `aco` CBB was
+         * negotiated. Absent in minor versions 1 and 2.
+         * ISO 9506-1:2003 §14.9.1.2.4.
+         * ISO 9506-2:2003 §14.9.2.1.
+         *
          * @public
          * @readonly
          */
         readonly accessControlList: OPTIONAL<Identifier>,
         /**
          * @summary `meaning`.
+         * @description
+         *
+         * Named Variable `&meaning` if present. Present iff
+         * Kind Of Variable is NAMED and `sem` CBB was
+         * negotiated. ISO 9506-1:2003 §14.9.1.2.5.
+         *
          * @public
          * @readonly
          */

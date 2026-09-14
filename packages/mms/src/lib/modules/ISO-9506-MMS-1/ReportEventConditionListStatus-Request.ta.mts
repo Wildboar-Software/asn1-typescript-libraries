@@ -20,7 +20,13 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary ReportEventConditionListStatus_Request
  * @description
- * 
+ *
+ * Confirmed request: status of Event Conditions in a list (direct and, if
+ * `recl`, nested). `continueAfter` continues when `moreFollows`.
+ *
+ * [ISO 9506-1:2003 §22.7]
+ * [ISO 9506-2:2003 §22.7]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +42,24 @@ class ReportEventConditionListStatus_Request {
     constructor (
         /**
          * @summary `eventConditionListName`.
+         * @description
+         *
+         * List whose member statuses are reported.
+         *
+         * [ISO 9506-1:2003 §22.7.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionListName: ObjectName,
         /**
          * @summary `continueAfter`.
+         * @description
+         *
+         * Identifier of the Event Condition after which to resume.
+         *
+         * [ISO 9506-1:2003 §22.7.1.1.2]
+         *
          * @public
          * @readonly
          */

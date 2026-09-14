@@ -23,6 +23,11 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
  * @summary Variable_List_Item_instance
  * @description
  * 
+ * One Named Variable List item
+ * in the SCI file (unnamed and/or named, optional Alternate Access).
+ * SCI configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003 Annex B.1.7; ISO 9506-1:2003 §14.1.4.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,18 +49,33 @@ class Variable_List_Item_instance {
     constructor (
         /**
          * @summary `unnamedItem`.
+         * @description
+         *
+         * Unnamed Variable (or NULL if not vadr). ISO 9506-1:2003 §14.1.4.3.1;
+         * ISO 9506-2:2003 Annex B.1.7.
+         *
          * @public
          * @readonly
          */
         readonly unnamedItem: OPTIONAL<Nullable_Unnamed_Variable_instance>,
         /**
          * @summary `namedItem`.
+         * @description
+         *
+         * Named Variable (or NULL if not vnam). ISO 9506-1:2003 §14.1.4.3.2;
+         * ISO 9506-2:2003 Annex B.1.7.
+         *
          * @public
          * @readonly
          */
         readonly namedItem: OPTIONAL<Nullable_Named_Variable_instance>,
         /**
          * @summary `alternateAccess`.
+         * @description
+         *
+         * Alternate Access (valt). ISO 9506-1:2003 §14.1.4.3.3; ISO 9506-2:2003
+         * Annex B.1.7.
+         *
          * @public
          * @readonly
          */

@@ -18,7 +18,13 @@ import { CS_AlterEventEnrollment_Request_changeDisplay, _decode_CS_AlterEventEnr
 /**
  * @summary CS_AlterEventEnrollment_Request
  * @description
- * 
+ *
+ * Request-Detail for AlterEventEnrollment: Display Enhancement if present;
+ * otherwise empty SEQUENCE. `cspi`.
+ *
+ * [ISO 9506-1:2003 §21.6.1.1.3.1]
+ * [ISO 9506-2:2003 §21.6.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +42,12 @@ class CS_AlterEventEnrollment_Request {
     constructor (
         /**
          * @summary `changeDisplay`.
+         * @description
+         *
+         * Replacement `&displayEnhancement`. Omitted: leave display unchanged.
+         *
+         * [ISO 9506-2:2003 §21.6.3]
+         *
          * @public
          * @readonly
          */

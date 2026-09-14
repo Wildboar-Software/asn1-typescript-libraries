@@ -17,7 +17,12 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary GetEventActionAttributes_Request
  * @description
- * 
+ *
+ * Confirmed request: Event Action Name whose attributes are returned.
+ *
+ * [ISO 9506-1:2003 §20.4]
+ * [ISO 9506-2:2003 §20.4.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

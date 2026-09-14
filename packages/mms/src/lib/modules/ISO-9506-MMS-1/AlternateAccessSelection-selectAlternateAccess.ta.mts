@@ -19,7 +19,13 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
 /**
  * @summary AlternateAccessSelection_selectAlternateAccess
  * @description
- * 
+ *
+ * SELECT-ALTERNATE-ACCESS: select a node (or range) at
+ * the next nesting level, then apply further Alternate
+ * Access. Selected component/element shall itself be
+ * array or structure.
+ * ISO 9506-1:2003 §14.3.1.1.3. ISO 9506-2:2003 §14.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,12 +53,23 @@ class AlternateAccessSelection_selectAlternateAccess {
     constructor (
         /**
          * @summary `accessSelection`.
+         * @description
+         *
+         * COMPONENT (`str2`), INDEX (`str1`), INDEX-RANGE
+         * (`str1`), or allElements (sender option for 0/0
+         * range). ISO 9506-1:2003 §14.3.1.1.3.1.
+         *
          * @public
          * @readonly
          */
         readonly accessSelection: AlternateAccessSelection_selectAlternateAccess_accessSelection,
         /**
          * @summary `alternateAccess`.
+         * @description
+         *
+         * Further alternate access at the selected node(s).
+         * ISO 9506-1:2003 §14.3.1.1.3.5.
+         *
          * @public
          * @readonly
          */

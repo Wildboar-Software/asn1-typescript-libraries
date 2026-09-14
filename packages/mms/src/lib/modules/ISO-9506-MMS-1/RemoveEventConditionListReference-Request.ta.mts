@@ -17,7 +17,13 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary RemoveEventConditionListReference_Request
  * @description
- * 
+ *
+ * Confirmed request: remove Event Condition and/or nested-list references from
+ * a list. Nested names require `recl`.
+ *
+ * [ISO 9506-1:2003 §22.5]
+ * [ISO 9506-2:2003 §22.5]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +42,36 @@ class RemoveEventConditionListReference_Request {
     constructor (
         /**
          * @summary `eventConditionListName`.
+         * @description
+         *
+         * List to update.
+         *
+         * [ISO 9506-1:2003 §22.5.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionListName: ObjectName,
         /**
          * @summary `listOfEventConditionName`.
+         * @description
+         *
+         * Event Conditions to remove.
+         *
+         * [ISO 9506-1:2003 §22.5]
+         *
          * @public
          * @readonly
          */
         readonly listOfEventConditionName: ObjectName[],
         /**
          * @summary `listOfEventConditionListName`.
+         * @description
+         *
+         * Nested lists to remove. Iff `recl`.
+         *
+         * [ISO 9506-2:2003 §22.5]
+         *
          * @public
          * @readonly
          */

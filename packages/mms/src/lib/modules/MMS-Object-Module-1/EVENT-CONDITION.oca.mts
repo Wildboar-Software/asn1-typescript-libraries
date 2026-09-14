@@ -37,6 +37,11 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary EVENT_CONDITION
  * @description
  * 
+ * MMS-visible event. network-triggered
+ * is raised by TriggerEvent or autonomous server action; monitored
+ * tracks a boolean variable (or unspecified local condition) via
+ * Event-Transition Processing. ISO 9506-1:2003 §19.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,66 +101,143 @@ interface EVENT_CONDITION {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * ObjectName unique in VMD/Domain/AA scope. ISO 9506-1:2003 §19.1.1.1.
+     *
      */
     readonly "&name"?: ObjectName;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating monitoring changes, TriggerEvent (network- triggered), ACL
+     * change, and delete. ISO 9506-1:2003 §19.1.1.2.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &ecClass
+     * @description
+     *
+     * network-triggered or monitored. ISO 9506-1:2003 §19.1.1.3.
+     *
      */
     readonly "&ecClass"?: EC_Class;
     /**
      * @summary &ecState
+     * @description
+     *
+     * disabled, idle, or active. Always disabled if network- triggered. ISO
+     * 9506-1:2003 §19.1.1.4.
+     *
      */
     readonly "&ecState"?: EC_State;
     /**
      * @summary &priority
+     * @description
+     *
+     * 0..127 relative to other ECs (0 highest, 64 normal). ISO 9506-1:2003
+     * §19.1.1.5.
+     *
      */
     readonly "&priority"?: Priority;
     /**
      * @summary &severity
+     * @description
+     *
+     * 0..127 effect on the process (0 most severe, 64 normal). ISO 9506-1:2003
+     * §19.1.1.6.
+     *
      */
     readonly "&severity"?: Severity;
     /**
      * @summary &EventEnrollments
+     * @description
+     *
+     * Enrollments that refer to this condition. ISO 9506-1:2003 §19.1.1.7.
+     *
      */
     readonly "&EventEnrollments"?: ObjectName;
     /**
      * @summary &enabled
+     * @description
+     *
+     * Monitored only: whether monitored-variable changes invoke
+     * Event-Transition Processing. ISO 9506-1:2003 §19.1.1.8.
+     *
      */
     readonly "&enabled"?: BOOLEAN;
     /**
      * @summary &alarmSummaryReports
+     * @description
+     *
+     * Monitored only: if true, include in GetAlarmSummary regardless of
+     * state/aaRule; if false, only if some enrollment has aaRule ≠ none. ISO
+     * 9506-1:2003 §19.1.1.9.
+     *
      */
     readonly "&alarmSummaryReports"?: BOOLEAN;
     /**
      * @summary &monitoredVariable
+     * @description
+     *
+     * Monitored only: boolean Named/Unnamed variable, or unspecified
+     * (local/CreateProgramInvocation conditions). ISO 9506-1:2003 §19.1.1.10.
+     *
      */
     readonly "&monitoredVariable"?: ({ named: ObjectName } | { unnamed: Address } | { unspecified: NULL });
     /**
      * @summary &evaluationInterval
+     * @description
+     *
+     * Monitored only: max ms between successive &ecState evaluations. ISO
+     * 9506-1:2003 §19.1.1.11.
+     *
      */
     readonly "&evaluationInterval"?: INTEGER;
     /**
      * @summary &timeToActive
+     * @description
+     *
+     * Monitored only: time of last transition to active, or undefined. ISO
+     * 9506-1:2003 §19.1.1.12.
+     *
      */
     readonly "&timeToActive"?: EventTime;
     /**
      * @summary &timeToIdle
+     * @description
+     *
+     * Monitored only: time of last transition to idle, or undefined. ISO
+     * 9506-1:2003 §19.1.1.
+     *
      */
     readonly "&timeToIdle"?: EventTime;
     /**
      * @summary &displayEnhancement
+     * @description
+     *
+     * cspi: text (des), number (dei), or none. ISO 9506-1:2003 §19.1.1.
+     *
      */
     readonly "&displayEnhancement"?: ({ text: MMSString } | { number_: INTEGER } | { none: NULL });
     /**
      * @summary &group-Priority-Override
+     * @description
+     *
+     * cspi: Priority override from an Event Condition List, or undefined. ISO
+     * 9506-1:2003 §19.1.1.
+     *
      */
     readonly "&group-Priority-Override"?: ({ priority: Priority } | { undefined: NULL });
     /**
      * @summary &ReferencingEventConditionLists
+     * @description
+     *
+     * cspi: Event Condition Lists that include this EC. ISO 9506-1:2003
+     * §19.1.1.
+     *
      */
     readonly "&ReferencingEventConditionLists"?: Identifier;
 };

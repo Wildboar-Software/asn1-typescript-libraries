@@ -17,7 +17,13 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary DefineEventEnrollment_Error
  * @description
- * 
+ *
+ * Result(-) Object Not Defined: name of the Event Condition or Event Action
+ * that does not exist.
+ *
+ * [ISO 9506-1:2003 §21.2.1.3.1]
+ * [ISO 9506-2:2003 §21.2.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

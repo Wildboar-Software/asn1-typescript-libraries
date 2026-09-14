@@ -18,6 +18,9 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary GetDomainAttributes_Request
  * @description
  * 
+ * Client request for attributes of a named Domain. Domain must exist. Does not
+ * return Domain content. ISO 9506-1:2003 §11.13. ISO 9506-2:2003 §11.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

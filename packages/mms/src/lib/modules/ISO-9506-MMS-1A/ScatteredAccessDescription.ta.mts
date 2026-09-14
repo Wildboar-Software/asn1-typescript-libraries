@@ -17,7 +17,20 @@ import { ScatteredAccessDescription_Item, _decode_ScatteredAccessDescription_Ite
 /**
  * @summary ScatteredAccessDescription
  * @description
- * 
+ *
+ * Ordered list of components describing access
+ * to a "structure" of independent MMS variables
+ * (Named, Unnamed, or Scattered Access). Fourth
+ * Variable Specification choice when the
+ * Scattered Access object is present. Requires
+ * CBBs `vsca` and `str2`. Informative Annex E:
+ * present in ISO 9506:1990; removed from the
+ * 2003 base document. Object class value 1 is
+ * reserved (ISO 9506-1:2003 §7.6).
+ *
+ * [ISO 9506-1:2003 Annex E, E.2.1]
+ * [ISO 9506-2:2003 Annex E, E.1.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

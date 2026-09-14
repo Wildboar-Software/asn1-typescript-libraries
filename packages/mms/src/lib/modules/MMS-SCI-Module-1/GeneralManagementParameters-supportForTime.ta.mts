@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GeneralManagementParameters_supportForTime
  * @description
  * 
+ * Which time
+ * forms this implementation supports (timeOfDay, timeSequence).
+ * SCI configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003 Annex B.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +39,21 @@ class GeneralManagementParameters_supportForTime {
     constructor (
         /**
          * @summary `timeOfDay`.
+         * @description
+         *
+         * true if TimeOfDay is supported. ISO 9506-2:2003 Annex B.2.1.
+         *
          * @public
          * @readonly
          */
         readonly timeOfDay: BOOLEAN,
         /**
          * @summary `timeSequence`.
+         * @description
+         *
+         * true if Time Sequence Identifiers are supported. ISO 9506-2:2003
+         * Annex B.2.1.
+         *
          * @public
          * @readonly
          */

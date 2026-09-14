@@ -19,6 +19,13 @@ import { Program_Invocation_instance, _decode_Program_Invocation_instance, _enco
  * @summary VMD_File_selected_Program_Invocation
  * @description
  * 
+ * csr CBB: which
+ * Program Invocation is selected to control the system, or noneSelected.
+ * Maps to VMD &selected-Program-Invocation. SCI configuration/initialization
+ * encoding (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.1;
+ * ISO 9506-1:2003 §7.2.1.34.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

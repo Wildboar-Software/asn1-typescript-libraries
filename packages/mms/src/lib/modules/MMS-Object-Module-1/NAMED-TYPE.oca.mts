@@ -22,6 +22,10 @@ import { TypeDescription, _decode_TypeDescription, _encode_TypeDescription } fro
  * @summary NAMED_TYPE
  * @description
  * 
+ * A name bound to a TypeDescription. Requires
+ * vnam (and vadr per §14.1.5). Optional &meaning (sem CBB) names another
+ * Named Type that conveys semantics. ISO 9506-1:2003 §14.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,18 +62,35 @@ interface NAMED_TYPE {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * ObjectName unique in its VMD/Domain/AA scope. ISO 9506-1:2003 §14.1.5.1.
+     *
      */
     readonly "&name"?: ObjectName;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating delete and ACL change. ISO 9506-1:2003 §14.1.5.2.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &typeDescription
+     * @description
+     *
+     * The named TypeDescription. ISO 9506-1:2003 §14.1.5.3, §14.2.2.
+     *
      */
     readonly "&typeDescription"?: TypeDescription;
     /**
      * @summary &meaning
+     * @description
+     *
+     * Optional name of another Named Type conveying semantics (sem CBB). ISO
+     * 9506-1:2003 §14.1.5.4.
+     *
      */
     readonly "&meaning"?: ObjectName;
 };

@@ -21,6 +21,21 @@ import { GetAccessControlListAttributes_Request_namedObject, _decode_GetAccessCo
  * @summary GetAccessControlListAttributes_Request
  * @description
  * 
+ * Confirmed request of GetAccessControlListAttributes: return fields of an ACL,
+ * either named directly or referenced by the VMD or by a named object's
+ * `&accessControl`. Choose one alternative. Result(-) if the ACL does not
+ * exist. Shall not appear in minor version 1 or 2 of the confirmed-service PDUs
+ * (ISO 9506-2:2003 ConfirmedServiceRequest/Response). ISO 9506-1:2003 §9.4;
+ * ISO 9506-2:2003 §9.4.1.
+ *
+ * `accessControlListName`: VMD-specific Identifier of the ACL whose fields are
+ * returned.
+ *
+ * `vMD`: return the ACL referenced by the VMD's `&accessControl`.
+ *
+ * `namedObject`: return the ACL referenced by the named object's
+ * `&accessControl` (object class + object name). ISO 9506-1:2003 §9.4.1.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

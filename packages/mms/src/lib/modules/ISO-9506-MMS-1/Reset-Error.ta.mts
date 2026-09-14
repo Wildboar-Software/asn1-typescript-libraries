@@ -18,6 +18,10 @@ import { ProgramInvocationState, _decode_ProgramInvocationState, _encode_Program
  * @summary Reset_Error
  * @description
  * 
+ * Result(-) of Reset: Program Invocation state after failure. `stopped` if
+ * possible, else `unrunnable`. ISO 9506-1:2003 §12.7.1.3.1. ISO 9506-2:2003
+ * §12.7.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

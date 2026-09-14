@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RejectPDU_rejectReason_confirmed_errorPDU
  * @description
- * 
+ *
+ * Reject codes when the rejected PDU is a Confirmed-ErrorPDU (ISO 9506-1:2003
+ * §8.6.1.4.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +39,10 @@ type RejectPDU_rejectReason_confirmed_errorPDU = INTEGER;
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_errorPDU_other
+ * @description
+ *
+ * Error other than those identified for this PDU type (ISO 9506-1:2003
+ * §8.6.1.4.3.1).
  * @constant
  * @type {number}
  */
@@ -44,6 +51,10 @@ const RejectPDU_rejectReason_confirmed_errorPDU_other: RejectPDU_rejectReason_co
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_errorPDU_other
+ * @description
+ *
+ * Error other than those identified for this PDU type (ISO 9506-1:2003
+ * §8.6.1.4.3.1).
  * @constant
  * @type {number}
  */
@@ -52,6 +63,10 @@ const other: RejectPDU_rejectReason_confirmed_errorPDU = RejectPDU_rejectReason_
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_errorPDU_unrecognized_service
+ * @description
+ *
+ * Service not supported, not recognized, or not the service requested with this
+ * invoke ID (ISO 9506-1:2003 §8.6.1.4.3.2).
  * @constant
  * @type {number}
  */
@@ -60,6 +75,10 @@ const RejectPDU_rejectReason_confirmed_errorPDU_unrecognized_service: RejectPDU_
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_errorPDU_unrecognized_service
+ * @description
+ *
+ * Service not supported, not recognized, or not the service requested with this
+ * invoke ID (ISO 9506-1:2003 §8.6.1.4.3.2).
  * @constant
  * @type {number}
  */
@@ -68,6 +87,10 @@ const unrecognized_service: RejectPDU_rejectReason_confirmed_errorPDU = RejectPD
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_errorPDU_invalid_invokeID
+ * @description
+ *
+ * Invoke ID invalid, or no confirmed service was requested with it
+ * (ISO 9506-1:2003 §8.6.1.4.3.3).
  * @constant
  * @type {number}
  */
@@ -76,6 +99,10 @@ const RejectPDU_rejectReason_confirmed_errorPDU_invalid_invokeID: RejectPDU_reje
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_errorPDU_invalid_invokeID
+ * @description
+ *
+ * Invoke ID invalid, or no confirmed service was requested with it
+ * (ISO 9506-1:2003 §8.6.1.4.3.3).
  * @constant
  * @type {number}
  */
@@ -84,6 +111,10 @@ const invalid_invokeID: RejectPDU_rejectReason_confirmed_errorPDU = RejectPDU_re
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_errorPDU_invalid_serviceError
+ * @description
+ *
+ * Service error does not meet ISO 9506-1 requirements (ISO 9506-1:2003
+ * §8.6.1.4.3.4).
  * @constant
  * @type {number}
  */
@@ -92,6 +123,10 @@ const RejectPDU_rejectReason_confirmed_errorPDU_invalid_serviceError: RejectPDU_
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_errorPDU_invalid_serviceError
+ * @description
+ *
+ * Service error does not meet ISO 9506-1 requirements (ISO 9506-1:2003
+ * §8.6.1.4.3.4).
  * @constant
  * @type {number}
  */
@@ -100,6 +135,10 @@ const invalid_serviceError: RejectPDU_rejectReason_confirmed_errorPDU = RejectPD
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_errorPDU_value_out_of_range
+ * @description
+ *
+ * One or more parameter values exceed the allowed range (ISO 9506-1:2003
+ * §8.6.1.4.3.5).
  * @constant
  * @type {number}
  */
@@ -108,6 +147,10 @@ const RejectPDU_rejectReason_confirmed_errorPDU_value_out_of_range: RejectPDU_re
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_errorPDU_value_out_of_range
+ * @description
+ *
+ * One or more parameter values exceed the allowed range (ISO 9506-1:2003
+ * §8.6.1.4.3.5).
  * @constant
  * @type {number}
  */

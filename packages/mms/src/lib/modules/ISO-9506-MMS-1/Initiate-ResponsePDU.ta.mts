@@ -24,7 +24,12 @@ import { Initiate_ResponsePDU_initResponseDetail, _decode_Initiate_ResponsePDU_i
 /**
  * @summary Initiate_ResponsePDU
  * @description
- * 
+ *
+ * Successful Initiate: negotiated environment parameters. Creates the
+ * Application Association object. Negotiated maxima and nesting shall be ≤ the
+ * corresponding proposed values. Result(−) is Initiate-ErrorPDU
+ * (ISO 9506-1:2003 §8.2; ISO 9506-2:2003 §8.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,7 +42,7 @@ import { Initiate_ResponsePDU_initResponseDetail, _decode_Initiate_ResponsePDU_i
  *        negotiatedVersionNumber              [0] IMPLICIT Integer16,
  *        negotiatedParameterCBB               [1] IMPLICIT ParameterSupportOptions,
  *        servicesSupportedCalled              [2] IMPLICIT ServiceSupportOptions,
- *        ...
+ *       ...
  * ,      additionalSupportedCalled            [3] IMPLICIT AdditionalSupportOptions
  * ,      additionalCbbSupportedCalled         [4] IMPLICIT AdditionalCBBOptions,
  *        privilegeClassIdentityCalled         [5] IMPLICIT VisibleString
@@ -52,30 +57,51 @@ class Initiate_ResponsePDU {
     constructor (
         /**
          * @summary `localDetailCalled`.
+         * @description
+         *
+         * Called implementation detail. Content is a local matter; not further
+         * standardized (ISO 9506-1:2003 §8.2.1.2.1).
          * @public
          * @readonly
          */
         readonly localDetailCalled: OPTIONAL<Integer32>,
         /**
          * @summary `negotiatedMaxServOutstandingCalling`.
+         * @description
+         *
+         * Agreed maximum Transaction objects at the calling MMS-user. ≤
+         * proposed; not less than zero (ISO 9506-1:2003 §8.2.1.2.2).
          * @public
          * @readonly
          */
         readonly negotiatedMaxServOutstandingCalling: Integer16,
         /**
          * @summary `negotiatedMaxServOutstandingCalled`.
+         * @description
+         *
+         * Agreed maximum Transaction objects at the called MMS-user. ≤
+         * proposed; not less than zero (ISO 9506-1:2003 §8.2.1.2.3).
          * @public
          * @readonly
          */
         readonly negotiatedMaxServOutstandingCalled: Integer16,
         /**
          * @summary `negotiatedDataStructureNestingLevel`.
+         * @description
+         *
+         * Agreed Type Specification nesting. Omit for unlimited. Zero means
+         * only simple types. ≤ proposed; not less than zero (ISO 9506-1:2003
+         * §8.2.1.2.4).
          * @public
          * @readonly
          */
         readonly negotiatedDataStructureNestingLevel: OPTIONAL<Integer8>,
         /**
          * @summary `initResponseDetail`.
+         * @description
+         *
+         * Negotiated minor version, parameter CBBs, and services supported
+         * (ISO 9506-1:2003 §8.2; ISO 9506-2:2003 §8.2).
          * @public
          * @readonly
          */
@@ -105,8 +131,8 @@ class Initiate_ResponsePDU {
  * @summary The Leading Root Component Types of Initiate_ResponsePDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -122,8 +148,8 @@ const _root_component_type_list_1_spec_for_Initiate_ResponsePDU: $.ComponentSpec
  * @summary The Trailing Root Component Types of Initiate_ResponsePDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -135,8 +161,8 @@ const _root_component_type_list_2_spec_for_Initiate_ResponsePDU: $.ComponentSpec
  * @summary The Extension Addition Component Types of Initiate_ResponsePDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -204,7 +230,7 @@ function _encode_Initiate_ResponsePDU (value: Initiate_ResponsePDU, elGetter: $.
             /* IF_ABSENT  */ ((value.negotiatedDataStructureNestingLevel === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_Integer8, $.BER)(value.negotiatedDataStructureNestingLevel, $.BER)),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 4, () => _encode_Initiate_ResponsePDU_initResponseDetail, $.BER)(value.initResponseDetail, $.BER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+   ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
     return _cached_encoder_for_Initiate_ResponsePDU(value, elGetter);
 }

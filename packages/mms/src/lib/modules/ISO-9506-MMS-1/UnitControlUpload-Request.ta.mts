@@ -21,6 +21,11 @@ import { UnitControlUpload_Request_continueAfter, _decode_UnitControlUpload_Requ
  * @summary UnitControlUpload_Request
  * @description
  * 
+ * Client request for Control Elements of a Unit Control object. May be
+ * repeated; `continueAfter` resumes after a previous `nextElement`. Ordering is
+ * server-defined but PIs follow Domains they depend on. ISO 9506-1:2003 §13.5.
+ * ISO 9506-2:2003 §13.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +45,21 @@ class UnitControlUpload_Request {
     constructor (
         /**
          * @summary `unitControlName`.
+         * @description
+         *
+         * Unit Control object to upload. ISO 9506-1:2003 §13.5.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly unitControlName: Identifier,
         /**
          * @summary `continueAfter`.
+         * @description
+         *
+         * Resume point: next Domain, open ULSM, or next PI. Absent: start at
+         * the beginning. ISO 9506-1:2003 §13.5.1.1.2.
+         *
          * @public
          * @readonly
          */

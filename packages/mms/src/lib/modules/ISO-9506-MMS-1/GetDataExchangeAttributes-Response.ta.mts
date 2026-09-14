@@ -21,7 +21,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary GetDataExchangeAttributes_Response
  * @description
- * 
+ *
+ * Result(+) of GetDataExchangeAttributes.
+ * ISO 9506-1:2003 §15.3.1.2. ISO 9506-2:2003 §15.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +45,60 @@ class GetDataExchangeAttributes_Response {
     constructor (
         /**
          * @summary `inUse`.
+         * @description
+         *
+         * `&inUse`: true while D-Exchange is performing (true
+         * if any concurrent instance is active).
+         * ISO 9506-1:2003 §15.3.1.2.1, §15.1.2.2.
+         *
          * @public
          * @readonly
          */
         readonly inUse: BOOLEAN,
         /**
          * @summary `listOfRequestTypeDescriptions`.
+         * @description
+         *
+         * `&request` input types. Empty list if none.
+         * ISO 9506-1:2003 §15.3.1.2.2.
+         *
          * @public
          * @readonly
          */
         readonly listOfRequestTypeDescriptions: TypeDescription[],
         /**
          * @summary `listOfResponseTypeDescriptions`.
+         * @description
+         *
+         * `&response` output types. Empty list if none.
+         * ISO 9506-1:2003 §15.3.1.2.3.
+         *
          * @public
          * @readonly
          */
         readonly listOfResponseTypeDescriptions: TypeDescription[],
         /**
          * @summary `programInvocation`.
+         * @description
+         *
+         * Present iff `&linked` is true: `&programInvocation`
+         * of the linked Program Invocation.
+         * ISO 9506-1:2003 §15.3.1.2.4.
+         * ISO 9506-2:2003 §15.3.2.1.
+         *
          * @public
          * @readonly
          */
         readonly programInvocation: OPTIONAL<Identifier>,
         /**
          * @summary `accessControlList`.
+         * @description
+         *
+         * `&accessControl`. Present iff `aco` CBB was
+         * negotiated. Absent in minor versions 1 and 2.
+         * ISO 9506-1:2003 §15.3.1.2.5.
+         * ISO 9506-2:2003 §15.3.2.2.
+         *
          * @public
          * @readonly
          */

@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DefineEventEnrollment_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): notification Event Enrollment created. Empty.
+ *
+ * [ISO 9506-1:2003 §21.2.1.2]
+ * [ISO 9506-2:2003 §21.2.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

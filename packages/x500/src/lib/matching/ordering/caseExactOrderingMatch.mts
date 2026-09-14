@@ -5,6 +5,18 @@ import {
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.1.2
+ * `caseExactOrderingMatch`.
+ *
+ * Directory ordering of `UnboundedDirectoryString` after removing
+ * insignificant spaces (clause 7.6). TRUE in the Directory sense
+ * iff the stored value is less than (appears earlier than) the
+ * presented value under Unicode code-point collation. This
+ * function returns a signed comparison (assertion vs stored).
+ *
+ * Language-specific collation is outside the scope of X.520.
+ */
 export
 const caseExactOrderingMatch: OrderingMatcher = (
     assertion: ASN1Element,

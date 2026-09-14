@@ -19,7 +19,14 @@ import { EventNotification_actionResult_successOrFailure_failure, _decode_EventN
 /**
  * @summary EventNotification_actionResult_successOrFailure
  * @description
- * 
+ *
+ * Discriminant of Event Action outcome. `success` if the
+ * confirmed service in `&confirmedServiceRequest` succeeded;
+ * `failure` otherwise (modifier failure or service error).
+ *
+ * [ISO 9506-1:2003 §18.3.1.1.8.2]
+ * [ISO 9506-2:2003 §18.3.1.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

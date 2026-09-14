@@ -19,7 +19,11 @@ import { SemaphoreEntry, _decode_SemaphoreEntry, _encode_SemaphoreEntry } from "
 /**
  * @summary ReportSemaphoreEntryStatus_Response
  * @description
- * 
+ *
+ * Semaphore-entries of the requested state, ordered by `&entryID`.
+ * `moreFollows` true means another request is needed.
+ * ISO 9506-1:2003 §16.8.1.2. ISO 9506-2:2003 §16.8.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,23 @@ class ReportSemaphoreEntryStatus_Response {
     constructor (
         /**
          * @summary `listOfSemaphoreEntry`.
+         * @description
+         *
+         * Possibly empty. Ordered by `&entryID`.
+         * ISO 9506-1:2003 §16.8.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly listOfSemaphoreEntry: SemaphoreEntry[],
         /**
          * @summary `moreFollows`.
+         * @description
+         *
+         * True if more entries remain. False if this list holds the
+         * last item or is empty. Default true. ISO 9506-1:2003
+         * §16.8.1.2.2.
+         *
          * @public
          * @readonly
          */

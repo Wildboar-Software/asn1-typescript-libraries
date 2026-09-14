@@ -18,6 +18,10 @@ import { NullableBitString, _decode_NullableBitString, _encode_NullableBitString
  * @summary NullableAdditionalSupportOptions
  * @description
  * 
+ * AdditionalSupportOptions
+ * or NULL (unsupported csr/cspi). SCI configuration/initialization encoding
+ * (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

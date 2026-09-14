@@ -18,6 +18,10 @@ import { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS
  * @summary TypeDescription_floating_point
  * @description
  * 
+ * Floating-point simple
+ * type: total format width (sign+exponent+fraction) and exponent width
+ * in bits. ISO 9506-1:2003 §14.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +42,21 @@ class TypeDescription_floating_point {
     constructor (
         /**
          * @summary `format_width`.
+         * @description
+         *
+         * Bits of the floating-point value including sign, exponent, and
+         * fraction. ISO 9506-1:2003 §14.2.1.
+         *
          * @public
          * @readonly
          */
         readonly format_width: Unsigned8,
         /**
          * @summary `exponent_width`.
+         * @description
+         *
+         * Exponent size in bits. ISO 9506-1:2003 §14.2.1.
+         *
          * @public
          * @readonly
          */

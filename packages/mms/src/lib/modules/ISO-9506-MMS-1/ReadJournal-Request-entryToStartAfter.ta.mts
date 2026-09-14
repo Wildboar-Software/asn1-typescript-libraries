@@ -18,7 +18,12 @@ import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS
 /**
  * @summary ReadJournal_Request_entryToStartAfter
  * @description
- * 
+ *
+ * Resume returning qualified entries after this time/`&entry`.
+ * If `entrySpecification` matches no qualified entry, return all
+ * from `timeSpecification` (including same-timestamp entries).
+ * ISO 9506-1:2003 §23.2.1.1.5. ISO 9506-2:2003 §23.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +40,22 @@ class ReadJournal_Request_entryToStartAfter {
     constructor (
         /**
          * @summary `timeSpecification`.
+         * @description
+         *
+         * Compared to `&timeStamp` as the resume time.
+         * ISO 9506-1:2003 §23.2.1.1.5.1.
+         *
          * @public
          * @readonly
          */
         readonly timeSpecification: TimeOfDay,
         /**
          * @summary `entrySpecification`.
+         * @description
+         *
+         * `&entry` of the qualified entry after which to start.
+         * ISO 9506-1:2003 §23.2.1.1.5.2.
+         *
          * @public
          * @readonly
          */

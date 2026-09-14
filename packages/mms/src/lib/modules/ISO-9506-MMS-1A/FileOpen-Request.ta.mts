@@ -19,7 +19,16 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary FileOpen_Request
  * @description
- * 
+ *
+ * Confirmed request: identify a file to read and
+ * establish the open state of a File Read State
+ * Machine (FRSM). Informative Annex D. Virtual
+ * filestore is sequential unstructured binary;
+ * no random access or modification.
+ *
+ * [ISO 9506-1:2003 Annex D, D.3]
+ * [ISO 9506-2:2003 Annex D, D.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +45,30 @@ class FileOpen_Request {
     constructor (
         /**
          * @summary `fileName`.
+         * @description
+         *
+         * Unambiguously identifies a single file to
+         * open for reading in the server's virtual
+         * filestore. Wildcard resolution shall yield
+         * a single name, else an error.
+         *
+         * [ISO 9506-1:2003 Annex D, D.3.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly fileName: FileName,
         /**
          * @summary `initialPosition`.
+         * @description
+         *
+         * Non-negative octet offset of the first
+         * FileRead. Zero begins at the start of the
+         * file; larger values skip that many octets.
+         * Must lie within the file.
+         *
+         * [ISO 9506-1:2003 Annex D, D.3.1.1.2]
+         *
          * @public
          * @readonly
          */

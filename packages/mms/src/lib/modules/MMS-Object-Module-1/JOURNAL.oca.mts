@@ -22,6 +22,10 @@ import { JOURNAL_ENTRY } from "../MMS-Object-Module-1/JOURNAL-ENTRY.oca.mjs";
  * @summary JOURNAL
  * @description
  * 
+ * Named store of Journal Entries (log). Capacity
+ * is modelled as unbounded; media/archival are local. Scope VMD,
+ * Domain, or AA. ISO 9506-1:2003 §23.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,14 +59,28 @@ interface JOURNAL {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * ObjectName unique in VMD/Domain/AA scope. ISO 9506-1:2003 §23.1.1.1.
+     *
      */
     readonly "&name"?: ObjectName;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating read, write, delete, and ACL change. ISO 9506-1:2003
+     * §23.1.1.2.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &Entries
+     * @description
+     *
+     * Journal Entry objects that make up this Journal. ISO 9506-1:2003
+     * §23.1.1.3.
+     *
      */
     readonly "&Entries"?: JOURNAL_ENTRY[];
 };

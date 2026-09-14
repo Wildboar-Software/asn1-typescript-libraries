@@ -17,7 +17,14 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary DeleteEventEnrollment_Request
  * @description
- * 
+ *
+ * Confirmed request: delete `notification` enrollments (modifier enrollments
+ * are not deletable this way). `specific` names; `ec` all for an Event
+ * Condition; `ea` all for an Event Action.
+ *
+ * [ISO 9506-1:2003 §21.3]
+ * [ISO 9506-2:2003 §21.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

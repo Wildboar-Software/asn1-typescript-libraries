@@ -19,7 +19,16 @@ import { DirectoryEntry, _decode_DirectoryEntry, _encode_DirectoryEntry } from "
 /**
  * @summary FileDirectory_Response
  * @description
- * 
+ *
+ * Result(+): ordered directory entries and
+ * whether more remain. Empty list with
+ * `moreFollows` false if no files match or
+ * Continue After is at the end of the list.
+ * Informative Annex D.
+ *
+ * [ISO 9506-1:2003 Annex D, D.8.1.2]
+ * [ISO 9506-2:2003 Annex D, D.7.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +45,30 @@ class FileDirectory_Response {
     constructor (
         /**
          * @summary `listOfDirectoryEntry`.
+         * @description
+         *
+         * Ordered list of zero or more entries
+         * matching File Specification, omitting those
+         * before and at Continue After. Order is
+         * required so Continue After is well-defined
+         * even if that file no longer exists.
+         *
+         * [ISO 9506-1:2003 Annex D, D.8.1.2.1]
+         * [ISO 9506-2:2003 Annex D, D.7.2.1]
+         *
          * @public
          * @readonly
          */
         readonly listOfDirectoryEntry: DirectoryEntry[],
         /**
          * @summary `moreFollows`.
+         * @description
+         *
+         * True if selected files were not included.
+         * False if the list is empty. Default false.
+         *
+         * [ISO 9506-1:2003 Annex D, D.8.1.2.2]
+         *
          * @public
          * @readonly
          */

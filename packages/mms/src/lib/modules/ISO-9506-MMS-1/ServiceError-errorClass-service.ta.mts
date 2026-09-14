@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceError_errorClass_service
  * @description
  * 
+ * Error Class SERVICE: problems with service primitives. Value 3 is reserved.
+ * ISO 9506-1:2003 §24.2.5; ISO 9506-2:2003 §7.4.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +40,10 @@ type ServiceError_errorClass_service = INTEGER;
 
 /**
  * @summary ServiceError_errorClass_service_other
+ * @description
+ *
+ * Reason other than those identified for SERVICE. ISO 9506-1:2003 §24.2.5.5.
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +52,10 @@ const ServiceError_errorClass_service_other: ServiceError_errorClass_service = 0
 
 /**
  * @summary ServiceError_errorClass_service_other
+ * @description
+ *
+ * Reason other than those identified for SERVICE. ISO 9506-1:2003 §24.2.5.5.
+ *
  * @constant
  * @type {number}
  */
@@ -53,6 +64,10 @@ const other: ServiceError_errorClass_service = ServiceError_errorClass_service_o
 
 /**
  * @summary ServiceError_errorClass_service_primitives_out_of_sequence
+ * @description
+ *
+ * The sequence of service primitives is invalid. ISO 9506-1:2003 §24.2.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +76,10 @@ const ServiceError_errorClass_service_primitives_out_of_sequence: ServiceError_e
 
 /**
  * @summary ServiceError_errorClass_service_primitives_out_of_sequence
+ * @description
+ *
+ * The sequence of service primitives is invalid. ISO 9506-1:2003 §24.2.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +88,11 @@ const primitives_out_of_sequence: ServiceError_errorClass_service = ServiceError
 
 /**
  * @summary ServiceError_errorClass_service_object_state_conflict
+ * @description
+ *
+ * The current object state does not permit a response for this service request.
+ * ISO 9506-1:2003 §24.2.5.2.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +101,11 @@ const ServiceError_errorClass_service_object_state_conflict: ServiceError_errorC
 
 /**
  * @summary ServiceError_errorClass_service_object_state_conflict
+ * @description
+ *
+ * The current object state does not permit a response for this service request.
+ * ISO 9506-1:2003 §24.2.5.2.
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +114,11 @@ const object_state_conflict: ServiceError_errorClass_service = ServiceError_erro
 
 /**
  * @summary ServiceError_errorClass_service_continuation_invalid
+ * @description
+ *
+ * The file name to continue after could not be a member of the group specified
+ * by the file specification. ISO 9506-1:2003 §24.2.5.3.
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +127,11 @@ const ServiceError_errorClass_service_continuation_invalid: ServiceError_errorCl
 
 /**
  * @summary ServiceError_errorClass_service_continuation_invalid
+ * @description
+ *
+ * The file name to continue after could not be a member of the group specified
+ * by the file specification. ISO 9506-1:2003 §24.2.5.3.
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +140,11 @@ const continuation_invalid: ServiceError_errorClass_service = ServiceError_error
 
 /**
  * @summary ServiceError_errorClass_service_object_constraint_conflict
+ * @description
+ *
+ * Current constraints on an object prevent execution of the requested service.
+ * ISO 9506-1:2003 §24.2.5.4.
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +153,11 @@ const ServiceError_errorClass_service_object_constraint_conflict: ServiceError_e
 
 /**
  * @summary ServiceError_errorClass_service_object_constraint_conflict
+ * @description
+ *
+ * Current constraints on an object prevent execution of the requested service.
+ * ISO 9506-1:2003 §24.2.5.4.
+ *
  * @constant
  * @type {number}
  */

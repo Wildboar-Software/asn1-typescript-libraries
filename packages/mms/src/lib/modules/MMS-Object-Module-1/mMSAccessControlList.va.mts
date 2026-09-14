@@ -18,6 +18,10 @@ import {
  * @summary mMSAccessControlList
  * @description
  * 
+ * OID root for Standardized Access
+ * Control List definitions: { iso standard 9506 part(1)
+ * symbols-version1(5) access-control-list(2) }. ISO 9506-1:2003 §25.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

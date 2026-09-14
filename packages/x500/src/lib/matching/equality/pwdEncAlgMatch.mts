@@ -10,6 +10,14 @@ import {
 } from "../../modules/PasswordPolicy/UserPwd.ta.mjs";
 import compareElements from "../../comparators/compareElements.mjs";
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.10.2 `pwdEncAlgMatch`.
+ *
+ * TRUE iff the presented `PwdEncAlg` equals the algorithm stored
+ * with an encrypted password: both the algorithm identifier and
+ * parameters must be equal. Fails if the stored `UserPwd` is not
+ * encrypted.
+ */
 export
 const pwdEncAlgMatch: EqualityMatcher = (
     assertion: ASN1Element,

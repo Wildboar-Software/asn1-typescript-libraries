@@ -30,7 +30,15 @@ import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-M
 /**
  * @summary AlarmSummary
  * @description
- * 
+ *
+ * One GetAlarmSummary Result(+) entry for a monitored Event
+ * Condition. `unacknowledgedState` reflects outstanding acks
+ * on referencing enrollments. Display Enhancement is CS
+ * (`cspi`). Transition times omitted if the corresponding
+ * Event Condition time is undefined.
+ *
+ * [ISO 9506-1:2003 §18.5.1.2.1] [ISO 9506-2:2003 §18.5.2.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,42 +64,91 @@ class AlarmSummary {
     constructor (
         /**
          * @summary `eventConditionName`.
+         * @description
+         *
+         * `&name` of the monitored Event Condition.
+         *
+         * [ISO 9506-1:2003 §18.5.1.2.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionName: ObjectName,
         /**
          * @summary `severity`.
+         * @description
+         *
+         * Event Condition `&severity` (0 most, 127 least).
+         *
+         * [ISO 9506-1:2003 §18.5.1.2.1.2]
+         *
          * @public
          * @readonly
          */
         readonly severity: Unsigned8,
         /**
          * @summary `currentState`.
+         * @description
+         *
+         * Current Event Condition `&ecState` (`disabled`,
+         * `idle`, or `active`). Disabled conditions do not
+         * notify.
+         *
+         * [ISO 9506-1:2003 §18.5.1.2.1.3]
+         *
          * @public
          * @readonly
          */
         readonly currentState: EC_State,
         /**
          * @summary `unacknowledgedState`.
+         * @description
+         *
+         * Outstanding acks on enrollments that reference this
+         * condition. `none`, `active`, `idle`, or `both`.
+         *
+         * [ISO 9506-1:2003 §18.5.1.2.1.5]
+         *
          * @public
          * @readonly
          */
         readonly unacknowledgedState: AlarmSummary_unacknowledgedState,
         /**
          * @summary `displayEnhancement`.
+         * @description
+         *
+         * Present only if `cspi` was negotiated. Enrollment
+         * `&displayEnhancement` if defined and not
+         * undefined; otherwise the Event Condition's.
+         *
+         * [ISO 9506-1:2003 §18.5.1.2.1.4]
+         *
          * @public
          * @readonly
          */
         readonly displayEnhancement: OPTIONAL<Nullable<EN_Additional_Detail>>,
         /**
          * @summary `timeOfLastTransitionToActive`.
+         * @description
+         *
+         * Event Condition `&timeToActive`. Omitted if
+         * undefined.
+         *
+         * [ISO 9506-1:2003 §18.5.1.2.1.6]
+         *
          * @public
          * @readonly
          */
         readonly timeOfLastTransitionToActive: OPTIONAL<EventTime>,
         /**
          * @summary `timeOfLastTransitionToIdle`.
+         * @description
+         *
+         * Event Condition `&timeToIdle`. Omitted if
+         * undefined.
+         *
+         * [ISO 9506-1:2003 §18.5.1.2.1.7]
+         *
          * @public
          * @readonly
          */

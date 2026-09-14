@@ -23,6 +23,13 @@ import { StatusResponse_vmdPhysicalStatus, _decode_StatusResponse_vmdPhysicalSta
  * @summary StatusResponse
  * @description
  * 
+ * Status Response parameter used by Status, UnsolicitedStatus, and VMDReset
+ * Result(+). Conveys VMD `&logicalStatus`, `&physicalStatus`, and optional
+ * `&local-detail`. Companion-standard fields (Operation State, Extended Status,
+ * mask, Selected Program Invocation) are specified separately under `csr`
+ * (ISO 9506-1:2003 §10.2.4–§10.2.7; ISO 9506-2:2003 §10.2.1). ISO 9506-1:2003
+ * §10.2; ISO 9506-2:2003 §10.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,18 +57,34 @@ class StatusResponse {
     constructor (
         /**
          * @summary `vmdLogicalStatus`.
+         * @description
+         *
+         * Value of the VMD `&logicalStatus` (functionality available through
+         * MMS). ISO 9506-1:2003 §7.2.1.9, §10.2.1.
+         *
          * @public
          * @readonly
          */
         readonly vmdLogicalStatus: StatusResponse_vmdLogicalStatus,
         /**
          * @summary `vmdPhysicalStatus`.
+         * @description
+         *
+         * Value of the VMD `&physicalStatus` (gross hardware state of all
+         * capabilities). Unrelated to ability to communicate. ISO 9506-1:2003
+         * §7.2.1.11, §10.2.2.
+         *
          * @public
          * @readonly
          */
         readonly vmdPhysicalStatus: StatusResponse_vmdPhysicalStatus,
         /**
          * @summary `localDetail`.
+         * @description
+         *
+         * Optional vendor bitstring (`&local-detail`), at most 128 bits;
+         * contents are a local matter. ISO 9506-1:2003 §7.2.1.12, §10.2.3.
+         *
          * @public
          * @readonly
          */
@@ -95,7 +118,8 @@ class StatusResponse {
  * @summary The Leading Root Component Types of StatusResponse
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -110,7 +134,8 @@ const _root_component_type_list_1_spec_for_StatusResponse: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of StatusResponse
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -123,7 +148,8 @@ const _root_component_type_list_2_spec_for_StatusResponse: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of StatusResponse
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

@@ -22,6 +22,11 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
  * @summary VARIABLE_LIST_ITEM
  * @description
  * 
+ * One member of a Named Variable List:
+ * either an unnamed address (vadr) or a named variable (vnam), plus
+ * optional Alternate Access (valt). Exactly one of unnamed/named.
+ * ISO 9506-1:2003 §14.1.4.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,14 +61,26 @@ interface VARIABLE_LIST_ITEM {
     }>;
     /**
      * @summary &unnamedItem
+     * @description
+     *
+     * Unnamed Variable address (vadr). ISO 9506-1:2003 §14.1.4.3.1.
+     *
      */
     readonly "&unnamedItem"?: Address;
     /**
      * @summary &namedItem
+     * @description
+     *
+     * Named Variable ObjectName (vnam). ISO 9506-1:2003 §14.1.4.3.2.
+     *
      */
     readonly "&namedItem"?: ObjectName;
     /**
      * @summary &alternateAccess
+     * @description
+     *
+     * Alternate Access Specification (valt). ISO 9506-1:2003 §14.1.4.3.3.
+     *
      */
     readonly "&alternateAccess"?: AlternateAccess;
 };

@@ -21,7 +21,14 @@ import { AlterEventConditionListMonitoring_Request_priorityChange, _decode_Alter
 /**
  * @summary AlterEventConditionListMonitoring_Request
  * @description
- * 
+ *
+ * Confirmed request: set `&enabled` and/or `&groupPriorityOverride` on all
+ * Event Conditions referenced (directly or nested) by a list. At least enabled
+ * or priorityChange. Disabled conditions do not notify. Result(+) empty.
+ *
+ * [ISO 9506-1:2003 §22.8]
+ * [ISO 9506-2:2003 §22.8]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +48,37 @@ class AlterEventConditionListMonitoring_Request {
     constructor (
         /**
          * @summary `eventConditionListName`.
+         * @description
+         *
+         * List whose referenced conditions are altered.
+         *
+         * [ISO 9506-1:2003 §22.8.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionListName: ObjectName,
         /**
          * @summary `enabled`.
+         * @description
+         *
+         * Replacement `&enabled` for all referenced (direct or nested) conditions.
+         *
+         * [ISO 9506-1:2003 §22.8.1.1.2]
+         *
          * @public
          * @readonly
          */
         readonly enabled: BOOLEAN,
         /**
          * @summary `priorityChange`.
+         * @description
+         *
+         * `priorityValue` sets `&groupPriorityOverride`; `priorityReset` sets it
+         * undefined.
+         *
+         * [ISO 9506-1:2003 §22.8.1.1.3]
+         *
          * @public
          * @readonly
          */

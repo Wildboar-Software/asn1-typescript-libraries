@@ -17,7 +17,13 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary ReportEventActionStatus_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): number of Event Enrollments that reference this Event
+ * Action.
+ *
+ * [ISO 9506-1:2003 §20.5.1.2.1]
+ * [ISO 9506-2:2003 §20.5.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -22,7 +22,13 @@ import { CS_GetEventConditionAttributes_Response, _decode_CS_GetEventConditionAt
 /**
  * @summary Response_Detail
  * @description
- * 
+ *
+ * Companion-standard response extension in Confirmed-ResponsePDU `service-ext`
+ * [79]. Select `otherRequests` (NULL) when the ConfirmedServiceResponse tag
+ * does not match status, getProgramInvocationAttributes, or
+ * getEventConditionAttributes. Omit the whole `service-ext` if the value would
+ * be a tagged NULL (ISO 9506-1:2003 Annex B; ISO 9506-2:2003 §7.3.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,6 +19,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary StartCount
  * @description
  * 
+ * Running-mode argument for Start / Resume / Alter on a controlling PI.
+ * `noLimit`: `&running-Mode` = `free-run`. `cycleCount`: `cycle-limited` and
+ * remaining-cycle-count (must be > 0). `stepCount`: `step-limited` and
+ * remaining-step-count (must be > 0; CSI may omit support). ISO 9506-1:2003
+ * §12.4.1.1.4, §12.6.1.1.3. ISO 9506-2:2003 §12.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

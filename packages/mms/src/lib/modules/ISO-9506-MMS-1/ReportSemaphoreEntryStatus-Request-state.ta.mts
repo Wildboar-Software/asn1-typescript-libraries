@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state
  * @description
- * 
+ *
+ * Semaphore-entry state to report. `queued` (0) waiting;
+ * `owner` (1) in control with AA up; `hung` (2) in control after
+ * AA lost and `relinquishIfLost` was false. ISO 9506-1:2003
+ * §16.1.3.9, §16.8.1.1.2. ISO 9506-2:2003 §16.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +39,10 @@ type ReportSemaphoreEntryStatus_Request_state = INTEGER;
 
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state_queued
+ * @description
+ *
+ * Waiting in `&Requesters`. ISO 9506-1:2003 §16.1.3.9.
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +51,10 @@ const ReportSemaphoreEntryStatus_Request_state_queued: ReportSemaphoreEntryStatu
 
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state_queued
+ * @description
+ *
+ * Waiting in `&Requesters`. ISO 9506-1:2003 §16.1.3.9.
+ *
  * @constant
  * @type {number}
  */
@@ -50,6 +63,11 @@ const queued: ReportSemaphoreEntryStatus_Request_state = ReportSemaphoreEntrySta
 
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state_owner
+ * @description
+ *
+ * In `&Owners` with the association still up. ISO 9506-1:2003
+ * §16.1.3.9.
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +76,11 @@ const ReportSemaphoreEntryStatus_Request_state_owner: ReportSemaphoreEntryStatus
 
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state_owner
+ * @description
+ *
+ * In `&Owners` with the association still up. ISO 9506-1:2003
+ * §16.1.3.9.
+ *
  * @constant
  * @type {number}
  */
@@ -66,6 +89,12 @@ const owner: ReportSemaphoreEntryStatus_Request_state = ReportSemaphoreEntryStat
 
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state_hung
+ * @description
+ *
+ * In `&Owners` after the association was lost and
+ * `relinquishIfLost` was false. Recover via preempt TakeControl.
+ * ISO 9506-1:2003 §16.1.3.9, §16.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +103,12 @@ const ReportSemaphoreEntryStatus_Request_state_hung: ReportSemaphoreEntryStatus_
 
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state_hung
+ * @description
+ *
+ * In `&Owners` after the association was lost and
+ * `relinquishIfLost` was false. Recover via preempt TakeControl.
+ * ISO 9506-1:2003 §16.1.3.9, §16.1.4.
+ *
  * @constant
  * @type {number}
  */

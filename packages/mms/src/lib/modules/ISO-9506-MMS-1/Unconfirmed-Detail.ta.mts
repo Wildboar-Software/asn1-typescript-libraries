@@ -18,7 +18,12 @@ import { CS_EventNotification, _decode_CS_EventNotification, _encode_CS_EventNot
 /**
  * @summary Unconfirmed_Detail
  * @description
- * 
+ *
+ * Companion-standard extension of an Unconfirmed-PDU. Select `otherRequests`
+ * (NULL) unless the UnconfirmedService tag matches a named alternative.
+ * `eventNotification` [2] is the CS-EventNotification when `cspi` is negotiated
+ * (ISO 9506-2:2003 §7.2.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

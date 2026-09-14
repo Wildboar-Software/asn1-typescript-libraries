@@ -20,7 +20,13 @@ import { Response_Detail, _decode_Response_Detail, _encode_Response_Detail } fro
 /**
  * @summary EventNotification_actionResult_successOrFailure_success
  * @description
- * 
+ *
+ * Event Action Result(+). Conveys the confirmed-service
+ * response of the executed Event Action.
+ *
+ * [ISO 9506-1:2003 §18.3.1.1.8.3]
+ * [ISO 9506-2:2003 §18.3.1.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +44,28 @@ class EventNotification_actionResult_successOrFailure_success {
     constructor (
         /**
          * @summary `confirmedServiceResponse`.
+         * @description
+         *
+         * Result(+) of the confirmed service named in the
+         * Event Action `&confirmedServiceRequest`.
+         *
+         * [ISO 9506-1:2003 §18.3.1.1.8.3]
+         *
          * @public
          * @readonly
          */
         readonly confirmedServiceResponse: ConfirmedServiceResponse,
         /**
          * @summary `cs_Response_Detail`.
+         * @description
+         *
+         * Companion-standard response detail matching the
+         * confirmed-service choice. Shall not be transmitted
+         * if the value is a tagged type derived from NULL.
+         * Present only if `csr`/`cspi` apply.
+         *
+         * [ISO 9506-2:2003 §18.3.1.1.1]
+         *
          * @public
          * @readonly
          */

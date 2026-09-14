@@ -19,6 +19,11 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary VariableAccessParameters
  * @description
  * 
+ * Variable Access CIS parameters
+ * (Table 32): uninterruptible-access conditions, singleMode,
+ * unnamedMode. SCI configuration/initialization encoding (ISO 9506-2:2003 Annex
+ * B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +42,33 @@ class VariableAccessParameters {
     constructor (
         /**
          * @summary `uninterruptibleAccess`.
+         * @description
+         *
+         * Conditions under which uninterruptible variable access is guaranteed.
+         * ISO 9506-1:2003 §14.1.1.1; ISO 9506-2:2003 Annex B.2.5.
+         *
          * @public
          * @readonly
          */
         readonly uninterruptibleAccess: MMSString,
         /**
          * @summary `singleMode`.
+         * @description
+         *
+         * Whether SINGLE Kind Of Variable is supported. ISO 9506-2:2003 Annex
+         * B.2.5.
+         *
          * @public
          * @readonly
          */
         readonly singleMode: BOOLEAN,
         /**
          * @summary `unnamedMode`.
+         * @description
+         *
+         * Whether unnamed (address) access is supported. ISO 9506-2:2003 Annex
+         * B.2.5.
+         *
          * @public
          * @readonly
          */

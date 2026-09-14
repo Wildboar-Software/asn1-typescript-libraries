@@ -19,7 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CS_GetEventConditionAttributes_Response_displayEnhancement
  * @description
- * 
+ *
+ * Display Enhancement of the Event Condition. `string` if `des`; `index` if
+ * `dei`; `noEnhancement` is NULL.
+ *
+ * [ISO 9506-1:2003 §19.4.1.2.11]
+ * [ISO 9506-2:2003 §19.4.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

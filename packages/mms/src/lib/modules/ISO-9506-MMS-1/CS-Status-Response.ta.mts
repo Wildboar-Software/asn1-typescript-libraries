@@ -19,6 +19,11 @@ import { CS_Status_Response_fullResponse, _decode_CS_Status_Response_fullRespons
  * @summary CS_Status_Response
  * @description
  * 
+ * Companion-standard extras of the Status Response. `fullResponse` is present
+ * when `csr` is selected (operation state, extended status, mask, selected
+ * Program Invocation). `noExtraResponse` is the `cspi` alternative.
+ * ISO 9506-1:2003 §10.2.4–§10.2.7; ISO 9506-2:2003 §10.2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

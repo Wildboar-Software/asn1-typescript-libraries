@@ -20,6 +20,11 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary Event_Enrollment_instance_definition_details_displayEnhancement
  * @description
  * 
+ * cspi Display Enhancement: text, number, or none. SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU.
+ * ISO 9506-2:2003 Annex B.1.14; ISO 9506-1:2003 §21.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,6 +19,16 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary GetNameList_Request_objectScope
  * @description
  * 
+ * Object Scope of GetNameList (ISO 9506-1:2003 §10.5.1.1.2; ISO 9506-2:2003
+ * §10.5.1.1).
+ *
+ * `vmdSpecific`: VMD-specific names.
+ *
+ * `domainSpecific`: Domain-specific names; value is the Domain Name Identifier.
+ * Present only for this choice.
+ *
+ * `aaSpecific`: AA-specific names.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

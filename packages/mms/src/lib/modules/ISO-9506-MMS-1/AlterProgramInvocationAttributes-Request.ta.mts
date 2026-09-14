@@ -21,6 +21,9 @@ import { StartCount, _decode_StartCount, _encode_StartCount } from "../ISO-9506-
  * @summary AlterProgramInvocationAttributes_Request
  * @description
  * 
+ * `csr` additional service: change `&running-Mode` of a controlling Program
+ * Invocation. PI must exist and be controlling. ISO 9506-1:2003 §12.11. ISO 9506-2:2003 §12.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,22 @@ class AlterProgramInvocationAttributes_Request {
     constructor (
         /**
          * @summary `programInvocation`.
+         * @description
+         *
+         * Controlling Program Invocation whose running mode is altered. ISO 9506-1:2003 §12.11.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly programInvocation: Identifier,
         /**
          * @summary `startCount`.
+         * @description
+         *
+         * New running mode: noLimit (`free-run`), cycleCount (`cycle-limited` +
+         * remaining cycles), or stepCount (`step-limited` + remaining steps).
+         * Default `cycleCount: 1`. ISO 9506-1:2003 §12.11.1.1.2. ISO 9506-2:2003 §12.11.
+         *
          * @public
          * @readonly
          */

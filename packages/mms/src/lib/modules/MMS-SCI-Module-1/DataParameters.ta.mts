@@ -21,6 +21,10 @@ import { DataParameters_floating_point, _decode_DataParameters_floating_point, _
  * @summary DataParameters
  * @description
  * 
+ * Variable-access data-size CIS parameters
+ * (Table 33). SCI configuration/initialization encoding (ISO 9506-2:2003 Annex
+ * B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,12 +56,20 @@ class DataParameters {
         readonly bit_string: OPTIONAL<INTEGER>,
         /**
          * @summary `integer`.
+         * @description
+         *
+         * Max integer size, if constrained. ISO 9506-2:2003 Annex B.2.6.
+         *
          * @public
          * @readonly
          */
         readonly integer: OPTIONAL<INTEGER>,
         /**
          * @summary `unsigned`.
+         * @description
+         *
+         * Max unsigned size, if constrained. ISO 9506-2:2003 Annex B.2.6.
+         *
          * @public
          * @readonly
          */
@@ -88,12 +100,20 @@ class DataParameters {
         readonly binary_time: OPTIONAL<BOOLEAN>,
         /**
          * @summary `bcd`.
+         * @description
+         *
+         * BCD size, if constrained. ISO 9506-2:2003 Annex B.2.6.
+         *
          * @public
          * @readonly
          */
         readonly bcd: OPTIONAL<INTEGER>,
         /**
          * @summary `mmsString`.
+         * @description
+         *
+         * Max MMSString size, if constrained. ISO 9506-2:2003 Annex B.2.6.
+         *
          * @public
          * @readonly
          */

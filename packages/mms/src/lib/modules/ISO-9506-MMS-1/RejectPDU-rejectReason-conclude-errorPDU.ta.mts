@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RejectPDU_rejectReason_conclude_errorPDU
  * @description
- * 
+ *
+ * Reject codes when the rejected PDU is a Conclude-ErrorPDU (ISO 9506-1:2003
+ * §8.6.1.4.11).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +37,10 @@ type RejectPDU_rejectReason_conclude_errorPDU = INTEGER;
 
 /**
  * @summary RejectPDU_rejectReason_conclude_errorPDU_other
+ * @description
+ *
+ * Error other than those identified for this PDU type (ISO 9506-1:2003
+ * §8.6.1.4.11.1).
  * @constant
  * @type {number}
  */
@@ -42,6 +49,10 @@ const RejectPDU_rejectReason_conclude_errorPDU_other: RejectPDU_rejectReason_con
 
 /**
  * @summary RejectPDU_rejectReason_conclude_errorPDU_other
+ * @description
+ *
+ * Error other than those identified for this PDU type (ISO 9506-1:2003
+ * §8.6.1.4.11.1).
  * @constant
  * @type {number}
  */
@@ -50,6 +61,10 @@ const other: RejectPDU_rejectReason_conclude_errorPDU = RejectPDU_rejectReason_c
 
 /**
  * @summary RejectPDU_rejectReason_conclude_errorPDU_invalid_serviceError
+ * @description
+ *
+ * Service error does not meet ISO 9506-1 requirements (ISO 9506-1:2003
+ * §8.6.1.4.11.2).
  * @constant
  * @type {number}
  */
@@ -58,6 +73,10 @@ const RejectPDU_rejectReason_conclude_errorPDU_invalid_serviceError: RejectPDU_r
 
 /**
  * @summary RejectPDU_rejectReason_conclude_errorPDU_invalid_serviceError
+ * @description
+ *
+ * Service error does not meet ISO 9506-1 requirements (ISO 9506-1:2003
+ * §8.6.1.4.11.2).
  * @constant
  * @type {number}
  */
@@ -66,6 +85,10 @@ const invalid_serviceError: RejectPDU_rejectReason_conclude_errorPDU = RejectPDU
 
 /**
  * @summary RejectPDU_rejectReason_conclude_errorPDU_value_out_of_range
+ * @description
+ *
+ * One or more parameter values exceed the allowed range (ISO 9506-1:2003
+ * §8.6.1.4.11.3).
  * @constant
  * @type {number}
  */
@@ -74,6 +97,10 @@ const RejectPDU_rejectReason_conclude_errorPDU_value_out_of_range: RejectPDU_rej
 
 /**
  * @summary RejectPDU_rejectReason_conclude_errorPDU_value_out_of_range
+ * @description
+ *
+ * One or more parameter values exceed the allowed range (ISO 9506-1:2003
+ * §8.6.1.4.11.3).
  * @constant
  * @type {number}
  */

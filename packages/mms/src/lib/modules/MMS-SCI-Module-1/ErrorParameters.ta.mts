@@ -20,6 +20,11 @@ import { ErrorParameters_additionalDetial, _decode_ErrorParameters_additionalDet
  * @summary ErrorParameters
  * @description
  * 
+ * Error CIS parameters (Table 47). Field
+ * `additionalDetial` keeps the ISO 9506-2:2003 Annex B spelling (spec typo for
+ * “Detail”). SCI configuration/initialization encoding (ISO 9506-2:2003 Annex
+ * B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.2.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +44,21 @@ class ErrorParameters {
     constructor (
         /**
          * @summary `additionalCode`.
+         * @description
+         *
+         * Description of additional error codes. ISO 9506-2:2003 Annex B.2.9.
+         *
          * @public
          * @readonly
          */
         readonly additionalCode: MMSString,
         /**
          * @summary `additionalDetial`.
+         * @description
+         *
+         * Additional error-detail size/syntax. Spec identifier spelling
+         * `Detial` (ISO 9506-2:2003 Annex B.2.9).
+         *
          * @public
          * @readonly
          */

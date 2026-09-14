@@ -23,6 +23,10 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
  * @summary LoadUnitControlFromFile_Request
  * @description
  * 
+ * Client request to create a Unit Control object from a file (local or third
+ * party). Name must not already exist. ISO 9506-1:2003 §13.12. ISO 9506-2:2003
+ * §13.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +44,32 @@ class LoadUnitControlFromFile_Request {
     constructor (
         /**
          * @summary `unitControlName`.
+         * @description
+         *
+         * Name of the Unit Control object to load. Must not exist. ISO 9506-1:2003 §13.12.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly unitControlName: Identifier,
         /**
          * @summary `fileName`.
+         * @description
+         *
+         * File containing the Unit Control content. ISO 9506-1:2003
+         * §13.12.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly fileName: FileName,
         /**
          * @summary `thirdParty`.
+         * @description
+         *
+         * Application that holds the file. Requires `tpy` CBB. Absent: local
+         * file access. ISO 9506-1:2003 §13.12.1.1.3. ISO 9506-2:2003 §13.12.
+         *
          * @public
          * @readonly
          */

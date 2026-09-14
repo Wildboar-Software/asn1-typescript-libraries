@@ -6,6 +6,14 @@ import {
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.1.3
+ * `caseIgnoreSubstringsMatch`.
+ *
+ * Same as `caseExactSubstringsMatch` except upper-case is folded
+ * during string preparation (clause 7.2). `control` elements are
+ * ignored.
+ */
 export
 const caseIgnoreSubstringsMatch: SubstringsMatcher = (
     assertion: ASN1Element,

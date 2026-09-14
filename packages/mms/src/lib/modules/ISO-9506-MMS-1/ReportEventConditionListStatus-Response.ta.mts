@@ -19,7 +19,13 @@ import { EventConditionStatus, _decode_EventConditionStatus, _encode_EventCondit
 /**
  * @summary ReportEventConditionListStatus_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): EventConditionStatus entries. `moreFollows` true means
+ * more remain; false if the list is empty.
+ *
+ * [ISO 9506-1:2003 §22.7.1.2]
+ * [ISO 9506-2:2003 §22.7.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,25 @@ class ReportEventConditionListStatus_Response {
     constructor (
         /**
          * @summary `listOfEventConditionStatus`.
+         * @description
+         *
+         * Status of members, collation order.
+         *
+         * [ISO 9506-1:2003 §22.7.1.2.1]
+         *
          * @public
          * @readonly
          */
         readonly listOfEventConditionStatus: EventConditionStatus[],
         /**
          * @summary `moreFollows`.
+         * @description
+         *
+         * True if more statuses remain. Default true in protocol; false if the list is
+         * empty.
+         *
+         * [ISO 9506-1:2003 §22.7.1.2.2]
+         *
          * @public
          * @readonly
          */

@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EE_Duration
  * @description
  * 
+ * Life of a notification enrollment. current
+ * = this application association; permanent = until explicitly deleted
+ * or the VMD ends. ISO 9506-1:2003 §21.1.1.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +37,10 @@ type EE_Duration = INTEGER;
 
 /**
  * @summary EE_Duration_current
+ * @description
+ *
+ * Lives for the defining application association. ISO 9506-1:2003 §21.1.1.11.
+ *
  * @constant
  * @type {number}
  */
@@ -41,6 +49,10 @@ const EE_Duration_current: EE_Duration = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Duration_current
+ * @description
+ *
+ * Lives for the defining application association. ISO 9506-1:2003 §21.1.1.11.
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +61,10 @@ const current: EE_Duration = EE_Duration_current; /* SHORT_NAMED_INTEGER_VALUE *
 
 /**
  * @summary EE_Duration_permanent
+ * @description
+ *
+ * Lives with the VMD unless explicitly deleted. ISO 9506-1:2003 §21.1.1.11.
+ *
  * @constant
  * @type {number}
  */
@@ -57,6 +73,10 @@ const EE_Duration_permanent: EE_Duration = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Duration_permanent
+ * @description
+ *
+ * Lives with the VMD unless explicitly deleted. ISO 9506-1:2003 §21.1.1.11.
+ *
  * @constant
  * @type {number}
  */

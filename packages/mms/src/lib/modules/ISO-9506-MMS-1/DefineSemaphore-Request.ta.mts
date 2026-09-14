@@ -19,7 +19,12 @@ import { Unsigned16, _decode_Unsigned16, _encode_Unsigned16 } from "../ISO-9506-
 /**
  * @summary DefineSemaphore_Request
  * @description
- * 
+ *
+ * Confirmed request to create a token semaphore (class `token`).
+ * Pool semaphores cannot be created by MMS. All tokens start free;
+ * a matching Event Condition is created. ISO 9506-1:2003 §16.1,
+ * §16.4. ISO 9506-2:2003 §16.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +40,22 @@ class DefineSemaphore_Request {
     constructor (
         /**
          * @summary `semaphoreName`.
+         * @description
+         *
+         * VMD-specific name of the token semaphore to create.
+         * ISO 9506-1:2003 §16.4.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly semaphoreName: ObjectName,
         /**
          * @summary `numberOfTokens`.
+         * @description
+         *
+         * Maximum simultaneous owners. One token is mutual exclusion.
+         * ISO 9506-1:2003 §16.1.5, §16.4.1.1.2.
+         *
          * @public
          * @readonly
          */

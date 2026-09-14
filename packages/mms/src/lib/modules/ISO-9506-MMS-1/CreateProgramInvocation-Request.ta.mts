@@ -20,6 +20,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary CreateProgramInvocation_Request
  * @description
  * 
+ * Client request to assemble existing Domains into a Program Invocation in
+ * `idle`. At least one Domain; each must be `ready`/`d7`, or
+ * `in-use`/`d4`/`d5`/`d6` and sharable. Atomic. ISO 9506-1:2003 §12.2. ISO 9506-2:2003 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,24 +44,44 @@ class CreateProgramInvocation_Request {
     constructor (
         /**
          * @summary `programInvocationName`.
+         * @description
+         *
+         * New PI name; unique among Program Invocations in the VMD. ISO 9506-1:2003 §12.2.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly programInvocationName: Identifier,
         /**
          * @summary `listOfDomainNames`.
+         * @description
+         *
+         * Existing Domains to bind; at least one. Order may matter to the
+         * server. ISO 9506-1:2003 §12.2.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly listOfDomainNames: Identifier[],
         /**
          * @summary `reusable`.
+         * @description
+         *
+         * True (default): return to `idle` after normal completion. False: go
+         * to `unrunnable`. ISO 9506-1:2003 §12.2.1.1.3.
+         *
          * @public
          * @readonly
          */
         readonly reusable: OPTIONAL<BOOLEAN>,
         /**
          * @summary `monitorType`.
+         * @description
+         *
+         * If present, Monitor is true: notify when the PI leaves `running`.
+         * True = permanent enrollment; false = current (association lifetime).
+         * Absent: no monitoring. ISO 9506-1:2003 §12.2.1.1.4–§12.2.1.1.5. ISO 9506-2:2003 §12.2.1.1.
+         *
          * @public
          * @readonly
          */

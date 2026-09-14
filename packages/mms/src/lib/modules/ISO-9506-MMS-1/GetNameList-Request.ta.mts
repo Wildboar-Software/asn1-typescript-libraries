@@ -23,6 +23,11 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary GetNameList_Request
  * @description
  * 
+ * Confirmed GetNameList request: return (part of) the object-name list at the
+ * VMD for a class and scope. Empty list is Result(+), not Result(-). Repeated
+ * Continue After use need not be time-consistent. ISO 9506-1:2003 §10.5;
+ * ISO 9506-2:2003 §10.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,18 +47,34 @@ class GetNameList_Request {
     constructor (
         /**
          * @summary `objectClass`.
+         * @description
+         *
+         * Object class of names to return. ISO 9506-1:2003 §10.5.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly objectClass: ObjectClass,
         /**
          * @summary `objectScope`.
+         * @description
+         *
+         * VMD-specific, Domain-specific, or AA-specific. ISO 9506-1:2003
+         * §10.5.1.1.2; ISO 9506-2:2003 §10.5.1.1.
+         *
          * @public
          * @readonly
          */
         readonly objectScope: GetNameList_Request_objectScope,
         /**
          * @summary `continueAfter`.
+         * @description
+         *
+         * If present, the returned list begins after this Identifier of the
+         * requested class and scope. If it does not match, the server uses the
+         * collating sequence of ISO 9506-1:2003 §5.4.2. ISO 9506-1:2003
+         * §10.5.1.1.4.
+         *
          * @public
          * @readonly
          */
@@ -83,7 +104,8 @@ class GetNameList_Request {
  * @summary The Leading Root Component Types of GetNameList_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -98,7 +120,8 @@ const _root_component_type_list_1_spec_for_GetNameList_Request: $.ComponentSpec[
  * @summary The Trailing Root Component Types of GetNameList_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -111,7 +134,8 @@ const _root_component_type_list_2_spec_for_GetNameList_Request: $.ComponentSpec[
  * @summary The Extension Addition Component Types of GetNameList_Request
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

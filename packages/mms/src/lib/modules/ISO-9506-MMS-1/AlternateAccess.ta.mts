@@ -17,7 +17,14 @@ import { AlternateAccess_Item, _decode_AlternateAccess_Item, _encode_AlternateAc
 /**
  * @summary AlternateAccess
  * @description
- * 
+ *
+ * Alternate view of a typed MMS variable: change perceived
+ * abstract syntax and/or restrict to a subset (partial
+ * access). Requires `valt` CBB. One or more selections;
+ * more than one yields a derived structure; a single
+ * element must not carry Component Name.
+ * ISO 9506-1:2003 §14.3. ISO 9506-2:2003 §14.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

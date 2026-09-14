@@ -52,6 +52,12 @@ import { Event_Condition_List_instance, _decode_Event_Condition_List_instance, _
  * @summary Access_Control_List_instance_definition_details
  * @description
  * 
+ * Inline
+ * ACL attributes and controlled-object lists in the SCI file. SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU.
+ * ISO 9506-2:2003 Annex B.1.1; ISO 9506-1:2003 §9.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -101,144 +107,253 @@ class Access_Control_List_instance_definition_details {
     constructor (
         /**
          * @summary `accessControl`.
+         * @description
+         *
+         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly accessControl: Access_Control_List_instance,
         /**
          * @summary `readAccessCondition`.
+         * @description
+         *
+         * Read-class AccessCondition. ISO 9506-1:2003 §9.1.1.3; ISO 9506-2:2003
+         * Annex B.1.1.
+         *
          * @public
          * @readonly
          */
         readonly readAccessCondition: OPTIONAL<AccessCondition>,
         /**
          * @summary `storeAccessCondition`.
+         * @description
+         *
+         * Store-class AccessCondition. ISO 9506-1:2003 §9.1.1.4; ISO
+         * 9506-2:2003 Annex B.1.1.
+         *
          * @public
          * @readonly
          */
         readonly storeAccessCondition: OPTIONAL<AccessCondition>,
         /**
          * @summary `writeAccessCondition`.
+         * @description
+         *
+         * Write-class AccessCondition. ISO 9506-1:2003 §9.1.1.5; ISO
+         * 9506-2:2003 Annex B.1.1.
+         *
          * @public
          * @readonly
          */
         readonly writeAccessCondition: OPTIONAL<AccessCondition>,
         /**
          * @summary `loadAccessCondition`.
+         * @description
+         *
+         * Load-class AccessCondition. ISO 9506-1:2003 §9.1.1.6; ISO 9506-2:2003
+         * Annex B.1.1.
+         *
          * @public
          * @readonly
          */
         readonly loadAccessCondition: OPTIONAL<AccessCondition>,
         /**
          * @summary `executeAccessCondition`.
+         * @description
+         *
+         * Execute-class AccessCondition. ISO 9506-1:2003 §9.1.1.7; ISO
+         * 9506-2:2003 Annex B.1.1.
+         *
          * @public
          * @readonly
          */
         readonly executeAccessCondition: OPTIONAL<AccessCondition>,
         /**
          * @summary `deleteAccessCondition`.
+         * @description
+         *
+         * Delete-class AccessCondition. ISO 9506-1:2003 §9.1.1.8; ISO
+         * 9506-2:2003 Annex B.1.1.
+         *
          * @public
          * @readonly
          */
         readonly deleteAccessCondition: OPTIONAL<AccessCondition>,
         /**
          * @summary `editAccessCondition`.
+         * @description
+         *
+         * Edit-class AccessCondition. ISO 9506-1:2003 §9.1.1.9; ISO 9506-2:2003
+         * Annex B.1.1.
+         *
          * @public
          * @readonly
          */
         readonly editAccessCondition: OPTIONAL<AccessCondition>,
         /**
          * @summary `accessControlLists`.
+         * @description
+         *
+         * Configured ACL instances. ISO 9506-2:2003 Annex B.1.1.
+         *
          * @public
          * @readonly
          */
         readonly accessControlLists: Access_Control_List_instance[],
         /**
          * @summary `domains`.
+         * @description
+         *
+         * Configured Domain instances. ISO 9506-2:2003 Annex B.1.2.
+         *
          * @public
          * @readonly
          */
         readonly domains: Domain_instance[],
         /**
          * @summary `programInvocations`.
+         * @description
+         *
+         * Configured Program Invocation instances. ISO 9506-2:2003 Annex B.1.3.
+         *
          * @public
          * @readonly
          */
         readonly programInvocations: Program_Invocation_instance[],
         /**
          * @summary `unitControls`.
+         * @description
+         *
+         * Configured Unit Control instances. ISO 9506-2:2003 Annex B.1.4.
+         *
          * @public
          * @readonly
          */
         readonly unitControls: Unit_Control_instance[],
         /**
          * @summary `unnamedVariables`.
+         * @description
+         *
+         * Configured Unnamed Variables (or NULL if not vadr). ISO 9506-2:2003
+         * Annex B.1.5.
+         *
          * @public
          * @readonly
          */
         readonly unnamedVariables: Unnamed_Variable_instance[] | NULL,
         /**
          * @summary `namedVariables`.
+         * @description
+         *
+         * Configured Named Variables (or NULL if not vnam). ISO 9506-2:2003
+         * Annex B.1.6.
+         *
          * @public
          * @readonly
          */
         readonly namedVariables: Named_Variable_instance[] | NULL,
         /**
          * @summary `namedVariableLists`.
+         * @description
+         *
+         * Configured Named Variable Lists (or NULL if not vlis). ISO
+         * 9506-2:2003 Annex B.1.7.
+         *
          * @public
          * @readonly
          */
         readonly namedVariableLists: Named_Variable_List_instance[] | NULL,
         /**
          * @summary `namedTypes`.
+         * @description
+         *
+         * Configured Named Types (or NULL if not vnam). ISO 9506-2:2003 Annex
+         * B.1.8.
+         *
          * @public
          * @readonly
          */
         readonly namedTypes: Named_Type_instance[] | NULL,
         /**
          * @summary `dataExchanges`.
+         * @description
+         *
+         * Configured Data Exchange instances. ISO 9506-2:2003 Annex B.1.9.
+         *
          * @public
          * @readonly
          */
         readonly dataExchanges: Data_Exchange_instance[],
         /**
          * @summary `semaphores`.
+         * @description
+         *
+         * Configured Semaphore instances. ISO 9506-2:2003 Annex B.1.10.
+         *
          * @public
          * @readonly
          */
         readonly semaphores: Semaphore_instance[],
         /**
          * @summary `operatorStations`.
+         * @description
+         *
+         * Configured Operator Station instances. ISO 9506-2:2003 Annex B.1.11.
+         *
          * @public
          * @readonly
          */
         readonly operatorStations: Operator_Station_instance[],
         /**
          * @summary `eventConditions`.
+         * @description
+         *
+         * Configured Event Condition instances. ISO 9506-2:2003 Annex B.1.12.
+         *
          * @public
          * @readonly
          */
         readonly eventConditions: Event_Condition_instance[],
         /**
          * @summary `eventActions`.
+         * @description
+         *
+         * Configured Event Action instances. ISO 9506-2:2003 Annex B.1.13.
+         *
          * @public
          * @readonly
          */
         readonly eventActions: Event_Action_instance[],
         /**
          * @summary `eventEnrollments`.
+         * @description
+         *
+         * Configured Event Enrollment instances. ISO 9506-2:2003 Annex B.1.14.
+         *
          * @public
          * @readonly
          */
         readonly eventEnrollments: Event_Enrollment_instance[],
         /**
          * @summary `journals`.
+         * @description
+         *
+         * Configured Journal instances. ISO 9506-2:2003 Annex B.1.16.
+         *
          * @public
          * @readonly
          */
         readonly journals: Journal_instance[],
         /**
          * @summary `eventConditionLists`.
+         * @description
+         *
+         * Configured Event Condition Lists (or NULL if not cspi). ISO
+         * 9506-2:2003 Annex B.1.15.
+         *
          * @public
          * @readonly
          */

@@ -17,7 +17,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FileName
  * @description
- * 
+ *
+ * Virtual filestore name: SEQUENCE OF GraphicString. Component semantics are a
+ * local matter; ISO 9506 defines no interpretation. Minimum support: a single
+ * component of 1..8 uppercase letters or digits, starting with a letter.
+ * Length/character limits belong in the System Configuration and Initialisation
+ * Statement (ISO 9506-2:2003 §7.5.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

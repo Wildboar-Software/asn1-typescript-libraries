@@ -19,7 +19,14 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
 /**
  * @summary VariableSpecification_variableDescription
  * @description
- * 
+ *
+ * SINGLE Kind Of Variable: Address plus Type
+ * Specification for a temporarily created Named Variable,
+ * deleted after the access. Requires `vadr` CBB. The type
+ * shall be compatible with spanned Unnamed Variables
+ * (compatibility is local).
+ * ISO 9506-1:2003 §14.5.2.4. ISO 9506-2:2003 §14.5.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +43,22 @@ class VariableSpecification_variableDescription {
     constructor (
         /**
          * @summary `address`.
+         * @description
+         *
+         * Base address of the described variable.
+         * ISO 9506-1:2003 §14.5.2.4.1, §14.5.3.
+         *
          * @public
          * @readonly
          */
         readonly address: Address,
         /**
          * @summary `typeSpecification`.
+         * @description
+         *
+         * Abstract type of the variable.
+         * ISO 9506-1:2003 §14.5.2.4.2, §14.2.
+         *
          * @public
          * @readonly
          */

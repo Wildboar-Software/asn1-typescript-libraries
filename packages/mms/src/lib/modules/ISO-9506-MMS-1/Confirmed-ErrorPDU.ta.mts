@@ -20,7 +20,12 @@ import { ServiceError, _decode_ServiceError, _encode_ServiceError } from "../ISO
 /**
  * @summary Confirmed_ErrorPDU
  * @description
- * 
+ *
+ * Negative confirmed-service result. `invokeID` matches the request.
+ * `modifierPosition` identifies which listOfModifiers entry failed, when the
+ * error occurred during modifier processing (ISO 9506-1:2003 §5.5;
+ * ISO 9506-2:2003 §7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,18 +43,32 @@ class Confirmed_ErrorPDU {
     constructor (
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Same value as the corresponding Confirmed-RequestPDU (ISO 9506-1:2003
+         * §5.5; ISO 9506-2:2003 §7.4).
          * @public
          * @readonly
          */
         readonly invokeID: Unsigned32,
         /**
          * @summary `modifierPosition`.
+         * @description
+         *
+         * Index of the modifier in the request's `listOfModifiers` that caused
+         * the error. Omit when the error is from the service itself
+         * (ISO 9506-2:2003 §7.4). Service-specific error information is not returned
+         * when a modifier fails.
          * @public
          * @readonly
          */
         readonly modifierPosition: OPTIONAL<Unsigned32>,
         /**
          * @summary `serviceError`.
+         * @description
+         *
+         * Error class and code for the failed modifier or confirmed service
+         * (ISO 9506-1:2003 clause 24; ISO 9506-2:2003 §7.4.1).
          * @public
          * @readonly
          */
@@ -79,8 +98,8 @@ class Confirmed_ErrorPDU {
  * @summary The Leading Root Component Types of Confirmed_ErrorPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -94,8 +113,8 @@ const _root_component_type_list_1_spec_for_Confirmed_ErrorPDU: $.ComponentSpec[]
  * @summary The Trailing Root Component Types of Confirmed_ErrorPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -107,8 +126,8 @@ const _root_component_type_list_2_spec_for_Confirmed_ErrorPDU: $.ComponentSpec[]
  * @summary The Extension Addition Component Types of Confirmed_ErrorPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -168,7 +187,7 @@ function _encode_Confirmed_ErrorPDU (value: Confirmed_ErrorPDU, elGetter: $.ASN1
             /* IF_ABSENT  */ ((value.modifierPosition === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_Unsigned32, $.BER)(value.modifierPosition, $.BER)),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_ServiceError, $.BER)(value.serviceError, $.BER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+   ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
     return _cached_encoder_for_Confirmed_ErrorPDU(value, elGetter);
 }

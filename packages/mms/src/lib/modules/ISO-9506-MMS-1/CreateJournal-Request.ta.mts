@@ -17,7 +17,11 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary CreateJournal_Request
  * @description
- * 
+ *
+ * Confirmed request to create a Journal object with an empty
+ * `&Entries` set. ISO 9506-1:2003 §23.1, §23.6.
+ * ISO 9506-2:2003 §23.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +36,11 @@ class CreateJournal_Request {
     constructor (
         /**
          * @summary `journalName`.
+         * @description
+         *
+         * Name of the Journal to create (VMD, Domain, or AA scope).
+         * ISO 9506-1:2003 §23.1.1.1, §23.6.1.1.1.
+         *
          * @public
          * @readonly
          */

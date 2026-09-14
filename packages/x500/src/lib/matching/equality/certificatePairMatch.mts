@@ -10,6 +10,15 @@ import {
     _decode_CertificatePair,
 } from "../../modules/AuthenticationFramework/CertificatePair.ta.mjs";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 13.3.4 `certificatePairMatch`.
+ *
+ * Selects one or more `CertificatePair` values. TRUE iff every
+ * component present in `issuedToThisCAAssertion` /
+ * `issuedByThisCAAssertion` matches the corresponding certificate
+ * as for `certificateMatch` (clause 13.3.2). At least one of those
+ * assertion components must be present.
+ */
 export
 const certificatePairMatch: EqualityMatcher = (
     assertion: ASN1Element,

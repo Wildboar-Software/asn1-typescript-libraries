@@ -19,6 +19,10 @@ import { StartCount, _decode_StartCount, _encode_StartCount } from "../ISO-9506-
  * @summary CS_Resume_Request_controlling_modeType
  * @description
  * 
+ * `continueMode`: keep `&running-Mode` (remaining cycle/step count must still
+ * be > 0 if limited). `changeMode`: new StartCount (noLimit / cycleCount /
+ * stepCount). ISO 9506-1:2003 §12.6.1.1.3. ISO 9506-2:2003 §12.6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

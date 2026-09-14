@@ -20,7 +20,12 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
 /**
  * @summary GetNamedVariableListAttributes_Response_listOfVariable_Item
  * @description
- * 
+ *
+ * One GetNamedVariableListAttributes list element, from
+ * `&listOfVariables`. INVALIDATED is not used here;
+ * UNDEFINED named items are returned as SINGLE.
+ * ISO 9506-1:2003 §14.13.1.2.2, §14.13.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +42,23 @@ class GetNamedVariableListAttributes_Response_listOfVariable_Item {
     constructor (
         /**
          * @summary `variableSpecification`.
+         * @description
+         *
+         * NAMED, UNNAMED, or SINGLE as stored.
+         * ISO 9506-1:2003 §14.13.1.2.2.1, §14.13.2.
+         *
          * @public
          * @readonly
          */
         readonly variableSpecification: VariableSpecification,
         /**
          * @summary `alternateAccess`.
+         * @description
+         *
+         * Omit if `&accessMethod` is missing (full access);
+         * otherwise that access description (`valt`).
+         * ISO 9506-1:2003 §14.13.1.2.2.2.
+         *
          * @public
          * @readonly
          */

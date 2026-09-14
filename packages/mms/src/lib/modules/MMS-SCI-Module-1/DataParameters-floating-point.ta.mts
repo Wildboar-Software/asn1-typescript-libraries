@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DataParameters_floating_point
  * @description
  * 
+ * Floating-point total and
+ * exponent widths in the CIS Data Parameters. SCI configuration/initialization
+ * encoding (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +39,20 @@ class DataParameters_floating_point {
     constructor (
         /**
          * @summary `total`.
+         * @description
+         *
+         * Total floating-point bits. ISO 9506-2:2003 Annex B.2.6.
+         *
          * @public
          * @readonly
          */
         readonly total: INTEGER,
         /**
          * @summary `exponent`.
+         * @description
+         *
+         * Exponent bits. ISO 9506-2:2003 Annex B.2.6.
+         *
          * @public
          * @readonly
          */

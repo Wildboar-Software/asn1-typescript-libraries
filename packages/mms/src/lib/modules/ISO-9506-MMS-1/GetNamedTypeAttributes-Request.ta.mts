@@ -17,7 +17,11 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary GetNamedTypeAttributes_Request
  * @description
- * 
+ *
+ * Confirmed request for attributes of a Named Type. The
+ * ObjectName is Type Name (`&name`).
+ * ISO 9506-1:2003 §14.16. ISO 9506-2:2003 §14.16.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

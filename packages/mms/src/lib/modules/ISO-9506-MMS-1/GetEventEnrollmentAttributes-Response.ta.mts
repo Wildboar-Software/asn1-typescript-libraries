@@ -19,7 +19,13 @@ import { EEAttributes, _decode_EEAttributes, _encode_EEAttributes } from "../ISO
 /**
  * @summary GetEventEnrollmentAttributes_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): EEAttributes list. `moreFollows` true means continue
+ * with `continueAfter`; then the list is non-empty.
+ *
+ * [ISO 9506-1:2003 §21.4.1.2]
+ * [ISO 9506-2:2003 §21.4.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,24 @@ class GetEventEnrollmentAttributes_Response {
     constructor (
         /**
          * @summary `listOfEEAttributes`.
+         * @description
+         *
+         * Zero or more enrollment attribute records, in listed order.
+         *
+         * [ISO 9506-1:2003 §21.4.1.2.1]
+         *
          * @public
          * @readonly
          */
         readonly listOfEEAttributes: EEAttributes[],
         /**
          * @summary `moreFollows`.
+         * @description
+         *
+         * True if more enrollments remain. Default false.
+         *
+         * [ISO 9506-1:2003 §21.4.1.2.2]
+         *
          * @public
          * @readonly
          */

@@ -42,6 +42,12 @@ import { ServiceError_errorClass_file, _decode_ServiceError_errorClass_file, _en
  * @summary ServiceError_errorClass
  * @description
  * 
+ * Error Class CHOICE of ServiceError. INTEGER alternatives are Error Codes of
+ * ISO 9506-1:2003 §24.2. `cancel` is INTEGER if the `cancel` CBB is selected,
+ * otherwise NULL. `file` is INTEGER if file-management / ObtainFile CBBs are
+ * selected, otherwise NULL. `others` is for device-specific errors and
+ * future/unclassified codes. ISO 9506-1:2003 §24.2; ISO 9506-2:2003 §7.4.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

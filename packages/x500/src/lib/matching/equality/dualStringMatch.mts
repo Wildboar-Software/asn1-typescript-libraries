@@ -7,6 +7,14 @@ import {
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
 import { prepString } from "../../utils/prepString.mjs";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 16.8.2 `dualStringMatch`.
+ *
+ * Case-sensitive equality of `DualStringSyntax`: the presented
+ * `operation` and `object` strings must each equal the stored
+ * pair. Used with the `permission` attribute (clause 16.8.1);
+ * operation and object names are specified as case sensitive.
+ */
 export
 const dualStringMatch: EqualityMatcher = (
     assertion: ASN1Element,

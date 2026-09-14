@@ -23,6 +23,9 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
  * @summary StoreUnitControlToFile_Request
  * @description
  * 
+ * Client request to store a Unit Control object's Domains and Program
+ * Invocations to a file (local or third party). Object must exist. ISO 9506-1:2003 §13.13. ISO 9506-2:2003 §13.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +43,32 @@ class StoreUnitControlToFile_Request {
     constructor (
         /**
          * @summary `unitControlName`.
+         * @description
+         *
+         * Existing Unit Control object whose content is stored. ISO 9506-1:2003
+         * §13.13.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly unitControlName: Identifier,
         /**
          * @summary `fileName`.
+         * @description
+         *
+         * Destination file. ISO 9506-1:2003 §13.13.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly fileName: FileName,
         /**
          * @summary `thirdParty`.
+         * @description
+         *
+         * Application whose filestore receives the content. Requires `tpy` CBB.
+         * Absent: local store method. ISO 9506-1:2003 §13.13.1.1.3.
+         *
          * @public
          * @readonly
          */

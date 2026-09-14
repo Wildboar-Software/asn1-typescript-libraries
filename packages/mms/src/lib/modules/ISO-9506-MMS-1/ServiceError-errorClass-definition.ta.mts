@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceError_errorClass_definition
  * @description
  * 
+ * Error Class DEFINITION: problems with object definitions. ISO 9506-1:2003
+ * §24.2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +41,10 @@ type ServiceError_errorClass_definition = INTEGER;
 
 /**
  * @summary ServiceError_errorClass_definition_other
+ * @description
+ *
+ * Reason other than those identified for DEFINITION. ISO 9506-1:2003 §24.2.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -46,6 +53,10 @@ const ServiceError_errorClass_definition_other: ServiceError_errorClass_definiti
 
 /**
  * @summary ServiceError_errorClass_definition_other
+ * @description
+ *
+ * Reason other than those identified for DEFINITION. ISO 9506-1:2003 §24.2.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -54,6 +65,10 @@ const other: ServiceError_errorClass_definition = ServiceError_errorClass_defini
 
 /**
  * @summary ServiceError_errorClass_definition_object_undefined
+ * @description
+ *
+ * No object with the desired name exists. ISO 9506-1:2003 §24.2.3.1.
+ *
  * @constant
  * @type {number}
  */
@@ -62,6 +77,10 @@ const ServiceError_errorClass_definition_object_undefined: ServiceError_errorCla
 
 /**
  * @summary ServiceError_errorClass_definition_object_undefined
+ * @description
+ *
+ * No object with the desired name exists. ISO 9506-1:2003 §24.2.3.1.
+ *
  * @constant
  * @type {number}
  */
@@ -70,6 +89,11 @@ const object_undefined: ServiceError_errorClass_definition = ServiceError_errorC
 
 /**
  * @summary ServiceError_errorClass_definition_invalid_address
+ * @description
+ *
+ * Unnamed variables only, and only if `vadr` is selected: address format is
+ * incorrect or out of range. ISO 9506-1:2003 §24.2.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -78,6 +102,11 @@ const ServiceError_errorClass_definition_invalid_address: ServiceError_errorClas
 
 /**
  * @summary ServiceError_errorClass_definition_invalid_address
+ * @description
+ *
+ * Unnamed variables only, and only if `vadr` is selected: address format is
+ * incorrect or out of range. ISO 9506-1:2003 §24.2.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -86,6 +115,11 @@ const invalid_address: ServiceError_errorClass_definition = ServiceError_errorCl
 
 /**
  * @summary ServiceError_errorClass_definition_type_unsupported
+ * @description
+ *
+ * An inappropriate or unsupported type was specified for a variable.
+ * ISO 9506-1:2003 §24.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -94,6 +128,11 @@ const ServiceError_errorClass_definition_type_unsupported: ServiceError_errorCla
 
 /**
  * @summary ServiceError_errorClass_definition_type_unsupported
+ * @description
+ *
+ * An inappropriate or unsupported type was specified for a variable.
+ * ISO 9506-1:2003 §24.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -102,6 +141,11 @@ const type_unsupported: ServiceError_errorClass_definition = ServiceError_errorC
 
 /**
  * @summary ServiceError_errorClass_definition_type_inconsistent
+ * @description
+ *
+ * A type is inconsistent with the service or referenced object. ISO 9506-1:2003
+ * §24.2.3.4.
+ *
  * @constant
  * @type {number}
  */
@@ -110,6 +154,11 @@ const ServiceError_errorClass_definition_type_inconsistent: ServiceError_errorCl
 
 /**
  * @summary ServiceError_errorClass_definition_type_inconsistent
+ * @description
+ *
+ * A type is inconsistent with the service or referenced object. ISO 9506-1:2003
+ * §24.2.3.4.
+ *
  * @constant
  * @type {number}
  */
@@ -118,6 +167,10 @@ const type_inconsistent: ServiceError_errorClass_definition = ServiceError_error
 
 /**
  * @summary ServiceError_errorClass_definition_object_exists
+ * @description
+ *
+ * The defined object already exists. ISO 9506-1:2003 §24.2.3.5.
+ *
  * @constant
  * @type {number}
  */
@@ -126,6 +179,10 @@ const ServiceError_errorClass_definition_object_exists: ServiceError_errorClass_
 
 /**
  * @summary ServiceError_errorClass_definition_object_exists
+ * @description
+ *
+ * The defined object already exists. ISO 9506-1:2003 §24.2.3.5.
+ *
  * @constant
  * @type {number}
  */
@@ -134,6 +191,11 @@ const object_exists: ServiceError_errorClass_definition = ServiceError_errorClas
 
 /**
  * @summary ServiceError_errorClass_definition_object_attribute_inconsistent
+ * @description
+ *
+ * The object is specified with inconsistent attributes. ISO 9506-1:2003
+ * §24.2.3.6.
+ *
  * @constant
  * @type {number}
  */
@@ -142,6 +204,11 @@ const ServiceError_errorClass_definition_object_attribute_inconsistent: ServiceE
 
 /**
  * @summary ServiceError_errorClass_definition_object_attribute_inconsistent
+ * @description
+ *
+ * The object is specified with inconsistent attributes. ISO 9506-1:2003
+ * §24.2.3.6.
+ *
  * @constant
  * @type {number}
  */

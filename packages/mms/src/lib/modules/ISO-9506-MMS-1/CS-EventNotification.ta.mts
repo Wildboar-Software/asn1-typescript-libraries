@@ -19,7 +19,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CS_EventNotification
  * @description
- * 
+ *
+ * Companion-standard Unconfirmed-Detail for
+ * EventNotification: the Display Enhancement parameter.
+ * Present only if `cspi` was negotiated. Prefers the
+ * enrollment `&displayEnhancement` if it is not `none`;
+ * otherwise the Event Condition's. `string` requires `des`;
+ * `index` requires `dei`; `noEnhancement` is NULL.
+ *
+ * [ISO 9506-1:2003 §18.3.1.1.9] [ISO 9506-2:2003 §18.3.1.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,6 +18,10 @@ import { StatusResponse, _decode_StatusResponse, _encode_StatusResponse } from "
  * @summary Status_Response
  * @description
  * 
+ * Confirmed Result(+) of Status: the Status Response parameter
+ * (logical/physical status and optional local detail; companion-standard extras
+ * if `csr`). ISO 9506-1:2003 §10.3.1.2; ISO 9506-2:2003 §10.3.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -24,6 +24,13 @@ import { MaybeAddress, _decode_MaybeAddress, _encode_MaybeAddress } from "../MMS
  * @summary Named_Variable_Definition_Details
  * @description
  * 
+ * Inline Named Variable
+ * attributes in the SCI file. `address` uses MaybeAddress (encoding-
+ * compatible deviation noted in the ASN.1). SCI configuration/initialization
+ * encoding (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.1.6;
+ * ISO 9506-1:2003 §14.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,24 +51,44 @@ class Named_Variable_Definition_Details {
     constructor (
         /**
          * @summary `accessControl`.
+         * @description
+         *
+         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly accessControl: Access_Control_List_instance,
         /**
          * @summary `typeDescription`.
+         * @description
+         *
+         * Configured TypeDescription. ISO 9506-1:2003 §14.2; ISO 9506-2:2003
+         * Annex B.
+         *
          * @public
          * @readonly
          */
         readonly typeDescription: TypeDescription,
         /**
          * @summary `address`.
+         * @description
+         *
+         * Unnamed-variable or public address. ISO 9506-1:2003 §14.1.2.1; ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly address: OPTIONAL<MaybeAddress>,
         /**
          * @summary `meaning`.
+         * @description
+         *
+         * Semantic alias (sem CBB). ISO 9506-1:2003 §14.1.3 / §14.1.5; ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */

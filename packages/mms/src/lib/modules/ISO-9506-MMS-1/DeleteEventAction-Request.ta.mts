@@ -20,7 +20,14 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary DeleteEventAction_Request
  * @description
- * 
+ *
+ * Confirmed request: delete Event Actions. `specific` names; `aa-specific`
+ * current AA; `domain` Domain-scoped; `vmd` VMD-scoped. Objects still
+ * referenced by enrollments are Candidates Not Deleted.
+ *
+ * [ISO 9506-1:2003 §20.3]
+ * [ISO 9506-2:2003 §20.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

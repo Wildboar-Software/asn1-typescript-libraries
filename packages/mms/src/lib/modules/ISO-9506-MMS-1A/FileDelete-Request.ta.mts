@@ -17,7 +17,14 @@ import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/
 /**
  * @summary FileDelete_Request
  * @description
- * 
+ *
+ * Confirmed request: File Name of a unique
+ * single file to delete in the server's virtual
+ * filestore. Informative Annex D.
+ *
+ * [ISO 9506-1:2003 Annex D, D.7]
+ * [ISO 9506-2:2003 Annex D, D.6.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

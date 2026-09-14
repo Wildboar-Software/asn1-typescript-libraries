@@ -20,6 +20,10 @@ import { ChangeAccessControl_Request_scopeOfChange_listOfObjects_objectScope, _d
  * @summary ChangeAccessControl_Request_scopeOfChange_listOfObjects
  * @description
  * 
+ * List of Objects choice: class plus object scope (SPECIFIC, AA-specific,
+ * DOMAIN, or VMD-named objects of that class). ISO 9506-1:2003
+ * §9.7.1.1.2–§9.7.1.1.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,12 +49,23 @@ class ChangeAccessControl_Request_scopeOfChange_listOfObjects {
     constructor (
         /**
          * @summary `objectClass`.
+         * @description
+         *
+         * Class of objects whose `&accessControl` is to be altered.
+         * ISO 9506-1:2003 §9.7.1.1.3.
+         *
          * @public
          * @readonly
          */
         readonly objectClass: ObjectClass,
         /**
          * @summary `objectScope`.
+         * @description
+         *
+         * Extent of the change: SPECIFIC names, all AA-specific objects of the
+         * class, all Domain-scoped objects of a named Domain, or all VMD-scoped
+         * objects of the class. ISO 9506-1:2003 §9.7.1.1.4.
+         *
          * @public
          * @readonly
          */
@@ -61,7 +76,8 @@ class ChangeAccessControl_Request_scopeOfChange_listOfObjects {
      * @summary Restructures an object into a ChangeAccessControl_Request_scopeOfChange_listOfObjects
      * @description
      * 
-     * This takes an `object` and converts it to a `ChangeAccessControl_Request_scopeOfChange_listOfObjects`.
+     * This takes an `object` and converts it to a
+     * `ChangeAccessControl_Request_scopeOfChange_listOfObjects`.
      * 
      * @public
      * @static
@@ -80,7 +96,8 @@ class ChangeAccessControl_Request_scopeOfChange_listOfObjects {
  * @summary The Leading Root Component Types of ChangeAccessControl_Request_scopeOfChange_listOfObjects
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -94,7 +111,8 @@ const _root_component_type_list_1_spec_for_ChangeAccessControl_Request_scopeOfCh
  * @summary The Trailing Root Component Types of ChangeAccessControl_Request_scopeOfChange_listOfObjects
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -107,7 +125,8 @@ const _root_component_type_list_2_spec_for_ChangeAccessControl_Request_scopeOfCh
  * @summary The Extension Addition Component Types of ChangeAccessControl_Request_scopeOfChange_listOfObjects
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

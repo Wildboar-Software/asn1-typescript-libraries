@@ -17,7 +17,13 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary Cancel_ResponsePDU
  * @description
- * 
+ *
+ * Successful Cancel result: Original Invoke ID of the cancelled confirmed
+ * service. The responder also issues Result(−) with SERVICE-PREEMPT/CANCEL for
+ * that service. State is as if the cancelled request had not been received,
+ * except Start, Stop, Resume, and Reset which allow defined destructive cancel
+ * (ISO 9506-1:2003 §8.5; ISO 9506-2:2003 §8.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

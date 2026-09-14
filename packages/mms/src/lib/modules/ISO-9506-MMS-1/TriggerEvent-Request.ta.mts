@@ -20,7 +20,17 @@ import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Modu
 /**
  * @summary TriggerEvent_Request
  * @description
- * 
+ *
+ * Confirmed request: client asks the server to trigger a
+ * network-triggered Event Condition. Result(+) carries no
+ * service-specific parameters. After that response, event
+ * transition processing runs for the named condition. The
+ * object must exist and `&ecClass` must be
+ * `network-triggered`. Disabled monitored conditions are not
+ * triggered by this service.
+ *
+ * [ISO 9506-1:2003 §18.2] [ISO 9506-2:2003 §18.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +46,27 @@ class TriggerEvent_Request {
     constructor (
         /**
          * @summary `eventConditionName`.
+         * @description
+         *
+         * Name of the network-triggered Event Condition to
+         * trigger.
+         *
+         * [ISO 9506-1:2003 §18.2.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionName: ObjectName,
         /**
          * @summary `priority`.
+         * @description
+         *
+         * Replacement for the Event Condition `&priority`
+         * field. Takes effect immediately, before transition
+         * processing. Omitted: leave `&priority` unchanged.
+         *
+         * [ISO 9506-1:2003 §18.2.1.1.2]
+         *
          * @public
          * @readonly
          */

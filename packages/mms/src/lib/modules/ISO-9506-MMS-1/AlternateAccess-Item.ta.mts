@@ -19,7 +19,16 @@ import { AlternateAccess_Item_named, _decode_AlternateAccess_Item_named, _encode
 /**
  * @summary AlternateAccess_Item
  * @description
- * 
+ *
+ * One List Of Alternate Access Selection element.
+ * `named` if Component Name is present (`str2` CBB);
+ * otherwise `unnamed`.
+ * ISO 9506-1:2003 §14.3.1.1. ISO 9506-2:2003 §14.3.1.
+ *
+ * - `unnamed`: no Component Name for this selection.
+ * - `named`: names this component of a multi-element
+ *   derived structure (`str2`).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

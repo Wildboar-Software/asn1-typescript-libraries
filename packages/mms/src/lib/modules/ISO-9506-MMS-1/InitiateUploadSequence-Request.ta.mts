@@ -18,6 +18,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary InitiateUploadSequence_Request
  * @description
  * 
+ * Client request to prepare upload of a Domain. Domain must exist and be
+ * `ready` or `in-use`. Creates a ULSM; client then issues N× UploadSegment then
+ * TerminateUploadSequence. Abort deletes the ULSM, not the Domain. ISO 9506-1:2003 §11.1.4.2, §11.5. ISO 9506-2:2003 §11.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -38,7 +38,12 @@ import { RejectPDU_rejectReason_conclude_errorPDU, _decode_RejectPDU_rejectReaso
 /**
  * @summary RejectPDU_rejectReason
  * @description
- * 
+ *
+ * Reject PDU Type and Reject Code. The CHOICE alternative is the type of PDU
+ * that caused the protocol error; PDU-ERROR is used when the PDU is not a
+ * syntactically valid MMSpdu. NULL cancel alternatives apply when Cancel is not
+ * supported (ISO 9506-1:2003 §8.6; ISO 9506-2:2003 §8.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

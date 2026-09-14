@@ -20,6 +20,12 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  * @summary ReportAccessControlledObjects_Response
  * @description
  * 
+ * Confirmed Result(+) of ReportAccessControlledObjects: ordered names
+ * (ISO 9506-1:2003 §5.4.2) and More Follows. Protocol default of `moreFollows`
+ * is FALSE (ISO 9506-2:2003 §9.5). Shall not appear in minor version 1 or 2 of
+ * the confirmed-service PDUs (ISO 9506-2:2003
+ * ConfirmedServiceRequest/Response). ISO 9506-1:2003 §9.5.1.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +42,23 @@ class ReportAccessControlledObjects_Response {
     constructor (
         /**
          * @summary `listOfNames`.
+         * @description
+         *
+         * Names whose `&accessControl` identifies the requested ACL. Zero or
+         * more; ordered per ISO 9506-1:2003 §5.4.2. ISO 9506-1:2003 §9.5.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly listOfNames: ObjectName[],
         /**
          * @summary `moreFollows`.
+         * @description
+         *
+         * True if further requests are needed to retrieve the rest. Shall be
+         * false when the list is empty or contains the last name. ASN.1 DEFAULT
+         * FALSE. ISO 9506-1:2003 §9.5.1.2.2; ISO 9506-2:2003 §9.5.
+         *
          * @public
          * @readonly
          */
@@ -52,7 +69,8 @@ class ReportAccessControlledObjects_Response {
      * @summary Restructures an object into a ReportAccessControlledObjects_Response
      * @description
      * 
-     * This takes an `object` and converts it to a `ReportAccessControlledObjects_Response`.
+     * This takes an `object` and converts it to a
+     * `ReportAccessControlledObjects_Response`.
      * 
      * @public
      * @static
@@ -77,7 +95,8 @@ class ReportAccessControlledObjects_Response {
  * @summary The Leading Root Component Types of ReportAccessControlledObjects_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -91,7 +110,8 @@ const _root_component_type_list_1_spec_for_ReportAccessControlledObjects_Respons
  * @summary The Trailing Root Component Types of ReportAccessControlledObjects_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -104,7 +124,8 @@ const _root_component_type_list_2_spec_for_ReportAccessControlledObjects_Respons
  * @summary The Extension Addition Component Types of ReportAccessControlledObjects_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

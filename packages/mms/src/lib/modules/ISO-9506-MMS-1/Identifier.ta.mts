@@ -21,7 +21,13 @@ import { maxIdentifier } from "../ISO-9506-MMS-1/maxIdentifier.va.mjs";
 /**
  * @summary Identifier
  * @description
- * 
+ *
+ * MMS object name token: 1..32 characters, case-sensitive. `notChar`
+ * (VisibleString from A–Z a–z 0–9 $ _) is used when CBB `char` is not
+ * supported; `ifChar` (UTF8String) when `char` is supported. Collating order of
+ * named objects uses this character repertoire (ISO 9506-1:2003 §5.4.2;
+ * ISO 9506-2:2003 §7.5.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

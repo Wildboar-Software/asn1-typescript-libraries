@@ -5,6 +5,13 @@ import {
     _decode_TelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.2.8 `telephoneNumberMatch`.
+ *
+ * Equality of `TelephoneNumber` (clause 6.7.1). Same as
+ * `caseIgnoreMatch` except hyphens and spaces are insignificant
+ * and are removed during insignificant-character removal.
+ */
 export
 const telephoneNumberMatch: EqualityMatcher = (
     assertion: ASN1Element,

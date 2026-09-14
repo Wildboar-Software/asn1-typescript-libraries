@@ -18,7 +18,12 @@ import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS
 /**
  * @summary ReadJournal_Request_rangeStartSpecification
  * @description
- * 
+ *
+ * Inclusive range start. `startingTime` is compared to
+ * `&timeStamp`. `startingEntry` is an Entry Identifier. Absent
+ * from the request means start of the journal. ISO 9506-1:2003
+ * §23.2.1.1.2. ISO 9506-2:2003 §23.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

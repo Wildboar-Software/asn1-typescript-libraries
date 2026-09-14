@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RejectPDU_rejectReason_cancel_errorPDU
  * @description
- * 
+ *
+ * Reject codes when the rejected PDU is a Cancel-ErrorPDU (ISO 9506-1:2003
+ * §8.6.1.4.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +38,10 @@ type RejectPDU_rejectReason_cancel_errorPDU = INTEGER;
 
 /**
  * @summary RejectPDU_rejectReason_cancel_errorPDU_other
+ * @description
+ *
+ * Error other than those identified for this PDU type (ISO 9506-1:2003
+ * §8.6.1.4.8.1).
  * @constant
  * @type {number}
  */
@@ -43,6 +50,10 @@ const RejectPDU_rejectReason_cancel_errorPDU_other: RejectPDU_rejectReason_cance
 
 /**
  * @summary RejectPDU_rejectReason_cancel_errorPDU_other
+ * @description
+ *
+ * Error other than those identified for this PDU type (ISO 9506-1:2003
+ * §8.6.1.4.8.1).
  * @constant
  * @type {number}
  */
@@ -51,6 +62,10 @@ const other: RejectPDU_rejectReason_cancel_errorPDU = RejectPDU_rejectReason_can
 
 /**
  * @summary RejectPDU_rejectReason_cancel_errorPDU_invalid_invokeID
+ * @description
+ *
+ * Invoke ID invalid, or no Cancel was requested with it (ISO 9506-1:2003
+ * §8.6.1.4.8.2).
  * @constant
  * @type {number}
  */
@@ -59,6 +74,10 @@ const RejectPDU_rejectReason_cancel_errorPDU_invalid_invokeID: RejectPDU_rejectR
 
 /**
  * @summary RejectPDU_rejectReason_cancel_errorPDU_invalid_invokeID
+ * @description
+ *
+ * Invoke ID invalid, or no Cancel was requested with it (ISO 9506-1:2003
+ * §8.6.1.4.8.2).
  * @constant
  * @type {number}
  */
@@ -67,6 +86,10 @@ const invalid_invokeID: RejectPDU_rejectReason_cancel_errorPDU = RejectPDU_rejec
 
 /**
  * @summary RejectPDU_rejectReason_cancel_errorPDU_invalid_serviceError
+ * @description
+ *
+ * Service error does not meet ISO 9506-1 requirements (ISO 9506-1:2003
+ * §8.6.1.4.8.3).
  * @constant
  * @type {number}
  */
@@ -75,6 +98,10 @@ const RejectPDU_rejectReason_cancel_errorPDU_invalid_serviceError: RejectPDU_rej
 
 /**
  * @summary RejectPDU_rejectReason_cancel_errorPDU_invalid_serviceError
+ * @description
+ *
+ * Service error does not meet ISO 9506-1 requirements (ISO 9506-1:2003
+ * §8.6.1.4.8.3).
  * @constant
  * @type {number}
  */
@@ -83,6 +110,10 @@ const invalid_serviceError: RejectPDU_rejectReason_cancel_errorPDU = RejectPDU_r
 
 /**
  * @summary RejectPDU_rejectReason_cancel_errorPDU_value_out_of_range
+ * @description
+ *
+ * One or more parameter values exceed the allowed range (ISO 9506-1:2003
+ * §8.6.1.4.8.4).
  * @constant
  * @type {number}
  */
@@ -91,6 +122,10 @@ const RejectPDU_rejectReason_cancel_errorPDU_value_out_of_range: RejectPDU_rejec
 
 /**
  * @summary RejectPDU_rejectReason_cancel_errorPDU_value_out_of_range
+ * @description
+ *
+ * One or more parameter values exceed the allowed range (ISO 9506-1:2003
+ * §8.6.1.4.8.4).
  * @constant
  * @type {number}
  */

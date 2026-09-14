@@ -21,6 +21,9 @@ import { UnitControlUpload_Response_nextElement, _decode_UnitControlUpload_Respo
  * @summary UnitControlUpload_Response
  * @description
  * 
+ * Uploaded Control Elements. PI definitions include actual PI state.
+ * `nextElement` absent means upload complete. ISO 9506-1:2003 §13.5.1.2. ISO 9506-2:2003 §13.5.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +43,22 @@ class UnitControlUpload_Response {
     constructor (
         /**
          * @summary `controlElements`.
+         * @description
+         *
+         * Domain/PI records; each PI definition includes
+         * `&programInvocationState`. ISO 9506-1:2003 §13.5.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly controlElements: ControlElement[],
         /**
          * @summary `nextElement`.
+         * @description
+         *
+         * First unsent element for a follow-up request. Absent: this response
+         * finished the Unit Control. ISO 9506-1:2003 §13.5.1.2.2.
+         *
          * @public
          * @readonly
          */

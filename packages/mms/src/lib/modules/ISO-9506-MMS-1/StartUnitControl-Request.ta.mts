@@ -21,6 +21,11 @@ import { StartUnitControl_Request_executionArgument, _decode_StartUnitControl_Re
  * @summary StartUnitControl_Request
  * @description
  * 
+ * Client request to place every constituent Program Invocation in `running`.
+ * Idle/resetting PIs are Started; stopped/stopping PIs are Resumed; already
+ * running/starting/resuming are left; `unrunnable` fails with
+ * StartUnitControl-Error. ISO 9506-1:2003 §13.6. ISO 9506-2:2003 §13.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +45,21 @@ class StartUnitControl_Request {
     constructor (
         /**
          * @summary `unitControlName`.
+         * @description
+         *
+         * Unit Control whose Program Invocations are started. ISO 9506-1:2003
+         * §13.6.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly unitControlName: Identifier,
         /**
          * @summary `executionArgument`.
+         * @description
+         *
+         * Optional data passed to the Program Invocations being started. ISO 9506-1:2003 §13.6.1.1.2.
+         *
          * @public
          * @readonly
          */

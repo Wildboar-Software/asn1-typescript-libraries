@@ -25,6 +25,11 @@ import { Event_Condition_instance, _decode_Event_Condition_instance, _encode_Eve
  * @summary Semaphore_instance_definition_details
  * @description
  * 
+ * Inline
+ * Semaphore attributes in the SCI file (owners/requesters omitted).
+ * SCI configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003 Annex B.1.10; ISO 9506-1:2003 §16.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,6 +54,11 @@ class Semaphore_instance_definition_details {
     constructor (
         /**
          * @summary `accessControl`.
+         * @description
+         *
+         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
@@ -61,18 +71,33 @@ class Semaphore_instance_definition_details {
         readonly class_: Semaphore_instance_definition_details_class,
         /**
          * @summary `numberOfTokens`.
+         * @description
+         *
+         * Token class: max owners. ISO 9506-1:2003 §16.1.1.4; ISO 9506-2:2003
+         * Annex B.1.10.
+         *
          * @public
          * @readonly
          */
         readonly numberOfTokens: OPTIONAL<INTEGER>,
         /**
          * @summary `namedTokens`.
+         * @description
+         *
+         * Pool class: named-token strings. ISO 9506-1:2003 §16.1.1.6; ISO
+         * 9506-2:2003 Annex B.1.10.
+         *
          * @public
          * @readonly
          */
         readonly namedTokens: OPTIONAL<VisibleString[]>,
         /**
          * @summary `eventCondition`.
+         * @description
+         *
+         * Configured Event Condition (PI monitor or semaphore match). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */

@@ -1,7 +1,11 @@
 /**
  * @description
  *
- * ASN.1 module `MMS-Object-Module-1`.
+ * ASN.1 module `MMS-Object-Module-1`: the ISO 9506-1 VMD
+ * object model. Classes here (VMD, Domain, Program Invocation, variables,
+ * events, journals, ACLs, and supporting states/CBBs) describe abstract
+ * objects inside a Virtual Manufacturing Device, not PDUs.
+ * ISO 9506-1:2003 clauses 7–23 and 25.
  */
 export * from "./ACCESS-CONTROL-LIST.oca.mjs";
 export * from "./AccessCondition-user.ta.mjs";

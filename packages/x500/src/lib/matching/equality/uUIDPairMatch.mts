@@ -6,6 +6,13 @@ import {
 } from "../../modules/SelectedAttributeTypes/UUIDPair.ta.mjs";
 import { Buffer } from "node:buffer";
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.2.15 `uUIDPairMatch`.
+ *
+ * TRUE iff each component of the presented `UUIDPair` equals the
+ * corresponding component of the stored pair (same length and
+ * identical octets).
+ */
 export
 const uUIDPairMatch: EqualityMatcher = (
     assertion: ASN1Element,

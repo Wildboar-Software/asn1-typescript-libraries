@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Output_Response
  * @description
- * 
+ *
+ * Confirmed success. No service-specific parameters.
+ * ISO 9506-1:2003 §17.3.1.2. ISO 9506-2:2003 §17.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

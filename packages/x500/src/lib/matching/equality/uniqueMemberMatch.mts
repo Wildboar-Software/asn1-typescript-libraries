@@ -8,6 +8,14 @@ import {
 import compareDistinguishedName from "../../comparators/compareDistinguishedName.mjs";
 import { Buffer } from "node:buffer";
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.2.11 `uniqueMemberMatch`.
+ *
+ * Equality of `NameAndOptionalUID`. The `dn` components must match
+ * with `distinguishedNameMatch`. TRUE if that holds and either the
+ * stored `uid` is absent or it matches the presented `uid` with
+ * `bitStringMatch`.
+ */
 export
 const uniqueMemberMatch: EqualityMatcher = (
     assertion: ASN1Element,

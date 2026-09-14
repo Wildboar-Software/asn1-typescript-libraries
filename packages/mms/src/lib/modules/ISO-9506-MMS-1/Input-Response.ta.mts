@@ -17,7 +17,12 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
 /**
  * @summary Input_Response
  * @description
- * 
+ *
+ * Input String from the operator. One input buffer; end-of-line
+ * is not included. Multi-line input needs multiple Input
+ * requests. ISO 9506-1:2003 §17.2.1.2.1. ISO 9506-2:2003
+ * §17.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

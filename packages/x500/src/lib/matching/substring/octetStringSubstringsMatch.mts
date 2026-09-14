@@ -7,6 +7,14 @@ import {
 } from "../../modules/SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
 import { Buffer } from "node:buffer";
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.2.7
+ * `octetStringSubstringsMatch`.
+ *
+ * TRUE iff the stored OCTET STRING contains the presented
+ * `OctetSubstringAssertion` octets with the same initial/any/final
+ * partitioning as `caseIgnoreSubstringsMatch`.
+ */
 export
 const octetStringSubstringsMatch: SubstringsMatcher = (
     assertion: ASN1Element,

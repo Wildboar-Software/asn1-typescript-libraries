@@ -17,6 +17,9 @@ import { Severity, _decode_Severity, _encode_Severity } from "../MMS-Object-Modu
  * @summary normalSeverity
  * @description
  * 
+ * Severity value 64: normal severity
+ * (range 0..127). ISO 9506-1:2003 §19.1.1.6, §25.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FileDelete_Response
  * @description
- * 
+ *
+ * Result(+): empty. Delete succeeded.
+ * Informative Annex D.
+ *
+ * [ISO 9506-1:2003 Annex D, D.7.1.2]
+ * [ISO 9506-2:2003 Annex D, D.6.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

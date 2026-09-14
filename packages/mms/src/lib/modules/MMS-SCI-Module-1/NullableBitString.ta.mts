@@ -18,6 +18,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NullableBitString
  * @description
  * 
+ * SCI encoding helper: zero octets mean
+ * NULL; otherwise a BIT STRING under the encoding rules in use. Used
+ * where Annex B substitutes NULL for unsupported CBB fields. SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU.
+ * ISO 9506-2:2003 Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -22,7 +22,20 @@ import { AlternateAccessSelection_selectAccess_indexRange, _decode_AlternateAcce
 /**
  * @summary AlternateAccessSelection_selectAccess
  * @description
- * 
+ *
+ * SELECT-ACCESS: the selected sub-tree is accessed in
+ * full. Component requires `str2`; index/indexRange
+ * require `str1`. `allElements` is a sender option when
+ * INDEX-RANGE has Low Index and Number Of Elements both
+ * zero (same meaning as that indexRange).
+ * ISO 9506-1:2003 §14.3.1.1.4. ISO 9506-2:2003 §14.3.1.
+ *
+ * - `component`: one structure component (`str2`).
+ * - `index`: one array element (`str1`).
+ * - `indexRange`: a range of array elements (`str1`).
+ * - `allElements`: whole array; equivalent to indexRange
+ *   0/0.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

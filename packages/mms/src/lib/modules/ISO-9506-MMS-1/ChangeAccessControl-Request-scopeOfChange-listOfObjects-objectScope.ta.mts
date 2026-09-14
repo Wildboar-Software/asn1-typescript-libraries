@@ -21,6 +21,21 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary ChangeAccessControl_Request_scopeOfChange_listOfObjects_objectScope
  * @description
  * 
+ * Object Scope of ChangeAccessControl (ISO 9506-1:2003 §9.7.1.1.4;
+ * ISO 9506-2:2003 §9.7).
+ *
+ * `specific`: named objects of the given class. For Domain, Program Invocation,
+ * Semaphore, Data Exchange, or Access Control List, do not use domain-specific
+ * or aa-specific ObjectName choices.
+ *
+ * `aa-specific`: all named objects of the class in the current application
+ * association.
+ *
+ * `domain`: Identifier of the Domain containing all named objects of the class
+ * to change.
+ *
+ * `vmd`: all VMD-scoped named objects of the class.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

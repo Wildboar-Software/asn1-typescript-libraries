@@ -24,7 +24,15 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
 /**
  * @summary DefineEventEnrollment_Request
  * @description
- * 
+ *
+ * Confirmed request: create a `notification` Event Enrollment (not `modifier`;
+ * those come from AttachToEventCondition). Duration is `current` (this AA) or
+ * `permanent` (until deleted). `&aaRule` applies only when the Event Condition
+ * is monitored. Disabled conditions do not notify. Result(+) empty.
+ *
+ * [ISO 9506-1:2003 §21.2]
+ * [ISO 9506-2:2003 §21.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,36 +53,75 @@ class DefineEventEnrollment_Request {
     constructor (
         /**
          * @summary `eventEnrollmentName`.
+         * @description
+         *
+         * `&name` of the enrollment to create.
+         *
+         * [ISO 9506-1:2003 §21.2.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventEnrollmentName: ObjectName,
         /**
          * @summary `eventConditionName`.
+         * @description
+         *
+         * Event Condition that drives this enrollment.
+         *
+         * [ISO 9506-1:2003 §21.2.1.1.2]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionName: ObjectName,
         /**
          * @summary `eventConditionTransitions`.
+         * @description
+         *
+         * `&ecTransitions`. Empty set for network-triggered. If `&aaRule` is not
+         * `none`, must include transitions to active; `ack-all` also idle.
+         *
+         * [ISO 9506-1:2003 §21.2.1.1.3]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionTransitions: Transitions,
         /**
          * @summary `alarmAcknowledgmentRule`.
+         * @description
+         *
+         * `&aaRule`: `none` (ack allowed, no `&ackState` effect), `simple` (active ack
+         * updates state), `ack-active` (active ack required), `ack-all` (active and
+         * idle required). Never required for disabled transitions.
+         *
+         * [ISO 9506-1:2003 §21.2.1.1.4]
+         *
          * @public
          * @readonly
          */
         readonly alarmAcknowledgmentRule: AlarmAckRule,
         /**
          * @summary `eventActionName`.
+         * @description
+         *
+         * Optional Event Action executed on matching transitions.
+         *
+         * [ISO 9506-1:2003 §21.2.1.1.5]
+         *
          * @public
          * @readonly
          */
         readonly eventActionName: OPTIONAL<ObjectName>,
         /**
          * @summary `clientApplication`.
+         * @description
+         *
+         * Enrolled client. Requires `tpy`. Default: requesting client.
+         *
+         * [ISO 9506-1:2003 §21.2.1.1.6]
+         *
          * @public
          * @readonly
          */

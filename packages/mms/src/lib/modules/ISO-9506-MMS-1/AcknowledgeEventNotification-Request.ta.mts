@@ -21,7 +21,17 @@ import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-M
 /**
  * @summary AcknowledgeEventNotification_Request
  * @description
- * 
+ *
+ * Confirmed request: the client's user (typically an
+ * operator) has acknowledged an EventNotification. Fields
+ * must match that notification's enrollment name, current
+ * state, and transition time. Whether ack is required
+ * depends on the enrollment `&aaRule` (`none`, `simple`,
+ * `ack-active`, `ack-all`). Duplicate or stale acks are
+ * skipped. Result(+) is empty.
+ *
+ * [ISO 9506-1:2003 §18.4] [ISO 9506-2:2003 §18.4]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,18 +48,41 @@ class AcknowledgeEventNotification_Request {
     constructor (
         /**
          * @summary `eventEnrollmentName`.
+         * @description
+         *
+         * Must equal the Event Enrollment Name of the
+         * EventNotification being acknowledged.
+         *
+         * [ISO 9506-1:2003 §18.4.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly eventEnrollmentName: ObjectName,
         /**
          * @summary `acknowledgedState`.
+         * @description
+         *
+         * Must equal the Current State of the
+         * EventNotification being acknowledged. ACTIVE
+         * updates `&timeActiveAck`; IDLE updates
+         * `&timeIdleAck`.
+         *
+         * [ISO 9506-1:2003 §18.4.1.1.2]
+         *
          * @public
          * @readonly
          */
         readonly acknowledgedState: EC_State,
         /**
          * @summary `timeOfAcknowledgedTransition`.
+         * @description
+         *
+         * Must equal the Transition Time of the
+         * EventNotification being acknowledged.
+         *
+         * [ISO 9506-1:2003 §18.4.1.1.3]
+         *
          * @public
          * @readonly
          */

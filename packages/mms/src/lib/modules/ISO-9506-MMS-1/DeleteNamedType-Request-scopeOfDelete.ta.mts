@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DeleteNamedType_Request_scopeOfDelete
  * @description
- * 
+ *
+ * Scope of Delete for DeleteNamedType.
+ * ISO 9506-1:2003 §14.17.1.1.1. ISO 9506-2:2003 §14.17.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +38,11 @@ type DeleteNamedType_Request_scopeOfDelete = INTEGER;
 
 /**
  * @summary DeleteNamedType_Request_scopeOfDelete_specific
+ * @description
+ *
+ * Delete the Named Types named in List Of Type Name.
+ * ISO 9506-1:2003 §14.17.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -43,6 +51,11 @@ const DeleteNamedType_Request_scopeOfDelete_specific: DeleteNamedType_Request_sc
 
 /**
  * @summary DeleteNamedType_Request_scopeOfDelete_specific
+ * @description
+ *
+ * Delete the Named Types named in List Of Type Name.
+ * ISO 9506-1:2003 §14.17.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +64,11 @@ const specific: DeleteNamedType_Request_scopeOfDelete = DeleteNamedType_Request_
 
 /**
  * @summary DeleteNamedType_Request_scopeOfDelete_aa_specific
+ * @description
+ *
+ * Delete all Named Types in the current AA scope.
+ * ISO 9506-1:2003 §14.17.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +77,11 @@ const DeleteNamedType_Request_scopeOfDelete_aa_specific: DeleteNamedType_Request
 
 /**
  * @summary DeleteNamedType_Request_scopeOfDelete_aa_specific
+ * @description
+ *
+ * Delete all Named Types in the current AA scope.
+ * ISO 9506-1:2003 §14.17.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +90,11 @@ const aa_specific: DeleteNamedType_Request_scopeOfDelete = DeleteNamedType_Reque
 
 /**
  * @summary DeleteNamedType_Request_scopeOfDelete_domain
+ * @description
+ *
+ * Delete all Named Types in the named Domain.
+ * ISO 9506-1:2003 §14.17.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +103,11 @@ const DeleteNamedType_Request_scopeOfDelete_domain: DeleteNamedType_Request_scop
 
 /**
  * @summary DeleteNamedType_Request_scopeOfDelete_domain
+ * @description
+ *
+ * Delete all Named Types in the named Domain.
+ * ISO 9506-1:2003 §14.17.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +116,11 @@ const domain: DeleteNamedType_Request_scopeOfDelete = DeleteNamedType_Request_sc
 
 /**
  * @summary DeleteNamedType_Request_scopeOfDelete_vmd
+ * @description
+ *
+ * Delete all VMD-scoped Named Types.
+ * ISO 9506-1:2003 §14.17.1.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +129,11 @@ const DeleteNamedType_Request_scopeOfDelete_vmd: DeleteNamedType_Request_scopeOf
 
 /**
  * @summary DeleteNamedType_Request_scopeOfDelete_vmd
+ * @description
+ *
+ * Delete all VMD-scoped Named Types.
+ * ISO 9506-1:2003 §14.17.1.1.1.
+ *
  * @constant
  * @type {number}
  */

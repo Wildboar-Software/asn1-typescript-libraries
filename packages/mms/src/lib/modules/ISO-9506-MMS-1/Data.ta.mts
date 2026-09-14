@@ -29,7 +29,35 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
 /**
  * @summary Data
  * @description
- * 
+ *
+ * Value of an MMS variable for Read, Write, and
+ * InformationReport. Recursively mirrors the type tree
+ * (or derived type after alternate access). Kind Of Data
+ * is ARRAY (`str1`), STRUCTURE (`str2`), or SIMPLE.
+ * Context tag 0 is reserved for AccessResult; [8] is
+ * reserved (Edition 1 REAL, deprecated).
+ * ISO 9506-1:2003 §14.4.2. ISO 9506-2:2003 §14.4.2.
+ *
+ * - `array`: ordered element values from index 0 (`str1`).
+ * - `structure`: ordered component values (`str2`).
+ * - `boolean_`: BOOLEAN (ISO/IEC 8824-1).
+ * - `bit_string`: BIT STRING.
+ * - `integer`: INTEGER.
+ * - `unsigned`: non-negative INTEGER.
+ * - `floating_point`: FloatingPoint (ISO 9506-2:2003
+ *   §14.4.2.2).
+ * - `octet_string`: OCTET STRING.
+ * - `visible_string`: VisibleString.
+ * - `generalized_time`: GeneralizedTime.
+ * - `binary_time`: TimeOfDay (BINARY TIME).
+ * - `bcd`: BCD as equivalent non-negative INTEGER (ISO
+ *   9506-2:2003 §14.4.2.3).
+ * - `booleanArray`: sender option for a boolean array;
+ *   bit i is element i (1=true). Same meaning as `array`
+ *   of booleans (ISO 9506-2:2003 §14.4.2.1).
+ * - `objId`: OBJECT IDENTIFIER.
+ * - `mMSString`: MMS STRING (ISO/IEC 646 or UCS).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

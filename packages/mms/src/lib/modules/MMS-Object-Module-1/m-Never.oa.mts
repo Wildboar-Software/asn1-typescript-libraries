@@ -24,6 +24,11 @@ import { type ACCESS_CONTROL_LIST } from "../MMS-Object-Module-1/ACCESS-CONTROL-
  * @summary m_Never
  * @description
  * 
+ * MMS Standardized Name `M_Never` (prefix `M_`).
+ * Predefined ACL used to govern other Standardized ACLs. Delete and
+ * edit are never. Lists `M_Deletable`, `M_NonDeletable`, `M_Never`,
+ * `M_ReadOnly`, and Event Condition `M_Violation`. ISO 9506-1:2003 §25.3.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

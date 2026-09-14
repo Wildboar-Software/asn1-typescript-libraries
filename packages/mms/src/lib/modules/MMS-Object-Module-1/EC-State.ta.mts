@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EC_State
  * @description
  * 
+ * Event Condition state: disabled, idle, or
+ * active. Always disabled for network-triggered conditions.
+ * ISO 9506-1:2003 §19.1.1.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +38,11 @@ type EC_State = INTEGER;
 
 /**
  * @summary EC_State_disabled
+ * @description
+ *
+ * Not monitoring / network-triggered idle form. Always this value if
+ * network-triggered. ISO 9506-1:2003 §19.1.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +51,11 @@ const EC_State_disabled: EC_State = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_State_disabled
+ * @description
+ *
+ * Not monitoring / network-triggered idle form. Always this value if
+ * network-triggered. ISO 9506-1:2003 §19.1.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -50,6 +64,10 @@ const disabled: EC_State = EC_State_disabled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_State_idle
+ * @description
+ *
+ * Monitored condition currently idle. ISO 9506-1:2003 §19.1.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +76,10 @@ const EC_State_idle: EC_State = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_State_idle
+ * @description
+ *
+ * Monitored condition currently idle. ISO 9506-1:2003 §19.1.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -66,6 +88,10 @@ const idle: EC_State = EC_State_idle; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_State_active
+ * @description
+ *
+ * Monitored condition currently active. ISO 9506-1:2003 §19.1.1.4.
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +100,10 @@ const EC_State_active: EC_State = 2; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_State_active
+ * @description
+ *
+ * Monitored condition currently active. ISO 9506-1:2003 §19.1.1.4.
+ *
  * @constant
  * @type {number}
  */

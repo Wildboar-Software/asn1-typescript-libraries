@@ -19,6 +19,10 @@ import { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "../ISO-95
  * @summary GetAccessControlListAttributes_Response_references_Item
  * @description
  * 
+ * One Counts of Controlled Objects entry: class plus how many objects of that
+ * class reference this ACL. Omitted when the count would be zero.
+ * ISO 9506-1:2003 §9.4.1.2.4; ISO 9506-2:2003 §9.4.2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,21 @@ class GetAccessControlListAttributes_Response_references_Item {
     constructor (
         /**
          * @summary `objectClass`.
+         * @description
+         *
+         * Object class of the counted set. ISO 9506-1:2003 §9.4.1.2.4.1.
+         *
          * @public
          * @readonly
          */
         readonly objectClass: ObjectClass,
         /**
          * @summary `objectCount`.
+         * @description
+         *
+         * Number of objects of that class in the corresponding Controlled
+         * Object List field. ISO 9506-1:2003 §9.4.1.2.4.2.
+         *
          * @public
          * @readonly
          */
@@ -51,7 +64,8 @@ class GetAccessControlListAttributes_Response_references_Item {
      * @summary Restructures an object into a GetAccessControlListAttributes_Response_references_Item
      * @description
      * 
-     * This takes an `object` and converts it to a `GetAccessControlListAttributes_Response_references_Item`.
+     * This takes an `object` and converts it to a
+     * `GetAccessControlListAttributes_Response_references_Item`.
      * 
      * @public
      * @static
@@ -70,7 +84,8 @@ class GetAccessControlListAttributes_Response_references_Item {
  * @summary The Leading Root Component Types of GetAccessControlListAttributes_Response_references_Item
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -84,7 +99,8 @@ const _root_component_type_list_1_spec_for_GetAccessControlListAttributes_Respon
  * @summary The Trailing Root Component Types of GetAccessControlListAttributes_Response_references_Item
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -97,7 +113,8 @@ const _root_component_type_list_2_spec_for_GetAccessControlListAttributes_Respon
  * @summary The Extension Addition Component Types of GetAccessControlListAttributes_Response_references_Item
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

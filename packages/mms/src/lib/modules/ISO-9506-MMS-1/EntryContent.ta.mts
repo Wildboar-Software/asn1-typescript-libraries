@@ -19,7 +19,13 @@ import { EntryContent_entryForm, _decode_EntryContent_entryForm, _encode_EntryCo
 /**
  * @summary EntryContent
  * @description
- * 
+ *
+ * Journal entry payload used by WriteJournal and ReadJournal.
+ * `occurrenceTime` is the client-supplied time associated with the
+ * comment, event, or variables. Form is data (`event-data` or
+ * `data`) or annotation. ISO 9506-1:2003 §23.1.2, §23.3.1.1.2.
+ * ISO 9506-2:2003 §23.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,12 +49,23 @@ class EntryContent {
     constructor (
         /**
          * @summary `occurrenceTime`.
+         * @description
+         *
+         * Time associated with the entry (`&timeStamp`).
+         * ISO 9506-1:2003 §23.1.2.4, §23.3.1.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly occurrenceTime: TimeOfDay,
         /**
          * @summary `entryForm`.
+         * @description
+         *
+         * `data` (event and/or journal variables) or `annotation`.
+         * ISO 9506-1:2003 §23.1.2.6, §23.3.1.1.2.2.
+         * ISO 9506-2:2003 §23.8.1.1.
+         *
          * @public
          * @readonly
          */

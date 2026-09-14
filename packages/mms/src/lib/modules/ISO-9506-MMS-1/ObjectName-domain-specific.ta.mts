@@ -17,7 +17,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary ObjectName_domain_specific
  * @description
- * 
+ *
+ * Domain-scoped object name: Domain identifier plus item identifier
+ * (ISO 9506-1:2003 §7.5.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +37,20 @@ class ObjectName_domain_specific {
     constructor (
         /**
          * @summary `domainID`.
+         * @description
+         *
+         * VMD-specific Identifier of the Domain that contains the object
+         * (ISO 9506-1:2003 §7.5.3.1).
          * @public
          * @readonly
          */
         readonly domainID: Identifier,
         /**
          * @summary `itemID`.
+         * @description
+         *
+         * Object name unique within that Domain for this object class
+         * (ISO 9506-1:2003 §7.5.3.2).
          * @public
          * @readonly
          */
@@ -69,8 +80,8 @@ class ObjectName_domain_specific {
  * @summary The Leading Root Component Types of ObjectName_domain_specific
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -83,8 +94,8 @@ const _root_component_type_list_1_spec_for_ObjectName_domain_specific: $.Compone
  * @summary The Trailing Root Component Types of ObjectName_domain_specific
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -96,8 +107,8 @@ const _root_component_type_list_2_spec_for_ObjectName_domain_specific: $.Compone
  * @summary The Extension Addition Component Types of ObjectName_domain_specific
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -152,7 +163,7 @@ function _encode_ObjectName_domain_specific (value: ObjectName_domain_specific, 
             /* REQUIRED   */ _encode_Identifier(value.domainID, $.BER),
             /* REQUIRED   */ _encode_Identifier(value.itemID, $.BER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+   ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
     return _cached_encoder_for_ObjectName_domain_specific(value, elGetter);
 }

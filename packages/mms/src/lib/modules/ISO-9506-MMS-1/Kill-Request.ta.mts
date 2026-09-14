@@ -18,6 +18,9 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary Kill_Request
  * @description
  * 
+ * Client request to place a Program Invocation in `unrunnable`. Atomic; failure
+ * leaves the PI state unchanged. ISO 9506-1:2003 §12.8. ISO 9506-2:2003 §12.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +35,10 @@ class Kill_Request {
     constructor (
         /**
          * @summary `programInvocationName`.
+         * @description
+         *
+         * Program Invocation to kill. ISO 9506-1:2003 §12.8.1.1.1.
+         *
          * @public
          * @readonly
          */

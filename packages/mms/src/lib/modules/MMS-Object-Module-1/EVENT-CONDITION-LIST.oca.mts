@@ -20,6 +20,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary EVENT_CONDITION_LIST
  * @description
  * 
+ * Named group of Event Conditions
+ * operated on together. Nested lists require the recl CBB; no circular
+ * references. ISO 9506-1:2003 §22.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,22 +59,46 @@ interface EVENT_CONDITION_LIST {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * ObjectName unique in VMD/Domain/AA scope. ISO 9506-1:2003 §22.1.1.1.
+     *
      */
     readonly "&name"?: ObjectName;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating DeleteEventConditionList (spec text in §22.1.1.2 also mentions
+     * a boolean deletable sense). ISO 9506-1:2003 §22.1.1.2.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &EventConditions
+     * @description
+     *
+     * Member Event Conditions. VMD/Domain-scoped lists may not include
+     * AA-scoped ECs. ISO 9506-1:2003 §22.1.1.3.
+     *
      */
     readonly "&EventConditions"?: ObjectName;
     /**
      * @summary &EventConditionLists
+     * @description
+     *
+     * Subordinate lists (recl); no cycles. Same visibility rules as
+     * &EventConditions. ISO 9506-1:2003 §22.1.1.4.
+     *
      */
     readonly "&EventConditionLists"?: ObjectName;
     /**
      * @summary &ReferencingEventConditionLists
+     * @description
+     *
+     * Lists that reference this one (recl). Not visible or modifiable via MMS.
+     * ISO 9506-1:2003 §22.1.1.5.
+     *
      */
     readonly "&ReferencingEventConditionLists"?: ObjectName;
 };

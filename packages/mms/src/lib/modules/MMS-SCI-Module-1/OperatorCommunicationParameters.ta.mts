@@ -18,6 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OperatorCommunicationParameters
  * @description
  * 
+ * Operator Communication
+ * CIS parameter (Table 37): input-time-out. SCI configuration/initialization
+ * encoding (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

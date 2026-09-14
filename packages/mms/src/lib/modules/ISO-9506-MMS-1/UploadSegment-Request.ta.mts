@@ -18,6 +18,9 @@ import { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS
  * @summary UploadSegment_Request
  * @description
  * 
+ * Client request for the next upload segment. Value is the ULSM ID from
+ * InitiateUploadSequence. ULSM must still exist. ISO 9506-1:2003 §11.6. ISO 9506-2:2003 §11.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

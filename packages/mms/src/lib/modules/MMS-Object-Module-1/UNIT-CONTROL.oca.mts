@@ -18,6 +18,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary UNIT_CONTROL
  * @description
  * 
+ * A VMD-specific collection of Domains and
+ * Program Invocations loaded and managed as a unit (one download/upload
+ * sequence for many objects). ISO 9506-1:2003 §13.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,18 +56,34 @@ interface UNIT_CONTROL {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * VMD-specific Unit Control name. ISO 9506-1:2003 §13.1.1.1.
+     *
      */
     readonly "&name"?: Identifier;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating DeleteUnitControl. ISO 9506-1:2003 §13.1.1.2.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &Domains
+     * @description
+     *
+     * Constituent Domains affected by UC operations. ISO 9506-1:2003 §13.1.1.3.
+     *
      */
     readonly "&Domains"?: Identifier;
     /**
      * @summary &ProgramInvocations
+     * @description
+     *
+     * Constituent PIs affected by UC operations. ISO 9506-1:2003 §13.1.1.4.
+     *
      */
     readonly "&ProgramInvocations"?: Identifier;
 };

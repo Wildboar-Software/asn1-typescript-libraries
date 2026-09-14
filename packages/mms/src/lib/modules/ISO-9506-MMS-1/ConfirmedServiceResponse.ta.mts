@@ -191,7 +191,12 @@ import { decodeWithRejectPDUFallback, encodeWithRejectPDUFallback } from "../../
 /**
  * @summary ConfirmedServiceResponse
  * @description
- * 
+ *
+ * CHOICE of confirmed MMS service Result(+) values. The context tag must match
+ * the request's service. Each alternative is the success response of a
+ * confirmed service from ISO 9506-1:2003 clauses 8–23 or AdditionalService (tag
+ * [78]). Unsupported alternatives are RejectPDU (ISO 9506-2:2003 §7.3.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -351,7 +356,7 @@ import { decodeWithRejectPDUFallback, encodeWithRejectPDUFallback } from "../../
  *     fileDelete [76] IMPLICIT RejectPDU,
  *     fileDirectory [77] IMPLICIT FileDirectory-Response,
  *     fileDirectory [77] IMPLICIT RejectPDU,
- *     ...,
+ *    ...,
  *     additionalService [78] AdditionalService-Response,
  *     -- choice [79] is reserved
  *     getDataExchangeAttributes [80] GetDataExchangeAttributes-Response,
@@ -368,7 +373,7 @@ import { decodeWithRejectPDUFallback, encodeWithRejectPDUFallback } from "../../
  *     -- Shall not appear in minor version 1 or 2
  *     changeAccessControl [86] IMPLICIT ChangeAccessControl-Response,
  *     -- Shall not appear in minor version 1 or 2
- *     ...
+ *    ...
  * }
  * ```
  */

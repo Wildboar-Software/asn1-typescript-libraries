@@ -19,6 +19,11 @@ import { Access_Control_List_instance_definition_details, _decode_Access_Control
  * @summary Access_Control_List_instance_definition
  * @description
  * 
+ * CHOICE of
+ * Standardized Name OID or inline ACL details. SCI configuration/initialization
+ * encoding (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

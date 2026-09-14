@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AlterEventConditionListMonitoring_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): list monitoring altered. Empty.
+ *
+ * [ISO 9506-1:2003 §22.8.1.2]
+ * [ISO 9506-2:2003 §22.8.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

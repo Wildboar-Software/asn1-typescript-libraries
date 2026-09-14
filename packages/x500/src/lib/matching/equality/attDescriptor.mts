@@ -7,6 +7,15 @@ import {
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
 import { Buffer } from "node:buffer";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 17.3.2.2.2 `attDescriptor`.
+ *
+ * Selects an attribute descriptor certificate. TRUE iff the stored
+ * AC contains the `attributeDescriptor` extension and every
+ * component present in the presented
+ * `AttributeDescriptorSyntax` matches the corresponding stored
+ * component.
+ */
 export
 const attDescriptor: EqualityMatcher = (
     assertion: ASN1Element,

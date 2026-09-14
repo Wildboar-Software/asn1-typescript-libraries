@@ -18,6 +18,10 @@ import { ProgramInvocationState, _decode_ProgramInvocationState, _encode_Program
  * @summary Start_Error
  * @description
  * 
+ * Result(-) of Start: Program Invocation state after failure. Server returns
+ * the PI to the previous state if possible, else `unrunnable`. ISO 9506-1:2003
+ * §12.4.1.3.1. ISO 9506-2:2003 §12.4.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

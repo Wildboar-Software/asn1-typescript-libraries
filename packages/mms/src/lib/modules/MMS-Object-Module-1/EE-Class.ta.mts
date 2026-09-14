@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EE_Class
  * @description
  * 
+ * Event Enrollment class. modifier (0) =
+ * AttachToEventCondition on a confirmed service; notification (1) =
+ * explicit/predefined notification request. ISO 9506-1:2003 §21.1.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +37,11 @@ type EE_Class = INTEGER;
 
 /**
  * @summary EE_Class_modifier
+ * @description
+ *
+ * One-shot enrollment from AttachToEventCondition; not Alter/Delete-able. ISO
+ * 9506-1:2003 §21.1.1.3.1.
+ *
  * @constant
  * @type {number}
  */
@@ -41,6 +50,11 @@ const EE_Class_modifier: EE_Class = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Class_modifier
+ * @description
+ *
+ * One-shot enrollment from AttachToEventCondition; not Alter/Delete-able. ISO
+ * 9506-1:2003 §21.1.1.3.1.
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +63,11 @@ const modifier: EE_Class = EE_Class_modifier; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Class_notification
+ * @description
+ *
+ * Explicit or predefined request for Event-Transition Processing. ISO
+ * 9506-1:2003 §21.1.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -57,6 +76,11 @@ const EE_Class_notification: EE_Class = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Class_notification
+ * @description
+ *
+ * Explicit or predefined request for Event-Transition Processing. ISO
+ * 9506-1:2003 §21.1.1.3.2.
+ *
  * @constant
  * @type {number}
  */

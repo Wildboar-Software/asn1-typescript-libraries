@@ -28,6 +28,12 @@ import { Running_Mode, _decode_Running_Mode, _encode_Running_Mode } from "../MMS
  * @summary PROGRAM_INVOCATION
  * @description
  * 
+ * An execution thread over one or more
+ * Domains plus control information. Closest MMS analogue of a task in a
+ * multi-tasking environment. May be predefined or created/deleted by MMS
+ * or locally. Reusable PIs return to idle after completion; others
+ * become unrunnable. ISO 9506-1:2003 §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,74 +96,156 @@ interface PROGRAM_INVOCATION {
     }>;
     /**
      * @summary &name
+     * @description
+     *
+     * Unique PI name within the VMD. ISO 9506-1:2003 §12.1.1.1.
+     *
      */
     readonly "&name"?: Identifier;
     /**
      * @summary &programInvocationState
+     * @description
+     *
+     * Principal PI state. ISO 9506-1:2003 §12.1.1.2.
+     *
      */
     readonly "&programInvocationState"?: ProgramInvocationState;
     /**
      * @summary &Domains
+     * @description
+     *
+     * Subordinate Domains; at least one. ISO 9506-1:2003 §12.1.1.3.
+     *
      */
     readonly "&Domains"?: Identifier;
     /**
      * @summary &accessControl
+     * @description
+     *
+     * ACL gating execute, delete, and ACL change. ISO 9506-1:2003 §12.1.1.4.
+     *
      */
     readonly "&accessControl"?: Identifier;
     /**
      * @summary &reusable
+     * @description
+     *
+     * true = return to idle after normal completion; false = become unrunnable.
+     * ISO 9506-1:2003 §12.1.1.5.
+     *
      */
     readonly "&reusable"?: BOOLEAN;
     /**
      * @summary &monitor
+     * @description
+     *
+     * If true, Event Management notifies enrolled clients when the PI leaves
+     * running (auto Event Condition/Action/ Enrollment of the same name). ISO
+     * 9506-1:2003 §12.1.1.6.
+     *
      */
     readonly "&monitor"?: BOOLEAN;
     /**
      * @summary &eventCondition
+     * @description
+     *
+     * If monitoring: monitored EC named as this PI; enabled; unspecified
+     * monitored variable (PI running); M_Deletable. ISO 9506-1:2003 §12.1.1.7.
+     *
      */
     readonly "&eventCondition"?: Identifier;
     /**
      * @summary &eventAction
+     * @description
+     *
+     * If monitoring: Event Action that runs GetProgramInvocationAttributes. ISO
+     * 9506-1:2003 §12.1.1.8.
+     *
      */
     readonly "&eventAction"?: Identifier;
     /**
      * @summary &eventEnrollment
+     * @description
+     *
+     * If monitoring: notification enrollment on active-to-idle. ISO 9506-1:2003
+     * §12.1.1.9.
+     *
      */
     readonly "&eventEnrollment"?: Identifier;
     /**
      * @summary &executionArgument
+     * @description
+     *
+     * Argument string supplied at Start/Resume. ISO 9506-1:2003 §12.1.1.
+     *
      */
     readonly "&executionArgument"?: MMSString;
     /**
      * @summary &errorCode
+     * @description
+     *
+     * csr CBB: implementation error code. ISO 9506-1:2003 §12.1.1.
+     *
      */
     readonly "&errorCode"?: INTEGER;
     /**
      * @summary &control
+     * @description
+     *
+     * csr CBB: normal, controlling, or controlled. ISO 9506-1:2003 §12.1.1.12.
+     *
      */
     readonly "&control"?: Control_State;
     /**
      * @summary &controlling-Program-Invocation
+     * @description
+     *
+     * Present iff &control is controlled: the controlling PI. ISO 9506-1:2003
+     * §12.1.1.13.
+     *
      */
     readonly "&controlling-Program-Invocation"?: Identifier;
     /**
      * @summary &Controlled-Program-Invocations
+     * @description
+     *
+     * Present iff &control is controlling: coupled controlled PIs (may be
+     * empty). ISO 9506-1:2003 §12.1.1.14.
+     *
      */
     readonly "&Controlled-Program-Invocations"?: Identifier;
     /**
      * @summary &program-Location
+     * @description
+     *
+     * csr, controlling: optional source-line notation; format in the CIS. ISO
+     * 9506-1:2003 §12.1.1.15.
+     *
      */
     readonly "&program-Location"?: MMSString;
     /**
      * @summary &running-Mode
+     * @description
+     *
+     * csr, controlling: free-run / cycle-limited / step-limited. ISO
+     * 9506-1:2003 §12.1.1.16.
+     *
      */
     readonly "&running-Mode"?: Running_Mode;
     /**
      * @summary &remaining-Cycle-Count
+     * @description
+     *
+     * csr, cycle-limited: cycles left. ISO 9506-1:2003 §12.1.1.17.
+     *
      */
     readonly "&remaining-Cycle-Count"?: INTEGER;
     /**
      * @summary &remaining-Step-Count
+     * @description
+     *
+     * csr, step-limited: steps left. ISO 9506-1:2003 §12.1.1.18.
+     *
      */
     readonly "&remaining-Step-Count"?: INTEGER;
 };

@@ -21,6 +21,10 @@ import { CS_GetProgramInvocationAttributes_Response_control_controlled, _decode_
  * @summary CS_GetProgramInvocationAttributes_Response_control
  * @description
  * 
+ * Companion-standard `&control` report. `controlling`: coupled PIs, optional
+ * program location, running mode. `controlled`: controlling PI or none.
+ * `normal`: no extras. ISO 9506-1:2003 §12.9.1.2.9–§12.9.1.2.19. ISO 9506-2:2003 §12.9.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

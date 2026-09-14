@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MMSString
  * @description
- * 
+ *
+ * User string. `notChar` (VisibleString, 94-character English set) when CBB
+ * `char` is not negotiated; `ifChar` (UTF8String / UNICODE) when `char` is
+ * negotiated (ISO 9506-2:2003 §7.5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

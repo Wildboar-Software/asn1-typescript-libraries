@@ -18,6 +18,11 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary DeleteUnitControl_Request
  * @description
  * 
+ * Client request to delete a Unit Control object and its constituents. Each PI
+ * must not be `running` (DeleteProgramInvocation); each Domain must not be
+ * `in-use` (DeleteDomain). Result(-) names the Domain or PI where deletion
+ * stopped; remaining members stay on the object. ISO 9506-1:2003 §13.14. ISO 9506-2:2003 §13.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

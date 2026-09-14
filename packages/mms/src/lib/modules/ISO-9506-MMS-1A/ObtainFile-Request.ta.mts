@@ -20,7 +20,19 @@ import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/
 /**
  * @summary ObtainFile_Request
  * @description
- * 
+ *
+ * Confirmed request: the client asks the MMS
+ * server to obtain a named file from a specified
+ * file server (possibly the requesting client)
+ * and store it in the server's filestore.
+ * Destination must not already exist; if transfer
+ * fails after create, the destination is deleted.
+ * Normative Annex C. CBB `tpy` gates
+ * `sourceFileServer`.
+ *
+ * [ISO 9506-1:2003 Annex C, C.1]
+ * [ISO 9506-2:2003 Annex C, C.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,18 +50,41 @@ class ObtainFile_Request {
     constructor (
         /**
          * @summary `sourceFileServer`.
+         * @description
+         *
+         * File server from which the source file is
+         * obtained. If absent, the requesting MMS
+         * client is the source. CBB `tpy`. Not all
+         * file servers need support MMS.
+         *
+         * [ISO 9506-1:2003 Annex C, C.1.1.1.1]
+         *
          * @public
          * @readonly
          */
         readonly sourceFileServer: OPTIONAL<ApplicationReference>,
         /**
          * @summary `sourceFile`.
+         * @description
+         *
+         * Unique name of a single existing file in
+         * the source file server's filestore.
+         *
+         * [ISO 9506-1:2003 Annex C, C.1.1.1.2]
+         *
          * @public
          * @readonly
          */
         readonly sourceFile: FileName,
         /**
          * @summary `destinationFile`.
+         * @description
+         *
+         * Name assigned to the newly acquired file
+         * in the MMS server's filestore.
+         *
+         * [ISO 9506-1:2003 Annex C, C.1.1.1.3]
+         *
          * @public
          * @readonly
          */

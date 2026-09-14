@@ -22,14 +22,18 @@ import { Response_Detail, _decode_Response_Detail, _encode_Response_Detail } fro
 /**
  * @summary Confirmed_ResponsePDU
  * @description
- * 
+ *
+ * Positive confirmed-service result. `invokeID` matches the request.
+ * `service-ext` carries companion-standard Response-Detail; omit when the value
+ * would be a tagged NULL (ISO 9506-1:2003 §5.5; ISO 9506-2:2003 §7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
  * Confirmed-ResponsePDU ::= SEQUENCE {
  *    invokeID            Unsigned32,
  *    service             ConfirmedServiceResponse,
- *    ...,
+ *   ...,
  *    service-ext         [79] Response-Detail OPTIONAL
  *                     -- shall not be transmitted if value is the value
  *                     -- of a tagged type derived from NULL
@@ -43,18 +47,32 @@ class Confirmed_ResponsePDU {
     constructor (
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Same value as the corresponding Confirmed-RequestPDU. Correlates this
+         * result with the outstanding request (ISO 9506-1:2003 §5.5;
+         * ISO 9506-2:2003 §7.3).
          * @public
          * @readonly
          */
         readonly invokeID: Unsigned32,
         /**
          * @summary `service`.
+         * @description
+         *
+         * Selects the confirmed service and its Result(+) (ISO 9506-2:2003
+         * §7.3.1).
          * @public
          * @readonly
          */
         readonly service: ConfirmedServiceResponse,
         /**
          * @summary `service_ext`.
+         * @description
+         *
+         * Companion-standard Response-Detail. Present only if `csr` or `cspi`
+         * was negotiated. Do not transmit if the value is a tagged NULL
+         * (ISO 9506-2:2003 §7.3).
          * @public
          * @readonly
          */
@@ -90,8 +108,8 @@ class Confirmed_ResponsePDU {
  * @summary The Leading Root Component Types of Confirmed_ResponsePDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -104,8 +122,8 @@ const _root_component_type_list_1_spec_for_Confirmed_ResponsePDU: $.ComponentSpe
  * @summary The Trailing Root Component Types of Confirmed_ResponsePDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -117,8 +135,8 @@ const _root_component_type_list_2_spec_for_Confirmed_ResponsePDU: $.ComponentSpe
  * @summary The Extension Addition Component Types of Confirmed_ResponsePDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -183,7 +201,7 @@ function _encode_Confirmed_ResponsePDU (value: Confirmed_ResponsePDU, elGetter: 
             /* IF_ABSENT  */ ((value.service_ext === undefined) ? undefined : $._encode_explicit(_TagClass.context, 79, () => _encode_Response_Detail, $.BER)(value.service_ext, $.BER))
         ],
         (value._unrecognizedExtensionsList ? value._unrecognizedExtensionsList : []),
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+   ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
     return _cached_encoder_for_Confirmed_ResponsePDU(value, elGetter);
 }

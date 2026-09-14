@@ -18,6 +18,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary Reset_Request
  * @description
  * 
+ * Client request to move a Program Invocation from `stopped` to `idle`
+ * (reusable) or `unrunnable` (not reusable), via transitory `resetting`.
+ * Result(-) returns Reset-Error (current PI state). ISO 9506-1:2003 §12.7. ISO 9506-2:2003 §12.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +36,11 @@ class Reset_Request {
     constructor (
         /**
          * @summary `programInvocationName`.
+         * @description
+         *
+         * Program Invocation to reset; must be `stopped`. ISO 9506-1:2003
+         * §12.7.1.1.1.
+         *
          * @public
          * @readonly
          */

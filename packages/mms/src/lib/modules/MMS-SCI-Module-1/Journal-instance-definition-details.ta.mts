@@ -20,6 +20,11 @@ import { Journal_Entry_instance, _decode_Journal_Entry_instance, _encode_Journal
  * @summary Journal_instance_definition_details
  * @description
  * 
+ * Inline Journal
+ * attributes in the SCI file. SCI configuration/initialization encoding (ISO
+ * 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003 Annex B.1.16;
+ * ISO 9506-1:2003 §23.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +41,11 @@ class Journal_instance_definition_details {
     constructor (
         /**
          * @summary `accessControl`.
+         * @description
+         *
+         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */

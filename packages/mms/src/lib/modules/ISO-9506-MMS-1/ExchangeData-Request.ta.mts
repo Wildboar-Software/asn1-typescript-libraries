@@ -19,7 +19,15 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
 /**
  * @summary ExchangeData_Request
  * @description
- * 
+ *
+ * Confirmed request to invoke a predefined procedure at
+ * the VMD via a Data Exchange object (remote procedure
+ * call / message function block). Success or failure of
+ * this service is not conditioned on procedure result;
+ * procedure output is in List of Response Data. Sets
+ * `&inUse` true for the duration of D-Exchange.
+ * ISO 9506-1:2003 §15.2. ISO 9506-2:2003 §15.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +43,23 @@ class ExchangeData_Request {
     constructor (
         /**
          * @summary `dataExchangeName`.
+         * @description
+         *
+         * `&name` of the Data Exchange object to invoke.
+         * ISO 9506-1:2003 §15.2.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly dataExchangeName: ObjectName,
         /**
          * @summary `listOfRequestData`.
+         * @description
+         *
+         * Input values matching `&request` in type and number.
+         * Empty list if there is no request data.
+         * ISO 9506-1:2003 §15.2.1.1.2.
+         *
          * @public
          * @readonly
          */

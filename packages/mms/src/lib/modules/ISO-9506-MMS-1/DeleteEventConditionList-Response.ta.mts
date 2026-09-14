@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DeleteEventConditionList_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): Event Condition List deleted. Empty.
+ *
+ * [ISO 9506-1:2003 §22.3.1.2]
+ * [ISO 9506-2:2003 §22.3.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

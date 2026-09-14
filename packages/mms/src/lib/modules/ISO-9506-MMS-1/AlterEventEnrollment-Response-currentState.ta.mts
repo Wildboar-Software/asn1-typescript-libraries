@@ -18,7 +18,13 @@ import { EE_State, _decode_EE_State, _encode_EE_State } from "../ISO-9506-MMS-1/
 /**
  * @summary AlterEventEnrollment_Response_currentState
  * @description
- * 
+ *
+ * `state` is EE-State. `undefined` if Current State of the confirm primitive
+ * is UNDEFINED.
+ *
+ * [ISO 9506-1:2003 §21.6.1.2.1]
+ * [ISO 9506-2:2003 §21.6.2.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

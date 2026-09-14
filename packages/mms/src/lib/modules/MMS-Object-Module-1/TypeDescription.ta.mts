@@ -28,6 +28,12 @@ import { TypeDescription_floating_point, _decode_TypeDescription_floating_point,
  * @summary TypeDescription
  * @description
  * 
+ * Abstract syntax and value range of a
+ * variable or Named Type. Array (str1) and structure (str2) are type
+ * trees; remaining arms are simple classes (size where applicable).
+ * Packed storage is valid only with vadr for public/unnamed types.
+ * ISO 9506-1:2003 §14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

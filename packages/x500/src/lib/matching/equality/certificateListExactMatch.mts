@@ -25,6 +25,16 @@ import compareElements from "../../comparators/compareElements.mjs";
 
 const SOUGHT_EXTENSION_OID: string = id_ce_issuingDistributionPoint.toString();
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 13.3.5
+ * `certificateListExactMatch`.
+ *
+ * Uniquely selects a single CRL (`CertificateList`). TRUE iff
+ * issuer `Name` and `thisUpdate` match. If `distributionPoint` is
+ * presented, the CRL must have an issuing distribution point
+ * extension whose name equals the assertion in at least one name
+ * form.
+ */
 export
 const certificateListExactMatch: EqualityMatcher = (
     assertion: ASN1Element,

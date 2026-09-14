@@ -20,6 +20,10 @@ import { Event_Enrollment_instance_definition, _decode_Event_Enrollment_instance
  * @summary Event_Enrollment_instance
  * @description
  * 
+ * SCI record for a predefined EVENT-ENROLLMENT (ISO 9506-1:2003 §21.1.1). SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003 Annex B.1.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,12 +63,21 @@ class Event_Enrollment_instance {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         *
+         * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly name: ObjectName,
         /**
          * @summary `definition`.
+         * @description
+         *
+         * Standardized Name OID (`reference`) or inline `details`. ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */

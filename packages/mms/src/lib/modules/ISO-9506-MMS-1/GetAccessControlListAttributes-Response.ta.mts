@@ -24,6 +24,13 @@ import { GetAccessControlListAttributes_Response_references_Item, _decode_GetAcc
  * @summary GetAccessControlListAttributes_Response
  * @description
  * 
+ * Confirmed Result(+) of GetAccessControlListAttributes: ACL name, elements,
+ * whether the VMD uses this ACL, per-class counts of controlled objects, and
+ * (if `aco` negotiated) the ACL that controls this ACL. Server returns the
+ * identified ACL's fields. Shall not appear in minor version 1 or 2 of the
+ * confirmed-service PDUs (ISO 9506-2:2003 ConfirmedServiceRequest/Response).
+ * ISO 9506-1:2003 §9.4.1.2; ISO 9506-2:2003 §9.4.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,30 +63,59 @@ class GetAccessControlListAttributes_Response {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         *
+         * VMD-specific Identifier of the ACL being returned. Equals the request
+         * name when the Access Control List Name choice was used.
+         * ISO 9506-1:2003 §9.4.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly name: Identifier,
         /**
          * @summary `accessControlListElements`.
+         * @description
+         *
+         * Zero or more Access Control Elements of the returned ACL.
+         * ISO 9506-1:2003 §9.4.1.2.2; ISO 9506-2:2003 §9.4.2.1.
+         *
          * @public
          * @readonly
          */
         readonly accessControlListElements: GetAccessControlListAttributes_Response_accessControlListElements,
         /**
          * @summary `vMDuse`.
+         * @description
+         *
+         * True if this ACL is referenced by the VMD's `&accessControl`.
+         * ISO 9506-1:2003 §9.4.1.2.3.
+         *
          * @public
          * @readonly
          */
         readonly vMDuse: BOOLEAN,
         /**
          * @summary `references`.
+         * @description
+         *
+         * Counts of Controlled Objects: one `objectClass`/`objectCount` pair
+         * per class that has a non-zero count of objects whose `&accessControl`
+         * references this ACL. Omit classes with count zero. ISO 9506-1:2003
+         * §9.4.1.2.4; ISO 9506-2:2003 §9.4.2.2.
+         *
          * @public
          * @readonly
          */
         readonly references: GetAccessControlListAttributes_Response_references_Item[],
         /**
          * @summary `accessControlList`.
+         * @description
+         *
+         * Name of the ACL that controls access to this ACL object. Present if
+         * and only if the `aco` parameter CBB has been negotiated.
+         * ISO 9506-1:2003 §9.4.1.2.5; ISO 9506-2:2003 §9.4.2.3.
+         *
          * @public
          * @readonly
          */
@@ -90,7 +126,8 @@ class GetAccessControlListAttributes_Response {
      * @summary Restructures an object into a GetAccessControlListAttributes_Response
      * @description
      * 
-     * This takes an `object` and converts it to a `GetAccessControlListAttributes_Response`.
+     * This takes an `object` and converts it to a
+     * `GetAccessControlListAttributes_Response`.
      * 
      * @public
      * @static
@@ -109,7 +146,8 @@ class GetAccessControlListAttributes_Response {
  * @summary The Leading Root Component Types of GetAccessControlListAttributes_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -126,7 +164,8 @@ const _root_component_type_list_1_spec_for_GetAccessControlListAttributes_Respon
  * @summary The Trailing Root Component Types of GetAccessControlListAttributes_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -139,7 +178,8 @@ const _root_component_type_list_2_spec_for_GetAccessControlListAttributes_Respon
  * @summary The Extension Addition Component Types of GetAccessControlListAttributes_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

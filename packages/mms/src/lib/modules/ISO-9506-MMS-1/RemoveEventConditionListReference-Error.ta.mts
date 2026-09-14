@@ -17,7 +17,12 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary RemoveEventConditionListReference_Error
  * @description
- * 
+ *
+ * Result(-) Object in error: `eventCondition` or `eventConditionList` name
+ * that caused the failure.
+ *
+ * [ISO 9506-1:2003 §22.5] [ISO 9506-2:2003 §22.5.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

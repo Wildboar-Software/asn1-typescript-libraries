@@ -19,6 +19,12 @@ import { Event_Action_instance_definition_details, _decode_Event_Action_instance
  * @summary Event_Action_instance_definition
  * @description
  * 
+ * CHOICE of
+ * Standardized Name OID or inline Event Action details. SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.1.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

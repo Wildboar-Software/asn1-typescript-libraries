@@ -28,6 +28,10 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  * @summary SEMAPHORE_ENTRY
  * @description
  * 
+ * One owner or waiter of a semaphore.
+ * Created by TakeControl, AttachToSemaphore, or locally. simple vs
+ * modifier class; queued/owner/hung entry state. ISO 9506-1:2003 §16.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -85,54 +89,114 @@ interface SEMAPHORE_ENTRY {
     }>;
     /**
      * @summary &entryID
+     * @description
+     *
+     * Unique among entries of the parent semaphore. ISO 9506-1:2003 §16.1.3.1.
+     *
      */
     readonly "&entryID"?: OCTET_STRING;
     /**
      * @summary &class
+     * @description
+     *
+     * modifier if created by AttachToSemaphore; else simple. ISO 9506-1:2003
+     * §16.1.3.2.
+     *
      */
     readonly "&class"?: SEMAPHORE_ENTRY_class;
     /**
      * @summary &semaphore
+     * @description
+     *
+     * Semaphore requested or owned. ISO 9506-1:2003 §16.1.3.3.
+     *
      */
     readonly "&semaphore"?: Identifier;
     /**
      * @summary &requester
+     * @description
+     *
+     * Application Process that created this entry. ISO 9506-1:2003 §16.1.3.4.
+     *
      */
     readonly "&requester"?: ApplicationReference;
     /**
      * @summary &aaIdentifier
+     * @description
+     *
+     * AA on which the entry was created. Not reported by MMS. ISO 9506-1:2003
+     * §16.1.3.5.
+     *
      */
     readonly "&aaIdentifier"?: INTEGER;
     /**
      * @summary &invokeID
+     * @description
+     *
+     * Transaction of the TakeControl or modified service. ISO 9506-1:2003
+     * §16.1.3.6.
+     *
      */
     readonly "&invokeID"?: INTEGER;
     /**
      * @summary &named-token
+     * @description
+     *
+     * Pool semaphore only: related named token. ISO 9506-1:2003 §16.1.3.7.
+     *
      */
     readonly "&named-token"?: Identifier;
     /**
      * @summary &priority
+     * @description
+     *
+     * Queue priority 0..127 (0 highest, 64 normal). Treatment is a local
+     * matter. ISO 9506-1:2003 §16.1.3.8.
+     *
      */
     readonly "&priority"?: Priority;
     /**
      * @summary &entryState
+     * @description
+     *
+     * queued (in requester list), owner (AA still up), or hung (AA lost). ISO
+     * 9506-1:2003 §16.1.3.9.
+     *
      */
     readonly "&entryState"?: SEMAPHORE_ENTRY_entryState;
     /**
      * @summary &remainingAcqDelay
+     * @description
+     *
+     * Time a queued entry may wait, or forever. Only if queued. ISO 9506-1:2003
+     * §16.1.3.10.
+     *
      */
     readonly "&remainingAcqDelay"?: ({ time: Unsigned32 } | { forever: NULL });
     /**
      * @summary &remainingTimeOut
+     * @description
+     *
+     * Ownership time remaining, or forever. Only if owner or hung. ISO
+     * 9506-1:2003 §16.1.3.
+     *
      */
     readonly "&remainingTimeOut"?: ({ time: Unsigned32 } | { forever: NULL });
     /**
      * @summary &abortOnTimeOut
+     * @description
+     *
+     * Whether timeout aborts the modified service. ISO 9506-1:2003 §16.1.3.
+     *
      */
     readonly "&abortOnTimeOut"?: BOOLEAN;
     /**
      * @summary &relinquishIfLost
+     * @description
+     *
+     * Whether ownership is relinquished if the AA is lost (else hung). ISO
+     * 9506-1:2003 §16.1.3, §16.1.
+     *
      */
     readonly "&relinquishIfLost"?: BOOLEAN;
 }
@@ -140,6 +204,10 @@ interface SEMAPHORE_ENTRY {
 /**
  * @summary SEMAPHORE_ENTRY_class
  * @description
+ *
+ * One owner or waiter of a semaphore.
+ * Created by TakeControl, AttachToSemaphore, or locally. simple vs
+ * modifier class; queued/owner/hung entry state. ISO 9506-1:2003 §16.1.3.
  *
  * ### ASN.1 Definition:
  *
@@ -190,6 +258,10 @@ const SEMAPHORE_ENTRY_class_modifier: SEMAPHORE_ENTRY_class = SEMAPHORE_ENTRY_cl
 /**
  * @summary SEMAPHORE_ENTRY_entryState
  * @description
+ *
+ * One owner or waiter of a semaphore.
+ * Created by TakeControl, AttachToSemaphore, or locally. simple vs
+ * modifier class; queued/owner/hung entry state. ISO 9506-1:2003 §16.1.3.
  *
  * ### ASN.1 Definition:
  *

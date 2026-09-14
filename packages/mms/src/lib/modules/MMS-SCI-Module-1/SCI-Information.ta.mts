@@ -20,6 +20,14 @@ import { Service_and_Parameter_CBBs, _decode_Service_and_Parameter_CBBs, _encode
  * @summary SCI_Information
  * @description
  * 
+ * Root of the Annex B configuration file:
+ * `partOne` is the VMD object snapshot (`VMD-File`); `partTwo` is CBB
+ * and CIS parameter tables. Used to communicate or store system
+ * initialization data requested by ISO 9506-2:2003 clause 25. SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +44,21 @@ class SCI_Information {
     constructor (
         /**
          * @summary `partOne`.
+         * @description
+         *
+         * VMD-File: configured VMD snapshot. ISO 9506-2:2003 Annex B.1.
+         *
          * @public
          * @readonly
          */
         readonly partOne: VMD_File,
         /**
          * @summary `partTwo`.
+         * @description
+         *
+         * Service-and-Parameter-CBBs: CIS/CBB tables. ISO 9506-2:2003 Annex
+         * B.2.
+         *
          * @public
          * @readonly
          */

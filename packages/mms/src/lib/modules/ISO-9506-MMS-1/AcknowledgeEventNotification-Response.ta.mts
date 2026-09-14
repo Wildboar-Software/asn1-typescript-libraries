@@ -17,7 +17,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AcknowledgeEventNotification_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): acknowledgement was accepted. Empty.
+ * Duplicate or mismatched (state/time) acks still yield
+ * Result(+) after skipping the update procedure.
+ *
+ * [ISO 9506-1:2003 §18.4.1.2] [ISO 9506-2:2003 §18.4.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

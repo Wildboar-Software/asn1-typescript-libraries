@@ -24,7 +24,14 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
 /**
  * @summary GetEventEnrollmentAttributes_Request
  * @description
- * 
+ *
+ * Confirmed request: descriptive attributes of Event Enrollments. Scope: named
+ * list, client application, Event Condition, or Event Action. `continueAfter`
+ * continues a response with `moreFollows`.
+ *
+ * [ISO 9506-1:2003 §21.4]
+ * [ISO 9506-2:2003 §21.4]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,36 +55,74 @@ class GetEventEnrollmentAttributes_Request {
     constructor (
         /**
          * @summary `scopeOfRequest`.
+         * @description
+         *
+         * Which enrollments: `specific`, `client` (default), `ec`, or `ea`.
+         *
+         * [ISO 9506-1:2003 §21.4.1.1.1]
+         * [ISO 9506-2:2003 §21.4.1.1]
+         *
          * @public
          * @readonly
          */
         readonly scopeOfRequest: OPTIONAL<GetEventEnrollmentAttributes_Request_scopeOfRequest>,
         /**
          * @summary `eventEnrollmentNames`.
+         * @description
+         *
+         * Names when scope is `specific`.
+         *
+         * [ISO 9506-1:2003 §21.4.1.1.2]
+         *
          * @public
          * @readonly
          */
         readonly eventEnrollmentNames: OPTIONAL<ObjectName[]>,
         /**
          * @summary `clientApplication`.
+         * @description
+         *
+         * Client filter. Omitted if the requesting client. Requires `tpy`.
+         *
+         * [ISO 9506-1:2003 §21.4.1.1.3]
+         * [ISO 9506-2:2003 §21.4.1.3]
+         *
          * @public
          * @readonly
          */
         readonly clientApplication: OPTIONAL<Nullable<ApplicationReference>>,
         /**
          * @summary `eventConditionName`.
+         * @description
+         *
+         * Event Condition when scope is `ec`.
+         *
+         * [ISO 9506-1:2003 §21.4.1.1.4]
+         *
          * @public
          * @readonly
          */
         readonly eventConditionName: OPTIONAL<ObjectName>,
         /**
          * @summary `eventActionName`.
+         * @description
+         *
+         * Event Action when scope is `ea`.
+         *
+         * [ISO 9506-1:2003 §21.4.1.1.5]
+         *
          * @public
          * @readonly
          */
         readonly eventActionName: OPTIONAL<ObjectName>,
         /**
          * @summary `continueAfter`.
+         * @description
+         *
+         * Last enrollment name from a prior `moreFollows` response.
+         *
+         * [ISO 9506-1:2003 §21.4.1.1.6]
+         *
          * @public
          * @readonly
          */

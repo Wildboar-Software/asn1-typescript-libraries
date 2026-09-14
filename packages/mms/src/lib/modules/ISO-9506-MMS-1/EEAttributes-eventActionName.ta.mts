@@ -18,7 +18,13 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary EEAttributes_eventActionName
  * @description
- * 
+ *
+ * `eventAction` is the Event Action name. `undefined` if the object is
+ * unavailable. Field omitted from EEAttributes if no action.
+ *
+ * [ISO 9506-1:2003 §21.4.1.2.1.3]
+ * [ISO 9506-2:2003 §21.4.2.1.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

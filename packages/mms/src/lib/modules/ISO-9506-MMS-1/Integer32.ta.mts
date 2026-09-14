@@ -18,7 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Integer32
  * @description
- * 
+ *
+ * Signed integer restricted to −2**31..2**31−1 (ISO 9506-2:2003 §7.5.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

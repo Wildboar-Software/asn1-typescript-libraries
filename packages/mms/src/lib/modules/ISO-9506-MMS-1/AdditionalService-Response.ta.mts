@@ -65,7 +65,11 @@ import { decodeWithRejectPDUFallback, encodeWithRejectPDUFallback } from "../../
 /**
  * @summary AdditionalService_Response
  * @description
- * 
+ *
+ * Result(+) of AdditionalService-Request (ConfirmedServiceResponse tag [78]).
+ * Unsupported alternatives are RejectPDU (ISO 9506-1:2003 Annex B;
+ * ISO 9506-2:2003 §7.3.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

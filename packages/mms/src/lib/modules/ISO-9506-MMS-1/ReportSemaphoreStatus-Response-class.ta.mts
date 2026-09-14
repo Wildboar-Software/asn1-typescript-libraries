@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ReportSemaphoreStatus_Response_class
  * @description
- * 
+ *
+ * Semaphore class. `token` (0): identical tokens; MMS may create
+ * these. `pool` (1): named tokens; predefined only.
+ * ISO 9506-1:2003 §16.1, §16.6.1.2.2. ISO 9506-2:2003 §16.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +37,11 @@ type ReportSemaphoreStatus_Response_class = INTEGER;
 
 /**
  * @summary ReportSemaphoreStatus_Response_class_token
+ * @description
+ *
+ * Token semaphore: identical tokens; max owners =
+ * `numberOfTokens`. ISO 9506-1:2003 §16.1.5, §16.6.1.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -41,6 +50,11 @@ const ReportSemaphoreStatus_Response_class_token: ReportSemaphoreStatus_Response
 
 /**
  * @summary ReportSemaphoreStatus_Response_class_token
+ * @description
+ *
+ * Token semaphore: identical tokens; max owners =
+ * `numberOfTokens`. ISO 9506-1:2003 §16.1.5, §16.6.1.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +63,12 @@ const token: ReportSemaphoreStatus_Response_class = ReportSemaphoreStatus_Respon
 
 /**
  * @summary ReportSemaphoreStatus_Response_class_pool
+ * @description
+ *
+ * Pool semaphore: named tokens; predefined only. Request a named
+ * token on TakeControl, or omit to let the server allocate.
+ * ISO 9506-1:2003 §16.1.6, §16.6.1.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -57,6 +77,12 @@ const ReportSemaphoreStatus_Response_class_pool: ReportSemaphoreStatus_Response_
 
 /**
  * @summary ReportSemaphoreStatus_Response_class_pool
+ * @description
+ *
+ * Pool semaphore: named tokens; predefined only. Request a named
+ * token on TakeControl, or omit to let the server allocate.
+ * ISO 9506-1:2003 §16.1.6, §16.6.1.2.2.
+ *
  * @constant
  * @type {number}
  */

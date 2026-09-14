@@ -17,7 +17,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ObtainFile_Response
  * @description
- * 
+ *
+ * Result(+): empty. File transfer succeeded.
+ * Normative Annex C.
+ *
+ * [ISO 9506-1:2003 Annex C, C.1.1.2]
+ * [ISO 9506-2:2003 Annex C, C.2.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

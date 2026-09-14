@@ -23,6 +23,12 @@ import { ConfirmedServiceRequest, _decode_ConfirmedServiceRequest, _encode_Confi
  * @summary TRANSACTION
  * @description
  * 
+ * Governs processing of one confirmed MMS
+ * service indication. Created when the VMD receives a confirmed-service
+ * indication (or as part of event-action processing) and deleted after
+ * the response primitive. Count is bounded by negotiated outstanding
+ * services. ISO 9506-1:2003 §7.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,26 +66,57 @@ interface TRANSACTION {
     }>;
     /**
      * @summary &invokeID
+     * @description
+     *
+     * Integer identifying this transaction on its Application Association
+     * (unique on that AA). ISO 9506-1:2003 §7.3.1.1.
+     *
      */
     readonly "&invokeID"?: INTEGER;
     /**
      * @summary &Pre-executionModifiers
+     * @description
+     *
+     * Ordered modifiers that must succeed before the confirmed service runs.
+     * May be empty. ISO 9506-1:2003 §7.3.1.2.
+     *
      */
     readonly "&Pre-executionModifiers"?: ModifierStep;
     /**
      * @summary &currentModifier
+     * @description
+     *
+     * Semaphore-Entry or Event-Enrollment of the modifier now executing; none
+     * if the pre-execution list is empty. ISO 9506-1:2003 §7.3.1.3.
+     *
      */
     readonly "&currentModifier"?: ({ modifier: ModifierStep } | { none: NULL });
     /**
      * @summary &confirmedService-Request
+     * @description
+     *
+     * Pending confirmed service and its arguments. ISO 9506-1:2003 §7.3.1.4.
+     *
      */
     readonly "&confirmedService-Request"?: ConfirmedServiceRequest;
     /**
      * @summary &Post-executionModifiers
+     * @description
+     *
+     * Semaphore-Entry objects owned because of processed AttachToSemaphore
+     * modifiers (reverse of pre-execution order). Event-condition modifiers do
+     * not appear. ISO 9506-1:2003 §7.3.1.5.
+     *
      */
     readonly "&Post-executionModifiers"?: ModifierStep;
     /**
      * @summary &cancelable
+     * @description
+     *
+     * Whether Cancel may abort this service. Initially true; the server may set
+     * false after pre-execution modifiers, and shall have set false before
+     * post-execution. ISO 9506-1:2003 §7.3.1.6, §7.3.2.6.
+     *
      */
     readonly "&cancelable"?: BOOLEAN;
 };

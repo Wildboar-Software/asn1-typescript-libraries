@@ -24,7 +24,15 @@ import { Initiate_RequestPDU_initRequestDetail, _decode_Initiate_RequestPDU_init
 /**
  * @summary Initiate_RequestPDU
  * @description
- * 
+ *
+ * Establish the MMS environment and propose capabilities. Must succeed before
+ * any other MMS service on the association. The calling MMS-provider may reduce
+ * proposed values (except services-supported bits, which become the
+ * intersection with the provider). Receipt of Initiate on an
+ * already-established MMS environment is Rejected as
+ * PDU-ERROR/ILLEGAL-ACSE-MAPPING (ISO 9506-1:2003 §8.2; ISO 9506-2:2003 §8.2).
+ * Extra tagged sequence elements shall be ignored for upward compatibility.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,7 +45,7 @@ import { Initiate_RequestPDU_initRequestDetail, _decode_Initiate_RequestPDU_init
  *        proposedVersionNumber                [0] IMPLICIT Integer16,
  *        proposedParameterCBB                 [1] IMPLICIT ParameterSupportOptions,
  *        servicesSupportedCalling             [2] IMPLICIT ServiceSupportOptions ,
- *        ...
+ *       ...
  * ,      additionalSupportedCalling           [3] IMPLICIT AdditionalSupportOptions
  * ,      additionalCbbSupportedCalling        [4] IMPLICIT AdditionalCBBOptions,
  *        privilegeClassIdentityCalling        [5] IMPLICIT VisibleString
@@ -52,30 +60,53 @@ class Initiate_RequestPDU {
     constructor (
         /**
          * @summary `localDetailCalling`.
+         * @description
+         *
+         * Calling implementation detail. Content is a local matter; not further
+         * standardized (ISO 9506-1:2003 §8.2.1.1.1).
          * @public
          * @readonly
          */
         readonly localDetailCalling: OPTIONAL<Integer32>,
         /**
          * @summary `proposedMaxServOutstandingCalling`.
+         * @description
+         *
+         * Proposed maximum Transaction objects at the calling MMS-user. May be
+         * reduced by the provider; indication ≤ request; not less than zero
+         * (ISO 9506-1:2003 §8.2.1.1.2).
          * @public
          * @readonly
          */
         readonly proposedMaxServOutstandingCalling: Integer16,
         /**
          * @summary `proposedMaxServOutstandingCalled`.
+         * @description
+         *
+         * Proposed maximum Transaction objects at the called MMS-user. May be
+         * reduced by the provider; indication ≤ request; not less than zero
+         * (ISO 9506-1:2003 §8.2.1.1.3).
          * @public
          * @readonly
          */
         readonly proposedMaxServOutstandingCalled: Integer16,
         /**
          * @summary `proposedDataStructureNestingLevel`.
+         * @description
+         *
+         * Proposed maximum Type Specification nesting. Omit for unlimited. Zero
+         * means only simple types. Provider may reduce; indication ≤ request
+         * (ISO 9506-1:2003 §8.2.1.1.4).
          * @public
          * @readonly
          */
         readonly proposedDataStructureNestingLevel: OPTIONAL<Integer8>,
         /**
          * @summary `initRequestDetail`.
+         * @description
+         *
+         * Proposed minor version, parameter CBBs, and services supported
+         * (ISO 9506-1:2003 §8.2; ISO 9506-2:2003 §8.2).
          * @public
          * @readonly
          */
@@ -105,8 +136,8 @@ class Initiate_RequestPDU {
  * @summary The Leading Root Component Types of Initiate_RequestPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -122,8 +153,8 @@ const _root_component_type_list_1_spec_for_Initiate_RequestPDU: $.ComponentSpec[
  * @summary The Trailing Root Component Types of Initiate_RequestPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -135,8 +166,8 @@ const _root_component_type_list_2_spec_for_Initiate_RequestPDU: $.ComponentSpec[
  * @summary The Extension Addition Component Types of Initiate_RequestPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -204,7 +235,7 @@ function _encode_Initiate_RequestPDU (value: Initiate_RequestPDU, elGetter: $.AS
             /* IF_ABSENT  */ ((value.proposedDataStructureNestingLevel === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_Integer8, $.BER)(value.proposedDataStructureNestingLevel, $.BER)),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 4, () => _encode_Initiate_RequestPDU_initRequestDetail, $.BER)(value.initRequestDetail, $.BER)
         ],
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+   ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
     return _cached_encoder_for_Initiate_RequestPDU(value, elGetter);
 }

@@ -18,6 +18,9 @@ import { ProgramInvocationState, _decode_ProgramInvocationState, _encode_Program
  * @summary Stop_Error
  * @description
  * 
+ * Result(-) of Stop: Program Invocation state after failure. ISO 9506-1:2003
+ * §12.5.1.3.1. ISO 9506-2:2003 §12.5.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

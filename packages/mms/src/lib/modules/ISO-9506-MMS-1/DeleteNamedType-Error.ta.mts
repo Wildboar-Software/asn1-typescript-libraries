@@ -17,7 +17,12 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary DeleteNamedType_Error
  * @description
- * 
+ *
+ * Result(-) of DeleteNamedType: number of Named Types
+ * deleted before the error. ACL DELETE failure on an
+ * object is not an error.
+ * ISO 9506-1:2003 §14.17.1.3. ISO 9506-2:2003 §14.17.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

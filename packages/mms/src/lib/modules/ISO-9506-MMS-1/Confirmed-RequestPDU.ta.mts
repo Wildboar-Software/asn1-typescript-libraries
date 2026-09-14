@@ -24,7 +24,13 @@ import { Request_Detail, _decode_Request_Detail, _encode_Request_Detail } from "
 /**
  * @summary Confirmed_RequestPDU
  * @description
- * 
+ *
+ * Confirmed MMS request. `invokeID` correlates request/response/error/cancel.
+ * Optional `listOfModifiers` is evaluated in order before the service
+ * (ISO 9506-1:2003 §5.5–5.6). `service-ext` carries companion-standard
+ * Request-Detail; omit when the value would be a tagged NULL (ISO 9506-2:2003
+ * §7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,7 +38,7 @@ import { Request_Detail, _decode_Request_Detail, _encode_Request_Detail } from "
  *     invokeID                      Unsigned32,
  *     listOfModifiers               SEQUENCE OF Modifier OPTIONAL,
  *     service                       ConfirmedServiceRequest,
- *     ...,
+ *    ...,
  *     service-ext                   [79] Request-Detail OPTIONAL
  *     -- shall not be transmitted if value is the value
  *     -- of a tagged type derived from NULL
@@ -46,24 +52,46 @@ class Confirmed_RequestPDU {
     constructor (
         /**
          * @summary `invokeID`.
+         * @description
+         *
+         * Unambiguously identifies this request among outstanding confirmed
+         * requests from this MMS-user on this association. At most one
+         * outstanding request may use a given value. Copied into the matching
+         * response, error, and cancel PDUs (ISO 9506-1:2003 §5.5;
+         * ISO 9506-2:2003 §7.1).
          * @public
          * @readonly
          */
         readonly invokeID: Unsigned32,
         /**
          * @summary `listOfModifiers`.
+         * @description
+         *
+         * Optional pre-conditions evaluated in list order before the service
+         * begins. MMS defines AttachToSemaphore and AttachToEventCondition
+         * (ISO 9506-1:2003 §5.6). Omit to start the service immediately
+         * (ISO 9506-2:2003 §7.1).
          * @public
          * @readonly
          */
         readonly listOfModifiers: OPTIONAL<Modifier[]>,
         /**
          * @summary `service`.
+         * @description
+         *
+         * Selects the confirmed service and its argument (ISO 9506-2:2003
+         * §7.1.1).
          * @public
          * @readonly
          */
         readonly service: ConfirmedServiceRequest,
         /**
          * @summary `service_ext`.
+         * @description
+         *
+         * Companion-standard Request-Detail. Present only if `csr` or `cspi`
+         * was negotiated. Do not transmit if the value is a tagged NULL
+         * (ISO 9506-2:2003 §7.1).
          * @public
          * @readonly
          */
@@ -99,8 +127,8 @@ class Confirmed_RequestPDU {
  * @summary The Leading Root Component Types of Confirmed_RequestPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -114,8 +142,8 @@ const _root_component_type_list_1_spec_for_Confirmed_RequestPDU: $.ComponentSpec
  * @summary The Trailing Root Component Types of Confirmed_RequestPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -127,8 +155,8 @@ const _root_component_type_list_2_spec_for_Confirmed_RequestPDU: $.ComponentSpec
  * @summary The Extension Addition Component Types of Confirmed_RequestPDU
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * @constant
  */
 export
@@ -197,7 +225,7 @@ function _encode_Confirmed_RequestPDU (value: Confirmed_RequestPDU, elGetter: $.
             /* IF_ABSENT  */ ((value.service_ext === undefined) ? undefined : $._encode_explicit(_TagClass.context, 79, () => _encode_Request_Detail, $.BER)(value.service_ext, $.BER))
         ],
         (value._unrecognizedExtensionsList ? value._unrecognizedExtensionsList : []),
-    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+   ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
     return _cached_encoder_for_Confirmed_RequestPDU(value, elGetter);
 }

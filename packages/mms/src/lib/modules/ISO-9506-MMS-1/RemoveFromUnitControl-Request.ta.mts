@@ -18,6 +18,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary RemoveFromUnitControl_Request
  * @description
  * 
+ * Client request to drop Domain and/or Program Invocation references from a
+ * Unit Control object (does not delete those objects). ISO 9506-1:2003 §13.10.
+ * ISO 9506-2:2003 §13.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +38,33 @@ class RemoveFromUnitControl_Request {
     constructor (
         /**
          * @summary `unitControl`.
+         * @description
+         *
+         * Unit Control whose constituent lists are reduced. ISO 9506-1:2003
+         * §13.10.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly unitControl: Identifier,
         /**
          * @summary `domains`.
+         * @description
+         *
+         * Zero or more Domains to remove from `&Domains`. ISO 9506-1:2003
+         * §13.10.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly domains: Identifier[],
         /**
          * @summary `programInvocations`.
+         * @description
+         *
+         * Zero or more Program Invocations to remove from
+         * `&ProgramInvocations`. ISO 9506-1:2003 §13.10.1.1.3.
+         *
          * @public
          * @readonly
          */

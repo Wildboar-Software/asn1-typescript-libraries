@@ -17,7 +17,12 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
 /**
  * @summary AlternateAccessSelection_selectAccess_indexRange
  * @description
- * 
+ *
+ * INDEX-RANGE for SELECT-ACCESS. Derived type is an
+ * array of the selected elements, numbered from zero.
+ * Requires `str1` CBB.
+ * ISO 9506-1:2003 §14.3.1.1.4.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +39,24 @@ class AlternateAccessSelection_selectAccess_indexRange {
     constructor (
         /**
          * @summary `lowIndex`.
+         * @description
+         *
+         * First selected index (valid for the array); becomes
+         * element 0 of the derived array.
+         * ISO 9506-1:2003 §14.3.1.1.4.4.1.
+         *
          * @public
          * @readonly
          */
         readonly lowIndex: Unsigned32,
         /**
          * @summary `numberOfElements`.
+         * @description
+         *
+         * Count including Low Index. Zero means from Low Index
+         * through the last defined element.
+         * ISO 9506-1:2003 §14.3.1.1.4.4.2.
+         *
          * @public
          * @readonly
          */

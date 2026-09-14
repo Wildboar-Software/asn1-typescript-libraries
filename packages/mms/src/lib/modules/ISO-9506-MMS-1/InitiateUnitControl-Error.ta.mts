@@ -18,6 +18,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary InitiateUnitControl_Error
  * @description
  * 
+ * Result(-) of InitiateUnitControlLoad: Domain or Program Invocation that was
+ * being created when loading failed. ISO 9506-1:2003 §13.3.1.3. ISO 9506-2:2003
+ * §13.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

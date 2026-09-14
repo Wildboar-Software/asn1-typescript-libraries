@@ -24,6 +24,12 @@ import { ControlElement_piDefinition, _decode_ControlElement_piDefinition, _enco
  * @summary ControlElement
  * @description
  * 
+ * One Unit Control constituent in load/upload. `beginDomainDef`: create Domain
+ * (`loading`) and optional first LoadData. `continueDomainDef`: more LoadData
+ * for a Domain already `loading`. `endDomainDef`: Domain name; Domain goes
+ * `ready`. `piDefinition`: create a PI on those Domains. ISO 9506-1:2003 §13.2.
+ * ISO 9506-2:2003 §13.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

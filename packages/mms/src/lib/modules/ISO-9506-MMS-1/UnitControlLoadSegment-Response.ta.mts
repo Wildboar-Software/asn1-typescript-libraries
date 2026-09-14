@@ -20,6 +20,9 @@ import { ControlElement, _decode_ControlElement, _encode_ControlElement } from "
  * @summary UnitControlLoadSegment_Response
  * @description
  * 
+ * Client reply: Control Elements that create Domains and PIs. Sequence with
+ * InitiateUnitControlLoad. ISO 9506-1:2003 §13.4.1.2. ISO 9506-2:2003 §13.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,22 @@ class UnitControlLoadSegment_Response {
     constructor (
         /**
          * @summary `controlElements`.
+         * @description
+         *
+         * Domain/PI construction records for this segment. PI state in each
+         * element is a user option. ISO 9506-1:2003 §13.4.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly controlElements: ControlElement[],
         /**
          * @summary `moreFollows`.
+         * @description
+         *
+         * True if more UnitControlLoadSegment requests are needed. Default
+         * true. ISO 9506-1:2003 §13.4.1.2.2.
+         *
          * @public
          * @readonly
          */

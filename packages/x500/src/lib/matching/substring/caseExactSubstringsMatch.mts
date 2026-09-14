@@ -6,6 +6,18 @@ import {
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.1.3
+ * `caseExactSubstringsMatch`.
+ *
+ * TRUE if the stored `DirectoryString` can be partitioned so that
+ * presented `initial`/`any`/`final` substrings match distinct
+ * portions in order (`initial` prefixes, `final` suffixes). Case
+ * is significant; insignificant spaces are removed (clause 7.6).
+ * At most one `initial` and one `final`; `control` is ignored.
+ * Corresponding characters (including combining sequences) must
+ * be identical.
+ */
 export
 const caseExactSubstringsMatch: SubstringsMatcher = (
     assertion: ASN1Element,

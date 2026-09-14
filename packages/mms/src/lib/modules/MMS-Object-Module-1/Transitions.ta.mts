@@ -19,6 +19,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Transitions
  * @description
  * 
+ * Monitored Event Condition transitions that
+ * invoke Event-Transition Processing for an enrollment. SIZE(7).
+ * any-to-deleted also fires if the condition or its monitored variable
+ * becomes undefined. ISO 9506-1:2003 §21.1.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +43,10 @@ type Transitions = BIT_STRING;
 
 /**
  * @summary Transitions_idle_to_disabled
+ * @description
+ *
+ * idle → disabled. ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export
@@ -45,6 +54,10 @@ const Transitions_idle_to_disabled: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary idle_to_disabled
+ * @description
+ *
+ * idle → disabled. ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export
@@ -52,6 +65,10 @@ const idle_to_disabled: number = Transitions_idle_to_disabled; /* SHORT_NAMED_BI
 
 /**
  * @summary Transitions_active_to_disabled
+ * @description
+ *
+ * active → disabled. ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export
@@ -59,6 +76,10 @@ const Transitions_active_to_disabled: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary active_to_disabled
+ * @description
+ *
+ * active → disabled. ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export
@@ -66,6 +87,10 @@ const active_to_disabled: number = Transitions_active_to_disabled; /* SHORT_NAME
 
 /**
  * @summary Transitions_disabled_to_idle
+ * @description
+ *
+ * disabled → idle. ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export
@@ -73,6 +98,10 @@ const Transitions_disabled_to_idle: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary disabled_to_idle
+ * @description
+ *
+ * disabled → idle. ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export
@@ -80,6 +109,10 @@ const disabled_to_idle: number = Transitions_disabled_to_idle; /* SHORT_NAMED_BI
 
 /**
  * @summary Transitions_active_to_idle
+ * @description
+ *
+ * active → idle. ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export
@@ -87,6 +120,10 @@ const Transitions_active_to_idle: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary active_to_idle
+ * @description
+ *
+ * active → idle. ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export
@@ -94,6 +131,10 @@ const active_to_idle: number = Transitions_active_to_idle; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Transitions_disabled_to_active
+ * @description
+ *
+ * disabled → active. ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export
@@ -101,6 +142,10 @@ const Transitions_disabled_to_active: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary disabled_to_active
+ * @description
+ *
+ * disabled → active. ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export
@@ -108,6 +153,10 @@ const disabled_to_active: number = Transitions_disabled_to_active; /* SHORT_NAME
 
 /**
  * @summary Transitions_idle_to_active
+ * @description
+ *
+ * idle → active. ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export
@@ -115,6 +164,10 @@ const Transitions_idle_to_active: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary idle_to_active
+ * @description
+ *
+ * idle → active. ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export
@@ -122,6 +175,11 @@ const idle_to_active: number = Transitions_idle_to_active; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Transitions_any_to_deleted
+ * @description
+ *
+ * Fires if the Event Condition (or its monitored variable) becomes undefined.
+ * ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export
@@ -129,6 +187,11 @@ const Transitions_any_to_deleted: number = 6; /* LONG_NAMED_BIT */
 
 /**
  * @summary any_to_deleted
+ * @description
+ *
+ * Fires if the Event Condition (or its monitored variable) becomes undefined.
+ * ISO 9506-1:2003 §21.1.1.5.
+ *
  * @constant
  */
 export

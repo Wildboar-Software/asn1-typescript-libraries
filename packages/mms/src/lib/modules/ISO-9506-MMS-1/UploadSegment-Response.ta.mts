@@ -20,6 +20,10 @@ import { LoadData, _decode_LoadData, _encode_LoadData } from "../ISO-9506-MMS-1/
  * @summary UploadSegment_Response
  * @description
  * 
+ * Load data formatted so it can later be used as DownloadSegment content.
+ * `moreFollows` false when the Domain content is exhausted. ISO 9506-1:2003
+ * §11.6.1.2. ISO 9506-2:2003 §11.6.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,22 @@ class UploadSegment_Response {
     constructor (
         /**
          * @summary `loadData`.
+         * @description
+         *
+         * Upload segment (octet string, EXTERNAL, or EMBEDDED PDV). ISO 9506-1:2003 §11.6.1.2.1. ISO 9506-2:2003 §11.6.2.1.
+         *
          * @public
          * @readonly
          */
         readonly loadData: LoadData,
         /**
          * @summary `moreFollows`.
+         * @description
+         *
+         * True if more load data remains; false if this completes the upload
+         * (must be false if load data is empty). Default true. ISO 9506-1:2003
+         * §11.6.1.2.2.
+         *
          * @public
          * @readonly
          */

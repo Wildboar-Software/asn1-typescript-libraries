@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Severity
  * @description
  * 
+ * Effect of an event on the controlled process.
+ * Integer 0..127; 0 = most severe, 64 = normal, 127 = least. Server
+ * treatment is a local matter. ISO 9506-1:2003 §19.1.1.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

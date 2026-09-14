@@ -17,7 +17,12 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 /**
  * @summary ReportEventEnrollmentStatus_Request
  * @description
- * 
+ *
+ * Confirmed request: Event Enrollment Name whose status is reported.
+ *
+ * [ISO 9506-1:2003 §21.5]
+ * [ISO 9506-2:2003 §21.5.1]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

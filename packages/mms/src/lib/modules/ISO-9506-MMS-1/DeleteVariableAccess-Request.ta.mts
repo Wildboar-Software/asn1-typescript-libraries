@@ -22,7 +22,14 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary DeleteVariableAccess_Request
  * @description
- * 
+ *
+ * Confirmed request to delete one or more Named Variable
+ * objects for which deletion is permitted. ACL failure on
+ * an individual object skips that object; it is not an
+ * error. Deleting a Named Variable referenced by a Named
+ * Variable List removes that list item.
+ * ISO 9506-1:2003 §14.11. ISO 9506-2:2003 §14.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,18 +51,35 @@ class DeleteVariableAccess_Request {
     constructor (
         /**
          * @summary `scopeOfDelete`.
+         * @description
+         *
+         * Extent: `specific`, `aa-specific`, `domain`, or
+         * `vmd`. Default `specific`.
+         * ISO 9506-1:2003 §14.11.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly scopeOfDelete: OPTIONAL<DeleteVariableAccess_Request_scopeOfDelete>,
         /**
          * @summary `listOfName`.
+         * @description
+         *
+         * Named Variables to delete when scope is `specific`;
+         * otherwise omitted. ISO 9506-1:2003 §14.11.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly listOfName: OPTIONAL<ObjectName[]>,
         /**
          * @summary `domainName`.
+         * @description
+         *
+         * Domain whose Named Variables are deleted when scope
+         * is `domain`; otherwise omitted.
+         * ISO 9506-1:2003 §14.11.1.1.3.
+         *
          * @public
          * @readonly
          */

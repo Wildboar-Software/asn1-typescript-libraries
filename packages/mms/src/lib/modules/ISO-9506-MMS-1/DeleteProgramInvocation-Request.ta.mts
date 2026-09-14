@@ -18,6 +18,11 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  * @summary DeleteProgramInvocation_Request
  * @description
  * 
+ * Client request to delete a Program Invocation. PI must be `idle`, `stopped`,
+ * or `unrunnable`. A `controlled` PI may be deleted only if its controlling PI
+ * is `idle` (or none). Unbinds Domains; last PI moves a Domain `in-use` →
+ * `ready`. ISO 9506-1:2003 §12.3. ISO 9506-2:2003 §12.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -20,6 +20,12 @@ import { Variable_List_Item_instance, _decode_Variable_List_Item_instance, _enco
  * @summary Named_Variable_List_instance_definition_details
  * @description
  * 
+ * Inline
+ * Named Variable List attributes in the SCI file. SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003 Annex
+ * B.1.7; ISO 9506-1:2003 §14.1.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +42,22 @@ class Named_Variable_List_instance_definition_details {
     constructor (
         /**
          * @summary `accessControl`.
+         * @description
+         *
+         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly accessControl: Access_Control_List_instance,
         /**
          * @summary `listOfVariables`.
+         * @description
+         *
+         * Configured variable-list items. ISO 9506-1:2003 §14.1.4.3; ISO
+         * 9506-2:2003 Annex B.1.7.
+         *
          * @public
          * @readonly
          */

@@ -19,7 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EEAttributes_displayEnhancement
  * @description
- * 
+ *
+ * Enrollment Display Enhancement. `string` if `des`; `index` if `dei`;
+ * `noEnhancement` is NULL. CS; `cspi`.
+ *
+ * [ISO 9506-1:2003 §21.4.1.2.1.10]
+ * [ISO 9506-2:2003 §21.4]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

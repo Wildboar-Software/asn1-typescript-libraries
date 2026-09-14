@@ -19,6 +19,11 @@ import { Program_Invocation_instance_definition_details, _decode_Program_Invocat
  * @summary Program_Invocation_instance_definition
  * @description
  * 
+ * CHOICE of
+ * Standardized Name OID or inline PI details. SCI configuration/initialization
+ * encoding (ISO 9506-2:2003 Annex B), not a runtime MMS PDU. ISO 9506-2:2003
+ * Annex B.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

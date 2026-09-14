@@ -20,6 +20,9 @@ import { LoadData, _decode_LoadData, _encode_LoadData } from "../ISO-9506-MMS-1/
  * @summary ControlElement_continueDomainDef
  * @description
  * 
+ * Continue loading a Domain already begun. Domain must exist and be `loading`.
+ * ISO 9506-1:2003 §13.2.1.2, §13.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,20 @@ class ControlElement_continueDomainDef {
     constructor (
         /**
          * @summary `domainName`.
+         * @description
+         *
+         * Domain still in `loading`. ISO 9506-1:2003 §13.2.1.2.1.
+         *
          * @public
          * @readonly
          */
         readonly domainName: Identifier,
         /**
          * @summary `loadData`.
+         * @description
+         *
+         * Further (partial) Domain content. ISO 9506-1:2003 §13.2.1.2.2.
+         *
          * @public
          * @readonly
          */

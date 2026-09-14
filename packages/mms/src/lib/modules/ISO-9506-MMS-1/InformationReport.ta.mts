@@ -19,7 +19,15 @@ import { AccessResult, _decode_AccessResult, _encode_AccessResult } from "../ISO
 /**
  * @summary InformationReport
  * @description
- * 
+ *
+ * Unconfirmed service: one MMS-user informs the other of
+ * values of specified variables as read by the issuer.
+ * Do not issue if the peer did not advertise support in
+ * Initiate Services Supported. Functionally like Event
+ * Notification with a Read Event Action and
+ * Specification With Result true; conditions are local.
+ * ISO 9506-1:2003 §14.8. ISO 9506-2:2003 §14.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +43,22 @@ class InformationReport {
     constructor (
         /**
          * @summary `variableAccessSpecification`.
+         * @description
+         *
+         * Variables whose values are reported.
+         * ISO 9506-1:2003 §14.8.1.1.1, §14.5.1.
+         *
          * @public
          * @readonly
          */
         readonly variableAccessSpecification: VariableAccessSpecification,
         /**
          * @summary `listOfAccessResult`.
+         * @description
+         *
+         * Value or failure per variable, in VAS order.
+         * ISO 9506-1:2003 §14.8.1.1.2, §14.4.1.
+         *
          * @public
          * @readonly
          */

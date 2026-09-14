@@ -16,13 +16,10 @@ function isWordChar(c: string): boolean {
 }
 
 /**
- * @summary Check for a contained word per `wordMatch` as defined in ITU-T X.520.
- * @param haystack The string in which to search
- * @param needle The string sought for
- * @returns `true` if the substring is present
- *
- * @function
- * @internal Only exported so this can be used in tests
+ * Rec. ITU-T X.520 (10/2019) clause 8.5.1: whether `needle` occurs
+ * as a complete word in `haystack`. X.520 leaves the definition of
+ * a "word" as a local matter; here a word is letters, digits, or
+ * underscore, bounded by other characters or the string edges.
  */
 export
 function containsWord (haystack: string, needle: string): boolean {
@@ -40,6 +37,15 @@ function containsWord (haystack: string, needle: string): boolean {
     return false;
 }
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.5.1 `wordMatch`.
+ *
+ * TRUE if the presented word matches any word in a
+ * `DirectoryString` attribute value. Individual words are compared
+ * as for `caseIgnoreMatch`. The precise definition of a "word" is
+ * a local matter; `containsWord` treats a match as a prepared,
+ * case-folded substring bounded by non-word characters.
+ */
 export
 const wordMatch: EqualityMatcher = (
     assertion: ASN1Element,

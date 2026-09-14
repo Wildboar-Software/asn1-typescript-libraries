@@ -19,7 +19,13 @@ import { AlarmEnrollmentSummary, _decode_AlarmEnrollmentSummary, _encode_AlarmEn
 /**
  * @summary GetAlarmEnrollmentSummary_Response
  * @description
- * 
+ *
+ * Confirmed Result(+): zero or more Alarm Enrollment
+ * Summary entries. `moreFollows` true means a continuation
+ * request is needed; in that case the list is non-empty.
+ *
+ * [ISO 9506-1:2003 §18.6.1.2] [ISO 9506-2:2003 §18.6.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,28 @@ class GetAlarmEnrollmentSummary_Response {
     constructor (
         /**
          * @summary `listOfAlarmEnrollmentSummary`.
+         * @description
+         *
+         * One summary per matching notification enrollment,
+         * ordered by Event Condition then enrollment
+         * collation sequence.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.1]
+         *
          * @public
          * @readonly
          */
         readonly listOfAlarmEnrollmentSummary: AlarmEnrollmentSummary[],
         /**
          * @summary `moreFollows`.
+         * @description
+         *
+         * True if this response is incomplete and a
+         * continuation request is needed. If true, the list
+         * contains at least one entry. Default false.
+         *
+         * [ISO 9506-1:2003 §18.6.1.2.2]
+         *
          * @public
          * @readonly
          */

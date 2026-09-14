@@ -19,6 +19,12 @@ import { Operator_Station_instance_definition_details, _decode_Operator_Station_
  * @summary Operator_Station_instance_definition
  * @description
  * 
+ * CHOICE of
+ * Standardized Name OID or inline Operator Station details. SCI
+ * configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU.
+ * ISO 9506-2:2003 Annex B.1.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

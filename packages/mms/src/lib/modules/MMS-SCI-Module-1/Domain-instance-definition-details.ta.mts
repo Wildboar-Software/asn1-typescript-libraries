@@ -40,6 +40,11 @@ import { Event_Condition_List_instance, _decode_Event_Condition_List_instance, _
  * @summary Domain_instance_definition_details
  * @description
  * 
+ * Inline Domain
+ * attributes in the SCI file (AA and uploadsInProgress omitted).
+ * SCI configuration/initialization encoding (ISO 9506-2:2003 Annex B), not a
+ * runtime MMS PDU. ISO 9506-2:2003 Annex B.1.2; ISO 9506-1:2003 §11.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,72 +77,128 @@ class Domain_instance_definition_details {
     constructor (
         /**
          * @summary `capabilities`.
+         * @description
+         *
+         * Configured capability strings. ISO 9506-1:2003 §7.2.1.10; ISO
+         * 9506-2:2003 Annex B.1.
+         *
          * @public
          * @readonly
          */
         readonly capabilities: MMSString[],
         /**
          * @summary `state`.
+         * @description
+         *
+         * Configured DomainState (or other object state in context). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly state: DomainState,
         /**
          * @summary `accessControl`.
+         * @description
+         *
+         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+         * 9506-2:2003 Annex B.
+         *
          * @public
          * @readonly
          */
         readonly accessControl: Access_Control_List_instance,
         /**
          * @summary `sharable`.
+         * @description
+         *
+         * Whether the Domain may be used by more than one PI. ISO 9506-1:2003
+         * §11.1.1.6; ISO 9506-2:2003 Annex B.1.2.
+         *
          * @public
          * @readonly
          */
         readonly sharable: BOOLEAN,
         /**
          * @summary `programInvocations`.
+         * @description
+         *
+         * Configured Program Invocation instances. ISO 9506-2:2003 Annex B.1.3.
+         *
          * @public
          * @readonly
          */
         readonly programInvocations: Program_Invocation_instance[],
         /**
          * @summary `namedVariables`.
+         * @description
+         *
+         * Configured Named Variables (or NULL if not vnam). ISO 9506-2:2003
+         * Annex B.1.6.
+         *
          * @public
          * @readonly
          */
         readonly namedVariables: Named_Variable_instance[] | NULL,
         /**
          * @summary `namedVariableLists`.
+         * @description
+         *
+         * Configured Named Variable Lists (or NULL if not vlis). ISO
+         * 9506-2:2003 Annex B.1.7.
+         *
          * @public
          * @readonly
          */
         readonly namedVariableLists: Named_Variable_List_instance[] | NULL,
         /**
          * @summary `namedTypes`.
+         * @description
+         *
+         * Configured Named Types (or NULL if not vnam). ISO 9506-2:2003 Annex
+         * B.1.8.
+         *
          * @public
          * @readonly
          */
         readonly namedTypes: Named_Type_instance[] | NULL,
         /**
          * @summary `eventConditions`.
+         * @description
+         *
+         * Configured Event Condition instances. ISO 9506-2:2003 Annex B.1.12.
+         *
          * @public
          * @readonly
          */
         readonly eventConditions: Event_Condition_instance[],
         /**
          * @summary `eventActions`.
+         * @description
+         *
+         * Configured Event Action instances. ISO 9506-2:2003 Annex B.1.13.
+         *
          * @public
          * @readonly
          */
         readonly eventActions: Event_Action_instance[],
         /**
          * @summary `eventEnrollments`.
+         * @description
+         *
+         * Configured Event Enrollment instances. ISO 9506-2:2003 Annex B.1.14.
+         *
          * @public
          * @readonly
          */
         readonly eventEnrollments: Event_Enrollment_instance[],
         /**
          * @summary `eventConditionLists`.
+         * @description
+         *
+         * Configured Event Condition Lists (or NULL if not cspi). ISO
+         * 9506-2:2003 Annex B.1.15.
+         *
          * @public
          * @readonly
          */

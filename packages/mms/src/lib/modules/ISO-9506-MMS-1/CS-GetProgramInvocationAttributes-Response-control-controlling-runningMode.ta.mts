@@ -19,6 +19,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode
  * @description
  * 
+ * Reported `&running-Mode`. `freeRunning`: `free-run`. `cycleLimited`:
+ * `cycle-limited` plus `&remaining-Cycle-Count`. `stepLimited`: `step-limited`
+ * plus `&remaining-Step-Count` (CSI; may be unsupported). ISO 9506-1:2003
+ * §12.9.1.2.14–§12.9.1.2.16.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

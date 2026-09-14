@@ -17,7 +17,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DefineScatteredAccess_Response
  * @description
- * 
+ *
+ * Result(+): empty. Object created; MMS
+ * Deletable initialized true. Informative
+ * Annex E.
+ *
+ * [ISO 9506-1:2003 Annex E, E.3.1.2]
+ * [ISO 9506-2:2003 Annex E, E.2.2]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

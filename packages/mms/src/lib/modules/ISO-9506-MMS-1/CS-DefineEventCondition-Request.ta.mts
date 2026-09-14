@@ -19,7 +19,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CS_DefineEventCondition_Request
  * @description
- * 
+ *
+ * Request-Detail for DefineEventCondition: Display Enhancement if present.
+ * `cspi`. `string` requires `des`; `index` requires `dei`; `noEnhancement` is
+ * NULL (required if neither des nor dei).
+ *
+ * [ISO 9506-1:2003 §19.2.1.1.7.1]
+ * [ISO 9506-2:2003 §19.2.3]
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

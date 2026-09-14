@@ -20,6 +20,10 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  * @summary GetCapabilityList_Response
  * @description
  * 
+ * Confirmed Result(+) of GetCapabilityList: VMD `&Capabilities`, ordered per
+ * ISO 9506-1:2003 §5.4.2. Protocol DEFAULT of `moreFollows` is TRUE
+ * (ISO 9506-2:2003 §10.8). ISO 9506-1:2003 §10.8.1.2, §10.8.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,24 @@ class GetCapabilityList_Response {
     constructor (
         /**
          * @summary `listOfCapabilities`.
+         * @description
+         *
+         * Zero or more capability strings from VMD `&Capabilities`, starting at
+         * the first or after Continue After. ISO 9506-1:2003 §10.8.1.2.1,
+         * §10.8.2.
+         *
          * @public
          * @readonly
          */
         readonly listOfCapabilities: MMSString[],
         /**
          * @summary `moreFollows`.
+         * @description
+         *
+         * True if further GetCapabilityList requests are needed. Shall be false
+         * if the list is empty or contains the last capability. ASN.1 DEFAULT
+         * TRUE. ISO 9506-1:2003 §10.8.1.2.2; ISO 9506-2:2003 §10.8.
+         *
          * @public
          * @readonly
          */
@@ -77,7 +93,8 @@ class GetCapabilityList_Response {
  * @summary The Leading Root Component Types of GetCapabilityList_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -91,7 +108,8 @@ const _root_component_type_list_1_spec_for_GetCapabilityList_Response: $.Compone
  * @summary The Trailing Root Component Types of GetCapabilityList_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -104,7 +122,8 @@ const _root_component_type_list_2_spec_for_GetCapabilityList_Response: $.Compone
  * @summary The Extension Addition Component Types of GetCapabilityList_Response
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

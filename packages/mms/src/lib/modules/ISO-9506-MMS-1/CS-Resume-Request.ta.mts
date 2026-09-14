@@ -19,6 +19,9 @@ import { CS_Resume_Request_controlling, _decode_CS_Resume_Request_controlling, _
  * @summary CS_Resume_Request
  * @description
  * 
+ * `csr` Request-Detail for Resume. `normal`: no extras. `controlling`: continue
+ * or change running mode. Must not appear unless `&control` is controlling. ISO 9506-1:2003 §12.6.1.1.3. ISO 9506-2:2003 §12.6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

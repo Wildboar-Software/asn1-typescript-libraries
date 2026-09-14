@@ -1,7 +1,20 @@
 /**
  * @description
  *
- * ASN.1 module `ISO-9506-MMS-1A`.
+ * Annex abstract syntax module `ISO-9506-MMS-1A`
+ * (MMS annex version 1). ObtainFile is the
+ * normative File Access service: the client asks
+ * the server to copy a file from a source
+ * filestore, possibly another server. FileOpen,
+ * FileRead, FileClose, FileRename, FileDelete,
+ * and FileDirectory are informative file
+ * management. Scattered Access was moved from
+ * the 2003 base document to informative Annex E;
+ * object class value 1 is reserved for it
+ * (ISO 9506-1:2003 §7.6).
+ *
+ * [ISO 9506-1:2003 Annex C, D, E]
+ * [ISO 9506-2:2003 Annex C, D, E]
  */
 export * from "./DefineScatteredAccess-Request.ta.mjs";
 export * from "./DefineScatteredAccess-Response.ta.mjs";

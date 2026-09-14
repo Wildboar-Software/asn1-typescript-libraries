@@ -19,7 +19,12 @@ import { EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Modu
 /**
  * @summary EntryContent_entryForm_data_event
  * @description
- * 
+ *
+ * Event transition recorded in a journal entry: Event Condition
+ * whose transition caused the entry, and its `&ecState` after
+ * processing. ISO 9506-1:2003 §23.1.2.8, §23.2.1.2.6.1,
+ * §23.3.1.1.2.2.1. ISO 9506-2:2003 §23.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,23 @@ class EntryContent_entryForm_data_event {
     constructor (
         /**
          * @summary `eventConditionName`.
+         * @description
+         *
+         * Event Condition whose transition is recorded.
+         * ISO 9506-1:2003 §23.2.1.2.6.1.1, §23.3.1.1.2.2.1.
+         *
          * @public
          * @readonly
          */
         readonly eventConditionName: ObjectName,
         /**
          * @summary `currentState`.
+         * @description
+         *
+         * `&ecState` of that Event Condition after transition
+         * processing. ISO 9506-1:2003 §23.2.1.2.6.1.2,
+         * §23.3.1.1.2.2.1.
+         *
          * @public
          * @readonly
          */

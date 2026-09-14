@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SemaphoreEntry_entryClass
  * @description
- * 
+ *
+ * How the entry was created. `simple` (0) TakeControl; `modifier`
+ * (1) AttachToSemaphore on another confirmed service.
+ * ISO 9506-1:2003 §16.1.3.2, §16.8.1.2.1.2. ISO 9506-2:2003
+ * §16.8.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +38,11 @@ type SemaphoreEntry_entryClass = INTEGER;
 
 /**
  * @summary SemaphoreEntry_entryClass_simple
+ * @description
+ *
+ * Created by TakeControl (or local action). ISO 9506-1:2003
+ * §16.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -41,6 +51,11 @@ const SemaphoreEntry_entryClass_simple: SemaphoreEntry_entryClass = 0; /* LONG_N
 
 /**
  * @summary SemaphoreEntry_entryClass_simple
+ * @description
+ *
+ * Created by TakeControl (or local action). ISO 9506-1:2003
+ * §16.1.3.2.
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +64,12 @@ const simple: SemaphoreEntry_entryClass = SemaphoreEntry_entryClass_simple; /* S
 
 /**
  * @summary SemaphoreEntry_entryClass_modifier
+ * @description
+ *
+ * Created by a confirmed service with AttachToSemaphore in
+ * `listOfModifiers`. Control is released when that service
+ * finishes. ISO 9506-1:2003 §16.1.3.2, §16.9.
+ *
  * @constant
  * @type {number}
  */
@@ -57,6 +78,12 @@ const SemaphoreEntry_entryClass_modifier: SemaphoreEntry_entryClass = 1; /* LONG
 
 /**
  * @summary SemaphoreEntry_entryClass_modifier
+ * @description
+ *
+ * Created by a confirmed service with AttachToSemaphore in
+ * `listOfModifiers`. Control is released when that service
+ * finishes. ISO 9506-1:2003 §16.1.3.2, §16.9.
+ *
  * @constant
  * @type {number}
  */

@@ -24,6 +24,9 @@ import { LoadData, _decode_LoadData, _encode_LoadData } from "../ISO-9506-MMS-1/
  * @summary ControlElement_beginDomainDef
  * @description
  * 
+ * Start a Domain definition in a Control Element. Domain name must not exist;
+ * server creates it `loading`. ISO 9506-1:2003 §13.2.1.1, §13.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,24 +45,40 @@ class ControlElement_beginDomainDef {
     constructor (
         /**
          * @summary `domainName`.
+         * @description
+         *
+         * Domain to create. ISO 9506-1:2003 §13.2.1.1.1.
+         *
          * @public
          * @readonly
          */
         readonly domainName: Identifier,
         /**
          * @summary `capabilities`.
+         * @description
+         *
+         * `&Capabilities` for the Domain. ISO 9506-1:2003 §13.2.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly capabilities: MMSString[],
         /**
          * @summary `sharable`.
+         * @description
+         *
+         * `&sharable` of the Domain. ISO 9506-1:2003 §13.2.1.1.3.
+         *
          * @public
          * @readonly
          */
         readonly sharable: BOOLEAN,
         /**
          * @summary `loadData`.
+         * @description
+         *
+         * Initial partial or total Domain content. ISO 9506-1:2003 §13.2.1.1.4.
+         *
          * @public
          * @readonly
          */

@@ -10,6 +10,14 @@ import {
 } from "../../modules/DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch-AssertionType.ta.mjs";
 import compareName from "../../comparators/compareName.mjs";
 
+/**
+ * Rec. ITU-T X.501 (10/2019), clause 24.2.1.9.3
+ * `supplierOrConsumerInformationMatch`.
+ *
+ * Equality for `SupplierInformation` or `ConsumerInformation`.
+ * TRUE iff `ae-title` matches as a distinguished name and the
+ * agreement `identifier` INTEGER matches.
+ */
 export
 const supplierOrConsumerInformationMatch: EqualityMatcher = (
     assertion: ASN1Element,

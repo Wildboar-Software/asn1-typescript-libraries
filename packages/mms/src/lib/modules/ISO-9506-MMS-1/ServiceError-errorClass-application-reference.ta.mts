@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceError_errorClass_application_reference
  * @description
  * 
+ * Error Class APPLICATION-REFERENCE: may be returned for associations other
+ * than those between the MMS client and server. ISO 9506-1:2003 §24.2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +39,11 @@ type ServiceError_errorClass_application_reference = INTEGER;
 
 /**
  * @summary ServiceError_errorClass_application_reference_other
+ * @description
+ *
+ * Reason other than those identified for APPLICATION-REFERENCE. ISO 9506-1:2003
+ * §24.2.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +52,11 @@ const ServiceError_errorClass_application_reference_other: ServiceError_errorCla
 
 /**
  * @summary ServiceError_errorClass_application_reference_other
+ * @description
+ *
+ * Reason other than those identified for APPLICATION-REFERENCE. ISO 9506-1:2003
+ * §24.2.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +65,11 @@ const other: ServiceError_errorClass_application_reference = ServiceError_errorC
 
 /**
  * @summary ServiceError_errorClass_application_reference_application_unreachable
+ * @description
+ *
+ * The referenced application is currently unreachable. ISO 9506-1:2003
+ * §24.2.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +78,11 @@ const ServiceError_errorClass_application_reference_application_unreachable: Ser
 
 /**
  * @summary ServiceError_errorClass_application_reference_application_unreachable
+ * @description
+ *
+ * The referenced application is currently unreachable. ISO 9506-1:2003
+ * §24.2.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +91,11 @@ const application_unreachable: ServiceError_errorClass_application_reference = S
 
 /**
  * @summary ServiceError_errorClass_application_reference_connection_lost
+ * @description
+ *
+ * The connection to the specified application was lost before the service could
+ * complete. ISO 9506-1:2003 §24.2.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +104,11 @@ const ServiceError_errorClass_application_reference_connection_lost: ServiceErro
 
 /**
  * @summary ServiceError_errorClass_application_reference_connection_lost
+ * @description
+ *
+ * The connection to the specified application was lost before the service could
+ * complete. ISO 9506-1:2003 §24.2.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +117,10 @@ const connection_lost: ServiceError_errorClass_application_reference = ServiceEr
 
 /**
  * @summary ServiceError_errorClass_application_reference_application_reference_invalid
+ * @description
+ *
+ * The application reference is invalid. ISO 9506-1:2003 §24.2.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +129,10 @@ const ServiceError_errorClass_application_reference_application_reference_invali
 
 /**
  * @summary ServiceError_errorClass_application_reference_application_reference_invalid
+ * @description
+ *
+ * The application reference is invalid. ISO 9506-1:2003 §24.2.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +141,11 @@ const application_reference_invalid: ServiceError_errorClass_application_referen
 
 /**
  * @summary ServiceError_errorClass_application_reference_context_unsupported
+ * @description
+ *
+ * The referenced application does not support the desired application context.
+ * ISO 9506-1:2003 §24.2.2.4.
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +154,11 @@ const ServiceError_errorClass_application_reference_context_unsupported: Service
 
 /**
  * @summary ServiceError_errorClass_application_reference_context_unsupported
+ * @description
+ *
+ * The referenced application does not support the desired application context.
+ * ISO 9506-1:2003 §24.2.2.4.
+ *
  * @constant
  * @type {number}
  */

@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceError_errorClass_time_resolution
  * @description
  * 
+ * Error Class TIME-RESOLUTION: the requested time resolution is not
+ * supportable. ISO 9506-1:2003 §24.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +36,11 @@ type ServiceError_errorClass_time_resolution = INTEGER;
 
 /**
  * @summary ServiceError_errorClass_time_resolution_other
+ * @description
+ *
+ * Reason other than those identified for TIME-RESOLUTION. ISO 9506-1:2003
+ * §24.2.7.2.
+ *
  * @constant
  * @type {number}
  */
@@ -41,6 +49,11 @@ const ServiceError_errorClass_time_resolution_other: ServiceError_errorClass_tim
 
 /**
  * @summary ServiceError_errorClass_time_resolution_other
+ * @description
+ *
+ * Reason other than those identified for TIME-RESOLUTION. ISO 9506-1:2003
+ * §24.2.7.2.
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +62,11 @@ const other: ServiceError_errorClass_time_resolution = ServiceError_errorClass_t
 
 /**
  * @summary ServiceError_errorClass_time_resolution_unsupportable_time_resolution
+ * @description
+ *
+ * The request asked for an unsupportable time resolution. ISO 9506-1:2003
+ * §24.2.7.1.
+ *
  * @constant
  * @type {number}
  */
@@ -57,6 +75,11 @@ const ServiceError_errorClass_time_resolution_unsupportable_time_resolution: Ser
 
 /**
  * @summary ServiceError_errorClass_time_resolution_unsupportable_time_resolution
+ * @description
+ *
+ * The request asked for an unsupportable time resolution. ISO 9506-1:2003
+ * §24.2.7.1.
+ *
  * @constant
  * @type {number}
  */

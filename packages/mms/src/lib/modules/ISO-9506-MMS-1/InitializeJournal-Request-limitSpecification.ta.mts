@@ -19,7 +19,12 @@ import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS
 /**
  * @summary InitializeJournal_Request_limitSpecification
  * @description
- * 
+ *
+ * Delete bound. Entries with `&timeStamp` earlier than or equal
+ * to `limitingTime` are removed; `limitingEntry` disambiguates
+ * same-timestamp entries via `&orderOfReceipt`. ISO 9506-1:2003
+ * §23.4.1.1.2, §23.4.2.2. ISO 9506-2:2003 §23.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,23 @@ class InitializeJournal_Request_limitSpecification {
     constructor (
         /**
          * @summary `limitingTime`.
+         * @description
+         *
+         * `&timeStamp` beyond which the journal is not initialized.
+         * ISO 9506-1:2003 §23.4.1.1.2.
+         *
          * @public
          * @readonly
          */
         readonly limitingTime: TimeOfDay,
         /**
          * @summary `limitingEntry`.
+         * @description
+         *
+         * `&entry` used when several entries share `limitingTime`.
+         * Shall not appear without `limitingTime`. ISO 9506-1:2003
+         * §23.4.1.1.3.
+         *
          * @public
          * @readonly
          */

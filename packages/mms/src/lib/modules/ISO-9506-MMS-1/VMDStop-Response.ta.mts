@@ -18,6 +18,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary VMDStop_Response
  * @description
  * 
+ * Confirmed Result(+) of VMDStop. No service-specific parameters. After
+ * success: `&operationState` = `manual-intervention-required`; `&localControl`
+ * undefined; `&logicalStatus` = `no-state-changes-allowed`; `&physicalStatus` =
+ * `needs-commissioning`. Running Program Invocations are removed from running
+ * (new state is a local matter). ISO 9506-1:2003 §10.9.1.2, §10.9.2 Table 29;
+ * ISO 9506-2:2003 §10.9.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

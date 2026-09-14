@@ -62,7 +62,13 @@ import { AlterEventConditionListMonitoring_Request, _decode_AlterEventConditionL
 /**
  * @summary AdditionalService_Request
  * @description
- * 
+ *
+ * Confirmed companion-standard and extended services selected by
+ * ConfirmedServiceRequest tag [78]. Alternatives require `csr` (VMDStop,
+ * VMDReset, Select, alterPI) or `cspi` (unit-control and event-condition-list
+ * services). Unsupported alternatives are tagged NULL (ISO 9506-1:2003 Annex B;
+ * ISO 9506-2:2003 §7.1.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

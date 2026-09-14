@@ -24,6 +24,11 @@ import { type ACCESS_CONTROL_LIST } from "../MMS-Object-Module-1/ACCESS-CONTROL-
  * @summary m_NonDeletable
  * @description
  * 
+ * MMS Standardized Name `M_NonDeletable`
+ * (prefix `M_`). ACL for objects that may not be deleted by an MMS
+ * service (`deleteAccessCondition` = never). Also lists `M_DAYTIME`.
+ * ISO 9506-1:2003 §25.3.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

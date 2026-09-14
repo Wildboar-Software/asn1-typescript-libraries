@@ -17,7 +17,13 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 /**
  * @summary GetUnitControlAttributes_Request
  * @description
- * 
+ *
+ * Unit Control Name: Identifier of the Unit Control whose
+ * constituent Domains and Program Invocations are requested.
+ * Carried as `getUCAttributes` in AdditionalService-Request,
+ * not as a top-level ConfirmedServiceRequest choice.
+ * ISO 9506-1:2003 §13.11.1.1.1; ISO 9506-2:2003 §13.11.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
