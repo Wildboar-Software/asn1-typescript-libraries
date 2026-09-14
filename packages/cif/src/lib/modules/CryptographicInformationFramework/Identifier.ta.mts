@@ -64,8 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { cia_ub_identifier } from "../CryptographicInformationFramework/cia-ub-identifier.va.mjs";
 
 
 
@@ -81,7 +83,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Identifier = OCTET_STRING; // OctetStringType
-export const _decode_Identifier = $._decodeOctetString;
+export const _decode_Identifier = (el: _Element): Identifier => {
+    const value = $._decodeOctetString(el);
+    if (value.length > cia_ub_identifier) {
+        throw new ASN1SizeError("Identifier violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_Identifier = $._encodeOctetString;
 
 

@@ -64,6 +64,8 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
@@ -73,6 +75,7 @@ import { CommonObjectFlags, CommonObjectFlags_private /* IMPORTED_LONG_NAMED_BIT
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
 // export { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
 import { AccessControlRule, _decode_AccessControlRule, _encode_AccessControlRule } from "../CryptographicInformationFramework/AccessControlRule.ta.mjs";
+import { cia_ub_userConsent } from "../CryptographicInformationFramework/cia-ub-userConsent.va.mjs";
 // export { AccessControlRule, _decode_AccessControlRule, _encode_AccessControlRule } from "../CryptographicInformationFramework/AccessControlRule.ta.mjs";
 
 
@@ -135,7 +138,17 @@ class CommonObjectAttributes {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (userConsent !== undefined) {
+            const n = typeof userConsent === "bigint" ? userConsent : BigInt(userConsent);
+            if (n < 1n || n > BigInt(cia_ub_userConsent)) {
+                throw new ASN1OverflowError("CommonObjectAttributes.userConsent violates INTEGER range");
+            }
+        }
+        if (accessControlRules !== undefined && accessControlRules.length < 1) {
+            throw new ASN1SizeError("CommonObjectAttributes.accessControlRules violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a CommonObjectAttributes

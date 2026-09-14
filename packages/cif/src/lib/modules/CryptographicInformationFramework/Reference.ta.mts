@@ -64,8 +64,11 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { cia_ub_reference } from "../CryptographicInformationFramework/cia-ub-reference.va.mjs";
 
 
 
@@ -101,7 +104,19 @@ function _decode_Reference (el: _Element): Reference {
     "UNIVERSAL 2": [ "uniqueByteRef", $._decodeInteger ],
     "CONTEXT 1": [ "multiByteRef", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
 }); }
-    return _cached_decoder_for_Reference(el);
+    const value = _cached_decoder_for_Reference(el);
+    if ("uniqueByteRef" in value) {
+        const n = typeof value.uniqueByteRef === "bigint" ? value.uniqueByteRef : BigInt(value.uniqueByteRef);
+        if (n < 0n || n > BigInt(cia_ub_reference)) {
+            throw new ASN1OverflowError("Reference.uniqueByteRef violates INTEGER range");
+        }
+    } else if ("multiByteRef" in value) {
+        const len = value.multiByteRef.length;
+        if (len < 4 || len > 20) {
+            throw new ASN1SizeError("Reference.multiByteRef violates SIZE constraint");
+        }
+    }
+    return value;
 }
 
 let _cached_encoder_for_Reference: $.ASN1Encoder<Reference> | null = null;

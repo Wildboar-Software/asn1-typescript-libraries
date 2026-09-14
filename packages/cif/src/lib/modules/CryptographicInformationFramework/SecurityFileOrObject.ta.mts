@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
@@ -71,6 +72,7 @@ import { Label, _decode_Label, _encode_Label } from "../CryptographicInformation
 import { CommunicationMode, CommunicationMode_contact /* IMPORTED_LONG_NAMED_BIT */, contact /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_contactLess /* IMPORTED_LONG_NAMED_BIT */, contactLess /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_usb /* IMPORTED_LONG_NAMED_BIT */, usb /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_nfc /* IMPORTED_LONG_NAMED_BIT */, nfc /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_contactC6 /* IMPORTED_LONG_NAMED_BIT */, contactC6 /* IMPORTED_SHORT_NAMED_BIT */, _decode_CommunicationMode, _encode_CommunicationMode } from "../CryptographicInformationFramework/CommunicationMode.ta.mjs";
 // export { CommunicationMode, CommunicationMode_contact /* IMPORTED_LONG_NAMED_BIT */, contact /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_contactLess /* IMPORTED_LONG_NAMED_BIT */, contactLess /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_usb /* IMPORTED_LONG_NAMED_BIT */, usb /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_nfc /* IMPORTED_LONG_NAMED_BIT */, nfc /* IMPORTED_SHORT_NAMED_BIT */, CommunicationMode_contactC6 /* IMPORTED_LONG_NAMED_BIT */, contactC6 /* IMPORTED_SHORT_NAMED_BIT */, _decode_CommunicationMode, _encode_CommunicationMode } from "../CryptographicInformationFramework/CommunicationMode.ta.mjs";
 import { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFramework/Path.ta.mjs";
+import { cia_ub_index } from "../CryptographicInformationFramework/cia-ub-index.va.mjs";
 // export { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFramework/Path.ta.mjs";
 
 
@@ -146,7 +148,17 @@ class SecurityFileOrObject {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        for (const [name, value] of [["index", index], ["precondition", precondition]] as const) {
+            if (value === undefined) {
+                continue;
+            }
+            const n = typeof value === "bigint" ? value : BigInt(value);
+            if (n < 0n || n > BigInt(cia_ub_index)) {
+                throw new ASN1OverflowError(`SecurityFileOrObject.${name} violates INTEGER range`);
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a SecurityFileOrObject

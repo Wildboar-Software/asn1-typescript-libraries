@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
@@ -102,7 +103,11 @@ class DigestInfoWithDefault {
          * @readonly
          */
         readonly digest: OCTET_STRING
-    ) {}
+    ) {
+        if (digest.length < 8 || digest.length > 128) {
+            throw new ASN1SizeError("DigestInfoWithDefault.digest violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a DigestInfoWithDefault

@@ -64,8 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { cia_ub_label } from "../CryptographicInformationFramework/cia-ub-label.va.mjs";
 
 
 
@@ -81,7 +83,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Label = UTF8String; // UTF8String
-export const _decode_Label = $._decodeUTF8String;
+export const _decode_Label = (el: _Element): Label => {
+    const value = $._decodeUTF8String(el);
+    if (value.length > cia_ub_label) {
+        throw new ASN1SizeError("Label violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_Label = $._encodeUTF8String;
 
 

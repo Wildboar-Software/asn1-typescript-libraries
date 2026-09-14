@@ -64,6 +64,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
@@ -119,7 +120,11 @@ class CommonDataContainerObjectAttributes {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (applicationName === undefined && applicationOID === undefined) {
+            throw new ASN1ConstructionError("CommonDataContainerObjectAttributes requires applicationName or applicationOID");
+        }
+    }
 
     /**
      * @summary Restructures an object into a CommonDataContainerObjectAttributes

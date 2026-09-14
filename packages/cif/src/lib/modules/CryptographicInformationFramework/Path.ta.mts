@@ -64,9 +64,12 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Path_efidOrTagChoice, _decode_Path_efidOrTagChoice, _encode_Path_efidOrTagChoice } from "../CryptographicInformationFramework/Path-efidOrTagChoice.ta.mjs";
+import { cia_ub_index } from "../CryptographicInformationFramework/cia-ub-index.va.mjs";
 // export { Path_efidOrTagChoice, _decode_Path_efidOrTagChoice, _encode_Path_efidOrTagChoice } from "../CryptographicInformationFramework/Path-efidOrTagChoice.ta.mjs";
 
 
@@ -126,7 +129,22 @@ class Path {
          * @readonly
          */
         readonly length: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+        const indexPresent = index !== undefined;
+        const lengthPresent = length !== undefined;
+        if (indexPresent !== lengthPresent) {
+            throw new ASN1ConstructionError("Path.index and Path.length must be both present or both absent");
+        }
+        for (const [name, value] of [["index", index], ["length", length]] as const) {
+            if (value === undefined) {
+                continue;
+            }
+            const n = typeof value === "bigint" ? value : BigInt(value);
+            if (n < 0n || n > BigInt(cia_ub_index)) {
+                throw new ASN1OverflowError(`Path.${name} violates INTEGER range`);
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a Path

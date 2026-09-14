@@ -64,8 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { cia_ub_recordLength } from "../CryptographicInformationFramework/cia-ub-recordLength.va.mjs";
 
 
 
@@ -134,7 +136,25 @@ class RecordInfo {
          * @readonly
          */
         readonly aODRecordLength: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+        for (const [name, value] of [
+            ["oDRecordLength", oDRecordLength],
+            ["prKDRecordLength", prKDRecordLength],
+            ["puKDRecordLength", puKDRecordLength],
+            ["sKDRecordLength", sKDRecordLength],
+            ["cDRecordLength", cDRecordLength],
+            ["dCODRecordLength", dCODRecordLength],
+            ["aODRecordLength", aODRecordLength],
+        ] as const) {
+            if (value === undefined) {
+                continue;
+            }
+            const n = typeof value === "bigint" ? value : BigInt(value);
+            if (n < 0n || n > BigInt(cia_ub_recordLength)) {
+                throw new ASN1OverflowError(`RecordInfo.${name} violates INTEGER range`);
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a RecordInfo
