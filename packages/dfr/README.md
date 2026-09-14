@@ -21,7 +21,8 @@ programming languages, or if you have any other questions, please contact us at
 
 ## ESM-Only
 
-This module is ESM-only.
+This module is ESM-only. Import from `@wildboar/dfr`. Per-module
+subpaths remain available for callers that want a narrower surface.
 
 ## AI Usage Statement
 

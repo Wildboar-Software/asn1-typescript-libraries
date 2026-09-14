@@ -4,7 +4,21 @@
  * ASN.1 module `DFRBasicAttributes`.
  */
 export * from "./AccessId.ta.mjs";
-export * from "./AccessRights.ta.mjs";
+export {
+    AccessRights,
+    AccessRights_extended_read,
+    AccessRights_owner,
+    AccessRights_read,
+    AccessRights_read_modify,
+    AccessRights_read_modify_delete,
+    _decode_AccessRights,
+    _encode_AccessRights,
+    _enum_for_AccessRights,
+    extended_read,
+    owner,
+    read_modify,
+    read_modify_delete,
+} from "./AccessRights.ta.mjs";
 export * from "./DfrAccessListElement.ta.mjs";
 export * from "./dfr-access-list.oa.mjs";
 export * from "./dfr-attributes-create-date-and-time.oa.mjs";

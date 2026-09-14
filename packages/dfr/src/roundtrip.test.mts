@@ -30,6 +30,15 @@ import {
     _encode_SearchArgument,
     _decode_SearchArgument,
 } from "./lib/modules/DFRAbstractService/SearchArgument.ta.mjs";
+import {
+    CreateArgument as CreateArgumentFromRoot,
+    DOR as DORFromRoot,
+    AccessRights_read,
+    id_dfr,
+    id_dfr_protocol,
+    type OPERATION,
+    read,
+} from "./index.mjs";
 
 describe("DFR encode/decode round-trips", () => {
     test("round-trips DOR with locational AE-Identifier, QoS, and token", () => {
@@ -193,5 +202,16 @@ describe("DFR encode/decode round-trips", () => {
         expect(decoded.search_mode).toEqual({ non_stored_search: null });
         expect(decoded.error_handling).toEqual({ all_or_nothing: null });
         expect(decoded.priority).toBe(Priority_medium);
+    });
+
+    test("re-exports DFR types from the package root", () => {
+        expect(CreateArgumentFromRoot).toBe(CreateArgument);
+        expect(DORFromRoot).toBe(DOR);
+        expect(AccessRights_read).toBe(0);
+        expect(id_dfr.toString()).toBe("1.0.10166.1");
+        expect(id_dfr_protocol.toString()).toBe("1.0.10166.2");
+        expect(read.class).toBe("OPERATION");
+        const op: OPERATION = read;
+        expect(op["&operationCode"]).toBeDefined();
     });
 });
