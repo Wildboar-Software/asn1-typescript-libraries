@@ -914,10 +914,10 @@ describe("boundariesOfPeriodOccurrence()", () => {
 
         expect(e.getFullYear()).toBe(2016);
         expect(e.getMonth()).toBe(1);
-        expect(e.getDate()).toBe(15);
-        expect(e.getHours()).toBe(0);
-        expect(e.getMinutes()).toBe(0);
-        expect(e.getSeconds()).toBe(0);
+        expect(e.getDate()).toBe(14);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
 
         const d2 = new Date(2016, 1, 15, 12, 34, 56);
         const s2 = boundariesOfPeriodOccurrence(p, d2);
@@ -1448,7 +1448,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
-        expect(s.getDate()).toBe(7);
+        expect(s.getDate()).toBe(10);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);

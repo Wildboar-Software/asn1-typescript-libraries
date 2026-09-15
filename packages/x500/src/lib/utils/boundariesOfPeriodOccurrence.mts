@@ -330,12 +330,44 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         max = endOfDay(point);
         let i: number = pointDay;
         while (whitelistedDays.has(i - 1)) {
-            min = subDays(min, 1);
+            const candidate: Date = subDays(min, 1);
+            if (period.weeks) {
+                const {
+                    year: candYear,
+                    month: candMonth,
+                    week: candWeek,
+                    lastWeek: candLastWeek,
+                } = destructureDateIntoPeriodProperties(period, candidate);
+                if (
+                    !periodAllowsWeek(whitelistedWeeks, candWeek, candLastWeek, weeksAreOfMonth)
+                    || (whitelistedMonths && !whitelistedMonths.has(candMonth))
+                    || (whitelistedYears && !whitelistedYears.has(candYear))
+                ) {
+                    break;
+                }
+            }
+            min = candidate;
             i--;
         }
         let j: number = pointDay;
         while (whitelistedDays.has(j + 1)) {
-            max = addDays(max, 1);
+            const candidate: Date = addDays(max, 1);
+            if (period.weeks) {
+                const {
+                    year: candYear,
+                    month: candMonth,
+                    week: candWeek,
+                    lastWeek: candLastWeek,
+                } = destructureDateIntoPeriodProperties(period, candidate);
+                if (
+                    !periodAllowsWeek(whitelistedWeeks, candWeek, candLastWeek, weeksAreOfMonth)
+                    || (whitelistedMonths && !whitelistedMonths.has(candMonth))
+                    || (whitelistedYears && !whitelistedYears.has(candYear))
+                ) {
+                    break;
+                }
+            }
+            max = candidate;
             j++;
         }
         if (i === 1) {
