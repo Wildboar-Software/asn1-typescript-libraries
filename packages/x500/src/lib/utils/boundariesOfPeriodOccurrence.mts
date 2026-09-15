@@ -11,7 +11,6 @@ import {
     addWeeks,
     subDays,
     startOfYear,
-    subYears,
     subMonths,
     getDaysInMonth,
     getDaysInYear,
@@ -20,15 +19,30 @@ import {
     addDays,
     addYears,
     endOfYear,
-    getWeeksInMonth,
+    startOfISOWeek,
+    endOfISOWeek,
 } from "date-fns";
 import getDayOfMonthWhitelistFromXDayOf from "./getDayOfMonthWhitelistFromXDayOf.mjs";
 import dateIsBetweenDayTimeBand from "./dateIsBetweenDayTimeBand.mjs";
 import destructureDateIntoPeriodProperties from "./destructureDateIntoPeriodProperties.mjs";
+import { x520WeekIsListed } from "./x520PeriodCalendar.mjs";
 
 const MAX_DAY_OF_WEEK = 7;
-const MAX_WEEK_OF_YEAR = 53;
 const MAX_MONTH = 12;
+const MAX_WEEK_SPAN_ITERS = 60;
+
+function periodAllowsWeek (
+    whitelist: Set<number> | null,
+    week: number,
+    lastWeek: number,
+    ofMonth: boolean,
+): boolean {
+    if (!whitelist) {
+        return true;
+    }
+    return x520WeekIsListed(whitelist, week, lastWeek, ofMonth);
+}
+
 const ALL_WEEKS_IN_YEAR: Set<number> = new Set(Array(53).fill(0).map((_, i) => (i + 1)));
 const ALL_WEEKS_IN_MONTH: Set<number> = new Set([ 1, 2, 3, 4, 5 ]);
 const ALL_MONTHS_IN_YEAR: Set<number> = new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]);
@@ -180,11 +194,13 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
             && ((tod.endDayTime?.second ?? DayTimeBand._default_value_for_endDayTime.second ?? 59) === 59)
         ));
 
+    const weeksAreOfMonth: boolean = Boolean(period.months);
     const {
         year: pointYear,
         month: pointMonth,
         week: pointWeek,
         day: pointDay,
+        lastWeek: pointLastWeek,
     } = destructureDateIntoPeriodProperties(period, point);
     const applicableTimeband: DayTimeBand | undefined = period.timesOfDay
         ? period.timesOfDay.find((tod): boolean => dateIsBetweenDayTimeBand(tod, point))
@@ -200,12 +216,10 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         }
     })();
 
-    const maxWeek: number = (period.months ? 5 : 53);
-
     if (
         (whitelistedYears && !whitelistedYears.has(pointYear))
         || (whitelistedMonths && !whitelistedMonths.has(pointMonth))
-        || (whitelistedWeeks && !whitelistedWeeks.has(pointWeek))
+        || !periodAllowsWeek(whitelistedWeeks, pointWeek, pointLastWeek, weeksAreOfMonth)
         || (whitelistedDays && !whitelistedDays.has(pointDay))
         || (period.timesOfDay && !applicableTimeband)
     ) {
@@ -227,10 +241,11 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                 month: yesterMonth,
                 week: yesterWeek,
                 day: yesterDay,
+                lastWeek: yesterLastWeek,
             } = destructureDateIntoPeriodProperties(period, prev);
             const previousDayIsPermitted = (
                 (!whitelistedDays || whitelistedDays.has(yesterDay))
-                && (!whitelistedWeeks || whitelistedWeeks.has(yesterWeek))
+                && periodAllowsWeek(whitelistedWeeks, yesterWeek, yesterLastWeek, weeksAreOfMonth)
                 && (!whitelistedMonths || whitelistedMonths.has(yesterMonth))
                 && (!whitelistedYears || whitelistedYears.has(yesterYear))
             );
@@ -271,10 +286,11 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                 month: nextMonth,
                 week: nextWeek,
                 day: nextDay,
+                lastWeek: nextLastWeek,
             } = destructureDateIntoPeriodProperties(period, next);
             const nextDayIsPermitted = (
                 (!whitelistedDays || whitelistedDays.has(nextDay))
-                && (!whitelistedWeeks || whitelistedWeeks.has(nextWeek))
+                && periodAllowsWeek(whitelistedWeeks, nextWeek, nextLastWeek, weeksAreOfMonth)
                 && (!whitelistedMonths || whitelistedMonths.has(nextMonth))
                 && (!whitelistedYears || whitelistedYears.has(nextYear))
             );
@@ -329,9 +345,10 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     year: yesterYear,
                     month: yesterMonth,
                     week: yesterWeek,
+                    lastWeek: yesterLastWeek,
                 } = destructureDateIntoPeriodProperties(period, prev);
                 const previousWeekPermitted = (
-                    (!whitelistedWeeks || whitelistedWeeks.has(yesterWeek))
+                    periodAllowsWeek(whitelistedWeeks, yesterWeek, yesterLastWeek, weeksAreOfMonth)
                     && (!whitelistedMonths || whitelistedMonths.has(yesterMonth))
                     && (!whitelistedYears || whitelistedYears.has(yesterYear))
                 );
@@ -379,9 +396,10 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     year: nextYear,
                     month: nextMonth,
                     week: nextWeek,
+                    lastWeek: nextLastWeek,
                 } = destructureDateIntoPeriodProperties(period, next);
                 const nextWeekPermitted = (
-                    (!whitelistedWeeks || whitelistedWeeks.has(nextWeek))
+                    periodAllowsWeek(whitelistedWeeks, nextWeek, nextLastWeek, weeksAreOfMonth)
                     && (!whitelistedMonths || whitelistedMonths.has(nextMonth))
                     && (!whitelistedYears || whitelistedYears.has(nextYear))
                 );
@@ -440,99 +458,41 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         }
         return [ min, max ];
     } else if (whitelistedWeeks) {
-        min = period.months
-            ? addWeeks(startOfMonth(point), (pointWeek - 1))
-            : addWeeks(startOfYear(point), (pointWeek - 1));
-        max = period.months
-            ? addWeeks(startOfMonth(point), pointWeek)
-            : addWeeks(startOfYear(point), pointWeek);
-        let i: number = pointWeek;
-        while (whitelistedWeeks.has(i - 1)) { // We need to check for rollover.
-            min = subWeeks(min, 1);
-            i--;
-        }
-        let j: number = pointWeek;
-        while (whitelistedWeeks.has(j + 1)) { // We need to check for rollover.
-            max = addWeeks(max, 1);
-            j++;
-        }
-        if (i === 1) {
-            if (period.months) {
-                const prev = subMonths(min, 1);
-                const {
-                    year: yesterYear,
-                    month: yesterMonth,
-                } = destructureDateIntoPeriodProperties(period, prev);
-                const previousMonthPermitted = (
-                    (!whitelistedMonths || whitelistedMonths.has(yesterMonth))
-                    && (!whitelistedYears || whitelistedYears.has(yesterYear))
-                );
-                if (previousMonthPermitted && whitelistedWeeks.has(5)) {
-                    min = subWeeks(endOfMonth(prev), 1);
-                    i = 4;
-                    while (whitelistedWeeks.has(i)) {
-                        min = addWeeks(startOfMonth(prev), (i - 1));
-                        i--;
-                    }
-                }
-            } else {
-                const prev = subYears(min, 1);
-                const { year: yesterYear } = destructureDateIntoPeriodProperties(period, prev);
-                const previousYearPermitted = (!whitelistedYears || whitelistedYears.has(yesterYear));
-                if (previousYearPermitted) {
-                    i = MAX_WEEK_OF_YEAR;
-                    while (whitelistedWeeks.has(i)) {
-                        min = subWeeks(min, 1);
-                        i--;
-                    }
-                }
+        min = startOfISOWeek(point);
+        max = endOfISOWeek(point);
+        for (let n: number = 0; n < MAX_WEEK_SPAN_ITERS; n++) {
+            const prev: Date = subWeeks(min, 1);
+            const {
+                year: prevYear,
+                month: prevMonth,
+                week: prevWeek,
+                lastWeek: prevLastWeek,
+            } = destructureDateIntoPeriodProperties(period, prev);
+            if (
+                !periodAllowsWeek(whitelistedWeeks, prevWeek, prevLastWeek, weeksAreOfMonth)
+                || (whitelistedMonths && !whitelistedMonths.has(prevMonth))
+                || (whitelistedYears && !whitelistedYears.has(prevYear))
+            ) {
+                break;
             }
+            min = startOfISOWeek(prev);
         }
-        if (j >= maxWeek) {
-            if (period.months) {
-                /**
-                 * Overflow is possible, because the whitelist may contain more
-                 * whitelisted weeks than the month has.
-                 */
-                if ((max.getMonth() + 1) > pointMonth) {
-                    max = endOfMonth(subWeeks(max, 2));
-                }
-                const next = addMonths(max, 1);
-                const {
-                    year: nextYear,
-                    month: nextMonth,
-                } = destructureDateIntoPeriodProperties(period, next);
-                const nextMonthPermitted = (
-                    (!whitelistedMonths || whitelistedMonths.has(nextMonth))
-                    && (!whitelistedYears || whitelistedYears.has(nextYear))
-                );
-                if (nextMonthPermitted) {
-                    const weeksInNextMonth: number = getWeeksInMonth(next);
-                    j = 1;
-                    while (whitelistedWeeks.has(j) && (j <= weeksInNextMonth)) {
-                        max = addWeeks(startOfMonth(next), j);
-                        j++;
-                    }
-                }
-            } else {
-                /**
-                 * Overflow is possible, because the whitelist may contain more
-                 * whitelisted weeks than the year has.
-                 */
-                if (max.getFullYear() > pointYear) {
-                    max = endOfYear(subMonths(max, 1));
-                }
-                const next = addYears(max, 1);
-                const { year: nextYear } = destructureDateIntoPeriodProperties(period, next);
-                const nextYearPermitted = (!whitelistedYears || whitelistedYears.has(nextYear));
-                if (nextYearPermitted) {
-                    j = 1;
-                    while (whitelistedWeeks.has(j)) {
-                        max = addWeeks(startOfYear(next), j);
-                        j++;
-                    }
-                }
+        for (let n: number = 0; n < MAX_WEEK_SPAN_ITERS; n++) {
+            const next: Date = addWeeks(max, 1);
+            const {
+                year: nextYear,
+                month: nextMonth,
+                week: nextWeek,
+                lastWeek: nextLastWeek,
+            } = destructureDateIntoPeriodProperties(period, next);
+            if (
+                !periodAllowsWeek(whitelistedWeeks, nextWeek, nextLastWeek, weeksAreOfMonth)
+                || (whitelistedMonths && !whitelistedMonths.has(nextMonth))
+                || (whitelistedYears && !whitelistedYears.has(nextYear))
+            ) {
+                break;
             }
+            max = endOfISOWeek(next);
         }
     } else if (whitelistedMonths) {
         min = startOfMonth(point);
