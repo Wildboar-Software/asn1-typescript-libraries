@@ -560,13 +560,13 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
             }
         }
         if (j >= MAX_MONTH) {
-            const next = addMonths(min, 1);
+            const next = addMonths(max, 1);
             const { year: nextYear } = destructureDateIntoPeriodProperties(period, next);
             const nextYearPermitted = (!whitelistedYears || whitelistedYears.has(nextYear));
             if (nextYearPermitted) {
                 j = 1;
                 while (whitelistedMonths.has(j)) {
-                    max = addMonths(startOfYear(next), j);
+                    max = endOfMonth(new Date(next.getFullYear(), j - 1, 1));
                     j++;
                 }
             }

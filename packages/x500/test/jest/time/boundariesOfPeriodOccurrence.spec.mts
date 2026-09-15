@@ -1827,11 +1827,38 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2022);
-        expect(e.getMonth()).toBe(2);
-        expect(e.getDate()).toBe(1);
-        expect(e.getHours()).toBe(0);
-        expect(e.getMinutes()).toBe(0);
-        expect(e.getSeconds()).toBe(0);
+        expect(e.getMonth()).toBe(1);
+        expect(e.getDate()).toBe(28);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
+    });
+
+    it("wraps Nov–Jan from a December point without inverting bounds", () => {
+        const p = new Period(
+            undefined,
+            undefined,
+            undefined,
+            {
+                intMonth: [ 1, 11, 12 ],
+            },
+            [ 2021, 2022 ],
+        );
+        const d = new Date(2021, 11, 15, 12, 0, 0);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r!;
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(10);
+        expect(s.getDate()).toBe(1);
+        expect(e.getFullYear()).toBe(2022);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(31);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
+        expect(s.valueOf()).toBeLessThanOrEqual(d.valueOf());
+        expect(d.valueOf()).toBeLessThanOrEqual(e.valueOf());
     });
 
     it("does not overflow into the next month prior to checking that the next month is allowed", () => {
