@@ -18,6 +18,10 @@ import { type KEY_IDENTIFIER } from "../CryptographicInformationFramework/KEY-ID
  * @summary certificateHolderReference
  * @description
  * 
+ * `KEY-IDENTIFIER` 10: holder of an ISO/IEC 7816-8 card-verifiable certificate;
+ * used as subject key identifier for the holder public key. ISO/IEC
+ * 7816-15:2016 §8.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,6 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DHPublicNumber
  * @description
  * 
+ * Raw Diffie-Hellman public value (INTEGER). ISO/IEC 7816-15:2016 §8.5.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

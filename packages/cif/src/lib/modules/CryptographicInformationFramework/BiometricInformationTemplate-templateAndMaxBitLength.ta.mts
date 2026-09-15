@@ -20,6 +20,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary BiometricInformationTemplate_templateAndMaxBitLength
  * @description
  * 
+ * `maxBITLength` is the maximum size in bytes allocated for a further BIT for
+ * post-issuance enrolment. ISO/IEC 7816-15:2016 §8.9.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +40,17 @@ class BiometricInformationTemplate_templateAndMaxBitLength {
     constructor (
         /**
          * @summary `maxBITLength`.
+         * @description
+         * Max size in bytes of DO '7F60' for later enrolment. ISO/IEC
+         * 7816-15:2016 §8.9.3.
          * @public
          * @readonly
          */
         readonly maxBITLength: OPTIONAL<INTEGER>,
         /**
          * @summary `biometricInformationTemplate`.
+         * @description
+         * ISO/IEC 7816-11 BIT value. ISO/IEC 7816-15:2016 §8.9.3.
          * @public
          * @readonly
          */
@@ -53,7 +61,8 @@ class BiometricInformationTemplate_templateAndMaxBitLength {
      * @summary Restructures an object into a BiometricInformationTemplate_templateAndMaxBitLength
      * @description
      * 
-     * This takes an `object` and converts it to a `BiometricInformationTemplate_templateAndMaxBitLength`.
+     * This takes an `object` and converts it to a
+     * `BiometricInformationTemplate_templateAndMaxBitLength`.
      * 
      * @public
      * @static
@@ -72,7 +81,8 @@ class BiometricInformationTemplate_templateAndMaxBitLength {
  * @summary The Leading Root Component Types of BiometricInformationTemplate_templateAndMaxBitLength
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -86,7 +96,8 @@ const _root_component_type_list_1_spec_for_BiometricInformationTemplate_template
  * @summary The Trailing Root Component Types of BiometricInformationTemplate_templateAndMaxBitLength
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -99,7 +110,8 @@ const _root_component_type_list_2_spec_for_BiometricInformationTemplate_template
  * @summary The Extension Addition Component Types of BiometricInformationTemplate_templateAndMaxBitLength
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

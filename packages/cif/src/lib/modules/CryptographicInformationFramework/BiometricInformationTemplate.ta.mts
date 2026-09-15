@@ -19,6 +19,9 @@ import { BiometricInformationTemplate_templateAndMaxBitLength, _decode_Biometric
  * @summary BiometricInformationTemplate
  * @description
  * 
+ * OCTET STRING wrapping an ISO/IEC 7816-11 Biometric Information Template (DO
+ * '7F60'). ISO/IEC 7816-15:2016 §8.9.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

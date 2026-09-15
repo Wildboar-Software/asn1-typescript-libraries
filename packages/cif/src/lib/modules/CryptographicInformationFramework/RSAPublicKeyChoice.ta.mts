@@ -20,6 +20,10 @@ import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPubl
  * @summary RSAPublicKeyChoice
  * @description
  * 
+ * `raw` is PKCS-style modulus/exponent; `spki` is ISO/IEC 9594-8
+ * `SubjectPublicKeyInfo` that must contain an RSA public key. ISO/IEC
+ * 7816-15:2016 §8.5.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

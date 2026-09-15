@@ -20,6 +20,10 @@ import { Operations, _decode_Operations, _encode_Operations } from "../Cryptogra
  * @summary CIO_ALGORITHM
  * @description
  * 
+ * Information object class for algorithms listed in `AlgorithmInfo` and generic
+ * keys. `&id` is unique; PKCS #11 mechanism numbers are a possible
+ * interpretation. ISO/IEC 7816-15:2016 §8.10, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,18 +64,30 @@ interface CIO_ALGORITHM<
     }>;
     /**
      * @summary &id
+     * @description
+     * Unique integer; often interpreted as a PKCS #11 mechanism number. ISO/IEC
+     * 7816-15:2016 §8.10.
      */
     readonly "&id"?: INTEGER;
     /**
      * @summary &Parameters
+     * @description
+     * Algorithm parameters (NULL for `cia-alg-null`). ISO/IEC 7816-15:2016
+     * Annex A.
      */
     readonly "&Parameters": Parameters;
     /**
      * @summary &Operations
+     * @description
+     * Hardware operations the card can perform with the algorithm. ISO/IEC
+     * 7816-15:2016 §8.10.
      */
     readonly "&Operations"?: Operations;
     /**
      * @summary &objectIdentifier
+     * @description
+     * Optional algorithm OID (`AlgorithmInfo.objId`). ISO/IEC 7816-15:2016
+     * §8.10.
      */
     readonly "&objectIdentifier"?: OBJECT_IDENTIFIER;
 };

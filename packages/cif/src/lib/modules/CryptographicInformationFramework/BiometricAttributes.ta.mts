@@ -22,6 +22,12 @@ import { BiometricInformationTemplateGroup, _decode_BiometricInformationTemplate
  * @summary BiometricAttributes
  * @description
  * 
+ * Either CIA-specific `BiometricTemplateAttributes` (likely deprecated in a
+ * future edition) or ISO/IEC 7816-11 BIT / BIT-group (tags APPLICATION 96/97),
+ * which may follow CBEFF patron format {iso registration-authority cbeff(19785)
+ * biometric-organization(0) jtc1-sc37(257) patron-format(1) tlv-encoded(5)}.
+ * ISO/IEC 7816-15:2016 §8.9.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

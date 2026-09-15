@@ -23,6 +23,12 @@ import { Path_efidOrTagChoice_appTagRef, _decode_Path_efidOrTagChoice_appTagRef,
  * @summary Path_efidOrTagChoice
  * @description
  * 
+ * `efidOrPath` encoding: empty = no file; 1 byte = short EF identifier in the
+ * most significant five bits (b3–b1 = 0); 2 bytes = file identifier; even
+ * length > 2 = absolute or relative path (concatenation of Fids); odd length >
+ * 2 = qualified path (ISO/IEC 7816-4). `aid`/`tag` address logical structures
+ * in an application context. ISO/IEC 7816-15:2016 §8.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

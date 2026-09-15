@@ -20,6 +20,8 @@ import { FingerPrintInformation_finger, _enum_for_FingerPrintInformation_finger,
  * @summary FingerPrintInformation
  * @description
  * 
+ * Which hand and finger is stored. ISO/IEC 7816-15:2016 §8.9.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +38,17 @@ class FingerPrintInformation {
     constructor (
         /**
          * @summary `hand`.
+         * @description
+         * `left` or `right`. ISO/IEC 7816-15:2016 §8.9.3.
          * @public
          * @readonly
          */
         readonly hand: FingerPrintInformation_hand,
         /**
          * @summary `finger`.
+         * @description
+         * thumb, pointerFinger, middleFinger, ringFinger, or littleFinger.
+         * ISO/IEC 7816-15:2016 §8.9.3.
          * @public
          * @readonly
          */
@@ -83,7 +90,8 @@ class FingerPrintInformation {
  * @summary The Leading Root Component Types of FingerPrintInformation
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -97,7 +105,8 @@ const _root_component_type_list_1_spec_for_FingerPrintInformation: $.ComponentSp
  * @summary The Trailing Root Component Types of FingerPrintInformation
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -110,7 +119,8 @@ const _root_component_type_list_2_spec_for_FingerPrintInformation: $.ComponentSp
  * @summary The Extension Addition Component Types of FingerPrintInformation
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

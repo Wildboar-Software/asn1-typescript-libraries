@@ -20,6 +20,8 @@ import { DataContainerObjectChoice, _decode_DataContainerObjectChoice, _encode_D
  * @summary DataContainerObjects
  * @description
  * 
+ * Data-container directory contents (EF.DCOD). ISO/IEC 7816-15:2016 §8.3, §8.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

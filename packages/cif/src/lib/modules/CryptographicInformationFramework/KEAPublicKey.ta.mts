@@ -18,6 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KEAPublicKey
  * @description
  * 
+ * Raw KEA public key (INTEGER). ISO/IEC 7816-15:2016 §8.5.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

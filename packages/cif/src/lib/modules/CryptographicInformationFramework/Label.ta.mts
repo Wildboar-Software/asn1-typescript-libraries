@@ -20,6 +20,9 @@ import { cia_ub_label } from "../CryptographicInformationFramework/cia-ub-label.
  * @summary Label
  * @description
  * 
+ * User-assigned object name (UTF-8), used for MMI display. ISO/IEC 7816-15:2016
+ * §8.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

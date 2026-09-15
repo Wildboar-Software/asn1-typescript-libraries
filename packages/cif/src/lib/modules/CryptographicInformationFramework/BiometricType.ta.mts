@@ -23,6 +23,9 @@ import { cia_ub_biometricTypes } from "../CryptographicInformationFramework/cia-
  * @summary BiometricType
  * @description
  * 
+ * `chained` requires more than one biometric feature in the same verification
+ * process. ISO/IEC 7816-15:2016 §8.9.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

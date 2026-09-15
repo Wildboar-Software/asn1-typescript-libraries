@@ -23,6 +23,10 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../Cryptogra
  * @summary CommonDataContainerObjectAttributes
  * @description
  * 
+ * At least one of `applicationName` or `applicationOID` shall be present;
+ * `applicationOID` is recommended to avoid name collisions. ISO/IEC
+ * 7816-15:2016 §8.2.17.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,18 +48,26 @@ class CommonDataContainerObjectAttributes {
     constructor (
         /**
          * @summary `applicationName`.
+         * @description
+         * Name of the application that "owns" the data container. ISO/IEC
+         * 7816-15:2016 §8.2.17.
          * @public
          * @readonly
          */
         readonly applicationName: OPTIONAL<Label>,
         /**
          * @summary `applicationOID`.
+         * @description
+         * Registered OID of that application. ISO/IEC 7816-15:2016 §8.2.17.
          * @public
          * @readonly
          */
         readonly applicationOID: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `iD`.
+         * @description
+         * Optional association with another CIO (e.g. a private key). ISO/IEC
+         * 7816-15:2016 §8.2.17.
          * @public
          * @readonly
          */
@@ -76,7 +88,8 @@ class CommonDataContainerObjectAttributes {
      * @summary Restructures an object into a CommonDataContainerObjectAttributes
      * @description
      * 
-     * This takes an `object` and converts it to a `CommonDataContainerObjectAttributes`.
+     * This takes an `object` and converts it to a
+     * `CommonDataContainerObjectAttributes`.
      * 
      * @public
      * @static
@@ -95,7 +108,8 @@ class CommonDataContainerObjectAttributes {
  * @summary The Leading Root Component Types of CommonDataContainerObjectAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -110,7 +124,8 @@ const _root_component_type_list_1_spec_for_CommonDataContainerObjectAttributes: 
  * @summary The Trailing Root Component Types of CommonDataContainerObjectAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -123,7 +138,8 @@ const _root_component_type_list_2_spec_for_CommonDataContainerObjectAttributes: 
  * @summary The Extension Addition Component Types of CommonDataContainerObjectAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

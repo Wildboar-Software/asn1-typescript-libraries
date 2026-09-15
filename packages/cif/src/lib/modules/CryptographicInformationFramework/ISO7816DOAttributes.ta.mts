@@ -19,6 +19,11 @@ import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue
  * @summary ISO7816DOAttributes
  * @description
  * 
+ * References a file that shall follow a compatible tag allocation scheme
+ * (ISO/IEC 7816-4). When the CDE is a data object retrieved by GET DATA, use
+ * `ObjectValue.direct` and put the DO tag in `CIO-OPAQUE.&Type`. ISO/IEC
+ * 7816-15:2016 §8.8.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

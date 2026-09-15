@@ -22,6 +22,9 @@ import { GenericKeyAttributes, _decode_GenericKeyAttributes, _encode_GenericKeyA
  * @summary SecretKeyChoice
  * @description
  * 
+ * Secret-key CIO alternatives. Context tags [0]–[14] are historical (PKCS #15)
+ * and shall not be used. ISO/IEC 7816-15:2016 §8.6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

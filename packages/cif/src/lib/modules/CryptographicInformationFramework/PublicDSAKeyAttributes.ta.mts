@@ -27,6 +27,8 @@ import { PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOper
  * @summary PublicDSAKeyAttributes
  * @description
  * 
+ * DSA public-key attributes. ISO/IEC 7816-15:2016 §8.5.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,12 +46,19 @@ class PublicDSAKeyAttributes {
     constructor (
         /**
          * @summary `value`.
+         * @description
+         * `ObjectValue` of `DSAPublicKeyChoice` or a card-specific DSA public
+         * key. ISO/IEC 7816-15:2016 §8.5.5.
          * @public
          * @readonly
          */
         readonly value: ObjectValue<DSAPublicKeyChoice>,
         /**
          * @summary `keyInfo`.
+         * @description
+         * If present, overrides `CIAInfo.supportedAlgorithms` referenced by
+         * `CommonKeyAttributes.algReference`. Omit when available by other
+         * means. ISO/IEC 7816-15:2016 §8.4.2.
          * @public
          * @readonly
          */
@@ -85,7 +94,8 @@ class PublicDSAKeyAttributes {
  * @summary The Leading Root Component Types of PublicDSAKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -99,7 +109,8 @@ const _root_component_type_list_1_spec_for_PublicDSAKeyAttributes: $.ComponentSp
  * @summary The Trailing Root Component Types of PublicDSAKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -112,7 +123,8 @@ const _root_component_type_list_2_spec_for_PublicDSAKeyAttributes: $.ComponentSp
  * @summary The Extension Addition Component Types of PublicDSAKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

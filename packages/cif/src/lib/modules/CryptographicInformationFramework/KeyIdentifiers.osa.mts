@@ -37,6 +37,9 @@ import { certificateHolderReference } from "../CryptographicInformationFramework
  * @summary KeyIdentifiers
  * @description
  * 
+ * The nine (extensible) identification methods for private keys and
+ * certificates. ISO/IEC 7816-15:2016 §8.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

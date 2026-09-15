@@ -20,6 +20,10 @@ import { URL, _decode_URL, _encode_URL } from "../CryptographicInformationFramew
  * @summary ReferencedValue
  * @description
  * 
+ * Pointer to a CIO/CDE value: either a card `Path` or an external `URL`. The
+ * syntax of the pointed-to object is determined by context. ISO/IEC
+ * 7816-15:2016 §8.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

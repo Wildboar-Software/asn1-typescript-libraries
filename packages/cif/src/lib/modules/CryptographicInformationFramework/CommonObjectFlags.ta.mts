@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CommonObjectFlags
  * @description
  * 
+ * Privacy and mutability of a CIO. Bit 2 (`internal`) is historical and shall
+ * not be used. ISO/IEC 7816-15:2016 §8.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +36,9 @@ type CommonObjectFlags = BIT_STRING;
 
 /**
  * @summary CommonObjectFlags_private_
+ * @description
+ * Object may be accessed only after proper authentication. ISO/IEC 7816-15:2016
+ * §8.2.8.
  * @constant
  */
 export
@@ -47,6 +53,8 @@ const private_: number = CommonObjectFlags_private_; /* SHORT_NAMED_BIT */
 
 /**
  * @summary CommonObjectFlags_modifiable
+ * @description
+ * The object value should be updatable. ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  */
 export
@@ -61,6 +69,8 @@ const modifiable: number = CommonObjectFlags_modifiable; /* SHORT_NAMED_BIT */
 
 /**
  * @summary CommonObjectFlags_internal
+ * @description
+ * Historical; shall not be used. ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  */
 export

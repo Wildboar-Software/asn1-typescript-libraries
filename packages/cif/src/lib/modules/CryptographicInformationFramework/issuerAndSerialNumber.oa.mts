@@ -18,6 +18,9 @@ import { type KEY_IDENTIFIER } from "../CryptographicInformationFramework/KEY-ID
  * @summary issuerAndSerialNumber
  * @description
  * 
+ * `KEY-IDENTIFIER` 1: issuer DN plus certificate serial number of a certificate
+ * that contains the associated public key. ISO/IEC 7816-15:2016 §8.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

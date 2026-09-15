@@ -28,6 +28,9 @@ enum _enum_for_LifeCycleStatus {
  * @summary LifeCycleStatus
  * @description
  * 
+ * Life-cycle state of a file or data object (ISO/IEC 7816-4) to which an
+ * `AccessControlRule` applies. ISO/IEC 7816-15:2016 §8.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,6 +52,8 @@ type LifeCycleStatus = _enum_for_LifeCycleStatus | ENUMERATED;
 
 /**
  * @summary LifeCycleStatus_creation
+ * @description
+ * Creation state. ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  * @type {number}
  */
@@ -65,6 +70,8 @@ const creation: LifeCycleStatus = LifeCycleStatus_creation; /* SHORT_NAMED_ENUME
 
 /**
  * @summary LifeCycleStatus_init
+ * @description
+ * Initialisation state. ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  * @type {number}
  */
@@ -81,6 +88,8 @@ const init: LifeCycleStatus = LifeCycleStatus_init; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary LifeCycleStatus_op_activated
+ * @description
+ * Operational (activated). ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  * @type {number}
  */
@@ -97,6 +106,8 @@ const op_activated: LifeCycleStatus = LifeCycleStatus_op_activated; /* SHORT_NAM
 
 /**
  * @summary LifeCycleStatus_op_deactivated
+ * @description
+ * Operational (deactivated). ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  * @type {number}
  */
@@ -113,6 +124,8 @@ const op_deactivated: LifeCycleStatus = LifeCycleStatus_op_deactivated; /* SHORT
 
 /**
  * @summary LifeCycleStatus_termination
+ * @description
+ * Termination state. ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  * @type {number}
  */
@@ -129,6 +142,8 @@ const termination: LifeCycleStatus = LifeCycleStatus_termination; /* SHORT_NAMED
 
 /**
  * @summary LifeCycleStatus_proprietary
+ * @description
+ * Proprietary state. ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  * @type {number}
  */

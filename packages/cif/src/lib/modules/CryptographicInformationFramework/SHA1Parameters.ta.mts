@@ -18,6 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SHA1Parameters
  * @description
  * 
+ * SHA-1 parameters: NULL. ISO/IEC 7816-15:2016 Annex A.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

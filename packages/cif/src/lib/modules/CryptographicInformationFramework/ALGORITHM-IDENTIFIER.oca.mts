@@ -13,6 +13,15 @@ import {
 
 
 
+/**
+ * @summary ALGORITHM_IDENTIFIER
+ * @description
+ *
+ * PKCS #5 `ALGORITHM-IDENTIFIER` class, used here for URL digest algorithms
+ * (`DigestAlgorithms`). ISO/IEC 7816-15:2016 Annex A.2.5.
+ *
+ * @interface
+ */
 export
 type ALGORITHM_IDENTIFIER<Type = any> = TYPE_IDENTIFIER<Type>;
 

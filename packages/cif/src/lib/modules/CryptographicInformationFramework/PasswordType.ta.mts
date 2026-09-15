@@ -27,6 +27,9 @@ enum _enum_for_PasswordType {
  * @summary PasswordType
  * @description
  * 
+ * How a supplied password is converted before padding. ISO/IEC 7816-15:2016
+ * §8.9.2, §8.9.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,6 +50,8 @@ type PasswordType = _enum_for_PasswordType | ENUMERATED;
 
 /**
  * @summary PasswordType_bcd
+ * @description
+ * Each nibble encodes one decimal digit. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  * @type {number}
  */
@@ -63,6 +68,8 @@ const bcd: PasswordType = PasswordType_bcd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PasswordType_ascii_numeric
+ * @description
+ * Each byte is an ASCII digit. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  * @type {number}
  */
@@ -79,6 +86,9 @@ const ascii_numeric: PasswordType = PasswordType_ascii_numeric; /* SHORT_NAMED_E
 
 /**
  * @summary PasswordType_utf8
+ * @description
+ * UTF-8; if not case-sensitive, apply locale-dependent uppercase after UTF-8
+ * conversion. ISO/IEC 7816-15:2016 §8.9.2.2.
  * @constant
  * @type {number}
  */
@@ -95,6 +105,8 @@ const utf8: PasswordType = PasswordType_utf8; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PasswordType_half_nibble_bcd
+ * @description
+ * Lower nibble is the digit; upper nibble is 'F'. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  * @type {number}
  */
@@ -111,6 +123,8 @@ const half_nibble_bcd: PasswordType = PasswordType_half_nibble_bcd; /* SHORT_NAM
 
 /**
  * @summary PasswordType_iso9564_1
+ * @description
+ * Encoding per ISO 9564-1. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  * @type {number}
  */

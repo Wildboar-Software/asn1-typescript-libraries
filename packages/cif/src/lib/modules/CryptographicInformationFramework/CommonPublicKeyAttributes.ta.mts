@@ -25,6 +25,10 @@ import { CredentialIdentifier, _decode_CredentialIdentifier, _encode_CredentialI
  * @summary CommonPublicKeyAttributes
  * @description
  * 
+ * `name` / `generalName` / `keyIdentifiers` have the same meaning as on private
+ * keys. `trustedUsage` is purposes for which the cardholder trusts this public
+ * key; exact "trust" semantics are out of scope. ISO/IEC 7816-15:2016 §8.2.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,24 +48,35 @@ class CommonPublicKeyAttributes {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         * Owner of the key, as in a corresponding certificate `subject`.
+         * ISO/IEC 7816-15:2016 §8.2.11.
          * @public
          * @readonly
          */
         readonly name: OPTIONAL<Name>,
         /**
          * @summary `trustedUsage`.
+         * @description
+         * Purposes for which the cardholder trusts the public key. ISO/IEC
+         * 7816-15:2016 §8.2.11, §8.2.15.
          * @public
          * @readonly
          */
         readonly trustedUsage: OPTIONAL<Usage>,
         /**
          * @summary `generalName`.
+         * @description
+         * Additional owner names. ISO/IEC 7816-15:2016 §8.2.11.
          * @public
          * @readonly
          */
         readonly generalName: OPTIONAL<GeneralNames>,
         /**
          * @summary `keyIdentifiers`.
+         * @description
+         * External identifiers for this public key. ISO/IEC 7816-15:2016
+         * §8.2.11.
          * @public
          * @readonly
          */
@@ -97,7 +112,8 @@ class CommonPublicKeyAttributes {
  * @summary The Leading Root Component Types of CommonPublicKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -113,7 +129,8 @@ const _root_component_type_list_1_spec_for_CommonPublicKeyAttributes: $.Componen
  * @summary The Trailing Root Component Types of CommonPublicKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -126,7 +143,8 @@ const _root_component_type_list_2_spec_for_CommonPublicKeyAttributes: $.Componen
  * @summary The Extension Addition Component Types of CommonPublicKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

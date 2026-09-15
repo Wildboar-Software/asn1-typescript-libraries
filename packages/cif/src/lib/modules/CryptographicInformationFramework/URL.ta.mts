@@ -20,6 +20,11 @@ import { URL_urlWithDigest, _decode_URL_urlWithDigest, _encode_URL_urlWithDigest
  * @summary URL
  * @description
  * 
+ * External location of an object (IETF RFC 3986). `urlWithDigest` pairs the URL
+ * with a hash so that, if the card is protected against unauthorized
+ * modification, the external object is protected too. ISO/IEC 7816-15:2016
+ * §8.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

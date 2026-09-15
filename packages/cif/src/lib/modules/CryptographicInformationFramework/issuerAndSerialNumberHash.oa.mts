@@ -18,6 +18,10 @@ import { type KEY_IDENTIFIER } from "../CryptographicInformationFramework/KEY-ID
  * @summary issuerAndSerialNumberHash
  * @description
  * 
+ * `KEY-IDENTIFIER` 3: SHA-1 hash of the DER encoding of
+ * `IssuerAndSerialNumber`, to save space. ISO/IEC 7816-15:2016 §8.2.4, Annex
+ * A.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

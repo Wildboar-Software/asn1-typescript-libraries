@@ -17,6 +17,9 @@ import {
  * @summary cia_lb_minPasswordLength
  * @description
  * 
+ * Lower bound of `PasswordAttributes.minLength` (4). ISO/IEC 7816-15:2016 Annex
+ * A.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -34,6 +34,9 @@ import { GenericCertificateAttributes, _decode_GenericCertificateAttributes, _en
  * @summary CertificateChoice
  * @description
  * 
+ * Certificate CIO alternatives: X.509, attribute, SPKI, PGP, WTLS, X9.68,
+ * card-verifiable, or generic. ISO/IEC 7816-15:2016 §8.7.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

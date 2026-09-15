@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KeyUsageConstraints_keyUsageConstraintsFlag
  * @description
  * 
+ * `immediateUsage` (0): no C-RP between key preparation and usage. ISO/IEC
+ * 7816-15:2016 §8.2.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +34,9 @@ type KeyUsageConstraints_keyUsageConstraintsFlag = BIT_STRING;
 
 /**
  * @summary KeyUsageConstraints_keyUsageConstraintsFlag_immediateUsage
+ * @description
+ * IFD must not send a C-RP between preparation and usage on the logical channel
+ * used for the key. ISO/IEC 7816-15:2016 §8.2.10.
  * @constant
  */
 export

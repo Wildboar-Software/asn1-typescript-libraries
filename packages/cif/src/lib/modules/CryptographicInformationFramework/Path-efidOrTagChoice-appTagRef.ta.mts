@@ -19,6 +19,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Path_efidOrTagChoice_appTagRef
  * @description
  * 
+ * Application AID, tag, and optional EF path. ISO/IEC 7816-15:2016 §8.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +38,25 @@ class Path_efidOrTagChoice_appTagRef {
     constructor (
         /**
          * @summary `aid`.
+         * @description
+         * ISO/IEC 7816-4 AID. ISO/IEC 7816-15:2016 §8.2.5.
          * @public
          * @readonly
          */
         readonly aid: OCTET_STRING,
         /**
          * @summary `tag`.
+         * @description
+         * Data-object tag. ISO/IEC 7816-15:2016 §8.2.5.
          * @public
          * @readonly
          */
         readonly tag: OCTET_STRING,
         /**
          * @summary `efidOrPath`.
+         * @description
+         * Optional EF containing the tagged object. ISO/IEC 7816-15:2016
+         * §8.2.5.
          * @public
          * @readonly
          */
@@ -58,7 +67,8 @@ class Path_efidOrTagChoice_appTagRef {
      * @summary Restructures an object into a Path_efidOrTagChoice_appTagRef
      * @description
      * 
-     * This takes an `object` and converts it to a `Path_efidOrTagChoice_appTagRef`.
+     * This takes an `object` and converts it to a
+     * `Path_efidOrTagChoice_appTagRef`.
      * 
      * @public
      * @static
@@ -77,7 +87,8 @@ class Path_efidOrTagChoice_appTagRef {
  * @summary The Leading Root Component Types of Path_efidOrTagChoice_appTagRef
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -92,7 +103,8 @@ const _root_component_type_list_1_spec_for_Path_efidOrTagChoice_appTagRef: $.Com
  * @summary The Trailing Root Component Types of Path_efidOrTagChoice_appTagRef
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -105,7 +117,8 @@ const _root_component_type_list_2_spec_for_Path_efidOrTagChoice_appTagRef: $.Com
  * @summary The Extension Addition Component Types of Path_efidOrTagChoice_appTagRef
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

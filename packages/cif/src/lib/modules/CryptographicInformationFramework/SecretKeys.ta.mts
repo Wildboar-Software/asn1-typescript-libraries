@@ -20,6 +20,8 @@ import { SecretKeyChoice, _decode_SecretKeyChoice, _encode_SecretKeyChoice } fro
  * @summary SecretKeys
  * @description
  * 
+ * Secret-key directory contents (EF.SKD). ISO/IEC 7816-15:2016 §8.3, §7.5.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

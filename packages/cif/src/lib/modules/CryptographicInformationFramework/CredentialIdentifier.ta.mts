@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CredentialIdentifier
  * @description
  * 
+ * Identifies a particular key or certificate via a `KEY-IDENTIFIER` member of
+ * `KeyIdentifiers`. Match these values against external protocol identifiers,
+ * or send them to a peer to name the key used. ISO/IEC 7816-15:2016 §8.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +38,19 @@ class CredentialIdentifier {
     constructor (
         /**
          * @summary `idType`.
+         * @description
+         * `KEY-IDENTIFIER.&id` selecting the identification method (1 =
+         * issuerAndSerialNumber, …, 10 = certificateHolderReference). ISO/IEC
+         * 7816-15:2016 §8.2.4, Annex A.2.4.
          * @public
          * @readonly
          */
         readonly idType: INTEGER,
         /**
          * @summary `idValue`.
+         * @description
+         * Value whose syntax is determined by `idType`. ISO/IEC 7816-15:2016
+         * §8.2.4.
          * @public
          * @readonly
          */
@@ -69,7 +80,8 @@ class CredentialIdentifier {
  * @summary The Leading Root Component Types of CredentialIdentifier
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -83,7 +95,8 @@ const _root_component_type_list_1_spec_for_CredentialIdentifier: $.ComponentSpec
  * @summary The Trailing Root Component Types of CredentialIdentifier
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -96,7 +109,8 @@ const _root_component_type_list_2_spec_for_CredentialIdentifier: $.ComponentSpec
  * @summary The Extension Addition Component Types of CredentialIdentifier
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

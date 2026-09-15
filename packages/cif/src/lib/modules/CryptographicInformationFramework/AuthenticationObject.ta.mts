@@ -21,6 +21,9 @@ import { CommonAuthenticationObjectAttributes, _decode_CommonAuthenticationObjec
  * @summary AuthenticationObject
  * @description
  * 
+ * `CIO` of common object + common authentication + NULL subclass +
+ * method-specific attributes. ISO/IEC 7816-15:2016 §8.9.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

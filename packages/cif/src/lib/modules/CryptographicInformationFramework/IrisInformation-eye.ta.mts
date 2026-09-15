@@ -17,6 +17,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IrisInformation_eye
  * @description
  * 
+ * Eye for an iris template. ISO/IEC 7816-15:2016 §8.9.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

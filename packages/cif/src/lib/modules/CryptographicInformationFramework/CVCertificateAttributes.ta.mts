@@ -21,6 +21,9 @@ import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue
  * @summary CVCertificateAttributes
  * @description
  * 
+ * ISO/IEC 7816-8 card-verifiable certificate, mainly for public-key card
+ * authentication. ISO/IEC 7816-15:2016 §8.7.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +41,18 @@ class CVCertificateAttributes {
     constructor (
         /**
          * @summary `value`.
+         * @description
+         * `ReferencedValue` to the CV certificate or URL. ISO/IEC 7816-15:2016
+         * §8.7.8.
          * @public
          * @readonly
          */
         readonly value: ObjectValue<_Element>,
         /**
          * @summary `certificationAuthorityReference`.
+         * @description
+         * Shall equal the corresponding field of the CV certificate. ISO/IEC
+         * 7816-15:2016 §8.7.8.
          * @public
          * @readonly
          */
@@ -79,7 +88,8 @@ class CVCertificateAttributes {
  * @summary The Leading Root Component Types of CVCertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -93,7 +103,8 @@ const _root_component_type_list_1_spec_for_CVCertificateAttributes: $.ComponentS
  * @summary The Trailing Root Component Types of CVCertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -106,7 +117,8 @@ const _root_component_type_list_2_spec_for_CVCertificateAttributes: $.ComponentS
  * @summary The Extension Addition Component Types of CVCertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

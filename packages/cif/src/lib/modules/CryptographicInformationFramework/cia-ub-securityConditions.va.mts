@@ -17,6 +17,9 @@ import {
  * @summary cia_ub_securityConditions
  * @description
  * 
+ * Maximum operands in `SecurityCondition` and/or or (255). ISO/IEC 7816-15:2016
+ * Annex A.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

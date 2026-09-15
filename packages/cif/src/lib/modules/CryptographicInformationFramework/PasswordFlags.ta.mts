@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PasswordFlags
  * @description
  * 
+ * Password properties. `resetRetryCounter1`/`2` encode P1 of RESET RETRY
+ * COUNTER ('00' neither, '01' only bit 2, '02' only bit 1, '03' both). ISO/IEC
+ * 7816-15:2016 §8.9.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,6 +53,8 @@ type PasswordFlags = BIT_STRING;
 
 /**
  * @summary PasswordFlags_case_sensitive
+ * @description
+ * Do not convert to uppercase before presenting. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export
@@ -63,6 +69,8 @@ const case_sensitive: number = PasswordFlags_case_sensitive; /* SHORT_NAMED_BIT 
 
 /**
  * @summary PasswordFlags_local
+ * @description
+ * Local to its application (not global). ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export
@@ -77,6 +85,8 @@ const local: number = PasswordFlags_local; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PasswordFlags_change_disabled
+ * @description
+ * Password cannot be changed. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export
@@ -91,6 +101,8 @@ const change_disabled: number = PasswordFlags_change_disabled; /* SHORT_NAMED_BI
 
 /**
  * @summary PasswordFlags_unblock_disabled
+ * @description
+ * Password cannot be unblocked. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export
@@ -105,6 +117,8 @@ const unblock_disabled: number = PasswordFlags_unblock_disabled; /* SHORT_NAMED_
 
 /**
  * @summary PasswordFlags_initialized
+ * @description
+ * Password has been initialized. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export
@@ -119,6 +133,8 @@ const initialized: number = PasswordFlags_initialized; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PasswordFlags_needs_padding
+ * @description
+ * Pad to `storedLength` before VERIFY. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export
@@ -133,6 +149,9 @@ const needs_padding: number = PasswordFlags_needs_padding; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PasswordFlags_unblockingPassword
+ * @description
+ * Resetting code (ISO/IEC 7816-4) for unblocking another authenticator. Cannot
+ * be combined with `soPassword`. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export
@@ -147,6 +166,8 @@ const unblockingPassword: number = PasswordFlags_unblockingPassword; /* SHORT_NA
 
 /**
  * @summary PasswordFlags_soPassword
+ * @description
+ * Security-officer (administrator) password. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export
@@ -161,6 +182,8 @@ const soPassword: number = PasswordFlags_soPassword; /* SHORT_NAMED_BIT */
 
 /**
  * @summary PasswordFlags_disable_allowed
+ * @description
+ * Password might be disabled. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export
@@ -175,6 +198,9 @@ const disable_allowed: number = PasswordFlags_disable_allowed; /* SHORT_NAMED_BI
 
 /**
  * @summary PasswordFlags_integrity_protected
+ * @description
+ * Present with secure messaging (integrity), unless `context-dependent` is set.
+ * ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export
@@ -189,6 +215,9 @@ const integrity_protected: number = PasswordFlags_integrity_protected; /* SHORT_
 
 /**
  * @summary PasswordFlags_confidentiality_protected
+ * @description
+ * Present encrypted, unless `context-dependent` is set. ISO/IEC 7816-15:2016
+ * §8.9.2.
  * @constant
  */
 export
@@ -203,6 +232,9 @@ const confidentiality_protected: number = PasswordFlags_confidentiality_protecte
 
 /**
  * @summary PasswordFlags_exchangeRefData
+ * @description
+ * If set, CHANGE REFERENCE DATA needs both old and new; if unset, only new.
+ * ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export
@@ -217,6 +249,8 @@ const exchangeRefData: number = PasswordFlags_exchangeRefData; /* SHORT_NAMED_BI
 
 /**
  * @summary PasswordFlags_resetRetryCounter1
+ * @description
+ * P1 bit for RESET RETRY COUNTER. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export
@@ -231,6 +265,8 @@ const resetRetryCounter1: number = PasswordFlags_resetRetryCounter1; /* SHORT_NA
 
 /**
  * @summary PasswordFlags_resetRetryCounter2
+ * @description
+ * P1 bit for RESET RETRY COUNTER. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export
@@ -245,6 +281,10 @@ const resetRetryCounter2: number = PasswordFlags_resetRetryCounter2; /* SHORT_NA
 
 /**
  * @summary PasswordFlags_context_dependent
+ * @description
+ * May be presented secured or in plaintext depending on interface/environment;
+ * supersedes integrity- and confidentiality-protected. ISO/IEC 7816-15:2016
+ * §8.9.2.
  * @constant
  */
 export
@@ -259,6 +299,9 @@ const context_dependent: number = PasswordFlags_context_dependent; /* SHORT_NAME
 
 /**
  * @summary PasswordFlags_multiStepProtocol
+ * @description
+ * Implicitly verified by a multi-step protocol whose parameters come from
+ * `SecurityFileOrObject`. ISO/IEC 7816-15:2016 §8.9.2.
  * @constant
  */
 export

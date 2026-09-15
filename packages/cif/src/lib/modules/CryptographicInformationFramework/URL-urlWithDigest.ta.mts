@@ -19,6 +19,8 @@ import { DigestInfoWithDefault, _decode_DigestInfoWithDefault, _encode_DigestInf
  * @summary URL_urlWithDigest
  * @description
  * 
+ * URL plus digest of the object at that location. ISO/IEC 7816-15:2016 §8.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +37,17 @@ class URL_urlWithDigest {
     constructor (
         /**
          * @summary `url`.
+         * @description
+         * IA5 URL (IETF RFC 3986). ISO/IEC 7816-15:2016 §8.2.5.
          * @public
          * @readonly
          */
         readonly url: IA5String,
         /**
          * @summary `digest`.
+         * @description
+         * Hash of the externally stored object. Default digest algorithm is
+         * SHA-1. ISO/IEC 7816-15:2016 §8.2.5, Annex A.2.5.
          * @public
          * @readonly
          */
@@ -70,7 +77,8 @@ class URL_urlWithDigest {
  * @summary The Leading Root Component Types of URL_urlWithDigest
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -84,7 +92,8 @@ const _root_component_type_list_1_spec_for_URL_urlWithDigest: $.ComponentSpec[] 
  * @summary The Trailing Root Component Types of URL_urlWithDigest
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -97,7 +106,8 @@ const _root_component_type_list_2_spec_for_URL_urlWithDigest: $.ComponentSpec[] 
  * @summary The Extension Addition Component Types of URL_urlWithDigest
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

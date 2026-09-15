@@ -1,3 +1,7 @@
+/**
+ * ISO/IEC 9594-8 `KeyUsage`, used in `Usage.keyUsage` (trusted usage).
+ * Mapping to CIO `KeyUsageFlags` is Table 2 of ISO/IEC 7816-15:2016 §8.2.9.
+ */
 export {
     type KeyUsage,
     KeyUsage_digitalSignature,

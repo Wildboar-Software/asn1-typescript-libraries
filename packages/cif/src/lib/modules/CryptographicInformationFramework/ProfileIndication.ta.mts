@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProfileIndication
  * @description
  * 
+ * A 7816-15 profile the card conforms to, by OID or name. ISO/IEC 7816-15:2016
+ * §8.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -34,6 +34,12 @@ import { cia_ub_storedVerifDataValueNumber } from "../CryptographicInformationFr
  * @summary PasswordAttributes
  * @description
  * 
+ * Password (knowledge-based) authenticator. Host encoding of a user-supplied
+ * password is specified in ISO/IEC 7816-15:2016 §8.9.2.2 (convert per
+ * `pwdType`, optionally NLS-uppercase if not case-sensitive, pad, then apply
+ * SM/encryption flags). `unblockingPassword` and `soPassword` shall not both be
+ * set; `context-dependent` overrides integrity- and confidentiality-protected.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,66 +66,102 @@ class PasswordAttributes {
     constructor (
         /**
          * @summary `pwdFlags`.
+         * @description
+         * See `PasswordFlags`. Local vs global: a non-local password is global;
+         * verification remains in effect until removal/reset or a failed
+         * re-verify. A local password may need re-verification on each use and
+         * only protects its application. ISO/IEC 7816-15:2016 §8.9.2.
          * @public
          * @readonly
          */
         readonly pwdFlags: PasswordFlags,
         /**
          * @summary `pwdType`.
+         * @description
+         * Encoding of password digits/characters. ISO/IEC 7816-15:2016 §8.9.2.
          * @public
          * @readonly
          */
         readonly pwdType: PasswordType,
         /**
          * @summary `minLength`.
+         * @description
+         * Minimum length in characters of a new password (if change is
+         * allowed). ISO/IEC 7816-15:2016 §8.9.2.
          * @public
          * @readonly
          */
         readonly minLength: INTEGER,
         /**
          * @summary `storedLength`.
+         * @description
+         * Stored length on the card in bytes; used to compute padding. May be 0
+         * and ignored if padding is not needed. ISO/IEC 7816-15:2016 §8.9.2.
          * @public
          * @readonly
          */
         readonly storedLength: INTEGER,
         /**
          * @summary `maxLength`.
+         * @description
+         * Maximum length in characters when the card does not pad. ISO/IEC
+         * 7816-15:2016 §8.9.2.
          * @public
          * @readonly
          */
         readonly maxLength: OPTIONAL<INTEGER>,
         /**
          * @summary `pwdReference`.
+         * @description
+         * Card-specific password reference, typically P2 of ISO/IEC 7816-4
+         * VERIFY. DEFAULT 0. ISO/IEC 7816-15:2016 §8.9.2.
          * @public
          * @readonly
          */
         readonly pwdReference: OPTIONAL<Reference>,
         /**
          * @summary `padChar`.
+         * @description
+         * Padding octet (usually 'FF' or '00'). For `bcd`, both nibbles shall
+         * be equal (e.g. '55' is allowed, '34' is not). Omit if padding is not
+         * needed. ISO/IEC 7816-15:2016 §8.9.2.
          * @public
          * @readonly
          */
         readonly padChar: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `lastPasswordChange`.
+         * @description
+         * For password-expiration policies. If never set/changed, use
+         * `000000000000Z`. ISO/IEC 7816-15:2016 §8.9.2.
          * @public
          * @readonly
          */
         readonly lastPasswordChange: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `path`.
+         * @description
+         * DF in which the password resides; SELECT it before a password
+         * operation. If absent, CHV is possible without a prior SELECT. ISO/IEC
+         * 7816-15:2016 §8.9.2.
          * @public
          * @readonly
          */
         readonly path: OPTIONAL<Path>,
         /**
          * @summary `verifDataHistoryLength`.
+         * @description
+         * Maximum number of stored verification data values; range [0, 8].
+         * ISO/IEC 7816-15:2016 §8.9.2.
          * @public
          * @readonly
          */
         readonly verifDataHistoryLength: OPTIONAL<INTEGER>,
         /**
          * @summary `cioSecurityId`.
+         * @description
+         * Cross-reference to a `SecurityFileOrObject` whose protocol requires
+         * this password. ISO/IEC 7816-15:2016 §8.9.2.
          * @public
          * @readonly
          */
@@ -188,7 +230,8 @@ class PasswordAttributes {
  * @summary The Leading Root Component Types of PasswordAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -211,7 +254,8 @@ const _root_component_type_list_1_spec_for_PasswordAttributes: $.ComponentSpec[]
  * @summary The Trailing Root Component Types of PasswordAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -224,7 +268,8 @@ const _root_component_type_list_2_spec_for_PasswordAttributes: $.ComponentSpec[]
  * @summary The Extension Addition Component Types of PasswordAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

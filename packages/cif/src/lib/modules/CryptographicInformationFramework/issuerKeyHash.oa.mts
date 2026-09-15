@@ -18,6 +18,9 @@ import { type KEY_IDENTIFIER } from "../CryptographicInformationFramework/KEY-ID
  * @summary issuerKeyHash
  * @description
  * 
+ * `KEY-IDENTIFIER` 5: SHA-1 hash of the public key that signed the requested
+ * certificate. ISO/IEC 7816-15:2016 §8.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

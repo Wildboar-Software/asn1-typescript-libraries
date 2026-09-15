@@ -17,6 +17,8 @@ import {
  * @summary cia_ub_recordLength
  * @description
  * 
+ * Maximum directory record length (16383). ISO/IEC 7816-15:2016 Annex A.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

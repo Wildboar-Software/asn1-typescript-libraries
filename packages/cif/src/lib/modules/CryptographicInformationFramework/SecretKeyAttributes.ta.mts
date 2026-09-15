@@ -19,6 +19,9 @@ import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue
  * @summary SecretKeyAttributes
  * @description
  * 
+ * Algorithm-independent secret key available for various algorithms or for
+ * deriving other secret keys. ISO/IEC 7816-15:2016 §8.6.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +38,10 @@ class SecretKeyAttributes {
     constructor (
         /**
          * @summary `value`.
+         * @description
+         * Path to an OCTET STRING or a card-specific secret-key representation
+         * (on cards that can perform secret-key ops). ISO/IEC 7816-15:2016
+         * §8.6.2.
          * @public
          * @readonly
          */
@@ -70,7 +77,8 @@ class SecretKeyAttributes {
  * @summary The Leading Root Component Types of SecretKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -83,7 +91,8 @@ const _root_component_type_list_1_spec_for_SecretKeyAttributes: $.ComponentSpec[
  * @summary The Trailing Root Component Types of SecretKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -96,7 +105,8 @@ const _root_component_type_list_2_spec_for_SecretKeyAttributes: $.ComponentSpec[
  * @summary The Extension Addition Component Types of SecretKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

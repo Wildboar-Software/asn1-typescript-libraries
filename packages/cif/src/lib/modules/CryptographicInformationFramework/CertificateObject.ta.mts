@@ -21,6 +21,9 @@ import { CommonCertificateAttributes, _decode_CommonCertificateAttributes, _enco
  * @summary CertificateObject
  * @description
  * 
+ * `CIO` of common object + common certificate + NULL subclass + format-specific
+ * attributes. ISO/IEC 7816-15:2016 §8.7.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -22,6 +22,9 @@ import { CommonPrivateKeyAttributes, _decode_CommonPrivateKeyAttributes, _encode
  * @summary PrivateKeyObject
  * @description
  * 
+ * `CIO` of common object + common key + common private-key + algorithm-specific
+ * attributes. ISO/IEC 7816-15:2016 §8.4.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

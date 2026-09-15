@@ -20,6 +20,8 @@ import { AuthKeyAttributes, _decode_AuthKeyAttributes, _encode_AuthKeyAttributes
  * @summary InternalAuthObjectAttributes
  * @description
  * 
+ * Internal authentication object. ISO/IEC 7816-15:2016 §8.9.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +39,17 @@ class InternalAuthObjectAttributes {
     constructor (
         /**
          * @summary `cioSecurityId`.
+         * @description
+         * Cross-reference to a `SecurityFileOrObject` protocol. ISO/IEC
+         * 7816-15:2016 §8.9.4.
          * @public
          * @readonly
          */
         readonly cioSecurityId: OPTIONAL<INTEGER>,
         /**
          * @summary `authKeyAttributes`.
+         * @description
+         * Key used for internal authentication. ISO/IEC 7816-15:2016 §8.9.4.
          * @public
          * @readonly
          */
@@ -59,7 +66,8 @@ class InternalAuthObjectAttributes {
      * @summary Restructures an object into a InternalAuthObjectAttributes
      * @description
      * 
-     * This takes an `object` and converts it to a `InternalAuthObjectAttributes`.
+     * This takes an `object` and converts it to a
+     * `InternalAuthObjectAttributes`.
      * 
      * @public
      * @static
@@ -78,7 +86,8 @@ class InternalAuthObjectAttributes {
  * @summary The Leading Root Component Types of InternalAuthObjectAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -92,7 +101,8 @@ const _root_component_type_list_1_spec_for_InternalAuthObjectAttributes: $.Compo
  * @summary The Trailing Root Component Types of InternalAuthObjectAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -105,7 +115,8 @@ const _root_component_type_list_2_spec_for_InternalAuthObjectAttributes: $.Compo
  * @summary The Extension Addition Component Types of InternalAuthObjectAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

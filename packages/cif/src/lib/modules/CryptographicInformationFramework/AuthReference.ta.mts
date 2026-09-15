@@ -20,6 +20,9 @@ import { AuthMethod, _decode_AuthMethod, _encode_AuthMethod } from "../Cryptogra
  * @summary AuthReference
  * @description
  * 
+ * Couples an authentication class to a Security Environment identifier (ISO/IEC
+ * 7816-4). ISO/IEC 7816-15:2016 §8.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,19 @@ class AuthReference {
     constructor (
         /**
          * @summary `authMethod`.
+         * @description
+         * Class of authentication (SM, external, user, or always). ISO/IEC
+         * 7816-15:2016 §8.2.8.
          * @public
          * @readonly
          */
         readonly authMethod: AuthMethod,
         /**
          * @summary `seIdentifier`.
+         * @description
+         * Security Environment identifier. Clause 8.2.8 types this as
+         * `Reference`; Annex A uses INTEGER. This module follows Annex A.
+         * ISO/IEC 7816-15:2016 §8.2.8, Annex A.2.8.
          * @public
          * @readonly
          */
@@ -71,7 +81,8 @@ class AuthReference {
  * @summary The Leading Root Component Types of AuthReference
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -85,7 +96,8 @@ const _root_component_type_list_1_spec_for_AuthReference: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of AuthReference
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -98,7 +110,8 @@ const _root_component_type_list_2_spec_for_AuthReference: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of AuthReference
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

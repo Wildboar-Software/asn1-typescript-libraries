@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KeyInfo_paramsAndOps
  * @description
  * 
+ * Algorithm parameters plus operations the card can perform with this key.
+ * ISO/IEC 7816-15:2016 §8.2.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +37,17 @@ class KeyInfo_paramsAndOps<ParameterType, OperationsType> {
     constructor (
         /**
          * @summary `parameters`.
+         * @description
+         * Algorithm-specific parameters. ISO/IEC 7816-15:2016 §8.2.14.
          * @public
          * @readonly
          */
         readonly parameters: ParameterType,
         /**
          * @summary `operations`.
+         * @description
+         * Operations the card supports with this key. ISO/IEC 7816-15:2016
+         * §8.2.14.
          * @public
          * @readonly
          */
@@ -69,7 +77,8 @@ class KeyInfo_paramsAndOps<ParameterType, OperationsType> {
  * @summary The Leading Root Component Types of KeyInfo_paramsAndOps
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -83,7 +92,8 @@ const _root_component_type_list_1_spec_for_KeyInfo_paramsAndOps: $.ComponentSpec
  * @summary The Trailing Root Component Types of KeyInfo_paramsAndOps
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -96,7 +106,8 @@ const _root_component_type_list_2_spec_for_KeyInfo_paramsAndOps: $.ComponentSpec
  * @summary The Extension Addition Component Types of KeyInfo_paramsAndOps
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

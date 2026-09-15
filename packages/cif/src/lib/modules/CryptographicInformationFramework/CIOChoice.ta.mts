@@ -28,6 +28,13 @@ import { AuthObjects, _decode_AuthObjects, _encode_AuthObjects } from "../Crypto
  * @summary CIOChoice
  * @description
  * 
+ * EF.OD content: concatenation of DER `CIOChoice` values; 'FF'/'00' padding may
+ * appear between them. The same alternative may appear more than once (e.g.
+ * different access rules). Usually `path` points at a directory EF; `objects`
+ * may hold CIOs directly. `trustedPublicKeys` / `trustedCertificates` need
+ * modification protection on EF.OD, the CIO files, and the referenced CDEs.
+ * ISO/IEC 7816-15:2016 §8.3, §7.5.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

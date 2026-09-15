@@ -17,6 +17,9 @@ import {
  * @summary id_sha1
  * @description
  * 
+ * OIW SHA-1 algorithm OID `{iso identified-organization oiw secsig
+ * algorithms(2) 26}`. ISO/IEC 7816-15:2016 Annex A.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

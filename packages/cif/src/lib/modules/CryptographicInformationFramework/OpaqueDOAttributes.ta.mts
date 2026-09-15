@@ -19,6 +19,9 @@ import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue
  * @summary OpaqueDOAttributes
  * @description
  * 
+ * Interpretation is left to the accessing application. ISO/IEC 7816-15:2016
+ * §8.8.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

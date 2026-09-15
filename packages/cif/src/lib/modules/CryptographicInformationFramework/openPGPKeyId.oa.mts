@@ -18,6 +18,9 @@ import { type KEY_IDENTIFIER } from "../CryptographicInformationFramework/KEY-ID
  * @summary openPGPKeyId
  * @description
  * 
+ * `KEY-IDENTIFIER` 9: 8-octet OpenPGP key identifier (IETF RFC 4880). ISO/IEC
+ * 7816-15:2016 §8.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

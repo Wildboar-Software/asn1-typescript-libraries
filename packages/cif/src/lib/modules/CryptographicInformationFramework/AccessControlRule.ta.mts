@@ -27,6 +27,10 @@ import { RangeOfDate, _decode_RangeOfDate, _encode_RangeOfDate } from "../Crypto
  * @summary AccessControlRule
  * @description
  * 
+ * One host-visible access-control statement for a CIO. Omit a rule entirely to
+ * forbid that access mode. Optional `communicationMode` and `lifeCycleStatus`
+ * scope the rule to an interface and LCS. ISO/IEC 7816-15:2016 §8.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,30 +51,45 @@ class AccessControlRule {
     constructor (
         /**
          * @summary `accessMode`.
+         * @description
+         * Which operations this rule covers. ISO/IEC 7816-15:2016 §8.2.8.
          * @public
          * @readonly
          */
         readonly accessMode: AccessMode,
         /**
          * @summary `securityCondition`.
+         * @description
+         * Boolean expression over authentication methods. ISO/IEC 7816-15:2016
+         * §8.2.8.
          * @public
          * @readonly
          */
         readonly securityCondition: SecurityCondition,
         /**
          * @summary `communicationMode`.
+         * @description
+         * Physical interface to which the rule applies (ISO/IEC 7816-4
+         * transport type descriptor). ISO/IEC 7816-15:2016 §8.2.8.
          * @public
          * @readonly
          */
         readonly communicationMode: OPTIONAL<CommunicationMode>,
         /**
          * @summary `lifeCycleStatus`.
+         * @description
+         * File/DO life-cycle state to which the rule applies (ISO/IEC 7816-4).
+         * ISO/IEC 7816-15:2016 §8.2.8.
          * @public
          * @readonly
          */
         readonly lifeCycleStatus: OPTIONAL<LifeCycleStatus>,
         /**
          * @summary `verifLimitDates`.
+         * @description
+         * Interval during which this rule may be verified; outside it the rule
+         * cannot be verified. May be used with a trusted timestamp presented to
+         * the card. ISO/IEC 7816-15:2016 §8.2.8.
          * @public
          * @readonly
          */
@@ -112,7 +131,8 @@ class AccessControlRule {
  * @summary The Leading Root Component Types of AccessControlRule
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -129,7 +149,8 @@ const _root_component_type_list_1_spec_for_AccessControlRule: $.ComponentSpec[] 
  * @summary The Trailing Root Component Types of AccessControlRule
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -142,7 +163,8 @@ const _root_component_type_list_2_spec_for_AccessControlRule: $.ComponentSpec[] 
  * @summary The Extension Addition Component Types of AccessControlRule
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

@@ -29,6 +29,13 @@ import { cia_ub_userConsent } from "../CryptographicInformationFramework/cia-ub-
  * @summary CommonObjectAttributes
  * @description
  * 
+ * Attributes common to every CIO. If `flags.private` is set, `authId` should be
+ * present and equal an `authId` of an authentication object in the AOD. When
+ * both `accessControlRules` and `authId` are present, the rules take precedence
+ * (backwards compatibility). This structure describes card access rules for the
+ * host; the card need not use it as its enforcement mechanism. ISO/IEC
+ * 7816-15:2016 §8.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,30 +57,50 @@ class CommonObjectAttributes {
     constructor (
         /**
          * @summary `label`.
+         * @description
+         * Display name for MMI (e.g. "bank certificate" vs "e-mail
+         * certificate"). ISO/IEC 7816-15:2016 §8.2.8.
          * @public
          * @readonly
          */
         readonly label: OPTIONAL<Label>,
         /**
          * @summary `flags`.
+         * @description
+         * `private` requires authentication before access; `modifiable` means
+         * the value may be updated (still after authentication if also
+         * private). Bit `internal` is historical and shall not be used. ISO/IEC
+         * 7816-15:2016 §8.2.8.
          * @public
          * @readonly
          */
         readonly flags: OPTIONAL<CommonObjectFlags>,
         /**
          * @summary `authId`.
+         * @description
+         * For a private object, cross-reference to the protecting
+         * authentication object. ISO/IEC 7816-15:2016 §8.2.8.
          * @public
          * @readonly
          */
         readonly authId: OPTIONAL<Identifier>,
         /**
          * @summary `userConsent`.
+         * @description
+         * How many times an application may access the object without a new
+         * user consent. 1 means authenticate before every access; 3 means
+         * before the 1st, 4th, 7th, … access. The card may enforce this with
+         * counter objects (ISO/IEC 7816-8). ISO/IEC 7816-15:2016 §8.2.8.
          * @public
          * @readonly
          */
         readonly userConsent: OPTIONAL<INTEGER>,
         /**
          * @summary `accessControlRules`.
+         * @description
+         * Fine-grained Boolean conditions per access mode. If a mode has no
+         * rule, that mode is not allowed. If this component is absent, deduce
+         * rules by other means (e.g. FCI). ISO/IEC 7816-15:2016 §8.2.8.
          * @public
          * @readonly
          */
@@ -119,7 +146,8 @@ class CommonObjectAttributes {
  * @summary The Leading Root Component Types of CommonObjectAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -136,7 +164,8 @@ const _root_component_type_list_1_spec_for_CommonObjectAttributes: $.ComponentSp
  * @summary The Trailing Root Component Types of CommonObjectAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -149,7 +178,8 @@ const _root_component_type_list_2_spec_for_CommonObjectAttributes: $.ComponentSp
  * @summary The Extension Addition Component Types of CommonObjectAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

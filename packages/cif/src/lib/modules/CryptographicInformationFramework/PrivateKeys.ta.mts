@@ -20,6 +20,9 @@ import { PrivateKeyChoice, _decode_PrivateKeyChoice, _encode_PrivateKeyChoice } 
  * @summary PrivateKeys
  * @description
  * 
+ * Private-key directory contents (EF.PrKD), or an inline sequence in EF.OD.
+ * ISO/IEC 7816-15:2016 §8.3, §7.5.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

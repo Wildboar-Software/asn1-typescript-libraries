@@ -18,6 +18,10 @@ import { type KEY_IDENTIFIER } from "../CryptographicInformationFramework/KEY-ID
  * @summary issuerNameHash
  * @description
  * 
+ * `KEY-IDENTIFIER` 6: SHA-1 hash of the issuer name as it appears in the
+ * certificate (DER-encoded per Annex A). Together with `subjectNameHash`,
+ * useful for chain construction. ISO/IEC 7816-15:2016 §8.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

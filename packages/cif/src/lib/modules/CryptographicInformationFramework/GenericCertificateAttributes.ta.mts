@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GenericCertificateAttributes
  * @description
  * 
+ * Type-specific attributes for a certificate kind identified in
+ * `AllowedCertificates` (open; filled by profiles/PICS). ISO/IEC 7816-15:2016
+ * §8.2.16.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,17 @@ class GenericCertificateAttributes {
     constructor (
         /**
          * @summary `certType`.
+         * @description
+         * Certificate type id from `AllowedCertificates`. ISO/IEC 7816-15:2016
+         * §8.2.16.
          * @public
          * @readonly
          */
         readonly certType: OBJECT_IDENTIFIER,
         /**
          * @summary `certAttr`.
+         * @description
+         * Type-specific attributes. ISO/IEC 7816-15:2016 §8.2.16.
          * @public
          * @readonly
          */
@@ -51,7 +60,8 @@ class GenericCertificateAttributes {
      * @summary Restructures an object into a GenericCertificateAttributes
      * @description
      * 
-     * This takes an `object` and converts it to a `GenericCertificateAttributes`.
+     * This takes an `object` and converts it to a
+     * `GenericCertificateAttributes`.
      * 
      * @public
      * @static
@@ -70,7 +80,8 @@ class GenericCertificateAttributes {
  * @summary The Leading Root Component Types of GenericCertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -84,7 +95,8 @@ const _root_component_type_list_1_spec_for_GenericCertificateAttributes: $.Compo
  * @summary The Trailing Root Component Types of GenericCertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -97,7 +109,8 @@ const _root_component_type_list_2_spec_for_GenericCertificateAttributes: $.Compo
  * @summary The Extension Addition Component Types of GenericCertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

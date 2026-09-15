@@ -20,6 +20,9 @@ import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPubl
  * @summary KEAPublicKeyChoice
  * @description
  * 
+ * `raw` is `KEAPublicKey`; `spki` must contain a KEA public key. ISO/IEC
+ * 7816-15:2016 §8.5.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

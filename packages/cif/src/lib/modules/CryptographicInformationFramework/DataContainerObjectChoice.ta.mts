@@ -24,6 +24,9 @@ import { OidDOAttributes, _decode_OidDOAttributes, _encode_OidDOAttributes } fro
  * @summary DataContainerObjectChoice
  * @description
  * 
+ * Data-container CIOs: opaque blobs, ISO/IEC 7816-4 data objects, or
+ * OID-identified objects. ISO/IEC 7816-15:2016 §8.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

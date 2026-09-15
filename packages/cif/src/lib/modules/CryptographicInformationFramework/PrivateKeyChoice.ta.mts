@@ -30,6 +30,9 @@ import { GenericKeyAttributes, _decode_GenericKeyAttributes, _encode_GenericKeyA
  * @summary PrivateKeyChoice
  * @description
  * 
+ * Private-key CIO alternatives (RSA, EC, DH, DSA, KEA, or generic). ISO/IEC
+ * 7816-15:2016 §8.4.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

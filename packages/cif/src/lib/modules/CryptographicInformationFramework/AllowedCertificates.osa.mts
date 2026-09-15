@@ -17,6 +17,9 @@ import { CIO_OPAQUE } from "../CryptographicInformationFramework/CIO-OPAQUE.oca.
  * @summary AllowedCertificates
  * @description
  * 
+ * Open `CIO-OPAQUE` set for generic certificates. Empty here; profiles or PICS
+ * fill it. ISO/IEC 7816-15:2016 §8.2.16.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

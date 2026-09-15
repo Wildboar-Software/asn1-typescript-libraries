@@ -21,6 +21,10 @@ import { cia_ub_recordLength } from "../CryptographicInformationFramework/cia-ub
  * @summary RecordInfo
  * @description
  * 
+ * Record lengths of CIA directory EFs when they are linear record files.
+ * Presence of `RecordInfo` itself means those EFs are linear record files.
+ * ISO/IEC 7816-15:2016 §8.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,42 +46,56 @@ class RecordInfo {
     constructor (
         /**
          * @summary `oDRecordLength`.
+         * @description
+         * EF.OD record length (0 = variable). ISO/IEC 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
         readonly oDRecordLength: OPTIONAL<INTEGER>,
         /**
          * @summary `prKDRecordLength`.
+         * @description
+         * EF.PrKD record length. ISO/IEC 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
         readonly prKDRecordLength: OPTIONAL<INTEGER>,
         /**
          * @summary `puKDRecordLength`.
+         * @description
+         * EF.PuKD record length. ISO/IEC 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
         readonly puKDRecordLength: OPTIONAL<INTEGER>,
         /**
          * @summary `sKDRecordLength`.
+         * @description
+         * EF.SKD record length. ISO/IEC 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
         readonly sKDRecordLength: OPTIONAL<INTEGER>,
         /**
          * @summary `cDRecordLength`.
+         * @description
+         * EF.CD record length. ISO/IEC 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
         readonly cDRecordLength: OPTIONAL<INTEGER>,
         /**
          * @summary `dCODRecordLength`.
+         * @description
+         * EF.DCOD record length. ISO/IEC 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
         readonly dCODRecordLength: OPTIONAL<INTEGER>,
         /**
          * @summary `aODRecordLength`.
+         * @description
+         * EF.AOD record length. ISO/IEC 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
@@ -125,7 +143,8 @@ class RecordInfo {
  * @summary The Leading Root Component Types of RecordInfo
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -144,7 +163,8 @@ const _root_component_type_list_1_spec_for_RecordInfo: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of RecordInfo
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -157,7 +177,8 @@ const _root_component_type_list_2_spec_for_RecordInfo: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of RecordInfo
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

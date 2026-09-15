@@ -29,6 +29,11 @@ import { Reference, _decode_Reference, _encode_Reference } from "../Cryptographi
  * @summary CommonKeyAttributes
  * @description
  * 
+ * `iD` shall be unique per key CIO, except a public/private pair (and matching
+ * certificates) on the same card share the identifier. `usage` maps to ISO/IEC
+ * 9594-8 KeyUsage as in Table 2. Algorithm-specific `KeyInfo` on a key
+ * overrides `algReference`. ISO/IEC 7816-15:2016 §8.2.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,48 +57,71 @@ class CommonKeyAttributes {
     constructor (
         /**
          * @summary `iD`.
+         * @description
+         * Unique among keys unless shared with the matching public key and/or
+         * certificates. ISO/IEC 7816-15:2016 §8.2.9, §8.2.15.
          * @public
          * @readonly
          */
         readonly iD: Identifier,
         /**
          * @summary `usage`.
+         * @description
+         * Intended cryptographic operations. Algorithms themselves are
+         * implicit. ISO/IEC 7816-15:2016 §8.2.9.
          * @public
          * @readonly
          */
         readonly usage: KeyUsageFlags,
         /**
          * @summary `native`.
+         * @description
+         * Whether associated algorithms are implemented in card hardware.
+         * DEFAULT TRUE. ISO/IEC 7816-15:2016 §8.2.9.
          * @public
          * @readonly
          */
         readonly native: OPTIONAL<BOOLEAN>,
         /**
          * @summary `accessFlags`.
+         * @description
+         * Sensitivity/extractability/generation. May be omitted when the value
+         * can be deduced otherwise. ISO/IEC 7816-15:2016 §8.2.9.
          * @public
          * @readonly
          */
         readonly accessFlags: OPTIONAL<KeyAccessFlags>,
         /**
          * @summary `keyReference`.
+         * @description
+         * Card-specific key reference for cryptographic cards (ISO/IEC 7816-4/8
+         * key reference DOs). Negative values are allowed. ISO/IEC 7816-15:2016
+         * §8.2.9.
          * @public
          * @readonly
          */
         readonly keyReference: OPTIONAL<KeyReference>,
         /**
          * @summary `startDate`.
+         * @description
+         * Start of the key's validity period. ISO/IEC 7816-15:2016 §8.2.9.
          * @public
          * @readonly
          */
         readonly startDate: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `endDate`.
+         * @description
+         * End of the key's validity period. ISO/IEC 7816-15:2016 §8.2.9.
          * @public
          * @readonly
          */
         readonly endDate: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `algReference`.
+         * @description
+         * References `AlgorithmInfo.reference` values in EF.CIAInfo for
+         * algorithms this key may be used with. ISO/IEC 7816-15:2016 §8.2.9.
          * @public
          * @readonly
          */
@@ -135,7 +163,8 @@ class CommonKeyAttributes {
  * @summary The Leading Root Component Types of CommonKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -155,7 +184,8 @@ const _root_component_type_list_1_spec_for_CommonKeyAttributes: $.ComponentSpec[
  * @summary The Trailing Root Component Types of CommonKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -168,7 +198,8 @@ const _root_component_type_list_2_spec_for_CommonKeyAttributes: $.ComponentSpec[
  * @summary The Extension Addition Component Types of CommonKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

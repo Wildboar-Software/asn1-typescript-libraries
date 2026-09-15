@@ -28,6 +28,9 @@ import { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFra
  * @summary BiometricTemplateAttributes
  * @description
  * 
+ * CIA-specific biometric reference-data description; not aligned with ISO/IEC
+ * 7816-11. ISO/IEC 7816-15:2016 §8.9.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,36 +52,55 @@ class BiometricTemplateAttributes {
     constructor (
         /**
          * @summary `bioFlags`.
+         * @description
+         * Same meaning as `PasswordFlags`, reading "biometric reference data"
+         * for "password". ISO/IEC 7816-15:2016 §8.9.3.
          * @public
          * @readonly
          */
         readonly bioFlags: BiometricFlags,
         /**
          * @summary `templateId`.
+         * @description
+         * Identifies the data structure that must be sent to the card. ISO/IEC
+         * 7816-15:2016 §8.9.3.
          * @public
          * @readonly
          */
         readonly templateId: BiometricTemplateIdentifier,
         /**
          * @summary `bioType`.
+         * @description
+         * Stored biometric (e.g. right pointer finger). `chained` means several
+         * features must be presented in one verification, possibly with chained
+         * commands. ISO/IEC 7816-15:2016 §8.9.3.
          * @public
          * @readonly
          */
         readonly bioType: BiometricType,
         /**
          * @summary `bioReference`.
+         * @description
+         * Card-specific biometric reference (as `pwdReference`). DEFAULT 0.
+         * ISO/IEC 7816-15:2016 §8.9.3.
          * @public
          * @readonly
          */
         readonly bioReference: OPTIONAL<Reference>,
         /**
          * @summary `lastChange`.
+         * @description
+         * Last change of the biometric reference data. ISO/IEC 7816-15:2016
+         * §8.9.3.
          * @public
          * @readonly
          */
         readonly lastChange: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `path`.
+         * @description
+         * DF to SELECT before a biometric operation. ISO/IEC 7816-15:2016
+         * §8.9.3.
          * @public
          * @readonly
          */
@@ -95,7 +117,8 @@ class BiometricTemplateAttributes {
      * @summary Restructures an object into a BiometricTemplateAttributes
      * @description
      * 
-     * This takes an `object` and converts it to a `BiometricTemplateAttributes`.
+     * This takes an `object` and converts it to a
+     * `BiometricTemplateAttributes`.
      * 
      * @public
      * @static
@@ -122,7 +145,8 @@ class BiometricTemplateAttributes {
  * @summary The Leading Root Component Types of BiometricTemplateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -140,7 +164,8 @@ const _root_component_type_list_1_spec_for_BiometricTemplateAttributes: $.Compon
  * @summary The Trailing Root Component Types of BiometricTemplateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -153,7 +178,8 @@ const _root_component_type_list_2_spec_for_BiometricTemplateAttributes: $.Compon
  * @summary The Extension Addition Component Types of BiometricTemplateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
