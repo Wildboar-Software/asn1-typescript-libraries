@@ -27,8 +27,8 @@ import { VolAbs, _decode_VolAbs, _encode_VolAbs } from "../CSTA-physical-device-
  * 
  * ```asn1
  * SpeakerVolumeList-Item ::= SEQUENCE {
- *     auditoryApparatus [UNIVERSAL 4] AuditoryApparatusID,
- *     speakerVolAbs [UNIVERSAL 2] VolAbs OPTIONAL
+ *     auditoryApparatus AuditoryApparatusID,
+ *     speakerVolAbs VolAbs OPTIONAL
  * }
  * ```
  * 
