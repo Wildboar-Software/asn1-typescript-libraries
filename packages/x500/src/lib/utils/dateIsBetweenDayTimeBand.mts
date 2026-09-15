@@ -35,7 +35,9 @@ function dateIsBetweenDayTimeBand (dtb: DayTimeBand, point: Date): boolean {
         Number(end?.minute ?? DayTimeBand._default_value_for_endDayTime.minute ?? 59),
         Number(end?.second ?? DayTimeBand._default_value_for_endDayTime.second ?? 59),
     );
-    return ((startScore <= pointScore) && (pointScore <= endScore));
+    return (startScore <= endScore)
+        ? ((startScore <= pointScore) && (pointScore <= endScore))
+        : ((pointScore >= startScore) || (pointScore <= endScore));
 }
 
 export default dateIsBetweenDayTimeBand;

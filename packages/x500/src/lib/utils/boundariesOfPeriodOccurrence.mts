@@ -220,6 +220,55 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
      * that unit is permitted by the period.
      */
     if (applicableTimeband) {
+        const bandStartHour = Number(applicableTimeband.startDayTime?.hour ?? 0);
+        const bandStartMinute = Number(applicableTimeband.startDayTime?.minute ?? 0);
+        const bandStartSecond = Number(applicableTimeband.startDayTime?.second ?? 0);
+        const bandEndHour = Number(applicableTimeband.endDayTime?.hour ?? 23);
+        const bandEndMinute = Number(applicableTimeband.endDayTime?.minute ?? 59);
+        const bandEndSecond = Number(applicableTimeband.endDayTime?.second ?? 59);
+        const bandStartScore = (bandStartHour * 3600) + (bandStartMinute * 60) + bandStartSecond;
+        const bandEndScore = (bandEndHour * 3600) + (bandEndMinute * 60) + bandEndSecond;
+        if (bandStartScore > bandEndScore) {
+            const pointScore = (point.getHours() * 3600) + (point.getMinutes() * 60) + point.getSeconds();
+            if (pointScore >= bandStartScore) {
+                min = new Date(
+                    point.getFullYear(),
+                    point.getMonth(),
+                    point.getDate(),
+                    bandStartHour,
+                    bandStartMinute,
+                    bandStartSecond,
+                );
+                const next = addDays(point, 1);
+                max = new Date(
+                    next.getFullYear(),
+                    next.getMonth(),
+                    next.getDate(),
+                    bandEndHour,
+                    bandEndMinute,
+                    bandEndSecond,
+                );
+            } else {
+                const prev = subDays(point, 1);
+                min = new Date(
+                    prev.getFullYear(),
+                    prev.getMonth(),
+                    prev.getDate(),
+                    bandStartHour,
+                    bandStartMinute,
+                    bandStartSecond,
+                );
+                max = new Date(
+                    point.getFullYear(),
+                    point.getMonth(),
+                    point.getDate(),
+                    bandEndHour,
+                    bandEndMinute,
+                    bandEndSecond,
+                );
+            }
+            return [ min, max ];
+        }
         if (startOfDayBand) {
             const prev: Date = subDays(point, 1);
             const {
