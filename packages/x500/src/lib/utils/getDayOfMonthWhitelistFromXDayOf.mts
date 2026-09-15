@@ -50,7 +50,7 @@ function getDayOfMonthWhitelistFromXDayOf (x: XDayOf, point: Date): Set<number> 
         const daysInMonth = getDaysInMonth(point);
         let d = (((occurrence - 1) * 7) + 1);
         let i = 0;
-        while ((d < daysInMonth) && (i < 7)) {
+        while ((d <= daysInMonth) && (i < 7)) {
             const a: Date = new Date(point);
             a.setDate(d);
             if (daysOfWeekWhitelist.has(getDay(a))) {
