@@ -190,8 +190,10 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         ? period.timesOfDay.find((tod): boolean => dateIsBetweenDayTimeBand(tod, point))
         : undefined;
 
+    const daysAreWeekdays = Boolean(period.weeks) || (!period.months && !period.years);
+
     const maxDay: number = ((): number => {
-        if (period.weeks) {
+        if (daysAreWeekdays) {
             return 7;
         } else if (period.months) {
             return getDaysInMonth(pointMonth);
@@ -324,7 +326,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         }
         if (i === 1) {
             const prev = subDays(min, 1);
-            if (period.weeks) {
+            if (daysAreWeekdays) {
                 const {
                     year: yesterYear,
                     month: yesterMonth,
@@ -374,7 +376,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         }
         if (j >= maxDay) {
             const next = addDays(max, 1);
-            if (period.weeks) {
+            if (daysAreWeekdays) {
                 const {
                     year: nextYear,
                     month: nextMonth,

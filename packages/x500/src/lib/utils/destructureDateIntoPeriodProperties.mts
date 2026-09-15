@@ -26,8 +26,11 @@ function destructureDateIntoPeriodProperties (period: Period, point: Date): Date
             return getDay(point) + 1;
         } else if (period.months) {
             return point.getDate();
-        } else {
+        } else if (period.years) {
             return getDayOfYear(point);
+        } else {
+            // X.520 example (b): `{ days intDay:{2} }` is every Monday.
+            return getDay(point) + 1;
         }
     })();
     return {
