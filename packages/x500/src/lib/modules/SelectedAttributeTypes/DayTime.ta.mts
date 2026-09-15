@@ -124,11 +124,15 @@ export class DayTime {
      * @summary Compare this `DayTime` to another for ordering.
      * @description
      *
-     * Missing `minute` and `second` use DEFAULT 0. Suitable for
-     * `Array.sort()`: returns a negative number, `0`, or a positive
-     * number as this time is before, equal to, or after `other`.
+     * Missing `minute` and `second` use DEFAULT 0.
      *
-     * @param {DayTime} other The other time of day.
+     * Suitable as `Array.prototype.sort`'s comparefn. For an ascending
+     * sort, pass `this` as argument `a` and `other` as argument `b`:
+     * `(a, b) => a.compare(b)`. Negative means `this` (`a`) is earlier
+     * and sorts first; `0` means equal; positive means `this` is later
+     * and sorts after `other` (`b`).
+     *
+     * @param {DayTime} other The comparefn `b` argument.
      * @returns {number} Negative, `0`, or positive.
      * @function
      * @author Cursor Grok 4.6

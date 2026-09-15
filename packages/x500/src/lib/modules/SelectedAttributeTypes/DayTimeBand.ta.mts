@@ -153,7 +153,13 @@ export class DayTimeBand {
      * Orders by start, then end. Missing ends use the `DayTimeBand`
      * DEFAULTs (`START_OF_DAY` / `END_OF_DAY`).
      *
-     * @param {DayTimeBand} other The other band.
+     * Suitable as `Array.prototype.sort`'s comparefn. For an ascending
+     * sort, pass `this` as argument `a` and `other` as argument `b`:
+     * `(a, b) => a.compare(b)`. Negative means `this` (`a`) starts
+     * (or, if starts match, ends) earlier and sorts first; `0` means
+     * equal; positive means `this` sorts after `other` (`b`).
+     *
+     * @param {DayTimeBand} other The comparefn `b` argument.
      * @returns {number} Negative, `0`, or positive.
      * @function
      * @author Cursor Grok 4.6
