@@ -297,6 +297,7 @@ describe("evaluateTemporalContext", () => {
         const entirelyValue = new TimeSpecification(
             value.time,
             TRUE,
+            value.timeZone,
         );
         matches = evaluateTemporalContext(
             _encode_TimeAssertion(entirelyAssertion, DER),
