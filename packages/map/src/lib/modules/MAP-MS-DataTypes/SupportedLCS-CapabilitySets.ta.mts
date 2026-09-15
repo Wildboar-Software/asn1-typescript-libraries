@@ -73,7 +73,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SupportedLCS_CapabilitySets
  * @description
- * 
+ *
+ * LCS core-network signalling capability sets: set1 R98/R99, set2 Rel-4, set3
+ * Rel-5, set4 Rel-6, set5 Rel-7 or later. A node shall mark all sets it
+ * supports. No bit set means LCS not supported. If omitted by a VLR, at most
+ * set1 may be assumed; if omitted by an SGSN, no LCS support. An SGSN shall not
+ * indicate set1. Other bits shall be discarded.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.11.17 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

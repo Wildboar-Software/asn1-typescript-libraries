@@ -20,7 +20,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetMicrophoneMuteArgument
  * @description
- * 
+ *
+ * Set Microphone Mute request (ECMA-269 §21.1.20.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,24 +43,38 @@ class SetMicrophoneMuteArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+         * 1).
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `auditoryApparatus`.
+         * @description
+         *
+         * Auditory apparatus at the device on which to set the feature.
          * @public
          * @readonly
          */
         readonly auditoryApparatus: AuditoryApparatusID,
         /**
          * @summary `microphoneMuteOn`.
+         * @description
+         *
+         * FALSE = activated; TRUE = muted.
          * @public
          * @readonly
          */
         readonly microphoneMuteOn: BOOLEAN,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

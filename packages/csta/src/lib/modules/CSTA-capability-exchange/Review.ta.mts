@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary Review
  * @description
- * 
+ * Capability bitmap for the Review event (ECMA-269 C.20.10, ECMA-285 §9.10).
+ * Presence of this entry in `VoiceUnitEvtsList` means the SF supports that
+ * event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +35,9 @@ type Review = BIT_STRING;
 /**
  * @summary Review_msgToReview
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.20.10).
  */
 export
 const Review_msgToReview: number = 4; /* LONG_NAMED_BIT */
@@ -34,6 +45,8 @@ const Review_msgToReview: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary msgToReview
  * @constant
+ * @description
+ * Alias of `Review_msgToReview`.
  */
 export
 const msgToReview: number = Review_msgToReview; /* SHORT_NAMED_BIT */
@@ -41,6 +54,9 @@ const msgToReview: number = Review_msgToReview; /* SHORT_NAMED_BIT */
 /**
  * @summary Review_resource
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `resource` parameter (ECMA-269
+ * C.20.10).
  */
 export
 const Review_resource: number = 5; /* LONG_NAMED_BIT */
@@ -48,6 +64,8 @@ const Review_resource: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary resource
  * @constant
+ * @description
+ * Alias of `Review_resource`.
  */
 export
 const resource: number = Review_resource; /* SHORT_NAMED_BIT */
@@ -55,6 +73,9 @@ const resource: number = Review_resource; /* SHORT_NAMED_BIT */
 /**
  * @summary Review_periodToResumeStartOfMsg
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.20.10).
  */
 export
 const Review_periodToResumeStartOfMsg: number = 0; /* LONG_NAMED_BIT */
@@ -62,6 +83,8 @@ const Review_periodToResumeStartOfMsg: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary periodToResumeStartOfMsg
  * @constant
+ * @description
+ * Alias of `Review_periodToResumeStartOfMsg`.
  */
 export
 const periodToResumeStartOfMsg: number = Review_periodToResumeStartOfMsg; /* SHORT_NAMED_BIT */
@@ -69,6 +92,9 @@ const periodToResumeStartOfMsg: number = Review_periodToResumeStartOfMsg; /* SHO
 /**
  * @summary Review_periodToResumeLengthOfReview
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.20.10).
  */
 export
 const Review_periodToResumeLengthOfReview: number = 1; /* LONG_NAMED_BIT */
@@ -76,6 +102,8 @@ const Review_periodToResumeLengthOfReview: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary periodToResumeLengthOfReview
  * @constant
+ * @description
+ * Alias of `Review_periodToResumeLengthOfReview`.
  */
 export
 const periodToResumeLengthOfReview: number = Review_periodToResumeLengthOfReview; /* SHORT_NAMED_BIT */
@@ -83,6 +111,9 @@ const periodToResumeLengthOfReview: number = Review_periodToResumeLengthOfReview
 /**
  * @summary Review_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.20.10).
  */
 export
 const Review_privateData: number = 2; /* LONG_NAMED_BIT */
@@ -90,6 +121,8 @@ const Review_privateData: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `Review_privateData`.
  */
 export
 const privateData: number = Review_privateData; /* SHORT_NAMED_BIT */
@@ -97,6 +130,9 @@ const privateData: number = Review_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary Review_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.20.10).
  */
 export
 const Review_privateDataInAck: number = 3; /* LONG_NAMED_BIT */
@@ -104,6 +140,8 @@ const Review_privateDataInAck: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `Review_privateDataInAck`.
  */
 export
 const privateDataInAck: number = Review_privateDataInAck; /* SHORT_NAMED_BIT */

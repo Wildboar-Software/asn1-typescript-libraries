@@ -89,7 +89,12 @@ import { ReportingPLMNList, _decode_ReportingPLMNList, _encode_ReportingPLMNList
 /**
  * @summary ProvideSubscriberLocation_Arg
  * @description
- * 
+ *
+ * Argument of MAP-PROVIDE-SUBSCRIBER-LOCATION: GMLC to visited MSC or SGSN. One
+ * of IMSI or MSISDN is mandatory. If location estimate type is activate/cancel
+ * deferred location, `lcs-ReferenceNumber` shall be included (3GPP TS 29.002
+ * V19.1.0 clauses 13A.2 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -125,126 +130,218 @@ class ProvideSubscriberLocation_Arg {
     constructor (
         /**
          * @summary `locationType`.
+         * @description
+         *
+         * Type of location estimate required (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.11.12).
+         *
          * @public
          * @readonly
          */
         readonly locationType: LocationType,
         /**
          * @summary `mlc_Number`.
+         * @description
+         *
+         * GMLC number.
+         *
          * @public
          * @readonly
          */
         readonly mlc_Number: ISDN_AddressString,
         /**
          * @summary `lcs_ClientID`.
+         * @description
+         *
+         * LCS client identity (3GPP TS 29.002 V19.1.0 clause 7.6.11.4).
+         *
          * @public
          * @readonly
          */
         readonly lcs_ClientID: OPTIONAL<LCS_ClientID>,
         /**
          * @summary `privacyOverride`.
+         * @description
+         *
+         * MS privacy overridden by the LCS client when GMLC and VMSC/SGSN are
+         * in the same country (3GPP TS 29.002 V19.1.0 clause 7.6.11.16).
+         *
          * @public
          * @readonly
          */
         readonly privacyOverride: OPTIONAL<NULL>,
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * One of IMSI or MSISDN is mandatory (clause 17.7.13).
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `msisdn`.
+         * @description
+         *
+         * One of IMSI or MSISDN is mandatory (clause 17.7.13).
+         *
          * @public
          * @readonly
          */
         readonly msisdn: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `lmsi`.
+         * @description
+         *
+         * LMSI.
+         *
          * @public
          * @readonly
          */
         readonly lmsi: OPTIONAL<LMSI>,
         /**
          * @summary `imei`.
+         * @description
+         *
+         * IMEI.
+         *
          * @public
          * @readonly
          */
         readonly imei: OPTIONAL<IMEI>,
         /**
          * @summary `lcs_Priority`.
+         * @description
+         *
+         * Priority of the location request (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.11.7).
+         *
          * @public
          * @readonly
          */
         readonly lcs_Priority: OPTIONAL<LCS_Priority>,
         /**
          * @summary `lcs_QoS`.
+         * @description
+         *
+         * LCS QoS (3GPP TS 29.002 V19.1.0 clause 7.6.11.8).
+         *
          * @public
          * @readonly
          */
         readonly lcs_QoS: OPTIONAL<LCS_QoS>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `supportedGADShapes`.
+         * @description
+         *
+         * GAD shapes supported (3GPP TS 29.002 V19.1.0 clause 7.6.11.20).
+         *
          * @public
          * @readonly
          */
         readonly supportedGADShapes: OPTIONAL<SupportedGADShapes>,
         /**
          * @summary `lcs_ReferenceNumber`.
+         * @description
+         *
+         * Deferred MT-LR request/response correlation (3GPP TS 29.002 V19.1.0
+         * clause 7.6.11.23).
+         *
          * @public
          * @readonly
          */
         readonly lcs_ReferenceNumber: OPTIONAL<LCS_ReferenceNumber>,
         /**
          * @summary `lcsServiceTypeID`.
+         * @description
+         *
+         * LCS Service Type as in 3GPP TS 22.071 (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.11.15).
+         *
          * @public
          * @readonly
          */
         readonly lcsServiceTypeID: OPTIONAL<LCSServiceTypeID>,
         /**
          * @summary `lcsCodeword`.
+         * @description
+         *
+         * Codeword as in 3GPP TS 23.271 (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.11.18).
+         *
          * @public
          * @readonly
          */
         readonly lcsCodeword: OPTIONAL<LCSCodeword>,
         /**
          * @summary `lcs_PrivacyCheck`.
+         * @description
+         *
+         * Privacy check actions (3GPP TS 29.002 V19.1.0 clause 7.6.11.24).
+         *
          * @public
          * @readonly
          */
         readonly lcs_PrivacyCheck: OPTIONAL<LCS_PrivacyCheck>,
         /**
          * @summary `areaEventInfo`.
+         * @description
+         *
+         * Deferred MT-LR area event (3GPP TS 29.002 V19.1.0 clause 7.6.11.26).
+         *
          * @public
          * @readonly
          */
         readonly areaEventInfo: OPTIONAL<AreaEventInfo>,
         /**
          * @summary `h_gmlc_Address`.
+         * @description
+         *
+         * Home GMLC address.
+         *
          * @public
          * @readonly
          */
         readonly h_gmlc_Address: OPTIONAL<GSN_Address>,
         /**
          * @summary `mo_lrShortCircuitIndicator`.
+         * @description
+         *
+         * MO-LR short circuit permitted (3GPP TS 23.271) (3GPP TS 29.002
+         * V19.1.0 clause 7.6.11.29).
+         *
          * @public
          * @readonly
          */
         readonly mo_lrShortCircuitIndicator: OPTIONAL<NULL>,
         /**
          * @summary `periodicLDRInfo`.
+         * @description
+         *
+         * Periodic deferred location (3GPP TS 29.002 V19.1.0 clause 7.6.11.31).
+         *
          * @public
          * @readonly
          */
         readonly periodicLDRInfo: OPTIONAL<PeriodicLDRInfo>,
         /**
          * @summary `reportingPLMNList`.
+         * @description
+         *
+         * PLMNs for subsequent periodic MO-LR TTTP (3GPP TS 29.002 V19.1.0
+         * clause 7.6.11.30).
+         *
          * @public
          * @readonly
          */

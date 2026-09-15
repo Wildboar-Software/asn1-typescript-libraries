@@ -82,7 +82,12 @@ import { facilityNotSupported } from "../MAP-Errors/facilityNotSupported.oa.mjs"
 /**
  * @summary ist_Alert
  * @description
- * 
+ *
+ * MAP_IST_ALERT: VMSC or GMSC reports to the HLR that the IST timer running for
+ * a call for the subscriber has expired. Confirmed. Typical path: VMSC→HLR or
+ * GMSC→HLR. Local opcode 87. Timer class `m` (15 s to 30 s). (3GPP TS 29.002
+ * V19.1.0 clauses 10.13.1, 17.1.2, 17.3.2.44 and 17.6.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

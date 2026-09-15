@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AgentLoggedOn
  * @description
- * 
+ * Capability bitmap for the Agent Logged On event (ECMA-269 C.15.3, ECMA-285
+ * §9.10). Presence of this entry in `LogicalEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +34,9 @@ type AgentLoggedOn = BIT_STRING;
 /**
  * @summary AgentLoggedOn_agentID
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `agentID` parameter (ECMA-269
+ * C.15.3).
  */
 export
 const AgentLoggedOn_agentID: number = 0; /* LONG_NAMED_BIT */
@@ -33,6 +44,8 @@ const AgentLoggedOn_agentID: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary agentID
  * @constant
+ * @description
+ * Alias of `AgentLoggedOn_agentID`.
  */
 export
 const agentID: number = AgentLoggedOn_agentID; /* SHORT_NAMED_BIT */
@@ -40,6 +53,9 @@ const agentID: number = AgentLoggedOn_agentID; /* SHORT_NAMED_BIT */
 /**
  * @summary AgentLoggedOn_acdGroup
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `acdGroup` parameter (ECMA-269
+ * C.15.3).
  */
 export
 const AgentLoggedOn_acdGroup: number = 1; /* LONG_NAMED_BIT */
@@ -47,6 +63,8 @@ const AgentLoggedOn_acdGroup: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary acdGroup
  * @constant
+ * @description
+ * Alias of `AgentLoggedOn_acdGroup`.
  */
 export
 const acdGroup: number = AgentLoggedOn_acdGroup; /* SHORT_NAMED_BIT */
@@ -54,6 +72,9 @@ const acdGroup: number = AgentLoggedOn_acdGroup; /* SHORT_NAMED_BIT */
 /**
  * @summary AgentLoggedOn_agentPassword
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `agentPassword` parameter
+ * (ECMA-269 C.15.3).
  */
 export
 const AgentLoggedOn_agentPassword: number = 2; /* LONG_NAMED_BIT */
@@ -61,6 +82,8 @@ const AgentLoggedOn_agentPassword: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary agentPassword
  * @constant
+ * @description
+ * Alias of `AgentLoggedOn_agentPassword`.
  */
 export
 const agentPassword: number = AgentLoggedOn_agentPassword; /* SHORT_NAMED_BIT */
@@ -68,6 +91,9 @@ const agentPassword: number = AgentLoggedOn_agentPassword; /* SHORT_NAMED_BIT */
 /**
  * @summary AgentLoggedOn_cause
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `cause` parameter (ECMA-269
+ * C.15.3).
  */
 export
 const AgentLoggedOn_cause: number = 3; /* LONG_NAMED_BIT */
@@ -75,6 +101,8 @@ const AgentLoggedOn_cause: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary cause
  * @constant
+ * @description
+ * Alias of `AgentLoggedOn_cause`.
  */
 export
 const cause: number = AgentLoggedOn_cause; /* SHORT_NAMED_BIT */
@@ -82,6 +110,9 @@ const cause: number = AgentLoggedOn_cause; /* SHORT_NAMED_BIT */
 /**
  * @summary AgentLoggedOn_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.15.3).
  */
 export
 const AgentLoggedOn_privateData: number = 4; /* LONG_NAMED_BIT */
@@ -89,6 +120,8 @@ const AgentLoggedOn_privateData: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `AgentLoggedOn_privateData`.
  */
 export
 const privateData: number = AgentLoggedOn_privateData; /* SHORT_NAMED_BIT */

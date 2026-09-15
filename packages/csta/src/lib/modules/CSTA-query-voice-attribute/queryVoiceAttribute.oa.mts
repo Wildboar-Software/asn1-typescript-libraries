@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary queryVoiceAttribute
  * @description
- * 
+ *
+ * Obtains the current value of a specified voice attribute for a message or
+ * resource (ECMA-269 §26.1.7).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:503. Errors: `universalFailure` (ECMA-285 §24.1.7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

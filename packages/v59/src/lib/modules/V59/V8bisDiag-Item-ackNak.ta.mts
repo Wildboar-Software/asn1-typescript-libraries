@@ -16,7 +16,10 @@ import { V8bisDiag_Item_ackNak_nAK, _decode_V8bisDiag_Item_ackNak_nAK, _encode_V
 /**
  * @summary V8bisDiag_Item_ackNak
  * @description
- * 
+ *
+ * ACK and NAK message types from the V.8 bis exchange. ITU-T Rec. V.59
+ * (11/2000) §6.8.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +42,21 @@ class V8bisDiag_Item_ackNak {
     constructor (
         /**
          * @summary `aCK`.
+         * @description
+         *
+         * ACK type (Table 10/V.59). Tag-ID `080A`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.2.
          * @public
          * @readonly
          */
         readonly aCK: V8bisDiag_Item_ackNak_aCK,
         /**
          * @summary `nAK`.
+         * @description
+         *
+         * NAK type (Table 11/V.59 as corrected by ITU-T Rec. V.59 Cor.2
+         * (03/2002) clause 4.1). Tag-ID `080B`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.2.
          * @public
          * @readonly
          */

@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CdrNotification
  * @description
- * 
+ * Capability bitmap for the Call Detail Records Notification service (ECMA-269
+ * C.21.1, ECMA-285 §9.10). Presence of this entry in `CDRServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +35,9 @@ type CdrNotification = BIT_STRING;
 /**
  * @summary CdrNotification_cdrReasonTimeout
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.1).
  */
 export
 const CdrNotification_cdrReasonTimeout: number = 0; /* LONG_NAMED_BIT */
@@ -33,6 +45,8 @@ const CdrNotification_cdrReasonTimeout: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary cdrReasonTimeout
  * @constant
+ * @description
+ * Alias of `CdrNotification_cdrReasonTimeout`.
  */
 export
 const cdrReasonTimeout: number = CdrNotification_cdrReasonTimeout; /* SHORT_NAMED_BIT */
@@ -40,6 +54,9 @@ const cdrReasonTimeout: number = CdrNotification_cdrReasonTimeout; /* SHORT_NAME
 /**
  * @summary CdrNotification_cdrReasonThresholdReached
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.1).
  */
 export
 const CdrNotification_cdrReasonThresholdReached: number = 1; /* LONG_NAMED_BIT */
@@ -47,6 +64,8 @@ const CdrNotification_cdrReasonThresholdReached: number = 1; /* LONG_NAMED_BIT *
 /**
  * @summary cdrReasonThresholdReached
  * @constant
+ * @description
+ * Alias of `CdrNotification_cdrReasonThresholdReached`.
  */
 export
 const cdrReasonThresholdReached: number = CdrNotification_cdrReasonThresholdReached; /* SHORT_NAMED_BIT */
@@ -54,6 +73,9 @@ const cdrReasonThresholdReached: number = CdrNotification_cdrReasonThresholdReac
 /**
  * @summary CdrNotification_cdrReasonOther
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.1).
  */
 export
 const CdrNotification_cdrReasonOther: number = 2; /* LONG_NAMED_BIT */
@@ -61,6 +83,8 @@ const CdrNotification_cdrReasonOther: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary cdrReasonOther
  * @constant
+ * @description
+ * Alias of `CdrNotification_cdrReasonOther`.
  */
 export
 const cdrReasonOther: number = CdrNotification_cdrReasonOther; /* SHORT_NAMED_BIT */
@@ -68,6 +92,9 @@ const cdrReasonOther: number = CdrNotification_cdrReasonOther; /* SHORT_NAMED_BI
 /**
  * @summary CdrNotification_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.21.1).
  */
 export
 const CdrNotification_privateData: number = 3; /* LONG_NAMED_BIT */
@@ -75,6 +102,8 @@ const CdrNotification_privateData: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `CdrNotification_privateData`.
  */
 export
 const privateData: number = CdrNotification_privateData; /* SHORT_NAMED_BIT */
@@ -82,6 +111,9 @@ const privateData: number = CdrNotification_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrNotification_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.21.1).
  */
 export
 const CdrNotification_privateDataInAck: number = 4; /* LONG_NAMED_BIT */
@@ -89,6 +121,8 @@ const CdrNotification_privateDataInAck: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `CdrNotification_privateDataInAck`.
  */
 export
 const privateDataInAck: number = CdrNotification_privateDataInAck; /* SHORT_NAMED_BIT */

@@ -17,7 +17,11 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
 /**
  * @summary CnxDiag_Item
  * @description
- * 
+ *
+ * Final modulation, carrier/retrain counts, duration, and originate/answer
+ * roles. ITU-T Rec. V.59 (11/2000) §6.9; ITU-T Rec. V.59 Cor.1 (07/2001) clause
+ * 5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,66 +46,114 @@ class CnxDiag_Item {
     constructor (
         /**
          * @summary `txCarrier`.
+         * @description
+         *
+         * Modulation last used by the transmitter at the end of the connection
+         * (not a history list). Same tokens as §6.4.1/V.250 and Table 13/V.250.
+         * IA5 `simpleText` (§6.2.1). Tag-ID `2C01`. ITU-T Rec. V.59 (11/2000)
+         * §6.9; ITU-T Rec. V.59 Cor.1 (07/2001) clause 5.
          * @public
          * @readonly
          */
         readonly txCarrier: V59String,
         /**
          * @summary `rxCarrier`.
+         * @description
+         *
+         * Modulation last used by the receiver at the end of the connection.
+         * Same tokens as `txCarrier`. IA5 `simpleText` (§6.2.1). Tag-ID `2C02`.
+         * ITU-T Rec. V.59 (11/2000) §6.9; ITU-T Rec. V.59 Cor.1 (07/2001)
+         * clause 5.
          * @public
          * @readonly
          */
         readonly rxCarrier: V59String,
         /**
          * @summary `carrierLosses`.
+         * @description
+         *
+         * Times carrier was lost and then restored. INTEGER 0..256 (Annex A;
+         * clause 6.9 prose says 0 to 255). Tag-ID `2C03`. ITU-T Rec. V.59
+         * (11/2000) §6.9.
          * @public
          * @readonly
          */
         readonly carrierLosses: INTEGER,
         /**
          * @summary `renegRequests`.
+         * @description
+         *
+         * Rate-renegotiation requests by either end. 0..256. Tag-ID `2C04`.
+         * ITU-T Rec. V.59 (11/2000) §6.9.
          * @public
          * @readonly
          */
         readonly renegRequests: INTEGER,
         /**
          * @summary `renegSuccesses`.
+         * @description
+         *
+         * Successful rate renegotiations. 0..256. Tag-ID `2C05`. ITU-T Rec.
+         * V.59 (11/2000) §6.9.
          * @public
          * @readonly
          */
         readonly renegSuccesses: INTEGER,
         /**
          * @summary `retrainRequests`.
+         * @description
+         *
+         * Retrain requests (same idea as `renegRequests`). 0..256. Tag-ID
+         * `2C06`. ITU-T Rec. V.59 (11/2000) §6.9.
          * @public
          * @readonly
          */
         readonly retrainRequests: INTEGER,
         /**
          * @summary `retrainSuccesses`.
+         * @description
+         *
+         * Successful retrains. 0..256. Tag-ID `2C07`. ITU-T Rec. V.59 (11/2000)
+         * §6.9.
          * @public
          * @readonly
          */
         readonly retrainSuccesses: INTEGER,
         /**
          * @summary `callWaiting`.
+         * @description
+         *
+         * Call-waiting events on the previous connection. 0..256. Tag-ID
+         * `2C08`. ITU-T Rec. V.59 (11/2000) §6.9.
          * @public
          * @readonly
          */
         readonly callWaiting: OPTIONAL<INTEGER>,
         /**
          * @summary `duration`.
+         * @description
+         *
+         * Call duration with units (e.g. `00H15M27S`). If longer than the DCE
+         * can measure, `>T` where T is that maximum. IA5 `simpleText` (§6.2.1).
+         * Tag-ID `2C09`. ITU-T Rec. V.59 (11/2000) §6.9.
          * @public
          * @readonly
          */
         readonly duration: OPTIONAL<V59String>,
         /**
          * @summary `caller`.
+         * @description
+         *
+         * `TRUE` if this modem originated the previous call. Tag-ID `2C0A`. ITU-T Rec. V.59 (11/2000) §6.9.
          * @public
          * @readonly
          */
         readonly caller: BOOLEAN,
         /**
          * @summary `reverseRoles`.
+         * @description
+         *
+         * `TRUE` if caller/answerer roles were reversed. An originating modem acting as answerer sets `caller` TRUE and this TRUE. Tag-ID `2C0B`. ITU-T Rec. V.59 (11/2000) §6.9.
          * @public
          * @readonly
          */

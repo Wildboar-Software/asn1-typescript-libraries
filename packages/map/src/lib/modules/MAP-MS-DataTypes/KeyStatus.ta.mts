@@ -78,7 +78,12 @@ enum _enum_for_KeyStatus {
 /**
  * @summary KeyStatus
  * @description
- * 
+ *
+ * Key Status element of 3GPP TS 25.413. Received values 2-31 shall be treated
+ * as `old`; values greater than 31 as `new`. If present in
+ * MAP_SEND_IDENTIFICATION, the new VLR shall treat the keyset as already used
+ * (`old`). (3GPP TS 29.002 V19.1.0 clauses 7.6.6.11, 8.1.4.3, and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +100,11 @@ type KeyStatus = _enum_for_KeyStatus | ENUMERATED;
 
 /**
  * @summary KeyStatus_old
+ * @description
+ *
+ * Keyset already used. Received values 2-31 shall be treated as this. (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +113,11 @@ const KeyStatus_old: KeyStatus = 0; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary old
+ * @description
+ *
+ * Keyset already used. Received values 2-31 shall be treated as this. (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +126,11 @@ const old: KeyStatus = KeyStatus_old; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary KeyStatus_new_
+ * @description
+ *
+ * New keyset not yet used. Received values greater than 31 shall be treated as
+ * this. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +139,11 @@ const KeyStatus_new_: KeyStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary new_
+ * @description
+ *
+ * New keyset not yet used. Received values greater than 31 shall be treated as
+ * this. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */

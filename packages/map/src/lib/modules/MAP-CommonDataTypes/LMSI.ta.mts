@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LMSI
  * @description
- * 
+ *
+ * Local Mobile Station Identity: a local identity allocated by the VLR for
+ * internal management of subscriber data. Size 4 octets. Shall not be sent to
+ * the SGSN. In `IMSI-WithLMSI`, all-zero means LMSI is not in use.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.16 and 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

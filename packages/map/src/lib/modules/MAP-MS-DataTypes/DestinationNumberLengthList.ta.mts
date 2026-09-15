@@ -75,7 +75,11 @@ import { maxNumOfCamelDestinationNumberLengths } from "./maxNumOfCamelDestinatio
 /**
  * @summary DestinationNumberLengthList
  * @description
- * 
+ *
+ * CAMEL destination-number length list (SIZE
+ * 1..maxNumOfCamelDestinationNumberLengths) of INTEGER
+ * 1..maxNumOfISDN-AddressDigits (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

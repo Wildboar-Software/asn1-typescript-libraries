@@ -11,7 +11,20 @@ import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CST
 /**
  * @summary CSTAObject
  * @description
- * 
+ *
+ * Device or call object in the switching sub-domain (ECMA-285 §9.1;
+ * ECMA-269 §6.1). Used where a service or monitor may target either.
+ *
+ * - `deviceObject`: CSTA device (`DeviceID`).
+ * - `callObject`: call referenced by `ConnectionID` (typically both
+ *   call and device components).
+ *
+ * Monitor count limits on one object are implementation-specific;
+ * with static identifiers the limit can only be one (ECMA-285 §5.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

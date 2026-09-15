@@ -29,7 +29,13 @@ import { VendorSpecEvents, _decode_VendorSpecEvents, _encode_VendorSpecEvents } 
 /**
  * @summary MonitorFilter
  * @description
- * 
+ *
+ * Events that are filtered (not sent) for a monitor. Default is no filter (all
+ * events). A bit TRUE means that event is not sent. Used on Monitor Start and
+ * Change Monitor Filter. ECMA-269 §12.2.23.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,48 +57,88 @@ class MonitorFilter {
     constructor (
         /**
          * @summary `callControl`.
+         * @description
+         *
+         * Call-control events (ECMA-269 Table 17-150). A set bit filters
+         * (suppresses) the event. ECMA-269 §12.2.23.
+         *
          * @public
          * @readonly
          */
         readonly callControl: OPTIONAL<CallControlEvents>,
         /**
          * @summary `callAssociated`.
+         * @description
+         *
+         * Call-associated events (Table 18-26). A set bit filters (suppresses)
+         * the event. ECMA-269 §12.2.23.
+         *
          * @public
          * @readonly
          */
         readonly callAssociated: OPTIONAL<CallAssociatedEvents>,
         /**
          * @summary `mediaAttachment`.
+         * @description
+         *
+         * Media-attachment events (Table 19-14). A set bit filters (suppresses)
+         * the event. ECMA-269 §12.2.23.
+         *
          * @public
          * @readonly
          */
         readonly mediaAttachment: OPTIONAL<MediaAttachmentEvents>,
         /**
          * @summary `physicalDeviceFeature`.
+         * @description
+         *
+         * Physical-device events (Table 21-59). A set bit filters (suppresses)
+         * the event. ECMA-269 §12.2.23.
+         *
          * @public
          * @readonly
          */
         readonly physicalDeviceFeature: OPTIONAL<PhysicalDeviceFeatureEvents>,
         /**
          * @summary `logicalDeviceFeature`.
+         * @description
+         *
+         * Logical-device events (Table 22-61). A set bit filters (suppresses)
+         * the event. ECMA-269 §12.2.23.
+         *
          * @public
          * @readonly
          */
         readonly logicalDeviceFeature: OPTIONAL<LogicalDeviceFeatureEvents>,
         /**
          * @summary `maintenance`.
+         * @description
+         *
+         * Maintenance events (Table 23-1). A set bit filters (suppresses) the
+         * event. ECMA-269 §12.2.23.
+         *
          * @public
          * @readonly
          */
         readonly maintenance: OPTIONAL<DeviceMaintenanceEvents>,
         /**
          * @summary `voiceUnit`.
+         * @description
+         *
+         * Voice events (Table 26-58). A set bit filters (suppresses) the event.
+         * ECMA-269 §12.2.23.
+         *
          * @public
          * @readonly
          */
         readonly voiceUnit: OPTIONAL<VoiceUnitEvents>,
         /**
          * @summary `private_`.
+         * @description
+         *
+         * Vendor-specific events (Table 29-12). ASN.1 name `private`. A set bit
+         * filters (suppresses) the event. ECMA-269 §12.2.23.
+         *
          * @public
          * @readonly
          */

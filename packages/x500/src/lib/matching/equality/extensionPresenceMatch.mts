@@ -9,14 +9,13 @@ import {
 } from "../../modules/AuthenticationFramework/Extensions.ta.mjs";
 
 /**
- * It is never said explicitly in the specification, but it is implied that the
- * following matching rule only applies to attribute certificates. Still, this
- * implementation supports checking for the presence of extensions in:
+ * Rec. ITU-T X.509 (10/2019), clause 19.3.5
+ * `extensionPresenceMatch`.
  *
- * - Public Key Certificates
- * - Certificate Revocation Lists
- * - Attribute Certificates
- * - AVLs
+ * TRUE iff the stored certificate contains the extension whose OID
+ * is presented (`EXTENSION.&id`). The specification is written
+ * against attribute certificates; this implementation also accepts
+ * public-key certificates, CRLs, and AVLs.
  */
 export
 const extensionPresenceMatch: EqualityMatcher = (

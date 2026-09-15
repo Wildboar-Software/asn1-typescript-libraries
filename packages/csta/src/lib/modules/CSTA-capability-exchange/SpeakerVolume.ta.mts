@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SpeakerVolume
  * @description
- * 
+ * Capability bitmap for the Speaker Volume event (ECMA-269 C.13.11, ECMA-285
+ * §9.10). Presence of this entry in `PhysDevEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +32,9 @@ type SpeakerVolume = BIT_STRING;
 /**
  * @summary SpeakerVolume_speakerVolumeAbs
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.13.11).
  */
 export
 const SpeakerVolume_speakerVolumeAbs: number = 0; /* LONG_NAMED_BIT */
@@ -31,6 +42,8 @@ const SpeakerVolume_speakerVolumeAbs: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary speakerVolumeAbs
  * @constant
+ * @description
+ * Alias of `SpeakerVolume_speakerVolumeAbs`.
  */
 export
 const speakerVolumeAbs: number = SpeakerVolume_speakerVolumeAbs; /* SHORT_NAMED_BIT */
@@ -38,6 +51,9 @@ const speakerVolumeAbs: number = SpeakerVolume_speakerVolumeAbs; /* SHORT_NAMED_
 /**
  * @summary SpeakerVolume_speakerVolumeInc
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.13.11).
  */
 export
 const SpeakerVolume_speakerVolumeInc: number = 1; /* LONG_NAMED_BIT */
@@ -45,6 +61,8 @@ const SpeakerVolume_speakerVolumeInc: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary speakerVolumeInc
  * @constant
+ * @description
+ * Alias of `SpeakerVolume_speakerVolumeInc`.
  */
 export
 const speakerVolumeInc: number = SpeakerVolume_speakerVolumeInc; /* SHORT_NAMED_BIT */
@@ -52,6 +70,9 @@ const speakerVolumeInc: number = SpeakerVolume_speakerVolumeInc; /* SHORT_NAMED_
 /**
  * @summary SpeakerVolume_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.13.11).
  */
 export
 const SpeakerVolume_privateData: number = 2; /* LONG_NAMED_BIT */
@@ -59,6 +80,8 @@ const SpeakerVolume_privateData: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SpeakerVolume_privateData`.
  */
 export
 const privateData: number = SpeakerVolume_privateData; /* SHORT_NAMED_BIT */

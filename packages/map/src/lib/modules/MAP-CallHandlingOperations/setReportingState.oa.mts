@@ -83,7 +83,12 @@ import { facilityNotSupported } from "../MAP-Errors/facilityNotSupported.oa.mjs"
 /**
  * @summary setReportingState
  * @description
- * 
+ *
+ * MAP_SET_REPORTING_STATE: HLR sets the reporting state in the VLR for a
+ * requested service. Confirmed. Typical path: HLR→VLR. Local opcode 73. Timer
+ * class `m` (15 s to 30 s). (3GPP TS 29.002 V19.1.0 clauses 10.10.1, 17.1.2,
+ * 17.3.2.37 and 17.6.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

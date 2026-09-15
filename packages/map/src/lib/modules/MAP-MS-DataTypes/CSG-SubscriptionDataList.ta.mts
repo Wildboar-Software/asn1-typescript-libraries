@@ -73,7 +73,10 @@ import { CSG_SubscriptionData, _decode_CSG_SubscriptionData, _encode_CSG_Subscri
 /**
  * @summary CSG_SubscriptionDataList
  * @description
- * 
+ *
+ * List of CSG subscription data returned e.g. in any-time subscription
+ * interrogation (3GPP TS 29.002 V19.1.0 clauses 8.11.3.2 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

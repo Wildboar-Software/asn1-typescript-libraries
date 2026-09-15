@@ -8,7 +8,12 @@ import { INTEGER, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MaxChannelBind
  * @description
- * 
+ *
+ * Maximum channels that can be associated with one connection at a device. If
+ * omitted, the maximum is one. ECMA-269 Get Logical Device Information.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

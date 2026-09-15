@@ -9,7 +9,12 @@ import { RegistrationType, _decode_RegistrationType, _encode_RegistrationType } 
 /**
  * @summary RegistrationTypeList
  * @description
- * 
+ *
+ * List of registration kinds. ECMA-269 §14.2.6; ECMA-285 §9.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

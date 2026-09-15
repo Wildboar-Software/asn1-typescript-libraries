@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GetAutoWorkMode
  * @description
- * 
+ * Capability bitmap for the Get Auto Work Mode service (ECMA-269 C.14.7,
+ * ECMA-285 §9.10). Presence of this entry in `LogicalServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +33,9 @@ type GetAutoWorkMode = BIT_STRING;
 /**
  * @summary GetAutoWorkMode_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.14.7).
  */
 export
 const GetAutoWorkMode_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -31,6 +43,8 @@ const GetAutoWorkMode_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `GetAutoWorkMode_privateData`.
  */
 export
 const privateData: number = GetAutoWorkMode_privateData; /* SHORT_NAMED_BIT */
@@ -38,6 +52,9 @@ const privateData: number = GetAutoWorkMode_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary GetAutoWorkMode_autoWorkIntervalInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `autoWorkInterval` in the
+ * acknowledgement (ECMA-269 C.14.7).
  */
 export
 const GetAutoWorkMode_autoWorkIntervalInAck: number = 1; /* LONG_NAMED_BIT */
@@ -45,6 +62,8 @@ const GetAutoWorkMode_autoWorkIntervalInAck: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary autoWorkIntervalInAck
  * @constant
+ * @description
+ * Alias of `GetAutoWorkMode_autoWorkIntervalInAck`.
  */
 export
 const autoWorkIntervalInAck: number = GetAutoWorkMode_autoWorkIntervalInAck; /* SHORT_NAMED_BIT */
@@ -52,6 +71,9 @@ const autoWorkIntervalInAck: number = GetAutoWorkMode_autoWorkIntervalInAck; /* 
 /**
  * @summary GetAutoWorkMode_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.14.7).
  */
 export
 const GetAutoWorkMode_privateDataInAck: number = 2; /* LONG_NAMED_BIT */
@@ -59,6 +81,8 @@ const GetAutoWorkMode_privateDataInAck: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `GetAutoWorkMode_privateDataInAck`.
  */
 export
 const privateDataInAck: number = GetAutoWorkMode_privateDataInAck; /* SHORT_NAMED_BIT */

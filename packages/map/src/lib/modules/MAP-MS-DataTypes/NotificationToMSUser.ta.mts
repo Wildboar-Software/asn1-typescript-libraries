@@ -80,7 +80,12 @@ enum _enum_for_NotificationToMSUser {
 /**
  * @summary NotificationToMSUser
  * @description
- * 
+ *
+ * Whether the MS user shall be notified of an MT-LR for a privacy class, and
+ * whether notification-only or notification with privacy verification applies
+ * (3GPP TS 23.271). Unknown received values shall be ignored. (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.3.65B and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -99,6 +104,10 @@ type NotificationToMSUser = _enum_for_NotificationToMSUser | ENUMERATED;
 
 /**
  * @summary NotificationToMSUser_notifyLocationAllowed
+ * @description
+ *
+ * Notify the MS; location is allowed. (3GPP TS 29.002 V19.1.0 clause 7.6.3.65B)
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +116,10 @@ const NotificationToMSUser_notifyLocationAllowed: NotificationToMSUser = 0; /* L
 
 /**
  * @summary notifyLocationAllowed
+ * @description
+ *
+ * Notify the MS; location is allowed. (3GPP TS 29.002 V19.1.0 clause 7.6.3.65B)
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +128,11 @@ const notifyLocationAllowed: NotificationToMSUser = NotificationToMSUser_notifyL
 
 /**
  * @summary NotificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse
+ * @description
+ *
+ * Notify and verify; location allowed if no response. (3GPP TS 29.002 V19.1.0
+ * clause 7.6.3.65B)
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +141,11 @@ const NotificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse: Notifica
 
 /**
  * @summary notifyAndVerify_LocationAllowedIfNoResponse
+ * @description
+ *
+ * Notify and verify; location allowed if no response. (3GPP TS 29.002 V19.1.0
+ * clause 7.6.3.65B)
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +154,11 @@ const notifyAndVerify_LocationAllowedIfNoResponse: NotificationToMSUser = Notifi
 
 /**
  * @summary NotificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse
+ * @description
+ *
+ * Notify and verify; location not allowed if no response. (3GPP TS 29.002
+ * V19.1.0 clause 7.6.3.65B)
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +167,11 @@ const NotificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse: Notif
 
 /**
  * @summary notifyAndVerify_LocationNotAllowedIfNoResponse
+ * @description
+ *
+ * Notify and verify; location not allowed if no response. (3GPP TS 29.002
+ * V19.1.0 clause 7.6.3.65B)
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +180,10 @@ const notifyAndVerify_LocationNotAllowedIfNoResponse: NotificationToMSUser = Not
 
 /**
  * @summary NotificationToMSUser_locationNotAllowed
+ * @description
+ *
+ * Location not allowed. (3GPP TS 29.002 V19.1.0 clause 7.6.3.65B)
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +192,10 @@ const NotificationToMSUser_locationNotAllowed: NotificationToMSUser = 3; /* LONG
 
 /**
  * @summary locationNotAllowed
+ * @description
+ *
+ * Location not allowed. (3GPP TS 29.002 V19.1.0 clause 7.6.3.65B)
+ *
  * @constant
  * @type {number}
  */

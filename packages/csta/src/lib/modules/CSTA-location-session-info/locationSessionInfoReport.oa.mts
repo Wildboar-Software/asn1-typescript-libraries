@@ -15,7 +15,12 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary locationSessionInfoReport
  * @description
- * 
+ *
+ * Switching-function-to-computing-function operation that delivers Location
+ * Session Info segments (local code 541). ECMA-269 §28.1.12.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

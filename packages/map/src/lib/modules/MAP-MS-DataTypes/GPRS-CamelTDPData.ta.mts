@@ -76,7 +76,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary GPRS_CamelTDPData
  * @description
- * 
+ *
+ * One GPRS CAMEL TDP: trigger detection point, service key, gsmSCF address and
+ * default GPRS handling (3GPP TS 29.002 V19.1.0 clauses 7.6.3.77 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,6 +100,12 @@ class GPRS_CamelTDPData {
     constructor (
         /**
          * @summary `gprs_TriggerDetectionPoint`.
+         * @description
+         *
+         * If any value other than the listed GPRS TDPs is received, the whole
+         * GPRS-CamelTDPData sequence shall be ignored (3GPP TS 29.002 V19.1.0
+         * clause 17.7.1).
+         *
          * @public
          * @readonly
          */
@@ -109,12 +118,22 @@ class GPRS_CamelTDPData {
         readonly serviceKey: ServiceKey,
         /**
          * @summary `gsmSCF_Address`.
+         * @description
+         *
+         * ISDN number assigned to the gsmSCF (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.2.58).
+         *
          * @public
          * @readonly
          */
         readonly gsmSCF_Address: ISDN_AddressString,
         /**
          * @summary `defaultSessionHandling`.
+         * @description
+         *
+         * Default GPRS handling if the CAMEL service is not available (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

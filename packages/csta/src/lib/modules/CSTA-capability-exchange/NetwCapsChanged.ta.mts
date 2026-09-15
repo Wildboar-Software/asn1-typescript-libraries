@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary NetwCapsChanged
  * @description
- * 
+ * Capability bitmap for the Network Capabilities Changed event (ECMA-269
+ * C.6.11, ECMA-285 §9.10). Presence of this entry in `CallControlEvtsList`
+ * means the SF supports that event. Each set bit is an optional parameter,
+ * enumerated value, initial connection state, or miscellaneous characteristic
+ * from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +75,9 @@ type NetwCapsChanged = BIT_STRING;
 /**
  * @summary NetwCapsChanged_progressLocationUser
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_progressLocationUser: number = 0; /* LONG_NAMED_BIT */
@@ -73,6 +85,8 @@ const NetwCapsChanged_progressLocationUser: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary progressLocationUser
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_progressLocationUser`.
  */
 export
 const progressLocationUser: number = NetwCapsChanged_progressLocationUser; /* SHORT_NAMED_BIT */
@@ -80,6 +94,9 @@ const progressLocationUser: number = NetwCapsChanged_progressLocationUser; /* SH
 /**
  * @summary NetwCapsChanged_progressLocationPrivateServLocal
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_progressLocationPrivateServLocal: number = 1; /* LONG_NAMED_BIT */
@@ -87,6 +104,8 @@ const NetwCapsChanged_progressLocationPrivateServLocal: number = 1; /* LONG_NAME
 /**
  * @summary progressLocationPrivateServLocal
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_progressLocationPrivateServLocal`.
  */
 export
 const progressLocationPrivateServLocal: number = NetwCapsChanged_progressLocationPrivateServLocal; /* SHORT_NAMED_BIT */
@@ -94,6 +113,9 @@ const progressLocationPrivateServLocal: number = NetwCapsChanged_progressLocatio
 /**
  * @summary NetwCapsChanged_progressLocationPublicServLocal
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_progressLocationPublicServLocal: number = 2; /* LONG_NAMED_BIT */
@@ -101,6 +123,8 @@ const NetwCapsChanged_progressLocationPublicServLocal: number = 2; /* LONG_NAMED
 /**
  * @summary progressLocationPublicServLocal
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_progressLocationPublicServLocal`.
  */
 export
 const progressLocationPublicServLocal: number = NetwCapsChanged_progressLocationPublicServLocal; /* SHORT_NAMED_BIT */
@@ -108,6 +132,9 @@ const progressLocationPublicServLocal: number = NetwCapsChanged_progressLocation
 /**
  * @summary NetwCapsChanged_progressLocationTransit
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_progressLocationTransit: number = 3; /* LONG_NAMED_BIT */
@@ -115,6 +142,8 @@ const NetwCapsChanged_progressLocationTransit: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary progressLocationTransit
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_progressLocationTransit`.
  */
 export
 const progressLocationTransit: number = NetwCapsChanged_progressLocationTransit; /* SHORT_NAMED_BIT */
@@ -122,6 +151,9 @@ const progressLocationTransit: number = NetwCapsChanged_progressLocationTransit;
 /**
  * @summary NetwCapsChanged_progressLocationPublicServRemote
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_progressLocationPublicServRemote: number = 4; /* LONG_NAMED_BIT */
@@ -129,6 +161,8 @@ const NetwCapsChanged_progressLocationPublicServRemote: number = 4; /* LONG_NAME
 /**
  * @summary progressLocationPublicServRemote
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_progressLocationPublicServRemote`.
  */
 export
 const progressLocationPublicServRemote: number = NetwCapsChanged_progressLocationPublicServRemote; /* SHORT_NAMED_BIT */
@@ -136,6 +170,9 @@ const progressLocationPublicServRemote: number = NetwCapsChanged_progressLocatio
 /**
  * @summary NetwCapsChanged_progressLocationPrivateServRemote
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_progressLocationPrivateServRemote: number = 5; /* LONG_NAMED_BIT */
@@ -143,6 +180,8 @@ const NetwCapsChanged_progressLocationPrivateServRemote: number = 5; /* LONG_NAM
 /**
  * @summary progressLocationPrivateServRemote
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_progressLocationPrivateServRemote`.
  */
 export
 const progressLocationPrivateServRemote: number = NetwCapsChanged_progressLocationPrivateServRemote; /* SHORT_NAMED_BIT */
@@ -150,6 +189,9 @@ const progressLocationPrivateServRemote: number = NetwCapsChanged_progressLocati
 /**
  * @summary NetwCapsChanged_progressLocationLocal
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_progressLocationLocal: number = 6; /* LONG_NAMED_BIT */
@@ -157,6 +199,8 @@ const NetwCapsChanged_progressLocationLocal: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary progressLocationLocal
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_progressLocationLocal`.
  */
 export
 const progressLocationLocal: number = NetwCapsChanged_progressLocationLocal; /* SHORT_NAMED_BIT */
@@ -164,6 +208,9 @@ const progressLocationLocal: number = NetwCapsChanged_progressLocationLocal; /* 
 /**
  * @summary NetwCapsChanged_progressLocationInternational
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_progressLocationInternational: number = 7; /* LONG_NAMED_BIT */
@@ -171,6 +218,8 @@ const NetwCapsChanged_progressLocationInternational: number = 7; /* LONG_NAMED_B
 /**
  * @summary progressLocationInternational
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_progressLocationInternational`.
  */
 export
 const progressLocationInternational: number = NetwCapsChanged_progressLocationInternational; /* SHORT_NAMED_BIT */
@@ -178,6 +227,9 @@ const progressLocationInternational: number = NetwCapsChanged_progressLocationIn
 /**
  * @summary NetwCapsChanged_progressLocationNetwBeyondInterworking
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_progressLocationNetwBeyondInterworking: number = 8; /* LONG_NAMED_BIT */
@@ -185,6 +237,8 @@ const NetwCapsChanged_progressLocationNetwBeyondInterworking: number = 8; /* LON
 /**
  * @summary progressLocationNetwBeyondInterworking
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_progressLocationNetwBeyondInterworking`.
  */
 export
 const progressLocationNetwBeyondInterworking: number = NetwCapsChanged_progressLocationNetwBeyondInterworking; /* SHORT_NAMED_BIT */
@@ -192,6 +246,9 @@ const progressLocationNetwBeyondInterworking: number = NetwCapsChanged_progressL
 /**
  * @summary NetwCapsChanged_progressLocationOther
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_progressLocationOther: number = 9; /* LONG_NAMED_BIT */
@@ -199,6 +256,8 @@ const NetwCapsChanged_progressLocationOther: number = 9; /* LONG_NAMED_BIT */
 /**
  * @summary progressLocationOther
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_progressLocationOther`.
  */
 export
 const progressLocationOther: number = NetwCapsChanged_progressLocationOther; /* SHORT_NAMED_BIT */
@@ -206,6 +265,9 @@ const progressLocationOther: number = NetwCapsChanged_progressLocationOther; /* 
 /**
  * @summary NetwCapsChanged_progressDescriptionISDN
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_progressDescriptionISDN: number = 10; /* LONG_NAMED_BIT */
@@ -213,6 +275,8 @@ const NetwCapsChanged_progressDescriptionISDN: number = 10; /* LONG_NAMED_BIT */
 /**
  * @summary progressDescriptionISDN
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_progressDescriptionISDN`.
  */
 export
 const progressDescriptionISDN: number = NetwCapsChanged_progressDescriptionISDN; /* SHORT_NAMED_BIT */
@@ -220,6 +284,9 @@ const progressDescriptionISDN: number = NetwCapsChanged_progressDescriptionISDN;
 /**
  * @summary NetwCapsChanged_progressDescriptionQSIG
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_progressDescriptionQSIG: number = 11; /* LONG_NAMED_BIT */
@@ -227,6 +294,8 @@ const NetwCapsChanged_progressDescriptionQSIG: number = 11; /* LONG_NAMED_BIT */
 /**
  * @summary progressDescriptionQSIG
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_progressDescriptionQSIG`.
  */
 export
 const progressDescriptionQSIG: number = NetwCapsChanged_progressDescriptionQSIG; /* SHORT_NAMED_BIT */
@@ -234,6 +303,9 @@ const progressDescriptionQSIG: number = NetwCapsChanged_progressDescriptionQSIG;
 /**
  * @summary NetwCapsChanged_progressDescriptionOther
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_progressDescriptionOther: number = 12; /* LONG_NAMED_BIT */
@@ -241,6 +313,8 @@ const NetwCapsChanged_progressDescriptionOther: number = 12; /* LONG_NAMED_BIT *
 /**
  * @summary progressDescriptionOther
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_progressDescriptionOther`.
  */
 export
 const progressDescriptionOther: number = NetwCapsChanged_progressDescriptionOther; /* SHORT_NAMED_BIT */
@@ -248,6 +322,9 @@ const progressDescriptionOther: number = NetwCapsChanged_progressDescriptionOthe
 /**
  * @summary NetwCapsChanged_userData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `userData` parameter (ECMA-269
+ * C.6.11).
  */
 export
 const NetwCapsChanged_userData: number = 13; /* LONG_NAMED_BIT */
@@ -255,6 +332,8 @@ const NetwCapsChanged_userData: number = 13; /* LONG_NAMED_BIT */
 /**
  * @summary userData
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_userData`.
  */
 export
 const userData: number = NetwCapsChanged_userData; /* SHORT_NAMED_BIT */
@@ -262,6 +341,9 @@ const userData: number = NetwCapsChanged_userData; /* SHORT_NAMED_BIT */
 /**
  * @summary NetwCapsChanged_typeOfNetworkISDNPublic
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_typeOfNetworkISDNPublic: number = 14; /* LONG_NAMED_BIT */
@@ -269,6 +351,8 @@ const NetwCapsChanged_typeOfNetworkISDNPublic: number = 14; /* LONG_NAMED_BIT */
 /**
  * @summary typeOfNetworkISDNPublic
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_typeOfNetworkISDNPublic`.
  */
 export
 const typeOfNetworkISDNPublic: number = NetwCapsChanged_typeOfNetworkISDNPublic; /* SHORT_NAMED_BIT */
@@ -276,6 +360,9 @@ const typeOfNetworkISDNPublic: number = NetwCapsChanged_typeOfNetworkISDNPublic;
 /**
  * @summary NetwCapsChanged_typeOfNetworkNonISDNPublic
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_typeOfNetworkNonISDNPublic: number = 15; /* LONG_NAMED_BIT */
@@ -283,6 +370,8 @@ const NetwCapsChanged_typeOfNetworkNonISDNPublic: number = 15; /* LONG_NAMED_BIT
 /**
  * @summary typeOfNetworkNonISDNPublic
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_typeOfNetworkNonISDNPublic`.
  */
 export
 const typeOfNetworkNonISDNPublic: number = NetwCapsChanged_typeOfNetworkNonISDNPublic; /* SHORT_NAMED_BIT */
@@ -290,6 +379,9 @@ const typeOfNetworkNonISDNPublic: number = NetwCapsChanged_typeOfNetworkNonISDNP
 /**
  * @summary NetwCapsChanged_typeOfNetworkISDNPrivate
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_typeOfNetworkISDNPrivate: number = 16; /* LONG_NAMED_BIT */
@@ -297,6 +389,8 @@ const NetwCapsChanged_typeOfNetworkISDNPrivate: number = 16; /* LONG_NAMED_BIT *
 /**
  * @summary typeOfNetworkISDNPrivate
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_typeOfNetworkISDNPrivate`.
  */
 export
 const typeOfNetworkISDNPrivate: number = NetwCapsChanged_typeOfNetworkISDNPrivate; /* SHORT_NAMED_BIT */
@@ -304,6 +398,9 @@ const typeOfNetworkISDNPrivate: number = NetwCapsChanged_typeOfNetworkISDNPrivat
 /**
  * @summary NetwCapsChanged_typeOfNetworkNonISDNPrivate
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_typeOfNetworkNonISDNPrivate: number = 17; /* LONG_NAMED_BIT */
@@ -311,6 +408,8 @@ const NetwCapsChanged_typeOfNetworkNonISDNPrivate: number = 17; /* LONG_NAMED_BI
 /**
  * @summary typeOfNetworkNonISDNPrivate
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_typeOfNetworkNonISDNPrivate`.
  */
 export
 const typeOfNetworkNonISDNPrivate: number = NetwCapsChanged_typeOfNetworkNonISDNPrivate; /* SHORT_NAMED_BIT */
@@ -318,6 +417,9 @@ const typeOfNetworkNonISDNPrivate: number = NetwCapsChanged_typeOfNetworkNonISDN
 /**
  * @summary NetwCapsChanged_typeOfNetworkOther
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_typeOfNetworkOther: number = 18; /* LONG_NAMED_BIT */
@@ -325,6 +427,8 @@ const NetwCapsChanged_typeOfNetworkOther: number = 18; /* LONG_NAMED_BIT */
 /**
  * @summary typeOfNetworkOther
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_typeOfNetworkOther`.
  */
 export
 const typeOfNetworkOther: number = NetwCapsChanged_typeOfNetworkOther; /* SHORT_NAMED_BIT */
@@ -332,6 +436,9 @@ const typeOfNetworkOther: number = NetwCapsChanged_typeOfNetworkOther; /* SHORT_
 /**
  * @summary NetwCapsChanged_eventsProvidedParameter
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedParameter: number = 19; /* LONG_NAMED_BIT */
@@ -339,6 +446,8 @@ const NetwCapsChanged_eventsProvidedParameter: number = 19; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedParameter
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedParameter`.
  */
 export
 const eventsProvidedParameter: number = NetwCapsChanged_eventsProvidedParameter; /* SHORT_NAMED_BIT */
@@ -346,6 +455,9 @@ const eventsProvidedParameter: number = NetwCapsChanged_eventsProvidedParameter;
 /**
  * @summary NetwCapsChanged_eventsProvidedBridged
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedBridged: number = 20; /* LONG_NAMED_BIT */
@@ -353,6 +465,8 @@ const NetwCapsChanged_eventsProvidedBridged: number = 20; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedBridged
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedBridged`.
  */
 export
 const eventsProvidedBridged: number = NetwCapsChanged_eventsProvidedBridged; /* SHORT_NAMED_BIT */
@@ -360,6 +474,9 @@ const eventsProvidedBridged: number = NetwCapsChanged_eventsProvidedBridged; /* 
 /**
  * @summary NetwCapsChanged_eventsProvidedCallCleared
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedCallCleared: number = 21; /* LONG_NAMED_BIT */
@@ -367,6 +484,8 @@ const NetwCapsChanged_eventsProvidedCallCleared: number = 21; /* LONG_NAMED_BIT 
 /**
  * @summary eventsProvidedCallCleared
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedCallCleared`.
  */
 export
 const eventsProvidedCallCleared: number = NetwCapsChanged_eventsProvidedCallCleared; /* SHORT_NAMED_BIT */
@@ -374,6 +493,9 @@ const eventsProvidedCallCleared: number = NetwCapsChanged_eventsProvidedCallClea
 /**
  * @summary NetwCapsChanged_eventsProvidedConferenced
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedConferenced: number = 22; /* LONG_NAMED_BIT */
@@ -381,6 +503,8 @@ const NetwCapsChanged_eventsProvidedConferenced: number = 22; /* LONG_NAMED_BIT 
 /**
  * @summary eventsProvidedConferenced
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedConferenced`.
  */
 export
 const eventsProvidedConferenced: number = NetwCapsChanged_eventsProvidedConferenced; /* SHORT_NAMED_BIT */
@@ -388,6 +512,9 @@ const eventsProvidedConferenced: number = NetwCapsChanged_eventsProvidedConferen
 /**
  * @summary NetwCapsChanged_eventsProvidedConnectionCleared
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedConnectionCleared: number = 23; /* LONG_NAMED_BIT */
@@ -395,6 +522,8 @@ const NetwCapsChanged_eventsProvidedConnectionCleared: number = 23; /* LONG_NAME
 /**
  * @summary eventsProvidedConnectionCleared
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedConnectionCleared`.
  */
 export
 const eventsProvidedConnectionCleared: number = NetwCapsChanged_eventsProvidedConnectionCleared; /* SHORT_NAMED_BIT */
@@ -402,6 +531,9 @@ const eventsProvidedConnectionCleared: number = NetwCapsChanged_eventsProvidedCo
 /**
  * @summary NetwCapsChanged_eventsProvidedDelivered
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedDelivered: number = 24; /* LONG_NAMED_BIT */
@@ -409,6 +541,8 @@ const NetwCapsChanged_eventsProvidedDelivered: number = 24; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedDelivered
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedDelivered`.
  */
 export
 const eventsProvidedDelivered: number = NetwCapsChanged_eventsProvidedDelivered; /* SHORT_NAMED_BIT */
@@ -416,6 +550,9 @@ const eventsProvidedDelivered: number = NetwCapsChanged_eventsProvidedDelivered;
 /**
  * @summary NetwCapsChanged_eventsProvidedDigitsDialed
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedDigitsDialed: number = 25; /* LONG_NAMED_BIT */
@@ -423,6 +560,8 @@ const NetwCapsChanged_eventsProvidedDigitsDialed: number = 25; /* LONG_NAMED_BIT
 /**
  * @summary eventsProvidedDigitsDialed
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedDigitsDialed`.
  */
 export
 const eventsProvidedDigitsDialed: number = NetwCapsChanged_eventsProvidedDigitsDialed; /* SHORT_NAMED_BIT */
@@ -430,6 +569,9 @@ const eventsProvidedDigitsDialed: number = NetwCapsChanged_eventsProvidedDigitsD
 /**
  * @summary NetwCapsChanged_eventsProvidedDiverted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedDiverted: number = 26; /* LONG_NAMED_BIT */
@@ -437,6 +579,8 @@ const NetwCapsChanged_eventsProvidedDiverted: number = 26; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedDiverted
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedDiverted`.
  */
 export
 const eventsProvidedDiverted: number = NetwCapsChanged_eventsProvidedDiverted; /* SHORT_NAMED_BIT */
@@ -444,6 +588,9 @@ const eventsProvidedDiverted: number = NetwCapsChanged_eventsProvidedDiverted; /
 /**
  * @summary NetwCapsChanged_eventsProvidedEstablished
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedEstablished: number = 27; /* LONG_NAMED_BIT */
@@ -451,6 +598,8 @@ const NetwCapsChanged_eventsProvidedEstablished: number = 27; /* LONG_NAMED_BIT 
 /**
  * @summary eventsProvidedEstablished
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedEstablished`.
  */
 export
 const eventsProvidedEstablished: number = NetwCapsChanged_eventsProvidedEstablished; /* SHORT_NAMED_BIT */
@@ -458,6 +607,9 @@ const eventsProvidedEstablished: number = NetwCapsChanged_eventsProvidedEstablis
 /**
  * @summary NetwCapsChanged_eventsProvidedFailed
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedFailed: number = 28; /* LONG_NAMED_BIT */
@@ -465,6 +617,8 @@ const NetwCapsChanged_eventsProvidedFailed: number = 28; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedFailed
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedFailed`.
  */
 export
 const eventsProvidedFailed: number = NetwCapsChanged_eventsProvidedFailed; /* SHORT_NAMED_BIT */
@@ -472,6 +626,9 @@ const eventsProvidedFailed: number = NetwCapsChanged_eventsProvidedFailed; /* SH
 /**
  * @summary NetwCapsChanged_eventsProvidedHeld
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedHeld: number = 29; /* LONG_NAMED_BIT */
@@ -479,6 +636,8 @@ const NetwCapsChanged_eventsProvidedHeld: number = 29; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedHeld
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedHeld`.
  */
 export
 const eventsProvidedHeld: number = NetwCapsChanged_eventsProvidedHeld; /* SHORT_NAMED_BIT */
@@ -486,6 +645,9 @@ const eventsProvidedHeld: number = NetwCapsChanged_eventsProvidedHeld; /* SHORT_
 /**
  * @summary NetwCapsChanged_eventsProvidedNetwCapsChanged
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedNetwCapsChanged: number = 30; /* LONG_NAMED_BIT */
@@ -493,6 +655,8 @@ const NetwCapsChanged_eventsProvidedNetwCapsChanged: number = 30; /* LONG_NAMED_
 /**
  * @summary eventsProvidedNetwCapsChanged
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedNetwCapsChanged`.
  */
 export
 const eventsProvidedNetwCapsChanged: number = NetwCapsChanged_eventsProvidedNetwCapsChanged; /* SHORT_NAMED_BIT */
@@ -500,6 +664,9 @@ const eventsProvidedNetwCapsChanged: number = NetwCapsChanged_eventsProvidedNetw
 /**
  * @summary NetwCapsChanged_eventsProvidedNetwReached
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedNetwReached: number = 31; /* LONG_NAMED_BIT */
@@ -507,6 +674,8 @@ const NetwCapsChanged_eventsProvidedNetwReached: number = 31; /* LONG_NAMED_BIT 
 /**
  * @summary eventsProvidedNetwReached
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedNetwReached`.
  */
 export
 const eventsProvidedNetwReached: number = NetwCapsChanged_eventsProvidedNetwReached; /* SHORT_NAMED_BIT */
@@ -514,6 +683,9 @@ const eventsProvidedNetwReached: number = NetwCapsChanged_eventsProvidedNetwReac
 /**
  * @summary NetwCapsChanged_eventsProvidedOffered
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedOffered: number = 32; /* LONG_NAMED_BIT */
@@ -521,6 +693,8 @@ const NetwCapsChanged_eventsProvidedOffered: number = 32; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedOffered
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedOffered`.
  */
 export
 const eventsProvidedOffered: number = NetwCapsChanged_eventsProvidedOffered; /* SHORT_NAMED_BIT */
@@ -528,6 +702,9 @@ const eventsProvidedOffered: number = NetwCapsChanged_eventsProvidedOffered; /* 
 /**
  * @summary NetwCapsChanged_eventsProvidedOriginated
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedOriginated: number = 33; /* LONG_NAMED_BIT */
@@ -535,6 +712,8 @@ const NetwCapsChanged_eventsProvidedOriginated: number = 33; /* LONG_NAMED_BIT *
 /**
  * @summary eventsProvidedOriginated
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedOriginated`.
  */
 export
 const eventsProvidedOriginated: number = NetwCapsChanged_eventsProvidedOriginated; /* SHORT_NAMED_BIT */
@@ -542,6 +721,9 @@ const eventsProvidedOriginated: number = NetwCapsChanged_eventsProvidedOriginate
 /**
  * @summary NetwCapsChanged_eventsProvidedQueued
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedQueued: number = 34; /* LONG_NAMED_BIT */
@@ -549,6 +731,8 @@ const NetwCapsChanged_eventsProvidedQueued: number = 34; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedQueued
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedQueued`.
  */
 export
 const eventsProvidedQueued: number = NetwCapsChanged_eventsProvidedQueued; /* SHORT_NAMED_BIT */
@@ -556,6 +740,9 @@ const eventsProvidedQueued: number = NetwCapsChanged_eventsProvidedQueued; /* SH
 /**
  * @summary NetwCapsChanged_eventsProvidedRetrieved
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedRetrieved: number = 35; /* LONG_NAMED_BIT */
@@ -563,6 +750,8 @@ const NetwCapsChanged_eventsProvidedRetrieved: number = 35; /* LONG_NAMED_BIT */
 /**
  * @summary eventsProvidedRetrieved
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedRetrieved`.
  */
 export
 const eventsProvidedRetrieved: number = NetwCapsChanged_eventsProvidedRetrieved; /* SHORT_NAMED_BIT */
@@ -570,6 +759,9 @@ const eventsProvidedRetrieved: number = NetwCapsChanged_eventsProvidedRetrieved;
 /**
  * @summary NetwCapsChanged_eventsProvidedServiceInitiated
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedServiceInitiated: number = 36; /* LONG_NAMED_BIT */
@@ -577,6 +769,8 @@ const NetwCapsChanged_eventsProvidedServiceInitiated: number = 36; /* LONG_NAMED
 /**
  * @summary eventsProvidedServiceInitiated
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedServiceInitiated`.
  */
 export
 const eventsProvidedServiceInitiated: number = NetwCapsChanged_eventsProvidedServiceInitiated; /* SHORT_NAMED_BIT */
@@ -584,6 +778,9 @@ const eventsProvidedServiceInitiated: number = NetwCapsChanged_eventsProvidedSer
 /**
  * @summary NetwCapsChanged_eventsProvidedTransferred
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_eventsProvidedTransferred: number = 37; /* LONG_NAMED_BIT */
@@ -591,6 +788,8 @@ const NetwCapsChanged_eventsProvidedTransferred: number = 37; /* LONG_NAMED_BIT 
 /**
  * @summary eventsProvidedTransferred
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_eventsProvidedTransferred`.
  */
 export
 const eventsProvidedTransferred: number = NetwCapsChanged_eventsProvidedTransferred; /* SHORT_NAMED_BIT */
@@ -598,6 +797,9 @@ const eventsProvidedTransferred: number = NetwCapsChanged_eventsProvidedTransfer
 /**
  * @summary NetwCapsChanged_servicesPermitted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_servicesPermitted: number = 38; /* LONG_NAMED_BIT */
@@ -605,6 +807,8 @@ const NetwCapsChanged_servicesPermitted: number = 38; /* LONG_NAMED_BIT */
 /**
  * @summary servicesPermitted
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_servicesPermitted`.
  */
 export
 const servicesPermitted: number = NetwCapsChanged_servicesPermitted; /* SHORT_NAMED_BIT */
@@ -612,6 +816,9 @@ const servicesPermitted: number = NetwCapsChanged_servicesPermitted; /* SHORT_NA
 /**
  * @summary NetwCapsChanged_mediaCallCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `mediaCallCharacteristics`
+ * parameter (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_mediaCallCharacteristics: number = 39; /* LONG_NAMED_BIT */
@@ -619,6 +826,8 @@ const NetwCapsChanged_mediaCallCharacteristics: number = 39; /* LONG_NAMED_BIT *
 /**
  * @summary mediaCallCharacteristics
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_mediaCallCharacteristics`.
  */
 export
 const mediaCallCharacteristics: number = NetwCapsChanged_mediaCallCharacteristics; /* SHORT_NAMED_BIT */
@@ -626,6 +835,9 @@ const mediaCallCharacteristics: number = NetwCapsChanged_mediaCallCharacteristic
 /**
  * @summary NetwCapsChanged_callCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callCharacteristics` parameter
+ * (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_callCharacteristics: number = 40; /* LONG_NAMED_BIT */
@@ -633,6 +845,8 @@ const NetwCapsChanged_callCharacteristics: number = 40; /* LONG_NAMED_BIT */
 /**
  * @summary callCharacteristics
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_callCharacteristics`.
  */
 export
 const callCharacteristics: number = NetwCapsChanged_callCharacteristics; /* SHORT_NAMED_BIT */
@@ -640,6 +854,9 @@ const callCharacteristics: number = NetwCapsChanged_callCharacteristics; /* SHOR
 /**
  * @summary NetwCapsChanged_outboundConnectionInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_outboundConnectionInfo: number = 41; /* LONG_NAMED_BIT */
@@ -647,6 +864,8 @@ const NetwCapsChanged_outboundConnectionInfo: number = 41; /* LONG_NAMED_BIT */
 /**
  * @summary outboundConnectionInfo
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_outboundConnectionInfo`.
  */
 export
 const outboundConnectionInfo: number = NetwCapsChanged_outboundConnectionInfo; /* SHORT_NAMED_BIT */
@@ -654,6 +873,9 @@ const outboundConnectionInfo: number = NetwCapsChanged_outboundConnectionInfo; /
 /**
  * @summary NetwCapsChanged_languagePreferences
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `languagePreferences` parameter
+ * (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_languagePreferences: number = 43; /* LONG_NAMED_BIT */
@@ -661,6 +883,8 @@ const NetwCapsChanged_languagePreferences: number = 43; /* LONG_NAMED_BIT */
 /**
  * @summary languagePreferences
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_languagePreferences`.
  */
 export
 const languagePreferences: number = NetwCapsChanged_languagePreferences; /* SHORT_NAMED_BIT */
@@ -668,6 +892,9 @@ const languagePreferences: number = NetwCapsChanged_languagePreferences; /* SHOR
 /**
  * @summary NetwCapsChanged_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.6.11).
  */
 export
 const NetwCapsChanged_privateData: number = 42; /* LONG_NAMED_BIT */
@@ -675,6 +902,8 @@ const NetwCapsChanged_privateData: number = 42; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_privateData`.
  */
 export
 const privateData: number = NetwCapsChanged_privateData; /* SHORT_NAMED_BIT */
@@ -682,6 +911,9 @@ const privateData: number = NetwCapsChanged_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary NetwCapsChanged_locationInfoList
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `locationInfoList` parameter
+ * (ECMA-269 C.6.11).
  */
 export
 const NetwCapsChanged_locationInfoList: number = 44; /* LONG_NAMED_BIT */
@@ -689,6 +921,8 @@ const NetwCapsChanged_locationInfoList: number = 44; /* LONG_NAMED_BIT */
 /**
  * @summary locationInfoList
  * @constant
+ * @description
+ * Alias of `NetwCapsChanged_locationInfoList`.
  */
 export
 const locationInfoList: number = NetwCapsChanged_locationInfoList; /* SHORT_NAMED_BIT */

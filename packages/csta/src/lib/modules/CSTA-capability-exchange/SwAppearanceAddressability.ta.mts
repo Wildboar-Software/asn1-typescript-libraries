@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SwAppearanceAddressability
  * @description
- * 
+ * Appearance addressability available in the switching sub-domain (ECMA-269
+ * §13.1.4.2.1 Table 13-9, ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +29,9 @@ type SwAppearanceAddressability = BIT_STRING;
 /**
  * @summary SwAppearanceAddressability_nonAddressable
  * @constant
+ * @description
+ * Bit set means the SF supports non-addressable appearances in the switching
+ * sub-domain (ECMA-269 §13.1.4.2.1 Table 13-9).
  */
 export
 const SwAppearanceAddressability_nonAddressable: number = 0; /* LONG_NAMED_BIT */
@@ -30,6 +39,8 @@ const SwAppearanceAddressability_nonAddressable: number = 0; /* LONG_NAMED_BIT *
 /**
  * @summary nonAddressable
  * @constant
+ * @description
+ * Alias of `SwAppearanceAddressability_nonAddressable`.
  */
 export
 const nonAddressable: number = SwAppearanceAddressability_nonAddressable; /* SHORT_NAMED_BIT */
@@ -37,6 +48,9 @@ const nonAddressable: number = SwAppearanceAddressability_nonAddressable; /* SHO
 /**
  * @summary SwAppearanceAddressability_addressable
  * @constant
+ * @description
+ * Bit set means the SF supports addressable appearances in the switching
+ * sub-domain (ECMA-269 §13.1.4.2.1 Table 13-9).
  */
 export
 const SwAppearanceAddressability_addressable: number = 1; /* LONG_NAMED_BIT */
@@ -44,6 +58,8 @@ const SwAppearanceAddressability_addressable: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary addressable
  * @constant
+ * @description
+ * Alias of `SwAppearanceAddressability_addressable`.
  */
 export
 const addressable: number = SwAppearanceAddressability_addressable; /* SHORT_NAMED_BIT */

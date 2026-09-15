@@ -99,7 +99,12 @@ import { CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG
 /**
  * @summary PrepareHO_Arg
  * @description
- * 
+ *
+ * MAP_PREPARE_HANDOVER request from MSC-A to MSC-B (E-interface) when a call is
+ * to be handed over or relocated. Confirmed service.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.4.1 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -147,72 +152,152 @@ class PrepareHO_Arg {
     constructor (
         /**
          * @summary `targetCellId`.
+         * @description
+         *
+         * Identity of the cell to which a call has to be handed over. In
+         * Prepare HO, only if the service is not in an ongoing transaction;
+         * excluded for Inter-MSC SRNS Relocation and GSM-to-UMTS inter-system
+         * handover (3GPP TS 23.009).
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.8 and 8.4.1.3).
+         *
          * @public
          * @readonly
          */
         readonly targetCellId: OPTIONAL<GlobalCellId>,
         /**
          * @summary `ho_NumberNotRequired`.
+         * @description
+         *
+         * No handover or relocation number allocation is necessary.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.7).
+         *
          * @public
          * @readonly
          */
         readonly ho_NumberNotRequired: OPTIONAL<NULL>,
         /**
          * @summary `targetRNCId`.
+         * @description
+         *
+         * Identity of the RNC to which a call has to be relocated. Included for
+         * Inter-MSC SRNS Relocation or GSM-to-UMTS inter-system handover (3GPP
+         * TS 23.009).
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.8A and 8.4.1.3).
+         *
          * @public
          * @readonly
          */
         readonly targetRNCId: OPTIONAL<RNCId>,
         /**
          * @summary `an_APDU`.
+         * @description
+         *
+         * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages,
+         * as in 3GPP TS 23.009 and 29.010. The access-network protocol ID
+         * selects 48.006 or 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.9.1).
+         *
          * @public
          * @readonly
          */
         readonly an_APDU: OPTIONAL<AccessNetworkSignalInfo>,
         /**
          * @summary `multipleBearerRequested`.
+         * @description
+         *
+         * Multiple bearers are requested for a relocation.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.53).
+         *
          * @public
          * @readonly
          */
         readonly multipleBearerRequested: OPTIONAL<NULL>,
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * International Mobile Subscriber Identity as in 3GPP TS 23.003.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `integrityProtectionInfo`.
+         * @description
+         *
+         * Integrity Protection Information element as in 3GPP TS 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.8).
+         *
          * @public
          * @readonly
          */
         readonly integrityProtectionInfo: OPTIONAL<IntegrityProtectionInformation>,
         /**
          * @summary `encryptionInfo`.
+         * @description
+         *
+         * Encryption Information element as in 3GPP TS 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.9).
+         *
          * @public
          * @readonly
          */
         readonly encryptionInfo: OPTIONAL<EncryptionInformation>,
         /**
          * @summary `radioResourceInformation`.
+         * @description
+         *
+         * Channel Type IE as in 3GPP TS 48.008.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.10).
+         *
          * @public
          * @readonly
          */
         readonly radioResourceInformation: OPTIONAL<RadioResourceInformation>,
         /**
          * @summary `allowedGSM_Algorithms`.
+         * @description
+         *
+         * GSM algorithms allowed in MSC-B. Coding as in 3GPP TS 48.008.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.13).
+         *
          * @public
          * @readonly
          */
         readonly allowedGSM_Algorithms: OPTIONAL<AllowedGSM_Algorithms>,
         /**
          * @summary `allowedUMTS_Algorithms`.
+         * @description
+         *
+         * UMTS algorithms allowed in MSC-B. Coding as in 3GPP TS 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.14).
+         *
          * @public
          * @readonly
          */
         readonly allowedUMTS_Algorithms: OPTIONAL<AllowedUMTS_Algorithms>,
         /**
          * @summary `radioResourceList`.
+         * @description
+         *
+         * RAB-Ids and Channel Type IEs when multiple bearers are used. Not sent
+         * together with a single `radioResourceInformation`.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.10A).
+         *
          * @public
          * @readonly
          */
@@ -225,114 +310,236 @@ class PrepareHO_Arg {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `rab_Id`.
+         * @description
+         *
+         * Radio access bearer identifier as in 3GPP TS 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.57).
+         *
          * @public
          * @readonly
          */
         readonly rab_Id: OPTIONAL<RAB_Id>,
         /**
          * @summary `bssmap_ServiceHandover`.
+         * @description
+         *
+         * Service Handover IE as in 3GPP TS 48.008.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.5).
+         *
          * @public
          * @readonly
          */
         readonly bssmap_ServiceHandover: OPTIONAL<BSSMAP_ServiceHandover>,
         /**
          * @summary `ranap_ServiceHandover`.
+         * @description
+         *
+         * Service Handover IE as in 3GPP TS 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.6).
+         *
          * @public
          * @readonly
          */
         readonly ranap_ServiceHandover: OPTIONAL<RANAP_ServiceHandover>,
         /**
          * @summary `bssmap_ServiceHandoverList`.
+         * @description
+         *
+         * Service Handover IEs when multiple bearers have an associated BSSMAP
+         * Service Handover parameter.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.5A).
+         *
          * @public
          * @readonly
          */
         readonly bssmap_ServiceHandoverList: OPTIONAL<BSSMAP_ServiceHandoverList>,
         /**
          * @summary `asciCallReference`.
+         * @description
+         *
+         * ASCI (VGCS/VBS) call reference.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.4.1).
+         *
          * @public
          * @readonly
          */
         readonly asciCallReference: OPTIONAL<ASCI_CallReference>,
         /**
          * @summary `geran_classmark`.
+         * @description
+         *
+         * GERAN cell capabilities as in 3GPP TS 48.008, sent inter-MSC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.4).
+         *
          * @public
          * @readonly
          */
         readonly geran_classmark: OPTIONAL<GERAN_Classmark>,
         /**
          * @summary `iuCurrentlyUsedCodec`.
+         * @description
+         *
+         * Codec used at the Iu interface before handover.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.16).
+         *
          * @public
          * @readonly
          */
         readonly iuCurrentlyUsedCodec: OPTIONAL<Codec>,
         /**
          * @summary `iuSupportedCodecsList`.
+         * @description
+         *
+         * Codecs supported by UE and MSC-A, in priority order, for MSC-B
+         * transcoder selection.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.17).
+         *
          * @public
          * @readonly
          */
         readonly iuSupportedCodecsList: OPTIONAL<SupportedCodecsList>,
         /**
          * @summary `rab_ConfigurationIndicator`.
+         * @description
+         *
+         * MSC-A (or MSC-B in subsequent HO) generated RAB parameters according
+         * to the preferred codec (first entry of Iu-Supported Codecs List).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.19).
+         *
          * @public
          * @readonly
          */
         readonly rab_ConfigurationIndicator: OPTIONAL<NULL>,
         /**
          * @summary `uesbi_Iu`.
+         * @description
+         *
+         * UE Specific Behaviour Information over Iu, as in 3GPP TS 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.20).
+         *
          * @public
          * @readonly
          */
         readonly uesbi_Iu: OPTIONAL<UESBI_Iu>,
         /**
          * @summary `imeisv`.
+         * @description
+         *
+         * IMEI and Software Version as in 3GPP TS 23.003. For presence in
+         * Update Location see 3GPP TS 23.012 and 22.101 clause 7.4 (ADD).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.3a).
+         *
          * @public
          * @readonly
          */
         readonly imeisv: OPTIONAL<IMEI>,
         /**
          * @summary `alternativeChannelType`.
+         * @description
+         *
+         * Alternative Channel Type for the handover.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.21).
+         *
          * @public
          * @readonly
          */
         readonly alternativeChannelType: OPTIONAL<RadioResourceInformation>,
         /**
          * @summary `tracePropagationList`.
+         * @description
+         *
+         * Trace parameters to be propagated to the target MSC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.4.1).
+         *
          * @public
          * @readonly
          */
         readonly tracePropagationList: OPTIONAL<TracePropagationList>,
         /**
          * @summary `aoipSupportedCodecsListAnchor`.
+         * @description
+         *
+         * AoIP codecs supported at the anchor MSC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.22).
+         *
          * @public
          * @readonly
          */
         readonly aoipSupportedCodecsListAnchor: OPTIONAL<AoIPCodecsList>,
         /**
          * @summary `regionalSubscriptionData`.
+         * @description
+         *
+         * Zone Codes defining the regional subscription area.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.11).
+         *
          * @public
          * @readonly
          */
         readonly regionalSubscriptionData: OPTIONAL<ZoneCodeList>,
         /**
          * @summary `lclsGlobalCallReference`.
+         * @description
+         *
+         * Globally unique call identifier for the duration of the call (3GPP TS
+         * 29.205), used to correlate call legs for local switching in the BSS.
+         * 13..15 octets.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.5.21).
+         *
          * @public
          * @readonly
          */
         readonly lclsGlobalCallReference: OPTIONAL<LCLS_GlobalCallReference>,
         /**
          * @summary `lcls_Negotiation`.
+         * @description
+         *
+         * Request MSC-B to indicate LCLS (3GPP TS 29.205 clause B.2.1.4). Bits
+         * 2-7 ignored if not understood.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.5.22 and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly lcls_Negotiation: OPTIONAL<LCLS_Negotiation>,
         /**
          * @summary `lcls_Configuration_Preference`.
+         * @description
+         *
+         * Negotiated LCLS configuration preference (3GPP TS 29.205 clause
+         * B.2.1.10). Bits 4-7 ignored if not understood.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.5.23 and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly lcls_Configuration_Preference: OPTIONAL<LCLS_ConfigurationPreference>,
         /**
          * @summary `csg_SubscriptionDataList`.
+         * @description
+         *
+         * CSG subscription data relevant to the handover.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.4.1).
+         *
          * @public
          * @readonly
          */

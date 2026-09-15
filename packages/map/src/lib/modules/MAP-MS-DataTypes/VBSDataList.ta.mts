@@ -75,7 +75,12 @@ import { maxNumOfVBSGroupIds } from "./maxNumOfVBSGroupIds.va.mjs";
 /**
  * @summary VBSDataList
  * @description
- * 
+ *
+ * Voice Broadcast Service groups the subscriber may belong to. Per group,
+ * whether the subscriber may only listen or may also initiate broadcast calls.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.40 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

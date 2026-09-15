@@ -9,7 +9,11 @@ import { MonitorListEntry, _decode_MonitorListEntry, _encode_MonitorListEntry } 
 /**
  * @summary MonitorList
  * @description
- * 
+ *
+ * Existing monitors for Get Monitors / Monitor Info. ECMA-269 §15.1.4–15.1.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

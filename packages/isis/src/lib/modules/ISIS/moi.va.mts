@@ -15,6 +15,10 @@ import { isisoi } from '../ISIS/isisoi.va.mjs';
  * @summary moi
  * @description
  *
+ * GDMO managed-object-class registration arc `{isisoi managedObjectClass(3)}`.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetAutoAnswerResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §22.1.6.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +39,28 @@ class GetAutoAnswerResult {
     constructor (
         /**
          * @summary `autoAnswerOn`.
+         * @description
+         *
+         * FALSE = disabled; TRUE = enabled.
          * @public
          * @readonly
          */
         readonly autoAnswerOn: BOOLEAN,
         /**
          * @summary `numberOfRings`.
+         * @description
+         *
+         * Rings before a call is auto-answered.
          * @public
          * @readonly
          */
         readonly numberOfRings: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

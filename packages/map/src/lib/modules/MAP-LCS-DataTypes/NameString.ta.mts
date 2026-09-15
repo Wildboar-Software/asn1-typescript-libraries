@@ -75,7 +75,10 @@ import { maxNameStringLength } from "./maxNameStringLength.va.mjs";
 /**
  * @summary NameString
  * @description
- * 
+ *
+ * USSD-String SIZE (1..maxNameStringLength) (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

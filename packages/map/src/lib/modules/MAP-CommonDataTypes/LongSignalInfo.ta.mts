@@ -75,7 +75,14 @@ import { maxLongSignalInfoLength } from "./maxLongSignalInfoLength.va.mjs";
 /**
  * @summary LongSignalInfo
  * @description
- * 
+ *
+ * Access-network signal octets. Size 1..`maxLongSignalInfoLength` (2560). That
+ * bound is the maximum using White Book SCCP with the maximum number of
+ * segments, accounting for lower-layer octets and other information elements in
+ * the same component.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.9.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -5,6 +5,15 @@ import {
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.1.2
+ * `caseIgnoreOrderingMatch`.
+ *
+ * Same as `caseExactOrderingMatch` except upper-case is folded
+ * during string preparation (clause 7.2). Insignificant spaces are
+ * ignored (clause 7.6). Directory TRUE iff the stored value is
+ * less than the presented value under Unicode code-point order.
+ */
 export
 const caseIgnoreOrderingMatch: OrderingMatcher = (
     assertion: ASN1Element,

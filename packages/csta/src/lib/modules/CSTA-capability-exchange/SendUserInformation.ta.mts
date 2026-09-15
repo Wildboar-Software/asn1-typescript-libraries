@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SendUserInformation
  * @description
- * 
+ * Capability bitmap for the Send User Information service (ECMA-269 C.7.6,
+ * ECMA-285 §9.10). Presence of this entry in `CallAssociatedServList` means the
+ * SF supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +34,9 @@ type SendUserInformation = BIT_STRING;
 /**
  * @summary SendUserInformation_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.7.6).
  */
 export
 const SendUserInformation_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -32,6 +44,8 @@ const SendUserInformation_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SendUserInformation_privateData`.
  */
 export
 const privateData: number = SendUserInformation_privateData; /* SHORT_NAMED_BIT */
@@ -39,6 +53,9 @@ const privateData: number = SendUserInformation_privateData; /* SHORT_NAMED_BIT 
 /**
  * @summary SendUserInformation_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.7.6).
  */
 export
 const SendUserInformation_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
@@ -46,6 +63,8 @@ const SendUserInformation_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `SendUserInformation_privateDataInAck`.
  */
 export
 const privateDataInAck: number = SendUserInformation_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -53,6 +72,9 @@ const privateDataInAck: number = SendUserInformation_privateDataInAck; /* SHORT_
 /**
  * @summary SendUserInformation_deviceIDOnly
  * @constant
+ * @description
+ * Bit set means the SF supports DeviceID-only ConnectionIDs for this service
+ * (ECMA-269 C.7.6).
  */
 export
 const SendUserInformation_deviceIDOnly: number = 2; /* LONG_NAMED_BIT */
@@ -60,6 +82,8 @@ const SendUserInformation_deviceIDOnly: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary deviceIDOnly
  * @constant
+ * @description
+ * Alias of `SendUserInformation_deviceIDOnly`.
  */
 export
 const deviceIDOnly: number = SendUserInformation_deviceIDOnly; /* SHORT_NAMED_BIT */
@@ -67,6 +91,9 @@ const deviceIDOnly: number = SendUserInformation_deviceIDOnly; /* SHORT_NAMED_BI
 /**
  * @summary SendUserInformation_ackModelMultiStep
  * @constant
+ * @description
+ * Bit set means the SF supports the multi-step positive acknowledgement model
+ * (ECMA-269 C.7.6).
  */
 export
 const SendUserInformation_ackModelMultiStep: number = 3; /* LONG_NAMED_BIT */
@@ -74,6 +101,8 @@ const SendUserInformation_ackModelMultiStep: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary ackModelMultiStep
  * @constant
+ * @description
+ * Alias of `SendUserInformation_ackModelMultiStep`.
  */
 export
 const ackModelMultiStep: number = SendUserInformation_ackModelMultiStep; /* SHORT_NAMED_BIT */

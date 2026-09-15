@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AgentWorkingAfterCallEvent_pendingAgentState
  * @description
- * 
+ *
+ * Pending state after Working After Call (ECMA-269 §22.2.6.1): notReady, ready,
+ * or null_.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,7 +37,13 @@ enum _enum_for_AgentWorkingAfterCallEvent_pendingAgentState {
 /**
  * @summary AgentWorkingAfterCallEvent_pendingAgentState
  * @description
- * 
+ *
+ * Pending state after Working After Call (ECMA-269 §22.2.6.1): notReady, ready,
+ * or null_.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,7 +62,13 @@ type AgentWorkingAfterCallEvent_pendingAgentState = _enum_for_AgentWorkingAfterC
 /**
  * @summary AgentWorkingAfterCallEvent_pendingAgentState
  * @description
- * 
+ *
+ * Pending state after Working After Call (ECMA-269 §22.2.6.1): notReady, ready,
+ * or null_.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,6 +86,9 @@ const AgentWorkingAfterCallEvent_pendingAgentState = _enum_for_AgentWorkingAfter
 
 /**
  * @summary AgentWorkingAfterCallEvent_pendingAgentState_notReady
+ * @description
+ *
+ * Transition to Not Ready.
  * @constant
  * @type {number}
  */
@@ -84,6 +105,9 @@ const notReady: AgentWorkingAfterCallEvent_pendingAgentState = AgentWorkingAfter
 
 /**
  * @summary AgentWorkingAfterCallEvent_pendingAgentState_ready
+ * @description
+ *
+ * Transition to Ready.
  * @constant
  * @type {number}
  */
@@ -100,6 +124,9 @@ const ready: AgentWorkingAfterCallEvent_pendingAgentState = AgentWorkingAfterCal
 
 /**
  * @summary AgentWorkingAfterCallEvent_pendingAgentState_null_
+ * @description
+ *
+ * Transition to Null.
  * @constant
  * @type {number}
  */

@@ -73,7 +73,10 @@ import { AdjacentAccessRestrictionData, _decode_AdjacentAccessRestrictionData, _
 /**
  * @summary AdjacentAccessRestrictionDataList
  * @description
- * 
+ *
+ * List of per-PLMN access restriction data for adjacent PLMNs (SIZE 1..50)
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

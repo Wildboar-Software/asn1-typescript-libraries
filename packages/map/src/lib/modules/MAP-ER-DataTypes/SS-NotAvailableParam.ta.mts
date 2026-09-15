@@ -73,6 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * @summary SS_NotAvailableParam
  * @description
  * 
+ * Optional parameter of `ss-NotAvailable`. Must not be used in version <3.
+ * Supplementary-service errors are defined in 3GPP TS 24.080 (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.1.4 and 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ObjectIdentifier
  * @description
  *
+ * OBJECT IDENTIFIER alias in the ISIS ASN.1 module. Notification
+ * specific-problem and information-type values are assigned under `se`.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

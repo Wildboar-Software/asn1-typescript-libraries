@@ -76,7 +76,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary T_BcsmCamelTDPData
  * @description
- * 
+ *
+ * One terminating BCSM CAMEL TDP: detection point, service key, gsmSCF address,
+ * and default call handling.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.5.7B and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,24 +101,50 @@ class T_BcsmCamelTDPData {
     constructor (
         /**
          * @summary `t_BcsmTriggerDetectionPoint`.
+         * @description
+         *
+         * Terminating BCSM CAMEL trigger detection point.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly t_BcsmTriggerDetectionPoint: T_BcsmTriggerDetectionPoint,
         /**
          * @summary `serviceKey`.
+         * @description
+         *
+         * Identifies CAMEL service logic in the gsmSCF.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly serviceKey: ServiceKey,
         /**
          * @summary `gsmSCF_Address`.
+         * @description
+         *
+         * ISDN number assigned to the gsmSCF. In an IP Multimedia CN, contains
+         * the IM-SSF address when IM-SSF takes the gsmSCF role.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.58).
+         *
          * @public
          * @readonly
          */
         readonly gsmSCF_Address: ISDN_AddressString,
         /**
          * @summary `defaultCallHandling`.
+         * @description
+         *
+         * CAMEL default call handling. Received 2-31 treated as `continueCall`;
+         * greater than 31 as `releaseCall`.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

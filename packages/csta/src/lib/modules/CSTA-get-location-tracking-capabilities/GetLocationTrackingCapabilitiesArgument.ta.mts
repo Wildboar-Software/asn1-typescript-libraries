@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetLocationTrackingCapabilitiesArgument
  * @description
- * 
+ *
+ * Device or group device to query (ECMA-269 §28.1.10.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,22 @@ class GetLocationTrackingCapabilitiesArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device or group whose tracking capabilities are returned (ECMA-269
+         * §28.1.10.1 / FR 2–3).
+         *
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

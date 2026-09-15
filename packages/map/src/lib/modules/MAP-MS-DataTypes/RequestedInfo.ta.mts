@@ -74,7 +74,12 @@ import { RequestedNodes, RequestedNodes_mme /* IMPORTED_LONG_NAMED_BIT */, mme /
 /**
  * @summary RequestedInfo
  * @description
- * 
+ *
+ * Subscriber information being requested, as in 3GPP TS 23.018 and 23.078. Used
+ * in Provide Subscriber Info and Any Time Interrogation.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.31, 8.11.2 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -103,12 +108,25 @@ class RequestedInfo {
     constructor (
         /**
          * @summary `locationInformation`.
+         * @description
+         *
+         * Request CS location information. If absent, `currentLocation` and
+         * `locationInformationEPS-Supported` shall be absent.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.31 and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly locationInformation: OPTIONAL<NULL>,
         /**
          * @summary `subscriberState`.
+         * @description
+         *
+         * Request CS subscriber state.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.30 and 17.7.1).
+         *
          * @public
          * @readonly
          */
@@ -121,60 +139,128 @@ class RequestedInfo {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `currentLocation`.
+         * @description
+         *
+         * Request current location (implies paging if needed). Absent if
+         * `locationInformation` is absent. If present, `servingNodeIndication`
+         * shall be absent.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly currentLocation: OPTIONAL<NULL>,
         /**
          * @summary `requestedDomain`.
+         * @description
+         *
+         * CS domain (MSC/VLR) or PS domain (SGSN/MME) from which information
+         * should be retrieved.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.31A).
+         *
          * @public
          * @readonly
          */
         readonly requestedDomain: OPTIONAL<DomainType>,
         /**
          * @summary `imei`.
+         * @description
+         *
+         * Request IMEI.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.3).
+         *
          * @public
          * @readonly
          */
         readonly imei: OPTIONAL<NULL>,
         /**
          * @summary `ms_classmark`.
+         * @description
+         *
+         * Request MS Classmark 2.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly ms_classmark: OPTIONAL<NULL>,
         /**
          * @summary `mnpRequestedInfo`.
+         * @description
+         *
+         * Request Mobile Number Portability information (3GPP TS 23.078).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.96).
+         *
          * @public
          * @readonly
          */
         readonly mnpRequestedInfo: OPTIONAL<NULL>,
         /**
          * @summary `locationInformationEPS_Supported`.
+         * @description
+         *
+         * Requester supports EPS location information. Absent if
+         * `locationInformation` is absent.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly locationInformationEPS_Supported: OPTIONAL<NULL>,
         /**
          * @summary `t_adsData`.
+         * @description
+         *
+         * Request T-ADS data (IMS VoPS, last activity, last RAT). Shall be
+         * absent in messages sent to the VLR.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 8.11.2.3 and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly t_adsData: OPTIONAL<NULL>,
         /**
          * @summary `requestedNodes`.
+         * @description
+         *
+         * Which PS nodes should answer. Absent if `requestedDomain` is
+         * `cs-Domain`.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly requestedNodes: OPTIONAL<RequestedNodes>,
         /**
          * @summary `servingNodeIndication`.
+         * @description
+         *
+         * Only the serving node's address (MME-Name, SGSN-Number, or
+         * VLR-Number) is requested. Absent if `locationInformation` is absent
+         * or `currentLocation` is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly servingNodeIndication: OPTIONAL<NULL>,
         /**
          * @summary `localTimeZoneRequest`.
+         * @description
+         *
+         * Request local time zone (and daylight saving time).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.11.2.3).
+         *
          * @public
          * @readonly
          */

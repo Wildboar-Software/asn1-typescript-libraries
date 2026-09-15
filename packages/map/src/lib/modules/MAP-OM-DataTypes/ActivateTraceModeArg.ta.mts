@@ -83,7 +83,10 @@ import { MDT_Configuration, _decode_MDT_Configuration, _encode_MDT_Configuration
 /**
  * @summary ActivateTraceModeArg
  * @description
- * 
+ *
+ * Argument of MAP-ACTIVATE-TRACE-MODE: HLR to VLR or SGSN (3GPP TS 29.002
+ * V19.1.0 clauses 9.1.1 and 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -111,72 +114,130 @@ class ActivateTraceModeArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * Mandatory in a stand-alone operation (clause 9.1.1.3).
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `traceReference`.
+         * @description
+         *
+         * GSM-only tracing request as in 3GPP TS 52.008; managed by OMC/EM
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.10.2 and 9.1.1.3).
+         *
          * @public
          * @readonly
          */
         readonly traceReference: TraceReference,
         /**
          * @summary `traceType`.
+         * @description
+         *
+         * GSM-only trace type as in 3GPP TS 52.008. If activation is UMTS-only:
+         * MSC Record Type 'No MSC Trace' and BSS Record Type 'No BSS Trace'
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.10.3 and 9.1.1.3).
+         *
          * @public
          * @readonly
          */
         readonly traceType: TraceType,
         /**
          * @summary `omc_Id`.
+         * @description
+         *
+         * Operator option (clause 9.1.1.3).
+         *
          * @public
          * @readonly
          */
         readonly omc_Id: OPTIONAL<AddressString>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `traceReference2`.
+         * @description
+         *
+         * UMTS trace as in 3GPP TS 32.421 and 32.422; managed by EM. Shall be
+         * used for UMTS trace activation (3GPP TS 29.002 V19.1.0 clauses
+         * 7.6.10.2A and 9.1.1.3).
+         *
          * @public
          * @readonly
          */
         readonly traceReference2: OPTIONAL<TraceReference2>,
         /**
          * @summary `traceDepthList`.
+         * @description
+         *
+         * Shall be used for UMTS trace activation (clauses 7.6.10.5 and
+         * 9.1.1.3).
+         *
          * @public
          * @readonly
          */
         readonly traceDepthList: OPTIONAL<TraceDepthList>,
         /**
          * @summary `traceNE_TypeList`.
+         * @description
+         *
+         * Shall be used for UMTS trace activation (clauses 7.6.10.6 and
+         * 9.1.1.3).
+         *
          * @public
          * @readonly
          */
         readonly traceNE_TypeList: OPTIONAL<TraceNE_TypeList>,
         /**
          * @summary `traceInterfaceList`.
+         * @description
+         *
+         * Shall be used for UMTS trace activation (clauses 7.6.10.7 and
+         * 9.1.1.3).
+         *
          * @public
          * @readonly
          */
         readonly traceInterfaceList: OPTIONAL<TraceInterfaceList>,
         /**
          * @summary `traceEventList`.
+         * @description
+         *
+         * Shall be used for UMTS trace activation (clauses 7.6.10.8 and
+         * 9.1.1.3).
+         *
          * @public
          * @readonly
          */
         readonly traceEventList: OPTIONAL<TraceEventList>,
         /**
          * @summary `traceCollectionEntity`.
+         * @description
+         *
+         * Trace collection entity address.
+         *
          * @public
          * @readonly
          */
         readonly traceCollectionEntity: OPTIONAL<GSN_Address>,
         /**
          * @summary `mdt_Configuration`.
+         * @description
+         *
+         * MDT configuration as in 3GPP TS 32.422 (3GPP TS 29.002 V19.1.0
+         * clauses 7.6.10.11 and 9.1.1.3).
+         *
          * @public
          * @readonly
          */

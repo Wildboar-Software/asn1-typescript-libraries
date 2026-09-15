@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GetDisplay
  * @description
- * 
+ * Capability bitmap for the Get Display service (ECMA-269 C.12.4, ECMA-285
+ * §9.10). Presence of this entry in `PhysDevServList` means the SF supports
+ * that service. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +35,9 @@ type GetDisplay = BIT_STRING;
 /**
  * @summary GetDisplay_displayID
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.4).
  */
 export
 const GetDisplay_displayID: number = 0; /* LONG_NAMED_BIT */
@@ -34,6 +45,8 @@ const GetDisplay_displayID: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary displayID
  * @constant
+ * @description
+ * Alias of `GetDisplay_displayID`.
  */
 export
 const displayID: number = GetDisplay_displayID; /* SHORT_NAMED_BIT */
@@ -41,6 +54,9 @@ const displayID: number = GetDisplay_displayID; /* SHORT_NAMED_BIT */
 /**
  * @summary GetDisplay_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.12.4).
  */
 export
 const GetDisplay_privateData: number = 1; /* LONG_NAMED_BIT */
@@ -48,6 +64,8 @@ const GetDisplay_privateData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `GetDisplay_privateData`.
  */
 export
 const privateData: number = GetDisplay_privateData; /* SHORT_NAMED_BIT */
@@ -55,6 +73,9 @@ const privateData: number = GetDisplay_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary GetDisplay_characterSetASCII
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.4).
  */
 export
 const GetDisplay_characterSetASCII: number = 2; /* LONG_NAMED_BIT */
@@ -62,6 +83,8 @@ const GetDisplay_characterSetASCII: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary characterSetASCII
  * @constant
+ * @description
+ * Alias of `GetDisplay_characterSetASCII`.
  */
 export
 const characterSetASCII: number = GetDisplay_characterSetASCII; /* SHORT_NAMED_BIT */
@@ -69,6 +92,9 @@ const characterSetASCII: number = GetDisplay_characterSetASCII; /* SHORT_NAMED_B
 /**
  * @summary GetDisplay_characterSetUnicode
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.4).
  */
 export
 const GetDisplay_characterSetUnicode: number = 3; /* LONG_NAMED_BIT */
@@ -76,6 +102,8 @@ const GetDisplay_characterSetUnicode: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary characterSetUnicode
  * @constant
+ * @description
+ * Alias of `GetDisplay_characterSetUnicode`.
  */
 export
 const characterSetUnicode: number = GetDisplay_characterSetUnicode; /* SHORT_NAMED_BIT */
@@ -83,6 +111,9 @@ const characterSetUnicode: number = GetDisplay_characterSetUnicode; /* SHORT_NAM
 /**
  * @summary GetDisplay_characterSetProprietary
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.4).
  */
 export
 const GetDisplay_characterSetProprietary: number = 4; /* LONG_NAMED_BIT */
@@ -90,6 +121,8 @@ const GetDisplay_characterSetProprietary: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary characterSetProprietary
  * @constant
+ * @description
+ * Alias of `GetDisplay_characterSetProprietary`.
  */
 export
 const characterSetProprietary: number = GetDisplay_characterSetProprietary; /* SHORT_NAMED_BIT */
@@ -97,6 +130,9 @@ const characterSetProprietary: number = GetDisplay_characterSetProprietary; /* S
 /**
  * @summary GetDisplay_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.12.4).
  */
 export
 const GetDisplay_privateDataInAck: number = 5; /* LONG_NAMED_BIT */
@@ -104,6 +140,8 @@ const GetDisplay_privateDataInAck: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `GetDisplay_privateDataInAck`.
  */
 export
 const privateDataInAck: number = GetDisplay_privateDataInAck; /* SHORT_NAMED_BIT */

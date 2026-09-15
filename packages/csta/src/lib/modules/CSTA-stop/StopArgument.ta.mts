@@ -21,7 +21,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary StopArgument
  * @description
- * 
+ *
+ * Connection, optional message and resource (ECMA-269 §26.1.15.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +45,42 @@ class StopArgument {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Connection whose voice operation is stopped (ECMA-269 §26.1.15.1).
+         *
          * @public
          * @readonly
          */
         readonly connection: ConnectionID,
         /**
          * @summary `messageToBeStopped`.
+         * @description
+         *
+         * Message to stop when several are active (ECMA-269 §26.1.15.1).
+         *
          * @public
          * @readonly
          */
         readonly messageToBeStopped: OPTIONAL<MessageID>,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

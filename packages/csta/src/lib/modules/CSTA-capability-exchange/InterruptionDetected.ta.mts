@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary InterruptionDetected
  * @description
- * 
+ * Capability bitmap for the Interruption Detected event (ECMA-269 C.20.5,
+ * ECMA-285 §9.10). Presence of this entry in `VoiceUnitEvtsList` means the SF
+ * supports that event. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +33,9 @@ type InterruptionDetected = BIT_STRING;
 /**
  * @summary InterruptionDetected_resource
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `resource` parameter (ECMA-269
+ * C.20.5).
  */
 export
 const InterruptionDetected_resource: number = 0; /* LONG_NAMED_BIT */
@@ -32,6 +43,8 @@ const InterruptionDetected_resource: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary resource
  * @constant
+ * @description
+ * Alias of `InterruptionDetected_resource`.
  */
 export
 const resource: number = InterruptionDetected_resource; /* SHORT_NAMED_BIT */
@@ -39,6 +52,9 @@ const resource: number = InterruptionDetected_resource; /* SHORT_NAMED_BIT */
 /**
  * @summary InterruptionDetected_cause
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `cause` parameter (ECMA-269
+ * C.20.5).
  */
 export
 const InterruptionDetected_cause: number = 1; /* LONG_NAMED_BIT */
@@ -46,6 +62,8 @@ const InterruptionDetected_cause: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary cause
  * @constant
+ * @description
+ * Alias of `InterruptionDetected_cause`.
  */
 export
 const cause: number = InterruptionDetected_cause; /* SHORT_NAMED_BIT */
@@ -53,6 +71,9 @@ const cause: number = InterruptionDetected_cause; /* SHORT_NAMED_BIT */
 /**
  * @summary InterruptionDetected_servicesPermitted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.20.5).
  */
 export
 const InterruptionDetected_servicesPermitted: number = 2; /* LONG_NAMED_BIT */
@@ -60,6 +81,8 @@ const InterruptionDetected_servicesPermitted: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary servicesPermitted
  * @constant
+ * @description
+ * Alias of `InterruptionDetected_servicesPermitted`.
  */
 export
 const servicesPermitted: number = InterruptionDetected_servicesPermitted; /* SHORT_NAMED_BIT */
@@ -67,6 +90,9 @@ const servicesPermitted: number = InterruptionDetected_servicesPermitted; /* SHO
 /**
  * @summary InterruptionDetected_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.20.5).
  */
 export
 const InterruptionDetected_privateData: number = 3; /* LONG_NAMED_BIT */
@@ -74,6 +100,8 @@ const InterruptionDetected_privateData: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `InterruptionDetected_privateData`.
  */
 export
 const privateData: number = InterruptionDetected_privateData; /* SHORT_NAMED_BIT */

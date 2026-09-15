@@ -73,7 +73,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary WLAN_Offloadability
  * @description
- * 
+ *
+ * WLAN offloadability for E-UTRAN and/or UTRAN, as in 3GPP TS 29.272.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.101 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,12 +95,24 @@ class WLAN_Offloadability {
     constructor (
         /**
          * @summary `wlan_offloadability_EUTRAN`.
+         * @description
+         *
+         * WLAN offloadability for E-UTRAN (3GPP TS 29.272).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.101).
+         *
          * @public
          * @readonly
          */
         readonly wlan_offloadability_EUTRAN: OPTIONAL<WLAN_Offloadability_Indication>,
         /**
          * @summary `wlan_offloadability_UTRAN`.
+         * @description
+         *
+         * WLAN offloadability for UTRAN (3GPP TS 29.272).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.101).
+         *
          * @public
          * @readonly
          */

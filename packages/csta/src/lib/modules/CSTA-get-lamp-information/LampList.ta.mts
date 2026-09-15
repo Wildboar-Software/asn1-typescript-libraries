@@ -9,7 +9,12 @@ import { LampList_Item, _decode_LampList_Item, _encode_LampList_Item } from "../
 /**
  * @summary LampList
  * @description
- * 
+ *
+ * SEQUENCE OF lamp descriptors (ECMA-269 §21.1.6.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

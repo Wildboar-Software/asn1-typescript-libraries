@@ -75,7 +75,12 @@ import { maxNumOfRelocationNumber } from "./maxNumOfRelocationNumber.va.mjs";
 /**
  * @summary RelocationNumberList
  * @description
- * 
+ *
+ * List of relocation numbers (handover number plus RAB Id) returned by MSC-B
+ * for multi-bearer relocation.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.19A, 8.4.1 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

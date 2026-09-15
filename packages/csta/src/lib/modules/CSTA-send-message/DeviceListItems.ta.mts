@@ -15,7 +15,13 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary DeviceListItems
  * @description
- * 
+ *
+ * Destination device for Send Message (ECMA-269 §17.1.24
+ * Table 17-130 / ECMA-285 §15.1.25).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +36,10 @@ class DeviceListItems {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Mandatory. One destination DeviceID.
+         *
          * @public
          * @readonly
          */

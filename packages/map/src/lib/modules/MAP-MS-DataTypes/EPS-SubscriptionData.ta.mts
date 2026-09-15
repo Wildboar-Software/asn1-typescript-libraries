@@ -77,7 +77,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary EPS_SubscriptionData
  * @description
- * 
+ *
+ * EPS subscription data: list of APN-Configurations the subscriber has
+ * subscribed to, plus UE-level APN-OI replacement, AMBR, STN-SR and MPS/vSRVCC
+ * flags. Presence of mps-CSPriority / mps-EPSPriority / subscribed-vsrvcc
+ * indicates eMLPP in CS, MPS in EPS, or vSRVCC in EPS respectively (3GPP TS
+ * 29.272) (3GPP TS 29.002 V19.1.0 clauses 7.6.3.46A and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -102,6 +108,10 @@ class EPS_SubscriptionData {
     constructor (
         /**
          * @summary `apn_oi_Replacement`.
+         * @description
+         *
+         * UE-level APN-OI replacement (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
@@ -114,12 +124,22 @@ class EPS_SubscriptionData {
         readonly rfsp_id: OPTIONAL<RFSP_ID>,
         /**
          * @summary `ambr`.
+         * @description
+         *
+         * UE-AMBR associated with the EPS subscription (3GPP TS 29.002 V19.1.0
+         * clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly ambr: OPTIONAL<AMBR>,
         /**
          * @summary `apn_ConfigurationProfile`.
+         * @description
+         *
+         * APN-Configurations the subscriber has subscribed to (3GPP TS 29.002
+         * V19.1.0 clause 7.6.3.46A).
+         *
          * @public
          * @readonly
          */
@@ -138,18 +158,33 @@ class EPS_SubscriptionData {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `mps_CSPriority`.
+         * @description
+         *
+         * By its presence, the UE is subscribed to eMLPP in the CS domain (3GPP
+         * TS 29.272) (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly mps_CSPriority: OPTIONAL<NULL>,
         /**
          * @summary `mps_EPSPriority`.
+         * @description
+         *
+         * By its presence, the UE is subscribed to MPS in the EPS domain (3GPP
+         * TS 29.272) (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly mps_EPSPriority: OPTIONAL<NULL>,
         /**
          * @summary `subscribed_vsrvcc`.
+         * @description
+         *
+         * By its presence, the UE is subscribed to vSRVCC in the EPS domain
+         * (3GPP TS 29.272) (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

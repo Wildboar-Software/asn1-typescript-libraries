@@ -73,7 +73,9 @@ import { E_UTRAN_CGI, _decode_E_UTRAN_CGI, _encode_E_UTRAN_CGI } from "../MAP-Co
 /**
  * @summary E_UTRAN_CGI_List
  * @description
- * 
+ *
+ * SEQUENCE SIZE (1..32) OF E-UTRAN-CGI (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Boolean
  * @description
  *
+ * BOOLEAN alias used for IS-IS managed-object attributes such as
+ * `externalDomain` (suppress intra-domain PDUs on this circuit) and
+ * `manualL2OnlyMode` (use the circuit for Level 2 traffic only).
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.5.9 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

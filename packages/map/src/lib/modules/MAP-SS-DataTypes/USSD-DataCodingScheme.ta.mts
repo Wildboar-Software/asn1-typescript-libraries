@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary USSD_DataCodingScheme
  * @description
- * 
+ *
+ * One octet: Cell Broadcast Data Coding Scheme as in 3GPP TS 23.038 (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.4.36 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

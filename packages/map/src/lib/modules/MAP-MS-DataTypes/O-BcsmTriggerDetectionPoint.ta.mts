@@ -78,7 +78,12 @@ enum _enum_for_O_BcsmTriggerDetectionPoint {
 /**
  * @summary O_BcsmTriggerDetectionPoint
  * @description
- * 
+ *
+ * Originating BCSM CAMEL trigger detection point: `collectedInfo` (2) or
+ * `routeSelectFailure` (4). Other values: ignore the enclosing
+ * `O-BcsmCamelTDPData` or `O-BcsmCamelTDP-Criteria` sequence. (3GPP TS 29.002
+ * V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +100,11 @@ type O_BcsmTriggerDetectionPoint = _enum_for_O_BcsmTriggerDetectionPoint | ENUME
 
 /**
  * @summary O_BcsmTriggerDetectionPoint_collectedInfo
+ * @description
+ *
+ * DP2 collectedInfo. For CAMEL phase 2 this is the only allowed O-BCSM TDP.
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +113,11 @@ const O_BcsmTriggerDetectionPoint_collectedInfo: O_BcsmTriggerDetectionPoint = 2
 
 /**
  * @summary collectedInfo
+ * @description
+ *
+ * DP2 collectedInfo. For CAMEL phase 2 this is the only allowed O-BCSM TDP.
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +126,10 @@ const collectedInfo: O_BcsmTriggerDetectionPoint = O_BcsmTriggerDetectionPoint_c
 
 /**
  * @summary O_BcsmTriggerDetectionPoint_routeSelectFailure
+ * @description
+ *
+ * DP4 routeSelectFailure. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +138,10 @@ const O_BcsmTriggerDetectionPoint_routeSelectFailure: O_BcsmTriggerDetectionPoin
 
 /**
  * @summary routeSelectFailure
+ * @description
+ *
+ * DP4 routeSelectFailure. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */

@@ -15,6 +15,11 @@ import { fupoi } from '../CommonMgt/fupoi.va.mjs';
  * @summary informationEventReports
  * @description
  *
+ * `FunctionalUnitPackageId` for negotiating the communications-information
+ * functional unit (bit 0 of the package).
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.13 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

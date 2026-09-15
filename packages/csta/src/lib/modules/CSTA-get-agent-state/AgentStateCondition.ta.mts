@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AgentStateCondition
  * @description
- * 
+ *
+ * Condition associated with an agent state (ECMA-269 §22.1.5.2.1): forcedPause
+ * or other.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +34,13 @@ enum _enum_for_AgentStateCondition {
 /**
  * @summary AgentStateCondition
  * @description
- * 
+ *
+ * Condition associated with an agent state (ECMA-269 §22.1.5.2.1): forcedPause
+ * or other.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +57,13 @@ type AgentStateCondition = _enum_for_AgentStateCondition;
 /**
  * @summary AgentStateCondition
  * @description
- * 
+ *
+ * Condition associated with an agent state (ECMA-269 §22.1.5.2.1): forcedPause
+ * or other.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,6 +79,9 @@ const AgentStateCondition = _enum_for_AgentStateCondition;
 
 /**
  * @summary AgentStateCondition_forcedPause
+ * @description
+ *
+ * Forced Pause.
  * @constant
  * @type {number}
  */
@@ -77,6 +98,9 @@ const forcedPause: AgentStateCondition = AgentStateCondition.forcedPause; /* SHO
 
 /**
  * @summary AgentStateCondition_other
+ * @description
+ *
+ * Other (not Forced Pause).
  * @constant
  * @type {number}
  */

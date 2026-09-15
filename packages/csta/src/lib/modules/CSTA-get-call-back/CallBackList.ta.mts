@@ -14,7 +14,12 @@ import { CallBackList_Item, _decode_CallBackList_Item, _encode_CallBackList_Item
 /**
  * @summary CallBackList
  * @description
- * 
+ *
+ * SEQUENCE OF callback entries (ECMA-269 §22.1.8.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

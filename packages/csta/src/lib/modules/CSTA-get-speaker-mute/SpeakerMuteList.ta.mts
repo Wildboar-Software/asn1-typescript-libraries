@@ -9,7 +9,12 @@ import { SpeakerMuteList_Item, _decode_SpeakerMuteList_Item, _encode_SpeakerMute
 /**
  * @summary SpeakerMuteList
  * @description
- * 
+ *
+ * SEQUENCE OF speaker-mute entries (ECMA-269 §21.1.12.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

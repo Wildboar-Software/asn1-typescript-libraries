@@ -8,7 +8,13 @@ import { INTEGER, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary PrivateDataVersionSelectionArgument
  * @description
- * 
+ *
+ * INTEGER version to use (ECMA-269 §29.2.2, ECMA-285 §27.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

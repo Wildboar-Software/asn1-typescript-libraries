@@ -39,7 +39,13 @@ import {
 /**
  * @summary ProgressIndicator
  * @description
- * 
+ *
+ * Interworking situation in a public or private network outside the switching
+ * sub-domain. Event reporting for the call may be reduced as a result. ECMA-269
+ * Network Capabilities Changed.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,12 +74,22 @@ class ProgressIndicator {
     constructor (
         /**
          * @summary `progressLocation`.
+         * @description
+         *
+         * Where the progress indication originated (user, local/remote public
+         * or private network, transit, local interface, international, beyond
+         * interworking, other).
+         *
          * @public
          * @readonly
          */
         readonly progressLocation: ProgressIndicator_progressLocation,
         /**
          * @summary `progressDescription`.
+         * @description
+         *
+         * ISDN progress (ETSI ETS 300 182:1993), QSIG (ECMA-143), or other.
+         *
          * @public
          * @readonly
          */

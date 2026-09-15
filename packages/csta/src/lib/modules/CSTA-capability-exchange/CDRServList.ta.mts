@@ -23,7 +23,13 @@ import { StopCDRTransmission, _decode_StopCDRTransmission, _encode_StopCDRTransm
 /**
  * @summary CDRServList
  * @description
- * 
+ * CDR services the SF supports (ECMA-269 Annex C.21, ECMA-285 §9.10). Omit
+ * unsupported services.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,30 +50,45 @@ class CDRServList {
          * @summary `cdrNotification`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly cdrNotification: OPTIONAL<CdrNotification>,
         /**
          * @summary `cdrReport`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly cdrReport: OPTIONAL<CdrReport>,
         /**
          * @summary `sendStoredCDRs`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly sendStoredCDRs: OPTIONAL<SendStoredCDRs>,
         /**
          * @summary `startCDRTransmission`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly startCDRTransmission: OPTIONAL<StartCDRTransmission>,
         /**
          * @summary `stopCDRTransmission`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly stopCDRTransmission: OPTIONAL<StopCDRTransmission>
     ) {}

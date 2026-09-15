@@ -18,7 +18,17 @@ import { SecurityInfo, _decode_SecurityInfo, _encode_SecurityInfo } from "../CST
 /**
  * @summary CSTASecurityData
  * @description
- * 
+ *
+ * Per-message security attributes (ECMA-269 §12.2.12; ECMA-285
+ * §9.7). Detects lost or reordered messages, indicates freshness
+ * against replay, and carries opaque data for access control or
+ * authentication. Contents of `securityInfo` are not defined by
+ * CSTA. Association-level authentication may use ACSE (ECMA-285
+ * §7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +45,33 @@ class CSTASecurityData {
     constructor (
         /**
          * @summary `messageSequenceNumber`.
+         * @description
+         *
+         * Sequential number to detect missing messages and verify
+         * order (ECMA-269 §12.2.12).
+         *
          * @public
          * @readonly
          */
         readonly messageSequenceNumber: OPTIONAL<INTEGER>,
         /**
          * @summary `timestamp`.
+         * @description
+         *
+         * Generalized time indicating message freshness; helps reject
+         * replay after sequence numbers wrap (ECMA-269 §12.2.12).
+         *
          * @public
          * @readonly
          */
         readonly timestamp: OPTIONAL<TimeInfo>,
         /**
          * @summary `securityInfo`.
+         * @description
+         *
+         * Opaque security data for access control or the current
+         * security policy. Not defined by CSTA (ECMA-269 §12.2.12).
+         *
          * @public
          * @readonly
          */

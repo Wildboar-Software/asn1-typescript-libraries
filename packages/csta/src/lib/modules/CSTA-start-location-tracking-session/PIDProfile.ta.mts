@@ -8,7 +8,15 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary PIDProfile
  * @description
- * 
+ *
+ * CSTA PIDF-LO profile for creating/interpreting LocationInfo. Option 1:
+ * RFC-5491 rules 1,3,5,7 normative and 2,4,6,8,9 informative. Option 2: rules
+ * 1–9 all normative (ECMA-269 §12.2.18 / §28.1.7.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +36,15 @@ enum _enum_for_PIDProfile {
 /**
  * @summary PIDProfile
  * @description
- * 
+ *
+ * CSTA PIDF-LO profile for creating/interpreting LocationInfo. Option 1:
+ * RFC-5491 rules 1,3,5,7 normative and 2,4,6,8,9 informative. Option 2: rules
+ * 1–9 all normative (ECMA-269 §12.2.18 / §28.1.7.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +61,15 @@ type PIDProfile = _enum_for_PIDProfile;
 /**
  * @summary PIDProfile
  * @description
- * 
+ *
+ * CSTA PIDF-LO profile for creating/interpreting LocationInfo. Option 1:
+ * RFC-5491 rules 1,3,5,7 normative and 2,4,6,8,9 informative. Option 2: rules
+ * 1–9 all normative (ECMA-269 §12.2.18 / §28.1.7.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,6 +85,10 @@ const PIDProfile = _enum_for_PIDProfile;
 
 /**
  * @summary PIDProfile_pidProfileOption1
+ * @description
+ *
+ * RFC-5491 rules 1,3,5,7 normative; 2,4,6,8,9 informative (ECMA-269 §12.2.18).
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +97,10 @@ const PIDProfile_pidProfileOption1: PIDProfile = PIDProfile.pidProfileOption1; /
 
 /**
  * @summary pidProfileOption1
+ * @description
+ *
+ * RFC-5491 rules 1,3,5,7 normative; 2,4,6,8,9 informative (ECMA-269 §12.2.18).
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +109,10 @@ const pidProfileOption1: PIDProfile = PIDProfile.pidProfileOption1; /* SHORT_NAM
 
 /**
  * @summary PIDProfile_pidProfileOption2
+ * @description
+ *
+ * RFC-5491 rules 1–9 all normative (ECMA-269 §12.2.18).
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +121,10 @@ const PIDProfile_pidProfileOption2: PIDProfile = PIDProfile.pidProfileOption2; /
 
 /**
  * @summary pidProfileOption2
+ * @description
+ *
+ * RFC-5491 rules 1–9 all normative (ECMA-269 §12.2.18).
+ *
  * @constant
  * @type {number}
  */

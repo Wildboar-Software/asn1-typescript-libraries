@@ -76,7 +76,13 @@ import { AUTN, _decode_AUTN, _encode_AUTN } from "../MAP-MS-DataTypes/AUTN.ta.mj
 /**
  * @summary AuthenticationQuintuplet
  * @description
- * 
+ *
+ * One UMTS authentication vector: Rand, Xres, Ck, Ik and Autn. In an
+ * AuthenticationSetList of quintuplets the order is chronological; the first
+ * quintuplet is the oldest (3GPP TS 29.002 V19.1.0 clauses 7.6.7.1 and 17.7.1).
+ * Returned when the requesting node is not an MME and the user is a UMTS
+ * subscriber (3GPP TS 29.002 V19.1.0 clause 8.5.2.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,30 +102,52 @@ class AuthenticationQuintuplet {
     constructor (
         /**
          * @summary `rand`.
+         * @description
+         *
+         * Random number used for authentication (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.7.2).
+         *
          * @public
          * @readonly
          */
         readonly rand: RAND,
         /**
          * @summary `xres`.
+         * @description
+         *
+         * Expected response to a UMTS authentication request (3GPP TS 29.002
+         * V19.1.0 clause 7.6.7.5).
+         *
          * @public
          * @readonly
          */
         readonly xres: XRES,
         /**
          * @summary `ck`.
+         * @description
+         *
+         * UMTS ciphering key (3GPP TS 29.002 V19.1.0 clause 7.6.7.5A).
+         *
          * @public
          * @readonly
          */
         readonly ck: CK,
         /**
          * @summary `ik`.
+         * @description
+         *
+         * Integrity Key (3GPP TS 29.002 V19.1.0 clause 7.6.7.5B).
+         *
          * @public
          * @readonly
          */
         readonly ik: IK,
         /**
          * @summary `autn`.
+         * @description
+         *
+         * Authentication Token (3GPP TS 29.002 V19.1.0 clause 7.6.7.5C).
+         *
          * @public
          * @readonly
          */

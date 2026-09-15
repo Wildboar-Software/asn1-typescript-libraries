@@ -1,0 +1,25 @@
+{
+  "name": "xbhsm",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/xbhsm/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/xbhsm",
+        "tsConfig": "packages/xbhsm/tsconfig.lib.json",
+        "packageJson": "packages/xbhsm/package.json",
+        "main": "packages/xbhsm/src/index.mts",
+        "assets": [
+          "packages/xbhsm/*.md",
+          "packages/xbhsm/LICENSE.txt",
+          "packages/xbhsm/package.json"
+        ]
+      }
+    }
+  }
+}

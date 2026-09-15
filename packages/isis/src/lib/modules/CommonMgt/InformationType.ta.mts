@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary InformationType
  * @description
  *
+ * Type of a `communicationsInformation` event (OBJECT IDENTIFIER). Also the
+ * syntax of the `informationType` attribute on
+ * `communicationsInformationRecord`.
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.1, E.1.9 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

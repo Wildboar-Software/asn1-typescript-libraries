@@ -89,7 +89,11 @@ import { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalI
 /**
  * @summary SendRoutingInfoRes
  * @description
- * 
+ *
+ * Result of MAP_SEND_ROUTING_INFORMATION. IMSI must be present if the result is
+ * not segmented; if TC-Result-NL is used, IMSI must appear in one segment (3GPP
+ * TS 29.002 V19.1.0 clauses 10.1 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -133,144 +137,247 @@ class SendRoutingInfoRes {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.018 and 3GPP TS 23.066 (clause
+         * 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `extendedRoutingInfo`.
+         * @description
+         *
+         * Roaming number, forwarding data, or CAMEL routing.
+         *
          * @public
          * @readonly
          */
         readonly extendedRoutingInfo: OPTIONAL<ExtendedRoutingInfo>,
         /**
          * @summary `cug_CheckInfo`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly cug_CheckInfo: OPTIONAL<CUG_CheckInfo>,
         /**
          * @summary `cugSubscriptionFlag`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly cugSubscriptionFlag: OPTIONAL<NULL>,
         /**
          * @summary `subscriberInfo`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly subscriberInfo: OPTIONAL<SubscriberInfo>,
         /**
          * @summary `ss_List`.
+         * @description
+         *
+         * Operator option. HLR shall not send PLMN-specific SS-codes across
+         * PLMN boundaries (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly ss_List: OPTIONAL<SS_List>,
         /**
          * @summary `basicService`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.078; operator option if CAMEL is
+         * not involved (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly basicService: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `forwardingInterrogationRequired`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly forwardingInterrogationRequired: OPTIONAL<NULL>,
         /**
          * @summary `vmsc_Address`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.079 and 3GPP TS 23.078. Shall be
+         * present if ReleaseResourcesSupported is present (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly vmsc_Address: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `naea_PreferredCI`.
+         * @description
+         *
+         * Preferred carrier identity; included at HLR operator discretion
+         * (clauses 10.1.3 and 17.7.3).
+         *
          * @public
          * @readonly
          */
         readonly naea_PreferredCI: OPTIONAL<NAEA_PreferredCI>,
         /**
          * @summary `ccbs_Indicators`.
+         * @description
+         *
+         * CCBS possible / keep CCBS call (3GPP TS 23.093).
+         *
          * @public
          * @readonly
          */
         readonly ccbs_Indicators: OPTIONAL<CCBS_Indicators>,
         /**
          * @summary `msisdn`.
+         * @description
+         *
+         * Basic MSISDN if the call is forwarded and HLR supports redirecting
+         * number.
+         *
          * @public
          * @readonly
          */
         readonly msisdn: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `numberPortabilityStatus`.
+         * @description
+         *
+         * May be present if sender of SRIack is NPLR (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly numberPortabilityStatus: OPTIONAL<NumberPortabilityStatus>,
         /**
          * @summary `istAlertTimer`.
+         * @description
+         *
+         * IST Alert timer; only if GMSC indicated IST support (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly istAlertTimer: OPTIONAL<IST_AlertTimerValue>,
         /**
          * @summary `supportedCamelPhasesInVMSC`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly supportedCamelPhasesInVMSC: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `offeredCamel4CSIsInVMSC`.
+         * @description
+         *
+         * See clause 7.6.3.36F (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly offeredCamel4CSIsInVMSC: OPTIONAL<OfferedCamel4CSIs>,
         /**
          * @summary `routingInfo2`.
+         * @description
+         *
+         * See 3GPP TS 23.172 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly routingInfo2: OPTIONAL<RoutingInfo>,
         /**
          * @summary `ss_List2`.
+         * @description
+         *
+         * See 3GPP TS 23.172 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly ss_List2: OPTIONAL<SS_List>,
         /**
          * @summary `basicService2`.
+         * @description
+         *
+         * See 3GPP TS 23.172 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly basicService2: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `allowedServices`.
+         * @description
+         *
+         * See 3GPP TS 23.172 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly allowedServices: OPTIONAL<AllowedServices>,
         /**
          * @summary `unavailabilityCause`.
+         * @description
+         *
+         * See 3GPP TS 23.172 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly unavailabilityCause: OPTIONAL<UnavailabilityCause>,
         /**
          * @summary `releaseResourcesSupported`.
+         * @description
+         *
+         * VMSC supports MAP_RELEASE_RESOURCES; present if so indicated in
+         * Provide Roaming Number confirm (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly releaseResourcesSupported: OPTIONAL<NULL>,
         /**
          * @summary `gsm_BearerCapability`.
+         * @description
+         *
+         * As in 3GPP TS 29.007; two may be supplied (clause 10.1.3).
+         *
          * @public
          * @readonly
          */

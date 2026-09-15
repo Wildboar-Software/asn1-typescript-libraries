@@ -19,6 +19,14 @@ import {
  * @summary minimumBroadcastLSPTransmissionInterval_Default
  * @description
  *
+ * Default minimum interval between LSP transmissions on a broadcast circuit: 33
+ * ms. Resolution shall be no coarser than 10 ms. See clause 7.3.15.6.
+ *
+ * GMI `Timer` encoding: value = mantissa × 10^exponent seconds (ISO/IEC
+ * 10589:2002 Annex E.1.9).
+ *
+ * (ISO/IEC 10589:2002 clauses 7.3.15.6, 11.2.4 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

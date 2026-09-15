@@ -72,7 +72,14 @@ import { AgeIndicator, _decode_AgeIndicator, _encode_AgeIndicator } from "../MAP
 /**
  * @summary SuperChargerInfo
  * @description
- * 
+ *
+ * Super-Charger support in the serving entity: either subscriber data is
+ * required (`sendSubscriberData`) or data were retained (`subscriberDataStored`
+ * plus Age Indicator). Absent Super-Charger IE means the entity does not
+ * support the function.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.71, 8.1.2.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

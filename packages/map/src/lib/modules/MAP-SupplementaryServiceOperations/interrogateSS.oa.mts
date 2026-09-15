@@ -85,7 +85,13 @@ import { ss_NotAvailable } from "../MAP-Errors/ss-NotAvailable.oa.mjs";
 /**
  * @summary interrogateSS
  * @description
- * 
+ *
+ * MAP_INTERROGATE_SS: retrieve information related to a supplementary service.
+ * Used MSC→VLR and VLR→HLR; the VLR relays to the HLR if necessary. Confirmed.
+ * Typical MAP path: VLR→HLR. Local opcode 14. Timer class `m` (15 s to 30 s).
+ * Distinctive error: `ss-NotAvailable`. (3GPP TS 29.002 V19.1.0 clauses 11.5.1,
+ * 17.1.2, 17.3.2.19 and 17.6.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

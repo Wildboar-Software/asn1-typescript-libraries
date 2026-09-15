@@ -73,7 +73,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SendEndSignal_Arg
  * @description
- * 
+ *
+ * MAP_SEND_END_SIGNAL request from MSC-B to MSC-A indicating that the radio
+ * path to the MS has been established. MSC-A retains call control until it
+ * clears.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.4.2 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,6 +96,14 @@ class SendEndSignal_Arg {
     constructor (
         /**
          * @summary `an_APDU`.
+         * @description
+         *
+         * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages,
+         * as in 3GPP TS 23.009 and 29.010. The access-network protocol ID
+         * selects 48.006 or 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.9.1).
+         *
          * @public
          * @readonly
          */

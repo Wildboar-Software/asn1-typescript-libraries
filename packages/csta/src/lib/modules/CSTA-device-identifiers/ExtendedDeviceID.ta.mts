@@ -9,7 +9,21 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary ExtendedDeviceID
  * @description
- * 
+ *
+ * Device ID plus status when an actual identifier may be omitted
+ * (`APPLICATION 9`; ECMA-269 §6.1.1; ECMA-285 §9.2).
+ *
+ * - `deviceIdentifier`: identifier is provided.
+ * - `notKnown`: switching function cannot provide the ID but knows
+ *   the device exists.
+ * - `restricted`: cannot be given for regulatory or privacy reasons.
+ *
+ * `notRequired` and `notSpecified` are not used here; they appear on
+ * `RedirectionDeviceID` (ECMA-269 §12.3.24).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

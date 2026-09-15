@@ -20,7 +20,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary DeactivateArgument
  * @description
- * 
+ *
+ * Connection, rule, optional grammar and resource (ECMA-269 §26.1.4.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,30 +45,54 @@ class DeactivateArgument {
     constructor (
         /**
          * @summary `overConnection`.
+         * @description
+         *
+         * Connection whose Listener grammar is deactivated (ECMA-269
+         * §26.1.4.1).
+         *
          * @public
          * @readonly
          */
         readonly overConnection: ConnectionID,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `ruleName`.
+         * @description
+         *
+         * Grammar rule to deactivate (ECMA-269 §26.1.4.1).
+         *
          * @public
          * @readonly
          */
         readonly ruleName: IA5String,
         /**
          * @summary `grammarName`.
+         * @description
+         *
+         * Grammar to deactivate; if absent, all grammars are affected (ECMA-269
+         * §26.1.4.1).
+         *
          * @public
          * @readonly
          */
         readonly grammarName: OPTIONAL<IA5String>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

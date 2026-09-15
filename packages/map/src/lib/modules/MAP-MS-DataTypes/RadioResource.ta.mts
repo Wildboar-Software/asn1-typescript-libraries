@@ -73,7 +73,12 @@ import { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-
 /**
  * @summary RadioResource
  * @description
- * 
+ *
+ * One radio resource: Channel Type plus RAB Identity, to relate the resource
+ * with the radio access bearer.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.6.10A and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,12 +96,24 @@ class RadioResource {
     constructor (
         /**
          * @summary `radioResourceInformation`.
+         * @description
+         *
+         * Channel Type IE as in 3GPP TS 48.008.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.10).
+         *
          * @public
          * @readonly
          */
         readonly radioResourceInformation: RadioResourceInformation,
         /**
          * @summary `rab_Id`.
+         * @description
+         *
+         * Radio access bearer identifier as in 3GPP TS 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.57).
+         *
          * @public
          * @readonly
          */

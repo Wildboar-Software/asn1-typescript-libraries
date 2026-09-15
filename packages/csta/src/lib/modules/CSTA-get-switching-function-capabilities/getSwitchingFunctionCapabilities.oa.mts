@@ -21,7 +21,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getSwitchingFunctionCapabilities
  * @description
- * 
+ *
+ * Get Switching Function Capabilities (ECMA-269 §13.1.4 / ECMA-285 §11.1.4).
+ * Direction: CF→SF. ROSE local CODE 203. Errors: `universalFailure`. Returns
+ * the current capabilities of the entire switching function.
+ * Atomic acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

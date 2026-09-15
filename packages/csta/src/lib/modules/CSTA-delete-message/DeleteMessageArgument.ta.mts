@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary DeleteMessageArgument
  * @description
- * 
+ *
+ * Message to delete (ECMA-269 §26.1.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ class DeleteMessageArgument {
     constructor (
         /**
          * @summary `messageToBeDeleted`.
+         * @description
+         *
+         * Message identifier to delete (ECMA-269 §26.1.5.1).
+         *
          * @public
          * @readonly
          */
         readonly messageToBeDeleted: MessageID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

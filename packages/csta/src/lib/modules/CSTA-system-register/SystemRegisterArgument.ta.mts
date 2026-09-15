@@ -19,7 +19,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SystemRegisterArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 14-4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +41,31 @@ class SystemRegisterArgument {
     constructor (
         /**
          * @summary `requestTypes`.
+         * @description
+         *
+         * Services being registered: systemStatus, requestSystemStatus,
+         * switchingFunctionCapsChanged, switchingFunctionDevicesChanged.
          * @public
          * @readonly
          */
         readonly requestTypes: RequestTypes,
         /**
          * @summary `requestedStatusFilter`.
+         * @description
+         *
+         * System Status types to filter (not send). Mandatory if
+         * `requestTypes` includes System Status; otherwise shall not be
+         * provided.
          * @public
          * @readonly
          */
         readonly requestedStatusFilter: OPTIONAL<StatusFilter>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 14-4.
          * @public
          * @readonly
          */

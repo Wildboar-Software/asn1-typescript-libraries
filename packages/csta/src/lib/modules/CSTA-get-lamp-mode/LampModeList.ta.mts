@@ -9,7 +9,12 @@ import { LampModeList_Item, _decode_LampModeList_Item, _encode_LampModeList_Item
 /**
  * @summary LampModeList
  * @description
- * 
+ *
+ * SEQUENCE OF lamp-mode entries (ECMA-269 §21.1.7.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

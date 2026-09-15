@@ -73,7 +73,9 @@ import { Cksn, _decode_Cksn, _encode_Cksn } from "../MAP-MS-DataTypes/Cksn.ta.mj
 /**
  * @summary GSM_SecurityContextData
  * @description
- * 
+ *
+ * GSM security context: Kc and Cksn (3GPP TS 29.002 V19.1.0 clause 7.6.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +92,21 @@ class GSM_SecurityContextData {
     constructor (
         /**
          * @summary `kc`.
+         * @description
+         *
+         * Ciphering key (3GPP TS 29.002 V19.1.0 clauses 7.6.7.4 and 7.6.7.8).
+         *
          * @public
          * @readonly
          */
         readonly kc: Kc,
         /**
          * @summary `cksn`.
+         * @description
+         *
+         * Ciphering key sequence number (3GPP TS 29.002 V19.1.0 clauses 7.6.7.6
+         * and 7.6.7.8).
+         *
          * @public
          * @readonly
          */

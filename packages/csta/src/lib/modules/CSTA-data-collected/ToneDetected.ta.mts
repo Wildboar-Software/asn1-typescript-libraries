@@ -8,7 +8,14 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ToneDetected
  * @description
- * 
+ *
+ * Telephony tone kind. Frequency/duration/pause apply only when the value is
+ * `other` (ECMA-269 §25.1.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,7 +73,14 @@ enum _enum_for_ToneDetected {
 /**
  * @summary ToneDetected
  * @description
- * 
+ *
+ * Telephony tone kind. Frequency/duration/pause apply only when the value is
+ * `other` (ECMA-269 §25.1.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -102,7 +116,14 @@ type ToneDetected = _enum_for_ToneDetected;
 /**
  * @summary ToneDetected
  * @description
- * 
+ *
+ * Telephony tone kind. Frequency/duration/pause apply only when the value is
+ * `other` (ECMA-269 §25.1.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -137,6 +158,10 @@ const ToneDetected = _enum_for_ToneDetected;
 
 /**
  * @summary ToneDetected_beep
+ * @description
+ *
+ * Beep tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +170,10 @@ const ToneDetected_beep: ToneDetected = ToneDetected.beep; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary beep
+ * @description
+ *
+ * Beep tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +182,10 @@ const beep: ToneDetected = ToneDetected.beep; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_billing
+ * @description
+ *
+ * Billing tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +194,10 @@ const ToneDetected_billing: ToneDetected = ToneDetected.billing; /* LONG_NAMED_E
 
 /**
  * @summary billing
+ * @description
+ *
+ * Billing tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +206,10 @@ const billing: ToneDetected = ToneDetected.billing; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary ToneDetected_busy
+ * @description
+ *
+ * Busy tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -177,6 +218,10 @@ const ToneDetected_busy: ToneDetected = ToneDetected.busy; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary busy
+ * @description
+ *
+ * Busy tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -185,6 +230,10 @@ const busy: ToneDetected = ToneDetected.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_carrier
+ * @description
+ *
+ * Carrier tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -193,6 +242,10 @@ const ToneDetected_carrier: ToneDetected = ToneDetected.carrier; /* LONG_NAMED_E
 
 /**
  * @summary carrier
+ * @description
+ *
+ * Carrier tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -201,6 +254,10 @@ const carrier: ToneDetected = ToneDetected.carrier; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary ToneDetected_confirmation
+ * @description
+ *
+ * Confirmation tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -209,6 +266,10 @@ const ToneDetected_confirmation: ToneDetected = ToneDetected.confirmation; /* LO
 
 /**
  * @summary confirmation
+ * @description
+ *
+ * Confirmation tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -217,6 +278,10 @@ const confirmation: ToneDetected = ToneDetected.confirmation; /* SHORT_NAMED_ENU
 
 /**
  * @summary ToneDetected_dial
+ * @description
+ *
+ * Dial tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -225,6 +290,10 @@ const ToneDetected_dial: ToneDetected = ToneDetected.dial; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary dial
+ * @description
+ *
+ * Dial tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -233,6 +302,10 @@ const dial: ToneDetected = ToneDetected.dial; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_faxCNG
+ * @description
+ *
+ * Fax CNG (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -241,6 +314,10 @@ const ToneDetected_faxCNG: ToneDetected = ToneDetected.faxCNG; /* LONG_NAMED_ENU
 
 /**
  * @summary faxCNG
+ * @description
+ *
+ * Fax CNG (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -249,6 +326,10 @@ const faxCNG: ToneDetected = ToneDetected.faxCNG; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary ToneDetected_hold
+ * @description
+ *
+ * Hold tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -257,6 +338,10 @@ const ToneDetected_hold: ToneDetected = ToneDetected.hold; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary hold
+ * @description
+ *
+ * Hold tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -265,6 +350,10 @@ const hold: ToneDetected = ToneDetected.hold; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_howler
+ * @description
+ *
+ * Howler tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -273,6 +362,10 @@ const ToneDetected_howler: ToneDetected = ToneDetected.howler; /* LONG_NAMED_ENU
 
 /**
  * @summary howler
+ * @description
+ *
+ * Howler tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -281,6 +374,10 @@ const howler: ToneDetected = ToneDetected.howler; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary ToneDetected_intrusion
+ * @description
+ *
+ * Intrusion tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -289,6 +386,10 @@ const ToneDetected_intrusion: ToneDetected = ToneDetected.intrusion; /* LONG_NAM
 
 /**
  * @summary intrusion
+ * @description
+ *
+ * Intrusion tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -297,6 +398,10 @@ const intrusion: ToneDetected = ToneDetected.intrusion; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary ToneDetected_modemCNG
+ * @description
+ *
+ * Modem CNG (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -305,6 +410,10 @@ const ToneDetected_modemCNG: ToneDetected = ToneDetected.modemCNG; /* LONG_NAMED
 
 /**
  * @summary modemCNG
+ * @description
+ *
+ * Modem CNG (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -313,6 +422,10 @@ const modemCNG: ToneDetected = ToneDetected.modemCNG; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary ToneDetected_park
+ * @description
+ *
+ * Park tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -321,6 +434,10 @@ const ToneDetected_park: ToneDetected = ToneDetected.park; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary park
+ * @description
+ *
+ * Park tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -329,6 +446,10 @@ const park: ToneDetected = ToneDetected.park; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ToneDetected_recordWarning
+ * @description
+ *
+ * Record-warning tone (call may be being recorded) (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -337,6 +458,10 @@ const ToneDetected_recordWarning: ToneDetected = ToneDetected.recordWarning; /* 
 
 /**
  * @summary recordWarning
+ * @description
+ *
+ * Record-warning tone (call may be being recorded) (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -345,6 +470,10 @@ const recordWarning: ToneDetected = ToneDetected.recordWarning; /* SHORT_NAMED_E
 
 /**
  * @summary ToneDetected_reorder
+ * @description
+ *
+ * Reorder tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -353,6 +482,10 @@ const ToneDetected_reorder: ToneDetected = ToneDetected.reorder; /* LONG_NAMED_E
 
 /**
  * @summary reorder
+ * @description
+ *
+ * Reorder tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -361,6 +494,10 @@ const reorder: ToneDetected = ToneDetected.reorder; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary ToneDetected_ringback
+ * @description
+ *
+ * Ringback tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -369,6 +506,10 @@ const ToneDetected_ringback: ToneDetected = ToneDetected.ringback; /* LONG_NAMED
 
 /**
  * @summary ringback
+ * @description
+ *
+ * Ringback tone (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -377,6 +518,10 @@ const ringback: ToneDetected = ToneDetected.ringback; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary ToneDetected_silence
+ * @description
+ *
+ * Silence (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -385,6 +530,10 @@ const ToneDetected_silence: ToneDetected = ToneDetected.silence; /* LONG_NAMED_E
 
 /**
  * @summary silence
+ * @description
+ *
+ * Silence (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -393,6 +542,10 @@ const silence: ToneDetected = ToneDetected.silence; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary ToneDetected_sitVC
+ * @description
+ *
+ * SIT VC (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -401,6 +554,10 @@ const ToneDetected_sitVC: ToneDetected = ToneDetected.sitVC; /* LONG_NAMED_ENUME
 
 /**
  * @summary sitVC
+ * @description
+ *
+ * SIT VC (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -409,6 +566,10 @@ const sitVC: ToneDetected = ToneDetected.sitVC; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary ToneDetected_sitIC
+ * @description
+ *
+ * SIT IC (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -417,6 +578,10 @@ const ToneDetected_sitIC: ToneDetected = ToneDetected.sitIC; /* LONG_NAMED_ENUME
 
 /**
  * @summary sitIC
+ * @description
+ *
+ * SIT IC (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -425,6 +590,10 @@ const sitIC: ToneDetected = ToneDetected.sitIC; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary ToneDetected_sitRO
+ * @description
+ *
+ * SIT RO (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -433,6 +602,10 @@ const ToneDetected_sitRO: ToneDetected = ToneDetected.sitRO; /* LONG_NAMED_ENUME
 
 /**
  * @summary sitRO
+ * @description
+ *
+ * SIT RO (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -441,6 +614,10 @@ const sitRO: ToneDetected = ToneDetected.sitRO; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary ToneDetected_sitNC
+ * @description
+ *
+ * SIT NC (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -449,6 +626,10 @@ const ToneDetected_sitNC: ToneDetected = ToneDetected.sitNC; /* LONG_NAMED_ENUME
 
 /**
  * @summary sitNC
+ * @description
+ *
+ * SIT NC (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -457,6 +638,10 @@ const sitNC: ToneDetected = ToneDetected.sitNC; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary ToneDetected_other
+ * @description
+ *
+ * Other tone; may carry frequency/duration/pause (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -465,6 +650,10 @@ const ToneDetected_other: ToneDetected = ToneDetected.other; /* LONG_NAMED_ENUME
 
 /**
  * @summary other
+ * @description
+ *
+ * Other tone; may carry frequency/duration/pause (ECMA-269 §25.1.1.1).
+ *
  * @constant
  * @type {number}
  */

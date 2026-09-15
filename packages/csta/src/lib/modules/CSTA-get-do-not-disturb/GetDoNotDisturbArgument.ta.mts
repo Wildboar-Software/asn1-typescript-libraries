@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetDoNotDisturbArgument
  * @description
- * 
+ *
+ * Get Do Not Disturb request (ECMA-269 §22.1.10.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class GetDoNotDisturbArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device whose DND status is queried.
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

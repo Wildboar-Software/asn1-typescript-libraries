@@ -73,7 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary PrepareGroupCallRes
  * @description
- * 
+ *
+ * Result of MAP_PREPARE_GROUP_CALL (3GPP TS 29.002 V19.1.0 clauses 10.4 and
+ * 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,21 @@ class PrepareGroupCallRes {
     constructor (
         /**
          * @summary `groupCallNumber`.
+         * @description
+         *
+         * Temporary E.164 number for routing from Anchor MSC to Relay MSC
+         * (clause 10.4.3).
+         *
          * @public
          * @readonly
          */
         readonly groupCallNumber: ISDN_AddressString,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

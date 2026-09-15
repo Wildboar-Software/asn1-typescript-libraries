@@ -73,7 +73,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PDP_Type
  * @description
- * 
+ *
+ * Protocol used by the MS as in 3GPP TS 23.060. Octets follow 3GPP TS 29.060.
+ * Allowed values: PPP, IPv4 (HEX `21`), IPv6 (HEX `57`), and Non-IP (HEX `02`).
+ * To allow both IPv4 and IPv6 but not IPv4v6, two PDP contexts for the same APN
+ * are used.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.44 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

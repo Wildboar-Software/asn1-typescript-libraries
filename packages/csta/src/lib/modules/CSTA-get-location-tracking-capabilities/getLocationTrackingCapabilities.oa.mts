@@ -26,7 +26,19 @@ import {
 /**
  * @summary getLocationTrackingCapabilities
  * @description
- * 
+ *
+ * Obtains location tracking capabilities for a device. Rejected if the device
+ * does not support tracking. A group device returns what Start Location
+ * Tracking Session supports for that group (ECMA-269 §28.1.10).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:539. Errors: `universalFailure` (ECMA-285 §26.1.10).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

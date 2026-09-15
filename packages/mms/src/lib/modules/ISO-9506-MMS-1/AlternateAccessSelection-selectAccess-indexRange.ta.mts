@@ -1,0 +1,178 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+// export { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+
+
+/**
+ * @summary AlternateAccessSelection_selectAccess_indexRange
+ * @description
+ *
+ * INDEX-RANGE for SELECT-ACCESS. Derived type is an
+ * array of the selected elements, numbered from zero.
+ * Requires `str1` CBB.
+ * ISO 9506-1:2003 §14.3.1.1.4.4.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * AlternateAccessSelection-selectAccess-indexRange ::= SEQUENCE {
+ *     lowIndex [0] IMPLICIT Unsigned32,
+ *     numberOfElements [1] IMPLICIT Unsigned32
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class AlternateAccessSelection_selectAccess_indexRange {
+    constructor (
+        /**
+         * @summary `lowIndex`.
+         * @description
+         *
+         * First selected index (valid for the array); becomes
+         * element 0 of the derived array.
+         * ISO 9506-1:2003 §14.3.1.1.4.4.1.
+         *
+         * @public
+         * @readonly
+         */
+        readonly lowIndex: Unsigned32,
+        /**
+         * @summary `numberOfElements`.
+         * @description
+         *
+         * Count including Low Index. Zero means from Low Index
+         * through the last defined element.
+         * ISO 9506-1:2003 §14.3.1.1.4.4.2.
+         *
+         * @public
+         * @readonly
+         */
+        readonly numberOfElements: Unsigned32
+    ) {}
+
+    /**
+     * @summary Restructures an object into a AlternateAccessSelection_selectAccess_indexRange
+     * @description
+     * 
+     * This takes an `object` and converts it to a `AlternateAccessSelection_selectAccess_indexRange`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `AlternateAccessSelection_selectAccess_indexRange`.
+     * @returns {AlternateAccessSelection_selectAccess_indexRange}
+     */
+    public static _from_object (_o: { [_K in keyof (AlternateAccessSelection_selectAccess_indexRange)]: (AlternateAccessSelection_selectAccess_indexRange)[_K] }): AlternateAccessSelection_selectAccess_indexRange {
+        return new AlternateAccessSelection_selectAccess_indexRange(_o.lowIndex, _o.numberOfElements);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of AlternateAccessSelection_selectAccess_indexRange
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_AlternateAccessSelection_selectAccess_indexRange: $.ComponentSpec[] = [
+    new $.ComponentSpec("lowIndex", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("numberOfElements", false, $.hasTag(_TagClass.context, 1))
+];
+
+/**
+ * @summary The Trailing Root Component Types of AlternateAccessSelection_selectAccess_indexRange
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_AlternateAccessSelection_selectAccess_indexRange: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of AlternateAccessSelection_selectAccess_indexRange
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_AlternateAccessSelection_selectAccess_indexRange: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_AlternateAccessSelection_selectAccess_indexRange: $.ASN1Decoder<AlternateAccessSelection_selectAccess_indexRange> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) AlternateAccessSelection_selectAccess_indexRange
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_AlternateAccessSelection_selectAccess_indexRange (el: _Element): AlternateAccessSelection_selectAccess_indexRange {
+    if (!_cached_decoder_for_AlternateAccessSelection_selectAccess_indexRange) { _cached_decoder_for_AlternateAccessSelection_selectAccess_indexRange = function (el: _Element): AlternateAccessSelection_selectAccess_indexRange {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError("AlternateAccessSelection-selectAccess-indexRange contained only " + sequence.length.toString() + " elements.");
+    }
+    sequence[0].name = "lowIndex";
+    sequence[1].name = "numberOfElements";
+    let lowIndex!: Unsigned32;
+    let numberOfElements!: Unsigned32;
+    lowIndex = $._decode_implicit<Unsigned32>(() => _decode_Unsigned32)(sequence[0]);
+    numberOfElements = $._decode_implicit<Unsigned32>(() => _decode_Unsigned32)(sequence[1]);
+    return new AlternateAccessSelection_selectAccess_indexRange(
+        lowIndex,
+        numberOfElements,
+
+    );
+}; }
+    return _cached_decoder_for_AlternateAccessSelection_selectAccess_indexRange(el);
+}
+
+let _cached_encoder_for_AlternateAccessSelection_selectAccess_indexRange: $.ASN1Encoder<AlternateAccessSelection_selectAccess_indexRange> | null = null;
+
+/**
+ * @summary Encodes a(n) AlternateAccessSelection_selectAccess_indexRange into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The AlternateAccessSelection_selectAccess_indexRange, encoded as an ASN.1 Element.
+ */
+export
+function _encode_AlternateAccessSelection_selectAccess_indexRange (value: AlternateAccessSelection_selectAccess_indexRange, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_AlternateAccessSelection_selectAccess_indexRange) { _cached_encoder_for_AlternateAccessSelection_selectAccess_indexRange = function (value: AlternateAccessSelection_selectAccess_indexRange): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_Unsigned32, $.BER)(value.lowIndex, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_Unsigned32, $.BER)(value.numberOfElements, $.BER)
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_AlternateAccessSelection_selectAccess_indexRange(value, elGetter);
+}
+
+
+/* eslint-enable */

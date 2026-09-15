@@ -73,6 +73,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * @summary MM_EventNotSupported_Param
  * @description
  * 
+ * Optional parameter of `mm-EventNotSupported` (3GPP TS 29.002 V19.1.0 clauses
+ * 8.1.8.3 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

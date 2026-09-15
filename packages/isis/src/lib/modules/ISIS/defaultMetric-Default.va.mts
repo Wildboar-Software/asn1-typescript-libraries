@@ -15,6 +15,11 @@ import {
  * @summary defaultMetric_Default
  * @description
  *
+ * Default value of the (mandatory) default metric on a circuit or reachable
+ * address: 20.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.2.2, 11.2.5.1 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

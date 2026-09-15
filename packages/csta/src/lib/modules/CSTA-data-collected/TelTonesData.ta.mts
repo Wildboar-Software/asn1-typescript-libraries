@@ -21,7 +21,14 @@ import {
 /**
  * @summary TelTonesData
  * @description
- * 
+ *
+ * Collected telephony tone. Present only when collection type is telephony
+ * tones (ECMA-269 §25.1.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +46,43 @@ class TelTonesData {
     constructor (
         /**
          * @summary `toneDetected`.
+         * @description
+         *
+         * Detected telephony tone (ECMA-269 §25.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly toneDetected: ToneDetected,
         /**
          * @summary `toneFrequency`.
+         * @description
+         *
+         * Hz of the tone. Only when `toneDetected` is `other` (ECMA-269
+         * §25.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly toneFrequency: OPTIONAL<INTEGER>,
         /**
          * @summary `toneDuration`.
+         * @description
+         *
+         * Milliseconds. Only when `toneDetected` is `other` (ECMA-269
+         * §25.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly toneDuration: OPTIONAL<INTEGER>,
         /**
          * @summary `tonePauseDuration`.
+         * @description
+         *
+         * Milliseconds since the previous tone. Only when `toneDetected` is
+         * `other` (ECMA-269 §25.1.1.1).
+         *
          * @public
          * @readonly
          */

@@ -142,7 +142,13 @@ import { sendGroupCallInfo } from "../MAP-Group-Call-Operations/sendGroupCallInf
 /**
  * @summary Supported_MAP_Operations
  * @description
- * 
+ *
+ * Information object set of all MAP operations (mobile service, OM, call
+ * handling, supplementary service, short message, group call, and location
+ * service). Resolves TCAP component relation constraints for the MAP abstract
+ * syntax. An entity need support only the subset required by its procedures
+ * (3GPP TS 29.002 V19.1.0 clauses 17.1 and 17.1.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

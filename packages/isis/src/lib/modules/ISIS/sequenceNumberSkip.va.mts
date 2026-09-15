@@ -15,6 +15,11 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary sequenceNumberSkip
  * @description
  *
+ * `informationType` when an LSP sequence number is incremented by more than
+ * one. Counted by `sequenceNumberSkips`.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

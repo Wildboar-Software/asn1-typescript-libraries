@@ -73,7 +73,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Ext_SS_Status
  * @description
- * 
+ *
+ * State of an individual supplementary service as in 3GPP TS 23.011. Size 1..5
+ * octets.
+ *
+ * Octet 1: bits 8765 unused (0000); bits 4321 convey the Q, P, R and A bits
+ * (bit 4 = Q, bit 3 = P, bit 2 = R, bit 1 = A). Octets 2-5 are reserved for
+ * future use and shall be discarded if received and not understood.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.3.17).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

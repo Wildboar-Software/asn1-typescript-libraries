@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SelectValue
  * @description
- * 
+ *
+ * Route-selection preference (used with Route Select). ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +38,11 @@ enum _enum_for_SelectValue {
 /**
  * @summary SelectValue
  * @description
- * 
+ *
+ * Route-selection preference (used with Route Select). ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,7 +62,11 @@ type SelectValue = _enum_for_SelectValue;
 /**
  * @summary SelectValue
  * @description
- * 
+ *
+ * Route-selection preference (used with Route Select). ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -73,14 +85,17 @@ const SelectValue = _enum_for_SelectValue;
 
 /**
  * @summary SelectValue_normal
+ * @description Normal route selection. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SelectValue_normal: SelectValue = SelectValue.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
+ * @description Alias of {@link SelectValue_normal}.
  * @constant
  * @type {number}
  */
@@ -89,14 +104,17 @@ const normal: SelectValue = SelectValue.normal; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary SelectValue_leastCost
+ * @description Least-cost route selection. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SelectValue_leastCost: SelectValue = SelectValue.leastCost; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary leastCost
+ * @description Alias of {@link SelectValue_leastCost}.
  * @constant
  * @type {number}
  */
@@ -105,14 +123,17 @@ const leastCost: SelectValue = SelectValue.leastCost; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary SelectValue_emergency
+ * @description Emergency route selection. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SelectValue_emergency: SelectValue = SelectValue.emergency; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergency
+ * @description Alias of {@link SelectValue_emergency}.
  * @constant
  * @type {number}
  */
@@ -121,14 +142,17 @@ const emergency: SelectValue = SelectValue.emergency; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary SelectValue_aCD
+ * @description ACD route selection. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SelectValue_aCD: SelectValue = SelectValue.aCD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aCD
+ * @description Alias of {@link SelectValue_aCD}.
  * @constant
  * @type {number}
  */
@@ -137,14 +161,17 @@ const aCD: SelectValue = SelectValue.aCD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SelectValue_userDefined
+ * @description User-defined route selection. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SelectValue_userDefined: SelectValue = SelectValue.userDefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userDefined
+ * @description Alias of {@link SelectValue_userDefined}.
  * @constant
  * @type {number}
  */

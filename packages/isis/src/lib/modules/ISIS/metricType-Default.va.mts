@@ -20,6 +20,10 @@ import {
  * @summary metricType_Default
  * @description
  *
+ * Default reachable-address metric type: internal.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.2.2, 11.2.12 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

@@ -73,6 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CUG_RejectCause
  * @description
  * 
+ * Cause on `CUG-RejectParam`. Clause 7.6.1.4 mentions incoming call barred and
+ * non-CUG membership as examples (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,6 +101,10 @@ enum _enum_for_CUG_RejectCause {
  * @summary CUG_RejectCause
  * @description
  * 
+ * Cause on `CUG-RejectParam`. Clause 7.6.1.4 mentions incoming call barred and
+ * non-CUG membership as examples (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -116,6 +124,10 @@ type CUG_RejectCause = _enum_for_CUG_RejectCause;
  * @summary CUG_RejectCause
  * @description
  * 
+ * Cause on `CUG-RejectParam`. Clause 7.6.1.4 mentions incoming call barred and
+ * non-CUG membership as examples (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -133,6 +145,11 @@ const CUG_RejectCause = _enum_for_CUG_RejectCause;
 
 /**
  * @summary CUG_RejectCause_incomingCallsBarredWithinCUG
+ * @description
+ *
+ * Incoming calls barred within the CUG (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4
+ * and 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +158,11 @@ const CUG_RejectCause_incomingCallsBarredWithinCUG: CUG_RejectCause = CUG_Reject
 
 /**
  * @summary incomingCallsBarredWithinCUG
+ * @description
+ *
+ * Incoming calls barred within the CUG (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4
+ * and 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +171,10 @@ const incomingCallsBarredWithinCUG: CUG_RejectCause = CUG_RejectCause.incomingCa
 
 /**
  * @summary CUG_RejectCause_subscriberNotMemberOfCUG
+ * @description
+ *
+ * Non-CUG membership (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +183,10 @@ const CUG_RejectCause_subscriberNotMemberOfCUG: CUG_RejectCause = CUG_RejectCaus
 
 /**
  * @summary subscriberNotMemberOfCUG
+ * @description
+ *
+ * Non-CUG membership (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +195,11 @@ const subscriberNotMemberOfCUG: CUG_RejectCause = CUG_RejectCause.subscriberNotM
 
 /**
  * @summary CUG_RejectCause_requestedBasicServiceViolatesCUG_Constraints
+ * @description
+ *
+ * `requestedBasicServiceViolatesCUG-Constraints` (5). Clause 7.6.1.4 does not
+ * list this value separately (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +208,11 @@ const CUG_RejectCause_requestedBasicServiceViolatesCUG_Constraints: CUG_RejectCa
 
 /**
  * @summary requestedBasicServiceViolatesCUG_Constraints
+ * @description
+ *
+ * `requestedBasicServiceViolatesCUG-Constraints` (5). Clause 7.6.1.4 does not
+ * list this value separately (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -181,6 +221,11 @@ const requestedBasicServiceViolatesCUG_Constraints: CUG_RejectCause = CUG_Reject
 
 /**
  * @summary CUG_RejectCause_calledPartySS_InteractionViolation
+ * @description
+ *
+ * `calledPartySS-InteractionViolation` (7). Clause 7.6.1.4 does not list this
+ * value separately (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +234,11 @@ const CUG_RejectCause_calledPartySS_InteractionViolation: CUG_RejectCause = CUG_
 
 /**
  * @summary calledPartySS_InteractionViolation
+ * @description
+ *
+ * `calledPartySS-InteractionViolation` (7). Clause 7.6.1.4 does not list this
+ * value separately (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */

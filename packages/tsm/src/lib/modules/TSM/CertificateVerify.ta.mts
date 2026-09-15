@@ -17,7 +17,10 @@ import { Signature, _decode_Signature, _encode_Signature } from "../TSM/Signatur
 /**
  * @summary CertificateVerify
  * @description
- * 
+ *
+ * TLS CertificateVerify: signature over the handshake transcript.
+ * ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +36,10 @@ class CertificateVerify {
     constructor (
         /**
          * @summary `signature`.
+         * @description
+         *
+         * Signature over the handshake transcript. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */

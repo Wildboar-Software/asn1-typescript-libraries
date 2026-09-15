@@ -18,7 +18,11 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 /**
  * @summary HASH
  * @description
- * 
+ *
+ * MAC / hash of `ToBeHashed`, encoded as `Opaque(SIZE(0..255))` with a
+ * content constraint. Used in stream and block cipher records. ITU-T
+ * Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

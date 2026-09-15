@@ -1,7 +1,13 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-data-call-types`.
+ * Digital-data call capability parameters used in capability exchange:
+ * supported connection rates and delay tolerances, available channels at a
+ * device, and max channels per connection. ECMA-269 §12.2.20, Get Logical
+ * Device Information; ECMA-285 §9.13.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
  */
 export * from "./ConnectionRateList.ta.mjs";
 export * from "./DelayToleranceList.ta.mjs";

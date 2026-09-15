@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CauseValue
  * @description
- * 
+ *
+ * Cause value extracted from the Cause parameter in ITU-T Recommendation Q.763.
+ * Use of the cause value refers to ITU-T Recommendation Q.850 (3GPP TS 29.002
+ * V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

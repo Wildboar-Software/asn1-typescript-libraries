@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CDRTransferMode
  * @description
- * 
+ *
+ * When the switching function sends CDRs after Start Call Detail Records
+ * Transmission. ECMA-269 §6.3, §27.1.4.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +35,12 @@ enum _enum_for_CDRTransferMode {
 /**
  * @summary CDRTransferMode
  * @description
- * 
+ *
+ * When the switching function sends CDRs after Start Call Detail Records
+ * Transmission. ECMA-269 §6.3, §27.1.4.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +58,12 @@ type CDRTransferMode = _enum_for_CDRTransferMode;
 /**
  * @summary CDRTransferMode
  * @description
- * 
+ *
+ * When the switching function sends CDRs after Start Call Detail Records
+ * Transmission. ECMA-269 §6.3, §27.1.4.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +80,10 @@ const CDRTransferMode = _enum_for_CDRTransferMode;
 
 /**
  * @summary CDRTransferMode_transferAtEndOfCall
+ * @description
+ *
+ * Send a report after every call. ECMA-269 §6.3.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +100,10 @@ const transferAtEndOfCall: CDRTransferMode = CDRTransferMode.transferAtEndOfCall
 
 /**
  * @summary CDRTransferMode_transferOnRequest
+ * @description
+ *
+ * Store records until Send Stored Call Detail Records. ECMA-269 §6.3.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +120,10 @@ const transferOnRequest: CDRTransferMode = CDRTransferMode.transferOnRequest; /*
 
 /**
  * @summary CDRTransferMode_transferOnThresholdReached
+ * @description
+ *
+ * Store until a threshold or timeout, then notify. ECMA-269 §6.3.
+ *
  * @constant
  * @type {number}
  */

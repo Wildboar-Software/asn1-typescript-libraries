@@ -75,7 +75,10 @@ import { maxNumOfCamelTDPData } from "./maxNumOfCamelTDPData.va.mjs";
 /**
  * @summary MT_smsCAMELTDP_CriteriaList
  * @description
- * 
+ *
+ * List of MT-SMS CAMEL TDP criteria, associated with MT-SMS-CSI in CAMEL phase
+ * 4. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

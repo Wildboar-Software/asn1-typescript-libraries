@@ -50,8 +50,6 @@ import * as $ from '@wildboar/asn1/functional';
  *   -- and the content specific notification types are defined
  *   -- in relevant content specifications
  *   service-message(7) -- the message content is for service purposes;
- *
- *
  * -- it may be a notification related to a service message;
  * -- used only by bilateral agreement --}(SIZE (0..ub-bit-options))
  * ```

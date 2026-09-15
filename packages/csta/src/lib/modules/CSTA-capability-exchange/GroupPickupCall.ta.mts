@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GroupPickupCall
  * @description
- * 
+ * Capability bitmap for the Group Pickup Call service (ECMA-269 C.5.14,
+ * ECMA-285 §9.10). Presence of this entry in `CallControlServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +45,9 @@ type GroupPickupCall = BIT_STRING;
 /**
  * @summary GroupPickupCall_alerting
  * @constant
+ * @description
+ * Bit set means the SF supports initial connection state Alerting (ECMA-269
+ * C.5.14).
  */
 export
 const GroupPickupCall_alerting: number = 0; /* LONG_NAMED_BIT */
@@ -43,6 +55,8 @@ const GroupPickupCall_alerting: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary alerting
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_alerting`.
  */
 export
 const alerting: number = GroupPickupCall_alerting; /* SHORT_NAMED_BIT */
@@ -50,6 +64,9 @@ const alerting: number = GroupPickupCall_alerting; /* SHORT_NAMED_BIT */
 /**
  * @summary GroupPickupCall_connected
  * @constant
+ * @description
+ * Bit set means the SF supports initial connection state Connected (ECMA-269
+ * C.5.14).
  */
 export
 const GroupPickupCall_connected: number = 1; /* LONG_NAMED_BIT */
@@ -57,6 +74,8 @@ const GroupPickupCall_connected: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary connected
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_connected`.
  */
 export
 const connected: number = GroupPickupCall_connected; /* SHORT_NAMED_BIT */
@@ -64,6 +83,9 @@ const connected: number = GroupPickupCall_connected; /* SHORT_NAMED_BIT */
 /**
  * @summary GroupPickupCall_hold
  * @constant
+ * @description
+ * Bit set means the SF supports initial connection state Hold (ECMA-269
+ * C.5.14).
  */
 export
 const GroupPickupCall_hold: number = 2; /* LONG_NAMED_BIT */
@@ -71,6 +93,8 @@ const GroupPickupCall_hold: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary hold
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_hold`.
  */
 export
 const hold: number = GroupPickupCall_hold; /* SHORT_NAMED_BIT */
@@ -78,6 +102,9 @@ const hold: number = GroupPickupCall_hold; /* SHORT_NAMED_BIT */
 /**
  * @summary GroupPickupCall_queued
  * @constant
+ * @description
+ * Bit set means the SF supports initial connection state Queued (ECMA-269
+ * C.5.14).
  */
 export
 const GroupPickupCall_queued: number = 3; /* LONG_NAMED_BIT */
@@ -85,6 +112,8 @@ const GroupPickupCall_queued: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary queued
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_queued`.
  */
 export
 const queued: number = GroupPickupCall_queued; /* SHORT_NAMED_BIT */
@@ -92,6 +121,9 @@ const queued: number = GroupPickupCall_queued; /* SHORT_NAMED_BIT */
 /**
  * @summary GroupPickupCall_pickGroup
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.5.14).
  */
 export
 const GroupPickupCall_pickGroup: number = 4; /* LONG_NAMED_BIT */
@@ -99,6 +131,8 @@ const GroupPickupCall_pickGroup: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary pickGroup
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_pickGroup`.
  */
 export
 const pickGroup: number = GroupPickupCall_pickGroup; /* SHORT_NAMED_BIT */
@@ -106,6 +140,9 @@ const pickGroup: number = GroupPickupCall_pickGroup; /* SHORT_NAMED_BIT */
 /**
  * @summary GroupPickupCall_correlatorData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `correlatorData` parameter
+ * (ECMA-269 C.5.14).
  */
 export
 const GroupPickupCall_correlatorData: number = 5; /* LONG_NAMED_BIT */
@@ -113,6 +150,8 @@ const GroupPickupCall_correlatorData: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary correlatorData
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_correlatorData`.
  */
 export
 const correlatorData: number = GroupPickupCall_correlatorData; /* SHORT_NAMED_BIT */
@@ -120,6 +159,9 @@ const correlatorData: number = GroupPickupCall_correlatorData; /* SHORT_NAMED_BI
 /**
  * @summary GroupPickupCall_userData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `userData` parameter (ECMA-269
+ * C.5.14).
  */
 export
 const GroupPickupCall_userData: number = 6; /* LONG_NAMED_BIT */
@@ -127,6 +169,8 @@ const GroupPickupCall_userData: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary userData
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_userData`.
  */
 export
 const userData: number = GroupPickupCall_userData; /* SHORT_NAMED_BIT */
@@ -134,6 +178,9 @@ const userData: number = GroupPickupCall_userData; /* SHORT_NAMED_BIT */
 /**
  * @summary GroupPickupCall_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.5.14).
  */
 export
 const GroupPickupCall_privateData: number = 7; /* LONG_NAMED_BIT */
@@ -141,6 +188,8 @@ const GroupPickupCall_privateData: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_privateData`.
  */
 export
 const privateData: number = GroupPickupCall_privateData; /* SHORT_NAMED_BIT */
@@ -148,6 +197,9 @@ const privateData: number = GroupPickupCall_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary GroupPickupCall_pickedCallInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `pickedCall` in the acknowledgement
+ * (ECMA-269 C.5.14).
  */
 export
 const GroupPickupCall_pickedCallInAck: number = 8; /* LONG_NAMED_BIT */
@@ -155,6 +207,8 @@ const GroupPickupCall_pickedCallInAck: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary pickedCallInAck
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_pickedCallInAck`.
  */
 export
 const pickedCallInAck: number = GroupPickupCall_pickedCallInAck; /* SHORT_NAMED_BIT */
@@ -162,6 +216,9 @@ const pickedCallInAck: number = GroupPickupCall_pickedCallInAck; /* SHORT_NAMED_
 /**
  * @summary GroupPickupCall_pickedCallInfoInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `pickedCallInfo` in the
+ * acknowledgement (ECMA-269 C.5.14).
  */
 export
 const GroupPickupCall_pickedCallInfoInAck: number = 9; /* LONG_NAMED_BIT */
@@ -169,6 +226,8 @@ const GroupPickupCall_pickedCallInfoInAck: number = 9; /* LONG_NAMED_BIT */
 /**
  * @summary pickedCallInfoInAck
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_pickedCallInfoInAck`.
  */
 export
 const pickedCallInfoInAck: number = GroupPickupCall_pickedCallInfoInAck; /* SHORT_NAMED_BIT */
@@ -176,6 +235,9 @@ const pickedCallInfoInAck: number = GroupPickupCall_pickedCallInfoInAck; /* SHOR
 /**
  * @summary GroupPickupCall_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.5.14).
  */
 export
 const GroupPickupCall_privateDataInAck: number = 10; /* LONG_NAMED_BIT */
@@ -183,6 +245,8 @@ const GroupPickupCall_privateDataInAck: number = 10; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_privateDataInAck`.
  */
 export
 const privateDataInAck: number = GroupPickupCall_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -190,6 +254,9 @@ const privateDataInAck: number = GroupPickupCall_privateDataInAck; /* SHORT_NAME
 /**
  * @summary GroupPickupCall_supportsPrompting
  * @constant
+ * @description
+ * Bit set means the SF supports prompting for the calling device (ECMA-269
+ * C.5.14).
  */
 export
 const GroupPickupCall_supportsPrompting: number = 11; /* LONG_NAMED_BIT */
@@ -197,6 +264,8 @@ const GroupPickupCall_supportsPrompting: number = 11; /* LONG_NAMED_BIT */
 /**
  * @summary supportsPrompting
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_supportsPrompting`.
  */
 export
 const supportsPrompting: number = GroupPickupCall_supportsPrompting; /* SHORT_NAMED_BIT */
@@ -204,6 +273,9 @@ const supportsPrompting: number = GroupPickupCall_supportsPrompting; /* SHORT_NA
 /**
  * @summary GroupPickupCall_promptingMode
  * @constant
+ * @description
+ * Bit set means the SF supports prompting as part of service execution
+ * (ECMA-269 C.5.14).
  */
 export
 const GroupPickupCall_promptingMode: number = 12; /* LONG_NAMED_BIT */
@@ -211,6 +283,8 @@ const GroupPickupCall_promptingMode: number = 12; /* LONG_NAMED_BIT */
 /**
  * @summary promptingMode
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_promptingMode`.
  */
 export
 const promptingMode: number = GroupPickupCall_promptingMode; /* SHORT_NAMED_BIT */
@@ -218,6 +292,8 @@ const promptingMode: number = GroupPickupCall_promptingMode; /* SHORT_NAMED_BIT 
 /**
  * @summary GroupPickupCall_supportsOfferedModeOfAlerting
  * @constant
+ * @description
+ * Bit set means the SF supports Offered mode of alerting (ECMA-269 C.5.14).
  */
 export
 const GroupPickupCall_supportsOfferedModeOfAlerting: number = 13; /* LONG_NAMED_BIT */
@@ -225,6 +301,8 @@ const GroupPickupCall_supportsOfferedModeOfAlerting: number = 13; /* LONG_NAMED_
 /**
  * @summary supportsOfferedModeOfAlerting
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_supportsOfferedModeOfAlerting`.
  */
 export
 const supportsOfferedModeOfAlerting: number = GroupPickupCall_supportsOfferedModeOfAlerting; /* SHORT_NAMED_BIT */
@@ -232,6 +310,9 @@ const supportsOfferedModeOfAlerting: number = GroupPickupCall_supportsOfferedMod
 /**
  * @summary GroupPickupCall_ackModelMultiStep
  * @constant
+ * @description
+ * Bit set means the SF supports the multi-step positive acknowledgement model
+ * (ECMA-269 C.5.14).
  */
 export
 const GroupPickupCall_ackModelMultiStep: number = 14; /* LONG_NAMED_BIT */
@@ -239,6 +320,8 @@ const GroupPickupCall_ackModelMultiStep: number = 14; /* LONG_NAMED_BIT */
 /**
  * @summary ackModelMultiStep
  * @constant
+ * @description
+ * Alias of `GroupPickupCall_ackModelMultiStep`.
  */
 export
 const ackModelMultiStep: number = GroupPickupCall_ackModelMultiStep; /* SHORT_NAMED_BIT */

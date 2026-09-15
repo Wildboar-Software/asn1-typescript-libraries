@@ -83,7 +83,12 @@ import { ss_ErrorStatus } from "../MAP-Errors/ss-ErrorStatus.oa.mjs";
 /**
  * @summary eraseCC_Entry
  * @description
- * 
+ *
+ * MAP_ERASE_CC_ENTRY: erase data related to a call-completion supplementary
+ * service. Used MSC→VLR and VLR→HLR; the VLR relays to the HLR. Confirmed.
+ * Typical MAP path: VLR→HLR. Local opcode 77. Timer class `m` (15 s to 30 s).
+ * (3GPP TS 29.002 V19.1.0 clauses 11.14.1, 17.1.2, 17.3.2.38 and 17.6.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

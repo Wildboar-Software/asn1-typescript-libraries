@@ -9,7 +9,27 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary AssociatedCalledDeviceID
  * @description
- * 
+ *
+ * Switching-function view of the originally called side when an NID
+ * is in use (`APPLICATION 6`; ECMA-269 §12.3.2). Present only on
+ * external calls that use a Network Interface Device.
+ *
+ * Outgoing external: NID (trunk, CO line) associated with the called
+ * device; mandatory on those events. Incoming external: internal
+ * representation associated with the originally called device (e.g.
+ * internal DNIS); optional. Not DNIS/DID digits — that is
+ * `CalledDeviceID`.
+ *
+ * - `deviceIdentifier`: associated device is provided.
+ * - `notKnown`: NID associated with the called device is unknown.
+ * - `restricted`: encoded in ECMA-285 §9.2; ECMA-269 §12.3.2 does
+ *   not assign this status.
+ *
+ * Never `notRequired` or `notSpecified`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

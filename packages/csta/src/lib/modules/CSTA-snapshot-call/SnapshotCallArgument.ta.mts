@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SnapshotCallArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 16-2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class SnapshotCallArgument {
     constructor (
         /**
          * @summary `snapshotObject`.
+         * @description
+         *
+         * Connection identifying the call to snapshot.
          * @public
          * @readonly
          */
         readonly snapshotObject: ConnectionID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

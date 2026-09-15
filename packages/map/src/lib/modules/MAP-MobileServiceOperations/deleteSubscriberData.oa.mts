@@ -80,7 +80,15 @@ import { unidentifiedSubscriber } from "../MAP-Errors/unidentifiedSubscriber.oa.
 /**
  * @summary deleteSubscriberData
  * @description
- * 
+ *
+ * MAP_DELETE_SUBSCRIBER_DATA: HLR removes subscriber data from a VLR or SGSN
+ * when a supplementary or basic service is withdrawn (not for erasure or
+ * deactivation of SS). Also used to remove GPRS data from an SGSN, EPS data
+ * from an MME via IWF, and CSG data from MME via IWF or VLR/SGSN (CSS).
+ * Confirmed. Typical path: HLR→VLR or HLR→SGSN. Local opcode 8. Timer class `m`
+ * (15 s to 30 s). (3GPP TS 29.002 V19.1.0 clauses 8.8.2.1, 17.1.2, 17.3.2.17
+ * and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

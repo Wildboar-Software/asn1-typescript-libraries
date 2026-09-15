@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionTypeDefault
  * @description
- * 
+ *
+ * Default collectionType (ECMA-269 §28.1.10.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,7 +37,13 @@ enum _enum_for_GetLocationTrackingCapabilitiesResult_collectionTypeDefault {
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionTypeDefault
  * @description
- * 
+ *
+ * Default collectionType (ECMA-269 §28.1.10.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,7 +62,13 @@ type GetLocationTrackingCapabilitiesResult_collectionTypeDefault = _enum_for_Get
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionTypeDefault
  * @description
- * 
+ *
+ * Default collectionType (ECMA-269 §28.1.10.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,6 +86,10 @@ const GetLocationTrackingCapabilitiesResult_collectionTypeDefault = _enum_for_Ge
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionTypeDefault_periodic
+ * @description
+ *
+ * periodic collection/reporting (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +98,10 @@ const GetLocationTrackingCapabilitiesResult_collectionTypeDefault_periodic: GetL
 
 /**
  * @summary periodic
+ * @description
+ *
+ * periodic collection/reporting (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +110,10 @@ const periodic: GetLocationTrackingCapabilitiesResult_collectionTypeDefault = Ge
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionTypeDefault_updatesOnly
+ * @description
+ *
+ * updates-only collection (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +122,10 @@ const GetLocationTrackingCapabilitiesResult_collectionTypeDefault_updatesOnly: G
 
 /**
  * @summary updatesOnly
+ * @description
+ *
+ * updates-only collection (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +134,10 @@ const updatesOnly: GetLocationTrackingCapabilitiesResult_collectionTypeDefault =
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionTypeDefault_periodicWithUpdates
+ * @description
+ *
+ * periodic-with-updates collection (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +146,10 @@ const GetLocationTrackingCapabilitiesResult_collectionTypeDefault_periodicWithUp
 
 /**
  * @summary periodicWithUpdates
+ * @description
+ *
+ * periodic-with-updates collection (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */

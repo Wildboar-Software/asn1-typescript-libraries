@@ -23,7 +23,12 @@ import { SignedData, _decode_SignedData, _encode_SignedData } from "../X9-84-CMS
 /**
  * @summary BDforRefOnTTPforLocalModel
  * @description
- * 
+ *
+ * Reference-on-TTP for local comparison: TTP URI, client process
+ * report, required TTP ACBio, client signature, optional client ACBio.
+ * Client may omit the TTP template from this message for privacy
+ * (App. I.2). ITU-T Rec. X.1084 (05/2008) §11.5, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,30 +49,53 @@ class BDforRefOnTTPforLocalModel {
     constructor (
         /**
          * @summary `thirdPartyInfo`.
+         * @description
+         *
+         * TTP network address as a URI ([IETF RFC 3986]). X.1084 §10.1.2.
+         *
          * @public
          * @readonly
          */
         readonly thirdPartyInfo: UTF8String,
         /**
          * @summary `biometricClientProcess`.
+         * @description
+         *
+         * BSP/BFP, template ID, sample quality, and comparison score from
+         * the client. X.1084 §11.1 Table 3.
+         *
          * @public
          * @readonly
          */
         readonly biometricClientProcess: BiometricClientProcess,
         /**
          * @summary `aCforBioOnTTP`.
+         * @description
+         *
+         * ISO/IEC 24761 ACBio for the TTP process. Optional except in
+         * `BDforRefOnTTPforLocalModel`, where Annex A requires it. X.1084
+         * §11.5.
+         *
          * @public
          * @readonly
          */
         readonly aCforBioOnTTP: ACBioContentInformation,
         /**
          * @summary `digitalSignaturebyClient`.
+         * @description
+         *
+         * CMS `SignedData` over the client process. X.1084 §11.5, §11.7.
+         *
          * @public
          * @readonly
          */
         readonly digitalSignaturebyClient: SignedData,
         /**
          * @summary `aCforBioOnClient`.
+         * @description
+         *
+         * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
+         *
          * @public
          * @readonly
          */

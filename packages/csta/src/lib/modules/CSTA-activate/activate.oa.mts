@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary activate
  * @description
- * 
+ *
+ * Enables a grammar rule to be considered when matching the speech of a call
+ * (ECMA-269 §26.1.1).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:512. Errors: `universalFailure` (ECMA-285 §24.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

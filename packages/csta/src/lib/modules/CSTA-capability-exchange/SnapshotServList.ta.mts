@@ -21,7 +21,13 @@ import { SnapshotDeviceData, _decode_SnapshotDeviceData, _encode_SnapshotDeviceD
 /**
  * @summary SnapshotServList
  * @description
- * 
+ * Snapshot services the SF supports (ECMA-269 Annex C.4, ECMA-285 §9.10). Omit
+ * unsupported services.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,24 +47,36 @@ class SnapshotServList {
          * @summary `snapshotCall`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly snapshotCall: SnapshotCall,
         /**
          * @summary `snapshotDevice`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly snapshotDevice: SnapshotDevice,
         /**
          * @summary `snapshotCallData`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly snapshotCallData: SnapshotCallData,
         /**
          * @summary `snapshotDeviceData`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly snapshotDeviceData: SnapshotDeviceData
     ) {}

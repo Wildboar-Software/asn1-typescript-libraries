@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary retrieveCall
  * @description
- * 
+ *
+ * Retrieve Call (ECMA-269 §17.1.23 / ECMA-285 §15.1.23). Invoked
+ * by the computing function on the switching function.
+ * `callToBeRetrieved` must be Hold and becomes Connected. Rejected
+ * if another voice call is already connected at the physical
+ * element (FR 1). ROSE local CODE 14. Errors are
+ * `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

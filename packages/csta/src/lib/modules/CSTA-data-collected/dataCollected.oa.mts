@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary dataCollected
  * @description
- * 
+ *
+ * Sends data received over a connection to the computing function as part of an
+ * active data collection (ECMA-269 §25.1.1).
+ *
+ * Switching function → computing function.
+ *
+ * ROSE local:343. Errors: `universalFailure` (ECMA-285 §23.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

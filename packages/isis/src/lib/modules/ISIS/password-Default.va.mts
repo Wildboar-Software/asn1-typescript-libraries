@@ -18,6 +18,10 @@ import {
  * @summary password_Default
  * @description
  *
+ * Default transmit password: empty OCTET STRING (no authentication).
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.3 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

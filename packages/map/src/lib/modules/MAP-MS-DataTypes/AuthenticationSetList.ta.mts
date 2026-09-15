@@ -73,7 +73,12 @@ import { QuintupletList, _decode_QuintupletList, _encode_QuintupletList } from "
 /**
  * @summary AuthenticationSetList
  * @description
- * 
+ *
+ * List of authentication parameter sets for a subscriber: either Authentication
+ * Triplets (Rand, Sres, Kc) or Authentication Quintuplets (Rand, Xres, Ck, Ik,
+ * Autn). Quintuplet lists are chronological, oldest first (3GPP TS 29.002
+ * V19.1.0 clause 7.6.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

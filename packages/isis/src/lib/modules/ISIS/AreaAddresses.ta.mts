@@ -19,6 +19,13 @@ import {
  * @summary AreaAddresses
  * @description
  *
+ * Set of area addresses. Used for `manualAreaAddresses` (locally configured
+ * synonymous addresses of this IS), `areaAddresses` (union of those reported in
+ * received Level 1 LSPs), a neighbour's addresses from its IIH PDU, and
+ * partition-repair sets.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.1.5, 11.2.4 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

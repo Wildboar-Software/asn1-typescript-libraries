@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ServiceKey
  * @description
- * 
+ *
+ * CAMEL service key identifying the service logic in the gsmSCF
+ * (0..2147483647).
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary alternateCall
  * @description
- * 
+ *
+ * Alternate Call (ECMA-269 §17.1.2 / ECMA-285 §15.1.2). Invoked by the
+ * computing function on the switching function. Atomic vs multi-step
+ * acknowledgement is via capability exchange. Errors are `universalFailure`
+ * (§12.2.14). `activeCall` must be Connected (becomes Hold); `heldCall` must be
+ * Hold, Alerting, or Queued (becomes Connected). Must not hold an alerting call
+ * to reconnect a held one (FR 1). Compound of Hold plus Retrieve, Answer, or
+ * Accept (FR 2). ROSE local CODE 1.
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetSwitchingFunctionCapsArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 13-8). `extensions` carries
+ * security/privateData; `noData` is an empty request.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

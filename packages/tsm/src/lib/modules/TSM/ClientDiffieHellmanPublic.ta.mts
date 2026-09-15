@@ -18,7 +18,10 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 /**
  * @summary ClientDiffieHellmanPublic
  * @description
- * 
+ *
+ * Client DH public: `implicit` if already in the client cert, else
+ * `explicit` opaque `Ys`. ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

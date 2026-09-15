@@ -73,7 +73,14 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary MAP_RefuseInfo
  * @description
- * 
+ *
+ * User information when MAP-OPEN is refused. Present when Result indicates
+ * refusal. `alternativeApplicationContext` supports version negotiation: if the
+ * dialogue is refused, the application context name shall indicate the highest
+ * version supported. Neither `extensionContainer` nor
+ * `alternativeApplicationContext` may be used in version 2 (3GPP TS 29.002
+ * V19.1.0 clauses 7.3.1 and 17.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,18 +101,35 @@ class MAP_RefuseInfo {
     constructor (
         /**
          * @summary `reason`.
+         * @description
+         *
+         * MAP-level refuse reason encoded in this PDU. Service primitive
+         * Refuse-reason also includes Application-context-not-supported, Remote
+         * node not reachable, and Potential version incompatibility (3GPP TS
+         * 29.002 V19.1.0 clause 7.3.1).
+         *
          * @public
          * @readonly
          */
         readonly reason: Reason,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `alternativeApplicationContext`.
+         * @description
+         *
+         * Highest version of the application context supported by the refusing
+         * entity. Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clauses
+         * 7.3.1 and 17.4).
+         *
          * @public
          * @readonly
          */

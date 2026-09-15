@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SetSpeakerVolume
  * @description
- * 
+ * Capability bitmap for the Set Speaker Volume service (ECMA-269 C.12.23,
+ * ECMA-285 §9.10). Presence of this entry in `PhysDevServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +37,9 @@ type SetSpeakerVolume = BIT_STRING;
 /**
  * @summary SetSpeakerVolume_speakerVolumeAbs
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.23).
  */
 export
 const SetSpeakerVolume_speakerVolumeAbs: number = 0; /* LONG_NAMED_BIT */
@@ -35,6 +47,8 @@ const SetSpeakerVolume_speakerVolumeAbs: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary speakerVolumeAbs
  * @constant
+ * @description
+ * Alias of `SetSpeakerVolume_speakerVolumeAbs`.
  */
 export
 const speakerVolumeAbs: number = SetSpeakerVolume_speakerVolumeAbs; /* SHORT_NAMED_BIT */
@@ -42,6 +56,9 @@ const speakerVolumeAbs: number = SetSpeakerVolume_speakerVolumeAbs; /* SHORT_NAM
 /**
  * @summary SetSpeakerVolume_speakerVolumeInc
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.23).
  */
 export
 const SetSpeakerVolume_speakerVolumeInc: number = 1; /* LONG_NAMED_BIT */
@@ -49,6 +66,8 @@ const SetSpeakerVolume_speakerVolumeInc: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary speakerVolumeInc
  * @constant
+ * @description
+ * Alias of `SetSpeakerVolume_speakerVolumeInc`.
  */
 export
 const speakerVolumeInc: number = SetSpeakerVolume_speakerVolumeInc; /* SHORT_NAMED_BIT */
@@ -56,6 +75,9 @@ const speakerVolumeInc: number = SetSpeakerVolume_speakerVolumeInc; /* SHORT_NAM
 /**
  * @summary SetSpeakerVolume_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.12.23).
  */
 export
 const SetSpeakerVolume_privateData: number = 2; /* LONG_NAMED_BIT */
@@ -63,6 +85,8 @@ const SetSpeakerVolume_privateData: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SetSpeakerVolume_privateData`.
  */
 export
 const privateData: number = SetSpeakerVolume_privateData; /* SHORT_NAMED_BIT */
@@ -70,6 +94,9 @@ const privateData: number = SetSpeakerVolume_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary SetSpeakerVolume_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.12.23).
  */
 export
 const SetSpeakerVolume_privateDataInAck: number = 3; /* LONG_NAMED_BIT */
@@ -77,6 +104,8 @@ const SetSpeakerVolume_privateDataInAck: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `SetSpeakerVolume_privateDataInAck`.
  */
 export
 const privateDataInAck: number = SetSpeakerVolume_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -84,6 +113,9 @@ const privateDataInAck: number = SetSpeakerVolume_privateDataInAck; /* SHORT_NAM
 /**
  * @summary SetSpeakerVolume_ackModelMultiStep
  * @constant
+ * @description
+ * Bit set means the SF supports the multi-step positive acknowledgement model
+ * (ECMA-269 C.12.23).
  */
 export
 const SetSpeakerVolume_ackModelMultiStep: number = 4; /* LONG_NAMED_BIT */
@@ -91,6 +123,8 @@ const SetSpeakerVolume_ackModelMultiStep: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary ackModelMultiStep
  * @constant
+ * @description
+ * Alias of `SetSpeakerVolume_ackModelMultiStep`.
  */
 export
 const ackModelMultiStep: number = SetSpeakerVolume_ackModelMultiStep; /* SHORT_NAMED_BIT */
@@ -98,6 +132,9 @@ const ackModelMultiStep: number = SetSpeakerVolume_ackModelMultiStep; /* SHORT_N
 /**
  * @summary SetSpeakerVolume_resettedAfterCall
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.23).
  */
 export
 const SetSpeakerVolume_resettedAfterCall: number = 5; /* LONG_NAMED_BIT */
@@ -105,6 +142,8 @@ const SetSpeakerVolume_resettedAfterCall: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary resettedAfterCall
  * @constant
+ * @description
+ * Alias of `SetSpeakerVolume_resettedAfterCall`.
  */
 export
 const resettedAfterCall: number = SetSpeakerVolume_resettedAfterCall; /* SHORT_NAMED_BIT */
@@ -112,6 +151,9 @@ const resettedAfterCall: number = SetSpeakerVolume_resettedAfterCall; /* SHORT_N
 /**
  * @summary SetSpeakerVolume_notSettableWhileActive
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.23).
  */
 export
 const SetSpeakerVolume_notSettableWhileActive: number = 6; /* LONG_NAMED_BIT */
@@ -119,6 +161,8 @@ const SetSpeakerVolume_notSettableWhileActive: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary notSettableWhileActive
  * @constant
+ * @description
+ * Alias of `SetSpeakerVolume_notSettableWhileActive`.
  */
 export
 const notSettableWhileActive: number = SetSpeakerVolume_notSettableWhileActive; /* SHORT_NAMED_BIT */

@@ -73,7 +73,14 @@ import { ProcedureCancellationReason, _enum_for_ProcedureCancellationReason, Pro
 /**
  * @summary MAP_UserAbortChoice
  * @description
- * 
+ *
+ * User reason of MAP-U-ABORT (3GPP TS 29.002 V19.1.0 clause 7.3.4, table
+ * 7.3/7): `userResourceLimitation` is resource limitation (congestion);
+ * `resourceUnavailable` is unavailability other than congestion (diagnostic
+ * `ResourceUnavailableReason`); `applicationProcedureCancellation` cancels the
+ * procedure (diagnostic `ProcedureCancellationReason`); `userSpecificReason` is
+ * procedure error (terminated for procedural reasons).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

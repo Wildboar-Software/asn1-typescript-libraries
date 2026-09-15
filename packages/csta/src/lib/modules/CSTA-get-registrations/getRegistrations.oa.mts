@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getRegistrations
  * @description
- * 
+ *
+ * Get Registrations (ECMA-269 §14.2.5 / ECMA-285 §12.2.5). Direction: CF→SF.
+ * ROSE local CODE 371. Errors: `universalFailure`. Lists existing registrations
+ * (type, registrationID, object).
+ * Capability exchange indicates inline vs Registration Info
+ * segmentation.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

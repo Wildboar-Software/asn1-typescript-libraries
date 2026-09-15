@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ConnectionInformation_flowDirection
  * @description
- * 
+ *
+ * Direction of media on a connection as seen by the associated device. ECMA-269
+ * §12.2.8.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,7 +38,12 @@ enum _enum_for_ConnectionInformation_flowDirection {
 /**
  * @summary ConnectionInformation_flowDirection
  * @description
- * 
+ *
+ * Direction of media on a connection as seen by the associated device. ECMA-269
+ * §12.2.8.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,7 +63,12 @@ type ConnectionInformation_flowDirection = _enum_for_ConnectionInformation_flowD
 /**
  * @summary ConnectionInformation_flowDirection
  * @description
- * 
+ *
+ * Direction of media on a connection as seen by the associated device. ECMA-269
+ * §12.2.8.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,6 +87,10 @@ const ConnectionInformation_flowDirection = _enum_for_ConnectionInformation_flow
 
 /**
  * @summary ConnectionInformation_flowDirection_transmit
+ * @description
+ *
+ * Device can only transmit on the connection. ECMA-269 §12.2.8.
+ *
  * @constant
  * @type {number}
  */
@@ -88,6 +107,10 @@ const transmit: ConnectionInformation_flowDirection = ConnectionInformation_flow
 
 /**
  * @summary ConnectionInformation_flowDirection_receive
+ * @description
+ *
+ * Device can only receive (e.g. silent monitor). ECMA-269 §12.2.8.
+ *
  * @constant
  * @type {number}
  */
@@ -104,6 +127,10 @@ const receive: ConnectionInformation_flowDirection = ConnectionInformation_flowD
 
 /**
  * @summary ConnectionInformation_flowDirection_transmitAndReceive
+ * @description
+ *
+ * Device can transmit and receive (active participation). ECMA-269 §12.2.8.
+ *
  * @constant
  * @type {number}
  */
@@ -120,6 +147,10 @@ const transmitAndReceive: ConnectionInformation_flowDirection = ConnectionInform
 
 /**
  * @summary ConnectionInformation_flowDirection_none
+ * @description
+ *
+ * Device can neither transmit nor receive. ECMA-269 §12.2.8.
+ *
  * @constant
  * @type {number}
  */

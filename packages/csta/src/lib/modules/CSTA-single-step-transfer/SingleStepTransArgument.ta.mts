@@ -40,7 +40,15 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
 /**
  * @summary SingleStepTransArgument
  * @description
- * 
+ *
+ * Service request for Single Step Transfer (ECMA-269
+ * §17.1.26 / ECMA-285 §15.1.26). Names the transferring
+ * connection and the complete destination. `transferredTo`
+ * must be complete (no null, no multi-stage `;`).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,66 +73,118 @@ class SingleStepTransArgument {
     constructor (
         /**
          * @summary `activeCall`.
+         * @description
+         *
+         * Mandatory. Transferring device's connection. Initial
+         * Connected, Alerting, Failed, Held, or Queued; resulting
+         * Null.
+         *
          * @public
          * @readonly
          */
         readonly activeCall: ConnectionID,
         /**
          * @summary `transferredTo`.
+         * @description
+         *
+         * Mandatory. Device that replaces the transferring
+         * device. Must be complete (no null, no multi-stage `;`).
+         *
          * @public
          * @readonly
          */
         readonly transferredTo: DeviceID,
         /**
          * @summary `accountCode`.
+         * @description
+         *
+         * Optional account code (§12.2.1).
+         *
          * @public
          * @readonly
          */
         readonly accountCode: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
+         * @description
+         *
+         * Optional authorization code (§12.2.3).
+         *
          * @public
          * @readonly
          */
         readonly authCode: OPTIONAL<AuthCode>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional correlator data attached before resulting
+         * state transitions (§12.2.10).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Optional user data associated with this request
+         * (§12.2.30).
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Optional call characteristics (§12.2.4).
+         *
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `subjectOfCall`.
+         * @description
+         *
+         * Optional subject or intent (§12.2.27).
+         *
          * @public
          * @readonly
          */
         readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Optional preferred language(s) (§12.2.16).
+         *
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `reason`.
+         * @description
+         *
+         * Optional `EventCause` for underlying signalling
+         * (§12.2.15).
+         *
          * @public
          * @readonly
          */
         readonly reason: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security
+         * and privateData parameters from the ECMA-269 service
+         * table.
+         *
          * @public
          * @readonly
          */

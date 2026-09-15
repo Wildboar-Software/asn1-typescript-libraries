@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LCLS_ConfigurationPreference
  * @description
- * 
+ *
+ * Negotiated LCLS configuration preference (3GPP TS 29.205 clause B.2.1.10).
+ * Bits 4-7 shall be ignored if received and not understood. (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.5.23 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -89,6 +93,11 @@ type LCLS_ConfigurationPreference = BIT_STRING;
 
 /**
  * @summary LCLS_ConfigurationPreference_forward_data_sending_indicator
+ * @description
+ *
+ * Forward data-sending indicator (3GPP TS 29.205). (3GPP TS 29.002 V19.1.0
+ * clause 7.6.5.23)
+ *
  * @constant
  */
 export
@@ -96,6 +105,11 @@ const LCLS_ConfigurationPreference_forward_data_sending_indicator: number = 0; /
 
 /**
  * @summary forward_data_sending_indicator
+ * @description
+ *
+ * Forward data-sending indicator (3GPP TS 29.205). (3GPP TS 29.002 V19.1.0
+ * clause 7.6.5.23)
+ *
  * @constant
  */
 export
@@ -103,6 +117,11 @@ const forward_data_sending_indicator: number = LCLS_ConfigurationPreference_forw
 
 /**
  * @summary LCLS_ConfigurationPreference_backward_data_sending_indicator
+ * @description
+ *
+ * Backward data-sending indicator (3GPP TS 29.205). (3GPP TS 29.002 V19.1.0
+ * clause 7.6.5.23)
+ *
  * @constant
  */
 export
@@ -110,6 +129,11 @@ const LCLS_ConfigurationPreference_backward_data_sending_indicator: number = 1; 
 
 /**
  * @summary backward_data_sending_indicator
+ * @description
+ *
+ * Backward data-sending indicator (3GPP TS 29.205). (3GPP TS 29.002 V19.1.0
+ * clause 7.6.5.23)
+ *
  * @constant
  */
 export
@@ -117,6 +141,11 @@ const backward_data_sending_indicator: number = LCLS_ConfigurationPreference_bac
 
 /**
  * @summary LCLS_ConfigurationPreference_forward_data_reception_indicator
+ * @description
+ *
+ * Forward data-reception indicator (3GPP TS 29.205). (3GPP TS 29.002 V19.1.0
+ * clause 7.6.5.23)
+ *
  * @constant
  */
 export
@@ -124,6 +153,11 @@ const LCLS_ConfigurationPreference_forward_data_reception_indicator: number = 2;
 
 /**
  * @summary forward_data_reception_indicator
+ * @description
+ *
+ * Forward data-reception indicator (3GPP TS 29.205). (3GPP TS 29.002 V19.1.0
+ * clause 7.6.5.23)
+ *
  * @constant
  */
 export
@@ -131,6 +165,11 @@ const forward_data_reception_indicator: number = LCLS_ConfigurationPreference_fo
 
 /**
  * @summary LCLS_ConfigurationPreference_backward_data_reception_indicator
+ * @description
+ *
+ * Backward data-reception indicator (3GPP TS 29.205). (3GPP TS 29.002 V19.1.0
+ * clause 7.6.5.23)
+ *
  * @constant
  */
 export
@@ -138,6 +177,11 @@ const LCLS_ConfigurationPreference_backward_data_reception_indicator: number = 3
 
 /**
  * @summary backward_data_reception_indicator
+ * @description
+ *
+ * Backward data-reception indicator (3GPP TS 29.205). (3GPP TS 29.002 V19.1.0
+ * clause 7.6.5.23)
+ *
  * @constant
  */
 export

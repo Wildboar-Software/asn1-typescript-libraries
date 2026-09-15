@@ -75,7 +75,14 @@ import { maxNumOfCamelSSEvents } from "./maxNumOfCamelSSEvents.va.mjs";
 /**
  * @summary SS_EventList
  * @description
- * 
+ *
+ * SS-Codes whose invocation triggers CAMEL. CAMEL Phase 3 defines actions for
+ * ECT (`00110001`B), MPTY (`01010001`B), CD (`00100100`B), and CCBS
+ * (`01000100`B); all other SS codes shall be ignored. When sent to the VLR,
+ * shall not mark CCBS; if received, the VLR shall discard the CCBS marking.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -9,7 +9,14 @@ import { DestinationDetection_Item, _decode_DestinationDetection_Item, _encode_D
 /**
  * @summary DestinationDetection
  * @description
- * 
+ *
+ * List of destination-condition/action pairs for Make
+ * Predictive Call (ECMA-269 §17.1.20 Table 17-110). The
+ * switching function uses the first detected condition.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

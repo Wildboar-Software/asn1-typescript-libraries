@@ -73,7 +73,12 @@ import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataType
 /**
  * @summary AdjacentPLMN_List
  * @description
- * 
+ *
+ * PLMNs where a UE served by the SGSN is likely to hand over from the SGSN's
+ * PLMN. Statically configured by the operator according to geography and
+ * roaming agreements. Sent in MAP_UPDATE_GPRS_LOCATION (3GPP TS 29.002 V19.1.0
+ * clauses 8.1.7.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

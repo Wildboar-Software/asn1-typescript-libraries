@@ -21,7 +21,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SuspendArgument
  * @description
- * 
+ *
+ * Connection, optional message and resource (ECMA-269 §26.1.16.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +45,42 @@ class SuspendArgument {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Connection whose play/record is suspended (ECMA-269 §26.1.16.1).
+         *
          * @public
          * @readonly
          */
         readonly connection: ConnectionID,
         /**
          * @summary `message`.
+         * @description
+         *
+         * Message to suspend when several are active (ECMA-269 §26.1.16.1).
+         *
          * @public
          * @readonly
          */
         readonly message: OPTIONAL<MessageID>,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

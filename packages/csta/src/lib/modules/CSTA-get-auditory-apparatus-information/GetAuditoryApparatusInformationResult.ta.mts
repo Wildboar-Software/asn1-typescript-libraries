@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetAuditoryApparatusInformationResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §21.1.2.2.1). List item types are in
+ * `CSTA-physical-device-feature`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ class GetAuditoryApparatusInformationResult {
     constructor (
         /**
          * @summary `auditoryApparatusList`.
+         * @description
+         *
+         * One entry per apparatus: type, speaker/microphone/hookswitch
+         * capability bits, `hookswitchID` (a hookswitch may serve multiple
+         * apparatuses).
          * @public
          * @readonly
          */
         readonly auditoryApparatusList: AuditoryApparatusList,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

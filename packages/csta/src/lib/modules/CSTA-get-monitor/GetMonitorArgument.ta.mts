@@ -15,7 +15,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetMonitorArgument
  * @description
- * 
+ *
+ * Service request (Table 15-8). No filter; lists all monitors.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +35,10 @@ class GetMonitorArgument {
     constructor (
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 15-8.
          * @public
          * @readonly
          */

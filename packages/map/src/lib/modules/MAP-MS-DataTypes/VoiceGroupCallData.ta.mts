@@ -76,7 +76,14 @@ import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP
 /**
  * @summary VoiceGroupCallData
  * @description
- * 
+ *
+ * One VGCS group subscription. If `longGroupId` is present, `groupId` shall be
+ * six TBCD fillers (`1111`). Data containing a long Group Id shall not be sent
+ * to VLRs that did not indicate long Group ID support in Update Location or
+ * Restore Data.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.39 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,6 +104,13 @@ class VoiceGroupCallData {
     constructor (
         /**
          * @summary `groupId`.
+         * @description
+         *
+         * Group Identification as in 3GPP TS 23.003. Filled with six TBCD
+         * fillers (`1111`) if `longGroupId` is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.33 and 17.7.1).
+         *
          * @public
          * @readonly
          */
@@ -109,18 +123,38 @@ class VoiceGroupCallData {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalSubscriptions`.
+         * @description
+         *
+         * Additional VGCS subscriptions for this group.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.39).
+         *
          * @public
          * @readonly
          */
         readonly additionalSubscriptions: OPTIONAL<AdditionalSubscriptions>,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * Additional VGCS information for this group.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly additionalInfo: OPTIONAL<AdditionalInfo>,
         /**
          * @summary `longGroupId`.
+         * @description
+         *
+         * Long Group Identification as in 3GPP TS 23.003 and 43.068/43.069.
+         * Shall not be sent to VLRs that did not indicate long Group ID
+         * support.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

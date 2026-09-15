@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Ext4_QoS_Subscribed
  * @description
- * 
+ *
+ * Further extension to Extension QoS-Subscribed defining Evolved
+ * Allocation/Retention Priority (Priority Level, Preemption Capability,
+ * Preemption Vulnerability) as in 3GPP TS 29.060 (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.75C and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

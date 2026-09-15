@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary StateIncompatibilityErrors
  * @description
- * 
+ *
+ * The service request was not compatible with the condition of a related CSTA
+ * object (ECMA-269 §9.3.1, §12.2.14.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -80,7 +85,12 @@ enum _enum_for_StateIncompatibilityErrors {
 /**
  * @summary StateIncompatibilityErrors
  * @description
- * 
+ *
+ * The service request was not compatible with the condition of a related CSTA
+ * object (ECMA-269 §9.3.1, §12.2.14.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -123,7 +133,12 @@ type StateIncompatibilityErrors = _enum_for_StateIncompatibilityErrors;
 /**
  * @summary StateIncompatibilityErrors
  * @description
- * 
+ *
+ * The service request was not compatible with the condition of a related CSTA
+ * object (ECMA-269 §9.3.1, §12.2.14.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -165,14 +180,19 @@ const StateIncompatibilityErrors = _enum_for_StateIncompatibilityErrors;
 
 /**
  * @summary StateIncompatibilityErrors_generic
+ * @description
+ * State incompatibility; the server cannot be more specific. ECMA-269
+ * §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_generic: StateIncompatibilityErrors = StateIncompatibilityErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
+ * @description Alias of {@link StateIncompatibilityErrors_generic}.
  * @constant
  * @type {number}
  */
@@ -181,14 +201,19 @@ const generic: StateIncompatibilityErrors = StateIncompatibilityErrors.generic; 
 
 /**
  * @summary StateIncompatibilityErrors_invalidObjectState
+ * @description
+ * A device, connection, call, or message is in an incorrect state. ECMA-269
+ * §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidObjectState: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidObjectState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidObjectState
+ * @description Alias of {@link StateIncompatibilityErrors_invalidObjectState}.
  * @constant
  * @type {number}
  */
@@ -197,14 +222,19 @@ const invalidObjectState: StateIncompatibilityErrors = StateIncompatibilityError
 
 /**
  * @summary StateIncompatibilityErrors_invalidDeviceState
+ * @description
+ * A device object is in an incorrect state for the request. ECMA-269
+ * §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidDeviceState: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDeviceState
+ * @description Alias of {@link StateIncompatibilityErrors_invalidDeviceState}.
  * @constant
  * @type {number}
  */
@@ -213,14 +243,19 @@ const invalidDeviceState: StateIncompatibilityErrors = StateIncompatibilityError
 
 /**
  * @summary StateIncompatibilityErrors_connectedCallExists
+ * @description
+ * A physical element is already associated with another connection in the
+ * connected state. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_connectedCallExists: StateIncompatibilityErrors = StateIncompatibilityErrors.connectedCallExists; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectedCallExists
+ * @description Alias of {@link StateIncompatibilityErrors_connectedCallExists}.
  * @constant
  * @type {number}
  */
@@ -229,14 +264,20 @@ const connectedCallExists: StateIncompatibilityErrors = StateIncompatibilityErro
 
 /**
  * @summary StateIncompatibilityErrors_invalidActiveDeviceState
+ * @description
+ * The device in activeCall or callToBePickedUp is not in the correct state.
+ * ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidActiveDeviceState: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidActiveDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidActiveDeviceState
+ * @description
+ * Alias of {@link StateIncompatibilityErrors_invalidActiveDeviceState}.
  * @constant
  * @type {number}
  */
@@ -245,14 +286,19 @@ const invalidActiveDeviceState: StateIncompatibilityErrors = StateIncompatibilit
 
 /**
  * @summary StateIncompatibilityErrors_invalidCalledDeviceState
+ * @description
+ * The device in calledDevice is not in the correct state. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidCalledDeviceState: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidCalledDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCalledDeviceState
+ * @description
+ * Alias of {@link StateIncompatibilityErrors_invalidCalledDeviceState}.
  * @constant
  * @type {number}
  */
@@ -261,14 +307,19 @@ const invalidCalledDeviceState: StateIncompatibilityErrors = StateIncompatibilit
 
 /**
  * @summary StateIncompatibilityErrors_invalidCallingDeviceState
+ * @description
+ * The device in callingDevice is not in the correct state. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidCallingDeviceState: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidCallingDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCallingDeviceState
+ * @description
+ * Alias of {@link StateIncompatibilityErrors_invalidCallingDeviceState}.
  * @constant
  * @type {number}
  */
@@ -277,14 +328,19 @@ const invalidCallingDeviceState: StateIncompatibilityErrors = StateIncompatibili
 
 /**
  * @summary StateIncompatibilityErrors_invalidCallToParkDeviceState
+ * @description
+ * The device in callToPark is not in the correct state. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidCallToParkDeviceState: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidCallToParkDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCallToParkDeviceState
+ * @description
+ * Alias of {@link StateIncompatibilityErrors_invalidCallToParkDeviceState}.
  * @constant
  * @type {number}
  */
@@ -293,14 +349,19 @@ const invalidCallToParkDeviceState: StateIncompatibilityErrors = StateIncompatib
 
 /**
  * @summary StateIncompatibilityErrors_invalidDestinationDeviceState
+ * @description
+ * The newDestination device is not in the correct state. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidDestinationDeviceState: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidDestinationDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDestinationDeviceState
+ * @description
+ * Alias of {@link StateIncompatibilityErrors_invalidDestinationDeviceState}.
  * @constant
  * @type {number}
  */
@@ -309,14 +370,19 @@ const invalidDestinationDeviceState: StateIncompatibilityErrors = StateIncompati
 
 /**
  * @summary StateIncompatibilityErrors_invalidDivertingDeviceState
+ * @description
+ * The diverting device is not in a correct state. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidDivertingDeviceState: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidDivertingDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDivertingDeviceState
+ * @description
+ * Alias of {@link StateIncompatibilityErrors_invalidDivertingDeviceState}.
  * @constant
  * @type {number}
  */
@@ -325,14 +391,19 @@ const invalidDivertingDeviceState: StateIncompatibilityErrors = StateIncompatibi
 
 /**
  * @summary StateIncompatibilityErrors_invalidHeldDeviceState
+ * @description
+ * The device in heldCall is not in the correct state. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidHeldDeviceState: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidHeldDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidHeldDeviceState
+ * @description
+ * Alias of {@link StateIncompatibilityErrors_invalidHeldDeviceState}.
  * @constant
  * @type {number}
  */
@@ -341,14 +412,19 @@ const invalidHeldDeviceState: StateIncompatibilityErrors = StateIncompatibilityE
 
 /**
  * @summary StateIncompatibilityErrors_invalidParkToDeviceState
+ * @description
+ * The parkTo device is not in the correct state. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidParkToDeviceState: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidParkToDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidParkToDeviceState
+ * @description
+ * Alias of {@link StateIncompatibilityErrors_invalidParkToDeviceState}.
  * @constant
  * @type {number}
  */
@@ -357,14 +433,20 @@ const invalidParkToDeviceState: StateIncompatibilityErrors = StateIncompatibilit
 
 /**
  * @summary StateIncompatibilityErrors_invalidConnectionState
+ * @description
+ * A connection object is in an incorrect state for the request. ECMA-269
+ * §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidConnectionState: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidConnectionState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidConnectionState
+ * @description
+ * Alias of {@link StateIncompatibilityErrors_invalidConnectionState}.
  * @constant
  * @type {number}
  */
@@ -373,14 +455,19 @@ const invalidConnectionState: StateIncompatibilityErrors = StateIncompatibilityE
 
 /**
  * @summary StateIncompatibilityErrors_invalidActiveConnectionState
+ * @description
+ * The activeCall connection is not in the correct state. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidActiveConnectionState: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidActiveConnectionState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidActiveConnectionState
+ * @description
+ * Alias of {@link StateIncompatibilityErrors_invalidActiveConnectionState}.
  * @constant
  * @type {number}
  */
@@ -389,14 +476,20 @@ const invalidActiveConnectionState: StateIncompatibilityErrors = StateIncompatib
 
 /**
  * @summary StateIncompatibilityErrors_invalidConnectionIDForActiveCall
+ * @description
+ * The ConnectionID specified as activeCall is not in the correct state.
+ * ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidConnectionIDForActiveCall: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidConnectionIDForActiveCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidConnectionIDForActiveCall
+ * @description
+ * Alias of {@link StateIncompatibilityErrors_invalidConnectionIDForActiveCall}.
  * @constant
  * @type {number}
  */
@@ -405,14 +498,19 @@ const invalidConnectionIDForActiveCall: StateIncompatibilityErrors = StateIncomp
 
 /**
  * @summary StateIncompatibilityErrors_invalidHeldConnectionState
+ * @description
+ * The heldCall connection is not in the correct state. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_invalidHeldConnectionState: StateIncompatibilityErrors = StateIncompatibilityErrors.invalidHeldConnectionState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidHeldConnectionState
+ * @description
+ * Alias of {@link StateIncompatibilityErrors_invalidHeldConnectionState}.
  * @constant
  * @type {number}
  */
@@ -421,14 +519,18 @@ const invalidHeldConnectionState: StateIncompatibilityErrors = StateIncompatibil
 
 /**
  * @summary StateIncompatibilityErrors_noActiveCall
+ * @description
+ * The request needs an active call, but there was none. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_noActiveCall: StateIncompatibilityErrors = StateIncompatibilityErrors.noActiveCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noActiveCall
+ * @description Alias of {@link StateIncompatibilityErrors_noActiveCall}.
  * @constant
  * @type {number}
  */
@@ -437,14 +539,19 @@ const noActiveCall: StateIncompatibilityErrors = StateIncompatibilityErrors.noAc
 
 /**
  * @summary StateIncompatibilityErrors_noCallToAnswer
+ * @description
+ * No call is active for the ConnectionID specified as callToBeAnswered.
+ * ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_noCallToAnswer: StateIncompatibilityErrors = StateIncompatibilityErrors.noCallToAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noCallToAnswer
+ * @description Alias of {@link StateIncompatibilityErrors_noCallToAnswer}.
  * @constant
  * @type {number}
  */
@@ -453,14 +560,18 @@ const noCallToAnswer: StateIncompatibilityErrors = StateIncompatibilityErrors.no
 
 /**
  * @summary StateIncompatibilityErrors_noCallToClear
+ * @description
+ * No call is associated with the Clear Call ConnectionID. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_noCallToClear: StateIncompatibilityErrors = StateIncompatibilityErrors.noCallToClear; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noCallToClear
+ * @description Alias of {@link StateIncompatibilityErrors_noCallToClear}.
  * @constant
  * @type {number}
  */
@@ -469,14 +580,19 @@ const noCallToClear: StateIncompatibilityErrors = StateIncompatibilityErrors.noC
 
 /**
  * @summary StateIncompatibilityErrors_noCallToComplete
+ * @description
+ * No call is active for the ConnectionID specified as callToBeCompleted.
+ * ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_noCallToComplete: StateIncompatibilityErrors = StateIncompatibilityErrors.noCallToComplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noCallToComplete
+ * @description Alias of {@link StateIncompatibilityErrors_noCallToComplete}.
  * @constant
  * @type {number}
  */
@@ -485,14 +601,19 @@ const noCallToComplete: StateIncompatibilityErrors = StateIncompatibilityErrors.
 
 /**
  * @summary StateIncompatibilityErrors_noConnectionToClear
+ * @description
+ * No connection for the ConnectionID specified as connectionToBeCleared.
+ * ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_noConnectionToClear: StateIncompatibilityErrors = StateIncompatibilityErrors.noConnectionToClear; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noConnectionToClear
+ * @description Alias of {@link StateIncompatibilityErrors_noConnectionToClear}.
  * @constant
  * @type {number}
  */
@@ -501,14 +622,19 @@ const noConnectionToClear: StateIncompatibilityErrors = StateIncompatibilityErro
 
 /**
  * @summary StateIncompatibilityErrors_noHeldCall
+ * @description
+ * The request needs a held call, but the specified call was not in Hold.
+ * ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_noHeldCall: StateIncompatibilityErrors = StateIncompatibilityErrors.noHeldCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noHeldCall
+ * @description Alias of {@link StateIncompatibilityErrors_noHeldCall}.
  * @constant
  * @type {number}
  */
@@ -517,14 +643,19 @@ const noHeldCall: StateIncompatibilityErrors = StateIncompatibilityErrors.noHeld
 
 /**
  * @summary StateIncompatibilityErrors_incorrectMsgState
+ * @description
+ * A message object is in an incorrect state for the service. ECMA-269
+ * §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_incorrectMsgState: StateIncompatibilityErrors = StateIncompatibilityErrors.incorrectMsgState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary incorrectMsgState
+ * @description Alias of {@link StateIncompatibilityErrors_incorrectMsgState}.
  * @constant
  * @type {number}
  */
@@ -533,14 +664,18 @@ const incorrectMsgState: StateIncompatibilityErrors = StateIncompatibilityErrors
 
 /**
  * @summary StateIncompatibilityErrors_beginningOfMsg
+ * @description
+ * The message pointer is at the beginning of the message. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_beginningOfMsg: StateIncompatibilityErrors = StateIncompatibilityErrors.beginningOfMsg; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary beginningOfMsg
+ * @description Alias of {@link StateIncompatibilityErrors_beginningOfMsg}.
  * @constant
  * @type {number}
  */
@@ -549,14 +684,18 @@ const beginningOfMsg: StateIncompatibilityErrors = StateIncompatibilityErrors.be
 
 /**
  * @summary StateIncompatibilityErrors_endOfMsg
+ * @description
+ * The message pointer is at the end of the message. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_endOfMsg: StateIncompatibilityErrors = StateIncompatibilityErrors.endOfMsg; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endOfMsg
+ * @description Alias of {@link StateIncompatibilityErrors_endOfMsg}.
  * @constant
  * @type {number}
  */
@@ -565,14 +704,19 @@ const endOfMsg: StateIncompatibilityErrors = StateIncompatibilityErrors.endOfMsg
 
 /**
  * @summary StateIncompatibilityErrors_msgSuspended
+ * @description
+ * The specified message is already suspended on the same connection. ECMA-269
+ * §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_msgSuspended: StateIncompatibilityErrors = StateIncompatibilityErrors.msgSuspended; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msgSuspended
+ * @description Alias of {@link StateIncompatibilityErrors_msgSuspended}.
  * @constant
  * @type {number}
  */
@@ -581,14 +725,18 @@ const msgSuspended: StateIncompatibilityErrors = StateIncompatibilityErrors.msgS
 
 /**
  * @summary StateIncompatibilityErrors_notAbleToPlay
+ * @description
+ * The specified message exists but cannot be played. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_notAbleToPlay: StateIncompatibilityErrors = StateIncompatibilityErrors.notAbleToPlay; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAbleToPlay
+ * @description Alias of {@link StateIncompatibilityErrors_notAbleToPlay}.
  * @constant
  * @type {number}
  */
@@ -597,14 +745,17 @@ const notAbleToPlay: StateIncompatibilityErrors = StateIncompatibilityErrors.not
 
 /**
  * @summary StateIncompatibilityErrors_notAbleToResume
+ * @description The specified message cannot be resumed. ECMA-269 §12.2.14.3.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const StateIncompatibilityErrors_notAbleToResume: StateIncompatibilityErrors = StateIncompatibilityErrors.notAbleToResume; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAbleToResume
+ * @description Alias of {@link StateIncompatibilityErrors_notAbleToResume}.
  * @constant
  * @type {number}
  */

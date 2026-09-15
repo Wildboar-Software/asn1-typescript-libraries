@@ -75,7 +75,10 @@ import { maxNumOfCamelTDPData } from "./maxNumOfCamelTDPData.va.mjs";
 /**
  * @summary GPRS_CamelTDPDataList
  * @description
- * 
+ *
+ * List of GPRS CAMEL TDP data. Shall not contain more than one instance with
+ * the same gprs-TriggerDetectionPoint (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

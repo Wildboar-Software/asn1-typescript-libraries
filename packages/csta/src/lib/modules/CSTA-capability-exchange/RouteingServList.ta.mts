@@ -36,7 +36,13 @@ import { RouteUsed, _decode_RouteUsed, _encode_RouteUsed } from "../CSTA-capabil
 /**
  * @summary RouteingServList
  * @description
- * 
+ * Routeing services the SF supports (ECMA-269 Annex C.11, ECMA-285 §9.10). Omit
+ * unsupported services.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,54 +67,81 @@ class RouteingServList {
          * @summary `routeRegister`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly routeRegister: OPTIONAL<RouteRegister>,
         /**
          * @summary `routeRegisterCancel`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly routeRegisterCancel: OPTIONAL<RouteRegisterCancel>,
         /**
          * @summary `routeRegisterAbort`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly routeRegisterAbort: OPTIONAL<RouteRegisterAbort>,
         /**
          * @summary `reRoute`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly reRoute: OPTIONAL<ReRoute>,
         /**
          * @summary `routeEnd`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly routeEnd: OPTIONAL<RouteEnd>,
         /**
          * @summary `routeReject`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly routeReject: OPTIONAL<RouteReject>,
         /**
          * @summary `routeRequest`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly routeRequest: OPTIONAL<RouteRequest>,
         /**
          * @summary `routeSelect`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly routeSelect: OPTIONAL<RouteSelect>,
         /**
          * @summary `routeUsed`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly routeUsed: OPTIONAL<RouteUsed>
     ) {}

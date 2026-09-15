@@ -39,7 +39,13 @@ import { SuspendDataPath, _decode_SuspendDataPath, _encode_SuspendDataPath } fro
 /**
  * @summary IOServicesServList
  * @description
- * 
+ * I/O services the SF supports (ECMA-269 Annex C.17, ECMA-285 §9.10). Omit
+ * unsupported services.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,78 +74,117 @@ class IOServicesServList {
          * @summary `ioRegister`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly ioRegister: OPTIONAL<IoRegister>,
         /**
          * @summary `ioRegisterAbort`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly ioRegisterAbort: OPTIONAL<IoRegisterAbort>,
         /**
          * @summary `ioRegisterCancel`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly ioRegisterCancel: OPTIONAL<IoRegisterCancel>,
         /**
          * @summary `dataPathResumed`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly dataPathResumed: OPTIONAL<DataPathResumed>,
         /**
          * @summary `dataPathSuspended`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly dataPathSuspended: OPTIONAL<DataPathSuspended>,
         /**
          * @summary `fastData`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly fastData: OPTIONAL<FastData>,
         /**
          * @summary `resumeDataPath`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly resumeDataPath: OPTIONAL<ResumeDataPath>,
         /**
          * @summary `sendBroadcastData`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly sendBroadcastData: OPTIONAL<SendBroadcastData>,
         /**
          * @summary `sendData`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly sendData: OPTIONAL<SendData>,
         /**
          * @summary `sendMulticastData`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly sendMulticastData: OPTIONAL<SendMulticastData>,
         /**
          * @summary `startDataPath`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly startDataPath: OPTIONAL<StartDataPath>,
         /**
          * @summary `stopDataPath`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly stopDataPath: OPTIONAL<StopDataPath>,
         /**
          * @summary `suspendDataPath`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly suspendDataPath: OPTIONAL<SuspendDataPath>
     ) {}

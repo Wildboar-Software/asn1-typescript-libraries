@@ -73,7 +73,12 @@ import { ISR_Information, ISR_Information_updateLocation /* IMPORTED_LONG_NAMED_
 /**
  * @summary EPS_Info
  * @description
- * 
+ *
+ * EPS information in MAP_UPDATE_GPRS_LOCATION: either a PDN GW update (new PDN
+ * GW for an APN; HSS shall skip subscriber data update and only note the new
+ * PDN GW) or ISR-Information instructing Update Location, Cancel SGSN and/or
+ * Initial Attach (3GPP TS 29.002 V19.1.0 clauses 8.1.7.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

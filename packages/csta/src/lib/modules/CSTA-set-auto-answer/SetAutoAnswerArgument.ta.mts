@@ -19,7 +19,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetAutoAnswerArgument
  * @description
- * 
+ *
+ * Set Auto Answer request (ECMA-269 §22.1.16.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +42,37 @@ class SetAutoAnswerArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device on which to set auto-answer.
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `autoAnswerOn`.
+         * @description
+         *
+         * FALSE = disable; TRUE = enable.
          * @public
          * @readonly
          */
         readonly autoAnswerOn: BOOLEAN,
         /**
          * @summary `numberOfRings`.
+         * @description
+         *
+         * Rings before a call is auto-answered.
          * @public
          * @readonly
          */
         readonly numberOfRings: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

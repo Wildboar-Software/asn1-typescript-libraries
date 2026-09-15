@@ -15,7 +15,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RobBitPatt
  * @description
- * 
+ *
+ * Robbed-bit signalling pattern: packed 6 bits, `1` = robbed. Cyclic; not
+ * aligned to network framing. Bit 0 is LSB when displayed (ITU-T Rec. V.59
+ * Cor.1 (07/2001) §6.2.3). Table 3/V.59. ITU-T Rec. V.59 (11/2000) §6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +33,10 @@ type RobBitPatt = BIT_STRING;
 
 /**
  * @summary RobBitPatt_robBit0
+ * @description
+ *
+ * Bit 0 robbed (`1`) or not (`0`). Table 3/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.4.
  * @constant
  */
 export
@@ -43,6 +51,10 @@ const robBit0: number = RobBitPatt_robBit0; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RobBitPatt_robBit1
+ * @description
+ *
+ * Bit 1 robbed (`1`) or not (`0`). Table 3/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.4.
  * @constant
  */
 export
@@ -57,6 +69,10 @@ const robBit1: number = RobBitPatt_robBit1; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RobBitPatt_robBit2
+ * @description
+ *
+ * Bit 2 robbed (`1`) or not (`0`). Table 3/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.4.
  * @constant
  */
 export
@@ -71,6 +87,10 @@ const robBit2: number = RobBitPatt_robBit2; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RobBitPatt_robBit3
+ * @description
+ *
+ * Bit 3 robbed (`1`) or not (`0`). Table 3/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.4.
  * @constant
  */
 export
@@ -85,6 +105,10 @@ const robBit3: number = RobBitPatt_robBit3; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RobBitPatt_robBit4
+ * @description
+ *
+ * Bit 4 robbed (`1`) or not (`0`). Table 3/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.4.
  * @constant
  */
 export
@@ -99,6 +123,10 @@ const robBit4: number = RobBitPatt_robBit4; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RobBitPatt_robBit5
+ * @description
+ *
+ * Bit 5 robbed (`1`) or not (`0`). Table 3/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.4.
  * @constant
  */
 export

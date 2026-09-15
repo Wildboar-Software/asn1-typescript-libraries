@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TraceReference2
  * @description
- * 
+ *
+ * OCTET STRING (SIZE 3). UMTS tracing as in 3GPP TS 32.421 and 32.422; managed
+ * by EM (3GPP TS 29.002 V19.1.0 clauses 7.6.10.2A and 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

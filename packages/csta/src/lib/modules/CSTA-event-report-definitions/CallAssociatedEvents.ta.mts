@@ -17,7 +17,13 @@ import { ServiceCompletionFailureEvent, _decode_ServiceCompletionFailureEvent, _
 /**
  * @summary CallAssociatedEvents
  * @description
- * 
+ *
+ * Call-associated event body of `cSTAEventReport` (ECMA-285 §10). Alternatives:
+ * Call Information, Charging, Digits Generated, Telephony Tones Generated,
+ * Service Completion Failure.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

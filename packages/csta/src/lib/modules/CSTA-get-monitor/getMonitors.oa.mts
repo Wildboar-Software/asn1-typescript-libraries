@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getMonitors
  * @description
- * 
+ *
+ * Get Monitors (ECMA-269 §15.1.4 / ECMA-285 §13.1.4). Direction: CF→SF. ROSE
+ * local CODE 373. Errors: `universalFailure`. Obtains existing monitors.
+ * Capability exchange selects inline
+ * vs Monitor Info segmentation.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

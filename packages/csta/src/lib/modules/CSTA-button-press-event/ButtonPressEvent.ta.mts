@@ -22,7 +22,16 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ButtonPressEvent
  * @description
- * 
+ *
+ * Button Press event (ECMA-269 §21.2.2 / ECMA-285 §19.2.2). Direction: SF→CF
+ * via Event Report. A button was pressed (manually or Button Press service).
+ * Not used to track the function the button represents (§21.2.2.2 FR 1). At
+ * least one of `buttonLabel` or `buttonAssociatedNumber`. Not generated when a
+ * Set request leaves the feature unchanged (ECMA-269 §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,30 +50,47 @@ class ButtonPressEvent {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device where the button was pressed.
          * @public
          * @readonly
          */
         readonly device: SubjectDeviceID,
         /**
          * @summary `button`.
+         * @description
+         *
+         * Button that was pressed. Reserved ButtonIDs in Table 12-3: `0`–`9`,
+         * `*`=10, `#`=11 (ECMA-269 §12.3.5).
          * @public
          * @readonly
          */
         readonly button: ButtonID,
         /**
          * @summary `buttonLabel`.
+         * @description
+         *
+         * Label by which the button may be referenced.
          * @public
          * @readonly
          */
         readonly buttonLabel: OPTIONAL<IA5String>,
         /**
          * @summary `buttonAssociatedNumber`.
+         * @description
+         *
+         * Diallable-digits number associated with the button.
          * @public
          * @readonly
          */
         readonly buttonAssociatedNumber: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

@@ -72,7 +72,10 @@ import { MAP_EXTENSION } from "../MAP-ExtensionDataTypes/MAP-EXTENSION.oca.mjs";
 /**
  * @summary ExtensionSet
  * @description
- * 
+ *
+ * Set of all defined private extensions. Empty in this specification; populated
+ * by definitions outside TS 29.002 (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

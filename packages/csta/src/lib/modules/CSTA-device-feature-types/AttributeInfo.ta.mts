@@ -16,7 +16,14 @@ import { CurrentState, _decode_CurrentState, _encode_CurrentState } from "../CST
 /**
  * @summary AttributeInfo
  * @description
- * 
+ *
+ * One voice-unit attribute (query or acknowledgement). Alternatives are
+ * encoding algorithm, sampling rate, duration, filename, current
+ * position/speed/volume/gain, or current state. Volume and gain are 0..100.
+ * ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,7 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary V18Diag_Item_v18used
  * @description
- * 
+ *
+ * Table 15/V.59 mode achieved: `none`(0); native V.18 `v18-V21Hi`(1),
+ * `v18-V21Lo`(2), `v18-V61C`(3) caller channel simultaneous text+voice,
+ * `v18-V61A`(4) answerer channel simultaneous; legacy `v21Hi`(5)/`v21Lo`(6);
+ * `dTMF`(7); `eDT`(8) European Deaf Telephone; `baudot45`(9) 45.45 bit/s,
+ * `baudot47`(10) undetermined Baudot rate, `baudot50`(11) 50 bit/s;
+ * V.23/Minitel `v23Hi`(12)/`v23Lo`(13); Bell 103 `bellHi`(14)/`bellLo`(15).
+ * ITU-T Rec. V.59 (11/2000) §6.8.15.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +57,15 @@ enum _enum_for_V18Diag_Item_v18used {
 /**
  * @summary V18Diag_Item_v18used
  * @description
- * 
+ *
+ * Table 15/V.59 mode achieved: `none`(0); native V.18 `v18-V21Hi`(1),
+ * `v18-V21Lo`(2), `v18-V61C`(3) caller channel simultaneous text+voice,
+ * `v18-V61A`(4) answerer channel simultaneous; legacy `v21Hi`(5)/`v21Lo`(6);
+ * `dTMF`(7); `eDT`(8) European Deaf Telephone; `baudot45`(9) 45.45 bit/s,
+ * `baudot47`(10) undetermined Baudot rate, `baudot50`(11) 50 bit/s;
+ * V.23/Minitel `v23Hi`(12)/`v23Lo`(13); Bell 103 `bellHi`(14)/`bellLo`(15).
+ * ITU-T Rec. V.59 (11/2000) §6.8.15.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -67,7 +83,15 @@ type V18Diag_Item_v18used = _enum_for_V18Diag_Item_v18used;
 /**
  * @summary V18Diag_Item_v18used
  * @description
- * 
+ *
+ * Table 15/V.59 mode achieved: `none`(0); native V.18 `v18-V21Hi`(1),
+ * `v18-V21Lo`(2), `v18-V61C`(3) caller channel simultaneous text+voice,
+ * `v18-V61A`(4) answerer channel simultaneous; legacy `v21Hi`(5)/`v21Lo`(6);
+ * `dTMF`(7); `eDT`(8) European Deaf Telephone; `baudot45`(9) 45.45 bit/s,
+ * `baudot47`(10) undetermined Baudot rate, `baudot50`(11) 50 bit/s;
+ * V.23/Minitel `v23Hi`(12)/`v23Lo`(13); Bell 103 `bellHi`(14)/`bellLo`(15).
+ * ITU-T Rec. V.59 (11/2000) §6.8.15.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -84,6 +108,9 @@ const V18Diag_Item_v18used = _enum_for_V18Diag_Item_v18used;
 
 /**
  * @summary V18Diag_Item_v18used_none
+ * @description
+ *
+ * No mode achieved. Table 15/V.59. ITU-T Rec. V.59 (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */
@@ -100,6 +127,10 @@ const none: V18Diag_Item_v18used = V18Diag_Item_v18used.none; /* SHORT_NAMED_ENU
 
 /**
  * @summary V18Diag_Item_v18used_v18_V21Hi
+ * @description
+ *
+ * Native V.18 using V.21 high (Table 15 code 1). Table 15/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */
@@ -116,6 +147,10 @@ const v18_V21Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V21Hi; /* SHORT
 
 /**
  * @summary V18Diag_Item_v18used_v18_V21Lo
+ * @description
+ *
+ * Native V.18 using V.21 low (Table 15 code 2). Table 15/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */
@@ -132,6 +167,10 @@ const v18_V21Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V21Lo; /* SHORT
 
 /**
  * @summary V18Diag_Item_v18used_v18_V61C
+ * @description
+ *
+ * Native V.18 simultaneous text+voice in the caller's channel. Table 15/V.59.
+ * ITU-T Rec. V.59 (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */
@@ -148,6 +187,10 @@ const v18_V61C: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V61C; /* SHORT_N
 
 /**
  * @summary V18Diag_Item_v18used_v18_V61A
+ * @description
+ *
+ * Native V.18 simultaneous text+voice in the answering channel. Table 15/V.59.
+ * ITU-T Rec. V.59 (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */
@@ -164,6 +207,10 @@ const v18_V61A: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V61A; /* SHORT_N
 
 /**
  * @summary V18Diag_Item_v18used_v21Hi
+ * @description
+ *
+ * Legacy V.21 transmitting on the high channel. Table 15/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */
@@ -180,6 +227,10 @@ const v21Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v21Hi; /* SHORT_NAMED_E
 
 /**
  * @summary V18Diag_Item_v18used_v21Lo
+ * @description
+ *
+ * Legacy V.21 transmitting on the low channel. Table 15/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */
@@ -196,6 +247,9 @@ const v21Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v21Lo; /* SHORT_NAMED_E
 
 /**
  * @summary V18Diag_Item_v18used_dTMF
+ * @description
+ *
+ * DTMF text-telephone mode. Table 15/V.59. ITU-T Rec. V.59 (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */
@@ -212,6 +266,10 @@ const dTMF: V18Diag_Item_v18used = V18Diag_Item_v18used.dTMF; /* SHORT_NAMED_ENU
 
 /**
  * @summary V18Diag_Item_v18used_eDT
+ * @description
+ *
+ * EDT ("European Deaf Telephone"). Table 15/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.8.15.
  * @constant
  * @type {number}
  */
@@ -228,6 +286,9 @@ const eDT: V18Diag_Item_v18used = V18Diag_Item_v18used.eDT; /* SHORT_NAMED_ENUME
 
 /**
  * @summary V18Diag_Item_v18used_baudot45
+ * @description
+ *
+ * Baudot 45.45 bit/s. Table 15/V.59. ITU-T Rec. V.59 (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */
@@ -244,6 +305,10 @@ const baudot45: V18Diag_Item_v18used = V18Diag_Item_v18used.baudot45; /* SHORT_N
 
 /**
  * @summary V18Diag_Item_v18used_baudot47
+ * @description
+ *
+ * Baudot, undetermined bit rate. Table 15/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.8.15.
  * @constant
  * @type {number}
  */
@@ -260,6 +325,9 @@ const baudot47: V18Diag_Item_v18used = V18Diag_Item_v18used.baudot47; /* SHORT_N
 
 /**
  * @summary V18Diag_Item_v18used_baudot50
+ * @description
+ *
+ * Baudot 50 bit/s. Table 15/V.59. ITU-T Rec. V.59 (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */
@@ -276,6 +344,10 @@ const baudot50: V18Diag_Item_v18used = V18Diag_Item_v18used.baudot50; /* SHORT_N
 
 /**
  * @summary V18Diag_Item_v18used_v23Hi
+ * @description
+ *
+ * V.23/Minitel transmitting on the high channel. Table 15/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */
@@ -292,6 +364,10 @@ const v23Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v23Hi; /* SHORT_NAMED_E
 
 /**
  * @summary V18Diag_Item_v18used_v23Lo
+ * @description
+ *
+ * V.23/Minitel transmitting on the low channel. Table 15/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */
@@ -308,6 +384,10 @@ const v23Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v23Lo; /* SHORT_NAMED_E
 
 /**
  * @summary V18Diag_Item_v18used_bellHi
+ * @description
+ *
+ * Bell 103 transmitting on the high channel. Table 15/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */
@@ -324,6 +404,10 @@ const bellHi: V18Diag_Item_v18used = V18Diag_Item_v18used.bellHi; /* SHORT_NAMED
 
 /**
  * @summary V18Diag_Item_v18used_bellLo
+ * @description
+ *
+ * Bell 103 transmitting on the low channel. Table 15/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.8.15.
  * @constant
  * @type {number}
  */

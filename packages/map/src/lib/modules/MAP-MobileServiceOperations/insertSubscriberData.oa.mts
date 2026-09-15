@@ -80,7 +80,15 @@ import { unidentifiedSubscriber } from "../MAP-Errors/unidentifiedSubscriber.oa.
 /**
  * @summary insertSubscriberData
  * @description
- * 
+ *
+ * MAP_INSERT_SUBSCRIBER_DATA: HLR updates a VLR (or SGSN) with subscriber data
+ * after subscription/ODB/SS-data change, or at location updating / restoration.
+ * Not used to withdraw a basic or supplementary service. Super-Charger may omit
+ * subscriber parameters at location updating (3GPP TS 23.116). Confirmed.
+ * Typical path: HLR→VLR or HLR→SGSN (also CSS as initiator of stand-alone SDM).
+ * Local opcode 7. Timer class `m` (15 s to 30 s). (3GPP TS 29.002 V19.1.0
+ * clauses 8.8.1.1, 17.1.2, 17.3.2.17 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

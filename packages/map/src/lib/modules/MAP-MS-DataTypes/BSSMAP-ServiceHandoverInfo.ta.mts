@@ -73,7 +73,11 @@ import { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-
 /**
  * @summary BSSMAP_ServiceHandoverInfo
  * @description
- * 
+ *
+ * Pairs a BSSMAP Service Handover value with a RAB Id so service handover can
+ * be related to the radio access bearer (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.6.5A and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,6 +101,11 @@ class BSSMAP_ServiceHandoverInfo {
         readonly bssmap_ServiceHandover: BSSMAP_ServiceHandover,
         /**
          * @summary `rab_Id`.
+         * @description
+         *
+         * RAB Identity needed to relate the service handover with the radio
+         * access bearer (3GPP TS 29.002 V19.1.0 clauses 7.6.2.57 and 17.7.1).
+         *
          * @public
          * @readonly
          */

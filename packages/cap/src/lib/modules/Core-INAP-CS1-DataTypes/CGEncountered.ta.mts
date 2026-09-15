@@ -1,0 +1,108 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary CGEncountered
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * CGEncountered      ::=  ENUMERATED {
+ *           manualCGencountered(1),
+ *           scpOverload(2)
+ *           }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_CGEncountered {
+    manualCGencountered = 1,
+    scpOverload = 2,
+}
+
+/**
+ * @summary CGEncountered
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * CGEncountered      ::=  ENUMERATED {
+ *           manualCGencountered(1),
+ *           scpOverload(2)
+ *           }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type CGEncountered = _enum_for_CGEncountered;
+
+/**
+ * @summary CGEncountered
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * CGEncountered      ::=  ENUMERATED {
+ *           manualCGencountered(1),
+ *           scpOverload(2)
+ *           }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const CGEncountered = _enum_for_CGEncountered;
+
+/**
+ * @summary CGEncountered_manualCGencountered
+ * @constant
+ * @type {number}
+ */
+export
+const CGEncountered_manualCGencountered: CGEncountered = CGEncountered.manualCGencountered; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary manualCGencountered
+ * @constant
+ * @type {number}
+ */
+export
+const manualCGencountered: CGEncountered = CGEncountered.manualCGencountered; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary CGEncountered_scpOverload
+ * @constant
+ * @type {number}
+ */
+export
+const CGEncountered_scpOverload: CGEncountered = CGEncountered.scpOverload; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary scpOverload
+ * @constant
+ * @type {number}
+ */
+export
+const scpOverload: CGEncountered = CGEncountered.scpOverload; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_CGEncountered = $._decodeEnumerated;
+export const _encode_CGEncountered = $._encodeEnumerated;
+
+
+/* eslint-enable */

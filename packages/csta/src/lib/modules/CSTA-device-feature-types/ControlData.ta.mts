@@ -24,7 +24,13 @@ import {
 /**
  * @summary ControlData
  * @description
- * 
+ *
+ * TTS control for Synthesize Message: voice gender and language. ECMA-269
+ * §26.1.17.1; ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,12 +48,14 @@ class ControlData {
     constructor (
         /**
          * @summary `gender`.
+         * @description Male or female voice.
          * @public
          * @readonly
          */
         readonly gender: ControlData_gender,
         /**
          * @summary `language`.
+         * @description Language of the synthesized voice.
          * @public
          * @readonly
          */

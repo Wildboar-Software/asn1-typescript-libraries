@@ -26,7 +26,18 @@ import {
 /**
  * @summary suspendLocationTrackingSession
  * @description
- * 
+ *
+ * Suspends a location tracking session. Location is not collected or reported
+ * until Resume (ECMA-269 §28.1.9).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:538. Errors: `universalFailure` (ECMA-285 §26.1.9).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

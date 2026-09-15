@@ -73,7 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary EventReportData
  * @description
- * 
+ *
+ * CCBS subscriber status in a status report (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,20 @@ class EventReportData {
     constructor (
         /**
          * @summary `ccbs_SubscriberStatus`.
+         * @description
+         *
+         * CCBS subscriber status.
+         *
          * @public
          * @readonly
          */
         readonly ccbs_SubscriberStatus: OPTIONAL<CCBS_SubscriberStatus>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

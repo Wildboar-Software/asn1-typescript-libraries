@@ -72,7 +72,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MAP_ProviderAbortReason
  * @description
- * 
+ *
+ * Provider reason in `MAP-ProviderAbortInfo`. `abnormalDialogue` is an abnormal
+ * MAP dialogue (not in accordance with the specified application context).
+ * Clause 7.3.5 also lists other MAP-P-ABORT provider reasons that are not
+ * members of this ENUMERATED (3GPP TS 29.002 V19.1.0 clauses 7.3.5 and 17.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,7 +97,12 @@ enum _enum_for_MAP_ProviderAbortReason {
 /**
  * @summary MAP_ProviderAbortReason
  * @description
- * 
+ *
+ * Provider reason in `MAP-ProviderAbortInfo`. `abnormalDialogue` is an abnormal
+ * MAP dialogue (not in accordance with the specified application context).
+ * Clause 7.3.5 also lists other MAP-P-ABORT provider reasons that are not
+ * members of this ENUMERATED (3GPP TS 29.002 V19.1.0 clauses 7.3.5 and 17.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -109,7 +119,12 @@ type MAP_ProviderAbortReason = _enum_for_MAP_ProviderAbortReason;
 /**
  * @summary MAP_ProviderAbortReason
  * @description
- * 
+ *
+ * Provider reason in `MAP-ProviderAbortInfo`. `abnormalDialogue` is an abnormal
+ * MAP dialogue (not in accordance with the specified application context).
+ * Clause 7.3.5 also lists other MAP-P-ABORT provider reasons that are not
+ * members of this ENUMERATED (3GPP TS 29.002 V19.1.0 clauses 7.3.5 and 17.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -125,6 +140,11 @@ const MAP_ProviderAbortReason = _enum_for_MAP_ProviderAbortReason;
 
 /**
  * @summary MAP_ProviderAbortReason_abnormalDialogue
+ * @description
+ *
+ * `abnormalDialogue (0)`: MAP dialogue is not in accordance with the specified
+ * application context (3GPP TS 29.002 V19.1.0 clause 7.3.5, table 7.3/9).
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +153,11 @@ const MAP_ProviderAbortReason_abnormalDialogue: MAP_ProviderAbortReason = MAP_Pr
 
 /**
  * @summary abnormalDialogue
+ * @description
+ *
+ * `abnormalDialogue (0)` of `MAP-ProviderAbortReason` (3GPP TS 29.002 V19.1.0
+ * clause 7.3.5).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +166,13 @@ const abnormalDialogue: MAP_ProviderAbortReason = MAP_ProviderAbortReason.abnorm
 
 /**
  * @summary MAP_ProviderAbortReason_invalidPDU
+ * @description
+ *
+ * `invalidPDU (1)` (3GPP TS 29.002 V19.1.0 clause 17.4). Service-level provider
+ * reasons in clause 7.3.5 also include provider malfunction, supporting
+ * dialogue/transaction released, resource limitation, maintenance activity and
+ * version incompatibility.
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +181,11 @@ const MAP_ProviderAbortReason_invalidPDU: MAP_ProviderAbortReason = MAP_Provider
 
 /**
  * @summary invalidPDU
+ * @description
+ *
+ * `invalidPDU (1)` of `MAP-ProviderAbortReason` (3GPP TS 29.002 V19.1.0 clause
+ * 17.4).
+ *
  * @constant
  * @type {number}
  */

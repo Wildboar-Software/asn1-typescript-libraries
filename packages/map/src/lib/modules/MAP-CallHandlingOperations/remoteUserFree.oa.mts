@@ -83,7 +83,13 @@ import { busySubscriber } from "../MAP-Errors/busySubscriber.oa.mjs";
 /**
  * @summary remoteUserFree
  * @description
- * 
+ *
+ * MAP_REMOTE_USER_FREE: HLR reports to the VLR that the B subscriber is now
+ * idle and that the A subscriber can be notified. Confirmed. Typical path:
+ * HLR→VLR. Local opcode 75. Timer class `ml` (1 min to 10 min). Distinctive
+ * errors: `incompatibleTerminal`, `busySubscriber`. (3GPP TS 29.002 V19.1.0
+ * clauses 10.12.1, 17.1.2, 17.3.2.37 and 17.6.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

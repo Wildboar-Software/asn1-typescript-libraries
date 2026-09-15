@@ -73,7 +73,11 @@ import { Ext_CallBarringInfoFor_CSE, _decode_Ext_CallBarringInfoFor_CSE, _encode
 /**
  * @summary Ext_SS_InfoFor_CSE
  * @description
- * 
+ *
+ * SS information for CSE returned in MAP-ANY-TIME-MODIFICATION: forwarding
+ * information for CSE or call barring information for CSE (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.3.79, 7.6.3.80 and 8.11.4.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

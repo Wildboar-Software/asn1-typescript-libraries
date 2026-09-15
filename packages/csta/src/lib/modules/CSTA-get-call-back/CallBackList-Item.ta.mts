@@ -16,7 +16,13 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary CallBackList_Item
  * @description
- * 
+ *
+ * One callback. The queried device is originator or target (ECMA-269
+ * §22.1.8.3.4 FR 2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +40,27 @@ class CallBackList_Item {
     constructor (
         /**
          * @summary `originatingDevice`.
+         * @description
+         *
+         * Device that originated the callback.
          * @public
          * @readonly
          */
         readonly originatingDevice: DeviceID,
         /**
          * @summary `targetDevice`.
+         * @description
+         *
+         * Target of the callback.
          * @public
          * @readonly
          */
         readonly targetDevice: DeviceID,
         /**
          * @summary `callBackMessageIndicator`.
+         * @description
+         *
+         * TRUE = Call Back Message; FALSE (default) = Call Back.
          * @public
          * @readonly
          */

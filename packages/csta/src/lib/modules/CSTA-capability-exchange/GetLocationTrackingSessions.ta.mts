@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GetLocationTrackingSessions
  * @description
- * 
+ * Capability bitmap for the Get Location Tracking Sessions service (ECMA-269
+ * C.22.11, ECMA-285 §9.10). Presence of this entry in
+ * `LocationServicesServList` means the SF supports that service. Each set bit
+ * is an optional parameter, enumerated value, initial connection state, or
+ * miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +32,9 @@ type GetLocationTrackingSessions = BIT_STRING;
 /**
  * @summary GetLocationTrackingSessions_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.22.11).
  */
 export
 const GetLocationTrackingSessions_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -30,6 +42,8 @@ const GetLocationTrackingSessions_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `GetLocationTrackingSessions_privateData`.
  */
 export
 const privateData: number = GetLocationTrackingSessions_privateData; /* SHORT_NAMED_BIT */
@@ -37,6 +51,9 @@ const privateData: number = GetLocationTrackingSessions_privateData; /* SHORT_NA
 /**
  * @summary GetLocationTrackingSessions_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.22.11).
  */
 export
 const GetLocationTrackingSessions_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
@@ -44,6 +61,8 @@ const GetLocationTrackingSessions_privateDataInAck: number = 1; /* LONG_NAMED_BI
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `GetLocationTrackingSessions_privateDataInAck`.
  */
 export
 const privateDataInAck: number = GetLocationTrackingSessions_privateDataInAck; /* SHORT_NAMED_BIT */

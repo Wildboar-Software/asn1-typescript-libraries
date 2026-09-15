@@ -13,7 +13,14 @@ import { CSTAEventReportArgument, _decode_CSTAEventReportArgument, _encode_CSTAE
 /**
  * @summary cSTAEventReport
  * @description
- * 
+ *
+ * ROSE operation that carries all CSTA events. ARGUMENT is
+ * `CSTAEventReportArgument`. ALWAYS RESPONDS FALSE. Local code 21. Cross-ref is
+ * `MonitorCrossRefID` (Call ID, Device ID, or a switch-managed identifier).
+ * ECMA-285 §5.4, §10.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

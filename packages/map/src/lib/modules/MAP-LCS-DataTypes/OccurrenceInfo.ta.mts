@@ -78,7 +78,9 @@ enum _enum_for_OccurrenceInfo {
 /**
  * @summary OccurrenceInfo
  * @description
- * 
+ *
+ * oneTimeEvent or multipleTimeEvent (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +97,10 @@ type OccurrenceInfo = _enum_for_OccurrenceInfo | ENUMERATED;
 
 /**
  * @summary OccurrenceInfo_oneTimeEvent
+ * @description
+ *
+ * `oneTimeEvent (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +109,10 @@ const OccurrenceInfo_oneTimeEvent: OccurrenceInfo = 0; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary oneTimeEvent
+ * @description
+ *
+ * `oneTimeEvent (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +121,10 @@ const oneTimeEvent: OccurrenceInfo = OccurrenceInfo_oneTimeEvent; /* SHORT_NAMED
 
 /**
  * @summary OccurrenceInfo_multipleTimeEvent
+ * @description
+ *
+ * `multipleTimeEvent (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +133,10 @@ const OccurrenceInfo_multipleTimeEvent: OccurrenceInfo = 1; /* LONG_NAMED_ENUMER
 
 /**
  * @summary multipleTimeEvent
+ * @description
+ *
+ * `multipleTimeEvent (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */

@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LSAOnlyAccessIndicator
  * @description
- * 
+ *
+ * Access right outside the subscribed localised service areas: allowed or
+ * restricted. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.56 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,7 +95,10 @@ enum _enum_for_LSAOnlyAccessIndicator {
 /**
  * @summary LSAOnlyAccessIndicator
  * @description
- * 
+ *
+ * Access right outside the subscribed localised service areas: allowed or
+ * restricted. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.56 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -109,7 +115,10 @@ type LSAOnlyAccessIndicator = _enum_for_LSAOnlyAccessIndicator;
 /**
  * @summary LSAOnlyAccessIndicator
  * @description
- * 
+ *
+ * Access right outside the subscribed localised service areas: allowed or
+ * restricted. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.56 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -125,6 +134,11 @@ const LSAOnlyAccessIndicator = _enum_for_LSAOnlyAccessIndicator;
 
 /**
  * @summary LSAOnlyAccessIndicator_accessOutsideLSAsAllowed
+ * @description
+ *
+ * Access outside subscribed LSAs is allowed. (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.3.56)
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +147,11 @@ const LSAOnlyAccessIndicator_accessOutsideLSAsAllowed: LSAOnlyAccessIndicator = 
 
 /**
  * @summary accessOutsideLSAsAllowed
+ * @description
+ *
+ * Access outside subscribed LSAs is allowed. (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.3.56)
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +160,11 @@ const accessOutsideLSAsAllowed: LSAOnlyAccessIndicator = LSAOnlyAccessIndicator.
 
 /**
  * @summary LSAOnlyAccessIndicator_accessOutsideLSAsRestricted
+ * @description
+ *
+ * Access outside subscribed LSAs is restricted. (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.3.56)
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +173,11 @@ const LSAOnlyAccessIndicator_accessOutsideLSAsRestricted: LSAOnlyAccessIndicator
 
 /**
  * @summary accessOutsideLSAsRestricted
+ * @description
+ *
+ * Access outside subscribed LSAs is restricted. (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.3.56)
+ *
  * @constant
  * @type {number}
  */

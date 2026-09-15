@@ -75,7 +75,10 @@ import { maxNumOfBasicServiceGroups } from "./maxNumOfBasicServiceGroups.va.mjs"
 /**
  * @summary ForwardingFeatureList
  * @description
- * 
+ *
+ * SEQUENCE SIZE (1..maxNumOfBasicServiceGroups) OF `ForwardingFeature` (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.4.15 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

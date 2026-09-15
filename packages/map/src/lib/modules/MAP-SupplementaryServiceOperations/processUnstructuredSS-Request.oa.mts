@@ -82,7 +82,14 @@ import { callBarred } from "../MAP-Errors/callBarred.oa.mjs";
 /**
  * @summary processUnstructuredSS_Request
  * @description
- * 
+ *
+ * MAP_PROCESS_UNSTRUCTURED_SS_REQUEST: relay information to allow unstructured
+ * SS operation. Used MSC→VLR, VLR→HLR, HLR→gsmSCF and HLR→HLR. Confirmed.
+ * Typical MAP path: VLR→HLR (also HLR↔gsmSCF). Local opcode 59. Timer is 10
+ * minutes (ASN.1 comment, not a class letter). Distinctive error:
+ * `unknownAlphabet`. (3GPP TS 29.002 V19.1.0 clauses 11.9.1, 17.3.2.20 and
+ * 17.6.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

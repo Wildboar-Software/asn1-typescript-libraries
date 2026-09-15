@@ -1,0 +1,1018 @@
+DFRAbstractService
+{iso standard 10166 part-1(1) modules(0) abstract-service(1)}
+DEFINITIONS IMPLICIT TAGS ::=
+BEGIN
+IMPORTS
+
+    -- Defined in ITU-T Recommendation X.407, I think, which was withdrawn and deleted.
+    -- In ITU-T Recommendation X.402 (1995), mapping of these constructs to the Remote
+    -- Operations Service Element (ROSE) was described. I did my best to translate the
+    -- old information objects to what I think a modernized DFRAbstractService would use.
+    -- ABSTRACT-BIND, ABSTRACT-ERROR, ABSTRACT-OPERATION, ABSTRACT-UNBIND, OBJECT, PORT
+    --     FROM AbstractServiceNotation
+    --     {joint-iso-ccitt mhs-motis(6) asdc(2) modules(0) notation(1)}
+
+    id-dfr-document, id-dfr-root-group, id-dfr-proper-group,
+    id-dfr-search-result-list, id-dfr-server, id-dfr-user, id-pt-dfr
+        FROM DFRObjectIdentifiers
+        {iso standard 10166 part-1(1) modules(0) object-identifiers(0)}
+
+    Attribute, AttributeType, AttributeValue, DistinguishedName
+        FROM InformationFramework
+        {joint-iso-ccitt ds(5) modules(1) informationFramework(1) 9}
+
+    Filter
+        FROM DirectoryAbstractService
+        {joint-iso-itu-t ds(5) module(1) directoryAbstractService(2) 9}
+        WITH SUCCESSORS
+
+    DOR, Requested-QoS-level, Quality-of-Service, Token
+        FROM DOR-definition
+        {joint-iso-ccitt dor(11) reference-definition(0)}
+
+    ROS-OBJECT-CLASS, OPERATION-PACKAGE, CONNECTION-PACKAGE, OPERATION, ERROR,
+    CONTRACT, Code, InvokeId
+        FROM Remote-Operations-Information-Objects
+        {joint-iso-itu-t remote-operations(4) informationObjects(5) version2(1)}
+
+    emptyUnbind
+        FROM Remote-Operations-Useful-Definitions
+        {joint-iso-itu-t remote-operations(4) useful-definitions(7) version2(1)}
+    ;
+
+-- Remote Operations
+
+id-opcode-create    Code ::= local:1
+id-opcode-delete    Code ::= local:2
+id-opcode-copy      Code ::= local:3
+id-opcode-move      Code ::= local:4
+id-opcode-read      Code ::= local:5
+id-opcode-modify    Code ::= local:6
+id-opcode-list      Code ::= local:7
+id-opcode-search    Code ::= local:8
+id-opcode-reserve   Code ::= local:9
+id-opcode-abandon   Code ::= local:10
+
+-- Remote Errors
+
+id-errcode-attribute-error              Code ::= local:1
+id-errcode-name-error                   Code ::= local:2
+id-errcode-access-error                 Code ::= local:3
+id-errcode-update-error                 Code ::= local:4
+id-errcode-referent-access-error        Code ::= local:5
+id-errcode-inter-server-access-error    Code ::= local:6
+id-errcode-reservation-error            Code ::= local:7
+id-errcode-version-management-error     Code ::= local:8
+id-errcode-security-error               Code ::= local:9
+id-errcode-service-error                Code ::= local:10
+id-errcode-abandon-failed               Code ::= local:11
+id-errcode-abandoned                    Code ::= local:12
+
+-- DFR ABSTRACT OBJECTS
+
+dfr-conn-pkg CONNECTION-PACKAGE ::= {
+    BIND                dfrBind
+    -- Empty unbind
+}
+
+dfr-contract CONTRACT ::= {
+    CONNECTION              dfr-conn-pkg
+    INITIATOR CONSUMER OF   {dfr}
+}
+
+-- dfr-server OBJECT PORTS { dfr-port [S] } ::= id-dfr-server
+dfr-server ROS-OBJECT-CLASS ::= {
+    RESPONDS    {dfr-contract}
+    ID          id-dfr-server
+}
+
+-- dfr-user OBJECT PORTS { dfr-port [C] } ::= id-dfr-user
+dfr-user ROS-OBJECT-CLASS ::= {
+    INITIATES   {dfr-contract}
+    ID          id-dfr-user
+}
+
+dfr OPERATION-PACKAGE ::= {
+    CONSUMER INVOKES {
+        create
+        | delete
+        | copy
+        | move
+        | read
+        | modify
+        | list
+        | search
+        | reserve
+        | abandon
+    }
+    SUPPLIER INVOKES { }
+    ID id-pt-dfr
+}
+
+-- SPECIFICATION OF DFR-OBJECT DATA TYPES
+
+DfrObjectClass ::= ENUMERATED {
+    dfr-document            (0),
+    dfr-root-group          (1),
+    dfr-proper-group        (2),
+    dfr-reference           (3),
+    dfr-search-result-list  (4)
+}
+
+DfrEntry ::= SEQUENCE {
+    attributes  [0] DfrEntryAttributes,
+    content     [1] DfrObjectContent
+}
+
+DfrEntryAttributes ::= SET OF Attribute
+
+DfrObjectContent ::= CHOICE {
+      document-content                             [0] DfrDocumentContent,
+      root-group-content                           [1] DfrGroupContent,
+      proper-group-content                         [2] DfrGroupContent,
+      reference-content                            [3] DfrReferenceContent,
+      search-result-list-content                   [4] DfrSearchResultListContent
+}
+
+DfrUniquePermanentIdentifier ::= OCTET STRING
+
+DfrDocumentContent ::= EXTERNAL
+    (WITH COMPONENTS {
+        ...,
+        direct-reference PRESENT,
+        indirect-reference ABSENT,
+        encoding (WITH COMPONENTS { ... , arbitrary ABSENT })
+    })
+
+DfrReferenceContent ::= DOR
+    -- (WITH COMPONENTS {
+    --     ae-identifier,
+    --     local-reference,
+    --     data-object-type (DfrObjectClassID(
+    --         id-dfr-document
+    --         | id-dfr-root-group
+    --         | id-dfr-proper-group
+    --         | id-df r-search-result-list
+    --     )),
+    --     quality-of-service,
+    --     token ABSENT
+    -- })
+
+DfrObjectClassID ::= OBJECT IDENTIFIER (
+    id-dfr-document
+    | id-dfr-root-group
+    | id-dfr-proper-group
+    | id-dfr-search-result-list
+)
+
+DfrGroupContent ::= SEQUENCE OF DfrUniquePermanentIdentifier
+
+DfrSearchResultListContent ::= CHOICE {
+    empty                     NULL,
+    produced                  SEQUENCE {
+        start-date-and-time     [0] GeneralizedTime,
+        end-date-and-time       [1] GeneralizedTime,
+        object-list             [2] DfrEntryList,
+        ordering                [3] OrderingRule OPTIONAL,
+        search-domain           [4] SearchDomain,
+        search-criteria         [5] SearchCriteria
+    }
+}
+
+-- ABSTRACT BIND
+
+-- DfrBind ::= ABSTRACT-BIND
+--     TO {dfr-port[S]}
+--     BIND
+--         ARGUMENT    DfrBindArgument
+--         RESULT      DfrBindResult
+--         BIND-ERROR  DfrBindError
+
+
+DfrBindArgument ::= SEQUENCE {
+    initiator-name              [0] DistinguishedName,
+    credentials                 [1] Credentials,
+    retrieve-restrictions       [2] Restrictions OPTIONAL, -- default is none
+    dfr-configuration-request   [3] BOOLEAN DEFAULT FALSE,
+    bind-security               [4] BindSecurity OPTIONAL,
+    priority                    [5] Priority DEFAULT medium,
+    dor-for-produce-operations  [6] BOOLEAN DEFAULT TRUE,
+    dor-for-consume-operations  [7] BOOLEAN DEFAULT TRUE
+}
+
+Credentials ::= CHOICE {
+    -- used for initial authentication
+    simple       [0] Creds,
+    -- used when initial authentication has already taken place external to the DFR-Server
+    certified    [1] PrivilegeAttributeCertificate
+}     --
+
+Creds ::= OCTET STRING
+
+PrivilegeAttributeCertificate ::= EXTERNAL
+
+Restrictions ::= SET {
+    allowed-document-types  [0] SET OF OBJECT IDENTIFIER OPTIONAL, -- default is no restriction
+    maximum-length          [1] INTEGER OPTIONAL -- default is no restriction
+}
+
+BindSecurity ::= EXTERNAL
+
+DfrBindResult ::= SET {
+    authentication-attributes       [0] SET OF AuthenticationAttribute OPTIONAL,
+    constraints-supported           [1] ConstraintsType OPTIONAL,
+    dfr-document-types-supported    [2] SET OF TypeAndAttribute OPTIONAL,
+    function-Set-supported          [3] FunctionSetType OPTIONAL,
+    maximum-length-supported        [4] INTEGER OPTIONAL,
+    dor-for-produce-operations      [5] BOOLEAN DEFAULT TRUE,
+    dor-for-consume-operations      [6] BOOLEAN DEFAULT TRUE,
+    rOA-protocols-accessee          [7] ROAProtocols OPTIONAL,
+    rOA-protocols-accessor          [8] ROAProtocols OPTIONAL
+}
+
+AuthenticationAttribute ::= EXTERNAL
+
+ConstraintsType ::= SEQUENCE {
+    name-constraint     [0] NameConstraint,
+    version-constraint  [1] VersionConstraint
+}
+
+NameConstraint ::= ENUMERATED {
+    no-name-constraint (0),
+    local-unambiguity  (1),
+    global-unambiguity (2)
+}
+
+VersionConstraint ::= ENUMERATED {
+    no-version-constraint (0),
+    version-unambiguity   (1)
+}
+
+TypeAndAttribute ::= SEQUENCE {
+    document-types  [0] OBJECT IDENTIFIER,
+    attributes      [1] SET OF AttributeType
+}
+
+FunctionSetType ::= ENUMERATED {
+    flat-store          (1),
+    pre-defined-store   (2),
+    full-set            (3)
+}
+
+ROAProtocols ::= SEQUENCE OF OBJECT IDENTIFIER
+
+DfrBindError ::= CHOICE {
+    service-error   [0] ServiceProblem,
+    security-error  [1] SecurityProblem
+}
+
+-- COMMON DATA TYPES FOR DFR-OPERATION ARGUMENTS
+
+CommonArguments ::= SEQUENCE {
+    task-id         [26] TaskId OPTIONAL,
+    reservation     [27] Reservation OPTIONAL,
+    error-handling  [28] ErrorHandlingMode DEFAULT all-or-nothing,
+    priority        [29] Priority DEFAULT medium,
+    privileges      [30] Privileges OPTIONAL
+}
+
+TaskId ::= OCTET STRING
+
+Reservation ::= SEQUENCE {
+    reservation-duration    [0] GeneralizedTime OPTIONAL,
+    reservation-level       [1] ReservationLevel,
+    reservation-Status      [2] ReservationStatus DEFAULT uncommitted
+}
+
+ReservationLevel ::= ENUMERATED {
+    unreserved       (0),
+    exclusive-write  (1),
+    exclusive-access (2),
+    read-only1       (3),
+    read-only2       (4)
+}
+
+ReservationStatus ::= ENUMERATED {
+    uncommitted (0),
+    committed   (1)
+}
+
+ErrorHandlingMode ::= CHOICE {
+    all-or-nothing      [0] NULL,
+    until-first-warning [1] NULL,
+    report-all-warnings [2] NULL,
+    -- This parameter is only applicable to multiple abstract operations
+    -- These are List or Copy group.
+    report-n-warnings   [3] INTEGER
+}
+
+-- warning will never be reported if the DFR-User has no read access right
+Warning ::= SEQUENCE {
+    entry          [0] DfrEntryName,
+    accessl        [1] AccessProblem OPTIONAL, -- see 8.3.3
+    access2        [2] ReferentAccessProblem OPTIONAL -- see 8.3.5
+}
+
+Priority ::= ENUMERATED {
+    low         (0),
+    medium      (1),
+    high        (2)
+}
+
+Privileges ::= SEQUENCE {
+    operation-pac   [0] PrivilegeAttributeCertificate OPTIONAL,
+    proxy-pac       [1] PrivilegeAttributeCertificate OPTIONAL
+}
+
+DfrEntryName ::= CHOICE {
+    upi                               [0] DfrUniquePermanentIdentifier,
+    path-name                         [1] DfrPathName,
+    relative-path-name                [2] SEQUENCE {
+        base        [0] DfrUniquePermanentIdentifier,
+        path        [1] DfrPathName
+    }
+}
+
+DfrPathName ::= SEQUENCE OF DfrTitle
+
+DfrTitle ::= CharacterData
+
+CharacterData ::= CHOICE {
+    graphicString   GraphicString,
+    t61String       T61String,
+    printableString PrintableString,
+    generalString   GeneralString
+}
+
+CommonUpdateArguments ::= SEQUENCE {
+    object-class    [0] DfrObjectClass OPTIONAL,
+    entry           [1] CHOICE {
+        local           [1] DfrEntryName,
+        external        [2] DOR
+    } OPTIONAL,
+    destination     [2] DfrEntryName OPTIONAL, -- of the parent group
+    position        [3] GroupMemberPosition OPTIONAL, -- in the parent group
+    modifications   [4] SEQUENCE OF EntryModification OPTIONAL,
+    selection       [5] EntryInformationSelection OPTIONAL,
+    reference-qos   [6] Requested-QoS-level OPTIONAL
+}
+
+CommonUpdateResult ::= SEQUENCE {
+    upi                 [0] DfrUniquePermanentIdentifier,
+    entry-information   [1] EntryInformation OPTIONAL,
+    warnings            [2] SEQUENCE OF Warning DEFAULT {},
+    continuation        [3] TaskId OPTIONAL,
+    reference-qos       [4] Quality-of-Service OPTIONAL,
+    referent-altered    [5] ReferentStatus OPTIONAL
+}
+
+ReferentStatus ::= ENUMERATED {
+    not-changed-since-produce (0),
+    changed-since-produce (1)
+}
+
+GroupMemberPosition ::= CHOICE {
+    last    [0] NULL,
+    first   [1] NULL,
+    after   [2] DfrEntryName,
+    before  [3] DfrEntryName
+}
+
+EntryModification ::= CHOICE {
+    put-attribute           [0] Attribute,
+    remove-attribute        [1] AttributeType,
+    copy-attributes-from    [2] SEQUENCE {
+        source                  [0] SourceEntry,
+        -- as default all copyable attributes
+        attribute-selection     [1] SET OF AttributeType OPTIONAL
+    },
+    add-values              [3] Attribute,
+    remove-values           [4] Attribute,
+    add-values-from         [5] SEQUENCE {
+        source                  [0] SourceEntry,
+        -- as default all multivalued attributes
+        attribute-selection     [1] SET OF AttributeType OPTIONAL
+    },
+    put-content             [6] DfrObjectContent,
+    remove-content          [7] NULL,
+    copy-content-from       [8] SourceEntry
+}
+
+SourceEntry ::= CHOICE {
+    parent              [0] NULL,
+    referent            [1] NULL, -- only for a DFR-Reference
+    previous-version    [2] NULL,
+    specified-entry     [3] DfrEntryName, -- only if unique previous version
+    dor                 [4] DOR
+}
+
+EntryInformationSelection ::= SEQUENCE {
+    read-selector           [0] ENUMERATED {
+        attributes-only                 (0),
+        attributes-and-content          (1),
+        content-only                    (2),
+        dor-to-attr-only                (3),
+        attr-and-dor-to-content         (4),
+        dor-to-content-only             (5),
+        dor-to-entire-object            (6),
+        attr-and-dor-to-entire-object   (7)
+    } DEFAULT attributes-only,
+    attribute-selection     [1] AttributeSelection OPTIONAL
+}
+
+AttributeSelection ::= CHOICE {
+    all         [0] NULL,
+    none        [1] NULL,
+    -- when the delivery order is not significant
+    unordered   [2] SET OF AttributeType,
+    -- to specify not only attributes to be delivered, but also the order in which they should appear
+    ordered     [3] SEQUENCE OF AttributeType,
+    -- implicitly selects UPI and DFR-Object-Class attributes
+    minimum     [4] NULL
+}
+
+EntryInformation ::= CHOICE {
+    attributes-only                 [0] DfrEntryAttributes,
+    attributes-and-content          [1] DfrEntry,
+    content-only                    [2] DfrObjectContent,
+    dor-to-attr-only                [3] DOR,
+    attr-and-dor-to-content         [4] SEQUENCE {
+        attributes              [0] DfrEntryAttributes,
+        dor-to-content          [1] DOR
+    },
+    dor-to-content-only             [5] DOR,
+    dor-to-entire-object            [6] DOR,
+    attr-and-dor-to-entire-object   [7] SEQUENCE {
+        attributes              [0] DfrEntryAttributes,
+        dor-to-entire-object    [1] DOR
+    }
+}
+
+CommonListSearchArguments ::= SEQUENCE {
+    continue    [1] BOOLEAN DEFAULT FALSE,
+    limits      [2] Limits OPTIONAL,
+    selection   [3] AttributeSelection OPTIONAL,
+    ordering    [4] OrderingRule OPTIONAL
+}
+
+CommonListSearchResult ::= SEQUENCE {
+    number-of-entries   [0] INTEGER,
+    limit-encountered   [1] LimitEncountered OPTIONAL,
+    entry-list          [2] DfrEntryList,
+    warnings            [3] SEQUENCE OF Warning DEFAULT {},
+    continuation        [4] TaskId OPTIONAL
+}
+
+Limits ::= SEQUENCE {
+    time-limit      [0] INTEGER OPTIONAL,
+    count-limit     [1] INTEGER OPTIONAL
+}
+
+LimitEncountered ::= ENUMERATED {
+    time-limit      (0),
+    count-limit     (1),
+    length-exceeded (2) -- maximum length as specified during binding exceeded
+}
+
+DfrEntryList ::= SEQUENCE OF SEQUENCE {
+    upi                 [0] DfrUniquePermanentIdentifier,
+    class               [1] DfrObjectClass,
+    ordering-attribute  [2] SEQUENCE OF Attribute OPTIONAL, -- ordered as specified in the OrderingRule
+    other-attributes    [3] SEQUENCE OF Attribute OPTIONAL
+}
+
+OrderingRule ::= SET {
+    list-attributes     [0] BOOLEAN DEFAULT FALSE,
+    ordering-attributes [1] OrderingAttributes
+}
+
+OrderingAttributes ::= SEQUENCE OF SEQUENCE {
+    attribute   [0] AttributeType,
+    direction   [1] Direction
+}
+
+Direction ::= ENUMERATED {
+    ascending   (0),
+    descending  (1)
+}
+
+SearchDomain ::= SEQUENCE OF CHOICE {
+    previous-result [0] DfrEntryName,
+    -- specifies an entry of "DFR-Search-Result-List" class
+    scope           [1] SEQUENCE {
+        root                [0] DfrEntryName,
+        descent-depth       [1] INTEGER OPTIONAL,
+        --default means the whole subtree
+        dereferencing-depth [2] INTEGER DEFAULT 0
+        -- default means no dereferencing
+    }
+}
+
+SearchCriteria ::= Filter
+
+-- ABSTRACT OPERATIONS
+
+dfrBind OPERATION ::= {
+    ARGUMENT    DfrBindArgument
+    RESULT      DfrBindResult
+    ERRORS      {dfrBindError}
+}
+
+dfrUnbind OPERATION ::= emptyUnbind
+
+create OPERATION ::= {
+    ARGUMENT    CreateArgument
+    RESULT      CreateResult
+    ERRORS {
+        abandoned
+        | accessError
+        | attributeError
+        | interServerAccessError
+        | nameError
+        | referentAccessError
+        | securityError
+        | serviceError
+        | updateError
+        | versionManagementError
+    }
+    CODE        id-opcode-create
+}
+
+CreateArgument ::= SEQUENCE {
+    COMPONENTS OF CommonUpdateArguments (WITH COMPONENTS {
+        ...,
+        object-class PRESENT,
+        entry ABSENT,
+        destination PRESENT,
+        reference-qos ABSENT
+    }),
+    attributes  [7] SET OF Attribute OPTIONAL,
+    content     [8] DfrObjectContent OPTIONAL,
+    COMPONENTS OF CommonArguments(WITH COMPONENTS {..., error-handling ABSENT})
+}
+
+CreateResult ::= CommonUpdateResult (WITH COMPONENTS { ... , warnings ABSENT, reference-qos ABSENT })
+
+delete OPERATION ::= {
+    ARGUMENT    DeleteArgument
+    RESULT      DeleteResult
+    ERRORS {
+        abandoned
+        | accessError
+        | nameError
+        | securityError
+        | serviceError
+        | updateError
+    }
+    CODE        id-opcode-delete
+}
+
+DeleteArgument ::= SEQUENCE {
+    entry  [0] DfrEntryName,
+    COMPONENTS OF CommonArguments (WITH COMPONENTS {
+        ...,
+        reservation ABSENT,
+        error-handling ABSENT
+    })
+}
+
+DeleteResult ::= NULL
+
+copy OPERATION ::= {
+    ARGUMENT    CopyArgument
+    RESULT      CopyResult
+    ERRORS {
+        abandoned
+        | accessError
+        | attributeError
+        | interServerAccessError
+        | nameError
+        | referentAccessError
+        | securityError
+        | serviceError
+        | updateError
+        | versionManagementError
+    }
+    CODE        id-opcode-copy
+}
+
+CopyArgument ::= SEQUENCE {
+    COMPONENTS OF CommonUpdateArguments (WITH COMPONENTS {
+        ...,
+        entry PRESENT,
+        destination PRESENT,
+        reference-qos ABSENT
+    }),
+    COMPONENTS OF CommonArguments
+}
+
+CopyResult ::= CommonUpdateResult (WITH COMPONENTS { ..., reference-qos ABSENT })
+
+move OPERATION ::= {
+    ARGUMENT    MoveArgument
+    RESULT      MoveResult
+    ERRORS {
+        abandoned
+        | accessError
+        | attributeError
+        | interServerAccessError
+        | nameError
+        | referentAccessError
+        | reservationError
+        | securityError
+        | serviceError
+        | updateError
+        | versionManagementError
+    }
+    CODE        id-opcode-move
+}
+
+MoveArgument ::= SEQUENCE {
+    COMPONENTS OF CommonUpdateArguments(WITH COMPONENTS {
+        ...,
+        entry PRESENT,
+        destination PRESENT,
+        reference-qos ABSENT
+    }),
+    COMPONENTS OF CommonArguments(WITH COMPONENTS { ..., error-handling ABSENT })
+}
+
+MoveResult ::= CommonUpdateResult (WITH COMPONENTS { ..., warnings ABSENT, reference-qos ABSENT } )
+
+read OPERATION ::= {
+    ARGUMENT    ReadArgument
+    RESULT      ReadResult
+    ERRORS {
+        abandoned
+        | accessError
+        | interServerAccessError
+        | nameError
+        | referentAccessError
+        | reservationError
+        | securityError
+        | serviceError
+    }
+    CODE        id-opcode-read
+}
+
+ReadArgument ::= SEQUENCE {
+    COMPONENTS OF CommonUpdateArguments(WITH COMPONENTS { entry PRESENT, selection PRESENT }),
+    dereferencing   [7] BOOLEAN DEFAULT FALSE,
+    token           [8] Token OPTIONAL,
+    COMPONENTS OF CommonArguments(WITH COMPONENTS { ..., error-handling ABSENT })
+}
+
+ReadResult ::= CommonUpdateResult (WITH COMPONENTS { ..., entry-information PRESENT, warnings ABSENT })
+
+modify OPERATION ::= {
+    ARGUMENT    ModifyArgument
+    RESULT      ModifyResult
+    ERRORS {
+        abandoned
+        | accessError
+        | attributeError
+        | interServerAccessError
+        | nameError
+        | referentAccessError
+        | reservationError
+        | securityError
+        | serviceError
+        | updateError
+        | versionManagementError
+    }
+    CODE        id-opcode-modify
+}
+
+ModifyArgument ::= SEQUENCE {
+    COMPONENTS OF CommonUpdateArguments (WITH COMPONENTS {
+        ...,
+        entry PRESENT,
+        destination ABSENT,
+        position ABSENT,
+        modifications PRESENT,
+        reference-qos ABSENT
+    }),
+    COMPONENTS OF CommonArguments (WITH COMPONENTS { ..., error-handling ABSENT })
+}
+
+ModifyResult ::= CommonUpdateResult (WITH COMPONENTS { ..., warnings ABSENT, reference-qos ABSENT })
+
+list OPERATION ::= {
+    ARGUMENT    ListArgument
+    RESULT      ListResult
+    ERRORS {
+        abandoned
+        | accessError
+        | attributeError
+        | nameError
+        | reservationError
+        | securityError
+        | serviceError
+    }
+    CODE        id-opcode-list
+}
+
+ListArgument ::= SEQUENCE {
+    entry   [0] DfrEntryName,
+    COMPONENTS OF CommonListSearchArguments (WITH COMPONENTS { ..., selection PRESENT }),
+    COMPONENTS OF CommonArguments
+}
+
+ListResult ::= SEQUENCE {
+    COMPONENTS OF CommonListSearchResult,
+    start-date-and-time     [5] GeneralizedTime OPTIONAL,
+    end-date-and-time       [6] GeneralizedTime OPTIONAL,
+    ordering                [7] OrderingRule OPTIONAL,
+    search-domain           [8] SearchDomain OPTIONAL,
+    search-criteria         [9] SearchCriteria OPTIONAL
+}
+
+search OPERATION ::= {
+    ARGUMENT    SearchArgument
+    RESULT      SearchResult
+    ERRORS {
+        abandoned
+        | accessError
+        | attributeError
+        | nameError
+        | reservationError
+        | securityError
+        | serviceError
+        | updateError -- concerns the searchResultList to be filled
+    }
+    CODE        id-opcode-search
+}
+
+SearchArgument ::= SEQUENCE {
+    search-mode     [0] CHOICE {
+        continue            [0] DfrEntryName,
+        -- Continue the search with all Options (search domain,
+        -- search criteria and continuation context) from the
+        -- search result list specified by the DfrEntryName.
+        -- The result will be added to the present content of
+        -- this search result list.
+        update              [1] DfrEntryName,
+        --The present content of the search result list
+        --is verified andpossibly updated.
+        new-search-stored   [2] DfrEntryName,
+        -- All Options are supplied by the requestor in the
+        -- subsequent Parameters; they are stored in the search
+        -- result List specified, where the result is then
+        -- also stored.
+        non-stored-search   [3] NULL
+    },
+    COMPONENTS OF CommonListSearchArguments,
+    search-domain   [5] SearchDomain OPTIONAL,
+    search-criteria [6] SearchCriteria OPTIONAL,
+    COMPONENTS OF CommonArguments(WITH COMPONENTS {
+        ...,
+        error-handling ABSENT
+    })
+}
+
+SearchResult ::= SEQUENCE {
+    COMPONENTS OF CommonListSearchResult(WITH COMPONENTS {
+        ...,
+        warnings ABSENT
+    }),
+    removed-entries [5] DfrEntryList OPTIONAL
+}
+
+reserve OPERATION ::= {
+    ARGUMENT    ReserveArgument
+    RESULT      ReserveResult
+    ERRORS {
+        abandoned
+        | nameError
+        | reservationError
+        | securityError
+        | serviceError
+    }
+    CODE        id-opcode-reserve
+}
+
+ReserveArgument ::= SEQUENCE {
+    entry   [0] DfrEntryName,
+    COMPONENTS OF CommonArguments (WITH COMPONENTS {
+        ...,
+        reservation     PRESENT,
+        error-handling  ABSENT
+    })
+}
+
+ReserveResult ::= NULL
+
+abandon OPERATION ::= {
+    ARGUMENT    AbandonArgument
+    RESULT      AbandonResult
+    ERRORS      {abandonFailed}
+    CODE        id-opcode-abandon
+}
+
+AbandonArgument ::= CHOICE {
+    task-id     [0] TaskId,
+    invoke-id   [1] InvokeId
+}
+
+AbandonResult ::= NULL
+
+-- ABSTRACT-ERRORS
+
+dfrBindError ERROR ::= {
+    PARAMETER DfrBindError
+}
+
+attributeError ERROR ::= {
+    PARAMETER SEQUENCE {
+        entry       [0] DfrEntryName OPTIONAL,
+        problems    [1] SEQUENCE OF SEQUENCE {
+            problem     [0] AttributeProblem,
+            type        [1] AttributeType,
+            value       [2] AttributeValue OPTIONAL
+        }
+    }
+    CODE        id-errcode-attribute-error
+}
+
+--applies also to search criteria and group membership criteria
+
+AttributeProblem ::= ENUMERATED {
+    no-such-attribute                   (1),
+    invalid-attribute-syntax            (2),
+    undefined-attribute-type            (3),
+    inappropriate-matching              (4),
+    constraint-violation                (5),
+    attribute-or-value-already-exists   (6),
+    illegal-modification                (7),
+    inconsistent-with-other-attributes  (8),
+    undefined-for-this-object-class     (9),
+    unsupported-document-type           (10)
+}
+
+nameError ERROR ::= {
+    PARAMETER SEQUENCE OF SEQUENCE {
+        entry       [0] DfrEntryName,
+        problem     [1] NameProblem
+    }
+    CODE        id-errcode-name-error
+}
+
+NameProblem ::= ENUMERATED {
+    invalid-upi                 (1),
+    invalid-path-name           (2),
+    ambiguous-path-name         (3),
+    inappropriate-object-class  (4)
+}
+
+accessError ERROR ::= {
+    PARAMETER SEQUENCE OF SEQUENCE {
+        entry       [0] DfrEntryName,
+        problem     [1] AccessProblem
+    }
+    CODE        id-errcode-access-error
+}
+
+AccessProblem ::= ENUMERATED {
+    inappropriate-object-class  (1),
+    reserved-by-a-user          (2),
+    externally-located-object   (3)
+}
+
+updateError ERROR ::= {
+    PARAMETER SEQUENCE {
+        entry       [0] DfrEntryName,
+        problem     [1] UpdateProblem
+    }
+    CODE        id-errcode-update-error
+}
+
+UpdateProblem ::= ENUMERATED {
+    inappropriate-object-class          (1),
+    insufficient-access-rights          (2),
+    reserved-by-a-user                  (3),
+    illegal-content-modification        (4),
+    group-membership-criteria-violation (5),
+    reference-loop-detected             (6)
+}
+
+referentAccessError ERROR ::= {
+    PARAMETER SEQUENCE {
+        entry   [0] CHOICE {
+            dfr-entry   [0] DfrEntryName,
+            dor         [1] NULL
+        },
+        problem [1] ReferentAccessProblem
+    }
+    CODE        id-errcode-referent-access-error
+}
+
+ReferentAccessProblem ::= ENUMERATED {
+    inappropriate-object-class  (1),
+    insufficient-access-rights  (2),
+    reserved-by-a-user          (3),
+    referent-no-longer-exists   (4),
+
+    -- only used in the case a DFR-Group is copied or listed and only
+    -- if warnings shall be reported, i.e. referent modified will not
+    -- terminate the operation
+    referent-modified           (5),
+    reference-content-empty     (6)
+}
+
+interServerAccessError ERROR ::= {
+    PARAMETER SEQUENCE {
+        entry   [0] DfrEntryName, -- of the reference
+        problem [1] InterServerAccessProblem
+    }
+    CODE        id-errcode-inter-server-access-error
+}
+
+InterServerAccessProblem ::= ENUMERATED {
+    referent-store-not-found        (1),    -- bad store identification
+    referent-store-unreachable      (2),    -- no port to reach it
+    referent-store-unavailable      (3),    -- temporarily
+    referent-store-security-problem (4)     -- access rights
+}
+
+reservationError ERROR ::= {
+    PARAMETER SEQUENCE {
+        entry   [0] DfrEntryName,
+        problem [1] ReservationProblem
+    }
+    CODE        id-errcode-reservation-error
+}
+
+ReservationProblem ::= ENUMERATED {
+    cannot-reserve          (0),
+    already-reserved        (1),
+    not-yet-reserved        (2),
+    cannot-unreserve        (3),
+    reservation-not-changed (4)
+}
+
+versionManagementError ERROR ::= {
+    PARAMETER SEQUENCE {
+        entry   [0] DfrEntryName,
+        -- of the entry itself or of its potential previous version
+        problem [1] VersionManagementProblem
+    }
+    CODE        id-errcode-version-management-error
+}
+
+VersionManagementProblem ::= ENUMERATED {
+      inappropriate-object-class                (1), -- not a DFR-Document
+      belongs-to-another-conceptual-document    (2)
+}
+
+securityError ERROR ::= {
+    PARAMETER SEQUENCE {
+        problem [0] SecurityProblem
+    }
+    CODE        id-errcode-security-error
+}
+
+SecurityProblem ::= ENUMERATED {
+    inappropriate-authentication    (1),
+    invalid-creds                   (2),
+    invalid-privilege               (3),
+    invalid-pac                     (4),
+    already-active                  (5)
+}
+
+serviceError ERROR ::= {
+    PARAMETER SEQUENCE {
+        problem [0] ServiceProblem
+    }
+    CODE        id-errcode-service-error
+}
+
+ServiceProblem ::= ENUMERATED {
+    server-busy                 (1), -- please wait and repeat
+    server-unavailable          (2), -- please unbind
+    operation-too-complex       (3), -- e.g. search-criteria
+    resource-limit-exceeded     (4), -- e-g. Lohen creating a bulky object
+    maximum-length-exceeded     (5), -- in an abstract operation
+    cannot-continue             (6), -- e-g. search-domain altered
+    unclassified-server-error   (7), -- implementation specific
+    function-set-violation      (8)  -- see 8.4
+}
+
+abandonFailed ERROR ::= {
+    PARAMETER SET {
+        problem     [0] AbandonProblem,
+        operation   [1] InvokeId
+    }
+    CODE        id-errcode-abandon-failed
+}
+
+AbandonProblem ::= ENUMERATED {
+    no-such-operation   (1),
+    too-late            (2),
+    cannot-abandon      (3)
+}
+
+abandoned ERROR ::= {
+    CODE        id-errcode-abandoned
+}
+
+END

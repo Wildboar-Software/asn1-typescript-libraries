@@ -45,7 +45,16 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
 /**
  * @summary CallInformationEvent
  * @description
- * 
+ *
+ * Call Information event (ECMA-269 §18.2.1 / ECMA-285 §16.2.1). Direction:
+ * SF→CF via Event Report. Typical causes: account/auth codes, Associate Data,
+ * user/correlator
+ * data, CallerID, servicesPermitted after a connection-state
+ * change, device information, callLinkageDataList.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -75,96 +84,145 @@ class CallInformationEvent {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Connection that is the focus of the update.
          * @public
          * @readonly
          */
         readonly connection: ConnectionID,
         /**
          * @summary `device`.
+         * @description
+         *
+         * Subject device for the event.
          * @public
          * @readonly
          */
         readonly device: SubjectDeviceID,
         /**
          * @summary `callingDevice`.
+         * @description
+         *
+         * Updated calling device / CallerID, if this is the change.
          * @public
          * @readonly
          */
         readonly callingDevice: OPTIONAL<CallingDeviceID>,
         /**
          * @summary `accountInfo`.
+         * @description
+         *
+         * Account information collected or updated.
          * @public
          * @readonly
          */
         readonly accountInfo: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
+         * @description
+         *
+         * Authorisation code collected or updated.
          * @public
          * @readonly
          */
         readonly authCode: OPTIONAL<AuthCode>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Correlator data collected or updated.
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `servicesPermitted`.
+         * @description
+         *
+         * Updated permitted services after a connection-state change.
          * @public
          * @readonly
          */
         readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * User-to-user data received or updated.
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `callQualifyingData`.
+         * @description
+         *
+         * Call-qualifying data collected or updated.
          * @public
          * @readonly
          */
         readonly callQualifyingData: OPTIONAL<CallQualifyingData>,
         /**
          * @summary `connectionInfo`.
+         * @description
+         *
+         * Connection information associated with `connection`.
          * @public
          * @readonly
          */
         readonly connectionInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageDataList`.
+         * @description
+         *
+         * Updated call-linkage data. See ECMA-269 §6.1.2.7.4.
          * @public
          * @readonly
          */
         readonly callLinkageDataList: OPTIONAL<CallLinkageDataList>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Updated call characterisation.
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `subjectOfCall`.
+         * @description
+         *
+         * Updated subject/topic.
          * @public
          * @readonly
          */
         readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Updated language preferences.
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `deviceInfo`.
+         * @description
+         *
+         * Updated device information for a device in the call.
          * @public
          * @readonly
          */
         readonly deviceInfo: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

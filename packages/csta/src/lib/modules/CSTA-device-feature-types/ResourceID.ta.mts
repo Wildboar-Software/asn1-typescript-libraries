@@ -8,7 +8,11 @@ import { IA5String, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ResourceID
  * @description
- * 
+ *
+ * Identifies a particular Voice device resource. ECMA-269 §12.3.25.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

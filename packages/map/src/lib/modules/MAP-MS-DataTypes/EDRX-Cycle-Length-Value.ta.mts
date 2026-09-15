@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EDRX_Cycle_Length_Value
  * @description
- * 
+ *
+ * eDRX cycle length value, encoded as specified in 3GPP TS 29.272 clause
+ * 7.3.216 (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

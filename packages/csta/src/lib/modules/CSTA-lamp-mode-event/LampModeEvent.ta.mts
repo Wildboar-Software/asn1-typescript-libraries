@@ -31,7 +31,16 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary LampModeEvent
  * @description
- * 
+ *
+ * Lamp Mode event (ECMA-269 §21.2.5 / ECMA-285 §19.2.5). Direction: SF→CF via
+ * Event Report. Lamp mode changed (Set Lamp Mode or a feature change from a
+ * manual button). At least one of `lampLabel`, `lampBrightness`, `lampColor` in
+ * addition to mandatory fields. Not generated when a Set request leaves the
+ * feature unchanged (ECMA-269 §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,42 +61,66 @@ class LampModeEvent {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device whose lamp mode changed.
          * @public
          * @readonly
          */
         readonly device: SubjectDeviceID,
         /**
          * @summary `lamp`.
+         * @description
+         *
+         * Lamp that changed.
          * @public
          * @readonly
          */
         readonly lamp: LampID,
         /**
          * @summary `lampLabel`.
+         * @description
+         *
+         * Label by which the lamp may be referenced.
          * @public
          * @readonly
          */
         readonly lampLabel: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `lampMode`.
+         * @description
+         *
+         * 0–100: 0 brokenflutter, 1 flutter, 2 off, 3 steady, 4 wink, 5
+         * unknown. 6–100 switching-function specific.
          * @public
          * @readonly
          */
         readonly lampMode: LampMode,
         /**
          * @summary `lampBrightness`.
+         * @description
+         *
+         * Intensity when on: unspecified/normal (default), dim, or bright.
          * @public
          * @readonly
          */
         readonly lampBrightness: OPTIONAL<LampBrightness>,
         /**
          * @summary `lampColor`.
+         * @description
+         *
+         * 0–100: 0 none, 1 red, 2 yellow, 3 green, 4 blue, 5 unknown (default
+         * if absent). 6–100 switching-function specific.
          * @public
          * @readonly
          */
         readonly lampColor: OPTIONAL<LampColor>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

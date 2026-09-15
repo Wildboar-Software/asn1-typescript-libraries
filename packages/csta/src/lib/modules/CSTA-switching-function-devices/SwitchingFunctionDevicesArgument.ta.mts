@@ -21,7 +21,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SwitchingFunctionDevicesArgument
  * @description
- * 
+ *
+ * Service request from the SF (ECMA-269 Table 13-12).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +45,47 @@ class SwitchingFunctionDevicesArgument {
     constructor (
         /**
          * @summary `serviceCrossRefID`.
+         * @description
+         *
+         * Matches the Get Switching Function Devices positive ack.
          * @public
          * @readonly
          */
         readonly serviceCrossRefID: ServiceCrossRefID,
         /**
          * @summary `segmentID`.
+         * @description
+         *
+         * Segment number; each successive segment increments by one.
          * @public
          * @readonly
          */
         readonly segmentID: OPTIONAL<INTEGER>,
         /**
          * @summary `lastSegment`.
+         * @description
+         *
+         * TRUE if this is the last segment for the cross-ref.
          * @public
          * @readonly
          */
         readonly lastSegment: BOOLEAN,
         /**
          * @summary `deviceList`.
+         * @description
+         *
+         * Devices that can be controlled and/or observed. Empty if none
+         * matched the original request.
          * @public
          * @readonly
          */
         readonly deviceList: DeviceList,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 13-12.
          * @public
          * @readonly
          */

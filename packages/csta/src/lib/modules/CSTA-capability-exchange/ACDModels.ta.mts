@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ACDModels
  * @description
- * 
+ * ACD models present at a device or in the SF. Bits are valid when the device
+ * is an ACD device (ECMA-269 §13.1.2.2.1 / §13.1.4.2.1, ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +29,9 @@ type ACDModels = BIT_STRING;
 /**
  * @summary ACDModels_visibleACDRelatedDevices
  * @constant
+ * @description
+ * Bit set means the SF supports Visible ACD-related Devices model (ECMA-269
+ * §13.1.4.2.1 Table 13-9).
  */
 export
 const ACDModels_visibleACDRelatedDevices: number = 0; /* LONG_NAMED_BIT */
@@ -30,6 +39,8 @@ const ACDModels_visibleACDRelatedDevices: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary visibleACDRelatedDevices
  * @constant
+ * @description
+ * Alias of `ACDModels_visibleACDRelatedDevices`.
  */
 export
 const visibleACDRelatedDevices: number = ACDModels_visibleACDRelatedDevices; /* SHORT_NAMED_BIT */
@@ -37,6 +48,9 @@ const visibleACDRelatedDevices: number = ACDModels_visibleACDRelatedDevices; /* 
 /**
  * @summary ACDModels_nonVisibleACDRelatedDevices
  * @constant
+ * @description
+ * Bit set means the SF supports Non-Visible ACD-related Devices model (ECMA-269
+ * §13.1.4.2.1 Table 13-9).
  */
 export
 const ACDModels_nonVisibleACDRelatedDevices: number = 1; /* LONG_NAMED_BIT */
@@ -44,6 +58,8 @@ const ACDModels_nonVisibleACDRelatedDevices: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary nonVisibleACDRelatedDevices
  * @constant
+ * @description
+ * Alias of `ACDModels_nonVisibleACDRelatedDevices`.
  */
 export
 const nonVisibleACDRelatedDevices: number = ACDModels_nonVisibleACDRelatedDevices; /* SHORT_NAMED_BIT */

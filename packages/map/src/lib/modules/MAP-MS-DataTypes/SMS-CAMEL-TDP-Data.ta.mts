@@ -76,7 +76,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SMS_CAMEL_TDP_Data
  * @description
- * 
+ *
+ * One SMS CAMEL trigger detection point: TDP, service key, gsmSCF address, and
+ * default SMS handling.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.76 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,24 +102,50 @@ class SMS_CAMEL_TDP_Data {
     constructor (
         /**
          * @summary `sms_TriggerDetectionPoint`.
+         * @description
+         *
+         * SMS CAMEL trigger detection point.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly sms_TriggerDetectionPoint: SMS_TriggerDetectionPoint,
         /**
          * @summary `serviceKey`.
+         * @description
+         *
+         * Identifies CAMEL service logic in the gsmSCF.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly serviceKey: ServiceKey,
         /**
          * @summary `gsmSCF_Address`.
+         * @description
+         *
+         * ISDN number assigned to the gsmSCF. In an IP Multimedia CN, contains
+         * the IM-SSF address when IM-SSF takes the gsmSCF role.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.58).
+         *
          * @public
          * @readonly
          */
         readonly gsmSCF_Address: ISDN_AddressString,
         /**
          * @summary `defaultSMS_Handling`.
+         * @description
+         *
+         * Default handling if the gsmSCF does not respond for this SMS CAMEL
+         * TDP.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

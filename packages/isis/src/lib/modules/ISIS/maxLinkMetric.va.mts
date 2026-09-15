@@ -15,6 +15,11 @@ import {
  * @summary maxLinkMetric
  * @description
  *
+ * Architectural constant: maximum routeing metric assignable to a circuit.
+ * Upper bound of `HopMetric`.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.5 table 2 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

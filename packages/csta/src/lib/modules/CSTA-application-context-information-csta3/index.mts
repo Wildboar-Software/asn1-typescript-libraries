@@ -1,7 +1,12 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-application-context-information-csta3`.
+ * ACSE user-information for a CSTA association: protocol-version bits and
+ * service/event bitmaps carried in A-ASSOCIATE. The responder picks the highest
+ * common version; each side lists services it requires and can supply. ECMA-285
+ * §8.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export * from "./ACSEUserInformationForCSTA.ta.mjs";
 export * from "./BidirectionalServicesC2.ta.mjs";

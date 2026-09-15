@@ -8,7 +8,14 @@ import { INTEGER, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary DeviceNumber
  * @description
- * 
+ *
+ * Non-diallable integer Device Identifier (ECMA-269 §10.1.3,
+ * §12.3.11). Used for switching-sub-domain objects that may not have
+ * a diallable number (trunks, line cards, etc.).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

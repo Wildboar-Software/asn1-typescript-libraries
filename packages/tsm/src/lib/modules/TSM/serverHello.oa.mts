@@ -19,7 +19,10 @@ import { type HANDSHAKE } from "../TSM/HANDSHAKE.oca.mjs";
 /**
  * @summary serverHello
  * @description
- * 
+ *
+ * `HANDSHAKE` object: `ServerHello` identified by `server-hello` (2).
+ * ITU-T Rec. X.1084 (05/2008) §10.3.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

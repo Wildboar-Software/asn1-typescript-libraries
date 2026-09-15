@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Ext_SupportedFeatures
  * @description
- * 
+ *
+ * Additional supported-feature indications beyond SupportedFeatures, also
+ * applied to the MME/IWF. Additional supported features are encoded in this bit
+ * string (3GPP TS 29.002 V19.1.0 clauses 8.1.7.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

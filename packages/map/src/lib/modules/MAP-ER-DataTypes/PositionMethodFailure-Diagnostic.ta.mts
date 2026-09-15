@@ -86,6 +86,9 @@ enum _enum_for_PositionMethodFailure_Diagnostic {
  * @summary PositionMethodFailure_Diagnostic
  * @description
  * 
+ * Diagnostic on `PositionMethodFailure-Param`. Any unrecognized value shall be
+ * ignored (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -109,6 +112,10 @@ type PositionMethodFailure_Diagnostic = _enum_for_PositionMethodFailure_Diagnost
 
 /**
  * @summary PositionMethodFailure_Diagnostic_congestion
+ * @description
+ *
+ * Congestion (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +124,10 @@ const PositionMethodFailure_Diagnostic_congestion: PositionMethodFailure_Diagnos
 
 /**
  * @summary congestion
+ * @description
+ *
+ * Congestion (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +136,10 @@ const congestion: PositionMethodFailure_Diagnostic = PositionMethodFailure_Diagn
 
 /**
  * @summary PositionMethodFailure_Diagnostic_insufficientResources
+ * @description
+ *
+ * Insufficient resources (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +148,10 @@ const PositionMethodFailure_Diagnostic_insufficientResources: PositionMethodFail
 
 /**
  * @summary insufficientResources
+ * @description
+ *
+ * Insufficient resources (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +160,10 @@ const insufficientResources: PositionMethodFailure_Diagnostic = PositionMethodFa
 
 /**
  * @summary PositionMethodFailure_Diagnostic_insufficientMeasurementData
+ * @description
+ *
+ * Insufficient Measurement Data (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +172,10 @@ const PositionMethodFailure_Diagnostic_insufficientMeasurementData: PositionMeth
 
 /**
  * @summary insufficientMeasurementData
+ * @description
+ *
+ * Insufficient Measurement Data (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +184,10 @@ const insufficientMeasurementData: PositionMethodFailure_Diagnostic = PositionMe
 
 /**
  * @summary PositionMethodFailure_Diagnostic_inconsistentMeasurementData
+ * @description
+ *
+ * Inconsistent Measurement Data (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +196,10 @@ const PositionMethodFailure_Diagnostic_inconsistentMeasurementData: PositionMeth
 
 /**
  * @summary inconsistentMeasurementData
+ * @description
+ *
+ * Inconsistent Measurement Data (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +208,10 @@ const inconsistentMeasurementData: PositionMethodFailure_Diagnostic = PositionMe
 
 /**
  * @summary PositionMethodFailure_Diagnostic_locationProcedureNotCompleted
+ * @description
+ *
+ * Location procedure not completed (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -181,6 +220,10 @@ const PositionMethodFailure_Diagnostic_locationProcedureNotCompleted: PositionMe
 
 /**
  * @summary locationProcedureNotCompleted
+ * @description
+ *
+ * Location procedure not completed (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +232,12 @@ const locationProcedureNotCompleted: PositionMethodFailure_Diagnostic = Position
 
 /**
  * @summary PositionMethodFailure_Diagnostic_locationProcedureNotSupportedByTargetMS
+ * @description
+ *
+ * `locationProcedureNotSupportedByTargetMS` (5). Clause 7.6.1.4 does not list
+ * this diagnostic among the detailed reasons (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -197,6 +246,12 @@ const PositionMethodFailure_Diagnostic_locationProcedureNotSupportedByTargetMS: 
 
 /**
  * @summary locationProcedureNotSupportedByTargetMS
+ * @description
+ *
+ * `locationProcedureNotSupportedByTargetMS` (5). Clause 7.6.1.4 does not list
+ * this diagnostic among the detailed reasons (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -205,6 +260,10 @@ const locationProcedureNotSupportedByTargetMS: PositionMethodFailure_Diagnostic 
 
 /**
  * @summary PositionMethodFailure_Diagnostic_qoSNotAttainable
+ * @description
+ *
+ * QoS not attainable (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -213,6 +272,10 @@ const PositionMethodFailure_Diagnostic_qoSNotAttainable: PositionMethodFailure_D
 
 /**
  * @summary qoSNotAttainable
+ * @description
+ *
+ * QoS not attainable (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -221,6 +284,11 @@ const qoSNotAttainable: PositionMethodFailure_Diagnostic = PositionMethodFailure
 
 /**
  * @summary PositionMethodFailure_Diagnostic_positionMethodNotAvailableInNetwork
+ * @description
+ *
+ * Position Method Not Available in Network (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -229,6 +297,11 @@ const PositionMethodFailure_Diagnostic_positionMethodNotAvailableInNetwork: Posi
 
 /**
  * @summary positionMethodNotAvailableInNetwork
+ * @description
+ *
+ * Position Method Not Available in Network (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -237,6 +310,11 @@ const positionMethodNotAvailableInNetwork: PositionMethodFailure_Diagnostic = Po
 
 /**
  * @summary PositionMethodFailure_Diagnostic_positionMethodNotAvailableInLocationArea
+ * @description
+ *
+ * Position Method Not Available in Location Area (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -245,6 +323,11 @@ const PositionMethodFailure_Diagnostic_positionMethodNotAvailableInLocationArea:
 
 /**
  * @summary positionMethodNotAvailableInLocationArea
+ * @description
+ *
+ * Position Method Not Available in Location Area (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */

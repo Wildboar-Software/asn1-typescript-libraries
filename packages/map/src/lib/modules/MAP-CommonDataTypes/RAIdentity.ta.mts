@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RAIdentity
  * @description
- * 
+ *
+ * Routing Area Identity, coded in accordance with 3GPP TS 29.060. Contains the
+ * value part defined in TS 29.060 only: the TS 29.060 type identifier octet
+ * shall not be included. Size 6 octets.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

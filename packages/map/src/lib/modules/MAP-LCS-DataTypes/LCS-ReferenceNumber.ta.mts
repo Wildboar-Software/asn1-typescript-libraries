@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LCS_ReferenceNumber
  * @description
- * 
+ *
+ * One octet. Deferred MT-LR request/response as in 3GPP TS 23.271 (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.11.23 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

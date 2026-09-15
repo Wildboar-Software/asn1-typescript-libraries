@@ -21,7 +21,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GroupPickupCallResult
  * @description
- * 
+ *
+ * Positive acknowledgement for Group Pickup Call (ECMA-269
+ * §17.1.14 / ECMA-285 §15.1.14). May return the destination
+ * device's connection in the selected call.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +46,43 @@ class GroupPickupCallResult {
     constructor (
         /**
          * @summary `pickedCall`.
+         * @description
+         *
+         * Optional. Destination device's connection in the picked
+         * call (Connected).
+         *
          * @public
          * @readonly
          */
         readonly pickedCall: OPTIONAL<ConnectionID>,
         /**
          * @summary `pickedCallInfo`.
+         * @description
+         *
+         * Optional connection information for `pickedCall`
+         * (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly pickedCallInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Optional call-linkage identifiers (§12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

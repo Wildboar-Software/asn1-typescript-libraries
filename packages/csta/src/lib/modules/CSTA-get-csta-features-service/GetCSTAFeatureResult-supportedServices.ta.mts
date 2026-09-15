@@ -45,7 +45,13 @@ import { LocationServicesServList, _decode_LocationServicesServList, _encode_Loc
 /**
  * @summary GetCSTAFeatureResult_supportedServices
  * @description
- * 
+ *
+ * Per-category service bitmaps from Table 13-3. A missing category
+ * or bit means that service is not supported by any device.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -76,96 +82,144 @@ class GetCSTAFeatureResult_supportedServices {
     constructor (
         /**
          * @summary `capExchangeServList`.
+         * @description
+         *
+         * Capability-exchange services.
          * @public
          * @readonly
          */
         readonly capExchangeServList: OPTIONAL<CapExchangeServList>,
         /**
          * @summary `systemStatServList`.
+         * @description
+         *
+         * System status services.
          * @public
          * @readonly
          */
         readonly systemStatServList: OPTIONAL<SystemStatusServList>,
         /**
          * @summary `monitoringServList`.
+         * @description
+         *
+         * Monitoring services.
          * @public
          * @readonly
          */
         readonly monitoringServList: OPTIONAL<MonitoringServList>,
         /**
          * @summary `snapshotServList`.
+         * @description
+         *
+         * Snapshot services.
          * @public
          * @readonly
          */
         readonly snapshotServList: OPTIONAL<SnapshotServList>,
         /**
          * @summary `callControlServList`.
+         * @description
+         *
+         * Call-control services.
          * @public
          * @readonly
          */
         readonly callControlServList: OPTIONAL<CallControlServList>,
         /**
          * @summary `callAssociatedServList`.
+         * @description
+         *
+         * Call-associated services.
          * @public
          * @readonly
          */
         readonly callAssociatedServList: OPTIONAL<CallAssociatedServList>,
         /**
          * @summary `mediaServList`.
+         * @description
+         *
+         * Media-attachment services.
          * @public
          * @readonly
          */
         readonly mediaServList: OPTIONAL<MediaServList>,
         /**
          * @summary `routeingServList`.
+         * @description
+         *
+         * Routeing services.
          * @public
          * @readonly
          */
         readonly routeingServList: OPTIONAL<RouteingServList>,
         /**
          * @summary `physDevServList`.
+         * @description
+         *
+         * Physical-device feature services.
          * @public
          * @readonly
          */
         readonly physDevServList: OPTIONAL<PhysDevServList>,
         /**
          * @summary `logicalServList`.
+         * @description
+         *
+         * Logical-device feature services.
          * @public
          * @readonly
          */
         readonly logicalServList: OPTIONAL<LogicalServList>,
         /**
          * @summary `iOServicesServList`.
+         * @description
+         *
+         * I/O services.
          * @public
          * @readonly
          */
         readonly iOServicesServList: OPTIONAL<IOServicesServList>,
         /**
          * @summary `dataCollectionServList`.
+         * @description
+         *
+         * Data-collection services.
          * @public
          * @readonly
          */
         readonly dataCollectionServList: OPTIONAL<DataCollectionServList>,
         /**
          * @summary `voiceServList`.
+         * @description
+         *
+         * Voice-unit services.
          * @public
          * @readonly
          */
         readonly voiceServList: OPTIONAL<VoiceUnitServList>,
         /**
          * @summary `cDRServList`.
+         * @description
+         *
+         * Call-detail-record services.
          * @public
          * @readonly
          */
         readonly cDRServList: OPTIONAL<CDRServList>,
         /**
          * @summary `vendorSpecificServList`.
+         * @description
+         *
+         * Vendor-specific services.
          * @public
          * @readonly
          */
         readonly vendorSpecificServList: OPTIONAL<VendorSpecificServList>,
         /**
          * @summary `locationServicesServList`.
+         * @description
+         *
+         * Location services.
          * @public
          * @readonly
          */

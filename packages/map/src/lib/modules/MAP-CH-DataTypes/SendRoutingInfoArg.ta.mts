@@ -90,7 +90,11 @@ import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "
 /**
  * @summary SendRoutingInfoArg
  * @description
- * 
+ *
+ * Argument of MAP_SEND_ROUTING_INFORMATION: GMSC to HLR to route a call to the
+ * MS; also GMSC–NPLR and gsmSCF–HLR (3GPP TS 29.002 V19.1.0 clauses 10.1 and
+ * 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -136,180 +140,310 @@ class SendRoutingInfoArg {
     constructor (
         /**
          * @summary `msisdn`.
+         * @description
+         *
+         * MSISDN received in ISUP IAM (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly msisdn: ISDN_AddressString,
         /**
          * @summary `cug_CheckInfo`.
+         * @description
+         *
+         * CUG interlock and outgoing access (Use and presence as in 3GPP TS
+         * 23.018).
+         *
          * @public
          * @readonly
          */
         readonly cug_CheckInfo: OPTIONAL<CUG_CheckInfo>,
         /**
          * @summary `numberOfForwarding`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly numberOfForwarding: OPTIONAL<NumberOfForwarding>,
         /**
          * @summary `interrogationType`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly interrogationType: InterrogationType,
         /**
          * @summary `or_Interrogation`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly or_Interrogation: OPTIONAL<NULL>,
         /**
          * @summary `or_Capability`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly or_Capability: OPTIONAL<OR_Phase>,
         /**
          * @summary `gmsc_OrGsmSCF_Address`.
+         * @description
+         *
+         * E.164 of GMSC, or gsmSCF if gsmSCF-InitiatedCall is present (clause
+         * 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly gmsc_OrGsmSCF_Address: ISDN_AddressString,
         /**
          * @summary `callReferenceNumber`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.078, Use and presence as in 3GPP TS
+         * 23.079 and Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly callReferenceNumber: OPTIONAL<CallReferenceNumber>,
         /**
          * @summary `forwardingReason`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly forwardingReason: OPTIONAL<ForwardingReason>,
         /**
          * @summary `basicServiceGroup`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly basicServiceGroup: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `networkSignalInfo`.
+         * @description
+         *
+         * Component presence as in Use and presence as in 3GPP TS 23.018
+         * (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly networkSignalInfo: OPTIONAL<ExternalSignalInfo>,
         /**
          * @summary `camelInfo`.
+         * @description
+         *
+         * Supported CAMEL phases and related flags.
+         *
          * @public
          * @readonly
          */
         readonly camelInfo: OPTIONAL<CamelInfo>,
         /**
          * @summary `suppressionOfAnnouncement`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly suppressionOfAnnouncement: OPTIONAL<SuppressionOfAnnouncement>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `alertingPattern`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.018 and 3GPP TS 23.078 (clause
+         * 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly alertingPattern: OPTIONAL<AlertingPattern>,
         /**
          * @summary `ccbs_Call`.
+         * @description
+         *
+         * See 3GPP TS 23.093 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly ccbs_Call: OPTIONAL<NULL>,
         /**
          * @summary `supportedCCBS_Phase`.
+         * @description
+         *
+         * Presence means CCBS is supported. Only value 1 is used; 2–127 map to
+         * 1 (3GPP TS 29.002 V19.1.0 clauses 10.1.3 and 17.7.3).
+         *
          * @public
          * @readonly
          */
         readonly supportedCCBS_Phase: OPTIONAL<SupportedCCBS_Phase>,
         /**
          * @summary `additionalSignalInfo`.
+         * @description
+         *
+         * See 3GPP TS 23.081 and 23.088 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly additionalSignalInfo: OPTIONAL<Ext_ExternalSignalInfo>,
         /**
          * @summary `istSupportIndicator`.
+         * @description
+         *
+         * GMSC supports basic IST and optionally IST Command (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly istSupportIndicator: OPTIONAL<IST_SupportIndicator>,
         /**
          * @summary `pre_pagingSupported`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly pre_pagingSupported: OPTIONAL<NULL>,
         /**
          * @summary `callDiversionTreatmentIndicator`.
+         * @description
+         *
+         * Whether diversion is allowed. Octet: xxxx xx01 allowed, xxxx xx10 not
+         * allowed; network default allowed (3GPP TS 29.002 V19.1.0 clauses
+         * 10.1.3 and 17.7.3).
+         *
          * @public
          * @readonly
          */
         readonly callDiversionTreatmentIndicator: OPTIONAL<CallDiversionTreatmentIndicator>,
         /**
          * @summary `longFTN_Supported`.
+         * @description
+         *
+         * GMSC supports Long Forwarded-to Numbers (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly longFTN_Supported: OPTIONAL<NULL>,
         /**
          * @summary `suppress_VT_CSI`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly suppress_VT_CSI: OPTIONAL<NULL>,
         /**
          * @summary `suppressIncomingCallBarring`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly suppressIncomingCallBarring: OPTIONAL<NULL>,
         /**
          * @summary `gsmSCF_InitiatedCall`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly gsmSCF_InitiatedCall: OPTIONAL<NULL>,
         /**
          * @summary `basicServiceGroup2`.
+         * @description
+         *
+         * See 3GPP TS 23.079 / 23.172 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly basicServiceGroup2: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `networkSignalInfo2`.
+         * @description
+         *
+         * See 3GPP TS 23.172 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly networkSignalInfo2: OPTIONAL<ExternalSignalInfo>,
         /**
          * @summary `suppressMTSS`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly suppressMTSS: OPTIONAL<SuppressMTSS>,
         /**
          * @summary `mtRoamingRetrySupported`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.018 and 3GPP TS 23.012 (clause
+         * 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly mtRoamingRetrySupported: OPTIONAL<NULL>,
         /**
          * @summary `callPriority`.
+         * @description
+         *
+         * eMLPP priority (3GPP TS 24.067). Present if GMSC supports eMLPP and
+         * the call is an eMLPP call. Levels A and B map to 0 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */

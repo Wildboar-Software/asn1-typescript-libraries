@@ -79,7 +79,11 @@ import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../
 /**
  * @summary RoutingInfoForSM_Arg
  * @description
- * 
+ *
+ * Argument of MAP-SEND-ROUTING-INFO-FOR-SM: SMS-GMSC (or SMS Router / IP-SM-GW
+ * / IWF for S6c) to HLR to retrieve routing for MT SM (3GPP TS 29.002 V19.1.0
+ * clauses 12.1 and 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -110,84 +114,144 @@ class RoutingInfoForSM_Arg {
     constructor (
         /**
          * @summary `msisdn`.
+         * @description
+         *
+         * Called subscriber MSISDN (clause 12.1).
+         *
          * @public
          * @readonly
          */
         readonly msisdn: ISDN_AddressString,
         /**
          * @summary `sm_RP_PRI`.
+         * @description
+         *
+         * SM-RP priority.
+         *
          * @public
          * @readonly
          */
         readonly sm_RP_PRI: BOOLEAN,
         /**
          * @summary `serviceCentreAddress`.
+         * @description
+         *
+         * Service Centre address.
+         *
          * @public
          * @readonly
          */
         readonly serviceCentreAddress: AddressString,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `gprsSupportIndicator`.
+         * @description
+         *
+         * Set only if the SMS-GMSC supports receiving two numbers from the HLR
+         * (clause 17.7.6).
+         *
          * @public
          * @readonly
          */
         readonly gprsSupportIndicator: OPTIONAL<NULL>,
         /**
          * @summary `sm_RP_MTI`.
+         * @description
+         *
+         * 0 = SMS Deliver, 1 = SMS Status Report; other values reserved and
+         * discarded if received (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+         *
          * @public
          * @readonly
          */
         readonly sm_RP_MTI: OPTIONAL<SM_RP_MTI>,
         /**
          * @summary `sm_RP_SMEA`.
+         * @description
+         *
+         * Address field as in 3GPP TS 23.040: address-length, type-of-address,
+         * address-value (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+         *
          * @public
          * @readonly
          */
         readonly sm_RP_SMEA: OPTIONAL<SM_RP_SMEA>,
         /**
          * @summary `sm_deliveryNotIntended`.
+         * @description
+         *
+         * Delivery not intended; only IMSI or MCC-MNC requested.
+         *
          * @public
          * @readonly
          */
         readonly sm_deliveryNotIntended: OPTIONAL<SM_DeliveryNotIntended>,
         /**
          * @summary `ip_sm_gwGuidanceIndicator`.
+         * @description
+         *
+         * Request IP-SM-GW guidance.
+         *
          * @public
          * @readonly
          */
         readonly ip_sm_gwGuidanceIndicator: OPTIONAL<NULL>,
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * IMSI when known.
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `t4_Trigger_Indicator`.
+         * @description
+         *
+         * T4-device triggering via IMS.
+         *
          * @public
          * @readonly
          */
         readonly t4_Trigger_Indicator: OPTIONAL<NULL>,
         /**
          * @summary `singleAttemptDelivery`.
+         * @description
+         *
+         * Single-attempt delivery.
+         *
          * @public
          * @readonly
          */
         readonly singleAttemptDelivery: OPTIONAL<NULL>,
         /**
          * @summary `correlationID`.
+         * @description
+         *
+         * HLR / SIP URI correlation.
+         *
          * @public
          * @readonly
          */
         readonly correlationID: OPTIONAL<CorrelationID>,
         /**
          * @summary `smsf_supportIndicator`.
+         * @description
+         *
+         * If absent in the request, SMSF numbers/indicators shall be absent in
+         * the result (clause 17.7.6).
+         *
          * @public
          * @readonly
          */

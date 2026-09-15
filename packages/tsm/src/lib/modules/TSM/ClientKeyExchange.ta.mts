@@ -17,7 +17,12 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 /**
  * @summary ClientKeyExchange
  * @description
- * 
+ *
+ * TLS ClientKeyExchange as opaque `SIZE(0..65535)` (RSA premaster or
+ * DH public). Structured `PreMasterSecret` /
+ * `ClientDiffieHellmanPublic` are defined separately. ITU-T Rec.
+ * X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

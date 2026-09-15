@@ -16,7 +16,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetCallerIDStatusResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §22.1.9.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +37,20 @@ class GetCallerIDStatusResult {
     constructor (
         /**
          * @summary `callerIDProvided`.
+         * @description
+         *
+         * TRUE: provide Caller ID on originating calls. FALSE: do not provide
+         * it to the called device.
          * @public
          * @readonly
          */
         readonly callerIDProvided: BOOLEAN,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

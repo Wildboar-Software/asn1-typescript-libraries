@@ -18,7 +18,10 @@ import { CipherSuite, _enum_for_CipherSuite, _decode_CipherSuite, _encode_Cipher
 /**
  * @summary CipherSuites
  * @description
- * 
+ *
+ * Client's offered cipher suites, `SIZE(1..32767)`. ITU-T Rec. X.1084
+ * (05/2008) §10.3.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

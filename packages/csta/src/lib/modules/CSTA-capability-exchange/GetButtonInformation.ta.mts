@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GetButtonInformation
  * @description
- * 
+ * Capability bitmap for the Get Button Information service (ECMA-269 C.12.3,
+ * ECMA-285 §9.10). Presence of this entry in `PhysDevServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +39,9 @@ type GetButtonInformation = BIT_STRING;
 /**
  * @summary GetButtonInformation_button
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.3).
  */
 export
 const GetButtonInformation_button: number = 0; /* LONG_NAMED_BIT */
@@ -37,6 +49,8 @@ const GetButtonInformation_button: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary button
  * @constant
+ * @description
+ * Alias of `GetButtonInformation_button`.
  */
 export
 const button: number = GetButtonInformation_button; /* SHORT_NAMED_BIT */
@@ -44,6 +58,9 @@ const button: number = GetButtonInformation_button; /* SHORT_NAMED_BIT */
 /**
  * @summary GetButtonInformation_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.12.3).
  */
 export
 const GetButtonInformation_privateData: number = 1; /* LONG_NAMED_BIT */
@@ -51,6 +68,8 @@ const GetButtonInformation_privateData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `GetButtonInformation_privateData`.
  */
 export
 const privateData: number = GetButtonInformation_privateData; /* SHORT_NAMED_BIT */
@@ -58,6 +77,9 @@ const privateData: number = GetButtonInformation_privateData; /* SHORT_NAMED_BIT
 /**
  * @summary GetButtonInformation_buttonLabelInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `buttonLabel` in the acknowledgement
+ * (ECMA-269 C.12.3).
  */
 export
 const GetButtonInformation_buttonLabelInAck: number = 2; /* LONG_NAMED_BIT */
@@ -65,6 +87,8 @@ const GetButtonInformation_buttonLabelInAck: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary buttonLabelInAck
  * @constant
+ * @description
+ * Alias of `GetButtonInformation_buttonLabelInAck`.
  */
 export
 const buttonLabelInAck: number = GetButtonInformation_buttonLabelInAck; /* SHORT_NAMED_BIT */
@@ -72,6 +96,9 @@ const buttonLabelInAck: number = GetButtonInformation_buttonLabelInAck; /* SHORT
 /**
  * @summary GetButtonInformation_buttonLabelSettableInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `buttonLabelSettable` in the
+ * acknowledgement (ECMA-269 C.12.3).
  */
 export
 const GetButtonInformation_buttonLabelSettableInAck: number = 3; /* LONG_NAMED_BIT */
@@ -79,6 +106,8 @@ const GetButtonInformation_buttonLabelSettableInAck: number = 3; /* LONG_NAMED_B
 /**
  * @summary buttonLabelSettableInAck
  * @constant
+ * @description
+ * Alias of `GetButtonInformation_buttonLabelSettableInAck`.
  */
 export
 const buttonLabelSettableInAck: number = GetButtonInformation_buttonLabelSettableInAck; /* SHORT_NAMED_BIT */
@@ -86,6 +115,9 @@ const buttonLabelSettableInAck: number = GetButtonInformation_buttonLabelSettabl
 /**
  * @summary GetButtonInformation_buttonFunctionInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `buttonFunction` in the
+ * acknowledgement (ECMA-269 C.12.3).
  */
 export
 const GetButtonInformation_buttonFunctionInAck: number = 4; /* LONG_NAMED_BIT */
@@ -93,6 +125,8 @@ const GetButtonInformation_buttonFunctionInAck: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary buttonFunctionInAck
  * @constant
+ * @description
+ * Alias of `GetButtonInformation_buttonFunctionInAck`.
  */
 export
 const buttonFunctionInAck: number = GetButtonInformation_buttonFunctionInAck; /* SHORT_NAMED_BIT */
@@ -100,6 +134,9 @@ const buttonFunctionInAck: number = GetButtonInformation_buttonFunctionInAck; /*
 /**
  * @summary GetButtonInformation_buttonAssociatedNumberInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `buttonAssociatedNumber` in the
+ * acknowledgement (ECMA-269 C.12.3).
  */
 export
 const GetButtonInformation_buttonAssociatedNumberInAck: number = 5; /* LONG_NAMED_BIT */
@@ -107,6 +144,8 @@ const GetButtonInformation_buttonAssociatedNumberInAck: number = 5; /* LONG_NAME
 /**
  * @summary buttonAssociatedNumberInAck
  * @constant
+ * @description
+ * Alias of `GetButtonInformation_buttonAssociatedNumberInAck`.
  */
 export
 const buttonAssociatedNumberInAck: number = GetButtonInformation_buttonAssociatedNumberInAck; /* SHORT_NAMED_BIT */
@@ -114,6 +153,9 @@ const buttonAssociatedNumberInAck: number = GetButtonInformation_buttonAssociate
 /**
  * @summary GetButtonInformation_buttonAssociatedNumberSettableInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `buttonAssociatedNumberSettable` in
+ * the acknowledgement (ECMA-269 C.12.3).
  */
 export
 const GetButtonInformation_buttonAssociatedNumberSettableInAck: number = 6; /* LONG_NAMED_BIT */
@@ -121,6 +163,8 @@ const GetButtonInformation_buttonAssociatedNumberSettableInAck: number = 6; /* L
 /**
  * @summary buttonAssociatedNumberSettableInAck
  * @constant
+ * @description
+ * Alias of `GetButtonInformation_buttonAssociatedNumberSettableInAck`.
  */
 export
 const buttonAssociatedNumberSettableInAck: number = GetButtonInformation_buttonAssociatedNumberSettableInAck; /* SHORT_NAMED_BIT */
@@ -128,6 +172,9 @@ const buttonAssociatedNumberSettableInAck: number = GetButtonInformation_buttonA
 /**
  * @summary GetButtonInformation_listOfLampsInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `listOfLamps` in the acknowledgement
+ * (ECMA-269 C.12.3).
  */
 export
 const GetButtonInformation_listOfLampsInAck: number = 7; /* LONG_NAMED_BIT */
@@ -135,6 +182,8 @@ const GetButtonInformation_listOfLampsInAck: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary listOfLampsInAck
  * @constant
+ * @description
+ * Alias of `GetButtonInformation_listOfLampsInAck`.
  */
 export
 const listOfLampsInAck: number = GetButtonInformation_listOfLampsInAck; /* SHORT_NAMED_BIT */
@@ -142,6 +191,9 @@ const listOfLampsInAck: number = GetButtonInformation_listOfLampsInAck; /* SHORT
 /**
  * @summary GetButtonInformation_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.12.3).
  */
 export
 const GetButtonInformation_privateDataInAck: number = 8; /* LONG_NAMED_BIT */
@@ -149,6 +201,8 @@ const GetButtonInformation_privateDataInAck: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `GetButtonInformation_privateDataInAck`.
  */
 export
 const privateDataInAck: number = GetButtonInformation_privateDataInAck; /* SHORT_NAMED_BIT */

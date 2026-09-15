@@ -25,7 +25,14 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
 /**
  * @summary ConnectionList_Item
  * @description
- * 
+ *
+ * One device/connection in a `ConnectionList` after conference or
+ * transfer (ECMA-269 §12.2.9). `newConnection`’s CallID is the
+ * resulting call; `oldConnection`’s CallID is the original call.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,30 +52,59 @@ class ConnectionList_Item {
     constructor (
         /**
          * @summary `newConnection`.
+         * @description
+         *
+         * Connection in the resulting call. Optional for
+         * `transferringDevice` in the Transferred event; otherwise
+         * mandatory (ECMA-269 §12.2.9).
+         *
          * @public
          * @readonly
          */
         readonly newConnection: OPTIONAL<ConnectionID>,
         /**
          * @summary `oldConnection`.
+         * @description
+         *
+         * Connection in the original call. Mandatory if the switching
+         * function previously reported that CallID; otherwise optional
+         * (ECMA-269 §12.2.9).
+         *
          * @public
          * @readonly
          */
         readonly oldConnection: OPTIONAL<ConnectionID>,
         /**
          * @summary `endpoint`.
+         * @description
+         *
+         * Internal device, or for external calls the far-end device if
+         * known. Statuses: Provided, Not Known, Restricted
+         * (ECMA-269 §12.2.9).
+         *
          * @public
          * @readonly
          */
         readonly endpoint: OPTIONAL<ConnectionList_Item_endpoint>,
         /**
          * @summary `associatedNID`.
+         * @description
+         *
+         * Network Interface Device for an external far-end. Mandatory
+         * on external calls; omit for devices inside the sub-domain.
+         * Statuses: Provided or Not Known (ECMA-269 §12.2.9).
+         *
          * @public
          * @readonly
          */
         readonly associatedNID: OPTIONAL<ConnectionList_Item_associatedNID>,
         /**
          * @summary `resultingConnectionInfo`.
+         * @description
+         *
+         * Flow direction and channel characteristics of the resulting
+         * connection (ECMA-269 §12.2.9).
+         *
          * @public
          * @readonly
          */

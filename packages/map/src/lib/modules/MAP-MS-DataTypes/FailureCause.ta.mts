@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FailureCause
  * @description
- * 
+ *
+ * Authentication failure that occurred: wrong user response or wrong network
+ * signature (3GPP TS 29.002 V19.1.0 clause 7.6.7.9).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,7 +95,10 @@ enum _enum_for_FailureCause {
 /**
  * @summary FailureCause
  * @description
- * 
+ *
+ * Authentication failure that occurred: wrong user response or wrong network
+ * signature (3GPP TS 29.002 V19.1.0 clause 7.6.7.9).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -109,7 +115,10 @@ type FailureCause = _enum_for_FailureCause;
 /**
  * @summary FailureCause
  * @description
- * 
+ *
+ * Authentication failure that occurred: wrong user response or wrong network
+ * signature (3GPP TS 29.002 V19.1.0 clause 7.6.7.9).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

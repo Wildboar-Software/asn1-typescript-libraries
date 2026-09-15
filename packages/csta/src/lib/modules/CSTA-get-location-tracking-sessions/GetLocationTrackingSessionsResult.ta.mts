@@ -21,7 +21,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetLocationTrackingSessionsResult
  * @description
- * 
+ *
+ * CHOICE of segment correlation id or the full session list (ECMA-269
+ * §28.1.11.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +46,22 @@ class GetLocationTrackingSessionsResult {
     constructor (
         /**
          * @summary `crossRefIDorRegistrationData`.
+         * @description
+         *
+         * Either a ServiceCrossRefID for Location Session Info or the session
+         * list itself (ECMA-269 §28.1.11.2.1).
+         *
          * @public
          * @readonly
          */
         readonly crossRefIDorRegistrationData: GetLocationTrackingSessionsResult_crossRefIDorRegistrationData,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

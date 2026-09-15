@@ -87,7 +87,15 @@ import { absentSubscriberSM } from "../MAP-Errors/absentSubscriberSM.oa.mjs";
 /**
  * @summary mt_ForwardSM
  * @description
- * 
+ *
+ * MAP_MT_FORWARD_SHORT_MESSAGE: GMSC forwards a mobile-terminated short message
+ * to the serving MSC or SGSN (transiting an SMS Router, if present) or to the
+ * IP-SM-GW. Confirmed. Typical path: GMSC→MSC or GMSC→SGSN. Local opcode 44.
+ * Timer class `ml` (1 min to 10 min); the timer value may be negotiated between
+ * GMSC and IP-SM-GW. Distinctive errors: `subscriberBusyForMT-SMS`,
+ * `sm-DeliveryFailure`, `absentSubscriberSM`. (3GPP TS 29.002 V19.1.0 clauses
+ * 12.9.1, 17.1.2, 17.3.2.26 and 17.6.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

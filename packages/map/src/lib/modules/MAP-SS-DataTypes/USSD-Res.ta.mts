@@ -73,7 +73,10 @@ import { USSD_String, _decode_USSD_String, _encode_USSD_String } from "../MAP-SS
 /**
  * @summary USSD_Res
  * @description
- * 
+ *
+ * Result of a USSD operation (3GPP TS 29.002 V19.1.0 clauses 11.9–11.10 and
+ * 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,22 @@ class USSD_Res {
     constructor (
         /**
          * @summary `ussd_DataCodingScheme`.
+         * @description
+         *
+         * Cell Broadcast DCS as in 3GPP TS 23.038 (3GPP TS 29.002 V19.1.0
+         * clauses 7.6.4.36 and 17.7.4).
+         *
          * @public
          * @readonly
          */
         readonly ussd_DataCodingScheme: USSD_DataCodingScheme,
         /**
          * @summary `ussd_String`.
+         * @description
+         *
+         * Unstructured information; structure depends on the DCS (3GPP TS
+         * 23.038) (3GPP TS 29.002 V19.1.0 clauses 7.6.4.37 and 17.7.4).
+         *
          * @public
          * @readonly
          */

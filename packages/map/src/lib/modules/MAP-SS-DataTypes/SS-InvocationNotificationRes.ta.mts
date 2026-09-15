@@ -72,7 +72,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SS_InvocationNotificationRes
  * @description
- * 
+ *
+ * Result of SS invocation notification (3GPP TS 29.002 V19.1.0 clauses 11.12
+ * and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -89,6 +92,10 @@ class SS_InvocationNotificationRes {
     constructor (
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

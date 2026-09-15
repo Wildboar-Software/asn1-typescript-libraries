@@ -8,7 +8,14 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary RouteRegisterReqID
  * @description
- * 
+ *
+ * Identifies a routeing registration for which the computing function (as
+ * routeing server) receives routeing requests. May apply to one routeing device
+ * or all in the sub-domain. Returned from Route Register; valid until
+ * registration ends. Unique across a CSTA service boundary. ECMA-269 §12.3.28.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

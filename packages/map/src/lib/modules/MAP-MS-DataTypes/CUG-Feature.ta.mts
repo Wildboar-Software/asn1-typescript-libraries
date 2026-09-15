@@ -75,7 +75,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CUG_Feature
  * @description
- * 
+ *
+ * CUG feature associated with a Basic Service Group. If the Basic Service Group
+ * Code is absent the feature applies to all Basic Services. Preferential CUG
+ * indicator selects the CUG index at outgoing call set-up; Inter CUG Option
+ * describes outgoing/incoming access. See 3GPP TS 22.085 (3GPP TS 29.002
+ * V19.1.0 clause 7.6.3.26).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,18 +100,36 @@ class CUG_Feature {
     constructor (
         /**
          * @summary `basicService`.
+         * @description
+         *
+         * If absent the feature applies to all Basic Services (3GPP TS 29.002
+         * V19.1.0 clause 7.6.3.26).
+         *
          * @public
          * @readonly
          */
         readonly basicService: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `preferentialCUG_Indicator`.
+         * @description
+         *
+         * CUG index to use at outgoing call set-up for the associated Basic
+         * Service Group. If CUG-Feature is received without preferential CUG,
+         * no preferential CUG applies (3GPP TS 29.002 V19.1.0 clauses 7.6.3.26
+         * and 8.8.1.3).
+         *
          * @public
          * @readonly
          */
         readonly preferentialCUG_Indicator: OPTIONAL<CUG_Index>,
         /**
          * @summary `interCUG_Restrictions`.
+         * @description
+         *
+         * Whether outgoing calls outside the CUG and incoming calls are allowed
+         * for the associated Basic Service Group (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.26).
+         *
          * @public
          * @readonly
          */

@@ -26,7 +26,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GenerateDigitsArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 18-14).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,42 +52,64 @@ class GenerateDigitsArgument {
     constructor (
         /**
          * @summary `connectionToSendDigits`.
+         * @description
+         *
+         * Connection on whose behalf digits are generated.
          * @public
          * @readonly
          */
         readonly connectionToSendDigits: ConnectionID,
         /**
          * @summary `digitMode`.
+         * @description
+         *
+         * rotaryPulse or dTMF. SF default if omitted.
          * @public
          * @readonly
          */
         readonly digitMode: OPTIONAL<DigitMode>,
         /**
          * @summary `charactersToSend`.
+         * @description
+         *
+         * Digit string to generate (max length from capabilities).
          * @public
          * @readonly
          */
         readonly charactersToSend: IA5String,
         /**
          * @summary `toneDuration`.
+         * @description
+         *
+         * Tone duration for DTMF generation, if applicable.
          * @public
          * @readonly
          */
         readonly toneDuration: OPTIONAL<INTEGER>,
         /**
          * @summary `pulseRate`.
+         * @description
+         *
+         * Pulse rate for rotary generation, if applicable.
          * @public
          * @readonly
          */
         readonly pulseRate: OPTIONAL<INTEGER>,
         /**
          * @summary `pauseDuration`.
+         * @description
+         *
+         * Pause duration between digits, if applicable.
          * @public
          * @readonly
          */
         readonly pauseDuration: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

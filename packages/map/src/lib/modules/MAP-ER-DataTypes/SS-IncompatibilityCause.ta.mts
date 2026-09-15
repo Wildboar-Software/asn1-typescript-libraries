@@ -75,6 +75,10 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  * @summary SS_IncompatibilityCause
  * @description
  * 
+ * Optional parameter of `ss-Incompatibility`. Supplementary-service errors are
+ * defined in 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,18 +96,34 @@ class SS_IncompatibilityCause {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * Supplementary-service code related to the incompatibility. SS errors
+         * are defined in 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.1.4).
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: OPTIONAL<SS_Code>,
         /**
          * @summary `basicService`.
+         * @description
+         *
+         * Basic service related to the incompatibility. SS errors are defined
+         * in 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+         *
          * @public
          * @readonly
          */
         readonly basicService: OPTIONAL<BasicServiceCode>,
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * SS-Status related to the incompatibility. SS errors are defined in
+         * 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+         *
          * @public
          * @readonly
          */

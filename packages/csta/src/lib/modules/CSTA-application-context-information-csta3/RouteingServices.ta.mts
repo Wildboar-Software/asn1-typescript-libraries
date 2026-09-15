@@ -8,7 +8,12 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary RouteingServices
  * @description
- * 
+ *
+ * Routeing services. BIT STRING advertised in ACSE user-information listing
+ * which CSTA services or events this association will use. ECMA-285 §8.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,13 +34,16 @@ type RouteingServices = BIT_STRING;
 
 /**
  * @summary RouteingServices_routeRegister
+ * @description Advertises `routeRegister` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const RouteingServices_routeRegister: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary routeRegister
+ * @description Alias of {@link RouteingServices_routeRegister}.
  * @constant
  */
 export
@@ -43,13 +51,17 @@ const routeRegister: number = RouteingServices_routeRegister; /* SHORT_NAMED_BIT
 
 /**
  * @summary RouteingServices_routeRegisterCancel
+ * @description
+ * Advertises `routeRegisterCancel` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const RouteingServices_routeRegisterCancel: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary routeRegisterCancel
+ * @description Alias of {@link RouteingServices_routeRegisterCancel}.
  * @constant
  */
 export
@@ -57,13 +69,17 @@ const routeRegisterCancel: number = RouteingServices_routeRegisterCancel; /* SHO
 
 /**
  * @summary RouteingServices_routeRegisterAbort
+ * @description
+ * Advertises `routeRegisterAbort` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const RouteingServices_routeRegisterAbort: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary routeRegisterAbort
+ * @description Alias of {@link RouteingServices_routeRegisterAbort}.
  * @constant
  */
 export
@@ -71,13 +87,16 @@ const routeRegisterAbort: number = RouteingServices_routeRegisterAbort; /* SHORT
 
 /**
  * @summary RouteingServices_reroute
+ * @description Advertises `reroute` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const RouteingServices_reroute: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary reroute
+ * @description Alias of {@link RouteingServices_reroute}.
  * @constant
  */
 export
@@ -85,13 +104,16 @@ const reroute: number = RouteingServices_reroute; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RouteingServices_routeEnd
+ * @description Advertises `routeEnd` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const RouteingServices_routeEnd: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary routeEnd
+ * @description Alias of {@link RouteingServices_routeEnd}.
  * @constant
  */
 export
@@ -99,13 +121,16 @@ const routeEnd: number = RouteingServices_routeEnd; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RouteingServices_routeReject
+ * @description Advertises `routeReject` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const RouteingServices_routeReject: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary routeReject
+ * @description Alias of {@link RouteingServices_routeReject}.
  * @constant
  */
 export
@@ -113,13 +138,16 @@ const routeReject: number = RouteingServices_routeReject; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RouteingServices_routeRequest
+ * @description Advertises `routeRequest` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const RouteingServices_routeRequest: number = 6; /* LONG_NAMED_BIT */
 
 /**
  * @summary routeRequest
+ * @description Alias of {@link RouteingServices_routeRequest}.
  * @constant
  */
 export
@@ -127,13 +155,16 @@ const routeRequest: number = RouteingServices_routeRequest; /* SHORT_NAMED_BIT *
 
 /**
  * @summary RouteingServices_routeSelect
+ * @description Advertises `routeSelect` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const RouteingServices_routeSelect: number = 7; /* LONG_NAMED_BIT */
 
 /**
  * @summary routeSelect
+ * @description Alias of {@link RouteingServices_routeSelect}.
  * @constant
  */
 export
@@ -141,13 +172,16 @@ const routeSelect: number = RouteingServices_routeSelect; /* SHORT_NAMED_BIT */
 
 /**
  * @summary RouteingServices_routeUsed
+ * @description Advertises `routeUsed` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const RouteingServices_routeUsed: number = 8; /* LONG_NAMED_BIT */
 
 /**
  * @summary routeUsed
+ * @description Alias of {@link RouteingServices_routeUsed}.
  * @constant
  */
 export

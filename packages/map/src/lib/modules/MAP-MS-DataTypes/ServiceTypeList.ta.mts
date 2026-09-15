@@ -75,7 +75,13 @@ import { maxNumOfServiceType } from "./maxNumOfServiceType.va.mjs";
 /**
  * @summary ServiceTypeList
  * @description
- * 
+ *
+ * Identities of LCS service types allowed to locate a target MS for an MT-LR.
+ * Applicable only to the Service type privacy class. Usage in 3GPP TS 23.271.
+ * Size 1..32.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.65D and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

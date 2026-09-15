@@ -74,6 +74,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * @summary CUG_RejectParam
  * @description
  * 
+ * Parameter of `cug-Reject`. Additional information may indicate rejection due
+ * to e.g. incoming call barred or non-CUG membership (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,6 +94,11 @@ class CUG_RejectParam {
     constructor (
         /**
          * @summary `cug_RejectCause`.
+         * @description
+         *
+         * Why the call did not pass a CUG check (3GPP TS 29.002 V19.1.0 clauses
+         * 7.6.1.4 and 17.7.7).
+         *
          * @public
          * @readonly
          */

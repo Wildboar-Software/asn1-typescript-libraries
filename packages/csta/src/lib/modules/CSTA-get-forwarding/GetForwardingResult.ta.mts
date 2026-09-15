@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetForwardingResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §22.1.11.2.1). ASN.1 `forwardingList` is spec
+ * `forwardList`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,22 @@ class GetForwardingResult {
     constructor (
         /**
          * @summary `forwardingList`.
+         * @description
+         *
+         * One structure per forwardingType/forwardDN combination.
+         * `forwardDefault` distinguishes SF-default vs user settings
+         * (§22.1.11.3.4 FR 2). `ringCount`/`ringDuration` only for
+         * forwardNoAns{,Int,Ext}.
          * @public
          * @readonly
          */
         readonly forwardingList: ForwardList,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

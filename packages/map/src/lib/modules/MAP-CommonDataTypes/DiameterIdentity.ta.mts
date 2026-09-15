@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DiameterIdentity
  * @description
- * 
+ *
+ * Diameter identity (name or realm). Size 9..255 octets. Content is defined in
+ * IETF RFC 3588. Used for MME Name, SGSN Name/Realm, 3GPP AAA Server Name, and
+ * similar Diameter identities.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8, 7.6.2.65, 7.6.2.68 and 7.6.2.69).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

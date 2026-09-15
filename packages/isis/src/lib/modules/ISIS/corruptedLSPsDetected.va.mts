@@ -15,6 +15,11 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary corruptedLSPsDetected
  * @description
  *
+ * `specificProblems` value when a corrupted LSP is detected in memory.
+ * probableCause `corruptData`; severity Minor.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

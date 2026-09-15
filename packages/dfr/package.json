@@ -1,0 +1,52 @@
+{
+    "name": "@wildboar/dfr",
+    "type": "module",
+    "version": "1.0.0",
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
+    "dependencies": {
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/rose": "npm:@jsr/wildboar__rose@^2.0.2",
+        "@wildboar/x500": "npm:@jsr/wildboar__x500@^2.0.9"
+    },
+    "exports": {
+        ".": "./src/index.mts",
+        "./DFRAbstractService": "./src/lib/modules/DFRAbstractService/index.mts",
+        "./DFRAccessProtocol": "./src/lib/modules/DFRAccessProtocol/index.mts",
+        "./DFRBasicAttributes": "./src/lib/modules/DFRBasicAttributes/index.mts",
+        "./DFRExtensionAttributes": "./src/lib/modules/DFRExtensionAttributes/index.mts",
+        "./DFRObjectIdentifiers": "./src/lib/modules/DFRObjectIdentifiers/index.mts",
+        "./DFRProtocolObjectIdentifiers": "./src/lib/modules/DFRProtocolObjectIdentifiers/index.mts",
+        "./DOR-definition": "./src/lib/modules/DOR-definition/index.mts",
+        "./DirectoryAbstractService": "./src/lib/modules/DirectoryAbstractService/index.mts",
+        "./InformationFramework": "./src/lib/modules/InformationFramework/index.mts",
+        "./Remote-Operations-Abstract-Syntaxes": "./src/lib/modules/Remote-Operations-Abstract-Syntaxes/index.mts",
+        "./Remote-Operations-Generic-ROS-PDUs": "./src/lib/modules/Remote-Operations-Generic-ROS-PDUs/index.mts",
+        "./Remote-Operations-Information-Objects": "./src/lib/modules/Remote-Operations-Information-Objects/index.mts",
+        "./Remote-Operations-Information-Objects-extensions": "./src/lib/modules/Remote-Operations-Information-Objects-extensions/index.mts",
+        "./Remote-Operations-Realizations": "./src/lib/modules/Remote-Operations-Realizations/index.mts",
+        "./Remote-Operations-Useful-Definitions": "./src/lib/modules/Remote-Operations-Useful-Definitions/index.mts"
+    }
+}

@@ -1,7 +1,13 @@
 /**
  * @description
  *
- * ASN.1 module `MAP-MobileServiceOperations`.
+ * ASN.1 module `MAP-MobileServiceOperations` (clause 17.6.1): MAP operations
+ * for location management, handover on the E-interface, authentication and IMEI
+ * check, subscriber-data management, fault recovery, any-time
+ * interrogation/modification, and GPRS routing / failure / presence
+ * notification. Service definitions are in clauses 8.1, 8.4, 8.5, 8.7, 8.8,
+ * 8.10, 8.11 and 13.1–13.3. Application contexts are in clause 17.3. Timer
+ * ranges are in clause 17.1.2. (3GPP TS 29.002 V19.1.0.)
  */
 export * from "./anyTimeInterrogation.oa.mjs";
 export * from "./anyTimeModification.oa.mjs";

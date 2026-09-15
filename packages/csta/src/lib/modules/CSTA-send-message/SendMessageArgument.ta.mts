@@ -35,7 +35,15 @@ import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "
 /**
  * @summary SendMessageArgument
  * @description
- * 
+ *
+ * Service request for Send Message (ECMA-269 §17.1.24 /
+ * ECMA-285 §15.1.25). Names the originator, destinations,
+ * and MIME message parts. For interactive chat use Make
+ * Call plus Send User Information (FR 2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,66 +68,120 @@ class SendMessageArgument {
     constructor (
         /**
          * @summary `callingDevice`.
+         * @description
+         *
+         * Mandatory. Device on whose behalf the message is
+         * sent. May name a group; later events use the actual
+         * device, and Originated reports this value as
+         * `originatingDevice` (FR 9).
+         *
          * @public
          * @readonly
          */
         readonly callingDevice: DeviceID,
         /**
          * @summary `destinationDevices`.
+         * @description
+         *
+         * Mandatory. Destination device(s). One
+         * non-interactive call is created per destination.
+         *
          * @public
          * @readonly
          */
         readonly destinationDevices: DeviceListItems,
         /**
          * @summary `messageInfo`.
+         * @description
+         *
+         * Mandatory. MIME body part(s). Default content type
+         * is `text/plain` when omitted (Table 17-130).
+         *
          * @public
          * @readonly
          */
         readonly messageInfo: MessageInfo,
         /**
          * @summary `accountCode`.
+         * @description
+         *
+         * Optional account code for the new call (§12.2.1).
+         *
          * @public
          * @readonly
          */
         readonly accountCode: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
+         * @description
+         *
+         * Optional authorization code (§12.2.3).
+         *
          * @public
          * @readonly
          */
         readonly authCode: OPTIONAL<AuthCode>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional. Associates several messages into one
+         * conversation (FR 1, §12.2.10).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Optional call characteristics (§12.2.4). Unsupported
+         * values cause a negative acknowledgement.
+         *
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Optional. Omitted media class is Message. The
+         * switching function may adjust values (FR 8).
+         *
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `subjectOfCall`.
+         * @description
+         *
+         * Optional subject or intent (§12.2.27).
+         *
          * @public
          * @readonly
          */
         readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Optional preferred language(s) (§12.2.16).
+         *
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security
+         * and privateData parameters from the ECMA-269 service
+         * table.
+         *
          * @public
          * @readonly
          */

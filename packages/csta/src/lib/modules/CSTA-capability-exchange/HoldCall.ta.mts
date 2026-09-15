@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary HoldCall
  * @description
- * 
+ * Capability bitmap for the Hold Call service (ECMA-269 C.5.15, ECMA-285
+ * §9.10). Presence of this entry in `CallControlServList` means the SF supports
+ * that service. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +34,9 @@ type HoldCall = BIT_STRING;
 /**
  * @summary HoldCall_connectionReservation
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `connectionReservation` parameter
+ * (ECMA-269 C.5.15).
  */
 export
 const HoldCall_connectionReservation: number = 0; /* LONG_NAMED_BIT */
@@ -33,6 +44,8 @@ const HoldCall_connectionReservation: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary connectionReservation
  * @constant
+ * @description
+ * Alias of `HoldCall_connectionReservation`.
  */
 export
 const connectionReservation: number = HoldCall_connectionReservation; /* SHORT_NAMED_BIT */
@@ -40,6 +53,9 @@ const connectionReservation: number = HoldCall_connectionReservation; /* SHORT_N
 /**
  * @summary HoldCall_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.5.15).
  */
 export
 const HoldCall_privateData: number = 1; /* LONG_NAMED_BIT */
@@ -47,6 +63,8 @@ const HoldCall_privateData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `HoldCall_privateData`.
  */
 export
 const privateData: number = HoldCall_privateData; /* SHORT_NAMED_BIT */
@@ -54,6 +72,9 @@ const privateData: number = HoldCall_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary HoldCall_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.5.15).
  */
 export
 const HoldCall_privateDataInAck: number = 2; /* LONG_NAMED_BIT */
@@ -61,6 +82,8 @@ const HoldCall_privateDataInAck: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `HoldCall_privateDataInAck`.
  */
 export
 const privateDataInAck: number = HoldCall_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -68,6 +91,9 @@ const privateDataInAck: number = HoldCall_privateDataInAck; /* SHORT_NAMED_BIT *
 /**
  * @summary HoldCall_deviceIDOnly
  * @constant
+ * @description
+ * Bit set means the SF supports DeviceID-only ConnectionIDs for this service
+ * (ECMA-269 C.5.15).
  */
 export
 const HoldCall_deviceIDOnly: number = 3; /* LONG_NAMED_BIT */
@@ -75,6 +101,8 @@ const HoldCall_deviceIDOnly: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary deviceIDOnly
  * @constant
+ * @description
+ * Alias of `HoldCall_deviceIDOnly`.
  */
 export
 const deviceIDOnly: number = HoldCall_deviceIDOnly; /* SHORT_NAMED_BIT */
@@ -82,6 +110,9 @@ const deviceIDOnly: number = HoldCall_deviceIDOnly; /* SHORT_NAMED_BIT */
 /**
  * @summary HoldCall_ackModelMultiStep
  * @constant
+ * @description
+ * Bit set means the SF supports the multi-step positive acknowledgement model
+ * (ECMA-269 C.5.15).
  */
 export
 const HoldCall_ackModelMultiStep: number = 4; /* LONG_NAMED_BIT */
@@ -89,6 +120,8 @@ const HoldCall_ackModelMultiStep: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary ackModelMultiStep
  * @constant
+ * @description
+ * Alias of `HoldCall_ackModelMultiStep`.
  */
 export
 const ackModelMultiStep: number = HoldCall_ackModelMultiStep; /* SHORT_NAMED_BIT */

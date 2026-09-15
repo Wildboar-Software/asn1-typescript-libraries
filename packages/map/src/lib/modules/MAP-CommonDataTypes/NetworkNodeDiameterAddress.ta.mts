@@ -72,7 +72,12 @@ import { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } 
 /**
  * @summary NetworkNodeDiameterAddress
  * @description
- * 
+ *
+ * Diameter Name and Realm of an MT-SMS target node or SMS Router (the same node
+ * whose ISDN number is the Network Node number).
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.2.43A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -88,12 +93,22 @@ class NetworkNodeDiameterAddress {
     constructor (
         /**
          * @summary `diameter_Name`.
+         * @description
+         *
+         * Diameter Name of the MT-SMS target node or SMS Router. (3GPP TS
+         * 29.002 V19.1.0 clause 7.6.2.43A).
+         *
          * @public
          * @readonly
          */
         readonly diameter_Name: DiameterIdentity,
         /**
          * @summary `diameter_Realm`.
+         * @description
+         *
+         * Diameter Realm of the same node. (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.2.43A).
+         *
          * @public
          * @readonly
          */

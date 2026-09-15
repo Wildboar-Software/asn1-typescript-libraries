@@ -23,7 +23,12 @@ enum _enum_for_V92ModDiag_Item_lastMOHaction {
 /**
  * @summary V92ModDiag_Item_lastMOHaction
  * @description
- * 
+ *
+ * Table 12/V.59: `mohaccepted`(0) both ends accepted hold, `mohdeclined`(1)
+ * interrupted modem declines hold and tries to resume, `mohdenied`(2) remote
+ * denied hold, `mohclrdn`(3) cleardown in response to the interrupt/hold
+ * request. ITU-T Rec. V.59 (11/2000) §6.8.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,6 +44,10 @@ type V92ModDiag_Item_lastMOHaction = _enum_for_V92ModDiag_Item_lastMOHaction | E
 
 /**
  * @summary V92ModDiag_Item_lastMOHaction_mohaccepted
+ * @description
+ *
+ * Both V.92 modems signalled and accepted modem-on-hold. Table 12/V.59. ITU-T
+ * Rec. V.59 (11/2000) §6.8.5.
  * @constant
  * @type {number}
  */
@@ -55,6 +64,10 @@ const mohaccepted: V92ModDiag_Item_lastMOHaction = V92ModDiag_Item_lastMOHaction
 
 /**
  * @summary V92ModDiag_Item_lastMOHaction_mohdeclined
+ * @description
+ *
+ * Modem receiving the interrupt declines hold and tries to resume. Table
+ * 12/V.59. ITU-T Rec. V.59 (11/2000) §6.8.5.
  * @constant
  * @type {number}
  */
@@ -71,6 +84,10 @@ const mohdeclined: V92ModDiag_Item_lastMOHaction = V92ModDiag_Item_lastMOHaction
 
 /**
  * @summary V92ModDiag_Item_lastMOHaction_mohdenied
+ * @description
+ *
+ * Hold request denied by the remote modem. Table 12/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.8.5.
  * @constant
  * @type {number}
  */
@@ -87,6 +104,10 @@ const mohdenied: V92ModDiag_Item_lastMOHaction = V92ModDiag_Item_lastMOHaction_m
 
 /**
  * @summary V92ModDiag_Item_lastMOHaction_mohclrdn
+ * @description
+ *
+ * Cleardown negotiated in response to the interrupt or hold request. Table
+ * 12/V.59. ITU-T Rec. V.59 (11/2000) §6.8.5.
  * @constant
  * @type {number}
  */

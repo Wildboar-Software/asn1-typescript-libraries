@@ -19,7 +19,12 @@ import { BioAPI_BFP_SCHEMA, _decode_BioAPI_BFP_SCHEMA, _encode_BioAPI_BFP_SCHEMA
 /**
  * @summary BSP_BFP_Schema
  * @description
- * 
+ *
+ * BioAPI BSP or BFP schema identifying which capture, preprocess, and
+ * compare functions a party used. Verifier checks security level and
+ * performance of all BSPs. [ISO/IEC 19784-1]; X.1084 §10.1.2, §11.1
+ * Table 3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

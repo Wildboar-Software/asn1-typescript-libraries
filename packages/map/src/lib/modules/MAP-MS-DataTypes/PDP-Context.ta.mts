@@ -91,7 +91,13 @@ import { FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mj
 /**
  * @summary PDP_Context
  * @description
- * 
+ *
+ * GPRS subscription PDP context sent in Insert Subscriber Data. QoS extension
+ * IEs are nested: `ext2` only if `ext` is present, `ext3` only if `ext2`,
+ * `ext4` only if `ext3`.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.46, 8.8.1 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -143,36 +149,72 @@ class PDP_Context {
     constructor (
         /**
          * @summary `pdp_ContextId`.
+         * @description
+         *
+         * Identifies this PDP context in the subscriber's GPRS subscription.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.55).
+         *
          * @public
          * @readonly
          */
         readonly pdp_ContextId: ContextId,
         /**
          * @summary `pdp_Type`.
+         * @description
+         *
+         * PDP protocol type as in 3GPP TS 23.060 / 29.060.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.44).
+         *
          * @public
          * @readonly
          */
         readonly pdp_Type: PDP_Type,
         /**
          * @summary `pdp_Address`.
+         * @description
+         *
+         * PDP address as in 3GPP TS 23.060 / 29.060.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.45).
+         *
          * @public
          * @readonly
          */
         readonly pdp_Address: OPTIONAL<PDP_Address>,
         /**
          * @summary `qos_Subscribed`.
+         * @description
+         *
+         * Subscribed QoS for the PDP context, as in 3GPP TS 23.060.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.47).
+         *
          * @public
          * @readonly
          */
         readonly qos_Subscribed: QoS_Subscribed,
         /**
          * @summary `vplmnAddressAllowed`.
+         * @description
+         *
+         * MS may use a dynamic address allocated in the VPLMN (3GPP TS 23.060).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.48).
+         *
          * @public
          * @readonly
          */
         readonly vplmnAddressAllowed: OPTIONAL<NULL>,
         /**
          * @summary `apn`.
+         * @description
+         *
+         * APN as in 3GPP TS 23.060 (DNS name of a GGSN / PDN connection).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.42).
+         *
          * @public
          * @readonly
          */
@@ -185,90 +227,192 @@ class PDP_Context {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ext_QoS_Subscribed`.
+         * @description
+         *
+         * Enhanced subscribed QoS (extension to QoS-Subscribed), as in 3GPP TS
+         * 23.060.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.74).
+         *
          * @public
          * @readonly
          */
         readonly ext_QoS_Subscribed: OPTIONAL<Ext_QoS_Subscribed>,
         /**
          * @summary `pdp_ChargingCharacteristics`.
+         * @description
+         *
+         * Charging characteristics of this PDP context (3GPP TS 32.215).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.55).
+         *
          * @public
          * @readonly
          */
         readonly pdp_ChargingCharacteristics: OPTIONAL<ChargingCharacteristics>,
         /**
          * @summary `ext2_QoS_Subscribed`.
+         * @description
+         *
+         * Further QoS extension when maximum bit rate exceeds 8640 kbit/s (3GPP
+         * TS 24.008). Present only if `ext-QoS-Subscribed` is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75A and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly ext2_QoS_Subscribed: OPTIONAL<Ext2_QoS_Subscribed>,
         /**
          * @summary `ext3_QoS_Subscribed`.
+         * @description
+         *
+         * Further QoS extension when maximum/guaranteed uplink bit rate exceeds
+         * 8640 kbit/s (3GPP TS 24.008). Present only if `ext2-QoS-Subscribed`
+         * is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75B and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly ext3_QoS_Subscribed: OPTIONAL<Ext3_QoS_Subscribed>,
         /**
          * @summary `ext4_QoS_Subscribed`.
+         * @description
+         *
+         * Evolved Allocation/Retention Priority (priority level, pre-emption
+         * capability and vulnerability) as in 3GPP TS 29.060. Present only if
+         * `ext3-QoS-Subscribed` is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75C and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly ext4_QoS_Subscribed: OPTIONAL<Ext4_QoS_Subscribed>,
         /**
          * @summary `apn_oi_Replacement`.
+         * @description
+         *
+         * APN-level APN-OI replacement; higher priority than UE-level APN-OI
+         * replacement.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly apn_oi_Replacement: OPTIONAL<APN_OI_Replacement>,
         /**
          * @summary `ext_pdp_Type`.
+         * @description
+         *
+         * Dual-stack PDP-type IPv4v6 (HEX `8D` in 3GPP TS 29.060) if the PDP
+         * can be accessed by dual-stack UEs.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.44A and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly ext_pdp_Type: OPTIONAL<Ext_PDP_Type>,
         /**
          * @summary `ext_pdp_Address`.
+         * @description
+         *
+         * Additional IP address for dual-stack static assignment. Present only
+         * if `pdp-Address` is present; the two shall hold different address
+         * types (IPv4 vs IPv6).
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.45A and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly ext_pdp_Address: OPTIONAL<PDP_Address>,
         /**
          * @summary `ambr`.
+         * @description
+         *
+         * APN-AMBR associated with the APN in this PDP context.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly ambr: OPTIONAL<AMBR>,
         /**
          * @summary `sipto_Permission`.
+         * @description
+         *
+         * SIPTO-above-RAN permission. SGSN handling as in 3GPP TS 29.272 clause
+         * 5.2.1.1.2.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3).
+         *
          * @public
          * @readonly
          */
         readonly sipto_Permission: OPTIONAL<SIPTO_Permission>,
         /**
          * @summary `lipa_Permission`.
+         * @description
+         *
+         * LIPA permission. SGSN handling as in 3GPP TS 29.272 clause 5.2.1.1.2.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3).
+         *
          * @public
          * @readonly
          */
         readonly lipa_Permission: OPTIONAL<LIPA_Permission>,
         /**
          * @summary `restoration_Priority`.
+         * @description
+         *
+         * Restoration priority as in 3GPP TS 29.272.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly restoration_Priority: OPTIONAL<Restoration_Priority>,
         /**
          * @summary `sipto_local_network_Permission`.
+         * @description
+         *
+         * SIPTO at local network permission. SGSN handling as in 3GPP TS 29.272
+         * clause 5.2.1.1.2.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3).
+         *
          * @public
          * @readonly
          */
         readonly sipto_local_network_Permission: OPTIONAL<SIPTO_Local_Network_Permission>,
         /**
          * @summary `nIDD_Mechanism`.
+         * @description
+         *
+         * NIDD delivery mechanism for this APN.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly nIDD_Mechanism: OPTIONAL<NIDD_Mechanism>,
         /**
          * @summary `sCEF_ID`.
+         * @description
+         *
+         * SCEF identity for SCEF-based NIDD.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

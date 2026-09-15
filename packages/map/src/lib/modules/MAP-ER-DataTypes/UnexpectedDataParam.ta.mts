@@ -73,6 +73,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * @summary UnexpectedDataParam
  * @description
  * 
+ * Optional parameter of `unexpectedDataValue`. Must not be used in version <3.
+ * `unexpectedSubscriber` shall not be used for operations that allow the
+ * `unidentifiedSubscriber` error (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +100,14 @@ class UnexpectedDataParam {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `unexpectedSubscriber`.
+         * @description
+         *
+         * Shall not be used for operations that allow the
+         * `unidentifiedSubscriber` error. On MAP-PROVIDE-SUBSCRIBER-INFO, if
+         * the subscriber is not found on the VLR, SGSN or MME, this may be
+         * indicated with this value inside `unexpectedDataValue` (3GPP TS
+         * 29.002 V19.1.0 clauses 8.11.2.3 and 17.7.7).
+         *
          * @public
          * @readonly
          */

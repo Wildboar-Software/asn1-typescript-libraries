@@ -75,7 +75,13 @@ import { maxPermittedEncryptionAlgorithmsLength } from "./maxPermittedEncryption
 /**
  * @summary PermittedEncryptionAlgorithms
  * @description
- * 
+ *
+ * Complete PermittedEncryptionAlgorithms from 3GPP TS 25.413, encoded as
+ * mandated there. Padding bits, if needed, occupy the least significant bits of
+ * the last octet. Size 1..9 octets.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.6.14 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

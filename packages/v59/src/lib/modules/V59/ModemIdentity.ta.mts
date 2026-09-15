@@ -15,7 +15,10 @@ import { ModemIdentity_Item, _decode_ModemIdentity_Item, _encode_ModemIdentity_I
 /**
  * @summary ModemIdentity
  * @description
- * 
+ *
+ * High-level DCE identity (Tag-ID `00xx`). ITU-T Rec. V.59 (11/2000) §6.3,
+ * §6.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

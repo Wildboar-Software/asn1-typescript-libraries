@@ -72,7 +72,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ModificationInstruction
  * @description
- * 
+ *
+ * Activate or deactivate a subscription-data item in MAP_ANY_TIME_MODIFICATION
+ * (gsmSCF, Presence Network Agent, or IP-SM-GW toward the HLR). (3GPP TS 29.002
+ * V19.1.0 clauses 8.11.4 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,7 +96,11 @@ enum _enum_for_ModificationInstruction {
 /**
  * @summary ModificationInstruction
  * @description
- * 
+ *
+ * Activate or deactivate a subscription-data item in MAP_ANY_TIME_MODIFICATION
+ * (gsmSCF, Presence Network Agent, or IP-SM-GW toward the HLR). (3GPP TS 29.002
+ * V19.1.0 clauses 8.11.4 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -109,7 +117,11 @@ type ModificationInstruction = _enum_for_ModificationInstruction;
 /**
  * @summary ModificationInstruction
  * @description
- * 
+ *
+ * Activate or deactivate a subscription-data item in MAP_ANY_TIME_MODIFICATION
+ * (gsmSCF, Presence Network Agent, or IP-SM-GW toward the HLR). (3GPP TS 29.002
+ * V19.1.0 clauses 8.11.4 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -125,6 +137,10 @@ const ModificationInstruction = _enum_for_ModificationInstruction;
 
 /**
  * @summary ModificationInstruction_deactivate
+ * @description
+ *
+ * Deactivate the referenced data. (3GPP TS 29.002 V19.1.0 clause 8.11.4)
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +149,10 @@ const ModificationInstruction_deactivate: ModificationInstruction = Modification
 
 /**
  * @summary deactivate
+ * @description
+ *
+ * Deactivate the referenced data. (3GPP TS 29.002 V19.1.0 clause 8.11.4)
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +161,10 @@ const deactivate: ModificationInstruction = ModificationInstruction.deactivate; 
 
 /**
  * @summary ModificationInstruction_activate
+ * @description
+ *
+ * Activate the referenced data. (3GPP TS 29.002 V19.1.0 clause 8.11.4)
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +173,10 @@ const ModificationInstruction_activate: ModificationInstruction = ModificationIn
 
 /**
  * @summary activate
+ * @description
+ *
+ * Activate the referenced data. (3GPP TS 29.002 V19.1.0 clause 8.11.4)
+ *
  * @constant
  * @type {number}
  */

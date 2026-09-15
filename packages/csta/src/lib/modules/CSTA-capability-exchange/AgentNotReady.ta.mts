@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AgentNotReady
  * @description
- * 
+ * Capability bitmap for the Agent Not Ready event (ECMA-269 C.15.4, ECMA-285
+ * §9.10). Presence of this entry in `LogicalEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +33,9 @@ type AgentNotReady = BIT_STRING;
 /**
  * @summary AgentNotReady_agentID
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `agentID` parameter (ECMA-269
+ * C.15.4).
  */
 export
 const AgentNotReady_agentID: number = 0; /* LONG_NAMED_BIT */
@@ -32,6 +43,8 @@ const AgentNotReady_agentID: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary agentID
  * @constant
+ * @description
+ * Alias of `AgentNotReady_agentID`.
  */
 export
 const agentID: number = AgentNotReady_agentID; /* SHORT_NAMED_BIT */
@@ -39,6 +52,9 @@ const agentID: number = AgentNotReady_agentID; /* SHORT_NAMED_BIT */
 /**
  * @summary AgentNotReady_acdGroup
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `acdGroup` parameter (ECMA-269
+ * C.15.4).
  */
 export
 const AgentNotReady_acdGroup: number = 1; /* LONG_NAMED_BIT */
@@ -46,6 +62,8 @@ const AgentNotReady_acdGroup: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary acdGroup
  * @constant
+ * @description
+ * Alias of `AgentNotReady_acdGroup`.
  */
 export
 const acdGroup: number = AgentNotReady_acdGroup; /* SHORT_NAMED_BIT */
@@ -53,6 +71,9 @@ const acdGroup: number = AgentNotReady_acdGroup; /* SHORT_NAMED_BIT */
 /**
  * @summary AgentNotReady_cause
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `cause` parameter (ECMA-269
+ * C.15.4).
  */
 export
 const AgentNotReady_cause: number = 2; /* LONG_NAMED_BIT */
@@ -60,6 +81,8 @@ const AgentNotReady_cause: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary cause
  * @constant
+ * @description
+ * Alias of `AgentNotReady_cause`.
  */
 export
 const cause: number = AgentNotReady_cause; /* SHORT_NAMED_BIT */
@@ -67,6 +90,9 @@ const cause: number = AgentNotReady_cause; /* SHORT_NAMED_BIT */
 /**
  * @summary AgentNotReady_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.15.4).
  */
 export
 const AgentNotReady_privateData: number = 3; /* LONG_NAMED_BIT */
@@ -74,6 +100,8 @@ const AgentNotReady_privateData: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `AgentNotReady_privateData`.
  */
 export
 const privateData: number = AgentNotReady_privateData; /* SHORT_NAMED_BIT */

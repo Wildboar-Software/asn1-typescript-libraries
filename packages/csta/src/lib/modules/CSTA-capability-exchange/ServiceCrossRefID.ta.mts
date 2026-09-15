@@ -8,7 +8,14 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ServiceCrossRefID
  * @description
- * 
+ * Correlator associating subsequent Switching Function Devices services with a
+ * Get Switching Function Devices request (ECMA-269 §13.1.5.2.1, ECMA-285
+ * §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

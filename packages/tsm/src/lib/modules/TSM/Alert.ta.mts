@@ -19,7 +19,11 @@ import { AlertDescription, _enum_for_AlertDescription, _decode_AlertDescription,
 /**
  * @summary Alert
  * @description
- * 
+ *
+ * TLS-style alert carried in the TSM record layer. TSM adds descriptions
+ * 115–117 for biometric handshake failures; those alerts are always fatal
+ * (X.1084 §10.2). ITU-T Rec. X.1084 (05/2008) §10.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,23 @@ class Alert {
     constructor (
         /**
          * @summary `level`.
+         * @description
+         *
+         * `warning` (1) or `fatal` (2). TSM biometric alerts 115–117 are
+         * always fatal. X.1084 §10.2.
+         *
          * @public
          * @readonly
          */
         readonly level: AlertLevel,
         /**
          * @summary `description`.
+         * @description
+         *
+         * TLS descriptions 0–114 plus TSM `unacceptable-model` (115),
+         * `unacceptable-biometrics` (116), and `unsupported-biometrics`
+         * (117). X.1084 §10.2.
+         *
          * @public
          * @readonly
          */

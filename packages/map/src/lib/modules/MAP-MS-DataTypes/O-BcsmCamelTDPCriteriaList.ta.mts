@@ -75,7 +75,10 @@ import { maxNumOfCamelTDPData } from "./maxNumOfCamelTDPData.va.mjs";
 /**
  * @summary O_BcsmCamelTDPCriteriaList
  * @description
- * 
+ *
+ * List of O-BCSM CAMEL TDP criteria (SIZE 1..10), associated with O-CSI. (3GPP
+ * TS 29.002 V19.1.0 clauses 8.8.1.3 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

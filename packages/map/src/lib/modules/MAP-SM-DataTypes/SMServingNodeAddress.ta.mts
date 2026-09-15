@@ -73,7 +73,10 @@ import { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode
 /**
  * @summary SMServingNodeAddress
  * @description
- * 
+ *
+ * CHOICE of ISDN number or Diameter address (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

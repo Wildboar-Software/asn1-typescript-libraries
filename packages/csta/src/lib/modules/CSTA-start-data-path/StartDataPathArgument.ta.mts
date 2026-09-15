@@ -37,7 +37,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary StartDataPathArgument
  * @description
- * 
+ *
+ * Object, direction, type, optional display and collection triggers (ECMA-269
+ * §24.2.8.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,54 +67,98 @@ class StartDataPathArgument {
     constructor (
         /**
          * @summary `ioRegisterReqID`.
+         * @description
+         *
+         * I/O registration identifier. Mandatory if the switching function
+         * supports I/O registration and the data path was requested by the
+         * switching function; otherwise absent (ECMA-269 §6.2.2).
+         *
          * @public
          * @readonly
          */
         readonly ioRegisterReqID: OPTIONAL<IORegisterReqID>,
         /**
          * @summary `object`.
+         * @description
+         *
+         * `DeviceID` or `ConnectionID` on which to start the path (ECMA-269
+         * §24.2.8.1).
+         *
          * @public
          * @readonly
          */
         readonly object: CSTAObject,
         /**
          * @summary `dataPathDirection`.
+         * @description
+         *
+         * CF→object, object→CF, or bidirectional (ECMA-269 §24.2.8.1).
+         *
          * @public
          * @readonly
          */
         readonly dataPathDirection: OPTIONAL<DataPathDirection>,
         /**
          * @summary `dataPathType`.
+         * @description
+         *
+         * `text` (digitally encoded text) or `voice` (digitally encoded voice)
+         * (ECMA-269 §24.2.3.1).
+         *
          * @public
          * @readonly
          */
         readonly dataPathType: OPTIONAL<DataPathType>,
         /**
          * @summary `displayID`.
+         * @description
+         *
+         * Display to update when the path targets a multi-display device
+         * (ECMA-269 §24.2.8.1).
+         *
          * @public
          * @readonly
          */
         readonly displayID: OPTIONAL<DisplayID>,
         /**
          * @summary `numberOfCharactersToCollect`.
+         * @description
+         *
+         * Send collected characters after this many (ECMA-269 §24.2.8.1).
+         *
          * @public
          * @readonly
          */
         readonly numberOfCharactersToCollect: OPTIONAL<INTEGER>,
         /**
          * @summary `terminationCharacter`.
+         * @description
+         *
+         * IA5 character that flushes collected characters onto the path
+         * (ECMA-269 §24.2.8.1).
+         *
          * @public
          * @readonly
          */
         readonly terminationCharacter: OPTIONAL<IA5String>,
         /**
          * @summary `timeout`.
+         * @description
+         *
+         * Seconds after which collected characters are sent (ECMA-269
+         * §24.2.8.1).
+         *
          * @public
          * @readonly
          */
         readonly timeout: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

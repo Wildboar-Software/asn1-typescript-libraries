@@ -75,7 +75,10 @@ import { maxNumOfMSISDN } from "./maxNumOfMSISDN.va.mjs";
 /**
  * @summary MSISDN_BS_List
  * @description
- * 
+ *
+ * List of MSISDN-plus-basic-service entries (SIZE 1..50). (3GPP TS 29.002
+ * V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

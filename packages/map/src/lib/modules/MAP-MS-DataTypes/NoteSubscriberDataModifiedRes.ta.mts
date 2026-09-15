@@ -72,7 +72,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary NoteSubscriberDataModifiedRes
  * @description
- * 
+ *
+ * Result of MAP_NOTE_SUBSCRIBER_DATA_MODIFIED. (3GPP TS 29.002 V19.1.0 clauses
+ * 8.11.5 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

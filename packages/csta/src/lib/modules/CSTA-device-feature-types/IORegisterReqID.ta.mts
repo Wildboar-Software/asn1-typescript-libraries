@@ -8,7 +8,14 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary IORegisterReqID
  * @description
- * 
+ *
+ * Identifies an I/O registration for which the computing function (as I/O
+ * server) receives I/O requests. May apply to one device or all devices in the
+ * sub-domain. Returned from I/O Register; valid until registration ends. Unique
+ * across a CSTA service boundary. ECMA-269 §12.3.16.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

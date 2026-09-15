@@ -22,7 +22,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ChangeSysStatFilterRes
  * @description
- * 
+ *
+ * Positive ack (Table 14-3). Actual filter may differ from requested.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +43,19 @@ class ChangeSysStatFilterRes {
     constructor (
         /**
          * @summary `actualStatusFilter`.
+         * @description
+         *
+         * Types the SF will actually filter (not send).
          * @public
          * @readonly
          */
         readonly actualStatusFilter: SystemStatus,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 14-3.
          * @public
          * @readonly
          */

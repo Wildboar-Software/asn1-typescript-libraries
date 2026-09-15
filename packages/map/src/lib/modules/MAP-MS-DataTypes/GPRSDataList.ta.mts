@@ -75,7 +75,11 @@ import { maxNumOfPDP_Contexts } from "./maxNumOfPDP-Contexts.va.mjs";
 /**
  * @summary GPRSDataList
  * @description
- * 
+ *
+ * List of PDP-Contexts the subscriber has subscribed to (SIZE
+ * 1..maxNumOfPDP-Contexts) (3GPP TS 29.002 V19.1.0 clauses 7.6.3.46 and
+ * 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getMicrophoneMute
  * @description
- * 
+ *
+ * Get Microphone Mute (ECMA-269 §21.1.10 / ECMA-285 §19.1.10). Direction:
+ * CF→SF. ROSE local CODE 269. Errors: `universalFailure`. Atomic
+ * acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

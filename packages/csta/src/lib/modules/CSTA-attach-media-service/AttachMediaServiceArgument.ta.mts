@@ -36,7 +36,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary AttachMediaServiceArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 19-2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,42 +62,65 @@ class AttachMediaServiceArgument {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Connection at the attaching device.
          * @public
          * @readonly
          */
         readonly connection: ConnectionID,
         /**
          * @summary `mediaServiceType`.
+         * @description
+         *
+         * Requested media service type.
          * @public
          * @readonly
          */
         readonly mediaServiceType: MediaServiceType,
         /**
          * @summary `mediaServiceVersion`.
+         * @description
+         *
+         * Version of the media service.
          * @public
          * @readonly
          */
         readonly mediaServiceVersion: OPTIONAL<INTEGER>,
         /**
          * @summary `mediaServiceInstanceID`.
+         * @description
+         *
+         * Desired media service instance.
          * @public
          * @readonly
          */
         readonly mediaServiceInstanceID: OPTIONAL<MediaServiceInstanceID>,
         /**
          * @summary `connectionMode`.
+         * @description
+         *
+         * How the MAD is added (consultation/conference/deflect/join/
+         * transfer variants) or `direct` if already in the call.
          * @public
          * @readonly
          */
         readonly connectionMode: ConnectionMode,
         /**
          * @summary `requestedConnectionState`.
+         * @description
+         *
+         * Requested local connection state after attach.
          * @public
          * @readonly
          */
         readonly requestedConnectionState: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

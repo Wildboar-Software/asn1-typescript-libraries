@@ -24,7 +24,11 @@ import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBio
 /**
  * @summary BDforAttachedModel
  * @description
- * 
+ *
+ * Attached model: client sends template and sample BIR; verifier
+ * compares. Signature / optional ACBio attest client capture. ITU-T
+ * Rec. X.1084 (05/2008) §7 (3), §11.3 Table 5, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,24 +48,43 @@ class BDforAttachedModel {
     constructor (
         /**
          * @summary `templateData`.
+         * @description
+         *
+         * Reference template as `XtsmTemplate` (X.1089 biometric
+         * certificate). X.1084 §11.3, §11.5.
+         *
          * @public
          * @readonly
          */
         readonly templateData: XtsmTemplate,
         /**
          * @summary `sampleData`.
+         * @description
+         *
+         * Captured sample as BioAPI BIR (includes BSP/device info).
+         * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
+         *
          * @public
          * @readonly
          */
         readonly sampleData: SampleData,
         /**
          * @summary `digitalSignature`.
+         * @description
+         *
+         * CMS `SignedData` (X9.84) over the biometric process or payload.
+         * Assures integrity of that party's processing. X.1084 §11.1 item 4.
+         *
          * @public
          * @readonly
          */
         readonly digitalSignature: SignedData,
         /**
          * @summary `aCforBioOnClient`.
+         * @description
+         *
+         * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
+         *
          * @public
          * @readonly
          */

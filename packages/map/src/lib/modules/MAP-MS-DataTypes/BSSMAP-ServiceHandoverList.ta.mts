@@ -75,7 +75,11 @@ import { maxNumOfServiceHandovers } from "./maxNumOfServiceHandovers.va.mjs";
 /**
  * @summary BSSMAP_ServiceHandoverList
  * @description
- * 
+ *
+ * List of BSSMAP Service Handover information elements (3GPP TS 48.008). Used
+ * when there are multiple bearers and at least one has an associated BSSMAP
+ * Service Handover parameter (3GPP TS 29.002 V19.1.0 clause 7.6.6.5A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

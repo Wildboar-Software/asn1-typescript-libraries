@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary monitorStop
  * @description
- * 
+ *
+ * Monitor Stop (ECMA-269 §15.1.3 / ECMA-285 §13.1.3). Direction: CF→SF or
+ * SF→CF. ROSE local CODE 73. Errors: `universalFailure`. Cancels or reports
+ * termination of a Monitor Start. After
+ * acknowledgement, event reports for that cross-ref cease.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

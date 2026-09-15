@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SLR_Arg_PCS_Extensions
  * @description
- * 
+ *
+ * PCS extensions for Subscriber Location Report argument (3GPP TS 29.002
+ * V19.1.0 clause 17.7.11).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -88,6 +91,12 @@ class SLR_Arg_PCS_Extensions {
     constructor (
         /**
          * @summary `na_ESRK_Request`.
+         * @description
+         *
+         * NA-ESRK Request: requests North American Emergency Services Routing
+         * Key for an emergency services call (3GPP TS 29.002 V19.1.0 clauses
+         * 7.6.11.19 and 7.6.11.14).
+         *
          * @public
          * @readonly
          */

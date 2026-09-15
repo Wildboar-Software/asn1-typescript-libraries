@@ -9,7 +9,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CDRReportResult
  * @description
- * 
+ *
+ * Positive acknowledgement is `extensions` or empty `noData` (atomic
+ * acknowledgement model). (ECMA-269 §27.1.2.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

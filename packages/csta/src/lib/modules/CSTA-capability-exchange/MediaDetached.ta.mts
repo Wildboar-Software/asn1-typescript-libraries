@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MediaDetached
  * @description
- * 
+ * Capability bitmap for the Media Detached event (ECMA-269 C.10.2, ECMA-285
+ * §9.10). Presence of this entry in `MediaEvtsList` means the SF supports that
+ * event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +36,9 @@ type MediaDetached = BIT_STRING;
 /**
  * @summary MediaDetached_mediaServiceVersion
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.10.2).
  */
 export
 const MediaDetached_mediaServiceVersion: number = 0; /* LONG_NAMED_BIT */
@@ -35,6 +46,8 @@ const MediaDetached_mediaServiceVersion: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary mediaServiceVersion
  * @constant
+ * @description
+ * Alias of `MediaDetached_mediaServiceVersion`.
  */
 export
 const mediaServiceVersion: number = MediaDetached_mediaServiceVersion; /* SHORT_NAMED_BIT */
@@ -42,6 +55,9 @@ const mediaServiceVersion: number = MediaDetached_mediaServiceVersion; /* SHORT_
 /**
  * @summary MediaDetached_mediaServiceInstanceID
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.10.2).
  */
 export
 const MediaDetached_mediaServiceInstanceID: number = 1; /* LONG_NAMED_BIT */
@@ -49,6 +65,8 @@ const MediaDetached_mediaServiceInstanceID: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary mediaServiceInstanceID
  * @constant
+ * @description
+ * Alias of `MediaDetached_mediaServiceInstanceID`.
  */
 export
 const mediaServiceInstanceID: number = MediaDetached_mediaServiceInstanceID; /* SHORT_NAMED_BIT */
@@ -56,6 +74,9 @@ const mediaServiceInstanceID: number = MediaDetached_mediaServiceInstanceID; /* 
 /**
  * @summary MediaDetached_mediaStreamID
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.10.2).
  */
 export
 const MediaDetached_mediaStreamID: number = 2; /* LONG_NAMED_BIT */
@@ -63,6 +84,8 @@ const MediaDetached_mediaStreamID: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary mediaStreamID
  * @constant
+ * @description
+ * Alias of `MediaDetached_mediaStreamID`.
  */
 export
 const mediaStreamID: number = MediaDetached_mediaStreamID; /* SHORT_NAMED_BIT */
@@ -70,6 +93,9 @@ const mediaStreamID: number = MediaDetached_mediaStreamID; /* SHORT_NAMED_BIT */
 /**
  * @summary MediaDetached_mediaCallCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `mediaCallCharacteristics`
+ * parameter (ECMA-269 C.10.2).
  */
 export
 const MediaDetached_mediaCallCharacteristics: number = 3; /* LONG_NAMED_BIT */
@@ -77,6 +103,8 @@ const MediaDetached_mediaCallCharacteristics: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary mediaCallCharacteristics
  * @constant
+ * @description
+ * Alias of `MediaDetached_mediaCallCharacteristics`.
  */
 export
 const mediaCallCharacteristics: number = MediaDetached_mediaCallCharacteristics; /* SHORT_NAMED_BIT */
@@ -84,6 +112,9 @@ const mediaCallCharacteristics: number = MediaDetached_mediaCallCharacteristics;
 /**
  * @summary MediaDetached_callCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callCharacteristics` parameter
+ * (ECMA-269 C.10.2).
  */
 export
 const MediaDetached_callCharacteristics: number = 4; /* LONG_NAMED_BIT */
@@ -91,6 +122,8 @@ const MediaDetached_callCharacteristics: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary callCharacteristics
  * @constant
+ * @description
+ * Alias of `MediaDetached_callCharacteristics`.
  */
 export
 const callCharacteristics: number = MediaDetached_callCharacteristics; /* SHORT_NAMED_BIT */
@@ -98,6 +131,9 @@ const callCharacteristics: number = MediaDetached_callCharacteristics; /* SHORT_
 /**
  * @summary MediaDetached_mediaConnectionInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.10.2).
  */
 export
 const MediaDetached_mediaConnectionInfo: number = 5; /* LONG_NAMED_BIT */
@@ -105,6 +141,8 @@ const MediaDetached_mediaConnectionInfo: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary mediaConnectionInfo
  * @constant
+ * @description
+ * Alias of `MediaDetached_mediaConnectionInfo`.
  */
 export
 const mediaConnectionInfo: number = MediaDetached_mediaConnectionInfo; /* SHORT_NAMED_BIT */
@@ -112,6 +150,9 @@ const mediaConnectionInfo: number = MediaDetached_mediaConnectionInfo; /* SHORT_
 /**
  * @summary MediaDetached_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.10.2).
  */
 export
 const MediaDetached_privateData: number = 6; /* LONG_NAMED_BIT */
@@ -119,6 +160,8 @@ const MediaDetached_privateData: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `MediaDetached_privateData`.
  */
 export
 const privateData: number = MediaDetached_privateData; /* SHORT_NAMED_BIT */

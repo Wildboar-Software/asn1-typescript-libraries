@@ -89,7 +89,16 @@ import { informationNotAvailable } from "../MAP-Errors/informationNotAvailable.o
 /**
  * @summary anyTimeModification
  * @description
- * 
+ *
+ * MAP_ANY_TIME_MODIFICATION: gsmSCF modifies information in the HLR at any
+ * time. Also used by the Presence Network Agent to activate or deactivate
+ * MM-event reporting from VLR/SGSN; by a service-related entity (e.g. IP-SM-GW)
+ * for one-time UE-reachability in MME/SGSN; and by IP-SM-GW to update the
+ * IP-SM-GW number and retrieve an SC address. Typical path: gsmSCF→HLR. Local
+ * opcode 65. Timer class `m` (15 s to 30 s). Distinctive error:
+ * `atm-NotAllowed`. (3GPP TS 29.002 V19.1.0 clauses 8.11.4.1, 17.1.2, 17.3.2.47
+ * and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -82,7 +82,12 @@ import { unidentifiedSubscriber } from "../MAP-Errors/unidentifiedSubscriber.oa.
 /**
  * @summary deactivateTraceMode
  * @description
- * 
+ *
+ * MAP_DEACTIVATE_TRACE_MODE: deactivates subscriber tracing in the VLR or SGSN.
+ * Confirmed. Typical path: HLR→VLR or HLR→SGSN. Local opcode 51. Timer class
+ * `m` (15 s to 30 s). (3GPP TS 29.002 V19.1.0 clauses 9.1.2.1, 17.1.2,
+ * 17.3.2.18 and 17.6.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

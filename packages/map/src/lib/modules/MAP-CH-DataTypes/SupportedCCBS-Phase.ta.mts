@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SupportedCCBS_Phase
  * @description
- * 
+ *
+ * INTEGER (1..127). Only 1 is used; 2–127 map to 1 (3GPP TS 29.002 V19.1.0
+ * clause 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,6 +15,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary MetricType
  * @description
  *
+ * Whether a reachable-address metric is internal (destination inside the
+ * routeing domain) or external (outside). Internal routes are always preferred
+ * over external ones even if the external cost is lower. Level 1 routeing
+ * always uses internal metrics. Manual adjacencies shall be internal.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.2.2, 7.2.12 and 11.2.12.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +39,13 @@ export enum _enum_for_MetricType {
  * @summary MetricType
  * @description
  *
+ * Whether a reachable-address metric is internal (destination inside the
+ * routeing domain) or external (outside). Internal routes are always preferred
+ * over external ones even if the external cost is lower. Level 1 routeing
+ * always uses internal metrics. Manual adjacencies shall be internal.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.2.2, 7.2.12 and 11.2.12.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,6 +60,13 @@ export type MetricType = _enum_for_MetricType;
  * @summary MetricType
  * @description
  *
+ * Whether a reachable-address metric is internal (destination inside the
+ * routeing domain) or external (outside). Internal routes are always preferred
+ * over external ones even if the external cost is lower. Level 1 routeing
+ * always uses internal metrics. Manual adjacencies shall be internal.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.2.2, 7.2.12 and 11.2.12.4).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,6 +79,13 @@ export const MetricType = _enum_for_MetricType;
 
 /**
  * @summary MetricType_internal
+ * @description
+ *
+ * Metric describes a link/route to a destination inside the routeing domain.
+ * Default for reachable-address metricType attributes.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.2.2 and 11.3.2).
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +102,12 @@ export const internal: MetricType =
 
 /**
  * @summary MetricType_external
+ * @description
+ *
+ * Metric describes a link/route to a destination outside the routeing domain.
+ *
+ * (ISO/IEC 10589:2002 clause 7.2.2).
+ *
  * @constant
  * @type {number}
  */

@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary Offered
  * @description
- * 
+ * Capability bitmap for the Offered event (ECMA-269 C.6.13, ECMA-285 §9.10).
+ * Presence of this entry in `CallControlEvtsList` means the SF supports that
+ * event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +43,9 @@ type Offered = BIT_STRING;
 /**
  * @summary Offered_originatingNIDConnection
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.13).
  */
 export
 const Offered_originatingNIDConnection: number = 0; /* LONG_NAMED_BIT */
@@ -42,6 +53,8 @@ const Offered_originatingNIDConnection: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary originatingNIDConnection
  * @constant
+ * @description
+ * Alias of `Offered_originatingNIDConnection`.
  */
 export
 const originatingNIDConnection: number = Offered_originatingNIDConnection; /* SHORT_NAMED_BIT */
@@ -49,6 +62,9 @@ const originatingNIDConnection: number = Offered_originatingNIDConnection; /* SH
 /**
  * @summary Offered_userData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `userData` parameter (ECMA-269
+ * C.6.13).
  */
 export
 const Offered_userData: number = 1; /* LONG_NAMED_BIT */
@@ -56,6 +72,8 @@ const Offered_userData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary userData
  * @constant
+ * @description
+ * Alias of `Offered_userData`.
  */
 export
 const userData: number = Offered_userData; /* SHORT_NAMED_BIT */
@@ -63,6 +81,9 @@ const userData: number = Offered_userData; /* SHORT_NAMED_BIT */
 /**
  * @summary Offered_servicesPermitted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.13).
  */
 export
 const Offered_servicesPermitted: number = 2; /* LONG_NAMED_BIT */
@@ -70,6 +91,8 @@ const Offered_servicesPermitted: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary servicesPermitted
  * @constant
+ * @description
+ * Alias of `Offered_servicesPermitted`.
  */
 export
 const servicesPermitted: number = Offered_servicesPermitted; /* SHORT_NAMED_BIT */
@@ -77,6 +100,9 @@ const servicesPermitted: number = Offered_servicesPermitted; /* SHORT_NAMED_BIT 
 /**
  * @summary Offered_netwCallingDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.13).
  */
 export
 const Offered_netwCallingDevice: number = 3; /* LONG_NAMED_BIT */
@@ -84,6 +110,8 @@ const Offered_netwCallingDevice: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary netwCallingDevice
  * @constant
+ * @description
+ * Alias of `Offered_netwCallingDevice`.
  */
 export
 const netwCallingDevice: number = Offered_netwCallingDevice; /* SHORT_NAMED_BIT */
@@ -91,6 +119,9 @@ const netwCallingDevice: number = Offered_netwCallingDevice; /* SHORT_NAMED_BIT 
 /**
  * @summary Offered_netwCalledDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.13).
  */
 export
 const Offered_netwCalledDevice: number = 4; /* LONG_NAMED_BIT */
@@ -98,6 +129,8 @@ const Offered_netwCalledDevice: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary netwCalledDevice
  * @constant
+ * @description
+ * Alias of `Offered_netwCalledDevice`.
  */
 export
 const netwCalledDevice: number = Offered_netwCalledDevice; /* SHORT_NAMED_BIT */
@@ -105,6 +138,9 @@ const netwCalledDevice: number = Offered_netwCalledDevice; /* SHORT_NAMED_BIT */
 /**
  * @summary Offered_mediaCallCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `mediaCallCharacteristics`
+ * parameter (ECMA-269 C.6.13).
  */
 export
 const Offered_mediaCallCharacteristics: number = 5; /* LONG_NAMED_BIT */
@@ -112,6 +148,8 @@ const Offered_mediaCallCharacteristics: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary mediaCallCharacteristics
  * @constant
+ * @description
+ * Alias of `Offered_mediaCallCharacteristics`.
  */
 export
 const mediaCallCharacteristics: number = Offered_mediaCallCharacteristics; /* SHORT_NAMED_BIT */
@@ -119,6 +157,9 @@ const mediaCallCharacteristics: number = Offered_mediaCallCharacteristics; /* SH
 /**
  * @summary Offered_callCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callCharacteristics` parameter
+ * (ECMA-269 C.6.13).
  */
 export
 const Offered_callCharacteristics: number = 6; /* LONG_NAMED_BIT */
@@ -126,6 +167,8 @@ const Offered_callCharacteristics: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary callCharacteristics
  * @constant
+ * @description
+ * Alias of `Offered_callCharacteristics`.
  */
 export
 const callCharacteristics: number = Offered_callCharacteristics; /* SHORT_NAMED_BIT */
@@ -133,6 +176,9 @@ const callCharacteristics: number = Offered_callCharacteristics; /* SHORT_NAMED_
 /**
  * @summary Offered_offeredConnectionInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.13).
  */
 export
 const Offered_offeredConnectionInfo: number = 7; /* LONG_NAMED_BIT */
@@ -140,6 +186,8 @@ const Offered_offeredConnectionInfo: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary offeredConnectionInfo
  * @constant
+ * @description
+ * Alias of `Offered_offeredConnectionInfo`.
  */
 export
 const offeredConnectionInfo: number = Offered_offeredConnectionInfo; /* SHORT_NAMED_BIT */
@@ -147,6 +195,9 @@ const offeredConnectionInfo: number = Offered_offeredConnectionInfo; /* SHORT_NA
 /**
  * @summary Offered_subjectOfCall
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `subjectOfCall` parameter
+ * (ECMA-269 C.6.13).
  */
 export
 const Offered_subjectOfCall: number = 9; /* LONG_NAMED_BIT */
@@ -154,6 +205,8 @@ const Offered_subjectOfCall: number = 9; /* LONG_NAMED_BIT */
 /**
  * @summary subjectOfCall
  * @constant
+ * @description
+ * Alias of `Offered_subjectOfCall`.
  */
 export
 const subjectOfCall: number = Offered_subjectOfCall; /* SHORT_NAMED_BIT */
@@ -161,6 +214,9 @@ const subjectOfCall: number = Offered_subjectOfCall; /* SHORT_NAMED_BIT */
 /**
  * @summary Offered_messageInfo
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `messageInfo` parameter (ECMA-269
+ * C.6.13).
  */
 export
 const Offered_messageInfo: number = 10; /* LONG_NAMED_BIT */
@@ -168,6 +224,8 @@ const Offered_messageInfo: number = 10; /* LONG_NAMED_BIT */
 /**
  * @summary messageInfo
  * @constant
+ * @description
+ * Alias of `Offered_messageInfo`.
  */
 export
 const messageInfo: number = Offered_messageInfo; /* SHORT_NAMED_BIT */
@@ -175,6 +233,9 @@ const messageInfo: number = Offered_messageInfo; /* SHORT_NAMED_BIT */
 /**
  * @summary Offered_languagePreferences
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `languagePreferences` parameter
+ * (ECMA-269 C.6.13).
  */
 export
 const Offered_languagePreferences: number = 11; /* LONG_NAMED_BIT */
@@ -182,6 +243,8 @@ const Offered_languagePreferences: number = 11; /* LONG_NAMED_BIT */
 /**
  * @summary languagePreferences
  * @constant
+ * @description
+ * Alias of `Offered_languagePreferences`.
  */
 export
 const languagePreferences: number = Offered_languagePreferences; /* SHORT_NAMED_BIT */
@@ -189,6 +252,9 @@ const languagePreferences: number = Offered_languagePreferences; /* SHORT_NAMED_
 /**
  * @summary Offered_deciceHistory
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.13).
  */
 export
 const Offered_deciceHistory: number = 12; /* LONG_NAMED_BIT */
@@ -196,6 +262,8 @@ const Offered_deciceHistory: number = 12; /* LONG_NAMED_BIT */
 /**
  * @summary deciceHistory
  * @constant
+ * @description
+ * Alias of `Offered_deciceHistory`.
  */
 export
 const deciceHistory: number = Offered_deciceHistory; /* SHORT_NAMED_BIT */
@@ -203,6 +271,9 @@ const deciceHistory: number = Offered_deciceHistory; /* SHORT_NAMED_BIT */
 /**
  * @summary Offered_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.6.13).
  */
 export
 const Offered_privateData: number = 8; /* LONG_NAMED_BIT */
@@ -210,6 +281,8 @@ const Offered_privateData: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `Offered_privateData`.
  */
 export
 const privateData: number = Offered_privateData; /* SHORT_NAMED_BIT */
@@ -217,6 +290,9 @@ const privateData: number = Offered_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary Offered_locationInfoList
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `locationInfoList` parameter
+ * (ECMA-269 C.6.13).
  */
 export
 const Offered_locationInfoList: number = 13; /* LONG_NAMED_BIT */
@@ -224,6 +300,8 @@ const Offered_locationInfoList: number = 13; /* LONG_NAMED_BIT */
 /**
  * @summary locationInfoList
  * @constant
+ * @description
+ * Alias of `Offered_locationInfoList`.
  */
 export
 const locationInfoList: number = Offered_locationInfoList; /* SHORT_NAMED_BIT */

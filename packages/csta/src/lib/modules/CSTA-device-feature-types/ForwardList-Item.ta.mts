@@ -33,7 +33,11 @@ import {
 /**
  * @summary ForwardList_Item
  * @description
- * 
+ *
+ * One forwardingType / forwardDN combination. ECMA-269 §22.1.11.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,36 +58,51 @@ class ForwardList_Item {
     constructor (
         /**
          * @summary `forwardingType`.
+         * @description
+         * Type of forwarding. Required for user-specified settings; optional
+         * for switching-function defaults. Internal/external types refer to
+         * call origination.
          * @public
          * @readonly
          */
         readonly forwardingType: OPTIONAL<ForwardingType>,
         /**
          * @summary `forwardStatus`.
+         * @description TRUE if this forwarding type is active.
          * @public
          * @readonly
          */
         readonly forwardStatus: BOOLEAN,
         /**
          * @summary `forwardDN`.
+         * @description
+         * Destination to which calls are forwarded. Required for user-specified
+         * settings; optional for defaults.
          * @public
          * @readonly
          */
         readonly forwardDN: OPTIONAL<DeviceID>,
         /**
          * @summary `forwardDefault`.
+         * @description
+         * Which of forwardingType and/or forwardDN is a default setting.
          * @public
          * @readonly
          */
         readonly forwardDefault: OPTIONAL<ForwardDefault>,
         /**
          * @summary `ringDuration`.
+         * @description
+         * Seconds the device rings before forward-no-answer. Do not provide if
+         * ringCount is provided.
          * @public
          * @readonly
          */
         readonly ringDuration: OPTIONAL<INTEGER>,
         /**
          * @summary `ringCount`.
+         * @description
+         * Times the device rings before forward-no-answer (1..100).
          * @public
          * @readonly
          */

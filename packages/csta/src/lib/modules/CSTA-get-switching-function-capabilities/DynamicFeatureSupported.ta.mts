@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary DynamicFeatureSupported
  * @description
- * 
+ *
+ * How `servicesPermitted` is provided on events: none, all, or
+ * some (then see logical-device event lists). Table 13-9.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +36,13 @@ enum _enum_for_DynamicFeatureSupported {
 /**
  * @summary DynamicFeatureSupported
  * @description
- * 
+ *
+ * How `servicesPermitted` is provided on events: none, all, or
+ * some (then see logical-device event lists). Table 13-9.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +60,13 @@ type DynamicFeatureSupported = _enum_for_DynamicFeatureSupported;
 /**
  * @summary DynamicFeatureSupported
  * @description
- * 
+ *
+ * How `servicesPermitted` is provided on events: none, all, or
+ * some (then see logical-device event lists). Table 13-9.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

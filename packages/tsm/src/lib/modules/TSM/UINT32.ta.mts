@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary UINT32
  * @description
- * 
+ *
+ * Unsigned 32-bit integer `0..4294967295`. Used for GMT Unix time in
+ * `ClientRandom` / `ServerRandom` and for `SessionID`. ITU-T Rec.
+ * X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

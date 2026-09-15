@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NumberOfRequestedVectors
  * @description
- * 
+ *
+ * How many authentication vectors the new VLR is prepared to receive (1..5).
+ * The previous VLR shall not return more than this. Present in the first
+ * MAP_SEND_IDENTIFICATION request of a dialogue and shall not be present in
+ * subsequent requests; if received later it shall be discarded. (3GPP TS 29.002
+ * V19.1.0 clauses 8.1.4.3 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

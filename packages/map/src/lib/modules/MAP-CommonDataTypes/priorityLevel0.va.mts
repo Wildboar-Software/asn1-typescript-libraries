@@ -72,7 +72,9 @@ import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "
 /**
  * @summary priorityLevel0
  * @description
- * 
+ *
+ * eMLPP priority 0, integer 0. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

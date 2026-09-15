@@ -76,7 +76,11 @@ import { EMLPP_Info, _decode_EMLPP_Info, _encode_EMLPP_Info } from "../MAP-Commo
 /**
  * @summary Ext_SS_Info
  * @description
- * 
+ *
+ * All information related to a supplementary service: choice of extensible
+ * forwarding information, extensible call barring information, CUG info or
+ * extensible SS-Data (3GPP TS 29.002 V19.1.0 clause 7.6.3.14).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

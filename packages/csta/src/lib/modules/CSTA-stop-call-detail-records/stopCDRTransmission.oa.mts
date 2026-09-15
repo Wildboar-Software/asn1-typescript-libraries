@@ -17,7 +17,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary stopCDRTransmission
  * @description
- * 
+ *
+ * Cancels a previously started CDR transmission. Either the computing function
+ * or the switching function may issue it. Positive acknowledgement invalidates
+ * `cdrCrossRefID` (ECMA-269 §27.1.5).
+ *
+ * Bidirectional: computing function or switching function may invoke.
+ *
+ * ROSE local:364. Errors: `universalFailure` (ECMA-285 §25.1.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

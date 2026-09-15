@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary LocationSessionInfo
  * @description
- * 
+ * Capability bitmap for the Location Session Info service (ECMA-269 C.22.12,
+ * ECMA-285 §9.10). Presence of this entry in `LocationServicesServList` means
+ * the SF supports that service. Each set bit is an optional parameter from
+ * Annex C (`segmentID`, `privateData`).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +31,9 @@ type LocationSessionInfo = BIT_STRING;
 /**
  * @summary LocationSessionInfo_segmentID
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `segmentID` parameter (ECMA-269
+ * Annex C).
  */
 export
 const LocationSessionInfo_segmentID: number = 0; /* LONG_NAMED_BIT */
@@ -30,6 +41,8 @@ const LocationSessionInfo_segmentID: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary segmentID
  * @constant
+ * @description
+ * Alias of `LocationSessionInfo_segmentID`.
  */
 export
 const segmentID: number = LocationSessionInfo_segmentID; /* SHORT_NAMED_BIT */
@@ -37,6 +50,9 @@ const segmentID: number = LocationSessionInfo_segmentID; /* SHORT_NAMED_BIT */
 /**
  * @summary LocationSessionInfo_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * Annex C).
  */
 export
 const LocationSessionInfo_privateData: number = 1; /* LONG_NAMED_BIT */
@@ -44,6 +60,8 @@ const LocationSessionInfo_privateData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `LocationSessionInfo_privateData`.
  */
 export
 const privateData: number = LocationSessionInfo_privateData; /* SHORT_NAMED_BIT */

@@ -23,7 +23,13 @@ import { PrivateDataVersionSelection, _decode_PrivateDataVersionSelection, _enco
 /**
  * @summary VendorSpecificServList
  * @description
- * 
+ * Vendor-specific services the SF supports (ECMA-269 Annex C.23, ECMA-285
+ * §9.10). Omit unsupported services.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,30 +50,45 @@ class VendorSpecificServList {
          * @summary `escapeRegister`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly escapeRegister: OPTIONAL<EscapeRegister>,
         /**
          * @summary `escapeRegisterCancel`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly escapeRegisterCancel: OPTIONAL<EscapeRegisterCancel>,
         /**
          * @summary `escapeRegisterAbort`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly escapeRegisterAbort: OPTIONAL<EscapeRegisterAbort>,
         /**
          * @summary `escape`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly escape: OPTIONAL<Escape>,
         /**
          * @summary `privateDataVersionSelection`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly privateDataVersionSelection: OPTIONAL<PrivateDataVersionSelection>
     ) {}

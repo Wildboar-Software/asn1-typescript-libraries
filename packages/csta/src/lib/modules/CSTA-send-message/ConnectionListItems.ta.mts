@@ -15,7 +15,13 @@ import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CST
 /**
  * @summary ConnectionListItems
  * @description
- * 
+ *
+ * Calling-device connection created by Send Message
+ * (ECMA-269 §17.1.24 Table 17-131 / ECMA-285 §15.1.25).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +36,11 @@ class ConnectionListItems {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Mandatory. Connection created at the calling
+         * device for one destination.
+         *
          * @public
          * @readonly
          */

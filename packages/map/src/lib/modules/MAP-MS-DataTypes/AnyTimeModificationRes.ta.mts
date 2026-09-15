@@ -81,7 +81,12 @@ import { AddressString, _decode_AddressString, _encode_AddressString } from "../
 /**
  * @summary AnyTimeModificationRes
  * @description
- * 
+ *
+ * Result of MAP-ANY-TIME-MODIFICATION, returning modified SS information for
+ * CSE, CAMEL subscription info, ODB info, CW/CH/CLIP/CLIR/ECT data, and
+ * optionally the Service Centre Address (3GPP TS 29.002 V19.1.0 clauses
+ * 8.11.4.2 and 8.11.4.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -107,12 +112,22 @@ class AnyTimeModificationRes {
     constructor (
         /**
          * @summary `ss_InfoFor_CSE`.
+         * @description
+         *
+         * Ext forwarding or call-barring information for CSE after modification
+         * (3GPP TS 29.002 V19.1.0 clauses 8.11.4.2, 7.6.3.79 and 7.6.3.80).
+         *
          * @public
          * @readonly
          */
         readonly ss_InfoFor_CSE: OPTIONAL<Ext_SS_InfoFor_CSE>,
         /**
          * @summary `camel_SubscriptionInfo`.
+         * @description
+         *
+         * CSI after modification (3GPP TS 29.002 V19.1.0 clauses 8.11.4.2 and
+         * 7.6.3.78).
+         *
          * @public
          * @readonly
          */
@@ -125,42 +140,77 @@ class AnyTimeModificationRes {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `odb_Info`.
+         * @description
+         *
+         * ODB data and Notification to CSE flag (3GPP TS 29.002 V19.1.0 clauses
+         * 8.11.4.2 and 7.6.3.88).
+         *
          * @public
          * @readonly
          */
         readonly odb_Info: OPTIONAL<ODB_Info>,
         /**
          * @summary `cw_Data`.
+         * @description
+         *
+         * Call Waiting data after modification (3GPP TS 29.002 V19.1.0 clause
+         * 8.11.4.2).
+         *
          * @public
          * @readonly
          */
         readonly cw_Data: OPTIONAL<CallWaitingData>,
         /**
          * @summary `ch_Data`.
+         * @description
+         *
+         * Call Hold data after modification (3GPP TS 29.002 V19.1.0 clause
+         * 8.11.4.2).
+         *
          * @public
          * @readonly
          */
         readonly ch_Data: OPTIONAL<CallHoldData>,
         /**
          * @summary `clip_Data`.
+         * @description
+         *
+         * CLIP data after modification (3GPP TS 29.002 V19.1.0 clause
+         * 8.11.4.2).
+         *
          * @public
          * @readonly
          */
         readonly clip_Data: OPTIONAL<ClipData>,
         /**
          * @summary `clir_Data`.
+         * @description
+         *
+         * CLIR data after modification (3GPP TS 29.002 V19.1.0 clause
+         * 8.11.4.2).
+         *
          * @public
          * @readonly
          */
         readonly clir_Data: OPTIONAL<ClirData>,
         /**
          * @summary `ect_data`.
+         * @description
+         *
+         * ECT data after modification (3GPP TS 29.002 V19.1.0 clause 8.11.4.2).
+         *
          * @public
          * @readonly
          */
         readonly ect_data: OPTIONAL<EctData>,
         /**
          * @summary `serviceCentreAddress`.
+         * @description
+         *
+         * SC Address retrieved when IP-SM-GW uses this service to update the
+         * IP-SM-GW Number (3GPP TS 29.002 V19.1.0 clauses 8.11.4.1 and
+         * 7.6.2.27).
+         *
          * @public
          * @readonly
          */

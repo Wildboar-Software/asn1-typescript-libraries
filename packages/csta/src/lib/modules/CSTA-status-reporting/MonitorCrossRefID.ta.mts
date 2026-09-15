@@ -8,7 +8,14 @@ import { OCTET_STRING, ASN1Element as _Element, ASN1TagClass as _TagClass } from
 /**
  * @summary MonitorCrossRefID
  * @description
- * 
+ *
+ * Correlates events to an established monitor. Returned in the Monitor Start
+ * positive acknowledgement and present on every event for that monitor.
+ * Allocated by the switching function; unique on a given service boundary. Also
+ * used by Monitor Stop and Change Monitor Filter. ECMA-269 §12.3.21.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

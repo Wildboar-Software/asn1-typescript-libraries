@@ -1,0 +1,192 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+
+
+/**
+ * @summary CreateUnitControl_Request
+ * @description
+ * 
+ * Client request to create a Unit Control object naming zero or more existing
+ * Domains and Program Invocations. ISO 9506-1:2003 §13.8. ISO 9506-2:2003
+ * §13.8.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * CreateUnitControl-Request ::= SEQUENCE {
+ *    unitControl                   [0] IMPLICIT Identifier, -- Unit Control Name
+ *    domains                       [1] IMPLICIT SEQUENCE OF Identifier,
+ *    programInvocations            [2] IMPLICIT SEQUENCE OF Identifier  }
+ * ```
+ * 
+ * @class
+ */
+export
+class CreateUnitControl_Request {
+    constructor (
+        /**
+         * @summary `unitControl`.
+         * @description
+         *
+         * Name assigned to the new Unit Control object. ISO 9506-1:2003
+         * §13.8.1.1.1.
+         *
+         * @public
+         * @readonly
+         */
+        readonly unitControl: Identifier,
+        /**
+         * @summary `domains`.
+         * @description
+         *
+         * Zero or more Domains referenced by `&Domains`. ISO 9506-1:2003
+         * §13.8.1.1.2.
+         *
+         * @public
+         * @readonly
+         */
+        readonly domains: Identifier[],
+        /**
+         * @summary `programInvocations`.
+         * @description
+         *
+         * Zero or more Program Invocations referenced by `&ProgramInvocations`.
+         * ISO 9506-1:2003 §13.8.1.1.3.
+         *
+         * @public
+         * @readonly
+         */
+        readonly programInvocations: Identifier[]
+    ) {}
+
+    /**
+     * @summary Restructures an object into a CreateUnitControl_Request
+     * @description
+     * 
+     * This takes an `object` and converts it to a `CreateUnitControl_Request`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `CreateUnitControl_Request`.
+     * @returns {CreateUnitControl_Request}
+     */
+    public static _from_object (_o: { [_K in keyof (CreateUnitControl_Request)]: (CreateUnitControl_Request)[_K] }): CreateUnitControl_Request {
+        return new CreateUnitControl_Request(_o.unitControl, _o.domains, _o.programInvocations);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of CreateUnitControl_Request
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_CreateUnitControl_Request: $.ComponentSpec[] = [
+    new $.ComponentSpec("unitControl", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("domains", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("programInvocations", false, $.hasTag(_TagClass.context, 2))
+];
+
+/**
+ * @summary The Trailing Root Component Types of CreateUnitControl_Request
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_CreateUnitControl_Request: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of CreateUnitControl_Request
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_CreateUnitControl_Request: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_CreateUnitControl_Request: $.ASN1Decoder<CreateUnitControl_Request> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) CreateUnitControl_Request
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_CreateUnitControl_Request (el: _Element): CreateUnitControl_Request {
+    if (!_cached_decoder_for_CreateUnitControl_Request) { _cached_decoder_for_CreateUnitControl_Request = function (el: _Element): CreateUnitControl_Request {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 3) {
+        throw new _ConstructionError("CreateUnitControl-Request contained only " + sequence.length.toString() + " elements.");
+    }
+    sequence[0].name = "unitControl";
+    sequence[1].name = "domains";
+    sequence[2].name = "programInvocations";
+    let unitControl!: Identifier;
+    let domains!: Identifier[];
+    let programInvocations!: Identifier[];
+    unitControl = $._decode_explicit<Identifier>(() => _decode_Identifier)(sequence[0]);
+    domains = $._decode_implicit<Identifier[]>(() => $._decodeSequenceOf<Identifier>(() => _decode_Identifier))(sequence[1]);
+    programInvocations = $._decode_implicit<Identifier[]>(() => $._decodeSequenceOf<Identifier>(() => _decode_Identifier))(sequence[2]);
+    return new CreateUnitControl_Request(
+        unitControl,
+        domains,
+        programInvocations,
+
+    );
+}; }
+    return _cached_decoder_for_CreateUnitControl_Request(el);
+}
+
+let _cached_encoder_for_CreateUnitControl_Request: $.ASN1Encoder<CreateUnitControl_Request> | null = null;
+
+/**
+ * @summary Encodes a(n) CreateUnitControl_Request into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The CreateUnitControl_Request, encoded as an ASN.1 Element.
+ */
+export
+function _encode_CreateUnitControl_Request (value: CreateUnitControl_Request, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_CreateUnitControl_Request) { _cached_encoder_for_CreateUnitControl_Request = function (value: CreateUnitControl_Request): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_Identifier, $.BER)(value.unitControl, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeSequenceOf<Identifier>(() => _encode_Identifier, $.BER), $.BER)(value.domains, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeSequenceOf<Identifier>(() => _encode_Identifier, $.BER), $.BER)(value.programInvocations, $.BER)
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_CreateUnitControl_Request(value, elGetter);
+}
+
+
+/* eslint-enable */

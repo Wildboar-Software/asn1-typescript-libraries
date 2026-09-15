@@ -74,7 +74,12 @@ import { T_CauseValueCriteria, _decode_T_CauseValueCriteria, _encode_T_CauseValu
 /**
  * @summary T_BCSM_CAMEL_TDP_Criteria
  * @description
- * 
+ *
+ * Criteria for a terminating BCSM CAMEL TDP (basic service and/or cause
+ * values).
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,18 +97,36 @@ class T_BCSM_CAMEL_TDP_Criteria {
     constructor (
         /**
          * @summary `t_BCSM_TriggerDetectionPoint`.
+         * @description
+         *
+         * Terminating BCSM TDP to which these criteria apply.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly t_BCSM_TriggerDetectionPoint: T_BcsmTriggerDetectionPoint,
         /**
          * @summary `basicServiceCriteria`.
+         * @description
+         *
+         * Basic services that arm this TDP.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly basicServiceCriteria: OPTIONAL<BasicServiceCriteria>,
         /**
          * @summary `t_CauseValueCriteria`.
+         * @description
+         *
+         * Cause values that arm this TDP (ITU-T Q.850).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

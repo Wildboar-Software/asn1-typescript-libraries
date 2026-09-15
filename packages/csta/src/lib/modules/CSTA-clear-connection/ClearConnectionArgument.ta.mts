@@ -28,7 +28,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ClearConnectionArgument
  * @description
- * 
+ *
+ * Service request for Clear Connection (ECMA-269 §17.1.8 /
+ * ECMA-285 §15.1.8). Names the single connection to release.
+ * Capability exchange indicates whether clearing a conference
+ * party may dissolve the whole conference (FR 3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,30 +55,57 @@ class ClearConnectionArgument {
     constructor (
         /**
          * @summary `connectionToBeCleared`.
+         * @description
+         *
+         * Mandatory. Connection to release. Final state Hold,
+         * Queued, or Null depending on configuration.
+         *
          * @public
          * @readonly
          */
         readonly connectionToBeCleared: ConnectionID,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional correlator data to attach before resulting
+         * state transitions (§12.2.10). A null string clears
+         * existing data.
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Optional user data sent to parties in the call
+         * (§12.2.30).
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `reason`.
+         * @description
+         *
+         * Optional `EventCause` explaining the clear, for
+         * underlying signalling (e.g. busy when rejecting an
+         * offered call) (FR 4, §12.2.15).
+         *
          * @public
          * @readonly
          */
         readonly reason: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

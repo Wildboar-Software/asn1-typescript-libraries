@@ -75,7 +75,12 @@ import { AdditionalRequestedCAMEL_SubscriptionInfo, _enum_for_AdditionalRequeste
 /**
  * @summary ModificationRequestFor_CSI
  * @description
- * 
+ *
+ * CSE request to modify CAMEL subscription information. If
+ * `additionalRequestedCAMEL-SubscriptionInfo` is received,
+ * `requestedCamel-SubscriptionInfo` shall be discarded. (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.81, 8.11.4, and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,18 +102,33 @@ class ModificationRequestFor_CSI {
     constructor (
         /**
          * @summary `requestedCamel_SubscriptionInfo`.
+         * @description
+         *
+         * Shall be discarded if `additionalRequestedCAMEL-SubscriptionInfo` is
+         * received. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly requestedCamel_SubscriptionInfo: RequestedCAMEL_SubscriptionInfo,
         /**
          * @summary `modifyNotificationToCSE`.
+         * @description
+         *
+         * Activate or deactivate notification to the CSE for this CSI. (3GPP TS
+         * 29.002 V19.1.0 clause 7.6.3.81)
+         *
          * @public
          * @readonly
          */
         readonly modifyNotificationToCSE: OPTIONAL<ModificationInstruction>,
         /**
          * @summary `modifyCSI_State`.
+         * @description
+         *
+         * Activate or deactivate the CSI itself. (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.81)
+         *
          * @public
          * @readonly
          */
@@ -121,6 +141,11 @@ class ModificationRequestFor_CSI {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalRequestedCAMEL_SubscriptionInfo`.
+         * @description
+         *
+         * Takes precedence over `requestedCamel-SubscriptionInfo`. (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */

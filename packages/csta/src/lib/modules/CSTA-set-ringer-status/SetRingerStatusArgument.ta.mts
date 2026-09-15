@@ -29,7 +29,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetRingerStatusArgument
  * @description
- * 
+ *
+ * Set Ringer Status request (ECMA-269 §21.1.21.1). At least one of `ringMode`,
+ * `ringPattern`, `ringVolume`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,36 +55,60 @@ class SetRingerStatusArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+         * 1).
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `ringer`.
+         * @description
+         *
+         * Ringer to set.
          * @public
          * @readonly
          */
         readonly ringer: RingerID,
         /**
          * @summary `ringMode`.
+         * @description
+         *
+         * `ringing` or `not ringing`. `ringPattern` is mandatory when this is
+         * ringing.
          * @public
          * @readonly
          */
         readonly ringMode: OPTIONAL<RingMode>,
         /**
          * @summary `ringPattern`.
+         * @description
+         *
+         * Device-specific pattern. Valid only when `ringMode` is ringing; does
+         * not affect later call-related ringing.
          * @public
          * @readonly
          */
         readonly ringPattern: OPTIONAL<INTEGER>,
         /**
          * @summary `ringVolume`.
+         * @description
+         *
+         * Absolute 0–100 (0 silence, 100 max; 1–99 device-specific) or
+         * increment/decrement by a switch-specified step. Loudness is
+         * ringer-specific.
          * @public
          * @readonly
          */
         readonly ringVolume: OPTIONAL<Volume>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

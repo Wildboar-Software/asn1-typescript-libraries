@@ -78,7 +78,12 @@ import { GERAN_Classmark, _decode_GERAN_Classmark, _encode_GERAN_Classmark } fro
 /**
  * @summary PrepareSubsequentHO_Arg
  * @description
- * 
+ *
+ * MAP_PREPARE_SUBSEQUENT_HANDOVER request from MSC-B to MSC-A when handover or
+ * relocation to MSC-A or a third MSC (MSC-B') is required.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.4.5 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -101,30 +106,69 @@ class PrepareSubsequentHO_Arg {
     constructor (
         /**
          * @summary `targetCellId`.
+         * @description
+         *
+         * Identity of the cell to which a call has to be handed over. In
+         * Prepare HO, only if the service is not in an ongoing transaction;
+         * excluded for Inter-MSC SRNS Relocation and GSM-to-UMTS inter-system
+         * handover (3GPP TS 23.009).
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.8 and 8.4.1.3).
+         *
          * @public
          * @readonly
          */
         readonly targetCellId: OPTIONAL<GlobalCellId>,
         /**
          * @summary `targetMSC_Number`.
+         * @description
+         *
+         * ISDN number of the MSC to which a call has to be handed over.
+         * Mandatory in Prepare Subsequent Handover.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.12 and 8.4.5).
+         *
          * @public
          * @readonly
          */
         readonly targetMSC_Number: ISDN_AddressString,
         /**
          * @summary `targetRNCId`.
+         * @description
+         *
+         * Identity of the RNC to which a call has to be relocated. Included for
+         * Inter-MSC SRNS Relocation or GSM-to-UMTS inter-system handover (3GPP
+         * TS 23.009).
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.8A and 8.4.1.3).
+         *
          * @public
          * @readonly
          */
         readonly targetRNCId: OPTIONAL<RNCId>,
         /**
          * @summary `an_APDU`.
+         * @description
+         *
+         * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages,
+         * as in 3GPP TS 23.009 and 29.010. The access-network protocol ID
+         * selects 48.006 or 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.9.1).
+         *
          * @public
          * @readonly
          */
         readonly an_APDU: OPTIONAL<AccessNetworkSignalInfo>,
         /**
          * @summary `selectedRab_Id`.
+         * @description
+         *
+         * Radio access bearer to be kept at subsequent inter-MSC handover from
+         * UMTS to GSM.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.56).
+         *
          * @public
          * @readonly
          */
@@ -137,12 +181,25 @@ class PrepareSubsequentHO_Arg {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `geran_classmark`.
+         * @description
+         *
+         * GERAN cell capabilities as in 3GPP TS 48.008, sent inter-MSC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.4).
+         *
          * @public
          * @readonly
          */
         readonly geran_classmark: OPTIONAL<GERAN_Classmark>,
         /**
          * @summary `rab_ConfigurationIndicator`.
+         * @description
+         *
+         * MSC-A (or MSC-B in subsequent HO) generated RAB parameters according
+         * to the preferred codec (first entry of Iu-Supported Codecs List).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.19).
+         *
          * @public
          * @readonly
          */

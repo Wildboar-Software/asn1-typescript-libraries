@@ -92,7 +92,13 @@ import { forwardingViolation } from "../MAP-Errors/forwardingViolation.oa.mjs";
 /**
  * @summary sendRoutingInfo
  * @description
- * 
+ *
+ * MAP_SEND_ROUTING_INFORMATION: GMSC interrogates the HLR to route a call
+ * towards the called MS. Also used GMSC→NPLR and gsmSCF→HLR. Confirmed. Typical
+ * path: GMSC→HLR. Local opcode 22. Timer class `m` (15 s to 30 s); set to the
+ * upper limit of the range if the GMSC supports pre-paging. (3GPP TS 29.002
+ * V19.1.0 clauses 10.1.1, 17.1.2, 17.3.2.6 and 17.6.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

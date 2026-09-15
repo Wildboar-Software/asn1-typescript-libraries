@@ -73,7 +73,10 @@ import { LAC, _decode_LAC, _encode_LAC } from "../MAP-MS-DataTypes/LAC.ta.mjs";
 /**
  * @summary LocationArea
  * @description
- * 
+ *
+ * One location area in a paging area: full LAI or LAC only. (3GPP TS 29.002
+ * V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -1,0 +1,88 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { CriticalityType, _enum_for_CriticalityType, _decode_CriticalityType, _encode_CriticalityType } from "../IN-CS2-datatypes/CriticalityType.ta.mjs";
+// export { CriticalityType, _enum_for_CriticalityType, CriticalityType_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, ignore /* IMPORTED_SHORT_ENUMERATION_ITEM */, CriticalityType_abort /* IMPORTED_LONG_ENUMERATION_ITEM */, abort /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CriticalityType, _encode_CriticalityType } from "../IN-CS2-datatypes/CriticalityType.ta.mjs";
+import { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
+// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
+
+
+/**
+ * @summary EXTENSION
+ * @description
+ *
+ * Information object class for network-operator CAP extensions.
+ * Only a Global OBJECT IDENTIFIER is used for `&id`; only `ignore` (0)
+ * is used for `&criticality`. ITU-T Q.1400 extension is for further
+ * study. The extension marker identifies future minor CAP additions.
+ * (3GPP TS 29.078 V19.0.0 clause 5.5).
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * EXTENSION ::= CLASS {
+ *     &ExtensionType,
+ *     &criticality    CriticalityType DEFAULT ignore,
+ *     &id    Code}
+ * 
+ * WITH SYNTAX {
+ *     EXTENSION-SYNTAX    &ExtensionType
+ *     CRITICALITY        &criticality
+ *     IDENTIFIED BY    &id
+ *     }
+ * ```
+ * 
+ * @interface
+ */
+export
+interface EXTENSION<
+    ExtensionType = any /* OBJECT_CLASS_TYPE_FIELD_PARAMETER */
+> {
+    /**
+     * @summary A fixed string that can be used for external programs to determine the object class of this object.
+     */
+    readonly class: "EXTENSION";
+    /**
+     * @summary A map of type fields to their corresponding decoders.
+     */
+    readonly decoderFor: Partial<{ // For decoding types supplied in type fields
+        [_K in keyof EXTENSION<ExtensionType>]: $.ASN1Decoder<EXTENSION<ExtensionType>[_K]>;
+    }>;
+    /**
+     * @summary A map of type fields to their corresponding encoders.
+     */
+    readonly encoderFor: Partial<{ // For encoding types supplied in type fields
+        [_K in keyof EXTENSION<ExtensionType>]: $.ASN1Encoder<EXTENSION<ExtensionType>[_K]>;
+    }>;
+    /**
+     * @summary &ExtensionType
+     */
+    readonly "&ExtensionType": ExtensionType;
+    /**
+     * @summary &criticality
+     * @description
+     *
+     * Only `ignore` (0) is used for CAP extensions.
+     * (3GPP TS 29.078 V19.0.0 clause 5.5).
+     */
+    readonly "&criticality"?: CriticalityType;
+    /**
+     * @summary &id
+     * @description
+     *
+     * Only a Global OBJECT IDENTIFIER is used (not a local integer).
+     * (3GPP TS 29.078 V19.0.0 clause 5.5).
+     */
+    readonly "&id"?: Code;
+};
+
+/* eslint-enable */

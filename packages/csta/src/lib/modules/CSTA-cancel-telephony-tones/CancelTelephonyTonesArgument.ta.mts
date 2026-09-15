@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CancelTelephonyTonesArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 18-6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class CancelTelephonyTonesArgument {
     constructor (
         /**
          * @summary `connectionToStopTone`.
+         * @description
+         *
+         * Connection on which tone generation is stopped.
          * @public
          * @readonly
          */
         readonly connectionToStopTone: ConnectionID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

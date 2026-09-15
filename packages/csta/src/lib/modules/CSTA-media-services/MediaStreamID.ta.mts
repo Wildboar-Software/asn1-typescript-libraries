@@ -8,7 +8,13 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MediaStreamID
  * @description
- * 
+ *
+ * Identifier used to access an attached media service. Format and meaning are
+ * media-service specific. Max length from capability exchange. Returned in
+ * Media Attached if supported. ECMA-269 §12.3.19, §6.7.7.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

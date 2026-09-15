@@ -17,7 +17,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getForwarding
  * @description
- * 
+ *
+ * Get Forwarding (ECMA-269 §22.1.11 / ECMA-285 §20.1.11). Direction: CF→SF.
+ * ROSE local CODE 309. Errors: `universalFailure`. Atomic acknowledgement.
+ * Result list type is `ForwardList` in CSTA-device-feature-types.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

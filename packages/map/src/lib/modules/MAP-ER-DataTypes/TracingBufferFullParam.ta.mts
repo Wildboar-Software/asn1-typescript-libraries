@@ -73,6 +73,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * @summary TracingBufferFullParam
  * @description
  * 
+ * Optional parameter of `tracingBufferFull` (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

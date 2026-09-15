@@ -15,7 +15,11 @@ import { LineConDiag_Item, _decode_LineConDiag_Item, _encode_LineConDiag_Item } 
 /**
  * @summary LineConDiag
  * @description
- * 
+ *
+ * High-level PSTN line-condition estimates (Tag-ID `2Dxx`). If present, there
+ * is no constraint on when in the call they were measured. ITU-T Rec. V.59
+ * (11/2000) §6.3, §6.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

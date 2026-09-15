@@ -1,0 +1,400 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { _decode_CommonUpdateArguments, _encode_CommonUpdateArguments } from "../DFRAbstractService/CommonUpdateArguments.ta.mjs";
+// export { CommonUpdateArguments, _decode_CommonUpdateArguments, _encode_CommonUpdateArguments } from "../DFRAbstractService/CommonUpdateArguments.ta.mjs";
+import { _decode_CommonArguments, _encode_CommonArguments } from "../DFRAbstractService/CommonArguments.ta.mjs";
+// export { CommonArguments, _decode_CommonArguments, _encode_CommonArguments } from "../DFRAbstractService/CommonArguments.ta.mjs";
+import { DfrObjectClass, _enum_for_DfrObjectClass, _decode_DfrObjectClass, _encode_DfrObjectClass } from "../DFRAbstractService/DfrObjectClass.ta.mjs";
+// export { DfrObjectClass, _enum_for_DfrObjectClass, DfrObjectClass_dfr_document /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_document /* IMPORTED_SHORT_ENUMERATION_ITEM */, DfrObjectClass_dfr_root_group /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_root_group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DfrObjectClass_dfr_proper_group /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_proper_group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DfrObjectClass_dfr_reference /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_reference /* IMPORTED_SHORT_ENUMERATION_ITEM */, DfrObjectClass_dfr_search_result_list /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_search_result_list /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DfrObjectClass, _encode_DfrObjectClass } from "../DFRAbstractService/DfrObjectClass.ta.mjs";
+import { CommonUpdateArguments_entry, _decode_CommonUpdateArguments_entry, _encode_CommonUpdateArguments_entry } from "../DFRAbstractService/CommonUpdateArguments-entry.ta.mjs";
+// export { CommonUpdateArguments_entry, _decode_CommonUpdateArguments_entry, _encode_CommonUpdateArguments_entry } from "../DFRAbstractService/CommonUpdateArguments-entry.ta.mjs";
+import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+// export { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+import { GroupMemberPosition, _decode_GroupMemberPosition, _encode_GroupMemberPosition } from "../DFRAbstractService/GroupMemberPosition.ta.mjs";
+// export { GroupMemberPosition, _decode_GroupMemberPosition, _encode_GroupMemberPosition } from "../DFRAbstractService/GroupMemberPosition.ta.mjs";
+import { EntryModification, _decode_EntryModification, _encode_EntryModification } from "../DFRAbstractService/EntryModification.ta.mjs";
+// export { EntryModification, _decode_EntryModification, _encode_EntryModification } from "../DFRAbstractService/EntryModification.ta.mjs";
+import { EntryInformationSelection, _decode_EntryInformationSelection, _encode_EntryInformationSelection } from "../DFRAbstractService/EntryInformationSelection.ta.mjs";
+// export { EntryInformationSelection, _decode_EntryInformationSelection, _encode_EntryInformationSelection } from "../DFRAbstractService/EntryInformationSelection.ta.mjs";
+import { Requested_QoS_level, _decode_Requested_QoS_level, _encode_Requested_QoS_level } from "../DOR-definition/Requested-QoS-level.ta.mjs";
+// export { Requested_QoS_level, _decode_Requested_QoS_level, _encode_Requested_QoS_level } from "../DOR-definition/Requested-QoS-level.ta.mjs";
+import { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
+// export { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
+import { Reservation, _decode_Reservation, _encode_Reservation } from "../DFRAbstractService/Reservation.ta.mjs";
+// export { Reservation, _decode_Reservation, _encode_Reservation } from "../DFRAbstractService/Reservation.ta.mjs";
+import { ErrorHandlingMode, _decode_ErrorHandlingMode, _encode_ErrorHandlingMode } from "../DFRAbstractService/ErrorHandlingMode.ta.mjs";
+// export { ErrorHandlingMode, _decode_ErrorHandlingMode, _encode_ErrorHandlingMode } from "../DFRAbstractService/ErrorHandlingMode.ta.mjs";
+import { Priority, _enum_for_Priority, Priority_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Priority, _encode_Priority } from "../DFRAbstractService/Priority.ta.mjs";
+// export { Priority, _enum_for_Priority, Priority_low /* IMPORTED_LONG_ENUMERATION_ITEM */, low /* IMPORTED_SHORT_ENUMERATION_ITEM */, Priority_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, medium /* IMPORTED_SHORT_ENUMERATION_ITEM */, Priority_high /* IMPORTED_LONG_ENUMERATION_ITEM */, high /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Priority, _encode_Priority } from "../DFRAbstractService/Priority.ta.mjs";
+import { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstractService/Privileges.ta.mjs";
+// export { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstractService/Privileges.ta.mjs";
+
+
+/**
+ * @summary CopyArgument
+ * @description
+ *
+ * `entry` and `destination` required; `reference-qos` absent. Error-handling
+ * applies when copying a group. ISO/IEC 10166-1:1991 §8.2.3.1.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * CopyArgument ::= SEQUENCE {
+ *     COMPONENTS OF CommonUpdateArguments (WITH COMPONENTS {
+ *         ...,
+ *         entry PRESENT,
+ *         destination PRESENT,
+ *         reference-qos ABSENT
+ *     }),
+ *     COMPONENTS OF CommonArguments
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class CopyArgument {
+    constructor (
+        /**
+         * @summary `object_class`.
+         * @description
+         *
+         * Class of the DFR-Object. Mandatory on Create; optional elsewhere and
+         * then used only to validate the named entry. ISO/IEC 10166-1:1991
+         * §8.1.5.1.
+         * @public
+         * @readonly
+         */
+        readonly object_class: OPTIONAL<DfrObjectClass> /* REPLICATED_COMPONENT */,
+        /**
+         * @summary `entry`.
+         * @description
+         *
+         * Local name or DOR of the object to copy, move, read, modify, delete,
+         * list, reserve, etc. Absent on Create. ISO/IEC 10166-1:1991 §8.1.5.2.
+         * @public
+         * @readonly
+         */
+        readonly entry: OPTIONAL<CommonUpdateArguments_entry> /* REPLICATED_COMPONENT */,
+        /**
+         * @summary `destination`.
+         * @description
+         *
+         * Parent group that will hold the created, copied, or moved entry.
+         * Required for those operations. ISO/IEC 10166-1:1991 §8.1.5.3.
+         * @public
+         * @readonly
+         */
+        readonly destination: OPTIONAL<DfrEntryName> /* REPLICATED_COMPONENT */,
+        /**
+         * @summary `position`.
+         * @description
+         *
+         * Where to insert the new member in the destination group
+         * (`first`/`last`/`before`/`after`). Forbidden if the parent has
+         * `dfr-ordering`; the server then places the member by that rule.
+         * ISO/IEC 10166-1:1991 §8.1.5.4.
+         * @public
+         * @readonly
+         */
+        readonly position: OPTIONAL<GroupMemberPosition> /* REPLICATED_COMPONENT */,
+        /**
+         * @summary `modifications`.
+         * @description
+         *
+         * Ordered updates to attributes and/or content. Mandatory on Modify;
+         * optional on Create, Copy, and Move. ISO/IEC 10166-1:1991 §8.1.5.5.
+         * @public
+         * @readonly
+         */
+        readonly modifications: OPTIONAL<EntryModification[]> /* REPLICATED_COMPONENT */,
+        /**
+         * @summary `selection`.
+         * @description
+         *
+         * Which attributes and/or content (or a produced DOR) to read back in
+         * the result. Mandatory on Read. ISO/IEC 10166-1:1991 §8.1.5.6.
+         * @public
+         * @readonly
+         */
+        readonly selection: OPTIONAL<EntryInformationSelection> /* REPLICATED_COMPONENT */,
+        /**
+         * @summary `reference_qos`.
+         * @description
+         *
+         * Constrained absent on Copy. ISO/IEC 10166-1:1991 §8.2.3.1.
+         * @public
+         * @readonly
+         */
+        readonly reference_qos: OPTIONAL<Requested_QoS_level> /* REPLICATED_COMPONENT */,
+        /**
+         * @summary `task_id`.
+         * @description
+         *
+         * Optional identifier for this invocation, so it can later be
+         * abandoned or continued. Must not be reused until the operation
+         * completes or is abandoned. A List/Search continuation value returned
+         * after a limit may be reused here. ISO/IEC 10166-1:1991 §8.1.3.1.
+         * @public
+         * @readonly
+         */
+        readonly task_id: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
+        /**
+         * @summary `reservation`.
+         * @description
+         *
+         * Requested reservation of the object this operation applies to. Omit
+         * to leave the current reservation unchanged. Raising the level or
+         * committing is done first; lowering an uncommitted reservation is
+         * done last. ISO/IEC 10166-1:1991 §8.1.3.2, §8.2.9.
+         * @public
+         * @readonly
+         */
+        readonly reservation: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
+        /**
+         * @summary `error_handling`.
+         * @description
+         *
+         * How List and Copy-of-group treat members that cannot be accessed.
+         * Default `all-or-nothing`. Modification problems are always treated
+         * as all-or-nothing. ISO/IEC 10166-1:1991 §8.1.3.3.
+         * @public
+         * @readonly
+         */
+        readonly error_handling: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
+        /**
+         * @summary `priority`.
+         * @description
+         *
+         * Operational priority for a loaded server; overrides the bind default
+         * (`medium`). The server need not honour it. Unrelated to
+         * communications QoS. ISO/IEC 10166-1:1991 §8.1.3.4, §7.1.1.
+         * @public
+         * @readonly
+         */
+        readonly priority: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
+        /**
+         * @summary `privileges`.
+         * @description
+         *
+         * Per-operation PACs that modify bind privileges for this request only
+         * (`operation-Pac`) and/or a `proxy-pac` the server may present when
+         * accessing another application on the user's behalf. ISO/IEC
+         * 10166-1:1991 §8.1.3.5.
+         * @public
+         * @readonly
+         */
+        readonly privileges: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
+    ) {
+        if (entry === undefined) {
+            throw new _ConstructionError("CopyArgument.entry shall be present");
+        }
+        if (destination === undefined) {
+            throw new _ConstructionError("CopyArgument.destination shall be present");
+        }
+        if (reference_qos !== undefined) {
+            throw new _ConstructionError("CopyArgument.reference-qos shall be absent");
+        }
+    }
+
+    /**
+     * @summary Restructures an object into a CopyArgument
+     * @description
+     * 
+     * This takes an `object` and converts it to a `CopyArgument`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `CopyArgument`.
+     * @returns {CopyArgument}
+     */
+    public static _from_object (_o: { [_K in keyof (CopyArgument)]: (CopyArgument)[_K] }): CopyArgument {
+        return new CopyArgument(_o.object_class, _o.entry, _o.destination, _o.position, _o.modifications, _o.selection, _o.reference_qos, _o.task_id, _o.reservation, _o.error_handling, _o.priority, _o.privileges);
+    }
+
+    /**
+     * @summary Getter that returns the default value for `error_handling`.
+     * @public
+     * @static
+     * @method
+     */
+    public static get _default_value_for_error_handling (): ErrorHandlingMode { return { all_or_nothing: null }; }
+    /**
+     * @summary Getter that returns the default value for `priority`.
+     * @public
+     * @static
+     * @method
+     */
+    public static get _default_value_for_priority () { return Priority_medium; }        /**
+         * @summary The enum used as the type of the component `object_class`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_object_class = _enum_for_DfrObjectClass;        /**
+         * @summary The enum used as the type of the component `priority`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_priority = _enum_for_Priority;
+}
+
+/**
+ * @summary The Leading Root Component Types of CopyArgument
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_CopyArgument: $.ComponentSpec[] = [
+    new $.ComponentSpec("object-class", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("entry", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("destination", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("position", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("modifications", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("selection", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("reference-qos", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("task-id", true, $.hasTag(_TagClass.context, 26)),
+    new $.ComponentSpec("reservation", true, $.hasTag(_TagClass.context, 27)),
+    new $.ComponentSpec("error-handling", true, $.hasTag(_TagClass.context, 28)),
+    new $.ComponentSpec("priority", true, $.hasTag(_TagClass.context, 29)),
+    new $.ComponentSpec("privileges", true, $.hasTag(_TagClass.context, 30))
+];
+
+/**
+ * @summary The Trailing Root Component Types of CopyArgument
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_CopyArgument: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of CopyArgument
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_CopyArgument: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_CopyArgument: $.ASN1Decoder<CopyArgument> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) CopyArgument
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_CopyArgument (el: _Element): CopyArgument {
+    if (!_cached_decoder_for_CopyArgument) { _cached_decoder_for_CopyArgument = function (el: _Element): CopyArgument {
+    let object_class: OPTIONAL<DfrObjectClass>;
+    let entry: OPTIONAL<CommonUpdateArguments_entry>;
+    let destination: OPTIONAL<DfrEntryName>;
+    let position: OPTIONAL<GroupMemberPosition>;
+    let modifications: OPTIONAL<EntryModification[]>;
+    let selection: OPTIONAL<EntryInformationSelection>;
+    let reference_qos: OPTIONAL<Requested_QoS_level>;
+    let task_id: OPTIONAL<TaskId>;
+    let reservation: OPTIONAL<Reservation>;
+    let error_handling: OPTIONAL<ErrorHandlingMode> = CopyArgument._default_value_for_error_handling;
+    let priority: OPTIONAL<Priority> = CopyArgument._default_value_for_priority;
+    let privileges: OPTIONAL<Privileges>;
+    const callbacks: $.DecodingMap = {
+        "object-class": (_el: _Element): void => { object_class = $._decode_implicit<DfrObjectClass>(() => _decode_DfrObjectClass)(_el); },
+        "entry": (_el: _Element): void => { entry = $._decode_explicit<CommonUpdateArguments_entry>(() => _decode_CommonUpdateArguments_entry)(_el); },
+        "destination": (_el: _Element): void => { destination = $._decode_explicit<DfrEntryName>(() => _decode_DfrEntryName)(_el); },
+        "position": (_el: _Element): void => { position = $._decode_explicit<GroupMemberPosition>(() => _decode_GroupMemberPosition)(_el); },
+        "modifications": (_el: _Element): void => { modifications = $._decode_implicit<EntryModification[]>(() => $._decodeSequenceOf<EntryModification>(() => _decode_EntryModification))(_el); },
+        "selection": (_el: _Element): void => { selection = $._decode_implicit<EntryInformationSelection>(() => _decode_EntryInformationSelection)(_el); },
+        "reference-qos": (_el: _Element): void => { reference_qos = $._decode_explicit<Requested_QoS_level>(() => _decode_Requested_QoS_level)(_el); },
+        "task-id": (_el: _Element): void => { task_id = $._decode_implicit<TaskId>(() => _decode_TaskId)(_el); },
+        "reservation": (_el: _Element): void => { reservation = $._decode_implicit<Reservation>(() => _decode_Reservation)(_el); },
+        "error-handling": (_el: _Element): void => { error_handling = $._decode_explicit<ErrorHandlingMode>(() => _decode_ErrorHandlingMode)(_el); },
+        "priority": (_el: _Element): void => { priority = $._decode_implicit<Priority>(() => _decode_Priority)(_el); },
+        "privileges": (_el: _Element): void => { privileges = $._decode_implicit<Privileges>(() => _decode_Privileges)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_CopyArgument,
+        _extension_additions_list_spec_for_CopyArgument,
+        _root_component_type_list_2_spec_for_CopyArgument,
+        undefined,
+    );
+    return new CopyArgument(
+        object_class,
+        entry,
+        destination,
+        position,
+        modifications,
+        selection,
+        reference_qos,
+        task_id,
+        reservation,
+        error_handling,
+        priority,
+        privileges
+    );
+}; }
+    return _cached_decoder_for_CopyArgument(el);
+}
+
+let _cached_encoder_for_CopyArgument: $.ASN1Encoder<CopyArgument> | null = null;
+
+/**
+ * @summary Encodes a(n) CopyArgument into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The CopyArgument, encoded as an ASN.1 Element.
+ */
+export
+function _encode_CopyArgument (value: CopyArgument, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_CopyArgument) { _cached_encoder_for_CopyArgument = function (value: CopyArgument): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* IF_ABSENT  */ ((value.object_class === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_DfrObjectClass, $.BER)(value.object_class, $.BER)),
+            /* IF_ABSENT  */ ((value.entry === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => _encode_CommonUpdateArguments_entry, $.BER)(value.entry, $.BER)),
+            /* IF_ABSENT  */ ((value.destination === undefined) ? undefined : $._encode_explicit(_TagClass.context, 2, () => _encode_DfrEntryName, $.BER)(value.destination, $.BER)),
+            /* IF_ABSENT  */ ((value.position === undefined) ? undefined : $._encode_explicit(_TagClass.context, 3, () => _encode_GroupMemberPosition, $.BER)(value.position, $.BER)),
+            /* IF_ABSENT  */ ((value.modifications === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => $._encodeSequenceOf<EntryModification>(() => _encode_EntryModification, $.BER), $.BER)(value.modifications, $.BER)),
+            /* IF_ABSENT  */ ((value.selection === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => _encode_EntryInformationSelection, $.BER)(value.selection, $.BER)),
+            /* IF_ABSENT  */ ((value.reference_qos === undefined) ? undefined : $._encode_explicit(_TagClass.context, 6, () => _encode_Requested_QoS_level, $.BER)(value.reference_qos, $.BER)),
+            /* IF_ABSENT  */ ((value.task_id === undefined) ? undefined : $._encode_implicit(_TagClass.context, 26, () => _encode_TaskId, $.BER)(value.task_id, $.BER)),
+            /* IF_ABSENT  */ ((value.reservation === undefined) ? undefined : $._encode_implicit(_TagClass.context, 27, () => _encode_Reservation, $.BER)(value.reservation, $.BER)),
+            /* IF_DEFAULT */ (value.error_handling === undefined || $.deepEq(value.error_handling, CopyArgument._default_value_for_error_handling) ? undefined : $._encode_explicit(_TagClass.context, 28, () => _encode_ErrorHandlingMode, $.BER)(value.error_handling, $.BER)),
+            /* IF_DEFAULT */ (value.priority === undefined || $.deepEq(value.priority, CopyArgument._default_value_for_priority) ? undefined : $._encode_implicit(_TagClass.context, 29, () => _encode_Priority, $.BER)(value.priority, $.BER)),
+            /* IF_ABSENT  */ ((value.privileges === undefined) ? undefined : $._encode_implicit(_TagClass.context, 30, () => _encode_Privileges, $.BER)(value.privileges, $.BER))
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_CopyArgument(value, elGetter);
+}
+
+
+/* eslint-enable */

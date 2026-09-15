@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DeferredLocationEventType
  * @description
- * 
+ *
+ * beingInsideArea is always oneTimeEvent regardless of occurrenceInfo. Other
+ * values in ProvideSubscriberLocation-Arg: reject with unexpected data value
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,6 +94,10 @@ type DeferredLocationEventType = BIT_STRING;
 
 /**
  * @summary DeferredLocationEventType_msAvailable
+ * @description
+ *
+ * `msAvailable (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -97,6 +105,10 @@ const DeferredLocationEventType_msAvailable: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary msAvailable
+ * @description
+ *
+ * `msAvailable (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -104,6 +116,10 @@ const msAvailable: number = DeferredLocationEventType_msAvailable; /* SHORT_NAME
 
 /**
  * @summary DeferredLocationEventType_enteringIntoArea
+ * @description
+ *
+ * `enteringIntoArea (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -111,6 +127,10 @@ const DeferredLocationEventType_enteringIntoArea: number = 1; /* LONG_NAMED_BIT 
 
 /**
  * @summary enteringIntoArea
+ * @description
+ *
+ * `enteringIntoArea (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -118,6 +138,10 @@ const enteringIntoArea: number = DeferredLocationEventType_enteringIntoArea; /* 
 
 /**
  * @summary DeferredLocationEventType_leavingFromArea
+ * @description
+ *
+ * `leavingFromArea (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -125,6 +149,10 @@ const DeferredLocationEventType_leavingFromArea: number = 2; /* LONG_NAMED_BIT *
 
 /**
  * @summary leavingFromArea
+ * @description
+ *
+ * `leavingFromArea (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -132,6 +160,11 @@ const leavingFromArea: number = DeferredLocationEventType_leavingFromArea; /* SH
 
 /**
  * @summary DeferredLocationEventType_beingInsideArea
+ * @description
+ *
+ * `beingInsideArea (3)` always one-time (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.13).
+ *
  * @constant
  */
 export
@@ -139,6 +172,11 @@ const DeferredLocationEventType_beingInsideArea: number = 3; /* LONG_NAMED_BIT *
 
 /**
  * @summary beingInsideArea
+ * @description
+ *
+ * `beingInsideArea (3)` always one-time (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.13).
+ *
  * @constant
  */
 export
@@ -146,6 +184,10 @@ const beingInsideArea: number = DeferredLocationEventType_beingInsideArea; /* SH
 
 /**
  * @summary DeferredLocationEventType_periodicLDR
+ * @description
+ *
+ * `periodicLDR (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export
@@ -153,6 +195,10 @@ const DeferredLocationEventType_periodicLDR: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary periodicLDR
+ * @description
+ *
+ * `periodicLDR (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  */
 export

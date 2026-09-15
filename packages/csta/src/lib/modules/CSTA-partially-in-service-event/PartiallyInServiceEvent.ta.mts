@@ -24,7 +24,16 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary PartiallyInServiceEvent
  * @description
- * 
+ *
+ * Partially In Service event (ECMA-269 §23.1.4 / ECMA-285 §21.1.4). Direction:
+ * SF→CF via Event Report. Part of the device cannot accept calls or some CSTA
+ * services (e.g. a group with mixed in-/out-of-service members). Monitors
+ * remain; event flow may shrink. Recovery: Back In Service. Further failure:
+ * Out Of Service. Causes: Forced Transition, Maintenance, Normal.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +50,28 @@ class PartiallyInServiceEvent {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device that has gone partially in service.
          * @public
          * @readonly
          */
         readonly device: SubjectDeviceID,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Reason for the event.
          * @public
          * @readonly
          */
         readonly cause: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

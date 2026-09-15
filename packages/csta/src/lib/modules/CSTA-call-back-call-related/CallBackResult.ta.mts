@@ -17,7 +17,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CallBackResult
  * @description
- * 
+ *
+ * Positive acknowledgement for Call Back Call-Related (ECMA-269
+ * §17.1.4 / ECMA-285 §15.1.4). May identify the device on which
+ * the callback was placed (switching-function dependent after
+ * forwarding).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +41,23 @@ class CallBackResult {
     constructor (
         /**
          * @summary `targetDevice`.
+         * @description
+         *
+         * Optional. Device that will receive the callback. After
+         * forward/deflect, may be the forwarded-to device rather
+         * than the originally called device.
+         *
          * @public
          * @readonly
          */
         readonly targetDevice: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

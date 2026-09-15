@@ -9,7 +9,13 @@ import { LocalConnectionState, _decode_LocalConnectionState, _encode_LocalConnec
 /**
  * @summary CompoundCallState
  * @description
- * 
+ *
+ * Call state as a list of connection states when there is no simple state, or
+ * more than two non-null connections. The first entry is the local connection
+ * state. ECMA-269 §6.1.4.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

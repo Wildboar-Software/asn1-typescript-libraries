@@ -15,7 +15,12 @@ import { DisplayList_Item, _decode_DisplayList_Item, _encode_DisplayList_Item } 
 /**
  * @summary DisplayList
  * @description
- * 
+ *
+ * SEQUENCE OF display snapshots (ECMA-269 §21.1.4.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

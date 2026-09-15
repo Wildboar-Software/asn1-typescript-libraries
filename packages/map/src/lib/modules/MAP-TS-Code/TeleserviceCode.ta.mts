@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TeleserviceCode
  * @description
- * 
+ *
+ * Identifies a single teleservice, a group of teleservices, or all
+ * teleservices, as defined in 3GPP TS 22.003. Used only for supplementary
+ * service management (3GPP TS 29.002 V19.1.0 clauses 7.6.4.39 and 17.7.9).
+ *
+ * One octet: bits 8-5 are the group; bits 4-1 are the specific service.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

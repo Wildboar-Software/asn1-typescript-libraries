@@ -25,7 +25,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getAuditoryApparatusInformation
  * @description
- * 
+ *
+ * Get Auditory Apparatus Information (ECMA-269 §21.1.2 / ECMA-285 §19.1.2).
+ * Direction: CF→SF. ROSE local CODE 261. Errors: `universalFailure`. Atomic
+ * acknowledgement. Optional apparatus ID; omit for all.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

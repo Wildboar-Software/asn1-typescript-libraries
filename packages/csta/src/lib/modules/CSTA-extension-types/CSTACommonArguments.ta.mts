@@ -17,7 +17,15 @@ import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } fro
 /**
  * @summary CSTACommonArguments
  * @description
- * 
+ *
+ * `APPLICATION 30` envelope for security and vendor private data on
+ * CSTA messages (ECMA-285 §9.8, §9). Many service and event PDUs
+ * carry this as `extensions`. Unrecognised `CSTAPrivateData` is
+ * discarded; the rest of the message is still processed (§5.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +41,22 @@ class CSTACommonArguments {
     constructor (
         /**
          * @summary `security`.
+         * @description
+         *
+         * Timestamp, message sequence number, and opaque security info
+         * (ECMA-269 §12.2.12).
+         *
          * @public
          * @readonly
          */
         readonly security: OPTIONAL<CSTASecurityData>,
         /**
          * @summary `privateData`.
+         * @description
+         *
+         * Non-standard parameters (ECMA-269 §12.2.11). Discard if
+         * unrecognised (ECMA-285 §5.5).
+         *
          * @public
          * @readonly
          */

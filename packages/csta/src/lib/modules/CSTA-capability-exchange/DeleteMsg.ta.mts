@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary DeleteMsg
  * @description
- * 
+ * Capability bitmap for the Delete Message service (ECMA-269 C.19.5, ECMA-285
+ * §9.10). Presence of this entry in `VoiceUnitServList` means the SF supports
+ * that service. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +31,9 @@ type DeleteMsg = BIT_STRING;
 /**
  * @summary DeleteMsg_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.19.5).
  */
 export
 const DeleteMsg_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -30,6 +41,8 @@ const DeleteMsg_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `DeleteMsg_privateData`.
  */
 export
 const privateData: number = DeleteMsg_privateData; /* SHORT_NAMED_BIT */
@@ -37,6 +50,9 @@ const privateData: number = DeleteMsg_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary DeleteMsg_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.19.5).
  */
 export
 const DeleteMsg_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
@@ -44,6 +60,8 @@ const DeleteMsg_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `DeleteMsg_privateDataInAck`.
  */
 export
 const privateDataInAck: number = DeleteMsg_privateDataInAck; /* SHORT_NAMED_BIT */

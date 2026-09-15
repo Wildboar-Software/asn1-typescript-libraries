@@ -8,7 +8,11 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary LampID
  * @description
- * 
+ *
+ * Lamp identifier. ECMA-269 §12.3.17.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

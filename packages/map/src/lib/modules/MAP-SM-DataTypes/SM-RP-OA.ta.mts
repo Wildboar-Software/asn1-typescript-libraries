@@ -73,7 +73,10 @@ import { AddressString, _decode_AddressString, _encode_AddressString } from "../
 /**
  * @summary SM_RP_OA
  * @description
- * 
+ *
+ * SM RP originating address: MSISDN, SC address, or none (3GPP TS 29.002
+ * V19.1.0 clause 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

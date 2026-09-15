@@ -77,7 +77,11 @@ import { MAP_ProviderAbortInfo, _decode_MAP_ProviderAbortInfo, _encode_MAP_Provi
 /**
  * @summary MAP_DialoguePDU
  * @description
- * 
+ *
+ * MAP dialogue user-information CHOICE in the TCAP dialogue portion.
+ * Alternatives map to MAP-OPEN (open/accept/refuse), MAP-CLOSE, MAP-U-ABORT and
+ * MAP-P-ABORT (3GPP TS 29.002 V19.1.0 clauses 7.3 and 17.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

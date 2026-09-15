@@ -72,7 +72,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary UpdateVcsgLocationRes
  * @description
- * 
+ *
+ * MAP_UPDATE_VCSG_LOCATION result. Temporary Empty CSG Subscription data
+ * Indicator shall be present if the CSS accepts the request and has no CSG
+ * subscription data (empty CSG-ID list) for the roaming MS.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.1.9.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -89,6 +95,13 @@ class UpdateVcsgLocationRes {
     constructor (
         /**
          * @summary `temporaryEmptySubscriptiondataIndicator`.
+         * @description
+         *
+         * CSS currently has no CSG subscription data for this roaming user but
+         * registers the VLR or SGSN so later CSG changes can be notified.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.100 and 8.1.9.3).
+         *
          * @public
          * @readonly
          */

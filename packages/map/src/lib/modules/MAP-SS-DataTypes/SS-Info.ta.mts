@@ -74,7 +74,10 @@ import { SS_Data, _decode_SS_Data, _encode_SS_Data } from "../MAP-SS-DataTypes/S
 /**
  * @summary SS_Info
  * @description
- * 
+ *
+ * All information related to a supplementary service: forwarding, call barring,
+ * or SS-Data (3GPP TS 29.002 V19.1.0 clauses 7.6.4.24 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

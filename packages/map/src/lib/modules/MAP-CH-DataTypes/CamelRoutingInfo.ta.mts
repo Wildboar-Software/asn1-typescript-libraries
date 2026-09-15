@@ -74,7 +74,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CamelRoutingInfo
  * @description
- * 
+ *
+ * CAMEL routing with GMSC CAMEL subscription info (3GPP TS 29.002 V19.1.0
+ * clauses 10.1.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,18 +95,30 @@ class CamelRoutingInfo {
     constructor (
         /**
          * @summary `forwardingData`.
+         * @description
+         *
+         * Forwarding data if CAMEL forwards the call.
+         *
          * @public
          * @readonly
          */
         readonly forwardingData: OPTIONAL<ForwardingData>,
         /**
          * @summary `gmscCamelSubscriptionInfo`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly gmscCamelSubscriptionInfo: GmscCamelSubscriptionInfo,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

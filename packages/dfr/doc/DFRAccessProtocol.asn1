@@ -1,0 +1,116 @@
+DFRAccessProtocol
+{iso standard 10166 part-2(2) modules(0) access-protocol(1)}
+DEFINITIONS IMPLICIT TAGS ::=
+BEGIN
+IMPORTS
+
+    dfrBind, dfrUnbind, create, delete, copy, move, read, modify, list, search,
+    reserve, abandon, dfr-contract
+        FROM DFRAbstractService
+        {iso standard(0) 10166 part-1(1) modules(0) abstract-service(1)}
+
+    id-ac-dfr-access, id-ac-dfr-reliable-access, id-as-dfrse,
+    id-as-dfr-ext-attr
+        FROM DFRProtocolObjectIdentifiers
+        {iso standard(0) 10166 part-2(2) modules(0) object-identifiers(0)}
+
+    OPERATION
+        FROM Remote-Operations-Information-Objects
+        {joint-iso-itu-t remote-operations(4) informationObjects(5) version2(1)}
+
+    APPLICATION-CONTEXT
+        FROM Remote-Operations-Information-Objects-extensions
+        {joint-iso-itu-t remote-operations(4) informationObjects-extensions(8)
+        version2(1)}
+
+    acse-abstract-syntax
+        FROM Remote-Operations-Abstract-Syntaxes
+        {joint-iso-itu-t remote-operations(4)
+        remote-operations-abstract-syntaxes(12) version1(0)}
+
+    ROS{}, Bind{}, Unbind{}, InvokeId
+        FROM Remote-Operations-Generic-ROS-PDUs
+        {joint-iso-itu-t remote-operations(4) generic-ROS-PDUs(6) version1(0)}
+
+    pData, acse, association-by-RTSE, transfer-by-RTSE
+        FROM Remote-Operations-Realizations
+        {joint-iso-itu-t remote-operations(4) realizations(9) version1(0)}
+    ;
+
+DFR-PDUs ::= CHOICE {
+    basicRos    ROS{{DFR-InvokeIDSet}, {DFR-Invokable}, {DFR-Returnable}},
+    bind        Bind{dfrBind},
+    unbind      Unbind{dfrUnbind}
+}
+
+DFR-InvokeIDSet ::= InvokeId(ALL EXCEPT absent:NULL)
+
+DFR-Invokable OPERATION ::= {
+    create
+    | delete
+    | copy
+    | move
+    | read
+    | modify
+    | list
+    | search
+    | reserve
+    | abandon
+}
+
+DFR-Returnable OPERATION ::= {
+    create
+    | delete
+    | copy
+    | move
+    | read
+    | modify
+    | list
+    | search
+    | reserve
+    | abandon
+}
+
+-- I'm not really sure why there are two of these.
+
+-- DFR-Basic-Attribute-Set
+dfrse-basic-abstract-syntax ABSTRACT-SYNTAX ::= {
+    DFR-PDUs
+    IDENTIFIED BY id-as-dfrse
+}
+
+-- DFR-Extension-Attribute-Set
+dfrse-ext-abstract-syntax ABSTRACT-SYNTAX ::= {
+    DFR-PDUs
+    IDENTIFIED BY id-as-dfr-ext-attr
+}
+
+-- Application Contexts
+
+-- Application Context without RTSE
+dfr-access APPLICATION-CONTEXT ::= {
+    CONTRACT                    dfr-contract
+    ESTABLISHED BY              acse
+    INFORMATION TRANSFER BY     pData
+    ABSTRACT SYNTAXES {
+        acse-abstract-syntax
+        | dfrse-basic-abstract-syntax
+        | dfrse-ext-abstract-syntax
+    }
+    APPLICATION CONTEXT NAME    id-ac-dfr-access
+}
+
+-- Application Context including RTSE
+dfr-reliable-access APPLICATION-CONTEXT ::= {
+    CONTRACT                    dfr-contract
+    ESTABLISHED BY              association-by-RTSE
+    INFORMATION TRANSFER BY     transfer-by-RTSE
+    ABSTRACT SYNTAXES {
+        acse-abstract-syntax
+        | dfrse-basic-abstract-syntax
+        | dfrse-ext-abstract-syntax
+    }
+    APPLICATION CONTEXT NAME    id-ac-dfr-reliable-access
+}
+
+END

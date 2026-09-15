@@ -76,6 +76,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary ongoingGroupCall
  * @description
  * 
+ * Group Call user error. Not listed under clause 7.6.1.4; returned as user
+ * error Ongoing Call on MAP_SEND_GROUP_CALL_INFO (3GPP TS 29.002 V19.1.0
+ * clauses 10.7A.3 and 17.6.6).
+ *
+ * Local code 22. Optional parameter `OngoingGroupCallParam` (3GPP TS 29.002
+ * V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

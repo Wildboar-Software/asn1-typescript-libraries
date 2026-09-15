@@ -80,7 +80,13 @@ import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformat
 /**
  * @summary LocationInformationGPRS
  * @description
- * 
+ *
+ * SGSN-provided location of the served subscriber as in 3GPP TS 23.078.
+ * `sai-Present` means `cellGlobalIdOrServiceAreaIdOrLAI` holds a Service Area
+ * Identity. `currentLocationRetrieved` shall be present if the location was
+ * retrieved after successful paging. (3GPP TS 29.002 V19.1.0 clauses 7.6.2.30a
+ * and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -106,30 +112,54 @@ class LocationInformationGPRS {
     constructor (
         /**
          * @summary `cellGlobalIdOrServiceAreaIdOrLAI`.
+         * @description
+         *
+         * CGI, SAI, or LAI. If `sai-Present` is included, this holds a Service
+         * Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly cellGlobalIdOrServiceAreaIdOrLAI: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
         /**
          * @summary `routeingAreaIdentity`.
+         * @description
+         *
+         * Routing Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly routeingAreaIdentity: OPTIONAL<RAIdentity>,
         /**
          * @summary `geographicalInformation`.
+         * @description
+         *
+         * Ellipsoid point with uncertainty circle (3GPP TS 23.032). (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly geographicalInformation: OPTIONAL<GeographicalInformation>,
         /**
          * @summary `sgsn_Number`.
+         * @description
+         *
+         * ISDN number of the serving SGSN. (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.2.38)
+         *
          * @public
          * @readonly
          */
         readonly sgsn_Number: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `selectedLSAIdentity`.
+         * @description
+         *
+         * Currently selected localised service area. (3GPP TS 29.002 V19.1.0
+         * clause 17.7.1)
+         *
          * @public
          * @readonly
          */
@@ -142,30 +172,54 @@ class LocationInformationGPRS {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `sai_Present`.
+         * @description
+         *
+         * `cellGlobalIdOrServiceAreaIdOrLAI` contains a Service Area Identity.
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly sai_Present: OPTIONAL<NULL>,
         /**
          * @summary `geodeticInformation`.
+         * @description
+         *
+         * Calling Geodetic Location (Q.763, 1999), ellipsoid point with
+         * uncertainty circle. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly geodeticInformation: OPTIONAL<GeodeticInformation>,
         /**
          * @summary `currentLocationRetrieved`.
+         * @description
+         *
+         * Shall be present if the location was retrieved after successful
+         * paging. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly currentLocationRetrieved: OPTIONAL<NULL>,
         /**
          * @summary `ageOfLocationInformation`.
+         * @description
+         *
+         * Age of the location estimate. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation>,
         /**
          * @summary `userCSGInformation`.
+         * @description
+         *
+         * CSG ID, access mode, and CSG membership indication when access mode
+         * is Hybrid. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */

@@ -16,7 +16,14 @@ import {
 /**
  * @summary DigitsReportingCriteria
  * @description
- * 
+ *
+ * When to send Data Collected for digits: count, flush character, and/or
+ * timeout (ECMA-269 §25.1.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +40,31 @@ class DigitsReportingCriteria {
     constructor (
         /**
          * @summary `numChars`.
+         * @description
+         *
+         * Send Data Collected after this many characters (ECMA-269 §25.1.5.1).
+         *
          * @public
          * @readonly
          */
         readonly numChars: OPTIONAL<INTEGER>,
         /**
          * @summary `flushChar`.
+         * @description
+         *
+         * IA5 flush character that reports collected digits (ECMA-269
+         * §25.1.5.1).
+         *
          * @public
          * @readonly
          */
         readonly flushChar: OPTIONAL<IA5String>,
         /**
          * @summary `timeout`.
+         * @description
+         *
+         * Timeout that reports collected digits (ECMA-269 §25.1.5.1).
+         *
          * @public
          * @readonly
          */

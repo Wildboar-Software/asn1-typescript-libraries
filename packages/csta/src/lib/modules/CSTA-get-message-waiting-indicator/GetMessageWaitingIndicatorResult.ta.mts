@@ -18,7 +18,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetMessageWaitingIndicatorResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §21.1.8.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +41,37 @@ class GetMessageWaitingIndicatorResult {
     constructor (
         /**
          * @summary `messageWaitingOn`.
+         * @description
+         *
+         * FALSE = off; TRUE = on.
          * @public
          * @readonly
          */
         readonly messageWaitingOn: BOOLEAN,
         /**
          * @summary `deviceForMessage`.
+         * @description
+         *
+         * Device where the message is waiting.
          * @public
          * @readonly
          */
         readonly deviceForMessage: OPTIONAL<DeviceID>,
         /**
          * @summary `lampIsPresent`.
+         * @description
+         *
+         * Whether a message-waiting lamp is present.
          * @public
          * @readonly
          */
         readonly lampIsPresent: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

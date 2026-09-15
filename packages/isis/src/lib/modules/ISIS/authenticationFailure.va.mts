@@ -15,6 +15,13 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary authenticationFailure
  * @description
  *
+ * `specificProblems` value when a PDU is received with an incorrect
+ * Authentication Information field. Source system ID is reported via
+ * `notificationSystemId`. probableCause `configurationOrCustomisationError`;
+ * severity Major.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.3 and 11.2.5.8).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

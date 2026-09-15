@@ -17,7 +17,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary sendStoredCDR
  * @description
- * 
+ *
+ * Initiates en-bloc transfer of stored CDR records, optionally for a time
+ * interval of recordCreationTime. Records arrive via Call Detail Records Report
+ * (ECMA-269 §27.1.3).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:362. Errors: `universalFailure` (ECMA-285 §25.1.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

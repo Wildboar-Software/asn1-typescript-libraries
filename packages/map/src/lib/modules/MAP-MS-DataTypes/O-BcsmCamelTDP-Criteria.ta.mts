@@ -77,7 +77,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary O_BcsmCamelTDP_Criteria
  * @description
- * 
+ *
+ * TDP criteria for an originating BCSM detection point (destination number,
+ * basic service, call type, O-cause values). Sequences with an unknown
+ * `o-BcsmTriggerDetectionPoint` shall be ignored as a whole. (3GPP TS 29.002
+ * V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -98,30 +103,56 @@ class O_BcsmCamelTDP_Criteria {
     constructor (
         /**
          * @summary `o_BcsmTriggerDetectionPoint`.
+         * @description
+         *
+         * Other values than `collectedInfo` / `routeSelectFailure`: ignore this
+         * sequence. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly o_BcsmTriggerDetectionPoint: O_BcsmTriggerDetectionPoint,
         /**
          * @summary `destinationNumberCriteria`.
+         * @description
+         *
+         * Destination-number match (match type plus number and/or length lists;
+         * one or both lists shall be present). (3GPP TS 29.002 V19.1.0 clause
+         * 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly destinationNumberCriteria: OPTIONAL<DestinationNumberCriteria>,
         /**
          * @summary `basicServiceCriteria`.
+         * @description
+         *
+         * Basic-service criteria (SIZE 1..5). (3GPP TS 29.002 V19.1.0 clause
+         * 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly basicServiceCriteria: OPTIONAL<BasicServiceCriteria>,
         /**
          * @summary `callTypeCriteria`.
+         * @description
+         *
+         * Whether the call is forwarded or not forwarded. (3GPP TS 29.002
+         * V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly callTypeCriteria: OPTIONAL<CallTypeCriteria>,
         /**
          * @summary `o_CauseValueCriteria`.
+         * @description
+         *
+         * O-BCSM cause values (SIZE 1..5). (3GPP TS 29.002 V19.1.0 clause
+         * 17.7.1)
+         *
          * @public
          * @readonly
          */

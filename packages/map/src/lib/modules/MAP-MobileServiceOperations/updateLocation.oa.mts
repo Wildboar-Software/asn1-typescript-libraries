@@ -82,7 +82,13 @@ import { roamingNotAllowed } from "../MAP-Errors/roamingNotAllowed.oa.mjs";
 /**
  * @summary updateLocation
  * @description
- * 
+ *
+ * MAP_UPDATE_LOCATION: the VLR updates location information stored in the HLR.
+ * Also used by an IWF that registers an MME as MSC for MT-SMS. Confirmed.
+ * Typical path: VLR→HLR. Local opcode 2. Timer class `m` (15 s to 30 s).
+ * Distinctive error: `roamingNotAllowed`. (3GPP TS 29.002 V19.1.0 clauses
+ * 8.1.2.1, 17.1.2, 17.3.2.2 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

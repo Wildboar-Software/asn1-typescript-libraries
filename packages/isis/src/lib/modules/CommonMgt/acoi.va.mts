@@ -15,6 +15,11 @@ import { cmoi } from '../CommonMgt/cmoi.va.mjs';
  * @summary acoi
  * @description
  *
+ * GMI action registration arc `{cmoi action(9)}` (`activate`, `deactivate`,
+ * `shutdown`).
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.11 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

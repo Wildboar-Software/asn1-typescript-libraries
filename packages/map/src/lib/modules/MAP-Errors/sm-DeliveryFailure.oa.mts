@@ -76,6 +76,17 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary sm_DeliveryFailure
  * @description
  * 
+ * Short-message delivery failure. Detailed reasons: memory capacity exceeded;
+ * MS protocol error; MS not equipped; unknown service centre (SC); SC
+ * congestion; invalid SME address; subscriber is not an SC subscriber. Detailed
+ * diagnostic information, if present, is coded as specified in 3GPP TS 23.040
+ * under SMS-SUBMIT-REPORT and SMS-DELIVERY-REPORT, and shall be forwarded in
+ * the MAP_MO_FORWARD_SHORT_MESSAGE and MAP_MT_FORWARD_SHORT_MESSAGE response
+ * (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 32. Parameter `SM-DeliveryFailureCause` is required (3GPP TS
+ * 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

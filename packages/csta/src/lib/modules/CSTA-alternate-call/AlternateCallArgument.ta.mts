@@ -27,7 +27,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary AlternateCallArgument
  * @description
- * 
+ *
+ * Service request for Alternate Call (ECMA-269 §17.1.2 / ECMA-285 §15.1.2).
+ * Identifies the active and held (or alerting/queued) connections at the
+ * alternating device.
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,30 +52,56 @@ class AlternateCallArgument {
     constructor (
         /**
          * @summary `heldCall`.
+         * @description
+         *
+         * Mandatory. Connection at the alternating device that is held,
+         * alerting, or queued; becomes Connected.
+         *
          * @public
          * @readonly
          */
         readonly heldCall: ConnectionID,
         /**
          * @summary `activeCall`.
+         * @description
+         *
+         * Mandatory. Connected connection at the alternating device; becomes
+         * Hold.
+         *
          * @public
          * @readonly
          */
         readonly activeCall: ConnectionID,
         /**
          * @summary `connectionReservation`.
+         * @description
+         *
+         * Optional. When TRUE, reserve the held call's media-stream channel(s)
+         * for later Retrieve, Reconnect, or Alternate.
+         *
          * @public
          * @readonly
          */
         readonly connectionReservation: OPTIONAL<BOOLEAN>,
         /**
          * @summary `consultOptions`.
+         * @description
+         *
+         * Default `unrestricted`. When supported, send a capability-advertised
+         * value so transfer/conference resources can be reserved. Does not
+         * restrict other services.
+         *
          * @public
          * @readonly
          */
         readonly consultOptions: OPTIONAL<ConsultOptions>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and privateData
+         * parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */
@@ -100,6 +132,7 @@ class AlternateCallArgument {
      */
     public static get _default_value_for_consultOptions () { return ConsultOptions_unrestricted; }        /**
          * @summary The enum used as the type of the component `consultOptions`
+         *
          * @public
          * @static
          */

@@ -14,6 +14,15 @@ import type {
 import compareAttCertIssuer from "../../comparators/compareAttCertIssuer.mjs";
 import compareHolder from "../../comparators/compareHolder.mjs";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 19.3.4 `delegationPathMatch`.
+ *
+ * Selects a stored `delegationPath` from an SOA-issued certificate
+ * to the AA that issued the end-entity holder certificate being
+ * validated. TRUE iff `firstIssuer` matches the issuer of the
+ * first AC in the SEQUENCE and `lastHolder` matches the holder of
+ * the last. FALSE if either comparison fails.
+ */
 export
 const delegationPathMatch: EqualityMatcher = (
     assertion: ASN1Element,

@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CancelCallBackMsg
  * @description
- * 
+ * Capability bitmap for the Cancel Call Back Message service (ECMA-269 C.14.4,
+ * ECMA-285 §9.10). Presence of this entry in `LogicalServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +34,9 @@ type CancelCallBackMsg = BIT_STRING;
 /**
  * @summary CancelCallBackMsg_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * Annex C).
  */
 export
 const CancelCallBackMsg_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -32,6 +44,8 @@ const CancelCallBackMsg_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `CancelCallBackMsg_privateData`.
  */
 export
 const privateData: number = CancelCallBackMsg_privateData; /* SHORT_NAMED_BIT */
@@ -39,6 +53,9 @@ const privateData: number = CancelCallBackMsg_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary CancelCallBackMsg_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 Annex C).
  */
 export
 const CancelCallBackMsg_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
@@ -46,6 +63,8 @@ const CancelCallBackMsg_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `CancelCallBackMsg_privateDataInAck`.
  */
 export
 const privateDataInAck: number = CancelCallBackMsg_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -53,6 +72,9 @@ const privateDataInAck: number = CancelCallBackMsg_privateDataInAck; /* SHORT_NA
 /**
  * @summary CancelCallBackMsg_ackModelMultiStep
  * @constant
+ * @description
+ * Bit set means the SF supports the multi-step positive acknowledgement model
+ * (ECMA-269 Annex C).
  */
 export
 const CancelCallBackMsg_ackModelMultiStep: number = 2; /* LONG_NAMED_BIT */
@@ -60,6 +82,8 @@ const CancelCallBackMsg_ackModelMultiStep: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary ackModelMultiStep
  * @constant
+ * @description
+ * Alias of `CancelCallBackMsg_ackModelMultiStep`.
  */
 export
 const ackModelMultiStep: number = CancelCallBackMsg_ackModelMultiStep; /* SHORT_NAMED_BIT */
@@ -67,6 +91,9 @@ const ackModelMultiStep: number = CancelCallBackMsg_ackModelMultiStep; /* SHORT_
 /**
  * @summary CancelCallBackMsg_supportsClearing
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const CancelCallBackMsg_supportsClearing: number = 3; /* LONG_NAMED_BIT */
@@ -74,6 +101,8 @@ const CancelCallBackMsg_supportsClearing: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary supportsClearing
  * @constant
+ * @description
+ * Alias of `CancelCallBackMsg_supportsClearing`.
  */
 export
 const supportsClearing: number = CancelCallBackMsg_supportsClearing; /* SHORT_NAMED_BIT */

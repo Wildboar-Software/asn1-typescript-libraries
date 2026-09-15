@@ -75,7 +75,10 @@ import { maxNumOfExt_BasicServiceGroups } from "./maxNumOfExt-BasicServiceGroups
 /**
  * @summary Ext_CallBarFeatureList
  * @description
- * 
+ *
+ * List of extensible call barring features, one item per Basic Service Group
+ * (3GPP TS 29.002 V19.1.0 clause 7.6.3.20).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

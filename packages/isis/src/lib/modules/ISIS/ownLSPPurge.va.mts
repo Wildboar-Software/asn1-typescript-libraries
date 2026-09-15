@@ -15,6 +15,12 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary ownLSPPurge
  * @description
  *
+ * `specificProblems` value when a zero-aged copy of this system's own LSP is
+ * received from another system (erroneous purge). probableCause
+ * `communicationsProtocolError`; severity Minor.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

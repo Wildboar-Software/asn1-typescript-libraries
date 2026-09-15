@@ -83,6 +83,10 @@ enum _enum_for_AbsentSubscriberReason {
  * @summary AbsentSubscriberReason
  * @description
  * 
+ * Qualifier on `AbsentSubscriberParam`. At reception of values other than the
+ * ones listed, this parameter shall be ignored (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -103,6 +107,10 @@ type AbsentSubscriberReason = _enum_for_AbsentSubscriberReason | ENUMERATED;
 
 /**
  * @summary AbsentSubscriberReason_imsiDetach
+ * @description
+ *
+ * Subscriber was IMSI detached (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +119,10 @@ const AbsentSubscriberReason_imsiDetach: AbsentSubscriberReason = 0; /* LONG_NAM
 
 /**
  * @summary imsiDetach
+ * @description
+ *
+ * Subscriber was IMSI detached (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +131,10 @@ const imsiDetach: AbsentSubscriberReason = AbsentSubscriberReason_imsiDetach; /*
 
 /**
  * @summary AbsentSubscriberReason_restrictedArea
+ * @description
+ *
+ * Subscriber was in a restricted area (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +143,10 @@ const AbsentSubscriberReason_restrictedArea: AbsentSubscriberReason = 1; /* LONG
 
 /**
  * @summary restrictedArea
+ * @description
+ *
+ * Subscriber was in a restricted area (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -135,6 +155,10 @@ const restrictedArea: AbsentSubscriberReason = AbsentSubscriberReason_restricted
 
 /**
  * @summary AbsentSubscriberReason_noPageResponse
+ * @description
+ *
+ * Subscriber did not respond to paging (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +167,10 @@ const AbsentSubscriberReason_noPageResponse: AbsentSubscriberReason = 2; /* LONG
 
 /**
  * @summary noPageResponse
+ * @description
+ *
+ * Subscriber did not respond to paging (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -151,6 +179,12 @@ const noPageResponse: AbsentSubscriberReason = AbsentSubscriberReason_noPageResp
 
 /**
  * @summary AbsentSubscriberReason_purgedMS
+ * @description
+ *
+ * Defined for the Super-Charger feature (see TS 23.116). If received in a
+ * Provide Roaming Number response it shall be mapped to `imsiDetach` in the
+ * Send Routeing Information response (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -159,6 +193,12 @@ const AbsentSubscriberReason_purgedMS: AbsentSubscriberReason = 3; /* LONG_NAMED
 
 /**
  * @summary purgedMS
+ * @description
+ *
+ * Defined for the Super-Charger feature (see TS 23.116). If received in a
+ * Provide Roaming Number response it shall be mapped to `imsiDetach` in the
+ * Send Routeing Information response (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -167,6 +207,11 @@ const purgedMS: AbsentSubscriberReason = AbsentSubscriberReason_purgedMS; /* SHO
 
 /**
  * @summary AbsentSubscriberReason_mtRoamingRetry
+ * @description
+ *
+ * Used during MT Roaming Retry; see 3GPP TS 23.018 (3GPP TS 29.002 V19.1.0
+ * clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -175,6 +220,11 @@ const AbsentSubscriberReason_mtRoamingRetry: AbsentSubscriberReason = 4; /* LONG
 
 /**
  * @summary mtRoamingRetry
+ * @description
+ *
+ * Used during MT Roaming Retry; see 3GPP TS 23.018 (3GPP TS 29.002 V19.1.0
+ * clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -183,6 +233,11 @@ const mtRoamingRetry: AbsentSubscriberReason = AbsentSubscriberReason_mtRoamingR
 
 /**
  * @summary AbsentSubscriberReason_busySubscriber
+ * @description
+ *
+ * Used during MT Roaming Forwarding; see 3GPP TS 23.018 (3GPP TS 29.002 V19.1.0
+ * clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -191,6 +246,11 @@ const AbsentSubscriberReason_busySubscriber: AbsentSubscriberReason = 5; /* LONG
 
 /**
  * @summary busySubscriber
+ * @description
+ *
+ * Used during MT Roaming Forwarding; see 3GPP TS 23.018 (3GPP TS 29.002 V19.1.0
+ * clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */

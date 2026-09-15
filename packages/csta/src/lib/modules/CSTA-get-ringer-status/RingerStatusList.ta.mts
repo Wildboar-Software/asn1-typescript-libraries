@@ -14,7 +14,12 @@ import { RingerStatusList_Item, _decode_RingerStatusList_Item, _encode_RingerSta
 /**
  * @summary RingerStatusList
  * @description
- * 
+ *
+ * SEQUENCE OF ringer-status entries (ECMA-269 §21.1.11.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ConnectionMode
  * @description
- * 
+ *
+ * How a media access device (MAD) is added to a call when attaching a media
+ * service. Each value names the call-control model used, except `direct` (MAD
+ * already in the call). ECMA-269 §19.1.1.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,7 +50,13 @@ enum _enum_for_ConnectionMode {
 /**
  * @summary ConnectionMode
  * @description
- * 
+ *
+ * How a media access device (MAD) is added to a call when attaching a media
+ * service. Each value names the call-control model used, except `direct` (MAD
+ * already in the call). ECMA-269 §19.1.1.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,7 +81,13 @@ type ConnectionMode = _enum_for_ConnectionMode;
 /**
  * @summary ConnectionMode
  * @description
- * 
+ *
+ * How a media access device (MAD) is added to a call when attaching a media
+ * service. Each value names the call-control model used, except `direct` (MAD
+ * already in the call). ECMA-269 §19.1.1.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,6 +111,11 @@ const ConnectionMode = _enum_for_ConnectionMode;
 
 /**
  * @summary ConnectionMode_consultationConference
+ * @description
+ *
+ * Conference the MAD via Consultation Call and Conference Call. ECMA-269
+ * §19.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +132,11 @@ const consultationConference: ConnectionMode = ConnectionMode.consultationConfer
 
 /**
  * @summary ConnectionMode_consultationConferenceHold
+ * @description
+ *
+ * Conference the MAD via Consultation Call and Hold (attaching device held).
+ * ECMA-269 §19.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +153,10 @@ const consultationConferenceHold: ConnectionMode = ConnectionMode.consultationCo
 
 /**
  * @summary ConnectionMode_deflect
+ * @description
+ *
+ * Move the call to the MAD via Deflect Call. ECMA-269 §19.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +173,10 @@ const deflect: ConnectionMode = ConnectionMode.deflect; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary ConnectionMode_directedPickup
+ * @description
+ *
+ * Direct the call to the MAD via Directed Pickup. ECMA-269 §19.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +193,11 @@ const directedPickup: ConnectionMode = ConnectionMode.directedPickup; /* SHORT_N
 
 /**
  * @summary ConnectionMode_join
+ * @description
+ *
+ * Add a device via Join Call; the application chooses the MAD. ECMA-269
+ * §19.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +214,10 @@ const join: ConnectionMode = ConnectionMode.join; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary ConnectionMode_singleStepConference
+ * @description
+ *
+ * Conference the MAD via Single Step Conference. ECMA-269 §19.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +234,10 @@ const singleStepConference: ConnectionMode = ConnectionMode.singleStepConference
 
 /**
  * @summary ConnectionMode_singleStepConferenceHold
+ * @description
+ *
+ * Single Step Conference plus Hold at the attaching device. ECMA-269 §19.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -205,6 +254,10 @@ const singleStepConferenceHold: ConnectionMode = ConnectionMode.singleStepConfer
 
 /**
  * @summary ConnectionMode_singleStepTransfer
+ * @description
+ *
+ * Transfer the MAD in via Single Step Transfer. ECMA-269 §19.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -221,6 +274,10 @@ const singleStepTransfer: ConnectionMode = ConnectionMode.singleStepTransfer; /*
 
 /**
  * @summary ConnectionMode_transfer
+ * @description
+ *
+ * Transfer the MAD via Consultation Call and Transfer. ECMA-269 §19.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -237,6 +294,11 @@ const transfer: ConnectionMode = ConnectionMode.transfer; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary ConnectionMode_direct
+ * @description
+ *
+ * Bind the media service to the existing connection; MAD already in the call.
+ * ECMA-269 §19.1.1.
+ *
  * @constant
  * @type {number}
  */

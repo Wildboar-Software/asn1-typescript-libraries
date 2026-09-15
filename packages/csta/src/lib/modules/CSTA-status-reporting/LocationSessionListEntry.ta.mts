@@ -17,7 +17,11 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary LocationSessionListEntry
  * @description
- * 
+ *
+ * One location tracking session. ECMA-269 §28.1.12.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +37,21 @@ class LocationSessionListEntry {
     constructor (
         /**
          * @summary `locCrossRefID`.
+         * @description
+         *
+         * Cross-reference assigned when the session was created. ECMA-269
+         * §28.1.12.
+         *
          * @public
          * @readonly
          */
         readonly locCrossRefID: LocCrossRefID,
         /**
          * @summary `locDevice`.
+         * @description
+         *
+         * DeviceID of the tracked resource. ECMA-269 §28.1.12.
+         *
          * @public
          * @readonly
          */

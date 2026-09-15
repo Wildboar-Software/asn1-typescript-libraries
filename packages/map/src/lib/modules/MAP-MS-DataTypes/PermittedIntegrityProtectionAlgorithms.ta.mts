@@ -75,7 +75,13 @@ import { maxPermittedIntegrityProtectionAlgorithmsLength } from "./maxPermittedI
 /**
  * @summary PermittedIntegrityProtectionAlgorithms
  * @description
- * 
+ *
+ * Complete PermittedIntegrityProtectionAlgorithms from 3GPP TS 25.413, encoded
+ * as mandated there. Padding bits, if needed, occupy the least significant bits
+ * of the last octet. Size 1..9 octets.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

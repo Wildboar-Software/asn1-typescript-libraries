@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PDP_Address
  * @description
- * 
+ *
+ * Address of the data protocol as in 3GPP TS 23.060. Octets follow 3GPP TS
+ * 29.060: 1-7 octets X.25, 4 octets IPv4, 16 octets IPv6.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.45 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,7 +18,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CallerIDStatusEvent
  * @description
- * 
+ *
+ * Caller ID Status event (ECMA-269 §22.2.11 / ECMA-285 §20.2.11). Direction:
+ * SF→CF via Event Report. Caller ID status changed (telephone or Set Caller ID
+ * Status). Not generated when a Set request leaves the feature unchanged
+ * (ECMA-269 §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +43,29 @@ class CallerIDStatusEvent {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device whose Caller ID status changed.
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `callerIDProvided`.
+         * @description
+         *
+         * TRUE: provide Caller ID on originating calls. FALSE: do not provide
+         * it to the called device.
          * @public
          * @readonly
          */
         readonly callerIDProvided: BOOLEAN,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

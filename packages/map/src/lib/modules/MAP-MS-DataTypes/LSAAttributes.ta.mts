@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LSAAttributes
  * @description
- * 
+ *
+ * Priority, preferential-access, and active-mode support for an LSA. One octet,
+ * coded according to 3GPP TS 48.008. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.56
+ * and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

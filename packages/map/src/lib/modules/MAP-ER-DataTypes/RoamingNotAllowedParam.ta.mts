@@ -75,6 +75,10 @@ import { AdditionalRoamingNotAllowedCause, _enum_for_AdditionalRoamingNotAllowed
  * @summary RoamingNotAllowedParam
  * @description
  * 
+ * Parameter of `roamingNotAllowed`. If `additionalRoamingNotAllowedCause` is
+ * received by the MSC/VLR or SGSN, `roamingNotAllowedCause` shall be discarded
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,6 +96,12 @@ class RoamingNotAllowedParam {
     constructor (
         /**
          * @summary `roamingNotAllowedCause`.
+         * @description
+         *
+         * Cause of roaming not allowed. Discarded if
+         * `additionalRoamingNotAllowedCause` is received by the MSC/VLR or SGSN
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+         *
          * @public
          * @readonly
          */
@@ -104,6 +114,11 @@ class RoamingNotAllowedParam {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalRoamingNotAllowedCause`.
+         * @description
+         *
+         * If received by the MSC/VLR or SGSN, `roamingNotAllowedCause` shall be
+         * discarded (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+         *
          * @public
          * @readonly
          */

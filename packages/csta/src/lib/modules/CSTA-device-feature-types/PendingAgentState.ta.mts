@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary PendingAgentState
  * @description
- * 
+ *
+ * Agent state the agent will transition to after Busy or Working After Call.
+ * Provided when the switching function delays that transition. Values: Working
+ * After Call, Not Ready, Ready, Null (no Busy). ECMA-269 §22.1.5.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,7 +38,13 @@ enum _enum_for_PendingAgentState {
 /**
  * @summary PendingAgentState
  * @description
- * 
+ *
+ * Agent state the agent will transition to after Busy or Working After Call.
+ * Provided when the switching function delays that transition. Values: Working
+ * After Call, Not Ready, Ready, Null (no Busy). ECMA-269 §22.1.5.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,7 +63,13 @@ type PendingAgentState = _enum_for_PendingAgentState;
 /**
  * @summary PendingAgentState
  * @description
- * 
+ *
+ * Agent state the agent will transition to after Busy or Working After Call.
+ * Provided when the switching function delays that transition. Values: Working
+ * After Call, Not Ready, Ready, Null (no Busy). ECMA-269 §22.1.5.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,14 +87,17 @@ const PendingAgentState = _enum_for_PendingAgentState;
 
 /**
  * @summary PendingAgentState_agentNotReady
+ * @description Pending transition to Agent Not Ready. ECMA-269 §22.1.5.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const PendingAgentState_agentNotReady: PendingAgentState = PendingAgentState.agentNotReady; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentNotReady
+ * @description Alias of {@link PendingAgentState_agentNotReady}.
  * @constant
  * @type {number}
  */
@@ -85,14 +106,17 @@ const agentNotReady: PendingAgentState = PendingAgentState.agentNotReady; /* SHO
 
 /**
  * @summary PendingAgentState_agentNull
+ * @description Pending transition to Agent Null (logged off). ECMA-269 §22.1.5.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const PendingAgentState_agentNull: PendingAgentState = PendingAgentState.agentNull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentNull
+ * @description Alias of {@link PendingAgentState_agentNull}.
  * @constant
  * @type {number}
  */
@@ -101,14 +125,17 @@ const agentNull: PendingAgentState = PendingAgentState.agentNull; /* SHORT_NAMED
 
 /**
  * @summary PendingAgentState_agentReady
+ * @description Pending transition to Agent Ready. ECMA-269 §22.1.5.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const PendingAgentState_agentReady: PendingAgentState = PendingAgentState.agentReady; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentReady
+ * @description Alias of {@link PendingAgentState_agentReady}.
  * @constant
  * @type {number}
  */
@@ -117,14 +144,18 @@ const agentReady: PendingAgentState = PendingAgentState.agentReady; /* SHORT_NAM
 
 /**
  * @summary PendingAgentState_agentWorkingAfterCall
+ * @description
+ * Pending transition to Agent Working After Call. ECMA-269 §22.1.5.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const PendingAgentState_agentWorkingAfterCall: PendingAgentState = PendingAgentState.agentWorkingAfterCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentWorkingAfterCall
+ * @description Alias of {@link PendingAgentState_agentWorkingAfterCall}.
  * @constant
  * @type {number}
  */

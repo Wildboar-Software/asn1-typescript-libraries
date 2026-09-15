@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RFSP_ID
  * @description
- * 
+ *
+ * Subscriber Profile ID for RAT/Frequency Priority (1..256). See 3GPP TS
+ * 23.401, 36.413, and 23.060.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

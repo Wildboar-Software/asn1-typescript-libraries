@@ -9,7 +9,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CancelTelephonyTonesResult
  * @description
- * 
+ *
+ * Positive acknowledgement: `extensions` (security/privateData) or
+ * `noData` when those are omitted.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

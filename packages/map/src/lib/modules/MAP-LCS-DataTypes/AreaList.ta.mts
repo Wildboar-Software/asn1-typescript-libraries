@@ -75,7 +75,10 @@ import { maxNumOfAreas } from "./maxNumOfAreas.va.mjs";
 /**
  * @summary AreaList
  * @description
- * 
+ *
+ * SEQUENCE SIZE (1..maxNumOfAreas) OF Area (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

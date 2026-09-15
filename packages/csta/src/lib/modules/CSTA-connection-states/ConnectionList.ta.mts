@@ -14,7 +14,15 @@ import { ConnectionList_Item, _decode_ConnectionList_Item, _encode_ConnectionLis
 /**
  * @summary ConnectionList
  * @description
- * 
+ *
+ * Links a device’s old `ConnectionID` to its new `ConnectionID`
+ * after conference or transfer (ECMA-269 §12.2.9; ECMA-285 §9.4).
+ * Use it to keep manipulating devices that remain in the resulting
+ * call. One entry per reported device or connection.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

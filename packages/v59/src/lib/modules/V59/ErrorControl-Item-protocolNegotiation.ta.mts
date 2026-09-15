@@ -22,7 +22,10 @@ enum _enum_for_ErrorControl_Item_protocolNegotiation {
 /**
  * @summary ErrorControl_Item_protocolNegotiation
  * @description
- * 
+ *
+ * Table 18/V.59: `disabled`(0) no error control, `lapm`(1) LAPM, `v42annexA`(2)
+ * V.42 Annex A. Extensible. ITU-T Rec. V.59 (11/2000) §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +40,10 @@ type ErrorControl_Item_protocolNegotiation = _enum_for_ErrorControl_Item_protoco
 
 /**
  * @summary ErrorControl_Item_protocolNegotiation_disabled
+ * @description
+ *
+ * No error-control protocol used. Table 18/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.12.
  * @constant
  * @type {number}
  */
@@ -53,6 +60,9 @@ const disabled: ErrorControl_Item_protocolNegotiation = ErrorControl_Item_protoc
 
 /**
  * @summary ErrorControl_Item_protocolNegotiation_lapm
+ * @description
+ *
+ * LAPM used. Table 18/V.59. ITU-T Rec. V.59 (11/2000) §6.12.
  * @constant
  * @type {number}
  */
@@ -69,6 +79,9 @@ const lapm: ErrorControl_Item_protocolNegotiation = ErrorControl_Item_protocolNe
 
 /**
  * @summary ErrorControl_Item_protocolNegotiation_v42annexA
+ * @description
+ *
+ * V.42 Annex A used. Table 18/V.59. ITU-T Rec. V.59 (11/2000) §6.12.
  * @constant
  * @type {number}
  */

@@ -1,0 +1,64 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS-1/Integer32.ta.mjs";
+// export { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS-1/Integer32.ta.mjs";
+
+
+/**
+ * @summary TerminateUploadSequence_Request
+ * @description
+ * 
+ * Client request to delete the ULSM, whether or not upload finished.
+ * Terminating before `moreFollows` false is an error but still deletes the
+ * ULSM. ISO 9506-1:2003 §11.7. ISO 9506-2:2003 §11.7.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * TerminateUploadSequence-Request  ::=  Integer32
+ * ```
+ */
+export
+type TerminateUploadSequence_Request = Integer32; // DefinedType
+
+let _cached_decoder_for_TerminateUploadSequence_Request: $.ASN1Decoder<TerminateUploadSequence_Request> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) TerminateUploadSequence_Request
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_TerminateUploadSequence_Request (el: _Element): TerminateUploadSequence_Request {
+    if (!_cached_decoder_for_TerminateUploadSequence_Request) { _cached_decoder_for_TerminateUploadSequence_Request = _decode_Integer32; }
+    return _cached_decoder_for_TerminateUploadSequence_Request(el);
+}
+
+let _cached_encoder_for_TerminateUploadSequence_Request: $.ASN1Encoder<TerminateUploadSequence_Request> | null = null;
+
+/**
+ * @summary Encodes a(n) TerminateUploadSequence_Request into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The TerminateUploadSequence_Request, encoded as an ASN.1 Element.
+ */
+export
+function _encode_TerminateUploadSequence_Request (value: TerminateUploadSequence_Request, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_TerminateUploadSequence_Request) { _cached_encoder_for_TerminateUploadSequence_Request = _encode_Integer32; }
+    return _cached_encoder_for_TerminateUploadSequence_Request(value, elGetter);
+}
+
+
+/* eslint-enable */

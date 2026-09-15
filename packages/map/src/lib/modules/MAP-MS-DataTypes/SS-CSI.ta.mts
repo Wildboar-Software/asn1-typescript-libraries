@@ -73,7 +73,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SS_CSI
  * @description
- * 
+ *
+ * Supplementary service CAMEL subscription. `notificationToCSE` and
+ * `csi-Active` shall not be present when SS-CSI is sent to the VLR (ATSI/ATM
+ * ack/NSDC only).
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +101,12 @@ class SS_CSI {
     constructor (
         /**
          * @summary `ss_CamelData`.
+         * @description
+         *
+         * SS event list and gsmSCF address for SS-CSI.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
@@ -107,12 +119,26 @@ class SS_CSI {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
+         * be included only in ATSI/ATM ack/NSDC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly notificationToCSE: OPTIONAL<NULL>,
         /**
          * @summary `csi_Active`.
+         * @description
+         *
+         * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
+         * be included only in ATSI/ATM ack/NSDC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

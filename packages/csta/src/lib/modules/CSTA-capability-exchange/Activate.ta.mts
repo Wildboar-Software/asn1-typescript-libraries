@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary Activate
  * @description
- * 
+ * Capability bitmap for the Activate service (ECMA-269 C.19.1, ECMA-285 §9.10).
+ * Presence of this entry in `VoiceUnitServList` means the SF supports that
+ * service. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +33,9 @@ type Activate = BIT_STRING;
 /**
  * @summary Activate_resource
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `resource` parameter (ECMA-269
+ * C.19.1).
  */
 export
 const Activate_resource: number = 0; /* LONG_NAMED_BIT */
@@ -32,6 +43,8 @@ const Activate_resource: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary resource
  * @constant
+ * @description
+ * Alias of `Activate_resource`.
  */
 export
 const resource: number = Activate_resource; /* SHORT_NAMED_BIT */
@@ -39,6 +52,9 @@ const resource: number = Activate_resource; /* SHORT_NAMED_BIT */
 /**
  * @summary Activate_grammarName
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `grammarName` parameter (ECMA-269
+ * C.19.1).
  */
 export
 const Activate_grammarName: number = 1; /* LONG_NAMED_BIT */
@@ -46,6 +62,8 @@ const Activate_grammarName: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary grammarName
  * @constant
+ * @description
+ * Alias of `Activate_grammarName`.
  */
 export
 const grammarName: number = Activate_grammarName; /* SHORT_NAMED_BIT */
@@ -53,6 +71,9 @@ const grammarName: number = Activate_grammarName; /* SHORT_NAMED_BIT */
 /**
  * @summary Activate_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.19.1).
  */
 export
 const Activate_privateData: number = 2; /* LONG_NAMED_BIT */
@@ -60,6 +81,8 @@ const Activate_privateData: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `Activate_privateData`.
  */
 export
 const privateData: number = Activate_privateData; /* SHORT_NAMED_BIT */
@@ -67,6 +90,9 @@ const privateData: number = Activate_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary Activate_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.19.1).
  */
 export
 const Activate_privateDataInAck: number = 3; /* LONG_NAMED_BIT */
@@ -74,6 +100,8 @@ const Activate_privateDataInAck: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `Activate_privateDataInAck`.
  */
 export
 const privateDataInAck: number = Activate_privateDataInAck; /* SHORT_NAMED_BIT */

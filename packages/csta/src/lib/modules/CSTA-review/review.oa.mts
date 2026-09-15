@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary review
  * @description
- * 
+ *
+ * Voice Review: plays a portion of a voice message during a recording session
+ * (ECMA-269 §26.1.12).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:506. Errors: `universalFailure` (ECMA-285 §24.1.12).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

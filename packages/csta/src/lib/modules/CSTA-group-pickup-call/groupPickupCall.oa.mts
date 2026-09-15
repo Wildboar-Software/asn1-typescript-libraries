@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary groupPickupCall
  * @description
- * 
+ *
+ * Group Pickup Call (ECMA-269 §17.1.14 / ECMA-285 §15.1.14).
+ * Invoked by the computing function on the switching function.
+ * The switching function selects which call in the pick group to
+ * connect (FR 2). Destination is immediately Connected (FR 1).
+ * CallID is unchanged (FR 4). ROSE local CODE 221. Errors are
+ * `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

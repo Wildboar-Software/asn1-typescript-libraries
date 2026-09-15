@@ -78,7 +78,13 @@ import { SupportedRAT_Types, SupportedRAT_Types_utran /* IMPORTED_LONG_NAMED_BIT
 /**
  * @summary VLR_Capability
  * @description
- * 
+ *
+ * VLR/VMSC capabilities in Update Location and Restore Data: CAMEL phases,
+ * SoLSA, IST, Super-Charger, long FTN, LCS sets, offered CAMEL4 CSIs, RAT
+ * types, long Group ID, MTRF, MSISDN-less operation, and Reset-Ids.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3, 8.10.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -106,6 +112,13 @@ class VLR_Capability {
     constructor (
         /**
          * @summary `supportedCamelPhases`.
+         * @description
+         *
+         * CAMEL phases supported. Present if a phase other than phase 1 is
+         * supported. SGSN can only support phase 3 or greater.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.36, 8.1.2.3 and 8.1.7.3).
+         *
          * @public
          * @readonly
          */
@@ -118,66 +131,138 @@ class VLR_Capability {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `solsaSupportIndicator`.
+         * @description
+         *
+         * SoLSA is supported. If absent and the subscriber is allowed only in
+         * subscribed LSAs, HLR shall reject roaming.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly solsaSupportIndicator: OPTIONAL<NULL>,
         /**
          * @summary `istSupportIndicator`.
+         * @description
+         *
+         * IST support: basic IST and optionally IST Command. If absent for an
+         * IST subscriber, HLR may limit service or accept the risk.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.69 and 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly istSupportIndicator: OPTIONAL<IST_SupportIndicator>,
         /**
          * @summary `superChargerSupportedInServingNetworkEntity`.
+         * @description
+         *
+         * Super-Charger support and whether subscription data were retained
+         * (Age Indicator) or data are required. Absent means Super-Charger is
+         * not supported.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.71 and 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly superChargerSupportedInServingNetworkEntity: OPTIONAL<SuperChargerInfo>,
         /**
          * @summary `longFTN_Supported`.
+         * @description
+         *
+         * VLR supports Long Forwarded-to Numbers.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.22B and 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly longFTN_Supported: OPTIONAL<NULL>,
         /**
          * @summary `supportedLCS_CapabilitySets`.
+         * @description
+         *
+         * LCS capability sets supported. If sent with no set marked, LCS is not
+         * supported. If absent from a VLR, at most set1; if absent from an
+         * SGSN, no LCS. SGSN shall not indicate set1.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.11.17 and 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly supportedLCS_CapabilitySets: OPTIONAL<SupportedLCS_CapabilitySets>,
         /**
          * @summary `offeredCamel4CSIs`.
+         * @description
+         *
+         * CAMEL phase 4 CSIs offered (3GPP TS 23.078).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.36D).
+         *
          * @public
          * @readonly
          */
         readonly offeredCamel4CSIs: OPTIONAL<OfferedCamel4CSIs>,
         /**
          * @summary `supportedRAT_TypesIndicator`.
+         * @description
+         *
+         * Access technologies served by the MSC/VLR, SGSN, or MME.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.98).
+         *
          * @public
          * @readonly
          */
         readonly supportedRAT_TypesIndicator: OPTIONAL<SupportedRAT_Types>,
         /**
          * @summary `longGroupID_Supported`.
+         * @description
+         *
+         * VLR supports long Group IDs for VGCS/VBS.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly longGroupID_Supported: OPTIONAL<NULL>,
         /**
          * @summary `mtRoamingForwardingSupported`.
+         * @description
+         *
+         * Entity supports MT Roaming Forwarding (3GPP TS 23.018 and 23.012).
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.5.20 and 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly mtRoamingForwardingSupported: OPTIONAL<NULL>,
         /**
          * @summary `msisdn_lessOperation_Supported`.
+         * @description
+         *
+         * Support of MSISDN-less operation (3GPP TS 23.012 clause 3.6.1.5).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly msisdn_lessOperation_Supported: OPTIONAL<NULL>,
         /**
          * @summary `reset_ids_Supported`.
+         * @description
+         *
+         * MSC/VLR supports Reset-Ids.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+         *
          * @public
          * @readonly
          */

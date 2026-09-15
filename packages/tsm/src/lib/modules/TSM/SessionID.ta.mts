@@ -17,7 +17,10 @@ import { UINT32, _decode_UINT32, _encode_UINT32 } from "../TSM/UINT32.ta.mjs";
 /**
  * @summary SessionID
  * @description
- * 
+ *
+ * TLS session identifier. Annex A types this as `UINT32` (TLS itself
+ * uses an opaque vector). ITU-T Rec. X.1084 (05/2008) §10.3.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

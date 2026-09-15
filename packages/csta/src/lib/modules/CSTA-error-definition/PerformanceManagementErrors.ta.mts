@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary PerformanceManagementErrors
  * @description
- * 
+ *
+ * Error returned as a performance-management mechanism (ECMA-269 §9.3.1,
+ * §12.2.14.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +33,12 @@ enum _enum_for_PerformanceManagementErrors {
 /**
  * @summary PerformanceManagementErrors
  * @description
- * 
+ *
+ * Error returned as a performance-management mechanism (ECMA-269 §9.3.1,
+ * §12.2.14.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +55,12 @@ type PerformanceManagementErrors = _enum_for_PerformanceManagementErrors;
 /**
  * @summary PerformanceManagementErrors
  * @description
- * 
+ *
+ * Error returned as a performance-management mechanism (ECMA-269 §9.3.1,
+ * §12.2.14.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,14 +76,19 @@ const PerformanceManagementErrors = _enum_for_PerformanceManagementErrors;
 
 /**
  * @summary PerformanceManagementErrors_generic
+ * @description
+ * Performance-management error; the server cannot be more specific. ECMA-269
+ * §12.2.14.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const PerformanceManagementErrors_generic: PerformanceManagementErrors = PerformanceManagementErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
+ * @description Alias of {@link PerformanceManagementErrors_generic}.
  * @constant
  * @type {number}
  */
@@ -77,14 +97,18 @@ const generic: PerformanceManagementErrors = PerformanceManagementErrors.generic
 
 /**
  * @summary PerformanceManagementErrors_performanceLimitExceeded
+ * @description A performance limit has been exceeded. ECMA-269 §12.2.14.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const PerformanceManagementErrors_performanceLimitExceeded: PerformanceManagementErrors = PerformanceManagementErrors.performanceLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary performanceLimitExceeded
+ * @description
+ * Alias of {@link PerformanceManagementErrors_performanceLimitExceeded}.
  * @constant
  * @type {number}
  */

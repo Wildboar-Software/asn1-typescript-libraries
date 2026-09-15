@@ -9,7 +9,13 @@ import { AuditoryApparatusList_Item, _decode_AuditoryApparatusList_Item, _encode
 /**
  * @summary AuditoryApparatusList
  * @description
- * 
+ *
+ * Auditory apparatuses on a physical device (speakerphone, handset, headset,
+ * etc.) and which speaker/microphone/hookswitch features they support. ECMA-285
+ * §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

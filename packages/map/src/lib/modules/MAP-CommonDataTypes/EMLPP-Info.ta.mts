@@ -73,7 +73,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary EMLPP_Info
  * @description
- * 
+ *
+ * enhanced Multi-Level Precedence and Pre-emption (eMLPP) subscription data:
+ * maximum entitled priority for outgoing call set-up, and the default priority
+ * used when none is indicated at set-up.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.4.41).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,18 +97,32 @@ class EMLPP_Info {
     constructor (
         /**
          * @summary `maximumentitledPriority`.
+         * @description
+         *
+         * Highest eMLPP priority the subscriber may apply for an outgoing call
+         * set-up. (3GPP TS 29.002 V19.1.0 clause 7.6.4.41).
+         *
          * @public
          * @readonly
          */
         readonly maximumentitledPriority: EMLPP_Priority,
         /**
          * @summary `defaultPriority`.
+         * @description
+         *
+         * Priority assigned if no explicit priority is indicated at call
+         * set-up. (3GPP TS 29.002 V19.1.0 clause 7.6.4.41).
+         *
          * @public
          * @readonly
          */
         readonly defaultPriority: EMLPP_Priority,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+         *
          * @public
          * @readonly
          */

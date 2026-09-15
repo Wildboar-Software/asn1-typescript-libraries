@@ -24,7 +24,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CDRNotificationArgument
  * @description
- * 
+ *
+ * CDR session and optional reason (ECMA-269 §27.1.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +47,32 @@ class CDRNotificationArgument {
     constructor (
         /**
          * @summary `cdrCrossRefID`.
+         * @description
+         *
+         * CDR transmission cross-reference from Start Call Detail Records
+         * Transmission (ECMA-269 §27.1.4).
+         *
          * @public
          * @readonly
          */
         readonly cdrCrossRefID: CDRCrossRefID,
         /**
          * @summary `cdrReason`.
+         * @description
+         *
+         * Why the notification is sent, when provided (ECMA-269 §27.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly cdrReason: OPTIONAL<CDRReason>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

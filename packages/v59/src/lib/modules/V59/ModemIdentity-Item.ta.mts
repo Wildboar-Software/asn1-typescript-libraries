@@ -18,7 +18,11 @@ import { ModemIdentity_Item_multimediaMode, _decode_ModemIdentity_Item_multimedi
 /**
  * @summary ModemIdentity_Item
  * @description
- * 
+ *
+ * Manufacturer, product, firmware, V.59 diagnostic version, and optional
+ * multimedia capability bits. Example: `ModemMaker Inc; PCI Card;2.66;1.0;83`.
+ * ITU-T Rec. V.59 (11/2000) §6.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +44,51 @@ class ModemIdentity_Item {
     constructor (
         /**
          * @summary `manufacturer`.
+         * @description
+         *
+         * Modem manufacturer. IA5 `simpleText` (§6.2.1). Tag-ID `0001`. ITU-T
+         * Rec. V.59 (11/2000) §6.5.
          * @public
          * @readonly
          */
         readonly manufacturer: V59String,
         /**
          * @summary `model`.
+         * @description
+         *
+         * Model or product name. IA5 `simpleText` (§6.2.1). Tag-ID `0002`.
+         * ITU-T Rec. V.59 (11/2000) §6.5.
          * @public
          * @readonly
          */
         readonly model: V59String,
         /**
          * @summary `firmwareVersion`.
+         * @description
+         *
+         * Firmware revision. IA5 `simpleText` (§6.2.1). Tag-ID `0003`. ITU-T
+         * Rec. V.59 (11/2000) §6.5.
          * @public
          * @readonly
          */
         readonly firmwareVersion: V59String,
         /**
          * @summary `diagnosticVersion`.
+         * @description
+         *
+         * Version of V.59 managed objects supported. Clause 1 assigns this
+         * Recommendation version 1 (approved November 2000). IA5 `simpleText`
+         * (§6.2.1). Tag-ID `0004`. ITU-T Rec. V.59 (11/2000) §1, §6.5.
          * @public
          * @readonly
          */
         readonly diagnosticVersion: V59String,
         /**
          * @summary `multimediaMode`.
+         * @description
+         *
+         * Multimedia capability bits: `1` capable, `0` not (Table 4/V.59).
+         * Tag-ID `0005`. ITU-T Rec. V.59 (11/2000) §6.5.
          * @public
          * @readonly
          */

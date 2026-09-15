@@ -76,6 +76,16 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary systemFailure
  * @description
  * 
+ * Returned when a task cannot be performed because of a problem in the entity
+ * reporting the error or in another entity. The type of entity or network
+ * resource may be indicated by the network resource or additional network
+ * resource parameter. If and only if the problem is in the entity reporting the
+ * error, a cause of failure (`FailureCauseParam`) shall be included (3GPP TS
+ * 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 34. Optional parameter `SystemFailureParam` (3GPP TS 29.002
+ * V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

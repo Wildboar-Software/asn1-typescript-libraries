@@ -17,7 +17,13 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getCallerIDStatus
  * @description
- * 
+ *
+ * Get Caller ID Status (ECMA-269 §22.1.9 / ECMA-285 §20.1.9). Direction: CF→SF.
+ * ROSE local CODE 307. Errors: `universalFailure`. Atomic acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

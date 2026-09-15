@@ -78,7 +78,11 @@ enum _enum_for_DomainType {
 /**
  * @summary DomainType
  * @description
- * 
+ *
+ * Requested domain for subscriber-info retrieval: cs-Domain or ps-Domain.
+ * Exception handling: reception of values > 1 shall be mapped to cs-Domain
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

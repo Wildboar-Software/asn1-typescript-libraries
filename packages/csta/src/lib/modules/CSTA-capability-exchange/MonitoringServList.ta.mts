@@ -23,7 +23,13 @@ import { MonitorInfo, _decode_MonitorInfo, _encode_MonitorInfo } from "../CSTA-c
 /**
  * @summary MonitoringServList
  * @description
- * 
+ * Monitoring services the SF supports (ECMA-269 Annex C.3, ECMA-285 §9.10).
+ * Omit unsupported services.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,30 +50,45 @@ class MonitoringServList {
          * @summary `changeMonitorFilter`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly changeMonitorFilter: OPTIONAL<ChangeMonitorFilter>,
         /**
          * @summary `monitorStart`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly monitorStart: OPTIONAL<MonitorStart>,
         /**
          * @summary `monitorStop`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly monitorStop: OPTIONAL<MonitorStop>,
         /**
          * @summary `getMonitors`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly getMonitors: OPTIONAL<GetMonitors>,
         /**
          * @summary `monitorInfo`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly monitorInfo: OPTIONAL<MonitorInfo>
     ) {}

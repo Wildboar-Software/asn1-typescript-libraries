@@ -31,7 +31,16 @@ import { MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-
 /**
  * @summary ReviewEvent
  * @description
- * 
+ *
+ * Indicates that a previously recorded message is being reviewed. Reported to a
+ * computing function that has a device-type or call-type monitor. This module
+ * has no ROSE OPERATION; the payload is a voice-unit event alternative
+ * (ECMA-285 §24.2). (ECMA-269 §26.2.10, ECMA-285 §24.2.10).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,48 +62,83 @@ class ReviewEvent {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Connection on which the message is reviewed (ECMA-269 §26.2.10).
+         *
          * @public
          * @readonly
          */
         readonly connection: ConnectionID,
         /**
          * @summary `message`.
+         * @description
+         *
+         * Message being reviewed; required if the event pertains to a message
+         * (ECMA-269 §26.2.10).
+         *
          * @public
          * @readonly
          */
         readonly message: MessageID,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `length`.
+         * @description
+         *
+         * Length, when provided (ECMA-269 §26.2.10).
+         *
          * @public
          * @readonly
          */
         readonly length: OPTIONAL<INTEGER>,
         /**
          * @summary `currentPosition`.
+         * @description
+         *
+         * Current review position (ECMA-269 §26.2.10).
+         *
          * @public
          * @readonly
          */
         readonly currentPosition: OPTIONAL<INTEGER>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Event cause, when the switching function supplies one.
+         *
          * @public
          * @readonly
          */
         readonly cause: OPTIONAL<EventCause>,
         /**
          * @summary `servicesPermitted`.
+         * @description
+         *
+         * Services permitted on the connection after this event.
+         *
          * @public
          * @readonly
          */
         readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

@@ -15,7 +15,12 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary monitorInfo
  * @description
- * 
+ *
+ * Switching-function-to-computing-function operation that delivers Monitor Info
+ * segments. ECMA-269 §15.1.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

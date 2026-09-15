@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ExtensionType
  * @description
- * 
+ *
+ * TLS hello extension type. Annex A range is `INTEGER(0..66535)`
+ * (likely intended `65535`). ITU-T Rec. X.1084 (05/2008) §10.3.2,
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

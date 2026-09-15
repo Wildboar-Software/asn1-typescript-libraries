@@ -72,7 +72,12 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary shortMsgMO_RelayContext_v3
  * @description
- * 
+ *
+ * Mobile originating short message relay between MSC and IWMSC or SGSN and
+ * IWMSC. Initiator is MSC or SGSN; responder is IWMSC. For SGSN–IWMSC, versions
+ * 1–3 apply. v2 equivalent exists; v1 uses `shortMsg-Relay` version 1 (3GPP TS
+ * 29.002 V19.1.0 clause 17.3.2.22).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

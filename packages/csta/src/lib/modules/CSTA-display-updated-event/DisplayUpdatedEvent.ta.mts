@@ -28,7 +28,16 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary DisplayUpdatedEvent
  * @description
- * 
+ *
+ * Display Updated event (ECMA-269 §21.2.3 / ECMA-285 §19.2.3). Direction: SF→CF
+ * via Event Report. A display's contents changed. Entire display snapshot.
+ * `contentsOfDisplay` has `logicalRows * logicalColumns` characters. After Set
+ * Display, completion matches that service's completion criteria. Not generated
+ * when a Set request leaves the feature unchanged (ECMA-269 §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,66 +62,102 @@ class DisplayUpdatedEvent {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device whose display changed.
          * @public
          * @readonly
          */
         readonly device: SubjectDeviceID,
         /**
          * @summary `displayID`.
+         * @description
+         *
+         * Which display. Omit only if the device has exactly one display.
          * @public
          * @readonly
          */
         readonly displayID: OPTIONAL<DisplayID>,
         /**
          * @summary `logicalRows`.
+         * @description
+         *
+         * Rows on the logical display (fixed per device).
          * @public
          * @readonly
          */
         readonly logicalRows: INTEGER,
         /**
          * @summary `logicalColumns`.
+         * @description
+         *
+         * Columns on the logical display (fixed per device).
          * @public
          * @readonly
          */
         readonly logicalColumns: INTEGER,
         /**
          * @summary `physicalRows`.
+         * @description
+         *
+         * Physical rows. Omit when equal to `logicalRows`.
          * @public
          * @readonly
          */
         readonly physicalRows: OPTIONAL<INTEGER>,
         /**
          * @summary `physicalColumns`.
+         * @description
+         *
+         * Physical columns. Omit when equal to `logicalColumns`.
          * @public
          * @readonly
          */
         readonly physicalColumns: OPTIONAL<INTEGER>,
         /**
          * @summary `physicalBaseRowNumber`.
+         * @description
+         *
+         * Logical row at the first physical row. Omit when row counts are
+         * equal.
          * @public
          * @readonly
          */
         readonly physicalBaseRowNumber: OPTIONAL<INTEGER>,
         /**
          * @summary `physicalBaseColumnNumber`.
+         * @description
+         *
+         * Logical column at the first physical column. Omit when column counts
+         * are equal.
          * @public
          * @readonly
          */
         readonly physicalBaseColumnNumber: OPTIONAL<INTEGER>,
         /**
          * @summary `characterSet`.
+         * @description
+         *
+         * ASCII (default), Unicode, or Proprietary. Fixed per display.
          * @public
          * @readonly
          */
         readonly characterSet: OPTIONAL<CharacterSet>,
         /**
          * @summary `contentsOfDisplay`.
+         * @description
+         *
+         * Full logical display: rows concatenated, including spaces.
          * @public
          * @readonly
          */
         readonly contentsOfDisplay: IA5String,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

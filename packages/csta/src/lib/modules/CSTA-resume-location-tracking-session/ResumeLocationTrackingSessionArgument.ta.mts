@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ResumeLocationTrackingSessionArgument
  * @description
- * 
+ *
+ * Session to resume (ECMA-269 §28.1.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ class ResumeLocationTrackingSessionArgument {
     constructor (
         /**
          * @summary `locCrossRefID`.
+         * @description
+         *
+         * Identifies the location tracking session (ECMA-269 §6.8.4).
+         *
          * @public
          * @readonly
          */
         readonly locCrossRefID: LocCrossRefID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

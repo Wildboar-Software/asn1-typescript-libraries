@@ -72,7 +72,9 @@ import { AreaList, _decode_AreaList, _encode_AreaList } from "../MAP-LCS-DataTyp
 /**
  * @summary AreaDefinition
  * @description
- * 
+ *
+ * Contains `areaList` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -88,6 +90,10 @@ class AreaDefinition {
     constructor (
         /**
          * @summary `areaList`.
+         * @description
+         *
+         * 1..10 areas.
+         *
          * @public
          * @readonly
          */

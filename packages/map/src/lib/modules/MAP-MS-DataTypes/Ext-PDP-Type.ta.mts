@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Ext_PDP_Type
  * @description
- * 
+ *
+ * Dual-stack PDP-type (IPv4v6) encoded as HEX (8D), as defined in 3GPP TS
+ * 23.060, extending PDP-Type. Octets are coded similarly to PDP-Type according
+ * to 3GPP TS 29.060. Only IPv4v6 is allowed (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.2.44A and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

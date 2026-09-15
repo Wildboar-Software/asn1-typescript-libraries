@@ -18,7 +18,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RouteingModeEvent
  * @description
- * 
+ *
+ * Routeing Mode event (ECMA-269 §22.2.15 / ECMA-285 §20.2.15). Direction: SF→CF
+ * via Event Report. Reports the new Route Mode of `device`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +41,28 @@ class RouteingModeEvent {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device whose Route Mode changed.
          * @public
          * @readonly
          */
         readonly device: SubjectDeviceID,
         /**
          * @summary `routeingMode`.
+         * @description
+         *
+         * New Route Mode (TRUE = can make routeing requests).
          * @public
          * @readonly
          */
         readonly routeingMode: BOOLEAN,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

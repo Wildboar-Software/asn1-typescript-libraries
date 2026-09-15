@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MatchType
  * @description
- * 
+ *
+ * How destination-number criteria match: inhibiting or enabling. Used in O-BCSM
+ * CAMEL TDP criteria. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,7 +95,10 @@ enum _enum_for_MatchType {
 /**
  * @summary MatchType
  * @description
- * 
+ *
+ * How destination-number criteria match: inhibiting or enabling. Used in O-BCSM
+ * CAMEL TDP criteria. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -109,7 +115,10 @@ type MatchType = _enum_for_MatchType;
 /**
  * @summary MatchType
  * @description
- * 
+ *
+ * How destination-number criteria match: inhibiting or enabling. Used in O-BCSM
+ * CAMEL TDP criteria. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -125,6 +134,11 @@ const MatchType = _enum_for_MatchType;
 
 /**
  * @summary MatchType_inhibiting
+ * @description
+ *
+ * Inhibiting match of destination-number criteria. (3GPP TS 29.002 V19.1.0
+ * clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +147,11 @@ const MatchType_inhibiting: MatchType = MatchType.inhibiting; /* LONG_NAMED_ENUM
 
 /**
  * @summary inhibiting
+ * @description
+ *
+ * Inhibiting match of destination-number criteria. (3GPP TS 29.002 V19.1.0
+ * clause 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +160,11 @@ const inhibiting: MatchType = MatchType.inhibiting; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary MatchType_enabling
+ * @description
+ *
+ * Enabling match of destination-number criteria. (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.1)
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +173,11 @@ const MatchType_enabling: MatchType = MatchType.enabling; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary enabling
+ * @description
+ *
+ * Enabling match of destination-number criteria. (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.1)
+ *
  * @constant
  * @type {number}
  */

@@ -74,7 +74,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary MOLR_Class
  * @description
- * 
+ *
+ * One Mobile Originating Location Request class: SS-Code and SS-Status. (3GPP
+ * TS 29.002 V19.1.0 clauses 7.6.3.65A and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +95,22 @@ class MOLR_Class {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * MO-LR class SS-Code (clause 7.6.4.1). (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.65A)
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: SS_Code,
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * SS-Status of this MO-LR class. (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.65A)
+         *
          * @public
          * @readonly
          */

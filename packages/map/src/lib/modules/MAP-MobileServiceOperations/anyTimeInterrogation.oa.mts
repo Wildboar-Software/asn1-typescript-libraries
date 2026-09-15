@@ -82,7 +82,15 @@ import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 /**
  * @summary anyTimeInterrogation
  * @description
- * 
+ *
+ * MAP_ANY_TIME_INTERROGATION: gsmSCF (or Presence Network Agent) requests
+ * information at any time: subscriber state/location/Time Zone/T-ADS from the
+ * HLR; location only from the GMLC; MNP information only from the NPLR.
+ * Confirmed. Typical path: gsmSCF→HLR, gsmSCF→GMLC, or gsmSCF→NPLR. Local
+ * opcode 71. Timer class `m` (15 s to 30 s). Distinctive error:
+ * `ati-NotAllowed`. (3GPP TS 29.002 V19.1.0 clauses 8.11.1.1, 17.1.2, 17.3.2.29
+ * and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

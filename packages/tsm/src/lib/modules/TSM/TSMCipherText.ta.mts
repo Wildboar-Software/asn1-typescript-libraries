@@ -23,7 +23,11 @@ import { TSMCipherText_fragment, _decode_TSMCipherText_fragment, _encode_TSMCiph
 /**
  * @summary TSMCipherText
  * @description
- * 
+ *
+ * Encrypted TSM record: `type` is the TLS content type; `fragment` is a
+ * stream or block cipher encoding of the corresponding plaintext fragment.
+ * ITU-T Rec. X.1084 (05/2008) §10.3.1, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,24 +49,42 @@ class TSMCipherText {
     constructor (
         /**
          * @summary `protocolID`.
+         * @description
+         *
+         * Same role as `TSMPlainText.protocolID`. X.1084 §10.3.1.
+         *
          * @public
          * @readonly
          */
         readonly protocolID: ProtocolIdentifier,
         /**
          * @summary `type_`.
+         * @description
+         *
+         * TLS content type of the encrypted fragment (CCS 20, alert 21,
+         * handshake 22, application-data 23). X.1084 §10.3.1.
+         *
          * @public
          * @readonly
          */
         readonly type_: ContentType,
         /**
          * @summary `version`.
+         * @description
+         *
+         * Same major/minor pair as TLS `ProtocolVersion`. X.1084 §10.3.1.
+         *
          * @public
          * @readonly
          */
         readonly version: ProtocolVersion,
         /**
          * @summary `fragment`.
+         * @description
+         *
+         * `GenericStreamCipher` or `GenericBlockCipher` per the negotiated
+         * cipher suite. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */

@@ -23,7 +23,12 @@ import { BioAPI_FMR, _decode_BioAPI_FMR, _encode_BioAPI_FMR } from "../BIP/BioAP
 /**
  * @summary BiometricClientProcess
  * @description
- * 
+ *
+ * Client-side process report: BSP/BFP used, template ID (not the
+ * template), sample quality, and comparison score. Lets the verifier
+ * check BSP assurance, revoke templates, and apply risk policy without
+ * seeing the sample. ITU-T Rec. X.1084 (05/2008) §11.1 Table 3, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,24 +47,41 @@ class BiometricClientProcess {
     constructor (
         /**
          * @summary `bFPSchema`.
+         * @description
+         *
+         * BSP/BFP schema(s) used for this process. X.1084 §11.1 Table 3.
+         *
          * @public
          * @readonly
          */
         readonly bFPSchema: BSP_BFP_Schemas,
         /**
          * @summary `templateID`.
+         * @description
+         *
+         * Identifies the reference template (issuer, serial, metadata)
+         * for revocation without sending the template. X.1084 §11.1.
+         *
          * @public
          * @readonly
          */
         readonly templateID: TemplateID,
         /**
          * @summary `sampleQuality`.
+         * @description
+         *
+         * Quality of the captured sample, `0..100`. X.1084 §11.1 item 3.
+         *
          * @public
          * @readonly
          */
         readonly sampleQuality: Quality,
         /**
          * @summary `score`.
+         * @description
+         *
+         * Comparison score as BioAPI FMR. X.1084 §11.1 item 3.
+         *
          * @public
          * @readonly
          */

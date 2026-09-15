@@ -15,6 +15,11 @@ import { cmoi } from '../CommonMgt/cmoi.va.mjs';
  * @summary proi
  * @description
  *
+ * GMI parameter registration arc `{cmoi parameter(5)}`. Action response-code
+ * values are registered under `responseCode` on this arc.
+ *
+ * (ISO/IEC 10589:2002 Annex E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

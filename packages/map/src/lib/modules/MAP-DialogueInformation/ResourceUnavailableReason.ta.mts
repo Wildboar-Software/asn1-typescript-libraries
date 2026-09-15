@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ResourceUnavailableReason
  * @description
- * 
+ *
+ * Diagnostic for MAP-U-ABORT user reason Resource unavailable: short-term or
+ * long-term problem (3GPP TS 29.002 V19.1.0 clause 7.3.4, table 7.3/7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,7 +95,10 @@ enum _enum_for_ResourceUnavailableReason {
 /**
  * @summary ResourceUnavailableReason
  * @description
- * 
+ *
+ * Diagnostic for MAP-U-ABORT user reason Resource unavailable: short-term or
+ * long-term problem (3GPP TS 29.002 V19.1.0 clause 7.3.4, table 7.3/7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -109,7 +115,10 @@ type ResourceUnavailableReason = _enum_for_ResourceUnavailableReason;
 /**
  * @summary ResourceUnavailableReason
  * @description
- * 
+ *
+ * Diagnostic for MAP-U-ABORT user reason Resource unavailable: short-term or
+ * long-term problem (3GPP TS 29.002 V19.1.0 clause 7.3.4, table 7.3/7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -125,6 +134,11 @@ const ResourceUnavailableReason = _enum_for_ResourceUnavailableReason;
 
 /**
  * @summary ResourceUnavailableReason_shortTermResourceLimitation
+ * @description
+ *
+ * `shortTermResourceLimitation (0)`: short-term problem (3GPP TS 29.002 V19.1.0
+ * clause 7.3.4, table 7.3/7).
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +147,11 @@ const ResourceUnavailableReason_shortTermResourceLimitation: ResourceUnavailable
 
 /**
  * @summary shortTermResourceLimitation
+ * @description
+ *
+ * `shortTermResourceLimitation (0)` of `ResourceUnavailableReason` (3GPP TS
+ * 29.002 V19.1.0 clause 7.3.4).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +160,11 @@ const shortTermResourceLimitation: ResourceUnavailableReason = ResourceUnavailab
 
 /**
  * @summary ResourceUnavailableReason_longTermResourceLimitation
+ * @description
+ *
+ * `longTermResourceLimitation (1)`: long-term problem (3GPP TS 29.002 V19.1.0
+ * clause 7.3.4, table 7.3/7).
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +173,11 @@ const ResourceUnavailableReason_longTermResourceLimitation: ResourceUnavailableR
 
 /**
  * @summary longTermResourceLimitation
+ * @description
+ *
+ * `longTermResourceLimitation (1)` of `ResourceUnavailableReason` (3GPP TS
+ * 29.002 V19.1.0 clause 7.3.4).
+ *
  * @constant
  * @type {number}
  */

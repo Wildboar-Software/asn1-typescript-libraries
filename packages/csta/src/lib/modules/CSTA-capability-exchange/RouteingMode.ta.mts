@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary RouteingMode
  * @description
- * 
+ * Capability bitmap for the Routeing Mode event (ECMA-269 C.15.15, ECMA-285
+ * §9.10). Presence of this entry in `LogicalEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,6 +30,9 @@ type RouteingMode = BIT_STRING;
 /**
  * @summary RouteingMode_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.15.15).
  */
 export
 const RouteingMode_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -29,6 +40,8 @@ const RouteingMode_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `RouteingMode_privateData`.
  */
 export
 const privateData: number = RouteingMode_privateData; /* SHORT_NAMED_BIT */

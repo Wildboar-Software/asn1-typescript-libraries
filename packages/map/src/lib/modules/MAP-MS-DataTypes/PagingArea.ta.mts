@@ -73,7 +73,13 @@ import { LocationArea, _decode_LocationArea, _encode_LocationArea } from "../MAP
 /**
  * @summary PagingArea
  * @description
- * 
+ *
+ * Paging area where the MS is currently located: a list of 1..5 location areas
+ * (see 3GPP TS 23.012 and 23.018). Sent in MAP_UPDATE_LOCATION when the VLR
+ * reports the area to the HLR.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.5.18, 8.1.2.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,7 +18,12 @@ import { BiometricMethod, _decode_BiometricMethod, _encode_BiometricMethod } fro
 /**
  * @summary BiometricClientHello
  * @description
- * 
+ *
+ * Client → verifier list of supported biometric methods and user-approved
+ * models (at least one). If none match verifier policy, the verifier sends
+ * `unacceptable-model` or `unacceptable-biometrics` (always fatal).
+ * ITU-T Rec. X.1084 (05/2008) §10.1.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

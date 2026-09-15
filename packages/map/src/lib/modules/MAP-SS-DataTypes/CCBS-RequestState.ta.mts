@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CCBS_RequestState
  * @description
- * 
+ *
+ * CCBS request state in invocation notification (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -103,7 +106,10 @@ enum _enum_for_CCBS_RequestState {
 /**
  * @summary CCBS_RequestState
  * @description
- * 
+ *
+ * CCBS request state in invocation notification (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -126,7 +132,10 @@ type CCBS_RequestState = _enum_for_CCBS_RequestState;
 /**
  * @summary CCBS_RequestState
  * @description
- * 
+ *
+ * CCBS request state in invocation notification (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -148,6 +157,10 @@ const CCBS_RequestState = _enum_for_CCBS_RequestState;
 
 /**
  * @summary CCBS_RequestState_request
+ * @description
+ *
+ * `request (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */
@@ -156,6 +169,10 @@ const CCBS_RequestState_request: CCBS_RequestState = CCBS_RequestState.request; 
 
 /**
  * @summary request
+ * @description
+ *
+ * `request (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */
@@ -164,6 +181,10 @@ const request: CCBS_RequestState = CCBS_RequestState.request; /* SHORT_NAMED_ENU
 
 /**
  * @summary CCBS_RequestState_recall
+ * @description
+ *
+ * `recall (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */
@@ -172,6 +193,10 @@ const CCBS_RequestState_recall: CCBS_RequestState = CCBS_RequestState.recall; /*
 
 /**
  * @summary recall
+ * @description
+ *
+ * `recall (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */
@@ -180,6 +205,10 @@ const recall: CCBS_RequestState = CCBS_RequestState.recall; /* SHORT_NAMED_ENUME
 
 /**
  * @summary CCBS_RequestState_active
+ * @description
+ *
+ * `active (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */
@@ -188,6 +217,10 @@ const CCBS_RequestState_active: CCBS_RequestState = CCBS_RequestState.active; /*
 
 /**
  * @summary active
+ * @description
+ *
+ * `active (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */
@@ -196,6 +229,10 @@ const active: CCBS_RequestState = CCBS_RequestState.active; /* SHORT_NAMED_ENUME
 
 /**
  * @summary CCBS_RequestState_completed
+ * @description
+ *
+ * `completed (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */
@@ -204,6 +241,10 @@ const CCBS_RequestState_completed: CCBS_RequestState = CCBS_RequestState.complet
 
 /**
  * @summary completed
+ * @description
+ *
+ * `completed (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */
@@ -212,6 +253,10 @@ const completed: CCBS_RequestState = CCBS_RequestState.completed; /* SHORT_NAMED
 
 /**
  * @summary CCBS_RequestState_suspended
+ * @description
+ *
+ * `suspended (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */
@@ -220,6 +265,10 @@ const CCBS_RequestState_suspended: CCBS_RequestState = CCBS_RequestState.suspend
 
 /**
  * @summary suspended
+ * @description
+ *
+ * `suspended (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */
@@ -228,6 +277,10 @@ const suspended: CCBS_RequestState = CCBS_RequestState.suspended; /* SHORT_NAMED
 
 /**
  * @summary CCBS_RequestState_frozen
+ * @description
+ *
+ * `frozen (5)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */
@@ -236,6 +289,10 @@ const CCBS_RequestState_frozen: CCBS_RequestState = CCBS_RequestState.frozen; /*
 
 /**
  * @summary frozen
+ * @description
+ *
+ * `frozen (5)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */
@@ -244,6 +301,10 @@ const frozen: CCBS_RequestState = CCBS_RequestState.frozen; /* SHORT_NAMED_ENUME
 
 /**
  * @summary CCBS_RequestState_deleted
+ * @description
+ *
+ * `deleted (6)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */
@@ -252,6 +313,10 @@ const CCBS_RequestState_deleted: CCBS_RequestState = CCBS_RequestState.deleted; 
 
 /**
  * @summary deleted
+ * @description
+ *
+ * `deleted (6)` (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * @constant
  * @type {number}
  */

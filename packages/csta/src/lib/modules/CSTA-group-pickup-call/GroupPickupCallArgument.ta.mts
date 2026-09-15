@@ -21,7 +21,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GroupPickupCallArgument
  * @description
- * 
+ *
+ * Service request for Group Pickup Call (ECMA-269 §17.1.14 /
+ * ECMA-285 §15.1.14). Names the device that will take the call
+ * and optionally the pick group.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +47,57 @@ class GroupPickupCallArgument {
     constructor (
         /**
          * @summary `newDestination`.
+         * @description
+         *
+         * Mandatory. Device that will be Connected. Must be a
+         * complete DeviceID (FR 5). Forwarding and DND are ignored
+         * (FR 3).
+         *
          * @public
          * @readonly
          */
         readonly newDestination: DeviceID,
         /**
          * @summary `pickGroup`.
+         * @description
+         *
+         * Optional pick-group DeviceID. If omitted, the switching
+         * function uses the group administered for
+         * `newDestination` (FR 2). Must be a complete DeviceID
+         * when present (FR 5).
+         *
          * @public
          * @readonly
          */
         readonly pickGroup: OPTIONAL<DeviceID>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional correlator data attached before resulting state
+         * transitions (§12.2.10).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Optional user data sent with the pickup (§12.2.30).
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

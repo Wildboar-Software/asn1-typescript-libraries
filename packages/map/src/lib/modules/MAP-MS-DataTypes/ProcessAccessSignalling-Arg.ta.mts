@@ -81,7 +81,12 @@ import { AoIPCodecsList, _decode_AoIPCodecsList, _encode_AoIPCodecsList } from "
 /**
  * @summary ProcessAccessSignalling_Arg
  * @description
- * 
+ *
+ * MAP_PROCESS_ACCESS_SIGNALLING indication from MSC-B to MSC-A (E-interface) to
+ * pass information received on the A or Iu interface. Non-confirmed service.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.4.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -106,30 +111,65 @@ class ProcessAccessSignalling_Arg {
     constructor (
         /**
          * @summary `an_APDU`.
+         * @description
+         *
+         * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages,
+         * as in 3GPP TS 23.009 and 29.010. The access-network protocol ID
+         * selects 48.006 or 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.9.1).
+         *
          * @public
          * @readonly
          */
         readonly an_APDU: AccessNetworkSignalInfo,
         /**
          * @summary `selectedUMTS_Algorithms`.
+         * @description
+         *
+         * UMTS integrity and optionally encryption algorithms selected by MSC-B
+         * (3GPP TS 25.413).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.12).
+         *
          * @public
          * @readonly
          */
         readonly selectedUMTS_Algorithms: OPTIONAL<SelectedUMTS_Algorithms>,
         /**
          * @summary `selectedGSM_Algorithm`.
+         * @description
+         *
+         * GSM algorithm selected by the GSM BSC controlled by MSC-B (3GPP TS
+         * 48.008).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.15).
+         *
          * @public
          * @readonly
          */
         readonly selectedGSM_Algorithm: OPTIONAL<SelectedGSM_Algorithm>,
         /**
          * @summary `chosenRadioResourceInformation`.
+         * @description
+         *
+         * Chosen Channel and Speech Version IEs as in 3GPP TS 48.008.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.10B).
+         *
          * @public
          * @readonly
          */
         readonly chosenRadioResourceInformation: OPTIONAL<ChosenRadioResourceInformation>,
         /**
          * @summary `selectedRab_Id`.
+         * @description
+         *
+         * Radio access bearer to be kept at subsequent inter-MSC handover from
+         * UMTS to GSM.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.56).
+         *
          * @public
          * @readonly
          */
@@ -142,24 +182,49 @@ class ProcessAccessSignalling_Arg {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `iUSelectedCodec`.
+         * @description
+         *
+         * Codec selected or to be used at the Iu interface.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.18).
+         *
          * @public
          * @readonly
          */
         readonly iUSelectedCodec: OPTIONAL<Codec>,
         /**
          * @summary `iuAvailableCodecsList`.
+         * @description
+         *
+         * Codecs available at the Iu interface in MSC-B, for MSC-A to decide
+         * whether a codec change is possible.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.17A).
+         *
          * @public
          * @readonly
          */
         readonly iuAvailableCodecsList: OPTIONAL<CodecList>,
         /**
          * @summary `aoipSelectedCodecTarget`.
+         * @description
+         *
+         * AoIP codec selected at the target MSC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.24).
+         *
          * @public
          * @readonly
          */
         readonly aoipSelectedCodecTarget: OPTIONAL<AoIPCodec>,
         /**
          * @summary `aoipAvailableCodecsListMap`.
+         * @description
+         *
+         * AoIP codecs available at the target for MAP.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.4.1).
+         *
          * @public
          * @readonly
          */

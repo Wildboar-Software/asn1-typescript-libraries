@@ -76,7 +76,12 @@ import { ProcessGroupCallSignallingArg, _decode_ProcessGroupCallSignallingArg, _
 /**
  * @summary processGroupCallSignalling
  * @description
- * 
+ *
+ * MAP_PROCESS_GROUP_CALL_SIGNALLING: Relay MSC transmits Group Call
+ * notifications to the Anchor MSC. Non-confirmed. Typical path: Relay
+ * MSC→Anchor MSC. Local opcode 41. Timer class `s` (3 s to 10 s). (3GPP TS
+ * 29.002 V19.1.0 clauses 10.5.1, 17.1.2, 17.3.2.30 and 17.6.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

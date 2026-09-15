@@ -11,6 +11,14 @@ import {
 } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
 import { Buffer } from "node:buffer";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 13.3.1
+ * `certificateExactMatch`.
+ *
+ * Uniquely selects a single `Certificate`. TRUE iff serial number
+ * and issuer `Name` in `CertificateExactAssertion` equal those in
+ * the stored certificate.
+ */
 export
 const certificateExactMatch: EqualityMatcher = (
     assertion: ASN1Element,

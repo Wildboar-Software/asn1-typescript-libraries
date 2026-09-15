@@ -81,7 +81,12 @@ import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 /**
  * @summary failureReport
  * @description
- * 
+ *
+ * MAP_FAILURE_REPORT: GGSN informs the HLR that network-requested PDP-context
+ * activation has failed. Typical path: GGSN→HLR. Local opcode 25. Timer class
+ * `m` (15 s to 30 s). (3GPP TS 29.002 V19.1.0 clauses 13.2.1, 17.1.2, 17.3.2.34
+ * and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

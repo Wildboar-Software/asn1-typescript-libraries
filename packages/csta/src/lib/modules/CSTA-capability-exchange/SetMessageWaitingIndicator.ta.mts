@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SetMessageWaitingIndicator
  * @description
- * 
+ * Capability bitmap for the Set Message Waiting Indicator service (ECMA-269
+ * C.12.18, ECMA-285 §9.10). Presence of this entry in `PhysDevServList` means
+ * the SF supports that service. Each set bit is an optional parameter,
+ * enumerated value, initial connection state, or miscellaneous characteristic
+ * from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +34,9 @@ type SetMessageWaitingIndicator = BIT_STRING;
 /**
  * @summary SetMessageWaitingIndicator_deviceForMsg
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.18).
  */
 export
 const SetMessageWaitingIndicator_deviceForMsg: number = 0; /* LONG_NAMED_BIT */
@@ -32,6 +44,8 @@ const SetMessageWaitingIndicator_deviceForMsg: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary deviceForMsg
  * @constant
+ * @description
+ * Alias of `SetMessageWaitingIndicator_deviceForMsg`.
  */
 export
 const deviceForMsg: number = SetMessageWaitingIndicator_deviceForMsg; /* SHORT_NAMED_BIT */
@@ -39,6 +53,9 @@ const deviceForMsg: number = SetMessageWaitingIndicator_deviceForMsg; /* SHORT_N
 /**
  * @summary SetMessageWaitingIndicator_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.12.18).
  */
 export
 const SetMessageWaitingIndicator_privateData: number = 1; /* LONG_NAMED_BIT */
@@ -46,6 +63,8 @@ const SetMessageWaitingIndicator_privateData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SetMessageWaitingIndicator_privateData`.
  */
 export
 const privateData: number = SetMessageWaitingIndicator_privateData; /* SHORT_NAMED_BIT */
@@ -53,6 +72,9 @@ const privateData: number = SetMessageWaitingIndicator_privateData; /* SHORT_NAM
 /**
  * @summary SetMessageWaitingIndicator_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.12.18).
  */
 export
 const SetMessageWaitingIndicator_privateDataInAck: number = 2; /* LONG_NAMED_BIT */
@@ -60,6 +82,8 @@ const SetMessageWaitingIndicator_privateDataInAck: number = 2; /* LONG_NAMED_BIT
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `SetMessageWaitingIndicator_privateDataInAck`.
  */
 export
 const privateDataInAck: number = SetMessageWaitingIndicator_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -67,6 +91,9 @@ const privateDataInAck: number = SetMessageWaitingIndicator_privateDataInAck; /*
 /**
  * @summary SetMessageWaitingIndicator_ackModelMultiStep
  * @constant
+ * @description
+ * Bit set means the SF supports the multi-step positive acknowledgement model
+ * (ECMA-269 C.12.18).
  */
 export
 const SetMessageWaitingIndicator_ackModelMultiStep: number = 3; /* LONG_NAMED_BIT */
@@ -74,6 +101,8 @@ const SetMessageWaitingIndicator_ackModelMultiStep: number = 3; /* LONG_NAMED_BI
 /**
  * @summary ackModelMultiStep
  * @constant
+ * @description
+ * Alias of `SetMessageWaitingIndicator_ackModelMultiStep`.
  */
 export
 const ackModelMultiStep: number = SetMessageWaitingIndicator_ackModelMultiStep; /* SHORT_NAMED_BIT */

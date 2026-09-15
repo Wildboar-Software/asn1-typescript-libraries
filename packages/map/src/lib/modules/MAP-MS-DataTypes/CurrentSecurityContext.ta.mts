@@ -73,7 +73,11 @@ import { UMTS_SecurityContextData, _decode_UMTS_SecurityContextData, _encode_UMT
 /**
  * @summary CurrentSecurityContext
  * @description
- * 
+ *
+ * Current security context for a subscriber: either GSM Security Context data
+ * (Kc, Cksn) or UMTS Security Context Data (Ck, Ik, Ksi) (3GPP TS 29.002
+ * V19.1.0 clause 7.6.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

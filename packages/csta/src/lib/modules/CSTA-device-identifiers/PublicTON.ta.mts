@@ -8,7 +8,24 @@ import { IA5String, ASN1Element as _Element, ASN1TagClass as _TagClass } from "@
 /**
  * @summary PublicTON
  * @description
- * 
+ *
+ * Explicit public Type Of Number in Switching Function
+ * Representation (ECMA-269 §10.1.2; ECMA-155 / ITU-T E.131).
+ *
+ * - `unknown`: TON not classified.
+ * - `international`: e.g. `"14089961010"`.
+ * - `national`: e.g. `"4089961010"`.
+ * - `networkspecific`: encoded in ECMA-285 §9.2; ECMA-269 §10.1.2
+ *   does not define this alternative.
+ * - `subscriber`: e.g. `"9961010"`.
+ * - `abbreviated`: e.g. `"17"`.
+ *
+ * Directory Number characters: `0-9*#A-D`; leading `+` means
+ * international. Visual separators `-()` are allowed.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

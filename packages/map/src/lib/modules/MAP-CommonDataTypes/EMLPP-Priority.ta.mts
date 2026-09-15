@@ -73,7 +73,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EMLPP_Priority
  * @description
- * 
+ *
+ * eMLPP priority. Integer 0..15. Mapping of levels A, B, 0, 1, 2, 3, 4 where A
+ * is highest and 4 is lowest: A=6, B=5, 0=0, 1=1, 2=2, 3=3, 4=4. Integers 7-15
+ * are spare and shall be mapped to 4. Call priority semantics are in 3GPP TS
+ * 23.067.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

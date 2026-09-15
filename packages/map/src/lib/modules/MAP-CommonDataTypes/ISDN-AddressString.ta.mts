@@ -75,7 +75,14 @@ import { maxISDN_AddressLength } from "./maxISDN-AddressLength.va.mjs";
 /**
  * @summary ISDN_AddressString
  * @description
- * 
+ *
+ * ISDN number as an `AddressString` constrained to 1..`maxISDN-AddressLength`
+ * (9 octets). Same first-octet NAI/NPI layout and TBCD digits as
+ * `AddressString`. Used for MSC/HLR/VLR/SGSN numbers, MSISDN, and similar E.164
+ * identities.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.2.17).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary dialDigits
  * @description
- * 
+ *
+ * Dial Digits (ECMA-269 §17.1.12 / ECMA-285 §15.1.12). Invoked
+ * by the computing function on the switching function. Used only
+ * for outbound dialling of an initiated call, not DTMF on a
+ * connected call (use Generate Digits) (FR 2). `diallingConnection`
+ * stays Initiated or becomes Connected. ROSE local CODE 219.
+ * Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

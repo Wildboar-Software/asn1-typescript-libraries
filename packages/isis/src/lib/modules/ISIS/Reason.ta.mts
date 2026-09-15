@@ -15,6 +15,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Reason
  * @description
  *
+ * Enumerated adjacency / initialisation failure cause. Defined in the ISIS
+ * ASN.1 module; the published GDMO text in clause 11.2 does not attach this
+ * type to an attribute.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -45,6 +51,12 @@ export enum _enum_for_Reason {
  * @summary Reason
  * @description
  *
+ * Enumerated adjacency / initialisation failure cause. Defined in the ISIS
+ * ASN.1 module; the published GDMO text in clause 11.2 does not attach this
+ * type to an attribute.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -63,6 +75,12 @@ export type Reason = _enum_for_Reason;
  * @summary Reason
  * @description
  *
+ * Enumerated adjacency / initialisation failure cause. Defined in the ISIS
+ * ASN.1 module; the published GDMO text in clause 11.2 does not attach this
+ * type to an attribute.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -79,6 +97,12 @@ export const Reason = _enum_for_Reason;
 
 /**
  * @summary Reason_holdingTimerExpired
+ * @description
+ *
+ * Holding timer for the adjacency expired (no IIH/ESH in time).
+ *
+ * (ISO/IEC 10589:2002 clauses 8.2.1 and 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -95,6 +119,12 @@ export const holdingTimerExpired: Reason =
 
 /**
  * @summary Reason_checksumError
+ * @description
+ *
+ * Checksum error on a received PDU.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.3.11 and 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +141,12 @@ export const checksumError: Reason =
 
 /**
  * @summary Reason_oneWayConnectivity
+ * @description
+ *
+ * One-way connectivity detected.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +163,12 @@ export const oneWayConnectivity: Reason =
 
 /**
  * @summary Reason_callRejected
+ * @description
+ *
+ * Call rejected (ISO 8208 / DA circuit).
+ *
+ * (ISO/IEC 10589:2002 clauses 8.3 and 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +185,12 @@ export const callRejected: Reason =
 
 /**
  * @summary Reason_reserveTimerExpired
+ * @description
+ *
+ * Reserve timer expired on a DA circuit.
+ *
+ * (ISO/IEC 10589:2002 clauses 8.3 and 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -159,6 +207,12 @@ export const reserveTimerExpired: Reason =
 
 /**
  * @summary Reason_circuitDisabled
+ * @description
+ *
+ * Circuit was disabled.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -175,6 +229,12 @@ export const circuitDisabled: Reason =
 
 /**
  * @summary Reason_versionSkew
+ * @description
+ *
+ * Adjacent system runs an incompatible protocol version.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.5.1 and 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -191,6 +251,12 @@ export const versionSkew: Reason =
 
 /**
  * @summary Reason_areaMismatch
+ * @description
+ *
+ * Two Level 1 ISs share no area address.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.1.5, 11.2.5.1 and 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -207,6 +273,12 @@ export const areaMismatch: Reason =
 
 /**
  * @summary Reason_maximumBroadcastIntermediateSystemsExceeded
+ * @description
+ *
+ * Broadcast circuit IS adjacency limit exceeded.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -223,6 +295,12 @@ export const maximumBroadcastIntermediateSystemsExceeded: Reason =
 
 /**
  * @summary Reason_maximumBroadcastEndSystemsExceeded
+ * @description
+ *
+ * Broadcast circuit ES adjacency limit exceeded.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -239,6 +317,12 @@ export const maximumBroadcastEndSystemsExceeded: Reason =
 
 /**
  * @summary Reason_wrongSystemType
+ * @description
+ *
+ * Neighbour system type is incompatible with this circuit.
+ *
+ * (ISO/IEC 10589:2002 clauses 8.2.4 and 11.3.1).
+ *
  * @constant
  * @type {number}
  */

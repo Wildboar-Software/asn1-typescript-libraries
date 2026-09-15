@@ -19,7 +19,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SendUserInfoArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 18-22).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +41,28 @@ class SendUserInfoArgument {
     constructor (
         /**
          * @summary `existingCall`.
+         * @description
+         *
+         * Connection identifying the call that sends user data.
          * @public
          * @readonly
          */
         readonly existingCall: ConnectionID,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * User-to-user information to send.
          * @public
          * @readonly
          */
         readonly userData: UserData,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

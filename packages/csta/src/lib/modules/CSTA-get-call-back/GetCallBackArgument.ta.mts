@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetCallBackArgument
  * @description
- * 
+ *
+ * Get CallBack request (ECMA-269 §22.1.8.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class GetCallBackArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device to query for callbacks.
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

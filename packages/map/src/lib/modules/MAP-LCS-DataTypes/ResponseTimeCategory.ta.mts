@@ -78,7 +78,10 @@ enum _enum_for_ResponseTimeCategory {
 /**
  * @summary ResponseTimeCategory
  * @description
- * 
+ *
+ * Unrecognized value treated as delaytolerant (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.11.8 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +98,10 @@ type ResponseTimeCategory = _enum_for_ResponseTimeCategory | ENUMERATED;
 
 /**
  * @summary ResponseTimeCategory_lowdelay
+ * @description
+ *
+ * `lowdelay (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.8).
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +110,10 @@ const ResponseTimeCategory_lowdelay: ResponseTimeCategory = 0; /* LONG_NAMED_ENU
 
 /**
  * @summary lowdelay
+ * @description
+ *
+ * `lowdelay (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.8).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +122,10 @@ const lowdelay: ResponseTimeCategory = ResponseTimeCategory_lowdelay; /* SHORT_N
 
 /**
  * @summary ResponseTimeCategory_delaytolerant
+ * @description
+ *
+ * `delaytolerant (1)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.8).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +134,10 @@ const ResponseTimeCategory_delaytolerant: ResponseTimeCategory = 1; /* LONG_NAME
 
 /**
  * @summary delaytolerant
+ * @description
+ *
+ * `delaytolerant (1)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.8).
+ *
  * @constant
  * @type {number}
  */

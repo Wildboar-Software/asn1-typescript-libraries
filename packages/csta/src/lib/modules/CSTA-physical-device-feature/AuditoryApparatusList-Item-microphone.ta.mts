@@ -8,7 +8,11 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AuditoryApparatusList_Item_microphone
  * @description
- * 
+ *
+ * Microphone capabilities of an auditory apparatus. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +30,10 @@ type AuditoryApparatusList_Item_microphone = BIT_STRING;
 
 /**
  * @summary AuditoryApparatusList_Item_microphone_present
+ * @description
+ *
+ * Microphone is present. ECMA-285 §9.16.
+ *
  * @constant
  */
 export
@@ -40,6 +48,10 @@ const present: number = AuditoryApparatusList_Item_microphone_present; /* SHORT_
 
 /**
  * @summary AuditoryApparatusList_Item_microphone_gainSettable
+ * @description
+ *
+ * Microphone gain can be set. ECMA-285 §9.16.
+ *
  * @constant
  */
 export
@@ -54,6 +66,10 @@ const gainSettable: number = AuditoryApparatusList_Item_microphone_gainSettable;
 
 /**
  * @summary AuditoryApparatusList_Item_microphone_gainReadable
+ * @description
+ *
+ * Microphone gain can be read. ECMA-285 §9.16.
+ *
  * @constant
  */
 export
@@ -68,6 +84,10 @@ const gainReadable: number = AuditoryApparatusList_Item_microphone_gainReadable;
 
 /**
  * @summary AuditoryApparatusList_Item_microphone_muteSettable
+ * @description
+ *
+ * Microphone mute can be set. ECMA-285 §9.16.
+ *
  * @constant
  */
 export
@@ -82,6 +102,10 @@ const muteSettable: number = AuditoryApparatusList_Item_microphone_muteSettable;
 
 /**
  * @summary AuditoryApparatusList_Item_microphone_muteReadable
+ * @description
+ *
+ * Microphone mute can be read. ECMA-285 §9.16.
+ *
  * @constant
  */
 export

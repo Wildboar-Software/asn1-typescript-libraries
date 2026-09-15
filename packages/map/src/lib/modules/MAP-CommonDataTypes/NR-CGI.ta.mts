@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NR_CGI
  * @description
- * 
+ *
+ * NR Cell Global Identification. Size 8 octets, coded as described in 3GPP TS
+ * 38.413.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

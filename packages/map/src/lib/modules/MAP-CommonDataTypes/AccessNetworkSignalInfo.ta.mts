@@ -74,7 +74,16 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary AccessNetworkSignalInfo
  * @description
- * 
+ *
+ * Access-network APDU: one or two concatenated complete 3GPP TS 25.413 or 3GPP
+ * TS 48.006 messages, as described in 3GPP TS 23.009 and 3GPP TS 29.010.
+ * `accessNetworkProtocolId` selects 48.006 or 25.413.
+ *
+ * If `accessNetworkProtocolId` is any value other than those listed, the
+ * receiver shall ignore the whole `AccessNetworkSignalInfo` sequence.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.9.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,18 +103,32 @@ class AccessNetworkSignalInfo {
     constructor (
         /**
          * @summary `accessNetworkProtocolId`.
+         * @description
+         *
+         * Selects 3GPP TS 48.006 or 3GPP TS 25.413. Unknown values: ignore the
+         * whole sequence. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.9.1).
+         *
          * @public
          * @readonly
          */
         readonly accessNetworkProtocolId: AccessNetworkProtocolId,
         /**
          * @summary `signalInfo`.
+         * @description
+         *
+         * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages
+         * (clause 7.6.9.1). Coding: TS 25.413, TS 48.006 and TS 48.008.
+         *
          * @public
          * @readonly
          */
         readonly signalInfo: LongSignalInfo,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+         *
          * @public
          * @readonly
          */

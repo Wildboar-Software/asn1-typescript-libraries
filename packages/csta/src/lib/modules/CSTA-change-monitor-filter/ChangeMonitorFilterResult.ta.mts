@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ChangeMonitorFilterResult
  * @description
- * 
+ *
+ * Positive ack (Table 15-3). Actual filter may differ from requested.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,20 @@ class ChangeMonitorFilterResult {
     constructor (
         /**
          * @summary `actualFilterList`.
+         * @description
+         *
+         * Events the SF will actually filter. May be omitted if it
+         * matches the request and the SF supports this parameter.
          * @public
          * @readonly
          */
         readonly actualFilterList: OPTIONAL<MonitorFilter>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 15-3.
          * @public
          * @readonly
          */

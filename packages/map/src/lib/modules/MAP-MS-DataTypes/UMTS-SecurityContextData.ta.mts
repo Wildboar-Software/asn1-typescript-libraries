@@ -74,7 +74,11 @@ import { KSI, _decode_KSI, _encode_KSI } from "../MAP-MS-DataTypes/KSI.ta.mjs";
 /**
  * @summary UMTS_SecurityContextData
  * @description
- * 
+ *
+ * Current UMTS security context: CK, IK, and KSI.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.7.8 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,18 +96,36 @@ class UMTS_SecurityContextData {
     constructor (
         /**
          * @summary `ck`.
+         * @description
+         *
+         * UMTS ciphering key.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.5A).
+         *
          * @public
          * @readonly
          */
         readonly ck: CK,
         /**
          * @summary `ik`.
+         * @description
+         *
+         * UMTS integrity key.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.5B).
+         *
          * @public
          * @readonly
          */
         readonly ik: IK,
         /**
          * @summary `ksi`.
+         * @description
+         *
+         * Key set identifier. Internal structure in 3GPP TS 24.008.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.6A).
+         *
          * @public
          * @readonly
          */

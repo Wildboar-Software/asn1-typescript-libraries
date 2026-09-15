@@ -74,7 +74,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ODB_Data
  * @description
- * 
+ *
+ * Operator Determined Barring data: general categories plus optional
+ * HPLMN-specific categories. Included in Insert Subscriber Data when
+ * `subscriberStatus` is Operator Determined Barring. Not used by the CSS. (3GPP
+ * TS 29.002 V19.1.0 clauses 7.6.3.85, 8.8.1.3, and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +97,22 @@ class ODB_Data {
     constructor (
         /**
          * @summary `odb_GeneralData`.
+         * @description
+         *
+         * ODB categories applicable in any PLMN. (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.9)
+         *
          * @public
          * @readonly
          */
         readonly odb_GeneralData: ODB_GeneralData,
         /**
          * @summary `odb_HPLMN_Data`.
+         * @description
+         *
+         * HPLMN-specific ODB; present when the subscriber is in the HPLMN and
+         * those categories apply. (3GPP TS 29.002 V19.1.0 clause 7.6.3.10)
+         *
          * @public
          * @readonly
          */

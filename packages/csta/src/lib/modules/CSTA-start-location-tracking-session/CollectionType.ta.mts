@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CollectionType
  * @description
- * 
+ *
+ * periodic, updatesOnly, or periodicWithUpdates (ECMA-269 §28.1.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +36,13 @@ enum _enum_for_CollectionType {
 /**
  * @summary CollectionType
  * @description
- * 
+ *
+ * periodic, updatesOnly, or periodicWithUpdates (ECMA-269 §28.1.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +60,13 @@ type CollectionType = _enum_for_CollectionType;
 /**
  * @summary CollectionType
  * @description
- * 
+ *
+ * periodic, updatesOnly, or periodicWithUpdates (ECMA-269 §28.1.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +83,10 @@ const CollectionType = _enum_for_CollectionType;
 
 /**
  * @summary CollectionType_periodic
+ * @description
+ *
+ * Collect at collectionInterval (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +95,10 @@ const CollectionType_periodic: CollectionType = CollectionType.periodic; /* LONG
 
 /**
  * @summary periodic
+ * @description
+ *
+ * Collect or report at the configured interval (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +107,10 @@ const periodic: CollectionType = CollectionType.periodic; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary CollectionType_periodicWithUpdates
+ * @description
+ *
+ * Collect on updates, else at collectionInterval (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +119,11 @@ const CollectionType_periodicWithUpdates: CollectionType = CollectionType.period
 
 /**
  * @summary periodicWithUpdates
+ * @description
+ *
+ * Collect on filter updates, or at collectionInterval if nothing changed
+ * (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +132,10 @@ const periodicWithUpdates: CollectionType = CollectionType.periodicWithUpdates; 
 
 /**
  * @summary CollectionType_updatesOnly
+ * @description
+ *
+ * Collect only on change subject to collectionFilter (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +144,11 @@ const CollectionType_updatesOnly: CollectionType = CollectionType.updatesOnly; /
 
 /**
  * @summary updatesOnly
+ * @description
+ *
+ * Collect only when location changes, subject to collectionFilter (ECMA-269
+ * §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */

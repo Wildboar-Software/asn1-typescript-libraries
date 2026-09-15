@@ -14,6 +14,12 @@ import { type PARAMETER } from '../CommonMgt/PARAMETER.oca.mjs';
  * @summary Parameters
  * @description
  *
+ * Information object set of `PARAMETER` objects referenced by
+ * `Parameter.paramId`. Compiled as empty (`{...}`); members are contributed by
+ * using specifications.
+ *
+ * (ISO/IEC 10589:2002 Annex E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

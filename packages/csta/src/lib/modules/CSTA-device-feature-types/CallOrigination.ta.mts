@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CallOrigination
  * @description
- * 
+ *
+ * Origination class used with forwarding (internal vs external switching
+ * sub-domain). ECMA-269 §6.7.1; ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,13 +28,17 @@ type CallOrigination = BIT_STRING;
 
 /**
  * @summary CallOrigination_internal
+ * @description
+ * Origination from a device inside the switching sub-domain. ECMA-269 §6.7.1.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const CallOrigination_internal: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary internal
+ * @description Alias of {@link CallOrigination_internal}.
  * @constant
  */
 export
@@ -36,13 +46,17 @@ const internal: number = CallOrigination_internal; /* SHORT_NAMED_BIT */
 
 /**
  * @summary CallOrigination_external
+ * @description
+ * Origination from a device outside the switching sub-domain. ECMA-269 §6.7.1.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const CallOrigination_external: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary external
+ * @description Alias of {@link CallOrigination_external}.
  * @constant
  */
 export

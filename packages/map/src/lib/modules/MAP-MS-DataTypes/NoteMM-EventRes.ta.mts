@@ -72,7 +72,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary NoteMM_EventRes
  * @description
- * 
+ *
+ * Result of MAP_NOTE_MM_EVENT. (3GPP TS 29.002 V19.1.0 clauses 8.1.8 and
+ * 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

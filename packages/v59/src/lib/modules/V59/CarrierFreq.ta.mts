@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CarrierFreq
  * @description
- * 
+ *
+ * Carrier frequency in hertz corresponding to a symbol rate (Table 2/V.59):
+ * 1200, 1600, 1646, 1680, 1700, 1800, 1829, 1867, 1920, 1959, 2000, 2400 Hz as
+ * codes 0..11. ITU-T Rec. V.59 (11/2000) §6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

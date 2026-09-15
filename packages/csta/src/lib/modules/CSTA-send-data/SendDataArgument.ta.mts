@@ -29,7 +29,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SendDataArgument
  * @description
- * 
+ *
+ * Path, payload, optional display attributes, and `ioCause` when explaining why
+ * data is sent (ECMA-269 §24.2.6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,36 +56,67 @@ class SendDataArgument {
     constructor (
         /**
          * @summary `ioCrossRefID`.
+         * @description
+         *
+         * Cross-reference for the data path, including which side started it
+         * (ECMA-269 §6.2.1 / §6.2.3).
+         *
          * @public
          * @readonly
          */
         readonly ioCrossRefID: IOCrossRefID,
         /**
          * @summary `ioRegisterReqID`.
+         * @description
+         *
+         * I/O registration identifier. Mandatory if the switching function
+         * supports I/O registration and the data path was requested by the
+         * switching function; otherwise absent (ECMA-269 §6.2.2).
+         *
          * @public
          * @readonly
          */
         readonly ioRegisterReqID: OPTIONAL<IORegisterReqID>,
         /**
          * @summary `displayAttributes`.
+         * @description
+         *
+         * Only when `ioData` updates a device display (ECMA-269 §24.2.6.1).
+         *
          * @public
          * @readonly
          */
         readonly displayAttributes: OPTIONAL<DisplayAttributeList>,
         /**
          * @summary `ioData`.
+         * @description
+         *
+         * Data to send. For a display, concatenated row text (including
+         * spaces); a null string clears the display (ECMA-269 §24.2.6.1).
+         *
          * @public
          * @readonly
          */
         readonly ioData: OCTET_STRING,
         /**
          * @summary `ioCause`.
+         * @description
+         *
+         * Why data is sent, using `EventCause`: terminationCharacterReceived,
+         * characterCountReached, timeout, or switchingFunctionTerminated
+         * (ECMA-269 §24.2.6.1).
+         *
          * @public
          * @readonly
          */
         readonly ioCause: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

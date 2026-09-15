@@ -87,7 +87,14 @@ import { informationNotAvailable } from "../MAP-Errors/informationNotAvailable.o
 /**
  * @summary anyTimeSubscriptionInterrogation
  * @description
- * 
+ *
+ * MAP_ANY_TIME_SUBSCRIPTION_INTERROGATION: gsmSCF requests subscription
+ * information (e.g. call-forwarding SS data or CSI) from the HLR at any time.
+ * In an IM CN, an IM-SSF may take the gsmSCF role. Typical path: gsmSCF→HLR.
+ * Local opcode 62. Timer class `m` (15 s to 30 s). Distinctive error:
+ * `atsi-NotAllowed`. (3GPP TS 29.002 V19.1.0 clauses 8.11.3.1, 17.1.2,
+ * 17.3.2.47 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

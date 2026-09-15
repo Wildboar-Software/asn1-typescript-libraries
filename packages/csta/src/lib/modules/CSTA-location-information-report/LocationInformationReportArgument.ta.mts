@@ -21,7 +21,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary LocationInformationReportArgument
  * @description
- * 
+ *
+ * Session, device, optional PIDF-LO list (ECMA-269 §28.1.6.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +45,42 @@ class LocationInformationReportArgument {
     constructor (
         /**
          * @summary `locCrossRefID`.
+         * @description
+         *
+         * Identifies the location tracking session (ECMA-269 §6.8.4).
+         *
          * @public
          * @readonly
          */
         readonly locCrossRefID: LocCrossRefID,
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device associated with the location (ECMA-269 §28.1.6.1).
+         *
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `locationInfoList`.
+         * @description
+         *
+         * Zero or more LocationInfo (PIDF-LO) records. Omitted when there is
+         * nothing to report (ECMA-269 §28.1.6.1).
+         *
          * @public
          * @readonly
          */
         readonly locationInfoList: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

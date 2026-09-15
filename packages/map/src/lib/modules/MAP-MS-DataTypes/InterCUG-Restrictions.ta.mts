@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary InterCUG_Restrictions
  * @description
- * 
+ *
+ * Subscriber's ability to make and receive calls outside a CUG. Octet bits 2-1:
+ * `00` CUG only; `01` outgoing access; `10` incoming access; `11` both. Bits
+ * 8-3 unused; ignore if not understood. (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.3.27 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

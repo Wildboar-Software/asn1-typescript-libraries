@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SystemStatus
  * @description
- * 
+ *
+ * Reason for a System Status service request. ECMA-269 §12.2.28.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,7 +46,11 @@ enum _enum_for_SystemStatus {
 /**
  * @summary SystemStatus
  * @description
- * 
+ *
+ * Reason for a System Status service request. ECMA-269 §12.2.28.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,7 +74,11 @@ type SystemStatus = _enum_for_SystemStatus;
 /**
  * @summary SystemStatus
  * @description
- * 
+ *
+ * Reason for a System Status service request. ECMA-269 §12.2.28.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -89,14 +101,20 @@ const SystemStatus = _enum_for_SystemStatus;
 
 /**
  * @summary SystemStatus_disabled
+ * @description
+ * Existing Monitor requests have been disabled. Other requests may also be
+ * disabled; negative acknowledgements should still be provided. ECMA-269
+ * §12.2.28.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SystemStatus_disabled: SystemStatus = SystemStatus.disabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disabled
+ * @description Alias of {@link SystemStatus_disabled}.
  * @constant
  * @type {number}
  */
@@ -105,14 +123,19 @@ const disabled: SystemStatus = SystemStatus.disabled; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary SystemStatus_partiallyDisabled
+ * @description
+ * Some objects cannot be reached. Existing monitors on them will not provide
+ * events; requests targeting them will be rejected. ECMA-269 §12.2.28.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SystemStatus_partiallyDisabled: SystemStatus = SystemStatus.partiallyDisabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary partiallyDisabled
+ * @description Alias of {@link SystemStatus_partiallyDisabled}.
  * @constant
  * @type {number}
  */
@@ -121,14 +144,20 @@ const partiallyDisabled: SystemStatus = SystemStatus.partiallyDisabled; /* SHORT
 
 /**
  * @summary SystemStatus_enabled
+ * @description
+ * Requests and acknowledgements have been enabled, usually after disruption or
+ * restart. Always sent after Initializing. Outstanding monitors and their
+ * cross-reference IDs are no longer valid. ECMA-269 §12.2.28.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SystemStatus_enabled: SystemStatus = SystemStatus.enabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enabled
+ * @description Alias of {@link SystemStatus_enabled}.
  * @constant
  * @type {number}
  */
@@ -137,14 +166,20 @@ const enabled: SystemStatus = SystemStatus.enabled; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary SystemStatus_initializing
+ * @description
+ * The system is initializing or restarting and is temporarily unable to
+ * respond. Followed by Enabled when initialization completes. ECMA-269
+ * §12.2.28.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SystemStatus_initializing: SystemStatus = SystemStatus.initializing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary initializing
+ * @description Alias of {@link SystemStatus_initializing}.
  * @constant
  * @type {number}
  */
@@ -153,14 +188,19 @@ const initializing: SystemStatus = SystemStatus.initializing; /* SHORT_NAMED_ENU
 
 /**
  * @summary SystemStatus_messagesLost
+ * @description
+ * Requests and/or acknowledgements, including event reports, may have been
+ * lost. ECMA-269 §12.2.28.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SystemStatus_messagesLost: SystemStatus = SystemStatus.messagesLost; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messagesLost
+ * @description Alias of {@link SystemStatus_messagesLost}.
  * @constant
  * @type {number}
  */
@@ -169,14 +209,19 @@ const messagesLost: SystemStatus = SystemStatus.messagesLost; /* SHORT_NAMED_ENU
 
 /**
  * @summary SystemStatus_normal
+ * @description
+ * Status is normal. May be sent at any time; has no effect on other services.
+ * ECMA-269 §12.2.28.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SystemStatus_normal: SystemStatus = SystemStatus.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
+ * @description Alias of {@link SystemStatus_normal}.
  * @constant
  * @type {number}
  */
@@ -185,14 +230,18 @@ const normal: SystemStatus = SystemStatus.normal; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary SystemStatus_overloadImminent
+ * @description
+ * The receiver is requested to take initiative to shed load. ECMA-269 §12.2.28.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SystemStatus_overloadImminent: SystemStatus = SystemStatus.overloadImminent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overloadImminent
+ * @description Alias of {@link SystemStatus_overloadImminent}.
  * @constant
  * @type {number}
  */
@@ -201,14 +250,19 @@ const overloadImminent: SystemStatus = SystemStatus.overloadImminent; /* SHORT_N
 
 /**
  * @summary SystemStatus_overloadReached
+ * @description
+ * The requester may shed load. May be followed by Stop Monitor and rejections
+ * of additional requests. ECMA-269 §12.2.28.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SystemStatus_overloadReached: SystemStatus = SystemStatus.overloadReached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overloadReached
+ * @description Alias of {@link SystemStatus_overloadReached}.
  * @constant
  * @type {number}
  */
@@ -217,14 +271,17 @@ const overloadReached: SystemStatus = SystemStatus.overloadReached; /* SHORT_NAM
 
 /**
  * @summary SystemStatus_overloadRelieved
+ * @description The overload condition has passed. ECMA-269 §12.2.28.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const SystemStatus_overloadRelieved: SystemStatus = SystemStatus.overloadRelieved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overloadRelieved
+ * @description Alias of {@link SystemStatus_overloadRelieved}.
  * @constant
  * @type {number}
  */

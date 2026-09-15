@@ -75,7 +75,10 @@ import { maxNumOfSMServingNodeAddresses } from "./maxNumOfSMServingNodeAddresses
 /**
  * @summary SMServingNodeAddressList
  * @description
- * 
+ *
+ * SEQUENCE SIZE (1..maxNumOfSMServingNodeAddresses) OF `SMServingNodeAddress`
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary MaximumPathSplits
  * @description
  *
+ * Maximum number of equal-cost paths over which traffic may be split. Replace
+ * is permitted only while the managed object is disabled.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.4 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

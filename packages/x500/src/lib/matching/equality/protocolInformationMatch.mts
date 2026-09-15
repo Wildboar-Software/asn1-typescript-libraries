@@ -6,6 +6,14 @@ import {
 } from "../../modules/SelectedAttributeTypes/ProtocolInformation.ta.mjs";
 import { compareNSAP } from "../../comparators/compareNSAPs.mjs";
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.2.12
+ * `protocolInformationMatch`.
+ *
+ * Assertion syntax is the `nAddress` OCTET STRING of
+ * `ProtocolInformation`. TRUE iff that presented NSAP matches the
+ * stored `nAddress` as for `octetStringMatch`.
+ */
 export
 const protocolInformationMatch: EqualityMatcher = (
     assertion: ASN1Element,

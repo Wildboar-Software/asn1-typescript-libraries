@@ -74,7 +74,10 @@ import { SMServingNodeAddressList, _decode_SMServingNodeAddressList, _encode_SMS
 /**
  * @summary ReportSM_DeliveryStatusRes
  * @description
- * 
+ *
+ * Result of MAP-REPORT-SM-DELIVERY-STATUS (3GPP TS 29.002 V19.1.0 clauses 12.3
+ * and 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,18 +96,30 @@ class ReportSM_DeliveryStatusRes {
     constructor (
         /**
          * @summary `storedMSISDN`.
+         * @description
+         *
+         * MSISDN stored in Message Waiting Data.
+         *
          * @public
          * @readonly
          */
         readonly storedMSISDN: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `registeredSMServingNodes`.
+         * @description
+         *
+         * Registered SM serving nodes.
+         *
          * @public
          * @readonly
          */

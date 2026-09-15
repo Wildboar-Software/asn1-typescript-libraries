@@ -21,7 +21,13 @@ import { PartiallyInService, _decode_PartiallyInService, _encode_PartiallyInServ
 /**
  * @summary DeviceMaintEvtsList
  * @description
- * 
+ * Device Maintenance events the SF supports (ECMA-269 Annex C.16, ECMA-285
+ * §9.10). Omit unsupported events.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,24 +47,36 @@ class DeviceMaintEvtsList {
          * @summary `backInService`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly backInService: OPTIONAL<BackInService>,
         /**
          * @summary `deviceCapsChanged`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly deviceCapsChanged: OPTIONAL<DeviceCapsChanged>,
         /**
          * @summary `outOfService`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly outOfService: OPTIONAL<OutOfService>,
         /**
          * @summary `partiallyInService`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly partiallyInService: OPTIONAL<PartiallyInService>
     ) {}

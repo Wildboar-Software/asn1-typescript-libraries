@@ -83,7 +83,12 @@ import { callBarred } from "../MAP-Errors/callBarred.oa.mjs";
 /**
  * @summary sendRoutingInfoForGprs
  * @description
- * 
+ *
+ * MAP_SEND_ROUTING_INFO_FOR_GPRS: GGSN requests GPRS routing information from
+ * the HLR. Typical path: GGSN→HLR. Local opcode 24. Timer class `m` (15 s to 30
+ * s). Distinctive errors: `absentSubscriber`, `callBarred`. (3GPP TS 29.002
+ * V19.1.0 clauses 13.1.1, 17.1.2, 17.3.2.33 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

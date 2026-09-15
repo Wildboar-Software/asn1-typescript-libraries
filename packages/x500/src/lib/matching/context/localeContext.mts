@@ -7,6 +7,14 @@ import {
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
 import compareElements from "../../comparators/compareElements.mjs";
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 10.3 `localeContext`.
+ *
+ * Associates an attribute value with a POSIX locale (ISO/IEC/IEEE
+ * 9945; registration in ISO/IEC 15897). TRUE iff both sides are
+ * object identifiers and equal, or both are strings and equal.
+ * Mixed OID/string is not a match.
+ */
 export
 const evaluateLocaleContext: EqualityMatcher = (
     assertion: ASN1Element,

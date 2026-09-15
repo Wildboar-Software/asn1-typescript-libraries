@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary PhysicalDeviceFeatureEvents
  * @description
- * 
+ *
+ * Physical device-feature events. BIT STRING advertised in ACSE
+ * user-information listing which CSTA services or events this association will
+ * use. ECMA-285 §8.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,13 +37,17 @@ type PhysicalDeviceFeatureEvents = BIT_STRING;
 
 /**
  * @summary PhysicalDeviceFeatureEvents_buttonInformation
+ * @description
+ * Advertises the `buttonInformation` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const PhysicalDeviceFeatureEvents_buttonInformation: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary buttonInformation
+ * @description Alias of {@link PhysicalDeviceFeatureEvents_buttonInformation}.
  * @constant
  */
 export
@@ -45,13 +55,17 @@ const buttonInformation: number = PhysicalDeviceFeatureEvents_buttonInformation;
 
 /**
  * @summary PhysicalDeviceFeatureEvents_buttonPress
+ * @description
+ * Advertises the `buttonPress` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const PhysicalDeviceFeatureEvents_buttonPress: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary buttonPress
+ * @description Alias of {@link PhysicalDeviceFeatureEvents_buttonPress}.
  * @constant
  */
 export
@@ -59,13 +73,17 @@ const buttonPress: number = PhysicalDeviceFeatureEvents_buttonPress; /* SHORT_NA
 
 /**
  * @summary PhysicalDeviceFeatureEvents_displayUpdated
+ * @description
+ * Advertises the `displayUpdated` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const PhysicalDeviceFeatureEvents_displayUpdated: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary displayUpdated
+ * @description Alias of {@link PhysicalDeviceFeatureEvents_displayUpdated}.
  * @constant
  */
 export
@@ -73,13 +91,17 @@ const displayUpdated: number = PhysicalDeviceFeatureEvents_displayUpdated; /* SH
 
 /**
  * @summary PhysicalDeviceFeatureEvents_hookswitch
+ * @description
+ * Advertises the `hookswitch` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const PhysicalDeviceFeatureEvents_hookswitch: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary hookswitch
+ * @description Alias of {@link PhysicalDeviceFeatureEvents_hookswitch}.
  * @constant
  */
 export
@@ -87,13 +109,17 @@ const hookswitch: number = PhysicalDeviceFeatureEvents_hookswitch; /* SHORT_NAME
 
 /**
  * @summary PhysicalDeviceFeatureEvents_lampMode
+ * @description
+ * Advertises the `lampMode` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const PhysicalDeviceFeatureEvents_lampMode: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary lampMode
+ * @description Alias of {@link PhysicalDeviceFeatureEvents_lampMode}.
  * @constant
  */
 export
@@ -101,13 +127,17 @@ const lampMode: number = PhysicalDeviceFeatureEvents_lampMode; /* SHORT_NAMED_BI
 
 /**
  * @summary PhysicalDeviceFeatureEvents_messageWaiting
+ * @description
+ * Advertises the `messageWaiting` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const PhysicalDeviceFeatureEvents_messageWaiting: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary messageWaiting
+ * @description Alias of {@link PhysicalDeviceFeatureEvents_messageWaiting}.
  * @constant
  */
 export
@@ -115,13 +145,17 @@ const messageWaiting: number = PhysicalDeviceFeatureEvents_messageWaiting; /* SH
 
 /**
  * @summary PhysicalDeviceFeatureEvents_microphoneGain
+ * @description
+ * Advertises the `microphoneGain` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const PhysicalDeviceFeatureEvents_microphoneGain: number = 6; /* LONG_NAMED_BIT */
 
 /**
  * @summary microphoneGain
+ * @description Alias of {@link PhysicalDeviceFeatureEvents_microphoneGain}.
  * @constant
  */
 export
@@ -129,13 +163,17 @@ const microphoneGain: number = PhysicalDeviceFeatureEvents_microphoneGain; /* SH
 
 /**
  * @summary PhysicalDeviceFeatureEvents_microphoneMute
+ * @description
+ * Advertises the `microphoneMute` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const PhysicalDeviceFeatureEvents_microphoneMute: number = 7; /* LONG_NAMED_BIT */
 
 /**
  * @summary microphoneMute
+ * @description Alias of {@link PhysicalDeviceFeatureEvents_microphoneMute}.
  * @constant
  */
 export
@@ -143,13 +181,17 @@ const microphoneMute: number = PhysicalDeviceFeatureEvents_microphoneMute; /* SH
 
 /**
  * @summary PhysicalDeviceFeatureEvents_ringerStatus
+ * @description
+ * Advertises the `ringerStatus` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const PhysicalDeviceFeatureEvents_ringerStatus: number = 8; /* LONG_NAMED_BIT */
 
 /**
  * @summary ringerStatus
+ * @description Alias of {@link PhysicalDeviceFeatureEvents_ringerStatus}.
  * @constant
  */
 export
@@ -157,13 +199,17 @@ const ringerStatus: number = PhysicalDeviceFeatureEvents_ringerStatus; /* SHORT_
 
 /**
  * @summary PhysicalDeviceFeatureEvents_speakerMute
+ * @description
+ * Advertises the `speakerMute` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const PhysicalDeviceFeatureEvents_speakerMute: number = 9; /* LONG_NAMED_BIT */
 
 /**
  * @summary speakerMute
+ * @description Alias of {@link PhysicalDeviceFeatureEvents_speakerMute}.
  * @constant
  */
 export
@@ -171,13 +217,17 @@ const speakerMute: number = PhysicalDeviceFeatureEvents_speakerMute; /* SHORT_NA
 
 /**
  * @summary PhysicalDeviceFeatureEvents_speakerVolume
+ * @description
+ * Advertises the `speakerVolume` event for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const PhysicalDeviceFeatureEvents_speakerVolume: number = 10; /* LONG_NAMED_BIT */
 
 /**
  * @summary speakerVolume
+ * @description Alias of {@link PhysicalDeviceFeatureEvents_speakerVolume}.
  * @constant
  */
 export

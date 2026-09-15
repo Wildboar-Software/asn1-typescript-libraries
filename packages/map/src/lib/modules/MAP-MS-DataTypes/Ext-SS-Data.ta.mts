@@ -76,7 +76,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary Ext_SS_Data
  * @description
- * 
+ *
+ * Characterises one supplementary service other than CF, CB, CUG and eMLPP:
+ * SS-Code, extensible SS-Status, override / CLI-restriction options if
+ * applicable, and extensible Basic Service Group. Used by the SGSN only for LCS
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.29 and 8.8.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,12 +101,22 @@ class Ext_SS_Data {
     constructor (
         /**
          * @summary `ss_Code`.
+         * @description
+         *
+         * SS-Code of the supplementary service (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.29).
+         *
          * @public
          * @readonly
          */
         readonly ss_Code: SS_Code,
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * Extensible SS-Status if applicable (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.29).
+         *
          * @public
          * @readonly
          */

@@ -73,7 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary IST_AlertArg
  * @description
- * 
+ *
+ * Argument of MAP_IST_ALERT: VMSC or GMSC to HLR when the IST timer expires
+ * (3GPP TS 29.002 V19.1.0 clauses 10.13 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,20 @@ class IST_AlertArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * Subscriber IMSI.
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

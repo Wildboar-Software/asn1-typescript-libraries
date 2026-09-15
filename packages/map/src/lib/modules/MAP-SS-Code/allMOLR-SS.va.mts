@@ -72,7 +72,10 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
 /**
  * @summary allMOLR_SS
  * @description
- * 
+ *
+ * All Mobile Originating Location Request Classes. Group code. Bit pattern
+ * `'11000000'B` (3GPP TS 29.002 V19.1.0 clauses 7.6.4.45 and 17.7.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

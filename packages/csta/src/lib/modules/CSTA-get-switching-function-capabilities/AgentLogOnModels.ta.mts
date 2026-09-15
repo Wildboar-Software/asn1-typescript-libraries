@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AgentLogOnModels
  * @description
- * 
+ *
+ * Agent log-on models (Table 13-9): ACD device; ACD group explicit
+ * one-step / two-step; ACD group implicit one-step.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

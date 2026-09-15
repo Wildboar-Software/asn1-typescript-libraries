@@ -18,7 +18,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary HoldCallArgument
  * @description
- * 
+ *
+ * Service request for Hold Call (ECMA-269 §17.1.15 / ECMA-285
+ * §15.1.15). Names the connected connection to place on hold.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +41,34 @@ class HoldCallArgument {
     constructor (
         /**
          * @summary `callToBeHeld`.
+         * @description
+         *
+         * Mandatory. Connection to hold. Required initial state
+         * Connected; final Hold (§17.1.15.3.1).
+         *
          * @public
          * @readonly
          */
         readonly callToBeHeld: ConnectionID,
         /**
          * @summary `connectionReservation`.
+         * @description
+         *
+         * Optional. When TRUE, reserve the held call's
+         * media-stream channel(s) for later Retrieve, Reconnect,
+         * or Alternate.
+         *
          * @public
          * @readonly
          */
         readonly connectionReservation: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

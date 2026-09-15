@@ -15,6 +15,11 @@ import { sseoi } from '../ISIS/sseoi.va.mjs';
  * @summary se
  * @description
  *
+ * Arc for communicationsAlarm `specificProblems` values: `{sseoi
+ * specificProblems(3)}`. Each protocol event below is an OID under `se`.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.2.1 and 11.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

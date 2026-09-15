@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary Resume
  * @description
- * 
+ * Capability bitmap for the Resume service (ECMA-269 C.19.11, ECMA-285 §9.10).
+ * Presence of this entry in `VoiceUnitServList` means the SF supports that
+ * service. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +34,9 @@ type Resume = BIT_STRING;
 /**
  * @summary Resume_msgToResume
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.19.11).
  */
 export
 const Resume_msgToResume: number = 0; /* LONG_NAMED_BIT */
@@ -33,6 +44,8 @@ const Resume_msgToResume: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary msgToResume
  * @constant
+ * @description
+ * Alias of `Resume_msgToResume`.
  */
 export
 const msgToResume: number = Resume_msgToResume; /* SHORT_NAMED_BIT */
@@ -40,6 +53,9 @@ const msgToResume: number = Resume_msgToResume; /* SHORT_NAMED_BIT */
 /**
  * @summary Resume_resource
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `resource` parameter (ECMA-269
+ * C.19.11).
  */
 export
 const Resume_resource: number = 4; /* LONG_NAMED_BIT */
@@ -47,6 +63,8 @@ const Resume_resource: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary resource
  * @constant
+ * @description
+ * Alias of `Resume_resource`.
  */
 export
 const resource: number = Resume_resource; /* SHORT_NAMED_BIT */
@@ -54,6 +72,9 @@ const resource: number = Resume_resource; /* SHORT_NAMED_BIT */
 /**
  * @summary Resume_duration
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.19.11).
  */
 export
 const Resume_duration: number = 1; /* LONG_NAMED_BIT */
@@ -61,6 +82,8 @@ const Resume_duration: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary duration
  * @constant
+ * @description
+ * Alias of `Resume_duration`.
  */
 export
 const duration: number = Resume_duration; /* SHORT_NAMED_BIT */
@@ -68,6 +91,9 @@ const duration: number = Resume_duration; /* SHORT_NAMED_BIT */
 /**
  * @summary Resume_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.19.11).
  */
 export
 const Resume_privateData: number = 2; /* LONG_NAMED_BIT */
@@ -75,6 +101,8 @@ const Resume_privateData: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `Resume_privateData`.
  */
 export
 const privateData: number = Resume_privateData; /* SHORT_NAMED_BIT */
@@ -82,6 +110,9 @@ const privateData: number = Resume_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary Resume_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.19.11).
  */
 export
 const Resume_privateDataInAck: number = 3; /* LONG_NAMED_BIT */
@@ -89,6 +120,8 @@ const Resume_privateDataInAck: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `Resume_privateDataInAck`.
  */
 export
 const privateDataInAck: number = Resume_privateDataInAck; /* SHORT_NAMED_BIT */

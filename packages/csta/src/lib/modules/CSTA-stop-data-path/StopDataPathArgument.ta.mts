@@ -19,7 +19,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary StopDataPathArgument
  * @description
- * 
+ *
+ * Identifies the data path to terminate (ECMA-269 §24.2.9.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +42,33 @@ class StopDataPathArgument {
     constructor (
         /**
          * @summary `ioCrossRefID`.
+         * @description
+         *
+         * Data path to terminate (ECMA-269 §24.2.9.1).
+         *
          * @public
          * @readonly
          */
         readonly ioCrossRefID: IOCrossRefID,
         /**
          * @summary `ioRegisterReqID`.
+         * @description
+         *
+         * I/O registration identifier. Mandatory if the switching function
+         * supports I/O registration and the data path was requested by the
+         * switching function; otherwise absent (ECMA-269 §6.2.2).
+         *
          * @public
          * @readonly
          */
         readonly ioRegisterReqID: OPTIONAL<IORegisterReqID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

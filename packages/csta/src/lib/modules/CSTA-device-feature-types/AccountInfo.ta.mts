@@ -8,7 +8,15 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AccountInfo
  * @description
- * 
+ *
+ * Computing sub-domain / business-specific code applied to a call for
+ * accounting. Managed by the switching function; a null string clears it.
+ * Association completes before any resulting state transitions. The switching
+ * function may omit it from events for security. Changes are reported via the
+ * Call Information event. ECMA-269 §12.2.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

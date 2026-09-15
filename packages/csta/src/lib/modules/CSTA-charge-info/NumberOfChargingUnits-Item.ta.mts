@@ -16,7 +16,11 @@ import {
 /**
  * @summary NumberOfChargingUnits_Item
  * @description
- * 
+ *
+ * One charging-unit count and optional unit type. ECMA-269 §12.2.7.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +37,20 @@ class NumberOfChargingUnits_Item {
     constructor (
         /**
          * @summary `chargingUnits`.
+         * @description
+         *
+         * Number of charging units. ECMA-269 §12.2.7.
+         *
          * @public
          * @readonly
          */
         readonly chargingUnits: INTEGER,
         /**
          * @summary `typeOfUnits`.
+         * @description
+         *
+         * Network-dependent type, to distinguish unit kinds. ECMA-269 §12.2.7.
+         *
          * @public
          * @readonly
          */

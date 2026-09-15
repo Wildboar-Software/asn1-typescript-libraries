@@ -15,7 +15,14 @@ import {
 /**
  * @summary Period
  * @description
- * 
+ *
+ * `absolutePosition` (start or end of message) or `relativePosition` in
+ * milliseconds (ECMA-269 §26.1.10).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

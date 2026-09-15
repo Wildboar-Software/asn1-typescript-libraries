@@ -15,7 +15,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary reRouteRequest
  * @description
- * 
+ *
+ * Re-Route (ECMA-269 §20.2.1 / ECMA-285 §18.2.1). Direction: SF→CF. ROSE local
+ * CODE 32. Errors: `universalFailure`. CF should respond with Route Select,
+ * Route Reject, or Route End
+ * on the same `routeingCrossRefID`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

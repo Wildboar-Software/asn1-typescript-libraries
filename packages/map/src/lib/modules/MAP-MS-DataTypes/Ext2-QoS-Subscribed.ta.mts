@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Ext2_QoS_Subscribed
  * @description
- * 
+ *
+ * Further extension to Extension QoS-Subscribed. Shall be used when the maximum
+ * bit rate exceeds 8640 kbps. Octets 1-3 are 3GPP TS 24.008 Quality of Service
+ * octets 14-16 (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75A and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

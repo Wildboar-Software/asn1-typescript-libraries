@@ -2,6 +2,11 @@
  * @description
  *
  * ASN.1 module `MAP-SS-Code`.
+ *
+ * Named `SS-Code` values for a single supplementary service, a group of
+ * supplementary services, or all supplementary services (3GPP TS 22.004). The
+ * code is one octet: bits 8-5 identify the group and bits 4-1 the specific
+ * service (3GPP TS 29.002 V19.1.0 clauses 7.6.4.1 and 17.7.5).
  */
 export * from "./SS-Code.ta.mjs";
 export * from "./allAdditionalInfoTransferSS.va.mjs";

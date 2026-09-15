@@ -75,7 +75,11 @@ import { maxNumOfBearerServices } from "./maxNumOfBearerServices.va.mjs";
 /**
  * @summary BearerServiceList
  * @description
- * 
+ *
+ * List of extensible bearer service codes sent in MAP_INSERT_SUBSCRIBER_DATA.
+ * Used only by the VLR; if the SGSN or IWF receives this parameter it shall
+ * ignore it. Not used by the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

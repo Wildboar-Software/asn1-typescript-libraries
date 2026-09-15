@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GetMessageWaitingIndicator
  * @description
- * 
+ * Capability bitmap for the Get Message Waiting Indicator service (ECMA-269
+ * C.12.8, ECMA-285 §9.10). Presence of this entry in `PhysDevServList` means
+ * the SF supports that service. Each set bit is an optional parameter,
+ * enumerated value, initial connection state, or miscellaneous characteristic
+ * from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +34,9 @@ type GetMessageWaitingIndicator = BIT_STRING;
 /**
  * @summary GetMessageWaitingIndicator_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.12.8).
  */
 export
 const GetMessageWaitingIndicator_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -32,6 +44,8 @@ const GetMessageWaitingIndicator_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `GetMessageWaitingIndicator_privateData`.
  */
 export
 const privateData: number = GetMessageWaitingIndicator_privateData; /* SHORT_NAMED_BIT */
@@ -39,6 +53,9 @@ const privateData: number = GetMessageWaitingIndicator_privateData; /* SHORT_NAM
 /**
  * @summary GetMessageWaitingIndicator_deviceForMsgInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `deviceForMsg` in the acknowledgement
+ * (ECMA-269 C.12.8).
  */
 export
 const GetMessageWaitingIndicator_deviceForMsgInAck: number = 1; /* LONG_NAMED_BIT */
@@ -46,6 +63,8 @@ const GetMessageWaitingIndicator_deviceForMsgInAck: number = 1; /* LONG_NAMED_BI
 /**
  * @summary deviceForMsgInAck
  * @constant
+ * @description
+ * Alias of `GetMessageWaitingIndicator_deviceForMsgInAck`.
  */
 export
 const deviceForMsgInAck: number = GetMessageWaitingIndicator_deviceForMsgInAck; /* SHORT_NAMED_BIT */
@@ -53,6 +72,9 @@ const deviceForMsgInAck: number = GetMessageWaitingIndicator_deviceForMsgInAck; 
 /**
  * @summary GetMessageWaitingIndicator_lampIsPresentInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `lampIsPresent` in the acknowledgement
+ * (ECMA-269 C.12.8).
  */
 export
 const GetMessageWaitingIndicator_lampIsPresentInAck: number = 2; /* LONG_NAMED_BIT */
@@ -60,6 +82,8 @@ const GetMessageWaitingIndicator_lampIsPresentInAck: number = 2; /* LONG_NAMED_B
 /**
  * @summary lampIsPresentInAck
  * @constant
+ * @description
+ * Alias of `GetMessageWaitingIndicator_lampIsPresentInAck`.
  */
 export
 const lampIsPresentInAck: number = GetMessageWaitingIndicator_lampIsPresentInAck; /* SHORT_NAMED_BIT */
@@ -67,6 +91,9 @@ const lampIsPresentInAck: number = GetMessageWaitingIndicator_lampIsPresentInAck
 /**
  * @summary GetMessageWaitingIndicator_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.12.8).
  */
 export
 const GetMessageWaitingIndicator_privateDataInAck: number = 3; /* LONG_NAMED_BIT */
@@ -74,6 +101,8 @@ const GetMessageWaitingIndicator_privateDataInAck: number = 3; /* LONG_NAMED_BIT
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `GetMessageWaitingIndicator_privateDataInAck`.
  */
 export
 const privateDataInAck: number = GetMessageWaitingIndicator_privateDataInAck; /* SHORT_NAMED_BIT */

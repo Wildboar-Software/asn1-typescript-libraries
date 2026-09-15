@@ -75,7 +75,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SendRoutingInfoForGprsArg
  * @description
- * 
+ *
+ * MAP_SEND_ROUTING_INFO_FOR_GPRS request from GGSN to HLR for GPRS routing
+ * information (SGSN address).
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 13.1 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,18 +99,37 @@ class SendRoutingInfoForGprsArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * International Mobile Subscriber Identity as in 3GPP TS 23.003.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `ggsn_Address`.
+         * @description
+         *
+         * IP address of a GGSN as in 3GPP TS 23.003.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.40).
+         *
          * @public
          * @readonly
          */
         readonly ggsn_Address: OPTIONAL<GSN_Address>,
         /**
          * @summary `ggsn_Number`.
+         * @description
+         *
+         * ISDN number of a GGSN, or of a protocol-converting GSN between GGSN
+         * and HLR.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.41).
+         *
          * @public
          * @readonly
          */

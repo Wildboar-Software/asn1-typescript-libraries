@@ -1,7 +1,9 @@
 /**
  * @description
  *
- * ASN.1 module `MAP-OM-DataTypes`.
+ * ASN.1 module `MAP-OM-DataTypes` (clause 17.7.2). Trace
+ * activation/deactivation and MDT configuration (3GPP TS 29.002 V19.1.0 clauses
+ * 17.7.2, 7.6.10 and 9).
  */
 export * from "./ActivateTraceModeArg.ta.mjs";
 export * from "./ActivateTraceModeRes.ta.mjs";

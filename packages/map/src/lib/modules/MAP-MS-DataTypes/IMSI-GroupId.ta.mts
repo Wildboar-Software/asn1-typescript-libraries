@@ -74,7 +74,11 @@ import { Local_GroupID, _decode_Local_GroupID, _encode_Local_GroupID } from "../
 /**
  * @summary IMSI_GroupId
  * @description
- * 
+ *
+ * IMSI-Group identifier as defined in 3GPP TS 29.272: group service, PLMN Id,
+ * and operator-defined local group Id. (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.3.102 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,18 +96,33 @@ class IMSI_GroupId {
     constructor (
         /**
          * @summary `group_Service_Id`.
+         * @description
+         *
+         * Group service identifier; values in 3GPP TS 29.272. (3GPP TS 29.002
+         * V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly group_Service_Id: Group_Service_ID,
         /**
          * @summary `plmnId`.
+         * @description
+         *
+         * PLMN that defines the local group. (3GPP TS 29.002 V19.1.0 clause
+         * 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly plmnId: PLMN_Id,
         /**
          * @summary `local_Group_ID`.
+         * @description
+         *
+         * Operator-defined local group ID (3GPP TS 29.272). (3GPP TS 29.002
+         * V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */

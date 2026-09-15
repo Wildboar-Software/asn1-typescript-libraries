@@ -17,7 +17,10 @@ import { Certificates, _decode_Certificates, _encode_Certificates } from "../TSM
 /**
  * @summary CertificateList
  * @description
- * 
+ *
+ * TLS Certificate handshake: chain of `X509Certificate`. ITU-T Rec.
+ * X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +36,10 @@ class CertificateList {
     constructor (
         /**
          * @summary `certificates`.
+         * @description
+         *
+         * Certificate chain, leaf first. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */

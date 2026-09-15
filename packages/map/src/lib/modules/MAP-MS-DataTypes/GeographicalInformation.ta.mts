@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary GeographicalInformation
  * @description
- * 
+ *
+ * Geographical Information defined in 3GPP TS 23.032. Only ellipsoid point with
+ * uncertainty circle is allowed. Structure: type of shape (1 octet), latitude
+ * (3), longitude (3), uncertainty code (1) (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.11.11 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

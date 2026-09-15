@@ -23,7 +23,10 @@ import { RobBitPatt, _decode_RobBitPatt, _encode_RobBitPatt } from "../V59/RobBi
 /**
  * @summary V91Diag_Item
  * @description
- * 
+ *
+ * V.91 control-channel/transparent mode, rates, estimates, codec laws, and
+ * frame slips. ITU-T Rec. V.59 (11/2000) §6.8.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,96 +56,173 @@ class V91Diag_Item {
     constructor (
         /**
          * @summary `modeV91`.
+         * @description
+         *
+         * V.91 operating-mode capability. Table 5/V.59: `notSupported`(0),
+         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+         * off. Tag-ID `0A00`. ITU-T Rec. V.59 (11/2000) §6.8.4.
          * @public
          * @readonly
          */
         readonly modeV91: Capabilities,
         /**
          * @summary `iNFO0TX`.
+         * @description
+         *
+         * INFO0 sequence transmitted. Hex `dataSequence` (§6.2.2): first bit in
+         * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
+         * `;` delimits N-bit words. Common Tag-ID `41`. ITU-T Rec. V.59
+         * (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly iNFO0TX: V59String,
         /**
          * @summary `iNFO0RX`.
+         * @description
+         *
+         * INFO0 sequence received. Hex `dataSequence` (§6.2.2): first bit in
+         * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
+         * `;` delimits N-bit words. Common Tag-ID `42`. ITU-T Rec. V.59
+         * (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly iNFO0RX: V59String,
         /**
          * @summary `cP`.
+         * @description
+         *
+         * Last CP sequence. Hex `dataSequence` (§6.2.2): first bit in time is
+         * the LSB of each hex word; omit start/stop/fill bits and CRCs; `;`
+         * delimits N-bit words. Tag-ID `54`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly cP: V59String,
         /**
          * @summary `controlChannel`.
+         * @description
+         *
+         * Optional control channel enabled (`TRUE`) or disabled (`FALSE`).
+         * Tag-ID `0A01`. ITU-T Rec. V.59 (11/2000) §6.8.4.
          * @public
          * @readonly
          */
         readonly controlChannel: BOOLEAN,
         /**
          * @summary `v91TxPowerLevel`.
+         * @description
+         *
+         * V.91 transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
+         * §6.8.4.
          * @public
          * @readonly
          */
         readonly v91TxPowerLevel: TxPowerLevel,
         /**
          * @summary `transparentMode`.
+         * @description
+         *
+         * `TRUE` = transparent mode, `FALSE` = encoded mode. Tag-ID `0A02`. ITU-T Rec. V.59 (11/2000) §6.8.4.
          * @public
          * @readonly
          */
         readonly transparentMode: BOOLEAN,
         /**
          * @summary `txDataHistory`.
+         * @description
+         *
+         * Transmitter primary data rates used. Example:
+         * `45333;44000;33333;33600`. IA5 `simpleText` (§6.2.1). History lists
+         * oldest event first, most recent last (§6.2.6). Tag-ID `4C`. ITU-T
+         * Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly txDataHistory: V59String,
         /**
          * @summary `rxDataHistory`.
+         * @description
+         *
+         * Receiver primary data rates used (same format as `txDataHistory`).
+         * History lists oldest event first, most recent last (§6.2.6). Tag-ID
+         * `4D`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxDataHistory: V59String,
         /**
          * @summary `noiseEstimate`.
+         * @description
+         *
+         * Noise level with units (e.g. `-55dBm`, `35dBrn`). IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4F`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly noiseEstimate: OPTIONAL<V59String>,
         /**
          * @summary `rxSignalQuality`.
+         * @description
+         *
+         * Receiver signal quality at start and, if available, near end of call.
+         * Fractional form 1.0 best / 0.0 worst (e.g. `0.445;0.312`), or a
+         * proprietary integer as text. IA5 `simpleText` (§6.2.1). Tag-ID `50`.
+         * ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxSignalQuality: OPTIONAL<V59String>,
         /**
          * @summary `rBSpattern`.
+         * @description
+         *
+         * Robbed-bit signalling pattern: packed 6 bits, `1` = robbed. Cyclic;
+         * not aligned to network framing. Bit 0 is LSB when displayed (ITU-T
+         * Rec. V.59 Cor.1 (07/2001) §6.2.3). Table 3/V.59. ITU-T Rec. V.59
+         * (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rBSpattern: OPTIONAL<RobBitPatt>,
         /**
          * @summary `digitalPadLoss`.
+         * @description
+         *
+         * Estimated downstream digital attenuation, in dB or as a decimal
+         * fraction (e.g. `3dB`, `0.5011`). IA5 `simpleText` (§6.2.1). Tag-ID
+         * `56`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly digitalPadLoss: OPTIONAL<V59String>,
         /**
          * @summary `localCodecLaw`.
+         * @description
+         *
+         * Codec companding: `TRUE` = A-law, `FALSE` = µ-law. ITU-T Rec. V.59
+         * (11/2000) §6.8.4.
          * @public
          * @readonly
          */
         readonly localCodecLaw: OPTIONAL<BOOLEAN>,
         /**
          * @summary `remoteCodecLaw`.
+         * @description
+         *
+         * Remote transmitter codec: `TRUE` = A-law, `FALSE` = µ-law. ITU-T Rec.
+         * V.59 (11/2000) §6.8.4.
          * @public
          * @readonly
          */
         readonly remoteCodecLaw: OPTIONAL<BOOLEAN>,
         /**
          * @summary `frameSlipsDetected`.
+         * @description
+         *
+         * Frame slips detected during the connection (0..256). Tag-ID `0A03`.
+         * ITU-T Rec. V.59 (11/2000) §6.8.4.
          * @public
          * @readonly
          */

@@ -1,0 +1,190 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { type AccessPointName, _decode_AccessPointName, _encode_AccessPointName } from "../CAP-datatypes/AccessPointName.ta.mjs";
+import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID.ta.mjs";
+
+
+
+/**
+ * @summary ConnectGPRSArg
+ * @description
+ *
+ * Argument of ConnectGPRS: APN to use for PDP Context
+ * establishment, and optional PDPID. (3GPP TS 29.078 V19.0.0
+ * clause 13.5.1.1).
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * ConnectGPRSArg {PARAMETERS-BOUND: bound} ::= SEQUENCE {
+ *     accessPointName    [0] AccessPointName {bound},
+ *     pdpID    [1] PDPID        OPTIONAL,
+ *     ...
+ *     }
+ * ```
+ * 
+ * @class
+ */
+export
+class ConnectGPRSArg {
+    constructor (
+        /**
+         * @summary `accessPointName`.
+         * @description
+         *
+         * Access Point Name towards which the PDP Context shall be
+         * established. See 3GPP TS 29.060.
+         * (3GPP TS 29.078 V19.0.0 clause 13.5.1.1).
+         *
+         * @public
+         * @readonly
+         */
+        readonly accessPointName: AccessPointName,
+        /**
+         * @summary `pdpID`.
+         * @description
+         *
+         * Identifies the PDP Context, within a GPRS Session dialogue,
+         * for which this APN shall be used (spec: pDPID). unknownPDPID
+         * if unknown. (3GPP TS 29.078 V19.0.0 clause 13.5.1.1).
+         *
+         * @public
+         * @readonly
+         */
+        readonly pdpID: OPTIONAL<PDPID>,
+        /**
+         * @summary Extensions that are not recognized.
+         * @public
+         * @readonly
+         */
+        readonly _unrecognizedExtensionsList: _Element[] = []
+    ) {}
+
+    /**
+     * @summary Restructures an object into a ConnectGPRSArg
+     * @description
+     * 
+     * This takes an `object` and converts it to a `ConnectGPRSArg`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `ConnectGPRSArg`.
+     * @returns {ConnectGPRSArg}
+     */
+    public static _from_object (_o: { [_K in keyof (ConnectGPRSArg)]: (ConnectGPRSArg)[_K] }): ConnectGPRSArg {
+        return new ConnectGPRSArg(_o.accessPointName, _o.pdpID, _o._unrecognizedExtensionsList);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of ConnectGPRSArg
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_ConnectGPRSArg: $.ComponentSpec[] = [
+    new $.ComponentSpec("accessPointName", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("pdpID", true, $.hasTag(_TagClass.context, 1))
+];
+
+/**
+ * @summary The Trailing Root Component Types of ConnectGPRSArg
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_ConnectGPRSArg: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of ConnectGPRSArg
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_ConnectGPRSArg: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_ConnectGPRSArg: $.ASN1Decoder<ConnectGPRSArg> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) ConnectGPRSArg
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_ConnectGPRSArg (el: _Element): ConnectGPRSArg {
+    if (!_cached_decoder_for_ConnectGPRSArg) { _cached_decoder_for_ConnectGPRSArg = function (el: _Element): ConnectGPRSArg {
+    let accessPointName!: AccessPointName;
+    let pdpID: OPTIONAL<PDPID>;
+    const _unrecognizedExtensionsList: _Element[] = [];
+    const callbacks: $.DecodingMap = {
+        "accessPointName": (_el: _Element): void => { accessPointName = $._decode_implicit<AccessPointName>(() => _decode_AccessPointName)(_el); },
+        "pdpID": (_el: _Element): void => { pdpID = $._decode_implicit<PDPID>(() => _decode_PDPID)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_ConnectGPRSArg,
+        _extension_additions_list_spec_for_ConnectGPRSArg,
+        _root_component_type_list_2_spec_for_ConnectGPRSArg,
+        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
+    );
+    return new ConnectGPRSArg(
+        accessPointName,
+        pdpID,
+        _unrecognizedExtensionsList
+    );
+}; }
+    return _cached_decoder_for_ConnectGPRSArg(el);
+}
+
+let _cached_encoder_for_ConnectGPRSArg: $.ASN1Encoder<ConnectGPRSArg> | null = null;
+
+/**
+ * @summary Encodes a(n) ConnectGPRSArg into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The ConnectGPRSArg, encoded as an ASN.1 Element.
+ */
+export
+function _encode_ConnectGPRSArg (value: ConnectGPRSArg, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ConnectGPRSArg) { _cached_encoder_for_ConnectGPRSArg = function (value: ConnectGPRSArg): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_AccessPointName, $.BER)(value.accessPointName, $.BER),
+            /* IF_ABSENT  */ ((value.pdpID === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_PDPID, $.BER)(value.pdpID, $.BER))
+        ],
+        (value._unrecognizedExtensionsList ? value._unrecognizedExtensionsList : []),
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_ConnectGPRSArg(value, elGetter);
+}
+
+
+/* eslint-enable */

@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary DataPathType
  * @description
- * 
+ *
+ * I/O data-path media: text or voice. ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +32,11 @@ enum _enum_for_DataPathType {
 /**
  * @summary DataPathType
  * @description
- * 
+ *
+ * I/O data-path media: text or voice. ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +53,11 @@ type DataPathType = _enum_for_DataPathType;
 /**
  * @summary DataPathType
  * @description
- * 
+ *
+ * I/O data-path media: text or voice. ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,14 +73,17 @@ const DataPathType = _enum_for_DataPathType;
 
 /**
  * @summary DataPathType_text
+ * @description Text I/O data path. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const DataPathType_text: DataPathType = DataPathType.text; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary text
+ * @description Alias of {@link DataPathType_text}.
  * @constant
  * @type {number}
  */
@@ -77,14 +92,17 @@ const text: DataPathType = DataPathType.text; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DataPathType_voice
+ * @description Voice I/O data path. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const DataPathType_voice: DataPathType = DataPathType.voice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary voice
+ * @description Alias of {@link DataPathType_voice}.
  * @constant
  * @type {number}
  */

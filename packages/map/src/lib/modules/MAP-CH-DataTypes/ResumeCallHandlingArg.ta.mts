@@ -82,7 +82,10 @@ import { O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode
 /**
  * @summary ResumeCallHandlingArg
  * @description
- * 
+ *
+ * Argument of MAP_RESUME_CALL_HANDLING: terminating VMSC to GMSC to resume and
+ * forward the call (3GPP TS 29.002 V19.1.0 clauses 10.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -113,90 +116,150 @@ class ResumeCallHandlingArg {
     constructor (
         /**
          * @summary `callReferenceNumber`.
+         * @description
+         *
+         * Call reference.
+         *
          * @public
          * @readonly
          */
         readonly callReferenceNumber: OPTIONAL<CallReferenceNumber>,
         /**
          * @summary `basicServiceGroup`.
+         * @description
+         *
+         * Basic service group.
+         *
          * @public
          * @readonly
          */
         readonly basicServiceGroup: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `forwardingData`.
+         * @description
+         *
+         * Forwarding destination.
+         *
          * @public
          * @readonly
          */
         readonly forwardingData: OPTIONAL<ForwardingData>,
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * IMSI.
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `cug_CheckInfo`.
+         * @description
+         *
+         * CUG check info.
+         *
          * @public
          * @readonly
          */
         readonly cug_CheckInfo: OPTIONAL<CUG_CheckInfo>,
         /**
          * @summary `o_CSI`.
+         * @description
+         *
+         * O-CSI.
+         *
          * @public
          * @readonly
          */
         readonly o_CSI: OPTIONAL<O_CSI>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ccbs_Possible`.
+         * @description
+         *
+         * CCBS possible.
+         *
          * @public
          * @readonly
          */
         readonly ccbs_Possible: OPTIONAL<NULL>,
         /**
          * @summary `msisdn`.
+         * @description
+         *
+         * MSISDN.
+         *
          * @public
          * @readonly
          */
         readonly msisdn: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `uu_Data`.
+         * @description
+         *
+         * User-to-user data (ETS 300 356).
+         *
          * @public
          * @readonly
          */
         readonly uu_Data: OPTIONAL<UU_Data>,
         /**
          * @summary `allInformationSent`.
+         * @description
+         *
+         * All information has been sent.
+         *
          * @public
          * @readonly
          */
         readonly allInformationSent: OPTIONAL<NULL>,
         /**
          * @summary `d_csi`.
+         * @description
+         *
+         * D-CSI.
+         *
          * @public
          * @readonly
          */
         readonly d_csi: OPTIONAL<D_CSI>,
         /**
          * @summary `o_BcsmCamelTDPCriteriaList`.
+         * @description
+         *
+         * O-BCSM CAMEL TDP criteria.
+         *
          * @public
          * @readonly
          */
         readonly o_BcsmCamelTDPCriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
         /**
          * @summary `basicServiceGroup2`.
+         * @description
+         *
+         * Second basic service (3GPP TS 23.172).
+         *
          * @public
          * @readonly
          */
         readonly basicServiceGroup2: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `mtRoamingRetry`.
+         * @description
+         *
+         * MT roaming retry.
+         *
          * @public
          * @readonly
          */

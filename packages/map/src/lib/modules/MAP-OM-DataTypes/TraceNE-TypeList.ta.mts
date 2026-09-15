@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TraceNE_TypeList
  * @description
- * 
+ *
+ * NEs to be traced. SIZE (6..16). Other bits than listed shall be discarded
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.10.6 and 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +98,10 @@ type TraceNE_TypeList = BIT_STRING;
 
 /**
  * @summary TraceNE_TypeList_msc_s
+ * @description
+ *
+ * `msc-s (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -102,6 +109,10 @@ const TraceNE_TypeList_msc_s: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary msc_s
+ * @description
+ *
+ * `msc-s (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -109,6 +120,10 @@ const msc_s: number = TraceNE_TypeList_msc_s; /* SHORT_NAMED_BIT */
 
 /**
  * @summary TraceNE_TypeList_mgw
+ * @description
+ *
+ * `mgw (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -116,6 +131,10 @@ const TraceNE_TypeList_mgw: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary mgw
+ * @description
+ *
+ * `mgw (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -123,6 +142,10 @@ const mgw: number = TraceNE_TypeList_mgw; /* SHORT_NAMED_BIT */
 
 /**
  * @summary TraceNE_TypeList_sgsn
+ * @description
+ *
+ * `sgsn (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -130,6 +153,10 @@ const TraceNE_TypeList_sgsn: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary sgsn
+ * @description
+ *
+ * `sgsn (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -137,6 +164,10 @@ const sgsn: number = TraceNE_TypeList_sgsn; /* SHORT_NAMED_BIT */
 
 /**
  * @summary TraceNE_TypeList_ggsn
+ * @description
+ *
+ * `ggsn (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -144,6 +175,10 @@ const TraceNE_TypeList_ggsn: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary ggsn
+ * @description
+ *
+ * `ggsn (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -151,6 +186,10 @@ const ggsn: number = TraceNE_TypeList_ggsn; /* SHORT_NAMED_BIT */
 
 /**
  * @summary TraceNE_TypeList_rnc
+ * @description
+ *
+ * `rnc (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -158,6 +197,10 @@ const TraceNE_TypeList_rnc: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary rnc
+ * @description
+ *
+ * `rnc (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -165,6 +208,10 @@ const rnc: number = TraceNE_TypeList_rnc; /* SHORT_NAMED_BIT */
 
 /**
  * @summary TraceNE_TypeList_bm_sc
+ * @description
+ *
+ * `bm-sc (5)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -172,6 +219,10 @@ const TraceNE_TypeList_bm_sc: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary bm_sc
+ * @description
+ *
+ * `bm-sc (5)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -179,6 +230,10 @@ const bm_sc: number = TraceNE_TypeList_bm_sc; /* SHORT_NAMED_BIT */
 
 /**
  * @summary TraceNE_TypeList_mme
+ * @description
+ *
+ * `mme (6)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -186,6 +241,10 @@ const TraceNE_TypeList_mme: number = 6; /* LONG_NAMED_BIT */
 
 /**
  * @summary mme
+ * @description
+ *
+ * `mme (6)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -193,6 +252,10 @@ const mme: number = TraceNE_TypeList_mme; /* SHORT_NAMED_BIT */
 
 /**
  * @summary TraceNE_TypeList_sgw
+ * @description
+ *
+ * `sgw (7)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -200,6 +263,10 @@ const TraceNE_TypeList_sgw: number = 7; /* LONG_NAMED_BIT */
 
 /**
  * @summary sgw
+ * @description
+ *
+ * `sgw (7)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -207,6 +274,10 @@ const sgw: number = TraceNE_TypeList_sgw; /* SHORT_NAMED_BIT */
 
 /**
  * @summary TraceNE_TypeList_pgw
+ * @description
+ *
+ * `pgw (8)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -214,6 +285,10 @@ const TraceNE_TypeList_pgw: number = 8; /* LONG_NAMED_BIT */
 
 /**
  * @summary pgw
+ * @description
+ *
+ * `pgw (8)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -221,6 +296,10 @@ const pgw: number = TraceNE_TypeList_pgw; /* SHORT_NAMED_BIT */
 
 /**
  * @summary TraceNE_TypeList_eNB
+ * @description
+ *
+ * `eNB (9)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export
@@ -228,6 +307,10 @@ const TraceNE_TypeList_eNB: number = 9; /* LONG_NAMED_BIT */
 
 /**
  * @summary eNB
+ * @description
+ *
+ * `eNB (9)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  */
 export

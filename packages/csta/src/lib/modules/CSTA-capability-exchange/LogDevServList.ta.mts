@@ -29,7 +29,14 @@ import { LocationServicesServList, _decode_LocationServicesServList, _encode_Loc
 /**
  * @summary LogDevServList
  * @description
- * 
+ * Per-category service bitmaps for a logical device (Get Logical Device
+ * Information). Omit a component if that category is unsupported at the device
+ * (ECMA-269 §13.1.2, ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,48 +60,72 @@ class LogDevServList {
          * @summary `callControlServList`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmaps for this service category at the logical device;
+         * omit if unsupported (ECMA-269 §13.1.2).
          */
         readonly callControlServList: OPTIONAL<CallControlServList>,
         /**
          * @summary `callAssociatedServList`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmaps for this service category at the logical device;
+         * omit if unsupported (ECMA-269 §13.1.2).
          */
         readonly callAssociatedServList: OPTIONAL<CallAssociatedServList>,
         /**
          * @summary `logicalServList`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmaps for this service category at the logical device;
+         * omit if unsupported (ECMA-269 §13.1.2).
          */
         readonly logicalServList: OPTIONAL<LogicalServList>,
         /**
          * @summary `mediaServList`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmaps for this service category at the logical device;
+         * omit if unsupported (ECMA-269 §13.1.2).
          */
         readonly mediaServList: OPTIONAL<MediaServList>,
         /**
          * @summary `iOServicesServList`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmaps for this service category at the logical device;
+         * omit if unsupported (ECMA-269 §13.1.2).
          */
         readonly iOServicesServList: OPTIONAL<IOServicesServList>,
         /**
          * @summary `dataCollectionServList`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmaps for this service category at the logical device;
+         * omit if unsupported (ECMA-269 §13.1.2).
          */
         readonly dataCollectionServList: OPTIONAL<DataCollectionServList>,
         /**
          * @summary `voiceUnitServList`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmaps for this service category at the logical device;
+         * omit if unsupported (ECMA-269 §13.1.2).
          */
         readonly voiceUnitServList: OPTIONAL<VoiceUnitServList>,
         /**
          * @summary `locationServicesServList`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmaps for this service category at the logical device;
+         * omit if unsupported (ECMA-269 §13.1.2).
          */
         readonly locationServicesServList: OPTIONAL<LocationServicesServList>
     ) {}

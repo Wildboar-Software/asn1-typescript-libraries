@@ -27,7 +27,10 @@ import { RobBitPatt, _decode_RobBitPatt, _encode_RobBitPatt } from "../V59/RobBi
 /**
  * @summary V90Diag_Item
  * @description
- * 
+ *
+ * V.90 training sequences, rates, line estimates, and PCM codec law. ITU-T Rec.
+ * V.59 (11/2000) §6.8.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -67,156 +70,293 @@ class V90Diag_Item {
     constructor (
         /**
          * @summary `modeV90`.
+         * @description
+         *
+         * V.90 operating-mode capability. Table 5/V.59: `notSupported`(0),
+         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+         * off. Tag-ID `0900`. ITU-T Rec. V.59 (11/2000) §6.8.3.
          * @public
          * @readonly
          */
         readonly modeV90: Capabilities,
         /**
          * @summary `iNFO0Tx`.
+         * @description
+         *
+         * INFO0 sequence transmitted. Hex `dataSequence` (§6.2.2): first bit in
+         * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
+         * `;` delimits N-bit words. Common Tag-ID `41`. ITU-T Rec. V.59
+         * (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly iNFO0Tx: V59String,
         /**
          * @summary `iNFO0Rx`.
+         * @description
+         *
+         * INFO0 sequence received. Hex `dataSequence` (§6.2.2): first bit in
+         * time is the LSB of each hex word; omit start/stop/fill bits and CRCs;
+         * `;` delimits N-bit words. Common Tag-ID `42`. ITU-T Rec. V.59
+         * (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly iNFO0Rx: V59String,
         /**
          * @summary `iNFO1A`.
+         * @description
+         *
+         * INFO1a sequence transmitted or received in V.90. Hex `dataSequence`
+         * (§6.2.2): first bit in time is the LSB of each hex word; omit
+         * start/stop/fill bits and CRCs; `;` delimits N-bit words. Tag-ID
+         * `0902`. ITU-T Rec. V.59 (11/2000) §6.8.3.
          * @public
          * @readonly
          */
         readonly iNFO1A: V59String,
         /**
          * @summary `iNFO1d`.
+         * @description
+         *
+         * INFO1d sequence transmitted or received in V.90, depending on calling
+         * or answering. Hex `dataSequence` (§6.2.2): first bit in time is the
+         * LSB of each hex word; omit start/stop/fill bits and CRCs; `;`
+         * delimits N-bit words. Tag-ID `0901`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.3.
          * @public
          * @readonly
          */
         readonly iNFO1d: V59String,
         /**
          * @summary `mP`.
+         * @description
+         *
+         * MP sequence. Precoder coefficients of type-1 MP are omitted (see
+         * `precodeCoeffTx`/`precodeCoeffRx` on V.34). Hex `dataSequence`
+         * (§6.2.2): first bit in time is the LSB of each hex word; omit
+         * start/stop/fill bits and CRCs; `;` delimits N-bit words. Tag-ID
+         * `0903`. ITU-T Rec. V.59 (11/2000) §6.8.3.
          * @public
          * @readonly
          */
         readonly mP: V59String,
         /**
          * @summary `cP`.
+         * @description
+         *
+         * Last CP sequence. Hex `dataSequence` (§6.2.2): first bit in time is
+         * the LSB of each hex word; omit start/stop/fill bits and CRCs; `;`
+         * delimits N-bit words. Tag-ID `54`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly cP: V59String,
         /**
          * @summary `cPt`.
+         * @description
+         *
+         * Last CPt sequence. Hex `dataSequence` (§6.2.2): first bit in time is
+         * the LSB of each hex word; omit start/stop/fill bits and CRCs; `;`
+         * delimits N-bit words. Tag-ID `0904`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.3.
          * @public
          * @readonly
          */
         readonly cPt: V59String,
         /**
          * @summary `jAsequence`.
+         * @description
+         *
+         * JA sequence. Hex `dataSequence` (§6.2.2): first bit in time is the
+         * LSB of each hex word; omit start/stop/fill bits and CRCs; `;`
+         * delimits N-bit words. Tag-ID `0905`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.3.
          * @public
          * @readonly
          */
         readonly jAsequence: V59String,
         /**
          * @summary `jDsequence`.
+         * @description
+         *
+         * JD sequence. Hex `dataSequence` (§6.2.2): first bit in time is the
+         * LSB of each hex word; omit start/stop/fill bits and CRCs; `;`
+         * delimits N-bit words. Tag-ID `0906`. ITU-T Rec. V.59 (11/2000)
+         * §6.8.3.
          * @public
          * @readonly
          */
         readonly jDsequence: V59String,
         /**
          * @summary `v90TxLevel`.
+         * @description
+         *
+         * V.90 transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
+         * §6.8.3.
          * @public
          * @readonly
          */
         readonly v90TxLevel: TxPowerLevel,
         /**
          * @summary `txSymbolRate`.
+         * @description
+         *
+         * Transmitter symbol rate (Table 1/V.59). `sR8000` = PCM. Tag-ID `48`.
+         * ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly txSymbolRate: OPTIONAL<SymbolRate>,
         /**
          * @summary `rxSymbolRate`.
+         * @description
+         *
+         * Receiver symbol rate (Table 1/V.59). `sR8000` = PCM. Tag-ID `49`.
+         * ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxSymbolRate: OPTIONAL<SymbolRate>,
         /**
          * @summary `txCarrierFreq`.
+         * @description
+         *
+         * Transmitter carrier frequency matching the symbol rate (Table
+         * 2/V.59). Tag-ID `4A`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly txCarrierFreq: OPTIONAL<CarrierFreq>,
         /**
          * @summary `rxCarrierFreq`.
+         * @description
+         *
+         * Receiver carrier frequency matching the receive symbol rate (Table
+         * 2/V.59). Tag-ID `4B`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxCarrierFreq: OPTIONAL<CarrierFreq>,
         /**
          * @summary `txDataHistory`.
+         * @description
+         *
+         * Transmitter primary data rates used. Example:
+         * `45333;44000;33333;33600`. IA5 `simpleText` (§6.2.1). History lists
+         * oldest event first, most recent last (§6.2.6). Tag-ID `4C`. ITU-T
+         * Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly txDataHistory: V59String,
         /**
          * @summary `rxDataHistory`.
+         * @description
+         *
+         * Receiver primary data rates used (same format as `txDataHistory`).
+         * History lists oldest event first, most recent last (§6.2.6). Tag-ID
+         * `4D`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxDataHistory: V59String,
         /**
          * @summary `rxLevelEstimate`.
+         * @description
+         *
+         * Receive power at the modem input, with units (e.g. `-25dBm0`). May
+         * differ from a measurement at the line interface. IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4E`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxLevelEstimate: OPTIONAL<V59String>,
         /**
          * @summary `noiseEstimate`.
+         * @description
+         *
+         * Noise level with units (e.g. `-55dBm`, `35dBrn`). IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4F`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly noiseEstimate: OPTIONAL<V59String>,
         /**
          * @summary `rxSignalQuality`.
+         * @description
+         *
+         * Receiver signal quality at start and, if available, near end of call.
+         * Fractional form 1.0 best / 0.0 worst (e.g. `0.445;0.312`), or a
+         * proprietary integer as text. IA5 `simpleText` (§6.2.1). Tag-ID `50`.
+         * ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rxSignalQuality: OPTIONAL<V59String>,
         /**
          * @summary `nearEchoEstimate`.
+         * @description
+         *
+         * Near-end echo at start and, if available, end of call. Units in the
+         * string; omitted units mean a custom scale. IA5 `simpleText` (§6.2.1).
+         * Tag-ID `51`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly nearEchoEstimate: OPTIONAL<V59String>,
         /**
          * @summary `farEchoEstimate`.
+         * @description
+         *
+         * Far-end echo at start and, if available, end of call. Units in the
+         * string; omitted units mean a custom scale. IA5 `simpleText` (§6.2.1).
+         * Tag-ID `52`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly farEchoEstimate: OPTIONAL<V59String>,
         /**
          * @summary `roundTripDelay`.
+         * @description
+         *
+         * Round-trip delay with units (`25ms`, `0.025s`, or `166T` where T is
+         * symbol periods). IA5 `simpleText` (§6.2.1). Tag-ID `53`. ITU-T Rec.
+         * V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly roundTripDelay: OPTIONAL<V59String>,
         /**
          * @summary `rBSpattern`.
+         * @description
+         *
+         * Robbed-bit signalling pattern: packed 6 bits, `1` = robbed. Cyclic;
+         * not aligned to network framing. Bit 0 is LSB when displayed (ITU-T
+         * Rec. V.59 Cor.1 (07/2001) §6.2.3). Table 3/V.59. ITU-T Rec. V.59
+         * (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly rBSpattern: OPTIONAL<RobBitPatt>,
         /**
          * @summary `digitalPadLoss`.
+         * @description
+         *
+         * Estimated downstream digital attenuation, in dB or as a decimal
+         * fraction (e.g. `3dB`, `0.5011`). IA5 `simpleText` (§6.2.1). Tag-ID
+         * `56`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */
         readonly digitalPadLoss: OPTIONAL<V59String>,
         /**
          * @summary `codecLaw`.
+         * @description
+         *
+         * From CP: `TRUE` = A-law, `FALSE` = µ-law. For a digital PCM modem
+         * this is the local (downstream) codec; for an analogue PCM modem it is
+         * the remote codec. Tag-ID `0907`. ITU-T Rec. V.59 (11/2000) §6.8.3.
          * @public
          * @readonly
          */

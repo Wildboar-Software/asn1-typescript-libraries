@@ -79,7 +79,14 @@ enum _enum_for_NetworkAccessMode {
 /**
  * @summary NetworkAccessMode
  * @description
- * 
+ *
+ * Whether the subscriber has access to MSC/VLR and/or SGSN/MME, as in 3GPP TS
+ * 23.008. Used by SGSN/MME and MSC/VLR; in the VLR only during Restore Data and
+ * not stored. Always sent to SGSN and via IWF to MME as part of GPRS subscriber
+ * data at GPRS/MME location updating. Not used by the CSS. Unknown received
+ * values shall be discarded. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.50, 8.8.1.3,
+ * and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,6 +104,10 @@ type NetworkAccessMode = _enum_for_NetworkAccessMode | ENUMERATED;
 
 /**
  * @summary NetworkAccessMode_packetAndCircuit
+ * @description
+ *
+ * Access to both MSC/VLR and SGSN/MME. (3GPP TS 29.002 V19.1.0 clause 7.6.3.50)
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +116,10 @@ const NetworkAccessMode_packetAndCircuit: NetworkAccessMode = 0; /* LONG_NAMED_E
 
 /**
  * @summary packetAndCircuit
+ * @description
+ *
+ * Access to both MSC/VLR and SGSN/MME. (3GPP TS 29.002 V19.1.0 clause 7.6.3.50)
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +128,10 @@ const packetAndCircuit: NetworkAccessMode = NetworkAccessMode_packetAndCircuit; 
 
 /**
  * @summary NetworkAccessMode_onlyCircuit
+ * @description
+ *
+ * Circuit-switched access only. (3GPP TS 29.002 V19.1.0 clause 7.6.3.50)
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +140,10 @@ const NetworkAccessMode_onlyCircuit: NetworkAccessMode = 1; /* LONG_NAMED_ENUMER
 
 /**
  * @summary onlyCircuit
+ * @description
+ *
+ * Circuit-switched access only. (3GPP TS 29.002 V19.1.0 clause 7.6.3.50)
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +152,10 @@ const onlyCircuit: NetworkAccessMode = NetworkAccessMode_onlyCircuit; /* SHORT_N
 
 /**
  * @summary NetworkAccessMode_onlyPacket
+ * @description
+ *
+ * Packet-switched access only. (3GPP TS 29.002 V19.1.0 clause 7.6.3.50)
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +164,10 @@ const NetworkAccessMode_onlyPacket: NetworkAccessMode = 2; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary onlyPacket
+ * @description
+ *
+ * Packet-switched access only. (3GPP TS 29.002 V19.1.0 clause 7.6.3.50)
+ *
  * @constant
  * @type {number}
  */

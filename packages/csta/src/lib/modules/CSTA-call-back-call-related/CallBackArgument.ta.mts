@@ -23,7 +23,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CallBackArgument
  * @description
- * 
+ *
+ * Service request for Call Back Call-Related (ECMA-269 §17.1.4 /
+ * ECMA-285 §15.1.4). Names the calling device's connection in the
+ * original call. The called side may be Fail, Alerting, Queued, or
+ * Null (e.g. after forward).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +50,53 @@ class CallBackArgument {
     constructor (
         /**
          * @summary `callbackConnection`.
+         * @description
+         *
+         * Mandatory. Calling device's connection in the original
+         * call. Initial state Connected; typically becomes Null
+         * (may Fail first if still off-hook).
+         *
          * @public
          * @readonly
          */
         readonly callbackConnection: ConnectionID,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Optional call characteristics to apply (§12.2.4).
+         *
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `subjectOfCall`.
+         * @description
+         *
+         * Optional subject or intent of the call (§12.2.27).
+         *
          * @public
          * @readonly
          */
         readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Optional preferred language(s) for the call (§12.2.16).
+         *
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

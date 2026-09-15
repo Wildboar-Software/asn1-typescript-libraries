@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ButtonPressEvent
  * @description
- * 
+ * Capability bitmap for the Button Press event (ECMA-269 C.13.2, ECMA-285
+ * §9.10). Presence of this entry in `PhysDevEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +32,9 @@ type ButtonPressEvent = BIT_STRING;
 /**
  * @summary ButtonPressEvent_buttonLabel
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.13.2).
  */
 export
 const ButtonPressEvent_buttonLabel: number = 0; /* LONG_NAMED_BIT */
@@ -31,6 +42,8 @@ const ButtonPressEvent_buttonLabel: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary buttonLabel
  * @constant
+ * @description
+ * Alias of `ButtonPressEvent_buttonLabel`.
  */
 export
 const buttonLabel: number = ButtonPressEvent_buttonLabel; /* SHORT_NAMED_BIT */
@@ -38,6 +51,9 @@ const buttonLabel: number = ButtonPressEvent_buttonLabel; /* SHORT_NAMED_BIT */
 /**
  * @summary ButtonPressEvent_buttonAssociatedNumber
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.13.2).
  */
 export
 const ButtonPressEvent_buttonAssociatedNumber: number = 1; /* LONG_NAMED_BIT */
@@ -45,6 +61,8 @@ const ButtonPressEvent_buttonAssociatedNumber: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary buttonAssociatedNumber
  * @constant
+ * @description
+ * Alias of `ButtonPressEvent_buttonAssociatedNumber`.
  */
 export
 const buttonAssociatedNumber: number = ButtonPressEvent_buttonAssociatedNumber; /* SHORT_NAMED_BIT */
@@ -52,6 +70,9 @@ const buttonAssociatedNumber: number = ButtonPressEvent_buttonAssociatedNumber; 
 /**
  * @summary ButtonPressEvent_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.13.2).
  */
 export
 const ButtonPressEvent_privateData: number = 2; /* LONG_NAMED_BIT */
@@ -59,6 +80,8 @@ const ButtonPressEvent_privateData: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `ButtonPressEvent_privateData`.
  */
 export
 const privateData: number = ButtonPressEvent_privateData; /* SHORT_NAMED_BIT */

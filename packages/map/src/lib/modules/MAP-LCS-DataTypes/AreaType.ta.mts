@@ -82,7 +82,9 @@ enum _enum_for_AreaType {
 /**
  * @summary AreaType
  * @description
- * 
+ *
+ * Area type for deferred area events (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -103,6 +105,10 @@ type AreaType = _enum_for_AreaType | ENUMERATED;
 
 /**
  * @summary AreaType_countryCode
+ * @description
+ *
+ * `countryCode (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +117,10 @@ const AreaType_countryCode: AreaType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary countryCode
+ * @description
+ *
+ * `countryCode (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +129,10 @@ const countryCode: AreaType = AreaType_countryCode; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary AreaType_plmnId
+ * @description
+ *
+ * `plmnId (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +141,10 @@ const AreaType_plmnId: AreaType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary plmnId
+ * @description
+ *
+ * `plmnId (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -135,6 +153,10 @@ const plmnId: AreaType = AreaType_plmnId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AreaType_locationAreaId
+ * @description
+ *
+ * `locationAreaId (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +165,10 @@ const AreaType_locationAreaId: AreaType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationAreaId
+ * @description
+ *
+ * `locationAreaId (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -151,6 +177,10 @@ const locationAreaId: AreaType = AreaType_locationAreaId; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary AreaType_routingAreaId
+ * @description
+ *
+ * `routingAreaId (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -159,6 +189,10 @@ const AreaType_routingAreaId: AreaType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary routingAreaId
+ * @description
+ *
+ * `routingAreaId (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -167,6 +201,10 @@ const routingAreaId: AreaType = AreaType_routingAreaId; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary AreaType_cellGlobalId
+ * @description
+ *
+ * `cellGlobalId (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -175,6 +213,10 @@ const AreaType_cellGlobalId: AreaType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cellGlobalId
+ * @description
+ *
+ * `cellGlobalId (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -183,6 +225,10 @@ const cellGlobalId: AreaType = AreaType_cellGlobalId; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary AreaType_utranCellId
+ * @description
+ *
+ * `utranCellId (5)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -191,6 +237,10 @@ const AreaType_utranCellId: AreaType = 5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary utranCellId
+ * @description
+ *
+ * `utranCellId (5)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */

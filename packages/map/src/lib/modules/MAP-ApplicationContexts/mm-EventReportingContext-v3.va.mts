@@ -72,7 +72,11 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary mm_EventReportingContext_v3
  * @description
- * 
+ *
+ * Mobility management event notification between VLR and gsmSCF. Initiator is
+ * VLR; responder is gsmSCF. Version 3 only (3GPP TS 29.002 V19.1.0 clause
+ * 17.3.2.46).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

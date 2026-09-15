@@ -15,6 +15,13 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary iDFieldLengthMismatch
  * @description
  *
+ * `specificProblems` value when a PDU's ID Length differs from this IS. Report
+ * received ID length and source ID via `notificationIDLength` and
+ * `notificationSourceId`. probableCause `configurationOrCustomisationError`;
+ * severity Major.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.1.3.2 and 11.2.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

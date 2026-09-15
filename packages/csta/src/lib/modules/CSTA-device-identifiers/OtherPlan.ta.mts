@@ -8,7 +8,14 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary OtherPlan
  * @description
- * 
+ *
+ * Device Identifier in a numbering plan other than public or private
+ * TON (ECMA-269 §10.1.2; ECMA-285 §9.2). Reserved for plans not
+ * covered by `PublicTON` / `PrivateTON`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

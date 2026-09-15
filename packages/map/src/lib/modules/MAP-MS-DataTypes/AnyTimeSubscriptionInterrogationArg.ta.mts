@@ -75,7 +75,14 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary AnyTimeSubscriptionInterrogationArg
  * @description
- * 
+ *
+ * Argument of MAP-ANY-TIME-SUBSCRIPTION-INTERROGATION. Used by the gsmSCF to
+ * request subscription information (e.g. call forwarding SS data or CSI) from
+ * the HLR at any time. In an IP Multimedia Core Network, an IM-SSF can take the
+ * gsmSCF role; gsmSCF-Address then contains the IM-SSF address. The HLR may
+ * screen using gsmSCF-Address. Presence requirements are in 3GPP TS 23.078 and
+ * TS 23.278 (3GPP TS 29.002 V19.1.0 clauses 8.11.3.1 and 8.11.3.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,18 +102,34 @@ class AnyTimeSubscriptionInterrogationArg {
     constructor (
         /**
          * @summary `subscriberIdentity`.
+         * @description
+         *
+         * IMSI or MSISDN of the subscriber whose subscription data is requested
+         * (3GPP TS 29.002 V19.1.0 clauses 8.11.3.2 and 7.6.2).
+         *
          * @public
          * @readonly
          */
         readonly subscriberIdentity: SubscriberIdentity,
         /**
          * @summary `requestedSubscriptionInfo`.
+         * @description
+         *
+         * Subscription information being requested (3GPP TS 29.002 V19.1.0
+         * clauses 8.11.3.2 and 7.6.3.86).
+         *
          * @public
          * @readonly
          */
         readonly requestedSubscriptionInfo: RequestedSubscriptionInfo,
         /**
          * @summary `gsmSCF_Address`.
+         * @description
+         *
+         * Address of the interrogating gsmSCF (IM-SSF address when IM-SSF takes
+         * the gsmSCF role). The HLR may use it to screen the request (3GPP TS
+         * 29.002 V19.1.0 clauses 8.11.3.3 and 7.6.2.58).
+         *
          * @public
          * @readonly
          */
@@ -119,6 +142,11 @@ class AnyTimeSubscriptionInterrogationArg {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `longFTN_Supported`.
+         * @description
+         *
+         * Indicates that the gsmSCF supports Long Forwarded-to Numbers (3GPP TS
+         * 29.002 V19.1.0 clauses 8.11.3.2 and 7.6.2.22B).
+         *
          * @public
          * @readonly
          */

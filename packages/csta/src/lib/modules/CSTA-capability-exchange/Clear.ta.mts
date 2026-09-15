@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary Clear
  * @description
- * 
+ * Capability bitmap for the Clear service (ECMA-269 C.19.2, ECMA-285 §9.10).
+ * Presence of this entry in `VoiceUnitServList` means the SF supports that
+ * service. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +32,9 @@ type Clear = BIT_STRING;
 /**
  * @summary Clear_resource
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `resource` parameter (ECMA-269
+ * C.19.2).
  */
 export
 const Clear_resource: number = 0; /* LONG_NAMED_BIT */
@@ -31,6 +42,8 @@ const Clear_resource: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary resource
  * @constant
+ * @description
+ * Alias of `Clear_resource`.
  */
 export
 const resource: number = Clear_resource; /* SHORT_NAMED_BIT */
@@ -38,6 +51,9 @@ const resource: number = Clear_resource; /* SHORT_NAMED_BIT */
 /**
  * @summary Clear_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.19.2).
  */
 export
 const Clear_privateData: number = 1; /* LONG_NAMED_BIT */
@@ -45,6 +61,8 @@ const Clear_privateData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `Clear_privateData`.
  */
 export
 const privateData: number = Clear_privateData; /* SHORT_NAMED_BIT */
@@ -52,6 +70,9 @@ const privateData: number = Clear_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary Clear_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.19.2).
  */
 export
 const Clear_privateDataInAck: number = 2; /* LONG_NAMED_BIT */
@@ -59,6 +80,8 @@ const Clear_privateDataInAck: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `Clear_privateDataInAck`.
  */
 export
 const privateDataInAck: number = Clear_privateDataInAck; /* SHORT_NAMED_BIT */

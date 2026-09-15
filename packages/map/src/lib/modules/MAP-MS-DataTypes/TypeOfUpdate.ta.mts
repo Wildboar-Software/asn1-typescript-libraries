@@ -78,7 +78,13 @@ enum _enum_for_TypeOfUpdate {
 /**
  * @summary TypeOfUpdate
  * @description
- * 
+ *
+ * Whether Cancel Location is due to SGSN change or MME change. Shall be absent
+ * if CancellationType is other than `updateProcedure` or
+ * `initialAttachProcedure`.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.52 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

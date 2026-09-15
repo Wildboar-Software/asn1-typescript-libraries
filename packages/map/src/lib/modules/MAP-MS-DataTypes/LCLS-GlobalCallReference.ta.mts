@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LCLS_GlobalCallReference
  * @description
- * 
+ *
+ * Globally unique call identifier for the duration of the call (3GPP TS
+ * 29.205). Used to correlate call legs and decide whether a call is local
+ * within the BSS. OCTET STRING SIZE (13..15), coded as in 3GPP TS 29.205. (3GPP
+ * TS 29.002 V19.1.0 clauses 7.6.5.21 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

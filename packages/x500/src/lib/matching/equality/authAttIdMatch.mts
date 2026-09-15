@@ -17,6 +17,14 @@ import type {
 import { DERElement } from "@wildboar/asn1";
 import compareIssuerSerial from "../../comparators/compareIssuerSerial.mjs";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 17.5.2.4.2 `authAttIdMatch`.
+ *
+ * TRUE iff the stored AC contains `authorityAttributeIdentifier`
+ * and every component present in the presented
+ * `AuthorityAttributeIdentifierSyntax` matches the stored
+ * `IssuerSerial` pointers.
+ */
 export
 const authAttIdMatch: EqualityMatcher = (
     assertion: ASN1Element,

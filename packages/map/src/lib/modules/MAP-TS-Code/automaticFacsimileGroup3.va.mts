@@ -72,7 +72,10 @@ import { TeleserviceCode, _decode_TeleserviceCode, _encode_TeleserviceCode } fro
 /**
  * @summary automaticFacsimileGroup3
  * @description
- * 
+ *
+ * Automatic facsimile group 3. Specific service. Bit pattern `'01100010'B`
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.9).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

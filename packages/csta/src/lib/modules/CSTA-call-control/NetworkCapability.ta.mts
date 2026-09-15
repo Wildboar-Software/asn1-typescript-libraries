@@ -50,7 +50,15 @@ import {
 /**
  * @summary NetworkCapability
  * @description
- * 
+ *
+ * Type of network reached and which Call Control events that
+ * network can provide. Reported on Network Reached /
+ * Network Capabilities Changed. After an interworking
+ * situation, event reporting for the call may be reduced.
+ * ECMA-269 §17.2 (Network Capabilities Changed).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -89,12 +97,22 @@ class NetworkCapability {
     constructor (
         /**
          * @summary `networkType`.
+         * @description
+         *
+         * ISDN/non-ISDN public or private, or other. ECMA-269
+         * Network Capabilities Changed.
+         *
          * @public
          * @readonly
          */
         readonly networkType: NetworkCapability_networkType,
         /**
          * @summary `eventsProvided`.
+         * @description
+         *
+         * Bitmap of Call Control events the network can report.
+         * ECMA-269 Network Capabilities Changed.
+         *
          * @public
          * @readonly
          */

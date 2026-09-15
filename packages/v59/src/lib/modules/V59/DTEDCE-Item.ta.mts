@@ -15,7 +15,13 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
 /**
  * @summary DTEDCE_Item
  * @description
- * 
+ *
+ * DTE/DCE flow control, transfer mode, speeds, throughput, and character
+ * errors. ITU-T Rec. V.59 Cor.2 (03/2002) clause 2 says `txThroughput`,
+ * `rxThroughput`, `txErrors`, and `rxErrors` should be OPTIONAL in Annex A
+ * (they are derived); this module still encodes them as required. ITU-T Rec.
+ * V.59 (11/2000) §6.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,54 +44,97 @@ class DTEDCE_Item {
     constructor (
         /**
          * @summary `txFlowControl`.
+         * @description
+         *
+         * Flow control used by the DCE transmitter (e.g. `XON/XOFF`, `105/133`,
+         * `None`). IA5 `simpleText` (§6.2.1). Tag-ID `3101`. ITU-T Rec. V.59
+         * (11/2000) §6.13.
          * @public
          * @readonly
          */
         readonly txFlowControl: V59String,
         /**
          * @summary `rxFlowControl`.
+         * @description
+         *
+         * Flow control used by the DCE receiver (same tokens as
+         * `txFlowControl`). IA5 `simpleText` (§6.2.1). Tag-ID `3102`. ITU-T
+         * Rec. V.59 (11/2000) §6.13.
          * @public
          * @readonly
          */
         readonly rxFlowControl: V59String,
         /**
          * @summary `protocol`.
+         * @description
+         *
+         * How data are transferred DTE/DCE (e.g. `8N1`, `7E2`, `Autosync`,
+         * `X.32`, `V.80 framed`). IA5 `simpleText` (§6.2.1). Tag-ID `3103`.
+         * ITU-T Rec. V.59 (11/2000) §6.13.
          * @public
          * @readonly
          */
         readonly protocol: V59String,
         /**
          * @summary `txSpeed`.
+         * @description
+         *
+         * Data rate DTE→DCE in bit/s (50..1677215). Tag-ID `3104`. ITU-T Rec.
+         * V.59 (11/2000) §6.13.
          * @public
          * @readonly
          */
         readonly txSpeed: INTEGER,
         /**
          * @summary `rxSpeed`.
+         * @description
+         *
+         * Data rate DCE→DTE in bit/s (50..1677215 in Annex A). Tag-ID `3105`.
+         * ITU-T Rec. V.59 (11/2000) §6.13.
          * @public
          * @readonly
          */
         readonly rxSpeed: INTEGER,
         /**
          * @summary `txThroughput`.
+         * @description
+         *
+         * Average data rate DTE→DCE in bit/s. Clause 6.13 and ITU-T Rec. V.59
+         * Cor.2 (03/2002) treat this as optional; Annex A in this module
+         * requires it. Tag-ID `3106`. ITU-T Rec. V.59 (11/2000) §6.13.
          * @public
          * @readonly
          */
         readonly txThroughput: INTEGER,
         /**
          * @summary `rxThroughput`.
+         * @description
+         *
+         * Average data rate DCE→DTE in bit/s. Optional in clause 6.13 / ITU-T
+         * Rec. V.59 Cor.2 (03/2002); required here. Tag-ID `3107`. ITU-T Rec.
+         * V.59 (11/2000) §6.13.
          * @public
          * @readonly
          */
         readonly rxThroughput: INTEGER,
         /**
          * @summary `txErrors`.
+         * @description
+         *
+         * Errored characters received from the DTE (overruns, framing errors,
+         * etc.). Optional in clause 6.13 / ITU-T Rec. V.59 Cor.2 (03/2002);
+         * required here. Tag-ID `3108`. ITU-T Rec. V.59 (11/2000) §6.13.
          * @public
          * @readonly
          */
         readonly txErrors: INTEGER,
         /**
          * @summary `rxErrors`.
+         * @description
+         *
+         * Characters known not to have been sent to the DTE. Optional in clause
+         * 6.13 / ITU-T Rec. V.59 Cor.2 (03/2002); required here. Tag-ID `3109`.
+         * ITU-T Rec. V.59 (11/2000) §6.13.
          * @public
          * @readonly
          */

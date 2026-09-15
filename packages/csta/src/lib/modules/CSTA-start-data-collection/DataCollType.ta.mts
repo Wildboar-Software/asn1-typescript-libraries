@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary DataCollType
  * @description
- * 
+ *
+ * `digits` (DTMF/rotary) or `telTones` (telephony tones) (ECMA-269 §25.1.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +34,13 @@ enum _enum_for_DataCollType {
 /**
  * @summary DataCollType
  * @description
- * 
+ *
+ * `digits` (DTMF/rotary) or `telTones` (telephony tones) (ECMA-269 §25.1.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +57,13 @@ type DataCollType = _enum_for_DataCollType;
 /**
  * @summary DataCollType
  * @description
- * 
+ *
+ * `digits` (DTMF/rotary) or `telTones` (telephony tones) (ECMA-269 §25.1.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,6 +79,10 @@ const DataCollType = _enum_for_DataCollType;
 
 /**
  * @summary DataCollType_digits
+ * @description
+ *
+ * DTMF/rotary pulse digits (ECMA-269 §25.1.5.1).
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +91,10 @@ const DataCollType_digits: DataCollType = DataCollType.digits; /* LONG_NAMED_ENU
 
 /**
  * @summary digits
+ * @description
+ *
+ * DTMF/rotary pulse digits (ECMA-269 §25.1.5.1).
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +103,10 @@ const digits: DataCollType = DataCollType.digits; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary DataCollType_telTones
+ * @description
+ *
+ * Telephony tones (ECMA-269 §25.1.5.1).
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +115,10 @@ const DataCollType_telTones: DataCollType = DataCollType.telTones; /* LONG_NAMED
 
 /**
  * @summary telTones
+ * @description
+ *
+ * Telephony tones (ECMA-269 §25.1.5.1).
+ *
  * @constant
  * @type {number}
  */

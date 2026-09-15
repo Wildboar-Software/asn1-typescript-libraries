@@ -79,7 +79,12 @@ import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 /**
  * @summary provideSubscriberInfo
  * @description
- * 
+ *
+ * MAP_PROVIDE_SUBSCRIBER_INFO: request information (e.g. subscriber state and
+ * location) from the VLR, SGSN or MME (via IWF) at any time. Confirmed. Typical
+ * path: HLR→VLR or HLR→SGSN. Local opcode 70. Timer class `m` (15 s to 30 s).
+ * (3GPP TS 29.002 V19.1.0 clauses 8.11.2.1, 17.1.2, 17.3.2.28 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

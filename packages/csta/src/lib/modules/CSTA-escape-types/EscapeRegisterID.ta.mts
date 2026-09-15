@@ -8,7 +8,12 @@ import { OCTET_STRING, ASN1Element as _Element, ASN1TagClass as _TagClass } from
 /**
  * @summary EscapeRegisterID
  * @description
- * 
+ *
+ * Identifies an escape-service registration. Returned by Escape Register; used
+ * to match subsequent Escape requests. ECMA-269 §9.4.2.1, §12.3.13.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -84,7 +84,13 @@ import { unauthorizedRequestingNetwork } from "../MAP-Errors/unauthorizedRequest
 /**
  * @summary sendRoutingInfoForLCS
  * @description
- * 
+ *
+ * MAP_SEND_ROUTING_INFO_FOR_LCS: GMLC retrieves routing information from the
+ * HLR to route a location-service request to the serving VMSC, SGSN, MME or
+ * 3GPP AAA server. Confirmed. Typical path: GMLC→HLR. Local opcode 85. Timer
+ * class `m` (15 s to 30 s). Distinctive error: `unauthorizedRequestingNetwork`.
+ * (3GPP TS 29.002 V19.1.0 clauses 13A.1.1, 17.1.2, 17.3.2.39 and 17.6.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

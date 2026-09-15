@@ -8,7 +8,12 @@ import { INTEGER, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ConnectionRateList
  * @description
- * 
+ *
+ * Connection rates supported for this device (contents switching-function
+ * specific). ECMA-269 §12.2.20, Get Logical Device Information.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

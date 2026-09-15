@@ -25,7 +25,13 @@ import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "
 /**
  * @summary ParkCallArgument
  * @description
- * 
+ *
+ * Service request for Park Call (ECMA-269 §17.1.21 / ECMA-285
+ * §15.1.21). Names the connection to park and the park-to device.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,36 +51,66 @@ class ParkCallArgument {
     constructor (
         /**
          * @summary `parking`.
+         * @description
+         *
+         * Mandatory. Connection to park. Initial Hold or
+         * Connected; typically becomes Null (Queued for some
+         * independent shared-bridged cases) (FR 5).
+         *
          * @public
          * @readonly
          */
         readonly parking: ConnectionID,
         /**
          * @summary `parkTo`.
+         * @description
+         *
+         * Mandatory. Device at which the call is queued. Must be a
+         * complete DeviceID (FR 6). DND and Forwarding are honoured
+         * (FR 4). May equal the parking device (FR 2).
+         *
          * @public
          * @readonly
          */
         readonly parkTo: DeviceID,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional correlator data attached before resulting state
+         * transitions (§12.2.10).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `subjectOfCall`.
+         * @description
+         *
+         * Optional subject or intent of the call (§12.2.27).
+         *
          * @public
          * @readonly
          */
         readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Optional preferred language(s) (§12.2.16).
+         *
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

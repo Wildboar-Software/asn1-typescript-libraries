@@ -19,7 +19,10 @@ import { ServerKeyExchange_diffie_hellman, _decode_ServerKeyExchange_diffie_hell
 /**
  * @summary ServerKeyExchange
  * @description
- * 
+ *
+ * TLS ServerKeyExchange: RSA or Diffie-Hellman params plus signature
+ * (or anonymous). Extensible. ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

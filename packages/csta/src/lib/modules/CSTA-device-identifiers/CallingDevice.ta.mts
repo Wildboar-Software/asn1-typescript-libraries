@@ -9,7 +9,13 @@ import { CallingDeviceID, _decode_CallingDeviceID, _encode_CallingDeviceID } fro
 /**
  * @summary CallingDevice
  * @description
- * 
+ *
+ * Synonym for `CallingDeviceID` (ECMA-285 §9.2). See that type for
+ * calling-device semantics (ECMA-269 §12.3.7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

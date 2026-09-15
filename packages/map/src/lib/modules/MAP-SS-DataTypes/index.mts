@@ -1,7 +1,9 @@
 /**
  * @description
  *
- * ASN.1 module `MAP-SS-DataTypes`.
+ * ASN.1 module `MAP-SS-DataTypes` (clause 17.7.4). Types for
+ * supplementary-service management, USSD, password, and call completion (CCBS)
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.4, 7.6.4 and 11).
  */
 export * from "./BasicServiceGroupList.ta.mjs";
 export * from "./CCBS-Data.ta.mjs";

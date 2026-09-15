@@ -73,7 +73,13 @@ import { AUTS, _decode_AUTS, _encode_AUTS } from "../MAP-MS-DataTypes/AUTS.ta.mj
 /**
  * @summary Re_synchronisationInfo
  * @description
- * 
+ *
+ * UMTS/EPS authentication resynchronisation: RAND plus AUTS. Use as in 3GPP TS
+ * 33.200. In Send Authentication Info, if multiple requests are in a dialogue,
+ * present only in the first.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.5.2.3, 7.6.7.6B and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +96,24 @@ class Re_synchronisationInfo {
     constructor (
         /**
          * @summary `rand`.
+         * @description
+         *
+         * Random number used for authentication.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.2).
+         *
          * @public
          * @readonly
          */
         readonly rand: RAND,
         /**
          * @summary `auts`.
+         * @description
+         *
+         * UMTS resynchronisation token.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.6B).
+         *
          * @public
          * @readonly
          */

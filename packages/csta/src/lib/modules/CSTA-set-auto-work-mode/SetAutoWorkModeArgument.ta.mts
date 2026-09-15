@@ -19,7 +19,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetAutoWorkModeArgument
  * @description
- * 
+ *
+ * Set Auto Work Mode request (ECMA-269 §22.1.17.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +42,38 @@ class SetAutoWorkModeArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * ACD agent whose auto-work mode is set.
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `autoWorkOn`.
+         * @description
+         *
+         * FALSE = off; TRUE = on.
          * @public
          * @readonly
          */
         readonly autoWorkOn: BOOLEAN,
         /**
          * @summary `autoWorkInterval`.
+         * @description
+         *
+         * Seconds in WorkingAfterCall (0..6000). 0: do not auto-exit that
+         * state.
          * @public
          * @readonly
          */
         readonly autoWorkInterval: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

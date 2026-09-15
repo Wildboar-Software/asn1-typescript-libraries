@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MicGainInc
  * @description
- * 
+ *
+ * Relative microphone-gain step. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +32,11 @@ enum _enum_for_MicGainInc {
 /**
  * @summary MicGainInc
  * @description
- * 
+ *
+ * Relative microphone-gain step. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,7 +53,11 @@ type MicGainInc = _enum_for_MicGainInc;
 /**
  * @summary MicGainInc
  * @description
- * 
+ *
+ * Relative microphone-gain step. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,6 +73,10 @@ const MicGainInc = _enum_for_MicGainInc;
 
 /**
  * @summary MicGainInc_increment
+ * @description
+ *
+ * Increase microphone gain. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +93,10 @@ const increment: MicGainInc = MicGainInc.increment; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary MicGainInc_decrement
+ * @description
+ *
+ * Decrease microphone gain. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */

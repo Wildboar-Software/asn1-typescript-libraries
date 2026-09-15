@@ -11,7 +11,12 @@ import { SimpleCallState, _decode_SimpleCallState, _encode_SimpleCallState } fro
 /**
  * @summary CallState
  * @description
- * 
+ *
+ * Call state in a snapshot: compound list, simple two-party state, or unknown.
+ * ECMA-269 §6.1.4, §16.1.2.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

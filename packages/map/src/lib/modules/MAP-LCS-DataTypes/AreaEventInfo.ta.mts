@@ -74,7 +74,10 @@ import { IntervalTime, _decode_IntervalTime, _encode_IntervalTime } from "../MAP
 /**
  * @summary AreaEventInfo
  * @description
- * 
+ *
+ * Deferred MT-LR area event: area definition, occurrence, minimum interval
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.11.26 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,18 +95,30 @@ class AreaEventInfo {
     constructor (
         /**
          * @summary `areaDefinition`.
+         * @description
+         *
+         * List of areas.
+         *
          * @public
          * @readonly
          */
         readonly areaDefinition: AreaDefinition,
         /**
          * @summary `occurrenceInfo`.
+         * @description
+         *
+         * oneTimeEvent or multipleTimeEvent.
+         *
          * @public
          * @readonly
          */
         readonly occurrenceInfo: OPTIONAL<OccurrenceInfo>,
         /**
          * @summary `intervalTime`.
+         * @description
+         *
+         * Minimum interval between area reports in seconds (1..32767).
+         *
          * @public
          * @readonly
          */

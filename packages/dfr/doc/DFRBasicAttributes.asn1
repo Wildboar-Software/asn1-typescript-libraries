@@ -1,0 +1,262 @@
+DFRBasicAttributes
+{iso standard(0) 10166 part-1(1) modules(0) basic-attributes(2)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    id-att-dfr-upi, id-att-dfr-object-class, id-att-dfr-document-type,
+    id-att-dfr-title, id-att-dfr-pathname, id-att-dfr-parent-identification,
+    id-att-dfr-referent-deleted, id-att-dfr-membership-criteria,
+    id-att-dfr-ordering, id-att-dfr-resource-limit, id-att-dfr-resource-used,
+    id-att-dfr-number-of-group-members, id-att-version-name,
+    id-att-dfr-previous-versions, id-att-dfr-next-versions, id-att-dfr-version-root,
+    id-att-dfr-external-location, id-att-user-reference,
+    id-att-user-reference-to-other-objects,
+    id-att-dfr-attributes-create-date-and-time,
+    id-att-dfr-content-create-date-and-time, id-att-dfr-created-by,
+    id-att-dfr-attributes-modify-date-and-time,
+    id-att-dfr-content-modify-date-and-time, id-att-dfr-attributes-modified-by,
+    id-att-dfr-content-modified-by, id-att-document-date-and-time,
+    id-att-dfr-reservation, id-att-dfr-reserved-by, id-att-dfr-access-list
+        FROM DFRObjectIdentifiers
+        {iso standard 10166 part-1(1) modules(0) object-identifiers(0)}
+
+    ATTRIBUTE, DistinguishedName, distinguishedNameMatch, objectIdentifierMatch
+        FROM InformationFramework
+        {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9}
+
+    booleanMatch, generalizedTimeMatch, generalizedTimeOrderingMatch,
+    integerMatch, integerOrderingMatch, octetStringMatch
+        FROM SelectedAttributeTypes
+        {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9}
+
+    DfrUniquePermanentIdentifier, DfrObjectClass, DfrPathName, CharacterData,
+    OrderingRule, Filter, Reservation
+        FROM DFRAbstractService
+        {iso standard 10166 part-1(1) modules(0) abstract-service(1)}
+    ;
+
+-- DFR-Basic-Attribute-Set
+
+dfr-upi ATTRIBUTE ::= {
+    WITH SYNTAX             DfrUniquePermanentIdentifier
+    EQUALITY MATCHING RULE  octetStringMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-upi
+}
+
+dfr-object-class ATTRIBUTE ::= {
+    WITH SYNTAX             DfrObjectClass
+    EQUALITY MATCHING RULE  integerMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-object-class
+}
+
+dfr-document-type ATTRIBUTE ::= {
+    WITH SYNTAX             OBJECT IDENTIFIER
+    EQUALITY MATCHING RULE  objectIdentifierMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-document-type
+}
+
+dfr-title ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-title
+}
+
+dfr-pathname ATTRIBUTE ::= {
+    WITH SYNTAX             DfrPathName
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-pathname
+}
+
+dfr-parent-identification ATTRIBUTE ::= {
+    WITH SYNTAX             DfrUniquePermanentIdentifier
+    EQUALITY MATCHING RULE  octetStringMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-parent-identification
+}
+
+dfr-referent-deleted ATTRIBUTE ::= {
+    WITH SYNTAX             BOOLEAN
+    EQUALITY MATCHING RULE  booleanMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-referent-deleted
+}
+
+dfr-membership-criteria ATTRIBUTE ::= {
+    WITH SYNTAX             Filter
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-membership-criteria
+}
+
+dfr-ordering ATTRIBUTE ::= {
+    WITH SYNTAX             OrderingRule
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-ordering
+}
+
+dfr-resource-limit ATTRIBUTE ::= {
+    WITH SYNTAX             INTEGER
+    EQUALITY MATCHING RULE  integerMatch
+    ORDERING MATCHING RULE  integerOrderingMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-resource-limit
+}
+
+dfr-resource-used ATTRIBUTE ::= {
+    WITH SYNTAX             INTEGER
+    EQUALITY MATCHING RULE  integerMatch
+    ORDERING MATCHING RULE  integerOrderingMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-resource-used
+}
+
+dfr-number-of-group-members ATTRIBUTE ::= {
+    WITH SYNTAX             INTEGER
+    EQUALITY MATCHING RULE  integerMatch
+    ORDERING MATCHING RULE  integerOrderingMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-number-of-group-members
+}
+
+version-name ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    SINGLE VALUE            TRUE
+    ID                      id-att-version-name
+}
+
+dfr-previous-versions ATTRIBUTE ::= {
+    WITH SYNTAX             DfrUniquePermanentIdentifier
+    EQUALITY MATCHING RULE  octetStringMatch
+    ID                      id-att-dfr-previous-versions
+}
+
+dfr-next-versions ATTRIBUTE ::= {
+    WITH SYNTAX             DfrUniquePermanentIdentifier
+    EQUALITY MATCHING RULE  octetStringMatch
+    ID                      id-att-dfr-next-versions
+}
+
+dfr-version-root ATTRIBUTE ::= {
+    WITH SYNTAX             DfrUniquePermanentIdentifier
+    EQUALITY MATCHING RULE  octetStringMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-version-root
+}
+
+dfr-external-location ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-external-location
+}
+
+user-reference ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    SINGLE VALUE            TRUE
+    ID                      id-att-user-reference
+}
+
+user-reference-to-other-objects ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    ID                      id-att-user-reference-to-other-objects
+}
+
+dfr-attributes-create-date-and-time ATTRIBUTE ::= {
+    WITH SYNTAX             GeneralizedTime
+    EQUALITY MATCHING RULE  generalizedTimeMatch
+    ORDERING MATCHING RULE  generalizedTimeOrderingMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-attributes-create-date-and-time
+}
+
+dfr-content-create-date-and-time ATTRIBUTE ::= {
+    WITH SYNTAX             GeneralizedTime
+    EQUALITY MATCHING RULE  generalizedTimeMatch
+    ORDERING MATCHING RULE  generalizedTimeOrderingMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-content-create-date-and-time
+}
+
+dfr-created-by ATTRIBUTE ::= {
+    WITH SYNTAX             DistinguishedName
+    EQUALITY MATCHING RULE  distinguishedNameMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-created-by
+}
+
+dfr-attributes-modify-date-and-time ATTRIBUTE ::= {
+    WITH SYNTAX             GeneralizedTime
+    EQUALITY MATCHING RULE  generalizedTimeMatch
+    ORDERING MATCHING RULE  generalizedTimeOrderingMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-attributes-modify-date-and-time
+}
+
+dfr-content-modify-date-and-time ATTRIBUTE ::= {
+    WITH SYNTAX             GeneralizedTime
+    EQUALITY MATCHING RULE  generalizedTimeMatch
+    ORDERING MATCHING RULE  generalizedTimeOrderingMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-content-modify-date-and-time
+}
+
+dfr-attributes-modified-by ATTRIBUTE ::= {
+    WITH SYNTAX             DistinguishedName
+    EQUALITY MATCHING RULE  distinguishedNameMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-attributes-modified-by
+}
+
+dfr-content-modified-by ATTRIBUTE ::= {
+    WITH SYNTAX             DistinguishedName
+    EQUALITY MATCHING RULE  distinguishedNameMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-content-modified-by
+}
+
+document-date-and-time ATTRIBUTE ::= {
+    WITH SYNTAX             GeneralizedTime
+    EQUALITY MATCHING RULE  generalizedTimeMatch
+    ORDERING MATCHING RULE  generalizedTimeOrderingMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-document-date-and-time
+}
+
+dfr-reservation ATTRIBUTE ::= {
+    WITH SYNTAX     Reservation
+    SINGLE VALUE    TRUE
+    ID              id-att-dfr-reservation
+}
+
+dfr-reserved-by ATTRIBUTE ::= {
+    WITH SYNTAX             DistinguishedName
+    EQUALITY MATCHING RULE  distinguishedNameMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-dfr-reserved-by
+}
+
+dfr-access-list ATTRIBUTE ::= {
+    WITH SYNTAX             DfrAccessListElement
+    ID                      id-att-dfr-access-list
+}
+
+-- Attribute Syntaxes
+
+DfrAccessListElement ::= SEQUENCE {
+    access-id       AccessId,
+    access-rights   AccessRights
+}
+
+AccessId ::= DistinguishedName
+
+AccessRights ::= ENUMERATED {
+    read                (0),
+    extended-read       (1),
+    read-modify         (2),
+    read-modify-delete  (3),
+    owner               (4)
+}
+
+END

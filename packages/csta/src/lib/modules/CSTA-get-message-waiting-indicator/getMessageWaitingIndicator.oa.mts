@@ -25,7 +25,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getMessageWaitingIndicator
  * @description
- * 
+ *
+ * Get Message Waiting Indicator (ECMA-269 §21.1.8 / ECMA-285 §19.1.8).
+ * Direction: CF→SF. ROSE local CODE 267. Errors: `universalFailure`. Atomic
+ * acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

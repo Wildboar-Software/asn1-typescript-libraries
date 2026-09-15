@@ -76,7 +76,10 @@ import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataType
 /**
  * @summary CSG_SubscriptionData
  * @description
- * 
+ *
+ * One CSG subscription: CSG Id, optional expiration time, optional LIPA-allowed
+ * APN list and PLMN Id (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,6 +100,11 @@ class CSG_SubscriptionData {
     constructor (
         /**
          * @summary `csg_Id`.
+         * @description
+         *
+         * CSG identity coded according to 3GPP TS 23.003 (3GPP TS 29.002
+         * V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

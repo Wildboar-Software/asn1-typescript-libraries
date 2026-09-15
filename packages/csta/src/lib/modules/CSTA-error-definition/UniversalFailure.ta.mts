@@ -31,7 +31,33 @@ import { UnspecifiedErrors, _decode_UnspecifiedErrors, _encode_UnspecifiedErrors
 /**
  * @summary UniversalFailure
  * @description
- * 
+ *
+ * CHOICE of error category for a negative acknowledgement (ECMA-269 Figure 9-1
+ * / §12.2.14). Alternatives:
+ *
+ * `operation` — error in the service request (§12.2.14.1).
+ *
+ * `security` — security error (§12.2.14.2).
+ *
+ * `stateIncompatibility` — request incompatible with a related CSTA object's
+ * condition (§12.2.14.3).
+ *
+ * `systemResourceAvailability` — lack of system resources in the serving
+ * sub-domain (§12.2.14.4).
+ *
+ * `subscribedResourceAvailability` — a required resource must be purchased or
+ * contracted (§12.2.14.5).
+ *
+ * `performanceManagement` — error returned as a performance-management
+ * mechanism (§12.2.14.6).
+ *
+ * `privateData` — error in CSTA Private Data (§12.2.14.7).
+ *
+ * `unspecified` — not in any other category (§12.2.14.9).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

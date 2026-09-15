@@ -73,7 +73,10 @@ import { ExtensionSet } from "../MAP-ExtensionDataTypes/ExtensionSet.osa.mjs";
 /**
  * @summary PrivateExtension
  * @description
- * 
+ *
+ * One private MAP extension: OID `extId` from `ExtensionSet`, optional type
+ * `extType` constrained by that OID (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,12 +94,23 @@ class PrivateExtension {
     constructor (
         /**
          * @summary `extId`.
+         * @description
+         *
+         * `MAP-EXTENSION.&extensionId`. OID length shall not exceed 16 octets
+         * and shall not have more than 16 components (3GPP TS 29.002 V19.1.0
+         * clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extId: OBJECT_IDENTIFIER,
         /**
          * @summary `extType`.
+         * @description
+         *
+         * `MAP-EXTENSION.&ExtensionType` for `extId`, if present (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LCS_Priority
  * @description
- * 
+ *
+ * One octet: 0 highest, 1 normal; all other values treated as 1 (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.11.7 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -75,7 +75,14 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ServiceType
  * @description
- * 
+ *
+ * One LCS service type in the Service type privacy class. If
+ * `notificationToMSUser` is omitted, the default in 3GPP TS 23.271 shall be
+ * assumed. Sent only for SS-code `serviceType` and if the visited node supports
+ * LCS Release 5 or later.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.65D, 7.6.11.15 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,18 +103,37 @@ class ServiceType {
     constructor (
         /**
          * @summary `serviceTypeIdentity`.
+         * @description
+         *
+         * LCS Service Type of the positioning request (3GPP TS 22.071).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.11.15).
+         *
          * @public
          * @readonly
          */
         readonly serviceTypeIdentity: LCSServiceTypeID,
         /**
          * @summary `gmlc_Restriction`.
+         * @description
+         *
+         * GMLC restriction for this service type.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly gmlc_Restriction: OPTIONAL<GMLC_Restriction>,
         /**
          * @summary `notificationToMSUser`.
+         * @description
+         *
+         * Privacy notification to the MS user. If omitted, the default in 3GPP
+         * TS 23.271 shall be assumed.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

@@ -19,7 +19,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ChangeConnectionInformationArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 18-10).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +41,28 @@ class ChangeConnectionInformationArgument {
     constructor (
         /**
          * @summary `connectionToBeChanged`.
+         * @description
+         *
+         * Connection whose connection information is changed.
          * @public
          * @readonly
          */
         readonly connectionToBeChanged: ConnectionID,
         /**
          * @summary `requestedConnectionInfo`.
+         * @description
+         *
+         * Requested connection information (e.g. flow direction).
          * @public
          * @readonly
          */
         readonly requestedConnectionInfo: ConnectionInformation,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

@@ -17,7 +17,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary cancelCallBack
  * @description
- * 
+ *
+ * Cancel Call Back (ECMA-269 §22.1.3 / ECMA-285 §20.1.3). Direction: CF→SF.
+ * ROSE local CODE 302. Errors: `universalFailure`. Originating and target
+ * DeviceIDs shall be known to the SF.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

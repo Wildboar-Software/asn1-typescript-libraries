@@ -22,7 +22,11 @@ import { CertificateIDInformation, _decode_CertificateIDInformation, _encode_Cer
 /**
  * @summary TemplateInfo
  * @description
- * 
+ *
+ * Metadata of a reference template: modality, creator, creating
+ * BSP/BFP, and certificate serial. Annex A notes serial may have "no
+ * value available". ITU-T Rec. X.1084 (05/2008) §11.1, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,24 +46,42 @@ class TemplateInfo {
     constructor (
         /**
          * @summary `biometricType`.
+         * @description
+         *
+         * BioAPI biometric type of this template. X.1084 §11.1.
+         *
          * @public
          * @readonly
          */
         readonly biometricType: BiometricType,
         /**
          * @summary `creator`.
+         * @description
+         *
+         * Party that created the reference template. X.1084 §11.1.
+         *
          * @public
          * @readonly
          */
         readonly creator: UTF8String,
         /**
          * @summary `createdBFPSchema`.
+         * @description
+         *
+         * BSP/BFP that produced the template. [ISO/IEC 19784-1];
+         * X.1084 §11.1.
+         *
          * @public
          * @readonly
          */
         readonly createdBFPSchema: BSP_BFP_Schema,
         /**
          * @summary `templateID`.
+         * @description
+         *
+         * Certificate serial of this template (Annex A: "such as
+         * CertificateSerialNumber (no value available)"). X.1084 §11.1.
+         *
          * @public
          * @readonly
          */

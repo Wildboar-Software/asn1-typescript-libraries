@@ -28,7 +28,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RouteRejectArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 20-10).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,30 +52,47 @@ class RouteRejectArgument {
     constructor (
         /**
          * @summary `crossRefIdentifier`.
+         * @description
+         *
+         * Dialogue for the rejected call.
          * @public
          * @readonly
          */
         readonly crossRefIdentifier: RouteingCrossRefID,
         /**
          * @summary `routeRegisterReqID`.
+         * @description
+         *
+         * Registration for this dialogue, if registration is used.
          * @public
          * @readonly
          */
         readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
         /**
          * @summary `rejectCause`.
+         * @description
+         *
+         * Why the call is returned to the network: busy, queue-time,
+         * capacity, calendar, or unknown overflow.
          * @public
          * @readonly
          */
         readonly rejectCause: OPTIONAL<RejectCause>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Correlator data to associate with the call.
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

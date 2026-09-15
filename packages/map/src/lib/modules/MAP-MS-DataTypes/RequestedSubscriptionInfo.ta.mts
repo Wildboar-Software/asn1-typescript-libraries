@@ -75,7 +75,13 @@ import { AdditionalRequestedCAMEL_SubscriptionInfo, _enum_for_AdditionalRequeste
 /**
  * @summary RequestedSubscriptionInfo
  * @description
- * 
+ *
+ * Subscription information requested by gsmSCF in Any Time Subscription
+ * Interrogation (SS, ODB, CSI, CAMEL phases, CW/CLIP/CLIR/HOLD/ECT, CSG,
+ * MSISDN-BS list).
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.86, 8.11.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -106,30 +112,61 @@ class RequestedSubscriptionInfo {
     constructor (
         /**
          * @summary `requestedSS_Info`.
+         * @description
+         *
+         * Supplementary-service information requested.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.86).
+         *
          * @public
          * @readonly
          */
         readonly requestedSS_Info: OPTIONAL<SS_ForBS_Code>,
         /**
          * @summary `odb`.
+         * @description
+         *
+         * Request ODB data.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.85).
+         *
          * @public
          * @readonly
          */
         readonly odb: OPTIONAL<NULL>,
         /**
          * @summary `requestedCAMEL_SubscriptionInfo`.
+         * @description
+         *
+         * Which CSI is requested. Discarded if
+         * `additionalRequestedCAMEL-SubscriptionInfo` is received.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly requestedCAMEL_SubscriptionInfo: OPTIONAL<RequestedCAMEL_SubscriptionInfo>,
         /**
          * @summary `supportedVLR_CAMEL_Phases`.
+         * @description
+         *
+         * Request CAMEL phases supported in the VLR.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.36).
+         *
          * @public
          * @readonly
          */
         readonly supportedVLR_CAMEL_Phases: OPTIONAL<NULL>,
         /**
          * @summary `supportedSGSN_CAMEL_Phases`.
+         * @description
+         *
+         * Request CAMEL phases supported in the SGSN.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.36A).
+         *
          * @public
          * @readonly
          */
@@ -142,48 +179,97 @@ class RequestedSubscriptionInfo {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalRequestedCAMEL_SubscriptionInfo`.
+         * @description
+         *
+         * Additional CSI (e.g. MT-SMS, MG, IM CSI). If present,
+         * `requestedCAMEL-SubscriptionInfo` shall be discarded.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly additionalRequestedCAMEL_SubscriptionInfo: OPTIONAL<AdditionalRequestedCAMEL_SubscriptionInfo>,
         /**
          * @summary `msisdn_BS_List`.
+         * @description
+         *
+         * Request MSISDN and basic-service list.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.86).
+         *
          * @public
          * @readonly
          */
         readonly msisdn_BS_List: OPTIONAL<NULL>,
         /**
          * @summary `csg_SubscriptionDataRequested`.
+         * @description
+         *
+         * Request CSG subscription data.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.86).
+         *
          * @public
          * @readonly
          */
         readonly csg_SubscriptionDataRequested: OPTIONAL<NULL>,
         /**
          * @summary `cw_Info`.
+         * @description
+         *
+         * Request Call Waiting information.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.86).
+         *
          * @public
          * @readonly
          */
         readonly cw_Info: OPTIONAL<NULL>,
         /**
          * @summary `clip_Info`.
+         * @description
+         *
+         * Request CLIP information.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.86).
+         *
          * @public
          * @readonly
          */
         readonly clip_Info: OPTIONAL<NULL>,
         /**
          * @summary `clir_Info`.
+         * @description
+         *
+         * Request CLIR information.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.86).
+         *
          * @public
          * @readonly
          */
         readonly clir_Info: OPTIONAL<NULL>,
         /**
          * @summary `hold_Info`.
+         * @description
+         *
+         * Request Call Hold information.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.86).
+         *
          * @public
          * @readonly
          */
         readonly hold_Info: OPTIONAL<NULL>,
         /**
          * @summary `ect_Info`.
+         * @description
+         *
+         * Request Explicit Call Transfer information.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.86).
+         *
          * @public
          * @readonly
          */

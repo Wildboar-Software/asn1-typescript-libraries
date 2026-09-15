@@ -22,7 +22,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary StartCDRTransmissionArgument
  * @description
- * 
+ *
+ * Required `transferMode` (ECMA-269 §27.1.4.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +44,22 @@ class StartCDRTransmissionArgument {
     constructor (
         /**
          * @summary `transferMode`.
+         * @description
+         *
+         * transferAtEndOfCall, transferOnRequest, or transferOnThresholdReached
+         * (ECMA-269 §27.1.4.1).
+         *
          * @public
          * @readonly
          */
         readonly transferMode: CDRTransferMode,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

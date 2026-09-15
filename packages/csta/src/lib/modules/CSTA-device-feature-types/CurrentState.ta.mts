@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CurrentState
  * @description
- * 
+ *
+ * Current voice-unit state (AttributeInfo). ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +52,11 @@ enum _enum_for_CurrentState {
 /**
  * @summary CurrentState
  * @description
- * 
+ *
+ * Current voice-unit state (AttributeInfo). ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -75,7 +83,11 @@ type CurrentState = _enum_for_CurrentState;
 /**
  * @summary CurrentState
  * @description
- * 
+ *
+ * Current voice-unit state (AttributeInfo). ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -101,14 +113,17 @@ const CurrentState = _enum_for_CurrentState;
 
 /**
  * @summary CurrentState_dtmfDetected
+ * @description DTMF detected. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CurrentState_dtmfDetected: CurrentState = CurrentState.dtmfDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dtmfDetected
+ * @description Alias of {@link CurrentState_dtmfDetected}.
  * @constant
  * @type {number}
  */
@@ -117,14 +132,17 @@ const dtmfDetected: CurrentState = CurrentState.dtmfDetected; /* SHORT_NAMED_ENU
 
 /**
  * @summary CurrentState_formed
+ * @description Formed. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CurrentState_formed: CurrentState = CurrentState.formed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary formed
+ * @description Alias of {@link CurrentState_formed}.
  * @constant
  * @type {number}
  */
@@ -133,14 +151,17 @@ const formed: CurrentState = CurrentState.formed; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary CurrentState_play
+ * @description Play. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CurrentState_play: CurrentState = CurrentState.play; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary play
+ * @description Alias of {@link CurrentState_play}.
  * @constant
  * @type {number}
  */
@@ -149,14 +170,17 @@ const play: CurrentState = CurrentState.play; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CurrentState_playing
+ * @description Playing. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CurrentState_playing: CurrentState = CurrentState.playing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary playing
+ * @description Alias of {@link CurrentState_playing}.
  * @constant
  * @type {number}
  */
@@ -165,14 +189,17 @@ const playing: CurrentState = CurrentState.playing; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary CurrentState_ready
+ * @description Ready. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CurrentState_ready: CurrentState = CurrentState.ready; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ready
+ * @description Alias of {@link CurrentState_ready}.
  * @constant
  * @type {number}
  */
@@ -181,14 +208,17 @@ const ready: CurrentState = CurrentState.ready; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary CurrentState_record
+ * @description Record. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CurrentState_record: CurrentState = CurrentState.record; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary record
+ * @description Alias of {@link CurrentState_record}.
  * @constant
  * @type {number}
  */
@@ -197,14 +227,17 @@ const record: CurrentState = CurrentState.record; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary CurrentState_review
+ * @description Review. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CurrentState_review: CurrentState = CurrentState.review; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary review
+ * @description Alias of {@link CurrentState_review}.
  * @constant
  * @type {number}
  */
@@ -213,14 +246,17 @@ const review: CurrentState = CurrentState.review; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary CurrentState_speechDetected
+ * @description Speech detected. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CurrentState_speechDetected: CurrentState = CurrentState.speechDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechDetected
+ * @description Alias of {@link CurrentState_speechDetected}.
  * @constant
  * @type {number}
  */
@@ -229,14 +265,17 @@ const speechDetected: CurrentState = CurrentState.speechDetected; /* SHORT_NAMED
 
 /**
  * @summary CurrentState_started
+ * @description Started. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CurrentState_started: CurrentState = CurrentState.started; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary started
+ * @description Alias of {@link CurrentState_started}.
  * @constant
  * @type {number}
  */
@@ -245,14 +284,17 @@ const started: CurrentState = CurrentState.started; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary CurrentState_stop
+ * @description Stop. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CurrentState_stop: CurrentState = CurrentState.stop; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stop
+ * @description Alias of {@link CurrentState_stop}.
  * @constant
  * @type {number}
  */
@@ -261,14 +303,17 @@ const stop: CurrentState = CurrentState.stop; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CurrentState_suspendPlay
+ * @description Suspend play. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CurrentState_suspendPlay: CurrentState = CurrentState.suspendPlay; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary suspendPlay
+ * @description Alias of {@link CurrentState_suspendPlay}.
  * @constant
  * @type {number}
  */
@@ -277,14 +322,17 @@ const suspendPlay: CurrentState = CurrentState.suspendPlay; /* SHORT_NAMED_ENUME
 
 /**
  * @summary CurrentState_suspendRecord
+ * @description Suspend record. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const CurrentState_suspendRecord: CurrentState = CurrentState.suspendRecord; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary suspendRecord
+ * @description Alias of {@link CurrentState_suspendRecord}.
  * @constant
  * @type {number}
  */

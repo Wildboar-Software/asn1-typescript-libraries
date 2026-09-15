@@ -17,7 +17,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary IORegisterArgument
  * @description
- * 
+ *
+ * I/O Register request. Omit `ioDevice` to register for all devices if the
+ * switching function supports that option (ECMA-269 §24.1.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +40,24 @@ class IORegisterArgument {
     constructor (
         /**
          * @summary `ioDevice`.
+         * @description
+         *
+         * Device for which the computing function requests to be the I/O
+         * server. Mandatory if the switching function does not support
+         * registering for all devices; absent means all devices in the
+         * switching sub-domain (ECMA-269 §24.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly ioDevice: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

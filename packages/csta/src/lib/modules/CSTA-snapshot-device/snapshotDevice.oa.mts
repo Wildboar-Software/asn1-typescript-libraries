@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary snapshotDevice
  * @description
- * 
+ *
+ * Snapshot Device (ECMA-269 §16.1.2 / ECMA-285 §14.1.2). Direction: CF→SF. ROSE
+ * local CODE 74. Errors: `universalFailure`. If Dynamic Feature Availability is
+ * supported, each connection
+ * includes `servicesPermitted`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

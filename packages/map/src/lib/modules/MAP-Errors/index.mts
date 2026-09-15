@@ -1,7 +1,14 @@
 /**
  * @description
  *
- * ASN.1 module `MAP-Errors`.
+ * ASN.1 module `MAP-Errors` (3GPP TS 29.002 V19.1.0 clause 17.6.6).
+ *
+ * MAP user-error information objects: generic, identification and numbering,
+ * subscription, handover, operation and maintenance, call handling, any-time
+ * interrogation and information handling, supplementary service, short message,
+ * group call, location service, and mobility-management errors. Meanings of
+ * each user error are in clause 7.6.1.4; parameter types are in
+ * `MAP-ER-DataTypes` (clause 17.7.7).
  */
 export * from "./absentSubscriber.oa.mjs";
 export * from "./absentSubscriberSM.oa.mjs";

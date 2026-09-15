@@ -15,6 +15,10 @@ import { isisoi } from '../ISIS/isisoi.va.mjs';
  * @summary aoi
  * @description
  *
+ * GDMO attribute registration arc `{isisoi attribute(7)}`.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

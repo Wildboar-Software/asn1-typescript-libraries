@@ -19,7 +19,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetMicrophoneMuteArgument
  * @description
- * 
+ *
+ * Get Microphone Mute request (ECMA-269 §21.1.10.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +41,29 @@ class GetMicrophoneMuteArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+         * 1).
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `auditoryApparatus`.
+         * @description
+         *
+         * Auditory apparatus to query. Absent: all apparatuses on the device.
          * @public
          * @readonly
          */
         readonly auditoryApparatus: OPTIONAL<AuditoryApparatusID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

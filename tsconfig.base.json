@@ -188,6 +188,9 @@
       "@wildboar/tsp/*": [
         "./tsp/*"
       ],
+      "@wildboar/tsm/*": [
+        "./tsm/*"
+      ],
       "@wildboar/usm/*": [
         "./usm/*"
       ],
@@ -202,6 +205,9 @@
       ],
       "@wildboar/x700/*": [
         "./x700/*"
+      ],
+      "@wildboar/xbhsm/*": [
+        "./xbhsm/*"
       ]
     },
     "noUncheckedSideEffectImports": false,

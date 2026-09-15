@@ -78,7 +78,11 @@ enum _enum_for_UE_SRVCC_Capability {
 /**
  * @summary UE_SRVCC_Capability
  * @description
- * 
+ *
+ * Whether the UE supports SRVCC. Present in Update GPRS Location when known.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.99 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

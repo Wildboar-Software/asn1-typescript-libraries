@@ -16,7 +16,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AlertDescription
  * @description
- * 
+ *
+ * Alert cause. Values 0–114 are TLS 1.1 / TLS-extension alerts
+ * ([IETF RFC 4346], [IETF RFC 4366]). TSM adds 115–117, chosen to avoid
+ * clashing with RFC 4366 (X.1084 §10.2). Appendix I lists further alerts
+ * 118–122; those are not in Annex A and are not in this type.
+ * ITU-T Rec. X.1084 (05/2008) §10.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,7 +102,13 @@ enum _enum_for_AlertDescription {
 /**
  * @summary AlertDescription
  * @description
- * 
+ *
+ * Alert cause. Values 0–114 are TLS 1.1 / TLS-extension alerts
+ * ([IETF RFC 4346], [IETF RFC 4366]). TSM adds 115–117, chosen to avoid
+ * clashing with RFC 4366 (X.1084 §10.2). Appendix I lists further alerts
+ * 118–122; those are not in Annex A and are not in this type.
+ * ITU-T Rec. X.1084 (05/2008) §10.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -144,7 +156,13 @@ type AlertDescription = _enum_for_AlertDescription;
 /**
  * @summary AlertDescription
  * @description
- * 
+ *
+ * Alert cause. Values 0–114 are TLS 1.1 / TLS-extension alerts
+ * ([IETF RFC 4346], [IETF RFC 4366]). TSM adds 115–117, chosen to avoid
+ * clashing with RFC 4366 (X.1084 §10.2). Appendix I lists further alerts
+ * 118–122; those are not in Annex A and are not in this type.
+ * ITU-T Rec. X.1084 (05/2008) §10.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -559,6 +577,10 @@ const no_renegotiation: AlertDescription = AlertDescription.no_renegotiation; /*
 
 /**
  * @summary AlertDescription_unsupported_extension
+ * @description
+ *
+ * RFC 4366 `unsupported_extension` (110). X.1084: fatal if the verifier
+ * received the biometric handshake in an unsupported fashion. §10.2.
  * @constant
  * @type {number}
  */
@@ -567,6 +589,10 @@ const AlertDescription_unsupported_extension: AlertDescription = AlertDescriptio
 
 /**
  * @summary unsupported_extension
+ * @description
+ *
+ * RFC 4366 `unsupported_extension` (110). X.1084: fatal if the verifier
+ * received the biometric handshake in an unsupported fashion. §10.2.
  * @constant
  * @type {number}
  */
@@ -639,6 +665,10 @@ const bad_certificate_hash_value: AlertDescription = AlertDescription.bad_certif
 
 /**
  * @summary AlertDescription_unacceptable_model
+ * @description
+ *
+ * TSM (115). Fatal: `BiometricClientHello` listed only models that do not
+ * match the verifier's policy. X.1084 §10.1.3, §10.2.
  * @constant
  * @type {number}
  */
@@ -647,6 +677,10 @@ const AlertDescription_unacceptable_model: AlertDescription = AlertDescription.u
 
 /**
  * @summary unacceptable_model
+ * @description
+ *
+ * TSM (115). Fatal: `BiometricClientHello` listed only models that do not
+ * match the verifier's policy. X.1084 §10.1.3, §10.2.
  * @constant
  * @type {number}
  */
@@ -655,6 +689,10 @@ const unacceptable_model: AlertDescription = AlertDescription.unacceptable_model
 
 /**
  * @summary AlertDescription_unacceptable_biometrics
+ * @description
+ *
+ * TSM (116). Fatal: only unacceptable modalities, algorithms, or devices
+ * (not conforming to verifier policy). X.1084 §10.1.3, §10.2.
  * @constant
  * @type {number}
  */
@@ -663,6 +701,10 @@ const AlertDescription_unacceptable_biometrics: AlertDescription = AlertDescript
 
 /**
  * @summary unacceptable_biometrics
+ * @description
+ *
+ * TSM (116). Fatal: only unacceptable modalities, algorithms, or devices
+ * (not conforming to verifier policy). X.1084 §10.1.3, §10.2.
  * @constant
  * @type {number}
  */
@@ -671,6 +713,10 @@ const unacceptable_biometrics: AlertDescription = AlertDescription.unacceptable_
 
 /**
  * @summary AlertDescription_unsupported_biometrics
+ * @description
+ *
+ * TSM (117). Fatal in server-comparison models: algorithms the verifier
+ * cannot run. X.1084 §10.2.
  * @constant
  * @type {number}
  */
@@ -679,6 +725,10 @@ const AlertDescription_unsupported_biometrics: AlertDescription = AlertDescripti
 
 /**
  * @summary unsupported_biometrics
+ * @description
+ *
+ * TSM (117). Fatal in server-comparison models: algorithms the verifier
+ * cannot run. X.1084 §10.2.
  * @constant
  * @type {number}
  */

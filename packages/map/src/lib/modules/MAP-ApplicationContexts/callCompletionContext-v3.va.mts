@@ -72,7 +72,11 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary callCompletionContext_v3
  * @description
- * 
+ *
+ * Subscriber control of call completion services between VLR and HLR. Initiator
+ * is VLR; responder is HLR. Version 3 only (3GPP TS 29.002 V19.1.0 clause
+ * 17.3.2.38).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

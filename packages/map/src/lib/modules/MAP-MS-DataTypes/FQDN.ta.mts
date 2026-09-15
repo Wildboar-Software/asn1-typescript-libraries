@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FQDN
  * @description
- * 
+ *
+ * Fully Qualified Domain Name used e.g. as PDN GW name or SCEF-ID (SIZE 9..255)
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

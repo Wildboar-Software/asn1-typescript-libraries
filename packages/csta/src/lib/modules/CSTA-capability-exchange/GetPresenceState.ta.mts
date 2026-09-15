@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GetPresenceState
  * @description
- * 
+ * Capability bitmap for the Get Presence State service (ECMA-269 C.14.13,
+ * ECMA-285 §9.10). Presence of this entry in `LogicalServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +37,9 @@ type GetPresenceState = BIT_STRING;
 /**
  * @summary GetPresenceState_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.14.13).
  */
 export
 const GetPresenceState_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -35,6 +47,8 @@ const GetPresenceState_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `GetPresenceState_privateData`.
  */
 export
 const privateData: number = GetPresenceState_privateData; /* SHORT_NAMED_BIT */
@@ -42,6 +56,9 @@ const privateData: number = GetPresenceState_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary GetPresenceState_fromTimeInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `fromTime` in the acknowledgement
+ * (ECMA-269 C.14.13).
  */
 export
 const GetPresenceState_fromTimeInAck: number = 1; /* LONG_NAMED_BIT */
@@ -49,6 +66,8 @@ const GetPresenceState_fromTimeInAck: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary fromTimeInAck
  * @constant
+ * @description
+ * Alias of `GetPresenceState_fromTimeInAck`.
  */
 export
 const fromTimeInAck: number = GetPresenceState_fromTimeInAck; /* SHORT_NAMED_BIT */
@@ -56,6 +75,9 @@ const fromTimeInAck: number = GetPresenceState_fromTimeInAck; /* SHORT_NAMED_BIT
 /**
  * @summary GetPresenceState_untilTimeInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `untilTime` in the acknowledgement
+ * (ECMA-269 C.14.13).
  */
 export
 const GetPresenceState_untilTimeInAck: number = 2; /* LONG_NAMED_BIT */
@@ -63,6 +85,8 @@ const GetPresenceState_untilTimeInAck: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary untilTimeInAck
  * @constant
+ * @description
+ * Alias of `GetPresenceState_untilTimeInAck`.
  */
 export
 const untilTimeInAck: number = GetPresenceState_untilTimeInAck; /* SHORT_NAMED_BIT */
@@ -70,6 +94,9 @@ const untilTimeInAck: number = GetPresenceState_untilTimeInAck; /* SHORT_NAMED_B
 /**
  * @summary GetPresenceState_placeInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `place` in the acknowledgement
+ * (ECMA-269 C.14.13).
  */
 export
 const GetPresenceState_placeInAck: number = 3; /* LONG_NAMED_BIT */
@@ -77,6 +104,8 @@ const GetPresenceState_placeInAck: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary placeInAck
  * @constant
+ * @description
+ * Alias of `GetPresenceState_placeInAck`.
  */
 export
 const placeInAck: number = GetPresenceState_placeInAck; /* SHORT_NAMED_BIT */
@@ -84,6 +113,9 @@ const placeInAck: number = GetPresenceState_placeInAck; /* SHORT_NAMED_BIT */
 /**
  * @summary GetPresenceState_moodInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `mood` in the acknowledgement
+ * (ECMA-269 C.14.13).
  */
 export
 const GetPresenceState_moodInAck: number = 4; /* LONG_NAMED_BIT */
@@ -91,6 +123,8 @@ const GetPresenceState_moodInAck: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary moodInAck
  * @constant
+ * @description
+ * Alias of `GetPresenceState_moodInAck`.
  */
 export
 const moodInAck: number = GetPresenceState_moodInAck; /* SHORT_NAMED_BIT */
@@ -98,6 +132,9 @@ const moodInAck: number = GetPresenceState_moodInAck; /* SHORT_NAMED_BIT */
 /**
  * @summary GetPresenceState_namedPresenceStateInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `namedPresenceState` in the
+ * acknowledgement (ECMA-269 C.14.13).
  */
 export
 const GetPresenceState_namedPresenceStateInAck: number = 5; /* LONG_NAMED_BIT */
@@ -105,6 +142,8 @@ const GetPresenceState_namedPresenceStateInAck: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary namedPresenceStateInAck
  * @constant
+ * @description
+ * Alias of `GetPresenceState_namedPresenceStateInAck`.
  */
 export
 const namedPresenceStateInAck: number = GetPresenceState_namedPresenceStateInAck; /* SHORT_NAMED_BIT */
@@ -112,6 +151,9 @@ const namedPresenceStateInAck: number = GetPresenceState_namedPresenceStateInAck
 /**
  * @summary GetPresenceState_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.14.13).
  */
 export
 const GetPresenceState_privateDataInAck: number = 6; /* LONG_NAMED_BIT */
@@ -119,6 +161,8 @@ const GetPresenceState_privateDataInAck: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `GetPresenceState_privateDataInAck`.
  */
 export
 const privateDataInAck: number = GetPresenceState_privateDataInAck; /* SHORT_NAMED_BIT */

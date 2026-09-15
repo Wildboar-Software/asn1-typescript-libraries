@@ -133,7 +133,12 @@ enum _enum_for_CipherSuite {
 /**
  * @summary CipherSuite
  * @description
- * 
+ *
+ * TLS cipher-suite identifier copied into TSM (RFC 2246/4346 IANA
+ * values, including later AES/Camellia/ECC suites). X.1084 does not
+ * redefine individual suites. ITU-T Rec. X.1084 (05/2008) §10.3.2,
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

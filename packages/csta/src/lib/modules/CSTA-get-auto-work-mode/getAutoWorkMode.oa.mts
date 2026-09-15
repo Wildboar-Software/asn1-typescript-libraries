@@ -17,7 +17,13 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getAutoWorkMode
  * @description
- * 
+ *
+ * Get Auto Work Mode (ECMA-269 §22.1.7 / ECMA-285 §20.1.7). Direction: CF→SF.
+ * ROSE local CODE 306. Errors: `universalFailure`. Atomic acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -85,7 +85,14 @@ import { EctData, _decode_EctData, _encode_EctData } from "../MAP-MS-DataTypes/E
 /**
  * @summary NoteSubscriberDataModifiedArg
  * @description
- * 
+ *
+ * Argument of MAP_NOTE_SUBSCRIBER_DATA_MODIFIED. The HLR informs the gsmSCF (or
+ * IM-SSF) that subscriber data were modified, or informs a service-related
+ * entity (e.g. IP-SM-GW) that the UE has become reachable (3GPP TS 23.204).
+ * When ODB-GeneralData or ODB-HPLMN-Data is removed in the HLR, all bits of
+ * that type shall be set to 0 in this operation. (3GPP TS 29.002 V19.1.0
+ * clauses 8.11.5 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -115,42 +122,77 @@ class NoteSubscriberDataModifiedArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * IMSI of the subscriber. (3GPP TS 29.002 V19.1.0 clauses 8.11.5 and
+         * 7.6.2.1)
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `msisdn`.
+         * @description
+         *
+         * MSISDN of the subscriber. (3GPP TS 29.002 V19.1.0 clauses 8.11.5 and
+         * 7.6.2.17)
+         *
          * @public
          * @readonly
          */
         readonly msisdn: ISDN_AddressString,
         /**
          * @summary `forwardingInfoFor_CSE`.
+         * @description
+         *
+         * Extensible forwarding information for the CSE. (3GPP TS 29.002
+         * V19.1.0 clause 7.6.3.80)
+         *
          * @public
          * @readonly
          */
         readonly forwardingInfoFor_CSE: OPTIONAL<Ext_ForwardingInfoFor_CSE>,
         /**
          * @summary `callBarringInfoFor_CSE`.
+         * @description
+         *
+         * Extensible call-barring information for the CSE. (3GPP TS 29.002
+         * V19.1.0 clause 7.6.3.79)
+         *
          * @public
          * @readonly
          */
         readonly callBarringInfoFor_CSE: OPTIONAL<Ext_CallBarringInfoFor_CSE>,
         /**
          * @summary `odb_Info`.
+         * @description
+         *
+         * ODB data and notification-to-CSE flag. (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.88)
+         *
          * @public
          * @readonly
          */
         readonly odb_Info: OPTIONAL<ODB_Info>,
         /**
          * @summary `camel_SubscriptionInfo`.
+         * @description
+         *
+         * CAMEL subscription information. (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.78)
+         *
          * @public
          * @readonly
          */
         readonly camel_SubscriptionInfo: OPTIONAL<CAMEL_SubscriptionInfo>,
         /**
          * @summary `allInformationSent`.
+         * @description
+         *
+         * Sending entity has sent all necessary information. (3GPP TS 29.002
+         * V19.1.0 clause 7.6.1.5)
+         *
          * @public
          * @readonly
          */
@@ -163,42 +205,72 @@ class NoteSubscriberDataModifiedArg {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ue_reachable`.
+         * @description
+         *
+         * Informs a service-related entity (e.g. IP-SM-GW) that the UE has
+         * become reachable (3GPP TS 23.204). (3GPP TS 29.002 V19.1.0 clause
+         * 8.11.5.1)
+         *
          * @public
          * @readonly
          */
         readonly ue_reachable: OPTIONAL<ServingNode>,
         /**
          * @summary `csg_SubscriptionDataList`.
+         * @description
+         *
+         * CSG subscription data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
+         *
          * @public
          * @readonly
          */
         readonly csg_SubscriptionDataList: OPTIONAL<CSG_SubscriptionDataList>,
         /**
          * @summary `cw_Data`.
+         * @description
+         *
+         * Call waiting data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
+         *
          * @public
          * @readonly
          */
         readonly cw_Data: OPTIONAL<CallWaitingData>,
         /**
          * @summary `ch_Data`.
+         * @description
+         *
+         * Call hold data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
+         *
          * @public
          * @readonly
          */
         readonly ch_Data: OPTIONAL<CallHoldData>,
         /**
          * @summary `clip_Data`.
+         * @description
+         *
+         * CLIP data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
+         *
          * @public
          * @readonly
          */
         readonly clip_Data: OPTIONAL<ClipData>,
         /**
          * @summary `clir_Data`.
+         * @description
+         *
+         * CLIR data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
+         *
          * @public
          * @readonly
          */
         readonly clir_Data: OPTIONAL<ClirData>,
         /**
          * @summary `ect_data`.
+         * @description
+         *
+         * ECT data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
+         *
          * @public
          * @readonly
          */

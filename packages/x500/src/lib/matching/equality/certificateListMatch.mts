@@ -35,6 +35,18 @@ import {
 import compareGeneralName from "../../comparators/compareGeneralName.mjs";
 import compareRelativeDistinguishedName from "../../comparators/compareRelativeDistinguishedName.mjs";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 13.3.6 `certificateListMatch`.
+ *
+ * Selects one or more CRLs. TRUE iff every present
+ * `CertificateListAssertion` component matches: issuer name;
+ * `minCRLNumber` / `maxCRLNumber` against the CRL number
+ * extension; `reasonFlags` against IDP `onlySomeReasons` (or match
+ * if IDP/`reasonFlags` absent); `dateAndTime` in
+ * `[thisUpdate, nextUpdate)`; distribution point name; authority
+ * key identifier. Missing CRL number or `nextUpdate` where
+ * required is not a match.
+ */
 export
 const certificateListMatch : EqualityMatcher = (
     assertion: ASN1Element,

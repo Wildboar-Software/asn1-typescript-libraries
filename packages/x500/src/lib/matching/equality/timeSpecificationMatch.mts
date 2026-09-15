@@ -20,9 +20,27 @@ import {
 } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { DER } from "@wildboar/asn1/functional";
 import { Buffer } from "node:buffer";
+import { _decode_Certificate } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
+import compareElements from "../../comparators/compareElements.mjs";
+import { normalizePeriod } from "../../utils/normalizePeriod.mjs";
 
+/**
+ * @summary DER-hash key for a `Period` after X.520 clause 10.2
+ *  canonicalization.
+ * @description
+ *
+ * Used so `timeSpecificationMatch` can compare `SET OF Period` as a
+ * set of equivalent encodings. `normalizePeriod` is applied first so
+ * INTEGER vs BIT STRING and complete-set vs `allWeeks`/`allMonths`
+ * compare equal when they denote the same times.
+ *
+ * @param {Period} period A stored or asserted periodic component.
+ * @returns {string} Base64 of the DER encoding of the canonical `Period`.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function periodHashKey(period: Period): string {
-    const encoding = _encode_Period(period, DER).toBytes();
+    const encoding = _encode_Period(normalizePeriod(period), DER).toBytes();
     return Buffer.from(
         encoding.buffer,
         encoding.byteOffset,
@@ -30,13 +48,30 @@ function periodHashKey(period: Period): string {
     ).toString("base64");
 }
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 17.1.2.1.2
+ * `timeSpecificationMatch`.
+ *
+ * TRUE iff the stored attribute certificate or public-key
+ * certificate contains the `timeSpecification` extension and every
+ * component present in the presented `TimeSpecification` matches
+ * the corresponding stored extension component.
+ */
 export
 const timeSpecificationMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
-    const v: AttributeCertificate = _decode_AttributeCertificate(value);
-    const ext: Extension | undefined = v.toBeSigned.extensions
+    let exts: Extension[] | undefined;
+    try {
+        const acert = _decode_AttributeCertificate(value);
+        exts = acert.toBeSigned.extensions;
+    } catch {
+        const pkcert = _decode_Certificate(value);
+        exts = pkcert.toBeSigned.extensions;
+    }
+    exts ??= [];
+    const ext: Extension | undefined = exts
         .find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_timeSpecification));
     if (!ext) {
         return false;
@@ -56,20 +91,57 @@ const timeSpecificationMatch: EqualityMatcher = (
         return false;
     }
 
-    if (storedTime.timeZone !== assertedTime.timeZone) {
+    if (
+        // If the timezone was actually asserted.
+        (typeof assertedTime.timeZone === "number")
+        // And they don't match.
+        && (storedTime.timeZone !== assertedTime.timeZone)
+    ) {
         return false;
     }
 
+    const storedTimeExts = storedTime._unrecognizedExtensionsList;
+    const assertedTimeExts = assertedTime._unrecognizedExtensionsList;
+    if (storedTimeExts.length < assertedTimeExts.length) {
+        return false; // Asserted a component we don't recognize.
+    }
+
     if (("absolute" in storedTime.time) && ("absolute" in assertedTime.time)) {
-        const storedStart   = storedTime.time.absolute.startTime;
-        const storedEnd     = storedTime.time.absolute.endTime;
-        const assertedStart = assertedTime.time.absolute.startTime;
-        const assertedEnd   = assertedTime.time.absolute.endTime;
-        if (storedStart?.valueOf() !== assertedStart?.valueOf()) {
+        const staexts = storedTime.time.absolute._unrecognizedExtensionsList;
+        const ataexts = assertedTime.time.absolute._unrecognizedExtensionsList;
+        if (staexts.length < ataexts.length) {
+            return false; // Asserted a component we don't recognize.
+        }
+
+        let storedStart   = storedTime.time.absolute.startTime?.valueOf();
+        let storedEnd     = storedTime.time.absolute.endTime?.valueOf();
+        let assertedStart = assertedTime.time.absolute.startTime?.valueOf();
+        let assertedEnd   = assertedTime.time.absolute.endTime?.valueOf();
+
+        // Truncate the milliseconds. Just compare up to second precision.
+        if (typeof storedStart === "number") {
+            storedStart = Math.trunc(storedStart / 1000);
+        }
+        if (typeof storedEnd === "number") {
+            storedEnd = Math.trunc(storedEnd / 1000);
+        }
+        if (typeof assertedStart === "number") {
+            assertedStart = Math.trunc(assertedStart / 1000);
+        }
+        if (typeof assertedEnd === "number") {
+            assertedEnd = Math.trunc(assertedEnd / 1000);
+        }
+        if (storedStart !== assertedStart) {
             return false;
         }
-        if (storedEnd?.valueOf() !== assertedEnd?.valueOf()) {
+        if (storedEnd !== assertedEnd) {
             return false;
+        }
+        // Compare unrecognized extensions in absolute times
+        for (let i = 0; i < ataexts.length; i++) {
+            if (!compareElements(staexts[i], ataexts[i])) {
+                return false;
+            }
         }
     } else if (("periodic" in storedTime.time) && ("periodic" in assertedTime.time)) {
         if (storedTime.time.periodic.length !== assertedTime.time.periodic.length) {
@@ -85,6 +157,11 @@ const timeSpecificationMatch: EqualityMatcher = (
         }
     } else {
         return false;
+    }
+    for (let i = 0; i < assertedTimeExts.length; i++) {
+        if (!compareElements(storedTimeExts[i], assertedTimeExts[i])) {
+            return false;
+        }
     }
     return true;
 }

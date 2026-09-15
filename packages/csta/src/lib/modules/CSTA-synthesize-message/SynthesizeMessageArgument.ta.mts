@@ -18,7 +18,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SynthesizeMessageArgument
  * @description
- * 
+ *
+ * Text and optional control data (ECMA-269 §26.1.17.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +41,31 @@ class SynthesizeMessageArgument {
     constructor (
         /**
          * @summary `textToBeSynthesized`.
+         * @description
+         *
+         * Source text (ECMA-269 §26.1.17.1).
+         *
          * @public
          * @readonly
          */
         readonly textToBeSynthesized: IA5String,
         /**
          * @summary `control`.
+         * @description
+         *
+         * Optional synthesis control (ECMA-269 §26.1.17.1).
+         *
          * @public
          * @readonly
          */
         readonly control: OPTIONAL<ControlData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

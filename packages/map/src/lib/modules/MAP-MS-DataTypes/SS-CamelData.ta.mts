@@ -74,7 +74,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SS_CamelData
  * @description
- * 
+ *
+ * CAMEL data for supplementary-service invocation: SS event list and gsmSCF
+ * address.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +97,25 @@ class SS_CamelData {
     constructor (
         /**
          * @summary `ss_EventList`.
+         * @description
+         *
+         * SS-Codes that trigger CAMEL (ECT, MPTY, CD, CCBS in Phase 3).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly ss_EventList: SS_EventList,
         /**
          * @summary `gsmSCF_Address`.
+         * @description
+         *
+         * ISDN number assigned to the gsmSCF. In an IP Multimedia CN, contains
+         * the IM-SSF address when IM-SSF takes the gsmSCF role.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.58).
+         *
          * @public
          * @readonly
          */

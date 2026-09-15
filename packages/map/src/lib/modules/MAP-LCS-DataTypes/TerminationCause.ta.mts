@@ -86,7 +86,11 @@ enum _enum_for_TerminationCause {
 /**
  * @summary TerminationCause
  * @description
- * 
+ *
+ * mt-lrRestart triggers GMLC to restart (MS moved, Send Identification, or
+ * Cancel Location). Unrecognized value treated as errorundefined (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.11.3 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -111,6 +115,10 @@ type TerminationCause = _enum_for_TerminationCause | ENUMERATED;
 
 /**
  * @summary TerminationCause_normal
+ * @description
+ *
+ * `normal (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +127,10 @@ const TerminationCause_normal: TerminationCause = 0; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary normal
+ * @description
+ *
+ * `normal (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +139,10 @@ const normal: TerminationCause = TerminationCause_normal; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary TerminationCause_errorundefined
+ * @description
+ *
+ * `errorundefined (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -135,6 +151,10 @@ const TerminationCause_errorundefined: TerminationCause = 1; /* LONG_NAMED_ENUME
 
 /**
  * @summary errorundefined
+ * @description
+ *
+ * `errorundefined (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +163,10 @@ const errorundefined: TerminationCause = TerminationCause_errorundefined; /* SHO
 
 /**
  * @summary TerminationCause_internalTimeout
+ * @description
+ *
+ * `internalTimeout (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -151,6 +175,10 @@ const TerminationCause_internalTimeout: TerminationCause = 2; /* LONG_NAMED_ENUM
 
 /**
  * @summary internalTimeout
+ * @description
+ *
+ * `internalTimeout (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -159,6 +187,10 @@ const internalTimeout: TerminationCause = TerminationCause_internalTimeout; /* S
 
 /**
  * @summary TerminationCause_congestion
+ * @description
+ *
+ * `congestion (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -167,6 +199,10 @@ const TerminationCause_congestion: TerminationCause = 3; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary congestion
+ * @description
+ *
+ * `congestion (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -175,6 +211,11 @@ const congestion: TerminationCause = TerminationCause_congestion; /* SHORT_NAMED
 
 /**
  * @summary TerminationCause_mt_lrRestart
+ * @description
+ *
+ * `mt-lrRestart (4)` restart at GMLC (3GPP TS 29.002 V19.1.0 clauses 7.6.11.3
+ * and 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -183,6 +224,11 @@ const TerminationCause_mt_lrRestart: TerminationCause = 4; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary mt_lrRestart
+ * @description
+ *
+ * `mt-lrRestart (4)` restart at GMLC (3GPP TS 29.002 V19.1.0 clauses 7.6.11.3
+ * and 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -191,6 +237,10 @@ const mt_lrRestart: TerminationCause = TerminationCause_mt_lrRestart; /* SHORT_N
 
 /**
  * @summary TerminationCause_privacyViolation
+ * @description
+ *
+ * `privacyViolation (5)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -199,6 +249,10 @@ const TerminationCause_privacyViolation: TerminationCause = 5; /* LONG_NAMED_ENU
 
 /**
  * @summary privacyViolation
+ * @description
+ *
+ * `privacyViolation (5)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -207,6 +261,11 @@ const privacyViolation: TerminationCause = TerminationCause_privacyViolation; /*
 
 /**
  * @summary TerminationCause_shapeOfLocationEstimateNotSupported
+ * @description
+ *
+ * `shapeOfLocationEstimateNotSupported (6)` (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -215,6 +274,11 @@ const TerminationCause_shapeOfLocationEstimateNotSupported: TerminationCause = 6
 
 /**
  * @summary shapeOfLocationEstimateNotSupported
+ * @description
+ *
+ * `shapeOfLocationEstimateNotSupported (6)` (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -223,6 +287,10 @@ const shapeOfLocationEstimateNotSupported: TerminationCause = TerminationCause_s
 
 /**
  * @summary TerminationCause_subscriberTermination
+ * @description
+ *
+ * `subscriberTermination (7)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -231,6 +299,10 @@ const TerminationCause_subscriberTermination: TerminationCause = 7; /* LONG_NAME
 
 /**
  * @summary subscriberTermination
+ * @description
+ *
+ * `subscriberTermination (7)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -239,6 +311,10 @@ const subscriberTermination: TerminationCause = TerminationCause_subscriberTermi
 
 /**
  * @summary TerminationCause_uETermination
+ * @description
+ *
+ * `uETermination (8)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -247,6 +323,10 @@ const TerminationCause_uETermination: TerminationCause = 8; /* LONG_NAMED_ENUMER
 
 /**
  * @summary uETermination
+ * @description
+ *
+ * `uETermination (8)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -255,6 +335,10 @@ const uETermination: TerminationCause = TerminationCause_uETermination; /* SHORT
 
 /**
  * @summary TerminationCause_networkTermination
+ * @description
+ *
+ * `networkTermination (9)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -263,6 +347,10 @@ const TerminationCause_networkTermination: TerminationCause = 9; /* LONG_NAMED_E
 
 /**
  * @summary networkTermination
+ * @description
+ *
+ * `networkTermination (9)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */

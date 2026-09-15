@@ -81,7 +81,10 @@ enum _enum_for_PrivacyCheckRelatedAction {
 /**
  * @summary PrivacyCheckRelatedAction
  * @description
- * 
+ *
+ * Unrecognized value in ProvideSubscriberLocation-Arg: reject with unexpected
+ * data value (3GPP TS 29.002 V19.1.0 clauses 7.6.11.24 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -101,6 +104,10 @@ type PrivacyCheckRelatedAction = _enum_for_PrivacyCheckRelatedAction | ENUMERATE
 
 /**
  * @summary PrivacyCheckRelatedAction_allowedWithoutNotification
+ * @description
+ *
+ * `allowedWithoutNotification (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.24).
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +116,10 @@ const PrivacyCheckRelatedAction_allowedWithoutNotification: PrivacyCheckRelatedA
 
 /**
  * @summary allowedWithoutNotification
+ * @description
+ *
+ * `allowedWithoutNotification (0)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.24).
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +128,10 @@ const allowedWithoutNotification: PrivacyCheckRelatedAction = PrivacyCheckRelate
 
 /**
  * @summary PrivacyCheckRelatedAction_allowedWithNotification
+ * @description
+ *
+ * `allowedWithNotification (1)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.24).
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +140,10 @@ const PrivacyCheckRelatedAction_allowedWithNotification: PrivacyCheckRelatedActi
 
 /**
  * @summary allowedWithNotification
+ * @description
+ *
+ * `allowedWithNotification (1)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.24).
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +152,10 @@ const allowedWithNotification: PrivacyCheckRelatedAction = PrivacyCheckRelatedAc
 
 /**
  * @summary PrivacyCheckRelatedAction_allowedIfNoResponse
+ * @description
+ *
+ * `allowedIfNoResponse (2)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.24).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +164,10 @@ const PrivacyCheckRelatedAction_allowedIfNoResponse: PrivacyCheckRelatedAction =
 
 /**
  * @summary allowedIfNoResponse
+ * @description
+ *
+ * `allowedIfNoResponse (2)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.24).
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +176,10 @@ const allowedIfNoResponse: PrivacyCheckRelatedAction = PrivacyCheckRelatedAction
 
 /**
  * @summary PrivacyCheckRelatedAction_restrictedIfNoResponse
+ * @description
+ *
+ * `restrictedIfNoResponse (3)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.24).
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +188,10 @@ const PrivacyCheckRelatedAction_restrictedIfNoResponse: PrivacyCheckRelatedActio
 
 /**
  * @summary restrictedIfNoResponse
+ * @description
+ *
+ * `restrictedIfNoResponse (3)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.24).
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +200,10 @@ const restrictedIfNoResponse: PrivacyCheckRelatedAction = PrivacyCheckRelatedAct
 
 /**
  * @summary PrivacyCheckRelatedAction_notAllowed
+ * @description
+ *
+ * `notAllowed (4)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.24).
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +212,10 @@ const PrivacyCheckRelatedAction_notAllowed: PrivacyCheckRelatedAction = 4; /* LO
 
 /**
  * @summary notAllowed
+ * @description
+ *
+ * `notAllowed (4)` (3GPP TS 29.002 V19.1.0 clause 7.6.11.24).
+ *
  * @constant
  * @type {number}
  */

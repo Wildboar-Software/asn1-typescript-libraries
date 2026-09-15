@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary detachMediaService
  * @description
- * 
+ *
+ * Detach Media Service (ECMA-269 §19.1.2 / ECMA-285 §17.1.2). Direction: CF→SF.
+ * ROSE local CODE 245. Errors: `universalFailure`. Removes the media service
+ * identified by type from `connection`
+ * (MAD connection if used; otherwise the connection at the
+ * detaching device).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

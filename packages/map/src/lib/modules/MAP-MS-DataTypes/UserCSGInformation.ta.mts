@@ -74,7 +74,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary UserCSGInformation
  * @description
- * 
+ *
+ * CSG ID, access mode, and CSG Membership Indication when access mode is
+ * Hybrid. `accessMode` and `cmi` encoding as in 3GPP TS 29.060.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,6 +98,12 @@ class UserCSGInformation {
     constructor (
         /**
          * @summary `csg_Id`.
+         * @description
+         *
+         * Closed Subscriber Group identity.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
@@ -105,12 +116,25 @@ class UserCSGInformation {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `accessMode`.
+         * @description
+         *
+         * CSG access mode. Encoding as in 3GPP TS 29.060.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly accessMode: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `cmi`.
+         * @description
+         *
+         * CSG Membership Indication when access mode is Hybrid. Encoding as in
+         * 3GPP TS 29.060.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

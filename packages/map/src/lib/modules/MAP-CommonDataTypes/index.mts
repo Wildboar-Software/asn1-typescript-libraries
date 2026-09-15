@@ -1,7 +1,12 @@
 /**
  * @description
  *
- * ASN.1 module `MAP-CommonDataTypes`.
+ * ASN.1 module `MAP-CommonDataTypes` (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ * Common MAP numbering and identity types: TBCD and address strings
+ * (`AddressString`, ISDN/FTN/subaddress), IMSI, TMSI, IMEI, LMSI, HLR-Id, GSN
+ * and Diameter identities, cell/LAI/CGI/TA/RA encodings, alerting pattern,
+ * external/access-network signal info, eMLPP and Multicall, and LCS
+ * client/service-type identifiers.
  */
 export * from "./ASCI-CallReference.ta.mjs";
 export * from "./AccessNetworkProtocolId.ta.mjs";

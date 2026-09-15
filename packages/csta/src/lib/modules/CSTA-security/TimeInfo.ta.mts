@@ -8,7 +8,15 @@ import { GeneralizedTime, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary TimeInfo
  * @description
- * 
+ *
+ * Calendar date and time of day (ECMA-269 §12.2.29; ECMA-285 §9.7).
+ * `GeneralizedTime` as in ISO/IEC 8824. Three representations: local
+ * time, UTC, or local time with a differential factor. Year is four
+ * characters.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

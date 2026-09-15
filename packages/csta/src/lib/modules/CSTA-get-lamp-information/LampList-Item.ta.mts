@@ -20,7 +20,12 @@ import { LampColor, _decode_LampColor, _encode_LampColor } from "../CSTA-physica
 /**
  * @summary LampList_Item
  * @description
- * 
+ *
+ * One lamp (ECMA-269 §21.1.6.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +44,39 @@ class LampList_Item {
     constructor (
         /**
          * @summary `lamp`.
+         * @description
+         *
+         * LampID of this lamp.
          * @public
          * @readonly
          */
         readonly lamp: LampID,
         /**
          * @summary `lampLabel`.
+         * @description
+         *
+         * Label by which the lamp may be referenced. Max length from
+         * capabilities exchange.
          * @public
          * @readonly
          */
         readonly lampLabel: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `button`.
+         * @description
+         *
+         * Associated button, if any.
          * @public
          * @readonly
          */
         readonly button: OPTIONAL<ButtonID>,
         /**
          * @summary `lampColor`.
+         * @description
+         *
+         * 0–100: 0 none, 1 red, 2 yellow, 3 green, 4 blue, 5 unknown (Get/Event
+         * default if absent) or unused (Set). 6–100 switching-function
+         * specific.
          * @public
          * @readonly
          */

@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetLampInformationResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §21.1.6.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class GetLampInformationResult {
     constructor (
         /**
          * @summary `lampList`.
+         * @description
+         *
+         * One entry per queried lamp.
          * @public
          * @readonly
          */
         readonly lampList: LampList,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

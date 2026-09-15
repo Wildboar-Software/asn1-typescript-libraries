@@ -77,7 +77,14 @@ import { DeleteSubscriberDataArg, _decode_DeleteSubscriberDataArg, _encode_Delet
 /**
  * @summary ResetArg
  * @description
- * 
+ *
+ * MAP_RESET indication from HSS/HLR or CSS after a restart, or for planned
+ * outage / shared subscription-data update. Non-confirmed. Sending node number
+ * is the HLR number or CSS number. `hlr-List` applies only to HSS/HLR restart
+ * and shall not be present if `reset-Id-List` is present.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.10.1 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -99,12 +106,26 @@ class ResetArg {
     constructor (
         /**
          * @summary `sendingNodenumber`.
+         * @description
+         *
+         * HLR number for HLR/HSS restart, or CSS number for CSS restart.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly sendingNodenumber: SendingNode_Number,
         /**
          * @summary `hlr_List`.
+         * @description
+         *
+         * HLR Ids. Affected subscribers are those whose IMSI leading digits
+         * match. Only for HSS/HLR restart. Shall not be present if Reset-Id
+         * list is present.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
+         *
          * @public
          * @readonly
          */
@@ -117,18 +138,39 @@ class ResetArg {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `reset_Id_List`.
+         * @description
+         *
+         * Reset-Ids of affected subscribers. Shall not be present if Reset-Ids
+         * are unsupported, or together with HLR Id list.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly reset_Id_List: OPTIONAL<Reset_Id_List>,
         /**
          * @summary `subscriptionData`.
+         * @description
+         *
+         * Shared subscription profile to add or replace. Absent if Subscription
+         * Data Deletion is present or Reset-Id list is absent.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly subscriptionData: OPTIONAL<InsertSubscriberDataArg>,
         /**
          * @summary `subscriptionDataDeletion`.
+         * @description
+         *
+         * Identifications of shared subscription data to delete. Absent if
+         * Subscription Data is present or Reset-Id list is absent.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
+         *
          * @public
          * @readonly
          */

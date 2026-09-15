@@ -73,7 +73,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary MAP_OpenInfo
  * @description
- * 
+ *
+ * User information of the MAP-OPEN service, which establishes a MAP dialogue.
+ * `destinationReference` and `originationReference` refine called and calling
+ * process identity at MAP level; only the services in tables 7.3/2 and 7.3/3
+ * may use them (3GPP TS 29.002 V19.1.0 clauses 7.3.1 and 17.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,18 +98,37 @@ class MAP_OpenInfo {
     constructor (
         /**
          * @summary `destinationReference`.
+         * @description
+         *
+         * Reference that refines identification of the called process. It may
+         * equal the Destination address but is carried at MAP level. Table
+         * 7.3/2 lists the allowed MAP services (typically IMSI as subscriber
+         * identity; notes 1–3 for USSD and MT-SM). (3GPP TS 29.002 V19.1.0
+         * clause 7.3.1).
+         *
          * @public
          * @readonly
          */
         readonly destinationReference: OPTIONAL<AddressString>,
         /**
          * @summary `originationReference`.
+         * @description
+         *
+         * Reference that refines identification of the calling process. Table
+         * 7.3/3 lists the allowed MAP services (typically ISDN-Address-String
+         * as originated entity address). The receiver may use it to screen the
+         * service indication (3GPP TS 29.002 V19.1.0 clause 7.3.1).
+         *
          * @public
          * @readonly
          */
         readonly originationReference: OPTIONAL<AddressString>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
+         *
          * @public
          * @readonly
          */

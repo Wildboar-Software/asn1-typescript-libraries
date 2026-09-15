@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AreaIdentification
  * @description
- * 
+ *
+ * OCTET STRING (2..7). Octets 1–3 MCC/MNC (filler 1111 if 2-digit MNC); 4–5
+ * LAC; octet 6 RAC for RAI; 6–7 CI for CGI; 4–7 UC-Id for UTRAN cell (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

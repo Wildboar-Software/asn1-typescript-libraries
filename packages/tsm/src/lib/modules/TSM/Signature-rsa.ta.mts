@@ -18,7 +18,10 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 /**
  * @summary Signature_rsa
  * @description
- * 
+ *
+ * RSA signature: concatenated MD5 (16 octets) and SHA-1 (20 octets)
+ * hashes, as in TLS 1.0/1.1. ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +38,20 @@ class Signature_rsa {
     constructor (
         /**
          * @summary `md5_hash`.
+         * @description
+         *
+         * 16-octet MD5 digest in an RSA signature. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */
         readonly md5_hash: Opaque,
         /**
          * @summary `sha_hash`.
+         * @description
+         *
+         * 20-octet SHA-1 digest. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */

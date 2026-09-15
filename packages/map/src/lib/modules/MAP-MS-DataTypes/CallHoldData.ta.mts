@@ -72,7 +72,11 @@ import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../
 /**
  * @summary CallHoldData
  * @description
- * 
+ *
+ * Call Hold supplementary service data returned in any-time subscription
+ * interrogation / modification, with SS-Status and optional notification-to-CSE
+ * (3GPP TS 29.002 V19.1.0 clauses 8.11.3.2 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +99,10 @@ class CallHoldData {
         readonly ss_Status: Ext_SS_Status,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

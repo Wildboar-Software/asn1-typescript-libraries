@@ -9,7 +9,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CallBackMessageNonCallRelatedResult
  * @description
- * 
+ *
+ * Positive ack. `noData` if only the ROSE result is needed; `extensions`
+ * carries `security`/`privateData`. ECMA-269 §22.1.2.2.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

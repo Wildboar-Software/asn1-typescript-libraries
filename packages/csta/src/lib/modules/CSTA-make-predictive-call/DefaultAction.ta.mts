@@ -9,7 +9,14 @@ import { DetectionAction, _decode_DetectionAction, _encode_DetectionAction } fro
 /**
  * @summary DefaultAction
  * @description
- * 
+ *
+ * Action when Make Predictive Call cannot meet
+ * `signallingCondition` (ECMA-269 §17.1.20 Table 17-110 /
+ * FR 4). Same enumerants as `DetectionAction`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

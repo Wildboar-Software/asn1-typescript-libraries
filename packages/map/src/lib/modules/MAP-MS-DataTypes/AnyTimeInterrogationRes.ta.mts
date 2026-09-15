@@ -73,7 +73,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary AnyTimeInterrogationRes
  * @description
- * 
+ *
+ * Result of MAP-ANY-TIME-INTERROGATION, returning SubscriberInfo (state,
+ * location, IMEI, MS classmark, GPRS MS class, MNP info, T-ADS related data,
+ * time zone / daylight saving time as requested) (3GPP TS 29.002 V19.1.0
+ * clauses 8.11.1.2 and 8.11.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,6 +95,12 @@ class AnyTimeInterrogationRes {
     constructor (
         /**
          * @summary `subscriberInfo`.
+         * @description
+         *
+         * Returned subscriber information matching Requested Info (location,
+         * state, IMEI, classmark, MNP, T-ADS, time zone / DST as applicable)
+         * (3GPP TS 29.002 V19.1.0 clauses 8.11.1.2 and 8.11.1.3).
+         *
          * @public
          * @readonly
          */

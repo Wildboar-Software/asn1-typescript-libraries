@@ -15,7 +15,14 @@ import {
 /**
  * @summary CollectionFilter
  * @description
- * 
+ *
+ * Collect when horizontal/vertical movement or civic address change meets the
+ * filter; any matching filter triggers collection (ECMA-269 §28.1.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +39,34 @@ class CollectionFilter {
     constructor (
         /**
          * @summary `horizontalMovement`.
+         * @description
+         *
+         * Collect after this many metres of horizontal movement from the last
+         * collection (ECMA-269 §28.1.7.1).
+         *
          * @public
          * @readonly
          */
         readonly horizontalMovement: OPTIONAL<INTEGER>,
         /**
          * @summary `verticalMovement`.
+         * @description
+         *
+         * Collect after this many metres of vertical movement from the last
+         * collection (ECMA-269 §28.1.7.1).
+         *
          * @public
          * @readonly
          */
         readonly verticalMovement: OPTIONAL<INTEGER>,
         /**
          * @summary `civicAdressChange`.
+         * @description
+         *
+         * Civic-address change filter (ASN.1 spelling). Spec describes RFC-4776
+         * civic type labels; this encoding is INTEGER (ECMA-269 §28.1.7.1,
+         * ECMA-285 §26.1.7).
+         *
          * @public
          * @readonly
          */

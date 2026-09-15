@@ -75,7 +75,10 @@ import { maxUtranAdditionalPositioningData } from "./maxUtranAdditionalPositioni
 /**
  * @summary UtranAdditionalPositioningData
  * @description
- * 
+ *
+ * Additional-PositioningDataSet of RANAP PositionData (3GPP TS 25.413), 1..8
+ * octets (3GPP TS 29.002 V19.1.0 clauses 7.6.11.11E and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -1,7 +1,12 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-get-location-tracking-capabilities`.
+ * Get Location Tracking Capabilities: supported collection and reporting
+ * options for a device or group (ECMA-269 §28.1.10, ECMA-285 §26.1.10).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export * from "./getLocationTrackingCapabilities.oa.mjs";
 export * from "./GetLocationTrackingCapabilitiesArgument.ta.mjs";

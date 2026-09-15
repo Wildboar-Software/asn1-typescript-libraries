@@ -17,7 +17,13 @@ import { GpLocationInfo_civicLocGml, _decode_GpLocationInfo_civicLocGml, _encode
 /**
  * @summary GpLocationInfo
  * @description
- * 
+ *
+ * One location chunk: GML 3.0 and/or civic address (RFC 4776
+ * civic-address types). ECMA-269 §6.8.1.1, §12.2.18;
+ * ECMA-285 §9.9.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,6 +60,11 @@ class GpLocationInfo {
     constructor (
         /**
          * @summary `civicLocGml`.
+         * @description
+         *
+         * GML 3.0 payload and optional civic-address fields.
+         * ECMA-285 §9.9.
+         *
          * @public
          * @readonly
          */

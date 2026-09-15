@@ -79,7 +79,10 @@ enum _enum_for_TraceDepth {
 /**
  * @summary TraceDepth
  * @description
- * 
+ *
+ * minimum, medium, maximum. medium applies only to RNC; other NEs treat medium
+ * as minimum (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,6 +100,10 @@ type TraceDepth = _enum_for_TraceDepth | ENUMERATED;
 
 /**
  * @summary TraceDepth_minimum
+ * @description
+ *
+ * `minimum (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +112,10 @@ const TraceDepth_minimum: TraceDepth = 0; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary minimum
+ * @description
+ *
+ * `minimum (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +124,11 @@ const minimum: TraceDepth = TraceDepth_minimum; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary TraceDepth_medium
+ * @description
+ *
+ * `medium (1)` RNC only; others apply minimum (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +137,11 @@ const TraceDepth_medium: TraceDepth = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary medium
+ * @description
+ *
+ * `medium (1)` RNC only; others apply minimum (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +150,10 @@ const medium: TraceDepth = TraceDepth_medium; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDepth_maximum
+ * @description
+ *
+ * `maximum (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +162,10 @@ const TraceDepth_maximum: TraceDepth = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maximum
+ * @description
+ *
+ * `maximum (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * @constant
  * @type {number}
  */

@@ -72,7 +72,12 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary subscriberDataMngtContext_v3
  * @description
- * 
+ *
+ * Stand-alone subscriber data management between HLR and VLR or HLR and SGSN,
+ * and between CSS and VLR or CSS and SGSN. Initiator is HLR or CSS; responder
+ * is VLR or SGSN. HLR–SGSN, CSS–VLR and CSS–SGSN: version 3 only. v2 and v1
+ * equivalents exist (3GPP TS 29.002 V19.1.0 clause 17.3.2.17).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

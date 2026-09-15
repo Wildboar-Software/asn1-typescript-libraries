@@ -119,6 +119,57 @@ export class DayTime {
     public static get _default_value_for_second(): INTEGER {
         return 0;
     }
+
+    /**
+     * @summary Compare this `DayTime` to another for ordering.
+     * @description
+     *
+     * Missing `minute` and `second` use DEFAULT 0.
+     *
+     * Suitable as `Array.prototype.sort`'s comparefn. For an ascending
+     * sort, pass `this` as argument `a` and `other` as argument `b`:
+     * `(a, b) => a.compare(b)`. Negative means `this` (`a`) is earlier
+     * and sorts first; `0` means equal; positive means `this` is later
+     * and sorts after `other` (`b`).
+     *
+     * @param {DayTime} other The comparefn `b` argument.
+     * @returns {number} Negative, `0`, or positive.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public compare (other: DayTime): number {
+        const hourDiff = Number(this.hour) - Number(other.hour);
+        if (hourDiff !== 0) {
+            return hourDiff;
+        }
+        const minuteDiff = (
+            Number(this.minute ?? DayTime._default_value_for_minute)
+            - Number(other.minute ?? DayTime._default_value_for_minute)
+        );
+        if (minuteDiff !== 0) {
+            return minuteDiff;
+        }
+        return (
+            Number(this.second ?? DayTime._default_value_for_second)
+            - Number(other.second ?? DayTime._default_value_for_second)
+        );
+    }
+
+    /**
+     * @summary Whether two `DayTime` values denote the same second.
+     * @description
+     *
+     * Missing `minute` and `second` use DEFAULT 0, so `{hour 9}` equals
+     * `{hour 9, minute 0, second 0}`.
+     *
+     * @param {DayTime} other The other time of day.
+     * @returns {boolean} `true` iff hour, minute, and second match.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isEqualTo (other: DayTime): boolean {
+        return (this.compare(other) === 0);
+    }
 }
 
 /**

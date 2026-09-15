@@ -63,7 +63,13 @@ import { LocationServicesServList, _decode_LocationServicesServList, _encode_Loc
 /**
  * @summary ServEvtsList
  * @description
- * 
+ *
+ * Service and event capability bitmaps for the whole SF (Table
+ * 13-9 `servEvtsList`). Omitted bit: not supported.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -102,150 +108,225 @@ class ServEvtsList {
     constructor (
         /**
          * @summary `capExchangeServList`.
+         * @description
+         *
+         * Capability-exchange services.
          * @public
          * @readonly
          */
         readonly capExchangeServList: OPTIONAL<CapExchangeServList>,
         /**
          * @summary `systemServList`.
+         * @description
+         *
+         * System status services.
          * @public
          * @readonly
          */
         readonly systemServList: OPTIONAL<SystemStatusServList>,
         /**
          * @summary `monitoringServList`.
+         * @description
+         *
+         * Monitoring services.
          * @public
          * @readonly
          */
         readonly monitoringServList: OPTIONAL<MonitoringServList>,
         /**
          * @summary `snapshotServList`.
+         * @description
+         *
+         * Snapshot services.
          * @public
          * @readonly
          */
         readonly snapshotServList: OPTIONAL<SnapshotServList>,
         /**
          * @summary `callControlServList`.
+         * @description
+         *
+         * Call-control services.
          * @public
          * @readonly
          */
         readonly callControlServList: OPTIONAL<CallControlServList>,
         /**
          * @summary `callControlEvtsList`.
+         * @description
+         *
+         * Call-control events.
          * @public
          * @readonly
          */
         readonly callControlEvtsList: OPTIONAL<CallControlEvtsList>,
         /**
          * @summary `callAssociatedServList`.
+         * @description
+         *
+         * Call-associated services.
          * @public
          * @readonly
          */
         readonly callAssociatedServList: OPTIONAL<CallAssociatedServList>,
         /**
          * @summary `callAssociatedEvtsList`.
+         * @description
+         *
+         * Call-associated events.
          * @public
          * @readonly
          */
         readonly callAssociatedEvtsList: OPTIONAL<CallAssociatedEvtsList>,
         /**
          * @summary `mediaServList`.
+         * @description
+         *
+         * Media-attachment services.
          * @public
          * @readonly
          */
         readonly mediaServList: OPTIONAL<MediaServList>,
         /**
          * @summary `mediaEvtsList`.
+         * @description
+         *
+         * Media-attachment events.
          * @public
          * @readonly
          */
         readonly mediaEvtsList: OPTIONAL<MediaEvtsList>,
         /**
          * @summary `routeingServList`.
+         * @description
+         *
+         * Routeing services.
          * @public
          * @readonly
          */
         readonly routeingServList: OPTIONAL<RouteingServList>,
         /**
          * @summary `physDevServList`.
+         * @description
+         *
+         * Physical-device feature services.
          * @public
          * @readonly
          */
         readonly physDevServList: OPTIONAL<PhysDevServList>,
         /**
          * @summary `physDevEvtsList`.
+         * @description
+         *
+         * Physical-device feature events.
          * @public
          * @readonly
          */
         readonly physDevEvtsList: OPTIONAL<PhysDevEvtsList>,
         /**
          * @summary `logicalServList`.
+         * @description
+         *
+         * Logical-device feature services.
          * @public
          * @readonly
          */
         readonly logicalServList: OPTIONAL<LogicalServList>,
         /**
          * @summary `logicalEvtsList`.
+         * @description
+         *
+         * Logical-device feature events.
          * @public
          * @readonly
          */
         readonly logicalEvtsList: OPTIONAL<LogicalEvtsList>,
         /**
          * @summary `deviceMaintEvtsList`.
+         * @description
+         *
+         * Device-maintenance events.
          * @public
          * @readonly
          */
         readonly deviceMaintEvtsList: OPTIONAL<DeviceMaintEvtsList>,
         /**
          * @summary `iOServicesServList`.
+         * @description
+         *
+         * I/O services.
          * @public
          * @readonly
          */
         readonly iOServicesServList: OPTIONAL<IOServicesServList>,
         /**
          * @summary `dataCollectionServList`.
+         * @description
+         *
+         * Data-collection services.
          * @public
          * @readonly
          */
         readonly dataCollectionServList: OPTIONAL<DataCollectionServList>,
         /**
          * @summary `voiceUnitServList`.
+         * @description
+         *
+         * Voice-unit services.
          * @public
          * @readonly
          */
         readonly voiceUnitServList: OPTIONAL<VoiceUnitServList>,
         /**
          * @summary `voiceUnitEvtsList`.
+         * @description
+         *
+         * Voice-unit events.
          * @public
          * @readonly
          */
         readonly voiceUnitEvtsList: OPTIONAL<VoiceUnitEvtsList>,
         /**
          * @summary `cdrServList`.
+         * @description
+         *
+         * Call-detail-record services.
          * @public
          * @readonly
          */
         readonly cdrServList: OPTIONAL<CDRServList>,
         /**
          * @summary `vendorSpecificServList`.
+         * @description
+         *
+         * Vendor-specific services.
          * @public
          * @readonly
          */
         readonly vendorSpecificServList: OPTIONAL<VendorSpecificServList>,
         /**
          * @summary `vendorSpecificEvtsList`.
+         * @description
+         *
+         * Vendor-specific events.
          * @public
          * @readonly
          */
         readonly vendorSpecificEvtsList: OPTIONAL<VendorSpecificEvtsList>,
         /**
          * @summary `statusReportingServList`.
+         * @description
+         *
+         * Grouped monitoring/snapshot/system lists.
          * @public
          * @readonly
          */
         readonly statusReportingServList: OPTIONAL<StatusReportingServList>,
         /**
          * @summary `locationServList`.
+         * @description
+         *
+         * Location services.
          * @public
          * @readonly
          */

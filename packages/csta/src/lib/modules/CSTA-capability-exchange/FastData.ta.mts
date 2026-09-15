@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary FastData
  * @description
- * 
+ * Capability bitmap for the Fast Data service (ECMA-269 C.17.6, ECMA-285
+ * §9.10). Presence of this entry in `IOServicesServList` means the SF supports
+ * that service. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +39,9 @@ type FastData = BIT_STRING;
 /**
  * @summary FastData_objectDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.6).
  */
 export
 const FastData_objectDevice: number = 0; /* LONG_NAMED_BIT */
@@ -38,6 +49,8 @@ const FastData_objectDevice: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary objectDevice
  * @constant
+ * @description
+ * Alias of `FastData_objectDevice`.
  */
 export
 const objectDevice: number = FastData_objectDevice; /* SHORT_NAMED_BIT */
@@ -45,6 +58,9 @@ const objectDevice: number = FastData_objectDevice; /* SHORT_NAMED_BIT */
 /**
  * @summary FastData_objectCall
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.6).
  */
 export
 const FastData_objectCall: number = 1; /* LONG_NAMED_BIT */
@@ -52,6 +68,8 @@ const FastData_objectCall: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary objectCall
  * @constant
+ * @description
+ * Alias of `FastData_objectCall`.
  */
 export
 const objectCall: number = FastData_objectCall; /* SHORT_NAMED_BIT */
@@ -59,6 +77,9 @@ const objectCall: number = FastData_objectCall; /* SHORT_NAMED_BIT */
 /**
  * @summary FastData_dataPathTypeText
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.6).
  */
 export
 const FastData_dataPathTypeText: number = 2; /* LONG_NAMED_BIT */
@@ -66,6 +87,8 @@ const FastData_dataPathTypeText: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary dataPathTypeText
  * @constant
+ * @description
+ * Alias of `FastData_dataPathTypeText`.
  */
 export
 const dataPathTypeText: number = FastData_dataPathTypeText; /* SHORT_NAMED_BIT */
@@ -73,6 +96,9 @@ const dataPathTypeText: number = FastData_dataPathTypeText; /* SHORT_NAMED_BIT *
 /**
  * @summary FastData_dataPathTypeVoice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.6).
  */
 export
 const FastData_dataPathTypeVoice: number = 3; /* LONG_NAMED_BIT */
@@ -80,6 +106,8 @@ const FastData_dataPathTypeVoice: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary dataPathTypeVoice
  * @constant
+ * @description
+ * Alias of `FastData_dataPathTypeVoice`.
  */
 export
 const dataPathTypeVoice: number = FastData_dataPathTypeVoice; /* SHORT_NAMED_BIT */
@@ -87,6 +115,9 @@ const dataPathTypeVoice: number = FastData_dataPathTypeVoice; /* SHORT_NAMED_BIT
 /**
  * @summary FastData_displayAttribPhyBaseRowNumber
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.6).
  */
 export
 const FastData_displayAttribPhyBaseRowNumber: number = 4; /* LONG_NAMED_BIT */
@@ -94,6 +125,8 @@ const FastData_displayAttribPhyBaseRowNumber: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary displayAttribPhyBaseRowNumber
  * @constant
+ * @description
+ * Alias of `FastData_displayAttribPhyBaseRowNumber`.
  */
 export
 const displayAttribPhyBaseRowNumber: number = FastData_displayAttribPhyBaseRowNumber; /* SHORT_NAMED_BIT */
@@ -101,6 +134,9 @@ const displayAttribPhyBaseRowNumber: number = FastData_displayAttribPhyBaseRowNu
 /**
  * @summary FastData_displayAttribPhyBaseColumnNumber
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.6).
  */
 export
 const FastData_displayAttribPhyBaseColumnNumber: number = 5; /* LONG_NAMED_BIT */
@@ -108,6 +144,8 @@ const FastData_displayAttribPhyBaseColumnNumber: number = 5; /* LONG_NAMED_BIT *
 /**
  * @summary displayAttribPhyBaseColumnNumber
  * @constant
+ * @description
+ * Alias of `FastData_displayAttribPhyBaseColumnNumber`.
  */
 export
 const displayAttribPhyBaseColumnNumber: number = FastData_displayAttribPhyBaseColumnNumber; /* SHORT_NAMED_BIT */
@@ -115,6 +153,9 @@ const displayAttribPhyBaseColumnNumber: number = FastData_displayAttribPhyBaseCo
 /**
  * @summary FastData_displayAttribOffset
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.6).
  */
 export
 const FastData_displayAttribOffset: number = 6; /* LONG_NAMED_BIT */
@@ -122,6 +163,8 @@ const FastData_displayAttribOffset: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary displayAttribOffset
  * @constant
+ * @description
+ * Alias of `FastData_displayAttribOffset`.
  */
 export
 const displayAttribOffset: number = FastData_displayAttribOffset; /* SHORT_NAMED_BIT */
@@ -129,6 +172,9 @@ const displayAttribOffset: number = FastData_displayAttribOffset; /* SHORT_NAMED
 /**
  * @summary FastData_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.17.6).
  */
 export
 const FastData_privateData: number = 7; /* LONG_NAMED_BIT */
@@ -136,6 +182,8 @@ const FastData_privateData: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `FastData_privateData`.
  */
 export
 const privateData: number = FastData_privateData; /* SHORT_NAMED_BIT */
@@ -143,6 +191,9 @@ const privateData: number = FastData_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary FastData_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.17.6).
  */
 export
 const FastData_privateDataInAck: number = 8; /* LONG_NAMED_BIT */
@@ -150,6 +201,8 @@ const FastData_privateDataInAck: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `FastData_privateDataInAck`.
  */
 export
 const privateDataInAck: number = FastData_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -157,6 +210,9 @@ const privateDataInAck: number = FastData_privateDataInAck; /* SHORT_NAMED_BIT *
 /**
  * @summary FastData_supportsModifyingPosition
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.6).
  */
 export
 const FastData_supportsModifyingPosition: number = 9; /* LONG_NAMED_BIT */
@@ -164,6 +220,8 @@ const FastData_supportsModifyingPosition: number = 9; /* LONG_NAMED_BIT */
 /**
  * @summary supportsModifyingPosition
  * @constant
+ * @description
+ * Alias of `FastData_supportsModifyingPosition`.
  */
 export
 const supportsModifyingPosition: number = FastData_supportsModifyingPosition; /* SHORT_NAMED_BIT */

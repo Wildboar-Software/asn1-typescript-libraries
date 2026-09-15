@@ -24,7 +24,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetSwitchingFunctionDevicesArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 13-10). Omit both filters for
+ * all devices in the working domain.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +47,30 @@ class GetSwitchingFunctionDevicesArgument {
     constructor (
         /**
          * @summary `requestedDeviceID`.
+         * @description
+         *
+         * If present, query this device only (still subject to
+         * `requestedDeviceCategory`).
          * @public
          * @readonly
          */
         readonly requestedDeviceID: OPTIONAL<DeviceID>,
         /**
          * @summary `requestedDeviceCategory`.
+         * @description
+         *
+         * Restrict the list to this category (group ACD/hunt/pick/user/
+         * other, IV variants, station, routeing, etc.).
          * @public
          * @readonly
          */
         readonly requestedDeviceCategory: OPTIONAL<ReqDeviceCategory>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 13-10.
          * @public
          * @readonly
          */

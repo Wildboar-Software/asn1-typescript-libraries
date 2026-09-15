@@ -8,7 +8,22 @@ import { IA5String, ASN1Element as _Element, ASN1TagClass as _TagClass } from "@
 /**
  * @summary PrivateTON
  * @description
- * 
+ *
+ * Explicit private Type Of Number in Switching Function
+ * Representation (ECMA-269 §10.1.2; ECMA-155 / ITU-T E.131).
+ *
+ * - `unknown`: TON not classified.
+ * - `level3RegionalNumber`: e.g. `"41396557321"`.
+ * - `level2RegionalNumber`: e.g. `"96557321"`.
+ * - `level1RegionalNumber`: e.g. `"557321"`.
+ * - `pTNSpecificNumber`: encoded in ECMA-285 §9.2; ECMA-269 §10.1.2
+ *   does not define this alternative.
+ * - `localNumber`: e.g. `"321"`.
+ * - `abbreviated`: e.g. `"2"`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

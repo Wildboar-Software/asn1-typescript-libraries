@@ -17,7 +17,10 @@ import { SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/Sampl
 /**
  * @summary TTPRequestSCObyClientModel
  * @description
- * 
+ *
+ * Client → TTP: sample BIR only; TTP already holds the template
+ * (Table 16). ITU-T Rec. X.1084 (05/2008) §11.9.1, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +36,11 @@ class TTPRequestSCObyClientModel {
     constructor (
         /**
          * @summary `sampleData`.
+         * @description
+         *
+         * Captured sample as BioAPI BIR (includes BSP/device info).
+         * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
+         *
          * @public
          * @readonly
          */

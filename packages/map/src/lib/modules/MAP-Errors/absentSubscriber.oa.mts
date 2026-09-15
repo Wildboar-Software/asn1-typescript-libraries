@@ -76,6 +76,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary absentSubscriber
  * @description
  * 
+ * Returned when the subscriber has activated the detach service or the system
+ * detects the absence condition. This error may be qualified to indicate
+ * whether the subscriber was IMSI detached, in a restricted area, or did not
+ * respond to paging (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 27. Optional parameter `AbsentSubscriberParam` must not be used in
+ * version <3 (3GPP TS 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

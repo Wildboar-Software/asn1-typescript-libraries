@@ -72,7 +72,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RegionalSubscriptionResponse
  * @description
- * 
+ *
+ * Indicates that regional subscription data cannot be handled, or that the
+ * current MSC, SGSN, or MME area is entirely restricted because of regional
+ * subscription.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.12 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,7 +102,13 @@ enum _enum_for_RegionalSubscriptionResponse {
 /**
  * @summary RegionalSubscriptionResponse
  * @description
- * 
+ *
+ * Indicates that regional subscription data cannot be handled, or that the
+ * current MSC, SGSN, or MME area is entirely restricted because of regional
+ * subscription.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.12 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -115,7 +127,13 @@ type RegionalSubscriptionResponse = _enum_for_RegionalSubscriptionResponse;
 /**
  * @summary RegionalSubscriptionResponse
  * @description
- * 
+ *
+ * Indicates that regional subscription data cannot be handled, or that the
+ * current MSC, SGSN, or MME area is entirely restricted because of regional
+ * subscription.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.12 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

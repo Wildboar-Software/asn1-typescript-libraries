@@ -73,7 +73,13 @@ import { LAIFixedLength, _decode_LAIFixedLength, _encode_LAIFixedLength } from "
 /**
  * @summary CellGlobalIdOrServiceAreaIdOrLAI
  * @description
- * 
+ *
+ * CAMEL location: Cell Global Identification or Service Area Identification, or
+ * Location Area Identification. For GERAN, CGI of the serving cell; for UTRAN,
+ * SAI of the serving cell.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.11.22).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

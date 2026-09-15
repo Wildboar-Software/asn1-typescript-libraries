@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary RouteEnd
  * @description
- * 
+ * Capability bitmap for the Route End service (ECMA-269 C.11.5, ECMA-285
+ * §9.10). Presence of this entry in `RouteingServList` means the SF supports
+ * that service. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +34,9 @@ type RouteEnd = BIT_STRING;
 /**
  * @summary RouteEnd_errorValue
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.11.5).
  */
 export
 const RouteEnd_errorValue: number = 1; /* LONG_NAMED_BIT */
@@ -33,6 +44,8 @@ const RouteEnd_errorValue: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary errorValue
  * @constant
+ * @description
+ * Alias of `RouteEnd_errorValue`.
  */
 export
 const errorValue: number = RouteEnd_errorValue; /* SHORT_NAMED_BIT */
@@ -40,6 +53,9 @@ const errorValue: number = RouteEnd_errorValue; /* SHORT_NAMED_BIT */
 /**
  * @summary RouteEnd_correlatorData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `correlatorData` parameter
+ * (ECMA-269 C.11.5).
  */
 export
 const RouteEnd_correlatorData: number = 2; /* LONG_NAMED_BIT */
@@ -47,6 +63,8 @@ const RouteEnd_correlatorData: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary correlatorData
  * @constant
+ * @description
+ * Alias of `RouteEnd_correlatorData`.
  */
 export
 const correlatorData: number = RouteEnd_correlatorData; /* SHORT_NAMED_BIT */
@@ -54,6 +72,9 @@ const correlatorData: number = RouteEnd_correlatorData; /* SHORT_NAMED_BIT */
 /**
  * @summary RouteEnd_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.11.5).
  */
 export
 const RouteEnd_privateData: number = 3; /* LONG_NAMED_BIT */
@@ -61,6 +82,8 @@ const RouteEnd_privateData: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `RouteEnd_privateData`.
  */
 export
 const privateData: number = RouteEnd_privateData; /* SHORT_NAMED_BIT */
@@ -68,6 +91,9 @@ const privateData: number = RouteEnd_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary RouteEnd_supportsSending
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.11.5).
  */
 export
 const RouteEnd_supportsSending: number = 4; /* LONG_NAMED_BIT */
@@ -75,6 +101,8 @@ const RouteEnd_supportsSending: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary supportsSending
  * @constant
+ * @description
+ * Alias of `RouteEnd_supportsSending`.
  */
 export
 const supportsSending: number = RouteEnd_supportsSending; /* SHORT_NAMED_BIT */
@@ -82,6 +110,9 @@ const supportsSending: number = RouteEnd_supportsSending; /* SHORT_NAMED_BIT */
 /**
  * @summary RouteEnd_supportsReceiving
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.11.5).
  */
 export
 const RouteEnd_supportsReceiving: number = 5; /* LONG_NAMED_BIT */
@@ -89,6 +120,8 @@ const RouteEnd_supportsReceiving: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary supportsReceiving
  * @constant
+ * @description
+ * Alias of `RouteEnd_supportsReceiving`.
  */
 export
 const supportsReceiving: number = RouteEnd_supportsReceiving; /* SHORT_NAMED_BIT */

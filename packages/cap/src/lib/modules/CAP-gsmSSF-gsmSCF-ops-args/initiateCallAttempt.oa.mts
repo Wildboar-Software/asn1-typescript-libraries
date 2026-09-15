@@ -1,0 +1,67 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { InitiateCallAttemptArg, _decode_InitiateCallAttemptArg, _encode_InitiateCallAttemptArg } from "../CAP-gsmSSF-gsmSCF-ops-args/InitiateCallAttemptArg.ta.mjs";
+import { InitiateCallAttemptRes, _decode_InitiateCallAttemptRes, _encode_InitiateCallAttemptRes } from "../CAP-gsmSSF-gsmSCF-ops-args/InitiateCallAttemptRes.ta.mjs";
+import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
+import { parameterOutOfRange } from "../CAP-errortypes/parameterOutOfRange.oa.mjs";
+import { systemFailure } from "../CAP-errortypes/systemFailure.oa.mjs";
+import { taskRefused } from "../CAP-errortypes/taskRefused.oa.mjs";
+import { unexpectedComponentSequence } from "../CAP-errortypes/unexpectedComponentSequence.oa.mjs";
+import { unexpectedDataValue } from "../CAP-errortypes/unexpectedDataValue.oa.mjs";
+import { unexpectedParameter } from "../CAP-errortypes/unexpectedParameter.oa.mjs";
+import { opcode_initiateCallAttempt } from "../CAP-operationcodes/opcode-initiateCallAttempt.va.mjs";
+
+/**
+ * @summary initiateCallAttempt
+ * @description
+ *
+ * gsmSCF instructs gsmSSF to create a new call leg using gsmSCF-provided
+ * address information (e.g. wake-up call), or an additional party in a new Call
+ * Segment within an existing CSA. gsmSCF shall then arm O_Answer as EDP-R and
+ * the failure events (Route_Select_Failure, O_Busy, O_No_Answer) as EDP-R
+ * and/or EDP-N. gsmSCF → gsmSSF. Confirmed (`RESULT`). Local opcode 32. Timer
+ * `Tica` (short: 1 s–10 s; operator-defined within range). (3GPP TS 29.078
+ * V19.0.0 clauses 6.1.1 and 11.21).
+ *
+ * ### ASN.1 Definition:
+ *
+ * ```asn1
+ * initiateCallAttempt {PARAMETERS-BOUND : bound} OPERATION ::= {
+ * 	ARGUMENT	InitiateCallAttemptArg {bound}
+ * 	RESULT		InitiateCallAttemptRes {bound}
+ * 	ERRORS		{missingParameter |
+ * 			parameterOutOfRange |
+ * 			systemFailure |
+ * 			taskRefused |
+ * 			unexpectedComponentSequence |
+ * 			unexpectedDataValue |
+ * 			unexpectedParameter
+ * 			}
+ * 	CODE		opcode-initiateCallAttempt}
+ * ```
+ *
+ * @constant
+ * @type {OPERATION<InitiateCallAttemptArg, InitiateCallAttemptRes>}
+ * @implements {OPERATION<InitiateCallAttemptArg, InitiateCallAttemptRes>}
+ */
+export
+const initiateCallAttempt: OPERATION<InitiateCallAttemptArg, InitiateCallAttemptRes> = {
+    class: "OPERATION",
+    decoderFor: {
+        "&ArgumentType": _decode_InitiateCallAttemptArg,
+        "&ResultType": _decode_InitiateCallAttemptRes,
+    },
+    encoderFor: {
+        "&ArgumentType": _encode_InitiateCallAttemptArg,
+        "&ResultType": _encode_InitiateCallAttemptRes,
+    },
+    "&returnResult": true /* OBJECT_FIELD_SETTING */,
+    "&Errors": [ missingParameter, parameterOutOfRange, systemFailure, taskRefused, unexpectedComponentSequence, unexpectedDataValue, unexpectedParameter, ] /* OBJECT_FIELD_SETTING */,
+    "&operationCode": opcode_initiateCallAttempt /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&InvokePriority": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
+    "&ResultPriority": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
+    "&synchronous": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&idempotent": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&alwaysReturns": true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};

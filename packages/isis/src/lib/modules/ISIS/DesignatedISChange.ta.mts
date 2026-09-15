@@ -15,6 +15,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DesignatedISChange
  * @description
  *
+ * `notificationDesignatedIntermediateSystemChange` payload: whether this system
+ * elected itself or resigned as LAN L1 or L2 Designated IS. Relative order of
+ * these events must be preserved.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.1.3, 11.2.5.2 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +38,12 @@ export enum _enum_for_DesignatedISChange {
  * @summary DesignatedISChange
  * @description
  *
+ * `notificationDesignatedIntermediateSystemChange` payload: whether this system
+ * elected itself or resigned as LAN L1 or L2 Designated IS. Relative order of
+ * these events must be preserved.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.1.3, 11.2.5.2 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,6 +58,12 @@ export type DesignatedISChange = _enum_for_DesignatedISChange;
  * @summary DesignatedISChange
  * @description
  *
+ * `notificationDesignatedIntermediateSystemChange` payload: whether this system
+ * elected itself or resigned as LAN L1 or L2 Designated IS. Relative order of
+ * these events must be preserved.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.1.3, 11.2.5.2 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,6 +76,12 @@ export const DesignatedISChange = _enum_for_DesignatedISChange;
 
 /**
  * @summary DesignatedISChange_resigned
+ * @description
+ *
+ * This system resigned as LAN Designated IS.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.5.2).
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +98,12 @@ export const resigned: DesignatedISChange =
 
 /**
  * @summary DesignatedISChange_elected
+ * @description
+ *
+ * This system elected itself as LAN Designated IS.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.5.2).
+ *
  * @constant
  * @type {number}
  */

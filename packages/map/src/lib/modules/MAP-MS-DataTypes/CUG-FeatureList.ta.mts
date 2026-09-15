@@ -75,7 +75,12 @@ import { maxNumOfExt_BasicServiceGroups } from "./maxNumOfExt-BasicServiceGroups
 /**
  * @summary CUG_FeatureList
  * @description
- * 
+ *
+ * CUG features per basic service group. If omitted in Insert Subscriber Data,
+ * the VLR shall interpret that no options per extensible basic service group
+ * exist and apply defaults (no outgoing access, no incoming access, no
+ * preferential CUG) (3GPP TS 29.002 V19.1.0 clauses 7.6.3.22 and 8.8.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

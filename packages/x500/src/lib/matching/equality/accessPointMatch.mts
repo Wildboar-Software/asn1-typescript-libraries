@@ -10,6 +10,13 @@ import {
 } from "../../modules/DistributedOperations/AccessPoint.ta.mjs";
 import compareName from "../../comparators/compareName.mjs";
 
+/**
+ * Rec. ITU-T X.501 (10/2019), clause 24.2.1.9.1 `accessPointMatch`.
+ *
+ * Equality for `AccessPoint`. The assertion is the `Name`
+ * (`ae-title`) component of the access point. TRUE iff those names
+ * match as distinguished names.
+ */
 export
 const accessPointMatch: EqualityMatcher = (
     assertion: ASN1Element,

@@ -79,7 +79,15 @@ import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 /**
  * @summary alertServiceCentre
  * @description
- * 
+ *
+ * MAP_ALERT_SERVICE_CENTRE: HLR notifies the IWMSC that a subscriber whose
+ * MSISDN is in the Message Waiting Data file is active or has memory available.
+ * Also MME (via IWF), SGSN or MSC (Deployment Option 2) to SMS-GMSC (possibly
+ * via SMS Router) when the MS is available for MT SMS or has moved serving node
+ * (3GPP TS 23.040). Confirmed (empty result). Typical path: HLR→IWMSC. Local
+ * opcode 64. Timer class `s` (3 s to 10 s). (3GPP TS 29.002 V19.1.0 clauses
+ * 12.5.1, 17.1.2, 17.3.2.24 and 17.6.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

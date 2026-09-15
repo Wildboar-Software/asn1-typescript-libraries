@@ -76,7 +76,14 @@ import { ResetArg, _decode_ResetArg, _encode_ResetArg } from "../MAP-MS-DataType
 /**
  * @summary reset
  * @description
- * 
+ *
+ * MAP_RESET: after a restart, HSS/HLR or CSS indicates failure to a list of
+ * VLRs, SGSNs or MMEs (via IWF). Also used as an O&M action (planned outage
+ * without service interruption, or updating data shared by multiple
+ * subscribers). Non-confirmed (argument only). Typical path: HLR/CSS→VLR or
+ * SGSN. Local opcode 37. Timer class `m` (15 s to 30 s). (3GPP TS 29.002
+ * V19.1.0 clauses 8.10.1.1, 17.1.2, 17.3.2.11 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

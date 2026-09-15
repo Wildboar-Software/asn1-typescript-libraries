@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary clearCall
  * @description
- * 
+ *
+ * Clear Call (ECMA-269 §17.1.7 / ECMA-285 §15.1.7). Invoked by
+ * the computing function on the switching function. Affects only
+ * the named call (FR 1). The ConnectionID may be Call-ID-only
+ * (FR 2; exception to §12.3.9). Some connections may Fail before
+ * Null. ROSE local CODE 4. Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

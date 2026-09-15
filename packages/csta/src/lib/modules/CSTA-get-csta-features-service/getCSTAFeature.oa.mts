@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getCSTAFeature
  * @description
- * 
+ *
+ * Get CSTA Features (ECMA-269 §13.1.1 / ECMA-285 §11.1.1). Direction: CF→SF.
+ * ROSE local CODE 370. Errors: `universalFailure`.
+ * Obtains the list of CSTA services and events supported by some or
+ * all devices. Omitted bitmap entries mean that service/event is
+ * not supported by any device. Atomic acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

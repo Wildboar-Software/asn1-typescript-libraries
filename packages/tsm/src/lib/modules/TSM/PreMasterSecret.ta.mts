@@ -19,7 +19,11 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 /**
  * @summary PreMasterSecret
  * @description
- * 
+ *
+ * TLS premaster: client's advertised version plus 46 random octets,
+ * RSA-encrypted as `EncryptedPreMasterSecret`. ITU-T Rec. X.1084
+ * (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,22 @@ class PreMasterSecret {
     constructor (
         /**
          * @summary `client_version`.
+         * @description
+         *
+         * Client-offered version, copied into the premaster so the server
+         * can detect version rollback. X.1084 Annex A.
+         *
          * @public
          * @readonly
          */
         readonly client_version: ProtocolVersion,
         /**
          * @summary `random`.
+         * @description
+         *
+         * 46 opaque random octets of the TLS premaster secret. X.1084
+         * Annex A.
+         *
          * @public
          * @readonly
          */

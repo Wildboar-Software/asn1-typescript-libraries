@@ -72,7 +72,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SIPTO_Permission
  * @description
- * 
+ *
+ * Whether SIPTO above RAN is allowed. SGSN handling as in 3GPP TS 29.272 clause
+ * 5.2.1.1.2.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,7 +98,12 @@ enum _enum_for_SIPTO_Permission {
 /**
  * @summary SIPTO_Permission
  * @description
- * 
+ *
+ * Whether SIPTO above RAN is allowed. SGSN handling as in 3GPP TS 29.272 clause
+ * 5.2.1.1.2.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -111,7 +121,12 @@ type SIPTO_Permission = _enum_for_SIPTO_Permission;
 /**
  * @summary SIPTO_Permission
  * @description
- * 
+ *
+ * Whether SIPTO above RAN is allowed. SGSN handling as in 3GPP TS 29.272 clause
+ * 5.2.1.1.2.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

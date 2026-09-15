@@ -75,7 +75,12 @@ import { maxNumOfCamelTDPData } from "./maxNumOfCamelTDPData.va.mjs";
 /**
  * @summary SMS_CAMEL_TDP_DataList
  * @description
- * 
+ *
+ * SMS CAMEL TDP list. Shall not contain more than one instance with the same
+ * `sms-TriggerDetectionPoint`.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

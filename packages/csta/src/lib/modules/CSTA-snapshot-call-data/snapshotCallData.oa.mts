@@ -15,7 +15,12 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary snapshotCallData
  * @description
- * 
+ *
+ * Switching-function-to-computing-function operation that delivers Snapshot
+ * CallData segments. ECMA-269 §16.1.3.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

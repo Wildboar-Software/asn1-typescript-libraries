@@ -76,7 +76,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary MNPInfoRes
  * @description
- * 
+ *
+ * Mobile Number Portability result (3GPP TS 23.078 and 23.066): routeing
+ * number, IMSI, MSISDN, and number portability status. (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.93 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,24 +100,43 @@ class MNPInfoRes {
     constructor (
         /**
          * @summary `routeingNumber`.
+         * @description
+         *
+         * Routeing Number (clause 7.6.2.63). (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.93)
+         *
          * @public
          * @readonly
          */
         readonly routeingNumber: OPTIONAL<RouteingNumber>,
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * Generic IMSI; MCC/MNC point to the subscription network (3GPP TS
+         * 23.066). (3GPP TS 29.002 V19.1.0 clauses 7.6.3.93 and 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `msisdn`.
+         * @description
+         *
+         * MSISDN (clause 7.6.2.17). (3GPP TS 29.002 V19.1.0 clause 7.6.3.93)
+         *
          * @public
          * @readonly
          */
         readonly msisdn: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `numberPortabilityStatus`.
+         * @description
+         *
+         * Number portability status (clause 7.6.5.14). (3GPP TS 29.002 V19.1.0
+         * clause 7.6.3.93)
+         *
          * @public
          * @readonly
          */

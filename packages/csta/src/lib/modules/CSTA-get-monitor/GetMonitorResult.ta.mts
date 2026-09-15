@@ -21,7 +21,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetMonitorResult
  * @description
- * 
+ *
+ * Positive ack (Table 15-9): cross-ref or inline monitor list.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +44,21 @@ class GetMonitorResult {
     constructor (
         /**
          * @summary `crossRefIDorRegistrationData`.
+         * @description
+         *
+         * `serviceCrossRefID` if Monitor Info will follow; `monitorList`
+         * if inline. Mutually exclusive. (Type name says RegistrationData
+         * but the CHOICE is monitor data.)
          * @public
          * @readonly
          */
         readonly crossRefIDorRegistrationData: GetMonitorResult_crossRefIDorRegistrationData,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 15-9.
          * @public
          * @readonly
          */

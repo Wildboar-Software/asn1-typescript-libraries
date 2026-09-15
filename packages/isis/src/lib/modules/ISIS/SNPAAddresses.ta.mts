@@ -20,6 +20,12 @@ import {
  * @summary SNPAAddresses
  * @description
  *
+ * Set of SNPA addresses to which a PDU may be forwarded in order to reach an
+ * NSAP that matches the reachable-address prefix, when `mappingType` is
+ * `explicit`.
+ *
+ * (ISO/IEC 10589:2002 clauses 8.1, 11.2.12.1 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

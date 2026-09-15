@@ -23,7 +23,13 @@ import { VendorSpecEvents, _decode_VendorSpecEvents, _encode_VendorSpecEvents } 
 /**
  * @summary EventSpecificInfo
  * @description
- * 
+ *
+ * Selects the event-report body by category (ECMA-285 §10): call control, call
+ * associated, media attachment, physical device feature, logical device
+ * feature, device maintenance, voice unit, or vendor-specific.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

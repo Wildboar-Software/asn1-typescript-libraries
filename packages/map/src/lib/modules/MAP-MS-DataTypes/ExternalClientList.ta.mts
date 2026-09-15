@@ -75,7 +75,12 @@ import { maxNumOfExternalClient } from "./maxNumOfExternalClient.va.mjs";
 /**
  * @summary ExternalClientList
  * @description
- * 
+ *
+ * Identities of external clients allowed to locate a target MS for an MT-LR,
+ * applicable to call/session unrelated and call/session related privacy
+ * classes. Usage is defined in 3GPP TS 23.271 (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.3.64).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

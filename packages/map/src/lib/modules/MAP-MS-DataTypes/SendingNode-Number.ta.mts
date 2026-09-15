@@ -72,7 +72,12 @@ import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressStr
 /**
  * @summary SendingNode_Number
  * @description
- * 
+ *
+ * ISDN number of the MAP_RESET sender: HLR number for HLR/HSS restart, or CSS
+ * number for CSS restart.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.10.1.3, 7.6.2.13 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

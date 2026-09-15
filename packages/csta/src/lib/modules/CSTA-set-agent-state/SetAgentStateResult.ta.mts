@@ -22,7 +22,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetAgentStateResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §22.1.15.2.1). `pendingAgentState` shall be present if
+ * the SF delays the transition until the agent is no longer Busy or Working
+ * After Call.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +45,20 @@ class SetAgentStateResult {
     constructor (
         /**
          * @summary `pendingAgentState`.
+         * @description
+         *
+         * Working After Call, Not Ready, Ready, or Null — state after
+         * Busy/Working After Call ends.
          * @public
          * @readonly
          */
         readonly pendingAgentState: OPTIONAL<PendingAgentState>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

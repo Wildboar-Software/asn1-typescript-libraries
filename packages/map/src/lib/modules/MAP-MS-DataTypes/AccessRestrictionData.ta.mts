@@ -73,7 +73,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AccessRestrictionData
  * @description
- * 
+ *
+ * Radio access technologies that may be restricted for a subscriber via
+ * subscription data. For CS domain use see 3GPP TS 23.012; for PS domain see
+ * 3GPP TS 23.060 clause 5.3.19, TS 29.060 clause 7.5.3 and TS 29.274 clause
+ * 7.3.6 (3GPP TS 29.002 V19.1.0 clause 7.6.3.97).
+ *
+ * The VLR shall ignore access restriction data related to an access type not
+ * supported by the node. Additional restrictions are encoded in
+ * Ext-AccessRestrictionData (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

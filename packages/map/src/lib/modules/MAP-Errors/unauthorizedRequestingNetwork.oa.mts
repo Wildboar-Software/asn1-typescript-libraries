@@ -76,6 +76,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary unauthorizedRequestingNetwork
  * @description
  * 
+ * Location services user error: Unauthorised Requesting Network (3GPP TS 29.002
+ * V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 52. Optional parameter `UnauthorizedRequestingNetwork-Param` (3GPP
+ * TS 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

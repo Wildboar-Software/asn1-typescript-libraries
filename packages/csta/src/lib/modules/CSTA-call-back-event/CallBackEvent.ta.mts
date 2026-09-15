@@ -18,7 +18,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CallBackEvent
  * @description
- * 
+ *
+ * Call Back event (ECMA-269 §22.2.9 / ECMA-285 §20.2.9). Direction: SF→CF via
+ * Event Report. Call Back set or cancelled between two devices (manual, Call
+ * Back Non-Call-Related, or Cancel Call Back). ASN.1 `callBackSetCanceled` is
+ * spec `callBackSetCancelled`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +44,38 @@ class CallBackEvent {
     constructor (
         /**
          * @summary `originatingDevice`.
+         * @description
+         *
+         * Originating device when the call-back was established.
          * @public
          * @readonly
          */
         readonly originatingDevice: SubjectDeviceID,
         /**
          * @summary `targetDevice`.
+         * @description
+         *
+         * Target device when the call-back was established.
          * @public
          * @readonly
          */
         readonly targetDevice: SubjectDeviceID,
         /**
          * @summary `callBackSetCanceled`.
+         * @description
+         *
+         * TRUE = Call Back was set; FALSE = cancelled. (Spec name:
+         * callBackSetCancelled.)
          * @public
          * @readonly
          */
         readonly callBackSetCanceled: BOOLEAN,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

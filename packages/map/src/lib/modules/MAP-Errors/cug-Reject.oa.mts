@@ -76,6 +76,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary cug_Reject
  * @description
  * 
+ * Returned when the call does not pass a CUG check. Additional information may
+ * also be given in order to indicate rejection due to e.g. incoming call barred
+ * or non-CUG membership (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 15. Optional parameter `CUG-RejectParam` (3GPP TS 29.002 V19.1.0
+ * clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

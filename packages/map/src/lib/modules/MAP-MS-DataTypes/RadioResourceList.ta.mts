@@ -75,7 +75,13 @@ import { maxNumOfRadioResources } from "./maxNumOfRadioResources.va.mjs";
 /**
  * @summary RadioResourceList
  * @description
- * 
+ *
+ * List of RAB-Ids and associated Channel Type IEs (3GPP TS 48.008). Used when
+ * there are multiple bearers and at least one has Radio Resource Information.
+ * Not sent if `RadioResourceInformation` is sent.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.6.10A and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

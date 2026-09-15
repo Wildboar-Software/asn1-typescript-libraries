@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary PrivateDataVersionSelection
  * @description
- * 
+ * Capability bitmap for the Private Data Version Selection service (ECMA-269
+ * C.23.5, ECMA-285 §9.10). Presence of this entry in `VendorSpecificServList`
+ * means the SF supports that service. Each set bit is an optional parameter,
+ * enumerated value, initial connection state, or miscellaneous characteristic
+ * from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,6 +31,9 @@ type PrivateDataVersionSelection = BIT_STRING;
 /**
  * @summary PrivateDataVersionSelection_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.23.5).
  */
 export
 const PrivateDataVersionSelection_privateDataInAck: number = 0; /* LONG_NAMED_BIT */
@@ -29,6 +41,8 @@ const PrivateDataVersionSelection_privateDataInAck: number = 0; /* LONG_NAMED_BI
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `PrivateDataVersionSelection_privateDataInAck`.
  */
 export
 const privateDataInAck: number = PrivateDataVersionSelection_privateDataInAck; /* SHORT_NAMED_BIT */

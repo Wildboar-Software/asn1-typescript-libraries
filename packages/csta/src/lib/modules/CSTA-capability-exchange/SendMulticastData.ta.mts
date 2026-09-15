@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SendMulticastData
  * @description
- * 
+ * Capability bitmap for the Send Multicast Data service (ECMA-269 C.17.10,
+ * ECMA-285 §9.10). Presence of this entry in `IOServicesServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +37,9 @@ type SendMulticastData = BIT_STRING;
 /**
  * @summary SendMulticastData_ioData
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.10).
  */
 export
 const SendMulticastData_ioData: number = 0; /* LONG_NAMED_BIT */
@@ -35,6 +47,8 @@ const SendMulticastData_ioData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary ioData
  * @constant
+ * @description
+ * Alias of `SendMulticastData_ioData`.
  */
 export
 const ioData: number = SendMulticastData_ioData; /* SHORT_NAMED_BIT */
@@ -42,6 +56,9 @@ const ioData: number = SendMulticastData_ioData; /* SHORT_NAMED_BIT */
 /**
  * @summary SendMulticastData_displayAttribPhyBaseRowNumber
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.10).
  */
 export
 const SendMulticastData_displayAttribPhyBaseRowNumber: number = 1; /* LONG_NAMED_BIT */
@@ -49,6 +66,8 @@ const SendMulticastData_displayAttribPhyBaseRowNumber: number = 1; /* LONG_NAMED
 /**
  * @summary displayAttribPhyBaseRowNumber
  * @constant
+ * @description
+ * Alias of `SendMulticastData_displayAttribPhyBaseRowNumber`.
  */
 export
 const displayAttribPhyBaseRowNumber: number = SendMulticastData_displayAttribPhyBaseRowNumber; /* SHORT_NAMED_BIT */
@@ -56,6 +75,9 @@ const displayAttribPhyBaseRowNumber: number = SendMulticastData_displayAttribPhy
 /**
  * @summary SendMulticastData_displayAttribPhyBaseColumnNumber
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.10).
  */
 export
 const SendMulticastData_displayAttribPhyBaseColumnNumber: number = 2; /* LONG_NAMED_BIT */
@@ -63,6 +85,8 @@ const SendMulticastData_displayAttribPhyBaseColumnNumber: number = 2; /* LONG_NA
 /**
  * @summary displayAttribPhyBaseColumnNumber
  * @constant
+ * @description
+ * Alias of `SendMulticastData_displayAttribPhyBaseColumnNumber`.
  */
 export
 const displayAttribPhyBaseColumnNumber: number = SendMulticastData_displayAttribPhyBaseColumnNumber; /* SHORT_NAMED_BIT */
@@ -70,6 +94,9 @@ const displayAttribPhyBaseColumnNumber: number = SendMulticastData_displayAttrib
 /**
  * @summary SendMulticastData_displayAttribOffset
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.10).
  */
 export
 const SendMulticastData_displayAttribOffset: number = 3; /* LONG_NAMED_BIT */
@@ -77,6 +104,8 @@ const SendMulticastData_displayAttribOffset: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary displayAttribOffset
  * @constant
+ * @description
+ * Alias of `SendMulticastData_displayAttribOffset`.
  */
 export
 const displayAttribOffset: number = SendMulticastData_displayAttribOffset; /* SHORT_NAMED_BIT */
@@ -84,6 +113,9 @@ const displayAttribOffset: number = SendMulticastData_displayAttribOffset; /* SH
 /**
  * @summary SendMulticastData_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.17.10).
  */
 export
 const SendMulticastData_privateData: number = 4; /* LONG_NAMED_BIT */
@@ -91,6 +123,8 @@ const SendMulticastData_privateData: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SendMulticastData_privateData`.
  */
 export
 const privateData: number = SendMulticastData_privateData; /* SHORT_NAMED_BIT */
@@ -98,6 +132,9 @@ const privateData: number = SendMulticastData_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary SendMulticastData_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.17.10).
  */
 export
 const SendMulticastData_privateDataInAck: number = 5; /* LONG_NAMED_BIT */
@@ -105,6 +142,8 @@ const SendMulticastData_privateDataInAck: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `SendMulticastData_privateDataInAck`.
  */
 export
 const privateDataInAck: number = SendMulticastData_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -112,6 +151,9 @@ const privateDataInAck: number = SendMulticastData_privateDataInAck; /* SHORT_NA
 /**
  * @summary SendMulticastData_supportsModifyingPosition
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.17.10).
  */
 export
 const SendMulticastData_supportsModifyingPosition: number = 6; /* LONG_NAMED_BIT */
@@ -119,6 +161,8 @@ const SendMulticastData_supportsModifyingPosition: number = 6; /* LONG_NAMED_BIT
 /**
  * @summary supportsModifyingPosition
  * @constant
+ * @description
+ * Alias of `SendMulticastData_supportsModifyingPosition`.
  */
 export
 const supportsModifyingPosition: number = SendMulticastData_supportsModifyingPosition; /* SHORT_NAMED_BIT */

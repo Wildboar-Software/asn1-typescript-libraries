@@ -77,7 +77,13 @@ enum _enum_for_Ext_ProtocolId {
 /**
  * @summary Ext_ProtocolId
  * @description
- * 
+ *
+ * Protocol identity for `Ext-ExternalSignalInfo`. `ets-300356` (1) identifies
+ * ETS 300 356. For any other value the receiver shall ignore the whole
+ * `Ext-ExternalSignalInfo` sequence.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.9.10).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,6 +100,10 @@ type Ext_ProtocolId = _enum_for_Ext_ProtocolId | ENUMERATED;
 
 /**
  * @summary Ext_ProtocolId_ets_300356
+ * @description
+ *
+ * ETS 300 356 (value 1). (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.9.10).
+ *
  * @constant
  * @type {number}
  */
@@ -102,6 +112,10 @@ const Ext_ProtocolId_ets_300356: Ext_ProtocolId = 1; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary ets_300356
+ * @description
+ *
+ * ETS 300 356 (value 1). (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.9.10).
+ *
  * @constant
  * @type {number}
  */

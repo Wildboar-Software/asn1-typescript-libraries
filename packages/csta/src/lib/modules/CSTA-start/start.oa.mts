@@ -17,7 +17,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary start
  * @description
- * 
+ *
+ * Voice Start: starts interaction between a call and an interactive voice
+ * resource. For Prompt with Prompt Queue, equivalent to Queue then Start on the
+ * queue (ECMA-269 §26.1.14).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:516. Errors: `universalFailure` (ECMA-285 §24.1.14).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

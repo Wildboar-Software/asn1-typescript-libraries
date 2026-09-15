@@ -6,6 +6,15 @@ import {
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
 import { prepString } from "../../utils/prepString.mjs";
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.4.3
+ * `directoryStringFirstComponentMatch`.
+ *
+ * Compares a presented `UnboundedDirectoryString` with a SEQUENCE
+ * whose first component is a mandatory `DirectoryString`. TRUE iff
+ * that first component matches via `caseIgnoreMatch`. The
+ * assertion syntax is derived from the first SEQUENCE component.
+ */
 export
 const directoryStringFirstComponentMatch: EqualityMatcher = (
     assertion: ASN1Element,

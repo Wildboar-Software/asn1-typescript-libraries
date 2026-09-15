@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary QueryVoiceAttributeResult
  * @description
- * 
+ *
+ * Requested attribute value in `attribute` (ECMA-269 §26.1.7.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ class QueryVoiceAttributeResult {
     constructor (
         /**
          * @summary `attribute`.
+         * @description
+         *
+         * Value of the requested attribute (ECMA-269 §26.1.7.2.1).
+         *
          * @public
          * @readonly
          */
         readonly attribute: AttributeInfo,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

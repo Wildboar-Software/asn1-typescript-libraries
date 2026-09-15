@@ -23,7 +23,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SingleStepTransResult
  * @description
- * 
+ *
+ * Positive acknowledgement for Single Step Transfer
+ * (ECMA-269 §17.1.26 / ECMA-285 §15.1.26). May recall the
+ * transferring device if the transfer fails after this
+ * acknowledgement (§6.7.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +50,57 @@ class SingleStepTransResult {
     constructor (
         /**
          * @summary `transferredCall`.
+         * @description
+         *
+         * Mandatory. Connection of `transferredTo` in the
+         * resulting call.
+         *
          * @public
          * @readonly
          */
         readonly transferredCall: ConnectionID,
         /**
          * @summary `connections`.
+         * @description
+         *
+         * Optional. Links old versus new ConnectionIDs for
+         * devices that remain in the call after transfer
+         * (§12.3.9 FR 8, §12.2.9).
+         *
          * @public
          * @readonly
          */
         readonly connections: OPTIONAL<ConnectionList>,
         /**
          * @summary `transferredCallInfo`.
+         * @description
+         *
+         * Optional connection information for `transferredTo`
+         * (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly transferredCallInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageDataList`.
+         * @description
+         *
+         * Optional call-linkage identifiers for the resulting
+         * connections (§12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageDataList: OPTIONAL<CallLinkageDataList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security
+         * and privateData parameters from the ECMA-269 service
+         * table.
+         *
          * @public
          * @readonly
          */

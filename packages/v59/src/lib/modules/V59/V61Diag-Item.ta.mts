@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary V61Diag_Item
  * @description
- * 
+ *
+ * Placeholder for V.61 ASVD diagnostics (for further study). ITU-T Rec. V.59
+ * (11/2000) §6.8.17.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

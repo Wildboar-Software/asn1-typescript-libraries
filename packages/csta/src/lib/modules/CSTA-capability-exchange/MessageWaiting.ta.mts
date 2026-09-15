@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MessageWaiting
  * @description
- * 
+ * Capability bitmap for the Message Waiting event (ECMA-269 C.13.6, ECMA-285
+ * §9.10). Presence of this entry in `PhysDevEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +31,9 @@ type MessageWaiting = BIT_STRING;
 /**
  * @summary MessageWaiting_deviceForMsg
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.13.6).
  */
 export
 const MessageWaiting_deviceForMsg: number = 0; /* LONG_NAMED_BIT */
@@ -30,6 +41,8 @@ const MessageWaiting_deviceForMsg: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary deviceForMsg
  * @constant
+ * @description
+ * Alias of `MessageWaiting_deviceForMsg`.
  */
 export
 const deviceForMsg: number = MessageWaiting_deviceForMsg; /* SHORT_NAMED_BIT */
@@ -37,6 +50,9 @@ const deviceForMsg: number = MessageWaiting_deviceForMsg; /* SHORT_NAMED_BIT */
 /**
  * @summary MessageWaiting_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.13.6).
  */
 export
 const MessageWaiting_privateData: number = 1; /* LONG_NAMED_BIT */
@@ -44,6 +60,8 @@ const MessageWaiting_privateData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `MessageWaiting_privateData`.
  */
 export
 const privateData: number = MessageWaiting_privateData; /* SHORT_NAMED_BIT */

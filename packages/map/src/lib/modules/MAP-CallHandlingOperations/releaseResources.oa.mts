@@ -79,7 +79,12 @@ import { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
 /**
  * @summary releaseResources
  * @description
- * 
+ *
+ * MAP_RELEASE_RESOURCES: GMSC asks the terminating VMSC to release resources
+ * associated with the specified MSRN. Confirmed. Typical path: GMSC→VMSC. Local
+ * opcode 20. Timer class `m` (15 s to 30 s). (3GPP TS 29.002 V19.1.0 clauses
+ * 10.15.1, 17.1.2, 17.3.2.50 and 17.6.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,11 @@ import { MSRadioAccessCapability, _decode_MSRadioAccessCapability, _encode_MSRad
 /**
  * @summary GPRSMSClass
  * @description
- * 
+ *
+ * GPRS MS Class returned with subscriber information (e.g.
+ * MAP-ANY-TIME-INTERROGATION): MS Network Capability and optional MS Radio
+ * Access Capability (3GPP TS 29.002 V19.1.0 clauses 8.11.1.2 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +94,22 @@ class GPRSMSClass {
     constructor (
         /**
          * @summary `mSNetworkCapability`.
+         * @description
+         *
+         * MS Network Capability of the GPRS MS (3GPP TS 29.002 V19.1.0 clause
+         * 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly mSNetworkCapability: MSNetworkCapability,
         /**
          * @summary `mSRadioAccessCapability`.
+         * @description
+         *
+         * MS Radio Access Capability of the GPRS MS (3GPP TS 29.002 V19.1.0
+         * clause 17.7.1).
+         *
          * @public
          * @readonly
          */

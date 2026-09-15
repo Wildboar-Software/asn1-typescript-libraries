@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ChangeConnectionInformationResult
  * @description
- * 
+ *
+ * Positive ack: actual connection information applied.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class ChangeConnectionInformationResult {
     constructor (
         /**
          * @summary `actualConnectionInfo`.
+         * @description
+         *
+         * Connection information the SF actually applied.
          * @public
          * @readonly
          */
         readonly actualConnectionInfo: ConnectionInformation,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

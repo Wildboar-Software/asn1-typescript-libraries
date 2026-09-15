@@ -19,6 +19,12 @@ import {
  * @summary SystemIds
  * @description
  *
+ * Set of system IDs. For an IS neighbour this is the single ID from the Source
+ * ID field of the neighbour's IIH PDU; for an ES neighbour it is the set of IDs
+ * of that ES.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.6.4 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

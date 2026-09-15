@@ -75,7 +75,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary FailureReportArg
  * @description
- * 
+ *
+ * Argument of MAP_FAILURE_REPORT, used by the GGSN to inform the HLR that
+ * network-requested PDP-context activation has failed. GGSN address shall be
+ * present if a protocol-converting GSN is used between GGSN and HLR (3GPP TS
+ * 29.002 V19.1.0 clauses 13.2.1 and 13.2.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,18 +99,35 @@ class FailureReportArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * IMSI of the subscriber for whom network-requested PDP-context
+         * activation failed (3GPP TS 29.002 V19.1.0 clauses 13.2.3 and
+         * 7.6.2.1).
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `ggsn_Number`.
+         * @description
+         *
+         * ISDN number of the GGSN, or of the protocol-converter if a
+         * protocol-converting GSN is used (3GPP TS 29.002 V19.1.0 clauses
+         * 13.2.3 and 7.6.2.41).
+         *
          * @public
          * @readonly
          */
         readonly ggsn_Number: ISDN_AddressString,
         /**
          * @summary `ggsn_Address`.
+         * @description
+         *
+         * Shall be present if a protocol-converting GSN is used between GGSN
+         * and HLR (3GPP TS 29.002 V19.1.0 clauses 13.2.3 and 7.6.2.40).
+         *
          * @public
          * @readonly
          */

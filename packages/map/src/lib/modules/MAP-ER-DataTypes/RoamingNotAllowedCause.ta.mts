@@ -73,6 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RoamingNotAllowedCause
  * @description
  * 
+ * Cause on `RoamingNotAllowedParam` for a location updating attempt in an area
+ * not covered by the subscription (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,6 +97,10 @@ enum _enum_for_RoamingNotAllowedCause {
  * @summary RoamingNotAllowedCause
  * @description
  * 
+ * Cause on `RoamingNotAllowedParam` for a location updating attempt in an area
+ * not covered by the subscription (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -110,6 +118,10 @@ type RoamingNotAllowedCause = _enum_for_RoamingNotAllowedCause;
  * @summary RoamingNotAllowedCause
  * @description
  * 
+ * Cause on `RoamingNotAllowedParam` for a location updating attempt in an area
+ * not covered by the subscription (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -125,6 +137,10 @@ const RoamingNotAllowedCause = _enum_for_RoamingNotAllowedCause;
 
 /**
  * @summary RoamingNotAllowedCause_plmnRoamingNotAllowed
+ * @description
+ *
+ * `plmnRoamingNotAllowed` (0) (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +149,10 @@ const RoamingNotAllowedCause_plmnRoamingNotAllowed: RoamingNotAllowedCause = Roa
 
 /**
  * @summary plmnRoamingNotAllowed
+ * @description
+ *
+ * `plmnRoamingNotAllowed` (0) (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +161,10 @@ const plmnRoamingNotAllowed: RoamingNotAllowedCause = RoamingNotAllowedCause.plm
 
 /**
  * @summary RoamingNotAllowedCause_operatorDeterminedBarring
+ * @description
+ *
+ * `operatorDeterminedBarring` (3) (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +173,10 @@ const RoamingNotAllowedCause_operatorDeterminedBarring: RoamingNotAllowedCause =
 
 /**
  * @summary operatorDeterminedBarring
+ * @description
+ *
+ * `operatorDeterminedBarring` (3) (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */

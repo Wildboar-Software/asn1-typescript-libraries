@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary StatusReportingServicesC2
  * @description
- * 
+ *
+ * Phase II status-reporting services. Phase II (ECMA-218) compatibility BIT
+ * STRING in ACSE user-information. For Phase III and later, use Capability
+ * Exchange to learn supported services and events. ECMA-285 §8.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,13 +31,16 @@ type StatusReportingServicesC2 = BIT_STRING;
 
 /**
  * @summary StatusReportingServicesC2_monitorStart
+ * @description Advertises `monitorStart` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const StatusReportingServicesC2_monitorStart: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary monitorStart
+ * @description Alias of {@link StatusReportingServicesC2_monitorStart}.
  * @constant
  */
 export
@@ -39,13 +48,17 @@ const monitorStart: number = StatusReportingServicesC2_monitorStart; /* SHORT_NA
 
 /**
  * @summary StatusReportingServicesC2_changeMonitorFilter
+ * @description
+ * Advertises `changeMonitorFilter` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const StatusReportingServicesC2_changeMonitorFilter: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary changeMonitorFilter
+ * @description Alias of {@link StatusReportingServicesC2_changeMonitorFilter}.
  * @constant
  */
 export
@@ -53,13 +66,16 @@ const changeMonitorFilter: number = StatusReportingServicesC2_changeMonitorFilte
 
 /**
  * @summary StatusReportingServicesC2_monitorStop
+ * @description Advertises `monitorStop` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const StatusReportingServicesC2_monitorStop: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary monitorStop
+ * @description Alias of {@link StatusReportingServicesC2_monitorStop}.
  * @constant
  */
 export
@@ -67,13 +83,16 @@ const monitorStop: number = StatusReportingServicesC2_monitorStop; /* SHORT_NAME
 
 /**
  * @summary StatusReportingServicesC2_snapshotDevice
+ * @description Advertises `snapshotDevice` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const StatusReportingServicesC2_snapshotDevice: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary snapshotDevice
+ * @description Alias of {@link StatusReportingServicesC2_snapshotDevice}.
  * @constant
  */
 export
@@ -81,13 +100,16 @@ const snapshotDevice: number = StatusReportingServicesC2_snapshotDevice; /* SHOR
 
 /**
  * @summary StatusReportingServicesC2_snapshotCall
+ * @description Advertises `snapshotCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const StatusReportingServicesC2_snapshotCall: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary snapshotCall
+ * @description Alias of {@link StatusReportingServicesC2_snapshotCall}.
  * @constant
  */
 export

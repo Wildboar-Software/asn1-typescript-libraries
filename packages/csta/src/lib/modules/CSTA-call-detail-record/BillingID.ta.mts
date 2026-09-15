@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary BillingID
  * @description
- * 
+ *
+ * Type of charging recorded in a CDR. ECMA-269 §27.1.2.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,7 +42,11 @@ enum _enum_for_BillingID {
 /**
  * @summary BillingID
  * @description
- * 
+ *
+ * Type of charging recorded in a CDR. ECMA-269 §27.1.2.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,7 +68,11 @@ type BillingID = _enum_for_BillingID;
 /**
  * @summary BillingID
  * @description
- * 
+ *
+ * Type of charging recorded in a CDR. ECMA-269 §27.1.2.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -81,6 +93,10 @@ const BillingID = _enum_for_BillingID;
 
 /**
  * @summary BillingID_normalCharging
+ * @description
+ *
+ * Normal charging. ECMA-269 §27.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +113,10 @@ const normalCharging: BillingID = BillingID.normalCharging; /* SHORT_NAMED_ENUME
 
 /**
  * @summary BillingID_reverseCharging
+ * @description
+ *
+ * Reverse charging. ECMA-269 §27.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +133,10 @@ const reverseCharging: BillingID = BillingID.reverseCharging; /* SHORT_NAMED_ENU
 
 /**
  * @summary BillingID_creditCardCharging
+ * @description
+ *
+ * Credit-card charging. ECMA-269 §27.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +153,10 @@ const creditCardCharging: BillingID = BillingID.creditCardCharging; /* SHORT_NAM
 
 /**
  * @summary BillingID_callForwarding
+ * @description
+ *
+ * Charging associated with call forwarding. ECMA-269 §27.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +173,10 @@ const callForwarding: BillingID = BillingID.callForwarding; /* SHORT_NAMED_ENUME
 
 /**
  * @summary BillingID_callDeflection
+ * @description
+ *
+ * Charging associated with call deflection. ECMA-269 §27.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +193,10 @@ const callDeflection: BillingID = BillingID.callDeflection; /* SHORT_NAMED_ENUME
 
 /**
  * @summary BillingID_callTransfer
+ * @description
+ *
+ * Charging associated with call transfer. ECMA-269 §27.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -177,6 +213,10 @@ const callTransfer: BillingID = BillingID.callTransfer; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary BillingID_other
+ * @description
+ *
+ * Other charging type. ECMA-269 §27.1.2.
+ *
  * @constant
  * @type {number}
  */

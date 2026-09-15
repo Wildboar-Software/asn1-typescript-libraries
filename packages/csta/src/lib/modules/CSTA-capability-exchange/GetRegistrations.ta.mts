@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GetRegistrations
  * @description
- * 
+ * Capability bitmap for the Get Registrations service (ECMA-269 C.2.9, ECMA-285
+ * §9.10). Presence of this entry in `SystemStatusServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +34,9 @@ type GetRegistrations = BIT_STRING;
 /**
  * @summary GetRegistrations_requestedReqTypes
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.2.9).
  */
 export
 const GetRegistrations_requestedReqTypes: number = 0; /* LONG_NAMED_BIT */
@@ -32,6 +44,8 @@ const GetRegistrations_requestedReqTypes: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary requestedReqTypes
  * @constant
+ * @description
+ * Alias of `GetRegistrations_requestedReqTypes`.
  */
 export
 const requestedReqTypes: number = GetRegistrations_requestedReqTypes; /* SHORT_NAMED_BIT */
@@ -39,6 +53,9 @@ const requestedReqTypes: number = GetRegistrations_requestedReqTypes; /* SHORT_N
 /**
  * @summary GetRegistrations_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.2.9).
  */
 export
 const GetRegistrations_privateData: number = 1; /* LONG_NAMED_BIT */
@@ -46,6 +63,8 @@ const GetRegistrations_privateData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `GetRegistrations_privateData`.
  */
 export
 const privateData: number = GetRegistrations_privateData; /* SHORT_NAMED_BIT */
@@ -53,6 +72,9 @@ const privateData: number = GetRegistrations_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary GetRegistrations_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.2.9).
  */
 export
 const GetRegistrations_privateDataInAck: number = 2; /* LONG_NAMED_BIT */
@@ -60,6 +82,8 @@ const GetRegistrations_privateDataInAck: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `GetRegistrations_privateDataInAck`.
  */
 export
 const privateDataInAck: number = GetRegistrations_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -67,6 +91,9 @@ const privateDataInAck: number = GetRegistrations_privateDataInAck; /* SHORT_NAM
 /**
  * @summary GetRegistrations_segmentedResponseProvided
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.2.9).
  */
 export
 const GetRegistrations_segmentedResponseProvided: number = 3; /* LONG_NAMED_BIT */
@@ -74,6 +101,8 @@ const GetRegistrations_segmentedResponseProvided: number = 3; /* LONG_NAMED_BIT 
 /**
  * @summary segmentedResponseProvided
  * @constant
+ * @description
+ * Alias of `GetRegistrations_segmentedResponseProvided`.
  */
 export
 const segmentedResponseProvided: number = GetRegistrations_segmentedResponseProvided; /* SHORT_NAMED_BIT */

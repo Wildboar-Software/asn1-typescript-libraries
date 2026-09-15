@@ -72,7 +72,10 @@ import { ResponseTimeCategory, _enum_for_ResponseTimeCategory, ResponseTimeCateg
 /**
  * @summary ResponseTime
  * @description
- * 
+ *
+ * Expandable SEQUENCE for later numeric response time (3GPP TS 29.002 V19.1.0
+ * clause 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -88,6 +91,10 @@ class ResponseTime {
     constructor (
         /**
          * @summary `responseTimeCategory`.
+         * @description
+         *
+         * lowdelay or delaytolerant.
+         *
          * @public
          * @readonly
          */

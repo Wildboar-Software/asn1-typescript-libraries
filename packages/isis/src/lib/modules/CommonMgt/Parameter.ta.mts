@@ -15,6 +15,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Parameter
  * @description
  *
+ * Open parameter: identifier plus information whose type is selected by
+ * `paramId` from the `Parameters` information object set (compiled here as an
+ * untyped `ANY`). Used in action info/reply, notification info, and
+ * `InformationData`.
+ *
+ * (ISO/IEC 10589:2002 Annex E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -29,12 +36,24 @@ export class Parameter {
   constructor(
     /**
      * @summary `paramId`.
+     * @description
+     *
+     * `PARAMETER.&id` — identifies which parameter this is.
+     *
+     * (ISO/IEC 10589:2002 Annex E.2).
+     *
      * @public
      * @readonly
      */
     readonly paramId: OBJECT_IDENTIFIER,
     /**
      * @summary `paramInfo`.
+     * @description
+     *
+     * `PARAMETER.&Type` selected by `paramId` (`ANY DEFINED BY paramId`).
+     *
+     * (ISO/IEC 10589:2002 Annex E.2).
+     *
      * @public
      * @readonly
      */

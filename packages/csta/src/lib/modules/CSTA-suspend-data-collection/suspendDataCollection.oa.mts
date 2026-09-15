@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary suspendDataCollection
  * @description
- * 
+ *
+ * Suspends a specified data collection without destroying it (ECMA-269
+ * §25.1.7). Service table direction is switching function → computing function.
+ *
+ * Switching function → computing function.
+ *
+ * ROSE local:349. Errors: `universalFailure` (ECMA-285 §23.1.7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

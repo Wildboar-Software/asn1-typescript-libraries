@@ -76,6 +76,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary facilityNotSupported
  * @description
  * 
+ * Returned when the requested facility is not supported by the PLMN. Detailed
+ * reasons may be Shape of location estimate not supported, or Needed LCS
+ * capability not supported in serving node (3GPP TS 29.002 V19.1.0 clause
+ * 7.6.1.4).
+ *
+ * Local code 21. Optional parameter `FacilityNotSupParam` must not be used in
+ * version <3 (3GPP TS 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

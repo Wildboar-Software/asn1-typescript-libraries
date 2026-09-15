@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary sendBroadcastData
  * @description
- * 
+ *
+ * Writes `ioData` to all open data paths for this association and
+ * `dataPathType` (ECMA-269 §24.2.5).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:114. Errors: `universalFailure` (ECMA-285 §22.2.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

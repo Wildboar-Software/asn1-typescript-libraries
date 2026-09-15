@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Ext_QoS_Subscribed
  * @description
- * 
+ *
+ * Enhanced QoS subscribed for a service, defined in 3GPP TS 23.060, extending
+ * QoS-Subscribed. Octet 1 is Allocation/Retention Priority (3GPP TS 23.107 / TS
+ * 29.060); octets 2-9 are 3GPP TS 24.008 Quality of Service octets 6-13. Sent
+ * to an SGSN that indicated GPRS enhancements support (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.74, 8.1.7.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

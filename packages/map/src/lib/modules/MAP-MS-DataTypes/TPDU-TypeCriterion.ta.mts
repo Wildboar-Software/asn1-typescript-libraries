@@ -75,7 +75,14 @@ import { maxNumOfTPDUTypes } from "./maxNumOfTPDUTypes.va.mjs";
 /**
  * @summary TPDU_TypeCriterion
  * @description
- * 
+ *
+ * MT-SMS TPDU types that arm MT-SMS CAMEL criteria. Size
+ * 1..`maxNumOfTPDUTypes`. A sequence containing any TPDU type other than those
+ * listed shall be ignored wholly. In CAMEL phase 4, `sms-SUBMIT-REPORT` shall
+ * not be used and a received list containing it shall be wholly ignored.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

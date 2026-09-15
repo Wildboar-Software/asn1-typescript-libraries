@@ -23,7 +23,14 @@ import { VoiceUnitEvtsList, _decode_VoiceUnitEvtsList, _encode_VoiceUnitEvtsList
 /**
  * @summary LogDevEvtsList
  * @description
- * 
+ * Per-category event bitmaps for a logical device (Get Logical Device
+ * Information). Omit a component if that category is unsupported at the device
+ * (ECMA-269 §13.1.2, ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,30 +51,45 @@ class LogDevEvtsList {
          * @summary `callControlEvtsList`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmaps for this event category at the logical device;
+         * omit if unsupported (ECMA-269 §13.1.2).
          */
         readonly callControlEvtsList: OPTIONAL<CallControlEvtsList>,
         /**
          * @summary `callAssociatedEvtsList`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmaps for this event category at the logical device;
+         * omit if unsupported (ECMA-269 §13.1.2).
          */
         readonly callAssociatedEvtsList: OPTIONAL<CallAssociatedEvtsList>,
         /**
          * @summary `logicalEvtsList`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmaps for this event category at the logical device;
+         * omit if unsupported (ECMA-269 §13.1.2).
          */
         readonly logicalEvtsList: OPTIONAL<LogicalEvtsList>,
         /**
          * @summary `mediaEvtsList`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmaps for this event category at the logical device;
+         * omit if unsupported (ECMA-269 §13.1.2).
          */
         readonly mediaEvtsList: OPTIONAL<MediaEvtsList>,
         /**
          * @summary `voiceUnitEvtsList`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmaps for this event category at the logical device;
+         * omit if unsupported (ECMA-269 §13.1.2).
          */
         readonly voiceUnitEvtsList: OPTIONAL<VoiceUnitEvtsList>
     ) {}

@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary StateAttributes
  * @description
- * 
+ *
+ * Mute/unmute a VGCS talker via a GCC message as in 3GPP TS 44.068 (3GPP TS
+ * 29.002 V19.1.0 clauses 10.6.3 and 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,24 +93,40 @@ class StateAttributes {
     constructor (
         /**
          * @summary `downlinkAttached`.
+         * @description
+         *
+         * See 3GPP TS 44.068 (clause 17.7.12).
+         *
          * @public
          * @readonly
          */
         readonly downlinkAttached: OPTIONAL<NULL>,
         /**
          * @summary `uplinkAttached`.
+         * @description
+         *
+         * See 3GPP TS 44.068 (clause 17.7.12).
+         *
          * @public
          * @readonly
          */
         readonly uplinkAttached: OPTIONAL<NULL>,
         /**
          * @summary `dualCommunication`.
+         * @description
+         *
+         * See 3GPP TS 44.068 (clause 17.7.12).
+         *
          * @public
          * @readonly
          */
         readonly dualCommunication: OPTIONAL<NULL>,
         /**
          * @summary `callOriginator`.
+         * @description
+         *
+         * See 3GPP TS 44.068 (clause 17.7.12).
+         *
          * @public
          * @readonly
          */

@@ -18,7 +18,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetCallerIDStatusArgument
  * @description
- * 
+ *
+ * Set Caller ID Status request (ECMA-269 §22.1.18.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +40,29 @@ class SetCallerIDStatusArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Device whose Caller ID status is set.
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `callerIDProvided`.
+         * @description
+         *
+         * TRUE: provide Caller ID on originating calls. FALSE: do not provide
+         * it to the called device.
          * @public
          * @readonly
          */
         readonly callerIDProvided: BOOLEAN,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

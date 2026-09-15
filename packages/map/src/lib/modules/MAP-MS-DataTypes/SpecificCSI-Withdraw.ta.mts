@@ -73,7 +73,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SpecificCSI_Withdraw
  * @description
- * 
+ *
+ * Which CSI shall be deleted. Bits 11-31 ignored by a non-IM CN entity; bits
+ * 0-10 and 14-31 ignored by an IM CN entity. Bits 11-13 apply only in an IP
+ * Multimedia Core Network. Bit 8 and bits 11-13 apply only to
+ * NoteSubscriberDataModified.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.8.2 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

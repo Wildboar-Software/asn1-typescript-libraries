@@ -23,7 +23,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetVoiceAttributeArgument
  * @description
- * 
+ *
+ * Connection, attribute CHOICE, optional message and resource (ECMA-269
+ * §26.1.13.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +49,52 @@ class SetVoiceAttributeArgument {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Connection whose attribute is set (ECMA-269 §26.1.13.1).
+         *
          * @public
          * @readonly
          */
         readonly connection: ConnectionID,
         /**
          * @summary `attributeToSet`.
+         * @description
+         *
+         * Attribute CHOICE to apply (ECMA-269 §26.1.13.1).
+         *
          * @public
          * @readonly
          */
         readonly attributeToSet: AttributeToSet,
         /**
          * @summary `message`.
+         * @description
+         *
+         * Message when the attribute is message-scoped (ECMA-269 §26.1.13.1).
+         *
          * @public
          * @readonly
          */
         readonly message: OPTIONAL<MessageID>,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

@@ -72,7 +72,12 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary locationInfoRetrievalContext_v3
  * @description
- * 
+ *
+ * Location information retrieval between GMSC and HLR, GMSC and NPLR, or gsmSCF
+ * and HLR. Initiator is GMSC (responder HLR or NPLR) or gsmSCF (responder HLR).
+ * For GMSC–NPLR, versions 1–3 apply. v2 and v1 equivalents exist (3GPP TS
+ * 29.002 V19.1.0 clause 17.3.2.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

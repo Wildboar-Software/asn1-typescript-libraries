@@ -15,6 +15,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary OverloadStateChange
  * @description
  *
+ * `notificationOverloadStateChange` payload: resulting Level 1 or Level 2
+ * database state after an overload transition. When the result is Waiting,
+ * `notificationSourceId` names the LSP that precipitated the overload.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.3.19, 11.2.2.1 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +38,12 @@ export enum _enum_for_OverloadStateChange {
  * @summary OverloadStateChange
  * @description
  *
+ * `notificationOverloadStateChange` payload: resulting Level 1 or Level 2
+ * database state after an overload transition. When the result is Waiting,
+ * `notificationSourceId` names the LSP that precipitated the overload.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.3.19, 11.2.2.1 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,6 +58,12 @@ export type OverloadStateChange = _enum_for_OverloadStateChange;
  * @summary OverloadStateChange
  * @description
  *
+ * `notificationOverloadStateChange` payload: resulting Level 1 or Level 2
+ * database state after an overload transition. When the result is Waiting,
+ * `notificationSourceId` names the LSP that precipitated the overload.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.3.19, 11.2.2.1 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,6 +76,12 @@ export const OverloadStateChange = _enum_for_OverloadStateChange;
 
 /**
  * @summary OverloadStateChange_on
+ * @description
+ *
+ * Database returned to On (recovered from Waiting).
+ *
+ * (ISO/IEC 10589:2002 clauses 7.3.19 and 11.2.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +98,12 @@ export const on: OverloadStateChange =
 
 /**
  * @summary OverloadStateChange_waiting
+ * @description
+ *
+ * Database entered Waiting (overload).
+ *
+ * (ISO/IEC 10589:2002 clauses 7.3.19 and 11.2.2.1).
+ *
  * @constant
  * @type {number}
  */

@@ -75,7 +75,11 @@ import { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta
 /**
  * @summary ReadyForSM_Arg
  * @description
- * 
+ *
+ * Argument of MAP-READY-FOR-SM: MSC–VLR and VLR–HLR (memory available or radio
+ * contact with MWF); also SGSN–HLR, MME–HSS via IWF, and IP-SM-GW–HLR (3GPP TS
+ * 29.002 V19.1.0 clauses 12.4 and 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -100,36 +104,61 @@ class ReadyForSM_Arg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * Subscriber IMSI.
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `alertReason`.
+         * @description
+         *
+         * ms-Present or memoryAvailable.
+         *
          * @public
          * @readonly
          */
         readonly alertReason: AlertReason,
         /**
          * @summary `alertReasonIndicator`.
+         * @description
+         *
+         * Set only when alertReason sent to HLR is for GPRS (clause 17.7.6).
+         *
          * @public
          * @readonly
          */
         readonly alertReasonIndicator: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalAlertReasonIndicator`.
+         * @description
+         *
+         * Set only when alertReason sent to HLR is for IP-SM-GW (clause
+         * 17.7.6).
+         *
          * @public
          * @readonly
          */
         readonly additionalAlertReasonIndicator: OPTIONAL<NULL>,
         /**
          * @summary `maximumUeAvailabilityTime`.
+         * @description
+         *
+         * Maximum UE availability time.
+         *
          * @public
          * @readonly
          */

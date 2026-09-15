@@ -74,7 +74,16 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ExternalSignalInfo
  * @description
- * 
+ *
+ * Concatenated information elements (including tag and length) of a common
+ * protocol version, preceded by the associated protocol ID. Used to transport
+ * that protocol over MAP interfaces. Internal structure of `signalInfo` is in
+ * clause 7.6.9.
+ *
+ * `extensionContainer` must not be used in MAP version 2.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.9.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,18 +104,34 @@ class ExternalSignalInfo {
     constructor (
         /**
          * @summary `protocolId`.
+         * @description
+         *
+         * Protocol to which `signalInfo` conforms (04.08, 08.06, or ETS 300
+         * 102-1). (3GPP TS 29.002 V19.1.0 clause 7.6.9.7).
+         *
          * @public
          * @readonly
          */
         readonly protocolId: ProtocolId,
         /**
          * @summary `signalInfo`.
+         * @description
+         *
+         * Concatenated IEs of the indicated protocol (tag and length included).
+         * Structure: clause 7.6.9. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+         * 7.6.9.4).
+         *
          * @public
          * @readonly
          */
         readonly signalInfo: SignalInfo,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private extensions. Must not be used in MAP version 2. (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.8).
+         *
          * @public
          * @readonly
          */

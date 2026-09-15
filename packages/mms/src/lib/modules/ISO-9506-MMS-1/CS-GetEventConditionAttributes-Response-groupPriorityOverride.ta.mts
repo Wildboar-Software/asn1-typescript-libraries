@@ -1,0 +1,78 @@
+/* eslint-disable */
+import {
+    NULL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
+// export { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
+
+
+/**
+ * @summary CS_GetEventConditionAttributes_Response_groupPriorityOverride
+ * @description
+ *
+ * `priority`: integer 0–127 used instead of `&priority`. `undefined`: use the
+ * Event Condition `&priority`. CS field; `cspi`.
+ *
+ * [ISO 9506-1:2003 §19.1.1.15]
+ * [ISO 9506-2:2003 §19.4.3]
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * CS-GetEventConditionAttributes-Response-groupPriorityOverride ::= CHOICE {
+ *     priority [0] IMPLICIT Priority,
+ *     undefined [1] IMPLICIT NULL
+ * }
+ * ```
+ */
+export
+type CS_GetEventConditionAttributes_Response_groupPriorityOverride =
+    { priority: Priority } /* CHOICE_ALT_ROOT */
+    | { undefined: NULL } /* CHOICE_ALT_ROOT */;
+
+let _cached_decoder_for_CS_GetEventConditionAttributes_Response_groupPriorityOverride: $.ASN1Decoder<CS_GetEventConditionAttributes_Response_groupPriorityOverride> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) CS_GetEventConditionAttributes_Response_groupPriorityOverride
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_CS_GetEventConditionAttributes_Response_groupPriorityOverride (el: _Element): CS_GetEventConditionAttributes_Response_groupPriorityOverride {
+    if (!_cached_decoder_for_CS_GetEventConditionAttributes_Response_groupPriorityOverride) { _cached_decoder_for_CS_GetEventConditionAttributes_Response_groupPriorityOverride = $._decode_inextensible_choice<CS_GetEventConditionAttributes_Response_groupPriorityOverride>({
+    "CONTEXT 0": [ "priority", $._decode_implicit<Priority>(() => _decode_Priority) ],
+    "CONTEXT 1": [ "undefined", $._decode_implicit<NULL>(() => $._decodeNull) ]
+}); }
+    return _cached_decoder_for_CS_GetEventConditionAttributes_Response_groupPriorityOverride(el);
+}
+
+let _cached_encoder_for_CS_GetEventConditionAttributes_Response_groupPriorityOverride: $.ASN1Encoder<CS_GetEventConditionAttributes_Response_groupPriorityOverride> | null = null;
+
+/**
+ * @summary Encodes a(n) CS_GetEventConditionAttributes_Response_groupPriorityOverride into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The CS_GetEventConditionAttributes_Response_groupPriorityOverride, encoded as an ASN.1 Element.
+ */
+export
+function _encode_CS_GetEventConditionAttributes_Response_groupPriorityOverride (value: CS_GetEventConditionAttributes_Response_groupPriorityOverride, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_CS_GetEventConditionAttributes_Response_groupPriorityOverride) { _cached_encoder_for_CS_GetEventConditionAttributes_Response_groupPriorityOverride = $._encode_choice<CS_GetEventConditionAttributes_Response_groupPriorityOverride>({
+    "priority": $._encode_implicit(_TagClass.context, 0, () => _encode_Priority, $.BER),
+    "undefined": $._encode_implicit(_TagClass.context, 1, () => $._encodeNull, $.BER),
+}, $.BER); }
+    return _cached_encoder_for_CS_GetEventConditionAttributes_Response_groupPriorityOverride(value, elGetter);
+}
+
+
+/* eslint-enable */

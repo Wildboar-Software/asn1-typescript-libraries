@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary setMicrophoneGain
  * @description
- * 
+ *
+ * Set Microphone Gain (ECMA-269 §21.1.19 / ECMA-285 §19.1.19). Direction:
+ * CF→SF. ROSE local CODE 278. Errors: `universalFailure`. Generates Microphone
+ * Gain. If already at the requested value: positive ack and no event (ECMA-269
+ * §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

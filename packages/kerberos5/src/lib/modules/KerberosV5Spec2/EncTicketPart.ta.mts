@@ -67,8 +67,6 @@ import {
  *         flags                   [0] TicketFlags,
  *         key                     [1] EncryptionKey,
  *         crealm                  [2] Realm,
- *
- *
  *         cname                   [3] PrincipalName,
  *         transited               [4] TransitedEncoding,
  *         authtime                [5] KerberosTime,

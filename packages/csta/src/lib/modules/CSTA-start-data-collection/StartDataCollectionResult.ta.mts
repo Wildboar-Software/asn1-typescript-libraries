@@ -17,7 +17,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary StartDataCollectionResult
  * @description
- * 
+ *
+ * Returns `dcollCrossRefID` for later Data Collected and control services
+ * (ECMA-269 §25.1.5.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +40,21 @@ class StartDataCollectionResult {
     constructor (
         /**
          * @summary `dcollCrossRefID`.
+         * @description
+         *
+         * Identifier for this collection (ECMA-269 §25.1.5.2.1).
+         *
          * @public
          * @readonly
          */
         readonly dcollCrossRefID: DcollCrossRefID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

@@ -73,7 +73,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary DeleteSubscriberDataRes
  * @description
- * 
+ *
+ * Result of MAP-DELETE-SUBSCRIBER-DATA. Regional Subscription Response, if
+ * included, indicates Network Node Area Restricted or Regional Subscription Not
+ * Supported. Used by the VLR, SGSN and IWF; not applicable for the CSS (3GPP TS
+ * 29.002 V19.1.0 clause 8.8.2.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,6 +95,12 @@ class DeleteSubscriberDataRes {
     constructor (
         /**
          * @summary `regionalSubscriptionResponse`.
+         * @description
+         *
+         * Network Node Area Restricted or Regional Subscription Not Supported.
+         * Used by VLR, SGSN and IWF. Not applicable for the CSS (3GPP TS 29.002
+         * V19.1.0 clause 8.8.2.3).
+         *
          * @public
          * @readonly
          */

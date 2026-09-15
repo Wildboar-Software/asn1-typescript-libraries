@@ -26,7 +26,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ClearCallArgument
  * @description
- * 
+ *
+ * Service request for Clear Call (ECMA-269 §17.1.7 / ECMA-285
+ * §15.1.7). Any connection in the call may be supplied; the whole
+ * call is released.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,24 +51,45 @@ class ClearCallArgument {
     constructor (
         /**
          * @summary `callToBeCleared`.
+         * @description
+         *
+         * Mandatory. Any connection in the call to clear, or a
+         * Call-ID-only ConnectionID (FR 2).
+         *
          * @public
          * @readonly
          */
         readonly callToBeCleared: ConnectionID,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Optional user data sent to parties in the call
+         * (§12.2.30). Not retained on a later conference or
+         * transferred call.
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `reason`.
+         * @description
+         *
+         * Optional `EventCause` for underlying signalling
+         * (§12.2.15).
+         *
          * @public
          * @readonly
          */
         readonly reason: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

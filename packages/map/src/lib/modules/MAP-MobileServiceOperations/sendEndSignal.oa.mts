@@ -77,7 +77,15 @@ import { SendEndSignal_Res, _decode_SendEndSignal_Res, _encode_SendEndSignal_Res
 /**
  * @summary sendEndSignal
  * @description
- * 
+ *
+ * MAP_SEND_END_SIGNAL: MSC-B tells MSC-A (E-interface) that the radio path to
+ * the MS is established; MSC-A retains call control until it clears. The result
+ * tells MSC-B that all call resources may be released (call released in MSC-A,
+ * or successful handover/relocation away from MSC-B). Confirmed. Typical path:
+ * MSC-B→MSC-A. Local opcode 29. Timer class `l` (28 h to 38 h). No user errors
+ * in the ASN.1. (3GPP TS 29.002 V19.1.0 clauses 8.4.2.1, 17.1.2, 17.3.2.12 and
+ * 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

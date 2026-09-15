@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetButtonInformationResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §21.1.3.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,20 @@ class GetButtonInformationResult {
     constructor (
         /**
          * @summary `buttonList`.
+         * @description
+         *
+         * One entry per button. Absent `button` in the request yields all
+         * buttons.
          * @public
          * @readonly
          */
         readonly buttonList: ButtonList,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

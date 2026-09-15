@@ -75,7 +75,10 @@ import { maxUtranGANSSpositioningData } from "./maxUtranGANSSpositioningData.va.
 /**
  * @summary UtranGANSSpositioningData
  * @description
- * 
+ *
+ * GANSS-PositioningDataSet of RANAP PositionData (3GPP TS 25.413), 1..9 octets
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.11.11D and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

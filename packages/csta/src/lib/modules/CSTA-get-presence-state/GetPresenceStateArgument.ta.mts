@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetPresenceStateArgument
  * @description
- * 
+ *
+ * Get Presence State request (ECMA-269 §22.1.13.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class GetPresenceStateArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Logical device whose presence is queried.
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

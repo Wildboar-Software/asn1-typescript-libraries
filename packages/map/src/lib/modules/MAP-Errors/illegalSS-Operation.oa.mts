@@ -76,6 +76,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary illegalSS_Operation
  * @description
  * 
+ * Supplementary-services user error; clause 7.6.1.4 refers the definition to
+ * 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 16. Optional parameter `IllegalSS-OperationParam` must not be used
+ * in version <3 (3GPP TS 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

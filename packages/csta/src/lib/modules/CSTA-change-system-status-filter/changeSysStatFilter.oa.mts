@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary changeSysStatFilter
  * @description
- * 
+ *
+ * Change System Status Filter (ECMA-269 §14.1.1 / ECMA-285 §12.1.1). Direction:
+ * CF→SF. ROSE local CODE 206. Errors: `universalFailure`. Updates the status
+ * filter of an existing system registration.
+ * Atomic acknowledgement. `actualStatusFilter` may differ from
+ * the request.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

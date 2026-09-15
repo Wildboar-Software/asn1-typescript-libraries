@@ -2,6 +2,15 @@
  * @description
  *
  * ASN.1 module `MAP-BS-Code`.
+ *
+ * Named `BearerServiceCode` and `Ext-BearerServiceCode` values for a single
+ * bearer service, a group of bearer services, or all bearer services (3GPP TS
+ * 22.002). `BearerServiceCode` is used only for supplementary service
+ * management; `Ext-BearerServiceCode` only for subscriber profile management.
+ * For non-PLMN-specific codes, bit 8 is unused (0), bits 7-4 are the group, and
+ * bits 3-1 are the rate, if applicable; PLMN-specific codes are defined by the
+ * HPLMN operator (3GPP TS 29.002 V19.1.0 clauses 7.6.3.3, 7.6.4.38 and
+ * 17.7.10).
  */
 export * from "./BearerServiceCode.ta.mjs";
 export * from "./Ext-BearerServiceCode.ta.mjs";

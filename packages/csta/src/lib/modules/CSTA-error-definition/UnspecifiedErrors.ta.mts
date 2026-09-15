@@ -8,7 +8,13 @@ import { NULL, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary UnspecifiedErrors
  * @description
- * 
+ *
+ * The error did not belong to any other category, or the server cannot
+ * determine the category (ECMA-269 §9.3.1, §12.2.14.9). ASN.1 encodes this
+ * alternative as NULL.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

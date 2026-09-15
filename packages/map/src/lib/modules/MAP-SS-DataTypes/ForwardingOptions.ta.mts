@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ForwardingOptions
  * @description
- * 
+ *
+ * One octet: bit 8 notification to forwarding party; bit 7 redirecting
+ * presentation; bit 6 notification to calling party; bits 4–3 forwarding reason
+ * (not reachable, busy, no reply, unconditional in SRI result or deflection in
+ * RCH). See 3GPP TS 22.082 (3GPP TS 29.002 V19.1.0 clauses 7.6.4.6 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

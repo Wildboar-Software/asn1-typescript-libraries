@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Quality
  * @description
- * 
+ *
+ * Captured-sample or reference quality, `0..100`, as used in BioAPI
+ * ([ISO/IEC 19784-1]). Verifier policy states the acceptable quality
+ * (X.1084 §9). ITU-T Rec. X.1084 (05/2008) §10.1.3, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

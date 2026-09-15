@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SetMicrophoneGain
  * @description
- * 
+ * Capability bitmap for the Set Microphone Gain service (ECMA-269 C.12.19,
+ * ECMA-285 §9.10). Presence of this entry in `PhysDevServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +35,9 @@ type SetMicrophoneGain = BIT_STRING;
 /**
  * @summary SetMicrophoneGain_microphoneGainAbs
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.19).
  */
 export
 const SetMicrophoneGain_microphoneGainAbs: number = 0; /* LONG_NAMED_BIT */
@@ -33,6 +45,8 @@ const SetMicrophoneGain_microphoneGainAbs: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary microphoneGainAbs
  * @constant
+ * @description
+ * Alias of `SetMicrophoneGain_microphoneGainAbs`.
  */
 export
 const microphoneGainAbs: number = SetMicrophoneGain_microphoneGainAbs; /* SHORT_NAMED_BIT */
@@ -40,6 +54,9 @@ const microphoneGainAbs: number = SetMicrophoneGain_microphoneGainAbs; /* SHORT_
 /**
  * @summary SetMicrophoneGain_microphoneGainInc
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.12.19).
  */
 export
 const SetMicrophoneGain_microphoneGainInc: number = 1; /* LONG_NAMED_BIT */
@@ -47,6 +64,8 @@ const SetMicrophoneGain_microphoneGainInc: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary microphoneGainInc
  * @constant
+ * @description
+ * Alias of `SetMicrophoneGain_microphoneGainInc`.
  */
 export
 const microphoneGainInc: number = SetMicrophoneGain_microphoneGainInc; /* SHORT_NAMED_BIT */
@@ -54,6 +73,9 @@ const microphoneGainInc: number = SetMicrophoneGain_microphoneGainInc; /* SHORT_
 /**
  * @summary SetMicrophoneGain_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.12.19).
  */
 export
 const SetMicrophoneGain_privateData: number = 2; /* LONG_NAMED_BIT */
@@ -61,6 +83,8 @@ const SetMicrophoneGain_privateData: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `SetMicrophoneGain_privateData`.
  */
 export
 const privateData: number = SetMicrophoneGain_privateData; /* SHORT_NAMED_BIT */
@@ -68,6 +92,9 @@ const privateData: number = SetMicrophoneGain_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary SetMicrophoneGain_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.12.19).
  */
 export
 const SetMicrophoneGain_privateDataInAck: number = 3; /* LONG_NAMED_BIT */
@@ -75,6 +102,8 @@ const SetMicrophoneGain_privateDataInAck: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `SetMicrophoneGain_privateDataInAck`.
  */
 export
 const privateDataInAck: number = SetMicrophoneGain_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -82,6 +111,9 @@ const privateDataInAck: number = SetMicrophoneGain_privateDataInAck; /* SHORT_NA
 /**
  * @summary SetMicrophoneGain_ackModelMultiStep
  * @constant
+ * @description
+ * Bit set means the SF supports the multi-step positive acknowledgement model
+ * (ECMA-269 C.12.19).
  */
 export
 const SetMicrophoneGain_ackModelMultiStep: number = 4; /* LONG_NAMED_BIT */
@@ -89,6 +121,8 @@ const SetMicrophoneGain_ackModelMultiStep: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary ackModelMultiStep
  * @constant
+ * @description
+ * Alias of `SetMicrophoneGain_ackModelMultiStep`.
  */
 export
 const ackModelMultiStep: number = SetMicrophoneGain_ackModelMultiStep; /* SHORT_NAMED_BIT */

@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LCSServiceTypeID
  * @description
- * 
+ *
+ * LCS Service Type of the current positioning request. Integer 0..127. Values
+ * 0-63 are reserved for standard LCS service types; 64-127 for non-standard
+ * types. Standard values are defined according to 3GPP TS 22.071.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.11.15).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

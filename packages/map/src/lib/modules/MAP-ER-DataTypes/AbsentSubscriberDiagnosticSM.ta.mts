@@ -74,6 +74,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AbsentSubscriberDiagnosticSM
  * @description
  * 
+ * Reason why the subscriber is absent. Values are defined in 3GPP TS 23.040
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.8.9 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

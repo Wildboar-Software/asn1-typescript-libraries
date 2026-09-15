@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary swFunctionCapsChanged
  * @description
- * 
+ *
+ * Switching Function Capabilities Changed (ECMA-269 §14.2.3 / ECMA-285
+ * §12.2.3). Direction: SF→CF. ROSE local CODE 212. Errors: `universalFailure`.
+ * Sent whenever SF-level capability information changes, whether
+ * or not Get Switching Function Capabilities was previously
+ * issued. `sysStatRegisterID` is mandatory if registration is
+ * supported.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

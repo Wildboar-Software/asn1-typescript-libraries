@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary requestSysStat
  * @description
- * 
+ *
+ * Request System Status (ECMA-269 §14.2.1 / ECMA-285 §12.2.1). Direction: CF→SF
+ * or SF→CF. ROSE local CODE 210. Errors: `universalFailure`. Queries the peer's
+ * system status. `sysStatRegisterID` is
+ * mandatory if the SF issues the request and supports system
+ * registration; otherwise it shall not be provided.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

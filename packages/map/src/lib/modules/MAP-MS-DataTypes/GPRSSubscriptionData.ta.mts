@@ -74,7 +74,12 @@ import { APN_OI_Replacement, _decode_APN_OI_Replacement, _encode_APN_OI_Replacem
 /**
  * @summary GPRSSubscriptionData
  * @description
- * 
+ *
+ * GPRS subscription data: list of PDP-Contexts. If segmentation is used,
+ * completeDataListIncluded may only be present in the first segment.
+ * `apn-oi-Replacement` here is the UE-level APN-OI replacement (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.3.46, 7.6.3.54 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,12 +102,24 @@ class GPRSSubscriptionData {
     constructor (
         /**
          * @summary `completeDataListIncluded`.
+         * @description
+         *
+         * If segmentation is used, may only be present in the first segment.
+         * Indicates the complete GPRS Subscription Data stored for the
+         * subscriber shall be replaced (3GPP TS 29.002 V19.1.0 clauses 7.6.3.54
+         * and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly completeDataListIncluded: OPTIONAL<NULL>,
         /**
          * @summary `gprsDataList`.
+         * @description
+         *
+         * List of PDP-Contexts the subscriber has subscribed to (3GPP TS 29.002
+         * V19.1.0 clause 7.6.3.46).
+         *
          * @public
          * @readonly
          */
@@ -115,6 +132,10 @@ class GPRSSubscriptionData {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `apn_oi_Replacement`.
+         * @description
+         *
+         * UE-level APN-OI replacement (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

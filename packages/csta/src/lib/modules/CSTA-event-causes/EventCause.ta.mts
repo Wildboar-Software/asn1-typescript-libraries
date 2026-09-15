@@ -8,7 +8,15 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary EventCause
  * @description
- * 
+ *
+ * Additional information on why a CSTA event was generated. Not all causes
+ * apply to all events — each event lists the allowed causes. Present only while
+ * the associated feature or situation remains active. ECMA-269 §12.2.15;
+ * ECMA-285 §9.18.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -264,7 +272,15 @@ enum _enum_for_EventCause {
 /**
  * @summary EventCause
  * @description
- * 
+ *
+ * Additional information on why a CSTA event was generated. Not all causes
+ * apply to all events — each event lists the allowed causes. Present only while
+ * the associated feature or situation remains active. ECMA-269 §12.2.15;
+ * ECMA-285 §9.18.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -399,7 +415,15 @@ type EventCause = _enum_for_EventCause;
 /**
  * @summary EventCause
  * @description
- * 
+ *
+ * Additional information on why a CSTA event was generated. Not all causes
+ * apply to all events — each event lists the allowed causes. Present only while
+ * the associated feature or situation remains active. ECMA-269 §12.2.15;
+ * ECMA-285 §9.18.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -533,14 +557,17 @@ const EventCause = _enum_for_EventCause;
 
 /**
  * @summary EventCause_aCDBusy
+ * @description ACD Busy. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_aCDBusy: EventCause = EventCause.aCDBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aCDBusy
+ * @description Alias of {@link EventCause_aCDBusy}.
  * @constant
  * @type {number}
  */
@@ -549,14 +576,17 @@ const aCDBusy: EventCause = EventCause.aCDBusy; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary EventCause_aCDForward
+ * @description ACD Forward. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_aCDForward: EventCause = EventCause.aCDForward; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aCDForward
+ * @description Alias of {@link EventCause_aCDForward}.
  * @constant
  * @type {number}
  */
@@ -565,14 +595,17 @@ const aCDForward: EventCause = EventCause.aCDForward; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary EventCause_aCDSaturated
+ * @description ACD Saturated. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_aCDSaturated: EventCause = EventCause.aCDSaturated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aCDSaturated
+ * @description Alias of {@link EventCause_aCDSaturated}.
  * @constant
  * @type {number}
  */
@@ -581,14 +614,17 @@ const aCDSaturated: EventCause = EventCause.aCDSaturated; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EventCause_activation
+ * @description Activation. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_activation: EventCause = EventCause.activation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activation
+ * @description Alias of {@link EventCause_activation}.
  * @constant
  * @type {number}
  */
@@ -597,14 +633,17 @@ const activation: EventCause = EventCause.activation; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary EventCause_activeParticipation
+ * @description Active Participation. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_activeParticipation: EventCause = EventCause.activeParticipation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activeParticipation
+ * @description Alias of {@link EventCause_activeParticipation}.
  * @constant
  * @type {number}
  */
@@ -613,14 +652,17 @@ const activeParticipation: EventCause = EventCause.activeParticipation; /* SHORT
 
 /**
  * @summary EventCause_alertTimeExpired
+ * @description Alert Time Expired. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_alertTimeExpired: EventCause = EventCause.alertTimeExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertTimeExpired
+ * @description Alias of {@link EventCause_alertTimeExpired}.
  * @constant
  * @type {number}
  */
@@ -629,14 +671,17 @@ const alertTimeExpired: EventCause = EventCause.alertTimeExpired; /* SHORT_NAMED
 
 /**
  * @summary EventCause_alternate
+ * @description Alternate. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_alternate: EventCause = EventCause.alternate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alternate
+ * @description Alias of {@link EventCause_alternate}.
  * @constant
  * @type {number}
  */
@@ -645,14 +690,17 @@ const alternate: EventCause = EventCause.alternate; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary EventCause_autoWork
+ * @description Auto Work. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_autoWork: EventCause = EventCause.autoWork; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary autoWork
+ * @description Alias of {@link EventCause_autoWork}.
  * @constant
  * @type {number}
  */
@@ -661,14 +709,17 @@ const autoWork: EventCause = EventCause.autoWork; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary EventCause_babble
+ * @description Babble. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_babble: EventCause = EventCause.babble; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary babble
+ * @description Alias of {@link EventCause_babble}.
  * @constant
  * @type {number}
  */
@@ -677,14 +728,17 @@ const babble: EventCause = EventCause.babble; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_badAttribute
+ * @description Bad Attribute. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_badAttribute: EventCause = EventCause.badAttribute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badAttribute
+ * @description Alias of {@link EventCause_badAttribute}.
  * @constant
  * @type {number}
  */
@@ -693,14 +747,17 @@ const badAttribute: EventCause = EventCause.badAttribute; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EventCause_badGrammar
+ * @description Bad Grammar. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_badGrammar: EventCause = EventCause.badGrammar; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badGrammar
+ * @description Alias of {@link EventCause_badGrammar}.
  * @constant
  * @type {number}
  */
@@ -709,14 +766,17 @@ const badGrammar: EventCause = EventCause.badGrammar; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary EventCause_badVoice
+ * @description Bad Voice. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_badVoice: EventCause = EventCause.badVoice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badVoice
+ * @description Alias of {@link EventCause_badVoice}.
  * @constant
  * @type {number}
  */
@@ -725,14 +785,17 @@ const badVoice: EventCause = EventCause.badVoice; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary EventCause_badUri
+ * @description Bad URI. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_badUri: EventCause = EventCause.badUri; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badUri
+ * @description Alias of {@link EventCause_badUri}.
  * @constant
  * @type {number}
  */
@@ -741,14 +804,17 @@ const badUri: EventCause = EventCause.badUri; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_blocked
+ * @description Blocked. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_blocked: EventCause = EventCause.blocked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary blocked
+ * @description Alias of {@link EventCause_blocked}.
  * @constant
  * @type {number}
  */
@@ -757,14 +823,17 @@ const blocked: EventCause = EventCause.blocked; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary EventCause_busy
+ * @description Busy. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_busy: EventCause = EventCause.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
+ * @description Alias of {@link EventCause_busy}.
  * @constant
  * @type {number}
  */
@@ -773,14 +842,17 @@ const busy: EventCause = EventCause.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_busyOverflow
+ * @description Busy Overflow. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_busyOverflow: EventCause = EventCause.busyOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busyOverflow
+ * @description Alias of {@link EventCause_busyOverflow}.
  * @constant
  * @type {number}
  */
@@ -789,14 +861,17 @@ const busyOverflow: EventCause = EventCause.busyOverflow; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EventCause_calendarOverflow
+ * @description Calendar Overflow. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_calendarOverflow: EventCause = EventCause.calendarOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary calendarOverflow
+ * @description Alias of {@link EventCause_calendarOverflow}.
  * @constant
  * @type {number}
  */
@@ -805,14 +880,17 @@ const calendarOverflow: EventCause = EventCause.calendarOverflow; /* SHORT_NAMED
 
 /**
  * @summary EventCause_callBack
+ * @description Call Back. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_callBack: EventCause = EventCause.callBack; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callBack
+ * @description Alias of {@link EventCause_callBack}.
  * @constant
  * @type {number}
  */
@@ -821,14 +899,17 @@ const callBack: EventCause = EventCause.callBack; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary EventCause_callCancelled
+ * @description Call Cancelled. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_callCancelled: EventCause = EventCause.callCancelled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callCancelled
+ * @description Alias of {@link EventCause_callCancelled}.
  * @constant
  * @type {number}
  */
@@ -837,14 +918,17 @@ const callCancelled: EventCause = EventCause.callCancelled; /* SHORT_NAMED_ENUME
 
 /**
  * @summary EventCause_callForward
+ * @description Call Forward. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_callForward: EventCause = EventCause.callForward; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForward
+ * @description Alias of {@link EventCause_callForward}.
  * @constant
  * @type {number}
  */
@@ -853,14 +937,17 @@ const callForward: EventCause = EventCause.callForward; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary EventCause_callForwardImmediate
+ * @description Call Forward - Immediate. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_callForwardImmediate: EventCause = EventCause.callForwardImmediate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardImmediate
+ * @description Alias of {@link EventCause_callForwardImmediate}.
  * @constant
  * @type {number}
  */
@@ -869,14 +956,17 @@ const callForwardImmediate: EventCause = EventCause.callForwardImmediate; /* SHO
 
 /**
  * @summary EventCause_callForwardBusy
+ * @description Call Forward - Busy. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_callForwardBusy: EventCause = EventCause.callForwardBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardBusy
+ * @description Alias of {@link EventCause_callForwardBusy}.
  * @constant
  * @type {number}
  */
@@ -885,14 +975,17 @@ const callForwardBusy: EventCause = EventCause.callForwardBusy; /* SHORT_NAMED_E
 
 /**
  * @summary EventCause_callForwardNoAnswer
+ * @description Call Forward - No Answer. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_callForwardNoAnswer: EventCause = EventCause.callForwardNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardNoAnswer
+ * @description Alias of {@link EventCause_callForwardNoAnswer}.
  * @constant
  * @type {number}
  */
@@ -901,14 +994,17 @@ const callForwardNoAnswer: EventCause = EventCause.callForwardNoAnswer; /* SHORT
 
 /**
  * @summary EventCause_callInterception
+ * @description Call Interception. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_callInterception: EventCause = EventCause.callInterception; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callInterception
+ * @description Alias of {@link EventCause_callInterception}.
  * @constant
  * @type {number}
  */
@@ -917,14 +1013,17 @@ const callInterception: EventCause = EventCause.callInterception; /* SHORT_NAMED
 
 /**
  * @summary EventCause_callInterceptionBusy
+ * @description Call Interception - Busy. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_callInterceptionBusy: EventCause = EventCause.callInterceptionBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callInterceptionBusy
+ * @description Alias of {@link EventCause_callInterceptionBusy}.
  * @constant
  * @type {number}
  */
@@ -933,14 +1032,17 @@ const callInterceptionBusy: EventCause = EventCause.callInterceptionBusy; /* SHO
 
 /**
  * @summary EventCause_callInterceptionForwarded
+ * @description Call Interception - Forwarded. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_callInterceptionForwarded: EventCause = EventCause.callInterceptionForwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callInterceptionForwarded
+ * @description Alias of {@link EventCause_callInterceptionForwarded}.
  * @constant
  * @type {number}
  */
@@ -949,14 +1051,17 @@ const callInterceptionForwarded: EventCause = EventCause.callInterceptionForward
 
 /**
  * @summary EventCause_callInterceptionNoAnswer
+ * @description Call Interception - No Answer. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_callInterceptionNoAnswer: EventCause = EventCause.callInterceptionNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callInterceptionNoAnswer
+ * @description Alias of {@link EventCause_callInterceptionNoAnswer}.
  * @constant
  * @type {number}
  */
@@ -965,14 +1070,18 @@ const callInterceptionNoAnswer: EventCause = EventCause.callInterceptionNoAnswer
 
 /**
  * @summary EventCause_callInterceptionResourcesNotAvailable
+ * @description Call Interception - Resources Not Available. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_callInterceptionResourcesNotAvailable: EventCause = EventCause.callInterceptionResourcesNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callInterceptionResourcesNotAvailable
+ * @description
+ * Alias of {@link EventCause_callInterceptionResourcesNotAvailable}.
  * @constant
  * @type {number}
  */
@@ -981,14 +1090,17 @@ const callInterceptionResourcesNotAvailable: EventCause = EventCause.callInterce
 
 /**
  * @summary EventCause_callNotAnswered
+ * @description Call Not Answered. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_callNotAnswered: EventCause = EventCause.callNotAnswered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callNotAnswered
+ * @description Alias of {@link EventCause_callNotAnswered}.
  * @constant
  * @type {number}
  */
@@ -997,14 +1109,17 @@ const callNotAnswered: EventCause = EventCause.callNotAnswered; /* SHORT_NAMED_E
 
 /**
  * @summary EventCause_callPickup
+ * @description Call Pickup. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_callPickup: EventCause = EventCause.callPickup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callPickup
+ * @description Alias of {@link EventCause_callPickup}.
  * @constant
  * @type {number}
  */
@@ -1013,14 +1128,17 @@ const callPickup: EventCause = EventCause.callPickup; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary EventCause_campOn
+ * @description Camp On. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_campOn: EventCause = EventCause.campOn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary campOn
+ * @description Alias of {@link EventCause_campOn}.
  * @constant
  * @type {number}
  */
@@ -1029,14 +1147,17 @@ const campOn: EventCause = EventCause.campOn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_campOnTrunks
+ * @description Camp On Trunks. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_campOnTrunks: EventCause = EventCause.campOnTrunks; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary campOnTrunks
+ * @description Alias of {@link EventCause_campOnTrunks}.
  * @constant
  * @type {number}
  */
@@ -1045,14 +1166,17 @@ const campOnTrunks: EventCause = EventCause.campOnTrunks; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EventCause_capacityOverflow
+ * @description Capacity Overflow. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_capacityOverflow: EventCause = EventCause.capacityOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary capacityOverflow
+ * @description Alias of {@link EventCause_capacityOverflow}.
  * @constant
  * @type {number}
  */
@@ -1061,14 +1185,17 @@ const capacityOverflow: EventCause = EventCause.capacityOverflow; /* SHORT_NAMED
 
 /**
  * @summary EventCause_characterCountReached
+ * @description Character Count Reached. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_characterCountReached: EventCause = EventCause.characterCountReached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary characterCountReached
+ * @description Alias of {@link EventCause_characterCountReached}.
  * @constant
  * @type {number}
  */
@@ -1077,14 +1204,17 @@ const characterCountReached: EventCause = EventCause.characterCountReached; /* S
 
 /**
  * @summary EventCause_conference
+ * @description Conference. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_conference: EventCause = EventCause.conference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary conference
+ * @description Alias of {@link EventCause_conference}.
  * @constant
  * @type {number}
  */
@@ -1093,14 +1223,17 @@ const conference: EventCause = EventCause.conference; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary EventCause_consultation
+ * @description Consultation. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_consultation: EventCause = EventCause.consultation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary consultation
+ * @description Alias of {@link EventCause_consultation}.
  * @constant
  * @type {number}
  */
@@ -1109,14 +1242,17 @@ const consultation: EventCause = EventCause.consultation; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EventCause_destDetected
+ * @description Destination Detected. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_destDetected: EventCause = EventCause.destDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destDetected
+ * @description Alias of {@link EventCause_destDetected}.
  * @constant
  * @type {number}
  */
@@ -1125,14 +1261,17 @@ const destDetected: EventCause = EventCause.destDetected; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EventCause_destNotObtainable
+ * @description Destination Not Obtainable. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_destNotObtainable: EventCause = EventCause.destNotObtainable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destNotObtainable
+ * @description Alias of {@link EventCause_destNotObtainable}.
  * @constant
  * @type {number}
  */
@@ -1141,14 +1280,17 @@ const destNotObtainable: EventCause = EventCause.destNotObtainable; /* SHORT_NAM
 
 /**
  * @summary EventCause_destOutOfOrder
+ * @description Destination Out of Order. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_destOutOfOrder: EventCause = EventCause.destOutOfOrder; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destOutOfOrder
+ * @description Alias of {@link EventCause_destOutOfOrder}.
  * @constant
  * @type {number}
  */
@@ -1157,14 +1299,17 @@ const destOutOfOrder: EventCause = EventCause.destOutOfOrder; /* SHORT_NAMED_ENU
 
 /**
  * @summary EventCause_distributed
+ * @description Distributed. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_distributed: EventCause = EventCause.distributed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary distributed
+ * @description Alias of {@link EventCause_distributed}.
  * @constant
  * @type {number}
  */
@@ -1173,14 +1318,17 @@ const distributed: EventCause = EventCause.distributed; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary EventCause_distributionDelay
+ * @description Distribution Delay. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_distributionDelay: EventCause = EventCause.distributionDelay; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary distributionDelay
+ * @description Alias of {@link EventCause_distributionDelay}.
  * @constant
  * @type {number}
  */
@@ -1189,14 +1337,17 @@ const distributionDelay: EventCause = EventCause.distributionDelay; /* SHORT_NAM
 
 /**
  * @summary EventCause_doNotDisturb
+ * @description Do Not Disturb. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_doNotDisturb: EventCause = EventCause.doNotDisturb; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary doNotDisturb
+ * @description Alias of {@link EventCause_doNotDisturb}.
  * @constant
  * @type {number}
  */
@@ -1205,14 +1356,17 @@ const doNotDisturb: EventCause = EventCause.doNotDisturb; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EventCause_dTMFDigitDetected
+ * @description DTMF Digit Detected. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_dTMFDigitDetected: EventCause = EventCause.dTMFDigitDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dTMFDigitDetected
+ * @description Alias of {@link EventCause_dTMFDigitDetected}.
  * @constant
  * @type {number}
  */
@@ -1221,14 +1375,17 @@ const dTMFDigitDetected: EventCause = EventCause.dTMFDigitDetected; /* SHORT_NAM
 
 /**
  * @summary EventCause_duplicateDTMF
+ * @description Duplicate DTMF. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_duplicateDTMF: EventCause = EventCause.duplicateDTMF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary duplicateDTMF
+ * @description Alias of {@link EventCause_duplicateDTMF}.
  * @constant
  * @type {number}
  */
@@ -1237,14 +1394,17 @@ const duplicateDTMF: EventCause = EventCause.duplicateDTMF; /* SHORT_NAMED_ENUME
 
 /**
  * @summary EventCause_durationExceeded
+ * @description Duration Exceeded. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_durationExceeded: EventCause = EventCause.durationExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary durationExceeded
+ * @description Alias of {@link EventCause_durationExceeded}.
  * @constant
  * @type {number}
  */
@@ -1253,14 +1413,17 @@ const durationExceeded: EventCause = EventCause.durationExceeded; /* SHORT_NAMED
 
 /**
  * @summary EventCause_earlyStop
+ * @description Early Stop. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_earlyStop: EventCause = EventCause.earlyStop; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary earlyStop
+ * @description Alias of {@link EventCause_earlyStop}.
  * @constant
  * @type {number}
  */
@@ -1269,14 +1432,17 @@ const earlyStop: EventCause = EventCause.earlyStop; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary EventCause_emptyQueue
+ * @description Empty Queue. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_emptyQueue: EventCause = EventCause.emptyQueue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emptyQueue
+ * @description Alias of {@link EventCause_emptyQueue}.
  * @constant
  * @type {number}
  */
@@ -1285,14 +1451,17 @@ const emptyQueue: EventCause = EventCause.emptyQueue; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary EventCause_endOfMessageDetected
+ * @description End of Message Detected. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_endOfMessageDetected: EventCause = EventCause.endOfMessageDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endOfMessageDetected
+ * @description Alias of {@link EventCause_endOfMessageDetected}.
  * @constant
  * @type {number}
  */
@@ -1301,14 +1470,17 @@ const endOfMessageDetected: EventCause = EventCause.endOfMessageDetected; /* SHO
 
 /**
  * @summary EventCause_enteringDistribution
+ * @description Entering Distribution. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_enteringDistribution: EventCause = EventCause.enteringDistribution; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enteringDistribution
+ * @description Alias of {@link EventCause_enteringDistribution}.
  * @constant
  * @type {number}
  */
@@ -1317,14 +1489,17 @@ const enteringDistribution: EventCause = EventCause.enteringDistribution; /* SHO
 
 /**
  * @summary EventCause_forcedPause
+ * @description Forced Pause. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_forcedPause: EventCause = EventCause.forcedPause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forcedPause
+ * @description Alias of {@link EventCause_forcedPause}.
  * @constant
  * @type {number}
  */
@@ -1333,14 +1508,17 @@ const forcedPause: EventCause = EventCause.forcedPause; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary EventCause_forcedTransition
+ * @description Forced Transition. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_forcedTransition: EventCause = EventCause.forcedTransition; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forcedTransition
+ * @description Alias of {@link EventCause_forcedTransition}.
  * @constant
  * @type {number}
  */
@@ -1349,14 +1527,17 @@ const forcedTransition: EventCause = EventCause.forcedTransition; /* SHORT_NAMED
 
 /**
  * @summary EventCause_incompatibleDestination
+ * @description Incompatible Destination. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_incompatibleDestination: EventCause = EventCause.incompatibleDestination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary incompatibleDestination
+ * @description Alias of {@link EventCause_incompatibleDestination}.
  * @constant
  * @type {number}
  */
@@ -1365,14 +1546,17 @@ const incompatibleDestination: EventCause = EventCause.incompatibleDestination; 
 
 /**
  * @summary EventCause_interDigitTimeout
+ * @description inter-digit Timeout. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_interDigitTimeout: EventCause = EventCause.interDigitTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interDigitTimeout
+ * @description Alias of {@link EventCause_interDigitTimeout}.
  * @constant
  * @type {number}
  */
@@ -1381,14 +1565,17 @@ const interDigitTimeout: EventCause = EventCause.interDigitTimeout; /* SHORT_NAM
 
 /**
  * @summary EventCause_intrude
+ * @description Intrude. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_intrude: EventCause = EventCause.intrude; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intrude
+ * @description Alias of {@link EventCause_intrude}.
  * @constant
  * @type {number}
  */
@@ -1397,14 +1584,17 @@ const intrude: EventCause = EventCause.intrude; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary EventCause_invalidAccountCode
+ * @description Invalid Account Code. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_invalidAccountCode: EventCause = EventCause.invalidAccountCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAccountCode
+ * @description Alias of {@link EventCause_invalidAccountCode}.
  * @constant
  * @type {number}
  */
@@ -1413,14 +1603,17 @@ const invalidAccountCode: EventCause = EventCause.invalidAccountCode; /* SHORT_N
 
 /**
  * @summary EventCause_invalidConnection
+ * @description Invalid Connection. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_invalidConnection: EventCause = EventCause.invalidConnection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidConnection
+ * @description Alias of {@link EventCause_invalidConnection}.
  * @constant
  * @type {number}
  */
@@ -1429,14 +1622,17 @@ const invalidConnection: EventCause = EventCause.invalidConnection; /* SHORT_NAM
 
 /**
  * @summary EventCause_invalidConnectionState
+ * @description Invalid Connection State. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_invalidConnectionState: EventCause = EventCause.invalidConnectionState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidConnectionState
+ * @description Alias of {@link EventCause_invalidConnectionState}.
  * @constant
  * @type {number}
  */
@@ -1445,14 +1641,17 @@ const invalidConnectionState: EventCause = EventCause.invalidConnectionState; /*
 
 /**
  * @summary EventCause_invalidNumberFormat
+ * @description Invalid Number Format. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_invalidNumberFormat: EventCause = EventCause.invalidNumberFormat; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidNumberFormat
+ * @description Alias of {@link EventCause_invalidNumberFormat}.
  * @constant
  * @type {number}
  */
@@ -1461,14 +1660,17 @@ const invalidNumberFormat: EventCause = EventCause.invalidNumberFormat; /* SHORT
 
 /**
  * @summary EventCause_joinCall
+ * @description Join Call. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_joinCall: EventCause = EventCause.joinCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary joinCall
+ * @description Alias of {@link EventCause_joinCall}.
  * @constant
  * @type {number}
  */
@@ -1477,14 +1679,17 @@ const joinCall: EventCause = EventCause.joinCall; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary EventCause_keyOperation
+ * @description Key Operation. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_keyOperation: EventCause = EventCause.keyOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary keyOperation
+ * @description Alias of {@link EventCause_keyOperation}.
  * @constant
  * @type {number}
  */
@@ -1493,14 +1698,17 @@ const keyOperation: EventCause = EventCause.keyOperation; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EventCause_keyOperationInUse
+ * @description Key Operation In Use. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_keyOperationInUse: EventCause = EventCause.keyOperationInUse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary keyOperationInUse
+ * @description Alias of {@link EventCause_keyOperationInUse}.
  * @constant
  * @type {number}
  */
@@ -1509,14 +1717,17 @@ const keyOperationInUse: EventCause = EventCause.keyOperationInUse; /* SHORT_NAM
 
 /**
  * @summary EventCause_lawfulInterception
+ * @description Lawful Interception. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_lawfulInterception: EventCause = EventCause.lawfulInterception; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lawfulInterception
+ * @description Alias of {@link EventCause_lawfulInterception}.
  * @constant
  * @type {number}
  */
@@ -1525,14 +1736,17 @@ const lawfulInterception: EventCause = EventCause.lawfulInterception; /* SHORT_N
 
 /**
  * @summary EventCause_lockout
+ * @description Lockout. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_lockout: EventCause = EventCause.lockout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lockout
+ * @description Alias of {@link EventCause_lockout}.
  * @constant
  * @type {number}
  */
@@ -1541,14 +1755,17 @@ const lockout: EventCause = EventCause.lockout; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary EventCause_maintenance
+ * @description Maintenance. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_maintenance: EventCause = EventCause.maintenance; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maintenance
+ * @description Alias of {@link EventCause_maintenance}.
  * @constant
  * @type {number}
  */
@@ -1557,14 +1774,17 @@ const maintenance: EventCause = EventCause.maintenance; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary EventCause_makeCall
+ * @description Make Call. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_makeCall: EventCause = EventCause.makeCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary makeCall
+ * @description Alias of {@link EventCause_makeCall}.
  * @constant
  * @type {number}
  */
@@ -1573,14 +1793,17 @@ const makeCall: EventCause = EventCause.makeCall; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary EventCause_makeConnection
+ * @description Make Connection. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_makeConnection: EventCause = EventCause.makeConnection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary makeConnection
+ * @description Alias of {@link EventCause_makeConnection}.
  * @constant
  * @type {number}
  */
@@ -1589,14 +1812,17 @@ const makeConnection: EventCause = EventCause.makeConnection; /* SHORT_NAMED_ENU
 
 /**
  * @summary EventCause_makePredictiveCall
+ * @description Make Predictive Call. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_makePredictiveCall: EventCause = EventCause.makePredictiveCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary makePredictiveCall
+ * @description Alias of {@link EventCause_makePredictiveCall}.
  * @constant
  * @type {number}
  */
@@ -1605,14 +1831,17 @@ const makePredictiveCall: EventCause = EventCause.makePredictiveCall; /* SHORT_N
 
 /**
  * @summary EventCause_maxTimeout
+ * @description Max Timeout. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_maxTimeout: EventCause = EventCause.maxTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maxTimeout
+ * @description Alias of {@link EventCause_maxTimeout}.
  * @constant
  * @type {number}
  */
@@ -1621,14 +1850,17 @@ const maxTimeout: EventCause = EventCause.maxTimeout; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary EventCause_messageDurationExceeded
+ * @description Message Duration Exceeded. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_messageDurationExceeded: EventCause = EventCause.messageDurationExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageDurationExceeded
+ * @description Alias of {@link EventCause_messageDurationExceeded}.
  * @constant
  * @type {number}
  */
@@ -1637,14 +1869,17 @@ const messageDurationExceeded: EventCause = EventCause.messageDurationExceeded; 
 
 /**
  * @summary EventCause_messageSizeExceeded
+ * @description Message Size Exceeded. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_messageSizeExceeded: EventCause = EventCause.messageSizeExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageSizeExceeded
+ * @description Alias of {@link EventCause_messageSizeExceeded}.
  * @constant
  * @type {number}
  */
@@ -1653,14 +1888,17 @@ const messageSizeExceeded: EventCause = EventCause.messageSizeExceeded; /* SHORT
 
 /**
  * @summary EventCause_multipleAlerting
+ * @description Multiple Alerting. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_multipleAlerting: EventCause = EventCause.multipleAlerting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multipleAlerting
+ * @description Alias of {@link EventCause_multipleAlerting}.
  * @constant
  * @type {number}
  */
@@ -1669,14 +1907,17 @@ const multipleAlerting: EventCause = EventCause.multipleAlerting; /* SHORT_NAMED
 
 /**
  * @summary EventCause_multipleQueuing
+ * @description Multiple Queuing. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_multipleQueuing: EventCause = EventCause.multipleQueuing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multipleQueuing
+ * @description Alias of {@link EventCause_multipleQueuing}.
  * @constant
  * @type {number}
  */
@@ -1685,14 +1926,17 @@ const multipleQueuing: EventCause = EventCause.multipleQueuing; /* SHORT_NAMED_E
 
 /**
  * @summary EventCause_networkCongestion
+ * @description Network Congestion. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_networkCongestion: EventCause = EventCause.networkCongestion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkCongestion
+ * @description Alias of {@link EventCause_networkCongestion}.
  * @constant
  * @type {number}
  */
@@ -1701,14 +1945,17 @@ const networkCongestion: EventCause = EventCause.networkCongestion; /* SHORT_NAM
 
 /**
  * @summary EventCause_networkDialling
+ * @description Network Dialling. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_networkDialling: EventCause = EventCause.networkDialling; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkDialling
+ * @description Alias of {@link EventCause_networkDialling}.
  * @constant
  * @type {number}
  */
@@ -1717,14 +1964,17 @@ const networkDialling: EventCause = EventCause.networkDialling; /* SHORT_NAMED_E
 
 /**
  * @summary EventCause_networkNotObtainable
+ * @description Network Not Obtainable. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_networkNotObtainable: EventCause = EventCause.networkNotObtainable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkNotObtainable
+ * @description Alias of {@link EventCause_networkNotObtainable}.
  * @constant
  * @type {number}
  */
@@ -1733,14 +1983,17 @@ const networkNotObtainable: EventCause = EventCause.networkNotObtainable; /* SHO
 
 /**
  * @summary EventCause_networkOutOfOrder
+ * @description Network Out of Order. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_networkOutOfOrder: EventCause = EventCause.networkOutOfOrder; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkOutOfOrder
+ * @description Alias of {@link EventCause_networkOutOfOrder}.
  * @constant
  * @type {number}
  */
@@ -1749,14 +2002,17 @@ const networkOutOfOrder: EventCause = EventCause.networkOutOfOrder; /* SHORT_NAM
 
 /**
  * @summary EventCause_networkSignal
+ * @description Network Signal. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_networkSignal: EventCause = EventCause.networkSignal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkSignal
+ * @description Alias of {@link EventCause_networkSignal}.
  * @constant
  * @type {number}
  */
@@ -1765,14 +2021,17 @@ const networkSignal: EventCause = EventCause.networkSignal; /* SHORT_NAMED_ENUME
 
 /**
  * @summary EventCause_newCall
+ * @description New Call. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_newCall: EventCause = EventCause.newCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary newCall
+ * @description Alias of {@link EventCause_newCall}.
  * @constant
  * @type {number}
  */
@@ -1781,14 +2040,17 @@ const newCall: EventCause = EventCause.newCall; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary EventCause_nextMessage
+ * @description Next Message. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_nextMessage: EventCause = EventCause.nextMessage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nextMessage
+ * @description Alias of {@link EventCause_nextMessage}.
  * @constant
  * @type {number}
  */
@@ -1797,14 +2059,17 @@ const nextMessage: EventCause = EventCause.nextMessage; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary EventCause_noAudioSaved
+ * @description No Audio Saved. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_noAudioSaved: EventCause = EventCause.noAudioSaved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noAudioSaved
+ * @description Alias of {@link EventCause_noAudioSaved}.
  * @constant
  * @type {number}
  */
@@ -1813,14 +2078,17 @@ const noAudioSaved: EventCause = EventCause.noAudioSaved; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EventCause_noAvailableAgents
+ * @description No Available Agents. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_noAvailableAgents: EventCause = EventCause.noAvailableAgents; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noAvailableAgents
+ * @description Alias of {@link EventCause_noAvailableAgents}.
  * @constant
  * @type {number}
  */
@@ -1829,14 +2097,17 @@ const noAvailableAgents: EventCause = EventCause.noAvailableAgents; /* SHORT_NAM
 
 /**
  * @summary EventCause_noQueue
+ * @description No Queue. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_noQueue: EventCause = EventCause.noQueue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noQueue
+ * @description Alias of {@link EventCause_noQueue}.
  * @constant
  * @type {number}
  */
@@ -1845,14 +2116,17 @@ const noQueue: EventCause = EventCause.noQueue; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary EventCause_normal
+ * @description Normal. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_normal: EventCause = EventCause.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
+ * @description Alias of {@link EventCause_normal}.
  * @constant
  * @type {number}
  */
@@ -1861,14 +2135,17 @@ const normal: EventCause = EventCause.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_normalClearing
+ * @description Normal Clearing. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_normalClearing: EventCause = EventCause.normalClearing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normalClearing
+ * @description Alias of {@link EventCause_normalClearing}.
  * @constant
  * @type {number}
  */
@@ -1877,14 +2154,17 @@ const normalClearing: EventCause = EventCause.normalClearing; /* SHORT_NAMED_ENU
 
 /**
  * @summary EventCause_noRule
+ * @description No Rule. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_noRule: EventCause = EventCause.noRule; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noRule
+ * @description Alias of {@link EventCause_noRule}.
  * @constant
  * @type {number}
  */
@@ -1893,14 +2173,17 @@ const noRule: EventCause = EventCause.noRule; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_noSpeechDetected
+ * @description No Speech Detected. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_noSpeechDetected: EventCause = EventCause.noSpeechDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noSpeechDetected
+ * @description Alias of {@link EventCause_noSpeechDetected}.
  * @constant
  * @type {number}
  */
@@ -1909,14 +2192,17 @@ const noSpeechDetected: EventCause = EventCause.noSpeechDetected; /* SHORT_NAMED
 
 /**
  * @summary EventCause_notAvaliableBearerService
+ * @description Not Available Bearer Service. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_notAvaliableBearerService: EventCause = EventCause.notAvaliableBearerService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAvaliableBearerService
+ * @description Alias of {@link EventCause_notAvaliableBearerService}.
  * @constant
  * @type {number}
  */
@@ -1925,14 +2211,17 @@ const notAvaliableBearerService: EventCause = EventCause.notAvaliableBearerServi
 
 /**
  * @summary EventCause_notSupportedBearerService
+ * @description Not Supported Bearer Service. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_notSupportedBearerService: EventCause = EventCause.notSupportedBearerService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notSupportedBearerService
+ * @description Alias of {@link EventCause_notSupportedBearerService}.
  * @constant
  * @type {number}
  */
@@ -1941,14 +2230,17 @@ const notSupportedBearerService: EventCause = EventCause.notSupportedBearerServi
 
 /**
  * @summary EventCause_numberChanged
+ * @description Number Changed. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_numberChanged: EventCause = EventCause.numberChanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numberChanged
+ * @description Alias of {@link EventCause_numberChanged}.
  * @constant
  * @type {number}
  */
@@ -1957,14 +2249,17 @@ const numberChanged: EventCause = EventCause.numberChanged; /* SHORT_NAMED_ENUME
 
 /**
  * @summary EventCause_numberUnallocated
+ * @description Number Unallocated. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_numberUnallocated: EventCause = EventCause.numberUnallocated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numberUnallocated
+ * @description Alias of {@link EventCause_numberUnallocated}.
  * @constant
  * @type {number}
  */
@@ -1973,14 +2268,17 @@ const numberUnallocated: EventCause = EventCause.numberUnallocated; /* SHORT_NAM
 
 /**
  * @summary EventCause_outOfGrammar
+ * @description Out Of Grammar. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_outOfGrammar: EventCause = EventCause.outOfGrammar; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary outOfGrammar
+ * @description Alias of {@link EventCause_outOfGrammar}.
  * @constant
  * @type {number}
  */
@@ -1989,14 +2287,17 @@ const outOfGrammar: EventCause = EventCause.outOfGrammar; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EventCause_overflow
+ * @description Overflow. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_overflow: EventCause = EventCause.overflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overflow
+ * @description Alias of {@link EventCause_overflow}.
  * @constant
  * @type {number}
  */
@@ -2005,14 +2306,17 @@ const overflow: EventCause = EventCause.overflow; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary EventCause_override
+ * @description Override. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_override: EventCause = EventCause.override; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary override
+ * @description Alias of {@link EventCause_override}.
  * @constant
  * @type {number}
  */
@@ -2021,14 +2325,17 @@ const override: EventCause = EventCause.override; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary EventCause_park
+ * @description Park. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_park: EventCause = EventCause.park; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary park
+ * @description Alias of {@link EventCause_park}.
  * @constant
  * @type {number}
  */
@@ -2037,14 +2344,17 @@ const park: EventCause = EventCause.park; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_pathReplacement
+ * @description Path Replacement. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_pathReplacement: EventCause = EventCause.pathReplacement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pathReplacement
+ * @description Alias of {@link EventCause_pathReplacement}.
  * @constant
  * @type {number}
  */
@@ -2053,14 +2363,17 @@ const pathReplacement: EventCause = EventCause.pathReplacement; /* SHORT_NAMED_E
 
 /**
  * @summary EventCause_queueCleared
+ * @description Queue Cleared. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_queueCleared: EventCause = EventCause.queueCleared; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary queueCleared
+ * @description Alias of {@link EventCause_queueCleared}.
  * @constant
  * @type {number}
  */
@@ -2069,14 +2382,17 @@ const queueCleared: EventCause = EventCause.queueCleared; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EventCause_queueTimeOverflow
+ * @description Queue Time Overflow. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_queueTimeOverflow: EventCause = EventCause.queueTimeOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary queueTimeOverflow
+ * @description Alias of {@link EventCause_queueTimeOverflow}.
  * @constant
  * @type {number}
  */
@@ -2085,14 +2401,17 @@ const queueTimeOverflow: EventCause = EventCause.queueTimeOverflow; /* SHORT_NAM
 
 /**
  * @summary EventCause_recall
+ * @description Recall. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_recall: EventCause = EventCause.recall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recall
+ * @description Alias of {@link EventCause_recall}.
  * @constant
  * @type {number}
  */
@@ -2101,14 +2420,17 @@ const recall: EventCause = EventCause.recall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventCause_recallBusy
+ * @description Recall - Busy. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_recallBusy: EventCause = EventCause.recallBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recallBusy
+ * @description Alias of {@link EventCause_recallBusy}.
  * @constant
  * @type {number}
  */
@@ -2117,14 +2439,17 @@ const recallBusy: EventCause = EventCause.recallBusy; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary EventCause_recallForwarded
+ * @description Recall - Forwarded. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_recallForwarded: EventCause = EventCause.recallForwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recallForwarded
+ * @description Alias of {@link EventCause_recallForwarded}.
  * @constant
  * @type {number}
  */
@@ -2133,14 +2458,17 @@ const recallForwarded: EventCause = EventCause.recallForwarded; /* SHORT_NAMED_E
 
 /**
  * @summary EventCause_recallNoAnswer
+ * @description Recall - No Answer. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_recallNoAnswer: EventCause = EventCause.recallNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recallNoAnswer
+ * @description Alias of {@link EventCause_recallNoAnswer}.
  * @constant
  * @type {number}
  */
@@ -2149,14 +2477,17 @@ const recallNoAnswer: EventCause = EventCause.recallNoAnswer; /* SHORT_NAMED_ENU
 
 /**
  * @summary EventCause_recallResourcesNotAvailable
+ * @description Recall - Resources Not Available. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_recallResourcesNotAvailable: EventCause = EventCause.recallResourcesNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recallResourcesNotAvailable
+ * @description Alias of {@link EventCause_recallResourcesNotAvailable}.
  * @constant
  * @type {number}
  */
@@ -2165,14 +2496,17 @@ const recallResourcesNotAvailable: EventCause = EventCause.recallResourcesNotAva
 
 /**
  * @summary EventCause_redirected
+ * @description Redirected. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_redirected: EventCause = EventCause.redirected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary redirected
+ * @description Alias of {@link EventCause_redirected}.
  * @constant
  * @type {number}
  */
@@ -2181,14 +2515,17 @@ const redirected: EventCause = EventCause.redirected; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary EventCause_remainsInQueue
+ * @description Remains in Queue. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_remainsInQueue: EventCause = EventCause.remainsInQueue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary remainsInQueue
+ * @description Alias of {@link EventCause_remainsInQueue}.
  * @constant
  * @type {number}
  */
@@ -2197,14 +2534,17 @@ const remainsInQueue: EventCause = EventCause.remainsInQueue; /* SHORT_NAMED_ENU
 
 /**
  * @summary EventCause_reorderTone
+ * @description Reorder Tone. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_reorderTone: EventCause = EventCause.reorderTone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reorderTone
+ * @description Alias of {@link EventCause_reorderTone}.
  * @constant
  * @type {number}
  */
@@ -2213,14 +2553,17 @@ const reorderTone: EventCause = EventCause.reorderTone; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary EventCause_reserved
+ * @description Reserved. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_reserved: EventCause = EventCause.reserved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserved
+ * @description Alias of {@link EventCause_reserved}.
  * @constant
  * @type {number}
  */
@@ -2229,14 +2572,17 @@ const reserved: EventCause = EventCause.reserved; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary EventCause_resourcesNotAvailable
+ * @description Resources Not Available. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_resourcesNotAvailable: EventCause = EventCause.resourcesNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resourcesNotAvailable
+ * @description Alias of {@link EventCause_resourcesNotAvailable}.
  * @constant
  * @type {number}
  */
@@ -2245,14 +2591,17 @@ const resourcesNotAvailable: EventCause = EventCause.resourcesNotAvailable; /* S
 
 /**
  * @summary EventCause_selectedTrunkBusy
+ * @description Selected Trunk Busy. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_selectedTrunkBusy: EventCause = EventCause.selectedTrunkBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary selectedTrunkBusy
+ * @description Alias of {@link EventCause_selectedTrunkBusy}.
  * @constant
  * @type {number}
  */
@@ -2261,14 +2610,17 @@ const selectedTrunkBusy: EventCause = EventCause.selectedTrunkBusy; /* SHORT_NAM
 
 /**
  * @summary EventCause_silentParticipation
+ * @description Silent Participation. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_silentParticipation: EventCause = EventCause.silentParticipation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary silentParticipation
+ * @description Alias of {@link EventCause_silentParticipation}.
  * @constant
  * @type {number}
  */
@@ -2277,14 +2629,17 @@ const silentParticipation: EventCause = EventCause.silentParticipation; /* SHORT
 
 /**
  * @summary EventCause_singleStepConference
+ * @description Single Step Conference. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_singleStepConference: EventCause = EventCause.singleStepConference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleStepConference
+ * @description Alias of {@link EventCause_singleStepConference}.
  * @constant
  * @type {number}
  */
@@ -2293,14 +2648,17 @@ const singleStepConference: EventCause = EventCause.singleStepConference; /* SHO
 
 /**
  * @summary EventCause_singleStepTransfer
+ * @description Single Step Transfer. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_singleStepTransfer: EventCause = EventCause.singleStepTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleStepTransfer
+ * @description Alias of {@link EventCause_singleStepTransfer}.
  * @constant
  * @type {number}
  */
@@ -2309,14 +2667,17 @@ const singleStepTransfer: EventCause = EventCause.singleStepTransfer; /* SHORT_N
 
 /**
  * @summary EventCause_speechDetected
+ * @description Speech Detected. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_speechDetected: EventCause = EventCause.speechDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechDetected
+ * @description Alias of {@link EventCause_speechDetected}.
  * @constant
  * @type {number}
  */
@@ -2325,14 +2686,17 @@ const speechDetected: EventCause = EventCause.speechDetected; /* SHORT_NAMED_ENU
 
 /**
  * @summary EventCause_suspend
+ * @description Suspend. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_suspend: EventCause = EventCause.suspend; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary suspend
+ * @description Alias of {@link EventCause_suspend}.
  * @constant
  * @type {number}
  */
@@ -2341,14 +2705,17 @@ const suspend: EventCause = EventCause.suspend; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary EventCause_switchingFunctionTerminated
+ * @description Switching Function Terminated. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_switchingFunctionTerminated: EventCause = EventCause.switchingFunctionTerminated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchingFunctionTerminated
+ * @description Alias of {@link EventCause_switchingFunctionTerminated}.
  * @constant
  * @type {number}
  */
@@ -2357,14 +2724,17 @@ const switchingFunctionTerminated: EventCause = EventCause.switchingFunctionTerm
 
 /**
  * @summary EventCause_terminationCharacterReceived
+ * @description Termination Character Received. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_terminationCharacterReceived: EventCause = EventCause.terminationCharacterReceived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminationCharacterReceived
+ * @description Alias of {@link EventCause_terminationCharacterReceived}.
  * @constant
  * @type {number}
  */
@@ -2373,14 +2743,17 @@ const terminationCharacterReceived: EventCause = EventCause.terminationCharacter
 
 /**
  * @summary EventCause_timeout
+ * @description Timeout. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_timeout: EventCause = EventCause.timeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeout
+ * @description Alias of {@link EventCause_timeout}.
  * @constant
  * @type {number}
  */
@@ -2389,14 +2762,17 @@ const timeout: EventCause = EventCause.timeout; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary EventCause_transfer
+ * @description Transfer. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_transfer: EventCause = EventCause.transfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transfer
+ * @description Alias of {@link EventCause_transfer}.
  * @constant
  * @type {number}
  */
@@ -2405,14 +2781,17 @@ const transfer: EventCause = EventCause.transfer; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary EventCause_trunksBusy
+ * @description Trunks Busy. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_trunksBusy: EventCause = EventCause.trunksBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trunksBusy
+ * @description Alias of {@link EventCause_trunksBusy}.
  * @constant
  * @type {number}
  */
@@ -2421,14 +2800,17 @@ const trunksBusy: EventCause = EventCause.trunksBusy; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary EventCause_unauthorisedBearerService
+ * @description Unauthorized Bearer Service. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_unauthorisedBearerService: EventCause = EventCause.unauthorisedBearerService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unauthorisedBearerService
+ * @description Alias of {@link EventCause_unauthorisedBearerService}.
  * @constant
  * @type {number}
  */
@@ -2437,14 +2819,17 @@ const unauthorisedBearerService: EventCause = EventCause.unauthorisedBearerServi
 
 /**
  * @summary EventCause_unknownOverflow
+ * @description Unknown Overflow. ECMA-269 §12.2.15.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
 const EventCause_unknownOverflow: EventCause = EventCause.unknownOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownOverflow
+ * @description Alias of {@link EventCause_unknownOverflow}.
  * @constant
  * @type {number}
  */

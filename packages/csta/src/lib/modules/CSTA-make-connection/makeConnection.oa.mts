@@ -17,7 +17,17 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary makeConnection
  * @description
- * 
+ *
+ * Make Connection (ECMA-269 §17.1.19 / ECMA-285 §15.1.19).
+ * Invoked by the computing function on the switching function.
+ * Creates a single-device call at `initiatingDevice` (Initiated
+ * or Connected). Unlike Make Call, no called party is supplied.
+ * Validation failure yields no ConnectionIDs (FR 2). ROSE local
+ * CODE 375. Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

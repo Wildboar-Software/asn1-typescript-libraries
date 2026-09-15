@@ -77,7 +77,10 @@ import { D_CSI, _decode_D_CSI, _encode_D_CSI } from "../MAP-MS-DataTypes/D-CSI.t
 /**
  * @summary GmscCamelSubscriptionInfo
  * @description
- * 
+ *
+ * T-CSI, O-CSI, D-CSI and TDP criteria at the GMSC (3GPP TS 29.002 V19.1.0
+ * clause 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -98,36 +101,60 @@ class GmscCamelSubscriptionInfo {
     constructor (
         /**
          * @summary `t_CSI`.
+         * @description
+         *
+         * T-CSI.
+         *
          * @public
          * @readonly
          */
         readonly t_CSI: OPTIONAL<T_CSI>,
         /**
          * @summary `o_CSI`.
+         * @description
+         *
+         * O-CSI.
+         *
          * @public
          * @readonly
          */
         readonly o_CSI: OPTIONAL<O_CSI>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `o_BcsmCamelTDP_CriteriaList`.
+         * @description
+         *
+         * O-BCSM CAMEL TDP criteria.
+         *
          * @public
          * @readonly
          */
         readonly o_BcsmCamelTDP_CriteriaList: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
         /**
          * @summary `t_BCSM_CAMEL_TDP_CriteriaList`.
+         * @description
+         *
+         * T-BCSM CAMEL TDP criteria.
+         *
          * @public
          * @readonly
          */
         readonly t_BCSM_CAMEL_TDP_CriteriaList: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
         /**
          * @summary `d_csi`.
+         * @description
+         *
+         * D-CSI.
+         *
          * @public
          * @readonly
          */

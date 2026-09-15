@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PDN_Type
  * @description
- * 
+ *
+ * PDN type of an EPS APN configuration. One octet: bits 3-1 are `001` IPv4,
+ * `010` IPv6, `011` IPv4v6, `100` IPv4_or_IPv6; bits 8-4 shall be zero. Details
+ * in 3GPP TS 29.272.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

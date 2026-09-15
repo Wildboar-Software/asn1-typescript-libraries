@@ -1,7 +1,11 @@
 /**
  * @description
  *
- * ASN.1 module `V59`.
+ * ASN.1 module `V59`: Modem Managed Objects for diagnosing PSTN
+ * V-series DCE connections (ITU-T Rec. V.59 (11/2000), Cor.1
+ * (07/2001), Cor.2 (03/2002)). Values describe the last call and
+ * are read off-line. Annex A encoding is BASIC-ALIGNED PER
+ * (X.691); if text and ASN.1 conflict, ASN.1 governs.
  */
 export * from "./CallProgress-Item.ta.mjs";
 export * from "./CallProgress.ta.mjs";

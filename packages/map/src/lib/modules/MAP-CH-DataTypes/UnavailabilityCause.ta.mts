@@ -82,7 +82,10 @@ enum _enum_for_UnavailabilityCause {
 /**
  * @summary UnavailabilityCause
  * @description
- * 
+ *
+ * Why a service is unavailable. Other values: service unavailable for that call
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -103,6 +106,10 @@ type UnavailabilityCause = _enum_for_UnavailabilityCause | ENUMERATED;
 
 /**
  * @summary UnavailabilityCause_bearerServiceNotProvisioned
+ * @description
+ *
+ * `bearerServiceNotProvisioned (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +118,10 @@ const UnavailabilityCause_bearerServiceNotProvisioned: UnavailabilityCause = 1; 
 
 /**
  * @summary bearerServiceNotProvisioned
+ * @description
+ *
+ * `bearerServiceNotProvisioned (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +130,10 @@ const bearerServiceNotProvisioned: UnavailabilityCause = UnavailabilityCause_bea
 
 /**
  * @summary UnavailabilityCause_teleserviceNotProvisioned
+ * @description
+ *
+ * `teleserviceNotProvisioned (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -127,6 +142,10 @@ const UnavailabilityCause_teleserviceNotProvisioned: UnavailabilityCause = 2; /*
 
 /**
  * @summary teleserviceNotProvisioned
+ * @description
+ *
+ * `teleserviceNotProvisioned (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -135,6 +154,10 @@ const teleserviceNotProvisioned: UnavailabilityCause = UnavailabilityCause_teles
 
 /**
  * @summary UnavailabilityCause_absentSubscriber
+ * @description
+ *
+ * `absentSubscriber (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -143,6 +166,10 @@ const UnavailabilityCause_absentSubscriber: UnavailabilityCause = 3; /* LONG_NAM
 
 /**
  * @summary absentSubscriber
+ * @description
+ *
+ * `absentSubscriber (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -151,6 +178,10 @@ const absentSubscriber: UnavailabilityCause = UnavailabilityCause_absentSubscrib
 
 /**
  * @summary UnavailabilityCause_busySubscriber
+ * @description
+ *
+ * `busySubscriber (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -159,6 +190,10 @@ const UnavailabilityCause_busySubscriber: UnavailabilityCause = 4; /* LONG_NAMED
 
 /**
  * @summary busySubscriber
+ * @description
+ *
+ * `busySubscriber (4)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -167,6 +202,10 @@ const busySubscriber: UnavailabilityCause = UnavailabilityCause_busySubscriber; 
 
 /**
  * @summary UnavailabilityCause_callBarred
+ * @description
+ *
+ * `callBarred (5)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -175,6 +214,10 @@ const UnavailabilityCause_callBarred: UnavailabilityCause = 5; /* LONG_NAMED_ENU
 
 /**
  * @summary callBarred
+ * @description
+ *
+ * `callBarred (5)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -183,6 +226,10 @@ const callBarred: UnavailabilityCause = UnavailabilityCause_callBarred; /* SHORT
 
 /**
  * @summary UnavailabilityCause_cug_Reject
+ * @description
+ *
+ * `cug-Reject (6)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -191,6 +238,10 @@ const UnavailabilityCause_cug_Reject: UnavailabilityCause = 6; /* LONG_NAMED_ENU
 
 /**
  * @summary cug_Reject
+ * @description
+ *
+ * `cug-Reject (6)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */

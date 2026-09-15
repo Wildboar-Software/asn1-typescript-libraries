@@ -14,7 +14,12 @@ import { DeviceList_Item, _decode_DeviceList_Item, _encode_DeviceList_Item } fro
 /**
  * @summary DeviceList
  * @description
- * 
+ *
+ * SEQUENCE OF device entries from Table 13-12.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

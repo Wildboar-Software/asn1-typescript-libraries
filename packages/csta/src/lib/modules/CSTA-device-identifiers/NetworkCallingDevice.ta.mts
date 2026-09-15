@@ -9,7 +9,14 @@ import { NetworkCallingDeviceID, _decode_NetworkCallingDeviceID, _encode_Network
 /**
  * @summary NetworkCallingDevice
  * @description
- * 
+ *
+ * Synonym for `NetworkCallingDeviceID` (ECMA-285 §9.2). See that
+ * type for network-provided calling-device semantics
+ * (ECMA-269 §12.3.23).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

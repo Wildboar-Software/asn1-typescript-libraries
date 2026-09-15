@@ -73,7 +73,10 @@ import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../
 /**
  * @summary Ext_CwFeature
  * @description
- * 
+ *
+ * Call Waiting feature for one extensible basic service: basic service code and
+ * SS-Status (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -21,7 +21,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary DialDigitsArgument
  * @description
- * 
+ *
+ * Service request for Dial Digits (ECMA-269 §17.1.12 / ECMA-285
+ * §15.1.12). Continues or completes outbound dialling on an
+ * initiated connection. Other calls at the device are unaffected
+ * (FR 1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +47,48 @@ class DialDigitsArgument {
     constructor (
         /**
          * @summary `diallingConnection`.
+         * @description
+         *
+         * Mandatory. Connection on which digits are dialled.
+         * Initial state Initiated; final Initiated or Connected
+         * (§17.1.12.3.1).
+         *
          * @public
          * @readonly
          */
         readonly diallingConnection: ConnectionID,
         /**
          * @summary `diallingSequence`.
+         * @description
+         *
+         * Mandatory. Digits to dial. Any DeviceID format if no
+         * digits have been dialled yet; otherwise Diallable Digits.
+         * A trailing `;` means more digits will follow (FR 3–4).
+         * If the switching function treats dialling as complete it
+         * ignores later digits (FR 7).
+         *
          * @public
          * @readonly
          */
         readonly diallingSequence: DeviceID,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional correlator data attached before resulting state
+         * transitions (§12.2.10).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

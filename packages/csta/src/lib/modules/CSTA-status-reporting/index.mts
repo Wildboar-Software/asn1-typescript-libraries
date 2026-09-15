@@ -1,7 +1,13 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-status-reporting`.
+ * Status-reporting types for Monitor Start, snapshots, registrations, and
+ * location tracking sessions: monitor filter and type, simple/compound call
+ * state, and snapshot response rows. ECMA-269 §6.1.4, §6.6, §12.2.23, §12.2.26;
+ * ECMA-285 §9.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
  */
 export * from "./CallMediaInfoList-Item.ta.mjs";
 export * from "./CallMediaInfoList.ta.mjs";

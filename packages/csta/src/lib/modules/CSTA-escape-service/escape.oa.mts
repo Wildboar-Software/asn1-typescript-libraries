@@ -17,7 +17,21 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary escape
  * @description
- * 
+ *
+ * Requests a completely new vendor-specific service. Bidirectional. Parameters
+ * live only in `privateData`; CSTA does not define that layout.
+ * `escapeRegisterID` identifies the registration when the SF invokes Escape and
+ * registration is used; a computing-function request shall not contain it
+ * (ECMA-269 §29.2.1 / §9.4.2.3).
+ *
+ * Bidirectional: computing function or switching function may invoke.
+ *
+ * ROSE local:51. Errors: `universalFailure` (ECMA-285 §27.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,7 +15,10 @@ import { V34Diag_Item, _decode_V34Diag_Item, _encode_V34Diag_Item } from "../V59
 /**
  * @summary V34Diag
  * @description
- * 
+ *
+ * High-level V.34 duplex diagnostics (Tag-ID `0Cxx`). ITU-T Rec. V.59 (11/2000)
+ * §6.3, §6.8.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -27,7 +27,11 @@ import { ExtensionValues, _decode_ExtensionValues, _encode_ExtensionValues } fro
 /**
  * @summary ServerHello
  * @description
- * 
+ *
+ * TLS ServerHello: selected version, random, session id, cipher suite,
+ * compression, optional extensions. ITU-T Rec. X.1084 (05/2008)
+ * §10.3.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,30 +54,50 @@ class ServerHello {
     constructor (
         /**
          * @summary `server_version`.
+         * @description
+         *
+         * Protocol version the server selects. X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */
         readonly server_version: ProtocolVersion,
         /**
          * @summary `random`.
+         * @description
+         *
+         * Hello random (challenge). X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */
         readonly random: ServerRandom,
         /**
          * @summary `session_id`.
+         * @description
+         *
+         * TLS session identifier (`UINT32` in Annex A). X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */
         readonly session_id: SessionID,
         /**
          * @summary `cipher_suite`.
+         * @description
+         *
+         * Cipher suite the server selects. X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */
         readonly cipher_suite: CipherSuite,
         /**
          * @summary `compression_method`.
+         * @description
+         *
+         * Compression method the server selects. X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */
@@ -86,6 +110,10 @@ class ServerHello {
         readonly _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary `server_hello_extension_list`.
+         * @description
+         *
+         * TLS-style hello extensions. X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */

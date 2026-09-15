@@ -17,7 +17,10 @@ import { ExtensionValue, _decode_ExtensionValue, _encode_ExtensionValue } from "
 /**
  * @summary ExtensionValues
  * @description
- * 
+ *
+ * SEQUENCE OF `ExtensionValue` on ClientHello / ServerHello. ITU-T
+ * Rec. X.1084 (05/2008) §10.3.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

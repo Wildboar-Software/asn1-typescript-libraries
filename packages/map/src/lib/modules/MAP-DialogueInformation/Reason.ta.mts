@@ -72,7 +72,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Reason
  * @description
- * 
+ *
+ * Refuse reason in `MAP-RefuseInfo`. Values `noReasonGiven`,
+ * `invalidDestinationReference` and `invalidOriginatingReference` correspond to
+ * Refuse-reason in MAP-OPEN (3GPP TS 29.002 V19.1.0 clauses 7.3.1 and 17.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,7 +98,11 @@ enum _enum_for_Reason {
 /**
  * @summary Reason
  * @description
- * 
+ *
+ * Refuse reason in `MAP-RefuseInfo`. Values `noReasonGiven`,
+ * `invalidDestinationReference` and `invalidOriginatingReference` correspond to
+ * Refuse-reason in MAP-OPEN (3GPP TS 29.002 V19.1.0 clauses 7.3.1 and 17.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -112,7 +120,11 @@ type Reason = _enum_for_Reason;
 /**
  * @summary Reason
  * @description
- * 
+ *
+ * Refuse reason in `MAP-RefuseInfo`. Values `noReasonGiven`,
+ * `invalidDestinationReference` and `invalidOriginatingReference` correspond to
+ * Refuse-reason in MAP-OPEN (3GPP TS 29.002 V19.1.0 clauses 7.3.1 and 17.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -129,6 +141,11 @@ const Reason = _enum_for_Reason;
 
 /**
  * @summary Reason_noReasonGiven
+ * @description
+ *
+ * `noReasonGiven (0)`: dialogue refused with no further reason (3GPP TS 29.002
+ * V19.1.0 clause 7.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +154,10 @@ const Reason_noReasonGiven: Reason = Reason.noReasonGiven; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary noReasonGiven
+ * @description
+ *
+ * `noReasonGiven (0)` of `Reason` (3GPP TS 29.002 V19.1.0 clause 7.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +166,11 @@ const noReasonGiven: Reason = Reason.noReasonGiven; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary Reason_invalidDestinationReference
+ * @description
+ *
+ * `invalidDestinationReference (1)`: destination reference is invalid (3GPP TS
+ * 29.002 V19.1.0 clause 7.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +179,11 @@ const Reason_invalidDestinationReference: Reason = Reason.invalidDestinationRefe
 
 /**
  * @summary invalidDestinationReference
+ * @description
+ *
+ * `invalidDestinationReference (1)` of `Reason` (3GPP TS 29.002 V19.1.0 clause
+ * 7.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +192,11 @@ const invalidDestinationReference: Reason = Reason.invalidDestinationReference; 
 
 /**
  * @summary Reason_invalidOriginatingReference
+ * @description
+ *
+ * `invalidOriginatingReference (2)`: originating reference is invalid (3GPP TS
+ * 29.002 V19.1.0 clause 7.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +205,11 @@ const Reason_invalidOriginatingReference: Reason = Reason.invalidOriginatingRefe
 
 /**
  * @summary invalidOriginatingReference
+ * @description
+ *
+ * `invalidOriginatingReference (2)` of `Reason` (3GPP TS 29.002 V19.1.0 clause
+ * 7.3.1).
+ *
  * @constant
  * @type {number}
  */

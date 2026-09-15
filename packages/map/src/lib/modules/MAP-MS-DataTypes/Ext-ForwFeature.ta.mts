@@ -79,7 +79,15 @@ import { FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString
 /**
  * @summary Ext_ForwFeature
  * @description
- * 
+ *
+ * Extensible forwarding feature per call-forwarding service and Basic Service
+ * Group. If a number is required to define the forwarded-to destination: if the
+ * VLR supports Long Forwarded-to Numbers the long forwarded-to number shall be
+ * present and the forwarded-to number absent; otherwise the reverse. When sent
+ * from an HLR that supports CAMEL Phase 2 to a VLR that supports CAMEL Phase 2
+ * the VLR shall not check the format of the forwarded-to number (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.3.16 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -105,36 +113,70 @@ class Ext_ForwFeature {
     constructor (
         /**
          * @summary `basicService`.
+         * @description
+         *
+         * Extensible Basic Service Group; interpreted per clause 8.8.1.4 (3GPP
+         * TS 29.002 V19.1.0 clauses 7.6.3.16 and 8.8.1.3).
+         *
          * @public
          * @readonly
          */
         readonly basicService: OPTIONAL<Ext_BasicServiceCode>,
         /**
          * @summary `ss_Status`.
+         * @description
+         *
+         * Extensible SS-Status of this forwarding feature (3GPP TS 29.002
+         * V19.1.0 clauses 7.6.3.16 and 7.6.3.17).
+         *
          * @public
          * @readonly
          */
         readonly ss_Status: Ext_SS_Status,
         /**
          * @summary `forwardedToNumber`.
+         * @description
+         *
+         * Forwarded-to number. Absent if the VLR supports Long Forwarded-to
+         * Numbers (longForwardedToNumber used instead). When HLR and VLR both
+         * support CAMEL Phase 2 the VLR shall not check the number format (3GPP
+         * TS 29.002 V19.1.0 clauses 7.6.3.16 and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly forwardedToNumber: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `forwardedToSubaddress`.
+         * @description
+         *
+         * Forwarded-to subaddress if available (3GPP TS 29.002 V19.1.0 clauses
+         * 7.6.3.16 and 7.6.2.23).
+         *
          * @public
          * @readonly
          */
         readonly forwardedToSubaddress: OPTIONAL<ISDN_SubaddressString>,
         /**
          * @summary `forwardingOptions`.
+         * @description
+         *
+         * Extensible forwarding options (except for CFU, where they shall not
+         * be included). Bits 3 and 4 shall be ignored by the VLR (3GPP TS
+         * 29.002 V19.1.0 clauses 7.6.3.18 and 8.8.1.3).
+         *
          * @public
          * @readonly
          */
         readonly forwardingOptions: OPTIONAL<Ext_ForwOptions>,
         /**
          * @summary `noReplyConditionTime`.
+         * @description
+         *
+         * For CFNRy, present when SS-Status indicates registered; otherwise
+         * absent. Not included for other CF services (3GPP TS 29.002 V19.1.0
+         * clauses 7.6.3.19 and 8.8.1.3).
+         *
          * @public
          * @readonly
          */
@@ -147,6 +189,12 @@ class Ext_ForwFeature {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `longForwardedToNumber`.
+         * @description
+         *
+         * Shall be present (and forwardedToNumber absent) if the VLR supports
+         * Long Forwarded-to Numbers (3GPP TS 29.002 V19.1.0 clauses 7.6.3.16
+         * and 7.6.2.22A).
+         *
          * @public
          * @readonly
          */

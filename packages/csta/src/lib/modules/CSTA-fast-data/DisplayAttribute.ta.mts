@@ -16,7 +16,17 @@ import { DisplayID, _decode_DisplayID, _encode_DisplayID } from "../CSTA-physica
 /**
  * @summary DisplayAttribute
  * @description
- * 
+ *
+ * Display update: displayID when the device has more than one display;
+ * physicalBaseRowNumber / physicalBaseColumnNumber scroll the logical origin
+ * onto the physical display; offset is in characters (not bytes), counting
+ * CR/LF/Tab, from 0 to (MaxNbrOfLogicalColumns × MaxNbrOfLogicalRows − 1)
+ * (ECMA-269 §24.2.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +44,44 @@ class DisplayAttribute {
     constructor (
         /**
          * @summary `displayID`.
+         * @description
+         *
+         * Which display to update. Required if the device has more than one
+         * display (ECMA-269 §24.2.3.1).
+         *
          * @public
          * @readonly
          */
         readonly displayID: OPTIONAL<DisplayID>,
         /**
          * @summary `physicalBaseRowNumber`.
+         * @description
+         *
+         * Logical row shown as the first physical row (scrolling). Omit when
+         * physical rows equal logical rows (ECMA-269 §24.2.3.1).
+         *
          * @public
          * @readonly
          */
         readonly physicalBaseRowNumber: OPTIONAL<INTEGER>,
         /**
          * @summary `physicalBaseColumnNumber`.
+         * @description
+         *
+         * Logical column shown as the first physical column. Omit when physical
+         * columns equal logical columns (ECMA-269 §24.2.3.1).
+         *
          * @public
          * @readonly
          */
         readonly physicalBaseColumnNumber: OPTIONAL<INTEGER>,
         /**
          * @summary `offset`.
+         * @description
+         *
+         * Character offset (not bytes) where text starts on the display;
+         * default 0 (ECMA-269 §24.2.3.1).
+         *
          * @public
          * @readonly
          */

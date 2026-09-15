@@ -26,7 +26,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary StartDataCollectionArgument
  * @description
- * 
+ *
+ * Target object, collection type, and digit reporting criteria (ECMA-269
+ * §25.1.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,24 +51,41 @@ class StartDataCollectionArgument {
     constructor (
         /**
          * @summary `object`.
+         * @description
+         *
+         * Device (next connection) or specific connection (ECMA-269 §25.1.5.1).
+         *
          * @public
          * @readonly
          */
         readonly object: CallObject,
         /**
          * @summary `dataCollType`.
+         * @description
+         *
+         * Digits or telephony tones (ECMA-269 §25.1.5.1).
+         *
          * @public
          * @readonly
          */
         readonly dataCollType: OPTIONAL<DataCollType>,
         /**
          * @summary `digitsReportingCriteria`.
+         * @description
+         *
+         * Only when `dataCollType` is digits (ECMA-269 §25.1.5.1).
+         *
          * @public
          * @readonly
          */
         readonly digitsReportingCriteria: OPTIONAL<DigitsReportingCriteria>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

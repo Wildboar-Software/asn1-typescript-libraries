@@ -9,7 +9,12 @@ import { AgentStateEntry, _decode_AgentStateEntry, _encode_AgentStateEntry } fro
 /**
  * @summary AgentStateList
  * @description
- * 
+ *
+ * SEQUENCE SIZE (1..32) OF AgentStateEntry (ECMA-269 §22.1.5.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

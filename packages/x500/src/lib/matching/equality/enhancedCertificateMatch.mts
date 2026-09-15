@@ -86,6 +86,15 @@ const CP_OID: string = id_ce_certificatePolicies.toString();
 const NC_OID: string = id_ce_nameConstraints.toString();
 const ANY_POLICY_OID: string = anyPolicy.toString();
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 13.3.10 component matching.
+ *
+ * Same component semantics as `certificateMatch` except
+ * `subjectAltName` may include an optional `altNameValue` (match
+ * type-only or type-and-value) and `pathToName` is `GeneralNames`
+ * (fails if name constraints inhibit a path to any presented name).
+ * At least one assertion component shall be present.
+ */
 export
 function evaluateEnhancedCertificateAssertion (
     assertion: EnhancedCertificateAssertion,
@@ -418,6 +427,16 @@ function evaluateEnhancedCertificateAssertion (
     return true;
 }
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 13.3.10
+ * `enhancedCertificateMatch`.
+ *
+ * More precise certificate selection than `certificateMatch`. TRUE
+ * iff all presented `EnhancedCertificateAssertion` components
+ * match as described by
+ * {@link evaluateEnhancedCertificateAssertion}. Multiple
+ * assertions may be combined in a search filter with AND/OR.
+ */
 export
 const enhancedCertificateMatch: EqualityMatcher = (
     assertion: ASN1Element,

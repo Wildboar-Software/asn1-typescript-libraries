@@ -15,7 +15,10 @@ import { V34HdxDiag_Item, _decode_V34HdxDiag_Item, _encode_V34HdxDiag_Item } fro
 /**
  * @summary V34HdxDiag
  * @description
- * 
+ *
+ * High-level V.34 half-duplex facsimile diagnostics (Tag-ID `15xx`; clause
+ * 12/V.34). ITU-T Rec. V.59 (11/2000) §6.3, §6.8.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

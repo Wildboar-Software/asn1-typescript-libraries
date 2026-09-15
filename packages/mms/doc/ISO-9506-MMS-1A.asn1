@@ -1,0 +1,117 @@
+ISO-9506-MMS-1A
+{iso standard 9506 part(2) mms-annex-version1(3)}
+DEFINITIONS ::=
+BEGIN
+
+EXPORTS
+    ObtainFile-Request, ObtainFile-Response, ObtainFile-Error, FileOpen-Request,
+    FileOpen-Response, FileRead-Request, FileRead-Response, FileClose-Request,
+    FileClose-Response, FileRename-Request, FileRename-Response, FileRename-Error,
+    FileDelete-Request, FileDelete-Response, FileDirectory-Request,
+    FileDirectory-Response, ScatteredAccessDescription,
+    DefineScatteredAccess-Request, DefineScatteredAccess-Response,
+    GetScatteredAccessAttributes-Request, GetScatteredAccessAttributes-Response;
+
+IMPORTS
+
+    FileName, ObjectName, AlternateAccess, VariableSpecification, Identifier,
+    Integer32, Unsigned32
+        FROM ISO-9506-MMS-1
+        {iso standard 9506 part(2) mms-abstract-syntax-version1(1) }
+
+    ApplicationReference
+        FROM MMS-Environment-1
+        {iso standard 9506 part(2) mms-environment-version1(4) }
+    ;
+
+ObtainFile-Request ::= SEQUENCE {
+    sourceFileServer       [0] IMPLICIT ApplicationReference OPTIONAL,
+    sourceFile             [1] IMPLICIT FileName,
+    destinationFile        [2] IMPLICIT FileName
+}
+
+ObtainFile-Response ::= NULL
+
+ObtainFile-Error ::= INTEGER {
+    source-file            (0),
+    destination-file       (1)
+} (0..1)
+
+FileOpen-Request ::= SEQUENCE {
+    fileName            [0] IMPLICIT FileName,
+    initialPosition     [1] IMPLICIT Unsigned32
+}
+
+FileOpen-Response ::= SEQUENCE {
+    frsmID              [0] IMPLICIT Integer32,
+    fileAttributes      [1] IMPLICIT FileAttributes
+}
+
+FileRead-Request ::= Integer32 -- FRSM ID
+
+FileRead-Response ::= SEQUENCE {
+    fileData         [0] IMPLICIT OCTET STRING,
+    moreFollows      [1] IMPLICIT BOOLEAN DEFAULT TRUE
+}
+
+FileClose-Request ::= Integer32 -- FRSM ID
+
+FileClose-Response ::= NULL
+
+FileRename-Request ::= SEQUENCE {
+    currentFileName     [0] IMPLICIT FileName,
+    newFileName         [1] IMPLICIT FileName
+}
+
+FileRename-Response ::= NULL
+
+FileRename-Error ::= INTEGER {
+    source-file            (0),
+    destination-file       (1)
+} (0..1)
+
+FileDelete-Request ::= FileName
+
+FileDelete-Response ::= NULL
+
+FileDirectory-Request ::= SEQUENCE {
+    fileSpecification      [0] IMPLICIT FileName OPTIONAL,
+    continueAfter          [1] IMPLICIT FileName OPTIONAL
+}
+
+FileDirectory-Response ::= SEQUENCE {
+    listOfDirectoryEntry   [0] SEQUENCE OF DirectoryEntry,
+    moreFollows            [1] IMPLICIT BOOLEAN DEFAULT FALSE
+}
+
+DirectoryEntry ::= SEQUENCE {
+    fileName               [0] IMPLICIT FileName,
+    fileAttributes         [1] IMPLICIT FileAttributes
+}
+
+FileAttributes ::= SEQUENCE {
+    sizeOfFile       [0] IMPLICIT Unsigned32, -- in octets
+    lastModified     [1] IMPLICIT GeneralizedTime OPTIONAL
+}
+
+ScatteredAccessDescription ::=SEQUENCE OF SEQUENCE {
+    componentName              [0] IMPLICIT Identifier OPTIONAL,
+    variableSpecification      [1] VariableSpecification,
+    alternateAccess            [2] IMPLICIT AlternateAccess OPTIONAL
+}
+
+DefineScatteredAccess-Request ::= SEQUENCE {
+    scatteredAccessName              [0] ObjectName,
+    scatteredAccessDescription       [1] IMPLICIT ScatteredAccessDescription }
+
+DefineScatteredAccess-Response ::= NULL
+
+GetScatteredAccessAttributes-Request ::= ObjectName -- ScatteredAccessName
+
+GetScatteredAccessAttributes-Response ::= SEQUENCE {
+    mmsDeletable                     [0] IMPLICIT BOOLEAN,
+    scatteredAccessDescription       [1] IMPLICIT ScatteredAccessDescription,
+    accessControlList                [2] IMPLICIT Identifier OPTIONAL
+    -- Shall not appear in minor version one or two
+}
+END

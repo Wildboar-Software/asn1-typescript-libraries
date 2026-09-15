@@ -80,7 +80,10 @@ enum _enum_for_LCSClientType {
 /**
  * @summary LCSClientType
  * @description
- * 
+ *
+ * Unrecognized values may be ignored if privacy override is used; otherwise
+ * unexpected data (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -99,6 +102,10 @@ type LCSClientType = _enum_for_LCSClientType | ENUMERATED;
 
 /**
  * @summary LCSClientType_emergencyServices
+ * @description
+ *
+ * `emergencyServices (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +114,10 @@ const LCSClientType_emergencyServices: LCSClientType = 0; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary emergencyServices
+ * @description
+ *
+ * `emergencyServices (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +126,10 @@ const emergencyServices: LCSClientType = LCSClientType_emergencyServices; /* SHO
 
 /**
  * @summary LCSClientType_valueAddedServices
+ * @description
+ *
+ * `valueAddedServices (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +138,10 @@ const LCSClientType_valueAddedServices: LCSClientType = 1; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary valueAddedServices
+ * @description
+ *
+ * `valueAddedServices (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +150,10 @@ const valueAddedServices: LCSClientType = LCSClientType_valueAddedServices; /* S
 
 /**
  * @summary LCSClientType_plmnOperatorServices
+ * @description
+ *
+ * `plmnOperatorServices (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +162,10 @@ const LCSClientType_plmnOperatorServices: LCSClientType = 2; /* LONG_NAMED_ENUME
 
 /**
  * @summary plmnOperatorServices
+ * @description
+ *
+ * `plmnOperatorServices (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +174,10 @@ const plmnOperatorServices: LCSClientType = LCSClientType_plmnOperatorServices; 
 
 /**
  * @summary LCSClientType_lawfulInterceptServices
+ * @description
+ *
+ * `lawfulInterceptServices (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +186,10 @@ const LCSClientType_lawfulInterceptServices: LCSClientType = 3; /* LONG_NAMED_EN
 
 /**
  * @summary lawfulInterceptServices
+ * @description
+ *
+ * `lawfulInterceptServices (3)` (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * @constant
  * @type {number}
  */

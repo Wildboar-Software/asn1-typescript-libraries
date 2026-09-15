@@ -76,7 +76,12 @@ import { ForwardGroupCallSignallingArg, _decode_ForwardGroupCallSignallingArg, _
 /**
  * @summary forwardGroupCallSignalling
  * @description
- * 
+ *
+ * MAP_FORWARD_GROUP_CALL_SIGNALLING: Anchor MSC transmits Group Call
+ * notifications to the Relay MSC. Non-confirmed. Typical path: Anchor MSC→Relay
+ * MSC. Local opcode 42. Timer class `s` (3 s to 10 s). (3GPP TS 29.002 V19.1.0
+ * clauses 10.6.1, 17.1.2, 17.3.2.30 and 17.6.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

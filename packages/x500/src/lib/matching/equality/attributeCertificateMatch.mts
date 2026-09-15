@@ -14,6 +14,17 @@ import type {
 import compareIssuerSerial from "../../comparators/compareIssuerSerial.mjs";
 import compareGeneralNames from "../../comparators/compareGeneralNames.mjs";
 
+/**
+ * Rec. ITU-T X.509 (10/2019), clause 19.3.2
+ * `attributeCertificateMatch`.
+ *
+ * Broader AC selection than exact match. TRUE iff every present
+ * `AttributeCertificateAssertion` component matches: holder
+ * `baseCertificateID` vs `IssuerSerial`, or `holderName` vs holder
+ * entity names; issuer `GeneralNames`; `attCertValidity` within
+ * the AC validity period; each asserted `attType` present in the
+ * AC `attributes`. At least one component shall be present.
+ */
 export
 const attributeCertificateMatch: EqualityMatcher = (
     assertion: ASN1Element,

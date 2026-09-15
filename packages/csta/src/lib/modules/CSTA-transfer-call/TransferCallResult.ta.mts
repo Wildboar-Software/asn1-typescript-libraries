@@ -23,7 +23,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary TransferCallResult
  * @description
- * 
+ *
+ * Positive acknowledgement for Transfer Call (ECMA-269 §17.1.27
+ * / ECMA-285 §15.1.27). Returns a connection in the resulting
+ * call and, when CallIDs change, the old-to-new connection list
+ * (§12.3.9 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +50,56 @@ class TransferCallResult {
     constructor (
         /**
          * @summary `transferredCall`.
+         * @description
+         *
+         * Mandatory. A connection in the resulting transferred
+         * call (new CallID may be allocated).
+         *
          * @public
          * @readonly
          */
         readonly transferredCall: ConnectionID,
         /**
          * @summary `connections`.
+         * @description
+         *
+         * Optional connection list linking old ConnectionIDs of
+         * remaining devices to replacements when CallIDs change
+         * (§12.3.9 FR 8, §12.2.9).
+         *
          * @public
          * @readonly
          */
         readonly connections: OPTIONAL<ConnectionList>,
         /**
          * @summary `transferredCallInfo`.
+         * @description
+         *
+         * Optional connection information for `transferredCall`
+         * (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly transferredCallInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageDataList`.
+         * @description
+         *
+         * Optional call-linkage data pairing old and new call
+         * identities (§12.2.5, §12.3.9 FR 8).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageDataList: OPTIONAL<CallLinkageDataList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

@@ -82,7 +82,11 @@ enum _enum_for_Used_RAT_Type {
 /**
  * @summary Used_RAT_Type
  * @description
- * 
+ *
+ * RAT currently used by the UE. Value `e-utran` indicates wide-band E-UTRAN.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.1.7 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

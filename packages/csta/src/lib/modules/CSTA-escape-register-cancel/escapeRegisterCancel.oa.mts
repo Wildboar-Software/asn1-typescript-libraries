@@ -17,7 +17,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary escapeRegisterCancel
  * @description
- * 
+ *
+ * Unregisters the computing function for escape services. After the positive
+ * acknowledgement the switching function sends no further Escape requests for
+ * that registration (ECMA-269 §29.1.3 / §9.4.2.1).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:367. Errors: `universalFailure` (ECMA-285 §27.1.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -72,7 +72,11 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary subscriberDataModificationNotificationContext_v3
  * @description
- * 
+ *
+ * Subscriber data modification notification between HLR and gsmSCF. Initiator
+ * is HLR; responder is gsmSCF. Version 3 only (3GPP TS 29.002 V19.1.0 clause
+ * 17.3.2.48).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

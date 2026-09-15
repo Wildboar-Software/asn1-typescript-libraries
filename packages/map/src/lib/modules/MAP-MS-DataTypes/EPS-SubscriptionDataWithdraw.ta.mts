@@ -72,7 +72,13 @@ import { ContextIdList, _decode_ContextIdList, _encode_ContextIdList } from "../
 /**
  * @summary EPS_SubscriptionDataWithdraw
  * @description
- * 
+ *
+ * Indicates that EPS Subscription Data shall be deleted from the MME: either
+ * all data or only APN configurations whose identifiers are listed. Used only
+ * by the SGSN and MME; if the VLR receives this parameter it shall ignore it.
+ * Not applicable for the CSS (3GPP TS 29.002 V19.1.0 clauses 7.6.3.45A and
+ * 8.8.2.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

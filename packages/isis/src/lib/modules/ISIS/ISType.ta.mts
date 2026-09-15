@@ -15,6 +15,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ISType
  * @description
  *
+ * Type of this Intermediate System. Settable only via CREATE
+ * (`supplyValueOnCreate-B`); read-only afterwards. Level 2 ISs also perform
+ * Level 1 functions unless a circuit is in `manualL2OnlyMode`.
+ *
+ * (ISO/IEC 10589:2002 clauses 6.1, 11.2.4 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -32,6 +38,12 @@ export enum _enum_for_ISType {
  * @summary ISType
  * @description
  *
+ * Type of this Intermediate System. Settable only via CREATE
+ * (`supplyValueOnCreate-B`); read-only afterwards. Level 2 ISs also perform
+ * Level 1 functions unless a circuit is in `manualL2OnlyMode`.
+ *
+ * (ISO/IEC 10589:2002 clauses 6.1, 11.2.4 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -46,6 +58,12 @@ export type ISType = _enum_for_ISType;
  * @summary ISType
  * @description
  *
+ * Type of this Intermediate System. Settable only via CREATE
+ * (`supplyValueOnCreate-B`); read-only afterwards. Level 2 ISs also perform
+ * Level 1 functions unless a circuit is in `manualL2OnlyMode`.
+ *
+ * (ISO/IEC 10589:2002 clauses 6.1, 11.2.4 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -58,6 +76,12 @@ export const ISType = _enum_for_ISType;
 
 /**
  * @summary ISType_level1IS
+ * @description
+ *
+ * Level 1 Intermediate System (intra-area routeing).
+ *
+ * (ISO/IEC 10589:2002 clauses 6.1 and 11.2.4).
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +98,12 @@ export const level1IS: ISType =
 
 /**
  * @summary ISType_level2IS
+ * @description
+ *
+ * Level 2 Intermediate System (also participates in the Level 2 subdomain).
+ *
+ * (ISO/IEC 10589:2002 clauses 6.1 and 11.2.4).
+ *
  * @constant
  * @type {number}
  */

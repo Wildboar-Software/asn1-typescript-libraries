@@ -16,6 +16,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary ConnectionId
  * @description
  *
+ * Naming attribute of a `connection` managed object (local view of a
+ * single-peer connection).
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.3, E.1.9 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

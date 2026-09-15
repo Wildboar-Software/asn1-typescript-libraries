@@ -73,7 +73,12 @@ import { UESBI_IuB, _decode_UESBI_IuB, _encode_UESBI_IuB } from "../MAP-MS-DataT
 /**
  * @summary UESBI_Iu
  * @description
- * 
+ *
+ * UE Specific Behaviour Information over the Iu interface, as in 3GPP TS
+ * 25.413.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.6.20 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +95,24 @@ class UESBI_Iu {
     constructor (
         /**
          * @summary `uesbi_IuA`.
+         * @description
+         *
+         * UESBI-IuA as in 3GPP TS 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.20).
+         *
          * @public
          * @readonly
          */
         readonly uesbi_IuA: OPTIONAL<UESBI_IuA>,
         /**
          * @summary `uesbi_IuB`.
+         * @description
+         *
+         * UESBI-IuB as in 3GPP TS 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.20).
+         *
          * @public
          * @readonly
          */

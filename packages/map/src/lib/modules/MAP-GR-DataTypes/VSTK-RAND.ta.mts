@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary VSTK_RAND
  * @description
- * 
+ *
+ * 5 octets: 36-bit value in bit 7 of octet 1 to bit 4 of octet 5; bits 3–0 of
+ * octet 5 padded with zeros (3GPP TS 29.002 V19.1.0 clause 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

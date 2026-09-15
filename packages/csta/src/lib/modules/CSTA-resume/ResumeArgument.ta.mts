@@ -22,7 +22,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ResumeArgument
  * @description
- * 
+ *
+ * Connection, optional message, resource, and duration (ECMA-269 §26.1.11.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,30 +47,52 @@ class ResumeArgument {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Connection on which to resume (ECMA-269 §26.1.11.1).
+         *
          * @public
          * @readonly
          */
         readonly connection: ConnectionID,
         /**
          * @summary `messageToResume`.
+         * @description
+         *
+         * Message to resume when several are active (ECMA-269 §26.1.11.1).
+         *
          * @public
          * @readonly
          */
         readonly messageToResume: OPTIONAL<MessageID>,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `duration`.
+         * @description
+         *
+         * Optional duration (ECMA-269 §26.1.11.1).
+         *
          * @public
          * @readonly
          */
         readonly duration: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

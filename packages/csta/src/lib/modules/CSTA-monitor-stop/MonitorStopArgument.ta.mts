@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary MonitorStopArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 15-6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class MonitorStopArgument {
     constructor (
         /**
          * @summary `crossRefIdentifier`.
+         * @description
+         *
+         * Monitor to stop.
          * @public
          * @readonly
          */
         readonly crossRefIdentifier: MonitorCrossRefID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 15-6.
          * @public
          * @readonly
          */

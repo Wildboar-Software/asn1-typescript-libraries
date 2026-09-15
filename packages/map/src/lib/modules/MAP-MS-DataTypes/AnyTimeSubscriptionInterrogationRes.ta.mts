@@ -85,7 +85,12 @@ import { EctData, _decode_EctData, _encode_EctData } from "../MAP-MS-DataTypes/E
 /**
  * @summary AnyTimeSubscriptionInterrogationRes
  * @description
- * 
+ *
+ * Result of MAP-ANY-TIME-SUBSCRIPTION-INTERROGATION, returning requested
+ * CF/CB/ODB/CAMEL data, supported CAMEL phases and offered CAMEL4 CSIs in
+ * VLR/SGSN, MSISDN-BS list, CSG subscription data, and CW/CH/CLIP/CLIR/ECT data
+ * (3GPP TS 29.002 V19.1.0 clauses 8.11.3.2 and 8.11.3.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -116,36 +121,66 @@ class AnyTimeSubscriptionInterrogationRes {
     constructor (
         /**
          * @summary `callForwardingData`.
+         * @description
+         *
+         * Extensible call forwarding feature list and Notification to CSE flag
+         * (3GPP TS 29.002 V19.1.0 clauses 8.11.3.2 and 7.6.3.84).
+         *
          * @public
          * @readonly
          */
         readonly callForwardingData: OPTIONAL<CallForwardingData>,
         /**
          * @summary `callBarringData`.
+         * @description
+         *
+         * Extensible call barring feature list and Notification to CSE flag
+         * (3GPP TS 29.002 V19.1.0 clauses 8.11.3.2 and 7.6.3.83).
+         *
          * @public
          * @readonly
          */
         readonly callBarringData: OPTIONAL<CallBarringData>,
         /**
          * @summary `odb_Info`.
+         * @description
+         *
+         * ODB data and Notification to CSE flag (3GPP TS 29.002 V19.1.0 clauses
+         * 8.11.3.2 and 7.6.3.88).
+         *
          * @public
          * @readonly
          */
         readonly odb_Info: OPTIONAL<ODB_Info>,
         /**
          * @summary `camel_SubscriptionInfo`.
+         * @description
+         *
+         * CSI that can be controlled by the CSE (3GPP TS 29.002 V19.1.0 clauses
+         * 8.11.3.2 and 7.6.3.78).
+         *
          * @public
          * @readonly
          */
         readonly camel_SubscriptionInfo: OPTIONAL<CAMEL_SubscriptionInfo>,
         /**
          * @summary `supportedVLR_CAMEL_Phases`.
+         * @description
+         *
+         * CAMEL phases supported in the VLR (3GPP TS 29.002 V19.1.0 clauses
+         * 8.11.3.2 and 7.6.3.36).
+         *
          * @public
          * @readonly
          */
         readonly supportedVLR_CAMEL_Phases: OPTIONAL<SupportedCamelPhases>,
         /**
          * @summary `supportedSGSN_CAMEL_Phases`.
+         * @description
+         *
+         * CAMEL phases supported in the SGSN (3GPP TS 29.002 V19.1.0 clauses
+         * 8.11.3.2 and 7.6.3.36A).
+         *
          * @public
          * @readonly
          */
@@ -158,12 +193,22 @@ class AnyTimeSubscriptionInterrogationRes {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `offeredCamel4CSIsInVLR`.
+         * @description
+         *
+         * CAMEL phase 4 CSIs offered in the VLR (3GPP TS 29.002 V19.1.0 clauses
+         * 8.11.3.2 and 7.6.3.36B).
+         *
          * @public
          * @readonly
          */
         readonly offeredCamel4CSIsInVLR: OPTIONAL<OfferedCamel4CSIs>,
         /**
          * @summary `offeredCamel4CSIsInSGSN`.
+         * @description
+         *
+         * CAMEL phase 4 CSIs offered in the SGSN (3GPP TS 29.002 V19.1.0
+         * clauses 8.11.3.2 and 7.6.3.36C).
+         *
          * @public
          * @readonly
          */
@@ -176,36 +221,62 @@ class AnyTimeSubscriptionInterrogationRes {
         readonly msisdn_BS_List: OPTIONAL<MSISDN_BS_List>,
         /**
          * @summary `csg_SubscriptionDataList`.
+         * @description
+         *
+         * CSG subscription data (3GPP TS 29.002 V19.1.0 clause 8.11.3.2).
+         *
          * @public
          * @readonly
          */
         readonly csg_SubscriptionDataList: OPTIONAL<CSG_SubscriptionDataList>,
         /**
          * @summary `cw_Data`.
+         * @description
+         *
+         * Call Waiting data (3GPP TS 29.002 V19.1.0 clause 8.11.3.2).
+         *
          * @public
          * @readonly
          */
         readonly cw_Data: OPTIONAL<CallWaitingData>,
         /**
          * @summary `ch_Data`.
+         * @description
+         *
+         * Call Hold data (3GPP TS 29.002 V19.1.0 clause 8.11.3.2).
+         *
          * @public
          * @readonly
          */
         readonly ch_Data: OPTIONAL<CallHoldData>,
         /**
          * @summary `clip_Data`.
+         * @description
+         *
+         * Calling Line Identification Presentation data (3GPP TS 29.002 V19.1.0
+         * clause 8.11.3.2).
+         *
          * @public
          * @readonly
          */
         readonly clip_Data: OPTIONAL<ClipData>,
         /**
          * @summary `clir_Data`.
+         * @description
+         *
+         * Calling Line Identification Restriction data (3GPP TS 29.002 V19.1.0
+         * clause 8.11.3.2).
+         *
          * @public
          * @readonly
          */
         readonly clir_Data: OPTIONAL<ClirData>,
         /**
          * @summary `ect_data`.
+         * @description
+         *
+         * Explicit Call Transfer data (3GPP TS 29.002 V19.1.0 clause 8.11.3.2).
+         *
          * @public
          * @readonly
          */

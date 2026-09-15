@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary V23Drate
  * @description
- * 
+ *
+ * V.23 data signalling rate (Table 13/V.59): `dR1200`(0) 1200 bit/s, `dR600`(1)
+ * 600 bit/s, `dR75`(2) 75 bit/s. ITU-T Rec. V.59 (11/2000) §6.8.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

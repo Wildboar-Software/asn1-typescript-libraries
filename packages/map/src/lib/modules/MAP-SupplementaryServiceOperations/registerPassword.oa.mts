@@ -85,7 +85,14 @@ import { numberOfPW_AttemptsViolation } from "../MAP-Errors/numberOfPW-AttemptsV
 /**
  * @summary registerPassword
  * @description
- * 
+ *
+ * MAP_REGISTER_PASSWORD: mobile subscriber requests registration of a new
+ * password. Used MSC→VLR and VLR→HLR; the VLR relays to the HLR. Linked to
+ * `getPassword`. Confirmed. Typical MAP path: VLR→HLR. Local opcode 17. Timer
+ * class `ml` (1 min to 10 min). Distinctive errors: `pw-RegistrationFailure`,
+ * `negativePW-Check`, `numberOfPW-AttemptsViolation`. (3GPP TS 29.002 V19.1.0
+ * clauses 11.7.1, 17.1.2, 17.3.2.19 and 17.6.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

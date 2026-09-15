@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary UtranCivicAddress
  * @description
- * 
+ *
+ * Civic address as in 3GPP TS 25.413 (3GPP TS 29.002 V19.1.0 clauses 7.6.11.11G
+ * and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -1,7 +1,12 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-call-detail-record`.
+ * Call Detail Record types: cross-reference for a CDR transmission session,
+ * transfer mode (after every call, on request, or on threshold), and per-call
+ * charge/destination/bill-to fields. ECMA-269 §6.3, clause 27; ECMA-285 §9.11.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
  */
 export {
     _enum_for_BillingID,

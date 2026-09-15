@@ -73,7 +73,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Ext_ForwOptions
  * @description
- * 
+ *
+ * Extensible forwarding options: notification to forwarding party, redirecting
+ * presentation, notification to calling party, and forwarding reason, as in
+ * 3GPP TS 22.082. Octets 2-5 are reserved and shall be discarded if received
+ * and not understood. Bits 3 and 4 shall be ignored by the VLR in Insert
+ * Subscriber Data (3GPP TS 29.002 V19.1.0 clauses 7.6.3.18, 8.8.1.3 and
+ * 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

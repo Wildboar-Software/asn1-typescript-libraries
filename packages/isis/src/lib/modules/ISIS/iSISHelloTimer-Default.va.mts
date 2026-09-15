@@ -19,6 +19,15 @@ import {
  * @summary iSISHelloTimer_Default
  * @description
  *
+ * Default period between IIH PDUs: 3 s. Also used as the period between ISH
+ * PDUs when polling ES configuration. Holding timer for IIHs is `iSISHelloTimer
+ * × ISISHoldingMultiplier` (10).
+ *
+ * GMI `Timer` encoding: value = mantissa × 10^exponent seconds (ISO/IEC
+ * 10589:2002 Annex E.1.9).
+ *
+ * (ISO/IEC 10589:2002 clauses 7.5 table 2, 11.2.5.9 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

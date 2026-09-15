@@ -16,7 +16,14 @@ import {
 /**
  * @summary DigitsData
  * @description
- * 
+ *
+ * Collected DTMF/rotary digits. Present only when collection type is digits
+ * (ECMA-269 §25.1.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +40,32 @@ class DigitsData {
     constructor (
         /**
          * @summary `digitsDetected`.
+         * @description
+         *
+         * IA5 DTMF/rotary digit string, size 0..64 (ECMA-269 §25.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly digitsDetected: IA5String,
         /**
          * @summary `digitsDuration`.
+         * @description
+         *
+         * Per-digit durations; if present, one per detected digit. DTMF only
+         * (ECMA-269 §25.1.1.1).
+         *
          * @public
          * @readonly
          */
         readonly digitsDuration: OPTIONAL<INTEGER[]>,
         /**
          * @summary `digitsPauseDuration`.
+         * @description
+         *
+         * Pause before each digit; if present, one per detected digit (ECMA-269
+         * §25.1.1.1).
+         *
          * @public
          * @readonly
          */

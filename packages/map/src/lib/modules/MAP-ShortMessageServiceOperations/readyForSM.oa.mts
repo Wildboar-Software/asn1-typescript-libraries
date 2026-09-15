@@ -81,7 +81,14 @@ import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 /**
  * @summary readyForSM
  * @description
- * 
+ *
+ * MAP_READY_FOR_SM: indicates that the subscriber is available for SM (memory
+ * available, or radio/IMS contact while a message-waiting flag is active). Used
+ * MSC↔VLR, VLR→HLR, SGSN→HLR, MME→HSS via IWF, and IP-SM-GW→HLR. Confirmed.
+ * Typical MAP path: VLR→HLR or SGSN→HLR. Local opcode 66. Timer class `m` (15 s
+ * to 30 s). (3GPP TS 29.002 V19.1.0 clauses 12.4.1, 17.1.2, 17.3.2.25 and
+ * 17.6.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

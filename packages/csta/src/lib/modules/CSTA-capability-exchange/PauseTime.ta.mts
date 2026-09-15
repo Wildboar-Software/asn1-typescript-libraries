@@ -8,7 +8,14 @@ import { INTEGER, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary PauseTime
  * @description
- * 
+ * Duration in milliseconds of a pause (comma in Diallable Digits) in a dialling
+ * sequence (1..2000). Omitted from Get Switching Function Capabilities when
+ * unknown (ECMA-269 §13.1.4.2.1 Table 13-9, ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

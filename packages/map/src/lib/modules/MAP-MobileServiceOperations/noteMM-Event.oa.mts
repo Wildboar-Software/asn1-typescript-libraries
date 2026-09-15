@@ -81,7 +81,14 @@ import { mm_EventNotSupported } from "../MAP-Errors/mm-EventNotSupported.oa.mjs"
 /**
  * @summary noteMM_Event
  * @description
- * 
+ *
+ * MAP_NOTE_MM_EVENT: VLR or SGSN reports a successfully processed
+ * mobility-management event to the gsmSCF (or Presence Network Agent) when the
+ * subscriber has M-CSI or MG-CSI and the event is marked for reporting. Typical
+ * path: VLR→gsmSCF (also SGSN→gsmSCF). Local opcode 89. Timer class `m` (15 s
+ * to 30 s). Distinctive error: `mm-EventNotSupported`. (3GPP TS 29.002 V19.1.0
+ * clauses 8.1.8.1, 17.1.2, 17.3.2.46 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

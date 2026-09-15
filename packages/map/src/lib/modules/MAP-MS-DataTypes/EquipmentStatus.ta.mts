@@ -72,7 +72,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EquipmentStatus
  * @description
- * 
+ *
+ * Status of the mobile equipment as defined in 3GPP TS 22.016:
+ * permitted-listed, prohibited-listed or tracking-listed. Returned by
+ * MAP_CHECK_IMEI if Equipment Status was requested (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.2 and 8.7.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,7 +99,12 @@ enum _enum_for_EquipmentStatus {
 /**
  * @summary EquipmentStatus
  * @description
- * 
+ *
+ * Status of the mobile equipment as defined in 3GPP TS 22.016:
+ * permitted-listed, prohibited-listed or tracking-listed. Returned by
+ * MAP_CHECK_IMEI if Equipment Status was requested (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.2 and 8.7.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -112,7 +122,12 @@ type EquipmentStatus = _enum_for_EquipmentStatus;
 /**
  * @summary EquipmentStatus
  * @description
- * 
+ *
+ * Status of the mobile equipment as defined in 3GPP TS 22.016:
+ * permitted-listed, prohibited-listed or tracking-listed. Returned by
+ * MAP_CHECK_IMEI if Equipment Status was requested (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.2 and 8.7.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

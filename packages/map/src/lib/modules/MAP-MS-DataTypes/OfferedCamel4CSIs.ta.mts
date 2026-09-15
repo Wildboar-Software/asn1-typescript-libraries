@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary OfferedCamel4CSIs
  * @description
- * 
+ *
+ * Which CAMEL phase 4 CSIs are offered, as in 3GPP TS 23.078. A node supporting
+ * CAMEL phase 4 shall mark all Camel4 CSIs it offers. Other bit values shall be
+ * discarded. An IWF shall omit this parameter in Insert Subscriber Data. SIZE
+ * (7..16). (3GPP TS 29.002 V19.1.0 clauses 7.6.3.36D, 8.8.1.3, and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,6 +98,11 @@ type OfferedCamel4CSIs = BIT_STRING;
 
 /**
  * @summary OfferedCamel4CSIs_o_csi
+ * @description
+ *
+ * O-CSI of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export
@@ -100,6 +110,11 @@ const OfferedCamel4CSIs_o_csi: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary o_csi
+ * @description
+ *
+ * O-CSI of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export
@@ -107,6 +122,11 @@ const o_csi: number = OfferedCamel4CSIs_o_csi; /* SHORT_NAMED_BIT */
 
 /**
  * @summary OfferedCamel4CSIs_d_csi
+ * @description
+ *
+ * D-CSI of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export
@@ -114,6 +134,11 @@ const OfferedCamel4CSIs_d_csi: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary d_csi
+ * @description
+ *
+ * D-CSI of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export
@@ -121,6 +146,11 @@ const d_csi: number = OfferedCamel4CSIs_d_csi; /* SHORT_NAMED_BIT */
 
 /**
  * @summary OfferedCamel4CSIs_vt_csi
+ * @description
+ *
+ * VT-CSI of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export
@@ -128,6 +158,11 @@ const OfferedCamel4CSIs_vt_csi: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary vt_csi
+ * @description
+ *
+ * VT-CSI of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export
@@ -135,6 +170,11 @@ const vt_csi: number = OfferedCamel4CSIs_vt_csi; /* SHORT_NAMED_BIT */
 
 /**
  * @summary OfferedCamel4CSIs_t_csi
+ * @description
+ *
+ * T-CSI of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export
@@ -142,6 +182,11 @@ const OfferedCamel4CSIs_t_csi: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary t_csi
+ * @description
+ *
+ * T-CSI of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export
@@ -149,6 +194,11 @@ const t_csi: number = OfferedCamel4CSIs_t_csi; /* SHORT_NAMED_BIT */
 
 /**
  * @summary OfferedCamel4CSIs_mt_sms_csi
+ * @description
+ *
+ * MT-SMS-CSI of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export
@@ -156,6 +206,11 @@ const OfferedCamel4CSIs_mt_sms_csi: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary mt_sms_csi
+ * @description
+ *
+ * MT-SMS-CSI of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export
@@ -163,6 +218,11 @@ const mt_sms_csi: number = OfferedCamel4CSIs_mt_sms_csi; /* SHORT_NAMED_BIT */
 
 /**
  * @summary OfferedCamel4CSIs_mg_csi
+ * @description
+ *
+ * MG-CSI of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export
@@ -170,6 +230,11 @@ const OfferedCamel4CSIs_mg_csi: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary mg_csi
+ * @description
+ *
+ * MG-CSI of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export
@@ -177,6 +242,11 @@ const mg_csi: number = OfferedCamel4CSIs_mg_csi; /* SHORT_NAMED_BIT */
 
 /**
  * @summary OfferedCamel4CSIs_psi_enhancements
+ * @description
+ *
+ * PSI enhancements of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export
@@ -184,6 +254,11 @@ const OfferedCamel4CSIs_psi_enhancements: number = 6; /* LONG_NAMED_BIT */
 
 /**
  * @summary psi_enhancements
+ * @description
+ *
+ * PSI enhancements of CAMEL phase 4 is offered (3GPP TS 23.078). (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.3.36D and 17.7.1)
+ *
  * @constant
  */
 export

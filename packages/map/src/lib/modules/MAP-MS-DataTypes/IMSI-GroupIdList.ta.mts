@@ -73,7 +73,11 @@ import { IMSI_GroupId, _decode_IMSI_GroupId, _encode_IMSI_GroupId } from "../MAP
 /**
  * @summary IMSI_GroupIdList
  * @description
- * 
+ *
+ * List of IMSI-Group identifiers the subscriber belongs to (SIZE 1..50). Sent
+ * in MAP_INSERT_SUBSCRIBER_DATA. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.102,
+ * 8.8.1.3, and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

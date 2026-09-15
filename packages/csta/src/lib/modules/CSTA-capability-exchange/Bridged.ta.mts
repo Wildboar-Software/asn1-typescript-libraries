@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary Bridged
  * @description
- * 
+ * Capability bitmap for the Bridged event (ECMA-269 C.6.1, ECMA-285 §9.10).
+ * Presence of this entry in `CallControlEvtsList` means the SF supports that
+ * event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +39,9 @@ type Bridged = BIT_STRING;
 /**
  * @summary Bridged_correlatorData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `correlatorData` parameter
+ * (ECMA-269 C.6.1).
  */
 export
 const Bridged_correlatorData: number = 0; /* LONG_NAMED_BIT */
@@ -38,6 +49,8 @@ const Bridged_correlatorData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary correlatorData
  * @constant
+ * @description
+ * Alias of `Bridged_correlatorData`.
  */
 export
 const correlatorData: number = Bridged_correlatorData; /* SHORT_NAMED_BIT */
@@ -45,6 +58,9 @@ const correlatorData: number = Bridged_correlatorData; /* SHORT_NAMED_BIT */
 /**
  * @summary Bridged_userData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `userData` parameter (ECMA-269
+ * C.6.1).
  */
 export
 const Bridged_userData: number = 1; /* LONG_NAMED_BIT */
@@ -52,6 +68,8 @@ const Bridged_userData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary userData
  * @constant
+ * @description
+ * Alias of `Bridged_userData`.
  */
 export
 const userData: number = Bridged_userData; /* SHORT_NAMED_BIT */
@@ -59,6 +77,9 @@ const userData: number = Bridged_userData; /* SHORT_NAMED_BIT */
 /**
  * @summary Bridged_servicesPermitted
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.1).
  */
 export
 const Bridged_servicesPermitted: number = 2; /* LONG_NAMED_BIT */
@@ -66,6 +87,8 @@ const Bridged_servicesPermitted: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary servicesPermitted
  * @constant
+ * @description
+ * Alias of `Bridged_servicesPermitted`.
  */
 export
 const servicesPermitted: number = Bridged_servicesPermitted; /* SHORT_NAMED_BIT */
@@ -73,6 +96,9 @@ const servicesPermitted: number = Bridged_servicesPermitted; /* SHORT_NAMED_BIT 
 /**
  * @summary Bridged_mediaCallCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `mediaCallCharacteristics`
+ * parameter (ECMA-269 C.6.1).
  */
 export
 const Bridged_mediaCallCharacteristics: number = 3; /* LONG_NAMED_BIT */
@@ -80,6 +106,8 @@ const Bridged_mediaCallCharacteristics: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary mediaCallCharacteristics
  * @constant
+ * @description
+ * Alias of `Bridged_mediaCallCharacteristics`.
  */
 export
 const mediaCallCharacteristics: number = Bridged_mediaCallCharacteristics; /* SHORT_NAMED_BIT */
@@ -87,6 +115,9 @@ const mediaCallCharacteristics: number = Bridged_mediaCallCharacteristics; /* SH
 /**
  * @summary Bridged_callCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callCharacteristics` parameter
+ * (ECMA-269 C.6.1).
  */
 export
 const Bridged_callCharacteristics: number = 4; /* LONG_NAMED_BIT */
@@ -94,6 +125,8 @@ const Bridged_callCharacteristics: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary callCharacteristics
  * @constant
+ * @description
+ * Alias of `Bridged_callCharacteristics`.
  */
 export
 const callCharacteristics: number = Bridged_callCharacteristics; /* SHORT_NAMED_BIT */
@@ -101,6 +134,9 @@ const callCharacteristics: number = Bridged_callCharacteristics; /* SHORT_NAMED_
 /**
  * @summary Bridged_bridgedConnectionInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.1).
  */
 export
 const Bridged_bridgedConnectionInfo: number = 5; /* LONG_NAMED_BIT */
@@ -108,6 +144,8 @@ const Bridged_bridgedConnectionInfo: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary bridgedConnectionInfo
  * @constant
+ * @description
+ * Alias of `Bridged_bridgedConnectionInfo`.
  */
 export
 const bridgedConnectionInfo: number = Bridged_bridgedConnectionInfo; /* SHORT_NAMED_BIT */
@@ -115,6 +153,9 @@ const bridgedConnectionInfo: number = Bridged_bridgedConnectionInfo; /* SHORT_NA
 /**
  * @summary Bridged_languagePreferences
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `languagePreferences` parameter
+ * (ECMA-269 C.6.1).
  */
 export
 const Bridged_languagePreferences: number = 8; /* LONG_NAMED_BIT */
@@ -122,6 +163,8 @@ const Bridged_languagePreferences: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary languagePreferences
  * @constant
+ * @description
+ * Alias of `Bridged_languagePreferences`.
  */
 export
 const languagePreferences: number = Bridged_languagePreferences; /* SHORT_NAMED_BIT */
@@ -129,6 +172,9 @@ const languagePreferences: number = Bridged_languagePreferences; /* SHORT_NAMED_
 /**
  * @summary Bridged_callLinkageData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callLinkageData` parameter
+ * (ECMA-269 C.6.1).
  */
 export
 const Bridged_callLinkageData: number = 7; /* LONG_NAMED_BIT */
@@ -136,6 +182,8 @@ const Bridged_callLinkageData: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary callLinkageData
  * @constant
+ * @description
+ * Alias of `Bridged_callLinkageData`.
  */
 export
 const callLinkageData: number = Bridged_callLinkageData; /* SHORT_NAMED_BIT */
@@ -143,6 +191,9 @@ const callLinkageData: number = Bridged_callLinkageData; /* SHORT_NAMED_BIT */
 /**
  * @summary Bridged_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.6.1).
  */
 export
 const Bridged_privateData: number = 6; /* LONG_NAMED_BIT */
@@ -150,6 +201,8 @@ const Bridged_privateData: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `Bridged_privateData`.
  */
 export
 const privateData: number = Bridged_privateData; /* SHORT_NAMED_BIT */
@@ -157,6 +210,9 @@ const privateData: number = Bridged_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary Bridged_locationinfoList
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.6.1).
  */
 export
 const Bridged_locationinfoList: number = 9; /* LONG_NAMED_BIT */
@@ -164,6 +220,8 @@ const Bridged_locationinfoList: number = 9; /* LONG_NAMED_BIT */
 /**
  * @summary locationinfoList
  * @constant
+ * @description
+ * Alias of `Bridged_locationinfoList`.
  */
 export
 const locationinfoList: number = Bridged_locationinfoList; /* SHORT_NAMED_BIT */

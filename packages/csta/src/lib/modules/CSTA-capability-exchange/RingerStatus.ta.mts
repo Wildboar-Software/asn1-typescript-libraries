@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary RingerStatus
  * @description
- * 
+ * Capability bitmap for the Ringer Status event (ECMA-269 C.13.9, ECMA-285
+ * §9.10). Presence of this entry in `PhysDevEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +36,9 @@ type RingerStatus = BIT_STRING;
 /**
  * @summary RingerStatus_ringerModeRinging
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.13.9).
  */
 export
 const RingerStatus_ringerModeRinging: number = 0; /* LONG_NAMED_BIT */
@@ -35,6 +46,8 @@ const RingerStatus_ringerModeRinging: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary ringerModeRinging
  * @constant
+ * @description
+ * Alias of `RingerStatus_ringerModeRinging`.
  */
 export
 const ringerModeRinging: number = RingerStatus_ringerModeRinging; /* SHORT_NAMED_BIT */
@@ -42,6 +55,9 @@ const ringerModeRinging: number = RingerStatus_ringerModeRinging; /* SHORT_NAMED
 /**
  * @summary RingerStatus_ringerModeNotRinging
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.13.9).
  */
 export
 const RingerStatus_ringerModeNotRinging: number = 1; /* LONG_NAMED_BIT */
@@ -49,6 +65,8 @@ const RingerStatus_ringerModeNotRinging: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary ringerModeNotRinging
  * @constant
+ * @description
+ * Alias of `RingerStatus_ringerModeNotRinging`.
  */
 export
 const ringerModeNotRinging: number = RingerStatus_ringerModeNotRinging; /* SHORT_NAMED_BIT */
@@ -56,6 +74,9 @@ const ringerModeNotRinging: number = RingerStatus_ringerModeNotRinging; /* SHORT
 /**
  * @summary RingerStatus_ringCount
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.13.9).
  */
 export
 const RingerStatus_ringCount: number = 2; /* LONG_NAMED_BIT */
@@ -63,6 +84,8 @@ const RingerStatus_ringCount: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary ringCount
  * @constant
+ * @description
+ * Alias of `RingerStatus_ringCount`.
  */
 export
 const ringCount: number = RingerStatus_ringCount; /* SHORT_NAMED_BIT */
@@ -70,6 +93,9 @@ const ringCount: number = RingerStatus_ringCount; /* SHORT_NAMED_BIT */
 /**
  * @summary RingerStatus_ringPattern
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.13.9).
  */
 export
 const RingerStatus_ringPattern: number = 3; /* LONG_NAMED_BIT */
@@ -77,6 +103,8 @@ const RingerStatus_ringPattern: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary ringPattern
  * @constant
+ * @description
+ * Alias of `RingerStatus_ringPattern`.
  */
 export
 const ringPattern: number = RingerStatus_ringPattern; /* SHORT_NAMED_BIT */
@@ -84,6 +112,9 @@ const ringPattern: number = RingerStatus_ringPattern; /* SHORT_NAMED_BIT */
 /**
  * @summary RingerStatus_ringVolumeAbs
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.13.9).
  */
 export
 const RingerStatus_ringVolumeAbs: number = 4; /* LONG_NAMED_BIT */
@@ -91,6 +122,8 @@ const RingerStatus_ringVolumeAbs: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary ringVolumeAbs
  * @constant
+ * @description
+ * Alias of `RingerStatus_ringVolumeAbs`.
  */
 export
 const ringVolumeAbs: number = RingerStatus_ringVolumeAbs; /* SHORT_NAMED_BIT */
@@ -98,6 +131,9 @@ const ringVolumeAbs: number = RingerStatus_ringVolumeAbs; /* SHORT_NAMED_BIT */
 /**
  * @summary RingerStatus_ringVolumeInc
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.13.9).
  */
 export
 const RingerStatus_ringVolumeInc: number = 5; /* LONG_NAMED_BIT */
@@ -105,6 +141,8 @@ const RingerStatus_ringVolumeInc: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary ringVolumeInc
  * @constant
+ * @description
+ * Alias of `RingerStatus_ringVolumeInc`.
  */
 export
 const ringVolumeInc: number = RingerStatus_ringVolumeInc; /* SHORT_NAMED_BIT */
@@ -112,6 +150,9 @@ const ringVolumeInc: number = RingerStatus_ringVolumeInc; /* SHORT_NAMED_BIT */
 /**
  * @summary RingerStatus_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.13.9).
  */
 export
 const RingerStatus_privateData: number = 6; /* LONG_NAMED_BIT */
@@ -119,6 +160,8 @@ const RingerStatus_privateData: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `RingerStatus_privateData`.
  */
 export
 const privateData: number = RingerStatus_privateData; /* SHORT_NAMED_BIT */

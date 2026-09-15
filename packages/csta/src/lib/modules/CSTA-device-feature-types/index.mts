@@ -1,7 +1,12 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-device-feature-types`.
+ * Device, agent, forwarding, voice-unit, and call-associated parameter types
+ * shared across CSTA services and events. ECMA-269 §6.7.1, §12.2, §12.3, §22;
+ * ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export * from "./AccountInfo.ta.mjs";
 export * from "./AgentID.ta.mjs";

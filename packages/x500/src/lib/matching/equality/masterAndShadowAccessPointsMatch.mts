@@ -15,6 +15,15 @@ function scoreName (name: Name): number {
     return name.rdnSequence.reduce((p, c, i) => (p + (c.length * (10 ** i))), 0);
 }
 
+/**
+ * Rec. ITU-T X.501 (10/2019), clause 24.2.1.9.2
+ * `masterAndShadowAccessPointsMatch`.
+ *
+ * Equality for `MasterAndShadowAccessPoints`. Category and address
+ * are ignored; remaining `ae-title` names must be the same set
+ * (same count, each pair matching via `distinguishedNameMatch`
+ * after ordering the SET OF elements in any convenient fashion).
+ */
 export
 const masterAndShadowAccessPointsMatch: EqualityMatcher = (
     assertion: ASN1Element,

@@ -77,7 +77,13 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary CDRInformationItem
  * @description
- * 
+ *
+ * One call-detail record: parties, media, charged device, connection times,
+ * billing, charging, supplementary services, and termination reason. Used for
+ * charging and statistics. ECMA-269 §27.1.2.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -120,174 +126,301 @@ class CDRInformationItem {
     constructor (
         /**
          * @summary `recordNumber`.
+         * @description
+         *
+         * Record number when more than one record is sent (1..128). ECMA-269
+         * §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly recordNumber: OPTIONAL<INTEGER>,
         /**
          * @summary `recordCreationTime`.
+         * @description
+         *
+         * Time the CDR was created. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly recordCreationTime: TimeInfo,
         /**
          * @summary `callingDevice`.
+         * @description
+         *
+         * Calling device. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly callingDevice: OPTIONAL<CallingDeviceID>,
         /**
          * @summary `calledDevice`.
+         * @description
+         *
+         * Called device. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly calledDevice: OPTIONAL<CalledDeviceID>,
         /**
          * @summary `associatedCallingDevice`.
+         * @description
+         *
+         * Network Interface Device associated with the calling device. ECMA-269
+         * §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly associatedCallingDevice: OPTIONAL<AssociatedCallingDeviceID>,
         /**
          * @summary `associatedCalledDevice`.
+         * @description
+         *
+         * Network Interface Device associated with the called device. ECMA-269
+         * §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly associatedCalledDevice: OPTIONAL<AssociatedCalledDeviceID>,
         /**
          * @summary `networkCallingDevice`.
+         * @description
+         *
+         * Calling device as provided by the network. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly networkCallingDevice: OPTIONAL<NetworkCallingDeviceID>,
         /**
          * @summary `networkCalledDevice`.
+         * @description
+         *
+         * Called device as provided by the network. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly networkCalledDevice: OPTIONAL<NetworkCalledDeviceID>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * High-level call characteristics (e.g. ACD). ECMA-269 §27.1.2,
+         * §12.2.4.
+         *
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Media class of the call. ECMA-269 §27.1.2, §12.2.20.
+         *
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `chargedDevice`.
+         * @description
+         *
+         * Attendant or non-attendant charged device. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly chargedDevice: OPTIONAL<ChargedDevice>,
         /**
          * @summary `recordedCall`.
+         * @description
+         *
+         * Call for which details are recorded. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly recordedCall: OPTIONAL<ConnectionID>,
         /**
          * @summary `nodeNumber`.
+         * @description
+         *
+         * Originating node in a switching network (area0–2). ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly nodeNumber: OPTIONAL<NodeNumber>,
         /**
          * @summary `tariffTable`.
+         * @description
+         *
+         * Tariff table for the network type (PSTN, ISDN, etc.). ECMA-269
+         * §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly tariffTable: OPTIONAL<INTEGER>,
         /**
          * @summary `connectionStart`.
+         * @description
+         *
+         * Date and time the connection was created. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly connectionStart: OPTIONAL<TimeInfo>,
         /**
          * @summary `connectionEnd`.
+         * @description
+         *
+         * Date and time the connection ended. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly connectionEnd: OPTIONAL<TimeInfo>,
         /**
          * @summary `connectionDuration`.
+         * @description
+         *
+         * Connection duration in tenths of a second. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly connectionDuration: OPTIONAL<INTEGER>,
         /**
          * @summary `accessCode`.
+         * @description
+         *
+         * Dialled access number (e.g. business vs private external). ECMA-269
+         * §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly accessCode: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `carrier`.
+         * @description
+         *
+         * Network that was used. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly carrier: OPTIONAL<INTEGER>,
         /**
          * @summary `selectedRoute`.
+         * @description
+         *
+         * Route that was used. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly selectedRoute: OPTIONAL<INTEGER>,
         /**
          * @summary `billingID`.
+         * @description
+         *
+         * Type of charging (normal, reverse, credit card, etc.). ECMA-269
+         * §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly billingID: OPTIONAL<BillingID>,
         /**
          * @summary `chargingInfo`.
+         * @description
+         *
+         * Charging or currency units charged to a device. ECMA-269 §27.1.2,
+         * §12.2.7.
+         *
          * @public
          * @readonly
          */
         readonly chargingInfo: OPTIONAL<ChargingInfo>,
         /**
          * @summary `supplServiceInfo`.
+         * @description
+         *
+         * Supplementary services used; multiple bits may be set. ECMA-269
+         * §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly supplServiceInfo: OPTIONAL<SupplServiceInfo>,
         /**
          * @summary `reasonForTerm`.
+         * @description
+         *
+         * Why the connection terminated. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly reasonForTerm: OPTIONAL<ReasonForTerm>,
         /**
          * @summary `authCode`.
+         * @description
+         *
+         * Authorization code used to authorize the call. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly authCode: OPTIONAL<AuthCode>,
         /**
          * @summary `accountInfo`.
+         * @description
+         *
+         * Account code used for the call. ECMA-269 §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly accountInfo: OPTIONAL<AccountInfo>,
         /**
          * @summary `deviceCategory`.
+         * @description
+         *
+         * Category of the charged device (station, ACD, etc.). ECMA-269
+         * §27.1.2.
+         *
          * @public
          * @readonly
          */
         readonly deviceCategory: OPTIONAL<DeviceCategory>,
         /**
          * @summary `namedDeviceTypes`.
+         * @description
+         *
+         * Named device type of the charged device. ECMA-269 §27.1.2; ECMA-285
+         * §9.11.
+         *
          * @public
          * @readonly
          */
         readonly namedDeviceTypes: OPTIONAL<NamedDeviceTypes>,
         /**
          * @summary `operatorDevice`.
+         * @description
+         *
+         * Operator/attendant device. ECMA-285 §9.11.
+         *
          * @public
          * @readonly
          */

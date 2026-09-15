@@ -27,7 +27,14 @@ import { ProvidedBy, _decode_ProvidedBy, _encode_ProvidedBy } from "../CSTA-call
 /**
  * @summary GeoPriv
  * @description
- * 
+ *
+ * GEOPRIV element of a PIDF-LO (RFC 4119): location-info
+ * chunks, optional usage-rules, method of discovery, and
+ * provided-by. ECMA-269 §12.2.18; ECMA-285 §9.9.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ * @see {@link https://www.rfc-editor.org/rfc/rfc4119.html RFC 4119}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,24 +52,46 @@ class GeoPriv {
     constructor (
         /**
          * @summary `gpLocationInfo`.
+         * @description
+         *
+         * One or more location chunks (GML and/or civic). Two
+         * chunks for the same place are a compound location.
+         * ECMA-269 §12.2.18.
+         *
          * @public
          * @readonly
          */
         readonly gpLocationInfo: GpLocationInfoList,
         /**
          * @summary `usageRules`.
+         * @description
+         *
+         * Retransmissions-allowed, retention-expires, and
+         * ruleset-reference for this location. ECMA-269
+         * §12.2.18.
+         *
          * @public
          * @readonly
          */
         readonly usageRules: OPTIONAL<UsageRules>,
         /**
          * @summary `method`.
+         * @description
+         *
+         * How this location was derived or discovered (e.g. GPS).
+         * IANA method-tokens. ECMA-269 §12.2.18.
+         *
          * @public
          * @readonly
          */
         readonly method: OPTIONAL<Method>,
         /**
          * @summary `providedBy`.
+         * @description
+         *
+         * Source of the location, to help locate a service
+         * provider if the location is wrong. ECMA-269 §12.2.18.
+         *
          * @public
          * @readonly
          */

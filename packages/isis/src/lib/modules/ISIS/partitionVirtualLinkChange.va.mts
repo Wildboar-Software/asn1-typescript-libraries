@@ -15,6 +15,13 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary partitionVirtualLinkChange
  * @description
  *
+ * `informationType` when a Level 1 partition-repair virtual link is created or
+ * deleted. Report direction and remote NET via `notificationVirtualLinkChange`
+ * and `notificationVirtualLinkAddress`. Order per virtual link must be
+ * preserved.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.2.10 and 11.2.2.3).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

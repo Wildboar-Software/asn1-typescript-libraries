@@ -76,7 +76,12 @@ import { MG_CSI, _decode_MG_CSI, _encode_MG_CSI } from "../MAP-MS-DataTypes/MG-C
 /**
  * @summary SGSN_CAMEL_SubscriptionInfo
  * @description
- * 
+ *
+ * CAMEL services invoked in the SGSN: GPRS-CSI, MO/MT-SMS-CSI, MT-SMS TDP
+ * criteria, and MG-CSI.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -98,12 +103,24 @@ class SGSN_CAMEL_SubscriptionInfo {
     constructor (
         /**
          * @summary `gprs_CSI`.
+         * @description
+         *
+         * GPRS CAMEL services as in 3GPP TS 23.078.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.77).
+         *
          * @public
          * @readonly
          */
         readonly gprs_CSI: OPTIONAL<GPRS_CSI>,
         /**
          * @summary `mo_sms_CSI`.
+         * @description
+         *
+         * Mobile originating SMS CAMEL services as in 3GPP TS 23.078.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.76).
+         *
          * @public
          * @readonly
          */
@@ -116,18 +133,36 @@ class SGSN_CAMEL_SubscriptionInfo {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `mt_sms_CSI`.
+         * @description
+         *
+         * Mobile terminating SMS CAMEL services as in 3GPP TS 23.078.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.76a).
+         *
          * @public
          * @readonly
          */
         readonly mt_sms_CSI: OPTIONAL<SMS_CSI>,
         /**
          * @summary `mt_smsCAMELTDP_CriteriaList`.
+         * @description
+         *
+         * Criteria for MT-SMS CAMEL TDPs.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly mt_smsCAMELTDP_CriteriaList: OPTIONAL<MT_smsCAMELTDP_CriteriaList>,
         /**
          * @summary `mg_csi`.
+         * @description
+         *
+         * Mobility management CAMEL CSI for the SGSN.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

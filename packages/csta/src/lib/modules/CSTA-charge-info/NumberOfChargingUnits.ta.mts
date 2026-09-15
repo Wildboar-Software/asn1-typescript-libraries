@@ -14,7 +14,11 @@ import { NumberOfChargingUnits_Item, _decode_NumberOfChargingUnits_Item, _encode
 /**
  * @summary NumberOfChargingUnits
  * @description
- * 
+ *
+ * Repeated charging-unit counts, possibly of different types. ECMA-269 §12.2.7.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

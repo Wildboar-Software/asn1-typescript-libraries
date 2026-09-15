@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CdrReport
  * @description
- * 
+ * Capability bitmap for the Call Detail Records Report service (ECMA-269
+ * C.21.2, ECMA-285 §9.10). Presence of this entry in `CDRServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -78,6 +87,9 @@ type CdrReport = BIT_STRING;
 /**
  * @summary CdrReport_cdrReasonTimeout
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_cdrReasonTimeout: number = 0; /* LONG_NAMED_BIT */
@@ -85,6 +97,8 @@ const CdrReport_cdrReasonTimeout: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary cdrReasonTimeout
  * @constant
+ * @description
+ * Alias of `CdrReport_cdrReasonTimeout`.
  */
 export
 const cdrReasonTimeout: number = CdrReport_cdrReasonTimeout; /* SHORT_NAMED_BIT */
@@ -92,6 +106,9 @@ const cdrReasonTimeout: number = CdrReport_cdrReasonTimeout; /* SHORT_NAMED_BIT 
 /**
  * @summary CdrReport_cdrReasonThresholdReached
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_cdrReasonThresholdReached: number = 1; /* LONG_NAMED_BIT */
@@ -99,6 +116,8 @@ const CdrReport_cdrReasonThresholdReached: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary cdrReasonThresholdReached
  * @constant
+ * @description
+ * Alias of `CdrReport_cdrReasonThresholdReached`.
  */
 export
 const cdrReasonThresholdReached: number = CdrReport_cdrReasonThresholdReached; /* SHORT_NAMED_BIT */
@@ -106,6 +125,9 @@ const cdrReasonThresholdReached: number = CdrReport_cdrReasonThresholdReached; /
 /**
  * @summary CdrReport_cdrReasonOther
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_cdrReasonOther: number = 2; /* LONG_NAMED_BIT */
@@ -113,6 +135,8 @@ const CdrReport_cdrReasonOther: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary cdrReasonOther
  * @constant
+ * @description
+ * Alias of `CdrReport_cdrReasonOther`.
  */
 export
 const cdrReasonOther: number = CdrReport_cdrReasonOther; /* SHORT_NAMED_BIT */
@@ -120,6 +144,9 @@ const cdrReasonOther: number = CdrReport_cdrReasonOther; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_recordNumber
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_recordNumber: number = 3; /* LONG_NAMED_BIT */
@@ -127,6 +154,8 @@ const CdrReport_recordNumber: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary recordNumber
  * @constant
+ * @description
+ * Alias of `CdrReport_recordNumber`.
  */
 export
 const recordNumber: number = CdrReport_recordNumber; /* SHORT_NAMED_BIT */
@@ -134,6 +163,9 @@ const recordNumber: number = CdrReport_recordNumber; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_recordCreationTime
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_recordCreationTime: number = 4; /* LONG_NAMED_BIT */
@@ -141,6 +173,8 @@ const CdrReport_recordCreationTime: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary recordCreationTime
  * @constant
+ * @description
+ * Alias of `CdrReport_recordCreationTime`.
  */
 export
 const recordCreationTime: number = CdrReport_recordCreationTime; /* SHORT_NAMED_BIT */
@@ -148,6 +182,9 @@ const recordCreationTime: number = CdrReport_recordCreationTime; /* SHORT_NAMED_
 /**
  * @summary CdrReport_callingDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_callingDevice: number = 5; /* LONG_NAMED_BIT */
@@ -155,6 +192,8 @@ const CdrReport_callingDevice: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary callingDevice
  * @constant
+ * @description
+ * Alias of `CdrReport_callingDevice`.
  */
 export
 const callingDevice: number = CdrReport_callingDevice; /* SHORT_NAMED_BIT */
@@ -162,6 +201,9 @@ const callingDevice: number = CdrReport_callingDevice; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_calledDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_calledDevice: number = 6; /* LONG_NAMED_BIT */
@@ -169,6 +211,8 @@ const CdrReport_calledDevice: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary calledDevice
  * @constant
+ * @description
+ * Alias of `CdrReport_calledDevice`.
  */
 export
 const calledDevice: number = CdrReport_calledDevice; /* SHORT_NAMED_BIT */
@@ -176,6 +220,9 @@ const calledDevice: number = CdrReport_calledDevice; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_assocCallingDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_assocCallingDevice: number = 7; /* LONG_NAMED_BIT */
@@ -183,6 +230,8 @@ const CdrReport_assocCallingDevice: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary assocCallingDevice
  * @constant
+ * @description
+ * Alias of `CdrReport_assocCallingDevice`.
  */
 export
 const assocCallingDevice: number = CdrReport_assocCallingDevice; /* SHORT_NAMED_BIT */
@@ -190,6 +239,9 @@ const assocCallingDevice: number = CdrReport_assocCallingDevice; /* SHORT_NAMED_
 /**
  * @summary CdrReport_assocCalledDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_assocCalledDevice: number = 8; /* LONG_NAMED_BIT */
@@ -197,6 +249,8 @@ const CdrReport_assocCalledDevice: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary assocCalledDevice
  * @constant
+ * @description
+ * Alias of `CdrReport_assocCalledDevice`.
  */
 export
 const assocCalledDevice: number = CdrReport_assocCalledDevice; /* SHORT_NAMED_BIT */
@@ -204,6 +258,9 @@ const assocCalledDevice: number = CdrReport_assocCalledDevice; /* SHORT_NAMED_BI
 /**
  * @summary CdrReport_netwCallingDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_netwCallingDevice: number = 9; /* LONG_NAMED_BIT */
@@ -211,6 +268,8 @@ const CdrReport_netwCallingDevice: number = 9; /* LONG_NAMED_BIT */
 /**
  * @summary netwCallingDevice
  * @constant
+ * @description
+ * Alias of `CdrReport_netwCallingDevice`.
  */
 export
 const netwCallingDevice: number = CdrReport_netwCallingDevice; /* SHORT_NAMED_BIT */
@@ -218,6 +277,9 @@ const netwCallingDevice: number = CdrReport_netwCallingDevice; /* SHORT_NAMED_BI
 /**
  * @summary CdrReport_netwCalledDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_netwCalledDevice: number = 10; /* LONG_NAMED_BIT */
@@ -225,6 +287,8 @@ const CdrReport_netwCalledDevice: number = 10; /* LONG_NAMED_BIT */
 /**
  * @summary netwCalledDevice
  * @constant
+ * @description
+ * Alias of `CdrReport_netwCalledDevice`.
  */
 export
 const netwCalledDevice: number = CdrReport_netwCalledDevice; /* SHORT_NAMED_BIT */
@@ -232,6 +296,9 @@ const netwCalledDevice: number = CdrReport_netwCalledDevice; /* SHORT_NAMED_BIT 
 /**
  * @summary CdrReport_callCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callCharacteristics` parameter
+ * (ECMA-269 C.21.2).
  */
 export
 const CdrReport_callCharacteristics: number = 11; /* LONG_NAMED_BIT */
@@ -239,6 +306,8 @@ const CdrReport_callCharacteristics: number = 11; /* LONG_NAMED_BIT */
 /**
  * @summary callCharacteristics
  * @constant
+ * @description
+ * Alias of `CdrReport_callCharacteristics`.
  */
 export
 const callCharacteristics: number = CdrReport_callCharacteristics; /* SHORT_NAMED_BIT */
@@ -246,6 +315,9 @@ const callCharacteristics: number = CdrReport_callCharacteristics; /* SHORT_NAME
 /**
  * @summary CdrReport_mediaCallCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `mediaCallCharacteristics`
+ * parameter (ECMA-269 C.21.2).
  */
 export
 const CdrReport_mediaCallCharacteristics: number = 12; /* LONG_NAMED_BIT */
@@ -253,6 +325,8 @@ const CdrReport_mediaCallCharacteristics: number = 12; /* LONG_NAMED_BIT */
 /**
  * @summary mediaCallCharacteristics
  * @constant
+ * @description
+ * Alias of `CdrReport_mediaCallCharacteristics`.
  */
 export
 const mediaCallCharacteristics: number = CdrReport_mediaCallCharacteristics; /* SHORT_NAMED_BIT */
@@ -260,6 +334,9 @@ const mediaCallCharacteristics: number = CdrReport_mediaCallCharacteristics; /* 
 /**
  * @summary CdrReport_chargedDeviceOperator
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_chargedDeviceOperator: number = 13; /* LONG_NAMED_BIT */
@@ -267,6 +344,8 @@ const CdrReport_chargedDeviceOperator: number = 13; /* LONG_NAMED_BIT */
 /**
  * @summary chargedDeviceOperator
  * @constant
+ * @description
+ * Alias of `CdrReport_chargedDeviceOperator`.
  */
 export
 const chargedDeviceOperator: number = CdrReport_chargedDeviceOperator; /* SHORT_NAMED_BIT */
@@ -274,6 +353,9 @@ const chargedDeviceOperator: number = CdrReport_chargedDeviceOperator; /* SHORT_
 /**
  * @summary CdrReport_chargedDeviceNonOperator
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_chargedDeviceNonOperator: number = 14; /* LONG_NAMED_BIT */
@@ -281,6 +363,8 @@ const CdrReport_chargedDeviceNonOperator: number = 14; /* LONG_NAMED_BIT */
 /**
  * @summary chargedDeviceNonOperator
  * @constant
+ * @description
+ * Alias of `CdrReport_chargedDeviceNonOperator`.
  */
 export
 const chargedDeviceNonOperator: number = CdrReport_chargedDeviceNonOperator; /* SHORT_NAMED_BIT */
@@ -288,6 +372,9 @@ const chargedDeviceNonOperator: number = CdrReport_chargedDeviceNonOperator; /* 
 /**
  * @summary CdrReport_recordedCall
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_recordedCall: number = 15; /* LONG_NAMED_BIT */
@@ -295,6 +382,8 @@ const CdrReport_recordedCall: number = 15; /* LONG_NAMED_BIT */
 /**
  * @summary recordedCall
  * @constant
+ * @description
+ * Alias of `CdrReport_recordedCall`.
  */
 export
 const recordedCall: number = CdrReport_recordedCall; /* SHORT_NAMED_BIT */
@@ -302,6 +391,9 @@ const recordedCall: number = CdrReport_recordedCall; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_nodeNumberArea0
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_nodeNumberArea0: number = 16; /* LONG_NAMED_BIT */
@@ -309,6 +401,8 @@ const CdrReport_nodeNumberArea0: number = 16; /* LONG_NAMED_BIT */
 /**
  * @summary nodeNumberArea0
  * @constant
+ * @description
+ * Alias of `CdrReport_nodeNumberArea0`.
  */
 export
 const nodeNumberArea0: number = CdrReport_nodeNumberArea0; /* SHORT_NAMED_BIT */
@@ -316,6 +410,9 @@ const nodeNumberArea0: number = CdrReport_nodeNumberArea0; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_nodeNumberArea1
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_nodeNumberArea1: number = 17; /* LONG_NAMED_BIT */
@@ -323,6 +420,8 @@ const CdrReport_nodeNumberArea1: number = 17; /* LONG_NAMED_BIT */
 /**
  * @summary nodeNumberArea1
  * @constant
+ * @description
+ * Alias of `CdrReport_nodeNumberArea1`.
  */
 export
 const nodeNumberArea1: number = CdrReport_nodeNumberArea1; /* SHORT_NAMED_BIT */
@@ -330,6 +429,9 @@ const nodeNumberArea1: number = CdrReport_nodeNumberArea1; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_nodeNumberArea2
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_nodeNumberArea2: number = 18; /* LONG_NAMED_BIT */
@@ -337,6 +439,8 @@ const CdrReport_nodeNumberArea2: number = 18; /* LONG_NAMED_BIT */
 /**
  * @summary nodeNumberArea2
  * @constant
+ * @description
+ * Alias of `CdrReport_nodeNumberArea2`.
  */
 export
 const nodeNumberArea2: number = CdrReport_nodeNumberArea2; /* SHORT_NAMED_BIT */
@@ -344,6 +448,9 @@ const nodeNumberArea2: number = CdrReport_nodeNumberArea2; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_tarifTable
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_tarifTable: number = 19; /* LONG_NAMED_BIT */
@@ -351,6 +458,8 @@ const CdrReport_tarifTable: number = 19; /* LONG_NAMED_BIT */
 /**
  * @summary tarifTable
  * @constant
+ * @description
+ * Alias of `CdrReport_tarifTable`.
  */
 export
 const tarifTable: number = CdrReport_tarifTable; /* SHORT_NAMED_BIT */
@@ -358,6 +467,9 @@ const tarifTable: number = CdrReport_tarifTable; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_connectionStart
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_connectionStart: number = 20; /* LONG_NAMED_BIT */
@@ -365,6 +477,8 @@ const CdrReport_connectionStart: number = 20; /* LONG_NAMED_BIT */
 /**
  * @summary connectionStart
  * @constant
+ * @description
+ * Alias of `CdrReport_connectionStart`.
  */
 export
 const connectionStart: number = CdrReport_connectionStart; /* SHORT_NAMED_BIT */
@@ -372,6 +486,9 @@ const connectionStart: number = CdrReport_connectionStart; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_connectionEnd
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_connectionEnd: number = 21; /* LONG_NAMED_BIT */
@@ -379,6 +496,8 @@ const CdrReport_connectionEnd: number = 21; /* LONG_NAMED_BIT */
 /**
  * @summary connectionEnd
  * @constant
+ * @description
+ * Alias of `CdrReport_connectionEnd`.
  */
 export
 const connectionEnd: number = CdrReport_connectionEnd; /* SHORT_NAMED_BIT */
@@ -386,6 +505,9 @@ const connectionEnd: number = CdrReport_connectionEnd; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_connectionDuration
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_connectionDuration: number = 22; /* LONG_NAMED_BIT */
@@ -393,6 +515,8 @@ const CdrReport_connectionDuration: number = 22; /* LONG_NAMED_BIT */
 /**
  * @summary connectionDuration
  * @constant
+ * @description
+ * Alias of `CdrReport_connectionDuration`.
  */
 export
 const connectionDuration: number = CdrReport_connectionDuration; /* SHORT_NAMED_BIT */
@@ -400,6 +524,9 @@ const connectionDuration: number = CdrReport_connectionDuration; /* SHORT_NAMED_
 /**
  * @summary CdrReport_accessCode
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_accessCode: number = 23; /* LONG_NAMED_BIT */
@@ -407,6 +534,8 @@ const CdrReport_accessCode: number = 23; /* LONG_NAMED_BIT */
 /**
  * @summary accessCode
  * @constant
+ * @description
+ * Alias of `CdrReport_accessCode`.
  */
 export
 const accessCode: number = CdrReport_accessCode; /* SHORT_NAMED_BIT */
@@ -414,6 +543,9 @@ const accessCode: number = CdrReport_accessCode; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_carrier
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_carrier: number = 24; /* LONG_NAMED_BIT */
@@ -421,6 +553,8 @@ const CdrReport_carrier: number = 24; /* LONG_NAMED_BIT */
 /**
  * @summary carrier
  * @constant
+ * @description
+ * Alias of `CdrReport_carrier`.
  */
 export
 const carrier: number = CdrReport_carrier; /* SHORT_NAMED_BIT */
@@ -428,6 +562,9 @@ const carrier: number = CdrReport_carrier; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_selectedRoute
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_selectedRoute: number = 25; /* LONG_NAMED_BIT */
@@ -435,6 +572,8 @@ const CdrReport_selectedRoute: number = 25; /* LONG_NAMED_BIT */
 /**
  * @summary selectedRoute
  * @constant
+ * @description
+ * Alias of `CdrReport_selectedRoute`.
  */
 export
 const selectedRoute: number = CdrReport_selectedRoute; /* SHORT_NAMED_BIT */
@@ -442,6 +581,9 @@ const selectedRoute: number = CdrReport_selectedRoute; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_billingIndicatorNormalCharging
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_billingIndicatorNormalCharging: number = 26; /* LONG_NAMED_BIT */
@@ -449,6 +591,8 @@ const CdrReport_billingIndicatorNormalCharging: number = 26; /* LONG_NAMED_BIT *
 /**
  * @summary billingIndicatorNormalCharging
  * @constant
+ * @description
+ * Alias of `CdrReport_billingIndicatorNormalCharging`.
  */
 export
 const billingIndicatorNormalCharging: number = CdrReport_billingIndicatorNormalCharging; /* SHORT_NAMED_BIT */
@@ -456,6 +600,9 @@ const billingIndicatorNormalCharging: number = CdrReport_billingIndicatorNormalC
 /**
  * @summary CdrReport_billingIndicatorReverseCharging
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_billingIndicatorReverseCharging: number = 27; /* LONG_NAMED_BIT */
@@ -463,6 +610,8 @@ const CdrReport_billingIndicatorReverseCharging: number = 27; /* LONG_NAMED_BIT 
 /**
  * @summary billingIndicatorReverseCharging
  * @constant
+ * @description
+ * Alias of `CdrReport_billingIndicatorReverseCharging`.
  */
 export
 const billingIndicatorReverseCharging: number = CdrReport_billingIndicatorReverseCharging; /* SHORT_NAMED_BIT */
@@ -470,6 +619,9 @@ const billingIndicatorReverseCharging: number = CdrReport_billingIndicatorRevers
 /**
  * @summary CdrReport_billingIndicatorCreditCardCharging
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_billingIndicatorCreditCardCharging: number = 28; /* LONG_NAMED_BIT */
@@ -477,6 +629,8 @@ const CdrReport_billingIndicatorCreditCardCharging: number = 28; /* LONG_NAMED_B
 /**
  * @summary billingIndicatorCreditCardCharging
  * @constant
+ * @description
+ * Alias of `CdrReport_billingIndicatorCreditCardCharging`.
  */
 export
 const billingIndicatorCreditCardCharging: number = CdrReport_billingIndicatorCreditCardCharging; /* SHORT_NAMED_BIT */
@@ -484,6 +638,9 @@ const billingIndicatorCreditCardCharging: number = CdrReport_billingIndicatorCre
 /**
  * @summary CdrReport_billingIndicatorCallForwarding
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_billingIndicatorCallForwarding: number = 29; /* LONG_NAMED_BIT */
@@ -491,6 +648,8 @@ const CdrReport_billingIndicatorCallForwarding: number = 29; /* LONG_NAMED_BIT *
 /**
  * @summary billingIndicatorCallForwarding
  * @constant
+ * @description
+ * Alias of `CdrReport_billingIndicatorCallForwarding`.
  */
 export
 const billingIndicatorCallForwarding: number = CdrReport_billingIndicatorCallForwarding; /* SHORT_NAMED_BIT */
@@ -498,6 +657,9 @@ const billingIndicatorCallForwarding: number = CdrReport_billingIndicatorCallFor
 /**
  * @summary CdrReport_billingIndicatorCallDeflection
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_billingIndicatorCallDeflection: number = 30; /* LONG_NAMED_BIT */
@@ -505,6 +667,8 @@ const CdrReport_billingIndicatorCallDeflection: number = 30; /* LONG_NAMED_BIT *
 /**
  * @summary billingIndicatorCallDeflection
  * @constant
+ * @description
+ * Alias of `CdrReport_billingIndicatorCallDeflection`.
  */
 export
 const billingIndicatorCallDeflection: number = CdrReport_billingIndicatorCallDeflection; /* SHORT_NAMED_BIT */
@@ -512,6 +676,9 @@ const billingIndicatorCallDeflection: number = CdrReport_billingIndicatorCallDef
 /**
  * @summary CdrReport_billingIndicatorCallTransfer
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_billingIndicatorCallTransfer: number = 31; /* LONG_NAMED_BIT */
@@ -519,6 +686,8 @@ const CdrReport_billingIndicatorCallTransfer: number = 31; /* LONG_NAMED_BIT */
 /**
  * @summary billingIndicatorCallTransfer
  * @constant
+ * @description
+ * Alias of `CdrReport_billingIndicatorCallTransfer`.
  */
 export
 const billingIndicatorCallTransfer: number = CdrReport_billingIndicatorCallTransfer; /* SHORT_NAMED_BIT */
@@ -526,6 +695,9 @@ const billingIndicatorCallTransfer: number = CdrReport_billingIndicatorCallTrans
 /**
  * @summary CdrReport_billingIndicatorOther
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_billingIndicatorOther: number = 32; /* LONG_NAMED_BIT */
@@ -533,6 +705,8 @@ const CdrReport_billingIndicatorOther: number = 32; /* LONG_NAMED_BIT */
 /**
  * @summary billingIndicatorOther
  * @constant
+ * @description
+ * Alias of `CdrReport_billingIndicatorOther`.
  */
 export
 const billingIndicatorOther: number = CdrReport_billingIndicatorOther; /* SHORT_NAMED_BIT */
@@ -540,6 +714,9 @@ const billingIndicatorOther: number = CdrReport_billingIndicatorOther; /* SHORT_
 /**
  * @summary CdrReport_chargingInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_chargingInfo: number = 33; /* LONG_NAMED_BIT */
@@ -547,6 +724,8 @@ const CdrReport_chargingInfo: number = 33; /* LONG_NAMED_BIT */
 /**
  * @summary chargingInfo
  * @constant
+ * @description
+ * Alias of `CdrReport_chargingInfo`.
  */
 export
 const chargingInfo: number = CdrReport_chargingInfo; /* SHORT_NAMED_BIT */
@@ -554,6 +733,9 @@ const chargingInfo: number = CdrReport_chargingInfo; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_suppServiceInfoNormalCall
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_suppServiceInfoNormalCall: number = 34; /* LONG_NAMED_BIT */
@@ -561,6 +743,8 @@ const CdrReport_suppServiceInfoNormalCall: number = 34; /* LONG_NAMED_BIT */
 /**
  * @summary suppServiceInfoNormalCall
  * @constant
+ * @description
+ * Alias of `CdrReport_suppServiceInfoNormalCall`.
  */
 export
 const suppServiceInfoNormalCall: number = CdrReport_suppServiceInfoNormalCall; /* SHORT_NAMED_BIT */
@@ -568,6 +752,9 @@ const suppServiceInfoNormalCall: number = CdrReport_suppServiceInfoNormalCall; /
 /**
  * @summary CdrReport_suppServiceInfoConsultationCall
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_suppServiceInfoConsultationCall: number = 35; /* LONG_NAMED_BIT */
@@ -575,6 +762,8 @@ const CdrReport_suppServiceInfoConsultationCall: number = 35; /* LONG_NAMED_BIT 
 /**
  * @summary suppServiceInfoConsultationCall
  * @constant
+ * @description
+ * Alias of `CdrReport_suppServiceInfoConsultationCall`.
  */
 export
 const suppServiceInfoConsultationCall: number = CdrReport_suppServiceInfoConsultationCall; /* SHORT_NAMED_BIT */
@@ -582,6 +771,9 @@ const suppServiceInfoConsultationCall: number = CdrReport_suppServiceInfoConsult
 /**
  * @summary CdrReport_suppServiceInfoTransferCall
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_suppServiceInfoTransferCall: number = 36; /* LONG_NAMED_BIT */
@@ -589,6 +781,8 @@ const CdrReport_suppServiceInfoTransferCall: number = 36; /* LONG_NAMED_BIT */
 /**
  * @summary suppServiceInfoTransferCall
  * @constant
+ * @description
+ * Alias of `CdrReport_suppServiceInfoTransferCall`.
  */
 export
 const suppServiceInfoTransferCall: number = CdrReport_suppServiceInfoTransferCall; /* SHORT_NAMED_BIT */
@@ -596,6 +790,9 @@ const suppServiceInfoTransferCall: number = CdrReport_suppServiceInfoTransferCal
 /**
  * @summary CdrReport_suppServiceInfoCallCompletion
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_suppServiceInfoCallCompletion: number = 37; /* LONG_NAMED_BIT */
@@ -603,6 +800,8 @@ const CdrReport_suppServiceInfoCallCompletion: number = 37; /* LONG_NAMED_BIT */
 /**
  * @summary suppServiceInfoCallCompletion
  * @constant
+ * @description
+ * Alias of `CdrReport_suppServiceInfoCallCompletion`.
  */
 export
 const suppServiceInfoCallCompletion: number = CdrReport_suppServiceInfoCallCompletion; /* SHORT_NAMED_BIT */
@@ -610,6 +809,9 @@ const suppServiceInfoCallCompletion: number = CdrReport_suppServiceInfoCallCompl
 /**
  * @summary CdrReport_suppServiceInfoCallForwarding
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_suppServiceInfoCallForwarding: number = 38; /* LONG_NAMED_BIT */
@@ -617,6 +819,8 @@ const CdrReport_suppServiceInfoCallForwarding: number = 38; /* LONG_NAMED_BIT */
 /**
  * @summary suppServiceInfoCallForwarding
  * @constant
+ * @description
+ * Alias of `CdrReport_suppServiceInfoCallForwarding`.
  */
 export
 const suppServiceInfoCallForwarding: number = CdrReport_suppServiceInfoCallForwarding; /* SHORT_NAMED_BIT */
@@ -624,6 +828,9 @@ const suppServiceInfoCallForwarding: number = CdrReport_suppServiceInfoCallForwa
 /**
  * @summary CdrReport_suppServiceInfoCallDiversion
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_suppServiceInfoCallDiversion: number = 39; /* LONG_NAMED_BIT */
@@ -631,6 +838,8 @@ const CdrReport_suppServiceInfoCallDiversion: number = 39; /* LONG_NAMED_BIT */
 /**
  * @summary suppServiceInfoCallDiversion
  * @constant
+ * @description
+ * Alias of `CdrReport_suppServiceInfoCallDiversion`.
  */
 export
 const suppServiceInfoCallDiversion: number = CdrReport_suppServiceInfoCallDiversion; /* SHORT_NAMED_BIT */
@@ -638,6 +847,9 @@ const suppServiceInfoCallDiversion: number = CdrReport_suppServiceInfoCallDivers
 /**
  * @summary CdrReport_suppServiceInfoConferencing
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_suppServiceInfoConferencing: number = 40; /* LONG_NAMED_BIT */
@@ -645,6 +857,8 @@ const CdrReport_suppServiceInfoConferencing: number = 40; /* LONG_NAMED_BIT */
 /**
  * @summary suppServiceInfoConferencing
  * @constant
+ * @description
+ * Alias of `CdrReport_suppServiceInfoConferencing`.
  */
 export
 const suppServiceInfoConferencing: number = CdrReport_suppServiceInfoConferencing; /* SHORT_NAMED_BIT */
@@ -652,6 +866,9 @@ const suppServiceInfoConferencing: number = CdrReport_suppServiceInfoConferencin
 /**
  * @summary CdrReport_suppServiceInfoIntrusion
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_suppServiceInfoIntrusion: number = 41; /* LONG_NAMED_BIT */
@@ -659,6 +876,8 @@ const CdrReport_suppServiceInfoIntrusion: number = 41; /* LONG_NAMED_BIT */
 /**
  * @summary suppServiceInfoIntrusion
  * @constant
+ * @description
+ * Alias of `CdrReport_suppServiceInfoIntrusion`.
  */
 export
 const suppServiceInfoIntrusion: number = CdrReport_suppServiceInfoIntrusion; /* SHORT_NAMED_BIT */
@@ -666,6 +885,9 @@ const suppServiceInfoIntrusion: number = CdrReport_suppServiceInfoIntrusion; /* 
 /**
  * @summary CdrReport_suppServiceInfoUserUserInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_suppServiceInfoUserUserInfo: number = 42; /* LONG_NAMED_BIT */
@@ -673,6 +895,8 @@ const CdrReport_suppServiceInfoUserUserInfo: number = 42; /* LONG_NAMED_BIT */
 /**
  * @summary suppServiceInfoUserUserInfo
  * @constant
+ * @description
+ * Alias of `CdrReport_suppServiceInfoUserUserInfo`.
  */
 export
 const suppServiceInfoUserUserInfo: number = CdrReport_suppServiceInfoUserUserInfo; /* SHORT_NAMED_BIT */
@@ -680,6 +904,9 @@ const suppServiceInfoUserUserInfo: number = CdrReport_suppServiceInfoUserUserInf
 /**
  * @summary CdrReport_suppServiceInfoOther
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_suppServiceInfoOther: number = 43; /* LONG_NAMED_BIT */
@@ -687,6 +914,8 @@ const CdrReport_suppServiceInfoOther: number = 43; /* LONG_NAMED_BIT */
 /**
  * @summary suppServiceInfoOther
  * @constant
+ * @description
+ * Alias of `CdrReport_suppServiceInfoOther`.
  */
 export
 const suppServiceInfoOther: number = CdrReport_suppServiceInfoOther; /* SHORT_NAMED_BIT */
@@ -694,6 +923,9 @@ const suppServiceInfoOther: number = CdrReport_suppServiceInfoOther; /* SHORT_NA
 /**
  * @summary CdrReport_reasonForTermNormalClearing
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_reasonForTermNormalClearing: number = 44; /* LONG_NAMED_BIT */
@@ -701,6 +933,8 @@ const CdrReport_reasonForTermNormalClearing: number = 44; /* LONG_NAMED_BIT */
 /**
  * @summary reasonForTermNormalClearing
  * @constant
+ * @description
+ * Alias of `CdrReport_reasonForTermNormalClearing`.
  */
 export
 const reasonForTermNormalClearing: number = CdrReport_reasonForTermNormalClearing; /* SHORT_NAMED_BIT */
@@ -708,6 +942,9 @@ const reasonForTermNormalClearing: number = CdrReport_reasonForTermNormalClearin
 /**
  * @summary CdrReport_reasonForTermUnsuccessfulCallAttempt
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_reasonForTermUnsuccessfulCallAttempt: number = 45; /* LONG_NAMED_BIT */
@@ -715,6 +952,8 @@ const CdrReport_reasonForTermUnsuccessfulCallAttempt: number = 45; /* LONG_NAMED
 /**
  * @summary reasonForTermUnsuccessfulCallAttempt
  * @constant
+ * @description
+ * Alias of `CdrReport_reasonForTermUnsuccessfulCallAttempt`.
  */
 export
 const reasonForTermUnsuccessfulCallAttempt: number = CdrReport_reasonForTermUnsuccessfulCallAttempt; /* SHORT_NAMED_BIT */
@@ -722,6 +961,9 @@ const reasonForTermUnsuccessfulCallAttempt: number = CdrReport_reasonForTermUnsu
 /**
  * @summary CdrReport_reasonForTermAbnormalTermination
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_reasonForTermAbnormalTermination: number = 46; /* LONG_NAMED_BIT */
@@ -729,6 +971,8 @@ const CdrReport_reasonForTermAbnormalTermination: number = 46; /* LONG_NAMED_BIT
 /**
  * @summary reasonForTermAbnormalTermination
  * @constant
+ * @description
+ * Alias of `CdrReport_reasonForTermAbnormalTermination`.
  */
 export
 const reasonForTermAbnormalTermination: number = CdrReport_reasonForTermAbnormalTermination; /* SHORT_NAMED_BIT */
@@ -736,6 +980,9 @@ const reasonForTermAbnormalTermination: number = CdrReport_reasonForTermAbnormal
 /**
  * @summary CdrReport_reasonForTermCallTransferred
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_reasonForTermCallTransferred: number = 47; /* LONG_NAMED_BIT */
@@ -743,6 +990,8 @@ const CdrReport_reasonForTermCallTransferred: number = 47; /* LONG_NAMED_BIT */
 /**
  * @summary reasonForTermCallTransferred
  * @constant
+ * @description
+ * Alias of `CdrReport_reasonForTermCallTransferred`.
  */
 export
 const reasonForTermCallTransferred: number = CdrReport_reasonForTermCallTransferred; /* SHORT_NAMED_BIT */
@@ -750,6 +999,9 @@ const reasonForTermCallTransferred: number = CdrReport_reasonForTermCallTransfer
 /**
  * @summary CdrReport_reasonForTermOther
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_reasonForTermOther: number = 48; /* LONG_NAMED_BIT */
@@ -757,6 +1009,8 @@ const CdrReport_reasonForTermOther: number = 48; /* LONG_NAMED_BIT */
 /**
  * @summary reasonForTermOther
  * @constant
+ * @description
+ * Alias of `CdrReport_reasonForTermOther`.
  */
 export
 const reasonForTermOther: number = CdrReport_reasonForTermOther; /* SHORT_NAMED_BIT */
@@ -764,6 +1018,9 @@ const reasonForTermOther: number = CdrReport_reasonForTermOther; /* SHORT_NAMED_
 /**
  * @summary CdrReport_authCode
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `authCode` parameter (ECMA-269
+ * C.21.2).
  */
 export
 const CdrReport_authCode: number = 49; /* LONG_NAMED_BIT */
@@ -771,6 +1028,8 @@ const CdrReport_authCode: number = 49; /* LONG_NAMED_BIT */
 /**
  * @summary authCode
  * @constant
+ * @description
+ * Alias of `CdrReport_authCode`.
  */
 export
 const authCode: number = CdrReport_authCode; /* SHORT_NAMED_BIT */
@@ -778,6 +1037,9 @@ const authCode: number = CdrReport_authCode; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_accountInfo
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_accountInfo: number = 50; /* LONG_NAMED_BIT */
@@ -785,6 +1047,8 @@ const CdrReport_accountInfo: number = 50; /* LONG_NAMED_BIT */
 /**
  * @summary accountInfo
  * @constant
+ * @description
+ * Alias of `CdrReport_accountInfo`.
  */
 export
 const accountInfo: number = CdrReport_accountInfo; /* SHORT_NAMED_BIT */
@@ -792,6 +1056,9 @@ const accountInfo: number = CdrReport_accountInfo; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_deviceCategory
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_deviceCategory: number = 51; /* LONG_NAMED_BIT */
@@ -799,6 +1066,8 @@ const CdrReport_deviceCategory: number = 51; /* LONG_NAMED_BIT */
 /**
  * @summary deviceCategory
  * @constant
+ * @description
+ * Alias of `CdrReport_deviceCategory`.
  */
 export
 const deviceCategory: number = CdrReport_deviceCategory; /* SHORT_NAMED_BIT */
@@ -806,6 +1075,9 @@ const deviceCategory: number = CdrReport_deviceCategory; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_namedDeviceTypes
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_namedDeviceTypes: number = 52; /* LONG_NAMED_BIT */
@@ -813,6 +1085,8 @@ const CdrReport_namedDeviceTypes: number = 52; /* LONG_NAMED_BIT */
 /**
  * @summary namedDeviceTypes
  * @constant
+ * @description
+ * Alias of `CdrReport_namedDeviceTypes`.
  */
 export
 const namedDeviceTypes: number = CdrReport_namedDeviceTypes; /* SHORT_NAMED_BIT */
@@ -820,6 +1094,9 @@ const namedDeviceTypes: number = CdrReport_namedDeviceTypes; /* SHORT_NAMED_BIT 
 /**
  * @summary CdrReport_operatorDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_operatorDevice: number = 53; /* LONG_NAMED_BIT */
@@ -827,6 +1104,8 @@ const CdrReport_operatorDevice: number = 53; /* LONG_NAMED_BIT */
 /**
  * @summary operatorDevice
  * @constant
+ * @description
+ * Alias of `CdrReport_operatorDevice`.
  */
 export
 const operatorDevice: number = CdrReport_operatorDevice; /* SHORT_NAMED_BIT */
@@ -834,6 +1113,9 @@ const operatorDevice: number = CdrReport_operatorDevice; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_lastStoredCDRReportSent
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.2).
  */
 export
 const CdrReport_lastStoredCDRReportSent: number = 54; /* LONG_NAMED_BIT */
@@ -841,6 +1123,8 @@ const CdrReport_lastStoredCDRReportSent: number = 54; /* LONG_NAMED_BIT */
 /**
  * @summary lastStoredCDRReportSent
  * @constant
+ * @description
+ * Alias of `CdrReport_lastStoredCDRReportSent`.
  */
 export
 const lastStoredCDRReportSent: number = CdrReport_lastStoredCDRReportSent; /* SHORT_NAMED_BIT */
@@ -848,6 +1132,9 @@ const lastStoredCDRReportSent: number = CdrReport_lastStoredCDRReportSent; /* SH
 /**
  * @summary CdrReport_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.21.2).
  */
 export
 const CdrReport_privateData: number = 55; /* LONG_NAMED_BIT */
@@ -855,6 +1142,8 @@ const CdrReport_privateData: number = 55; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `CdrReport_privateData`.
  */
 export
 const privateData: number = CdrReport_privateData; /* SHORT_NAMED_BIT */
@@ -862,6 +1151,9 @@ const privateData: number = CdrReport_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary CdrReport_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.21.2).
  */
 export
 const CdrReport_privateDataInAck: number = 56; /* LONG_NAMED_BIT */
@@ -869,6 +1161,8 @@ const CdrReport_privateDataInAck: number = 56; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `CdrReport_privateDataInAck`.
  */
 export
 const privateDataInAck: number = CdrReport_privateDataInAck; /* SHORT_NAMED_BIT */

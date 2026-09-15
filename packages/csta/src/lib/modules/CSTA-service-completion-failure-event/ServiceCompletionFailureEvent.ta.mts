@@ -28,7 +28,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ServiceCompletionFailureEvent
  * @description
- * 
+ *
+ * Service Completion Failure event (ECMA-269 §18.2.5 / ECMA-285 §16.2.5).
+ * Direction: SF→CF via Event Report. If events already showed a state change,
+ * CF must apply services
+ * to restore original conditions if needed and possible.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,42 +57,64 @@ class ServiceCompletionFailureEvent {
     constructor (
         /**
          * @summary `primaryCall`.
+         * @description
+         *
+         * Connection in the primary call of the failed service.
          * @public
          * @readonly
          */
         readonly primaryCall: PrimaryOrSecondaryCall,
         /**
          * @summary `secondaryCall`.
+         * @description
+         *
+         * Connection in the secondary call, if the service had one.
          * @public
          * @readonly
          */
         readonly secondaryCall: OPTIONAL<PrimaryOrSecondaryCall>,
         /**
          * @summary `otherDevsPrimaryCallList`.
+         * @description
+         *
+         * Other devices/connections on the primary call.
          * @public
          * @readonly
          */
         readonly otherDevsPrimaryCallList: OPTIONAL<OtherCall[]>,
         /**
          * @summary `otherDevsSecondaryCallList`.
+         * @description
+         *
+         * Other devices/connections on the secondary call.
          * @public
          * @readonly
          */
         readonly otherDevsSecondaryCallList: OPTIONAL<OtherCall[]>,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Media characteristics of the affected call(s).
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Why completion failed.
          * @public
          * @readonly
          */
         readonly cause: EventCause,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

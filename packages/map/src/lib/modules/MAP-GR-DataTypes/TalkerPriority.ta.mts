@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TalkerPriority
  * @description
- * 
+ *
+ * Talker priority. Use is specified in 3GPP TS 43.068 (3GPP TS 29.002 V19.1.0
+ * clauses 10.5.3 and 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,7 +97,10 @@ enum _enum_for_TalkerPriority {
 /**
  * @summary TalkerPriority
  * @description
- * 
+ *
+ * Talker priority. Use is specified in 3GPP TS 43.068 (3GPP TS 29.002 V19.1.0
+ * clauses 10.5.3 and 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -112,7 +118,10 @@ type TalkerPriority = _enum_for_TalkerPriority;
 /**
  * @summary TalkerPriority
  * @description
- * 
+ *
+ * Talker priority. Use is specified in 3GPP TS 43.068 (3GPP TS 29.002 V19.1.0
+ * clauses 10.5.3 and 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -129,6 +138,10 @@ const TalkerPriority = _enum_for_TalkerPriority;
 
 /**
  * @summary TalkerPriority_normal
+ * @description
+ *
+ * `normal (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.12).
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +150,10 @@ const TalkerPriority_normal: TalkerPriority = TalkerPriority.normal; /* LONG_NAM
 
 /**
  * @summary normal
+ * @description
+ *
+ * `normal (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.12).
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +162,10 @@ const normal: TalkerPriority = TalkerPriority.normal; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary TalkerPriority_privileged
+ * @description
+ *
+ * `privileged (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.12).
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +174,10 @@ const TalkerPriority_privileged: TalkerPriority = TalkerPriority.privileged; /* 
 
 /**
  * @summary privileged
+ * @description
+ *
+ * `privileged (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.12).
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +186,10 @@ const privileged: TalkerPriority = TalkerPriority.privileged; /* SHORT_NAMED_ENU
 
 /**
  * @summary TalkerPriority_emergency
+ * @description
+ *
+ * `emergency (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.12).
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +198,10 @@ const TalkerPriority_emergency: TalkerPriority = TalkerPriority.emergency; /* LO
 
 /**
  * @summary emergency
+ * @description
+ *
+ * `emergency (2)` (3GPP TS 29.002 V19.1.0 clause 17.7.12).
+ *
  * @constant
  * @type {number}
  */

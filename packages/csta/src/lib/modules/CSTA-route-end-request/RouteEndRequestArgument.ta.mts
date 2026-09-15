@@ -23,7 +23,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RouteEndRequestArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 20-9).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +47,47 @@ class RouteEndRequestArgument {
     constructor (
         /**
          * @summary `crossRefIdentifier`.
+         * @description
+         *
+         * Dialogue being ended.
          * @public
          * @readonly
          */
         readonly crossRefIdentifier: RouteingCrossRefID,
         /**
          * @summary `routeRegisterReqID`.
+         * @description
+         *
+         * Registration for this dialogue, if registration is used.
          * @public
          * @readonly
          */
         readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
         /**
          * @summary `errorValue`.
+         * @description
+         *
+         * Why the dialogue ended, if provided.
          * @public
          * @readonly
          */
         readonly errorValue: OPTIONAL<ErrorValue>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * If CF→SF: correlator data to associate with the call. If
+         * SF→CF: correlator data associated with the call.
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

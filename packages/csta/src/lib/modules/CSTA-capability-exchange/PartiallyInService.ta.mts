@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary PartiallyInService
  * @description
- * 
+ * Capability bitmap for the Partially In Service event (ECMA-269 C.16.4,
+ * ECMA-285 §9.10). Presence of this entry in `DeviceMaintEvtsList` means the SF
+ * supports that event. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +31,9 @@ type PartiallyInService = BIT_STRING;
 /**
  * @summary PartiallyInService_cause
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `cause` parameter (ECMA-269
+ * C.16.4).
  */
 export
 const PartiallyInService_cause: number = 0; /* LONG_NAMED_BIT */
@@ -30,6 +41,8 @@ const PartiallyInService_cause: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary cause
  * @constant
+ * @description
+ * Alias of `PartiallyInService_cause`.
  */
 export
 const cause: number = PartiallyInService_cause; /* SHORT_NAMED_BIT */
@@ -37,6 +50,9 @@ const cause: number = PartiallyInService_cause; /* SHORT_NAMED_BIT */
 /**
  * @summary PartiallyInService_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.16.4).
  */
 export
 const PartiallyInService_privateData: number = 1; /* LONG_NAMED_BIT */
@@ -44,6 +60,8 @@ const PartiallyInService_privateData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `PartiallyInService_privateData`.
  */
 export
 const privateData: number = PartiallyInService_privateData; /* SHORT_NAMED_BIT */

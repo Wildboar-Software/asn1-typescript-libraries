@@ -81,7 +81,13 @@ import { sm_DeliveryFailure } from "../MAP-Errors/sm-DeliveryFailure.oa.mjs";
 /**
  * @summary mo_ForwardSM
  * @description
- * 
+ *
+ * MAP_MO_FORWARD_SHORT_MESSAGE: serving MSC, SGSN or IP-SM-GW forwards a
+ * mobile-originated short message to the SMS Interworking MSC. Confirmed.
+ * Typical path: MSC→IWMSC or SGSN→IWMSC. Local opcode 46. Timer class `ml` (1
+ * min to 10 min). Distinctive error: `sm-DeliveryFailure`. (3GPP TS 29.002
+ * V19.1.0 clauses 12.2.1, 17.1.2, 17.3.2.22 and 17.6.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

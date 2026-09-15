@@ -72,7 +72,11 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary subscriberInfoEnquiryContext_v3
  * @description
- * 
+ *
+ * Subscriber information enquiry between HLR and VLR or HLR and SGSN. Initiator
+ * is HLR; responder is VLR or SGSN. Version 3 only (3GPP TS 29.002 V19.1.0
+ * clause 17.3.2.28).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

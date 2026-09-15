@@ -20,7 +20,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetButtonInformationArgument
  * @description
- * 
+ *
+ * Set Button Information request (ECMA-269 §21.1.14.1). At least one of
+ * `buttonLabel` or `buttonAssociatedNumber`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,30 +45,49 @@ class SetButtonInformationArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+         * 1).
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `button`.
+         * @description
+         *
+         * Button to set. Reserved ButtonIDs in Table 12-3: `0`–`9`, `*`=10,
+         * `#`=11 (ECMA-269 §12.3.5).
          * @public
          * @readonly
          */
         readonly button: ButtonID,
         /**
          * @summary `buttonLabel`.
+         * @description
+         *
+         * Label by which the button may be referenced. Max length from
+         * capabilities exchange.
          * @public
          * @readonly
          */
         readonly buttonLabel: OPTIONAL<IA5String>,
         /**
          * @summary `buttonAssociatedNumber`.
+         * @description
+         *
+         * Diallable-digits string associated with the button (e.g. speed-dial).
          * @public
          * @readonly
          */
         readonly buttonAssociatedNumber: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

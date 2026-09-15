@@ -8,7 +8,14 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SimpleCallState
  * @description
- * 
+ *
+ * Widely recognized two-connection call states in simplified encoding.
+ * Semantics match a pair of connection states (local then other) as in ECMA-269
+ * Table 6-5. Used by Snapshot Device and Monitor Start. If no simple state
+ * fits, use a compound state. ECMA-269 §6.1.4, §12.2.26.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,7 +61,14 @@ enum _enum_for_SimpleCallState {
 /**
  * @summary SimpleCallState
  * @description
- * 
+ *
+ * Widely recognized two-connection call states in simplified encoding.
+ * Semantics match a pair of connection states (local then other) as in ECMA-269
+ * Table 6-5. Used by Snapshot Device and Monitor Start. If no simple state
+ * fits, use a compound state. ECMA-269 §6.1.4, §12.2.26.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -84,7 +98,14 @@ type SimpleCallState = _enum_for_SimpleCallState;
 /**
  * @summary SimpleCallState
  * @description
- * 
+ *
+ * Widely recognized two-connection call states in simplified encoding.
+ * Semantics match a pair of connection states (local then other) as in ECMA-269
+ * Table 6-5. Used by Snapshot Device and Monitor Start. If no simple state
+ * fits, use a compound state. ECMA-269 §6.1.4, §12.2.26.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -113,6 +134,10 @@ const SimpleCallState = _enum_for_SimpleCallState;
 
 /**
  * @summary SimpleCallState_callNull
+ * @description
+ *
+ * Null–Null. ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +154,10 @@ const callNull: SimpleCallState = SimpleCallState.callNull; /* SHORT_NAMED_ENUME
 
 /**
  * @summary SimpleCallState_callPending
+ * @description
+ *
+ * Initiated–Null (Pending). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +174,10 @@ const callPending: SimpleCallState = SimpleCallState.callPending; /* SHORT_NAMED
 
 /**
  * @summary SimpleCallState_callOriginated
+ * @description
+ *
+ * Connected–Null (Originated/Terminated). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +194,10 @@ const callOriginated: SimpleCallState = SimpleCallState.callOriginated; /* SHORT
 
 /**
  * @summary SimpleCallState_callDelivered
+ * @description
+ *
+ * Connected–Alerting (Delivered). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -177,6 +214,10 @@ const callDelivered: SimpleCallState = SimpleCallState.callDelivered; /* SHORT_N
 
 /**
  * @summary SimpleCallState_callDeliveredHeld
+ * @description
+ *
+ * Hold–Alerting (Delivered-Held). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -193,6 +234,10 @@ const callDeliveredHeld: SimpleCallState = SimpleCallState.callDeliveredHeld; /*
 
 /**
  * @summary SimpleCallState_callReceived
+ * @description
+ *
+ * Alerting–Connected (Received). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -209,6 +254,10 @@ const callReceived: SimpleCallState = SimpleCallState.callReceived; /* SHORT_NAM
 
 /**
  * @summary SimpleCallState_callEstablished
+ * @description
+ *
+ * Connected–Connected (Established). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -225,6 +274,10 @@ const callEstablished: SimpleCallState = SimpleCallState.callEstablished; /* SHO
 
 /**
  * @summary SimpleCallState_callEstablishedHeld
+ * @description
+ *
+ * Connected–Hold (Established-Held). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -241,6 +294,10 @@ const callEstablishedHeld: SimpleCallState = SimpleCallState.callEstablishedHeld
 
 /**
  * @summary SimpleCallState_callReceivedOnHold
+ * @description
+ *
+ * Alerting–Hold (Received-On Hold). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -257,6 +314,10 @@ const callReceivedOnHold: SimpleCallState = SimpleCallState.callReceivedOnHold; 
 
 /**
  * @summary SimpleCallState_callEstablishedOnHold
+ * @description
+ *
+ * Hold–Connected (Established-On Hold). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -273,6 +334,10 @@ const callEstablishedOnHold: SimpleCallState = SimpleCallState.callEstablishedOn
 
 /**
  * @summary SimpleCallState_callQueued
+ * @description
+ *
+ * Connected–Queued (Queued). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -289,6 +354,10 @@ const callQueued: SimpleCallState = SimpleCallState.callQueued; /* SHORT_NAMED_E
 
 /**
  * @summary SimpleCallState_callQueuedHeld
+ * @description
+ *
+ * Hold–Queued (Queued-Held). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -305,6 +374,10 @@ const callQueuedHeld: SimpleCallState = SimpleCallState.callQueuedHeld; /* SHORT
 
 /**
  * @summary SimpleCallState_callFailed
+ * @description
+ *
+ * Connected–Failed (Failed). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -321,6 +394,10 @@ const callFailed: SimpleCallState = SimpleCallState.callFailed; /* SHORT_NAMED_E
 
 /**
  * @summary SimpleCallState_callFailedHeld
+ * @description
+ *
+ * Hold–Failed (Failed-Held). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */
@@ -337,6 +414,10 @@ const callFailedHeld: SimpleCallState = SimpleCallState.callFailedHeld; /* SHORT
 
 /**
  * @summary SimpleCallState_callBlocked
+ * @description
+ *
+ * Failed–Null (Blocked). ECMA-269 Table 6-5, §12.2.26.
+ *
  * @constant
  * @type {number}
  */

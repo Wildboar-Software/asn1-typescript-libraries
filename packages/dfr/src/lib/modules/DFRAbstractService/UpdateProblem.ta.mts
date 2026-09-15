@@ -1,0 +1,236 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary UpdateProblem
+ * @description
+ *
+ * Why an update failed. ISO/IEC 10166-1:1991 §8.3.4.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * UpdateProblem  ::=  ENUMERATED {
+ *     inappropriate-object-class          (1),
+ *     insufficient-access-rights          (2),
+ *     reserved-by-a-user                  (3),
+ *     illegal-content-modification        (4),
+ *     group-membership-criteria-violation (5),
+ *     reference-loop-detected             (6)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_UpdateProblem {
+    inappropriate_object_class = 1,
+    insufficient_access_rights = 2,
+    reserved_by_a_user = 3,
+    illegal_content_modification = 4,
+    group_membership_criteria_violation = 5,
+    reference_loop_detected = 6,
+}
+
+/**
+ * @summary UpdateProblem
+ * @description
+ *
+ * Why an update failed. ISO/IEC 10166-1:1991 §8.3.4.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * UpdateProblem  ::=  ENUMERATED {
+ *     inappropriate-object-class          (1),
+ *     insufficient-access-rights          (2),
+ *     reserved-by-a-user                  (3),
+ *     illegal-content-modification        (4),
+ *     group-membership-criteria-violation (5),
+ *     reference-loop-detected             (6)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type UpdateProblem = _enum_for_UpdateProblem;
+
+/**
+ * @summary UpdateProblem
+ * @description
+ *
+ * Why an update failed. ISO/IEC 10166-1:1991 §8.3.4.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * UpdateProblem  ::=  ENUMERATED {
+ *     inappropriate-object-class          (1),
+ *     insufficient-access-rights          (2),
+ *     reserved-by-a-user                  (3),
+ *     illegal-content-modification        (4),
+ *     group-membership-criteria-violation (5),
+ *     reference-loop-detected             (6)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const UpdateProblem = _enum_for_UpdateProblem;
+
+/**
+ * @summary UpdateProblem_inappropriate_object_class
+ * @description
+ *
+ * Wrong class for the requested update.
+ * @constant
+ * @type {number}
+ */
+export
+const UpdateProblem_inappropriate_object_class: UpdateProblem = UpdateProblem.inappropriate_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary inappropriate_object_class
+ * @description
+ *
+ * Wrong class for the requested update.
+ * @constant
+ * @type {number}
+ */
+export
+const inappropriate_object_class: UpdateProblem = UpdateProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary UpdateProblem_insufficient_access_rights
+ * @description
+ *
+ * Not allowed to modify. No read right ⇒ nameError instead.
+ * @constant
+ * @type {number}
+ */
+export
+const UpdateProblem_insufficient_access_rights: UpdateProblem = UpdateProblem.insufficient_access_rights; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary insufficient_access_rights
+ * @description
+ *
+ * Not allowed to modify. No read right ⇒ nameError instead.
+ * @constant
+ * @type {number}
+ */
+export
+const insufficient_access_rights: UpdateProblem = UpdateProblem.insufficient_access_rights; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary UpdateProblem_reserved_by_a_user
+ * @description
+ *
+ * Entry or parent reserved by this or another user.
+ * @constant
+ * @type {number}
+ */
+export
+const UpdateProblem_reserved_by_a_user: UpdateProblem = UpdateProblem.reserved_by_a_user; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary reserved_by_a_user
+ * @description
+ *
+ * Entry or parent reserved by this or another user.
+ * @constant
+ * @type {number}
+ */
+export
+const reserved_by_a_user: UpdateProblem = UpdateProblem.reserved_by_a_user; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary UpdateProblem_illegal_content_modification
+ * @description
+ *
+ * Content of this class is not user-modifiable (e.g. SRL).
+ * @constant
+ * @type {number}
+ */
+export
+const UpdateProblem_illegal_content_modification: UpdateProblem = UpdateProblem.illegal_content_modification; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary illegal_content_modification
+ * @description
+ *
+ * Content of this class is not user-modifiable (e.g. SRL).
+ * @constant
+ * @type {number}
+ */
+export
+const illegal_content_modification: UpdateProblem = UpdateProblem.illegal_content_modification; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary UpdateProblem_group_membership_criteria_violation
+ * @description
+ *
+ * New/modified member fails the group's filter, or changing the filter would
+ * exclude existing members.
+ * @constant
+ * @type {number}
+ */
+export
+const UpdateProblem_group_membership_criteria_violation: UpdateProblem = UpdateProblem.group_membership_criteria_violation; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary group_membership_criteria_violation
+ * @description
+ *
+ * New/modified member fails the group's filter, or changing the filter would
+ * exclude existing members.
+ * @constant
+ * @type {number}
+ */
+export
+const group_membership_criteria_violation: UpdateProblem = UpdateProblem.group_membership_criteria_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary UpdateProblem_reference_loop_detected
+ * @description
+ *
+ * Create/modify of a reference would close a reference or membership loop.
+ * Servers need not detect every loop at creation, but navigation must still
+ * work.
+ * @constant
+ * @type {number}
+ */
+export
+const UpdateProblem_reference_loop_detected: UpdateProblem = UpdateProblem.reference_loop_detected; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary reference_loop_detected
+ * @description
+ *
+ * Create/modify of a reference would close a reference or membership loop.
+ * Servers need not detect every loop at creation, but navigation must still
+ * work.
+ * @constant
+ * @type {number}
+ */
+export
+const reference_loop_detected: UpdateProblem = UpdateProblem.reference_loop_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_UpdateProblem = $._decodeEnumerated;
+export const _encode_UpdateProblem = $._encodeEnumerated;
+
+
+/* eslint-enable */

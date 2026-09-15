@@ -17,7 +17,13 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getSpeakerVolume
  * @description
- * 
+ *
+ * Get Speaker Volume (ECMA-269 §21.1.13 / ECMA-285 §19.1.13). Direction: CF→SF.
+ * ROSE local CODE 272. Errors: `universalFailure`. Atomic acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ProgressIndicator_progressDescription
  * @description
- * 
+ *
+ * Kind of progress description carried with an interworking indication.
+ * ECMA-269 Network Capabilities Changed.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,7 +36,12 @@ enum _enum_for_ProgressIndicator_progressDescription {
 /**
  * @summary ProgressIndicator_progressDescription
  * @description
- * 
+ *
+ * Kind of progress description carried with an interworking indication.
+ * ECMA-269 Network Capabilities Changed.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,7 +60,12 @@ type ProgressIndicator_progressDescription = _enum_for_ProgressIndicator_progres
 /**
  * @summary ProgressIndicator_progressDescription
  * @description
- * 
+ *
+ * Kind of progress description carried with an interworking indication.
+ * ECMA-269 Network Capabilities Changed.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,6 +83,10 @@ const ProgressIndicator_progressDescription = _enum_for_ProgressIndicator_progre
 
 /**
  * @summary ProgressIndicator_progressDescription_iSDNProgressDesc
+ * @description
+ *
+ * ISDN progress description from ETSI ETS 300 182:1993.
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +103,10 @@ const iSDNProgressDesc: ProgressIndicator_progressDescription = ProgressIndicato
 
 /**
  * @summary ProgressIndicator_progressDescription_qSIGProgressDesc
+ * @description
+ *
+ * QSIG progress description from ECMA-143.
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +123,10 @@ const qSIGProgressDesc: ProgressIndicator_progressDescription = ProgressIndicato
 
 /**
  * @summary ProgressIndicator_progressDescription_other
+ * @description
+ *
+ * Progress description other than ISDN or QSIG.
+ *
  * @constant
  * @type {number}
  */

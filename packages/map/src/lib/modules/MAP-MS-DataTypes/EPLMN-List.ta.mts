@@ -73,7 +73,11 @@ import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataType
 /**
  * @summary EPLMN_List
  * @description
- * 
+ *
+ * Equivalent PLMN list for which the VLR or MME/SGSN requests corresponding CSG
+ * Subscription data (SIZE 1..50) (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3,
+ * 8.1.7.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

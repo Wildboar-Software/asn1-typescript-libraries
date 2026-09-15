@@ -8,7 +8,12 @@ import { INTEGER, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary PrivateDataVersionList
  * @description
- * 
+ *
+ * Supported private-data versions for this manufacturer. Table 13-9.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

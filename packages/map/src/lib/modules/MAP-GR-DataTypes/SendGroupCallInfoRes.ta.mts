@@ -78,7 +78,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SendGroupCallInfoRes
  * @description
- * 
+ *
+ * Result of MAP_SEND_GROUP_CALL_INFO (3GPP TS 29.002 V19.1.0 clauses 10.7A and
+ * 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -100,42 +103,70 @@ class SendGroupCallInfoRes {
     constructor (
         /**
          * @summary `anchorMSC_Address`.
+         * @description
+         *
+         * See 3GPP TS 43.068 and 43.069 (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly anchorMSC_Address: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `asciCallReference`.
+         * @description
+         *
+         * See 3GPP TS 43.068 and 43.069 (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly asciCallReference: OPTIONAL<ASCI_CallReference>,
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * Uplink requesting service subscriber (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * See 3GPP TS 43.068 (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly additionalInfo: OPTIONAL<AdditionalInfo>,
         /**
          * @summary `additionalSubscriptions`.
+         * @description
+         *
+         * See 3GPP TS 43.068 (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly additionalSubscriptions: OPTIONAL<AdditionalSubscriptions>,
         /**
          * @summary `kc`.
+         * @description
+         *
+         * See clause 7.6.7 (clause 10.7A.3).
+         *
          * @public
          * @readonly
          */
         readonly kc: OPTIONAL<Kc>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

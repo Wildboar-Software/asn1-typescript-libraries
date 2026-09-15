@@ -24,7 +24,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RouteRegisterArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 20-2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +46,30 @@ class RouteRegisterArgument {
     constructor (
         /**
          * @summary `routeingDevice`.
+         * @description
+         *
+         * Specific routeing device. Omitted: all routeing devices in
+         * the sub-domain, if supported.
          * @public
          * @readonly
          */
         readonly routeingDevice: OPTIONAL<DeviceID>,
         /**
          * @summary `requestedRouteingMediaClass`.
+         * @description
+         *
+         * Media classes of calls this registration should receive.
+         * Matched on Route Request when Route Mode is used.
          * @public
          * @readonly
          */
         readonly requestedRouteingMediaClass: OPTIONAL<MediaClass>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

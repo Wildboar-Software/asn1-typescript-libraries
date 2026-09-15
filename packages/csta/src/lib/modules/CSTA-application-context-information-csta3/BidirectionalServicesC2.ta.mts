@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary BidirectionalServicesC2
  * @description
- * 
+ *
+ * Phase II bidirectional services. Phase II (ECMA-218) compatibility BIT STRING
+ * in ACSE user-information. For Phase III and later, use Capability Exchange to
+ * learn supported services and events. ECMA-285 §8.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,13 +28,16 @@ type BidirectionalServicesC2 = BIT_STRING;
 
 /**
  * @summary BidirectionalServicesC2_escapeService
+ * @description Advertises `escapeService` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const BidirectionalServicesC2_escapeService: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary escapeService
+ * @description Alias of {@link BidirectionalServicesC2_escapeService}.
  * @constant
  */
 export
@@ -36,13 +45,16 @@ const escapeService: number = BidirectionalServicesC2_escapeService; /* SHORT_NA
 
 /**
  * @summary BidirectionalServicesC2_systemStatus
+ * @description Advertises `systemStatus` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const BidirectionalServicesC2_systemStatus: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary systemStatus
+ * @description Alias of {@link BidirectionalServicesC2_systemStatus}.
  * @constant
  */
 export

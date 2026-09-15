@@ -35,7 +35,16 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary AgentBusyEvent
  * @description
- * 
+ *
+ * Agent Busy event (ECMA-269 §22.2.1 / ECMA-285 §20.2.1). Direction: SF→CF via
+ * Event Report. Agent entered Busy: involved with an ACD call (even if held).
+ * May still accept non-ACD calls. Agent/supervisor/private calls may or may not
+ * cause this. May be reported for a monitor on the ACD device, ACD group, or
+ * agent device (§6.1.1.6).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,36 +64,57 @@ class AgentBusyEvent {
     constructor (
         /**
          * @summary `agentDevice`.
+         * @description
+         *
+         * Device at which the agent entered Busy.
          * @public
          * @readonly
          */
         readonly agentDevice: SubjectDeviceID,
         /**
          * @summary `agentID`.
+         * @description
+         *
+         * Required if multiple agentIDs exist at the agent device.
          * @public
          * @readonly
          */
         readonly agentID: OPTIONAL<AgentID>,
         /**
          * @summary `acdGroup`.
+         * @description
+         *
+         * Present iff the event is associated with ACD group activity
+         * (§6.1.1.6.5); otherwise absent.
          * @public
          * @readonly
          */
         readonly acdGroup: OPTIONAL<DeviceID>,
         /**
          * @summary `pendingAgentState`.
+         * @description
+         *
+         * Next state after Busy ends: Working After Call, Not Ready, Ready, or
+         * Null. Required if the SF delays that transition.
          * @public
          * @readonly
          */
         readonly pendingAgentState: OPTIONAL<PendingAgentState>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Reason for the event.
          * @public
          * @readonly
          */
         readonly cause: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

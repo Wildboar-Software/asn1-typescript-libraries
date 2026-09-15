@@ -24,7 +24,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary StartLocationTrackingSessionResult
  * @description
- * 
+ *
+ * `locCrossRefID` unique in the switching function, and PIDF-LO profile option
+ * (ECMA-269 §28.1.7.2.1 / §12.2.18).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +48,33 @@ class StartLocationTrackingSessionResult {
     constructor (
         /**
          * @summary `locCrossRefID`.
+         * @description
+         *
+         * Session identifier, unique in the switching function (ECMA-269
+         * §28.1.7.2.1).
+         *
          * @public
          * @readonly
          */
         readonly locCrossRefID: LocCrossRefID,
         /**
          * @summary `pidProfile`.
+         * @description
+         *
+         * PIDF-LO profile for this session. ECMA-269 lists it mandatory; ASN.1
+         * marks it OPTIONAL (ECMA-269 §28.1.7.2.1, ECMA-285 §26.1.7).
+         *
          * @public
          * @readonly
          */
         readonly pidProfile: OPTIONAL<PIDProfile>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

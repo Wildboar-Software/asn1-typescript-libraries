@@ -15,7 +15,11 @@ import {
 /**
  * @summary DisplayAttributeList
  * @description
- * 
+ *
+ * Display positioning for a physical-device display update. ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +36,21 @@ class DisplayAttributeList {
     constructor (
         /**
          * @summary `physicalBaseRowNumber`.
+         * @description Physical display base row.
          * @public
          * @readonly
          */
         readonly physicalBaseRowNumber: OPTIONAL<INTEGER>,
         /**
          * @summary `physicalBaseColumnNumber`.
+         * @description Physical display base column.
          * @public
          * @readonly
          */
         readonly physicalBaseColumnNumber: OPTIONAL<INTEGER>,
         /**
          * @summary `offset`.
+         * @description Display offset.
          * @public
          * @readonly
          */

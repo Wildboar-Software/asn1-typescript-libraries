@@ -75,7 +75,10 @@ import { maxGeranGANSSpositioningData } from "./maxGeranGANSSpositioningData.va.
 /**
  * @summary GeranGANSSpositioningData
  * @description
- * 
+ *
+ * GERAN GANSS data as in 3GPP TS 49.031, 2..10 octets (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.11.11C and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

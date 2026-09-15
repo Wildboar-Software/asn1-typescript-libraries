@@ -73,7 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ProvideRoamingNumberRes
  * @description
- * 
+ *
+ * Result of MAP_PROVIDE_ROAMING_NUMBER (3GPP TS 29.002 V19.1.0 clauses 10.2 and
+ * 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,24 +95,41 @@ class ProvideRoamingNumberRes {
     constructor (
         /**
          * @summary `roamingNumber`.
+         * @description
+         *
+         * MSRN. If NPLR returns MSISDN without RN, that MSISDN is returned as
+         * MSRN (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly roamingNumber: ISDN_AddressString,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `releaseResourcesSupported`.
+         * @description
+         *
+         * VMSC supports MAP_RELEASE_RESOURCES.
+         *
          * @public
          * @readonly
          */
         readonly releaseResourcesSupported: OPTIONAL<NULL>,
         /**
          * @summary `vmsc_Address`.
+         * @description
+         *
+         * VMSC address.
+         *
          * @public
          * @readonly
          */

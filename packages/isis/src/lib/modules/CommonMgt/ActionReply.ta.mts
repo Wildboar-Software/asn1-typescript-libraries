@@ -21,6 +21,12 @@ import {
  * @summary ActionReply
  * @description
  *
+ * Reply syntax of the GMI `activate`, `deactivate` and `shutdown` actions.
+ * `responseCode` is `successResponse` if the state change was initiated,
+ * otherwise `failureResponse` plus a failure-reason parameter.
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.11 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,12 +41,25 @@ export class ActionReply {
   constructor(
     /**
      * @summary `responseCode`.
+     * @description
+     *
+     * Success or failure OID under `{proi responseCode(1001)}`.
+     *
+     * (ISO/IEC 10589:2002 Annex E.1.11 and E.2).
+     *
      * @public
      * @readonly
      */
     readonly responseCode: OBJECT_IDENTIFIER,
     /**
      * @summary `responseArgs`.
+     * @description
+     *
+     * Optional extra parameters (for example a failure reason when
+     * `responseCode` is `failureResponse`).
+     *
+     * (ISO/IEC 10589:2002 Annex E.1.11).
+     *
      * @public
      * @readonly
      */

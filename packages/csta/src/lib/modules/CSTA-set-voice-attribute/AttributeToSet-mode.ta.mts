@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AttributeToSet_mode
  * @description
- * 
+ *
+ * Listener mode: automatic, single, or multiple (ECMA-269 §26.1.13.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,7 +37,13 @@ enum _enum_for_AttributeToSet_mode {
 /**
  * @summary AttributeToSet_mode
  * @description
- * 
+ *
+ * Listener mode: automatic, single, or multiple (ECMA-269 §26.1.13.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,7 +62,13 @@ type AttributeToSet_mode = _enum_for_AttributeToSet_mode;
 /**
  * @summary AttributeToSet_mode
  * @description
- * 
+ *
+ * Listener mode: automatic, single, or multiple (ECMA-269 §26.1.13.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,6 +86,10 @@ const AttributeToSet_mode = _enum_for_AttributeToSet_mode;
 
 /**
  * @summary AttributeToSet_mode_automatic
+ * @description
+ *
+ * Listener automatic mode (ECMA-269 §26.1.13.1).
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +98,10 @@ const AttributeToSet_mode_automatic: AttributeToSet_mode = AttributeToSet_mode.a
 
 /**
  * @summary automatic
+ * @description
+ *
+ * Listener automatic mode (ECMA-269 §26.1.13.1).
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +110,10 @@ const automatic: AttributeToSet_mode = AttributeToSet_mode.automatic; /* SHORT_N
 
 /**
  * @summary AttributeToSet_mode_single
+ * @description
+ *
+ * Listener single mode (ECMA-269 §26.1.13.1).
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +122,10 @@ const AttributeToSet_mode_single: AttributeToSet_mode = AttributeToSet_mode.sing
 
 /**
  * @summary single
+ * @description
+ *
+ * Listener single mode (ECMA-269 §26.1.13.1).
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +134,10 @@ const single: AttributeToSet_mode = AttributeToSet_mode.single; /* SHORT_NAMED_E
 
 /**
  * @summary AttributeToSet_mode_multiple
+ * @description
+ *
+ * Listener multiple mode (ECMA-269 §26.1.13.1).
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +146,10 @@ const AttributeToSet_mode_multiple: AttributeToSet_mode = AttributeToSet_mode.mu
 
 /**
  * @summary multiple
+ * @description
+ *
+ * Listener multiple mode (ECMA-269 §26.1.13.1).
+ *
  * @constant
  * @type {number}
  */

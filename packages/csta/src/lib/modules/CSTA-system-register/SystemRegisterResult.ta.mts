@@ -19,7 +19,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SystemRegisterResult
  * @description
- * 
+ *
+ * Positive ack (Table 14-5). Allocates `sysStatRegisterID`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +41,28 @@ class SystemRegisterResult {
     constructor (
         /**
          * @summary `sysStatRegisterID`.
+         * @description
+         *
+         * SF-allocated registration identifier (ECMA-269 §12.3.31).
          * @public
          * @readonly
          */
         readonly sysStatRegisterID: SysStatRegisterID,
         /**
          * @summary `actualStatusFilter`.
+         * @description
+         *
+         * Filter the SF will actually apply, if System Status was requested.
          * @public
          * @readonly
          */
         readonly actualStatusFilter: OPTIONAL<StatusFilter>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 14-5.
          * @public
          * @readonly
          */

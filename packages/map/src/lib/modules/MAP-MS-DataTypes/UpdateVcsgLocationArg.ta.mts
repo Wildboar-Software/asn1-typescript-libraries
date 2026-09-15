@@ -74,7 +74,15 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary UpdateVcsgLocationArg
  * @description
- * 
+ *
+ * MAP_UPDATE_VCSG_LOCATION request. VLR or SGSN registers the MS in the CSS
+ * when the VPLMN supports Autonomous CSG Roaming, the HPLMN has enabled it, the
+ * MS requested attach or LA/RA update to a CSG cell, and the VLR/SGSN has not
+ * yet registered the MS. VLR number mandatory if used by VLR; SGSN number if
+ * used by SGSN.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.1.9 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,24 +102,48 @@ class UpdateVcsgLocationArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * International Mobile Subscriber Identity as in 3GPP TS 23.003.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `msisdn`.
+         * @description
+         *
+         * MSISDN as in 3GPP TS 23.003.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.17).
+         *
          * @public
          * @readonly
          */
         readonly msisdn: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `vlr_Number`.
+         * @description
+         *
+         * ISDN number of a VLR.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.14).
+         *
          * @public
          * @readonly
          */
         readonly vlr_Number: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `sgsn_Number`.
+         * @description
+         *
+         * ISDN number of an SGSN. In EPS, may be an IWF number.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.38).
+         *
          * @public
          * @readonly
          */

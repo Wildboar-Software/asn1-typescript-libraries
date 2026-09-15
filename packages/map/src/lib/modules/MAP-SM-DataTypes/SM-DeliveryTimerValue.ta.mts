@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SM_DeliveryTimerValue
  * @description
- * 
+ *
+ * INTEGER (30..600). Used by the SMS-GMSC (3GPP TS 29.002 V19.1.0 clause
+ * 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

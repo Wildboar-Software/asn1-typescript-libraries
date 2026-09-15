@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary LocationInformationReport
  * @description
- * 
+ * Capability bitmap for the Location Information Report service (ECMA-269
+ * C.22.6, ECMA-285 §9.10). Presence of this entry in `LocationServicesServList`
+ * means the SF supports that service. Each set bit is an optional parameter,
+ * enumerated value, initial connection state, or miscellaneous characteristic
+ * from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +33,9 @@ type LocationInformationReport = BIT_STRING;
 /**
  * @summary LocationInformationReport_locationInfoList
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `locationInfoList` parameter
+ * (ECMA-269 C.22.6).
  */
 export
 const LocationInformationReport_locationInfoList: number = 0; /* LONG_NAMED_BIT */
@@ -31,6 +43,8 @@ const LocationInformationReport_locationInfoList: number = 0; /* LONG_NAMED_BIT 
 /**
  * @summary locationInfoList
  * @constant
+ * @description
+ * Alias of `LocationInformationReport_locationInfoList`.
  */
 export
 const locationInfoList: number = LocationInformationReport_locationInfoList; /* SHORT_NAMED_BIT */
@@ -38,6 +52,9 @@ const locationInfoList: number = LocationInformationReport_locationInfoList; /* 
 /**
  * @summary LocationInformationReport_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.22.6).
  */
 export
 const LocationInformationReport_privateData: number = 1; /* LONG_NAMED_BIT */
@@ -45,6 +62,8 @@ const LocationInformationReport_privateData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `LocationInformationReport_privateData`.
  */
 export
 const privateData: number = LocationInformationReport_privateData; /* SHORT_NAMED_BIT */
@@ -52,6 +71,9 @@ const privateData: number = LocationInformationReport_privateData; /* SHORT_NAME
 /**
  * @summary LocationInformationReport_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.22.6).
  */
 export
 const LocationInformationReport_privateDataInAck: number = 2; /* LONG_NAMED_BIT */
@@ -59,6 +81,8 @@ const LocationInformationReport_privateDataInAck: number = 2; /* LONG_NAMED_BIT 
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `LocationInformationReport_privateDataInAck`.
  */
 export
 const privateDataInAck: number = LocationInformationReport_privateDataInAck; /* SHORT_NAMED_BIT */

@@ -21,7 +21,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary MakePredictiveCallResult
  * @description
- * 
+ *
+ * Positive acknowledgement for Make Predictive Call
+ * (ECMA-269 §17.1.20 / ECMA-285 §15.1.20). The ConnectionID
+ * is often the NID toward an external called party (FR 3).
+ * Validation failure yields no ConnectionIDs (FR 5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +47,46 @@ class MakePredictiveCallResult {
     constructor (
         /**
          * @summary `initiatedCall`.
+         * @description
+         *
+         * Mandatory. Initial connection of the called device
+         * (CallID of the new call plus that device). For an
+         * external called party this is often the NID (FR 3).
+         *
          * @public
          * @readonly
          */
         readonly initiatedCall: ConnectionID,
         /**
          * @summary `initiatedCallInfo`.
+         * @description
+         *
+         * Optional connection information. Omitted values are
+         * switching-function specific (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly initiatedCallInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Optional global call data and thread data
+         * (§12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security
+         * and privateData parameters from the ECMA-269 service
+         * table.
+         *
          * @public
          * @readonly
          */

@@ -17,7 +17,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary startDataCollection
  * @description
- * 
+ *
+ * Starts collection of DTMF/rotary digits or telephony tones on an existing
+ * connection, or on the next connection at a device. Continues until Stop or
+ * the connection clears (ECMA-269 §25.1.5).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:347. Errors: `universalFailure` (ECMA-285 §23.1.5).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

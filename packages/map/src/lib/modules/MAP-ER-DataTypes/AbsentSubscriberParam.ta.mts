@@ -74,6 +74,11 @@ import { AbsentSubscriberReason, _enum_for_AbsentSubscriberReason, AbsentSubscri
  * @summary AbsentSubscriberParam
  * @description
  * 
+ * Optional parameter of `absentSubscriber`. Must not be used in version <3. May
+ * qualify whether the subscriber was IMSI detached, in a restricted area, or
+ * did not respond to paging (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,6 +101,12 @@ class AbsentSubscriberParam {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `absentSubscriberReason`.
+         * @description
+         *
+         * Whether the subscriber was IMSI detached, in a restricted area, or
+         * did not respond to paging, or a later-defined reason. Unknown values
+         * shall be ignored (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+         *
          * @public
          * @readonly
          */

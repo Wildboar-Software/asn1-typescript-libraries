@@ -69,7 +69,20 @@ import { DTEDCE, _decode_DTEDCE, _encode_DTEDCE } from "../V59/DTEDCE.ta.mjs";
 /**
  * @summary V59Objects
  * @description
- * 
+ *
+ * Union of every high-level Modem Managed Object (MMO). Diagnostics cover the
+ * last PSTN connection and are meant to be read off-line (on-hook). Objects
+ * persist across a call and are cleared only by power-off or forced reset;
+ * going off-hook starts a new collection. A soft reset (e.g. V.250 ATZ) during
+ * a call records the termination cause and must not clear objects. Compliant
+ * implementations must supply objects marked mandatory; objects that cannot
+ * be derived from exchanged sequences and need extra DCE processing are
+ * optional (§5.1). Clause 6 Tag-IDs identify objects in hex (`HHll`). Annex A
+ * encoding is BASIC-ALIGNED PER (X.691) per ITU-T Rec. V.59 Cor.1 (07/2001) and
+ * Cor.2 (03/2002); if text and ASN.1 conflict, ASN.1 governs (Cor.2 clause 1).
+ * ITU-T Rec. V.59 (11/2000) §1, §5, §5.2, §6.3.
+ * https://www.itu.int/rec/T-REC-V.59
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

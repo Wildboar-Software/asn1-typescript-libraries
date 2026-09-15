@@ -8,7 +8,15 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary DestinationCondition
  * @description
- * 
+ *
+ * Called-party condition for Make Predictive Call
+ * destination detection (ECMA-269 §17.1.20 Table 17-110):
+ * `humanVoice`, `answeringMachine`, or
+ * `facsimileMachine`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +38,15 @@ enum _enum_for_DestinationCondition {
 /**
  * @summary DestinationCondition
  * @description
- * 
+ *
+ * Called-party condition for Make Predictive Call
+ * destination detection (ECMA-269 §17.1.20 Table 17-110):
+ * `humanVoice`, `answeringMachine`, or
+ * `facsimileMachine`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +64,15 @@ type DestinationCondition = _enum_for_DestinationCondition;
 /**
  * @summary DestinationCondition
  * @description
- * 
+ *
+ * Called-party condition for Make Predictive Call
+ * destination detection (ECMA-269 §17.1.20 Table 17-110):
+ * `humanVoice`, `answeringMachine`, or
+ * `facsimileMachine`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

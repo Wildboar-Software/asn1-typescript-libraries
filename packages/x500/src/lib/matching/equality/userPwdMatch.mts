@@ -6,20 +6,23 @@ import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdenti
 import compareElements from "../../comparators/compareElements.mjs";
 import { Buffer } from "node:buffer";
 
-// userPwdMatch MATCHING-RULE ::= {
-//     SYNTAX       UserPwd
-//     LDAP-SYNTAX  userPwdDescription.&id
-//     LDAP-NAME    {"userPwdMatch"}
-//     ID           id-mr-userPwdMatch }
-
-// UserPwd ::= CHOICE {
-//     clear                 UTF8String,
-//     encrypted             SEQUENCE {
-//       algorithmIdentifier   AlgorithmIdentifier{{SupportedAlgorithms}},
-//       encryptedString       OCTET STRING,
-//       ...},
-//     ...}
-
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.10.1 `userPwdMatch`.
+ *
+ * Factory for matching presented `UserPwd` against a stored
+ * `UserPwd`:
+ *
+ * - Both clear: `caseExactMatch`.
+ * - Presented clear, stored encrypted: encrypt the assertion with
+ *   the stored algorithm, then `octetStringMatch`.
+ * - Presented encrypted, stored clear: encrypt the stored password
+ *   with the asserted algorithm, then `octetStringMatch`.
+ * - Both encrypted: algorithm identifier and parameters must be
+ *   equal, then encrypted strings via `octetStringMatch`.
+ *
+ * `encrypter` supplies the encryption for mixed clear/encrypted
+ * cases; returning `null` means the algorithm is not understood.
+ */
 export
 function createUserPwdMatch (
     encrypter: (alg: AlgorithmIdentifier, clear: string) => Uint8Array | null,

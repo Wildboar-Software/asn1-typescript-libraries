@@ -8,7 +8,12 @@ import { INTEGER, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary LampColor
  * @description
- * 
+ *
+ * Lamp color. 0–4 are pre-assigned; 5 is not used in §21.1.17 (ECMA-285 names
+ * it `unknown`); 6–100 are switching-function specific. ECMA-269 §21.1.17.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +31,10 @@ type LampColor = INTEGER;
 
 /**
  * @summary LampColor_noColor
+ * @description
+ *
+ * No color (0). ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +51,10 @@ const noColor: LampColor = LampColor_noColor; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampColor_red
+ * @description
+ *
+ * Red (1). ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +71,10 @@ const red: LampColor = LampColor_red; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampColor_yellow
+ * @description
+ *
+ * Yellow (2). ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +91,10 @@ const yellow: LampColor = LampColor_yellow; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampColor_green
+ * @description
+ *
+ * Green (3). ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +111,10 @@ const green: LampColor = LampColor_green; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampColor_blue
+ * @description
+ *
+ * Blue (4). ECMA-269 §21.1.17.
+ *
  * @constant
  * @type {number}
  */
@@ -106,6 +131,11 @@ const blue: LampColor = LampColor_blue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LampColor_unknown
+ * @description
+ *
+ * Value 5 is not used in §21.1.17; ECMA-285 names it `unknown`. ECMA-269
+ * §21.1.17.
+ *
  * @constant
  * @type {number}
  */

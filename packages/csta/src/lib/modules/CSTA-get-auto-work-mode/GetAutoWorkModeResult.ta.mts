@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetAutoWorkModeResult
  * @description
- * 
+ *
+ * Positive ack (ECMA-269 §22.1.7.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +39,29 @@ class GetAutoWorkModeResult {
     constructor (
         /**
          * @summary `autoWorkOn`.
+         * @description
+         *
+         * FALSE = off; TRUE = on.
          * @public
          * @readonly
          */
         readonly autoWorkOn: BOOLEAN,
         /**
          * @summary `autoWorkInterval`.
+         * @description
+         *
+         * Seconds in WorkingAfterCall. 0: do not auto-exit; change state
+         * manually or via Set Agent State.
          * @public
          * @readonly
          */
         readonly autoWorkInterval: OPTIONAL<INTEGER>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

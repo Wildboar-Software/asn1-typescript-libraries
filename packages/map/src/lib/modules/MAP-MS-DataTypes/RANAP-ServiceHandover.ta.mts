@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RANAP_ServiceHandover
  * @description
- * 
+ *
+ * Complete Service-Handover data type from 3GPP TS 25.413, encoded as mandated
+ * there. Padding bits occupy the least significant bits.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.6.6 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

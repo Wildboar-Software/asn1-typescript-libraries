@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary V8bisSignalType
  * @description
- * 
+ *
+ * V.8 bis MR/CR signal class (Tables 7 and 8/V.59): `nONE`(0) none sent or
+ * received, `e`(1) type e (MRe/CRe), `d`(2) type d (MRd/CRd). ITU-T Rec. V.59
+ * (11/2000) §6.8.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

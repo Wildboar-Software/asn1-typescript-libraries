@@ -17,7 +17,12 @@ import { VolAbs, _decode_VolAbs, _encode_VolAbs } from "../CSTA-physical-device-
 /**
  * @summary SpeakerVolumeList_Item
  * @description
- * 
+ *
+ * Volume for one speaker (ECMA-269 §21.1.13.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +39,19 @@ class SpeakerVolumeList_Item {
     constructor (
         /**
          * @summary `auditoryApparatus`.
+         * @description
+         *
+         * Apparatus that owns the speaker.
          * @public
          * @readonly
          */
         readonly auditoryApparatus: AuditoryApparatusID,
         /**
          * @summary `speakerVolAbs`.
+         * @description
+         *
+         * Absolute volume. 0 silence, 100 maximum; 1–99 device-specific.
+         * Absent: unknown.
          * @public
          * @readonly
          */

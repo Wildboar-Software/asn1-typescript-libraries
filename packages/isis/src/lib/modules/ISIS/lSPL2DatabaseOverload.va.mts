@@ -15,6 +15,11 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary lSPL2DatabaseOverload
  * @description
  *
+ * `specificProblems` value when `l2State` changes between On and Waiting. Same
+ * additional-information and probableCause rules as Level 1 overload.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.3.19 and 11.2.2.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

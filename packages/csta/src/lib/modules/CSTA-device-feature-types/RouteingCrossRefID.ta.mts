@@ -8,7 +8,15 @@ import { OCTET_STRING, ASN1Element as _Element, ASN1TagClass as _TagClass } from
 /**
  * @summary RouteingCrossRefID
  * @description
- * 
+ *
+ * Identifies a routeing dialogue. Received in each Route Request; valid for the
+ * duration of that dialogue for a specific call. Unique within the routeing
+ * registration (`RouteRegisterReqID`); some switching functions make it unique
+ * across the sub-domain. Tagged APPLICATION 24. ECMA-269 §12.3.27.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

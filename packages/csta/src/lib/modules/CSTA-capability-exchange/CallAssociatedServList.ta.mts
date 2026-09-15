@@ -25,7 +25,13 @@ import { SendUserInformation, _decode_SendUserInformation, _encode_SendUserInfor
 /**
  * @summary CallAssociatedServList
  * @description
- * 
+ * Call Associated services the SF supports (ECMA-269 Annex C.7, ECMA-285
+ * §9.10). Omit unsupported services.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,36 +53,54 @@ class CallAssociatedServList {
          * @summary `associateData`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly associateData: OPTIONAL<AssociateData>,
         /**
          * @summary `cancelTelephonyTones`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly cancelTelephonyTones: OPTIONAL<CancelTelephonyTones>,
         /**
          * @summary `changeConnectionInformation`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly changeConnectionInformation: OPTIONAL<ChangeConnectionInformation>,
         /**
          * @summary `generateDigits`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly generateDigits: OPTIONAL<GenerateDigits>,
         /**
          * @summary `generateTelephonyTones`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly generateTelephonyTones: OPTIONAL<GenerateTelephonyTones>,
         /**
          * @summary `sendUserInformation`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly sendUserInformation: OPTIONAL<SendUserInformation>
     ) {}

@@ -11,6 +11,14 @@ import {
 } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
 
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.2.9
+ * `telephoneNumberSubstringsMatch`.
+ *
+ * Substring match of a telephone-number `PrintableString`. Same as
+ * `caseExactSubstringsMatch` except hyphens and spaces are
+ * insignificant and are removed during character removal.
+ */
 export
 const telephoneNumberSubstringsMatch: SubstringsMatcher = (
     assertion: ASN1Element,

@@ -74,7 +74,12 @@ import { CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_Camel
 /**
  * @summary O_CSI
  * @description
- * 
+ *
+ * Originating CAMEL Subscription Information as in 3GPP TS 23.078.
+ * `notificationToCSE` and `csiActive` shall not be present when O-CSI is sent
+ * to VLR/GMSC; they may appear only in ATSI/ATM ack/NSDC. O-CSI shall not be
+ * segmented. (3GPP TS 29.002 V19.1.0 clauses 7.6.5.7 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,6 +99,12 @@ class O_CSI {
     constructor (
         /**
          * @summary `o_BcsmCamelTDPDataList`.
+         * @description
+         *
+         * O-BCSM TDP data. Shall not contain two instances with the same
+         * detection point. O-CSI shall not be segmented. (3GPP TS 29.002
+         * V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
@@ -106,18 +117,33 @@ class O_CSI {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `camelCapabilityHandling`.
+         * @description
+         *
+         * CAMEL phase to apply for this CSI (1..4; values > 4 treated as phase
+         * 4). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly camelCapabilityHandling: OPTIONAL<CamelCapabilityHandling>,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Shall not be present when O-CSI is sent to VLR/GMSC; may appear only
+         * in ATSI/ATM ack/NSDC. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly notificationToCSE: OPTIONAL<NULL>,
         /**
          * @summary `csiActive`.
+         * @description
+         *
+         * Shall not be present when O-CSI is sent to VLR/GMSC; may appear only
+         * in ATSI/ATM ack/NSDC. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */

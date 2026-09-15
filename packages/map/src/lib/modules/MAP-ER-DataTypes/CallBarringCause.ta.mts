@@ -73,6 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CallBarringCause
  * @description
  * 
+ * Indicates either that the call meets a barring condition set by the
+ * subscriber or that the call is barred for operator reasons (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,6 +97,10 @@ enum _enum_for_CallBarringCause {
  * @summary CallBarringCause
  * @description
  * 
+ * Indicates either that the call meets a barring condition set by the
+ * subscriber or that the call is barred for operator reasons (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -110,6 +118,10 @@ type CallBarringCause = _enum_for_CallBarringCause;
  * @summary CallBarringCause
  * @description
  * 
+ * Indicates either that the call meets a barring condition set by the
+ * subscriber or that the call is barred for operator reasons (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -125,6 +137,11 @@ const CallBarringCause = _enum_for_CallBarringCause;
 
 /**
  * @summary CallBarringCause_barringServiceActive
+ * @description
+ *
+ * Call meets a barring condition set by the subscriber (3GPP TS 29.002 V19.1.0
+ * clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +150,11 @@ const CallBarringCause_barringServiceActive: CallBarringCause = CallBarringCause
 
 /**
  * @summary barringServiceActive
+ * @description
+ *
+ * Call meets a barring condition set by the subscriber (3GPP TS 29.002 V19.1.0
+ * clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +163,10 @@ const barringServiceActive: CallBarringCause = CallBarringCause.barringServiceAc
 
 /**
  * @summary CallBarringCause_operatorBarring
+ * @description
+ *
+ * Call is barred for operator reasons (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +175,10 @@ const CallBarringCause_operatorBarring: CallBarringCause = CallBarringCause.oper
 
 /**
  * @summary operatorBarring
+ * @description
+ *
+ * Call is barred for operator reasons (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */

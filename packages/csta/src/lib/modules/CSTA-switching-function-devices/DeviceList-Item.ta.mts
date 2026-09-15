@@ -33,7 +33,12 @@ import { DeviceAttributes, _decode_DeviceAttributes, _encode_DeviceAttributes } 
 /**
  * @summary DeviceList_Item
  * @description
- * 
+ *
+ * One working-domain device (Table 13-12 `deviceList` entry).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,36 +59,57 @@ class DeviceList_Item {
     constructor (
         /**
          * @summary `deviceID`.
+         * @description
+         *
+         * Device identifier for this entry. Mandatory.
          * @public
          * @readonly
          */
         readonly deviceID: DeviceID,
         /**
          * @summary `deviceCategory`.
+         * @description
+         *
+         * Category; defaults to station.
          * @public
          * @readonly
          */
         readonly deviceCategory: OPTIONAL<DeviceCategory>,
         /**
          * @summary `namedDeviceTypes`.
+         * @description
+         *
+         * Named device type, if assigned.
          * @public
          * @readonly
          */
         readonly namedDeviceTypes: OPTIONAL<NamedDeviceTypes>,
         /**
          * @summary `deviceAttributes`.
+         * @description
+         *
+         * Additional bits: media-access device, routeing device, group
+         * ACD/hunt/pick.
          * @public
          * @readonly
          */
         readonly deviceAttributes: OPTIONAL<DeviceAttributes>,
         /**
          * @summary `deviceModelName`.
+         * @description
+         *
+         * SF-specific model name.
          * @public
          * @readonly
          */
         readonly deviceModelName: OPTIONAL<IA5String>,
         /**
          * @summary `nidGroup`.
+         * @description
+         *
+         * NID group (e.g. trunk group) associated with a Network
+         * Interface device. Only when `deviceCategory` is Network
+         * Interface.
          * @public
          * @readonly
          */

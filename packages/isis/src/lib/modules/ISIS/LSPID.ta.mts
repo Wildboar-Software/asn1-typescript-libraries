@@ -16,6 +16,12 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary LSPID
  * @description
  *
+ * Link State PDU identifier: Source ID (`IDLength` octets), one-octet
+ * Pseudonode ID (zero if not a pseudonode LSP), and one-octet LSP number.
+ * Identifies an LSP in the link-state database and in SNP ranges.
+ *
+ * (ISO/IEC 10589:2002 clauses 9.8 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

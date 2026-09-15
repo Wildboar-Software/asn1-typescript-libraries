@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary generateTelephonyTones
  * @description
- * 
+ *
+ * Generate Telephony Tones (ECMA-269 §18.1.5 / ECMA-285 §16.1.5). Direction:
+ * CF→SF. ROSE local CODE 233. Errors: `universalFailure`. Generates
+ * `toneToSend` on `connectionToSendTone`. Telephony
+ * Tones Generated reports generation; `toneFrequency` / duration
+ * / pause apply only when the tone is `other`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

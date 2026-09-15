@@ -18,7 +18,13 @@ import { AgentInfo, _decode_AgentInfo, _encode_AgentInfo } from "../CSTA-get-age
 /**
  * @summary AgentStateEntry
  * @description
- * 
+ *
+ * One agent at the device (ECMA-269 §22.1.5.2.1). ASN.1 `loggedOn` is spec
+ * `loggedOnState`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +41,28 @@ class AgentStateEntry {
     constructor (
         /**
          * @summary `agentID`.
+         * @description
+         *
+         * Required if multiple agentIDs are associated with the device.
          * @public
          * @readonly
          */
         readonly agentID: OPTIONAL<AgentID>,
         /**
          * @summary `loggedOn`.
+         * @description
+         *
+         * TRUE = logged on; FALSE = not logged on.
          * @public
          * @readonly
          */
         readonly loggedOn: BOOLEAN,
         /**
          * @summary `agentInfo`.
+         * @description
+         *
+         * Per-group/state rows. A specific agent may have more than one state
+         * association.
          * @public
          * @readonly
          */

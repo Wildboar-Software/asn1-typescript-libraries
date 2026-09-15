@@ -8,7 +8,12 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SupplServiceInfo
  * @description
- * 
+ *
+ * Supplementary services used on the recorded call. Multiple bits may be set.
+ * ECMA-269 §27.1.2.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +35,10 @@ type SupplServiceInfo = BIT_STRING;
 
 /**
  * @summary SupplServiceInfo_normalCall
+ * @description
+ *
+ * Normal call (no listed supplementary service). ECMA-269 §27.1.2.
+ *
  * @constant
  */
 export
@@ -44,6 +53,10 @@ const normalCall: number = SupplServiceInfo_normalCall; /* SHORT_NAMED_BIT */
 
 /**
  * @summary SupplServiceInfo_consultationCall
+ * @description
+ *
+ * Consultation Call. ECMA-269 §27.1.2.
+ *
  * @constant
  */
 export
@@ -58,6 +71,10 @@ const consultationCall: number = SupplServiceInfo_consultationCall; /* SHORT_NAM
 
 /**
  * @summary SupplServiceInfo_transferCall
+ * @description
+ *
+ * Transfer. ECMA-269 §27.1.2.
+ *
  * @constant
  */
 export
@@ -72,6 +89,10 @@ const transferCall: number = SupplServiceInfo_transferCall; /* SHORT_NAMED_BIT *
 
 /**
  * @summary SupplServiceInfo_callCompletion
+ * @description
+ *
+ * Call completion. ECMA-269 §27.1.2.
+ *
  * @constant
  */
 export
@@ -86,6 +107,10 @@ const callCompletion: number = SupplServiceInfo_callCompletion; /* SHORT_NAMED_B
 
 /**
  * @summary SupplServiceInfo_callForwarding
+ * @description
+ *
+ * Call forwarding. ECMA-269 §27.1.2.
+ *
  * @constant
  */
 export
@@ -100,6 +125,10 @@ const callForwarding: number = SupplServiceInfo_callForwarding; /* SHORT_NAMED_B
 
 /**
  * @summary SupplServiceInfo_callDiversion
+ * @description
+ *
+ * Call diversion. ECMA-269 §27.1.2.
+ *
  * @constant
  */
 export
@@ -114,6 +143,10 @@ const callDiversion: number = SupplServiceInfo_callDiversion; /* SHORT_NAMED_BIT
 
 /**
  * @summary SupplServiceInfo_conferencing
+ * @description
+ *
+ * Conferencing. ECMA-269 §27.1.2.
+ *
  * @constant
  */
 export
@@ -128,6 +161,10 @@ const conferencing: number = SupplServiceInfo_conferencing; /* SHORT_NAMED_BIT *
 
 /**
  * @summary SupplServiceInfo_intrusion
+ * @description
+ *
+ * Intrusion. ECMA-269 §27.1.2.
+ *
  * @constant
  */
 export
@@ -142,6 +179,11 @@ const intrusion: number = SupplServiceInfo_intrusion; /* SHORT_NAMED_BIT */
 
 /**
  * @summary SupplServiceInfo_userUserInfo
+ * @description
+ *
+ * User-related information was exchanged (e.g. ISDN User-to-User signalling).
+ * ECMA-269 §27.1.2.
+ *
  * @constant
  */
 export
@@ -156,6 +198,10 @@ const userUserInfo: number = SupplServiceInfo_userUserInfo; /* SHORT_NAMED_BIT *
 
 /**
  * @summary SupplServiceInfo_other
+ * @description
+ *
+ * Other supplementary service. ECMA-269 §27.1.2.
+ *
  * @constant
  */
 export

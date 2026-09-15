@@ -1,7 +1,14 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-device-identifiers`.
+ * CSTA Phase III device identifiers (ECMA-285 §9.2). `DeviceID` carries
+ * the Clause 10 formats; role types (`CallingDeviceID`,
+ * `CalledDeviceID`, `Associated*`, `Network*`, `RedirectionDeviceID`,
+ * `SubjectDeviceID`) wrap it with status alternatives. Semantics:
+ * ECMA-269 §6.1.1, §10, §12.3.2–12.3.11, §12.3.22–12.3.24, §12.3.30.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export * from "./AssociatedCalledDevice.ta.mjs";
 export * from "./AssociatedCalledDeviceID.ta.mjs";

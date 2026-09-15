@@ -72,7 +72,11 @@ import { map_ac } from "../MAP-ApplicationContexts/map-ac.va.mjs";
 /**
  * @summary locationSvcEnquiryContext_v3
  * @description
- * 
+ *
+ * Location service enquiry. Initiator GMLC with responder MSC or SGSN, or
+ * initiator MSC or SGSN with responder GMLC (3GPP TS 29.002 V19.1.0 clause
+ * 17.3.2.40).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

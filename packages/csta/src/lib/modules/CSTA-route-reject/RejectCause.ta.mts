@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary RejectCause
  * @description
- * 
+ *
+ * Overflow reason for Route Reject (Table 20-10): busy,
+ * queue-time, capacity, calendar, unknown.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +40,13 @@ enum _enum_for_RejectCause {
 /**
  * @summary RejectCause
  * @description
- * 
+ *
+ * Overflow reason for Route Reject (Table 20-10): busy,
+ * queue-time, capacity, calendar, unknown.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,7 +66,13 @@ type RejectCause = _enum_for_RejectCause;
 /**
  * @summary RejectCause
  * @description
- * 
+ *
+ * Overflow reason for Route Reject (Table 20-10): busy,
+ * queue-time, capacity, calendar, unknown.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

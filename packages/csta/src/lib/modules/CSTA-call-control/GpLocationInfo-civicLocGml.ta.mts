@@ -20,7 +20,13 @@ import {
 /**
  * @summary GpLocationInfo_civicLocGml
  * @description
- * 
+ *
+ * GML 3.0 encoding plus optional civic address for one
+ * location chunk. GML shall conform to GML 3.0 schemas.
+ * ECMA-269 §6.8.1.1; ECMA-285 §9.9.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +43,21 @@ class GpLocationInfo_civicLocGml {
     constructor (
         /**
          * @summary `gmlFormat`.
+         * @description
+         *
+         * GML 3.0 document. ECMA-285 §9.9.
+         *
          * @public
          * @readonly
          */
         readonly gmlFormat: OCTET_STRING,
         /**
          * @summary `civicLoc`.
+         * @description
+         *
+         * Civic-address types (RFC 4776 / IANA). ECMA-269
+         * §6.8.1.1.
+         *
          * @public
          * @readonly
          */

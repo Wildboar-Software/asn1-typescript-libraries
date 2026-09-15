@@ -19,7 +19,10 @@ import { SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/Sampl
 /**
  * @summary TTPRequestCObyServerModel
  * @description
- * 
+ *
+ * Verifier → TTP: template and sample BIR (Table 14). ITU-T Rec.
+ * X.1084 (05/2008) §11.8, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,22 @@ class TTPRequestCObyServerModel {
     constructor (
         /**
          * @summary `templateData`.
+         * @description
+         *
+         * Reference template as `XtsmTemplate` (X.1089 biometric
+         * certificate). X.1084 §11.3, §11.5.
+         *
          * @public
          * @readonly
          */
         readonly templateData: XtsmTemplate,
         /**
          * @summary `sampleData`.
+         * @description
+         *
+         * Captured sample as BioAPI BIR (includes BSP/device info).
+         * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
+         *
          * @public
          * @readonly
          */

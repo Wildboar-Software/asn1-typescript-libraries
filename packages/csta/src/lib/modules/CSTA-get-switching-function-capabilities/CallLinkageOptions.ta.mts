@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CallLinkageOptions
  * @description
- * 
+ *
+ * Call-linkage and thread-linkage support. Call linkage is
+ * required if thread linkage is supported (ECMA-269 §6.1.2.7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MicrophoneMute
  * @description
- * 
+ * Capability bitmap for the Microphone Mute event (ECMA-269 C.13.8, ECMA-285
+ * §9.10). Presence of this entry in `PhysDevEvtsList` means the SF supports
+ * that event. Each set bit is an optional parameter, enumerated value, initial
+ * connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,6 +30,9 @@ type MicrophoneMute = BIT_STRING;
 /**
  * @summary MicrophoneMute_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.13.8).
  */
 export
 const MicrophoneMute_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -29,6 +40,8 @@ const MicrophoneMute_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `MicrophoneMute_privateData`.
  */
 export
 const privateData: number = MicrophoneMute_privateData; /* SHORT_NAMED_BIT */

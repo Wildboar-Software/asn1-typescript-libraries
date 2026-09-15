@@ -20,7 +20,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary StartArgument
  * @description
- * 
+ *
+ * Connection, optional resource and text (ECMA-269 §26.1.14.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,24 +44,42 @@ class StartArgument {
     constructor (
         /**
          * @summary `overConnection`.
+         * @description
+         *
+         * Connection to start with the voice resource (ECMA-269 §26.1.14.1).
+         *
          * @public
          * @readonly
          */
         readonly overConnection: ConnectionID,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `text`.
+         * @description
+         *
+         * Optional text (ECMA-269 §26.1.14.1).
+         *
          * @public
          * @readonly
          */
         readonly text: OPTIONAL<IA5String>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

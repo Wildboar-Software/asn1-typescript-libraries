@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MW_Status
  * @description
- * 
+ *
+ * Message Waiting flags. Bits 6–15 ignored if received and not understood (3GPP
+ * TS 29.002 V19.1.0 clauses 12.6.1 and 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,6 +94,10 @@ type MW_Status = BIT_STRING;
 
 /**
  * @summary MW_Status_sc_AddressNotIncluded
+ * @description
+ *
+ * `sc-AddressNotIncluded (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * @constant
  */
 export
@@ -98,6 +105,10 @@ const MW_Status_sc_AddressNotIncluded: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary sc_AddressNotIncluded
+ * @description
+ *
+ * `sc-AddressNotIncluded (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * @constant
  */
 export
@@ -105,6 +116,10 @@ const sc_AddressNotIncluded: number = MW_Status_sc_AddressNotIncluded; /* SHORT_
 
 /**
  * @summary MW_Status_mnrf_Set
+ * @description
+ *
+ * `mnrf-Set (1)` MNRF (3GPP TS 29.002 V19.1.0 clauses 12.6.1 and 17.7.6).
+ *
  * @constant
  */
 export
@@ -112,6 +127,10 @@ const MW_Status_mnrf_Set: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary mnrf_Set
+ * @description
+ *
+ * `mnrf-Set (1)` MNRF (3GPP TS 29.002 V19.1.0 clauses 12.6.1 and 17.7.6).
+ *
  * @constant
  */
 export
@@ -119,6 +138,10 @@ const mnrf_Set: number = MW_Status_mnrf_Set; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MW_Status_mcef_Set
+ * @description
+ *
+ * `mcef-Set (2)` MCEF (3GPP TS 29.002 V19.1.0 clauses 12.6.1 and 17.7.6).
+ *
  * @constant
  */
 export
@@ -126,6 +149,10 @@ const MW_Status_mcef_Set: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary mcef_Set
+ * @description
+ *
+ * `mcef-Set (2)` MCEF (3GPP TS 29.002 V19.1.0 clauses 12.6.1 and 17.7.6).
+ *
  * @constant
  */
 export
@@ -133,6 +160,10 @@ const mcef_Set: number = MW_Status_mcef_Set; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MW_Status_mnrg_Set
+ * @description
+ *
+ * `mnrg-Set (3)` MNRG (3GPP TS 29.002 V19.1.0 clauses 12.6.1 and 17.7.6).
+ *
  * @constant
  */
 export
@@ -140,6 +171,10 @@ const MW_Status_mnrg_Set: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary mnrg_Set
+ * @description
+ *
+ * `mnrg-Set (3)` MNRG (3GPP TS 29.002 V19.1.0 clauses 12.6.1 and 17.7.6).
+ *
  * @constant
  */
 export
@@ -147,6 +182,10 @@ const mnrg_Set: number = MW_Status_mnrg_Set; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MW_Status_mnr5g_Set
+ * @description
+ *
+ * `mnr5g-Set (4)` (3GPP TS 29.002 V19.1.0 clauses 12.6.1 and 17.7.6).
+ *
  * @constant
  */
 export
@@ -154,6 +193,10 @@ const MW_Status_mnr5g_Set: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary mnr5g_Set
+ * @description
+ *
+ * `mnr5g-Set (4)` (3GPP TS 29.002 V19.1.0 clauses 12.6.1 and 17.7.6).
+ *
  * @constant
  */
 export
@@ -161,6 +204,10 @@ const mnr5g_Set: number = MW_Status_mnr5g_Set; /* SHORT_NAMED_BIT */
 
 /**
  * @summary MW_Status_mnr5gn3g_Set
+ * @description
+ *
+ * `mnr5gn3g-Set (5)` (3GPP TS 29.002 V19.1.0 clauses 12.6.1 and 17.7.6).
+ *
  * @constant
  */
 export
@@ -168,6 +215,10 @@ const MW_Status_mnr5gn3g_Set: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary mnr5gn3g_Set
+ * @description
+ *
+ * `mnr5gn3g-Set (5)` (3GPP TS 29.002 V19.1.0 clauses 12.6.1 and 17.7.6).
+ *
  * @constant
  */
 export

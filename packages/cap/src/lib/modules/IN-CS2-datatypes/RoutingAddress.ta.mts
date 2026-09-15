@@ -1,0 +1,72 @@
+/* eslint-disable */
+import {
+    NULL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { DestinationRoutingAddress, _decode_DestinationRoutingAddress, _encode_DestinationRoutingAddress } from "../IN-CS2-datatypes/DestinationRoutingAddress.ta.mjs";
+// export { DestinationRoutingAddress, _decode_DestinationRoutingAddress, _encode_DestinationRoutingAddress } from "../IN-CS2-datatypes/DestinationRoutingAddress.ta.mjs";
+
+
+/**
+ * @summary RoutingAddress
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * RoutingAddress{PARAMETERS-BOUND:bound}  ::=  CHOICE {
+ *   routingProhibited          [0]  NULL,
+ *   destinationRoutingAddress  [1]  DestinationRoutingAddress{bound}
+ * }
+ * ```
+ */
+export
+type RoutingAddress =
+    { routingProhibited: NULL } /* CHOICE_ALT_ROOT */
+    | { destinationRoutingAddress: DestinationRoutingAddress } /* CHOICE_ALT_ROOT */;
+
+let _cached_decoder_for_RoutingAddress: $.ASN1Decoder<RoutingAddress> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) RoutingAddress
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_RoutingAddress (el: _Element): RoutingAddress {
+    if (!_cached_decoder_for_RoutingAddress) { _cached_decoder_for_RoutingAddress = $._decode_inextensible_choice<RoutingAddress>({
+    "CONTEXT 0": [ "routingProhibited", $._decode_implicit<NULL>(() => $._decodeNull) ],
+    "CONTEXT 1": [ "destinationRoutingAddress", $._decode_implicit<DestinationRoutingAddress>(() => _decode_DestinationRoutingAddress) ]
+}); }
+    return _cached_decoder_for_RoutingAddress(el);
+}
+
+let _cached_encoder_for_RoutingAddress: $.ASN1Encoder<RoutingAddress> | null = null;
+
+/**
+ * @summary Encodes a(n) RoutingAddress into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The RoutingAddress, encoded as an ASN.1 Element.
+ */
+export
+function _encode_RoutingAddress (value: RoutingAddress, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_RoutingAddress) { _cached_encoder_for_RoutingAddress = $._encode_choice<RoutingAddress>({
+    "routingProhibited": $._encode_implicit(_TagClass.context, 0, () => $._encodeNull, $.BER),
+    "destinationRoutingAddress": $._encode_implicit(_TagClass.context, 1, () => _encode_DestinationRoutingAddress, $.BER),
+}, $.BER); }
+    return _cached_encoder_for_RoutingAddress(value, elGetter);
+}
+
+
+/* eslint-enable */

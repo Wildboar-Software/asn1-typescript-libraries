@@ -14,7 +14,23 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CallTerminateCode
  * @description
- * 
+ *
+ * Why the last call ended (Table 17/V.59 as aligned by ITU-T Rec. V.59 Cor.2
+ * (03/2002) clause 3; ASN.1 codes govern). `causeUnidentified`(0); DCE
+ * `dCEpowerLoss`(20), `equipmentFailure`(21), `inactivityTimerExpired`(25);
+ * V.24 108 `cct108isOffInhibitsDial`(31), `cct108turnedOff`(32); dialling
+ * `noNumberProvided`(40), `blacklistedNumber`(41),
+ * `callAttemptsLimitExceeded`(42), `extensionDeviceOffHook`(43),
+ * `callSetupFailTimerExpired`(44), `incomingCallDetected`(45),
+ * `loopCurrentInterrupted`(46), `noDialTone`(47), `voiceDetected`(48),
+ * `reorderTone`(49), `sitTone`(50), `engagedTone`(51),
+ * `longSpaceDisconnect`(52); modem `carrierLost`(60), `trainingFailed`(61),
+ * `noModulationinCommon`(62), `retrainFailed`(63),
+ * `retrainAttemptCountExceeded`(64), `gstnCleardownReceived`(65),
+ * `faxDetected`(66); `protocolError`(80); `userDisconnect`(90); V.92 hold
+ * `onHoldTimerExpired`(100), `onHoldRemoteDisc`(101). ITU-T Rec. V.59 (11/2000)
+ * §6.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

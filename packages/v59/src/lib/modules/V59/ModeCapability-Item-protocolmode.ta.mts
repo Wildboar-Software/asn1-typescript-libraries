@@ -18,7 +18,11 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
 /**
  * @summary ModeCapability_Item_protocolmode
  * @description
- * 
+ *
+ * Error-control and compression protocol capabilities. Table 5/V.59:
+ * `notSupported`(0), `default`(1) preferred, `enabled`(2), `disabled`(3)
+ * supported but off. ITU-T Rec. V.59 (11/2000) §6.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +40,40 @@ class ModeCapability_Item_protocolmode {
     constructor (
         /**
          * @summary `modeV42`.
+         * @description
+         *
+         * V.42 operating-mode capability. Tag-ID `2F00`. ITU-T Rec. V.59
+         * (11/2000) §6.6, §6.12.
          * @public
          * @readonly
          */
         readonly modeV42: Capabilities,
         /**
          * @summary `modeV42B`.
+         * @description
+         *
+         * V.42 bis operating-mode capability. Tag-ID `3000`. ITU-T Rec. V.59
+         * (11/2000) §6.6, §6.12.
          * @public
          * @readonly
          */
         readonly modeV42B: Capabilities,
         /**
          * @summary `modeV44`.
+         * @description
+         *
+         * V.44 operating-mode capability. Tag-ID `300A`. ITU-T Rec. V.59
+         * (11/2000) §6.6, §6.12.
          * @public
          * @readonly
          */
         readonly modeV44: Capabilities,
         /**
          * @summary `otherProtMode`.
+         * @description
+         *
+         * Proprietary or other protocol modes. IA5 `simpleText` (§6.2.1).
+         * Tag-ID `0102`. ITU-T Rec. V.59 (11/2000) §6.6.
          * @public
          * @readonly
          */

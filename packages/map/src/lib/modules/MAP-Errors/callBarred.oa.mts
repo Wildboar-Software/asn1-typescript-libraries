@@ -76,6 +76,17 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary callBarred
  * @description
  * 
+ * Optionally, additional information may be included for indicating either that
+ * the call meets a barring condition set by the subscriber or that the call is
+ * barred for operator reasons. For barring of Mobile Terminating Short Message,
+ * the additional information may indicate "Unauthorised Message Originator"; if
+ * the call is rejected due to the ACR supplementary service, the additional
+ * information shall indicate "Anonymous Call Rejection" (3GPP TS 29.002 V19.1.0
+ * clause 7.6.1.4).
+ *
+ * Local code 13. Optional parameter `CallBarredParam` (3GPP TS 29.002 V19.1.0
+ * clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,13 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SwitchingFunctionServicesC2
  * @description
- * 
+ *
+ * Phase II switching-function services. Phase II (ECMA-218) compatibility BIT
+ * STRING in ACSE user-information. For Phase III and later, use Capability
+ * Exchange to learn supported services and events. ECMA-285 §8.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,13 +47,16 @@ type SwitchingFunctionServicesC2 = BIT_STRING;
 
 /**
  * @summary SwitchingFunctionServicesC2_alternateCall
+ * @description Advertises `alternateCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_alternateCall: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary alternateCall
+ * @description Alias of {@link SwitchingFunctionServicesC2_alternateCall}.
  * @constant
  */
 export
@@ -55,13 +64,16 @@ const alternateCall: number = SwitchingFunctionServicesC2_alternateCall; /* SHOR
 
 /**
  * @summary SwitchingFunctionServicesC2_answerCall
+ * @description Advertises `answerCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_answerCall: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary answerCall
+ * @description Alias of {@link SwitchingFunctionServicesC2_answerCall}.
  * @constant
  */
 export
@@ -69,13 +81,16 @@ const answerCall: number = SwitchingFunctionServicesC2_answerCall; /* SHORT_NAME
 
 /**
  * @summary SwitchingFunctionServicesC2_associateData
+ * @description Advertises `associateData` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_associateData: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary associateData
+ * @description Alias of {@link SwitchingFunctionServicesC2_associateData}.
  * @constant
  */
 export
@@ -83,13 +98,16 @@ const associateData: number = SwitchingFunctionServicesC2_associateData; /* SHOR
 
 /**
  * @summary SwitchingFunctionServicesC2_callCompletion
+ * @description Advertises `callCompletion` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_callCompletion: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary callCompletion
+ * @description Alias of {@link SwitchingFunctionServicesC2_callCompletion}.
  * @constant
  */
 export
@@ -97,13 +115,16 @@ const callCompletion: number = SwitchingFunctionServicesC2_callCompletion; /* SH
 
 /**
  * @summary SwitchingFunctionServicesC2_clearCall
+ * @description Advertises `clearCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_clearCall: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary clearCall
+ * @description Alias of {@link SwitchingFunctionServicesC2_clearCall}.
  * @constant
  */
 export
@@ -111,13 +132,17 @@ const clearCall: number = SwitchingFunctionServicesC2_clearCall; /* SHORT_NAMED_
 
 /**
  * @summary SwitchingFunctionServicesC2_clearConnection
+ * @description
+ * Advertises `clearConnection` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_clearConnection: number = 5; /* LONG_NAMED_BIT */
 
 /**
  * @summary clearConnection
+ * @description Alias of {@link SwitchingFunctionServicesC2_clearConnection}.
  * @constant
  */
 export
@@ -125,13 +150,16 @@ const clearConnection: number = SwitchingFunctionServicesC2_clearConnection; /* 
 
 /**
  * @summary SwitchingFunctionServicesC2_conferenceCall
+ * @description Advertises `conferenceCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_conferenceCall: number = 6; /* LONG_NAMED_BIT */
 
 /**
  * @summary conferenceCall
+ * @description Alias of {@link SwitchingFunctionServicesC2_conferenceCall}.
  * @constant
  */
 export
@@ -139,13 +167,17 @@ const conferenceCall: number = SwitchingFunctionServicesC2_conferenceCall; /* SH
 
 /**
  * @summary SwitchingFunctionServicesC2_consultationCall
+ * @description
+ * Advertises `consultationCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_consultationCall: number = 7; /* LONG_NAMED_BIT */
 
 /**
  * @summary consultationCall
+ * @description Alias of {@link SwitchingFunctionServicesC2_consultationCall}.
  * @constant
  */
 export
@@ -153,13 +185,16 @@ const consultationCall: number = SwitchingFunctionServicesC2_consultationCall; /
 
 /**
  * @summary SwitchingFunctionServicesC2_divertCall
+ * @description Advertises `divertCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_divertCall: number = 8; /* LONG_NAMED_BIT */
 
 /**
  * @summary divertCall
+ * @description Alias of {@link SwitchingFunctionServicesC2_divertCall}.
  * @constant
  */
 export
@@ -167,13 +202,16 @@ const divertCall: number = SwitchingFunctionServicesC2_divertCall; /* SHORT_NAME
 
 /**
  * @summary SwitchingFunctionServicesC2_holdCall
+ * @description Advertises `holdCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_holdCall: number = 9; /* LONG_NAMED_BIT */
 
 /**
  * @summary holdCall
+ * @description Alias of {@link SwitchingFunctionServicesC2_holdCall}.
  * @constant
  */
 export
@@ -181,13 +219,16 @@ const holdCall: number = SwitchingFunctionServicesC2_holdCall; /* SHORT_NAMED_BI
 
 /**
  * @summary SwitchingFunctionServicesC2_makeCall
+ * @description Advertises `makeCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_makeCall: number = 10; /* LONG_NAMED_BIT */
 
 /**
  * @summary makeCall
+ * @description Alias of {@link SwitchingFunctionServicesC2_makeCall}.
  * @constant
  */
 export
@@ -195,13 +236,17 @@ const makeCall: number = SwitchingFunctionServicesC2_makeCall; /* SHORT_NAMED_BI
 
 /**
  * @summary SwitchingFunctionServicesC2_makePredictiveCall
+ * @description
+ * Advertises `makePredictiveCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_makePredictiveCall: number = 11; /* LONG_NAMED_BIT */
 
 /**
  * @summary makePredictiveCall
+ * @description Alias of {@link SwitchingFunctionServicesC2_makePredictiveCall}.
  * @constant
  */
 export
@@ -209,13 +254,16 @@ const makePredictiveCall: number = SwitchingFunctionServicesC2_makePredictiveCal
 
 /**
  * @summary SwitchingFunctionServicesC2_parkCall
+ * @description Advertises `parkCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_parkCall: number = 12; /* LONG_NAMED_BIT */
 
 /**
  * @summary parkCall
+ * @description Alias of {@link SwitchingFunctionServicesC2_parkCall}.
  * @constant
  */
 export
@@ -223,13 +271,16 @@ const parkCall: number = SwitchingFunctionServicesC2_parkCall; /* SHORT_NAMED_BI
 
 /**
  * @summary SwitchingFunctionServicesC2_queryDevice
+ * @description Advertises `queryDevice` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_queryDevice: number = 13; /* LONG_NAMED_BIT */
 
 /**
  * @summary queryDevice
+ * @description Alias of {@link SwitchingFunctionServicesC2_queryDevice}.
  * @constant
  */
 export
@@ -237,13 +288,16 @@ const queryDevice: number = SwitchingFunctionServicesC2_queryDevice; /* SHORT_NA
 
 /**
  * @summary SwitchingFunctionServicesC2_reconnectCall
+ * @description Advertises `reconnectCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_reconnectCall: number = 14; /* LONG_NAMED_BIT */
 
 /**
  * @summary reconnectCall
+ * @description Alias of {@link SwitchingFunctionServicesC2_reconnectCall}.
  * @constant
  */
 export
@@ -251,13 +305,16 @@ const reconnectCall: number = SwitchingFunctionServicesC2_reconnectCall; /* SHOR
 
 /**
  * @summary SwitchingFunctionServicesC2_retrieveCall
+ * @description Advertises `retrieveCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_retrieveCall: number = 15; /* LONG_NAMED_BIT */
 
 /**
  * @summary retrieveCall
+ * @description Alias of {@link SwitchingFunctionServicesC2_retrieveCall}.
  * @constant
  */
 export
@@ -265,13 +322,16 @@ const retrieveCall: number = SwitchingFunctionServicesC2_retrieveCall; /* SHORT_
 
 /**
  * @summary SwitchingFunctionServicesC2_sendDTMFTones
+ * @description Advertises `sendDTMFTones` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_sendDTMFTones: number = 16; /* LONG_NAMED_BIT */
 
 /**
  * @summary sendDTMFTones
+ * @description Alias of {@link SwitchingFunctionServicesC2_sendDTMFTones}.
  * @constant
  */
 export
@@ -279,13 +339,16 @@ const sendDTMFTones: number = SwitchingFunctionServicesC2_sendDTMFTones; /* SHOR
 
 /**
  * @summary SwitchingFunctionServicesC2_setFeature
+ * @description Advertises `setFeature` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_setFeature: number = 17; /* LONG_NAMED_BIT */
 
 /**
  * @summary setFeature
+ * @description Alias of {@link SwitchingFunctionServicesC2_setFeature}.
  * @constant
  */
 export
@@ -293,13 +356,18 @@ const setFeature: number = SwitchingFunctionServicesC2_setFeature; /* SHORT_NAME
 
 /**
  * @summary SwitchingFunctionServicesC2_singleStepConference
+ * @description
+ * Advertises `singleStepConference` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_singleStepConference: number = 18; /* LONG_NAMED_BIT */
 
 /**
  * @summary singleStepConference
+ * @description
+ * Alias of {@link SwitchingFunctionServicesC2_singleStepConference}.
  * @constant
  */
 export
@@ -307,13 +375,17 @@ const singleStepConference: number = SwitchingFunctionServicesC2_singleStepConfe
 
 /**
  * @summary SwitchingFunctionServicesC2_singleStepTransfer
+ * @description
+ * Advertises `singleStepTransfer` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_singleStepTransfer: number = 19; /* LONG_NAMED_BIT */
 
 /**
  * @summary singleStepTransfer
+ * @description Alias of {@link SwitchingFunctionServicesC2_singleStepTransfer}.
  * @constant
  */
 export
@@ -321,13 +393,16 @@ const singleStepTransfer: number = SwitchingFunctionServicesC2_singleStepTransfe
 
 /**
  * @summary SwitchingFunctionServicesC2_transferCall
+ * @description Advertises `transferCall` for this association. ECMA-285 §8.2.
  * @constant
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const SwitchingFunctionServicesC2_transferCall: number = 20; /* LONG_NAMED_BIT */
 
 /**
  * @summary transferCall
+ * @description Alias of {@link SwitchingFunctionServicesC2_transferCall}.
  * @constant
  */
 export

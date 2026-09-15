@@ -8,7 +8,11 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AuditoryApparatusList_Item_hookswitch
  * @description
- * 
+ *
+ * Hookswitch capabilities of an auditory apparatus. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +27,10 @@ type AuditoryApparatusList_Item_hookswitch = BIT_STRING;
 
 /**
  * @summary AuditoryApparatusList_Item_hookswitch_hookswitchSettable
+ * @description
+ *
+ * Hookswitch state can be set. ECMA-285 §9.16.
+ *
  * @constant
  */
 export
@@ -37,6 +45,10 @@ const hookswitchSettable: number = AuditoryApparatusList_Item_hookswitch_hookswi
 
 /**
  * @summary AuditoryApparatusList_Item_hookswitch_hookswitchOnHook
+ * @description
+ *
+ * Hookswitch is on-hook. ECMA-285 §9.16.
+ *
  * @constant
  */
 export

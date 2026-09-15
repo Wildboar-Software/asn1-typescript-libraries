@@ -73,7 +73,13 @@ import { TBCD_STRING, _decode_TBCD_STRING, _encode_TBCD_STRING } from "../MAP-Co
 /**
  * @summary GroupId
  * @description
- * 
+ *
+ * VGCS/VBS Group Identification as specified in 3GPP TS 23.003 and 3GPP TS
+ * 43.068/43.069. A subscriber can partake in all group calls where the
+ * respective groups are subscribed. When less than six characters, TBCD filler
+ * (1111) fills unused half octets (3GPP TS 29.002 V19.1.0 clauses 7.6.2.33 and
+ * 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -21,7 +21,12 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
 /**
  * @summary OtherCall
  * @description
- * 
+ *
+ * Other device/connection on the primary or secondary call.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +44,36 @@ class OtherCall {
     constructor (
         /**
          * @summary `deviceID`.
+         * @description
+         *
+         * Other device on the call.
          * @public
          * @readonly
          */
         readonly deviceID: DeviceID,
         /**
          * @summary `connectionID`.
+         * @description
+         *
+         * That device's connection.
          * @public
          * @readonly
          */
         readonly connectionID: ConnectionID,
         /**
          * @summary `localConnectionState`.
+         * @description
+         *
+         * Local connection state, if known.
          * @public
          * @readonly
          */
         readonly localConnectionState: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `connectionInfo`.
+         * @description
+         *
+         * Connection information, if provided.
          * @public
          * @readonly
          */

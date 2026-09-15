@@ -8,7 +8,14 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary TimeStampMode
  * @description
- * 
+ * When the SF provides timestamp information via the security parameter
+ * (ECMA-269 §13.1.4.2.1 Table 13-9, ECMA-285 §9.10). Required if the SF
+ * provides timestamps.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +31,9 @@ type TimeStampMode = BIT_STRING;
 /**
  * @summary TimeStampMode_allEvents
  * @constant
+ * @description
+ * Bit set means the SF supports timestamp on all events from the SF (ECMA-269
+ * §13.1.4.2.1 Table 13-9).
  */
 export
 const TimeStampMode_allEvents: number = 0; /* LONG_NAMED_BIT */
@@ -31,6 +41,8 @@ const TimeStampMode_allEvents: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary allEvents
  * @constant
+ * @description
+ * Alias of `TimeStampMode_allEvents`.
  */
 export
 const allEvents: number = TimeStampMode_allEvents; /* SHORT_NAMED_BIT */
@@ -38,6 +50,9 @@ const allEvents: number = TimeStampMode_allEvents; /* SHORT_NAMED_BIT */
 /**
  * @summary TimeStampMode_allAcks
  * @constant
+ * @description
+ * Bit set means the SF supports timestamp on all acknowledgements from the SF
+ * (ECMA-269 §13.1.4.2.1 Table 13-9).
  */
 export
 const TimeStampMode_allAcks: number = 1; /* LONG_NAMED_BIT */
@@ -45,6 +60,8 @@ const TimeStampMode_allAcks: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary allAcks
  * @constant
+ * @description
+ * Alias of `TimeStampMode_allAcks`.
  */
 export
 const allAcks: number = TimeStampMode_allAcks; /* SHORT_NAMED_BIT */
@@ -52,6 +69,9 @@ const allAcks: number = TimeStampMode_allAcks; /* SHORT_NAMED_BIT */
 /**
  * @summary TimeStampMode_allServReqs
  * @constant
+ * @description
+ * Bit set means the SF supports timestamp on all service requests from the SF
+ * (ECMA-269 §13.1.4.2.1 Table 13-9).
  */
 export
 const TimeStampMode_allServReqs: number = 2; /* LONG_NAMED_BIT */
@@ -59,6 +79,8 @@ const TimeStampMode_allServReqs: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary allServReqs
  * @constant
+ * @description
+ * Alias of `TimeStampMode_allServReqs`.
  */
 export
 const allServReqs: number = TimeStampMode_allServReqs; /* SHORT_NAMED_BIT */

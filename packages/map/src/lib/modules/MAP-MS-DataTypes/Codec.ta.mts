@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Codec
  * @description
- * 
+ *
+ * Iu codec: octet 1 is the Codec Identification code in 3GPP TS 26.103; octets
+ * 2-4 are codec parameters as in 3GPP TS 26.103 if available (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.6.16 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

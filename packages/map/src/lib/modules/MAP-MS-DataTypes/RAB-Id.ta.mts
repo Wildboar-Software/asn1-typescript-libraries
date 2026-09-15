@@ -75,7 +75,14 @@ import { maxNrOfRABs } from "./maxNrOfRABs.va.mjs";
 /**
  * @summary RAB_Id
  * @description
- * 
+ *
+ * Radio access bearer identifier as in 3GPP TS 25.413. Relates radio resources
+ * with radio access bearers. In Prepare HO, included when MSC-A supports
+ * multiple bearers, access network protocol is BSSAP, and the RAB ID is other
+ * than 1.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.57, 8.4.1.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

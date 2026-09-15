@@ -75,7 +75,12 @@ import { maxNumOfEncryptionInfo } from "./maxNumOfEncryptionInfo.va.mjs";
 /**
  * @summary EncryptionInformation
  * @description
- * 
+ *
+ * Encryption Information element defined in 3GPP TS 25.413. Octets contain a
+ * complete EncryptionInformation data type encoded as mandated by 3GPP TS
+ * 25.413; padding bits, if needed, are in the least significant bits of the
+ * last octet (3GPP TS 29.002 V19.1.0 clauses 7.6.6.9 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

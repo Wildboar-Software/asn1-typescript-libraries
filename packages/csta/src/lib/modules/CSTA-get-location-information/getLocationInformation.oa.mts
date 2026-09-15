@@ -17,7 +17,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getLocationInformation
  * @description
- * 
+ *
+ * Obtains location information associated with a device, whether or not it is
+ * in a call. LocationInfo is PIDF-LO (RFC-4119/5139) (ECMA-269 §28.1.1 / §6.8.1
+ * / §12.2.18).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:530. Errors: `universalFailure` (ECMA-285 §26.1.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

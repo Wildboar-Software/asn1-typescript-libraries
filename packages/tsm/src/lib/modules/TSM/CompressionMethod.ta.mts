@@ -22,7 +22,10 @@ enum _enum_for_CompressionMethod {
 /**
  * @summary CompressionMethod
  * @description
- * 
+ *
+ * TLS compression method. Annex A defines only `null`, plus
+ * extension. ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,6 +42,7 @@ type CompressionMethod = _enum_for_CompressionMethod | ENUMERATED;
 
 /**
  * @summary CompressionMethod_null_
+ * @description No compression (`null` in Annex A). X.1084 Annex A.
  * @constant
  * @type {number}
  */
@@ -47,6 +51,7 @@ const CompressionMethod_null_: CompressionMethod = 0; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary null_
+ * @description No compression (`null` in Annex A). X.1084 Annex A.
  * @constant
  * @type {number}
  */

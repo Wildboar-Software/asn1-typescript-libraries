@@ -9,7 +9,21 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary ConnectionList_Item_associatedNID
  * @description
- * 
+ *
+ * Network Interface Device (trunk, CO line) associated with an
+ * external far-end in a `ConnectionList` entry (ECMA-269 §12.2.9).
+ * Mandatory on external calls; omit when the device is inside the
+ * switching sub-domain. If present, `endpoint` (when provided) is
+ * that external device.
+ *
+ * - `deviceID`: NID is provided (any Clause 10 format).
+ * - `notKnown`: switching function cannot provide the NID.
+ *
+ * Restricted is not a status for this component.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,7 +14,11 @@ import { CallMediaInfoList_Item, _decode_CallMediaInfoList_Item, _encode_CallMed
 /**
  * @summary CallMediaInfoList
  * @description
- * 
+ *
+ * Media services bound to a connection in a Snapshot Call. ECMA-269 §16.1.3.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

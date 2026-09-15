@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary attachMediaService
  * @description
- * 
+ *
+ * Attach Media Service (ECMA-269 §19.1.1 / ECMA-285 §17.1.1). Direction: CF→SF.
+ * ROSE local CODE 244. Errors: `universalFailure`. Binds `mediaServiceType` /
+ * optional version and instance to
+ * `connection`. The Media Attached event may include
+ * `mediaStreamID`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

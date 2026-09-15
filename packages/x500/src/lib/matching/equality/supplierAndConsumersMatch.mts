@@ -10,6 +10,13 @@ import {
 } from "../../modules/InformationFramework/Name.ta.mjs";
 import compareName from "../../comparators/compareName.mjs";
 
+/**
+ * Rec. ITU-T X.501 (10/2019), clause 24.2.1.9.4
+ * `supplierAndConsumersMatch`.
+ *
+ * Equality for `SupplierAndConsumers` (and compatible types). TRUE
+ * iff the `ae-title` components match as distinguished names.
+ */
 export
 const supplierAndConsumersMatch: EqualityMatcher = (
     assertion: ASN1Element,

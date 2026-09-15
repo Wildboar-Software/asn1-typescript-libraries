@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary VelocityEstimate
  * @description
- * 
+ *
+ * 3GPP TS 23.032 velocity types: horizontal; horizontal with vertical; with
+ * uncertainty; both. Other type-of-velocity invalid (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.11.27 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

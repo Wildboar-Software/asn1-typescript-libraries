@@ -73,7 +73,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary PrepareSubsequentHO_Res
  * @description
- * 
+ *
+ * MAP_PREPARE_SUBSEQUENT_HANDOVER result, carrying the access-network APDU from
+ * MSC-A.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.4.5 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,6 +95,14 @@ class PrepareSubsequentHO_Res {
     constructor (
         /**
          * @summary `an_APDU`.
+         * @description
+         *
+         * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages,
+         * as in 3GPP TS 23.009 and 29.010. The access-network protocol ID
+         * selects 48.006 or 25.413.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.9.1).
+         *
          * @public
          * @readonly
          */

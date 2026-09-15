@@ -18,7 +18,15 @@ import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/T
 /**
  * @summary ThreadData
  * @description
- * 
+ *
+ * Identity of a call thread: the set of CSTA/global calls that
+ * belong to one telephony process (consultation, conference,
+ * transfer). Used to correlate calls across sub-domains for
+ * charging, accounting, or reporting. Present only if thread
+ * linkage is supported. ECMA-269 §6.1.2.7.2, §12.2.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +43,35 @@ class ThreadData {
     constructor (
         /**
          * @summary `threadSwitchingSubDomainName`.
+         * @description
+         *
+         * Sub-domain that created this thread data. Required if
+         * `threadLinkageID` is not itself globally unique.
+         * ECMA-269 §12.2.5.
+         *
          * @public
          * @readonly
          */
         readonly threadSwitchingSubDomainName: OPTIONAL<IA5String>,
         /**
          * @summary `threadLinkageID`.
+         * @description
+         *
+         * Sub-domain-specific or H.225 globally unique thread ID.
+         * ECMA-269 §12.2.5.
+         *
          * @public
          * @readonly
          */
         readonly threadLinkageID: ThreadLinkageID,
         /**
          * @summary `threadIDTimeStamp`.
+         * @description
+         *
+         * Time this `threadData` was created or last updated.
+         * Format as `TimeInfo` (ECMA-269 §12.2.29). ECMA-269
+         * §12.2.5.
+         *
          * @public
          * @readonly
          */

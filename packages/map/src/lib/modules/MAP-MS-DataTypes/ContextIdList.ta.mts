@@ -75,7 +75,11 @@ import { maxNumOfPDP_Contexts } from "./maxNumOfPDP-Contexts.va.mjs";
 /**
  * @summary ContextIdList
  * @description
- * 
+ *
+ * List of PDP-context / APN-configuration identifiers used when withdrawing a
+ * subset of GPRS or EPS subscription data (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.3.45, 7.6.3.45A and 8.8.2.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

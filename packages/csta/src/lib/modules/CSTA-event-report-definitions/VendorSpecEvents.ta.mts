@@ -9,7 +9,12 @@ import { PrivateEvent, _decode_PrivateEvent, _encode_PrivateEvent } from "../CST
 /**
  * @summary VendorSpecEvents
  * @description
- * 
+ *
+ * Vendor-specific event body of `cSTAEventReport` (ECMA-285 §10). Alternative:
+ * Private Event.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

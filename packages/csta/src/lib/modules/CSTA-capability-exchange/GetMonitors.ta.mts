@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GetMonitors
  * @description
- * 
+ * Capability bitmap for the Get Monitors service (ECMA-269 C.3.4, ECMA-285
+ * §9.10). Presence of this entry in `MonitoringServList` means the SF supports
+ * that service. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +32,9 @@ type GetMonitors = BIT_STRING;
 /**
  * @summary GetMonitors_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.3.4).
  */
 export
 const GetMonitors_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -31,6 +42,8 @@ const GetMonitors_privateData: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `GetMonitors_privateData`.
  */
 export
 const privateData: number = GetMonitors_privateData; /* SHORT_NAMED_BIT */
@@ -38,6 +51,9 @@ const privateData: number = GetMonitors_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary GetMonitors_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.3.4).
  */
 export
 const GetMonitors_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
@@ -45,6 +61,8 @@ const GetMonitors_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `GetMonitors_privateDataInAck`.
  */
 export
 const privateDataInAck: number = GetMonitors_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -52,6 +70,9 @@ const privateDataInAck: number = GetMonitors_privateDataInAck; /* SHORT_NAMED_BI
 /**
  * @summary GetMonitors_segmentedResponseProvided
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.3.4).
  */
 export
 const GetMonitors_segmentedResponseProvided: number = 2; /* LONG_NAMED_BIT */
@@ -59,6 +80,8 @@ const GetMonitors_segmentedResponseProvided: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary segmentedResponseProvided
  * @constant
+ * @description
+ * Alias of `GetMonitors_segmentedResponseProvided`.
  */
 export
 const segmentedResponseProvided: number = GetMonitors_segmentedResponseProvided; /* SHORT_NAMED_BIT */

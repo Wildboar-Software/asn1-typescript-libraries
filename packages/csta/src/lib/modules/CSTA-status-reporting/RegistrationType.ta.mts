@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary RegistrationType
  * @description
- * 
+ *
+ * Kind of computing-function registration with the switching function. ECMA-269
+ * §14.2.6.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,7 +37,12 @@ enum _enum_for_RegistrationType {
 /**
  * @summary RegistrationType
  * @description
- * 
+ *
+ * Kind of computing-function registration with the switching function. ECMA-269
+ * §14.2.6.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,7 +61,12 @@ type RegistrationType = _enum_for_RegistrationType;
 /**
  * @summary RegistrationType
  * @description
- * 
+ *
+ * Kind of computing-function registration with the switching function. ECMA-269
+ * §14.2.6.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,6 +84,10 @@ const RegistrationType = _enum_for_RegistrationType;
 
 /**
  * @summary RegistrationType_escapeRegister
+ * @description
+ *
+ * Escape services (ECMA-269 §29.1.1, §9.4).
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +104,10 @@ const escapeRegister: RegistrationType = RegistrationType.escapeRegister; /* SHO
 
 /**
  * @summary RegistrationType_ioRegister
+ * @description
+ *
+ * I/O services (ECMA-269 §24.1.1, §6.2).
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +124,10 @@ const ioRegister: RegistrationType = RegistrationType.ioRegister; /* SHORT_NAMED
 
 /**
  * @summary RegistrationType_routeRegister
+ * @description
+ *
+ * Routeing services (ECMA-269 §20.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +144,10 @@ const routeRegister: RegistrationType = RegistrationType.routeRegister; /* SHORT
 
 /**
  * @summary RegistrationType_sysStatRegister
+ * @description
+ *
+ * System status services (ECMA-269 §14.1.2, §6.6.1.1).
+ *
  * @constant
  * @type {number}
  */

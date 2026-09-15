@@ -80,7 +80,12 @@ import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";
 /**
  * @summary authenticationFailureReport
  * @description
- * 
+ *
+ * MAP_AUTHENTICATION_FAILURE_REPORT: reports authentication failures to the
+ * HLR. Typical path: VLR→HLR or SGSN→HLR. Local opcode 15. Timer class `m` (15
+ * s to 30 s). (3GPP TS 29.002 V19.1.0 clauses 8.5.3.1, 17.1.2, 17.3.2.49 and
+ * 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

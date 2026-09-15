@@ -15,7 +15,15 @@ import { MediaServiceCapsList_Item, _decode_MediaServiceCapsList_Item, _encode_M
 /**
  * @summary MediaServiceCapsList
  * @description
- * 
+ * List of media-service capability structures for the SF (type, version,
+ * instance, connection modes, mediaStreamIDSupported). Provided if media access
+ * is supported on at least one device (ECMA-269 §13.1.4.2.1 Table 13-9,
+ * ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

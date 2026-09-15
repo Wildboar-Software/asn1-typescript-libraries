@@ -1,9 +1,13 @@
 /**
  * @description
  *
- * Telebiometric Security Mechanism (TSM) and supporting X9.84 CMS types.
- * Conflicting `ContentType` symbols from X9-84-CMS are omitted here; import
- * them from `@wildboar/tsm/X9-84-CMS`.
+ * Telebiometric Security Mechanism (TSM) from ITU-T Rec. X.1084 (05/2008):
+ * biometric handshake and record-layer types, plus supporting X9.84 CMS
+ * types used to sign biometric transportation data. Conflicting
+ * `ContentType` symbols from X9-84-CMS are omitted here; import them from
+ * `@wildboar/tsm/X9-84-CMS`.
+ *
+ * @see https://www.itu.int/rec/T-REC-X.1084-200805-I
  */
 export * from "./lib/modules/TSM/index.mjs";
 export * from "./lib/modules/X9-84-CMS/ALGORITHM.oca.mjs";

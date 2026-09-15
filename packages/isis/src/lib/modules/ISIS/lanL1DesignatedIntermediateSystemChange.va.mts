@@ -15,6 +15,13 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary lanL1DesignatedIntermediateSystemChange
  * @description
  *
+ * `informationType` for a communicationsInformation event when this system
+ * elects itself or resigns as LAN L1 Designated IS. Direction is
+ * `notificationDesignatedIntermediateSystemChange`. Order of events must be
+ * preserved.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.5.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

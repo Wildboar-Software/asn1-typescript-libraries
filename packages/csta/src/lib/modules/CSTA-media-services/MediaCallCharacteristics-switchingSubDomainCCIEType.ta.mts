@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType
  * @description
- * 
+ *
+ * Kind of switching-sub-domain private call-control information elements.
+ * ECMA-269 §12.2.20.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,7 +42,12 @@ enum _enum_for_MediaCallCharacteristics_switchingSubDomainCCIEType {
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType
  * @description
- * 
+ *
+ * Kind of switching-sub-domain private call-control information elements.
+ * ECMA-269 §12.2.20.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,7 +69,12 @@ type MediaCallCharacteristics_switchingSubDomainCCIEType = _enum_for_MediaCallCh
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType
  * @description
- * 
+ *
+ * Kind of switching-sub-domain private call-control information elements.
+ * ECMA-269 §12.2.20.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -80,6 +95,10 @@ const MediaCallCharacteristics_switchingSubDomainCCIEType = _enum_for_MediaCallC
 
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType_isdn
+ * @description
+ *
+ * ISDN information elements. ECMA-269 §12.2.20.
+ *
  * @constant
  * @type {number}
  */
@@ -96,6 +115,10 @@ const isdn: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallChara
 
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType_atm
+ * @description
+ *
+ * ATM (B-ISDN) information elements. ECMA-269 §12.2.20.
+ *
  * @constant
  * @type {number}
  */
@@ -112,6 +135,10 @@ const atm: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallCharac
 
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType_isoEthernet
+ * @description
+ *
+ * ISO-Ethernet (TDM part only). ECMA-269 §12.2.20.
+ *
  * @constant
  * @type {number}
  */
@@ -128,6 +155,10 @@ const isoEthernet: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCa
 
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType_rsvp
+ * @description
+ *
+ * RSVP information elements. ECMA-269 §12.2.20.
+ *
  * @constant
  * @type {number}
  */
@@ -144,6 +175,10 @@ const rsvp: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallChara
 
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType_other
+ * @description
+ *
+ * Switching-sub-domain-specific IEs. ECMA-269 §12.2.20.
+ *
  * @constant
  * @type {number}
  */
@@ -160,6 +195,10 @@ const other: MediaCallCharacteristics_switchingSubDomainCCIEType = MediaCallChar
 
 /**
  * @summary MediaCallCharacteristics_switchingSubDomainCCIEType_sip
+ * @description
+ *
+ * SIP information elements. ECMA-269 §12.2.20.
+ *
  * @constant
  * @type {number}
  */

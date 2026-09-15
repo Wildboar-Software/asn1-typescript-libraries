@@ -8,7 +8,15 @@ import { OCTET_STRING, ASN1Element as _Element, ASN1TagClass as _TagClass } from
 /**
  * @summary ThreadLinkageID
  * @description
- * 
+ *
+ * Identifier of a call thread. Choose a sub-domain-specific ID
+ * (unique only with the sub-domain name) or an H.225 globally
+ * unique ID. If both the globally unique ID and the sub-domain
+ * name are present, the node-name field should match.
+ * ECMA-269 §12.2.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

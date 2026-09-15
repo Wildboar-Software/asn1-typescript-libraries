@@ -25,7 +25,11 @@ enum _enum_for_ClientCertificateType {
 /**
  * @summary ClientCertificateType
  * @description
- * 
+ *
+ * TLS client-certificate type: rsa-sign (1), dss-sign (2),
+ * rsa-fixed-dh (3), dss-fixed-dn (4; TLS spelling is dss_fixed_dh).
+ * Extensible. ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,6 +97,10 @@ const rsa_fixed_dh: ClientCertificateType = ClientCertificateType_rsa_fixed_dh; 
 
 /**
  * @summary ClientCertificateType_dss_fixed_dn
+ * @description
+ *
+ * Annex A spelling `dss-fixed-dn` (4). TLS 1.1 uses `dss_fixed_dh` for
+ * this value. X.1084 Annex A.
  * @constant
  * @type {number}
  */
@@ -101,6 +109,10 @@ const ClientCertificateType_dss_fixed_dn: ClientCertificateType = 4; /* LONG_NAM
 
 /**
  * @summary dss_fixed_dn
+ * @description
+ *
+ * Annex A spelling `dss-fixed-dn` (4). TLS 1.1 uses `dss_fixed_dh` for
+ * this value. X.1084 Annex A.
  * @constant
  * @type {number}
  */

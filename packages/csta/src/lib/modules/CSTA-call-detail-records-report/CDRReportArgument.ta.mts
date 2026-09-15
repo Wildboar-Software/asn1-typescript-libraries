@@ -21,7 +21,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CDRReportArgument
  * @description
- * 
+ *
+ * One to 128 records in `cdrInfo`, plus whether this is the last stored report
+ * (ECMA-269 §27.1.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +47,56 @@ class CDRReportArgument {
     constructor (
         /**
          * @summary `cdrCrossRefID`.
+         * @description
+         *
+         * CDR transmission cross-reference from Start Call Detail Records
+         * Transmission (ECMA-269 §27.1.4).
+         *
          * @public
          * @readonly
          */
         readonly cdrCrossRefID: CDRCrossRefID,
         /**
          * @summary `numberOfRecordsSent`.
+         * @description
+         *
+         * Count of records in this report, 1..128 (ECMA-269 §27.1.2.1).
+         *
          * @public
          * @readonly
          */
         readonly numberOfRecordsSent: INTEGER,
         /**
          * @summary `cdrInfo`.
+         * @description
+         *
+         * CDR payload. Structure is defined in the call-detail-record module
+         * (ECMA-269 §27.1.2.1).
+         *
          * @public
          * @readonly
          */
         readonly cdrInfo: CDRInfo,
         /**
          * @summary `lastStoredCDRReportSent`.
+         * @description
+         *
+         * Present only after Send Stored Call Detail Records: TRUE if this is
+         * the last stored report (further CDRs are stored until another Send
+         * Stored); FALSE if more stored reports will follow (ECMA-269
+         * §27.1.2.1).
+         *
          * @public
          * @readonly
          */
         readonly lastStoredCDRReportSent: OPTIONAL<BOOLEAN>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

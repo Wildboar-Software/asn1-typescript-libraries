@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Ext_AccessRestrictionData
  * @description
- * 
+ *
+ * Additional access restrictions beyond AccessRestrictionData: NR as secondary
+ * RAT not allowed, and unlicensed spectrum as secondary RAT not allowed (3GPP
+ * TS 29.002 V19.1.0 clauses 7.6.3.97 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

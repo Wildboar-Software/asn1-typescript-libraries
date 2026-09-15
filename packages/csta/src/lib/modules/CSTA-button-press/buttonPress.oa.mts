@@ -17,7 +17,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary buttonPress
  * @description
- * 
+ *
+ * Button Press (ECMA-269 §21.1.1 / ECMA-285 §19.1.1). Direction: CF→SF. ROSE
+ * local CODE 260. Errors: `universalFailure`. Sequences appear as manual
+ * presses (e.g. speed-dial).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

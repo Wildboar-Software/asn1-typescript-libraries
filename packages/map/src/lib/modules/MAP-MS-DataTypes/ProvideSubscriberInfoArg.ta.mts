@@ -76,7 +76,13 @@ import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "
 /**
  * @summary ProvideSubscriberInfoArg
  * @description
- * 
+ *
+ * MAP_PROVIDE_SUBSCRIBER_INFO request from HLR (or gsmSCF via ATI) to VLR,
+ * SGSN, or MME via IWF for subscriber state and location at any time. Confirmed
+ * service. Presence rules: 3GPP TS 23.018 and 23.078.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.11.2 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -97,18 +103,39 @@ class ProvideSubscriberInfoArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * International Mobile Subscriber Identity as in 3GPP TS 23.003.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `lmsi`.
+         * @description
+         *
+         * Local identity allocated by the VLR for internal data management.
+         * Providing it is an operator option; HLR shall support LMSI handling.
+         * Shall not be sent to the SGSN.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.16).
+         *
          * @public
          * @readonly
          */
         readonly lmsi: OPTIONAL<LMSI>,
         /**
          * @summary `requestedInfo`.
+         * @description
+         *
+         * Which subscriber information is requested (3GPP TS 23.018 and
+         * 23.078).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.31).
+         *
          * @public
          * @readonly
          */
@@ -121,6 +148,14 @@ class ProvideSubscriberInfoArg {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `callPriority`.
+         * @description
+         *
+         * eMLPP priority of the call (3GPP TS 23.067 / 24.067). In Provide
+         * Subscriber Info, present if the HLR supports it and Call Priority was
+         * received in MAP_SEND_ROUTING_INFORMATION.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.5.19 and 8.11.2.3).
+         *
          * @public
          * @readonly
          */

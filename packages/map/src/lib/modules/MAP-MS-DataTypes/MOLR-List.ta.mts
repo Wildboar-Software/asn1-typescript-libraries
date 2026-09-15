@@ -75,7 +75,10 @@ import { maxNumOfMOLR_Class } from "./maxNumOfMOLR-Class.va.mjs";
 /**
  * @summary MOLR_List
  * @description
- * 
+ *
+ * MO-LR classes for which a subscription exists (SIZE 1..3). (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.3.65A and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

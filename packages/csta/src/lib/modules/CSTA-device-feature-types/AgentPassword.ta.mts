@@ -8,7 +8,11 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AgentPassword
  * @description
- * 
+ *
+ * Password for an ACD agent. ECMA-269 §12.2.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

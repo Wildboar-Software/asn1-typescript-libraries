@@ -15,6 +15,11 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary AdjacencyUsage
  * @description
  *
+ * How an IS adjacency is used for forwarding. There may be two adjacencies
+ * (Level 1 and Level 2) between the same pair of ISs.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.6.4 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -35,6 +40,11 @@ export enum _enum_for_AdjacencyUsage {
  * @summary AdjacencyUsage
  * @description
  *
+ * How an IS adjacency is used for forwarding. There may be two adjacencies
+ * (Level 1 and Level 2) between the same pair of ISs.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.6.4 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -50,6 +60,11 @@ export type AdjacencyUsage = _enum_for_AdjacencyUsage;
  * @summary AdjacencyUsage
  * @description
  *
+ * How an IS adjacency is used for forwarding. There may be two adjacencies
+ * (Level 1 and Level 2) between the same pair of ISs.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.6.4 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -63,6 +78,12 @@ export const AdjacencyUsage = _enum_for_AdjacencyUsage;
 
 /**
  * @summary AdjacencyUsage_undefined
+ * @description
+ *
+ * Usage not yet determined.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +100,12 @@ export const undefined: AdjacencyUsage =
 
 /**
  * @summary AdjacencyUsage_level1
+ * @description
+ *
+ * Used for Level 1 traffic only.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.6.4).
+ *
  * @constant
  * @type {number}
  */
@@ -95,6 +122,12 @@ export const level1: AdjacencyUsage =
 
 /**
  * @summary AdjacencyUsage_level2
+ * @description
+ *
+ * Used for Level 2 traffic only.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.6.4).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +144,12 @@ export const level2: AdjacencyUsage =
 
 /**
  * @summary AdjacencyUsage_level1and2
+ * @description
+ *
+ * Used for both Level 1 and Level 2 traffic.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.6.4).
+ *
  * @constant
  * @type {number}
  */

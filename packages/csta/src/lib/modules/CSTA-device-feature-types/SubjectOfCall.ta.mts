@@ -8,7 +8,12 @@ import { IA5String, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary SubjectOfCall
  * @description
- * 
+ *
+ * Subject or intent of the call (e.g. email subject line, or reason for a voice
+ * call). Maximum length from capability exchange. ECMA-269 §12.2.27.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

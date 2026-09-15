@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary UESBI_IuB
  * @description
- * 
+ *
+ * UE Specific Behaviour Information Iu-B. See 3GPP TS 25.413. BIT STRING size
+ * 1..128.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.6.20 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

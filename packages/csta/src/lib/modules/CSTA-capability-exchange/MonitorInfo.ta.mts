@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary MonitorInfo
  * @description
- * 
+ * Capability bitmap for the Monitor Info service (ECMA-269 C.3.5, ECMA-285
+ * §9.10). Presence of this entry in `MonitoringServList` means the SF supports
+ * that service. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +31,9 @@ type MonitorInfo = BIT_STRING;
 /**
  * @summary MonitorInfo_segmentID
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `segmentID` parameter (ECMA-269
+ * C.3.5).
  */
 export
 const MonitorInfo_segmentID: number = 0; /* LONG_NAMED_BIT */
@@ -30,6 +41,8 @@ const MonitorInfo_segmentID: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary segmentID
  * @constant
+ * @description
+ * Alias of `MonitorInfo_segmentID`.
  */
 export
 const segmentID: number = MonitorInfo_segmentID; /* SHORT_NAMED_BIT */
@@ -37,6 +50,9 @@ const segmentID: number = MonitorInfo_segmentID; /* SHORT_NAMED_BIT */
 /**
  * @summary MonitorInfo_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.3.5).
  */
 export
 const MonitorInfo_privateData: number = 1; /* LONG_NAMED_BIT */
@@ -44,6 +60,8 @@ const MonitorInfo_privateData: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `MonitorInfo_privateData`.
  */
 export
 const privateData: number = MonitorInfo_privateData; /* SHORT_NAMED_BIT */

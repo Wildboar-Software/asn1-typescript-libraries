@@ -9,7 +9,11 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary ChargedDevice
  * @description
- * 
+ *
+ * Device being charged: attendant (`operator`) or not. ECMA-269 §27.1.2.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

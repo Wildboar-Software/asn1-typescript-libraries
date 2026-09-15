@@ -1,0 +1,205 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { type CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../CAP-datatypes/CorrelationID.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
+import { type IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../CAP-datatypes/IPSSPCapabilities.ta.mjs";
+
+
+
+/**
+ * @summary AssistRequestInstructionsArg
+ * @description
+ * 
+ * Argument of AssistRequestInstructions, sent by assist gsmSSF or gsmSRF so
+ * gsmSCF can correlate the assist with the initiating gsmSSF. (3GPP TS 29.078
+ * V19.0.0 clause 11.4.1).
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * AssistRequestInstructionsArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
+ *     correlationID            [0] CorrelationID {bound},
+ *     iPSSPCapabilities            [2] IPSSPCapabilities {bound},
+ *     extensions                [3] Extensions {bound}            OPTIONAL,
+ *     ...
+ *     }
+ * ```
+ * 
+ * @class
+ */
+export
+class AssistRequestInstructionsArg {
+    constructor (
+        /**
+         * @summary `correlationID`.
+         * @description
+         *
+         * Lets gsmSCF associate this AssistRequestInstructions with the
+         * initiating gsmSSF's request. May be extracted from digits received
+         * from the initiating gsmSSF; ASN.1 notes it may be the Called Party
+         * Number supplied by that gsmSSF. (3GPP TS 29.078 V19.0.0 clause
+         * 11.4.1.1).
+         *
+         * @public
+         * @readonly
+         */
+        readonly correlationID: CorrelationID,
+        /**
+         * @summary `iPSSPCapabilities`.
+         * @description
+         *
+         * Which gsmSRF resources are attached, available, and supported in the
+         * MSC of the assisting gsmSSF, or in the IP where the gsmSRF resides.
+         * (3GPP TS 29.078 V19.0.0 clause 11.4.1.1).
+         *
+         * @public
+         * @readonly
+         */
+        readonly iPSSPCapabilities: IPSSPCapabilities,
+        /**
+         * @summary `extensions`.
+         * @public
+         * @readonly
+         */
+        readonly extensions: OPTIONAL<Extensions>,
+        /**
+         * @summary Extensions that are not recognized.
+         * @public
+         * @readonly
+         */
+        readonly _unrecognizedExtensionsList: _Element[] = []
+    ) {}
+
+    /**
+     * @summary Restructures an object into a AssistRequestInstructionsArg
+     * @description
+     * 
+     * This takes an `object` and converts it to a `AssistRequestInstructionsArg`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `AssistRequestInstructionsArg`.
+     * @returns {AssistRequestInstructionsArg}
+     */
+    public static _from_object (_o: { [_K in keyof (AssistRequestInstructionsArg)]: (AssistRequestInstructionsArg)[_K] }): AssistRequestInstructionsArg {
+        return new AssistRequestInstructionsArg(_o.correlationID, _o.iPSSPCapabilities, _o.extensions, _o._unrecognizedExtensionsList);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of AssistRequestInstructionsArg
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_AssistRequestInstructionsArg: $.ComponentSpec[] = [
+    new $.ComponentSpec("correlationID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("iPSSPCapabilities", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 3))
+];
+
+/**
+ * @summary The Trailing Root Component Types of AssistRequestInstructionsArg
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_AssistRequestInstructionsArg: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of AssistRequestInstructionsArg
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_AssistRequestInstructionsArg: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_AssistRequestInstructionsArg: $.ASN1Decoder<AssistRequestInstructionsArg> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) AssistRequestInstructionsArg
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_AssistRequestInstructionsArg (el: _Element): AssistRequestInstructionsArg {
+    if (!_cached_decoder_for_AssistRequestInstructionsArg) { _cached_decoder_for_AssistRequestInstructionsArg = function (el: _Element): AssistRequestInstructionsArg {
+    let correlationID!: CorrelationID;
+    let iPSSPCapabilities!: IPSSPCapabilities;
+    let extensions: OPTIONAL<Extensions>;
+    const _unrecognizedExtensionsList: _Element[] = [];
+    const callbacks: $.DecodingMap = {
+        "correlationID": (_el: _Element): void => { correlationID = $._decode_implicit<CorrelationID>(() => _decode_CorrelationID)(_el); },
+        "iPSSPCapabilities": (_el: _Element): void => { iPSSPCapabilities = $._decode_implicit<IPSSPCapabilities>(() => _decode_IPSSPCapabilities)(_el); },
+        "extensions": (_el: _Element): void => { extensions = $._decode_implicit<Extensions>(() => _decode_Extensions)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_AssistRequestInstructionsArg,
+        _extension_additions_list_spec_for_AssistRequestInstructionsArg,
+        _root_component_type_list_2_spec_for_AssistRequestInstructionsArg,
+        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
+    );
+    return new AssistRequestInstructionsArg(
+        correlationID,
+        iPSSPCapabilities,
+        extensions,
+        _unrecognizedExtensionsList
+    );
+}; }
+    return _cached_decoder_for_AssistRequestInstructionsArg(el);
+}
+
+let _cached_encoder_for_AssistRequestInstructionsArg: $.ASN1Encoder<AssistRequestInstructionsArg> | null = null;
+
+/**
+ * @summary Encodes a(n) AssistRequestInstructionsArg into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The AssistRequestInstructionsArg, encoded as an ASN.1 Element.
+ */
+export
+function _encode_AssistRequestInstructionsArg (value: AssistRequestInstructionsArg, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_AssistRequestInstructionsArg) { _cached_encoder_for_AssistRequestInstructionsArg = function (value: AssistRequestInstructionsArg): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_CorrelationID, $.BER)(value.correlationID, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_IPSSPCapabilities, $.BER)(value.iPSSPCapabilities, $.BER),
+            /* IF_ABSENT  */ ((value.extensions === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_Extensions, $.BER)(value.extensions, $.BER))
+        ],
+        (value._unrecognizedExtensionsList ? value._unrecognizedExtensionsList : []),
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_AssistRequestInstructionsArg(value, elGetter);
+}
+
+
+/* eslint-enable */

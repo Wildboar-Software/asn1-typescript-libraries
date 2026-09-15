@@ -78,7 +78,11 @@ enum _enum_for_CallTerminationIndicator {
 /**
  * @summary CallTerminationIndicator
  * @description
- * 
+ *
+ * 2–10 map to terminateCallActivityReferred; >10 to terminateAllCallActivities.
+ * MSCs without linkage of all activities treat any value as
+ * terminateCallActivityReferred (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +99,10 @@ type CallTerminationIndicator = _enum_for_CallTerminationIndicator | ENUMERATED;
 
 /**
  * @summary CallTerminationIndicator_terminateCallActivityReferred
+ * @description
+ *
+ * `terminateCallActivityReferred (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +111,10 @@ const CallTerminationIndicator_terminateCallActivityReferred: CallTerminationInd
 
 /**
  * @summary terminateCallActivityReferred
+ * @description
+ *
+ * `terminateCallActivityReferred (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +123,10 @@ const terminateCallActivityReferred: CallTerminationIndicator = CallTerminationI
 
 /**
  * @summary CallTerminationIndicator_terminateAllCallActivities
+ * @description
+ *
+ * `terminateAllCallActivities (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +135,10 @@ const CallTerminationIndicator_terminateAllCallActivities: CallTerminationIndica
 
 /**
  * @summary terminateAllCallActivities
+ * @description
+ *
+ * `terminateAllCallActivities (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */

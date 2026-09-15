@@ -15,6 +15,12 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary attemptToExceedMaximumSequenceNumber
  * @description
  *
+ * `specificProblems` value when an attempt is made to increment an LSP sequence
+ * number past the modulus (2^32). probableCause `communicationsProtocolError`;
+ * severity Major.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.5 table 2 and 11.2.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

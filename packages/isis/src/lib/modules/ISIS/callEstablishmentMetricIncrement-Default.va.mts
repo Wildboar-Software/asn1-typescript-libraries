@@ -15,6 +15,12 @@ import {
  * @summary callEstablishmentMetricIncrement_Default
  * @description
  *
+ * Default extra metric reported for an unestablished DA adjacency (0: no
+ * increment). Used for default, delay, expense and error call-establishment
+ * increments.
+ *
+ * (ISO/IEC 10589:2002 clauses 8.3.5.3, 11.2.5.4 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

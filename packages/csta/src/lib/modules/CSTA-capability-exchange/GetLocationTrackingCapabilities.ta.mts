@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary GetLocationTrackingCapabilities
  * @description
- * 
+ * Capability bitmap for the Get Location Tracking Capabilities service
+ * (ECMA-269 C.22.10, ECMA-285 §9.10). Presence of this entry in
+ * `LocationServicesServList` means the SF supports that service. Each set bit
+ * is an optional parameter, enumerated value, initial connection state, or
+ * miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +32,9 @@ type GetLocationTrackingCapabilities = BIT_STRING;
 /**
  * @summary GetLocationTrackingCapabilities_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.22.10).
  */
 export
 const GetLocationTrackingCapabilities_privateData: number = 0; /* LONG_NAMED_BIT */
@@ -30,6 +42,8 @@ const GetLocationTrackingCapabilities_privateData: number = 0; /* LONG_NAMED_BIT
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `GetLocationTrackingCapabilities_privateData`.
  */
 export
 const privateData: number = GetLocationTrackingCapabilities_privateData; /* SHORT_NAMED_BIT */
@@ -37,6 +51,9 @@ const privateData: number = GetLocationTrackingCapabilities_privateData; /* SHOR
 /**
  * @summary GetLocationTrackingCapabilities_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.22.10).
  */
 export
 const GetLocationTrackingCapabilities_privateDataInAck: number = 1; /* LONG_NAMED_BIT */
@@ -44,6 +61,8 @@ const GetLocationTrackingCapabilities_privateDataInAck: number = 1; /* LONG_NAME
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `GetLocationTrackingCapabilities_privateDataInAck`.
  */
 export
 const privateDataInAck: number = GetLocationTrackingCapabilities_privateDataInAck; /* SHORT_NAMED_BIT */

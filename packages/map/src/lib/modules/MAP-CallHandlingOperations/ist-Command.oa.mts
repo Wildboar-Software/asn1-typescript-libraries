@@ -82,7 +82,12 @@ import { facilityNotSupported } from "../MAP-Errors/facilityNotSupported.oa.mjs"
 /**
  * @summary ist_Command
  * @description
- * 
+ *
+ * MAP_IST_COMMAND: HLR instructs the VMSC or GMSC to terminate ongoing call
+ * activities for a specific subscriber. Confirmed. Typical path: HLR→VMSC or
+ * HLR→GMSC. Local opcode 88. Timer class `m` (15 s to 30 s). (3GPP TS 29.002
+ * V19.1.0 clauses 10.14.1, 17.1.2, 17.3.2.45 and 17.6.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

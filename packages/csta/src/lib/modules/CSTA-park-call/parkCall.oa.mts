@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary parkCall
  * @description
- * 
+ *
+ * Park Call (ECMA-269 §17.1.21 / ECMA-285 §15.1.21). Invoked by
+ * the computing function on the switching function. Parks
+ * `parking` at `parkTo` (Queued). CallID is unchanged (FR 1).
+ * Parking and parkTo may be the same device (FR 2). ROSE local
+ * CODE 18. Errors are `universalFailure`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

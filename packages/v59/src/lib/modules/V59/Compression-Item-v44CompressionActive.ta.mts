@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Compression_Item_v44CompressionActive
  * @description
- * 
+ *
+ * V.44 P0 (Table 22/V.59): `none`(0), `txOnly`(1), `rxOnly`(2), `both`(3).
+ * ITU-T Rec. V.59 (11/2000) §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,7 +37,10 @@ enum _enum_for_Compression_Item_v44CompressionActive {
 /**
  * @summary Compression_Item_v44CompressionActive
  * @description
- * 
+ *
+ * V.44 P0 (Table 22/V.59): `none`(0), `txOnly`(1), `rxOnly`(2), `both`(3).
+ * ITU-T Rec. V.59 (11/2000) §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,7 +55,10 @@ type Compression_Item_v44CompressionActive = _enum_for_Compression_Item_v44Compr
 /**
  * @summary Compression_Item_v44CompressionActive
  * @description
- * 
+ *
+ * V.44 P0 (Table 22/V.59): `none`(0), `txOnly`(1), `rxOnly`(2), `both`(3).
+ * ITU-T Rec. V.59 (11/2000) §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,6 +72,9 @@ const Compression_Item_v44CompressionActive = _enum_for_Compression_Item_v44Comp
 
 /**
  * @summary Compression_Item_v44CompressionActive_none
+ * @description
+ *
+ * V.44 not selected. Table 22/V.59. ITU-T Rec. V.59 (11/2000) §6.12.
  * @constant
  * @type {number}
  */
@@ -79,6 +91,9 @@ const none: Compression_Item_v44CompressionActive = Compression_Item_v44Compress
 
 /**
  * @summary Compression_Item_v44CompressionActive_txOnly
+ * @description
+ *
+ * V.44 transmit direction only. Table 22/V.59. ITU-T Rec. V.59 (11/2000) §6.12.
  * @constant
  * @type {number}
  */
@@ -95,6 +110,9 @@ const txOnly: Compression_Item_v44CompressionActive = Compression_Item_v44Compre
 
 /**
  * @summary Compression_Item_v44CompressionActive_rxOnly
+ * @description
+ *
+ * V.44 receive direction only. Table 22/V.59. ITU-T Rec. V.59 (11/2000) §6.12.
  * @constant
  * @type {number}
  */
@@ -111,6 +129,9 @@ const rxOnly: Compression_Item_v44CompressionActive = Compression_Item_v44Compre
 
 /**
  * @summary Compression_Item_v44CompressionActive_both
+ * @description
+ *
+ * V.44 both directions. Table 22/V.59. ITU-T Rec. V.59 (11/2000) §6.12.
  * @constant
  * @type {number}
  */

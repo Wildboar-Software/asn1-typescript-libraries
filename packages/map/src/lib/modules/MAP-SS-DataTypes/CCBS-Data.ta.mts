@@ -75,7 +75,9 @@ import { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalI
 /**
  * @summary CCBS_Data
  * @description
- * 
+ *
+ * CCBS registration payload (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,30 +97,50 @@ class CCBS_Data {
     constructor (
         /**
          * @summary `ccbs_Feature`.
+         * @description
+         *
+         * CCBS feature being registered.
+         *
          * @public
          * @readonly
          */
         readonly ccbs_Feature: CCBS_Feature,
         /**
          * @summary `translatedB_Number`.
+         * @description
+         *
+         * Translated B-number.
+         *
          * @public
          * @readonly
          */
         readonly translatedB_Number: ISDN_AddressString,
         /**
          * @summary `serviceIndicator`.
+         * @description
+         *
+         * CLIR and/or CAMEL invoked.
+         *
          * @public
          * @readonly
          */
         readonly serviceIndicator: OPTIONAL<ServiceIndicator>,
         /**
          * @summary `callInfo`.
+         * @description
+         *
+         * Call information as ExternalSignalInfo.
+         *
          * @public
          * @readonly
          */
         readonly callInfo: ExternalSignalInfo,
         /**
          * @summary `networkSignalInfo`.
+         * @description
+         *
+         * Network signalling information.
+         *
          * @public
          * @readonly
          */

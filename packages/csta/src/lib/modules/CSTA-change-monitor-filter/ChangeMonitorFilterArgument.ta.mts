@@ -19,7 +19,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ChangeMonitorFilterArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 15-2). Bits TRUE = filtered out.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +41,28 @@ class ChangeMonitorFilterArgument {
     constructor (
         /**
          * @summary `crossRefIdentifier`.
+         * @description
+         *
+         * Monitor whose filter is changed (from Monitor Start).
          * @public
          * @readonly
          */
         readonly crossRefIdentifier: MonitorCrossRefID,
         /**
          * @summary `requestedFilterList`.
+         * @description
+         *
+         * Requested events to filter out (not send).
          * @public
          * @readonly
          */
         readonly requestedFilterList: MonitorFilter,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 15-2.
          * @public
          * @readonly
          */

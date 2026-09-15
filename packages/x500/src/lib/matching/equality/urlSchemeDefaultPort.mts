@@ -1,3 +1,10 @@
+/**
+ * Default TCP/UDP ports by URI scheme, used for scheme-based
+ * normalization in Rec. ITU-T X.520 (10/2019) clause 8.9.1
+ * `uriMatch` (IETF RFC 3986 clause 6.2.3: omit a port equal to
+ * the scheme default). Keys include the trailing colon, as in
+ * `URL.protocol` (e.g. `"https:"`).
+ */
 export const urlSchemeDefaultPort: Map<string, number> = new Map([
     // Added by me just because they are common.
     [ "ws:", 80 ],

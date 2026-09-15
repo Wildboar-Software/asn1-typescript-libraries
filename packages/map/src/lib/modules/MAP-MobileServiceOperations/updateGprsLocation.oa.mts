@@ -81,7 +81,13 @@ import { roamingNotAllowed } from "../MAP-Errors/roamingNotAllowed.oa.mjs";
 /**
  * @summary updateGprsLocation
  * @description
- * 
+ *
+ * MAP_UPDATE_GPRS_LOCATION: the SGSN updates GPRS location information stored
+ * in the HLR. In EPS, used IWF↔IWF and IWF↔HSS. Confirmed. Typical path:
+ * SGSN→HLR. Local opcode 23. Timer class `m` (15 s to 30 s). Distinctive error:
+ * `roamingNotAllowed`. (3GPP TS 29.002 V19.1.0 clauses 8.1.7.1, 17.1.2,
+ * 17.3.2.32 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

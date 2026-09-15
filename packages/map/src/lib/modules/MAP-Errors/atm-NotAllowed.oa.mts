@@ -76,6 +76,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary atm_NotAllowed
  * @description
  * 
+ * Any Time Modification user error. Not listed under clause 7.6.1.4; returned
+ * as user error Any Time Modification Not Allowed on MAP-ANY-TIME-MODIFICATION
+ * (3GPP TS 29.002 V19.1.0 clauses 8.11.4.3 and 17.6.6).
+ *
+ * Local code 61. Optional parameter `ATM-NotAllowedParam` (3GPP TS 29.002
+ * V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

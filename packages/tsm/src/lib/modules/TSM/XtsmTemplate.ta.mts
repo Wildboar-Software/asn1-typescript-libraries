@@ -17,7 +17,11 @@ import { BiometricCertificate, _decode_BiometricCertificate, _encode_BiometricCe
 /**
  * @summary XtsmTemplate
  * @description
- * 
+ *
+ * Reference template as a biometric certificate from ITU-T X.1089
+ * (TAI `BiometricCertificate`), signed by a BCA. ITU-T Rec. X.1084
+ * (05/2008) §6, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

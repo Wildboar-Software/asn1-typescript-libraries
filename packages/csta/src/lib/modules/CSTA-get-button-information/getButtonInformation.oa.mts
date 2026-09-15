@@ -17,7 +17,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getButtonInformation
  * @description
- * 
+ *
+ * Get Button Information (ECMA-269 §21.1.3 / ECMA-285 §19.1.3). Direction:
+ * CF→SF. ROSE local CODE 262. Errors: `universalFailure`. Atomic
+ * acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

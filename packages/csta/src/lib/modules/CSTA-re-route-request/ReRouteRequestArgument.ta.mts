@@ -24,7 +24,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ReRouteRequestArgument
  * @description
- * 
+ *
+ * SF request (ECMA-269 Table 20-8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,36 +49,57 @@ class ReRouteRequestArgument {
     constructor (
         /**
          * @summary `crossRefIdentifier`.
+         * @description
+         *
+         * Per-call routeing dialogue (`routeingCrossRefID`).
          * @public
          * @readonly
          */
         readonly crossRefIdentifier: RouteingCrossRefID,
         /**
          * @summary `routeRegisterReqID`.
+         * @description
+         *
+         * Mandatory if the SF supports route registration; otherwise
+         * absent. If absent, `routeingCrossRefID` is unique in the
+         * sub-domain.
          * @public
          * @readonly
          */
         readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
         /**
          * @summary `replyTimeout`.
+         * @description
+         *
+         * How long CF may take to respond, if provided.
          * @public
          * @readonly
          */
         readonly replyTimeout: OPTIONAL<INTEGER>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Correlator data associated with the call.
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Call/thread linkage identifiers.
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

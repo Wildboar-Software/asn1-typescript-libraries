@@ -17,7 +17,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary startCDRTransmission
  * @description
- * 
+ *
+ * Starts CDR collection. `transferMode` selects send at end of call/segment,
+ * store until Send Stored, or store until request or threshold (ECMA-269
+ * §27.1.4).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:363. Errors: `universalFailure` (ECMA-285 §25.1.4).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

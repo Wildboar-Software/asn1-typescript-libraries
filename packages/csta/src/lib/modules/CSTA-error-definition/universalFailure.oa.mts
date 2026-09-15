@@ -12,7 +12,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 /**
  * @summary universalFailure
  * @description
- * 
+ *
+ * ROSE ERROR with local code 1. Parameter is `UniversalFailure`. Used as the
+ * ERRORS set of almost all CSTA operations. ECMA-269 §9.3, §12.2.14; ECMA-285
+ * §9.19.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

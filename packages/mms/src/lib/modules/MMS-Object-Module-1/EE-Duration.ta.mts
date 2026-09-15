@@ -1,0 +1,89 @@
+/* eslint-disable */
+import {
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary EE_Duration
+ * @description
+ * 
+ * Life of a notification enrollment. current
+ * = this application association; permanent = until explicitly deleted
+ * or the VMD ends. ISO 9506-1:2003 §21.1.1.11.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * EE-Duration  ::=  INTEGER {
+ *     current          (0),
+ *     permanent        (1)
+ * } (0..1)
+ * ```
+ */
+export
+type EE_Duration = INTEGER;
+
+/**
+ * @summary EE_Duration_current
+ * @description
+ *
+ * Lives for the defining application association. ISO 9506-1:2003 §21.1.1.11.
+ *
+ * @constant
+ * @type {number}
+ */
+export
+const EE_Duration_current: EE_Duration = 0; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary EE_Duration_current
+ * @description
+ *
+ * Lives for the defining application association. ISO 9506-1:2003 §21.1.1.11.
+ *
+ * @constant
+ * @type {number}
+ */
+export
+const current: EE_Duration = EE_Duration_current; /* SHORT_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary EE_Duration_permanent
+ * @description
+ *
+ * Lives with the VMD unless explicitly deleted. ISO 9506-1:2003 §21.1.1.11.
+ *
+ * @constant
+ * @type {number}
+ */
+export
+const EE_Duration_permanent: EE_Duration = 1; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary EE_Duration_permanent
+ * @description
+ *
+ * Lives with the VMD unless explicitly deleted. ISO 9506-1:2003 §21.1.1.11.
+ *
+ * @constant
+ * @type {number}
+ */
+export
+const permanent: EE_Duration = EE_Duration_permanent; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_EE_Duration = $._decodeInteger;
+export const _encode_EE_Duration = $._encodeInteger;
+
+
+/* eslint-enable */

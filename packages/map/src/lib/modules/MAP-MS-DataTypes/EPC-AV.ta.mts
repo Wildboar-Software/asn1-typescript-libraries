@@ -76,7 +76,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary EPC_AV
  * @description
- * 
+ *
+ * One EPS authentication vector (Rand, Xres, Autn, KASME). If the requesting
+ * node type is MME, the HSS shall return EPS authentication vectors. If the HSS
+ * cannot provide EPS AVs, an empty MAP_SEND_AUTHENTICATION_INFO response is
+ * returned (3GPP TS 29.002 V19.1.0 clauses 8.5.2.1, 7.6.7.5D and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,24 +101,43 @@ class EPC_AV {
     constructor (
         /**
          * @summary `rand`.
+         * @description
+         *
+         * Random number used for authentication (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.7.2).
+         *
          * @public
          * @readonly
          */
         readonly rand: RAND,
         /**
          * @summary `xres`.
+         * @description
+         *
+         * Expected response to the authentication request (3GPP TS 29.002
+         * V19.1.0 clause 7.6.7.5).
+         *
          * @public
          * @readonly
          */
         readonly xres: XRES,
         /**
          * @summary `autn`.
+         * @description
+         *
+         * Authentication Token (3GPP TS 29.002 V19.1.0 clause 7.6.7.5C).
+         *
          * @public
          * @readonly
          */
         readonly autn: AUTN,
         /**
          * @summary `kasme`.
+         * @description
+         *
+         * Key for the Access Security Management Entity (3GPP TS 29.002 V19.1.0
+         * clause 7.6.7.5D).
+         *
          * @public
          * @readonly
          */

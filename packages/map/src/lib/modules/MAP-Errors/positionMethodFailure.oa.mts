@@ -76,6 +76,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary positionMethodFailure
  * @description
  * 
+ * Location services user error. Detailed reasons: Congestion; Insufficient
+ * resources; Insufficient Measurement Data; Inconsistent Measurement Data;
+ * Location procedure not completed; QoS not attainable; Position Method Not
+ * Available in Network; Position Method Not Available in Location Area (3GPP TS
+ * 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 54. Optional parameter `PositionMethodFailure-Param` (3GPP TS
+ * 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

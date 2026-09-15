@@ -78,7 +78,12 @@ enum _enum_for_DefaultCallHandling {
 /**
  * @summary DefaultCallHandling
  * @description
- * 
+ *
+ * Default call handling if CAMEL service is not available: continueCall or
+ * releaseCall. Exception handling: values 2-31 shall be treated as
+ * continueCall; values greater than 31 shall be treated as releaseCall (3GPP TS
+ * 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

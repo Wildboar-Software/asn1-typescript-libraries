@@ -74,7 +74,11 @@ import { LCSLocationInfo, _decode_LCSLocationInfo, _encode_LCSLocationInfo } fro
 /**
  * @summary Deferredmt_lrData
  * @description
- * 
+ *
+ * Reports deferred event type, optional location, and why monitoring stopped.
+ * lcsLocationInfo only if terminationCause is mt-lrRestart (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.11.3 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,18 +96,30 @@ class Deferredmt_lrData {
     constructor (
         /**
          * @summary `deferredLocationEventType`.
+         * @description
+         *
+         * Deferred event type.
+         *
          * @public
          * @readonly
          */
         readonly deferredLocationEventType: DeferredLocationEventType,
         /**
          * @summary `terminationCause`.
+         * @description
+         *
+         * Why monitoring stopped.
+         *
          * @public
          * @readonly
          */
         readonly terminationCause: OPTIONAL<TerminationCause>,
         /**
          * @summary `lcsLocationInfo`.
+         * @description
+         *
+         * Only if terminationCause is mt-lrRestart (clause 17.7.13).
+         *
          * @public
          * @readonly
          */

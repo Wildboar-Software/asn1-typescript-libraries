@@ -75,7 +75,10 @@ import { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_Acces
 /**
  * @summary ProcessGroupCallSignallingArg
  * @description
- * 
+ *
+ * Argument of MAP_PROCESS_GROUP_CALL_SIGNALLING: Relay MSC to Anchor MSC,
+ * unconfirmed (3GPP TS 29.002 V19.1.0 clauses 10.5 and 17.7.12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -98,48 +101,82 @@ class ProcessGroupCallSignallingArg {
     constructor (
         /**
          * @summary `uplinkRequest`.
+         * @description
+         *
+         * Service subscriber in the Relay MSC area requests uplink access
+         * (clause 10.5.3).
+         *
          * @public
          * @readonly
          */
         readonly uplinkRequest: OPTIONAL<NULL>,
         /**
          * @summary `uplinkReleaseIndication`.
+         * @description
+         *
+         * Uplink has become free (clause 10.5.3).
+         *
          * @public
          * @readonly
          */
         readonly uplinkReleaseIndication: OPTIONAL<NULL>,
         /**
          * @summary `releaseGroupCall`.
+         * @description
+         *
+         * Call initiator who currently has the uplink terminates the call
+         * (clause 10.5.3).
+         *
          * @public
          * @readonly
          */
         readonly releaseGroupCall: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `talkerPriority`.
+         * @description
+         *
+         * See 3GPP TS 43.068 (clause 10.5.3).
+         *
          * @public
          * @readonly
          */
         readonly talkerPriority: OPTIONAL<TalkerPriority>,
         /**
          * @summary `additionalInfo`.
+         * @description
+         *
+         * See 3GPP TS 43.068 (clause 10.5.3).
+         *
          * @public
          * @readonly
          */
         readonly additionalInfo: OPTIONAL<AdditionalInfo>,
         /**
          * @summary `emergencyModeResetCommandFlag`.
+         * @description
+         *
+         * See 3GPP TS 43.068 (clause 10.5.3).
+         *
          * @public
          * @readonly
          */
         readonly emergencyModeResetCommandFlag: OPTIONAL<NULL>,
         /**
          * @summary `an_APDU`.
+         * @description
+         *
+         * Notification Data message as in 3GPP TS 48.008 (clause 10.5.3).
+         *
          * @public
          * @readonly
          */

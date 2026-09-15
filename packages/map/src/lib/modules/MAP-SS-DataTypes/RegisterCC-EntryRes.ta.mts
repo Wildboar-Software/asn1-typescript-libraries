@@ -72,7 +72,10 @@ import { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP
 /**
  * @summary RegisterCC_EntryRes
  * @description
- * 
+ *
+ * Result of MAP_REGISTER_CC_ENTRY (3GPP TS 29.002 V19.1.0 clauses 11.13 and
+ * 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -88,6 +91,10 @@ class RegisterCC_EntryRes {
     constructor (
         /**
          * @summary `ccbs_Feature`.
+         * @description
+         *
+         * Registered CCBS feature.
+         *
          * @public
          * @readonly
          */

@@ -8,7 +8,13 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary ReportingType
  * @description
- * 
+ *
+ * immediate, periodic, or count (ECMA-269 §28.1.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +36,13 @@ enum _enum_for_ReportingType {
 /**
  * @summary ReportingType
  * @description
- * 
+ *
+ * immediate, periodic, or count (ECMA-269 §28.1.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +60,13 @@ type ReportingType = _enum_for_ReportingType;
 /**
  * @summary ReportingType
  * @description
- * 
+ *
+ * immediate, periodic, or count (ECMA-269 §28.1.7.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +83,10 @@ const ReportingType = _enum_for_ReportingType;
 
 /**
  * @summary ReportingType_immediate
+ * @description
+ *
+ * Report whenever collected (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +95,10 @@ const ReportingType_immediate: ReportingType = ReportingType.immediate; /* LONG_
 
 /**
  * @summary immediate
+ * @description
+ *
+ * Report each time location is collected (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +107,10 @@ const immediate: ReportingType = ReportingType.immediate; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary ReportingType_periodic
+ * @description
+ *
+ * Report every reportingInterval seconds (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +119,10 @@ const ReportingType_periodic: ReportingType = ReportingType.periodic; /* LONG_NA
 
 /**
  * @summary periodic
+ * @description
+ *
+ * Collect or report at the configured interval (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +131,10 @@ const periodic: ReportingType = ReportingType.periodic; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary ReportingType_count
+ * @description
+ *
+ * Report after reportingCount collections (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +143,10 @@ const ReportingType_count: ReportingType = ReportingType.count; /* LONG_NAMED_EN
 
 /**
  * @summary count
+ * @description
+ *
+ * Report after reportingCount collections (ECMA-269 §28.1.7.1).
+ *
  * @constant
  * @type {number}
  */

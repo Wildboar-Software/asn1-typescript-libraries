@@ -15,7 +15,10 @@ import { TxPowerLevel_Item, _decode_TxPowerLevel_Item, _encode_TxPowerLevel_Item
 /**
  * @summary TxPowerLevel
  * @description
- * 
+ *
+ * Common mid-level transmit-power object (Tag-IDs `45` to `47` under the parent
+ * high-level prefix). ITU-T Rec. V.59 (11/2000) §6.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

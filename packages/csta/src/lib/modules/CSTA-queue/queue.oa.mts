@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary queue
  * @description
- * 
+ *
+ * Voice Queue: stores a copy of a Prompt on the Prompt Queue (ECMA-269
+ * §26.1.8). Not the Queued event.
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:515. Errors: `universalFailure` (ECMA-285 §24.1.8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

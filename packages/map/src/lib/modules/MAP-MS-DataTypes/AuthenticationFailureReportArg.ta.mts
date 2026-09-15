@@ -77,7 +77,11 @@ import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressStr
 /**
  * @summary AuthenticationFailureReportArg
  * @description
- * 
+ *
+ * Argument of MAP_AUTHENTICATION_FAILURE_REPORT, used between VLR and HLR or
+ * SGSN and HLR to report authentication failures (3GPP TS 29.002 V19.1.0 clause
+ * 8.5.3.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -100,12 +104,22 @@ class AuthenticationFailureReportArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * IMSI of the subscriber for whom authentication failed (3GPP TS 29.002
+         * V19.1.0 clauses 8.5.3.3 and 7.6.2.1).
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `failureCause`.
+         * @description
+         *
+         * Wrong user response or wrong network signature (3GPP TS 29.002
+         * V19.1.0 clauses 8.5.3.3 and 7.6.7.9).
+         *
          * @public
          * @readonly
          */
@@ -118,30 +132,58 @@ class AuthenticationFailureReportArg {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `re_attempt`.
+         * @description
+         *
+         * Whether the failure occurred in a normal authentication attempt or in
+         * a reattempt after a previous unsuccessful authentication (3GPP TS
+         * 29.002 V19.1.0 clauses 8.5.3.3 and 7.6.7.10).
+         *
          * @public
          * @readonly
          */
         readonly re_attempt: OPTIONAL<BOOLEAN>,
         /**
          * @summary `accessType`.
+         * @description
+         *
+         * Procedure that initiated authentication (call, emergency call,
+         * location updating, SS, SM, GPRS attach, RAU, service request, PDP
+         * activation/deactivation, GPRS detach) (3GPP TS 29.002 V19.1.0 clauses
+         * 8.5.3.3 and 7.6.7.11).
+         *
          * @public
          * @readonly
          */
         readonly accessType: OPTIONAL<AccessType>,
         /**
          * @summary `rand`.
+         * @description
+         *
+         * Identifies the specific authentication vector that failed (3GPP TS
+         * 29.002 V19.1.0 clauses 8.5.3.3 and 7.6.7.2).
+         *
          * @public
          * @readonly
          */
         readonly rand: OPTIONAL<RAND>,
         /**
          * @summary `vlr_Number`.
+         * @description
+         *
+         * Shall be present if the sender is the VLR (3GPP TS 29.002 V19.1.0
+         * clauses 8.5.3.3 and 7.6.2.14).
+         *
          * @public
          * @readonly
          */
         readonly vlr_Number: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `sgsn_Number`.
+         * @description
+         *
+         * Shall be present if the sender is the SGSN (3GPP TS 29.002 V19.1.0
+         * clauses 8.5.3.3 and 7.6.2.38).
+         *
          * @public
          * @readonly
          */

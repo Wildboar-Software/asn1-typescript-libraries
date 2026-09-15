@@ -84,7 +84,13 @@ enum _enum_for_RequestingNodeType {
 /**
  * @summary RequestingNodeType
  * @description
- * 
+ *
+ * Type of node requesting authentication vectors. Values 2-5 (S-CSCF, BSF,
+ * GAN/WLAN AAA) shall not be used on MAP-D or Gr. Received 6-15 treated as
+ * `vlr`; greater than 17 treated as `sgsn`.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.5.2.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

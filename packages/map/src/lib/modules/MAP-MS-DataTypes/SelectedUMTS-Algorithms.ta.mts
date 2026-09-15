@@ -74,7 +74,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SelectedUMTS_Algorithms
  * @description
- * 
+ *
+ * UMTS integrity and optionally encryption algorithms selected by MSC-B. Coding
+ * as in 3GPP TS 25.413.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.6.12 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +97,24 @@ class SelectedUMTS_Algorithms {
     constructor (
         /**
          * @summary `integrityProtectionAlgorithm`.
+         * @description
+         *
+         * Selected UMTS integrity-protection algorithm.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.12).
+         *
          * @public
          * @readonly
          */
         readonly integrityProtectionAlgorithm: OPTIONAL<ChosenIntegrityProtectionAlgorithm>,
         /**
          * @summary `encryptionAlgorithm`.
+         * @description
+         *
+         * Selected UMTS encryption algorithm.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.12).
+         *
          * @public
          * @readonly
          */

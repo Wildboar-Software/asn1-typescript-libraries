@@ -74,7 +74,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary LSAData
  * @description
- * 
+ *
+ * One localised service area: identity, attributes, and optional active-mode
+ * indication. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.56 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,18 +96,32 @@ class LSAData {
     constructor (
         /**
          * @summary `lsaIdentity`.
+         * @description
+         *
+         * LSA identity (3GPP TS 23.003). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly lsaIdentity: LSAIdentity,
         /**
          * @summary `lsaAttributes`.
+         * @description
+         *
+         * Priority / preferential access / active-mode support (3GPP TS
+         * 48.008). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly lsaAttributes: LSAAttributes,
         /**
          * @summary `lsaActiveModeIndicator`.
+         * @description
+         *
+         * Active-mode indication for this LSA. (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.3.56)
+         *
          * @public
          * @readonly
          */

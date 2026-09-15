@@ -25,7 +25,12 @@ import { LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } 
 /**
  * @summary SnapshotCallResponseInfo
  * @description
- * 
+ *
+ * One endpoint in a Snapshot Call: device, connection, local connection state,
+ * services permitted, bound media, and location. ECMA-269 §16.1.3.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,36 +50,62 @@ class SnapshotCallResponseInfo {
     constructor (
         /**
          * @summary `deviceOnCall`.
+         * @description
+         *
+         * Device at this endpoint. ECMA-269 §16.1.3.
+         *
          * @public
          * @readonly
          */
         readonly deviceOnCall: SubjectDeviceID,
         /**
          * @summary `callIdentifier`.
+         * @description
+         *
+         * Connection of the endpoint. Mandatory if the endpoint is in the
+         * switching sub-domain. ECMA-269 §16.1.3.
+         *
          * @public
          * @readonly
          */
         readonly callIdentifier: OPTIONAL<ConnectionID>,
         /**
          * @summary `localConnectionState`.
+         * @description
+         *
+         * Local connection state of this endpoint. ECMA-269 §16.1.3.
+         *
          * @public
          * @readonly
          */
         readonly localConnectionState: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `servicesPermitted`.
+         * @description
+         *
+         * Mandatory if Dynamic Feature Availability is supported. ECMA-269
+         * §16.1.3, §12.2.25.
+         *
          * @public
          * @readonly
          */
         readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `mediaServiceInfoList`.
+         * @description
+         *
+         * Media services bound to this connection. ECMA-269 §16.1.3.
+         *
          * @public
          * @readonly
          */
         readonly mediaServiceInfoList: OPTIONAL<CallMediaInfoList>,
         /**
          * @summary `locationInfo`.
+         * @description
+         *
+         * PIDF-LO location for the endpoint. ECMA-269 §16.1.3, §12.2.18.
+         *
          * @public
          * @readonly
          */

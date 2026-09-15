@@ -74,7 +74,14 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary PDN_GW_Identity
  * @description
- * 
+ *
+ * Identity of a PDN Gateway (IPv4, IPv6 and/or FQDN). In `PDN-GW-Update`, this
+ * IE shall be included; the HSS ignores `eps-info` if a `pdn-gw-update` lacks
+ * it. Marked OPTIONAL only for backward compatibility with outdated earlier
+ * versions.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,18 +100,36 @@ class PDN_GW_Identity {
     constructor (
         /**
          * @summary `pdn_gw_ipv4_Address`.
+         * @description
+         *
+         * IPv4 address of the PDN GW.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly pdn_gw_ipv4_Address: OPTIONAL<PDP_Address>,
         /**
          * @summary `pdn_gw_ipv6_Address`.
+         * @description
+         *
+         * IPv6 address of the PDN GW.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly pdn_gw_ipv6_Address: OPTIONAL<PDP_Address>,
         /**
          * @summary `pdn_gw_name`.
+         * @description
+         *
+         * FQDN of the PDN GW.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

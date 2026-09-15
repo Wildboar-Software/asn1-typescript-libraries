@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary changeMonitorFilter
  * @description
- * 
+ *
+ * Change Monitor Filter (ECMA-269 §15.1.1 / ECMA-285 §13.1.1). Direction:
+ * CF→SF. ROSE local CODE 72. Errors: `universalFailure`. The actual filter in
+ * the ack may differ from the request. If the
+ * SF does not support returning the actual filter, it does not
+ * filter events beyond what capability exchange advertises.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

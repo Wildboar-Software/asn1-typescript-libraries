@@ -25,7 +25,20 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary privateDataVersionSelection
  * @description
- * 
+ *
+ * Negotiates the private data version (or no private data). May be sent again
+ * to change the version. Should not be issued before the first Get Switching
+ * Function Capabilities ack unless versions were supplied in ACSE Association
+ * Information (ECMA-269 §29.2.2 / §9.4.1.1).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:368. Errors: `universalFailure` (ECMA-285 §27.2.2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

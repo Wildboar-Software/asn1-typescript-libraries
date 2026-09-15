@@ -26,7 +26,18 @@ import {
 /**
  * @summary stopLocationTrackingSession
  * @description
- * 
+ *
+ * Terminates an existing location tracking session. Bidirectional (ECMA-269
+ * §28.1.8 / §6.8.4.3).
+ *
+ * Bidirectional: computing function or switching function may invoke.
+ *
+ * ROSE local:537. Errors: `universalFailure` (ECMA-285 §26.1.8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

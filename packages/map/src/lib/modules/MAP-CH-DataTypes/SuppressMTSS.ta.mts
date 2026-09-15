@@ -73,7 +73,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SuppressMTSS
  * @description
- * 
+ *
+ * BIT STRING suppressCUG (0), suppressCCBS (1). Other bits discarded. Use and
+ * presence as in 3GPP TS 23.078 (3GPP TS 29.002 V19.1.0 clauses 10.1.3 and
+ * 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -87,6 +91,10 @@ type SuppressMTSS = BIT_STRING;
 
 /**
  * @summary SuppressMTSS_suppressCUG
+ * @description
+ *
+ * `suppressCUG (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  */
 export
@@ -94,6 +102,10 @@ const SuppressMTSS_suppressCUG: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary suppressCUG
+ * @description
+ *
+ * `suppressCUG (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  */
 export
@@ -101,6 +113,10 @@ const suppressCUG: number = SuppressMTSS_suppressCUG; /* SHORT_NAMED_BIT */
 
 /**
  * @summary SuppressMTSS_suppressCCBS
+ * @description
+ *
+ * `suppressCCBS (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  */
 export
@@ -108,6 +124,10 @@ const SuppressMTSS_suppressCCBS: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary suppressCCBS
+ * @description
+ *
+ * `suppressCCBS (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  */
 export

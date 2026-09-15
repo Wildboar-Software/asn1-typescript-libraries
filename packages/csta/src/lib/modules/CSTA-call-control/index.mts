@@ -1,7 +1,16 @@
 /**
  * @description
  *
- * ASN.1 module `CSTA-call-control`.
+ * Call-control parameter types for CSTA Phase III: high-level
+ * call characteristics, globally unique call linkage after
+ * conference/transfer, call-qualifying wrap codes, PIDF-LO
+ * location, consultation options, network capability, and
+ * which call-control services the switching function currently
+ * permits on a connection. ECMA-269 §6.1.2.7, §12.2.4–12.2.6,
+ * §12.2.18–12.2.19, §12.2.25; ECMA-285 §9.9.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
  */
 export * from "./AutoOriginate.ta.mjs";
 export * from "./CallCharacteristics.ta.mjs";

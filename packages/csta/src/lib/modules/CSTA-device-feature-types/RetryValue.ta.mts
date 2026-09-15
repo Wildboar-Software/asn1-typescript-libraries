@@ -13,7 +13,12 @@ import {
 /**
  * @summary RetryValue
  * @description
- * 
+ *
+ * Retry information on Route Select. Alternatives: no list available, no count
+ * available, or a retry count. ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -74,7 +74,16 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary SMS_CSI
  * @description
- * 
+ *
+ * Mobile originating or terminating SMS CAMEL subscription (MO-SMS-CSI /
+ * MT-SMS-CSI) as in 3GPP TS 23.078. For CAMEL phase 3, MO-SMS-CSI is the same
+ * as SMS-CSI. `notificationToCSE` and `csi-Active` shall not be present when
+ * sent to VLR or SGSN (ATSI/ATM ack/NSDC only). `sms-CAMEL-TDP-Data` and
+ * `camelCapabilityHandling` shall be present; if segmented, they shall be in
+ * the first segment.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.76 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,12 +103,26 @@ class SMS_CSI {
     constructor (
         /**
          * @summary `sms_CAMEL_TDP_DataList`.
+         * @description
+         *
+         * SMS CAMEL TDP data. Shall be present in SMS-CSI; in the first segment
+         * if segmented.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly sms_CAMEL_TDP_DataList: OPTIONAL<SMS_CAMEL_TDP_DataList>,
         /**
          * @summary `camelCapabilityHandling`.
+         * @description
+         *
+         * CAMEL phase of this CSI: 1-4. Values greater than 4 shall be treated
+         * as CAMEL phase 4.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
@@ -112,12 +135,26 @@ class SMS_CSI {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
+         * be included only in ATSI/ATM ack/NSDC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly notificationToCSE: OPTIONAL<NULL>,
         /**
          * @summary `csi_Active`.
+         * @description
+         *
+         * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
+         * be included only in ATSI/ATM ack/NSDC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

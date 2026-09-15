@@ -73,7 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary MAP_UserAbortInfo
  * @description
- * 
+ *
+ * User information of MAP-U-ABORT, which lets the service-user abort the MAP
+ * dialogue. Unconfirmed (3GPP TS 29.002 V19.1.0 clauses 7.3.4 and 17.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +95,20 @@ class MAP_UserAbortInfo {
     constructor (
         /**
          * @summary `map_UserAbortChoice`.
+         * @description
+         *
+         * User reason of MAP-U-ABORT (3GPP TS 29.002 V19.1.0 clause 7.3.4).
+         *
          * @public
          * @readonly
          */
         readonly map_UserAbortChoice: MAP_UserAbortChoice,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
+         *
          * @public
          * @readonly
          */

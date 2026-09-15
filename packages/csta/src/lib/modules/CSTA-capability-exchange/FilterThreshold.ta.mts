@@ -15,7 +15,15 @@ import {
 /**
  * @summary FilterThreshold
  * @description
- * 
+ * Per-service outstanding-request limits for the SF. Each INTEGER is the number
+ * of unacknowledged requests allowed for that service; 0 means no limit. Absent
+ * from Get Switching Function Capabilities when unknown (ECMA-269 §13.1.4.2.1
+ * Table 13-9, ECMA-285 §9.10).
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -177,876 +185,1314 @@ class FilterThreshold {
          * @summary `getLogicalDeviceInformation`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getLogicalDeviceInformation: INTEGER,
         /**
          * @summary `getPhysicalDeviceInformation`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getPhysicalDeviceInformation: INTEGER,
         /**
          * @summary `getSwitchingFunctionCaps`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getSwitchingFunctionCaps: INTEGER,
         /**
          * @summary `getSwitchingFunctionDevices`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getSwitchingFunctionDevices: INTEGER,
         /**
          * @summary `switchingFunctionDevices`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly switchingFunctionDevices: INTEGER,
         /**
          * @summary `changeSystemStatusFilter`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly changeSystemStatusFilter: INTEGER,
         /**
          * @summary `systemStatusRegister`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly systemStatusRegister: INTEGER,
         /**
          * @summary `systemStatusRegisterAbort`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly systemStatusRegisterAbort: INTEGER,
         /**
          * @summary `systemStatusRegisterCancel`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly systemStatusRegisterCancel: INTEGER,
         /**
          * @summary `requestSystemStatus`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly requestSystemStatus: INTEGER,
         /**
          * @summary `systemStatus`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly systemStatus: INTEGER,
         /**
          * @summary `switchingFunctionCapsChanged`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly switchingFunctionCapsChanged: INTEGER,
         /**
          * @summary `switchingFunctionDevsChanged`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly switchingFunctionDevsChanged: INTEGER,
         /**
          * @summary `changeMonitorFilter`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly changeMonitorFilter: INTEGER,
         /**
          * @summary `monitorStart`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly monitorStart: INTEGER,
         /**
          * @summary `monitorStop`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly monitorStop: INTEGER,
         /**
          * @summary `snapshotCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly snapshotCall: INTEGER,
         /**
          * @summary `snapshotDevice`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly snapshotDevice: INTEGER,
         /**
          * @summary `snapshotCallData`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly snapshotCallData: INTEGER,
         /**
          * @summary `snapshotDeviceData`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly snapshotDeviceData: INTEGER,
         /**
          * @summary `acceptCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly acceptCall: INTEGER,
         /**
          * @summary `alternateCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly alternateCall: INTEGER,
         /**
          * @summary `answerCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly answerCall: INTEGER,
         /**
          * @summary `callBackCallRelated`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly callBackCallRelated: INTEGER,
         /**
          * @summary `callBackMessageCallRelated`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly callBackMessageCallRelated: INTEGER,
         /**
          * @summary `campOnCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly campOnCall: INTEGER,
         /**
          * @summary `clearCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly clearCall: INTEGER,
         /**
          * @summary `clearConnection`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly clearConnection: INTEGER,
         /**
          * @summary `conferenceCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly conferenceCall: INTEGER,
         /**
          * @summary `consultationCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly consultationCall: INTEGER,
         /**
          * @summary `deflectCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly deflectCall: INTEGER,
         /**
          * @summary `dialDigits`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly dialDigits: INTEGER,
         /**
          * @summary `directedPickupCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly directedPickupCall: INTEGER,
         /**
          * @summary `groupPickupCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly groupPickupCall: INTEGER,
         /**
          * @summary `holdCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly holdCall: INTEGER,
         /**
          * @summary `intrudeCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly intrudeCall: INTEGER,
         /**
          * @summary `joinCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly joinCall: INTEGER,
         /**
          * @summary `makeCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly makeCall: INTEGER,
         /**
          * @summary `makePredictiveCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly makePredictiveCall: INTEGER,
         /**
          * @summary `parkCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly parkCall: INTEGER,
         /**
          * @summary `reconnectCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly reconnectCall: INTEGER,
         /**
          * @summary `retrieveCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly retrieveCall: INTEGER,
         /**
          * @summary `singleStepConferenceCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly singleStepConferenceCall: INTEGER,
         /**
          * @summary `singleStepTransferCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly singleStepTransferCall: INTEGER,
         /**
          * @summary `transferCall`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly transferCall: INTEGER,
         /**
          * @summary `associateData`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly associateData: INTEGER,
         /**
          * @summary `cancelTelephonyTone`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly cancelTelephonyTone: INTEGER,
         /**
          * @summary `generateDigits`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly generateDigits: INTEGER,
         /**
          * @summary `generateTelephonyTone`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly generateTelephonyTone: INTEGER,
         /**
          * @summary `sendUserInformation`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly sendUserInformation: INTEGER,
         /**
          * @summary `startDTMFDigitsCollection`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly startDTMFDigitsCollection: INTEGER,
         /**
          * @summary `startTelephonyTonesCollection`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly startTelephonyTonesCollection: INTEGER,
         /**
          * @summary `stopDTMFDigitsCollection`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly stopDTMFDigitsCollection: INTEGER,
         /**
          * @summary `stopTelephonyTonesCollection`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly stopTelephonyTonesCollection: INTEGER,
         /**
          * @summary `attachMediaService`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly attachMediaService: INTEGER,
         /**
          * @summary `detachMediaService`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly detachMediaService: INTEGER,
         /**
          * @summary `routeRegister`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly routeRegister: INTEGER,
         /**
          * @summary `routeRegisterAbort`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly routeRegisterAbort: INTEGER,
         /**
          * @summary `routeRegisterCancel`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly routeRegisterCancel: INTEGER,
         /**
          * @summary `reRoute`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly reRoute: INTEGER,
         /**
          * @summary `routeEnd`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly routeEnd: INTEGER,
         /**
          * @summary `routeReject`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly routeReject: INTEGER,
         /**
          * @summary `routeRequest`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly routeRequest: INTEGER,
         /**
          * @summary `routeSelect`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly routeSelect: INTEGER,
         /**
          * @summary `routeUsed`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly routeUsed: INTEGER,
         /**
          * @summary `buttonPress`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly buttonPress: INTEGER,
         /**
          * @summary `getAuditoryApparatusInfo`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getAuditoryApparatusInfo: INTEGER,
         /**
          * @summary `getButtonInformation`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getButtonInformation: INTEGER,
         /**
          * @summary `getDisplay`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getDisplay: INTEGER,
         /**
          * @summary `getHookswitchStatus`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getHookswitchStatus: INTEGER,
         /**
          * @summary `getLampInformation`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getLampInformation: INTEGER,
         /**
          * @summary `getLampMode`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getLampMode: INTEGER,
         /**
          * @summary `getMicrophoneGain`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getMicrophoneGain: INTEGER,
         /**
          * @summary `getMicrophoneMute`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getMicrophoneMute: INTEGER,
         /**
          * @summary `getMessageWaitingIndicator`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getMessageWaitingIndicator: INTEGER,
         /**
          * @summary `getRingerStatus`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getRingerStatus: INTEGER,
         /**
          * @summary `getSpeakerMute`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getSpeakerMute: INTEGER,
         /**
          * @summary `getSpeakerVolume`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getSpeakerVolume: INTEGER,
         /**
          * @summary `setButtonInformation`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setButtonInformation: INTEGER,
         /**
          * @summary `setDisplay`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setDisplay: INTEGER,
         /**
          * @summary `setHookswitchStatus`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setHookswitchStatus: INTEGER,
         /**
          * @summary `setLampMode`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setLampMode: INTEGER,
         /**
          * @summary `setMsgWaitingIndicator`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setMsgWaitingIndicator: INTEGER,
         /**
          * @summary `setMicrophoneGain`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setMicrophoneGain: INTEGER,
         /**
          * @summary `setMicrophoneMute`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setMicrophoneMute: INTEGER,
         /**
          * @summary `setRingerStatus`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setRingerStatus: INTEGER,
         /**
          * @summary `setSpeakerMute`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setSpeakerMute: INTEGER,
         /**
          * @summary `setSpeakerVolume`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setSpeakerVolume: INTEGER,
         /**
          * @summary `callBackMessageNonCallRelated`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly callBackMessageNonCallRelated: INTEGER,
         /**
          * @summary `callBackNonCallRelated`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly callBackNonCallRelated: INTEGER,
         /**
          * @summary `cancelCallBack`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly cancelCallBack: INTEGER,
         /**
          * @summary `cancelCallBackMessage`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly cancelCallBackMessage: INTEGER,
         /**
          * @summary `getAgentState`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getAgentState: INTEGER,
         /**
          * @summary `getAutoAnswer`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getAutoAnswer: INTEGER,
         /**
          * @summary `getAutoWorkMode`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getAutoWorkMode: INTEGER,
         /**
          * @summary `getCallerIDStatus`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getCallerIDStatus: INTEGER,
         /**
          * @summary `getDoNotDisturb`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getDoNotDisturb: INTEGER,
         /**
          * @summary `getForwarding`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getForwarding: INTEGER,
         /**
          * @summary `getLastNumberDialed`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getLastNumberDialed: INTEGER,
         /**
          * @summary `getRouteingMode`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly getRouteingMode: INTEGER,
         /**
          * @summary `setAgentState`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setAgentState: INTEGER,
         /**
          * @summary `setAutoAnswer`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setAutoAnswer: INTEGER,
         /**
          * @summary `setAutoWorkMode`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setAutoWorkMode: INTEGER,
         /**
          * @summary `setCallerIDStatus`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setCallerIDStatus: INTEGER,
         /**
          * @summary `setDoNotDisturb`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setDoNotDisturb: INTEGER,
         /**
          * @summary `setForwarding`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setForwarding: INTEGER,
         /**
          * @summary `setRouteingMode`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setRouteingMode: INTEGER,
         /**
          * @summary `backInService`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly backInService: INTEGER,
         /**
          * @summary `deviceCaosChanged`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly deviceCaosChanged: INTEGER,
         /**
          * @summary `outOfService`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly outOfService: INTEGER,
         /**
          * @summary `partiallyInService`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly partiallyInService: INTEGER,
         /**
          * @summary `ioRegister`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly ioRegister: INTEGER,
         /**
          * @summary `ioRegisterAbort`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly ioRegisterAbort: INTEGER,
         /**
          * @summary `ioRegisterCancel`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly ioRegisterCancel: INTEGER,
         /**
          * @summary `dataPathResumed`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly dataPathResumed: INTEGER,
         /**
          * @summary `dataPathSuspended`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly dataPathSuspended: INTEGER,
         /**
          * @summary `fastData`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly fastData: INTEGER,
         /**
          * @summary `resumeDataPath`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly resumeDataPath: INTEGER,
         /**
          * @summary `sendBroadcastData`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly sendBroadcastData: INTEGER,
         /**
          * @summary `sendData`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly sendData: INTEGER,
         /**
          * @summary `sendMulticastData`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly sendMulticastData: INTEGER,
         /**
          * @summary `startDataPath`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly startDataPath: INTEGER,
         /**
          * @summary `stopDataPath`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly stopDataPath: INTEGER,
         /**
          * @summary `suspendDataPath`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly suspendDataPath: INTEGER,
         /**
          * @summary `concatenateMsg`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly concatenateMsg: INTEGER,
         /**
          * @summary `deleteMsg`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly deleteMsg: INTEGER,
         /**
          * @summary `playMsg`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly playMsg: INTEGER,
         /**
          * @summary `queryVoiceAttribute`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly queryVoiceAttribute: INTEGER,
         /**
          * @summary `recordMsg`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly recordMsg: INTEGER,
         /**
          * @summary `reposition`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly reposition: INTEGER,
         /**
          * @summary `resume`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly resume: INTEGER,
         /**
          * @summary `review`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly review: INTEGER,
         /**
          * @summary `setVoiceAttribute`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly setVoiceAttribute: INTEGER,
         /**
          * @summary `stop`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly stop: INTEGER,
         /**
          * @summary `suspend`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly suspend: INTEGER,
         /**
          * @summary `synthesizeMsg`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly synthesizeMsg: INTEGER,
         /**
          * @summary `cDRNotification`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly cDRNotification: INTEGER,
         /**
          * @summary `cDRReport`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly cDRReport: INTEGER,
         /**
          * @summary `sendStoredCDRs`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly sendStoredCDRs: INTEGER,
         /**
          * @summary `startCDRTransmission`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly startCDRTransmission: INTEGER,
         /**
          * @summary `stopCDRTransmission`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly stopCDRTransmission: INTEGER,
         /**
          * @summary `escapeRegister`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly escapeRegister: INTEGER,
         /**
          * @summary `escapeRegisterAbort`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly escapeRegisterAbort: INTEGER,
         /**
          * @summary `escapeRegisterCancel`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly escapeRegisterCancel: INTEGER,
         /**
          * @summary `escape`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly escape: INTEGER,
         /**
          * @summary `privateDataVersion`.
          * @public
          * @readonly
+         * @description
+         * Outstanding-request limit for this service; 0 means no limit
+         * (ECMA-269 §13.1.4.2.1).
          */
         readonly privateDataVersion: INTEGER
     ) {}

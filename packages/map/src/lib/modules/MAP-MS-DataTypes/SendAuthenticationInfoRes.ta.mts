@@ -75,7 +75,14 @@ import { UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP
 /**
  * @summary SendAuthenticationInfoRes
  * @description
- * 
+ *
+ * MAP_SEND_AUTHENTICATION_INFO result: triplets, quintuplets, and/or EPS AVs,
+ * and optionally UE Usage Type. Empty response if the HLR/HSS cannot provide
+ * vectors. Old quintuplets shall not be re-used; old triplets may be re-used
+ * except where 3GPP TS 43.020 forbids it.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.5.2 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,6 +101,13 @@ class SendAuthenticationInfoRes {
     constructor (
         /**
          * @summary `authenticationSetList`.
+         * @description
+         *
+         * One to five GSM triplets or UMTS quintuplets if the service
+         * succeeded.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 7.6.7.1 and 8.5.2.3).
+         *
          * @public
          * @readonly
          */
@@ -106,12 +120,27 @@ class SendAuthenticationInfoRes {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `eps_AuthenticationSetList`.
+         * @description
+         *
+         * EPS authentication vectors when the requesting node type is MME (or
+         * additional EPS vectors for combined MME/SGSN).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.5.2.1).
+         *
          * @public
          * @readonly
          */
         readonly eps_AuthenticationSetList: OPTIONAL<EPS_AuthenticationSetList>,
         /**
          * @summary `ueUsageType`.
+         * @description
+         *
+         * Present if requested, the HLR supports DCN (3GPP TS 23.060), and a UE
+         * Usage Type is in the subscription. If Immediate Response Preferred is
+         * not set, HLR may return no authentication vectors in that case.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
+         *
          * @public
          * @readonly
          */

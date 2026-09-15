@@ -79,7 +79,12 @@ enum _enum_for_SMSRegisterRequest {
 /**
  * @summary SMSRegisterRequest
  * @description
- * 
+ *
+ * Whether SMS registration at the MME/SGSN is required, not preferred, or
+ * unconstrained. Used in Update GPRS Location for MT-SMS registration.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.1.7 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

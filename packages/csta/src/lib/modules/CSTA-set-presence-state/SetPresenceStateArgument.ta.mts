@@ -22,7 +22,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SetPresenceStateArgument
  * @description
- * 
+ *
+ * Set Presence State request (ECMA-269 §22.1.21.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,48 +49,75 @@ class SetPresenceStateArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Logical device on which to set presence.
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `requestedPresenceState`.
+         * @description
+         *
+         * Presence values (ECMA-269 §12.2.24): available, away, busy, calling,
+         * dnd, meeting, offline, unknown (default), vacation,
+         * applicationSpecified0–10. 9th-edition feature.
          * @public
          * @readonly
          */
         readonly requestedPresenceState: PresenceState,
         /**
          * @summary `fromTime`.
+         * @description
+         *
+         * Start date and time of the presence state.
          * @public
          * @readonly
          */
         readonly fromTime: OPTIONAL<TimeInfo>,
         /**
          * @summary `untilTime`.
+         * @description
+         *
+         * End date and time of the presence state.
          * @public
          * @readonly
          */
         readonly untilTime: OPTIONAL<TimeInfo>,
         /**
          * @summary `place`.
+         * @description
+         *
+         * Natural-language description of current location.
          * @public
          * @readonly
          */
         readonly place: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `mood`.
+         * @description
+         *
+         * Natural-language description of current mood.
          * @public
          * @readonly
          */
         readonly mood: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `namedPresenceState`.
+         * @description
+         *
+         * Natural-language description of availability.
          * @public
          * @readonly
          */
         readonly namedPresenceState: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

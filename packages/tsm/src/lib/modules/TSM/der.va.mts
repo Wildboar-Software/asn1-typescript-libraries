@@ -17,7 +17,11 @@ import {
 /**
  * @summary der
  * @description
- * 
+ *
+ * `{joint-iso-itu-t asn1(1) ber-derived(2) distinguished-encoding(1)}`.
+ * Encoding used for `X509Certificate`. ITU-T Rec. X.1084 (05/2008)
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

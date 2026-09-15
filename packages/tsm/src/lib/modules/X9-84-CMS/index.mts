@@ -1,7 +1,9 @@
 /**
  * @description
  *
- * ASN.1 module `X9-84-CMS`.
+ * X9.84 CMS types imported by TSM for `SignedData` on biometric
+ * transportation messages (`digitalSignature` and related fields). ITU-T
+ * Rec. X.1084 (05/2008) Annex A.
  */
 export * from "./ALGORITHM.oca.mjs";
 export * from "./AlgorithmIdentifier.ta.mjs";

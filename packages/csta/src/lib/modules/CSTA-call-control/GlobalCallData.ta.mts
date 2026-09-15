@@ -18,7 +18,15 @@ import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/T
 /**
  * @summary GlobalCallData
  * @description
- * 
+ *
+ * End-to-end ("global") call identity shared by CSTA calls in
+ * one or more switching sub-domains. Globally unique by either
+ * pairing a sub-domain name with a sub-domain-unique ID, or
+ * by an H.225 globally unique ID. Update the timestamp whenever
+ * this data is updated. ECMA-269 §6.1.2.7.1, §12.2.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +43,36 @@ class GlobalCallData {
     constructor (
         /**
          * @summary `globalCallSwitchingSubDomainName`.
+         * @description
+         *
+         * Name of the sub-domain that created this global call
+         * data. Required if `globalCallLinkageID` is not itself
+         * globally unique; otherwise optional. ECMA-269 §12.2.5.
+         *
          * @public
          * @readonly
          */
         readonly globalCallSwitchingSubDomainName: OPTIONAL<IA5String>,
         /**
          * @summary `globalCallLinkageID`.
+         * @description
+         *
+         * Sub-domain-specific or H.225 globally unique linkage ID.
+         * Max length of the sub-domain form comes from capability
+         * exchange. ECMA-269 §12.2.5.
+         *
          * @public
          * @readonly
          */
         readonly globalCallLinkageID: GlobalCallLinkageID,
         /**
          * @summary `callLinkageIDTimestamp`.
+         * @description
+         *
+         * Time this `globalCallData` was created or last updated.
+         * Format as `TimeInfo` (ECMA-269 §12.2.29). ECMA-269
+         * §12.2.5.
+         *
          * @public
          * @readonly
          */

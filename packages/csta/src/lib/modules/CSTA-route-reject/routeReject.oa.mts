@@ -15,7 +15,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary routeReject
  * @description
- * 
+ *
+ * Route Reject (ECMA-269 §20.2.3 / ECMA-285 §18.2.3). Direction: CF→SF. ROSE
+ * local CODE 36. Errors: `universalFailure`. `rejectCause`
+ * (busy/queue/capacity/calendar/unknown overflow)
+ * may be passed toward the originating network.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

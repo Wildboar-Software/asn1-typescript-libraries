@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CSG_Id
  * @description
- * 
+ *
+ * Closed Subscriber Group identity, coded according to 3GPP TS 23.003 as a BIT
+ * STRING of 27 bits (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -1,0 +1,152 @@
+DFRExtensionAttributes
+{iso standard(0) 10166 part-1(1) modules(0) extension-attributes(3)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    id-att-other-titles, id-att-subject, id-att-document-type,
+    id-att-document-architecture-class, id-att-keywords,
+    id-att-creation-date-and-time, id-att-purge-date-and-time,
+    id-att-revision-date-and-time, id-att-organizations, id-att-preparers,
+    id-att-owners, id-att-authors, id-att-status, id-att-user-specific-codes,
+    id-att-superseded-documents, id-att-number-of-pages, id-att-languages
+        FROM DFRObjectIdentifiers
+        {iso standard 10166 part-1(1) modules(0) object-identifiers(0)}
+
+    ATTRIBUTE
+        FROM InformationFramework
+        {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9}
+
+    generalizedTimeMatch, generalizedTimeOrderingMatch, integerMatch,
+    integerOrderingMatch
+        FROM SelectedAttributeTypes
+        {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9}
+
+    CharacterData
+        FROM DFRAbstractService
+        {iso standard 10166 part-1(1) modules(0) abstract-service(1)}
+    ;
+
+-- DFR-Extension-Attribute-Set
+
+other-titles ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    ID                      id-att-other-titles
+}
+
+subject ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    SINGLE VALUE            TRUE
+    ID                      id-att-subject
+}
+
+document-type ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    SINGLE VALUE            TRUE
+    ID                      id-att-document-type
+}
+
+document-architecture-class ATTRIBUTE ::= {
+    WITH SYNTAX             DocumentArchitectureClass
+    EQUALITY MATCHING RULE  integerMatch
+    ORDERING MATCHING RULE  integerOrderingMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-document-architecture-class
+}
+
+keywords ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    ID                      id-att-keywords
+}
+
+creation-date-and-time ATTRIBUTE ::= {
+    WITH SYNTAX             GeneralizedTime
+    EQUALITY MATCHING RULE  generalizedTimeMatch
+    ORDERING MATCHING RULE  generalizedTimeOrderingMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-creation-date-and-time
+}
+
+purge-date-and-time ATTRIBUTE ::= {
+    WITH SYNTAX             GeneralizedTime
+    EQUALITY MATCHING RULE  generalizedTimeMatch
+    ORDERING MATCHING RULE  generalizedTimeOrderingMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-purge-date-and-time
+}
+
+revision-date-and-time ATTRIBUTE ::= {
+    WITH SYNTAX             GeneralizedTime
+    EQUALITY MATCHING RULE  generalizedTimeMatch
+    ORDERING MATCHING RULE  generalizedTimeOrderingMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-revision-date-and-time
+}
+
+organizations ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    ID                      id-att-organizations
+}
+
+preparers ATTRIBUTE ::= {
+    WITH SYNTAX             Person
+    ID                      id-att-preparers
+}
+
+owners ATTRIBUTE ::= {
+    WITH SYNTAX             Person
+    ID                      id-att-owners
+}
+
+authors ATTRIBUTE ::= {
+    WITH SYNTAX             Person
+    ID                      id-att-authors
+}
+
+status ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    SINGLE VALUE            TRUE
+    ID                      id-att-status
+}
+
+user-specific-codes ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    ID                      id-att-user-specific-codes
+}
+
+superseded-documents ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    ID                      id-att-superseded-documents
+}
+
+number-of-pages ATTRIBUTE ::= {
+    WITH SYNTAX             INTEGER
+    EQUALITY MATCHING RULE  integerMatch
+    ORDERING MATCHING RULE  integerOrderingMatch
+    SINGLE VALUE            TRUE
+    ID                      id-att-number-of-pages
+}
+
+languages ATTRIBUTE ::= {
+    WITH SYNTAX             CharacterData
+    ID                      id-att-languages
+}
+
+-- Attribute Syntaxes --
+
+-- same as ISO 8613-5
+DocumentArchitectureClass ::= INTEGER {
+    formatted                (0),
+    processable              (1),
+    formatted-processable    (2)
+}
+
+Person ::= SEQUENCE {
+    surname        [0] CharacterData OPTIONAL,
+    givenname      [1] CharacterData OPTIONAL,
+    initials       [2] CharacterData OPTIONAL,
+    title          [3] CharacterData OPTIONAL,
+    organization   [4] CharacterData OPTIONAL
+}
+
+END

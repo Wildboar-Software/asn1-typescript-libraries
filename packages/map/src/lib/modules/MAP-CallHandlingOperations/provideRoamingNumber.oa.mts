@@ -84,7 +84,14 @@ import { noRoamingNumberAvailable } from "../MAP-Errors/noRoamingNumberAvailable
 /**
  * @summary provideRoamingNumber
  * @description
- * 
+ *
+ * MAP_PROVIDE_ROAMING_NUMBER: HLR requests a roaming number from the VLR so the
+ * GMSC can route an incoming call to the called MS. Also used old VLR→new VLR
+ * during MT Roaming Forwarding. Confirmed. Typical path: HLR→VLR. Local opcode
+ * 4. Timer class `m` (15 s to 30 s); set to the upper limit of the range if the
+ * HLR supports pre-paging. Distinctive error: `noRoamingNumberAvailable`. (3GPP
+ * TS 29.002 V19.1.0 clauses 10.2.1, 17.1.2, 17.3.2.4 and 17.6.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Category
  * @description
- * 
+ *
+ * Calling party category as defined in CCITT Recommendation Q.767. Internal
+ * structure is defined in ITU-T Rec Q.763. Included at location updating or
+ * when changed. Used only by the VLR; if the SGSN or IWF receives this
+ * parameter it shall ignore it (3GPP TS 29.002 V19.1.0 clauses 7.6.3.1, 8.8.1.3
+ * and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

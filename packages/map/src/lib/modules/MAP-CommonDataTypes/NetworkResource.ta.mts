@@ -72,7 +72,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NetworkResource
  * @description
- * 
+ *
+ * Class or type of network resource that may qualify a system-failure error:
+ * PLMN; HLR; VLR (current or previous); MSC (controlling or current); EIR;
+ * radio sub-system.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.10.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -104,7 +110,13 @@ enum _enum_for_NetworkResource {
 /**
  * @summary NetworkResource
  * @description
- * 
+ *
+ * Class or type of network resource that may qualify a system-failure error:
+ * PLMN; HLR; VLR (current or previous); MSC (controlling or current); EIR;
+ * radio sub-system.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.10.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -127,7 +139,13 @@ type NetworkResource = _enum_for_NetworkResource;
 /**
  * @summary NetworkResource
  * @description
- * 
+ *
+ * Class or type of network resource that may qualify a system-failure error:
+ * PLMN; HLR; VLR (current or previous); MSC (controlling or current); EIR;
+ * radio sub-system.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.10.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -149,6 +167,10 @@ const NetworkResource = _enum_for_NetworkResource;
 
 /**
  * @summary NetworkResource_plmn
+ * @description
+ *
+ * PLMN (value 0). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +179,10 @@ const NetworkResource_plmn: NetworkResource = NetworkResource.plmn; /* LONG_NAME
 
 /**
  * @summary plmn
+ * @description
+ *
+ * PLMN (value 0). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +191,10 @@ const plmn: NetworkResource = NetworkResource.plmn; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary NetworkResource_hlr
+ * @description
+ *
+ * HLR (value 1). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +203,10 @@ const NetworkResource_hlr: NetworkResource = NetworkResource.hlr; /* LONG_NAMED_
 
 /**
  * @summary hlr
+ * @description
+ *
+ * HLR (value 1). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -181,6 +215,10 @@ const hlr: NetworkResource = NetworkResource.hlr; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary NetworkResource_vlr
+ * @description
+ *
+ * Current VLR (value 2). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +227,10 @@ const NetworkResource_vlr: NetworkResource = NetworkResource.vlr; /* LONG_NAMED_
 
 /**
  * @summary vlr
+ * @description
+ *
+ * Current VLR (value 2). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -197,6 +239,10 @@ const vlr: NetworkResource = NetworkResource.vlr; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary NetworkResource_pvlr
+ * @description
+ *
+ * Previous VLR (value 3). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -205,6 +251,10 @@ const NetworkResource_pvlr: NetworkResource = NetworkResource.pvlr; /* LONG_NAME
 
 /**
  * @summary pvlr
+ * @description
+ *
+ * Previous VLR (value 3). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -213,6 +263,10 @@ const pvlr: NetworkResource = NetworkResource.pvlr; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary NetworkResource_controllingMSC
+ * @description
+ *
+ * Controlling MSC (value 4). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -221,6 +275,10 @@ const NetworkResource_controllingMSC: NetworkResource = NetworkResource.controll
 
 /**
  * @summary controllingMSC
+ * @description
+ *
+ * Controlling MSC (value 4). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -229,6 +287,10 @@ const controllingMSC: NetworkResource = NetworkResource.controllingMSC; /* SHORT
 
 /**
  * @summary NetworkResource_vmsc
+ * @description
+ *
+ * Current (visited) MSC (value 5). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -237,6 +299,10 @@ const NetworkResource_vmsc: NetworkResource = NetworkResource.vmsc; /* LONG_NAME
 
 /**
  * @summary vmsc
+ * @description
+ *
+ * Current (visited) MSC (value 5). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -245,6 +311,10 @@ const vmsc: NetworkResource = NetworkResource.vmsc; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary NetworkResource_eir
+ * @description
+ *
+ * EIR (value 6). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -253,6 +323,10 @@ const NetworkResource_eir: NetworkResource = NetworkResource.eir; /* LONG_NAMED_
 
 /**
  * @summary eir
+ * @description
+ *
+ * EIR (value 6). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -261,6 +335,10 @@ const eir: NetworkResource = NetworkResource.eir; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary NetworkResource_rss
+ * @description
+ *
+ * Radio sub-system (value 7). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */
@@ -269,6 +347,10 @@ const NetworkResource_rss: NetworkResource = NetworkResource.rss; /* LONG_NAMED_
 
 /**
  * @summary rss
+ * @description
+ *
+ * Radio sub-system (value 7). (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+ *
  * @constant
  * @type {number}
  */

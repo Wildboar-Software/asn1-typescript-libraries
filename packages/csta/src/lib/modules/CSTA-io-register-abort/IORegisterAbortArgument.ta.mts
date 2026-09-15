@@ -17,7 +17,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary IORegisterAbortArgument
  * @description
- * 
+ *
+ * Identifies the I/O registration that was aborted (ECMA-269 §24.1.2.1). No
+ * positive acknowledgement is defined.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +40,21 @@ class IORegisterAbortArgument {
     constructor (
         /**
          * @summary `ioRegisterReqID`.
+         * @description
+         *
+         * I/O registration that was aborted (ECMA-269 §24.1.2.1).
+         *
          * @public
          * @readonly
          */
         readonly ioRegisterReqID: IORegisterReqID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

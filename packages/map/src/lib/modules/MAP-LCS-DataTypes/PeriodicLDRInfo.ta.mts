@@ -74,7 +74,12 @@ import { ReportingOptionMilliseconds, _decode_ReportingOptionMilliseconds, _enco
 /**
  * @summary PeriodicLDRInfo
  * @description
- * 
+ *
+ * reportingInterval × reportingAmount shall not exceed 8639999 (99d 23h 59m
+ * 59s) for OMA MLP/RLP. If reportingOptionMilliseconds is provided and
+ * supported, reportingInterval and reportingAmount shall be ignored (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.11.31 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,18 +98,30 @@ class PeriodicLDRInfo {
     constructor (
         /**
          * @summary `reportingAmount`.
+         * @description
+         *
+         * 1..maxReportingAmount.
+         *
          * @public
          * @readonly
          */
         readonly reportingAmount: ReportingAmount,
         /**
          * @summary `reportingInterval`.
+         * @description
+         *
+         * Seconds, 1..maxReportingInterval.
+         *
          * @public
          * @readonly
          */
         readonly reportingInterval: ReportingInterval,
         /**
          * @summary `reportingOptionMilliseconds`.
+         * @description
+         *
+         * Millisecond reporting; if used, ignore second-based fields.
+         *
          * @public
          * @readonly
          */

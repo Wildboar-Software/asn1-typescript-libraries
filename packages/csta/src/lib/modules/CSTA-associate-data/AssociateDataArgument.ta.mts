@@ -33,7 +33,12 @@ import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacter
 /**
  * @summary AssociateDataArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 18-2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,60 +62,91 @@ class AssociateDataArgument {
     constructor (
         /**
          * @summary `existingCall`.
+         * @description
+         *
+         * Connection identifying the call. Either endpoint is valid.
          * @public
          * @readonly
          */
         readonly existingCall: ConnectionID,
         /**
          * @summary `accountCode`.
+         * @description
+         *
+         * Account information to associate with the call.
          * @public
          * @readonly
          */
         readonly accountCode: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
+         * @description
+         *
+         * Authorisation code to associate with the call.
          * @public
          * @readonly
          */
         readonly authCode: OPTIONAL<AuthCode>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Correlator data to associate with the call.
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `callQualifyingData`.
+         * @description
+         *
+         * Call-qualifying data to associate with the call.
          * @public
          * @readonly
          */
         readonly callQualifyingData: OPTIONAL<CallQualifyingData>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Call characterisation to associate with the call.
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `subjectOfCall`.
+         * @description
+         *
+         * Subject/topic to associate with the call.
          * @public
          * @readonly
          */
         readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Language preferences to associate with the call.
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `deviceInfo`.
+         * @description
+         *
+         * Device information to associate with a device in the call.
          * @public
          * @readonly
          */
         readonly deviceInfo: OPTIONAL<DeviceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

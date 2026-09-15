@@ -27,7 +27,13 @@ import { SuspendDataCollection, _decode_SuspendDataCollection, _encode_SuspendDa
 /**
  * @summary DataCollectionServList
  * @description
- * 
+ * Data Collection services the SF supports (ECMA-269 Annex C.18, ECMA-285
+ * §9.10). Omit unsupported services.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,42 +56,63 @@ class DataCollectionServList {
          * @summary `dataCollected`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly dataCollected: OPTIONAL<DataCollected>,
         /**
          * @summary `dataCollectionResumed`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly dataCollectionResumed: OPTIONAL<DataCollectionResumed>,
         /**
          * @summary `dataCollectionSuspended`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly dataCollectionSuspended: OPTIONAL<DataCollectionSuspended>,
         /**
          * @summary `resumeDataCollection`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly resumeDataCollection: OPTIONAL<ResumeDataCollection>,
         /**
          * @summary `startDataCollection`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly startDataCollection: OPTIONAL<StartDataCollection>,
         /**
          * @summary `stopDataCollection`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly stopDataCollection: OPTIONAL<StopDataCollection>,
         /**
          * @summary `suspendDataCollection`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this service; omit if the SF does not support
+         * it (ECMA-269 Annex C).
          */
         readonly suspendDataCollection: OPTIONAL<SuspendDataCollection>
     ) {}

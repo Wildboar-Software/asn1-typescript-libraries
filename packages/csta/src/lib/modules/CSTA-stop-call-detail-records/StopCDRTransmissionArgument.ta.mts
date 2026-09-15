@@ -24,7 +24,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary StopCDRTransmissionArgument
  * @description
- * 
+ *
+ * CDR session and optional termination reason (ECMA-269 §27.1.5.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +47,34 @@ class StopCDRTransmissionArgument {
     constructor (
         /**
          * @summary `cdrCrossRefID`.
+         * @description
+         *
+         * CDR transmission cross-reference from Start Call Detail Records
+         * Transmission (ECMA-269 §27.1.4).
+         *
          * @public
          * @readonly
          */
         readonly cdrCrossRefID: CDRCrossRefID,
         /**
          * @summary `cdrTermReason`.
+         * @description
+         *
+         * endOfDataDetected, errorDetected, thresholdReached, or other. Shall
+         * not be provided when the computing function sends this service
+         * (ECMA-269 §27.1.5.1).
+         *
          * @public
          * @readonly
          */
         readonly cdrTermReason: OPTIONAL<CDRTermReason>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

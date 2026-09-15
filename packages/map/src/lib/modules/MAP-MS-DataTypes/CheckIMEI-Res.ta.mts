@@ -74,7 +74,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CheckIMEI_Res
  * @description
- * 
+ *
+ * Result of MAP_CHECK_IMEI. Equipment status is returned if requested; BMUEF
+ * (UESBI-Iu) is returned if requested. From EIR to MSC/SGSN/IWF, IMEI/IMEISV is
+ * not included; one of IMEI and IMEISV is mandatory from MSC to VLR on success
+ * (3GPP TS 29.002 V19.1.0 clauses 8.7.1.2 and 8.7.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +97,23 @@ class CheckIMEI_Res {
     constructor (
         /**
          * @summary `equipmentStatus`.
+         * @description
+         *
+         * Sent by the responder on success if Equipment Status was requested
+         * (3GPP TS 29.002 V19.1.0 clauses 8.7.1.3 and 7.6.3.2).
+         *
          * @public
          * @readonly
          */
         readonly equipmentStatus: OPTIONAL<EquipmentStatus>,
         /**
          * @summary `bmuef`.
+         * @description
+         *
+         * Bit Map of UE Faults (UESBI-Iu as in 3GPP TS 25.413). Sent on success
+         * if BMUEF was requested (3GPP TS 29.002 V19.1.0 clauses 8.7.1.3 and
+         * 7.6.3.2a).
+         *
          * @public
          * @readonly
          */

@@ -75,7 +75,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ExternalClient
  * @description
- * 
+ *
+ * One external LCS client identity (international, e.g. E.164) with optional
+ * GMLC restrictions and privacy notification. If notificationToMSUser is not
+ * received, the default according to 3GPP TS 23.271 shall be assumed (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.3.64 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -108,6 +113,12 @@ class ExternalClient {
         readonly gmlc_Restriction: OPTIONAL<GMLC_Restriction>,
         /**
          * @summary `notificationToMSUser`.
+         * @description
+         *
+         * If not received, the default according to 3GPP TS 23.271 shall be
+         * assumed (3GPP TS 29.002 V19.1.0 clauses 7.6.3.64, 7.6.3.65B and
+         * 17.7.1).
+         *
          * @public
          * @readonly
          */

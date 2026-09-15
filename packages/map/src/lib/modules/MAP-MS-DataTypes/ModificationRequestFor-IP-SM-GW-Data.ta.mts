@@ -74,7 +74,12 @@ import { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode
 /**
  * @summary ModificationRequestFor_IP_SM_GW_Data
  * @description
- * 
+ *
+ * IP-SM-GW request to update registration status (and optionally Diameter
+ * address) stored in the HLR. `ip-sm-gw-DiameterAddress` may be present when
+ * the modification instruction is `activate`. (3GPP TS 29.002 V19.1.0 clauses
+ * 8.11.4 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,6 +99,11 @@ class ModificationRequestFor_IP_SM_GW_Data {
     constructor (
         /**
          * @summary `modifyRegistrationStatus`.
+         * @description
+         *
+         * Activate or deactivate the IP-SM-GW registration stored in the HLR.
+         * (3GPP TS 29.002 V19.1.0 clause 8.11.4)
+         *
          * @public
          * @readonly
          */
@@ -106,6 +116,11 @@ class ModificationRequestFor_IP_SM_GW_Data {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `ip_sm_gw_DiameterAddress`.
+         * @description
+         *
+         * May be present when ModificationInstruction is `activate`. (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */

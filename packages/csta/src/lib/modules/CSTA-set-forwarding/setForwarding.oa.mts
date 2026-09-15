@@ -17,7 +17,15 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary setForwarding
  * @description
- * 
+ *
+ * Set Forwarding (ECMA-269 §22.1.20 / ECMA-285 §20.1.20). Direction: CF→SF.
+ * ROSE local CODE 317. Errors: `universalFailure`. Multiple user settings:
+ * multiple requests if supported. If already at the requested value: positive
+ * ack and no event (ECMA-269 §9.5.1 FR 8).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

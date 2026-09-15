@@ -17,7 +17,20 @@ import { ThreadData, _decode_ThreadData, _encode_ThreadData } from "../CSTA-call
 /**
  * @summary CallLinkageData
  * @description
- * 
+ *
+ * Globally unique linkage of related CSTA calls after
+ * conference or transfer, and across switching sub-domains that
+ * share one end-to-end ("global") call. A consulted call may
+ * be linked to the held call at the consultation device.
+ * `globalCallData` is always present when the switch supports
+ * call linkage; `threadData` only if thread linkage is also
+ * supported (capability exchange). 9th edition added detecting
+ * this in service results as well as events. Obtain via call
+ * control events or Snapshot Call. ECMA-269 §6.1.2.7,
+ * §12.2.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +46,29 @@ class CallLinkageData {
     constructor (
         /**
          * @summary `globalCallData`.
+         * @description
+         *
+         * End-to-end / global call identity. Always provided when
+         * the switch supports call linkage. New calls either create
+         * new global data or inherit it when they belong to an
+         * existing global call (e.g. incoming from another
+         * sub-domain). ECMA-269 §6.1.2.7.3, §12.2.5.
+         *
          * @public
          * @readonly
          */
         readonly globalCallData: GlobalCallData,
         /**
          * @summary `threadData`.
+         * @description
+         *
+         * Call-thread identity: all CSTA/global calls in the same
+         * telephony process (e.g. consultation). Present only if
+         * the switch supports thread linkage. After conference or
+         * transfer, thread data is inherited from one of the
+         * incoming or originating calls per §6.1.2.7.3.
+         * ECMA-269 §12.2.5.
+         *
          * @public
          * @readonly
          */

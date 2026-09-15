@@ -72,7 +72,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ProcedureCancellationReason
  * @description
- * 
+ *
+ * Diagnostic for MAP-U-ABORT user reason Application procedure cancellation:
+ * handover cancellation, radio channel release, network path release, call
+ * release, associated procedure failure, tandem dialogue released, or remote
+ * operations failure (3GPP TS 29.002 V19.1.0 clause 7.3.4, table 7.3/7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -102,7 +107,12 @@ enum _enum_for_ProcedureCancellationReason {
 /**
  * @summary ProcedureCancellationReason
  * @description
- * 
+ *
+ * Diagnostic for MAP-U-ABORT user reason Application procedure cancellation:
+ * handover cancellation, radio channel release, network path release, call
+ * release, associated procedure failure, tandem dialogue released, or remote
+ * operations failure (3GPP TS 29.002 V19.1.0 clause 7.3.4, table 7.3/7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -124,7 +134,12 @@ type ProcedureCancellationReason = _enum_for_ProcedureCancellationReason;
 /**
  * @summary ProcedureCancellationReason
  * @description
- * 
+ *
+ * Diagnostic for MAP-U-ABORT user reason Application procedure cancellation:
+ * handover cancellation, radio channel release, network path release, call
+ * release, associated procedure failure, tandem dialogue released, or remote
+ * operations failure (3GPP TS 29.002 V19.1.0 clause 7.3.4, table 7.3/7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -145,6 +160,11 @@ const ProcedureCancellationReason = _enum_for_ProcedureCancellationReason;
 
 /**
  * @summary ProcedureCancellationReason_handoverCancellation
+ * @description
+ *
+ * `handoverCancellation (0)` (3GPP TS 29.002 V19.1.0 clause 7.3.4, table
+ * 7.3/7).
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +173,11 @@ const ProcedureCancellationReason_handoverCancellation: ProcedureCancellationRea
 
 /**
  * @summary handoverCancellation
+ * @description
+ *
+ * `handoverCancellation (0)` of `ProcedureCancellationReason` (3GPP TS 29.002
+ * V19.1.0 clause 7.3.4).
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +186,10 @@ const handoverCancellation: ProcedureCancellationReason = ProcedureCancellationR
 
 /**
  * @summary ProcedureCancellationReason_radioChannelRelease
+ * @description
+ *
+ * `radioChannelRelease (1)` (3GPP TS 29.002 V19.1.0 clause 7.3.4, table 7.3/7).
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +198,11 @@ const ProcedureCancellationReason_radioChannelRelease: ProcedureCancellationReas
 
 /**
  * @summary radioChannelRelease
+ * @description
+ *
+ * `radioChannelRelease (1)` of `ProcedureCancellationReason` (3GPP TS 29.002
+ * V19.1.0 clause 7.3.4).
+ *
  * @constant
  * @type {number}
  */
@@ -177,6 +211,10 @@ const radioChannelRelease: ProcedureCancellationReason = ProcedureCancellationRe
 
 /**
  * @summary ProcedureCancellationReason_networkPathRelease
+ * @description
+ *
+ * `networkPathRelease (2)` (3GPP TS 29.002 V19.1.0 clause 7.3.4, table 7.3/7).
+ *
  * @constant
  * @type {number}
  */
@@ -185,6 +223,11 @@ const ProcedureCancellationReason_networkPathRelease: ProcedureCancellationReaso
 
 /**
  * @summary networkPathRelease
+ * @description
+ *
+ * `networkPathRelease (2)` of `ProcedureCancellationReason` (3GPP TS 29.002
+ * V19.1.0 clause 7.3.4).
+ *
  * @constant
  * @type {number}
  */
@@ -193,6 +236,10 @@ const networkPathRelease: ProcedureCancellationReason = ProcedureCancellationRea
 
 /**
  * @summary ProcedureCancellationReason_callRelease
+ * @description
+ *
+ * `callRelease (3)` (3GPP TS 29.002 V19.1.0 clause 7.3.4, table 7.3/7).
+ *
  * @constant
  * @type {number}
  */
@@ -201,6 +248,11 @@ const ProcedureCancellationReason_callRelease: ProcedureCancellationReason = Pro
 
 /**
  * @summary callRelease
+ * @description
+ *
+ * `callRelease (3)` of `ProcedureCancellationReason` (3GPP TS 29.002 V19.1.0
+ * clause 7.3.4).
+ *
  * @constant
  * @type {number}
  */
@@ -209,6 +261,11 @@ const callRelease: ProcedureCancellationReason = ProcedureCancellationReason.cal
 
 /**
  * @summary ProcedureCancellationReason_associatedProcedureFailure
+ * @description
+ *
+ * `associatedProcedureFailure (4)` (3GPP TS 29.002 V19.1.0 clause 7.3.4, table
+ * 7.3/7).
+ *
  * @constant
  * @type {number}
  */
@@ -217,6 +274,11 @@ const ProcedureCancellationReason_associatedProcedureFailure: ProcedureCancellat
 
 /**
  * @summary associatedProcedureFailure
+ * @description
+ *
+ * `associatedProcedureFailure (4)` of `ProcedureCancellationReason` (3GPP TS
+ * 29.002 V19.1.0 clause 7.3.4).
+ *
  * @constant
  * @type {number}
  */
@@ -225,6 +287,11 @@ const associatedProcedureFailure: ProcedureCancellationReason = ProcedureCancell
 
 /**
  * @summary ProcedureCancellationReason_tandemDialogueRelease
+ * @description
+ *
+ * `tandemDialogueRelease (5)`: tandem dialogue released (3GPP TS 29.002 V19.1.0
+ * clause 7.3.4, table 7.3/7).
+ *
  * @constant
  * @type {number}
  */
@@ -233,6 +300,11 @@ const ProcedureCancellationReason_tandemDialogueRelease: ProcedureCancellationRe
 
 /**
  * @summary tandemDialogueRelease
+ * @description
+ *
+ * `tandemDialogueRelease (5)` of `ProcedureCancellationReason` (3GPP TS 29.002
+ * V19.1.0 clause 7.3.4).
+ *
  * @constant
  * @type {number}
  */
@@ -241,6 +313,11 @@ const tandemDialogueRelease: ProcedureCancellationReason = ProcedureCancellation
 
 /**
  * @summary ProcedureCancellationReason_remoteOperationsFailure
+ * @description
+ *
+ * `remoteOperationsFailure (6)` (3GPP TS 29.002 V19.1.0 clause 7.3.4, table
+ * 7.3/7).
+ *
  * @constant
  * @type {number}
  */
@@ -249,6 +326,11 @@ const ProcedureCancellationReason_remoteOperationsFailure: ProcedureCancellation
 
 /**
  * @summary remoteOperationsFailure
+ * @description
+ *
+ * `remoteOperationsFailure (6)` of `ProcedureCancellationReason` (3GPP TS
+ * 29.002 V19.1.0 clause 7.3.4).
+ *
  * @constant
  * @type {number}
  */

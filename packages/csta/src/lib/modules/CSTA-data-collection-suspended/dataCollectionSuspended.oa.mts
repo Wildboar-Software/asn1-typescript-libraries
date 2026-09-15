@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary dataCollectionSuspended
  * @description
- * 
+ *
+ * Informs the computing function that data collection has been suspended.
+ * Resume Data Collection may restart it (ECMA-269 §25.1.3).
+ *
+ * Switching function → computing function.
+ *
+ * ROSE local:345. Errors: `universalFailure` (ECMA-285 §23.1.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

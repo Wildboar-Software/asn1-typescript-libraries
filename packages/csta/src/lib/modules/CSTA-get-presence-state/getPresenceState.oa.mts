@@ -17,7 +17,14 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary getPresenceState
  * @description
- * 
+ *
+ * Get Presence State (ECMA-269 §22.1.13 / ECMA-285 §20.1.13). Direction: CF→SF.
+ * ROSE local CODE 550. Errors: `universalFailure`. 9th-edition service. Atomic
+ * acknowledgement.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

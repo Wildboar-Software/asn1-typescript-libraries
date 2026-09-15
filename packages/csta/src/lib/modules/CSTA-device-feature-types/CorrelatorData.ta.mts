@@ -8,7 +8,15 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CorrelatorData
  * @description
- * 
+ *
+ * Computing sub-domain data attached to a call so computing functions can share
+ * their own information (database key, command sequence, file name, etc.).
+ * Stays with the call for its life; a null string clears it. Consultation Call
+ * correlator data applies only to the secondary call. See also User Data
+ * (ECMA-269 §6.1.2.4). ECMA-269 §12.2.10.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RequestedNodes
  * @description
- * 
+ *
+ * Which PS serving nodes (MME and/or SGSN) should supply the requested
+ * information. Absent if `requestedDomain` is `cs-Domain`. Other bits shall be
+ * discarded.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

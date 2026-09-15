@@ -78,7 +78,9 @@ enum _enum_for_MonitoringMode {
 /**
  * @summary MonitoringMode
  * @description
- * 
+ *
+ * 2–10 map to a-side; >10 map to b-side (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -95,6 +97,10 @@ type MonitoringMode = _enum_for_MonitoringMode | ENUMERATED;
 
 /**
  * @summary MonitoringMode_a_side
+ * @description
+ *
+ * `a-side (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -103,6 +109,10 @@ const MonitoringMode_a_side: MonitoringMode = 0; /* LONG_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary a_side
+ * @description
+ *
+ * `a-side (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -111,6 +121,10 @@ const a_side: MonitoringMode = MonitoringMode_a_side; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary MonitoringMode_b_side
+ * @description
+ *
+ * `b-side (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -119,6 +133,10 @@ const MonitoringMode_b_side: MonitoringMode = 1; /* LONG_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary b_side
+ * @description
+ *
+ * `b-side (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */

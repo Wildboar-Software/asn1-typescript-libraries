@@ -74,7 +74,11 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary AllowedUMTS_Algorithms
  * @description
- * 
+ *
+ * Allowed UMTS algorithms in MSC-B. Coding of permitted integrity-protection
+ * and encryption algorithms is defined in 3GPP TS 25.413 (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.6.14 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +96,22 @@ class AllowedUMTS_Algorithms {
     constructor (
         /**
          * @summary `integrityProtectionAlgorithms`.
+         * @description
+         *
+         * Permitted integrity protection algorithms as in 3GPP TS 25.413 (3GPP
+         * TS 29.002 V19.1.0 clauses 7.6.6.14 and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly integrityProtectionAlgorithms: OPTIONAL<PermittedIntegrityProtectionAlgorithms>,
         /**
          * @summary `encryptionAlgorithms`.
+         * @description
+         *
+         * Permitted encryption algorithms as in 3GPP TS 25.413 (3GPP TS 29.002
+         * V19.1.0 clauses 7.6.6.14 and 17.7.1).
+         *
          * @public
          * @readonly
          */

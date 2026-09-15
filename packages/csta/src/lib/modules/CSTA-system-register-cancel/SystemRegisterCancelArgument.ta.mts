@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary SystemRegisterCancelArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 14-7).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class SystemRegisterCancelArgument {
     constructor (
         /**
          * @summary `sysStatRegisterID`.
+         * @description
+         *
+         * Registration to cancel. Mandatory.
          * @public
          * @readonly
          */
         readonly sysStatRegisterID: SysStatRegisterID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData. ECMA-269 Table 14-7.
          * @public
          * @readonly
          */

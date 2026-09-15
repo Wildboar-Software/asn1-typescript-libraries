@@ -73,7 +73,11 @@ import { EDRX_Cycle_Length, _decode_EDRX_Cycle_Length, _encode_EDRX_Cycle_Length
 /**
  * @summary EDRX_Cycle_Length_List
  * @description
- * 
+ *
+ * Subscribed eDRX cycle lengths, each with the RAT type to which it applies.
+ * Sent in Insert Subscriber Data (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and
+ * 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

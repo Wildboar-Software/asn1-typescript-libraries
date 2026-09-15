@@ -19,7 +19,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary DataPathSuspendedArgument
  * @description
- * 
+ *
+ * Identifies the suspended data path (ECMA-269 §24.2.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +42,36 @@ class DataPathSuspendedArgument {
     constructor (
         /**
          * @summary `ioCrossRefID`.
+         * @description
+         *
+         * Cross-reference for the data path, including which side started it
+         * (ECMA-269 §6.2.1 / §6.2.3).
+         *
          * @public
          * @readonly
          */
         readonly ioCrossRefID: IOCrossRefID,
         /**
          * @summary `ioReqRegisterID`.
+         * @description
+         *
+         * I/O registration identifier (ASN.1 name `ioReqRegisterID`; ECMA-269
+         * `ioRegisterReqID`). I/O registration identifier. Mandatory if the
+         * switching function supports I/O registration and the data path was
+         * requested by the switching function; otherwise absent (ECMA-269
+         * §6.2.2).
+         *
          * @public
          * @readonly
          */
         readonly ioReqRegisterID: OPTIONAL<IORegisterReqID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

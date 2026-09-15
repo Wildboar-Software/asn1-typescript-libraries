@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary EncodingAlgorithm
  * @description
- * 
+ *
+ * Voice encoding algorithm. ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,7 +36,11 @@ enum _enum_for_EncodingAlgorithm {
 /**
  * @summary EncodingAlgorithm
  * @description
- * 
+ *
+ * Voice encoding algorithm. ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,7 +59,11 @@ type EncodingAlgorithm = _enum_for_EncodingAlgorithm;
 /**
  * @summary EncodingAlgorithm
  * @description
- * 
+ *
+ * Voice encoding algorithm. ECMA-285 §9.6.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,14 +81,17 @@ const EncodingAlgorithm = _enum_for_EncodingAlgorithm;
 
 /**
  * @summary EncodingAlgorithm_aDPCM6K
+ * @description ADPCM 6 kHz. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const EncodingAlgorithm_aDPCM6K: EncodingAlgorithm = EncodingAlgorithm.aDPCM6K; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aDPCM6K
+ * @description Alias of {@link EncodingAlgorithm_aDPCM6K}.
  * @constant
  * @type {number}
  */
@@ -85,14 +100,17 @@ const aDPCM6K: EncodingAlgorithm = EncodingAlgorithm.aDPCM6K; /* SHORT_NAMED_ENU
 
 /**
  * @summary EncodingAlgorithm_aDPCM8K
+ * @description ADPCM 8 kHz. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const EncodingAlgorithm_aDPCM8K: EncodingAlgorithm = EncodingAlgorithm.aDPCM8K; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aDPCM8K
+ * @description Alias of {@link EncodingAlgorithm_aDPCM8K}.
  * @constant
  * @type {number}
  */
@@ -101,14 +119,17 @@ const aDPCM8K: EncodingAlgorithm = EncodingAlgorithm.aDPCM8K; /* SHORT_NAMED_ENU
 
 /**
  * @summary EncodingAlgorithm_muLawPCM6K
+ * @description µ-law PCM 6 kHz. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const EncodingAlgorithm_muLawPCM6K: EncodingAlgorithm = EncodingAlgorithm.muLawPCM6K; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary muLawPCM6K
+ * @description Alias of {@link EncodingAlgorithm_muLawPCM6K}.
  * @constant
  * @type {number}
  */
@@ -117,14 +138,17 @@ const muLawPCM6K: EncodingAlgorithm = EncodingAlgorithm.muLawPCM6K; /* SHORT_NAM
 
 /**
  * @summary EncodingAlgorithm_aLawPCM6K
+ * @description A-law PCM 6 kHz. ECMA-285 §9.6.
  * @constant
  * @type {number}
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
 const EncodingAlgorithm_aLawPCM6K: EncodingAlgorithm = EncodingAlgorithm.aLawPCM6K; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aLawPCM6K
+ * @description Alias of {@link EncodingAlgorithm_aLawPCM6K}.
  * @constant
  * @type {number}
  */

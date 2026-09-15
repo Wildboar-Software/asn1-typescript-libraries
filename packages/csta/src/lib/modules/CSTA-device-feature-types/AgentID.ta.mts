@@ -8,7 +8,12 @@ import { OCTET_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary AgentID
  * @description
- * 
+ *
+ * Identifies an ACD agent. Maximum length is given by capability exchange.
+ * ECMA-269 §12.3.1.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

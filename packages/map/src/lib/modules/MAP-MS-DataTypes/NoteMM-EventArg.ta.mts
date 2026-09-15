@@ -80,7 +80,12 @@ import { OfferedCamel4Functionalities, OfferedCamel4Functionalities_initiateCall
 /**
  * @summary NoteMM_EventArg
  * @description
- * 
+ *
+ * Argument of MAP_NOTE_MM_EVENT. Sent by the VLR or SGSN to the gsmSCF (or
+ * Presence Network Agent) after a marked mobility-management event for a
+ * subscriber with M-CSI or MG-CSI. (3GPP TS 29.002 V19.1.0 clauses 8.1.8 and
+ * 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -105,36 +110,65 @@ class NoteMM_EventArg {
     constructor (
         /**
          * @summary `serviceKey`.
+         * @description
+         *
+         * Service key. (3GPP TS 29.002 V19.1.0 clause 8.1.8.3)
+         *
          * @public
          * @readonly
          */
         readonly serviceKey: ServiceKey,
         /**
          * @summary `eventMet`.
+         * @description
+         *
+         * MM event that led to the notification (VLR or SGSN codes in clause
+         * 8.1.8.3). (3GPP TS 29.002 V19.1.0 clause 8.1.8.3)
+         *
          * @public
          * @readonly
          */
         readonly eventMet: MM_Code,
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * IMSI of the subscriber. (3GPP TS 29.002 V19.1.0 clauses 8.1.8.3 and
+         * 7.6.2.1)
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `msisdn`.
+         * @description
+         *
+         * Basic MSISDN. (3GPP TS 29.002 V19.1.0 clauses 8.1.8.3 and 7.6.2.17)
+         *
          * @public
          * @readonly
          */
         readonly msisdn: ISDN_AddressString,
         /**
          * @summary `locationInformation`.
+         * @description
+         *
+         * CS-domain location of the served subscriber. (3GPP TS 29.002 V19.1.0
+         * clauses 8.1.8 and 7.6.2.30)
+         *
          * @public
          * @readonly
          */
         readonly locationInformation: OPTIONAL<LocationInformation>,
         /**
          * @summary `supportedCAMELPhases`.
+         * @description
+         *
+         * CAMEL phases supported by the reporting node. Mandatory in
+         * MAP_NOTE_MM_EVENT. (3GPP TS 29.002 V19.1.0 clauses 8.1.8.2 and
+         * 7.6.3.36H)
+         *
          * @public
          * @readonly
          */
@@ -147,12 +181,22 @@ class NoteMM_EventArg {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `locationInformationGPRS`.
+         * @description
+         *
+         * PS-domain location of the served subscriber. (3GPP TS 29.002 V19.1.0
+         * clauses 8.1.8 and 7.6.2.30a)
+         *
          * @public
          * @readonly
          */
         readonly locationInformationGPRS: OPTIONAL<LocationInformationGPRS>,
         /**
          * @summary `offeredCamel4Functionalities`.
+         * @description
+         *
+         * CAMEL phase 4 functionalities offered by the reporting node. (3GPP TS
+         * 29.002 V19.1.0 clauses 8.1.8 and 7.6.3.36G)
+         *
          * @public
          * @readonly
          */

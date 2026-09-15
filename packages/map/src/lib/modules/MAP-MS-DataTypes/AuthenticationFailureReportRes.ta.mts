@@ -72,7 +72,12 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary AuthenticationFailureReportRes
  * @description
- * 
+ *
+ * Result of MAP_AUTHENTICATION_FAILURE_REPORT. The response may be empty except
+ * for an optional extension container; unsuccessful outcome uses user errors
+ * unknown subscriber, system failure or unexpected data value (3GPP TS 29.002
+ * V19.1.0 clauses 8.5.3.2 and 8.5.3.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

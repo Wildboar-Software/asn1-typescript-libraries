@@ -17,7 +17,12 @@ import { CSTAFunctionality, _decode_CSTAFunctionality, _encode_CSTAFunctionality
 /**
  * @summary OldACSEUserInformationForCSTA
  * @description
- * 
+ *
+ * Phase II ACSE user-information: version plus required and supplied
+ * `CSTAFunctionality`. All three components mandatory. ECMA-285 §8.2.2.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +39,22 @@ class OldACSEUserInformationForCSTA {
     constructor (
         /**
          * @summary `cSTAVersion`.
+         * @description Protocol versions offered or selected.
          * @public
          * @readonly
          */
         readonly cSTAVersion: CSTAVersion,
         /**
          * @summary `cSTAFunctionsRequiredByApplication`.
+         * @description
+         * CSTA services/events this application requires from the peer.
          * @public
          * @readonly
          */
         readonly cSTAFunctionsRequiredByApplication: CSTAFunctionality,
         /**
          * @summary `cSTAFunctionsThatCanBeSupplied`.
+         * @description CSTA services/events this application can supply.
          * @public
          * @readonly
          */

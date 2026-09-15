@@ -73,7 +73,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MSC_S_EventList
  * @description
- * 
+ *
+ * SIZE (5..16). Other bits than listed shall be discarded (3GPP TS 29.002
+ * V19.1.0 clause 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

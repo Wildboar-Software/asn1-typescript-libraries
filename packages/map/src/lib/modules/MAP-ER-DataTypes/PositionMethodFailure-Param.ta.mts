@@ -74,6 +74,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * @summary PositionMethodFailure_Param
  * @description
  * 
+ * Optional parameter of `positionMethodFailure` (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,6 +93,11 @@ class PositionMethodFailure_Param {
     constructor (
         /**
          * @summary `positionMethodFailure_Diagnostic`.
+         * @description
+         *
+         * Detailed reason for position method failure. Unrecognized values
+         * shall be ignored (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+         *
          * @public
          * @readonly
          */

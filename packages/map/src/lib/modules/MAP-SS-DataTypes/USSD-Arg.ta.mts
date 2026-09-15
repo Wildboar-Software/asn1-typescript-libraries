@@ -75,7 +75,10 @@ import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressStr
 /**
  * @summary USSD_Arg
  * @description
- * 
+ *
+ * Argument of processUnstructuredSS-Request, unstructuredSS-Request and
+ * unstructuredSS-Notify (3GPP TS 29.002 V19.1.0 clauses 11.9–11.11 and 17.7.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,24 +97,42 @@ class USSD_Arg {
     constructor (
         /**
          * @summary `ussd_DataCodingScheme`.
+         * @description
+         *
+         * Alphabet and language; Cell Broadcast DCS as in 3GPP TS 23.038 (3GPP
+         * TS 29.002 V19.1.0 clauses 7.6.4.36 and 17.7.4).
+         *
          * @public
          * @readonly
          */
         readonly ussd_DataCodingScheme: USSD_DataCodingScheme,
         /**
          * @summary `ussd_String`.
+         * @description
+         *
+         * Unstructured string; MS contents as in 3GPP TS 22.090 (3GPP TS 29.002
+         * V19.1.0 clauses 7.6.4.37 and 17.7.4).
+         *
          * @public
          * @readonly
          */
         readonly ussd_String: USSD_String,
         /**
          * @summary `alertingPattern`.
+         * @description
+         *
+         * Alerting pattern for the notification/request.
+         *
          * @public
          * @readonly
          */
         readonly alertingPattern: OPTIONAL<AlertingPattern>,
         /**
          * @summary `msisdn`.
+         * @description
+         *
+         * MSISDN when required by the procedure.
+         *
          * @public
          * @readonly
          */

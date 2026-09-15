@@ -74,7 +74,11 @@ import { BandwidthExt, _decode_BandwidthExt, _encode_BandwidthExt } from "../MAP
 /**
  * @summary AMBR
  * @description
- * 
+ *
+ * Aggregate Maximum Bit Rate for an APN or UE. Extended uplink/downlink
+ * bandwidth fields shall be populated according to the corresponding parameters
+ * in 3GPP TS 29.272 (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -115,12 +119,22 @@ class AMBR {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `extended_Max_RequestedBandwidth_UL`.
+         * @description
+         *
+         * Shall be populated according to the corresponding parameter in 3GPP
+         * TS 29.272 (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly extended_Max_RequestedBandwidth_UL: OPTIONAL<BandwidthExt>,
         /**
          * @summary `extended_Max_RequestedBandwidth_DL`.
+         * @description
+         *
+         * Shall be populated according to the corresponding parameter in 3GPP
+         * TS 29.272 (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

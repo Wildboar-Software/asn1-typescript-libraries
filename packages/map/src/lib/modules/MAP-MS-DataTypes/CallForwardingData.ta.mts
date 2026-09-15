@@ -73,7 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary CallForwardingData
  * @description
- * 
+ *
+ * Call forwarding data for CSE: extensible call forwarding feature list and
+ * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 7.6.3.84).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,12 +94,21 @@ class CallForwardingData {
     constructor (
         /**
          * @summary `forwardingFeatureList`.
+         * @description
+         *
+         * Extensible call forwarding feature list (3GPP TS 29.002 V19.1.0
+         * clause 7.6.3.84).
+         *
          * @public
          * @readonly
          */
         readonly forwardingFeatureList: Ext_ForwFeatureList,
         /**
          * @summary `notificationToCSE`.
+         * @description
+         *
+         * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 7.6.3.84).
+         *
          * @public
          * @readonly
          */

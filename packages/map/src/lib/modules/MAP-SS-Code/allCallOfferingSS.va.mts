@@ -72,7 +72,11 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
 /**
  * @summary allCallOfferingSS
  * @description
- * 
+ *
+ * All call offering SS; includes also all forwarding SS. Group code. Bit
+ * pattern `'00110000'B`. Reserved for possible future use (3GPP TS 29.002
+ * V19.1.0 clause 17.7.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

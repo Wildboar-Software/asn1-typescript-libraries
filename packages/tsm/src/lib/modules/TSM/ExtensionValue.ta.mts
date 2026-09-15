@@ -16,7 +16,10 @@ import { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../
 /**
  * @summary ExtensionValue
  * @description
- * 
+ *
+ * One hello extension: type plus open-type data from `{Extensions}`.
+ * ITU-T Rec. X.1084 (05/2008) §10.3.2, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +36,20 @@ class ExtensionValue {
     constructor (
         /**
          * @summary `extension_type`.
+         * @description
+         *
+         * `EXTENSION.&id` from `{Extensions}`. X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */
         readonly extension_type: ExtensionType,
         /**
          * @summary `extension_data`.
+         * @description
+         *
+         * `EXTENSION.&Type` for that id. X.1084 §10.3.2.
+         *
          * @public
          * @readonly
          */

@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Compression_Item_compressionNegotiationResult
  * @description
- * 
+ *
+ * Table 20/V.59: `none`(0); `v42bisOnly`(1) proposed and responded V.42 bis;
+ * `v42bisBoth`(2) proposed V.42 bis or V.44 / responded V.42 bis; `v44Both`(3)
+ * proposed V.42 bis or V.44 / responded V.44; `v44Only`(4) proposed and
+ * responded V.44; `other`(5) undefined compression. ITU-T Rec. V.59 (11/2000)
+ * §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,7 +43,13 @@ enum _enum_for_Compression_Item_compressionNegotiationResult {
 /**
  * @summary Compression_Item_compressionNegotiationResult
  * @description
- * 
+ *
+ * Table 20/V.59: `none`(0); `v42bisOnly`(1) proposed and responded V.42 bis;
+ * `v42bisBoth`(2) proposed V.42 bis or V.44 / responded V.42 bis; `v44Both`(3)
+ * proposed V.42 bis or V.44 / responded V.44; `v44Only`(4) proposed and
+ * responded V.44; `other`(5) undefined compression. ITU-T Rec. V.59 (11/2000)
+ * §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,7 +65,13 @@ type Compression_Item_compressionNegotiationResult = _enum_for_Compression_Item_
 /**
  * @summary Compression_Item_compressionNegotiationResult
  * @description
- * 
+ *
+ * Table 20/V.59: `none`(0); `v42bisOnly`(1) proposed and responded V.42 bis;
+ * `v42bisBoth`(2) proposed V.42 bis or V.44 / responded V.42 bis; `v44Both`(3)
+ * proposed V.42 bis or V.44 / responded V.44; `v44Only`(4) proposed and
+ * responded V.44; `other`(5) undefined compression. ITU-T Rec. V.59 (11/2000)
+ * §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,6 +86,9 @@ const Compression_Item_compressionNegotiationResult = _enum_for_Compression_Item
 
 /**
  * @summary Compression_Item_compressionNegotiationResult_none
+ * @description
+ *
+ * No compression negotiated. Table 20/V.59. ITU-T Rec. V.59 (11/2000) §6.12.
  * @constant
  * @type {number}
  */
@@ -84,6 +105,10 @@ const none: Compression_Item_compressionNegotiationResult = Compression_Item_com
 
 /**
  * @summary Compression_Item_compressionNegotiationResult_v42bisOnly
+ * @description
+ *
+ * Proposed V.42 bis / response V.42 bis. Table 20/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.12.
  * @constant
  * @type {number}
  */
@@ -100,6 +125,10 @@ const v42bisOnly: Compression_Item_compressionNegotiationResult = Compression_It
 
 /**
  * @summary Compression_Item_compressionNegotiationResult_v42bisBoth
+ * @description
+ *
+ * Proposed V.42 bis or V.44 / response V.42 bis. Table 20/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.12.
  * @constant
  * @type {number}
  */
@@ -116,6 +145,10 @@ const v42bisBoth: Compression_Item_compressionNegotiationResult = Compression_It
 
 /**
  * @summary Compression_Item_compressionNegotiationResult_v44Both
+ * @description
+ *
+ * Proposed V.42 bis or V.44 / response V.44. Table 20/V.59. ITU-T Rec. V.59
+ * (11/2000) §6.12.
  * @constant
  * @type {number}
  */
@@ -132,6 +165,10 @@ const v44Both: Compression_Item_compressionNegotiationResult = Compression_Item_
 
 /**
  * @summary Compression_Item_compressionNegotiationResult_v44Only
+ * @description
+ *
+ * Proposed V.44 / response V.44. Table 20/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.12.
  * @constant
  * @type {number}
  */
@@ -148,6 +185,10 @@ const v44Only: Compression_Item_compressionNegotiationResult = Compression_Item_
 
 /**
  * @summary Compression_Item_compressionNegotiationResult_other
+ * @description
+ *
+ * Compression of a non-defined type. Table 20/V.59. ITU-T Rec. V.59 (11/2000)
+ * §6.12.
  * @constant
  * @type {number}
  */

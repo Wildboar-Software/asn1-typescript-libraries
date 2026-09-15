@@ -15,6 +15,13 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary DatabaseState
  * @description
  *
+ * State of the Level 1 or Level 2 LSP database (`l1State` / `l2State`).
+ * Overload is independent per level. On entering Waiting, the IS floods its own
+ * LSP 0 with the LSP Database Overload bit set so other ISs do not use it as a
+ * forwarding path.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.3.19, 11.2.4 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -33,6 +40,13 @@ export enum _enum_for_DatabaseState {
  * @summary DatabaseState
  * @description
  *
+ * State of the Level 1 or Level 2 LSP database (`l1State` / `l2State`).
+ * Overload is independent per level. On entering Waiting, the IS floods its own
+ * LSP 0 with the LSP Database Overload bit set so other ISs do not use it as a
+ * forwarding path.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.3.19, 11.2.4 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -47,6 +61,13 @@ export type DatabaseState = _enum_for_DatabaseState;
  * @summary DatabaseState
  * @description
  *
+ * State of the Level 1 or Level 2 LSP database (`l1State` / `l2State`).
+ * Overload is independent per level. On entering Waiting, the IS floods its own
+ * LSP 0 with the LSP Database Overload bit set so other ISs do not use it as a
+ * forwarding path.
+ *
+ * (ISO/IEC 10589:2002 clauses 7.3.19, 11.2.4 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -59,6 +80,12 @@ export const DatabaseState = _enum_for_DatabaseState;
 
 /**
  * @summary DatabaseState_off
+ * @description
+ *
+ * Database is off.
+ *
+ * (ISO/IEC 10589:2002 clause 11.3.1).
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +102,13 @@ export const off: DatabaseState =
 
 /**
  * @summary DatabaseState_on
+ * @description
+ *
+ * Database is operating normally. Restored when `waitingTime` expires after
+ * overload.
+ *
+ * (ISO/IEC 10589:2002 clause 7.3.19).
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +125,14 @@ export const on: DatabaseState =
 
 /**
  * @summary DatabaseState_waiting
+ * @description
+ *
+ * Waiting state: an LSP could not be stored (or Decision Process lacked
+ * resources). New LSPs that cannot be stored are ignored and `waitingTime` is
+ * restarted.
+ *
+ * (ISO/IEC 10589:2002 clause 7.3.19).
+ *
  * @constant
  * @type {number}
  */

@@ -77,7 +77,16 @@ import { SendGroupCallEndSignalRes, _decode_SendGroupCallEndSignalRes, _encode_S
 /**
  * @summary sendGroupCallEndSignal
  * @description
- * 
+ *
+ * MAP_SEND_GROUP_CALL_END_SIGNAL: Relay MSC indicates that a VGCS/VBS downlink
+ * is established (originating cell if the calling service subscriber is in the
+ * Relay MSC area; otherwise any cell in the Relay MSC VGCS/VBS area). The
+ * result tells the Relay MSC that call resources may be released because the
+ * call has been released in the Anchor MSC. Confirmed. Typical path: Relay
+ * MSC→Anchor MSC. Local opcode 40. Timer class `l` (28 h to 38 h). No user
+ * errors in the ASN.1. (3GPP TS 29.002 V19.1.0 clauses 10.7.1, 17.1.2,
+ * 17.3.2.30 and 17.6.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

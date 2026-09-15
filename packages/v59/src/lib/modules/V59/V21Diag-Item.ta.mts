@@ -20,7 +20,10 @@ import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59Strin
 /**
  * @summary V21Diag_Item
  * @description
- * 
+ *
+ * V.21 capability, transmit power, and receive level. ITU-T Rec. V.59 (11/2000)
+ * §6.8.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +39,32 @@ class V21Diag_Item {
     constructor (
         /**
          * @summary `modeV21`.
+         * @description
+         *
+         * V.21 operating-mode capability. Table 5/V.59: `notSupported`(0),
+         * `default`(1) preferred, `enabled`(2), `disabled`(3) supported but
+         * off. Tag-ID `1000`. ITU-T Rec. V.59 (11/2000) §6.8.10.
          * @public
          * @readonly
          */
         readonly modeV21: Capabilities,
         /**
          * @summary `v21TxLevel`.
+         * @description
+         *
+         * V.21 transmit power (`TxPowerLevel`). ITU-T Rec. V.59 (11/2000)
+         * §6.8.10.
          * @public
          * @readonly
          */
         readonly v21TxLevel: TxPowerLevel,
         /**
          * @summary `rxLevelEstimate`.
+         * @description
+         *
+         * Receive power at the modem input, with units (e.g. `-25dBm0`). May
+         * differ from a measurement at the line interface. IA5 `simpleText`
+         * (§6.2.1). Tag-ID `4E`. ITU-T Rec. V.59 (11/2000) §6.4.
          * @public
          * @readonly
          */

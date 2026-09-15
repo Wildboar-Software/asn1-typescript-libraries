@@ -75,7 +75,15 @@ import { VLR_Capability, _decode_VLR_Capability, _encode_VLR_Capability } from "
 /**
  * @summary RestoreDataArg
  * @description
- * 
+ *
+ * MAP_RESTORE_DATA request from VLR to HLR when Provide Roaming Number or MT
+ * Forward SM is received for an unknown IMSI, or a known IMSI with Subscriber
+ * Data Confirmed by HLR not confirmed. Updates LMSI if provided and requests
+ * all subscriber data. HLR returns `system failure` if the subscriber is not
+ * registered in that VLR.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.10.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,12 +104,26 @@ class RestoreDataArg {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * International Mobile Subscriber Identity as in 3GPP TS 23.003.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
+         *
          * @public
          * @readonly
          */
         readonly imsi: IMSI,
         /**
          * @summary `lmsi`.
+         * @description
+         *
+         * Local identity allocated by the VLR for internal data management.
+         * Providing it is an operator option; HLR shall support LMSI handling.
+         * Shall not be sent to the SGSN.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.16).
+         *
          * @public
          * @readonly
          */
@@ -114,12 +136,27 @@ class RestoreDataArg {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `vlr_Capability`.
+         * @description
+         *
+         * Capabilities of the serving VLR/VMSC.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+         *
          * @public
          * @readonly
          */
         readonly vlr_Capability: OPTIONAL<VLR_Capability>,
         /**
          * @summary `restorationIndicator`.
+         * @description
+         *
+         * HLR shall send in Insert Subscriber Data the MME Name if the
+         * subscriber is registered to EPS, or the SGSN Number if registered to
+         * GPRS. VLR may set this during a CSFB MO call implicit location update
+         * (3GPP TS 23.272).
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+         *
          * @public
          * @readonly
          */

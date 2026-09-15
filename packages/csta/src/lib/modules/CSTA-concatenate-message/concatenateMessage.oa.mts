@@ -17,7 +17,19 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary concatenateMessage
  * @description
- * 
+ *
+ * Combines multiple messages, in the given sequence, into one resulting
+ * message. Originals are preserved. Rejected if encodings cannot be unified
+ * (ECMA-269 §26.1.3).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:500. Errors: `universalFailure` (ECMA-285 §24.1.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

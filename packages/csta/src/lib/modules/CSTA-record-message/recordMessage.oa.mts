@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary recordMessage
  * @description
- * 
+ *
+ * Starts recording a new message from a specified connection and returns a
+ * message identifier (ECMA-269 §26.1.9).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:511. Errors: `universalFailure` (ECMA-285 §24.1.9).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

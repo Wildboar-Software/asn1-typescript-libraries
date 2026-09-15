@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Reset_Id
  * @description
- * 
+ *
+ * Reset identifier, unique within the HPLMN. Size 1..4 octets. VLR/SGSN/MME may
+ * restore subscribers whose subscription contains at least one listed Reset-Id.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.10.1.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

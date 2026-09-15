@@ -8,7 +8,20 @@ import { IA5String, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary NumberDigits
  * @description
- * 
+ *
+ * Digit or identifier string used in `DeviceID` (ECMA-269 §10,
+ * §12.3.11). Carries Diallable Digits (§10.1.1) or implicit TON
+ * directory numbers in Switching Function Representation (§10.1.2).
+ *
+ * Diallable Digits: first character is not `N`; 0–64 characters.
+ * Permitted: `0-9`, `*#`, `A-D`, `!` (hookflash), `P`/`T` (pulse/
+ * tone), `,` (pause), `W` (wait for dial tone), `@` (quiet answer),
+ * `$` (billing tone), `;` (incomplete; Dial Digits follows), `+`
+ * (international). Visual separators `-()` are allowed.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

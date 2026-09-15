@@ -17,7 +17,17 @@ import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } fro
 /**
  * @summary PrivateEvent
  * @description
- * 
+ *
+ * Unsolicited vendor-specific event. Shall not carry information that a
+ * standardized event can report. `privateData` holds the vendor payload; CSTA
+ * does not define it. Requires a monitor; monitor type is switching-function
+ * specific. This module has no ROSE OPERATION (ECMA-269 §29.3.1 / §9.4.2.4,
+ * ECMA-285 §27.3.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +43,22 @@ class PrivateEvent {
     constructor (
         /**
          * @summary `security`.
+         * @description
+         *
+         * Timestamp, sequence number, and security information (ECMA-269
+         * §29.3.1.1).
+         *
          * @public
          * @readonly
          */
         readonly security: OPTIONAL<CSTASecurityData>,
         /**
          * @summary `privateData`.
+         * @description
+         *
+         * Vendor-defined event information. CSTA does not specify the contents
+         * (ECMA-269 §9.4.1 / §29.3.1.1).
+         *
          * @public
          * @readonly
          */

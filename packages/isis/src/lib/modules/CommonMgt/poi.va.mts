@@ -15,6 +15,10 @@ import { cmoi } from '../CommonMgt/cmoi.va.mjs';
  * @summary poi
  * @description
  *
+ * GMI package registration arc `{cmoi package(4)}`.
+ *
+ * (ISO/IEC 10589:2002 Annex E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

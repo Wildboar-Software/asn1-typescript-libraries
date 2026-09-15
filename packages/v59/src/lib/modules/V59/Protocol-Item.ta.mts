@@ -17,7 +17,10 @@ import { Compression, _decode_Compression, _encode_Compression } from "../V59/Co
 /**
  * @summary Protocol_Item
  * @description
- * 
+ *
+ * Error-control and compression results for the last connection. ITU-T Rec.
+ * V.59 (11/2000) §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +36,20 @@ class Protocol_Item {
     constructor (
         /**
          * @summary `errorControlStat`.
+         * @description
+         *
+         * V.42 / error-control negotiation and counters. ITU-T Rec. V.59
+         * (11/2000) §6.12.
          * @public
          * @readonly
          */
         readonly errorControlStat: ErrorControl,
         /**
          * @summary `compStat`.
+         * @description
+         *
+         * V.42 bis / V.44 compression negotiation and parameters. ITU-T Rec.
+         * V.59 (11/2000) §6.12.
          * @public
          * @readonly
          */

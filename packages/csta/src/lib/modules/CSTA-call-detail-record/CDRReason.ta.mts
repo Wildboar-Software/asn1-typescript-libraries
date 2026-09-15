@@ -8,7 +8,12 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CDRReason
  * @description
- * 
+ *
+ * Why the switch issued Call Detail Records Notification (timeout, threshold,
+ * or other). ECMA-269 §27.1.1.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +35,12 @@ enum _enum_for_CDRReason {
 /**
  * @summary CDRReason
  * @description
- * 
+ *
+ * Why the switch issued Call Detail Records Notification (timeout, threshold,
+ * or other). ECMA-269 §27.1.1.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +58,12 @@ type CDRReason = _enum_for_CDRReason;
 /**
  * @summary CDRReason
  * @description
- * 
+ *
+ * Why the switch issued Call Detail Records Notification (timeout, threshold,
+ * or other). ECMA-269 §27.1.1.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +80,10 @@ const CDRReason = _enum_for_CDRReason;
 
 /**
  * @summary CDRReason_timeout
+ * @description
+ *
+ * A timeout occurred while CDRs were stored. ECMA-269 §27.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +100,10 @@ const timeout: CDRReason = CDRReason.timeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CDRReason_thresholdReached
+ * @description
+ *
+ * A storage threshold was reached. ECMA-269 §6.3, §27.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +120,10 @@ const thresholdReached: CDRReason = CDRReason.thresholdReached; /* SHORT_NAMED_E
 
 /**
  * @summary CDRReason_other
+ * @description
+ *
+ * Other notification reason. ECMA-269 §27.1.1.
+ *
  * @constant
  * @type {number}
  */

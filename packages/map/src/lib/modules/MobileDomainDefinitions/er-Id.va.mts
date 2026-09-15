@@ -72,7 +72,11 @@ import { CommonComponentId, _decode_CommonComponentId, _encode_CommonComponentId
 /**
  * @summary er_Id
  * @description
- * 
+ *
+ * `CommonComponentId` value 4 named `er-Id` in `MobileDomainDefinitions`. TS
+ * 29.002 does not further define this value (3GPP TS 29.002 V19.1.0 clause
+ * 17.1.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

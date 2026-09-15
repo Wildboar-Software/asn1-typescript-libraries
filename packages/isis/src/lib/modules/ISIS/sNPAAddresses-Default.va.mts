@@ -23,6 +23,10 @@ import {
  * @summary sNPAAddresses_Default
  * @description
  *
+ * Default explicit next-hop SNPA set on a reachable address: empty.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.12.1 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

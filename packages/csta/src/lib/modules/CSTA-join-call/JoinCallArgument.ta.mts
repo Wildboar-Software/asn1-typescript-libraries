@@ -45,7 +45,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary JoinCallArgument
  * @description
- * 
+ *
+ * Service request for Join Call (ECMA-269 §17.1.17 / ECMA-285
+ * §15.1.17). Names the existing call and the device to add.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,54 +74,98 @@ class JoinCallArgument {
     constructor (
         /**
          * @summary `activeCall`.
+         * @description
+         *
+         * Mandatory. A connection already in the call the device
+         * will join. Existing connections are unaffected.
+         *
          * @public
          * @readonly
          */
         readonly activeCall: ConnectionID,
         /**
          * @summary `joiningDevice`.
+         * @description
+         *
+         * Mandatory. Device to add. Must be a complete DeviceID
+         * (FR 2). Becomes Connected.
+         *
          * @public
          * @readonly
          */
         readonly joiningDevice: DeviceID,
         /**
          * @summary `autoOriginate`.
+         * @description
+         *
+         * Default `prompt`. `doNotPrompt` expects a device that
+         * can auto-answer; otherwise processing is
+         * switching-function specific (FR 4).
+         *
          * @public
          * @readonly
          */
         readonly autoOriginate: OPTIONAL<AutoOriginate>,
         /**
          * @summary `participationType`.
+         * @description
+         *
+         * Default `active`. Speak (`active`) or listen only
+         * (`silent`). Also controls digital-data flow direction
+         * (FR 8).
+         *
          * @public
          * @readonly
          */
         readonly participationType: OPTIONAL<ParticipationType>,
         /**
          * @summary `accountCode`.
+         * @description
+         *
+         * Optional account code for the join (§12.2.1).
+         *
          * @public
          * @readonly
          */
         readonly accountCode: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
+         * @description
+         *
+         * Optional authorization code (§12.2.3).
+         *
          * @public
          * @readonly
          */
         readonly authCode: OPTIONAL<AuthCode>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional correlator data attached before resulting state
+         * transitions (§12.2.10).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Optional user data sent with the join (§12.2.30).
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

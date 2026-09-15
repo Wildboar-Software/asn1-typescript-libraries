@@ -21,7 +21,13 @@ import { TSMPlainText_fragment, _decode_TSMPlainText_fragment, _encode_TSMPlainT
 /**
  * @summary TSMPlainText
  * @description
- * 
+ *
+ * Unencrypted TSM record. X.1084 modifies the TLS record layer (it does not
+ * use RFC 4366 ClientHello/ServerHello extensions without IETF consensus)
+ * and identifies the protocol with `protocolID` plus TLS-style `version`.
+ * `fragment` is CCS, alert, handshake, or application data. ITU-T Rec.
+ * X.1084 (05/2008) §10.3.1, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,18 +50,32 @@ class TSMPlainText {
     constructor (
         /**
          * @summary `protocolID`.
+         * @description
+         *
+         * Distinguishes TSM from other record-layer protocols. X.1084 does
+         * not assign a numeric value in Annex A.
+         *
          * @public
          * @readonly
          */
         readonly protocolID: ProtocolIdentifier,
         /**
          * @summary `version`.
+         * @description
+         *
+         * Same major/minor pair as TLS `ProtocolVersion`. X.1084 §10.3.1.
+         *
          * @public
          * @readonly
          */
         readonly version: ProtocolVersion,
         /**
          * @summary `fragment`.
+         * @description
+         *
+         * Payload: CCS, alert, biometric handshake, or application data.
+         * X.1084 §10.3.1.
+         *
          * @public
          * @readonly
          */

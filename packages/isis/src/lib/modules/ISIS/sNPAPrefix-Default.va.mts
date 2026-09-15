@@ -18,6 +18,10 @@ import {
  * @summary sNPAPrefix_Default
  * @description
  *
+ * Default SNPA prefix for `extractDSP` mapping: empty bit string.
+ *
+ * (ISO/IEC 10589:2002 clauses 8.1, 11.2.12.2 and 11.3.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

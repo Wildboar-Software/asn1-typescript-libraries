@@ -15,6 +15,13 @@ import { se } from '../ISIS/se.va.mjs';
  * @summary originatingLSPBufferSizeMismatch
  * @description
  *
+ * `specificProblems` value when a received L1/L2 LSP is larger than the local
+ * originating buffer size, or its originatingLSPBufferSize option disagrees
+ * with the local value. LSP header is `notificationLSPHeader`. probableCause
+ * `configurationOrCustomisationError`; severity Minor.
+ *
+ * (ISO/IEC 10589:2002 clause 11.2.2.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

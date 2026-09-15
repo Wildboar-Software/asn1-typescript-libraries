@@ -72,7 +72,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NotReachableReason
  * @description
- * 
+ *
+ * Reason the MS is absent when MT short-message delivery fails at the MSC,
+ * SGSN, or both. Defined in 3GPP TS 23.040. (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.3.51 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -96,7 +100,11 @@ enum _enum_for_NotReachableReason {
 /**
  * @summary NotReachableReason
  * @description
- * 
+ *
+ * Reason the MS is absent when MT short-message delivery fails at the MSC,
+ * SGSN, or both. Defined in 3GPP TS 23.040. (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.3.51 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -115,7 +123,11 @@ type NotReachableReason = _enum_for_NotReachableReason;
 /**
  * @summary NotReachableReason
  * @description
- * 
+ *
+ * Reason the MS is absent when MT short-message delivery fails at the MSC,
+ * SGSN, or both. Defined in 3GPP TS 23.040. (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.3.51 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -133,6 +145,10 @@ const NotReachableReason = _enum_for_NotReachableReason;
 
 /**
  * @summary NotReachableReason_msPurged
+ * @description
+ *
+ * MS purged. (3GPP TS 29.002 V19.1.0 clause 7.6.3.51)
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +157,10 @@ const NotReachableReason_msPurged: NotReachableReason = NotReachableReason.msPur
 
 /**
  * @summary msPurged
+ * @description
+ *
+ * MS purged. (3GPP TS 29.002 V19.1.0 clause 7.6.3.51)
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +169,10 @@ const msPurged: NotReachableReason = NotReachableReason.msPurged; /* SHORT_NAMED
 
 /**
  * @summary NotReachableReason_imsiDetached
+ * @description
+ *
+ * IMSI detached. (3GPP TS 29.002 V19.1.0 clause 7.6.3.51)
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +181,10 @@ const NotReachableReason_imsiDetached: NotReachableReason = NotReachableReason.i
 
 /**
  * @summary imsiDetached
+ * @description
+ *
+ * IMSI detached. (3GPP TS 29.002 V19.1.0 clause 7.6.3.51)
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +193,10 @@ const imsiDetached: NotReachableReason = NotReachableReason.imsiDetached; /* SHO
 
 /**
  * @summary NotReachableReason_restrictedArea
+ * @description
+ *
+ * Restricted area. (3GPP TS 29.002 V19.1.0 clause 7.6.3.51)
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +205,10 @@ const NotReachableReason_restrictedArea: NotReachableReason = NotReachableReason
 
 /**
  * @summary restrictedArea
+ * @description
+ *
+ * Restricted area. (3GPP TS 29.002 V19.1.0 clause 7.6.3.51)
+ *
  * @constant
  * @type {number}
  */
@@ -181,6 +217,10 @@ const restrictedArea: NotReachableReason = NotReachableReason.restrictedArea; /*
 
 /**
  * @summary NotReachableReason_notRegistered
+ * @description
+ *
+ * Not registered. (3GPP TS 29.002 V19.1.0 clause 7.6.3.51)
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +229,10 @@ const NotReachableReason_notRegistered: NotReachableReason = NotReachableReason.
 
 /**
  * @summary notRegistered
+ * @description
+ *
+ * Not registered. (3GPP TS 29.002 V19.1.0 clause 7.6.3.51)
+ *
  * @constant
  * @type {number}
  */

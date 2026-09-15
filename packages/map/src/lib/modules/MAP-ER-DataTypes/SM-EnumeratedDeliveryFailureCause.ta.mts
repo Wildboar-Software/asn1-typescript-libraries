@@ -73,6 +73,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SM_EnumeratedDeliveryFailureCause
  * @description
  * 
+ * Enumerated SM delivery-failure reason on `SM-DeliveryFailureCause` ({CITE}
+ * clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -103,6 +106,9 @@ enum _enum_for_SM_EnumeratedDeliveryFailureCause {
  * @summary SM_EnumeratedDeliveryFailureCause
  * @description
  * 
+ * Enumerated SM delivery-failure reason on `SM-DeliveryFailureCause` ({CITE}
+ * clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -125,6 +131,9 @@ type SM_EnumeratedDeliveryFailureCause = _enum_for_SM_EnumeratedDeliveryFailureC
  * @summary SM_EnumeratedDeliveryFailureCause
  * @description
  * 
+ * Enumerated SM delivery-failure reason on `SM-DeliveryFailureCause` ({CITE}
+ * clauses 7.6.1.4 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -145,6 +154,10 @@ const SM_EnumeratedDeliveryFailureCause = _enum_for_SM_EnumeratedDeliveryFailure
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_memoryCapacityExceeded
+ * @description
+ *
+ * Memory capacity exceeded (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +166,10 @@ const SM_EnumeratedDeliveryFailureCause_memoryCapacityExceeded: SM_EnumeratedDel
 
 /**
  * @summary memoryCapacityExceeded
+ * @description
+ *
+ * Memory capacity exceeded (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +178,10 @@ const memoryCapacityExceeded: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedD
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_equipmentProtocolError
+ * @description
+ *
+ * MS protocol error (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +190,10 @@ const SM_EnumeratedDeliveryFailureCause_equipmentProtocolError: SM_EnumeratedDel
 
 /**
  * @summary equipmentProtocolError
+ * @description
+ *
+ * MS protocol error (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -177,6 +202,10 @@ const equipmentProtocolError: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedD
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_equipmentNotSM_Equipped
+ * @description
+ *
+ * MS not equipped (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -185,6 +214,10 @@ const SM_EnumeratedDeliveryFailureCause_equipmentNotSM_Equipped: SM_EnumeratedDe
 
 /**
  * @summary equipmentNotSM_Equipped
+ * @description
+ *
+ * MS not equipped (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -193,6 +226,10 @@ const equipmentNotSM_Equipped: SM_EnumeratedDeliveryFailureCause = SM_Enumerated
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_unknownServiceCentre
+ * @description
+ *
+ * Unknown service centre (SC) (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -201,6 +238,10 @@ const SM_EnumeratedDeliveryFailureCause_unknownServiceCentre: SM_EnumeratedDeliv
 
 /**
  * @summary unknownServiceCentre
+ * @description
+ *
+ * Unknown service centre (SC) (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -209,6 +250,10 @@ const unknownServiceCentre: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDel
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_sc_Congestion
+ * @description
+ *
+ * SC congestion (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -217,6 +262,10 @@ const SM_EnumeratedDeliveryFailureCause_sc_Congestion: SM_EnumeratedDeliveryFail
 
 /**
  * @summary sc_Congestion
+ * @description
+ *
+ * SC congestion (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -225,6 +274,10 @@ const sc_Congestion: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFa
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_invalidSME_Address
+ * @description
+ *
+ * Invalid SME address (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -233,6 +286,10 @@ const SM_EnumeratedDeliveryFailureCause_invalidSME_Address: SM_EnumeratedDeliver
 
 /**
  * @summary invalidSME_Address
+ * @description
+ *
+ * Invalid SME address (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -241,6 +298,10 @@ const invalidSME_Address: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliv
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_subscriberNotSC_Subscriber
+ * @description
+ *
+ * Subscriber is not an SC subscriber (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -249,6 +310,10 @@ const SM_EnumeratedDeliveryFailureCause_subscriberNotSC_Subscriber: SM_Enumerate
 
 /**
  * @summary subscriberNotSC_Subscriber
+ * @description
+ *
+ * Subscriber is not an SC subscriber (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
  * @constant
  * @type {number}
  */

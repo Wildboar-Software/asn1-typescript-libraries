@@ -22,7 +22,11 @@ import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBio
 /**
  * @summary BiometricTTPProcess
  * @description
- * 
+ *
+ * TTP → client download of a reference template plus TTP integrity
+ * evidence (signature and optional ACBio). Used in reference-on-TTP
+ * for local model. ITU-T Rec. X.1084 (05/2008) §11.5 Table 7, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +45,32 @@ class BiometricTTPProcess {
     constructor (
         /**
          * @summary `templateData`.
+         * @description
+         *
+         * Reference template as `XtsmTemplate` (X.1089 biometric
+         * certificate). X.1084 §11.3, §11.5.
+         *
          * @public
          * @readonly
          */
         readonly templateData: XtsmTemplate,
         /**
          * @summary `digitalSignature`.
+         * @description
+         *
+         * CMS `SignedData` (X9.84) over the biometric process or payload.
+         * Assures integrity of that party's processing. X.1084 §11.1 item 4.
+         *
          * @public
          * @readonly
          */
         readonly digitalSignature: SignedData,
         /**
          * @summary `aCforBioOnClient`.
+         * @description
+         *
+         * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
+         *
          * @public
          * @readonly
          */

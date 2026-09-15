@@ -76,6 +76,10 @@ import { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta
  * @summary AbsentSubscriberSM_Param
  * @description
  * 
+ * Optional parameter of `absentSubscriberSM`. Diagnostic information regarding
+ * the reason for the subscriber's absence may be included (3GPP TS 29.002
+ * V19.1.0 clauses 7.6.1.4, 7.6.8.9, 7.6.8.12 and 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -103,6 +107,13 @@ class AbsentSubscriberSM_Param {
     constructor (
         /**
          * @summary `absentSubscriberDiagnosticSM`.
+         * @description
+         *
+         * Reason why the subscriber is absent. May be either for non-GPRS or
+         * for GPRS. If `additionalAbsentSubscriberDiagnosticSM` is received,
+         * this component is for non-GPRS (3GPP TS 29.002 V19.1.0 clauses
+         * 7.6.8.9 and 17.7.7).
+         *
          * @public
          * @readonly
          */
@@ -115,18 +126,36 @@ class AbsentSubscriberSM_Param {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `additionalAbsentSubscriberDiagnosticSM`.
+         * @description
+         *
+         * If received, this diagnostic is for GPRS and
+         * `absentSubscriberDiagnosticSM` is for non-GPRS (3GPP TS 29.002
+         * V19.1.0 clauses 7.6.8.12 and 17.7.7).
+         *
          * @public
          * @readonly
          */
         readonly additionalAbsentSubscriberDiagnosticSM: OPTIONAL<AbsentSubscriberDiagnosticSM>,
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * When sent from HLR to IP-SM-GW, IMSI shall be present if UNRI is not
+         * set, to indicate that the absent condition is met for CS and PS but
+         * not for IMS (3GPP TS 29.002 V19.1.0 clause 17.7.7).
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `requestedRetransmissionTime`.
+         * @description
+         *
+         * Retransmission time (UTC) at which the SMS-GMSC is requested to
+         * retransmit the MT Short Message (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.8.24).
+         *
          * @public
          * @readonly
          */

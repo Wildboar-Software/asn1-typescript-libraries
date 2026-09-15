@@ -19,7 +19,10 @@ import { type HANDSHAKE } from "../TSM/HANDSHAKE.oca.mjs";
 /**
  * @summary certificateList
  * @description
- * 
+ *
+ * `HANDSHAKE` object: `CertificateList` identified by
+ * `certificate-list` (11). ITU-T Rec. X.1084 (05/2008) Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

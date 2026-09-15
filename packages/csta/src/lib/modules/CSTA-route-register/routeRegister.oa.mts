@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary routeRegister
  * @description
- * 
+ *
+ * Route Register (ECMA-269 §20.1.1 / ECMA-285 §18.1.1). Direction: CF→SF. ROSE
+ * local CODE 248. Errors: `universalFailure`. Omitted `routeingDevice` means
+ * all routeing devices, if that
+ * option is supported. Positive ack returns `routeRegisterReqID`.
+ * Simultaneous registrations per device are SF-dependent.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

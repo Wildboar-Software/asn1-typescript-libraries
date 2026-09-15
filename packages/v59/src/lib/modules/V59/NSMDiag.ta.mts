@@ -15,7 +15,10 @@ import { NSMDiag_Item, _decode_NSMDiag_Item, _encode_NSMDiag_Item } from "../V59
 /**
  * @summary NSMDiag
  * @description
- * 
+ *
+ * High-level non-standard (proprietary) modem diagnostics (Tag-ID `26xx`).
+ * ITU-T Rec. V.59 (11/2000) §6.3, §6.8.18.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

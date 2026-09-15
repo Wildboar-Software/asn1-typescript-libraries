@@ -15,7 +15,10 @@ import { ErrorControl_Item, _decode_ErrorControl_Item, _encode_ErrorControl_Item
 /**
  * @summary ErrorControl
  * @description
- * 
+ *
+ * Error-control diagnostics (Tag-ID `2Fxx`). ITU-T Rec. V.59 (11/2000) §6.3,
+ * §6.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

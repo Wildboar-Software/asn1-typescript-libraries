@@ -18,7 +18,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CallBackMessageEvent
  * @description
- * 
+ *
+ * Call Back Message event (ECMA-269 §22.2.10 / ECMA-285 §20.2.10). Direction:
+ * SF→CF via Event Report. Call Back Message set or cancelled (manual or the
+ * corresponding services).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +43,37 @@ class CallBackMessageEvent {
     constructor (
         /**
          * @summary `originatingDevice`.
+         * @description
+         *
+         * Originating device when the call-back message was established.
          * @public
          * @readonly
          */
         readonly originatingDevice: SubjectDeviceID,
         /**
          * @summary `targetDevice`.
+         * @description
+         *
+         * Target device of the call-back message.
          * @public
          * @readonly
          */
         readonly targetDevice: SubjectDeviceID,
         /**
          * @summary `callBackMsgSetCanceled`.
+         * @description
+         *
+         * TRUE = message was set; FALSE = cancelled.
          * @public
          * @readonly
          */
         readonly callBackMsgSetCanceled: BOOLEAN,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

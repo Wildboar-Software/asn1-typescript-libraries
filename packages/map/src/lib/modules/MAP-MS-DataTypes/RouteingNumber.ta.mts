@@ -73,7 +73,12 @@ import { TBCD_STRING, _decode_TBCD_STRING, _encode_TBCD_STRING } from "../MAP-Co
 /**
  * @summary RouteingNumber
  * @description
- * 
+ *
+ * Number used for routeing that identifies a network operator (Mobile Number
+ * Portability). See 3GPP TS 23.066. Encoded as TBCD-STRING of 1..5 octets.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.63 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

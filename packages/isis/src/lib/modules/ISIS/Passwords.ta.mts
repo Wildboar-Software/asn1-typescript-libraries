@@ -19,6 +19,11 @@ import {
  * @summary Passwords
  * @description
  *
+ * Set of receive passwords against which the Authentication Information field
+ * of a received PDU is checked (Level 1 LSP/SNP, Level 2 LSP/SNP, or IIH).
+ *
+ * (ISO/IEC 10589:2002 clauses 11.2.3, 11.2.5.8 and 11.3.1).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

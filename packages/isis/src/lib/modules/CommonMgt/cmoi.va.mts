@@ -16,6 +16,12 @@ import {
  * @summary cmoi
  * @description
  *
+ * Root of SC6 generic management information: `{joint-iso-ccitt
+ * network-layer(13) management(0) sc6-gmi(0)}`. Annex E supplies definitions
+ * intended for ISO/IEC 10165-5; if that Recommendation conflicts, Annex E wins.
+ *
+ * (ISO/IEC 10589:2002 clauses 11.1 and Annex E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

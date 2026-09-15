@@ -1,0 +1,42 @@
+DFRProtocolObjectIdentifiers
+{iso standard(0) 10166 part-2(2) modules(0) object-identifiers(0)}
+DEFINITIONS ::=
+BEGIN
+ID ::= OBJECT IDENTIFIER
+
+id-dfr-protocol ID ::= {iso standard 10166 part-2(2)}
+
+-- Categories
+
+id-mod   ID ::= {id-dfr-protocol 0} -- modules
+id-ac    ID ::= {id-dfr-protocol 1} -- application context
+id-as    ID ::= {id-dfr-protocol 2} -- abstract syntax
+id-ase   ID ::= {id-dfr-protocol 3} -- application service element
+
+-- Modules
+
+id-mod-object-identifiers  ID ::= {id-mod 0}
+id-mod-access-protocol     ID ::= {id-mod 1}
+
+-- Application Context
+
+id-ac-dfr-access           ID ::= {id-ac 0}
+id-ac-dfr-reliable-access  ID ::= {id-ac 1}
+
+-- Abstract Syntaxes
+id-as-acse ID ::= {
+   joint-iso-ccitt
+   association-control(2)
+   abstract-syntax(1)
+   apdus(0)
+   version1(1)
+}
+
+id-as-dfrse          ID ::= {id-as 1}
+id-as-dfr-ext-attr   ID ::= {id-as 2}
+
+-- Application Service Element
+
+id-are-dfrse ID ::= {id-ase 0}
+
+END

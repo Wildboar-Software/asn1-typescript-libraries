@@ -76,6 +76,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary roamingNotAllowed
  * @description
  * 
+ * Returned when a location updating attempt is made in an area not covered by
+ * the subscription (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 8. Parameter `RoamingNotAllowedParam` is required (3GPP TS 29.002
+ * V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CallBack
  * @description
- * 
+ * Capability bitmap for the Call Back Call-Related service (ECMA-269 C.5.4,
+ * ECMA-285 §9.10). Presence of this entry in `CallControlServList` means the SF
+ * supports that service. Each set bit is an optional parameter, enumerated
+ * value, initial connection state, or miscellaneous characteristic from Annex
+ * C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +43,9 @@ type CallBack = BIT_STRING;
 /**
  * @summary CallBack_alerting
  * @constant
+ * @description
+ * Bit set means the SF supports initial connection state Alerting (ECMA-269
+ * C.5.4).
  */
 export
 const CallBack_alerting: number = 0; /* LONG_NAMED_BIT */
@@ -41,6 +53,8 @@ const CallBack_alerting: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary alerting
  * @constant
+ * @description
+ * Alias of `CallBack_alerting`.
  */
 export
 const alerting: number = CallBack_alerting; /* SHORT_NAMED_BIT */
@@ -48,6 +62,8 @@ const alerting: number = CallBack_alerting; /* SHORT_NAMED_BIT */
 /**
  * @summary CallBack_null_
  * @constant
+ * @description
+ * Bit set means the SF supports initial connection state Null (ECMA-269 C.5.4).
  */
 export
 const CallBack_null_: number = 1; /* LONG_NAMED_BIT */
@@ -55,6 +71,8 @@ const CallBack_null_: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary null_
  * @constant
+ * @description
+ * Alias of `CallBack_null_`.
  */
 export
 const null_: number = CallBack_null_; /* SHORT_NAMED_BIT */
@@ -62,6 +80,8 @@ const null_: number = CallBack_null_; /* SHORT_NAMED_BIT */
 /**
  * @summary CallBack_failed
  * @constant
+ * @description
+ * Bit set means the SF supports initial connection state Fail (ECMA-269 C.5.4).
  */
 export
 const CallBack_failed: number = 2; /* LONG_NAMED_BIT */
@@ -69,6 +89,8 @@ const CallBack_failed: number = 2; /* LONG_NAMED_BIT */
 /**
  * @summary failed
  * @constant
+ * @description
+ * Alias of `CallBack_failed`.
  */
 export
 const failed: number = CallBack_failed; /* SHORT_NAMED_BIT */
@@ -76,6 +98,9 @@ const failed: number = CallBack_failed; /* SHORT_NAMED_BIT */
 /**
  * @summary CallBack_queued
  * @constant
+ * @description
+ * Bit set means the SF supports initial connection state Queued (ECMA-269
+ * C.5.4).
  */
 export
 const CallBack_queued: number = 3; /* LONG_NAMED_BIT */
@@ -83,6 +108,8 @@ const CallBack_queued: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary queued
  * @constant
+ * @description
+ * Alias of `CallBack_queued`.
  */
 export
 const queued: number = CallBack_queued; /* SHORT_NAMED_BIT */
@@ -90,6 +117,9 @@ const queued: number = CallBack_queued; /* SHORT_NAMED_BIT */
 /**
  * @summary CallBack_callCharacteristics
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `callCharacteristics` parameter
+ * (ECMA-269 C.5.4).
  */
 export
 const CallBack_callCharacteristics: number = 4; /* LONG_NAMED_BIT */
@@ -97,6 +127,8 @@ const CallBack_callCharacteristics: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary callCharacteristics
  * @constant
+ * @description
+ * Alias of `CallBack_callCharacteristics`.
  */
 export
 const callCharacteristics: number = CallBack_callCharacteristics; /* SHORT_NAMED_BIT */
@@ -104,6 +136,9 @@ const callCharacteristics: number = CallBack_callCharacteristics; /* SHORT_NAMED
 /**
  * @summary CallBack_subjectOfCall
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `subjectOfCall` parameter
+ * (ECMA-269 C.5.4).
  */
 export
 const CallBack_subjectOfCall: number = 11; /* LONG_NAMED_BIT */
@@ -111,6 +146,8 @@ const CallBack_subjectOfCall: number = 11; /* LONG_NAMED_BIT */
 /**
  * @summary subjectOfCall
  * @constant
+ * @description
+ * Alias of `CallBack_subjectOfCall`.
  */
 export
 const subjectOfCall: number = CallBack_subjectOfCall; /* SHORT_NAMED_BIT */
@@ -118,6 +155,9 @@ const subjectOfCall: number = CallBack_subjectOfCall; /* SHORT_NAMED_BIT */
 /**
  * @summary CallBack_languagePreferences
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `languagePreferences` parameter
+ * (ECMA-269 C.5.4).
  */
 export
 const CallBack_languagePreferences: number = 12; /* LONG_NAMED_BIT */
@@ -125,6 +165,8 @@ const CallBack_languagePreferences: number = 12; /* LONG_NAMED_BIT */
 /**
  * @summary languagePreferences
  * @constant
+ * @description
+ * Alias of `CallBack_languagePreferences`.
  */
 export
 const languagePreferences: number = CallBack_languagePreferences; /* SHORT_NAMED_BIT */
@@ -132,6 +174,9 @@ const languagePreferences: number = CallBack_languagePreferences; /* SHORT_NAMED
 /**
  * @summary CallBack_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.5.4).
  */
 export
 const CallBack_privateData: number = 5; /* LONG_NAMED_BIT */
@@ -139,6 +184,8 @@ const CallBack_privateData: number = 5; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `CallBack_privateData`.
  */
 export
 const privateData: number = CallBack_privateData; /* SHORT_NAMED_BIT */
@@ -146,6 +193,9 @@ const privateData: number = CallBack_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary CallBack_targetDeviceInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `targetDevice` in the acknowledgement
+ * (ECMA-269 C.5.4).
  */
 export
 const CallBack_targetDeviceInAck: number = 6; /* LONG_NAMED_BIT */
@@ -153,6 +203,8 @@ const CallBack_targetDeviceInAck: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary targetDeviceInAck
  * @constant
+ * @description
+ * Alias of `CallBack_targetDeviceInAck`.
  */
 export
 const targetDeviceInAck: number = CallBack_targetDeviceInAck; /* SHORT_NAMED_BIT */
@@ -160,6 +212,9 @@ const targetDeviceInAck: number = CallBack_targetDeviceInAck; /* SHORT_NAMED_BIT
 /**
  * @summary CallBack_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.5.4).
  */
 export
 const CallBack_privateDataInAck: number = 7; /* LONG_NAMED_BIT */
@@ -167,6 +222,8 @@ const CallBack_privateDataInAck: number = 7; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `CallBack_privateDataInAck`.
  */
 export
 const privateDataInAck: number = CallBack_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -174,6 +231,9 @@ const privateDataInAck: number = CallBack_privateDataInAck; /* SHORT_NAMED_BIT *
 /**
  * @summary CallBack_deviceIDOnly
  * @constant
+ * @description
+ * Bit set means the SF supports DeviceID-only ConnectionIDs for this service
+ * (ECMA-269 C.5.4).
  */
 export
 const CallBack_deviceIDOnly: number = 8; /* LONG_NAMED_BIT */
@@ -181,6 +241,8 @@ const CallBack_deviceIDOnly: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary deviceIDOnly
  * @constant
+ * @description
+ * Alias of `CallBack_deviceIDOnly`.
  */
 export
 const deviceIDOnly: number = CallBack_deviceIDOnly; /* SHORT_NAMED_BIT */
@@ -188,6 +250,9 @@ const deviceIDOnly: number = CallBack_deviceIDOnly; /* SHORT_NAMED_BIT */
 /**
  * @summary CallBack_moreCallBacksNegAck
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.5.4).
  */
 export
 const CallBack_moreCallBacksNegAck: number = 9; /* LONG_NAMED_BIT */
@@ -195,6 +260,8 @@ const CallBack_moreCallBacksNegAck: number = 9; /* LONG_NAMED_BIT */
 /**
  * @summary moreCallBacksNegAck
  * @constant
+ * @description
+ * Alias of `CallBack_moreCallBacksNegAck`.
  */
 export
 const moreCallBacksNegAck: number = CallBack_moreCallBacksNegAck; /* SHORT_NAMED_BIT */
@@ -202,6 +269,9 @@ const moreCallBacksNegAck: number = CallBack_moreCallBacksNegAck; /* SHORT_NAMED
 /**
  * @summary CallBack_ackModelMultiStep
  * @constant
+ * @description
+ * Bit set means the SF supports the multi-step positive acknowledgement model
+ * (ECMA-269 C.5.4).
  */
 export
 const CallBack_ackModelMultiStep: number = 10; /* LONG_NAMED_BIT */
@@ -209,6 +279,8 @@ const CallBack_ackModelMultiStep: number = 10; /* LONG_NAMED_BIT */
 /**
  * @summary ackModelMultiStep
  * @constant
+ * @description
+ * Alias of `CallBack_ackModelMultiStep`.
  */
 export
 const ackModelMultiStep: number = CallBack_ackModelMultiStep; /* SHORT_NAMED_BIT */

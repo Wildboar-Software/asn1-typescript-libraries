@@ -75,7 +75,23 @@ import { maxAddressLength } from "./maxAddressLength.va.mjs";
 /**
  * @summary AddressString
  * @description
- * 
+ *
+ * Number used for addressing. Octet 1 is nature of address (NAI) and numbering
+ * plan (NPI); the remaining octets are address digits encoded as `TBCD-STRING`.
+ * Size 1..`maxAddressLength` (20).
+ *
+ * First octet:
+ * - bit 8: 1 (no extension)
+ * - bits 765: NAI — 000 unknown; 001 international; 010 national significant;
+ *   011 network specific; 100 subscriber; 101 reserved; 110 abbreviated; 111
+ *   reserved for extension
+ * - bits 4321: NPI — 0000 unknown; 0001 ISDN/telephony (ITU-T E.164); 0010
+ *   spare; 0011 data (ITU-T X.121); 0100 telex (ITU-T F.69); 0101 spare; 0110
+ *   land mobile (ITU-T E.212); 0111 spare; 1000 national; 1001 private; 1111
+ *   reserved for extension. All other NPI values are reserved.
+ *
+ * (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

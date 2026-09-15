@@ -73,7 +73,9 @@ import { RAN_Technology, _enum_for_RAN_Technology, RAN_Technology_gsm /* IMPORTE
 /**
  * @summary ReportingPLMN
  * @description
- * 
+ *
+ * One reporting PLMN (3GPP TS 29.002 V19.1.0 clause 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,18 +93,30 @@ class ReportingPLMN {
     constructor (
         /**
          * @summary `plmn_Id`.
+         * @description
+         *
+         * PLMN identity.
+         *
          * @public
          * @readonly
          */
         readonly plmn_Id: PLMN_Id,
         /**
          * @summary `ran_Technology`.
+         * @description
+         *
+         * gsm or umts.
+         *
          * @public
          * @readonly
          */
         readonly ran_Technology: OPTIONAL<RAN_Technology>,
         /**
          * @summary `ran_PeriodicLocationSupport`.
+         * @description
+         *
+         * Periodic location supported in this RAN.
+         *
          * @public
          * @readonly
          */

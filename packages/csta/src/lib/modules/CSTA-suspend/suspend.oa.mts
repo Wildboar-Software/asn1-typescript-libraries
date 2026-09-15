@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary suspend
  * @description
- * 
+ *
+ * Voice Suspend: temporarily stops playing or recording the current message
+ * (ECMA-269 §26.1.16).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:509. Errors: `universalFailure` (ECMA-285 §24.1.16).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,7 +11,12 @@ import { MediaDetachedEvent, _decode_MediaDetachedEvent, _encode_MediaDetachedEv
 /**
  * @summary MediaAttachmentEvents
  * @description
- * 
+ *
+ * Media-attachment event body of `cSTAEventReport` (ECMA-285 §10).
+ * Alternatives: Media Attached, Media Detached.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

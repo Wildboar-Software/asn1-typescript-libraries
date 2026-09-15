@@ -75,6 +75,11 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary unknownEquipment
  * @description
  * 
+ * Identification/numbering user error: unknown equipment (3GPP TS 29.002
+ * V19.1.0 clause 7.6.1.4).
+ *
+ * Local code 7. No parameter (3GPP TS 29.002 V19.1.0 clause 17.6.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,7 +8,11 @@ import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary CharacterSet
  * @description
- * 
+ *
+ * Character set of a device display. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,7 +34,11 @@ enum _enum_for_CharacterSet {
 /**
  * @summary CharacterSet
  * @description
- * 
+ *
+ * Character set of a device display. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +56,11 @@ type CharacterSet = _enum_for_CharacterSet;
 /**
  * @summary CharacterSet
  * @description
- * 
+ *
+ * Character set of a device display. ECMA-285 §9.16.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/ ECMA-285}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +77,10 @@ const CharacterSet = _enum_for_CharacterSet;
 
 /**
  * @summary CharacterSet_ascii
+ * @description
+ *
+ * ASCII. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +97,10 @@ const ascii: CharacterSet = CharacterSet.ascii; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary CharacterSet_unicode
+ * @description
+ *
+ * Unicode. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +117,10 @@ const unicode: CharacterSet = CharacterSet.unicode; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary CharacterSet_proprietary
+ * @description
+ *
+ * Proprietary character set. ECMA-285 §9.16.
+ *
  * @constant
  * @type {number}
  */

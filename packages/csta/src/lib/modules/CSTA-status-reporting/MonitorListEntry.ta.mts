@@ -17,7 +17,12 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 /**
  * @summary MonitorListEntry
  * @description
- * 
+ *
+ * One established monitor: cross-reference ID and monitor object. ECMA-269
+ * §15.1.5.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,21 @@ class MonitorListEntry {
     constructor (
         /**
          * @summary `monitorCrossRefID`.
+         * @description
+         *
+         * Cross-reference assigned when the monitor was created. ECMA-269
+         * §15.1.5.
+         *
          * @public
          * @readonly
          */
         readonly monitorCrossRefID: MonitorCrossRefID,
         /**
          * @summary `monitorObject`.
+         * @description
+         *
+         * Device that is the monitor object. ECMA-269 §15.1.5.
+         *
          * @public
          * @readonly
          */

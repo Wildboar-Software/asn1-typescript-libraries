@@ -52,7 +52,16 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
 /**
  * @summary DigitsDialedEvent
  * @description
- * 
+ *
+ * Digits Dialled event payload (ECMA-269 §17.2.6 /
+ * ECMA-285 §15.2.6) for `cSTAEventReport`. Only when a
+ * monitor is on the initiating device or call (FR 1). The
+ * first event includes the first digit from Make Call or
+ * Consultation Call, or a null string (FR 3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -83,102 +92,192 @@ class DigitsDialedEvent {
     constructor (
         /**
          * @summary `dialingConnection`.
+         * @description
+         *
+         * Mandatory. Connection at which the digits were
+         * dialled.
+         *
          * @public
          * @readonly
          */
         readonly dialingConnection: ConnectionID,
         /**
          * @summary `dialingDevice`.
+         * @description
+         *
+         * Mandatory. Device at which the digits were
+         * dialled.
+         *
          * @public
          * @readonly
          */
         readonly dialingDevice: SubjectDeviceID,
         /**
          * @summary `dialingSequence`.
+         * @description
+         *
+         * Mandatory. Digits actually dialled (manual or
+         * CSTA). Grouping per event is switching-function
+         * dependent (FR 2, FR 4).
+         *
          * @public
          * @readonly
          */
         readonly dialingSequence: DeviceID,
         /**
          * @summary `localConnectionInfo`.
+         * @description
+         *
+         * Device-type monitors only (§9.5.2, §12.2.17). For
+         * the dialling device: Initiated.
+         *
          * @public
          * @readonly
          */
         readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Conditional. Present when correlator data is
+         * associated with the call (§12.2.10).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Mandatory. Valid values are listed in Table
+         * 17-162: Conference, Consultation, Network
+         * Dialling, Normal, Transfer.
+         *
          * @public
          * @readonly
          */
         readonly cause: EventCause,
         /**
          * @summary `servicesPermitted`.
+         * @description
+         *
+         * Device-type monitors only (§9.5.2, §12.2.25).
+         * Mandatory if Dynamic Feature Availability is
+         * supported.
+         *
          * @public
          * @readonly
          */
         readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `networkCallingDevice`.
+         * @description
+         *
+         * Optional. Original calling device from the
+         * network, external incoming only. Does not change
+         * while `associatedCallingDevice` remains.
+         *
          * @public
          * @readonly
          */
         readonly networkCallingDevice: OPTIONAL<NetworkCallingDeviceID>,
         /**
          * @summary `networkCalledDevice`.
+         * @description
+         *
+         * Optional. Original called device from the
+         * network, external incoming only. Does not change
+         * while `associatedCallingDevice` remains.
+         *
          * @public
          * @readonly
          */
         readonly networkCalledDevice: OPTIONAL<NetworkCalledDeviceID>,
         /**
          * @summary `associatedCallingDevice`.
+         * @description
+         *
+         * Conditional. NID of the calling device for
+         * external incoming calls.
+         *
          * @public
          * @readonly
          */
         readonly associatedCallingDevice: OPTIONAL<AssociatedCallingDeviceID>,
         /**
          * @summary `associatedCalledDevice`.
+         * @description
+         *
+         * Conditional. NID or associated device for
+         * external outgoing or incoming calls.
+         *
          * @public
          * @readonly
          */
         readonly associatedCalledDevice: OPTIONAL<AssociatedCalledDeviceID>,
         /**
          * @summary `dialingConnectionInfo`.
+         * @description
+         *
+         * Optional connection information. Omitted values
+         * are switching-function specific (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly dialingConnectionInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Optional high-level call characteristics
+         * (§12.2.4).
+         *
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Optional global call data and thread data
+         * (§12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Optional preferred language(s) (§12.2.16).
+         *
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `locationInfo`.
+         * @description
+         *
+         * Optional location information for devices in the
+         * call.
+         *
          * @public
          * @readonly
          */
         readonly locationInfo: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the
+         * security and privateData parameters from the
+         * ECMA-269 event table.
+         *
          * @public
          * @readonly
          */

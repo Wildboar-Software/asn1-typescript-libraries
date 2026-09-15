@@ -23,7 +23,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary ReviewArgument
  * @description
- * 
+ *
+ * Connection, review period, optional message and resource (ECMA-269
+ * §26.1.12.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +49,54 @@ class ReviewArgument {
     constructor (
         /**
          * @summary `connection`.
+         * @description
+         *
+         * Connection on which to review (ECMA-269 §26.1.12.1).
+         *
          * @public
          * @readonly
          */
         readonly connection: ConnectionID,
         /**
          * @summary `periodToReview`.
+         * @description
+         *
+         * From start of message, or length in milliseconds (ECMA-269
+         * §26.1.12.1).
+         *
          * @public
          * @readonly
          */
         readonly periodToReview: PeriodToReview,
         /**
          * @summary `messageToReview`.
+         * @description
+         *
+         * Mandatory if several messages are active on the connection; otherwise
+         * the currently active message (ECMA-269 §26.1.12.1).
+         *
          * @public
          * @readonly
          */
         readonly messageToReview: OPTIONAL<MessageID>,
         /**
          * @summary `resource`.
+         * @description
+         *
+         * Interactive voice resource. Required when more than one interactive
+         * voice resource exists on the connection.
+         *
          * @public
          * @readonly
          */
         readonly resource: OPTIONAL<ResourceID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

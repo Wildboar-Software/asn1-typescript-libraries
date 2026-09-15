@@ -17,7 +17,18 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary fastData
  * @description
- * 
+ *
+ * Transfers data to or from a specified CSTA object by creating a data path
+ * only for the duration of this request (ECMA-269 §24.2.3).
+ *
+ * Computing function → switching function.
+ *
+ * ROSE local:119. Errors: `universalFailure` (ECMA-285 §22.2.3).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

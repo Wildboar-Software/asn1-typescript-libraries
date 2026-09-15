@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AlertReason
  * @description
- * 
+ *
+ * ms-Present or memoryAvailable (3GPP TS 29.002 V19.1.0 clauses 12.4 and
+ * 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,7 +95,10 @@ enum _enum_for_AlertReason {
 /**
  * @summary AlertReason
  * @description
- * 
+ *
+ * ms-Present or memoryAvailable (3GPP TS 29.002 V19.1.0 clauses 12.4 and
+ * 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -109,7 +115,10 @@ type AlertReason = _enum_for_AlertReason;
 /**
  * @summary AlertReason
  * @description
- * 
+ *
+ * ms-Present or memoryAvailable (3GPP TS 29.002 V19.1.0 clauses 12.4 and
+ * 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -125,6 +134,10 @@ const AlertReason = _enum_for_AlertReason;
 
 /**
  * @summary AlertReason_ms_Present
+ * @description
+ *
+ * `ms-Present (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +146,10 @@ const AlertReason_ms_Present: AlertReason = AlertReason.ms_Present; /* LONG_NAME
 
 /**
  * @summary ms_Present
+ * @description
+ *
+ * `ms-Present (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +158,10 @@ const ms_Present: AlertReason = AlertReason.ms_Present; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary AlertReason_memoryAvailable
+ * @description
+ *
+ * `memoryAvailable (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +170,10 @@ const AlertReason_memoryAvailable: AlertReason = AlertReason.memoryAvailable; /*
 
 /**
  * @summary memoryAvailable
+ * @description
+ *
+ * `memoryAvailable (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+ *
  * @constant
  * @type {number}
  */

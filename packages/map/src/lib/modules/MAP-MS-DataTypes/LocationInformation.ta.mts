@@ -81,7 +81,18 @@ import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformat
 /**
  * @summary LocationInformation
  * @description
- * 
+ *
+ * VLR-provided location of the served subscriber as in 3GPP TS 23.018.
+ * `sai-Present` means `cellGlobalIdOrServiceAreaIdOrLAI` holds a Service Area
+ * Identity. `currentLocationRetrieved` shall be present if the location was
+ * retrieved after successful paging. If `locationInformationEPS` is present,
+ * CGI/SAI/LAI, age, geographical and geodetic information, and
+ * `currentLocationRetrieved` outside that IE shall be absent, except that both
+ * an LAI in `cellGlobalIdOrServiceAreaIdOrLAI` and `locationInformationEPS` may
+ * be present in MAP_NOTE_MM_EVENT. Omit `locationInformationEPS` unless
+ * `locationInformationEPS-Supported` was received in `RequestedInfo`. (3GPP TS
+ * 29.002 V19.1.0 clauses 7.6.2.30 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -109,30 +120,60 @@ class LocationInformation {
     constructor (
         /**
          * @summary `ageOfLocationInformation`.
+         * @description
+         *
+         * Age of the location estimate. Absent (outside
+         * `locationInformationEPS`) if that IE is present, except the
+         * MAP_NOTE_MM_EVENT LAI exception. (3GPP TS 29.002 V19.1.0 clause
+         * 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation>,
         /**
          * @summary `geographicalInformation`.
+         * @description
+         *
+         * Ellipsoid point with uncertainty circle (3GPP TS 23.032). Absent if
+         * `locationInformationEPS` is present (except NOTE-MM-EVENT). (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly geographicalInformation: OPTIONAL<GeographicalInformation>,
         /**
          * @summary `vlr_number`.
+         * @description
+         *
+         * ISDN number of the serving VLR. (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.2.14)
+         *
          * @public
          * @readonly
          */
         readonly vlr_number: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `locationNumber`.
+         * @description
+         *
+         * Location number as in ITU-T Rec. Q.763. (3GPP TS 29.002 V19.1.0
+         * clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly locationNumber: OPTIONAL<LocationNumber>,
         /**
          * @summary `cellGlobalIdOrServiceAreaIdOrLAI`.
+         * @description
+         *
+         * CGI, SAI, or LAI. If `sai-Present` is included, this holds a Service
+         * Area Identity. Shall be absent if `locationInformationEPS` is
+         * present, except both an LAI here and `locationInformationEPS` may
+         * appear in MAP_NOTE_MM_EVENT. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
@@ -145,42 +186,80 @@ class LocationInformation {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `selectedLSA_Id`.
+         * @description
+         *
+         * Currently selected localised service area. (3GPP TS 29.002 V19.1.0
+         * clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly selectedLSA_Id: OPTIONAL<LSAIdentity>,
         /**
          * @summary `msc_Number`.
+         * @description
+         *
+         * ISDN number of the serving MSC. (3GPP TS 29.002 V19.1.0 clause
+         * 7.6.2.11)
+         *
          * @public
          * @readonly
          */
         readonly msc_Number: OPTIONAL<ISDN_AddressString>,
         /**
          * @summary `geodeticInformation`.
+         * @description
+         *
+         * Calling Geodetic Location (Q.763, 1999), ellipsoid point with
+         * uncertainty circle. Absent if `locationInformationEPS` is present
+         * (except NOTE-MM-EVENT). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly geodeticInformation: OPTIONAL<GeodeticInformation>,
         /**
          * @summary `currentLocationRetrieved`.
+         * @description
+         *
+         * Shall be present if the location was retrieved after successful
+         * paging. Absent outside `locationInformationEPS` if that IE is present
+         * (except NOTE-MM-EVENT). (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly currentLocationRetrieved: OPTIONAL<NULL>,
         /**
          * @summary `sai_Present`.
+         * @description
+         *
+         * `cellGlobalIdOrServiceAreaIdOrLAI` contains a Service Area Identity.
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly sai_Present: OPTIONAL<NULL>,
         /**
          * @summary `locationInformationEPS`.
+         * @description
+         *
+         * EPS location. Should be absent unless
+         * `locationInformationEPS-Supported` was received in RequestedInfo.
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly locationInformationEPS: OPTIONAL<LocationInformationEPS>,
         /**
          * @summary `userCSGInformation`.
+         * @description
+         *
+         * CSG ID, access mode, and CSG membership indication when access mode
+         * is Hybrid. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */

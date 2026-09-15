@@ -73,7 +73,10 @@ import { DeferredLocationEventType, DeferredLocationEventType_msAvailable /* IMP
 /**
  * @summary LocationType
  * @description
- * 
+ *
+ * Estimate type plus optional deferred event (3GPP TS 29.002 V19.1.0 clauses
+ * 7.6.11.12 and 17.7.13).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,20 @@ class LocationType {
     constructor (
         /**
          * @summary `locationEstimateType`.
+         * @description
+         *
+         * Current, current-or-last, initial, deferred, or notification-only.
+         *
          * @public
          * @readonly
          */
         readonly locationEstimateType: LocationEstimateType,
         /**
          * @summary `deferredLocationEventType`.
+         * @description
+         *
+         * Deferred event bits if deferred location is used.
+         *
          * @public
          * @readonly
          */

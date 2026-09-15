@@ -8,7 +8,15 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary RouteRegister
  * @description
- * 
+ * Capability bitmap for the Route Register service (ECMA-269 C.11.1, ECMA-285
+ * §9.10). Presence of this entry in `RouteingServList` means the SF supports
+ * that service. Each set bit is an optional parameter, enumerated value,
+ * initial connection state, or miscellaneous characteristic from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +45,9 @@ type RouteRegister = BIT_STRING;
 /**
  * @summary RouteRegister_routeingDevice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const RouteRegister_routeingDevice: number = 0; /* LONG_NAMED_BIT */
@@ -44,6 +55,8 @@ const RouteRegister_routeingDevice: number = 0; /* LONG_NAMED_BIT */
 /**
  * @summary routeingDevice
  * @constant
+ * @description
+ * Alias of `RouteRegister_routeingDevice`.
  */
 export
 const routeingDevice: number = RouteRegister_routeingDevice; /* SHORT_NAMED_BIT */
@@ -51,6 +64,9 @@ const routeingDevice: number = RouteRegister_routeingDevice; /* SHORT_NAMED_BIT 
 /**
  * @summary RouteRegister_requestedMonitorMediaClass
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const RouteRegister_requestedMonitorMediaClass: number = 1; /* LONG_NAMED_BIT */
@@ -58,6 +74,8 @@ const RouteRegister_requestedMonitorMediaClass: number = 1; /* LONG_NAMED_BIT */
 /**
  * @summary requestedMonitorMediaClass
  * @constant
+ * @description
+ * Alias of `RouteRegister_requestedMonitorMediaClass`.
  */
 export
 const requestedMonitorMediaClass: number = RouteRegister_requestedMonitorMediaClass; /* SHORT_NAMED_BIT */
@@ -65,6 +83,9 @@ const requestedMonitorMediaClass: number = RouteRegister_requestedMonitorMediaCl
 /**
  * @summary RouteRegister_requestedMonitorMediaClassAudio
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const RouteRegister_requestedMonitorMediaClassAudio: number = 2; /* LONG_NAMED_BIT */
@@ -72,6 +93,8 @@ const RouteRegister_requestedMonitorMediaClassAudio: number = 2; /* LONG_NAMED_B
 /**
  * @summary requestedMonitorMediaClassAudio
  * @constant
+ * @description
+ * Alias of `RouteRegister_requestedMonitorMediaClassAudio`.
  */
 export
 const requestedMonitorMediaClassAudio: number = RouteRegister_requestedMonitorMediaClassAudio; /* SHORT_NAMED_BIT */
@@ -79,6 +102,9 @@ const requestedMonitorMediaClassAudio: number = RouteRegister_requestedMonitorMe
 /**
  * @summary RouteRegister_requestedMonitorMediaClassData
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const RouteRegister_requestedMonitorMediaClassData: number = 3; /* LONG_NAMED_BIT */
@@ -86,6 +112,8 @@ const RouteRegister_requestedMonitorMediaClassData: number = 3; /* LONG_NAMED_BI
 /**
  * @summary requestedMonitorMediaClassData
  * @constant
+ * @description
+ * Alias of `RouteRegister_requestedMonitorMediaClassData`.
  */
 export
 const requestedMonitorMediaClassData: number = RouteRegister_requestedMonitorMediaClassData; /* SHORT_NAMED_BIT */
@@ -93,6 +121,9 @@ const requestedMonitorMediaClassData: number = RouteRegister_requestedMonitorMed
 /**
  * @summary RouteRegister_requestedMonitorMediaClassImage
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const RouteRegister_requestedMonitorMediaClassImage: number = 4; /* LONG_NAMED_BIT */
@@ -100,6 +131,8 @@ const RouteRegister_requestedMonitorMediaClassImage: number = 4; /* LONG_NAMED_B
 /**
  * @summary requestedMonitorMediaClassImage
  * @constant
+ * @description
+ * Alias of `RouteRegister_requestedMonitorMediaClassImage`.
  */
 export
 const requestedMonitorMediaClassImage: number = RouteRegister_requestedMonitorMediaClassImage; /* SHORT_NAMED_BIT */
@@ -107,6 +140,9 @@ const requestedMonitorMediaClassImage: number = RouteRegister_requestedMonitorMe
 /**
  * @summary RouteRegister_requestedMonitorMediaClassVoice
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const RouteRegister_requestedMonitorMediaClassVoice: number = 5; /* LONG_NAMED_BIT */
@@ -114,6 +150,8 @@ const RouteRegister_requestedMonitorMediaClassVoice: number = 5; /* LONG_NAMED_B
 /**
  * @summary requestedMonitorMediaClassVoice
  * @constant
+ * @description
+ * Alias of `RouteRegister_requestedMonitorMediaClassVoice`.
  */
 export
 const requestedMonitorMediaClassVoice: number = RouteRegister_requestedMonitorMediaClassVoice; /* SHORT_NAMED_BIT */
@@ -121,6 +159,9 @@ const requestedMonitorMediaClassVoice: number = RouteRegister_requestedMonitorMe
 /**
  * @summary RouteRegister_requestedMonitorMediaClassChat
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const RouteRegister_requestedMonitorMediaClassChat: number = 10; /* LONG_NAMED_BIT */
@@ -128,6 +169,8 @@ const RouteRegister_requestedMonitorMediaClassChat: number = 10; /* LONG_NAMED_B
 /**
  * @summary requestedMonitorMediaClassChat
  * @constant
+ * @description
+ * Alias of `RouteRegister_requestedMonitorMediaClassChat`.
  */
 export
 const requestedMonitorMediaClassChat: number = RouteRegister_requestedMonitorMediaClassChat; /* SHORT_NAMED_BIT */
@@ -135,6 +178,9 @@ const requestedMonitorMediaClassChat: number = RouteRegister_requestedMonitorMed
 /**
  * @summary RouteRegister_requestedMonitorMediaClassEmail
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const RouteRegister_requestedMonitorMediaClassEmail: number = 11; /* LONG_NAMED_BIT */
@@ -142,6 +188,8 @@ const RouteRegister_requestedMonitorMediaClassEmail: number = 11; /* LONG_NAMED_
 /**
  * @summary requestedMonitorMediaClassEmail
  * @constant
+ * @description
+ * Alias of `RouteRegister_requestedMonitorMediaClassEmail`.
  */
 export
 const requestedMonitorMediaClassEmail: number = RouteRegister_requestedMonitorMediaClassEmail; /* SHORT_NAMED_BIT */
@@ -149,6 +197,9 @@ const requestedMonitorMediaClassEmail: number = RouteRegister_requestedMonitorMe
 /**
  * @summary RouteRegister_requestedMonitorMediaClassMessage
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const RouteRegister_requestedMonitorMediaClassMessage: number = 12; /* LONG_NAMED_BIT */
@@ -156,6 +207,8 @@ const RouteRegister_requestedMonitorMediaClassMessage: number = 12; /* LONG_NAME
 /**
  * @summary requestedMonitorMediaClassMessage
  * @constant
+ * @description
+ * Alias of `RouteRegister_requestedMonitorMediaClassMessage`.
  */
 export
 const requestedMonitorMediaClassMessage: number = RouteRegister_requestedMonitorMediaClassMessage; /* SHORT_NAMED_BIT */
@@ -163,6 +216,9 @@ const requestedMonitorMediaClassMessage: number = RouteRegister_requestedMonitor
 /**
  * @summary RouteRegister_requestedMonitorMediaClassIM
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const RouteRegister_requestedMonitorMediaClassIM: number = 13; /* LONG_NAMED_BIT */
@@ -170,6 +226,8 @@ const RouteRegister_requestedMonitorMediaClassIM: number = 13; /* LONG_NAMED_BIT
 /**
  * @summary requestedMonitorMediaClassIM
  * @constant
+ * @description
+ * Alias of `RouteRegister_requestedMonitorMediaClassIM`.
  */
 export
 const requestedMonitorMediaClassIM: number = RouteRegister_requestedMonitorMediaClassIM; /* SHORT_NAMED_BIT */
@@ -177,6 +235,9 @@ const requestedMonitorMediaClassIM: number = RouteRegister_requestedMonitorMedia
 /**
  * @summary RouteRegister_requestedMonitorMediaClassSMS
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const RouteRegister_requestedMonitorMediaClassSMS: number = 14; /* LONG_NAMED_BIT */
@@ -184,6 +245,8 @@ const RouteRegister_requestedMonitorMediaClassSMS: number = 14; /* LONG_NAMED_BI
 /**
  * @summary requestedMonitorMediaClassSMS
  * @constant
+ * @description
+ * Alias of `RouteRegister_requestedMonitorMediaClassSMS`.
  */
 export
 const requestedMonitorMediaClassSMS: number = RouteRegister_requestedMonitorMediaClassSMS; /* SHORT_NAMED_BIT */
@@ -191,6 +254,9 @@ const requestedMonitorMediaClassSMS: number = RouteRegister_requestedMonitorMedi
 /**
  * @summary RouteRegister_requestedMonitorMediaClassMMS
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const RouteRegister_requestedMonitorMediaClassMMS: number = 15; /* LONG_NAMED_BIT */
@@ -198,6 +264,8 @@ const RouteRegister_requestedMonitorMediaClassMMS: number = 15; /* LONG_NAMED_BI
 /**
  * @summary requestedMonitorMediaClassMMS
  * @constant
+ * @description
+ * Alias of `RouteRegister_requestedMonitorMediaClassMMS`.
  */
 export
 const requestedMonitorMediaClassMMS: number = RouteRegister_requestedMonitorMediaClassMMS; /* SHORT_NAMED_BIT */
@@ -205,6 +273,9 @@ const requestedMonitorMediaClassMMS: number = RouteRegister_requestedMonitorMedi
 /**
  * @summary RouteRegister_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * Annex C).
  */
 export
 const RouteRegister_privateData: number = 6; /* LONG_NAMED_BIT */
@@ -212,6 +283,8 @@ const RouteRegister_privateData: number = 6; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `RouteRegister_privateData`.
  */
 export
 const privateData: number = RouteRegister_privateData; /* SHORT_NAMED_BIT */
@@ -219,6 +292,9 @@ const privateData: number = RouteRegister_privateData; /* SHORT_NAMED_BIT */
 /**
  * @summary RouteRegister_actualRouteingMediaClassInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `actualRouteingMediaClass` in the
+ * acknowledgement (ECMA-269 Annex C).
  */
 export
 const RouteRegister_actualRouteingMediaClassInAck: number = 7; /* LONG_NAMED_BIT */
@@ -226,6 +302,8 @@ const RouteRegister_actualRouteingMediaClassInAck: number = 7; /* LONG_NAMED_BIT
 /**
  * @summary actualRouteingMediaClassInAck
  * @constant
+ * @description
+ * Alias of `RouteRegister_actualRouteingMediaClassInAck`.
  */
 export
 const actualRouteingMediaClassInAck: number = RouteRegister_actualRouteingMediaClassInAck; /* SHORT_NAMED_BIT */
@@ -233,6 +311,9 @@ const actualRouteingMediaClassInAck: number = RouteRegister_actualRouteingMediaC
 /**
  * @summary RouteRegister_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 Annex C).
  */
 export
 const RouteRegister_privateDataInAck: number = 8; /* LONG_NAMED_BIT */
@@ -240,6 +321,8 @@ const RouteRegister_privateDataInAck: number = 8; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `RouteRegister_privateDataInAck`.
  */
 export
 const privateDataInAck: number = RouteRegister_privateDataInAck; /* SHORT_NAMED_BIT */
@@ -247,6 +330,9 @@ const privateDataInAck: number = RouteRegister_privateDataInAck; /* SHORT_NAMED_
 /**
  * @summary RouteRegister_allRouteingDevices
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 Annex C).
  */
 export
 const RouteRegister_allRouteingDevices: number = 9; /* LONG_NAMED_BIT */
@@ -254,6 +340,8 @@ const RouteRegister_allRouteingDevices: number = 9; /* LONG_NAMED_BIT */
 /**
  * @summary allRouteingDevices
  * @constant
+ * @description
+ * Alias of `RouteRegister_allRouteingDevices`.
  */
 export
 const allRouteingDevices: number = RouteRegister_allRouteingDevices; /* SHORT_NAMED_BIT */

@@ -15,6 +15,11 @@ import { cmoi } from '../CommonMgt/cmoi.va.mjs';
  * @summary agoi
  * @description
  *
+ * GMI attribute-group registration arc `{cmoi attributeGroup(8)}` (for example
+ * the empty `counters` group).
+ *
+ * (ISO/IEC 10589:2002 Annex E.1.10 and E.2).
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

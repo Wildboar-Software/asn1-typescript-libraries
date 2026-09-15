@@ -17,7 +17,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary RecordMessageResult
  * @description
- * 
+ *
+ * Identifier of the recorded message (ECMA-269 §26.1.9.2.1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ class RecordMessageResult {
     constructor (
         /**
          * @summary `resultingMessage`.
+         * @description
+         *
+         * MessageID of the recording (ECMA-269 §26.1.9.2.1).
+         *
          * @public
          * @readonly
          */
         readonly resultingMessage: MessageID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * CSTACommonArguments carrying the service-table security and
+         * privateData parameters.
+         *
          * @public
          * @readonly
          */

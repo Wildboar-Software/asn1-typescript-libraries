@@ -88,7 +88,13 @@ import { positionMethodFailure } from "../MAP-Errors/positionMethodFailure.oa.mj
 /**
  * @summary provideSubscriberLocation
  * @description
- * 
+ *
+ * MAP_PROVIDE_SUBSCRIBER_LOCATION: GMLC requests the location of a target MS
+ * from the visited MSC or SGSN at any time. Confirmed. Typical path: GMLC→MSC
+ * or GMLC→SGSN. Local opcode 83. Timer class `ml` (1 min to 10 min).
+ * Distinctive errors: `unauthorizedLCSClient`, `positionMethodFailure`. (3GPP
+ * TS 29.002 V19.1.0 clauses 13A.2.1, 17.1.2, 17.3.2.40 and 17.6.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

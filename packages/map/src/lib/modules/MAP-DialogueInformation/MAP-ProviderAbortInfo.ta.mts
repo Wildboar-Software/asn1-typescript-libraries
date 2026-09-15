@@ -73,7 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary MAP_ProviderAbortInfo
  * @description
- * 
+ *
+ * User information of MAP-P-ABORT, a provider-initiated abort of the MAP
+ * dialogue (3GPP TS 29.002 V19.1.0 clauses 7.3.5 and 17.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,12 +95,21 @@ class MAP_ProviderAbortInfo {
     constructor (
         /**
          * @summary `map_ProviderAbortReason`.
+         * @description
+         *
+         * Provider reason encoded in this PDU (3GPP TS 29.002 V19.1.0 clause
+         * 7.3.5).
+         *
          * @public
          * @readonly
          */
         readonly map_ProviderAbortReason: MAP_ProviderAbortReason,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
+         *
          * @public
          * @readonly
          */

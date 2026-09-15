@@ -73,7 +73,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary OfferedCamel4Functionalities
  * @description
- * 
+ *
+ * Which CAMEL phase 4 functionalities are offered, as in 3GPP TS 23.078. A node
+ * supporting CAMEL phase 4 shall mark all CAMEL4 functionalities it offers.
+ * Other bit values shall be discarded. SIZE (15..64). (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.36G and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

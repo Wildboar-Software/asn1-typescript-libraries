@@ -72,7 +72,12 @@ import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta
 /**
  * @summary ADD_Info
  * @description
- * 
+ *
+ * Additional information sent in MAP_UPDATE_LOCATION and
+ * MAP_UPDATE_GPRS_LOCATION when the Automatic Device Detection (ADD) function
+ * is supported. Carries the IMEISV to be notified to the HLR (3GPP TS 29.002
+ * V19.1.0 clauses 8.1.2.3, 8.1.7.3 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,12 +96,26 @@ class ADD_Info {
     constructor (
         /**
          * @summary `imeisv`.
+         * @description
+         *
+         * IMEISV to notify to the HLR when ADD is supported and a new IMEISV is
+         * reported. Presence requirements are in 3GPP TS 23.012 / TS 23.060 and
+         * 3GPP TS 22.101 clause 7.4 (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3 and
+         * 8.1.7.3).
+         *
          * @public
          * @readonly
          */
         readonly imeisv: IMEI,
         /**
          * @summary `skipSubscriberDataUpdate`.
+         * @description
+         *
+         * Same semantics as skipSubscriberDataUpdate in UpdateLocationArg /
+         * UpdateGprsLocationArg: the service is used to inform the HLR about
+         * IMEISV (or paging area) change and subscriber data download may be
+         * skipped (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3, 8.1.7.3 and 17.7.1).
+         *
          * @public
          * @readonly
          */

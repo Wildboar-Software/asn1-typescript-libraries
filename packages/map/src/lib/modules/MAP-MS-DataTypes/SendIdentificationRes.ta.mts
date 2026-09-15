@@ -76,7 +76,12 @@ import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataType
 /**
  * @summary SendIdentificationRes
  * @description
- * 
+ *
+ * MAP_SEND_IDENTIFICATION result. IMSI shall be present in the first (or only)
+ * response of a dialogue and absent in later responses.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.1.4 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -100,18 +105,37 @@ class SendIdentificationRes {
     constructor (
         /**
          * @summary `imsi`.
+         * @description
+         *
+         * IMSI. Present in the first (or only) response of a dialogue; absent
+         * in later responses.
+         *
+         * (3GPP TS 29.002 V19.1.0 clauses 8.1.4 and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly imsi: OPTIONAL<IMSI>,
         /**
          * @summary `authenticationSetList`.
+         * @description
+         *
+         * Authentication triplets or quintuplets for the subscriber.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.1).
+         *
          * @public
          * @readonly
          */
         readonly authenticationSetList: OPTIONAL<AuthenticationSetList>,
         /**
          * @summary `currentSecurityContext`.
+         * @description
+         *
+         * Current GSM (Kc, CKSN) or UMTS (CK, IK, KSI) security context.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.8).
+         *
          * @public
          * @readonly
          */
@@ -124,12 +148,24 @@ class SendIdentificationRes {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `lastUsedLtePLMN_Id`.
+         * @description
+         *
+         * PLMN identity of the last used LTE PLMN.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly lastUsedLtePLMN_Id: OPTIONAL<PLMN_Id>,
         /**
          * @summary `mtCallPendingFlag`.
+         * @description
+         *
+         * A mobile-terminated call is pending.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+         *
          * @public
          * @readonly
          */

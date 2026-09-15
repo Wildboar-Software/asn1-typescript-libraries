@@ -75,7 +75,11 @@ import { maxNumOfExt_ExternalClient } from "./maxNumOfExt-ExternalClient.va.mjs"
 /**
  * @summary Ext_ExternalClientList
  * @description
- * 
+ *
+ * Extended external LCS client list (beyond ExternalClientList capacity) for
+ * call/session related or unrelated privacy class (3GPP TS 29.002 V19.1.0
+ * clauses 7.6.3.64 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -72,7 +72,13 @@ import { ZoneCode, _decode_ZoneCode, _encode_ZoneCode } from "../MAP-MS-DataType
 /**
  * @summary ZoneCodeList
  * @description
- * 
+ *
+ * Regional subscription area: list of 1..10 Zone Codes. With the complete list,
+ * the VLR, SGSN, or MME can decide for all its areas whether roaming is
+ * allowed.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.11, 7.6.2.28 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

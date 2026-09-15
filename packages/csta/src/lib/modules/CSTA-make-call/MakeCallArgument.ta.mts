@@ -51,7 +51,14 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
 /**
  * @summary MakeCallArgument
  * @description
- * 
+ *
+ * Service request for Make Call (ECMA-269 §17.1.18 / ECMA-285
+ * §15.1.18). Names calling and called devices. Validation
+ * failure yields a negative ack and no ConnectionIDs (FR 2).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -79,84 +86,155 @@ class MakeCallArgument {
     constructor (
         /**
          * @summary `callingDevice`.
+         * @description
+         *
+         * Mandatory. Device from which the call is originated.
+         * Initial Null or Initiated (if already off-hook, FR 6).
+         * May identify a group; subsequent events use the actual
+         * originating device.
+         *
          * @public
          * @readonly
          */
         readonly callingDevice: DeviceID,
         /**
          * @summary `calledDirectoryNumber`.
+         * @description
+         *
+         * Mandatory. Called device. May be a null DeviceID or a
+         * Diallable Digits string ending in `;` to stage dialling
+         * via Dial Digits (FR 7–8). Other formats must be
+         * complete. Called-device features are honoured (FR 5).
+         *
          * @public
          * @readonly
          */
         readonly calledDirectoryNumber: DeviceID,
         /**
          * @summary `accountCode`.
+         * @description
+         *
+         * Optional account code for the new call (§12.2.1).
+         *
          * @public
          * @readonly
          */
         readonly accountCode: OPTIONAL<AccountInfo>,
         /**
          * @summary `authCode`.
+         * @description
+         *
+         * Optional authorization code for this request (§12.2.3).
+         *
          * @public
          * @readonly
          */
         readonly authCode: OPTIONAL<AuthCode>,
         /**
          * @summary `autoOriginate`.
+         * @description
+         *
+         * Default `prompt`. Whether the switching function
+         * prompts the calling device off-hook. `doNotPrompt` is
+         * switching-function dependent if the device cannot
+         * auto-answer (FR 3).
+         *
          * @public
          * @readonly
          */
         readonly autoOriginate: OPTIONAL<AutoOriginate>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Optional correlator data attached before resulting
+         * state transitions (§12.2.10).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Optional user data sent with the call (§12.2.30).
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Optional call characteristics (§12.2.4).
+         *
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Optional media class/characteristics (§12.2.20). The
+         * switching function may adjust digital-data values
+         * (FR 10).
+         *
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callingConnectionInfo`.
+         * @description
+         *
+         * Optional connection information for the calling
+         * connection (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly callingConnectionInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `subjectOfCall`.
+         * @description
+         *
+         * Optional subject or intent of the call (§12.2.27).
+         *
          * @public
          * @readonly
          */
         readonly subjectOfCall: OPTIONAL<SubjectOfCall>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Optional preferred language(s) (§12.2.16).
+         *
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `reason`.
+         * @description
+         *
+         * Optional `EventCause` for underlying signalling
+         * (§12.2.15).
+         *
          * @public
          * @readonly
          */
         readonly reason: OPTIONAL<EventCause>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

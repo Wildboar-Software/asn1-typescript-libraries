@@ -15,7 +15,13 @@ import { PrivateEvent, _decode_PrivateEvent, _encode_PrivateEvent } from "../CST
 /**
  * @summary VendorSpecificEvtsList
  * @description
- * 
+ * Vendor-specific events the SF supports (ECMA-269 Annex C.24, ECMA-285 §9.10).
+ * Omit unsupported events.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +38,9 @@ class VendorSpecificEvtsList {
          * @summary `privateEvent`.
          * @public
          * @readonly
+         * @description
+         * Capability bitmap for this event; omit if the SF does not support it
+         * (ECMA-269 Annex C).
          */
         readonly privateEvent: OPTIONAL<PrivateEvent>
     ) {}

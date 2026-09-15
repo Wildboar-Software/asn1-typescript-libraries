@@ -82,7 +82,14 @@ import { targetCellOutsideGroupCallArea } from "../MAP-Errors/targetCellOutsideG
 /**
  * @summary prepareHandover
  * @description
- * 
+ *
+ * MAP_PREPARE_HANDOVER: MSC-A asks MSC-B (E-interface) to prepare when a call
+ * is to be handed over or relocated from MSC-A to MSC-B. Confirmed. Typical
+ * path: MSC-A→MSC-B. Local opcode 68. Timer class `m` (15 s to 30 s).
+ * Distinctive errors: `noHandoverNumberAvailable`,
+ * `targetCellOutsideGroupCallArea`. (3GPP TS 29.002 V19.1.0 clauses 8.4.1.1,
+ * 17.1.2, 17.3.2.12 and 17.6.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

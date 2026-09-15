@@ -78,6 +78,11 @@ enum _enum_for_FailureCauseParam {
  * @summary FailureCauseParam
  * @description
  * 
+ * Cause of failure on `ExtensibleSystemFailureParam`. Shall be included if and
+ * only if the problem is in the entity reporting the error. If an unknown value
+ * is received it shall be ignored (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and
+ * 17.7.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,6 +98,12 @@ type FailureCauseParam = _enum_for_FailureCauseParam | ENUMERATED;
 
 /**
  * @summary FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests
+ * @description
+ *
+ * `limitReachedOnNumberOfConcurrentLocationRequests` (0). Unknown values
+ * received in `FailureCauseParam` shall be ignored (3GPP TS 29.002 V19.1.0
+ * clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +112,12 @@ const FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests: Failur
 
 /**
  * @summary limitReachedOnNumberOfConcurrentLocationRequests
+ * @description
+ *
+ * `limitReachedOnNumberOfConcurrentLocationRequests` (0). Unknown values
+ * received in `FailureCauseParam` shall be ignored (3GPP TS 29.002 V19.1.0
+ * clause 17.7.7).
+ *
  * @constant
  * @type {number}
  */

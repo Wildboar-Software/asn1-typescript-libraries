@@ -17,7 +17,16 @@ import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.m
 /**
  * @summary systemRegisterCancel
  * @description
- * 
+ *
+ * System Register Cancel (ECMA-269 §14.1.4 / ECMA-285 §12.1.4). Direction:
+ * CF→SF. ROSE local CODE 209. Errors: `universalFailure`. CF shall keep
+ * processing outstanding SF system requests until
+ * this is positively acknowledged. The SF shall not send further
+ * system requests for the registration after that ack.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,15 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary CamponCallArgument
  * @description
- * 
+ *
+ * Service request for Camp On Call (ECMA-269 §17.1.6 / ECMA-285
+ * §15.1.6). Names the calling connection of the call waiting for
+ * a busy destination. Only one camp-on may be active per
+ * calling/called pair (FR 1).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +41,23 @@ class CamponCallArgument {
     constructor (
         /**
          * @summary `camponConnection`.
+         * @description
+         *
+         * Mandatory. Calling device's connection (Connected). The
+         * called side is typically a Call-ID-only connection in
+         * Fail (§6.7.2).
+         *
          * @public
          * @readonly
          */
         readonly camponConnection: ConnectionID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and
+         * privateData parameters from the ECMA-269 service table.
+         *
          * @public
          * @readonly
          */

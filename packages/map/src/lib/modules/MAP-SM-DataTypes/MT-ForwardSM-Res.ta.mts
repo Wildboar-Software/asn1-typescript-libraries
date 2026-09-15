@@ -73,7 +73,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary MT_ForwardSM_Res
  * @description
- * 
+ *
+ * Result of MAP-MT-FORWARD-SHORT-MESSAGE (3GPP TS 29.002 V19.1.0 clauses 12.9
+ * and 17.7.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,20 @@ class MT_ForwardSM_Res {
     constructor (
         /**
          * @summary `sm_RP_UI`.
+         * @description
+         *
+         * Optional TPDU in the result.
+         *
          * @public
          * @readonly
          */
         readonly sm_RP_UI: OPTIONAL<SignalInfo>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */

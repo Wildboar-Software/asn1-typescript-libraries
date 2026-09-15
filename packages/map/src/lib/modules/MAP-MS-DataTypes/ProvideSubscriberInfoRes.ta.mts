@@ -73,7 +73,13 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary ProvideSubscriberInfoRes
  * @description
- * 
+ *
+ * MAP_PROVIDE_SUBSCRIBER_INFO result carrying `SubscriberInfo`. The HLR
+ * discards parameters it did not request and domain-mismatched location/state
+ * IEs.
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 8.11.2 and 17.7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,6 +96,12 @@ class ProvideSubscriberInfoRes {
     constructor (
         /**
          * @summary `subscriberInfo`.
+         * @description
+         *
+         * Location, state, and related subscriber data matching the request.
+         *
+         * (3GPP TS 29.002 V19.1.0 clause 8.11.2).
+         *
          * @public
          * @readonly
          */

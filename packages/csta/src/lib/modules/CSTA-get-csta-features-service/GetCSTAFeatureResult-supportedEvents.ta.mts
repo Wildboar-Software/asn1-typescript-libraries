@@ -29,7 +29,13 @@ import { VendorSpecificEvtsList, _decode_VendorSpecificEvtsList, _encode_VendorS
 /**
  * @summary GetCSTAFeatureResult_supportedEvents
  * @description
- * 
+ *
+ * Per-category event bitmaps from Table 13-3. A missing category or
+ * bit means that event is not supported by any device.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,48 +58,72 @@ class GetCSTAFeatureResult_supportedEvents {
     constructor (
         /**
          * @summary `callControlEvtsList`.
+         * @description
+         *
+         * Call-control events.
          * @public
          * @readonly
          */
         readonly callControlEvtsList: OPTIONAL<CallControlEvtsList>,
         /**
          * @summary `callAssociatedEvtsList`.
+         * @description
+         *
+         * Call-associated events.
          * @public
          * @readonly
          */
         readonly callAssociatedEvtsList: OPTIONAL<CallAssociatedEvtsList>,
         /**
          * @summary `mediaEvtsList`.
+         * @description
+         *
+         * Media-attachment events.
          * @public
          * @readonly
          */
         readonly mediaEvtsList: OPTIONAL<MediaEvtsList>,
         /**
          * @summary `physDevEvtsList`.
+         * @description
+         *
+         * Physical-device feature events.
          * @public
          * @readonly
          */
         readonly physDevEvtsList: OPTIONAL<PhysDevEvtsList>,
         /**
          * @summary `logicalEvtsList`.
+         * @description
+         *
+         * Logical-device feature events.
          * @public
          * @readonly
          */
         readonly logicalEvtsList: OPTIONAL<LogicalEvtsList>,
         /**
          * @summary `deviceMaintEvtsList`.
+         * @description
+         *
+         * Device-maintenance events.
          * @public
          * @readonly
          */
         readonly deviceMaintEvtsList: OPTIONAL<DeviceMaintEvtsList>,
         /**
          * @summary `voiceEvtsList`.
+         * @description
+         *
+         * Voice-unit events.
          * @public
          * @readonly
          */
         readonly voiceEvtsList: OPTIONAL<VoiceUnitEvtsList>,
         /**
          * @summary `vendorSpecificEvtsList`.
+         * @description
+         *
+         * Vendor-specific events.
          * @public
          * @readonly
          */

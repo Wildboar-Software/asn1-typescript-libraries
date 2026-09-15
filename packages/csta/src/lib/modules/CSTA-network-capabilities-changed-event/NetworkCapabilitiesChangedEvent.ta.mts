@@ -52,7 +52,14 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
 /**
  * @summary NetworkCapabilitiesChangedEvent
  * @description
- * 
+ *
+ * Network Capabilities Changed event payload (ECMA-269 §17.2.11 / ECMA-285
+ * §15.2.11) for `cSTAEventReport`. Reports an interworking situation outside
+ * the switching sub-domain.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -83,102 +90,176 @@ class NetworkCapabilitiesChangedEvent {
     constructor (
         /**
          * @summary `outboundConnection`.
+         * @description
+         *
+         * Mandatory. Outbound connection of the network interface device.
+         *
          * @public
          * @readonly
          */
         readonly outboundConnection: ConnectionID,
         /**
          * @summary `networkInterfaceUsed`.
+         * @description
+         *
+         * Mandatory. Selected Network Interface Device (trunk, CO line).
+         *
          * @public
          * @readonly
          */
         readonly networkInterfaceUsed: SubjectDeviceID,
         /**
          * @summary `calledDevice`.
+         * @description
+         *
+         * Mandatory. Destination device.
+         *
          * @public
          * @readonly
          */
         readonly calledDevice: CalledDeviceID,
         /**
          * @summary `progressIndicator`.
+         * @description
+         *
+         * Mandatory. Interworking location and progress description (Table
+         * 17-171). Event reporting for the call may be reduced.
+         *
          * @public
          * @readonly
          */
         readonly progressIndicator: ProgressIndicator,
         /**
          * @summary `localConnectionInfo`.
+         * @description
+         *
+         * Device-type monitors only (§9.5.2, §12.2.17).
+         *
          * @public
          * @readonly
          */
         readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
         /**
          * @summary `correlatorData`.
+         * @description
+         *
+         * Conditional. Present when correlator data is associated with the call
+         * (§12.2.10).
+         *
          * @public
          * @readonly
          */
         readonly correlatorData: OPTIONAL<CorrelatorData>,
         /**
          * @summary `userData`.
+         * @description
+         *
+         * Conditional. Present when user data is sent and supported (§12.2.30).
+         *
          * @public
          * @readonly
          */
         readonly userData: OPTIONAL<UserData>,
         /**
          * @summary `networkCapability`.
+         * @description
+         *
+         * Optional. Network type and Call Control events supported by that
+         * network (Table 17-171).
+         *
          * @public
          * @readonly
          */
         readonly networkCapability: OPTIONAL<NetworkCapability>,
         /**
          * @summary `cause`.
+         * @description
+         *
+         * Mandatory. Table 17-172 lists Network Signal.
+         *
          * @public
          * @readonly
          */
         readonly cause: EventCause,
         /**
          * @summary `servicesPermitted`.
+         * @description
+         *
+         * Device-type monitors only (§9.5.2, §12.2.25). Mandatory if Dynamic
+         * Feature Availability is supported.
+         *
          * @public
          * @readonly
          */
         readonly servicesPermitted: OPTIONAL<ServicesPermitted>,
         /**
          * @summary `mediaCallCharacteristics`.
+         * @description
+         *
+         * Optional media class and characteristics (§12.2.20).
+         *
          * @public
          * @readonly
          */
         readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
         /**
          * @summary `callCharacteristics`.
+         * @description
+         *
+         * Optional high-level call characteristics (§12.2.4).
+         *
          * @public
          * @readonly
          */
         readonly callCharacteristics: OPTIONAL<CallCharacteristics>,
         /**
          * @summary `outboundConnectionInfo`.
+         * @description
+         *
+         * Optional connection information. Omitted values are
+         * switching-function specific (§12.2.8).
+         *
          * @public
          * @readonly
          */
         readonly outboundConnectionInfo: OPTIONAL<ConnectionInformation>,
         /**
          * @summary `callLinkageData`.
+         * @description
+         *
+         * Optional global call data and thread data (§12.2.5).
+         *
          * @public
          * @readonly
          */
         readonly callLinkageData: OPTIONAL<CallLinkageData>,
         /**
          * @summary `languagePreferences`.
+         * @description
+         *
+         * Optional preferred language(s) (§12.2.16).
+         *
          * @public
          * @readonly
          */
         readonly languagePreferences: OPTIONAL<LanguagePreferences>,
         /**
          * @summary `locationInfo`.
+         * @description
+         *
+         * Optional location information for devices in the call.
+         *
          * @public
          * @readonly
          */
         readonly locationInfo: OPTIONAL<LocationInfoList>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional `CSTACommonArguments` carrying the security and privateData
+         * parameters from the ECMA-269 event table.
+         *
          * @public
          * @readonly
          */
@@ -214,7 +295,8 @@ class NetworkCapabilitiesChangedEvent {
  * @summary The Leading Root Component Types of NetworkCapabilitiesChangedEvent
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -243,7 +325,8 @@ const _root_component_type_list_1_spec_for_NetworkCapabilitiesChangedEvent: $.Co
  * @summary The Trailing Root Component Types of NetworkCapabilitiesChangedEvent
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -256,7 +339,8 @@ const _root_component_type_list_2_spec_for_NetworkCapabilitiesChangedEvent: $.Co
  * @summary The Extension Addition Component Types of NetworkCapabilitiesChangedEvent
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

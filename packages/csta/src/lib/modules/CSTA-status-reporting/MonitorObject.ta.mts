@@ -9,7 +9,12 @@ import { CSTAObject, _decode_CSTAObject, _encode_CSTAObject } from "../CSTA-swit
 /**
  * @summary MonitorObject
  * @description
- * 
+ *
+ * What Monitor Start is placed on: a call/connection or a device (alias of
+ * `CSTAObject`). ECMA-269 §6.6.2.2, Table 6-7.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/ ECMA-269}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,9 @@ import { TA_Id, _decode_TA_Id, _encode_TA_Id } from "../MAP-CommonDataTypes/TA-I
 /**
  * @summary TrackingAreaId_List
  * @description
- * 
+ *
+ * SEQUENCE SIZE (1..8) OF TA-Id (3GPP TS 29.002 V19.1.0 clause 17.7.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -73,7 +73,14 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
 /**
  * @summary NAEA_PreferredCI
  * @description
- * 
+ *
+ * North American Equal Access preferred Carrier Id. Carrier identity preferred
+ * by the subscriber for calls requiring routing via an inter-exchange carrier:
+ * outgoing calls when the subscriber does not specify a carrier at set-up;
+ * forwarded calls; incoming calls (roaming leg).
+ *
+ * (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and 7.6.2.34).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +97,21 @@ class NAEA_PreferredCI {
     constructor (
         /**
          * @summary `naea_PreferredCIC`.
+         * @description
+         *
+         * Preferred NAEA carrier identification code. (3GPP TS 29.002 V19.1.0
+         * clauses 17.7.8 and 7.6.2.34).
+         *
          * @public
          * @readonly
          */
         readonly naea_PreferredCIC: NAEA_CIC,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+         *
          * @public
          * @readonly
          */

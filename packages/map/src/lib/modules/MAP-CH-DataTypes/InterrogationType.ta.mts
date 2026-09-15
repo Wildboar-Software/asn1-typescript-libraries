@@ -72,7 +72,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary InterrogationType
  * @description
- * 
+ *
+ * basicCall or forwarding. Use and presence as in 3GPP TS 23.079 (3GPP TS
+ * 29.002 V19.1.0 clauses 10.1.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,7 +95,10 @@ enum _enum_for_InterrogationType {
 /**
  * @summary InterrogationType
  * @description
- * 
+ *
+ * basicCall or forwarding. Use and presence as in 3GPP TS 23.079 (3GPP TS
+ * 29.002 V19.1.0 clauses 10.1.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -109,7 +115,10 @@ type InterrogationType = _enum_for_InterrogationType;
 /**
  * @summary InterrogationType
  * @description
- * 
+ *
+ * basicCall or forwarding. Use and presence as in 3GPP TS 23.079 (3GPP TS
+ * 29.002 V19.1.0 clauses 10.1.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -125,6 +134,10 @@ const InterrogationType = _enum_for_InterrogationType;
 
 /**
  * @summary InterrogationType_basicCall
+ * @description
+ *
+ * `basicCall (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +146,10 @@ const InterrogationType_basicCall: InterrogationType = InterrogationType.basicCa
 
 /**
  * @summary basicCall
+ * @description
+ *
+ * `basicCall (0)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +158,10 @@ const basicCall: InterrogationType = InterrogationType.basicCall; /* SHORT_NAMED
 
 /**
  * @summary InterrogationType_forwarding
+ * @description
+ *
+ * `forwarding (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +170,10 @@ const InterrogationType_forwarding: InterrogationType = InterrogationType.forwar
 
 /**
  * @summary forwarding
+ * @description
+ *
+ * `forwarding (1)` (3GPP TS 29.002 V19.1.0 clause 17.7.3).
+ *
  * @constant
  * @type {number}
  */

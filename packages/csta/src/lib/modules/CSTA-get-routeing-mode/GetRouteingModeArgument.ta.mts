@@ -17,7 +17,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetRouteingModeArgument
  * @description
- * 
+ *
+ * Service request (ECMA-269 Table 22-32).
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,19 @@ class GetRouteingModeArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Logical device whose Route Mode is queried.
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */

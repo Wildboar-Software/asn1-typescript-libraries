@@ -73,7 +73,10 @@ import { ChosenSpeechVersion, _decode_ChosenSpeechVersion, _encode_ChosenSpeechV
 /**
  * @summary ChosenRadioResourceInformation
  * @description
- * 
+ *
+ * Chosen Channel and Speech Version information elements defined in 3GPP TS
+ * 48.008 (3GPP TS 29.002 V19.1.0 clause 7.6.6.10B).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,12 +93,22 @@ class ChosenRadioResourceInformation {
     constructor (
         /**
          * @summary `chosenChannelInfo`.
+         * @description
+         *
+         * Chosen Channel information element in 3GPP TS 48.008 (3GPP TS 29.002
+         * V19.1.0 clauses 7.6.6.10B and 17.7.1).
+         *
          * @public
          * @readonly
          */
         readonly chosenChannelInfo: OPTIONAL<ChosenChannelInfo>,
         /**
          * @summary `chosenSpeechVersion`.
+         * @description
+         *
+         * Speech Version (chosen) information element in 3GPP TS 48.008 (3GPP
+         * TS 29.002 V19.1.0 clauses 7.6.6.10B and 17.7.1).
+         *
          * @public
          * @readonly
          */

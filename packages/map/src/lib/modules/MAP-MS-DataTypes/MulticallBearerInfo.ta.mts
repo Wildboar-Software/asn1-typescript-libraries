@@ -75,7 +75,10 @@ import { maxNumOfRelocationNumber } from "./maxNumOfRelocationNumber.va.mjs";
 /**
  * @summary MulticallBearerInfo
  * @description
- * 
+ *
+ * Number of simultaneous bearers supported per user by the serving network
+ * (1..7). (3GPP TS 29.002 V19.1.0 clauses 7.6.2.52 and 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

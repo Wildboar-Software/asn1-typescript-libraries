@@ -8,7 +8,16 @@ import { BIT_STRING, ASN1Element as _Element } from "@wildboar/asn1";
 /**
  * @summary StartCDRTransmission
  * @description
- * 
+ * Capability bitmap for the Start Call Detail Records Transmission service
+ * (ECMA-269 C.21.4, ECMA-285 §9.10). Presence of this entry in `CDRServList`
+ * means the SF supports that service. Each set bit is an optional parameter,
+ * enumerated value, initial connection state, or miscellaneous characteristic
+ * from Annex C.
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-269/}
+ *
+ * @see {@link https://ecma-international.org/publications-and-standards/standards/ecma-285/}
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +35,9 @@ type StartCDRTransmission = BIT_STRING;
 /**
  * @summary StartCDRTransmission_transferModeTransferAtEndOfCall
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.4).
  */
 export
 const StartCDRTransmission_transferModeTransferAtEndOfCall: number = 0; /* LONG_NAMED_BIT */
@@ -33,6 +45,8 @@ const StartCDRTransmission_transferModeTransferAtEndOfCall: number = 0; /* LONG_
 /**
  * @summary transferModeTransferAtEndOfCall
  * @constant
+ * @description
+ * Alias of `StartCDRTransmission_transferModeTransferAtEndOfCall`.
  */
 export
 const transferModeTransferAtEndOfCall: number = StartCDRTransmission_transferModeTransferAtEndOfCall; /* SHORT_NAMED_BIT */
@@ -40,6 +54,9 @@ const transferModeTransferAtEndOfCall: number = StartCDRTransmission_transferMod
 /**
  * @summary StartCDRTransmission_transferModeTransferOnRequest
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.4).
  */
 export
 const StartCDRTransmission_transferModeTransferOnRequest: number = 1; /* LONG_NAMED_BIT */
@@ -47,6 +64,8 @@ const StartCDRTransmission_transferModeTransferOnRequest: number = 1; /* LONG_NA
 /**
  * @summary transferModeTransferOnRequest
  * @constant
+ * @description
+ * Alias of `StartCDRTransmission_transferModeTransferOnRequest`.
  */
 export
 const transferModeTransferOnRequest: number = StartCDRTransmission_transferModeTransferOnRequest; /* SHORT_NAMED_BIT */
@@ -54,6 +73,9 @@ const transferModeTransferOnRequest: number = StartCDRTransmission_transferModeT
 /**
  * @summary StartCDRTransmission_transferModeTransferOnThresholdReached
  * @constant
+ * @description
+ * Bit set means the SF supports listed in this capability bitmap without a
+ * separate Annex C prose gloss (ECMA-269 C.21.4).
  */
 export
 const StartCDRTransmission_transferModeTransferOnThresholdReached: number = 2; /* LONG_NAMED_BIT */
@@ -61,6 +83,8 @@ const StartCDRTransmission_transferModeTransferOnThresholdReached: number = 2; /
 /**
  * @summary transferModeTransferOnThresholdReached
  * @constant
+ * @description
+ * Alias of `StartCDRTransmission_transferModeTransferOnThresholdReached`.
  */
 export
 const transferModeTransferOnThresholdReached: number = StartCDRTransmission_transferModeTransferOnThresholdReached; /* SHORT_NAMED_BIT */
@@ -68,6 +92,9 @@ const transferModeTransferOnThresholdReached: number = StartCDRTransmission_tran
 /**
  * @summary StartCDRTransmission_privateData
  * @constant
+ * @description
+ * Bit set means the SF supports the optional `privateData` parameter (ECMA-269
+ * C.21.4).
  */
 export
 const StartCDRTransmission_privateData: number = 3; /* LONG_NAMED_BIT */
@@ -75,6 +102,8 @@ const StartCDRTransmission_privateData: number = 3; /* LONG_NAMED_BIT */
 /**
  * @summary privateData
  * @constant
+ * @description
+ * Alias of `StartCDRTransmission_privateData`.
  */
 export
 const privateData: number = StartCDRTransmission_privateData; /* SHORT_NAMED_BIT */
@@ -82,6 +111,9 @@ const privateData: number = StartCDRTransmission_privateData; /* SHORT_NAMED_BIT
 /**
  * @summary StartCDRTransmission_privateDataInAck
  * @constant
+ * @description
+ * Bit set means the SF supports optional `privateData` in the acknowledgement
+ * (ECMA-269 C.21.4).
  */
 export
 const StartCDRTransmission_privateDataInAck: number = 4; /* LONG_NAMED_BIT */
@@ -89,6 +121,8 @@ const StartCDRTransmission_privateDataInAck: number = 4; /* LONG_NAMED_BIT */
 /**
  * @summary privateDataInAck
  * @constant
+ * @description
+ * Alias of `StartCDRTransmission_privateDataInAck`.
  */
 export
 const privateDataInAck: number = StartCDRTransmission_privateDataInAck; /* SHORT_NAMED_BIT */

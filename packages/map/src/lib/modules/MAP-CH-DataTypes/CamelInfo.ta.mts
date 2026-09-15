@@ -74,7 +74,10 @@ import { OfferedCamel4CSIs, OfferedCamel4CSIs_o_csi /* IMPORTED_LONG_NAMED_BIT *
 /**
  * @summary CamelInfo
  * @description
- * 
+ *
+ * CAMEL capability of the interrogating node (3GPP TS 29.002 V19.1.0 clauses
+ * 10.1.3 and 17.7.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -93,24 +96,40 @@ class CamelInfo {
     constructor (
         /**
          * @summary `supportedCamelPhases`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly supportedCamelPhases: SupportedCamelPhases,
         /**
          * @summary `suppress_T_CSI`.
+         * @description
+         *
+         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+         *
          * @public
          * @readonly
          */
         readonly suppress_T_CSI: OPTIONAL<NULL>,
         /**
          * @summary `extensionContainer`.
+         * @description
+         *
+         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+         *
          * @public
          * @readonly
          */
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `offeredCamel4CSIs`.
+         * @description
+         *
+         * See clause 7.6.3.36D (clause 10.1.3).
+         *
          * @public
          * @readonly
          */

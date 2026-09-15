@@ -83,7 +83,12 @@ import { NR_TA_Id, _decode_NR_TA_Id, _encode_NR_TA_Id } from "../MAP-CommonDataT
 /**
  * @summary LocationInformation5GS
  * @description
- * 
+ *
+ * 5GS location of the served subscriber (NR/E-UTRAN CGI, TAI, AMF address,
+ * etc.). `currentLocationRetrieved` shall be present if the location was
+ * retrieved after successful paging. Should be absent if the UE did not access
+ * via 5GS and IM-SSF. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -112,66 +117,115 @@ class LocationInformation5GS {
     constructor (
         /**
          * @summary `nrCellGlobalIdentity`.
+         * @description
+         *
+         * NR Cell Global Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly nrCellGlobalIdentity: OPTIONAL<NR_CGI>,
         /**
          * @summary `e_utranCellGlobalIdentity`.
+         * @description
+         *
+         * E-UTRAN Cell Global Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly e_utranCellGlobalIdentity: OPTIONAL<E_UTRAN_CGI>,
         /**
          * @summary `geographicalInformation`.
+         * @description
+         *
+         * Ellipsoid point with uncertainty circle (3GPP TS 23.032). (3GPP TS
+         * 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly geographicalInformation: OPTIONAL<GeographicalInformation>,
         /**
          * @summary `geodeticInformation`.
+         * @description
+         *
+         * Calling Geodetic Location (Q.763, 1999), ellipsoid point with
+         * uncertainty circle. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly geodeticInformation: OPTIONAL<GeodeticInformation>,
         /**
          * @summary `amf_address`.
+         * @description
+         *
+         * AMF address as an FQDN. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly amf_address: OPTIONAL<FQDN>,
         /**
          * @summary `trackingAreaIdentity`.
+         * @description
+         *
+         * Tracking Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly trackingAreaIdentity: OPTIONAL<TA_Id>,
         /**
          * @summary `currentLocationRetrieved`.
+         * @description
+         *
+         * Shall be present if the location was retrieved after successful
+         * paging. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly currentLocationRetrieved: OPTIONAL<NULL>,
         /**
          * @summary `ageOfLocationInformation`.
+         * @description
+         *
+         * Age of the location estimate. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly ageOfLocationInformation: OPTIONAL<AgeOfLocationInformation>,
         /**
          * @summary `vplmnId`.
+         * @description
+         *
+         * Visited PLMN identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly vplmnId: OPTIONAL<PLMN_Id>,
         /**
          * @summary `localtimeZone`.
+         * @description
+         *
+         * Local time zone (see 3GPP TS 29.272). (3GPP TS 29.002 V19.1.0 clause
+         * 17.7.1)
+         *
          * @public
          * @readonly
          */
         readonly localtimeZone: OPTIONAL<TimeZone>,
         /**
          * @summary `rat_Type`.
+         * @description
+         *
+         * Radio access technology in use. (3GPP TS 29.002 V19.1.0 clause
+         * 17.7.1)
+         *
          * @public
          * @readonly
          */
@@ -184,6 +238,10 @@ class LocationInformation5GS {
         readonly extensionContainer: OPTIONAL<ExtensionContainer>,
         /**
          * @summary `nrTrackingAreaIdentity`.
+         * @description
+         *
+         * NR Tracking Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+         *
          * @public
          * @readonly
          */

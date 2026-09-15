@@ -1,0 +1,44 @@
+{
+  "name": "@wildboar/cap",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts",
+    "./CAP-GPRS-ReferenceNumber": "./src/lib/modules/CAP-GPRS-ReferenceNumber/index.mts",
+    "./CAP-SMS-ops-args": "./src/lib/modules/CAP-SMS-ops-args/index.mts",
+    "./CAP-U-ABORT-Data": "./src/lib/modules/CAP-U-ABORT-Data/index.mts",
+    "./CAP-classes": "./src/lib/modules/CAP-classes/index.mts",
+    "./CAP-datatypes": "./src/lib/modules/CAP-datatypes/index.mts",
+    "./CAP-errorcodes": "./src/lib/modules/CAP-errorcodes/index.mts",
+    "./CAP-errortypes": "./src/lib/modules/CAP-errortypes/index.mts",
+    "./CAP-gprsSSF-gsmSCF-ops-args": "./src/lib/modules/CAP-gprsSSF-gsmSCF-ops-args/index.mts",
+    "./CAP-gprsSSF-gsmSCF-pkgs-contracts-acs": "./src/lib/modules/CAP-gprsSSF-gsmSCF-pkgs-contracts-acs/index.mts",
+    "./CAP-gsmSCF-gsmSRF-ops-args": "./src/lib/modules/CAP-gsmSCF-gsmSRF-ops-args/index.mts",
+    "./CAP-gsmSCF-gsmSRF-pkgs-contracts-acs": "./src/lib/modules/CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/index.mts",
+    "./CAP-gsmSSF-gsmSCF-ops-args": "./src/lib/modules/CAP-gsmSSF-gsmSCF-ops-args/index.mts",
+    "./CAP-gsmSSF-gsmSCF-pkgs-contracts-acs": "./src/lib/modules/CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/index.mts",
+    "./CAP-object-identifiers": "./src/lib/modules/CAP-object-identifiers/index.mts",
+    "./CAP-operationcodes": "./src/lib/modules/CAP-operationcodes/index.mts",
+    "./CAP-smsSSF-gsmSCF-pkgs-contracts-acs": "./src/lib/modules/CAP-smsSSF-gsmSCF-pkgs-contracts-acs/index.mts",
+    "./Core-INAP-CS1-DataTypes": "./src/lib/modules/Core-INAP-CS1-DataTypes/index.mts",
+    "./IN-CS2-datatypes": "./src/lib/modules/IN-CS2-datatypes/index.mts",
+    "./MAP-CH-DataTypes": "./src/lib/modules/MAP-CH-DataTypes/index.mts",
+    "./MAP-CommonDataTypes": "./src/lib/modules/MAP-CommonDataTypes/index.mts",
+    "./MAP-ExtensionDataTypes": "./src/lib/modules/MAP-ExtensionDataTypes/index.mts",
+    "./MAP-MS-DataTypes": "./src/lib/modules/MAP-MS-DataTypes/index.mts",
+    "./Remote-Operations-Information-Objects": "./src/lib/modules/Remote-Operations-Information-Objects/index.mts",
+    "./TC-Notation-Extensions": "./src/lib/modules/TC-Notation-Extensions/index.mts",
+    "./TCAPMessages": "./src/lib/modules/TCAPMessages/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
+    ]
+  }
+}

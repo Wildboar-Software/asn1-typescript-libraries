@@ -19,7 +19,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 /**
  * @summary GetDisplayArgument
  * @description
- * 
+ *
+ * Get Display request (ECMA-269 §21.1.4.1). ASN.1 `display` is spec
+ * `displayID`.
+ *
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
+ * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +42,29 @@ class GetDisplayArgument {
     constructor (
         /**
          * @summary `device`.
+         * @description
+         *
+         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+         * 1).
          * @public
          * @readonly
          */
         readonly device: DeviceID,
         /**
          * @summary `display`.
+         * @description
+         *
+         * Display to query (`displayID`). Absent: all displays.
          * @public
          * @readonly
          */
         readonly display: OPTIONAL<DisplayID>,
         /**
          * @summary `extensions`.
+         * @description
+         *
+         * Optional security (timestamp, sequence, securityInfo) and
+         * privateData.
          * @public
          * @readonly
          */
