@@ -261,10 +261,22 @@ describe("normalizePeriod()", () => {
         expectSame(
             new Period([
                 new DayTimeBand(
-                    DayTimeBand._default_value_for_startDayTime,
-                    DayTimeBand._default_value_for_endDayTime,
+                    DayTimeBand.START_OF_DAY,
+                    DayTimeBand.END_OF_DAY,
                 ),
             ]),
+            new Period(),
+        );
+    });
+
+    it("omits timesOfDay when any band is the whole day", () => {
+        const morning = new DayTimeBand(new DayTime(9), new DayTime(12));
+        const wholeDay = new DayTimeBand(
+            DayTimeBand.START_OF_DAY,
+            DayTimeBand.END_OF_DAY,
+        );
+        expectSame(
+            new Period([morning, wholeDay]),
             new Period(),
         );
     });
@@ -275,6 +287,18 @@ describe("normalizePeriod()", () => {
         expectSame(
             new Period([afternoon, morning]),
             new Period([morning, afternoon]),
+        );
+    });
+
+    it("de-duplicates equal timesOfDay SET members", () => {
+        const morning = new DayTimeBand(new DayTime(9), new DayTime(12));
+        const morningAgain = new DayTimeBand(
+            new DayTime(9, 0, 0),
+            new DayTime(12, 0, 0),
+        );
+        expectSame(
+            new Period([morning, morningAgain]),
+            new Period([morning]),
         );
     });
 
@@ -308,6 +332,37 @@ describe("normalizePeriod()", () => {
         expectDifferent(
             new Period(undefined, { intDay: [2] }, undefined, undefined, [1996]),
             new Period(undefined, { intDay: [2] }, { allWeeks: null }, undefined, [1996]),
+        );
+    });
+
+    it("collapses all days of all months to an omitted period", () => {
+        // If `months` were dropped before collapsing days, 1..31 would
+        // be read as days-of-week and would not collapse.
+        const daysOfMonth = Array.from({ length: 31 }, (_, i) => i + 1);
+        const monthsOfYear = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        expectSame(
+            new Period(
+                undefined,
+                { intDay: daysOfMonth },
+                undefined,
+                { intMonth: monthsOfYear },
+            ),
+            new Period(),
+        );
+    });
+
+    it("omits allMonths then allWeeks when both are redundant for days-of-week", () => {
+        const normalized = normalizePeriod(new Period(
+            undefined,
+            { intDay: [2] },
+            { allWeeks: null },
+            { allMonths: null },
+        ));
+        expect(normalized.weeks).toBeUndefined();
+        expect(normalized.months).toBeUndefined();
+        expectSame(
+            normalized,
+            new Period(undefined, { intDay: [2] }),
         );
     });
 });

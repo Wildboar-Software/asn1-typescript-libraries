@@ -81,13 +81,27 @@ export class DayTimeBand {
     }
 
     /**
+     * @summary DEFAULT `startDayTime` (`{hour 0}`).
+     * @constant
+     * @author Cursor Grok 4.6
+     */
+    public static readonly START_OF_DAY: DayTime = new DayTime(0);
+
+    /**
+     * @summary DEFAULT `endDayTime` (`{hour 23, minute 59, second 59}`).
+     * @constant
+     * @author Cursor Grok 4.6
+     */
+    public static readonly END_OF_DAY: DayTime = new DayTime(23, 59, 59);
+
+    /**
      * @summary Getter that returns the default value for `startDayTime`.
      * @public
      * @static
      * @method
      */
     public static get _default_value_for_startDayTime(): DayTime {
-        return DayTime._from_object({ hour: 0, minute: 0, second: 0, _unrecognizedExtensionsList: [] });
+        return DayTimeBand.START_OF_DAY;
     }
     /**
      * @summary Getter that returns the default value for `endDayTime`.
@@ -96,7 +110,73 @@ export class DayTimeBand {
      * @method
      */
     public static get _default_value_for_endDayTime(): DayTime {
-        return DayTime._from_object({ hour: 23, minute: 59, second: 59, _unrecognizedExtensionsList: [] });
+        return DayTimeBand.END_OF_DAY;
+    }
+
+    /**
+     * @summary Whether `startDayTime` is 00:00:00.
+     * @description
+     *
+     * Absent `startDayTime` is DEFAULT `{hour 0}` (minute and second
+     * DEFAULT 0). Present `{hour 0}` is the same instant.
+     *
+     * @returns {boolean} `true` if the band starts at midnight.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isStartOfDay (): boolean {
+        return (this.startDayTime === undefined)
+            || this.startDayTime.isEqualTo(DayTimeBand.START_OF_DAY);
+    }
+
+    /**
+     * @summary Whether `endDayTime` is 23:59:59.
+     * @description
+     *
+     * Absent `endDayTime` is DEFAULT `{hour 23, minute 59, second 59}`.
+     * Present `{hour 23}` is 23:00:00, not the end of the day, because
+     * `DayTime` minute and second default to 0.
+     *
+     * @returns {boolean} `true` if the band ends at 23:59:59.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isEndOfDay (): boolean {
+        return (this.endDayTime === undefined)
+            || this.endDayTime.isEqualTo(DayTimeBand.END_OF_DAY);
+    }
+
+    /**
+     * @summary Compare this band to another for SET ordering.
+     * @description
+     *
+     * Orders by start, then end. Missing ends use the `DayTimeBand`
+     * DEFAULTs (`START_OF_DAY` / `END_OF_DAY`).
+     *
+     * @param {DayTimeBand} other The other band.
+     * @returns {number} Negative, `0`, or positive.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public compare (other: DayTimeBand): number {
+        const startDiff = (this.startDayTime ?? DayTimeBand.START_OF_DAY)
+            .compare(other.startDayTime ?? DayTimeBand.START_OF_DAY);
+        if (startDiff !== 0) {
+            return startDiff;
+        }
+        return (this.endDayTime ?? DayTimeBand.END_OF_DAY)
+            .compare(other.endDayTime ?? DayTimeBand.END_OF_DAY);
+    }
+
+    /**
+     * @summary Whether two bands cover the same start and end.
+     * @param {DayTimeBand} other The other band.
+     * @returns {boolean} `true` iff start and end match, applying DEFAULTs.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isEqualTo (other: DayTimeBand): boolean {
+        return (this.compare(other) === 0);
     }
 }
 

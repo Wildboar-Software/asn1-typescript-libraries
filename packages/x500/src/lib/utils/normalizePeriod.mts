@@ -45,17 +45,6 @@ const BIT_MONTH_MAX = 11;
 const BIT_NAMED_DAY_MAX = 6;
 
 /**
- * @summary Convert an ASN.1 `INTEGER` to a JavaScript number.
- * @param {INTEGER} value The INTEGER (number or bigint).
- * @returns {number} `Number(value)`.
- * @function
- * @author Cursor Grok 4.6
- */
-function toNumber(value: INTEGER): number {
-    return Number(value);
-}
-
-/**
  * @summary Sort and de-duplicate a `SET OF INTEGER`.
  * @description
  *
@@ -68,7 +57,8 @@ function toNumber(value: INTEGER): number {
  * @author Cursor Grok 4.6
  */
 function uniqueSorted(values: INTEGER[]): number[] {
-    return Array.from(new Set(values.map(toNumber))).sort((a, b) => a - b);
+    return Array.from(new Set(values.map((value) => Number(value))))
+        .sort((a, b) => a - b);
 }
 
 /**
@@ -105,6 +95,9 @@ function sameSet(actual: readonly INTEGER[], expected: readonly number[]): boole
  * same named value. Returns `undefined` if a TRUE bit lies outside the
  * named range, so the original BIT STRING can be kept.
  *
+ * Bits are visited from 0 upward, so the result is already unique and
+ * ascending.
+ *
  * @param {BIT_STRING} bits Named bits (`TRUE_BIT` where set).
  * @param {number} maxBitIndex Highest named bit (inclusive).
  * @returns {number[] | undefined} Sorted 1-based ints, or `undefined`.
@@ -125,7 +118,7 @@ function bitsToInts(
         }
         ints.push(i + 1);
     }
-    return uniqueSorted(ints);
+    return ints;
 }
 
 /**
@@ -141,104 +134,12 @@ function bitsToInts(
  * @author Cursor Grok 4.6
  */
 function trimmedBits(bits: BIT_STRING): BIT_STRING {
-    let lastTrue = -1;
-    for (let i = 0; i < bits.length; i++) {
+    for (let i = bits.length - 1; i >= 0; i--) {
         if (bits[i] === TRUE_BIT) {
-            lastTrue = i;
+            return bits.slice(0, i + 1);
         }
     }
-    if (lastTrue < 0) {
-        return new Uint8ClampedArray(0);
-    }
-    return bits.slice(0, lastTrue + 1);
-}
-
-/**
- * @summary Type guard for `intDay` or `bitDay`.
- * @param {Period_days} days A `Period.days` CHOICE value.
- * @returns {boolean} `true` if the CHOICE is INTEGER or BIT STRING days.
- * @function
- * @author Cursor Grok 4.6
- */
-function isIntOrBitDay(days: Period_days): days is
-    | { intDay: INTEGER[] }
-    | { bitDay: BIT_STRING } {
-    return ("intDay" in days) || ("bitDay" in days);
-}
-
-/**
- * @summary Type guard for `days.dayOf`.
- * @description
- *
- * X.520 clause 10.2: `dayOf` is the Nth `NamedDay` of a month. If used,
- * `weeks` is not meaningful and is ignored.
- *
- * @param {Period_days} days A `Period.days` CHOICE value.
- * @returns {boolean} `true` if the CHOICE is `dayOf`.
- * @function
- * @author Cursor Grok 4.6
- */
-function isDayOf(days: Period_days): days is { dayOf: XDayOf } {
-    return ("dayOf" in days);
-}
-
-/**
- * @summary Type guard for `intWeek` or `bitWeek`.
- * @param {Period_weeks} weeks A `Period.weeks` CHOICE value.
- * @returns {boolean} `true` if the CHOICE is INTEGER or BIT STRING weeks.
- * @function
- * @author Cursor Grok 4.6
- */
-function isIntOrBitWeek(weeks: Period_weeks): weeks is
-    | { intWeek: INTEGER[] }
-    | { bitWeek: BIT_STRING } {
-    return ("intWeek" in weeks) || ("bitWeek" in weeks);
-}
-
-/**
- * @summary Type guard for `allWeeks`.
- * @description
- *
- * X.520 clause 10.2: `allWeeks` means every week within the next
- * element. It also lets `days` stay days-of-week when `months` follows.
- *
- * @param {Period_weeks} weeks A `Period.weeks` CHOICE value.
- * @returns {boolean} `true` if the CHOICE is `allWeeks`.
- * @function
- * @author Cursor Grok 4.6
- */
-function isAllWeeks(weeks: Period_weeks): weeks is { allWeeks: null } {
-    return ("allWeeks" in weeks);
-}
-
-/**
- * @summary Type guard for `intMonth` or `bitMonth`.
- * @param {Period_months} months A `Period.months` CHOICE value.
- * @returns {boolean} `true` if the CHOICE is INTEGER or BIT STRING months.
- * @function
- * @author Cursor Grok 4.6
- */
-function isIntOrBitMonth(months: Period_months): months is
-    | { intMonth: INTEGER[] }
-    | { bitMonth: BIT_STRING } {
-    return ("intMonth" in months) || ("bitMonth" in months);
-}
-
-/**
- * @summary Type guard for `allMonths`.
- * @description
- *
- * X.520 clause 10.2: `allMonths` means every month. It also lets `weeks`
- * mean weeks-of-month, or `days` mean days-of-month, for all months
- * (example e).
- *
- * @param {Period_months} months A `Period.months` CHOICE value.
- * @returns {boolean} `true` if the CHOICE is `allMonths`.
- * @function
- * @author Cursor Grok 4.6
- */
-function isAllMonths(months: Period_months): months is { allMonths: null } {
-    return ("allMonths" in months);
+    return new Uint8ClampedArray(0);
 }
 
 /**
@@ -379,7 +280,7 @@ function normalizeDays(
     if (!days) {
         return undefined;
     }
-    if (isDayOf(days)) {
+    if ("dayOf" in days) {
         return { dayOf: normalizeXDayOf(days.dayOf) };
     }
     if ("intDay" in days) {
@@ -413,7 +314,7 @@ function normalizeWeeks(
     if (!weeks) {
         return undefined;
     }
-    if (isAllWeeks(weeks)) {
+    if ("allWeeks" in weeks) {
         return ALL_WEEKS;
     }
     if ("intWeek" in weeks) {
@@ -448,7 +349,7 @@ function normalizeMonths(
     if (!months) {
         return undefined;
     }
-    if (isAllMonths(months)) {
+    if ("allMonths" in months) {
         return ALL_MONTHS;
     }
     if ("intMonth" in months) {
@@ -486,7 +387,7 @@ function collapseCompleteDays(
     months: Period_months | undefined,
     years: INTEGER[] | undefined,
 ): Period_days | undefined {
-    if (!days || !isIntOrBitDay(days) || !("intDay" in days)) {
+    if (!days || !("intDay" in days)) {
         return days;
     }
     const ints = days.intDay;
@@ -518,7 +419,7 @@ function collapseCompleteWeeks(
     weeks: Period_weeks | undefined,
     months: Period_months | undefined,
 ): Period_weeks | undefined {
-    if (!weeks || !isIntOrBitWeek(weeks) || !("intWeek" in weeks)) {
+    if (!weeks || !("intWeek" in weeks)) {
         return weeks;
     }
     if (months) {
@@ -543,7 +444,7 @@ function collapseCompleteWeeks(
 function collapseCompleteMonths(
     months: Period_months | undefined,
 ): Period_months | undefined {
-    if (!months || !isIntOrBitMonth(months) || !("intMonth" in months)) {
+    if (!months || !("intMonth" in months)) {
         return months;
     }
     return sameSet(months.intMonth, MONTHS_OF_YEAR) ? ALL_MONTHS : months;
@@ -570,7 +471,11 @@ function canOmitAllWeeks(
     months: Period_months | undefined,
     years: INTEGER[] | undefined,
 ): boolean {
-    if (days && isIntOrBitDay(days) && (months || (years && years.length))) {
+    if (
+        days
+        && (("intDay" in days) || ("bitDay" in days))
+        && (months || (years && years.length))
+    ) {
         return false;
     }
     return true;
@@ -595,86 +500,13 @@ function canOmitAllMonths(
     days: Period_days | undefined,
     weeks: Period_weeks | undefined,
 ): boolean {
-    if (weeks && isIntOrBitWeek(weeks)) {
+    if (weeks && (("intWeek" in weeks) || ("bitWeek" in weeks))) {
         return false;
     }
-    if (days && isIntOrBitDay(days) && !weeks) {
+    if (days && (("intDay" in days) || ("bitDay" in days)) && !weeks) {
         return false;
     }
     return true;
-}
-
-/**
- * @summary Seconds from midnight for a band start, applying DEFAULT `{hour 0}`.
- * @param {DayTime | undefined} time `startDayTime`, or absent for the DEFAULT.
- * @returns {number} `hour*3600 + minute*60 + second`.
- * @function
- * @author Cursor Grok 4.6
- */
-function dayTimeStartScore(time: DayTime | undefined): number {
-    const start = DayTimeBand._default_value_for_startDayTime;
-    return (
-        (Number(time?.hour ?? start.hour) * 3600)
-        + (Number(time?.minute ?? start.minute ?? 0) * 60)
-        + Number(time?.second ?? start.second ?? 0)
-    );
-}
-
-/**
- * @summary Seconds from midnight for a band end.
- * @description
- *
- * Absent `endDayTime` is DEFAULT `{hour 23, minute 59, second 59}`.
- * Present `{hour 17}` still uses `DayTime` field defaults (minute and
- * second 0), not 17:59:59.
- *
- * @param {DayTime | undefined} time `endDayTime`, or absent for the DEFAULT.
- * @returns {number} `hour*3600 + minute*60 + second`.
- * @function
- * @author Cursor Grok 4.6
- */
-function dayTimeEndScore(time: DayTime | undefined): number {
-    const end = DayTimeBand._default_value_for_endDayTime;
-    if (!time) {
-        return (
-            (Number(end.hour) * 3600)
-            + (Number(end.minute ?? 59) * 60)
-            + Number(end.second ?? 59)
-        );
-    }
-    return (
-        (Number(time.hour) * 3600)
-        + (Number(time.minute ?? DayTime._default_value_for_minute) * 60)
-        + Number(time.second ?? DayTime._default_value_for_second)
-    );
-}
-
-/**
- * @summary Whether `startDayTime` equals DEFAULT `{hour 0}`.
- * @param {DayTime | undefined} time The start, possibly absent.
- * @returns {boolean} `true` if start is 00:00:00.
- * @function
- * @author Cursor Grok 4.6
- */
-function isDefaultStart(time: DayTime | undefined): boolean {
-    return dayTimeStartScore(time) === dayTimeStartScore(undefined);
-}
-
-/**
- * @summary Whether `endDayTime` equals DEFAULT `{hour 23, minute 59, second 59}`.
- * @param {DayTime | undefined} time The end, possibly absent.
- * @returns {boolean} `true` if end is 23:59:59.
- * @function
- * @author Cursor Grok 4.6
- */
-function isDefaultEnd(time: DayTime | undefined): boolean {
-    const end = DayTimeBand._default_value_for_endDayTime;
-    const defaultEndScore = (
-        (Number(end.hour) * 3600)
-        + (Number(end.minute ?? 59) * 60)
-        + Number(end.second ?? 59)
-    );
-    return dayTimeEndScore(time) === defaultEndScore;
 }
 
 /**
@@ -709,12 +541,12 @@ function normalizeDayTime(time: DayTime): DayTime {
  * @author Cursor Grok 4.6
  */
 function normalizeDayTimeBand(band: DayTimeBand): DayTimeBand {
-    const start = (band.startDayTime === undefined) || isDefaultStart(band.startDayTime)
+    const start = band.isStartOfDay()
         ? undefined
-        : normalizeDayTime(band.startDayTime);
-    const end = (band.endDayTime === undefined) || isDefaultEnd(band.endDayTime)
+        : normalizeDayTime(band.startDayTime!);
+    const end = band.isEndOfDay()
         ? undefined
-        : normalizeDayTime(band.endDayTime);
+        : normalizeDayTime(band.endDayTime!);
     return new DayTimeBand(
         start,
         end,
@@ -723,32 +555,17 @@ function normalizeDayTimeBand(band: DayTimeBand): DayTimeBand {
 }
 
 /**
- * @summary Whether a band covers the whole day (DEFAULT start and end).
+ * @summary Canonicalize `timesOfDay`: sort the SET, drop a full-day band.
  * @description
  *
- * X.520 clause 10.2: if `timesOfDay` is not included, all times of the
- * day are valid within the next element. A single full-day band is that
- * same meaning.
+ * `timesOfDay` is `SET SIZE (1..MAX) OF DayTimeBand`. If any band is
+ * the whole day (00:00:00–23:59:59), the others are redundant and the
+ * component is omitted: X.520 clause 10.2 says that missing
+ * `timesOfDay` already means all times of the day.
  *
- * @param {DayTimeBand} band A canonical band.
- * @returns {boolean} `true` if 00:00:00–23:59:59.
- * @function
- * @author Cursor Grok 4.6
- */
-function isFullDayBand(band: DayTimeBand): boolean {
-    return isDefaultStart(band.startDayTime) && isDefaultEnd(band.endDayTime);
-}
-
-/**
- * @summary Canonicalize `timesOfDay`: sort the SET, drop a lone full-day band.
- * @description
- *
- * `timesOfDay` is `SET SIZE (1..MAX) OF DayTimeBand`. Members are sorted
- * by start then end. Duplicate (start, end) pairs are removed. A single
- * band that is the whole day is omitted.
- *
- * Overlapping bands are **not** merged; X.520 clause 10.2 does not
- * define that encoding equivalence.
+ * Otherwise members are sorted by start then end. Duplicate (start,
+ * end) pairs are removed. Overlapping bands are **not** merged; X.520
+ * clause 10.2 does not define that encoding equivalence.
  *
  * @param {DayTimeBand[] | undefined} bands The SET, if present.
  * @returns {DayTimeBand[] | undefined} Canonical SET, or `undefined`.
@@ -761,30 +578,35 @@ function normalizeTimesOfDay(
     if (!bands || (bands.length === 0)) {
         return undefined;
     }
-    const normalized = bands
-        .map(normalizeDayTimeBand)
-        .sort((a, b) => {
-            const startDiff = dayTimeStartScore(a.startDayTime)
-                - dayTimeStartScore(b.startDayTime);
-            if (startDiff !== 0) {
-                return startDiff;
-            }
-            return dayTimeEndScore(a.endDayTime) - dayTimeEndScore(b.endDayTime);
-        });
-    const unique: DayTimeBand[] = [];
-    const seen = new Set<string>();
-    for (const band of normalized) {
-        const key = `${dayTimeStartScore(band.startDayTime)}:${dayTimeEndScore(band.endDayTime)}`;
-        if (seen.has(key)) {
-            continue;
+    const count = bands.length;
+    const normalized: DayTimeBand[] = new Array(count);
+    for (let i = 0; i < count; i++) {
+        const band = bands[i];
+        if (band.isStartOfDay() && band.isEndOfDay()) {
+            return undefined;
         }
-        seen.add(key);
-        unique.push(band);
+        normalized[i] = normalizeDayTimeBand(band);
     }
-    if ((unique.length === 1) && isFullDayBand(unique[0])) {
-        return undefined;
+    let hasDuplicate = false;
+    normalized.sort((a, b) => {
+        const cmp = a.compare(b);
+        if (cmp === 0) {
+            hasDuplicate = true;
+        }
+        return cmp;
+    });
+    if (!hasDuplicate) {
+        return normalized;
     }
-    return unique;
+    let lastUnique = 0;
+    for (let i = 1; i < count; i++) {
+        if (!normalized[lastUnique].isEqualTo(normalized[i])) {
+            lastUnique++;
+            normalized[lastUnique] = normalized[i];
+        }
+    }
+    normalized.length = lastUnique + 1;
+    return normalized;
 }
 
 /**
@@ -811,8 +633,8 @@ function normalizeTimesOfDay(
  *   `years` follows; `allMonths` must be kept when `days` is days-of-month
  *   (example e) or `weeks` is weeks-of-month.
  * - If `dayOf` is used, `weeks` is dropped (X.520: not meaningful, ignored).
- * - `DayTime` / `DayTimeBand` DEFAULT values are omitted; a single band
- *   covering the whole day is treated as omitted `timesOfDay`.
+ * - `DayTime` / `DayTimeBand` DEFAULT values are omitted; a band covering
+ *   the whole day is treated as omitted `timesOfDay`.
  * - `timesOfDay` bands are sorted (it is a SET).
  *
  * This does **not** rewrite week 5 / 53 or `fifth` NamedDay; those are
@@ -833,18 +655,29 @@ function normalizePeriod(period: Period): Period {
         : period.years;
 
     // X.520 10.2: if `dayOf` is specified, `weeks` is ignored.
-    if (days && isDayOf(days)) {
+    if (days && ("dayOf" in days)) {
         weeks = undefined;
     }
 
+    // Collapse complete sets while the next coarser unit is still
+    // present. `intDay` 1..31 is "all days of the month" only if
+    // `months` is present; `intWeek` 1..5 is `allWeeks` only if
+    // `months` is present. `collapseCompleteMonths` rewrites 1..12 to
+    // `allMonths` and does **not** drop `months`. Do not omit
+    // `allMonths` / `allWeeks` before these three calls, and do not
+    // reorder them to drop a coarser unit first.
     days = collapseCompleteDays(days, weeks, months, years);
     weeks = collapseCompleteWeeks(weeks, months);
     months = collapseCompleteMonths(months);
 
-    if (months && isAllMonths(months) && canOmitAllMonths(days, weeks)) {
+    // Omit `allMonths` before `allWeeks`. Dropping a redundant
+    // `allMonths` can make a remaining `allWeeks` omittable (days stay
+    // days-of-week with no following `months`). Reversing these two
+    // would leave a useless `allWeeks` when both were `all*`.
+    if (months && ("allMonths" in months) && canOmitAllMonths(days, weeks)) {
         months = undefined;
     }
-    if (weeks && isAllWeeks(weeks) && canOmitAllWeeks(days, months, years)) {
+    if (weeks && ("allWeeks" in weeks) && canOmitAllWeeks(days, months, years)) {
         weeks = undefined;
     }
 
