@@ -17,6 +17,8 @@ import {
  * @summary cia_ub_storedPasswordLength
  * @description
  * 
+ * Maximum stored password length in bytes (64). ISO/IEC 7816-15:2016 Annex A.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

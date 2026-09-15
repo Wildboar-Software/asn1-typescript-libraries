@@ -19,6 +19,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary URL_url
  * @description
  * 
+ * URL as `PrintableString` or `IA5String`. ISO/IEC 7816-15:2016 §8.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

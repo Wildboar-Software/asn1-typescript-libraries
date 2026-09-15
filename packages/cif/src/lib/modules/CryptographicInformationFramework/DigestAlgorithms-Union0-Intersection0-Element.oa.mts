@@ -19,6 +19,9 @@ import { id_sha1 } from "../CryptographicInformationFramework/id-sha1.va.mjs";
  * @summary DigestAlgorithms_Union0_Intersection0_Element
  * @description
  * 
+ * SHA-1 member of `DigestAlgorithms`: NULL parameters identified by `id-sha1`.
+ * ISO/IEC 7816-15:2016 Annex A.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

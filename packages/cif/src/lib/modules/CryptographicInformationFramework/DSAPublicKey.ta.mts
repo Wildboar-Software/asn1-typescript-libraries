@@ -18,6 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DSAPublicKey
  * @description
  * 
+ * Raw DSA public key (INTEGER). ISO/IEC 7816-15:2016 §8.5.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

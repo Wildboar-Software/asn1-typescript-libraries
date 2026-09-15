@@ -17,6 +17,9 @@ import { CIO_OPAQUE } from "../CryptographicInformationFramework/CIO-OPAQUE.oca.
  * @summary AllowedOidDOs
  * @description
  * 
+ * Open `CIO-OPAQUE` set for OID-identified data objects. Empty here; profiles
+ * or PICS fill it. ISO/IEC 7816-15:2016 §8.8.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

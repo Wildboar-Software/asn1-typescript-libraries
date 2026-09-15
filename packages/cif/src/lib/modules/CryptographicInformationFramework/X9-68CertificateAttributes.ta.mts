@@ -19,6 +19,10 @@ import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue
  * @summary X9_68CertificateAttributes
  * @description
  * 
+ * ANSI X9.68 domain certificate. X9.68 is no longer in the ANSI catalog; this
+ * type is for backward compatibility and may become obsolete. Encoding may be
+ * DER or PER. ISO/IEC 7816-15:2016 §8.7.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +39,9 @@ class X9_68CertificateAttributes {
     constructor (
         /**
          * @summary `value`.
+         * @description
+         * `ReferencedValue` to the domain certificate or URL. ISO/IEC
+         * 7816-15:2016 §8.7.7.
          * @public
          * @readonly
          */
@@ -70,7 +77,8 @@ class X9_68CertificateAttributes {
  * @summary The Leading Root Component Types of X9_68CertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -83,7 +91,8 @@ const _root_component_type_list_1_spec_for_X9_68CertificateAttributes: $.Compone
  * @summary The Trailing Root Component Types of X9_68CertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -96,7 +105,8 @@ const _root_component_type_list_2_spec_for_X9_68CertificateAttributes: $.Compone
  * @summary The Extension Addition Component Types of X9_68CertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

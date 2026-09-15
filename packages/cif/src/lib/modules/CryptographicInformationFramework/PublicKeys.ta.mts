@@ -20,6 +20,9 @@ import { PublicKeyChoice, _decode_PublicKeyChoice, _encode_PublicKeyChoice } fro
  * @summary PublicKeys
  * @description
  * 
+ * Public-key directory contents (EF.PuKD), also used for `trustedPublicKeys`
+ * (cardholder trust points). ISO/IEC 7816-15:2016 §8.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

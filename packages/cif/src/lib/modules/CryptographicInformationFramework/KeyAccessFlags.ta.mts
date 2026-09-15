@@ -18,6 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KeyAccessFlags
  * @description
  * 
+ * How key material may leave the card. ISO/IEC 7816-15:2016 §8.2.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +37,9 @@ type KeyAccessFlags = BIT_STRING;
 
 /**
  * @summary KeyAccessFlags_sensitive
+ * @description
+ * Key material cannot be revealed in plaintext outside the card. ISO/IEC
+ * 7816-15:2016 §8.2.9.
  * @constant
  */
 export
@@ -49,6 +54,9 @@ const sensitive: number = KeyAccessFlags_sensitive; /* SHORT_NAMED_BIT */
 
 /**
  * @summary KeyAccessFlags_extractable
+ * @description
+ * If not set, the key cannot be extracted even in encrypted form. ISO/IEC
+ * 7816-15:2016 §8.2.9.
  * @constant
  */
 export
@@ -63,6 +71,8 @@ const extractable: number = KeyAccessFlags_extractable; /* SHORT_NAMED_BIT */
 
 /**
  * @summary KeyAccessFlags_alwaysSensitive
+ * @description
+ * The key has always been sensitive. ISO/IEC 7816-15:2016 §8.2.9.
  * @constant
  */
 export
@@ -77,6 +87,8 @@ const alwaysSensitive: number = KeyAccessFlags_alwaysSensitive; /* SHORT_NAMED_B
 
 /**
  * @summary KeyAccessFlags_neverExtractable
+ * @description
+ * The key has never been extractable. ISO/IEC 7816-15:2016 §8.2.9.
  * @constant
  */
 export
@@ -91,6 +103,8 @@ const neverExtractable: number = KeyAccessFlags_neverExtractable; /* SHORT_NAMED
 
 /**
  * @summary KeyAccessFlags_cardGenerated
+ * @description
+ * The key was randomly generated on the card. ISO/IEC 7816-15:2016 §8.2.9.
  * @constant
  */
 export

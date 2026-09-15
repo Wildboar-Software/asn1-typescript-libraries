@@ -20,6 +20,9 @@ import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPubl
  * @summary ECPublicKeyChoice
  * @description
  * 
+ * `raw` is ANSI X9.62 `ECPoint`; `spki` must contain an elliptic-curve public
+ * key (ISO/IEC 9594-8). ISO/IEC 7816-15:2016 §8.5.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

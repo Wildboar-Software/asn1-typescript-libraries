@@ -19,6 +19,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OidDOAttributes
  * @description
  * 
+ * Data container identified by an object identifier (e.g. an X.500 ATTRIBUTE,
+ * ISO/IEC 9594-6). ISO/IEC 7816-15:2016 §8.8.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +38,17 @@ class OidDOAttributes {
     constructor (
         /**
          * @summary `id`.
+         * @description
+         * Member of `AllowedOidDOs`. ISO/IEC 7816-15:2016 §8.8.4.
          * @public
          * @readonly
          */
         readonly id: OBJECT_IDENTIFIER,
         /**
          * @summary `value`.
+         * @description
+         * Value whose syntax is determined by `id`. ISO/IEC 7816-15:2016
+         * §8.8.4.
          * @public
          * @readonly
          */
@@ -70,7 +78,8 @@ class OidDOAttributes {
  * @summary The Leading Root Component Types of OidDOAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -84,7 +93,8 @@ const _root_component_type_list_1_spec_for_OidDOAttributes: $.ComponentSpec[] = 
  * @summary The Trailing Root Component Types of OidDOAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -97,7 +107,8 @@ const _root_component_type_list_2_spec_for_OidDOAttributes: $.ComponentSpec[] = 
  * @summary The Extension Addition Component Types of OidDOAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

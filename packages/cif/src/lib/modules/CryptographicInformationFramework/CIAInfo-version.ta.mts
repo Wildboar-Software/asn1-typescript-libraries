@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CIAInfo_version
  * @description
  * 
+ * `v2` is required for this edition; `v1` is PKCS #15. Unknown versions shall
+ * still be accepted. ISO/IEC 7816-15:2016 §8.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,8 @@ type CIAInfo_version = INTEGER;
 
 /**
  * @summary CIAInfo_version_v1
+ * @description
+ * PKCS #15 equivalent structure. ISO/IEC 7816-15:2016 §8.10.
  * @constant
  * @type {number}
  */
@@ -45,6 +50,8 @@ const v1: CIAInfo_version = CIAInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CIAInfo_version_v2
+ * @description
+ * This edition of ISO/IEC 7816-15. ISO/IEC 7816-15:2016 §8.10.
  * @constant
  * @type {number}
  */

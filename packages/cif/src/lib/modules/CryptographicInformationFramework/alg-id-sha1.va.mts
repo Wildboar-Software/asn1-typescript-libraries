@@ -24,6 +24,9 @@ import { _encode_SHA1Parameters } from "../CryptographicInformationFramework/SHA
  * @summary alg_id_sha1
  * @description
  * 
+ * Default `AlgorithmIdentifier` for URL digests: `id-sha1` with NULL
+ * parameters. ISO/IEC 7816-15:2016 Annex A.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

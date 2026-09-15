@@ -19,6 +19,10 @@ import { cia_alg_null } from "../CryptographicInformationFramework/cia-alg-null.
  * @summary AlgorithmSet
  * @description
  * 
+ * Extensible set of `CIO-ALGORITHM` objects used by `AlgorithmInfo`. This
+ * module ships `cia-alg-null` only; further members may follow PKCS #11
+ * mechanism numbering. ISO/IEC 7816-15:2016 Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

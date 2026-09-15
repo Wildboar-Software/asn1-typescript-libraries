@@ -18,6 +18,9 @@ import { ReferencedValue, _decode_ReferencedValue, _encode_ReferencedValue } fro
  * @summary ObjectValue
  * @description
  * 
+ * Unless a clause says otherwise, store the value by `indirect` reference
+ * rather than inlining it with `direct`. ISO/IEC 7816-15:2016 §8.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

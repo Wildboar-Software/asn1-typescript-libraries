@@ -21,6 +21,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SecurityEnvironmentInfo
  * @description
  * 
+ * A pre-set Security Environment on the card. ISO/IEC 7816-15:2016 §8.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +41,25 @@ class SecurityEnvironmentInfo {
     constructor (
         /**
          * @summary `se`.
+         * @description
+         * SE number. ISO/IEC 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
         readonly se: INTEGER,
         /**
          * @summary `owner`.
+         * @description
+         * Owner of the environment. ISO/IEC 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
         readonly owner: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `aid`.
+         * @description
+         * Application (ISO/IEC 7816-4 AID) for which the SE applies. ISO/IEC
+         * 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
@@ -86,7 +95,8 @@ class SecurityEnvironmentInfo {
  * @summary The Leading Root Component Types of SecurityEnvironmentInfo
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -101,7 +111,8 @@ const _root_component_type_list_1_spec_for_SecurityEnvironmentInfo: $.ComponentS
  * @summary The Trailing Root Component Types of SecurityEnvironmentInfo
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -114,7 +125,8 @@ const _root_component_type_list_2_spec_for_SecurityEnvironmentInfo: $.ComponentS
  * @summary The Extension Addition Component Types of SecurityEnvironmentInfo
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

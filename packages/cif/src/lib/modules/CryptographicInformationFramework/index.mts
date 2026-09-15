@@ -1,7 +1,11 @@
 /**
  * @description
  *
- * ASN.1 module `CryptographicInformationFramework`.
+ * ASN.1 module `CryptographicInformationFramework` `{iso(1) standard(0) 7816 15
+ * 1}` — ISO/IEC 7816-15:2016 Cryptographic information application (CIA / PKCS
+ * #15). CIOs describe keys, certificates, data containers, and authenticators
+ * on an ICC. EF.CIAInfo holds `CIAInfo`; EF.OD holds `CIOChoice` values
+ * pointing at PrKD, PuKD, SKD, CD, DCOD, and AOD files (see Table 1).
  */
 export * from "./AccessControlRule.ta.mjs";
 export * from "./AccessMode.ta.mjs";

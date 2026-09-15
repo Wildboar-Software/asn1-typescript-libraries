@@ -19,6 +19,9 @@ import { DigestAlgorithms_Union0_Intersection0_Element } from "../CryptographicI
  * @summary DigestAlgorithms
  * @description
  * 
+ * Open type constrained here to SHA-1 with NULL parameters; may be extended
+ * with further algorithm identifiers. ISO/IEC 7816-15:2016 Annex A.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

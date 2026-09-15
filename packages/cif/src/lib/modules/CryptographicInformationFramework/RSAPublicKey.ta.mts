@@ -18,6 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RSAPublicKey
  * @description
  * 
+ * Raw RSA public key. ISO/IEC 7816-15:2016 §8.5.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +36,16 @@ class RSAPublicKey {
     constructor (
         /**
          * @summary `modulus`.
+         * @description
+         * RSA modulus n. ISO/IEC 7816-15:2016 §8.5.2.
          * @public
          * @readonly
          */
         readonly modulus: INTEGER,
         /**
          * @summary `publicExponent`.
+         * @description
+         * RSA public exponent e. ISO/IEC 7816-15:2016 §8.5.2.
          * @public
          * @readonly
          */
@@ -69,7 +75,8 @@ class RSAPublicKey {
  * @summary The Leading Root Component Types of RSAPublicKey
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -83,7 +90,8 @@ const _root_component_type_list_1_spec_for_RSAPublicKey: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of RSAPublicKey
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -96,7 +104,8 @@ const _root_component_type_list_2_spec_for_RSAPublicKey: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of RSAPublicKey
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

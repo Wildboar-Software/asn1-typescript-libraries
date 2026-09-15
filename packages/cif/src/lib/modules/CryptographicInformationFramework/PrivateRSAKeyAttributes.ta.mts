@@ -25,6 +25,8 @@ import { PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOper
  * @summary PrivateRSAKeyAttributes
  * @description
  * 
+ * RSA private-key type attributes. ISO/IEC 7816-15:2016 §8.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,18 +45,28 @@ class PrivateRSAKeyAttributes {
     constructor (
         /**
          * @summary `value`.
+         * @description
+         * Path to the file holding the private key; empty path if no file need
+         * be specified. ISO/IEC 7816-15:2016 §8.4. RSA.
          * @public
          * @readonly
          */
         readonly value: Path,
         /**
          * @summary `modulusLength`.
+         * @description
+         * Modulus length in bits (e.g. 1024), required to format data before
+         * sending it to the card. ISO/IEC 7816-15:2016 §8.4.2.
          * @public
          * @readonly
          */
         readonly modulusLength: INTEGER,
         /**
          * @summary `keyInfo`.
+         * @description
+         * If present, overrides `CIAInfo.supportedAlgorithms` referenced by
+         * `CommonKeyAttributes.algReference`. Omit when available by other
+         * means. ISO/IEC 7816-15:2016 §8.4.2.
          * @public
          * @readonly
          */
@@ -90,7 +102,8 @@ class PrivateRSAKeyAttributes {
  * @summary The Leading Root Component Types of PrivateRSAKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -105,7 +118,8 @@ const _root_component_type_list_1_spec_for_PrivateRSAKeyAttributes: $.ComponentS
  * @summary The Trailing Root Component Types of PrivateRSAKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -118,7 +132,8 @@ const _root_component_type_list_2_spec_for_PrivateRSAKeyAttributes: $.ComponentS
  * @summary The Extension Addition Component Types of PrivateRSAKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

@@ -20,6 +20,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CertBasedAuthenticationAttributes
  * @description
  * 
+ * Asymmetric role authentication using a card-verifiable certificate. ISO/IEC
+ * 7816-15:2016 §8.9.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +40,21 @@ class CertBasedAuthenticationAttributes {
     constructor (
         /**
          * @summary `cha`.
+         * @description
+         * Certificate holder authorization (or CHA template) as in the CV
+         * certificate (ISO/IEC 7816-6). After successful verify and
+         * authentication with the corresponding key pair, this CHA is set valid
+         * and grants access to private objects protected under that
+         * authorization. ISO/IEC 7816-15:2016 §8.9.4.
          * @public
          * @readonly
          */
         readonly cha: OCTET_STRING,
         /**
          * @summary `cioSecurityId`.
+         * @description
+         * Authentication object required for a preliminary IFD protocol.
+         * ISO/IEC 7816-15:2016 §8.9.4.
          * @public
          * @readonly
          */
@@ -59,7 +71,8 @@ class CertBasedAuthenticationAttributes {
      * @summary Restructures an object into a CertBasedAuthenticationAttributes
      * @description
      * 
-     * This takes an `object` and converts it to a `CertBasedAuthenticationAttributes`.
+     * This takes an `object` and converts it to a
+     * `CertBasedAuthenticationAttributes`.
      * 
      * @public
      * @static
@@ -78,7 +91,8 @@ class CertBasedAuthenticationAttributes {
  * @summary The Leading Root Component Types of CertBasedAuthenticationAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -92,7 +106,8 @@ const _root_component_type_list_1_spec_for_CertBasedAuthenticationAttributes: $.
  * @summary The Trailing Root Component Types of CertBasedAuthenticationAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -105,7 +120,8 @@ const _root_component_type_list_2_spec_for_CertBasedAuthenticationAttributes: $.
  * @summary The Extension Addition Component Types of CertBasedAuthenticationAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

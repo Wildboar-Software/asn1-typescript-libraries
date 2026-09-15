@@ -28,6 +28,10 @@ import { InternalAuthObjectAttributes, _decode_InternalAuthObjectAttributes, _en
  * @summary AuthenticationObjectChoice
  * @description
  * 
+ * Each authentication object shall have a distinct
+ * `CommonAuthenticationObjectAttributes.authId` so private CIOs can look it up
+ * unambiguously. ISO/IEC 7816-15:2016 §8.9.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KEY_IDENTIFIER
  * @description
  * 
+ * Information object class for credential identifiers. `&id` is unique among
+ * `KeyIdentifiers`; `&Value` is the corresponding syntax. ISO/IEC 7816-15:2016
+ * §8.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,10 +58,16 @@ interface KEY_IDENTIFIER<
     }>;
     /**
      * @summary &id
+     * @description
+     * Unique integer among `KeyIdentifiers` (1–10 in this edition). ISO/IEC
+     * 7816-15:2016 §8.2.4, Annex A.2.4.
      */
     readonly "&id"?: INTEGER;
     /**
      * @summary &Value
+     * @description
+     * Syntax of the identifier (name+serial, OCTET STRING hash, etc.). ISO/IEC
+     * 7816-15:2016 §8.2.4.
      */
     readonly "&Value": Value;
 };

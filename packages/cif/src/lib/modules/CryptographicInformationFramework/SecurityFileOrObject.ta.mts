@@ -27,6 +27,9 @@ import { cia_ub_index } from "../CryptographicInformationFramework/cia-ub-index.
  * @summary SecurityFileOrObject
  * @description
  * 
+ * Descriptor of a preliminary security protocol the IFD must run. ISO/IEC
+ * 7816-15:2016 §7.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,42 +52,61 @@ class SecurityFileOrObject {
     constructor (
         /**
          * @summary `label`.
+         * @description
+         * May identify the security file or object. ISO/IEC 7816-15:2016 §7.4.
          * @public
          * @readonly
          */
         readonly label: OPTIONAL<Label>,
         /**
          * @summary `communicationMode`.
+         * @description
+         * Physical interface to which the protocols apply. ISO/IEC 7816-15:2016
+         * §7.4.
          * @public
          * @readonly
          */
         readonly communicationMode: OPTIONAL<CommunicationMode>,
         /**
          * @summary `fileOrObjectPath`.
+         * @description
+         * Path to the file or DO nesting protocol OIDs and parameters. ISO/IEC
+         * 7816-15:2016 §7.4.
          * @public
          * @readonly
          */
         readonly fileOrObjectPath: Path,
         /**
          * @summary `protocol`.
+         * @description
+         * Which of possibly several protocols in that file to use. ISO/IEC
+         * 7816-15:2016 §7.4.
          * @public
          * @readonly
          */
         readonly protocol: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `cioSecurityId`.
+         * @description
+         * Authentication object required for the preliminary protocol. ISO/IEC
+         * 7816-15:2016 §7.4.
          * @public
          * @readonly
          */
         readonly cioSecurityId: OPTIONAL<INTEGER>,
         /**
          * @summary `index`.
+         * @description
+         * Index of this descriptor (for `precondition` links). ISO/IEC
+         * 7816-15:2016 §7.4.
          * @public
          * @readonly
          */
         readonly index: OPTIONAL<INTEGER>,
         /**
          * @summary `precondition`.
+         * @description
+         * Index of a protocol that must run first. ISO/IEC 7816-15:2016 §7.4.
          * @public
          * @readonly
          */
@@ -130,7 +152,8 @@ class SecurityFileOrObject {
  * @summary The Leading Root Component Types of SecurityFileOrObject
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -149,7 +172,8 @@ const _root_component_type_list_1_spec_for_SecurityFileOrObject: $.ComponentSpec
  * @summary The Trailing Root Component Types of SecurityFileOrObject
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -162,7 +186,8 @@ const _root_component_type_list_2_spec_for_SecurityFileOrObject: $.ComponentSpec
  * @summary The Extension Addition Component Types of SecurityFileOrObject
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

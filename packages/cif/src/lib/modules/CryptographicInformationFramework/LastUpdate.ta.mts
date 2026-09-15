@@ -19,6 +19,9 @@ import { ReferencedValue, _decode_ReferencedValue, _encode_ReferencedValue } fro
  * @summary LastUpdate
  * @description
  * 
+ * `referencedTime` shall encode a GeneralizedTime and is intended when
+ * EF.CIAInfo is write-protected. ISO/IEC 7816-15:2016 §8.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

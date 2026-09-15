@@ -17,6 +17,9 @@ import { CIO_ALGORITHM } from "../CryptographicInformationFramework/CIO-ALGORITH
  * @summary AllowedAlgorithms
  * @description
  * 
+ * Open `CIO-ALGORITHM` set for generic keys. Empty in this module; profiles or
+ * PICS fill it. ISO/IEC 7816-15:2016 §8.2.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

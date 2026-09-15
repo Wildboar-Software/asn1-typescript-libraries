@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GenericKeyAttributes
  * @description
  * 
+ * Type-specific attributes for a key whose algorithm is identified by an object
+ * in `AllowedAlgorithms` (open; filled by profiles/PICS). ISO/IEC 7816-15:2016
+ * §8.2.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,17 @@ class GenericKeyAttributes {
     constructor (
         /**
          * @summary `keyType`.
+         * @description
+         * Algorithm object identifier from `AllowedAlgorithms`. ISO/IEC
+         * 7816-15:2016 §8.2.13.
          * @public
          * @readonly
          */
         readonly keyType: OBJECT_IDENTIFIER,
         /**
          * @summary `keyAttr`.
+         * @description
+         * Parameters for that algorithm. ISO/IEC 7816-15:2016 §8.2.13.
          * @public
          * @readonly
          */
@@ -70,7 +79,8 @@ class GenericKeyAttributes {
  * @summary The Leading Root Component Types of GenericKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -84,7 +94,8 @@ const _root_component_type_list_1_spec_for_GenericKeyAttributes: $.ComponentSpec
  * @summary The Trailing Root Component Types of GenericKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -97,7 +108,8 @@ const _root_component_type_list_2_spec_for_GenericKeyAttributes: $.ComponentSpec
  * @summary The Extension Addition Component Types of GenericKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

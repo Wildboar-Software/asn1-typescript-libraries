@@ -21,6 +21,9 @@ import { CommonDataContainerObjectAttributes, _decode_CommonDataContainerObjectA
  * @summary DataContainerObject
  * @description
  * 
+ * `CIO` of common object + common data-container + NULL subclass + type
+ * attributes. ISO/IEC 7816-15:2016 §8.8.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

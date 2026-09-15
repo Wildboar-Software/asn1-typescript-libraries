@@ -24,6 +24,11 @@ import { cia_ub_securityConditions } from "../CryptographicInformationFramework/
  * @summary SecurityCondition
  * @description
  * 
+ * Boolean expression over authentication: always, a named auth object, an
+ * ISO/IEC 7816 security-environment reference, negation, or
+ * conjunction/disjunction of 2..`cia-ub-securityConditions` sub-conditions.
+ * ISO/IEC 7816-15:2016 §8.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

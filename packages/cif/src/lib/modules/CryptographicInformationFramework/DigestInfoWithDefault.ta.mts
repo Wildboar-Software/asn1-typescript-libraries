@@ -23,6 +23,9 @@ import { alg_id_sha1 } from "../CryptographicInformationFramework/alg-id-sha1.va
  * @summary DigestInfoWithDefault
  * @description
  * 
+ * Digest used with `urlWithDigest`. `digestAlg` defaults to `alg-id-sha1`.
+ * ISO/IEC 7816-15:2016 Annex A.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +42,17 @@ class DigestInfoWithDefault {
     constructor (
         /**
          * @summary `digestAlg`.
+         * @description
+         * Defaults to SHA-1 (`alg-id-sha1`). The set is open and may be
+         * extended (e.g. SHA-2). ISO/IEC 7816-15:2016 Annex A.2.5.
          * @public
          * @readonly
          */
         readonly digestAlg: OPTIONAL<AlgorithmIdentifier>,
         /**
          * @summary `digest`.
+         * @description
+         * Digest octets; SIZE(8..128). ISO/IEC 7816-15:2016 Annex A.2.5.
          * @public
          * @readonly
          */
@@ -84,7 +92,8 @@ class DigestInfoWithDefault {
  * @summary The Leading Root Component Types of DigestInfoWithDefault
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -98,7 +107,8 @@ const _root_component_type_list_1_spec_for_DigestInfoWithDefault: $.ComponentSpe
  * @summary The Trailing Root Component Types of DigestInfoWithDefault
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -111,7 +121,8 @@ const _root_component_type_list_2_spec_for_DigestInfoWithDefault: $.ComponentSpe
  * @summary The Extension Addition Component Types of DigestInfoWithDefault
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

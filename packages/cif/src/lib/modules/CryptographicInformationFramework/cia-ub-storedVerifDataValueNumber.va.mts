@@ -17,6 +17,8 @@ import {
  * @summary cia_ub_storedVerifDataValueNumber
  * @description
  * 
+ * Maximum `verifDataHistoryLength` (8). ISO/IEC 7816-15:2016 Annex A.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

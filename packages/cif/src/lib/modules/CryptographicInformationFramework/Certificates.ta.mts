@@ -20,6 +20,10 @@ import { CertificateChoice, _decode_CertificateChoice, _encode_CertificateChoice
  * @summary Certificates
  * @description
  * 
+ * Certificate directory contents (EF.CD). Used for cardholder certs
+ * (`certificates`), trust-point certs (`trustedCertificates`), and other useful
+ * certs (`usefulCertificates`). ISO/IEC 7816-15:2016 §8.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

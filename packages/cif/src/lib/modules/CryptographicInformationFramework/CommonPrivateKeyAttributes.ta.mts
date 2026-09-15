@@ -25,6 +25,9 @@ import { KeyUsageConstraints, _decode_KeyUsageConstraints, _encode_KeyUsageConst
  * @summary CommonPrivateKeyAttributes
  * @description
  * 
+ * If `keyUsageConstraints` is present, `CommonObjectAttributes.userConsent`
+ * should also be set and the two correlated. ISO/IEC 7816-15:2016 §8.2.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,24 +48,36 @@ class CommonPrivateKeyAttributes {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         * Owner of the key, as in the corresponding certificate `subject`.
+         * ISO/IEC 7816-15:2016 §8.2.10.
          * @public
          * @readonly
          */
         readonly name: OPTIONAL<Name>,
         /**
          * @summary `keyIdentifiers`.
+         * @description
+         * Values that can be matched to external messages to select this key,
+         * or sent to a peer to name the key used. ISO/IEC 7816-15:2016 §8.2.10,
+         * §8.2.4.
          * @public
          * @readonly
          */
         readonly keyIdentifiers: OPTIONAL<CredentialIdentifier[]>,
         /**
          * @summary `generalName`.
+         * @description
+         * Additional names for the key owner. ISO/IEC 7816-15:2016 §8.2.10.
          * @public
          * @readonly
          */
         readonly generalName: OPTIONAL<GeneralNames>,
         /**
          * @summary `keyUsageConstraints`.
+         * @description
+         * Whether the IFD may issue C-RPs between preparation and usage on the
+         * logical channel (`immediateUsage`). ISO/IEC 7816-15:2016 §8.2.10.
          * @public
          * @readonly
          */
@@ -98,7 +113,8 @@ class CommonPrivateKeyAttributes {
  * @summary The Leading Root Component Types of CommonPrivateKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -114,7 +130,8 @@ const _root_component_type_list_1_spec_for_CommonPrivateKeyAttributes: $.Compone
  * @summary The Trailing Root Component Types of CommonPrivateKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -127,7 +144,8 @@ const _root_component_type_list_2_spec_for_CommonPrivateKeyAttributes: $.Compone
  * @summary The Extension Addition Component Types of CommonPrivateKeyAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

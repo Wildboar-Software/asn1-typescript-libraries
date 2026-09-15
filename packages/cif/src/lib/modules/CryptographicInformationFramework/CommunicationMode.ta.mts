@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CommunicationMode
  * @description
  * 
+ * Physical interface for an access-control rule (ISO/IEC 7816-4 transport
+ * type). If the IFD cannot provide the mode, the related `SecurityFileOrObject`
+ * may be inaccessible. ISO/IEC 7816-15:2016 §8.2.8, §7.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +39,8 @@ type CommunicationMode = BIT_STRING;
 
 /**
  * @summary CommunicationMode_contact
+ * @description
+ * Contacts (ISO/IEC 7816-3). ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  */
 export
@@ -49,6 +55,8 @@ const contact: number = CommunicationMode_contact; /* SHORT_NAMED_BIT */
 
 /**
  * @summary CommunicationMode_contactLess
+ * @description
+ * Proximity (ISO/IEC 14443). ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  */
 export
@@ -63,6 +71,8 @@ const contactLess: number = CommunicationMode_contactLess; /* SHORT_NAMED_BIT */
 
 /**
  * @summary CommunicationMode_usb
+ * @description
+ * USB (ISO/IEC 7816-12). ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  */
 export
@@ -77,6 +87,8 @@ const usb: number = CommunicationMode_usb; /* SHORT_NAMED_BIT */
 
 /**
  * @summary CommunicationMode_nfc
+ * @description
+ * NFC (ISO/IEC 18092). ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  */
 export
@@ -91,6 +103,9 @@ const nfc: number = CommunicationMode_nfc; /* SHORT_NAMED_BIT */
 
 /**
  * @summary CommunicationMode_contactC6
+ * @description
+ * Legacy contact C6 programming voltage (ISO/IEC 7816-3). ISO/IEC 7816-15:2016
+ * §8.2.8.
  * @constant
  */
 export

@@ -20,6 +20,9 @@ import { AuthenticationObjectChoice, _decode_AuthenticationObjectChoice, _encode
  * @summary AuthObjects
  * @description
  * 
+ * Authentication-object directory contents (EF.AOD). ISO/IEC 7816-15:2016 §8.3,
+ * §8.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

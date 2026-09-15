@@ -20,6 +20,9 @@ import { type CIO_ALGORITHM } from "../CryptographicInformationFramework/CIO-ALG
  * @summary cia_alg_null
  * @description
  * 
+ * Placeholder algorithm: NULL parameters, generate-key only, `&id` -1. ISO/IEC
+ * 7816-15:2016 Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

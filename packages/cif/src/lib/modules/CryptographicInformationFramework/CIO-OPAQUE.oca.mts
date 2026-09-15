@@ -13,6 +13,17 @@ import {
 
 
 
+/**
+ * @summary CIO_OPAQUE
+ * @description
+ *
+ * `TYPE-IDENTIFIER` used for opaque certificate, data-object, and generic value
+ * syntaxes (`AllowedCertificates`, `AllowedOidDOs`, SPKI/PGP/WTLS certificate
+ * `value`). Profiles bind `&id` to `&Type`. ISO/IEC 7816-15:2016 §8.2.16,
+ * §8.7.4–§8.8.4, Annex A.
+ *
+ * @interface
+ */
 export
 type CIO_OPAQUE = TYPE_IDENTIFIER;
 

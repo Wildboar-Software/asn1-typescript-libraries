@@ -20,6 +20,9 @@ import { KeyUsageConstraints_keyUsageConstraintsFlag, _decode_KeyUsageConstraint
  * @summary KeyUsageConstraints
  * @description
  * 
+ * Constraints on using a private key after it is prepared. ISO/IEC 7816-15:2016
+ * §8.2.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +42,19 @@ class KeyUsageConstraints {
     constructor (
         /**
          * @summary `keyUsageConstraintsFlag`.
+         * @description
+         * `immediateUsage` set: IFD shall not send a C-RP between preparation
+         * and usage on that logical channel. Unset: IFD may send C-RPs on
+         * arbitrary channels. ISO/IEC 7816-15:2016 §8.2.10.
          * @public
          * @readonly
          */
         readonly keyUsageConstraintsFlag: KeyUsageConstraints_keyUsageConstraintsFlag,
         /**
          * @summary `refOID`.
+         * @description
+         * Optional OID giving further constraint details. ISO/IEC 7816-15:2016
+         * §8.2.10.
          * @public
          * @readonly
          */
@@ -80,7 +90,8 @@ class KeyUsageConstraints {
  * @summary The Leading Root Component Types of KeyUsageConstraints
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -94,7 +105,8 @@ const _root_component_type_list_1_spec_for_KeyUsageConstraints: $.ComponentSpec[
  * @summary The Trailing Root Component Types of KeyUsageConstraints
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -107,7 +119,8 @@ const _root_component_type_list_2_spec_for_KeyUsageConstraints: $.ComponentSpec[
  * @summary The Extension Addition Component Types of KeyUsageConstraints
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

@@ -22,6 +22,9 @@ import { cia_ub_reference } from "../CryptographicInformationFramework/cia-ub-re
  * @summary Reference
  * @description
  * 
+ * Generic card-side reference. Use `multiByteRef` when the value needs more
+ * than one byte or exceeds 255. ISO/IEC 7816-15:2016 §8.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

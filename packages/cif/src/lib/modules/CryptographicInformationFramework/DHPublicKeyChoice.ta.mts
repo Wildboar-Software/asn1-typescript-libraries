@@ -20,6 +20,9 @@ import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPubl
  * @summary DHPublicKeyChoice
  * @description
  * 
+ * `raw` is `DHPublicNumber`; `spki` must contain a DH public key. ISO/IEC
+ * 7816-15:2016 §8.5.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

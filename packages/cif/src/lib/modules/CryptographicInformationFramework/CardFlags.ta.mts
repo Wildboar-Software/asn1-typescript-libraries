@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CardFlags
  * @description
  * 
+ * Card-wide flags. Bit 3 is reserved for historical reasons. ISO/IEC
+ * 7816-15:2016 §8.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +36,8 @@ type CardFlags = BIT_STRING;
 
 /**
  * @summary CardFlags_readonly
+ * @description
+ * Card is read-only. ISO/IEC 7816-15:2016 §8.10.
  * @constant
  */
 export
@@ -47,6 +52,9 @@ const readonly: number = CardFlags_readonly; /* SHORT_NAMED_BIT */
 
 /**
  * @summary CardFlags_authRequired
+ * @description
+ * Some cryptographic functions require the user to be authenticated. ISO/IEC
+ * 7816-15:2016 §8.10.
  * @constant
  */
 export
@@ -61,6 +69,8 @@ const authRequired: number = CardFlags_authRequired; /* SHORT_NAMED_BIT */
 
 /**
  * @summary CardFlags_prnGeneration
+ * @description
+ * Card supports pseudo-random number generation. ISO/IEC 7816-15:2016 §8.10.
  * @constant
  */
 export

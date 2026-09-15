@@ -20,6 +20,10 @@ import { Reference, _decode_Reference, _encode_Reference } from "../Cryptographi
  * @summary KeyInfo
  * @description
  * 
+ * Optional per-key parameters and operations. If present, they override
+ * `CommonKeyAttributes.algReference`. The `reference` alternative is historical
+ * (PKCS #15) and shall not be used. ISO/IEC 7816-15:2016 §8.2.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

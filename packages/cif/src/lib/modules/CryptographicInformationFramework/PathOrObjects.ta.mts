@@ -18,6 +18,12 @@ import { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFra
  * @summary PathOrObjects
  * @description
  * 
+ * Sequence of objects either in another file (`path`) or inline in EF.OD
+ * (`objects`). The referenced file is the concatenation of DER values of the
+ * given type; any number of 'FF' or '00' octets may pad unused or deleted
+ * space. The `path` alternative is strongly recommended. ISO/IEC 7816-15:2016
+ * §8.2.7, §7.5.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

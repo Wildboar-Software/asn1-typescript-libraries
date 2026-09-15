@@ -28,6 +28,10 @@ import { Validity, _decode_Validity, _encode_Validity } from "../AuthenticationF
  * @summary CommonCertificateAttributes
  * @description
  * 
+ * When a certificate's public key matches a private-key CIO, they share `iD`
+ * (and multiple certificates for the same key share it too). Context tag [3] is
+ * reserved (PKCS #15). ISO/IEC 7816-15:2016 §8.2.15.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,42 +54,65 @@ class CommonCertificateAttributes {
     constructor (
         /**
          * @summary `iD`.
+         * @description
+         * Shared with the matching private-key CIO and sibling certificates.
+         * ISO/IEC 7816-15:2016 §8.2.15.
          * @public
          * @readonly
          */
         readonly iD: Identifier,
         /**
          * @summary `authority`.
+         * @description
+         * TRUE if the certificate is for an authority (e.g. CA). DEFAULT FALSE.
+         * ISO/IEC 7816-15:2016 §8.2.15.
          * @public
          * @readonly
          */
         readonly authority: OPTIONAL<BOOLEAN>,
         /**
          * @summary `identifier`.
+         * @description
+         * Historical; use `identifiers` instead. ISO/IEC 7816-15:2016 §8.2.15.
          * @public
          * @readonly
          */
         readonly identifier: OPTIONAL<CredentialIdentifier>,
         /**
          * @summary `certHash`.
+         * @description
+         * Integrity check when the certificate is stored off-card (`url` of
+         * `ReferencedValue`). ISO/IEC 7816-15:2016 §8.2.15.
          * @public
          * @readonly
          */
         readonly certHash: OPTIONAL<CertHash>,
         /**
          * @summary `trustedUsage`.
+         * @description
+         * Purposes for which the cardholder trusts the certified public key.
+         * Intersect with the certificate's keyUsage extension when present.
+         * Absent means all usage. "Trust" semantics are out of scope. ISO/IEC
+         * 7816-15:2016 §8.2.15.
          * @public
          * @readonly
          */
         readonly trustedUsage: OPTIONAL<Usage>,
         /**
          * @summary `identifiers`.
+         * @description
+         * Distinguishing info a requester already knows (e.g.
+         * subjectNameHash/issuerNameHash for chain building). ISO/IEC
+         * 7816-15:2016 §8.2.15.
          * @public
          * @readonly
          */
         readonly identifiers: OPTIONAL<CredentialIdentifier[]>,
         /**
          * @summary `validity`.
+         * @description
+         * Certificate validity period (ISO/IEC 9594-8). ISO/IEC 7816-15:2016
+         * §8.2.15.
          * @public
          * @readonly
          */
@@ -102,7 +129,8 @@ class CommonCertificateAttributes {
      * @summary Restructures an object into a CommonCertificateAttributes
      * @description
      * 
-     * This takes an `object` and converts it to a `CommonCertificateAttributes`.
+     * This takes an `object` and converts it to a
+     * `CommonCertificateAttributes`.
      * 
      * @public
      * @static
@@ -127,7 +155,8 @@ class CommonCertificateAttributes {
  * @summary The Leading Root Component Types of CommonCertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -146,7 +175,8 @@ const _root_component_type_list_1_spec_for_CommonCertificateAttributes: $.Compon
  * @summary The Trailing Root Component Types of CommonCertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -159,7 +189,8 @@ const _root_component_type_list_2_spec_for_CommonCertificateAttributes: $.Compon
  * @summary The Extension Addition Component Types of CommonCertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

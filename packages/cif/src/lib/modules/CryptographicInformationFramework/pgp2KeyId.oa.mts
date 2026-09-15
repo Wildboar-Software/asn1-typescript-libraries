@@ -18,6 +18,9 @@ import { type KEY_IDENTIFIER } from "../CryptographicInformationFramework/KEY-ID
  * @summary pgp2KeyId
  * @description
  * 
+ * `KEY-IDENTIFIER` 8: 8-octet PGP 2 key identifier (IETF RFC 4880). ISO/IEC
+ * 7816-15:2016 §8.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

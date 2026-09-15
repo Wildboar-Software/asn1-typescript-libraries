@@ -22,6 +22,10 @@ import { KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "../CertificateExte
  * @summary Usage
  * @description
  * 
+ * Trusted usage: X.509 `KeyUsage` and/or extended-key-usage OIDs (any
+ * organization may define the latter). At least one of `keyUsage` or
+ * `extKeyUsage` shall be present. ISO/IEC 7816-15:2016 §8.2.15.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,12 +47,16 @@ class Usage {
     constructor (
         /**
          * @summary `keyUsage`.
+         * @description
+         * ISO/IEC 9594-8 KeyUsage bits. ISO/IEC 7816-15:2016 §8.2.15.
          * @public
          * @readonly
          */
         readonly keyUsage: OPTIONAL<KeyUsage>,
         /**
          * @summary `extKeyUsage`.
+         * @description
+         * Extended key purpose OIDs. ISO/IEC 7816-15:2016 §8.2.15.
          * @public
          * @readonly
          */
@@ -91,7 +99,8 @@ class Usage {
  * @summary The Leading Root Component Types of Usage
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -105,7 +114,8 @@ const _root_component_type_list_1_spec_for_Usage: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of Usage
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -118,7 +128,8 @@ const _root_component_type_list_2_spec_for_Usage: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of Usage
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

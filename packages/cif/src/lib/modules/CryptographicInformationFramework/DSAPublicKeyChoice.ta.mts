@@ -20,6 +20,9 @@ import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPubl
  * @summary DSAPublicKeyChoice
  * @description
  * 
+ * `raw` is `DSAPublicKey`; `spki` must contain a DSA public key. ISO/IEC
+ * 7816-15:2016 §8.5.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

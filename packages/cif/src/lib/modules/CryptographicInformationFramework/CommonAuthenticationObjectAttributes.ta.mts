@@ -21,6 +21,9 @@ import { Reference, _decode_Reference, _encode_Reference } from "../Cryptographi
  * @summary CommonAuthenticationObjectAttributes
  * @description
  * 
+ * `authId` shall be unique; private CIOs cross-reference it. ISO/IEC
+ * 7816-15:2016 §8.2.18.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +42,27 @@ class CommonAuthenticationObjectAttributes {
     constructor (
         /**
          * @summary `authId`.
+         * @description
+         * Unique id used as `CommonObjectAttributes.authId` on protected CIOs.
+         * ISO/IEC 7816-15:2016 §8.2.18.
          * @public
          * @readonly
          */
         readonly authId: OPTIONAL<Identifier>,
         /**
          * @summary `authReference`.
+         * @description
+         * ISO/IEC 7816-4 key-reference object for naming this authenticator in
+         * Security Environments. ISO/IEC 7816-15:2016 §8.2.18.
          * @public
          * @readonly
          */
         readonly authReference: OPTIONAL<Reference>,
         /**
          * @summary `seIdentifier`.
+         * @description
+         * Security environment to which this authentication object belongs.
+         * ISO/IEC 7816-15:2016 §8.2.18.
          * @public
          * @readonly
          */
@@ -67,7 +79,8 @@ class CommonAuthenticationObjectAttributes {
      * @summary Restructures an object into a CommonAuthenticationObjectAttributes
      * @description
      * 
-     * This takes an `object` and converts it to a `CommonAuthenticationObjectAttributes`.
+     * This takes an `object` and converts it to a
+     * `CommonAuthenticationObjectAttributes`.
      * 
      * @public
      * @static
@@ -86,7 +99,8 @@ class CommonAuthenticationObjectAttributes {
  * @summary The Leading Root Component Types of CommonAuthenticationObjectAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -101,7 +115,8 @@ const _root_component_type_list_1_spec_for_CommonAuthenticationObjectAttributes:
  * @summary The Trailing Root Component Types of CommonAuthenticationObjectAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -114,7 +129,8 @@ const _root_component_type_list_2_spec_for_CommonAuthenticationObjectAttributes:
  * @summary The Extension Addition Component Types of CommonAuthenticationObjectAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

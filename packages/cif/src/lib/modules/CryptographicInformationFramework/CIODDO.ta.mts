@@ -23,6 +23,13 @@ import { SecurityFileOrObject, _decode_SecurityFileOrObject, _encode_SecurityFil
  * @summary CIODDO
  * @description
  * 
+ * Discretionary data object in an EF.DIR application template (tag '73' /
+ * [APPLICATION 19] under implicit tagging). Context tag 1 is historical (PKCS
+ * #15) and shall not be used. Required in the template if Path (tag '51') is
+ * missing (virtual DF.CIA). If only `securityFileOrObject` is present, the ICC
+ * is demanding preliminary privacy protocols. Multiple unlinked
+ * `SecurityFileOrObject` values are alternatives. ISO/IEC 7816-15:2016 §7.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,30 +50,44 @@ class CIODDO {
     constructor (
         /**
          * @summary `providerId`.
+         * @description
+         * OID uniquely identifying the CIA provider. ISO/IEC 7816-15:2016 §7.4.
          * @public
          * @readonly
          */
         readonly providerId: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `odfPath`.
+         * @description
+         * Non-default path (or constructed DO without CPT) to EF.OD. Enables
+         * sharing/non-standard Fids. ISO/IEC 7816-15:2016 §7.4.
          * @public
          * @readonly
          */
         readonly odfPath: OPTIONAL<Path>,
         /**
          * @summary `ciaInfoPath`.
+         * @description
+         * Non-default path to EF.CIAInfo; several CIAs may share one CIAInfo.
+         * ISO/IEC 7816-15:2016 §7.4.
          * @public
          * @readonly
          */
         readonly ciaInfoPath: OPTIONAL<Path>,
         /**
          * @summary `aid`.
+         * @description
+         * Application to which this CIA applies (ISO/IEC 7816-4 AID, 1..16
+         * octets). ISO/IEC 7816-15:2016 §7.4.
          * @public
          * @readonly
          */
         readonly aid: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `securityFileOrObject`.
+         * @description
+         * Security protocol descriptors. Execution order follows
+         * `index`/`precondition`. ISO/IEC 7816-15:2016 §7.4.
          * @public
          * @readonly
          */
@@ -102,7 +123,8 @@ class CIODDO {
  * @summary The Leading Root Component Types of CIODDO
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -119,7 +141,8 @@ const _root_component_type_list_1_spec_for_CIODDO: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of CIODDO
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -132,7 +155,8 @@ const _root_component_type_list_2_spec_for_CIODDO: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of CIODDO
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

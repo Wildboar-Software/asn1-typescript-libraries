@@ -18,6 +18,10 @@ import { type KEY_IDENTIFIER } from "../CryptographicInformationFramework/KEY-ID
  * @summary subjectKeyId
  * @description
  * 
+ * `KEY-IDENTIFIER` 2: same octets as the ISO/IEC 9594-8 `subjectKeyIdentifier`
+ * extension of the certificate that contains the associated public key. Useful
+ * for chain traversal. ISO/IEC 7816-15:2016 §8.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

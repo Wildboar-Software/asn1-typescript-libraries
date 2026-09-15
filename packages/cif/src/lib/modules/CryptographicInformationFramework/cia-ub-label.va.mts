@@ -18,6 +18,8 @@ import { cia_ub_identifier } from "../CryptographicInformationFramework/cia-ub-i
  * @summary cia_ub_label
  * @description
  * 
+ * Maximum `Label` length (same as identifier). ISO/IEC 7816-15:2016 Annex A.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -23,6 +23,13 @@ import { cia_ub_index } from "../CryptographicInformationFramework/cia-ub-index.
  * @summary Path
  * @description
  * 
+ * Reference to a file or data object on the card. `index` and `length` are
+ * either both present or both absent. For a linear record EF, `index` is the
+ * ISO/IEC 7816-4 record number and `length` 0 means the file is record-oriented
+ * (Le may be '00' on READ RECORD). For a transparent EF, `index` is an offset
+ * (P1/P2) and `length` is Le for READ BINARY, so several objects may share one
+ * file. ISO/IEC 7816-15:2016 §8.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,18 +66,27 @@ class Path {
     constructor (
         /**
          * @summary `efidOrTagChoice`.
+         * @description
+         * How the file/object is addressed (EF path, tag, or application AID).
+         * ISO/IEC 7816-15:2016 §8.2.5.
          * @public
          * @readonly
          */
         readonly efidOrTagChoice: Path_efidOrTagChoice,
         /**
          * @summary `index`.
+         * @description
+         * Record number (linear EF) or byte offset (transparent EF). Must be
+         * present iff `length` is present. ISO/IEC 7816-15:2016 §8.2.5.
          * @public
          * @readonly
          */
         readonly index: OPTIONAL<INTEGER>,
         /**
          * @summary `length`.
+         * @description
+         * Record length 0 for linear EFs, or segment length for transparent
+         * EFs. ISO/IEC 7816-15:2016 §8.2.5.
          * @public
          * @readonly
          */
@@ -115,7 +131,8 @@ class Path {
  * @summary The Leading Root Component Types of Path
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -130,7 +147,8 @@ const _root_component_type_list_1_spec_for_Path: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of Path
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -143,7 +161,8 @@ const _root_component_type_list_2_spec_for_Path: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of Path
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

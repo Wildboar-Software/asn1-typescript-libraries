@@ -20,6 +20,11 @@ import { CertBasedAuthenticationAttributes, _decode_CertBasedAuthenticationAttri
  * @summary ExternalAuthObjectAttributes
  * @description
  * 
+ * Use `authKeyAttributes` for symmetric role authentication and
+ * `certBasedAttributes` for asymmetric role authentication. Covers
+ * authenticating to the card and internal/mutual authentication implied by
+ * external authentication. ISO/IEC 7816-15:2016 §8.9.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

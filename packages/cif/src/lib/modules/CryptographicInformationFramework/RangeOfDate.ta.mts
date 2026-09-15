@@ -19,6 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RangeOfDate
  * @description
  * 
+ * Inclusive verification window for an `AccessControlRule`, encoded as
+ * GeneralizedTime (universal tag 24). Encoding guidelines: ISO/IEC 7816-15:2016
+ * Annex D.9. ISO/IEC 7816-15:2016 §8.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,18 @@ class RangeOfDate {
     constructor (
         /**
          * @summary `startDate`.
+         * @description
+         * Start of the allowed verification interval. ISO/IEC 7816-15:2016
+         * §8.2.8.
          * @public
          * @readonly
          */
         readonly startDate: OPTIONAL<GeneralizedTime>,
         /**
          * @summary `endDate`.
+         * @description
+         * End of the allowed verification interval. ISO/IEC 7816-15:2016
+         * §8.2.8.
          * @public
          * @readonly
          */
@@ -70,7 +80,8 @@ class RangeOfDate {
  * @summary The Leading Root Component Types of RangeOfDate
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -84,7 +95,8 @@ const _root_component_type_list_1_spec_for_RangeOfDate: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of RangeOfDate
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -97,7 +109,8 @@ const _root_component_type_list_2_spec_for_RangeOfDate: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of RangeOfDate
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

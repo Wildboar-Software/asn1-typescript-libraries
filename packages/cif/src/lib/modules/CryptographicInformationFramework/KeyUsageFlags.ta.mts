@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KeyUsageFlags
  * @description
  * 
+ * Possible use of a key. Mapping to ISO/IEC 9594-8 certificate KeyUsage is
+ * Table 2 of ISO/IEC 7816-15:2016 §8.2.9 (e.g. DataEncipherment → encipher on
+ * public / decipher on private).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,6 +44,9 @@ type KeyUsageFlags = BIT_STRING;
 
 /**
  * @summary KeyUsageFlags_encipher
+ * @description
+ * Encipher data (public-key counterpart of ISO/IEC 9594-8 dataEncipherment).
+ * ISO/IEC 7816-15:2016 §8.2.9 Table 2.
  * @constant
  */
 export
@@ -54,6 +61,8 @@ const encipher: number = KeyUsageFlags_encipher; /* SHORT_NAMED_BIT */
 
 /**
  * @summary KeyUsageFlags_decipher
+ * @description
+ * Decipher data. ISO/IEC 7816-15:2016 §8.2.9 Table 2.
  * @constant
  */
 export
@@ -68,6 +77,8 @@ const decipher: number = KeyUsageFlags_decipher; /* SHORT_NAMED_BIT */
 
 /**
  * @summary KeyUsageFlags_sign
+ * @description
+ * Sign without message recovery. ISO/IEC 7816-15:2016 §8.2.9 Table 2.
  * @constant
  */
 export
@@ -82,6 +93,8 @@ const sign: number = KeyUsageFlags_sign; /* SHORT_NAMED_BIT */
 
 /**
  * @summary KeyUsageFlags_signRecover
+ * @description
+ * Sign with message recovery. ISO/IEC 7816-15:2016 §8.2.9 Table 2.
  * @constant
  */
 export
@@ -96,6 +109,8 @@ const signRecover: number = KeyUsageFlags_signRecover; /* SHORT_NAMED_BIT */
 
 /**
  * @summary KeyUsageFlags_keyEncipher
+ * @description
+ * Encipher keys. ISO/IEC 7816-15:2016 §8.2.9 Table 2.
  * @constant
  */
 export
@@ -110,6 +125,8 @@ const keyEncipher: number = KeyUsageFlags_keyEncipher; /* SHORT_NAMED_BIT */
 
 /**
  * @summary KeyUsageFlags_keyDecipher
+ * @description
+ * Decipher keys. ISO/IEC 7816-15:2016 §8.2.9 Table 2.
  * @constant
  */
 export
@@ -124,6 +141,8 @@ const keyDecipher: number = KeyUsageFlags_keyDecipher; /* SHORT_NAMED_BIT */
 
 /**
  * @summary KeyUsageFlags_verify
+ * @description
+ * Verify signatures without recovery. ISO/IEC 7816-15:2016 §8.2.9 Table 2.
  * @constant
  */
 export
@@ -138,6 +157,8 @@ const verify: number = KeyUsageFlags_verify; /* SHORT_NAMED_BIT */
 
 /**
  * @summary KeyUsageFlags_verifyRecover
+ * @description
+ * Verify signatures with recovery. ISO/IEC 7816-15:2016 §8.2.9 Table 2.
  * @constant
  */
 export
@@ -152,6 +173,8 @@ const verifyRecover: number = KeyUsageFlags_verifyRecover; /* SHORT_NAMED_BIT */
 
 /**
  * @summary KeyUsageFlags_derive
+ * @description
+ * Key agreement / derivation. ISO/IEC 7816-15:2016 §8.2.9 Table 2.
  * @constant
  */
 export
@@ -166,6 +189,8 @@ const derive: number = KeyUsageFlags_derive; /* SHORT_NAMED_BIT */
 
 /**
  * @summary KeyUsageFlags_nonRepudiation
+ * @description
+ * Non-repudiation. ISO/IEC 7816-15:2016 §8.2.9 Table 2.
  * @constant
  */
 export

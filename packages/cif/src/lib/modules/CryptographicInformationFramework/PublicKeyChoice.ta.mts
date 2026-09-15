@@ -30,6 +30,8 @@ import { GenericKeyAttributes, _decode_GenericKeyAttributes, _encode_GenericKeyA
  * @summary PublicKeyChoice
  * @description
  * 
+ * Public-key CIO alternatives. ISO/IEC 7816-15:2016 §8.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

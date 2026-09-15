@@ -25,6 +25,10 @@ import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_Certi
  * @summary X509CertificateAttributes
  * @description
  * 
+ * ISO/IEC 9594-8 public-key certificate. Optional subject/issuer/serial shall
+ * equal the certificate's own fields; they exist for lookup without parsing the
+ * cert. ISO/IEC 7816-15:2016 §8.7.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,24 +48,33 @@ class X509CertificateAttributes {
     constructor (
         /**
          * @summary `value`.
+         * @description
+         * `ReferencedValue`: file of a DER certificate or a URL where it can be
+         * fetched. ISO/IEC 7816-15:2016 §8.7.2.
          * @public
          * @readonly
          */
         readonly value: ObjectValue<Certificate>,
         /**
          * @summary `subject`.
+         * @description
+         * Same as the certificate `subject`. ISO/IEC 7816-15:2016 §8.7.2.
          * @public
          * @readonly
          */
         readonly subject: OPTIONAL<Name>,
         /**
          * @summary `issuer`.
+         * @description
+         * Same as the certificate `issuer`. ISO/IEC 7816-15:2016 §8.7.2.
          * @public
          * @readonly
          */
         readonly issuer: OPTIONAL<Name>,
         /**
          * @summary `serialNumber`.
+         * @description
+         * Same as the certificate serial number. ISO/IEC 7816-15:2016 §8.7.2.
          * @public
          * @readonly
          */
@@ -97,7 +110,8 @@ class X509CertificateAttributes {
  * @summary The Leading Root Component Types of X509CertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -113,7 +127,8 @@ const _root_component_type_list_1_spec_for_X509CertificateAttributes: $.Componen
  * @summary The Trailing Root Component Types of X509CertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -126,7 +141,8 @@ const _root_component_type_list_2_spec_for_X509CertificateAttributes: $.Componen
  * @summary The Extension Addition Component Types of X509CertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

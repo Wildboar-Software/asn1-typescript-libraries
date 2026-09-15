@@ -20,6 +20,9 @@ import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_Certi
  * @summary IssuerAndSerialNumber
  * @description
  * 
+ * Issuer name and serial number of an associated public-key certificate.
+ * ISO/IEC 7816-15:2016 §8.2.4, Annex A.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,16 @@ class IssuerAndSerialNumber {
     constructor (
         /**
          * @summary `issuer`.
+         * @description
+         * Certificate issuer DN. ISO/IEC 7816-15:2016 §8.2.4.
          * @public
          * @readonly
          */
         readonly issuer: Name,
         /**
          * @summary `serialNumber`.
+         * @description
+         * Certificate serial number. ISO/IEC 7816-15:2016 §8.2.4.
          * @public
          * @readonly
          */
@@ -71,7 +78,8 @@ class IssuerAndSerialNumber {
  * @summary The Leading Root Component Types of IssuerAndSerialNumber
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -85,7 +93,8 @@ const _root_component_type_list_1_spec_for_IssuerAndSerialNumber: $.ComponentSpe
  * @summary The Trailing Root Component Types of IssuerAndSerialNumber
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -98,7 +107,8 @@ const _root_component_type_list_2_spec_for_IssuerAndSerialNumber: $.ComponentSpe
  * @summary The Extension Addition Component Types of IssuerAndSerialNumber
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

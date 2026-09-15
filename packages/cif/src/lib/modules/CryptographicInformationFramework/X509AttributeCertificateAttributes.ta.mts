@@ -26,6 +26,8 @@ import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_Certi
  * @summary X509AttributeCertificateAttributes
  * @description
  * 
+ * ISO/IEC 9594-8 attribute certificate. ISO/IEC 7816-15:2016 §8.7.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,24 +47,35 @@ class X509AttributeCertificateAttributes {
     constructor (
         /**
          * @summary `value`.
+         * @description
+         * `ReferencedValue` to a DER attribute certificate or URL. ISO/IEC
+         * 7816-15:2016 §8.7.3.
          * @public
          * @readonly
          */
         readonly value: ObjectValue<AttributeCertificate>,
         /**
          * @summary `issuer`.
+         * @description
+         * Same as the AC issuer; optional for easier lookup. ISO/IEC
+         * 7816-15:2016 §8.7.3.
          * @public
          * @readonly
          */
         readonly issuer: OPTIONAL<GeneralNames>,
         /**
          * @summary `serialNumber`.
+         * @description
+         * Same as the AC serial number. ISO/IEC 7816-15:2016 §8.7.3.
          * @public
          * @readonly
          */
         readonly serialNumber: OPTIONAL<CertificateSerialNumber>,
         /**
          * @summary `attrTypes`.
+         * @description
+         * OIDs of attributes present in the AC, so an application can search
+         * without parsing the certificate. ISO/IEC 7816-15:2016 §8.7.3.
          * @public
          * @readonly
          */
@@ -79,7 +92,8 @@ class X509AttributeCertificateAttributes {
      * @summary Restructures an object into a X509AttributeCertificateAttributes
      * @description
      * 
-     * This takes an `object` and converts it to a `X509AttributeCertificateAttributes`.
+     * This takes an `object` and converts it to a
+     * `X509AttributeCertificateAttributes`.
      * 
      * @public
      * @static
@@ -98,7 +112,8 @@ class X509AttributeCertificateAttributes {
  * @summary The Leading Root Component Types of X509AttributeCertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -114,7 +129,8 @@ const _root_component_type_list_1_spec_for_X509AttributeCertificateAttributes: $
  * @summary The Trailing Root Component Types of X509AttributeCertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -127,7 +143,8 @@ const _root_component_type_list_2_spec_for_X509AttributeCertificateAttributes: $
  * @summary The Extension Addition Component Types of X509AttributeCertificateAttributes
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

@@ -23,6 +23,9 @@ import { Reference, _decode_Reference, _encode_Reference } from "../Cryptographi
  * @summary AlgorithmInfo
  * @description
  * 
+ * One algorithm supported by the card. `reference` shall be unique within
+ * `CIAInfo.supportedAlgorithms`. ISO/IEC 7816-15:2016 §8.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,36 +46,51 @@ class AlgorithmInfo {
     constructor (
         /**
          * @summary `reference`.
+         * @description
+         * Cross-reference from key `algReference`. ISO/IEC 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
         readonly reference: Reference,
         /**
          * @summary `algorithm`.
+         * @description
+         * Private algorithm id (often a PKCS #11 mechanism number). ISO/IEC
+         * 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
         readonly algorithm: INTEGER,
         /**
          * @summary `parameters`.
+         * @description
+         * Parameters of the algorithm. ISO/IEC 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
         readonly parameters: _Element,
         /**
          * @summary `supportedOperations`.
+         * @description
+         * Hardware operations the card can perform with this algorithm. ISO/IEC
+         * 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
         readonly supportedOperations: _Element,
         /**
          * @summary `objId`.
+         * @description
+         * Algorithm object identifier. ISO/IEC 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
         readonly objId: OBJECT_IDENTIFIER,
         /**
          * @summary `algRef`.
+         * @description
+         * Identifier used at the card interface (e.g. parameter of EXTERNAL
+         * AUTHENTICATE). ISO/IEC 7816-15:2016 §8.10.
          * @public
          * @readonly
          */
@@ -102,7 +120,8 @@ class AlgorithmInfo {
  * @summary The Leading Root Component Types of AlgorithmInfo
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -120,7 +139,8 @@ const _root_component_type_list_1_spec_for_AlgorithmInfo: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of AlgorithmInfo
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -133,7 +153,8 @@ const _root_component_type_list_2_spec_for_AlgorithmInfo: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of AlgorithmInfo
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

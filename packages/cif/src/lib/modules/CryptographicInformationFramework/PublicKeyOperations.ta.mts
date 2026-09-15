@@ -18,6 +18,9 @@ import { Operations, _decode_Operations, _encode_Operations } from "../Cryptogra
  * @summary PublicKeyOperations
  * @description
  * 
+ * Alias of `Operations` used in `KeyInfo` for public/private keys. ISO/IEC
+ * 7816-15:2016 §8.2.14, Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

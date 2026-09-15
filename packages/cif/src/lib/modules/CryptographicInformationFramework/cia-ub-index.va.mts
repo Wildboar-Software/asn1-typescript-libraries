@@ -17,6 +17,8 @@ import {
  * @summary cia_ub_index
  * @description
  * 
+ * Maximum `Path.index`/`length` (65535). ISO/IEC 7816-15:2016 Annex A.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

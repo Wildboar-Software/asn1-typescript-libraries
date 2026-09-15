@@ -20,6 +20,10 @@ import { cia_ub_identifier } from "../CryptographicInformationFramework/cia-ub-i
  * @summary Identifier
  * @description
  * 
+ * CIO identifier. Two or more CIOs may share a value to cross-reference linked
+ * CDEs (e.g. a private key and matching certificates). ISO/IEC 7816-15:2016
+ * §8.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

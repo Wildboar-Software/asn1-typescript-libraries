@@ -18,6 +18,9 @@ import { type KEY_IDENTIFIER } from "../CryptographicInformationFramework/KEY-ID
  * @summary subjectNameHash
  * @description
  * 
+ * `KEY-IDENTIFIER` 7: SHA-1 hash of the subject name as it appears in the
+ * certificate. ISO/IEC 7816-15:2016 §8.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

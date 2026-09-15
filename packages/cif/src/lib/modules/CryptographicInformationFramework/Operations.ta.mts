@@ -18,6 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Operations
  * @description
  * 
+ * Hardware operations a card can perform with an algorithm
+ * (checksum/signature/encipher/hash/keygen/derive). ISO/IEC 7816-15:2016 §8.10,
+ * Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,6 +43,8 @@ type Operations = BIT_STRING;
 
 /**
  * @summary Operations_compute_checksum
+ * @description
+ * H/W checksum computation. ISO/IEC 7816-15:2016 Annex A.
  * @constant
  */
 export
@@ -53,6 +59,8 @@ const compute_checksum: number = Operations_compute_checksum; /* SHORT_NAMED_BIT
 
 /**
  * @summary Operations_compute_signature
+ * @description
+ * H/W signature computation. ISO/IEC 7816-15:2016 Annex A.
  * @constant
  */
 export
@@ -67,6 +75,8 @@ const compute_signature: number = Operations_compute_signature; /* SHORT_NAMED_B
 
 /**
  * @summary Operations_verify_checksum
+ * @description
+ * H/W checksum verification. ISO/IEC 7816-15:2016 Annex A.
  * @constant
  */
 export
@@ -81,6 +91,8 @@ const verify_checksum: number = Operations_verify_checksum; /* SHORT_NAMED_BIT *
 
 /**
  * @summary Operations_verify_signature
+ * @description
+ * H/W signature verification. ISO/IEC 7816-15:2016 Annex A.
  * @constant
  */
 export
@@ -95,6 +107,8 @@ const verify_signature: number = Operations_verify_signature; /* SHORT_NAMED_BIT
 
 /**
  * @summary Operations_encipher
+ * @description
+ * H/W encryption of data. ISO/IEC 7816-15:2016 Annex A.
  * @constant
  */
 export
@@ -109,6 +123,8 @@ const encipher: number = Operations_encipher; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Operations_decipher
+ * @description
+ * H/W decryption of data. ISO/IEC 7816-15:2016 Annex A.
  * @constant
  */
 export
@@ -123,6 +139,8 @@ const decipher: number = Operations_decipher; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Operations_hash
+ * @description
+ * H/W hashing. ISO/IEC 7816-15:2016 Annex A.
  * @constant
  */
 export
@@ -137,6 +155,8 @@ const hash: number = Operations_hash; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Operations_generate_key
+ * @description
+ * H/W key generation. ISO/IEC 7816-15:2016 Annex A.
  * @constant
  */
 export
@@ -151,6 +171,8 @@ const generate_key: number = Operations_generate_key; /* SHORT_NAMED_BIT */
 
 /**
  * @summary Operations_derive_key
+ * @description
+ * H/W key derivation. ISO/IEC 7816-15:2016 Annex A.
  * @constant
  */
 export

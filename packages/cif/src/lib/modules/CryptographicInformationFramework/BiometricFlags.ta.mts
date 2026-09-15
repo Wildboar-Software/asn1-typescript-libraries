@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary BiometricFlags
  * @description
  * 
+ * Same semantics as the corresponding `PasswordFlags` bits. Numbering skips
+ * unused password bits. ISO/IEC 7816-15:2016 §8.9.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +40,8 @@ type BiometricFlags = BIT_STRING;
 
 /**
  * @summary BiometricFlags_local
+ * @description
+ * Local to the application. ISO/IEC 7816-15:2016 §8.9.3.
  * @constant
  */
 export
@@ -51,6 +56,8 @@ const local: number = BiometricFlags_local; /* SHORT_NAMED_BIT */
 
 /**
  * @summary BiometricFlags_change_disabled
+ * @description
+ * Cannot be changed. ISO/IEC 7816-15:2016 §8.9.3.
  * @constant
  */
 export
@@ -65,6 +72,8 @@ const change_disabled: number = BiometricFlags_change_disabled; /* SHORT_NAMED_B
 
 /**
  * @summary BiometricFlags_unblock_disabled
+ * @description
+ * Cannot be unblocked. ISO/IEC 7816-15:2016 §8.9.3.
  * @constant
  */
 export
@@ -79,6 +88,8 @@ const unblock_disabled: number = BiometricFlags_unblock_disabled; /* SHORT_NAMED
 
 /**
  * @summary BiometricFlags_initialized
+ * @description
+ * Initialized. ISO/IEC 7816-15:2016 §8.9.3.
  * @constant
  */
 export
@@ -93,6 +104,8 @@ const initialized: number = BiometricFlags_initialized; /* SHORT_NAMED_BIT */
 
 /**
  * @summary BiometricFlags_disable_allowed
+ * @description
+ * May be disabled. ISO/IEC 7816-15:2016 §8.9.3.
  * @constant
  */
 export
@@ -107,6 +120,8 @@ const disable_allowed: number = BiometricFlags_disable_allowed; /* SHORT_NAMED_B
 
 /**
  * @summary BiometricFlags_integrity_protected
+ * @description
+ * Present with SM integrity. ISO/IEC 7816-15:2016 §8.9.3.
  * @constant
  */
 export
@@ -121,6 +136,8 @@ const integrity_protected: number = BiometricFlags_integrity_protected; /* SHORT
 
 /**
  * @summary BiometricFlags_confidentiality_protected
+ * @description
+ * Present encrypted. ISO/IEC 7816-15:2016 §8.9.3.
  * @constant
  */
 export

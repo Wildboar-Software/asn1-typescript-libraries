@@ -18,6 +18,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AuthMethod
  * @description
  * 
+ * Authentication class used with a Security Environment. ISO/IEC 7816-15:2016
+ * §8.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +37,8 @@ type AuthMethod = BIT_STRING;
 
 /**
  * @summary AuthMethod_secureMessaging
+ * @description
+ * Secure messaging. ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  */
 export
@@ -48,6 +53,8 @@ const secureMessaging: number = AuthMethod_secureMessaging; /* SHORT_NAMED_BIT *
 
 /**
  * @summary AuthMethod_extAuthentication
+ * @description
+ * External authentication. ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  */
 export
@@ -62,6 +69,8 @@ const extAuthentication: number = AuthMethod_extAuthentication; /* SHORT_NAMED_B
 
 /**
  * @summary AuthMethod_userAuthentication
+ * @description
+ * User authentication. ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  */
 export
@@ -76,6 +85,8 @@ const userAuthentication: number = AuthMethod_userAuthentication; /* SHORT_NAMED
 
 /**
  * @summary AuthMethod_always
+ * @description
+ * Always (unconditional in this class). ISO/IEC 7816-15:2016 §8.2.8.
  * @constant
  */
 export
