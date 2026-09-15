@@ -1,0 +1,45 @@
+{
+    "name": "@wildboar/cif",
+    "type": "module",
+    "version": "1.0.0",
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
+    "dependencies": {
+        "@wildboar/ansi-x9-42": "npm:@jsr/wildboar__ansi-x9-42@^2.0.3",
+        "@wildboar/ansi-x9-62": "npm:@jsr/wildboar__ansi-x9-62@^2.0.2",
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/x500": "npm:@jsr/wildboar__x500@^2.0.9"
+    },
+    "exports": {
+        ".": "./src/index.mts",
+        "./ANSI-X9-42": "./src/lib/modules/ANSI-X9-42/index.mts",
+        "./ANSI-X9-62": "./src/lib/modules/ANSI-X9-62/index.mts",
+        "./AttributeCertificateDefinitions": "./src/lib/modules/AttributeCertificateDefinitions/index.mts",
+        "./AuthenticationFramework": "./src/lib/modules/AuthenticationFramework/index.mts",
+        "./CertificateExtensions": "./src/lib/modules/CertificateExtensions/index.mts",
+        "./CryptographicInformationFramework": "./src/lib/modules/CryptographicInformationFramework/index.mts",
+        "./InformationFramework": "./src/lib/modules/InformationFramework/index.mts"
+    }
+}

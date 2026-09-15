@@ -1,0 +1,26 @@
+{
+  "name": "@wildboar/cif",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts",
+    "./ANSI-X9-42": "./src/lib/modules/ANSI-X9-42/index.mts",
+    "./ANSI-X9-62": "./src/lib/modules/ANSI-X9-62/index.mts",
+    "./AttributeCertificateDefinitions": "./src/lib/modules/AttributeCertificateDefinitions/index.mts",
+    "./AuthenticationFramework": "./src/lib/modules/AuthenticationFramework/index.mts",
+    "./CertificateExtensions": "./src/lib/modules/CertificateExtensions/index.mts",
+    "./CryptographicInformationFramework": "./src/lib/modules/CryptographicInformationFramework/index.mts",
+    "./InformationFramework": "./src/lib/modules/InformationFramework/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
+    ]
+  }
+}
