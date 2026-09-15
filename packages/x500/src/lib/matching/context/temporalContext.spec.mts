@@ -178,8 +178,8 @@ describe("evaluateTemporalContext", () => {
     it("matches a between assertion against a periodic temporal context", () => {
         const assertion: TimeAssertion = {
             between: new TimeAssertion_between(
-                new Date(2026, 0, 6, 12, 13, 12),
-                new Date(2026, 0, 8, 12, 13, 14),
+                new Date(2026, 0, 3, 12, 13, 12),
+                new Date(2026, 0, 5, 12, 13, 14),
             ),
         };
         const value = new TimeSpecification(
