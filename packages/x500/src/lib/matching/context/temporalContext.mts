@@ -122,7 +122,8 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
  * `notThisTime` negation). A `TimeAssertion` matches if the times
  * overlap: `now`/`at` must fall within the stored specification;
  * `between` overlaps unless `entirely` is TRUE, in which case the
- * whole asserted band must lie inside the stored times. Missing
+ * whole asserted band must lie inside the stored times. `notThisTime`
+ * complements the stored set (it is not a boolean XOR of the matcher). Missing
  * timezone is interpreted in the DSA's zone. Periodic SET OF is a
  * logical OR.
  */
