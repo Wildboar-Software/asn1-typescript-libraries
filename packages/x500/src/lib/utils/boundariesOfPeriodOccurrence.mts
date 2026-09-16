@@ -545,6 +545,8 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                 }
             }
         }
+        // Week arithmetic uses an exclusive upper bound (start of the next week).
+        max = endOfDay(subDays(max, 1));
     } else if (whitelistedMonths) {
         min = startOfMonth(point);
         max = endOfMonth(point);
