@@ -21,9 +21,33 @@ function xor (a: boolean, b: boolean): boolean {
     return ((a && !b) || (!a && b));
 }
 
+/**
+ * Return a Date whose *local* Y/M/D/h/m/s equal the civil time of `instant`
+ * in a fixed offset from GMT. Independent of the host timezone.
+ */
+function civilDateInFixedOffset (instant: Date, offsetHours: number): Date {
+    const shifted = new Date(instant.getTime() + (offsetHours * 3_600_000));
+    return new Date(
+        shifted.getUTCFullYear(),
+        shifted.getUTCMonth(),
+        shifted.getUTCDate(),
+        shifted.getUTCHours(),
+        shifted.getUTCMinutes(),
+        shifted.getUTCSeconds(),
+        shifted.getUTCMilliseconds(),
+    );
+}
+
+function inSpecTimeZone (instant: Date, timeZone: number | undefined): Date {
+    if (timeZone === undefined) {
+        return new Date(instant);
+    }
+    return civilDateInFixedOffset(instant, timeZone);
+}
+
 /** True if `time` falls in one occurrence of `period` (clause 10.2). */
-function timeFallsWithinPeriod (time: Date, period: Period, timezone: number = 0): boolean {
-    const adjustedTime = addHours(time, -timezone);
+function timeFallsWithinPeriod (time: Date, period: Period, timezone: number | undefined): boolean {
+    const adjustedTime = inSpecTimeZone(time, timezone);
     const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedTime);
     if (!boundaries) {
         return false;
@@ -84,8 +108,8 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
             return spec.time.periodic.some((period) => {
                 // We cannot adjust the period by timezone, so instead, we
                 // modify the asserted times
-                const adjustedStart = addHours(start, timezone ?? 0);
-                const adjustedEnd = addHours(end, timezone ?? 0);
+                const adjustedStart = inSpecTimeZone(start, timezone);
+                const adjustedEnd = inSpecTimeZone(end, timezone);
                 const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedStart);
                 if (!boundaries) {
                     return false;
