@@ -1,6 +1,7 @@
 import {
     type XDayOf,
     NamedDay_intNamedDays_monday,
+    NamedDay_intNamedDays_sunday,
     NamedDay_bitNamedDays_monday,
     NamedDay_bitNamedDays_thursday,
 } from "../modules/SelectedAttributeTypes/index.mjs";
@@ -63,6 +64,18 @@ describe("getDayOfMonthWhitelistFromXDayOf", () => {
         const whitelist = getDayOfMonthWhitelistFromXDayOf(xDayOf, point);
         // The last Monday is January 26th, and the last Thursday is January 29th.
         expect(whitelist).toEqual(new Set([26, 29]));
+    });
+
+    it("includes the last day of a 28-day February as a fourth occurrence", () => {
+        const xDayOf: XDayOf = {
+            fourth: {
+                intNamedDays: NamedDay_intNamedDays_sunday,
+            },
+        };
+        // 1 Feb 2021 was a Monday, so the fourth Sunday is 28 Feb.
+        const point = new Date(2021, 1, 1);
+        const whitelist = getDayOfMonthWhitelistFromXDayOf(xDayOf, point);
+        expect(whitelist).toEqual(new Set([28]));
     });
 
 });

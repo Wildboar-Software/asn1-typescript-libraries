@@ -299,4 +299,58 @@ describe("evaluateTemporalContext", () => {
         );
         expect(matches).toBe(true);
     });
+
+    it("matches an at-assertion after an open-ended absolute startTime", () => {
+        const assertion: TimeAssertion = {
+            at: new Date(2026, 0, 1, 12, 13, 14),
+        };
+        const value = new TimeSpecification(
+            {
+                absolute: new TimeSpecification_time_absolute(
+                    new Date(2026, 0, 1, 12, 13, 13),
+                    undefined,
+                ),
+            },
+        );
+        const matches = evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        );
+        expect(matches).toBe(true);
+
+        const before: TimeAssertion = {
+            at: new Date(2026, 0, 1, 12, 13, 12),
+        };
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(before, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(false);
+    });
+
+    it("matches an at-assertion before an open-ended absolute endTime", () => {
+        const assertion: TimeAssertion = {
+            at: new Date(2026, 0, 1, 12, 13, 14),
+        };
+        const value = new TimeSpecification(
+            {
+                absolute: new TimeSpecification_time_absolute(
+                    undefined,
+                    new Date(2026, 0, 1, 12, 13, 15),
+                ),
+            },
+        );
+        const matches = evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        );
+        expect(matches).toBe(true);
+
+        const after: TimeAssertion = {
+            at: new Date(2026, 0, 1, 12, 13, 16),
+        };
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(after, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(false);
+    });
 });
