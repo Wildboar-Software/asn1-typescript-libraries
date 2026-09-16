@@ -13,7 +13,6 @@ import type {
 } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { addHours } from "date-fns";
 import boundariesOfPeriodOccurrence from "../../utils/boundariesOfPeriodOccurrence.mjs";
-import compareElements from "../../comparators/compareElements.mjs";
 
 const MAX_DATE: Date = new Date(8640000000000000);
 
@@ -139,7 +138,7 @@ const evaluateTemporalContext: EqualityMatcher = (
     } else if ("between" in a) {
         return timeSpecificationContains(v, a.between.startTime, a.between.endTime ?? MAX_DATE, a.between.entirely);
     } else {
-        return compareElements(assertion, value);
+        return false;
     }
 }
 
