@@ -1550,7 +1550,29 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s2).not.toBeNull();
     });
 
-    test.todo("Test dayOf without months specified...");
+    it("matches dayOf without months and ignores weeks when dayOf is present", () => {
+        const p = new Period(
+            undefined,
+            {
+                dayOf: {
+                    second: {
+                        intNamedDays: NamedDay_intNamedDays_friday,
+                    },
+                },
+            },
+            {
+                intWeek: [ 1 ],
+            },
+            undefined,
+            undefined,
+        );
+        const d = new Date(2021, 4, 14, 12, 34, 56);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s ] = r!;
+        expect(s.getDate()).toBe(14);
+        expect(s.getMonth()).toBe(4);
+    });
 
     it("rolls forward to the end of a timespan that spans midnight", () => {
         const p = new Period(

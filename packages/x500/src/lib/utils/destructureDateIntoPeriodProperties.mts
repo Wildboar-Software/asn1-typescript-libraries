@@ -16,12 +16,17 @@ interface DateDestructuredIntoPeriodMembers {
 
 export
 function destructureDateIntoPeriodProperties (period: Period, point: Date): DateDestructuredIntoPeriodMembers {
+    const usesDayOf = Boolean(period.days && ("dayOf" in period.days));
     const year: number = point.getFullYear();
     const month: number = point.getMonth() + 1;
     const week: number = (period.months)
         ? Math.ceil(point.getDate() / 7)
         : Math.ceil(getDayOfYear(point) / 7);
     const day: number = ((): number => {
+        // X.520: dayOf is an occurrence of NamedDay in a month; weeks is ignored.
+        if (usesDayOf) {
+            return point.getDate();
+        }
         if (period.weeks) {
             return getDay(point) + 1;
         } else if (period.months) {
