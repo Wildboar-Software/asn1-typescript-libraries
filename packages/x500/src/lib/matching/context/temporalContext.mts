@@ -15,6 +15,7 @@ import { addHours } from "date-fns";
 import boundariesOfPeriodOccurrence from "../../utils/boundariesOfPeriodOccurrence.mjs";
 
 const MAX_DATE: Date = new Date(8640000000000000);
+const MIN_DATE: Date = new Date(-8640000000000000);
 
 function xor (a: boolean, b: boolean): boolean {
     return ((a && !b) || (!a && b));
@@ -41,8 +42,12 @@ function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification):
             ? Number(spec.timeZone)
             : undefined;
         if ("absolute" in spec.time) {
-            const start = addHours(spec.time.absolute.startTime, -(timezone ?? 0));
-            const end = addHours(spec.time.absolute.endTime, -(timezone ?? 0));
+            const start = spec.time.absolute.startTime
+                ? addHours(spec.time.absolute.startTime, -(timezone ?? 0))
+                : MIN_DATE;
+            const end = spec.time.absolute.endTime
+                ? addHours(spec.time.absolute.endTime, -(timezone ?? 0))
+                : MAX_DATE;
             return (
                 (time.valueOf() >= start.valueOf())
                 && (time.valueOf() <= end.valueOf())
@@ -66,8 +71,12 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
             ? Number(spec.timeZone)
             : undefined;
         if ("absolute" in spec.time) {
-            const startSpec = addHours(spec.time.absolute.startTime, -(timezone ?? 0));
-            const endSpec = addHours(spec.time.absolute.endTime, -(timezone ?? 0));
+            const startSpec = spec.time.absolute.startTime
+                ? addHours(spec.time.absolute.startTime, -(timezone ?? 0))
+                : MIN_DATE;
+            const endSpec = spec.time.absolute.endTime
+                ? addHours(spec.time.absolute.endTime, -(timezone ?? 0))
+                : MAX_DATE;
             if (entirely) {
                 return (
                     (start.valueOf() >= startSpec.valueOf())
