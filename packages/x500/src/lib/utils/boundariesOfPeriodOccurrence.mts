@@ -102,6 +102,8 @@ const ALL_MONTHS_IN_YEAR: Set<number> = new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
 export
 function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Date ] | null {
 
+    const usesDayOf = Boolean(period.days && ("dayOf" in period.days));
+
     const whitelistedYears: Set<number> | null = period.years
         ? new Set(period.years.map(Number))
         : null;
@@ -126,7 +128,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
     })();
 
     const whitelistedWeeks: Set<number> | null = ((): Set<number> | null => {
-        if (!period.weeks) {
+        if (usesDayOf || !period.weeks) {
             return null;
         }
         if ("intWeek" in period.weeks) {
@@ -200,12 +202,12 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
     const daysAreWeekdays = Boolean(period.weeks) || (!period.months && !period.years);
 
     const maxDay: number = ((): number => {
-        if (daysAreWeekdays) {
+        if (daysAreWeekdays && !usesDayOf) {
             return 7;
         } else if (period.months) {
-            return getDaysInMonth(pointMonth);
+            return getDaysInMonth(point);
         } else {
-            return getDaysInYear(pointYear);
+            return getDaysInYear(point);
         }
     })();
 
@@ -333,7 +335,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         }
         if (i === 1) {
             const prev = subDays(min, 1);
-            if (daysAreWeekdays) {
+            if (daysAreWeekdays && !usesDayOf) {
                 const {
                     year: yesterYear,
                     month: yesterMonth,
@@ -383,7 +385,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         }
         if (j >= maxDay) {
             const next = addDays(max, 1);
-            if (daysAreWeekdays) {
+            if (daysAreWeekdays && !usesDayOf) {
                 const {
                     year: nextYear,
                     month: nextMonth,
@@ -569,13 +571,13 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
             }
         }
         if (j >= MAX_MONTH) {
-            const next = addMonths(min, 1);
+            const next = addMonths(max, 1);
             const { year: nextYear } = destructureDateIntoPeriodProperties(period, next);
             const nextYearPermitted = (!whitelistedYears || whitelistedYears.has(nextYear));
             if (nextYearPermitted) {
                 j = 1;
                 while (whitelistedMonths.has(j)) {
-                    max = addMonths(startOfYear(next), j);
+                    max = endOfMonth(new Date(next.getFullYear(), j - 1, 1));
                     j++;
                 }
             }
