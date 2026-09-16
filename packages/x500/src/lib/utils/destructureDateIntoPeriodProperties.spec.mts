@@ -20,15 +20,16 @@ describe("destructureDateIntoPeriodProperties", () => {
     });
 
     it("still treats days+years as day-of-year", () => {
+        // Day 32 cannot be a day-of-week (1-7) or day-of-month (1-31).
         const p = new Period(
             undefined,
-            { intDay: [ 2 ] },
+            { intDay: [ 32 ] },
             undefined,
             undefined,
             [ 2026 ],
         );
-        const jan2 = new Date(2026, 0, 2, 12, 0, 0);
-        expect(destructureDateIntoPeriodProperties(p, jan2).day).toBe(2);
-        expect(boundariesOfPeriodOccurrence(p, jan2)).not.toBeNull();
+        const feb1 = new Date(2026, 1, 1, 12, 0, 0);
+        expect(destructureDateIntoPeriodProperties(p, feb1).day).toBe(32);
+        expect(boundariesOfPeriodOccurrence(p, feb1)).not.toBeNull();
     });
 });

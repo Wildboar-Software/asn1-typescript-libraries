@@ -190,6 +190,13 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         ? period.timesOfDay.find((tod): boolean => dateIsBetweenDayTimeBand(tod, point))
         : undefined;
 
+    /**
+     * X.520 clause 10.2 says `days` is days of the week when it precedes
+     * `weeks`. The "days but no coarser units" case (`days` with no
+     * `weeks`, `months`, or `years`) is not described in the
+     * specification; this treats it as days of the week as well, inferred
+     * from example (b) `{ days intDay:{2} }` (every Monday).
+     */
     const daysAreWeekdays = Boolean(period.weeks) || (!period.months && !period.years);
 
     const maxDay: number = ((): number => {

@@ -29,7 +29,9 @@ function destructureDateIntoPeriodProperties (period: Period, point: Date): Date
         } else if (period.years) {
             return getDayOfYear(point);
         } else {
-            // X.520 example (b): `{ days intDay:{2} }` is every Monday.
+            // Days with no coarser unit is not described in X.520
+            // clause 10.2; inferred as days of the week from
+            // example (b) `{ days intDay:{2} }` (every Monday).
             return getDay(point) + 1;
         }
     })();
