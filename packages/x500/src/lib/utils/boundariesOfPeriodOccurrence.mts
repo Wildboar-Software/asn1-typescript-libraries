@@ -29,8 +29,19 @@ import { x520WeekIsListed } from "./x520PeriodCalendar.mjs";
 
 const MAX_DAY_OF_WEEK = 7;
 const MAX_MONTH = 12;
+/**
+ * Cap when walking adjacent Monday–Sunday weeks. We cannot just decrement
+ * the week integer: week 5 is an alias, and week 1 of January is not
+ * adjacent (in number-space) to week 5 of December. Stepping one ISO week
+ * at a time and re-destructuring handles month/year wrap. 60 is far more
+ * than a contiguous allWeeks span would ever need.
+ */
 const MAX_WEEK_SPAN_ITERS = 60;
 
+/**
+ * `whitelistedWeeks.has(week)` is not enough: X.520 week 5 (of month) and
+ * 53 (of year) mean “last week”, which may be 4 or 52. See x520PeriodCalendar.
+ */
 function periodAllowsWeek (
     whitelist: Set<number> | null,
     week: number,
@@ -106,6 +117,13 @@ const ALL_MONTHS_IN_YEAR: Set<number> = new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
  *    year. To perform this "rolling back," we check if this "rolled-back" value
  *    still satisfies all of the constraints of the `Period`. If it does, we
  *    continue counting down through the previous day / week / month / year.
+ *
+ * When `weeks` is present, a week is a Monday–Sunday ISO week (X.520 clause
+ * 10.2’s “≥4 days of this month/year” rule; see x520PeriodCalendar.mts).
+ * Occurrence bounds are therefore `startOfISOWeek` … `endOfISOWeek`, not
+ * `addWeeks(startOfMonth, n)`. Adjacent-week walking re-runs
+ * `destructureDateIntoPeriodProperties` so week 5/53 aliases and
+ * Thursday-owned months stay correct across boundaries.
  *
  * @param period {Period} The `Period` data structure that defines the period itself.
  * @param point {Date} The point in time used to select an occurence of the `Period`
@@ -196,6 +214,8 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
             && ((tod.endDayTime?.second ?? DayTimeBand._default_value_for_endDayTime.second ?? 59) === 59)
         ));
 
+    // X.520: if months is present, weeks are 1..5 of that month; otherwise
+    // weeks are 1..53 of the year. This also selects the 5 vs 53 alias.
     const weeksAreOfMonth: boolean = Boolean(period.months);
     const {
         year: pointYear,
@@ -333,6 +353,9 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         let i: number = pointDay;
         while (whitelistedDays.has(i - 1)) {
             const candidate: Date = subDays(min, 1);
+            // When days are weekdays, walking back from Monday (intDay 2)
+            // lands on Sunday of the previous Monday–Sunday week. Stop
+            // unless that X.520 week (and its owning month/year) is listed.
             if (period.weeks) {
                 const {
                     year: candYear,
@@ -354,6 +377,8 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         let j: number = pointDay;
         while (whitelistedDays.has(j + 1)) {
             const candidate: Date = addDays(max, 1);
+            // Same guard forward: the calendar day after Sunday is Monday of
+            // the next ISO week, which may be a different X.520 week-of-month.
             if (period.weeks) {
                 const {
                     year: candYear,
@@ -492,8 +517,14 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         }
         return [ min, max ];
     } else if (whitelistedWeeks) {
+        // One X.520 week is Monday 00:00 .. Sunday end-of-day in local time,
+        // not a 7-day slice from the 1st of the calendar month/year (the old
+        // ceil(date/7) alignment).
         min = startOfISOWeek(point);
         max = endOfISOWeek(point);
+        // Expand through neighbouring ISO weeks while they remain permitted.
+        // Re-destructure each candidate: week numbers are not a flat 1..5
+        // sequence across months, and week 5/53 may alias lastWeek.
         for (let n: number = 0; n < MAX_WEEK_SPAN_ITERS; n++) {
             const prev: Date = subWeeks(min, 1);
             const {

@@ -1970,6 +1970,8 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(e.getDate()).toBe(1);
     });
 
+    // Fri 1 Jan 2021 is in Mon 28 Dec 2020 – Sun 3 Jan 2021 (3 January days).
+    // Week 1 of January 2021 is Mon 4 – Sun 10 (the week containing the 4th).
     it("does not treat 1 January as week 1 of January when that ISO week has fewer than four January days", () => {
         const p = new Period(
             undefined,
@@ -1994,6 +1996,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(e.getDate()).toBe(10);
     });
 
+    // Feb 2021 has four X.520 weeks; last is Mon 22 – Sun 28. Week 5 aliases it.
     it("treats week 5 of February as the last week even when February has only four X.520 weeks", () => {
         const p = new Period(
             undefined,
@@ -2018,6 +2021,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(boundariesOfPeriodOccurrence(p, new Date(2021, 1, 15, 12))).toBeNull();
     });
 
+    // 2021 has 52 ISO weeks; last is Mon 27 Dec 2021 – Sun 2 Jan 2022. 53 aliases 52.
     it("treats week 53 as the last ISO week of a 52-week year", () => {
         const p = new Period(
             undefined,
