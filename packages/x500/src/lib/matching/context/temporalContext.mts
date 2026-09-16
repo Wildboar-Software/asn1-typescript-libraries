@@ -59,57 +59,59 @@ function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification):
 
 /**
  * `between` evaluation: overlap, or containment when `entirely` is
- * TRUE. `notThisTime` inverts the result (clause 10.2).
+ * TRUE. `notThisTime` complements the stored time set (clause 10.2).
  */
 function timeSpecificationContains (spec: TimeSpecification, start: Date, end: Date, entirely: boolean = false): boolean {
-    const result = ((): boolean => {
-        const timezone: number | undefined = (spec.timeZone !== undefined)
-            ? Number(spec.timeZone)
-            : undefined;
-        if ("absolute" in spec.time) {
-            const startSpec = addHours(spec.time.absolute.startTime, -(timezone ?? 0));
-            const endSpec = addHours(spec.time.absolute.endTime, -(timezone ?? 0));
-            if (entirely) {
-                return (
-                    (start.valueOf() >= startSpec.valueOf())
-                    && (end.valueOf() <= endSpec.valueOf())
-                );
-            } else {
-                return (!(
-                    (start.valueOf() > endSpec.valueOf())
-                    || (end.valueOf() < startSpec.valueOf())
-                ));
+    const timezone: number | undefined = (spec.timeZone !== undefined)
+        ? Number(spec.timeZone)
+        : undefined;
+    let overlaps = false;
+    let contained = false;
+    if ("absolute" in spec.time) {
+        const startSpec = addHours(spec.time.absolute.startTime, -(timezone ?? 0));
+        const endSpec = addHours(spec.time.absolute.endTime, -(timezone ?? 0));
+        contained = (
+            (start.valueOf() >= startSpec.valueOf())
+            && (end.valueOf() <= endSpec.valueOf())
+        );
+        overlaps = !(
+            (start.valueOf() > endSpec.valueOf())
+            || (end.valueOf() < startSpec.valueOf())
+        );
+    } else if ("periodic" in spec.time) {
+        for (const period of spec.time.periodic) {
+            const adjustedStart = addHours(start, timezone ?? 0);
+            const adjustedEnd = addHours(end, timezone ?? 0);
+            const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedStart);
+            if (!boundaries) {
+                continue;
             }
-        } else if ("periodic" in spec.time) {
-            return spec.time.periodic.some((period) => {
-                // We cannot adjust the period by timezone, so instead, we
-                // modify the asserted times
-                const adjustedStart = addHours(start, timezone ?? 0);
-                const adjustedEnd = addHours(end, timezone ?? 0);
-                const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedStart);
-                if (!boundaries) {
-                    return false;
-                }
-                const [ lower, upper ] = boundaries;
-                const startWithinBounds: boolean = (
-                    (adjustedStart.valueOf() >= lower.valueOf())
-                    && (adjustedStart.valueOf() <= upper.valueOf())
-                );
-                const endWithinBounds: boolean = (
-                    (adjustedEnd.valueOf() >= lower.valueOf())
-                    && (adjustedEnd.valueOf() <= upper.valueOf())
-                );
-                return (
-                    entirely
-                        ? (startWithinBounds && endWithinBounds)
-                        : (startWithinBounds || endWithinBounds)
-                );
-            });
-        } else {
-            throw new Error(); // There is no other option.
+            const [ lower, upper ] = boundaries;
+            const startWithinBounds: boolean = (
+                (adjustedStart.valueOf() >= lower.valueOf())
+                && (adjustedStart.valueOf() <= upper.valueOf())
+            );
+            const endWithinBounds: boolean = (
+                (adjustedEnd.valueOf() >= lower.valueOf())
+                && (adjustedEnd.valueOf() <= upper.valueOf())
+            );
+            if (startWithinBounds || endWithinBounds) {
+                overlaps = true;
+            }
+            if (startWithinBounds && endWithinBounds) {
+                contained = true;
+            }
         }
-    })();
-    return xor(result, spec.notThisTime);
+    } else {
+        throw new Error();
+    }
+    if (!spec.notThisTime) {
+        return entirely ? contained : overlaps;
+    }
+    // Stored value is the complement of the expressed times.
+    // entirely ⊆ ¬S  ⇔  A ∩ S = ∅
+    // overlap ¬S     ⇔  ¬(A ⊆ S)
+    return entirely ? !overlaps : !contained;
 }
 
 /**
@@ -120,7 +122,8 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
  * `notThisTime` negation). A `TimeAssertion` matches if the times
  * overlap: `now`/`at` must fall within the stored specification;
  * `between` overlaps unless `entirely` is TRUE, in which case the
- * whole asserted band must lie inside the stored times. Missing
+ * whole asserted band must lie inside the stored times. `notThisTime`
+ * complements the stored set (it is not a boolean XOR of the matcher). Missing
  * timezone is interpreted in the DSA's zone. Periodic SET OF is a
  * logical OR.
  */
