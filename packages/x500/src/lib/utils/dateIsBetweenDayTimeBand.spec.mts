@@ -32,20 +32,7 @@ describe("dateIsBetweenDayTimeBand", () => {
         expect(boundariesOfPeriodOccurrence(p, new Date(2021, 5, 11, 3, 0, 0))).toBeNull();
     });
 
-    it("covers a night that crosses midnight with two same-day bands", () => {
-        const evening = new DayTimeBand(
-            new DayTime(22, 0, 0),
-            DayTimeBand.END_OF_DAY,
-        );
-        const morning = new DayTimeBand(
-            DayTimeBand.START_OF_DAY,
-            new DayTime(6, 0, 0),
-        );
-        expect(dateIsBetweenDayTimeBand(evening, new Date(2021, 0, 1, 22, 0, 0))).toBe(true);
-        expect(dateIsBetweenDayTimeBand(evening, new Date(2021, 0, 1, 23, 59, 59))).toBe(true);
-        expect(dateIsBetweenDayTimeBand(evening, new Date(2021, 0, 1, 0, 0, 0))).toBe(false);
-        expect(dateIsBetweenDayTimeBand(morning, new Date(2021, 0, 1, 0, 0, 0))).toBe(true);
-        expect(dateIsBetweenDayTimeBand(morning, new Date(2021, 0, 1, 6, 0, 0))).toBe(true);
-        expect(dateIsBetweenDayTimeBand(morning, new Date(2021, 0, 1, 22, 0, 0))).toBe(false);
-    });
+    // Overnight `between` with `entirely` TRUE is covered (skipped) in
+    // `temporalContext.spec.mts`. X.520 clause 10.2 is not clear if or
+    // how overnight timebands are represented.
 });
