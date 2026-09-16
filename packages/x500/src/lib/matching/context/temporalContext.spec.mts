@@ -1,5 +1,5 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { TRUE } from "@wildboar/asn1";
+import { TRUE, DERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
 import {
     TimeSpecification,
     _decode_TimeSpecification,
@@ -450,6 +450,26 @@ describe("evaluateTemporalContext", () => {
         expect(evaluateTemporalContext(
             _encode_TimeAssertion(assertion, DER),
             _encode_TimeSpecification(invertedOvernightBand, DER),
+
+    it("does not match an unrecognized TimeAssertion CHOICE", () => {
+        const assertion = new DERElement(
+            ASN1TagClass.universal,
+            ASN1Construction.primitive,
+            ASN1UniversalType.integer,
+            5,
+        );
+        const value = new TimeSpecification(
+            {
+                absolute: new TimeSpecification_time_absolute(
+                    new Date(2026, 0, 1, 12, 13, 13),
+                    new Date(2026, 0, 1, 12, 13, 15),
+                ),
+            },
+        );
+        expect(evaluateTemporalContext(
+            assertion,
+            _encode_TimeSpecification(value, DER),
+
         )).toBe(false);
     });
 });
