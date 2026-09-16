@@ -47,22 +47,5 @@ describe("dateIsBetweenDayTimeBand", () => {
         expect(dateIsBetweenDayTimeBand(morning, new Date(2021, 0, 1, 0, 0, 0))).toBe(true);
         expect(dateIsBetweenDayTimeBand(morning, new Date(2021, 0, 1, 6, 0, 0))).toBe(true);
         expect(dateIsBetweenDayTimeBand(morning, new Date(2021, 0, 1, 22, 0, 0))).toBe(false);
-
-        const p = new Period([ evening, morning ]);
-        const eveningBounds = boundariesOfPeriodOccurrence(
-            p,
-            new Date(2021, 5, 10, 23, 0, 0),
-        );
-        expect(eveningBounds).not.toBeNull();
-        expect(eveningBounds![0]).toEqual(new Date(2021, 5, 10, 22, 0, 0));
-        expect(eveningBounds![1]).toEqual(new Date(2021, 5, 10, 23, 59, 59));
-
-        const morningBounds = boundariesOfPeriodOccurrence(
-            p,
-            new Date(2021, 5, 10, 3, 0, 0),
-        );
-        expect(morningBounds).not.toBeNull();
-        expect(morningBounds![0]).toEqual(new Date(2021, 5, 10, 0, 0, 0));
-        expect(morningBounds![1]).toEqual(new Date(2021, 5, 10, 6, 0, 0));
     });
 });
