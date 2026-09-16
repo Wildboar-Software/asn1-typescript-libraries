@@ -1545,7 +1545,29 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s2).not.toBeNull();
     });
 
-    test.todo("Test dayOf without months specified...");
+    it("matches dayOf without months and ignores weeks when dayOf is present", () => {
+        const p = new Period(
+            undefined,
+            {
+                dayOf: {
+                    second: {
+                        intNamedDays: NamedDay_intNamedDays_friday,
+                    },
+                },
+            },
+            {
+                intWeek: [ 1 ],
+            },
+            undefined,
+            undefined,
+        );
+        const d = new Date(2021, 4, 14, 12, 34, 56);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s ] = r!;
+        expect(s.getDate()).toBe(14);
+        expect(s.getMonth()).toBe(4);
+    });
 
     it("rolls forward to the end of a timespan that spans midnight", () => {
         const p = new Period(
@@ -1822,11 +1844,38 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2022);
-        expect(e.getMonth()).toBe(2);
-        expect(e.getDate()).toBe(1);
-        expect(e.getHours()).toBe(0);
-        expect(e.getMinutes()).toBe(0);
-        expect(e.getSeconds()).toBe(0);
+        expect(e.getMonth()).toBe(1);
+        expect(e.getDate()).toBe(28);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
+    });
+
+    it("wraps Nov–Jan from a December point without inverting bounds", () => {
+        const p = new Period(
+            undefined,
+            undefined,
+            undefined,
+            {
+                intMonth: [ 1, 11, 12 ],
+            },
+            [ 2021, 2022 ],
+        );
+        const d = new Date(2021, 11, 15, 12, 0, 0);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r!;
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(10);
+        expect(s.getDate()).toBe(1);
+        expect(e.getFullYear()).toBe(2022);
+        expect(e.getMonth()).toBe(0);
+        expect(e.getDate()).toBe(31);
+        expect(e.getHours()).toBe(23);
+        expect(e.getMinutes()).toBe(59);
+        expect(e.getSeconds()).toBe(59);
+        expect(s.valueOf()).toBeLessThanOrEqual(d.valueOf());
+        expect(d.valueOf()).toBeLessThanOrEqual(e.valueOf());
     });
 
     it("does not overflow into the next month prior to checking that the next month is allowed", () => {
@@ -1895,6 +1944,30 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
+    });
+
+    it("rolls from 28 Feb into 1 Mar when both days are permitted", () => {
+        const p = new Period(
+            undefined,
+            {
+                intDay: [ 1, 28 ],
+            },
+            undefined,
+            {
+                allMonths: null,
+            },
+            undefined,
+        );
+        const d = new Date(2021, 1, 28, 12, 0, 0);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r!;
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(1);
+        expect(s.getDate()).toBe(28);
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(2);
+        expect(e.getDate()).toBe(1);
     });
 
     it("does not treat 1 January as week 1 of January when that ISO week has fewer than four January days", () => {
