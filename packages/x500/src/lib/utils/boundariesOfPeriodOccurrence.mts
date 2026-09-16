@@ -59,8 +59,8 @@ const ALL_MONTHS_IN_YEAR: Set<number> = new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
  * ### Assumptions
  *
  * - Not all possible values for a given unit of precision in a `Period` are specified.
- * - `DayTimeBand`s do not overlap.
- * - `DayTimeBand`s are not adjacent (other than at minima and maxima)
+ * - Overlapping and adjacent `DayTimeBand`s are flattened first, so the
+ *   remaining bands do not overlap or abut (other than at midnight).
  *
  * ### Algorithm
  *
@@ -169,18 +169,28 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         }
     })();
 
-    const startOfDayBand: DayTimeBand | undefined = period.timesOfDay
-        ?.find((tod: DayTimeBand): boolean => (
-            ((tod.startDayTime?.hour ?? DayTimeBand._default_value_for_startDayTime.hour) === 0)
-            && ((tod.startDayTime?.minute ?? DayTimeBand._default_value_for_startDayTime.minute ?? 0) === 0)
-            && ((tod.startDayTime?.second ?? DayTimeBand._default_value_for_startDayTime.second ?? 0) === 0)
-        ));
-    const endOfDayBand: DayTimeBand | undefined = period.timesOfDay
-        ?.find((tod: DayTimeBand): boolean => (
-            ((tod.endDayTime?.hour ?? DayTimeBand._default_value_for_endDayTime.hour) === 23)
-            && ((tod.endDayTime?.minute ?? DayTimeBand._default_value_for_endDayTime.minute ?? 59) === 59)
-            && ((tod.endDayTime?.second ?? DayTimeBand._default_value_for_endDayTime.second ?? 59) === 59)
-        ));
+    /**
+     * Flatten so at most one band starts at 00:00:00 and at most one
+     * ends at 23:59:59. A union that covers the whole day is treated
+     * as omitted `timesOfDay` (all times of the day).
+     */
+    const timesOfDay: DayTimeBand[] | undefined = ((): DayTimeBand[] | undefined => {
+        if (!period.timesOfDay?.length) {
+            return undefined;
+        }
+        const flattened = DayTimeBand.flatten(period.timesOfDay);
+        for (const band of flattened) {
+            if (band.isStartOfDay() && band.isEndOfDay()) {
+                return undefined;
+            }
+        }
+        return flattened;
+    })();
+
+    const startOfDayBand: DayTimeBand | undefined = timesOfDay
+        ?.find((tod: DayTimeBand): boolean => tod.isStartOfDay());
+    const endOfDayBand: DayTimeBand | undefined = timesOfDay
+        ?.find((tod: DayTimeBand): boolean => tod.isEndOfDay());
 
     const {
         year: pointYear,
@@ -188,8 +198,8 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         week: pointWeek,
         day: pointDay,
     } = destructureDateIntoPeriodProperties(period, point);
-    const applicableTimeband: DayTimeBand | undefined = period.timesOfDay
-        ? period.timesOfDay.find((tod): boolean => dateIsBetweenDayTimeBand(tod, point))
+    const applicableTimeband: DayTimeBand | undefined = timesOfDay
+        ? timesOfDay.find((tod): boolean => dateIsBetweenDayTimeBand(tod, point))
         : undefined;
 
     /**
@@ -218,7 +228,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         || (whitelistedMonths && !whitelistedMonths.has(pointMonth))
         || (whitelistedWeeks && !whitelistedWeeks.has(pointWeek))
         || (whitelistedDays && !whitelistedDays.has(pointDay))
-        || (period.timesOfDay && !applicableTimeband)
+        || (timesOfDay && !applicableTimeband)
     ) {
         return null;
     }

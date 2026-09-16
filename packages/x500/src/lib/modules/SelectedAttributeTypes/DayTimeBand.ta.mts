@@ -184,6 +184,120 @@ export class DayTimeBand {
     public isEqualTo (other: DayTimeBand): boolean {
         return (this.compare(other) === 0);
     }
+
+    /**
+     * @summary Start of this band as seconds since 00:00:00.
+     * @returns {number} 0 when `startDayTime` is absent or midnight.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public startToSeconds (): number {
+        return (this.startDayTime ?? DayTimeBand.START_OF_DAY).toSeconds();
+    }
+
+    /**
+     * @summary End of this band as seconds since 00:00:00.
+     * @returns {number} 86399 when `endDayTime` is absent or 23:59:59.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public endToSeconds (): number {
+        return (this.endDayTime ?? DayTimeBand.END_OF_DAY).toSeconds();
+    }
+
+    /**
+     * @summary Whether this band shares any second with `other`.
+     * @description
+     *
+     * Closed intervals: a band ending at `T` overlaps one starting at
+     * `T`. Does not wrap past midnight.
+     *
+     * @param {DayTimeBand} other The other band.
+     * @returns {boolean} `true` iff the closed ranges intersect.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public overlaps (other: DayTimeBand): boolean {
+        return (this.startToSeconds() <= other.endToSeconds())
+            && (other.startToSeconds() <= this.endToSeconds());
+    }
+
+    /**
+     * @summary Whether the bands are consecutive with no gap between.
+     * @description
+     *
+     * True when one band ends at second `T` and the other starts at
+     * `T + 1`. Bands that share a second `overlap` instead.
+     *
+     * @param {DayTimeBand} other The other band.
+     * @returns {boolean} `true` iff they abut by one second.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isAdjacentTo (other: DayTimeBand): boolean {
+        return ((this.endToSeconds() + 1) === other.startToSeconds())
+            || ((other.endToSeconds() + 1) === this.startToSeconds());
+    }
+
+    /**
+     * @summary Covering interval of this band and `other`.
+     * @description
+     *
+     * Start is the earlier start; end is the later end. DEFAULT start
+     * and end are omitted. Used after `overlaps` / `isAdjacentTo`; if
+     * the bands have a gap, that gap is filled.
+     *
+     * @param {DayTimeBand} other The other band.
+     * @returns {DayTimeBand} One band spanning both.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public merge (other: DayTimeBand): DayTimeBand {
+        const startSec = Math.min(this.startToSeconds(), other.startToSeconds());
+        const endSec = Math.max(this.endToSeconds(), other.endToSeconds());
+        return new DayTimeBand(
+            (startSec === 0) ? undefined : DayTime.fromSeconds(startSec),
+            (endSec === DayTimeBand.END_OF_DAY.toSeconds())
+                ? undefined
+                : DayTime.fromSeconds(endSec),
+        );
+    }
+
+    /**
+     * @summary Flatten overlapping and adjacent `DayTimeBand`s.
+     * @description
+     *
+     * Sorts by start then end and merges any pair that `overlaps` or
+     * `isAdjacentTo` the previous merged band. After this, at most one
+     * band starts at 00:00:00 and at most one ends at 23:59:59, unless
+     * they are the same whole-day band.
+     *
+     * @param {readonly DayTimeBand[]} bands The SET members, in any order.
+     * @returns {DayTimeBand[]} Disjoint, non-adjacent bands, sorted.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public static flatten (bands: readonly DayTimeBand[]): DayTimeBand[] {
+        const count = bands.length;
+        if (count === 0) {
+            return [];
+        }
+        if (count === 1) {
+            return [ bands[0] ];
+        }
+        const sorted = bands.slice().sort((a, b) => a.compare(b));
+        const out: DayTimeBand[] = [ sorted[0] ];
+        for (let i = 1; i < count; i++) {
+            const last = out[out.length - 1];
+            const next = sorted[i];
+            if (last.overlaps(next) || last.isAdjacentTo(next)) {
+                out[out.length - 1] = last.merge(next);
+            } else {
+                out.push(next);
+            }
+        }
+        return out;
+    }
 }
 
 /**
