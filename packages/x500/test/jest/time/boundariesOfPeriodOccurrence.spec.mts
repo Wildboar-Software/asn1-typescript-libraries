@@ -1901,4 +1901,28 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
     });
+
+    it("rolls from 28 Feb into 1 Mar when both days are permitted", () => {
+        const p = new Period(
+            undefined,
+            {
+                intDay: [ 1, 28 ],
+            },
+            undefined,
+            {
+                allMonths: null,
+            },
+            undefined,
+        );
+        const d = new Date(2021, 1, 28, 12, 0, 0);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r!;
+        expect(s.getFullYear()).toBe(2021);
+        expect(s.getMonth()).toBe(1);
+        expect(s.getDate()).toBe(28);
+        expect(e.getFullYear()).toBe(2021);
+        expect(e.getMonth()).toBe(2);
+        expect(e.getDate()).toBe(1);
+    });
 });

@@ -194,9 +194,9 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         if (period.weeks) {
             return 7;
         } else if (period.months) {
-            return getDaysInMonth(pointMonth);
+            return getDaysInMonth(point);
         } else {
-            return getDaysInYear(pointYear);
+            return getDaysInYear(point);
         }
     })();
 
