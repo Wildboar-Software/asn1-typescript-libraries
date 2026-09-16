@@ -1951,6 +1951,103 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(e.getSeconds()).toBe(59);
     });
 
+    it("uses the union of overlapping start-of-day bands when merging midnight", () => {
+        const p = new Period(
+            [
+                new DayTimeBand( // shorter start-of-day; listed first
+                    new DayTime(0, 0, 0),
+                    new DayTime(8, 0, 0),
+                ),
+                new DayTimeBand( // longer start-of-day
+                    new DayTime(0, 0, 0),
+                    new DayTime(16, 0, 0),
+                ),
+                new DayTimeBand(
+                    new DayTime(18, 0, 0),
+                    new DayTime(23, 59, 59),
+                ),
+            ],
+            {
+                intDay: [ 16, 17, 18 ],
+            },
+            undefined,
+            {
+                allMonths: null,
+            },
+            [ 2021 ],
+        );
+        const d = new Date(2021, 4, 17, 12, 0, 0);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r!;
+        expect(s.getDate()).toBe(16);
+        expect(s.getHours()).toBe(18);
+        expect(e.getDate()).toBe(18);
+        expect(e.getHours()).toBe(16);
+    });
+
+    it("uses the union of overlapping midday bands as the occurrence", () => {
+        const p = new Period(
+            [
+                new DayTimeBand(
+                    new DayTime(9, 0, 0),
+                    new DayTime(12, 0, 0),
+                ),
+                new DayTimeBand(
+                    new DayTime(11, 0, 0),
+                    new DayTime(17, 0, 0),
+                ),
+            ],
+            {
+                intDay: [ 17 ],
+            },
+            undefined,
+            {
+                allMonths: null,
+            },
+            [ 2021 ],
+        );
+        const d = new Date(2021, 4, 17, 11, 30, 0);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r!;
+        expect(s.getDate()).toBe(17);
+        expect(s.getHours()).toBe(9);
+        expect(e.getDate()).toBe(17);
+        expect(e.getHours()).toBe(17);
+    });
+
+    it("merges more than one adjacent day when time bands cover midnight", () => {
+        const p = new Period(
+            [
+                new DayTimeBand(
+                    new DayTime(0, 0, 0),
+                    new DayTime(16, 0, 0),
+                ),
+                new DayTimeBand(
+                    new DayTime(18, 0, 0),
+                    new DayTime(23, 59, 59),
+                ),
+            ],
+            {
+                intDay: [ 16, 17, 18 ],
+            },
+            undefined,
+            {
+                allMonths: null,
+            },
+            [ 2021 ],
+        );
+        const d = new Date(2021, 4, 17, 12, 0, 0);
+        const r = boundariesOfPeriodOccurrence(p, d);
+        expect(r).not.toBeNull();
+        const [ s, e ] = r!;
+        expect(s.getDate()).toBe(16);
+        expect(s.getHours()).toBe(18);
+        expect(e.getDate()).toBe(18);
+        expect(e.getHours()).toBe(16);
+    });
+
     it("rolls from 28 Feb into 1 Mar when both days are permitted", () => {
         const p = new Period(
             undefined,

@@ -555,17 +555,20 @@ function normalizeDayTimeBand(band: DayTimeBand): DayTimeBand {
 }
 
 /**
- * @summary Canonicalize `timesOfDay`: sort the SET, drop a full-day band.
+ * @summary Canonicalize `timesOfDay`: flatten, sort, drop a full-day band.
  * @description
  *
- * `timesOfDay` is `SET SIZE (1..MAX) OF DayTimeBand`. If any band is
- * the whole day (00:00:00–23:59:59), the others are redundant and the
+ * `timesOfDay` is `SET SIZE (1..MAX) OF DayTimeBand`. Overlapping and
+ * adjacent bands are merged so the SET is a list of disjoint coverage.
+ * That leaves at most one midnight-starting band and at most one
+ * 23:59:59-ending band (or a single whole-day band).
+ *
+ * If any remaining band is the whole day (00:00:00–23:59:59), the
  * component is omitted: X.520 clause 10.2 says that missing
  * `timesOfDay` already means all times of the day.
  *
- * Otherwise members are sorted by start then end. Duplicate (start,
- * end) pairs are removed. Overlapping bands are **not** merged; X.520
- * clause 10.2 does not define that encoding equivalence.
+ * Otherwise DEFAULT start/end are omitted and members stay sorted by
+ * start then end.
  *
  * @param {DayTimeBand[] | undefined} bands The SET, if present.
  * @returns {DayTimeBand[] | undefined} Canonical SET, or `undefined`.
@@ -578,34 +581,16 @@ function normalizeTimesOfDay(
     if (!bands || (bands.length === 0)) {
         return undefined;
     }
-    const count = bands.length;
+    const flattened = DayTimeBand.flatten(bands);
+    const count = flattened.length;
     const normalized: DayTimeBand[] = new Array(count);
     for (let i = 0; i < count; i++) {
-        const band = bands[i];
+        const band = flattened[i];
         if (band.isStartOfDay() && band.isEndOfDay()) {
             return undefined;
         }
         normalized[i] = normalizeDayTimeBand(band);
     }
-    let hasDuplicate = false;
-    normalized.sort((a, b) => {
-        const cmp = a.compare(b);
-        if (cmp === 0) {
-            hasDuplicate = true;
-        }
-        return cmp;
-    });
-    if (!hasDuplicate) {
-        return normalized;
-    }
-    let lastUnique = 0;
-    for (let i = 1; i < count; i++) {
-        if (!normalized[lastUnique].isEqualTo(normalized[i])) {
-            lastUnique++;
-            normalized[lastUnique] = normalized[i];
-        }
-    }
-    normalized.length = lastUnique + 1;
     return normalized;
 }
 
@@ -635,7 +620,8 @@ function normalizeTimesOfDay(
  * - If `dayOf` is used, `weeks` is dropped (X.520: not meaningful, ignored).
  * - `DayTime` / `DayTimeBand` DEFAULT values are omitted; a band covering
  *   the whole day is treated as omitted `timesOfDay`.
- * - `timesOfDay` bands are sorted (it is a SET).
+ * - `timesOfDay` bands are sorted (it is a SET). Overlapping and
+ *   adjacent bands are flattened into disjoint coverage.
  *
  * This does **not** rewrite week 5 / 53 or `fifth` NamedDay; those are
  * "last of that month/year" at evaluation time, not alternate encodings.

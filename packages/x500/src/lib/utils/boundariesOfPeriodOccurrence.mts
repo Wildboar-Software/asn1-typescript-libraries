@@ -59,8 +59,8 @@ const ALL_MONTHS_IN_YEAR: Set<number> = new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
  * ### Assumptions
  *
  * - Not all possible values for a given unit of precision in a `Period` are specified.
- * - `DayTimeBand`s do not overlap.
- * - `DayTimeBand`s are not adjacent (other than at minima and maxima)
+ * - Overlapping and adjacent `DayTimeBand`s are flattened first, so the
+ *   remaining bands do not overlap or abut (other than at midnight).
  *
  * ### Algorithm
  *
@@ -169,18 +169,28 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         }
     })();
 
-    const startOfDayBand: DayTimeBand | undefined = period.timesOfDay
-        ?.find((tod: DayTimeBand): boolean => (
-            ((tod.startDayTime?.hour ?? DayTimeBand._default_value_for_startDayTime.hour) === 0)
-            && ((tod.startDayTime?.minute ?? DayTimeBand._default_value_for_startDayTime.minute ?? 0) === 0)
-            && ((tod.startDayTime?.second ?? DayTimeBand._default_value_for_startDayTime.second ?? 0) === 0)
-        ));
-    const endOfDayBand: DayTimeBand | undefined = period.timesOfDay
-        ?.find((tod: DayTimeBand): boolean => (
-            ((tod.endDayTime?.hour ?? DayTimeBand._default_value_for_endDayTime.hour) === 23)
-            && ((tod.endDayTime?.minute ?? DayTimeBand._default_value_for_endDayTime.minute ?? 59) === 59)
-            && ((tod.endDayTime?.second ?? DayTimeBand._default_value_for_endDayTime.second ?? 59) === 59)
-        ));
+    /**
+     * Flatten so at most one band starts at 00:00:00 and at most one
+     * ends at 23:59:59. A union that covers the whole day is treated
+     * as omitted `timesOfDay` (all times of the day).
+     */
+    const timesOfDay: DayTimeBand[] | undefined = ((): DayTimeBand[] | undefined => {
+        if (!period.timesOfDay?.length) {
+            return undefined;
+        }
+        const flattened = DayTimeBand.flatten(period.timesOfDay);
+        for (const band of flattened) {
+            if (band.isStartOfDay() && band.isEndOfDay()) {
+                return undefined;
+            }
+        }
+        return flattened;
+    })();
+
+    const startOfDayBand: DayTimeBand | undefined = timesOfDay
+        ?.find((tod: DayTimeBand): boolean => tod.isStartOfDay());
+    const endOfDayBand: DayTimeBand | undefined = timesOfDay
+        ?.find((tod: DayTimeBand): boolean => tod.isEndOfDay());
 
     const {
         year: pointYear,
@@ -188,8 +198,8 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         week: pointWeek,
         day: pointDay,
     } = destructureDateIntoPeriodProperties(period, point);
-    const applicableTimeband: DayTimeBand | undefined = period.timesOfDay
-        ? period.timesOfDay.find((tod): boolean => dateIsBetweenDayTimeBand(tod, point))
+    const applicableTimeband: DayTimeBand | undefined = timesOfDay
+        ? timesOfDay.find((tod): boolean => dateIsBetweenDayTimeBand(tod, point))
         : undefined;
 
     /**
@@ -218,10 +228,20 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         || (whitelistedMonths && !whitelistedMonths.has(pointMonth))
         || (whitelistedWeeks && !whitelistedWeeks.has(pointWeek))
         || (whitelistedDays && !whitelistedDays.has(pointDay))
-        || (period.timesOfDay && !applicableTimeband)
+        || (timesOfDay && !applicableTimeband)
     ) {
         return null;
     }
+
+    const dayPermitted = (d: Date): boolean => {
+        const { year, month, week, day } = destructureDateIntoPeriodProperties(period, d);
+        return (
+            (!whitelistedDays || whitelistedDays.has(day))
+            && (!whitelistedWeeks || whitelistedWeeks.has(week))
+            && (!whitelistedMonths || whitelistedMonths.has(month))
+            && (!whitelistedYears || whitelistedYears.has(year))
+        );
+    };
 
     let min: Date = new Date(point);
     let max: Date = new Date(point);
@@ -231,21 +251,29 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
      * that unit is permitted by the period.
      */
     if (applicableTimeband) {
-        if (startOfDayBand) {
-            const prev: Date = subDays(point, 1);
-            const {
-                year: yesterYear,
-                month: yesterMonth,
-                week: yesterWeek,
-                day: yesterDay,
-            } = destructureDateIntoPeriodProperties(period, prev);
-            const previousDayIsPermitted = (
-                (!whitelistedDays || whitelistedDays.has(yesterDay))
-                && (!whitelistedWeeks || whitelistedWeeks.has(yesterWeek))
-                && (!whitelistedMonths || whitelistedMonths.has(yesterMonth))
-                && (!whitelistedYears || whitelistedYears.has(yesterYear))
-            );
-            if (previousDayIsPermitted && endOfDayBand) {
+        min = new Date(
+            point.getFullYear(),
+            point.getMonth(),
+            point.getDate(),
+            Number(applicableTimeband.startDayTime?.hour ?? 0),
+            Number(applicableTimeband.startDayTime?.minute ?? 0),
+            Number(applicableTimeband.startDayTime?.second ?? 0),
+        );
+        max = new Date(
+            point.getFullYear(),
+            point.getMonth(),
+            point.getDate(),
+            Number(applicableTimeband.endDayTime?.hour ?? 23),
+            Number(applicableTimeband.endDayTime?.minute ?? 59),
+            Number(applicableTimeband.endDayTime?.second ?? 59),
+        );
+        if (startOfDayBand && endOfDayBand) {
+            let cursor = new Date(point);
+            while (true) {
+                const prev = subDays(cursor, 1);
+                if (!dayPermitted(prev)) {
+                    break;
+                }
                 min = new Date(
                     prev.getFullYear(),
                     prev.getMonth(),
@@ -254,42 +282,14 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     Number(endOfDayBand.startDayTime?.minute ?? 0),
                     Number(endOfDayBand.startDayTime?.second ?? 0),
                 );
-            } else {
-                min = new Date(
-                    point.getFullYear(),
-                    point.getMonth(),
-                    point.getDate(),
-                    Number(applicableTimeband.startDayTime?.hour ?? 0),
-                    Number(applicableTimeband.startDayTime?.minute ?? 0),
-                    Number(applicableTimeband.startDayTime?.second ?? 0),
-                );
+                cursor = prev;
             }
-        } else {
-            min = new Date(
-                point.getFullYear(),
-                point.getMonth(),
-                point.getDate(),
-                Number(applicableTimeband.startDayTime?.hour ?? 0),
-                Number(applicableTimeband.startDayTime?.minute ?? 0),
-                Number(applicableTimeband.startDayTime?.second ?? 0),
-            );
-        }
-
-        if (endOfDayBand) {
-            const next: Date = addDays(point, 1);
-            const {
-                year: nextYear,
-                month: nextMonth,
-                week: nextWeek,
-                day: nextDay,
-            } = destructureDateIntoPeriodProperties(period, next);
-            const nextDayIsPermitted = (
-                (!whitelistedDays || whitelistedDays.has(nextDay))
-                && (!whitelistedWeeks || whitelistedWeeks.has(nextWeek))
-                && (!whitelistedMonths || whitelistedMonths.has(nextMonth))
-                && (!whitelistedYears || whitelistedYears.has(nextYear))
-            );
-            if (nextDayIsPermitted && startOfDayBand) {
+            cursor = new Date(point);
+            while (true) {
+                const next = addDays(cursor, 1);
+                if (!dayPermitted(next)) {
+                    break;
+                }
                 max = new Date(
                     next.getFullYear(),
                     next.getMonth(),
@@ -298,27 +298,9 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     Number(startOfDayBand.endDayTime?.minute ?? 59),
                     Number(startOfDayBand.endDayTime?.second ?? 59),
                 );
-            } else {
-                max = new Date(
-                    point.getFullYear(),
-                    point.getMonth(),
-                    point.getDate(),
-                    Number(applicableTimeband.endDayTime?.hour ?? 23),
-                    Number(applicableTimeband.endDayTime?.minute ?? 59),
-                    Number(applicableTimeband.endDayTime?.second ?? 59),
-                );
+                cursor = next;
             }
-        } else {
-            max = new Date(
-                point.getFullYear(),
-                point.getMonth(),
-                point.getDate(),
-                Number(applicableTimeband.endDayTime?.hour ?? 23),
-                Number(applicableTimeband.endDayTime?.minute ?? 59),
-                Number(applicableTimeband.endDayTime?.second ?? 59),
-            );
         }
-
         return [ min, max ];
     } else if (whitelistedDays) {
         min = startOfDay(point);

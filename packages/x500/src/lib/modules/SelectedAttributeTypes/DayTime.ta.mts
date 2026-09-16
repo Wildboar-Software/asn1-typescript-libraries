@@ -170,6 +170,38 @@ export class DayTime {
     public isEqualTo (other: DayTime): boolean {
         return (this.compare(other) === 0);
     }
+
+    /**
+     * @summary Seconds since 00:00:00, applying minute/second DEFAULTs.
+     * @returns {number} 0 (`00:00:00`) through 86399 (`23:59:59`).
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public toSeconds (): number {
+        return (
+            (Number(this.hour) * 3600)
+            + (Number(this.minute ?? DayTime._default_value_for_minute) * 60)
+            + Number(this.second ?? DayTime._default_value_for_second)
+        );
+    }
+
+    /**
+     * @summary Build a `DayTime` from seconds since 00:00:00.
+     * @param {number} seconds Integer in 0..86399.
+     * @returns {DayTime} The corresponding time of day.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public static fromSeconds (seconds: number): DayTime {
+        if (!Number.isSafeInteger(seconds) || (seconds < 0) || (seconds > 86399)) {
+            throw new Error();
+        }
+        return new DayTime(
+            Math.trunc(seconds / 3600),
+            Math.trunc((seconds % 3600) / 60),
+            seconds % 60,
+        );
+    }
 }
 
 /**

@@ -57,3 +57,108 @@ describe("DayTimeBand", () => {
         expect(new DayTimeBand(new DayTime(9)).isEqualTo(implicit)).toBe(false);
     });
 });
+
+describe("DayTime.toSeconds() / fromSeconds()", () => {
+    it("maps midnight and 23:59:59 to 0 and 86399", () => {
+        expect(new DayTime(0).toSeconds()).toBe(0);
+        expect(new DayTime(23, 59, 59).toSeconds()).toBe(86399);
+        expect(DayTime.fromSeconds(0).isEqualTo(new DayTime(0))).toBe(true);
+        expect(DayTime.fromSeconds(86399).isEqualTo(new DayTime(23, 59, 59)))
+            .toBe(true);
+    });
+
+    it("round-trips a time that uses minute and second", () => {
+        const original = new DayTime(14, 30, 5);
+        expect(DayTime.fromSeconds(original.toSeconds()).isEqualTo(original))
+            .toBe(true);
+    });
+
+    it("rejects a second-of-day outside 0..86399", () => {
+        expect(() => DayTime.fromSeconds(-1)).toThrow();
+        expect(() => DayTime.fromSeconds(86400)).toThrow();
+        expect(() => DayTime.fromSeconds(1.5)).toThrow();
+    });
+});
+
+describe("DayTimeBand.overlaps() / isAdjacentTo() / merge() / flatten()", () => {
+    const morning = new DayTimeBand(new DayTime(9), new DayTime(12));
+    const midday = new DayTimeBand(new DayTime(11), new DayTime(14));
+    const afternoon = new DayTimeBand(new DayTime(13), new DayTime(17));
+    const late = new DayTimeBand(new DayTime(18), new DayTime(20));
+    const fromMidnightA = new DayTimeBand(undefined, new DayTime(8));
+    const fromMidnightB = new DayTimeBand(undefined, new DayTime(12));
+    const toMidnightA = new DayTimeBand(new DayTime(17), undefined);
+    const toMidnightB = new DayTimeBand(new DayTime(20), undefined);
+
+    it("overlaps when closed ranges share a second", () => {
+        expect(morning.overlaps(midday)).toBe(true);
+        expect(morning.overlaps(afternoon)).toBe(false);
+        expect(morning.overlaps(
+            new DayTimeBand(new DayTime(12), new DayTime(13)),
+        )).toBe(true);
+    });
+
+    it("isAdjacentTo when bands are one second apart", () => {
+        const untilNoon = new DayTimeBand(new DayTime(9), new DayTime(12));
+        const fromNextSecond = new DayTimeBand(
+            new DayTime(12, 0, 1),
+            new DayTime(17),
+        );
+        expect(untilNoon.isAdjacentTo(fromNextSecond)).toBe(true);
+        expect(untilNoon.overlaps(fromNextSecond)).toBe(false);
+        expect(morning.isAdjacentTo(afternoon)).toBe(false);
+    });
+
+    it("merge() takes the earlier start and later end", () => {
+        const union = morning.merge(midday);
+        expect(union.startDayTime!.isEqualTo(new DayTime(9))).toBe(true);
+        expect(union.endDayTime!.isEqualTo(new DayTime(14))).toBe(true);
+    });
+
+    it("merge() omits DEFAULT start and end", () => {
+        const union = fromMidnightA.merge(toMidnightA);
+        expect(union.startDayTime).toBeUndefined();
+        expect(union.endDayTime).toBeUndefined();
+        expect(union.isStartOfDay()).toBe(true);
+        expect(union.isEndOfDay()).toBe(true);
+    });
+
+    it("flatten() merges overlapping start-of-day bands into one", () => {
+        const flattened = DayTimeBand.flatten([ fromMidnightA, fromMidnightB ]);
+        expect(flattened).toHaveLength(1);
+        expect(flattened[0].isStartOfDay()).toBe(true);
+        expect(flattened[0].endDayTime!.isEqualTo(new DayTime(12))).toBe(true);
+    });
+
+    it("flatten() merges overlapping end-of-day bands into one", () => {
+        const flattened = DayTimeBand.flatten([ toMidnightB, toMidnightA ]);
+        expect(flattened).toHaveLength(1);
+        expect(flattened[0].isEndOfDay()).toBe(true);
+        expect(flattened[0].startDayTime!.isEqualTo(new DayTime(17))).toBe(true);
+    });
+
+    it("flatten() unions a chain of overlaps and keeps a gapped band", () => {
+        const flattened = DayTimeBand.flatten([
+            late,
+            afternoon,
+            midday,
+            morning,
+        ]);
+        expect(flattened).toHaveLength(2);
+        expect(flattened[0].startDayTime!.isEqualTo(new DayTime(9))).toBe(true);
+        expect(flattened[0].endDayTime!.isEqualTo(new DayTime(17))).toBe(true);
+        expect(flattened[1].isEqualTo(late)).toBe(true);
+    });
+
+    it("flatten() merges bands that only abut by one second", () => {
+        const untilNoon = new DayTimeBand(new DayTime(9), new DayTime(12));
+        const fromNextSecond = new DayTimeBand(
+            new DayTime(12, 0, 1),
+            new DayTime(17),
+        );
+        const flattened = DayTimeBand.flatten([ fromNextSecond, untilNoon ]);
+        expect(flattened).toHaveLength(1);
+        expect(flattened[0].startDayTime!.isEqualTo(new DayTime(9))).toBe(true);
+        expect(flattened[0].endDayTime!.isEqualTo(new DayTime(17))).toBe(true);
+    });
+});
