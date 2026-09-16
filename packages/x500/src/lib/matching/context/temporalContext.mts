@@ -11,7 +11,7 @@ import {
 import type {
     Period,
 } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
-import { addHours } from "date-fns";
+import { addHours, addDays, startOfDay } from "date-fns";
 import boundariesOfPeriodOccurrence from "../../utils/boundariesOfPeriodOccurrence.mjs";
 import compareElements from "../../comparators/compareElements.mjs";
 
@@ -19,6 +19,80 @@ const MAX_DATE: Date = new Date(8640000000000000);
 
 function xor (a: boolean, b: boolean): boolean {
     return ((a && !b) || (!a && b));
+}
+
+function instantInPeriod (period: Period, time: Date): boolean {
+    const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, time);
+    if (!boundaries) {
+        return false;
+    }
+    return (
+        (time.valueOf() >= boundaries[0].valueOf())
+        && (time.valueOf() <= boundaries[1].valueOf())
+    );
+}
+
+function candidateInstantsOnDay (period: Period, day: Date): Date[] {
+    if (period.timesOfDay?.length) {
+        return period.timesOfDay.map((tod) => new Date(
+            day.getFullYear(),
+            day.getMonth(),
+            day.getDate(),
+            Number(tod.startDayTime?.hour ?? 0),
+            Number(tod.startDayTime?.minute ?? 0),
+            Number(tod.startDayTime?.second ?? 0),
+        ));
+    }
+    return [ new Date(day.getFullYear(), day.getMonth(), day.getDate(), 12, 0, 0) ];
+}
+
+function periodOverlapsInterval (period: Period, start: Date, end: Date): boolean {
+    if (instantInPeriod(period, start) || instantInPeriod(period, end)) {
+        return true;
+    }
+    const specifiedYears = period.years?.map(Number);
+    const minYear = start.getFullYear();
+    const yearList = specifiedYears
+        ? specifiedYears.filter((y) => (y >= minYear) && (y <= end.getFullYear()))
+        : Array.from(
+            { length: (Math.min(end.getFullYear(), minYear + 1) - minYear) + 1 },
+            (_, i) => (minYear + i),
+        );
+    for (const year of yearList) {
+        const rangeStart = new Date(Math.max(start.valueOf(), new Date(year, 0, 1).valueOf()));
+        const rangeEnd = new Date(Math.min(end.valueOf(), new Date(year, 11, 31, 23, 59, 59, 999).valueOf()));
+        if (rangeStart.valueOf() > rangeEnd.valueOf()) {
+            continue;
+        }
+        for (let day = startOfDay(rangeStart); day.valueOf() <= rangeEnd.valueOf(); day = addDays(day, 1)) {
+            for (const candidate of candidateInstantsOnDay(period, day)) {
+                if (
+                    (candidate.valueOf() < start.valueOf())
+                    || (candidate.valueOf() > end.valueOf())
+                ) {
+                    continue;
+                }
+                if (instantInPeriod(period, candidate)) {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+
+function periodContainsInterval (period: Period, start: Date, end: Date): boolean {
+    const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, start);
+    if (!boundaries) {
+        return false;
+    }
+    const [ lower, upper ] = boundaries;
+    return (
+        (start.valueOf() >= lower.valueOf())
+        && (start.valueOf() <= upper.valueOf())
+        && (end.valueOf() >= lower.valueOf())
+        && (end.valueOf() <= upper.valueOf())
+    );
 }
 
 /** True if `time` falls in one occurrence of `period` (clause 10.2). */
@@ -82,28 +156,11 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
             }
         } else if ("periodic" in spec.time) {
             return spec.time.periodic.some((period) => {
-                // We cannot adjust the period by timezone, so instead, we
-                // modify the asserted times
                 const adjustedStart = addHours(start, timezone ?? 0);
                 const adjustedEnd = addHours(end, timezone ?? 0);
-                const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedStart);
-                if (!boundaries) {
-                    return false;
-                }
-                const [ lower, upper ] = boundaries;
-                const startWithinBounds: boolean = (
-                    (adjustedStart.valueOf() >= lower.valueOf())
-                    && (adjustedStart.valueOf() <= upper.valueOf())
-                );
-                const endWithinBounds: boolean = (
-                    (adjustedEnd.valueOf() >= lower.valueOf())
-                    && (adjustedEnd.valueOf() <= upper.valueOf())
-                );
-                return (
-                    entirely
-                        ? (startWithinBounds && endWithinBounds)
-                        : (startWithinBounds || endWithinBounds)
-                );
+                return entirely
+                    ? periodContainsInterval(period, adjustedStart, adjustedEnd)
+                    : periodOverlapsInterval(period, adjustedStart, adjustedEnd);
             });
         } else {
             throw new Error(); // There is no other option.
