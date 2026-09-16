@@ -17,39 +17,52 @@ describe("dateIsBetweenDayTimeBand", () => {
         expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 17, 0, 1))).toBe(false);
     });
 
-    it("matches an overnight band that wraps past midnight", () => {
+    it("does not treat start after end as an overnight wrap", () => {
         const dtb = new DayTimeBand(
             new DayTime(22, 0, 0),
             new DayTime(6, 0, 0),
         );
-        expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 22, 0, 0))).toBe(true);
-        expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 23, 30, 0))).toBe(true);
-        expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 0, 0, 0))).toBe(true);
-        expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 6, 0, 0))).toBe(true);
+        expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 22, 0, 0))).toBe(false);
+        expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 23, 30, 0))).toBe(false);
+        expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 0, 0, 0))).toBe(false);
+        expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 6, 0, 0))).toBe(false);
         expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 12, 0, 0))).toBe(false);
-        expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 21, 59, 59))).toBe(false);
-        expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 6, 0, 1))).toBe(false);
+        const p = new Period([ dtb ]);
+        expect(boundariesOfPeriodOccurrence(p, new Date(2021, 5, 10, 23, 0, 0))).toBeNull();
+        expect(boundariesOfPeriodOccurrence(p, new Date(2021, 5, 11, 3, 0, 0))).toBeNull();
     });
 
-    it("returns overnight occurrence bounds spanning midnight", () => {
-        const p = new Period(
-            [
-                new DayTimeBand(
-                    new DayTime(22, 0, 0),
-                    new DayTime(6, 0, 0),
-                ),
-            ],
+    it("covers a night that crosses midnight with two same-day bands", () => {
+        const evening = new DayTimeBand(
+            new DayTime(22, 0, 0),
+            DayTimeBand.END_OF_DAY,
         );
-        const evening = new Date(2021, 5, 10, 23, 0, 0);
-        const eveningBounds = boundariesOfPeriodOccurrence(p, evening);
+        const morning = new DayTimeBand(
+            DayTimeBand.START_OF_DAY,
+            new DayTime(6, 0, 0),
+        );
+        expect(dateIsBetweenDayTimeBand(evening, new Date(2021, 0, 1, 22, 0, 0))).toBe(true);
+        expect(dateIsBetweenDayTimeBand(evening, new Date(2021, 0, 1, 23, 59, 59))).toBe(true);
+        expect(dateIsBetweenDayTimeBand(evening, new Date(2021, 0, 1, 0, 0, 0))).toBe(false);
+        expect(dateIsBetweenDayTimeBand(morning, new Date(2021, 0, 1, 0, 0, 0))).toBe(true);
+        expect(dateIsBetweenDayTimeBand(morning, new Date(2021, 0, 1, 6, 0, 0))).toBe(true);
+        expect(dateIsBetweenDayTimeBand(morning, new Date(2021, 0, 1, 22, 0, 0))).toBe(false);
+
+        const p = new Period([ evening, morning ]);
+        const eveningBounds = boundariesOfPeriodOccurrence(
+            p,
+            new Date(2021, 5, 10, 23, 0, 0),
+        );
         expect(eveningBounds).not.toBeNull();
         expect(eveningBounds![0]).toEqual(new Date(2021, 5, 10, 22, 0, 0));
-        expect(eveningBounds![1]).toEqual(new Date(2021, 5, 11, 6, 0, 0));
+        expect(eveningBounds![1]).toEqual(new Date(2021, 5, 10, 23, 59, 59));
 
-        const morning = new Date(2021, 5, 11, 3, 0, 0);
-        const morningBounds = boundariesOfPeriodOccurrence(p, morning);
+        const morningBounds = boundariesOfPeriodOccurrence(
+            p,
+            new Date(2021, 5, 10, 3, 0, 0),
+        );
         expect(morningBounds).not.toBeNull();
-        expect(morningBounds![0]).toEqual(new Date(2021, 5, 10, 22, 0, 0));
-        expect(morningBounds![1]).toEqual(new Date(2021, 5, 11, 6, 0, 0));
+        expect(morningBounds![0]).toEqual(new Date(2021, 5, 10, 0, 0, 0));
+        expect(morningBounds![1]).toEqual(new Date(2021, 5, 10, 6, 0, 0));
     });
 });

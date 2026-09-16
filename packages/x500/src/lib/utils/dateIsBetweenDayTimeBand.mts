@@ -11,7 +11,13 @@ function score (hour: number, minute: number, second: number): number {
 }
 
 /**
- * @summary Determine if a point in time occurs between a day time band
+ * @summary Whether a local instant's clock time lies in a `DayTimeBand`
+ * @description
+ *
+ * Closed interval from `startDayTime` to `endDayTime` on that calendar
+ * day's clock. If start is after end, the band matches no instant.
+ * Overnight coverage is two bands; see {@link DayTimeBand}.
+ *
  * @param {DayTimeBand} dtb The asserted day time band
  * @param {Date} point The date representing the asserted point in time
  * @returns {Boolean} `true` if the date is between the asserted time band
@@ -35,9 +41,7 @@ function dateIsBetweenDayTimeBand (dtb: DayTimeBand, point: Date): boolean {
         Number(end?.minute ?? DayTimeBand._default_value_for_endDayTime.minute ?? 59),
         Number(end?.second ?? DayTimeBand._default_value_for_endDayTime.second ?? 59),
     );
-    return (startScore <= endScore)
-        ? ((startScore <= pointScore) && (pointScore <= endScore))
-        : ((pointScore >= startScore) || (pointScore <= endScore));
+    return ((startScore <= pointScore) && (pointScore <= endScore));
 }
 
 export default dateIsBetweenDayTimeBand;

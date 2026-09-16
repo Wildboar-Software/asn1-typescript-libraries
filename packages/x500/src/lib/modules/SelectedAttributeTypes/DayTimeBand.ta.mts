@@ -15,8 +15,28 @@ import {
  * @summary DayTimeBand
  * @description
  *
- * `startDayTime` DEFAULT {hour 0}; `endDayTime` DEFAULT {hour 23,
- * minute 59, second 59}.
+ * Rec. ITU-T X.520 (10/2019) | ISO/IEC 9594-6:2020, clause 10.2
+ * (`temporalContext`): a period of time during a **single** civil day,
+ * as a member of `Period.timesOfDay`.
+ * [X.520 (2019)](https://www.itu.int/rec/T-REC-X.520-201910-I/en).
+ * After X.520 (2019) Amd.1 (10/2024) NOTE 1, the ASN.1 lives in
+ * X.501 `UsefulDefinitions`; matching rules stay in X.520 10.2.
+ * [Amd.1](https://www.itu.int/rec/T-REC-X.520-201910-I-Amd1/en).
+ *
+ * `startDayTime` DEFAULT `{hour 0}` (00:00:00). `endDayTime` DEFAULT
+ * `{hour 23, minute 59, second 59}`. `DayTime.hour` is `0..23`.
+ *
+ * `timesOfDay` is `SET SIZE (1..MAX) OF DayTimeBand`. A night that
+ * crosses midnight is **two** bands on each allowed day: one ending
+ * at 23:59:59 and one starting at 00:00:00. Morning hours do not
+ * belong to the previous calendar day unless that day is also
+ * selected (`days` / `weeks` / `months` / `years`).
+ *
+ * 10.2 does not constrain `startDayTime <= endDayTime` and does not
+ * define wrap when start is after end. This implementation does
+ * **not** treat `start > end` as overnight: membership is the closed
+ * interval from start to end on that day's clock, so an inverted
+ * band matches no instant.
  *
  * ### ASN.1 Definition:
  *
