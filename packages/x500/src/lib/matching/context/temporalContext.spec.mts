@@ -12,6 +12,12 @@ import {
 import {
     Period,
 } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
+import {
+    DayTimeBand,
+} from "../../modules/SelectedAttributeTypes/DayTimeBand.ta.mjs";
+import {
+    DayTime,
+} from "../../modules/SelectedAttributeTypes/DayTime.ta.mjs";
 import evaluateTemporalContext from "./temporalContext.mjs";
 import { DER } from "@wildboar/asn1/functional";
 import { TimeSpecification_time_absolute } from "../../modules/SelectedAttributeTypes/TimeSpecification-time-absolute.ta.mjs";
@@ -354,6 +360,97 @@ describe("evaluateTemporalContext", () => {
         )).toBe(false);
     });
 
+    const eveningBand = new DayTimeBand(
+        new DayTime(22, 0, 0),
+        DayTimeBand.END_OF_DAY,
+    );
+    const morningBand = new DayTimeBand(
+        DayTimeBand.START_OF_DAY,
+        new DayTime(6, 0, 0),
+    );
+    const twoBandOvernightNight = new TimeSpecification(
+        {
+            periodic: [
+                new Period(
+                    [ eveningBand, morningBand ],
+                    {
+                        intDay: [ 1, 2 ],
+                    },
+                    undefined,
+                    undefined,
+                    [ 2021 ],
+                ),
+            ],
+        },
+    );
+    const invertedOvernightBand = new TimeSpecification(
+        {
+            periodic: [
+                new Period(
+                    [
+                        new DayTimeBand(
+                            new DayTime(22, 0, 0),
+                            new DayTime(6, 0, 0),
+                        ),
+                    ],
+                    {
+                        intDay: [ 1, 2 ],
+                    },
+                    undefined,
+                    undefined,
+                    [ 2021 ],
+                ),
+            ],
+        },
+    );
+
+    // Rec. ITU-T X.520 (10/2019) | ISO/IEC 9594-6:2020, clause 10.2 does
+    // not say if or how overnight timebands are represented (one inverted
+    // `DayTimeBand`, two same-day bands, a contiguous occurrence across
+    // midnight, etc.), nor how `TimeAssertion.between` with `entirely`
+    // TRUE should treat a span that crosses 00:00:00. These cases only
+    // record what this matcher currently returns.
+    // TODO: Report this overnight / `entirely` ambiguity to the ITU-T.
+    it.skip("matches between+entirely across midnight against two same-day overnight bands", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 0, 1, 23, 0, 0),
+                new Date(2021, 0, 2, 1, 0, 0),
+                TRUE,
+            ),
+        };
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(twoBandOvernightNight, DER),
+        )).toBe(true);
+    });
+
+    it.skip("matches between+entirely within the evening half of two same-day overnight bands", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 0, 1, 23, 0, 0),
+                new Date(2021, 0, 1, 23, 30, 0),
+                TRUE,
+            ),
+        };
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(twoBandOvernightNight, DER),
+        )).toBe(true);
+    });
+
+    it.skip("does not match between+entirely across midnight against an inverted DayTimeBand", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 0, 1, 23, 0, 0),
+                new Date(2021, 0, 2, 1, 0, 0),
+                TRUE,
+            ),
+        };
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(invertedOvernightBand, DER),
+
     it("does not match an unrecognized TimeAssertion CHOICE", () => {
         const assertion = new DERElement(
             ASN1TagClass.universal,
@@ -372,6 +469,7 @@ describe("evaluateTemporalContext", () => {
         expect(evaluateTemporalContext(
             assertion,
             _encode_TimeSpecification(value, DER),
+
         )).toBe(false);
     });
 });
