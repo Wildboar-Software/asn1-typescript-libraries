@@ -348,17 +348,14 @@ export class DayTime {
         let hourDelta = 0;
         let minDelta = 0;
         let secDelta = 0;
-        if (
-            (typeof hourDeltaOrChange === "object")
-            && (hourDeltaOrChange !== null)
-        ) {
-            hourDelta = hourDeltaOrChange.hourDelta ?? 0;
-            minDelta = hourDeltaOrChange.minuteDelta ?? 0;
-            secDelta = hourDeltaOrChange.secondDelta ?? 0;
-        } else {
+        if (typeof hourDeltaOrChange === "number") {
             hourDelta = hourDeltaOrChange;
             minDelta = minuteDelta;
             secDelta = secondDelta;
+        } else {
+            hourDelta = hourDeltaOrChange.hourDelta ?? 0;
+            minDelta = hourDeltaOrChange.minuteDelta ?? 0;
+            secDelta = hourDeltaOrChange.secondDelta ?? 0;
         }
         if ((hourDelta === 0) && (minDelta === 0) && (secDelta === 0)) {
             return this;
@@ -398,13 +395,10 @@ export class DayTime {
         let hour: INTEGER = this.hour;
         let nextMinute: OPTIONAL<INTEGER> = this.minute;
         let nextSecond: OPTIONAL<INTEGER> = this.second;
-        if (
-            (hourOrChange !== undefined)
-            && (typeof hourOrChange === "object")
-            && (hourOrChange !== null)
-            && (typeof hourOrChange !== "bigint")
-        ) {
-            hour = hourOrChange.hour ?? this.hour;
+        if ((typeof hourOrChange === "object") && (hourOrChange !== null)) {
+            hour = ("hour" in hourOrChange && hourOrChange.hour !== undefined)
+                ? hourOrChange.hour
+                : this.hour;
             nextMinute = (hourOrChange.minute !== undefined)
                 ? hourOrChange.minute
                 : this.minute;
@@ -412,7 +406,8 @@ export class DayTime {
                 ? hourOrChange.second
                 : this.second;
         } else {
-            hour = hourOrChange ?? this.hour;
+            const nextHour = hourOrChange as OPTIONAL<INTEGER>;
+            hour = (nextHour !== undefined) ? nextHour : this.hour;
             nextMinute = (minute !== undefined) ? minute : this.minute;
             nextSecond = (second !== undefined) ? second : this.second;
         }

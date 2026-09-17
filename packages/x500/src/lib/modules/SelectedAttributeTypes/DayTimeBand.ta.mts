@@ -386,21 +386,18 @@ export class DayTimeBand {
     ): DayTimeBand {
         let start = this.startDayTime;
         let nextEnd = this.endDayTime;
-        if (
-            (startOrChange !== undefined)
-            && !(startOrChange instanceof DayTime)
-        ) {
+        if (startOrChange instanceof DayTime) {
+            start = startOrChange;
+            nextEnd = (end !== undefined) ? end : this.endDayTime;
+        } else if (startOrChange === undefined) {
+            nextEnd = (end !== undefined) ? end : this.endDayTime;
+        } else {
             start = (startOrChange.startDayTime !== undefined)
                 ? startOrChange.startDayTime
                 : this.startDayTime;
             nextEnd = (startOrChange.endDayTime !== undefined)
                 ? startOrChange.endDayTime
                 : this.endDayTime;
-        } else {
-            start = (startOrChange !== undefined)
-                ? startOrChange
-                : this.startDayTime;
-            nextEnd = (end !== undefined) ? end : this.endDayTime;
         }
         if ((start === this.startDayTime) && (nextEnd === this.endDayTime)) {
             return this;
