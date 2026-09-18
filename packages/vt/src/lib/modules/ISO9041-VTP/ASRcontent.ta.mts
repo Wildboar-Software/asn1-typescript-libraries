@@ -15,7 +15,7 @@ import { _decode_Result3, _encode_Result3, type Result3 } from "../G/Result3.ta.
 // export { Result3, _decode_Result3, _encode_Result3 } from "../G/Result3.ta.mjs";
 import { _decode_ImplementationIdent, _encode_ImplementationIdent, ImplementationIdent } from "../G/ImplementationIdent.ta.mjs";
 // export { ImplementationIdent, _decode_ImplementationIdent, _encode_ImplementationIdent } from "../G/ImplementationIdent.ta.mjs";
-import { _decode_ProtocolVersion, _encode_ProtocolVersion, type ProtocolVersion, version1 } from "../G/ProtocolVersion.ta.mjs";
+import { _decode_ProtocolVersion, _encode_ProtocolVersion, type ProtocolVersion } from "../G/ProtocolVersion.ta.mjs";
 // export { ProtocolVersion, ProtocolVersion_version1 /* IMPORTED_LONG_NAMED_BIT */, version1 /* IMPORTED_SHORT_NAMED_BIT */, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../G/ProtocolVersion.ta.mjs";
 import { _decode_ProfileArgumValueList, _encode_ProfileArgumValueList, ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
 // export { ProfileArgumValueList, _decode_ProfileArgumValueList, _encode_ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
@@ -98,7 +98,7 @@ class ASRcontent {
      * @static
      * @method
      */
-    public static get _default_value_for_protocol_verison () { return version1; }
+    public static get _default_value_for_protocol_verison (): ProtocolVersion { return new Uint8ClampedArray([1]); }
 }
 
 /**

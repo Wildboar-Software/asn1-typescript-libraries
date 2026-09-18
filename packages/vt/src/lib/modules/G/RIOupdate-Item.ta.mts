@@ -14,7 +14,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { RIOupdate_Item_operation, _decode_RIOupdate_Item_operation, _encode_RIOupdate_Item_operation } from "../G/RIOupdate-Item-operation.ta.mjs";
 // export { RIOupdate_Item_operation, RIOupdate_Item_operation_eraseRIO /* IMPORTED_LONG_NAMED_INTEGER */, eraseRIO /* IMPORTED_SHORT_NAMED_INTEGER */, RIOupdate_Item_operation_deleteRecord /* IMPORTED_LONG_NAMED_INTEGER */, deleteRecord /* IMPORTED_SHORT_NAMED_INTEGER */, RIOupdate_Item_operation_createRecord /* IMPORTED_LONG_NAMED_INTEGER */, createRecord /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RIOupdate_Item_operation, _encode_RIOupdate_Item_operation } from "../G/RIOupdate-Item-operation.ta.mjs";
-import { _decode_ObjectUpdate, _encode_ObjectUpdate } from "../ISO9041-VTP/ObjectUpdate.ta.mjs";
+import { type ObjectUpdate, _decode_ObjectUpdate, _encode_ObjectUpdate } from "../ISO9041-VTP/ObjectUpdate.ta.mjs";
 // export { ObjectUpdate, _decode_ObjectUpdate, _encode_ObjectUpdate } from "../ISO9041-VTP/ObjectUpdate.ta.mjs";
 
 
@@ -58,7 +58,7 @@ class RIOupdate_Item {
          * @public
          * @readonly
          */
-        readonly updates: OPTIONAL<ISO9041_VTP.ObjectUpdate[]>
+        readonly updates: OPTIONAL<ObjectUpdate[]>
     ) {}
 
     /**
@@ -134,11 +134,11 @@ function _decode_RIOupdate_Item (el: _Element): RIOupdate_Item {
     if (!_cached_decoder_for_RIOupdate_Item) { _cached_decoder_for_RIOupdate_Item = function (el: _Element): RIOupdate_Item {
     let recordId: OPTIONAL<PrintableString>;
     let operation!: RIOupdate_Item_operation;
-    let updates: OPTIONAL<ISO9041_VTP.ObjectUpdate[]>;
+    let updates: OPTIONAL<ObjectUpdate[]>;
     const callbacks: $.DecodingMap = {
         "recordId": (_el: _Element): void => { recordId = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el); },
         "operation": (_el: _Element): void => { operation = $._decode_implicit<RIOupdate_Item_operation>(() => _decode_RIOupdate_Item_operation)(_el); },
-        "updates": (_el: _Element): void => { updates = $._decode_implicit<ISO9041_VTP.ObjectUpdate[]>(() => $._decodeSequenceOf<ISO9041_VTP.ObjectUpdate>(() => ISO9041_VTP._decode_ObjectUpdate))(_el); }
+        "updates": (_el: _Element): void => { updates = $._decode_implicit<ObjectUpdate[]>(() => $._decodeSequenceOf<ObjectUpdate>(() => _decode_ObjectUpdate))(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_RIOupdate_Item,
@@ -171,7 +171,7 @@ function _encode_RIOupdate_Item (value: RIOupdate_Item, elGetter: $.ASN1Encoder<
         [
             /* IF_ABSENT  */ ((value.recordId === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodePrintableString, $.BER)(value.recordId, $.BER)),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_RIOupdate_Item_operation, $.BER)(value.operation, $.BER),
-            /* IF_ABSENT  */ ((value.updates === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeSequenceOf<ISO9041_VTP.ObjectUpdate>(() => ISO9041_VTP._encode_ObjectUpdate, $.BER), $.BER)(value.updates, $.BER))
+            /* IF_ABSENT  */ ((value.updates === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeSequenceOf<ObjectUpdate>(() => _encode_ObjectUpdate, $.BER), $.BER)(value.updates, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
