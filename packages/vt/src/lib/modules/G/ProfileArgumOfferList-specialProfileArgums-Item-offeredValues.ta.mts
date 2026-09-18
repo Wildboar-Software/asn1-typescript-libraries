@@ -79,7 +79,12 @@ import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/I
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileArgumOfferList-specialProfileArgums-Item-offeredValues ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileArgumOfferList-specialProfileArgums-Item-offeredValues ::= CHOICE {
+ *     boolean [0] IMPLICIT BIT STRING { false-bit (0), true-bit (1) },
+ *     integer [1] IMPLICIT IntegerOffer,
+ *     string  [2] IMPLICIT SET OF PrintableString,
+ *     objid   [3] IMPLICIT SET OF OBJECT IDENTIFIER
+ * }
  * ```
  */
 export

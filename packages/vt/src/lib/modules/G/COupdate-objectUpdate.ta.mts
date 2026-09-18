@@ -89,7 +89,38 @@ import { RIOupdate, _decode_RIOupdate, _encode_RIOupdate } from "../G/RIOupdate.
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * COupdate-objectUpdate ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * COupdate-objectUpdate ::= CHOICE {
+ *     characterUpdate     [0] IMPLICIT OCTET STRING,
+ *     booleanUpdate       [1] IMPLICIT SEQUENCE {
+ *         values  [0] IMPLICIT BIT STRING,
+ *         mask    [1] IMPLICIT BIT STRING OPTIONAL
+ *     },
+ *     -- If mask is omitted, a bit string with the same length as "values" and
+ *     -- a content of all ones is assumed. When mask is present a one bit means
+ *     -- that the corresponding bit in value is to be used.
+ *     symbolicUpdate      [2] IMPLICIT INTEGER,
+ *     integerUpdate       [3] IMPLICIT INTEGER,
+ *     bitStringUpdate     [4] IMPLICIT BIT STRING,
+ *     multiElement        [5] IMPLICIT SEQUENCE OF SEQUENCE {
+ *         identifier INTEGER,
+ *         update CHOICE {
+ *             characterUpdate [0] IMPLICIT OCTET STRING,
+ *             booleanUpdate   [1] IMPLICIT SEQUENCE {
+ *                 values  [0] IMPLICIT BIT STRING,
+ *                 mask    [1] IMPLICIT BIT STRING OPTIONAL
+ *             }, -- See note under mask in G.COUpdate
+ *             symbolicUpdate  [2] IMPLICIT INTEGER,
+ *             integerUpdate   [3] IMPLICIT INTEGER,
+ *             bitStringUpdate [4] IMPLICIT BIT STRING
+ *         }
+ *     },
+ *     cco                 [6]  IMPLICIT CCOupdate,
+ *     fdco                [7]  IMPLICIT FDCOupdate,
+ *     feico               [8]  IMPLICIT FEICOupdate,
+ *     fepco               [9]  IMPLICIT FEPCOupdate,
+ *     rio                 [10] IMPLICIT RIOupdate,
+ *     other               [11] ANY
+ * }
  * ```
  */
 export

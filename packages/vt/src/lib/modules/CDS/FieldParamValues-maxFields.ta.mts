@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FieldParamValues-maxFields ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * FieldParamValues-maxFields ::= CHOICE { unbounded NULL, limit INTEGER }
  * ```
  */
 export

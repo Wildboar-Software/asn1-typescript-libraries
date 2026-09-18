@@ -81,7 +81,11 @@ import { FontAssignment, _decode_FontAssignment, _encode_FontAssignment } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RepertoireFontOffer-alternatives-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RepertoireFontOffer-alternatives-Item ::= SEQUENCE {
+ *     repertoire      [0] IMPLICIT RepertoireAssignment OPTIONAL,
+ *     fontCapability  [1] IMPLICIT G.IntegerOffer OPTIONAL,
+ *     fontAssignments [2] IMPLICIT SEQUENCE OF FontAssignment OPTIONAL
+ * }
  * ```
  * 
  * @class

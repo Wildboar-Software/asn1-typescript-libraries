@@ -77,7 +77,14 @@ import { ParameterValues_terminationTimeout_eventId, _decode_ParameterValues_ter
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterValues-terminationTimeout ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterValues-terminationTimeout ::= SEQUENCE {
+ *     timeMultiplier INTEGER,
+ *     timeExponent INTEGER,
+ *     eventId CHOICE {
+ *         integer INTEGER,
+ *         nul NULL
+ *     }
+ * }
  * ```
  * 
  * @class

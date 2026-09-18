@@ -79,7 +79,10 @@ import { LogExpPointer, _decode_LogExpPointer, _encode_LogExpPointer } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BKQcontent-standard ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BKQcontent-standard ::= SEQUENCE {
+ *     pointer    [0] IMPLICIT G.ExplicitPointer OPTIONAL,
+ *     logPointer [1] IMPLICIT G.LogExpPointer OPTIONAL
+ * }
  * ```
  * 
  * @class

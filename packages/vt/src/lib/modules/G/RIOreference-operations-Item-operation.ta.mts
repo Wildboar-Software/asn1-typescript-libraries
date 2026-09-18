@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RIOreference-operations-Item-operation ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * RIOreference-operations-Item-operation ::= INTEGER {
+ *     executeRecord (0),
+ *     callRecord    (1)
+ * }
  * ```
  */
 export

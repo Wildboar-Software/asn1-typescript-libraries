@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileArgumOfferList-specialProfileArgums-Item-offeredValues-boolean ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileArgumOfferList-specialProfileArgums-Item-offeredValues-boolean ::= BIT STRING { false-bit (0), true-bit (1) }
  * ```
  */
 export

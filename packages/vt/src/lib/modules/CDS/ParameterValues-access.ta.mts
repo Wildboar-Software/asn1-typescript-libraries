@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterValues-access ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterValues-access ::= INTEGER { wavar (0), waci (1), waca (2) }
  * ```
  */
 export

@@ -77,7 +77,10 @@ import { ParameterOffers, _decode_ParameterOffers, _encode_ParameterOffers } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Offer-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Offer-Item ::= SEQUENCE {
+ *     name    PrintableString,
+ *     offers  ParameterOffers
+ * }
  * ```
  * 
  * @class

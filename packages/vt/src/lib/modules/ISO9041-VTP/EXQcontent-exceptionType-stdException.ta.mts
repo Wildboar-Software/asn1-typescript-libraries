@@ -76,7 +76,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EXQcontent-exceptionType-stdException ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * EXQcontent-exceptionType-stdException ::= INTEGER {
+ *     rioFull (0),
+ *     tooManyFields (1),
+ *     tooManyFieldElements (2),
+ *     tooManyFERs (3),
+ *     tooManyFEIs (4)
+ * }
  * ```
  */
 export

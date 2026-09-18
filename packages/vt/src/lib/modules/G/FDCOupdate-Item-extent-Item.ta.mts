@@ -77,7 +77,10 @@ import { MeasurePair, _decode_MeasurePair, _encode_MeasurePair } from "../G/Meas
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FDCOupdate-Item-extent-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FDCOupdate-Item-extent-Item ::= SEQUENCE {
+ *     position  [0] IMPLICIT MeasurePair,
+ *     dimension [1] IMPLICIT MeasurePair
+ * }
  * ```
  * 
  * @class

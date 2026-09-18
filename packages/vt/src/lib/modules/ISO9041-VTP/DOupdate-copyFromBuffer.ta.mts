@@ -79,7 +79,20 @@ import { DOupdate_copyFromBuffer_structure, DOupdate_copyFromBuffer_structure_no
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-copyFromBuffer ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-copyFromBuffer ::= SEQUENCE {
+ *     address Pointer,
+ *     rioName  [10] IMPLICIT PrintableString OPTIONAL,
+ *     recordId [11] IMPLICIT PrintableString OPTIONAL,
+ *     -- when buffer-name is "temporary", rioName and recordId shall be absent;
+ *     -- when there is only one RIO present in the VTE, rioName is optional,
+ *     -- but recordId shall be present
+ *     rendition [12] IMPLICIT NULL OPTIONAL,
+ *     -- presence implies "copy attributes", absence implies "no attribute copy"
+ *     structure [13] IMPLICIT INTEGER { none (0), x (1), xAndy (2) } OPTIONAL,
+ *     -- absence implies "none"
+ *     ripple [14] IMPLICIT NULL OPTIONAL
+ *     -- presence implies "on", absence implies "off"
+ * }
  * ```
  * 
  * @class

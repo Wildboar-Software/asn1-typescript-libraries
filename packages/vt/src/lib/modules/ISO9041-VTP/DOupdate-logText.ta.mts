@@ -76,7 +76,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-logText ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-logText ::= SEQUENCE {
+ *     fdrAttr   [0] IMPLICIT BOOLEAN,
+ *     -- TRUE = "yes", FALSE = "no"
+ *     prAttrVal [1] IMPLICIT OCTET STRING
+ *     -- see comment under text in DOupdate
+ * }
  * ```
  * 
  * @class

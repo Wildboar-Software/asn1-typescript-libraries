@@ -77,7 +77,13 @@ import { ParameterOffers_terminationEventList_Item_Item_eventId, _decode_Paramet
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterOffers-terminationEventList-Item-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterOffers-terminationEventList-Item-Item ::= SEQUENCE {
+ *     event   ANY,
+ *     eventId SEQUENCE {
+ *         integer G.IntegerOffer OPTIONAL,
+ *         nul     NULL OPTIONAL
+ *     }
+ * }
  * ```
  * 
  * @class

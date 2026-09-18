@@ -79,7 +79,10 @@ import { AttrExtent, _decode_AttrExtent, _encode_AttrExtent } from "../ISO9041-V
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-writeAttr ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-writeAttr ::= SEQUENCE {
+ *     attributeId     AttrId,
+ *     attributeExtent AttrExtent
+ * }
  * ```
  * 
  * @class

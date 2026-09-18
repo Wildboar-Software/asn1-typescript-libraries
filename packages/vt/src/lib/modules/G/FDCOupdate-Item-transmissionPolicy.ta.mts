@@ -76,7 +76,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FDCOupdate-Item-transmissionPolicy ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * FDCOupdate-Item-transmissionPolicy ::= INTEGER {
+ *     all                (0),
+ *     modifiedAllContent (1),
+ *     modifiedPart       (2),
+ *     none               (3),
+ *     refTPCO            (4)
+ * }
  * ```
  */
 export

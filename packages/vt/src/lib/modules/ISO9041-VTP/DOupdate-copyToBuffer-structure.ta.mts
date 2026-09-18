@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-copyToBuffer-structure ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-copyToBuffer-structure ::= INTEGER { none (0), x (1), xAndy (2) }
  * ```
  */
 export

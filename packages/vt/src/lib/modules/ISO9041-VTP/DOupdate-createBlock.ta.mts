@@ -79,7 +79,11 @@ import { MeasurePair, _decode_MeasurePair, _encode_MeasurePair } from "../G/Meas
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-createBlock ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-createBlock ::= SEQUENCE {
+ *     blockPosition [0] IMPLICIT G.Block,
+ *     origin        [1] IMPLICIT G.MeasurePair,
+ *     dimension     [2] IMPLICIT G.MeasurePair
+ * }
  * ```
  * 
  * @class

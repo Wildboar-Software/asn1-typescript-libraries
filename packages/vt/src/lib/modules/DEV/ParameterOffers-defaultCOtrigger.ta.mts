@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterOffers-defaultCOtrigger ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterOffers-defaultCOtrigger ::= BIT STRING { notSelected (0), selected (1) }
  * ```
  */
 export

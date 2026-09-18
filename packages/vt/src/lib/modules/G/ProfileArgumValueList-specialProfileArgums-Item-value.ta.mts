@@ -76,7 +76,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileArgumValueList-specialProfileArgums-Item-value ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileArgumValueList-specialProfileArgums-Item-value ::= CHOICE {
+ *     boolean BOOLEAN,
+ *     integer INTEGER,
+ *     string  PrintableString,
+ *     oid     OBJECT IDENTIFIER
+ * }
  * ```
  */
 export

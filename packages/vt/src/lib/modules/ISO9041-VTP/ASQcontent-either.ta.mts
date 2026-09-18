@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ASQcontent-either ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ASQcontent-either ::= INTEGER { a-mode (0), s-mode (1) }
  * ```
  */
 export

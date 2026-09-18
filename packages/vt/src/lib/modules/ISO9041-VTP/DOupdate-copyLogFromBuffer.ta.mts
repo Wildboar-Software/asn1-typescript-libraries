@@ -77,7 +77,20 @@ import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-V
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-copyLogFromBuffer ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-copyLogFromBuffer ::= SEQUENCE {
+ *     address LogPointer,
+ *     rioName  [8] IMPLICIT PrintableString OPTIONAL,
+ *     recordId [9] IMPLICIT PrintableString OPTIONAL,
+ *     -- when buffer-name is "temporary", rioName and recordId shall be absent;
+ *     -- when there is only one RIO present in the VTE, rioName is optional,
+ *     -- but recordId shall be present
+ *     rendition [10] IMPLICIT NULL OPTIONAL,
+ *     -- presence implies "copy attributes", absence implies "no attribute copy"
+ *     structure [11] IMPLICIT NULL OPTIONAL,
+ *     -- presence implies "x", absence implies "none"
+ *     ripple [12] IMPLICIT NULL OPTIONAL
+ *     -- presence implies "on", absence implies "off"
+ * }
  * ```
  * 
  * @class

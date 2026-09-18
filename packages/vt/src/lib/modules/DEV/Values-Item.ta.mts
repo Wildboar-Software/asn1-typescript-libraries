@@ -77,7 +77,10 @@ import { ParameterValues, _decode_ParameterValues, _encode_ParameterValues } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Values-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Values-Item ::= SEQUENCE {
+ *     name    PrintableString,
+ *     values  ParameterValues
+ * }
  * ```
  * 
  * @class

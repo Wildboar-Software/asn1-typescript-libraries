@@ -77,7 +77,16 @@ import { EXQcontent_exceptionType_stdException, EXQcontent_exceptionType_stdExce
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EXQcontent-exceptionType ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * EXQcontent-exceptionType ::= CHOICE {
+ *     stdException [0] IMPLICIT INTEGER {
+ *         rioFull (0),
+ *         tooManyFields (1),
+ *         tooManyFieldElements (2),
+ *         tooManyFERs (3),
+ *         tooManyFEIs (4)
+ *     },
+ *     proException [1] IMPLICIT INTEGER
+ * }
  * ```
  */
 export

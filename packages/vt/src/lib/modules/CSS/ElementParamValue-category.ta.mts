@@ -76,7 +76,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ElementParamValue-category ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ElementParamValue-category ::= INTEGER {
+ *     character   (0),
+ *     boolean     (1),
+ *     symbolic    (2),
+ *     integer     (3),
+ *     transparent (4)
+ * }
  * ```
  */
 export

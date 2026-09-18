@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AttrId-font ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * AttrId-font ::= INTEGER { null (0) }
  * ```
  */
 export

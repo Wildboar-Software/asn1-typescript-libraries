@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IntegerOffer-Item-range ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * IntegerOffer-Item-range ::= SEQUENCE {
+ *     minimum INTEGER,
+ *     maximum INTEGER
+ * }
  * ```
  * 
  * @class

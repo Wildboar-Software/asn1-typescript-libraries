@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterValues-terminationTimeout-eventId ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterValues-terminationTimeout-eventId ::= CHOICE {
+ *     integer INTEGER,
+ *     nul NULL
+ * }
  * ```
  */
 export

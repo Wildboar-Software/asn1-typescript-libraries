@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BlockParamOffer-capability ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * BlockParamOffer-capability ::= BIT STRING { yes (0), no (1) }
  * ```
  */
 export

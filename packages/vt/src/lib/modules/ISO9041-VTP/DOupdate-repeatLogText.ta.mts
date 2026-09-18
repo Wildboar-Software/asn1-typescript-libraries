@@ -77,7 +77,11 @@ import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-V
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-repeatLogText ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-repeatLogText ::= SEQUENCE {
+ *     finishAddress LogPointer,
+ *     fdrAttr      [8] IMPLICIT BOOLEAN,
+ *     prAttrValStr [9] IMPLICIT OCTET STRING
+ * }
  * ```
  * 
  * @class

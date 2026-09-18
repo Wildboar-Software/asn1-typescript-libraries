@@ -77,7 +77,13 @@ import { IntegerOffer_Item_range, _decode_IntegerOffer_Item_range, _encode_Integ
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IntegerOffer-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * IntegerOffer-Item ::= CHOICE {
+ *     individualValue [0] IMPLICIT INTEGER,
+ *     range           [1] IMPLICIT SEQUENCE {
+ *         minimum INTEGER,
+ *         maximum INTEGER
+ *     }
+ * }
  * ```
  */
 export

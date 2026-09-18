@@ -79,7 +79,11 @@ import { EraseAttr, _decode_EraseAttr, _encode_EraseAttr } from "../ISO9041-VTP/
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-erase ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-erase ::= SEQUENCE {
+ *     startErase  Pointer,
+ *     endErase    Pointer,
+ *     attribute   EraseAttr
+ * }
  * ```
  * 
  * @class

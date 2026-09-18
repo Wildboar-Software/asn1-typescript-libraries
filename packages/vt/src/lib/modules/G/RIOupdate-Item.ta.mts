@@ -79,7 +79,15 @@ import { ObjectUpdate, _decode_ObjectUpdate, _encode_ObjectUpdate } from "../ISO
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RIOupdate-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RIOupdate-Item ::= SEQUENCE {
+ *     recordId    [0] IMPLICIT PrintableString OPTIONAL,
+ *     operation   [1] IMPLICIT INTEGER {
+ *         eraseRIO     (0),
+ *         deleteRecord (1),
+ *         createRecord (2)
+ *     },
+ *     updates     [2] IMPLICIT SEQUENCE OF ISO9041-VTP.ObjectUpdate OPTIONAL
+ * }
  * ```
  * 
  * @class
