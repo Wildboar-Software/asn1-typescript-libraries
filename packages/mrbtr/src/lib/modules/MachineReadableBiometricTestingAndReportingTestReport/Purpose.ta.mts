@@ -158,7 +158,6 @@ const Purpose_sample: Purpose = Purpose.sample; /* LONG_NAMED_ENUMERATED_VALUE *
 export
 const sample: Purpose = Purpose.sample; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_Purpose: $.ASN1Decoder<Purpose> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Purpose
@@ -166,13 +165,8 @@ let _cached_decoder_for_Purpose: $.ASN1Decoder<Purpose> | null = null;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Purpose (el: _Element): Purpose {
-    if (!_cached_decoder_for_Purpose) { _cached_decoder_for_Purpose = $._decodeEnumerated; }
-    return _cached_decoder_for_Purpose(el);
-}
+export const _decode_Purpose = $._decodeEnumerated;
 
-let _cached_encoder_for_Purpose: $.ASN1Encoder<Purpose> | null = null;
 
 /**
  * @summary Encodes a(n) Purpose into an ASN.1 Element.
@@ -181,11 +175,7 @@ let _cached_encoder_for_Purpose: $.ASN1Encoder<Purpose> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Purpose, encoded as an ASN.1 Element.
  */
-export
-function _encode_Purpose (value: Purpose, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Purpose) { _cached_encoder_for_Purpose = $._encodeEnumerated; }
-    return _cached_encoder_for_Purpose(value, elGetter);
-}
+export const _encode_Purpose = $._encodeEnumerated;
 
 
 /* eslint-enable */

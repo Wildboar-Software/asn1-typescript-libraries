@@ -82,7 +82,6 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Date = VisibleString; // VisibleString
 
-let _cached_decoder_for_Date: $.ASN1Decoder<Date> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Date
@@ -90,13 +89,8 @@ let _cached_decoder_for_Date: $.ASN1Decoder<Date> | null = null;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Date (el: _Element): Date {
-    if (!_cached_decoder_for_Date) { _cached_decoder_for_Date = $._decodeVisibleString; }
-    return _cached_decoder_for_Date(el);
-}
+export const _decode_Date = $._decodeVisibleString;
 
-let _cached_encoder_for_Date: $.ASN1Encoder<Date> | null = null;
 
 /**
  * @summary Encodes a(n) Date into an ASN.1 Element.
@@ -105,11 +99,7 @@ let _cached_encoder_for_Date: $.ASN1Encoder<Date> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Date, encoded as an ASN.1 Element.
  */
-export
-function _encode_Date (value: Date, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Date) { _cached_encoder_for_Date = $._encodeVisibleString; }
-    return _cached_encoder_for_Date(value, elGetter);
-}
+export const _encode_Date = $._encodeVisibleString;
 
 
 /* eslint-enable */

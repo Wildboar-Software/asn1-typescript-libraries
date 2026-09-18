@@ -198,7 +198,6 @@ const InstructionMode_personal: InstructionMode = InstructionMode.personal; /* L
 export
 const personal: InstructionMode = InstructionMode.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_InstructionMode: $.ASN1Decoder<InstructionMode> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) InstructionMode
@@ -206,13 +205,8 @@ let _cached_decoder_for_InstructionMode: $.ASN1Decoder<InstructionMode> | null =
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_InstructionMode (el: _Element): InstructionMode {
-    if (!_cached_decoder_for_InstructionMode) { _cached_decoder_for_InstructionMode = $._decodeEnumerated; }
-    return _cached_decoder_for_InstructionMode(el);
-}
+export const _decode_InstructionMode = $._decodeEnumerated;
 
-let _cached_encoder_for_InstructionMode: $.ASN1Encoder<InstructionMode> | null = null;
 
 /**
  * @summary Encodes a(n) InstructionMode into an ASN.1 Element.
@@ -221,11 +215,7 @@ let _cached_encoder_for_InstructionMode: $.ASN1Encoder<InstructionMode> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InstructionMode, encoded as an ASN.1 Element.
  */
-export
-function _encode_InstructionMode (value: InstructionMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InstructionMode) { _cached_encoder_for_InstructionMode = $._encodeEnumerated; }
-    return _cached_encoder_for_InstructionMode(value, elGetter);
-}
+export const _encode_InstructionMode = $._encodeEnumerated;
 
 
 /* eslint-enable */

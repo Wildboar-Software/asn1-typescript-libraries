@@ -198,7 +198,6 @@ const RoleProvider_other: RoleProvider = RoleProvider.other; /* LONG_NAMED_ENUME
 export
 const other: RoleProvider = RoleProvider.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RoleProvider: $.ASN1Decoder<RoleProvider> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) RoleProvider
@@ -206,13 +205,8 @@ let _cached_decoder_for_RoleProvider: $.ASN1Decoder<RoleProvider> | null = null;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RoleProvider (el: _Element): RoleProvider {
-    if (!_cached_decoder_for_RoleProvider) { _cached_decoder_for_RoleProvider = $._decodeEnumerated; }
-    return _cached_decoder_for_RoleProvider(el);
-}
+export const _decode_RoleProvider = $._decodeEnumerated;
 
-let _cached_encoder_for_RoleProvider: $.ASN1Encoder<RoleProvider> | null = null;
 
 /**
  * @summary Encodes a(n) RoleProvider into an ASN.1 Element.
@@ -221,11 +215,7 @@ let _cached_encoder_for_RoleProvider: $.ASN1Encoder<RoleProvider> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RoleProvider, encoded as an ASN.1 Element.
  */
-export
-function _encode_RoleProvider (value: RoleProvider, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RoleProvider) { _cached_encoder_for_RoleProvider = $._encodeEnumerated; }
-    return _cached_encoder_for_RoleProvider(value, elGetter);
-}
+export const _encode_RoleProvider = $._encodeEnumerated;
 
 
 /* eslint-enable */

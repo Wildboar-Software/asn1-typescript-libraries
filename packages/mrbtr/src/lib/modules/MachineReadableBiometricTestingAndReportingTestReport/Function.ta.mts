@@ -162,7 +162,6 @@ const Function_identification: Function = 4; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const identification: Function = Function_identification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_Function: $.ASN1Decoder<Function> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Function
@@ -170,13 +169,8 @@ let _cached_decoder_for_Function: $.ASN1Decoder<Function> | null = null;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Function (el: _Element): Function {
-    if (!_cached_decoder_for_Function) { _cached_decoder_for_Function = $._decodeEnumerated; }
-    return _cached_decoder_for_Function(el);
-}
+export const _decode_Function = $._decodeEnumerated;
 
-let _cached_encoder_for_Function: $.ASN1Encoder<Function> | null = null;
 
 /**
  * @summary Encodes a(n) Function into an ASN.1 Element.
@@ -185,11 +179,7 @@ let _cached_encoder_for_Function: $.ASN1Encoder<Function> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Function, encoded as an ASN.1 Element.
  */
-export
-function _encode_Function (value: Function, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Function) { _cached_encoder_for_Function = $._encodeEnumerated; }
-    return _cached_encoder_for_Function(value, elGetter);
-}
+export const _encode_Function = $._encodeEnumerated;
 
 
 /* eslint-enable */
