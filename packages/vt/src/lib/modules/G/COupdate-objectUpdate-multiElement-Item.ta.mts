@@ -132,10 +132,8 @@ function _decode_COupdate_objectUpdate_multiElement_Item (el: _Element): COupdat
     }
     sequence[0].name = "identifier";
     sequence[1].name = "update";
-    let identifier!: INTEGER;
-    let update!: COupdate_objectUpdate_multiElement_Item_update;
-    identifier = $._decodeInteger(sequence[0]);
-    update = _decode_COupdate_objectUpdate_multiElement_Item_update(sequence[1]);
+    const identifier: INTEGER = $._decodeInteger(sequence[0]);
+    const update: COupdate_objectUpdate_multiElement_Item_update = _decode_COupdate_objectUpdate_multiElement_Item_update(sequence[1]);
     return new COupdate_objectUpdate_multiElement_Item(
         identifier,
         update,

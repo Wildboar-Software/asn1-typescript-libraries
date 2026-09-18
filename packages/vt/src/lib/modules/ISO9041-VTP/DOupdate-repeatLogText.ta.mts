@@ -133,12 +133,9 @@ function _decode_DOupdate_repeatLogText (el: _Element): DOupdate_repeatLogText {
     sequence[0].name = "finishAddress";
     sequence[1].name = "fdrAttr";
     sequence[2].name = "prAttrValStr";
-    let finishAddress!: LogPointer;
-    let fdrAttr!: BOOLEAN;
-    let prAttrValStr!: OCTET_STRING;
-    finishAddress = _decode_LogPointer(sequence[0]);
-    fdrAttr = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(sequence[1]);
-    prAttrValStr = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[2]);
+    const finishAddress: LogPointer = _decode_LogPointer(sequence[0]);
+    const fdrAttr: BOOLEAN = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(sequence[1]);
+    const prAttrValStr: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[2]);
     return new DOupdate_repeatLogText(
         finishAddress,
         fdrAttr,

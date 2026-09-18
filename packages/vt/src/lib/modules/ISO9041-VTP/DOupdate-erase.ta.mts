@@ -133,12 +133,9 @@ function _decode_DOupdate_erase (el: _Element): DOupdate_erase {
     sequence[0].name = "startErase";
     sequence[1].name = "endErase";
     sequence[2].name = "attribute";
-    let startErase!: Pointer;
-    let endErase!: Pointer;
-    let attribute!: EraseAttr;
-    startErase = _decode_Pointer(sequence[0]);
-    endErase = _decode_Pointer(sequence[1]);
-    attribute = _decode_EraseAttr(sequence[2]);
+    const startErase: Pointer = _decode_Pointer(sequence[0]);
+    const endErase: Pointer = _decode_Pointer(sequence[1]);
+    const attribute: EraseAttr = _decode_EraseAttr(sequence[2]);
     return new DOupdate_erase(
         startErase,
         endErase,

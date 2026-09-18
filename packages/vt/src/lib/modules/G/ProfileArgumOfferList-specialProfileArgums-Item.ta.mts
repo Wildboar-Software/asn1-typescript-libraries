@@ -128,10 +128,8 @@ function _decode_ProfileArgumOfferList_specialProfileArgums_Item (el: _Element):
     }
     sequence[0].name = "identifier";
     sequence[1].name = "offeredValues";
-    let identifier!: INTEGER;
-    let offeredValues!: ProfileArgumOfferList_specialProfileArgums_Item_offeredValues;
-    identifier = $._decodeInteger(sequence[0]);
-    offeredValues = _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues(sequence[1]);
+    const identifier: INTEGER = $._decodeInteger(sequence[0]);
+    const offeredValues: ProfileArgumOfferList_specialProfileArgums_Item_offeredValues = _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues(sequence[1]);
     return new ProfileArgumOfferList_specialProfileArgums_Item(
         identifier,
         offeredValues,

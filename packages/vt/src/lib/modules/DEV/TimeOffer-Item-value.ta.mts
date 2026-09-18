@@ -122,10 +122,8 @@ function _decode_TimeOffer_Item_value (el: _Element): TimeOffer_Item_value {
     }
     sequence[0].name = "multiplier";
     sequence[1].name = "exponent";
-    let multiplier!: INTEGER;
-    let exponent!: INTEGER;
-    multiplier = $._decodeInteger(sequence[0]);
-    exponent = $._decodeInteger(sequence[1]);
+    const multiplier: INTEGER = $._decodeInteger(sequence[0]);
+    const exponent: INTEGER = $._decodeInteger(sequence[1]);
     return new TimeOffer_Item_value(
         multiplier,
         exponent,

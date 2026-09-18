@@ -125,10 +125,8 @@ function _decode_DOupdate_logText (el: _Element): DOupdate_logText {
     }
     sequence[0].name = "fdrAttr";
     sequence[1].name = "prAttrVal";
-    let fdrAttr!: BOOLEAN;
-    let prAttrVal!: OCTET_STRING;
-    fdrAttr = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(sequence[0]);
-    prAttrVal = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const fdrAttr: BOOLEAN = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(sequence[0]);
+    const prAttrVal: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new DOupdate_logText(
         fdrAttr,
         prAttrVal,

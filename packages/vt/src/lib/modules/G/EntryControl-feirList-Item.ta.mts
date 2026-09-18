@@ -123,10 +123,8 @@ function _decode_EntryControl_feirList_Item (el: _Element): EntryControl_feirLis
     }
     sequence[0].name = "feicoName";
     sequence[1].name = "recordIndex";
-    let feicoName!: PrintableString;
-    let recordIndex!: INTEGER;
-    feicoName = $._decodePrintableString(sequence[0]);
-    recordIndex = $._decodeInteger(sequence[1]);
+    const feicoName: PrintableString = $._decodePrintableString(sequence[0]);
+    const recordIndex: INTEGER = $._decodeInteger(sequence[1]);
     return new EntryControl_feirList_Item(
         feicoName,
         recordIndex,

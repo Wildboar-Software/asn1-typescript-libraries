@@ -135,12 +135,9 @@ function _decode_ParameterValues_terminationTimeout (el: _Element): ParameterVal
     sequence[0].name = "timeMultiplier";
     sequence[1].name = "timeExponent";
     sequence[2].name = "eventId";
-    let timeMultiplier!: INTEGER;
-    let timeExponent!: INTEGER;
-    let eventId!: ParameterValues_terminationTimeout_eventId;
-    timeMultiplier = $._decodeInteger(sequence[0]);
-    timeExponent = $._decodeInteger(sequence[1]);
-    eventId = _decode_ParameterValues_terminationTimeout_eventId(sequence[2]);
+    const timeMultiplier: INTEGER = $._decodeInteger(sequence[0]);
+    const timeExponent: INTEGER = $._decodeInteger(sequence[1]);
+    const eventId: ParameterValues_terminationTimeout_eventId = _decode_ParameterValues_terminationTimeout_eventId(sequence[2]);
     return new ParameterValues_terminationTimeout(
         timeMultiplier,
         timeExponent,

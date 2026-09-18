@@ -123,10 +123,8 @@ function _decode_Offer_Item (el: _Element): Offer_Item {
     }
     sequence[0].name = "name";
     sequence[1].name = "offers";
-    let name!: PrintableString;
-    let offers!: ParameterOffers;
-    name = $._decodePrintableString(sequence[0]);
-    offers = _decode_ParameterOffers(sequence[1]);
+    const name: PrintableString = $._decodePrintableString(sequence[0]);
+    const offers: ParameterOffers = _decode_ParameterOffers(sequence[1]);
     return new Offer_Item(
         name,
         offers,

@@ -123,10 +123,8 @@ function _decode_Identifier_Item (el: _Element): Identifier_Item {
     }
     sequence[0].name = "name";
     sequence[1].name = "idents";
-    let name!: PrintableString;
-    let idents!: ParameterIdents;
-    name = $._decodePrintableString(sequence[0]);
-    idents = _decode_ParameterIdents(sequence[1]);
+    const name: PrintableString = $._decodePrintableString(sequence[0]);
+    const idents: ParameterIdents = _decode_ParameterIdents(sequence[1]);
     return new Identifier_Item(
         name,
         idents,

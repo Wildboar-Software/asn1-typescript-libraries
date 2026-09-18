@@ -129,10 +129,8 @@ function _decode_RIOreference (el: _Element): RIOreference {
     }
     sequence[0].name = "rioName";
     sequence[1].name = "operations";
-    let rioName!: PrintableString;
-    let operations!: RIOreference_operations_Item[];
-    rioName = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(sequence[0]);
-    operations = $._decode_implicit<RIOreference_operations_Item[]>(() => $._decodeSequenceOf<RIOreference_operations_Item>(() => _decode_RIOreference_operations_Item))(sequence[1]);
+    const rioName: PrintableString = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(sequence[0]);
+    const operations: RIOreference_operations_Item[] = $._decode_implicit<RIOreference_operations_Item[]>(() => $._decodeSequenceOf<RIOreference_operations_Item>(() => _decode_RIOreference_operations_Item))(sequence[1]);
     return new RIOreference(
         rioName,
         operations,

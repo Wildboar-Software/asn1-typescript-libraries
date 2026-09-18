@@ -123,10 +123,8 @@ function _decode_DOupdate_repeatText (el: _Element): DOupdate_repeatText {
     }
     sequence[0].name = "finishAddress";
     sequence[1].name = "text";
-    let finishAddress!: Pointer;
-    let text!: OCTET_STRING;
-    finishAddress = _decode_Pointer(sequence[0]);
-    text = $._decodeOctetString(sequence[1]);
+    const finishAddress: Pointer = _decode_Pointer(sequence[0]);
+    const text: OCTET_STRING = $._decodeOctetString(sequence[1]);
     return new DOupdate_repeatText(
         finishAddress,
         text,

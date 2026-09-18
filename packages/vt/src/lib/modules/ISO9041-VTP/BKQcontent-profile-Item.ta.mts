@@ -123,10 +123,8 @@ function _decode_BKQcontent_profile_Item (el: _Element): BKQcontent_profile_Item
     }
     sequence[0].name = "ptag";
     sequence[1].name = "pvalue";
-    let ptag!: INTEGER;
-    let pvalue!: OCTET_STRING;
-    ptag = $._decodeInteger(sequence[0]);
-    pvalue = $._decodeOctetString(sequence[1]);
+    const ptag: INTEGER = $._decodeInteger(sequence[0]);
+    const pvalue: OCTET_STRING = $._decodeOctetString(sequence[1]);
     return new BKQcontent_profile_Item(
         ptag,
         pvalue,

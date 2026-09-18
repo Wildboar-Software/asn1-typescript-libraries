@@ -122,10 +122,8 @@ function _decode_LogAttrExtent_address (el: _Element): LogAttrExtent_address {
     }
     sequence[0].name = "beginning";
     sequence[1].name = "ending";
-    let beginning!: LogPointer;
-    let ending!: LogPointer;
-    beginning = _decode_LogPointer(sequence[0]);
-    ending = _decode_LogPointer(sequence[1]);
+    const beginning: LogPointer = _decode_LogPointer(sequence[0]);
+    const ending: LogPointer = _decode_LogPointer(sequence[1]);
     return new LogAttrExtent_address(
         beginning,
         ending,

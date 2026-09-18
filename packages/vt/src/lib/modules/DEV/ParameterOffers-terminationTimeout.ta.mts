@@ -127,10 +127,8 @@ function _decode_ParameterOffers_terminationTimeout (el: _Element): ParameterOff
     }
     sequence[0].name = "timeOffer";
     sequence[1].name = "eventId";
-    let timeOffer!: TimeOffer;
-    let eventId!: ParameterOffers_terminationTimeout_eventId;
-    timeOffer = _decode_TimeOffer(sequence[0]);
-    eventId = _decode_ParameterOffers_terminationTimeout_eventId(sequence[1]);
+    const timeOffer: TimeOffer = _decode_TimeOffer(sequence[0]);
+    const eventId: ParameterOffers_terminationTimeout_eventId = _decode_ParameterOffers_terminationTimeout_eventId(sequence[1]);
     return new ParameterOffers_terminationTimeout(
         timeOffer,
         eventId,

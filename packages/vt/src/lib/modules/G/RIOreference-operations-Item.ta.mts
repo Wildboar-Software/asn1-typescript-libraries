@@ -126,10 +126,8 @@ function _decode_RIOreference_operations_Item (el: _Element): RIOreference_opera
     }
     sequence[0].name = "recordId";
     sequence[1].name = "operation";
-    let recordId!: PrintableString;
-    let operation!: RIOreference_operations_Item_operation;
-    recordId = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(sequence[0]);
-    operation = $._decode_implicit<RIOreference_operations_Item_operation>(() => _decode_RIOreference_operations_Item_operation)(sequence[1]);
+    const recordId: PrintableString = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(sequence[0]);
+    const operation: RIOreference_operations_Item_operation = $._decode_implicit<RIOreference_operations_Item_operation>(() => _decode_RIOreference_operations_Item_operation)(sequence[1]);
     return new RIOreference_operations_Item(
         recordId,
         operation,

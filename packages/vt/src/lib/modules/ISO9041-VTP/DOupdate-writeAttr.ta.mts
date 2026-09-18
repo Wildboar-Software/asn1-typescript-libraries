@@ -124,10 +124,8 @@ function _decode_DOupdate_writeAttr (el: _Element): DOupdate_writeAttr {
     }
     sequence[0].name = "attributeId";
     sequence[1].name = "attributeExtent";
-    let attributeId!: AttrId;
-    let attributeExtent!: AttrExtent;
-    attributeId = _decode_AttrId(sequence[0]);
-    attributeExtent = _decode_AttrExtent(sequence[1]);
+    const attributeId: AttrId = _decode_AttrId(sequence[0]);
+    const attributeExtent: AttrExtent = _decode_AttrExtent(sequence[1]);
     return new DOupdate_writeAttr(
         attributeId,
         attributeExtent,

@@ -124,10 +124,8 @@ function _decode_DOupdate_writeLogAttr (el: _Element): DOupdate_writeLogAttr {
     }
     sequence[0].name = "attributeId";
     sequence[1].name = "logAttrExtent";
-    let attributeId!: AttrId;
-    let logAttrExtent!: LogAttrExtent;
-    attributeId = _decode_AttrId(sequence[0]);
-    logAttrExtent = _decode_LogAttrExtent(sequence[1]);
+    const attributeId: AttrId = _decode_AttrId(sequence[0]);
+    const logAttrExtent: LogAttrExtent = _decode_LogAttrExtent(sequence[1]);
     return new DOupdate_writeLogAttr(
         attributeId,
         logAttrExtent,
