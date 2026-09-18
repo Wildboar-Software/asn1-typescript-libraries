@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +13,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExplicitPointer, _decode_ExplicitPointer, _encode_ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
+import { _decode_ExplicitPointer, _encode_ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
 // export { ExplicitPointer, _decode_ExplicitPointer, _encode_ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
 import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
 // export { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
@@ -76,7 +23,7 @@ import { DOupdate_writeAttr, _decode_DOupdate_writeAttr, _encode_DOupdate_writeA
 // export { DOupdate_writeAttr, _decode_DOupdate_writeAttr, _encode_DOupdate_writeAttr } from "../ISO9041-VTP/DOupdate-writeAttr.ta.mjs";
 import { DOupdate_erase, _decode_DOupdate_erase, _encode_DOupdate_erase } from "../ISO9041-VTP/DOupdate-erase.ta.mjs";
 // export { DOupdate_erase, _decode_DOupdate_erase, _encode_DOupdate_erase } from "../ISO9041-VTP/DOupdate-erase.ta.mjs";
-import { LogExpPointer, _decode_LogExpPointer, _encode_LogExpPointer } from "../G/LogExpPointer.ta.mjs";
+import { _decode_LogExpPointer, _encode_LogExpPointer } from "../G/LogExpPointer.ta.mjs";
 // export { LogExpPointer, _decode_LogExpPointer, _encode_LogExpPointer } from "../G/LogExpPointer.ta.mjs";
 import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-VTP/LogPointer.ta.mjs";
 // export { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-VTP/LogPointer.ta.mjs";
@@ -90,7 +37,7 @@ import { DOupdate_logErase, _decode_DOupdate_logErase, _encode_DOupdate_logErase
 // export { DOupdate_logErase, _decode_DOupdate_logErase, _encode_DOupdate_logErase } from "../ISO9041-VTP/DOupdate-logErase.ta.mjs";
 import { DOupdate_createBlock, _decode_DOupdate_createBlock, _encode_DOupdate_createBlock } from "../ISO9041-VTP/DOupdate-createBlock.ta.mjs";
 // export { DOupdate_createBlock, _decode_DOupdate_createBlock, _encode_DOupdate_createBlock } from "../ISO9041-VTP/DOupdate-createBlock.ta.mjs";
-import { Block, _decode_Block, _encode_Block } from "../G/Block.ta.mjs";
+import { _decode_Block, _encode_Block } from "../G/Block.ta.mjs";
 // export { Block, _decode_Block, _encode_Block } from "../G/Block.ta.mjs";
 import { DOupdate_copyToBuffer, _decode_DOupdate_copyToBuffer, _encode_DOupdate_copyToBuffer } from "../ISO9041-VTP/DOupdate-copyToBuffer.ta.mjs";
 // export { DOupdate_copyToBuffer, _decode_DOupdate_copyToBuffer, _encode_DOupdate_copyToBuffer } from "../ISO9041-VTP/DOupdate-copyToBuffer.ta.mjs";

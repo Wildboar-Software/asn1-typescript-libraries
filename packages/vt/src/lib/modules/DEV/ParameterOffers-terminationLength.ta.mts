@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { ParameterOffers_terminationLength_eventId, _decode_ParameterOffers_terminationLength_eventId, _encode_ParameterOffers_terminationLength_eventId } from "../DEV/ParameterOffers-terminationLength-eventId.ta.mjs";
 // export { ParameterOffers_terminationLength_eventId, _decode_ParameterOffers_terminationLength_eventId, _encode_ParameterOffers_terminationLength_eventId } from "../DEV/ParameterOffers-terminationLength-eventId.ta.mjs";
@@ -207,7 +151,7 @@ let _cached_encoder_for_ParameterOffers_terminationLength: $.ASN1Encoder<Paramet
  */
 export
 function _encode_ParameterOffers_terminationLength (value: ParameterOffers_terminationLength, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterOffers_terminationLength) { _cached_encoder_for_ParameterOffers_terminationLength = function (value: ParameterOffers_terminationLength, elGetter: $.ASN1Encoder<ParameterOffers_terminationLength>): _Element {
+    if (!_cached_encoder_for_ParameterOffers_terminationLength) { _cached_encoder_for_ParameterOffers_terminationLength = function (value: ParameterOffers_terminationLength): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => G._encode_IntegerOffer, $.BER)(value.length, $.BER),

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,7 +13,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 // export { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
-import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { FontAssignment, _decode_FontAssignment, _encode_FontAssignment } from "../CDS/FontAssignment.ta.mjs";
 // export { FontAssignment, _decode_FontAssignment, _encode_FontAssignment } from "../CDS/FontAssignment.ta.mjs";
@@ -218,7 +163,7 @@ let _cached_encoder_for_RepertoireFontOffer_alternatives_Item: $.ASN1Encoder<Rep
  */
 export
 function _encode_RepertoireFontOffer_alternatives_Item (value: RepertoireFontOffer_alternatives_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RepertoireFontOffer_alternatives_Item) { _cached_encoder_for_RepertoireFontOffer_alternatives_Item = function (value: RepertoireFontOffer_alternatives_Item, elGetter: $.ASN1Encoder<RepertoireFontOffer_alternatives_Item>): _Element {
+    if (!_cached_encoder_for_RepertoireFontOffer_alternatives_Item) { _cached_encoder_for_RepertoireFontOffer_alternatives_Item = function (value: RepertoireFontOffer_alternatives_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.repertoire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_RepertoireAssignment, $.BER)(value.repertoire, $.BER)),
