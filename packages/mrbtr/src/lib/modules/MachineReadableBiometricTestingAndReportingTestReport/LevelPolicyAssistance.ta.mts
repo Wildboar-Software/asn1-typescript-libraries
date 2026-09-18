@@ -1,0 +1,220 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { LevelEffortAndDecisionPolicy, _decode_LevelEffortAndDecisionPolicy, _encode_LevelEffortAndDecisionPolicy } from "../MachineReadableBiometricTestingAndReportingTestReport/LevelEffortAndDecisionPolicy.ta.mjs";
+// export { LevelEffortAndDecisionPolicy, _decode_LevelEffortAndDecisionPolicy, _encode_LevelEffortAndDecisionPolicy } from "../MachineReadableBiometricTestingAndReportingTestReport/LevelEffortAndDecisionPolicy.ta.mjs";
+import { AssistanceAndInstruction, _decode_AssistanceAndInstruction, _encode_AssistanceAndInstruction } from "../MachineReadableBiometricTestingAndReportingTestReport/AssistanceAndInstruction.ta.mjs";
+// export { AssistanceAndInstruction, _decode_AssistanceAndInstruction, _encode_AssistanceAndInstruction } from "../MachineReadableBiometricTestingAndReportingTestReport/AssistanceAndInstruction.ta.mjs";
+
+
+/**
+ * @summary LevelPolicyAssistance
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * LevelPolicyAssistance ::= SEQUENCE {
+ *     levelEffortAndDecisionPolicy    LevelEffortAndDecisionPolicy,
+ *     assistanceAndInstruction        AssistanceAndInstruction OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class LevelPolicyAssistance {
+    constructor (
+        /**
+         * @summary `levelEffortAndDecisionPolicy`.
+         * @public
+         * @readonly
+         */
+        readonly levelEffortAndDecisionPolicy: LevelEffortAndDecisionPolicy,
+        /**
+         * @summary `assistanceAndInstruction`.
+         * @public
+         * @readonly
+         */
+        readonly assistanceAndInstruction: OPTIONAL<AssistanceAndInstruction>
+    ) {}
+
+    /**
+     * @summary Restructures an object into a LevelPolicyAssistance
+     * @description
+     * 
+     * This takes an `object` and converts it to a `LevelPolicyAssistance`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `LevelPolicyAssistance`.
+     * @returns {LevelPolicyAssistance}
+     */
+    public static _from_object (_o: { [_K in keyof (LevelPolicyAssistance)]: (LevelPolicyAssistance)[_K] }): LevelPolicyAssistance {
+        return new LevelPolicyAssistance(_o.levelEffortAndDecisionPolicy, _o.assistanceAndInstruction);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of LevelPolicyAssistance
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_LevelPolicyAssistance: $.ComponentSpec[] = [
+    new $.ComponentSpec("levelEffortAndDecisionPolicy", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("assistanceAndInstruction", true, $.hasTag(_TagClass.context, 1))
+];
+
+/**
+ * @summary The Trailing Root Component Types of LevelPolicyAssistance
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_LevelPolicyAssistance: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of LevelPolicyAssistance
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_LevelPolicyAssistance: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_LevelPolicyAssistance: $.ASN1Decoder<LevelPolicyAssistance> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) LevelPolicyAssistance
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_LevelPolicyAssistance (el: _Element): LevelPolicyAssistance {
+    if (!_cached_decoder_for_LevelPolicyAssistance) { _cached_decoder_for_LevelPolicyAssistance = function (el: _Element): LevelPolicyAssistance {
+    let levelEffortAndDecisionPolicy!: LevelEffortAndDecisionPolicy;
+    let assistanceAndInstruction: OPTIONAL<AssistanceAndInstruction>;
+    const callbacks: $.DecodingMap = {
+        "levelEffortAndDecisionPolicy": (_el: _Element): void => { levelEffortAndDecisionPolicy = _decode_LevelEffortAndDecisionPolicy(_el); },
+        "assistanceAndInstruction": (_el: _Element): void => { assistanceAndInstruction = _decode_AssistanceAndInstruction(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_LevelPolicyAssistance,
+        _extension_additions_list_spec_for_LevelPolicyAssistance,
+        _root_component_type_list_2_spec_for_LevelPolicyAssistance,
+        undefined,
+    );
+    return new LevelPolicyAssistance(
+        levelEffortAndDecisionPolicy,
+        assistanceAndInstruction
+    );
+}; }
+    return _cached_decoder_for_LevelPolicyAssistance(el);
+}
+
+let _cached_encoder_for_LevelPolicyAssistance: $.ASN1Encoder<LevelPolicyAssistance> | null = null;
+
+/**
+ * @summary Encodes a(n) LevelPolicyAssistance into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The LevelPolicyAssistance, encoded as an ASN.1 Element.
+ */
+export
+function _encode_LevelPolicyAssistance (value: LevelPolicyAssistance, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_LevelPolicyAssistance) { _cached_encoder_for_LevelPolicyAssistance = function (value: LevelPolicyAssistance, elGetter: $.ASN1Encoder<LevelPolicyAssistance>): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* REQUIRED   */ _encode_LevelEffortAndDecisionPolicy(value.levelEffortAndDecisionPolicy, $.BER),
+            /* IF_ABSENT  */ ((value.assistanceAndInstruction === undefined) ? undefined : _encode_AssistanceAndInstruction(value.assistanceAndInstruction, $.BER))
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_LevelPolicyAssistance(value, elGetter);
+}
+
+
+/* eslint-enable */

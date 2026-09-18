@@ -1,0 +1,251 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary TypeProvider
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * TypeProvider  ::=  ENUMERATED {
+ *     non-profit  (1),
+ *     university  (2),
+ *     corporation (3),
+ *     individual  (4),
+ *     government  (5)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_TypeProvider {
+    non_profit = 1,
+    university = 2,
+    corporation = 3,
+    individual = 4,
+    government = 5,
+}
+
+/**
+ * @summary TypeProvider
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * TypeProvider  ::=  ENUMERATED {
+ *     non-profit  (1),
+ *     university  (2),
+ *     corporation (3),
+ *     individual  (4),
+ *     government  (5)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type TypeProvider = _enum_for_TypeProvider;
+
+/**
+ * @summary TypeProvider
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * TypeProvider  ::=  ENUMERATED {
+ *     non-profit  (1),
+ *     university  (2),
+ *     corporation (3),
+ *     individual  (4),
+ *     government  (5)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const TypeProvider = _enum_for_TypeProvider;
+
+/**
+ * @summary TypeProvider_non_profit
+ * @constant
+ * @type {number}
+ */
+export
+const TypeProvider_non_profit: TypeProvider = TypeProvider.non_profit; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary non_profit
+ * @constant
+ * @type {number}
+ */
+export
+const non_profit: TypeProvider = TypeProvider.non_profit; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary TypeProvider_university
+ * @constant
+ * @type {number}
+ */
+export
+const TypeProvider_university: TypeProvider = TypeProvider.university; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary university
+ * @constant
+ * @type {number}
+ */
+export
+const university: TypeProvider = TypeProvider.university; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary TypeProvider_corporation
+ * @constant
+ * @type {number}
+ */
+export
+const TypeProvider_corporation: TypeProvider = TypeProvider.corporation; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary corporation
+ * @constant
+ * @type {number}
+ */
+export
+const corporation: TypeProvider = TypeProvider.corporation; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary TypeProvider_individual
+ * @constant
+ * @type {number}
+ */
+export
+const TypeProvider_individual: TypeProvider = TypeProvider.individual; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary individual
+ * @constant
+ * @type {number}
+ */
+export
+const individual: TypeProvider = TypeProvider.individual; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary TypeProvider_government
+ * @constant
+ * @type {number}
+ */
+export
+const TypeProvider_government: TypeProvider = TypeProvider.government; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary government
+ * @constant
+ * @type {number}
+ */
+export
+const government: TypeProvider = TypeProvider.government; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+let _cached_decoder_for_TypeProvider: $.ASN1Decoder<TypeProvider> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) TypeProvider
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_TypeProvider (el: _Element): TypeProvider {
+    if (!_cached_decoder_for_TypeProvider) { _cached_decoder_for_TypeProvider = $._decodeEnumerated; }
+    return _cached_decoder_for_TypeProvider(el);
+}
+
+let _cached_encoder_for_TypeProvider: $.ASN1Encoder<TypeProvider> | null = null;
+
+/**
+ * @summary Encodes a(n) TypeProvider into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The TypeProvider, encoded as an ASN.1 Element.
+ */
+export
+function _encode_TypeProvider (value: TypeProvider, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_TypeProvider) { _cached_encoder_for_TypeProvider = $._encodeEnumerated; }
+    return _cached_encoder_for_TypeProvider(value, elGetter);
+}
+
+
+/* eslint-enable */
