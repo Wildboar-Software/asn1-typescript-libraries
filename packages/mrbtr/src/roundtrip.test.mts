@@ -3,7 +3,7 @@ import {
     ObjectIdentifier,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Product } from "./lib/modules/CBEFF-DATA-ELEMENTS/Product.ta.mjs";
+import { AttributeTypeAndValue } from "@wildboar/x500/InformationFramework";
 import { BiometricType_finger } from "./lib/modules/CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
 import {
     AccreditationStatus,
@@ -112,8 +112,15 @@ import {
     testReportTechnology,
 } from "./index.mjs";
 
-function directoryName(): Name {
-    return { rdnSequence: [] };
+function directoryName(cn: string): Name {
+    return {
+        rdnSequence: [[
+            new AttributeTypeAndValue(
+                ObjectIdentifier.fromParts([2, 5, 4, 3]),
+                $._encodeUTF8String(cn, $.BER),
+            ),
+        ]],
+    };
 }
 
 function sampleTechnologyReport(): TestReportTechnology {
@@ -123,14 +130,14 @@ function sampleTechnologyReport(): TestReportTechnology {
         MRTDBTRVersion_v0,
         new ProductInformation(
             new Provider(
-                directoryName(),
+                directoryName("Example Corp"),
                 TypeProvider_corporation,
                 RoleProvider_manufacturer,
                 "qa@example.com",
             ),
             new NameProduct(
-                directoryName(),
-                new Product(1, 42),
+                directoryName("Matcher 1"),
+                undefined,
                 VersionProduct_v0,
                 VersionProduct_v0,
                 VersionProduct_v0,
@@ -204,8 +211,8 @@ function sampleTechnologyReport(): TestReportTechnology {
                 "20260101",
                 "20260331",
                 [
-                    { testResultEnrol: new TestResultEnrol(0.012) },
-                    { testResultAcquire: new TestResultAcquire(0.003) },
+                    { testResultEnrol: new TestResultEnrol(0.5) },
+                    { testResultAcquire: new TestResultAcquire(0.25) },
                 ],
             ),
         ],
@@ -221,10 +228,12 @@ describe("MRBTR encode/decode round-trips", () => {
         expect(decoded.version).toBe(MRTDBTRVersion_v0);
         expect(decoded.targetInfo.description).toBe("Example matcher");
         expect(decoded.targetInfo.functionProduct).toEqual([Function_verification]);
+        expect(decoded.targetInfo.provider.nameProvider.rdnSequence).toHaveLength(1);
+        expect(decoded.targetInfo.provider.nameProvider.rdnSequence[0][0].type_.toString()).toBe("2.5.4.3");
+        expect(decoded.targetInfo.nameProduct.modelName.rdnSequence[0][0].type_.toString()).toBe("2.5.4.3");
         expect(decoded.targetInfo.provider.typeProvider).toBe(TypeProvider_corporation);
         expect(decoded.targetInfo.provider.roleProvider).toBe(RoleProvider_manufacturer);
-        expect(decoded.targetInfo.nameProduct.productCBEFF?.product_owner).toBe(1);
-        expect(decoded.targetInfo.nameProduct.productCBEFF?.product_type).toBe(42);
+        expect(decoded.targetInfo.nameProduct.productCBEFF).toBeUndefined();
         expect(decoded.targetInfo.modalityProduct.type_[BiometricType_finger]).toBe(1);
         expect(decoded.targetInfo.outputProduct?.processedLevel).toBe(ProcessedLevel_processed_data);
         expect(decoded.testReportInfo.compliantStandard.standardNumber).toBe("ISO/IEC 29120-1");
@@ -235,17 +244,18 @@ describe("MRBTR encode/decode round-trips", () => {
         expect(decoded.testReports).toHaveLength(1);
         expect(decoded.testReports[0].corpusInfo.composition.nameCorpus).toBe("Example Corpus");
         expect(decoded.testReports[0].corpusInfo.composition.corpusStatistics.numSamples).toBe(1000);
-        expect(decoded.testReports[0].corpusInfo.environInfo.celsiusTemp).toBe(21.5);
+        expect(decoded.testReports[0].corpusInfo.environInfo.celsiusTemp).toBeCloseTo(21.5);
+        expect(decoded.testReports[0].corpusInfo.environInfo.dBNoise).toBeCloseTo(30);
         expect(decoded.testReports[0].dateStarted).toBe("20260101");
         expect(decoded.testReports[0].dateEnded).toBe("20260331");
         expect(decoded.testReports[0].testResult).toHaveLength(2);
         expect("testResultEnrol" in decoded.testReports[0].testResult[0]).toBe(true);
         if ("testResultEnrol" in decoded.testReports[0].testResult[0]) {
-            expect(decoded.testReports[0].testResult[0].testResultEnrol.failureToEnrolRate).toBe(0.012);
+            expect(decoded.testReports[0].testResult[0].testResultEnrol.failureToEnrolRate).toBeCloseTo(0.5);
         }
         expect("testResultAcquire" in decoded.testReports[0].testResult[1]).toBe(true);
         if ("testResultAcquire" in decoded.testReports[0].testResult[1]) {
-            expect(decoded.testReports[0].testResult[1].testResultAcquire.failureToAcquireRate).toBe(0.003);
+            expect(decoded.testReports[0].testResult[1].testResultAcquire.failureToAcquireRate).toBeCloseTo(0.25);
         }
     });
 
@@ -275,7 +285,8 @@ describe("MRBTR encode/decode round-trips", () => {
         expect(TestReportTechnologyFromRoot).toBe(TestReportTechnology);
         expect(MRTDBTRVersion_v0FromRoot).toBe(MRTDBTRVersion_v0);
         expect(VersionProduct_v0FromRoot).toBe(VersionProduct_v0);
-        expect(MRTDBTRVersion_v0FromRoot).not.toBe(VersionProduct_v0FromRoot);
+        expect(MRTDBTRVersion_v0FromRoot).toBe(0);
+        expect(VersionProduct_v0FromRoot).toBe(0);
         expect(id_testReportTechnology.toString()).toBe("1.0.29120.1.2.1");
         expect(testReportTechnology.class).toBe("CONTENT-TYPE");
         expect(testReportTechnology["&id"]?.toString()).toBe("1.0.29120.1.2.1");
