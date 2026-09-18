@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
     VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -70,7 +16,7 @@ import { Provider, _decode_Provider, _encode_Provider } from "../MachineReadable
 // export { Provider, _decode_Provider, _encode_Provider } from "../MachineReadableBiometricTestingAndReportingTestReport/Provider.ta.mjs";
 import { NameProduct, _decode_NameProduct, _encode_NameProduct } from "../MachineReadableBiometricTestingAndReportingTestReport/NameProduct.ta.mjs";
 // export { NameProduct, _decode_NameProduct, _encode_NameProduct } from "../MachineReadableBiometricTestingAndReportingTestReport/NameProduct.ta.mjs";
-import { Function, _enum_for_Function, Function_acquisition /* IMPORTED_LONG_ENUMERATION_ITEM */, acquisition /* IMPORTED_SHORT_ENUMERATION_ITEM */, Function_enrolment /* IMPORTED_LONG_ENUMERATION_ITEM */, enrolment /* IMPORTED_SHORT_ENUMERATION_ITEM */, Function_verification /* IMPORTED_LONG_ENUMERATION_ITEM */, verification /* IMPORTED_SHORT_ENUMERATION_ITEM */, Function_identification /* IMPORTED_LONG_ENUMERATION_ITEM */, identification /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Function, _encode_Function } from "../MachineReadableBiometricTestingAndReportingTestReport/Function.ta.mjs";
+import { Function, _enum_for_Function, _decode_Function, _encode_Function } from "../MachineReadableBiometricTestingAndReportingTestReport/Function.ta.mjs";
 // export { Function, _enum_for_Function, Function_acquisition /* IMPORTED_LONG_ENUMERATION_ITEM */, acquisition /* IMPORTED_SHORT_ENUMERATION_ITEM */, Function_enrolment /* IMPORTED_LONG_ENUMERATION_ITEM */, enrolment /* IMPORTED_SHORT_ENUMERATION_ITEM */, Function_verification /* IMPORTED_LONG_ENUMERATION_ITEM */, verification /* IMPORTED_SHORT_ENUMERATION_ITEM */, Function_identification /* IMPORTED_LONG_ENUMERATION_ITEM */, identification /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Function, _encode_Function } from "../MachineReadableBiometricTestingAndReportingTestReport/Function.ta.mjs";
 import { DataType, _decode_DataType, _encode_DataType } from "../MachineReadableBiometricTestingAndReportingTestReport/DataType.ta.mjs";
 // export { DataType, _decode_DataType, _encode_DataType } from "../MachineReadableBiometricTestingAndReportingTestReport/DataType.ta.mjs";
@@ -255,7 +201,7 @@ let _cached_encoder_for_ProductInformation: $.ASN1Encoder<ProductInformation> | 
  */
 export
 function _encode_ProductInformation (value: ProductInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProductInformation) { _cached_encoder_for_ProductInformation = function (value: ProductInformation, elGetter: $.ASN1Encoder<ProductInformation>): _Element {
+    if (!_cached_encoder_for_ProductInformation) { _cached_encoder_for_ProductInformation = function (value: ProductInformation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_Provider, $.BER)(value.provider, $.BER),

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MRTDBTRVersion, MRTDBTRVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_MRTDBTRVersion, _encode_MRTDBTRVersion } from "../MachineReadableBiometricTestingAndReportingTestReport/MRTDBTRVersion.ta.mjs";
+import { MRTDBTRVersion, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_MRTDBTRVersion, _encode_MRTDBTRVersion } from "../MachineReadableBiometricTestingAndReportingTestReport/MRTDBTRVersion.ta.mjs";
 // export { MRTDBTRVersion, MRTDBTRVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_MRTDBTRVersion, _encode_MRTDBTRVersion } from "../MachineReadableBiometricTestingAndReportingTestReport/MRTDBTRVersion.ta.mjs";
 import { ProductInformation, _decode_ProductInformation, _encode_ProductInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/ProductInformation.ta.mjs";
 // export { ProductInformation, _decode_ProductInformation, _encode_ProductInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/ProductInformation.ta.mjs";
@@ -237,7 +182,7 @@ let _cached_encoder_for_TestReportScenario: $.ASN1Encoder<TestReportScenario> | 
  */
 export
 function _encode_TestReportScenario (value: TestReportScenario, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TestReportScenario) { _cached_encoder_for_TestReportScenario = function (value: TestReportScenario, elGetter: $.ASN1Encoder<TestReportScenario>): _Element {
+    if (!_cached_encoder_for_TestReportScenario) { _cached_encoder_for_TestReportScenario = function (value: TestReportScenario): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.version === undefined || $.deepEq(value.version, TestReportScenario._default_value_for_version) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_MRTDBTRVersion, $.BER)(value.version, $.BER)),
