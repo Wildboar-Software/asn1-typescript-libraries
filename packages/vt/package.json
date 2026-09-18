@@ -1,21 +1,41 @@
 {
-  "name": "@wildboar/vt",
-  "version": "0.0.1",
-  "private": true,
-  "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "development": "./src/index.ts",
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
+    "name": "@wildboar/vt",
+    "type": "module",
+    "version": "1.0.0",
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
+    "dependencies": {
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
+    },
+    "exports": {
+        ".": "./src/index.mts",
+        "./CDS": "./src/lib/modules/CDS/index.mts",
+        "./CSS": "./src/lib/modules/CSS/index.mts",
+        "./DEV": "./src/lib/modules/DEV/index.mts",
+        "./G": "./src/lib/modules/G/index.mts",
+        "./IS09041-VT": "./src/lib/modules/IS09041-VT/index.mts",
+        "./ISO9041-VTP": "./src/lib/modules/ISO9041-VTP/index.mts"
     }
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  }
 }
