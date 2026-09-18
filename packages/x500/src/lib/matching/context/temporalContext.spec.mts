@@ -153,7 +153,8 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeAssertion(assertion, DER),
             _encode_TimeSpecification(negatedValue, DER),
         );
-        expect(matches).toBe(false);
+        // Assertion straddles S and ¬S, so it overlaps the complement.
+        expect(matches).toBe(true);
 
         const entirelyAssertion: TimeAssertion = {
             between: new TimeAssertion_between(
@@ -178,7 +179,8 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeAssertion(entirelyAssertion, DER),
             _encode_TimeSpecification(entirelyValue, DER),
         );
-        expect(matches).toBe(true);
+        // A straddling band is not entirely inside ¬S.
+        expect(matches).toBe(false);
     });
 
     it("matches a between assertion against a periodic temporal context", () => {
@@ -215,7 +217,8 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeAssertion(assertion, DER),
             _encode_TimeSpecification(negatedValue, DER),
         );
-        expect(matches).toBe(false);
+        // Assertion straddles S and ¬S, so it overlaps the complement.
+        expect(matches).toBe(true);
 
         const entirelyAssertion: TimeAssertion = {
             between: new TimeAssertion_between(
@@ -240,7 +243,8 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeAssertion(entirelyAssertion, DER),
             _encode_TimeSpecification(entirelyValue, DER),
         );
-        expect(matches).toBe(true);
+        // A straddling band is not entirely inside ¬S.
+        expect(matches).toBe(false);
     });
 
     // I live in Florida, in the United States, which is UTC-04:00.
@@ -278,7 +282,8 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeAssertion(assertion, DER),
             _encode_TimeSpecification(negatedValue, DER),
         );
-        expect(matches).toBe(false);
+        // Assertion straddles S and ¬S, so it overlaps the complement.
+        expect(matches).toBe(true);
 
         const entirelyAssertion: TimeAssertion = {
             between: new TimeAssertion_between(
@@ -298,12 +303,14 @@ describe("evaluateTemporalContext", () => {
         const entirelyValue = new TimeSpecification(
             value.time,
             TRUE,
+            value.timeZone,
         );
         matches = evaluateTemporalContext(
             _encode_TimeAssertion(entirelyAssertion, DER),
             _encode_TimeSpecification(entirelyValue, DER),
         );
-        expect(matches).toBe(true);
+        // A straddling band is not entirely inside ¬S.
+        expect(matches).toBe(false);
     });
 
     it("matches an at-assertion after an open-ended absolute startTime", () => {
