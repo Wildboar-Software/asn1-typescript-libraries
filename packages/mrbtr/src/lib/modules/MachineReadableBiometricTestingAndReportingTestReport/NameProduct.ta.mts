@@ -151,7 +151,7 @@ function _decode_NameProduct (el: _Element): NameProduct {
     let softwareVersion!: VersionProduct;
     let firmwareVersion!: VersionProduct;
     const callbacks: $.DecodingMap = {
-        "modelName": (_el: _Element): void => { modelName = _decode_Name(_el); },
+        "modelName": (_el: _Element): void => { modelName = $._decode_explicit<Name>(() => _decode_Name)(_el); },
         "productCBEFF": (_el: _Element): void => { productCBEFF = _decode_Product(_el); },
         "version": (_el: _Element): void => { version = _decode_VersionProduct(_el); },
         "softwareVersion": (_el: _Element): void => { softwareVersion = _decode_VersionProduct(_el); },
@@ -188,7 +188,7 @@ function _encode_NameProduct (value: NameProduct, elGetter: $.ASN1Encoder<any>):
     if (!_cached_encoder_for_NameProduct) { _cached_encoder_for_NameProduct = function (value: NameProduct): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_Name, $.BER)(value.modelName, $.BER),
+            /* REQUIRED  */ $._encode_explicit(_TagClass.context, 0, () => _encode_Name, $.BER)(value.modelName, $.BER),
             /* IF_ABSENT */ ((value.productCBEFF === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_Product, $.BER)(value.productCBEFF, $.BER)),
             /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => _encode_VersionProduct, $.BER)(value.version, $.BER),
             /* REQUIRED  */ $._encode_implicit(_TagClass.context, 3, () => _encode_VersionProduct, $.BER)(value.softwareVersion, $.BER),
