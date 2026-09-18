@@ -218,7 +218,6 @@ const AssistanceMode_video_only: AssistanceMode = AssistanceMode.video_only; /* 
 export
 const video_only: AssistanceMode = AssistanceMode.video_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AssistanceMode: $.ASN1Decoder<AssistanceMode> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AssistanceMode
@@ -226,13 +225,8 @@ let _cached_decoder_for_AssistanceMode: $.ASN1Decoder<AssistanceMode> | null = n
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AssistanceMode (el: _Element): AssistanceMode {
-    if (!_cached_decoder_for_AssistanceMode) { _cached_decoder_for_AssistanceMode = $._decodeEnumerated; }
-    return _cached_decoder_for_AssistanceMode(el);
-}
+export const _decode_AssistanceMode = $._decodeEnumerated;
 
-let _cached_encoder_for_AssistanceMode: $.ASN1Encoder<AssistanceMode> | null = null;
 
 /**
  * @summary Encodes a(n) AssistanceMode into an ASN.1 Element.
@@ -241,11 +235,7 @@ let _cached_encoder_for_AssistanceMode: $.ASN1Encoder<AssistanceMode> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AssistanceMode, encoded as an ASN.1 Element.
  */
-export
-function _encode_AssistanceMode (value: AssistanceMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AssistanceMode) { _cached_encoder_for_AssistanceMode = $._encodeEnumerated; }
-    return _cached_encoder_for_AssistanceMode(value, elGetter);
-}
+export const _encode_AssistanceMode = $._encodeEnumerated;
 
 
 /* eslint-enable */

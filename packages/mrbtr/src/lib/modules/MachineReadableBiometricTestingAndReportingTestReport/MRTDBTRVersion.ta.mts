@@ -98,7 +98,6 @@ const MRTDBTRVersion_v0: MRTDBTRVersion = 0; /* LONG_NAMED_INTEGER_VALUE */
 export
 const v0: MRTDBTRVersion = MRTDBTRVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
 
-let _cached_decoder_for_MRTDBTRVersion: $.ASN1Decoder<MRTDBTRVersion> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) MRTDBTRVersion
@@ -106,13 +105,8 @@ let _cached_decoder_for_MRTDBTRVersion: $.ASN1Decoder<MRTDBTRVersion> | null = n
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MRTDBTRVersion (el: _Element): MRTDBTRVersion {
-    if (!_cached_decoder_for_MRTDBTRVersion) { _cached_decoder_for_MRTDBTRVersion = $._decodeInteger; }
-    return _cached_decoder_for_MRTDBTRVersion(el);
-}
+export const _decode_MRTDBTRVersion = $._decodeInteger;
 
-let _cached_encoder_for_MRTDBTRVersion: $.ASN1Encoder<MRTDBTRVersion> | null = null;
 
 /**
  * @summary Encodes a(n) MRTDBTRVersion into an ASN.1 Element.
@@ -121,11 +115,7 @@ let _cached_encoder_for_MRTDBTRVersion: $.ASN1Encoder<MRTDBTRVersion> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MRTDBTRVersion, encoded as an ASN.1 Element.
  */
-export
-function _encode_MRTDBTRVersion (value: MRTDBTRVersion, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MRTDBTRVersion) { _cached_encoder_for_MRTDBTRVersion = $._encodeInteger; }
-    return _cached_encoder_for_MRTDBTRVersion(value, elGetter);
-}
+export const _encode_MRTDBTRVersion = $._encodeInteger;
 
 
 /* eslint-enable */

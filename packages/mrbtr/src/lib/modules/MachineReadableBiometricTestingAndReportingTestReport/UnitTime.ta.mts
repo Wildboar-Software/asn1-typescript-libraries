@@ -158,7 +158,6 @@ const UnitTime_second: UnitTime = UnitTime.second; /* LONG_NAMED_ENUMERATED_VALU
 export
 const second: UnitTime = UnitTime.second; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_UnitTime: $.ASN1Decoder<UnitTime> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) UnitTime
@@ -166,13 +165,8 @@ let _cached_decoder_for_UnitTime: $.ASN1Decoder<UnitTime> | null = null;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UnitTime (el: _Element): UnitTime {
-    if (!_cached_decoder_for_UnitTime) { _cached_decoder_for_UnitTime = $._decodeEnumerated; }
-    return _cached_decoder_for_UnitTime(el);
-}
+export const _decode_UnitTime = $._decodeEnumerated;
 
-let _cached_encoder_for_UnitTime: $.ASN1Encoder<UnitTime> | null = null;
 
 /**
  * @summary Encodes a(n) UnitTime into an ASN.1 Element.
@@ -181,11 +175,7 @@ let _cached_encoder_for_UnitTime: $.ASN1Encoder<UnitTime> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnitTime, encoded as an ASN.1 Element.
  */
-export
-function _encode_UnitTime (value: UnitTime, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UnitTime) { _cached_encoder_for_UnitTime = $._encodeEnumerated; }
-    return _cached_encoder_for_UnitTime(value, elGetter);
-}
+export const _encode_UnitTime = $._encodeEnumerated;
 
 
 /* eslint-enable */

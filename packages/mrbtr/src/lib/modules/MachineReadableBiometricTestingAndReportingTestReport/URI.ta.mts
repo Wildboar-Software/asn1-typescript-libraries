@@ -82,7 +82,6 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type URI = VisibleString; // VisibleString
 
-let _cached_decoder_for_URI: $.ASN1Decoder<URI> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) URI
@@ -90,13 +89,8 @@ let _cached_decoder_for_URI: $.ASN1Decoder<URI> | null = null;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_URI (el: _Element): URI {
-    if (!_cached_decoder_for_URI) { _cached_decoder_for_URI = $._decodeVisibleString; }
-    return _cached_decoder_for_URI(el);
-}
+export const _decode_URI = $._decodeVisibleString;
 
-let _cached_encoder_for_URI: $.ASN1Encoder<URI> | null = null;
 
 /**
  * @summary Encodes a(n) URI into an ASN.1 Element.
@@ -105,11 +99,7 @@ let _cached_encoder_for_URI: $.ASN1Encoder<URI> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The URI, encoded as an ASN.1 Element.
  */
-export
-function _encode_URI (value: URI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_URI) { _cached_encoder_for_URI = $._encodeVisibleString; }
-    return _cached_encoder_for_URI(value, elGetter);
-}
+export const _encode_URI = $._encodeVisibleString;
 
 
 /* eslint-enable */

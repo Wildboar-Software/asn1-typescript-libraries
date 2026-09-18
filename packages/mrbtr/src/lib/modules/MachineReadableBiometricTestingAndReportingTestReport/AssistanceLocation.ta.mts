@@ -178,7 +178,6 @@ const AssistanceLocation_after_failure: AssistanceLocation = AssistanceLocation.
 export
 const after_failure: AssistanceLocation = AssistanceLocation.after_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AssistanceLocation: $.ASN1Decoder<AssistanceLocation> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AssistanceLocation
@@ -186,13 +185,8 @@ let _cached_decoder_for_AssistanceLocation: $.ASN1Decoder<AssistanceLocation> | 
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AssistanceLocation (el: _Element): AssistanceLocation {
-    if (!_cached_decoder_for_AssistanceLocation) { _cached_decoder_for_AssistanceLocation = $._decodeEnumerated; }
-    return _cached_decoder_for_AssistanceLocation(el);
-}
+export const _decode_AssistanceLocation = $._decodeEnumerated;
 
-let _cached_encoder_for_AssistanceLocation: $.ASN1Encoder<AssistanceLocation> | null = null;
 
 /**
  * @summary Encodes a(n) AssistanceLocation into an ASN.1 Element.
@@ -201,11 +195,7 @@ let _cached_encoder_for_AssistanceLocation: $.ASN1Encoder<AssistanceLocation> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AssistanceLocation, encoded as an ASN.1 Element.
  */
-export
-function _encode_AssistanceLocation (value: AssistanceLocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AssistanceLocation) { _cached_encoder_for_AssistanceLocation = $._encodeEnumerated; }
-    return _cached_encoder_for_AssistanceLocation(value, elGetter);
-}
+export const _encode_AssistanceLocation = $._encodeEnumerated;
 
 
 /* eslint-enable */

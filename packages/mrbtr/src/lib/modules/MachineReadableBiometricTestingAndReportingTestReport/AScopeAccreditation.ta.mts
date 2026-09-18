@@ -162,7 +162,6 @@ const AScopeAccreditation_iso_iec30107_4: AScopeAccreditation = 4; /* LONG_NAMED
 export
 const iso_iec30107_4: AScopeAccreditation = AScopeAccreditation_iso_iec30107_4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AScopeAccreditation: $.ASN1Decoder<AScopeAccreditation> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AScopeAccreditation
@@ -170,13 +169,8 @@ let _cached_decoder_for_AScopeAccreditation: $.ASN1Decoder<AScopeAccreditation> 
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AScopeAccreditation (el: _Element): AScopeAccreditation {
-    if (!_cached_decoder_for_AScopeAccreditation) { _cached_decoder_for_AScopeAccreditation = $._decodeEnumerated; }
-    return _cached_decoder_for_AScopeAccreditation(el);
-}
+export const _decode_AScopeAccreditation = $._decodeEnumerated;
 
-let _cached_encoder_for_AScopeAccreditation: $.ASN1Encoder<AScopeAccreditation> | null = null;
 
 /**
  * @summary Encodes a(n) AScopeAccreditation into an ASN.1 Element.
@@ -185,11 +179,7 @@ let _cached_encoder_for_AScopeAccreditation: $.ASN1Encoder<AScopeAccreditation> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AScopeAccreditation, encoded as an ASN.1 Element.
  */
-export
-function _encode_AScopeAccreditation (value: AScopeAccreditation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AScopeAccreditation) { _cached_encoder_for_AScopeAccreditation = $._encodeEnumerated; }
-    return _cached_encoder_for_AScopeAccreditation(value, elGetter);
-}
+export const _encode_AScopeAccreditation = $._encodeEnumerated;
 
 
 /* eslint-enable */

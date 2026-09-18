@@ -98,7 +98,6 @@ const VersionProduct_v0: VersionProduct = 0; /* LONG_NAMED_INTEGER_VALUE */
 export
 const v0: VersionProduct = VersionProduct_v0; /* SHORT_NAMED_INTEGER_VALUE */
 
-let _cached_decoder_for_VersionProduct: $.ASN1Decoder<VersionProduct> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) VersionProduct
@@ -106,13 +105,8 @@ let _cached_decoder_for_VersionProduct: $.ASN1Decoder<VersionProduct> | null = n
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_VersionProduct (el: _Element): VersionProduct {
-    if (!_cached_decoder_for_VersionProduct) { _cached_decoder_for_VersionProduct = $._decodeInteger; }
-    return _cached_decoder_for_VersionProduct(el);
-}
+export const _decode_VersionProduct = $._decodeInteger;
 
-let _cached_encoder_for_VersionProduct: $.ASN1Encoder<VersionProduct> | null = null;
 
 /**
  * @summary Encodes a(n) VersionProduct into an ASN.1 Element.
@@ -121,11 +115,7 @@ let _cached_encoder_for_VersionProduct: $.ASN1Encoder<VersionProduct> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The VersionProduct, encoded as an ASN.1 Element.
  */
-export
-function _encode_VersionProduct (value: VersionProduct, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_VersionProduct) { _cached_encoder_for_VersionProduct = $._encodeInteger; }
-    return _cached_encoder_for_VersionProduct(value, elGetter);
-}
+export const _encode_VersionProduct = $._encodeInteger;
 
 
 /* eslint-enable */

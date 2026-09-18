@@ -218,7 +218,6 @@ const TypeProvider_government: TypeProvider = TypeProvider.government; /* LONG_N
 export
 const government: TypeProvider = TypeProvider.government; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TypeProvider: $.ASN1Decoder<TypeProvider> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) TypeProvider
@@ -226,13 +225,8 @@ let _cached_decoder_for_TypeProvider: $.ASN1Decoder<TypeProvider> | null = null;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TypeProvider (el: _Element): TypeProvider {
-    if (!_cached_decoder_for_TypeProvider) { _cached_decoder_for_TypeProvider = $._decodeEnumerated; }
-    return _cached_decoder_for_TypeProvider(el);
-}
+export const _decode_TypeProvider = $._decodeEnumerated;
 
-let _cached_encoder_for_TypeProvider: $.ASN1Encoder<TypeProvider> | null = null;
 
 /**
  * @summary Encodes a(n) TypeProvider into an ASN.1 Element.
@@ -241,11 +235,7 @@ let _cached_encoder_for_TypeProvider: $.ASN1Encoder<TypeProvider> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TypeProvider, encoded as an ASN.1 Element.
  */
-export
-function _encode_TypeProvider (value: TypeProvider, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TypeProvider) { _cached_encoder_for_TypeProvider = $._encodeEnumerated; }
-    return _cached_encoder_for_TypeProvider(value, elGetter);
-}
+export const _encode_TypeProvider = $._encodeEnumerated;
 
 
 /* eslint-enable */

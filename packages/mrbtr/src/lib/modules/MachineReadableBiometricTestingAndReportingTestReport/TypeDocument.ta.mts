@@ -258,7 +258,6 @@ const TypeDocument_collection: TypeDocument = TypeDocument.collection; /* LONG_N
 export
 const collection: TypeDocument = TypeDocument.collection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TypeDocument: $.ASN1Decoder<TypeDocument> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) TypeDocument
@@ -266,13 +265,8 @@ let _cached_decoder_for_TypeDocument: $.ASN1Decoder<TypeDocument> | null = null;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TypeDocument (el: _Element): TypeDocument {
-    if (!_cached_decoder_for_TypeDocument) { _cached_decoder_for_TypeDocument = $._decodeEnumerated; }
-    return _cached_decoder_for_TypeDocument(el);
-}
+export const _decode_TypeDocument = $._decodeEnumerated;
 
-let _cached_encoder_for_TypeDocument: $.ASN1Encoder<TypeDocument> | null = null;
 
 /**
  * @summary Encodes a(n) TypeDocument into an ASN.1 Element.
@@ -281,11 +275,7 @@ let _cached_encoder_for_TypeDocument: $.ASN1Encoder<TypeDocument> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TypeDocument, encoded as an ASN.1 Element.
  */
-export
-function _encode_TypeDocument (value: TypeDocument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TypeDocument) { _cached_encoder_for_TypeDocument = $._encodeEnumerated; }
-    return _cached_encoder_for_TypeDocument(value, elGetter);
-}
+export const _encode_TypeDocument = $._encodeEnumerated;
 
 
 /* eslint-enable */

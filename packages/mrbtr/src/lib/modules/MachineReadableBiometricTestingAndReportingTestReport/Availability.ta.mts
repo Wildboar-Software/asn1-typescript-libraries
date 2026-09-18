@@ -198,7 +198,6 @@ const Availability_superseded: Availability = Availability.superseded; /* LONG_N
 export
 const superseded: Availability = Availability.superseded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_Availability: $.ASN1Decoder<Availability> | null = null;
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Availability
@@ -206,13 +205,8 @@ let _cached_decoder_for_Availability: $.ASN1Decoder<Availability> | null = null;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Availability (el: _Element): Availability {
-    if (!_cached_decoder_for_Availability) { _cached_decoder_for_Availability = $._decodeEnumerated; }
-    return _cached_decoder_for_Availability(el);
-}
+export const _decode_Availability = $._decodeEnumerated;
 
-let _cached_encoder_for_Availability: $.ASN1Encoder<Availability> | null = null;
 
 /**
  * @summary Encodes a(n) Availability into an ASN.1 Element.
@@ -221,11 +215,7 @@ let _cached_encoder_for_Availability: $.ASN1Encoder<Availability> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Availability, encoded as an ASN.1 Element.
  */
-export
-function _encode_Availability (value: Availability, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Availability) { _cached_encoder_for_Availability = $._encodeEnumerated; }
-    return _cached_encoder_for_Availability(value, elGetter);
-}
+export const _encode_Availability = $._encodeEnumerated;
 
 
 /* eslint-enable */
