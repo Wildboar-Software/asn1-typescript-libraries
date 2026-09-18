@@ -49,6 +49,7 @@ jobs:
           # - "m3100"
           - "map"
           - "mms"
+          - "mrbtr"
           - "nlm"
           - "ocsp"
           - "or-address"
