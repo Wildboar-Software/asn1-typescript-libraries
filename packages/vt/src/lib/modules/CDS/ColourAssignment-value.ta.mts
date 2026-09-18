@@ -44,7 +44,7 @@ export
 function _decode_ColourAssignment_value (el: _Element): ColourAssignment_value {
     if (!_cached_decoder_for_ColourAssignment_value) { _cached_decoder_for_ColourAssignment_value = $._decode_inextensible_choice<ColourAssignment_value>({
     "CONTEXT 1": [ "iso6429", $._decode_implicit<PrintableString>(() => $._decodePrintableString) ],
-    "CONTEXT 2": [ "isonnnn", $._decode_implicit<_Element>(() => $._decodeAny) ]
+    "CONTEXT 2": [ "isonnnn", $._decode_explicit<_Element>(() => $._decodeAny) ]
 }); }
     return _cached_decoder_for_ColourAssignment_value(el);
 }
@@ -62,7 +62,7 @@ export
 function _encode_ColourAssignment_value (value: ColourAssignment_value, elGetter: $.ASN1Encoder<any>): _Element {
     if (!_cached_encoder_for_ColourAssignment_value) { _cached_encoder_for_ColourAssignment_value = $._encode_choice<ColourAssignment_value>({
     "iso6429": $._encode_implicit(_TagClass.context, 1, () => $._encodePrintableString, $.BER),
-    "isonnnn": $._encode_implicit(_TagClass.context, 2, () => $._encodeAny, $.BER),
+    "isonnnn": $._encode_explicit(_TagClass.context, 2, () => $._encodeAny, $.BER),
 }, $.BER); }
     return _cached_encoder_for_ColourAssignment_value(value, elGetter);
 }
