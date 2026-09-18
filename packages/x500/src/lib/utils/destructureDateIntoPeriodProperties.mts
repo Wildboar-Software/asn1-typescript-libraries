@@ -17,7 +17,7 @@ interface DateDestructuredIntoPeriodMembers {
     week: number,
     day: number,
     /**
-     * Real last X.520 week of the owning month (4–5) or ISO year (52–53).
+     * Real last X.520 week of the owning month (4–5) or year (52–53).
      * 0 when `weeks` is not used. Needed so week 5/53 can alias that last
      * week during matching.
      */
@@ -30,8 +30,7 @@ interface DateDestructuredIntoPeriodMembers {
  *
  * When `weeks` is present (and `dayOf` is not), week numbers follow X.520
  * clause 10.2 (first week has ≥4 days of the month or year; week 5/53 means
- * the last week). See `x520PeriodCalendar.mts` for why those weeks are
- * Monday–Sunday (ISO) weeks.
+ * the last week). See `x520PeriodCalendar.mts` for Sunday–Saturday weeks.
  *
  * Year and month are those that **own** the week, not necessarily
  * `point.getFullYear()` / `getMonth()`. 1 Jan 2021 is December 2020’s last
@@ -57,7 +56,7 @@ function destructureDateIntoPeriodProperties (period: Period, point: Date): Date
     })();
 
     // Weeks of the month: owning month can differ from the calendar month of
-    // `point` (Thursday rule). lastWeek lets week 5 mean “last week”.
+    // `point` (Wednesday / ≥4-day rule). lastWeek lets week 5 mean “last week”.
     if (!usesDayOf && period.weeks && period.months) {
         const ofMonth = x520WeekOfMonth(point);
         return {
@@ -69,8 +68,8 @@ function destructureDateIntoPeriodProperties (period: Period, point: Date): Date
         };
     }
 
-    // Weeks of the year: ISO week-year, not calendar year (1 Jan 2021 is
-    // ISO week 53 of 2020). Calendar month is still reported for any
+    // Weeks of the year: week-numbering year, not calendar year (1 Jan 2021
+    // is the last week of 2020). Calendar month is still reported for any
     // months constraint that might appear without going through the
     // week-of-month branch above.
     if (!usesDayOf && period.weeks) {

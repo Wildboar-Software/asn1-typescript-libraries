@@ -130,14 +130,14 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(0);
-        expect(s.getDate()).toBe(4);
+        expect(s.getDate()).toBe(3);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2016);
         expect(e.getMonth()).toBe(0);
-        expect(e.getDate()).toBe(17);
+        expect(e.getDate()).toBe(16);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -161,14 +161,14 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(3);
-        expect(s.getDate()).toBe(11);
+        expect(s.getDate()).toBe(10);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2016);
         expect(e.getMonth()).toBe(3);
-        expect(e.getDate()).toBe(24);
+        expect(e.getDate()).toBe(23);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -310,14 +310,14 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(0);
-        expect(s.getDate()).toBe(11);
+        expect(s.getDate()).toBe(10);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2016);
         expect(e.getMonth()).toBe(0);
-        expect(e.getDate()).toBe(17);
+        expect(e.getDate()).toBe(16);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -399,14 +399,14 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
         expect(s.getMonth()).toBe(5);
-        expect(s.getDate()).toBe(6);
+        expect(s.getDate()).toBe(5);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2016);
         expect(e.getMonth()).toBe(5);
-        expect(e.getDate()).toBe(19);
+        expect(e.getDate()).toBe(18);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -906,15 +906,15 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(r).not.toBeNull();
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2016);
-        expect(s.getMonth()).toBe(1);
-        expect(s.getDate()).toBe(1);
+        expect(s.getMonth()).toBe(0);
+        expect(s.getDate()).toBe(31);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2016);
         expect(e.getMonth()).toBe(1);
-        expect(e.getDate()).toBe(14);
+        expect(e.getDate()).toBe(13);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -1174,14 +1174,14 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(3);
-        expect(s.getDate()).toBe(26);
+        expect(s.getDate()).toBe(25);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2021);
         expect(e.getMonth()).toBe(4);
-        expect(e.getDate()).toBe(16);
+        expect(e.getDate()).toBe(15);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -1205,14 +1205,14 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(3);
-        expect(s.getDate()).toBe(19);
+        expect(s.getDate()).toBe(25);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2021);
         expect(e.getMonth()).toBe(4);
-        expect(e.getDate()).toBe(16);
+        expect(e.getDate()).toBe(15);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -1234,14 +1234,14 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2020);
         expect(s.getMonth()).toBe(11);
-        expect(s.getDate()).toBe(28);
+        expect(s.getDate()).toBe(27);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2021);
         expect(e.getMonth()).toBe(0);
-        expect(e.getDate()).toBe(10);
+        expect(e.getDate()).toBe(9);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -1294,14 +1294,14 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
-        expect(s.getDate()).toBe(3);
+        expect(s.getDate()).toBe(2);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2021);
         expect(e.getMonth()).toBe(4);
-        expect(e.getDate()).toBe(16);
+        expect(e.getDate()).toBe(15);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -1309,6 +1309,8 @@ describe("boundariesOfPeriodOccurrence()", () => {
 
     it("rolls back to the beginning of a span of weeks that does NOT partially "
         + "because the fifth week is disabled", () => {
+        // March 2021 has five X.520 weeks; April’s week 1 does not join March
+        // week 5 when 5 is omitted (week 4 of March is a different week).
         const p = new Period(
             undefined,
             undefined,
@@ -1316,24 +1318,24 @@ describe("boundariesOfPeriodOccurrence()", () => {
                 intWeek: [ 1, 2, 4 ],
             },
             {
-                intMonth: [ 4, 5 ],
+                intMonth: [ 3, 4 ],
             },
             [ 2021 ],
         );
-        const d = new Date(2021, 4, 10, 12, 34, 56);
+        const d = new Date(2021, 3, 12, 12, 34, 56);
         const r = boundariesOfPeriodOccurrence(p, d);
         expect(r).not.toBeNull();
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
-        expect(s.getMonth()).toBe(4);
-        expect(s.getDate()).toBe(3);
+        expect(s.getMonth()).toBe(3);
+        expect(s.getDate()).toBe(4);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2021);
-        expect(e.getMonth()).toBe(4);
-        expect(e.getDate()).toBe(16);
+        expect(e.getMonth()).toBe(3);
+        expect(e.getDate()).toBe(17);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -1355,14 +1357,14 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(0);
-        expect(s.getDate()).toBe(4);
+        expect(s.getDate()).toBe(3);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2021);
         expect(e.getMonth()).toBe(0);
-        expect(e.getDate()).toBe(17);
+        expect(e.getDate()).toBe(16);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -1448,7 +1450,7 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(4);
-        expect(s.getDate()).toBe(10);
+        expect(s.getDate()).toBe(9);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
@@ -1780,14 +1782,14 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(0);
-        expect(s.getDate()).toBe(25);
+        expect(s.getDate()).toBe(24);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2021);
         expect(e.getMonth()).toBe(1);
-        expect(e.getDate()).toBe(7);
+        expect(e.getDate()).toBe(6);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -1809,14 +1811,14 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(11);
-        expect(s.getDate()).toBe(27);
+        expect(s.getDate()).toBe(26);
         expect(s.getHours()).toBe(0);
         expect(s.getMinutes()).toBe(0);
         expect(s.getSeconds()).toBe(0);
 
         expect(e.getFullYear()).toBe(2022);
         expect(e.getMonth()).toBe(0);
-        expect(e.getDate()).toBe(16);
+        expect(e.getDate()).toBe(15);
         expect(e.getHours()).toBe(23);
         expect(e.getMinutes()).toBe(59);
         expect(e.getSeconds()).toBe(59);
@@ -1970,9 +1972,9 @@ describe("boundariesOfPeriodOccurrence()", () => {
         expect(e.getDate()).toBe(1);
     });
 
-    // Fri 1 Jan 2021 is in Mon 28 Dec 2020 – Sun 3 Jan 2021 (3 January days).
-    // Week 1 of January 2021 is Mon 4 – Sun 10 (the week containing the 4th).
-    it("does not treat 1 January as week 1 of January when that ISO week has fewer than four January days", () => {
+    // Fri 1 Jan 2021 is in Sun 27 Dec 2020 – Sat 2 Jan 2021 (2 January days).
+    // Week 1 of January 2021 is Sun 3 – Sat 9 (the week containing the 4th).
+    it("does not treat 1 January as week 1 of January when that week has fewer than four January days", () => {
         const p = new Period(
             undefined,
             undefined,
@@ -1990,13 +1992,14 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(0);
-        expect(s.getDate()).toBe(4);
+        expect(s.getDate()).toBe(3);
         expect(e.getFullYear()).toBe(2021);
         expect(e.getMonth()).toBe(0);
-        expect(e.getDate()).toBe(10);
+        expect(e.getDate()).toBe(9);
     });
 
-    // Feb 2021 has four X.520 weeks; last is Mon 22 – Sun 28. Week 5 aliases it.
+    // Feb 2021 has four X.520 weeks; last is Sun 21 – Sat 27. Week 5 aliases it.
+    // 28 Feb 2021 is Sunday of a week with only one February day (March).
     it("treats week 5 of February as the last week even when February has only four X.520 weeks", () => {
         const p = new Period(
             undefined,
@@ -2009,20 +2012,21 @@ describe("boundariesOfPeriodOccurrence()", () => {
             },
             [ 2021 ],
         );
-        const r = boundariesOfPeriodOccurrence(p, new Date(2021, 1, 28, 12));
+        const r = boundariesOfPeriodOccurrence(p, new Date(2021, 1, 27, 12));
         expect(r).not.toBeNull();
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(1);
-        expect(s.getDate()).toBe(22);
+        expect(s.getDate()).toBe(21);
         expect(e.getFullYear()).toBe(2021);
         expect(e.getMonth()).toBe(1);
-        expect(e.getDate()).toBe(28);
+        expect(e.getDate()).toBe(27);
         expect(boundariesOfPeriodOccurrence(p, new Date(2021, 1, 15, 12))).toBeNull();
+        expect(boundariesOfPeriodOccurrence(p, new Date(2021, 1, 28, 12))).toBeNull();
     });
 
-    // 2021 has 52 ISO weeks; last is Mon 27 Dec 2021 – Sun 2 Jan 2022. 53 aliases 52.
-    it("treats week 53 as the last ISO week of a 52-week year", () => {
+    // 2021 last X.520 week is Sun 26 Dec 2021 – Sat 1 Jan 2022. 53 aliases it.
+    it("treats week 53 as the last week of a year that has only 52 such weeks", () => {
         const p = new Period(
             undefined,
             undefined,
@@ -2037,10 +2041,10 @@ describe("boundariesOfPeriodOccurrence()", () => {
         const [ s, e ] = r!;
         expect(s.getFullYear()).toBe(2021);
         expect(s.getMonth()).toBe(11);
-        expect(s.getDate()).toBe(27);
+        expect(s.getDate()).toBe(26);
         expect(e.getFullYear()).toBe(2022);
         expect(e.getMonth()).toBe(0);
-        expect(e.getDate()).toBe(2);
+        expect(e.getDate()).toBe(1);
         expect(boundariesOfPeriodOccurrence(p, new Date(2021, 11, 20, 12))).toBeNull();
     });
 });

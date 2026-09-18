@@ -1,74 +1,85 @@
 /**
  * @file X.520 `Period` week numbering (clause 10.2).
  *
- * X.520 never says “ISO 8601 week”. It does give the same two rules ISO uses
- * to number weeks:
+ * X.520 (10/2019) p. 68–69 does **not** mention ISO 8601, Monday, or a
+ * week that starts on 1 January. It says:
  *
- * - the **first week** of a month or year is the first week that contains
+ * - the first week of a month or year is the first week that contains
  *   **at least four days** of that month or year;
- * - **week 5** of a month and **week 53** of a year always mean the **last**
- *   such week, even if the month only has four weeks or the year only has 52.
+ * - week **5** of a month and week **53** of a year always mean the
+ *   **last** such week.
  *
- * A “week” is seven consecutive days, so those rules are undefined until you
- * pick which weekday starts the week. ISO 8601 picks **Monday**. This module
- * uses date-fns ISO-week helpers (`startOfISOWeek`, `getISOWeek`, …) for that
- * choice — not because the Recommendation names ISO weeks, but because its
- * 4-day rule **is** the ISO week definition, and ISO weeks start on Monday.
+ * Those rules only make sense if a week is a fixed weekday block that can
+ * start in the previous month or year. (If week 1 always started on the
+ * 1st, it would always contain seven days of that month/year, and the
+ * four-day sentence would do no work.)
  *
- * Why the start day matters — January 2021 (1 Jan was a Friday):
+ * The Recommendation never names the first weekday. This module uses
+ * **Sunday–Saturday**, because the same clause numbers days of the week
+ * with INTEGER 1 = Sunday when `days` precedes `weeks`.
+ *
+ * Why the four-day rule matters — January 2021 (1 Jan was a Friday):
  *
  * ```
- *  December 2020               January 2021
- * Mo Tu We Th Fr Sa Su     Mo Tu We Th Fr Sa Su
- * 28 29 30 31  1  2  3      4  5  6  7  8  9 10
- * |<-- 3 January days -->| |<-- week 1 of Jan -->|
+ *  December 2020              January 2021
+ * Su Mo Tu We Th Fr Sa    Su Mo Tu We Th Fr Sa
+ * 27 28 29 30 31  1  2     3  4  5  6  7  8  9
+ * |<-- 2 January days -->| |<-- week 1 of Jan -->|
  * ```
  *
- * The Monday–Sunday week that contains 1 Jan has only Fri/Sat/Sun of January
- * (3 days), so it is **not** week 1 of January. It belongs to December 2020
- * (that week has four December days). Week 1 of January is Mon 4 – Sun 10,
- * which is also “the week containing the 4th” — the usual ISO shortcut for
- * “first week with ≥4 days of this month”.
+ * 1–2 Jan sit in a week with only two January days, so they are **not**
+ * week 1 of January; that week belongs to December. Week 1 is the week
+ * that contains the 4th (Sun 3 – Sat 9).
  *
- * A Sunday-start week would give a different week 1 (Sun 3 – Sat 9). Same
- * 4-day rule, different calendar. We do not use Sunday-start weeks.
+ * A split week is owned by the month/year that contains its **Wednesday**
+ * (the 4th day of a Sunday–Saturday week, hence the side with ≥4 days).
  *
- * A split week is owned by the month/year that contains its **Thursday**
- * (the 4th day of a Monday–Sunday week, hence the side with ≥4 days). That
- * is why 1 Jan 2021 reports December 2020, not January week 0.
- *
- * `Period` week **5** / **53** are aliases for that last real week, not a
- * separate bucket. February 2021 has four X.520 weeks; `weeks:{5}` still
- * matches 22–28 Feb.
+ * `Period` week 5 / 53 are aliases for that last real week, not a
+ * separate bucket.
  */
 import {
     addDays,
     differenceInCalendarWeeks,
     endOfMonth,
-    getISOWeek,
-    getISOWeeksInYear,
-    getISOWeekYear,
-    startOfISOWeek,
+    endOfWeek,
+    endOfYear,
+    startOfWeek,
     subWeeks,
 } from "date-fns";
 
-/** date-fns: `1` = Monday, matching ISO 8601 / X.520 week boundaries. */
-const ISO_WEEK_STARTS_ON_MONDAY = { weekStartsOn: 1 as const };
+/**
+ * X.520 clause 10.2 numbers `intDay` Sunday = 1 when `days` precedes
+ * `weeks`. Weeks are therefore Sunday–Saturday. The Recommendation does
+ * not specify this; it is the implementation choice that matches that
+ * day numbering.
+ */
+const WEEK_STARTS_ON_SUNDAY = { weekStartsOn: 0 as const };
 
 /**
- * @summary Count how many days of a Monday–Sunday week fall in a calendar month.
- * @description
- *
- * Used to apply X.520’s “≥4 days of that month” test to a candidate last
- * week. `weekStart` must be a Monday (as `startOfISOWeek` returns).
- *
- * @param {Date} weekStart Monday 00:00 of the week.
+ * @summary Sunday 00:00 of the X.520 week containing `point`.
+ */
+export
+function startOfX520Week (point: Date): Date {
+    return startOfWeek(point, WEEK_STARTS_ON_SUNDAY);
+}
+
+/**
+ * @summary Saturday end-of-day of the X.520 week containing `point`.
+ */
+export
+function endOfX520Week (point: Date): Date {
+    return endOfWeek(point, WEEK_STARTS_ON_SUNDAY);
+}
+
+/**
+ * @summary Count how many days of a Sunday–Saturday week fall in a month.
+ * @param {Date} weekStart Sunday 00:00 of the week.
  * @param {number} year Calendar year of the month.
  * @param {number} month 1-based month.
  * @returns {number} Number of days in `[1, 7]`.
  */
 export
-function countDaysOfMonthInISOWeek (weekStart: Date, year: number, month: number): number {
+function countDaysOfMonthInWeek (weekStart: Date, year: number, month: number): number {
     let count: number = 0;
     for (let i: number = 0; i < 7; i++) {
         const day: Date = addDays(weekStart, i);
@@ -79,32 +90,43 @@ function countDaysOfMonthInISOWeek (weekStart: Date, year: number, month: number
     return count;
 }
 
+function countDaysOfYearInWeek (weekStart: Date, year: number): number {
+    let count: number = 0;
+    for (let i: number = 0; i < 7; i++) {
+        if (addDays(weekStart, i).getFullYear() === year) {
+            count++;
+        }
+    }
+    return count;
+}
+
 /**
- * @summary Monday of the first X.520 week of a calendar month.
+ * @summary Sunday of the first X.520 week of a calendar month.
  * @description
  *
- * X.520 clause 10.2: the first week of a month is the first week that contains
- * at least four days of that month. For Monday-start weeks that is exactly
- * the week that contains the **4th** of the month (ISO’s usual shortcut).
+ * Clause 10.2: first week = first week with at least four days of that
+ * month. For Sunday-start weeks that is the week containing the 4th.
  *
  * @param {number} year Calendar year.
  * @param {number} month 1-based month.
- * @returns {Date} Local Monday 00:00 of week 1 of the month.
+ * @returns {Date} Local Sunday 00:00 of week 1 of the month.
  */
 export
 function startOfFirstX520WeekOfMonth (year: number, month: number): Date {
-    return startOfISOWeek(new Date(year, month - 1, 4));
+    return startOfX520Week(new Date(year, month - 1, 4));
+}
+
+function startOfFirstX520WeekOfYear (year: number): Date {
+    return startOfX520Week(new Date(year, 0, 4));
 }
 
 /**
  * @summary How many X.520 weeks a calendar month has (4 or 5).
  * @description
  *
- * Walk back from the Monday-start week that contains the last day of the
- * month until that week has ≥4 days in the month. The gap from week 1 to
- * that last week is 4 or 5. `Period` week 5 still aliases this last week
- * when the count is only 4 — that alias is applied in `x520WeekIsListed`,
- * not by returning 5 here.
+ * Last week = last Sunday-start week with ≥4 days in the month. `Period`
+ * week 5 still aliases this last week when the count is only 4 — that
+ * alias is applied in `x520WeekIsListed`, not by returning 5 here.
  *
  * @param {number} year Calendar year.
  * @param {number} month 1-based month.
@@ -113,21 +135,27 @@ function startOfFirstX520WeekOfMonth (year: number, month: number): Date {
 export
 function x520WeeksInMonth (year: number, month: number): number {
     const first: Date = startOfFirstX520WeekOfMonth(year, month);
-    // Candidate: the Monday-start week that contains the last calendar day.
-    let lastStart: Date = startOfISOWeek(endOfMonth(new Date(year, month - 1, 1)));
-    // If that week only spills 1–3 days into this month, it belongs to next
-    // month; the previous Monday is the real last week of this month.
-    if (countDaysOfMonthInISOWeek(lastStart, year, month) < 4) {
+    let lastStart: Date = startOfX520Week(endOfMonth(new Date(year, month - 1, 1)));
+    if (countDaysOfMonthInWeek(lastStart, year, month) < 4) {
         lastStart = subWeeks(lastStart, 1);
     }
-    return differenceInCalendarWeeks(lastStart, first, ISO_WEEK_STARTS_ON_MONDAY) + 1;
+    return differenceInCalendarWeeks(lastStart, first, WEEK_STARTS_ON_SUNDAY) + 1;
+}
+
+function x520WeeksInYear (year: number): number {
+    const first: Date = startOfFirstX520WeekOfYear(year);
+    let lastStart: Date = startOfX520Week(endOfYear(new Date(year, 0, 1)));
+    if (countDaysOfYearInWeek(lastStart, year) < 4) {
+        lastStart = subWeeks(lastStart, 1);
+    }
+    return differenceInCalendarWeeks(lastStart, first, WEEK_STARTS_ON_SUNDAY) + 1;
 }
 
 export
 interface X520WeekOfMonth {
-    /** Calendar year of the month that owns this Monday–Sunday week. */
+    /** Calendar year of the month that owns this Sunday–Saturday week. */
     year: number;
-    /** 1-based month that owns this week (Thursday’s month). */
+    /** 1-based month that owns this week (Wednesday’s month). */
     month: number;
     /** 1-based X.520 week of that month (1..lastWeek, never the 5-alias). */
     week: number;
@@ -139,27 +167,28 @@ interface X520WeekOfMonth {
  * @summary X.520 week-of-month for a local instant.
  * @description
  *
- * The week is owned by the month that contains its Thursday (the month with
- * at least four days of that Monday–Sunday week). Days 1–3 of a month that
- * belong to the previous month’s last week therefore report that previous
- * month — so `{ months: January, weeks: 1 }` does not match 1 Jan 2021.
+ * The week is owned by the month that contains its Wednesday (the month
+ * with at least four days of that Sunday–Saturday week). Days 1–3 of a
+ * month that belong to the previous month’s last week therefore report
+ * that previous month — so `{ months: January, weeks: 1 }` does not
+ * match 1 Jan 2021.
  *
  * @param {Date} point Local instant.
  * @returns {X520WeekOfMonth} Owning year/month, 1-based week, and last week number.
  */
 export
 function x520WeekOfMonth (point: Date): X520WeekOfMonth {
-    const weekStart: Date = startOfISOWeek(point);
-    // Thursday = Monday + 3 = the day that puts ≥4 days on this side of
-    // the month boundary (ISO 8601 “week belongs to the year of its Thursday”).
-    const thursday: Date = addDays(weekStart, 3);
-    const year: number = thursday.getFullYear();
-    const month: number = thursday.getMonth() + 1;
+    const weekStart: Date = startOfX520Week(point);
+    // Wednesday = Sunday + 3 = the day that puts ≥4 days on this side of
+    // the month boundary.
+    const wednesday: Date = addDays(weekStart, 3);
+    const year: number = wednesday.getFullYear();
+    const month: number = wednesday.getMonth() + 1;
     const first: Date = startOfFirstX520WeekOfMonth(year, month);
     const week: number = differenceInCalendarWeeks(
         weekStart,
         first,
-        ISO_WEEK_STARTS_ON_MONDAY,
+        WEEK_STARTS_ON_SUNDAY,
     ) + 1;
     return {
         year,
@@ -171,32 +200,41 @@ function x520WeekOfMonth (point: Date): X520WeekOfMonth {
 
 export
 interface X520WeekOfYear {
-    /** ISO week-numbering year (may differ from `point.getFullYear()`). */
+    /** Week-numbering year (may differ from `point.getFullYear()`). */
     year: number;
-    /** ISO week 1..lastWeek (52 or 53). */
+    /** Week 1..lastWeek (52 or 53). */
     week: number;
     /** 52 or 53; `Period` week 53 aliases this when it is 52. */
     lastWeek: number;
 }
 
 /**
- * @summary X.520 week-of-year for a local instant (ISO week date).
+ * @summary X.520 week-of-year for a local instant.
  * @description
  *
- * X.520’s “first week of a year has ≥4 days of that year” is ISO week 1
- * (`getISOWeek`). 1 Jan can fall in week 52/53 of the previous ISO year
- * (`getISOWeekYear`). Week 53 in a `Period` aliases the last ISO week even
- * when that year has only 52 weeks (`x520WeekIsListed`).
+ * Same four-day rule as weeks of the month, applied to the calendar year.
+ * 1 Jan can fall in week 52/53 of the previous year. Week 53 in a
+ * `Period` aliases the last real week even when that year has only 52
+ * weeks (`x520WeekIsListed`).
  *
  * @param {Date} point Local instant.
- * @returns {X520WeekOfYear} ISO week-numbering year, week, and weeks in that year.
+ * @returns {X520WeekOfYear} Week-numbering year, week, and weeks in that year.
  */
 export
 function x520WeekOfYear (point: Date): X520WeekOfYear {
+    const weekStart: Date = startOfX520Week(point);
+    const wednesday: Date = addDays(weekStart, 3);
+    const year: number = wednesday.getFullYear();
+    const first: Date = startOfFirstX520WeekOfYear(year);
+    const week: number = differenceInCalendarWeeks(
+        weekStart,
+        first,
+        WEEK_STARTS_ON_SUNDAY,
+    ) + 1;
     return {
-        year: getISOWeekYear(point),
-        week: getISOWeek(point),
-        lastWeek: getISOWeeksInYear(point),
+        year,
+        week,
+        lastWeek: x520WeeksInYear(year),
     };
 }
 
