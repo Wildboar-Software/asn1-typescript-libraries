@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 
 
@@ -45,7 +45,7 @@ class ParameterOffers_structure {
          * @public
          * @readonly
          */
-        readonly numberElements: OPTIONAL<G.IntegerOffer>
+        readonly numberElements: OPTIONAL<IntegerOffer>
     ) {}
 
     /**
@@ -119,10 +119,10 @@ export
 function _decode_ParameterOffers_structure (el: _Element): ParameterOffers_structure {
     if (!_cached_decoder_for_ParameterOffers_structure) { _cached_decoder_for_ParameterOffers_structure = function (el: _Element): ParameterOffers_structure {
     let nonParametric: OPTIONAL<NULL>;
-    let numberElements: OPTIONAL<G.IntegerOffer>;
+    let numberElements: OPTIONAL<IntegerOffer>;
     const callbacks: $.DecodingMap = {
         "nonParametric": (_el: _Element): void => { nonParametric = $._decodeNull(_el); },
-        "numberElements": (_el: _Element): void => { numberElements = G._decode_IntegerOffer(_el); }
+        "numberElements": (_el: _Element): void => { numberElements = _decode_IntegerOffer(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ParameterOffers_structure,
@@ -153,7 +153,7 @@ function _encode_ParameterOffers_structure (value: ParameterOffers_structure, el
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.nonParametric === undefined) ? undefined : $._encodeNull(value.nonParametric, $.BER)),
-            /* IF_ABSENT  */ ((value.numberElements === undefined) ? undefined : G._encode_IntegerOffer(value.numberElements, $.BER))
+            /* IF_ABSENT  */ ((value.numberElements === undefined) ? undefined : _encode_IntegerOffer(value.numberElements, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

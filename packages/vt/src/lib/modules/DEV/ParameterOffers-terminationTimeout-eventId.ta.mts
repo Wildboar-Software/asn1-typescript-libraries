@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 
 
@@ -39,7 +39,7 @@ class ParameterOffers_terminationTimeout_eventId {
          * @public
          * @readonly
          */
-        readonly integer: OPTIONAL<G.IntegerOffer>,
+        readonly integer: OPTIONAL<IntegerOffer>,
         /**
          * @summary `nul`.
          * @public
@@ -118,10 +118,10 @@ let _cached_decoder_for_ParameterOffers_terminationTimeout_eventId: $.ASN1Decode
 export
 function _decode_ParameterOffers_terminationTimeout_eventId (el: _Element): ParameterOffers_terminationTimeout_eventId {
     if (!_cached_decoder_for_ParameterOffers_terminationTimeout_eventId) { _cached_decoder_for_ParameterOffers_terminationTimeout_eventId = function (el: _Element): ParameterOffers_terminationTimeout_eventId {
-    let integer: OPTIONAL<G.IntegerOffer>;
+    let integer: OPTIONAL<IntegerOffer>;
     let nul: OPTIONAL<NULL>;
     const callbacks: $.DecodingMap = {
-        "integer": (_el: _Element): void => { integer = G._decode_IntegerOffer(_el); },
+        "integer": (_el: _Element): void => { integer = _decode_IntegerOffer(_el); },
         "nul": (_el: _Element): void => { nul = $._decodeNull(_el); }
     };
     $._parse_sequence(el, callbacks,
@@ -152,7 +152,7 @@ function _encode_ParameterOffers_terminationTimeout_eventId (value: ParameterOff
     if (!_cached_encoder_for_ParameterOffers_terminationTimeout_eventId) { _cached_encoder_for_ParameterOffers_terminationTimeout_eventId = function (value: ParameterOffers_terminationTimeout_eventId): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.integer === undefined) ? undefined : G._encode_IntegerOffer(value.integer, $.BER)),
+            /* IF_ABSENT  */ ((value.integer === undefined) ? undefined : _encode_IntegerOffer(value.integer, $.BER)),
             /* IF_ABSENT  */ ((value.nul === undefined) ? undefined : $._encodeNull(value.nul, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

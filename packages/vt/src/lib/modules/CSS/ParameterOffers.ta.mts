@@ -17,11 +17,11 @@ import { AccessRuleOffer, _decode_AccessRuleOffer, _encode_AccessRuleOffer } fro
 // export { AccessRuleOffer, AccessRuleOffer_wavar /* IMPORTED_LONG_NAMED_BIT */, wavar /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waci /* IMPORTED_LONG_NAMED_BIT */, waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waca /* IMPORTED_LONG_NAMED_BIT */, waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_nsac /* IMPORTED_LONG_NAMED_BIT */, nsac /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waci /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waca /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_no_access /* IMPORTED_LONG_NAMED_BIT */, no_access /* IMPORTED_SHORT_NAMED_BIT */, _decode_AccessRuleOffer, _encode_AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
 import { ParameterOffers_trigger, _decode_ParameterOffers_trigger, _encode_ParameterOffers_trigger } from "../CSS/ParameterOffers-trigger.ta.mjs";
 // export { ParameterOffers_trigger, ParameterOffers_trigger_yes /* IMPORTED_LONG_NAMED_BIT */, yes /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_trigger_no /* IMPORTED_LONG_NAMED_BIT */, no /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_trigger, _encode_ParameterOffers_trigger } from "../CSS/ParameterOffers-trigger.ta.mjs";
-import { _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { ParameterOffers_category, _decode_ParameterOffers_category, _encode_ParameterOffers_category } from "../CSS/ParameterOffers-category.ta.mjs";
 // export { ParameterOffers_category, ParameterOffers_category_character /* IMPORTED_LONG_NAMED_BIT */, character /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_boolean /* IMPORTED_LONG_NAMED_BIT */, boolean_ /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_symbolic /* IMPORTED_LONG_NAMED_BIT */, symbolic /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_integer /* IMPORTED_LONG_NAMED_BIT */, integer /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_transparent /* IMPORTED_LONG_NAMED_BIT */, transparent /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_category, _encode_ParameterOffers_category } from "../CSS/ParameterOffers-category.ta.mjs";
-import { _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
+import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 // export { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 import { ParameterOffers_priority, _decode_ParameterOffers_priority, _encode_ParameterOffers_priority } from "../CSS/ParameterOffers-priority.ta.mjs";
 // export { ParameterOffers_priority, ParameterOffers_priority_normal /* IMPORTED_LONG_NAMED_BIT */, normal /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_priority_high /* IMPORTED_LONG_NAMED_BIT */, high /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_priority_urgent /* IMPORTED_LONG_NAMED_BIT */, urgent /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_priority, _encode_ParameterOffers_priority } from "../CSS/ParameterOffers-priority.ta.mjs";
@@ -97,7 +97,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly size: OPTIONAL<G.IntegerOffer>,
+        readonly size: OPTIONAL<IntegerOffer>,
         /**
          * @summary `category`.
          * @public
@@ -109,7 +109,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<CDS.RepertoireAssignment[]>,
+        readonly repertoire: OPTIONAL<RepertoireAssignment[]>,
         /**
          * @summary `priority`.
          * @public
@@ -210,9 +210,9 @@ function _decode_ParameterOffers (el: _Element): ParameterOffers {
     let typeIdentifier!: ParameterOffers_typeIdentifier_Item[];
     let access: OPTIONAL<AccessRuleOffer>;
     let trigger: OPTIONAL<ParameterOffers_trigger>;
-    let size: OPTIONAL<G.IntegerOffer>;
+    let size: OPTIONAL<IntegerOffer>;
     let category: OPTIONAL<ParameterOffers_category>;
-    let repertoire: OPTIONAL<CDS.RepertoireAssignment[]>;
+    let repertoire: OPTIONAL<RepertoireAssignment[]>;
     let priority: OPTIONAL<ParameterOffers_priority>;
     let structure: OPTIONAL<ParameterOffers_structure>;
     let multiElement: OPTIONAL<ElementParamOffer[]>;
@@ -220,9 +220,9 @@ function _decode_ParameterOffers (el: _Element): ParameterOffers {
         "typeIdentifier": (_el: _Element): void => { typeIdentifier = $._decode_implicit<ParameterOffers_typeIdentifier_Item[]>(() => $._decodeSetOf<ParameterOffers_typeIdentifier_Item>(() => _decode_ParameterOffers_typeIdentifier_Item))(_el); },
         "access": (_el: _Element): void => { access = $._decode_implicit<AccessRuleOffer>(() => _decode_AccessRuleOffer)(_el); },
         "trigger": (_el: _Element): void => { trigger = $._decode_implicit<ParameterOffers_trigger>(() => _decode_ParameterOffers_trigger)(_el); },
-        "size": (_el: _Element): void => { size = $._decode_implicit<G.IntegerOffer>(() => G._decode_IntegerOffer)(_el); },
+        "size": (_el: _Element): void => { size = $._decode_implicit<IntegerOffer>(() => _decode_IntegerOffer)(_el); },
         "category": (_el: _Element): void => { category = $._decode_implicit<ParameterOffers_category>(() => _decode_ParameterOffers_category)(_el); },
-        "repertoire": (_el: _Element): void => { repertoire = $._decode_implicit<CDS.RepertoireAssignment[]>(() => $._decodeSequenceOf<CDS.RepertoireAssignment>(() => CDS._decode_RepertoireAssignment))(_el); },
+        "repertoire": (_el: _Element): void => { repertoire = $._decode_implicit<RepertoireAssignment[]>(() => $._decodeSequenceOf<RepertoireAssignment>(() => _decode_RepertoireAssignment))(_el); },
         "priority": (_el: _Element): void => { priority = $._decode_implicit<ParameterOffers_priority>(() => _decode_ParameterOffers_priority)(_el); },
         "structure": (_el: _Element): void => { structure = $._decode_implicit<ParameterOffers_structure>(() => _decode_ParameterOffers_structure)(_el); },
         "multiElement": (_el: _Element): void => { multiElement = $._decode_implicit<ElementParamOffer[]>(() => $._decodeSequenceOf<ElementParamOffer>(() => _decode_ElementParamOffer))(_el); }
@@ -265,9 +265,9 @@ function _encode_ParameterOffers (value: ParameterOffers, elGetter: $.ASN1Encode
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeSetOf<ParameterOffers_typeIdentifier_Item>(() => _encode_ParameterOffers_typeIdentifier_Item, $.BER), $.BER)(value.typeIdentifier, $.BER),
             /* IF_ABSENT  */ ((value.access === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_AccessRuleOffer, $.BER)(value.access, $.BER)),
             /* IF_ABSENT  */ ((value.trigger === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_ParameterOffers_trigger, $.BER)(value.trigger, $.BER)),
-            /* IF_ABSENT  */ ((value.size === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => G._encode_IntegerOffer, $.BER)(value.size, $.BER)),
+            /* IF_ABSENT  */ ((value.size === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_IntegerOffer, $.BER)(value.size, $.BER)),
             /* IF_ABSENT  */ ((value.category === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_ParameterOffers_category, $.BER)(value.category, $.BER)),
-            /* IF_ABSENT  */ ((value.repertoire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => $._encodeSequenceOf<CDS.RepertoireAssignment>(() => CDS._encode_RepertoireAssignment, $.BER), $.BER)(value.repertoire, $.BER)),
+            /* IF_ABSENT  */ ((value.repertoire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => $._encodeSequenceOf<RepertoireAssignment>(() => _encode_RepertoireAssignment, $.BER), $.BER)(value.repertoire, $.BER)),
             /* IF_ABSENT  */ ((value.priority === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => _encode_ParameterOffers_priority, $.BER)(value.priority, $.BER)),
             /* IF_ABSENT  */ ((value.structure === undefined) ? undefined : $._encode_implicit(_TagClass.context, 7, () => _encode_ParameterOffers_structure, $.BER)(value.structure, $.BER)),
             /* IF_ABSENT  */ ((value.multiElement === undefined) ? undefined : $._encode_implicit(_TagClass.context, 8, () => $._encodeSequenceOf<ElementParamOffer>(() => _encode_ElementParamOffer, $.BER), $.BER)(value.multiElement, $.BER))

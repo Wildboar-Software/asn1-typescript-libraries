@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_Profile, _encode_Profile } from "../G/Profile.ta.mjs";
+import { _decode_Profile, _encode_Profile, Profile } from "../G/Profile.ta.mjs";
 // export { Profile, _decode_Profile, _encode_Profile } from "../G/Profile.ta.mjs";
 
 
@@ -39,7 +39,7 @@ class SPQ2content {
          * @public
          * @readonly
          */
-        readonly profile: G.Profile,
+        readonly profile: Profile,
         /**
          * @summary `retList`.
          * @public
@@ -118,10 +118,10 @@ let _cached_decoder_for_SPQ2content: $.ASN1Decoder<SPQ2content> | null = null;
 export
 function _decode_SPQ2content (el: _Element): SPQ2content {
     if (!_cached_decoder_for_SPQ2content) { _cached_decoder_for_SPQ2content = function (el: _Element): SPQ2content {
-    let profile!: G.Profile;
+    let profile!: Profile;
     let retList: OPTIONAL<PrintableString[]>;
     const callbacks: $.DecodingMap = {
-        "profile": (_el: _Element): void => { profile = $._decode_implicit<G.Profile>(() => G._decode_Profile)(_el); },
+        "profile": (_el: _Element): void => { profile = $._decode_implicit<Profile>(() => _decode_Profile)(_el); },
         "retList": (_el: _Element): void => { retList = $._decode_implicit<PrintableString[]>(() => $._decodeSequenceOf<PrintableString>(() => $._decodePrintableString))(_el); }
     };
     $._parse_sequence(el, callbacks,
@@ -152,7 +152,7 @@ function _encode_SPQ2content (value: SPQ2content, elGetter: $.ASN1Encoder<any>):
     if (!_cached_encoder_for_SPQ2content) { _cached_encoder_for_SPQ2content = function (value: SPQ2content): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => G._encode_Profile, $.BER)(value.profile, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_Profile, $.BER)(value.profile, $.BER),
             /* IF_ABSENT  */ ((value.retList === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeSequenceOf<PrintableString>(() => $._encodePrintableString, $.BER), $.BER)(value.retList, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

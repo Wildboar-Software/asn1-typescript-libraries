@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { ParameterOffers_terminationLength_eventId, _decode_ParameterOffers_terminationLength_eventId, _encode_ParameterOffers_terminationLength_eventId } from "../DEV/ParameterOffers-terminationLength-eventId.ta.mjs";
 // export { ParameterOffers_terminationLength_eventId, _decode_ParameterOffers_terminationLength_eventId, _encode_ParameterOffers_terminationLength_eventId } from "../DEV/ParameterOffers-terminationLength-eventId.ta.mjs";
@@ -42,7 +42,7 @@ class ParameterOffers_terminationLength {
          * @public
          * @readonly
          */
-        readonly length: G.IntegerOffer,
+        readonly length: IntegerOffer,
         /**
          * @summary `eventId`.
          * @public
@@ -127,9 +127,9 @@ function _decode_ParameterOffers_terminationLength (el: _Element): ParameterOffe
     }
     sequence[0].name = "length";
     sequence[1].name = "eventId";
-    let length!: G.IntegerOffer;
+    let length!: IntegerOffer;
     let eventId!: ParameterOffers_terminationLength_eventId;
-    length = $._decode_implicit<G.IntegerOffer>(() => G._decode_IntegerOffer)(sequence[0]);
+    length = $._decode_implicit<IntegerOffer>(() => _decode_IntegerOffer)(sequence[0]);
     eventId = $._decode_implicit<ParameterOffers_terminationLength_eventId>(() => _decode_ParameterOffers_terminationLength_eventId)(sequence[1]);
     return new ParameterOffers_terminationLength(
         length,
@@ -154,7 +154,7 @@ function _encode_ParameterOffers_terminationLength (value: ParameterOffers_termi
     if (!_cached_encoder_for_ParameterOffers_terminationLength) { _cached_encoder_for_ParameterOffers_terminationLength = function (value: ParameterOffers_terminationLength): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => G._encode_IntegerOffer, $.BER)(value.length, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_IntegerOffer, $.BER)(value.length, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_ParameterOffers_terminationLength_eventId, $.BER)(value.eventId, $.BER)
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

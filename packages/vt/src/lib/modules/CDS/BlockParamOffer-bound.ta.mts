@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 
 
@@ -45,7 +45,7 @@ class BlockParamOffer_bound {
          * @public
          * @readonly
          */
-        readonly limit: OPTIONAL<G.IntegerOffer>
+        readonly limit: OPTIONAL<IntegerOffer>
     ) {}
 
     /**
@@ -119,10 +119,10 @@ export
 function _decode_BlockParamOffer_bound (el: _Element): BlockParamOffer_bound {
     if (!_cached_decoder_for_BlockParamOffer_bound) { _cached_decoder_for_BlockParamOffer_bound = function (el: _Element): BlockParamOffer_bound {
     let unbounded: OPTIONAL<NULL>;
-    let limit: OPTIONAL<G.IntegerOffer>;
+    let limit: OPTIONAL<IntegerOffer>;
     const callbacks: $.DecodingMap = {
         "unbounded": (_el: _Element): void => { unbounded = $._decodeNull(_el); },
-        "limit": (_el: _Element): void => { limit = G._decode_IntegerOffer(_el); }
+        "limit": (_el: _Element): void => { limit = _decode_IntegerOffer(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_BlockParamOffer_bound,
@@ -153,7 +153,7 @@ function _encode_BlockParamOffer_bound (value: BlockParamOffer_bound, elGetter: 
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.unbounded === undefined) ? undefined : $._encodeNull(value.unbounded, $.BER)),
-            /* IF_ABSENT  */ ((value.limit === undefined) ? undefined : G._encode_IntegerOffer(value.limit, $.BER))
+            /* IF_ABSENT  */ ((value.limit === undefined) ? undefined : _encode_IntegerOffer(value.limit, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

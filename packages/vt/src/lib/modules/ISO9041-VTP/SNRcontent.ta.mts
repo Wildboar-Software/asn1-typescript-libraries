@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_Result2, _encode_Result2 } from "../G/Result2.ta.mjs";
+import { _decode_Result2, _encode_Result2, type Result2 } from "../G/Result2.ta.mjs";
 // export { Result2, _decode_Result2, _encode_Result2 } from "../G/Result2.ta.mjs";
-import { _decode_ProfileArgumValueList, _encode_ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
+import { _decode_ProfileArgumValueList, _encode_ProfileArgumValueList, ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
 // export { ProfileArgumValueList, _decode_ProfileArgumValueList, _encode_ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
 
 
@@ -40,13 +40,13 @@ class SNRcontent {
          * @public
          * @readonly
          */
-        readonly result: G.Result2,
+        readonly result: Result2,
         /**
          * @summary `argValuesList`.
          * @public
          * @readonly
          */
-        readonly argValuesList: OPTIONAL<G.ProfileArgumValueList>
+        readonly argValuesList: OPTIONAL<ProfileArgumValueList>
     ) {}
 
     /**
@@ -119,11 +119,11 @@ let _cached_decoder_for_SNRcontent: $.ASN1Decoder<SNRcontent> | null = null;
 export
 function _decode_SNRcontent (el: _Element): SNRcontent {
     if (!_cached_decoder_for_SNRcontent) { _cached_decoder_for_SNRcontent = function (el: _Element): SNRcontent {
-    let result!: G.Result2;
-    let argValuesList: OPTIONAL<G.ProfileArgumValueList>;
+    let result!: Result2;
+    let argValuesList: OPTIONAL<ProfileArgumValueList>;
     const callbacks: $.DecodingMap = {
-        "result": (_el: _Element): void => { result = G._decode_Result2(_el); },
-        "argValuesList": (_el: _Element): void => { argValuesList = $._decode_implicit<G.ProfileArgumValueList>(() => G._decode_ProfileArgumValueList)(_el); }
+        "result": (_el: _Element): void => { result = _decode_Result2(_el); },
+        "argValuesList": (_el: _Element): void => { argValuesList = $._decode_implicit<ProfileArgumValueList>(() => _decode_ProfileArgumValueList)(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_SNRcontent,
@@ -153,8 +153,8 @@ function _encode_SNRcontent (value: SNRcontent, elGetter: $.ASN1Encoder<any>): _
     if (!_cached_encoder_for_SNRcontent) { _cached_encoder_for_SNRcontent = function (value: SNRcontent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ G._encode_Result2(value.result, $.BER),
-            /* IF_ABSENT  */ ((value.argValuesList === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => G._encode_ProfileArgumValueList, $.BER)(value.argValuesList, $.BER))
+            /* REQUIRED   */ _encode_Result2(value.result, $.BER),
+            /* IF_ABSENT  */ ((value.argValuesList === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_ProfileArgumValueList, $.BER)(value.argValuesList, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

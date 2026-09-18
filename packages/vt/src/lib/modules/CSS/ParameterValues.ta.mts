@@ -19,7 +19,7 @@ import { AccessRuleValue, _decode_AccessRuleValue, _encode_AccessRuleValue } fro
 // export { AccessRuleValue, AccessRuleValue_wavar /* IMPORTED_LONG_NAMED_INTEGER */, wavar /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_waci /* IMPORTED_LONG_NAMED_INTEGER */, waci /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_waca /* IMPORTED_LONG_NAMED_INTEGER */, waca /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_nsac /* IMPORTED_LONG_NAMED_INTEGER */, nsac /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_wavar_and_waci /* IMPORTED_LONG_NAMED_INTEGER */, wavar_and_waci /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_wavar_and_waca /* IMPORTED_LONG_NAMED_INTEGER */, wavar_and_waca /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_no_access /* IMPORTED_LONG_NAMED_INTEGER */, no_access /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AccessRuleValue, _encode_AccessRuleValue } from "../CSS/AccessRuleValue.ta.mjs";
 import { ParameterValues_category, _decode_ParameterValues_category, _encode_ParameterValues_category } from "../CSS/ParameterValues-category.ta.mjs";
 // export { ParameterValues_category, ParameterValues_category_character /* IMPORTED_LONG_NAMED_INTEGER */, character /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_category_boolean /* IMPORTED_LONG_NAMED_INTEGER */, boolean_ /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_category_symbolic /* IMPORTED_LONG_NAMED_INTEGER */, symbolic /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_category_integer /* IMPORTED_LONG_NAMED_INTEGER */, integer /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_category_transparent /* IMPORTED_LONG_NAMED_INTEGER */, transparent /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ParameterValues_category, _encode_ParameterValues_category } from "../CSS/ParameterValues-category.ta.mjs";
-import { _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
+import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 // export { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 import { ParameterValues_priority, _decode_ParameterValues_priority, _encode_ParameterValues_priority } from "../CSS/ParameterValues-priority.ta.mjs";
 // export { ParameterValues_priority, ParameterValues_priority_normal /* IMPORTED_LONG_NAMED_INTEGER */, normal /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_priority_high /* IMPORTED_LONG_NAMED_INTEGER */, high /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_priority_urgent /* IMPORTED_LONG_NAMED_INTEGER */, urgent /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ParameterValues_priority, _encode_ParameterValues_priority } from "../CSS/ParameterValues-priority.ta.mjs";
@@ -106,7 +106,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<CDS.RepertoireAssignment>,
+        readonly repertoire: OPTIONAL<RepertoireAssignment>,
         /**
          * @summary `priority`.
          * @public
@@ -209,7 +209,7 @@ function _decode_ParameterValues (el: _Element): ParameterValues {
     let triggerSelected: OPTIONAL<BOOLEAN>;
     let size: OPTIONAL<INTEGER>;
     let category: OPTIONAL<ParameterValues_category>;
-    let repertoire: OPTIONAL<CDS.RepertoireAssignment>;
+    let repertoire: OPTIONAL<RepertoireAssignment>;
     let priority: OPTIONAL<ParameterValues_priority>;
     let structure: OPTIONAL<ParameterValues_structure>;
     let multiElement: OPTIONAL<ElementParamValue[]>;
@@ -219,7 +219,7 @@ function _decode_ParameterValues (el: _Element): ParameterValues {
         "triggerSelected": (_el: _Element): void => { triggerSelected = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },
         "size": (_el: _Element): void => { size = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "category": (_el: _Element): void => { category = $._decode_implicit<ParameterValues_category>(() => _decode_ParameterValues_category)(_el); },
-        "repertoire": (_el: _Element): void => { repertoire = $._decode_implicit<CDS.RepertoireAssignment>(() => CDS._decode_RepertoireAssignment)(_el); },
+        "repertoire": (_el: _Element): void => { repertoire = $._decode_implicit<RepertoireAssignment>(() => _decode_RepertoireAssignment)(_el); },
         "priority": (_el: _Element): void => { priority = $._decode_implicit<ParameterValues_priority>(() => _decode_ParameterValues_priority)(_el); },
         "structure": (_el: _Element): void => { structure = $._decode_explicit<ParameterValues_structure>(() => _decode_ParameterValues_structure)(_el); },
         "multiElement": (_el: _Element): void => { multiElement = $._decode_implicit<ElementParamValue[]>(() => $._decodeSequenceOf<ElementParamValue>(() => _decode_ElementParamValue))(_el); }
@@ -264,7 +264,7 @@ function _encode_ParameterValues (value: ParameterValues, elGetter: $.ASN1Encode
             /* IF_ABSENT  */ ((value.triggerSelected === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeBoolean, $.BER)(value.triggerSelected, $.BER)),
             /* IF_ABSENT  */ ((value.size === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeInteger, $.BER)(value.size, $.BER)),
             /* IF_ABSENT  */ ((value.category === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_ParameterValues_category, $.BER)(value.category, $.BER)),
-            /* IF_ABSENT  */ ((value.repertoire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => CDS._encode_RepertoireAssignment, $.BER)(value.repertoire, $.BER)),
+            /* IF_ABSENT  */ ((value.repertoire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => _encode_RepertoireAssignment, $.BER)(value.repertoire, $.BER)),
             /* IF_ABSENT  */ ((value.priority === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => _encode_ParameterValues_priority, $.BER)(value.priority, $.BER)),
             /* IF_ABSENT  */ ((value.structure === undefined) ? undefined : $._encode_explicit(_TagClass.context, 7, () => _encode_ParameterValues_structure, $.BER)(value.structure, $.BER)),
             /* IF_ABSENT  */ ((value.multiElement === undefined) ? undefined : $._encode_implicit(_TagClass.context, 8, () => $._encodeSequenceOf<ElementParamValue>(() => _encode_ElementParamValue, $.BER), $.BER)(value.multiElement, $.BER))

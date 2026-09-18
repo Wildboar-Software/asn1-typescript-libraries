@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { RepertoireFontOffer, _decode_RepertoireFontOffer, _encode_RepertoireFontOffer } from "../CDS/RepertoireFontOffer.ta.mjs";
 // export { RepertoireFontOffer, _decode_RepertoireFontOffer, _encode_RepertoireFontOffer } from "../CDS/RepertoireFontOffer.ta.mjs";
@@ -40,7 +40,7 @@ class CompoundRepertoireOffer {
          * @public
          * @readonly
          */
-        readonly repertoireCapability: OPTIONAL<G.IntegerOffer>,
+        readonly repertoireCapability: OPTIONAL<IntegerOffer>,
         /**
          * @summary `fontOffers`.
          * @public
@@ -119,10 +119,10 @@ let _cached_decoder_for_CompoundRepertoireOffer: $.ASN1Decoder<CompoundRepertoir
 export
 function _decode_CompoundRepertoireOffer (el: _Element): CompoundRepertoireOffer {
     if (!_cached_decoder_for_CompoundRepertoireOffer) { _cached_decoder_for_CompoundRepertoireOffer = function (el: _Element): CompoundRepertoireOffer {
-    let repertoireCapability: OPTIONAL<G.IntegerOffer>;
+    let repertoireCapability: OPTIONAL<IntegerOffer>;
     let fontOffers: OPTIONAL<RepertoireFontOffer[]>;
     const callbacks: $.DecodingMap = {
-        "repertoireCapability": (_el: _Element): void => { repertoireCapability = $._decode_implicit<G.IntegerOffer>(() => G._decode_IntegerOffer)(_el); },
+        "repertoireCapability": (_el: _Element): void => { repertoireCapability = $._decode_implicit<IntegerOffer>(() => _decode_IntegerOffer)(_el); },
         "fontOffers": (_el: _Element): void => { fontOffers = $._decode_implicit<RepertoireFontOffer[]>(() => $._decodeSequenceOf<RepertoireFontOffer>(() => _decode_RepertoireFontOffer))(_el); }
     };
     $._parse_sequence(el, callbacks,
@@ -153,7 +153,7 @@ function _encode_CompoundRepertoireOffer (value: CompoundRepertoireOffer, elGett
     if (!_cached_encoder_for_CompoundRepertoireOffer) { _cached_encoder_for_CompoundRepertoireOffer = function (value: CompoundRepertoireOffer): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.repertoireCapability === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => G._encode_IntegerOffer, $.BER)(value.repertoireCapability, $.BER)),
+            /* IF_ABSENT  */ ((value.repertoireCapability === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_IntegerOffer, $.BER)(value.repertoireCapability, $.BER)),
             /* IF_ABSENT  */ ((value.fontOffers === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeSequenceOf<RepertoireFontOffer>(() => _encode_RepertoireFontOffer, $.BER), $.BER)(value.fontOffers, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

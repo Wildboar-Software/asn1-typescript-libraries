@@ -14,7 +14,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ElementParamValue_category, _decode_ElementParamValue_category, _encode_ElementParamValue_category } from "../CSS/ElementParamValue-category.ta.mjs";
 // export { ElementParamValue_category, ElementParamValue_category_character /* IMPORTED_LONG_NAMED_INTEGER */, character /* IMPORTED_SHORT_NAMED_INTEGER */, ElementParamValue_category_boolean /* IMPORTED_LONG_NAMED_INTEGER */, boolean_ /* IMPORTED_SHORT_NAMED_INTEGER */, ElementParamValue_category_symbolic /* IMPORTED_LONG_NAMED_INTEGER */, symbolic /* IMPORTED_SHORT_NAMED_INTEGER */, ElementParamValue_category_integer /* IMPORTED_LONG_NAMED_INTEGER */, integer /* IMPORTED_SHORT_NAMED_INTEGER */, ElementParamValue_category_transparent /* IMPORTED_LONG_NAMED_INTEGER */, transparent /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ElementParamValue_category, _encode_ElementParamValue_category } from "../CSS/ElementParamValue-category.ta.mjs";
-import { _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
+import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 // export { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 
 
@@ -67,7 +67,7 @@ class ElementParamValue {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<CDS.RepertoireAssignment>
+        readonly repertoire: OPTIONAL<RepertoireAssignment>
     ) {}
 
     /**
@@ -145,12 +145,12 @@ function _decode_ElementParamValue (el: _Element): ElementParamValue {
     let elementIdentifier!: INTEGER;
     let size: OPTIONAL<INTEGER>;
     let category: OPTIONAL<ElementParamValue_category>;
-    let repertoire: OPTIONAL<CDS.RepertoireAssignment>;
+    let repertoire: OPTIONAL<RepertoireAssignment>;
     const callbacks: $.DecodingMap = {
         "elementIdentifier": (_el: _Element): void => { elementIdentifier = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "size": (_el: _Element): void => { size = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "category": (_el: _Element): void => { category = $._decode_implicit<ElementParamValue_category>(() => _decode_ElementParamValue_category)(_el); },
-        "repertoire": (_el: _Element): void => { repertoire = $._decode_implicit<CDS.RepertoireAssignment>(() => CDS._decode_RepertoireAssignment)(_el); }
+        "repertoire": (_el: _Element): void => { repertoire = $._decode_implicit<RepertoireAssignment>(() => _decode_RepertoireAssignment)(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ElementParamValue,
@@ -185,7 +185,7 @@ function _encode_ElementParamValue (value: ElementParamValue, elGetter: $.ASN1En
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.elementIdentifier, $.BER),
             /* IF_ABSENT  */ ((value.size === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeInteger, $.BER)(value.size, $.BER)),
             /* IF_ABSENT  */ ((value.category === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_ElementParamValue_category, $.BER)(value.category, $.BER)),
-            /* IF_ABSENT  */ ((value.repertoire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => CDS._encode_RepertoireAssignment, $.BER)(value.repertoire, $.BER))
+            /* IF_ABSENT  */ ((value.repertoire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => _encode_RepertoireAssignment, $.BER)(value.repertoire, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_Result2, _encode_Result2 } from "../G/Result2.ta.mjs";
+import { _decode_Result2, _encode_Result2, type Result2 } from "../G/Result2.ta.mjs";
 // export { Result2, _decode_Result2, _encode_Result2 } from "../G/Result2.ta.mjs";
-import { _decode_ProfileArgumValueList, _encode_ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
+import { _decode_ProfileArgumValueList, _encode_ProfileArgumValueList, ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
 // export { ProfileArgumValueList, _decode_ProfileArgumValueList, _encode_ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
 
 
@@ -42,13 +42,13 @@ class SPR2content {
          * @public
          * @readonly
          */
-        readonly result: G.Result2,
+        readonly result: Result2,
         /**
          * @summary `argList`.
          * @public
          * @readonly
          */
-        readonly argList: OPTIONAL<G.ProfileArgumValueList>,
+        readonly argList: OPTIONAL<ProfileArgumValueList>,
         /**
          * @summary `retList`.
          * @public
@@ -128,12 +128,12 @@ let _cached_decoder_for_SPR2content: $.ASN1Decoder<SPR2content> | null = null;
 export
 function _decode_SPR2content (el: _Element): SPR2content {
     if (!_cached_decoder_for_SPR2content) { _cached_decoder_for_SPR2content = function (el: _Element): SPR2content {
-    let result!: G.Result2;
-    let argList: OPTIONAL<G.ProfileArgumValueList>;
+    let result!: Result2;
+    let argList: OPTIONAL<ProfileArgumValueList>;
     let retList: OPTIONAL<PrintableString[]>;
     const callbacks: $.DecodingMap = {
-        "result": (_el: _Element): void => { result = G._decode_Result2(_el); },
-        "argList": (_el: _Element): void => { argList = $._decode_implicit<G.ProfileArgumValueList>(() => G._decode_ProfileArgumValueList)(_el); },
+        "result": (_el: _Element): void => { result = _decode_Result2(_el); },
+        "argList": (_el: _Element): void => { argList = $._decode_implicit<ProfileArgumValueList>(() => _decode_ProfileArgumValueList)(_el); },
         "retList": (_el: _Element): void => { retList = $._decode_implicit<PrintableString[]>(() => $._decodeSequenceOf<PrintableString>(() => $._decodePrintableString))(_el); }
     };
     $._parse_sequence(el, callbacks,
@@ -165,8 +165,8 @@ function _encode_SPR2content (value: SPR2content, elGetter: $.ASN1Encoder<any>):
     if (!_cached_encoder_for_SPR2content) { _cached_encoder_for_SPR2content = function (value: SPR2content): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ G._encode_Result2(value.result, $.BER),
-            /* IF_ABSENT  */ ((value.argList === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => G._encode_ProfileArgumValueList, $.BER)(value.argList, $.BER)),
+            /* REQUIRED   */ _encode_Result2(value.result, $.BER),
+            /* IF_ABSENT  */ ((value.argList === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_ProfileArgumValueList, $.BER)(value.argList, $.BER)),
             /* IF_ABSENT  */ ((value.retList === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeSequenceOf<PrintableString>(() => $._encodePrintableString, $.BER), $.BER)(value.retList, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

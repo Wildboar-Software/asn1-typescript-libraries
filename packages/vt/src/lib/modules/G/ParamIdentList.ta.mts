@@ -12,6 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type Identifier as CDS_Identifier, _decode_Identifier as CDS__decode_Identifier, _encode_Identifier as CDS__encode_Identifier } from "../CDS/Identifier.ta.mjs";
+import { type Identifier as CSS_Identifier, _decode_Identifier as CSS__decode_Identifier, _encode_Identifier as CSS__encode_Identifier } from "../CSS/Identifier.ta.mjs";
+import { type Identifier as DEV_Identifier, _decode_Identifier as DEV__decode_Identifier, _encode_Identifier as DEV__encode_Identifier } from "../DEV/Identifier.ta.mjs";
 
 
 
@@ -40,19 +43,19 @@ class ParamIdentList {
          * @public
          * @readonly
          */
-        readonly displayObjects: OPTIONAL<CDS.Identifier>,
+        readonly displayObjects: OPTIONAL<CDS_Identifier>,
         /**
          * @summary `controlObjects`.
          * @public
          * @readonly
          */
-        readonly controlObjects: OPTIONAL<CSS.Identifier>,
+        readonly controlObjects: OPTIONAL<CSS_Identifier>,
         /**
          * @summary `deviceObjects`.
          * @public
          * @readonly
          */
-        readonly deviceObjects: OPTIONAL<DEV.Identifier>,
+        readonly deviceObjects: OPTIONAL<DEV_Identifier>,
         /**
          * @summary `deliveryControl`.
          * @public
@@ -133,14 +136,14 @@ let _cached_decoder_for_ParamIdentList: $.ASN1Decoder<ParamIdentList> | null = n
 export
 function _decode_ParamIdentList (el: _Element): ParamIdentList {
     if (!_cached_decoder_for_ParamIdentList) { _cached_decoder_for_ParamIdentList = function (el: _Element): ParamIdentList {
-    let displayObjects: OPTIONAL<CDS.Identifier>;
-    let controlObjects: OPTIONAL<CSS.Identifier>;
-    let deviceObjects: OPTIONAL<DEV.Identifier>;
+    let displayObjects: OPTIONAL<CDS_Identifier>;
+    let controlObjects: OPTIONAL<CSS_Identifier>;
+    let deviceObjects: OPTIONAL<DEV_Identifier>;
     let deliveryControl: OPTIONAL<NULL>;
     const callbacks: $.DecodingMap = {
-        "displayObjects": (_el: _Element): void => { displayObjects = $._decode_implicit<CDS.Identifier>(() => CDS._decode_Identifier)(_el); },
-        "controlObjects": (_el: _Element): void => { controlObjects = $._decode_implicit<CSS.Identifier>(() => CSS._decode_Identifier)(_el); },
-        "deviceObjects": (_el: _Element): void => { deviceObjects = $._decode_implicit<DEV.Identifier>(() => DEV._decode_Identifier)(_el); },
+        "displayObjects": (_el: _Element): void => { displayObjects = $._decode_implicit<CDS_Identifier>(() => CDS__decode_Identifier)(_el); },
+        "controlObjects": (_el: _Element): void => { controlObjects = $._decode_implicit<CSS_Identifier>(() => CSS__decode_Identifier)(_el); },
+        "deviceObjects": (_el: _Element): void => { deviceObjects = $._decode_implicit<DEV_Identifier>(() => DEV__decode_Identifier)(_el); },
         "deliveryControl": (_el: _Element): void => { deliveryControl = $._decode_implicit<NULL>(() => $._decodeNull)(_el); }
     };
     $._parse_sequence(el, callbacks,
@@ -173,9 +176,9 @@ function _encode_ParamIdentList (value: ParamIdentList, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_ParamIdentList) { _cached_encoder_for_ParamIdentList = function (value: ParamIdentList): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.displayObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => CDS._encode_Identifier, $.BER)(value.displayObjects, $.BER)),
-            /* IF_ABSENT  */ ((value.controlObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => CSS._encode_Identifier, $.BER)(value.controlObjects, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => DEV._encode_Identifier, $.BER)(value.deviceObjects, $.BER)),
+            /* IF_ABSENT  */ ((value.displayObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => CDS__encode_Identifier, $.BER)(value.displayObjects, $.BER)),
+            /* IF_ABSENT  */ ((value.controlObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => CSS__encode_Identifier, $.BER)(value.controlObjects, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => DEV__encode_Identifier, $.BER)(value.deviceObjects, $.BER)),
             /* IF_ABSENT  */ ((value.deliveryControl === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeNull, $.BER)(value.deliveryControl, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
