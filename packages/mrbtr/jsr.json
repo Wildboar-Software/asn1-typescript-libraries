@@ -1,0 +1,23 @@
+{
+  "name": "@wildboar/mrbtr",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts",
+    "./CBEFF-DATA-ELEMENTS": "./src/lib/modules/CBEFF-DATA-ELEMENTS/index.mts",
+    "./CryptographicMessageSyntax-2009": "./src/lib/modules/CryptographicMessageSyntax-2009/index.mts",
+    "./InformationFramework": "./src/lib/modules/InformationFramework/index.mts",
+    "./MachineReadableBiometricTestingAndReportingTestReport": "./src/lib/modules/MachineReadableBiometricTestingAndReportingTestReport/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
+    ]
+  }
+}
