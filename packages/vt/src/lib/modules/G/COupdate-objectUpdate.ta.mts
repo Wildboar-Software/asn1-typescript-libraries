@@ -105,7 +105,7 @@ type COupdate_objectUpdate =
     | { feico: FEICOupdate } /* CHOICE_ALT_ROOT */
     | { fepco: FEPCOupdate } /* CHOICE_ALT_ROOT */
     | { rio: RIOupdate } /* CHOICE_ALT_ROOT */
-    | /* FIXME: other CHOICE_ALT_ROOT */;
+    | { other: _Element } /* CHOICE_ALT_ROOT */;
 
 let _cached_decoder_for_COupdate_objectUpdate: $.ASN1Decoder<COupdate_objectUpdate> | null = null;
 
@@ -129,7 +129,7 @@ function _decode_COupdate_objectUpdate (el: _Element): COupdate_objectUpdate {
     "CONTEXT 8": [ "feico", $._decode_implicit<FEICOupdate>(() => _decode_FEICOupdate) ],
     "CONTEXT 9": [ "fepco", $._decode_implicit<FEPCOupdate>(() => _decode_FEPCOupdate) ],
     "CONTEXT 10": [ "rio", $._decode_implicit<RIOupdate>(() => _decode_RIOupdate) ],
-    "// FIXME: COULD_NOT_COMPILE_TYPE_DECODER": [ "other", undefined ]
+    "CONTEXT 11": [ "other", $._decode_implicit<_Element>(() => $._decodeAny) ]
 }); }
     return _cached_decoder_for_COupdate_objectUpdate(el);
 }

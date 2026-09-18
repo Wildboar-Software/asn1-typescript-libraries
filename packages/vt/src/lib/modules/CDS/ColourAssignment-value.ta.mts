@@ -82,7 +82,7 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type ColourAssignment_value =
     { iso6429: PrintableString } /* CHOICE_ALT_ROOT */
-    | /* FIXME: isonnnn CHOICE_ALT_ROOT */;
+    | { isonnnn: _Element } /* CHOICE_ALT_ROOT */;
 
 let _cached_decoder_for_ColourAssignment_value: $.ASN1Decoder<ColourAssignment_value> | null = null;
 
@@ -96,7 +96,7 @@ export
 function _decode_ColourAssignment_value (el: _Element): ColourAssignment_value {
     if (!_cached_decoder_for_ColourAssignment_value) { _cached_decoder_for_ColourAssignment_value = $._decode_inextensible_choice<ColourAssignment_value>({
     "CONTEXT 1": [ "iso6429", $._decode_implicit<PrintableString>(() => $._decodePrintableString) ],
-    "// FIXME: COULD_NOT_COMPILE_TYPE_DECODER": [ "isonnnn", undefined ]
+    "CONTEXT 2": [ "isonnnn", $._decode_implicit<_Element>(() => $._decodeAny) ]
 }); }
     return _cached_decoder_for_ColourAssignment_value(el);
 }

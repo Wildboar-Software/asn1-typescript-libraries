@@ -85,7 +85,12 @@ import { ParameterOffers_terminationEventList_Item_Item_eventId, _decode_Paramet
 export
 class ParameterOffers_terminationEventList_Item_Item {
     constructor (
-// FIXME: readonly event: AnyType,
+        /**
+         * @summary `event`.
+         * @public
+         * @readonly
+         */
+        readonly event: _Element,
         /**
          * @summary `eventId`.
          * @public
@@ -107,7 +112,7 @@ class ParameterOffers_terminationEventList_Item_Item {
      * @returns {ParameterOffers_terminationEventList_Item_Item}
      */
     public static _from_object (_o: { [_K in keyof (ParameterOffers_terminationEventList_Item_Item)]: (ParameterOffers_terminationEventList_Item_Item)[_K] }): ParameterOffers_terminationEventList_Item_Item {
-        return new ParameterOffers_terminationEventList_Item_Item(_o., _o.eventId);
+        return new ParameterOffers_terminationEventList_Item_Item(_o.event, _o.eventId);
     }
 
 
@@ -170,7 +175,7 @@ function _decode_ParameterOffers_terminationEventList_Item_Item (el: _Element): 
     }
     sequence[0].name = "event";
     sequence[1].name = "eventId";
-    let event!: /* FIXME: event COULD_NOT_COMPILE_TYPE */;
+    let event!: _Element;
     let eventId!: ParameterOffers_terminationEventList_Item_Item_eventId;
     event = $._decodeAny(sequence[0]);
     eventId = _decode_ParameterOffers_terminationEventList_Item_Item_eventId(sequence[1]);
