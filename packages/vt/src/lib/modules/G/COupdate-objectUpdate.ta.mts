@@ -107,7 +107,7 @@ function _decode_COupdate_objectUpdate (el: _Element): COupdate_objectUpdate {
     "CONTEXT 8": [ "feico", $._decode_implicit<FEICOupdate>(() => _decode_FEICOupdate) ],
     "CONTEXT 9": [ "fepco", $._decode_implicit<FEPCOupdate>(() => _decode_FEPCOupdate) ],
     "CONTEXT 10": [ "rio", $._decode_implicit<RIOupdate>(() => _decode_RIOupdate) ],
-    "CONTEXT 11": [ "other", $._decode_implicit<_Element>(() => $._decodeAny) ]
+    "CONTEXT 11": [ "other", $._decode_explicit<_Element>(() => $._decodeAny) ]
 }); }
     return _cached_decoder_for_COupdate_objectUpdate(el);
 }
@@ -135,7 +135,7 @@ function _encode_COupdate_objectUpdate (value: COupdate_objectUpdate, elGetter: 
     "feico": $._encode_implicit(_TagClass.context, 8, () => _encode_FEICOupdate, $.BER),
     "fepco": $._encode_implicit(_TagClass.context, 9, () => _encode_FEPCOupdate, $.BER),
     "rio": $._encode_implicit(_TagClass.context, 10, () => _encode_RIOupdate, $.BER),
-    "other": $._encode_implicit(_TagClass.context, 11, () => $._encodeAny, $.BER),
+    "other": $._encode_explicit(_TagClass.context, 11, () => $._encodeAny, $.BER),
 }, $.BER); }
     return _cached_encoder_for_COupdate_objectUpdate(value, elGetter);
 }

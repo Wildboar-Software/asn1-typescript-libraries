@@ -44,7 +44,7 @@ export
 function _decode_RepertoireAssignment_value (el: _Element): RepertoireAssignment_value {
     if (!_cached_decoder_for_RepertoireAssignment_value) { _cached_decoder_for_RepertoireAssignment_value = $._decode_inextensible_choice<RepertoireAssignment_value>({
     "CONTEXT 1": [ "iso2022", $._decode_implicit<OCTET_STRING[]>(() => $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString)) ],
-    "CONTEXT 2": [ "isonnnn", $._decode_implicit<_Element>(() => $._decodeAny) ]
+    "CONTEXT 2": [ "isonnnn", $._decode_explicit<_Element>(() => $._decodeAny) ]
 }); }
     return _cached_decoder_for_RepertoireAssignment_value(el);
 }
@@ -62,7 +62,7 @@ export
 function _encode_RepertoireAssignment_value (value: RepertoireAssignment_value, elGetter: $.ASN1Encoder<any>): _Element {
     if (!_cached_encoder_for_RepertoireAssignment_value) { _cached_encoder_for_RepertoireAssignment_value = $._encode_choice<RepertoireAssignment_value>({
     "iso2022": $._encode_implicit(_TagClass.context, 1, () => $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.BER), $.BER),
-    "isonnnn": $._encode_implicit(_TagClass.context, 2, () => $._encodeAny, $.BER),
+    "isonnnn": $._encode_explicit(_TagClass.context, 2, () => $._encodeAny, $.BER),
 }, $.BER); }
     return _cached_encoder_for_RepertoireAssignment_value(value, elGetter);
 }
