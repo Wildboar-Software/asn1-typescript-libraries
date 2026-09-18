@@ -97,35 +97,8 @@ const ASQcontent_class_basic: ASQcontent_class = 1; /* LONG_NAMED_INTEGER_VALUE 
  */
 export
 const basic: ASQcontent_class = ASQcontent_class_basic; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ASQcontent_class: $.ASN1Decoder<ASQcontent_class> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ASQcontent_class
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ASQcontent_class (el: _Element): ASQcontent_class {
-    if (!_cached_decoder_for_ASQcontent_class) { _cached_decoder_for_ASQcontent_class = $._decodeInteger; }
-    return _cached_decoder_for_ASQcontent_class(el);
-}
-
-let _cached_encoder_for_ASQcontent_class: $.ASN1Encoder<ASQcontent_class> | null = null;
-
-/**
- * @summary Encodes a(n) ASQcontent_class into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ASQcontent_class, encoded as an ASN.1 Element.
- */
-export
-function _encode_ASQcontent_class (value: ASQcontent_class, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ASQcontent_class) { _cached_encoder_for_ASQcontent_class = $._encodeInteger; }
-    return _cached_encoder_for_ASQcontent_class(value, elGetter);
-}
+export const _decode_ASQcontent_class = $._decodeInteger;
+export const _encode_ASQcontent_class = $._encodeInteger;
 
 
 /* eslint-enable */

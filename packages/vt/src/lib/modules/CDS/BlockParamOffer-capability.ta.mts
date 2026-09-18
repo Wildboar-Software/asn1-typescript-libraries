@@ -109,35 +109,8 @@ const BlockParamOffer_capability_no: number = 1; /* LONG_NAMED_BIT */
  */
 export
 const no: number = BlockParamOffer_capability_no; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_BlockParamOffer_capability: $.ASN1Decoder<BlockParamOffer_capability> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) BlockParamOffer_capability
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_BlockParamOffer_capability (el: _Element): BlockParamOffer_capability {
-    if (!_cached_decoder_for_BlockParamOffer_capability) { _cached_decoder_for_BlockParamOffer_capability = $._decodeBitString; }
-    return _cached_decoder_for_BlockParamOffer_capability(el);
-}
-
-let _cached_encoder_for_BlockParamOffer_capability: $.ASN1Encoder<BlockParamOffer_capability> | null = null;
-
-/**
- * @summary Encodes a(n) BlockParamOffer_capability into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BlockParamOffer_capability, encoded as an ASN.1 Element.
- */
-export
-function _encode_BlockParamOffer_capability (value: BlockParamOffer_capability, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BlockParamOffer_capability) { _cached_encoder_for_BlockParamOffer_capability = $._encodeBitString; }
-    return _cached_encoder_for_BlockParamOffer_capability(value, elGetter);
-}
+export const _decode_BlockParamOffer_capability = $._decodeBitString;
+export const _encode_BlockParamOffer_capability = $._encodeBitString;
 
 
 /* eslint-enable */

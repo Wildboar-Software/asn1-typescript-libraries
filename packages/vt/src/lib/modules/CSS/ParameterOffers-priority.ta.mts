@@ -123,35 +123,8 @@ const ParameterOffers_priority_urgent: number = 2; /* LONG_NAMED_BIT */
  */
 export
 const urgent: number = ParameterOffers_priority_urgent; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_ParameterOffers_priority: $.ASN1Decoder<ParameterOffers_priority> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ParameterOffers_priority
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ParameterOffers_priority (el: _Element): ParameterOffers_priority {
-    if (!_cached_decoder_for_ParameterOffers_priority) { _cached_decoder_for_ParameterOffers_priority = $._decodeBitString; }
-    return _cached_decoder_for_ParameterOffers_priority(el);
-}
-
-let _cached_encoder_for_ParameterOffers_priority: $.ASN1Encoder<ParameterOffers_priority> | null = null;
-
-/**
- * @summary Encodes a(n) ParameterOffers_priority into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ParameterOffers_priority, encoded as an ASN.1 Element.
- */
-export
-function _encode_ParameterOffers_priority (value: ParameterOffers_priority, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterOffers_priority) { _cached_encoder_for_ParameterOffers_priority = $._encodeBitString; }
-    return _cached_encoder_for_ParameterOffers_priority(value, elGetter);
-}
+export const _decode_ParameterOffers_priority = $._decodeBitString;
+export const _encode_ParameterOffers_priority = $._encodeBitString;
 
 
 /* eslint-enable */

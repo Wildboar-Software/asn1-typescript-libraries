@@ -151,35 +151,8 @@ const ElementParamOffer_category_transparent: number = 4; /* LONG_NAMED_BIT */
  */
 export
 const transparent: number = ElementParamOffer_category_transparent; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_ElementParamOffer_category: $.ASN1Decoder<ElementParamOffer_category> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ElementParamOffer_category
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ElementParamOffer_category (el: _Element): ElementParamOffer_category {
-    if (!_cached_decoder_for_ElementParamOffer_category) { _cached_decoder_for_ElementParamOffer_category = $._decodeBitString; }
-    return _cached_decoder_for_ElementParamOffer_category(el);
-}
-
-let _cached_encoder_for_ElementParamOffer_category: $.ASN1Encoder<ElementParamOffer_category> | null = null;
-
-/**
- * @summary Encodes a(n) ElementParamOffer_category into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ElementParamOffer_category, encoded as an ASN.1 Element.
- */
-export
-function _encode_ElementParamOffer_category (value: ElementParamOffer_category, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ElementParamOffer_category) { _cached_encoder_for_ElementParamOffer_category = $._encodeBitString; }
-    return _cached_encoder_for_ElementParamOffer_category(value, elGetter);
-}
+export const _decode_ElementParamOffer_category = $._decodeBitString;
+export const _encode_ElementParamOffer_category = $._encodeBitString;
 
 
 /* eslint-enable */

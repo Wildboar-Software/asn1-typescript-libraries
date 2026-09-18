@@ -161,35 +161,8 @@ const ParameterValues_category_transparent: ParameterValues_category = 4; /* LON
  */
 export
 const transparent: ParameterValues_category = ParameterValues_category_transparent; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ParameterValues_category: $.ASN1Decoder<ParameterValues_category> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ParameterValues_category
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ParameterValues_category (el: _Element): ParameterValues_category {
-    if (!_cached_decoder_for_ParameterValues_category) { _cached_decoder_for_ParameterValues_category = $._decodeInteger; }
-    return _cached_decoder_for_ParameterValues_category(el);
-}
-
-let _cached_encoder_for_ParameterValues_category: $.ASN1Encoder<ParameterValues_category> | null = null;
-
-/**
- * @summary Encodes a(n) ParameterValues_category into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ParameterValues_category, encoded as an ASN.1 Element.
- */
-export
-function _encode_ParameterValues_category (value: ParameterValues_category, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterValues_category) { _cached_encoder_for_ParameterValues_category = $._encodeInteger; }
-    return _cached_encoder_for_ParameterValues_category(value, elGetter);
-}
+export const _decode_ParameterValues_category = $._decodeInteger;
+export const _encode_ParameterValues_category = $._encodeInteger;
 
 
 /* eslint-enable */

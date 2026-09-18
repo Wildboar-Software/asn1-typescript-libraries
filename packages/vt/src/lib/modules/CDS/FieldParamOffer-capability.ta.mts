@@ -109,35 +109,8 @@ const FieldParamOffer_capability_no: number = 1; /* LONG_NAMED_BIT */
  */
 export
 const no: number = FieldParamOffer_capability_no; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_FieldParamOffer_capability: $.ASN1Decoder<FieldParamOffer_capability> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FieldParamOffer_capability
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FieldParamOffer_capability (el: _Element): FieldParamOffer_capability {
-    if (!_cached_decoder_for_FieldParamOffer_capability) { _cached_decoder_for_FieldParamOffer_capability = $._decodeBitString; }
-    return _cached_decoder_for_FieldParamOffer_capability(el);
-}
-
-let _cached_encoder_for_FieldParamOffer_capability: $.ASN1Encoder<FieldParamOffer_capability> | null = null;
-
-/**
- * @summary Encodes a(n) FieldParamOffer_capability into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FieldParamOffer_capability, encoded as an ASN.1 Element.
- */
-export
-function _encode_FieldParamOffer_capability (value: FieldParamOffer_capability, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FieldParamOffer_capability) { _cached_encoder_for_FieldParamOffer_capability = $._encodeBitString; }
-    return _cached_encoder_for_FieldParamOffer_capability(value, elGetter);
-}
+export const _decode_FieldParamOffer_capability = $._decodeBitString;
+export const _encode_FieldParamOffer_capability = $._encodeBitString;
 
 
 /* eslint-enable */

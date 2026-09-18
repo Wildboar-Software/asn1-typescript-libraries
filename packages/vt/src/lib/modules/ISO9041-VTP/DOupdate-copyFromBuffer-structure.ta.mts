@@ -129,35 +129,8 @@ const DOupdate_copyFromBuffer_structure_xAndy: DOupdate_copyFromBuffer_structure
  */
 export
 const xAndy: DOupdate_copyFromBuffer_structure = DOupdate_copyFromBuffer_structure_xAndy; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DOupdate_copyFromBuffer_structure: $.ASN1Decoder<DOupdate_copyFromBuffer_structure> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DOupdate_copyFromBuffer_structure
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DOupdate_copyFromBuffer_structure (el: _Element): DOupdate_copyFromBuffer_structure {
-    if (!_cached_decoder_for_DOupdate_copyFromBuffer_structure) { _cached_decoder_for_DOupdate_copyFromBuffer_structure = $._decodeInteger; }
-    return _cached_decoder_for_DOupdate_copyFromBuffer_structure(el);
-}
-
-let _cached_encoder_for_DOupdate_copyFromBuffer_structure: $.ASN1Encoder<DOupdate_copyFromBuffer_structure> | null = null;
-
-/**
- * @summary Encodes a(n) DOupdate_copyFromBuffer_structure into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DOupdate_copyFromBuffer_structure, encoded as an ASN.1 Element.
- */
-export
-function _encode_DOupdate_copyFromBuffer_structure (value: DOupdate_copyFromBuffer_structure, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DOupdate_copyFromBuffer_structure) { _cached_encoder_for_DOupdate_copyFromBuffer_structure = $._encodeInteger; }
-    return _cached_encoder_for_DOupdate_copyFromBuffer_structure(value, elGetter);
-}
+export const _decode_DOupdate_copyFromBuffer_structure = $._decodeInteger;
+export const _encode_DOupdate_copyFromBuffer_structure = $._encodeInteger;
 
 
 /* eslint-enable */

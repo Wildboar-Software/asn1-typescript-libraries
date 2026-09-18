@@ -109,35 +109,8 @@ const ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean_true
  */
 export
 const true_bit: number = ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean_true_bit; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean: $.ASN1Decoder<ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean (el: _Element): ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean {
-    if (!_cached_decoder_for_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean) { _cached_decoder_for_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean = $._decodeBitString; }
-    return _cached_decoder_for_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean(el);
-}
-
-let _cached_encoder_for_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean: $.ASN1Encoder<ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean> | null = null;
-
-/**
- * @summary Encodes a(n) ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean, encoded as an ASN.1 Element.
- */
-export
-function _encode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean (value: ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean) { _cached_encoder_for_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean = $._encodeBitString; }
-    return _cached_encoder_for_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean(value, elGetter);
-}
+export const _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean = $._decodeBitString;
+export const _encode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -97,35 +97,8 @@ const AttrId_backgroundColour_null_: AttrId_backgroundColour = 0; /* LONG_NAMED_
  */
 export
 const null_: AttrId_backgroundColour = AttrId_backgroundColour_null_; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_AttrId_backgroundColour: $.ASN1Decoder<AttrId_backgroundColour> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AttrId_backgroundColour
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AttrId_backgroundColour (el: _Element): AttrId_backgroundColour {
-    if (!_cached_decoder_for_AttrId_backgroundColour) { _cached_decoder_for_AttrId_backgroundColour = $._decodeInteger; }
-    return _cached_decoder_for_AttrId_backgroundColour(el);
-}
-
-let _cached_encoder_for_AttrId_backgroundColour: $.ASN1Encoder<AttrId_backgroundColour> | null = null;
-
-/**
- * @summary Encodes a(n) AttrId_backgroundColour into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AttrId_backgroundColour, encoded as an ASN.1 Element.
- */
-export
-function _encode_AttrId_backgroundColour (value: AttrId_backgroundColour, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AttrId_backgroundColour) { _cached_encoder_for_AttrId_backgroundColour = $._encodeInteger; }
-    return _cached_encoder_for_AttrId_backgroundColour(value, elGetter);
-}
+export const _decode_AttrId_backgroundColour = $._decodeInteger;
+export const _encode_AttrId_backgroundColour = $._encodeInteger;
 
 
 /* eslint-enable */

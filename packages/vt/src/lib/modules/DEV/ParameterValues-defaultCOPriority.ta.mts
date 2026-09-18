@@ -129,35 +129,8 @@ const ParameterValues_defaultCOPriority_urgent: ParameterValues_defaultCOPriorit
  */
 export
 const urgent: ParameterValues_defaultCOPriority = ParameterValues_defaultCOPriority_urgent; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ParameterValues_defaultCOPriority: $.ASN1Decoder<ParameterValues_defaultCOPriority> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ParameterValues_defaultCOPriority
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ParameterValues_defaultCOPriority (el: _Element): ParameterValues_defaultCOPriority {
-    if (!_cached_decoder_for_ParameterValues_defaultCOPriority) { _cached_decoder_for_ParameterValues_defaultCOPriority = $._decodeInteger; }
-    return _cached_decoder_for_ParameterValues_defaultCOPriority(el);
-}
-
-let _cached_encoder_for_ParameterValues_defaultCOPriority: $.ASN1Encoder<ParameterValues_defaultCOPriority> | null = null;
-
-/**
- * @summary Encodes a(n) ParameterValues_defaultCOPriority into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ParameterValues_defaultCOPriority, encoded as an ASN.1 Element.
- */
-export
-function _encode_ParameterValues_defaultCOPriority (value: ParameterValues_defaultCOPriority, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterValues_defaultCOPriority) { _cached_encoder_for_ParameterValues_defaultCOPriority = $._encodeInteger; }
-    return _cached_encoder_for_ParameterValues_defaultCOPriority(value, elGetter);
-}
+export const _decode_ParameterValues_defaultCOPriority = $._decodeInteger;
+export const _encode_ParameterValues_defaultCOPriority = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -113,35 +113,8 @@ const FieldParamValues_accessOutside_notAllowed: FieldParamValues_accessOutside 
  */
 export
 const notAllowed: FieldParamValues_accessOutside = FieldParamValues_accessOutside_notAllowed; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_FieldParamValues_accessOutside: $.ASN1Decoder<FieldParamValues_accessOutside> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FieldParamValues_accessOutside
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FieldParamValues_accessOutside (el: _Element): FieldParamValues_accessOutside {
-    if (!_cached_decoder_for_FieldParamValues_accessOutside) { _cached_decoder_for_FieldParamValues_accessOutside = $._decodeInteger; }
-    return _cached_decoder_for_FieldParamValues_accessOutside(el);
-}
-
-let _cached_encoder_for_FieldParamValues_accessOutside: $.ASN1Encoder<FieldParamValues_accessOutside> | null = null;
-
-/**
- * @summary Encodes a(n) FieldParamValues_accessOutside into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FieldParamValues_accessOutside, encoded as an ASN.1 Element.
- */
-export
-function _encode_FieldParamValues_accessOutside (value: FieldParamValues_accessOutside, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FieldParamValues_accessOutside) { _cached_encoder_for_FieldParamValues_accessOutside = $._encodeInteger; }
-    return _cached_encoder_for_FieldParamValues_accessOutside(value, elGetter);
-}
+export const _decode_FieldParamValues_accessOutside = $._decodeInteger;
+export const _encode_FieldParamValues_accessOutside = $._encodeInteger;
 
 
 /* eslint-enable */
