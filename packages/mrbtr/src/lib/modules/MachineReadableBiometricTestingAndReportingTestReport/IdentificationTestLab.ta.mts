@@ -238,11 +238,11 @@ function _encode_IdentificationTestLab (value: IdentificationTestLab, elGetter: 
     if (!_cached_encoder_for_IdentificationTestLab) { _cached_encoder_for_IdentificationTestLab = function (value: IdentificationTestLab, elGetter: $.ASN1Encoder<IdentificationTestLab>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeVisibleString(value.nameLab, $.BER),
-            /* REQUIRED   */ $._encodeVisibleString(value.location, $.BER),
-            /* IF_ABSENT  */ ((value.testImplementor === undefined) ? undefined : $._encodeVisibleString(value.testImplementor, $.BER)),
-            /* REQUIRED   */ $._encodeVisibleString(value.testReportSignatory, $.BER),
-            /* REQUIRED   */ $._encodeVisibleString(value.contactInformation, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeVisibleString, $.BER)(value.nameLab, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeVisibleString, $.BER)(value.location, $.BER),
+            /* IF_ABSENT */ ((value.testImplementor === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeVisibleString, $.BER)(value.testImplementor, $.BER)),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 3, () => $._encodeVisibleString, $.BER)(value.testReportSignatory, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 4, () => $._encodeVisibleString, $.BER)(value.contactInformation, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

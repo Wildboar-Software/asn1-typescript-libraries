@@ -217,9 +217,9 @@ function _encode_InfoDETCurve (value: InfoDETCurve, elGetter: $.ASN1Encoder<any>
     if (!_cached_encoder_for_InfoDETCurve) { _cached_encoder_for_InfoDETCurve = function (value: InfoDETCurve, elGetter: $.ASN1Encoder<InfoDETCurve>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeInteger(value.numOfSamplesEstTypeIError, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.numOfSamplesEstTypeIIError, $.BER),
-            /* REQUIRED   */ _encode_ExpressionDETCurve(value.expressionDETCurve, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.numOfSamplesEstTypeIError, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.numOfSamplesEstTypeIIError, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => _encode_ExpressionDETCurve, $.BER)(value.expressionDETCurve, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

@@ -129,10 +129,10 @@ let _cached_encoder_for_TestResult: $.ASN1Encoder<TestResult> | null = null;
 export
 function _encode_TestResult (value: TestResult, elGetter: $.ASN1Encoder<any>): _Element {
     if (!_cached_encoder_for_TestResult) { _cached_encoder_for_TestResult = $._encode_choice<TestResult>({
-    "testResultEnrol": _encode_TestResultEnrol,
-    "testResultAcquire": _encode_TestResultAcquire,
-    "testResultVerify": _encode_TestResultVerify,
-    "testResultIdentify": _encode_TestResultIdentify,
+    "testResultEnrol": $._encode_implicit(_TagClass.context, 0, () => _encode_TestResultEnrol, $.BER),
+    "testResultAcquire": $._encode_implicit(_TagClass.context, 1, () => _encode_TestResultAcquire, $.BER),
+    "testResultVerify": $._encode_implicit(_TagClass.context, 2, () => _encode_TestResultVerify, $.BER),
+    "testResultIdentify": $._encode_implicit(_TagClass.context, 3, () => _encode_TestResultIdentify, $.BER),
 }, $.BER); }
     return _cached_encoder_for_TestResult(value, elGetter);
 }

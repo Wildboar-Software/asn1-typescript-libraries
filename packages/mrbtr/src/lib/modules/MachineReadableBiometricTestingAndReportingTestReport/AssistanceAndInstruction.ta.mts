@@ -239,9 +239,9 @@ function _encode_AssistanceAndInstruction (value: AssistanceAndInstruction, elGe
     if (!_cached_encoder_for_AssistanceAndInstruction) { _cached_encoder_for_AssistanceAndInstruction = function (value: AssistanceAndInstruction, elGetter: $.ASN1Encoder<AssistanceAndInstruction>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_AssistanceLocation(value.assistanceLocation, $.BER),
-            /* REQUIRED   */ _encode_AssistanceMode(value.assistanceMode, $.BER),
-            /* REQUIRED   */ _encode_InstructionMode(value.instructionMode, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_AssistanceLocation, $.BER)(value.assistanceLocation, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => _encode_AssistanceMode, $.BER)(value.assistanceMode, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => _encode_InstructionMode, $.BER)(value.instructionMode, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

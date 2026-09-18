@@ -230,10 +230,10 @@ function _encode_ResultMatchVerify (value: ResultMatchVerify, elGetter: $.ASN1En
     if (!_cached_encoder_for_ResultMatchVerify) { _cached_encoder_for_ResultMatchVerify = function (value: ResultMatchVerify, elGetter: $.ASN1Encoder<ResultMatchVerify>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.infoDETFNMRFMR === undefined) ? undefined : _encode_InfoDETCurve(value.infoDETFNMRFMR, $.BER)),
-            /* IF_ABSENT  */ ((value.infoDETFRRFAR === undefined) ? undefined : _encode_InfoDETCurve(value.infoDETFRRFAR, $.BER)),
-            /* IF_ABSENT  */ ((value.infoDETGFRRGFAR === undefined) ? undefined : _encode_InfoDETCurve(value.infoDETGFRRGFAR, $.BER)),
-            /* IF_ABSENT  */ ((value.cmpScrDistr === undefined) ? undefined : _encode_DistributionRealReal(value.cmpScrDistr, $.BER))
+            /* IF_ABSENT */ ((value.infoDETFNMRFMR === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_InfoDETCurve, $.BER)(value.infoDETFNMRFMR, $.BER)),
+            /* IF_ABSENT */ ((value.infoDETFRRFAR === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_InfoDETCurve, $.BER)(value.infoDETFRRFAR, $.BER)),
+            /* IF_ABSENT */ ((value.infoDETGFRRGFAR === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_InfoDETCurve, $.BER)(value.infoDETGFRRGFAR, $.BER)),
+            /* IF_ABSENT */ ((value.cmpScrDistr === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_DistributionRealReal, $.BER)(value.cmpScrDistr, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

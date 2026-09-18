@@ -258,12 +258,12 @@ function _encode_TestReportScenarioForOneCondition (value: TestReportScenarioFor
     if (!_cached_encoder_for_TestReportScenarioForOneCondition) { _cached_encoder_for_TestReportScenarioForOneCondition = function (value: TestReportScenarioForOneCondition, elGetter: $.ASN1Encoder<TestReportScenarioForOneCondition>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_TestCrewInformation(value.testCrewInfo, $.BER),
-            /* REQUIRED   */ _encode_LevelPolicyAssistance(value.levelPolicyAssistance, $.BER),
-            /* REQUIRED   */ _encode_EnvironmentalInformation(value.environInfo, $.BER),
-            /* IF_ABSENT  */ ((value.dateStarted === undefined) ? undefined : _encode_Date(value.dateStarted, $.BER)),
-            /* IF_ABSENT  */ ((value.dateEnded === undefined) ? undefined : _encode_Date(value.dateEnded, $.BER)),
-            /* REQUIRED   */ $._encodeSequenceOf<TestResult>(() => _encode_TestResult, $.BER)(value.testResult, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_TestCrewInformation, $.BER)(value.testCrewInfo, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => _encode_LevelPolicyAssistance, $.BER)(value.levelPolicyAssistance, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => _encode_EnvironmentalInformation, $.BER)(value.environInfo, $.BER),
+            /* IF_ABSENT */ ((value.dateStarted === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_Date, $.BER)(value.dateStarted, $.BER)),
+            /* IF_ABSENT */ ((value.dateEnded === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_Date, $.BER)(value.dateEnded, $.BER)),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 5, () => $._encodeSequenceOf<TestResult>(() => _encode_TestResult, $.BER), $.BER)(value.testResult, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

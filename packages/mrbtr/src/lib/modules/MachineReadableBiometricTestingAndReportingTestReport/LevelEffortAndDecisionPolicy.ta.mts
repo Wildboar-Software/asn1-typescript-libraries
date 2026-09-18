@@ -205,8 +205,8 @@ function _encode_LevelEffortAndDecisionPolicy (value: LevelEffortAndDecisionPoli
     if (!_cached_encoder_for_LevelEffortAndDecisionPolicy) { _cached_encoder_for_LevelEffortAndDecisionPolicy = function (value: LevelEffortAndDecisionPolicy, elGetter: $.ASN1Encoder<LevelEffortAndDecisionPolicy>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_LevelAndPolicy(value.levelAndPolicyEnrol, $.BER),
-            /* REQUIRED   */ _encode_LevelAndPolicy(value.levelAndPolicyCmp, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_LevelAndPolicy, $.BER)(value.levelAndPolicyEnrol, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => _encode_LevelAndPolicy, $.BER)(value.levelAndPolicyCmp, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

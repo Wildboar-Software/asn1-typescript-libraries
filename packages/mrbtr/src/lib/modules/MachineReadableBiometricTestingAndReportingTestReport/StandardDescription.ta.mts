@@ -229,10 +229,10 @@ function _encode_StandardDescription (value: StandardDescription, elGetter: $.AS
     if (!_cached_encoder_for_StandardDescription) { _cached_encoder_for_StandardDescription = function (value: StandardDescription, elGetter: $.ASN1Encoder<StandardDescription>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeVisibleString(value.standardName, $.BER),
-            /* REQUIRED   */ $._encodeVisibleString(value.standardNumber, $.BER),
-            /* REQUIRED   */ $._encodeVisibleString(value.standardPart, $.BER),
-            /* REQUIRED   */ _encode_Date(value.standardPublicationDate, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeVisibleString, $.BER)(value.standardName, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeVisibleString, $.BER)(value.standardNumber, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => $._encodeVisibleString, $.BER)(value.standardPart, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 3, () => _encode_Date, $.BER)(value.standardPublicationDate, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

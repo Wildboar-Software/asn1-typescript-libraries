@@ -206,8 +206,8 @@ function _encode_TestResultEnrol (value: TestResultEnrol, elGetter: $.ASN1Encode
     if (!_cached_encoder_for_TestResultEnrol) { _cached_encoder_for_TestResultEnrol = function (value: TestResultEnrol, elGetter: $.ASN1Encoder<TestResultEnrol>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeReal(value.failureToEnrolRate, $.BER),
-            /* IF_ABSENT  */ ((value.durationEnrol === undefined) ? undefined : _encode_StatisticInformationSet(value.durationEnrol, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeReal, $.BER)(value.failureToEnrolRate, $.BER),
+            /* IF_ABSENT */ ((value.durationEnrol === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_StatisticInformationSet, $.BER)(value.durationEnrol, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

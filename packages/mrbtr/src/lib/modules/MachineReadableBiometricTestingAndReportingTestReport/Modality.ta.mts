@@ -178,7 +178,7 @@ function _decode_Modality (el: _Element): Modality {
     let subtype: OPTIONAL<BiometricSubtype>;
     const callbacks: $.DecodingMap = {
         "type": (_el: _Element): void => { type_ = _decode_BiometricType(_el); },
-        "subtype": (_el: _Element): void => { subtype = _decode_BiometricSubtype(_el); }
+        "subtype": (_el: _Element): void => { subtype = $._decode_explicit<BiometricSubtype>(() => _decode_BiometricSubtype)(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_Modality,
@@ -208,8 +208,8 @@ function _encode_Modality (value: Modality, elGetter: $.ASN1Encoder<any>): _Elem
     if (!_cached_encoder_for_Modality) { _cached_encoder_for_Modality = function (value: Modality, elGetter: $.ASN1Encoder<Modality>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_BiometricType(value.type_, $.BER),
-            /* IF_ABSENT  */ ((value.subtype === undefined) ? undefined : _encode_BiometricSubtype(value.subtype, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_BiometricType, $.BER)(value.type_, $.BER),
+            /* IF_ABSENT */ ((value.subtype === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => _encode_BiometricSubtype, $.BER)(value.subtype, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

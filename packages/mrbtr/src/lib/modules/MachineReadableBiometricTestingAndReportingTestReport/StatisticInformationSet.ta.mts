@@ -278,14 +278,14 @@ function _encode_StatisticInformationSet (value: StatisticInformationSet, elGett
     if (!_cached_encoder_for_StatisticInformationSet) { _cached_encoder_for_StatisticInformationSet = function (value: StatisticInformationSet, elGetter: $.ASN1Encoder<StatisticInformationSet>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_UnitTime(value.unitTime, $.BER),
-            /* IF_ABSENT  */ ((value.numberOfMeasurements === undefined) ? undefined : $._encodeInteger(value.numberOfMeasurements, $.BER)),
-            /* IF_ABSENT  */ ((value.median === undefined) ? undefined : $._encodeReal(value.median, $.BER)),
-            /* IF_ABSENT  */ ((value.mean === undefined) ? undefined : $._encodeReal(value.mean, $.BER)),
-            /* IF_ABSENT  */ ((value.minimum === undefined) ? undefined : $._encodeReal(value.minimum, $.BER)),
-            /* IF_ABSENT  */ ((value.maximum === undefined) ? undefined : $._encodeReal(value.maximum, $.BER)),
-            /* IF_ABSENT  */ ((value.stdDev === undefined) ? undefined : $._encodeReal(value.stdDev, $.BER)),
-            /* IF_ABSENT  */ ((value.medAbsDev === undefined) ? undefined : $._encodeReal(value.medAbsDev, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_UnitTime, $.BER)(value.unitTime, $.BER),
+            /* IF_ABSENT */ ((value.numberOfMeasurements === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.numberOfMeasurements, $.BER)),
+            /* IF_ABSENT */ ((value.median === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeReal, $.BER)(value.median, $.BER)),
+            /* IF_ABSENT */ ((value.mean === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeReal, $.BER)(value.mean, $.BER)),
+            /* IF_ABSENT */ ((value.minimum === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => $._encodeReal, $.BER)(value.minimum, $.BER)),
+            /* IF_ABSENT */ ((value.maximum === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => $._encodeReal, $.BER)(value.maximum, $.BER)),
+            /* IF_ABSENT */ ((value.stdDev === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => $._encodeReal, $.BER)(value.stdDev, $.BER)),
+            /* IF_ABSENT */ ((value.medAbsDev === undefined) ? undefined : $._encode_implicit(_TagClass.context, 7, () => $._encodeReal, $.BER)(value.medAbsDev, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

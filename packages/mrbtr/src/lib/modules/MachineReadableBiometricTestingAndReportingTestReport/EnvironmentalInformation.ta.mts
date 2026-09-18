@@ -227,10 +227,10 @@ function _encode_EnvironmentalInformation (value: EnvironmentalInformation, elGe
     if (!_cached_encoder_for_EnvironmentalInformation) { _cached_encoder_for_EnvironmentalInformation = function (value: EnvironmentalInformation, elGetter: $.ASN1Encoder<EnvironmentalInformation>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeVisibleString(value.exceptionalCondition, $.BER),
-            /* IF_ABSENT  */ ((value.celsiusTemp === undefined) ? undefined : $._encodeReal(value.celsiusTemp, $.BER)),
-            /* IF_ABSENT  */ ((value.dBNoise === undefined) ? undefined : $._encodeReal(value.dBNoise, $.BER)),
-            /* IF_ABSENT  */ ((value.lightingInfo === undefined) ? undefined : $._encodeVisibleString(value.lightingInfo, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeVisibleString, $.BER)(value.exceptionalCondition, $.BER),
+            /* IF_ABSENT */ ((value.celsiusTemp === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeReal, $.BER)(value.celsiusTemp, $.BER)),
+            /* IF_ABSENT */ ((value.dBNoise === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeReal, $.BER)(value.dBNoise, $.BER)),
+            /* IF_ABSENT */ ((value.lightingInfo === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeVisibleString, $.BER)(value.lightingInfo, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

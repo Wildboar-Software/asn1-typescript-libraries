@@ -221,9 +221,9 @@ function _encode_ResultMatchClosedIdentify (value: ResultMatchClosedIdentify, el
     if (!_cached_encoder_for_ResultMatchClosedIdentify) { _cached_encoder_for_ResultMatchClosedIdentify = function (value: ResultMatchClosedIdentify, elGetter: $.ASN1Encoder<ResultMatchClosedIdentify>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_DistributionIntegerReal(value.cmcCurveClosed, $.BER),
-            /* REQUIRED   */ _encode_ExpressionHistogram(value.srchExecDistr, $.BER),
-            /* IF_ABSENT  */ ((value.durationClosedIdentify === undefined) ? undefined : _encode_StatisticInformationSet(value.durationClosedIdentify, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_DistributionIntegerReal, $.BER)(value.cmcCurveClosed, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => _encode_ExpressionHistogram, $.BER)(value.srchExecDistr, $.BER),
+            /* IF_ABSENT */ ((value.durationClosedIdentify === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_StatisticInformationSet, $.BER)(value.durationClosedIdentify, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

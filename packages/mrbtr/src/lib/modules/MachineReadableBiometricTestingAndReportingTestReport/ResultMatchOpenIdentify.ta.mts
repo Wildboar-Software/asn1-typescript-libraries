@@ -246,11 +246,11 @@ function _encode_ResultMatchOpenIdentify (value: ResultMatchOpenIdentify, elGett
     if (!_cached_encoder_for_ResultMatchOpenIdentify) { _cached_encoder_for_ResultMatchOpenIdentify = function (value: ResultMatchOpenIdentify, elGetter: $.ASN1Encoder<ResultMatchOpenIdentify>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_DistributionIntegerReal(value.cmcCurveOpen, $.BER),
-            /* REQUIRED   */ _encode_ExpressionHistogram(value.srchExecDistrEnroled, $.BER),
-            /* REQUIRED   */ _encode_ExpressionHistogram(value.srchExecDistrNoEnroled, $.BER),
-            /* IF_ABSENT  */ ((value.infoDETCurveFNIRFPIR === undefined) ? undefined : _encode_InfoDETCurve(value.infoDETCurveFNIRFPIR, $.BER)),
-            /* IF_ABSENT  */ ((value.durationOpenIdentify === undefined) ? undefined : _encode_StatisticInformationSet(value.durationOpenIdentify, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_DistributionIntegerReal, $.BER)(value.cmcCurveOpen, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => _encode_ExpressionHistogram, $.BER)(value.srchExecDistrEnroled, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => _encode_ExpressionHistogram, $.BER)(value.srchExecDistrNoEnroled, $.BER),
+            /* IF_ABSENT */ ((value.infoDETCurveFNIRFPIR === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_InfoDETCurve, $.BER)(value.infoDETCurveFNIRFPIR, $.BER)),
+            /* IF_ABSENT */ ((value.durationOpenIdentify === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_StatisticInformationSet, $.BER)(value.durationOpenIdentify, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

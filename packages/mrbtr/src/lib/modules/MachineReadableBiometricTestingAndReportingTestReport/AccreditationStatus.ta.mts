@@ -208,8 +208,8 @@ function _encode_AccreditationStatus (value: AccreditationStatus, elGetter: $.AS
     if (!_cached_encoder_for_AccreditationStatus) { _cached_encoder_for_AccreditationStatus = function (value: AccreditationStatus, elGetter: $.ASN1Encoder<AccreditationStatus>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeSequenceOf<AccreditingBody>(() => _encode_AccreditingBody, $.BER)(value.accreditingBodies, $.BER),
-            /* IF_ABSENT  */ ((value.scopeAccreditation === undefined) ? undefined : _encode_ScopeAccreditation(value.scopeAccreditation, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeSequenceOf<AccreditingBody>(() => _encode_AccreditingBody, $.BER), $.BER)(value.accreditingBodies, $.BER),
+            /* IF_ABSENT */ ((value.scopeAccreditation === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_ScopeAccreditation, $.BER)(value.scopeAccreditation, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

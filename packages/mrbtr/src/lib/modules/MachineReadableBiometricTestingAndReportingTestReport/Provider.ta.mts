@@ -244,10 +244,10 @@ function _encode_Provider (value: Provider, elGetter: $.ASN1Encoder<any>): _Elem
     if (!_cached_encoder_for_Provider) { _cached_encoder_for_Provider = function (value: Provider, elGetter: $.ASN1Encoder<Provider>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_Name(value.nameProvider, $.BER),
-            /* REQUIRED   */ _encode_TypeProvider(value.typeProvider, $.BER),
-            /* REQUIRED   */ _encode_RoleProvider(value.roleProvider, $.BER),
-            /* IF_ABSENT  */ ((value.contactInformation === undefined) ? undefined : $._encodeVisibleString(value.contactInformation, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_Name, $.BER)(value.nameProvider, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => _encode_TypeProvider, $.BER)(value.typeProvider, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => _encode_RoleProvider, $.BER)(value.roleProvider, $.BER),
+            /* IF_ABSENT */ ((value.contactInformation === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeVisibleString, $.BER)(value.contactInformation, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

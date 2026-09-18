@@ -230,10 +230,10 @@ function _encode_CorpusStatistics (value: CorpusStatistics, elGetter: $.ASN1Enco
     if (!_cached_encoder_for_CorpusStatistics) { _cached_encoder_for_CorpusStatistics = function (value: CorpusStatistics, elGetter: $.ASN1Encoder<CorpusStatistics>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_CorpusCrewBasicStatistics(value.corpusBasicStatistics, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.numSamples, $.BER),
-            /* IF_ABSENT  */ ((value.samplesPerIndividualEnrol === undefined) ? undefined : _encode_SamplesPerIndividual(value.samplesPerIndividualEnrol, $.BER)),
-            /* IF_ABSENT  */ ((value.samplesPerIndividualProbe === undefined) ? undefined : _encode_SamplesPerIndividual(value.samplesPerIndividualProbe, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_CorpusCrewBasicStatistics, $.BER)(value.corpusBasicStatistics, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.numSamples, $.BER),
+            /* IF_ABSENT */ ((value.samplesPerIndividualEnrol === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_SamplesPerIndividual, $.BER)(value.samplesPerIndividualEnrol, $.BER)),
+            /* IF_ABSENT */ ((value.samplesPerIndividualProbe === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_SamplesPerIndividual, $.BER)(value.samplesPerIndividualProbe, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

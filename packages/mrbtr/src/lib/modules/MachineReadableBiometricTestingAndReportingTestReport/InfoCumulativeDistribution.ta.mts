@@ -217,9 +217,9 @@ function _encode_InfoCumulativeDistribution (value: InfoCumulativeDistribution, 
     if (!_cached_encoder_for_InfoCumulativeDistribution) { _cached_encoder_for_InfoCumulativeDistribution = function (value: InfoCumulativeDistribution, elGetter: $.ASN1Encoder<InfoCumulativeDistribution>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeInteger(value.mean, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.median, $.BER),
-            /* REQUIRED   */ _encode_DistributionIntegerReal(value.cumulativeDistribution, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.mean, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.median, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => _encode_DistributionIntegerReal, $.BER)(value.cumulativeDistribution, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

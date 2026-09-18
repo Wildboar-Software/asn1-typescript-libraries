@@ -258,12 +258,12 @@ function _encode_ProductInformation (value: ProductInformation, elGetter: $.ASN1
     if (!_cached_encoder_for_ProductInformation) { _cached_encoder_for_ProductInformation = function (value: ProductInformation, elGetter: $.ASN1Encoder<ProductInformation>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_Provider(value.provider, $.BER),
-            /* REQUIRED   */ _encode_NameProduct(value.nameProduct, $.BER),
-            /* IF_ABSENT  */ ((value.description === undefined) ? undefined : $._encodeVisibleString(value.description, $.BER)),
-            /* REQUIRED   */ $._encodeSequenceOf<Function>(() => _encode_Function, $.BER)(value.functionProduct, $.BER),
-            /* IF_ABSENT  */ ((value.outputProduct === undefined) ? undefined : _encode_DataType(value.outputProduct, $.BER)),
-            /* REQUIRED   */ _encode_Modality(value.modalityProduct, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_Provider, $.BER)(value.provider, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => _encode_NameProduct, $.BER)(value.nameProduct, $.BER),
+            /* IF_ABSENT */ ((value.description === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeVisibleString, $.BER)(value.description, $.BER)),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 3, () => $._encodeSequenceOf<Function>(() => _encode_Function, $.BER), $.BER)(value.functionProduct, $.BER),
+            /* IF_ABSENT */ ((value.outputProduct === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_DataType, $.BER)(value.outputProduct, $.BER)),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 5, () => _encode_Modality, $.BER)(value.modalityProduct, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

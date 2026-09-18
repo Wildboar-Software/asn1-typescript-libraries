@@ -204,8 +204,8 @@ function _encode_ExpressionPointRealReal (value: ExpressionPointRealReal, elGett
     if (!_cached_encoder_for_ExpressionPointRealReal) { _cached_encoder_for_ExpressionPointRealReal = function (value: ExpressionPointRealReal, elGetter: $.ASN1Encoder<ExpressionPointRealReal>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeReal(value.xValue, $.BER),
-            /* REQUIRED   */ $._encodeReal(value.yValue, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeReal, $.BER)(value.xValue, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeReal, $.BER)(value.yValue, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
