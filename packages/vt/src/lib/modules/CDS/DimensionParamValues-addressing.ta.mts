@@ -129,35 +129,8 @@ const DimensionParamValues_addressing_notPermitted: DimensionParamValues_address
  */
 export
 const notPermitted: DimensionParamValues_addressing = DimensionParamValues_addressing_notPermitted; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DimensionParamValues_addressing: $.ASN1Decoder<DimensionParamValues_addressing> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DimensionParamValues_addressing
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DimensionParamValues_addressing (el: _Element): DimensionParamValues_addressing {
-    if (!_cached_decoder_for_DimensionParamValues_addressing) { _cached_decoder_for_DimensionParamValues_addressing = $._decodeInteger; }
-    return _cached_decoder_for_DimensionParamValues_addressing(el);
-}
-
-let _cached_encoder_for_DimensionParamValues_addressing: $.ASN1Encoder<DimensionParamValues_addressing> | null = null;
-
-/**
- * @summary Encodes a(n) DimensionParamValues_addressing into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DimensionParamValues_addressing, encoded as an ASN.1 Element.
- */
-export
-function _encode_DimensionParamValues_addressing (value: DimensionParamValues_addressing, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DimensionParamValues_addressing) { _cached_encoder_for_DimensionParamValues_addressing = $._encodeInteger; }
-    return _cached_encoder_for_DimensionParamValues_addressing(value, elGetter);
-}
+export const _decode_DimensionParamValues_addressing = $._decodeInteger;
+export const _encode_DimensionParamValues_addressing = $._encodeInteger;
 
 
 /* eslint-enable */

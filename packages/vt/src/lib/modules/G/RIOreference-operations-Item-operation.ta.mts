@@ -113,35 +113,8 @@ const RIOreference_operations_Item_operation_callRecord: RIOreference_operations
  */
 export
 const callRecord: RIOreference_operations_Item_operation = RIOreference_operations_Item_operation_callRecord; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_RIOreference_operations_Item_operation: $.ASN1Decoder<RIOreference_operations_Item_operation> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) RIOreference_operations_Item_operation
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RIOreference_operations_Item_operation (el: _Element): RIOreference_operations_Item_operation {
-    if (!_cached_decoder_for_RIOreference_operations_Item_operation) { _cached_decoder_for_RIOreference_operations_Item_operation = $._decodeInteger; }
-    return _cached_decoder_for_RIOreference_operations_Item_operation(el);
-}
-
-let _cached_encoder_for_RIOreference_operations_Item_operation: $.ASN1Encoder<RIOreference_operations_Item_operation> | null = null;
-
-/**
- * @summary Encodes a(n) RIOreference_operations_Item_operation into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RIOreference_operations_Item_operation, encoded as an ASN.1 Element.
- */
-export
-function _encode_RIOreference_operations_Item_operation (value: RIOreference_operations_Item_operation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RIOreference_operations_Item_operation) { _cached_encoder_for_RIOreference_operations_Item_operation = $._encodeInteger; }
-    return _cached_encoder_for_RIOreference_operations_Item_operation(value, elGetter);
-}
+export const _decode_RIOreference_operations_Item_operation = $._decodeInteger;
+export const _encode_RIOreference_operations_Item_operation = $._encodeInteger;
 
 
 /* eslint-enable */

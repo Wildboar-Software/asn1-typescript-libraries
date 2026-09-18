@@ -201,35 +201,8 @@ const AccessRuleValue_no_access: AccessRuleValue = 6; /* LONG_NAMED_INTEGER_VALU
  */
 export
 const no_access: AccessRuleValue = AccessRuleValue_no_access; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_AccessRuleValue: $.ASN1Decoder<AccessRuleValue> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AccessRuleValue
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AccessRuleValue (el: _Element): AccessRuleValue {
-    if (!_cached_decoder_for_AccessRuleValue) { _cached_decoder_for_AccessRuleValue = $._decodeInteger; }
-    return _cached_decoder_for_AccessRuleValue(el);
-}
-
-let _cached_encoder_for_AccessRuleValue: $.ASN1Encoder<AccessRuleValue> | null = null;
-
-/**
- * @summary Encodes a(n) AccessRuleValue into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AccessRuleValue, encoded as an ASN.1 Element.
- */
-export
-function _encode_AccessRuleValue (value: AccessRuleValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccessRuleValue) { _cached_encoder_for_AccessRuleValue = $._encodeInteger; }
-    return _cached_encoder_for_AccessRuleValue(value, elGetter);
-}
+export const _decode_AccessRuleValue = $._decodeInteger;
+export const _encode_AccessRuleValue = $._encodeInteger;
 
 
 /* eslint-enable */

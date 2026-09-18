@@ -123,35 +123,8 @@ const ParamOfferList_deliveryControl_quarantine: number = 2; /* LONG_NAMED_BIT *
  */
 export
 const quarantine: number = ParamOfferList_deliveryControl_quarantine; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_ParamOfferList_deliveryControl: $.ASN1Decoder<ParamOfferList_deliveryControl> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ParamOfferList_deliveryControl
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ParamOfferList_deliveryControl (el: _Element): ParamOfferList_deliveryControl {
-    if (!_cached_decoder_for_ParamOfferList_deliveryControl) { _cached_decoder_for_ParamOfferList_deliveryControl = $._decodeBitString; }
-    return _cached_decoder_for_ParamOfferList_deliveryControl(el);
-}
-
-let _cached_encoder_for_ParamOfferList_deliveryControl: $.ASN1Encoder<ParamOfferList_deliveryControl> | null = null;
-
-/**
- * @summary Encodes a(n) ParamOfferList_deliveryControl into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ParamOfferList_deliveryControl, encoded as an ASN.1 Element.
- */
-export
-function _encode_ParamOfferList_deliveryControl (value: ParamOfferList_deliveryControl, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParamOfferList_deliveryControl) { _cached_encoder_for_ParamOfferList_deliveryControl = $._encodeBitString; }
-    return _cached_encoder_for_ParamOfferList_deliveryControl(value, elGetter);
-}
+export const _decode_ParamOfferList_deliveryControl = $._decodeBitString;
+export const _encode_ParamOfferList_deliveryControl = $._encodeBitString;
 
 
 /* eslint-enable */

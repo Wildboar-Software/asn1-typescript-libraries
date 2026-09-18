@@ -277,35 +277,8 @@ const FunctionalUnits_contextRetention: number = 12; /* LONG_NAMED_BIT */
  */
 export
 const contextRetention: number = FunctionalUnits_contextRetention; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_FunctionalUnits: $.ASN1Decoder<FunctionalUnits> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FunctionalUnits
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FunctionalUnits (el: _Element): FunctionalUnits {
-    if (!_cached_decoder_for_FunctionalUnits) { _cached_decoder_for_FunctionalUnits = $._decodeBitString; }
-    return _cached_decoder_for_FunctionalUnits(el);
-}
-
-let _cached_encoder_for_FunctionalUnits: $.ASN1Encoder<FunctionalUnits> | null = null;
-
-/**
- * @summary Encodes a(n) FunctionalUnits into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FunctionalUnits, encoded as an ASN.1 Element.
- */
-export
-function _encode_FunctionalUnits (value: FunctionalUnits, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FunctionalUnits) { _cached_encoder_for_FunctionalUnits = $._encodeBitString; }
-    return _cached_encoder_for_FunctionalUnits(value, elGetter);
-}
+export const _decode_FunctionalUnits = $._decodeBitString;
+export const _encode_FunctionalUnits = $._encodeBitString;
 
 
 /* eslint-enable */
