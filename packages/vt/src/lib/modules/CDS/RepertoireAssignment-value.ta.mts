@@ -82,7 +82,7 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type RepertoireAssignment_value =
     { iso2022: OCTET_STRING[] } /* CHOICE_ALT_ROOT */
-    | /* FIXME: isonnnn CHOICE_ALT_ROOT */;
+    | { isonnnn: _Element } /* CHOICE_ALT_ROOT */;
 
 let _cached_decoder_for_RepertoireAssignment_value: $.ASN1Decoder<RepertoireAssignment_value> | null = null;
 
@@ -96,7 +96,7 @@ export
 function _decode_RepertoireAssignment_value (el: _Element): RepertoireAssignment_value {
     if (!_cached_decoder_for_RepertoireAssignment_value) { _cached_decoder_for_RepertoireAssignment_value = $._decode_inextensible_choice<RepertoireAssignment_value>({
     "CONTEXT 1": [ "iso2022", $._decode_implicit<OCTET_STRING[]>(() => $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString)) ],
-    "// FIXME: COULD_NOT_COMPILE_TYPE_DECODER": [ "isonnnn", undefined ]
+    "CONTEXT 2": [ "isonnnn", $._decode_implicit<_Element>(() => $._decodeAny) ]
 }); }
     return _cached_decoder_for_RepertoireAssignment_value(el);
 }

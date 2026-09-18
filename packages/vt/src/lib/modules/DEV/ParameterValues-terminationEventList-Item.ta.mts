@@ -85,7 +85,12 @@ import { ParameterValues_terminationEventList_Item_eventId, _decode_ParameterVal
 export
 class ParameterValues_terminationEventList_Item {
     constructor (
-// FIXME: readonly event: AnyType,
+        /**
+         * @summary `event`.
+         * @public
+         * @readonly
+         */
+        readonly event: _Element,
         /**
          * @summary `eventId`.
          * @public
@@ -107,7 +112,7 @@ class ParameterValues_terminationEventList_Item {
      * @returns {ParameterValues_terminationEventList_Item}
      */
     public static _from_object (_o: { [_K in keyof (ParameterValues_terminationEventList_Item)]: (ParameterValues_terminationEventList_Item)[_K] }): ParameterValues_terminationEventList_Item {
-        return new ParameterValues_terminationEventList_Item(_o., _o.eventId);
+        return new ParameterValues_terminationEventList_Item(_o.event, _o.eventId);
     }
 
 
@@ -170,7 +175,7 @@ function _decode_ParameterValues_terminationEventList_Item (el: _Element): Param
     }
     sequence[0].name = "event";
     sequence[1].name = "eventId";
-    let event!: /* FIXME: event COULD_NOT_COMPILE_TYPE */;
+    let event!: _Element;
     let eventId!: ParameterValues_terminationEventList_Item_eventId;
     event = $._decodeAny(sequence[0]);
     eventId = _decode_ParameterValues_terminationEventList_Item_eventId(sequence[1]);
