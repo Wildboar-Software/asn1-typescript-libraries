@@ -155,7 +155,7 @@ function _decode_Provider (el: _Element): Provider {
     let roleProvider!: RoleProvider;
     let contactInformation: OPTIONAL<VisibleString>;
     const callbacks: $.DecodingMap = {
-        "nameProvider": (_el: _Element): void => { nameProvider = _decode_Name(_el); },
+        "nameProvider": (_el: _Element): void => { nameProvider = $._decode_explicit<Name>(() => _decode_Name)(_el); },
         "typeProvider": (_el: _Element): void => { typeProvider = _decode_TypeProvider(_el); },
         "roleProvider": (_el: _Element): void => { roleProvider = _decode_RoleProvider(_el); },
         "contactInformation": (_el: _Element): void => { contactInformation = $._decodeVisibleString(_el); }
@@ -190,7 +190,7 @@ function _encode_Provider (value: Provider, elGetter: $.ASN1Encoder<any>): _Elem
     if (!_cached_encoder_for_Provider) { _cached_encoder_for_Provider = function (value: Provider): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_Name, $.BER)(value.nameProvider, $.BER),
+            /* REQUIRED  */ $._encode_explicit(_TagClass.context, 0, () => _encode_Name, $.BER)(value.nameProvider, $.BER),
             /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => _encode_TypeProvider, $.BER)(value.typeProvider, $.BER),
             /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => _encode_RoleProvider, $.BER)(value.roleProvider, $.BER),
             /* IF_ABSENT */ ((value.contactInformation === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeVisibleString, $.BER)(value.contactInformation, $.BER)),
