@@ -216,9 +216,9 @@ function _encode_IntervalIntegerFrequency (value: IntervalIntegerFrequency, elGe
     if (!_cached_encoder_for_IntervalIntegerFrequency) { _cached_encoder_for_IntervalIntegerFrequency = function (value: IntervalIntegerFrequency, elGetter: $.ASN1Encoder<IntervalIntegerFrequency>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeInteger(value.lowerLimit, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.upperLimit, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.frequency, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.lowerLimit, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.upperLimit, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER)(value.frequency, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

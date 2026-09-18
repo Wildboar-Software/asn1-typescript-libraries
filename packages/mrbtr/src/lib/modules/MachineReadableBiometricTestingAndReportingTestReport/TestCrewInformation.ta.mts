@@ -231,10 +231,10 @@ function _encode_TestCrewInformation (value: TestCrewInformation, elGetter: $.AS
     if (!_cached_encoder_for_TestCrewInformation) { _cached_encoder_for_TestCrewInformation = function (value: TestCrewInformation, elGetter: $.ASN1Encoder<TestCrewInformation>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeObjectIdentifier(value.identifier, $.BER),
-            /* REQUIRED   */ $._encodeVisibleString(value.location, $.BER),
-            /* REQUIRED   */ _encode_ExpressionHistogram(value.habituation, $.BER),
-            /* REQUIRED   */ _encode_CorpusCrewBasicStatistics(value.testCrewStatistics, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeObjectIdentifier, $.BER)(value.identifier, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeVisibleString, $.BER)(value.location, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => _encode_ExpressionHistogram, $.BER)(value.habituation, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 3, () => _encode_CorpusCrewBasicStatistics, $.BER)(value.testCrewStatistics, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

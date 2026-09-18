@@ -216,9 +216,9 @@ function _encode_LevelAndPolicy (value: LevelAndPolicy, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_LevelAndPolicy) { _cached_encoder_for_LevelAndPolicy = function (value: LevelAndPolicy, elGetter: $.ASN1Encoder<LevelAndPolicy>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeInteger(value.minNumAttempt, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.maxNumAttempt, $.BER),
-            /* REQUIRED   */ $._encodeReal(value.maxDurPermitted, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.minNumAttempt, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.maxNumAttempt, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => $._encodeReal, $.BER)(value.maxDurPermitted, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

@@ -235,10 +235,10 @@ function _encode_TestReportInformation (value: TestReportInformation, elGetter: 
     if (!_cached_encoder_for_TestReportInformation) { _cached_encoder_for_TestReportInformation = function (value: TestReportInformation, elGetter: $.ASN1Encoder<TestReportInformation>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_TestLabInformation(value.testLabInformation, $.BER),
-            /* REQUIRED   */ _encode_StandardDescription(value.compliantStandard, $.BER),
-            /* REQUIRED   */ _encode_Date(value.testReportIssuanceDate, $.BER),
-            /* REQUIRED   */ _encode_ExternalDocument(value.parentTestReport, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_TestLabInformation, $.BER)(value.testLabInformation, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => _encode_StandardDescription, $.BER)(value.compliantStandard, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => _encode_Date, $.BER)(value.testReportIssuanceDate, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 3, () => _encode_ExternalDocument, $.BER)(value.parentTestReport, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

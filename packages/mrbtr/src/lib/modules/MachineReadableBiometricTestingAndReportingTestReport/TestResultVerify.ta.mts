@@ -208,8 +208,8 @@ function _encode_TestResultVerify (value: TestResultVerify, elGetter: $.ASN1Enco
     if (!_cached_encoder_for_TestResultVerify) { _cached_encoder_for_TestResultVerify = function (value: TestResultVerify, elGetter: $.ASN1Encoder<TestResultVerify>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_ResultMatchVerify(value.resultMatchVerify, $.BER),
-            /* IF_ABSENT  */ ((value.durationVerify === undefined) ? undefined : _encode_StatisticInformationSet(value.durationVerify, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_ResultMatchVerify, $.BER)(value.resultMatchVerify, $.BER),
+            /* IF_ABSENT */ ((value.durationVerify === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_StatisticInformationSet, $.BER)(value.durationVerify, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

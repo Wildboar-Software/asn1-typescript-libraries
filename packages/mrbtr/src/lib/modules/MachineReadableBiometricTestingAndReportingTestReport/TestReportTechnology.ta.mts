@@ -240,10 +240,10 @@ function _encode_TestReportTechnology (value: TestReportTechnology, elGetter: $.
     if (!_cached_encoder_for_TestReportTechnology) { _cached_encoder_for_TestReportTechnology = function (value: TestReportTechnology, elGetter: $.ASN1Encoder<TestReportTechnology>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_DEFAULT */ (value.version === undefined || $.deepEq(value.version, TestReportTechnology._default_value_for_version) ? undefined : _encode_MRTDBTRVersion(value.version, $.BER)),
-            /* REQUIRED   */ _encode_ProductInformation(value.targetInfo, $.BER),
-            /* REQUIRED   */ _encode_TestReportInformation(value.testReportInfo, $.BER),
-            /* REQUIRED   */ $._encodeSequenceOf<TestReportTechnologyForOneCondition>(() => _encode_TestReportTechnologyForOneCondition, $.BER)(value.testReports, $.BER)
+            /* IF_DEFAULT */ (value.version === undefined || $.deepEq(value.version, TestReportTechnology._default_value_for_version) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_MRTDBTRVersion, $.BER)(value.version, $.BER)),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => _encode_ProductInformation, $.BER)(value.targetInfo, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => _encode_TestReportInformation, $.BER)(value.testReportInfo, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 3, () => $._encodeSequenceOf<TestReportTechnologyForOneCondition>(() => _encode_TestReportTechnologyForOneCondition, $.BER), $.BER)(value.testReports, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

@@ -208,8 +208,8 @@ function _encode_LevelPolicyAssistance (value: LevelPolicyAssistance, elGetter: 
     if (!_cached_encoder_for_LevelPolicyAssistance) { _cached_encoder_for_LevelPolicyAssistance = function (value: LevelPolicyAssistance, elGetter: $.ASN1Encoder<LevelPolicyAssistance>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_LevelEffortAndDecisionPolicy(value.levelEffortAndDecisionPolicy, $.BER),
-            /* IF_ABSENT  */ ((value.assistanceAndInstruction === undefined) ? undefined : _encode_AssistanceAndInstruction(value.assistanceAndInstruction, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_LevelEffortAndDecisionPolicy, $.BER)(value.levelEffortAndDecisionPolicy, $.BER),
+            /* IF_ABSENT */ ((value.assistanceAndInstruction === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_AssistanceAndInstruction, $.BER)(value.assistanceAndInstruction, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

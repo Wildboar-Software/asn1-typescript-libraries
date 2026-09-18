@@ -216,9 +216,9 @@ function _encode_AccreditingBody (value: AccreditingBody, elGetter: $.ASN1Encode
     if (!_cached_encoder_for_AccreditingBody) { _cached_encoder_for_AccreditingBody = function (value: AccreditingBody, elGetter: $.ASN1Encoder<AccreditingBody>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeVisibleString(value.nameAccreditingBody, $.BER),
-            /* REQUIRED   */ $._encodeObjectIdentifier(value.identifierCertificate, $.BER),
-            /* REQUIRED   */ $._encodeOctetString(value.signatory, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeVisibleString, $.BER)(value.nameAccreditingBody, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeObjectIdentifier, $.BER)(value.identifierCertificate, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => $._encodeOctetString, $.BER)(value.signatory, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

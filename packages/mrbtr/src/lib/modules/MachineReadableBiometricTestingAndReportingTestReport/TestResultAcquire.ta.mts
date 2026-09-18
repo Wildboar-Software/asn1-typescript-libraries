@@ -206,8 +206,8 @@ function _encode_TestResultAcquire (value: TestResultAcquire, elGetter: $.ASN1En
     if (!_cached_encoder_for_TestResultAcquire) { _cached_encoder_for_TestResultAcquire = function (value: TestResultAcquire, elGetter: $.ASN1Encoder<TestResultAcquire>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeReal(value.failureToAcquireRate, $.BER),
-            /* IF_ABSENT  */ ((value.durationAcquire === undefined) ? undefined : _encode_StatisticInformationSet(value.durationAcquire, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeReal, $.BER)(value.failureToAcquireRate, $.BER),
+            /* IF_ABSENT */ ((value.durationAcquire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_StatisticInformationSet, $.BER)(value.durationAcquire, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

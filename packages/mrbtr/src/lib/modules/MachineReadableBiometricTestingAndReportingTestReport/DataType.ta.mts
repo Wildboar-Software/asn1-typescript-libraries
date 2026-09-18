@@ -220,8 +220,8 @@ function _encode_DataType (value: DataType, elGetter: $.ASN1Encoder<any>): _Elem
     if (!_cached_encoder_for_DataType) { _cached_encoder_for_DataType = function (value: DataType, elGetter: $.ASN1Encoder<DataType>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_ProcessedLevel(value.processedLevel, $.BER),
-            /* IF_ABSENT  */ ((value.purpose === undefined) ? undefined : _encode_Purpose(value.purpose, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_ProcessedLevel, $.BER)(value.processedLevel, $.BER),
+            /* IF_ABSENT */ ((value.purpose === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_Purpose, $.BER)(value.purpose, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

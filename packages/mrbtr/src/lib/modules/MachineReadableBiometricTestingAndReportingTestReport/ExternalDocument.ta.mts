@@ -290,14 +290,14 @@ function _encode_ExternalDocument (value: ExternalDocument, elGetter: $.ASN1Enco
     if (!_cached_encoder_for_ExternalDocument) { _cached_encoder_for_ExternalDocument = function (value: ExternalDocument, elGetter: $.ASN1Encoder<ExternalDocument>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_URI(value.link, $.BER),
-            /* REQUIRED   */ $._encodeVisibleString(value.title, $.BER),
-            /* IF_ABSENT  */ ((value.authors === undefined) ? undefined : $._encodeSequenceOf<VisibleString>(() => $._encodeVisibleString, $.BER)(value.authors, $.BER)),
-            /* IF_ABSENT  */ ((value.publisher === undefined) ? undefined : $._encodeVisibleString(value.publisher, $.BER)),
-            /* IF_ABSENT  */ ((value.editor === undefined) ? undefined : $._encodeVisibleString(value.editor, $.BER)),
-            /* IF_ABSENT  */ ((value.typeDocument === undefined) ? undefined : _encode_TypeDocument(value.typeDocument, $.BER)),
-            /* IF_ABSENT  */ ((value.publicationDate === undefined) ? undefined : _encode_Date(value.publicationDate, $.BER)),
-            /* REQUIRED   */ _encode_Availability(value.availability, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_URI, $.BER)(value.link, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeVisibleString, $.BER)(value.title, $.BER),
+            /* IF_ABSENT */ ((value.authors === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeSequenceOf<VisibleString>(() => $._encodeVisibleString, $.BER), $.BER)(value.authors, $.BER)),
+            /* IF_ABSENT */ ((value.publisher === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeVisibleString, $.BER)(value.publisher, $.BER)),
+            /* IF_ABSENT */ ((value.editor === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => $._encodeVisibleString, $.BER)(value.editor, $.BER)),
+            /* IF_ABSENT */ ((value.typeDocument === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => _encode_TypeDocument, $.BER)(value.typeDocument, $.BER)),
+            /* IF_ABSENT */ ((value.publicationDate === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => _encode_Date, $.BER)(value.publicationDate, $.BER)),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 7, () => _encode_Availability, $.BER)(value.availability, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

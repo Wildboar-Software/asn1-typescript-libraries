@@ -217,9 +217,9 @@ function _encode_CorpusComposition (value: CorpusComposition, elGetter: $.ASN1En
     if (!_cached_encoder_for_CorpusComposition) { _cached_encoder_for_CorpusComposition = function (value: CorpusComposition, elGetter: $.ASN1Encoder<CorpusComposition>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeObjectIdentifier(value.identifier, $.BER),
-            /* REQUIRED   */ $._encodeVisibleString(value.nameCorpus, $.BER),
-            /* REQUIRED   */ _encode_CorpusStatistics(value.corpusStatistics, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeObjectIdentifier, $.BER)(value.identifier, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeVisibleString, $.BER)(value.nameCorpus, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => _encode_CorpusStatistics, $.BER)(value.corpusStatistics, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

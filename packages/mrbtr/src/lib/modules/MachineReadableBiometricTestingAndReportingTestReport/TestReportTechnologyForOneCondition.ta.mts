@@ -232,10 +232,10 @@ function _encode_TestReportTechnologyForOneCondition (value: TestReportTechnolog
     if (!_cached_encoder_for_TestReportTechnologyForOneCondition) { _cached_encoder_for_TestReportTechnologyForOneCondition = function (value: TestReportTechnologyForOneCondition, elGetter: $.ASN1Encoder<TestReportTechnologyForOneCondition>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_CorpusInformation(value.corpusInfo, $.BER),
-            /* IF_ABSENT  */ ((value.dateStarted === undefined) ? undefined : _encode_Date(value.dateStarted, $.BER)),
-            /* IF_ABSENT  */ ((value.dateEnded === undefined) ? undefined : _encode_Date(value.dateEnded, $.BER)),
-            /* REQUIRED   */ $._encodeSequenceOf<TestResult>(() => _encode_TestResult, $.BER)(value.testResult, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_CorpusInformation, $.BER)(value.corpusInfo, $.BER),
+            /* IF_ABSENT */ ((value.dateStarted === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_Date, $.BER)(value.dateStarted, $.BER)),
+            /* IF_ABSENT */ ((value.dateEnded === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_Date, $.BER)(value.dateEnded, $.BER)),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 3, () => $._encodeSequenceOf<TestResult>(() => _encode_TestResult, $.BER), $.BER)(value.testResult, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

@@ -207,8 +207,8 @@ function _encode_TestLabInformation (value: TestLabInformation, elGetter: $.ASN1
     if (!_cached_encoder_for_TestLabInformation) { _cached_encoder_for_TestLabInformation = function (value: TestLabInformation, elGetter: $.ASN1Encoder<TestLabInformation>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_IdentificationTestLab(value.identificationTestLab, $.BER),
-            /* REQUIRED   */ _encode_AccreditationStatus(value.accreditationStatus, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_IdentificationTestLab, $.BER)(value.identificationTestLab, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => _encode_AccreditationStatus, $.BER)(value.accreditationStatus, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

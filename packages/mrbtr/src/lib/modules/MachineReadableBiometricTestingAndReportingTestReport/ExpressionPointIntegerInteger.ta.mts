@@ -204,8 +204,8 @@ function _encode_ExpressionPointIntegerInteger (value: ExpressionPointIntegerInt
     if (!_cached_encoder_for_ExpressionPointIntegerInteger) { _cached_encoder_for_ExpressionPointIntegerInteger = function (value: ExpressionPointIntegerInteger, elGetter: $.ASN1Encoder<ExpressionPointIntegerInteger>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeInteger(value.subjectId, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.numberOfSamples, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.subjectId, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.numberOfSamples, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

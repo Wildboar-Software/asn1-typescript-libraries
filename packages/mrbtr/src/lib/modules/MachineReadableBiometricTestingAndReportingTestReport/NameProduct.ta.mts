@@ -243,11 +243,11 @@ function _encode_NameProduct (value: NameProduct, elGetter: $.ASN1Encoder<any>):
     if (!_cached_encoder_for_NameProduct) { _cached_encoder_for_NameProduct = function (value: NameProduct, elGetter: $.ASN1Encoder<NameProduct>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_Name(value.modelName, $.BER),
-            /* IF_ABSENT  */ ((value.productCBEFF === undefined) ? undefined : _encode_Product(value.productCBEFF, $.BER)),
-            /* REQUIRED   */ _encode_VersionProduct(value.version, $.BER),
-            /* REQUIRED   */ _encode_VersionProduct(value.softwareVersion, $.BER),
-            /* REQUIRED   */ _encode_VersionProduct(value.firmwareVersion, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_Name, $.BER)(value.modelName, $.BER),
+            /* IF_ABSENT */ ((value.productCBEFF === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_Product, $.BER)(value.productCBEFF, $.BER)),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => _encode_VersionProduct, $.BER)(value.version, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 3, () => _encode_VersionProduct, $.BER)(value.softwareVersion, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 4, () => _encode_VersionProduct, $.BER)(value.firmwareVersion, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

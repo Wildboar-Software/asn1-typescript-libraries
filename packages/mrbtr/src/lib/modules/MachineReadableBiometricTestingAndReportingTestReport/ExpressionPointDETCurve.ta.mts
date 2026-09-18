@@ -216,9 +216,9 @@ function _encode_ExpressionPointDETCurve (value: ExpressionPointDETCurve, elGett
     if (!_cached_encoder_for_ExpressionPointDETCurve) { _cached_encoder_for_ExpressionPointDETCurve = function (value: ExpressionPointDETCurve, elGetter: $.ASN1Encoder<ExpressionPointDETCurve>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.threshold === undefined) ? undefined : $._encodeReal(value.threshold, $.BER)),
-            /* REQUIRED   */ $._encodeReal(value.typeIError, $.BER),
-            /* REQUIRED   */ $._encodeReal(value.typeIIError, $.BER)
+            /* IF_ABSENT */ ((value.threshold === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeReal, $.BER)(value.threshold, $.BER)),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeReal, $.BER)(value.typeIError, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => $._encodeReal, $.BER)(value.typeIIError, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

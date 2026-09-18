@@ -229,10 +229,10 @@ function _encode_SamplesPerIndividual (value: SamplesPerIndividual, elGetter: $.
     if (!_cached_encoder_for_SamplesPerIndividual) { _cached_encoder_for_SamplesPerIndividual = function (value: SamplesPerIndividual, elGetter: $.ASN1Encoder<SamplesPerIndividual>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeInteger(value.numSubjects, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.mean, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.median, $.BER),
-            /* REQUIRED   */ _encode_DistributionIntegerInteger(value.distrSubjSample, $.BER)
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.numSubjects, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.mean, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER)(value.median, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 3, () => _encode_DistributionIntegerInteger, $.BER)(value.distrSubjSample, $.BER),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

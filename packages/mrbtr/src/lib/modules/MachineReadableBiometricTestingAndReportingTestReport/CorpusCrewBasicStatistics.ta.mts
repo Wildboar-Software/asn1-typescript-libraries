@@ -305,17 +305,17 @@ function _encode_CorpusCrewBasicStatistics (value: CorpusCrewBasicStatistics, el
     if (!_cached_encoder_for_CorpusCrewBasicStatistics) { _cached_encoder_for_CorpusCrewBasicStatistics = function (value: CorpusCrewBasicStatistics, elGetter: $.ASN1Encoder<CorpusCrewBasicStatistics>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encodeInteger(value.numIndividuals, $.BER),
-            /* IF_ABSENT  */ ((value.numMales === undefined) ? undefined : $._encodeInteger(value.numMales, $.BER)),
-            /* IF_ABSENT  */ ((value.numFemales === undefined) ? undefined : $._encodeInteger(value.numFemales, $.BER)),
-            /* IF_ABSENT  */ ((value.numOther === undefined) ? undefined : $._encodeInteger(value.numOther, $.BER)),
-            /* IF_ABSENT  */ ((value.numUnknown === undefined) ? undefined : $._encodeInteger(value.numUnknown, $.BER)),
-            /* REQUIRED   */ $._encodeInteger(value.numIndividualsEnrol, $.BER),
-            /* REQUIRED   */ $._encodeInteger(value.numIndividualsVeriId, $.BER),
-            /* IF_ABSENT  */ ((value.ageDistrMale === undefined) ? undefined : _encode_InfoCumulativeDistribution(value.ageDistrMale, $.BER)),
-            /* IF_ABSENT  */ ((value.ageDistrFemale === undefined) ? undefined : _encode_InfoCumulativeDistribution(value.ageDistrFemale, $.BER)),
-            /* IF_ABSENT  */ ((value.elapsDistr === undefined) ? undefined : _encode_InfoCumulativeDistribution(value.elapsDistr, $.BER)),
-            /* IF_ABSENT  */ ((value.visitsDayDistr === undefined) ? undefined : _encode_InfoCumulativeDistribution(value.visitsDayDistr, $.BER))
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.numIndividuals, $.BER),
+            /* IF_ABSENT */ ((value.numMales === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.numMales, $.BER)),
+            /* IF_ABSENT */ ((value.numFemales === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER)(value.numFemales, $.BER)),
+            /* IF_ABSENT */ ((value.numOther === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeInteger, $.BER)(value.numOther, $.BER)),
+            /* IF_ABSENT */ ((value.numUnknown === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => $._encodeInteger, $.BER)(value.numUnknown, $.BER)),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 5, () => $._encodeInteger, $.BER)(value.numIndividualsEnrol, $.BER),
+            /* REQUIRED  */ $._encode_implicit(_TagClass.context, 6, () => $._encodeInteger, $.BER)(value.numIndividualsVeriId, $.BER),
+            /* IF_ABSENT */ ((value.ageDistrMale === undefined) ? undefined : $._encode_implicit(_TagClass.context, 7, () => _encode_InfoCumulativeDistribution, $.BER)(value.ageDistrMale, $.BER)),
+            /* IF_ABSENT */ ((value.ageDistrFemale === undefined) ? undefined : $._encode_implicit(_TagClass.context, 8, () => _encode_InfoCumulativeDistribution, $.BER)(value.ageDistrFemale, $.BER)),
+            /* IF_ABSENT */ ((value.elapsDistr === undefined) ? undefined : $._encode_implicit(_TagClass.context, 9, () => _encode_InfoCumulativeDistribution, $.BER)(value.elapsDistr, $.BER)),
+            /* IF_ABSENT */ ((value.visitsDayDistr === undefined) ? undefined : $._encode_implicit(_TagClass.context, 10, () => _encode_InfoCumulativeDistribution, $.BER)(value.visitsDayDistr, $.BER)),
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
