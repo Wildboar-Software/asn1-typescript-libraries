@@ -83,7 +83,7 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 const vtp_b: OBJECT_IDENTIFIER = _OID.fromParts([
-    standard,
+    0 /* standard */,
     9041,
 ], iso);
 
