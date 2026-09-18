@@ -125,10 +125,8 @@ function _decode_ParameterValues_terminationEventList_Item (el: _Element): Param
     }
     sequence[0].name = "event";
     sequence[1].name = "eventId";
-    let event!: _Element;
-    let eventId!: ParameterValues_terminationEventList_Item_eventId;
-    event = $._decodeAny(sequence[0]);
-    eventId = _decode_ParameterValues_terminationEventList_Item_eventId(sequence[1]);
+    const event: _Element = $._decodeAny(sequence[0]);
+    const eventId: ParameterValues_terminationEventList_Item_eventId = _decode_ParameterValues_terminationEventList_Item_eventId(sequence[1]);
     return new ParameterValues_terminationEventList_Item(
         event,
         eventId,

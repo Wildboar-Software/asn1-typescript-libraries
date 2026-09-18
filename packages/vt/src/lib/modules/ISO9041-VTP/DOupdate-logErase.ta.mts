@@ -133,12 +133,9 @@ function _decode_DOupdate_logErase (el: _Element): DOupdate_logErase {
     sequence[0].name = "logStartErase";
     sequence[1].name = "logEndErase";
     sequence[2].name = "attribute";
-    let logStartErase!: LogPointer;
-    let logEndErase!: LogPointer;
-    let attribute!: EraseAttr;
-    logStartErase = _decode_LogPointer(sequence[0]);
-    logEndErase = _decode_LogPointer(sequence[1]);
-    attribute = _decode_EraseAttr(sequence[2]);
+    const logStartErase: LogPointer = _decode_LogPointer(sequence[0]);
+    const logEndErase: LogPointer = _decode_LogPointer(sequence[1]);
+    const attribute: EraseAttr = _decode_EraseAttr(sequence[2]);
     return new DOupdate_logErase(
         logStartErase,
         logEndErase,

@@ -123,10 +123,8 @@ function _decode_FEICOupdate_Item (el: _Element): FEICOupdate_Item {
     }
     sequence[0].name = "index";
     sequence[1].name = "content";
-    let index!: INTEGER;
-    let content!: FEI[];
-    index = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    content = $._decode_implicit<FEI[]>(() => $._decodeSetOf<FEI>(() => _decode_FEI))(sequence[1]);
+    const index: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const content: FEI[] = $._decode_implicit<FEI[]>(() => $._decodeSetOf<FEI>(() => _decode_FEI))(sequence[1]);
     return new FEICOupdate_Item(
         index,
         content,

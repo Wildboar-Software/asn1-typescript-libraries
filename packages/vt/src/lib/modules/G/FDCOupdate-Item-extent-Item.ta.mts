@@ -122,10 +122,8 @@ function _decode_FDCOupdate_Item_extent_Item (el: _Element): FDCOupdate_Item_ext
     }
     sequence[0].name = "position";
     sequence[1].name = "dimension";
-    let position!: MeasurePair;
-    let dimension!: MeasurePair;
-    position = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[0]);
-    dimension = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[1]);
+    const position: MeasurePair = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[0]);
+    const dimension: MeasurePair = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[1]);
     return new FDCOupdate_Item_extent_Item(
         position,
         dimension,

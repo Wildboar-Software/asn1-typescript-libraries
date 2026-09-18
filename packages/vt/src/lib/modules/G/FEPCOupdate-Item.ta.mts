@@ -145,14 +145,10 @@ function _decode_FEPCOupdate_Item (el: _Element): FEPCOupdate_Item {
     sequence[1].name = "event";
     sequence[2].name = "condition";
     sequence[3].name = "reactions";
-    let index!: INTEGER;
-    let event!: FEE;
-    let condition!: FEC[];
-    let reactions!: FER[];
-    index = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    event = $._decode_explicit<FEE>(() => _decode_FEE)(sequence[1]);
-    condition = $._decode_implicit<FEC[]>(() => $._decodeSetOf<FEC>(() => _decode_FEC))(sequence[2]);
-    reactions = $._decode_implicit<FER[]>(() => $._decodeSequenceOf<FER>(() => _decode_FER))(sequence[3]);
+    const index: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const event: FEE = $._decode_explicit<FEE>(() => _decode_FEE)(sequence[1]);
+    const condition: FEC[] = $._decode_implicit<FEC[]>(() => $._decodeSetOf<FEC>(() => _decode_FEC))(sequence[2]);
+    const reactions: FER[] = $._decode_implicit<FER[]>(() => $._decodeSequenceOf<FER>(() => _decode_FER))(sequence[3]);
     return new FEPCOupdate_Item(
         index,
         event,

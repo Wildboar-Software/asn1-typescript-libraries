@@ -122,10 +122,8 @@ function _decode_AttrExtent_address (el: _Element): AttrExtent_address {
     }
     sequence[0].name = "beginning";
     sequence[1].name = "ending";
-    let beginning!: Pointer;
-    let ending!: Pointer;
-    beginning = _decode_Pointer(sequence[0]);
-    ending = _decode_Pointer(sequence[1]);
+    const beginning: Pointer = _decode_Pointer(sequence[0]);
+    const ending: Pointer = _decode_Pointer(sequence[1]);
     return new AttrExtent_address(
         beginning,
         ending,

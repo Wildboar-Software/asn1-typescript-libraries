@@ -125,10 +125,8 @@ function _decode_ParameterOffers_terminationEventList_Item_Item (el: _Element): 
     }
     sequence[0].name = "event";
     sequence[1].name = "eventId";
-    let event!: _Element;
-    let eventId!: ParameterOffers_terminationEventList_Item_Item_eventId;
-    event = $._decodeAny(sequence[0]);
-    eventId = _decode_ParameterOffers_terminationEventList_Item_Item_eventId(sequence[1]);
+    const event: _Element = $._decodeAny(sequence[0]);
+    const eventId: ParameterOffers_terminationEventList_Item_Item_eventId = _decode_ParameterOffers_terminationEventList_Item_Item_eventId(sequence[1]);
     return new ParameterOffers_terminationEventList_Item_Item(
         event,
         eventId,

@@ -123,10 +123,8 @@ function _decode_Values_Item (el: _Element): Values_Item {
     }
     sequence[0].name = "name";
     sequence[1].name = "values";
-    let name!: PrintableString;
-    let values!: ParameterValues;
-    name = $._decodePrintableString(sequence[0]);
-    values = _decode_ParameterValues(sequence[1]);
+    const name: PrintableString = $._decodePrintableString(sequence[0]);
+    const values: ParameterValues = _decode_ParameterValues(sequence[1]);
     return new Values_Item(
         name,
         values,

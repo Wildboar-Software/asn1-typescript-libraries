@@ -123,10 +123,8 @@ function _decode_BKQcontent_stuser_Item (el: _Element): BKQcontent_stuser_Item {
     }
     sequence[0].name = "utag";
     sequence[1].name = "uvalue";
-    let utag!: INTEGER;
-    let uvalue!: OCTET_STRING;
-    utag = $._decodeInteger(sequence[0]);
-    uvalue = $._decodeOctetString(sequence[1]);
+    const utag: INTEGER = $._decodeInteger(sequence[0]);
+    const uvalue: OCTET_STRING = $._decodeOctetString(sequence[1]);
     return new BKQcontent_stuser_Item(
         utag,
         uvalue,

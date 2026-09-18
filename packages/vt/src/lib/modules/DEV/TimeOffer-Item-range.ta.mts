@@ -140,14 +140,10 @@ function _decode_TimeOffer_Item_range (el: _Element): TimeOffer_Item_range {
     sequence[1].name = "lowerExponent";
     sequence[2].name = "upperMultiplier";
     sequence[3].name = "upperExponent";
-    let lowerMultiplier!: INTEGER;
-    let lowerExponent!: INTEGER;
-    let upperMultiplier!: INTEGER;
-    let upperExponent!: INTEGER;
-    lowerMultiplier = $._decodeInteger(sequence[0]);
-    lowerExponent = $._decodeInteger(sequence[1]);
-    upperMultiplier = $._decodeInteger(sequence[2]);
-    upperExponent = $._decodeInteger(sequence[3]);
+    const lowerMultiplier: INTEGER = $._decodeInteger(sequence[0]);
+    const lowerExponent: INTEGER = $._decodeInteger(sequence[1]);
+    const upperMultiplier: INTEGER = $._decodeInteger(sequence[2]);
+    const upperExponent: INTEGER = $._decodeInteger(sequence[3]);
     return new TimeOffer_Item_range(
         lowerMultiplier,
         lowerExponent,

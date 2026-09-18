@@ -133,12 +133,9 @@ function _decode_DOupdate_createBlock (el: _Element): DOupdate_createBlock {
     sequence[0].name = "blockPosition";
     sequence[1].name = "origin";
     sequence[2].name = "dimension";
-    let blockPosition!: Block;
-    let origin!: MeasurePair;
-    let dimension!: MeasurePair;
-    blockPosition = $._decode_implicit<Block>(() => _decode_Block)(sequence[0]);
-    origin = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[1]);
-    dimension = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[2]);
+    const blockPosition: Block = $._decode_implicit<Block>(() => _decode_Block)(sequence[0]);
+    const origin: MeasurePair = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[1]);
+    const dimension: MeasurePair = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[2]);
     return new DOupdate_createBlock(
         blockPosition,
         origin,

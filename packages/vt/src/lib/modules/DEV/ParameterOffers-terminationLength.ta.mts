@@ -127,10 +127,8 @@ function _decode_ParameterOffers_terminationLength (el: _Element): ParameterOffe
     }
     sequence[0].name = "length";
     sequence[1].name = "eventId";
-    let length!: IntegerOffer;
-    let eventId!: ParameterOffers_terminationLength_eventId;
-    length = $._decode_implicit<IntegerOffer>(() => _decode_IntegerOffer)(sequence[0]);
-    eventId = $._decode_implicit<ParameterOffers_terminationLength_eventId>(() => _decode_ParameterOffers_terminationLength_eventId)(sequence[1]);
+    const length: IntegerOffer = $._decode_implicit<IntegerOffer>(() => _decode_IntegerOffer)(sequence[0]);
+    const eventId: ParameterOffers_terminationLength_eventId = $._decode_implicit<ParameterOffers_terminationLength_eventId>(() => _decode_ParameterOffers_terminationLength_eventId)(sequence[1]);
     return new ParameterOffers_terminationLength(
         length,
         eventId,

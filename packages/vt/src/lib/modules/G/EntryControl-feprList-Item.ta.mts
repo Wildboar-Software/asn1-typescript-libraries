@@ -123,10 +123,8 @@ function _decode_EntryControl_feprList_Item (el: _Element): EntryControl_feprLis
     }
     sequence[0].name = "fepcoName";
     sequence[1].name = "recordIndex";
-    let fepcoName!: PrintableString;
-    let recordIndex!: INTEGER;
-    fepcoName = $._decodePrintableString(sequence[0]);
-    recordIndex = $._decodeInteger(sequence[1]);
+    const fepcoName: PrintableString = $._decodePrintableString(sequence[0]);
+    const recordIndex: INTEGER = $._decodeInteger(sequence[1]);
     return new EntryControl_feprList_Item(
         fepcoName,
         recordIndex,

@@ -122,10 +122,8 @@ function _decode_IntegerOffer_Item_range (el: _Element): IntegerOffer_Item_range
     }
     sequence[0].name = "minimum";
     sequence[1].name = "maximum";
-    let minimum!: INTEGER;
-    let maximum!: INTEGER;
-    minimum = $._decodeInteger(sequence[0]);
-    maximum = $._decodeInteger(sequence[1]);
+    const minimum: INTEGER = $._decodeInteger(sequence[0]);
+    const maximum: INTEGER = $._decodeInteger(sequence[1]);
     return new IntegerOffer_Item_range(
         minimum,
         maximum,
