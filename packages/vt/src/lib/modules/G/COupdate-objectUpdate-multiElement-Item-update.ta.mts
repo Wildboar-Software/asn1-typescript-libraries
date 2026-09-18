@@ -1,0 +1,133 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { COupdate_objectUpdate_multiElement_Item_update_booleanUpdate, _decode_COupdate_objectUpdate_multiElement_Item_update_booleanUpdate, _encode_COupdate_objectUpdate_multiElement_Item_update_booleanUpdate } from "../G/COupdate-objectUpdate-multiElement-Item-update-booleanUpdate.ta.mjs";
+// export { COupdate_objectUpdate_multiElement_Item_update_booleanUpdate, _decode_COupdate_objectUpdate_multiElement_Item_update_booleanUpdate, _encode_COupdate_objectUpdate_multiElement_Item_update_booleanUpdate } from "../G/COupdate-objectUpdate-multiElement-Item-update-booleanUpdate.ta.mjs";
+
+
+/**
+ * @summary COupdate_objectUpdate_multiElement_Item_update
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * COupdate-objectUpdate-multiElement-Item-update ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ```
+ */
+export
+type COupdate_objectUpdate_multiElement_Item_update =
+    { characterUpdate: OCTET_STRING } /* CHOICE_ALT_ROOT */
+    | { booleanUpdate: COupdate_objectUpdate_multiElement_Item_update_booleanUpdate } /* CHOICE_ALT_ROOT */
+    | { symbolicUpdate: INTEGER } /* CHOICE_ALT_ROOT */
+    | { integerUpdate: INTEGER } /* CHOICE_ALT_ROOT */
+    | { bitStringUpdate: BIT_STRING } /* CHOICE_ALT_ROOT */;
+
+let _cached_decoder_for_COupdate_objectUpdate_multiElement_Item_update: $.ASN1Decoder<COupdate_objectUpdate_multiElement_Item_update> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) COupdate_objectUpdate_multiElement_Item_update
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_COupdate_objectUpdate_multiElement_Item_update (el: _Element): COupdate_objectUpdate_multiElement_Item_update {
+    if (!_cached_decoder_for_COupdate_objectUpdate_multiElement_Item_update) { _cached_decoder_for_COupdate_objectUpdate_multiElement_Item_update = $._decode_inextensible_choice<COupdate_objectUpdate_multiElement_Item_update>({
+    "CONTEXT 0": [ "characterUpdate", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
+    "CONTEXT 1": [ "booleanUpdate", $._decode_implicit<COupdate_objectUpdate_multiElement_Item_update_booleanUpdate>(() => _decode_COupdate_objectUpdate_multiElement_Item_update_booleanUpdate) ],
+    "CONTEXT 2": [ "symbolicUpdate", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
+    "CONTEXT 3": [ "integerUpdate", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
+    "CONTEXT 4": [ "bitStringUpdate", $._decode_implicit<BIT_STRING>(() => $._decodeBitString) ]
+}); }
+    return _cached_decoder_for_COupdate_objectUpdate_multiElement_Item_update(el);
+}
+
+let _cached_encoder_for_COupdate_objectUpdate_multiElement_Item_update: $.ASN1Encoder<COupdate_objectUpdate_multiElement_Item_update> | null = null;
+
+/**
+ * @summary Encodes a(n) COupdate_objectUpdate_multiElement_Item_update into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The COupdate_objectUpdate_multiElement_Item_update, encoded as an ASN.1 Element.
+ */
+export
+function _encode_COupdate_objectUpdate_multiElement_Item_update (value: COupdate_objectUpdate_multiElement_Item_update, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_COupdate_objectUpdate_multiElement_Item_update) { _cached_encoder_for_COupdate_objectUpdate_multiElement_Item_update = $._encode_choice<COupdate_objectUpdate_multiElement_Item_update>({
+    "characterUpdate": $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER),
+    "booleanUpdate": $._encode_implicit(_TagClass.context, 1, () => _encode_COupdate_objectUpdate_multiElement_Item_update_booleanUpdate, $.BER),
+    "symbolicUpdate": $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER),
+    "integerUpdate": $._encode_implicit(_TagClass.context, 3, () => $._encodeInteger, $.BER),
+    "bitStringUpdate": $._encode_implicit(_TagClass.context, 4, () => $._encodeBitString, $.BER),
+}, $.BER); }
+    return _cached_encoder_for_COupdate_objectUpdate_multiElement_Item_update(value, elGetter);
+}
+
+
+/* eslint-enable */

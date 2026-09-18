@@ -1,0 +1,228 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { Block, _decode_Block, _encode_Block } from "../G/Block.ta.mjs";
+// export { Block, _decode_Block, _encode_Block } from "../G/Block.ta.mjs";
+import { MeasurePair, _decode_MeasurePair, _encode_MeasurePair } from "../G/MeasurePair.ta.mjs";
+// export { MeasurePair, _decode_MeasurePair, _encode_MeasurePair } from "../G/MeasurePair.ta.mjs";
+
+
+/**
+ * @summary DOupdate_createBlock
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * DOupdate-createBlock ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ```
+ * 
+ * @class
+ */
+export
+class DOupdate_createBlock {
+    constructor (
+        /**
+         * @summary `blockPosition`.
+         * @public
+         * @readonly
+         */
+        readonly blockPosition: G.Block,
+        /**
+         * @summary `origin`.
+         * @public
+         * @readonly
+         */
+        readonly origin: G.MeasurePair,
+        /**
+         * @summary `dimension`.
+         * @public
+         * @readonly
+         */
+        readonly dimension: G.MeasurePair
+    ) {}
+
+    /**
+     * @summary Restructures an object into a DOupdate_createBlock
+     * @description
+     * 
+     * This takes an `object` and converts it to a `DOupdate_createBlock`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `DOupdate_createBlock`.
+     * @returns {DOupdate_createBlock}
+     */
+    public static _from_object (_o: { [_K in keyof (DOupdate_createBlock)]: (DOupdate_createBlock)[_K] }): DOupdate_createBlock {
+        return new DOupdate_createBlock(_o.blockPosition, _o.origin, _o.dimension);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of DOupdate_createBlock
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_DOupdate_createBlock: $.ComponentSpec[] = [
+    new $.ComponentSpec("blockPosition", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("origin", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("dimension", false, $.hasTag(_TagClass.context, 2))
+];
+
+/**
+ * @summary The Trailing Root Component Types of DOupdate_createBlock
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_DOupdate_createBlock: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of DOupdate_createBlock
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_DOupdate_createBlock: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_DOupdate_createBlock: $.ASN1Decoder<DOupdate_createBlock> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) DOupdate_createBlock
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_DOupdate_createBlock (el: _Element): DOupdate_createBlock {
+    if (!_cached_decoder_for_DOupdate_createBlock) { _cached_decoder_for_DOupdate_createBlock = function (el: _Element): DOupdate_createBlock {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 3) {
+        throw new _ConstructionError("DOupdate-createBlock contained only " + sequence.length.toString() + " elements.");
+    }
+    sequence[0].name = "blockPosition";
+    sequence[1].name = "origin";
+    sequence[2].name = "dimension";
+    let blockPosition!: G.Block;
+    let origin!: G.MeasurePair;
+    let dimension!: G.MeasurePair;
+    blockPosition = $._decode_implicit<G.Block>(() => G._decode_Block)(sequence[0]);
+    origin = $._decode_implicit<G.MeasurePair>(() => G._decode_MeasurePair)(sequence[1]);
+    dimension = $._decode_implicit<G.MeasurePair>(() => G._decode_MeasurePair)(sequence[2]);
+    return new DOupdate_createBlock(
+        blockPosition,
+        origin,
+        dimension,
+
+    );
+}; }
+    return _cached_decoder_for_DOupdate_createBlock(el);
+}
+
+let _cached_encoder_for_DOupdate_createBlock: $.ASN1Encoder<DOupdate_createBlock> | null = null;
+
+/**
+ * @summary Encodes a(n) DOupdate_createBlock into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The DOupdate_createBlock, encoded as an ASN.1 Element.
+ */
+export
+function _encode_DOupdate_createBlock (value: DOupdate_createBlock, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_DOupdate_createBlock) { _cached_encoder_for_DOupdate_createBlock = function (value: DOupdate_createBlock, elGetter: $.ASN1Encoder<DOupdate_createBlock>): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => G._encode_Block, $.BER)(value.blockPosition, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => G._encode_MeasurePair, $.BER)(value.origin, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => G._encode_MeasurePair, $.BER)(value.dimension, $.BER)
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_DOupdate_createBlock(value, elGetter);
+}
+
+
+/* eslint-enable */

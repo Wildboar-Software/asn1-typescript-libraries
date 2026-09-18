@@ -1,0 +1,156 @@
+-- Sourced from ISO/IEC 9041:1997(E)
+-- Modified to remove ancient deprecated ASN.1 syntaxes.
+-- In particular, use of unnamed components in SEQUENCE and SET.
+CSS DEFINITIONS ::= BEGIN
+
+-- 12.4.1 CSS Identifiers
+-- The following are to identify parameters to be negotiated
+
+Identifier ::= SET OF SEQUENCE {
+    name    PrintableString,
+    idents  ParameterIdents
+}
+
+ParameterIdents ::= SEQUENCE {
+    typeIdentifier [0] IMPLICIT NULL OPTIONAL,
+    access         [1] IMPLICIT NULL OPTIONAL,
+    trigger        [2] IMPLICIT NULL OPTIONAL,
+    size           [3] IMPLICIT NULL OPTIONAL,
+    category       [4] IMPLICIT NULL OPTIONAL,
+    repertoire     [5] IMPLICIT NULL OPTIONAL,
+    priority       [6] IMPLICIT NULL OPTIONAL,
+    structure      [7] IMPLICIT NULL OPTIONAL,
+    multiElement   [8] IMPLICIT SEQUENCE OF ElementParamIdent OPTIONAL
+}
+
+ElementParamIdent ::= SEQUENCE {
+    elementIdentifier [0] IMPLICIT INTEGER,
+    size              [3] IMPLICIT NULL OPTIONAL,
+    category          [4] IMPLICIT NULL OPTIONAL,
+    repertoire        [5] IMPLICIT NULL OPTIONAL
+}
+
+-- 12.4.2 CSS Offers
+-- The following are for offered values during negotiation
+
+Offer ::= SET OF SEQUENCE {
+    name    PrintableString,
+    offers  ParameterOffers
+}
+
+ParameterOffers ::= SEQUENCE {
+    typeIdentifier  [0] IMPLICIT SET OF CHOICE {
+        oid     OBJECT IDENTIFIER,
+        string  PrintableString
+    },
+    access          [1] IMPLICIT AccessRuleOffer OPTIONAL,
+    trigger         [2] IMPLICIT BIT STRING { yes (0), no (1) } OPTIONAL,
+    size            [3] IMPLICIT G.IntegerOffer OPTIONAL,
+    -- Set bits are offered, unset ones are not.
+    category        [4] IMPLICIT BIT STRING {
+        character   (0),
+        boolean     (1),
+        symbolic    (2),
+        integer     (3),
+        transparent (4)
+    } OPTIONAL,
+    repertoire      [5] IMPLICIT SEQUENCE OF CDS.RepertoireAssignment OPTIONAL,
+    -- Set bits are offered, unset ones are not.
+    priority        [6] IMPLICIT BIT STRING {
+        normal (0),
+        high   (1),
+        urgent (2)
+    } OPTIONAL,
+    structure       [7] IMPLICIT SEQUENCE {
+        nonParametric NULL OPTIONAL,
+        numberElements G.IntegerOffer OPTIONAL
+    } OPTIONAL,
+    multiElement    [8] IMPLICIT SEQUENCE OF ElementParamOffer OPTIONAL
+}
+
+ElementParamOffer ::= SEQUENCE {
+    elementIdentifier   [0] IMPLICIT INTEGER,
+    size                [3] IMPLICIT G.IntegerOffer OPTIONAL,
+    -- Set bits are offered, unset ones are not.
+    category            [4] IMPLICIT BIT STRING {
+        character   (0),
+        boolean     (1),
+        symbolic    (2),
+        integer     (3),
+        transparent (4)
+    } OPTIONAL,
+    repertoire          [5] IMPLICIT SEQUENCE OF CDS.RepertoireAssignment OPTIONAL
+}
+
+-- Set bits are offered, unset ones are not.
+AccessRuleOffer ::= BIT STRING {
+    wavar           (0),
+    waci            (1),
+    waca            (2),
+    nsac            (3),
+    wavar-and-waci  (4),
+    wavar-and-waca  (5),
+    no-access       (6)
+}
+
+-- 12.4.3 CSS Values
+-- The following are for returned values during negotiation
+
+Values ::= SET OF SEQUENCE {
+    name    PrintableString,
+    values  ParameterValues
+}
+
+ParameterValues ::= SEQUENCE {
+    typeIdentifier  [0] CHOICE {
+        oid     OBJECT IDENTIFIER,
+        string  PrintableString
+    },
+    access          [1] IMPLICIT AccessRuleValue OPTIONAL,
+    triggerSelected [2] IMPLICIT BOOLEAN OPTIONAL,
+    size            [3] IMPLICIT INTEGER OPTIONAL,
+    category        [4] IMPLICIT INTEGER {
+        character   (0),
+        boolean     (1),
+        symbolic    (2),
+        integer     (3),
+        transparent (4)
+    } OPTIONAL,
+    repertoire      [5] IMPLICIT CDS.RepertoireAssignment OPTIONAL,
+    priority        [6] IMPLICIT INTEGER {
+        normal (0),
+        high   (1),
+        urgent (2)
+    } OPTIONAL,
+    structure       [7] CHOICE {
+        nonParametric NULL,
+        numberElements INTEGER
+    } OPTIONAL,
+    multiElement    [8] IMPLICIT SEQUENCE OF ElementParamValue OPTIONAL
+    -- These values are responses to an offer and must be consistent with the proposals.
+}
+
+ElementParamValue ::= SEQUENCE {
+    elementIdentifier   [0] IMPLICIT INTEGER,
+    size                [3] IMPLICIT INTEGER OPTIONAL,
+    category            [4] IMPLICIT INTEGER {
+        character   (0),
+        boolean     (1),
+        symbolic    (2),
+        integer     (3),
+        transparent (4)
+    } OPTIONAL,
+    repertoire          [5] IMPLICIT CDS.RepertoireAssignment OPTIONAL
+}
+
+AccessRuleValue ::= INTEGER {
+    wavar           (0),
+    waci            (1),
+    waca            (2),
+    nsac            (3),
+    wavar-and-waci  (4),
+    wavar-and-waca  (5),
+    no-access       (6)
+}
+
+END

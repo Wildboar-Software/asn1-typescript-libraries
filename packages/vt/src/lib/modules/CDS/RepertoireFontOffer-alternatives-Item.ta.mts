@@ -1,0 +1,230 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
+// export { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
+import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+// export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { FontAssignment, _decode_FontAssignment, _encode_FontAssignment } from "../CDS/FontAssignment.ta.mjs";
+// export { FontAssignment, _decode_FontAssignment, _encode_FontAssignment } from "../CDS/FontAssignment.ta.mjs";
+
+
+/**
+ * @summary RepertoireFontOffer_alternatives_Item
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * RepertoireFontOffer-alternatives-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ```
+ * 
+ * @class
+ */
+export
+class RepertoireFontOffer_alternatives_Item {
+    constructor (
+        /**
+         * @summary `repertoire`.
+         * @public
+         * @readonly
+         */
+        readonly repertoire: OPTIONAL<RepertoireAssignment>,
+        /**
+         * @summary `fontCapability`.
+         * @public
+         * @readonly
+         */
+        readonly fontCapability: OPTIONAL<G.IntegerOffer>,
+        /**
+         * @summary `fontAssignments`.
+         * @public
+         * @readonly
+         */
+        readonly fontAssignments: OPTIONAL<FontAssignment[]>
+    ) {}
+
+    /**
+     * @summary Restructures an object into a RepertoireFontOffer_alternatives_Item
+     * @description
+     * 
+     * This takes an `object` and converts it to a `RepertoireFontOffer_alternatives_Item`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `RepertoireFontOffer_alternatives_Item`.
+     * @returns {RepertoireFontOffer_alternatives_Item}
+     */
+    public static _from_object (_o: { [_K in keyof (RepertoireFontOffer_alternatives_Item)]: (RepertoireFontOffer_alternatives_Item)[_K] }): RepertoireFontOffer_alternatives_Item {
+        return new RepertoireFontOffer_alternatives_Item(_o.repertoire, _o.fontCapability, _o.fontAssignments);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of RepertoireFontOffer_alternatives_Item
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_RepertoireFontOffer_alternatives_Item: $.ComponentSpec[] = [
+    new $.ComponentSpec("repertoire", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("fontCapability", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("fontAssignments", true, $.hasTag(_TagClass.context, 2))
+];
+
+/**
+ * @summary The Trailing Root Component Types of RepertoireFontOffer_alternatives_Item
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_RepertoireFontOffer_alternatives_Item: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of RepertoireFontOffer_alternatives_Item
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_RepertoireFontOffer_alternatives_Item: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_RepertoireFontOffer_alternatives_Item: $.ASN1Decoder<RepertoireFontOffer_alternatives_Item> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) RepertoireFontOffer_alternatives_Item
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_RepertoireFontOffer_alternatives_Item (el: _Element): RepertoireFontOffer_alternatives_Item {
+    if (!_cached_decoder_for_RepertoireFontOffer_alternatives_Item) { _cached_decoder_for_RepertoireFontOffer_alternatives_Item = function (el: _Element): RepertoireFontOffer_alternatives_Item {
+    let repertoire: OPTIONAL<RepertoireAssignment>;
+    let fontCapability: OPTIONAL<G.IntegerOffer>;
+    let fontAssignments: OPTIONAL<FontAssignment[]>;
+    const callbacks: $.DecodingMap = {
+        "repertoire": (_el: _Element): void => { repertoire = $._decode_implicit<RepertoireAssignment>(() => _decode_RepertoireAssignment)(_el); },
+        "fontCapability": (_el: _Element): void => { fontCapability = $._decode_implicit<G.IntegerOffer>(() => G._decode_IntegerOffer)(_el); },
+        "fontAssignments": (_el: _Element): void => { fontAssignments = $._decode_implicit<FontAssignment[]>(() => $._decodeSequenceOf<FontAssignment>(() => _decode_FontAssignment))(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_RepertoireFontOffer_alternatives_Item,
+        _extension_additions_list_spec_for_RepertoireFontOffer_alternatives_Item,
+        _root_component_type_list_2_spec_for_RepertoireFontOffer_alternatives_Item,
+        undefined,
+    );
+    return new RepertoireFontOffer_alternatives_Item(
+        repertoire,
+        fontCapability,
+        fontAssignments
+    );
+}; }
+    return _cached_decoder_for_RepertoireFontOffer_alternatives_Item(el);
+}
+
+let _cached_encoder_for_RepertoireFontOffer_alternatives_Item: $.ASN1Encoder<RepertoireFontOffer_alternatives_Item> | null = null;
+
+/**
+ * @summary Encodes a(n) RepertoireFontOffer_alternatives_Item into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The RepertoireFontOffer_alternatives_Item, encoded as an ASN.1 Element.
+ */
+export
+function _encode_RepertoireFontOffer_alternatives_Item (value: RepertoireFontOffer_alternatives_Item, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_RepertoireFontOffer_alternatives_Item) { _cached_encoder_for_RepertoireFontOffer_alternatives_Item = function (value: RepertoireFontOffer_alternatives_Item, elGetter: $.ASN1Encoder<RepertoireFontOffer_alternatives_Item>): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* IF_ABSENT  */ ((value.repertoire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_RepertoireAssignment, $.BER)(value.repertoire, $.BER)),
+            /* IF_ABSENT  */ ((value.fontCapability === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => G._encode_IntegerOffer, $.BER)(value.fontCapability, $.BER)),
+            /* IF_ABSENT  */ ((value.fontAssignments === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeSequenceOf<FontAssignment>(() => _encode_FontAssignment, $.BER), $.BER)(value.fontAssignments, $.BER))
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_RepertoireFontOffer_alternatives_Item(value, elGetter);
+}
+
+
+/* eslint-enable */

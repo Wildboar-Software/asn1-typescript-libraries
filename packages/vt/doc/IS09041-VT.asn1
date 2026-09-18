@@ -1,0 +1,11 @@
+IS09041-VT
+DEFINITIONS ::=
+BEGIN
+
+vtp-b OBJECT IDENTIFIER ::= { iso standard 9041 }
+
+vtp-b-A-context OBJECT IDENTIFIER ::= { vtp-b application-context(1) initial-facilities(0) }
+
+vtp-b-syntax OBJECT IDENTIFIER ::= { vtp-b abstract-syntax(1) initial-facilities(0) }
+
+END
