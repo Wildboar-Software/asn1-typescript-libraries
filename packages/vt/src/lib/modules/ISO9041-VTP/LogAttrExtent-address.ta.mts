@@ -77,7 +77,10 @@ import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-V
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LogAttrExtent-address ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * LogAttrExtent-address ::= SEQUENCE {
+ *     beginning LogPointer,
+ *     ending LogPointer
+ * }
  * ```
  * 
  * @class

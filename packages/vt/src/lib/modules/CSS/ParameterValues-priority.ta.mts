@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterValues-priority ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterValues-priority ::= INTEGER { normal (0), high (1), urgent (2) }
  * ```
  */
 export

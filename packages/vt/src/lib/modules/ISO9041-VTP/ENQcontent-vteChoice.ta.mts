@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ENQcontent-vteChoice ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ENQcontent-vteChoice ::= INTEGER { draft (0), current (1), either (2) }
  * ```
  */
 export

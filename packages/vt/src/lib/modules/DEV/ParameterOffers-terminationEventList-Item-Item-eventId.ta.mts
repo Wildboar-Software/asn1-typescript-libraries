@@ -77,7 +77,10 @@ import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/I
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterOffers-terminationEventList-Item-Item-eventId ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterOffers-terminationEventList-Item-Item-eventId ::= SEQUENCE {
+ *     integer G.IntegerOffer OPTIONAL,
+ *     nul     NULL OPTIONAL
+ * }
  * ```
  * 
  * @class

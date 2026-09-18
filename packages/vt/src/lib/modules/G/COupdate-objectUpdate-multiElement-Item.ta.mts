@@ -77,7 +77,19 @@ import { COupdate_objectUpdate_multiElement_Item_update, _decode_COupdate_object
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * COupdate-objectUpdate-multiElement-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * COupdate-objectUpdate-multiElement-Item ::= SEQUENCE {
+ *     identifier INTEGER,
+ *     update CHOICE {
+ *         characterUpdate [0] IMPLICIT OCTET STRING,
+ *         booleanUpdate   [1] IMPLICIT SEQUENCE {
+ *             values  [0] IMPLICIT BIT STRING,
+ *             mask    [1] IMPLICIT BIT STRING OPTIONAL
+ *         }, -- See note under mask in G.COUpdate
+ *         symbolicUpdate  [2] IMPLICIT INTEGER,
+ *         integerUpdate   [3] IMPLICIT INTEGER,
+ *         bitStringUpdate [4] IMPLICIT BIT STRING
+ *     }
+ * }
  * ```
  * 
  * @class

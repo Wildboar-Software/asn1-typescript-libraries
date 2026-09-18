@@ -77,7 +77,10 @@ import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointe
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-repeatText ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-repeatText ::= SEQUENCE {
+ *     finishAddress   Pointer,
+ *     text            OCTET STRING
+ * }
  * ```
  * 
  * @class

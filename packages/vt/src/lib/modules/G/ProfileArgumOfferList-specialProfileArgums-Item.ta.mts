@@ -77,7 +77,15 @@ import { ProfileArgumOfferList_specialProfileArgums_Item_offeredValues, _decode_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileArgumOfferList-specialProfileArgums-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileArgumOfferList-specialProfileArgums-Item ::= SEQUENCE {
+ *     identifier INTEGER,
+ *     offeredValues CHOICE {
+ *         boolean [0] IMPLICIT BIT STRING { false-bit (0), true-bit (1) },
+ *         integer [1] IMPLICIT IntegerOffer,
+ *         string  [2] IMPLICIT SET OF PrintableString,
+ *         objid   [3] IMPLICIT SET OF OBJECT IDENTIFIER
+ *     }
+ * }
  * ```
  * 
  * @class

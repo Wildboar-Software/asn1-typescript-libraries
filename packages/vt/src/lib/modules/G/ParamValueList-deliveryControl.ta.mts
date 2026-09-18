@@ -76,7 +76,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParamValueList-deliveryControl ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ParamValueList-deliveryControl ::= INTEGER {
+ *     none       (0), -- value 1 for a bit implies offer,
+ *     simple     (1), -- value 0 implies no offer.
+ *     quarantine (2)
+ * }
  * ```
  */
 export

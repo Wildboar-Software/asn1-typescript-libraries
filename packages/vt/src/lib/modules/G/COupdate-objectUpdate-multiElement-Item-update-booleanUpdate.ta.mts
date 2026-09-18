@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * COupdate-objectUpdate-multiElement-Item-update-booleanUpdate ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * COupdate-objectUpdate-multiElement-Item-update-booleanUpdate ::= SEQUENCE {
+ *     values  [0] IMPLICIT BIT STRING,
+ *     mask    [1] IMPLICIT BIT STRING OPTIONAL
+ * }
  * ```
  * 
  * @class

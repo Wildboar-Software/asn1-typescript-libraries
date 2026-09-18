@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterOffers-typeIdentifier-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterOffers-typeIdentifier-Item ::= CHOICE {
+ *     oid     OBJECT IDENTIFIER,
+ *     string  PrintableString
+ * }
  * ```
  */
 export

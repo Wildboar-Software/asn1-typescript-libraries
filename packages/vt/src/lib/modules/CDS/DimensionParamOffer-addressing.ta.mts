@@ -76,7 +76,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DimensionParamOffer-addressing ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * DimensionParamOffer-addressing ::= BIT STRING {
+ *     noConstraint (0),
+ *     higherOnly   (1),
+ *     notPermitted (2)
+ * }
  * ```
  */
 export

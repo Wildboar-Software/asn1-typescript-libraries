@@ -77,7 +77,10 @@ import { DOupdate, _decode_DOupdate, _encode_DOupdate } from "../ISO9041-VTP/DOu
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ObjectUpdate-display ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ObjectUpdate-display ::= SEQUENCE {
+ *     doName PrintableString OPTIONAL,
+ *     updates SEQUENCE OF DOupdate
+ * }
  * ```
  * 
  * @class

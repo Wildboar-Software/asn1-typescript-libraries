@@ -77,7 +77,10 @@ import { FEI, _decode_FEI, _encode_FEI } from "../G/FEI.ta.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FEICOupdate-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FEICOupdate-Item ::= SEQUENCE {
+ *     index   [0] IMPLICIT INTEGER,
+ *     content [1] IMPLICIT SET OF FEI
+ * }
  * ```
  * 
  * @class

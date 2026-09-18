@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DimensionParamValues-bound ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DimensionParamValues-bound ::= CHOICE { unbounded NULL, limit INTEGER }
  * ```
  */
 export

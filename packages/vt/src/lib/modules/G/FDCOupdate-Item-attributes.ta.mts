@@ -76,7 +76,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FDCOupdate-Item-attributes ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FDCOupdate-Item-attributes ::= SEQUENCE {
+ *     graphicCharacterRepertoire [0] IMPLICIT INTEGER OPTIONAL,
+ *     foregroundColour           [1] IMPLICIT INTEGER OPTIONAL,
+ *     backgroundColour           [2] IMPLICIT INTEGER OPTIONAL,
+ *     emphasis                   [3] IMPLICIT PrintableString OPTIONAL,
+ *     font                       [4] IMPLICIT INTEGER OPTIONAL
+ *     -- value of zero for any of the integer items in attributes implies the "null"value,
+ * }
  * ```
  * 
  * @class

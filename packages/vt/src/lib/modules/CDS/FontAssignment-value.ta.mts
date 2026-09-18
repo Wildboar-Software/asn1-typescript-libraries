@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FontAssignment-value ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * FontAssignment-value ::= CHOICE {
+ *     vtadhoc [1] IMPLICIT PrintableString,
+ *     isonnnn [2] ANY
+ * }
  * ```
  */
 export

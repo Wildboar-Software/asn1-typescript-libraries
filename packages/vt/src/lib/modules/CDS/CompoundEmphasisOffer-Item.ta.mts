@@ -76,7 +76,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CompoundEmphasisOffer-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CompoundEmphasisOffer-Item ::= CHOICE {
+ *     placeholder             NULL,
+ *     multiOfferSingleSubAttr SEQUENCE OF PrintableString
+ *     -- multiple offer of single emphasis subattribute
+ * }
  * ```
  */
 export

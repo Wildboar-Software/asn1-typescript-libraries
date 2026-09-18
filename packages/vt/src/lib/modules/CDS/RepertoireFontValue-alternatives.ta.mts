@@ -79,7 +79,11 @@ import { FontAssignment, _decode_FontAssignment, _encode_FontAssignment } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RepertoireFontValue-alternatives ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RepertoireFontValue-alternatives ::= SEQUENCE {
+ *     repertoire      [0] IMPLICIT RepertoireAssignment OPTIONAL,
+ *     fontCapability  [1] IMPLICIT INTEGER OPTIONAL,
+ *     fontAssignments [2] IMPLICIT SEQUENCE OF FontAssignment OPTIONAL
+ * }
  * ```
  * 
  * @class

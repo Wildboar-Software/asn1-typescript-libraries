@@ -79,7 +79,18 @@ import { TimeOffer_Item_range, _decode_TimeOffer_Item_range, _encode_TimeOffer_I
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TimeOffer-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * TimeOffer-Item ::= CHOICE {
+ *     value [0] IMPLICIT SEQUENCE {
+ *         multiplier INTEGER,
+ *         exponent INTEGER
+ *     },
+ *     range [1] IMPLICIT SEQUENCE {
+ *         lowerMultiplier     INTEGER,
+ *         lowerExponent       INTEGER,
+ *         upperMultiplier     INTEGER,
+ *         upperExponent       INTEGER
+ *     }
+ * }
  * ```
  */
 export

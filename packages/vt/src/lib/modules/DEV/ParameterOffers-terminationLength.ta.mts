@@ -79,7 +79,13 @@ import { ParameterOffers_terminationLength_eventId, _decode_ParameterOffers_term
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterOffers-terminationLength ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterOffers-terminationLength ::= SEQUENCE {
+ *     length      [0] IMPLICIT G.IntegerOffer,
+ *     eventId     [1] IMPLICIT SEQUENCE {
+ *         integer G.IntegerOffer OPTIONAL,
+ *         nul     NULL OPTIONAL
+ *     }
+ * }
  * ```
  * 
  * @class

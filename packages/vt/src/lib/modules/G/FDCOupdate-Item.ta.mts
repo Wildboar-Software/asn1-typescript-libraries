@@ -85,7 +85,38 @@ import { EntryControl, _decode_EntryControl, _encode_EntryControl } from "../G/E
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FDCOupdate-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FDCOupdate-Item ::= SEQUENCE {
+ *     labelFCoordinate    [0] IMPLICIT INTEGER,
+ *     labelZCoordinate    [1] IMPLICIT INTEGER OPTIONAL,
+ *     status              [2] IMPLICIT INTEGER {
+ *         active   (0),
+ *         inactive (1),
+ *         void     (2)
+ *     } OPTIONAL,
+ *     extent              [3] IMPLICIT SEQUENCE OF SEQUENCE {
+ *         position  [0] IMPLICIT MeasurePair,
+ *         dimension [1] IMPLICIT MeasurePair
+ *     } OPTIONAL,
+ *     attributes          [4] IMPLICIT SEQUENCE {
+ *         graphicCharacterRepertoire [0] IMPLICIT INTEGER OPTIONAL,
+ *         foregroundColour           [1] IMPLICIT INTEGER OPTIONAL,
+ *         backgroundColour           [2] IMPLICIT INTEGER OPTIONAL,
+ *         emphasis                   [3] IMPLICIT PrintableString OPTIONAL,
+ *         font                       [4] IMPLICIT INTEGER OPTIONAL
+ *         -- value of zero for any of the integer items in attributes implies the "null"value,
+ *     } OPTIONAL,
+ *     nextField           [5] IMPLICIT INTEGER OPTIONAL,
+ *     previousField       [6] IMPLICIT INTEGER OPTIONAL,
+ *     -- for tags 5 & 6, a zero value implies end of navigation path; a negative value implies "void"
+ *     transmissionPolicy  [7] IMPLICIT INTEGER {
+ *         all                (0),
+ *         modifiedAllContent (1),
+ *         modifiedPart       (2),
+ *         none               (3),
+ *         refTPCO            (4)
+ *     } OPTIONAL,
+ *     entryControlList    [8] IMPLICIT SEQUENCE OF EntryControl OPTIONAL
+ * }
  * ```
  * 
  * @class

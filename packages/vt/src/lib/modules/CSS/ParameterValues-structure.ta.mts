@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterValues-structure ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterValues-structure ::= CHOICE {
+ *     nonParametric NULL,
+ *     numberElements INTEGER
+ * }
  * ```
  */
 export

@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TimeOffer-Item-value ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TimeOffer-Item-value ::= SEQUENCE {
+ *     multiplier INTEGER,
+ *     exponent INTEGER
+ * }
  * ```
  * 
  * @class

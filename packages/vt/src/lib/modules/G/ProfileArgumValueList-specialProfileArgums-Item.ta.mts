@@ -77,7 +77,15 @@ import { ProfileArgumValueList_specialProfileArgums_Item_value, _decode_ProfileA
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileArgumValueList-specialProfileArgums-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileArgumValueList-specialProfileArgums-Item ::= SEQUENCE {
+ *     identifier INTEGER,
+ *     value CHOICE {
+ *         boolean BOOLEAN,
+ *         integer INTEGER,
+ *         string  PrintableString,
+ *         oid     OBJECT IDENTIFIER
+ *     }
+ * }
  * ```
  * 
  * @class

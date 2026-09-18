@@ -77,7 +77,13 @@ import { RIOreference_operations_Item_operation, RIOreference_operations_Item_op
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RIOreference-operations-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RIOreference-operations-Item ::= SEQUENCE {
+ *     recordId    [0] IMPLICIT PrintableString,
+ *     operation   [1] IMPLICIT INTEGER {
+ *         executeRecord (0),
+ *         callRecord    (1)
+ *     }
+ * }
  * ```
  * 
  * @class

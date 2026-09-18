@@ -81,7 +81,12 @@ import { FER, _decode_FER, _encode_FER } from "../G/FER.ta.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FEPCOupdate-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FEPCOupdate-Item ::= SEQUENCE {
+ *     index     [0] IMPLICIT INTEGER,
+ *     event     [1] FEE,
+ *     condition [2] IMPLICIT SET OF FEC,
+ *     reactions [3] IMPLICIT SEQUENCE OF FER
+ * }
  * ```
  * 
  * @class

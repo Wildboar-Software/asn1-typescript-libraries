@@ -79,7 +79,10 @@ import { LogAttrExtent, _decode_LogAttrExtent, _encode_LogAttrExtent } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-writeLogAttr ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-writeLogAttr ::= SEQUENCE {
+ *     attributeId     AttrId,
+ *     logAttrExtent   LogAttrExtent
+ * }
  * ```
  * 
  * @class

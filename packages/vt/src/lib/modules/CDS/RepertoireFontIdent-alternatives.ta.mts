@@ -77,7 +77,11 @@ import { AssignmentIdent, _decode_AssignmentIdent, _encode_AssignmentIdent } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RepertoireFontIdent-alternatives ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RepertoireFontIdent-alternatives ::= SEQUENCE {
+ *     assignment     [0] IMPLICIT NULL OPTIONAL,
+ *     fontCapability [1] IMPLICIT NULL OPTIONAL,
+ *     fontNames      [2] IMPLICIT SEQUENCE OF AssignmentIdent OPTIONAL
+ * }
  * ```
  * 
  * @class

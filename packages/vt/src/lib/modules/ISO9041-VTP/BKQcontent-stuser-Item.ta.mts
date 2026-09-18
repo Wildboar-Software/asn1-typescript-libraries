@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BKQcontent-stuser-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BKQcontent-stuser-Item ::= SEQUENCE {
+ *     utag INTEGER,
+ *     uvalue OCTET STRING
+ * }
  * ```
  * 
  * @class

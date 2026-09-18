@@ -76,7 +76,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AttrId-backgroundColour ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * AttrId-backgroundColour ::= INTEGER { null (0) }
  * ```
  */
 export

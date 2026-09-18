@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EntryControl-feirList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EntryControl-feirList-Item ::= SEQUENCE {
+ *     feicoName PrintableString,
+ *     recordIndex INTEGER
+ * }
  * ```
  * 
  * @class

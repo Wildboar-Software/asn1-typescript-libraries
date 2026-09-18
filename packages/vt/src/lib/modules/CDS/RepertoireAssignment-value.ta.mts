@@ -76,7 +76,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RepertoireAssignment-value ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RepertoireAssignment-value ::= CHOICE {
+ *     iso2022 [1] IMPLICIT SEQUENCE OF OCTET STRING,
+ *     isonnnn [2] ANY
+ * }
  * ```
  */
 export
