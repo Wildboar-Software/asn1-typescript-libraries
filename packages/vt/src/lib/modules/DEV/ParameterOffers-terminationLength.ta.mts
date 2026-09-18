@@ -19,7 +19,10 @@ import { ParameterOffers_terminationLength_eventId, _decode_ParameterOffers_term
 /**
  * @summary ParameterOffers_terminationLength
  * @description
- * 
+ *
+ * Offered `<length, eventId>`: terminate after this many array-element
+ * updates if no event fired first. ISO/IEC 9040:1997 §23.4 table 14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +42,18 @@ class ParameterOffers_terminationLength {
     constructor (
         /**
          * @summary `length`.
+         * @description
+         * Offered update counts after which to terminate if no event
+         * fired first. ISO/IEC 9040:1997 §23.4 table 14.
          * @public
          * @readonly
          */
         readonly length: IntegerOffer,
         /**
          * @summary `eventId`.
+         * @description
+         * Offered event-id: non-zero positive integer or `"null"`.
+         * ISO/IEC 9040:1997 §23.4.
          * @public
          * @readonly
          */

@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CompoundEmphasisOffer_Item
  * @description
- * 
+ *
+ * One DO-emphasis list slot offer. `placeholder`: skip the slot.
+ * `multiOfferSingleSubAttr`: multiple offered PrintableString
+ * values for one emphasis subattribute. ISO/IEC 9040:1997
+ * §18.2.6, B.17; ISO/IEC 9041-1:1997 §12.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

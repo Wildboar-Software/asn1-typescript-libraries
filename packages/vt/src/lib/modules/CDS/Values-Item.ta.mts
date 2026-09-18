@@ -18,7 +18,11 @@ import { ParameterValues, _decode_ParameterValues, _encode_ParameterValues } fro
 /**
  * @summary Values_Item
  * @description
- * 
+ *
+ * Selected VTE-parameters for one display object. `name` is
+ * `display-object-name`. ISO/IEC 9041-1:1997 §12.3.3;
+ * ISO/IEC 9040:1997 §18.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,19 @@ class Values_Item {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         * `display-object-name`; unique PrintableString in the VTE.
+         * ISO/IEC 9040:1997 §18.1.
          * @public
          * @readonly
          */
         readonly name: PrintableString,
         /**
          * @summary `values`.
+         * @description
+         * Selected single values for this object's VTE-parameters;
+         * must be consistent with the offer. ISO/IEC 9041-1:1997
+         * §12.3.3.
          * @public
          * @readonly
          */

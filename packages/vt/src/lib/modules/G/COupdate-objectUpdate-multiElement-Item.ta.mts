@@ -18,7 +18,11 @@ import { COupdate_objectUpdate_multiElement_Item_update, _decode_COupdate_object
 /**
  * @summary COupdate_objectUpdate_multiElement_Item
  * @description
- * 
+ *
+ * One element of a structured (CO-structure > 1) parametric CO
+ * update. Requires the Structured COs FU. ISO/IEC 9040:1997 §10.6;
+ * ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,12 +48,18 @@ class COupdate_objectUpdate_multiElement_Item {
     constructor (
         /**
          * @summary `identifier`.
+         * @description
+         * Data-element index within the parametric CO. ISO/IEC
+         * 9041-1:1997 §12.2.
          * @public
          * @readonly
          */
         readonly identifier: INTEGER,
         /**
          * @summary `update`.
+         * @description
+         * Per-element character/boolean/symbolic/integer/bit-string
+         * update. ISO/IEC 9041-1:1997 §12.2.
          * @public
          * @readonly
          */

@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EntryControl_feirList_Item
  * @description
- * 
+ *
+ * Reference to one Field Entry Instruction Record in a named FEICO.
+ * ISO/IEC 9040:1997 §3.3.62; ISO/IEC 9041-1:1997 §12.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +38,18 @@ class EntryControl_feirList_Item {
     constructor (
         /**
          * @summary `feicoName`.
+         * @description
+         * Name of the Field Entry Instruction Control Object. ISO/IEC
+         * 9040:1997 §3.3.60.
          * @public
          * @readonly
          */
         readonly feicoName: PrintableString,
         /**
          * @summary `recordIndex`.
+         * @description
+         * Index of the FEIR within that FEICO. ISO/IEC 9040:1997
+         * §3.3.62.
          * @public
          * @readonly
          */

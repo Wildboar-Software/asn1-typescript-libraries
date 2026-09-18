@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FontAssignment_value
  * @description
- * 
+ *
+ * Font designation. `vtadhoc`: PrintableString name when modal
+ * `type` is `{vt-b-font-adhoc}` or unset. `isonnnn`: ANY resolved
+ * by `type`. ISO/IEC 9040:1997 §18.3; ISO/IEC 9041-1:1997 §12.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

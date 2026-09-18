@@ -23,7 +23,12 @@ import { FieldParamValues_accessOutside, _decode_FieldParamValues_accessOutside,
 /**
  * @summary FieldParamValues
  * @description
- * 
+ *
+ * Selected field-definition VTE-parameters. `capability` `true` =
+ * `"yes"`; `false` or absent = `"no"`. Absence of `accessOutside`
+ * implies `"allowed"`. ISO/IEC 9040:1997 §18.2.2; ISO/IEC
+ * 9041-1:1997 §12.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,24 +48,38 @@ class FieldParamValues {
     constructor (
         /**
          * @summary `capability`.
+         * @description
+         * Selected `field-definition-capability`. `true` = `"yes"`;
+         * `false` or absent = `"no"`. ISO/IEC 9040:1997 §18.1,
+         * §18.2.2.
          * @public
          * @readonly
          */
         readonly capability: OPTIONAL<BOOLEAN>,
         /**
          * @summary `maxFields`.
+         * @description
+         * Selected `max-fields` (F-dimension bound; default 1). f < 1
+         * always invalid. ISO/IEC 9040:1997 §18.2.2.
          * @public
          * @readonly
          */
         readonly maxFields: OPTIONAL<FieldParamValues_maxFields>,
         /**
          * @summary `maxFieldElements`.
+         * @description
+         * Selected `max-field-elements` (default 1). ISO/IEC
+         * 9040:1997 §18.2.2.
          * @public
          * @readonly
          */
         readonly maxFieldElements: OPTIONAL<FieldParamValues_maxFieldElements>,
         /**
          * @summary `accessOutside`.
+         * @description
+         * Selected `access-outside-fields`. Absence implies
+         * `"allowed"`. ISO/IEC 9040:1997 §18.2.2, §19.5; ISO/IEC
+         * 9041-1:1997 §12.3.3.
          * @public
          * @readonly
          */

@@ -17,7 +17,10 @@ import { MeasurePair, _decode_MeasurePair, _encode_MeasurePair } from "../G/Meas
 /**
  * @summary FDCOupdate_Item_extent_Item
  * @description
- * 
+ *
+ * One field-element of an FDR extent: origin and size. ISO/IEC
+ * 9040:1997 §13.1.3; ISO/IEC 9041-1:1997 §12.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +37,16 @@ class FDCOupdate_Item_extent_Item {
     constructor (
         /**
          * @summary `position`.
+         * @description
+         * Origin of the field-element. ISO/IEC 9040:1997 §13.1.3.
          * @public
          * @readonly
          */
         readonly position: MeasurePair,
         /**
          * @summary `dimension`.
+         * @description
+         * Size of the field-element. ISO/IEC 9040:1997 §13.1.3.
          * @public
          * @readonly
          */

@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary BKQcontent_stuser_Item
  * @description
- * 
+ *
+ * One user-defined VT-information item in a break PDU.
+ * ISO/IEC 9040:1997 §34.1.3.2. ISO/IEC 9041-1:1997 §6.5,
+ * §6.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,17 @@ class BKQcontent_stuser_Item {
     constructor (
         /**
          * @summary `utag`.
+         * @description
+         * User-defined item-tag. ISO/IEC 9040:1997 §34.1.3.2.
          * @public
          * @readonly
          */
         readonly utag: INTEGER,
         /**
          * @summary `uvalue`.
+         * @description
+         * User-defined item-value octets. ISO/IEC 9040:1997
+         * §34.1.3.2.
          * @public
          * @readonly
          */

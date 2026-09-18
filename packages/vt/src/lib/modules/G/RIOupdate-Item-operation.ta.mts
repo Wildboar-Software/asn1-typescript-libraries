@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RIOupdate_Item_operation
  * @description
- * 
+ *
+ * RIO record operation. `updates` is used only with `createRecord`.
+ * ISO/IEC 9041-1:1997 §12.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +36,9 @@ type RIOupdate_Item_operation = INTEGER;
 
 /**
  * @summary RIOupdate_Item_operation_eraseRIO
+ * @description
+ *
+ * Erase the entire RIO. ISO/IEC 9041-1:1997 §12.2.5.
  * @constant
  * @type {number}
  */
@@ -41,6 +47,9 @@ const RIOupdate_Item_operation_eraseRIO: RIOupdate_Item_operation = 0; /* LONG_N
 
 /**
  * @summary RIOupdate_Item_operation_eraseRIO
+ * @description
+ *
+ * Erase the entire RIO. ISO/IEC 9041-1:1997 §12.2.5.
  * @constant
  * @type {number}
  */
@@ -49,6 +58,9 @@ const eraseRIO: RIOupdate_Item_operation = RIOupdate_Item_operation_eraseRIO; /*
 
 /**
  * @summary RIOupdate_Item_operation_deleteRecord
+ * @description
+ *
+ * Delete one named record. ISO/IEC 9041-1:1997 §12.2.5.
  * @constant
  * @type {number}
  */
@@ -57,6 +69,9 @@ const RIOupdate_Item_operation_deleteRecord: RIOupdate_Item_operation = 1; /* LO
 
 /**
  * @summary RIOupdate_Item_operation_deleteRecord
+ * @description
+ *
+ * Delete one named record. ISO/IEC 9041-1:1997 §12.2.5.
  * @constant
  * @type {number}
  */
@@ -65,6 +80,10 @@ const deleteRecord: RIOupdate_Item_operation = RIOupdate_Item_operation_deleteRe
 
 /**
  * @summary RIOupdate_Item_operation_createRecord
+ * @description
+ *
+ * Create a named record; `updates` absent ⇒ empty record. ISO/IEC
+ * 9041-1:1997 §12.2.5.
  * @constant
  * @type {number}
  */
@@ -73,6 +92,10 @@ const RIOupdate_Item_operation_createRecord: RIOupdate_Item_operation = 2; /* LO
 
 /**
  * @summary RIOupdate_Item_operation_createRecord
+ * @description
+ *
+ * Create a named record; `updates` absent ⇒ empty record. ISO/IEC
+ * 9041-1:1997 §12.2.5.
  * @constant
  * @type {number}
  */

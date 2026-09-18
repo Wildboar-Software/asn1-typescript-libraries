@@ -18,7 +18,15 @@ import { LogAttrExtent_address, _decode_LogAttrExtent_address, _encode_LogAttrEx
 /**
  * @summary LogAttrExtent
  * @description
- * 
+ *
+ * Logical ATTRIBUTE extent. Same semantics as `AttrExtent` with
+ * `LogPointer`s. ISO/IEC 9040:1997 §19.4.1.3, §19.4.2.
+ *
+ * - `global`: also sets the global attribute; `"null"` value is
+ *   valid; does not change array elements when the value is null.
+ * - `address`: beginning/ending `LogPointer`s.
+ * - `modal`: sets the modal attribute only; no array elements.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

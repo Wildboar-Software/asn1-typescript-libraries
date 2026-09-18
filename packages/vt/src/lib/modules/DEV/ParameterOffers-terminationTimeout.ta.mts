@@ -19,7 +19,12 @@ import { ParameterOffers_terminationTimeout_eventId, _decode_ParameterOffers_ter
 /**
  * @summary ParameterOffers_terminationTimeout
  * @description
- * 
+ *
+ * Offered timeout `<T, E, eventId>`. T and E encode the timeout per
+ * ISO/IEC 9040:1997 §23.4; T must not be negative; T=0 means infinite.
+ * If a TCCO is linked, these parameters become ineffective. ISO/IEC
+ * 9040:1997 §14.3, §23.4, §23.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +44,18 @@ class ParameterOffers_terminationTimeout {
     constructor (
         /**
          * @summary `timeOffer`.
+         * @description
+         * Offered timeouts as values or ranges of `(multiplier,
+         * exponent)`. T=0 means infinite. ISO/IEC 9040:1997 §23.4.
          * @public
          * @readonly
          */
         readonly timeOffer: TimeOffer,
         /**
          * @summary `eventId`.
+         * @description
+         * Offered event-id: non-zero positive integer or `"null"`.
+         * ISO/IEC 9040:1997 §23.4.
          * @public
          * @readonly
          */

@@ -19,7 +19,12 @@ import { ProfileArgumOfferList, _decode_ProfileArgumOfferList, _encode_ProfileAr
 /**
  * @summary Profile
  * @description
- * 
+ *
+ * Named VTE-profile plus optional argument offers. Omitted `name`
+ * means the default profile for the selected mode (ISO/IEC 9040:1997
+ * annex A). ISO/IEC 9040:1997 §11, §3.3.44–§3.3.51; ISO/IEC
+ * 9041-1:1997 §6.2.2 f–g, §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,19 @@ class Profile {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         * Registered or privately agreed VTE-profile OID. Omitted ⇒ default
+         * profile for the mode. ISO/IEC 9040:1997 §3.3.45, annex A.
          * @public
          * @readonly
          */
         readonly name: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `argumentOfferList`.
+         * @description
+         * Special profile arguments plus VTE-parameter offers. Omitted if
+         * the profile has no arguments. ISO/IEC 9040:1997 §3.3.49–§3.3.51;
+         * ISO/IEC 9041-1:1997 §6.2.2 g.
          * @public
          * @readonly
          */

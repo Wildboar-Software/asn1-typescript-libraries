@@ -19,7 +19,11 @@ import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-V
 /**
  * @summary DOupdate_repeatLogText
  * @description
- * 
+ *
+ * Logical REPEAT-TEXT: cycle primary-attribute octets from the
+ * current logical pointer through `finishAddress`.
+ * ISO/IEC 9040:1997 §19.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +41,27 @@ class DOupdate_repeatLogText {
     constructor (
         /**
          * @summary `finishAddress`.
+         * @description
+         * End of the logical repeat-extent; must be ≥ the current
+         * logical pointer. ISO/IEC 9040:1997 §19.4.2.
          * @public
          * @readonly
          */
         readonly finishAddress: LogPointer,
         /**
          * @summary `fdrAttr`.
+         * @description
+         * TRUE (`"yes"`) apply FDR attributes; FALSE (`"no"`) do not.
+         * ISO/IEC 9040:1997 §19.4.2.
          * @public
          * @readonly
          */
         readonly fdrAttr: BOOLEAN,
         /**
          * @summary `prAttrValStr`.
+         * @description
+         * Primary-attribute octets cycled across the logical
+         * repeat-extent. ISO/IEC 9040:1997 §19.4.2.
          * @public
          * @readonly
          */

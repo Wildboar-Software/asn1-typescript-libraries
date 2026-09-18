@@ -18,7 +18,11 @@ import { ParameterIdents, _decode_ParameterIdents, _encode_ParameterIdents } fro
 /**
  * @summary Identifier_Item
  * @description
- * 
+ *
+ * One display object's invite list. `name` is `display-object-name`;
+ * `idents` flags which VTE-parameters of that object are invited.
+ * ISO/IEC 9041-1:1997 §12.3.1; ISO/IEC 9040:1997 §18.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,18 @@ class Identifier_Item {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         * `display-object-name`; unique PrintableString in the VTE.
+         * ISO/IEC 9040:1997 §18.1.
          * @public
          * @readonly
          */
         readonly name: PrintableString,
         /**
          * @summary `idents`.
+         * @description
+         * Invited display-object VTE-parameters. A `NULL` component
+         * means that parameter is invited. ISO/IEC 9041-1:1997 §12.3.1.
          * @public
          * @readonly
          */

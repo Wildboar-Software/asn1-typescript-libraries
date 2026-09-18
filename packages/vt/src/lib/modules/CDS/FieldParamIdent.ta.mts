@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FieldParamIdent
  * @description
- * 
+ *
+ * Invite flags for field-definition VTE-parameters. Requires Fields
+ * FU. ISO/IEC 9040:1997 §10.8, §18.2.2; ISO/IEC 9041-1:1997
+ * §12.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +41,36 @@ class FieldParamIdent {
     constructor (
         /**
          * @summary `capability`.
+         * @description
+         * Invite `field-definition-capability` (default `"no"`).
+         * ISO/IEC 9040:1997 §18.1, §18.2.2.
          * @public
          * @readonly
          */
         readonly capability: OPTIONAL<NULL>,
         /**
          * @summary `maxFields`.
+         * @description
+         * Invite `max-fields` (F-dimension bound; default 1).
+         * ISO/IEC 9040:1997 §18.2.2.
          * @public
          * @readonly
          */
         readonly maxFields: OPTIONAL<NULL>,
         /**
          * @summary `maxFieldElements`.
+         * @description
+         * Invite `max-field-elements` (S-dimension bound; default 1).
+         * ISO/IEC 9040:1997 §18.2.2.
          * @public
          * @readonly
          */
         readonly maxFieldElements: OPTIONAL<NULL>,
         /**
          * @summary `accessOutside`.
+         * @description
+         * Invite `access-outside-fields` (default `"allowed"`).
+         * ISO/IEC 9040:1997 §18.2.2, §19.5.
          * @public
          * @readonly
          */

@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ParameterOffers_defaultCOtrigger
  * @description
- * 
+ *
+ * Offered trigger values for the implicit default CO. Set bits are
+ * offered. ISO/IEC 9040:1997 §23.1 table 12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,11 @@ type ParameterOffers_defaultCOtrigger = BIT_STRING;
 
 /**
  * @summary ParameterOffers_defaultCOtrigger_notSelected
+ * @description
+ *
+ * Bit 0: offer `notSelected` (default). Same meaning as CO-trigger.
+ * ISO/IEC 9040:1997 §23.1 table 12.
+ *
  * @constant
  */
 export
@@ -36,6 +44,11 @@ const ParameterOffers_defaultCOtrigger_notSelected: number = 0; /* LONG_NAMED_BI
 
 /**
  * @summary notSelected
+ * @description
+ *
+ * Bit 0: offer `notSelected` (default). Same meaning as CO-trigger.
+ * ISO/IEC 9040:1997 §23.1 table 12.
+ *
  * @constant
  */
 export
@@ -43,6 +56,11 @@ const notSelected: number = ParameterOffers_defaultCOtrigger_notSelected; /* SHO
 
 /**
  * @summary ParameterOffers_defaultCOtrigger_selected
+ * @description
+ *
+ * Bit 1: offer `selected`. Same meaning as CO-trigger. ISO/IEC
+ * 9040:1997 §23.1 table 12.
+ *
  * @constant
  */
 export
@@ -50,6 +68,11 @@ const ParameterOffers_defaultCOtrigger_selected: number = 1; /* LONG_NAMED_BIT *
 
 /**
  * @summary selected
+ * @description
+ *
+ * Bit 1: offer `selected`. Same meaning as CO-trigger. ISO/IEC
+ * 9040:1997 §23.1 table 12.
+ *
  * @constant
  */
 export

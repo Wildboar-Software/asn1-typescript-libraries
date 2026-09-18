@@ -17,7 +17,12 @@ import { Offer_Item, _decode_Offer_Item, _encode_Offer_Item } from "../CDS/Offer
 /**
  * @summary Offer
  * @description
- * 
+ *
+ * MIN offers of display-object VTE-parameter values. Each member names
+ * one display object and proposes values, lists, or ranges for its
+ * parameters. Selected `Values` must be consistent with this offer.
+ * ISO/IEC 9041-1:1997 §12.3.2; ISO/IEC 9040:1997 §18.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

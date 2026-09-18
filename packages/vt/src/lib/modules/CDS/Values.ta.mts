@@ -17,7 +17,12 @@ import { Values_Item, _decode_Values_Item, _encode_Values_Item } from "../CDS/Va
 /**
  * @summary Values
  * @description
- * 
+ *
+ * MIN accepted display-object VTE-parameter values. Each member names
+ * one display object and returns a single selected value per parameter,
+ * consistent with the corresponding offer. ISO/IEC 9041-1:1997 §12.3.3;
+ * ISO/IEC 9040:1997 §18.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

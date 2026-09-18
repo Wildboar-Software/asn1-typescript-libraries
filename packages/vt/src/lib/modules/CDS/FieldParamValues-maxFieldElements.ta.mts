@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FieldParamValues_maxFieldElements
  * @description
- * 
+ *
+ * Selected `max-field-elements`. `unbounded` or integer `limit`
+ * (default 1). FDR field-extent may not exceed this many
+ * field-element 4-tuples. ISO/IEC 9040:1997 §18.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

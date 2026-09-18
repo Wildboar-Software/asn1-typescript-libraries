@@ -19,7 +19,10 @@ import { ParameterValues_terminationLength_eventId, _decode_ParameterValues_term
 /**
  * @summary ParameterValues_terminationLength
  * @description
- * 
+ *
+ * Agreed `<length, eventId>`: terminate after this many array-element
+ * updates if no event fired first. ISO/IEC 9040:1997 §23.4 table 14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +42,18 @@ class ParameterValues_terminationLength {
     constructor (
         /**
          * @summary `length`.
+         * @description
+         * Number of array-element updates after which to terminate if
+         * no event fired first. ISO/IEC 9040:1997 §23.4 table 14.
          * @public
          * @readonly
          */
         readonly length: OPTIONAL<INTEGER>,
         /**
          * @summary `eventId`.
+         * @description
+         * Agreed event-id: non-zero positive integer or `"null"`.
+         * ISO/IEC 9040:1997 §23.4.
          * @public
          * @readonly
          */

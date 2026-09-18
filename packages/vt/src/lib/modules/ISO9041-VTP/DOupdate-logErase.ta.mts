@@ -19,7 +19,10 @@ import { EraseAttr, _decode_EraseAttr, _encode_EraseAttr } from "../ISO9041-VTP/
 /**
  * @summary DOupdate_logErase
  * @description
- * 
+ *
+ * Logical ERASE from `logStartErase` to `logEndErase`. Logical
+ * counterpart of ERASE. ISO/IEC 9040:1997 §19.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +40,26 @@ class DOupdate_logErase {
     constructor (
         /**
          * @summary `logStartErase`.
+         * @description
+         * Start of the logical erase extent. ISO/IEC 9040:1997 §19.4.2.
          * @public
          * @readonly
          */
         readonly logStartErase: LogPointer,
         /**
          * @summary `logEndErase`.
+         * @description
+         * End of the logical erase extent. ISO/IEC 9040:1997 §19.4.2.
          * @public
          * @readonly
          */
         readonly logEndErase: LogPointer,
         /**
          * @summary `attribute`.
+         * @description
+         * TRUE also resets secondary attributes to explicit modal
+         * defaults (reset-attribute `"yes"`); FALSE leaves them.
+         * ISO/IEC 9040:1997 §19.4.1.4, §19.4.2.
          * @public
          * @readonly
          */

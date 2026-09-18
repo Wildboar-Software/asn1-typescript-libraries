@@ -19,7 +19,10 @@ import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from ".
 /**
  * @summary BlockParamOffer_bound
  * @description
- * 
+ *
+ * Offered `b-bound`: unbounded or integer limit. Default 1 (single
+ * block). ISO/IEC 9040:1997 §18.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,17 @@ class BlockParamOffer_bound {
     constructor (
         /**
          * @summary `unbounded`.
+         * @description
+         * Offer unbounded `b-bound`. ISO/IEC 9040:1997 §18.2.1.
          * @public
          * @readonly
          */
         readonly unbounded: OPTIONAL<NULL>,
         /**
          * @summary `limit`.
+         * @description
+         * Offered integer `b-bound`(s). Addressing/CREATE/DELETE
+         * invalid if b > bound. ISO/IEC 9040:1997 §18.2.1.
          * @public
          * @readonly
          */

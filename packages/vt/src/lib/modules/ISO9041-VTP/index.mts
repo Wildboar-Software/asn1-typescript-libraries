@@ -1,7 +1,12 @@
 /**
  * @description
  *
- * ISO/IEC 9041 Virtual Terminal Protocol PDUs and display-object updates.
+ * ASN.1 module `ISO9041-VTP`: Basic Class Virtual Terminal Protocol PDUs
+ * (`BasicVTPitem`) and their contents, plus display-object updates used in
+ * VT-DATA. PDU purposes are ISO/IEC 9041-1:1997 clause 6; encoding is
+ * clause 12.1. The service model is ISO/IEC 9040:1997. RLQ, GTQ, RTQ and
+ * EXR are identified by the bearer service, not this CHOICE; EXR by
+ * absence of user data in the P-RESYNCHRONIZE user-data field.
  */
 export * from "./ASQcontent-class.ta.mjs";
 export * from "./ASQcontent-either.ta.mjs";

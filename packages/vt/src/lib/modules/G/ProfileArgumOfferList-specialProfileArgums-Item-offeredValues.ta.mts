@@ -21,7 +21,13 @@ import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/I
 /**
  * @summary ProfileArgumOfferList_specialProfileArgums_Item_offeredValues
  * @description
- * 
+ *
+ * Offered values for one special profile argument.
+ * `boolean_`: BIT STRING `{ false-bit(0), true-bit(1) }` (`false` /
+ * `true` are ASN.1 keywords). `integer`: `IntegerOffer`.
+ * `string_`: set of PrintableStrings. `objid`: set of OIDs.
+ * ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

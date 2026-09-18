@@ -19,7 +19,11 @@ import { AssignmentIdent, _decode_AssignmentIdent, _encode_AssignmentIdent } fro
 /**
  * @summary RepertoireFontIdent_alternatives
  * @description
- * 
+ *
+ * Invite sub-parameters of one repertoire-list slot. `NULL`
+ * presence invites that sub-parameter. ISO/IEC 9041-1:1997
+ * §12.3.1; ISO/IEC 9040:1997 §18.2.4, §18.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +41,27 @@ class RepertoireFontIdent_alternatives {
     constructor (
         /**
          * @summary `assignment`.
+         * @description
+         * Invite repertoire-assignment for this slot. ISO/IEC
+         * 9040:1997 §18.2.4.
          * @public
          * @readonly
          */
         readonly assignment: OPTIONAL<NULL>,
         /**
          * @summary `fontCapability`.
+         * @description
+         * Invite `font-capability` for this repertoire (default 1).
+         * ISO/IEC 9040:1997 §18.3.
          * @public
          * @readonly
          */
         readonly fontCapability: OPTIONAL<NULL>,
         /**
          * @summary `fontNames`.
+         * @description
+         * Invite font-assignment names for this repertoire slot.
+         * ISO/IEC 9040:1997 §18.3.
          * @public
          * @readonly
          */

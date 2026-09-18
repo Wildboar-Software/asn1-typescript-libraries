@@ -17,7 +17,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RIOreference_operations_Item_operation
  * @description
- * 
+ *
+ * Operation on a named RIO record. ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +34,9 @@ type RIOreference_operations_Item_operation = INTEGER;
 
 /**
  * @summary RIOreference_operations_Item_operation_executeRecord
+ * @description
+ *
+ * Execute the named RIO record. ISO/IEC 9041-1:1997 §12.2.
  * @constant
  * @type {number}
  */
@@ -40,6 +45,9 @@ const RIOreference_operations_Item_operation_executeRecord: RIOreference_operati
 
 /**
  * @summary RIOreference_operations_Item_operation_executeRecord
+ * @description
+ *
+ * Execute the named RIO record. ISO/IEC 9041-1:1997 §12.2.
  * @constant
  * @type {number}
  */
@@ -48,6 +56,9 @@ const executeRecord: RIOreference_operations_Item_operation = RIOreference_opera
 
 /**
  * @summary RIOreference_operations_Item_operation_callRecord
+ * @description
+ *
+ * Call the named RIO record. ISO/IEC 9041-1:1997 §12.2.
  * @constant
  * @type {number}
  */
@@ -56,6 +67,9 @@ const RIOreference_operations_Item_operation_callRecord: RIOreference_operations
 
 /**
  * @summary RIOreference_operations_Item_operation_callRecord
+ * @description
+ *
+ * Call the named RIO record. ISO/IEC 9041-1:1997 §12.2.
  * @constant
  * @type {number}
  */

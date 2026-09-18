@@ -39,7 +39,13 @@ import { ParameterOffers_defaultCOinitialValue_Item, _decode_ParameterOffers_def
 /**
  * @summary ParameterOffers
  * @description
- * 
+ *
+ * Offered device-object VTE-parameter values. The default CO is always
+ * category boolean with eight booleans. Termination parameters are
+ * optional and useful when the device is an object-updating device;
+ * they do not by themselves block further updates. ISO/IEC 9040:1997
+ * §23; ISO/IEC 9041-1:1997 §12.5.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -102,90 +108,149 @@ class ParameterOffers {
     constructor (
         /**
          * @summary `defaultCOaccess`.
+         * @description
+         * CSS `AccessRuleOffer` for the implicit default CO. Set bits
+         * are offered. ISO/IEC 9040:1997 §23.1 table 12.
          * @public
          * @readonly
          */
         readonly defaultCOaccess: OPTIONAL<AccessRuleOffer>,
         /**
          * @summary `defaultCOPriority`.
+         * @description
+         * Offered default-CO priorities. Set bits are offered. Same
+         * meaning as CO-priority. ISO/IEC 9040:1997 §23.1 table 12.
          * @public
          * @readonly
          */
         readonly defaultCOPriority: OPTIONAL<ParameterOffers_defaultCOPriority>,
         /**
          * @summary `deviceRepertoireAssignment`.
+         * @description
+         * Offered repertoire overrides. The n-th device assignment
+         * overrides the n-th DO assignment; `"null"` skips a slot.
+         * ISO/IEC 9040:1997 §23.3.
          * @public
          * @readonly
          */
         readonly deviceRepertoireAssignment: OPTIONAL<CompoundRepertoireOffer>,
         /**
          * @summary `deviceEmphasisAssignment`.
+         * @description
+         * Offered emphasis overrides of the linked DO. Same CDS
+         * compound type and n-th/`"null"` slot rule. ISO/IEC
+         * 9040:1997 §23.3.
          * @public
          * @readonly
          */
         readonly deviceEmphasisAssignment: OPTIONAL<CompoundEmphasisOffer>,
         /**
          * @summary `deviceForegroundAssignment`.
+         * @description
+         * Offered foreground-colour overrides of the linked DO. Same
+         * CDS colour semantics and n-th/`"null"` slot rule. ISO/IEC
+         * 9040:1997 §23.3.
          * @public
          * @readonly
          */
         readonly deviceForegroundAssignment: OPTIONAL<CompoundColourOffer>,
         /**
          * @summary `deviceBackgroundAssignment`.
+         * @description
+         * Offered background-colour overrides of the linked DO. Same
+         * CDS colour semantics and n-th/`"null"` slot rule. ISO/IEC
+         * 9040:1997 §23.3.
          * @public
          * @readonly
          */
         readonly deviceBackgroundAssignment: OPTIONAL<CompoundColourOffer>,
         /**
          * @summary `minimumXarrayLength`.
+         * @description
+         * Offered minimum X-array length the device must handle.
+         * ISO/IEC 9040:1997 §23.2 table 12.
          * @public
          * @readonly
          */
         readonly minimumXarrayLength: OPTIONAL<IntegerOffer>,
         /**
          * @summary `minimumYarrayLength`.
+         * @description
+         * Offered minimum Y-array length the device must handle.
+         * ISO/IEC 9040:1997 §23.2 table 12.
          * @public
          * @readonly
          */
         readonly minimumYarrayLength: OPTIONAL<IntegerOffer>,
         /**
          * @summary `deviceControlObjectNames`.
+         * @description
+         * Alternatives: each inner SEQUENCE OF names is one offered
+         * set of linked CO-names. Does not include the implicit
+         * default CO. ISO/IEC 9040:1997 §23 notes.
          * @public
          * @readonly
          */
         readonly deviceControlObjectNames: OPTIONAL<PrintableString[][]>,
         /**
          * @summary `deviceDisplayObjectName`.
+         * @description
+         * Alternative DO-names; the chosen value must equal a DO-name
+         * in the VTE. ISO/IEC 9040:1997 §23 notes.
          * @public
          * @readonly
          */
         readonly deviceDisplayObjectName: OPTIONAL<PrintableString[]>,
         /**
          * @summary `terminationEventList`.
+         * @description
+         * Offered sets of `<event, eventId>` pairs. Event syntax is
+         * not defined in 9040; datatypes come from the VTE-profile
+         * used as the initial draft-VTE. Absent ⇒ no explicit event
+         * conditions. ISO/IEC 9040:1997 §23.4; ISO/IEC 9041-1:1997
+         * §12.5.2.
          * @public
          * @readonly
          */
         readonly terminationEventList: OPTIONAL<ParameterOffers_terminationEventList_Item_Item[][]>,
         /**
          * @summary `terminationLength`.
+         * @description
+         * Offered `<length, eventId>`: terminate after this many
+         * array-element updates if no event fired first. Absent ⇒ no
+         * update-count limit. ISO/IEC 9040:1997 §23.4 table 14.
          * @public
          * @readonly
          */
         readonly terminationLength: OPTIONAL<ParameterOffers_terminationLength>,
         /**
          * @summary `terminationTimeout`.
+         * @description
+         * Offered timeout `<T, E, eventId>`. T and E encode the
+         * timeout per ISO/IEC 9040:1997 §23.4; T=0 means infinite. If
+         * a TCCO is linked, these parameters become ineffective; an
+         * FDCO linked to the device also overrides them. ISO/IEC
+         * 9040:1997 §14.3, §23.4, §23.5.
          * @public
          * @readonly
          */
         readonly terminationTimeout: OPTIONAL<ParameterOffers_terminationTimeout>,
         /**
          * @summary `defaultCOtrigger`.
+         * @description
+         * Offered trigger values for the implicit default CO. Set bits
+         * are offered. ISO/IEC 9040:1997 §23.1 table 12.
          * @public
          * @readonly
          */
         readonly defaultCOtrigger: OPTIONAL<ParameterOffers_defaultCOtrigger>,
         /**
          * @summary `defaultCOinitialValue`.
+         * @description
+         * Offered initial states of the eight booleans. Each item is
+         * a BIT STRING value plus optional mask (omitted ⇒ all-ones,
+         * same as G.COupdate). ISO/IEC 9040:1997 §23.1; ISO/IEC
+         * 9041-1:1997 §12.5.2.
          * @public
          * @readonly
          */

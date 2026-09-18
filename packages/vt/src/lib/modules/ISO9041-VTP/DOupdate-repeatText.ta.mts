@@ -18,7 +18,13 @@ import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointe
 /**
  * @summary DOupdate_repeatText
  * @description
- * 
+ *
+ * REPEAT-TEXT: write primary-attribute octets from the current
+ * pointer through `finishAddress` (must be ≥ current), cycling the
+ * octet string across the repeat-extent. Pointer is left
+ * immediately after the last updated element.
+ * ISO/IEC 9040:1997 §19.4.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,18 @@ class DOupdate_repeatText {
     constructor (
         /**
          * @summary `finishAddress`.
+         * @description
+         * End of the repeat-extent; must be ≥ the current pointer.
+         * ISO/IEC 9040:1997 §19.4.1.2.
          * @public
          * @readonly
          */
         readonly finishAddress: Pointer,
         /**
          * @summary `text`.
+         * @description
+         * Primary-attribute octets cycled across the repeat-extent.
+         * Repertoire defines the encoding. ISO/IEC 9040:1997 §19.4.1.2.
          * @public
          * @readonly
          */

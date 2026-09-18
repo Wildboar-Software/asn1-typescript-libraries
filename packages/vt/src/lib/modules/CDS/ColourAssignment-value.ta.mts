@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ColourAssignment_value
  * @description
- * 
+ *
+ * Colour designation. `iso6429`: English colour name from ISO/IEC
+ * 6429 SET GRAPHIC RENDITION when modal `type` is
+ * `{vt-b-colour-iso6429}` or unset. `isonnnn`: ANY resolved by
+ * `type`. ISO/IEC 9040:1997 §18.2.5; ISO/IEC 9041-1:1997 §12.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

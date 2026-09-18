@@ -17,7 +17,10 @@ import {
 /**
  * @summary vtp_b
  * @description
- * 
+ *
+ * Arc `{ iso standard 9041 }` for all ISO/IEC 9041-assigned names.
+ * ISO/IEC 9041-1:1997 Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

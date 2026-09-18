@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ParameterOffers_defaultCOinitialValue_Item
  * @description
- * 
+ *
+ * One offered initial state of the default CO's eight booleans. Same
+ * mask rule as G.COupdate: omitted mask ⇒ all-ones. ISO/IEC 9040:1997
+ * §23.1; ISO/IEC 9041-1:1997 §12.5.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,18 @@ class ParameterOffers_defaultCOinitialValue_Item {
     constructor (
         /**
          * @summary `value`.
+         * @description
+         * Initial bits for the eight booleans. ISO/IEC 9040:1997
+         * §23.1 table 12.
          * @public
          * @readonly
          */
         readonly value: BIT_STRING,
         /**
          * @summary `mask`.
+         * @description
+         * Which bits of `value` apply. Omitted ⇒ all-ones (same as
+         * G.COupdate). ISO/IEC 9041-1:1997 §12.5.2.
          * @public
          * @readonly
          */

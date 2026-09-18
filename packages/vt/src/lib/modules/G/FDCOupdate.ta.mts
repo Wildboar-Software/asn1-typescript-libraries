@@ -17,7 +17,11 @@ import { FDCOupdate_Item, _decode_FDCOupdate_Item, _encode_FDCOupdate_Item } fro
 /**
  * @summary FDCOupdate
  * @description
- * 
+ *
+ * Sequence of Field Definition Record (FDR) updates for a Field
+ * Definition Control Object. ISO/IEC 9040:1997 §14.2 a, §20.3.3;
+ * ISO/IEC 9041-1:1997 §12.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DOupdate_logText
  * @description
- * 
+ *
+ * LOGICAL-TEXT. Writes the primary-attribute octet string at the
+ * logical pointer. `fdrAttr` TRUE applies FDR attributes.
+ * ISO/IEC 9040:1997 §19.4.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,18 @@ class DOupdate_logText {
     constructor (
         /**
          * @summary `fdrAttr`.
+         * @description
+         * TRUE (`"yes"`) apply FDR attributes; FALSE (`"no"`) do not.
+         * ISO/IEC 9040:1997 §19.4.2.1.
          * @public
          * @readonly
          */
         readonly fdrAttr: BOOLEAN,
         /**
          * @summary `prAttrVal`.
+         * @description
+         * Primary-attribute octet string. Repertoire defines the
+         * encoding, as for TEXT. ISO/IEC 9040:1997 §19.4.2.1.
          * @public
          * @readonly
          */

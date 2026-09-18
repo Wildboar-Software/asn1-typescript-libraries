@@ -20,7 +20,9 @@ import { _decode_Result3, _encode_Result3, type Result3 } from "../G/Result3.ta.
 /**
  * @summary ENRcontent
  * @description
- * 
+ *
+ * Parameters of VT-END-NEG-RESP. ISO/IEC 9041-1:1997 §6.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +41,26 @@ class ENRcontent {
     constructor (
         /**
          * @summary `result`.
+         * @description
+         * Result of end-negotiation. ISO/IEC 9041-1:1997 §6.10.
          * @public
          * @readonly
          */
         readonly result: Result3,
         /**
          * @summary `vteChoice`.
+         * @description
+         * TRUE = draft; FALSE = current. ISO/IEC 9041-1:1997
+         * §6.10, §12.1.
          * @public
          * @readonly
          */
         readonly vteChoice: OPTIONAL<BOOLEAN>,
         /**
          * @summary `retList`.
+         * @description
+         * DO/CO names agreed to be retained. ISO/IEC
+         * 9041-1:1997 §6.10.
          * @public
          * @readonly
          */

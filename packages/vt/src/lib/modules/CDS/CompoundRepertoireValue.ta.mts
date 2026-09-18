@@ -19,7 +19,11 @@ import { RepertoireFontValue, _decode_RepertoireFontValue, _encode_RepertoireFon
 /**
  * @summary CompoundRepertoireValue
  * @description
- * 
+ *
+ * Selected repertoire-capability and assignment list. INTEGER
+ * attribute values in DO updates are 1-based indexes into this
+ * list. ISO/IEC 9040:1997 §18.2.4; ISO/IEC 9041-1:1997 §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,18 @@ class CompoundRepertoireValue {
     constructor (
         /**
          * @summary `repertoireCapability`.
+         * @description
+         * Selected `repertoire-capability` (1..N; default 1). ISO/IEC
+         * 9040:1997 §18.1.
          * @public
          * @readonly
          */
         readonly repertoireCapability: OPTIONAL<INTEGER>,
         /**
          * @summary `repertoireFontValues`.
+         * @description
+         * Selected per-slot repertoire and font assignments.
+         * ISO/IEC 9040:1997 §18.2.4, §18.3.
          * @public
          * @readonly
          */

@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DOupdate_copyFromBuffer_structure
  * @description
- * 
+ *
+ * COPY-FROM-BUFFER `structure`. `none`(0), `x`(1), `xAndy`(2).
+ * Absence of the field implies `none`.
+ * ISO/IEC 9040:1997 §19.4.1.10.3; ISO/IEC 9041-1:1997 §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +33,11 @@ type DOupdate_copyFromBuffer_structure = INTEGER;
 
 /**
  * @summary DOupdate_copyFromBuffer_structure_none
+ * @description
+ *
+ * `"none"`(0). Absence of `structure` implies this value.
+ * ISO/IEC 9040:1997 §19.4.1.10.3.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +46,11 @@ const DOupdate_copyFromBuffer_structure_none: DOupdate_copyFromBuffer_structure 
 
 /**
  * @summary DOupdate_copyFromBuffer_structure_none
+ * @description
+ *
+ * `"none"`(0). Absence of `structure` implies this value.
+ * ISO/IEC 9040:1997 §19.4.1.10.3.
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +59,10 @@ const none: DOupdate_copyFromBuffer_structure = DOupdate_copyFromBuffer_structur
 
 /**
  * @summary DOupdate_copyFromBuffer_structure_x
+ * @description
+ *
+ * `"x"`(1). ISO/IEC 9040:1997 §19.4.1.10.3.
+ *
  * @constant
  * @type {number}
  */
@@ -53,6 +71,10 @@ const DOupdate_copyFromBuffer_structure_x: DOupdate_copyFromBuffer_structure = 1
 
 /**
  * @summary DOupdate_copyFromBuffer_structure_x
+ * @description
+ *
+ * `"x"`(1). ISO/IEC 9040:1997 §19.4.1.10.3.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +83,10 @@ const x: DOupdate_copyFromBuffer_structure = DOupdate_copyFromBuffer_structure_x
 
 /**
  * @summary DOupdate_copyFromBuffer_structure_xAndy
+ * @description
+ *
+ * `"x and y"`(2). ISO/IEC 9040:1997 §19.4.1.10.3.
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +95,10 @@ const DOupdate_copyFromBuffer_structure_xAndy: DOupdate_copyFromBuffer_structure
 
 /**
  * @summary DOupdate_copyFromBuffer_structure_xAndy
+ * @description
+ *
+ * `"x and y"`(2). ISO/IEC 9040:1997 §19.4.1.10.3.
+ *
  * @constant
  * @type {number}
  */

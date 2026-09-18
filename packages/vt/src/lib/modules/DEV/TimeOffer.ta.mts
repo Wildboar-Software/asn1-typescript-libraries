@@ -17,7 +17,11 @@ import { TimeOffer_Item, _decode_TimeOffer_Item, _encode_TimeOffer_Item } from "
 /**
  * @summary TimeOffer
  * @description
- * 
+ *
+ * Offered termination timeouts. Each item is a single `(multiplier,
+ * exponent)` value or a range of such values. T and E encode the
+ * timeout per ISO/IEC 9040:1997 §23.4; T=0 means infinite.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

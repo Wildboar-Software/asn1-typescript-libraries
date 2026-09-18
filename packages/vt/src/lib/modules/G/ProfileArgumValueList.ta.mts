@@ -20,7 +20,12 @@ import { ParamValueList, _decode_ParamValueList, _encode_ParamValueList } from "
 /**
  * @summary ProfileArgumValueList
  * @description
- * 
+ *
+ * Selected special VTE-profile argument values plus selected
+ * VTE-parameters. Used in ASR, SNR, SPR. Each value is taken from
+ * the corresponding offer. ISO/IEC 9040:1997 §3.3.49–§3.3.51;
+ * ISO/IEC 9041-1:1997 §6.3.2 c, §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,12 +50,18 @@ class ProfileArgumValueList {
     constructor (
         /**
          * @summary `specialProfileArgums`.
+         * @description
+         * Chosen values for special profile arguments. ISO/IEC 9040:1997
+         * §3.3.51.
          * @public
          * @readonly
          */
         readonly specialProfileArgums: OPTIONAL<ProfileArgumValueList_specialProfileArgums_Item[]>,
         /**
          * @summary `vteParams`.
+         * @description
+         * Chosen VTE-parameter values (CDS/CSS/DEV, delivery-control).
+         * ISO/IEC 9041-1:1997 §6.3.2 c, §12.2.
          * @public
          * @readonly
          */

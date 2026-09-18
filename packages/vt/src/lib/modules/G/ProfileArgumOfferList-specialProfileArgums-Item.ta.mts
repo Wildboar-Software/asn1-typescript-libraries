@@ -18,7 +18,11 @@ import { ProfileArgumOfferList_specialProfileArgums_Item_offeredValues, _decode_
 /**
  * @summary ProfileArgumOfferList_specialProfileArgums_Item
  * @description
- * 
+ *
+ * One special VTE-profile argument offer. The INTEGER identifier is
+ * defined by the profile specification. ISO/IEC 9040:1997 §3.3.51;
+ * ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +44,17 @@ class ProfileArgumOfferList_specialProfileArgums_Item {
     constructor (
         /**
          * @summary `identifier`.
+         * @description
+         * Profile-defined argument number. ISO/IEC 9040:1997 §3.3.51.
          * @public
          * @readonly
          */
         readonly identifier: INTEGER,
         /**
          * @summary `offeredValues`.
+         * @description
+         * Boolean bits, integer offer, string set, or OID set. ISO/IEC
+         * 9041-1:1997 §12.2.
          * @public
          * @readonly
          */

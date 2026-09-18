@@ -18,7 +18,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ParameterValues_structure
  * @description
- * 
+ *
+ * Selected `CO-structure`.
+ *
+ * - `nonParametric`: structure defined by
+ *   `CO-type-identifier` (standard COs: CCO, FDCO, FEICO,
+ *   FEPCO, RIO, TCO, …). Element layout is not negotiated.
+ * - `numberElements`: parametric count. 1 = single element
+ *   (kernel); >1 requires Structured COs FU; elements have
+ *   `CO-element-id` 1..N.
+ *
+ * If Structured COs FU is not selected, must be parametric
+ * with one element. ISO/IEC 9040:1997 §10.6, §14.1, §20.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -32,7 +32,12 @@ import { ElementParamValue, _decode_ElementParamValue, _encode_ElementParamValue
 /**
  * @summary ParameterValues
  * @description
- * 
+ *
+ * Selected VTE-parameter values for one CO. Must be
+ * consistent with the proposals in the matching offer.
+ * `typeIdentifier` is a single CHOICE, not a SET.
+ * ISO/IEC 9041-1:1997 §12.4.3; ISO/IEC 9040:1997 §20.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -73,54 +78,95 @@ class ParameterValues {
     constructor (
         /**
          * @summary `typeIdentifier`.
+         * @description
+         * Selected `CO-type-identifier` (one OID or
+         * PrintableString). ISO/IEC 9040:1997 §14, §20.1.1.
          * @public
          * @readonly
          */
         readonly typeIdentifier: ParameterValues_typeIdentifier,
         /**
          * @summary `access`.
+         * @description
+         * Selected `CO-access` rule. Default `"NSAC"`.
+         * Combined rules and `"no-access"` need Enhanced
+         * Access-rules FU. ISO/IEC 9040:1997 §9, §10.5,
+         * §20.1.3, table 1, table 11.
          * @public
          * @readonly
          */
         readonly access: OPTIONAL<AccessRuleValue>,
         /**
          * @summary `triggerSelected`.
+         * @description
+         * Selected `CO-trigger`. `true` = `"selected"`;
+         * only valid if `CO-priority` is `"normal"`. Default
+         * `"not selected"`. Update delivers queued updates
+         * and, in S-mode, transfers WAVAR.
+         * ISO/IEC 9040:1997 §3.3.43, §20.1.5, §24.1, §31.1.4.
          * @public
          * @readonly
          */
         readonly triggerSelected: OPTIONAL<BOOLEAN>,
         /**
          * @summary `size`.
+         * @description
+         * Selected `CO-size`. Meaning depends on category:
+         * character max string length (default 16); boolean
+         * max booleans (default 16); symbolic max distinct
+         * values (default 256); integer max value (default
+         * 65535); transparent max bits (default 16).
+         * ISO/IEC 9040:1997 §20.2.2.
          * @public
          * @readonly
          */
         readonly size: OPTIONAL<INTEGER>,
         /**
          * @summary `category`.
+         * @description
+         * Selected `CO-category`. Default `"boolean"`.
+         * ISO/IEC 9040:1997 table 9, §20.2.3–§20.2.6.
          * @public
          * @readonly
          */
         readonly category: OPTIONAL<ParameterValues_category>,
         /**
          * @summary `repertoire`.
+         * @description
+         * Selected `CO-repertoire-assignment` (character
+         * category). Same form as CDS.
+         * ISO/IEC 9040:1997 table 9, §20.2.5.
          * @public
          * @readonly
          */
         readonly repertoire: OPTIONAL<RepertoireAssignment>,
         /**
          * @summary `priority`.
+         * @description
+         * Selected `CO-priority`. Default `"normal"`. Selects
+         * NDQ / HDQ / UDQ. High/urgent are not quarantined
+         * and may overtake earlier normal updates.
+         * ISO/IEC 9040:1997 §20.1.4, §24.5;
+         * ISO/IEC 9041-1:1997 §6.12, §6.14, §6.25.
          * @public
          * @readonly
          */
         readonly priority: OPTIONAL<ParameterValues_priority>,
         /**
          * @summary `structure`.
+         * @description
+         * Selected `CO-structure`: non-parametric NULL or
+         * parametric element count.
+         * ISO/IEC 9040:1997 §10.6, §14.1, §20.1.2.
          * @public
          * @readonly
          */
         readonly structure: OPTIONAL<ParameterValues_structure>,
         /**
          * @summary `multiElement`.
+         * @description
+         * Per-element selected values. Structured COs FU.
+         * ISO/IEC 9040:1997 §20.2.1.
          * @public
          * @readonly
          */

@@ -18,7 +18,11 @@ import { ParameterIdents, _decode_ParameterIdents, _encode_ParameterIdents } fro
 /**
  * @summary Identifier_Item
  * @description
- * 
+ *
+ * One named control object and which of its VTE-parameters
+ * are invited for MIN. ISO/IEC 9041-1:1997 §12.4.1;
+ * ISO/IEC 9040:1997 §14, §20.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,18 @@ class Identifier_Item {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         * `CO-name`: PrintableString unique in the VTE.
+         * ISO/IEC 9040:1997 table 9, §14.
          * @public
          * @readonly
          */
         readonly name: PrintableString,
         /**
          * @summary `idents`.
+         * @description
+         * Which VTE-parameters of this CO to negotiate.
+         * ISO/IEC 9041-1:1997 §12.4.1.
          * @public
          * @readonly
          */

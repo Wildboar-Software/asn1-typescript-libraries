@@ -18,7 +18,10 @@ import { ProfileArgumValueList_specialProfileArgums_Item_value, _decode_ProfileA
 /**
  * @summary ProfileArgumValueList_specialProfileArgums_Item
  * @description
- * 
+ *
+ * Selected value of one special VTE-profile argument. ISO/IEC
+ * 9040:1997 §3.3.51; ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +43,17 @@ class ProfileArgumValueList_specialProfileArgums_Item {
     constructor (
         /**
          * @summary `identifier`.
+         * @description
+         * Profile-defined argument number. ISO/IEC 9040:1997 §3.3.51.
          * @public
          * @readonly
          */
         readonly identifier: INTEGER,
         /**
          * @summary `value`.
+         * @description
+         * Chosen boolean, integer, string, or OID. ISO/IEC 9041-1:1997
+         * §12.2.
          * @public
          * @readonly
          */

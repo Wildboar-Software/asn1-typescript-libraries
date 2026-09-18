@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary BlockParamIdent
  * @description
- * 
+ *
+ * Invite flags for block-definition-capability and `b-bound`.
+ * Requires Blocks FU. ISO/IEC 9040:1997 §10.7, §18.2.1; ISO/IEC
+ * 9041-1:1997 §12.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,18 @@ class BlockParamIdent {
     constructor (
         /**
          * @summary `capability`.
+         * @description
+         * Invite `block-definition-capability` (default `"no"`).
+         * ISO/IEC 9040:1997 §18.1, §18.2.1.
          * @public
          * @readonly
          */
         readonly capability: OPTIONAL<NULL>,
         /**
          * @summary `bound`.
+         * @description
+         * Invite `b-bound` (max blocks per Y-array; default 1).
+         * ISO/IEC 9040:1997 §18.2.1.
          * @public
          * @readonly
          */

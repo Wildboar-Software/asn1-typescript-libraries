@@ -17,7 +17,11 @@ import { vtp_b } from "../IS09041-VT/vtp-b.va.mjs";
 /**
  * @summary vtp_b_A_context
  * @description
- * 
+ *
+ * ACSE application-context for Basic Class VTP initial facilities.
+ * Used in A-ASSOCIATE (`Application Context Name`). ISO/IEC 9041-1:1997
+ * §11.1, Annex B.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

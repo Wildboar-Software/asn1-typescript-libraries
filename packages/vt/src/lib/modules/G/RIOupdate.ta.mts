@@ -17,7 +17,12 @@ import { RIOupdate_Item, _decode_RIOupdate_Item, _encode_RIOupdate_Item } from "
 /**
  * @summary RIOupdate
  * @description
- * 
+ *
+ * Sequence of Reference Information Object record operations:
+ * eraseRIO / deleteRecord / createRecord. `updates` only for Create
+ * Record; absent ⇒ empty record. ISO/IEC 9040:1997 §3.3.70; ISO/IEC
+ * 9041-1:1997 §12.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

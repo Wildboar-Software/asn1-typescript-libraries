@@ -18,7 +18,9 @@ import { RIOreference_operations_Item_operation, _decode_RIOreference_operations
 /**
  * @summary RIOreference_operations_Item
  * @description
- * 
+ *
+ * One execute/call of a named RIO record. ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +40,16 @@ class RIOreference_operations_Item {
     constructor (
         /**
          * @summary `recordId`.
+         * @description
+         * Named record within the RIO. ISO/IEC 9041-1:1997 §12.2.
          * @public
          * @readonly
          */
         readonly recordId: PrintableString,
         /**
          * @summary `operation`.
+         * @description
+         * executeRecord(0) or callRecord(1). ISO/IEC 9041-1:1997 §12.2.
          * @public
          * @readonly
          */

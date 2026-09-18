@@ -19,7 +19,11 @@ import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from ".
 /**
  * @summary DimensionParamOffer_window
  * @description
- * 
+ *
+ * Offered `d-window` (update-window-size). Default 0 if bound
+ * unbounded; else default = bound. Y/Z default 1 when that bound is
+ * unbounded. ISO/IEC 9040:1997 §18.2.3, §19.1.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,18 @@ class DimensionParamOffer_window {
     constructor (
         /**
          * @summary `unbounded`.
+         * @description
+         * Offer unbounded update-window-size. ISO/IEC 9040:1997
+         * §18.2.3, §19.1.1.3.
          * @public
          * @readonly
          */
         readonly unbounded: OPTIONAL<NULL>,
         /**
          * @summary `limit`.
+         * @description
+         * Offered integer update-window-size(s). ISO/IEC 9040:1997
+         * §18.2.3, §19.1.1.3.
          * @public
          * @readonly
          */

@@ -6,8 +6,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FEE
  * @description
  *
- * Field entry event. The syntax is found in the register entry pointed
- * to by the VTE-parameter CO-type-identifier for this FEPCO.
+ * Field Entry Event: may occur during controlled data entry and
+ * cause an entry reaction. Syntax is in the register entry named by
+ * VTE-parameter CO-type-identifier for this FEPCO. ISO/IEC
+ * 9040:1997 §3.3.65, §14.2 c; ISO/IEC 9041-1:1997 §12.2.4.
  *
  * ### ASN.1 Definition:
  *

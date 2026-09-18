@@ -23,7 +23,11 @@ import { DimensionParamValues_window, _decode_DimensionParamValues_window, _enco
 /**
  * @summary DimensionParamValues
  * @description
- * 
+ *
+ * Selected addressing VTE-parameters for one defined dimension.
+ * `absolute`: `true` = `"yes"`; `false` or absent = `"no"`.
+ * ISO/IEC 9040:1997 §18.2.3; ISO/IEC 9041-1:1997 §12.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,24 +50,40 @@ class DimensionParamValues {
     constructor (
         /**
          * @summary `bound`.
+         * @description
+         * Selected `d-bound`: unbounded or integer limit. X default
+         * unbounded. ISO/IEC 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly bound: OPTIONAL<DimensionParamValues_bound>,
         /**
          * @summary `addressing`.
+         * @description
+         * Selected `d-addressing`. Default `"higher only"`. ISO/IEC
+         * 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly addressing: OPTIONAL<DimensionParamValues_addressing>,
         /**
          * @summary `absolute`.
+         * @description
+         * Selected `d-absolute`. `true` = `"yes"`; `false` or absent
+         * = `"no"` (default). ISO/IEC 9040:1997 §18.2.3; ISO/IEC
+         * 9041-1:1997 §12.3.3.
          * @public
          * @readonly
          */
         readonly absolute: OPTIONAL<BOOLEAN>,
         /**
          * @summary `window`.
+         * @description
+         * Selected update-window-size. Default 0 if bound unbounded
+         * (X: no backward movement); else default = bound. Y/Z
+         * default 1 when that bound is unbounded. Unused (assumes
+         * bound default) for X/Y when blocks or fields are selected.
+         * ISO/IEC 9040:1997 §18.2.3, §19.1.1.3.
          * @public
          * @readonly
          */

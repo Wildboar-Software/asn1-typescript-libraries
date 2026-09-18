@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DimensionParamOffer_absolute
  * @description
- * 
+ *
+ * Offered `d-absolute` for one dimension. Bit = 1 is offered:
+ * `yes`(0) allows POINTER-ABSOLUTE to set this coordinate (still
+ * subject to `d-addressing`); `no`(1) is the default. ISO/IEC
+ * 9040:1997 §18.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +34,10 @@ type DimensionParamOffer_absolute = BIT_STRING;
 
 /**
  * @summary DimensionParamOffer_absolute_yes
+ * @description
+ *
+ * Offer `d-absolute` = `"yes"`: POINTER-ABSOLUTE may set this
+ * coordinate. ISO/IEC 9040:1997 §18.2.3.
  * @constant
  */
 export
@@ -36,6 +45,10 @@ const DimensionParamOffer_absolute_yes: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary yes
+ * @description
+ *
+ * Offer `d-absolute` = `"yes"`: POINTER-ABSOLUTE may set this
+ * coordinate. ISO/IEC 9040:1997 §18.2.3.
  * @constant
  */
 export
@@ -43,6 +56,9 @@ const yes: number = DimensionParamOffer_absolute_yes; /* SHORT_NAMED_BIT */
 
 /**
  * @summary DimensionParamOffer_absolute_no
+ * @description
+ *
+ * Offer `d-absolute` = `"no"` (default). ISO/IEC 9040:1997 §18.2.3.
  * @constant
  */
 export
@@ -50,6 +66,9 @@ const DimensionParamOffer_absolute_no: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary no
+ * @description
+ *
+ * Offer `d-absolute` = `"no"` (default). ISO/IEC 9040:1997 §18.2.3.
  * @constant
  */
 export

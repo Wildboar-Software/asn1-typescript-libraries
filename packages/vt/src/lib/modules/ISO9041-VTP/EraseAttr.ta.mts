@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EraseAttr
  * @description
- * 
+ *
+ * Whether ERASE also resets secondary attributes. TRUE =
+ * reset-attribute `"yes"` (restore explicit modal defaults);
+ * FALSE = leave them. ISO/IEC 9040:1997 §19.4.1.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

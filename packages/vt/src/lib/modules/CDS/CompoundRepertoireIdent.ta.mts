@@ -19,7 +19,11 @@ import { RepertoireFontIdent, _decode_RepertoireFontIdent, _encode_RepertoireFon
 /**
  * @summary CompoundRepertoireIdent
  * @description
- * 
+ *
+ * Invite flags for repertoire-capability and per-slot
+ * repertoire/font invitations. ISO/IEC 9040:1997 §18.1, §18.2.4;
+ * ISO/IEC 9041-1:1997 §12.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,18 @@ class CompoundRepertoireIdent {
     constructor (
         /**
          * @summary `capability`.
+         * @description
+         * Invite `repertoire-capability` (1..N; default 1). ISO/IEC
+         * 9040:1997 §18.1.
          * @public
          * @readonly
          */
         readonly capability: OPTIONAL<NULL>,
         /**
          * @summary `repertoirePositionOffers`.
+         * @description
+         * Per-slot invitations in the repertoire assignment list.
+         * ISO/IEC 9041-1:1997 §12.3.1.
          * @public
          * @readonly
          */

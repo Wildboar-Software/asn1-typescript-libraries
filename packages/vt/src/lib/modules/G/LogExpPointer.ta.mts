@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LogExpPointer
  * @description
- * 
+ *
+ * Logical display-object address: field-element `k`, field `f`, and
+ * `z`. Used with Fields. ISO/IEC 9040:1997 §3.3.15, §19.1.3;
+ * ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +40,24 @@ class LogExpPointer {
     constructor (
         /**
          * @summary `kValue`.
+         * @description
+         * Field-element coordinate. ISO/IEC 9040:1997 §19.1.3.
          * @public
          * @readonly
          */
         readonly kValue: OPTIONAL<INTEGER>,
         /**
          * @summary `fValue`.
+         * @description
+         * Field coordinate. ISO/IEC 9040:1997 §19.1.3.
          * @public
          * @readonly
          */
         readonly fValue: OPTIONAL<INTEGER>,
         /**
          * @summary `zValue`.
+         * @description
+         * Z coordinate of the logical pointer. ISO/IEC 9040:1997 §19.1.3.
          * @public
          * @readonly
          */

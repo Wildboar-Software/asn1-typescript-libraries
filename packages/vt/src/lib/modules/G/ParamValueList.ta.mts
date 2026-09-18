@@ -21,7 +21,11 @@ import { type Values as DEV_Values, _decode_Values as DEV__decode_Values, _encod
 /**
  * @summary ParamValueList
  * @description
- * 
+ *
+ * MIN ACCEPT payload (and profile-arg values): selected CDS/CSS/DEV
+ * parameters and one delivery-control INTEGER. ISO/IEC 9041-1:1997
+ * §6.13, §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,24 +48,37 @@ class ParamValueList {
     constructor (
         /**
          * @summary `displayObjects`.
+         * @description
+         * Selected CDS display-object values. ISO/IEC 9041-1:1997
+         * §6.13.2, §12.2.
          * @public
          * @readonly
          */
         readonly displayObjects: OPTIONAL<CDS_Values>,
         /**
          * @summary `controlObjects`.
+         * @description
+         * Selected CSS control-object values. ISO/IEC 9041-1:1997
+         * §6.13.2, §12.2.
          * @public
          * @readonly
          */
         readonly controlObjects: OPTIONAL<CSS_Values>,
         /**
          * @summary `deviceObjects`.
+         * @description
+         * Selected DEV device-object values. ISO/IEC 9041-1:1997
+         * §6.13.2, §12.2.
          * @public
          * @readonly
          */
         readonly deviceObjects: OPTIONAL<DEV_Values>,
         /**
          * @summary `deliveryControl`.
+         * @description
+         * Selected delivery-control: none / simple / quarantine. Applies
+         * only to DO updates and COs with CO-priority `"normal"`.
+         * ISO/IEC 9040:1997 §24, table 15.
          * @public
          * @readonly
          */

@@ -20,7 +20,11 @@ import { BlockParamOffer_bound, _decode_BlockParamOffer_bound, _encode_BlockPara
 /**
  * @summary BlockParamOffer
  * @description
- * 
+ *
+ * Offered block-definition-capability and `b-bound`. Applicable only
+ * if capability is `"yes"`. Requires Blocks FU. ISO/IEC 9040:1997
+ * §10.7, §18.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +44,19 @@ class BlockParamOffer {
     constructor (
         /**
          * @summary `capability`.
+         * @description
+         * Offered `block-definition-capability` (`yes`(0)/`no`(1);
+         * default `"no"`). ISO/IEC 9040:1997 §18.1, §18.2.1.
          * @public
          * @readonly
          */
         readonly capability: OPTIONAL<BlockParamOffer_capability>,
         /**
          * @summary `bound`.
+         * @description
+         * Offered `b-bound`: unbounded or integer limit (default 1).
+         * Addressing/CREATE/DELETE invalid if b > bound; b < 1
+         * always invalid. ISO/IEC 9040:1997 §18.2.1.
          * @public
          * @readonly
          */

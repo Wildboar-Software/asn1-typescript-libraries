@@ -22,7 +22,13 @@ import { BKQcontent_stuser_Item, _decode_BKQcontent_stuser_Item, _encode_BKQcont
 /**
  * @summary BKQcontent
  * @description
- * 
+ *
+ * Body of VT-BREAK-REQ and VT-BREAK-RESP. Break FU
+ * (ISO/IEC 9040:1997 §10.4) is a destructive interrupt.
+ * After break, context is reset-context. WAVAR-owner is a
+ * service parameter of the primitive, not this PDU body.
+ * ISO/IEC 9041-1:1997 §6.5, §6.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,18 +55,27 @@ class BKQcontent {
     constructor (
         /**
          * @summary `standard`.
+         * @description
+         * Display and logical pointers. ISO/IEC 9041-1:1997
+         * §6.5, §6.6.
          * @public
          * @readonly
          */
         readonly standard: OPTIONAL<BKQcontent_standard>,
         /**
          * @summary `profile`.
+         * @description
+         * Profile-defined tagged octets (ISO/IEC 9040:1997
+         * VT-information). ISO/IEC 9041-1:1997 §6.5, §6.6.
          * @public
          * @readonly
          */
         readonly profile: OPTIONAL<BKQcontent_profile_Item[]>,
         /**
          * @summary `stuser`.
+         * @description
+         * User-defined tagged octets (ISO/IEC 9040:1997
+         * VT-information). ISO/IEC 9041-1:1997 §6.5, §6.6.
          * @public
          * @readonly
          */

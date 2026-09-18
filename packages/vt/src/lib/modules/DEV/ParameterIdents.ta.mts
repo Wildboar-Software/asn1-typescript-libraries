@@ -23,7 +23,12 @@ import { _decode_CompoundColourIdent, _encode_CompoundColourIdent, CompoundColou
 /**
  * @summary ParameterIdents
  * @description
- * 
+ *
+ * Which device-object VTE-parameters are identified for negotiation.
+ * A present NULL puts that parameter in scope. Capability-list-length
+ * components of the CDS compound types SHALL NOT be present. ISO/IEC
+ * 9041-1:1997 §12.5.1; ISO/IEC 9040:1997 §16, §23.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,90 +61,141 @@ class ParameterIdents {
     constructor (
         /**
          * @summary `defaultCOaccess`.
+         * @description
+         * Access-rule of the implicit default CO (boolean, eight
+         * booleans). ISO/IEC 9040:1997 §23.1 table 12.
          * @public
          * @readonly
          */
         readonly defaultCOaccess: OPTIONAL<NULL>,
         /**
          * @summary `defaultCOPriority`.
+         * @description
+         * Default-CO priority (`normal`/`high`/`urgent`). Same meaning
+         * as CO-priority. ISO/IEC 9040:1997 §23.1 table 12.
          * @public
          * @readonly
          */
         readonly defaultCOPriority: OPTIONAL<NULL>,
         /**
          * @summary `deviceRepertoire`.
+         * @description
+         * Device repertoire-assignment overrides of the linked DO.
+         * Capability-list-length SHALL NOT be present. ISO/IEC
+         * 9040:1997 §23.3; ISO/IEC 9041-1:1997 §12.5.1 note.
          * @public
          * @readonly
          */
         readonly deviceRepertoire: OPTIONAL<CompoundRepertoireIdent>,
         /**
          * @summary `deviceEmphasis`.
+         * @description
+         * Device-emphasis overrides of the linked DO.
+         * Capability-list-length SHALL NOT be present. ISO/IEC
+         * 9040:1997 §23.3; ISO/IEC 9041-1:1997 §12.5.1 note.
          * @public
          * @readonly
          */
         readonly deviceEmphasis: OPTIONAL<CompoundEmphasisIdent>,
         /**
          * @summary `deviceForeground`.
+         * @description
+         * Device foreground-colour overrides of the linked DO.
+         * Capability-list-length SHALL NOT be present. ISO/IEC
+         * 9040:1997 §23.3; ISO/IEC 9041-1:1997 §12.5.1 note.
          * @public
          * @readonly
          */
         readonly deviceForeground: OPTIONAL<CompoundColourIdent>,
         /**
          * @summary `deviceBackground`.
+         * @description
+         * Device background-colour overrides of the linked DO.
+         * Capability-list-length SHALL NOT be present. ISO/IEC
+         * 9040:1997 §23.3; ISO/IEC 9041-1:1997 §12.5.1 note.
          * @public
          * @readonly
          */
         readonly deviceBackground: OPTIONAL<CompoundColourIdent>,
         /**
          * @summary `minimumXarrayLength`.
+         * @description
+         * Device must handle X-arrays at least this long. ISO/IEC
+         * 9040:1997 §23.2 table 12.
          * @public
          * @readonly
          */
         readonly minimumXarrayLength: OPTIONAL<NULL>,
         /**
          * @summary `minimumYarrayLength`.
+         * @description
+         * Device must handle Y-arrays at least this long. ISO/IEC
+         * 9040:1997 §23.2 table 12.
          * @public
          * @readonly
          */
         readonly minimumYarrayLength: OPTIONAL<NULL>,
         /**
          * @summary `deviceControlObjectNames`.
+         * @description
+         * Semantic links to named COs (profile-defined). Does not
+         * include the implicit default CO. ISO/IEC 9040:1997 §23
+         * notes.
          * @public
          * @readonly
          */
         readonly deviceControlObjectNames: OPTIONAL<NULL>,
         /**
          * @summary `deviceDisplayObjectName`.
+         * @description
+         * Linked DO-name; must equal a DO-name in the VTE. ISO/IEC
+         * 9040:1997 §23 notes.
          * @public
          * @readonly
          */
         readonly deviceDisplayObjectName: OPTIONAL<NULL>,
         /**
          * @summary `terminationEventList`.
+         * @description
+         * Optional event-based termination conditions. Useful when the
+         * device is an object-updating device. ISO/IEC 9040:1997
+         * §23.4 table 14.
          * @public
          * @readonly
          */
         readonly terminationEventList: OPTIONAL<NULL>,
         /**
          * @summary `terminationLength`.
+         * @description
+         * Optional update-count termination. ISO/IEC 9040:1997 §23.4
+         * table 14.
          * @public
          * @readonly
          */
         readonly terminationLength: OPTIONAL<NULL>,
         /**
          * @summary `terminationTimeout`.
+         * @description
+         * Optional timeout termination. ISO/IEC 9040:1997 §23.4 table
+         * 14.
          * @public
          * @readonly
          */
         readonly terminationTimeout: OPTIONAL<NULL>,
         /**
          * @summary `defaultCOtrigger`.
+         * @description
+         * Whether the implicit default CO has the trigger
+         * characteristic. ISO/IEC 9040:1997 §23.1 table 12.
          * @public
          * @readonly
          */
         readonly defaultCOtrigger: OPTIONAL<NULL>,
         /**
          * @summary `defaultCOinitialValue`.
+         * @description
+         * Initial state of the default CO's eight booleans. ISO/IEC
+         * 9040:1997 §23.1 table 12.
          * @public
          * @readonly
          */

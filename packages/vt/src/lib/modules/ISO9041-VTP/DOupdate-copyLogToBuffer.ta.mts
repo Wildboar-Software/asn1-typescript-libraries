@@ -20,7 +20,11 @@ import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-V
 /**
  * @summary DOupdate_copyLogToBuffer
  * @description
- * 
+ *
+ * Logical COPY-TO-BUFFER. Copies a logical extent into a RIO
+ * record or the temporary buffer. `structure` present ⇒ `"x"`,
+ * absent ⇒ `"none"`. ISO/IEC 9040:1997 §19.4.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,30 +49,46 @@ class DOupdate_copyLogToBuffer {
     constructor (
         /**
          * @summary `address`.
+         * @description
+         * End of the logical copy extent. ISO/IEC 9040:1997 §19.4.2.5.
          * @public
          * @readonly
          */
         readonly address: LogPointer,
         /**
          * @summary `rioName`.
+         * @description
+         * RIO name. SHALL be absent for the temporary buffer.
+         * Optional when the VTE has a single RIO.
+         * ISO/IEC 9040:1997 §19.4.2.5; ISO/IEC 9041-1:1997 §12.1.
          * @public
          * @readonly
          */
         readonly rioName: OPTIONAL<PrintableString>,
         /**
          * @summary `recordId`.
+         * @description
+         * RIO record identifier. SHALL be absent for the temporary
+         * buffer; present when a RIO is the target.
+         * ISO/IEC 9040:1997 §19.4.2.5; ISO/IEC 9041-1:1997 §12.1.
          * @public
          * @readonly
          */
         readonly recordId: OPTIONAL<PrintableString>,
         /**
          * @summary `rendition`.
+         * @description
+         * Present ⇒ `"copy attributes"`; absent ⇒
+         * `"no attribute copy"`. ISO/IEC 9040:1997 §19.4.2.5.
          * @public
          * @readonly
          */
         readonly rendition: OPTIONAL<NULL>,
         /**
          * @summary `structure`.
+         * @description
+         * Present ⇒ `"x"`; absent ⇒ `"none"`.
+         * ISO/IEC 9040:1997 §19.4.2.5.
          * @public
          * @readonly
          */

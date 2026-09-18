@@ -20,7 +20,11 @@ import { ColourAssignment, _decode_ColourAssignment, _encode_ColourAssignment } 
 /**
  * @summary CompoundColourOffer
  * @description
- * 
+ *
+ * Offered colour-capability and colour-assignment list (foreground
+ * or background). Slot 1 is the explicit modal default. ISO/IEC
+ * 9040:1997 §18.1, §18.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,17 @@ class CompoundColourOffer {
     constructor (
         /**
          * @summary `colourCapability`.
+         * @description
+         * Offered colour-capability (how many assignment slots;
+         * default 1). ISO/IEC 9040:1997 §18.1.
          * @public
          * @readonly
          */
         readonly colourCapability: OPTIONAL<IntegerOffer>,
         /**
          * @summary `colourValues`.
+         * @description
+         * Offered colour-assignment list. ISO/IEC 9040:1997 §18.2.5.
          * @public
          * @readonly
          */

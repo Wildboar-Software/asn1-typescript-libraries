@@ -21,7 +21,10 @@ import { type ObjectUpdate, _decode_ObjectUpdate, _encode_ObjectUpdate } from ".
 /**
  * @summary RIOupdate_Item
  * @description
- * 
+ *
+ * One RIO record operation. ISO/IEC 9040:1997 §3.3.70; ISO/IEC
+ * 9041-1:1997 §12.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,18 +46,26 @@ class RIOupdate_Item {
     constructor (
         /**
          * @summary `recordId`.
+         * @description
+         * Named record within the RIO. ISO/IEC 9041-1:1997 §12.2.5.
          * @public
          * @readonly
          */
         readonly recordId: OPTIONAL<PrintableString>,
         /**
          * @summary `operation`.
+         * @description
+         * eraseRIO(0) / deleteRecord(1) / createRecord(2). ISO/IEC
+         * 9041-1:1997 §12.2.5.
          * @public
          * @readonly
          */
         readonly operation: RIOupdate_Item_operation,
         /**
          * @summary `updates`.
+         * @description
+         * Present only for Create Record; omitted ⇒ the record is empty.
+         * ISO/IEC 9041-1:1997 §12.2.5.
          * @public
          * @readonly
          */

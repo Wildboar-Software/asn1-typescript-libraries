@@ -19,7 +19,11 @@ import { TimeOffer_Item_range, _decode_TimeOffer_Item_range, _encode_TimeOffer_I
 /**
  * @summary TimeOffer_Item
  * @description
- * 
+ *
+ * One offered timeout: `value` is a single `(multiplier, exponent)`;
+ * `range` is lower/upper multiplier+exponent. T and E encode the
+ * timeout per ISO/IEC 9040:1997 §23.4; T=0 means infinite.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

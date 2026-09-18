@@ -18,7 +18,11 @@ import { COupdate_objectUpdate, _decode_COupdate_objectUpdate, _encode_COupdate_
 /**
  * @summary COupdate
  * @description
- * 
+ *
+ * Update to a named control object. Which `objectUpdate` alternative
+ * is legal depends on VTE-parameter CO-structure. ISO/IEC 9040:1997
+ * §14; ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,12 +70,18 @@ class COupdate {
     constructor (
         /**
          * @summary `coName`.
+         * @description
+         * Name of the CSS control object being updated. ISO/IEC
+         * 9041-1:1997 §6.12.2, §12.2.
          * @public
          * @readonly
          */
         readonly coName: PrintableString,
         /**
          * @summary `objectUpdate`.
+         * @description
+         * Typed update; choice is constrained by CO-structure. ISO/IEC
+         * 9041-1:1997 §12.2.
          * @public
          * @readonly
          */

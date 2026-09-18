@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TimeOffer_Item_value
  * @description
- * 
+ *
+ * A single offered timeout as multiplier T and exponent E. T and E
+ * encode the timeout per ISO/IEC 9040:1997 §23.4; T must not be
+ * negative; T=0 means infinite.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +38,18 @@ class TimeOffer_Item_value {
     constructor (
         /**
          * @summary `multiplier`.
+         * @description
+         * Timeout multiplier T. Must not be negative; T=0 means
+         * infinite. ISO/IEC 9040:1997 §23.4.
          * @public
          * @readonly
          */
         readonly multiplier: INTEGER,
         /**
          * @summary `exponent`.
+         * @description
+         * Timeout exponent E. T and E encode the timeout per ISO/IEC
+         * 9040:1997 §23.4.
          * @public
          * @readonly
          */

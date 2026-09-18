@@ -18,7 +18,12 @@ import { RepertoireFontIdent_alternatives, _decode_RepertoireFontIdent_alternati
 /**
  * @summary RepertoireFontIdent
  * @description
- * 
+ *
+ * Invite one repertoire-list slot: `placeholder` skips the slot;
+ * `alternatives` invites assignment, font-capability, and/or font
+ * names. ISO/IEC 9041-1:1997 §12.3.1; ISO/IEC 9040:1997 §18.2.4,
+ * §18.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

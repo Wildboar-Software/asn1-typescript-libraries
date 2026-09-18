@@ -19,7 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ImplementationIdent
  * @description
- * 
+ *
+ * Optional product identity for implementor maintenance. Outside the
+ * protocol's conformance. ISO/IEC 9041-1:1997 §6.2.2 j, §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +40,24 @@ class ImplementationIdent {
     constructor (
         /**
          * @summary `implementationIdentifier`.
+         * @description
+         * Optional OID naming the product. ISO/IEC 9041-1:1997 §6.2.2 j.
          * @public
          * @readonly
          */
         readonly implementationIdentifier: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `implementationName`.
+         * @description
+         * Character name of the product. ISO/IEC 9041-1:1997 §6.2.2 j.
          * @public
          * @readonly
          */
         readonly implementationName: OPTIONAL<PrintableString>,
         /**
          * @summary `implementationVersion`.
+         * @description
+         * Character version of the product. ISO/IEC 9041-1:1997 §6.2.2 j.
          * @public
          * @readonly
          */

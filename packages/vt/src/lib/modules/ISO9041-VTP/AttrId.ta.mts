@@ -25,7 +25,22 @@ import { AttrId_font, _decode_AttrId_font, _encode_AttrId_font } from "../ISO904
 /**
  * @summary AttrId
  * @description
- * 
+ *
+ * ATTRIBUTE id and value together. INTEGER values other than 0
+ * identify a 1-based position in the corresponding assignment
+ * VTE-parameter list (1 = first). 0 = `"null"`.
+ * ISO/IEC 9040:1997 §13.2, §19.4.1.3; ISO/IEC 9041-1:1997 §12.1.
+ *
+ * - `graphicCharacterRepertoire` / `foregroundColour` /
+ *   `backgroundColour`: INTEGER `{ null(0) }`; 1..capability.
+ * - `font`: INTEGER `{ null(0) }`; integer ≥ 1, must be valid for
+ *   the element's repertoire.
+ * - `emphasis`: PrintableString of subattributes
+ *   (ISO/IEC 9040:1997 B.17).
+ * - `fevGrCharRep` / `fevForCol` / `fevBakCol` / `fevEmph` /
+ *   `fevFont` (tags 5–9): attribute-value
+ *   `"field-explicit-value"` (use the FDR's attribute).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

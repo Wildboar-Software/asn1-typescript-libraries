@@ -17,7 +17,12 @@ import { Identifier_Item, _decode_Identifier_Item, _encode_Identifier_Item } fro
 /**
  * @summary Identifier
  * @description
- * 
+ *
+ * MIN identifiers for control-object VTE-parameters to
+ * negotiate. Each member names one CO (`CO-name`, unique in
+ * the VTE) and which of its parameters are invited.
+ * ISO/IEC 9041-1:1997 §12.4.1; ISO/IEC 9040:1997 §14, §20.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

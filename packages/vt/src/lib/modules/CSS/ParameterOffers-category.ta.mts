@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ParameterOffers_category
  * @description
- * 
+ *
+ * Offered `CO-category` values. Set bits are offered, unset
+ * are not. Default category is `"boolean"`.
+ * ISO/IEC 9040:1997 table 9, §20.2.3–§20.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +39,12 @@ type ParameterOffers_category = BIT_STRING;
 
 /**
  * @summary ParameterOffers_category_character
+ * @description
+ *
+ * One string; all chars share `CO-repertoire-assignment`.
+ * New value fully replaces old. Initial empty = zero-length
+ * string. Size = max length (default 16).
+ * ISO/IEC 9040:1997 §20.2.3–§20.2.5.
  * @constant
  */
 export
@@ -42,6 +52,12 @@ const ParameterOffers_category_character: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary character
+ * @description
+ *
+ * One string; all chars share `CO-repertoire-assignment`.
+ * New value fully replaces old. Initial empty = zero-length
+ * string. Size = max length (default 16).
+ * ISO/IEC 9040:1997 §20.2.3–§20.2.5.
  * @constant
  */
 export
@@ -49,6 +65,12 @@ const character: number = ParameterOffers_category_character; /* SHORT_NAMED_BIT
 
 /**
  * @summary ParameterOffers_category_boolean_
+ * @description
+ *
+ * One or more booleans, each independently updatable (mask
+ * in `COupdate`). Initial each `false`. Size = max number of
+ * booleans (default 16). Default category.
+ * ISO/IEC 9040:1997 table 9, §20.2.3.
  * @constant
  */
 export
@@ -56,6 +78,12 @@ const ParameterOffers_category_boolean_: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary boolean_
+ * @description
+ *
+ * One or more booleans, each independently updatable (mask
+ * in `COupdate`). Initial each `false`. Size = max number of
+ * booleans (default 16). Default category.
+ * ISO/IEC 9040:1997 table 9, §20.2.3.
  * @constant
  */
 export
@@ -63,6 +91,11 @@ const boolean_: number = ParameterOffers_category_boolean_; /* SHORT_NAMED_BIT *
 
 /**
  * @summary ParameterOffers_category_symbolic
+ * @description
+ *
+ * One value encoded as integer 0..size-1; 0 is always
+ * `"null"`. Size = max distinct values (default 256).
+ * ISO/IEC 9040:1997 §20.2.6.
  * @constant
  */
 export
@@ -70,6 +103,11 @@ const ParameterOffers_category_symbolic: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary symbolic
+ * @description
+ *
+ * One value encoded as integer 0..size-1; 0 is always
+ * `"null"`. Size = max distinct values (default 256).
+ * ISO/IEC 9040:1997 §20.2.6.
  * @constant
  */
 export
@@ -77,6 +115,10 @@ const symbolic: number = ParameterOffers_category_symbolic; /* SHORT_NAMED_BIT *
 
 /**
  * @summary ParameterOffers_category_integer
+ * @description
+ *
+ * Single integer 0..size. Initial 0. Size = max integer
+ * value (default 65535). ISO/IEC 9040:1997 §20.2.2–§20.2.4.
  * @constant
  */
 export
@@ -84,6 +126,10 @@ const ParameterOffers_category_integer: number = 3; /* LONG_NAMED_BIT */
 
 /**
  * @summary integer
+ * @description
+ *
+ * Single integer 0..size. Initial 0. Size = max integer
+ * value (default 65535). ISO/IEC 9040:1997 §20.2.2–§20.2.4.
  * @constant
  */
 export
@@ -91,6 +137,10 @@ const integer: number = ParameterOffers_category_integer; /* SHORT_NAMED_BIT */
 
 /**
  * @summary ParameterOffers_category_transparent
+ * @description
+ *
+ * Uninterpreted bit string. Initial all 0. Size = max bits
+ * (default 16). ISO/IEC 9040:1997 §20.2.2–§20.2.4.
  * @constant
  */
 export
@@ -98,6 +148,10 @@ const ParameterOffers_category_transparent: number = 4; /* LONG_NAMED_BIT */
 
 /**
  * @summary transparent
+ * @description
+ *
+ * Uninterpreted bit string. Initial all 0. Size = max bits
+ * (default 16). ISO/IEC 9040:1997 §20.2.2–§20.2.4.
  * @constant
  */
 export

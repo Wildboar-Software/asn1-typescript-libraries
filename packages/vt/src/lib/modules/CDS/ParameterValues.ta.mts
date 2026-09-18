@@ -32,7 +32,11 @@ import { FieldParamValues, _decode_FieldParamValues, _encode_FieldParamValues } 
 /**
  * @summary ParameterValues
  * @description
- * 
+ *
+ * Selected values for one display object's VTE-parameters. Each
+ * present component is a single accepted value consistent with the
+ * offer. ISO/IEC 9041-1:1997 §12.3.3; ISO/IEC 9040:1997 §18.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,78 +64,120 @@ class ParameterValues {
     constructor (
         /**
          * @summary `dimension`.
+         * @description
+         * Selected `dimensions`: 0 = one, 1 = two, 2 = three. Default
+         * `"two"`. ISO/IEC 9040:1997 §18.1.
          * @public
          * @readonly
          */
         readonly dimension: OPTIONAL<INTEGER>,
         /**
          * @summary `xParam`.
+         * @description
+         * Selected X addressing parameters. ISO/IEC 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly xParam: OPTIONAL<DimensionParamValues>,
         /**
          * @summary `yParam`.
+         * @description
+         * Selected Y addressing parameters. Present only if
+         * `dimensions` ≥ 2. ISO/IEC 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly yParam: OPTIONAL<DimensionParamValues>,
         /**
          * @summary `zParam`.
+         * @description
+         * Selected Z addressing parameters. Present only if
+         * `dimensions` = 3. ISO/IEC 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly zParam: OPTIONAL<DimensionParamValues>,
         /**
          * @summary `erasure`.
+         * @description
+         * Selected `erasure-capability`. `true` = `"yes"`; `false` or
+         * absent = `"no"` (default). ISO/IEC 9040:1997 §18.1,
+         * §19.4.1.4; ISO/IEC 9041-1:1997 §12.3.3.
          * @public
          * @readonly
          */
         readonly erasure: OPTIONAL<BOOLEAN>,
         /**
          * @summary `repertoire`.
+         * @description
+         * Selected repertoire-capability and assignment list. INTEGER
+         * attribute values in DO updates are 1-based indexes into this
+         * list. ISO/IEC 9040:1997 §18.2.4; ISO/IEC 9041-1:1997 §12.1.
          * @public
          * @readonly
          */
         readonly repertoire: OPTIONAL<CompoundRepertoireValue>,
         /**
          * @summary `emphasis`.
+         * @description
+         * Selected DO-emphasis assignment list. ISO/IEC 9040:1997
+         * §18.2.6, B.17.
          * @public
          * @readonly
          */
         readonly emphasis: OPTIONAL<CompoundEmphasisValue>,
         /**
          * @summary `foreground`.
+         * @description
+         * Selected foreground-colour capability and assignment list.
+         * ISO/IEC 9040:1997 §18.2.5.
          * @public
          * @readonly
          */
         readonly foreground: OPTIONAL<CompoundColourValue>,
         /**
          * @summary `background`.
+         * @description
+         * Selected background-colour capability and assignment list.
+         * ISO/IEC 9040:1997 §18.2.5.
          * @public
          * @readonly
          */
         readonly background: OPTIONAL<CompoundColourValue>,
         /**
          * @summary `access`.
+         * @description
+         * Selected DO-access: `wavar`(0), `waci`(1), or `waca`(2)
+         * only. S-mode single DO is always WAVAR; A-mode uses WACI
+         * and WACA (WAVAR does not exist). ISO/IEC 9040:1997 §8, §9.
          * @public
          * @readonly
          */
         readonly access: OPTIONAL<ParameterValues_access>,
         /**
          * @summary `blockParams`.
+         * @description
+         * Selected block-definition-capability and `b-bound`.
+         * ISO/IEC 9040:1997 §18.2.1.
          * @public
          * @readonly
          */
         readonly blockParams: OPTIONAL<BlockParamValues>,
         /**
          * @summary `fieldParams`.
+         * @description
+         * Selected field-definition-capability and field bounds.
+         * ISO/IEC 9040:1997 §18.2.2.
          * @public
          * @readonly
          */
         readonly fieldParams: OPTIONAL<FieldParamValues>,
         /**
          * @summary `rippleCapability`.
+         * @description
+         * Selected `ripple-capability`. `true` = `"yes"`; `false` or
+         * absent = `"no"` (default). ISO/IEC 9040:1997 §10.10, §18.1;
+         * ISO/IEC 9041-1:1997 §12.3.3.
          * @public
          * @readonly
          */

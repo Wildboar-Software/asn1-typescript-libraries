@@ -26,7 +26,10 @@ import { _decode_FunctionalUnits, _encode_FunctionalUnits, type FunctionalUnits 
 /**
  * @summary ASRcontent
  * @description
- * 
+ *
+ * Parameters of VT-ASSOCIATE-RESP. Other distinctively tagged types
+ * as received are not an error. ISO/IEC 9041-1:1997 §6.3, §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,30 +49,46 @@ class ASRcontent {
     constructor (
         /**
          * @summary `result`.
+         * @description
+         * `success`, `fail`, or `success-with-warning`. ISO/IEC
+         * 9041-1:1997 §6.3.
          * @public
          * @readonly
          */
         readonly result: Result3,
         /**
          * @summary `implementation`.
+         * @description
+         * Optional implementor id/name/version for maintenance,
+         * as in ASQ. ISO/IEC 9041-1:1997 §6.3.
          * @public
          * @readonly
          */
         readonly implementation: OPTIONAL<ImplementationIdent>,
         /**
          * @summary `protocol_verison`.
+         * @description
+         * ASN.1 spelling is `protocol-verison`. On success a
+         * single bit selects the version; on failure indicates
+         * versions the rejecting VTPM supports. ISO/IEC
+         * 9041-1:1997 §6.3, §12.1.
          * @public
          * @readonly
          */
         readonly protocol_verison: OPTIONAL<ProtocolVersion>,
         /**
          * @summary `profile_arguments`.
+         * @description
+         * Selected values from the offer list; absent if result
+         * is failure. ISO/IEC 9041-1:1997 §6.3.
          * @public
          * @readonly
          */
         readonly profile_arguments: OPTIONAL<ProfileArgumValueList>,
         /**
          * @summary `functional_units`.
+         * @description
+         * Accepted FUs. ISO/IEC 9041-1:1997 §6.3.
          * @public
          * @readonly
          */

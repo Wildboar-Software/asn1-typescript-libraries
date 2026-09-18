@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AttrId_graphicCharacterRepertoire
  * @description
- * 
+ *
+ * Graphic-character-repertoire attribute-value. 0 = `"null"`.
+ * Other values are a 1-based index into the repertoire assignment
+ * VTE-parameter list; valid range 1..capability.
+ * ISO/IEC 9040:1997 §13.2, §19.4.1.3; ISO/IEC 9041-1:1997 §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +34,10 @@ type AttrId_graphicCharacterRepertoire = INTEGER;
 
 /**
  * @summary AttrId_graphicCharacterRepertoire_null_
+ * @description
+ *
+ * `"null"`(0). ISO/IEC 9040:1997 §13.2, §19.4.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +46,10 @@ const AttrId_graphicCharacterRepertoire_null_: AttrId_graphicCharacterRepertoire
 
 /**
  * @summary AttrId_graphicCharacterRepertoire_null_
+ * @description
+ *
+ * `"null"`(0). ISO/IEC 9040:1997 §13.2, §19.4.1.3.
+ *
  * @constant
  * @type {number}
  */

@@ -19,7 +19,13 @@ import { _decode_Profile, _encode_Profile, Profile } from "../G/Profile.ta.mjs";
 /**
  * @summary SPQ2content
  * @description
- * 
+ *
+ * VT-SWITCH-PROFILE-REQ with object-retention list. SHALL be
+ * used when context retention is required. SHALL NOT be used
+ * if Context Retention FU is not selected. Either form is
+ * allowed when retention is not required even if the FU is
+ * selected. ISO/IEC 9041-1:1997 §6.23, §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +42,18 @@ class SPQ2content {
     constructor (
         /**
          * @summary `profile`.
+         * @description
+         * Named VTE-profile plus argument offers. ISO/IEC
+         * 9041-1:1997 §6.23.
          * @public
          * @readonly
          */
         readonly profile: Profile,
         /**
          * @summary `retList`.
+         * @description
+         * DO/CO names whose contents are requested retained.
+         * ISO/IEC 9041-1:1997 §12.1.
          * @public
          * @readonly
          */

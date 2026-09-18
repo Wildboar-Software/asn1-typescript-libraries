@@ -19,7 +19,12 @@ import { AttrExtent, _decode_AttrExtent, _encode_AttrExtent } from "../ISO9041-V
 /**
  * @summary DOupdate_writeAttr
  * @description
- * 
+ *
+ * ATTRIBUTE: set a secondary attribute. `AttrId` encodes both
+ * attribute-id and attribute-value. Extent is global, address or
+ * modal. character-repertoire may only be set with modal extent.
+ * ISO/IEC 9040:1997 §19.4.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,18 @@ class DOupdate_writeAttr {
     constructor (
         /**
          * @summary `attributeId`.
+         * @description
+         * Both attribute-id and attribute-value.
+         * ISO/IEC 9040:1997 §19.4.1.3; ISO/IEC 9041-1:1997 §12.1.
          * @public
          * @readonly
          */
         readonly attributeId: AttrId,
         /**
          * @summary `attributeExtent`.
+         * @description
+         * global, address or modal. character-repertoire may only be
+         * set with modal extent. ISO/IEC 9040:1997 §19.4.1.3.
          * @public
          * @readonly
          */

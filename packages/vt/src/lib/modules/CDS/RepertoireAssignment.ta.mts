@@ -19,7 +19,13 @@ import { RepertoireAssignment_value, _decode_RepertoireAssignment_value, _encode
 /**
  * @summary RepertoireAssignment
  * @description
- * 
+ *
+ * One repertoire-assignment list entry. `type` is optional OID
+ * (default `{vt-b-rep-iso2022}`). INTEGER attribute values in DO
+ * updates are 1-based indexes into this ordered list; slot 1 is the
+ * TEXT/REPEAT-TEXT/ERASE modal default. ISO/IEC 9040:1997 §18.2.4;
+ * ISO/IEC 9041-1:1997 §12.1, §12.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +45,19 @@ class RepertoireAssignment {
     constructor (
         /**
          * @summary `type_`.
+         * @description
+         * Repertoire-assignment-type. Absent or `{vt-b-rep-iso2022}`
+         * selects ISO/IEC 2022 designation sequences. Otherwise
+         * `value` is ANY per this OID. ISO/IEC 9040:1997 §18.2.4;
+         * ISO/IEC 9041-1:1997 §12.3.2.
          * @public
          * @readonly
          */
         readonly type_: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `value`.
+         * @description
+         * Repertoire-assignment-value. ISO/IEC 9040:1997 §18.2.4.
          * @public
          * @readonly
          */

@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ASQcontent_class
  * @description
- * 
+ *
+ * VT-class of the association. Only `basic` (1) invokes
+ * ISO/IEC 9040. Other values are outside ISO/IEC 9041-1:1997.
+ * ISO/IEC 9041-1:1997 §6.2, §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +33,8 @@ type ASQcontent_class = INTEGER;
 
 /**
  * @summary ASQcontent_class_basic
+ * @description
+ * ISO/IEC 9040 Basic Class. ISO/IEC 9041-1:1997 §6.2.
  * @constant
  * @type {number}
  */
@@ -37,6 +43,8 @@ const ASQcontent_class_basic: ASQcontent_class = 1; /* LONG_NAMED_INTEGER_VALUE 
 
 /**
  * @summary ASQcontent_class_basic
+ * @description
+ * ISO/IEC 9040 Basic Class. ISO/IEC 9041-1:1997 §6.2.
  * @constant
  * @type {number}
  */

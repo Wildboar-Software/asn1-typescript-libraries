@@ -1,7 +1,12 @@
 /**
  * @description
  *
- * Character Display Service parameters for VT negotiation: identifiers, offers, and values from ISO/IEC 9041:1997 clause 12.3.
+ * Conceptual Data Store (CDS) encodings: display-object VTE-parameters
+ * for Multiple Interaction Negotiation (MIN). `Identifier` invites
+ * parameters, `Offer` proposes values, and `Values` returns the
+ * selected values. Each set member is keyed by `display-object-name`
+ * (PrintableString unique in the VTE). ISO/IEC 9041-1:1997 §12.3;
+ * ISO/IEC 9040:1997 §13, §18.
  */
 export * from "./AssignmentIdent.ta.mjs";
 export * from "./BlockParamIdent.ta.mjs";

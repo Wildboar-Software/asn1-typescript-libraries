@@ -28,7 +28,10 @@ import { ASQcontent_either, _decode_ASQcontent_either, _encode_ASQcontent_either
 /**
  * @summary ASQcontent
  * @description
- * 
+ *
+ * Parameters of VT-ASSOCIATE-REQ. Other distinctively tagged types as
+ * received are not an error. ISO/IEC 9041-1:1997 §6.2, §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,36 +53,61 @@ class ASQcontent {
     constructor (
         /**
          * @summary `class_`.
+         * @description
+         * VT-class. Only `basic` (1) invokes ISO/IEC 9040. Other
+         * values are outside ISO/IEC 9041-1:1997. ISO/IEC
+         * 9041-1:1997 §6.2.
          * @public
          * @readonly
          */
         readonly class_: ASQcontent_class,
         /**
          * @summary `implementation`.
+         * @description
+         * Optional implementor id/name/version for maintenance.
+         * ISO/IEC 9041-1:1997 §6.2.
          * @public
          * @readonly
          */
         readonly implementation: OPTIONAL<ImplementationIdent>,
         /**
          * @summary `functional_units`.
+         * @description
+         * Proposed FUs (bit=1 offered). MIN requires Switch
+         * Profile; Exceptions requires Break; Context Retention
+         * requires Switch Profile; Ripple requires Structured COs.
+         * ISO/IEC 9040:1997 §10. ISO/IEC 9041-1:1997 §6.2.
          * @public
          * @readonly
          */
         readonly functional_units: OPTIONAL<FunctionalUnits>,
         /**
          * @summary `profile`.
+         * @description
+         * VTE-profile name plus argument offers. Omitted means
+         * the default profile for the selected mode. ISO/IEC
+         * 9040:1997 annex A. ISO/IEC 9041-1:1997 §6.2.
          * @public
          * @readonly
          */
         readonly profile: OPTIONAL<Profile>,
         /**
          * @summary `protocol_version`.
+         * @description
+         * Bit string; bit 0 = version 1. Initiator may set
+         * multiple bits; last bit sent must be 1. Receiver
+         * ignores trailing bits above the latest version it
+         * supports. ISO/IEC 9041-1:1997 §6.2, §12.1.
          * @public
          * @readonly
          */
         readonly protocol_version: OPTIONAL<ProtocolVersion>,
         /**
          * @summary `either`.
+         * @description
+         * Present only if VT-mode is `"either-A"` or `"either-S"`;
+         * chooses A-mode (0) or S-mode (1) when mode-switching
+         * was offered. ISO/IEC 9041-1:1997 §6.2, §12.1.
          * @public
          * @readonly
          */

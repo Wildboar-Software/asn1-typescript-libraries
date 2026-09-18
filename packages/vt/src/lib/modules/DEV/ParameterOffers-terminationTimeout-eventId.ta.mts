@@ -19,7 +19,10 @@ import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from ".
 /**
  * @summary ParameterOffers_terminationTimeout_eventId
  * @description
- * 
+ *
+ * Offered event-id for timeout termination: `integer` is a non-zero
+ * positive integer offer; `nul` is `"null"`. ISO/IEC 9040:1997 §23.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,17 @@ class ParameterOffers_terminationTimeout_eventId {
     constructor (
         /**
          * @summary `integer`.
+         * @description
+         * Offered non-zero positive event-id values. ISO/IEC
+         * 9040:1997 §23.4.
          * @public
          * @readonly
          */
         readonly integer: OPTIONAL<IntegerOffer>,
         /**
          * @summary `nul`.
+         * @description
+         * Offer `"null"` as the event-id. ISO/IEC 9040:1997 §23.4.
          * @public
          * @readonly
          */

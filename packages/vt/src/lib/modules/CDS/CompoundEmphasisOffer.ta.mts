@@ -17,7 +17,11 @@ import { CompoundEmphasisOffer_Item, _decode_CompoundEmphasisOffer_Item, _encode
 /**
  * @summary CompoundEmphasisOffer
  * @description
- * 
+ *
+ * Offered DO-emphasis assignment list. Each item is a placeholder
+ * or a multiple offer of one emphasis subattribute. Explicit modal
+ * default is not defined in 9040. ISO/IEC 9040:1997 §18.2.6, B.17.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

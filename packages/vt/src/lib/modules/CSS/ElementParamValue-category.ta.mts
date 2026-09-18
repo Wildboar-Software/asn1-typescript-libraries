@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ElementParamValue_category
  * @description
- * 
+ *
+ * Selected `CO-category` for one data element. Default
+ * `"boolean"`. ISO/IEC 9040:1997 table 9, §20.2.3–§20.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +38,12 @@ type ElementParamValue_category = INTEGER;
 
 /**
  * @summary ElementParamValue_category_character
+ * @description
+ *
+ * One string; all chars share `CO-repertoire-assignment`.
+ * New value fully replaces old. Initial empty = zero-length
+ * string. Size = max length (default 16).
+ * ISO/IEC 9040:1997 §20.2.3–§20.2.5.
  * @constant
  * @type {number}
  */
@@ -43,6 +52,12 @@ const ElementParamValue_category_character: ElementParamValue_category = 0; /* L
 
 /**
  * @summary ElementParamValue_category_character
+ * @description
+ *
+ * One string; all chars share `CO-repertoire-assignment`.
+ * New value fully replaces old. Initial empty = zero-length
+ * string. Size = max length (default 16).
+ * ISO/IEC 9040:1997 §20.2.3–§20.2.5.
  * @constant
  * @type {number}
  */
@@ -51,6 +66,12 @@ const character: ElementParamValue_category = ElementParamValue_category_charact
 
 /**
  * @summary ElementParamValue_category_boolean_
+ * @description
+ *
+ * One or more booleans, each independently updatable (mask
+ * in `COupdate`). Initial each `false`. Size = max number of
+ * booleans (default 16). Default category.
+ * ISO/IEC 9040:1997 table 9, §20.2.3.
  * @constant
  * @type {number}
  */
@@ -59,6 +80,12 @@ const ElementParamValue_category_boolean_: ElementParamValue_category = 1; /* LO
 
 /**
  * @summary ElementParamValue_category_boolean_
+ * @description
+ *
+ * One or more booleans, each independently updatable (mask
+ * in `COupdate`). Initial each `false`. Size = max number of
+ * booleans (default 16). Default category.
+ * ISO/IEC 9040:1997 table 9, §20.2.3.
  * @constant
  * @type {number}
  */
@@ -67,6 +94,11 @@ const boolean_: ElementParamValue_category = ElementParamValue_category_boolean_
 
 /**
  * @summary ElementParamValue_category_symbolic
+ * @description
+ *
+ * One value encoded as integer 0..size-1; 0 is always
+ * `"null"`. Size = max distinct values (default 256).
+ * ISO/IEC 9040:1997 §20.2.6.
  * @constant
  * @type {number}
  */
@@ -75,6 +107,11 @@ const ElementParamValue_category_symbolic: ElementParamValue_category = 2; /* LO
 
 /**
  * @summary ElementParamValue_category_symbolic
+ * @description
+ *
+ * One value encoded as integer 0..size-1; 0 is always
+ * `"null"`. Size = max distinct values (default 256).
+ * ISO/IEC 9040:1997 §20.2.6.
  * @constant
  * @type {number}
  */
@@ -83,6 +120,10 @@ const symbolic: ElementParamValue_category = ElementParamValue_category_symbolic
 
 /**
  * @summary ElementParamValue_category_integer
+ * @description
+ *
+ * Single integer 0..size. Initial 0. Size = max integer
+ * value (default 65535). ISO/IEC 9040:1997 §20.2.2–§20.2.4.
  * @constant
  * @type {number}
  */
@@ -91,6 +132,10 @@ const ElementParamValue_category_integer: ElementParamValue_category = 3; /* LON
 
 /**
  * @summary ElementParamValue_category_integer
+ * @description
+ *
+ * Single integer 0..size. Initial 0. Size = max integer
+ * value (default 65535). ISO/IEC 9040:1997 §20.2.2–§20.2.4.
  * @constant
  * @type {number}
  */
@@ -99,6 +144,10 @@ const integer: ElementParamValue_category = ElementParamValue_category_integer; 
 
 /**
  * @summary ElementParamValue_category_transparent
+ * @description
+ *
+ * Uninterpreted bit string. Initial all 0. Size = max bits
+ * (default 16). ISO/IEC 9040:1997 §20.2.2–§20.2.4.
  * @constant
  * @type {number}
  */
@@ -107,6 +156,10 @@ const ElementParamValue_category_transparent: ElementParamValue_category = 4; /*
 
 /**
  * @summary ElementParamValue_category_transparent
+ * @description
+ *
+ * Uninterpreted bit string. Initial all 0. Size = max bits
+ * (default 16). ISO/IEC 9040:1997 §20.2.2–§20.2.4.
  * @constant
  * @type {number}
  */

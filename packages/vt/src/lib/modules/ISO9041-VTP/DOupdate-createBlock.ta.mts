@@ -19,7 +19,11 @@ import { _decode_MeasurePair, _encode_MeasurePair, MeasurePair } from "../G/Meas
 /**
  * @summary DOupdate_createBlock
  * @description
- * 
+ *
+ * CREATE-BLOCK at (z,b) with origin (x,y) and dimension (Dx,Dy).
+ * Replaces any existing block at that (b,z). Requires Blocks FU.
+ * ISO/IEC 9040:1997 §19.4.1.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +41,24 @@ class DOupdate_createBlock {
     constructor (
         /**
          * @summary `blockPosition`.
+         * @description
+         * Block coordinates (z,b). ISO/IEC 9040:1997 §19.4.1.5.1.
          * @public
          * @readonly
          */
         readonly blockPosition: Block,
         /**
          * @summary `origin`.
+         * @description
+         * Block origin (x,y) in the Y-array. ISO/IEC 9040:1997 §19.4.1.5.1.
          * @public
          * @readonly
          */
         readonly origin: MeasurePair,
         /**
          * @summary `dimension`.
+         * @description
+         * Block size (Dx,Dy). ISO/IEC 9040:1997 §19.4.1.5.1.
          * @public
          * @readonly
          */

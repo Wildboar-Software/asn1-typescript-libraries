@@ -18,7 +18,14 @@ import { AttrExtent_address, _decode_AttrExtent_address, _encode_AttrExtent_addr
 /**
  * @summary AttrExtent
  * @description
- * 
+ *
+ * ATTRIBUTE extent. ISO/IEC 9040:1997 §19.4.1.3.
+ *
+ * - `global`: also sets the global attribute; `"null"` value is
+ *   valid; does not change array elements when the value is null.
+ * - `address`: beginning/ending `Pointer`s.
+ * - `modal`: sets the modal attribute only; no array elements.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

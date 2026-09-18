@@ -17,7 +17,11 @@ import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-V
 /**
  * @summary LogAttrExtent_address
  * @description
- * 
+ *
+ * Address alternative of `LogAttrExtent`: logical ATTRIBUTE from
+ * `beginning` through `ending` `LogPointer`s.
+ * ISO/IEC 9040:1997 §19.4.1.3, §19.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +38,18 @@ class LogAttrExtent_address {
     constructor (
         /**
          * @summary `beginning`.
+         * @description
+         * Start of the logical attribute extent.
+         * ISO/IEC 9040:1997 §19.4.1.3, §19.4.2.
          * @public
          * @readonly
          */
         readonly beginning: LogPointer,
         /**
          * @summary `ending`.
+         * @description
+         * End of the logical attribute extent; must be ≥ `beginning`.
+         * ISO/IEC 9040:1997 §19.4.1.3, §19.4.2.
          * @public
          * @readonly
          */

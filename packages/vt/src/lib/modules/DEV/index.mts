@@ -1,7 +1,13 @@
 /**
  * @description
  *
- * Device object parameters for VT negotiation from ISO/IEC 9041:1997 clause 12.5.
+ * Device-object VTE-parameters for VT negotiation (ISO/IEC 9041-1:1997
+ * §12.5). Device objects are defined by ISO/IEC 9040:1997 §16, §23:
+ * they model real-device mapping and link a display object to control
+ * objects. ISO/IEC 9040 is the service (VTE model, DOs/COs/devices,
+ * operations); ISO/IEC 9041-1 is the protocol (PDUs, mapping to
+ * ACSE/Presentation). `Identifier`, `Offer`, and `Values` share names
+ * with CDS and CSS; import those from `@wildboar/vt/DEV`.
  */
 export * from "./Identifier-Item.ta.mjs";
 export * from "./Identifier.ta.mjs";

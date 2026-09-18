@@ -36,7 +36,12 @@ import { ParameterOffers_rippleCapability, _decode_ParameterOffers_rippleCapabil
 /**
  * @summary ParameterOffers
  * @description
- * 
+ *
+ * Offered values for one display object's VTE-parameters. BIT STRING
+ * bits with value 1 are offered. Selected `ParameterValues` must be
+ * consistent with these offers. ISO/IEC 9041-1:1997 §12.3.2;
+ * ISO/IEC 9040:1997 §18.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,78 +77,123 @@ class ParameterOffers {
     constructor (
         /**
          * @summary `dimensionOffer`.
+         * @description
+         * Offered `dimensions`: `oneDimension`(0), `twoDimensions`(1),
+         * `threeDimensions`(2). Default `"two"`. ISO/IEC 9040:1997
+         * §18.1.
          * @public
          * @readonly
          */
         readonly dimensionOffer: OPTIONAL<ParameterOffers_dimensionOffer>,
         /**
          * @summary `xParam`.
+         * @description
+         * Offered X addressing parameters (`bound`, `addressing`,
+         * `absolute`, `window`). ISO/IEC 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly xParam: OPTIONAL<DimensionParamOffer>,
         /**
          * @summary `yParam`.
+         * @description
+         * Offered Y addressing parameters. Valid if `dimensions` ≥ 2.
+         * ISO/IEC 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly yParam: OPTIONAL<DimensionParamOffer>,
         /**
          * @summary `zParam`.
+         * @description
+         * Offered Z addressing parameters. Valid if `dimensions` = 3.
+         * ISO/IEC 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly zParam: OPTIONAL<DimensionParamOffer>,
         /**
          * @summary `erasure`.
+         * @description
+         * Offered `erasure-capability` (`yes`(0)/`no`(1); default
+         * `"no"`). Controls ERASE. ISO/IEC 9040:1997 §18.1,
+         * §19.4.1.4.
          * @public
          * @readonly
          */
         readonly erasure: OPTIONAL<ParameterOffers_erasure>,
         /**
          * @summary `repertoire`.
+         * @description
+         * Offered repertoire-capability and assignment-list slots
+         * (slot 1 is the TEXT/REPEAT-TEXT/ERASE modal default).
+         * ISO/IEC 9040:1997 §18.1, §18.2.4.
          * @public
          * @readonly
          */
         readonly repertoire: OPTIONAL<CompoundRepertoireOffer>,
         /**
          * @summary `emphasis`.
+         * @description
+         * Offered DO-emphasis assignment list. Explicit modal default
+         * is not defined in 9040. ISO/IEC 9040:1997 §18.2.6, B.17.
          * @public
          * @readonly
          */
         readonly emphasis: OPTIONAL<CompoundEmphasisOffer>,
         /**
          * @summary `foreground`.
+         * @description
+         * Offered foreground-colour capability and assignment list.
+         * ISO/IEC 9040:1997 §18.1, §18.2.5.
          * @public
          * @readonly
          */
         readonly foreground: OPTIONAL<CompoundColourOffer>,
         /**
          * @summary `background`.
+         * @description
+         * Offered background-colour capability and assignment list.
+         * ISO/IEC 9040:1997 §18.1, §18.2.5.
          * @public
          * @readonly
          */
         readonly background: OPTIONAL<CompoundColourOffer>,
         /**
          * @summary `access`.
+         * @description
+         * Offered DO-access. Only `wavar`(0), `waci`(1), `waca`(2);
+         * a display object cannot have a combined access-rule. Only
+         * `waci` and `waca` bits may be set together. ISO/IEC
+         * 9040:1997 §8, §9; ISO/IEC 9041-1:1997 §12.3.2.
          * @public
          * @readonly
          */
         readonly access: OPTIONAL<ParameterOffers_access>,
         /**
          * @summary `blockParams`.
+         * @description
+         * Offered block-definition-capability and `b-bound`. Requires
+         * Blocks FU. ISO/IEC 9040:1997 §10.7, §18.2.1.
          * @public
          * @readonly
          */
         readonly blockParams: OPTIONAL<BlockParamOffer>,
         /**
          * @summary `fieldParams`.
+         * @description
+         * Offered field-definition-capability and field bounds.
+         * Requires Fields FU. ISO/IEC 9040:1997 §10.8, §18.2.2.
          * @public
          * @readonly
          */
         readonly fieldParams: OPTIONAL<FieldParamOffer>,
         /**
          * @summary `rippleCapability`.
+         * @description
+         * Offered `ripple-capability` (`yes`(0)/`no`(1); default
+         * `"no"`). Requires Ripple FU. ISO/IEC 9040:1997 §10.10,
+         * §18.1.
          * @public
          * @readonly
          */

@@ -18,7 +18,10 @@ import { ParameterValues, _decode_ParameterValues, _encode_ParameterValues } fro
 /**
  * @summary Values_Item
  * @description
- * 
+ *
+ * One device object's agreed VTE-parameter values. ISO/IEC 9040:1997
+ * §23; ISO/IEC 9041-1:1997 §12.5.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +38,18 @@ class Values_Item {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         * VTE-unique device-name of the object these values apply to.
+         * ISO/IEC 9040:1997 §16, §23.1.
          * @public
          * @readonly
          */
         readonly name: PrintableString,
         /**
          * @summary `values`.
+         * @description
+         * Agreed values for this device's VTE-parameters. ISO/IEC
+         * 9041-1:1997 §12.5.3.
          * @public
          * @readonly
          */

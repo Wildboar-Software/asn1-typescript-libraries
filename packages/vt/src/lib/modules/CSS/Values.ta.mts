@@ -17,7 +17,12 @@ import { Values_Item, _decode_Values_Item, _encode_Values_Item } from "../CSS/Va
 /**
  * @summary Values
  * @description
- * 
+ *
+ * MIN returned values for control-object VTE-parameters.
+ * Responses must be consistent with the corresponding
+ * offers. ISO/IEC 9041-1:1997 §12.4.3;
+ * ISO/IEC 9040:1997 §20.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

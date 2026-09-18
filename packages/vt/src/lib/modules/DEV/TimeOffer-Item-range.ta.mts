@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TimeOffer_Item_range
  * @description
- * 
+ *
+ * Inclusive range of offered timeouts via lower/upper multiplier and
+ * exponent. T and E encode the timeout per ISO/IEC 9040:1997 §23.4;
+ * T=0 means infinite.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +40,32 @@ class TimeOffer_Item_range {
     constructor (
         /**
          * @summary `lowerMultiplier`.
+         * @description
+         * Lower-bound timeout multiplier T. ISO/IEC 9040:1997 §23.4.
          * @public
          * @readonly
          */
         readonly lowerMultiplier: INTEGER,
         /**
          * @summary `lowerExponent`.
+         * @description
+         * Lower-bound timeout exponent E. ISO/IEC 9040:1997 §23.4.
          * @public
          * @readonly
          */
         readonly lowerExponent: INTEGER,
         /**
          * @summary `upperMultiplier`.
+         * @description
+         * Upper-bound timeout multiplier T. ISO/IEC 9040:1997 §23.4.
          * @public
          * @readonly
          */
         readonly upperMultiplier: INTEGER,
         /**
          * @summary `upperExponent`.
+         * @description
+         * Upper-bound timeout exponent E. ISO/IEC 9040:1997 §23.4.
          * @public
          * @readonly
          */

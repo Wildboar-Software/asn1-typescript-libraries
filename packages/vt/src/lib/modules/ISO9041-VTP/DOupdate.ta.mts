@@ -52,7 +52,74 @@ import { DOupdate_copyLogFromBuffer, _decode_DOupdate_copyLogFromBuffer, _encode
 /**
  * @summary DOupdate
  * @description
- * 
+ *
+ * One display-object update from ISO/IEC 9040:1997 clause 19.
+ * Carried in an NDQ `ObjectUpdate` display item. Subject to the DO
+ * access-rule (ISO/IEC 9040:1997 §19.5). TEXT, REPEAT-TEXT,
+ * ATTRIBUTE and ERASE are also constrained by the update-window and
+ * access-outside-fields. ISO/IEC 9041-1:1997 §12.1.
+ *
+ * - `nextXarray` / `previousXarray`: NEXT/PREVIOUS X-ARRAY macros.
+ *   y±1, then x:=Xmin (lower update-window bound of the destination
+ *   X-array). ISO/IEC 9040:1997 §19.1.1.2.2.
+ * - `nextYarray` / `previousYarray`: z±1; y:=Ymin; x:=Xmin.
+ *   ISO/IEC 9040:1997 §19.1.1.2.2.
+ * - `ptr_relative`: POINTER-RELATIVE. Service args p,q,r map to
+ *   x,y,z. Each optional (default 0). Invalid if it violates
+ *   d-bound, d-addressing or d-absolute.
+ *   ISO/IEC 9040:1997 §19.1.1.2.
+ * - `ptr_absolute`: POINTER-ABSOLUTE to a `Pointer` special value
+ *   or coords. ISO/IEC 9040:1997 §19.1.1.2.1.
+ * - `text`: TEXT. Writes primary-attribute octets at the display
+ *   pointer then implicit addressing (x++ unless ripple). Repertoire
+ *   defines octet encoding. Invalid if the pointer does not identify
+ *   an array element or is below the update-window. If ripple is
+ *   enabled, a 1-unit forward x-ripple runs first.
+ *   ISO/IEC 9040:1997 §19.4.1.1.
+ * - `repeatText`: REPEAT-TEXT from current to `finishAddress`
+ *   (must be ≥ current). Cycles the octet string across the
+ *   repeat-extent. Pointer left immediately after the last updated
+ *   element. ISO/IEC 9040:1997 §19.4.1.2.
+ * - `writeAttr`: ATTRIBUTE. `AttrId` encodes both attribute-id and
+ *   attribute-value. Extent is global, address or modal.
+ *   character-repertoire may only be set with modal extent.
+ *   ISO/IEC 9040:1997 §19.4.1.3.
+ * - `erase`: ERASE from `startErase` to `endErase`. `EraseAttr`
+ *   TRUE also resets secondary attributes to explicit modal
+ *   defaults. Does not move the display pointer. If ripple is
+ *   enabled, replaced by backward x-ripple. Requires
+ *   erasure-capability `"yes"`. ISO/IEC 9040:1997 §19.4.1.4, §18.1.
+ * - `nextBlock` / `previousBlock`: block addressing macros.
+ *   Requires Blocks FU and block-definition-capability.
+ *   ISO/IEC 9040:1997 §19.1.2.2.
+ * - `nextField` / `previousField`: field navigation. Requires
+ *   Fields FU. ISO/IEC 9040:1997 §19.1.3.
+ * - `log_relative` / `log_absolute`: logical POINTER-RELATIVE /
+ *   POINTER-ABSOLUTE (k,f,z). ISO/IEC 9040:1997 §19.1.3.
+ * - `logText`: LOGICAL-TEXT. `fdrAttr` TRUE applies FDR attributes.
+ *   `prAttrVal` is the primary-attribute octet string.
+ *   ISO/IEC 9040:1997 §19.4.2.1.
+ * - `repeatLogText` / `writeLogAttr` / `logErase`: logical
+ *   counterparts of REPEAT-TEXT, ATTRIBUTE and ERASE.
+ *   ISO/IEC 9040:1997 §19.4.2.
+ * - `createBlock`: CREATE-BLOCK at (z,b) with origin (x,y) and
+ *   dimension (Dx,Dy). Replaces any existing block at that (b,z).
+ *   Requires Blocks FU. ISO/IEC 9040:1997 §19.4.1.5.1.
+ * - `deleteBlock`: DELETE-BLOCK. ISO/IEC 9040:1997 §19.4.1.5.2.
+ * - `insertXarray` / `deleteXarray` / `insertYarray` /
+ *   `deleteYarray`: ripple INSERT/DELETE of N arrays. INTEGER is
+ *   the unit count. Requires Ripple FU (and Structured COs for
+ *   RMCO). ISO/IEC 9040:1997 §19.2, §19.4.1.6–§19.4.1.9, §10.10.
+ * - `copyToBuffer` / `copyFromBuffer`: COPY-TO/FROM-BUFFER.
+ *   Temporary buffer: `rioName` and `recordId` SHALL be absent.
+ *   Single RIO in VTE: `rioName` optional, `recordId` present.
+ *   `rendition` present ⇒ copy attributes; absent ⇒ no attribute
+ *   copy. `structure` absent ⇒ none. `ripple` present ⇒ on.
+ *   Requires Ripple FU. ISO/IEC 9040:1997 §19.4.1.10.2–3.
+ * - `copyLogToBuffer` / `copyLogFromBuffer`: logical copies.
+ *   `structure` present ⇒ `"x"`, absent ⇒ `"none"`.
+ *   ISO/IEC 9040:1997 §19.4.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

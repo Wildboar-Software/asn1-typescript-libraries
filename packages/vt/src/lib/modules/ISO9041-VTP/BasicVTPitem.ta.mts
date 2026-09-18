@@ -50,7 +50,73 @@ import { SPR2content, _decode_SPR2content, _encode_SPR2content } from "../ISO904
 /**
  * @summary BasicVTPitem
  * @description
- * 
+ *
+ * CHOICE of all VTP PDUs that carry user data. RLQ, GTQ, RTQ and EXR
+ * are not in this CHOICE: they are identified by the bearer service;
+ * EXR by absence of user data in the P-RESYNCHRONIZE user-data field.
+ * ISO/IEC 9041-1:1997 §6, §12.1, §11.2.4.
+ *
+ * - `asq_pdu`: VT-ASSOCIATE-REQ — request establishment.
+ *   ISO/IEC 9041-1:1997 §6.2.
+ * - `asr_pdu`: VT-ASSOCIATE-RESP — complete or refuse establishment.
+ *   ISO/IEC 9041-1:1997 §6.3.
+ * - `rlr_pdu`: VT-RELEASE-RESP — accept/reject orderly termination.
+ *   Result2. Failure only if Negotiated Release session FU was
+ *   negotiated. ISO/IEC 9041-1:1997 §6.19.
+ * - `auq_pdu`: VT-U-ABORT — user-initiated unconditional termination.
+ *   PrintableString is VT-user-failure-reason; empty string if absent.
+ *   ISO/IEC 9041-1:1997 §6.4, §12.1.
+ * - `apq_pdu`: VT-P-ABORT — VTPM-initiated unconditional termination.
+ *   Empty string if no reason; `"P"` = protocol-error; `"L"` =
+ *   local-error. ISO/IEC 9041-1:1997 §6.1, §12.1.
+ * - `hdq_pdu`: VT-HIGH-PRI-DATA — updates to COs with CO-priority
+ *   `"high"`. ISO/IEC 9041-1:1997 §6.12.
+ * - `ndq_pdu`: VT-DATA — controlled updates of DOs/COs/RIOs; A-mode
+ *   may indicate echo/start-entry. ISO/IEC 9041-1:1997 §6.14.
+ * - `udq_pdu`: VT-URGENT-DATA — updates to COs with CO-priority
+ *   `"urgent"`. Mapping to lower layers depends on Session
+ *   Requirements. ISO/IEC 9041-1:1997 §6.25.
+ * - `bkq_pdu`: VT-BREAK-REQ — destructive priority interrupt to the
+ *   remote VT-user. ISO/IEC 9041-1:1997 §6.5.
+ * - `bkr_pdu`: VT-BREAK-RESP — acknowledges that the interrupt was
+ *   indicated to the local VT-user. ISO/IEC 9041-1:1997 §6.6.
+ * - `dlq_pdu`: VT-DELIVER — delivery point in the NDQ stream. TRUE =
+ *   acknowledgement required. ISO/IEC 9041-1:1997 §6.8, §12.1.
+ * - `daq_pdu`: VT-ACK-RECEIPT — acknowledges a delivery point
+ *   identified by a DLQ. No parameters. ISO/IEC 9041-1:1997 §6.7.
+ * - `spq_pdu`: VT-SWITCH-PROFILE-REQ without context retention list —
+ *   negotiate a new full-VTE from a named profile. Use SPQ2 when
+ *   context retention is required. ISO/IEC 9041-1:1997 §6.23.
+ * - `spr_pdu`: VT-SWITCH-PROFILE-RESP without retention list.
+ *   ISO/IEC 9041-1:1997 §6.24.
+ * - `snq_pdu`: VT-START-NEG-REQ — request Negotiation Active phase
+ *   (MIN). ISO/IEC 9041-1:1997 §6.21.
+ * - `snr_pdu`: VT-START-NEG-RESP — success/failure of entering
+ *   Negotiation Active. ISO/IEC 9041-1:1997 §6.22.
+ * - `enq_pdu`: VT-END-NEG-REQ — synchronized end of MIN and
+ *   transition to data handling. ISO/IEC 9041-1:1997 §6.9.
+ * - `enr_pdu`: VT-END-NEG-RESP — respond to end-negotiation.
+ *   ISO/IEC 9041-1:1997 §6.10.
+ * - `niq_pdu`: VT-NEG-INVITE — invite peer to propose values for
+ *   named VTE-parameters. ISO/IEC 9041-1:1997 §6.15.
+ * - `noq_pdu`: VT-NEG-OFFER — propose values/lists/ranges once MIN
+ *   is active. ISO/IEC 9041-1:1997 §6.17.
+ * - `naq_pdu`: VT-NEG-ACCEPT — select values from a previous offer.
+ *   ISO/IEC 9041-1:1997 §6.13.
+ * - `njq_pdu`: VT-NEG-REJECT — reject parameters from previous NOQs.
+ *   ISO/IEC 9041-1:1997 §6.16.
+ * - `exq_pdu`: VT-P-EXCEPTION-REQ — non-fatal exception between
+ *   VTPMs. Requires Exceptions FU (ISO/IEC 9040:1997 §10.11).
+ *   VT-exception-source is `"local"` for the sender and `"remote"`
+ *   for the receiver. ISO/IEC 9041-1:1997 §6.26, §12.1.
+ * - `spq2_pdu`: SPQ with object-retention list. SHALL be used when
+ *   context retention is required. SHALL NOT be used if Context
+ *   Retention FU is not selected. Either form allowed when
+ *   retention is not required even if the FU is selected.
+ *   ISO/IEC 9041-1:1997 §12.1.
+ * - `spr2_pdu`: SPR with retention list; same FU rules as
+ *   `spq2_pdu`. ISO/IEC 9041-1:1997 §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IntegerOffer_Item_range
  * @description
- * 
+ *
+ * Inclusive INTEGER range in an `IntegerOffer`. ISO/IEC 9041-1:1997
+ * §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +37,16 @@ class IntegerOffer_Item_range {
     constructor (
         /**
          * @summary `minimum`.
+         * @description
+         * Inclusive lower bound. ISO/IEC 9041-1:1997 §12.2.
          * @public
          * @readonly
          */
         readonly minimum: INTEGER,
         /**
          * @summary `maximum`.
+         * @description
+         * Inclusive upper bound. ISO/IEC 9041-1:1997 §12.2.
          * @public
          * @readonly
          */

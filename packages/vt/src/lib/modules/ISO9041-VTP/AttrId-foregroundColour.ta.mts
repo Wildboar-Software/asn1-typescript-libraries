@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AttrId_foregroundColour
  * @description
- * 
+ *
+ * Foreground-colour attribute-value. 0 = `"null"`. Other values
+ * are a 1-based index into the colour assignment VTE-parameter
+ * list; valid range 1..capability.
+ * ISO/IEC 9040:1997 §13.2, §19.4.1.3; ISO/IEC 9041-1:1997 §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +34,10 @@ type AttrId_foregroundColour = INTEGER;
 
 /**
  * @summary AttrId_foregroundColour_null_
+ * @description
+ *
+ * `"null"`(0). ISO/IEC 9040:1997 §13.2, §19.4.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +46,10 @@ const AttrId_foregroundColour_null_: AttrId_foregroundColour = 0; /* LONG_NAMED_
 
 /**
  * @summary AttrId_foregroundColour_null_
+ * @description
+ *
+ * `"null"`(0). ISO/IEC 9040:1997 §13.2, §19.4.1.3.
+ *
  * @constant
  * @type {number}
  */

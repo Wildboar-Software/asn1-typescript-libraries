@@ -17,7 +17,12 @@ import { Offer_Item, _decode_Offer_Item, _encode_Offer_Item } from "../CSS/Offer
 /**
  * @summary Offer
  * @description
- * 
+ *
+ * MIN offered values for control-object VTE-parameters. Each
+ * member is one named CO and the ranges or alternatives
+ * offered for its parameters.
+ * ISO/IEC 9041-1:1997 §12.4.2; ISO/IEC 9040:1997 §20.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

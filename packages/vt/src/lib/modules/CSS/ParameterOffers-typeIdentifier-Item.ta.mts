@@ -18,7 +18,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ParameterOffers_typeIdentifier_Item
  * @description
- * 
+ *
+ * One offered `CO-type-identifier`.
+ *
+ * - `oid`: semantics from this International Standard, a
+ *   VTE-profile, or a registered CO (ISO/IEC 9040:1997
+ *   table 10, annex C).
+ * - `string_`: PrintableString; semantics defined outside
+ *   ISO/IEC 9040 (profile or private agreement).
+ *
+ * ISO/IEC 9040:1997 §14, §20.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

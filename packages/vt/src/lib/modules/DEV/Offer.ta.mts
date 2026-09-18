@@ -17,7 +17,11 @@ import { Offer_Item, _decode_Offer_Item, _encode_Offer_Item } from "../DEV/Offer
 /**
  * @summary Offer
  * @description
- * 
+ *
+ * Offered device-object VTE-parameter values during negotiation. Each
+ * member is a VTE-unique device-name plus that device's offers.
+ * ISO/IEC 9040:1997 §16, §23; ISO/IEC 9041-1:1997 §12.5.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

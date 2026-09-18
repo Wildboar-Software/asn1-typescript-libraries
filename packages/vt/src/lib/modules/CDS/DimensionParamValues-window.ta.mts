@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DimensionParamValues_window
  * @description
- * 
+ *
+ * Selected `d-window` (update-window-size). `unbounded` or integer
+ * `limit`. Constrains TEXT/REPEAT-TEXT/ATTRIBUTE/ERASE lower bound;
+ * does not itself cap TEXT upper bound. ISO/IEC 9040:1997 §18.2.3,
+ * §19.1.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -22,7 +22,10 @@ import { FER, _decode_FER, _encode_FER } from "../G/FER.ta.mjs";
 /**
  * @summary FEPCOupdate_Item
  * @description
- * 
+ *
+ * One Field Entry Pilot Record: event, conditions, and a sequence of
+ * reactions. ISO/IEC 9040:1997 §3.3.63; ISO/IEC 9041-1:1997 §12.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,24 +44,34 @@ class FEPCOupdate_Item {
     constructor (
         /**
          * @summary `index`.
+         * @description
+         * FEPR index within the FEPCO. ISO/IEC 9041-1:1997 §12.2.4.
          * @public
          * @readonly
          */
         readonly index: INTEGER,
         /**
          * @summary `event`.
+         * @description
+         * Field Entry Event. ISO/IEC 9040:1997 §3.3.65.
          * @public
          * @readonly
          */
         readonly event: FEE,
         /**
          * @summary `condition`.
+         * @description
+         * Field Entry Conditions that, with the event, predicate a
+         * reaction. ISO/IEC 9040:1997 §3.3.66.
          * @public
          * @readonly
          */
         readonly condition: FEC[],
         /**
          * @summary `reactions`.
+         * @description
+         * Ordered Field Entry Reactions on other VTE objects. ISO/IEC
+         * 9040:1997 §3.3.67.
          * @public
          * @readonly
          */

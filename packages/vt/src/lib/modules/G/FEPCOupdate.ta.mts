@@ -17,7 +17,12 @@ import { FEPCOupdate_Item, _decode_FEPCOupdate_Item, _encode_FEPCOupdate_Item } 
 /**
  * @summary FEPCOupdate
  * @description
- * 
+ *
+ * Sequence of Field Entry Pilot Control Object record updates. Each
+ * record is event + conditions + reactions. Syntax of FEE/FEC/FER
+ * comes from the FEPCO's CO-type-identifier register entry. ISO/IEC
+ * 9040:1997 §3.3.61, §14.2 c; ISO/IEC 9041-1:1997 §12.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

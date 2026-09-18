@@ -18,7 +18,12 @@ import { ParameterValues_terminationTimeout_eventId, _decode_ParameterValues_ter
 /**
  * @summary ParameterValues_terminationTimeout
  * @description
- * 
+ *
+ * Agreed timeout `<T, E, eventId>`. T and E encode the timeout per
+ * ISO/IEC 9040:1997 §23.4; T must not be negative; T=0 means infinite.
+ * If a TCCO is linked, these parameters become ineffective. ISO/IEC
+ * 9040:1997 §14.3, §23.4, §23.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +44,27 @@ class ParameterValues_terminationTimeout {
     constructor (
         /**
          * @summary `timeMultiplier`.
+         * @description
+         * Timeout multiplier T. Must not be negative; T=0 means
+         * infinite. ISO/IEC 9040:1997 §23.4.
          * @public
          * @readonly
          */
         readonly timeMultiplier: INTEGER,
         /**
          * @summary `timeExponent`.
+         * @description
+         * Timeout exponent E. T and E encode the timeout per ISO/IEC
+         * 9040:1997 §23.4.
          * @public
          * @readonly
          */
         readonly timeExponent: INTEGER,
         /**
          * @summary `eventId`.
+         * @description
+         * Agreed event-id: non-zero positive integer or `"null"`.
+         * ISO/IEC 9040:1997 §23.4.
          * @public
          * @readonly
          */

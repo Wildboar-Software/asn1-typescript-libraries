@@ -17,7 +17,10 @@ import { AssignmentIdent, _decode_AssignmentIdent, _encode_AssignmentIdent } fro
 /**
  * @summary CompoundEmphasisIdent
  * @description
- * 
+ *
+ * Invite flags for the DO-emphasis assignment list. ISO/IEC
+ * 9040:1997 §18.2.6; ISO/IEC 9041-1:1997 §12.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

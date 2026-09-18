@@ -17,7 +17,11 @@ import { IntegerOffer_Item, _decode_IntegerOffer_Item, _encode_IntegerOffer_Item
 /**
  * @summary IntegerOffer
  * @description
- * 
+ *
+ * Negotiation offer of INTEGER values: each item is a single value
+ * or an inclusive min/max range. Used throughout VTE-parameter
+ * negotiation. ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

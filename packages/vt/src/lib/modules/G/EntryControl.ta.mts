@@ -21,7 +21,13 @@ import { EntryControl_feprList_Item, _decode_EntryControl_feprList_Item, _encode
 /**
  * @summary EntryControl
  * @description
- * 
+ *
+ * FDR entry-control: device-object list, FEIR list, FEPR list.
+ * Update rules when FDCOupdate tag 8 is present and non-empty: empty
+ * instance ⇒ no action; missing part ⇒ that part unchanged;
+ * present-empty part ⇒ discarded; present-nonempty ⇒ full replace
+ * (no partial list update). ISO/IEC 9041-1:1997 §12.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,18 +51,29 @@ class EntryControl {
     constructor (
         /**
          * @summary `deviceObjectList`.
+         * @description
+         * Names of device objects. Absent ⇒ unchanged; present-empty ⇒
+         * discarded. ISO/IEC 9041-1:1997 §12.2.2.
          * @public
          * @readonly
          */
         readonly deviceObjectList: OPTIONAL<PrintableString[]>,
         /**
          * @summary `feirList`.
+         * @description
+         * Field Entry Instruction Records (FEICO name + index). Absent ⇒
+         * unchanged; present-empty ⇒ discarded. ISO/IEC 9040:1997
+         * §3.3.62; ISO/IEC 9041-1:1997 §12.2.2.
          * @public
          * @readonly
          */
         readonly feirList: OPTIONAL<EntryControl_feirList_Item[]>,
         /**
          * @summary `feprList`.
+         * @description
+         * Field Entry Pilot Records (FEPCO name + index). Absent ⇒
+         * unchanged; present-empty ⇒ discarded. ISO/IEC 9040:1997
+         * §3.3.63; ISO/IEC 9041-1:1997 §12.2.2.
          * @public
          * @readonly
          */

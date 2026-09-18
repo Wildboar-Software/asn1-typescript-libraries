@@ -18,7 +18,10 @@ import { FEI, _decode_FEI, _encode_FEI } from "../G/FEI.ta.mjs";
 /**
  * @summary FEICOupdate_Item
  * @description
- * 
+ *
+ * One FEIR: index plus a set of Field Entry Instructions. ISO/IEC
+ * 9040:1997 §3.3.62; ISO/IEC 9041-1:1997 §12.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +38,17 @@ class FEICOupdate_Item {
     constructor (
         /**
          * @summary `index`.
+         * @description
+         * FEIR index within the FEICO. ISO/IEC 9041-1:1997 §12.2.3.
          * @public
          * @readonly
          */
         readonly index: INTEGER,
         /**
          * @summary `content`.
+         * @description
+         * Set of Field Entry Instructions; syntax from the FEICO register
+         * entry. ISO/IEC 9040:1997 §3.3.64; ISO/IEC 9041-1:1997 §12.2.3.
          * @public
          * @readonly
          */

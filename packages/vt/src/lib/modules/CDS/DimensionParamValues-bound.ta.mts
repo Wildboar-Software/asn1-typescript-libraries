@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DimensionParamValues_bound
  * @description
- * 
+ *
+ * Selected `d-bound`. `unbounded`: no upper limit (X default).
+ * `limit`: integer bound; addressing > bound+1 is invalid, < 1
+ * always invalid. ISO/IEC 9040:1997 §18.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

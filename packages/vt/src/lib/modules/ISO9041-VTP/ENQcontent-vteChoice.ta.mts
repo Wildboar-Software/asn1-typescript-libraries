@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ENQcontent_vteChoice
  * @description
- * 
+ *
+ * Which VTE to keep when ending MIN. ISO/IEC 9041-1:1997
+ * §6.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,8 @@ type ENQcontent_vteChoice = INTEGER;
 
 /**
  * @summary ENQcontent_vteChoice_draft
+ * @description
+ * Keep the draft VTE (0). ISO/IEC 9041-1:1997 §6.9.
  * @constant
  * @type {number}
  */
@@ -37,6 +42,8 @@ const ENQcontent_vteChoice_draft: ENQcontent_vteChoice = 0; /* LONG_NAMED_INTEGE
 
 /**
  * @summary ENQcontent_vteChoice_draft
+ * @description
+ * Keep the draft VTE (0). ISO/IEC 9041-1:1997 §6.9.
  * @constant
  * @type {number}
  */
@@ -45,6 +52,8 @@ const draft: ENQcontent_vteChoice = ENQcontent_vteChoice_draft; /* SHORT_NAMED_I
 
 /**
  * @summary ENQcontent_vteChoice_current
+ * @description
+ * Keep the current VTE (1). ISO/IEC 9041-1:1997 §6.9.
  * @constant
  * @type {number}
  */
@@ -53,6 +62,8 @@ const ENQcontent_vteChoice_current: ENQcontent_vteChoice = 1; /* LONG_NAMED_INTE
 
 /**
  * @summary ENQcontent_vteChoice_current
+ * @description
+ * Keep the current VTE (1). ISO/IEC 9041-1:1997 §6.9.
  * @constant
  * @type {number}
  */
@@ -61,6 +72,8 @@ const current: ENQcontent_vteChoice = ENQcontent_vteChoice_current; /* SHORT_NAM
 
 /**
  * @summary ENQcontent_vteChoice_either
+ * @description
+ * Either VTE is acceptable (2). ISO/IEC 9041-1:1997 §6.9.
  * @constant
  * @type {number}
  */
@@ -69,6 +82,8 @@ const ENQcontent_vteChoice_either: ENQcontent_vteChoice = 2; /* LONG_NAMED_INTEG
 
 /**
  * @summary ENQcontent_vteChoice_either
+ * @description
+ * Either VTE is acceptable (2). ISO/IEC 9041-1:1997 §6.9.
  * @constant
  * @type {number}
  */

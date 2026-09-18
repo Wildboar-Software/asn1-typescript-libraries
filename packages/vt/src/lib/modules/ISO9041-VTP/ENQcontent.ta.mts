@@ -20,7 +20,10 @@ import { ENQcontent_vteChoice, _decode_ENQcontent_vteChoice, _encode_ENQcontent_
 /**
  * @summary ENQcontent
  * @description
- * 
+ *
+ * Parameters of VT-END-NEG-REQ: synchronized end of MIN and
+ * transition to data handling. ISO/IEC 9041-1:1997 §6.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +42,27 @@ class ENQcontent {
     constructor (
         /**
          * @summary `vteChoice`.
+         * @description
+         * Which VTE to keep: draft (0), current (1), or either
+         * (2). ISO/IEC 9041-1:1997 §6.9.
          * @public
          * @readonly
          */
         readonly vteChoice: ENQcontent_vteChoice,
         /**
          * @summary `failAllowed`.
+         * @description
+         * TRUE = yes; FALSE or absent = no. ISO/IEC
+         * 9041-1:1997 §6.9, §12.1.
          * @public
          * @readonly
          */
         readonly failAllowed: OPTIONAL<BOOLEAN>,
         /**
          * @summary `retList`.
+         * @description
+         * DO/CO names whose contents are requested retained
+         * (Context Retention FU). ISO/IEC 9041-1:1997 §6.9.
          * @public
          * @readonly
          */

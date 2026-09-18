@@ -18,7 +18,10 @@ import { ParameterOffers, _decode_ParameterOffers, _encode_ParameterOffers } fro
 /**
  * @summary Offer_Item
  * @description
- * 
+ *
+ * One control object in a CSS offer.
+ * ISO/IEC 9041-1:1997 §12.4.2; ISO/IEC 9040:1997 §20.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +38,18 @@ class Offer_Item {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         * `CO-name` of the control object being offered.
+         * Unique in the VTE. ISO/IEC 9040:1997 table 9, §14.
          * @public
          * @readonly
          */
         readonly name: PrintableString,
         /**
          * @summary `offers`.
+         * @description
+         * Offered alternatives and ranges for this CO's
+         * VTE-parameters. ISO/IEC 9041-1:1997 §12.4.2.
          * @public
          * @readonly
          */

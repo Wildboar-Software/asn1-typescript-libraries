@@ -19,7 +19,10 @@ import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from ".
 /**
  * @summary FieldParamOffer_maxFieldElements
  * @description
- * 
+ *
+ * Offered `max-field-elements` (S-dimension bound; elements per
+ * field). Default 1. ISO/IEC 9040:1997 §18.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,18 @@ class FieldParamOffer_maxFieldElements {
     constructor (
         /**
          * @summary `unbounded`.
+         * @description
+         * Offer unbounded `max-field-elements`. ISO/IEC 9040:1997
+         * §18.2.2.
          * @public
          * @readonly
          */
         readonly unbounded: OPTIONAL<NULL>,
         /**
          * @summary `limit`.
+         * @description
+         * Offered integer `max-field-elements`(s). ISO/IEC 9040:1997
+         * §18.2.2.
          * @public
          * @readonly
          */

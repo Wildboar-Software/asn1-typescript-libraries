@@ -32,7 +32,27 @@ import { RIOupdate, _decode_RIOupdate, _encode_RIOupdate } from "../G/RIOupdate.
 /**
  * @summary COupdate_objectUpdate
  * @description
- * 
+ *
+ * Control-object update payload. Choice depends on CO-structure
+ * (ISO/IEC 9041-1:1997 §12.2):
+ * - CO-structure = 1: only `characterUpdate` [0] or `bitStringUpdate`
+ *   [4].
+ * - CO-structure > 1: `cco` [6] if CO-type-identifier is
+ *   `vt-b-sco-cco`; otherwise `multiElement` [5] (Structured COs FU).
+ * - CO-structure = non-parametric: type-id selects `fdco` /
+ *   `feico` / `fepco` / `rio` / registered / private (`other` ANY).
+ *
+ * `characterUpdate` [0]: character content.
+ * `booleanUpdate` [1]: bitmask; omitted `mask` ⇒ all-ones of the
+ * same length; a 1-bit in `mask` means use the corresponding
+ * `values` bit.
+ * `symbolicUpdate` [2] / `integerUpdate` [3] / `bitStringUpdate`
+ * [4]: parametric element updates.
+ * `multiElement` [5]: per-element id + update (Structured COs).
+ * `cco` [6], `fdco` [7], `feico` [8], `fepco` [9], `rio` [10]:
+ * standard non-parametric COs.
+ * `other` [11]: private type agreed outside ISO/IEC 9041.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

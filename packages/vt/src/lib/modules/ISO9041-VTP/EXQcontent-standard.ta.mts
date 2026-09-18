@@ -20,7 +20,11 @@ import { _decode_LogExpPointer, _encode_LogExpPointer, LogExpPointer } from "../
 /**
  * @summary EXQcontent_standard
  * @description
- * 
+ *
+ * Standard VT-information on an exception: display and logical
+ * pointers, as for BKQ. ISO/IEC 9040:1997 §35.1.3.3. ISO/IEC
+ * 9041-1:1997 §6.26.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,16 @@ class EXQcontent_standard {
     constructor (
         /**
          * @summary `pointer`.
+         * @description
+         * Display pointer. ISO/IEC 9040:1997 §35.1.3.3.
          * @public
          * @readonly
          */
         readonly pointer: OPTIONAL<ExplicitPointer>,
         /**
          * @summary `logPointer`.
+         * @description
+         * Logical pointer. ISO/IEC 9040:1997 §35.1.3.3.
          * @public
          * @readonly
          */

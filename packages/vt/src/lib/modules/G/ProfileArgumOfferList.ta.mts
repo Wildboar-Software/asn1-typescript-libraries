@@ -20,7 +20,12 @@ import { ParamOfferList, _decode_ParamOfferList, _encode_ParamOfferList } from "
 /**
  * @summary ProfileArgumOfferList
  * @description
- * 
+ *
+ * Offered special VTE-profile arguments (keyed by INTEGER from the
+ * profile spec) plus offered VTE-parameters. Used in ASQ, SPQ, SNQ.
+ * ISO/IEC 9040:1997 §3.3.49–§3.3.51; ISO/IEC 9041-1:1997 §6.2.2 g,
+ * §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,12 +50,18 @@ class ProfileArgumOfferList {
     constructor (
         /**
          * @summary `specialProfileArgums`.
+         * @description
+         * Arguments that do not map 1:1 onto VTE-parameters; identifiers
+         * come from the profile specification. ISO/IEC 9040:1997 §3.3.51.
          * @public
          * @readonly
          */
         readonly specialProfileArgums: OPTIONAL<ProfileArgumOfferList_specialProfileArgums_Item[]>,
         /**
          * @summary `vteParams`.
+         * @description
+         * Offered display/control/device objects and delivery-control.
+         * ISO/IEC 9040:1997 §3.3.50; ISO/IEC 9041-1:1997 §12.2.
          * @public
          * @readonly
          */

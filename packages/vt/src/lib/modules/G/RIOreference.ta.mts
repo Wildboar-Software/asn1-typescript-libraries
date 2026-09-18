@@ -18,7 +18,11 @@ import { RIOreference_operations_Item, _decode_RIOreference_operations_Item, _en
 /**
  * @summary RIOreference
  * @description
- * 
+ *
+ * Execute or call named records of a named RIO. Used from
+ * `ObjectUpdate.rioref`. ISO/IEC 9040:1997 §3.3.70; ISO/IEC
+ * 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,12 +45,18 @@ class RIOreference {
     constructor (
         /**
          * @summary `rioName`.
+         * @description
+         * Name of the Reference Information Object. ISO/IEC 9041-1:1997
+         * §12.2.
          * @public
          * @readonly
          */
         readonly rioName: PrintableString,
         /**
          * @summary `operations`.
+         * @description
+         * executeRecord / callRecord on named records. ISO/IEC
+         * 9041-1:1997 §12.2.
          * @public
          * @readonly
          */

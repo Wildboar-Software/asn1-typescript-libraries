@@ -1,7 +1,17 @@
 /**
  * @description
  *
- * General Virtual Terminal types shared by the ISO/IEC 9041 protocol modules.
+ * General Virtual Terminal types shared by ISO/IEC 9041 protocol modules
+ * (functional units, profile/MIN negotiation, pointers, CO updates,
+ * results). ASN.1 module G from ISO/IEC 9041-1:1997 §12.2; service
+ * semantics from ISO/IEC 9040:1997.
+ *
+ * Access-rules (ISO/IEC 9040:1997 §9): WACI = association initiator
+ * only; WACA = acceptor only; WAVAR = current WAVAR-token owner
+ * (S-mode); NSAC = either user anytime; no-access = nobody;
+ * WAVAR&WACI / WAVAR&WACA = initiator/acceptor AND they currently own
+ * WAVAR. S-mode: one DO, access-rule WAVAR. A-mode: two DOs WACI+WACA,
+ * no WAVAR. Display objects cannot have combined access-rules.
  */
 export * from "./Block.ta.mjs";
 export * from "./CCOupdate.ta.mjs";

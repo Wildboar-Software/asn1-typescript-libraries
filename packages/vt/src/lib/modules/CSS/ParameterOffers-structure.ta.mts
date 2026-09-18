@@ -19,7 +19,13 @@ import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from ".
 /**
  * @summary ParameterOffers_structure
  * @description
- * 
+ *
+ * Offered `CO-structure`. `nonParametric` offers structure
+ * defined by `CO-type-identifier`. `numberElements` offers a
+ * parametric element count. If Structured COs FU is not
+ * selected, structure must be parametric with one element.
+ * ISO/IEC 9040:1997 §10.6, §14.1, §20.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +42,20 @@ class ParameterOffers_structure {
     constructor (
         /**
          * @summary `nonParametric`.
+         * @description
+         * Offer non-parametric structure (defined by
+         * `CO-type-identifier`: CCO, FDCO, FEICO, FEPCO, RIO,
+         * TCO, …). ISO/IEC 9040:1997 §14.1, §20.1.2.
          * @public
          * @readonly
          */
         readonly nonParametric: OPTIONAL<NULL>,
         /**
          * @summary `numberElements`.
+         * @description
+         * Offered parametric element counts. 1 = single
+         * element (kernel); >1 requires Structured COs FU.
+         * ISO/IEC 9040:1997 §10.6, §20.1.2, table 9 note 3.
          * @public
          * @readonly
          */

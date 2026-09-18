@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AttrId_font
  * @description
- * 
+ *
+ * Font attribute-value. 0 = `"null"`. Other values are a 1-based
+ * index into the font assignment VTE-parameter list; integer ≥ 1
+ * and must be valid for the element's repertoire.
+ * ISO/IEC 9040:1997 §13.2, §19.4.1.3; ISO/IEC 9041-1:1997 §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +34,10 @@ type AttrId_font = INTEGER;
 
 /**
  * @summary AttrId_font_null_
+ * @description
+ *
+ * `"null"`(0). ISO/IEC 9040:1997 §13.2, §19.4.1.3.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +46,10 @@ const AttrId_font_null_: AttrId_font = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttrId_font_null_
+ * @description
+ *
+ * `"null"`(0). ISO/IEC 9040:1997 §13.2, §19.4.1.3.
+ *
  * @constant
  * @type {number}
  */

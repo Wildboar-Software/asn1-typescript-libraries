@@ -17,7 +17,13 @@ import { ParameterOffers_terminationEventList_Item_Item_eventId, _decode_Paramet
 /**
  * @summary ParameterOffers_terminationEventList_Item_Item
  * @description
- * 
+ *
+ * One offered `<event, eventId>` pair. Event syntax is not defined in
+ * 9040; it may be a repertoire character, a registered profile choice,
+ * or private. Datatypes for `event` come from the VTE-profile used as
+ * the initial draft-VTE. ISO/IEC 9040:1997 §23.4; ISO/IEC 9041-1:1997
+ * §12.5.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +43,20 @@ class ParameterOffers_terminationEventList_Item_Item {
     constructor (
         /**
          * @summary `event`.
+         * @description
+         * Termination event. Syntax is not defined in 9040; datatypes
+         * come from the VTE-profile used as the initial draft-VTE.
+         * ISO/IEC 9040:1997 §23.4; ISO/IEC 9041-1:1997 §12.5.2.
          * @public
          * @readonly
          */
         readonly event: _Element,
         /**
          * @summary `eventId`.
+         * @description
+         * Offered event-id: non-zero positive integer or `"null"`.
+         * Written to a TCO to notify the peer. ISO/IEC 9040:1997
+         * §20.3.1, §23.4.
          * @public
          * @readonly
          */

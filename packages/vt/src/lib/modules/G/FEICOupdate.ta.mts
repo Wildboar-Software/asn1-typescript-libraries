@@ -17,7 +17,11 @@ import { FEICOupdate_Item, _decode_FEICOupdate_Item, _encode_FEICOupdate_Item } 
 /**
  * @summary FEICOupdate
  * @description
- * 
+ *
+ * Sequence of Field Entry Instruction Control Object record updates.
+ * FEI syntax is in the register entry named by CO-type-identifier.
+ * ISO/IEC 9040:1997 §3.3.60, §14.2 b; ISO/IEC 9041-1:1997 §12.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

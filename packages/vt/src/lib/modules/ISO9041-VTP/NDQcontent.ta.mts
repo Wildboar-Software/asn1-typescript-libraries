@@ -19,7 +19,11 @@ import { ObjectUpdate, _decode_ObjectUpdate, _encode_ObjectUpdate } from "../ISO
 /**
  * @summary NDQcontent
  * @description
- * 
+ *
+ * Parameters of VT-DATA: controlled updates of DOs, COs, or
+ * RIOs; A-mode may indicate echo-now or start-entry. ISO/IEC
+ * 9041-1:1997 §6.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +41,30 @@ class NDQcontent {
     constructor (
         /**
          * @summary `updates`.
+         * @description
+         * Object name and update for DOs, COs, or RIOs.
+         * Permitted updates: ISO/IEC 9040:1997 clauses 19 and
+         * 20. ISO/IEC 9041-1:1997 §6.14.
          * @public
          * @readonly
          */
         readonly updates: ObjectUpdate[],
         /**
          * @summary `echoNow`.
+         * @description
+         * Presence means echo-now (A-mode echoing). Absence
+         * means do not echo-now. ISO/IEC 9041-1:1997 §6.14,
+         * §12.1.
          * @public
          * @readonly
          */
         readonly echoNow: OPTIONAL<NULL>,
         /**
          * @summary `startEntry`.
+         * @description
+         * Presence means start-entry (A-mode data entry).
+         * Absence means do not start-entry. ISO/IEC
+         * 9041-1:1997 §6.14, §12.1.
          * @public
          * @readonly
          */

@@ -19,7 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ElementParamIdent
  * @description
- * 
+ *
+ * Invites data-element VTE-parameters of a parametric
+ * structured CO. Used when Structured COs FU is selected and
+ * `CO-structure` > 1; otherwise one element and
+ * `CO-element-id` is unused. ISO/IEC 9040:1997 table 9
+ * note 4, §20.2.1; ISO/IEC 9041-1:1997 §12.4.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,24 +44,37 @@ class ElementParamIdent {
     constructor (
         /**
          * @summary `elementIdentifier`.
+         * @description
+         * `CO-element-id`: 1-based in structure order, 1..N
+         * where N is `CO-structure`.
+         * ISO/IEC 9040:1997 §20.2.1.
          * @public
          * @readonly
          */
         readonly elementIdentifier: INTEGER,
         /**
          * @summary `size`.
+         * @description
+         * Invite this element's `CO-size`.
+         * ISO/IEC 9040:1997 §20.2.2.
          * @public
          * @readonly
          */
         readonly size: OPTIONAL<NULL>,
         /**
          * @summary `category`.
+         * @description
+         * Invite this element's `CO-category`.
+         * ISO/IEC 9040:1997 §20.2.
          * @public
          * @readonly
          */
         readonly category: OPTIONAL<NULL>,
         /**
          * @summary `repertoire`.
+         * @description
+         * Invite this element's `CO-repertoire-assignment`.
+         * ISO/IEC 9040:1997 §20.2.5.
          * @public
          * @readonly
          */

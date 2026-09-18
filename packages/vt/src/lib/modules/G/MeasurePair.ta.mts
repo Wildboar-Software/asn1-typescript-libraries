@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MeasurePair
  * @description
- * 
+ *
+ * Origin or size of a block or field-element: `xValue` required,
+ * `yValue` optional (omit when the Y dimension is not defined).
+ * ISO/IEC 9040:1997 §13.1.2, §13.1.3; ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,17 @@ class MeasurePair {
     constructor (
         /**
          * @summary `xValue`.
+         * @description
+         * X origin or width. ISO/IEC 9040:1997 §13.1.2.
          * @public
          * @readonly
          */
         readonly xValue: INTEGER,
         /**
          * @summary `yValue`.
+         * @description
+         * Y origin or depth. Omitted for a one-dimensional Y-array.
+         * ISO/IEC 9040:1997 §13.1.2.
          * @public
          * @readonly
          */

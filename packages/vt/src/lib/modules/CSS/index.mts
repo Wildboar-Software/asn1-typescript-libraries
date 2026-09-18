@@ -1,7 +1,13 @@
 /**
  * @description
  *
- * Control, Switching, and Signalling object parameters for VT negotiation from ISO/IEC 9041:1997 clause 12.4.
+ * Control, Signal and Status (CSS): MIN encodings for
+ * control-object VTE-parameters (`CO-name` plus idents,
+ * offers, or values). ISO/IEC 9041-1:1997 §12.4;
+ * ISO/IEC 9040:1997 §9, §14, §20.
+ *
+ * A device object's default CO is not negotiated with these
+ * parameters; see DEV (`defaultCOaccess`, etc.).
  */
 export {
     type AccessRuleOffer,

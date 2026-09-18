@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary COupdate_objectUpdate_multiElement_Item_update_booleanUpdate
  * @description
- * 
+ *
+ * Boolean update of one structured-CO element. If `mask` is omitted,
+ * a bit string of the same length as `values` with all ones is
+ * assumed. When `mask` is present a 1-bit means the corresponding
+ * `values` bit is used. ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +40,19 @@ class COupdate_objectUpdate_multiElement_Item_update_booleanUpdate {
     constructor (
         /**
          * @summary `values`.
+         * @description
+         * New boolean bits. Only bits selected by `mask` are applied.
+         * ISO/IEC 9041-1:1997 §12.2.
          * @public
          * @readonly
          */
         readonly values: BIT_STRING,
         /**
          * @summary `mask`.
+         * @description
+         * Omitted ⇒ all-ones of the same length as `values`. A 1-bit
+         * means use the corresponding `values` bit. ISO/IEC 9041-1:1997
+         * §12.2.
          * @public
          * @readonly
          */

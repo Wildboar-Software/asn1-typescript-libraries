@@ -18,7 +18,21 @@ import { _decode_LogExpPointer, _encode_LogExpPointer, LogExpPointer } from "../
 /**
  * @summary LogPointer
  * @description
- * 
+ *
+ * LOGICAL POINTER-ABSOLUTE target. Logical analogues of `Pointer`.
+ * k = field-element, f = field, z = Y-array.
+ * ISO/IEC 9040:1997 §19.1.3.
+ *
+ * - `logCurrent`: current logical pointer.
+ * - `logStart`: start of the addressable logical extent (extent
+ *   start).
+ * - `logStartF`: f:=1 (start of F in the current Y-array).
+ * - `logStartK`: k:=1, keep f,z.
+ * - `logEnd`: end of the logical update-window (extent end).
+ * - `logEndF` / `logEndK`: end of F / K in the current
+ *   higher-dimension.
+ * - `logCoords`: explicit `G.LogExpPointer`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

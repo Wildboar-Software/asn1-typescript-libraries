@@ -19,7 +19,11 @@ import { LogAttrExtent, _decode_LogAttrExtent, _encode_LogAttrExtent } from "../
 /**
  * @summary DOupdate_writeLogAttr
  * @description
- * 
+ *
+ * Logical ATTRIBUTE: set a secondary attribute over a
+ * `LogAttrExtent`. `AttrId` encodes both attribute-id and
+ * attribute-value. ISO/IEC 9040:1997 §19.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,18 @@ class DOupdate_writeLogAttr {
     constructor (
         /**
          * @summary `attributeId`.
+         * @description
+         * Both attribute-id and attribute-value.
+         * ISO/IEC 9040:1997 §19.4.2; ISO/IEC 9041-1:1997 §12.1.
          * @public
          * @readonly
          */
         readonly attributeId: AttrId,
         /**
          * @summary `logAttrExtent`.
+         * @description
+         * global, address or modal logical extent.
+         * ISO/IEC 9040:1997 §19.4.2.
          * @public
          * @readonly
          */

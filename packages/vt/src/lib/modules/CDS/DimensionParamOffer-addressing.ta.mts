@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DimensionParamOffer_addressing
  * @description
- * 
+ *
+ * Offered `d-addressing` bits. Bit = 1 is offered: `noConstraint`(0),
+ * `higherOnly`(1; default `"higher only"`), `notPermitted`(2).
+ * Controls whether explicit pointer ops may decrease the coordinate
+ * or change it at all. ISO/IEC 9040:1997 §18.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +38,10 @@ type DimensionParamOffer_addressing = BIT_STRING;
 
 /**
  * @summary DimensionParamOffer_addressing_noConstraint
+ * @description
+ *
+ * Offer `d-addressing` = `"no constraint"`: explicit ops may raise
+ * or lower this coordinate. ISO/IEC 9040:1997 §18.2.3.
  * @constant
  */
 export
@@ -40,6 +49,10 @@ const DimensionParamOffer_addressing_noConstraint: number = 0; /* LONG_NAMED_BIT
 
 /**
  * @summary noConstraint
+ * @description
+ *
+ * Offer `d-addressing` = `"no constraint"`: explicit ops may raise
+ * or lower this coordinate. ISO/IEC 9040:1997 §18.2.3.
  * @constant
  */
 export
@@ -47,6 +60,10 @@ const noConstraint: number = DimensionParamOffer_addressing_noConstraint; /* SHO
 
 /**
  * @summary DimensionParamOffer_addressing_higherOnly
+ * @description
+ *
+ * Offer `d-addressing` = `"higher only"` (default): explicit ops
+ * cannot decrease this coordinate. ISO/IEC 9040:1997 §18.2.3.
  * @constant
  */
 export
@@ -54,6 +71,10 @@ const DimensionParamOffer_addressing_higherOnly: number = 1; /* LONG_NAMED_BIT *
 
 /**
  * @summary higherOnly
+ * @description
+ *
+ * Offer `d-addressing` = `"higher only"` (default): explicit ops
+ * cannot decrease this coordinate. ISO/IEC 9040:1997 §18.2.3.
  * @constant
  */
 export
@@ -61,6 +82,10 @@ const higherOnly: number = DimensionParamOffer_addressing_higherOnly; /* SHORT_N
 
 /**
  * @summary DimensionParamOffer_addressing_notPermitted
+ * @description
+ *
+ * Offer `d-addressing` = `"not permitted"`: no explicit change of
+ * this coordinate. ISO/IEC 9040:1997 §18.2.3.
  * @constant
  */
 export
@@ -68,6 +93,10 @@ const DimensionParamOffer_addressing_notPermitted: number = 2; /* LONG_NAMED_BIT
 
 /**
  * @summary notPermitted
+ * @description
+ *
+ * Offer `d-addressing` = `"not permitted"`: no explicit change of
+ * this coordinate. ISO/IEC 9040:1997 §18.2.3.
  * @constant
  */
 export

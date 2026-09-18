@@ -18,7 +18,11 @@ import { EXQcontent_exceptionType_stdException, _decode_EXQcontent_exceptionType
 /**
  * @summary EXQcontent_exceptionType
  * @description
- * 
+ *
+ * Exception kind. `stdException` is a standard code;
+ * `proException` is a profile-defined INTEGER. ISO/IEC
+ * 9041-1:1997 §6.26.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

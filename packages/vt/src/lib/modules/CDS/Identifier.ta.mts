@@ -17,7 +17,12 @@ import { Identifier_Item, _decode_Identifier_Item, _encode_Identifier_Item } fro
 /**
  * @summary Identifier
  * @description
- * 
+ *
+ * MIN invitations for display-object VTE-parameters. Each member names
+ * one display object and lists which of its parameters are invited
+ * (`NULL` presence = invite). ISO/IEC 9041-1:1997 §12.3.1;
+ * ISO/IEC 9040:1997 §18.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

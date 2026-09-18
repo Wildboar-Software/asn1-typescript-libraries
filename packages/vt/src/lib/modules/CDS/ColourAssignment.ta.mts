@@ -19,7 +19,14 @@ import { ColourAssignment_value, _decode_ColourAssignment_value, _encode_ColourA
 /**
  * @summary ColourAssignment
  * @description
- * 
+ *
+ * One colour-assignment list entry (foreground or background).
+ * `type` has a modal effect until the next `type`. If modal type is
+ * `{vt-b-colour-iso6429}` or unset, `value` is an English colour
+ * name from ISO/IEC 6429; otherwise ANY per `type`. Slot 1 is the
+ * explicit modal default when capability > 0. ISO/IEC 9040:1997
+ * §18.2.5; ISO/IEC 9041-1:1997 §12.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +46,19 @@ class ColourAssignment {
     constructor (
         /**
          * @summary `type_`.
+         * @description
+         * Colour-assignment-type. Modal until the next `type` in the
+         * same list. Absent or `{vt-b-colour-iso6429}` selects
+         * ISO/IEC 6429 English colour names. ISO/IEC 9040:1997
+         * §18.2.5; ISO/IEC 9041-1:1997 §12.3.2.
          * @public
          * @readonly
          */
         readonly type_: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `value`.
+         * @description
+         * Colour-assignment-value. ISO/IEC 9040:1997 §18.2.5.
          * @public
          * @readonly
          */

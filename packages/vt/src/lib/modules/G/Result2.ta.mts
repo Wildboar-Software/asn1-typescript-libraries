@@ -18,7 +18,10 @@ import { Reason, _decode_Reason, _encode_Reason } from "../G/Reason.ta.mjs";
 /**
  * @summary Result2
  * @description
- * 
+ *
+ * Two-way result used by RLR, SNR, and SPR: `success` or `fail` with
+ * `Reason`. ISO/IEC 9041-1:1997 §6.19.2, §6.22.2, §6.24.2, §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

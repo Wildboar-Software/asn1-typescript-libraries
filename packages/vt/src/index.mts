@@ -1,10 +1,16 @@
 /**
  * @packageDocumentation
  *
- * TypeScript encodings of ISO/IEC 9041 Virtual Terminal (VT) ASN.1
- * modules. Import unique types from `@wildboar/vt`. Identifiers,
- * offers, and values that share names across CDS, CSS, and DEV are
- * available on per-module subpaths such as `@wildboar/vt/CDS`.
+ * TypeScript encodings of ISO/IEC 9040:1997 Virtual Terminal Basic
+ * Class Service and ISO/IEC 9041-1:1997 Virtual Terminal Basic Class
+ * Protocol. ISO/IEC 9040 defines the VTE model, display objects,
+ * control objects, device objects, and operations. ISO/IEC 9041-1
+ * defines PDUs and the mapping to ACSE and Presentation.
+ *
+ * Import unique names from `@wildboar/vt`. `Identifier`, `Offer`, and
+ * `Values` share names across CDS, CSS, and DEV, so those go through
+ * subpaths such as `@wildboar/vt/CDS`, `@wildboar/vt/CSS`, and
+ * `@wildboar/vt/DEV`.
  */
 export {
     type AssignmentIdent,

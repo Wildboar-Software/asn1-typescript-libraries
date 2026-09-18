@@ -17,7 +17,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FDCOupdate_Item_status
  * @description
- * 
+ *
+ * Field Definition Record status. ISO/IEC 9041-1:1997 §12.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +31,9 @@ type FDCOupdate_Item_status = INTEGER;
 
 /**
  * @summary FDCOupdate_Item_status_active
+ * @description
+ *
+ * FDR is active. ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */
@@ -37,6 +42,9 @@ const FDCOupdate_Item_status_active: FDCOupdate_Item_status = 0; /* LONG_NAMED_I
 
 /**
  * @summary FDCOupdate_Item_status_active
+ * @description
+ *
+ * FDR is active. ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */
@@ -45,6 +53,9 @@ const active: FDCOupdate_Item_status = FDCOupdate_Item_status_active; /* SHORT_N
 
 /**
  * @summary FDCOupdate_Item_status_inactive
+ * @description
+ *
+ * FDR is inactive. ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */
@@ -53,6 +64,9 @@ const FDCOupdate_Item_status_inactive: FDCOupdate_Item_status = 1; /* LONG_NAMED
 
 /**
  * @summary FDCOupdate_Item_status_inactive
+ * @description
+ *
+ * FDR is inactive. ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */
@@ -61,6 +75,9 @@ const inactive: FDCOupdate_Item_status = FDCOupdate_Item_status_inactive; /* SHO
 
 /**
  * @summary FDCOupdate_Item_status_void_
+ * @description
+ *
+ * FDR is void. ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */
@@ -69,6 +86,9 @@ const FDCOupdate_Item_status_void_: FDCOupdate_Item_status = 2; /* LONG_NAMED_IN
 
 /**
  * @summary FDCOupdate_Item_status_void_
+ * @description
+ *
+ * FDR is void. ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */

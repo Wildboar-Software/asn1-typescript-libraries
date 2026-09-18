@@ -17,7 +17,15 @@ import { Identifier_Item, _decode_Identifier_Item, _encode_Identifier_Item } fro
 /**
  * @summary Identifier
  * @description
- * 
+ *
+ * Device objects whose VTE-parameters are identified for negotiation.
+ * Each member is a VTE-unique device-name plus the selected
+ * parameters. Device objects model real-device mapping and link a
+ * display object to COs; they are not updated by Data Transfer. A
+ * default 8-boolean CO is implicitly associated and is referenced by
+ * the device-object name. ISO/IEC 9040:1997 §16, §23.1; ISO/IEC
+ * 9041-1:1997 §12.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,7 +19,11 @@ import { DOupdate, _decode_DOupdate, _encode_DOupdate } from "../ISO9041-VTP/DOu
 /**
  * @summary ObjectUpdate_display
  * @description
- * 
+ *
+ * Display-object alternative of `ObjectUpdate`: named DO plus a
+ * sequence of `DOupdate` operations. ISO/IEC 9041-1:1997 §6.14,
+ * §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,18 @@ class ObjectUpdate_display {
     constructor (
         /**
          * @summary `doName`.
+         * @description
+         * Display-object name. Optional when the VTE has a single DO.
+         * ISO/IEC 9041-1:1997 §6.14, §12.1.
          * @public
          * @readonly
          */
         readonly doName: OPTIONAL<PrintableString>,
         /**
          * @summary `updates`.
+         * @description
+         * Ordered `DOupdate` operations for this DO.
+         * ISO/IEC 9041-1:1997 §6.14, §12.1.
          * @public
          * @readonly
          */

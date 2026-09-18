@@ -17,7 +17,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ParameterOffers_trigger
  * @description
- * 
+ *
+ * Offered `CO-trigger` values. Set bits are offered.
+ * `"selected"` is valid only if `CO-priority` is `"normal"`.
+ * An update to a trigger CO delivers queued updates and, in
+ * S-mode, transfers WAVAR to the peer. Default
+ * `"not selected"`. ISO/IEC 9040:1997 §3.3.43, §20.1.5,
+ * §24.1, §31.1.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +36,10 @@ type ParameterOffers_trigger = BIT_STRING;
 
 /**
  * @summary ParameterOffers_trigger_yes
+ * @description
+ *
+ * Offer `"selected"` (bit 0). Valid only if `CO-priority` is
+ * `"normal"`. ISO/IEC 9040:1997 §3.3.43, §20.1.5.
  * @constant
  */
 export
@@ -36,6 +47,10 @@ const ParameterOffers_trigger_yes: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary yes
+ * @description
+ *
+ * Offer `"selected"` (bit 0). Valid only if `CO-priority` is
+ * `"normal"`. ISO/IEC 9040:1997 §3.3.43, §20.1.5.
  * @constant
  */
 export
@@ -43,6 +58,10 @@ const yes: number = ParameterOffers_trigger_yes; /* SHORT_NAMED_BIT */
 
 /**
  * @summary ParameterOffers_trigger_no
+ * @description
+ *
+ * Offer `"not selected"` (bit 1). Default.
+ * ISO/IEC 9040:1997 table 9, §20.1.5.
  * @constant
  */
 export
@@ -50,6 +69,10 @@ const ParameterOffers_trigger_no: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary no
+ * @description
+ *
+ * Offer `"not selected"` (bit 1). Default.
+ * ISO/IEC 9040:1997 table 9, §20.1.5.
  * @constant
  */
 export

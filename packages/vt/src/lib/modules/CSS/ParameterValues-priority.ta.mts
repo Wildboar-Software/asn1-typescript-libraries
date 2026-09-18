@@ -17,7 +17,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ParameterValues_priority
  * @description
- * 
+ *
+ * Selected `CO-priority`. Default `"normal"`. Selects which
+ * PDU carries updates: NDQ (normal), HDQ (high), UDQ
+ * (urgent). High/urgent are not quarantined and may overtake
+ * earlier normal updates. Urgent Data FU affects UDQ
+ * mapping, not PDU availability.
+ * ISO/IEC 9040:1997 §20.1.4, §24.5;
+ * ISO/IEC 9041-1:1997 §6.12, §6.14, §6.25.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +37,11 @@ type ParameterValues_priority = INTEGER;
 
 /**
  * @summary ParameterValues_priority_normal
+ * @description
+ *
+ * NDQ; subject to delivery-control; may have trigger.
+ * Default. ISO/IEC 9040:1997 §20.1.4, table 11, §24.5;
+ * ISO/IEC 9041-1:1997 §6.14.
  * @constant
  * @type {number}
  */
@@ -37,6 +50,11 @@ const ParameterValues_priority_normal: ParameterValues_priority = 0; /* LONG_NAM
 
 /**
  * @summary ParameterValues_priority_normal
+ * @description
+ *
+ * NDQ; subject to delivery-control; may have trigger.
+ * Default. ISO/IEC 9040:1997 §20.1.4, table 11, §24.5;
+ * ISO/IEC 9041-1:1997 §6.14.
  * @constant
  * @type {number}
  */
@@ -45,6 +63,11 @@ const normal: ParameterValues_priority = ParameterValues_priority_normal; /* SHO
 
 /**
  * @summary ParameterValues_priority_high
+ * @description
+ *
+ * HDQ; not quarantined; may overtake earlier normal updates.
+ * Cannot have trigger. ISO/IEC 9040:1997 §20.1.4, table 11,
+ * §24.5; ISO/IEC 9041-1:1997 §6.12.
  * @constant
  * @type {number}
  */
@@ -53,6 +76,11 @@ const ParameterValues_priority_high: ParameterValues_priority = 1; /* LONG_NAMED
 
 /**
  * @summary ParameterValues_priority_high
+ * @description
+ *
+ * HDQ; not quarantined; may overtake earlier normal updates.
+ * Cannot have trigger. ISO/IEC 9040:1997 §20.1.4, table 11,
+ * §24.5; ISO/IEC 9041-1:1997 §6.12.
  * @constant
  * @type {number}
  */
@@ -61,6 +89,12 @@ const high: ParameterValues_priority = ParameterValues_priority_high; /* SHORT_N
 
 /**
  * @summary ParameterValues_priority_urgent
+ * @description
+ *
+ * UDQ; used for non-destructive interrupt. Urgent Data FU
+ * affects mapping, not availability of the PDU. Cannot have
+ * trigger. ISO/IEC 9040:1997 §7.7, §10.3, §20.1.4, table 11,
+ * §24.5; ISO/IEC 9041-1:1997 §6.25.
  * @constant
  * @type {number}
  */
@@ -69,6 +103,12 @@ const ParameterValues_priority_urgent: ParameterValues_priority = 2; /* LONG_NAM
 
 /**
  * @summary ParameterValues_priority_urgent
+ * @description
+ *
+ * UDQ; used for non-destructive interrupt. Urgent Data FU
+ * affects mapping, not availability of the PDU. Cannot have
+ * trigger. ISO/IEC 9040:1997 §7.7, §10.3, §20.1.4, table 11,
+ * §24.5; ISO/IEC 9041-1:1997 §6.25.
  * @constant
  * @type {number}
  */

@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ExplicitPointer
  * @description
- * 
+ *
+ * Display-object address (x, y, z, b). 2-D DOs omit `z`; 1-D DOs
+ * present only `x`; `b` is omitted if Blocks is not selected. Any
+ * component may be omitted as permitted by the ISO/IEC 9040
+ * operation definitions. ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +42,36 @@ class ExplicitPointer {
     constructor (
         /**
          * @summary `x`.
+         * @description
+         * X (lowest-order) coordinate. Only component present for a 1-D
+         * DO. Maps to service argument p. ISO/IEC 9041-1:1997 §12.2.
          * @public
          * @readonly
          */
         readonly x: OPTIONAL<INTEGER>,
         /**
          * @summary `y`.
+         * @description
+         * Y coordinate. Maps to service argument q. ISO/IEC 9041-1:1997
+         * §12.2.
          * @public
          * @readonly
          */
         readonly y: OPTIONAL<INTEGER>,
         /**
          * @summary `z`.
+         * @description
+         * Z coordinate. Always omitted for a 2-D DO. Maps to service
+         * argument r. ISO/IEC 9041-1:1997 §12.2.
          * @public
          * @readonly
          */
         readonly z: OPTIONAL<INTEGER>,
         /**
          * @summary `b`.
+         * @description
+         * Block index. Always omitted if the Blocks FU is not selected.
+         * ISO/IEC 9041-1:1997 §12.2; ISO/IEC 9040:1997 §13.1.2.
          * @public
          * @readonly
          */

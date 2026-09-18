@@ -18,7 +18,12 @@ import { RepertoireFontValue_alternatives, _decode_RepertoireFontValue_alternati
 /**
  * @summary RepertoireFontValue
  * @description
- * 
+ *
+ * Selected value for one repertoire-list slot: `placeholder` skips
+ * the slot; `alternatives` is the chosen assignment, font-capability,
+ * and fonts. ISO/IEC 9041-1:1997 §12.3.3; ISO/IEC 9040:1997
+ * §18.2.4, §18.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

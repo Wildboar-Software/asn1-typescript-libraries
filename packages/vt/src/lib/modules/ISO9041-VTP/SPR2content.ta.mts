@@ -21,7 +21,11 @@ import { _decode_ProfileArgumValueList, _encode_ProfileArgumValueList, ProfileAr
 /**
  * @summary SPR2content
  * @description
- * 
+ *
+ * VT-SWITCH-PROFILE-RESP with retention list. Same Context
+ * Retention FU rules as `SPQ2content`. ISO/IEC 9041-1:1997
+ * §6.24, §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +43,26 @@ class SPR2content {
     constructor (
         /**
          * @summary `result`.
+         * @description
+         * Result2 success or fail. ISO/IEC 9041-1:1997 §6.24.
          * @public
          * @readonly
          */
         readonly result: Result2,
         /**
          * @summary `argList`.
+         * @description
+         * Selected profile-argument values. ISO/IEC
+         * 9041-1:1997 §6.24.
          * @public
          * @readonly
          */
         readonly argList: OPTIONAL<ProfileArgumValueList>,
         /**
          * @summary `retList`.
+         * @description
+         * DO/CO names agreed to be retained. ISO/IEC
+         * 9041-1:1997 §12.1.
          * @public
          * @readonly
          */

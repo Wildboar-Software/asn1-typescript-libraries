@@ -19,7 +19,11 @@ import { BlockParamValues_bound, _decode_BlockParamValues_bound, _encode_BlockPa
 /**
  * @summary BlockParamValues
  * @description
- * 
+ *
+ * Selected block-definition-capability and `b-bound`. `capability`
+ * `true` = `"yes"`; `false` or absent = `"no"`. ISO/IEC 9040:1997
+ * §18.2.1; ISO/IEC 9041-1:1997 §12.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,19 @@ class BlockParamValues {
     constructor (
         /**
          * @summary `capability`.
+         * @description
+         * Selected `block-definition-capability`. `true` = `"yes"`;
+         * `false` or absent = `"no"`. ISO/IEC 9040:1997 §18.1,
+         * §18.2.1.
          * @public
          * @readonly
          */
         readonly capability: OPTIONAL<BOOLEAN>,
         /**
          * @summary `bound`.
+         * @description
+         * Selected `b-bound` (max blocks per Y-array; default 1).
+         * ISO/IEC 9040:1997 §18.2.1.
          * @public
          * @readonly
          */

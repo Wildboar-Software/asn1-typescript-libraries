@@ -21,7 +21,11 @@ import { type Identifier as DEV_Identifier, _decode_Identifier as DEV__decode_Id
 /**
  * @summary ParamIdentList
  * @description
- * 
+ *
+ * MIN INVITE/REJECT payload: names of VTE-parameters (CDS/CSS/DEV,
+ * delivery-control) for which values are requested or rejected.
+ * ISO/IEC 9041-1:1997 §6.15, §6.16, §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,24 +44,36 @@ class ParamIdentList {
     constructor (
         /**
          * @summary `displayObjects`.
+         * @description
+         * CDS display-object identifiers to invite or reject. ISO/IEC
+         * 9041-1:1997 §6.15.2, §12.2.
          * @public
          * @readonly
          */
         readonly displayObjects: OPTIONAL<CDS_Identifier>,
         /**
          * @summary `controlObjects`.
+         * @description
+         * CSS control-object identifiers to invite or reject. ISO/IEC
+         * 9041-1:1997 §6.15.2, §12.2.
          * @public
          * @readonly
          */
         readonly controlObjects: OPTIONAL<CSS_Identifier>,
         /**
          * @summary `deviceObjects`.
+         * @description
+         * DEV device-object identifiers to invite or reject. ISO/IEC
+         * 9041-1:1997 §6.15.2, §12.2.
          * @public
          * @readonly
          */
         readonly deviceObjects: OPTIONAL<DEV_Identifier>,
         /**
          * @summary `deliveryControl`.
+         * @description
+         * Present to invite or reject the delivery-control VTE-parameter.
+         * ISO/IEC 9040:1997 §24; ISO/IEC 9041-1:1997 §12.2.
          * @public
          * @readonly
          */

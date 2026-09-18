@@ -21,7 +21,12 @@ import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireA
 /**
  * @summary ElementParamValue
  * @description
- * 
+ *
+ * Selected data-element VTE-parameters for one element of a
+ * parametric structured CO. Must be consistent with the
+ * matching offer. ISO/IEC 9040:1997 §20.2.1;
+ * ISO/IEC 9041-1:1997 §12.4.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,24 +51,37 @@ class ElementParamValue {
     constructor (
         /**
          * @summary `elementIdentifier`.
+         * @description
+         * `CO-element-id`: 1-based in structure order, 1..N.
+         * ISO/IEC 9040:1997 §20.2.1.
          * @public
          * @readonly
          */
         readonly elementIdentifier: INTEGER,
         /**
          * @summary `size`.
+         * @description
+         * Selected `CO-size` for this element. Meaning depends
+         * on category (see `CO-size` defaults).
+         * ISO/IEC 9040:1997 §20.2.2.
          * @public
          * @readonly
          */
         readonly size: OPTIONAL<INTEGER>,
         /**
          * @summary `category`.
+         * @description
+         * Selected `CO-category`. Default `"boolean"`.
+         * ISO/IEC 9040:1997 table 9, §20.2.3–§20.2.6.
          * @public
          * @readonly
          */
         readonly category: OPTIONAL<ElementParamValue_category>,
         /**
          * @summary `repertoire`.
+         * @description
+         * Selected `CO-repertoire-assignment` (character
+         * category). ISO/IEC 9040:1997 §20.2.5.
          * @public
          * @readonly
          */

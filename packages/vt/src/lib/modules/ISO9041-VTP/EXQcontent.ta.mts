@@ -22,7 +22,13 @@ import { EXQcontent_profile_Item, _decode_EXQcontent_profile_Item, _encode_EXQco
 /**
  * @summary EXQcontent
  * @description
- * 
+ *
+ * Parameters of VT-P-EXCEPTION-REQ. Non-fatal exception
+ * between VTPMs. Requires Exceptions FU (ISO/IEC 9040:1997
+ * §10.11). VT-exception-source is `"local"` for the sender
+ * and `"remote"` for the receiver. ISO/IEC 9041-1:1997
+ * §6.26, §12.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,18 +61,27 @@ class EXQcontent {
     constructor (
         /**
          * @summary `exceptionType`.
+         * @description
+         * Standard or profile-defined exception. ISO/IEC
+         * 9041-1:1997 §6.26.
          * @public
          * @readonly
          */
         readonly exceptionType: EXQcontent_exceptionType,
         /**
          * @summary `standard`.
+         * @description
+         * Display and logical pointers, as for BKQ. ISO/IEC
+         * 9041-1:1997 §6.26.
          * @public
          * @readonly
          */
         readonly standard: OPTIONAL<EXQcontent_standard>,
         /**
          * @summary `profile`.
+         * @description
+         * Profile-defined tagged octets, as for BKQ. ISO/IEC
+         * 9041-1:1997 §6.26.
          * @public
          * @readonly
          */

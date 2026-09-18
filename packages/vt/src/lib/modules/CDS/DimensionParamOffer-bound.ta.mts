@@ -19,7 +19,10 @@ import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from ".
 /**
  * @summary DimensionParamOffer_bound
  * @description
- * 
+ *
+ * Offered `d-bound`: unbounded `NULL` and/or an integer-offer limit.
+ * X default unbounded. ISO/IEC 9040:1997 §18.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,18 @@ class DimensionParamOffer_bound {
     constructor (
         /**
          * @summary `unbounded`.
+         * @description
+         * Offer unbounded `d-bound` (X default). ISO/IEC 9040:1997
+         * §18.2.3.
          * @public
          * @readonly
          */
         readonly unbounded: OPTIONAL<NULL>,
         /**
          * @summary `limit`.
+         * @description
+         * Offered integer upper bound(s). Addressing > bound+1 is
+         * invalid. ISO/IEC 9040:1997 §18.2.3.
          * @public
          * @readonly
          */

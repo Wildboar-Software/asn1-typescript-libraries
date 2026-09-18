@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AssignmentIdent
  * @description
- * 
+ *
+ * Invite/placeholder for one assignment-list slot. `nul`: no
+ * invitation for that slot. `name`: invite that assignment
+ * (conventionally an empty PrintableString). ISO/IEC 9041-1:1997
+ * §12.3.1; ISO/IEC 9040:1997 §18.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

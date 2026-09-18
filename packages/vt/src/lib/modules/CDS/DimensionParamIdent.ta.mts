@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DimensionParamIdent
  * @description
- * 
+ *
+ * Invite flags for one dimension's addressing VTE-parameters
+ * (`d-bound`, `d-addressing`, `d-absolute`, `d-window`). `NULL`
+ * presence invites that sub-parameter. ISO/IEC 9041-1:1997 §12.3.1;
+ * ISO/IEC 9040:1997 §18.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +42,38 @@ class DimensionParamIdent {
     constructor (
         /**
          * @summary `bound`.
+         * @description
+         * Invite `d-bound`. X default unbounded; if blocks or fields
+         * are used, x-bound MUST be bounded. ISO/IEC 9040:1997
+         * §18.2.3.
          * @public
          * @readonly
          */
         readonly bound: OPTIONAL<NULL>,
         /**
          * @summary `addressing`.
+         * @description
+         * Invite `d-addressing` (default `"higher only"`). ISO/IEC
+         * 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly addressing: OPTIONAL<NULL>,
         /**
          * @summary `absolute`.
+         * @description
+         * Invite `d-absolute` (default `"no"`). ISO/IEC 9040:1997
+         * §18.2.3.
          * @public
          * @readonly
          */
         readonly absolute: OPTIONAL<NULL>,
         /**
          * @summary `window`.
+         * @description
+         * Invite `d-window` (update-window-size). Unused for X/Y when
+         * blocks or fields are selected. ISO/IEC 9040:1997 §18.2.3,
+         * §19.1.1.3.
          * @public
          * @readonly
          */

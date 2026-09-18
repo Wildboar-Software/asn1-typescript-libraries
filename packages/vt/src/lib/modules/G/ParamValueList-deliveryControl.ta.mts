@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ParamValueList_deliveryControl
  * @description
- * 
+ *
+ * Selected delivery-control. Applies only to DO updates and COs with
+ * CO-priority `"normal"`. Quarantine holds NDQs until a delivery
+ * point (DLQ). ISO/IEC 9040:1997 §24, table 15; ISO/IEC 9041-1:1997
+ * §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +38,9 @@ type ParamValueList_deliveryControl = INTEGER;
 
 /**
  * @summary ParamValueList_deliveryControl_none
+ * @description
+ *
+ * Delivery-control `"none"`. ISO/IEC 9040:1997 §24, table 15.
  * @constant
  * @type {number}
  */
@@ -41,6 +49,9 @@ const ParamValueList_deliveryControl_none: ParamValueList_deliveryControl = 0; /
 
 /**
  * @summary ParamValueList_deliveryControl_none
+ * @description
+ *
+ * Delivery-control `"none"`. ISO/IEC 9040:1997 §24, table 15.
  * @constant
  * @type {number}
  */
@@ -49,6 +60,9 @@ const none: ParamValueList_deliveryControl = ParamValueList_deliveryControl_none
 
 /**
  * @summary ParamValueList_deliveryControl_simple
+ * @description
+ *
+ * Delivery-control `"simple"`. ISO/IEC 9040:1997 §24, table 15.
  * @constant
  * @type {number}
  */
@@ -57,6 +71,9 @@ const ParamValueList_deliveryControl_simple: ParamValueList_deliveryControl = 1;
 
 /**
  * @summary ParamValueList_deliveryControl_simple
+ * @description
+ *
+ * Delivery-control `"simple"`. ISO/IEC 9040:1997 §24, table 15.
  * @constant
  * @type {number}
  */
@@ -65,6 +82,10 @@ const simple: ParamValueList_deliveryControl = ParamValueList_deliveryControl_si
 
 /**
  * @summary ParamValueList_deliveryControl_quarantine
+ * @description
+ *
+ * Delivery-control `"quarantine"` (hold NDQs until a DLQ). ISO/IEC
+ * 9040:1997 §24, table 15.
  * @constant
  * @type {number}
  */
@@ -73,6 +94,10 @@ const ParamValueList_deliveryControl_quarantine: ParamValueList_deliveryControl 
 
 /**
  * @summary ParamValueList_deliveryControl_quarantine
+ * @description
+ *
+ * Delivery-control `"quarantine"` (hold NDQs until a DLQ). ISO/IEC
+ * 9040:1997 §24, table 15.
  * @constant
  * @type {number}
  */

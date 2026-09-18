@@ -20,7 +20,11 @@ import { _decode_ProfileArgumValueList, _encode_ProfileArgumValueList, ProfileAr
 /**
  * @summary SNRcontent
  * @description
- * 
+ *
+ * Shared body of VT-SWITCH-PROFILE-RESP without a retention
+ * list (`spr_pdu`) and VT-START-NEG-RESP (`snr_pdu`).
+ * ISO/IEC 9041-1:1997 §6.22, §6.24.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,18 @@ class SNRcontent {
     constructor (
         /**
          * @summary `result`.
+         * @description
+         * Result2 success or fail. ISO/IEC 9041-1:1997 §6.22,
+         * §6.24.
          * @public
          * @readonly
          */
         readonly result: Result2,
         /**
          * @summary `argValuesList`.
+         * @description
+         * Selected profile-argument values. ISO/IEC
+         * 9041-1:1997 §6.22, §6.24.
          * @public
          * @readonly
          */

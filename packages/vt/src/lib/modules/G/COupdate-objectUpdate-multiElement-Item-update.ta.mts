@@ -20,7 +20,12 @@ import { COupdate_objectUpdate_multiElement_Item_update_booleanUpdate, _decode_C
 /**
  * @summary COupdate_objectUpdate_multiElement_Item_update
  * @description
- * 
+ *
+ * Per-element update of a structured parametric CO.
+ * `characterUpdate` [0], `booleanUpdate` [1] (same mask rule as
+ * `COupdate.booleanUpdate`), `symbolicUpdate` [2], `integerUpdate`
+ * [3], `bitStringUpdate` [4]. ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

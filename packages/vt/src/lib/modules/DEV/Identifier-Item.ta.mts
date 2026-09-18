@@ -18,7 +18,11 @@ import { ParameterIdents, _decode_ParameterIdents, _encode_ParameterIdents } fro
 /**
  * @summary Identifier_Item
  * @description
- * 
+ *
+ * One device object in an Identifier SET: VTE-unique device-name plus
+ * the parameters identified for negotiation. ISO/IEC 9040:1997 §16,
+ * §23.1; ISO/IEC 9041-1:1997 §12.5.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,19 @@ class Identifier_Item {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         * VTE-unique device-name. Also names the implicit default CO,
+         * which is not listed in `deviceControlObjectNames`. ISO/IEC
+         * 9040:1997 §16, §23.1.
          * @public
          * @readonly
          */
         readonly name: PrintableString,
         /**
          * @summary `idents`.
+         * @description
+         * Which of this device's VTE-parameters are in the Identifier.
+         * ISO/IEC 9041-1:1997 §12.5.1.
          * @public
          * @readonly
          */

@@ -18,7 +18,11 @@ import { Reason, _decode_Reason, _encode_Reason } from "../G/Reason.ta.mjs";
 /**
  * @summary Result3
  * @description
- * 
+ *
+ * Three-way result used by ASR and ENR: `success`, `fail` with
+ * `Reason`, or `successWithWarning` with `Reason`. ISO/IEC
+ * 9041-1:1997 §6.3.2 d, §6.10.2 b, §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

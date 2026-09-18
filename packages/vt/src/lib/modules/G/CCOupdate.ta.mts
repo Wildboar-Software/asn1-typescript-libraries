@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CCOupdate
  * @description
- * 
+ *
+ * Context Control Object update: starting point for data entry, or
+ * termination point plus reason. Not partially updatable (not the
+ * multi-element form). ISO/IEC 9040:1997 §3.3.69, §14.2 e, §20;
+ * ISO/IEC 9041-1:1997 §12.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,36 +47,52 @@ class CCOupdate {
     constructor (
         /**
          * @summary `kCoordinate`.
+         * @description
+         * Field-element coordinate of the context. ISO/IEC 9040:1997
+         * §3.3.69; ISO/IEC 9041-1:1997 §12.2.1.
          * @public
          * @readonly
          */
         readonly kCoordinate: INTEGER,
         /**
          * @summary `fCoordinate`.
+         * @description
+         * Field coordinate of the context. ISO/IEC 9040:1997 §3.3.69;
+         * ISO/IEC 9041-1:1997 §12.2.1.
          * @public
          * @readonly
          */
         readonly fCoordinate: INTEGER,
         /**
          * @summary `zCoordinate`.
+         * @description
+         * Required when VT-dimensions = three. ISO/IEC 9041-1:1997
+         * §12.2.1.
          * @public
          * @readonly
          */
         readonly zCoordinate: OPTIONAL<INTEGER>,
         /**
          * @summary `entryControlIndex`.
+         * @description
+         * Required on a termination update. ISO/IEC 9041-1:1997 §12.2.1.
          * @public
          * @readonly
          */
         readonly entryControlIndex: OPTIONAL<INTEGER>,
         /**
          * @summary `deviceObjectIndex`.
+         * @description
+         * Required on a termination update. ISO/IEC 9041-1:1997 §12.2.1.
          * @public
          * @readonly
          */
         readonly deviceObjectIndex: OPTIONAL<INTEGER>,
         /**
          * @summary `feprIndex`.
+         * @description
+         * Field Entry Pilot Record index. Required on a termination
+         * update. ISO/IEC 9041-1:1997 §12.2.1.
          * @public
          * @readonly
          */

@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FDCOupdate_Item_transmissionPolicy
  * @description
- * 
+ *
+ * How field contents are transmitted after controlled data entry.
+ * `refTPCO` defers to a Transmission Policy Control Object. ISO/IEC
+ * 9040:1997 §3.3.68; ISO/IEC 9041-1:1997 §12.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +39,9 @@ type FDCOupdate_Item_transmissionPolicy = INTEGER;
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_all
+ * @description
+ *
+ * Transmit all field content. ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */
@@ -43,6 +50,9 @@ const FDCOupdate_Item_transmissionPolicy_all: FDCOupdate_Item_transmissionPolicy
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_all
+ * @description
+ *
+ * Transmit all field content. ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */
@@ -51,6 +61,10 @@ const all: FDCOupdate_Item_transmissionPolicy = FDCOupdate_Item_transmissionPoli
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_modifiedAllContent
+ * @description
+ *
+ * Transmit all content of modified fields. ISO/IEC 9041-1:1997
+ * §12.2.2.
  * @constant
  * @type {number}
  */
@@ -59,6 +73,10 @@ const FDCOupdate_Item_transmissionPolicy_modifiedAllContent: FDCOupdate_Item_tra
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_modifiedAllContent
+ * @description
+ *
+ * Transmit all content of modified fields. ISO/IEC 9041-1:1997
+ * §12.2.2.
  * @constant
  * @type {number}
  */
@@ -67,6 +85,9 @@ const modifiedAllContent: FDCOupdate_Item_transmissionPolicy = FDCOupdate_Item_t
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_modifiedPart
+ * @description
+ *
+ * Transmit only the modified part. ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */
@@ -75,6 +96,9 @@ const FDCOupdate_Item_transmissionPolicy_modifiedPart: FDCOupdate_Item_transmiss
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_modifiedPart
+ * @description
+ *
+ * Transmit only the modified part. ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */
@@ -83,6 +107,9 @@ const modifiedPart: FDCOupdate_Item_transmissionPolicy = FDCOupdate_Item_transmi
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_none
+ * @description
+ *
+ * Transmit none of the field content. ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */
@@ -91,6 +118,9 @@ const FDCOupdate_Item_transmissionPolicy_none: FDCOupdate_Item_transmissionPolic
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_none
+ * @description
+ *
+ * Transmit none of the field content. ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */
@@ -99,6 +129,10 @@ const none: FDCOupdate_Item_transmissionPolicy = FDCOupdate_Item_transmissionPol
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_refTPCO
+ * @description
+ *
+ * Use the Transmission Policy Control Object. ISO/IEC 9040:1997
+ * §3.3.68; ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */
@@ -107,6 +141,10 @@ const FDCOupdate_Item_transmissionPolicy_refTPCO: FDCOupdate_Item_transmissionPo
 
 /**
  * @summary FDCOupdate_Item_transmissionPolicy_refTPCO
+ * @description
+ *
+ * Use the Transmission Policy Control Object. ISO/IEC 9040:1997
+ * §3.3.68; ISO/IEC 9041-1:1997 §12.2.2.
  * @constant
  * @type {number}
  */

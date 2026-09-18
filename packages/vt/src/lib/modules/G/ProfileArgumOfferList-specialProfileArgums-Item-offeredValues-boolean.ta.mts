@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean
  * @description
- * 
+ *
+ * Boolean special-argument offer. Bit=1 means that value is offered.
+ * Named `false-bit`/`true-bit` because `false`/`true` are ASN.1
+ * keywords. ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +33,9 @@ type ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean = BIT
 
 /**
  * @summary ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean_false_bit
+ * @description
+ *
+ * Offers boolean false. ISO/IEC 9041-1:1997 §12.2.
  * @constant
  */
 export
@@ -36,6 +43,9 @@ const ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean_fals
 
 /**
  * @summary false_bit
+ * @description
+ *
+ * Offers boolean false. ISO/IEC 9041-1:1997 §12.2.
  * @constant
  */
 export
@@ -43,6 +53,9 @@ const false_bit: number = ProfileArgumOfferList_specialProfileArgums_Item_offere
 
 /**
  * @summary ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean_true_bit
+ * @description
+ *
+ * Offers boolean true. ISO/IEC 9041-1:1997 §12.2.
  * @constant
  */
 export
@@ -50,6 +63,9 @@ const ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean_true
 
 /**
  * @summary true_bit
+ * @description
+ *
+ * Offers boolean true. ISO/IEC 9041-1:1997 §12.2.
  * @constant
  */
 export

@@ -18,7 +18,11 @@ import { ParameterValues, _decode_ParameterValues, _encode_ParameterValues } fro
 /**
  * @summary Values_Item
  * @description
- * 
+ *
+ * One control object in a CSS values response. Must be
+ * consistent with the matching offer.
+ * ISO/IEC 9041-1:1997 §12.4.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,19 @@ class Values_Item {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         * `CO-name` of the control object whose values are
+         * returned. Unique in the VTE.
+         * ISO/IEC 9040:1997 table 9, §14.
          * @public
          * @readonly
          */
         readonly name: PrintableString,
         /**
          * @summary `values`.
+         * @description
+         * Selected VTE-parameter values; must be consistent
+         * with the proposals. ISO/IEC 9041-1:1997 §12.4.3.
          * @public
          * @readonly
          */

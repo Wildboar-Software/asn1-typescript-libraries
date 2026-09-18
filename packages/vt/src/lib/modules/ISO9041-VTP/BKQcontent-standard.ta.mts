@@ -20,7 +20,11 @@ import { _decode_LogExpPointer, _encode_LogExpPointer, LogExpPointer } from "../
 /**
  * @summary BKQcontent_standard
  * @description
- * 
+ *
+ * Standard VT-information after a break: display and logical
+ * pointers. ISO/IEC 9040:1997 §34.1.3.2. ISO/IEC 9041-1:1997
+ * §6.5, §6.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,16 @@ class BKQcontent_standard {
     constructor (
         /**
          * @summary `pointer`.
+         * @description
+         * Display pointer. ISO/IEC 9040:1997 §34.1.3.2.
          * @public
          * @readonly
          */
         readonly pointer: OPTIONAL<ExplicitPointer>,
         /**
          * @summary `logPointer`.
+         * @description
+         * Logical pointer. ISO/IEC 9040:1997 §34.1.3.2.
          * @public
          * @readonly
          */

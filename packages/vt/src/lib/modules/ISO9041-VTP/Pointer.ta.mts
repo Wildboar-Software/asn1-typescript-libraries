@@ -18,7 +18,22 @@ import { _decode_ExplicitPointer, _encode_ExplicitPointer, ExplicitPointer } fro
 /**
  * @summary Pointer
  * @description
- * 
+ *
+ * POINTER-ABSOLUTE target. `xc,yc,zc` are the current pointer;
+ * `xm,ym,zm` are the update-window upper bounds.
+ * ISO/IEC 9040:1997 §19.1.1.4; §19.1.2.5 when blocks are in use.
+ *
+ * - `current`: current pointer.
+ * - `start`: start of the addressable extent (extent start).
+ * - `startX`: x:=1, keep y,z — `(1, yc, zc)`.
+ * - `startY`: y:=1 — `(xc, 1, zc)`.
+ * - `end`: end of the update-window (extent end).
+ * - `endX` / `endY`: end of X / Y in the current higher-dimension
+ *   array.
+ * - `coords`: explicit `G.ExplicitPointer`.
+ * - `startB` / `endB`: start-b / end-b when blocks are in use
+ *   (ISO/IEC 9040:1997 §19.1.2.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

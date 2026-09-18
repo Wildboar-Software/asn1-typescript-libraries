@@ -17,7 +17,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RepertoireAssignment_value
  * @description
- * 
+ *
+ * Repertoire designation. `iso2022`: SEQUENCE OF OCTET STRING —
+ * up to four ISO/IEC 2022 escape sequences with `<ESC>` omitted
+ * (used when `type` is absent or `{vt-b-rep-iso2022}`). `isonnnn`:
+ * ANY resolved by `type`. Default repertoire is IRV of ISO/IEC 646
+ * (`2/8 4/0`). ISO/IEC 9040:1997 §18.2.4; ISO/IEC 9041-1:1997
+ * §12.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

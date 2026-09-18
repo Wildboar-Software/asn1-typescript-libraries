@@ -19,7 +19,11 @@ import { AssignmentIdent, _decode_AssignmentIdent, _encode_AssignmentIdent } fro
 /**
  * @summary CompoundColourIdent
  * @description
- * 
+ *
+ * Invite flags for colour-capability and colour-assignment list
+ * (foreground or background). ISO/IEC 9040:1997 §18.1, §18.2.5;
+ * ISO/IEC 9041-1:1997 §12.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,18 @@ class CompoundColourIdent {
     constructor (
         /**
          * @summary `capability`.
+         * @description
+         * Invite colour-capability (1..N; default 1). ISO/IEC
+         * 9040:1997 §18.1.
          * @public
          * @readonly
          */
         readonly capability: OPTIONAL<NULL>,
         /**
          * @summary `assignment`.
+         * @description
+         * Invite colour-assignment list slots. ISO/IEC 9040:1997
+         * §18.2.5.
          * @public
          * @readonly
          */

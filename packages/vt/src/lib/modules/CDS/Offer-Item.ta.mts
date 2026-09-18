@@ -18,7 +18,11 @@ import { ParameterOffers, _decode_ParameterOffers, _encode_ParameterOffers } fro
 /**
  * @summary Offer_Item
  * @description
- * 
+ *
+ * Offered VTE-parameters for one display object. `name` is
+ * `display-object-name`. ISO/IEC 9041-1:1997 §12.3.2;
+ * ISO/IEC 9040:1997 §18.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,18 @@ class Offer_Item {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         * `display-object-name`; unique PrintableString in the VTE.
+         * ISO/IEC 9040:1997 §18.1.
          * @public
          * @readonly
          */
         readonly name: PrintableString,
         /**
          * @summary `offers`.
+         * @description
+         * Proposed values / lists / ranges for this object's
+         * VTE-parameters. ISO/IEC 9041-1:1997 §12.3.2.
          * @public
          * @readonly
          */

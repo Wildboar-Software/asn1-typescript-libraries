@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EXQcontent_exceptionType_stdException
  * @description
- * 
+ *
+ * Standard exception codes of VT-P-EXCEPTION-REQ. ISO/IEC
+ * 9041-1:1997 §6.26.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +38,9 @@ type EXQcontent_exceptionType_stdException = INTEGER;
 
 /**
  * @summary EXQcontent_exceptionType_stdException_rioFull
+ * @description
+ * `"RIO or temporary buffer full"` (0). ISO/IEC 9041-1:1997
+ * §6.26.
  * @constant
  * @type {number}
  */
@@ -43,6 +49,9 @@ const EXQcontent_exceptionType_stdException_rioFull: EXQcontent_exceptionType_st
 
 /**
  * @summary EXQcontent_exceptionType_stdException_rioFull
+ * @description
+ * `"RIO or temporary buffer full"` (0). ISO/IEC 9041-1:1997
+ * §6.26.
  * @constant
  * @type {number}
  */
@@ -51,6 +60,8 @@ const rioFull: EXQcontent_exceptionType_stdException = EXQcontent_exceptionType_
 
 /**
  * @summary EXQcontent_exceptionType_stdException_tooManyFields
+ * @description
+ * `"too many fields"` (1). ISO/IEC 9041-1:1997 §6.26.
  * @constant
  * @type {number}
  */
@@ -59,6 +70,8 @@ const EXQcontent_exceptionType_stdException_tooManyFields: EXQcontent_exceptionT
 
 /**
  * @summary EXQcontent_exceptionType_stdException_tooManyFields
+ * @description
+ * `"too many fields"` (1). ISO/IEC 9041-1:1997 §6.26.
  * @constant
  * @type {number}
  */
@@ -67,6 +80,9 @@ const tooManyFields: EXQcontent_exceptionType_stdException = EXQcontent_exceptio
 
 /**
  * @summary EXQcontent_exceptionType_stdException_tooManyFieldElements
+ * @description
+ * `"too many field elements"` (2). ISO/IEC 9041-1:1997
+ * §6.26.
  * @constant
  * @type {number}
  */
@@ -75,6 +91,9 @@ const EXQcontent_exceptionType_stdException_tooManyFieldElements: EXQcontent_exc
 
 /**
  * @summary EXQcontent_exceptionType_stdException_tooManyFieldElements
+ * @description
+ * `"too many field elements"` (2). ISO/IEC 9041-1:1997
+ * §6.26.
  * @constant
  * @type {number}
  */
@@ -83,6 +102,8 @@ const tooManyFieldElements: EXQcontent_exceptionType_stdException = EXQcontent_e
 
 /**
  * @summary EXQcontent_exceptionType_stdException_tooManyFERs
+ * @description
+ * `"too many FERs"` (3). ISO/IEC 9041-1:1997 §6.26.
  * @constant
  * @type {number}
  */
@@ -91,6 +112,8 @@ const EXQcontent_exceptionType_stdException_tooManyFERs: EXQcontent_exceptionTyp
 
 /**
  * @summary EXQcontent_exceptionType_stdException_tooManyFERs
+ * @description
+ * `"too many FERs"` (3). ISO/IEC 9041-1:1997 §6.26.
  * @constant
  * @type {number}
  */
@@ -99,6 +122,8 @@ const tooManyFERs: EXQcontent_exceptionType_stdException = EXQcontent_exceptionT
 
 /**
  * @summary EXQcontent_exceptionType_stdException_tooManyFEIs
+ * @description
+ * `"too many FEIs"` (4). ISO/IEC 9041-1:1997 §6.26.
  * @constant
  * @type {number}
  */
@@ -107,6 +132,8 @@ const EXQcontent_exceptionType_stdException_tooManyFEIs: EXQcontent_exceptionTyp
 
 /**
  * @summary EXQcontent_exceptionType_stdException_tooManyFEIs
+ * @description
+ * `"too many FEIs"` (4). ISO/IEC 9041-1:1997 §6.26.
  * @constant
  * @type {number}
  */

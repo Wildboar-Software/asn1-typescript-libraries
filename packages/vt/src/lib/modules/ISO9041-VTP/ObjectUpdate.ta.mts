@@ -21,7 +21,17 @@ import { _decode_RIOreference, _encode_RIOreference, RIOreference } from "../G/R
 /**
  * @summary ObjectUpdate
  * @description
- * 
+ *
+ * One NDQ object-update item. Identifies a Display Object, Control
+ * Object or RIO and the permitted updates for that object.
+ * ISO/IEC 9041-1:1997 §6.14, §12.1.
+ *
+ * - `display`: named DO plus `SEQUENCE OF DOupdate`. `doName` is
+ *   optional when the VTE has a single DO.
+ * - `control`: `G.COupdate`.
+ * - `rioref`: execute/call a RIO record
+ *   (ISO/IEC 9040:1997 §3.3.70, §15).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

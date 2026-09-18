@@ -21,7 +21,10 @@ import { type Offer as DEV_Offer, _decode_Offer as DEV__decode_Offer, _encode_Of
 /**
  * @summary ParamOfferList
  * @description
- * 
+ *
+ * MIN OFFER payload: offered CDS/CSS/DEV parameters and
+ * delivery-control. ISO/IEC 9041-1:1997 §6.17, §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,24 +47,37 @@ class ParamOfferList {
     constructor (
         /**
          * @summary `displayObjects`.
+         * @description
+         * Offered CDS display-object parameters. ISO/IEC 9041-1:1997
+         * §6.17.2, §12.2.
          * @public
          * @readonly
          */
         readonly displayObjects: OPTIONAL<CDS_Offer>,
         /**
          * @summary `controlObjects`.
+         * @description
+         * Offered CSS control-object parameters. ISO/IEC 9041-1:1997
+         * §6.17.2, §12.2.
          * @public
          * @readonly
          */
         readonly controlObjects: OPTIONAL<CSS_Offer>,
         /**
          * @summary `deviceObjects`.
+         * @description
+         * Offered DEV device-object parameters. ISO/IEC 9041-1:1997
+         * §6.17.2, §12.2.
          * @public
          * @readonly
          */
         readonly deviceObjects: OPTIONAL<DEV_Offer>,
         /**
          * @summary `deliveryControl`.
+         * @description
+         * Offered delivery-control values; bit=1 means offered. Applies
+         * only to DO updates and COs with CO-priority `"normal"`.
+         * ISO/IEC 9040:1997 §24, table 15.
          * @public
          * @readonly
          */

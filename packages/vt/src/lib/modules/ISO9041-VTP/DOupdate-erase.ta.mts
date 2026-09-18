@@ -19,7 +19,12 @@ import { EraseAttr, _decode_EraseAttr, _encode_EraseAttr } from "../ISO9041-VTP/
 /**
  * @summary DOupdate_erase
  * @description
- * 
+ *
+ * ERASE from `startErase` to `endErase`. Does not move the display
+ * pointer. If ripple is enabled, replaced by backward x-ripple.
+ * Requires erasure-capability `"yes"`.
+ * ISO/IEC 9040:1997 §19.4.1.4, §18.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +42,26 @@ class DOupdate_erase {
     constructor (
         /**
          * @summary `startErase`.
+         * @description
+         * Start of the erase extent. ISO/IEC 9040:1997 §19.4.1.4.
          * @public
          * @readonly
          */
         readonly startErase: Pointer,
         /**
          * @summary `endErase`.
+         * @description
+         * End of the erase extent. ISO/IEC 9040:1997 §19.4.1.4.
          * @public
          * @readonly
          */
         readonly endErase: Pointer,
         /**
          * @summary `attribute`.
+         * @description
+         * TRUE also resets secondary attributes to explicit modal
+         * defaults (reset-attribute `"yes"`); FALSE leaves them.
+         * ISO/IEC 9040:1997 §19.4.1.4.
          * @public
          * @readonly
          */

@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ParameterValues_terminationLength_eventId
  * @description
- * 
+ *
+ * Agreed event-id for update-count termination. `integer` is a
+ * non-zero positive integer; `nul` is `"null"`. ISO/IEC 9040:1997
+ * §23.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

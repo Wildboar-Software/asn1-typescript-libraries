@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FieldParamOffer_accessOutside
  * @description
- * 
+ *
+ * Offered `access-outside-fields`. Bit = 1 is offered: `allowed`(0)
+ * / `notAllowed`(1); default `"allowed"`. Restricts Terminal
+ * VT-user updates outside field extents. ISO/IEC 9040:1997
+ * §18.2.2, §19.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +34,10 @@ type FieldParamOffer_accessOutside = BIT_STRING;
 
 /**
  * @summary FieldParamOffer_accessOutside_allowed
+ * @description
+ *
+ * Offer `access-outside-fields` = `"allowed"` (default). ISO/IEC
+ * 9040:1997 §18.2.2, §19.5.
  * @constant
  */
 export
@@ -36,6 +45,10 @@ const FieldParamOffer_accessOutside_allowed: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary allowed
+ * @description
+ *
+ * Offer `access-outside-fields` = `"allowed"` (default). ISO/IEC
+ * 9040:1997 §18.2.2, §19.5.
  * @constant
  */
 export
@@ -43,6 +56,11 @@ const allowed: number = FieldParamOffer_accessOutside_allowed; /* SHORT_NAMED_BI
 
 /**
  * @summary FieldParamOffer_accessOutside_notAllowed
+ * @description
+ *
+ * Offer `access-outside-fields` = `"not allowed"`: Terminal VT-user
+ * restricted to logical operations. ISO/IEC 9040:1997 §18.2.2,
+ * §19.5.
  * @constant
  */
 export
@@ -50,6 +68,11 @@ const FieldParamOffer_accessOutside_notAllowed: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary notAllowed
+ * @description
+ *
+ * Offer `access-outside-fields` = `"not allowed"`: Terminal VT-user
+ * restricted to logical operations. ISO/IEC 9040:1997 §18.2.2,
+ * §19.5.
  * @constant
  */
 export

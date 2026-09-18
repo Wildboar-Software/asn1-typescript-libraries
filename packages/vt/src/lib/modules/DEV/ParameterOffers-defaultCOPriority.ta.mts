@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ParameterOffers_defaultCOPriority
  * @description
- * 
+ *
+ * Offered default-CO priorities. Set bits are offered. Same meaning as
+ * CO-priority. ISO/IEC 9040:1997 §23.1 table 12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,11 @@ type ParameterOffers_defaultCOPriority = BIT_STRING;
 
 /**
  * @summary ParameterOffers_defaultCOPriority_normal
+ * @description
+ *
+ * Bit 0: offer `normal` default-CO priority. Same meaning as
+ * CO-priority. ISO/IEC 9040:1997 §23.1 table 12.
+ *
  * @constant
  */
 export
@@ -36,6 +44,11 @@ const ParameterOffers_defaultCOPriority_normal: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary normal
+ * @description
+ *
+ * Bit 0: offer `normal` default-CO priority. Same meaning as
+ * CO-priority. ISO/IEC 9040:1997 §23.1 table 12.
+ *
  * @constant
  */
 export
@@ -43,6 +56,11 @@ const normal: number = ParameterOffers_defaultCOPriority_normal; /* SHORT_NAMED_
 
 /**
  * @summary ParameterOffers_defaultCOPriority_high
+ * @description
+ *
+ * Bit 1: offer `high` default-CO priority. Same meaning as
+ * CO-priority. ISO/IEC 9040:1997 §23.1 table 12.
+ *
  * @constant
  */
 export
@@ -50,6 +68,11 @@ const ParameterOffers_defaultCOPriority_high: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary high
+ * @description
+ *
+ * Bit 1: offer `high` default-CO priority. Same meaning as
+ * CO-priority. ISO/IEC 9040:1997 §23.1 table 12.
+ *
  * @constant
  */
 export
@@ -57,6 +80,11 @@ const high: number = ParameterOffers_defaultCOPriority_high; /* SHORT_NAMED_BIT 
 
 /**
  * @summary ParameterOffers_defaultCOPriority_urgent
+ * @description
+ *
+ * Bit 2: offer `urgent` default-CO priority. Same meaning as
+ * CO-priority. ISO/IEC 9040:1997 §23.1 table 12.
+ *
  * @constant
  */
 export
@@ -64,6 +92,11 @@ const ParameterOffers_defaultCOPriority_urgent: number = 2; /* LONG_NAMED_BIT */
 
 /**
  * @summary urgent
+ * @description
+ *
+ * Bit 2: offer `urgent` default-CO priority. Same meaning as
+ * CO-priority. ISO/IEC 9040:1997 §23.1 table 12.
+ *
  * @constant
  */
 export

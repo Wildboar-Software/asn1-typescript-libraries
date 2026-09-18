@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ProtocolVersion
  * @description
- * 
+ *
+ * Protocol version bits. Bit 0 is `version1`. Later editions of
+ * ISO/IEC 9041-1 may define further bits. In ASQ each 1-bit is a
+ * supported version (multiple allowed); a successful ASR sets only
+ * one bit. ISO/IEC 9041-1:1997 §6.2.2 i, §6.3.2 f, §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +34,9 @@ type ProtocolVersion = BIT_STRING;
 
 /**
  * @summary ProtocolVersion_version1
+ * @description
+ *
+ * Version 1 of ISO/IEC 9041-1. ISO/IEC 9041-1:1997 §12.2.
  * @constant
  */
 export
@@ -36,6 +44,9 @@ const ProtocolVersion_version1: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary version1
+ * @description
+ *
+ * Version 1 of ISO/IEC 9041-1. ISO/IEC 9041-1:1997 §12.2.
  * @constant
  */
 export

@@ -17,7 +17,12 @@ import { Values_Item, _decode_Values_Item, _encode_Values_Item } from "../DEV/Va
 /**
  * @summary Values
  * @description
- * 
+ *
+ * Returned (agreed) device-object VTE-parameter values during
+ * negotiation. Each member is a VTE-unique device-name plus that
+ * device's values. ISO/IEC 9040:1997 §16, §23; ISO/IEC 9041-1:1997
+ * §12.5.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

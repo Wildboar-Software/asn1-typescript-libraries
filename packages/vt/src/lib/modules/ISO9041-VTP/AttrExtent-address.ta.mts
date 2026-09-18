@@ -17,7 +17,11 @@ import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointe
 /**
  * @summary AttrExtent_address
  * @description
- * 
+ *
+ * Address alternative of `AttrExtent`: ATTRIBUTE applied from
+ * `beginning` through `ending` `Pointer`s.
+ * ISO/IEC 9040:1997 §19.4.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +38,17 @@ class AttrExtent_address {
     constructor (
         /**
          * @summary `beginning`.
+         * @description
+         * Start of the attribute extent. ISO/IEC 9040:1997 §19.4.1.3.
          * @public
          * @readonly
          */
         readonly beginning: Pointer,
         /**
          * @summary `ending`.
+         * @description
+         * End of the attribute extent; must be ≥ `beginning`.
+         * ISO/IEC 9040:1997 §19.4.1.3.
          * @public
          * @readonly
          */

@@ -20,7 +20,12 @@ import { RepertoireFontOffer, _decode_RepertoireFontOffer, _encode_RepertoireFon
 /**
  * @summary CompoundRepertoireOffer
  * @description
- * 
+ *
+ * Offered repertoire-capability and per-slot repertoire/font
+ * alternatives. Slot 1 is the TEXT/REPEAT-TEXT/ERASE modal default.
+ * `"null"` placeholder is allowed. ISO/IEC 9040:1997 §18.1,
+ * §18.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +42,18 @@ class CompoundRepertoireOffer {
     constructor (
         /**
          * @summary `repertoireCapability`.
+         * @description
+         * Offered `repertoire-capability` (how many assignment
+         * slots; default 1). ISO/IEC 9040:1997 §18.1.
          * @public
          * @readonly
          */
         readonly repertoireCapability: OPTIONAL<IntegerOffer>,
         /**
          * @summary `fontOffers`.
+         * @description
+         * Offers for positions in the repertoire list (placeholder or
+         * alternatives). ISO/IEC 9041-1:1997 §12.3.2.
          * @public
          * @readonly
          */

@@ -29,7 +29,12 @@ import { FieldParamIdent, _decode_FieldParamIdent, _encode_FieldParamIdent } fro
 /**
  * @summary ParameterIdents
  * @description
- * 
+ *
+ * Invite flags for one display object's VTE-parameters. A `NULL`
+ * component means that parameter is invited. Nested SEQUENCE types
+ * invite sub-parameters the same way. ISO/IEC 9041-1:1997 §12.3.1;
+ * ISO/IEC 9040:1997 §18.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,78 +62,117 @@ class ParameterIdents {
     constructor (
         /**
          * @summary `dimensions`.
+         * @description
+         * Invite `dimensions` (`one`/`two`/`three`, default `"two"`).
+         * ISO/IEC 9040:1997 §18.1.
          * @public
          * @readonly
          */
         readonly dimensions: OPTIONAL<NULL>,
         /**
          * @summary `xParam`.
+         * @description
+         * Invite X-dimension addressing parameters. Always defined.
+         * ISO/IEC 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly xParam: OPTIONAL<DimensionParamIdent>,
         /**
          * @summary `yParam`.
+         * @description
+         * Invite Y-dimension addressing parameters. Valid if
+         * `dimensions` ≥ 2. ISO/IEC 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly yParam: OPTIONAL<DimensionParamIdent>,
         /**
          * @summary `zParam`.
+         * @description
+         * Invite Z-dimension addressing parameters. Valid if
+         * `dimensions` = 3. ISO/IEC 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly zParam: OPTIONAL<DimensionParamIdent>,
         /**
          * @summary `erasure`.
+         * @description
+         * Invite `erasure-capability` (controls ERASE; default `"no"`).
+         * ISO/IEC 9040:1997 §18.1, §19.4.1.4.
          * @public
          * @readonly
          */
         readonly erasure: OPTIONAL<NULL>,
         /**
          * @summary `repertoire`.
+         * @description
+         * Invite repertoire-capability and assignment-list slots.
+         * ISO/IEC 9040:1997 §18.1, §18.2.4.
          * @public
          * @readonly
          */
         readonly repertoire: OPTIONAL<CompoundRepertoireIdent>,
         /**
          * @summary `emphasis`.
+         * @description
+         * Invite DO-emphasis assignment-list slots. ISO/IEC 9040:1997
+         * §18.2.6, B.17.
          * @public
          * @readonly
          */
         readonly emphasis: OPTIONAL<CompoundEmphasisIdent>,
         /**
          * @summary `foreground`.
+         * @description
+         * Invite foreground-colour capability and assignment list.
+         * ISO/IEC 9040:1997 §18.1, §18.2.5.
          * @public
          * @readonly
          */
         readonly foreground: OPTIONAL<CompoundColourIdent>,
         /**
          * @summary `background`.
+         * @description
+         * Invite background-colour capability and assignment list.
+         * ISO/IEC 9040:1997 §18.1, §18.2.5.
          * @public
          * @readonly
          */
         readonly background: OPTIONAL<CompoundColourIdent>,
         /**
          * @summary `access`.
+         * @description
+         * Invite DO-access (`WAVAR`/`WACI`/`WACA` only). ISO/IEC
+         * 9040:1997 §8, §9, §18.1.
          * @public
          * @readonly
          */
         readonly access: OPTIONAL<NULL>,
         /**
          * @summary `blockParams`.
+         * @description
+         * Invite block-definition-capability and `b-bound`. Requires
+         * Blocks FU. ISO/IEC 9040:1997 §10.7, §18.2.1.
          * @public
          * @readonly
          */
         readonly blockParams: OPTIONAL<BlockParamIdent>,
         /**
          * @summary `fieldParams`.
+         * @description
+         * Invite field-definition-capability and field bounds. Requires
+         * Fields FU. ISO/IEC 9040:1997 §10.8, §18.2.2.
          * @public
          * @readonly
          */
         readonly fieldParams: OPTIONAL<FieldParamIdent>,
         /**
          * @summary `rippleCapability`.
+         * @description
+         * Invite `ripple-capability` (default `"no"`). Requires Ripple
+         * FU. ISO/IEC 9040:1997 §10.10, §18.1.
          * @public
          * @readonly
          */

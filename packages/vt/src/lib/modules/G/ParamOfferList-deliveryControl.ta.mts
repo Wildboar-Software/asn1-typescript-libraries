@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ParamOfferList_deliveryControl
  * @description
- * 
+ *
+ * Offered delivery-control values. Bit=1 means offered; bit=0 means
+ * not. Applies only to DO updates and COs with CO-priority
+ * `"normal"`. Quarantine holds NDQs until a delivery point (DLQ).
+ * ISO/IEC 9040:1997 §24, table 15; ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +38,9 @@ type ParamOfferList_deliveryControl = BIT_STRING;
 
 /**
  * @summary ParamOfferList_deliveryControl_none
+ * @description
+ *
+ * Offers delivery-control `"none"`. ISO/IEC 9040:1997 §24, table 15.
  * @constant
  */
 export
@@ -40,6 +48,9 @@ const ParamOfferList_deliveryControl_none: number = 0; /* LONG_NAMED_BIT */
 
 /**
  * @summary none
+ * @description
+ *
+ * Offers delivery-control `"none"`. ISO/IEC 9040:1997 §24, table 15.
  * @constant
  */
 export
@@ -47,6 +58,10 @@ const none: number = ParamOfferList_deliveryControl_none; /* SHORT_NAMED_BIT */
 
 /**
  * @summary ParamOfferList_deliveryControl_simple
+ * @description
+ *
+ * Offers delivery-control `"simple"`. ISO/IEC 9040:1997 §24,
+ * table 15.
  * @constant
  */
 export
@@ -54,6 +69,10 @@ const ParamOfferList_deliveryControl_simple: number = 1; /* LONG_NAMED_BIT */
 
 /**
  * @summary simple
+ * @description
+ *
+ * Offers delivery-control `"simple"`. ISO/IEC 9040:1997 §24,
+ * table 15.
  * @constant
  */
 export
@@ -61,6 +80,10 @@ const simple: number = ParamOfferList_deliveryControl_simple; /* SHORT_NAMED_BIT
 
 /**
  * @summary ParamOfferList_deliveryControl_quarantine
+ * @description
+ *
+ * Offers delivery-control `"quarantine"` (hold NDQs until a DLQ).
+ * ISO/IEC 9040:1997 §24, table 15.
  * @constant
  */
 export
@@ -68,6 +91,10 @@ const ParamOfferList_deliveryControl_quarantine: number = 2; /* LONG_NAMED_BIT *
 
 /**
  * @summary quarantine
+ * @description
+ *
+ * Offers delivery-control `"quarantine"` (hold NDQs until a DLQ).
+ * ISO/IEC 9040:1997 §24, table 15.
  * @constant
  */
 export

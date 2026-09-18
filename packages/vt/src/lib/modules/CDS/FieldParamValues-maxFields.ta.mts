@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FieldParamValues_maxFields
  * @description
- * 
+ *
+ * Selected `max-fields` (F-dimension bound). `unbounded` or integer
+ * `limit` (default 1). Logical addressing / FDR update invalid if
+ * f > bound; f < 1 always invalid. ISO/IEC 9040:1997 §18.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

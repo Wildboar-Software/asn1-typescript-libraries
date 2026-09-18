@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Block
  * @description
- * 
+ *
+ * Block address `(z, b)` of a rectangular sub-area of a Y-array.
+ * ISO/IEC 9040:1997 §13.1.2; ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +38,17 @@ class Block {
     constructor (
         /**
          * @summary `zValue`.
+         * @description
+         * Z coordinate of the Y-array containing the block. ISO/IEC
+         * 9040:1997 §13.1.2.
          * @public
          * @readonly
          */
         readonly zValue: OPTIONAL<INTEGER>,
         /**
          * @summary `bValue`.
+         * @description
+         * Block index within that Y-array. ISO/IEC 9040:1997 §13.1.2.
          * @public
          * @readonly
          */

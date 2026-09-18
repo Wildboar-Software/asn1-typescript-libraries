@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary BlockParamValues_bound
  * @description
- * 
+ *
+ * Selected `b-bound`. `unbounded` or integer `limit` (default 1).
+ * Addressing/CREATE/DELETE invalid if b > bound; b < 1 always
+ * invalid. ISO/IEC 9040:1997 §18.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

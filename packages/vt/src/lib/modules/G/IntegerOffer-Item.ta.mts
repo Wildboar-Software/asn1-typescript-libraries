@@ -18,7 +18,10 @@ import { IntegerOffer_Item_range, _decode_IntegerOffer_Item_range, _encode_Integ
 /**
  * @summary IntegerOffer_Item
  * @description
- * 
+ *
+ * One INTEGER offer: `individualValue` is a single INTEGER; `range`
+ * is an inclusive `[minimum, maximum]`. ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

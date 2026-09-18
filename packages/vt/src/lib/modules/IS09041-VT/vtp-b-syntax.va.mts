@@ -17,7 +17,12 @@ import { vtp_b } from "../IS09041-VT/vtp-b.va.mjs";
 /**
  * @summary vtp_b_syntax
  * @description
- * 
+ *
+ * Presentation abstract syntax for `BasicVTPitem`. This package's
+ * compiled ASN.1 assigns `{ vtp-b abstract-syntax(1)
+ * initial-facilities(0) }`. ISO/IEC 9041-1:1997 Annex B assigns
+ * `{ vtp-b abstract-syntax(2) initial-facilities(0) }`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -20,7 +20,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ProfileArgumValueList_specialProfileArgums_Item_value
  * @description
- * 
+ *
+ * Chosen special-argument value: `boolean_`, `integer`, `string_`,
+ * or `oid`. ISO/IEC 9041-1:1997 §12.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

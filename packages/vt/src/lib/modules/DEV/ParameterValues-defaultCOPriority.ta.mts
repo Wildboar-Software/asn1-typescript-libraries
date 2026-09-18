@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ParameterValues_defaultCOPriority
  * @description
- * 
+ *
+ * Agreed default-CO priority. Same meaning as CO-priority. ISO/IEC
+ * 9040:1997 §23.1 table 12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,11 @@ type ParameterValues_defaultCOPriority = INTEGER;
 
 /**
  * @summary ParameterValues_defaultCOPriority_normal
+ * @description
+ *
+ * `normal` default-CO priority. Same meaning as CO-priority. ISO/IEC
+ * 9040:1997 §23.1 table 12.
+ *
  * @constant
  * @type {number}
  */
@@ -37,6 +45,11 @@ const ParameterValues_defaultCOPriority_normal: ParameterValues_defaultCOPriorit
 
 /**
  * @summary ParameterValues_defaultCOPriority_normal
+ * @description
+ *
+ * `normal` default-CO priority. Same meaning as CO-priority. ISO/IEC
+ * 9040:1997 §23.1 table 12.
+ *
  * @constant
  * @type {number}
  */
@@ -45,6 +58,11 @@ const normal: ParameterValues_defaultCOPriority = ParameterValues_defaultCOPrior
 
 /**
  * @summary ParameterValues_defaultCOPriority_high
+ * @description
+ *
+ * `high` default-CO priority. Same meaning as CO-priority. ISO/IEC
+ * 9040:1997 §23.1 table 12.
+ *
  * @constant
  * @type {number}
  */
@@ -53,6 +71,11 @@ const ParameterValues_defaultCOPriority_high: ParameterValues_defaultCOPriority 
 
 /**
  * @summary ParameterValues_defaultCOPriority_high
+ * @description
+ *
+ * `high` default-CO priority. Same meaning as CO-priority. ISO/IEC
+ * 9040:1997 §23.1 table 12.
+ *
  * @constant
  * @type {number}
  */
@@ -61,6 +84,11 @@ const high: ParameterValues_defaultCOPriority = ParameterValues_defaultCOPriorit
 
 /**
  * @summary ParameterValues_defaultCOPriority_urgent
+ * @description
+ *
+ * `urgent` default-CO priority. Same meaning as CO-priority. ISO/IEC
+ * 9040:1997 §23.1 table 12.
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +97,11 @@ const ParameterValues_defaultCOPriority_urgent: ParameterValues_defaultCOPriorit
 
 /**
  * @summary ParameterValues_defaultCOPriority_urgent
+ * @description
+ *
+ * `urgent` default-CO priority. Same meaning as CO-priority. ISO/IEC
+ * 9040:1997 §23.1 table 12.
+ *
  * @constant
  * @type {number}
  */

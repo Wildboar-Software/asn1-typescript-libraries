@@ -22,7 +22,11 @@ import { FontAssignment, _decode_FontAssignment, _encode_FontAssignment } from "
 /**
  * @summary RepertoireFontOffer_alternatives_Item
  * @description
- * 
+ *
+ * One alternative for a repertoire-list slot: assignment,
+ * `font-capability`, and font-assignment list. ISO/IEC 9040:1997
+ * §18.2.4, §18.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +44,27 @@ class RepertoireFontOffer_alternatives_Item {
     constructor (
         /**
          * @summary `repertoire`.
+         * @description
+         * Offered repertoire-assignment for this slot. ISO/IEC
+         * 9040:1997 §18.2.4.
          * @public
          * @readonly
          */
         readonly repertoire: OPTIONAL<RepertoireAssignment>,
         /**
          * @summary `fontCapability`.
+         * @description
+         * Offered `font-capability` (number of fonts for this
+         * repertoire; default 1). ISO/IEC 9040:1997 §18.3.
          * @public
          * @readonly
          */
         readonly fontCapability: OPTIONAL<IntegerOffer>,
         /**
          * @summary `fontAssignments`.
+         * @description
+         * Offered font-assignment list for this repertoire. ISO/IEC
+         * 9040:1997 §18.3.
          * @public
          * @readonly
          */

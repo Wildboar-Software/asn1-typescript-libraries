@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EntryControl_feprList_Item
  * @description
- * 
+ *
+ * Reference to one Field Entry Pilot Record in a named FEPCO.
+ * ISO/IEC 9040:1997 §3.3.63; ISO/IEC 9041-1:1997 §12.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +38,18 @@ class EntryControl_feprList_Item {
     constructor (
         /**
          * @summary `fepcoName`.
+         * @description
+         * Name of the Field Entry Pilot Control Object. ISO/IEC
+         * 9040:1997 §3.3.61.
          * @public
          * @readonly
          */
         readonly fepcoName: PrintableString,
         /**
          * @summary `recordIndex`.
+         * @description
+         * Index of the FEPR within that FEPCO. ISO/IEC 9040:1997
+         * §3.3.63.
          * @public
          * @readonly
          */

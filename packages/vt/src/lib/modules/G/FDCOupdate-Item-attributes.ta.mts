@@ -19,7 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FDCOupdate_Item_attributes
  * @description
- * 
+ *
+ * FDR graphic attributes. INTEGER 0 for repertoire, colours, or font
+ * means `"null"`. ISO/IEC 9041-1:1997 §12.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +43,43 @@ class FDCOupdate_Item_attributes {
     constructor (
         /**
          * @summary `graphicCharacterRepertoire`.
+         * @description
+         * Repertoire assignment; 0 ⇒ `"null"`. ISO/IEC 9041-1:1997
+         * §12.2.2.
          * @public
          * @readonly
          */
         readonly graphicCharacterRepertoire: OPTIONAL<INTEGER>,
         /**
          * @summary `foregroundColour`.
+         * @description
+         * Foreground colour assignment; 0 ⇒ `"null"`. ISO/IEC
+         * 9041-1:1997 §12.2.2.
          * @public
          * @readonly
          */
         readonly foregroundColour: OPTIONAL<INTEGER>,
         /**
          * @summary `backgroundColour`.
+         * @description
+         * Background colour assignment; 0 ⇒ `"null"`. ISO/IEC
+         * 9041-1:1997 §12.2.2.
          * @public
          * @readonly
          */
         readonly backgroundColour: OPTIONAL<INTEGER>,
         /**
          * @summary `emphasis`.
+         * @description
+         * Emphasis attribute string. ISO/IEC 9041-1:1997 §12.2.2.
          * @public
          * @readonly
          */
         readonly emphasis: OPTIONAL<PrintableString>,
         /**
          * @summary `font`.
+         * @description
+         * Font assignment; 0 ⇒ `"null"`. ISO/IEC 9041-1:1997 §12.2.2.
          * @public
          * @readonly
          */

@@ -17,7 +17,11 @@ import { CompoundEmphasisValue_Item, _decode_CompoundEmphasisValue_Item, _encode
 /**
  * @summary CompoundEmphasisValue
  * @description
- * 
+ *
+ * Selected DO-emphasis assignment list. Each item is a placeholder
+ * or one accepted PrintableString subattribute. ISO/IEC 9040:1997
+ * §18.2.6, B.17.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

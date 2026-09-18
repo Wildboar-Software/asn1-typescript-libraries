@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EXQcontent_profile_Item
  * @description
- * 
+ *
+ * One profile-defined VT-information item in an exception PDU.
+ * ISO/IEC 9040:1997 §35.1.3.3. ISO/IEC 9041-1:1997 §6.26.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +38,17 @@ class EXQcontent_profile_Item {
     constructor (
         /**
          * @summary `ptag`.
+         * @description
+         * Profile-defined item-tag. ISO/IEC 9040:1997 §35.1.3.3.
          * @public
          * @readonly
          */
         readonly ptag: INTEGER,
         /**
          * @summary `pvalue`.
+         * @description
+         * Profile-defined item-value octets. ISO/IEC 9040:1997
+         * §35.1.3.3.
          * @public
          * @readonly
          */

@@ -24,7 +24,11 @@ import { DimensionParamOffer_window, _decode_DimensionParamOffer_window, _encode
 /**
  * @summary DimensionParamOffer
  * @description
- * 
+ *
+ * Offered addressing VTE-parameters for one defined dimension
+ * (`d-bound`, `d-addressing`, `d-absolute`, `d-window`). Present
+ * only if that dimension is defined. ISO/IEC 9040:1997 §18.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,24 +57,39 @@ class DimensionParamOffer {
     constructor (
         /**
          * @summary `bound`.
+         * @description
+         * Offered `d-bound`: unbounded or an integer limit. X default
+         * unbounded. Explicit addressing is invalid if > bound+1;
+         * < 1 is always invalid. If blocks or fields are used,
+         * x-bound MUST be bounded. ISO/IEC 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly bound: OPTIONAL<DimensionParamOffer_bound>,
         /**
          * @summary `addressing`.
+         * @description
+         * Offered `d-addressing`. Default `"higher only"`. ISO/IEC
+         * 9040:1997 §18.2.3.
          * @public
          * @readonly
          */
         readonly addressing: OPTIONAL<DimensionParamOffer_addressing>,
         /**
          * @summary `absolute`.
+         * @description
+         * Offered `d-absolute`. Default `"no"`. ISO/IEC 9040:1997
+         * §18.2.3.
          * @public
          * @readonly
          */
         readonly absolute: OPTIONAL<DimensionParamOffer_absolute>,
         /**
          * @summary `window`.
+         * @description
+         * Offered update-window-size. Constrains TEXT/REPEAT-TEXT/
+         * ATTRIBUTE/ERASE lower bound; does not itself cap TEXT
+         * upper bound. ISO/IEC 9040:1997 §18.2.3, §19.1.1.3.
          * @public
          * @readonly
          */
