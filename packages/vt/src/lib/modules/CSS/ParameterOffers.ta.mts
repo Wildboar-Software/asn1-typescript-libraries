@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,17 +13,17 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ParameterOffers_typeIdentifier_Item, _decode_ParameterOffers_typeIdentifier_Item, _encode_ParameterOffers_typeIdentifier_Item } from "../CSS/ParameterOffers-typeIdentifier-Item.ta.mjs";
 // export { ParameterOffers_typeIdentifier_Item, _decode_ParameterOffers_typeIdentifier_Item, _encode_ParameterOffers_typeIdentifier_Item } from "../CSS/ParameterOffers-typeIdentifier-Item.ta.mjs";
-import { AccessRuleOffer, AccessRuleOffer_wavar /* IMPORTED_LONG_NAMED_BIT */, wavar /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waci /* IMPORTED_LONG_NAMED_BIT */, waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waca /* IMPORTED_LONG_NAMED_BIT */, waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_nsac /* IMPORTED_LONG_NAMED_BIT */, nsac /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waci /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waca /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_no_access /* IMPORTED_LONG_NAMED_BIT */, no_access /* IMPORTED_SHORT_NAMED_BIT */, _decode_AccessRuleOffer, _encode_AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
+import { AccessRuleOffer, _decode_AccessRuleOffer, _encode_AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
 // export { AccessRuleOffer, AccessRuleOffer_wavar /* IMPORTED_LONG_NAMED_BIT */, wavar /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waci /* IMPORTED_LONG_NAMED_BIT */, waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waca /* IMPORTED_LONG_NAMED_BIT */, waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_nsac /* IMPORTED_LONG_NAMED_BIT */, nsac /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waci /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waca /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_no_access /* IMPORTED_LONG_NAMED_BIT */, no_access /* IMPORTED_SHORT_NAMED_BIT */, _decode_AccessRuleOffer, _encode_AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
-import { ParameterOffers_trigger, ParameterOffers_trigger_yes /* IMPORTED_LONG_NAMED_BIT */, yes /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_trigger_no /* IMPORTED_LONG_NAMED_BIT */, no /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_trigger, _encode_ParameterOffers_trigger } from "../CSS/ParameterOffers-trigger.ta.mjs";
+import { ParameterOffers_trigger, _decode_ParameterOffers_trigger, _encode_ParameterOffers_trigger } from "../CSS/ParameterOffers-trigger.ta.mjs";
 // export { ParameterOffers_trigger, ParameterOffers_trigger_yes /* IMPORTED_LONG_NAMED_BIT */, yes /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_trigger_no /* IMPORTED_LONG_NAMED_BIT */, no /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_trigger, _encode_ParameterOffers_trigger } from "../CSS/ParameterOffers-trigger.ta.mjs";
-import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
-import { ParameterOffers_category, ParameterOffers_category_character /* IMPORTED_LONG_NAMED_BIT */, character /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_boolean /* IMPORTED_LONG_NAMED_BIT */, boolean_ /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_symbolic /* IMPORTED_LONG_NAMED_BIT */, symbolic /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_integer /* IMPORTED_LONG_NAMED_BIT */, integer /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_transparent /* IMPORTED_LONG_NAMED_BIT */, transparent /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_category, _encode_ParameterOffers_category } from "../CSS/ParameterOffers-category.ta.mjs";
+import { ParameterOffers_category, _decode_ParameterOffers_category, _encode_ParameterOffers_category } from "../CSS/ParameterOffers-category.ta.mjs";
 // export { ParameterOffers_category, ParameterOffers_category_character /* IMPORTED_LONG_NAMED_BIT */, character /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_boolean /* IMPORTED_LONG_NAMED_BIT */, boolean_ /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_symbolic /* IMPORTED_LONG_NAMED_BIT */, symbolic /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_integer /* IMPORTED_LONG_NAMED_BIT */, integer /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_transparent /* IMPORTED_LONG_NAMED_BIT */, transparent /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_category, _encode_ParameterOffers_category } from "../CSS/ParameterOffers-category.ta.mjs";
-import { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
+import { _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 // export { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
-import { ParameterOffers_priority, ParameterOffers_priority_normal /* IMPORTED_LONG_NAMED_BIT */, normal /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_priority_high /* IMPORTED_LONG_NAMED_BIT */, high /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_priority_urgent /* IMPORTED_LONG_NAMED_BIT */, urgent /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_priority, _encode_ParameterOffers_priority } from "../CSS/ParameterOffers-priority.ta.mjs";
+import { ParameterOffers_priority, _decode_ParameterOffers_priority, _encode_ParameterOffers_priority } from "../CSS/ParameterOffers-priority.ta.mjs";
 // export { ParameterOffers_priority, ParameterOffers_priority_normal /* IMPORTED_LONG_NAMED_BIT */, normal /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_priority_high /* IMPORTED_LONG_NAMED_BIT */, high /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_priority_urgent /* IMPORTED_LONG_NAMED_BIT */, urgent /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_priority, _encode_ParameterOffers_priority } from "../CSS/ParameterOffers-priority.ta.mjs";
 import { ParameterOffers_structure, _decode_ParameterOffers_structure, _encode_ParameterOffers_structure } from "../CSS/ParameterOffers-structure.ta.mjs";
 // export { ParameterOffers_structure, _decode_ParameterOffers_structure, _encode_ParameterOffers_structure } from "../CSS/ParameterOffers-structure.ta.mjs";
@@ -314,7 +259,7 @@ let _cached_encoder_for_ParameterOffers: $.ASN1Encoder<ParameterOffers> | null =
  */
 export
 function _encode_ParameterOffers (value: ParameterOffers, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterOffers) { _cached_encoder_for_ParameterOffers = function (value: ParameterOffers, elGetter: $.ASN1Encoder<ParameterOffers>): _Element {
+    if (!_cached_encoder_for_ParameterOffers) { _cached_encoder_for_ParameterOffers = function (value: ParameterOffers): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeSetOf<ParameterOffers_typeIdentifier_Item>(() => _encode_ParameterOffers_typeIdentifier_Item, $.BER), $.BER)(value.typeIdentifier, $.BER),

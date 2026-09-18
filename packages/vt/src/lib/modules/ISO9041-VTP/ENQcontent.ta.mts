@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
     PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +13,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ENQcontent_vteChoice, ENQcontent_vteChoice_draft /* IMPORTED_LONG_NAMED_INTEGER */, draft /* IMPORTED_SHORT_NAMED_INTEGER */, ENQcontent_vteChoice_current /* IMPORTED_LONG_NAMED_INTEGER */, current /* IMPORTED_SHORT_NAMED_INTEGER */, ENQcontent_vteChoice_either /* IMPORTED_LONG_NAMED_INTEGER */, either /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ENQcontent_vteChoice, _encode_ENQcontent_vteChoice } from "../ISO9041-VTP/ENQcontent-vteChoice.ta.mjs";
+import { ENQcontent_vteChoice, _decode_ENQcontent_vteChoice, _encode_ENQcontent_vteChoice } from "../ISO9041-VTP/ENQcontent-vteChoice.ta.mjs";
 // export { ENQcontent_vteChoice, ENQcontent_vteChoice_draft /* IMPORTED_LONG_NAMED_INTEGER */, draft /* IMPORTED_SHORT_NAMED_INTEGER */, ENQcontent_vteChoice_current /* IMPORTED_LONG_NAMED_INTEGER */, current /* IMPORTED_SHORT_NAMED_INTEGER */, ENQcontent_vteChoice_either /* IMPORTED_LONG_NAMED_INTEGER */, either /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ENQcontent_vteChoice, _encode_ENQcontent_vteChoice } from "../ISO9041-VTP/ENQcontent-vteChoice.ta.mjs";
 
 
@@ -215,7 +162,7 @@ let _cached_encoder_for_ENQcontent: $.ASN1Encoder<ENQcontent> | null = null;
  */
 export
 function _encode_ENQcontent (value: ENQcontent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ENQcontent) { _cached_encoder_for_ENQcontent = function (value: ENQcontent, elGetter: $.ASN1Encoder<ENQcontent>): _Element {
+    if (!_cached_encoder_for_ENQcontent) { _cached_encoder_for_ENQcontent = function (value: ENQcontent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ENQcontent_vteChoice, $.BER)(value.vteChoice, $.BER),

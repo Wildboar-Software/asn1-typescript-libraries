@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterOffers_dimensionOffer, ParameterOffers_dimensionOffer_oneDimension /* IMPORTED_LONG_NAMED_BIT */, oneDimension /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_dimensionOffer_twoDimensions /* IMPORTED_LONG_NAMED_BIT */, twoDimensions /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_dimensionOffer_threeDimensions /* IMPORTED_LONG_NAMED_BIT */, threeDimensions /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_dimensionOffer, _encode_ParameterOffers_dimensionOffer } from "../CDS/ParameterOffers-dimensionOffer.ta.mjs";
+import { ParameterOffers_dimensionOffer, _decode_ParameterOffers_dimensionOffer, _encode_ParameterOffers_dimensionOffer } from "../CDS/ParameterOffers-dimensionOffer.ta.mjs";
 // export { ParameterOffers_dimensionOffer, ParameterOffers_dimensionOffer_oneDimension /* IMPORTED_LONG_NAMED_BIT */, oneDimension /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_dimensionOffer_twoDimensions /* IMPORTED_LONG_NAMED_BIT */, twoDimensions /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_dimensionOffer_threeDimensions /* IMPORTED_LONG_NAMED_BIT */, threeDimensions /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_dimensionOffer, _encode_ParameterOffers_dimensionOffer } from "../CDS/ParameterOffers-dimensionOffer.ta.mjs";
 import { DimensionParamOffer, _decode_DimensionParamOffer, _encode_DimensionParamOffer } from "../CDS/DimensionParamOffer.ta.mjs";
 // export { DimensionParamOffer, _decode_DimensionParamOffer, _encode_DimensionParamOffer } from "../CDS/DimensionParamOffer.ta.mjs";
-import { ParameterOffers_erasure, ParameterOffers_erasure_yes /* IMPORTED_LONG_NAMED_BIT */, ParameterOffers_erasure_no /* IMPORTED_LONG_NAMED_BIT */, _decode_ParameterOffers_erasure, _encode_ParameterOffers_erasure } from "../CDS/ParameterOffers-erasure.ta.mjs";
+import { ParameterOffers_erasure, _decode_ParameterOffers_erasure, _encode_ParameterOffers_erasure } from "../CDS/ParameterOffers-erasure.ta.mjs";
 // export { ParameterOffers_erasure, ParameterOffers_erasure_yes /* IMPORTED_LONG_NAMED_BIT */, ParameterOffers_erasure_no /* IMPORTED_LONG_NAMED_BIT */, _decode_ParameterOffers_erasure, _encode_ParameterOffers_erasure } from "../CDS/ParameterOffers-erasure.ta.mjs";
 import { CompoundRepertoireOffer, _decode_CompoundRepertoireOffer, _encode_CompoundRepertoireOffer } from "../CDS/CompoundRepertoireOffer.ta.mjs";
 // export { CompoundRepertoireOffer, _decode_CompoundRepertoireOffer, _encode_CompoundRepertoireOffer } from "../CDS/CompoundRepertoireOffer.ta.mjs";
@@ -78,13 +23,13 @@ import { CompoundEmphasisOffer, _decode_CompoundEmphasisOffer, _encode_CompoundE
 // export { CompoundEmphasisOffer, _decode_CompoundEmphasisOffer, _encode_CompoundEmphasisOffer } from "../CDS/CompoundEmphasisOffer.ta.mjs";
 import { CompoundColourOffer, _decode_CompoundColourOffer, _encode_CompoundColourOffer } from "../CDS/CompoundColourOffer.ta.mjs";
 // export { CompoundColourOffer, _decode_CompoundColourOffer, _encode_CompoundColourOffer } from "../CDS/CompoundColourOffer.ta.mjs";
-import { ParameterOffers_access, ParameterOffers_access_wavar /* IMPORTED_LONG_NAMED_BIT */, wavar /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_access_waci /* IMPORTED_LONG_NAMED_BIT */, waci /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_access_waca /* IMPORTED_LONG_NAMED_BIT */, waca /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_access, _encode_ParameterOffers_access } from "../CDS/ParameterOffers-access.ta.mjs";
+import { ParameterOffers_access, _decode_ParameterOffers_access, _encode_ParameterOffers_access } from "../CDS/ParameterOffers-access.ta.mjs";
 // export { ParameterOffers_access, ParameterOffers_access_wavar /* IMPORTED_LONG_NAMED_BIT */, wavar /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_access_waci /* IMPORTED_LONG_NAMED_BIT */, waci /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_access_waca /* IMPORTED_LONG_NAMED_BIT */, waca /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_access, _encode_ParameterOffers_access } from "../CDS/ParameterOffers-access.ta.mjs";
 import { BlockParamOffer, _decode_BlockParamOffer, _encode_BlockParamOffer } from "../CDS/BlockParamOffer.ta.mjs";
 // export { BlockParamOffer, _decode_BlockParamOffer, _encode_BlockParamOffer } from "../CDS/BlockParamOffer.ta.mjs";
 import { FieldParamOffer, _decode_FieldParamOffer, _encode_FieldParamOffer } from "../CDS/FieldParamOffer.ta.mjs";
 // export { FieldParamOffer, _decode_FieldParamOffer, _encode_FieldParamOffer } from "../CDS/FieldParamOffer.ta.mjs";
-import { ParameterOffers_rippleCapability, ParameterOffers_rippleCapability_yes /* IMPORTED_LONG_NAMED_BIT */, ParameterOffers_rippleCapability_no /* IMPORTED_LONG_NAMED_BIT */, _decode_ParameterOffers_rippleCapability, _encode_ParameterOffers_rippleCapability } from "../CDS/ParameterOffers-rippleCapability.ta.mjs";
+import { ParameterOffers_rippleCapability, _decode_ParameterOffers_rippleCapability, _encode_ParameterOffers_rippleCapability } from "../CDS/ParameterOffers-rippleCapability.ta.mjs";
 // export { ParameterOffers_rippleCapability, ParameterOffers_rippleCapability_yes /* IMPORTED_LONG_NAMED_BIT */, ParameterOffers_rippleCapability_no /* IMPORTED_LONG_NAMED_BIT */, _decode_ParameterOffers_rippleCapability, _encode_ParameterOffers_rippleCapability } from "../CDS/ParameterOffers-rippleCapability.ta.mjs";
 
 
@@ -350,7 +295,7 @@ let _cached_encoder_for_ParameterOffers: $.ASN1Encoder<ParameterOffers> | null =
  */
 export
 function _encode_ParameterOffers (value: ParameterOffers, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterOffers) { _cached_encoder_for_ParameterOffers = function (value: ParameterOffers, elGetter: $.ASN1Encoder<ParameterOffers>): _Element {
+    if (!_cached_encoder_for_ParameterOffers) { _cached_encoder_for_ParameterOffers = function (value: ParameterOffers): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.dimensionOffer === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_ParameterOffers_dimensionOffer, $.BER)(value.dimensionOffer, $.BER)),

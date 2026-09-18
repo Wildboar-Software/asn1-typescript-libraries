@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
     PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -70,15 +17,15 @@ import { ASQcontent, _decode_ASQcontent, _encode_ASQcontent } from "../ISO9041-V
 // export { ASQcontent, _decode_ASQcontent, _encode_ASQcontent } from "../ISO9041-VTP/ASQcontent.ta.mjs";
 import { ASRcontent, _decode_ASRcontent, _encode_ASRcontent } from "../ISO9041-VTP/ASRcontent.ta.mjs";
 // export { ASRcontent, _decode_ASRcontent, _encode_ASRcontent } from "../ISO9041-VTP/ASRcontent.ta.mjs";
-import { Result2, _decode_Result2, _encode_Result2 } from "../G/Result2.ta.mjs";
+import { _decode_Result2, _encode_Result2 } from "../G/Result2.ta.mjs";
 // export { Result2, _decode_Result2, _encode_Result2 } from "../G/Result2.ta.mjs";
-import { COupdate, _decode_COupdate, _encode_COupdate } from "../G/COupdate.ta.mjs";
+import { _decode_COupdate, _encode_COupdate } from "../G/COupdate.ta.mjs";
 // export { COupdate, _decode_COupdate, _encode_COupdate } from "../G/COupdate.ta.mjs";
 import { NDQcontent, _decode_NDQcontent, _encode_NDQcontent } from "../ISO9041-VTP/NDQcontent.ta.mjs";
 // export { NDQcontent, _decode_NDQcontent, _encode_NDQcontent } from "../ISO9041-VTP/NDQcontent.ta.mjs";
 import { BKQcontent, _decode_BKQcontent, _encode_BKQcontent } from "../ISO9041-VTP/BKQcontent.ta.mjs";
 // export { BKQcontent, _decode_BKQcontent, _encode_BKQcontent } from "../ISO9041-VTP/BKQcontent.ta.mjs";
-import { Profile, _decode_Profile, _encode_Profile } from "../G/Profile.ta.mjs";
+import { _decode_Profile, _encode_Profile } from "../G/Profile.ta.mjs";
 // export { Profile, _decode_Profile, _encode_Profile } from "../G/Profile.ta.mjs";
 import { SNRcontent, _decode_SNRcontent, _encode_SNRcontent } from "../ISO9041-VTP/SNRcontent.ta.mjs";
 // export { SNRcontent, _decode_SNRcontent, _encode_SNRcontent } from "../ISO9041-VTP/SNRcontent.ta.mjs";
@@ -86,11 +33,11 @@ import { ENQcontent, _decode_ENQcontent, _encode_ENQcontent } from "../ISO9041-V
 // export { ENQcontent, _decode_ENQcontent, _encode_ENQcontent } from "../ISO9041-VTP/ENQcontent.ta.mjs";
 import { ENRcontent, _decode_ENRcontent, _encode_ENRcontent } from "../ISO9041-VTP/ENRcontent.ta.mjs";
 // export { ENRcontent, _decode_ENRcontent, _encode_ENRcontent } from "../ISO9041-VTP/ENRcontent.ta.mjs";
-import { ParamIdentList, _decode_ParamIdentList, _encode_ParamIdentList } from "../G/ParamIdentList.ta.mjs";
+import { _decode_ParamIdentList, _encode_ParamIdentList } from "../G/ParamIdentList.ta.mjs";
 // export { ParamIdentList, _decode_ParamIdentList, _encode_ParamIdentList } from "../G/ParamIdentList.ta.mjs";
-import { ParamOfferList, _decode_ParamOfferList, _encode_ParamOfferList } from "../G/ParamOfferList.ta.mjs";
+import { _decode_ParamOfferList, _encode_ParamOfferList } from "../G/ParamOfferList.ta.mjs";
 // export { ParamOfferList, _decode_ParamOfferList, _encode_ParamOfferList } from "../G/ParamOfferList.ta.mjs";
-import { ParamValueList, _decode_ParamValueList, _encode_ParamValueList } from "../G/ParamValueList.ta.mjs";
+import { _decode_ParamValueList, _encode_ParamValueList } from "../G/ParamValueList.ta.mjs";
 // export { ParamValueList, _decode_ParamValueList, _encode_ParamValueList } from "../G/ParamValueList.ta.mjs";
 import { EXQcontent, _decode_EXQcontent, _encode_EXQcontent } from "../ISO9041-VTP/EXQcontent.ta.mjs";
 // export { EXQcontent, _decode_EXQcontent, _encode_EXQcontent } from "../ISO9041-VTP/EXQcontent.ta.mjs";

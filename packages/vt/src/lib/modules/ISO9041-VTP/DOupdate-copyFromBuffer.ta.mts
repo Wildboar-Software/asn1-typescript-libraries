@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
     PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,7 +15,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
 // export { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
-import { DOupdate_copyFromBuffer_structure, DOupdate_copyFromBuffer_structure_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, DOupdate_copyFromBuffer_structure_x /* IMPORTED_LONG_NAMED_INTEGER */, x /* IMPORTED_SHORT_NAMED_INTEGER */, DOupdate_copyFromBuffer_structure_xAndy /* IMPORTED_LONG_NAMED_INTEGER */, xAndy /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DOupdate_copyFromBuffer_structure, _encode_DOupdate_copyFromBuffer_structure } from "../ISO9041-VTP/DOupdate-copyFromBuffer-structure.ta.mjs";
+import { DOupdate_copyFromBuffer_structure, _decode_DOupdate_copyFromBuffer_structure, _encode_DOupdate_copyFromBuffer_structure } from "../ISO9041-VTP/DOupdate-copyFromBuffer-structure.ta.mjs";
 // export { DOupdate_copyFromBuffer_structure, DOupdate_copyFromBuffer_structure_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, DOupdate_copyFromBuffer_structure_x /* IMPORTED_LONG_NAMED_INTEGER */, x /* IMPORTED_SHORT_NAMED_INTEGER */, DOupdate_copyFromBuffer_structure_xAndy /* IMPORTED_LONG_NAMED_INTEGER */, xAndy /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DOupdate_copyFromBuffer_structure, _encode_DOupdate_copyFromBuffer_structure } from "../ISO9041-VTP/DOupdate-copyFromBuffer-structure.ta.mjs";
 
 
@@ -255,7 +202,7 @@ let _cached_encoder_for_DOupdate_copyFromBuffer: $.ASN1Encoder<DOupdate_copyFrom
  */
 export
 function _encode_DOupdate_copyFromBuffer (value: DOupdate_copyFromBuffer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DOupdate_copyFromBuffer) { _cached_encoder_for_DOupdate_copyFromBuffer = function (value: DOupdate_copyFromBuffer, elGetter: $.ASN1Encoder<DOupdate_copyFromBuffer>): _Element {
+    if (!_cached_encoder_for_DOupdate_copyFromBuffer) { _cached_encoder_for_DOupdate_copyFromBuffer = function (value: DOupdate_copyFromBuffer): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Pointer(value.address, $.BER),
