@@ -35,10 +35,14 @@ export {
 } from "./FDCOupdate-Item-transmissionPolicy.ta.mjs";
 export * from "./FDCOupdate-Item.ta.mjs";
 export * from "./FDCOupdate.ta.mjs";
+export * from "./FEC.ta.mjs";
+export * from "./FEE.ta.mjs";
+export * from "./FEI.ta.mjs";
 export * from "./FEICOupdate-Item.ta.mjs";
 export * from "./FEICOupdate.ta.mjs";
 export * from "./FEPCOupdate-Item.ta.mjs";
 export * from "./FEPCOupdate.ta.mjs";
+export * from "./FER.ta.mjs";
 export * from "./FunctionalUnits.ta.mjs";
 export * from "./ImplementationIdent.ta.mjs";
 export * from "./IntegerOffer-Item-range.ta.mjs";
