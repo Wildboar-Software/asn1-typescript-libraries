@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,11 +10,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AssistanceLocation, _enum_for_AssistanceLocation, AssistanceLocation_separate_from_transaction /* IMPORTED_LONG_ENUMERATION_ITEM */, separate_from_transaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, AssistanceLocation_interactively_with_transaction /* IMPORTED_LONG_ENUMERATION_ITEM */, interactively_with_transaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, AssistanceLocation_after_failure /* IMPORTED_LONG_ENUMERATION_ITEM */, after_failure /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AssistanceLocation, _encode_AssistanceLocation } from "../MachineReadableBiometricTestingAndReportingTestReport/AssistanceLocation.ta.mjs";
+import { AssistanceLocation, _enum_for_AssistanceLocation, _decode_AssistanceLocation, _encode_AssistanceLocation } from "../MachineReadableBiometricTestingAndReportingTestReport/AssistanceLocation.ta.mjs";
 // export { AssistanceLocation, _enum_for_AssistanceLocation, AssistanceLocation_separate_from_transaction /* IMPORTED_LONG_ENUMERATION_ITEM */, separate_from_transaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, AssistanceLocation_interactively_with_transaction /* IMPORTED_LONG_ENUMERATION_ITEM */, interactively_with_transaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, AssistanceLocation_after_failure /* IMPORTED_LONG_ENUMERATION_ITEM */, after_failure /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AssistanceLocation, _encode_AssistanceLocation } from "../MachineReadableBiometricTestingAndReportingTestReport/AssistanceLocation.ta.mjs";
-import { AssistanceMode, _enum_for_AssistanceMode, AssistanceMode_physical /* IMPORTED_LONG_ENUMERATION_ITEM */, physical /* IMPORTED_SHORT_ENUMERATION_ITEM */, AssistanceMode_audio_only /* IMPORTED_LONG_ENUMERATION_ITEM */, audio_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, AssistanceMode_audio_video /* IMPORTED_LONG_ENUMERATION_ITEM */, audio_video /* IMPORTED_SHORT_ENUMERATION_ITEM */, AssistanceMode_none /* IMPORTED_LONG_ENUMERATION_ITEM */, none /* IMPORTED_SHORT_ENUMERATION_ITEM */, AssistanceMode_video_only /* IMPORTED_LONG_ENUMERATION_ITEM */, video_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AssistanceMode, _encode_AssistanceMode } from "../MachineReadableBiometricTestingAndReportingTestReport/AssistanceMode.ta.mjs";
+import { AssistanceMode, _enum_for_AssistanceMode, _decode_AssistanceMode, _encode_AssistanceMode } from "../MachineReadableBiometricTestingAndReportingTestReport/AssistanceMode.ta.mjs";
 // export { AssistanceMode, _enum_for_AssistanceMode, AssistanceMode_physical /* IMPORTED_LONG_ENUMERATION_ITEM */, physical /* IMPORTED_SHORT_ENUMERATION_ITEM */, AssistanceMode_audio_only /* IMPORTED_LONG_ENUMERATION_ITEM */, audio_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, AssistanceMode_audio_video /* IMPORTED_LONG_ENUMERATION_ITEM */, audio_video /* IMPORTED_SHORT_ENUMERATION_ITEM */, AssistanceMode_none /* IMPORTED_LONG_ENUMERATION_ITEM */, none /* IMPORTED_SHORT_ENUMERATION_ITEM */, AssistanceMode_video_only /* IMPORTED_LONG_ENUMERATION_ITEM */, video_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AssistanceMode, _encode_AssistanceMode } from "../MachineReadableBiometricTestingAndReportingTestReport/AssistanceMode.ta.mjs";
-import { InstructionMode, _enum_for_InstructionMode, InstructionMode_written_manual /* IMPORTED_LONG_ENUMERATION_ITEM */, written_manual /* IMPORTED_SHORT_ENUMERATION_ITEM */, InstructionMode_poster /* IMPORTED_LONG_ENUMERATION_ITEM */, poster /* IMPORTED_SHORT_ENUMERATION_ITEM */, InstructionMode_video /* IMPORTED_LONG_ENUMERATION_ITEM */, video /* IMPORTED_SHORT_ENUMERATION_ITEM */, InstructionMode_personal /* IMPORTED_LONG_ENUMERATION_ITEM */, personal /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InstructionMode, _encode_InstructionMode } from "../MachineReadableBiometricTestingAndReportingTestReport/InstructionMode.ta.mjs";
+import { InstructionMode, _enum_for_InstructionMode, _decode_InstructionMode, _encode_InstructionMode } from "../MachineReadableBiometricTestingAndReportingTestReport/InstructionMode.ta.mjs";
 // export { InstructionMode, _enum_for_InstructionMode, InstructionMode_written_manual /* IMPORTED_LONG_ENUMERATION_ITEM */, written_manual /* IMPORTED_SHORT_ENUMERATION_ITEM */, InstructionMode_poster /* IMPORTED_LONG_ENUMERATION_ITEM */, poster /* IMPORTED_SHORT_ENUMERATION_ITEM */, InstructionMode_video /* IMPORTED_LONG_ENUMERATION_ITEM */, video /* IMPORTED_SHORT_ENUMERATION_ITEM */, InstructionMode_personal /* IMPORTED_LONG_ENUMERATION_ITEM */, personal /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InstructionMode, _encode_InstructionMode } from "../MachineReadableBiometricTestingAndReportingTestReport/InstructionMode.ta.mjs";
 
 
@@ -236,7 +180,7 @@ let _cached_encoder_for_AssistanceAndInstruction: $.ASN1Encoder<AssistanceAndIns
  */
 export
 function _encode_AssistanceAndInstruction (value: AssistanceAndInstruction, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AssistanceAndInstruction) { _cached_encoder_for_AssistanceAndInstruction = function (value: AssistanceAndInstruction, elGetter: $.ASN1Encoder<AssistanceAndInstruction>): _Element {
+    if (!_cached_encoder_for_AssistanceAndInstruction) { _cached_encoder_for_AssistanceAndInstruction = function (value: AssistanceAndInstruction): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_AssistanceLocation, $.BER)(value.assistanceLocation, $.BER),

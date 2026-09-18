@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProcessedLevel, _enum_for_ProcessedLevel, ProcessedLevel_raw_data /* IMPORTED_LONG_ENUMERATION_ITEM */, raw_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProcessedLevel_intermediate_data /* IMPORTED_LONG_ENUMERATION_ITEM */, intermediate_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProcessedLevel_processed_data /* IMPORTED_LONG_ENUMERATION_ITEM */, processed_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProcessedLevel_comparison_score /* IMPORTED_LONG_ENUMERATION_ITEM */, comparison_score /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProcessedLevel_comparison_result /* IMPORTED_LONG_ENUMERATION_ITEM */, comparison_result /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ProcessedLevel, _encode_ProcessedLevel } from "../MachineReadableBiometricTestingAndReportingTestReport/ProcessedLevel.ta.mjs";
+import { ProcessedLevel, _enum_for_ProcessedLevel, _decode_ProcessedLevel, _encode_ProcessedLevel } from "../MachineReadableBiometricTestingAndReportingTestReport/ProcessedLevel.ta.mjs";
 // export { ProcessedLevel, _enum_for_ProcessedLevel, ProcessedLevel_raw_data /* IMPORTED_LONG_ENUMERATION_ITEM */, raw_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProcessedLevel_intermediate_data /* IMPORTED_LONG_ENUMERATION_ITEM */, intermediate_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProcessedLevel_processed_data /* IMPORTED_LONG_ENUMERATION_ITEM */, processed_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProcessedLevel_comparison_score /* IMPORTED_LONG_ENUMERATION_ITEM */, comparison_score /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProcessedLevel_comparison_result /* IMPORTED_LONG_ENUMERATION_ITEM */, comparison_result /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ProcessedLevel, _encode_ProcessedLevel } from "../MachineReadableBiometricTestingAndReportingTestReport/ProcessedLevel.ta.mjs";
-import { Purpose, _enum_for_Purpose, Purpose_reference /* IMPORTED_LONG_ENUMERATION_ITEM */, reference /* IMPORTED_SHORT_ENUMERATION_ITEM */, Purpose_sample /* IMPORTED_LONG_ENUMERATION_ITEM */, sample /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Purpose, _encode_Purpose } from "../MachineReadableBiometricTestingAndReportingTestReport/Purpose.ta.mjs";
+import { Purpose, _enum_for_Purpose, _decode_Purpose, _encode_Purpose } from "../MachineReadableBiometricTestingAndReportingTestReport/Purpose.ta.mjs";
 // export { Purpose, _enum_for_Purpose, Purpose_reference /* IMPORTED_LONG_ENUMERATION_ITEM */, reference /* IMPORTED_SHORT_ENUMERATION_ITEM */, Purpose_sample /* IMPORTED_LONG_ENUMERATION_ITEM */, sample /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Purpose, _encode_Purpose } from "../MachineReadableBiometricTestingAndReportingTestReport/Purpose.ta.mjs";
 
 
@@ -217,7 +162,7 @@ let _cached_encoder_for_DataType: $.ASN1Encoder<DataType> | null = null;
  */
 export
 function _encode_DataType (value: DataType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DataType) { _cached_encoder_for_DataType = function (value: DataType, elGetter: $.ASN1Encoder<DataType>): _Element {
+    if (!_cached_encoder_for_DataType) { _cached_encoder_for_DataType = function (value: DataType): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_ProcessedLevel, $.BER)(value.processedLevel, $.BER),

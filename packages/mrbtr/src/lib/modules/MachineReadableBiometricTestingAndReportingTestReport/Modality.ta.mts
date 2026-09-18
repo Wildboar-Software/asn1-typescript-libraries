@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BiometricType, BiometricType_no_value_available /* IMPORTED_LONG_NAMED_BIT */, no_value_available /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_multiple_biometric_types /* IMPORTED_LONG_NAMED_BIT */, multiple_biometric_types /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_scent /* IMPORTED_LONG_NAMED_BIT */, scent /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_dna /* IMPORTED_LONG_NAMED_BIT */, dna /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_ear /* IMPORTED_LONG_NAMED_BIT */, ear /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_face /* IMPORTED_LONG_NAMED_BIT */, face /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_finger /* IMPORTED_LONG_NAMED_BIT */, finger /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_foot /* IMPORTED_LONG_NAMED_BIT */, foot /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_hand_geometry /* IMPORTED_LONG_NAMED_BIT */, hand_geometry /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_vein /* IMPORTED_LONG_NAMED_BIT */, vein /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_iris /* IMPORTED_LONG_NAMED_BIT */, iris /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_retina /* IMPORTED_LONG_NAMED_BIT */, retina /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_voice /* IMPORTED_LONG_NAMED_BIT */, voice /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_gait /* IMPORTED_LONG_NAMED_BIT */, gait /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_keystroke /* IMPORTED_LONG_NAMED_BIT */, keystroke /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_lip_movement /* IMPORTED_LONG_NAMED_BIT */, lip_movement /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_signature_sign /* IMPORTED_LONG_NAMED_BIT */, signature_sign /* IMPORTED_SHORT_NAMED_BIT */, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
+import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
 // export { BiometricType, BiometricType_no_value_available /* IMPORTED_LONG_NAMED_BIT */, no_value_available /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_multiple_biometric_types /* IMPORTED_LONG_NAMED_BIT */, multiple_biometric_types /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_scent /* IMPORTED_LONG_NAMED_BIT */, scent /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_dna /* IMPORTED_LONG_NAMED_BIT */, dna /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_ear /* IMPORTED_LONG_NAMED_BIT */, ear /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_face /* IMPORTED_LONG_NAMED_BIT */, face /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_finger /* IMPORTED_LONG_NAMED_BIT */, finger /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_foot /* IMPORTED_LONG_NAMED_BIT */, foot /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_hand_geometry /* IMPORTED_LONG_NAMED_BIT */, hand_geometry /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_vein /* IMPORTED_LONG_NAMED_BIT */, vein /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_iris /* IMPORTED_LONG_NAMED_BIT */, iris /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_retina /* IMPORTED_LONG_NAMED_BIT */, retina /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_voice /* IMPORTED_LONG_NAMED_BIT */, voice /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_gait /* IMPORTED_LONG_NAMED_BIT */, gait /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_keystroke /* IMPORTED_LONG_NAMED_BIT */, keystroke /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_lip_movement /* IMPORTED_LONG_NAMED_BIT */, lip_movement /* IMPORTED_SHORT_NAMED_BIT */, BiometricType_signature_sign /* IMPORTED_LONG_NAMED_BIT */, signature_sign /* IMPORTED_SHORT_NAMED_BIT */, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
 import { BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
 // export { BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
@@ -205,7 +150,7 @@ let _cached_encoder_for_Modality: $.ASN1Encoder<Modality> | null = null;
  */
 export
 function _encode_Modality (value: Modality, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Modality) { _cached_encoder_for_Modality = function (value: Modality, elGetter: $.ASN1Encoder<Modality>): _Element {
+    if (!_cached_encoder_for_Modality) { _cached_encoder_for_Modality = function (value: Modality): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED  */ $._encode_implicit(_TagClass.context, 0, () => _encode_BiometricType, $.BER)(value.type_, $.BER),
