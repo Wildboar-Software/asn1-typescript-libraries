@@ -1,0 +1,241 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary ParamIdentList
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * ParamIdentList ::= SEQUENCE {
+ *     displayObjects   [0] IMPLICIT CDS.Identifier OPTIONAL,
+ *     controlObjects   [1] IMPLICIT CSS.Identifier OPTIONAL,
+ *     deviceObjects    [2] IMPLICIT DEV.Identifier OPTIONAL,
+ *     deliveryControl  [3] IMPLICIT NULL OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class ParamIdentList {
+    constructor (
+        /**
+         * @summary `displayObjects`.
+         * @public
+         * @readonly
+         */
+        readonly displayObjects: OPTIONAL<CDS.Identifier>,
+        /**
+         * @summary `controlObjects`.
+         * @public
+         * @readonly
+         */
+        readonly controlObjects: OPTIONAL<CSS.Identifier>,
+        /**
+         * @summary `deviceObjects`.
+         * @public
+         * @readonly
+         */
+        readonly deviceObjects: OPTIONAL<DEV.Identifier>,
+        /**
+         * @summary `deliveryControl`.
+         * @public
+         * @readonly
+         */
+        readonly deliveryControl: OPTIONAL<NULL>
+    ) {}
+
+    /**
+     * @summary Restructures an object into a ParamIdentList
+     * @description
+     * 
+     * This takes an `object` and converts it to a `ParamIdentList`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `ParamIdentList`.
+     * @returns {ParamIdentList}
+     */
+    public static _from_object (_o: { [_K in keyof (ParamIdentList)]: (ParamIdentList)[_K] }): ParamIdentList {
+        return new ParamIdentList(_o.displayObjects, _o.controlObjects, _o.deviceObjects, _o.deliveryControl);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of ParamIdentList
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_ParamIdentList: $.ComponentSpec[] = [
+    new $.ComponentSpec("displayObjects", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("controlObjects", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("deviceObjects", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("deliveryControl", true, $.hasTag(_TagClass.context, 3))
+];
+
+/**
+ * @summary The Trailing Root Component Types of ParamIdentList
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_ParamIdentList: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of ParamIdentList
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_ParamIdentList: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_ParamIdentList: $.ASN1Decoder<ParamIdentList> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) ParamIdentList
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_ParamIdentList (el: _Element): ParamIdentList {
+    if (!_cached_decoder_for_ParamIdentList) { _cached_decoder_for_ParamIdentList = function (el: _Element): ParamIdentList {
+    let displayObjects: OPTIONAL<CDS.Identifier>;
+    let controlObjects: OPTIONAL<CSS.Identifier>;
+    let deviceObjects: OPTIONAL<DEV.Identifier>;
+    let deliveryControl: OPTIONAL<NULL>;
+    const callbacks: $.DecodingMap = {
+        "displayObjects": (_el: _Element): void => { displayObjects = $._decode_implicit<CDS.Identifier>(() => CDS._decode_Identifier)(_el); },
+        "controlObjects": (_el: _Element): void => { controlObjects = $._decode_implicit<CSS.Identifier>(() => CSS._decode_Identifier)(_el); },
+        "deviceObjects": (_el: _Element): void => { deviceObjects = $._decode_implicit<DEV.Identifier>(() => DEV._decode_Identifier)(_el); },
+        "deliveryControl": (_el: _Element): void => { deliveryControl = $._decode_implicit<NULL>(() => $._decodeNull)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_ParamIdentList,
+        _extension_additions_list_spec_for_ParamIdentList,
+        _root_component_type_list_2_spec_for_ParamIdentList,
+        undefined,
+    );
+    return new ParamIdentList(
+        displayObjects,
+        controlObjects,
+        deviceObjects,
+        deliveryControl
+    );
+}; }
+    return _cached_decoder_for_ParamIdentList(el);
+}
+
+let _cached_encoder_for_ParamIdentList: $.ASN1Encoder<ParamIdentList> | null = null;
+
+/**
+ * @summary Encodes a(n) ParamIdentList into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The ParamIdentList, encoded as an ASN.1 Element.
+ */
+export
+function _encode_ParamIdentList (value: ParamIdentList, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ParamIdentList) { _cached_encoder_for_ParamIdentList = function (value: ParamIdentList, elGetter: $.ASN1Encoder<ParamIdentList>): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* IF_ABSENT  */ ((value.displayObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => CDS._encode_Identifier, $.BER)(value.displayObjects, $.BER)),
+            /* IF_ABSENT  */ ((value.controlObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => CSS._encode_Identifier, $.BER)(value.controlObjects, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => DEV._encode_Identifier, $.BER)(value.deviceObjects, $.BER)),
+            /* IF_ABSENT  */ ((value.deliveryControl === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeNull, $.BER)(value.deliveryControl, $.BER))
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_ParamIdentList(value, elGetter);
+}
+
+
+/* eslint-enable */

@@ -1,0 +1,349 @@
+-- Sourced from ISO/IEC 9041:1997(E)
+-- Modified to remove ancient deprecated ASN.1 syntaxes.
+-- In particular, use of unnamed components in SEQUENCE and SET.
+-- This impacted ProfileArgumValueList and RIOreference.
+-- Also changed `false` and `true` named bits to `false-bit` and `true-bit`
+-- because `false` and `true` became ASN.1 keywords.
+G DEFINITIONS ::= BEGIN
+
+-- General definitions used at multiple places in the rest of the syntax but
+-- not specific to a particular object.
+
+Block ::= SEQUENCE {
+    zValue [0] IMPLICIT INTEGER OPTIONAL,
+    bValue [1] IMPLICIT INTEGER
+}
+
+COupdate ::= SEQUENCE {
+    coName PrintableString,
+    objectUpdate CHOICE {
+        characterUpdate     [0] IMPLICIT OCTET STRING,
+        booleanUpdate       [1] IMPLICIT SEQUENCE {
+            values  [0] IMPLICIT BIT STRING,
+            mask    [1] IMPLICIT BIT STRING OPTIONAL
+        },
+        -- If mask is omitted, a bit string with the same length as "values" and
+        -- a content of all ones is assumed. When mask is present a one bit means
+        -- that the corresponding bit in value is to be used.
+        symbolicUpdate      [2] IMPLICIT INTEGER,
+        integerUpdate       [3] IMPLICIT INTEGER,
+        bitStringUpdate     [4] IMPLICIT BIT STRING,
+        multiElement        [5] IMPLICIT SEQUENCE OF SEQUENCE {
+            identifier INTEGER,
+            update CHOICE {
+                characterUpdate [0] IMPLICIT OCTET STRING,
+                booleanUpdate   [1] IMPLICIT SEQUENCE {
+                    values  [0] IMPLICIT BIT STRING,
+                    mask    [1] IMPLICIT BIT STRING OPTIONAL
+                }, -- See note under mask in G.COUpdate
+                symbolicUpdate  [2] IMPLICIT INTEGER,
+                integerUpdate   [3] IMPLICIT INTEGER,
+                bitStringUpdate [4] IMPLICIT BIT STRING
+            }
+        },
+        cco                 [6]  IMPLICIT CCOupdate,
+        fdco                [7]  IMPLICIT FDCOupdate,
+        feico               [8]  IMPLICIT FEICOupdate,
+        fepco               [9]  IMPLICIT FEPCOupdate,
+        rio                 [10] IMPLICIT RIOupdate,
+        other               [11] ANY
+    }
+}
+-- The choice depends on the value of the VTE-parameter CO-structure as follows:
+-- a)   if CO-structure = 1, then the datatype of COUpdate
+--      is restricted to those defined above corresponding to the tags [0] and [4].
+-- b)   if CO-structure > 1, then
+--      1)  if CO-type-identifier = vt-b-sco-cco, the tag must be [6], see 12.2.1;
+--      2)  otherwise the tag must be [5].
+-- c)   if CO-structure has the value "non-parametric," then the datatype
+--      definition is referenced by the value of the VTE-parameter
+--      CO-type-identifier:
+--      1)  vt-b-sco-fdco       - see 12.2.2
+--      2)  vt-b-sco-nullrio    - see 12.2.5
+--      3)  a value for a registered type definition: the CO-type may be found
+--          in the register entry. For FEICOs, FEPCOs, and RIOs, the data type
+--          definition may be found as follows:
+--          i)      feico   - see 12.2.3
+--          ii)     fepco   - see 12.2.4
+--          iii)    rio     - see 12.2.5
+--      4)  a value for a private type definition - the data type definition
+--          is defined entirely by agreement outside the scope of this part of
+--          ISO/IEC 9041.
+
+ExplicitPointer ::= SEQUENCE {
+    x [0] IMPLICIT INTEGER OPTIONAL,
+    y [1] IMPLICIT INTEGER OPTIONAL,
+    z [2] IMPLICIT INTEGER OPTIONAL,
+    b [3] IMPLICIT INTEGER OPTIONAL
+}
+-- When the display object has 2 dimensions then the z value is always omitted.
+-- When the display object has 1 dimension then only the x value is present.
+-- When the block capability is not selected then the b value is always omitted.
+-- Any or all of these values may be omitted as permitted by the operation definitions in ISO/IEC 9040.
+
+FunctionalUnits ::= BIT STRING {
+    profileSwitch       (0),
+    multipleIntNeg      (1),
+    negotiatedRelease   (2),
+    urgentData          (3),
+    destructiveBreak    (4),   -- for any bit, value 1 implies offered/accepted
+    enhancedAccess      (5),   --  value 0 implies not offered/not accepted
+    structuredCOs       (6),   --  depending on occurrence in ASQ or ASR
+    blocks              (7),
+    fields              (8),
+    referenceInfOs      (9),
+    ripple              (10),
+    exceptions          (11),
+    contextRetention    (12)
+}
+
+ImplementationIdent ::= SEQUENCE {
+    implementationIdentifier [0] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+    implementationName       [1] IMPLICIT PrintableString OPTIONAL,
+    implementationVersion    [2] IMPLICIT PrintableString OPTIONAL
+}
+-- Intendedto allow implementors to identify their implementation in a
+-- character format outside the scope of this part of ISO/IEC 9041.
+
+ProtocolVersion ::= BIT STRING { version1 (0) }
+-- Further bits may be defined by later editions of this part of ISO/IEC 9041
+-- or in responses to defect reports relating to it.
+
+IntegerOffer ::= SEQUENCE OF CHOICE {
+    individualValue [0] IMPLICIT INTEGER,
+    range           [1] IMPLICIT SEQUENCE {
+        minimum INTEGER,
+        maximum INTEGER
+    }
+}
+
+LogExpPointer ::= SEQUENCE {
+    kValue [0] IMPLICIT INTEGER OPTIONAL,
+    fValue [1] IMPLICIT INTEGER OPTIONAL,
+    zValue [2] IMPLICIT INTEGER OPTIONAL
+}
+
+MeasurePair ::= SEQUENCE {
+    xValue [0] IMPLICIT INTEGER,
+    yValue [1] IMPLICIT INTEGER OPTIONAL
+}
+
+ParamIdentList ::= SEQUENCE {
+    displayObjects   [0] IMPLICIT CDS.Identifier OPTIONAL,
+    controlObjects   [1] IMPLICIT CSS.Identifier OPTIONAL,
+    deviceObjects    [2] IMPLICIT DEV.Identifier OPTIONAL,
+    deliveryControl  [3] IMPLICIT NULL OPTIONAL
+}
+
+ParamOfferList ::= SEQUENCE {
+    displayObjects  [0] IMPLICIT CDS.Offer OPTIONAL,
+    controlObjects  [1] IMPLICIT CSS.Offer OPTIONAL,
+    deviceObjects   [2] IMPLICIT DEV.Offer OPTIONAL,
+    deliveryControl [3] IMPLICIT BIT STRING {
+        none       (0), -- value 1 for a bit implies offer,
+        simple     (1), -- value 0 implies no offer.
+        quarantine (2)
+    } OPTIONAL
+}
+
+ParamValueList ::= SEQUENCE {
+    displayObjects  [0] IMPLICIT CDS.Values OPTIONAL,
+    controlObjects  [1] IMPLICIT CSS.Values OPTIONAL,
+    deviceObjects   [2] IMPLICIT DEV.Values OPTIONAL,
+    deliveryControl [3] IMPLICIT INTEGER {
+        none       (0), -- value 1 for a bit implies offer,
+        simple     (1), -- value 0 implies no offer.
+        quarantine (2)
+    } OPTIONAL
+}
+
+Profile ::= SEQUENCE {
+    name                OBJECT IDENTIFIER OPTIONAL,
+    argumentOfferList   ProfileArgumOfferList OPTIONAL
+}
+-- Omission of the name parameter implies the default profile.
+
+ProfileArgumOfferList ::= SEQUENCE {
+    specialProfileArgums    [0] IMPLICIT SEQUENCE OF SEQUENCE {
+        identifier INTEGER,
+        offeredValues CHOICE {
+            boolean [0] IMPLICIT BIT STRING { false-bit (0), true-bit (1) },
+            integer [1] IMPLICIT IntegerOffer,
+            string  [2] IMPLICIT SET OF PrintableString,
+            objid   [3] IMPLICIT SET OF OBJECT IDENTIFIER
+        }
+    } OPTIONAL,
+    vteParams               [1] IMPLICIT ParamOfferList OPTIONAL
+}
+
+ProfileArgumValueList ::= SEQUENCE {
+    specialProfileArgums    [0] IMPLICIT SEQUENCE OF SEQUENCE {
+        identifier INTEGER,
+        value CHOICE {
+            boolean BOOLEAN,
+            integer INTEGER,
+            string  PrintableString,
+            oid     OBJECT IDENTIFIER
+        }
+    } OPTIONAL,
+    vteParams               [1] IMPLICIT ParamValueList OPTIONAL
+}
+
+Result3 ::= CHOICE {
+    success            [0] IMPLICIT NULL,
+    fail               [1] IMPLICIT Reason,
+    successWithWarning [2] IMPLICIT Reason
+}
+
+Result2 ::= CHOICE {
+    success            [0] IMPLICIT NULL,
+    fail               [1] IMPLICIT Reason
+}
+
+Reason ::= SEQUENCE {
+    userA    [0] IMPLICIT PrintableString OPTIONAL,
+    userB    [1] IMPLICIT ErrorCode OPTIONAL,
+    provider [2] IMPLICIT ErrorCode OPTIONAL
+}
+
+ErrorCode ::= INTEGER {
+    collisionDetected          (0),
+    vteParamNotSupported       (1),
+    vteParamCombNotSupported   (2),
+    vteIncomplete              (3),
+    vteProfileNotSupported     (4),
+    vtModeNotSupported         (5),
+    lengthExceeded             (6)
+}
+
+RIOreference ::= SEQUENCE {
+    rioName     [0] IMPLICIT PrintableString,
+    operations  [1] IMPLICIT SEQUENCE OF SEQUENCE {
+        recordId    [0] IMPLICIT PrintableString,
+        operation   [1] IMPLICIT INTEGER {
+            executeRecord (0),
+            callRecord    (1)
+        }
+    }
+}
+
+-- 12.2.1 Context Control Object update syntax
+-- The following define types for updates to control objects
+-- whose type and structure are defined in ISO/IEC 9040.
+
+CCOupdate ::= SEQUENCE {
+    kCoordinate         [0] IMPLICIT INTEGER,
+    fCoordinate         [1] IMPLICIT INTEGER,
+    zCoordinate         [2] IMPLICIT INTEGER OPTIONAL,
+    -- required when VT-dirnensions="three
+    entryControlIndex   [3] IMPLICIT INTEGER OPTIONAL,
+    deviceObjectIndex   [4] IMPLICIT INTEGER OPTIONAL,
+    feprIndex           [5] IMPLICIT INTEGER OPTIONAL
+    -- Items with tags [3], [4] and [5] are required on termination update.
+    -- See ISO/IEC 9040.
+}
+-- This syntax definition is included separately from the multi-element CO
+-- update syntax since the CCO is not partially updatable.
+
+-- 12.2.2 Field Definition Control Object update syntax
+FDCOupdate ::= SEQUENCE OF SEQUENCE {
+    labelFCoordinate    [0] IMPLICIT INTEGER,
+    labelZCoordinate    [1] IMPLICIT INTEGER OPTIONAL,
+    status              [2] IMPLICIT INTEGER {
+        active   (0),
+        inactive (1),
+        void     (2)
+    } OPTIONAL,
+    extent              [3] IMPLICIT SEQUENCE OF SEQUENCE {
+        position  [0] IMPLICIT MeasurePair,
+        dimension [1] IMPLICIT MeasurePair
+    } OPTIONAL,
+    attributes          [4] IMPLICIT SEQUENCE {
+        graphicCharacterRepertoire [0] IMPLICIT INTEGER OPTIONAL,
+        foregroundColour           [1] IMPLICIT INTEGER OPTIONAL,
+        backgroundColour           [2] IMPLICIT INTEGER OPTIONAL,
+        emphasis                   [3] IMPLICIT PrintableString OPTIONAL,
+        font                       [4] IMPLICIT INTEGER OPTIONAL
+        -- value of zero for any of the integer items in attributes implies the "null"value,
+    } OPTIONAL,
+    nextField           [5] IMPLICIT INTEGER OPTIONAL,
+    previousField       [6] IMPLICIT INTEGER OPTIONAL,
+    -- for tags 5 & 6, a zero value implies end of navigation path; a negative value implies "void"
+    transmissionPolicy  [7] IMPLICIT INTEGER {
+        all                (0),
+        modifiedAllContent (1),
+        modifiedPart       (2),
+        none               (3),
+        refTPCO            (4)
+    } OPTIONAL,
+    entryControlList    [8] IMPLICIT SEQUENCE OF EntryControl OPTIONAL
+}
+-- If tag 8 is absent, no change is to be made to the entry-control-list in the FDR;
+-- If tag 8 is present but the item has value { 1 (i.e., is empty), the entry
+-- control-list for this FDR is discarded.
+
+EntryControl ::= SEQUENCE {
+    deviceObjectList    [0] IMPLICIT SEQUENCE OF PrintableString OPTIONAL,
+    feirList            [1] IMPLICIT SEQUENCE OF SEQUENCE {
+        feicoName PrintableString,
+        recordIndex INTEGER
+    } OPTIONAL,
+    feprList            [2] IMPLICIT SEQUENCE OF SEQUENCE {
+        fepcoName PrintableString,
+        recordIndex INTEGER
+    } OPTIONAL
+}
+-- If tag 8 of FDCOupdate is present and the item is not empty, each instance
+-- of EntryControl is used to update the corresponding entry-control in the FDR
+-- as follows:
+--  - If the instance of EntryControl is empty, no action is taken.
+--  - therwise, each part is used to update the corresponding entry-control part as follows:
+--      - If any of the 3 parts is not present, then the corresponding part is
+--        not updated;
+--      - If a part is present but empty, the corresponding part is discarded;
+--      - If a part is present and not empty, the list it contains completely
+--        replaces the corresponding part. There is no provision for partial
+--        update of such a list.
+
+-- 12.2.3 Field Entry Instruction Control Object update syntax
+
+FEICOupdate ::= SEQUENCE OF SEQUENCE {
+    index   [0] IMPLICIT INTEGER,
+    content [1] IMPLICIT SET OF FEI
+}
+
+FEI ::= ANY
+-- The syntax for FEI will be found in the register entry pointed
+-- to by the VTE-parameter CO-type-identifier for this FEICO.
+
+-- 12.2.4 Field Entry Pilot Control Object update syntax
+
+FEPCOupdate ::= SEQUENCE OF SEQUENCE {
+    index     [0] IMPLICIT INTEGER,
+    event     [1] FEE,
+    condition [2] IMPLICIT SET OF FEC,
+    reactions [3] IMPLICIT SEQUENCE OF FER
+}
+
+FEE ::= ANY -- field entry event
+FEC ::= ANY -- field entry condition
+FER ::= ANY -- field entry reaction
+
+-- The syntax for FEI, FEC & FER will be found in the register entry pointed to by
+-- the VTE-parameter CO-Type-Identifierfor this FEPCO.
+
+-- 12.2.5 RIO Control Object update syntax
+RIOupdate ::= SEQUENCE OF SEQUENCE {
+    recordId    [0] IMPLICIT PrintableString OPTIONAL,
+    operation   [1] IMPLICIT INTEGER {
+        eraseRIO     (0),
+        deleteRecord (1),
+        createRecord (2)
+    },
+    updates     [2] IMPLICIT SEQUENCE OF ISO9041-VTP.ObjectUpdate OPTIONAL
+}
+-- "updates" is only present in the case of a Create Record operation.
+-- absence of "updates" for a Create Record operation implies
+-- that the specified record shall be set to the "empty" state.
+
+END

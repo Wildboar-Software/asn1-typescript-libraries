@@ -215,6 +215,9 @@
     },
     {
       "path": "./packages/dfr"
+    },
+    {
+      "path": "./packages/vt"
     }
   ],
   "compilerOptions": {
