@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_LogExpPointer, _encode_LogExpPointer } from "../G/LogExpPointer.ta.mjs";
+import { _decode_LogExpPointer, _encode_LogExpPointer, LogExpPointer } from "../G/LogExpPointer.ta.mjs";
 // export { LogExpPointer, _decode_LogExpPointer, _encode_LogExpPointer } from "../G/LogExpPointer.ta.mjs";
 
 
@@ -43,7 +43,7 @@ type LogPointer =
     | { logEnd: NULL } /* CHOICE_ALT_ROOT */
     | { logEndF: NULL } /* CHOICE_ALT_ROOT */
     | { logEndK: NULL } /* CHOICE_ALT_ROOT */
-    | { logCoords: G.LogExpPointer } /* CHOICE_ALT_ROOT */;
+    | { logCoords: LogExpPointer } /* CHOICE_ALT_ROOT */;
 
 let _cached_decoder_for_LogPointer: $.ASN1Decoder<LogPointer> | null = null;
 
@@ -63,7 +63,7 @@ function _decode_LogPointer (el: _Element): LogPointer {
     "CONTEXT 4": [ "logEnd", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 5": [ "logEndF", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 6": [ "logEndK", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 7": [ "logCoords", $._decode_implicit<G.LogExpPointer>(() => G._decode_LogExpPointer) ]
+    "CONTEXT 7": [ "logCoords", $._decode_implicit<LogExpPointer>(() => _decode_LogExpPointer) ]
 }); }
     return _cached_decoder_for_LogPointer(el);
 }
@@ -87,7 +87,7 @@ function _encode_LogPointer (value: LogPointer, elGetter: $.ASN1Encoder<any>): _
     "logEnd": $._encode_implicit(_TagClass.context, 4, () => $._encodeNull, $.BER),
     "logEndF": $._encode_implicit(_TagClass.context, 5, () => $._encodeNull, $.BER),
     "logEndK": $._encode_implicit(_TagClass.context, 6, () => $._encodeNull, $.BER),
-    "logCoords": $._encode_implicit(_TagClass.context, 7, () => G._encode_LogExpPointer, $.BER),
+    "logCoords": $._encode_implicit(_TagClass.context, 7, () => _encode_LogExpPointer, $.BER),
 }, $.BER); }
     return _cached_encoder_for_LogPointer(value, elGetter);
 }

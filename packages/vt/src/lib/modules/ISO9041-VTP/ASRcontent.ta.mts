@@ -11,15 +11,15 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_Result3, _encode_Result3 } from "../G/Result3.ta.mjs";
+import { _decode_Result3, _encode_Result3, type Result3 } from "../G/Result3.ta.mjs";
 // export { Result3, _decode_Result3, _encode_Result3 } from "../G/Result3.ta.mjs";
-import { _decode_ImplementationIdent, _encode_ImplementationIdent } from "../G/ImplementationIdent.ta.mjs";
+import { _decode_ImplementationIdent, _encode_ImplementationIdent, ImplementationIdent } from "../G/ImplementationIdent.ta.mjs";
 // export { ImplementationIdent, _decode_ImplementationIdent, _encode_ImplementationIdent } from "../G/ImplementationIdent.ta.mjs";
-import { _decode_ProtocolVersion, _encode_ProtocolVersion } from "../G/ProtocolVersion.ta.mjs";
+import { _decode_ProtocolVersion, _encode_ProtocolVersion, type ProtocolVersion, version1 } from "../G/ProtocolVersion.ta.mjs";
 // export { ProtocolVersion, ProtocolVersion_version1 /* IMPORTED_LONG_NAMED_BIT */, version1 /* IMPORTED_SHORT_NAMED_BIT */, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../G/ProtocolVersion.ta.mjs";
-import { _decode_ProfileArgumValueList, _encode_ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
+import { _decode_ProfileArgumValueList, _encode_ProfileArgumValueList, ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
 // export { ProfileArgumValueList, _decode_ProfileArgumValueList, _encode_ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
-import { _decode_FunctionalUnits, _encode_FunctionalUnits } from "../G/FunctionalUnits.ta.mjs";
+import { _decode_FunctionalUnits, _encode_FunctionalUnits, type FunctionalUnits } from "../G/FunctionalUnits.ta.mjs";
 // export { FunctionalUnits, FunctionalUnits_profileSwitch /* IMPORTED_LONG_NAMED_BIT */, profileSwitch /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_multipleIntNeg /* IMPORTED_LONG_NAMED_BIT */, multipleIntNeg /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_negotiatedRelease /* IMPORTED_LONG_NAMED_BIT */, negotiatedRelease /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_urgentData /* IMPORTED_LONG_NAMED_BIT */, urgentData /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_destructiveBreak /* IMPORTED_LONG_NAMED_BIT */, destructiveBreak /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_enhancedAccess /* IMPORTED_LONG_NAMED_BIT */, enhancedAccess /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_structuredCOs /* IMPORTED_LONG_NAMED_BIT */, structuredCOs /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_blocks /* IMPORTED_LONG_NAMED_BIT */, blocks /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_fields /* IMPORTED_LONG_NAMED_BIT */, fields /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_referenceInfOs /* IMPORTED_LONG_NAMED_BIT */, referenceInfOs /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_ripple /* IMPORTED_LONG_NAMED_BIT */, ripple /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_exceptions /* IMPORTED_LONG_NAMED_BIT */, exceptions /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_contextRetention /* IMPORTED_LONG_NAMED_BIT */, contextRetention /* IMPORTED_SHORT_NAMED_BIT */, _decode_FunctionalUnits, _encode_FunctionalUnits } from "../G/FunctionalUnits.ta.mjs";
 
 
@@ -49,31 +49,31 @@ class ASRcontent {
          * @public
          * @readonly
          */
-        readonly result: G.Result3,
+        readonly result: Result3,
         /**
          * @summary `implementation`.
          * @public
          * @readonly
          */
-        readonly implementation: OPTIONAL<G.ImplementationIdent>,
+        readonly implementation: OPTIONAL<ImplementationIdent>,
         /**
          * @summary `protocol_verison`.
          * @public
          * @readonly
          */
-        readonly protocol_verison: OPTIONAL<G.ProtocolVersion>,
+        readonly protocol_verison: OPTIONAL<ProtocolVersion>,
         /**
          * @summary `profile_arguments`.
          * @public
          * @readonly
          */
-        readonly profile_arguments: OPTIONAL<G.ProfileArgumValueList>,
+        readonly profile_arguments: OPTIONAL<ProfileArgumValueList>,
         /**
          * @summary `functional_units`.
          * @public
          * @readonly
          */
-        readonly functional_units: OPTIONAL<G.FunctionalUnits>
+        readonly functional_units: OPTIONAL<FunctionalUnits>
     ) {}
 
     /**
@@ -98,7 +98,7 @@ class ASRcontent {
      * @static
      * @method
      */
-    public static get _default_value_for_protocol_verison () { return G.version1; }
+    public static get _default_value_for_protocol_verison () { return version1; }
 }
 
 /**
@@ -155,17 +155,17 @@ let _cached_decoder_for_ASRcontent: $.ASN1Decoder<ASRcontent> | null = null;
 export
 function _decode_ASRcontent (el: _Element): ASRcontent {
     if (!_cached_decoder_for_ASRcontent) { _cached_decoder_for_ASRcontent = function (el: _Element): ASRcontent {
-    let result!: G.Result3;
-    let implementation: OPTIONAL<G.ImplementationIdent>;
-    let protocol_verison: OPTIONAL<G.ProtocolVersion> = ASRcontent._default_value_for_protocol_verison;
-    let profile_arguments: OPTIONAL<G.ProfileArgumValueList>;
-    let functional_units: OPTIONAL<G.FunctionalUnits>;
+    let result!: Result3;
+    let implementation: OPTIONAL<ImplementationIdent>;
+    let protocol_verison: OPTIONAL<ProtocolVersion> = ASRcontent._default_value_for_protocol_verison;
+    let profile_arguments: OPTIONAL<ProfileArgumValueList>;
+    let functional_units: OPTIONAL<FunctionalUnits>;
     const callbacks: $.DecodingMap = {
-        "result": (_el: _Element): void => { result = G._decode_Result3(_el); },
-        "implementation": (_el: _Element): void => { implementation = $._decode_implicit<G.ImplementationIdent>(() => G._decode_ImplementationIdent)(_el); },
-        "protocol-verison": (_el: _Element): void => { protocol_verison = $._decode_implicit<G.ProtocolVersion>(() => G._decode_ProtocolVersion)(_el); },
-        "profile-arguments": (_el: _Element): void => { profile_arguments = $._decode_implicit<G.ProfileArgumValueList>(() => G._decode_ProfileArgumValueList)(_el); },
-        "functional-units": (_el: _Element): void => { functional_units = $._decode_implicit<G.FunctionalUnits>(() => G._decode_FunctionalUnits)(_el); }
+        "result": (_el: _Element): void => { result = _decode_Result3(_el); },
+        "implementation": (_el: _Element): void => { implementation = $._decode_implicit<ImplementationIdent>(() => _decode_ImplementationIdent)(_el); },
+        "protocol-verison": (_el: _Element): void => { protocol_verison = $._decode_implicit<ProtocolVersion>(() => _decode_ProtocolVersion)(_el); },
+        "profile-arguments": (_el: _Element): void => { profile_arguments = $._decode_implicit<ProfileArgumValueList>(() => _decode_ProfileArgumValueList)(_el); },
+        "functional-units": (_el: _Element): void => { functional_units = $._decode_implicit<FunctionalUnits>(() => _decode_FunctionalUnits)(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ASRcontent,
@@ -198,11 +198,11 @@ function _encode_ASRcontent (value: ASRcontent, elGetter: $.ASN1Encoder<any>): _
     if (!_cached_encoder_for_ASRcontent) { _cached_encoder_for_ASRcontent = function (value: ASRcontent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ G._encode_Result3(value.result, $.BER),
-            /* IF_ABSENT  */ ((value.implementation === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => G._encode_ImplementationIdent, $.BER)(value.implementation, $.BER)),
-            /* IF_DEFAULT */ (value.protocol_verison === undefined || $.deepEq(value.protocol_verison, ASRcontent._default_value_for_protocol_verison) ? undefined : $._encode_implicit(_TagClass.context, 4, () => G._encode_ProtocolVersion, $.BER)(value.protocol_verison, $.BER)),
-            /* IF_ABSENT  */ ((value.profile_arguments === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => G._encode_ProfileArgumValueList, $.BER)(value.profile_arguments, $.BER)),
-            /* IF_ABSENT  */ ((value.functional_units === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => G._encode_FunctionalUnits, $.BER)(value.functional_units, $.BER))
+            /* REQUIRED   */ _encode_Result3(value.result, $.BER),
+            /* IF_ABSENT  */ ((value.implementation === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_ImplementationIdent, $.BER)(value.implementation, $.BER)),
+            /* IF_DEFAULT */ (value.protocol_verison === undefined || $.deepEq(value.protocol_verison, ASRcontent._default_value_for_protocol_verison) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_ProtocolVersion, $.BER)(value.protocol_verison, $.BER)),
+            /* IF_ABSENT  */ ((value.profile_arguments === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => _encode_ProfileArgumValueList, $.BER)(value.profile_arguments, $.BER)),
+            /* IF_ABSENT  */ ((value.functional_units === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => _encode_FunctionalUnits, $.BER)(value.functional_units, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

@@ -12,6 +12,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ParamValueList_deliveryControl, _decode_ParamValueList_deliveryControl, _encode_ParamValueList_deliveryControl } from "../G/ParamValueList-deliveryControl.ta.mjs";
+import { type Values as CDS_Values, _decode_Values as CDS__decode_Values, _encode_Values as CDS__encode_Values } from "../CDS/Values.ta.mjs";
+import { type Values as CSS_Values, _decode_Values as CSS__decode_Values, _encode_Values as CSS__encode_Values } from "../CSS/Values.ta.mjs";
+import { type Values as DEV_Values, _decode_Values as DEV__decode_Values, _encode_Values as DEV__encode_Values } from "../DEV/Values.ta.mjs";
 // export { ParamValueList_deliveryControl, ParamValueList_deliveryControl_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, ParamValueList_deliveryControl_simple /* IMPORTED_LONG_NAMED_INTEGER */, simple /* IMPORTED_SHORT_NAMED_INTEGER */, ParamValueList_deliveryControl_quarantine /* IMPORTED_LONG_NAMED_INTEGER */, quarantine /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ParamValueList_deliveryControl, _encode_ParamValueList_deliveryControl } from "../G/ParamValueList-deliveryControl.ta.mjs";
 
 
@@ -44,19 +47,19 @@ class ParamValueList {
          * @public
          * @readonly
          */
-        readonly displayObjects: OPTIONAL<CDS.Values>,
+        readonly displayObjects: OPTIONAL<CDS_Values>,
         /**
          * @summary `controlObjects`.
          * @public
          * @readonly
          */
-        readonly controlObjects: OPTIONAL<CSS.Values>,
+        readonly controlObjects: OPTIONAL<CSS_Values>,
         /**
          * @summary `deviceObjects`.
          * @public
          * @readonly
          */
-        readonly deviceObjects: OPTIONAL<DEV.Values>,
+        readonly deviceObjects: OPTIONAL<DEV_Values>,
         /**
          * @summary `deliveryControl`.
          * @public
@@ -137,14 +140,14 @@ let _cached_decoder_for_ParamValueList: $.ASN1Decoder<ParamValueList> | null = n
 export
 function _decode_ParamValueList (el: _Element): ParamValueList {
     if (!_cached_decoder_for_ParamValueList) { _cached_decoder_for_ParamValueList = function (el: _Element): ParamValueList {
-    let displayObjects: OPTIONAL<CDS.Values>;
-    let controlObjects: OPTIONAL<CSS.Values>;
-    let deviceObjects: OPTIONAL<DEV.Values>;
+    let displayObjects: OPTIONAL<CDS_Values>;
+    let controlObjects: OPTIONAL<CSS_Values>;
+    let deviceObjects: OPTIONAL<DEV_Values>;
     let deliveryControl: OPTIONAL<ParamValueList_deliveryControl>;
     const callbacks: $.DecodingMap = {
-        "displayObjects": (_el: _Element): void => { displayObjects = $._decode_implicit<CDS.Values>(() => CDS._decode_Values)(_el); },
-        "controlObjects": (_el: _Element): void => { controlObjects = $._decode_implicit<CSS.Values>(() => CSS._decode_Values)(_el); },
-        "deviceObjects": (_el: _Element): void => { deviceObjects = $._decode_implicit<DEV.Values>(() => DEV._decode_Values)(_el); },
+        "displayObjects": (_el: _Element): void => { displayObjects = $._decode_implicit<CDS_Values>(() => CDS__decode_Values)(_el); },
+        "controlObjects": (_el: _Element): void => { controlObjects = $._decode_implicit<CSS_Values>(() => CSS__decode_Values)(_el); },
+        "deviceObjects": (_el: _Element): void => { deviceObjects = $._decode_implicit<DEV_Values>(() => DEV__decode_Values)(_el); },
         "deliveryControl": (_el: _Element): void => { deliveryControl = $._decode_implicit<ParamValueList_deliveryControl>(() => _decode_ParamValueList_deliveryControl)(_el); }
     };
     $._parse_sequence(el, callbacks,
@@ -177,9 +180,9 @@ function _encode_ParamValueList (value: ParamValueList, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_ParamValueList) { _cached_encoder_for_ParamValueList = function (value: ParamValueList): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.displayObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => CDS._encode_Values, $.BER)(value.displayObjects, $.BER)),
-            /* IF_ABSENT  */ ((value.controlObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => CSS._encode_Values, $.BER)(value.controlObjects, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => DEV._encode_Values, $.BER)(value.deviceObjects, $.BER)),
+            /* IF_ABSENT  */ ((value.displayObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => CDS__encode_Values, $.BER)(value.displayObjects, $.BER)),
+            /* IF_ABSENT  */ ((value.controlObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => CSS__encode_Values, $.BER)(value.controlObjects, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => DEV__encode_Values, $.BER)(value.deviceObjects, $.BER)),
             /* IF_ABSENT  */ ((value.deliveryControl === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_ParamValueList_deliveryControl, $.BER)(value.deliveryControl, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

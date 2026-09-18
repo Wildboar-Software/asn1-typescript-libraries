@@ -13,7 +13,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_Result3, _encode_Result3 } from "../G/Result3.ta.mjs";
+import { _decode_Result3, _encode_Result3, type Result3 } from "../G/Result3.ta.mjs";
 // export { Result3, _decode_Result3, _encode_Result3 } from "../G/Result3.ta.mjs";
 
 
@@ -42,7 +42,7 @@ class ENRcontent {
          * @public
          * @readonly
          */
-        readonly result: G.Result3,
+        readonly result: Result3,
         /**
          * @summary `vteChoice`.
          * @public
@@ -128,11 +128,11 @@ let _cached_decoder_for_ENRcontent: $.ASN1Decoder<ENRcontent> | null = null;
 export
 function _decode_ENRcontent (el: _Element): ENRcontent {
     if (!_cached_decoder_for_ENRcontent) { _cached_decoder_for_ENRcontent = function (el: _Element): ENRcontent {
-    let result!: G.Result3;
+    let result!: Result3;
     let vteChoice: OPTIONAL<BOOLEAN>;
     let retList: OPTIONAL<PrintableString[]>;
     const callbacks: $.DecodingMap = {
-        "result": (_el: _Element): void => { result = G._decode_Result3(_el); },
+        "result": (_el: _Element): void => { result = _decode_Result3(_el); },
         "vteChoice": (_el: _Element): void => { vteChoice = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },
         "retList": (_el: _Element): void => { retList = $._decode_implicit<PrintableString[]>(() => $._decodeSequenceOf<PrintableString>(() => $._decodePrintableString))(_el); }
     };
@@ -165,7 +165,7 @@ function _encode_ENRcontent (value: ENRcontent, elGetter: $.ASN1Encoder<any>): _
     if (!_cached_encoder_for_ENRcontent) { _cached_encoder_for_ENRcontent = function (value: ENRcontent): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ G._encode_Result3(value.result, $.BER),
+            /* REQUIRED   */ _encode_Result3(value.result, $.BER),
             /* IF_ABSENT  */ ((value.vteChoice === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => $._encodeBoolean, $.BER)(value.vteChoice, $.BER)),
             /* IF_ABSENT  */ ((value.retList === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeSequenceOf<PrintableString>(() => $._encodePrintableString, $.BER), $.BER)(value.retList, $.BER))
         ],

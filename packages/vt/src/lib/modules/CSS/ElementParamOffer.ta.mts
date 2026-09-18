@@ -12,11 +12,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { ElementParamOffer_category, _decode_ElementParamOffer_category, _encode_ElementParamOffer_category } from "../CSS/ElementParamOffer-category.ta.mjs";
 // export { ElementParamOffer_category, ElementParamOffer_category_character /* IMPORTED_LONG_NAMED_BIT */, character /* IMPORTED_SHORT_NAMED_BIT */, ElementParamOffer_category_boolean /* IMPORTED_LONG_NAMED_BIT */, boolean_ /* IMPORTED_SHORT_NAMED_BIT */, ElementParamOffer_category_symbolic /* IMPORTED_LONG_NAMED_BIT */, symbolic /* IMPORTED_SHORT_NAMED_BIT */, ElementParamOffer_category_integer /* IMPORTED_LONG_NAMED_BIT */, integer /* IMPORTED_SHORT_NAMED_BIT */, ElementParamOffer_category_transparent /* IMPORTED_LONG_NAMED_BIT */, transparent /* IMPORTED_SHORT_NAMED_BIT */, _decode_ElementParamOffer_category, _encode_ElementParamOffer_category } from "../CSS/ElementParamOffer-category.ta.mjs";
-import { _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
+import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 // export { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 
 
@@ -58,7 +58,7 @@ class ElementParamOffer {
          * @public
          * @readonly
          */
-        readonly size: OPTIONAL<G.IntegerOffer>,
+        readonly size: OPTIONAL<IntegerOffer>,
         /**
          * @summary `category`.
          * @public
@@ -70,7 +70,7 @@ class ElementParamOffer {
          * @public
          * @readonly
          */
-        readonly repertoire: OPTIONAL<CDS.RepertoireAssignment[]>
+        readonly repertoire: OPTIONAL<RepertoireAssignment[]>
     ) {}
 
     /**
@@ -146,14 +146,14 @@ export
 function _decode_ElementParamOffer (el: _Element): ElementParamOffer {
     if (!_cached_decoder_for_ElementParamOffer) { _cached_decoder_for_ElementParamOffer = function (el: _Element): ElementParamOffer {
     let elementIdentifier!: INTEGER;
-    let size: OPTIONAL<G.IntegerOffer>;
+    let size: OPTIONAL<IntegerOffer>;
     let category: OPTIONAL<ElementParamOffer_category>;
-    let repertoire: OPTIONAL<CDS.RepertoireAssignment[]>;
+    let repertoire: OPTIONAL<RepertoireAssignment[]>;
     const callbacks: $.DecodingMap = {
         "elementIdentifier": (_el: _Element): void => { elementIdentifier = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "size": (_el: _Element): void => { size = $._decode_implicit<G.IntegerOffer>(() => G._decode_IntegerOffer)(_el); },
+        "size": (_el: _Element): void => { size = $._decode_implicit<IntegerOffer>(() => _decode_IntegerOffer)(_el); },
         "category": (_el: _Element): void => { category = $._decode_implicit<ElementParamOffer_category>(() => _decode_ElementParamOffer_category)(_el); },
-        "repertoire": (_el: _Element): void => { repertoire = $._decode_implicit<CDS.RepertoireAssignment[]>(() => $._decodeSequenceOf<CDS.RepertoireAssignment>(() => CDS._decode_RepertoireAssignment))(_el); }
+        "repertoire": (_el: _Element): void => { repertoire = $._decode_implicit<RepertoireAssignment[]>(() => $._decodeSequenceOf<RepertoireAssignment>(() => _decode_RepertoireAssignment))(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ElementParamOffer,
@@ -186,9 +186,9 @@ function _encode_ElementParamOffer (value: ElementParamOffer, elGetter: $.ASN1En
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.elementIdentifier, $.BER),
-            /* IF_ABSENT  */ ((value.size === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => G._encode_IntegerOffer, $.BER)(value.size, $.BER)),
+            /* IF_ABSENT  */ ((value.size === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_IntegerOffer, $.BER)(value.size, $.BER)),
             /* IF_ABSENT  */ ((value.category === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_ElementParamOffer_category, $.BER)(value.category, $.BER)),
-            /* IF_ABSENT  */ ((value.repertoire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => $._encodeSequenceOf<CDS.RepertoireAssignment>(() => CDS._encode_RepertoireAssignment, $.BER), $.BER)(value.repertoire, $.BER))
+            /* IF_ABSENT  */ ((value.repertoire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => $._encodeSequenceOf<RepertoireAssignment>(() => _encode_RepertoireAssignment, $.BER), $.BER)(value.repertoire, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

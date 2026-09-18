@@ -12,11 +12,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_CompoundRepertoireIdent, _encode_CompoundRepertoireIdent } from "../CDS/CompoundRepertoireIdent.ta.mjs";
+import { _decode_CompoundRepertoireIdent, _encode_CompoundRepertoireIdent, CompoundRepertoireIdent } from "../CDS/CompoundRepertoireIdent.ta.mjs";
 // export { CompoundRepertoireIdent, _decode_CompoundRepertoireIdent, _encode_CompoundRepertoireIdent } from "../CDS/CompoundRepertoireIdent.ta.mjs";
-import { _decode_CompoundEmphasisIdent, _encode_CompoundEmphasisIdent } from "../CDS/CompoundEmphasisIdent.ta.mjs";
+import { _decode_CompoundEmphasisIdent, _encode_CompoundEmphasisIdent, type CompoundEmphasisIdent } from "../CDS/CompoundEmphasisIdent.ta.mjs";
 // export { CompoundEmphasisIdent, _decode_CompoundEmphasisIdent, _encode_CompoundEmphasisIdent } from "../CDS/CompoundEmphasisIdent.ta.mjs";
-import { _decode_CompoundColourIdent, _encode_CompoundColourIdent } from "../CDS/CompoundColourIdent.ta.mjs";
+import { _decode_CompoundColourIdent, _encode_CompoundColourIdent, CompoundColourIdent } from "../CDS/CompoundColourIdent.ta.mjs";
 // export { CompoundColourIdent, _decode_CompoundColourIdent, _encode_CompoundColourIdent } from "../CDS/CompoundColourIdent.ta.mjs";
 
 
@@ -71,25 +71,25 @@ class ParameterIdents {
          * @public
          * @readonly
          */
-        readonly deviceRepertoire: OPTIONAL<CDS.CompoundRepertoireIdent>,
+        readonly deviceRepertoire: OPTIONAL<CompoundRepertoireIdent>,
         /**
          * @summary `deviceEmphasis`.
          * @public
          * @readonly
          */
-        readonly deviceEmphasis: OPTIONAL<CDS.CompoundEmphasisIdent>,
+        readonly deviceEmphasis: OPTIONAL<CompoundEmphasisIdent>,
         /**
          * @summary `deviceForeground`.
          * @public
          * @readonly
          */
-        readonly deviceForeground: OPTIONAL<CDS.CompoundColourIdent>,
+        readonly deviceForeground: OPTIONAL<CompoundColourIdent>,
         /**
          * @summary `deviceBackground`.
          * @public
          * @readonly
          */
-        readonly deviceBackground: OPTIONAL<CDS.CompoundColourIdent>,
+        readonly deviceBackground: OPTIONAL<CompoundColourIdent>,
         /**
          * @summary `minimumXarrayLength`.
          * @public
@@ -231,10 +231,10 @@ function _decode_ParameterIdents (el: _Element): ParameterIdents {
     if (!_cached_decoder_for_ParameterIdents) { _cached_decoder_for_ParameterIdents = function (el: _Element): ParameterIdents {
     let defaultCOaccess: OPTIONAL<NULL>;
     let defaultCOPriority: OPTIONAL<NULL>;
-    let deviceRepertoire: OPTIONAL<CDS.CompoundRepertoireIdent>;
-    let deviceEmphasis: OPTIONAL<CDS.CompoundEmphasisIdent>;
-    let deviceForeground: OPTIONAL<CDS.CompoundColourIdent>;
-    let deviceBackground: OPTIONAL<CDS.CompoundColourIdent>;
+    let deviceRepertoire: OPTIONAL<CompoundRepertoireIdent>;
+    let deviceEmphasis: OPTIONAL<CompoundEmphasisIdent>;
+    let deviceForeground: OPTIONAL<CompoundColourIdent>;
+    let deviceBackground: OPTIONAL<CompoundColourIdent>;
     let minimumXarrayLength: OPTIONAL<NULL>;
     let minimumYarrayLength: OPTIONAL<NULL>;
     let deviceControlObjectNames: OPTIONAL<NULL>;
@@ -247,10 +247,10 @@ function _decode_ParameterIdents (el: _Element): ParameterIdents {
     const callbacks: $.DecodingMap = {
         "defaultCOaccess": (_el: _Element): void => { defaultCOaccess = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "defaultCOPriority": (_el: _Element): void => { defaultCOPriority = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
-        "deviceRepertoire": (_el: _Element): void => { deviceRepertoire = $._decode_implicit<CDS.CompoundRepertoireIdent>(() => CDS._decode_CompoundRepertoireIdent)(_el); },
-        "deviceEmphasis": (_el: _Element): void => { deviceEmphasis = $._decode_implicit<CDS.CompoundEmphasisIdent>(() => CDS._decode_CompoundEmphasisIdent)(_el); },
-        "deviceForeground": (_el: _Element): void => { deviceForeground = $._decode_implicit<CDS.CompoundColourIdent>(() => CDS._decode_CompoundColourIdent)(_el); },
-        "deviceBackground": (_el: _Element): void => { deviceBackground = $._decode_implicit<CDS.CompoundColourIdent>(() => CDS._decode_CompoundColourIdent)(_el); },
+        "deviceRepertoire": (_el: _Element): void => { deviceRepertoire = $._decode_implicit<CompoundRepertoireIdent>(() => _decode_CompoundRepertoireIdent)(_el); },
+        "deviceEmphasis": (_el: _Element): void => { deviceEmphasis = $._decode_implicit<CompoundEmphasisIdent>(() => _decode_CompoundEmphasisIdent)(_el); },
+        "deviceForeground": (_el: _Element): void => { deviceForeground = $._decode_implicit<CompoundColourIdent>(() => _decode_CompoundColourIdent)(_el); },
+        "deviceBackground": (_el: _Element): void => { deviceBackground = $._decode_implicit<CompoundColourIdent>(() => _decode_CompoundColourIdent)(_el); },
         "minimumXarrayLength": (_el: _Element): void => { minimumXarrayLength = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "minimumYarrayLength": (_el: _Element): void => { minimumYarrayLength = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "deviceControlObjectNames": (_el: _Element): void => { deviceControlObjectNames = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
@@ -304,10 +304,10 @@ function _encode_ParameterIdents (value: ParameterIdents, elGetter: $.ASN1Encode
         [
             /* IF_ABSENT  */ ((value.defaultCOaccess === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeNull, $.BER)(value.defaultCOaccess, $.BER)),
             /* IF_ABSENT  */ ((value.defaultCOPriority === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeNull, $.BER)(value.defaultCOPriority, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceRepertoire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => CDS._encode_CompoundRepertoireIdent, $.BER)(value.deviceRepertoire, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceEmphasis === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => CDS._encode_CompoundEmphasisIdent, $.BER)(value.deviceEmphasis, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceForeground === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => CDS._encode_CompoundColourIdent, $.BER)(value.deviceForeground, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceBackground === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => CDS._encode_CompoundColourIdent, $.BER)(value.deviceBackground, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceRepertoire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_CompoundRepertoireIdent, $.BER)(value.deviceRepertoire, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceEmphasis === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_CompoundEmphasisIdent, $.BER)(value.deviceEmphasis, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceForeground === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_CompoundColourIdent, $.BER)(value.deviceForeground, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceBackground === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => _encode_CompoundColourIdent, $.BER)(value.deviceBackground, $.BER)),
             /* IF_ABSENT  */ ((value.minimumXarrayLength === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => $._encodeNull, $.BER)(value.minimumXarrayLength, $.BER)),
             /* IF_ABSENT  */ ((value.minimumYarrayLength === undefined) ? undefined : $._encode_implicit(_TagClass.context, 7, () => $._encodeNull, $.BER)(value.minimumYarrayLength, $.BER)),
             /* IF_ABSENT  */ ((value.deviceControlObjectNames === undefined) ? undefined : $._encode_implicit(_TagClass.context, 8, () => $._encodeNull, $.BER)(value.deviceControlObjectNames, $.BER)),

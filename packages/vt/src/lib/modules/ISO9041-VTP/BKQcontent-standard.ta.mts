@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ExplicitPointer, _encode_ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
+import { _decode_ExplicitPointer, _encode_ExplicitPointer, ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
 // export { ExplicitPointer, _decode_ExplicitPointer, _encode_ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
-import { _decode_LogExpPointer, _encode_LogExpPointer } from "../G/LogExpPointer.ta.mjs";
+import { _decode_LogExpPointer, _encode_LogExpPointer, LogExpPointer } from "../G/LogExpPointer.ta.mjs";
 // export { LogExpPointer, _decode_LogExpPointer, _encode_LogExpPointer } from "../G/LogExpPointer.ta.mjs";
 
 
@@ -40,13 +40,13 @@ class BKQcontent_standard {
          * @public
          * @readonly
          */
-        readonly pointer: OPTIONAL<G.ExplicitPointer>,
+        readonly pointer: OPTIONAL<ExplicitPointer>,
         /**
          * @summary `logPointer`.
          * @public
          * @readonly
          */
-        readonly logPointer: OPTIONAL<G.LogExpPointer>
+        readonly logPointer: OPTIONAL<LogExpPointer>
     ) {}
 
     /**
@@ -119,11 +119,11 @@ let _cached_decoder_for_BKQcontent_standard: $.ASN1Decoder<BKQcontent_standard> 
 export
 function _decode_BKQcontent_standard (el: _Element): BKQcontent_standard {
     if (!_cached_decoder_for_BKQcontent_standard) { _cached_decoder_for_BKQcontent_standard = function (el: _Element): BKQcontent_standard {
-    let pointer: OPTIONAL<G.ExplicitPointer>;
-    let logPointer: OPTIONAL<G.LogExpPointer>;
+    let pointer: OPTIONAL<ExplicitPointer>;
+    let logPointer: OPTIONAL<LogExpPointer>;
     const callbacks: $.DecodingMap = {
-        "pointer": (_el: _Element): void => { pointer = $._decode_implicit<G.ExplicitPointer>(() => G._decode_ExplicitPointer)(_el); },
-        "logPointer": (_el: _Element): void => { logPointer = $._decode_implicit<G.LogExpPointer>(() => G._decode_LogExpPointer)(_el); }
+        "pointer": (_el: _Element): void => { pointer = $._decode_implicit<ExplicitPointer>(() => _decode_ExplicitPointer)(_el); },
+        "logPointer": (_el: _Element): void => { logPointer = $._decode_implicit<LogExpPointer>(() => _decode_LogExpPointer)(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_BKQcontent_standard,
@@ -153,8 +153,8 @@ function _encode_BKQcontent_standard (value: BKQcontent_standard, elGetter: $.AS
     if (!_cached_encoder_for_BKQcontent_standard) { _cached_encoder_for_BKQcontent_standard = function (value: BKQcontent_standard): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.pointer === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => G._encode_ExplicitPointer, $.BER)(value.pointer, $.BER)),
-            /* IF_ABSENT  */ ((value.logPointer === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => G._encode_LogExpPointer, $.BER)(value.logPointer, $.BER))
+            /* IF_ABSENT  */ ((value.pointer === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_ExplicitPointer, $.BER)(value.pointer, $.BER)),
+            /* IF_ABSENT  */ ((value.logPointer === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_LogExpPointer, $.BER)(value.logPointer, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

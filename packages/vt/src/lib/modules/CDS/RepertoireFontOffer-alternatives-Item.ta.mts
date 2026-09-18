@@ -13,7 +13,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 // export { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
-import { _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { FontAssignment, _decode_FontAssignment, _encode_FontAssignment } from "../CDS/FontAssignment.ta.mjs";
 // export { FontAssignment, _decode_FontAssignment, _encode_FontAssignment } from "../CDS/FontAssignment.ta.mjs";
@@ -49,7 +49,7 @@ class RepertoireFontOffer_alternatives_Item {
          * @public
          * @readonly
          */
-        readonly fontCapability: OPTIONAL<G.IntegerOffer>,
+        readonly fontCapability: OPTIONAL<IntegerOffer>,
         /**
          * @summary `fontAssignments`.
          * @public
@@ -130,11 +130,11 @@ export
 function _decode_RepertoireFontOffer_alternatives_Item (el: _Element): RepertoireFontOffer_alternatives_Item {
     if (!_cached_decoder_for_RepertoireFontOffer_alternatives_Item) { _cached_decoder_for_RepertoireFontOffer_alternatives_Item = function (el: _Element): RepertoireFontOffer_alternatives_Item {
     let repertoire: OPTIONAL<RepertoireAssignment>;
-    let fontCapability: OPTIONAL<G.IntegerOffer>;
+    let fontCapability: OPTIONAL<IntegerOffer>;
     let fontAssignments: OPTIONAL<FontAssignment[]>;
     const callbacks: $.DecodingMap = {
         "repertoire": (_el: _Element): void => { repertoire = $._decode_implicit<RepertoireAssignment>(() => _decode_RepertoireAssignment)(_el); },
-        "fontCapability": (_el: _Element): void => { fontCapability = $._decode_implicit<G.IntegerOffer>(() => G._decode_IntegerOffer)(_el); },
+        "fontCapability": (_el: _Element): void => { fontCapability = $._decode_implicit<IntegerOffer>(() => _decode_IntegerOffer)(_el); },
         "fontAssignments": (_el: _Element): void => { fontAssignments = $._decode_implicit<FontAssignment[]>(() => $._decodeSequenceOf<FontAssignment>(() => _decode_FontAssignment))(_el); }
     };
     $._parse_sequence(el, callbacks,
@@ -167,7 +167,7 @@ function _encode_RepertoireFontOffer_alternatives_Item (value: RepertoireFontOff
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.repertoire === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_RepertoireAssignment, $.BER)(value.repertoire, $.BER)),
-            /* IF_ABSENT  */ ((value.fontCapability === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => G._encode_IntegerOffer, $.BER)(value.fontCapability, $.BER)),
+            /* IF_ABSENT  */ ((value.fontCapability === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_IntegerOffer, $.BER)(value.fontCapability, $.BER)),
             /* IF_ABSENT  */ ((value.fontAssignments === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => $._encodeSequenceOf<FontAssignment>(() => _encode_FontAssignment, $.BER), $.BER)(value.fontAssignments, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

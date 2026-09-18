@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_Block, _encode_Block } from "../G/Block.ta.mjs";
+import { _decode_Block, _encode_Block, Block } from "../G/Block.ta.mjs";
 // export { Block, _decode_Block, _encode_Block } from "../G/Block.ta.mjs";
-import { _decode_MeasurePair, _encode_MeasurePair } from "../G/MeasurePair.ta.mjs";
+import { _decode_MeasurePair, _encode_MeasurePair, MeasurePair } from "../G/MeasurePair.ta.mjs";
 // export { MeasurePair, _decode_MeasurePair, _encode_MeasurePair } from "../G/MeasurePair.ta.mjs";
 
 
@@ -40,19 +40,19 @@ class DOupdate_createBlock {
          * @public
          * @readonly
          */
-        readonly blockPosition: G.Block,
+        readonly blockPosition: Block,
         /**
          * @summary `origin`.
          * @public
          * @readonly
          */
-        readonly origin: G.MeasurePair,
+        readonly origin: MeasurePair,
         /**
          * @summary `dimension`.
          * @public
          * @readonly
          */
-        readonly dimension: G.MeasurePair
+        readonly dimension: MeasurePair
     ) {}
 
     /**
@@ -133,12 +133,12 @@ function _decode_DOupdate_createBlock (el: _Element): DOupdate_createBlock {
     sequence[0].name = "blockPosition";
     sequence[1].name = "origin";
     sequence[2].name = "dimension";
-    let blockPosition!: G.Block;
-    let origin!: G.MeasurePair;
-    let dimension!: G.MeasurePair;
-    blockPosition = $._decode_implicit<G.Block>(() => G._decode_Block)(sequence[0]);
-    origin = $._decode_implicit<G.MeasurePair>(() => G._decode_MeasurePair)(sequence[1]);
-    dimension = $._decode_implicit<G.MeasurePair>(() => G._decode_MeasurePair)(sequence[2]);
+    let blockPosition!: Block;
+    let origin!: MeasurePair;
+    let dimension!: MeasurePair;
+    blockPosition = $._decode_implicit<Block>(() => _decode_Block)(sequence[0]);
+    origin = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[1]);
+    dimension = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[2]);
     return new DOupdate_createBlock(
         blockPosition,
         origin,
@@ -163,9 +163,9 @@ function _encode_DOupdate_createBlock (value: DOupdate_createBlock, elGetter: $.
     if (!_cached_encoder_for_DOupdate_createBlock) { _cached_encoder_for_DOupdate_createBlock = function (value: DOupdate_createBlock): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => G._encode_Block, $.BER)(value.blockPosition, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => G._encode_MeasurePair, $.BER)(value.origin, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => G._encode_MeasurePair, $.BER)(value.dimension, $.BER)
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_Block, $.BER)(value.blockPosition, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MeasurePair, $.BER)(value.origin, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_MeasurePair, $.BER)(value.dimension, $.BER)
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
