@@ -92,7 +92,7 @@ import { type CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TY
  */
 export
 const testReportTechnology: CONTENT_TYPE<TestReportTechnology> = {
-    class: "TYPE-IDENTIFIER",
+    class: "CONTENT-TYPE",
     decoderFor: {
         "&Type": _decode_TestReportTechnology,
     },
