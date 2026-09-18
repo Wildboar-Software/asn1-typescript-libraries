@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +23,13 @@ import { ParameterValues_terminationLength_eventId, _decode_ParameterValues_term
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterValues-terminationLength ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterValues-terminationLength ::= SEQUENCE {
+ *     length [0] IMPLICIT INTEGER OPTIONAL,
+ *     eventId CHOICE {
+ *         integer [1] IMPLICIT INTEGER,
+ *         nul     [2] IMPLICIT NULL
+ *     }
+ * }
  * ```
  * 
  * @class
@@ -200,7 +152,7 @@ let _cached_encoder_for_ParameterValues_terminationLength: $.ASN1Encoder<Paramet
  */
 export
 function _encode_ParameterValues_terminationLength (value: ParameterValues_terminationLength, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterValues_terminationLength) { _cached_encoder_for_ParameterValues_terminationLength = function (value: ParameterValues_terminationLength, elGetter: $.ASN1Encoder<ParameterValues_terminationLength>): _Element {
+    if (!_cached_encoder_for_ParameterValues_terminationLength) { _cached_encoder_for_ParameterValues_terminationLength = function (value: ParameterValues_terminationLength): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.length === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.length, $.BER)),

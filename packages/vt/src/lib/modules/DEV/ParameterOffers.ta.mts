@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
     PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,17 +12,17 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AccessRuleOffer, AccessRuleOffer_wavar /* IMPORTED_LONG_NAMED_BIT */, wavar /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waci /* IMPORTED_LONG_NAMED_BIT */, waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waca /* IMPORTED_LONG_NAMED_BIT */, waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_nsac /* IMPORTED_LONG_NAMED_BIT */, nsac /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waci /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waca /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_no_access /* IMPORTED_LONG_NAMED_BIT */, no_access /* IMPORTED_SHORT_NAMED_BIT */, _decode_AccessRuleOffer, _encode_AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
+import { _decode_AccessRuleOffer, _encode_AccessRuleOffer, type AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
 // export { AccessRuleOffer, AccessRuleOffer_wavar /* IMPORTED_LONG_NAMED_BIT */, wavar /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waci /* IMPORTED_LONG_NAMED_BIT */, waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waca /* IMPORTED_LONG_NAMED_BIT */, waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_nsac /* IMPORTED_LONG_NAMED_BIT */, nsac /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waci /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waca /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_no_access /* IMPORTED_LONG_NAMED_BIT */, no_access /* IMPORTED_SHORT_NAMED_BIT */, _decode_AccessRuleOffer, _encode_AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
-import { ParameterOffers_defaultCOPriority, ParameterOffers_defaultCOPriority_normal /* IMPORTED_LONG_NAMED_BIT */, normal /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_defaultCOPriority_high /* IMPORTED_LONG_NAMED_BIT */, high /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_defaultCOPriority_urgent /* IMPORTED_LONG_NAMED_BIT */, urgent /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_defaultCOPriority, _encode_ParameterOffers_defaultCOPriority } from "../DEV/ParameterOffers-defaultCOPriority.ta.mjs";
+import { ParameterOffers_defaultCOPriority, _decode_ParameterOffers_defaultCOPriority, _encode_ParameterOffers_defaultCOPriority } from "../DEV/ParameterOffers-defaultCOPriority.ta.mjs";
 // export { ParameterOffers_defaultCOPriority, ParameterOffers_defaultCOPriority_normal /* IMPORTED_LONG_NAMED_BIT */, normal /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_defaultCOPriority_high /* IMPORTED_LONG_NAMED_BIT */, high /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_defaultCOPriority_urgent /* IMPORTED_LONG_NAMED_BIT */, urgent /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_defaultCOPriority, _encode_ParameterOffers_defaultCOPriority } from "../DEV/ParameterOffers-defaultCOPriority.ta.mjs";
-import { CompoundRepertoireOffer, _decode_CompoundRepertoireOffer, _encode_CompoundRepertoireOffer } from "../CDS/CompoundRepertoireOffer.ta.mjs";
+import { _decode_CompoundRepertoireOffer, _encode_CompoundRepertoireOffer, CompoundRepertoireOffer } from "../CDS/CompoundRepertoireOffer.ta.mjs";
 // export { CompoundRepertoireOffer, _decode_CompoundRepertoireOffer, _encode_CompoundRepertoireOffer } from "../CDS/CompoundRepertoireOffer.ta.mjs";
-import { CompoundEmphasisOffer, _decode_CompoundEmphasisOffer, _encode_CompoundEmphasisOffer } from "../CDS/CompoundEmphasisOffer.ta.mjs";
+import { _decode_CompoundEmphasisOffer, _encode_CompoundEmphasisOffer, type CompoundEmphasisOffer } from "../CDS/CompoundEmphasisOffer.ta.mjs";
 // export { CompoundEmphasisOffer, _decode_CompoundEmphasisOffer, _encode_CompoundEmphasisOffer } from "../CDS/CompoundEmphasisOffer.ta.mjs";
-import { CompoundColourOffer, _decode_CompoundColourOffer, _encode_CompoundColourOffer } from "../CDS/CompoundColourOffer.ta.mjs";
+import { _decode_CompoundColourOffer, _encode_CompoundColourOffer, CompoundColourOffer } from "../CDS/CompoundColourOffer.ta.mjs";
 // export { CompoundColourOffer, _decode_CompoundColourOffer, _encode_CompoundColourOffer } from "../CDS/CompoundColourOffer.ta.mjs";
-import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { ParameterOffers_terminationEventList_Item_Item, _decode_ParameterOffers_terminationEventList_Item_Item, _encode_ParameterOffers_terminationEventList_Item_Item } from "../DEV/ParameterOffers-terminationEventList-Item-Item.ta.mjs";
 // export { ParameterOffers_terminationEventList_Item_Item, _decode_ParameterOffers_terminationEventList_Item_Item, _encode_ParameterOffers_terminationEventList_Item_Item } from "../DEV/ParameterOffers-terminationEventList-Item-Item.ta.mjs";
@@ -84,7 +30,7 @@ import { ParameterOffers_terminationLength, _decode_ParameterOffers_terminationL
 // export { ParameterOffers_terminationLength, _decode_ParameterOffers_terminationLength, _encode_ParameterOffers_terminationLength } from "../DEV/ParameterOffers-terminationLength.ta.mjs";
 import { ParameterOffers_terminationTimeout, _decode_ParameterOffers_terminationTimeout, _encode_ParameterOffers_terminationTimeout } from "../DEV/ParameterOffers-terminationTimeout.ta.mjs";
 // export { ParameterOffers_terminationTimeout, _decode_ParameterOffers_terminationTimeout, _encode_ParameterOffers_terminationTimeout } from "../DEV/ParameterOffers-terminationTimeout.ta.mjs";
-import { ParameterOffers_defaultCOtrigger, ParameterOffers_defaultCOtrigger_notSelected /* IMPORTED_LONG_NAMED_BIT */, notSelected /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_defaultCOtrigger_selected /* IMPORTED_LONG_NAMED_BIT */, selected /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_defaultCOtrigger, _encode_ParameterOffers_defaultCOtrigger } from "../DEV/ParameterOffers-defaultCOtrigger.ta.mjs";
+import { ParameterOffers_defaultCOtrigger, _decode_ParameterOffers_defaultCOtrigger, _encode_ParameterOffers_defaultCOtrigger } from "../DEV/ParameterOffers-defaultCOtrigger.ta.mjs";
 // export { ParameterOffers_defaultCOtrigger, ParameterOffers_defaultCOtrigger_notSelected /* IMPORTED_LONG_NAMED_BIT */, notSelected /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_defaultCOtrigger_selected /* IMPORTED_LONG_NAMED_BIT */, selected /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_defaultCOtrigger, _encode_ParameterOffers_defaultCOtrigger } from "../DEV/ParameterOffers-defaultCOtrigger.ta.mjs";
 import { ParameterOffers_defaultCOinitialValue_Item, _decode_ParameterOffers_defaultCOinitialValue_Item, _encode_ParameterOffers_defaultCOinitialValue_Item } from "../DEV/ParameterOffers-defaultCOinitialValue-Item.ta.mjs";
 // export { ParameterOffers_defaultCOinitialValue_Item, _decode_ParameterOffers_defaultCOinitialValue_Item, _encode_ParameterOffers_defaultCOinitialValue_Item } from "../DEV/ParameterOffers-defaultCOinitialValue-Item.ta.mjs";
@@ -159,7 +105,7 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly defaultCOaccess: OPTIONAL<CSS.AccessRuleOffer>,
+        readonly defaultCOaccess: OPTIONAL<AccessRuleOffer>,
         /**
          * @summary `defaultCOPriority`.
          * @public
@@ -171,37 +117,37 @@ class ParameterOffers {
          * @public
          * @readonly
          */
-        readonly deviceRepertoireAssignment: OPTIONAL<CDS.CompoundRepertoireOffer>,
+        readonly deviceRepertoireAssignment: OPTIONAL<CompoundRepertoireOffer>,
         /**
          * @summary `deviceEmphasisAssignment`.
          * @public
          * @readonly
          */
-        readonly deviceEmphasisAssignment: OPTIONAL<CDS.CompoundEmphasisOffer>,
+        readonly deviceEmphasisAssignment: OPTIONAL<CompoundEmphasisOffer>,
         /**
          * @summary `deviceForegroundAssignment`.
          * @public
          * @readonly
          */
-        readonly deviceForegroundAssignment: OPTIONAL<CDS.CompoundColourOffer>,
+        readonly deviceForegroundAssignment: OPTIONAL<CompoundColourOffer>,
         /**
          * @summary `deviceBackgroundAssignment`.
          * @public
          * @readonly
          */
-        readonly deviceBackgroundAssignment: OPTIONAL<CDS.CompoundColourOffer>,
+        readonly deviceBackgroundAssignment: OPTIONAL<CompoundColourOffer>,
         /**
          * @summary `minimumXarrayLength`.
          * @public
          * @readonly
          */
-        readonly minimumXarrayLength: OPTIONAL<G.IntegerOffer>,
+        readonly minimumXarrayLength: OPTIONAL<IntegerOffer>,
         /**
          * @summary `minimumYarrayLength`.
          * @public
          * @readonly
          */
-        readonly minimumYarrayLength: OPTIONAL<G.IntegerOffer>,
+        readonly minimumYarrayLength: OPTIONAL<IntegerOffer>,
         /**
          * @summary `deviceControlObjectNames`.
          * @public
@@ -329,14 +275,14 @@ let _cached_decoder_for_ParameterOffers: $.ASN1Decoder<ParameterOffers> | null =
 export
 function _decode_ParameterOffers (el: _Element): ParameterOffers {
     if (!_cached_decoder_for_ParameterOffers) { _cached_decoder_for_ParameterOffers = function (el: _Element): ParameterOffers {
-    let defaultCOaccess: OPTIONAL<CSS.AccessRuleOffer>;
+    let defaultCOaccess: OPTIONAL<AccessRuleOffer>;
     let defaultCOPriority: OPTIONAL<ParameterOffers_defaultCOPriority>;
-    let deviceRepertoireAssignment: OPTIONAL<CDS.CompoundRepertoireOffer>;
-    let deviceEmphasisAssignment: OPTIONAL<CDS.CompoundEmphasisOffer>;
-    let deviceForegroundAssignment: OPTIONAL<CDS.CompoundColourOffer>;
-    let deviceBackgroundAssignment: OPTIONAL<CDS.CompoundColourOffer>;
-    let minimumXarrayLength: OPTIONAL<G.IntegerOffer>;
-    let minimumYarrayLength: OPTIONAL<G.IntegerOffer>;
+    let deviceRepertoireAssignment: OPTIONAL<CompoundRepertoireOffer>;
+    let deviceEmphasisAssignment: OPTIONAL<CompoundEmphasisOffer>;
+    let deviceForegroundAssignment: OPTIONAL<CompoundColourOffer>;
+    let deviceBackgroundAssignment: OPTIONAL<CompoundColourOffer>;
+    let minimumXarrayLength: OPTIONAL<IntegerOffer>;
+    let minimumYarrayLength: OPTIONAL<IntegerOffer>;
     let deviceControlObjectNames: OPTIONAL<PrintableString[][]>;
     let deviceDisplayObjectName: OPTIONAL<PrintableString[]>;
     let terminationEventList: OPTIONAL<ParameterOffers_terminationEventList_Item_Item[][]>;
@@ -345,14 +291,14 @@ function _decode_ParameterOffers (el: _Element): ParameterOffers {
     let defaultCOtrigger: OPTIONAL<ParameterOffers_defaultCOtrigger>;
     let defaultCOinitialValue: OPTIONAL<ParameterOffers_defaultCOinitialValue_Item[]>;
     const callbacks: $.DecodingMap = {
-        "defaultCOaccess": (_el: _Element): void => { defaultCOaccess = $._decode_implicit<CSS.AccessRuleOffer>(() => CSS._decode_AccessRuleOffer)(_el); },
+        "defaultCOaccess": (_el: _Element): void => { defaultCOaccess = $._decode_implicit<AccessRuleOffer>(() => _decode_AccessRuleOffer)(_el); },
         "defaultCOPriority": (_el: _Element): void => { defaultCOPriority = $._decode_implicit<ParameterOffers_defaultCOPriority>(() => _decode_ParameterOffers_defaultCOPriority)(_el); },
-        "deviceRepertoireAssignment": (_el: _Element): void => { deviceRepertoireAssignment = $._decode_implicit<CDS.CompoundRepertoireOffer>(() => CDS._decode_CompoundRepertoireOffer)(_el); },
-        "deviceEmphasisAssignment": (_el: _Element): void => { deviceEmphasisAssignment = $._decode_implicit<CDS.CompoundEmphasisOffer>(() => CDS._decode_CompoundEmphasisOffer)(_el); },
-        "deviceForegroundAssignment": (_el: _Element): void => { deviceForegroundAssignment = $._decode_implicit<CDS.CompoundColourOffer>(() => CDS._decode_CompoundColourOffer)(_el); },
-        "deviceBackgroundAssignment": (_el: _Element): void => { deviceBackgroundAssignment = $._decode_implicit<CDS.CompoundColourOffer>(() => CDS._decode_CompoundColourOffer)(_el); },
-        "minimumXarrayLength": (_el: _Element): void => { minimumXarrayLength = $._decode_implicit<G.IntegerOffer>(() => G._decode_IntegerOffer)(_el); },
-        "minimumYarrayLength": (_el: _Element): void => { minimumYarrayLength = $._decode_implicit<G.IntegerOffer>(() => G._decode_IntegerOffer)(_el); },
+        "deviceRepertoireAssignment": (_el: _Element): void => { deviceRepertoireAssignment = $._decode_implicit<CompoundRepertoireOffer>(() => _decode_CompoundRepertoireOffer)(_el); },
+        "deviceEmphasisAssignment": (_el: _Element): void => { deviceEmphasisAssignment = $._decode_implicit<CompoundEmphasisOffer>(() => _decode_CompoundEmphasisOffer)(_el); },
+        "deviceForegroundAssignment": (_el: _Element): void => { deviceForegroundAssignment = $._decode_implicit<CompoundColourOffer>(() => _decode_CompoundColourOffer)(_el); },
+        "deviceBackgroundAssignment": (_el: _Element): void => { deviceBackgroundAssignment = $._decode_implicit<CompoundColourOffer>(() => _decode_CompoundColourOffer)(_el); },
+        "minimumXarrayLength": (_el: _Element): void => { minimumXarrayLength = $._decode_implicit<IntegerOffer>(() => _decode_IntegerOffer)(_el); },
+        "minimumYarrayLength": (_el: _Element): void => { minimumYarrayLength = $._decode_implicit<IntegerOffer>(() => _decode_IntegerOffer)(_el); },
         "deviceControlObjectNames": (_el: _Element): void => { deviceControlObjectNames = $._decode_implicit<PrintableString[][]>(() => $._decodeSequenceOf<PrintableString[]>(() => $._decodeSequenceOf<PrintableString>(() => $._decodePrintableString)))(_el); },
         "deviceDisplayObjectName": (_el: _Element): void => { deviceDisplayObjectName = $._decode_implicit<PrintableString[]>(() => $._decodeSequenceOf<PrintableString>(() => $._decodePrintableString))(_el); },
         "terminationEventList": (_el: _Element): void => { terminationEventList = $._decode_implicit<ParameterOffers_terminationEventList_Item_Item[][]>(() => $._decodeSequenceOf<ParameterOffers_terminationEventList_Item_Item[]>(() => $._decodeSetOf<ParameterOffers_terminationEventList_Item_Item>(() => _decode_ParameterOffers_terminationEventList_Item_Item)))(_el); },
@@ -399,17 +345,17 @@ let _cached_encoder_for_ParameterOffers: $.ASN1Encoder<ParameterOffers> | null =
  */
 export
 function _encode_ParameterOffers (value: ParameterOffers, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterOffers) { _cached_encoder_for_ParameterOffers = function (value: ParameterOffers, elGetter: $.ASN1Encoder<ParameterOffers>): _Element {
+    if (!_cached_encoder_for_ParameterOffers) { _cached_encoder_for_ParameterOffers = function (value: ParameterOffers): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.defaultCOaccess === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => CSS._encode_AccessRuleOffer, $.BER)(value.defaultCOaccess, $.BER)),
+            /* IF_ABSENT  */ ((value.defaultCOaccess === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_AccessRuleOffer, $.BER)(value.defaultCOaccess, $.BER)),
             /* IF_ABSENT  */ ((value.defaultCOPriority === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_ParameterOffers_defaultCOPriority, $.BER)(value.defaultCOPriority, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceRepertoireAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => CDS._encode_CompoundRepertoireOffer, $.BER)(value.deviceRepertoireAssignment, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceEmphasisAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => CDS._encode_CompoundEmphasisOffer, $.BER)(value.deviceEmphasisAssignment, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceForegroundAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => CDS._encode_CompoundColourOffer, $.BER)(value.deviceForegroundAssignment, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceBackgroundAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => CDS._encode_CompoundColourOffer, $.BER)(value.deviceBackgroundAssignment, $.BER)),
-            /* IF_ABSENT  */ ((value.minimumXarrayLength === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => G._encode_IntegerOffer, $.BER)(value.minimumXarrayLength, $.BER)),
-            /* IF_ABSENT  */ ((value.minimumYarrayLength === undefined) ? undefined : $._encode_implicit(_TagClass.context, 7, () => G._encode_IntegerOffer, $.BER)(value.minimumYarrayLength, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceRepertoireAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_CompoundRepertoireOffer, $.BER)(value.deviceRepertoireAssignment, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceEmphasisAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_CompoundEmphasisOffer, $.BER)(value.deviceEmphasisAssignment, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceForegroundAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_CompoundColourOffer, $.BER)(value.deviceForegroundAssignment, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceBackgroundAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => _encode_CompoundColourOffer, $.BER)(value.deviceBackgroundAssignment, $.BER)),
+            /* IF_ABSENT  */ ((value.minimumXarrayLength === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => _encode_IntegerOffer, $.BER)(value.minimumXarrayLength, $.BER)),
+            /* IF_ABSENT  */ ((value.minimumYarrayLength === undefined) ? undefined : $._encode_implicit(_TagClass.context, 7, () => _encode_IntegerOffer, $.BER)(value.minimumYarrayLength, $.BER)),
             /* IF_ABSENT  */ ((value.deviceControlObjectNames === undefined) ? undefined : $._encode_implicit(_TagClass.context, 8, () => $._encodeSequenceOf<PrintableString[]>(() => $._encodeSequenceOf<PrintableString>(() => $._encodePrintableString, $.BER), $.BER), $.BER)(value.deviceControlObjectNames, $.BER)),
             /* IF_ABSENT  */ ((value.deviceDisplayObjectName === undefined) ? undefined : $._encode_implicit(_TagClass.context, 9, () => $._encodeSequenceOf<PrintableString>(() => $._encodePrintableString, $.BER), $.BER)(value.deviceDisplayObjectName, $.BER)),
             /* IF_ABSENT  */ ((value.terminationEventList === undefined) ? undefined : $._encode_implicit(_TagClass.context, 10, () => $._encodeSequenceOf<ParameterOffers_terminationEventList_Item_Item[]>(() => $._encodeSetOf<ParameterOffers_terminationEventList_Item_Item>(() => _encode_ParameterOffers_terminationEventList_Item_Item, $.BER), $.BER), $.BER)(value.terminationEventList, $.BER)),

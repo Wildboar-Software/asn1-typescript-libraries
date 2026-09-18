@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +22,19 @@ import { COupdate_objectUpdate_multiElement_Item_update, _decode_COupdate_object
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * COupdate-objectUpdate-multiElement-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * COupdate-objectUpdate-multiElement-Item ::= SEQUENCE {
+ *     identifier INTEGER,
+ *     update CHOICE {
+ *         characterUpdate [0] IMPLICIT OCTET STRING,
+ *         booleanUpdate   [1] IMPLICIT SEQUENCE {
+ *             values  [0] IMPLICIT BIT STRING,
+ *             mask    [1] IMPLICIT BIT STRING OPTIONAL
+ *         }, -- See note under mask in G.COUpdate
+ *         symbolicUpdate  [2] IMPLICIT INTEGER,
+ *         integerUpdate   [3] IMPLICIT INTEGER,
+ *         bitStringUpdate [4] IMPLICIT BIT STRING
+ *     }
+ * }
  * ```
  * 
  * @class
@@ -175,10 +132,8 @@ function _decode_COupdate_objectUpdate_multiElement_Item (el: _Element): COupdat
     }
     sequence[0].name = "identifier";
     sequence[1].name = "update";
-    let identifier!: INTEGER;
-    let update!: COupdate_objectUpdate_multiElement_Item_update;
-    identifier = $._decodeInteger(sequence[0]);
-    update = _decode_COupdate_objectUpdate_multiElement_Item_update(sequence[1]);
+    const identifier: INTEGER = $._decodeInteger(sequence[0]);
+    const update: COupdate_objectUpdate_multiElement_Item_update = _decode_COupdate_objectUpdate_multiElement_Item_update(sequence[1]);
     return new COupdate_objectUpdate_multiElement_Item(
         identifier,
         update,
@@ -199,7 +154,7 @@ let _cached_encoder_for_COupdate_objectUpdate_multiElement_Item: $.ASN1Encoder<C
  */
 export
 function _encode_COupdate_objectUpdate_multiElement_Item (value: COupdate_objectUpdate_multiElement_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_COupdate_objectUpdate_multiElement_Item) { _cached_encoder_for_COupdate_objectUpdate_multiElement_Item = function (value: COupdate_objectUpdate_multiElement_Item, elGetter: $.ASN1Encoder<COupdate_objectUpdate_multiElement_Item>): _Element {
+    if (!_cached_encoder_for_COupdate_objectUpdate_multiElement_Item) { _cached_encoder_for_COupdate_objectUpdate_multiElement_Item = function (value: COupdate_objectUpdate_multiElement_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.identifier, $.BER),

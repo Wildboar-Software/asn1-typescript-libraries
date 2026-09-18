@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -81,7 +26,12 @@ import { FER, _decode_FER, _encode_FER } from "../G/FER.ta.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FEPCOupdate-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FEPCOupdate-Item ::= SEQUENCE {
+ *     index     [0] IMPLICIT INTEGER,
+ *     event     [1] FEE,
+ *     condition [2] IMPLICIT SET OF FEC,
+ *     reactions [3] IMPLICIT SEQUENCE OF FER
+ * }
  * ```
  * 
  * @class
@@ -195,14 +145,10 @@ function _decode_FEPCOupdate_Item (el: _Element): FEPCOupdate_Item {
     sequence[1].name = "event";
     sequence[2].name = "condition";
     sequence[3].name = "reactions";
-    let index!: INTEGER;
-    let event!: FEE;
-    let condition!: FEC[];
-    let reactions!: FER[];
-    index = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    event = $._decode_explicit<FEE>(() => _decode_FEE)(sequence[1]);
-    condition = $._decode_implicit<FEC[]>(() => $._decodeSetOf<FEC>(() => _decode_FEC))(sequence[2]);
-    reactions = $._decode_implicit<FER[]>(() => $._decodeSequenceOf<FER>(() => _decode_FER))(sequence[3]);
+    const index: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const event: FEE = $._decode_explicit<FEE>(() => _decode_FEE)(sequence[1]);
+    const condition: FEC[] = $._decode_implicit<FEC[]>(() => $._decodeSetOf<FEC>(() => _decode_FEC))(sequence[2]);
+    const reactions: FER[] = $._decode_implicit<FER[]>(() => $._decodeSequenceOf<FER>(() => _decode_FER))(sequence[3]);
     return new FEPCOupdate_Item(
         index,
         event,
@@ -225,7 +171,7 @@ let _cached_encoder_for_FEPCOupdate_Item: $.ASN1Encoder<FEPCOupdate_Item> | null
  */
 export
 function _encode_FEPCOupdate_Item (value: FEPCOupdate_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FEPCOupdate_Item) { _cached_encoder_for_FEPCOupdate_Item = function (value: FEPCOupdate_Item, elGetter: $.ASN1Encoder<FEPCOupdate_Item>): _Element {
+    if (!_cached_encoder_for_FEPCOupdate_Item) { _cached_encoder_for_FEPCOupdate_Item = function (value: FEPCOupdate_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.index, $.BER),

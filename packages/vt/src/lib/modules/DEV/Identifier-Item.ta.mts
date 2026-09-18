@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
     PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +22,10 @@ import { ParameterIdents, _decode_ParameterIdents, _encode_ParameterIdents } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Identifier-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Identifier-Item ::= SEQUENCE {
+ *     name    PrintableString,
+ *     idents  ParameterIdents
+ * }
  * ```
  * 
  * @class
@@ -175,10 +123,8 @@ function _decode_Identifier_Item (el: _Element): Identifier_Item {
     }
     sequence[0].name = "name";
     sequence[1].name = "idents";
-    let name!: PrintableString;
-    let idents!: ParameterIdents;
-    name = $._decodePrintableString(sequence[0]);
-    idents = _decode_ParameterIdents(sequence[1]);
+    const name: PrintableString = $._decodePrintableString(sequence[0]);
+    const idents: ParameterIdents = _decode_ParameterIdents(sequence[1]);
     return new Identifier_Item(
         name,
         idents,
@@ -199,7 +145,7 @@ let _cached_encoder_for_Identifier_Item: $.ASN1Encoder<Identifier_Item> | null =
  */
 export
 function _encode_Identifier_Item (value: Identifier_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Identifier_Item) { _cached_encoder_for_Identifier_Item = function (value: Identifier_Item, elGetter: $.ASN1Encoder<Identifier_Item>): _Element {
+    if (!_cached_encoder_for_Identifier_Item) { _cached_encoder_for_Identifier_Item = function (value: Identifier_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodePrintableString(value.name, $.BER),

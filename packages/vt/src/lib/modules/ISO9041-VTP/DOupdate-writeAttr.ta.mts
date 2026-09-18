@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -79,7 +23,10 @@ import { AttrExtent, _decode_AttrExtent, _encode_AttrExtent } from "../ISO9041-V
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-writeAttr ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-writeAttr ::= SEQUENCE {
+ *     attributeId     AttrId,
+ *     attributeExtent AttrExtent
+ * }
  * ```
  * 
  * @class
@@ -177,10 +124,8 @@ function _decode_DOupdate_writeAttr (el: _Element): DOupdate_writeAttr {
     }
     sequence[0].name = "attributeId";
     sequence[1].name = "attributeExtent";
-    let attributeId!: AttrId;
-    let attributeExtent!: AttrExtent;
-    attributeId = _decode_AttrId(sequence[0]);
-    attributeExtent = _decode_AttrExtent(sequence[1]);
+    const attributeId: AttrId = _decode_AttrId(sequence[0]);
+    const attributeExtent: AttrExtent = _decode_AttrExtent(sequence[1]);
     return new DOupdate_writeAttr(
         attributeId,
         attributeExtent,
@@ -201,7 +146,7 @@ let _cached_encoder_for_DOupdate_writeAttr: $.ASN1Encoder<DOupdate_writeAttr> | 
  */
 export
 function _encode_DOupdate_writeAttr (value: DOupdate_writeAttr, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DOupdate_writeAttr) { _cached_encoder_for_DOupdate_writeAttr = function (value: DOupdate_writeAttr, elGetter: $.ASN1Encoder<DOupdate_writeAttr>): _Element {
+    if (!_cached_encoder_for_DOupdate_writeAttr) { _cached_encoder_for_DOupdate_writeAttr = function (value: DOupdate_writeAttr): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_AttrId(value.attributeId, $.BER),

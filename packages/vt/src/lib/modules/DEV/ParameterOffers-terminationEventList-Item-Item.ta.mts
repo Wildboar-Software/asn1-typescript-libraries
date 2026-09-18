@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +21,13 @@ import { ParameterOffers_terminationEventList_Item_Item_eventId, _decode_Paramet
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterOffers-terminationEventList-Item-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterOffers-terminationEventList-Item-Item ::= SEQUENCE {
+ *     event   ANY,
+ *     eventId SEQUENCE {
+ *         integer G.IntegerOffer OPTIONAL,
+ *         nul     NULL OPTIONAL
+ *     }
+ * }
  * ```
  * 
  * @class
@@ -85,7 +35,12 @@ import { ParameterOffers_terminationEventList_Item_Item_eventId, _decode_Paramet
 export
 class ParameterOffers_terminationEventList_Item_Item {
     constructor (
-// FIXME: readonly event: AnyType,
+        /**
+         * @summary `event`.
+         * @public
+         * @readonly
+         */
+        readonly event: _Element,
         /**
          * @summary `eventId`.
          * @public
@@ -107,7 +62,7 @@ class ParameterOffers_terminationEventList_Item_Item {
      * @returns {ParameterOffers_terminationEventList_Item_Item}
      */
     public static _from_object (_o: { [_K in keyof (ParameterOffers_terminationEventList_Item_Item)]: (ParameterOffers_terminationEventList_Item_Item)[_K] }): ParameterOffers_terminationEventList_Item_Item {
-        return new ParameterOffers_terminationEventList_Item_Item(_o., _o.eventId);
+        return new ParameterOffers_terminationEventList_Item_Item(_o.event, _o.eventId);
     }
 
 
@@ -170,10 +125,8 @@ function _decode_ParameterOffers_terminationEventList_Item_Item (el: _Element): 
     }
     sequence[0].name = "event";
     sequence[1].name = "eventId";
-    let event!: /* FIXME: event COULD_NOT_COMPILE_TYPE */;
-    let eventId!: ParameterOffers_terminationEventList_Item_Item_eventId;
-    event = $._decodeAny(sequence[0]);
-    eventId = _decode_ParameterOffers_terminationEventList_Item_Item_eventId(sequence[1]);
+    const event: _Element = $._decodeAny(sequence[0]);
+    const eventId: ParameterOffers_terminationEventList_Item_Item_eventId = _decode_ParameterOffers_terminationEventList_Item_Item_eventId(sequence[1]);
     return new ParameterOffers_terminationEventList_Item_Item(
         event,
         eventId,
@@ -194,7 +147,7 @@ let _cached_encoder_for_ParameterOffers_terminationEventList_Item_Item: $.ASN1En
  */
 export
 function _encode_ParameterOffers_terminationEventList_Item_Item (value: ParameterOffers_terminationEventList_Item_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterOffers_terminationEventList_Item_Item) { _cached_encoder_for_ParameterOffers_terminationEventList_Item_Item = function (value: ParameterOffers_terminationEventList_Item_Item, elGetter: $.ASN1Encoder<ParameterOffers_terminationEventList_Item_Item>): _Element {
+    if (!_cached_encoder_for_ParameterOffers_terminationEventList_Item_Item) { _cached_encoder_for_ParameterOffers_terminationEventList_Item_Item = function (value: ParameterOffers_terminationEventList_Item_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeAny(value.event, $.BER),

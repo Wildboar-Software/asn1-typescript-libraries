@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 
 
@@ -77,7 +23,10 @@ import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/I
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterOffers-structure ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterOffers-structure ::= SEQUENCE {
+ *     nonParametric NULL OPTIONAL,
+ *     numberElements G.IntegerOffer OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -96,7 +45,7 @@ class ParameterOffers_structure {
          * @public
          * @readonly
          */
-        readonly numberElements: OPTIONAL<G.IntegerOffer>
+        readonly numberElements: OPTIONAL<IntegerOffer>
     ) {}
 
     /**
@@ -170,10 +119,10 @@ export
 function _decode_ParameterOffers_structure (el: _Element): ParameterOffers_structure {
     if (!_cached_decoder_for_ParameterOffers_structure) { _cached_decoder_for_ParameterOffers_structure = function (el: _Element): ParameterOffers_structure {
     let nonParametric: OPTIONAL<NULL>;
-    let numberElements: OPTIONAL<G.IntegerOffer>;
+    let numberElements: OPTIONAL<IntegerOffer>;
     const callbacks: $.DecodingMap = {
         "nonParametric": (_el: _Element): void => { nonParametric = $._decodeNull(_el); },
-        "numberElements": (_el: _Element): void => { numberElements = G._decode_IntegerOffer(_el); }
+        "numberElements": (_el: _Element): void => { numberElements = _decode_IntegerOffer(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ParameterOffers_structure,
@@ -200,11 +149,11 @@ let _cached_encoder_for_ParameterOffers_structure: $.ASN1Encoder<ParameterOffers
  */
 export
 function _encode_ParameterOffers_structure (value: ParameterOffers_structure, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterOffers_structure) { _cached_encoder_for_ParameterOffers_structure = function (value: ParameterOffers_structure, elGetter: $.ASN1Encoder<ParameterOffers_structure>): _Element {
+    if (!_cached_encoder_for_ParameterOffers_structure) { _cached_encoder_for_ParameterOffers_structure = function (value: ParameterOffers_structure): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.nonParametric === undefined) ? undefined : $._encodeNull(value.nonParametric, $.BER)),
-            /* IF_ABSENT  */ ((value.numberElements === undefined) ? undefined : G._encode_IntegerOffer(value.numberElements, $.BER))
+            /* IF_ABSENT  */ ((value.numberElements === undefined) ? undefined : _encode_IntegerOffer(value.numberElements, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

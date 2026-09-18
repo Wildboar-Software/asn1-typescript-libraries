@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExplicitPointer, _decode_ExplicitPointer, _encode_ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
+import { _decode_ExplicitPointer, _encode_ExplicitPointer, ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
 // export { ExplicitPointer, _decode_ExplicitPointer, _encode_ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
 
 
@@ -100,7 +45,7 @@ type Pointer =
     | { end: NULL } /* CHOICE_ALT_ROOT */
     | { endX: NULL } /* CHOICE_ALT_ROOT */
     | { endY: NULL } /* CHOICE_ALT_ROOT */
-    | { coords: G.ExplicitPointer } /* CHOICE_ALT_ROOT */
+    | { coords: ExplicitPointer } /* CHOICE_ALT_ROOT */
     | { startB: NULL } /* CHOICE_ALT_ROOT */
     | { endB: NULL } /* CHOICE_ALT_ROOT */;
 
@@ -122,7 +67,7 @@ function _decode_Pointer (el: _Element): Pointer {
     "CONTEXT 4": [ "end", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 5": [ "endX", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 6": [ "endY", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 7": [ "coords", $._decode_implicit<G.ExplicitPointer>(() => G._decode_ExplicitPointer) ],
+    "CONTEXT 7": [ "coords", $._decode_implicit<ExplicitPointer>(() => _decode_ExplicitPointer) ],
     "CONTEXT 8": [ "startB", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 9": [ "endB", $._decode_implicit<NULL>(() => $._decodeNull) ]
 }); }
@@ -148,7 +93,7 @@ function _encode_Pointer (value: Pointer, elGetter: $.ASN1Encoder<any>): _Elemen
     "end": $._encode_implicit(_TagClass.context, 4, () => $._encodeNull, $.BER),
     "endX": $._encode_implicit(_TagClass.context, 5, () => $._encodeNull, $.BER),
     "endY": $._encode_implicit(_TagClass.context, 6, () => $._encodeNull, $.BER),
-    "coords": $._encode_implicit(_TagClass.context, 7, () => G._encode_ExplicitPointer, $.BER),
+    "coords": $._encode_implicit(_TagClass.context, 7, () => _encode_ExplicitPointer, $.BER),
     "startB": $._encode_implicit(_TagClass.context, 8, () => $._encodeNull, $.BER),
     "endB": $._encode_implicit(_TagClass.context, 9, () => $._encodeNull, $.BER),
 }, $.BER); }

@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
     PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RIOreference_operations_Item_operation, RIOreference_operations_Item_operation_executeRecord /* IMPORTED_LONG_NAMED_INTEGER */, executeRecord /* IMPORTED_SHORT_NAMED_INTEGER */, RIOreference_operations_Item_operation_callRecord /* IMPORTED_LONG_NAMED_INTEGER */, callRecord /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RIOreference_operations_Item_operation, _encode_RIOreference_operations_Item_operation } from "../G/RIOreference-operations-Item-operation.ta.mjs";
+import { RIOreference_operations_Item_operation, _decode_RIOreference_operations_Item_operation, _encode_RIOreference_operations_Item_operation } from "../G/RIOreference-operations-Item-operation.ta.mjs";
 // export { RIOreference_operations_Item_operation, RIOreference_operations_Item_operation_executeRecord /* IMPORTED_LONG_NAMED_INTEGER */, executeRecord /* IMPORTED_SHORT_NAMED_INTEGER */, RIOreference_operations_Item_operation_callRecord /* IMPORTED_LONG_NAMED_INTEGER */, callRecord /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RIOreference_operations_Item_operation, _encode_RIOreference_operations_Item_operation } from "../G/RIOreference-operations-Item-operation.ta.mjs";
 
 
@@ -77,7 +22,13 @@ import { RIOreference_operations_Item_operation, RIOreference_operations_Item_op
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RIOreference-operations-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RIOreference-operations-Item ::= SEQUENCE {
+ *     recordId    [0] IMPLICIT PrintableString,
+ *     operation   [1] IMPLICIT INTEGER {
+ *         executeRecord (0),
+ *         callRecord    (1)
+ *     }
+ * }
  * ```
  * 
  * @class
@@ -175,10 +126,8 @@ function _decode_RIOreference_operations_Item (el: _Element): RIOreference_opera
     }
     sequence[0].name = "recordId";
     sequence[1].name = "operation";
-    let recordId!: PrintableString;
-    let operation!: RIOreference_operations_Item_operation;
-    recordId = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(sequence[0]);
-    operation = $._decode_implicit<RIOreference_operations_Item_operation>(() => _decode_RIOreference_operations_Item_operation)(sequence[1]);
+    const recordId: PrintableString = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(sequence[0]);
+    const operation: RIOreference_operations_Item_operation = $._decode_implicit<RIOreference_operations_Item_operation>(() => _decode_RIOreference_operations_Item_operation)(sequence[1]);
     return new RIOreference_operations_Item(
         recordId,
         operation,
@@ -199,7 +148,7 @@ let _cached_encoder_for_RIOreference_operations_Item: $.ASN1Encoder<RIOreference
  */
 export
 function _encode_RIOreference_operations_Item (value: RIOreference_operations_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RIOreference_operations_Item) { _cached_encoder_for_RIOreference_operations_Item = function (value: RIOreference_operations_Item, elGetter: $.ASN1Encoder<RIOreference_operations_Item>): _Element {
+    if (!_cached_encoder_for_RIOreference_operations_Item) { _cached_encoder_for_RIOreference_operations_Item = function (value: RIOreference_operations_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodePrintableString, $.BER)(value.recordId, $.BER),

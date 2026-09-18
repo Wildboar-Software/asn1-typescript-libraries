@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
     PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +22,10 @@ import { ParameterOffers, _decode_ParameterOffers, _encode_ParameterOffers } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Offer-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Offer-Item ::= SEQUENCE {
+ *     name    PrintableString,
+ *     offers  ParameterOffers
+ * }
  * ```
  * 
  * @class
@@ -175,10 +123,8 @@ function _decode_Offer_Item (el: _Element): Offer_Item {
     }
     sequence[0].name = "name";
     sequence[1].name = "offers";
-    let name!: PrintableString;
-    let offers!: ParameterOffers;
-    name = $._decodePrintableString(sequence[0]);
-    offers = _decode_ParameterOffers(sequence[1]);
+    const name: PrintableString = $._decodePrintableString(sequence[0]);
+    const offers: ParameterOffers = _decode_ParameterOffers(sequence[1]);
     return new Offer_Item(
         name,
         offers,
@@ -199,7 +145,7 @@ let _cached_encoder_for_Offer_Item: $.ASN1Encoder<Offer_Item> | null = null;
  */
 export
 function _encode_Offer_Item (value: Offer_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Offer_Item) { _cached_encoder_for_Offer_Item = function (value: Offer_Item, elGetter: $.ASN1Encoder<Offer_Item>): _Element {
+    if (!_cached_encoder_for_Offer_Item) { _cached_encoder_for_Offer_Item = function (value: Offer_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodePrintableString(value.name, $.BER),

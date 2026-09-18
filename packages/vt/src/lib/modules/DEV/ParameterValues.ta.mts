@@ -1,61 +1,9 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
     BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
     PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,15 +14,15 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AccessRuleValue, AccessRuleValue_wavar /* IMPORTED_LONG_NAMED_INTEGER */, wavar /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_waci /* IMPORTED_LONG_NAMED_INTEGER */, waci /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_waca /* IMPORTED_LONG_NAMED_INTEGER */, waca /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_nsac /* IMPORTED_LONG_NAMED_INTEGER */, nsac /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_wavar_and_waci /* IMPORTED_LONG_NAMED_INTEGER */, wavar_and_waci /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_wavar_and_waca /* IMPORTED_LONG_NAMED_INTEGER */, wavar_and_waca /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_no_access /* IMPORTED_LONG_NAMED_INTEGER */, no_access /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AccessRuleValue, _encode_AccessRuleValue } from "../CSS/AccessRuleValue.ta.mjs";
+import { _decode_AccessRuleValue, _encode_AccessRuleValue, type AccessRuleValue } from "../CSS/AccessRuleValue.ta.mjs";
 // export { AccessRuleValue, AccessRuleValue_wavar /* IMPORTED_LONG_NAMED_INTEGER */, wavar /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_waci /* IMPORTED_LONG_NAMED_INTEGER */, waci /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_waca /* IMPORTED_LONG_NAMED_INTEGER */, waca /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_nsac /* IMPORTED_LONG_NAMED_INTEGER */, nsac /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_wavar_and_waci /* IMPORTED_LONG_NAMED_INTEGER */, wavar_and_waci /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_wavar_and_waca /* IMPORTED_LONG_NAMED_INTEGER */, wavar_and_waca /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_no_access /* IMPORTED_LONG_NAMED_INTEGER */, no_access /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AccessRuleValue, _encode_AccessRuleValue } from "../CSS/AccessRuleValue.ta.mjs";
-import { ParameterValues_defaultCOPriority, ParameterValues_defaultCOPriority_normal /* IMPORTED_LONG_NAMED_INTEGER */, normal /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_defaultCOPriority_high /* IMPORTED_LONG_NAMED_INTEGER */, high /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_defaultCOPriority_urgent /* IMPORTED_LONG_NAMED_INTEGER */, urgent /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ParameterValues_defaultCOPriority, _encode_ParameterValues_defaultCOPriority } from "../DEV/ParameterValues-defaultCOPriority.ta.mjs";
+import { ParameterValues_defaultCOPriority, _decode_ParameterValues_defaultCOPriority, _encode_ParameterValues_defaultCOPriority } from "../DEV/ParameterValues-defaultCOPriority.ta.mjs";
 // export { ParameterValues_defaultCOPriority, ParameterValues_defaultCOPriority_normal /* IMPORTED_LONG_NAMED_INTEGER */, normal /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_defaultCOPriority_high /* IMPORTED_LONG_NAMED_INTEGER */, high /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_defaultCOPriority_urgent /* IMPORTED_LONG_NAMED_INTEGER */, urgent /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ParameterValues_defaultCOPriority, _encode_ParameterValues_defaultCOPriority } from "../DEV/ParameterValues-defaultCOPriority.ta.mjs";
-import { CompoundRepertoireValue, _decode_CompoundRepertoireValue, _encode_CompoundRepertoireValue } from "../CDS/CompoundRepertoireValue.ta.mjs";
+import { _decode_CompoundRepertoireValue, _encode_CompoundRepertoireValue, CompoundRepertoireValue } from "../CDS/CompoundRepertoireValue.ta.mjs";
 // export { CompoundRepertoireValue, _decode_CompoundRepertoireValue, _encode_CompoundRepertoireValue } from "../CDS/CompoundRepertoireValue.ta.mjs";
-import { CompoundEmphasisValue, _decode_CompoundEmphasisValue, _encode_CompoundEmphasisValue } from "../CDS/CompoundEmphasisValue.ta.mjs";
+import { _decode_CompoundEmphasisValue, _encode_CompoundEmphasisValue, type CompoundEmphasisValue } from "../CDS/CompoundEmphasisValue.ta.mjs";
 // export { CompoundEmphasisValue, _decode_CompoundEmphasisValue, _encode_CompoundEmphasisValue } from "../CDS/CompoundEmphasisValue.ta.mjs";
-import { CompoundColourValue, _decode_CompoundColourValue, _encode_CompoundColourValue } from "../CDS/CompoundColourValue.ta.mjs";
+import { _decode_CompoundColourValue, _encode_CompoundColourValue, CompoundColourValue } from "../CDS/CompoundColourValue.ta.mjs";
 // export { CompoundColourValue, _decode_CompoundColourValue, _encode_CompoundColourValue } from "../CDS/CompoundColourValue.ta.mjs";
 import { ParameterValues_terminationEventList_Item, _decode_ParameterValues_terminationEventList_Item, _encode_ParameterValues_terminationEventList_Item } from "../DEV/ParameterValues-terminationEventList-Item.ta.mjs";
 // export { ParameterValues_terminationEventList_Item, _decode_ParameterValues_terminationEventList_Item, _encode_ParameterValues_terminationEventList_Item } from "../DEV/ParameterValues-terminationEventList-Item.ta.mjs";
@@ -151,7 +99,7 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly defaultCOaccess: OPTIONAL<CSS.AccessRuleValue>,
+        readonly defaultCOaccess: OPTIONAL<AccessRuleValue>,
         /**
          * @summary `defaultCOPriority`.
          * @public
@@ -163,25 +111,25 @@ class ParameterValues {
          * @public
          * @readonly
          */
-        readonly deviceRepertoireAssignment: OPTIONAL<CDS.CompoundRepertoireValue>,
+        readonly deviceRepertoireAssignment: OPTIONAL<CompoundRepertoireValue>,
         /**
          * @summary `deviceEmphasisAssignment`.
          * @public
          * @readonly
          */
-        readonly deviceEmphasisAssignment: OPTIONAL<CDS.CompoundEmphasisValue>,
+        readonly deviceEmphasisAssignment: OPTIONAL<CompoundEmphasisValue>,
         /**
          * @summary `deviceForegroundAssignment`.
          * @public
          * @readonly
          */
-        readonly deviceForegroundAssignment: OPTIONAL<CDS.CompoundColourValue>,
+        readonly deviceForegroundAssignment: OPTIONAL<CompoundColourValue>,
         /**
          * @summary `deviceBackgroundAssignment`.
          * @public
          * @readonly
          */
-        readonly deviceBackgroundAssignment: OPTIONAL<CDS.CompoundColourValue>,
+        readonly deviceBackgroundAssignment: OPTIONAL<CompoundColourValue>,
         /**
          * @summary `minimumXarrayLength`.
          * @public
@@ -321,12 +269,12 @@ let _cached_decoder_for_ParameterValues: $.ASN1Decoder<ParameterValues> | null =
 export
 function _decode_ParameterValues (el: _Element): ParameterValues {
     if (!_cached_decoder_for_ParameterValues) { _cached_decoder_for_ParameterValues = function (el: _Element): ParameterValues {
-    let defaultCOaccess: OPTIONAL<CSS.AccessRuleValue>;
+    let defaultCOaccess: OPTIONAL<AccessRuleValue>;
     let defaultCOPriority: OPTIONAL<ParameterValues_defaultCOPriority>;
-    let deviceRepertoireAssignment: OPTIONAL<CDS.CompoundRepertoireValue>;
-    let deviceEmphasisAssignment: OPTIONAL<CDS.CompoundEmphasisValue>;
-    let deviceForegroundAssignment: OPTIONAL<CDS.CompoundColourValue>;
-    let deviceBackgroundAssignment: OPTIONAL<CDS.CompoundColourValue>;
+    let deviceRepertoireAssignment: OPTIONAL<CompoundRepertoireValue>;
+    let deviceEmphasisAssignment: OPTIONAL<CompoundEmphasisValue>;
+    let deviceForegroundAssignment: OPTIONAL<CompoundColourValue>;
+    let deviceBackgroundAssignment: OPTIONAL<CompoundColourValue>;
     let minimumXarrayLength: OPTIONAL<INTEGER>;
     let minimumYarrayLength: OPTIONAL<INTEGER>;
     let deviceControlObjectNames: OPTIONAL<PrintableString[]>;
@@ -337,12 +285,12 @@ function _decode_ParameterValues (el: _Element): ParameterValues {
     let defaultCOtriggerSelected: OPTIONAL<BOOLEAN>;
     let defaultCOinitialValue: OPTIONAL<ParameterValues_defaultCOinitialValue>;
     const callbacks: $.DecodingMap = {
-        "defaultCOaccess": (_el: _Element): void => { defaultCOaccess = $._decode_implicit<CSS.AccessRuleValue>(() => CSS._decode_AccessRuleValue)(_el); },
+        "defaultCOaccess": (_el: _Element): void => { defaultCOaccess = $._decode_implicit<AccessRuleValue>(() => _decode_AccessRuleValue)(_el); },
         "defaultCOPriority": (_el: _Element): void => { defaultCOPriority = $._decode_implicit<ParameterValues_defaultCOPriority>(() => _decode_ParameterValues_defaultCOPriority)(_el); },
-        "deviceRepertoireAssignment": (_el: _Element): void => { deviceRepertoireAssignment = $._decode_implicit<CDS.CompoundRepertoireValue>(() => CDS._decode_CompoundRepertoireValue)(_el); },
-        "deviceEmphasisAssignment": (_el: _Element): void => { deviceEmphasisAssignment = $._decode_implicit<CDS.CompoundEmphasisValue>(() => CDS._decode_CompoundEmphasisValue)(_el); },
-        "deviceForegroundAssignment": (_el: _Element): void => { deviceForegroundAssignment = $._decode_implicit<CDS.CompoundColourValue>(() => CDS._decode_CompoundColourValue)(_el); },
-        "deviceBackgroundAssignment": (_el: _Element): void => { deviceBackgroundAssignment = $._decode_implicit<CDS.CompoundColourValue>(() => CDS._decode_CompoundColourValue)(_el); },
+        "deviceRepertoireAssignment": (_el: _Element): void => { deviceRepertoireAssignment = $._decode_implicit<CompoundRepertoireValue>(() => _decode_CompoundRepertoireValue)(_el); },
+        "deviceEmphasisAssignment": (_el: _Element): void => { deviceEmphasisAssignment = $._decode_implicit<CompoundEmphasisValue>(() => _decode_CompoundEmphasisValue)(_el); },
+        "deviceForegroundAssignment": (_el: _Element): void => { deviceForegroundAssignment = $._decode_implicit<CompoundColourValue>(() => _decode_CompoundColourValue)(_el); },
+        "deviceBackgroundAssignment": (_el: _Element): void => { deviceBackgroundAssignment = $._decode_implicit<CompoundColourValue>(() => _decode_CompoundColourValue)(_el); },
         "minimumXarrayLength": (_el: _Element): void => { minimumXarrayLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "minimumYarrayLength": (_el: _Element): void => { minimumYarrayLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "deviceControlObjectNames": (_el: _Element): void => { deviceControlObjectNames = $._decode_implicit<PrintableString[]>(() => $._decodeSequenceOf<PrintableString>(() => $._decodePrintableString))(_el); },
@@ -391,15 +339,15 @@ let _cached_encoder_for_ParameterValues: $.ASN1Encoder<ParameterValues> | null =
  */
 export
 function _encode_ParameterValues (value: ParameterValues, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterValues) { _cached_encoder_for_ParameterValues = function (value: ParameterValues, elGetter: $.ASN1Encoder<ParameterValues>): _Element {
+    if (!_cached_encoder_for_ParameterValues) { _cached_encoder_for_ParameterValues = function (value: ParameterValues): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.defaultCOaccess === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => CSS._encode_AccessRuleValue, $.BER)(value.defaultCOaccess, $.BER)),
+            /* IF_ABSENT  */ ((value.defaultCOaccess === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_AccessRuleValue, $.BER)(value.defaultCOaccess, $.BER)),
             /* IF_ABSENT  */ ((value.defaultCOPriority === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_ParameterValues_defaultCOPriority, $.BER)(value.defaultCOPriority, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceRepertoireAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => CDS._encode_CompoundRepertoireValue, $.BER)(value.deviceRepertoireAssignment, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceEmphasisAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => CDS._encode_CompoundEmphasisValue, $.BER)(value.deviceEmphasisAssignment, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceForegroundAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => CDS._encode_CompoundColourValue, $.BER)(value.deviceForegroundAssignment, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceBackgroundAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => CDS._encode_CompoundColourValue, $.BER)(value.deviceBackgroundAssignment, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceRepertoireAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_CompoundRepertoireValue, $.BER)(value.deviceRepertoireAssignment, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceEmphasisAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_CompoundEmphasisValue, $.BER)(value.deviceEmphasisAssignment, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceForegroundAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_CompoundColourValue, $.BER)(value.deviceForegroundAssignment, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceBackgroundAssignment === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => _encode_CompoundColourValue, $.BER)(value.deviceBackgroundAssignment, $.BER)),
             /* IF_ABSENT  */ ((value.minimumXarrayLength === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => $._encodeInteger, $.BER)(value.minimumXarrayLength, $.BER)),
             /* IF_ABSENT  */ ((value.minimumYarrayLength === undefined) ? undefined : $._encode_implicit(_TagClass.context, 7, () => $._encodeInteger, $.BER)(value.minimumYarrayLength, $.BER)),
             /* IF_ABSENT  */ ((value.deviceControlObjectNames === undefined) ? undefined : $._encode_implicit(_TagClass.context, 8, () => $._encodeSequenceOf<PrintableString>(() => $._encodePrintableString, $.BER), $.BER)(value.deviceControlObjectNames, $.BER)),

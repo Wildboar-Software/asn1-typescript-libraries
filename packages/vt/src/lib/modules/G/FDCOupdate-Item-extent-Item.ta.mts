@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +21,10 @@ import { MeasurePair, _decode_MeasurePair, _encode_MeasurePair } from "../G/Meas
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FDCOupdate-Item-extent-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FDCOupdate-Item-extent-Item ::= SEQUENCE {
+ *     position  [0] IMPLICIT MeasurePair,
+ *     dimension [1] IMPLICIT MeasurePair
+ * }
  * ```
  * 
  * @class
@@ -175,10 +122,8 @@ function _decode_FDCOupdate_Item_extent_Item (el: _Element): FDCOupdate_Item_ext
     }
     sequence[0].name = "position";
     sequence[1].name = "dimension";
-    let position!: MeasurePair;
-    let dimension!: MeasurePair;
-    position = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[0]);
-    dimension = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[1]);
+    const position: MeasurePair = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[0]);
+    const dimension: MeasurePair = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[1]);
     return new FDCOupdate_Item_extent_Item(
         position,
         dimension,
@@ -199,7 +144,7 @@ let _cached_encoder_for_FDCOupdate_Item_extent_Item: $.ASN1Encoder<FDCOupdate_It
  */
 export
 function _encode_FDCOupdate_Item_extent_Item (value: FDCOupdate_Item_extent_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FDCOupdate_Item_extent_Item) { _cached_encoder_for_FDCOupdate_Item_extent_Item = function (value: FDCOupdate_Item_extent_Item, elGetter: $.ASN1Encoder<FDCOupdate_Item_extent_Item>): _Element {
+    if (!_cached_encoder_for_FDCOupdate_Item_extent_Item) { _cached_encoder_for_FDCOupdate_Item_extent_Item = function (value: FDCOupdate_Item_extent_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_MeasurePair, $.BER)(value.position, $.BER),

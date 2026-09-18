@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
     PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -209,10 +154,8 @@ function _decode_COupdate (el: _Element): COupdate {
     }
     sequence[0].name = "coName";
     sequence[1].name = "objectUpdate";
-    let coName!: PrintableString;
-    let objectUpdate!: COupdate_objectUpdate;
-    coName = $._decodePrintableString(sequence[0]);
-    objectUpdate = _decode_COupdate_objectUpdate(sequence[1]);
+    const coName: PrintableString = $._decodePrintableString(sequence[0]);
+    const objectUpdate: COupdate_objectUpdate = _decode_COupdate_objectUpdate(sequence[1]);
     return new COupdate(
         coName,
         objectUpdate,
@@ -233,7 +176,7 @@ let _cached_encoder_for_COupdate: $.ASN1Encoder<COupdate> | null = null;
  */
 export
 function _encode_COupdate (value: COupdate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_COupdate) { _cached_encoder_for_COupdate = function (value: COupdate, elGetter: $.ASN1Encoder<COupdate>): _Element {
+    if (!_cached_encoder_for_COupdate) { _cached_encoder_for_COupdate = function (value: COupdate): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodePrintableString(value.coName, $.BER),

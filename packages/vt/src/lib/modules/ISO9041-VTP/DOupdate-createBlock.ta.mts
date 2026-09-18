@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Block, _decode_Block, _encode_Block } from "../G/Block.ta.mjs";
+import { _decode_Block, _encode_Block, Block } from "../G/Block.ta.mjs";
 // export { Block, _decode_Block, _encode_Block } from "../G/Block.ta.mjs";
-import { MeasurePair, _decode_MeasurePair, _encode_MeasurePair } from "../G/MeasurePair.ta.mjs";
+import { _decode_MeasurePair, _encode_MeasurePair, MeasurePair } from "../G/MeasurePair.ta.mjs";
 // export { MeasurePair, _decode_MeasurePair, _encode_MeasurePair } from "../G/MeasurePair.ta.mjs";
 
 
@@ -79,7 +23,11 @@ import { MeasurePair, _decode_MeasurePair, _encode_MeasurePair } from "../G/Meas
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-createBlock ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-createBlock ::= SEQUENCE {
+ *     blockPosition [0] IMPLICIT G.Block,
+ *     origin        [1] IMPLICIT G.MeasurePair,
+ *     dimension     [2] IMPLICIT G.MeasurePair
+ * }
  * ```
  * 
  * @class
@@ -92,19 +40,19 @@ class DOupdate_createBlock {
          * @public
          * @readonly
          */
-        readonly blockPosition: G.Block,
+        readonly blockPosition: Block,
         /**
          * @summary `origin`.
          * @public
          * @readonly
          */
-        readonly origin: G.MeasurePair,
+        readonly origin: MeasurePair,
         /**
          * @summary `dimension`.
          * @public
          * @readonly
          */
-        readonly dimension: G.MeasurePair
+        readonly dimension: MeasurePair
     ) {}
 
     /**
@@ -185,12 +133,9 @@ function _decode_DOupdate_createBlock (el: _Element): DOupdate_createBlock {
     sequence[0].name = "blockPosition";
     sequence[1].name = "origin";
     sequence[2].name = "dimension";
-    let blockPosition!: G.Block;
-    let origin!: G.MeasurePair;
-    let dimension!: G.MeasurePair;
-    blockPosition = $._decode_implicit<G.Block>(() => G._decode_Block)(sequence[0]);
-    origin = $._decode_implicit<G.MeasurePair>(() => G._decode_MeasurePair)(sequence[1]);
-    dimension = $._decode_implicit<G.MeasurePair>(() => G._decode_MeasurePair)(sequence[2]);
+    const blockPosition: Block = $._decode_implicit<Block>(() => _decode_Block)(sequence[0]);
+    const origin: MeasurePair = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[1]);
+    const dimension: MeasurePair = $._decode_implicit<MeasurePair>(() => _decode_MeasurePair)(sequence[2]);
     return new DOupdate_createBlock(
         blockPosition,
         origin,
@@ -212,12 +157,12 @@ let _cached_encoder_for_DOupdate_createBlock: $.ASN1Encoder<DOupdate_createBlock
  */
 export
 function _encode_DOupdate_createBlock (value: DOupdate_createBlock, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DOupdate_createBlock) { _cached_encoder_for_DOupdate_createBlock = function (value: DOupdate_createBlock, elGetter: $.ASN1Encoder<DOupdate_createBlock>): _Element {
+    if (!_cached_encoder_for_DOupdate_createBlock) { _cached_encoder_for_DOupdate_createBlock = function (value: DOupdate_createBlock): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => G._encode_Block, $.BER)(value.blockPosition, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => G._encode_MeasurePair, $.BER)(value.origin, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => G._encode_MeasurePair, $.BER)(value.dimension, $.BER)
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_Block, $.BER)(value.blockPosition, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MeasurePair, $.BER)(value.origin, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_MeasurePair, $.BER)(value.dimension, $.BER)
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

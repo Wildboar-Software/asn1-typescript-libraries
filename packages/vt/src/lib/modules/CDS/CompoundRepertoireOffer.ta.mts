@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { RepertoireFontOffer, _decode_RepertoireFontOffer, _encode_RepertoireFontOffer } from "../CDS/RepertoireFontOffer.ta.mjs";
 // export { RepertoireFontOffer, _decode_RepertoireFontOffer, _encode_RepertoireFontOffer } from "../CDS/RepertoireFontOffer.ta.mjs";
@@ -95,7 +40,7 @@ class CompoundRepertoireOffer {
          * @public
          * @readonly
          */
-        readonly repertoireCapability: OPTIONAL<G.IntegerOffer>,
+        readonly repertoireCapability: OPTIONAL<IntegerOffer>,
         /**
          * @summary `fontOffers`.
          * @public
@@ -174,10 +119,10 @@ let _cached_decoder_for_CompoundRepertoireOffer: $.ASN1Decoder<CompoundRepertoir
 export
 function _decode_CompoundRepertoireOffer (el: _Element): CompoundRepertoireOffer {
     if (!_cached_decoder_for_CompoundRepertoireOffer) { _cached_decoder_for_CompoundRepertoireOffer = function (el: _Element): CompoundRepertoireOffer {
-    let repertoireCapability: OPTIONAL<G.IntegerOffer>;
+    let repertoireCapability: OPTIONAL<IntegerOffer>;
     let fontOffers: OPTIONAL<RepertoireFontOffer[]>;
     const callbacks: $.DecodingMap = {
-        "repertoireCapability": (_el: _Element): void => { repertoireCapability = $._decode_implicit<G.IntegerOffer>(() => G._decode_IntegerOffer)(_el); },
+        "repertoireCapability": (_el: _Element): void => { repertoireCapability = $._decode_implicit<IntegerOffer>(() => _decode_IntegerOffer)(_el); },
         "fontOffers": (_el: _Element): void => { fontOffers = $._decode_implicit<RepertoireFontOffer[]>(() => $._decodeSequenceOf<RepertoireFontOffer>(() => _decode_RepertoireFontOffer))(_el); }
     };
     $._parse_sequence(el, callbacks,
@@ -205,10 +150,10 @@ let _cached_encoder_for_CompoundRepertoireOffer: $.ASN1Encoder<CompoundRepertoir
  */
 export
 function _encode_CompoundRepertoireOffer (value: CompoundRepertoireOffer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompoundRepertoireOffer) { _cached_encoder_for_CompoundRepertoireOffer = function (value: CompoundRepertoireOffer, elGetter: $.ASN1Encoder<CompoundRepertoireOffer>): _Element {
+    if (!_cached_encoder_for_CompoundRepertoireOffer) { _cached_encoder_for_CompoundRepertoireOffer = function (value: CompoundRepertoireOffer): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.repertoireCapability === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => G._encode_IntegerOffer, $.BER)(value.repertoireCapability, $.BER)),
+            /* IF_ABSENT  */ ((value.repertoireCapability === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_IntegerOffer, $.BER)(value.repertoireCapability, $.BER)),
             /* IF_ABSENT  */ ((value.fontOffers === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeSequenceOf<RepertoireFontOffer>(() => _encode_RepertoireFontOffer, $.BER), $.BER)(value.fontOffers, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,13 +12,13 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FDCOupdate_Item_status, FDCOupdate_Item_status_active /* IMPORTED_LONG_NAMED_INTEGER */, active /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_status_inactive /* IMPORTED_LONG_NAMED_INTEGER */, inactive /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_status_void /* IMPORTED_LONG_NAMED_INTEGER */, void_ /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_FDCOupdate_Item_status, _encode_FDCOupdate_Item_status } from "../G/FDCOupdate-Item-status.ta.mjs";
+import { FDCOupdate_Item_status, _decode_FDCOupdate_Item_status, _encode_FDCOupdate_Item_status } from "../G/FDCOupdate-Item-status.ta.mjs";
 // export { FDCOupdate_Item_status, FDCOupdate_Item_status_active /* IMPORTED_LONG_NAMED_INTEGER */, active /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_status_inactive /* IMPORTED_LONG_NAMED_INTEGER */, inactive /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_status_void /* IMPORTED_LONG_NAMED_INTEGER */, void_ /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_FDCOupdate_Item_status, _encode_FDCOupdate_Item_status } from "../G/FDCOupdate-Item-status.ta.mjs";
 import { FDCOupdate_Item_extent_Item, _decode_FDCOupdate_Item_extent_Item, _encode_FDCOupdate_Item_extent_Item } from "../G/FDCOupdate-Item-extent-Item.ta.mjs";
 // export { FDCOupdate_Item_extent_Item, _decode_FDCOupdate_Item_extent_Item, _encode_FDCOupdate_Item_extent_Item } from "../G/FDCOupdate-Item-extent-Item.ta.mjs";
 import { FDCOupdate_Item_attributes, _decode_FDCOupdate_Item_attributes, _encode_FDCOupdate_Item_attributes } from "../G/FDCOupdate-Item-attributes.ta.mjs";
 // export { FDCOupdate_Item_attributes, _decode_FDCOupdate_Item_attributes, _encode_FDCOupdate_Item_attributes } from "../G/FDCOupdate-Item-attributes.ta.mjs";
-import { FDCOupdate_Item_transmissionPolicy, FDCOupdate_Item_transmissionPolicy_all /* IMPORTED_LONG_NAMED_INTEGER */, all /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_transmissionPolicy_modifiedAllContent /* IMPORTED_LONG_NAMED_INTEGER */, modifiedAllContent /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_transmissionPolicy_modifiedPart /* IMPORTED_LONG_NAMED_INTEGER */, modifiedPart /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_transmissionPolicy_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_transmissionPolicy_refTPCO /* IMPORTED_LONG_NAMED_INTEGER */, refTPCO /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_FDCOupdate_Item_transmissionPolicy, _encode_FDCOupdate_Item_transmissionPolicy } from "../G/FDCOupdate-Item-transmissionPolicy.ta.mjs";
+import { FDCOupdate_Item_transmissionPolicy, _decode_FDCOupdate_Item_transmissionPolicy, _encode_FDCOupdate_Item_transmissionPolicy } from "../G/FDCOupdate-Item-transmissionPolicy.ta.mjs";
 // export { FDCOupdate_Item_transmissionPolicy, FDCOupdate_Item_transmissionPolicy_all /* IMPORTED_LONG_NAMED_INTEGER */, all /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_transmissionPolicy_modifiedAllContent /* IMPORTED_LONG_NAMED_INTEGER */, modifiedAllContent /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_transmissionPolicy_modifiedPart /* IMPORTED_LONG_NAMED_INTEGER */, modifiedPart /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_transmissionPolicy_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_transmissionPolicy_refTPCO /* IMPORTED_LONG_NAMED_INTEGER */, refTPCO /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_FDCOupdate_Item_transmissionPolicy, _encode_FDCOupdate_Item_transmissionPolicy } from "../G/FDCOupdate-Item-transmissionPolicy.ta.mjs";
 import { EntryControl, _decode_EntryControl, _encode_EntryControl } from "../G/EntryControl.ta.mjs";
 // export { EntryControl, _decode_EntryControl, _encode_EntryControl } from "../G/EntryControl.ta.mjs";
@@ -85,7 +31,38 @@ import { EntryControl, _decode_EntryControl, _encode_EntryControl } from "../G/E
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FDCOupdate-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FDCOupdate-Item ::= SEQUENCE {
+ *     labelFCoordinate    [0] IMPLICIT INTEGER,
+ *     labelZCoordinate    [1] IMPLICIT INTEGER OPTIONAL,
+ *     status              [2] IMPLICIT INTEGER {
+ *         active   (0),
+ *         inactive (1),
+ *         void     (2)
+ *     } OPTIONAL,
+ *     extent              [3] IMPLICIT SEQUENCE OF SEQUENCE {
+ *         position  [0] IMPLICIT MeasurePair,
+ *         dimension [1] IMPLICIT MeasurePair
+ *     } OPTIONAL,
+ *     attributes          [4] IMPLICIT SEQUENCE {
+ *         graphicCharacterRepertoire [0] IMPLICIT INTEGER OPTIONAL,
+ *         foregroundColour           [1] IMPLICIT INTEGER OPTIONAL,
+ *         backgroundColour           [2] IMPLICIT INTEGER OPTIONAL,
+ *         emphasis                   [3] IMPLICIT PrintableString OPTIONAL,
+ *         font                       [4] IMPLICIT INTEGER OPTIONAL
+ *         -- value of zero for any of the integer items in attributes implies the "null"value,
+ *     } OPTIONAL,
+ *     nextField           [5] IMPLICIT INTEGER OPTIONAL,
+ *     previousField       [6] IMPLICIT INTEGER OPTIONAL,
+ *     -- for tags 5 & 6, a zero value implies end of navigation path; a negative value implies "void"
+ *     transmissionPolicy  [7] IMPLICIT INTEGER {
+ *         all                (0),
+ *         modifiedAllContent (1),
+ *         modifiedPart       (2),
+ *         none               (3),
+ *         refTPCO            (4)
+ *     } OPTIONAL,
+ *     entryControlList    [8] IMPLICIT SEQUENCE OF EntryControl OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -278,7 +255,7 @@ let _cached_encoder_for_FDCOupdate_Item: $.ASN1Encoder<FDCOupdate_Item> | null =
  */
 export
 function _encode_FDCOupdate_Item (value: FDCOupdate_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FDCOupdate_Item) { _cached_encoder_for_FDCOupdate_Item = function (value: FDCOupdate_Item, elGetter: $.ASN1Encoder<FDCOupdate_Item>): _Element {
+    if (!_cached_encoder_for_FDCOupdate_Item) { _cached_encoder_for_FDCOupdate_Item = function (value: FDCOupdate_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.labelFCoordinate, $.BER),

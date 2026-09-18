@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { ColourAssignment, _decode_ColourAssignment, _encode_ColourAssignment } from "../CDS/ColourAssignment.ta.mjs";
 // export { ColourAssignment, _decode_ColourAssignment, _encode_ColourAssignment } from "../CDS/ColourAssignment.ta.mjs";
@@ -95,7 +40,7 @@ class CompoundColourOffer {
          * @public
          * @readonly
          */
-        readonly colourCapability: OPTIONAL<G.IntegerOffer>,
+        readonly colourCapability: OPTIONAL<IntegerOffer>,
         /**
          * @summary `colourValues`.
          * @public
@@ -174,10 +119,10 @@ let _cached_decoder_for_CompoundColourOffer: $.ASN1Decoder<CompoundColourOffer> 
 export
 function _decode_CompoundColourOffer (el: _Element): CompoundColourOffer {
     if (!_cached_decoder_for_CompoundColourOffer) { _cached_decoder_for_CompoundColourOffer = function (el: _Element): CompoundColourOffer {
-    let colourCapability: OPTIONAL<G.IntegerOffer>;
+    let colourCapability: OPTIONAL<IntegerOffer>;
     let colourValues: OPTIONAL<ColourAssignment[]>;
     const callbacks: $.DecodingMap = {
-        "colourCapability": (_el: _Element): void => { colourCapability = $._decode_implicit<G.IntegerOffer>(() => G._decode_IntegerOffer)(_el); },
+        "colourCapability": (_el: _Element): void => { colourCapability = $._decode_implicit<IntegerOffer>(() => _decode_IntegerOffer)(_el); },
         "colourValues": (_el: _Element): void => { colourValues = $._decode_implicit<ColourAssignment[]>(() => $._decodeSequenceOf<ColourAssignment>(() => _decode_ColourAssignment))(_el); }
     };
     $._parse_sequence(el, callbacks,
@@ -205,10 +150,10 @@ let _cached_encoder_for_CompoundColourOffer: $.ASN1Encoder<CompoundColourOffer> 
  */
 export
 function _encode_CompoundColourOffer (value: CompoundColourOffer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompoundColourOffer) { _cached_encoder_for_CompoundColourOffer = function (value: CompoundColourOffer, elGetter: $.ASN1Encoder<CompoundColourOffer>): _Element {
+    if (!_cached_encoder_for_CompoundColourOffer) { _cached_encoder_for_CompoundColourOffer = function (value: CompoundColourOffer): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.colourCapability === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => G._encode_IntegerOffer, $.BER)(value.colourCapability, $.BER)),
+            /* IF_ABSENT  */ ((value.colourCapability === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_IntegerOffer, $.BER)(value.colourCapability, $.BER)),
             /* IF_ABSENT  */ ((value.colourValues === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeSequenceOf<ColourAssignment>(() => _encode_ColourAssignment, $.BER), $.BER)(value.colourValues, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

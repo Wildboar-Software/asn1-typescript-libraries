@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
     BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -89,7 +36,38 @@ import { RIOupdate, _decode_RIOupdate, _encode_RIOupdate } from "../G/RIOupdate.
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * COupdate-objectUpdate ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * COupdate-objectUpdate ::= CHOICE {
+ *     characterUpdate     [0] IMPLICIT OCTET STRING,
+ *     booleanUpdate       [1] IMPLICIT SEQUENCE {
+ *         values  [0] IMPLICIT BIT STRING,
+ *         mask    [1] IMPLICIT BIT STRING OPTIONAL
+ *     },
+ *     -- If mask is omitted, a bit string with the same length as "values" and
+ *     -- a content of all ones is assumed. When mask is present a one bit means
+ *     -- that the corresponding bit in value is to be used.
+ *     symbolicUpdate      [2] IMPLICIT INTEGER,
+ *     integerUpdate       [3] IMPLICIT INTEGER,
+ *     bitStringUpdate     [4] IMPLICIT BIT STRING,
+ *     multiElement        [5] IMPLICIT SEQUENCE OF SEQUENCE {
+ *         identifier INTEGER,
+ *         update CHOICE {
+ *             characterUpdate [0] IMPLICIT OCTET STRING,
+ *             booleanUpdate   [1] IMPLICIT SEQUENCE {
+ *                 values  [0] IMPLICIT BIT STRING,
+ *                 mask    [1] IMPLICIT BIT STRING OPTIONAL
+ *             }, -- See note under mask in G.COUpdate
+ *             symbolicUpdate  [2] IMPLICIT INTEGER,
+ *             integerUpdate   [3] IMPLICIT INTEGER,
+ *             bitStringUpdate [4] IMPLICIT BIT STRING
+ *         }
+ *     },
+ *     cco                 [6]  IMPLICIT CCOupdate,
+ *     fdco                [7]  IMPLICIT FDCOupdate,
+ *     feico               [8]  IMPLICIT FEICOupdate,
+ *     fepco               [9]  IMPLICIT FEPCOupdate,
+ *     rio                 [10] IMPLICIT RIOupdate,
+ *     other               [11] ANY
+ * }
  * ```
  */
 export
@@ -105,7 +83,7 @@ type COupdate_objectUpdate =
     | { feico: FEICOupdate } /* CHOICE_ALT_ROOT */
     | { fepco: FEPCOupdate } /* CHOICE_ALT_ROOT */
     | { rio: RIOupdate } /* CHOICE_ALT_ROOT */
-    | /* FIXME: other CHOICE_ALT_ROOT */;
+    | { other: _Element } /* CHOICE_ALT_ROOT */;
 
 let _cached_decoder_for_COupdate_objectUpdate: $.ASN1Decoder<COupdate_objectUpdate> | null = null;
 
@@ -129,7 +107,7 @@ function _decode_COupdate_objectUpdate (el: _Element): COupdate_objectUpdate {
     "CONTEXT 8": [ "feico", $._decode_implicit<FEICOupdate>(() => _decode_FEICOupdate) ],
     "CONTEXT 9": [ "fepco", $._decode_implicit<FEPCOupdate>(() => _decode_FEPCOupdate) ],
     "CONTEXT 10": [ "rio", $._decode_implicit<RIOupdate>(() => _decode_RIOupdate) ],
-    "// FIXME: COULD_NOT_COMPILE_TYPE_DECODER": [ "other", undefined ]
+    "CONTEXT 11": [ "other", $._decode_explicit<_Element>(() => $._decodeAny) ]
 }); }
     return _cached_decoder_for_COupdate_objectUpdate(el);
 }
@@ -157,7 +135,7 @@ function _encode_COupdate_objectUpdate (value: COupdate_objectUpdate, elGetter: 
     "feico": $._encode_implicit(_TagClass.context, 8, () => _encode_FEICOupdate, $.BER),
     "fepco": $._encode_implicit(_TagClass.context, 9, () => _encode_FEPCOupdate, $.BER),
     "rio": $._encode_implicit(_TagClass.context, 10, () => _encode_RIOupdate, $.BER),
-    "other": $._encode_implicit(_TagClass.context, 11, () => $._encodeAny, $.BER),
+    "other": $._encode_explicit(_TagClass.context, 11, () => $._encodeAny, $.BER),
 }, $.BER); }
     return _cached_encoder_for_COupdate_objectUpdate(value, elGetter);
 }

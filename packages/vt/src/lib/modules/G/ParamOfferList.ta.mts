@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParamOfferList_deliveryControl, ParamOfferList_deliveryControl_none /* IMPORTED_LONG_NAMED_BIT */, none /* IMPORTED_SHORT_NAMED_BIT */, ParamOfferList_deliveryControl_simple /* IMPORTED_LONG_NAMED_BIT */, simple /* IMPORTED_SHORT_NAMED_BIT */, ParamOfferList_deliveryControl_quarantine /* IMPORTED_LONG_NAMED_BIT */, quarantine /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParamOfferList_deliveryControl, _encode_ParamOfferList_deliveryControl } from "../G/ParamOfferList-deliveryControl.ta.mjs";
+import { ParamOfferList_deliveryControl, _decode_ParamOfferList_deliveryControl, _encode_ParamOfferList_deliveryControl } from "../G/ParamOfferList-deliveryControl.ta.mjs";
+import { type Offer as CDS_Offer, _decode_Offer as CDS__decode_Offer, _encode_Offer as CDS__encode_Offer } from "../CDS/Offer.ta.mjs";
+import { type Offer as CSS_Offer, _decode_Offer as CSS__decode_Offer, _encode_Offer as CSS__encode_Offer } from "../CSS/Offer.ta.mjs";
+import { type Offer as DEV_Offer, _decode_Offer as DEV__decode_Offer, _encode_Offer as DEV__encode_Offer } from "../DEV/Offer.ta.mjs";
 // export { ParamOfferList_deliveryControl, ParamOfferList_deliveryControl_none /* IMPORTED_LONG_NAMED_BIT */, none /* IMPORTED_SHORT_NAMED_BIT */, ParamOfferList_deliveryControl_simple /* IMPORTED_LONG_NAMED_BIT */, simple /* IMPORTED_SHORT_NAMED_BIT */, ParamOfferList_deliveryControl_quarantine /* IMPORTED_LONG_NAMED_BIT */, quarantine /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParamOfferList_deliveryControl, _encode_ParamOfferList_deliveryControl } from "../G/ParamOfferList-deliveryControl.ta.mjs";
 
 
@@ -99,19 +47,19 @@ class ParamOfferList {
          * @public
          * @readonly
          */
-        readonly displayObjects: OPTIONAL<CDS.Offer>,
+        readonly displayObjects: OPTIONAL<CDS_Offer>,
         /**
          * @summary `controlObjects`.
          * @public
          * @readonly
          */
-        readonly controlObjects: OPTIONAL<CSS.Offer>,
+        readonly controlObjects: OPTIONAL<CSS_Offer>,
         /**
          * @summary `deviceObjects`.
          * @public
          * @readonly
          */
-        readonly deviceObjects: OPTIONAL<DEV.Offer>,
+        readonly deviceObjects: OPTIONAL<DEV_Offer>,
         /**
          * @summary `deliveryControl`.
          * @public
@@ -192,14 +140,14 @@ let _cached_decoder_for_ParamOfferList: $.ASN1Decoder<ParamOfferList> | null = n
 export
 function _decode_ParamOfferList (el: _Element): ParamOfferList {
     if (!_cached_decoder_for_ParamOfferList) { _cached_decoder_for_ParamOfferList = function (el: _Element): ParamOfferList {
-    let displayObjects: OPTIONAL<CDS.Offer>;
-    let controlObjects: OPTIONAL<CSS.Offer>;
-    let deviceObjects: OPTIONAL<DEV.Offer>;
+    let displayObjects: OPTIONAL<CDS_Offer>;
+    let controlObjects: OPTIONAL<CSS_Offer>;
+    let deviceObjects: OPTIONAL<DEV_Offer>;
     let deliveryControl: OPTIONAL<ParamOfferList_deliveryControl>;
     const callbacks: $.DecodingMap = {
-        "displayObjects": (_el: _Element): void => { displayObjects = $._decode_implicit<CDS.Offer>(() => CDS._decode_Offer)(_el); },
-        "controlObjects": (_el: _Element): void => { controlObjects = $._decode_implicit<CSS.Offer>(() => CSS._decode_Offer)(_el); },
-        "deviceObjects": (_el: _Element): void => { deviceObjects = $._decode_implicit<DEV.Offer>(() => DEV._decode_Offer)(_el); },
+        "displayObjects": (_el: _Element): void => { displayObjects = $._decode_implicit<CDS_Offer>(() => CDS__decode_Offer)(_el); },
+        "controlObjects": (_el: _Element): void => { controlObjects = $._decode_implicit<CSS_Offer>(() => CSS__decode_Offer)(_el); },
+        "deviceObjects": (_el: _Element): void => { deviceObjects = $._decode_implicit<DEV_Offer>(() => DEV__decode_Offer)(_el); },
         "deliveryControl": (_el: _Element): void => { deliveryControl = $._decode_implicit<ParamOfferList_deliveryControl>(() => _decode_ParamOfferList_deliveryControl)(_el); }
     };
     $._parse_sequence(el, callbacks,
@@ -229,12 +177,12 @@ let _cached_encoder_for_ParamOfferList: $.ASN1Encoder<ParamOfferList> | null = n
  */
 export
 function _encode_ParamOfferList (value: ParamOfferList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParamOfferList) { _cached_encoder_for_ParamOfferList = function (value: ParamOfferList, elGetter: $.ASN1Encoder<ParamOfferList>): _Element {
+    if (!_cached_encoder_for_ParamOfferList) { _cached_encoder_for_ParamOfferList = function (value: ParamOfferList): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.displayObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => CDS._encode_Offer, $.BER)(value.displayObjects, $.BER)),
-            /* IF_ABSENT  */ ((value.controlObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => CSS._encode_Offer, $.BER)(value.controlObjects, $.BER)),
-            /* IF_ABSENT  */ ((value.deviceObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => DEV._encode_Offer, $.BER)(value.deviceObjects, $.BER)),
+            /* IF_ABSENT  */ ((value.displayObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => CDS__encode_Offer, $.BER)(value.displayObjects, $.BER)),
+            /* IF_ABSENT  */ ((value.controlObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => CSS__encode_Offer, $.BER)(value.controlObjects, $.BER)),
+            /* IF_ABSENT  */ ((value.deviceObjects === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => DEV__encode_Offer, $.BER)(value.deviceObjects, $.BER)),
             /* IF_ABSENT  */ ((value.deliveryControl === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_ParamOfferList_deliveryControl, $.BER)(value.deliveryControl, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

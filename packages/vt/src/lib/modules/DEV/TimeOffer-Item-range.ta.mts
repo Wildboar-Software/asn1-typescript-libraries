@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,7 +21,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TimeOffer-Item-range ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TimeOffer-Item-range ::= SEQUENCE {
+ *     lowerMultiplier     INTEGER,
+ *     lowerExponent       INTEGER,
+ *     upperMultiplier     INTEGER,
+ *     upperExponent       INTEGER
+ * }
  * ```
  * 
  * @class
@@ -190,14 +140,10 @@ function _decode_TimeOffer_Item_range (el: _Element): TimeOffer_Item_range {
     sequence[1].name = "lowerExponent";
     sequence[2].name = "upperMultiplier";
     sequence[3].name = "upperExponent";
-    let lowerMultiplier!: INTEGER;
-    let lowerExponent!: INTEGER;
-    let upperMultiplier!: INTEGER;
-    let upperExponent!: INTEGER;
-    lowerMultiplier = $._decodeInteger(sequence[0]);
-    lowerExponent = $._decodeInteger(sequence[1]);
-    upperMultiplier = $._decodeInteger(sequence[2]);
-    upperExponent = $._decodeInteger(sequence[3]);
+    const lowerMultiplier: INTEGER = $._decodeInteger(sequence[0]);
+    const lowerExponent: INTEGER = $._decodeInteger(sequence[1]);
+    const upperMultiplier: INTEGER = $._decodeInteger(sequence[2]);
+    const upperExponent: INTEGER = $._decodeInteger(sequence[3]);
     return new TimeOffer_Item_range(
         lowerMultiplier,
         lowerExponent,
@@ -220,7 +166,7 @@ let _cached_encoder_for_TimeOffer_Item_range: $.ASN1Encoder<TimeOffer_Item_range
  */
 export
 function _encode_TimeOffer_Item_range (value: TimeOffer_Item_range, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TimeOffer_Item_range) { _cached_encoder_for_TimeOffer_Item_range = function (value: TimeOffer_Item_range, elGetter: $.ASN1Encoder<TimeOffer_Item_range>): _Element {
+    if (!_cached_encoder_for_TimeOffer_Item_range) { _cached_encoder_for_TimeOffer_Item_range = function (value: TimeOffer_Item_range): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.lowerMultiplier, $.BER),

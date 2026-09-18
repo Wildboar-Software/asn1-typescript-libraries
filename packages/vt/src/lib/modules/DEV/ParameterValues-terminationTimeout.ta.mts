@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +22,14 @@ import { ParameterValues_terminationTimeout_eventId, _decode_ParameterValues_ter
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterValues-terminationTimeout ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterValues-terminationTimeout ::= SEQUENCE {
+ *     timeMultiplier INTEGER,
+ *     timeExponent INTEGER,
+ *     eventId CHOICE {
+ *         integer INTEGER,
+ *         nul NULL
+ *     }
+ * }
  * ```
  * 
  * @class
@@ -183,12 +135,9 @@ function _decode_ParameterValues_terminationTimeout (el: _Element): ParameterVal
     sequence[0].name = "timeMultiplier";
     sequence[1].name = "timeExponent";
     sequence[2].name = "eventId";
-    let timeMultiplier!: INTEGER;
-    let timeExponent!: INTEGER;
-    let eventId!: ParameterValues_terminationTimeout_eventId;
-    timeMultiplier = $._decodeInteger(sequence[0]);
-    timeExponent = $._decodeInteger(sequence[1]);
-    eventId = _decode_ParameterValues_terminationTimeout_eventId(sequence[2]);
+    const timeMultiplier: INTEGER = $._decodeInteger(sequence[0]);
+    const timeExponent: INTEGER = $._decodeInteger(sequence[1]);
+    const eventId: ParameterValues_terminationTimeout_eventId = _decode_ParameterValues_terminationTimeout_eventId(sequence[2]);
     return new ParameterValues_terminationTimeout(
         timeMultiplier,
         timeExponent,
@@ -210,7 +159,7 @@ let _cached_encoder_for_ParameterValues_terminationTimeout: $.ASN1Encoder<Parame
  */
 export
 function _encode_ParameterValues_terminationTimeout (value: ParameterValues_terminationTimeout, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterValues_terminationTimeout) { _cached_encoder_for_ParameterValues_terminationTimeout = function (value: ParameterValues_terminationTimeout, elGetter: $.ASN1Encoder<ParameterValues_terminationTimeout>): _Element {
+    if (!_cached_encoder_for_ParameterValues_terminationTimeout) { _cached_encoder_for_ParameterValues_terminationTimeout = function (value: ParameterValues_terminationTimeout): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.timeMultiplier, $.BER),

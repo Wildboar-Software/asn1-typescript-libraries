@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
     PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -68,7 +15,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
 // export { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
-import { DOupdate_copyToBuffer_structure, DOupdate_copyToBuffer_structure_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, DOupdate_copyToBuffer_structure_x /* IMPORTED_LONG_NAMED_INTEGER */, x /* IMPORTED_SHORT_NAMED_INTEGER */, DOupdate_copyToBuffer_structure_xAndy /* IMPORTED_LONG_NAMED_INTEGER */, xAndy /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DOupdate_copyToBuffer_structure, _encode_DOupdate_copyToBuffer_structure } from "../ISO9041-VTP/DOupdate-copyToBuffer-structure.ta.mjs";
+import { DOupdate_copyToBuffer_structure, _decode_DOupdate_copyToBuffer_structure, _encode_DOupdate_copyToBuffer_structure } from "../ISO9041-VTP/DOupdate-copyToBuffer-structure.ta.mjs";
 // export { DOupdate_copyToBuffer_structure, DOupdate_copyToBuffer_structure_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, DOupdate_copyToBuffer_structure_x /* IMPORTED_LONG_NAMED_INTEGER */, x /* IMPORTED_SHORT_NAMED_INTEGER */, DOupdate_copyToBuffer_structure_xAndy /* IMPORTED_LONG_NAMED_INTEGER */, xAndy /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DOupdate_copyToBuffer_structure, _encode_DOupdate_copyToBuffer_structure } from "../ISO9041-VTP/DOupdate-copyToBuffer-structure.ta.mjs";
 
 
@@ -79,7 +26,20 @@ import { DOupdate_copyToBuffer_structure, DOupdate_copyToBuffer_structure_none /
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-copyToBuffer ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-copyToBuffer ::= SEQUENCE {
+ *     address Pointer,
+ *     rioName  [10] IMPLICIT PrintableString OPTIONAL,
+ *     recordId [11] IMPLICIT PrintableString OPTIONAL,
+ *     -- when buffer-name is "temporary", rioName and recordId shall be absent;
+ *     -- when there is only one RIO present in the VTE, rioName is optional,
+ *     -- but recordId shall be present
+ *     rendition [12] IMPLICIT NULL OPTIONAL,
+ *     -- presence implies "copy attributes", absence implies "no attribute copy"
+ *     structure [13] IMPLICIT INTEGER { none (0), x (1), xAndy (2) } OPTIONAL,
+ *     -- absence implies "none"
+ *     ripple [14] IMPLICIT NULL OPTIONAL
+ *     -- presence implies "on", absence implies "off"
+ * }
  * ```
  * 
  * @class
@@ -242,7 +202,7 @@ let _cached_encoder_for_DOupdate_copyToBuffer: $.ASN1Encoder<DOupdate_copyToBuff
  */
 export
 function _encode_DOupdate_copyToBuffer (value: DOupdate_copyToBuffer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DOupdate_copyToBuffer) { _cached_encoder_for_DOupdate_copyToBuffer = function (value: DOupdate_copyToBuffer, elGetter: $.ASN1Encoder<DOupdate_copyToBuffer>): _Element {
+    if (!_cached_encoder_for_DOupdate_copyToBuffer) { _cached_encoder_for_DOupdate_copyToBuffer = function (value: DOupdate_copyToBuffer): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Pointer(value.address, $.BER),

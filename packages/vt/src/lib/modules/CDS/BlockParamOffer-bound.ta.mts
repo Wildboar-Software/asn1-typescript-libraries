@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 
 
@@ -77,7 +23,10 @@ import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/I
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BlockParamOffer-bound ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BlockParamOffer-bound ::= SEQUENCE {
+ *     unbounded NULL OPTIONAL,
+ *     limit G.IntegerOffer OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -96,7 +45,7 @@ class BlockParamOffer_bound {
          * @public
          * @readonly
          */
-        readonly limit: OPTIONAL<G.IntegerOffer>
+        readonly limit: OPTIONAL<IntegerOffer>
     ) {}
 
     /**
@@ -170,10 +119,10 @@ export
 function _decode_BlockParamOffer_bound (el: _Element): BlockParamOffer_bound {
     if (!_cached_decoder_for_BlockParamOffer_bound) { _cached_decoder_for_BlockParamOffer_bound = function (el: _Element): BlockParamOffer_bound {
     let unbounded: OPTIONAL<NULL>;
-    let limit: OPTIONAL<G.IntegerOffer>;
+    let limit: OPTIONAL<IntegerOffer>;
     const callbacks: $.DecodingMap = {
         "unbounded": (_el: _Element): void => { unbounded = $._decodeNull(_el); },
-        "limit": (_el: _Element): void => { limit = G._decode_IntegerOffer(_el); }
+        "limit": (_el: _Element): void => { limit = _decode_IntegerOffer(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_BlockParamOffer_bound,
@@ -200,11 +149,11 @@ let _cached_encoder_for_BlockParamOffer_bound: $.ASN1Encoder<BlockParamOffer_bou
  */
 export
 function _encode_BlockParamOffer_bound (value: BlockParamOffer_bound, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BlockParamOffer_bound) { _cached_encoder_for_BlockParamOffer_bound = function (value: BlockParamOffer_bound, elGetter: $.ASN1Encoder<BlockParamOffer_bound>): _Element {
+    if (!_cached_encoder_for_BlockParamOffer_bound) { _cached_encoder_for_BlockParamOffer_bound = function (value: BlockParamOffer_bound): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.unbounded === undefined) ? undefined : $._encodeNull(value.unbounded, $.BER)),
-            /* IF_ABSENT  */ ((value.limit === undefined) ? undefined : G._encode_IntegerOffer(value.limit, $.BER))
+            /* IF_ABSENT  */ ((value.limit === undefined) ? undefined : _encode_IntegerOffer(value.limit, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

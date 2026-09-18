@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +22,15 @@ import { ProfileArgumOfferList_specialProfileArgums_Item_offeredValues, _decode_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileArgumOfferList-specialProfileArgums-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileArgumOfferList-specialProfileArgums-Item ::= SEQUENCE {
+ *     identifier INTEGER,
+ *     offeredValues CHOICE {
+ *         boolean [0] IMPLICIT BIT STRING { false-bit (0), true-bit (1) },
+ *         integer [1] IMPLICIT IntegerOffer,
+ *         string  [2] IMPLICIT SET OF PrintableString,
+ *         objid   [3] IMPLICIT SET OF OBJECT IDENTIFIER
+ *     }
+ * }
  * ```
  * 
  * @class
@@ -175,10 +128,8 @@ function _decode_ProfileArgumOfferList_specialProfileArgums_Item (el: _Element):
     }
     sequence[0].name = "identifier";
     sequence[1].name = "offeredValues";
-    let identifier!: INTEGER;
-    let offeredValues!: ProfileArgumOfferList_specialProfileArgums_Item_offeredValues;
-    identifier = $._decodeInteger(sequence[0]);
-    offeredValues = _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues(sequence[1]);
+    const identifier: INTEGER = $._decodeInteger(sequence[0]);
+    const offeredValues: ProfileArgumOfferList_specialProfileArgums_Item_offeredValues = _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues(sequence[1]);
     return new ProfileArgumOfferList_specialProfileArgums_Item(
         identifier,
         offeredValues,
@@ -199,7 +150,7 @@ let _cached_encoder_for_ProfileArgumOfferList_specialProfileArgums_Item: $.ASN1E
  */
 export
 function _encode_ProfileArgumOfferList_specialProfileArgums_Item (value: ProfileArgumOfferList_specialProfileArgums_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProfileArgumOfferList_specialProfileArgums_Item) { _cached_encoder_for_ProfileArgumOfferList_specialProfileArgums_Item = function (value: ProfileArgumOfferList_specialProfileArgums_Item, elGetter: $.ASN1Encoder<ProfileArgumOfferList_specialProfileArgums_Item>): _Element {
+    if (!_cached_encoder_for_ProfileArgumOfferList_specialProfileArgums_Item) { _cached_encoder_for_ProfileArgumOfferList_specialProfileArgums_Item = function (value: ProfileArgumOfferList_specialProfileArgums_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.identifier, $.BER),

@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -79,7 +23,10 @@ import { LogAttrExtent, _decode_LogAttrExtent, _encode_LogAttrExtent } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-writeLogAttr ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-writeLogAttr ::= SEQUENCE {
+ *     attributeId     AttrId,
+ *     logAttrExtent   LogAttrExtent
+ * }
  * ```
  * 
  * @class
@@ -177,10 +124,8 @@ function _decode_DOupdate_writeLogAttr (el: _Element): DOupdate_writeLogAttr {
     }
     sequence[0].name = "attributeId";
     sequence[1].name = "logAttrExtent";
-    let attributeId!: AttrId;
-    let logAttrExtent!: LogAttrExtent;
-    attributeId = _decode_AttrId(sequence[0]);
-    logAttrExtent = _decode_LogAttrExtent(sequence[1]);
+    const attributeId: AttrId = _decode_AttrId(sequence[0]);
+    const logAttrExtent: LogAttrExtent = _decode_LogAttrExtent(sequence[1]);
     return new DOupdate_writeLogAttr(
         attributeId,
         logAttrExtent,
@@ -201,7 +146,7 @@ let _cached_encoder_for_DOupdate_writeLogAttr: $.ASN1Encoder<DOupdate_writeLogAt
  */
 export
 function _encode_DOupdate_writeLogAttr (value: DOupdate_writeLogAttr, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DOupdate_writeLogAttr) { _cached_encoder_for_DOupdate_writeLogAttr = function (value: DOupdate_writeLogAttr, elGetter: $.ASN1Encoder<DOupdate_writeLogAttr>): _Element {
+    if (!_cached_encoder_for_DOupdate_writeLogAttr) { _cached_encoder_for_DOupdate_writeLogAttr = function (value: DOupdate_writeLogAttr): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_AttrId(value.attributeId, $.BER),

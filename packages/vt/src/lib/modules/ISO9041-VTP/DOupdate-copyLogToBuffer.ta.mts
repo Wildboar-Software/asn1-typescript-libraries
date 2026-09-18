@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
     PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +24,18 @@ import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-V
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-copyLogToBuffer ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-copyLogToBuffer ::= SEQUENCE {
+ *     address LogPointer,
+ *     rioName  [8] IMPLICIT PrintableString OPTIONAL,
+ *     recordId [9] IMPLICIT PrintableString OPTIONAL,
+ *     -- when buffer-name is "temporary", rioName and recordId shall be absent;
+ *     -- when there is only one RIO present in the VTE, rioName is optional,
+ *     -- but recordId shall be present
+ *     rendition [10] IMPLICIT NULL OPTIONAL,
+ *     -- presence implies "copy attributes", absence implies "no attribute copy"
+ *     structure [11] IMPLICIT NULL OPTIONAL
+ *     -- presence implies "x", absence implies "none"
+ * }
  * ```
  * 
  * @class
@@ -230,7 +188,7 @@ let _cached_encoder_for_DOupdate_copyLogToBuffer: $.ASN1Encoder<DOupdate_copyLog
  */
 export
 function _encode_DOupdate_copyLogToBuffer (value: DOupdate_copyLogToBuffer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DOupdate_copyLogToBuffer) { _cached_encoder_for_DOupdate_copyLogToBuffer = function (value: DOupdate_copyLogToBuffer, elGetter: $.ASN1Encoder<DOupdate_copyLogToBuffer>): _Element {
+    if (!_cached_encoder_for_DOupdate_copyLogToBuffer) { _cached_encoder_for_DOupdate_copyLogToBuffer = function (value: DOupdate_copyLogToBuffer): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_LogPointer(value.address, $.BER),

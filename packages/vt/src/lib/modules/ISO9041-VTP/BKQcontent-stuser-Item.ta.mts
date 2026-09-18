@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,7 +22,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BKQcontent-stuser-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BKQcontent-stuser-Item ::= SEQUENCE {
+ *     utag INTEGER,
+ *     uvalue OCTET STRING
+ * }
  * ```
  * 
  * @class
@@ -174,10 +123,8 @@ function _decode_BKQcontent_stuser_Item (el: _Element): BKQcontent_stuser_Item {
     }
     sequence[0].name = "utag";
     sequence[1].name = "uvalue";
-    let utag!: INTEGER;
-    let uvalue!: OCTET_STRING;
-    utag = $._decodeInteger(sequence[0]);
-    uvalue = $._decodeOctetString(sequence[1]);
+    const utag: INTEGER = $._decodeInteger(sequence[0]);
+    const uvalue: OCTET_STRING = $._decodeOctetString(sequence[1]);
     return new BKQcontent_stuser_Item(
         utag,
         uvalue,
@@ -198,7 +145,7 @@ let _cached_encoder_for_BKQcontent_stuser_Item: $.ASN1Encoder<BKQcontent_stuser_
  */
 export
 function _encode_BKQcontent_stuser_Item (value: BKQcontent_stuser_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BKQcontent_stuser_Item) { _cached_encoder_for_BKQcontent_stuser_Item = function (value: BKQcontent_stuser_Item, elGetter: $.ASN1Encoder<BKQcontent_stuser_Item>): _Element {
+    if (!_cached_encoder_for_BKQcontent_stuser_Item) { _cached_encoder_for_BKQcontent_stuser_Item = function (value: BKQcontent_stuser_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.utag, $.BER),

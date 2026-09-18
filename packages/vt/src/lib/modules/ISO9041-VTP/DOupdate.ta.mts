@@ -1,61 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +13,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExplicitPointer, _decode_ExplicitPointer, _encode_ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
+import { _decode_ExplicitPointer, _encode_ExplicitPointer, ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
 // export { ExplicitPointer, _decode_ExplicitPointer, _encode_ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
 import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
 // export { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
@@ -76,7 +23,7 @@ import { DOupdate_writeAttr, _decode_DOupdate_writeAttr, _encode_DOupdate_writeA
 // export { DOupdate_writeAttr, _decode_DOupdate_writeAttr, _encode_DOupdate_writeAttr } from "../ISO9041-VTP/DOupdate-writeAttr.ta.mjs";
 import { DOupdate_erase, _decode_DOupdate_erase, _encode_DOupdate_erase } from "../ISO9041-VTP/DOupdate-erase.ta.mjs";
 // export { DOupdate_erase, _decode_DOupdate_erase, _encode_DOupdate_erase } from "../ISO9041-VTP/DOupdate-erase.ta.mjs";
-import { LogExpPointer, _decode_LogExpPointer, _encode_LogExpPointer } from "../G/LogExpPointer.ta.mjs";
+import { _decode_LogExpPointer, _encode_LogExpPointer, LogExpPointer } from "../G/LogExpPointer.ta.mjs";
 // export { LogExpPointer, _decode_LogExpPointer, _encode_LogExpPointer } from "../G/LogExpPointer.ta.mjs";
 import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-VTP/LogPointer.ta.mjs";
 // export { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-VTP/LogPointer.ta.mjs";
@@ -90,7 +37,7 @@ import { DOupdate_logErase, _decode_DOupdate_logErase, _encode_DOupdate_logErase
 // export { DOupdate_logErase, _decode_DOupdate_logErase, _encode_DOupdate_logErase } from "../ISO9041-VTP/DOupdate-logErase.ta.mjs";
 import { DOupdate_createBlock, _decode_DOupdate_createBlock, _encode_DOupdate_createBlock } from "../ISO9041-VTP/DOupdate-createBlock.ta.mjs";
 // export { DOupdate_createBlock, _decode_DOupdate_createBlock, _encode_DOupdate_createBlock } from "../ISO9041-VTP/DOupdate-createBlock.ta.mjs";
-import { Block, _decode_Block, _encode_Block } from "../G/Block.ta.mjs";
+import { _decode_Block, _encode_Block, Block } from "../G/Block.ta.mjs";
 // export { Block, _decode_Block, _encode_Block } from "../G/Block.ta.mjs";
 import { DOupdate_copyToBuffer, _decode_DOupdate_copyToBuffer, _encode_DOupdate_copyToBuffer } from "../ISO9041-VTP/DOupdate-copyToBuffer.ta.mjs";
 // export { DOupdate_copyToBuffer, _decode_DOupdate_copyToBuffer, _encode_DOupdate_copyToBuffer } from "../ISO9041-VTP/DOupdate-copyToBuffer.ta.mjs";
@@ -233,7 +180,7 @@ export
 type DOupdate =
     { nextXarray: NULL } /* CHOICE_ALT_ROOT */
     | { nextYarray: NULL } /* CHOICE_ALT_ROOT */
-    | { ptr_relative: G.ExplicitPointer } /* CHOICE_ALT_ROOT */
+    | { ptr_relative: ExplicitPointer } /* CHOICE_ALT_ROOT */
     | { ptr_absolute: Pointer } /* CHOICE_ALT_ROOT */
     | { text: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | { repeatText: DOupdate_repeatText } /* CHOICE_ALT_ROOT */
@@ -245,14 +192,14 @@ type DOupdate =
     | { previousBlock: NULL } /* CHOICE_ALT_ROOT */
     | { nextField: NULL } /* CHOICE_ALT_ROOT */
     | { previousField: NULL } /* CHOICE_ALT_ROOT */
-    | { log_relative: G.LogExpPointer } /* CHOICE_ALT_ROOT */
+    | { log_relative: LogExpPointer } /* CHOICE_ALT_ROOT */
     | { log_absolute: LogPointer } /* CHOICE_ALT_ROOT */
     | { logText: DOupdate_logText } /* CHOICE_ALT_ROOT */
     | { repeatLogText: DOupdate_repeatLogText } /* CHOICE_ALT_ROOT */
     | { writeLogAttr: DOupdate_writeLogAttr } /* CHOICE_ALT_ROOT */
     | { logErase: DOupdate_logErase } /* CHOICE_ALT_ROOT */
     | { createBlock: DOupdate_createBlock } /* CHOICE_ALT_ROOT */
-    | { deleteBlock: G.Block } /* CHOICE_ALT_ROOT */
+    | { deleteBlock: Block } /* CHOICE_ALT_ROOT */
     | { insertXarray: INTEGER } /* CHOICE_ALT_ROOT */
     | { deleteXarray: INTEGER } /* CHOICE_ALT_ROOT */
     | { insertYarray: INTEGER } /* CHOICE_ALT_ROOT */
@@ -275,7 +222,7 @@ function _decode_DOupdate (el: _Element): DOupdate {
     if (!_cached_decoder_for_DOupdate) { _cached_decoder_for_DOupdate = $._decode_inextensible_choice<DOupdate>({
     "CONTEXT 0": [ "nextXarray", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 1": [ "nextYarray", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 2": [ "ptr_relative", $._decode_implicit<G.ExplicitPointer>(() => G._decode_ExplicitPointer) ],
+    "CONTEXT 2": [ "ptr_relative", $._decode_implicit<ExplicitPointer>(() => _decode_ExplicitPointer) ],
     "CONTEXT 3": [ "ptr_absolute", $._decode_explicit<Pointer>(() => _decode_Pointer) ],
     "CONTEXT 4": [ "text", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 5": [ "repeatText", $._decode_implicit<DOupdate_repeatText>(() => _decode_DOupdate_repeatText) ],
@@ -287,14 +234,14 @@ function _decode_DOupdate (el: _Element): DOupdate {
     "CONTEXT 11": [ "previousBlock", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 12": [ "nextField", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 13": [ "previousField", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 14": [ "log_relative", $._decode_implicit<G.LogExpPointer>(() => G._decode_LogExpPointer) ],
+    "CONTEXT 14": [ "log_relative", $._decode_implicit<LogExpPointer>(() => _decode_LogExpPointer) ],
     "CONTEXT 15": [ "log_absolute", $._decode_explicit<LogPointer>(() => _decode_LogPointer) ],
     "CONTEXT 16": [ "logText", $._decode_implicit<DOupdate_logText>(() => _decode_DOupdate_logText) ],
     "CONTEXT 17": [ "repeatLogText", $._decode_implicit<DOupdate_repeatLogText>(() => _decode_DOupdate_repeatLogText) ],
     "CONTEXT 18": [ "writeLogAttr", $._decode_implicit<DOupdate_writeLogAttr>(() => _decode_DOupdate_writeLogAttr) ],
     "CONTEXT 19": [ "logErase", $._decode_implicit<DOupdate_logErase>(() => _decode_DOupdate_logErase) ],
     "CONTEXT 20": [ "createBlock", $._decode_implicit<DOupdate_createBlock>(() => _decode_DOupdate_createBlock) ],
-    "CONTEXT 21": [ "deleteBlock", $._decode_implicit<G.Block>(() => G._decode_Block) ],
+    "CONTEXT 21": [ "deleteBlock", $._decode_implicit<Block>(() => _decode_Block) ],
     "CONTEXT 22": [ "insertXarray", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
     "CONTEXT 23": [ "deleteXarray", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
     "CONTEXT 24": [ "insertYarray", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
@@ -321,7 +268,7 @@ function _encode_DOupdate (value: DOupdate, elGetter: $.ASN1Encoder<any>): _Elem
     if (!_cached_encoder_for_DOupdate) { _cached_encoder_for_DOupdate = $._encode_choice<DOupdate>({
     "nextXarray": $._encode_implicit(_TagClass.context, 0, () => $._encodeNull, $.BER),
     "nextYarray": $._encode_implicit(_TagClass.context, 1, () => $._encodeNull, $.BER),
-    "ptr_relative": $._encode_implicit(_TagClass.context, 2, () => G._encode_ExplicitPointer, $.BER),
+    "ptr_relative": $._encode_implicit(_TagClass.context, 2, () => _encode_ExplicitPointer, $.BER),
     "ptr_absolute": $._encode_explicit(_TagClass.context, 3, () => _encode_Pointer, $.BER),
     "text": $._encode_implicit(_TagClass.context, 4, () => $._encodeOctetString, $.BER),
     "repeatText": $._encode_implicit(_TagClass.context, 5, () => _encode_DOupdate_repeatText, $.BER),
@@ -333,14 +280,14 @@ function _encode_DOupdate (value: DOupdate, elGetter: $.ASN1Encoder<any>): _Elem
     "previousBlock": $._encode_implicit(_TagClass.context, 11, () => $._encodeNull, $.BER),
     "nextField": $._encode_implicit(_TagClass.context, 12, () => $._encodeNull, $.BER),
     "previousField": $._encode_implicit(_TagClass.context, 13, () => $._encodeNull, $.BER),
-    "log_relative": $._encode_implicit(_TagClass.context, 14, () => G._encode_LogExpPointer, $.BER),
+    "log_relative": $._encode_implicit(_TagClass.context, 14, () => _encode_LogExpPointer, $.BER),
     "log_absolute": $._encode_explicit(_TagClass.context, 15, () => _encode_LogPointer, $.BER),
     "logText": $._encode_implicit(_TagClass.context, 16, () => _encode_DOupdate_logText, $.BER),
     "repeatLogText": $._encode_implicit(_TagClass.context, 17, () => _encode_DOupdate_repeatLogText, $.BER),
     "writeLogAttr": $._encode_implicit(_TagClass.context, 18, () => _encode_DOupdate_writeLogAttr, $.BER),
     "logErase": $._encode_implicit(_TagClass.context, 19, () => _encode_DOupdate_logErase, $.BER),
     "createBlock": $._encode_implicit(_TagClass.context, 20, () => _encode_DOupdate_createBlock, $.BER),
-    "deleteBlock": $._encode_implicit(_TagClass.context, 21, () => G._encode_Block, $.BER),
+    "deleteBlock": $._encode_implicit(_TagClass.context, 21, () => _encode_Block, $.BER),
     "insertXarray": $._encode_implicit(_TagClass.context, 22, () => $._encodeInteger, $.BER),
     "deleteXarray": $._encode_implicit(_TagClass.context, 23, () => $._encodeInteger, $.BER),
     "insertYarray": $._encode_implicit(_TagClass.context, 24, () => $._encodeInteger, $.BER),

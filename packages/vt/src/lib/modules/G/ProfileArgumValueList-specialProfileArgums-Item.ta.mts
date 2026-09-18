@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +22,15 @@ import { ProfileArgumValueList_specialProfileArgums_Item_value, _decode_ProfileA
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileArgumValueList-specialProfileArgums-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileArgumValueList-specialProfileArgums-Item ::= SEQUENCE {
+ *     identifier INTEGER,
+ *     value CHOICE {
+ *         boolean BOOLEAN,
+ *         integer INTEGER,
+ *         string  PrintableString,
+ *         oid     OBJECT IDENTIFIER
+ *     }
+ * }
  * ```
  * 
  * @class
@@ -175,10 +128,8 @@ function _decode_ProfileArgumValueList_specialProfileArgums_Item (el: _Element):
     }
     sequence[0].name = "identifier";
     sequence[1].name = "value";
-    let identifier!: INTEGER;
-    let value!: ProfileArgumValueList_specialProfileArgums_Item_value;
-    identifier = $._decodeInteger(sequence[0]);
-    value = _decode_ProfileArgumValueList_specialProfileArgums_Item_value(sequence[1]);
+    const identifier: INTEGER = $._decodeInteger(sequence[0]);
+    const value: ProfileArgumValueList_specialProfileArgums_Item_value = _decode_ProfileArgumValueList_specialProfileArgums_Item_value(sequence[1]);
     return new ProfileArgumValueList_specialProfileArgums_Item(
         identifier,
         value,
@@ -199,7 +150,7 @@ let _cached_encoder_for_ProfileArgumValueList_specialProfileArgums_Item: $.ASN1E
  */
 export
 function _encode_ProfileArgumValueList_specialProfileArgums_Item (value: ProfileArgumValueList_specialProfileArgums_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProfileArgumValueList_specialProfileArgums_Item) { _cached_encoder_for_ProfileArgumValueList_specialProfileArgums_Item = function (value: ProfileArgumValueList_specialProfileArgums_Item, elGetter: $.ASN1Encoder<ProfileArgumValueList_specialProfileArgums_Item>): _Element {
+    if (!_cached_encoder_for_ProfileArgumValueList_specialProfileArgums_Item) { _cached_encoder_for_ProfileArgumValueList_specialProfileArgums_Item = function (value: ProfileArgumValueList_specialProfileArgums_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.identifier, $.BER),

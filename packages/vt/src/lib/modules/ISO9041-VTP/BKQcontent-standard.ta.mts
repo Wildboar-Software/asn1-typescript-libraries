@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExplicitPointer, _decode_ExplicitPointer, _encode_ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
+import { _decode_ExplicitPointer, _encode_ExplicitPointer, ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
 // export { ExplicitPointer, _decode_ExplicitPointer, _encode_ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
-import { LogExpPointer, _decode_LogExpPointer, _encode_LogExpPointer } from "../G/LogExpPointer.ta.mjs";
+import { _decode_LogExpPointer, _encode_LogExpPointer, LogExpPointer } from "../G/LogExpPointer.ta.mjs";
 // export { LogExpPointer, _decode_LogExpPointer, _encode_LogExpPointer } from "../G/LogExpPointer.ta.mjs";
 
 
@@ -79,7 +24,10 @@ import { LogExpPointer, _decode_LogExpPointer, _encode_LogExpPointer } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BKQcontent-standard ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BKQcontent-standard ::= SEQUENCE {
+ *     pointer    [0] IMPLICIT G.ExplicitPointer OPTIONAL,
+ *     logPointer [1] IMPLICIT G.LogExpPointer OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -92,13 +40,13 @@ class BKQcontent_standard {
          * @public
          * @readonly
          */
-        readonly pointer: OPTIONAL<G.ExplicitPointer>,
+        readonly pointer: OPTIONAL<ExplicitPointer>,
         /**
          * @summary `logPointer`.
          * @public
          * @readonly
          */
-        readonly logPointer: OPTIONAL<G.LogExpPointer>
+        readonly logPointer: OPTIONAL<LogExpPointer>
     ) {}
 
     /**
@@ -171,11 +119,11 @@ let _cached_decoder_for_BKQcontent_standard: $.ASN1Decoder<BKQcontent_standard> 
 export
 function _decode_BKQcontent_standard (el: _Element): BKQcontent_standard {
     if (!_cached_decoder_for_BKQcontent_standard) { _cached_decoder_for_BKQcontent_standard = function (el: _Element): BKQcontent_standard {
-    let pointer: OPTIONAL<G.ExplicitPointer>;
-    let logPointer: OPTIONAL<G.LogExpPointer>;
+    let pointer: OPTIONAL<ExplicitPointer>;
+    let logPointer: OPTIONAL<LogExpPointer>;
     const callbacks: $.DecodingMap = {
-        "pointer": (_el: _Element): void => { pointer = $._decode_implicit<G.ExplicitPointer>(() => G._decode_ExplicitPointer)(_el); },
-        "logPointer": (_el: _Element): void => { logPointer = $._decode_implicit<G.LogExpPointer>(() => G._decode_LogExpPointer)(_el); }
+        "pointer": (_el: _Element): void => { pointer = $._decode_implicit<ExplicitPointer>(() => _decode_ExplicitPointer)(_el); },
+        "logPointer": (_el: _Element): void => { logPointer = $._decode_implicit<LogExpPointer>(() => _decode_LogExpPointer)(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_BKQcontent_standard,
@@ -202,11 +150,11 @@ let _cached_encoder_for_BKQcontent_standard: $.ASN1Encoder<BKQcontent_standard> 
  */
 export
 function _encode_BKQcontent_standard (value: BKQcontent_standard, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BKQcontent_standard) { _cached_encoder_for_BKQcontent_standard = function (value: BKQcontent_standard, elGetter: $.ASN1Encoder<BKQcontent_standard>): _Element {
+    if (!_cached_encoder_for_BKQcontent_standard) { _cached_encoder_for_BKQcontent_standard = function (value: BKQcontent_standard): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.pointer === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => G._encode_ExplicitPointer, $.BER)(value.pointer, $.BER)),
-            /* IF_ABSENT  */ ((value.logPointer === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => G._encode_LogExpPointer, $.BER)(value.logPointer, $.BER))
+            /* IF_ABSENT  */ ((value.pointer === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_ExplicitPointer, $.BER)(value.pointer, $.BER)),
+            /* IF_ABSENT  */ ((value.logPointer === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_LogExpPointer, $.BER)(value.logPointer, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

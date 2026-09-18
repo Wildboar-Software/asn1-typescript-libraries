@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 // export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 
 
@@ -77,7 +23,10 @@ import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/I
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ParameterOffers-terminationEventList-Item-Item-eventId ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ParameterOffers-terminationEventList-Item-Item-eventId ::= SEQUENCE {
+ *     integer G.IntegerOffer OPTIONAL,
+ *     nul     NULL OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -90,7 +39,7 @@ class ParameterOffers_terminationEventList_Item_Item_eventId {
          * @public
          * @readonly
          */
-        readonly integer: OPTIONAL<G.IntegerOffer>,
+        readonly integer: OPTIONAL<IntegerOffer>,
         /**
          * @summary `nul`.
          * @public
@@ -169,10 +118,10 @@ let _cached_decoder_for_ParameterOffers_terminationEventList_Item_Item_eventId: 
 export
 function _decode_ParameterOffers_terminationEventList_Item_Item_eventId (el: _Element): ParameterOffers_terminationEventList_Item_Item_eventId {
     if (!_cached_decoder_for_ParameterOffers_terminationEventList_Item_Item_eventId) { _cached_decoder_for_ParameterOffers_terminationEventList_Item_Item_eventId = function (el: _Element): ParameterOffers_terminationEventList_Item_Item_eventId {
-    let integer: OPTIONAL<G.IntegerOffer>;
+    let integer: OPTIONAL<IntegerOffer>;
     let nul: OPTIONAL<NULL>;
     const callbacks: $.DecodingMap = {
-        "integer": (_el: _Element): void => { integer = G._decode_IntegerOffer(_el); },
+        "integer": (_el: _Element): void => { integer = _decode_IntegerOffer(_el); },
         "nul": (_el: _Element): void => { nul = $._decodeNull(_el); }
     };
     $._parse_sequence(el, callbacks,
@@ -200,10 +149,10 @@ let _cached_encoder_for_ParameterOffers_terminationEventList_Item_Item_eventId: 
  */
 export
 function _encode_ParameterOffers_terminationEventList_Item_Item_eventId (value: ParameterOffers_terminationEventList_Item_Item_eventId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterOffers_terminationEventList_Item_Item_eventId) { _cached_encoder_for_ParameterOffers_terminationEventList_Item_Item_eventId = function (value: ParameterOffers_terminationEventList_Item_Item_eventId, elGetter: $.ASN1Encoder<ParameterOffers_terminationEventList_Item_Item_eventId>): _Element {
+    if (!_cached_encoder_for_ParameterOffers_terminationEventList_Item_Item_eventId) { _cached_encoder_for_ParameterOffers_terminationEventList_Item_Item_eventId = function (value: ParameterOffers_terminationEventList_Item_Item_eventId): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* IF_ABSENT  */ ((value.integer === undefined) ? undefined : G._encode_IntegerOffer(value.integer, $.BER)),
+            /* IF_ABSENT  */ ((value.integer === undefined) ? undefined : _encode_IntegerOffer(value.integer, $.BER)),
             /* IF_ABSENT  */ ((value.nul === undefined) ? undefined : $._encodeNull(value.nul, $.BER))
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

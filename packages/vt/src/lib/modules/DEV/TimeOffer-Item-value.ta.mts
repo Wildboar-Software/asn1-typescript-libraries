@@ -1,61 +1,6 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,7 +21,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TimeOffer-Item-value ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TimeOffer-Item-value ::= SEQUENCE {
+ *     multiplier INTEGER,
+ *     exponent INTEGER
+ * }
  * ```
  * 
  * @class
@@ -174,10 +122,8 @@ function _decode_TimeOffer_Item_value (el: _Element): TimeOffer_Item_value {
     }
     sequence[0].name = "multiplier";
     sequence[1].name = "exponent";
-    let multiplier!: INTEGER;
-    let exponent!: INTEGER;
-    multiplier = $._decodeInteger(sequence[0]);
-    exponent = $._decodeInteger(sequence[1]);
+    const multiplier: INTEGER = $._decodeInteger(sequence[0]);
+    const exponent: INTEGER = $._decodeInteger(sequence[1]);
     return new TimeOffer_Item_value(
         multiplier,
         exponent,
@@ -198,7 +144,7 @@ let _cached_encoder_for_TimeOffer_Item_value: $.ASN1Encoder<TimeOffer_Item_value
  */
 export
 function _encode_TimeOffer_Item_value (value: TimeOffer_Item_value, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TimeOffer_Item_value) { _cached_encoder_for_TimeOffer_Item_value = function (value: TimeOffer_Item_value, elGetter: $.ASN1Encoder<TimeOffer_Item_value>): _Element {
+    if (!_cached_encoder_for_TimeOffer_Item_value) { _cached_encoder_for_TimeOffer_Item_value = function (value: TimeOffer_Item_value): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.multiplier, $.BER),

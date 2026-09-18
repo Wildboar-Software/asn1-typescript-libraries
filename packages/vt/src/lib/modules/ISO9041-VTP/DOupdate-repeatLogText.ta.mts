@@ -1,61 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -77,7 +23,11 @@ import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-V
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-repeatLogText ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-repeatLogText ::= SEQUENCE {
+ *     finishAddress LogPointer,
+ *     fdrAttr      [8] IMPLICIT BOOLEAN,
+ *     prAttrValStr [9] IMPLICIT OCTET STRING
+ * }
  * ```
  * 
  * @class
@@ -183,12 +133,9 @@ function _decode_DOupdate_repeatLogText (el: _Element): DOupdate_repeatLogText {
     sequence[0].name = "finishAddress";
     sequence[1].name = "fdrAttr";
     sequence[2].name = "prAttrValStr";
-    let finishAddress!: LogPointer;
-    let fdrAttr!: BOOLEAN;
-    let prAttrValStr!: OCTET_STRING;
-    finishAddress = _decode_LogPointer(sequence[0]);
-    fdrAttr = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(sequence[1]);
-    prAttrValStr = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[2]);
+    const finishAddress: LogPointer = _decode_LogPointer(sequence[0]);
+    const fdrAttr: BOOLEAN = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(sequence[1]);
+    const prAttrValStr: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[2]);
     return new DOupdate_repeatLogText(
         finishAddress,
         fdrAttr,
@@ -210,7 +157,7 @@ let _cached_encoder_for_DOupdate_repeatLogText: $.ASN1Encoder<DOupdate_repeatLog
  */
 export
 function _encode_DOupdate_repeatLogText (value: DOupdate_repeatLogText, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DOupdate_repeatLogText) { _cached_encoder_for_DOupdate_repeatLogText = function (value: DOupdate_repeatLogText, elGetter: $.ASN1Encoder<DOupdate_repeatLogText>): _Element {
+    if (!_cached_encoder_for_DOupdate_repeatLogText) { _cached_encoder_for_DOupdate_repeatLogText = function (value: DOupdate_repeatLogText): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_LogPointer(value.finishAddress, $.BER),

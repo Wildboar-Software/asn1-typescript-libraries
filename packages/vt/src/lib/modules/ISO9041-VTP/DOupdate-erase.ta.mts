@@ -1,61 +1,5 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -79,7 +23,11 @@ import { EraseAttr, _decode_EraseAttr, _encode_EraseAttr } from "../ISO9041-VTP/
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DOupdate-erase ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DOupdate-erase ::= SEQUENCE {
+ *     startErase  Pointer,
+ *     endErase    Pointer,
+ *     attribute   EraseAttr
+ * }
  * ```
  * 
  * @class
@@ -185,12 +133,9 @@ function _decode_DOupdate_erase (el: _Element): DOupdate_erase {
     sequence[0].name = "startErase";
     sequence[1].name = "endErase";
     sequence[2].name = "attribute";
-    let startErase!: Pointer;
-    let endErase!: Pointer;
-    let attribute!: EraseAttr;
-    startErase = _decode_Pointer(sequence[0]);
-    endErase = _decode_Pointer(sequence[1]);
-    attribute = _decode_EraseAttr(sequence[2]);
+    const startErase: Pointer = _decode_Pointer(sequence[0]);
+    const endErase: Pointer = _decode_Pointer(sequence[1]);
+    const attribute: EraseAttr = _decode_EraseAttr(sequence[2]);
     return new DOupdate_erase(
         startErase,
         endErase,
@@ -212,7 +157,7 @@ let _cached_encoder_for_DOupdate_erase: $.ASN1Encoder<DOupdate_erase> | null = n
  */
 export
 function _encode_DOupdate_erase (value: DOupdate_erase, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DOupdate_erase) { _cached_encoder_for_DOupdate_erase = function (value: DOupdate_erase, elGetter: $.ASN1Encoder<DOupdate_erase>): _Element {
+    if (!_cached_encoder_for_DOupdate_erase) { _cached_encoder_for_DOupdate_erase = function (value: DOupdate_erase): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Pointer(value.startErase, $.BER),
