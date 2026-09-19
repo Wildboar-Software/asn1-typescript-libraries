@@ -22,6 +22,8 @@ import evaluateTemporalContext from "./temporalContext.mjs";
 import { DER } from "@wildboar/asn1/functional";
 import { TimeSpecification_time_absolute } from "../../modules/SelectedAttributeTypes/TimeSpecification-time-absolute.ta.mjs";
 import { TimeAssertion_between } from "../../modules/SelectedAttributeTypes/TimeAssertion-between.ta.mjs";
+import { DayTimeBand } from "../../modules/SelectedAttributeTypes/DayTimeBand.ta.mjs";
+import { DayTime } from "../../modules/SelectedAttributeTypes/DayTime.ta.mjs";
 
 describe("evaluateTemporalContext", () => {
     it("matches an at-assertion against an absolute temporal context", () => {
@@ -241,6 +243,59 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeSpecification(entirelyValue, DER),
         );
         expect(matches).toBe(true);
+    });
+
+    it("matches a between assertion that covers a periodic occurrence without containing either endpoint", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2016, 0, 1, 12, 0, 0),
+                new Date(2016, 0, 31, 12, 0, 0),
+            ),
+        };
+        const value = new TimeSpecification(
+            {
+                periodic: [
+                    new Period(
+                        undefined,
+                        undefined,
+                        { intWeek: [ 2 ] },
+                        undefined,
+                        [ 2016 ],
+                    ),
+                ],
+            },
+        );
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(true);
+    });
+
+    it("matches a between assertion that overlaps a daily time band only after the start", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 4, 10, 18, 0, 0),
+                new Date(2021, 4, 11, 10, 0, 0),
+            ),
+        };
+        const value = new TimeSpecification(
+            {
+                periodic: [
+                    new Period(
+                        [
+                            new DayTimeBand(
+                                new DayTime(9, 0, 0),
+                                new DayTime(17, 0, 0),
+                            ),
+                        ],
+                    ),
+                ],
+            },
+        );
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(true);
     });
 
     // I live in Florida, in the United States, which is UTC-04:00.
