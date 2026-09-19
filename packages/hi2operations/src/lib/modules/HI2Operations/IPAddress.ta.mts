@@ -1,76 +1,17 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IPAddress_iP_type, _enum_for_IPAddress_iP_type, IPAddress_iP_type_iPV4 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPAddress_iP_type_iPV6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IPAddress_iP_type, _encode_IPAddress_iP_type } from "../HI2Operations/IPAddress-iP-type.ta.mjs";
+import { IPAddress_iP_type, _decode_IPAddress_iP_type, _encode_IPAddress_iP_type, _enum_for_IPAddress_iP_type } from "../HI2Operations/IPAddress-iP-type.ta.mjs";
 // export { IPAddress_iP_type, _enum_for_IPAddress_iP_type, IPAddress_iP_type_iPV4 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPAddress_iP_type_iPV6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IPAddress_iP_type, _encode_IPAddress_iP_type } from "../HI2Operations/IPAddress-iP-type.ta.mjs";
 import { IP_value, _decode_IP_value, _encode_IP_value } from "../HI2Operations/IP-value.ta.mjs";
 // export { IP_value, _decode_IP_value, _encode_IP_value } from "../HI2Operations/IP-value.ta.mjs";
-import { IPAddress_iP_assignment, _enum_for_IPAddress_iP_assignment, IPAddress_iP_assignment_static /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPAddress_iP_assignment_dynamic /* IMPORTED_LONG_ENUMERATION_ITEM */, dynamic /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPAddress_iP_assignment_notKnown /* IMPORTED_LONG_ENUMERATION_ITEM */, notKnown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IPAddress_iP_assignment, _encode_IPAddress_iP_assignment } from "../HI2Operations/IPAddress-iP-assignment.ta.mjs";
+import { IPAddress_iP_assignment, _decode_IPAddress_iP_assignment, _encode_IPAddress_iP_assignment, _enum_for_IPAddress_iP_assignment } from "../HI2Operations/IPAddress-iP-assignment.ta.mjs";
 // export { IPAddress_iP_assignment, _enum_for_IPAddress_iP_assignment, IPAddress_iP_assignment_static /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPAddress_iP_assignment_dynamic /* IMPORTED_LONG_ENUMERATION_ITEM */, dynamic /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPAddress_iP_assignment_notKnown /* IMPORTED_LONG_ENUMERATION_ITEM */, notKnown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IPAddress_iP_assignment, _encode_IPAddress_iP_assignment } from "../HI2Operations/IPAddress-iP-assignment.ta.mjs";
 
 

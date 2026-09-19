@@ -1,69 +1,10 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OCTET_STRING,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
@@ -72,7 +13,7 @@ import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_Commu
 // export { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
 import { CC_Link_Identifier, _decode_CC_Link_Identifier, _encode_CC_Link_Identifier } from "../HI2Operations/CC-Link-Identifier.ta.mjs";
 // export { CC_Link_Identifier, _decode_CC_Link_Identifier, _encode_CC_Link_Identifier } from "../HI2Operations/CC-Link-Identifier.ta.mjs";
-import { Direction_Indication, _enum_for_Direction_Indication, Direction_Indication_mono_mode /* IMPORTED_LONG_ENUMERATION_ITEM */, mono_mode /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_Indication_cc_from_target /* IMPORTED_LONG_ENUMERATION_ITEM */, cc_from_target /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_Indication_cc_from_other_party /* IMPORTED_LONG_ENUMERATION_ITEM */, cc_from_other_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_Indication_direction_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, direction_unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Direction_Indication, _encode_Direction_Indication } from "../HI3CCLinkData/Direction-Indication.ta.mjs";
+import { Direction_Indication, _decode_Direction_Indication, _encode_Direction_Indication, _enum_for_Direction_Indication } from "../HI3CCLinkData/Direction-Indication.ta.mjs";
 // export { Direction_Indication, _enum_for_Direction_Indication, Direction_Indication_mono_mode /* IMPORTED_LONG_ENUMERATION_ITEM */, mono_mode /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_Indication_cc_from_target /* IMPORTED_LONG_ENUMERATION_ITEM */, cc_from_target /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_Indication_cc_from_other_party /* IMPORTED_LONG_ENUMERATION_ITEM */, cc_from_other_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_Indication_direction_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, direction_unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Direction_Indication, _encode_Direction_Indication } from "../HI3CCLinkData/Direction-Indication.ta.mjs";
 import { Service_Information, _decode_Service_Information, _encode_Service_Information } from "../HI3CCLinkData/Service-Information.ta.mjs";
 // export { Service_Information, _decode_Service_Information, _encode_Service_Information } from "../HI3CCLinkData/Service-Information.ta.mjs";
