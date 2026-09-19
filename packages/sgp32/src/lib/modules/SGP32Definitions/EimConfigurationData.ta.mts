@@ -1,78 +1,20 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
+    OPTIONAL,
     UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EimIdType, EimIdType_eimIdTypeOid /* IMPORTED_LONG_NAMED_INTEGER */, eimIdTypeOid /* IMPORTED_SHORT_NAMED_INTEGER */, EimIdType_eimIdTypeFqdn /* IMPORTED_LONG_NAMED_INTEGER */, eimIdTypeFqdn /* IMPORTED_SHORT_NAMED_INTEGER */, EimIdType_eimIdTypeProprietary /* IMPORTED_LONG_NAMED_INTEGER */, eimIdTypeProprietary /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EimIdType, _encode_EimIdType } from "../SGP32Definitions/EimIdType.ta.mjs";
+import { EimIdType, _decode_EimIdType, _encode_EimIdType } from "../SGP32Definitions/EimIdType.ta.mjs";
 // export { EimIdType, EimIdType_eimIdTypeOid /* IMPORTED_LONG_NAMED_INTEGER */, eimIdTypeOid /* IMPORTED_SHORT_NAMED_INTEGER */, EimIdType_eimIdTypeFqdn /* IMPORTED_LONG_NAMED_INTEGER */, eimIdTypeFqdn /* IMPORTED_SHORT_NAMED_INTEGER */, EimIdType_eimIdTypeProprietary /* IMPORTED_LONG_NAMED_INTEGER */, eimIdTypeProprietary /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EimIdType, _encode_EimIdType } from "../SGP32Definitions/EimIdType.ta.mjs";
 import { EimConfigurationData_eimPublicKeyData, _decode_EimConfigurationData_eimPublicKeyData, _encode_EimConfigurationData_eimPublicKeyData } from "../SGP32Definitions/EimConfigurationData-eimPublicKeyData.ta.mjs";
 // export { EimConfigurationData_eimPublicKeyData, _decode_EimConfigurationData_eimPublicKeyData, _encode_EimConfigurationData_eimPublicKeyData } from "../SGP32Definitions/EimConfigurationData-eimPublicKeyData.ta.mjs";
 import { EimConfigurationData_trustedPublicKeyDataTls, _decode_EimConfigurationData_trustedPublicKeyDataTls, _encode_EimConfigurationData_trustedPublicKeyDataTls } from "../SGP32Definitions/EimConfigurationData-trustedPublicKeyDataTls.ta.mjs";
 // export { EimConfigurationData_trustedPublicKeyDataTls, _decode_EimConfigurationData_trustedPublicKeyDataTls, _encode_EimConfigurationData_trustedPublicKeyDataTls } from "../SGP32Definitions/EimConfigurationData-trustedPublicKeyDataTls.ta.mjs";
-import { EimSupportedProtocol, EimSupportedProtocol_eimRetrieveHttps /* IMPORTED_LONG_NAMED_BIT */, eimRetrieveHttps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimRetrieveCoaps /* IMPORTED_LONG_NAMED_BIT */, eimRetrieveCoaps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimInjectHttps /* IMPORTED_LONG_NAMED_BIT */, eimInjectHttps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimInjectCoaps /* IMPORTED_LONG_NAMED_BIT */, eimInjectCoaps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimProprietary /* IMPORTED_LONG_NAMED_BIT */, eimProprietary /* IMPORTED_SHORT_NAMED_BIT */, _decode_EimSupportedProtocol, _encode_EimSupportedProtocol } from "../SGP32Definitions/EimSupportedProtocol.ta.mjs";
+import { EimSupportedProtocol, _decode_EimSupportedProtocol, _encode_EimSupportedProtocol } from "../SGP32Definitions/EimSupportedProtocol.ta.mjs";
 // export { EimSupportedProtocol, EimSupportedProtocol_eimRetrieveHttps /* IMPORTED_LONG_NAMED_BIT */, eimRetrieveHttps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimRetrieveCoaps /* IMPORTED_LONG_NAMED_BIT */, eimRetrieveCoaps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimInjectHttps /* IMPORTED_LONG_NAMED_BIT */, eimInjectHttps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimInjectCoaps /* IMPORTED_LONG_NAMED_BIT */, eimInjectCoaps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimProprietary /* IMPORTED_LONG_NAMED_BIT */, eimProprietary /* IMPORTED_SHORT_NAMED_BIT */, _decode_EimSupportedProtocol, _encode_EimSupportedProtocol } from "../SGP32Definitions/EimSupportedProtocol.ta.mjs";
 import { SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "../PKIX1Implicit88/SubjectKeyIdentifier.ta.mjs";
 // export { SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "../PKIX1Implicit88/SubjectKeyIdentifier.ta.mjs";

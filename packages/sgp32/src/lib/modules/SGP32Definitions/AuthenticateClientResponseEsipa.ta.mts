@@ -1,76 +1,14 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthenticateClientOkDPEsipa, _decode_AuthenticateClientOkDPEsipa, _encode_AuthenticateClientOkDPEsipa } from "../SGP32Definitions/AuthenticateClientOkDPEsipa.ta.mjs";
 // export { AuthenticateClientOkDPEsipa, _decode_AuthenticateClientOkDPEsipa, _encode_AuthenticateClientOkDPEsipa } from "../SGP32Definitions/AuthenticateClientOkDPEsipa.ta.mjs";
 import { AuthenticateClientOkDSEsipa, _decode_AuthenticateClientOkDSEsipa, _encode_AuthenticateClientOkDSEsipa } from "../SGP32Definitions/AuthenticateClientOkDSEsipa.ta.mjs";
 // export { AuthenticateClientOkDSEsipa, _decode_AuthenticateClientOkDSEsipa, _encode_AuthenticateClientOkDSEsipa } from "../SGP32Definitions/AuthenticateClientOkDSEsipa.ta.mjs";
-import { AuthenticateClientResponseEsipa_authenticateClientErrorEsipa, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificateInvalid /* IMPORTED_LONG_NAMED_INTEGER */, eumCertificateInvalid /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificateExpired /* IMPORTED_LONG_NAMED_INTEGER */, eumCertificateExpired /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateInvalid /* IMPORTED_LONG_NAMED_INTEGER */, euiccCertificateInvalid /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateExpired /* IMPORTED_LONG_NAMED_INTEGER */, euiccCertificateExpired /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccSignatureInvalid /* IMPORTED_LONG_NAMED_INTEGER */, euiccSignatureInvalid /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_matchingIdRefused /* IMPORTED_LONG_NAMED_INTEGER */, matchingIdRefused /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eidMismatch /* IMPORTED_LONG_NAMED_INTEGER */, eidMismatch /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_noEligibleProfile /* IMPORTED_LONG_NAMED_INTEGER */, noEligibleProfile /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_ciPKUnknown /* IMPORTED_LONG_NAMED_INTEGER */, ciPKUnknown /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_invalidTransactionId /* IMPORTED_LONG_NAMED_INTEGER */, invalidTransactionId /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_insufficientMemory /* IMPORTED_LONG_NAMED_INTEGER */, insufficientMemory /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_downloadOrderExpired /* IMPORTED_LONG_NAMED_INTEGER */, downloadOrderExpired /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_pprNotAllowed /* IMPORTED_LONG_NAMED_INTEGER */, pprNotAllowed /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eventIdUnknown /* IMPORTED_LONG_NAMED_INTEGER */, eventIdUnknown /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa, _encode_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa } from "../SGP32Definitions/AuthenticateClientResponseEsipa-authenticateClientErrorEsipa.ta.mjs";
+import { AuthenticateClientResponseEsipa_authenticateClientErrorEsipa, _decode_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa, _encode_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa } from "../SGP32Definitions/AuthenticateClientResponseEsipa-authenticateClientErrorEsipa.ta.mjs";
 // export { AuthenticateClientResponseEsipa_authenticateClientErrorEsipa, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificateInvalid /* IMPORTED_LONG_NAMED_INTEGER */, eumCertificateInvalid /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificateExpired /* IMPORTED_LONG_NAMED_INTEGER */, eumCertificateExpired /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateInvalid /* IMPORTED_LONG_NAMED_INTEGER */, euiccCertificateInvalid /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateExpired /* IMPORTED_LONG_NAMED_INTEGER */, euiccCertificateExpired /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccSignatureInvalid /* IMPORTED_LONG_NAMED_INTEGER */, euiccSignatureInvalid /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_matchingIdRefused /* IMPORTED_LONG_NAMED_INTEGER */, matchingIdRefused /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eidMismatch /* IMPORTED_LONG_NAMED_INTEGER */, eidMismatch /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_noEligibleProfile /* IMPORTED_LONG_NAMED_INTEGER */, noEligibleProfile /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_ciPKUnknown /* IMPORTED_LONG_NAMED_INTEGER */, ciPKUnknown /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_invalidTransactionId /* IMPORTED_LONG_NAMED_INTEGER */, invalidTransactionId /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_insufficientMemory /* IMPORTED_LONG_NAMED_INTEGER */, insufficientMemory /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_downloadOrderExpired /* IMPORTED_LONG_NAMED_INTEGER */, downloadOrderExpired /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_pprNotAllowed /* IMPORTED_LONG_NAMED_INTEGER */, pprNotAllowed /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eventIdUnknown /* IMPORTED_LONG_NAMED_INTEGER */, eventIdUnknown /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa, _encode_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa } from "../SGP32Definitions/AuthenticateClientResponseEsipa-authenticateClientErrorEsipa.ta.mjs";
 
 

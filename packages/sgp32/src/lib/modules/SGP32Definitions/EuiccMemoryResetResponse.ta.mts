@@ -1,76 +1,15 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EuiccMemoryResetResponse_resetResult, EuiccMemoryResetResponse_resetResult_ok /* IMPORTED_LONG_NAMED_INTEGER */, EuiccMemoryResetResponse_resetResult_nothingToDelete /* IMPORTED_LONG_NAMED_INTEGER */, EuiccMemoryResetResponse_resetResult_catBusy /* IMPORTED_LONG_NAMED_INTEGER */, catBusy /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccMemoryResetResponse_resetResult_ecallActive /* IMPORTED_LONG_NAMED_INTEGER */, ecallActive /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccMemoryResetResponse_resetResult_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, _decode_EuiccMemoryResetResponse_resetResult, _encode_EuiccMemoryResetResponse_resetResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetResult.ta.mjs";
+import { EuiccMemoryResetResponse_resetResult, _decode_EuiccMemoryResetResponse_resetResult, _encode_EuiccMemoryResetResponse_resetResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetResult.ta.mjs";
 // export { EuiccMemoryResetResponse_resetResult, EuiccMemoryResetResponse_resetResult_ok /* IMPORTED_LONG_NAMED_INTEGER */, EuiccMemoryResetResponse_resetResult_nothingToDelete /* IMPORTED_LONG_NAMED_INTEGER */, EuiccMemoryResetResponse_resetResult_catBusy /* IMPORTED_LONG_NAMED_INTEGER */, catBusy /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccMemoryResetResponse_resetResult_ecallActive /* IMPORTED_LONG_NAMED_INTEGER */, ecallActive /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccMemoryResetResponse_resetResult_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, _decode_EuiccMemoryResetResponse_resetResult, _encode_EuiccMemoryResetResponse_resetResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetResult.ta.mjs";
-import { EuiccMemoryResetResponse_resetEimResult, EuiccMemoryResetResponse_resetEimResult_ok /* IMPORTED_LONG_NAMED_INTEGER */, EuiccMemoryResetResponse_resetEimResult_nothingToDelete /* IMPORTED_LONG_NAMED_INTEGER */, EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported /* IMPORTED_LONG_NAMED_INTEGER */, eimResetNotSupported /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccMemoryResetResponse_resetEimResult_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, _decode_EuiccMemoryResetResponse_resetEimResult, _encode_EuiccMemoryResetResponse_resetEimResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetEimResult.ta.mjs";
+import { EuiccMemoryResetResponse_resetEimResult, _decode_EuiccMemoryResetResponse_resetEimResult, _encode_EuiccMemoryResetResponse_resetEimResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetEimResult.ta.mjs";
 // export { EuiccMemoryResetResponse_resetEimResult, EuiccMemoryResetResponse_resetEimResult_ok /* IMPORTED_LONG_NAMED_INTEGER */, EuiccMemoryResetResponse_resetEimResult_nothingToDelete /* IMPORTED_LONG_NAMED_INTEGER */, EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported /* IMPORTED_LONG_NAMED_INTEGER */, eimResetNotSupported /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccMemoryResetResponse_resetEimResult_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, _decode_EuiccMemoryResetResponse_resetEimResult, _encode_EuiccMemoryResetResponse_resetEimResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetEimResult.ta.mjs";
-import { EuiccMemoryResetResponse_resetImmediateEnableConfigResult, EuiccMemoryResetResponse_resetImmediateEnableConfigResult_ok /* IMPORTED_LONG_NAMED_INTEGER */, EuiccMemoryResetResponse_resetImmediateEnableConfigResult_resetIECNotSupported /* IMPORTED_LONG_NAMED_INTEGER */, resetIECNotSupported /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccMemoryResetResponse_resetImmediateEnableConfigResult_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, _decode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _encode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetImmediateEnableConfigResult.ta.mjs";
+import { EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _decode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _encode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetImmediateEnableConfigResult.ta.mjs";
 // export { EuiccMemoryResetResponse_resetImmediateEnableConfigResult, EuiccMemoryResetResponse_resetImmediateEnableConfigResult_ok /* IMPORTED_LONG_NAMED_INTEGER */, EuiccMemoryResetResponse_resetImmediateEnableConfigResult_resetIECNotSupported /* IMPORTED_LONG_NAMED_INTEGER */, resetIECNotSupported /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccMemoryResetResponse_resetImmediateEnableConfigResult_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, _decode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _encode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetImmediateEnableConfigResult.ta.mjs";
 
 

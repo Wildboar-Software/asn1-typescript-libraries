@@ -1,69 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageResult } from "../SGP32Definitions/EuiccPackageResult.ta.mjs";
@@ -74,7 +13,7 @@ import { IpaEuiccDataResponse, _decode_IpaEuiccDataResponse, _encode_IpaEuiccDat
 // export { IpaEuiccDataResponse, _decode_IpaEuiccDataResponse, _encode_IpaEuiccDataResponse } from "../SGP32Definitions/IpaEuiccDataResponse.ta.mjs";
 import { EimPackageReceivedWithCid, _decode_EimPackageReceivedWithCid, _encode_EimPackageReceivedWithCid } from "../SGP32Definitions/EimPackageReceivedWithCid.ta.mjs";
 // export { EimPackageReceivedWithCid, _decode_EimPackageReceivedWithCid, _encode_EimPackageReceivedWithCid } from "../SGP32Definitions/EimPackageReceivedWithCid.ta.mjs";
-import { TransferEimPackageResponse_eimPackageError, TransferEimPackageResponse_eimPackageError_invalidPackageFormat /* IMPORTED_LONG_NAMED_INTEGER */, invalidPackageFormat /* IMPORTED_SHORT_NAMED_INTEGER */, TransferEimPackageResponse_eimPackageError_unknownPackage /* IMPORTED_LONG_NAMED_INTEGER */, unknownPackage /* IMPORTED_SHORT_NAMED_INTEGER */, TransferEimPackageResponse_eimPackageError_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TransferEimPackageResponse_eimPackageError, _encode_TransferEimPackageResponse_eimPackageError } from "../SGP32Definitions/TransferEimPackageResponse-eimPackageError.ta.mjs";
+import { TransferEimPackageResponse_eimPackageError, _decode_TransferEimPackageResponse_eimPackageError, _encode_TransferEimPackageResponse_eimPackageError } from "../SGP32Definitions/TransferEimPackageResponse-eimPackageError.ta.mjs";
 // export { TransferEimPackageResponse_eimPackageError, TransferEimPackageResponse_eimPackageError_invalidPackageFormat /* IMPORTED_LONG_NAMED_INTEGER */, invalidPackageFormat /* IMPORTED_SHORT_NAMED_INTEGER */, TransferEimPackageResponse_eimPackageError_unknownPackage /* IMPORTED_LONG_NAMED_INTEGER */, unknownPackage /* IMPORTED_SHORT_NAMED_INTEGER */, TransferEimPackageResponse_eimPackageError_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TransferEimPackageResponse_eimPackageError, _encode_TransferEimPackageResponse_eimPackageError } from "../SGP32Definitions/TransferEimPackageResponse-eimPackageError.ta.mjs";
 import { EimPackageErrorWithCid, _decode_EimPackageErrorWithCid, _encode_EimPackageErrorWithCid } from "../SGP32Definitions/EimPackageErrorWithCid.ta.mjs";
 // export { EimPackageErrorWithCid, _decode_EimPackageErrorWithCid, _encode_EimPackageErrorWithCid } from "../SGP32Definitions/EimPackageErrorWithCid.ta.mjs";

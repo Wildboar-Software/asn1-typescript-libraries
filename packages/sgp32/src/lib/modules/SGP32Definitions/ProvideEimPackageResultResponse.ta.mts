@@ -1,76 +1,14 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EimAcknowledgements, _decode_EimAcknowledgements, _encode_EimAcknowledgements } from "../SGP32Definitions/EimAcknowledgements.ta.mjs";
 // export { EimAcknowledgements, _decode_EimAcknowledgements, _encode_EimAcknowledgements } from "../SGP32Definitions/EimAcknowledgements.ta.mjs";
 import { ProvideEimPackageResultResponse_emptyResponse, _decode_ProvideEimPackageResultResponse_emptyResponse, _encode_ProvideEimPackageResultResponse_emptyResponse } from "../SGP32Definitions/ProvideEimPackageResultResponse-emptyResponse.ta.mjs";
 // export { ProvideEimPackageResultResponse_emptyResponse, _decode_ProvideEimPackageResultResponse_emptyResponse, _encode_ProvideEimPackageResultResponse_emptyResponse } from "../SGP32Definitions/ProvideEimPackageResultResponse-emptyResponse.ta.mjs";
-import { ProvideEimPackageResultResponse_provideEimPackageResultError, ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound /* IMPORTED_LONG_NAMED_INTEGER */, eidNotFound /* IMPORTED_SHORT_NAMED_INTEGER */, ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid /* IMPORTED_LONG_NAMED_INTEGER */, invalidEid /* IMPORTED_SHORT_NAMED_INTEGER */, ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid /* IMPORTED_LONG_NAMED_INTEGER */, missingEid /* IMPORTED_SHORT_NAMED_INTEGER */, ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ProvideEimPackageResultResponse_provideEimPackageResultError, _encode_ProvideEimPackageResultResponse_provideEimPackageResultError } from "../SGP32Definitions/ProvideEimPackageResultResponse-provideEimPackageResultError.ta.mjs";
+import { ProvideEimPackageResultResponse_provideEimPackageResultError, _decode_ProvideEimPackageResultResponse_provideEimPackageResultError, _encode_ProvideEimPackageResultResponse_provideEimPackageResultError } from "../SGP32Definitions/ProvideEimPackageResultResponse-provideEimPackageResultError.ta.mjs";
 // export { ProvideEimPackageResultResponse_provideEimPackageResultError, ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound /* IMPORTED_LONG_NAMED_INTEGER */, eidNotFound /* IMPORTED_SHORT_NAMED_INTEGER */, ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid /* IMPORTED_LONG_NAMED_INTEGER */, invalidEid /* IMPORTED_SHORT_NAMED_INTEGER */, ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid /* IMPORTED_LONG_NAMED_INTEGER */, missingEid /* IMPORTED_SHORT_NAMED_INTEGER */, ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ProvideEimPackageResultResponse_provideEimPackageResultError, _encode_ProvideEimPackageResultResponse_provideEimPackageResultError } from "../SGP32Definitions/ProvideEimPackageResultResponse-provideEimPackageResultError.ta.mjs";
 
 
