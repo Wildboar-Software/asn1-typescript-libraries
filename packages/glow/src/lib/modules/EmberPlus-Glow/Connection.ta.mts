@@ -1,78 +1,17 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Integer32, _decode_Integer32, _encode_Integer32 } from "../EmberPlus-Glow/Integer32.ta.mjs";
 // export { Integer32, _decode_Integer32, _encode_Integer32 } from "../EmberPlus-Glow/Integer32.ta.mjs";
 import { PackedNumbers, _decode_PackedNumbers, _encode_PackedNumbers } from "../EmberPlus-Glow/PackedNumbers.ta.mjs";
 // export { PackedNumbers, _decode_PackedNumbers, _encode_PackedNumbers } from "../EmberPlus-Glow/PackedNumbers.ta.mjs";
-import { ConnectionOperation, ConnectionOperation_absolute /* IMPORTED_LONG_NAMED_INTEGER */, absolute /* IMPORTED_SHORT_NAMED_INTEGER */, ConnectionOperation_connect /* IMPORTED_LONG_NAMED_INTEGER */, connect /* IMPORTED_SHORT_NAMED_INTEGER */, ConnectionOperation_disconnect /* IMPORTED_LONG_NAMED_INTEGER */, disconnect /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ConnectionOperation, _encode_ConnectionOperation } from "../EmberPlus-Glow/ConnectionOperation.ta.mjs";
+import { ConnectionOperation, _decode_ConnectionOperation, _encode_ConnectionOperation } from "../EmberPlus-Glow/ConnectionOperation.ta.mjs";
 // export { ConnectionOperation, ConnectionOperation_absolute /* IMPORTED_LONG_NAMED_INTEGER */, absolute /* IMPORTED_SHORT_NAMED_INTEGER */, ConnectionOperation_connect /* IMPORTED_LONG_NAMED_INTEGER */, connect /* IMPORTED_SHORT_NAMED_INTEGER */, ConnectionOperation_disconnect /* IMPORTED_LONG_NAMED_INTEGER */, disconnect /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ConnectionOperation, _encode_ConnectionOperation } from "../EmberPlus-Glow/ConnectionOperation.ta.mjs";
-import { ConnectionDisposition, ConnectionDisposition_tally /* IMPORTED_LONG_NAMED_INTEGER */, tally /* IMPORTED_SHORT_NAMED_INTEGER */, ConnectionDisposition_modified /* IMPORTED_LONG_NAMED_INTEGER */, modified /* IMPORTED_SHORT_NAMED_INTEGER */, ConnectionDisposition_pending /* IMPORTED_LONG_NAMED_INTEGER */, pending /* IMPORTED_SHORT_NAMED_INTEGER */, ConnectionDisposition_locked /* IMPORTED_LONG_NAMED_INTEGER */, locked /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ConnectionDisposition, _encode_ConnectionDisposition } from "../EmberPlus-Glow/ConnectionDisposition.ta.mjs";
+import { ConnectionDisposition, _decode_ConnectionDisposition, _encode_ConnectionDisposition } from "../EmberPlus-Glow/ConnectionDisposition.ta.mjs";
 // export { ConnectionDisposition, ConnectionDisposition_tally /* IMPORTED_LONG_NAMED_INTEGER */, tally /* IMPORTED_SHORT_NAMED_INTEGER */, ConnectionDisposition_modified /* IMPORTED_LONG_NAMED_INTEGER */, modified /* IMPORTED_SHORT_NAMED_INTEGER */, ConnectionDisposition_pending /* IMPORTED_LONG_NAMED_INTEGER */, pending /* IMPORTED_SHORT_NAMED_INTEGER */, ConnectionDisposition_locked /* IMPORTED_LONG_NAMED_INTEGER */, locked /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ConnectionDisposition, _encode_ConnectionDisposition } from "../EmberPlus-Glow/ConnectionDisposition.ta.mjs";
 
 
