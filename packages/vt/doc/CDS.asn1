@@ -1,0 +1,277 @@
+-- Sourced from ISO/IEC 9041:1997(E)
+-- Modified to remove ancient deprecated ASN.1 syntaxes.
+-- In particular, use of unnamed components in SEQUENCE and SET.
+-- This impacted Identifier, RepertoireFontIdent
+CDS DEFINITIONS ::= BEGIN
+
+-- 12.3.1 CDS Identifiers
+-- The following are to identify parameters to be negotiated
+
+Identifier ::= SET OF SEQUENCE {
+    name    PrintableString,
+    idents  ParameterIdents
+}
+
+ParameterIdents ::= SEQUENCE {
+    dimensions       [0]  IMPLICIT NULL OPTIONAL,
+    xParam           [1]  IMPLICIT DimensionParamIdent OPTIONAL,
+    yParam           [2]  IMPLICIT DimensionParamIdent OPTIONAL,
+    zParam           [3]  IMPLICIT DimensionParamIdent OPTIONAL,
+    erasure          [4]  IMPLICIT NULL OPTIONAL,
+    repertoire       [5]  IMPLICIT CompoundRepertoireIdent OPTIONAL,
+    emphasis         [6]  IMPLICIT CompoundEmphasisIdent OPTIONAL,
+    foreground       [7]  IMPLICIT CompoundColourIdent OPTIONAL,
+    background       [8]  IMPLICIT CompoundColourIdent OPTIONAL,
+    access           [9]  IMPLICIT NULL OPTIONAL,
+    blockParams      [10] IMPLICIT BlockParamIdent OPTIONAL,
+    fieldParams      [11] IMPLICIT FieldParamIdent OPTIONAL,
+    rippleCapability [12] IMPLICIT NULL OPTIONAL
+}
+
+DimensionParamIdent ::= SEQUENCE {
+    bound      [0] IMPLICIT NULL OPTIONAL,
+    addressing [1] IMPLICIT NULL OPTIONAL,
+    absolute   [2] IMPLICIT NULL OPTIONAL,
+    window     [3] IMPLICIT NULL OPTIONAL
+}
+
+CompoundRepertoireIdent ::= SEQUENCE {
+    capability                  [0] IMPLICIT NULL OPTIONAL,
+    repertoirePositionOffers    [1] IMPLICIT SEQUENCE OF RepertoireFontIdent OPTIONAL
+    -- offers for positions in repertoire list
+}
+
+RepertoireFontIdent ::= CHOICE {
+    placeholder     NULL,
+    alternatives    SEQUENCE {
+        assignment     [0] IMPLICIT NULL OPTIONAL,
+        fontCapability [1] IMPLICIT NULL OPTIONAL,
+        fontNames      [2] IMPLICIT SEQUENCE OF AssignmentIdent OPTIONAL
+    }
+}
+
+AssignmentIdent ::= CHOICE {
+    nul     NULL,
+    name    PrintableString
+}
+
+CompoundEmphasisIdent ::= SEQUENCE OF AssignmentIdent
+
+CompoundColourIdent ::= SEQUENCE {
+    capability NULL OPTIONAL,
+    assignment SEQUENCE OF AssignmentIdent OPTIONAL
+}
+
+BlockParamIdent ::= SEQUENCE {
+    capability [0] IMPLICIT NULL OPTIONAL,
+    bound      [1] IMPLICIT NULL OPTIONAL
+}
+
+FieldParamIdent ::= SEQUENCE {
+    capability       [0] IMPLICIT NULL OPTIONAL,
+    maxFields        [1] IMPLICIT NULL OPTIONAL,
+    maxFieldElements [2] IMPLICIT NULL OPTIONAL,
+    accessOutside    [3] IMPLICIT NULL OPTIONAL
+}
+
+-- 12.3.2 CDS Offers
+-- The following are for offered values during negotiation
+
+Offer ::= SET OF SEQUENCE {
+    name    PrintableString,
+    offers  ParameterOffers
+}
+
+ParameterOffers ::= SEQUENCE {
+    dimensionOffer      [0] IMPLICIT BIT STRING {
+        oneDimension   (0),
+        twoDimensions  (1),
+        threeDimensions (2)
+    } OPTIONAL,
+    xParam              [1]  IMPLICIT DimensionParamOffer OPTIONAL,
+    yParam              [2]  IMPLICIT DimensionParamOffer OPTIONAL,
+    zParam              [3]  IMPLICIT DimensionParamOffer OPTIONAL,
+    erasure             [4]  IMPLICIT BIT STRING { yes (0), no (1) } OPTIONAL,
+    repertoire          [5]  IMPLICIT CompoundRepertoireOffer OPTIONAL,
+    emphasis            [6]  IMPLICIT CompoundEmphasisOffer OPTIONAL,
+    foreground          [7]  IMPLICIT CompoundColourOffer OPTIONAL,
+    background          [8]  IMPLICIT CompoundColourOffer OPTIONAL,
+    access              [9]  IMPLICIT BIT STRING {
+        wavar (0),
+        waci  (1),
+        waca  (2)
+    } OPTIONAL,
+    blockParams         [10] IMPLICIT BlockParamOffer OPTIONAL,
+    fieldParams         [11] IMPLICIT FieldParamOffer OPTIONAL,
+    rippleCapability    [12] IMPLICIT BIT STRING { yes (0), no (1) } OPTIONAL
+}
+
+DimensionParamOffer ::= SEQUENCE {
+    bound       [0] IMPLICIT SEQUENCE {
+        unbounded NULL OPTIONAL,
+        limit G.IntegerOffer OPTIONAL
+    } OPTIONAL,
+    addressing  [1] IMPLICIT BIT STRING {
+        noConstraint (0),
+        higherOnly   (1),
+        notPermitted (2)
+    } OPTIONAL,
+    absolute    [2] IMPLICIT BIT STRING { yes (0), no (1) } OPTIONAL,
+    window      [3] IMPLICIT SEQUENCE {
+        unbounded NULL OPTIONAL,
+        limit G.IntegerOffer OPTIONAL
+    } OPTIONAL
+}
+
+CompoundRepertoireOffer ::= SEQUENCE {
+    repertoireCapability    [0] IMPLICIT G.IntegerOffer OPTIONAL,
+    fontOffers              [1] IMPLICIT SEQUENCE OF RepertoireFontOffer OPTIONAL
+}
+
+-- offer for single position in repertoire list:
+-- either a placeholder or a list of alternatives.
+RepertoireFontOffer ::= CHOICE {
+    placeholder     NULL,
+    alternatives    SEQUENCE OF SEQUENCE {
+        repertoire      [0] IMPLICIT RepertoireAssignment OPTIONAL,
+        fontCapability  [1] IMPLICIT G.IntegerOffer OPTIONAL,
+        fontAssignments [2] IMPLICIT SEQUENCE OF FontAssignment OPTIONAL
+    }
+}
+
+RepertoireAssignment ::= SEQUENCE {
+    type    [0] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+    value   CHOICE {
+        iso2022 [1] IMPLICIT SEQUENCE OF OCTET STRING,
+        isonnnn [2] ANY
+    }
+}
+
+FontAssignment ::= SEQUENCE {
+    type [0] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+    value CHOICE {
+        vtadhoc [1] IMPLICIT PrintableString,
+        isonnnn [2] ANY
+    }
+}
+
+CompoundEmphasisOffer ::= SEQUENCE OF CHOICE {
+    placeholder             NULL,
+    multiOfferSingleSubAttr SEQUENCE OF PrintableString
+    -- multiple offer of single emphasis subattribute
+}
+
+CompoundColourOffer ::= SEQUENCE {
+    colourCapability [0] IMPLICIT G.IntegerOffer OPTIONAL,
+    colourValues     [1] IMPLICIT SEQUENCE OF ColourAssignment OPTIONAL
+}
+
+ColourAssignment ::= SEQUENCE {
+    type    [0] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+    value   CHOICE {
+        iso6429 [1] IMPLICIT PrintableString,
+        isonnnn [2] ANY
+    }
+}
+-- The "type" value for "ColourAssignment" has a modal effect.
+-- It determines the CHOICE taken until another "type" value is encountered.
+-- If the modal 'type" value is {vt-b-colour-iso6429} has not been set,
+--   then the syntax of "value" is an English colour name to be found in ISO/IEC 6429.
+-- Otherwise, the syntax is ANY which may be resolved by reference to the
+-- definition specified in "type".
+
+BlockParamOffer ::= SEQUENCE {
+    capability  [0] IMPLICIT BIT STRING { yes (0), no (1) } OPTIONAL,
+    bound       [1] IMPLICIT SEQUENCE {
+        unbounded NULL OPTIONAL,
+        limit G.IntegerOffer OPTIONAL
+    } OPTIONAL
+}
+
+FieldParamOffer ::= SEQUENCE {
+    capability          [0] IMPLICIT BIT STRING { yes (0), no (1) } OPTIONAL,
+    maxFields           [1] IMPLICIT SEQUENCE {
+        unbounded NULL OPTIONAL,
+        limit G.IntegerOffer OPTIONAL
+    } OPTIONAL,
+    maxFieldElements    [2] IMPLICIT SEQUENCE {
+        unbounded NULL OPTIONAL,
+        limit G.IntegerOffer OPTIONAL
+    } OPTIONAL,
+    accessOutside       [3] IMPLICIT BIT STRING { allowed (0), notAllowed (1) } OPTIONAL
+}
+
+-- 12.3.3 CDS Values
+-- The following are for returned values during negotiation
+
+Values ::= SET OF SEQUENCE {
+    name    PrintableString,
+    values  ParameterValues
+}
+
+ParameterValues ::= SEQUENCE {
+    dimension        [0]  IMPLICIT INTEGER OPTIONAL,
+    xParam           [1]  IMPLICIT DimensionParamValues OPTIONAL,
+    yParam           [2]  IMPLICIT DimensionParamValues OPTIONAL,
+    zParam           [3]  IMPLICIT DimensionParamValues OPTIONAL,
+    erasure          [4]  IMPLICIT BOOLEAN OPTIONAL,
+    repertoire       [5]  IMPLICIT CompoundRepertoireValue OPTIONAL,
+    emphasis         [6]  IMPLICIT CompoundEmphasisValue OPTIONAL,
+    foreground       [7]  IMPLICIT CompoundColourValue OPTIONAL,
+    background       [8]  IMPLICIT CompoundColourValue OPTIONAL,
+    access           [9]  IMPLICIT INTEGER { wavar (0), waci (1), waca (2) } OPTIONAL,
+    blockParams      [10] IMPLICIT BlockParamValues OPTIONAL,
+    fieldParams      [11] IMPLICIT FieldParamValues OPTIONAL,
+    rippleCapability [12] IMPLICIT BOOLEAN OPTIONAL -- true = "yes", false or absent = "no"
+}
+
+DimensionParamValues ::= SEQUENCE {
+    bound       [0] CHOICE { unbounded NULL, limit INTEGER } OPTIONAL,
+    addressing  [1] IMPLICIT INTEGER {
+        noConstraint (0),
+        higherOnly   (1),
+        notPermitted (2)
+    } OPTIONAL,
+    absolute    [2] IMPLICIT BOOLEAN OPTIONAL, -- true = "yes", false or absent = "no"
+    window      [3] CHOICE { unbounded NULL, limit INTEGER } OPTIONAL
+}
+
+CompoundRepertoireValue ::= SEQUENCE {
+    repertoireCapability    [0] IMPLICIT INTEGER OPTIONAL,
+    repertoireFontValues    [1] IMPLICIT SEQUENCE OF RepertoireFontValue OPTIONAL
+}
+
+RepertoireFontValue ::= CHOICE {
+    placeholder     NULL,
+    alternatives    SEQUENCE {
+        repertoire      [0] IMPLICIT RepertoireAssignment OPTIONAL,
+        fontCapability  [1] IMPLICIT INTEGER OPTIONAL,
+        fontAssignments [2] IMPLICIT SEQUENCE OF FontAssignment OPTIONAL
+    }
+}
+
+CompoundEmphasisValue ::= SEQUENCE OF CHOICE {
+    placeholder                 NULL,
+    acceptanceOfEmphasisSubAttr PrintableString
+    -- single acceptance value of emphasis subattribute
+}
+
+CompoundColourValue ::= SEQUENCE {
+    capability  [0] IMPLICIT INTEGER OPTIONAL,
+    assignments [1] IMPLICIT SEQUENCE OF ColourAssignment OPTIONAL
+}
+
+BlockParamValues ::= SEQUENCE {
+    capability  [0] IMPLICIT BOOLEAN OPTIONAL,
+    bound       [1] CHOICE { unbounded NULL, limit INTEGER } OPTIONAL
+}
+
+FieldParamValues ::= SEQUENCE {
+    capability       [0] IMPLICIT BOOLEAN OPTIONAL,
+    maxFields        [1] CHOICE { unbounded NULL, limit INTEGER } OPTIONAL,
+    maxFieldElements [2] CHOICE { unbounded NULL, limit INTEGER } OPTIONAL,
+    accessOutside    [3] IMPLICIT INTEGER { allowed (0), notAllowed (1) } OPTIONAL
+    -- absence implies "allowed"
+}
+
+END

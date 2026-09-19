@@ -1,0 +1,25 @@
+{
+  "name": "vt",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/vt/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/vt",
+        "tsConfig": "packages/vt/tsconfig.lib.json",
+        "packageJson": "packages/vt/package.json",
+        "main": "packages/vt/src/index.mts",
+        "assets": [
+          "packages/vt/*.md",
+          "packages/vt/LICENSE.txt",
+          "packages/vt/package.json"
+        ]
+      }
+    }
+  }
+}
