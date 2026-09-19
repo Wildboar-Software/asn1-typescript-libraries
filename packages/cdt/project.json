@@ -1,0 +1,25 @@
+{
+  "name": "cdt",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/cdt/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/cdt",
+        "tsConfig": "packages/cdt/tsconfig.lib.json",
+        "packageJson": "packages/cdt/package.json",
+        "main": "packages/cdt/src/index.mts",
+        "assets": [
+          "packages/cdt/*.md",
+          "packages/cdt/LICENSE.txt",
+          "packages/cdt/package.json"
+        ]
+      }
+    }
+  }
+}
