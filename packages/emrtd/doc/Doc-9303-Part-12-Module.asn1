@@ -1,0 +1,58 @@
+-- From ICAO Doc. 9303 Part 12. There is no formal module defined, just ASN.1
+-- littered thoughtlessly throughout the prose.
+-- // TODO: Check that these aren't already defined elsewhere.
+Doc-9303-Part-12-Module DEFINITIONS ::= BEGIN 
+
+IMPORTS
+    id-icao-mrtd-security
+        FROM LDSSecurityObjectV1
+        {joint-iso-itu-t(2) international(23) icao(136) mrtd(1) security(1)
+        ldsSecurityObject(1)}
+
+    EXTENSION
+        FROM AuthenticationFramework
+        {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9}
+        WITH SUCCESSORS
+
+    ;
+
+id-icao-mrtd-security-vds OBJECT IDENTIFIER ::= {id-icao-mrtd-security 11}
+id-icao-vdsSigner OBJECT IDENTIFIER ::= {id-icao-mrtd-security-vds 1}
+
+id-icao-mrtd-security-lds2 OBJECT IDENTIFIER ::= {id-icao-mrtd-security 9}
+id-icao-lds2Signer OBJECT IDENTIFIER ::= {id-icao-mrtd-security-lds2 8}
+-- LDS2 Travel Stamp Signer (LDS2-TS) certificates
+id-icao-tsSigner OBJECT IDENTIFIER ::= { id-icao-lds2Signer 1}
+-- LDS2 Visa Signer (LDS2-V) certificates:
+id-icao-vSigner OBJECT IDENTIFIER ::= { id-icao-lds2Signer 2}
+-- LDS2 Biometrics Signer (LDS2-B) certificates:
+id-icao-bSigner OBJECT IDENTIFIER ::= { id-icao-lds2Signer 3}
+
+nameChange EXTENSION ::= {
+    SYNTAX NULL
+    IDENTIFIED BY id-icao-mrtd-security-extensions-nameChange
+}
+
+id-icao-mrtd-security-extensions OBJECT IDENTIFIER ::= {id-icao-mrtd-security 6}
+
+id-icao-mrtd-security-extensions-nameChange OBJECT IDENTIFIER ::= {id-icao-mrtd-security-extensions 1}
+
+documentTypeList EXTENSION ::= {
+    SYNTAX DocumentTypeListSyntax
+    IDENTIFIED BY id-icao-mrtd-security-extensions-documentTypeList
+}
+
+DocumentTypeListSyntax ::= SEQUENCE {
+    version     DocumentTypeListVersion,
+    docTypeList SET OF DocumentType
+}
+
+DocumentTypeListVersion ::= INTEGER {v0(0)}
+
+-- Document Type as contained in MRZ, e.g. “P” or “ID” where a
+-- single letter denotes all document types starting with that letter
+DocumentType ::= PrintableString(SIZE(1..2))
+
+id-icao-mrtd-security-extensions-documentTypeList OBJECT IDENTIFIER ::= {id-icao-mrtd-security-extensions 2}
+
+END
