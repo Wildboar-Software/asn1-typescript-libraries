@@ -1,0 +1,25 @@
+{
+  "name": "hi2operations",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/hi2operations/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/hi2operations",
+        "tsConfig": "packages/hi2operations/tsconfig.lib.json",
+        "packageJson": "packages/hi2operations/package.json",
+        "main": "packages/hi2operations/src/index.mts",
+        "assets": [
+          "packages/hi2operations/*.md",
+          "packages/hi2operations/LICENSE.txt",
+          "packages/hi2operations/package.json"
+        ]
+      }
+    }
+  }
+}
