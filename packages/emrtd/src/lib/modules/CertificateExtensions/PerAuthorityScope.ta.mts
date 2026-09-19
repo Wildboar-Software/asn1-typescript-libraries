@@ -1,78 +1,17 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeneralName, _decode_GeneralName, _encode_GeneralName } from "../CertificateExtensions/GeneralName.ta.mjs";
 // export { GeneralName, _decode_GeneralName, _encode_GeneralName } from "../CertificateExtensions/GeneralName.ta.mjs";
 import { DistributionPointName, _decode_DistributionPointName, _encode_DistributionPointName } from "../CertificateExtensions/DistributionPointName.ta.mjs";
 // export { DistributionPointName, _decode_DistributionPointName, _encode_DistributionPointName } from "../CertificateExtensions/DistributionPointName.ta.mjs";
-import { OnlyCertificateTypes, OnlyCertificateTypes_user /* IMPORTED_LONG_NAMED_BIT */, user /* IMPORTED_SHORT_NAMED_BIT */, OnlyCertificateTypes_authority /* IMPORTED_LONG_NAMED_BIT */, authority /* IMPORTED_SHORT_NAMED_BIT */, OnlyCertificateTypes_attribute /* IMPORTED_LONG_NAMED_BIT */, attribute /* IMPORTED_SHORT_NAMED_BIT */, _decode_OnlyCertificateTypes, _encode_OnlyCertificateTypes } from "../CertificateExtensions/OnlyCertificateTypes.ta.mjs";
+import { OnlyCertificateTypes, _decode_OnlyCertificateTypes, _encode_OnlyCertificateTypes } from "../CertificateExtensions/OnlyCertificateTypes.ta.mjs";
 // export { OnlyCertificateTypes, OnlyCertificateTypes_user /* IMPORTED_LONG_NAMED_BIT */, user /* IMPORTED_SHORT_NAMED_BIT */, OnlyCertificateTypes_authority /* IMPORTED_LONG_NAMED_BIT */, authority /* IMPORTED_SHORT_NAMED_BIT */, OnlyCertificateTypes_attribute /* IMPORTED_LONG_NAMED_BIT */, attribute /* IMPORTED_SHORT_NAMED_BIT */, _decode_OnlyCertificateTypes, _encode_OnlyCertificateTypes } from "../CertificateExtensions/OnlyCertificateTypes.ta.mjs";
-import { ReasonFlags, ReasonFlags_unused /* IMPORTED_LONG_NAMED_BIT */, unused /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_keyCompromise /* IMPORTED_LONG_NAMED_BIT */, keyCompromise /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_cACompromise /* IMPORTED_LONG_NAMED_BIT */, cACompromise /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_affiliationChanged /* IMPORTED_LONG_NAMED_BIT */, affiliationChanged /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_superseded /* IMPORTED_LONG_NAMED_BIT */, superseded /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_cessationOfOperation /* IMPORTED_LONG_NAMED_BIT */, cessationOfOperation /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_certificateHold /* IMPORTED_LONG_NAMED_BIT */, certificateHold /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_privilegeWithdrawn /* IMPORTED_LONG_NAMED_BIT */, privilegeWithdrawn /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_aACompromise /* IMPORTED_LONG_NAMED_BIT */, aACompromise /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_weakAlgorithmOrKey /* IMPORTED_LONG_NAMED_BIT */, weakAlgorithmOrKey /* IMPORTED_SHORT_NAMED_BIT */, _decode_ReasonFlags, _encode_ReasonFlags } from "../CertificateExtensions/ReasonFlags.ta.mjs";
+import { ReasonFlags, _decode_ReasonFlags, _encode_ReasonFlags } from "../CertificateExtensions/ReasonFlags.ta.mjs";
 // export { ReasonFlags, ReasonFlags_unused /* IMPORTED_LONG_NAMED_BIT */, unused /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_keyCompromise /* IMPORTED_LONG_NAMED_BIT */, keyCompromise /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_cACompromise /* IMPORTED_LONG_NAMED_BIT */, cACompromise /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_affiliationChanged /* IMPORTED_LONG_NAMED_BIT */, affiliationChanged /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_superseded /* IMPORTED_LONG_NAMED_BIT */, superseded /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_cessationOfOperation /* IMPORTED_LONG_NAMED_BIT */, cessationOfOperation /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_certificateHold /* IMPORTED_LONG_NAMED_BIT */, certificateHold /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_privilegeWithdrawn /* IMPORTED_LONG_NAMED_BIT */, privilegeWithdrawn /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_aACompromise /* IMPORTED_LONG_NAMED_BIT */, aACompromise /* IMPORTED_SHORT_NAMED_BIT */, ReasonFlags_weakAlgorithmOrKey /* IMPORTED_LONG_NAMED_BIT */, weakAlgorithmOrKey /* IMPORTED_SHORT_NAMED_BIT */, _decode_ReasonFlags, _encode_ReasonFlags } from "../CertificateExtensions/ReasonFlags.ta.mjs";
 import { NumberRange, _decode_NumberRange, _encode_NumberRange } from "../CertificateExtensions/NumberRange.ta.mjs";
 // export { NumberRange, _decode_NumberRange, _encode_NumberRange } from "../CertificateExtensions/NumberRange.ta.mjs";
