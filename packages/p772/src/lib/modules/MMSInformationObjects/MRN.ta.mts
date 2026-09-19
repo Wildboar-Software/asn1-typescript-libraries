@@ -1,0 +1,53 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { MN, _decode_MN, _encode_MN } from "../MMSInformationObjects/MN.ta.mjs";
+// export { MN, _decode_MN, _encode_MN } from "../MMSInformationObjects/MN.ta.mjs";
+
+
+/**
+ * @summary MRN
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * MRN  ::=  MN
+ * ```
+ */
+export
+type MRN = MN; // DefinedType
+
+let _cached_decoder_for_MRN: $.ASN1Decoder<MRN> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) MRN
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_MRN (el: _Element): MRN {
+    if (!_cached_decoder_for_MRN) { _cached_decoder_for_MRN = _decode_MN; }
+    return _cached_decoder_for_MRN(el);
+}
+
+let _cached_encoder_for_MRN: $.ASN1Encoder<MRN> | null = null;
+
+/**
+ * @summary Encodes a(n) MRN into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The MRN, encoded as an ASN.1 Element.
+ */
+export
+function _encode_MRN (value: MRN, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_MRN) { _cached_encoder_for_MRN = _encode_MN; }
+    return _cached_encoder_for_MRN(value, elGetter);
+}
+
+
+/* eslint-enable */
