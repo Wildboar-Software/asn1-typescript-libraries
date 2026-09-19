@@ -1,0 +1,26 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+
+
+
+/**
+ * @summary id_pr_missingSearchContext
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * id-pr-missingSearchContext                OBJECT IDENTIFIER ::= {id-pr 15}
+ * ```
+ * 
+ * @constant
+ */
+export
+const id_pr_missingSearchContext: OBJECT_IDENTIFIER = _OID.fromParts([
+    15,
+], id_pr);
+
+/* eslint-enable */

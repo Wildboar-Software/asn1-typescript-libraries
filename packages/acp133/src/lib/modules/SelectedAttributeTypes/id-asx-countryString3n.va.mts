@@ -1,0 +1,26 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+
+
+
+/**
+ * @summary id_asx_countryString3n
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * id-asx-countryString3n                    OBJECT IDENTIFIER ::= {id-asx 8}
+ * ```
+ * 
+ * @constant
+ */
+export
+const id_asx_countryString3n: OBJECT_IDENTIFIER = _OID.fromParts([
+    8,
+], id_asx);
+
+/* eslint-enable */

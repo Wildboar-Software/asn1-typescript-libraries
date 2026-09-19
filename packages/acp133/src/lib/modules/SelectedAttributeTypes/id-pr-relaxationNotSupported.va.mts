@@ -1,0 +1,26 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+
+
+
+/**
+ * @summary id_pr_relaxationNotSupported
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * id-pr-relaxationNotSupported              OBJECT IDENTIFIER ::= {id-pr 36}
+ * ```
+ * 
+ * @constant
+ */
+export
+const id_pr_relaxationNotSupported: OBJECT_IDENTIFIER = _OID.fromParts([
+    36,
+], id_pr);
+
+/* eslint-enable */

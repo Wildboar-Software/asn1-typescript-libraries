@@ -1,0 +1,26 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+
+
+
+/**
+ * @summary id_cat_selectedContexts
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * id-cat-selectedContexts                   OBJECT IDENTIFIER ::= {id-cat 4}
+ * ```
+ * 
+ * @constant
+ */
+export
+const id_cat_selectedContexts: OBJECT_IDENTIFIER = _OID.fromParts([
+    4,
+], id_cat);
+
+/* eslint-enable */
