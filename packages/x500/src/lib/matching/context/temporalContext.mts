@@ -13,6 +13,7 @@ import type {
 } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { addHours } from "date-fns";
 import boundariesOfPeriodOccurrence from "../../utils/boundariesOfPeriodOccurrence.mjs";
+import dateIsBetweenDayTimeBand from "../../utils/dateIsBetweenDayTimeBand.mjs";
 
 const MAX_DATE: Date = new Date(8640000000000000);
 const MIN_DATE: Date = new Date(-8640000000000000);
@@ -59,23 +60,56 @@ function instantAfter (instant: Date): Date {
 /**
  * Latest inclusive end among occurrences (any `Period` in the SET) that
  * contain `t`. `null` if `t` is a hole in the union.
+ *
+ * A single `Period` may have several `DayTimeBand`s; occurrence bounds
+ * use only the first matching band, so this also considers every band
+ * that contains `t` on that civil day.
  */
 function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null {
     let farthest: Date | null = null;
+
+    const consider = (upper: Date, lower: Date): void => {
+        if (
+            (t.valueOf() < lower.valueOf())
+            || (t.valueOf() > upper.valueOf())
+        ) {
+            return;
+        }
+        if ((farthest === null) || (upper.valueOf() > farthest.valueOf())) {
+            farthest = upper;
+        }
+    };
+
     for (const period of periods) {
         const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, t);
         if (!boundaries) {
             continue;
         }
-        const [ lower, upper ] = boundaries;
-        if (
-            (t.valueOf() < lower.valueOf())
-            || (t.valueOf() > upper.valueOf())
-        ) {
+        consider(boundaries[1], boundaries[0]);
+        if (!period.timesOfDay?.length) {
             continue;
         }
-        if ((farthest === null) || (upper.valueOf() > farthest.valueOf())) {
-            farthest = upper;
+        for (const band of period.timesOfDay) {
+            if (!dateIsBetweenDayTimeBand(band, t)) {
+                continue;
+            }
+            const lower = new Date(
+                t.getFullYear(),
+                t.getMonth(),
+                t.getDate(),
+                Number(band.startDayTime?.hour ?? 0),
+                Number(band.startDayTime?.minute ?? 0),
+                Number(band.startDayTime?.second ?? 0),
+            );
+            const upper = new Date(
+                t.getFullYear(),
+                t.getMonth(),
+                t.getDate(),
+                Number(band.endDayTime?.hour ?? 23),
+                Number(band.endDayTime?.minute ?? 59),
+                Number(band.endDayTime?.second ?? 59),
+            );
+            consider(upper, lower);
         }
     }
     return farthest;
