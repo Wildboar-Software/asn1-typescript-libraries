@@ -221,6 +221,9 @@
     },
     {
       "path": "./packages/mrbtr"
+    },
+    {
+      "path": "./packages/cosem"
     }
   ],
   "compilerOptions": {
