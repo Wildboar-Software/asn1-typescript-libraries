@@ -1,69 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
@@ -72,7 +11,7 @@ import { AttributeCombinations, _decode_AttributeCombinations, _encode_Attribute
 // export { AttributeCombinations, _decode_AttributeCombinations, _encode_AttributeCombinations } from "../RecordSyntax-explain/AttributeCombinations.ta.mjs";
 import { SortKeyDetails_sortType, _decode_SortKeyDetails_sortType, _encode_SortKeyDetails_sortType } from "../RecordSyntax-explain/SortKeyDetails-sortType.ta.mjs";
 // export { SortKeyDetails_sortType, _decode_SortKeyDetails_sortType, _encode_SortKeyDetails_sortType } from "../RecordSyntax-explain/SortKeyDetails-sortType.ta.mjs";
-import { SortKeyDetails_caseSensitivity, SortKeyDetails_caseSensitivity_always /* IMPORTED_LONG_NAMED_INTEGER */, always /* IMPORTED_SHORT_NAMED_INTEGER */, SortKeyDetails_caseSensitivity_never /* IMPORTED_LONG_NAMED_INTEGER */, never /* IMPORTED_SHORT_NAMED_INTEGER */, SortKeyDetails_caseSensitivity_default_yes /* IMPORTED_LONG_NAMED_INTEGER */, default_yes /* IMPORTED_SHORT_NAMED_INTEGER */, SortKeyDetails_caseSensitivity_default_no /* IMPORTED_LONG_NAMED_INTEGER */, default_no /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SortKeyDetails_caseSensitivity, _encode_SortKeyDetails_caseSensitivity } from "../RecordSyntax-explain/SortKeyDetails-caseSensitivity.ta.mjs";
+import { SortKeyDetails_caseSensitivity, _decode_SortKeyDetails_caseSensitivity, _encode_SortKeyDetails_caseSensitivity } from "../RecordSyntax-explain/SortKeyDetails-caseSensitivity.ta.mjs";
 // export { SortKeyDetails_caseSensitivity, SortKeyDetails_caseSensitivity_always /* IMPORTED_LONG_NAMED_INTEGER */, always /* IMPORTED_SHORT_NAMED_INTEGER */, SortKeyDetails_caseSensitivity_never /* IMPORTED_LONG_NAMED_INTEGER */, never /* IMPORTED_SHORT_NAMED_INTEGER */, SortKeyDetails_caseSensitivity_default_yes /* IMPORTED_LONG_NAMED_INTEGER */, default_yes /* IMPORTED_SHORT_NAMED_INTEGER */, SortKeyDetails_caseSensitivity_default_no /* IMPORTED_LONG_NAMED_INTEGER */, default_no /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SortKeyDetails_caseSensitivity, _encode_SortKeyDetails_caseSensitivity } from "../RecordSyntax-explain/SortKeyDetails-caseSensitivity.ta.mjs";
 
 

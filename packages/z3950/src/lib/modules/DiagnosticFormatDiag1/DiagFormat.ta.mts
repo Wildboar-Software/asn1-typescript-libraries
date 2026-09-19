@@ -1,69 +1,7 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagFormat_tooMany, _decode_DiagFormat_tooMany, _encode_DiagFormat_tooMany } from "../DiagnosticFormatDiag1/DiagFormat-tooMany.ta.mjs";
@@ -72,7 +10,7 @@ import { DiagFormat_badSpec, _decode_DiagFormat_badSpec, _encode_DiagFormat_badS
 // export { DiagFormat_badSpec, _decode_DiagFormat_badSpec, _encode_DiagFormat_badSpec } from "../DiagnosticFormatDiag1/DiagFormat-badSpec.ta.mjs";
 import { DiagFormat_dbUnavail, _decode_DiagFormat_dbUnavail, _encode_DiagFormat_dbUnavail } from "../DiagnosticFormatDiag1/DiagFormat-dbUnavail.ta.mjs";
 // export { DiagFormat_dbUnavail, _decode_DiagFormat_dbUnavail, _encode_DiagFormat_dbUnavail } from "../DiagnosticFormatDiag1/DiagFormat-dbUnavail.ta.mjs";
-import { DiagFormat_unSupOp, DiagFormat_unSupOp_and /* IMPORTED_LONG_NAMED_INTEGER */, and /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_unSupOp_or /* IMPORTED_LONG_NAMED_INTEGER */, or /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_unSupOp_and_not /* IMPORTED_LONG_NAMED_INTEGER */, and_not /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_unSupOp_prox /* IMPORTED_LONG_NAMED_INTEGER */, prox /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagFormat_unSupOp, _encode_DiagFormat_unSupOp } from "../DiagnosticFormatDiag1/DiagFormat-unSupOp.ta.mjs";
+import { DiagFormat_unSupOp, _decode_DiagFormat_unSupOp, _encode_DiagFormat_unSupOp } from "../DiagnosticFormatDiag1/DiagFormat-unSupOp.ta.mjs";
 // export { DiagFormat_unSupOp, DiagFormat_unSupOp_and /* IMPORTED_LONG_NAMED_INTEGER */, and /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_unSupOp_or /* IMPORTED_LONG_NAMED_INTEGER */, or /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_unSupOp_and_not /* IMPORTED_LONG_NAMED_INTEGER */, and_not /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_unSupOp_prox /* IMPORTED_LONG_NAMED_INTEGER */, prox /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagFormat_unSupOp, _encode_DiagFormat_unSupOp } from "../DiagnosticFormatDiag1/DiagFormat-unSupOp.ta.mjs";
 import { DiagFormat_attribute, _decode_DiagFormat_attribute, _encode_DiagFormat_attribute } from "../DiagnosticFormatDiag1/DiagFormat-attribute.ta.mjs";
 // export { DiagFormat_attribute, _decode_DiagFormat_attribute, _encode_DiagFormat_attribute } from "../DiagnosticFormatDiag1/DiagFormat-attribute.ta.mjs";
