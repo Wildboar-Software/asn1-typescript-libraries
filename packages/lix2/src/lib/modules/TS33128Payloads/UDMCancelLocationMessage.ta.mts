@@ -1,69 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
@@ -76,7 +15,7 @@ import { GUAMI, _decode_GUAMI, _encode_GUAMI } from "../TS33128Payloads/GUAMI.ta
 // export { GUAMI, _decode_GUAMI, _encode_GUAMI } from "../TS33128Payloads/GUAMI.ta.mjs";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
 // export { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
-import { UDMCancelLocationMethod, _enum_for_UDMCancelLocationMethod, UDMCancelLocationMethod_aMF3GPPAccessDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, aMF3GPPAccessDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMCancelLocationMethod_aMFNon3GPPAccessDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, aMFNon3GPPAccessDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMCancelLocationMethod_uDMDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, uDMDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMCancelLocationMethod_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UDMCancelLocationMethod, _encode_UDMCancelLocationMethod } from "../TS33128Payloads/UDMCancelLocationMethod.ta.mjs";
+import { UDMCancelLocationMethod, _decode_UDMCancelLocationMethod, _encode_UDMCancelLocationMethod, _enum_for_UDMCancelLocationMethod } from "../TS33128Payloads/UDMCancelLocationMethod.ta.mjs";
 // export { UDMCancelLocationMethod, _enum_for_UDMCancelLocationMethod, UDMCancelLocationMethod_aMF3GPPAccessDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, aMF3GPPAccessDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMCancelLocationMethod_aMFNon3GPPAccessDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, aMFNon3GPPAccessDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMCancelLocationMethod_uDMDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, uDMDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMCancelLocationMethod_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UDMCancelLocationMethod, _encode_UDMCancelLocationMethod } from "../TS33128Payloads/UDMCancelLocationMethod.ta.mjs";
 import { UDMAMFDeregistrationInfo, _decode_UDMAMFDeregistrationInfo, _encode_UDMAMFDeregistrationInfo } from "../TS33128Payloads/UDMAMFDeregistrationInfo.ta.mjs";
 // export { UDMAMFDeregistrationInfo, _decode_UDMAMFDeregistrationInfo, _encode_UDMAMFDeregistrationInfo } from "../TS33128Payloads/UDMAMFDeregistrationInfo.ta.mjs";

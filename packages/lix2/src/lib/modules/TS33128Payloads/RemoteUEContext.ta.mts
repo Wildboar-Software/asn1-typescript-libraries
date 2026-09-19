@@ -1,78 +1,18 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RemoteUEIDFormat, _enum_for_RemoteUEIDFormat, RemoteUEIDFormat_nAI /* IMPORTED_LONG_ENUMERATION_ITEM */, nAI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RemoteUEIDFormat_sixtyFourBitString /* IMPORTED_LONG_ENUMERATION_ITEM */, sixtyFourBitString /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RemoteUEIDFormat, _encode_RemoteUEIDFormat } from "../TS33128Payloads/RemoteUEIDFormat.ta.mjs";
+import { RemoteUEIDFormat, _decode_RemoteUEIDFormat, _encode_RemoteUEIDFormat, _enum_for_RemoteUEIDFormat } from "../TS33128Payloads/RemoteUEIDFormat.ta.mjs";
 // export { RemoteUEIDFormat, _enum_for_RemoteUEIDFormat, RemoteUEIDFormat_nAI /* IMPORTED_LONG_ENUMERATION_ITEM */, nAI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RemoteUEIDFormat_sixtyFourBitString /* IMPORTED_LONG_ENUMERATION_ITEM */, sixtyFourBitString /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RemoteUEIDFormat, _encode_RemoteUEIDFormat } from "../TS33128Payloads/RemoteUEIDFormat.ta.mjs";
-import { RemoteUEIDType, _enum_for_RemoteUEIDType, RemoteUEIDType_uPPRUKID /* IMPORTED_LONG_ENUMERATION_ITEM */, uPPRUKID /* IMPORTED_SHORT_ENUMERATION_ITEM */, RemoteUEIDType_cPPRUKID /* IMPORTED_LONG_ENUMERATION_ITEM */, cPPRUKID /* IMPORTED_SHORT_ENUMERATION_ITEM */, RemoteUEIDType_iMEI /* IMPORTED_LONG_ENUMERATION_ITEM */, iMEI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RemoteUEIDType_iMEISV /* IMPORTED_LONG_ENUMERATION_ITEM */, iMEISV /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RemoteUEIDType, _encode_RemoteUEIDType } from "../TS33128Payloads/RemoteUEIDType.ta.mjs";
+import { RemoteUEIDType, _decode_RemoteUEIDType, _encode_RemoteUEIDType, _enum_for_RemoteUEIDType } from "../TS33128Payloads/RemoteUEIDType.ta.mjs";
 // export { RemoteUEIDType, _enum_for_RemoteUEIDType, RemoteUEIDType_uPPRUKID /* IMPORTED_LONG_ENUMERATION_ITEM */, uPPRUKID /* IMPORTED_SHORT_ENUMERATION_ITEM */, RemoteUEIDType_cPPRUKID /* IMPORTED_LONG_ENUMERATION_ITEM */, cPPRUKID /* IMPORTED_SHORT_ENUMERATION_ITEM */, RemoteUEIDType_iMEI /* IMPORTED_LONG_ENUMERATION_ITEM */, iMEI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RemoteUEIDType_iMEISV /* IMPORTED_LONG_ENUMERATION_ITEM */, iMEISV /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RemoteUEIDType, _encode_RemoteUEIDType } from "../TS33128Payloads/RemoteUEIDType.ta.mjs";
 import { RemoteUEID, _decode_RemoteUEID, _encode_RemoteUEID } from "../TS33128Payloads/RemoteUEID.ta.mjs";
 // export { RemoteUEID, _decode_RemoteUEID, _encode_RemoteUEID } from "../TS33128Payloads/RemoteUEID.ta.mjs";
-import { ProtocolUsedByRemoteUE, _enum_for_ProtocolUsedByRemoteUE, ProtocolUsedByRemoteUE_noIPInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, noIPInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolUsedByRemoteUE_iPv4 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolUsedByRemoteUE_iPv6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolUsedByRemoteUE_unstructured /* IMPORTED_LONG_ENUMERATION_ITEM */, unstructured /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolUsedByRemoteUE_ethernet /* IMPORTED_LONG_ENUMERATION_ITEM */, ethernet /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ProtocolUsedByRemoteUE, _encode_ProtocolUsedByRemoteUE } from "../TS33128Payloads/ProtocolUsedByRemoteUE.ta.mjs";
+import { ProtocolUsedByRemoteUE, _decode_ProtocolUsedByRemoteUE, _encode_ProtocolUsedByRemoteUE, _enum_for_ProtocolUsedByRemoteUE } from "../TS33128Payloads/ProtocolUsedByRemoteUE.ta.mjs";
 // export { ProtocolUsedByRemoteUE, _enum_for_ProtocolUsedByRemoteUE, ProtocolUsedByRemoteUE_noIPInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, noIPInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolUsedByRemoteUE_iPv4 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolUsedByRemoteUE_iPv6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolUsedByRemoteUE_unstructured /* IMPORTED_LONG_ENUMERATION_ITEM */, unstructured /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProtocolUsedByRemoteUE_ethernet /* IMPORTED_LONG_ENUMERATION_ITEM */, ethernet /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ProtocolUsedByRemoteUE, _encode_ProtocolUsedByRemoteUE } from "../TS33128Payloads/ProtocolUsedByRemoteUE.ta.mjs";
 import { AddressInformation, _decode_AddressInformation, _encode_AddressInformation } from "../TS33128Payloads/AddressInformation.ta.mjs";
 // export { AddressInformation, _decode_AddressInformation, _encode_AddressInformation } from "../TS33128Payloads/AddressInformation.ta.mjs";

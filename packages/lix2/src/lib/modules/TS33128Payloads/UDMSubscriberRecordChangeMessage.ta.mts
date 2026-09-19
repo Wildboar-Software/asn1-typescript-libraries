@@ -1,69 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
@@ -74,7 +13,7 @@ import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs
 // export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 import { ServiceID, _decode_ServiceID, _encode_ServiceID } from "../TS33128Payloads/ServiceID.ta.mjs";
 // export { ServiceID, _decode_ServiceID, _encode_ServiceID } from "../TS33128Payloads/ServiceID.ta.mjs";
-import { UDMSubscriberRecordChangeMethod, _enum_for_UDMSubscriberRecordChangeMethod, UDMSubscriberRecordChangeMethod_pEIChange /* IMPORTED_LONG_ENUMERATION_ITEM */, pEIChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMSubscriberRecordChangeMethod_sUPIChange /* IMPORTED_LONG_ENUMERATION_ITEM */, sUPIChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMSubscriberRecordChangeMethod_gPSIChange /* IMPORTED_LONG_ENUMERATION_ITEM */, gPSIChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMSubscriberRecordChangeMethod_uEDeprovisioning /* IMPORTED_LONG_ENUMERATION_ITEM */, uEDeprovisioning /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMSubscriberRecordChangeMethod_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMSubscriberRecordChangeMethod_serviceIDChange /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceIDChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMSubscriberRecordChangeMethod_multipleIDChanges /* IMPORTED_LONG_ENUMERATION_ITEM */, multipleIDChanges /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UDMSubscriberRecordChangeMethod, _encode_UDMSubscriberRecordChangeMethod } from "../TS33128Payloads/UDMSubscriberRecordChangeMethod.ta.mjs";
+import { UDMSubscriberRecordChangeMethod, _decode_UDMSubscriberRecordChangeMethod, _encode_UDMSubscriberRecordChangeMethod, _enum_for_UDMSubscriberRecordChangeMethod } from "../TS33128Payloads/UDMSubscriberRecordChangeMethod.ta.mjs";
 // export { UDMSubscriberRecordChangeMethod, _enum_for_UDMSubscriberRecordChangeMethod, UDMSubscriberRecordChangeMethod_pEIChange /* IMPORTED_LONG_ENUMERATION_ITEM */, pEIChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMSubscriberRecordChangeMethod_sUPIChange /* IMPORTED_LONG_ENUMERATION_ITEM */, sUPIChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMSubscriberRecordChangeMethod_gPSIChange /* IMPORTED_LONG_ENUMERATION_ITEM */, gPSIChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMSubscriberRecordChangeMethod_uEDeprovisioning /* IMPORTED_LONG_ENUMERATION_ITEM */, uEDeprovisioning /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMSubscriberRecordChangeMethod_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMSubscriberRecordChangeMethod_serviceIDChange /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceIDChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMSubscriberRecordChangeMethod_multipleIDChanges /* IMPORTED_LONG_ENUMERATION_ITEM */, multipleIDChanges /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UDMSubscriberRecordChangeMethod, _encode_UDMSubscriberRecordChangeMethod } from "../TS33128Payloads/UDMSubscriberRecordChangeMethod.ta.mjs";
 
 

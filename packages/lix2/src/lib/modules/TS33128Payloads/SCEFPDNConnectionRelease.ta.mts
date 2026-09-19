@@ -1,69 +1,9 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
@@ -76,7 +16,7 @@ import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS3312
 // export { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
 import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
-import { SCEFReleaseCause, _enum_for_SCEFReleaseCause, SCEFReleaseCause_mMERelease /* IMPORTED_LONG_ENUMERATION_ITEM */, mMERelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCEFReleaseCause_dNRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, dNRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCEFReleaseCause_hSSRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, hSSRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCEFReleaseCause_localConfigurationPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, localConfigurationPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCEFReleaseCause_unknownCause /* IMPORTED_LONG_ENUMERATION_ITEM */, unknownCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SCEFReleaseCause, _encode_SCEFReleaseCause } from "../TS33128Payloads/SCEFReleaseCause.ta.mjs";
+import { SCEFReleaseCause, _decode_SCEFReleaseCause, _encode_SCEFReleaseCause, _enum_for_SCEFReleaseCause } from "../TS33128Payloads/SCEFReleaseCause.ta.mjs";
 // export { SCEFReleaseCause, _enum_for_SCEFReleaseCause, SCEFReleaseCause_mMERelease /* IMPORTED_LONG_ENUMERATION_ITEM */, mMERelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCEFReleaseCause_dNRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, dNRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCEFReleaseCause_hSSRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, hSSRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCEFReleaseCause_localConfigurationPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, localConfigurationPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCEFReleaseCause_unknownCause /* IMPORTED_LONG_ENUMERATION_ITEM */, unknownCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SCEFReleaseCause, _encode_SCEFReleaseCause } from "../TS33128Payloads/SCEFReleaseCause.ta.mjs";
 
 

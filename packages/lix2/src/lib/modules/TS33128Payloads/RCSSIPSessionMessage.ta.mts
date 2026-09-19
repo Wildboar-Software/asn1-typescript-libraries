@@ -1,76 +1,15 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RCSSessionLeg, _enum_for_RCSSessionLeg, RCSSessionLeg_remoteLeg /* IMPORTED_LONG_ENUMERATION_ITEM */, remoteLeg /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionLeg_localLeg /* IMPORTED_LONG_ENUMERATION_ITEM */, localLeg /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RCSSessionLeg, _encode_RCSSessionLeg } from "../TS33128Payloads/RCSSessionLeg.ta.mjs";
+import { RCSSessionLeg, _decode_RCSSessionLeg, _encode_RCSSessionLeg, _enum_for_RCSSessionLeg } from "../TS33128Payloads/RCSSessionLeg.ta.mjs";
 // export { RCSSessionLeg, _enum_for_RCSSessionLeg, RCSSessionLeg_remoteLeg /* IMPORTED_LONG_ENUMERATION_ITEM */, remoteLeg /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionLeg_localLeg /* IMPORTED_LONG_ENUMERATION_ITEM */, localLeg /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RCSSessionLeg, _encode_RCSSessionLeg } from "../TS33128Payloads/RCSSessionLeg.ta.mjs";
 import { IMSPayload, _decode_IMSPayload, _encode_IMSPayload } from "../TS33128Payloads/IMSPayload.ta.mjs";
 // export { IMSPayload, _decode_IMSPayload, _encode_IMSPayload } from "../TS33128Payloads/IMSPayload.ta.mjs";
-import { RCSSessionResult, _enum_for_RCSSessionResult, RCSSessionResult_newLegRequested /* IMPORTED_LONG_ENUMERATION_ITEM */, newLegRequested /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionResult_newLegEstablished /* IMPORTED_LONG_ENUMERATION_ITEM */, newLegEstablished /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionResult_legModificationRequested /* IMPORTED_LONG_ENUMERATION_ITEM */, legModificationRequested /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionResult_legModificationComplete /* IMPORTED_LONG_ENUMERATION_ITEM */, legModificationComplete /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionResult_legRemovalRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, legRemovalRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionResult_legRemovalComplete /* IMPORTED_LONG_ENUMERATION_ITEM */, legRemovalComplete /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RCSSessionResult, _encode_RCSSessionResult } from "../TS33128Payloads/RCSSessionResult.ta.mjs";
+import { RCSSessionResult, _decode_RCSSessionResult, _encode_RCSSessionResult, _enum_for_RCSSessionResult } from "../TS33128Payloads/RCSSessionResult.ta.mjs";
 // export { RCSSessionResult, _enum_for_RCSSessionResult, RCSSessionResult_newLegRequested /* IMPORTED_LONG_ENUMERATION_ITEM */, newLegRequested /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionResult_newLegEstablished /* IMPORTED_LONG_ENUMERATION_ITEM */, newLegEstablished /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionResult_legModificationRequested /* IMPORTED_LONG_ENUMERATION_ITEM */, legModificationRequested /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionResult_legModificationComplete /* IMPORTED_LONG_ENUMERATION_ITEM */, legModificationComplete /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionResult_legRemovalRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, legRemovalRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionResult_legRemovalComplete /* IMPORTED_LONG_ENUMERATION_ITEM */, legRemovalComplete /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RCSSessionResult, _encode_RCSSessionResult } from "../TS33128Payloads/RCSSessionResult.ta.mjs";
 import { MSRPPath, _decode_MSRPPath, _encode_MSRPPath } from "../TS33128Payloads/MSRPPath.ta.mjs";
 // export { MSRPPath, _decode_MSRPPath, _encode_MSRPPath } from "../TS33128Payloads/MSRPPath.ta.mjs";

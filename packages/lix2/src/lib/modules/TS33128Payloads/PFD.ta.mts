@@ -1,69 +1,9 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
     UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PFDFlowDescriptions, _decode_PFDFlowDescriptions, _encode_PFDFlowDescriptions } from "../TS33128Payloads/PFDFlowDescriptions.ta.mjs";
@@ -72,7 +12,7 @@ import { PFDURLs, _decode_PFDURLs, _encode_PFDURLs } from "../TS33128Payloads/PF
 // export { PFDURLs, _decode_PFDURLs, _encode_PFDURLs } from "../TS33128Payloads/PFDURLs.ta.mjs";
 import { DomainNames, _decode_DomainNames, _encode_DomainNames } from "../TS33128Payloads/DomainNames.ta.mjs";
 // export { DomainNames, _decode_DomainNames, _encode_DomainNames } from "../TS33128Payloads/DomainNames.ta.mjs";
-import { DnProtocol, _enum_for_DnProtocol, DnProtocol_dnsQname /* IMPORTED_LONG_ENUMERATION_ITEM */, dnsQname /* IMPORTED_SHORT_ENUMERATION_ITEM */, DnProtocol_tlsSni /* IMPORTED_LONG_ENUMERATION_ITEM */, tlsSni /* IMPORTED_SHORT_ENUMERATION_ITEM */, DnProtocol_tlsSan /* IMPORTED_LONG_ENUMERATION_ITEM */, tlsSan /* IMPORTED_SHORT_ENUMERATION_ITEM */, DnProtocol_tlsScn /* IMPORTED_LONG_ENUMERATION_ITEM */, tlsScn /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DnProtocol, _encode_DnProtocol } from "../TS33128Payloads/DnProtocol.ta.mjs";
+import { DnProtocol, _decode_DnProtocol, _encode_DnProtocol, _enum_for_DnProtocol } from "../TS33128Payloads/DnProtocol.ta.mjs";
 // export { DnProtocol, _enum_for_DnProtocol, DnProtocol_dnsQname /* IMPORTED_LONG_ENUMERATION_ITEM */, dnsQname /* IMPORTED_SHORT_ENUMERATION_ITEM */, DnProtocol_tlsSni /* IMPORTED_LONG_ENUMERATION_ITEM */, tlsSni /* IMPORTED_SHORT_ENUMERATION_ITEM */, DnProtocol_tlsSan /* IMPORTED_LONG_ENUMERATION_ITEM */, tlsSan /* IMPORTED_SHORT_ENUMERATION_ITEM */, DnProtocol_tlsScn /* IMPORTED_LONG_ENUMERATION_ITEM */, tlsScn /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DnProtocol, _encode_DnProtocol } from "../TS33128Payloads/DnProtocol.ta.mjs";
 
 

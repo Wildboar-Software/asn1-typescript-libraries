@@ -1,69 +1,9 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
@@ -74,7 +14,7 @@ import { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS3
 // export { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS33128Payloads/PDUSessionID.ta.mjs";
 import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
-import { NEFReleaseCause, _enum_for_NEFReleaseCause, NEFReleaseCause_sMFRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, sMFRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_dNRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, dNRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_uDMRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, uDMRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_cHFRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, cHFRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_localConfigurationPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, localConfigurationPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_unknownCause /* IMPORTED_LONG_ENUMERATION_ITEM */, unknownCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NEFReleaseCause, _encode_NEFReleaseCause } from "../TS33128Payloads/NEFReleaseCause.ta.mjs";
+import { NEFReleaseCause, _decode_NEFReleaseCause, _encode_NEFReleaseCause, _enum_for_NEFReleaseCause } from "../TS33128Payloads/NEFReleaseCause.ta.mjs";
 // export { NEFReleaseCause, _enum_for_NEFReleaseCause, NEFReleaseCause_sMFRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, sMFRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_dNRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, dNRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_uDMRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, uDMRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_cHFRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, cHFRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_localConfigurationPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, localConfigurationPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_unknownCause /* IMPORTED_LONG_ENUMERATION_ITEM */, unknownCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NEFReleaseCause, _encode_NEFReleaseCause } from "../TS33128Payloads/NEFReleaseCause.ta.mjs";
 
 

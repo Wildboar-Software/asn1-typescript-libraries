@@ -1,69 +1,10 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
     BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS33128Payloads/PDUSessionID.ta.mjs";
@@ -76,9 +17,9 @@ import { NextLayerProtocol, _decode_NextLayerProtocol, _encode_NextLayerProtocol
 // export { NextLayerProtocol, _decode_NextLayerProtocol, _encode_NextLayerProtocol } from "../TS33128Payloads/NextLayerProtocol.ta.mjs";
 import { IPv6FlowLabel, _decode_IPv6FlowLabel, _encode_IPv6FlowLabel } from "../TS33128Payloads/IPv6FlowLabel.ta.mjs";
 // export { IPv6FlowLabel, _decode_IPv6FlowLabel, _encode_IPv6FlowLabel } from "../TS33128Payloads/IPv6FlowLabel.ta.mjs";
-import { Direction, _enum_for_Direction, Direction_fromTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, fromTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_toTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, toTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Direction, _encode_Direction } from "../TS33128Payloads/Direction.ta.mjs";
+import { Direction, _decode_Direction, _encode_Direction, _enum_for_Direction } from "../TS33128Payloads/Direction.ta.mjs";
 // export { Direction, _enum_for_Direction, Direction_fromTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, fromTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_toTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, toTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Direction, _encode_Direction } from "../TS33128Payloads/Direction.ta.mjs";
-import { PDSRSummaryTrigger, _enum_for_PDSRSummaryTrigger, PDSRSummaryTrigger_timerExpiry /* IMPORTED_LONG_ENUMERATION_ITEM */, timerExpiry /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDSRSummaryTrigger_packetCount /* IMPORTED_LONG_ENUMERATION_ITEM */, packetCount /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDSRSummaryTrigger_byteCount /* IMPORTED_LONG_ENUMERATION_ITEM */, byteCount /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDSRSummaryTrigger_startOfFlow /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfFlow /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDSRSummaryTrigger_endOfFlow /* IMPORTED_LONG_ENUMERATION_ITEM */, endOfFlow /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PDSRSummaryTrigger, _encode_PDSRSummaryTrigger } from "../TS33128Payloads/PDSRSummaryTrigger.ta.mjs";
+import { PDSRSummaryTrigger, _decode_PDSRSummaryTrigger, _encode_PDSRSummaryTrigger, _enum_for_PDSRSummaryTrigger } from "../TS33128Payloads/PDSRSummaryTrigger.ta.mjs";
 // export { PDSRSummaryTrigger, _enum_for_PDSRSummaryTrigger, PDSRSummaryTrigger_timerExpiry /* IMPORTED_LONG_ENUMERATION_ITEM */, timerExpiry /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDSRSummaryTrigger_packetCount /* IMPORTED_LONG_ENUMERATION_ITEM */, packetCount /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDSRSummaryTrigger_byteCount /* IMPORTED_LONG_ENUMERATION_ITEM */, byteCount /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDSRSummaryTrigger_startOfFlow /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfFlow /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDSRSummaryTrigger_endOfFlow /* IMPORTED_LONG_ENUMERATION_ITEM */, endOfFlow /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PDSRSummaryTrigger, _encode_PDSRSummaryTrigger } from "../TS33128Payloads/PDSRSummaryTrigger.ta.mjs";
 import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";

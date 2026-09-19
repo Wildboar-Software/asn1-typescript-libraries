@@ -1,76 +1,15 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
 // export { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
 import { BroadcastPLMNItem, _decode_BroadcastPLMNItem, _encode_BroadcastPLMNItem } from "../TS33128Payloads/BroadcastPLMNItem.ta.mjs";
 // export { BroadcastPLMNItem, _decode_BroadcastPLMNItem, _encode_BroadcastPLMNItem } from "../TS33128Payloads/BroadcastPLMNItem.ta.mjs";
-import { RATInformation, _enum_for_RATInformation, RATInformation_unlicensed /* IMPORTED_LONG_ENUMERATION_ITEM */, unlicensed /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nBIoT /* IMPORTED_LONG_ENUMERATION_ITEM */, nBIoT /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nRLEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nRLEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nRMEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nRMEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nRGEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nRGEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nROTHERSAT /* IMPORTED_LONG_ENUMERATION_ITEM */, nROTHERSAT /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RATInformation, _encode_RATInformation } from "../TS33128Payloads/RATInformation.ta.mjs";
+import { RATInformation, _decode_RATInformation, _encode_RATInformation, _enum_for_RATInformation } from "../TS33128Payloads/RATInformation.ta.mjs";
 // export { RATInformation, _enum_for_RATInformation, RATInformation_unlicensed /* IMPORTED_LONG_ENUMERATION_ITEM */, unlicensed /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nBIoT /* IMPORTED_LONG_ENUMERATION_ITEM */, nBIoT /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nRLEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nRLEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nRMEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nRMEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nRGEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nRGEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nROTHERSAT /* IMPORTED_LONG_ENUMERATION_ITEM */, nROTHERSAT /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RATInformation, _encode_RATInformation } from "../TS33128Payloads/RATInformation.ta.mjs";
 
 

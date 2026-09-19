@@ -1,69 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
@@ -78,7 +17,7 @@ import { GUMMEI, _decode_GUMMEI, _encode_GUMMEI } from "../TS33128Payloads/GUMME
 // export { GUMMEI, _decode_GUMMEI, _encode_GUMMEI } from "../TS33128Payloads/GUMMEI.ta.mjs";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
 // export { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
-import { UDMServingSystemMethod, _enum_for_UDMServingSystemMethod, UDMServingSystemMethod_amf3GPPAccessRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, amf3GPPAccessRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMServingSystemMethod_amfNon3GPPAccessRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, amfNon3GPPAccessRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMServingSystemMethod_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UDMServingSystemMethod, _encode_UDMServingSystemMethod } from "../TS33128Payloads/UDMServingSystemMethod.ta.mjs";
+import { UDMServingSystemMethod, _decode_UDMServingSystemMethod, _encode_UDMServingSystemMethod, _enum_for_UDMServingSystemMethod } from "../TS33128Payloads/UDMServingSystemMethod.ta.mjs";
 // export { UDMServingSystemMethod, _enum_for_UDMServingSystemMethod, UDMServingSystemMethod_amf3GPPAccessRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, amf3GPPAccessRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMServingSystemMethod_amfNon3GPPAccessRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, amfNon3GPPAccessRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMServingSystemMethod_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UDMServingSystemMethod, _encode_UDMServingSystemMethod } from "../TS33128Payloads/UDMServingSystemMethod.ta.mjs";
 import { ServiceID, _decode_ServiceID, _encode_ServiceID } from "../TS33128Payloads/ServiceID.ta.mjs";
 // export { ServiceID, _decode_ServiceID, _encode_ServiceID } from "../TS33128Payloads/ServiceID.ta.mjs";

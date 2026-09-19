@@ -1,74 +1,13 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MMEDirection, _enum_for_MMEDirection, MMEDirection_networkInitiated /* IMPORTED_LONG_ENUMERATION_ITEM */, networkInitiated /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMEDirection_uEInitiated /* IMPORTED_LONG_ENUMERATION_ITEM */, uEInitiated /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMEDirection, _encode_MMEDirection } from "../TS33128Payloads/MMEDirection.ta.mjs";
+import { MMEDirection, _decode_MMEDirection, _encode_MMEDirection, _enum_for_MMEDirection } from "../TS33128Payloads/MMEDirection.ta.mjs";
 // export { MMEDirection, _enum_for_MMEDirection, MMEDirection_networkInitiated /* IMPORTED_LONG_ENUMERATION_ITEM */, networkInitiated /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMEDirection_uEInitiated /* IMPORTED_LONG_ENUMERATION_ITEM */, uEInitiated /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMEDirection, _encode_MMEDirection } from "../TS33128Payloads/MMEDirection.ta.mjs";
-import { EPSDetachType, _enum_for_EPSDetachType, EPSDetachType_ePSDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, ePSDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_iMSIDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, iMSIDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_combinedEPSIMSIDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, combinedEPSIMSIDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_reAttachRequired /* IMPORTED_LONG_ENUMERATION_ITEM */, reAttachRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_reAttachNotRequired /* IMPORTED_LONG_ENUMERATION_ITEM */, reAttachNotRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_reserved /* IMPORTED_LONG_ENUMERATION_ITEM */, reserved /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EPSDetachType, _encode_EPSDetachType } from "../TS33128Payloads/EPSDetachType.ta.mjs";
+import { EPSDetachType, _decode_EPSDetachType, _encode_EPSDetachType, _enum_for_EPSDetachType } from "../TS33128Payloads/EPSDetachType.ta.mjs";
 // export { EPSDetachType, _enum_for_EPSDetachType, EPSDetachType_ePSDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, ePSDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_iMSIDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, iMSIDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_combinedEPSIMSIDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, combinedEPSIMSIDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_reAttachRequired /* IMPORTED_LONG_ENUMERATION_ITEM */, reAttachRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_reAttachNotRequired /* IMPORTED_LONG_ENUMERATION_ITEM */, reAttachNotRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_reserved /* IMPORTED_LONG_ENUMERATION_ITEM */, reserved /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EPSDetachType, _encode_EPSDetachType } from "../TS33128Payloads/EPSDetachType.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
 // export { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
@@ -82,7 +21,7 @@ import { EMMCause, _decode_EMMCause, _encode_EMMCause } from "../TS33128Payloads
 // export { EMMCause, _decode_EMMCause, _encode_EMMCause } from "../TS33128Payloads/EMMCause.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 // export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-import { SwitchOffIndicator, _enum_for_SwitchOffIndicator, SwitchOffIndicator_normalDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, normalDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, SwitchOffIndicator_switchOff /* IMPORTED_LONG_ENUMERATION_ITEM */, switchOff /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SwitchOffIndicator, _encode_SwitchOffIndicator } from "../TS33128Payloads/SwitchOffIndicator.ta.mjs";
+import { SwitchOffIndicator, _decode_SwitchOffIndicator, _encode_SwitchOffIndicator, _enum_for_SwitchOffIndicator } from "../TS33128Payloads/SwitchOffIndicator.ta.mjs";
 // export { SwitchOffIndicator, _enum_for_SwitchOffIndicator, SwitchOffIndicator_normalDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, normalDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, SwitchOffIndicator_switchOff /* IMPORTED_LONG_ENUMERATION_ITEM */, switchOff /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SwitchOffIndicator, _encode_SwitchOffIndicator } from "../TS33128Payloads/SwitchOffIndicator.ta.mjs";
 
 

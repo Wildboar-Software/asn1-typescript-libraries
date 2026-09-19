@@ -1,80 +1,20 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
     UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PTCTargetInformation, _decode_PTCTargetInformation, _encode_PTCTargetInformation } from "../TS33128Payloads/PTCTargetInformation.ta.mjs";
 // export { PTCTargetInformation, _decode_PTCTargetInformation, _encode_PTCTargetInformation } from "../TS33128Payloads/PTCTargetInformation.ta.mjs";
-import { Direction, _enum_for_Direction, Direction_fromTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, fromTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_toTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, toTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Direction, _encode_Direction } from "../TS33128Payloads/Direction.ta.mjs";
+import { Direction, _decode_Direction, _encode_Direction, _enum_for_Direction } from "../TS33128Payloads/Direction.ta.mjs";
 // export { Direction, _enum_for_Direction, Direction_fromTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, fromTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_toTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, toTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Direction, _encode_Direction } from "../TS33128Payloads/Direction.ta.mjs";
 import { PTCSessionInfo, _decode_PTCSessionInfo, _encode_PTCSessionInfo } from "../TS33128Payloads/PTCSessionInfo.ta.mjs";
 // export { PTCSessionInfo, _decode_PTCSessionInfo, _encode_PTCSessionInfo } from "../TS33128Payloads/PTCSessionInfo.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 // export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-import { PTCSessionEndCause, _enum_for_PTCSessionEndCause, PTCSessionEndCause_initiaterLeavesSession /* IMPORTED_LONG_ENUMERATION_ITEM */, initiaterLeavesSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionEndCause_definedParticipantLeaves /* IMPORTED_LONG_ENUMERATION_ITEM */, definedParticipantLeaves /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionEndCause_numberOfParticipants /* IMPORTED_LONG_ENUMERATION_ITEM */, numberOfParticipants /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionEndCause_sessionTimerExpired /* IMPORTED_LONG_ENUMERATION_ITEM */, sessionTimerExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionEndCause_pTCSpeechInactive /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCSpeechInactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionEndCause_allMediaTypesInactive /* IMPORTED_LONG_ENUMERATION_ITEM */, allMediaTypesInactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PTCSessionEndCause, _encode_PTCSessionEndCause } from "../TS33128Payloads/PTCSessionEndCause.ta.mjs";
+import { PTCSessionEndCause, _decode_PTCSessionEndCause, _encode_PTCSessionEndCause, _enum_for_PTCSessionEndCause } from "../TS33128Payloads/PTCSessionEndCause.ta.mjs";
 // export { PTCSessionEndCause, _enum_for_PTCSessionEndCause, PTCSessionEndCause_initiaterLeavesSession /* IMPORTED_LONG_ENUMERATION_ITEM */, initiaterLeavesSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionEndCause_definedParticipantLeaves /* IMPORTED_LONG_ENUMERATION_ITEM */, definedParticipantLeaves /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionEndCause_numberOfParticipants /* IMPORTED_LONG_ENUMERATION_ITEM */, numberOfParticipants /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionEndCause_sessionTimerExpired /* IMPORTED_LONG_ENUMERATION_ITEM */, sessionTimerExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionEndCause_pTCSpeechInactive /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCSpeechInactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionEndCause_allMediaTypesInactive /* IMPORTED_LONG_ENUMERATION_ITEM */, allMediaTypesInactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PTCSessionEndCause, _encode_PTCSessionEndCause } from "../TS33128Payloads/PTCSessionEndCause.ta.mjs";
 
 

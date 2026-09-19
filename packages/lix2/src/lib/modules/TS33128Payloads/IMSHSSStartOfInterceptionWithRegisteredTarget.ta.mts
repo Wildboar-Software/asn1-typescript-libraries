@@ -1,76 +1,15 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HSSIdentities, _decode_HSSIdentities, _encode_HSSIdentities } from "../TS33128Payloads/HSSIdentities.ta.mjs";
 // export { HSSIdentities, _decode_HSSIdentities, _encode_HSSIdentities } from "../TS33128Payloads/HSSIdentities.ta.mjs";
 import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SBIType.ta.mjs";
 // export { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SBIType.ta.mjs";
-import { IMSRegistrationStatus, _enum_for_IMSRegistrationStatus, IMSRegistrationStatus_initialRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, initialRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_reregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, reregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_timeoutDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, timeoutDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_userDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, userDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_administrativeDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, administrativeDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_authenticationFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, authenticationFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_authenticationTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, authenticationTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_unregisteredUser /* IMPORTED_LONG_ENUMERATION_ITEM */, unregisteredUser /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IMSRegistrationStatus, _encode_IMSRegistrationStatus } from "../TS33128Payloads/IMSRegistrationStatus.ta.mjs";
+import { IMSRegistrationStatus, _decode_IMSRegistrationStatus, _encode_IMSRegistrationStatus, _enum_for_IMSRegistrationStatus } from "../TS33128Payloads/IMSRegistrationStatus.ta.mjs";
 // export { IMSRegistrationStatus, _enum_for_IMSRegistrationStatus, IMSRegistrationStatus_initialRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, initialRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_reregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, reregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_timeoutDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, timeoutDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_userDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, userDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_administrativeDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, administrativeDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_authenticationFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, authenticationFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_authenticationTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, authenticationTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSRegistrationStatus_unregisteredUser /* IMPORTED_LONG_ENUMERATION_ITEM */, unregisteredUser /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IMSRegistrationStatus, _encode_IMSRegistrationStatus } from "../TS33128Payloads/IMSRegistrationStatus.ta.mjs";
 
 

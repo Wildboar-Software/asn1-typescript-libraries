@@ -1,69 +1,8 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PASSporT, _decode_PASSporT, _encode_PASSporT } from "../TS33128Payloads/PASSporT.ta.mjs";
@@ -72,7 +11,7 @@ import { RCDDisplayInfo, _decode_RCDDisplayInfo, _encode_RCDDisplayInfo } from "
 // export { RCDDisplayInfo, _decode_RCDDisplayInfo, _encode_RCDDisplayInfo } from "../TS33128Payloads/RCDDisplayInfo.ta.mjs";
 import { ECNAMDisplayInfo, _decode_ECNAMDisplayInfo, _encode_ECNAMDisplayInfo } from "../TS33128Payloads/ECNAMDisplayInfo.ta.mjs";
 // export { ECNAMDisplayInfo, _decode_ECNAMDisplayInfo, _encode_ECNAMDisplayInfo } from "../TS33128Payloads/ECNAMDisplayInfo.ta.mjs";
-import { SHAKENValidationResult, _enum_for_SHAKENValidationResult, SHAKENValidationResult_tNValidationPassed /* IMPORTED_LONG_ENUMERATION_ITEM */, tNValidationPassed /* IMPORTED_SHORT_ENUMERATION_ITEM */, SHAKENValidationResult_tNValidationFailed /* IMPORTED_LONG_ENUMERATION_ITEM */, tNValidationFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */, SHAKENValidationResult_noTNValidation /* IMPORTED_LONG_ENUMERATION_ITEM */, noTNValidation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SHAKENValidationResult, _encode_SHAKENValidationResult } from "../TS33128Payloads/SHAKENValidationResult.ta.mjs";
+import { SHAKENValidationResult, _decode_SHAKENValidationResult, _encode_SHAKENValidationResult, _enum_for_SHAKENValidationResult } from "../TS33128Payloads/SHAKENValidationResult.ta.mjs";
 // export { SHAKENValidationResult, _enum_for_SHAKENValidationResult, SHAKENValidationResult_tNValidationPassed /* IMPORTED_LONG_ENUMERATION_ITEM */, tNValidationPassed /* IMPORTED_SHORT_ENUMERATION_ITEM */, SHAKENValidationResult_tNValidationFailed /* IMPORTED_LONG_ENUMERATION_ITEM */, tNValidationFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */, SHAKENValidationResult_noTNValidation /* IMPORTED_LONG_ENUMERATION_ITEM */, noTNValidation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SHAKENValidationResult, _encode_SHAKENValidationResult } from "../TS33128Payloads/SHAKENValidationResult.ta.mjs";
 import { SHAKENFailureStatusCode, _decode_SHAKENFailureStatusCode, _encode_SHAKENFailureStatusCode } from "../TS33128Payloads/SHAKENFailureStatusCode.ta.mjs";
 // export { SHAKENFailureStatusCode, _decode_SHAKENFailureStatusCode, _encode_SHAKENFailureStatusCode } from "../TS33128Payloads/SHAKENFailureStatusCode.ta.mjs";

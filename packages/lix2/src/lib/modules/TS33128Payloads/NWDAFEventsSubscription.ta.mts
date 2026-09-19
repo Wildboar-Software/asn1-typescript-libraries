@@ -1,82 +1,22 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
     UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 // export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
-import { NWDAFConsumerNFType, _enum_for_NWDAFConsumerNFType, NWDAFConsumerNFType_pCF /* IMPORTED_LONG_ENUMERATION_ITEM */, pCF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_nSSF /* IMPORTED_LONG_ENUMERATION_ITEM */, nSSF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_aMF /* IMPORTED_LONG_ENUMERATION_ITEM */, aMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_sMF /* IMPORTED_LONG_ENUMERATION_ITEM */, sMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_nEF /* IMPORTED_LONG_ENUMERATION_ITEM */, nEF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_aF /* IMPORTED_LONG_ENUMERATION_ITEM */, aF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_lMF /* IMPORTED_LONG_ENUMERATION_ITEM */, lMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_oAM /* IMPORTED_LONG_ENUMERATION_ITEM */, oAM /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_nWDAF /* IMPORTED_LONG_ENUMERATION_ITEM */, nWDAF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_dCCF /* IMPORTED_LONG_ENUMERATION_ITEM */, dCCF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_cEF /* IMPORTED_LONG_ENUMERATION_ITEM */, cEF /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NWDAFConsumerNFType, _encode_NWDAFConsumerNFType } from "../TS33128Payloads/NWDAFConsumerNFType.ta.mjs";
+import { NWDAFConsumerNFType, _decode_NWDAFConsumerNFType, _encode_NWDAFConsumerNFType, _enum_for_NWDAFConsumerNFType } from "../TS33128Payloads/NWDAFConsumerNFType.ta.mjs";
 // export { NWDAFConsumerNFType, _enum_for_NWDAFConsumerNFType, NWDAFConsumerNFType_pCF /* IMPORTED_LONG_ENUMERATION_ITEM */, pCF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_nSSF /* IMPORTED_LONG_ENUMERATION_ITEM */, nSSF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_aMF /* IMPORTED_LONG_ENUMERATION_ITEM */, aMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_sMF /* IMPORTED_LONG_ENUMERATION_ITEM */, sMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_nEF /* IMPORTED_LONG_ENUMERATION_ITEM */, nEF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_aF /* IMPORTED_LONG_ENUMERATION_ITEM */, aF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_lMF /* IMPORTED_LONG_ENUMERATION_ITEM */, lMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_oAM /* IMPORTED_LONG_ENUMERATION_ITEM */, oAM /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_nWDAF /* IMPORTED_LONG_ENUMERATION_ITEM */, nWDAF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_dCCF /* IMPORTED_LONG_ENUMERATION_ITEM */, dCCF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_cEF /* IMPORTED_LONG_ENUMERATION_ITEM */, cEF /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NWDAFConsumerNFType, _encode_NWDAFConsumerNFType } from "../TS33128Payloads/NWDAFConsumerNFType.ta.mjs";
-import { NWDAFEventsSubscriptionOpType, _enum_for_NWDAFEventsSubscriptionOpType, NWDAFEventsSubscriptionOpType_pOST /* IMPORTED_LONG_ENUMERATION_ITEM */, pOST /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionOpType_pUT /* IMPORTED_LONG_ENUMERATION_ITEM */, pUT /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionOpType_dELETE /* IMPORTED_LONG_ENUMERATION_ITEM */, dELETE /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NWDAFEventsSubscriptionOpType, _encode_NWDAFEventsSubscriptionOpType } from "../TS33128Payloads/NWDAFEventsSubscriptionOpType.ta.mjs";
+import { NWDAFEventsSubscriptionOpType, _decode_NWDAFEventsSubscriptionOpType, _encode_NWDAFEventsSubscriptionOpType, _enum_for_NWDAFEventsSubscriptionOpType } from "../TS33128Payloads/NWDAFEventsSubscriptionOpType.ta.mjs";
 // export { NWDAFEventsSubscriptionOpType, _enum_for_NWDAFEventsSubscriptionOpType, NWDAFEventsSubscriptionOpType_pOST /* IMPORTED_LONG_ENUMERATION_ITEM */, pOST /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionOpType_pUT /* IMPORTED_LONG_ENUMERATION_ITEM */, pUT /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionOpType_dELETE /* IMPORTED_LONG_ENUMERATION_ITEM */, dELETE /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NWDAFEventsSubscriptionOpType, _encode_NWDAFEventsSubscriptionOpType } from "../TS33128Payloads/NWDAFEventsSubscriptionOpType.ta.mjs";
-import { NWDAFEvent, _enum_for_NWDAFEvent, NWDAFEvent_serviceExperience /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceExperience /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_uEMobility /* IMPORTED_LONG_ENUMERATION_ITEM */, uEMobility /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_uEComm /* IMPORTED_LONG_ENUMERATION_ITEM */, uEComm /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_abnormalBehaviour /* IMPORTED_LONG_ENUMERATION_ITEM */, abnormalBehaviour /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_dispersion /* IMPORTED_LONG_ENUMERATION_ITEM */, dispersion /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_relativeProximity /* IMPORTED_LONG_ENUMERATION_ITEM */, relativeProximity /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_pDUSessionTraffic /* IMPORTED_LONG_ENUMERATION_ITEM */, pDUSessionTraffic /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NWDAFEvent, _encode_NWDAFEvent } from "../TS33128Payloads/NWDAFEvent.ta.mjs";
+import { NWDAFEvent, _decode_NWDAFEvent, _encode_NWDAFEvent } from "../TS33128Payloads/NWDAFEvent.ta.mjs";
 // export { NWDAFEvent, _enum_for_NWDAFEvent, NWDAFEvent_serviceExperience /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceExperience /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_uEMobility /* IMPORTED_LONG_ENUMERATION_ITEM */, uEMobility /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_uEComm /* IMPORTED_LONG_ENUMERATION_ITEM */, uEComm /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_abnormalBehaviour /* IMPORTED_LONG_ENUMERATION_ITEM */, abnormalBehaviour /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_dispersion /* IMPORTED_LONG_ENUMERATION_ITEM */, dispersion /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_relativeProximity /* IMPORTED_LONG_ENUMERATION_ITEM */, relativeProximity /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_pDUSessionTraffic /* IMPORTED_LONG_ENUMERATION_ITEM */, pDUSessionTraffic /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NWDAFEvent, _encode_NWDAFEvent } from "../TS33128Payloads/NWDAFEvent.ta.mjs";
 import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SBIType.ta.mjs";
 // export { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SBIType.ta.mjs";
-import { NWDAFEventsSubscriptionResponseCode, _enum_for_NWDAFEventsSubscriptionResponseCode, NWDAFEventsSubscriptionResponseCode_oK200 /* IMPORTED_LONG_ENUMERATION_ITEM */, oK200 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_created201 /* IMPORTED_LONG_ENUMERATION_ITEM */, created201 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_noContent204 /* IMPORTED_LONG_ENUMERATION_ITEM */, noContent204 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_temporaryRedirect307 /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryRedirect307 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_permanentRedirect308 /* IMPORTED_LONG_ENUMERATION_ITEM */, permanentRedirect308 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_badRequest400 /* IMPORTED_LONG_ENUMERATION_ITEM */, badRequest400 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_unauthorized401 /* IMPORTED_LONG_ENUMERATION_ITEM */, unauthorized401 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_forbidden403 /* IMPORTED_LONG_ENUMERATION_ITEM */, forbidden403 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_notFound404 /* IMPORTED_LONG_ENUMERATION_ITEM */, notFound404 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_notAcceptable406 /* IMPORTED_LONG_ENUMERATION_ITEM */, notAcceptable406 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_lengthRequired411 /* IMPORTED_LONG_ENUMERATION_ITEM */, lengthRequired411 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_payloadTooLarge413 /* IMPORTED_LONG_ENUMERATION_ITEM */, payloadTooLarge413 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_unsupportedMediaType415 /* IMPORTED_LONG_ENUMERATION_ITEM */, unsupportedMediaType415 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_tooManyRequests429 /* IMPORTED_LONG_ENUMERATION_ITEM */, tooManyRequests429 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_internalServerError500 /* IMPORTED_LONG_ENUMERATION_ITEM */, internalServerError500 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_notImplemented501 /* IMPORTED_LONG_ENUMERATION_ITEM */, notImplemented501 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_badGateway502 /* IMPORTED_LONG_ENUMERATION_ITEM */, badGateway502 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_serviceUnavailable503 /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceUnavailable503 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NWDAFEventsSubscriptionResponseCode, _encode_NWDAFEventsSubscriptionResponseCode } from "../TS33128Payloads/NWDAFEventsSubscriptionResponseCode.ta.mjs";
+import { NWDAFEventsSubscriptionResponseCode, _decode_NWDAFEventsSubscriptionResponseCode, _encode_NWDAFEventsSubscriptionResponseCode, _enum_for_NWDAFEventsSubscriptionResponseCode } from "../TS33128Payloads/NWDAFEventsSubscriptionResponseCode.ta.mjs";
 // export { NWDAFEventsSubscriptionResponseCode, _enum_for_NWDAFEventsSubscriptionResponseCode, NWDAFEventsSubscriptionResponseCode_oK200 /* IMPORTED_LONG_ENUMERATION_ITEM */, oK200 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_created201 /* IMPORTED_LONG_ENUMERATION_ITEM */, created201 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_noContent204 /* IMPORTED_LONG_ENUMERATION_ITEM */, noContent204 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_temporaryRedirect307 /* IMPORTED_LONG_ENUMERATION_ITEM */, temporaryRedirect307 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_permanentRedirect308 /* IMPORTED_LONG_ENUMERATION_ITEM */, permanentRedirect308 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_badRequest400 /* IMPORTED_LONG_ENUMERATION_ITEM */, badRequest400 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_unauthorized401 /* IMPORTED_LONG_ENUMERATION_ITEM */, unauthorized401 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_forbidden403 /* IMPORTED_LONG_ENUMERATION_ITEM */, forbidden403 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_notFound404 /* IMPORTED_LONG_ENUMERATION_ITEM */, notFound404 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_notAcceptable406 /* IMPORTED_LONG_ENUMERATION_ITEM */, notAcceptable406 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_lengthRequired411 /* IMPORTED_LONG_ENUMERATION_ITEM */, lengthRequired411 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_payloadTooLarge413 /* IMPORTED_LONG_ENUMERATION_ITEM */, payloadTooLarge413 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_unsupportedMediaType415 /* IMPORTED_LONG_ENUMERATION_ITEM */, unsupportedMediaType415 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_tooManyRequests429 /* IMPORTED_LONG_ENUMERATION_ITEM */, tooManyRequests429 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_internalServerError500 /* IMPORTED_LONG_ENUMERATION_ITEM */, internalServerError500 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_notImplemented501 /* IMPORTED_LONG_ENUMERATION_ITEM */, notImplemented501 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_badGateway502 /* IMPORTED_LONG_ENUMERATION_ITEM */, badGateway502 /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEventsSubscriptionResponseCode_serviceUnavailable503 /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceUnavailable503 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NWDAFEventsSubscriptionResponseCode, _encode_NWDAFEventsSubscriptionResponseCode } from "../TS33128Payloads/NWDAFEventsSubscriptionResponseCode.ta.mjs";
 
 

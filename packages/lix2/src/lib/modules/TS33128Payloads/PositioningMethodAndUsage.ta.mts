@@ -1,76 +1,15 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PositioningMethod, _enum_for_PositioningMethod, PositioningMethod_cellID /* IMPORTED_LONG_ENUMERATION_ITEM */, cellID /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_eCID /* IMPORTED_LONG_ENUMERATION_ITEM */, eCID /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_oTDOA /* IMPORTED_LONG_ENUMERATION_ITEM */, oTDOA /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_barometricPressure /* IMPORTED_LONG_ENUMERATION_ITEM */, barometricPressure /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_wLAN /* IMPORTED_LONG_ENUMERATION_ITEM */, wLAN /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_bluetooth /* IMPORTED_LONG_ENUMERATION_ITEM */, bluetooth /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_mBS /* IMPORTED_LONG_ENUMERATION_ITEM */, mBS /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_motionSensor /* IMPORTED_LONG_ENUMERATION_ITEM */, motionSensor /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_dLTDOA /* IMPORTED_LONG_ENUMERATION_ITEM */, dLTDOA /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_dLAOD /* IMPORTED_LONG_ENUMERATION_ITEM */, dLAOD /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_multiRTT /* IMPORTED_LONG_ENUMERATION_ITEM */, multiRTT /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_nRECID /* IMPORTED_LONG_ENUMERATION_ITEM */, nRECID /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_uLTDOA /* IMPORTED_LONG_ENUMERATION_ITEM */, uLTDOA /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_uLAOA /* IMPORTED_LONG_ENUMERATION_ITEM */, uLAOA /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_networkSpecific /* IMPORTED_LONG_ENUMERATION_ITEM */, networkSpecific /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PositioningMethod, _encode_PositioningMethod } from "../TS33128Payloads/PositioningMethod.ta.mjs";
+import { PositioningMethod, _decode_PositioningMethod, _encode_PositioningMethod, _enum_for_PositioningMethod } from "../TS33128Payloads/PositioningMethod.ta.mjs";
 // export { PositioningMethod, _enum_for_PositioningMethod, PositioningMethod_cellID /* IMPORTED_LONG_ENUMERATION_ITEM */, cellID /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_eCID /* IMPORTED_LONG_ENUMERATION_ITEM */, eCID /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_oTDOA /* IMPORTED_LONG_ENUMERATION_ITEM */, oTDOA /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_barometricPressure /* IMPORTED_LONG_ENUMERATION_ITEM */, barometricPressure /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_wLAN /* IMPORTED_LONG_ENUMERATION_ITEM */, wLAN /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_bluetooth /* IMPORTED_LONG_ENUMERATION_ITEM */, bluetooth /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_mBS /* IMPORTED_LONG_ENUMERATION_ITEM */, mBS /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_motionSensor /* IMPORTED_LONG_ENUMERATION_ITEM */, motionSensor /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_dLTDOA /* IMPORTED_LONG_ENUMERATION_ITEM */, dLTDOA /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_dLAOD /* IMPORTED_LONG_ENUMERATION_ITEM */, dLAOD /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_multiRTT /* IMPORTED_LONG_ENUMERATION_ITEM */, multiRTT /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_nRECID /* IMPORTED_LONG_ENUMERATION_ITEM */, nRECID /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_uLTDOA /* IMPORTED_LONG_ENUMERATION_ITEM */, uLTDOA /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_uLAOA /* IMPORTED_LONG_ENUMERATION_ITEM */, uLAOA /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMethod_networkSpecific /* IMPORTED_LONG_ENUMERATION_ITEM */, networkSpecific /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PositioningMethod, _encode_PositioningMethod } from "../TS33128Payloads/PositioningMethod.ta.mjs";
-import { PositioningMode, _enum_for_PositioningMode, PositioningMode_uEBased /* IMPORTED_LONG_ENUMERATION_ITEM */, uEBased /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMode_uEAssisted /* IMPORTED_LONG_ENUMERATION_ITEM */, uEAssisted /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMode_conventional /* IMPORTED_LONG_ENUMERATION_ITEM */, conventional /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PositioningMode, _encode_PositioningMode } from "../TS33128Payloads/PositioningMode.ta.mjs";
+import { PositioningMode, _decode_PositioningMode, _encode_PositioningMode, _enum_for_PositioningMode } from "../TS33128Payloads/PositioningMode.ta.mjs";
 // export { PositioningMode, _enum_for_PositioningMode, PositioningMode_uEBased /* IMPORTED_LONG_ENUMERATION_ITEM */, uEBased /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMode_uEAssisted /* IMPORTED_LONG_ENUMERATION_ITEM */, uEAssisted /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMode_conventional /* IMPORTED_LONG_ENUMERATION_ITEM */, conventional /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PositioningMode, _encode_PositioningMode } from "../TS33128Payloads/PositioningMode.ta.mjs";
-import { Usage, _enum_for_Usage, Usage_unsuccess /* IMPORTED_LONG_ENUMERATION_ITEM */, unsuccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, Usage_successResultsNotUsed /* IMPORTED_LONG_ENUMERATION_ITEM */, successResultsNotUsed /* IMPORTED_SHORT_ENUMERATION_ITEM */, Usage_successResultsUsedToVerifyLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, successResultsUsedToVerifyLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, Usage_successResultsUsedToGenerateLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, successResultsUsedToGenerateLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, Usage_successMethodNotDetermined /* IMPORTED_LONG_ENUMERATION_ITEM */, successMethodNotDetermined /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Usage, _encode_Usage } from "../TS33128Payloads/Usage.ta.mjs";
+import { Usage, _decode_Usage, _encode_Usage, _enum_for_Usage } from "../TS33128Payloads/Usage.ta.mjs";
 // export { Usage, _enum_for_Usage, Usage_unsuccess /* IMPORTED_LONG_ENUMERATION_ITEM */, unsuccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, Usage_successResultsNotUsed /* IMPORTED_LONG_ENUMERATION_ITEM */, successResultsNotUsed /* IMPORTED_SHORT_ENUMERATION_ITEM */, Usage_successResultsUsedToVerifyLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, successResultsUsedToVerifyLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, Usage_successResultsUsedToGenerateLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, successResultsUsedToGenerateLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, Usage_successMethodNotDetermined /* IMPORTED_LONG_ENUMERATION_ITEM */, successMethodNotDetermined /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Usage, _encode_Usage } from "../TS33128Payloads/Usage.ta.mjs";
 import { MethodCode, _decode_MethodCode, _encode_MethodCode } from "../TS33128Payloads/MethodCode.ta.mjs";
 // export { MethodCode, _decode_MethodCode, _encode_MethodCode } from "../TS33128Payloads/MethodCode.ta.mjs";

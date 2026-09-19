@@ -1,72 +1,11 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AMFEventType, _enum_for_AMFEventType, AMFEventType_locationReport /* IMPORTED_LONG_ENUMERATION_ITEM */, locationReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, AMFEventType_presenceInAOIReport /* IMPORTED_LONG_ENUMERATION_ITEM */, presenceInAOIReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AMFEventType, _encode_AMFEventType } from "../TS33128Payloads/AMFEventType.ta.mjs";
+import { AMFEventType, _decode_AMFEventType, _encode_AMFEventType, _enum_for_AMFEventType } from "../TS33128Payloads/AMFEventType.ta.mjs";
 // export { AMFEventType, _enum_for_AMFEventType, AMFEventType_locationReport /* IMPORTED_LONG_ENUMERATION_ITEM */, locationReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, AMFEventType_presenceInAOIReport /* IMPORTED_LONG_ENUMERATION_ITEM */, presenceInAOIReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AMFEventType, _encode_AMFEventType } from "../TS33128Payloads/AMFEventType.ta.mjs";
 import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
@@ -74,13 +13,13 @@ import { AMFEventArea, _decode_AMFEventArea, _encode_AMFEventArea } from "../TS3
 // export { AMFEventArea, _decode_AMFEventArea, _encode_AMFEventArea } from "../TS33128Payloads/AMFEventArea.ta.mjs";
 import { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../TS33128Payloads/TimeZone.ta.mjs";
 // export { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../TS33128Payloads/TimeZone.ta.mjs";
-import { AccessType, _enum_for_AccessType, AccessType_threeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_nonThreeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, nonThreeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_threeGPPandNonThreeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPandNonThreeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessType, _encode_AccessType } from "../TS33128Payloads/AccessType.ta.mjs";
+import { AccessType, _decode_AccessType, _encode_AccessType } from "../TS33128Payloads/AccessType.ta.mjs";
 // export { AccessType, _enum_for_AccessType, AccessType_threeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_nonThreeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, nonThreeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_threeGPPandNonThreeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPandNonThreeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessType, _encode_AccessType } from "../TS33128Payloads/AccessType.ta.mjs";
 import { RMInfo, _decode_RMInfo, _encode_RMInfo } from "../TS33128Payloads/RMInfo.ta.mjs";
 // export { RMInfo, _decode_RMInfo, _encode_RMInfo } from "../TS33128Payloads/RMInfo.ta.mjs";
 import { CMInfo, _decode_CMInfo, _encode_CMInfo } from "../TS33128Payloads/CMInfo.ta.mjs";
 // export { CMInfo, _decode_CMInfo, _encode_CMInfo } from "../TS33128Payloads/CMInfo.ta.mjs";
-import { UEReachability, _enum_for_UEReachability, UEReachability_unreachable /* IMPORTED_LONG_ENUMERATION_ITEM */, unreachable /* IMPORTED_SHORT_ENUMERATION_ITEM */, UEReachability_reachable /* IMPORTED_LONG_ENUMERATION_ITEM */, reachable /* IMPORTED_SHORT_ENUMERATION_ITEM */, UEReachability_regulatoryOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, regulatoryOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UEReachability, _encode_UEReachability } from "../TS33128Payloads/UEReachability.ta.mjs";
+import { UEReachability, _decode_UEReachability, _encode_UEReachability, _enum_for_UEReachability } from "../TS33128Payloads/UEReachability.ta.mjs";
 // export { UEReachability, _enum_for_UEReachability, UEReachability_unreachable /* IMPORTED_LONG_ENUMERATION_ITEM */, unreachable /* IMPORTED_SHORT_ENUMERATION_ITEM */, UEReachability_reachable /* IMPORTED_LONG_ENUMERATION_ITEM */, reachable /* IMPORTED_SHORT_ENUMERATION_ITEM */, UEReachability_regulatoryOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, regulatoryOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UEReachability, _encode_UEReachability } from "../TS33128Payloads/UEReachability.ta.mjs";
 import { UserLocation, _decode_UserLocation, _encode_UserLocation } from "../TS33128Payloads/UserLocation.ta.mjs";
 // export { UserLocation, _decode_UserLocation, _encode_UserLocation } from "../TS33128Payloads/UserLocation.ta.mjs";
