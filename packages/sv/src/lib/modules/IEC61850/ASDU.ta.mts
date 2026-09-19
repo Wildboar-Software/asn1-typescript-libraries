@@ -1,78 +1,19 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
+    OPTIONAL,
     VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
 // export { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
-import { ASDU_smpSynch, ASDU_smpSynch_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, ASDU_smpSynch_local /* IMPORTED_LONG_NAMED_INTEGER */, local /* IMPORTED_SHORT_NAMED_INTEGER */, ASDU_smpSynch_global /* IMPORTED_LONG_NAMED_INTEGER */, global /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ASDU_smpSynch, _encode_ASDU_smpSynch } from "../IEC61850/ASDU-smpSynch.ta.mjs";
+import { ASDU_smpSynch, _decode_ASDU_smpSynch, _encode_ASDU_smpSynch } from "../IEC61850/ASDU-smpSynch.ta.mjs";
 // export { ASDU_smpSynch, ASDU_smpSynch_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, ASDU_smpSynch_local /* IMPORTED_LONG_NAMED_INTEGER */, local /* IMPORTED_SHORT_NAMED_INTEGER */, ASDU_smpSynch_global /* IMPORTED_LONG_NAMED_INTEGER */, global /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ASDU_smpSynch, _encode_ASDU_smpSynch } from "../IEC61850/ASDU-smpSynch.ta.mjs";
 import { Data, _decode_Data, _encode_Data } from "../IEC61850/Data.ta.mjs";
 // export { Data, _decode_Data, _encode_Data } from "../IEC61850/Data.ta.mjs";
-import { ASDU_smpMod, ASDU_smpMod_samplesPerNormalPeriod /* IMPORTED_LONG_NAMED_INTEGER */, samplesPerNormalPeriod /* IMPORTED_SHORT_NAMED_INTEGER */, ASDU_smpMod_samplesPerSecond /* IMPORTED_LONG_NAMED_INTEGER */, samplesPerSecond /* IMPORTED_SHORT_NAMED_INTEGER */, ASDU_smpMod_secondsPerSample /* IMPORTED_LONG_NAMED_INTEGER */, secondsPerSample /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ASDU_smpMod, _encode_ASDU_smpMod } from "../IEC61850/ASDU-smpMod.ta.mjs";
+import { ASDU_smpMod, _decode_ASDU_smpMod, _encode_ASDU_smpMod } from "../IEC61850/ASDU-smpMod.ta.mjs";
 // export { ASDU_smpMod, ASDU_smpMod_samplesPerNormalPeriod /* IMPORTED_LONG_NAMED_INTEGER */, samplesPerNormalPeriod /* IMPORTED_SHORT_NAMED_INTEGER */, ASDU_smpMod_samplesPerSecond /* IMPORTED_LONG_NAMED_INTEGER */, samplesPerSecond /* IMPORTED_SHORT_NAMED_INTEGER */, ASDU_smpMod_secondsPerSample /* IMPORTED_LONG_NAMED_INTEGER */, secondsPerSample /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ASDU_smpMod, _encode_ASDU_smpMod } from "../IEC61850/ASDU-smpMod.ta.mjs";
 import { GmidData, _decode_GmidData, _encode_GmidData } from "../IEC61850/GmidData.ta.mjs";
 // export { GmidData, _decode_GmidData, _encode_GmidData } from "../IEC61850/GmidData.ta.mjs";
