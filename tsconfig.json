@@ -221,6 +221,9 @@
     },
     {
       "path": "./packages/mrbtr"
+    },
+    {
+      "path": "./packages/z3950"
     }
   ],
   "compilerOptions": {

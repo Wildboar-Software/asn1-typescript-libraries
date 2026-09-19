@@ -1,0 +1,25 @@
+{
+  "name": "z3950",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/z3950/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/z3950",
+        "tsConfig": "packages/z3950/tsconfig.lib.json",
+        "packageJson": "packages/z3950/package.json",
+        "main": "packages/z3950/src/index.mts",
+        "assets": [
+          "packages/z3950/*.md",
+          "packages/z3950/LICENSE.txt",
+          "packages/z3950/package.json"
+        ]
+      }
+    }
+  }
+}
