@@ -1,0 +1,25 @@
+{
+  "name": "q932ros",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/q932ros/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/q932ros",
+        "tsConfig": "packages/q932ros/tsconfig.lib.json",
+        "packageJson": "packages/q932ros/package.json",
+        "main": "packages/q932ros/src/index.mts",
+        "assets": [
+          "packages/q932ros/*.md",
+          "packages/q932ros/LICENSE.txt",
+          "packages/q932ros/package.json"
+        ]
+      }
+    }
+  }
+}
