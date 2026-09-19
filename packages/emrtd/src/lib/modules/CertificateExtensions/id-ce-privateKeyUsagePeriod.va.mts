@@ -1,0 +1,26 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+
+
+
+/**
+ * @summary id_ce_privateKeyUsagePeriod
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * id-ce-privateKeyUsagePeriod              OBJECT IDENTIFIER ::= {id-ce 16}
+ * ```
+ * 
+ * @constant
+ */
+export
+const id_ce_privateKeyUsagePeriod: OBJECT_IDENTIFIER = _OID.fromParts([
+    16,
+], id_ce);
+
+/* eslint-enable */

@@ -1,0 +1,26 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+
+
+
+/**
+ * @summary id_lsx_x509CertificatePair
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * id-lsx-x509CertificatePair          OBJECT IDENTIFIER ::= {id-lsx 10}
+ * ```
+ * 
+ * @constant
+ */
+export
+const id_lsx_x509CertificatePair: OBJECT_IDENTIFIER = _OID.fromParts([
+    10,
+], id_lsx);
+
+/* eslint-enable */

@@ -1,0 +1,131 @@
+DeviationList
+{joint-iso-itu-t(2) international-organization(23) icao(136) mrtd(1)
+security(1) deviationlist(7)}
+DEFINITIONS IMPLICIT TAGS ::=
+BEGIN
+IMPORTS
+
+    AlgorithmIdentifier
+        FROM AuthenticationFramework
+        {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9}
+        WITH SUCCESSORS
+
+    SubjectKeyIdentifier
+        FROM CertificateExtensions
+        {joint-iso-itu-t ds(5) module(1) certificateExtensions(26) 9}
+        WITH SUCCESSORS
+
+    IssuerAndSerialNumber
+        FROM EnhancedSecurity
+        {joint-iso-itu-t ds(5) modules(1) enhancedSecurity(28) 9}
+        WITH SUCCESSORS
+
+    -- Digest
+    --     FROM CryptographicMessageSyntax2004
+    --     {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-9(9)
+    --     smime(16) modules(0) cms-2004(24) }
+    ;
+
+Digest ::= OCTET STRING
+
+DeviationListVersion ::= INTEGER {v0(0)}
+
+DeviationList ::= SEQUENCE {
+    version DeviationListVersion,
+    digestAlgorithm AlgorithmIdentifier OPTIONAL,
+    deviations SET OF Deviation
+}
+
+Deviation ::= SEQUENCE{
+    documents DeviationDocuments,
+    descriptions SET OF DeviationDescription
+}
+
+DeviationDescription ::= SEQUENCE{
+    description PrintableString OPTIONAL,
+    deviationType OBJECT IDENTIFIER,
+    parameters [0] ANY DEFINED BY deviationType OPTIONAL,
+    nationalUse [1] ANY OPTIONAL
+    -- The nationalUse field is for internal State use, and is not governed
+    -- by an ICAO specification.
+}
+
+DeviationDocuments ::= SEQUENCE {
+    documentType [0] PrintableString (SIZE(2)) OPTIONAL,
+    -- per MRZ, e.g. ‘P’
+    dscIdentifier DocumentSignerIdentifier OPTIONAL,
+    issuingDate [4] IssuancePeriod OPTIONAL,
+    documentNumbers [5] SET OF PrintableString OPTIONAL
+}
+
+DocumentSignerIdentifier ::= CHOICE{
+    issuerAndSerialNumber [1] IssuerAndSerialNumber,
+    subjectKeyIdentifier [2] SubjectKeyIdentifier,
+    certificateDigest [3] Digest -- if used, digestAlgorithm must be present in DeviationList
+}
+
+IssuancePeriod ::= SEQUENCE {
+    firstIssued GeneralizedTime,
+    lastIssued GeneralizedTime
+}
+
+/*
+CertField is used to define which part of a certificate is affected by a coding
+error. Parts of the Body are identified by the corresponding value of
+CertificateBodyField, extensions by the corresponding OID identifying the
+extension.
+*/
+CertField ::= CHOICE {
+    body CertificateBodyField,
+    extension OBJECT IDENTIFIER
+}
+
+CertificateBodyField ::= INTEGER {
+    generic(0),
+    version(1),
+    serialNumber(2),
+    signature(3),
+    issuer(4),
+    validity(5),
+    subject(6),
+    subjectPublicKeyInfo(7),
+    issuerUniqueID(8),
+    subjectUniqueID(9)
+}
+
+Datagroup ::= INTEGER {
+    dg1(1), dg2(2), dg3(3), dg4(4), dg5(5), dg6(6),
+    dg7(7), dg8(8), dg9(9), dg10(10), dg11(11),
+    dg12(12), dg13(13), dg14(14), dg15(15), dg16(16),
+    sod(20), com(21) }
+
+MRZField ::= INTEGER {
+    generic(0), documentCode(1), issuingState(2), personName(3),
+    documentNumber(4), nationality(5), dateOfBirth(6),
+    sex(7), dateOfExpiry(8), optionalData(9) }
+
+-- Base Object Identifiers
+
+id-icao                                 OBJECT IDENTIFIER ::= {2 23 136 }
+id-icao-mrtd                            OBJECT IDENTIFIER ::= {id-icao 1}
+id-icao-mrtd-security                   OBJECT IDENTIFIER ::= {id-icao-mrtd 1}
+id-icao-DeviationList                   OBJECT IDENTIFIER ::= {id-icao-mrtd-security 7}
+id-icao-DeviationListSigningKey         OBJECT IDENTIFIER ::= {id-icao-mrtd-security 8}
+-- Deviation Object Identifiers and Parameter Definitions
+id-Deviation-CertOrKey                  OBJECT IDENTIFIER ::= {id-icao-DeviationList 1}
+id-Deviation-CertOrKey-DSSignature      OBJECT IDENTIFIER ::= {id-Deviation-CertOrKey 1}
+id-Deviation-CertOrKey-DSEncoding       OBJECT IDENTIFIER ::= {id-Deviation-CertOrKey 2}
+id-Deviation-CertOrKey-CSCAEncoding     OBJECT IDENTIFIER ::= {id-Deviation-CertOrKey 3}
+id-Deviation-CertOrKey-AAKeyCompromised OBJECT IDENTIFIER ::= {id-Deviation-CertOrKey 4}
+id-Deviation-LDS                        OBJECT IDENTIFIER ::= {id-icao-DeviationList 2}
+id-Deviation-LDS-DGMalformed            OBJECT IDENTIFIER ::= {id-Deviation-LDS 1}
+id-Deviation-LDS-DGHashWrong            OBJECT IDENTIFIER ::= {id-Deviation-LDS 2}
+id-Deviation-LDS-SODSignatureWrong      OBJECT IDENTIFIER ::= {id-Deviation-LDS 3}
+id-Deviation-LDS-COMInconsistent        OBJECT IDENTIFIER ::= {id-Deviation-LDS 4}
+id-Deviation-MRZ                        OBJECT IDENTIFIER ::= {id-icao-DeviationList 3}
+id-Deviation-MRZ-WrongData              OBJECT IDENTIFIER ::= {id-Deviation-MRZ 1}
+id-Deviation-MRZ-WrongCheckDigit        OBJECT IDENTIFIER ::= {id-Deviation-MRZ 2}
+id-Deviation-Chip                       OBJECT IDENTIFIER ::= {id-icao-DeviationList 4}
+id-Deviation-NationalUse                OBJECT IDENTIFIER ::= {id-icao-DeviationList 5}
+
+END

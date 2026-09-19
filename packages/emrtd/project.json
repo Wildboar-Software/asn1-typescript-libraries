@@ -1,0 +1,25 @@
+{
+  "name": "emrtd",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/emrtd/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/emrtd",
+        "tsConfig": "packages/emrtd/tsconfig.lib.json",
+        "packageJson": "packages/emrtd/package.json",
+        "main": "packages/emrtd/src/index.mts",
+        "assets": [
+          "packages/emrtd/*.md",
+          "packages/emrtd/LICENSE.txt",
+          "packages/emrtd/package.json"
+        ]
+      }
+    }
+  }
+}
