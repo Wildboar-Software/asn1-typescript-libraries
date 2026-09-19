@@ -1,0 +1,214 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary MMStateFlag
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * MMStateFlag  ::=  ENUMERATED
+ * {
+ *     add(1),
+ *     remove(2),
+ *     filter(3)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_MMStateFlag {
+    add = 1,
+    remove = 2,
+    filter = 3,
+}
+
+/**
+ * @summary MMStateFlag
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * MMStateFlag  ::=  ENUMERATED
+ * {
+ *     add(1),
+ *     remove(2),
+ *     filter(3)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type MMStateFlag = _enum_for_MMStateFlag;
+
+/**
+ * @summary MMStateFlag
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * MMStateFlag  ::=  ENUMERATED
+ * {
+ *     add(1),
+ *     remove(2),
+ *     filter(3)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const MMStateFlag = _enum_for_MMStateFlag;
+
+/**
+ * @summary MMStateFlag_add
+ * @constant
+ * @type {number}
+ */
+export
+const MMStateFlag_add: MMStateFlag = MMStateFlag.add; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary add
+ * @constant
+ * @type {number}
+ */
+export
+const add: MMStateFlag = MMStateFlag.add; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary MMStateFlag_remove
+ * @constant
+ * @type {number}
+ */
+export
+const MMStateFlag_remove: MMStateFlag = MMStateFlag.remove; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary remove
+ * @constant
+ * @type {number}
+ */
+export
+const remove: MMStateFlag = MMStateFlag.remove; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary MMStateFlag_filter
+ * @constant
+ * @type {number}
+ */
+export
+const MMStateFlag_filter: MMStateFlag = MMStateFlag.filter; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary filter
+ * @constant
+ * @type {number}
+ */
+export
+const filter: MMStateFlag = MMStateFlag.filter; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+let _cached_decoder_for_MMStateFlag: $.ASN1Decoder<MMStateFlag> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) MMStateFlag
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_MMStateFlag (el: _Element): MMStateFlag {
+    if (!_cached_decoder_for_MMStateFlag) { _cached_decoder_for_MMStateFlag = $._decodeEnumerated; }
+    return _cached_decoder_for_MMStateFlag(el);
+}
+
+let _cached_encoder_for_MMStateFlag: $.ASN1Encoder<MMStateFlag> | null = null;
+
+/**
+ * @summary Encodes a(n) MMStateFlag into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The MMStateFlag, encoded as an ASN.1 Element.
+ */
+export
+function _encode_MMStateFlag (value: MMStateFlag, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_MMStateFlag) { _cached_encoder_for_MMStateFlag = $._encodeEnumerated; }
+    return _cached_encoder_for_MMStateFlag(value, elGetter);
+}
+
+
+/* eslint-enable */
