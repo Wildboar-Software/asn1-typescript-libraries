@@ -1,0 +1,139 @@
+/* eslint-disable */
+import {
+    BIT_STRING,
+    BOOLEAN,
+    INTEGER,
+    OBJECT_IDENTIFIER,
+    OCTET_STRING,
+    REAL,
+    VisibleString,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { FloatingPoint, _decode_FloatingPoint, _encode_FloatingPoint } from "../IEC61850/FloatingPoint.ta.mjs";
+// export { FloatingPoint, _decode_FloatingPoint, _encode_FloatingPoint } from "../IEC61850/FloatingPoint.ta.mjs";
+import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../IEC61850/TimeOfDay.ta.mjs";
+// export { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../IEC61850/TimeOfDay.ta.mjs";
+import { MMSString, _decode_MMSString, _encode_MMSString } from "../IEC61850/MMSString.ta.mjs";
+// export { MMSString, _decode_MMSString, _encode_MMSString } from "../IEC61850/MMSString.ta.mjs";
+import { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
+// export { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
+
+
+// TODO: CHECK_RECURSIVE_DEFINITION
+/**
+ * @summary Data
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * Data  ::=  CHOICE
+ *     {
+ *     -- context tag 0 is reserved for AccessResult
+ *     array                [1] IMPLICIT SEQUENCE OF Data,
+ *     structure            [2] IMPLICIT SEQUENCE OF Data,
+ *     boolean                [3] IMPLICIT BOOLEAN,    
+ *     bit-string            [4] IMPLICIT BIT STRING,
+ *     integer                [5] IMPLICIT INTEGER,
+ *     unsigned            [6] IMPLICIT INTEGER,
+ *     floating-point        [7] IMPLICIT FloatingPoint,
+ *     real                 [8] IMPLICIT REAL,
+ *     octet-string        [9] IMPLICIT OCTET STRING,
+ *     visible-string        [10] IMPLICIT VisibleString,
+ *     binary-time            [12] IMPLICIT TimeOfDay,
+ *     bcd                    [13] IMPLICIT INTEGER,
+ *     booleanArray        [14] IMPLICIT BIT STRING,
+ *     objId               [15] IMPLICIT OBJECT IDENTIFIER,
+ *   ...,
+ *     mMSString           [16] IMPLICIT MMSString,
+ *     utc-time            [17] IMPLICIT UtcTime                -- added by IEC61850 8.1 G3    
+ *     }
+ * ```
+ */
+export
+type Data =
+    { array: Data[] } /* CHOICE_ALT_ROOT */
+    | { structure: Data[] } /* CHOICE_ALT_ROOT */
+    | { boolean_: BOOLEAN } /* CHOICE_ALT_ROOT */
+    | { bit_string: BIT_STRING } /* CHOICE_ALT_ROOT */
+    | { integer: INTEGER } /* CHOICE_ALT_ROOT */
+    | { unsigned: INTEGER } /* CHOICE_ALT_ROOT */
+    | { floating_point: FloatingPoint } /* CHOICE_ALT_ROOT */
+    | { real: REAL } /* CHOICE_ALT_ROOT */
+    | { octet_string: OCTET_STRING } /* CHOICE_ALT_ROOT */
+    | { visible_string: VisibleString } /* CHOICE_ALT_ROOT */
+    | { binary_time: TimeOfDay } /* CHOICE_ALT_ROOT */
+    | { bcd: INTEGER } /* CHOICE_ALT_ROOT */
+    | { booleanArray: BIT_STRING } /* CHOICE_ALT_ROOT */
+    | { objId: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
+    | { mMSString: MMSString } /* CHOICE_ALT_EXT */
+    | { utc_time: UtcTime } /* CHOICE_ALT_EXT */
+    | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
+
+let _cached_decoder_for_Data: $.ASN1Decoder<Data> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) Data
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_Data (el: _Element): Data {
+    if (!_cached_decoder_for_Data) { _cached_decoder_for_Data = $._decode_extensible_choice<Data>({
+    "CONTEXT 1": [ "array", $._decode_implicit<Data[]>(() => $._decodeSequenceOf<Data>(() => _decode_Data)) ],
+    "CONTEXT 2": [ "structure", $._decode_implicit<Data[]>(() => $._decodeSequenceOf<Data>(() => _decode_Data)) ],
+    "CONTEXT 3": [ "boolean_", $._decode_implicit<BOOLEAN>(() => $._decodeBoolean) ],
+    "CONTEXT 4": [ "bit_string", $._decode_implicit<BIT_STRING>(() => $._decodeBitString) ],
+    "CONTEXT 5": [ "integer", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
+    "CONTEXT 6": [ "unsigned", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
+    "CONTEXT 7": [ "floating_point", $._decode_implicit<FloatingPoint>(() => _decode_FloatingPoint) ],
+    "CONTEXT 8": [ "real", $._decode_implicit<REAL>(() => $._decodeReal) ],
+    "CONTEXT 9": [ "octet_string", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
+    "CONTEXT 10": [ "visible_string", $._decode_implicit<VisibleString>(() => $._decodeVisibleString) ],
+    "CONTEXT 12": [ "binary_time", $._decode_implicit<TimeOfDay>(() => _decode_TimeOfDay) ],
+    "CONTEXT 13": [ "bcd", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
+    "CONTEXT 14": [ "booleanArray", $._decode_implicit<BIT_STRING>(() => $._decodeBitString) ],
+    "CONTEXT 15": [ "objId", $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier) ],
+    "CONTEXT 16": [ "mMSString", $._decode_implicit<MMSString>(() => _decode_MMSString) ],
+    "CONTEXT 17": [ "utc_time", $._decode_implicit<UtcTime>(() => _decode_UtcTime) ]
+}); }
+    return _cached_decoder_for_Data(el);
+}
+
+let _cached_encoder_for_Data: $.ASN1Encoder<Data> | null = null;
+
+/**
+ * @summary Encodes a(n) Data into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The Data, encoded as an ASN.1 Element.
+ */
+export
+function _encode_Data (value: Data, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_Data) { _cached_encoder_for_Data = $._encode_choice<Data>({
+    "array": $._encode_implicit(_TagClass.context, 1, () => $._encodeSequenceOf<Data>(() => _encode_Data, $.BER), $.BER),
+    "structure": $._encode_implicit(_TagClass.context, 2, () => $._encodeSequenceOf<Data>(() => _encode_Data, $.BER), $.BER),
+    "boolean_": $._encode_implicit(_TagClass.context, 3, () => $._encodeBoolean, $.BER),
+    "bit_string": $._encode_implicit(_TagClass.context, 4, () => $._encodeBitString, $.BER),
+    "integer": $._encode_implicit(_TagClass.context, 5, () => $._encodeInteger, $.BER),
+    "unsigned": $._encode_implicit(_TagClass.context, 6, () => $._encodeInteger, $.BER),
+    "floating_point": $._encode_implicit(_TagClass.context, 7, () => _encode_FloatingPoint, $.BER),
+    "real": $._encode_implicit(_TagClass.context, 8, () => $._encodeReal, $.BER),
+    "octet_string": $._encode_implicit(_TagClass.context, 9, () => $._encodeOctetString, $.BER),
+    "visible_string": $._encode_implicit(_TagClass.context, 10, () => $._encodeVisibleString, $.BER),
+    "binary_time": $._encode_implicit(_TagClass.context, 12, () => _encode_TimeOfDay, $.BER),
+    "bcd": $._encode_implicit(_TagClass.context, 13, () => $._encodeInteger, $.BER),
+    "booleanArray": $._encode_implicit(_TagClass.context, 14, () => $._encodeBitString, $.BER),
+    "objId": $._encode_implicit(_TagClass.context, 15, () => $._encodeObjectIdentifier, $.BER),
+    "mMSString": $._encode_implicit(_TagClass.context, 16, () => _encode_MMSString, $.BER),
+    "utc_time": $._encode_implicit(_TagClass.context, 17, () => _encode_UtcTime, $.BER),
+}, $.BER); }
+    return _cached_encoder_for_Data(value, elGetter);
+}
+
+
+/* eslint-enable */
