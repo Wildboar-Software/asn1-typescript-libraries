@@ -22,6 +22,8 @@ import evaluateTemporalContext from "./temporalContext.mjs";
 import { DER } from "@wildboar/asn1/functional";
 import { TimeSpecification_time_absolute } from "../../modules/SelectedAttributeTypes/TimeSpecification-time-absolute.ta.mjs";
 import { TimeAssertion_between } from "../../modules/SelectedAttributeTypes/TimeAssertion-between.ta.mjs";
+import { DayTimeBand } from "../../modules/SelectedAttributeTypes/DayTimeBand.ta.mjs";
+import { DayTime } from "../../modules/SelectedAttributeTypes/DayTime.ta.mjs";
 
 describe("evaluateTemporalContext", () => {
     it("matches an at-assertion against an absolute temporal context", () => {
@@ -473,6 +475,42 @@ describe("evaluateTemporalContext", () => {
             assertion,
             _encode_TimeSpecification(value, DER),
 
+        )).toBe(false);
+    });
+
+    it("interprets periodic timesOfDay in the specification timeZone, independent of host offset", () => {
+        const assertion: TimeAssertion = {
+            at: new Date(Date.UTC(2026, 0, 1, 12, 30, 0)),
+        };
+        const value = new TimeSpecification(
+            {
+                periodic: [
+                    new Period(
+                        [
+                            new DayTimeBand(
+                                new DayTime(13, 0, 0),
+                                new DayTime(14, 0, 0),
+                            ),
+                        ],
+                    ),
+                ],
+            },
+            undefined,
+            1,
+        );
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(true);
+
+        const utcZone = new TimeSpecification(
+            value.time,
+            undefined,
+            0,
+        );
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(utcZone, DER),
         )).toBe(false);
     });
 });
