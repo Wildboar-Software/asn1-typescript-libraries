@@ -1,0 +1,65 @@
+/* eslint-disable */
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
+// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
+import { NCARequestArg, _decode_NCARequestArg, _encode_NCARequestArg } from "../AIN-Operations/NCARequestArg.ta.mjs";
+// export { NCARequestArg, _decode_NCARequestArg, _encode_NCARequestArg } from "../AIN-Operations/NCARequestArg.ta.mjs";
+import { _decode_nCARequest_ResultType, _encode_nCARequest_ResultType, nCARequest_ResultType } from "../AIN-Operations/nCARequest-ResultType.ta.mjs";
+// export { nCARequest_ResultType, _decode_nCARequest_ResultType, _encode_nCARequest_ResultType } from "../AIN-Operations/nCARequest-ResultType.ta.mjs";
+import { applicationError } from "../AIN-Errors/applicationError.oa.mjs";
+// export { applicationError } from "../AIN-Errors/applicationError.oa.mjs";
+
+
+/**
+ * @summary nCARequest
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * nCARequest OPERATION ::= {
+ *         ARGUMENT
+ *         NCARequestArg
+ *         RESULT SEQUENCE{
+ *             envelopeEncodingAuthority      EnvelopeEncodingAuthority,
+ *             envelopContent                 EnvelopContent,
+ *             securityEnvelope               SecurityEnvelope OPTIONAL,
+ *             amp1                           Amp1 OPTIONAL,
+ *             amp2                           Amp2 OPTIONAL,
+ *             extensionParameter             [84] IMPLICIT ExtensionParameter OPTIONAL
+ *         }
+ *         ERRORS{ applicationError,
+ *         failureReport
+ *         }
+ *         CODE private: 27393
+ *         --Family Name is "NCA Signaling"
+ *         }
+ * ```
+ * 
+ * @constant
+ * @type {OPERATION<NCARequestArg, nCARequest_ResultType>}
+ * @implements {OPERATION<NCARequestArg, nCARequest_ResultType>}
+ */
+export
+const nCARequest: OPERATION<NCARequestArg, nCARequest_ResultType> = {
+    class: "OPERATION",
+    decoderFor: {
+        "&ArgumentType": _decode_NCARequestArg,
+        "&ResultType": _decode_nCARequest_ResultType,
+    },
+    encoderFor: {
+        "&ArgumentType": _encode_NCARequestArg,
+        "&ResultType": _encode_nCARequest_ResultType,
+    },
+    "&Errors": [ applicationError, ] /* OBJECT_FIELD_SETTING */,
+    "&operationCode": { private_: 27393 } /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&InvokePriority": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
+    "&ResultPriority": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
+    "&returnResult": true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&synchronous": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&alwaysReturns": true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

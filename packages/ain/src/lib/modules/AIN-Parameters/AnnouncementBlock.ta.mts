@@ -1,0 +1,159 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { UninterAnnounceBlock, _decode_UninterAnnounceBlock, _encode_UninterAnnounceBlock } from "../AIN-Parameters/UninterAnnounceBlock.ta.mjs";
+// export { UninterAnnounceBlock, _decode_UninterAnnounceBlock, _encode_UninterAnnounceBlock } from "../AIN-Parameters/UninterAnnounceBlock.ta.mjs";
+import { InterAnnounceBlock, _decode_InterAnnounceBlock, _encode_InterAnnounceBlock } from "../AIN-Parameters/InterAnnounceBlock.ta.mjs";
+// export { InterAnnounceBlock, _decode_InterAnnounceBlock, _encode_InterAnnounceBlock } from "../AIN-Parameters/InterAnnounceBlock.ta.mjs";
+
+
+/**
+ * @summary AnnouncementBlock
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * AnnouncementBlock ::= SEQUENCE{
+ *         uninterAnnounceBlock        [1] IMPLICIT UninterAnnounceBlock OPTIONAL,
+ *         interAnnounceBlock          [2] IMPLICIT InterAnnounceBlock OPTIONAL
+ *     }
+ * ```
+ * 
+ * @class
+ */
+export
+class AnnouncementBlock {
+    constructor (
+        /**
+         * @summary `uninterAnnounceBlock`.
+         * @public
+         * @readonly
+         */
+        readonly uninterAnnounceBlock: OPTIONAL<UninterAnnounceBlock>,
+        /**
+         * @summary `interAnnounceBlock`.
+         * @public
+         * @readonly
+         */
+        readonly interAnnounceBlock: OPTIONAL<InterAnnounceBlock>
+    ) {}
+
+    /**
+     * @summary Restructures an object into a AnnouncementBlock
+     * @description
+     * 
+     * This takes an `object` and converts it to a `AnnouncementBlock`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `AnnouncementBlock`.
+     * @returns {AnnouncementBlock}
+     */
+    public static _from_object (_o: { [_K in keyof (AnnouncementBlock)]: (AnnouncementBlock)[_K] }): AnnouncementBlock {
+        return new AnnouncementBlock(_o.uninterAnnounceBlock, _o.interAnnounceBlock);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of AnnouncementBlock
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_AnnouncementBlock: $.ComponentSpec[] = [
+    new $.ComponentSpec("uninterAnnounceBlock", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("interAnnounceBlock", true, $.hasTag(_TagClass.context, 2))
+];
+
+/**
+ * @summary The Trailing Root Component Types of AnnouncementBlock
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_AnnouncementBlock: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of AnnouncementBlock
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_AnnouncementBlock: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_AnnouncementBlock: $.ASN1Decoder<AnnouncementBlock> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) AnnouncementBlock
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_AnnouncementBlock (el: _Element): AnnouncementBlock {
+    if (!_cached_decoder_for_AnnouncementBlock) { _cached_decoder_for_AnnouncementBlock = function (el: _Element): AnnouncementBlock {
+    let uninterAnnounceBlock: OPTIONAL<UninterAnnounceBlock>;
+    let interAnnounceBlock: OPTIONAL<InterAnnounceBlock>;
+    const callbacks: $.DecodingMap = {
+        "uninterAnnounceBlock": (_el: _Element): void => { uninterAnnounceBlock = $._decode_implicit<UninterAnnounceBlock>(() => _decode_UninterAnnounceBlock)(_el); },
+        "interAnnounceBlock": (_el: _Element): void => { interAnnounceBlock = $._decode_implicit<InterAnnounceBlock>(() => _decode_InterAnnounceBlock)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_AnnouncementBlock,
+        _extension_additions_list_spec_for_AnnouncementBlock,
+        _root_component_type_list_2_spec_for_AnnouncementBlock,
+        undefined,
+    );
+    return new AnnouncementBlock(
+        uninterAnnounceBlock,
+        interAnnounceBlock
+    );
+}; }
+    return _cached_decoder_for_AnnouncementBlock(el);
+}
+
+let _cached_encoder_for_AnnouncementBlock: $.ASN1Encoder<AnnouncementBlock> | null = null;
+
+/**
+ * @summary Encodes a(n) AnnouncementBlock into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The AnnouncementBlock, encoded as an ASN.1 Element.
+ */
+export
+function _encode_AnnouncementBlock (value: AnnouncementBlock, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_AnnouncementBlock) { _cached_encoder_for_AnnouncementBlock = function (value: AnnouncementBlock, elGetter: $.ASN1Encoder<AnnouncementBlock>): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* IF_ABSENT  */ ((value.uninterAnnounceBlock === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_UninterAnnounceBlock, $.BER)(value.uninterAnnounceBlock, $.BER)),
+            /* IF_ABSENT  */ ((value.interAnnounceBlock === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_InterAnnounceBlock, $.BER)(value.interAnnounceBlock, $.BER))
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_AnnouncementBlock(value, elGetter);
+}
+
+
+/* eslint-enable */

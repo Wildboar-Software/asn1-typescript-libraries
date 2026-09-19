@@ -1,0 +1,25 @@
+{
+  "name": "ain",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/ain/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/ain",
+        "tsConfig": "packages/ain/tsconfig.lib.json",
+        "packageJson": "packages/ain/package.json",
+        "main": "packages/ain/src/index.mts",
+        "assets": [
+          "packages/ain/*.md",
+          "packages/ain/LICENSE.txt",
+          "packages/ain/package.json"
+        ]
+      }
+    }
+  }
+}

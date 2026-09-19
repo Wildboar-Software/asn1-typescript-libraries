@@ -1,0 +1,63 @@
+/* eslint-disable */
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
+// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
+import { QueryRequestArg, _decode_QueryRequestArg, _encode_QueryRequestArg } from "../AIN-Operations/QueryRequestArg.ta.mjs";
+// export { QueryRequestArg, _decode_QueryRequestArg, _encode_QueryRequestArg } from "../AIN-Operations/QueryRequestArg.ta.mjs";
+import { _decode_queryRequest_ResultType, _encode_queryRequest_ResultType, queryRequest_ResultType } from "../AIN-Operations/queryRequest-ResultType.ta.mjs";
+// export { queryRequest_ResultType, _decode_queryRequest_ResultType, _encode_queryRequest_ResultType } from "../AIN-Operations/queryRequest-ResultType.ta.mjs";
+import { applicationError } from "../AIN-Errors/applicationError.oa.mjs";
+// export { applicationError } from "../AIN-Errors/applicationError.oa.mjs";
+
+
+/**
+ * @summary queryRequest
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * queryRequest OPERATION ::= {
+ *         ARGUMENT
+ *         QueryRequestArg
+ *         RESULT SEQUENCE{
+ *             amp1                          Amp1 OPTIONAL,
+ *             amp2                          Amp2 OPTIONAL,
+ *             extensionParameter            [84] IMPLICIT ExtensionParameter OPTIONAL,
+ *             infoProvided                  InfoProvided OPTIONAL
+ *         }
+ *         ERRORS{ applicationError,
+ *         failureReport
+ *         }
+ *         CODE private: 26626
+ *         --Family Name is “Information Revision”
+ *         }
+ * ```
+ * 
+ * @constant
+ * @type {OPERATION<QueryRequestArg, queryRequest_ResultType>}
+ * @implements {OPERATION<QueryRequestArg, queryRequest_ResultType>}
+ */
+export
+const queryRequest: OPERATION<QueryRequestArg, queryRequest_ResultType> = {
+    class: "OPERATION",
+    decoderFor: {
+        "&ArgumentType": _decode_QueryRequestArg,
+        "&ResultType": _decode_queryRequest_ResultType,
+    },
+    encoderFor: {
+        "&ArgumentType": _encode_QueryRequestArg,
+        "&ResultType": _encode_queryRequest_ResultType,
+    },
+    "&Errors": [ applicationError, ] /* OBJECT_FIELD_SETTING */,
+    "&operationCode": { private_: 26626 } /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&InvokePriority": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
+    "&ResultPriority": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
+    "&returnResult": true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&synchronous": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&alwaysReturns": true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */
