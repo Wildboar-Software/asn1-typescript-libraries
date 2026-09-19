@@ -1,0 +1,25 @@
+{
+  "name": "q932",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/q932/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/q932",
+        "tsConfig": "packages/q932/tsconfig.lib.json",
+        "packageJson": "packages/q932/package.json",
+        "main": "packages/q932/src/index.mts",
+        "assets": [
+          "packages/q932/*.md",
+          "packages/q932/LICENSE.txt",
+          "packages/q932/package.json"
+        ]
+      }
+    }
+  }
+}
