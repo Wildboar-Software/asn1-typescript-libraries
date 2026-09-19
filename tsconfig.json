@@ -221,6 +221,9 @@
     },
     {
       "path": "./packages/mrbtr"
+    },
+    {
+      "path": "./packages/c1222"
     }
   ],
   "compilerOptions": {
