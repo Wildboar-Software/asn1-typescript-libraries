@@ -17,7 +17,10 @@ import { LevelAndPolicy, _decode_LevelAndPolicy, _encode_LevelAndPolicy } from "
 /**
  * @summary LevelEffortAndDecisionPolicy
  * @description
- * 
+ *
+ * Enrolment policy and comparison policy for a scenario test
+ * (Clause 6.5.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +37,20 @@ class LevelEffortAndDecisionPolicy {
     constructor (
         /**
          * @summary `levelAndPolicyEnrol`.
+         * @description
+         *
+         * Enrolment transaction policy (Clause 6.5.2).
+         *
          * @public
          * @readonly
          */
         readonly levelAndPolicyEnrol: LevelAndPolicy,
         /**
          * @summary `levelAndPolicyCmp`.
+         * @description
+         *
+         * Comparison (recognition) transaction policy (Clause 6.5.2).
+         *
          * @public
          * @readonly
          */

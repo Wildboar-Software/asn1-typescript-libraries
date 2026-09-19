@@ -25,7 +25,11 @@ import { Availability, _enum_for_Availability, _decode_Availability, _encode_Ava
 /**
  * @summary ExternalDocument
  * @description
- * 
+ *
+ * Citation of a non-machine-readable document (parent test report,
+ * test plan, etc.) (Clause 6.4.3, Annex B.8 Table B.5). This
+ * machine-readable report is not complete documentation of a test.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,48 +52,83 @@ class ExternalDocument {
     constructor (
         /**
          * @summary `link`.
+         * @description
+         *
+         * URL or other locator where the document can be referenced
+         * (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly link: URI,
         /**
          * @summary `title`.
+         * @description
+         *
+         * Title of the document (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly title: VisibleString,
         /**
          * @summary `authors`.
+         * @description
+         *
+         * Author or group of authors (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly authors: OPTIONAL<VisibleString[]>,
         /**
          * @summary `publisher`.
+         * @description
+         *
+         * Publisher of the document (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly publisher: OPTIONAL<VisibleString>,
         /**
          * @summary `editor`.
+         * @description
+         *
+         * Editor of the document (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly editor: OPTIONAL<VisibleString>,
         /**
          * @summary `typeDocument`.
+         * @description
+         *
+         * `article`, `technical-report`, `in-proceedings`, `abstract`,
+         * `book`, `in-book`, or `collection` (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly typeDocument: OPTIONAL<TypeDocument>,
         /**
          * @summary `publicationDate`.
+         * @description
+         *
+         * Publication date of the document (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly publicationDate: OPTIONAL<Date>,
         /**
          * @summary `availability`.
+         * @description
+         *
+         * `public`, `restricted`, `unavailable`, or `superseded`
+         * (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */

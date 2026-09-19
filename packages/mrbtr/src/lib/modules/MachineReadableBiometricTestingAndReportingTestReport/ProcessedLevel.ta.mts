@@ -26,7 +26,11 @@ enum _enum_for_ProcessedLevel {
 /**
  * @summary ProcessedLevel
  * @description
- * 
+ *
+ * Processing level of product output (Clause 6.4.2.3). Extensible:
+ * `raw-data`(1), `intermediate-data`(2), `processed-data`(3),
+ * `comparison-score`(4), `comparison-result`(5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

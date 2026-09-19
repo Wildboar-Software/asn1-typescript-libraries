@@ -19,7 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AccreditingBody
  * @description
- * 
+ *
+ * One body accrediting the laboratory (Clause 6.4.3, Annex B.5
+ * Table B.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +40,33 @@ class AccreditingBody {
     constructor (
         /**
          * @summary `nameAccreditingBody`.
+         * @description
+         *
+         * Name of the accrediting body (Clause 6.4.3, Annex B.5).
+         *
          * @public
          * @readonly
          */
         readonly nameAccreditingBody: VisibleString,
         /**
          * @summary `identifierCertificate`.
+         * @description
+         *
+         * Identifier of the accreditation result (Annex B.5 Table B.3).
+         * Clause 6.4.3 does not further specify this OID.
+         *
          * @public
          * @readonly
          */
         readonly identifierCertificate: OBJECT_IDENTIFIER,
         /**
          * @summary `signatory`.
+         * @description
+         *
+         * Annex B.5 Table B.3: location, contact point, pointer, URI, or
+         * other reference to the laboratory's accreditation
+         * certificate. Clause 6.4.3 does not describe the octets.
+         *
          * @public
          * @readonly
          */

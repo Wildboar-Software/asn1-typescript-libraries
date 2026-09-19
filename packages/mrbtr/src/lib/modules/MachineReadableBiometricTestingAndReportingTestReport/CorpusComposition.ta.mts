@@ -19,7 +19,9 @@ import { CorpusStatistics, _decode_CorpusStatistics, _encode_CorpusStatistics } 
 /**
  * @summary CorpusComposition
  * @description
- * 
+ *
+ * Identity and statistics of the evaluation corpus (Clause 6.4.4.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +39,32 @@ class CorpusComposition {
     constructor (
         /**
          * @summary `identifier`.
+         * @description
+         *
+         * OID identifying the corpus. Annex C.2 Table C.1 allows an
+         * owner-assigned or independently registered OID.
+         *
          * @public
          * @readonly
          */
         readonly identifier: OBJECT_IDENTIFIER,
         /**
          * @summary `nameCorpus`.
+         * @description
+         *
+         * Name of the corpus (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly nameCorpus: VisibleString,
         /**
          * @summary `corpusStatistics`.
+         * @description
+         *
+         * Counts, per-subject sample tables, and related statistics
+         * (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */

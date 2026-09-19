@@ -17,7 +17,9 @@ import { AScopeAccreditation, _enum_for_AScopeAccreditation, _decode_AScopeAccre
 /**
  * @summary ScopeAccreditation
  * @description
- * 
+ *
+ * Sequence of claimed accreditation scopes (Clause 6.4.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

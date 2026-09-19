@@ -18,7 +18,11 @@ import { Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTes
 /**
  * @summary StandardDescription
  * @description
- * 
+ *
+ * Testing standard claimed for the test (Clause 6.4.3, Annex B.6).
+ * Presence indicates the laboratory claims conformance to the listed
+ * standard.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +41,41 @@ class StandardDescription {
     constructor (
         /**
          * @summary `standardName`.
+         * @description
+         *
+         * Name of the standard, e.g. "Biometric Testing and Reporting —
+         * Principles and Framework" (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly standardName: VisibleString,
         /**
          * @summary `standardNumber`.
+         * @description
+         *
+         * Series number, e.g. `"19795"` (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly standardNumber: VisibleString,
         /**
          * @summary `standardPart`.
+         * @description
+         *
+         * Part number of the standard series (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly standardPart: VisibleString,
         /**
          * @summary `standardPublicationDate`.
+         * @description
+         *
+         * Publication date of the cited document (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */

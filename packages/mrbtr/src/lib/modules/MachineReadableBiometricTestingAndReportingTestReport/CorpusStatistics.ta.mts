@@ -21,7 +21,12 @@ import { SamplesPerIndividual, _decode_SamplesPerIndividual, _encode_SamplesPerI
 /**
  * @summary CorpusStatistics
  * @description
- * 
+ *
+ * Statistical description of the corpus (Clause 6.4.4.2). Mean samples
+ * per person is `numSamples` divided by `numIndividuals` in
+ * `corpusBasicStatistics`. `numSamples` may be used when computing
+ * uncertainties.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,24 +45,40 @@ class CorpusStatistics {
     constructor (
         /**
          * @summary `corpusBasicStatistics`.
+         * @description
+         *
+         * Counts and CDFs common to corpus and crew (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly corpusBasicStatistics: CorpusCrewBasicStatistics,
         /**
          * @summary `numSamples`.
+         * @description
+         *
+         * Number of biometric samples in the corpus (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly numSamples: INTEGER,
         /**
          * @summary `samplesPerIndividualEnrol`.
+         * @description
+         *
+         * Enrolment samples per individual (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly samplesPerIndividualEnrol: OPTIONAL<SamplesPerIndividual>,
         /**
          * @summary `samplesPerIndividualProbe`.
+         * @description
+         *
+         * Probe samples per individual (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */

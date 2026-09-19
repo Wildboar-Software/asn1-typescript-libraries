@@ -18,7 +18,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ExpressionPointDETCurve
  * @description
- * 
+ *
+ * One DET point (Clause 6.4.4.3.3). Sentinel values for `threshold`
+ * conflict in the specification: Clause 6.4.4.3.3 prose says unknown
+ * = -1 and unavailable = 0; the same clause's ASN.1 comment says
+ * unavailable = -1 and unknown = -2; Annex A says unavailable = 0 and
+ * unknown = -1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +42,32 @@ class ExpressionPointDETCurve {
     constructor (
         /**
          * @summary `threshold`.
+         * @description
+         *
+         * Operating threshold. See type JSDoc for conflicting sentinel
+         * values in Clause 6.4.4.3.3 vs Annex A.
+         *
          * @public
          * @readonly
          */
         readonly threshold: OPTIONAL<REAL>,
         /**
          * @summary `typeIError`.
+         * @description
+         *
+         * Type I error rate at this point (Clause 6.4.4.3.3). Sequence
+         * of points shall be increasing in this field.
+         *
          * @public
          * @readonly
          */
         readonly typeIError: REAL,
         /**
          * @summary `typeIIError`.
+         * @description
+         *
+         * Type II error rate at this point (Clause 6.4.4.3.3).
+         *
          * @public
          * @readonly
          */

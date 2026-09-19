@@ -18,7 +18,11 @@ import { DistributionIntegerInteger, _decode_DistributionIntegerInteger, _encode
 /**
  * @summary SamplesPerIndividual
  * @description
- * 
+ *
+ * Exhaustive per-subject sample counts (Clause 6.4.4.2, Annex B.10).
+ * `mean` and `median` support applications that do not need
+ * `distrSubjSample`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +41,42 @@ class SamplesPerIndividual {
     constructor (
         /**
          * @summary `numSubjects`.
+         * @description
+         *
+         * Number of subjects in the sample (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly numSubjects: INTEGER,
         /**
          * @summary `mean`.
+         * @description
+         *
+         * Mean samples per subject, over all subjects (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly mean: INTEGER,
         /**
          * @summary `median`.
+         * @description
+         *
+         * Median samples per subject, over all subjects
+         * (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly median: INTEGER,
         /**
          * @summary `distrSubjSample`.
+         * @description
+         *
+         * `(subjectId, numberOfSamples)` pairs. Example: 20 samples for
+         * subject 1, 30 for 2 is `((1,20),(2,30),…)` (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */

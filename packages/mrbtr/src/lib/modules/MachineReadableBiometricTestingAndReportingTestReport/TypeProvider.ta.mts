@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TypeProvider
  * @description
- * 
+ *
+ * Kind of provider (Clause 6.4.2.2): `non-profit`(1), `university`(2),
+ * `corporation`(3), `individual`(4), `government`(5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +46,10 @@ enum _enum_for_TypeProvider {
 /**
  * @summary TypeProvider
  * @description
- * 
+ *
+ * Kind of provider (Clause 6.4.2.2): `non-profit`(1), `university`(2),
+ * `corporation`(3), `individual`(4), `government`(5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,7 +70,10 @@ type TypeProvider = _enum_for_TypeProvider;
 /**
  * @summary TypeProvider
  * @description
- * 
+ *
+ * Kind of provider (Clause 6.4.2.2): `non-profit`(1), `university`(2),
+ * `corporation`(3), `individual`(4), `government`(5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

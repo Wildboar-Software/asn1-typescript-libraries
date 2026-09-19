@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ExpressionPointRealReal
  * @description
- * 
+ *
+ * One CDF point of a real-valued variable: proportion of values ≤
+ * `xValue` is `yValue` (Clause 6.4.4.3.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +37,20 @@ class ExpressionPointRealReal {
     constructor (
         /**
          * @summary `xValue`.
+         * @description
+         *
+         * Score (or other real) at this CDF point (Clause 6.4.4.3.3).
+         *
          * @public
          * @readonly
          */
         readonly xValue: REAL,
         /**
          * @summary `yValue`.
+         * @description
+         *
+         * Proportion of values ≤ `xValue` (Clause 6.4.4.3.3).
+         *
          * @public
          * @readonly
          */

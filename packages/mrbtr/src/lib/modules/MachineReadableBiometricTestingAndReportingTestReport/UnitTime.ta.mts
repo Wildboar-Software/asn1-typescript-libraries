@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary UnitTime
  * @description
- * 
+ *
+ * Time unit for `StatisticInformationSet` numeric fields
+ * (Clause 6.4.4.3.1): `millisecond`(1), `second`(2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,7 +40,10 @@ enum _enum_for_UnitTime {
 /**
  * @summary UnitTime
  * @description
- * 
+ *
+ * Time unit for `StatisticInformationSet` numeric fields
+ * (Clause 6.4.4.3.1): `millisecond`(1), `second`(2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,7 +61,10 @@ type UnitTime = _enum_for_UnitTime;
 /**
  * @summary UnitTime
  * @description
- * 
+ *
+ * Time unit for `StatisticInformationSet` numeric fields
+ * (Clause 6.4.4.3.1): `millisecond`(1), `second`(2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

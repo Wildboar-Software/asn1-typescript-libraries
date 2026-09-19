@@ -17,7 +17,10 @@ import { ExpressionPointDETCurve, _decode_ExpressionPointDETCurve, _encode_Expre
 /**
  * @summary ExpressionDETCurve
  * @description
- * 
+ *
+ * Sequence of DET points in increasing Type I error order
+ * (Clause 6.4.4.3.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

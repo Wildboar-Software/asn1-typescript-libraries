@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary BiometricTestReport
  * @description
- * 
+ *
+ * Outer envelope of a machine-readable biometric test report (ISO/IEC
+ * 29120-1:2022 Clause 6.3). `contentType` selects the CMS `CONTENT-TYPE`
+ * and `content` is the corresponding value from
+ * `ContentTypeBiometricTestReport`: technology, scenario, or signed.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,22 @@ class BiometricTestReport {
     constructor (
         /**
          * @summary `contentType`.
+         * @description
+         *
+         * One of `id-testReportTechnology`, `id-testReportScenario`, or
+         * `id-signedTestReport` (Clause 6.3).
+         *
          * @public
          * @readonly
          */
         readonly contentType: OBJECT_IDENTIFIER,
         /**
          * @summary `content`.
+         * @description
+         *
+         * Open type constrained by `contentType`: `TestReportTechnology`,
+         * `TestReportScenario`, or `SignedTestReport`.
+         *
          * @public
          * @readonly
          */

@@ -1,3 +1,9 @@
+/**
+ * CBEFF `BiometricType` (ISO/IEC 19785-3:2020 Clause 6.2), used as
+ * `Modality.type` in ISO/IEC 29120-1:2022 Clause 6.4.2.3. Mandatory
+ * when `processedLevel` is neither `comparison-score` nor
+ * `comparison-result`.
+ */
 export {
     type BiometricType,
     BiometricType_no_value_available,

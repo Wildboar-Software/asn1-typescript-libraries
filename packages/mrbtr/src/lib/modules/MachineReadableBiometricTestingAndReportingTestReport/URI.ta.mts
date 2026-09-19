@@ -11,7 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary URI
  * @description
- * 
+ *
+ * Locator for an external document (Clause 6.4.3, Annex B.8): a URI,
+ * webpage, or other locator. Non-empty `VisibleString`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IdentificationTestLab
  * @description
- * 
+ *
+ * Identifying fields for the laboratory that conducted the test
+ * (Clause 6.4.3, Annex B.5 Table B.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +41,55 @@ class IdentificationTestLab {
     constructor (
         /**
          * @summary `nameLab`.
+         * @description
+         *
+         * Name of the responsible laboratory (Clause 6.4.3). Annex B.5
+         * Table B.3 instead says the name of the individual
+         * responsible for the laboratory.
+         *
          * @public
          * @readonly
          */
         readonly nameLab: VisibleString,
         /**
          * @summary `location`.
+         * @description
+         *
+         * Location of the laboratory (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly location: VisibleString,
         /**
          * @summary `testImplementor`.
+         * @description
+         *
+         * Employee or representative who executed the test
+         * (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly testImplementor: OPTIONAL<VisibleString>,
         /**
          * @summary `testReportSignatory`.
+         * @description
+         *
+         * Employee or representative assuring integrity, correctness,
+         * and completeness of the test (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly testReportSignatory: VisibleString,
         /**
          * @summary `contactInformation`.
+         * @description
+         *
+         * Contact for enquiries concerning the test report
+         * (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */

@@ -21,7 +21,10 @@ import { CorpusCrewBasicStatistics, _decode_CorpusCrewBasicStatistics, _encode_C
 /**
  * @summary TestCrewInformation
  * @description
- * 
+ *
+ * Scenario test crew (Clause 6.5.2). Statistics items are the same as
+ * for a corpus (`CorpusCrewBasicStatistics`).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,24 +43,42 @@ class TestCrewInformation {
     constructor (
         /**
          * @summary `identifier`.
+         * @description
+         *
+         * OID identifying the test crew (Clause 6.5.2).
+         *
          * @public
          * @readonly
          */
         readonly identifier: OBJECT_IDENTIFIER,
         /**
          * @summary `location`.
+         * @description
+         *
+         * Where the scenario test was performed. Annex C.3 Table C.3
+         * describes this as a list of "City + State" pairs.
+         *
          * @public
          * @readonly
          */
         readonly location: VisibleString,
         /**
          * @summary `habituation`.
+         * @description
+         *
+         * Histogram of past usage counts on the system (Clause 6.5.2).
+         *
          * @public
          * @readonly
          */
         readonly habituation: ExpressionHistogram,
         /**
          * @summary `testCrewStatistics`.
+         * @description
+         *
+         * Crew statistics; same items as corpus basic statistics
+         * (Clause 6.5.2).
+         *
          * @public
          * @readonly
          */

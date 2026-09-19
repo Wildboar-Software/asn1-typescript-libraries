@@ -20,7 +20,12 @@ import { DistributionRealReal, _decode_DistributionRealReal, _encode_Distributio
 /**
  * @summary ResultMatchVerify
  * @description
- * 
+ *
+ * Verification DET curves and comparison-score CDF
+ * (Clause 6.4.4.3.3, Annex B.12). Type I/II pairs: FMR with FNMR, FAR
+ * with FRR, GFAR with GFRR. Annex C.2: score distribution is not
+ * needed if both rates are tabulated.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +44,43 @@ class ResultMatchVerify {
     constructor (
         /**
          * @summary `infoDETFNMRFMR`.
+         * @description
+         *
+         * DET of FNMR vs FMR. Pair of error types shall be `fnmr-fmr`
+         * (Clause 6.4.4.3.3).
+         *
          * @public
          * @readonly
          */
         readonly infoDETFNMRFMR: OPTIONAL<InfoDETCurve>,
         /**
          * @summary `infoDETFRRFAR`.
+         * @description
+         *
+         * DET of FRR vs FAR. Pair of error types shall be `frr-far`
+         * (Clause 6.4.4.3.3).
+         *
          * @public
          * @readonly
          */
         readonly infoDETFRRFAR: OPTIONAL<InfoDETCurve>,
         /**
          * @summary `infoDETGFRRGFAR`.
+         * @description
+         *
+         * DET of GFRR vs GFAR. Pair of error types shall be `gfrr-gfar`
+         * (Clause 6.4.4.3.3).
+         *
          * @public
          * @readonly
          */
         readonly infoDETGFRRGFAR: OPTIONAL<InfoDETCurve>,
         /**
          * @summary `cmpScrDistr`.
+         * @description
+         *
+         * CDF of comparison scores (Clause 6.4.4.3.3).
+         *
          * @public
          * @readonly
          */

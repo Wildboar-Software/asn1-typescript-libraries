@@ -21,7 +21,10 @@ import { InstructionMode, _enum_for_InstructionMode, _decode_InstructionMode, _e
 /**
  * @summary AssistanceAndInstruction
  * @description
- * 
+ *
+ * Assistance location, assistance mode, and instructional mode of a
+ * scenario test (Clause 6.5.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +42,34 @@ class AssistanceAndInstruction {
     constructor (
         /**
          * @summary `assistanceLocation`.
+         * @description
+         *
+         * Before and separate from the transaction, during/interactively
+         * with it, or after a failure (Clause 6.5.2, Annex C.3).
+         *
          * @public
          * @readonly
          */
         readonly assistanceLocation: AssistanceLocation,
         /**
          * @summary `assistanceMode`.
+         * @description
+         *
+         * How assistance was provided: physical, audio-only,
+         * audio-video, none, or video-only (Clause 6.5.2). Annex C.3
+         * describes this as human assistance to the subject.
+         *
          * @public
          * @readonly
          */
         readonly assistanceMode: AssistanceMode,
         /**
          * @summary `instructionMode`.
+         * @description
+         *
+         * Written manual, poster, video, or personal (Clause 6.5.2).
+         * `video` covers slides or other sets of static images.
+         *
          * @public
          * @readonly
          */

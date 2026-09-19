@@ -23,7 +23,11 @@ import { TestResultIdentify, _decode_TestResultIdentify, _encode_TestResultIdent
 /**
  * @summary TestResult
  * @description
- * 
+ *
+ * Choose the alternative that matches what was tested: enrolment,
+ * acquisition, verification matching, or identification matching
+ * (Clause 6.4.4.3). Used in both technology and scenario reports.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,7 +19,11 @@ import { type CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TY
 /**
  * @summary testReportScenario
  * @description
- * 
+ *
+ * CMS `CONTENT-TYPE` for a scenario test report: type
+ * `TestReportScenario`, identified by `id-testReportScenario`
+ * (Clause 6.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,10 @@ import { ExpressionPointIntegerReal, _decode_ExpressionPointIntegerReal, _encode
 /**
  * @summary DistributionIntegerReal
  * @description
- * 
+ *
+ * CDF or CMC points: increasing `xValue`; `yValue` is the proportion
+ * of observations ≤ `xValue` (Clauses 6.4.4.2, 6.4.4.3.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

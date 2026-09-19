@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AssistanceLocation
  * @description
- * 
+ *
+ * When assistance was given relative to the transaction
+ * (Clause 6.5.2, Annex C.3): `separate-from-transaction`(1),
+ * `interactively-with-transaction`(2), `after-failure`(3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,7 +43,11 @@ enum _enum_for_AssistanceLocation {
 /**
  * @summary AssistanceLocation
  * @description
- * 
+ *
+ * When assistance was given relative to the transaction
+ * (Clause 6.5.2, Annex C.3): `separate-from-transaction`(1),
+ * `interactively-with-transaction`(2), `after-failure`(3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,7 +66,11 @@ type AssistanceLocation = _enum_for_AssistanceLocation;
 /**
  * @summary AssistanceLocation
  * @description
- * 
+ *
+ * When assistance was given relative to the transaction
+ * (Clause 6.5.2, Annex C.3): `separate-from-transaction`(1),
+ * `interactively-with-transaction`(2), `after-failure`(3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

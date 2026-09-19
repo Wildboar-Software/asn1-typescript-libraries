@@ -22,7 +22,11 @@ import { VersionProduct, _decode_VersionProduct, _encode_VersionProduct } from "
 /**
  * @summary NameProduct
  * @description
- * 
+ *
+ * Identity of the tested product (Clause 6.4.2.3). Annex B.4 Table B.2
+ * allows model/version to be stated as unknown, unspecified, or unused
+ * (e.g. no firmware).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +46,51 @@ class NameProduct {
     constructor (
         /**
          * @summary `modelName`.
+         * @description
+         *
+         * Identifies the product (Clause 6.4.2.3).
+         *
          * @public
          * @readonly
          */
         readonly modelName: Name,
         /**
          * @summary `productCBEFF`.
+         * @description
+         *
+         * If used, shall conform to ISO/IEC 19785-3. For a product
+         * registered with a biometric organization (Clause 6.4.2.3).
+         *
          * @public
          * @readonly
          */
         readonly productCBEFF: OPTIONAL<Product>,
         /**
          * @summary `version`.
+         * @description
+         *
+         * Version of the product (Clause 6.4.2.3).
+         *
          * @public
          * @readonly
          */
         readonly version: VersionProduct,
         /**
          * @summary `softwareVersion`.
+         * @description
+         *
+         * Version of the product software (Clause 6.4.2.3).
+         *
          * @public
          * @readonly
          */
         readonly softwareVersion: VersionProduct,
         /**
          * @summary `firmwareVersion`.
+         * @description
+         *
+         * Version of the product firmware (Clause 6.4.2.3).
+         *
          * @public
          * @readonly
          */

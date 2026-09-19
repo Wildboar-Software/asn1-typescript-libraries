@@ -18,7 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ExpressionPointIntegerReal
  * @description
- * 
+ *
+ * One CDF/CMC point: proportion of values ≤ `xValue` is `yValue`
+ * (Clause 6.4.4.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +38,21 @@ class ExpressionPointIntegerReal {
     constructor (
         /**
          * @summary `xValue`.
+         * @description
+         *
+         * Threshold of the tabulated variable (age, rank, elapsed
+         * days, etc.) (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly xValue: INTEGER,
         /**
          * @summary `yValue`.
+         * @description
+         *
+         * Proportion of observations ≤ `xValue` (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */

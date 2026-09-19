@@ -17,7 +17,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IntervalIntegerFrequency
  * @description
- * 
+ *
+ * One histogram bin: interval plus frequency (Clause 6.4.4.3.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +37,31 @@ class IntervalIntegerFrequency {
     constructor (
         /**
          * @summary `lowerLimit`.
+         * @description
+         *
+         * Lower bound of the interval. Sequence of bins shall be
+         * increasing in this field (Clause 6.4.4.3.4).
+         *
          * @public
          * @readonly
          */
         readonly lowerLimit: INTEGER,
         /**
          * @summary `upperLimit`.
+         * @description
+         *
+         * Upper bound of the interval (Clause 6.4.4.3.4).
+         *
          * @public
          * @readonly
          */
         readonly upperLimit: INTEGER,
         /**
          * @summary `frequency`.
+         * @description
+         *
+         * Count of observations in this interval (Clause 6.4.4.3.4).
+         *
          * @public
          * @readonly
          */

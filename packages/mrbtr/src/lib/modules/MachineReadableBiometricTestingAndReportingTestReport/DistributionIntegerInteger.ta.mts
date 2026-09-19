@@ -17,7 +17,10 @@ import { ExpressionPointIntegerInteger, _decode_ExpressionPointIntegerInteger, _
 /**
  * @summary DistributionIntegerInteger
  * @description
- * 
+ *
+ * Sequence of `(subjectId, numberOfSamples)` points
+ * (Clause 6.4.4.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

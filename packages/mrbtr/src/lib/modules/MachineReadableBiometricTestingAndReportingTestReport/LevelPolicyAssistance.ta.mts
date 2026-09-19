@@ -20,7 +20,10 @@ import { AssistanceAndInstruction, _decode_AssistanceAndInstruction, _encode_Ass
 /**
  * @summary LevelPolicyAssistance
  * @description
- * 
+ *
+ * Level of effort, decision policy, assistance, and instructional mode
+ * of a scenario test (Clause 6.5.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +40,23 @@ class LevelPolicyAssistance {
     constructor (
         /**
          * @summary `levelEffortAndDecisionPolicy`.
+         * @description
+         *
+         * Enrolment and comparison policies (min/max attempts and max
+         * duration). A transaction consists of one or more attempts
+         * (Clause 6.5.2, Annex C.3).
+         *
          * @public
          * @readonly
          */
         readonly levelEffortAndDecisionPolicy: LevelEffortAndDecisionPolicy,
         /**
          * @summary `assistanceAndInstruction`.
+         * @description
+         *
+         * Where assistance was given, how, and how subjects were
+         * instructed (Clause 6.5.2).
+         *
          * @public
          * @readonly
          */

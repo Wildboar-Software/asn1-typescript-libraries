@@ -17,7 +17,11 @@ import { ExpressionPointRealReal, _decode_ExpressionPointRealReal, _encode_Expre
 /**
  * @summary DistributionRealReal
  * @description
- * 
+ *
+ * CDF of a real-valued variable (comparison scores): proportion of
+ * values ≤ `xValue` is `yValue`. Points shall appear in increasing
+ * `xValue` order (Clause 6.4.4.3.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

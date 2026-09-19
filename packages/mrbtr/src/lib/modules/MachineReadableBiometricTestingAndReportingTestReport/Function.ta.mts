@@ -25,7 +25,11 @@ enum _enum_for_Function {
 /**
  * @summary Function
  * @description
- * 
+ *
+ * Function of the tested product (Clause 6.4.2.3). Extensible:
+ * `acquisition`(1), `enrolment`(2), `verification`(3),
+ * `identification`(4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,7 +18,12 @@ import { DistributionIntegerReal, _decode_DistributionIntegerReal, _encode_Distr
 /**
  * @summary InfoCumulativeDistribution
  * @description
- * 
+ *
+ * Tabulated CDF of a random variable plus summary mean/median
+ * (Clause 6.4.4.2, Annex B.11). Points shall be in increasing `xValue`
+ * order; F(X) shall be non-decreasing; the tabulated range shall
+ * satisfy F(X₁)=0 and F(Xₙ)=1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +41,33 @@ class InfoCumulativeDistribution {
     constructor (
         /**
          * @summary `mean`.
+         * @description
+         *
+         * Mean over all `xValue`s in `cumulativeDistribution`
+         * (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly mean: INTEGER,
         /**
          * @summary `median`.
+         * @description
+         *
+         * Median over all `xValue`s in `cumulativeDistribution`
+         * (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly median: INTEGER,
         /**
          * @summary `cumulativeDistribution`.
+         * @description
+         *
+         * Pairs `(xValue, yValue)`: proportion of values ≤ `xValue` is
+         * `yValue`. Increasing `xValue` order (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */

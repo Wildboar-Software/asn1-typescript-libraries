@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TypeDocument
  * @description
- * 
+ *
+ * Kind of cited external document (Clause 6.4.3): `article`(1),
+ * `technical-report`(2), `in-proceedings`(3), `abstract`(4),
+ * `book`(5), `in-book`(6), `collection`(7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,7 +51,11 @@ enum _enum_for_TypeDocument {
 /**
  * @summary TypeDocument
  * @description
- * 
+ *
+ * Kind of cited external document (Clause 6.4.3): `article`(1),
+ * `technical-report`(2), `in-proceedings`(3), `abstract`(4),
+ * `book`(5), `in-book`(6), `collection`(7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -70,7 +78,11 @@ type TypeDocument = _enum_for_TypeDocument;
 /**
  * @summary TypeDocument
  * @description
- * 
+ *
+ * Kind of cited external document (Clause 6.4.3): `article`(1),
+ * `technical-report`(2), `in-proceedings`(3), `abstract`(4),
+ * `book`(5), `in-book`(6), `collection`(7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

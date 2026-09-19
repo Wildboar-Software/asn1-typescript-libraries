@@ -19,7 +19,13 @@ import { StatisticInformationSet, _decode_StatisticInformationSet, _encode_Stati
 /**
  * @summary TestResultEnrol
  * @description
- * 
+ *
+ * Enrolment-phase result (Clause 6.4.4.3.1). Technology tests: FTE is
+ * the fraction of enrolment samples not converted into a template
+ * (Annex C.2). Scenario tests: FTE is the fraction of enrolment
+ * transactions that did not produce an enrolled identity (Annex C.3
+ * Table C.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +42,21 @@ class TestResultEnrol {
     constructor (
         /**
          * @summary `failureToEnrolRate`.
+         * @description
+         *
+         * Failure-to-enrol rate (FTE) (Clause 6.4.4.3.1).
+         *
          * @public
          * @readonly
          */
         readonly failureToEnrolRate: REAL,
         /**
          * @summary `durationEnrol`.
+         * @description
+         *
+         * Enrolment duration statistics; covers successful and failed
+         * operations (Clause 6.4.4.3.1, Annex C.2).
+         *
          * @public
          * @readonly
          */

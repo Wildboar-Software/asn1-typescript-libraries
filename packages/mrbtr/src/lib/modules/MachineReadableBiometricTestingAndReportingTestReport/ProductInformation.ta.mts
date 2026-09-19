@@ -27,7 +27,11 @@ import { Modality, _decode_Modality, _encode_Modality } from "../MachineReadable
 /**
  * @summary ProductInformation
  * @description
- * 
+ *
+ * Tested biometric product / IUT (Clause 6.4.2.1). A target may be an
+ * assembly of components (Annex B.4). Common-element discussion:
+ * Annex B.4 Table B.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,36 +52,69 @@ class ProductInformation {
     constructor (
         /**
          * @summary `provider`.
+         * @description
+         *
+         * Manufacturer or supplier of the component under test
+         * (Clause 6.4.2.2, Annex B.3).
+         *
          * @public
          * @readonly
          */
         readonly provider: Provider,
         /**
          * @summary `nameProduct`.
+         * @description
+         *
+         * Model identity and product, software, and firmware versions
+         * (Clause 6.4.2.3).
+         *
          * @public
          * @readonly
          */
         readonly nameProduct: NameProduct,
         /**
          * @summary `description`.
+         * @description
+         *
+         * Complete unique description of the component. Use for
+         * prototypes, experimental models, modalities not listed in
+         * ISO/IEC 19785-3, or extra modality detail (e.g. iris in the
+         * visible spectrum) (Clause 6.4.2.3).
+         *
          * @public
          * @readonly
          */
         readonly description: OPTIONAL<VisibleString>,
         /**
          * @summary `functionProduct`.
+         * @description
+         *
+         * One or more functions of the tested product; multifunctional
+         * components list several (Clause 6.4.2.3, Annex B.4).
+         *
          * @public
          * @readonly
          */
         readonly functionProduct: Function[],
         /**
          * @summary `outputProduct`.
+         * @description
+         *
+         * Processed level and purpose of the product's output
+         * (Clause 6.4.2.3).
+         *
          * @public
          * @readonly
          */
         readonly outputProduct: OPTIONAL<DataType>,
         /**
          * @summary `modalityProduct`.
+         * @description
+         *
+         * Biometric modality processed by the product. `type` is
+         * mandatory if `outputProduct.processedLevel` is neither
+         * `comparison-score` nor `comparison-result` (Clause 6.4.2.3).
+         *
          * @public
          * @readonly
          */

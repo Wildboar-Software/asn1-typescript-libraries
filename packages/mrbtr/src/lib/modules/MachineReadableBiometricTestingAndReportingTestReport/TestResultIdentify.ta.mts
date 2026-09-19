@@ -20,7 +20,11 @@ import { ResultMatchOpenIdentify, _decode_ResultMatchOpenIdentify, _encode_Resul
 /**
  * @summary TestResultIdentify
  * @description
- * 
+ *
+ * Identification matching result (Clause 6.4.4.3.4). Closed-set
+ * metrics are mandatory because, as rank-based statistics, they can
+ * always be computed.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,22 @@ class TestResultIdentify {
     constructor (
         /**
          * @summary `resultMatchClosedIdentify`.
+         * @description
+         *
+         * Closed-set CMC, search-count histogram, and optional search
+         * duration (Clause 6.4.4.3.4).
+         *
          * @public
          * @readonly
          */
         readonly resultMatchClosedIdentify: ResultMatchClosedIdentify,
         /**
          * @summary `resultMatchOpenIdentify`.
+         * @description
+         *
+         * Open-set CMC, enrolled/no-mate search histograms, optional
+         * FNIR/FPIR DET, and optional duration (Clause 6.4.4.3.4).
+         *
          * @public
          * @readonly
          */

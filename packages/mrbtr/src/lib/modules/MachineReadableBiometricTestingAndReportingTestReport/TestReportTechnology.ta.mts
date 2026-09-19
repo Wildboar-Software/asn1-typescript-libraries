@@ -24,7 +24,11 @@ import { TestReportTechnologyForOneCondition, _decode_TestReportTechnologyForOne
 /**
  * @summary TestReportTechnology
  * @description
- * 
+ *
+ * Results of an ISO/IEC 19795-2 technology test (Clause 6.4.1). One
+ * `testReports` element per test condition. Informative examples:
+ * Annex C.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,24 +47,41 @@ class TestReportTechnology {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * Format version; defaults to `v0` (Clause 6.4.1).
+         *
          * @public
          * @readonly
          */
         readonly version: OPTIONAL<MRTDBTRVersion>,
         /**
          * @summary `targetInfo`.
+         * @description
+         *
+         * Product under test (IUT).
+         *
          * @public
          * @readonly
          */
         readonly targetInfo: ProductInformation,
         /**
          * @summary `testReportInfo`.
+         * @description
+         *
+         * Laboratory, claimed testing standard, issuance date, and parent
+         * written report.
+         *
          * @public
          * @readonly
          */
         readonly testReportInfo: TestReportInformation,
         /**
          * @summary `testReports`.
+         * @description
+         *
+         * One result set per test condition.
+         *
          * @public
          * @readonly
          */

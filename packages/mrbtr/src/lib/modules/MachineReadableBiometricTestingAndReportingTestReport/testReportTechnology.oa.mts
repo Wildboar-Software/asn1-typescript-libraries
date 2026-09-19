@@ -19,7 +19,11 @@ import { type CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TY
 /**
  * @summary testReportTechnology
  * @description
- * 
+ *
+ * CMS `CONTENT-TYPE` for a technology test report: type
+ * `TestReportTechnology`, identified by `id-testReportTechnology`
+ * (Clause 6.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

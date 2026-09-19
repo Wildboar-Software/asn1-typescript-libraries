@@ -24,7 +24,11 @@ import { StatisticInformationSet, _decode_StatisticInformationSet, _encode_Stati
 /**
  * @summary ResultMatchOpenIdentify
  * @description
- * 
+ *
+ * Open-set identification result (Clause 6.4.4.3.4). FNIR/FPIR DET
+ * pair of error types shall be `fnir-fpir`. CMC is the proportion of
+ * searches with an enrolled mate found at rank ≤ R (Annex C.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,30 +49,54 @@ class ResultMatchOpenIdentify {
     constructor (
         /**
          * @summary `cmcCurveOpen`.
+         * @description
+         *
+         * Open-set CMC curve (Clause 6.4.4.3.4).
+         *
          * @public
          * @readonly
          */
         readonly cmcCurveOpen: DistributionIntegerReal,
         /**
          * @summary `srchExecDistrEnroled`.
+         * @description
+         *
+         * Histogram of searches that had an enrolled mate
+         * (Clause 6.4.4.3.4).
+         *
          * @public
          * @readonly
          */
         readonly srchExecDistrEnroled: ExpressionHistogram,
         /**
          * @summary `srchExecDistrNoEnroled`.
+         * @description
+         *
+         * Histogram of searches with no enrolled mate
+         * (Clause 6.4.4.3.4).
+         *
          * @public
          * @readonly
          */
         readonly srchExecDistrNoEnroled: ExpressionHistogram,
         /**
          * @summary `infoDETCurveFNIRFPIR`.
+         * @description
+         *
+         * DET of FNIR vs FPIR. Pair of error types shall be
+         * `fnir-fpir` (Clause 6.4.4.3.4).
+         *
          * @public
          * @readonly
          */
         readonly infoDETCurveFNIRFPIR: OPTIONAL<InfoDETCurve>,
         /**
          * @summary `durationOpenIdentify`.
+         * @description
+         *
+         * Open-set search duration; covers successful and failed
+         * searches (Clause 6.4.4.3.4).
+         *
          * @public
          * @readonly
          */

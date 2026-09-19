@@ -18,7 +18,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LevelAndPolicy
  * @description
- * 
+ *
+ * Attempt limits and maximum permitted duration for a transaction
+ * (Clause 6.5.2). A transaction consists of one or more attempts
+ * (Annex C.3). Units of `maxDurPermitted` are not stated in
+ * ISO/IEC 29120-1:2022.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +41,31 @@ class LevelAndPolicy {
     constructor (
         /**
          * @summary `minNumAttempt`.
+         * @description
+         *
+         * Minimum number of attempts (Clause 6.5.2).
+         *
          * @public
          * @readonly
          */
         readonly minNumAttempt: INTEGER,
         /**
          * @summary `maxNumAttempt`.
+         * @description
+         *
+         * Maximum number of attempts (Clause 6.5.2).
+         *
          * @public
          * @readonly
          */
         readonly maxNumAttempt: INTEGER,
         /**
          * @summary `maxDurPermitted`.
+         * @description
+         *
+         * Maximum duration permitted for the transaction
+         * (Clause 6.5.2). Units are not stated in this document.
+         *
          * @public
          * @readonly
          */

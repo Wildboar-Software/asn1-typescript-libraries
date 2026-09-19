@@ -19,7 +19,10 @@ import { EnvironmentalInformation, _decode_EnvironmentalInformation, _encode_Env
 /**
  * @summary CorpusInformation
  * @description
- * 
+ *
+ * Corpus used in a technology evaluation: composition plus collection
+ * environment (Clause 6.4.4.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,22 @@ class CorpusInformation {
     constructor (
         /**
          * @summary `composition`.
+         * @description
+         *
+         * Identifier, name, and statistics of the corpus
+         * (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly composition: CorpusComposition,
         /**
          * @summary `environInfo`.
+         * @description
+         *
+         * Environment in which the corpus was collected
+         * (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */

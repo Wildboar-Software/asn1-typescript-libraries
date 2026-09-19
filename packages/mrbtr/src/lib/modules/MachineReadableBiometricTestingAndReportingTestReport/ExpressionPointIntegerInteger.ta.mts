@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ExpressionPointIntegerInteger
  * @description
- * 
+ *
+ * One subject's sample count in `SamplesPerIndividual.distrSubjSample`
+ * (Clause 6.4.4.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +37,20 @@ class ExpressionPointIntegerInteger {
     constructor (
         /**
          * @summary `subjectId`.
+         * @description
+         *
+         * Subject identifier (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly subjectId: INTEGER,
         /**
          * @summary `numberOfSamples`.
+         * @description
+         *
+         * Samples for this `subjectId` (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */

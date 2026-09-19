@@ -27,7 +27,13 @@ import { SignerInfos, _decode_SignerInfos, _encode_SignerInfos } from "../Crypto
 /**
  * @summary SignedTestReport
  * @description
- * 
+ *
+ * Signed test report, also called a test certificate (Clause 6.6).
+ * CMS fields follow RFC 3852; this document does not specify which
+ * digest algorithms must be supported. Integrity of laboratory, date,
+ * accreditation, manner of testing, and accuracy figures is the
+ * purpose of the signature (Introduction).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,36 +54,66 @@ class SignedTestReport {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * Format version; defaults to `v0` (Clause 6.6).
+         *
          * @public
          * @readonly
          */
         readonly version: OPTIONAL<MRTDBTRVersion>,
         /**
          * @summary `digestAlgorithms`.
+         * @description
+         *
+         * Message-digest algorithm identifiers. Which algorithms to
+         * support is not specified here; see RFC 3852 (Clause 6.6).
+         *
          * @public
          * @readonly
          */
         readonly digestAlgorithms: DigestAlgorithmIdentifiers,
         /**
          * @summary `encapContentInfo`.
+         * @description
+         *
+         * Encapsulated technology or scenario test report as an OCTET
+         * STRING (Clause 6.6).
+         *
          * @public
          * @readonly
          */
         readonly encapContentInfo: EncapsulatedContentInfoSignedTR,
         /**
          * @summary `certificates`.
+         * @description
+         *
+         * Intended to contain certification paths from a recognized
+         * root to all `signerInfos` signers. Correspondence is not
+         * required; see RFC 3852 (Clause 6.6).
+         *
          * @public
          * @readonly
          */
         readonly certificates: OPTIONAL<CertificateSet>,
         /**
          * @summary `crls`.
+         * @description
+         *
+         * Revocation status information, intended to be sufficient to
+         * decide whether `certificates` are valid; correspondence is
+         * not required. See RFC 3852 (Clause 6.6).
+         *
          * @public
          * @readonly
          */
         readonly crls: OPTIONAL<RevocationInfoChoices>,
         /**
          * @summary `signerInfos`.
+         * @description
+         *
+         * Per-signer information. See RFC 3852 (Clause 6.6).
+         *
          * @public
          * @readonly
          */

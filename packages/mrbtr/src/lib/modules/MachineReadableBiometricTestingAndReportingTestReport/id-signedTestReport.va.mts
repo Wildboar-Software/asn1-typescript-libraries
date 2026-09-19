@@ -16,7 +16,11 @@ import {
 /**
  * @summary id_signedTestReport
  * @description
- * 
+ *
+ * Content-type OID for a signed test report (test certificate)
+ * (Clause 6.3). `{iso(1) standard(0) mrtdbtr(29120) testReport(1)
+ * contentType(2) signedTestReport(3)}`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

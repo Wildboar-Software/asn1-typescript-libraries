@@ -20,7 +20,12 @@ import { UnitTime, _enum_for_UnitTime, _decode_UnitTime, _encode_UnitTime } from
 /**
  * @summary StatisticInformationSet
  * @description
- * 
+ *
+ * Summary statistics for a timed quantity, shared by enrolment,
+ * acquisition, verification, and identification (Clause 6.4.4.3.1,
+ * Annex B.9). If the variable is random, report
+ * `numberOfMeasurements`; if not, Annex B.9 says set it to 1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,48 +48,82 @@ class StatisticInformationSet {
     constructor (
         /**
          * @summary `unitTime`.
+         * @description
+         *
+         * Unit for the numeric fields: millisecond or second
+         * (Clause 6.4.4.3.1).
+         *
          * @public
          * @readonly
          */
         readonly unitTime: UnitTime,
         /**
          * @summary `numberOfMeasurements`.
+         * @description
+         *
+         * Count of measurements. Mandatory when the variable is random
+         * (Annex B.9); optional in the ASN.1 (Clause 6.4.4.3.1).
+         *
          * @public
          * @readonly
          */
         readonly numberOfMeasurements: OPTIONAL<INTEGER>,
         /**
          * @summary `median`.
+         * @description
+         *
+         * Median of the measured values (Clause 6.4.4.3.1).
+         *
          * @public
          * @readonly
          */
         readonly median: OPTIONAL<REAL>,
         /**
          * @summary `mean`.
+         * @description
+         *
+         * Mean of the measured values (Clause 6.4.4.3.1).
+         *
          * @public
          * @readonly
          */
         readonly mean: OPTIONAL<REAL>,
         /**
          * @summary `minimum`.
+         * @description
+         *
+         * Minimum of the measured values (Clause 6.4.4.3.1).
+         *
          * @public
          * @readonly
          */
         readonly minimum: OPTIONAL<REAL>,
         /**
          * @summary `maximum`.
+         * @description
+         *
+         * Maximum of the measured values (Clause 6.4.4.3.1).
+         *
          * @public
          * @readonly
          */
         readonly maximum: OPTIONAL<REAL>,
         /**
          * @summary `stdDev`.
+         * @description
+         *
+         * Standard deviation (Clause 6.4.4.3.1).
+         *
          * @public
          * @readonly
          */
         readonly stdDev: OPTIONAL<REAL>,
         /**
          * @summary `medAbsDev`.
+         * @description
+         *
+         * Median absolute deviation (Clause 6.4.4.3.1).
+         *
          * @public
          * @readonly
          */

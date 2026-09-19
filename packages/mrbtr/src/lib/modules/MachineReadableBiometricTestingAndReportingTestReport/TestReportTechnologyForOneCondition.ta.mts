@@ -22,7 +22,10 @@ import { TestResult, _decode_TestResult, _encode_TestResult } from "../MachineRe
 /**
  * @summary TestReportTechnologyForOneCondition
  * @description
- * 
+ *
+ * Technology-test result under one condition (Clause 6.4.4.1): corpus,
+ * optional trial dates, and one or more `TestResult` values.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,24 +44,41 @@ class TestReportTechnologyForOneCondition {
     constructor (
         /**
          * @summary `corpusInfo`.
+         * @description
+         *
+         * Corpus used in the evaluation (Clause 6.4.4.1).
+         *
          * @public
          * @readonly
          */
         readonly corpusInfo: CorpusInformation,
         /**
          * @summary `dateStarted`.
+         * @description
+         *
+         * Date the test trials started (Clause 6.4.4.1, Annex C.2).
+         *
          * @public
          * @readonly
          */
         readonly dateStarted: OPTIONAL<Date>,
         /**
          * @summary `dateEnded`.
+         * @description
+         *
+         * Date the test trials ended (Clause 6.4.4.1, Annex C.2).
+         *
          * @public
          * @readonly
          */
         readonly dateEnded: OPTIONAL<Date>,
         /**
          * @summary `testResult`.
+         * @description
+         *
+         * Enrolment, acquisition, verification, and/or identification
+         * results for this condition (Clause 6.4.4.3).
+         *
          * @public
          * @readonly
          */

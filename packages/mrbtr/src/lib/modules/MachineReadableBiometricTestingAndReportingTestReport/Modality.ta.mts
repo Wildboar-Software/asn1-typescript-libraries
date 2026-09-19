@@ -20,7 +20,12 @@ import { BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } 
 /**
  * @summary Modality
  * @description
- * 
+ *
+ * Biometric modality processed by the product (Clause 6.4.2.3).
+ * `BiometricType` and `BiometricSubtype` are ISO/IEC 19785-3:2020
+ * Clause 6.2. `type` is mandatory if `processedLevel` is neither
+ * `comparison-score` nor `comparison-result`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +42,23 @@ class Modality {
     constructor (
         /**
          * @summary `type_`.
+         * @description
+         *
+         * CBEFF biometric type (e.g. face, iris). Mandatory unless the
+         * product output is a comparison score or comparison result
+         * (Clause 6.4.2.3).
+         *
          * @public
          * @readonly
          */
         readonly type_: BiometricType,
         /**
          * @summary `subtype`.
+         * @description
+         *
+         * CBEFF biometric subtype (e.g. index finger code 02)
+         * (Clause 6.4.2.3, Annex B.4).
+         *
          * @public
          * @readonly
          */

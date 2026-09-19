@@ -20,7 +20,11 @@ import { ScopeAccreditation, _decode_ScopeAccreditation, _encode_ScopeAccreditat
 /**
  * @summary AccreditationStatus
  * @description
- * 
+ *
+ * Bodies accrediting the laboratory and optional scope of
+ * accreditation (Clause 6.4.3, Annex B.5). Does not imply that
+ * accreditation is required.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +41,22 @@ class AccreditationStatus {
     constructor (
         /**
          * @summary `accreditingBodies`.
+         * @description
+         *
+         * List of accrediting bodies. If none is claimed, Annex B.5
+         * requires an "accreditation not claimed" entry.
+         *
          * @public
          * @readonly
          */
         readonly accreditingBodies: AccreditingBody[],
         /**
          * @summary `scopeAccreditation`.
+         * @description
+         *
+         * Claimed accreditation scope, e.g. ISO/IEC 19795-1 testing
+         * (Clause 6.4.3, Annex B.5).
+         *
          * @public
          * @readonly
          */

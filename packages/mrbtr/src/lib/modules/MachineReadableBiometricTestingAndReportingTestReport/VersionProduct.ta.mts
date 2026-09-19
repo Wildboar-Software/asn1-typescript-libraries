@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary VersionProduct
  * @description
- * 
+ *
+ * Extensible INTEGER version of a product, its software, or its
+ * firmware (Clause 6.4.2.3). Only `v0`(0) is named in this edition.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,11 @@ type VersionProduct = INTEGER;
 
 /**
  * @summary VersionProduct_v0
+ * @description
+ *
+ * Named product version 0 (Clause 6.4.2.3). Annex B.4 allows version
+ * to be stated as unknown, unspecified, or unused.
+ *
  * @constant
  * @type {number}
  */

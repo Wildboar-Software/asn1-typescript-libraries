@@ -3,9 +3,13 @@
  *
  * ASN.1 module `MachineReadableBiometricTestingAndReportingTestReport`
  * `{iso(1) standard(0) mrtdbtr(29120) testReport(1) module(1) rev(0)}`
- * from ISO/IEC 29120-1. The short integer name `v0` is omitted because it
- * collides between `MRTDBTRVersion` and `VersionProduct`; use
- * `MRTDBTRVersion_v0` and `VersionProduct_v0`.
+ * from ISO/IEC 29120-1:2022 Annex A (authoritative for binary encodings;
+ * Clause 6 excerpts the same types). Encode reports with XER or BER
+ * (Clause 6.1).
+ *
+ * The short integer name `v0` is omitted because it collides between
+ * `MRTDBTRVersion` and `VersionProduct`; use `MRTDBTRVersion_v0` and
+ * `VersionProduct_v0`.
  */
 export * from "./AScopeAccreditation.ta.mjs";
 export * from "./AccreditationStatus.ta.mjs";

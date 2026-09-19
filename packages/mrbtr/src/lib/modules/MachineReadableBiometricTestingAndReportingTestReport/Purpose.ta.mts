@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Purpose
  * @description
- * 
+ *
+ * Whether the output is a biometric reference or a biometric sample
+ * (Clause 6.4.2.3): `reference`(1), `sample`(2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,7 +40,10 @@ enum _enum_for_Purpose {
 /**
  * @summary Purpose
  * @description
- * 
+ *
+ * Whether the output is a biometric reference or a biometric sample
+ * (Clause 6.4.2.3): `reference`(1), `sample`(2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,7 +61,10 @@ type Purpose = _enum_for_Purpose;
 /**
  * @summary Purpose
  * @description
- * 
+ *
+ * Whether the output is a biometric reference or a biometric sample
+ * (Clause 6.4.2.3): `reference`(1), `sample`(2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,6 +81,10 @@ const Purpose = _enum_for_Purpose;
 
 /**
  * @summary Purpose_reference
+ * @description
+ *
+ * Biometric reference (Clause 6.4.2.3).
+ *
  * @constant
  * @type {number}
  */
@@ -88,6 +101,10 @@ const reference: Purpose = Purpose.reference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Purpose_sample
+ * @description
+ *
+ * Biometric sample (Clause 6.4.2.3).
+ *
  * @constant
  * @type {number}
  */

@@ -19,7 +19,10 @@ import { type CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TY
 /**
  * @summary signedTestReport
  * @description
- * 
+ *
+ * CMS `CONTENT-TYPE` for a signed test report (test certificate): type
+ * `SignedTestReport`, identified by `id-signedTestReport` (Clause 6.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,7 +19,11 @@ import { StatisticInformationSet, _decode_StatisticInformationSet, _encode_Stati
 /**
  * @summary TestResultAcquire
  * @description
- * 
+ *
+ * Acquisition-phase result (Clause 6.4.4.3.2). FTA is the fraction of
+ * acquisition samples not converted into a template. Annex C.2 also
+ * uses FTA for verification-sample conversion failure.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,21 @@ class TestResultAcquire {
     constructor (
         /**
          * @summary `failureToAcquireRate`.
+         * @description
+         *
+         * Failure-to-acquire rate (FTA) (Clause 6.4.4.3.2).
+         *
          * @public
          * @readonly
          */
         readonly failureToAcquireRate: REAL,
         /**
          * @summary `durationAcquire`.
+         * @description
+         *
+         * Acquisition duration statistics; covers successful and failed
+         * operations (Clause 6.4.4.3.2).
+         *
          * @public
          * @readonly
          */

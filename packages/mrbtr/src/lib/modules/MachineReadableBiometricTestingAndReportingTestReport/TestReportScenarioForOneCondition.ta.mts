@@ -26,7 +26,11 @@ import { TestResult, _decode_TestResult, _encode_TestResult } from "../MachineRe
 /**
  * @summary TestReportScenarioForOneCondition
  * @description
- * 
+ *
+ * Scenario-test result under one condition (Clause 6.5.2): crew,
+ * effort/decision policy and assistance, environment, optional trial
+ * dates, and one or more `TestResult` values.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,36 +51,64 @@ class TestReportScenarioForOneCondition {
     constructor (
         /**
          * @summary `testCrewInfo`.
+         * @description
+         *
+         * Test crew identity, location, habituation, and statistics
+         * (Clause 6.5.2).
+         *
          * @public
          * @readonly
          */
         readonly testCrewInfo: TestCrewInformation,
         /**
          * @summary `levelPolicyAssistance`.
+         * @description
+         *
+         * Effort, decision policy, assistance, and instructional mode.
+         * Policy is specified at the test level and enforced at the
+         * transaction level (Clause 6.5.2, Annex C.3).
+         *
          * @public
          * @readonly
          */
         readonly levelPolicyAssistance: LevelPolicyAssistance,
         /**
          * @summary `environInfo`.
+         * @description
+         *
+         * Test-execution environment (Clause 6.5.2).
+         *
          * @public
          * @readonly
          */
         readonly environInfo: EnvironmentalInformation,
         /**
          * @summary `dateStarted`.
+         * @description
+         *
+         * Date the test trials started (Clause 6.5.2).
+         *
          * @public
          * @readonly
          */
         readonly dateStarted: OPTIONAL<Date>,
         /**
          * @summary `dateEnded`.
+         * @description
+         *
+         * Date the test trials ended (Clause 6.5.2).
+         *
          * @public
          * @readonly
          */
         readonly dateEnded: OPTIONAL<Date>,
         /**
          * @summary `testResult`.
+         * @description
+         *
+         * Enrolment, acquisition, verification, and/or identification
+         * results for this condition (Clause 6.5.2).
+         *
          * @public
          * @readonly
          */

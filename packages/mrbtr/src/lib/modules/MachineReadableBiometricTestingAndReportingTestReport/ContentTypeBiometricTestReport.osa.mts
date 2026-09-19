@@ -22,7 +22,11 @@ import { signedTestReport } from "../MachineReadableBiometricTestingAndReporting
 /**
  * @summary ContentTypeBiometricTestReport
  * @description
- * 
+ *
+ * Allowed `CONTENT-TYPE` objects for `BiometricTestReport` (Clause 6.3):
+ * `testReportTechnology` (ISO/IEC 19795-2 technology test),
+ * `testReportScenario` (scenario test), and `signedTestReport`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Availability
  * @description
- * 
+ *
+ * Availability of a cited document (Clause 6.4.3): `public`(1),
+ * `restricted`(2), `unavailable`(3), `superseded`(4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,7 +44,10 @@ enum _enum_for_Availability {
 /**
  * @summary Availability
  * @description
- * 
+ *
+ * Availability of a cited document (Clause 6.4.3): `public`(1),
+ * `restricted`(2), `unavailable`(3), `superseded`(4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,7 +67,10 @@ type Availability = _enum_for_Availability;
 /**
  * @summary Availability
  * @description
- * 
+ *
+ * Availability of a cited document (Clause 6.4.3): `public`(1),
+ * `restricted`(2), `unavailable`(3), `superseded`(4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -20,7 +20,10 @@ import { Purpose, _enum_for_Purpose, _decode_Purpose, _encode_Purpose } from "..
 /**
  * @summary DataType
  * @description
- * 
+ *
+ * Output of the tested product (Clause 6.4.2.3): processing level plus
+ * optional purpose (biometric reference vs sample).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +40,22 @@ class DataType {
     constructor (
         /**
          * @summary `processedLevel`.
+         * @description
+         *
+         * `raw-data`, `intermediate-data`, `processed-data`,
+         * `comparison-score`, or `comparison-result` (Clause 6.4.2.3).
+         *
          * @public
          * @readonly
          */
         readonly processedLevel: ProcessedLevel,
         /**
          * @summary `purpose`.
+         * @description
+         *
+         * `reference` (biometric reference) or `sample` (biometric
+         * sample) (Clause 6.4.2.3).
+         *
          * @public
          * @readonly
          */

@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MRTDBTRVersion
  * @description
- * 
+ *
+ * Version of this test-report format (Clause 6.4.1). Extensible
+ * INTEGER; only `v0`(0) is defined in ISO/IEC 29120-1:2022.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,11 @@ type MRTDBTRVersion = INTEGER;
 
 /**
  * @summary MRTDBTRVersion_v0
+ * @description
+ *
+ * Version 0 of the ISO/IEC 29120-1 test-report format. Default when
+ * `version` is omitted (Clauses 6.4.1, 6.5.1, 6.6).
+ *
  * @constant
  * @type {number}
  */

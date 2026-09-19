@@ -20,7 +20,10 @@ import { testReportScenario } from "../MachineReadableBiometricTestingAndReporti
 /**
  * @summary ContentTypeContentInfoSignedTR
  * @description
- * 
+ *
+ * Allowed encapsulated content types inside a signed test report
+ * (Clause 6.6): `testReportTechnology` and `testReportScenario` only.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

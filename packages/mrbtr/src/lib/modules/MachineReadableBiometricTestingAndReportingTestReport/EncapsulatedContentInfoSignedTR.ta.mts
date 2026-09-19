@@ -19,7 +19,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EncapsulatedContentInfoSignedTR
  * @description
- * 
+ *
+ * Encapsulated content of a signed test report (Clause 6.6).
+ * `eContentTypeContentInfoSignedTR` is `id-testReportTechnology` or
+ * `id-testReportScenario`; `eContentContentInfoSignedTR` is the
+ * encoded report as OCTET STRING.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +43,23 @@ class EncapsulatedContentInfoSignedTR {
     constructor (
         /**
          * @summary `eContentTypeContentInfoSignedTR`.
+         * @description
+         *
+         * `id-testReportTechnology` or `id-testReportScenario`
+         * (Clause 6.6). Signed reports do not wrap another signed
+         * report.
+         *
          * @public
          * @readonly
          */
         readonly eContentTypeContentInfoSignedTR: OBJECT_IDENTIFIER,
         /**
          * @summary `eContentContentInfoSignedTR`.
+         * @description
+         *
+         * The test report itself, carried as an OCTET STRING containing
+         * `TestReportTechnology` or `TestReportScenario` (Clause 6.6).
+         *
          * @public
          * @readonly
          */

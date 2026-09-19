@@ -23,7 +23,11 @@ import { ExternalDocument, _decode_ExternalDocument, _encode_ExternalDocument } 
 /**
  * @summary TestReportInformation
  * @description
- * 
+ *
+ * Laboratory, claimed testing standard, issuance date, and parent
+ * written report (Clause 6.4.3). Shared by technology and scenario
+ * reports.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,24 +46,45 @@ class TestReportInformation {
     constructor (
         /**
          * @summary `testLabInformation`.
+         * @description
+         *
+         * Laboratory that conducted the test, plus accreditation
+         * (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly testLabInformation: TestLabInformation,
         /**
          * @summary `compliantStandard`.
+         * @description
+         *
+         * Testing standard claimed for the test. Presence indicates the
+         * laboratory claims conformance to that standard (Clause 6.4.3,
+         * Annex B.6).
+         *
          * @public
          * @readonly
          */
         readonly compliantStandard: StandardDescription,
         /**
          * @summary `testReportIssuanceDate`.
+         * @description
+         *
+         * Date the test laboratory official signed the report
+         * (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly testReportIssuanceDate: Date,
         /**
          * @summary `parentTestReport`.
+         * @description
+         *
+         * Non-machine-readable traditional test report that fully
+         * documents the test (Clause 6.4.3, Annex B.8).
+         *
          * @public
          * @readonly
          */

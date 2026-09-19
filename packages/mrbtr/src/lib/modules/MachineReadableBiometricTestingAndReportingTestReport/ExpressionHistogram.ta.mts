@@ -17,7 +17,11 @@ import { IntervalIntegerFrequency, _decode_IntervalIntegerFrequency, _encode_Int
 /**
  * @summary ExpressionHistogram
  * @description
- * 
+ *
+ * Histogram as intervals of `[lowerLimit, upperLimit]` with
+ * `frequency`. Elements shall appear in increasing `lowerLimit` order
+ * (Clause 6.4.4.3.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

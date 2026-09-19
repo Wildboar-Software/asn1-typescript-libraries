@@ -20,7 +20,10 @@ import { StatisticInformationSet, _decode_StatisticInformationSet, _encode_Stati
 /**
  * @summary TestResultVerify
  * @description
- * 
+ *
+ * Verification matching result (Clause 6.4.4.3.3): DET curves and/or
+ * comparison-score distribution, plus optional duration.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +40,21 @@ class TestResultVerify {
     constructor (
         /**
          * @summary `resultMatchVerify`.
+         * @description
+         *
+         * FNMR/FMR, FRR/FAR, and/or GFRR/GFAR DETs, plus optional score
+         * distribution (Clause 6.4.4.3.3).
+         *
          * @public
          * @readonly
          */
         readonly resultMatchVerify: ResultMatchVerify,
         /**
          * @summary `durationVerify`.
+         * @description
+         *
+         * Verification duration statistics (Clause 6.4.4.3.3).
+         *
          * @public
          * @readonly
          */

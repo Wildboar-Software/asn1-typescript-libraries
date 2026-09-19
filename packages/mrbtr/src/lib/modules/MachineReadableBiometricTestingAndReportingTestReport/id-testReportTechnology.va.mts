@@ -16,7 +16,11 @@ import {
 /**
  * @summary id_testReportTechnology
  * @description
- * 
+ *
+ * Content-type OID for an ISO/IEC 19795-2 technology test report
+ * (Clause 6.3). `{iso(1) standard(0) mrtdbtr(29120) testReport(1)
+ * contentType(2) testReportTechnology(1)}`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

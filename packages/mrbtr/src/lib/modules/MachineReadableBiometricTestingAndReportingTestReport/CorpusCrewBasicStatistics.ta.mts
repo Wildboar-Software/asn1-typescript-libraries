@@ -19,7 +19,14 @@ import { InfoCumulativeDistribution, _decode_InfoCumulativeDistribution, _encode
 /**
  * @summary CorpusCrewBasicStatistics
  * @description
- * 
+ *
+ * Counts and optional CDFs shared by a corpus and a scenario test crew
+ * (Clause 6.4.4.2). `numIndividuals` shall be ≥ `numIndividualsEnrol`
+ * and ≥ `numIndividualsVeriId`. For identification,
+ * `numIndividualsVeriId` is the size of the population searched.
+ * `numOther` and `numUnknown` appear in Annex A but are not described
+ * in Clause 6.4.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,66 +52,119 @@ class CorpusCrewBasicStatistics {
     constructor (
         /**
          * @summary `numIndividuals`.
+         * @description
+         *
+         * Unique individuals in the corpus or crew (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly numIndividuals: INTEGER,
         /**
          * @summary `numMales`.
+         * @description
+         *
+         * Male subjects (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly numMales: OPTIONAL<INTEGER>,
         /**
          * @summary `numFemales`.
+         * @description
+         *
+         * Female subjects (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly numFemales: OPTIONAL<INTEGER>,
         /**
          * @summary `numOther`.
+         * @description
+         *
+         * Present in Annex A. Clause 6.4.4.2 does not define this
+         * count.
+         *
          * @public
          * @readonly
          */
         readonly numOther: OPTIONAL<INTEGER>,
         /**
          * @summary `numUnknown`.
+         * @description
+         *
+         * Present in Annex A. Clause 6.4.4.2 does not define this
+         * count.
+         *
          * @public
          * @readonly
          */
         readonly numUnknown: OPTIONAL<INTEGER>,
         /**
          * @summary `numIndividualsEnrol`.
+         * @description
+         *
+         * Individuals in the enrolment set. Shall be ≤
+         * `numIndividuals` (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly numIndividualsEnrol: INTEGER,
         /**
          * @summary `numIndividualsVeriId`.
+         * @description
+         *
+         * Individuals in the verification or identification set. For
+         * identification, size of the searched population
+         * (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly numIndividualsVeriId: INTEGER,
         /**
          * @summary `ageDistrMale`.
+         * @description
+         *
+         * CDF of male age in years: proportion whose age ≤ X
+         * (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly ageDistrMale: OPTIONAL<InfoCumulativeDistribution>,
         /**
          * @summary `ageDistrFemale`.
+         * @description
+         *
+         * CDF of female age in years: proportion whose age ≤ X
+         * (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly ageDistrFemale: OPTIONAL<InfoCumulativeDistribution>,
         /**
          * @summary `elapsDistr`.
+         * @description
+         *
+         * CDF of days between visits: proportion for whom elapsed days
+         * ≤ T (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly elapsDistr: OPTIONAL<InfoCumulativeDistribution>,
         /**
          * @summary `visitsDayDistr`.
+         * @description
+         *
+         * CDF of samples collected by day: proportion collected on day
+         * ≤ n (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */

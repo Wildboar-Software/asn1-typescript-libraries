@@ -18,7 +18,11 @@ import { ExpressionDETCurve, _decode_ExpressionDETCurve, _encode_ExpressionDETCu
 /**
  * @summary InfoDETCurve
  * @description
- * 
+ *
+ * DET characteristic: sample counts for Type I and Type II estimates
+ * plus tabulated points (Clause 6.4.4.3.3, Annex B.12). Points shall
+ * appear in increasing `typeIError` order.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +40,33 @@ class InfoDETCurve {
     constructor (
         /**
          * @summary `numOfSamplesEstTypeIError`.
+         * @description
+         *
+         * Comparisons or transactions used to estimate the Type I error
+         * (Clause 6.4.4.3.3, Annex B.12).
+         *
          * @public
          * @readonly
          */
         readonly numOfSamplesEstTypeIError: INTEGER,
         /**
          * @summary `numOfSamplesEstTypeIIError`.
+         * @description
+         *
+         * Comparisons or transactions used to estimate the Type II error
+         * (Clause 6.4.4.3.3, Annex B.12).
+         *
          * @public
          * @readonly
          */
         readonly numOfSamplesEstTypeIIError: INTEGER,
         /**
          * @summary `expressionDETCurve`.
+         * @description
+         *
+         * DET points in increasing Type I error order
+         * (Clause 6.4.4.3.3).
+         *
          * @public
          * @readonly
          */

@@ -16,7 +16,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RoleProvider
  * @description
- * 
+ *
+ * Role of the provider (Clause 6.4.2.2): `manufacturer`(1) designs or
+ * creates the component; `reseller`(2) packages or resells it;
+ * `integrator`(3) may combine components into one atomic component;
+ * `other`(4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,7 +46,12 @@ enum _enum_for_RoleProvider {
 /**
  * @summary RoleProvider
  * @description
- * 
+ *
+ * Role of the provider (Clause 6.4.2.2): `manufacturer`(1) designs or
+ * creates the component; `reseller`(2) packages or resells it;
+ * `integrator`(3) may combine components into one atomic component;
+ * `other`(4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,7 +71,12 @@ type RoleProvider = _enum_for_RoleProvider;
 /**
  * @summary RoleProvider
  * @description
- * 
+ *
+ * Role of the provider (Clause 6.4.2.2): `manufacturer`(1) designs or
+ * creates the component; `reseller`(2) packages or resells it;
+ * `integrator`(3) may combine components into one atomic component;
+ * `other`(4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -80,6 +95,11 @@ const RoleProvider = _enum_for_RoleProvider;
 
 /**
  * @summary RoleProvider_manufacturer
+ * @description
+ *
+ * Entity responsible for the design or creation of the component
+ * (Clause 6.4.2.2).
+ *
  * @constant
  * @type {number}
  */
@@ -96,6 +116,10 @@ const manufacturer: RoleProvider = RoleProvider.manufacturer; /* SHORT_NAMED_ENU
 
 /**
  * @summary RoleProvider_reseller
+ * @description
+ *
+ * Entity which packages or resells the component (Clause 6.4.2.2).
+ *
  * @constant
  * @type {number}
  */
@@ -112,6 +136,11 @@ const reseller: RoleProvider = RoleProvider.reseller; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary RoleProvider_integrator
+ * @description
+ *
+ * Entity which may combine components into a single atomic component
+ * (Clause 6.4.2.2).
+ *
  * @constant
  * @type {number}
  */

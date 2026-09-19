@@ -24,7 +24,12 @@ import { TestReportScenarioForOneCondition, _decode_TestReportScenarioForOneCond
 /**
  * @summary TestReportScenario
  * @description
- * 
+ *
+ * Results of an ISO/IEC 19795-2 scenario test (Clause 6.5.1).
+ * `targetInfos` is the set of tested products (the IUT may be a
+ * composite). One `testReports` element per condition. Informative
+ * examples: Annex C.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,24 +48,41 @@ class TestReportScenario {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * Format version; defaults to `v0` (Clause 6.5.1).
+         *
          * @public
          * @readonly
          */
         readonly version: OPTIONAL<MRTDBTRVersion>,
         /**
          * @summary `targetInfos`.
+         * @description
+         *
+         * Products under test (Clause 6.5.1).
+         *
          * @public
          * @readonly
          */
         readonly targetInfos: ProductInformation[],
         /**
          * @summary `testReportInfo`.
+         * @description
+         *
+         * Laboratory, claimed testing standard, issuance date, and
+         * parent written report (Clause 6.5.1, 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly testReportInfo: TestReportInformation,
         /**
          * @summary `testReports`.
+         * @description
+         *
+         * One result set per test condition (Clause 6.5.1).
+         *
          * @public
          * @readonly
          */

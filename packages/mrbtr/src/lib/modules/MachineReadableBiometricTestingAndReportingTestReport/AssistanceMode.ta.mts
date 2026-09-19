@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AssistanceMode
  * @description
- * 
+ *
+ * How assistance was provided (Clause 6.5.2): `physical`(1),
+ * `audio-only`(2), `audio-video`(3), `none`(4), `video-only`(5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,7 +46,10 @@ enum _enum_for_AssistanceMode {
 /**
  * @summary AssistanceMode
  * @description
- * 
+ *
+ * How assistance was provided (Clause 6.5.2): `physical`(1),
+ * `audio-only`(2), `audio-video`(3), `none`(4), `video-only`(5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,7 +70,10 @@ type AssistanceMode = _enum_for_AssistanceMode;
 /**
  * @summary AssistanceMode
  * @description
- * 
+ *
+ * How assistance was provided (Clause 6.5.2): `physical`(1),
+ * `audio-only`(2), `audio-video`(3), `none`(4), `video-only`(5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

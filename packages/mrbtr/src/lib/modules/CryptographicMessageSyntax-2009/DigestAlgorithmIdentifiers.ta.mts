@@ -9,6 +9,10 @@ import {
  * @summary DigestAlgorithmIdentifiers
  * @description
  *
+ * SET OF CMS `DigestAlgorithmIdentifier` used in `SignedTestReport`
+ * (ISO/IEC 29120-1:2022 Clause 6.6, RFC 3852). Which digest
+ * algorithms must be supported is not specified in 29120-1.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

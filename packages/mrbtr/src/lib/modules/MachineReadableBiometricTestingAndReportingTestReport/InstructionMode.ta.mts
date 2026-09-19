@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary InstructionMode
  * @description
- * 
+ *
+ * How subjects were instructed (Clause 6.5.2): `written-manual`(1),
+ * `poster`(2), `video`(3), `personal`(4). The `video` option covers
+ * slides or other sets of static images.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,7 +45,11 @@ enum _enum_for_InstructionMode {
 /**
  * @summary InstructionMode
  * @description
- * 
+ *
+ * How subjects were instructed (Clause 6.5.2): `written-manual`(1),
+ * `poster`(2), `video`(3), `personal`(4). The `video` option covers
+ * slides or other sets of static images.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,7 +69,11 @@ type InstructionMode = _enum_for_InstructionMode;
 /**
  * @summary InstructionMode
  * @description
- * 
+ *
+ * How subjects were instructed (Clause 6.5.2): `written-manual`(1),
+ * `poster`(2), `video`(3), `personal`(4). The `video` option covers
+ * slides or other sets of static images.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -112,6 +124,11 @@ const poster: InstructionMode = InstructionMode.poster; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary InstructionMode_video
+ * @description
+ *
+ * Video instruction; also covers slides or other sets of static
+ * images (Clause 6.5.2).
+ *
  * @constant
  * @type {number}
  */

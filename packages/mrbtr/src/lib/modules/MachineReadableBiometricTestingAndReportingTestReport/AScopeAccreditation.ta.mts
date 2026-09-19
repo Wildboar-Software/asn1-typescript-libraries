@@ -25,7 +25,11 @@ enum _enum_for_AScopeAccreditation {
 /**
  * @summary AScopeAccreditation
  * @description
- * 
+ *
+ * Claimed accreditation scope (Clause 6.4.3). Extensible:
+ * `iso-iec19795-1:2006`(1), `iso-iec19795-1:2021`(2),
+ * `iso-iec19795-3`(3), `iso-iec30107-4`(4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Date
  * @description
- * 
+ *
+ * Calendar date as `VisibleString` of fixed length 8, form `YYYYMMDD`,
+ * conforming to ISO 8601-1 (Clause 6.4.3, Annex B.7). The SIZE(8)
+ * constraint is stated in comments in Annex A, not as an ASN.1
+ * constraint.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,7 +19,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EnvironmentalInformation
  * @description
- * 
+ *
+ * Collection or test-execution environment (Clause 6.4.4.2; also
+ * scenario Clause 6.5.2). Temperature and lighting: see ISO/IEC
+ * 19795-3 (Annex C.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,24 +42,41 @@ class EnvironmentalInformation {
     constructor (
         /**
          * @summary `exceptionalCondition`.
+         * @description
+         *
+         * Free-text keywords that the collection environment was
+         * adverse (e.g. outdoors, snow, noisy) (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly exceptionalCondition: VisibleString,
         /**
          * @summary `celsiusTemp`.
+         * @description
+         *
+         * Collection temperature in Celsius (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly celsiusTemp: OPTIONAL<REAL>,
         /**
          * @summary `dBNoise`.
+         * @description
+         *
+         * Ambient noise in dB (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */
         readonly dBNoise: OPTIONAL<REAL>,
         /**
          * @summary `lightingInfo`.
+         * @description
+         *
+         * Free-text lighting information (Clause 6.4.4.2).
+         *
          * @public
          * @readonly
          */

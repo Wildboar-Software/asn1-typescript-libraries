@@ -19,7 +19,11 @@ import { AccreditationStatus, _decode_AccreditationStatus, _encode_Accreditation
 /**
  * @summary TestLabInformation
  * @description
- * 
+ *
+ * Identity of the test laboratory and its accreditation status
+ * (Clause 6.4.3, Annex B.5). Presence of accreditation fields does
+ * not imply a requirement that labs be accredited.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,23 @@ class TestLabInformation {
     constructor (
         /**
          * @summary `identificationTestLab`.
+         * @description
+         *
+         * Name, location, implementor, signatory, and contact for the
+         * laboratory (Clause 6.4.3).
+         *
          * @public
          * @readonly
          */
         readonly identificationTestLab: IdentificationTestLab,
         /**
          * @summary `accreditationStatus`.
+         * @description
+         *
+         * Accrediting bodies and optional scope. If no accreditation is
+         * claimed, Annex B.5 requires an "accreditation not claimed"
+         * entry.
+         *
          * @public
          * @readonly
          */

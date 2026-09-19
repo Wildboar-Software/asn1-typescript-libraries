@@ -22,7 +22,11 @@ import { StatisticInformationSet, _decode_StatisticInformationSet, _encode_Stati
 /**
  * @summary ResultMatchClosedIdentify
  * @description
- * 
+ *
+ * Closed-set identification result (Clause 6.4.4.3.4). CMC is the
+ * proportion of searches with the enrolled mate found at rank ≤ R
+ * (Annex C.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +44,32 @@ class ResultMatchClosedIdentify {
     constructor (
         /**
          * @summary `cmcCurveClosed`.
+         * @description
+         *
+         * Closed-set CMC curve (Clause 6.4.4.3.4).
+         *
          * @public
          * @readonly
          */
         readonly cmcCurveClosed: DistributionIntegerReal,
         /**
          * @summary `srchExecDistr`.
+         * @description
+         *
+         * Histogram of number of searches executed in closed-set
+         * identification (Clause 6.4.4.3.4).
+         *
          * @public
          * @readonly
          */
         readonly srchExecDistr: ExpressionHistogram,
         /**
          * @summary `durationClosedIdentify`.
+         * @description
+         *
+         * Closed-set search duration; covers successful and failed
+         * searches (Clause 6.4.4.3.4, Annex C.2).
+         *
          * @public
          * @readonly
          */
