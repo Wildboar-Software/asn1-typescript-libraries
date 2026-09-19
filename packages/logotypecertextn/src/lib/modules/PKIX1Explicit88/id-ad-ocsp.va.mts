@@ -1,0 +1,27 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+import { id_ad } from "../PKIX1Explicit88/id-ad.va.mjs";
+// export { id_ad } from "../PKIX1Explicit88/id-ad.va.mjs";
+
+
+/**
+ * @summary id_ad_ocsp
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * id-ad-ocsp         OBJECT IDENTIFIER ::= { id-ad 1 }
+ * ```
+ * 
+ * @constant
+ */
+export
+const id_ad_ocsp: OBJECT_IDENTIFIER = _OID.fromParts([
+    1,
+], id_ad);
+
+/* eslint-enable */
