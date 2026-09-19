@@ -54,8 +54,9 @@ describe("evaluateTemporalContext", () => {
     });
 
     it("matches an at-assertion against a periodic temporal context", () => {
+        // 4 Jan 2026 is Sunday of the first X.520 week of 2026 (week containing the 4th).
         const assertion: TimeAssertion = {
-            at: new Date(2026, 0, 1, 12, 13, 14),
+            at: new Date(2026, 0, 4, 12, 13, 14),
         };
         const value = new TimeSpecification(
             {
@@ -184,8 +185,8 @@ describe("evaluateTemporalContext", () => {
     it("matches a between assertion against a periodic temporal context", () => {
         const assertion: TimeAssertion = {
             between: new TimeAssertion_between(
-                new Date(2026, 0, 6, 12, 13, 12),
-                new Date(2026, 0, 8, 12, 13, 14),
+                new Date(2026, 0, 5, 12, 13, 12),
+                new Date(2026, 0, 11, 12, 13, 14),
             ),
         };
         const value = new TimeSpecification(
@@ -450,6 +451,8 @@ describe("evaluateTemporalContext", () => {
         expect(evaluateTemporalContext(
             _encode_TimeAssertion(assertion, DER),
             _encode_TimeSpecification(invertedOvernightBand, DER),
+        )).toBe(false);
+    });
 
     it("does not match an unrecognized TimeAssertion CHOICE", () => {
         const assertion = new DERElement(
