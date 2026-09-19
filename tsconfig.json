@@ -221,6 +221,9 @@
     },
     {
       "path": "./packages/mrbtr"
+    },
+    {
+      "path": "./packages/novell_pkis"
     }
   ],
   "compilerOptions": {
