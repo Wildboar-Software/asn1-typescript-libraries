@@ -1,0 +1,25 @@
+{
+  "name": "mrbtr",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/mrbtr/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/mrbtr",
+        "tsConfig": "packages/mrbtr/tsconfig.lib.json",
+        "packageJson": "packages/mrbtr/package.json",
+        "main": "packages/mrbtr/src/index.mts",
+        "assets": [
+          "packages/mrbtr/*.md",
+          "packages/mrbtr/LICENSE.txt",
+          "packages/mrbtr/package.json"
+        ]
+      }
+    }
+  }
+}

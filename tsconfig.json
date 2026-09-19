@@ -215,6 +215,12 @@
     },
     {
       "path": "./packages/dfr"
+    },
+    {
+      "path": "./packages/vt"
+    },
+    {
+      "path": "./packages/mrbtr"
     }
   ],
   "compilerOptions": {

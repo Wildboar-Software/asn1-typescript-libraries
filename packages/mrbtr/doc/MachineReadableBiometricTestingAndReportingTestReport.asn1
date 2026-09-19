@@ -1,0 +1,494 @@
+-- Sourced from ISO/IEC 29120-1:2022(E)
+-- Modified to fix several syntax errors
+-- Colons used for variant names in AScopeAccreditation
+MachineReadableBiometricTestingAndReportingTestReport
+{iso(1) standard(0) mrtdbtr(29120) testReport(1) module(1) rev(0)}
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS
+
+    -- ITU-T X.501 Open Systems Interconnection – The Directory: Models
+    Name
+        FROM InformationFramework
+        {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9}
+        WITH SUCCESSORS
+
+    -- RFC 3852/5911 Cryptographic Message Syntax
+    DigestAlgorithmIdentifiers, CertificateSet, RevocationInfoChoices,
+    SignerInfos, CONTENT-TYPE
+        FROM CryptographicMessageSyntax-2009
+        {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-9(9)
+        smime(16) modules(0) id-mod-cms-2004-02(41)}
+
+    -- ISO/IEC 19785 CBEFF Part 3
+    BiometricType, BiometricSubtype, Product
+        FROM CBEFF-DATA-ELEMENTS
+        {iso standard 19785 modules(0) types-for-cbeff-data-elements(1)}
+
+    ;
+
+MRTDBTRVersion ::= INTEGER { v0(0) } ( v0, ... )
+
+BiometricTestReport ::= SEQUENCE {
+    contentType CONTENT-TYPE.&id({ContentTypeBiometricTestReport}),
+    content     [0] EXPLICIT CONTENT-TYPE.&Type
+        ({ContentTypeBiometricTestReport}{@contentType})
+}
+
+ContentTypeBiometricTestReport CONTENT-TYPE ::= {
+    testReportTechnology
+    | testReportScenario
+    | signedTestReport
+}
+
+TestReportTechnology ::= SEQUENCE {
+    version         MRTDBTRVersion DEFAULT v0,
+    targetInfo      ProductInformation,
+    testReportInfo  TestReportInformation,
+    testReports     SEQUENCE OF TestReportTechnologyForOneCondition
+}
+
+ProductInformation ::= SEQUENCE {
+    provider        Provider,
+    nameProduct     NameProduct,
+    description     VisibleString OPTIONAL,
+    functionProduct SEQUENCE OF Function,
+    outputProduct   DataType OPTIONAL,
+    modalityProduct Modality
+}
+
+Provider ::= SEQUENCE {
+    nameProvider        Name,
+    typeProvider        TypeProvider,
+    roleProvider        RoleProvider,
+    contactInformation  VisibleString OPTIONAL
+}
+
+TypeProvider ::= ENUMERATED {
+    non-profit  (1),
+    university  (2),
+    corporation (3),
+    individual  (4),
+    government  (5)
+}
+
+RoleProvider ::= ENUMERATED {
+    manufacturer    (1),
+    reseller        (2),
+    integrator      (3),
+    other           (4)
+}
+
+NameProduct ::= SEQUENCE {
+    modelName       Name,
+    productCBEFF    Product OPTIONAL,
+    version         VersionProduct,
+    softwareVersion VersionProduct,
+    firmwareVersion VersionProduct
+}
+
+VersionProduct ::= INTEGER { v0(0) } ( v0, ... )
+
+Function ::= ENUMERATED {
+    acquisition     (1),
+    enrolment       (2),
+    verification    (3),
+    identification  (4),
+    ...
+}
+
+DataType ::= SEQUENCE {
+    processedLevel  ProcessedLevel,
+    purpose         Purpose OPTIONAL
+}
+
+ProcessedLevel ::= ENUMERATED {
+    raw-data            (1),
+    intermediate-data   (2),
+    processed-data      (3),
+    comparison-score    (4),
+    comparison-result   (5),
+    ...
+}
+
+Purpose ::= ENUMERATED {
+    reference   (1),
+    sample      (2)
+}
+
+Modality ::= SEQUENCE {
+    type    BiometricType,
+    subtype BiometricSubtype OPTIONAL
+}
+
+TestReportInformation ::= SEQUENCE {
+    testLabInformation      TestLabInformation,
+    compliantStandard       StandardDescription,
+    testReportIssuanceDate  Date,
+    parentTestReport        ExternalDocument
+}
+
+TestLabInformation ::= SEQUENCE {
+    identificationTestLab   IdentificationTestLab,
+    accreditationStatus     AccreditationStatus
+}
+
+IdentificationTestLab ::= SEQUENCE {
+    nameLab             VisibleString,
+    location            VisibleString,
+    testImplementor     VisibleString OPTIONAL,
+    testReportSignatory VisibleString,
+    contactInformation  VisibleString
+}
+
+AccreditationStatus ::= SEQUENCE {
+    accreditingBodies   SEQUENCE OF AccreditingBody,
+    scopeAccreditation  ScopeAccreditation OPTIONAL
+}
+
+AccreditingBody ::= SEQUENCE {
+    nameAccreditingBody     VisibleString,
+    identifierCertificate   OBJECT IDENTIFIER,
+    signatory               OCTET STRING
+}
+
+StandardDescription ::= SEQUENCE {
+    standardName            VisibleString,
+    standardNumber          VisibleString,
+    standardPart            VisibleString,
+    standardPublicationDate Date
+}
+
+ScopeAccreditation ::= SEQUENCE OF AScopeAccreditation
+
+AScopeAccreditation ::= ENUMERATED {
+    iso-iec19795-1-2006(1),
+    iso-iec19795-1-2021(2),
+    iso-iec19795-3(3),
+    iso-iec30107-4(4),
+    ...
+}
+
+Date ::= VisibleString
+-- conforms to ISO 8601-1
+-- length = 8
+-- fixed
+-- YYYYMMDD
+
+ExternalDocument ::= SEQUENCE {
+    link            URI,
+    title           VisibleString,
+    authors         SEQUENCE OF VisibleString OPTIONAL,
+    publisher       VisibleString OPTIONAL,
+    editor          VisibleString OPTIONAL,
+    typeDocument    TypeDocument OPTIONAL,
+    publicationDate Date OPTIONAL,
+    availability    Availability
+}
+
+URI ::= VisibleString (SIZE(1..MAX))
+
+TypeDocument ::= ENUMERATED {
+    article             (1),
+    technical-report    (2),
+    in-proceedings      (3),
+    abstract            (4),
+    book                (5),
+    in-book             (6),
+    collection          (7)
+}
+
+Availability ::= ENUMERATED {
+    public      (1),
+    restricted  (2),
+    unavailable (3),
+    superseded  (4)
+}
+
+TestReportTechnologyForOneCondition ::= SEQUENCE {
+    corpusInfo  CorpusInformation,
+    dateStarted Date OPTIONAL,
+    dateEnded   Date OPTIONAL,
+    testResult  SEQUENCE OF TestResult
+}
+
+CorpusInformation ::= SEQUENCE {
+    composition CorpusComposition,
+    environInfo EnvironmentalInformation
+}
+
+CorpusComposition ::= SEQUENCE {
+    identifier          OBJECT IDENTIFIER,
+    nameCorpus          VisibleString,
+    corpusStatistics    CorpusStatistics
+}
+
+CorpusStatistics ::= SEQUENCE {
+    corpusBasicStatistics       CorpusCrewBasicStatistics,
+    numSamples                  INTEGER,
+    samplesPerIndividualEnrol   SamplesPerIndividual OPTIONAL,
+    samplesPerIndividualProbe   SamplesPerIndividual OPTIONAL
+}
+
+CorpusCrewBasicStatistics ::= SEQUENCE {
+    numIndividuals          INTEGER,
+    numMales                INTEGER OPTIONAL,
+    numFemales              INTEGER OPTIONAL,
+    numOther                INTEGER OPTIONAL,
+    numUnknown              INTEGER OPTIONAL,
+    numIndividualsEnrol     INTEGER,
+    numIndividualsVeriId    INTEGER,
+    ageDistrMale            InfoCumulativeDistribution OPTIONAL,
+    ageDistrFemale          InfoCumulativeDistribution OPTIONAL,
+    elapsDistr              InfoCumulativeDistribution OPTIONAL,
+    visitsDayDistr          InfoCumulativeDistribution OPTIONAL
+}
+
+InfoCumulativeDistribution ::= SEQUENCE {
+    mean                    INTEGER,
+    median                  INTEGER,
+    cumulativeDistribution  DistributionIntegerReal
+}
+
+DistributionIntegerReal ::= SEQUENCE OF ExpressionPointIntegerReal
+
+ExpressionPointIntegerReal ::= SEQUENCE {
+    xValue  INTEGER,
+    yValue  REAL
+}
+
+SamplesPerIndividual ::= SEQUENCE {
+    numSubjects     INTEGER,
+    mean            INTEGER,
+    median          INTEGER,
+    distrSubjSample DistributionIntegerInteger
+}
+
+DistributionIntegerInteger ::= SEQUENCE OF ExpressionPointIntegerInteger
+
+ExpressionPointIntegerInteger ::= SEQUENCE {
+    subjectId       INTEGER,
+    numberOfSamples INTEGER
+}
+
+EnvironmentalInformation ::= SEQUENCE {
+    exceptionalCondition    VisibleString,
+    celsiusTemp             REAL OPTIONAL, -- temperature
+    dBNoise                 REAL OPTIONAL, -- ambient noise
+    lightingInfo            VisibleString OPTIONAL
+}
+
+TestResult ::= CHOICE {
+    testResultEnrol     TestResultEnrol, -- enrolment
+    testResultAcquire   TestResultAcquire, -- acquisition
+    testResultVerify    TestResultVerify, -- verification
+    testResultIdentify  TestResultIdentify -- identification
+}
+
+TestResultEnrol ::= SEQUENCE {
+    failureToEnrolRate  REAL,
+    durationEnrol       StatisticInformationSet OPTIONAL
+}
+
+StatisticInformationSet ::= SEQUENCE {
+    unitTime                UnitTime,
+    numberOfMeasurements    INTEGER OPTIONAL,
+    median                  REAL OPTIONAL,
+    mean                    REAL OPTIONAL,
+    minimum                 REAL OPTIONAL,
+    maximum                 REAL OPTIONAL,
+    stdDev                  REAL OPTIONAL,
+    medAbsDev               REAL OPTIONAL
+}
+
+UnitTime ::= ENUMERATED {
+    millisecond (1),
+    second      (2)
+}
+
+TestResultAcquire ::= SEQUENCE {
+    failureToAcquireRate    REAL,
+    durationAcquire         StatisticInformationSet OPTIONAL
+}
+
+TestResultVerify ::= SEQUENCE {
+    resultMatchVerify   ResultMatchVerify,
+    durationVerify      StatisticInformationSet OPTIONAL
+}
+
+ResultMatchVerify ::= SEQUENCE {
+    infoDETFNMRFMR      InfoDETCurve OPTIONAL, -- pair of error types shall be fnmr-fmr
+    infoDETFRRFAR       InfoDETCurve OPTIONAL, -- pair of error types shall be frr-far
+    infoDETGFRRGFAR     InfoDETCurve OPTIONAL, -- pair of error types shall be gfrr-gfar
+    cmpScrDistr         DistributionRealReal OPTIONAL
+}
+
+InfoDETCurve ::= SEQUENCE {
+    numOfSamplesEstTypeIError   INTEGER,
+    numOfSamplesEstTypeIIError  INTEGER,
+    expressionDETCurve          ExpressionDETCurve
+}
+
+ExpressionDETCurve ::= SEQUENCE OF ExpressionPointDETCurve
+
+ExpressionPointDETCurve ::= SEQUENCE {
+    threshold   REAL OPTIONAL, -- 0 for unavailable, -1 for unknown
+    typeIError  REAL,
+    typeIIError REAL
+}
+
+DistributionRealReal ::= SEQUENCE OF ExpressionPointRealReal
+
+ExpressionPointRealReal ::= SEQUENCE {
+    xValue  REAL,
+    yValue  REAL
+}
+
+TestResultIdentify ::= SEQUENCE {
+    resultMatchClosedIdentify   ResultMatchClosedIdentify,
+    resultMatchOpenIdentify     ResultMatchOpenIdentify OPTIONAL
+}
+
+ResultMatchClosedIdentify ::= SEQUENCE {
+    cmcCurveClosed          DistributionIntegerReal,
+    srchExecDistr           ExpressionHistogram,
+    durationClosedIdentify  StatisticInformationSet OPTIONAL
+}
+
+ExpressionHistogram ::= SEQUENCE OF IntervalIntegerFrequency
+
+IntervalIntegerFrequency ::= SEQUENCE {
+    lowerLimit  INTEGER,
+    upperLimit  INTEGER,
+    frequency   INTEGER
+}
+
+ResultMatchOpenIdentify ::= SEQUENCE {
+    cmcCurveOpen            DistributionIntegerReal,
+    srchExecDistrEnroled    ExpressionHistogram,
+    srchExecDistrNoEnroled  ExpressionHistogram,
+    infoDETCurveFNIRFPIR    InfoDETCurve OPTIONAL,
+    -- pair of error types shall be fnir-fpir
+    durationOpenIdentify    StatisticInformationSet OPTIONAL
+}
+
+TestReportScenario ::= SEQUENCE {
+    version         MRTDBTRVersion DEFAULT v0,
+    targetInfos     SEQUENCE OF ProductInformation,
+    testReportInfo  TestReportInformation,
+    testReports     SEQUENCE OF TestReportScenarioForOneCondition
+}
+
+TestReportScenarioForOneCondition ::= SEQUENCE {
+    testCrewInfo            TestCrewInformation,
+    levelPolicyAssistance   LevelPolicyAssistance,
+    environInfo             EnvironmentalInformation,
+    dateStarted             Date OPTIONAL,
+    dateEnded               Date OPTIONAL,
+    testResult              SEQUENCE OF TestResult
+}
+
+TestCrewInformation ::= SEQUENCE {
+    identifier          OBJECT IDENTIFIER,
+    location            VisibleString,
+    habituation         ExpressionHistogram,
+    testCrewStatistics  CorpusCrewBasicStatistics
+}
+
+LevelPolicyAssistance ::= SEQUENCE {
+    levelEffortAndDecisionPolicy    LevelEffortAndDecisionPolicy,
+    assistanceAndInstruction        AssistanceAndInstruction OPTIONAL
+}
+
+LevelEffortAndDecisionPolicy ::= SEQUENCE {
+    levelAndPolicyEnrol LevelAndPolicy,
+    levelAndPolicyCmp   LevelAndPolicy
+}
+
+LevelAndPolicy ::= SEQUENCE {
+    minNumAttempt   INTEGER,
+    maxNumAttempt   INTEGER,
+    maxDurPermitted REAL
+}
+
+AssistanceAndInstruction ::= SEQUENCE {
+    assistanceLocation  AssistanceLocation,
+    assistanceMode      AssistanceMode,
+    instructionMode     InstructionMode
+}
+
+AssistanceLocation ::= ENUMERATED {
+    separate-from-transaction       (1),
+    interactively-with-transaction  (2),
+    after-failure                   (3)
+}
+
+AssistanceMode ::= ENUMERATED {
+    physical        (1),
+    audio-only      (2),
+    audio-video     (3),
+    none            (4),
+    video-only      (5)
+}
+
+InstructionMode ::= ENUMERATED {
+    written-manual  (1),
+    poster          (2),
+    video           (3),
+    personal        (4)
+}
+
+SignedTestReport ::= SEQUENCE {
+    version             MRTDBTRVersion DEFAULT v0,
+    digestAlgorithms    DigestAlgorithmIdentifiers,
+    encapContentInfo    EncapsulatedContentInfoSignedTR,
+    certificates        [0] IMPLICIT CertificateSet OPTIONAL,
+    crls                [1] IMPLICIT RevocationInfoChoices OPTIONAL,
+    signerInfos         SignerInfos
+}
+
+EncapsulatedContentInfoSignedTR ::= SEQUENCE {
+    eContentTypeContentInfoSignedTR CONTENT-TYPE.&id
+        ({ContentTypeContentInfoSignedTR }),
+    eContentContentInfoSignedTR [0] EXPLICIT OCTET STRING
+        (CONTAINING CONTENT-TYPE.&Type({ContentTypeContentInfoSignedTR}{@contentType}))
+}
+
+ContentTypeContentInfoSignedTR CONTENT-TYPE ::= {
+    testReportTechnology
+    | testReportScenario
+}
+
+-- contentType object identifiers
+id-testReportTechnology OBJECT IDENTIFIER ::= {
+    iso(1) standard(0) mrtdbtr(29120) testReport(1) contentType(2)
+    testReportTechnology(1)
+}
+
+id-testReportScenario OBJECT IDENTIFIER ::= {
+    iso(1) standard(0) mrtdbtr(29120) testReport(1) contentType(2)
+    testReportScenario(2)
+}
+
+id-signedTestReport OBJECT IDENTIFIER ::= {
+    iso(1) standard(0) mrtdbtr(29120) testReport(1) contentType(2)
+    signedTestReport(3)
+}
+
+-- ContentType objects
+testReportTechnology CONTENT-TYPE ::= {
+    TestReportTechnology
+    IDENTIFIED BY id-testReportTechnology
+}
+
+testReportScenario CONTENT-TYPE ::= {
+    TestReportScenario
+    IDENTIFIED BY id-testReportScenario
+}
+
+signedTestReport CONTENT-TYPE ::= {
+    SignedTestReport
+    IDENTIFIED BY id-signedTestReport
+}
+
+END

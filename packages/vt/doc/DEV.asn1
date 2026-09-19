@@ -1,0 +1,162 @@
+-- Sourced from ISO/IEC 9041:1997(E)
+-- Modified to remove ancient deprecated ASN.1 syntaxes.
+-- In particular, use of unnamed components in SEQUENCE and SET.
+DEV DEFINITIONS ::= BEGIN
+
+-- 12.5.1 DEV Identifiers
+-- The following are to identify parameters to be negotiated
+
+Identifier ::= SET OF SEQUENCE {
+    name    PrintableString,
+    idents  ParameterIdents
+}
+
+ParameterIdents ::= SEQUENCE {
+    defaultCOaccess           [0]  IMPLICIT NULL OPTIONAL,
+    defaultCOPriority         [1]  IMPLICIT NULL OPTIONAL,
+    deviceRepertoire          [2]  IMPLICIT CDS.CompoundRepertoireIdent OPTIONAL,
+    deviceEmphasis            [3]  IMPLICIT CDS.CompoundEmphasisIdent OPTIONAL,
+    deviceForeground          [4]  IMPLICIT CDS.CompoundColourIdent OPTIONAL,
+    deviceBackground          [5]  IMPLICIT CDS.CompoundColourIdent OPTIONAL,
+-- Tags 2 to 5 above make cross referencesto the definitions in the CDS module.
+-- Not all the components of those definitions can be used validly in this context.
+-- In particular,the components relating to the lengths of lists (capabilities) shall not be present
+    minimumXarrayLength       [6]  IMPLICIT NULL OPTIONAL,
+    minimumYarrayLength       [7]  IMPLICIT NULL OPTIONAL,
+    deviceControlObjectNames  [8]  IMPLICIT NULL OPTIONAL,
+    deviceDisplayObjectName   [9]  IMPLICIT NULL OPTIONAL,
+    terminationEventList      [10] IMPLICIT NULL OPTIONAL,
+    terminationLength         [11] IMPLICIT NULL OPTIONAL,
+    terminationTimeout        [12] IMPLICIT NULL OPTIONAL,
+    defaultCOtrigger          [13] IMPLICIT NULL OPTIONAL,
+    defaultCOinitialValue     [14] IMPLICIT NULL OPTIONAL
+}
+
+-- 12.5.2 DEV Offers
+-- The following are for offered values during negotiation
+
+Offer ::= SET OF SEQUENCE {
+    name    PrintableString,
+    offers  ParameterOffers
+}
+
+ParameterOffers ::= SEQUENCE {
+    defaultCOaccess             [0] IMPLICIT CSS.AccessRuleOffer OPTIONAL,
+    -- Set bits are offered, unset ones are not.
+    defaultCOPriority           [1] IMPLICIT BIT STRING {
+        normal (0),
+        high   (1),
+        urgent (2)
+    } OPTIONAL,
+    deviceRepertoireAssignment  [2] IMPLICIT CDS.CompoundRepertoireOffer OPTIONAL,
+    deviceEmphasisAssignment    [3] IMPLICIT CDS.CompoundEmphasisOffer OPTIONAL,
+    deviceForegroundAssignment  [4] IMPLICIT CDS.CompoundColourOffer OPTIONAL,
+    deviceBackgroundAssignment  [5] IMPLICIT CDS.CompoundColourOffer OPTIONAL,
+    -- see note in 12.5.1
+    minimumXarrayLength         [6] IMPLICIT G.IntegerOffer OPTIONAL,
+    minimumYarrayLength         [7] IMPLICIT G.IntegerOffer OPTIONAL,
+    deviceControlObjectNames    [8] IMPLICIT SEQUENCE OF SEQUENCE OF PrintableString OPTIONAL,
+    deviceDisplayObjectName     [9] IMPLICIT SEQUENCE OF PrintableString OPTIONAL,
+    terminationEventList        [10] IMPLICIT SEQUENCE OF SET OF SEQUENCE {
+        event   ANY,
+        eventId SEQUENCE {
+            integer G.IntegerOffer OPTIONAL,
+            nul     NULL OPTIONAL
+        }
+    } OPTIONAL,
+    -- The datatypes for "event" will be as defined in the vte-profile used as
+    -- the initial draft-VTE for the individual instance of negotiation.
+    terminationLength           [11] IMPLICIT SEQUENCE {
+        length      [0] IMPLICIT G.IntegerOffer,
+        eventId     [1] IMPLICIT SEQUENCE {
+            integer G.IntegerOffer OPTIONAL,
+            nul     NULL OPTIONAL
+        }
+    } OPTIONAL,
+    terminationTimeout          [12] IMPLICIT SEQUENCE {
+        timeOffer   TimeOffer,
+        eventId     SEQUENCE {
+            integer     G.IntegerOffer OPTIONAL,
+            nul         NULL OPTIONAL
+        }
+    } OPTIONAL,
+    defaultCOtrigger            [13] IMPLICIT BIT STRING {
+        notSelected (0),
+        selected    (1)
+    } OPTIONAL,
+    defaultCOinitialValue       [14] IMPLICIT SEQUENCE OF SEQUENCE {
+        value [0] IMPLICIT BIT STRING,
+        mask  [1] IMPLICIT BIT STRING OPTIONAL
+    } OPTIONAL
+    -- See note under mask in G.COUpdate
+}
+
+TimeOffer ::= SET OF CHOICE {
+    value [0] IMPLICIT SEQUENCE {
+        multiplier INTEGER,
+        exponent INTEGER
+    },
+    range [1] IMPLICIT SEQUENCE {
+        lowerMultiplier     INTEGER,
+        lowerExponent       INTEGER,
+        upperMultiplier     INTEGER,
+        upperExponent       INTEGER
+    }
+}
+
+-- 12.5.3 DEV Values
+-- The following are for returned values during negotiation
+
+Values ::= SET OF SEQUENCE {
+    name    PrintableString,
+    values  ParameterValues
+}
+
+ParameterValues ::= SEQUENCE {
+    defaultCOaccess             [0] IMPLICIT CSS.AccessRuleValue OPTIONAL,
+    defaultCOPriority           [1] IMPLICIT INTEGER {
+        normal (0),
+        high   (1),
+        urgent (2)
+    } OPTIONAL,
+    deviceRepertoireAssignment  [2] IMPLICIT CDS.CompoundRepertoireValue OPTIONAL,
+    deviceEmphasisAssignment    [3] IMPLICIT CDS.CompoundEmphasisValue OPTIONAL,
+    deviceForegroundAssignment  [4] IMPLICIT CDS.CompoundColourValue OPTIONAL,
+    deviceBackgroundAssignment  [5] IMPLICIT CDS.CompoundColourValue OPTIONAL,
+    -- see note in 12.5.1
+    minimumXarrayLength         [6] IMPLICIT INTEGER OPTIONAL,
+    minimumYarrayLength         [7] IMPLICIT INTEGER OPTIONAL,
+    deviceControlObjectNames    [8] IMPLICIT SEQUENCE OF PrintableString OPTIONAL,
+    deviceDisplayObjectName     [9] IMPLICIT PrintableString OPTIONAL,
+    terminationEventList        [10] IMPLICIT SET OF SEQUENCE {
+        event ANY,
+        eventId CHOICE {
+            integer INTEGER,
+            nul NULL
+        }
+    } OPTIONAL,
+    -- The datatypes for "event" will be as defined in the vte-profile used as
+    -- the initial draft-VTEfor the individual instance of negotiation.
+    terminationLength           [11] IMPLICIT SEQUENCE {
+        length [0] IMPLICIT INTEGER OPTIONAL,
+        eventId CHOICE {
+            integer [1] IMPLICIT INTEGER,
+            nul     [2] IMPLICIT NULL
+        }
+    } OPTIONAL,
+    terminationTimeout          [12] IMPLICIT SEQUENCE {
+        timeMultiplier INTEGER,
+        timeExponent INTEGER,
+        eventId CHOICE {
+            integer INTEGER,
+            nul NULL
+        }
+    } OPTIONAL,
+    defaultCOtriggerSelected    [13] IMPLICIT BOOLEAN OPTIONAL,
+    defaultCOinitialValue       [14] IMPLICIT SEQUENCE {
+        value [0] IMPLICIT BIT STRING,
+        mask  [1] IMPLICIT BIT STRING OPTIONAL
+    } OPTIONAL
+}
+
+END
