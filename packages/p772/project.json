@@ -1,0 +1,25 @@
+{
+  "name": "p772",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/p772/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/p772",
+        "tsConfig": "packages/p772/tsconfig.lib.json",
+        "packageJson": "packages/p772/package.json",
+        "main": "packages/p772/src/index.mts",
+        "assets": [
+          "packages/p772/*.md",
+          "packages/p772/LICENSE.txt",
+          "packages/p772/package.json"
+        ]
+      }
+    }
+  }
+}
