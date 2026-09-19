@@ -1,72 +1,11 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ActivationStateCode, _enum_for_ActivationStateCode, ActivationStateCode_off /* IMPORTED_LONG_ENUMERATION_ITEM */, off /* IMPORTED_SHORT_ENUMERATION_ITEM */, ActivationStateCode_on /* IMPORTED_LONG_ENUMERATION_ITEM */, on /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ActivationStateCode, _encode_ActivationStateCode } from "../AIN-Parameters/ActivationStateCode.ta.mjs";
+import { ActivationStateCode, _decode_ActivationStateCode, _encode_ActivationStateCode, _enum_for_ActivationStateCode } from "../AIN-Parameters/ActivationStateCode.ta.mjs";
 // export { ActivationStateCode, _enum_for_ActivationStateCode, ActivationStateCode_off /* IMPORTED_LONG_ENUMERATION_ITEM */, off /* IMPORTED_SHORT_ENUMERATION_ITEM */, ActivationStateCode_on /* IMPORTED_LONG_ENUMERATION_ITEM */, on /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ActivationStateCode, _encode_ActivationStateCode } from "../AIN-Parameters/ActivationStateCode.ta.mjs";
 import { EntireList, _decode_EntireList, _encode_EntireList } from "../AIN-Parameters/EntireList.ta.mjs";
 // export { EntireList, _decode_EntireList, _encode_EntireList } from "../AIN-Parameters/EntireList.ta.mjs";
@@ -78,7 +17,7 @@ import { ForwardToDn, _decode_ForwardToDn, _encode_ForwardToDn } from "../AIN-Pa
 // export { ForwardToDn, _decode_ForwardToDn, _encode_ForwardToDn } from "../AIN-Parameters/ForwardToDn.ta.mjs";
 import { DelayInterval, _decode_DelayInterval, _encode_DelayInterval } from "../AIN-Parameters/DelayInterval.ta.mjs";
 // export { DelayInterval, _decode_DelayInterval, _encode_DelayInterval } from "../AIN-Parameters/DelayInterval.ta.mjs";
-import { Empty, Empty_entireList /* IMPORTED_LONG_NAMED_BIT */, entireList /* IMPORTED_SHORT_NAMED_BIT */, Empty_outgoingmemorySlot /* IMPORTED_LONG_NAMED_BIT */, outgoingmemorySlot /* IMPORTED_SHORT_NAMED_BIT */, Empty_incomingmemorySlot /* IMPORTED_LONG_NAMED_BIT */, incomingmemorySlot /* IMPORTED_SHORT_NAMED_BIT */, Empty_forwardToDn /* IMPORTED_LONG_NAMED_BIT */, forwardToDn /* IMPORTED_SHORT_NAMED_BIT */, _decode_Empty, _encode_Empty } from "../AIN-Parameters/Empty.ta.mjs";
+import { Empty, _decode_Empty, _encode_Empty } from "../AIN-Parameters/Empty.ta.mjs";
 // export { Empty, Empty_entireList /* IMPORTED_LONG_NAMED_BIT */, entireList /* IMPORTED_SHORT_NAMED_BIT */, Empty_outgoingmemorySlot /* IMPORTED_LONG_NAMED_BIT */, outgoingmemorySlot /* IMPORTED_SHORT_NAMED_BIT */, Empty_incomingmemorySlot /* IMPORTED_LONG_NAMED_BIT */, incomingmemorySlot /* IMPORTED_SHORT_NAMED_BIT */, Empty_forwardToDn /* IMPORTED_LONG_NAMED_BIT */, forwardToDn /* IMPORTED_SHORT_NAMED_BIT */, _decode_Empty, _encode_Empty } from "../AIN-Parameters/Empty.ta.mjs";
 
 

@@ -1,78 +1,17 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AmpAINNodeID, _decode_AmpAINNodeID, _encode_AmpAINNodeID } from "../AIN-Parameters/AmpAINNodeID.ta.mjs";
 // export { AmpAINNodeID, _decode_AmpAINNodeID, _encode_AmpAINNodeID } from "../AIN-Parameters/AmpAINNodeID.ta.mjs";
 import { AmpCLogSeqNo, _decode_AmpCLogSeqNo, _encode_AmpCLogSeqNo } from "../AIN-Parameters/AmpCLogSeqNo.ta.mjs";
 // export { AmpCLogSeqNo, _decode_AmpCLogSeqNo, _encode_AmpCLogSeqNo } from "../AIN-Parameters/AmpCLogSeqNo.ta.mjs";
-import { AmpCLogRepInd, _enum_for_AmpCLogRepInd, AmpCLogRepInd_autoReportOS /* IMPORTED_LONG_ENUMERATION_ITEM */, autoReportOS /* IMPORTED_SHORT_ENUMERATION_ITEM */, AmpCLogRepInd_requestReport /* IMPORTED_LONG_ENUMERATION_ITEM */, requestReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, AmpCLogRepInd_autoReportISDN /* IMPORTED_LONG_ENUMERATION_ITEM */, autoReportISDN /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AmpCLogRepInd, _encode_AmpCLogRepInd } from "../AIN-Parameters/AmpCLogRepInd.ta.mjs";
+import { AmpCLogRepInd, _decode_AmpCLogRepInd, _encode_AmpCLogRepInd, _enum_for_AmpCLogRepInd } from "../AIN-Parameters/AmpCLogRepInd.ta.mjs";
 // export { AmpCLogRepInd, _enum_for_AmpCLogRepInd, AmpCLogRepInd_autoReportOS /* IMPORTED_LONG_ENUMERATION_ITEM */, autoReportOS /* IMPORTED_SHORT_ENUMERATION_ITEM */, AmpCLogRepInd_requestReport /* IMPORTED_LONG_ENUMERATION_ITEM */, requestReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, AmpCLogRepInd_autoReportISDN /* IMPORTED_LONG_ENUMERATION_ITEM */, autoReportISDN /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AmpCLogRepInd, _encode_AmpCLogRepInd } from "../AIN-Parameters/AmpCLogRepInd.ta.mjs";
-import { AmpCallProgInd, _enum_for_AmpCallProgInd, AmpCallProgInd_callProgressVoiceAnnouncements /* IMPORTED_LONG_ENUMERATION_ITEM */, callProgressVoiceAnnouncements /* IMPORTED_SHORT_ENUMERATION_ITEM */, AmpCallProgInd_callProgressTextMessages /* IMPORTED_LONG_ENUMERATION_ITEM */, callProgressTextMessages /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AmpCallProgInd, _encode_AmpCallProgInd } from "../AIN-Parameters/AmpCallProgInd.ta.mjs";
+import { AmpCallProgInd, _decode_AmpCallProgInd, _encode_AmpCallProgInd, _enum_for_AmpCallProgInd } from "../AIN-Parameters/AmpCallProgInd.ta.mjs";
 // export { AmpCallProgInd, _enum_for_AmpCallProgInd, AmpCallProgInd_callProgressVoiceAnnouncements /* IMPORTED_LONG_ENUMERATION_ITEM */, callProgressVoiceAnnouncements /* IMPORTED_SHORT_ENUMERATION_ITEM */, AmpCallProgInd_callProgressTextMessages /* IMPORTED_LONG_ENUMERATION_ITEM */, callProgressTextMessages /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AmpCallProgInd, _encode_AmpCallProgInd } from "../AIN-Parameters/AmpCallProgInd.ta.mjs";
 import { AmpTestReqInd, _decode_AmpTestReqInd, _encode_AmpTestReqInd } from "../AIN-Parameters/AmpTestReqInd.ta.mjs";
 // export { AmpTestReqInd, _decode_AmpTestReqInd, _encode_AmpTestReqInd } from "../AIN-Parameters/AmpTestReqInd.ta.mjs";
