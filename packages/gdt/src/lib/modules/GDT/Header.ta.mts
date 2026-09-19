@@ -1,78 +1,19 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
     INTEGER,
-    BIT_STRING,
     OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EndPointDescriptor, _decode_EndPointDescriptor, _encode_EndPointDescriptor } from "../GDT/EndPointDescriptor.ta.mjs";
 // export { EndPointDescriptor, _decode_EndPointDescriptor, _encode_EndPointDescriptor } from "../GDT/EndPointDescriptor.ta.mjs";
-import { SequenceFlag, SequenceFlag_sf_start /* IMPORTED_LONG_NAMED_INTEGER */, sf_start /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_continue /* IMPORTED_LONG_NAMED_INTEGER */, sf_continue /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_end /* IMPORTED_LONG_NAMED_INTEGER */, sf_end /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_stateless_no_reply /* IMPORTED_LONG_NAMED_INTEGER */, sf_stateless_no_reply /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_stateless /* IMPORTED_LONG_NAMED_INTEGER */, sf_stateless /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_stream_complete /* IMPORTED_LONG_NAMED_INTEGER */, sf_stream_complete /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_continue_wait /* IMPORTED_LONG_NAMED_INTEGER */, sf_continue_wait /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_heartbeat /* IMPORTED_LONG_NAMED_INTEGER */, sf_heartbeat /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SequenceFlag, _encode_SequenceFlag } from "../GDT/SequenceFlag.ta.mjs";
+import { SequenceFlag, _decode_SequenceFlag, _encode_SequenceFlag } from "../GDT/SequenceFlag.ta.mjs";
 // export { SequenceFlag, SequenceFlag_sf_start /* IMPORTED_LONG_NAMED_INTEGER */, sf_start /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_continue /* IMPORTED_LONG_NAMED_INTEGER */, sf_continue /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_end /* IMPORTED_LONG_NAMED_INTEGER */, sf_end /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_stateless_no_reply /* IMPORTED_LONG_NAMED_INTEGER */, sf_stateless_no_reply /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_stateless /* IMPORTED_LONG_NAMED_INTEGER */, sf_stateless /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_stream_complete /* IMPORTED_LONG_NAMED_INTEGER */, sf_stream_complete /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_continue_wait /* IMPORTED_LONG_NAMED_INTEGER */, sf_continue_wait /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_heartbeat /* IMPORTED_LONG_NAMED_INTEGER */, sf_heartbeat /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SequenceFlag, _encode_SequenceFlag } from "../GDT/SequenceFlag.ta.mjs";
 import { HopInfo, _decode_HopInfo, _encode_HopInfo } from "../GDT/HopInfo.ta.mjs";
 // export { HopInfo, _decode_HopInfo, _encode_HopInfo } from "../GDT/HopInfo.ta.mjs";
-import { ErrorCode, ErrorCode_err_ok /* IMPORTED_LONG_NAMED_INTEGER */, err_ok /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_out_of_sequence /* IMPORTED_LONG_NAMED_INTEGER */, err_out_of_sequence /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unknown_sequence /* IMPORTED_LONG_NAMED_INTEGER */, err_unknown_sequence /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unsupported_version /* IMPORTED_LONG_NAMED_INTEGER */, err_unsupported_version /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_timeout /* IMPORTED_LONG_NAMED_INTEGER */, err_timeout /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unknown_route /* IMPORTED_LONG_NAMED_INTEGER */, err_unknown_route /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_routing_not_supported /* IMPORTED_LONG_NAMED_INTEGER */, err_routing_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_max_hops_exceeded /* IMPORTED_LONG_NAMED_INTEGER */, err_max_hops_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unknown_error /* IMPORTED_LONG_NAMED_INTEGER */, err_unknown_error /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ErrorCode, _encode_ErrorCode } from "../GDT/ErrorCode.ta.mjs";
+import { ErrorCode, _decode_ErrorCode, _encode_ErrorCode } from "../GDT/ErrorCode.ta.mjs";
 // export { ErrorCode, ErrorCode_err_ok /* IMPORTED_LONG_NAMED_INTEGER */, err_ok /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_out_of_sequence /* IMPORTED_LONG_NAMED_INTEGER */, err_out_of_sequence /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unknown_sequence /* IMPORTED_LONG_NAMED_INTEGER */, err_unknown_sequence /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unsupported_version /* IMPORTED_LONG_NAMED_INTEGER */, err_unsupported_version /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_timeout /* IMPORTED_LONG_NAMED_INTEGER */, err_timeout /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unknown_route /* IMPORTED_LONG_NAMED_INTEGER */, err_unknown_route /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_routing_not_supported /* IMPORTED_LONG_NAMED_INTEGER */, err_routing_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_max_hops_exceeded /* IMPORTED_LONG_NAMED_INTEGER */, err_max_hops_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unknown_error /* IMPORTED_LONG_NAMED_INTEGER */, err_unknown_error /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ErrorCode, _encode_ErrorCode } from "../GDT/ErrorCode.ta.mjs";
 
 
