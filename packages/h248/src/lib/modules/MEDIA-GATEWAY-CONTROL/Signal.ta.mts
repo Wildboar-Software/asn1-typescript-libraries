@@ -1,82 +1,23 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
     BOOLEAN,
     INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SignalName, _decode_SignalName, _encode_SignalName } from "../MEDIA-GATEWAY-CONTROL/SignalName.ta.mjs";
 // export { SignalName, _decode_SignalName, _encode_SignalName } from "../MEDIA-GATEWAY-CONTROL/SignalName.ta.mjs";
 import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
 // export { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
-import { SignalType, _enum_for_SignalType, SignalType_brief /* IMPORTED_LONG_ENUMERATION_ITEM */, brief /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignalType_onOff /* IMPORTED_LONG_ENUMERATION_ITEM */, onOff /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignalType_timeOut /* IMPORTED_LONG_ENUMERATION_ITEM */, timeOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SignalType, _encode_SignalType } from "../MEDIA-GATEWAY-CONTROL/SignalType.ta.mjs";
+import { SignalType, _decode_SignalType, _encode_SignalType, _enum_for_SignalType } from "../MEDIA-GATEWAY-CONTROL/SignalType.ta.mjs";
 // export { SignalType, _enum_for_SignalType, SignalType_brief /* IMPORTED_LONG_ENUMERATION_ITEM */, brief /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignalType_onOff /* IMPORTED_LONG_ENUMERATION_ITEM */, onOff /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignalType_timeOut /* IMPORTED_LONG_ENUMERATION_ITEM */, timeOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SignalType, _encode_SignalType } from "../MEDIA-GATEWAY-CONTROL/SignalType.ta.mjs";
-import { NotifyCompletion, NotifyCompletion_onTimeOut /* IMPORTED_LONG_NAMED_BIT */, onTimeOut /* IMPORTED_SHORT_NAMED_BIT */, NotifyCompletion_onInterruptByEvent /* IMPORTED_LONG_NAMED_BIT */, onInterruptByEvent /* IMPORTED_SHORT_NAMED_BIT */, NotifyCompletion_onInterruptByNewSignalDescr /* IMPORTED_LONG_NAMED_BIT */, onInterruptByNewSignalDescr /* IMPORTED_SHORT_NAMED_BIT */, NotifyCompletion_otherReason /* IMPORTED_LONG_NAMED_BIT */, otherReason /* IMPORTED_SHORT_NAMED_BIT */, NotifyCompletion_onIteration /* IMPORTED_LONG_NAMED_BIT */, onIteration /* IMPORTED_SHORT_NAMED_BIT */, _decode_NotifyCompletion, _encode_NotifyCompletion } from "../MEDIA-GATEWAY-CONTROL/NotifyCompletion.ta.mjs";
+import { NotifyCompletion, _decode_NotifyCompletion, _encode_NotifyCompletion } from "../MEDIA-GATEWAY-CONTROL/NotifyCompletion.ta.mjs";
 // export { NotifyCompletion, NotifyCompletion_onTimeOut /* IMPORTED_LONG_NAMED_BIT */, onTimeOut /* IMPORTED_SHORT_NAMED_BIT */, NotifyCompletion_onInterruptByEvent /* IMPORTED_LONG_NAMED_BIT */, onInterruptByEvent /* IMPORTED_SHORT_NAMED_BIT */, NotifyCompletion_onInterruptByNewSignalDescr /* IMPORTED_LONG_NAMED_BIT */, onInterruptByNewSignalDescr /* IMPORTED_SHORT_NAMED_BIT */, NotifyCompletion_otherReason /* IMPORTED_LONG_NAMED_BIT */, otherReason /* IMPORTED_SHORT_NAMED_BIT */, NotifyCompletion_onIteration /* IMPORTED_LONG_NAMED_BIT */, onIteration /* IMPORTED_SHORT_NAMED_BIT */, _decode_NotifyCompletion, _encode_NotifyCompletion } from "../MEDIA-GATEWAY-CONTROL/NotifyCompletion.ta.mjs";
 import { SigParameter, _decode_SigParameter, _encode_SigParameter } from "../MEDIA-GATEWAY-CONTROL/SigParameter.ta.mjs";
 // export { SigParameter, _decode_SigParameter, _encode_SigParameter } from "../MEDIA-GATEWAY-CONTROL/SigParameter.ta.mjs";
-import { SignalDirection, _enum_for_SignalDirection, SignalDirection_internal /* IMPORTED_LONG_ENUMERATION_ITEM */, internal /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignalDirection_external /* IMPORTED_LONG_ENUMERATION_ITEM */, external /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignalDirection_both /* IMPORTED_LONG_ENUMERATION_ITEM */, both /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SignalDirection, _encode_SignalDirection } from "../MEDIA-GATEWAY-CONTROL/SignalDirection.ta.mjs";
+import { SignalDirection, _decode_SignalDirection, _encode_SignalDirection, _enum_for_SignalDirection } from "../MEDIA-GATEWAY-CONTROL/SignalDirection.ta.mjs";
 // export { SignalDirection, _enum_for_SignalDirection, SignalDirection_internal /* IMPORTED_LONG_ENUMERATION_ITEM */, internal /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignalDirection_external /* IMPORTED_LONG_ENUMERATION_ITEM */, external /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignalDirection_both /* IMPORTED_LONG_ENUMERATION_ITEM */, both /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SignalDirection, _encode_SignalDirection } from "../MEDIA-GATEWAY-CONTROL/SignalDirection.ta.mjs";
 import { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
 // export { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";

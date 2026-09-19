@@ -1,78 +1,17 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
 // export { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
-import { TopologyRequest_topologyDirection, _enum_for_TopologyRequest_topologyDirection, TopologyRequest_topologyDirection_bothway /* IMPORTED_LONG_ENUMERATION_ITEM */, bothway /* IMPORTED_SHORT_ENUMERATION_ITEM */, TopologyRequest_topologyDirection_isolate /* IMPORTED_LONG_ENUMERATION_ITEM */, isolate /* IMPORTED_SHORT_ENUMERATION_ITEM */, TopologyRequest_topologyDirection_oneway /* IMPORTED_LONG_ENUMERATION_ITEM */, oneway /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TopologyRequest_topologyDirection, _encode_TopologyRequest_topologyDirection } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest-topologyDirection.ta.mjs";
+import { TopologyRequest_topologyDirection, _decode_TopologyRequest_topologyDirection, _encode_TopologyRequest_topologyDirection, _enum_for_TopologyRequest_topologyDirection } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest-topologyDirection.ta.mjs";
 // export { TopologyRequest_topologyDirection, _enum_for_TopologyRequest_topologyDirection, TopologyRequest_topologyDirection_bothway /* IMPORTED_LONG_ENUMERATION_ITEM */, bothway /* IMPORTED_SHORT_ENUMERATION_ITEM */, TopologyRequest_topologyDirection_isolate /* IMPORTED_LONG_ENUMERATION_ITEM */, isolate /* IMPORTED_SHORT_ENUMERATION_ITEM */, TopologyRequest_topologyDirection_oneway /* IMPORTED_LONG_ENUMERATION_ITEM */, oneway /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TopologyRequest_topologyDirection, _encode_TopologyRequest_topologyDirection } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest-topologyDirection.ta.mjs";
 import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
 // export { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
-import { TopologyRequest_topologyDirectionExtension, _enum_for_TopologyRequest_topologyDirectionExtension, TopologyRequest_topologyDirectionExtension_onewayexternal /* IMPORTED_LONG_ENUMERATION_ITEM */, onewayexternal /* IMPORTED_SHORT_ENUMERATION_ITEM */, TopologyRequest_topologyDirectionExtension_onewayboth /* IMPORTED_LONG_ENUMERATION_ITEM */, onewayboth /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TopologyRequest_topologyDirectionExtension, _encode_TopologyRequest_topologyDirectionExtension } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest-topologyDirectionExtension.ta.mjs";
+import { TopologyRequest_topologyDirectionExtension, _decode_TopologyRequest_topologyDirectionExtension, _encode_TopologyRequest_topologyDirectionExtension, _enum_for_TopologyRequest_topologyDirectionExtension } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest-topologyDirectionExtension.ta.mjs";
 // export { TopologyRequest_topologyDirectionExtension, _enum_for_TopologyRequest_topologyDirectionExtension, TopologyRequest_topologyDirectionExtension_onewayexternal /* IMPORTED_LONG_ENUMERATION_ITEM */, onewayexternal /* IMPORTED_SHORT_ENUMERATION_ITEM */, TopologyRequest_topologyDirectionExtension_onewayboth /* IMPORTED_LONG_ENUMERATION_ITEM */, onewayboth /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TopologyRequest_topologyDirectionExtension, _encode_TopologyRequest_topologyDirectionExtension } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest-topologyDirectionExtension.ta.mjs";
 
 
