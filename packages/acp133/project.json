@@ -1,0 +1,25 @@
+{
+  "name": "acp133",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/acp133/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/acp133",
+        "tsConfig": "packages/acp133/tsconfig.lib.json",
+        "packageJson": "packages/acp133/package.json",
+        "main": "packages/acp133/src/index.mts",
+        "assets": [
+          "packages/acp133/*.md",
+          "packages/acp133/LICENSE.txt",
+          "packages/acp133/package.json"
+        ]
+      }
+    }
+  }
+}

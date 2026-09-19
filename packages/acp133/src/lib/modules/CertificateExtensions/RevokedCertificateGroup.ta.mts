@@ -1,0 +1,136 @@
+/* eslint-disable */
+import {
+    itu_t,
+    itu_r,
+    ccitt,
+    iso,
+    joint_iso_itu_t,
+    joint_iso_ccitt,
+    OPTIONAL,
+    BOOLEAN,
+    INTEGER,
+    BIT_STRING,
+    OCTET_STRING,
+    NULL,
+    OBJECT_IDENTIFIER,
+    ObjectDescriptor,
+    EXTERNAL,
+    REAL,
+    INSTANCE_OF,
+    ENUMERATED,
+    EMBEDDED_PDV,
+    UTF8String,
+    RELATIVE_OID,
+    SEQUENCE,
+    SEQUENCE_OF,
+    SET,
+    SET_OF,
+    GraphicString,
+    NumericString,
+    VisibleString,
+    PrintableString,
+    ISO646String,
+    TeletexString,
+    GeneralString,
+    T61String,
+    UniversalString,
+    VideotexString,
+    BMPString,
+    IA5String,
+    CharacterString,
+    UTCTime,
+    GeneralizedTime,
+    TIME,
+    DATE,
+    TIME_OF_DAY,
+    DATE_TIME,
+    DURATION,
+    OID_IRI,
+    RELATIVE_OID_IRI,
+    TRUE,
+    FALSE,
+    TRUE_BIT,
+    FALSE_BIT,
+    PLUS_INFINITY,
+    MINUS_INFINITY,
+    NOT_A_NUMBER,
+    TYPE_IDENTIFIER,
+    ABSTRACT_SYNTAX,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { NumberRange, _decode_NumberRange, _encode_NumberRange } from "../CertificateExtensions/NumberRange.ta.mjs";
+// export { NumberRange, _decode_NumberRange, _encode_NumberRange } from "../CertificateExtensions/NumberRange.ta.mjs";
+import { GeneralName, _decode_GeneralName, _encode_GeneralName } from "../CertificateExtensions/GeneralName.ta.mjs";
+// export { GeneralName, _decode_GeneralName, _encode_GeneralName } from "../CertificateExtensions/GeneralName.ta.mjs";
+
+
+/**
+ * @summary RevokedCertificateGroup
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * RevokedCertificateGroup  ::=  CHOICE {
+ *   serialNumberRange  NumberRange,
+ *   nameSubtree        GeneralName }
+ * ```
+ */
+export
+type RevokedCertificateGroup =
+    { serialNumberRange: NumberRange } /* CHOICE_ALT_ROOT */
+    | { nameSubtree: GeneralName } /* CHOICE_ALT_ROOT */;
+
+let _cached_decoder_for_RevokedCertificateGroup: $.ASN1Decoder<RevokedCertificateGroup> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) RevokedCertificateGroup
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_RevokedCertificateGroup (el: _Element): RevokedCertificateGroup {
+    if (!_cached_decoder_for_RevokedCertificateGroup) { _cached_decoder_for_RevokedCertificateGroup = $._decode_inextensible_choice<RevokedCertificateGroup>({
+    "UNIVERSAL 16": [ "serialNumberRange", _decode_NumberRange ],
+    "CONTEXT 0": [ "nameSubtree", _decode_GeneralName ],
+    "CONTEXT 1": [ "nameSubtree", _decode_GeneralName ],
+    "CONTEXT 2": [ "nameSubtree", _decode_GeneralName ],
+    "CONTEXT 3": [ "nameSubtree", _decode_GeneralName ],
+    "CONTEXT 4": [ "nameSubtree", _decode_GeneralName ],
+    "CONTEXT 5": [ "nameSubtree", _decode_GeneralName ],
+    "CONTEXT 6": [ "nameSubtree", _decode_GeneralName ],
+    "CONTEXT 7": [ "nameSubtree", _decode_GeneralName ],
+    "CONTEXT 8": [ "nameSubtree", _decode_GeneralName ]
+}); }
+    return _cached_decoder_for_RevokedCertificateGroup(el);
+}
+
+let _cached_encoder_for_RevokedCertificateGroup: $.ASN1Encoder<RevokedCertificateGroup> | null = null;
+
+/**
+ * @summary Encodes a(n) RevokedCertificateGroup into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The RevokedCertificateGroup, encoded as an ASN.1 Element.
+ */
+export
+function _encode_RevokedCertificateGroup (value: RevokedCertificateGroup, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_RevokedCertificateGroup) { _cached_encoder_for_RevokedCertificateGroup = $._encode_choice<RevokedCertificateGroup>({
+    "serialNumberRange": _encode_NumberRange,
+    "nameSubtree": _encode_GeneralName,
+}, $.BER); }
+    return _cached_encoder_for_RevokedCertificateGroup(value, elGetter);
+}
+
+
+/* eslint-enable */
