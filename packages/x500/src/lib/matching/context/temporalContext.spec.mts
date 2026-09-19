@@ -451,6 +451,8 @@ describe("evaluateTemporalContext", () => {
         expect(evaluateTemporalContext(
             _encode_TimeAssertion(assertion, DER),
             _encode_TimeSpecification(invertedOvernightBand, DER),
+        )).toBe(false);
+    });
 
     it("does not match an unrecognized TimeAssertion CHOICE", () => {
         const assertion = new DERElement(
