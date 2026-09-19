@@ -1,0 +1,25 @@
+{
+  "name": "cosem",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/cosem/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/cosem",
+        "tsConfig": "packages/cosem/tsconfig.lib.json",
+        "packageJson": "packages/cosem/package.json",
+        "main": "packages/cosem/src/index.mts",
+        "assets": [
+          "packages/cosem/*.md",
+          "packages/cosem/LICENSE.txt",
+          "packages/cosem/package.json"
+        ]
+      }
+    }
+  }
+}
