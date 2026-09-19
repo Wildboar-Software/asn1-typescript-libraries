@@ -13,12 +13,36 @@ import type {
 } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { addHours, addDays, startOfDay } from "date-fns";
 import boundariesOfPeriodOccurrence from "../../utils/boundariesOfPeriodOccurrence.mjs";
-import compareElements from "../../comparators/compareElements.mjs";
 
 const MAX_DATE: Date = new Date(8640000000000000);
+const MIN_DATE: Date = new Date(-8640000000000000);
 
 function xor (a: boolean, b: boolean): boolean {
     return ((a && !b) || (!a && b));
+}
+
+/**
+ * Return a Date whose *local* Y/M/D/h/m/s equal the civil time of `instant`
+ * in a fixed offset from GMT. Independent of the host timezone.
+ */
+function civilDateInFixedOffset (instant: Date, offsetHours: number): Date {
+    const shifted = new Date(instant.getTime() + (offsetHours * 3_600_000));
+    return new Date(
+        shifted.getUTCFullYear(),
+        shifted.getUTCMonth(),
+        shifted.getUTCDate(),
+        shifted.getUTCHours(),
+        shifted.getUTCMinutes(),
+        shifted.getUTCSeconds(),
+        shifted.getUTCMilliseconds(),
+    );
+}
+
+function inSpecTimeZone (instant: Date, timeZone: number | undefined): Date {
+    if (timeZone === undefined) {
+        return new Date(instant);
+    }
+    return civilDateInFixedOffset(instant, timeZone);
 }
 
 function instantInPeriod (period: Period, time: Date): boolean {
@@ -96,8 +120,8 @@ function periodContainsInterval (period: Period, start: Date, end: Date): boolea
 }
 
 /** True if `time` falls in one occurrence of `period` (clause 10.2). */
-function timeFallsWithinPeriod (time: Date, period: Period, timezone: number = 0): boolean {
-    const adjustedTime = addHours(time, -timezone);
+function timeFallsWithinPeriod (time: Date, period: Period, timezone: number | undefined): boolean {
+    const adjustedTime = inSpecTimeZone(time, timezone);
     const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedTime);
     if (!boundaries) {
         return false;
@@ -116,8 +140,12 @@ function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification):
             ? Number(spec.timeZone)
             : undefined;
         if ("absolute" in spec.time) {
-            const start = addHours(spec.time.absolute.startTime, -(timezone ?? 0));
-            const end = addHours(spec.time.absolute.endTime, -(timezone ?? 0));
+            const start = spec.time.absolute.startTime
+                ? addHours(spec.time.absolute.startTime, -(timezone ?? 0))
+                : MIN_DATE;
+            const end = spec.time.absolute.endTime
+                ? addHours(spec.time.absolute.endTime, -(timezone ?? 0))
+                : MAX_DATE;
             return (
                 (time.valueOf() >= start.valueOf())
                 && (time.valueOf() <= end.valueOf())
@@ -141,8 +169,12 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
             ? Number(spec.timeZone)
             : undefined;
         if ("absolute" in spec.time) {
-            const startSpec = addHours(spec.time.absolute.startTime, -(timezone ?? 0));
-            const endSpec = addHours(spec.time.absolute.endTime, -(timezone ?? 0));
+            const startSpec = spec.time.absolute.startTime
+                ? addHours(spec.time.absolute.startTime, -(timezone ?? 0))
+                : MIN_DATE;
+            const endSpec = spec.time.absolute.endTime
+                ? addHours(spec.time.absolute.endTime, -(timezone ?? 0))
+                : MAX_DATE;
             if (entirely) {
                 return (
                     (start.valueOf() >= startSpec.valueOf())
@@ -156,8 +188,8 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
             }
         } else if ("periodic" in spec.time) {
             return spec.time.periodic.some((period) => {
-                const adjustedStart = addHours(start, timezone ?? 0);
-                const adjustedEnd = addHours(end, timezone ?? 0);
+                const adjustedStart = inSpecTimeZone(start, timezone);
+                const adjustedEnd = inSpecTimeZone(end, timezone);
                 return entirely
                     ? periodContainsInterval(period, adjustedStart, adjustedEnd)
                     : periodOverlapsInterval(period, adjustedStart, adjustedEnd);
@@ -196,7 +228,7 @@ const evaluateTemporalContext: EqualityMatcher = (
     } else if ("between" in a) {
         return timeSpecificationContains(v, a.between.startTime, a.between.endTime ?? MAX_DATE, a.between.entirely);
     } else {
-        return compareElements(assertion, value);
+        return false;
     }
 }
 
