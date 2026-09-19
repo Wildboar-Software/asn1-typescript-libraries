@@ -1,72 +1,12 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
     TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AARQ_apdu_protocol_version, AARQ_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */, version1 /* IMPORTED_SHORT_NAMED_BIT */, _decode_AARQ_apdu_protocol_version, _encode_AARQ_apdu_protocol_version } from "../XDLMS-1/AARQ-apdu-protocol-version.ta.mjs";
+import { AARQ_apdu_protocol_version, AARQ_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */, _decode_AARQ_apdu_protocol_version, _encode_AARQ_apdu_protocol_version } from "../XDLMS-1/AARQ-apdu-protocol-version.ta.mjs";
 // export { AARQ_apdu_protocol_version, AARQ_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */, version1 /* IMPORTED_SHORT_NAMED_BIT */, _decode_AARQ_apdu_protocol_version, _encode_AARQ_apdu_protocol_version } from "../XDLMS-1/AARQ-apdu-protocol-version.ta.mjs";
 import { Application_context_name, _decode_Application_context_name, _encode_Application_context_name } from "../XDLMS-1/Application-context-name.ta.mjs";
 // export { Application_context_name, _decode_Application_context_name, _encode_Application_context_name } from "../XDLMS-1/Application-context-name.ta.mjs";
@@ -78,7 +18,7 @@ import { AP_invocation_identifier, _decode_AP_invocation_identifier, _encode_AP_
 // export { AP_invocation_identifier, _decode_AP_invocation_identifier, _encode_AP_invocation_identifier } from "../XDLMS-1/AP-invocation-identifier.ta.mjs";
 import { AE_invocation_identifier, _decode_AE_invocation_identifier, _encode_AE_invocation_identifier } from "../XDLMS-1/AE-invocation-identifier.ta.mjs";
 // export { AE_invocation_identifier, _decode_AE_invocation_identifier, _encode_AE_invocation_identifier } from "../XDLMS-1/AE-invocation-identifier.ta.mjs";
-import { ACSE_requirements, ACSE_requirements_authentication /* IMPORTED_LONG_NAMED_BIT */, authentication /* IMPORTED_SHORT_NAMED_BIT */, ACSE_requirements_aSO_context_negotiation /* IMPORTED_LONG_NAMED_BIT */, aSO_context_negotiation /* IMPORTED_SHORT_NAMED_BIT */, ACSE_requirements_higher_level_association /* IMPORTED_LONG_NAMED_BIT */, higher_level_association /* IMPORTED_SHORT_NAMED_BIT */, ACSE_requirements_nested_association /* IMPORTED_LONG_NAMED_BIT */, nested_association /* IMPORTED_SHORT_NAMED_BIT */, _decode_ACSE_requirements, _encode_ACSE_requirements } from "../XDLMS-1/ACSE-requirements.ta.mjs";
+import { ACSE_requirements, _decode_ACSE_requirements, _encode_ACSE_requirements } from "../XDLMS-1/ACSE-requirements.ta.mjs";
 // export { ACSE_requirements, ACSE_requirements_authentication /* IMPORTED_LONG_NAMED_BIT */, authentication /* IMPORTED_SHORT_NAMED_BIT */, ACSE_requirements_aSO_context_negotiation /* IMPORTED_LONG_NAMED_BIT */, aSO_context_negotiation /* IMPORTED_SHORT_NAMED_BIT */, ACSE_requirements_higher_level_association /* IMPORTED_LONG_NAMED_BIT */, higher_level_association /* IMPORTED_SHORT_NAMED_BIT */, ACSE_requirements_nested_association /* IMPORTED_LONG_NAMED_BIT */, nested_association /* IMPORTED_SHORT_NAMED_BIT */, _decode_ACSE_requirements, _encode_ACSE_requirements } from "../XDLMS-1/ACSE-requirements.ta.mjs";
 import { Mechanism_name, _decode_Mechanism_name, _encode_Mechanism_name } from "../XDLMS-1/Mechanism-name.ta.mjs";
 // export { Mechanism_name, _decode_Mechanism_name, _encode_Mechanism_name } from "../XDLMS-1/Mechanism-name.ta.mjs";
