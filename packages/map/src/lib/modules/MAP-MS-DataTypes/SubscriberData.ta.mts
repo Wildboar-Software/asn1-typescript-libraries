@@ -1,82 +1,22 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { Category, _decode_Category, _encode_Category } from "../MAP-MS-DataTypes/Category.ta.mjs";
-import { SubscriberStatus, _enum_for_SubscriberStatus, SubscriberStatus_serviceGranted /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceGranted /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriberStatus_operatorDeterminedBarring /* IMPORTED_LONG_ENUMERATION_ITEM */, operatorDeterminedBarring /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriberStatus, _encode_SubscriberStatus } from "../MAP-MS-DataTypes/SubscriberStatus.ta.mjs";
 import { BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
-import { TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
+import { Category, _decode_Category, _encode_Category } from "../MAP-MS-DataTypes/Category.ta.mjs";
 import { Ext_SS_InfoList, _decode_Ext_SS_InfoList, _encode_Ext_SS_InfoList } from "../MAP-MS-DataTypes/Ext-SS-InfoList.ta.mjs";
 import { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataTypes/ODB-Data.ta.mjs";
-import { ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP-MS-DataTypes/ZoneCodeList.ta.mjs";
+import { SubscriberStatus, _decode_SubscriberStatus, _encode_SubscriberStatus, _enum_for_SubscriberStatus } from "../MAP-MS-DataTypes/SubscriberStatus.ta.mjs";
+import { TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
 import { VBSDataList, _decode_VBSDataList, _encode_VBSDataList } from "../MAP-MS-DataTypes/VBSDataList.ta.mjs";
 import { VGCSDataList, _decode_VGCSDataList, _encode_VGCSDataList } from "../MAP-MS-DataTypes/VGCSDataList.ta.mjs";
 import { VlrCamelSubscriptionInfo, _decode_VlrCamelSubscriptionInfo, _encode_VlrCamelSubscriptionInfo } from "../MAP-MS-DataTypes/VlrCamelSubscriptionInfo.ta.mjs";
+import { ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP-MS-DataTypes/ZoneCodeList.ta.mjs";
 
 
 /**

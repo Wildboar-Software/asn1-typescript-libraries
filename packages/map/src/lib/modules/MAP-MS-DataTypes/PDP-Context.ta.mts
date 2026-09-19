@@ -1,91 +1,31 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
-import { PDP_Type, _decode_PDP_Type, _encode_PDP_Type } from "../MAP-MS-DataTypes/PDP-Type.ta.mjs";
-import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
-import { QoS_Subscribed, _decode_QoS_Subscribed, _encode_QoS_Subscribed } from "../MAP-MS-DataTypes/QoS-Subscribed.ta.mjs";
-import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Ext_QoS_Subscribed, _decode_Ext_QoS_Subscribed, _encode_Ext_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext-QoS-Subscribed.ta.mjs";
+import { AMBR, _decode_AMBR, _encode_AMBR } from "../MAP-MS-DataTypes/AMBR.ta.mjs";
+import { APN_OI_Replacement, _decode_APN_OI_Replacement, _encode_APN_OI_Replacement } from "../MAP-MS-DataTypes/APN-OI-Replacement.ta.mjs";
+import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
 import { ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
+import { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
+import { Ext_PDP_Type, _decode_Ext_PDP_Type, _encode_Ext_PDP_Type } from "../MAP-MS-DataTypes/Ext-PDP-Type.ta.mjs";
+import { Ext_QoS_Subscribed, _decode_Ext_QoS_Subscribed, _encode_Ext_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext-QoS-Subscribed.ta.mjs";
 import { Ext2_QoS_Subscribed, _decode_Ext2_QoS_Subscribed, _encode_Ext2_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext2-QoS-Subscribed.ta.mjs";
 import { Ext3_QoS_Subscribed, _decode_Ext3_QoS_Subscribed, _encode_Ext3_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext3-QoS-Subscribed.ta.mjs";
 import { Ext4_QoS_Subscribed, _decode_Ext4_QoS_Subscribed, _encode_Ext4_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext4-QoS-Subscribed.ta.mjs";
-import { APN_OI_Replacement, _decode_APN_OI_Replacement, _encode_APN_OI_Replacement } from "../MAP-MS-DataTypes/APN-OI-Replacement.ta.mjs";
-import { Ext_PDP_Type, _decode_Ext_PDP_Type, _encode_Ext_PDP_Type } from "../MAP-MS-DataTypes/Ext-PDP-Type.ta.mjs";
-import { AMBR, _decode_AMBR, _encode_AMBR } from "../MAP-MS-DataTypes/AMBR.ta.mjs";
-import { SIPTO_Permission, _enum_for_SIPTO_Permission, SIPTO_Permission_siptoAboveRanAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, siptoAboveRanAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, SIPTO_Permission_siptoAboveRanNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, siptoAboveRanNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SIPTO_Permission, _encode_SIPTO_Permission } from "../MAP-MS-DataTypes/SIPTO-Permission.ta.mjs";
-import { LIPA_Permission, _enum_for_LIPA_Permission, LIPA_Permission_lipaProhibited /* IMPORTED_LONG_ENUMERATION_ITEM */, lipaProhibited /* IMPORTED_SHORT_ENUMERATION_ITEM */, LIPA_Permission_lipaOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, lipaOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, LIPA_Permission_lipaConditional /* IMPORTED_LONG_ENUMERATION_ITEM */, lipaConditional /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LIPA_Permission, _encode_LIPA_Permission } from "../MAP-MS-DataTypes/LIPA-Permission.ta.mjs";
-import { Restoration_Priority, _decode_Restoration_Priority, _encode_Restoration_Priority } from "../MAP-MS-DataTypes/Restoration-Priority.ta.mjs";
-import { SIPTO_Local_Network_Permission, _enum_for_SIPTO_Local_Network_Permission, SIPTO_Local_Network_Permission_siptoAtLocalNetworkAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, siptoAtLocalNetworkAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, SIPTO_Local_Network_Permission_siptoAtLocalNetworkNotAllowed /* IMPORTED_LONG_ENUMERATION_ITEM */, siptoAtLocalNetworkNotAllowed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SIPTO_Local_Network_Permission, _encode_SIPTO_Local_Network_Permission } from "../MAP-MS-DataTypes/SIPTO-Local-Network-Permission.ta.mjs";
-import { NIDD_Mechanism, _enum_for_NIDD_Mechanism, NIDD_Mechanism_sGi_based_data_delivery /* IMPORTED_LONG_ENUMERATION_ITEM */, sGi_based_data_delivery /* IMPORTED_SHORT_ENUMERATION_ITEM */, NIDD_Mechanism_sCEF_based_data_delivery /* IMPORTED_LONG_ENUMERATION_ITEM */, sCEF_based_data_delivery /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NIDD_Mechanism, _encode_NIDD_Mechanism } from "../MAP-MS-DataTypes/NIDD-Mechanism.ta.mjs";
 import { FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
+import { LIPA_Permission, _decode_LIPA_Permission, _encode_LIPA_Permission, _enum_for_LIPA_Permission } from "../MAP-MS-DataTypes/LIPA-Permission.ta.mjs";
+import { NIDD_Mechanism, _decode_NIDD_Mechanism, _encode_NIDD_Mechanism, _enum_for_NIDD_Mechanism } from "../MAP-MS-DataTypes/NIDD-Mechanism.ta.mjs";
+import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
+import { PDP_Type, _decode_PDP_Type, _encode_PDP_Type } from "../MAP-MS-DataTypes/PDP-Type.ta.mjs";
+import { QoS_Subscribed, _decode_QoS_Subscribed, _encode_QoS_Subscribed } from "../MAP-MS-DataTypes/QoS-Subscribed.ta.mjs";
+import { Restoration_Priority, _decode_Restoration_Priority, _encode_Restoration_Priority } from "../MAP-MS-DataTypes/Restoration-Priority.ta.mjs";
+import { SIPTO_Local_Network_Permission, _decode_SIPTO_Local_Network_Permission, _encode_SIPTO_Local_Network_Permission, _enum_for_SIPTO_Local_Network_Permission } from "../MAP-MS-DataTypes/SIPTO-Local-Network-Permission.ta.mjs";
+import { SIPTO_Permission, _decode_SIPTO_Permission, _encode_SIPTO_Permission, _enum_for_SIPTO_Permission } from "../MAP-MS-DataTypes/SIPTO-Permission.ta.mjs";
 
 
 /**

@@ -1,89 +1,28 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { JobType, _enum_for_JobType, JobType_immediate_MDT_only /* IMPORTED_LONG_ENUMERATION_ITEM */, immediate_MDT_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, JobType_logged_MDT_only /* IMPORTED_LONG_ENUMERATION_ITEM */, logged_MDT_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, JobType_trace_only /* IMPORTED_LONG_ENUMERATION_ITEM */, trace_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, JobType_immediate_MDT_and_trace /* IMPORTED_LONG_ENUMERATION_ITEM */, immediate_MDT_and_trace /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_JobType, _encode_JobType } from "../MAP-OM-DataTypes/JobType.ta.mjs";
-import { AreaScope, _decode_AreaScope, _encode_AreaScope } from "../MAP-OM-DataTypes/AreaScope.ta.mjs";
-import { ListOfMeasurements, _decode_ListOfMeasurements, _encode_ListOfMeasurements } from "../MAP-OM-DataTypes/ListOfMeasurements.ta.mjs";
-import { ReportingTrigger, _decode_ReportingTrigger, _encode_ReportingTrigger } from "../MAP-OM-DataTypes/ReportingTrigger.ta.mjs";
-import { ReportInterval, _enum_for_ReportInterval, ReportInterval_umts250ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts250ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts500ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts500ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts1000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts1000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts2000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts2000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts3000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts3000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts4000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts4000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts6000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts6000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts8000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts8000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts12000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts12000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts16000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts16000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts20000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts20000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts24000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts24000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts28000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts28000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts32000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts32000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_umts64000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, umts64000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_lte120ms /* IMPORTED_LONG_ENUMERATION_ITEM */, lte120ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_lte240ms /* IMPORTED_LONG_ENUMERATION_ITEM */, lte240ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_lte480ms /* IMPORTED_LONG_ENUMERATION_ITEM */, lte480ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_lte640ms /* IMPORTED_LONG_ENUMERATION_ITEM */, lte640ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_lte1024ms /* IMPORTED_LONG_ENUMERATION_ITEM */, lte1024ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_lte2048ms /* IMPORTED_LONG_ENUMERATION_ITEM */, lte2048ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_lte5120ms /* IMPORTED_LONG_ENUMERATION_ITEM */, lte5120ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_lte10240ms /* IMPORTED_LONG_ENUMERATION_ITEM */, lte10240ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_lte1min /* IMPORTED_LONG_ENUMERATION_ITEM */, lte1min /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_lte6min /* IMPORTED_LONG_ENUMERATION_ITEM */, lte6min /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_lte12min /* IMPORTED_LONG_ENUMERATION_ITEM */, lte12min /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_lte30min /* IMPORTED_LONG_ENUMERATION_ITEM */, lte30min /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportInterval_lte60min /* IMPORTED_LONG_ENUMERATION_ITEM */, lte60min /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReportInterval, _encode_ReportInterval } from "../MAP-OM-DataTypes/ReportInterval.ta.mjs";
-import { ReportAmount, _enum_for_ReportAmount, ReportAmount_d1 /* IMPORTED_LONG_ENUMERATION_ITEM */, d1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportAmount_d2 /* IMPORTED_LONG_ENUMERATION_ITEM */, d2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportAmount_d4 /* IMPORTED_LONG_ENUMERATION_ITEM */, d4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportAmount_d8 /* IMPORTED_LONG_ENUMERATION_ITEM */, d8 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportAmount_d16 /* IMPORTED_LONG_ENUMERATION_ITEM */, d16 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportAmount_d32 /* IMPORTED_LONG_ENUMERATION_ITEM */, d32 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportAmount_d64 /* IMPORTED_LONG_ENUMERATION_ITEM */, d64 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportAmount_infinity /* IMPORTED_LONG_ENUMERATION_ITEM */, infinity /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReportAmount, _encode_ReportAmount } from "../MAP-OM-DataTypes/ReportAmount.ta.mjs";
-import { EventThresholdRSRP, _decode_EventThresholdRSRP, _encode_EventThresholdRSRP } from "../MAP-OM-DataTypes/EventThresholdRSRP.ta.mjs";
-import { EventThresholdRSRQ, _decode_EventThresholdRSRQ, _encode_EventThresholdRSRQ } from "../MAP-OM-DataTypes/EventThresholdRSRQ.ta.mjs";
-import { LoggingInterval, _enum_for_LoggingInterval, LoggingInterval_d1dot28 /* IMPORTED_LONG_ENUMERATION_ITEM */, d1dot28 /* IMPORTED_SHORT_ENUMERATION_ITEM */, LoggingInterval_d2dot56 /* IMPORTED_LONG_ENUMERATION_ITEM */, d2dot56 /* IMPORTED_SHORT_ENUMERATION_ITEM */, LoggingInterval_d5dot12 /* IMPORTED_LONG_ENUMERATION_ITEM */, d5dot12 /* IMPORTED_SHORT_ENUMERATION_ITEM */, LoggingInterval_d10dot24 /* IMPORTED_LONG_ENUMERATION_ITEM */, d10dot24 /* IMPORTED_SHORT_ENUMERATION_ITEM */, LoggingInterval_d20dot48 /* IMPORTED_LONG_ENUMERATION_ITEM */, d20dot48 /* IMPORTED_SHORT_ENUMERATION_ITEM */, LoggingInterval_d30dot72 /* IMPORTED_LONG_ENUMERATION_ITEM */, d30dot72 /* IMPORTED_SHORT_ENUMERATION_ITEM */, LoggingInterval_d40dot96 /* IMPORTED_LONG_ENUMERATION_ITEM */, d40dot96 /* IMPORTED_SHORT_ENUMERATION_ITEM */, LoggingInterval_d61dot44 /* IMPORTED_LONG_ENUMERATION_ITEM */, d61dot44 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LoggingInterval, _encode_LoggingInterval } from "../MAP-OM-DataTypes/LoggingInterval.ta.mjs";
-import { LoggingDuration, _enum_for_LoggingDuration, LoggingDuration_d600sec /* IMPORTED_LONG_ENUMERATION_ITEM */, d600sec /* IMPORTED_SHORT_ENUMERATION_ITEM */, LoggingDuration_d1200sec /* IMPORTED_LONG_ENUMERATION_ITEM */, d1200sec /* IMPORTED_SHORT_ENUMERATION_ITEM */, LoggingDuration_d2400sec /* IMPORTED_LONG_ENUMERATION_ITEM */, d2400sec /* IMPORTED_SHORT_ENUMERATION_ITEM */, LoggingDuration_d3600sec /* IMPORTED_LONG_ENUMERATION_ITEM */, d3600sec /* IMPORTED_SHORT_ENUMERATION_ITEM */, LoggingDuration_d5400sec /* IMPORTED_LONG_ENUMERATION_ITEM */, d5400sec /* IMPORTED_SHORT_ENUMERATION_ITEM */, LoggingDuration_d7200sec /* IMPORTED_LONG_ENUMERATION_ITEM */, d7200sec /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LoggingDuration, _encode_LoggingDuration } from "../MAP-OM-DataTypes/LoggingDuration.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { PeriodUMTS, _enum_for_PeriodUMTS, PeriodUMTS_d250ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d250ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d500ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d500ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d1000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d1000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d2000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d2000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d3000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d3000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d4000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d4000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d6000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d6000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d8000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d8000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d12000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d12000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d16000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d16000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d20000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d20000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d24000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d24000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d28000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d28000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d32000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d32000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodUMTS_d64000ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d64000ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PeriodUMTS, _encode_PeriodUMTS } from "../MAP-OM-DataTypes/PeriodUMTS.ta.mjs";
-import { PeriodLTE, _enum_for_PeriodLTE, PeriodLTE_d1024ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d1024ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodLTE_d1280ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d1280ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodLTE_d2048ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d2048ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodLTE_d2560ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d2560ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodLTE_d5120ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d5120ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodLTE_d10240ms /* IMPORTED_LONG_ENUMERATION_ITEM */, d10240ms /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodLTE_d1min /* IMPORTED_LONG_ENUMERATION_ITEM */, d1min /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PeriodLTE, _encode_PeriodLTE } from "../MAP-OM-DataTypes/PeriodLTE.ta.mjs";
-import { PositioningMethod, _decode_PositioningMethod, _encode_PositioningMethod } from "../MAP-OM-DataTypes/PositioningMethod.ta.mjs";
-import { MeasurementQuantity, _decode_MeasurementQuantity, _encode_MeasurementQuantity } from "../MAP-OM-DataTypes/MeasurementQuantity.ta.mjs";
+import { AreaScope, _decode_AreaScope, _encode_AreaScope } from "../MAP-OM-DataTypes/AreaScope.ta.mjs";
 import { EventThreshold1F, _decode_EventThreshold1F, _encode_EventThreshold1F } from "../MAP-OM-DataTypes/EventThreshold1F.ta.mjs";
 import { EventThreshold1I, _decode_EventThreshold1I, _encode_EventThreshold1I } from "../MAP-OM-DataTypes/EventThreshold1I.ta.mjs";
+import { EventThresholdRSRP, _decode_EventThresholdRSRP, _encode_EventThresholdRSRP } from "../MAP-OM-DataTypes/EventThresholdRSRP.ta.mjs";
+import { EventThresholdRSRQ, _decode_EventThresholdRSRQ, _encode_EventThresholdRSRQ } from "../MAP-OM-DataTypes/EventThresholdRSRQ.ta.mjs";
+import { JobType, _decode_JobType, _encode_JobType, _enum_for_JobType } from "../MAP-OM-DataTypes/JobType.ta.mjs";
+import { ListOfMeasurements, _decode_ListOfMeasurements, _encode_ListOfMeasurements } from "../MAP-OM-DataTypes/ListOfMeasurements.ta.mjs";
+import { LoggingDuration, _decode_LoggingDuration, _encode_LoggingDuration, _enum_for_LoggingDuration } from "../MAP-OM-DataTypes/LoggingDuration.ta.mjs";
+import { LoggingInterval, _decode_LoggingInterval, _encode_LoggingInterval, _enum_for_LoggingInterval } from "../MAP-OM-DataTypes/LoggingInterval.ta.mjs";
 import { MDT_Allowed_PLMNId_List, _decode_MDT_Allowed_PLMNId_List, _encode_MDT_Allowed_PLMNId_List } from "../MAP-OM-DataTypes/MDT-Allowed-PLMNId-List.ta.mjs";
+import { MeasurementQuantity, _decode_MeasurementQuantity, _encode_MeasurementQuantity } from "../MAP-OM-DataTypes/MeasurementQuantity.ta.mjs";
+import { PeriodLTE, _decode_PeriodLTE, _encode_PeriodLTE, _enum_for_PeriodLTE } from "../MAP-OM-DataTypes/PeriodLTE.ta.mjs";
+import { PeriodUMTS, _decode_PeriodUMTS, _encode_PeriodUMTS, _enum_for_PeriodUMTS } from "../MAP-OM-DataTypes/PeriodUMTS.ta.mjs";
+import { PositioningMethod, _decode_PositioningMethod, _encode_PositioningMethod } from "../MAP-OM-DataTypes/PositioningMethod.ta.mjs";
+import { ReportAmount, _decode_ReportAmount, _encode_ReportAmount, _enum_for_ReportAmount } from "../MAP-OM-DataTypes/ReportAmount.ta.mjs";
+import { ReportingTrigger, _decode_ReportingTrigger, _encode_ReportingTrigger } from "../MAP-OM-DataTypes/ReportingTrigger.ta.mjs";
+import { ReportInterval, _decode_ReportInterval, _encode_ReportInterval, _enum_for_ReportInterval } from "../MAP-OM-DataTypes/ReportInterval.ta.mjs";
 
 
 /**

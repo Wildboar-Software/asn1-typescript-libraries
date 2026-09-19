@@ -1,89 +1,29 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ExtendedRoutingInfo, _decode_ExtendedRoutingInfo, _encode_ExtendedRoutingInfo } from "../MAP-CH-DataTypes/ExtendedRoutingInfo.ta.mjs";
-import { CUG_CheckInfo, _decode_CUG_CheckInfo, _encode_CUG_CheckInfo } from "../MAP-CH-DataTypes/CUG-CheckInfo.ta.mjs";
-import { SubscriberInfo, _decode_SubscriberInfo, _encode_SubscriberInfo } from "../MAP-MS-DataTypes/SubscriberInfo.ta.mjs";
-import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
-import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { NAEA_PreferredCI, _decode_NAEA_PreferredCI, _encode_NAEA_PreferredCI } from "../MAP-CommonDataTypes/NAEA-PreferredCI.ta.mjs";
+import { AllowedServices, _decode_AllowedServices, _encode_AllowedServices } from "../MAP-CH-DataTypes/AllowedServices.ta.mjs";
 import { CCBS_Indicators, _decode_CCBS_Indicators, _encode_CCBS_Indicators } from "../MAP-CH-DataTypes/CCBS-Indicators.ta.mjs";
-import { NumberPortabilityStatus, _enum_for_NumberPortabilityStatus, NumberPortabilityStatus_notKnownToBePorted /* IMPORTED_LONG_ENUMERATION_ITEM */, notKnownToBePorted /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_ownNumberPortedOut /* IMPORTED_LONG_ENUMERATION_ITEM */, ownNumberPortedOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_foreignNumberPortedToForeignNetwork /* IMPORTED_LONG_ENUMERATION_ITEM */, foreignNumberPortedToForeignNetwork /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_ownNumberNotPortedOut /* IMPORTED_LONG_ENUMERATION_ITEM */, ownNumberNotPortedOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, NumberPortabilityStatus_foreignNumberPortedIn /* IMPORTED_LONG_ENUMERATION_ITEM */, foreignNumberPortedIn /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NumberPortabilityStatus, _encode_NumberPortabilityStatus } from "../MAP-MS-DataTypes/NumberPortabilityStatus.ta.mjs";
-import { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
-import { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
-import { OfferedCamel4CSIs, OfferedCamel4CSIs_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_psi_enhancements /* IMPORTED_LONG_NAMED_BIT */, psi_enhancements /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
+import { CUG_CheckInfo, _decode_CUG_CheckInfo, _encode_CUG_CheckInfo } from "../MAP-CH-DataTypes/CUG-CheckInfo.ta.mjs";
+import { ExtendedRoutingInfo, _decode_ExtendedRoutingInfo, _encode_ExtendedRoutingInfo } from "../MAP-CH-DataTypes/ExtendedRoutingInfo.ta.mjs";
 import { RoutingInfo, _decode_RoutingInfo, _encode_RoutingInfo } from "../MAP-CH-DataTypes/RoutingInfo.ta.mjs";
-import { AllowedServices, AllowedServices_firstServiceAllowed /* IMPORTED_LONG_NAMED_BIT */, firstServiceAllowed /* IMPORTED_SHORT_NAMED_BIT */, AllowedServices_secondServiceAllowed /* IMPORTED_LONG_NAMED_BIT */, secondServiceAllowed /* IMPORTED_SHORT_NAMED_BIT */, _decode_AllowedServices, _encode_AllowedServices } from "../MAP-CH-DataTypes/AllowedServices.ta.mjs";
-import { UnavailabilityCause, _enum_for_UnavailabilityCause, UnavailabilityCause_bearerServiceNotProvisioned /* IMPORTED_LONG_ENUMERATION_ITEM */, bearerServiceNotProvisioned /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_teleserviceNotProvisioned /* IMPORTED_LONG_ENUMERATION_ITEM */, teleserviceNotProvisioned /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_absentSubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, absentSubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_busySubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, busySubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_callBarred /* IMPORTED_LONG_ENUMERATION_ITEM */, callBarred /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnavailabilityCause_cug_Reject /* IMPORTED_LONG_ENUMERATION_ITEM */, cug_Reject /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UnavailabilityCause, _encode_UnavailabilityCause } from "../MAP-CH-DataTypes/UnavailabilityCause.ta.mjs";
+import { UnavailabilityCause, _decode_UnavailabilityCause, _encode_UnavailabilityCause, _enum_for_UnavailabilityCause } from "../MAP-CH-DataTypes/UnavailabilityCause.ta.mjs";
+import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 import { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
+import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { NAEA_PreferredCI, _decode_NAEA_PreferredCI, _encode_NAEA_PreferredCI } from "../MAP-CommonDataTypes/NAEA-PreferredCI.ta.mjs";
+import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
+import { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
+import { NumberPortabilityStatus, _decode_NumberPortabilityStatus, _encode_NumberPortabilityStatus, _enum_for_NumberPortabilityStatus } from "../MAP-MS-DataTypes/NumberPortabilityStatus.ta.mjs";
+import { OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
+import { SubscriberInfo, _decode_SubscriberInfo, _encode_SubscriberInfo } from "../MAP-MS-DataTypes/SubscriberInfo.ta.mjs";
+import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
+import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
 
 
 /**
