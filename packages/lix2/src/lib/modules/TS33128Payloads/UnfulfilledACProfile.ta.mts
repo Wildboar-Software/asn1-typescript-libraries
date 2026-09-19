@@ -1,0 +1,165 @@
+/* eslint-disable */
+import {
+    ASN1ConstructionError as _ConstructionError,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { ACID, _decode_ACID, _encode_ACID } from "../TS33128Payloads/ACID.ta.mjs";
+// export { ACID, _decode_ACID, _encode_ACID } from "../TS33128Payloads/ACID.ta.mjs";
+import { UnfulfilledACProfileReason, _decode_UnfulfilledACProfileReason, _encode_UnfulfilledACProfileReason, _enum_for_UnfulfilledACProfileReason } from "../TS33128Payloads/UnfulfilledACProfileReason.ta.mjs";
+// export { UnfulfilledACProfileReason, _enum_for_UnfulfilledACProfileReason, UnfulfilledACProfileReason_eASNotAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, eASNotAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnfulfilledACProfileReason_requirementsUnfulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requirementsUnfulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UnfulfilledACProfileReason, _encode_UnfulfilledACProfileReason } from "../TS33128Payloads/UnfulfilledACProfileReason.ta.mjs";
+
+
+/**
+ * @summary UnfulfilledACProfile
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * UnfulfilledACProfile ::= SEQUENCE
+ * {
+ *     aCID      [1] ACID,
+ *     reason    [2] UnfulfilledACProfileReason
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class UnfulfilledACProfile {
+    constructor (
+        /**
+         * @summary `aCID`.
+         * @public
+         * @readonly
+         */
+        readonly aCID: ACID,
+        /**
+         * @summary `reason`.
+         * @public
+         * @readonly
+         */
+        readonly reason: UnfulfilledACProfileReason
+    ) {}
+
+    /**
+     * @summary Restructures an object into a UnfulfilledACProfile
+     * @description
+     * 
+     * This takes an `object` and converts it to a `UnfulfilledACProfile`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `UnfulfilledACProfile`.
+     * @returns {UnfulfilledACProfile}
+     */
+    public static _from_object (_o: { [_K in keyof (UnfulfilledACProfile)]: (UnfulfilledACProfile)[_K] }): UnfulfilledACProfile {
+        return new UnfulfilledACProfile(_o.aCID, _o.reason);
+    }
+
+        /**
+         * @summary The enum used as the type of the component `reason`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_reason = _enum_for_UnfulfilledACProfileReason;
+}
+
+/**
+ * @summary The Leading Root Component Types of UnfulfilledACProfile
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_UnfulfilledACProfile: $.ComponentSpec[] = [
+    new $.ComponentSpec("aCID", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("reason", false, $.hasTag(_TagClass.context, 2))
+];
+
+/**
+ * @summary The Trailing Root Component Types of UnfulfilledACProfile
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_UnfulfilledACProfile: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of UnfulfilledACProfile
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_UnfulfilledACProfile: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_UnfulfilledACProfile: $.ASN1Decoder<UnfulfilledACProfile> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) UnfulfilledACProfile
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_UnfulfilledACProfile (el: _Element): UnfulfilledACProfile {
+    if (!_cached_decoder_for_UnfulfilledACProfile) { _cached_decoder_for_UnfulfilledACProfile = function (el: _Element): UnfulfilledACProfile {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError("UnfulfilledACProfile contained only " + sequence.length.toString() + " elements.");
+    }
+    sequence[0].name = "aCID";
+    sequence[1].name = "reason";
+    let aCID!: ACID;
+    let reason!: UnfulfilledACProfileReason;
+    aCID = $._decode_implicit<ACID>(() => _decode_ACID)(sequence[0]);
+    reason = $._decode_implicit<UnfulfilledACProfileReason>(() => _decode_UnfulfilledACProfileReason)(sequence[1]);
+    return new UnfulfilledACProfile(
+        aCID,
+        reason,
+
+    );
+}; }
+    return _cached_decoder_for_UnfulfilledACProfile(el);
+}
+
+let _cached_encoder_for_UnfulfilledACProfile: $.ASN1Encoder<UnfulfilledACProfile> | null = null;
+
+/**
+ * @summary Encodes a(n) UnfulfilledACProfile into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The UnfulfilledACProfile, encoded as an ASN.1 Element.
+ */
+export
+function _encode_UnfulfilledACProfile (value: UnfulfilledACProfile, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_UnfulfilledACProfile) { _cached_encoder_for_UnfulfilledACProfile = function (value: UnfulfilledACProfile, elGetter: $.ASN1Encoder<UnfulfilledACProfile>): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_ACID, $.BER)(value.aCID, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_UnfulfilledACProfileReason, $.BER)(value.reason, $.BER)
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_UnfulfilledACProfile(value, elGetter);
+}
+
+
+/* eslint-enable */

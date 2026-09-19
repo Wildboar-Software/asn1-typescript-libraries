@@ -1,0 +1,25 @@
+{
+  "name": "lix2",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/lix2/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/lix2",
+        "tsConfig": "packages/lix2/tsconfig.lib.json",
+        "packageJson": "packages/lix2/package.json",
+        "main": "packages/lix2/src/index.mts",
+        "assets": [
+          "packages/lix2/*.md",
+          "packages/lix2/LICENSE.txt",
+          "packages/lix2/package.json"
+        ]
+      }
+    }
+  }
+}
