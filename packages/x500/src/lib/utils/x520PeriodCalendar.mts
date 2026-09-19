@@ -56,18 +56,18 @@ import {
 const WEEK_STARTS_ON_SUNDAY = { weekStartsOn: 0 as const };
 
 /**
- * @summary Sunday 00:00 of the X.520 week containing `point`.
+ * @summary Sunday 00:00 of the Sunday-based week containing `point`.
  */
 export
-function startOfX520Week (point: Date): Date {
+function startOfSundayBasedWeek (point: Date): Date {
     return startOfWeek(point, WEEK_STARTS_ON_SUNDAY);
 }
 
 /**
- * @summary Saturday end-of-day of the X.520 week containing `point`.
+ * @summary Saturday end-of-day of the Sunday-based week containing `point`.
  */
 export
-function endOfX520Week (point: Date): Date {
+function endOfSundayBasedWeek (point: Date): Date {
     return endOfWeek(point, WEEK_STARTS_ON_SUNDAY);
 }
 
@@ -113,38 +113,38 @@ function countDaysOfYearInWeek (weekStart: Date, year: number): number {
  */
 export
 function startOfFirstX520WeekOfMonth (year: number, month: number): Date {
-    return startOfX520Week(new Date(year, month - 1, 4));
+    return startOfSundayBasedWeek(new Date(year, month - 1, 4));
 }
 
 function startOfFirstX520WeekOfYear (year: number): Date {
-    return startOfX520Week(new Date(year, 0, 4));
+    return startOfSundayBasedWeek(new Date(year, 0, 4));
 }
 
 /**
- * @summary How many X.520 weeks a calendar month has (4 or 5).
+ * @summary How many Sunday-based X.520 weeks a calendar month has (4 or 5).
  * @description
  *
  * Last week = last Sunday-start week with ≥4 days in the month. `Period`
  * week 5 still aliases this last week when the count is only 4 — that
- * alias is applied in `x520WeekIsListed`, not by returning 5 here.
+ * alias is applied in `isX520WeekListed`, not by returning 5 here.
  *
  * @param {number} year Calendar year.
  * @param {number} month 1-based month.
  * @returns {number} `4` or `5`.
  */
 export
-function x520WeeksInMonth (year: number, month: number): number {
+function sundayBasedWeeksInMonth (year: number, month: number): number {
     const first: Date = startOfFirstX520WeekOfMonth(year, month);
-    let lastStart: Date = startOfX520Week(endOfMonth(new Date(year, month - 1, 1)));
+    let lastStart: Date = startOfSundayBasedWeek(endOfMonth(new Date(year, month - 1, 1)));
     if (countDaysOfMonthInWeek(lastStart, year, month) < 4) {
         lastStart = subWeeks(lastStart, 1);
     }
     return differenceInCalendarWeeks(lastStart, first, WEEK_STARTS_ON_SUNDAY) + 1;
 }
 
-function x520WeeksInYear (year: number): number {
+function sundayBasedWeeksInYear (year: number): number {
     const first: Date = startOfFirstX520WeekOfYear(year);
-    let lastStart: Date = startOfX520Week(endOfYear(new Date(year, 0, 1)));
+    let lastStart: Date = startOfSundayBasedWeek(endOfYear(new Date(year, 0, 1)));
     if (countDaysOfYearInWeek(lastStart, year) < 4) {
         lastStart = subWeeks(lastStart, 1);
     }
@@ -157,10 +157,10 @@ interface X520WeekOfMonth {
     year: number;
     /** 1-based month that owns this week (Wednesday’s month). */
     month: number;
-    /** 1-based X.520 week of that month (1..lastWeek, never the 5-alias). */
+    /** 1-based X.520 week of that month (1..numberOfLastWeekOfMonth). */
     week: number;
-    /** Real last week number of that month (4 or 5). */
-    lastWeek: number;
+    /** 1-based week number of the last Sunday-based week of that month (4 or 5). */
+    numberOfLastWeekOfMonth: number;
 }
 
 /**
@@ -178,7 +178,7 @@ interface X520WeekOfMonth {
  */
 export
 function x520WeekOfMonth (point: Date): X520WeekOfMonth {
-    const weekStart: Date = startOfX520Week(point);
+    const weekStart: Date = startOfSundayBasedWeek(point);
     // Wednesday = Sunday + 3 = the day that puts ≥4 days on this side of
     // the month boundary.
     const wednesday: Date = addDays(weekStart, 3);
@@ -194,7 +194,7 @@ function x520WeekOfMonth (point: Date): X520WeekOfMonth {
         year,
         month,
         week,
-        lastWeek: x520WeeksInMonth(year, month),
+        numberOfLastWeekOfMonth: sundayBasedWeeksInMonth(year, month),
     };
 }
 
@@ -202,10 +202,10 @@ export
 interface X520WeekOfYear {
     /** Week-numbering year (may differ from `point.getFullYear()`). */
     year: number;
-    /** Week 1..lastWeek (52 or 53). */
+    /** Week 1..numberOfLastWeekOfYear (52 or 53). */
     week: number;
-    /** 52 or 53; `Period` week 53 aliases this when it is 52. */
-    lastWeek: number;
+    /** 1-based week number of the last Sunday-based week of that year (52 or 53). */
+    numberOfLastWeekOfYear: number;
 }
 
 /**
@@ -215,14 +215,14 @@ interface X520WeekOfYear {
  * Same four-day rule as weeks of the month, applied to the calendar year.
  * 1 Jan can fall in week 52/53 of the previous year. Week 53 in a
  * `Period` aliases the last real week even when that year has only 52
- * weeks (`x520WeekIsListed`).
+ * weeks (`isX520WeekListed`).
  *
  * @param {Date} point Local instant.
  * @returns {X520WeekOfYear} Week-numbering year, week, and weeks in that year.
  */
 export
 function x520WeekOfYear (point: Date): X520WeekOfYear {
-    const weekStart: Date = startOfX520Week(point);
+    const weekStart: Date = startOfSundayBasedWeek(point);
     const wednesday: Date = addDays(weekStart, 3);
     const year: number = wednesday.getFullYear();
     const first: Date = startOfFirstX520WeekOfYear(year);
@@ -234,7 +234,7 @@ function x520WeekOfYear (point: Date): X520WeekOfYear {
     return {
         year,
         week,
-        lastWeek: x520WeeksInYear(year),
+        numberOfLastWeekOfYear: sundayBasedWeeksInYear(year),
     };
 }
 
@@ -250,24 +250,24 @@ function x520WeekOfYear (point: Date): X520WeekOfYear {
  *
  * @param {Set<number>} whitelist Week numbers from `intWeek` / `bitWeek` / `allWeeks`.
  * @param {number} week The X.520 week of the month or year.
- * @param {number} lastWeek Last real week of that month (4–5) or year (52–53).
+ * @param {number} numberOfLastWeek Last real week of that month (4–5) or year (52–53).
  * @param {boolean} weekOfMonth `true` if `Period.months` is present.
  * @returns {boolean} `true` if the week is listed, including 5/53 last-week aliases.
  */
 export
-function x520WeekIsListed (
+function isX520WeekListed (
     whitelist: Set<number>,
     week: number,
-    lastWeek: number,
+    numberOfLastWeek: number,
     weekOfMonth: boolean,
 ): boolean {
     if (whitelist.has(week)) {
         return true;
     }
-    if (weekOfMonth && whitelist.has(5) && (week === lastWeek)) {
+    if (weekOfMonth && whitelist.has(5) && (week === numberOfLastWeek)) {
         return true;
     }
-    if (!weekOfMonth && whitelist.has(53) && (week === lastWeek)) {
+    if (!weekOfMonth && whitelist.has(53) && (week === numberOfLastWeek)) {
         return true;
     }
     return false;

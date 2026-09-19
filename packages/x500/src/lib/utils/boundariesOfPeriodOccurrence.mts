@@ -23,9 +23,9 @@ import getDayOfMonthWhitelistFromXDayOf from "./getDayOfMonthWhitelistFromXDayOf
 import dateIsBetweenDayTimeBand from "./dateIsBetweenDayTimeBand.mjs";
 import destructureDateIntoPeriodProperties from "./destructureDateIntoPeriodProperties.mjs";
 import {
-    endOfX520Week,
-    startOfX520Week,
-    x520WeekIsListed,
+    endOfSundayBasedWeek,
+    startOfSundayBasedWeek,
+    isX520WeekListed,
 } from "./x520PeriodCalendar.mjs";
 
 const MAX_DAY_OF_WEEK = 7;
@@ -46,13 +46,13 @@ const MAX_WEEK_SPAN_ITERS = 60;
 function periodAllowsWeek (
     whitelist: Set<number> | null,
     week: number,
-    lastWeek: number,
+    numberOfLastWeek: number,
     ofMonth: boolean,
 ): boolean {
     if (!whitelist) {
         return true;
     }
-    return x520WeekIsListed(whitelist, week, lastWeek, ofMonth);
+    return isX520WeekListed(whitelist, week, numberOfLastWeek, ofMonth);
 }
 
 const ALL_WEEKS_IN_YEAR: Set<number> = new Set(Array(53).fill(0).map((_, i) => (i + 1)));
@@ -121,7 +121,8 @@ const ALL_MONTHS_IN_YEAR: Set<number> = new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
  *
  * When `weeks` is present, a week is a Sunday–Saturday block (X.520 clause
  * 10.2’s “≥4 days of this month/year” rule; see x520PeriodCalendar.mts).
- * Occurrence bounds are therefore `startOfX520Week` … `endOfX520Week`, not
+ * Occurrence bounds are therefore `startOfSundayBasedWeek` …
+ * `endOfSundayBasedWeek`, not
  * `addWeeks(startOfMonth, n)`. Adjacent-week walking re-runs
  * `destructureDateIntoPeriodProperties` so week 5/53 aliases and
  * Wednesday-owned months stay correct across boundaries.
@@ -223,7 +224,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         month: pointMonth,
         week: pointWeek,
         day: pointDay,
-        lastWeek: pointLastWeek,
+        numberOfLastWeek: pointLastWeek,
     } = destructureDateIntoPeriodProperties(period, point);
     const applicableTimeband: DayTimeBand | undefined = period.timesOfDay
         ? period.timesOfDay.find((tod): boolean => dateIsBetweenDayTimeBand(tod, point))
@@ -264,7 +265,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                 month: yesterMonth,
                 week: yesterWeek,
                 day: yesterDay,
-                lastWeek: yesterLastWeek,
+                numberOfLastWeek: yesterLastWeek,
             } = destructureDateIntoPeriodProperties(period, prev);
             const previousDayIsPermitted = (
                 (!whitelistedDays || whitelistedDays.has(yesterDay))
@@ -309,7 +310,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                 month: nextMonth,
                 week: nextWeek,
                 day: nextDay,
-                lastWeek: nextLastWeek,
+                numberOfLastWeek: nextLastWeek,
             } = destructureDateIntoPeriodProperties(period, next);
             const nextDayIsPermitted = (
                 (!whitelistedDays || whitelistedDays.has(nextDay))
@@ -363,7 +364,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     year: candYear,
                     month: candMonth,
                     week: candWeek,
-                    lastWeek: candLastWeek,
+                    numberOfLastWeek: candLastWeek,
                 } = destructureDateIntoPeriodProperties(period, candidate);
                 if (
                     !periodAllowsWeek(whitelistedWeeks, candWeek, candLastWeek, weeksAreOfMonth)
@@ -386,7 +387,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     year: candYear,
                     month: candMonth,
                     week: candWeek,
-                    lastWeek: candLastWeek,
+                    numberOfLastWeek: candLastWeek,
                 } = destructureDateIntoPeriodProperties(period, candidate);
                 if (
                     !periodAllowsWeek(whitelistedWeeks, candWeek, candLastWeek, weeksAreOfMonth)
@@ -406,7 +407,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     year: yesterYear,
                     month: yesterMonth,
                     week: yesterWeek,
-                    lastWeek: yesterLastWeek,
+                    numberOfLastWeek: yesterLastWeek,
                 } = destructureDateIntoPeriodProperties(period, prev);
                 const previousWeekPermitted = (
                     periodAllowsWeek(whitelistedWeeks, yesterWeek, yesterLastWeek, weeksAreOfMonth)
@@ -457,7 +458,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                     year: nextYear,
                     month: nextMonth,
                     week: nextWeek,
-                    lastWeek: nextLastWeek,
+                    numberOfLastWeek: nextLastWeek,
                 } = destructureDateIntoPeriodProperties(period, next);
                 const nextWeekPermitted = (
                     periodAllowsWeek(whitelistedWeeks, nextWeek, nextLastWeek, weeksAreOfMonth)
@@ -522,18 +523,18 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
         // One X.520 week is Sunday 00:00 .. Saturday end-of-day in local time,
         // not a 7-day slice from the 1st of the calendar month/year (the old
         // ceil(date/7) alignment).
-        min = startOfX520Week(point);
-        max = endOfX520Week(point);
+        min = startOfSundayBasedWeek(point);
+        max = endOfSundayBasedWeek(point);
         // Expand through neighbouring weeks while they remain permitted.
         // Re-destructure each candidate: week numbers are not a flat 1..5
-        // sequence across months, and week 5/53 may alias lastWeek.
+        // sequence across months, and week 5/53 may alias numberOfLastWeek.
         for (let n: number = 0; n < MAX_WEEK_SPAN_ITERS; n++) {
             const prev: Date = subWeeks(min, 1);
             const {
                 year: prevYear,
                 month: prevMonth,
                 week: prevWeek,
-                lastWeek: prevLastWeek,
+                numberOfLastWeek: prevLastWeek,
             } = destructureDateIntoPeriodProperties(period, prev);
             if (
                 !periodAllowsWeek(whitelistedWeeks, prevWeek, prevLastWeek, weeksAreOfMonth)
@@ -542,7 +543,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
             ) {
                 break;
             }
-            min = startOfX520Week(prev);
+            min = startOfSundayBasedWeek(prev);
         }
         for (let n: number = 0; n < MAX_WEEK_SPAN_ITERS; n++) {
             const next: Date = addWeeks(max, 1);
@@ -550,7 +551,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
                 year: nextYear,
                 month: nextMonth,
                 week: nextWeek,
-                lastWeek: nextLastWeek,
+                numberOfLastWeek: nextLastWeek,
             } = destructureDateIntoPeriodProperties(period, next);
             if (
                 !periodAllowsWeek(whitelistedWeeks, nextWeek, nextLastWeek, weeksAreOfMonth)
@@ -559,7 +560,7 @@ function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Dat
             ) {
                 break;
             }
-            max = endOfX520Week(next);
+            max = endOfSundayBasedWeek(next);
         }
     } else if (whitelistedMonths) {
         min = startOfMonth(point);

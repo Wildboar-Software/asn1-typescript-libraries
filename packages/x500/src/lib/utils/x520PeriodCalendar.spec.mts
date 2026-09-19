@@ -1,11 +1,11 @@
 import {
     countDaysOfMonthInWeek,
     startOfFirstX520WeekOfMonth,
-    startOfX520Week,
-    x520WeekIsListed,
+    startOfSundayBasedWeek,
+    isX520WeekListed,
     x520WeekOfMonth,
     x520WeekOfYear,
-    x520WeeksInMonth,
+    sundayBasedWeeksInMonth,
 } from "./x520PeriodCalendar.mjs";
 
 describe("x520PeriodCalendar", () => {
@@ -24,28 +24,28 @@ describe("x520PeriodCalendar", () => {
         const owned = x520WeekOfMonth(new Date(2021, 0, 1, 12));
         expect(owned.year).toBe(2020);
         expect(owned.month).toBe(12);
-        expect(owned.week).toBe(owned.lastWeek);
-        expect(countDaysOfMonthInWeek(startOfX520Week(new Date(2021, 0, 1)), 2021, 1)).toBe(2);
+        expect(owned.week).toBe(owned.numberOfLastWeekOfMonth);
+        expect(countDaysOfMonthInWeek(startOfSundayBasedWeek(new Date(2021, 0, 1)), 2021, 1)).toBe(2);
     });
 
     it("treats week 5 as an alias for the last week of a 4-week February", () => {
         // Feb 2021 last X.520 week = Sun 21 – Sat 27 (= 4). 28 Feb is March.
-        expect(x520WeeksInMonth(2021, 2)).toBe(4);
+        expect(sundayBasedWeeksInMonth(2021, 2)).toBe(4);
         const last = x520WeekOfMonth(new Date(2021, 1, 27, 12));
         expect(last.month).toBe(2);
         expect(last.week).toBe(4);
-        expect(x520WeekIsListed(new Set([5]), last.week, last.lastWeek, true)).toBe(true);
-        expect(x520WeekIsListed(new Set([5]), 1, last.lastWeek, true)).toBe(false);
+        expect(isX520WeekListed(new Set([5]), last.week, last.numberOfLastWeekOfMonth, true)).toBe(true);
+        expect(isX520WeekListed(new Set([5]), 1, last.numberOfLastWeekOfMonth, true)).toBe(false);
     });
 
     it("numbers weeks of the year with the four-day rule and aliases 53 to the last week", () => {
         const newYears = x520WeekOfYear(new Date(2021, 0, 1, 12));
         expect(newYears.year).toBe(2020);
-        expect(newYears.week).toBe(newYears.lastWeek);
+        expect(newYears.week).toBe(newYears.numberOfLastWeekOfYear);
         const late2021 = x520WeekOfYear(new Date(2021, 11, 28, 12));
         expect(late2021.year).toBe(2021);
-        expect(late2021.week).toBe(late2021.lastWeek);
-        expect(x520WeekIsListed(new Set([53]), late2021.week, late2021.lastWeek, false)).toBe(true);
-        expect(x520WeekIsListed(new Set([53]), late2021.week - 1, late2021.lastWeek, false)).toBe(false);
+        expect(late2021.week).toBe(late2021.numberOfLastWeekOfYear);
+        expect(isX520WeekListed(new Set([53]), late2021.week, late2021.numberOfLastWeekOfYear, false)).toBe(true);
+        expect(isX520WeekListed(new Set([53]), late2021.week - 1, late2021.numberOfLastWeekOfYear, false)).toBe(false);
     });
 });

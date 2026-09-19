@@ -17,11 +17,11 @@ interface DateDestructuredIntoPeriodMembers {
     week: number,
     day: number,
     /**
-     * Real last X.520 week of the owning month (4–5) or year (52–53).
-     * 0 when `weeks` is not used. Needed so week 5/53 can alias that last
-     * week during matching.
+     * 1-based week number of the last Sunday-based week of the owning
+     * month (4–5) or year (52–53). 0 when `weeks` is not used. Needed so
+     * week 5/53 can alias that last week during matching.
      */
-    lastWeek: number,
+    numberOfLastWeek: number,
 }
 
 /**
@@ -56,7 +56,8 @@ function destructureDateIntoPeriodProperties (period: Period, point: Date): Date
     })();
 
     // Weeks of the month: owning month can differ from the calendar month of
-    // `point` (Wednesday / ≥4-day rule). lastWeek lets week 5 mean “last week”.
+    // `point` (Wednesday / ≥4-day rule). numberOfLastWeek lets week 5 mean
+    // “last week”.
     if (!usesDayOf && period.weeks && period.months) {
         const ofMonth = x520WeekOfMonth(point);
         return {
@@ -64,7 +65,7 @@ function destructureDateIntoPeriodProperties (period: Period, point: Date): Date
             month: ofMonth.month,
             week: ofMonth.week,
             day,
-            lastWeek: ofMonth.lastWeek,
+            numberOfLastWeek: ofMonth.numberOfLastWeekOfMonth,
         };
     }
 
@@ -79,7 +80,7 @@ function destructureDateIntoPeriodProperties (period: Period, point: Date): Date
             month: point.getMonth() + 1,
             week: ofYear.week,
             day,
-            lastWeek: ofYear.lastWeek,
+            numberOfLastWeek: ofYear.numberOfLastWeekOfYear,
         };
     }
 
@@ -90,7 +91,7 @@ function destructureDateIntoPeriodProperties (period: Period, point: Date): Date
         month: point.getMonth() + 1,
         week: 0,
         day,
-        lastWeek: 0,
+        numberOfLastWeek: 0,
     };
 }
 
