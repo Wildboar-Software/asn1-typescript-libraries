@@ -1,0 +1,15 @@
+{
+  "name": "@wildboar/charging",
+  "version": "0.1.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ]
+  }
+}
