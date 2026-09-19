@@ -1,0 +1,25 @@
+{
+  "name": "glow",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/glow/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/glow",
+        "tsConfig": "packages/glow/tsconfig.lib.json",
+        "packageJson": "packages/glow/package.json",
+        "main": "packages/glow/src/index.mts",
+        "assets": [
+          "packages/glow/*.md",
+          "packages/glow/LICENSE.txt",
+          "packages/glow/package.json"
+        ]
+      }
+    }
+  }
+}
