@@ -1,0 +1,25 @@
+{
+  "name": "nist-csor",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/nist-csor/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/nist-csor",
+        "tsConfig": "packages/nist-csor/tsconfig.lib.json",
+        "packageJson": "packages/nist-csor/package.json",
+        "main": "packages/nist-csor/src/index.mts",
+        "assets": [
+          "packages/nist-csor/*.md",
+          "packages/nist-csor/LICENSE.txt",
+          "packages/nist-csor/package.json"
+        ]
+      }
+    }
+  }
+}
