@@ -50,7 +50,7 @@ function inSpecTimeZone (instant: Date, timeZone: number | undefined): Date {
  * assertions use `MAX_DATE`; each step is one occurrence, so a daily
  * band could otherwise iterate without bound.
  */
-const MAX_ENTIRELY_COVER_STEPS = 100_000;
+const MAX_ENTIRELY_COVER_STEPS = 1000;
 
 function secondAfter (instant: Date): Date {
     return new Date(instant.valueOf() + 1000);
@@ -100,14 +100,7 @@ function periodsEntirelyCoverInterval (periods: Period[], start: Date, end: Date
             // No period covered that instant (a hole in the union).
             return false;
         }
-        if (farthestEnd.valueOf() >= end.valueOf()) {
-            return true;
-        }
-        const next: Date = secondAfter(farthestEnd);
-        if (next.valueOf() <= t.valueOf()) {
-            return false;
-        }
-        t = next;
+        t = secondAfter(farthestEnd);
     }
     return true;
 }
