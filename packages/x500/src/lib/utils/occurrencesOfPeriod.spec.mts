@@ -40,6 +40,58 @@ describe("occurrencesOfPeriod / Period.occurrences", () => {
         expect(pairs[0][0].valueOf()).toBeLessThan(start.valueOf());
     });
 
+    it("jumps a year gap to the first allowed month, not January", () => {
+        const period = new Period(
+            undefined,
+            undefined,
+            undefined,
+            { intMonth: [ 6 ] },
+            [ 2016, 2018 ],
+        );
+        const start = new Date(2017, 2, 15, 12, 0, 0);
+        const end = new Date(2018, 11, 31, 23, 59, 59);
+        const pairs = Array.from(period.occurrences(start, end));
+        expect(pairs).toHaveLength(1);
+        expect(pairYearMonthDay(pairs[0])).toEqual({
+            start: [ 2018, 5, 1, 0, 0, 0 ],
+            end: [ 2018, 5, 30, 23, 59, 59 ],
+        });
+        expect(pairs[0][0].getMonth()).toBe(5);
+    });
+
+    it("wraps past the last allowed month to the first allowed month of the next listed year", () => {
+        const period = new Period(
+            undefined,
+            undefined,
+            undefined,
+            { intMonth: [ 6 ] },
+            [ 2017, 2018 ],
+        );
+        const start = new Date(2017, 6, 15, 12, 0, 0);
+        const end = new Date(2018, 11, 31, 23, 59, 59);
+        const pairs = Array.from(period.occurrences(start, end));
+        expect(pairs).toHaveLength(1);
+        expect(pairYearMonthDay(pairs[0])).toEqual({
+            start: [ 2018, 5, 1, 0, 0, 0 ],
+            end: [ 2018, 5, 30, 23, 59, 59 ],
+        });
+    });
+
+    it("still lands on January when the next year allows month 1", () => {
+        const period = new Period(
+            undefined,
+            undefined,
+            undefined,
+            { intMonth: [ 1, 6 ] },
+            [ 2018 ],
+        );
+        const start = new Date(2017, 2, 15, 12, 0, 0);
+        const end = new Date(2018, 11, 31, 23, 59, 59);
+        const pairs = Array.from(period.occurrences(start, end));
+        expect(pairs.length).toBeGreaterThanOrEqual(1);
+        expect(pairYearMonthDay(pairs[0]).start).toEqual([ 2018, 0, 1, 0, 0, 0 ]);
+    });
+
     it("yields the next occurrence when startInstant is in a gap", () => {
         const period = new Period(
             undefined,

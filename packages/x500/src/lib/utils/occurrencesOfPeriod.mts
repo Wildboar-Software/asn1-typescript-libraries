@@ -52,7 +52,7 @@ interface PeriodWhitelists {
  * @description
  *
  * Jumps a cursor out of a year that `Period.years` does not list,
- * instead of walking day by day to 1 January of the next listed year.
+ * instead of walking day by day to the next listed year.
  *
  * @param {Set<number>} years Listed `Period.years` values.
  * @param {number} afterYear Calendar year that is not listed (or already
@@ -71,6 +71,32 @@ function nextListedYear (
         if (year > afterYear) {
             if ((best === null) || (year < best)) {
                 best = year;
+            }
+        }
+    }
+    return best;
+}
+
+/**
+ * @summary Smallest 1-based month in `months`.
+ * @description
+ *
+ * Used when a year jump must land on the first allowed month of that
+ * year. `Period.months` is a SET, so January is not implied.
+ *
+ * @param {Set<number>} months Listed `intMonth` / `bitMonth` /
+ *  `allMonths` values (1 = January).
+ * @returns {number | null} Smallest month in `1..12`, or `null` if
+ *  none are valid.
+ * @function
+ * @author Cursor Grok 4.6
+ */
+function earliestListedMonth (months: Set<number>): number | null {
+    let best: number | null = null;
+    for (const month of months) {
+        if ((month >= 1) && (month <= 12)) {
+            if ((best === null) || (month < best)) {
+                best = month;
             }
         }
     }
@@ -302,8 +328,10 @@ function firstStartOnAllowedDay (
  *
  * If the cursor's year or month is not in the whitelist, return the
  * first instant of the next listed year/month that is still within
- * the window. Year 10000 and later is out of GeneralizedTime. If the
- * cursor is already allowed, it is returned unchanged.
+ * the window. A year jump uses the earliest listed month of that
+ * year (January only if `months` allows it, or is omitted). Year
+ * 10000 and later is out of GeneralizedTime. If the cursor is
+ * already allowed, it is returned unchanged.
  *
  * @param {Date} cursor Current walk position (local).
  * @param {PeriodWhitelists} decoded Output of {@link decodeWhitelists}.
@@ -332,13 +360,22 @@ function skipDisallowedYearMonth (
         ) {
             return null;
         }
-        return new Date(nextYear, 0, 1);
+        const firstMonth = decoded.months
+            ? earliestListedMonth(decoded.months)
+            : 1;
+        if (firstMonth === null) {
+            return null;
+        }
+        const candidate = new Date(nextYear, firstMonth - 1, 1);
+        if (candidate.valueOf() > endInstant.valueOf()) {
+            return null;
+        }
+        return candidate;
     }
     if (decoded.months && !decoded.months.has(month)) {
         for (let n = 0; n < 24; n++) {
             month += 1;
             if (month > 12) {
-                month = 1;
                 year += 1;
                 if (decoded.years && !decoded.years.has(year)) {
                     const nextYear = nextListedYear(decoded.years, year - 1);
@@ -349,8 +386,12 @@ function skipDisallowedYearMonth (
                         return null;
                     }
                     year = nextYear;
-                    month = 1;
                 }
+                const firstMonth = earliestListedMonth(decoded.months);
+                if (firstMonth === null) {
+                    return null;
+                }
+                month = firstMonth;
             }
             if (year > 9999) {
                 return null;
