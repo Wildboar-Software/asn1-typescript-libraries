@@ -13,7 +13,6 @@ import type {
 } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { addHours } from "date-fns";
 import boundariesOfPeriodOccurrence from "../../utils/boundariesOfPeriodOccurrence.mjs";
-import dateIsBetweenDayTimeBand from "../../utils/dateIsBetweenDayTimeBand.mjs";
 
 const MAX_DATE: Date = new Date(8640000000000000);
 const MIN_DATE: Date = new Date(-8640000000000000);
@@ -53,63 +52,28 @@ function inSpecTimeZone (instant: Date, timeZone: number | undefined): Date {
  */
 const MAX_ENTIRELY_COVER_STEPS = 100_000;
 
-function instantAfter (instant: Date): Date {
-    return new Date(instant.valueOf() + 1);
+function secondAfter (instant: Date): Date {
+    return new Date(instant.valueOf() + 1000);
 }
 
 /**
  * Latest inclusive end among occurrences (any `Period` in the SET) that
  * contain `t`. `null` if `t` is a hole in the union.
  *
- * A single `Period` may have several `DayTimeBand`s; occurrence bounds
- * use only the first matching band, so this also considers every band
- * that contains `t` on that civil day.
+ * Occurrence bounds already include the `DayTimeBand` that contains
+ * `t`. Later bands of the same `Period` are found on the next walk
+ * step (X.520 `DayTime` is second-precision).
  */
 function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null {
     let farthest: Date | null = null;
-
-    const consider = (upper: Date, lower: Date): void => {
-        if (
-            (t.valueOf() < lower.valueOf())
-            || (t.valueOf() > upper.valueOf())
-        ) {
-            return;
-        }
-        if ((farthest === null) || (upper.valueOf() > farthest.valueOf())) {
-            farthest = upper;
-        }
-    };
-
     for (const period of periods) {
         const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, t);
         if (!boundaries) {
             continue;
         }
-        consider(boundaries[1], boundaries[0]);
-        if (!period.timesOfDay?.length) {
-            continue;
-        }
-        for (const band of period.timesOfDay) {
-            if (!dateIsBetweenDayTimeBand(band, t)) {
-                continue;
-            }
-            const lower = new Date(
-                t.getFullYear(),
-                t.getMonth(),
-                t.getDate(),
-                Number(band.startDayTime?.hour ?? 0),
-                Number(band.startDayTime?.minute ?? 0),
-                Number(band.startDayTime?.second ?? 0),
-            );
-            const upper = new Date(
-                t.getFullYear(),
-                t.getMonth(),
-                t.getDate(),
-                Number(band.endDayTime?.hour ?? 23),
-                Number(band.endDayTime?.minute ?? 59),
-                Number(band.endDayTime?.second ?? 59),
-            );
-            consider(upper, lower);
+        const upper: Date = boundaries[1];
+        if ((farthest === null) || (upper.valueOf() > farthest.valueOf())) {
+            farthest = upper;
         }
     }
     return farthest;
@@ -118,7 +82,7 @@ function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null
 /**
  * `entirely` TRUE: `[start, end]` ⊆ union of all `Period` occurrences
  * (clause 10.2). Walk `t` from `start`; at each `t` take the farthest
- * covering occurrence end and continue at the next instant.
+ * covering occurrence end and continue at the next second.
  */
 function periodsEntirelyCoverInterval (periods: Period[], start: Date, end: Date): boolean {
     if (start.valueOf() > end.valueOf()) {
@@ -138,7 +102,7 @@ function periodsEntirelyCoverInterval (periods: Period[], start: Date, end: Date
         if (farthestEnd.valueOf() >= end.valueOf()) {
             return true;
         }
-        const next: Date = instantAfter(farthestEnd);
+        const next: Date = secondAfter(farthestEnd);
         if (next.valueOf() <= t.valueOf()) {
             return false;
         }

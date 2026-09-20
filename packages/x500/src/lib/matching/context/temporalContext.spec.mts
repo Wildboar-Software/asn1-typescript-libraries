@@ -612,6 +612,38 @@ describe("evaluateTemporalContext", () => {
         )).toBe(true);
     });
 
+    it("matches between+entirely across DayTimeBands that meet at adjacent seconds", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 4, 10, 9, 0, 0),
+                new Date(2021, 4, 10, 17, 0, 0),
+                TRUE,
+            ),
+        };
+        const value = new TimeSpecification(
+            {
+                periodic: [
+                    new Period(
+                        [
+                            new DayTimeBand(
+                                new DayTime(9, 0, 0),
+                                new DayTime(12, 0, 0),
+                            ),
+                            new DayTimeBand(
+                                new DayTime(12, 0, 1),
+                                new DayTime(17, 0, 0),
+                            ),
+                        ],
+                    ),
+                ],
+            },
+        );
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(true);
+    });
+
     it("matches between+entirely across abutting DayTimeBands from two Periods", () => {
         const assertion: TimeAssertion = {
             between: new TimeAssertion_between(
