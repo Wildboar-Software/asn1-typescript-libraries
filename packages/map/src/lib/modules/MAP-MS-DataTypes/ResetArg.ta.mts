@@ -1,77 +1,16 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SendingNode_Number, _decode_SendingNode_Number, _encode_SendingNode_Number } from "../MAP-MS-DataTypes/SendingNode-Number.ta.mjs";
 import { HLR_List, _decode_HLR_List, _encode_HLR_List } from "../MAP-CommonDataTypes/HLR-List.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Reset_Id_List, _decode_Reset_Id_List, _encode_Reset_Id_List } from "../MAP-MS-DataTypes/Reset-Id-List.ta.mjs";
-import { InsertSubscriberDataArg, _decode_InsertSubscriberDataArg, _encode_InsertSubscriberDataArg } from "../MAP-MS-DataTypes/InsertSubscriberDataArg.ta.mjs";
 import { DeleteSubscriberDataArg, _decode_DeleteSubscriberDataArg, _encode_DeleteSubscriberDataArg } from "../MAP-MS-DataTypes/DeleteSubscriberDataArg.ta.mjs";
+import { InsertSubscriberDataArg, _decode_InsertSubscriberDataArg, _encode_InsertSubscriberDataArg } from "../MAP-MS-DataTypes/InsertSubscriberDataArg.ta.mjs";
+import { Reset_Id_List, _decode_Reset_Id_List, _encode_Reset_Id_List } from "../MAP-MS-DataTypes/Reset-Id-List.ta.mjs";
+import { SendingNode_Number, _decode_SendingNode_Number, _encode_SendingNode_Number } from "../MAP-MS-DataTypes/SendingNode-Number.ta.mjs";
 
 
 /**

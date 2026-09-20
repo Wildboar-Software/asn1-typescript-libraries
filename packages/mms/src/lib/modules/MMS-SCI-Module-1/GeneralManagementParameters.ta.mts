@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
-// export { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 import { GeneralManagementParameters_supportForTime, _decode_GeneralManagementParameters_supportForTime, _encode_GeneralManagementParameters_supportForTime } from "../MMS-SCI-Module-1/GeneralManagementParameters-supportForTime.ta.mjs";
-// export { GeneralManagementParameters_supportForTime, _decode_GeneralManagementParameters_supportForTime, _encode_GeneralManagementParameters_supportForTime } from "../MMS-SCI-Module-1/GeneralManagementParameters-supportForTime.ta.mjs";
 
 
 /**

@@ -10,9 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { dfr_conn_pkg } from "../DFRAbstractService/dfr-conn-pkg.oa.mjs";
-// export { dfr_conn_pkg } from "../DFRAbstractService/dfr-conn-pkg.oa.mjs";
 import { dfr } from "../DFRAbstractService/dfr.oa.mjs";
-// export { dfr } from "../DFRAbstractService/dfr.oa.mjs";
 import { type CONTRACT } from "../Remote-Operations-Information-Objects/CONTRACT.oca.mjs";
 
 

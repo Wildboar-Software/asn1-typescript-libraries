@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlternateAccessSelection_selectAlternateAccess, _decode_AlternateAccessSelection_selectAlternateAccess, _encode_AlternateAccessSelection_selectAlternateAccess } from "../ISO-9506-MMS-1/AlternateAccessSelection-selectAlternateAccess.ta.mjs";
-// export { AlternateAccessSelection_selectAlternateAccess, _decode_AlternateAccessSelection_selectAlternateAccess, _encode_AlternateAccessSelection_selectAlternateAccess } from "../ISO-9506-MMS-1/AlternateAccessSelection-selectAlternateAccess.ta.mjs";
 import { AlternateAccessSelection_selectAccess, _decode_AlternateAccessSelection_selectAccess, _encode_AlternateAccessSelection_selectAccess } from "../ISO-9506-MMS-1/AlternateAccessSelection-selectAccess.ta.mjs";
-// export { AlternateAccessSelection_selectAccess, _decode_AlternateAccessSelection_selectAccess, _encode_AlternateAccessSelection_selectAccess } from "../ISO-9506-MMS-1/AlternateAccessSelection-selectAccess.ta.mjs";
 
 
 /**

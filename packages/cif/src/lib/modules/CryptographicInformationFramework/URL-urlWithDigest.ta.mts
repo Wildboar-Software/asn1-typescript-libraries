@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DigestInfoWithDefault, _decode_DigestInfoWithDefault, _encode_DigestInfoWithDefault } from "../CryptographicInformationFramework/DigestInfoWithDefault.ta.mjs";
-// export { DigestInfoWithDefault, _decode_DigestInfoWithDefault, _encode_DigestInfoWithDefault } from "../CryptographicInformationFramework/DigestInfoWithDefault.ta.mjs";
 
 
 /**

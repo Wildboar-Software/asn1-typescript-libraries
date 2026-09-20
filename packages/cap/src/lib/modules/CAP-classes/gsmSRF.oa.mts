@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { type ROS_OBJECT_CLASS } from "../Remote-Operations-Information-Objects/ROS-OBJECT-CLASS.oca.mjs";
 import { gsmSRF_gsmSCF_contract } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/gsmSRF-gsmSCF-contract.oa.mjs";
-// export { gsmSRF_gsmSCF_contract } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/gsmSRF-gsmSCF-contract.oa.mjs";
 import { id_rosObject_gsmSRF } from "../CAP-object-identifiers/id-rosObject-gsmSRF.va.mjs";
-// export { id_rosObject_gsmSRF } from "../CAP-object-identifiers/id-rosObject-gsmSRF.va.mjs";
 
 
 /**

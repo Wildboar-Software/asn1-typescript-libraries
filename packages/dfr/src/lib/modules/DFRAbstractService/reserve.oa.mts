@@ -11,25 +11,15 @@ import {
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ReserveArgument, _decode_ReserveArgument, _encode_ReserveArgument } from "../DFRAbstractService/ReserveArgument.ta.mjs";
-// export { ReserveArgument, _decode_ReserveArgument, _encode_ReserveArgument } from "../DFRAbstractService/ReserveArgument.ta.mjs";
 import { ReserveResult, _decode_ReserveResult, _encode_ReserveResult } from "../DFRAbstractService/ReserveResult.ta.mjs";
-// export { ReserveResult, _decode_ReserveResult, _encode_ReserveResult } from "../DFRAbstractService/ReserveResult.ta.mjs";
 import { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
-// export { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
 import { nameError } from "../DFRAbstractService/nameError.oa.mjs";
-// export { nameError } from "../DFRAbstractService/nameError.oa.mjs";
 import { reservationError } from "../DFRAbstractService/reservationError.oa.mjs";
-// export { reservationError } from "../DFRAbstractService/reservationError.oa.mjs";
 import { securityError } from "../DFRAbstractService/securityError.oa.mjs";
-// export { securityError } from "../DFRAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DFRAbstractService/serviceError.oa.mjs";
-// export { serviceError } from "../DFRAbstractService/serviceError.oa.mjs";
 import { id_opcode_reserve } from "../DFRAbstractService/id-opcode-reserve.va.mjs";
-// export { id_opcode_reserve } from "../DFRAbstractService/id-opcode-reserve.va.mjs";
 
 
 /**

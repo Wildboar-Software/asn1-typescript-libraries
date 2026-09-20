@@ -12,8 +12,6 @@
  * HPLMN operator (3GPP TS 29.002 V19.1.0 clauses 7.6.3.3, 7.6.4.38 and
  * 17.7.10).
  */
-export * from "./BearerServiceCode.ta.mjs";
-export * from "./Ext-BearerServiceCode.ta.mjs";
 export * from "./allAlternateSpeech-DataCDA.va.mjs";
 export * from "./allAlternateSpeech-DataCDS.va.mjs";
 export * from "./allAsynchronousServices.va.mjs";
@@ -23,11 +21,12 @@ export * from "./allDataCDS-Services.va.mjs";
 export * from "./allDataCircuitAsynchronous.va.mjs";
 export * from "./allDataCircuitSynchronous.va.mjs";
 export * from "./allDataPDS-Services.va.mjs";
-export * from "./allPLMN-specificBS.va.mjs";
 export * from "./allPadAccessCA-Services.va.mjs";
+export * from "./allPLMN-specificBS.va.mjs";
 export * from "./allSpeechFollowedByDataCDA.va.mjs";
 export * from "./allSpeechFollowedByDataCDS.va.mjs";
 export * from "./allSynchronousServices.va.mjs";
+export * from "./BearerServiceCode.ta.mjs";
 export * from "./dataCDA-1200-75bps.va.mjs";
 export * from "./dataCDA-1200bps.va.mjs";
 export * from "./dataCDA-2400bps.va.mjs";
@@ -41,6 +40,7 @@ export * from "./dataCDS-9600bps.va.mjs";
 export * from "./dataPDS-2400bps.va.mjs";
 export * from "./dataPDS-4800bps.va.mjs";
 export * from "./dataPDS-9600bps.va.mjs";
+export * from "./Ext-BearerServiceCode.ta.mjs";
 export * from "./general-dataCDA.va.mjs";
 export * from "./general-dataCDS.va.mjs";
 export * from "./general-dataPDS.va.mjs";

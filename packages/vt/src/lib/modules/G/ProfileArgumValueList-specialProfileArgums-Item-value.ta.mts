@@ -1,0 +1,85 @@
+/* eslint-disable */
+import {
+    BOOLEAN,
+    INTEGER,
+    OBJECT_IDENTIFIER,
+    PrintableString,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1Construction as _Construction,
+    ASN1UniversalType as _UniversalType,
+    ObjectIdentifier as _OID,
+    External as _External,
+    EmbeddedPDV as _PDV,
+    ASN1ConstructionError as _ConstructionError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary ProfileArgumValueList_specialProfileArgums_Item_value
+ * @description
+ *
+ * Chosen special-argument value: `boolean_`, `integer`, `string_`,
+ * or `oid`. ISO/IEC 9041-1:1997 §12.2.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * ProfileArgumValueList-specialProfileArgums-Item-value ::= CHOICE {
+ *     boolean BOOLEAN,
+ *     integer INTEGER,
+ *     string  PrintableString,
+ *     oid     OBJECT IDENTIFIER
+ * }
+ * ```
+ */
+export
+type ProfileArgumValueList_specialProfileArgums_Item_value =
+    { boolean_: BOOLEAN } /* CHOICE_ALT_ROOT */
+    | { integer: INTEGER } /* CHOICE_ALT_ROOT */
+    | { string_: PrintableString } /* CHOICE_ALT_ROOT */
+    | { oid: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
+
+let _cached_decoder_for_ProfileArgumValueList_specialProfileArgums_Item_value: $.ASN1Decoder<ProfileArgumValueList_specialProfileArgums_Item_value> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) ProfileArgumValueList_specialProfileArgums_Item_value
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_ProfileArgumValueList_specialProfileArgums_Item_value (el: _Element): ProfileArgumValueList_specialProfileArgums_Item_value {
+    if (!_cached_decoder_for_ProfileArgumValueList_specialProfileArgums_Item_value) { _cached_decoder_for_ProfileArgumValueList_specialProfileArgums_Item_value = $._decode_inextensible_choice<ProfileArgumValueList_specialProfileArgums_Item_value>({
+    "UNIVERSAL 1": [ "boolean_", $._decodeBoolean ],
+    "UNIVERSAL 2": [ "integer", $._decodeInteger ],
+    "UNIVERSAL 19": [ "string_", $._decodePrintableString ],
+    "UNIVERSAL 6": [ "oid", $._decodeObjectIdentifier ]
+}); }
+    return _cached_decoder_for_ProfileArgumValueList_specialProfileArgums_Item_value(el);
+}
+
+let _cached_encoder_for_ProfileArgumValueList_specialProfileArgums_Item_value: $.ASN1Encoder<ProfileArgumValueList_specialProfileArgums_Item_value> | null = null;
+
+/**
+ * @summary Encodes a(n) ProfileArgumValueList_specialProfileArgums_Item_value into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The ProfileArgumValueList_specialProfileArgums_Item_value, encoded as an ASN.1 Element.
+ */
+export
+function _encode_ProfileArgumValueList_specialProfileArgums_Item_value (value: ProfileArgumValueList_specialProfileArgums_Item_value, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ProfileArgumValueList_specialProfileArgums_Item_value) { _cached_encoder_for_ProfileArgumValueList_specialProfileArgums_Item_value = $._encode_choice<ProfileArgumValueList_specialProfileArgums_Item_value>({
+    "boolean_": $._encodeBoolean,
+    "integer": $._encodeInteger,
+    "string_": $._encodePrintableString,
+    "oid": $._encodeObjectIdentifier,
+}, $.BER); }
+    return _cached_encoder_for_ProfileArgumValueList_specialProfileArgums_Item_value(value, elGetter);
+}
+
+
+/* eslint-enable */

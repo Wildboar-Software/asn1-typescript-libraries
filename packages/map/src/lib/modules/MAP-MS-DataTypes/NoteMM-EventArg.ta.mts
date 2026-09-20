@@ -1,80 +1,19 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
-import { MM_Code, _decode_MM_Code, _encode_MM_Code } from "../MAP-MS-DataTypes/MM-Code.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { LocationInformation, _decode_LocationInformation, _encode_LocationInformation } from "../MAP-MS-DataTypes/LocationInformation.ta.mjs";
-import { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
+import { LocationInformation, _decode_LocationInformation, _encode_LocationInformation } from "../MAP-MS-DataTypes/LocationInformation.ta.mjs";
 import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_LocationInformationGPRS } from "../MAP-MS-DataTypes/LocationInformationGPRS.ta.mjs";
-import { OfferedCamel4Functionalities, OfferedCamel4Functionalities_initiateCallAttempt /* IMPORTED_LONG_NAMED_BIT */, initiateCallAttempt /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_splitLeg /* IMPORTED_LONG_NAMED_BIT */, splitLeg /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_moveLeg /* IMPORTED_LONG_NAMED_BIT */, moveLeg /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_disconnectLeg /* IMPORTED_LONG_NAMED_BIT */, disconnectLeg /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_entityReleased /* IMPORTED_LONG_NAMED_BIT */, entityReleased /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_dfc_WithArgument /* IMPORTED_LONG_NAMED_BIT */, dfc_WithArgument /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_playTone /* IMPORTED_LONG_NAMED_BIT */, playTone /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_dtmf_MidCall /* IMPORTED_LONG_NAMED_BIT */, dtmf_MidCall /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_chargingIndicator /* IMPORTED_LONG_NAMED_BIT */, chargingIndicator /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_alertingDP /* IMPORTED_LONG_NAMED_BIT */, alertingDP /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_locationAtAlerting /* IMPORTED_LONG_NAMED_BIT */, locationAtAlerting /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_changeOfPositionDP /* IMPORTED_LONG_NAMED_BIT */, changeOfPositionDP /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_or_Interactions /* IMPORTED_LONG_NAMED_BIT */, or_Interactions /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_warningToneEnhancements /* IMPORTED_LONG_NAMED_BIT */, warningToneEnhancements /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_cf_Enhancements /* IMPORTED_LONG_NAMED_BIT */, cf_Enhancements /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_subscribedEnhancedDialledServices /* IMPORTED_LONG_NAMED_BIT */, subscribedEnhancedDialledServices /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_servingNetworkEnhancedDialledServices /* IMPORTED_LONG_NAMED_BIT */, servingNetworkEnhancedDialledServices /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_criteriaForChangeOfPositionDP /* IMPORTED_LONG_NAMED_BIT */, criteriaForChangeOfPositionDP /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_serviceChangeDP /* IMPORTED_LONG_NAMED_BIT */, serviceChangeDP /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4Functionalities_collectInformation /* IMPORTED_LONG_NAMED_BIT */, collectInformation /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4Functionalities, _encode_OfferedCamel4Functionalities } from "../MAP-MS-DataTypes/OfferedCamel4Functionalities.ta.mjs";
+import { MM_Code, _decode_MM_Code, _encode_MM_Code } from "../MAP-MS-DataTypes/MM-Code.ta.mjs";
+import { OfferedCamel4Functionalities, _decode_OfferedCamel4Functionalities, _encode_OfferedCamel4Functionalities } from "../MAP-MS-DataTypes/OfferedCamel4Functionalities.ta.mjs";
+import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
+import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
 
 
 /**

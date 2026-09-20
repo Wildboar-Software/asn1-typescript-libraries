@@ -1,77 +1,17 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
     BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { FailureCause, _enum_for_FailureCause, FailureCause_wrongUserResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, wrongUserResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, FailureCause_wrongNetworkSignature /* IMPORTED_LONG_ENUMERATION_ITEM */, wrongNetworkSignature /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FailureCause, _encode_FailureCause } from "../MAP-MS-DataTypes/FailureCause.ta.mjs";
-import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AccessType, _enum_for_AccessType, AccessType_call /* IMPORTED_LONG_ENUMERATION_ITEM */, call /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_emergencyCall /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_locationUpdating /* IMPORTED_LONG_ENUMERATION_ITEM */, locationUpdating /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_supplementaryService /* IMPORTED_LONG_ENUMERATION_ITEM */, supplementaryService /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_shortMessage /* IMPORTED_LONG_ENUMERATION_ITEM */, shortMessage /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_gprsAttach /* IMPORTED_LONG_ENUMERATION_ITEM */, gprsAttach /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_routingAreaUpdating /* IMPORTED_LONG_ENUMERATION_ITEM */, routingAreaUpdating /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_serviceRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_pdpContextActivation /* IMPORTED_LONG_ENUMERATION_ITEM */, pdpContextActivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_pdpContextDeactivation /* IMPORTED_LONG_ENUMERATION_ITEM */, pdpContextDeactivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_gprsDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, gprsDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessType, _encode_AccessType } from "../MAP-MS-DataTypes/AccessType.ta.mjs";
-import { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
+import { AccessType, _decode_AccessType, _encode_AccessType, _enum_for_AccessType } from "../MAP-MS-DataTypes/AccessType.ta.mjs";
+import { FailureCause, _decode_FailureCause, _encode_FailureCause, _enum_for_FailureCause } from "../MAP-MS-DataTypes/FailureCause.ta.mjs";
+import { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
 
 
 /**

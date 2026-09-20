@@ -1,82 +1,21 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
-import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataTypes/TraceType.ta.mjs";
-import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
+import { MGW_EventList, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
+import { MGW_InterfaceList, _decode_MGW_InterfaceList, _encode_MGW_InterfaceList } from "../MAP-OM-DataTypes/MGW-InterfaceList.ta.mjs";
+import { MSC_S_EventList, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
+import { MSC_S_InterfaceList, _decode_MSC_S_InterfaceList, _encode_MSC_S_InterfaceList } from "../MAP-OM-DataTypes/MSC-S-InterfaceList.ta.mjs";
+import { RNC_InterfaceList, _decode_RNC_InterfaceList, _encode_RNC_InterfaceList } from "../MAP-OM-DataTypes/RNC-InterfaceList.ta.mjs";
+import { TraceDepth, _decode_TraceDepth, _encode_TraceDepth, _enum_for_TraceDepth } from "../MAP-OM-DataTypes/TraceDepth.ta.mjs";
+import { TraceDepthExtension, _decode_TraceDepthExtension, _encode_TraceDepthExtension, _enum_for_TraceDepthExtension } from "../MAP-OM-DataTypes/TraceDepthExtension.ta.mjs";
 import { TraceRecordingSessionReference, _decode_TraceRecordingSessionReference, _encode_TraceRecordingSessionReference } from "../MAP-OM-DataTypes/TraceRecordingSessionReference.ta.mjs";
-import { TraceDepth, _enum_for_TraceDepth, TraceDepth_minimum /* IMPORTED_LONG_ENUMERATION_ITEM */, minimum /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, medium /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_maximum /* IMPORTED_LONG_ENUMERATION_ITEM */, maximum /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceDepth, _encode_TraceDepth } from "../MAP-OM-DataTypes/TraceDepth.ta.mjs";
-import { RNC_InterfaceList, RNC_InterfaceList_iu /* IMPORTED_LONG_NAMED_BIT */, RNC_InterfaceList_iur /* IMPORTED_LONG_NAMED_BIT */, iur /* IMPORTED_SHORT_NAMED_BIT */, RNC_InterfaceList_iub /* IMPORTED_LONG_NAMED_BIT */, iub /* IMPORTED_SHORT_NAMED_BIT */, RNC_InterfaceList_uu /* IMPORTED_LONG_NAMED_BIT */, uu /* IMPORTED_SHORT_NAMED_BIT */, _decode_RNC_InterfaceList, _encode_RNC_InterfaceList } from "../MAP-OM-DataTypes/RNC-InterfaceList.ta.mjs";
-import { MSC_S_InterfaceList, MSC_S_InterfaceList_a /* IMPORTED_LONG_NAMED_BIT */, a /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_iu /* IMPORTED_LONG_NAMED_BIT */, MSC_S_InterfaceList_mc /* IMPORTED_LONG_NAMED_BIT */, MSC_S_InterfaceList_map_g /* IMPORTED_LONG_NAMED_BIT */, map_g /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_b /* IMPORTED_LONG_NAMED_BIT */, map_b /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_e /* IMPORTED_LONG_NAMED_BIT */, map_e /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_f /* IMPORTED_LONG_NAMED_BIT */, map_f /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_cap /* IMPORTED_LONG_NAMED_BIT */, cap /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_d /* IMPORTED_LONG_NAMED_BIT */, map_d /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_c /* IMPORTED_LONG_NAMED_BIT */, map_c /* IMPORTED_SHORT_NAMED_BIT */, _decode_MSC_S_InterfaceList, _encode_MSC_S_InterfaceList } from "../MAP-OM-DataTypes/MSC-S-InterfaceList.ta.mjs";
-import { MSC_S_EventList, MSC_S_EventList_mo_mtCall /* IMPORTED_LONG_NAMED_BIT */, mo_mtCall /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_mo_mt_sms /* IMPORTED_LONG_NAMED_BIT */, mo_mt_sms /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_lu_imsiAttach_imsiDetach /* IMPORTED_LONG_NAMED_BIT */, lu_imsiAttach_imsiDetach /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_handovers /* IMPORTED_LONG_NAMED_BIT */, handovers /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_ss /* IMPORTED_LONG_NAMED_BIT */, ss /* IMPORTED_SHORT_NAMED_BIT */, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
-import { MGW_InterfaceList, MGW_InterfaceList_mc /* IMPORTED_LONG_NAMED_BIT */, MGW_InterfaceList_nb_up /* IMPORTED_LONG_NAMED_BIT */, nb_up /* IMPORTED_SHORT_NAMED_BIT */, MGW_InterfaceList_iu_up /* IMPORTED_LONG_NAMED_BIT */, iu_up /* IMPORTED_SHORT_NAMED_BIT */, _decode_MGW_InterfaceList, _encode_MGW_InterfaceList } from "../MAP-OM-DataTypes/MGW-InterfaceList.ta.mjs";
-import { MGW_EventList, MGW_EventList_context /* IMPORTED_LONG_NAMED_BIT */, context /* IMPORTED_SHORT_NAMED_BIT */, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
-import { TraceDepthExtension, _enum_for_TraceDepthExtension, TraceDepthExtension_minimumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, minimumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepthExtension_mediumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, mediumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepthExtension_maximumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, maximumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceDepthExtension, _encode_TraceDepthExtension } from "../MAP-OM-DataTypes/TraceDepthExtension.ta.mjs";
+import { TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
+import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
+import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataTypes/TraceType.ta.mjs";
 
 
 /**

@@ -1,0 +1,347 @@
+-- Sourced from ISO/IEC 9041:1997(E)
+-- Modified to remove ancient deprecated ASN.1 syntaxes.
+-- In particular, use of unnamed components in SEQUENCE and SET.
+-- BKQcontent, SNRcontent, and EXQcontent were affected.
+ISO9041-VTP DEFINITIONS ::= BEGIN
+
+BasicVTPitem ::= CHOICE {
+    asq-pdu   [0]  IMPLICIT ASQcontent,
+    asr-pdu   [1]  IMPLICIT ASRcontent,
+    rlr-pdu   [2]  G.Result2,
+    auq-pdu   [3]  IMPLICIT PrintableString,
+    -- absence of a VT-user-failure-reason is represented by the empty string
+    apq-pdu   [4]  IMPLICIT PrintableString,
+    -- empty string if reason not provided
+    -- "P" if reason = protocol-error
+    -- "L" if reason = local-error
+    hdq-pdu   [5]  IMPLICIT SEQUENCE OF G.COupdate,
+    ndq-pdu   [6]  IMPLICIT NDQcontent,
+    udq-pdu   [7]  IMPLICIT G.COupdate,
+    bkq-pdu   [8]  IMPLICIT BKQcontent,
+    bkr-pdu   [9]  IMPLICIT BKQcontent,
+    dlq-pdu   [10] IMPLICIT BOOLEAN,
+    -- TRUE if acknowledge required
+    daq-pdu   [11] IMPLICIT NULL,
+    spq-pdu   [12] IMPLICIT G.Profile,
+    spr-pdu   [13] IMPLICIT SNRcontent,
+    snq-pdu   [14] IMPLICIT G.Profile,
+    snr-pdu   [15] IMPLICIT SNRcontent,
+    enq-pdu   [16] IMPLICIT ENQcontent,
+    enr-pdu   [17] IMPLICIT ENRcontent,
+    niq-pdu   [18] IMPLICIT G.ParamIdentList,
+    noq-pdu   [19] IMPLICIT G.ParamOfferList,
+    naq-pdu   [20] IMPLICIT G.ParamValueList,
+    njq-pdu   [21] IMPLICIT G.ParamIdentList,
+    exq-pdu   [22] IMPLICIT EXQcontent,
+    spq2-pdu  [23] IMPLICIT SPQ2content,
+    -- This form of spq shall be used when context retention is required.
+    -- Either form of spq is allowed when context retention is not required,
+    -- even when the Context Retention functional unit is selected.
+    -- spq2 shall not be used when the Context Retention functional unit is not selected.
+    spr2-pdu  [24] IMPLICIT SPR2content
+}
+
+-- In general, each type of PDU thus has its own identifying tag(s) which is/are
+-- unique within the protocol; this is not strictly necessary for those items
+-- whose type is uniquely deducible from the primitives which convey them but is
+-- adopted for flexibility and extensibility.
+-- RLQ, GTQ, RTQ and EXR are however identified by the bearer service, in the
+-- case of EXR by the absence of user data in the bearer primitive, see 11.2.4.
+
+ASQcontent ::= SEQUENCE {
+    class               [0] IMPLICIT INTEGER { basic (1) },
+    implementation      [1] IMPLICIT G.ImplementationIdent OPTIONAL,
+    functional-units    [2] IMPLICIT G.FunctionalUnits OPTIONAL,
+    profile             [3] IMPLICIT G.Profile OPTIONAL,
+    protocol-version    [4] IMPLICIT G.ProtocolVersion DEFAULT G.version1,
+    either              [5] IMPLICIT INTEGER { a-mode (0), s-mode (1) } OPTIONAL
+    -- only present if VT-mode parameter has value "either-A" or "either-S"
+}
+-- The occurrence of other distinctively tagged types in ASQcontent as received
+-- by the VTPM is not an error.
+
+ASRcontent ::= SEQUENCE {
+    result              G.Result3,
+    implementation      [3] IMPLICIT G.ImplementationIdent OPTIONAL,
+    protocol-verison    [4] IMPLICIT G.ProtocolVersion DEFAULT G.version1,
+    profile-arguments   [5] IMPLICIT G.ProfileArgumValueList OPTIONAL,
+    functional-units    [6] IMPLICIT G.FunctionalUnits OPTIONAL
+}
+-- The occurrence of other distinctively tagged types in ASRcontent as received
+-- by the VTPM is not an error.
+
+BKQcontent ::= SEQUENCE {
+    standard [0] IMPLICIT SEQUENCE {
+        pointer    [0] IMPLICIT G.ExplicitPointer OPTIONAL,
+        logPointer [1] IMPLICIT G.LogExpPointer OPTIONAL
+    } OPTIONAL,
+    profile [1] IMPLICIT SEQUENCE OF SEQUENCE {
+        ptag INTEGER,
+        pvalue OCTET STRING
+    } OPTIONAL,
+    stuser [2] IMPLICIT SEQUENCE OF SEQUENCE {
+        utag INTEGER,
+        uvalue OCTET STRING
+    } OPTIONAL
+}
+
+ENQcontent ::= SEQUENCE {
+    vteChoice   [0] IMPLICIT INTEGER { draft (0), current (1), either (2) },
+    failAllowed [1] IMPLICIT BOOLEAN OPTIONAL,
+    -- TRUE = "yes", FALSE or absent = "no"
+    retList     [2] IMPLICIT SEQUENCE OF PrintableString OPTIONAL
+}
+
+ENRcontent ::= SEQUENCE {
+    result      G.Result3,
+    vteChoice   [3] IMPLICIT BOOLEAN OPTIONAL,
+    -- TRUE = "draft", FALSE = "current"
+    retList     [2] IMPLICIT SEQUENCE OF PrintableString OPTIONAL
+}
+
+SNRcontent ::= SEQUENCE {
+    result          G.Result2,
+    argValuesList   [2] IMPLICIT G.ProfileArgumValueList OPTIONAL
+}
+
+SPQ2content ::= SEQUENCE {
+    profile [0] IMPLICIT G.Profile,
+    retList [1] IMPLICIT SEQUENCE OF PrintableString OPTIONAL
+}
+-- This form of spq shall be used when context retention is required. Either form
+-- of spq is allowed when context retention is not required, even when the Context
+-- Retention functional unit is selected. spq2 shall not be used when the Context
+-- Retention functional unit is not selected.
+
+SPR2content ::= SEQUENCE {
+    result  G.Result2,
+    argList [2] IMPLICIT G.ProfileArgumValueList OPTIONAL,
+    retList [3] IMPLICIT SEQUENCE OF PrintableString OPTIONAL
+}
+-- This form of spr shall be used when context retention is required. Either form
+-- of spr is allowed when context retention is not required, even when the Context
+-- Retention functional unit is selected. spq2 shall not be used when the Context
+-- Retention functional unit is not selected.
+
+EXQcontent ::= SEQUENCE {
+    exceptionType [0] CHOICE {
+        stdException [0] IMPLICIT INTEGER {
+            rioFull (0),
+            tooManyFields (1),
+            tooManyFieldElements (2),
+            tooManyFERs (3),
+            tooManyFEIs (4)
+        },
+        proException [1] IMPLICIT INTEGER
+    },
+    standard [1] IMPLICIT SEQUENCE {
+        pointer    [0] IMPLICIT G.ExplicitPointer OPTIONAL,
+        logPointer [1] IMPLICIT G.LogExpPointer OPTIONAL
+    } OPTIONAL,
+    profile [2] IMPLICIT SEQUENCE OF SEQUENCE {
+        ptag INTEGER,
+        pvalue OCTET STRING
+    } OPTIONAL
+}
+-- The service parameter VT-exception-source shall take the value "local" for the
+-- sender of the EXQ and "remote" for the receiver of the EXQ.
+
+NDQcontent ::= SEQUENCE {
+    updates    [0] IMPLICIT SEQUENCE OF ObjectUpdate,
+    echoNow    [1] IMPLICIT NULL OPTIONAL,
+    startEntry [2] IMPLICIT NULL OPTIONAL
+}
+-- absence means do not "echo now".
+-- absence means do not "start entry".
+
+ObjectUpdate ::= CHOICE {
+    display [0] IMPLICIT SEQUENCE {
+        doName PrintableString OPTIONAL,
+        updates SEQUENCE OF DOupdate
+    },
+    control [1] IMPLICIT G.COupdate,
+    rioref  [2] IMPLICIT G.RIOreference
+}
+
+DOupdate ::= CHOICE {
+    nextXarray      [0]  IMPLICIT NULL,
+    nextYarray      [1]  IMPLICIT NULL,
+    ptr-relative    [2]  IMPLICIT G.ExplicitPointer,
+    -- the values of service arguments p,q,r correspond to x,y,z respectively
+    ptr-absolute    [3]  Pointer,
+    text            [4]  IMPLICIT OCTET STRING,
+    -- text may incorporate a number of encoded characters; the repertoire
+    -- defines the encoding of characters into octets.
+    repeatText      [5]  IMPLICIT SEQUENCE {
+        finishAddress   Pointer,
+        text            OCTET STRING
+    },
+    writeAttr       [6]  IMPLICIT SEQUENCE {
+        attributeId     AttrId,
+        attributeExtent AttrExtent
+    },
+    -- AttrId encodes both service arguments attribute-id and attribute-value
+    erase           [7]  IMPLICIT SEQUENCE {
+        startErase  Pointer,
+        endErase    Pointer,
+        attribute   EraseAttr
+    },
+    previousXarray  [8]  IMPLICIT NULL,
+    previousYarray  [9]  IMPLICIT NULL,
+    nextBlock       [10] IMPLICIT NULL,
+    previousBlock   [11] IMPLICIT NULL,
+    nextField       [12] IMPLICIT NULL,
+    previousField   [13] IMPLICIT NULL,
+    log-relative    [14] IMPLICIT G.LogExpPointer,
+    log-absolute    [15] LogPointer,
+    logText         [16] IMPLICIT SEQUENCE {
+        fdrAttr   [0] IMPLICIT BOOLEAN,
+        -- TRUE = "yes", FALSE = "no"
+        prAttrVal [1] IMPLICIT OCTET STRING
+        -- see comment under text in DOupdate
+    },
+    repeatLogText   [17] IMPLICIT SEQUENCE {
+        finishAddress LogPointer,
+        fdrAttr      [8] IMPLICIT BOOLEAN,
+        prAttrValStr [9] IMPLICIT OCTET STRING
+    },
+    -- AttrId encodes both the service arguments attribute-id and attribute-value
+    -- TRUE = "yes", FALSE = "no"
+    writeLogAttr    [18] IMPLICIT SEQUENCE {
+        attributeId     AttrId,
+        logAttrExtent   LogAttrExtent
+    },
+    logErase        [19] IMPLICIT SEQUENCE {
+        logStartErase   LogPointer,
+        logEndErase     LogPointer,
+        attribute       EraseAttr
+    },
+    createBlock     [20] IMPLICIT SEQUENCE {
+        blockPosition [0] IMPLICIT G.Block,
+        origin        [1] IMPLICIT G.MeasurePair,
+        dimension     [2] IMPLICIT G.MeasurePair
+    },
+    deleteBlock     [21] IMPLICIT G.Block,
+    insertXarray    [22] IMPLICIT INTEGER,
+    deleteXarray    [23] IMPLICIT INTEGER,
+    insertYarray    [24] IMPLICIT INTEGER,
+    deleteYarray    [25] IMPLICIT INTEGER,
+    copyToBuffer    [26] SEQUENCE {
+        address Pointer,
+        rioName  [10] IMPLICIT PrintableString OPTIONAL,
+        recordId [11] IMPLICIT PrintableString OPTIONAL,
+        -- when buffer-name is "temporary", rioName and recordId shall be absent;
+        -- when there is only one RIO present in the VTE, rioName is optional,
+        -- but recordId shall be present
+        rendition [12] IMPLICIT NULL OPTIONAL,
+        -- presence implies "copy attributes", absence implies "no attribute copy"
+        structure [13] IMPLICIT INTEGER { none (0), x (1), xAndy (2) } OPTIONAL,
+        -- absence implies "none"
+        ripple [14] IMPLICIT NULL OPTIONAL
+        -- presence implies "on", absence implies "off"
+    },
+    copyFromBuffer  [27] SEQUENCE {
+        address Pointer,
+        rioName  [10] IMPLICIT PrintableString OPTIONAL,
+        recordId [11] IMPLICIT PrintableString OPTIONAL,
+        -- when buffer-name is "temporary", rioName and recordId shall be absent;
+        -- when there is only one RIO present in the VTE, rioName is optional,
+        -- but recordId shall be present
+        rendition [12] IMPLICIT NULL OPTIONAL,
+        -- presence implies "copy attributes", absence implies "no attribute copy"
+        structure [13] IMPLICIT INTEGER { none (0), x (1), xAndy (2) } OPTIONAL,
+        -- absence implies "none"
+        ripple [14] IMPLICIT NULL OPTIONAL
+        -- presence implies "on", absence implies "off"
+    },
+    copyLogToBuffer [28] SEQUENCE {
+        address LogPointer,
+        rioName  [8] IMPLICIT PrintableString OPTIONAL,
+        recordId [9] IMPLICIT PrintableString OPTIONAL,
+        -- when buffer-name is "temporary", rioName and recordId shall be absent;
+        -- when there is only one RIO present in the VTE, rioName is optional,
+        -- but recordId shall be present
+        rendition [10] IMPLICIT NULL OPTIONAL,
+        -- presence implies "copy attributes", absence implies "no attribute copy"
+        structure [11] IMPLICIT NULL OPTIONAL
+        -- presence implies "x", absence implies "none"
+    },
+    copyLogFromBuffer [29] SEQUENCE {
+        address LogPointer,
+        rioName  [8] IMPLICIT PrintableString OPTIONAL,
+        recordId [9] IMPLICIT PrintableString OPTIONAL,
+        -- when buffer-name is "temporary", rioName and recordId shall be absent;
+        -- when there is only one RIO present in the VTE, rioName is optional,
+        -- but recordId shall be present
+        rendition [10] IMPLICIT NULL OPTIONAL,
+        -- presence implies "copy attributes", absence implies "no attribute copy"
+        structure [11] IMPLICIT NULL OPTIONAL,
+        -- presence implies "x", absence implies "none"
+        ripple [12] IMPLICIT NULL OPTIONAL
+        -- presence implies "on", absence implies "off"
+    }
+}
+
+Pointer ::= CHOICE {
+    current [0] IMPLICIT NULL,
+    start   [1] IMPLICIT NULL,
+    startX  [2] IMPLICIT NULL,
+    startY  [3] IMPLICIT NULL,
+    end     [4] IMPLICIT NULL,
+    endX    [5] IMPLICIT NULL,
+    endY    [6] IMPLICIT NULL,
+    coords  [7] IMPLICIT G.ExplicitPointer,
+    startB  [8] IMPLICIT NULL,
+    endB    [9] IMPLICIT NULL
+}
+
+EraseAttr ::= BOOLEAN
+-- TRUE = erase secondary attributes
+
+AttrId ::= CHOICE {
+    graphicCharacterRepertoire  [0] IMPLICIT INTEGER { null (0) },
+    foregroundColour            [1] IMPLICIT INTEGER { null (0) },
+    backgroundColour            [2] IMPLICIT INTEGER { null (0) },
+    emphasis                    [3] IMPLICIT PrintableString,
+    font                        [4] IMPLICIT INTEGER { null (0) },
+    -- Values for the INTEGERs other than zero identify a position in the
+    -- appropriate list of assignment VTE-parameters and signify the value of
+    -- the parameter in that position; value 1 identifies the first parameter.
+    fevGrCharRep                [5] IMPLICIT NULL,
+    fevForCol                   [6] IMPLICIT NULL,
+    fevBakCol                   [7] IMPLICIT NULL,
+    fevEmph                     [8] IMPLICIT NULL,
+    fevFont                     [9] IMPLICIT NULL
+}
+-- Tags 5-9 imply the attribute-value "field-explicit-value".
+
+AttrExtent ::= CHOICE {
+    global  [0] IMPLICIT NULL,
+    address [1] IMPLICIT SEQUENCE {
+        beginning Pointer,
+        ending Pointer
+    },
+    modal [2] IMPLICIT NULL
+}
+
+LogPointer ::= CHOICE {
+    logCurrent [0] IMPLICIT NULL,
+    logStart   [1] IMPLICIT NULL,
+    logStartF  [2] IMPLICIT NULL,
+    logStartK  [3] IMPLICIT NULL,
+    logEnd     [4] IMPLICIT NULL,
+    logEndF    [5] IMPLICIT NULL,
+    logEndK    [6] IMPLICIT NULL,
+    logCoords  [7] IMPLICIT G.LogExpPointer
+}
+
+LogAttrExtent ::= CHOICE {
+    global  [0] IMPLICIT NULL,
+    address [1] IMPLICIT SEQUENCE {
+        beginning LogPointer,
+        ending LogPointer
+    },
+    modal   [2] IMPLICIT NULL
+}
+
+END

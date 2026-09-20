@@ -1,8 +1,6 @@
 name: Publish
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -19,7 +17,6 @@ jobs:
           - "attribute-asn1module"
           - "bip"
           - "cades"
-          - "cap"
           - "casscam"
           - "cbeff"
           - "ccr"
@@ -34,7 +31,6 @@ jobs:
           - "copp"
           - "crmf"
           - "device-owner-attribute"
-          - "dfr"
           - "ec-private-key"
           - "ers"
           - "ess"

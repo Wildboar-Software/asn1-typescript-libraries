@@ -11,13 +11,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DfrDocumentContent, _decode_DfrDocumentContent, _encode_DfrDocumentContent } from "../DFRAbstractService/DfrDocumentContent.ta.mjs";
-// export { DfrDocumentContent, _decode_DfrDocumentContent, _encode_DfrDocumentContent } from "../DFRAbstractService/DfrDocumentContent.ta.mjs";
 import { DfrGroupContent, _decode_DfrGroupContent, _encode_DfrGroupContent } from "../DFRAbstractService/DfrGroupContent.ta.mjs";
-// export { DfrGroupContent, _decode_DfrGroupContent, _encode_DfrGroupContent } from "../DFRAbstractService/DfrGroupContent.ta.mjs";
 import { DfrReferenceContent, _decode_DfrReferenceContent, _encode_DfrReferenceContent } from "../DFRAbstractService/DfrReferenceContent.ta.mjs";
-// export { DfrReferenceContent, _decode_DfrReferenceContent, _encode_DfrReferenceContent } from "../DFRAbstractService/DfrReferenceContent.ta.mjs";
 import { DfrSearchResultListContent, _decode_DfrSearchResultListContent, _encode_DfrSearchResultListContent } from "../DFRAbstractService/DfrSearchResultListContent.ta.mjs";
-// export { DfrSearchResultListContent, _decode_DfrSearchResultListContent, _encode_DfrSearchResultListContent } from "../DFRAbstractService/DfrSearchResultListContent.ta.mjs";
 
 
 /**

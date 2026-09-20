@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { cia_ub_identifier } from "../CryptographicInformationFramework/cia-ub-identifier.va.mjs";
-// export { cia_ub_identifier } from "../CryptographicInformationFramework/cia-ub-identifier.va.mjs";
 
 
 /**

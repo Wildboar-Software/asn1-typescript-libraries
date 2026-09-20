@@ -14,7 +14,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MessageID, _decode_MessageID, _encode_MessageID } from "../Core-INAP-CS1-DataTypes/MessageID.ta.mjs";
-// export { MessageID, _decode_MessageID, _encode_MessageID } from "../Core-INAP-CS1-DataTypes/MessageID.ta.mjs";
 
 
 /**

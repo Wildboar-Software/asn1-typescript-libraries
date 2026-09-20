@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ScatteredAccessDescription_Item, _decode_ScatteredAccessDescription_Item, _encode_ScatteredAccessDescription_Item } from "../ISO-9506-MMS-1A/ScatteredAccessDescription-Item.ta.mjs";
-// export { ScatteredAccessDescription_Item, _decode_ScatteredAccessDescription_Item, _encode_ScatteredAccessDescription_Item } from "../ISO-9506-MMS-1A/ScatteredAccessDescription-Item.ta.mjs";
 
 
 /**

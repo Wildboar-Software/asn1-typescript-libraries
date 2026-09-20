@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
-// export { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
 import { Direction, _enum_for_Direction, _decode_Direction, _encode_Direction } from "../DFRAbstractService/Direction.ta.mjs";
-// export { Direction, _enum_for_Direction, Direction_ascending /* IMPORTED_LONG_ENUMERATION_ITEM */, ascending /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_descending /* IMPORTED_LONG_ENUMERATION_ITEM */, descending /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Direction, _encode_Direction } from "../DFRAbstractService/Direction.ta.mjs";
 
 
 /**

@@ -4,6 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OPTIONAL,
+    type TIME_OF_DAY,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -12,6 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @description
  *
  * `hour` 0..23; `minute`/`second` DEFAULT 0 (0..59).
+ *
+ * Ordering, `translate`, `with`, `Min`, and `Max` are inspired by
+ * the VS Code `Position` API. Unlike a text position, this value is
+ * a clock time on a single civil day (0..86399 seconds).
+ *
+ * @author Cursor Grok 4.6
  *
  * ### ASN.1 Definition:
  *
@@ -172,6 +179,66 @@ export class DayTime {
     }
 
     /**
+     * @summary Whether this time is strictly earlier than `other`.
+     * @description
+     *
+     * Inspired by VS Code `Position.isBefore`.
+     *
+     * @param {DayTime} other The other time of day.
+     * @returns {boolean} `true` iff `this.compare(other) < 0`.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isBefore (other: DayTime): boolean {
+        return (this.compare(other) < 0);
+    }
+
+    /**
+     * @summary Whether this time is earlier than or equal to `other`.
+     * @description
+     *
+     * Inspired by VS Code `Position.isBeforeOrEqual`.
+     *
+     * @param {DayTime} other The other time of day.
+     * @returns {boolean} `true` iff `this.compare(other) <= 0`.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isBeforeOrEqual (other: DayTime): boolean {
+        return (this.compare(other) <= 0);
+    }
+
+    /**
+     * @summary Whether this time is strictly later than `other`.
+     * @description
+     *
+     * Inspired by VS Code `Position.isAfter`.
+     *
+     * @param {DayTime} other The other time of day.
+     * @returns {boolean} `true` iff `this.compare(other) > 0`.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isAfter (other: DayTime): boolean {
+        return (this.compare(other) > 0);
+    }
+
+    /**
+     * @summary Whether this time is later than or equal to `other`.
+     * @description
+     *
+     * Inspired by VS Code `Position.isAfterOrEqual`.
+     *
+     * @param {DayTime} other The other time of day.
+     * @returns {boolean} `true` iff `this.compare(other) >= 0`.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isAfterOrEqual (other: DayTime): boolean {
+        return (this.compare(other) >= 0);
+    }
+
+    /**
      * @summary Seconds since 00:00:00, applying minute/second DEFAULTs.
      * @returns {number} 0 (`00:00:00`) through 86399 (`23:59:59`).
      * @function
@@ -201,6 +268,210 @@ export class DayTime {
             Math.trunc((seconds % 3600) / 60),
             seconds % 60,
         );
+    }
+
+    /**
+     * @summary Encode as ASN.1 `TIME-OF-DAY` (`Date` in `@wildboar/asn1`).
+     * @description
+     *
+     * Hours, minutes, and seconds are stored in the `Date`'s UTC
+     * fields so they match `ASN1Element.timeOfDay` encoding. The
+     * calendar date is 1970-01-01; milliseconds are 0.
+     *
+     * @returns {TIME_OF_DAY} A `Date` whose UTC clock is this time.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public toTimeOfDay (): TIME_OF_DAY {
+        return new Date(
+            1970,
+            11,
+            1,
+            Number(this.hour),
+            Number(this.minute ?? DayTime._default_value_for_minute),
+            Number(this.second ?? DayTime._default_value_for_second),
+        );
+    }
+
+    /**
+     * @summary Build a `DayTime` from ASN.1 `TIME-OF-DAY`.
+     * @description
+     *
+     * Reads UTC hours, minutes, and seconds. Milliseconds and the
+     * calendar date are ignored.
+     *
+     * @param {TIME_OF_DAY} timeOfDay A `Date` from `@wildboar/asn1`.
+     * @returns {DayTime} Hour, minute, and second of that `Date`.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public static fromTimeOfDay (timeOfDay: TIME_OF_DAY): DayTime {
+        if (
+            !(timeOfDay instanceof Date)
+            || Number.isNaN(timeOfDay.getTime())
+        ) {
+            throw new Error();
+        }
+        return new DayTime(
+            timeOfDay.getHours(),
+            timeOfDay.getMinutes(),
+            timeOfDay.getSeconds(),
+        );
+    }
+
+    /**
+     * @summary Shift this time by hour/minute/second deltas.
+     * @description
+     *
+     * Inspired by VS Code `Position.translate`. The result must still
+     * be a valid `DayTime` (0..86399 seconds); it does not wrap
+     * past midnight.
+     *
+     * @param {number | object} hourDeltaOrChange Hour delta, or a
+     * change object with optional `hourDelta` / `minuteDelta` /
+     * `secondDelta`.
+     * @param {number} [minuteDelta] Minute delta when using numbers.
+     * @param {number} [secondDelta] Second delta when using numbers.
+     * @returns {DayTime} A new time; `this` if all deltas are 0.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public translate (
+        hourDeltaOrChange: number | {
+            hourDelta?: number;
+            minuteDelta?: number;
+            secondDelta?: number;
+        } = 0,
+        minuteDelta: number = 0,
+        secondDelta: number = 0,
+    ): DayTime {
+        let hourDelta = 0;
+        let minDelta = 0;
+        let secDelta = 0;
+        if (typeof hourDeltaOrChange === "number") {
+            hourDelta = hourDeltaOrChange;
+            minDelta = minuteDelta;
+            secDelta = secondDelta;
+        } else {
+            hourDelta = hourDeltaOrChange.hourDelta ?? 0;
+            minDelta = hourDeltaOrChange.minuteDelta ?? 0;
+            secDelta = hourDeltaOrChange.secondDelta ?? 0;
+        }
+        if ((hourDelta === 0) && (minDelta === 0) && (secDelta === 0)) {
+            return this;
+        }
+        return DayTime.fromSeconds(
+            this.toSeconds()
+            + (hourDelta * 3600)
+            + (minDelta * 60)
+            + secDelta,
+        );
+    }
+
+    /**
+     * @summary Copy this time, replacing selected components.
+     * @description
+     *
+     * Inspired by VS Code `Position.with`. Omitted fields keep their
+     * current values (including absent DEFAULT minute/second).
+     *
+     * @param {INTEGER | object} [hourOrChange] New hour, or a change
+     * object with optional `hour` / `minute` / `second`.
+     * @param {INTEGER} [minute] New minute when using positional args.
+     * @param {INTEGER} [second] New second when using positional args.
+     * @returns {DayTime} A new time, or `this` if nothing changed.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public with (
+        hourOrChange?: INTEGER | {
+            hour?: INTEGER;
+            minute?: INTEGER;
+            second?: INTEGER;
+        },
+        minute?: INTEGER,
+        second?: INTEGER,
+    ): DayTime {
+        let hour: INTEGER = this.hour;
+        let nextMinute: OPTIONAL<INTEGER> = this.minute;
+        let nextSecond: OPTIONAL<INTEGER> = this.second;
+        if ((typeof hourOrChange === "object") && (hourOrChange !== null)) {
+            hour = ("hour" in hourOrChange && hourOrChange.hour !== undefined)
+                ? hourOrChange.hour
+                : this.hour;
+            nextMinute = (hourOrChange.minute !== undefined)
+                ? hourOrChange.minute
+                : this.minute;
+            nextSecond = (hourOrChange.second !== undefined)
+                ? hourOrChange.second
+                : this.second;
+        } else {
+            const nextHour = hourOrChange as OPTIONAL<INTEGER>;
+            hour = (nextHour !== undefined) ? nextHour : this.hour;
+            nextMinute = (minute !== undefined) ? minute : this.minute;
+            nextSecond = (second !== undefined) ? second : this.second;
+        }
+        if (
+            (hour === this.hour)
+            && (nextMinute === this.minute)
+            && (nextSecond === this.second)
+        ) {
+            return this;
+        }
+        return new DayTime(
+            hour,
+            nextMinute,
+            nextSecond,
+            this._unrecognizedExtensionsList,
+        );
+    }
+
+    /**
+     * @summary Earliest of one or more `DayTime` values.
+     * @description
+     *
+     * Inspired by VS Code `Position.Min`.
+     *
+     * @param {...DayTime} times At least one time of day.
+     * @returns {DayTime} The earliest argument.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public static Min (...times: DayTime[]): DayTime {
+        if (times.length === 0) {
+            throw new Error();
+        }
+        let min = times[0];
+        for (let i = 1; i < times.length; i++) {
+            if (times[i].isBefore(min)) {
+                min = times[i];
+            }
+        }
+        return min;
+    }
+
+    /**
+     * @summary Latest of one or more `DayTime` values.
+     * @description
+     *
+     * Inspired by VS Code `Position.Max`.
+     *
+     * @param {...DayTime} times At least one time of day.
+     * @returns {DayTime} The latest argument.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public static Max (...times: DayTime[]): DayTime {
+        if (times.length === 0) {
+            throw new Error();
+        }
+        let max = times[0];
+        for (let i = 1; i < times.length; i++) {
+            if (times[i].isAfter(max)) {
+                max = times[i];
+            }
+        }
+        return max;
     }
 }
 

@@ -11,11 +11,8 @@ import {
 } from "@wildboar/asn1";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { _enum_for_AttributeUsage, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { DocumentArchitectureClass, _decode_DocumentArchitectureClass, _encode_DocumentArchitectureClass } from "../DFRExtensionAttributes/DocumentArchitectureClass.ta.mjs";
-// export { DocumentArchitectureClass, DocumentArchitectureClass_formatted /* IMPORTED_LONG_NAMED_INTEGER */, formatted /* IMPORTED_SHORT_NAMED_INTEGER */, DocumentArchitectureClass_processable /* IMPORTED_LONG_NAMED_INTEGER */, processable /* IMPORTED_SHORT_NAMED_INTEGER */, DocumentArchitectureClass_formatted_processable /* IMPORTED_LONG_NAMED_INTEGER */, formatted_processable /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DocumentArchitectureClass, _encode_DocumentArchitectureClass } from "../DFRExtensionAttributes/DocumentArchitectureClass.ta.mjs";
 import { id_att_document_architecture_class } from "../DFRObjectIdentifiers/id-att-document-architecture-class.va.mjs";
-// export { id_att_document_architecture_class } from "../DFRObjectIdentifiers/id-att-document-architecture-class.va.mjs";
 import {
     integerMatch,
     integerOrderingMatch,

@@ -11,13 +11,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DataContainerObject, _get_decoder_for_DataContainerObject, _get_encoder_for_DataContainerObject } from "../CryptographicInformationFramework/DataContainerObject.ta.mjs";
-// export { DataContainerObject, _get_decoder_for_DataContainerObject, _get_encoder_for_DataContainerObject } from "../CryptographicInformationFramework/DataContainerObject.ta.mjs";
 import { OpaqueDOAttributes, _decode_OpaqueDOAttributes, _encode_OpaqueDOAttributes } from "../CryptographicInformationFramework/OpaqueDOAttributes.ta.mjs";
-// export { OpaqueDOAttributes, _decode_OpaqueDOAttributes, _encode_OpaqueDOAttributes } from "../CryptographicInformationFramework/OpaqueDOAttributes.ta.mjs";
 import { ISO7816DOAttributes, _decode_ISO7816DOAttributes, _encode_ISO7816DOAttributes } from "../CryptographicInformationFramework/ISO7816DOAttributes.ta.mjs";
-// export { ISO7816DOAttributes, _decode_ISO7816DOAttributes, _encode_ISO7816DOAttributes } from "../CryptographicInformationFramework/ISO7816DOAttributes.ta.mjs";
 import { OidDOAttributes, _decode_OidDOAttributes, _encode_OidDOAttributes } from "../CryptographicInformationFramework/OidDOAttributes.ta.mjs";
-// export { OidDOAttributes, _decode_OidDOAttributes, _encode_OidDOAttributes } from "../CryptographicInformationFramework/OidDOAttributes.ta.mjs";
 
 
 /**

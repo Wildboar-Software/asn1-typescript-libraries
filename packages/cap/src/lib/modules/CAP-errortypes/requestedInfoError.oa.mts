@@ -10,13 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { requestedInfoError_ParameterType, _enum_for_requestedInfoError_ParameterType, _decode_requestedInfoError_ParameterType, _encode_requestedInfoError_ParameterType } from "../CAP-errortypes/requestedInfoError-ParameterType.ta.mjs";
-// export { requestedInfoError_ParameterType, _enum_for_requestedInfoError_ParameterType, requestedInfoError_ParameterType_unknownRequestedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, unknownRequestedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, requestedInfoError_ParameterType_requestedInfoNotAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedInfoNotAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_requestedInfoError_ParameterType, _encode_requestedInfoError_ParameterType } from "../CAP-errortypes/requestedInfoError-ParameterType.ta.mjs";
 import { errcode_requestedInfoError } from "../CAP-errorcodes/errcode-requestedInfoError.va.mjs";
-// export { errcode_requestedInfoError } from "../CAP-errorcodes/errcode-requestedInfoError.va.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 

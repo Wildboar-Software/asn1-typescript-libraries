@@ -1,3 +1,3 @@
 export {
-    type ERROR,
+    type ERROR
 } from "@wildboar/rose";

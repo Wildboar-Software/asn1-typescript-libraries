@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../Core-INAP-CS1-DataTypes/InformationToSend.ta.mjs";
-// export { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../Core-INAP-CS1-DataTypes/InformationToSend.ta.mjs";
 import { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/Cause.ta.mjs";
-// export { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/Cause.ta.mjs";
 
 
 /**

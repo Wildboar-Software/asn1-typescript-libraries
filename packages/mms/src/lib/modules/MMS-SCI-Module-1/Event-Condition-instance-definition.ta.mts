@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Event_Condition_instance_definition_details, _decode_Event_Condition_instance_definition_details, _encode_Event_Condition_instance_definition_details } from "../MMS-SCI-Module-1/Event-Condition-instance-definition-details.ta.mjs";
-// export { Event_Condition_instance_definition_details, _decode_Event_Condition_instance_definition_details, _encode_Event_Condition_instance_definition_details } from "../MMS-SCI-Module-1/Event-Condition-instance-definition-details.ta.mjs";
 
 
 /**

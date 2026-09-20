@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DfrEntryAttributes, _decode_DfrEntryAttributes, _encode_DfrEntryAttributes } from "../DFRAbstractService/DfrEntryAttributes.ta.mjs";
-// export { DfrEntryAttributes, _decode_DfrEntryAttributes, _encode_DfrEntryAttributes } from "../DFRAbstractService/DfrEntryAttributes.ta.mjs";
 import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
-// export { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
 
 
 /**

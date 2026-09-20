@@ -14,21 +14,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CIAInfo_version, _decode_CIAInfo_version, _encode_CIAInfo_version } from "../CryptographicInformationFramework/CIAInfo-version.ta.mjs";
-// export { CIAInfo_version, CIAInfo_version_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, CIAInfo_version_v2 /* IMPORTED_LONG_NAMED_INTEGER */, v2 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CIAInfo_version, _encode_CIAInfo_version } from "../CryptographicInformationFramework/CIAInfo-version.ta.mjs";
 import { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
-// export { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
 import { CardFlags, _decode_CardFlags, _encode_CardFlags } from "../CryptographicInformationFramework/CardFlags.ta.mjs";
-// export { CardFlags, CardFlags_readonly /* IMPORTED_LONG_NAMED_BIT */, readonly /* IMPORTED_SHORT_NAMED_BIT */, CardFlags_authRequired /* IMPORTED_LONG_NAMED_BIT */, authRequired /* IMPORTED_SHORT_NAMED_BIT */, CardFlags_prnGeneration /* IMPORTED_LONG_NAMED_BIT */, prnGeneration /* IMPORTED_SHORT_NAMED_BIT */, _decode_CardFlags, _encode_CardFlags } from "../CryptographicInformationFramework/CardFlags.ta.mjs";
 import { SecurityEnvironmentInfo, _decode_SecurityEnvironmentInfo, _encode_SecurityEnvironmentInfo } from "../CryptographicInformationFramework/SecurityEnvironmentInfo.ta.mjs";
-// export { SecurityEnvironmentInfo, _decode_SecurityEnvironmentInfo, _encode_SecurityEnvironmentInfo } from "../CryptographicInformationFramework/SecurityEnvironmentInfo.ta.mjs";
 import { RecordInfo, _decode_RecordInfo, _encode_RecordInfo } from "../CryptographicInformationFramework/RecordInfo.ta.mjs";
-// export { RecordInfo, _decode_RecordInfo, _encode_RecordInfo } from "../CryptographicInformationFramework/RecordInfo.ta.mjs";
 import { AlgorithmInfo, _decode_AlgorithmInfo, _encode_AlgorithmInfo } from "../CryptographicInformationFramework/AlgorithmInfo.ta.mjs";
-// export { AlgorithmInfo, _decode_AlgorithmInfo, _encode_AlgorithmInfo } from "../CryptographicInformationFramework/AlgorithmInfo.ta.mjs";
 import { LastUpdate, _decode_LastUpdate, _encode_LastUpdate } from "../CryptographicInformationFramework/LastUpdate.ta.mjs";
-// export { LastUpdate, _decode_LastUpdate, _encode_LastUpdate } from "../CryptographicInformationFramework/LastUpdate.ta.mjs";
 import { ProfileIndication, _decode_ProfileIndication, _encode_ProfileIndication } from "../CryptographicInformationFramework/ProfileIndication.ta.mjs";
-// export { ProfileIndication, _decode_ProfileIndication, _encode_ProfileIndication } from "../CryptographicInformationFramework/ProfileIndication.ta.mjs";
 
 
 /**

@@ -12,13 +12,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
 import { Usage, _decode_Usage, _encode_Usage } from "../CryptographicInformationFramework/Usage.ta.mjs";
-// export { Usage, _decode_Usage, _encode_Usage } from "../CryptographicInformationFramework/Usage.ta.mjs";
 import { GeneralNames, _decode_GeneralNames, _encode_GeneralNames } from "../CertificateExtensions/GeneralNames.ta.mjs";
-// export { GeneralNames, _decode_GeneralNames, _encode_GeneralNames } from "../CertificateExtensions/GeneralNames.ta.mjs";
 import { CredentialIdentifier, _decode_CredentialIdentifier, _encode_CredentialIdentifier } from "../CryptographicInformationFramework/CredentialIdentifier.ta.mjs";
-// export { CredentialIdentifier, _decode_CredentialIdentifier, _encode_CredentialIdentifier } from "../CryptographicInformationFramework/CredentialIdentifier.ta.mjs";
 
 
 /**

@@ -1,75 +1,14 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NetworkResource, _enum_for_NetworkResource, NetworkResource_plmn /* IMPORTED_LONG_ENUMERATION_ITEM */, plmn /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_hlr /* IMPORTED_LONG_ENUMERATION_ITEM */, hlr /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_vlr /* IMPORTED_LONG_ENUMERATION_ITEM */, vlr /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_pvlr /* IMPORTED_LONG_ENUMERATION_ITEM */, pvlr /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_controllingMSC /* IMPORTED_LONG_ENUMERATION_ITEM */, controllingMSC /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_vmsc /* IMPORTED_LONG_ENUMERATION_ITEM */, vmsc /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_eir /* IMPORTED_LONG_ENUMERATION_ITEM */, eir /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkResource_rss /* IMPORTED_LONG_ENUMERATION_ITEM */, rss /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NetworkResource, _encode_NetworkResource } from "../MAP-CommonDataTypes/NetworkResource.ta.mjs";
+import { AdditionalNetworkResource, _decode_AdditionalNetworkResource, _encode_AdditionalNetworkResource, _enum_for_AdditionalNetworkResource } from "../MAP-CommonDataTypes/AdditionalNetworkResource.ta.mjs";
+import { NetworkResource, _decode_NetworkResource, _encode_NetworkResource, _enum_for_NetworkResource } from "../MAP-CommonDataTypes/NetworkResource.ta.mjs";
+import { FailureCauseParam, _decode_FailureCauseParam, _encode_FailureCauseParam, _enum_for_FailureCauseParam } from "../MAP-ER-DataTypes/FailureCauseParam.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AdditionalNetworkResource, _enum_for_AdditionalNetworkResource, AdditionalNetworkResource_sgsn /* IMPORTED_LONG_ENUMERATION_ITEM */, sgsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_ggsn /* IMPORTED_LONG_ENUMERATION_ITEM */, ggsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_gmlc /* IMPORTED_LONG_ENUMERATION_ITEM */, gmlc /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_gsmSCF /* IMPORTED_LONG_ENUMERATION_ITEM */, gsmSCF /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_nplr /* IMPORTED_LONG_ENUMERATION_ITEM */, nplr /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_auc /* IMPORTED_LONG_ENUMERATION_ITEM */, auc /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_ue /* IMPORTED_LONG_ENUMERATION_ITEM */, ue /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalNetworkResource_mme /* IMPORTED_LONG_ENUMERATION_ITEM */, mme /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AdditionalNetworkResource, _encode_AdditionalNetworkResource } from "../MAP-CommonDataTypes/AdditionalNetworkResource.ta.mjs";
-import { FailureCauseParam, _enum_for_FailureCauseParam, FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests /* IMPORTED_LONG_ENUMERATION_ITEM */, limitReachedOnNumberOfConcurrentLocationRequests /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FailureCauseParam, _encode_FailureCauseParam } from "../MAP-ER-DataTypes/FailureCauseParam.ta.mjs";
 
 
 /**

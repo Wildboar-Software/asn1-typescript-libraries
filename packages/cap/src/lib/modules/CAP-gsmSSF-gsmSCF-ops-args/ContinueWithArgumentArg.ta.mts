@@ -20,13 +20,9 @@ import { type GenericNumbers, _decode_GenericNumbers, _encode_GenericNumbers } f
 import { type NAOliInfo, _decode_NAOliInfo, _encode_NAOliInfo } from "../CAP-datatypes/NAOliInfo.ta.mjs";
 import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../CAP-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
 import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
-// export { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
 import { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
-// export { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
 import { SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
-// export { SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
 import { ContinueWithArgumentArgExtension, _decode_ContinueWithArgumentArgExtension, _encode_ContinueWithArgumentArgExtension } from "../CAP-gsmSSF-gsmSCF-ops-args/ContinueWithArgumentArgExtension.ta.mjs";
-// export { ContinueWithArgumentArgExtension, _decode_ContinueWithArgumentArgExtension, _encode_ContinueWithArgumentArgExtension } from "../CAP-gsmSSF-gsmSCF-ops-args/ContinueWithArgumentArgExtension.ta.mjs";
 
 
 /**
