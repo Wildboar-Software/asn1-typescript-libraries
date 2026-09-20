@@ -11,9 +11,10 @@ import boundariesOfPeriodOccurrence from "./boundariesOfPeriodOccurrence.mjs";
 import getDayOfMonthWhitelistFromXDayOf from "./getDayOfMonthWhitelistFromXDayOf.mjs";
 import destructureDateIntoPeriodProperties from "./destructureDateIntoPeriodProperties.mjs";
 import {
-    isX520WeekListed,
+    periodAllowsWeek,
     startOfSundayBasedWeek,
 } from "./x520PeriodCalendar.mjs";
+import { secondAfter } from "./secondAfter.mjs";
 
 /**
  * ASN.1 GeneralizedTime four-digit-year ceiling: 9999-12-31 23:59:59 local.
@@ -43,22 +44,6 @@ interface PeriodWhitelists {
     weeksAreOfMonth: boolean;
     daysAreWeekdays: boolean;
     bands: DayTimeBand[] | null;
-}
-
-function secondAfter (instant: Date): Date {
-    return new Date(instant.valueOf() + 1000);
-}
-
-function periodAllowsWeek (
-    whitelist: Set<number> | null,
-    week: number,
-    numberOfLastWeek: number,
-    ofMonth: boolean,
-): boolean {
-    if (!whitelist) {
-        return true;
-    }
-    return isX520WeekListed(whitelist, week, numberOfLastWeek, ofMonth);
 }
 
 function nextListedYear (

@@ -13,6 +13,7 @@ import type {
 } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { addHours } from "date-fns";
 import boundariesOfPeriodOccurrence from "../../utils/boundariesOfPeriodOccurrence.mjs";
+import { secondAfter } from "../../utils/secondAfter.mjs";
 
 const MAX_DATE: Date = new Date(8640000000000000);
 const MIN_DATE: Date = new Date(-8640000000000000);
@@ -51,24 +52,6 @@ function inSpecTimeZone (instant: Date, timeZone: number | undefined): Date {
  * band could otherwise iterate without bound.
  */
 const MAX_ENTIRELY_COVER_STEPS = 1000;
-
-/**
- * @summary Instant one second after `instant`.
- * @description
- *
- * X.520 clause 10.2 `DayTime` is second-precision. The cover walk
- * advances by this amount after an occurrence end so
- * {@link boundariesOfPeriodOccurrence} can select a later
- * `DayTimeBand` (band matching ignores milliseconds).
- *
- * @param {Date} instant Inclusive end of the current covering occurrence.
- * @returns {Date} `instant` plus one second.
- * @function
- * @author Cursor Grok 4.6
- */
-function secondAfter (instant: Date): Date {
-    return new Date(instant.valueOf() + 1000);
-}
 
 /**
  * @summary Latest inclusive occurrence end that covers `t`.

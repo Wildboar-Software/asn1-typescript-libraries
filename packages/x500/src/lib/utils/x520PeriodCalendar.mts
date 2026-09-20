@@ -272,3 +272,30 @@ function isX520WeekListed (
     }
     return false;
 }
+
+/**
+ * @summary Whether a `Period.weeks` set (or its absence) allows this week.
+ * @description
+ *
+ * `null` means `weeks` was omitted, so every week is allowed. Otherwise
+ * this is {@link isX520WeekListed}: week 5 of a month and week 53 of a
+ * year alias the last real week.
+ *
+ * @param {Set<number> | null} whitelist Week numbers, or `null` if unconstrained.
+ * @param {number} week The X.520 week of the month or year.
+ * @param {number} numberOfLastWeek Last real week of that month or year.
+ * @param {boolean} weekOfMonth `true` if `Period.months` is present.
+ * @returns {boolean} `true` if the week is allowed.
+ */
+export
+function periodAllowsWeek (
+    whitelist: Set<number> | null,
+    week: number,
+    numberOfLastWeek: number,
+    weekOfMonth: boolean,
+): boolean {
+    if (!whitelist) {
+        return true;
+    }
+    return isX520WeekListed(whitelist, week, numberOfLastWeek, weekOfMonth);
+}

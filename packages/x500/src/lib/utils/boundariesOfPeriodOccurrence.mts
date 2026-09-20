@@ -25,7 +25,7 @@ import destructureDateIntoPeriodProperties from "./destructureDateIntoPeriodProp
 import {
     endOfSundayBasedWeek,
     startOfSundayBasedWeek,
-    isX520WeekListed,
+    periodAllowsWeek,
 } from "./x520PeriodCalendar.mjs";
 
 const MAX_DAY_OF_WEEK = 7;
@@ -38,22 +38,6 @@ const MAX_MONTH = 12;
  * than a contiguous allWeeks span would ever need.
  */
 const MAX_WEEK_SPAN_ITERS = 60;
-
-/**
- * `whitelistedWeeks.has(week)` is not enough: X.520 week 5 (of month) and
- * 53 (of year) mean “last week”, which may be 4 or 52. See x520PeriodCalendar.
- */
-function periodAllowsWeek (
-    whitelist: Set<number> | null,
-    week: number,
-    numberOfLastWeek: number,
-    ofMonth: boolean,
-): boolean {
-    if (!whitelist) {
-        return true;
-    }
-    return isX520WeekListed(whitelist, week, numberOfLastWeek, ofMonth);
-}
 
 const ALL_WEEKS_IN_YEAR: Set<number> = new Set(Array(53).fill(0).map((_, i) => (i + 1)));
 const ALL_WEEKS_IN_MONTH: Set<number> = new Set([ 1, 2, 3, 4, 5 ]);

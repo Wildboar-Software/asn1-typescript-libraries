@@ -3,6 +3,7 @@ import {
     startOfFirstX520WeekOfMonth,
     startOfSundayBasedWeek,
     isX520WeekListed,
+    periodAllowsWeek,
     x520WeekOfMonth,
     x520WeekOfYear,
     sundayBasedWeeksInMonth,
@@ -47,5 +48,13 @@ describe("x520PeriodCalendar", () => {
         expect(late2021.week).toBe(late2021.numberOfLastWeekOfYear);
         expect(isX520WeekListed(new Set([53]), late2021.week, late2021.numberOfLastWeekOfYear, false)).toBe(true);
         expect(isX520WeekListed(new Set([53]), late2021.week - 1, late2021.numberOfLastWeekOfYear, false)).toBe(false);
+    });
+
+    it("treats a null week whitelist as unconstrained and otherwise delegates aliases", () => {
+        expect(periodAllowsWeek(null, 1, 4, true)).toBe(true);
+        expect(periodAllowsWeek(null, 52, 52, false)).toBe(true);
+        expect(periodAllowsWeek(new Set([5]), 4, 4, true)).toBe(true);
+        expect(periodAllowsWeek(new Set([5]), 1, 4, true)).toBe(false);
+        expect(periodAllowsWeek(new Set([1]), 1, 4, true)).toBe(true);
     });
 });
