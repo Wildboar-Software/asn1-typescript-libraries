@@ -52,17 +52,42 @@ function inSpecTimeZone (instant: Date, timeZone: number | undefined): Date {
  */
 const MAX_ENTIRELY_COVER_STEPS = 1000;
 
+/**
+ * @summary Instant one second after `instant`.
+ * @description
+ *
+ * X.520 clause 10.2 `DayTime` is second-precision. The cover walk
+ * advances by this amount after an occurrence end so
+ * {@link boundariesOfPeriodOccurrence} can select a later
+ * `DayTimeBand` (band matching ignores milliseconds).
+ *
+ * @param {Date} instant Inclusive end of the current covering occurrence.
+ * @returns {Date} `instant` plus one second.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function secondAfter (instant: Date): Date {
     return new Date(instant.valueOf() + 1000);
 }
 
 /**
- * Latest inclusive end among occurrences (any `Period` in the SET) that
- * contain `t`. `null` if `t` is a hole in the union.
+ * @summary Latest inclusive occurrence end that covers `t`.
+ * @description
+ *
+ * Among the stored `periodic` SET, take the farthest inclusive end of
+ * any `Period` occurrence that contains `t`. `null` means `t` is a
+ * hole in the union (X.520 clause 10.2).
  *
  * Occurrence bounds already include the `DayTimeBand` that contains
  * `t`. Later bands of the same `Period` are found on the next walk
- * step (X.520 `DayTime` is second-precision).
+ * step.
+ *
+ * @param {Period[]} periods Stored `TimeSpecification.time.periodic`.
+ * @param {Date} t Instant that must lie in the union.
+ * @returns {Date | null} Farthest inclusive end, or `null` if none
+ *  cover `t`.
+ * @function
+ * @author Cursor Grok 4.6
  */
 function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null {
     let farthest: Date | null = null;
@@ -80,9 +105,26 @@ function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null
 }
 
 /**
- * `entirely` TRUE: `[start, end]` ⊆ union of all `Period` occurrences
- * (clause 10.2). Walk `t` from `start`; at each `t` take the farthest
- * covering occurrence end and continue at the next second.
+ * @summary Whether `[start, end]` ⊆ the union of `Period` occurrences.
+ * @description
+ *
+ * X.520 clause 10.2 `between` with `entirely` TRUE: the asserted band
+ * must lie inside the **stored times**. For `periodic`, that is the
+ * union of all `Period` occurrences (the SET), not one occurrence of
+ * one `Period`.
+ *
+ * Walk `t` from `start`; at each `t` take the farthest covering
+ * occurrence end and continue at the next second. A hole, or more
+ * than {@link MAX_ENTIRELY_COVER_STEPS} steps, fails. Open-ended
+ * assertions use `MAX_DATE`.
+ *
+ * @param {Period[]} periods Stored `TimeSpecification.time.periodic`.
+ * @param {Date} start Inclusive start of the asserted band (spec zone).
+ * @param {Date} end Inclusive end of the asserted band (spec zone).
+ * @returns {boolean} `true` iff every instant in `[start, end]` is
+ *  covered.
+ * @function
+ * @author Cursor Grok 4.6
  */
 function periodsEntirelyCoverInterval (periods: Period[], start: Date, end: Date): boolean {
     if (start.valueOf() > end.valueOf()) {
