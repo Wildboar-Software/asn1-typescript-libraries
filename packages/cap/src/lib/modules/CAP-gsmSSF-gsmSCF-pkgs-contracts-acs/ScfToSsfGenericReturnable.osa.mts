@@ -32,14 +32,9 @@ import { playAnnouncement } from "../CAP-gsmSCF-gsmSRF-ops-args/playAnnouncement
 import { playTone } from "../CAP-gsmSSF-gsmSCF-ops-args/playTone.oa.mjs";
 import { promptAndCollectUserInformation } from "../CAP-gsmSCF-gsmSRF-ops-args/promptAndCollectUserInformation.oa.mjs";
 import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { activityTest } from "../CAP-gsmSSF-gsmSCF-ops-args/activityTest.oa.mjs";
-// export { activityTest } from "../CAP-gsmSSF-gsmSCF-ops-args/activityTest.oa.mjs";
-// export { cAPSpecificBoundSet } from "../CAP-classes/cAPSpecificBoundSet.oa.mjs";
 import { disconnectForwardConnection } from "../CAP-gsmSSF-gsmSCF-ops-args/disconnectForwardConnection.oa.mjs";
-// export { disconnectForwardConnection } from "../CAP-gsmSSF-gsmSCF-ops-args/disconnectForwardConnection.oa.mjs";
 import { specializedResourceReport } from "../CAP-gsmSCF-gsmSRF-ops-args/specializedResourceReport.oa.mjs";
-// export { specializedResourceReport } from "../CAP-gsmSCF-gsmSRF-ops-args/specializedResourceReport.oa.mjs";
 
 
 /**

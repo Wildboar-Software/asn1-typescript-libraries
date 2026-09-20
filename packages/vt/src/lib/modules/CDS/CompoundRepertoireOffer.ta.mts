@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
-// export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { RepertoireFontOffer, _decode_RepertoireFontOffer, _encode_RepertoireFontOffer } from "../CDS/RepertoireFontOffer.ta.mjs";
-// export { RepertoireFontOffer, _decode_RepertoireFontOffer, _encode_RepertoireFontOffer } from "../CDS/RepertoireFontOffer.ta.mjs";
 
 
 /**

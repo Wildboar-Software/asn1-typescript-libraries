@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credit, _decode_Credit, _encode_Credit } from "../IN-CS2-datatypes/Credit.ta.mjs";
-// export { Credit, _decode_Credit, _encode_Credit } from "../IN-CS2-datatypes/Credit.ta.mjs";
 
 
 /**

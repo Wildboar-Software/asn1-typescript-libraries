@@ -11,8 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { CIO_OPAQUE } from "../CryptographicInformationFramework/CIO-OPAQUE.oca.mjs";
-// export { AllowedCertificates } from "../CryptographicInformationFramework/AllowedCertificates.osa.mjs";
 
 
 /**

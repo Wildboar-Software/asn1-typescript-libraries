@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ObjectUpdate, _decode_ObjectUpdate, _encode_ObjectUpdate } from "../ISO9041-VTP/ObjectUpdate.ta.mjs";
-// export { ObjectUpdate, _decode_ObjectUpdate, _encode_ObjectUpdate } from "../ISO9041-VTP/ObjectUpdate.ta.mjs";
 
 
 /**

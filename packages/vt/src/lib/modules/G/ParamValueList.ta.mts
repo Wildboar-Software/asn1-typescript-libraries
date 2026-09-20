@@ -15,7 +15,6 @@ import { ParamValueList_deliveryControl, _decode_ParamValueList_deliveryControl,
 import { type Values as CDS_Values, _decode_Values as CDS__decode_Values, _encode_Values as CDS__encode_Values } from "../CDS/Values.ta.mjs";
 import { type Values as CSS_Values, _decode_Values as CSS__decode_Values, _encode_Values as CSS__encode_Values } from "../CSS/Values.ta.mjs";
 import { type Values as DEV_Values, _decode_Values as DEV__decode_Values, _encode_Values as DEV__encode_Values } from "../DEV/Values.ta.mjs";
-// export { ParamValueList_deliveryControl, ParamValueList_deliveryControl_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, ParamValueList_deliveryControl_simple /* IMPORTED_LONG_NAMED_INTEGER */, simple /* IMPORTED_SHORT_NAMED_INTEGER */, ParamValueList_deliveryControl_quarantine /* IMPORTED_LONG_NAMED_INTEGER */, quarantine /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ParamValueList_deliveryControl, _encode_ParamValueList_deliveryControl } from "../G/ParamValueList-deliveryControl.ta.mjs";
 
 
 /**

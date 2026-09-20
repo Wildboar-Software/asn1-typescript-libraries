@@ -14,17 +14,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SemaphoreEntry_entryClass, _decode_SemaphoreEntry_entryClass, _encode_SemaphoreEntry_entryClass } from "../ISO-9506-MMS-1/SemaphoreEntry-entryClass.ta.mjs";
-// export { SemaphoreEntry_entryClass, SemaphoreEntry_entryClass_simple /* IMPORTED_LONG_NAMED_INTEGER */, simple /* IMPORTED_SHORT_NAMED_INTEGER */, SemaphoreEntry_entryClass_modifier /* IMPORTED_LONG_NAMED_INTEGER */, modifier /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SemaphoreEntry_entryClass, _encode_SemaphoreEntry_entryClass } from "../ISO-9506-MMS-1/SemaphoreEntry-entryClass.ta.mjs";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
-// export { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
 import { normalPriority } from "../MMS-Object-Module-1/normalPriority.va.mjs";
-// export { normalPriority } from "../MMS-Object-Module-1/normalPriority.va.mjs";
 import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
-// export { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
 
 
 /**

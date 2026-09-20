@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CurrencyID, _decode_CurrencyID, _encode_CurrencyID } from "../IN-CS2-datatypes/CurrencyID.ta.mjs";
-// export { CurrencyID, _decode_CurrencyID, _encode_CurrencyID } from "../IN-CS2-datatypes/CurrencyID.ta.mjs";
 
 
 /**

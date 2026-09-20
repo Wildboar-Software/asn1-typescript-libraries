@@ -9,11 +9,8 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-// export { emptyBind } from "../Remote-Operations-Useful-Definitions/emptyBind.oa.mjs";
 import { emptyUnbind } from "../Remote-Operations-Useful-Definitions/emptyUnbind.oa.mjs";
-// export { emptyUnbind } from "../Remote-Operations-Useful-Definitions/emptyUnbind.oa.mjs";
 import { dfrBind } from "../DFRAbstractService/dfrBind.oa.mjs";
-// export { dfrBind } from "../DFRAbstractService/dfrBind.oa.mjs";
 import { type CONNECTION_PACKAGE } from "../Remote-Operations-Information-Objects/CONNECTION-PACKAGE.oca.mjs";
 
 

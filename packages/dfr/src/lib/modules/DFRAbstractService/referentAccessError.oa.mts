@@ -10,13 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { referentAccessError_ParameterType, _decode_referentAccessError_ParameterType, _encode_referentAccessError_ParameterType } from "../DFRAbstractService/referentAccessError-ParameterType.ta.mjs";
-// export { referentAccessError_ParameterType, _decode_referentAccessError_ParameterType, _encode_referentAccessError_ParameterType } from "../DFRAbstractService/referentAccessError-ParameterType.ta.mjs";
 import { id_errcode_referent_access_error } from "../DFRAbstractService/id-errcode-referent-access-error.va.mjs";
-// export { id_errcode_referent_access_error } from "../DFRAbstractService/id-errcode-referent-access-error.va.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 

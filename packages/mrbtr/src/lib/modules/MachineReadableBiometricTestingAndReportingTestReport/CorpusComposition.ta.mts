@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CorpusStatistics, _decode_CorpusStatistics, _encode_CorpusStatistics } from "../MachineReadableBiometricTestingAndReportingTestReport/CorpusStatistics.ta.mjs";
-// export { CorpusStatistics, _decode_CorpusStatistics, _encode_CorpusStatistics } from "../MachineReadableBiometricTestingAndReportingTestReport/CorpusStatistics.ta.mjs";
 
 
 /**

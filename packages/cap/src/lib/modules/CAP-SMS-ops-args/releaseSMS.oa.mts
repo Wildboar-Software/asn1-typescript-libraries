@@ -11,13 +11,9 @@ import {
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ReleaseSMSArg, _decode_ReleaseSMSArg, _encode_ReleaseSMSArg } from "../CAP-SMS-ops-args/ReleaseSMSArg.ta.mjs";
-// export { ReleaseSMSArg, _decode_ReleaseSMSArg, _encode_ReleaseSMSArg } from "../CAP-SMS-ops-args/ReleaseSMSArg.ta.mjs";
 import { opcode_releaseSMS } from "../CAP-operationcodes/opcode-releaseSMS.va.mjs";
-// export { opcode_releaseSMS } from "../CAP-operationcodes/opcode-releaseSMS.va.mjs";
 
 
 /**

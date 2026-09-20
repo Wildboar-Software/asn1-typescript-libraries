@@ -11,9 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { CAP_GPRS_ReferenceNumber, _decode_CAP_GPRS_ReferenceNumber, _encode_CAP_GPRS_ReferenceNumber } from "../CAP-GPRS-ReferenceNumber/CAP-GPRS-ReferenceNumber.ta.mjs";
-// export { CAP_GPRS_ReferenceNumber, _decode_CAP_GPRS_ReferenceNumber, _encode_CAP_GPRS_ReferenceNumber } from "../CAP-GPRS-ReferenceNumber/CAP-GPRS-ReferenceNumber.ta.mjs";
 import { id_CAP_GPRS_ReferenceNumber } from "../CAP-GPRS-ReferenceNumber/id-CAP-GPRS-ReferenceNumber.va.mjs";
-// export { id_CAP_GPRS_ReferenceNumber } from "../CAP-GPRS-ReferenceNumber/id-CAP-GPRS-ReferenceNumber.va.mjs";
 
 
 /**

@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_LogExpPointer, _encode_LogExpPointer, LogExpPointer } from "../G/LogExpPointer.ta.mjs";
-// export { LogExpPointer, _decode_LogExpPointer, _encode_LogExpPointer } from "../G/LogExpPointer.ta.mjs";
 
 
 /**

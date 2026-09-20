@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessId, _decode_AccessId, _encode_AccessId } from "../DFRBasicAttributes/AccessId.ta.mjs";
-// export { AccessId, _decode_AccessId, _encode_AccessId } from "../DFRBasicAttributes/AccessId.ta.mjs";
 import { AccessRights, _enum_for_AccessRights, _decode_AccessRights, _encode_AccessRights } from "../DFRBasicAttributes/AccessRights.ta.mjs";
-// export { AccessRights, _enum_for_AccessRights, AccessRights_read /* IMPORTED_LONG_ENUMERATION_ITEM */, read /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessRights_extended_read /* IMPORTED_LONG_ENUMERATION_ITEM */, extended_read /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessRights_read_modify /* IMPORTED_LONG_ENUMERATION_ITEM */, read_modify /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessRights_read_modify_delete /* IMPORTED_LONG_ENUMERATION_ITEM */, read_modify_delete /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessRights_owner /* IMPORTED_LONG_ENUMERATION_ITEM */, owner /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessRights, _encode_AccessRights } from "../DFRBasicAttributes/AccessRights.ta.mjs";
 
 
 /**

@@ -12,11 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DfrUniquePermanentIdentifier, _decode_DfrUniquePermanentIdentifier, _encode_DfrUniquePermanentIdentifier } from "../DFRAbstractService/DfrUniquePermanentIdentifier.ta.mjs";
-// export { DfrUniquePermanentIdentifier, _decode_DfrUniquePermanentIdentifier, _encode_DfrUniquePermanentIdentifier } from "../DFRAbstractService/DfrUniquePermanentIdentifier.ta.mjs";
 import { DfrObjectClass, _enum_for_DfrObjectClass, _decode_DfrObjectClass, _encode_DfrObjectClass } from "../DFRAbstractService/DfrObjectClass.ta.mjs";
-// export { DfrObjectClass, _enum_for_DfrObjectClass, DfrObjectClass_dfr_document /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_document /* IMPORTED_SHORT_ENUMERATION_ITEM */, DfrObjectClass_dfr_root_group /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_root_group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DfrObjectClass_dfr_proper_group /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_proper_group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DfrObjectClass_dfr_reference /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_reference /* IMPORTED_SHORT_ENUMERATION_ITEM */, DfrObjectClass_dfr_search_result_list /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_search_result_list /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DfrObjectClass, _encode_DfrObjectClass } from "../DFRAbstractService/DfrObjectClass.ta.mjs";
 import { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationFramework/Attribute.ta.mjs";
-// export { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationFramework/Attribute.ta.mjs";
 
 
 /**

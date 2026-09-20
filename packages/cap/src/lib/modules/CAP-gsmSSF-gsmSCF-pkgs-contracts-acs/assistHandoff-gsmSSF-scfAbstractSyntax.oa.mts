@@ -11,9 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { AssistHandoffsSF_gsmSCF_PDUs, _decode_AssistHandoffsSF_gsmSCF_PDUs, _encode_AssistHandoffsSF_gsmSCF_PDUs } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/AssistHandoffsSF-gsmSCF-PDUs.ta.mjs";
-// export { AssistHandoffsSF_gsmSCF_PDUs, _decode_AssistHandoffsSF_gsmSCF_PDUs, _encode_AssistHandoffsSF_gsmSCF_PDUs } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/AssistHandoffsSF-gsmSCF-PDUs.ta.mjs";
 import { id_as_assistHandoff_gsmSSF_scfAS } from "../CAP-object-identifiers/id-as-assistHandoff-gsmSSF-scfAS.va.mjs";
-// export { id_as_assistHandoff_gsmSSF_scfAS } from "../CAP-object-identifiers/id-as-assistHandoff-gsmSSF-scfAS.va.mjs";
 
 
 /**

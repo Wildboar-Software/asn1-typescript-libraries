@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { VMD_File, _decode_VMD_File, _encode_VMD_File } from "../MMS-SCI-Module-1/VMD-File.ta.mjs";
-// export { VMD_File, _decode_VMD_File, _encode_VMD_File } from "../MMS-SCI-Module-1/VMD-File.ta.mjs";
 import { Service_and_Parameter_CBBs, _decode_Service_and_Parameter_CBBs, _encode_Service_and_Parameter_CBBs } from "../MMS-SCI-Module-1/Service-and-Parameter-CBBs.ta.mjs";
-// export { Service_and_Parameter_CBBs, _decode_Service_and_Parameter_CBBs, _encode_Service_and_Parameter_CBBs } from "../MMS-SCI-Module-1/Service-and-Parameter-CBBs.ta.mjs";
 
 
 /**

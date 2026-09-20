@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IntervalIntegerFrequency, _decode_IntervalIntegerFrequency, _encode_IntervalIntegerFrequency } from "../MachineReadableBiometricTestingAndReportingTestReport/IntervalIntegerFrequency.ta.mjs";
-// export { IntervalIntegerFrequency, _decode_IntervalIntegerFrequency, _encode_IntervalIntegerFrequency } from "../MachineReadableBiometricTestingAndReportingTestReport/IntervalIntegerFrequency.ta.mjs";
 
 
 /**

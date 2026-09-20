@@ -13,13 +13,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttrId_graphicCharacterRepertoire, _decode_AttrId_graphicCharacterRepertoire, _encode_AttrId_graphicCharacterRepertoire } from "../ISO9041-VTP/AttrId-graphicCharacterRepertoire.ta.mjs";
-// export { AttrId_graphicCharacterRepertoire, AttrId_graphicCharacterRepertoire_null /* IMPORTED_LONG_NAMED_INTEGER */, _decode_AttrId_graphicCharacterRepertoire, _encode_AttrId_graphicCharacterRepertoire } from "../ISO9041-VTP/AttrId-graphicCharacterRepertoire.ta.mjs";
 import { AttrId_foregroundColour, _decode_AttrId_foregroundColour, _encode_AttrId_foregroundColour } from "../ISO9041-VTP/AttrId-foregroundColour.ta.mjs";
-// export { AttrId_foregroundColour, AttrId_foregroundColour_null /* IMPORTED_LONG_NAMED_INTEGER */, _decode_AttrId_foregroundColour, _encode_AttrId_foregroundColour } from "../ISO9041-VTP/AttrId-foregroundColour.ta.mjs";
 import { AttrId_backgroundColour, _decode_AttrId_backgroundColour, _encode_AttrId_backgroundColour } from "../ISO9041-VTP/AttrId-backgroundColour.ta.mjs";
-// export { AttrId_backgroundColour, AttrId_backgroundColour_null /* IMPORTED_LONG_NAMED_INTEGER */, _decode_AttrId_backgroundColour, _encode_AttrId_backgroundColour } from "../ISO9041-VTP/AttrId-backgroundColour.ta.mjs";
 import { AttrId_font, _decode_AttrId_font, _encode_AttrId_font } from "../ISO9041-VTP/AttrId-font.ta.mjs";
-// export { AttrId_font, AttrId_font_null /* IMPORTED_LONG_NAMED_INTEGER */, _decode_AttrId_font, _encode_AttrId_font } from "../ISO9041-VTP/AttrId-font.ta.mjs";
 
 
 /**

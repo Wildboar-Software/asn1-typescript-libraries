@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LevelEffortAndDecisionPolicy, _decode_LevelEffortAndDecisionPolicy, _encode_LevelEffortAndDecisionPolicy } from "../MachineReadableBiometricTestingAndReportingTestReport/LevelEffortAndDecisionPolicy.ta.mjs";
-// export { LevelEffortAndDecisionPolicy, _decode_LevelEffortAndDecisionPolicy, _encode_LevelEffortAndDecisionPolicy } from "../MachineReadableBiometricTestingAndReportingTestReport/LevelEffortAndDecisionPolicy.ta.mjs";
 import { AssistanceAndInstruction, _decode_AssistanceAndInstruction, _encode_AssistanceAndInstruction } from "../MachineReadableBiometricTestingAndReportingTestReport/AssistanceAndInstruction.ta.mjs";
-// export { AssistanceAndInstruction, _decode_AssistanceAndInstruction, _encode_AssistanceAndInstruction } from "../MachineReadableBiometricTestingAndReportingTestReport/AssistanceAndInstruction.ta.mjs";
 
 
 /**

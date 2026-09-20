@@ -13,15 +13,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { ProgramInvocationState, _decode_ProgramInvocationState, _encode_ProgramInvocationState } from "../MMS-Object-Module-1/ProgramInvocationState.ta.mjs";
-// export { ProgramInvocationState, ProgramInvocationState_non_existent /* IMPORTED_LONG_NAMED_INTEGER */, non_existent /* IMPORTED_SHORT_NAMED_INTEGER */, ProgramInvocationState_unrunnable /* IMPORTED_LONG_NAMED_INTEGER */, unrunnable /* IMPORTED_SHORT_NAMED_INTEGER */, ProgramInvocationState_idle /* IMPORTED_LONG_NAMED_INTEGER */, idle /* IMPORTED_SHORT_NAMED_INTEGER */, ProgramInvocationState_running /* IMPORTED_LONG_NAMED_INTEGER */, running /* IMPORTED_SHORT_NAMED_INTEGER */, ProgramInvocationState_stopped /* IMPORTED_LONG_NAMED_INTEGER */, stopped /* IMPORTED_SHORT_NAMED_INTEGER */, ProgramInvocationState_starting /* IMPORTED_LONG_NAMED_INTEGER */, starting /* IMPORTED_SHORT_NAMED_INTEGER */, ProgramInvocationState_stopping /* IMPORTED_LONG_NAMED_INTEGER */, stopping /* IMPORTED_SHORT_NAMED_INTEGER */, ProgramInvocationState_resuming /* IMPORTED_LONG_NAMED_INTEGER */, resuming /* IMPORTED_SHORT_NAMED_INTEGER */, ProgramInvocationState_resetting /* IMPORTED_LONG_NAMED_INTEGER */, resetting /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ProgramInvocationState, _encode_ProgramInvocationState } from "../MMS-Object-Module-1/ProgramInvocationState.ta.mjs";
 import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
-// export { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 import { Control_State, _decode_Control_State, _encode_Control_State } from "../MMS-Object-Module-1/Control-State.ta.mjs";
-// export { Control_State, Control_State_normal /* IMPORTED_LONG_NAMED_INTEGER */, normal /* IMPORTED_SHORT_NAMED_INTEGER */, Control_State_controlling /* IMPORTED_LONG_NAMED_INTEGER */, controlling /* IMPORTED_SHORT_NAMED_INTEGER */, Control_State_controlled /* IMPORTED_LONG_NAMED_INTEGER */, controlled /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Control_State, _encode_Control_State } from "../MMS-Object-Module-1/Control-State.ta.mjs";
 import { Running_Mode, _decode_Running_Mode, _encode_Running_Mode } from "../MMS-Object-Module-1/Running-Mode.ta.mjs";
-// export { Running_Mode, Running_Mode_free_run /* IMPORTED_LONG_NAMED_INTEGER */, free_run /* IMPORTED_SHORT_NAMED_INTEGER */, Running_Mode_cycle_limited /* IMPORTED_LONG_NAMED_INTEGER */, cycle_limited /* IMPORTED_SHORT_NAMED_INTEGER */, Running_Mode_step_limited /* IMPORTED_LONG_NAMED_INTEGER */, step_limited /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Running_Mode, _encode_Running_Mode } from "../MMS-Object-Module-1/Running-Mode.ta.mjs";
 
 
 /**

@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TimeOffer, _decode_TimeOffer, _encode_TimeOffer } from "../DEV/TimeOffer.ta.mjs";
-// export { TimeOffer, _decode_TimeOffer, _encode_TimeOffer } from "../DEV/TimeOffer.ta.mjs";
 import { ParameterOffers_terminationTimeout_eventId, _decode_ParameterOffers_terminationTimeout_eventId, _encode_ParameterOffers_terminationTimeout_eventId } from "../DEV/ParameterOffers-terminationTimeout-eventId.ta.mjs";
-// export { ParameterOffers_terminationTimeout_eventId, _decode_ParameterOffers_terminationTimeout_eventId, _encode_ParameterOffers_terminationTimeout_eventId } from "../DEV/ParameterOffers-terminationTimeout-eventId.ta.mjs";
 
 
 /**

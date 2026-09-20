@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-// export { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 import { Journal_instance_definition, _decode_Journal_instance_definition, _encode_Journal_instance_definition } from "../MMS-SCI-Module-1/Journal-instance-definition.ta.mjs";
-// export { Journal_instance_definition, _decode_Journal_instance_definition, _encode_Journal_instance_definition } from "../MMS-SCI-Module-1/Journal-instance-definition.ta.mjs";
 
 
 /**

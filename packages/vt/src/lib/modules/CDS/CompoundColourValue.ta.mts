@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ColourAssignment, _decode_ColourAssignment, _encode_ColourAssignment } from "../CDS/ColourAssignment.ta.mjs";
-// export { ColourAssignment, _decode_ColourAssignment, _encode_ColourAssignment } from "../CDS/ColourAssignment.ta.mjs";
 
 
 /**

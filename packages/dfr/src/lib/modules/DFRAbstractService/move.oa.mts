@@ -11,37 +11,21 @@ import {
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { MoveArgument, _decode_MoveArgument, _encode_MoveArgument } from "../DFRAbstractService/MoveArgument.ta.mjs";
-// export { MoveArgument, _decode_MoveArgument, _encode_MoveArgument } from "../DFRAbstractService/MoveArgument.ta.mjs";
 import { MoveResult, _decode_MoveResult, _encode_MoveResult } from "../DFRAbstractService/MoveResult.ta.mjs";
-// export { MoveResult, _decode_MoveResult, _encode_MoveResult } from "../DFRAbstractService/MoveResult.ta.mjs";
 import { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
-// export { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
 import { accessError } from "../DFRAbstractService/accessError.oa.mjs";
-// export { accessError } from "../DFRAbstractService/accessError.oa.mjs";
 import { attributeError } from "../DFRAbstractService/attributeError.oa.mjs";
-// export { attributeError } from "../DFRAbstractService/attributeError.oa.mjs";
 import { interServerAccessError } from "../DFRAbstractService/interServerAccessError.oa.mjs";
-// export { interServerAccessError } from "../DFRAbstractService/interServerAccessError.oa.mjs";
 import { nameError } from "../DFRAbstractService/nameError.oa.mjs";
-// export { nameError } from "../DFRAbstractService/nameError.oa.mjs";
 import { referentAccessError } from "../DFRAbstractService/referentAccessError.oa.mjs";
-// export { referentAccessError } from "../DFRAbstractService/referentAccessError.oa.mjs";
 import { reservationError } from "../DFRAbstractService/reservationError.oa.mjs";
-// export { reservationError } from "../DFRAbstractService/reservationError.oa.mjs";
 import { securityError } from "../DFRAbstractService/securityError.oa.mjs";
-// export { securityError } from "../DFRAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DFRAbstractService/serviceError.oa.mjs";
-// export { serviceError } from "../DFRAbstractService/serviceError.oa.mjs";
 import { updateError } from "../DFRAbstractService/updateError.oa.mjs";
-// export { updateError } from "../DFRAbstractService/updateError.oa.mjs";
 import { versionManagementError } from "../DFRAbstractService/versionManagementError.oa.mjs";
-// export { versionManagementError } from "../DFRAbstractService/versionManagementError.oa.mjs";
 import { id_opcode_move } from "../DFRAbstractService/id-opcode-move.va.mjs";
-// export { id_opcode_move } from "../DFRAbstractService/id-opcode-move.va.mjs";
 
 
 /**

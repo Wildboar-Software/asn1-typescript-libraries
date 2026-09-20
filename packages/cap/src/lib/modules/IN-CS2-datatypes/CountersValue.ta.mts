@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CounterAndValue, _decode_CounterAndValue, _encode_CounterAndValue } from "../IN-CS2-datatypes/CounterAndValue.ta.mjs";
-// export { CounterAndValue, _decode_CounterAndValue, _encode_CounterAndValue } from "../IN-CS2-datatypes/CounterAndValue.ta.mjs";
 
 
 /**

@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DOupdate, _decode_DOupdate, _encode_DOupdate } from "../ISO9041-VTP/DOupdate.ta.mjs";
-// export { DOupdate, _decode_DOupdate, _encode_DOupdate } from "../ISO9041-VTP/DOupdate.ta.mjs";
 
 
 /**

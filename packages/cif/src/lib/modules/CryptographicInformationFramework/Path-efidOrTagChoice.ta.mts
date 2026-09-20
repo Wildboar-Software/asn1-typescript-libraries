@@ -12,11 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Path_efidOrTagChoice_tagRef, _decode_Path_efidOrTagChoice_tagRef, _encode_Path_efidOrTagChoice_tagRef } from "../CryptographicInformationFramework/Path-efidOrTagChoice-tagRef.ta.mjs";
-// export { Path_efidOrTagChoice_tagRef, _decode_Path_efidOrTagChoice_tagRef, _encode_Path_efidOrTagChoice_tagRef } from "../CryptographicInformationFramework/Path-efidOrTagChoice-tagRef.ta.mjs";
 import { Path_efidOrTagChoice_appFileRef, _decode_Path_efidOrTagChoice_appFileRef, _encode_Path_efidOrTagChoice_appFileRef } from "../CryptographicInformationFramework/Path-efidOrTagChoice-appFileRef.ta.mjs";
-// export { Path_efidOrTagChoice_appFileRef, _decode_Path_efidOrTagChoice_appFileRef, _encode_Path_efidOrTagChoice_appFileRef } from "../CryptographicInformationFramework/Path-efidOrTagChoice-appFileRef.ta.mjs";
 import { Path_efidOrTagChoice_appTagRef, _decode_Path_efidOrTagChoice_appTagRef, _encode_Path_efidOrTagChoice_appTagRef } from "../CryptographicInformationFramework/Path-efidOrTagChoice-appTagRef.ta.mjs";
-// export { Path_efidOrTagChoice_appTagRef, _decode_Path_efidOrTagChoice_appTagRef, _encode_Path_efidOrTagChoice_appTagRef } from "../CryptographicInformationFramework/Path-efidOrTagChoice-appTagRef.ta.mjs";
 
 
 /**

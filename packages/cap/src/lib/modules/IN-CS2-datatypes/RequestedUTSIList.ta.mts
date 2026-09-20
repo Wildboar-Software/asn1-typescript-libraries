@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedUTSI, _decode_RequestedUTSI, _encode_RequestedUTSI } from "../IN-CS2-datatypes/RequestedUTSI.ta.mjs";
-// export { RequestedUTSI, _decode_RequestedUTSI, _encode_RequestedUTSI } from "../IN-CS2-datatypes/RequestedUTSI.ta.mjs";
 
 
 /**

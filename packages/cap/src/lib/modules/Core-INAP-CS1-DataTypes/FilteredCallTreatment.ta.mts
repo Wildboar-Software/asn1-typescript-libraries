@@ -12,13 +12,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SFBillingChargingCharacteristics, _decode_SFBillingChargingCharacteristics, _encode_SFBillingChargingCharacteristics } from "../Core-INAP-CS1-DataTypes/SFBillingChargingCharacteristics.ta.mjs";
-// export { SFBillingChargingCharacteristics, _decode_SFBillingChargingCharacteristics, _encode_SFBillingChargingCharacteristics } from "../Core-INAP-CS1-DataTypes/SFBillingChargingCharacteristics.ta.mjs";
 import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../Core-INAP-CS1-DataTypes/InformationToSend.ta.mjs";
-// export { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../Core-INAP-CS1-DataTypes/InformationToSend.ta.mjs";
 import { MaximumNumberOfCounters, _decode_MaximumNumberOfCounters, _encode_MaximumNumberOfCounters } from "../Core-INAP-CS1-DataTypes/MaximumNumberOfCounters.ta.mjs";
-// export { MaximumNumberOfCounters, _decode_MaximumNumberOfCounters, _encode_MaximumNumberOfCounters } from "../Core-INAP-CS1-DataTypes/MaximumNumberOfCounters.ta.mjs";
 import { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/Cause.ta.mjs";
-// export { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/Cause.ta.mjs";
 
 
 /**

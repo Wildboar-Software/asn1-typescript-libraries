@@ -13,11 +13,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DimensionParamValues_bound, _decode_DimensionParamValues_bound, _encode_DimensionParamValues_bound } from "../CDS/DimensionParamValues-bound.ta.mjs";
-// export { DimensionParamValues_bound, _decode_DimensionParamValues_bound, _encode_DimensionParamValues_bound } from "../CDS/DimensionParamValues-bound.ta.mjs";
 import { DimensionParamValues_addressing, _decode_DimensionParamValues_addressing, _encode_DimensionParamValues_addressing } from "../CDS/DimensionParamValues-addressing.ta.mjs";
-// export { DimensionParamValues_addressing, DimensionParamValues_addressing_noConstraint /* IMPORTED_LONG_NAMED_INTEGER */, noConstraint /* IMPORTED_SHORT_NAMED_INTEGER */, DimensionParamValues_addressing_higherOnly /* IMPORTED_LONG_NAMED_INTEGER */, higherOnly /* IMPORTED_SHORT_NAMED_INTEGER */, DimensionParamValues_addressing_notPermitted /* IMPORTED_LONG_NAMED_INTEGER */, notPermitted /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DimensionParamValues_addressing, _encode_DimensionParamValues_addressing } from "../CDS/DimensionParamValues-addressing.ta.mjs";
 import { DimensionParamValues_window, _decode_DimensionParamValues_window, _encode_DimensionParamValues_window } from "../CDS/DimensionParamValues-window.ta.mjs";
-// export { DimensionParamValues_window, _decode_DimensionParamValues_window, _encode_DimensionParamValues_window } from "../CDS/DimensionParamValues-window.ta.mjs";
 
 
 /**

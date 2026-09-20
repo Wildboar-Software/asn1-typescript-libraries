@@ -14,7 +14,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ENQcontent_vteChoice, _decode_ENQcontent_vteChoice, _encode_ENQcontent_vteChoice } from "../ISO9041-VTP/ENQcontent-vteChoice.ta.mjs";
-// export { ENQcontent_vteChoice, ENQcontent_vteChoice_draft /* IMPORTED_LONG_NAMED_INTEGER */, draft /* IMPORTED_SHORT_NAMED_INTEGER */, ENQcontent_vteChoice_current /* IMPORTED_LONG_NAMED_INTEGER */, current /* IMPORTED_SHORT_NAMED_INTEGER */, ENQcontent_vteChoice_either /* IMPORTED_LONG_NAMED_INTEGER */, either /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ENQcontent_vteChoice, _encode_ENQcontent_vteChoice } from "../ISO9041-VTP/ENQcontent-vteChoice.ta.mjs";
 
 
 /**

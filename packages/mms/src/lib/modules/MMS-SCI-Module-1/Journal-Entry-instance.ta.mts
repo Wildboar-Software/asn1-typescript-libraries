@@ -14,19 +14,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Journal_instance, _decode_Journal_instance, _encode_Journal_instance } from "../MMS-SCI-Module-1/Journal-instance.ta.mjs";
-// export { Journal_instance, _decode_Journal_instance, _encode_Journal_instance } from "../MMS-SCI-Module-1/Journal-instance.ta.mjs";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
-// export { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
 import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS-1/TimeOfDay.ta.mjs";
-// export { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS-1/TimeOfDay.ta.mjs";
 import { Journal_Entry_instance_informationType, _enum_for_Journal_Entry_instance_informationType, _decode_Journal_Entry_instance_informationType, _encode_Journal_Entry_instance_informationType } from "../MMS-SCI-Module-1/Journal-Entry-instance-informationType.ta.mjs";
-// export { Journal_Entry_instance_informationType, _enum_for_Journal_Entry_instance_informationType, Journal_Entry_instance_informationType_annotation /* IMPORTED_LONG_ENUMERATION_ITEM */, annotation /* IMPORTED_SHORT_ENUMERATION_ITEM */, Journal_Entry_instance_informationType_event_data /* IMPORTED_LONG_ENUMERATION_ITEM */, event_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, Journal_Entry_instance_informationType_data /* IMPORTED_LONG_ENUMERATION_ITEM */, data /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Journal_Entry_instance_informationType, _encode_Journal_Entry_instance_informationType } from "../MMS-SCI-Module-1/Journal-Entry-instance-informationType.ta.mjs";
 import { MMS255String, _decode_MMS255String, _encode_MMS255String } from "../ISO-9506-MMS-1/MMS255String.ta.mjs";
-// export { MMS255String, _decode_MMS255String, _encode_MMS255String } from "../ISO-9506-MMS-1/MMS255String.ta.mjs";
 import { Journal_Entry_instance_eventTransitionRecord, _decode_Journal_Entry_instance_eventTransitionRecord, _encode_Journal_Entry_instance_eventTransitionRecord } from "../MMS-SCI-Module-1/Journal-Entry-instance-eventTransitionRecord.ta.mjs";
-// export { Journal_Entry_instance_eventTransitionRecord, _decode_Journal_Entry_instance_eventTransitionRecord, _encode_Journal_Entry_instance_eventTransitionRecord } from "../MMS-SCI-Module-1/Journal-Entry-instance-eventTransitionRecord.ta.mjs";
 import { Journal_Entry_instance_journalVariables_Item, _decode_Journal_Entry_instance_journalVariables_Item, _encode_Journal_Entry_instance_journalVariables_Item } from "../MMS-SCI-Module-1/Journal-Entry-instance-journalVariables-Item.ta.mjs";
-// export { Journal_Entry_instance_journalVariables_Item, _decode_Journal_Entry_instance_journalVariables_Item, _encode_Journal_Entry_instance_journalVariables_Item } from "../MMS-SCI-Module-1/Journal-Entry-instance-journalVariables-Item.ta.mjs";
 
 
 /**

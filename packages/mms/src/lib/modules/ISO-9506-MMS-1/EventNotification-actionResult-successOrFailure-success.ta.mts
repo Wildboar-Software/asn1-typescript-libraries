@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ConfirmedServiceResponse, _decode_ConfirmedServiceResponse, _encode_ConfirmedServiceResponse } from "../ISO-9506-MMS-1/ConfirmedServiceResponse.ta.mjs";
-// export { ConfirmedServiceResponse, _decode_ConfirmedServiceResponse, _encode_ConfirmedServiceResponse } from "../ISO-9506-MMS-1/ConfirmedServiceResponse.ta.mjs";
 import { Response_Detail, _decode_Response_Detail, _encode_Response_Detail } from "../ISO-9506-MMS-1/Response-Detail.ta.mjs";
-// export { Response_Detail, _decode_Response_Detail, _encode_Response_Detail } from "../ISO-9506-MMS-1/Response-Detail.ta.mjs";
 
 
 /**

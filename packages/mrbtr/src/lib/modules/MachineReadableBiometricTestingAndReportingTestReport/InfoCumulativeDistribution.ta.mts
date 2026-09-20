@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DistributionIntegerReal, _decode_DistributionIntegerReal, _encode_DistributionIntegerReal } from "../MachineReadableBiometricTestingAndReportingTestReport/DistributionIntegerReal.ta.mjs";
-// export { DistributionIntegerReal, _decode_DistributionIntegerReal, _encode_DistributionIntegerReal } from "../MachineReadableBiometricTestingAndReportingTestReport/DistributionIntegerReal.ta.mjs";
 
 
 /**
