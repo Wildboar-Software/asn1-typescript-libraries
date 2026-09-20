@@ -78,32 +78,11 @@ function nextListedYear (
 }
 
 /**
- * @summary Seconds from midnight of a `DayTimeBand` start.
- * @description
- *
- * X.520 clause 10.2 `DayTime` is hour/minute/second. Missing fields
- * default to 0 so an omitted start is midnight. Used only to order
- * bands earliest-first before walking a civil day.
- *
- * @param {DayTimeBand} band One `Period.timesOfDay` member.
- * @returns {number} `hour*3600 + minute*60 + second`.
- * @function
- * @author Cursor Grok 4.6
- */
-function bandStartScore (band: DayTimeBand): number {
-    return (
-        (Number(band.startDayTime?.hour ?? 0) * 3600)
-        + (Number(band.startDayTime?.minute ?? 0) * 60)
-        + Number(band.startDayTime?.second ?? 0)
-    );
-}
-
-/**
  * @summary Local start instant of `band` on civil day `day`.
  * @description
  *
- * Combines `day`'s Y/M/D with the band's `startDayTime` clock. Missing
- * hour/minute/second default to 0 (X.520 omitted start ⇒ midnight).
+ * Combines `day`'s Y/M/D with {@link DayTimeBand.startToSeconds}. An
+ * omitted start is midnight (X.520 `DayTimeBand` DEFAULT).
  *
  * @param {Date} day Any instant on the civil day (local).
  * @param {DayTimeBand} band The band whose start clock is applied.
@@ -116,9 +95,9 @@ function startOfBandOnDay (day: Date, band: DayTimeBand): Date {
         day.getFullYear(),
         day.getMonth(),
         day.getDate(),
-        Number(band.startDayTime?.hour ?? 0),
-        Number(band.startDayTime?.minute ?? 0),
-        Number(band.startDayTime?.second ?? 0),
+        0,
+        0,
+        band.startToSeconds(),
     );
 }
 
@@ -134,7 +113,8 @@ function startOfBandOnDay (day: Date, band: DayTimeBand): Date {
  *
  * `weeksAreOfMonth` is true when `months` is present (weeks of month).
  * `daysAreWeekdays` is true when `weeks` is present, or when neither
- * `months` nor `years` is (X.520 example: every Monday).
+ * `months` nor `years` is (X.520 example: every Monday). `timesOfDay`
+ * is a SET, so bands are sorted with {@link DayTimeBand.compare}.
  *
  * @param {Period} period Stored periodic specification.
  * @returns {PeriodWhitelists} Sets and flags used by the calendar walk.
@@ -203,8 +183,9 @@ function decodeWhitelists (period: Period): PeriodWhitelists {
         }
         throw new Error("Unrecognized Period.days CHOICE alternative.");
     })();
+    // `timesOfDay` is SET OF DayTimeBand: members have no order.
     const bands: DayTimeBand[] | null = period.timesOfDay?.length
-        ? [ ...period.timesOfDay ].sort((a, b) => (bandStartScore(a) - bandStartScore(b)))
+        ? [ ...period.timesOfDay ].sort((a, b) => a.compare(b))
         : null;
     return {
         years,
@@ -278,10 +259,11 @@ function civilDayAllowed (period: Period, point: Date, decoded: PeriodWhitelists
  * @summary First occurrence start on `day` that is not before `notBefore`.
  * @description
  *
- * With `timesOfDay`, bands are already earliest-first; the first band
- * whose start is `>= notBefore` wins. Without bands, the start is
- * midnight of that civil day. `null` means every start on this day is
- * already earlier than `notBefore`.
+ * `timesOfDay` is a SET, so members need not be in start order. This
+ * takes the earliest band start that is `>= notBefore` (decode also
+ * sorts with {@link DayTimeBand.compare}). Without bands, the start
+ * is midnight of that civil day. `null` means every start on this day
+ * is already earlier than `notBefore`.
  *
  * @param {Date} day Instant on the allowed civil day (local).
  * @param {PeriodWhitelists} decoded Output of {@link decodeWhitelists}.
@@ -298,13 +280,17 @@ function firstStartOnAllowedDay (
     notBefore: Date,
 ): Date | null {
     if (decoded.bands) {
+        let earliest: Date | null = null;
         for (const band of decoded.bands) {
             const start = startOfBandOnDay(day, band);
-            if (start.valueOf() >= notBefore.valueOf()) {
-                return start;
+            if (start.valueOf() < notBefore.valueOf()) {
+                continue;
+            }
+            if ((earliest === null) || (start.valueOf() < earliest.valueOf())) {
+                earliest = start;
             }
         }
-        return null;
+        return earliest;
     }
     const start = startOfDay(day);
     return (start.valueOf() >= notBefore.valueOf()) ? start : null;

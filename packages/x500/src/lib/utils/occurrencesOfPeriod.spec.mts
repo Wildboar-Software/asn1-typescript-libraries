@@ -58,6 +58,40 @@ describe("occurrencesOfPeriod / Period.occurrences", () => {
         });
     });
 
+    it("yields DayTimeBands in start order even when the SET is reversed", () => {
+        const period = new Period(
+            [
+                new DayTimeBand(new DayTime(13, 0, 0), new DayTime(17, 0, 0)),
+                new DayTimeBand(new DayTime(9, 0, 0), new DayTime(12, 0, 0)),
+            ],
+            undefined,
+            undefined,
+            undefined,
+            [ 2021 ],
+        );
+        const start = new Date(2021, 4, 10, 8, 0, 0);
+        const end = new Date(2021, 4, 10, 17, 0, 0);
+        const pairs = Array.from(period.occurrences(start, end));
+        expect(pairs).toHaveLength(2);
+        expect(pairYearMonthDay(pairs[0])).toEqual({
+            start: [ 2021, 4, 10, 9, 0, 0 ],
+            end: [ 2021, 4, 10, 12, 0, 0 ],
+        });
+        expect(pairYearMonthDay(pairs[1])).toEqual({
+            start: [ 2021, 4, 10, 13, 0, 0 ],
+            end: [ 2021, 4, 10, 17, 0, 0 ],
+        });
+        const afterMorning = Array.from(period.occurrences(
+            new Date(2021, 4, 10, 12, 30, 0),
+            end,
+        ));
+        expect(afterMorning).toHaveLength(1);
+        expect(pairYearMonthDay(afterMorning[0])).toEqual({
+            start: [ 2021, 4, 10, 13, 0, 0 ],
+            end: [ 2021, 4, 10, 17, 0, 0 ],
+        });
+    });
+
     it("yields successive DayTimeBands then the next day's first band", () => {
         const period = new Period(
             [
