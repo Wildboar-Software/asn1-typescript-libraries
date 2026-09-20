@@ -27,6 +27,9 @@ import {
     _encode_Period_weeks,
 } from "../SelectedAttributeTypes/Period-weeks.ta.mjs";
 import isPositionalInt from "../../utils/isPositionalInt.mjs";
+import occurrencesOfPeriod, {
+    MAX_GENERALIZED_TIME,
+} from "../../utils/occurrencesOfPeriod.mjs";
 
 /**
  * @summary Period
@@ -248,6 +251,27 @@ export class Period {
             _o.years,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Occurrences intersecting `[startInstant, endInstant]`.
+     * @description
+     *
+     * Lazy inclusive `[start, end]` pairs (same shape as
+     * `boundariesOfPeriodOccurrence`). If `startInstant` lies in an
+     * occurrence, that pair is first even when its start is earlier.
+     * `endInstant` defaults to 9999-12-31 23:59:59 (GeneralizedTime max).
+     *
+     * @param {Date} startInstant Inclusive window start (local).
+     * @param {Date} [endInstant] Inclusive window end (local).
+     * @returns {IterableIterator<[Date, Date]>} Occurrence pairs.
+     * @method
+     */
+    public occurrences (
+        startInstant: Date,
+        endInstant: Date = MAX_GENERALIZED_TIME,
+    ): IterableIterator<[ Date, Date ]> {
+        return occurrencesOfPeriod(this, startInstant, endInstant);
     }
 }
 
