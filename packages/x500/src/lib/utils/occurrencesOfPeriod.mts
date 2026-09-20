@@ -102,7 +102,7 @@ function decodeWhitelists (period: Period): PeriodWhitelists {
         if ("allMonths" in period.months) {
             return ALL_MONTHS;
         }
-        throw new Error();
+        throw new Error("Unrecognized Period.months CHOICE alternative.");
     })();
     const weeks: Set<number> | null = ((): Set<number> | null => {
         if (usesDayOf || !period.weeks) {
@@ -121,7 +121,7 @@ function decodeWhitelists (period: Period): PeriodWhitelists {
         if ("allWeeks" in period.weeks) {
             return period.months ? ALL_WEEKS_IN_MONTH : ALL_WEEKS_IN_YEAR;
         }
-        throw new Error();
+        throw new Error("Unrecognized Period.weeks CHOICE alternative.");
     })();
     const days: Set<number> | null = ((): Set<number> | null => {
         if (!period.days) {
@@ -140,7 +140,7 @@ function decodeWhitelists (period: Period): PeriodWhitelists {
         if ("dayOf" in period.days) {
             return null;
         }
-        throw new Error();
+        throw new Error("Unrecognized Period.days CHOICE alternative.");
     })();
     const bands: DayTimeBand[] | null = period.timesOfDay?.length
         ? [ ...period.timesOfDay ].sort((a, b) => (bandStartScore(a) - bandStartScore(b)))
