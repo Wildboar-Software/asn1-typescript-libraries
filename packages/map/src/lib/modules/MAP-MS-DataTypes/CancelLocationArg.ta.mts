@@ -1,77 +1,17 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identity, _decode_Identity, _encode_Identity } from "../MAP-CommonDataTypes/Identity.ta.mjs";
-import { CancellationType, _enum_for_CancellationType, CancellationType_updateProcedure /* IMPORTED_LONG_ENUMERATION_ITEM */, updateProcedure /* IMPORTED_SHORT_ENUMERATION_ITEM */, CancellationType_subscriptionWithdraw /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriptionWithdraw /* IMPORTED_SHORT_ENUMERATION_ITEM */, CancellationType_initialAttachProcedure /* IMPORTED_LONG_ENUMERATION_ITEM */, initialAttachProcedure /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CancellationType, _encode_CancellationType } from "../MAP-MS-DataTypes/CancellationType.ta.mjs";
-import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { TypeOfUpdate, _enum_for_TypeOfUpdate, TypeOfUpdate_sgsn_change /* IMPORTED_LONG_ENUMERATION_ITEM */, sgsn_change /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeOfUpdate_mme_change /* IMPORTED_LONG_ENUMERATION_ITEM */, mme_change /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TypeOfUpdate, _encode_TypeOfUpdate } from "../MAP-MS-DataTypes/TypeOfUpdate.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
+import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
+import { CancellationType, _decode_CancellationType, _encode_CancellationType, _enum_for_CancellationType } from "../MAP-MS-DataTypes/CancellationType.ta.mjs";
+import { TypeOfUpdate, _decode_TypeOfUpdate, _encode_TypeOfUpdate, _enum_for_TypeOfUpdate } from "../MAP-MS-DataTypes/TypeOfUpdate.ta.mjs";
 
 
 /**

@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_Profile, _encode_Profile, Profile } from "../G/Profile.ta.mjs";
-// export { Profile, _decode_Profile, _encode_Profile } from "../G/Profile.ta.mjs";
 
 
 /**

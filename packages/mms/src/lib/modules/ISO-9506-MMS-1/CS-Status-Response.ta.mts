@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CS_Status_Response_fullResponse, _decode_CS_Status_Response_fullResponse, _encode_CS_Status_Response_fullResponse } from "../ISO-9506-MMS-1/CS-Status-Response-fullResponse.ta.mjs";
-// export { CS_Status_Response_fullResponse, _decode_CS_Status_Response_fullResponse, _encode_CS_Status_Response_fullResponse } from "../ISO-9506-MMS-1/CS-Status-Response-fullResponse.ta.mjs";
 
 
 /**

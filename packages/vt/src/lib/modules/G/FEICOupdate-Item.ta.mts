@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FEI, _decode_FEI, _encode_FEI } from "../G/FEI.ta.mjs";
-// export { FEI, _decode_FEI, _encode_FEI } from "../G/FEI.ta.mjs";
 
 
 /**

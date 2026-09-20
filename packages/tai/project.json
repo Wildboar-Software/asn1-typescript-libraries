@@ -18,7 +18,6 @@
         "assets": [
           "packages/tai/*.md",
           "packages/tai/LICENSE.txt",
-          "packages/tai/package.json",
           "packages/tai/package.json"
         ],
         "generatePackageJson": false

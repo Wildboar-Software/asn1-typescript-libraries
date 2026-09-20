@@ -12,8 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.mjs";
-// export { ContentTypeContentInfoSignedTR } from "../MachineReadableBiometricTestingAndReportingTestReport/ContentTypeContentInfoSignedTR.osa.mjs";
 
 
 /**

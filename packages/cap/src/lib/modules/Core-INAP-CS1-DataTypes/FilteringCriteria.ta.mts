@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
-// export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
 import { FilteringCriteria_addressAndService, _decode_FilteringCriteria_addressAndService, _encode_FilteringCriteria_addressAndService } from "../Core-INAP-CS1-DataTypes/FilteringCriteria-addressAndService.ta.mjs";
-// export { FilteringCriteria_addressAndService, _decode_FilteringCriteria_addressAndService, _encode_FilteringCriteria_addressAndService } from "../Core-INAP-CS1-DataTypes/FilteringCriteria-addressAndService.ta.mjs";
 
 
 /**

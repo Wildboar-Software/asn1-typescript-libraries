@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { Unit_Control_instance_definition, _decode_Unit_Control_instance_definition, _encode_Unit_Control_instance_definition } from "../MMS-SCI-Module-1/Unit-Control-instance-definition.ta.mjs";
-// export { Unit_Control_instance_definition, _decode_Unit_Control_instance_definition, _encode_Unit_Control_instance_definition } from "../MMS-SCI-Module-1/Unit-Control-instance-definition.ta.mjs";
 
 
 /**

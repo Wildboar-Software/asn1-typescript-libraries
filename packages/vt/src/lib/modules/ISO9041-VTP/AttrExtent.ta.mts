@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttrExtent_address, _decode_AttrExtent_address, _encode_AttrExtent_address } from "../ISO9041-VTP/AttrExtent-address.ta.mjs";
-// export { AttrExtent_address, _decode_AttrExtent_address, _encode_AttrExtent_address } from "../ISO9041-VTP/AttrExtent-address.ta.mjs";
 
 
 /**

@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TypeDescription_structure_components_Item, _decode_TypeDescription_structure_components_Item, _encode_TypeDescription_structure_components_Item } from "../MMS-Object-Module-1/TypeDescription-structure-components-Item.ta.mjs";
-// export { TypeDescription_structure_components_Item, _decode_TypeDescription_structure_components_Item, _encode_TypeDescription_structure_components_Item } from "../MMS-Object-Module-1/TypeDescription-structure-components-Item.ta.mjs";
 
 
 /**

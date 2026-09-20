@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
-// export { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
 import { EraseAttr, _decode_EraseAttr, _encode_EraseAttr } from "../ISO9041-VTP/EraseAttr.ta.mjs";
-// export { EraseAttr, _decode_EraseAttr, _encode_EraseAttr } from "../ISO9041-VTP/EraseAttr.ta.mjs";
 
 
 /**

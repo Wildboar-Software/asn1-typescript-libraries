@@ -11,27 +11,16 @@ import {
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { DeleteArgument, _decode_DeleteArgument, _encode_DeleteArgument } from "../DFRAbstractService/DeleteArgument.ta.mjs";
-// export { DeleteArgument, _decode_DeleteArgument, _encode_DeleteArgument } from "../DFRAbstractService/DeleteArgument.ta.mjs";
 import { DeleteResult, _decode_DeleteResult, _encode_DeleteResult } from "../DFRAbstractService/DeleteResult.ta.mjs";
-// export { DeleteResult, _decode_DeleteResult, _encode_DeleteResult } from "../DFRAbstractService/DeleteResult.ta.mjs";
 import { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
-// export { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
 import { accessError } from "../DFRAbstractService/accessError.oa.mjs";
-// export { accessError } from "../DFRAbstractService/accessError.oa.mjs";
 import { nameError } from "../DFRAbstractService/nameError.oa.mjs";
-// export { nameError } from "../DFRAbstractService/nameError.oa.mjs";
 import { securityError } from "../DFRAbstractService/securityError.oa.mjs";
-// export { securityError } from "../DFRAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DFRAbstractService/serviceError.oa.mjs";
-// export { serviceError } from "../DFRAbstractService/serviceError.oa.mjs";
 import { updateError } from "../DFRAbstractService/updateError.oa.mjs";
-// export { updateError } from "../DFRAbstractService/updateError.oa.mjs";
 import { id_opcode_delete } from "../DFRAbstractService/id-opcode-delete.va.mjs";
-// export { id_opcode_delete } from "../DFRAbstractService/id-opcode-delete.va.mjs";
 
 
 /**

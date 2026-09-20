@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CorpusComposition, _decode_CorpusComposition, _encode_CorpusComposition } from "../MachineReadableBiometricTestingAndReportingTestReport/CorpusComposition.ta.mjs";
-// export { CorpusComposition, _decode_CorpusComposition, _encode_CorpusComposition } from "../MachineReadableBiometricTestingAndReportingTestReport/CorpusComposition.ta.mjs";
 import { EnvironmentalInformation, _decode_EnvironmentalInformation, _encode_EnvironmentalInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/EnvironmentalInformation.ta.mjs";
-// export { EnvironmentalInformation, _decode_EnvironmentalInformation, _encode_EnvironmentalInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/EnvironmentalInformation.ta.mjs";
 
 
 /**

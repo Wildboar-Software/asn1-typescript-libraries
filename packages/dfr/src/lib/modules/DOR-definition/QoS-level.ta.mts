@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { QoS_level_level_3, _decode_QoS_level_level_3, _encode_QoS_level_level_3 } from "../DOR-definition/QoS-level-level-3.ta.mjs";
-// export { QoS_level_level_3, _decode_QoS_level_level_3, _encode_QoS_level_level_3 } from "../DOR-definition/QoS-level-level-3.ta.mjs";
 
 
 /**

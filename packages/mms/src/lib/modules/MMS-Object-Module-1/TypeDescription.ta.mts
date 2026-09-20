@@ -13,15 +13,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TypeDescription_array, _decode_TypeDescription_array, _encode_TypeDescription_array } from "../MMS-Object-Module-1/TypeDescription-array.ta.mjs";
-// export { TypeDescription_array, _decode_TypeDescription_array, _encode_TypeDescription_array } from "../MMS-Object-Module-1/TypeDescription-array.ta.mjs";
 import { TypeDescription_structure, _decode_TypeDescription_structure, _encode_TypeDescription_structure } from "../MMS-Object-Module-1/TypeDescription-structure.ta.mjs";
-// export { TypeDescription_structure, _decode_TypeDescription_structure, _encode_TypeDescription_structure } from "../MMS-Object-Module-1/TypeDescription-structure.ta.mjs";
 import { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS-1/Integer32.ta.mjs";
-// export { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS-1/Integer32.ta.mjs";
 import { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
-// export { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
 import { TypeDescription_floating_point, _decode_TypeDescription_floating_point, _encode_TypeDescription_floating_point } from "../MMS-Object-Module-1/TypeDescription-floating-point.ta.mjs";
-// export { TypeDescription_floating_point, _decode_TypeDescription_floating_point, _encode_TypeDescription_floating_point } from "../MMS-Object-Module-1/TypeDescription-floating-point.ta.mjs";
 
 
 /**

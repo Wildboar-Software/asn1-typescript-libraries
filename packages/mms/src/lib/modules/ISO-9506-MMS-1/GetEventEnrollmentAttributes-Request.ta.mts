@@ -12,13 +12,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GetEventEnrollmentAttributes_Request_scopeOfRequest, client /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest, _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest } from "../ISO-9506-MMS-1/GetEventEnrollmentAttributes-Request-scopeOfRequest.ta.mjs";
-// export { GetEventEnrollmentAttributes_Request_scopeOfRequest, GetEventEnrollmentAttributes_Request_scopeOfRequest_specific /* IMPORTED_LONG_NAMED_INTEGER */, specific /* IMPORTED_SHORT_NAMED_INTEGER */, GetEventEnrollmentAttributes_Request_scopeOfRequest_client /* IMPORTED_LONG_NAMED_INTEGER */, client /* IMPORTED_SHORT_NAMED_INTEGER */, GetEventEnrollmentAttributes_Request_scopeOfRequest_ec /* IMPORTED_LONG_NAMED_INTEGER */, ec /* IMPORTED_SHORT_NAMED_INTEGER */, GetEventEnrollmentAttributes_Request_scopeOfRequest_ea /* IMPORTED_LONG_NAMED_INTEGER */, ea /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest, _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest } from "../ISO-9506-MMS-1/GetEventEnrollmentAttributes-Request-scopeOfRequest.ta.mjs";
 import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-// export { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 import { Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
-// export { Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
-// export { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
 
 
 /**

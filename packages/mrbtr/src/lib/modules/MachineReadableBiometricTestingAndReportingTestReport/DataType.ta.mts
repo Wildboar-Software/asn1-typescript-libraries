@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProcessedLevel, _enum_for_ProcessedLevel, _decode_ProcessedLevel, _encode_ProcessedLevel } from "../MachineReadableBiometricTestingAndReportingTestReport/ProcessedLevel.ta.mjs";
-// export { ProcessedLevel, _enum_for_ProcessedLevel, ProcessedLevel_raw_data /* IMPORTED_LONG_ENUMERATION_ITEM */, raw_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProcessedLevel_intermediate_data /* IMPORTED_LONG_ENUMERATION_ITEM */, intermediate_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProcessedLevel_processed_data /* IMPORTED_LONG_ENUMERATION_ITEM */, processed_data /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProcessedLevel_comparison_score /* IMPORTED_LONG_ENUMERATION_ITEM */, comparison_score /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProcessedLevel_comparison_result /* IMPORTED_LONG_ENUMERATION_ITEM */, comparison_result /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ProcessedLevel, _encode_ProcessedLevel } from "../MachineReadableBiometricTestingAndReportingTestReport/ProcessedLevel.ta.mjs";
 import { Purpose, _enum_for_Purpose, _decode_Purpose, _encode_Purpose } from "../MachineReadableBiometricTestingAndReportingTestReport/Purpose.ta.mjs";
-// export { Purpose, _enum_for_Purpose, Purpose_reference /* IMPORTED_LONG_ENUMERATION_ITEM */, reference /* IMPORTED_SHORT_ENUMERATION_ITEM */, Purpose_sample /* IMPORTED_LONG_ENUMERATION_ITEM */, sample /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Purpose, _encode_Purpose } from "../MachineReadableBiometricTestingAndReportingTestReport/Purpose.ta.mjs";
 
 
 /**

@@ -1,78 +1,18 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { IST_SupportIndicator, _enum_for_IST_SupportIndicator, IST_SupportIndicator_basicISTSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, basicISTSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, IST_SupportIndicator_istCommandSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, istCommandSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IST_SupportIndicator, _encode_IST_SupportIndicator } from "../MAP-MS-DataTypes/IST-SupportIndicator.ta.mjs";
+import { IST_SupportIndicator, _decode_IST_SupportIndicator, _encode_IST_SupportIndicator, _enum_for_IST_SupportIndicator } from "../MAP-MS-DataTypes/IST-SupportIndicator.ta.mjs";
+import { OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
 import { SuperChargerInfo, _decode_SuperChargerInfo, _encode_SuperChargerInfo } from "../MAP-MS-DataTypes/SuperChargerInfo.ta.mjs";
-import { SupportedLCS_CapabilitySets, SupportedLCS_CapabilitySets_lcsCapabilitySet1 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet2 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet3 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet4 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet4 /* IMPORTED_SHORT_NAMED_BIT */, SupportedLCS_CapabilitySets_lcsCapabilitySet5 /* IMPORTED_LONG_NAMED_BIT */, lcsCapabilitySet5 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedLCS_CapabilitySets, _encode_SupportedLCS_CapabilitySets } from "../MAP-MS-DataTypes/SupportedLCS-CapabilitySets.ta.mjs";
-import { OfferedCamel4CSIs, OfferedCamel4CSIs_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_psi_enhancements /* IMPORTED_LONG_NAMED_BIT */, psi_enhancements /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
-import { SupportedRAT_Types, SupportedRAT_Types_utran /* IMPORTED_LONG_NAMED_BIT */, utran /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_geran /* IMPORTED_LONG_NAMED_BIT */, geran /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_gan /* IMPORTED_LONG_NAMED_BIT */, gan /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_i_hspa_evolution /* IMPORTED_LONG_NAMED_BIT */, i_hspa_evolution /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_e_utran /* IMPORTED_LONG_NAMED_BIT */, e_utran /* IMPORTED_SHORT_NAMED_BIT */, SupportedRAT_Types_nb_iot /* IMPORTED_LONG_NAMED_BIT */, nb_iot /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedRAT_Types, _encode_SupportedRAT_Types } from "../MAP-MS-DataTypes/SupportedRAT-Types.ta.mjs";
+import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
+import { SupportedLCS_CapabilitySets, _decode_SupportedLCS_CapabilitySets, _encode_SupportedLCS_CapabilitySets } from "../MAP-MS-DataTypes/SupportedLCS-CapabilitySets.ta.mjs";
+import { SupportedRAT_Types, _decode_SupportedRAT_Types, _encode_SupportedRAT_Types } from "../MAP-MS-DataTypes/SupportedRAT-Types.ta.mjs";
 
 
 /**

@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LevelAndPolicy, _decode_LevelAndPolicy, _encode_LevelAndPolicy } from "../MachineReadableBiometricTestingAndReportingTestReport/LevelAndPolicy.ta.mjs";
-// export { LevelAndPolicy, _decode_LevelAndPolicy, _encode_LevelAndPolicy } from "../MachineReadableBiometricTestingAndReportingTestReport/LevelAndPolicy.ta.mjs";
 
 
 /**

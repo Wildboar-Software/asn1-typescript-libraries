@@ -11,31 +11,18 @@ import {
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ReadArgument, _decode_ReadArgument, _encode_ReadArgument } from "../DFRAbstractService/ReadArgument.ta.mjs";
-// export { ReadArgument, _decode_ReadArgument, _encode_ReadArgument } from "../DFRAbstractService/ReadArgument.ta.mjs";
 import { ReadResult, _decode_ReadResult, _encode_ReadResult } from "../DFRAbstractService/ReadResult.ta.mjs";
-// export { ReadResult, _decode_ReadResult, _encode_ReadResult } from "../DFRAbstractService/ReadResult.ta.mjs";
 import { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
-// export { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
 import { accessError } from "../DFRAbstractService/accessError.oa.mjs";
-// export { accessError } from "../DFRAbstractService/accessError.oa.mjs";
 import { interServerAccessError } from "../DFRAbstractService/interServerAccessError.oa.mjs";
-// export { interServerAccessError } from "../DFRAbstractService/interServerAccessError.oa.mjs";
 import { nameError } from "../DFRAbstractService/nameError.oa.mjs";
-// export { nameError } from "../DFRAbstractService/nameError.oa.mjs";
 import { referentAccessError } from "../DFRAbstractService/referentAccessError.oa.mjs";
-// export { referentAccessError } from "../DFRAbstractService/referentAccessError.oa.mjs";
 import { reservationError } from "../DFRAbstractService/reservationError.oa.mjs";
-// export { reservationError } from "../DFRAbstractService/reservationError.oa.mjs";
 import { securityError } from "../DFRAbstractService/securityError.oa.mjs";
-// export { securityError } from "../DFRAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DFRAbstractService/serviceError.oa.mjs";
-// export { serviceError } from "../DFRAbstractService/serviceError.oa.mjs";
 import { id_opcode_read } from "../DFRAbstractService/id-opcode-read.va.mjs";
-// export { id_opcode_read } from "../DFRAbstractService/id-opcode-read.va.mjs";
 
 
 /**

@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChangeAccessControl_Request_scopeOfChange_listOfObjects, _decode_ChangeAccessControl_Request_scopeOfChange_listOfObjects, _encode_ChangeAccessControl_Request_scopeOfChange_listOfObjects } from "../ISO-9506-MMS-1/ChangeAccessControl-Request-scopeOfChange-listOfObjects.ta.mjs";
-// export { ChangeAccessControl_Request_scopeOfChange_listOfObjects, _decode_ChangeAccessControl_Request_scopeOfChange_listOfObjects, _encode_ChangeAccessControl_Request_scopeOfChange_listOfObjects } from "../ISO-9506-MMS-1/ChangeAccessControl-Request-scopeOfChange-listOfObjects.ta.mjs";
 
 
 /**

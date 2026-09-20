@@ -9,16 +9,11 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-// export { cAPSpecificBoundSet } from "../CAP-classes/cAPSpecificBoundSet.oa.mjs";
 import { specializedResourceControlPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/specializedResourceControlPackage.oa.mjs";
-// export { specializedResourceControlPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/specializedResourceControlPackage.oa.mjs";
 import { gsmSRF_scfActivationOfAssistPackage } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/gsmSRF-scfActivationOfAssistPackage.oa.mjs";
 import { activityTestPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/activityTestPackage.oa.mjs";
-// export { activityTestPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/activityTestPackage.oa.mjs";
 import { gsmSRF_scfCancelPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/gsmSRF-scfCancelPackage.oa.mjs";
-// export { gsmSRF_scfCancelPackage } from "../CAP-gsmSCF-gsmSRF-pkgs-contracts-acs/gsmSRF-scfCancelPackage.oa.mjs";
 import { id_contract_gsmSRF_gsmSCF } from "../CAP-object-identifiers/id-contract-gsmSRF-gsmSCF.va.mjs";
-// export { id_contract_gsmSRF_gsmSCF } from "../CAP-object-identifiers/id-contract-gsmSRF-gsmSCF.va.mjs";
 import { type CONTRACT } from "../Remote-Operations-Information-Objects/CONTRACT.oca.mjs";
 
 

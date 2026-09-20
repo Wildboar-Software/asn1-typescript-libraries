@@ -70,9 +70,9 @@ describe("DayTime.toTimeOfDay() / fromTimeOfDay()", () => {
     it("round-trips through TIME_OF_DAY UTC fields", () => {
         const original = new DayTime(14, 30, 5);
         const tod = original.toTimeOfDay();
-        expect(tod.getUTCHours()).toBe(14);
-        expect(tod.getUTCMinutes()).toBe(30);
-        expect(tod.getUTCSeconds()).toBe(5);
+        expect(tod.getHours()).toBe(14);
+        expect(tod.getMinutes()).toBe(30);
+        expect(tod.getSeconds()).toBe(5);
         expect(DayTime.fromTimeOfDay(tod).isEqualTo(original)).toBe(true);
     });
 
@@ -85,7 +85,7 @@ describe("DayTime.toTimeOfDay() / fromTimeOfDay()", () => {
     });
 
     it("reads UTC fields from an arbitrary Date", () => {
-        const date = new Date(Date.UTC(2021, 4, 17, 23, 59, 59));
+        const date = new Date(2021, 4, 17, 23, 59, 59);
         expect(DayTime.fromTimeOfDay(date).isEqualTo(new DayTime(23, 59, 59)))
             .toBe(true);
     });

@@ -11,17 +11,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthenticationObject, _get_decoder_for_AuthenticationObject, _get_encoder_for_AuthenticationObject } from "../CryptographicInformationFramework/AuthenticationObject.ta.mjs";
-// export { AuthenticationObject, _get_decoder_for_AuthenticationObject, _get_encoder_for_AuthenticationObject } from "../CryptographicInformationFramework/AuthenticationObject.ta.mjs";
 import { PasswordAttributes, _decode_PasswordAttributes, _encode_PasswordAttributes } from "../CryptographicInformationFramework/PasswordAttributes.ta.mjs";
-// export { PasswordAttributes, _decode_PasswordAttributes, _encode_PasswordAttributes } from "../CryptographicInformationFramework/PasswordAttributes.ta.mjs";
 import { BiometricAttributes, _decode_BiometricAttributes, _encode_BiometricAttributes } from "../CryptographicInformationFramework/BiometricAttributes.ta.mjs";
-// export { BiometricAttributes, _decode_BiometricAttributes, _encode_BiometricAttributes } from "../CryptographicInformationFramework/BiometricAttributes.ta.mjs";
 import { AuthKeyAttributes, _decode_AuthKeyAttributes, _encode_AuthKeyAttributes } from "../CryptographicInformationFramework/AuthKeyAttributes.ta.mjs";
-// export { AuthKeyAttributes, _decode_AuthKeyAttributes, _encode_AuthKeyAttributes } from "../CryptographicInformationFramework/AuthKeyAttributes.ta.mjs";
 import { ExternalAuthObjectAttributes, _decode_ExternalAuthObjectAttributes, _encode_ExternalAuthObjectAttributes } from "../CryptographicInformationFramework/ExternalAuthObjectAttributes.ta.mjs";
-// export { ExternalAuthObjectAttributes, _decode_ExternalAuthObjectAttributes, _encode_ExternalAuthObjectAttributes } from "../CryptographicInformationFramework/ExternalAuthObjectAttributes.ta.mjs";
 import { InternalAuthObjectAttributes, _decode_InternalAuthObjectAttributes, _encode_InternalAuthObjectAttributes } from "../CryptographicInformationFramework/InternalAuthObjectAttributes.ta.mjs";
-// export { InternalAuthObjectAttributes, _decode_InternalAuthObjectAttributes, _encode_InternalAuthObjectAttributes } from "../CryptographicInformationFramework/InternalAuthObjectAttributes.ta.mjs";
 
 
 /**

@@ -13,15 +13,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Provider, _decode_Provider, _encode_Provider } from "../MachineReadableBiometricTestingAndReportingTestReport/Provider.ta.mjs";
-// export { Provider, _decode_Provider, _encode_Provider } from "../MachineReadableBiometricTestingAndReportingTestReport/Provider.ta.mjs";
 import { NameProduct, _decode_NameProduct, _encode_NameProduct } from "../MachineReadableBiometricTestingAndReportingTestReport/NameProduct.ta.mjs";
-// export { NameProduct, _decode_NameProduct, _encode_NameProduct } from "../MachineReadableBiometricTestingAndReportingTestReport/NameProduct.ta.mjs";
 import { Function, _enum_for_Function, _decode_Function, _encode_Function } from "../MachineReadableBiometricTestingAndReportingTestReport/Function.ta.mjs";
-// export { Function, _enum_for_Function, Function_acquisition /* IMPORTED_LONG_ENUMERATION_ITEM */, acquisition /* IMPORTED_SHORT_ENUMERATION_ITEM */, Function_enrolment /* IMPORTED_LONG_ENUMERATION_ITEM */, enrolment /* IMPORTED_SHORT_ENUMERATION_ITEM */, Function_verification /* IMPORTED_LONG_ENUMERATION_ITEM */, verification /* IMPORTED_SHORT_ENUMERATION_ITEM */, Function_identification /* IMPORTED_LONG_ENUMERATION_ITEM */, identification /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Function, _encode_Function } from "../MachineReadableBiometricTestingAndReportingTestReport/Function.ta.mjs";
 import { DataType, _decode_DataType, _encode_DataType } from "../MachineReadableBiometricTestingAndReportingTestReport/DataType.ta.mjs";
-// export { DataType, _decode_DataType, _encode_DataType } from "../MachineReadableBiometricTestingAndReportingTestReport/DataType.ta.mjs";
 import { Modality, _decode_Modality, _encode_Modality } from "../MachineReadableBiometricTestingAndReportingTestReport/Modality.ta.mjs";
-// export { Modality, _decode_Modality, _encode_Modality } from "../MachineReadableBiometricTestingAndReportingTestReport/Modality.ta.mjs";
 
 
 /**

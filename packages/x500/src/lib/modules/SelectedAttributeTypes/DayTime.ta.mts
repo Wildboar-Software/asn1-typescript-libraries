@@ -283,14 +283,14 @@ export class DayTime {
      * @author Cursor Grok 4.6
      */
     public toTimeOfDay (): TIME_OF_DAY {
-        return new Date(Date.UTC(
+        return new Date(
             1970,
-            0,
+            11,
             1,
             Number(this.hour),
             Number(this.minute ?? DayTime._default_value_for_minute),
             Number(this.second ?? DayTime._default_value_for_second),
-        ));
+        );
     }
 
     /**
@@ -313,9 +313,9 @@ export class DayTime {
             throw new Error();
         }
         return new DayTime(
-            timeOfDay.getUTCHours(),
-            timeOfDay.getUTCMinutes(),
-            timeOfDay.getUTCSeconds(),
+            timeOfDay.getHours(),
+            timeOfDay.getMinutes(),
+            timeOfDay.getSeconds(),
         );
     }
 

@@ -14,47 +14,26 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
-// export { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
 import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
-// export { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 import { Access_Control_List_instance, _decode_Access_Control_List_instance, _encode_Access_Control_List_instance } from "../MMS-SCI-Module-1/Access-Control-List-instance.ta.mjs";
-// export { Access_Control_List_instance, _decode_Access_Control_List_instance, _encode_Access_Control_List_instance } from "../MMS-SCI-Module-1/Access-Control-List-instance.ta.mjs";
 import { LogicalStatus, _decode_LogicalStatus, _encode_LogicalStatus } from "../MMS-Object-Module-1/LogicalStatus.ta.mjs";
-// export { LogicalStatus, _decode_LogicalStatus, _encode_LogicalStatus } from "../MMS-Object-Module-1/LogicalStatus.ta.mjs";
 import { PhysicalStatus, _decode_PhysicalStatus, _encode_PhysicalStatus } from "../MMS-Object-Module-1/PhysicalStatus.ta.mjs";
-// export { PhysicalStatus, _decode_PhysicalStatus, _encode_PhysicalStatus } from "../MMS-Object-Module-1/PhysicalStatus.ta.mjs";
 import { Domain_instance, _decode_Domain_instance, _encode_Domain_instance } from "../MMS-SCI-Module-1/Domain-instance.ta.mjs";
-// export { Domain_instance, _decode_Domain_instance, _encode_Domain_instance } from "../MMS-SCI-Module-1/Domain-instance.ta.mjs";
 import { Program_Invocation_instance, _decode_Program_Invocation_instance, _encode_Program_Invocation_instance } from "../MMS-SCI-Module-1/Program-Invocation-instance.ta.mjs";
-// export { Program_Invocation_instance, _decode_Program_Invocation_instance, _encode_Program_Invocation_instance } from "../MMS-SCI-Module-1/Program-Invocation-instance.ta.mjs";
 import { Unit_Control_instance, _decode_Unit_Control_instance, _encode_Unit_Control_instance } from "../MMS-SCI-Module-1/Unit-Control-instance.ta.mjs";
-// export { Unit_Control_instance, _decode_Unit_Control_instance, _encode_Unit_Control_instance } from "../MMS-SCI-Module-1/Unit-Control-instance.ta.mjs";
 import { Unnamed_Variable_instance, _decode_Unnamed_Variable_instance, _encode_Unnamed_Variable_instance } from "../MMS-SCI-Module-1/Unnamed-Variable-instance.ta.mjs";
-// export { Unnamed_Variable_instance, _decode_Unnamed_Variable_instance, _encode_Unnamed_Variable_instance } from "../MMS-SCI-Module-1/Unnamed-Variable-instance.ta.mjs";
 import { Named_Variable_instance, _decode_Named_Variable_instance, _encode_Named_Variable_instance } from "../MMS-SCI-Module-1/Named-Variable-instance.ta.mjs";
-// export { Named_Variable_instance, _decode_Named_Variable_instance, _encode_Named_Variable_instance } from "../MMS-SCI-Module-1/Named-Variable-instance.ta.mjs";
 import { Named_Variable_List_instance, _decode_Named_Variable_List_instance, _encode_Named_Variable_List_instance } from "../MMS-SCI-Module-1/Named-Variable-List-instance.ta.mjs";
-// export { Named_Variable_List_instance, _decode_Named_Variable_List_instance, _encode_Named_Variable_List_instance } from "../MMS-SCI-Module-1/Named-Variable-List-instance.ta.mjs";
 import { Named_Type_instance, _decode_Named_Type_instance, _encode_Named_Type_instance } from "../MMS-SCI-Module-1/Named-Type-instance.ta.mjs";
-// export { Named_Type_instance, _decode_Named_Type_instance, _encode_Named_Type_instance } from "../MMS-SCI-Module-1/Named-Type-instance.ta.mjs";
 import { Data_Exchange_instance, _decode_Data_Exchange_instance, _encode_Data_Exchange_instance } from "../MMS-SCI-Module-1/Data-Exchange-instance.ta.mjs";
-// export { Data_Exchange_instance, _decode_Data_Exchange_instance, _encode_Data_Exchange_instance } from "../MMS-SCI-Module-1/Data-Exchange-instance.ta.mjs";
 import { Semaphore_instance, _decode_Semaphore_instance, _encode_Semaphore_instance } from "../MMS-SCI-Module-1/Semaphore-instance.ta.mjs";
-// export { Semaphore_instance, _decode_Semaphore_instance, _encode_Semaphore_instance } from "../MMS-SCI-Module-1/Semaphore-instance.ta.mjs";
 import { Operator_Station_instance, _decode_Operator_Station_instance, _encode_Operator_Station_instance } from "../MMS-SCI-Module-1/Operator-Station-instance.ta.mjs";
-// export { Operator_Station_instance, _decode_Operator_Station_instance, _encode_Operator_Station_instance } from "../MMS-SCI-Module-1/Operator-Station-instance.ta.mjs";
 import { Event_Condition_instance, _decode_Event_Condition_instance, _encode_Event_Condition_instance } from "../MMS-SCI-Module-1/Event-Condition-instance.ta.mjs";
-// export { Event_Condition_instance, _decode_Event_Condition_instance, _encode_Event_Condition_instance } from "../MMS-SCI-Module-1/Event-Condition-instance.ta.mjs";
 import { Event_Action_instance, _decode_Event_Action_instance, _encode_Event_Action_instance } from "../MMS-SCI-Module-1/Event-Action-instance.ta.mjs";
-// export { Event_Action_instance, _decode_Event_Action_instance, _encode_Event_Action_instance } from "../MMS-SCI-Module-1/Event-Action-instance.ta.mjs";
 import { Event_Enrollment_instance, _decode_Event_Enrollment_instance, _encode_Event_Enrollment_instance } from "../MMS-SCI-Module-1/Event-Enrollment-instance.ta.mjs";
-// export { Event_Enrollment_instance, _decode_Event_Enrollment_instance, _encode_Event_Enrollment_instance } from "../MMS-SCI-Module-1/Event-Enrollment-instance.ta.mjs";
 import { Event_Condition_List_instance, _decode_Event_Condition_List_instance, _encode_Event_Condition_List_instance } from "../MMS-SCI-Module-1/Event-Condition-List-instance.ta.mjs";
-// export { Event_Condition_List_instance, _decode_Event_Condition_List_instance, _encode_Event_Condition_List_instance } from "../MMS-SCI-Module-1/Event-Condition-List-instance.ta.mjs";
 import { Journal_instance, _decode_Journal_instance, _encode_Journal_instance } from "../MMS-SCI-Module-1/Journal-instance.ta.mjs";
-// export { Journal_instance, _decode_Journal_instance, _encode_Journal_instance } from "../MMS-SCI-Module-1/Journal-instance.ta.mjs";
 import { VMD_File_selected_Program_Invocation, _decode_VMD_File_selected_Program_Invocation, _encode_VMD_File_selected_Program_Invocation } from "../MMS-SCI-Module-1/VMD-File-selected-Program-Invocation.ta.mjs";
-// export { VMD_File_selected_Program_Invocation, _decode_VMD_File_selected_Program_Invocation, _encode_VMD_File_selected_Program_Invocation } from "../MMS-SCI-Module-1/VMD-File-selected-Program-Invocation.ta.mjs";
 
 
 /**

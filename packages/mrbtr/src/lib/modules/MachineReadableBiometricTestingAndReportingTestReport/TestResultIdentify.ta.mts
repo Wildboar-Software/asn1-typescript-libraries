@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ResultMatchClosedIdentify, _decode_ResultMatchClosedIdentify, _encode_ResultMatchClosedIdentify } from "../MachineReadableBiometricTestingAndReportingTestReport/ResultMatchClosedIdentify.ta.mjs";
-// export { ResultMatchClosedIdentify, _decode_ResultMatchClosedIdentify, _encode_ResultMatchClosedIdentify } from "../MachineReadableBiometricTestingAndReportingTestReport/ResultMatchClosedIdentify.ta.mjs";
 import { ResultMatchOpenIdentify, _decode_ResultMatchOpenIdentify, _encode_ResultMatchOpenIdentify } from "../MachineReadableBiometricTestingAndReportingTestReport/ResultMatchOpenIdentify.ta.mjs";
-// export { ResultMatchOpenIdentify, _decode_ResultMatchOpenIdentify, _encode_ResultMatchOpenIdentify } from "../MachineReadableBiometricTestingAndReportingTestReport/ResultMatchOpenIdentify.ta.mjs";
 
 
 /**

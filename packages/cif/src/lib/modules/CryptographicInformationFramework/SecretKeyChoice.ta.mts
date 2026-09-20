@@ -11,11 +11,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SecretKeyObject, _get_decoder_for_SecretKeyObject, _get_encoder_for_SecretKeyObject } from "../CryptographicInformationFramework/SecretKeyObject.ta.mjs";
-// export { SecretKeyObject, _get_decoder_for_SecretKeyObject, _get_encoder_for_SecretKeyObject } from "../CryptographicInformationFramework/SecretKeyObject.ta.mjs";
 import { SecretKeyAttributes, _decode_SecretKeyAttributes, _encode_SecretKeyAttributes } from "../CryptographicInformationFramework/SecretKeyAttributes.ta.mjs";
-// export { SecretKeyAttributes, _decode_SecretKeyAttributes, _encode_SecretKeyAttributes } from "../CryptographicInformationFramework/SecretKeyAttributes.ta.mjs";
 import { GenericKeyAttributes, _decode_GenericKeyAttributes, _encode_GenericKeyAttributes } from "../CryptographicInformationFramework/GenericKeyAttributes.ta.mjs";
-// export { GenericKeyAttributes, _decode_GenericKeyAttributes, _encode_GenericKeyAttributes } from "../CryptographicInformationFramework/GenericKeyAttributes.ta.mjs";
 
 
 /**

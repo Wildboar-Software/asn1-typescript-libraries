@@ -12,11 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CountersValue, _decode_CountersValue, _encode_CountersValue } from "../Core-INAP-CS1-DataTypes/CountersValue.ta.mjs";
-// export { CountersValue, _decode_CountersValue, _encode_CountersValue } from "../Core-INAP-CS1-DataTypes/CountersValue.ta.mjs";
 import { FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../Core-INAP-CS1-DataTypes/FilteringCriteria.ta.mjs";
-// export { FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../Core-INAP-CS1-DataTypes/FilteringCriteria.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
-// export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 
 /**

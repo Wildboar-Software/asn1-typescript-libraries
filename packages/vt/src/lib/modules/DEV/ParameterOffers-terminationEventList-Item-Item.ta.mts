@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ParameterOffers_terminationEventList_Item_Item_eventId, _decode_ParameterOffers_terminationEventList_Item_Item_eventId, _encode_ParameterOffers_terminationEventList_Item_Item_eventId } from "../DEV/ParameterOffers-terminationEventList-Item-Item-eventId.ta.mjs";
-// export { ParameterOffers_terminationEventList_Item_Item_eventId, _decode_ParameterOffers_terminationEventList_Item_Item_eventId, _encode_ParameterOffers_terminationEventList_Item_Item_eventId } from "../DEV/ParameterOffers-terminationEventList-Item-Item-eventId.ta.mjs";
 
 
 /**

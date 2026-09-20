@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IdentificationTestLab, _decode_IdentificationTestLab, _encode_IdentificationTestLab } from "../MachineReadableBiometricTestingAndReportingTestReport/IdentificationTestLab.ta.mjs";
-// export { IdentificationTestLab, _decode_IdentificationTestLab, _encode_IdentificationTestLab } from "../MachineReadableBiometricTestingAndReportingTestReport/IdentificationTestLab.ta.mjs";
 import { AccreditationStatus, _decode_AccreditationStatus, _encode_AccreditationStatus } from "../MachineReadableBiometricTestingAndReportingTestReport/AccreditationStatus.ta.mjs";
-// export { AccreditationStatus, _decode_AccreditationStatus, _encode_AccreditationStatus } from "../MachineReadableBiometricTestingAndReportingTestReport/AccreditationStatus.ta.mjs";
 
 
 /**

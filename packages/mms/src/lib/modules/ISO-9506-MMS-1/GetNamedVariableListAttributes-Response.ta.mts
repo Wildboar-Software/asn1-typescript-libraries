@@ -13,9 +13,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GetNamedVariableListAttributes_Response_listOfVariable_Item, _decode_GetNamedVariableListAttributes_Response_listOfVariable_Item, _encode_GetNamedVariableListAttributes_Response_listOfVariable_Item } from "../ISO-9506-MMS-1/GetNamedVariableListAttributes-Response-listOfVariable-Item.ta.mjs";
-// export { GetNamedVariableListAttributes_Response_listOfVariable_Item, _decode_GetNamedVariableListAttributes_Response_listOfVariable_Item, _encode_GetNamedVariableListAttributes_Response_listOfVariable_Item } from "../ISO-9506-MMS-1/GetNamedVariableListAttributes-Response-listOfVariable-Item.ta.mjs";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**

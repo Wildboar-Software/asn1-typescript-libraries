@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RepertoireAssignment_value, _decode_RepertoireAssignment_value, _encode_RepertoireAssignment_value } from "../CDS/RepertoireAssignment-value.ta.mjs";
-// export { RepertoireAssignment_value, _decode_RepertoireAssignment_value, _encode_RepertoireAssignment_value } from "../CDS/RepertoireAssignment-value.ta.mjs";
 
 
 /**

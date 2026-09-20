@@ -12,13 +12,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DimensionParamOffer_bound, _decode_DimensionParamOffer_bound, _encode_DimensionParamOffer_bound } from "../CDS/DimensionParamOffer-bound.ta.mjs";
-// export { DimensionParamOffer_bound, _decode_DimensionParamOffer_bound, _encode_DimensionParamOffer_bound } from "../CDS/DimensionParamOffer-bound.ta.mjs";
 import { DimensionParamOffer_addressing, _decode_DimensionParamOffer_addressing, _encode_DimensionParamOffer_addressing } from "../CDS/DimensionParamOffer-addressing.ta.mjs";
-// export { DimensionParamOffer_addressing, DimensionParamOffer_addressing_noConstraint /* IMPORTED_LONG_NAMED_BIT */, noConstraint /* IMPORTED_SHORT_NAMED_BIT */, DimensionParamOffer_addressing_higherOnly /* IMPORTED_LONG_NAMED_BIT */, higherOnly /* IMPORTED_SHORT_NAMED_BIT */, DimensionParamOffer_addressing_notPermitted /* IMPORTED_LONG_NAMED_BIT */, notPermitted /* IMPORTED_SHORT_NAMED_BIT */, _decode_DimensionParamOffer_addressing, _encode_DimensionParamOffer_addressing } from "../CDS/DimensionParamOffer-addressing.ta.mjs";
 import { DimensionParamOffer_absolute, _decode_DimensionParamOffer_absolute, _encode_DimensionParamOffer_absolute } from "../CDS/DimensionParamOffer-absolute.ta.mjs";
-// export { DimensionParamOffer_absolute, DimensionParamOffer_absolute_yes /* IMPORTED_LONG_NAMED_BIT */, yes /* IMPORTED_SHORT_NAMED_BIT */, DimensionParamOffer_absolute_no /* IMPORTED_LONG_NAMED_BIT */, no /* IMPORTED_SHORT_NAMED_BIT */, _decode_DimensionParamOffer_absolute, _encode_DimensionParamOffer_absolute } from "../CDS/DimensionParamOffer-absolute.ta.mjs";
 import { DimensionParamOffer_window, _decode_DimensionParamOffer_window, _encode_DimensionParamOffer_window } from "../CDS/DimensionParamOffer-window.ta.mjs";
-// export { DimensionParamOffer_window, _decode_DimensionParamOffer_window, _encode_DimensionParamOffer_window } from "../CDS/DimensionParamOffer-window.ta.mjs";
 
 
 /**

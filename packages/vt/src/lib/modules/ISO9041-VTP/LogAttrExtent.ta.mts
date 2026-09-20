@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LogAttrExtent_address, _decode_LogAttrExtent_address, _encode_LogAttrExtent_address } from "../ISO9041-VTP/LogAttrExtent-address.ta.mjs";
-// export { LogAttrExtent_address, _decode_LogAttrExtent_address, _encode_LogAttrExtent_address } from "../ISO9041-VTP/LogAttrExtent-address.ta.mjs";
 
 
 /**

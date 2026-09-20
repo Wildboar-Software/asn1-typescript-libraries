@@ -13,15 +13,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FDCOupdate_Item_status, _decode_FDCOupdate_Item_status, _encode_FDCOupdate_Item_status } from "../G/FDCOupdate-Item-status.ta.mjs";
-// export { FDCOupdate_Item_status, FDCOupdate_Item_status_active /* IMPORTED_LONG_NAMED_INTEGER */, active /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_status_inactive /* IMPORTED_LONG_NAMED_INTEGER */, inactive /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_status_void /* IMPORTED_LONG_NAMED_INTEGER */, void_ /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_FDCOupdate_Item_status, _encode_FDCOupdate_Item_status } from "../G/FDCOupdate-Item-status.ta.mjs";
 import { FDCOupdate_Item_extent_Item, _decode_FDCOupdate_Item_extent_Item, _encode_FDCOupdate_Item_extent_Item } from "../G/FDCOupdate-Item-extent-Item.ta.mjs";
-// export { FDCOupdate_Item_extent_Item, _decode_FDCOupdate_Item_extent_Item, _encode_FDCOupdate_Item_extent_Item } from "../G/FDCOupdate-Item-extent-Item.ta.mjs";
 import { FDCOupdate_Item_attributes, _decode_FDCOupdate_Item_attributes, _encode_FDCOupdate_Item_attributes } from "../G/FDCOupdate-Item-attributes.ta.mjs";
-// export { FDCOupdate_Item_attributes, _decode_FDCOupdate_Item_attributes, _encode_FDCOupdate_Item_attributes } from "../G/FDCOupdate-Item-attributes.ta.mjs";
 import { FDCOupdate_Item_transmissionPolicy, _decode_FDCOupdate_Item_transmissionPolicy, _encode_FDCOupdate_Item_transmissionPolicy } from "../G/FDCOupdate-Item-transmissionPolicy.ta.mjs";
-// export { FDCOupdate_Item_transmissionPolicy, FDCOupdate_Item_transmissionPolicy_all /* IMPORTED_LONG_NAMED_INTEGER */, all /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_transmissionPolicy_modifiedAllContent /* IMPORTED_LONG_NAMED_INTEGER */, modifiedAllContent /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_transmissionPolicy_modifiedPart /* IMPORTED_LONG_NAMED_INTEGER */, modifiedPart /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_transmissionPolicy_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, FDCOupdate_Item_transmissionPolicy_refTPCO /* IMPORTED_LONG_NAMED_INTEGER */, refTPCO /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_FDCOupdate_Item_transmissionPolicy, _encode_FDCOupdate_Item_transmissionPolicy } from "../G/FDCOupdate-Item-transmissionPolicy.ta.mjs";
 import { EntryControl, _decode_EntryControl, _encode_EntryControl } from "../G/EntryControl.ta.mjs";
-// export { EntryControl, _decode_EntryControl, _encode_EntryControl } from "../G/EntryControl.ta.mjs";
 
 
 /**

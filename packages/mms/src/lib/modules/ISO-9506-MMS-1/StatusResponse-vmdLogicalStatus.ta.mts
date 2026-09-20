@@ -68,7 +68,7 @@ const state_changes_allowed: StatusResponse_vmdLogicalStatus = StatusResponse_vm
  * @description
  *
  * Only Abort, Conclude, Cancel, Initiate, Status, Identify, Read, ReadJournal,
- * and the Get*/Report* services listed in ISO 9506-1:2003 §7.2.1.9.2 may be
+ * and the Get* / Report* services listed in ISO 9506-1:2003 §7.2.1.9.2 may be
  * performed (if supported).
  *
  * @constant
@@ -82,7 +82,7 @@ const StatusResponse_vmdLogicalStatus_no_state_changes_allowed: StatusResponse_v
  * @description
  *
  * Only Abort, Conclude, Cancel, Initiate, Status, Identify, Read, ReadJournal,
- * and the Get*/Report* services listed in ISO 9506-1:2003 §7.2.1.9.2 may be
+ * and the Get* / Report* services listed in ISO 9506-1:2003 §7.2.1.9.2 may be
  * performed (if supported).
  *
  * @constant

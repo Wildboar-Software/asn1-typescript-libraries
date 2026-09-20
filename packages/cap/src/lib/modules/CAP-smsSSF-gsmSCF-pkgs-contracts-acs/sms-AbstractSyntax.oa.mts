@@ -11,9 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { Generic_sms_PDUs, _decode_Generic_sms_PDUs, _encode_Generic_sms_PDUs } from "../CAP-smsSSF-gsmSCF-pkgs-contracts-acs/Generic-sms-PDUs.ta.mjs";
-// export { Generic_sms_PDUs, _decode_Generic_sms_PDUs, _encode_Generic_sms_PDUs } from "../CAP-smsSSF-gsmSCF-pkgs-contracts-acs/Generic-sms-PDUs.ta.mjs";
 import { id_as_smsSSF_gsmSCF_AS } from "../CAP-object-identifiers/id-as-smsSSF-gsmSCF-AS.va.mjs";
-// export { id_as_smsSSF_gsmSCF_AS } from "../CAP-object-identifiers/id-as-smsSSF-gsmSCF-AS.va.mjs";
 
 
 /**

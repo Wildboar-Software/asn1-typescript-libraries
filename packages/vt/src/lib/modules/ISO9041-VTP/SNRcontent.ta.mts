@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_Result2, _encode_Result2, type Result2 } from "../G/Result2.ta.mjs";
-// export { Result2, _decode_Result2, _encode_Result2 } from "../G/Result2.ta.mjs";
 import { _decode_ProfileArgumValueList, _encode_ProfileArgumValueList, ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
-// export { ProfileArgumValueList, _decode_ProfileArgumValueList, _encode_ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
 
 
 /**

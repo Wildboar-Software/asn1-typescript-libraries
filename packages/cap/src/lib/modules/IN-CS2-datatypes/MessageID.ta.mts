@@ -11,11 +11,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
-// export { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
 import { MessageID_text, _decode_MessageID_text, _encode_MessageID_text } from "../IN-CS2-datatypes/MessageID-text.ta.mjs";
-// export { MessageID_text, _decode_MessageID_text, _encode_MessageID_text } from "../IN-CS2-datatypes/MessageID-text.ta.mjs";
 import { MessageID_variableMessage, _decode_MessageID_variableMessage, _encode_MessageID_variableMessage } from "../IN-CS2-datatypes/MessageID-variableMessage.ta.mjs";
-// export { MessageID_variableMessage, _decode_MessageID_variableMessage, _encode_MessageID_variableMessage } from "../IN-CS2-datatypes/MessageID-variableMessage.ta.mjs";
 
 
 /**

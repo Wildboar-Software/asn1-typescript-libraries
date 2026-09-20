@@ -13,11 +13,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
 import { TypeProvider, _enum_for_TypeProvider, _decode_TypeProvider, _encode_TypeProvider } from "../MachineReadableBiometricTestingAndReportingTestReport/TypeProvider.ta.mjs";
-// export { TypeProvider, _enum_for_TypeProvider, TypeProvider_non_profit /* IMPORTED_LONG_ENUMERATION_ITEM */, non_profit /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeProvider_university /* IMPORTED_LONG_ENUMERATION_ITEM */, university /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeProvider_corporation /* IMPORTED_LONG_ENUMERATION_ITEM */, corporation /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeProvider_individual /* IMPORTED_LONG_ENUMERATION_ITEM */, individual /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeProvider_government /* IMPORTED_LONG_ENUMERATION_ITEM */, government /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TypeProvider, _encode_TypeProvider } from "../MachineReadableBiometricTestingAndReportingTestReport/TypeProvider.ta.mjs";
 import { RoleProvider, _enum_for_RoleProvider, _decode_RoleProvider, _encode_RoleProvider } from "../MachineReadableBiometricTestingAndReportingTestReport/RoleProvider.ta.mjs";
-// export { RoleProvider, _enum_for_RoleProvider, RoleProvider_manufacturer /* IMPORTED_LONG_ENUMERATION_ITEM */, manufacturer /* IMPORTED_SHORT_ENUMERATION_ITEM */, RoleProvider_reseller /* IMPORTED_LONG_ENUMERATION_ITEM */, reseller /* IMPORTED_SHORT_ENUMERATION_ITEM */, RoleProvider_integrator /* IMPORTED_LONG_ENUMERATION_ITEM */, integrator /* IMPORTED_SHORT_ENUMERATION_ITEM */, RoleProvider_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RoleProvider, _encode_RoleProvider } from "../MachineReadableBiometricTestingAndReportingTestReport/RoleProvider.ta.mjs";
 
 
 /**

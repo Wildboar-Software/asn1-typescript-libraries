@@ -11,17 +11,11 @@ import {
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { AbandonArgument, _decode_AbandonArgument, _encode_AbandonArgument } from "../DFRAbstractService/AbandonArgument.ta.mjs";
-// export { AbandonArgument, _decode_AbandonArgument, _encode_AbandonArgument } from "../DFRAbstractService/AbandonArgument.ta.mjs";
 import { AbandonResult, _decode_AbandonResult, _encode_AbandonResult } from "../DFRAbstractService/AbandonResult.ta.mjs";
-// export { AbandonResult, _decode_AbandonResult, _encode_AbandonResult } from "../DFRAbstractService/AbandonResult.ta.mjs";
 import { abandonFailed } from "../DFRAbstractService/abandonFailed.oa.mjs";
-// export { abandonFailed } from "../DFRAbstractService/abandonFailed.oa.mjs";
 import { id_opcode_abandon } from "../DFRAbstractService/id-opcode-abandon.va.mjs";
-// export { id_opcode_abandon } from "../DFRAbstractService/id-opcode-abandon.va.mjs";
 
 
 /**

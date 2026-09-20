@@ -14,39 +14,22 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ExplicitPointer, _encode_ExplicitPointer, ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
-// export { ExplicitPointer, _decode_ExplicitPointer, _encode_ExplicitPointer } from "../G/ExplicitPointer.ta.mjs";
 import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
-// export { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
 import { DOupdate_repeatText, _decode_DOupdate_repeatText, _encode_DOupdate_repeatText } from "../ISO9041-VTP/DOupdate-repeatText.ta.mjs";
-// export { DOupdate_repeatText, _decode_DOupdate_repeatText, _encode_DOupdate_repeatText } from "../ISO9041-VTP/DOupdate-repeatText.ta.mjs";
 import { DOupdate_writeAttr, _decode_DOupdate_writeAttr, _encode_DOupdate_writeAttr } from "../ISO9041-VTP/DOupdate-writeAttr.ta.mjs";
-// export { DOupdate_writeAttr, _decode_DOupdate_writeAttr, _encode_DOupdate_writeAttr } from "../ISO9041-VTP/DOupdate-writeAttr.ta.mjs";
 import { DOupdate_erase, _decode_DOupdate_erase, _encode_DOupdate_erase } from "../ISO9041-VTP/DOupdate-erase.ta.mjs";
-// export { DOupdate_erase, _decode_DOupdate_erase, _encode_DOupdate_erase } from "../ISO9041-VTP/DOupdate-erase.ta.mjs";
 import { _decode_LogExpPointer, _encode_LogExpPointer, LogExpPointer } from "../G/LogExpPointer.ta.mjs";
-// export { LogExpPointer, _decode_LogExpPointer, _encode_LogExpPointer } from "../G/LogExpPointer.ta.mjs";
 import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-VTP/LogPointer.ta.mjs";
-// export { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-VTP/LogPointer.ta.mjs";
 import { DOupdate_logText, _decode_DOupdate_logText, _encode_DOupdate_logText } from "../ISO9041-VTP/DOupdate-logText.ta.mjs";
-// export { DOupdate_logText, _decode_DOupdate_logText, _encode_DOupdate_logText } from "../ISO9041-VTP/DOupdate-logText.ta.mjs";
 import { DOupdate_repeatLogText, _decode_DOupdate_repeatLogText, _encode_DOupdate_repeatLogText } from "../ISO9041-VTP/DOupdate-repeatLogText.ta.mjs";
-// export { DOupdate_repeatLogText, _decode_DOupdate_repeatLogText, _encode_DOupdate_repeatLogText } from "../ISO9041-VTP/DOupdate-repeatLogText.ta.mjs";
 import { DOupdate_writeLogAttr, _decode_DOupdate_writeLogAttr, _encode_DOupdate_writeLogAttr } from "../ISO9041-VTP/DOupdate-writeLogAttr.ta.mjs";
-// export { DOupdate_writeLogAttr, _decode_DOupdate_writeLogAttr, _encode_DOupdate_writeLogAttr } from "../ISO9041-VTP/DOupdate-writeLogAttr.ta.mjs";
 import { DOupdate_logErase, _decode_DOupdate_logErase, _encode_DOupdate_logErase } from "../ISO9041-VTP/DOupdate-logErase.ta.mjs";
-// export { DOupdate_logErase, _decode_DOupdate_logErase, _encode_DOupdate_logErase } from "../ISO9041-VTP/DOupdate-logErase.ta.mjs";
 import { DOupdate_createBlock, _decode_DOupdate_createBlock, _encode_DOupdate_createBlock } from "../ISO9041-VTP/DOupdate-createBlock.ta.mjs";
-// export { DOupdate_createBlock, _decode_DOupdate_createBlock, _encode_DOupdate_createBlock } from "../ISO9041-VTP/DOupdate-createBlock.ta.mjs";
 import { _decode_Block, _encode_Block, Block } from "../G/Block.ta.mjs";
-// export { Block, _decode_Block, _encode_Block } from "../G/Block.ta.mjs";
 import { DOupdate_copyToBuffer, _decode_DOupdate_copyToBuffer, _encode_DOupdate_copyToBuffer } from "../ISO9041-VTP/DOupdate-copyToBuffer.ta.mjs";
-// export { DOupdate_copyToBuffer, _decode_DOupdate_copyToBuffer, _encode_DOupdate_copyToBuffer } from "../ISO9041-VTP/DOupdate-copyToBuffer.ta.mjs";
 import { DOupdate_copyFromBuffer, _decode_DOupdate_copyFromBuffer, _encode_DOupdate_copyFromBuffer } from "../ISO9041-VTP/DOupdate-copyFromBuffer.ta.mjs";
-// export { DOupdate_copyFromBuffer, _decode_DOupdate_copyFromBuffer, _encode_DOupdate_copyFromBuffer } from "../ISO9041-VTP/DOupdate-copyFromBuffer.ta.mjs";
 import { DOupdate_copyLogToBuffer, _decode_DOupdate_copyLogToBuffer, _encode_DOupdate_copyLogToBuffer } from "../ISO9041-VTP/DOupdate-copyLogToBuffer.ta.mjs";
-// export { DOupdate_copyLogToBuffer, _decode_DOupdate_copyLogToBuffer, _encode_DOupdate_copyLogToBuffer } from "../ISO9041-VTP/DOupdate-copyLogToBuffer.ta.mjs";
 import { DOupdate_copyLogFromBuffer, _decode_DOupdate_copyLogFromBuffer, _encode_DOupdate_copyLogFromBuffer } from "../ISO9041-VTP/DOupdate-copyLogFromBuffer.ta.mjs";
-// export { DOupdate_copyLogFromBuffer, _decode_DOupdate_copyLogFromBuffer, _encode_DOupdate_copyLogFromBuffer } from "../ISO9041-VTP/DOupdate-copyLogFromBuffer.ta.mjs";
 
 
 /**

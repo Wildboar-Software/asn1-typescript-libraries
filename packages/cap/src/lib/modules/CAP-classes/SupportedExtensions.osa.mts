@@ -10,9 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { EXTENSION } from "../CAP-classes/EXTENSION.oca.mjs";
-// export { EXTENSION } from "../CAP-classes/EXTENSION.oca.mjs";
 import { firstExtension } from "../CAP-classes/firstExtension.oa.mjs";
-// export { firstExtension } from "../CAP-classes/firstExtension.oa.mjs";
 
 
 /**

@@ -13,15 +13,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BiometricFlags, _decode_BiometricFlags, _encode_BiometricFlags } from "../CryptographicInformationFramework/BiometricFlags.ta.mjs";
-// export { BiometricFlags, BiometricFlags_local /* IMPORTED_LONG_NAMED_BIT */, local /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_change_disabled /* IMPORTED_LONG_NAMED_BIT */, change_disabled /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_unblock_disabled /* IMPORTED_LONG_NAMED_BIT */, unblock_disabled /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_initialized /* IMPORTED_LONG_NAMED_BIT */, initialized /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_disable_allowed /* IMPORTED_LONG_NAMED_BIT */, disable_allowed /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_integrity_protected /* IMPORTED_LONG_NAMED_BIT */, integrity_protected /* IMPORTED_SHORT_NAMED_BIT */, BiometricFlags_confidentiality_protected /* IMPORTED_LONG_NAMED_BIT */, confidentiality_protected /* IMPORTED_SHORT_NAMED_BIT */, _decode_BiometricFlags, _encode_BiometricFlags } from "../CryptographicInformationFramework/BiometricFlags.ta.mjs";
 import { BiometricTemplateIdentifier, _decode_BiometricTemplateIdentifier, _encode_BiometricTemplateIdentifier } from "../CryptographicInformationFramework/BiometricTemplateIdentifier.ta.mjs";
-// export { BiometricTemplateIdentifier, _decode_BiometricTemplateIdentifier, _encode_BiometricTemplateIdentifier } from "../CryptographicInformationFramework/BiometricTemplateIdentifier.ta.mjs";
 import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CryptographicInformationFramework/BiometricType.ta.mjs";
-// export { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CryptographicInformationFramework/BiometricType.ta.mjs";
 import { Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
-// export { Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
 import { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFramework/Path.ta.mjs";
-// export { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFramework/Path.ta.mjs";
 
 
 /**

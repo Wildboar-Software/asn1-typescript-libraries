@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Semaphore_instance_definition_details, _decode_Semaphore_instance_definition_details, _encode_Semaphore_instance_definition_details } from "../MMS-SCI-Module-1/Semaphore-instance-definition-details.ta.mjs";
-// export { Semaphore_instance_definition_details, _decode_Semaphore_instance_definition_details, _encode_Semaphore_instance_definition_details } from "../MMS-SCI-Module-1/Semaphore-instance-definition-details.ta.mjs";
 
 
 /**

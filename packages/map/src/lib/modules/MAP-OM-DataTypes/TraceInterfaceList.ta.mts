@@ -1,81 +1,20 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MSC_S_InterfaceList, MSC_S_InterfaceList_a /* IMPORTED_LONG_NAMED_BIT */, a /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_iu /* IMPORTED_LONG_NAMED_BIT */, MSC_S_InterfaceList_mc /* IMPORTED_LONG_NAMED_BIT */, MSC_S_InterfaceList_map_g /* IMPORTED_LONG_NAMED_BIT */, map_g /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_b /* IMPORTED_LONG_NAMED_BIT */, map_b /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_e /* IMPORTED_LONG_NAMED_BIT */, map_e /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_f /* IMPORTED_LONG_NAMED_BIT */, map_f /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_cap /* IMPORTED_LONG_NAMED_BIT */, cap /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_d /* IMPORTED_LONG_NAMED_BIT */, map_d /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_InterfaceList_map_c /* IMPORTED_LONG_NAMED_BIT */, map_c /* IMPORTED_SHORT_NAMED_BIT */, _decode_MSC_S_InterfaceList, _encode_MSC_S_InterfaceList } from "../MAP-OM-DataTypes/MSC-S-InterfaceList.ta.mjs";
-import { MGW_InterfaceList, MGW_InterfaceList_mc /* IMPORTED_LONG_NAMED_BIT */, MGW_InterfaceList_nb_up /* IMPORTED_LONG_NAMED_BIT */, nb_up /* IMPORTED_SHORT_NAMED_BIT */, MGW_InterfaceList_iu_up /* IMPORTED_LONG_NAMED_BIT */, iu_up /* IMPORTED_SHORT_NAMED_BIT */, _decode_MGW_InterfaceList, _encode_MGW_InterfaceList } from "../MAP-OM-DataTypes/MGW-InterfaceList.ta.mjs";
-import { SGSN_InterfaceList, SGSN_InterfaceList_gb /* IMPORTED_LONG_NAMED_BIT */, gb /* IMPORTED_SHORT_NAMED_BIT */, SGSN_InterfaceList_iu /* IMPORTED_LONG_NAMED_BIT */, SGSN_InterfaceList_gn /* IMPORTED_LONG_NAMED_BIT */, SGSN_InterfaceList_map_gr /* IMPORTED_LONG_NAMED_BIT */, map_gr /* IMPORTED_SHORT_NAMED_BIT */, SGSN_InterfaceList_map_gd /* IMPORTED_LONG_NAMED_BIT */, map_gd /* IMPORTED_SHORT_NAMED_BIT */, SGSN_InterfaceList_map_gf /* IMPORTED_LONG_NAMED_BIT */, map_gf /* IMPORTED_SHORT_NAMED_BIT */, SGSN_InterfaceList_gs /* IMPORTED_LONG_NAMED_BIT */, gs /* IMPORTED_SHORT_NAMED_BIT */, SGSN_InterfaceList_ge /* IMPORTED_LONG_NAMED_BIT */, ge /* IMPORTED_SHORT_NAMED_BIT */, SGSN_InterfaceList_s3 /* IMPORTED_LONG_NAMED_BIT */, SGSN_InterfaceList_s4 /* IMPORTED_LONG_NAMED_BIT */, SGSN_InterfaceList_s6d /* IMPORTED_LONG_NAMED_BIT */, s6d /* IMPORTED_SHORT_NAMED_BIT */, _decode_SGSN_InterfaceList, _encode_SGSN_InterfaceList } from "../MAP-OM-DataTypes/SGSN-InterfaceList.ta.mjs";
-import { GGSN_InterfaceList, GGSN_InterfaceList_gn /* IMPORTED_LONG_NAMED_BIT */, GGSN_InterfaceList_gi /* IMPORTED_LONG_NAMED_BIT */, gi /* IMPORTED_SHORT_NAMED_BIT */, GGSN_InterfaceList_gmb /* IMPORTED_LONG_NAMED_BIT */, _decode_GGSN_InterfaceList, _encode_GGSN_InterfaceList } from "../MAP-OM-DataTypes/GGSN-InterfaceList.ta.mjs";
-import { RNC_InterfaceList, RNC_InterfaceList_iu /* IMPORTED_LONG_NAMED_BIT */, RNC_InterfaceList_iur /* IMPORTED_LONG_NAMED_BIT */, iur /* IMPORTED_SHORT_NAMED_BIT */, RNC_InterfaceList_iub /* IMPORTED_LONG_NAMED_BIT */, iub /* IMPORTED_SHORT_NAMED_BIT */, RNC_InterfaceList_uu /* IMPORTED_LONG_NAMED_BIT */, _decode_RNC_InterfaceList, _encode_RNC_InterfaceList } from "../MAP-OM-DataTypes/RNC-InterfaceList.ta.mjs";
-import { BMSC_InterfaceList, BMSC_InterfaceList_gmb /* IMPORTED_LONG_NAMED_BIT */, _decode_BMSC_InterfaceList, _encode_BMSC_InterfaceList } from "../MAP-OM-DataTypes/BMSC-InterfaceList.ta.mjs";
-import { MME_InterfaceList, MME_InterfaceList_s1_mme /* IMPORTED_LONG_NAMED_BIT */, MME_InterfaceList_s3 /* IMPORTED_LONG_NAMED_BIT */, MME_InterfaceList_s6a /* IMPORTED_LONG_NAMED_BIT */, s6a /* IMPORTED_SHORT_NAMED_BIT */, MME_InterfaceList_s10 /* IMPORTED_LONG_NAMED_BIT */, s10 /* IMPORTED_SHORT_NAMED_BIT */, MME_InterfaceList_s11 /* IMPORTED_LONG_NAMED_BIT */, _decode_MME_InterfaceList, _encode_MME_InterfaceList } from "../MAP-OM-DataTypes/MME-InterfaceList.ta.mjs";
-import { SGW_InterfaceList, SGW_InterfaceList_s4 /* IMPORTED_LONG_NAMED_BIT */, SGW_InterfaceList_s5 /* IMPORTED_LONG_NAMED_BIT */, SGW_InterfaceList_s8b /* IMPORTED_LONG_NAMED_BIT */, SGW_InterfaceList_s11 /* IMPORTED_LONG_NAMED_BIT */, SGW_InterfaceList_gxc /* IMPORTED_LONG_NAMED_BIT */, gxc /* IMPORTED_SHORT_NAMED_BIT */, _decode_SGW_InterfaceList, _encode_SGW_InterfaceList } from "../MAP-OM-DataTypes/SGW-InterfaceList.ta.mjs";
-import { PGW_InterfaceList, PGW_InterfaceList_s2a /* IMPORTED_LONG_NAMED_BIT */, s2a /* IMPORTED_SHORT_NAMED_BIT */, PGW_InterfaceList_s2b /* IMPORTED_LONG_NAMED_BIT */, s2b /* IMPORTED_SHORT_NAMED_BIT */, PGW_InterfaceList_s2c /* IMPORTED_LONG_NAMED_BIT */, s2c /* IMPORTED_SHORT_NAMED_BIT */, PGW_InterfaceList_s5 /* IMPORTED_LONG_NAMED_BIT */, PGW_InterfaceList_s6b /* IMPORTED_LONG_NAMED_BIT */, s6b /* IMPORTED_SHORT_NAMED_BIT */, PGW_InterfaceList_gx /* IMPORTED_LONG_NAMED_BIT */, gx /* IMPORTED_SHORT_NAMED_BIT */, PGW_InterfaceList_s8b /* IMPORTED_LONG_NAMED_BIT */, PGW_InterfaceList_sgi /* IMPORTED_LONG_NAMED_BIT */, sgi /* IMPORTED_SHORT_NAMED_BIT */, _decode_PGW_InterfaceList, _encode_PGW_InterfaceList } from "../MAP-OM-DataTypes/PGW-InterfaceList.ta.mjs";
-import { ENB_InterfaceList, ENB_InterfaceList_s1_mme /* IMPORTED_LONG_NAMED_BIT */, ENB_InterfaceList_x2 /* IMPORTED_LONG_NAMED_BIT */, x2 /* IMPORTED_SHORT_NAMED_BIT */, ENB_InterfaceList_uu /* IMPORTED_LONG_NAMED_BIT */, _decode_ENB_InterfaceList, _encode_ENB_InterfaceList } from "../MAP-OM-DataTypes/ENB-InterfaceList.ta.mjs";
+import { BMSC_InterfaceList, _decode_BMSC_InterfaceList, _encode_BMSC_InterfaceList } from "../MAP-OM-DataTypes/BMSC-InterfaceList.ta.mjs";
+import { ENB_InterfaceList, _decode_ENB_InterfaceList, _encode_ENB_InterfaceList } from "../MAP-OM-DataTypes/ENB-InterfaceList.ta.mjs";
+import { GGSN_InterfaceList, _decode_GGSN_InterfaceList, _encode_GGSN_InterfaceList } from "../MAP-OM-DataTypes/GGSN-InterfaceList.ta.mjs";
+import { MGW_InterfaceList, _decode_MGW_InterfaceList, _encode_MGW_InterfaceList } from "../MAP-OM-DataTypes/MGW-InterfaceList.ta.mjs";
+import { MME_InterfaceList, _decode_MME_InterfaceList, _encode_MME_InterfaceList } from "../MAP-OM-DataTypes/MME-InterfaceList.ta.mjs";
+import { MSC_S_InterfaceList, _decode_MSC_S_InterfaceList, _encode_MSC_S_InterfaceList } from "../MAP-OM-DataTypes/MSC-S-InterfaceList.ta.mjs";
+import { PGW_InterfaceList, _decode_PGW_InterfaceList, _encode_PGW_InterfaceList } from "../MAP-OM-DataTypes/PGW-InterfaceList.ta.mjs";
+import { RNC_InterfaceList, _decode_RNC_InterfaceList, _encode_RNC_InterfaceList } from "../MAP-OM-DataTypes/RNC-InterfaceList.ta.mjs";
+import { SGSN_InterfaceList, _decode_SGSN_InterfaceList, _encode_SGSN_InterfaceList } from "../MAP-OM-DataTypes/SGSN-InterfaceList.ta.mjs";
+import { SGW_InterfaceList, _decode_SGW_InterfaceList, _encode_SGW_InterfaceList } from "../MAP-OM-DataTypes/SGW-InterfaceList.ta.mjs";
 
 
 /**

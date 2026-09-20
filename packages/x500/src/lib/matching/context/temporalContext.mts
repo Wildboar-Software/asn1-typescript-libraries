@@ -45,6 +45,108 @@ function inSpecTimeZone (instant: Date, timeZone: number | undefined): Date {
     return civilDateInFixedOffset(instant, timeZone);
 }
 
+/**
+ * Cap on greedy-cover steps for `between` + `entirely`. Open-ended
+ * assertions use `MAX_DATE`; each step is one occurrence, so a daily
+ * band could otherwise iterate without bound.
+ */
+const MAX_ENTIRELY_COVER_STEPS = 1000;
+
+/**
+ * @summary Instant one second after `instant`.
+ * @description
+ *
+ * X.520 clause 10.2 `DayTime` is second-precision. The cover walk
+ * advances by this amount after an occurrence end so
+ * {@link boundariesOfPeriodOccurrence} can select a later
+ * `DayTimeBand` (band matching ignores milliseconds).
+ *
+ * @param {Date} instant Inclusive end of the current covering occurrence.
+ * @returns {Date} `instant` plus one second.
+ * @function
+ * @author Cursor Grok 4.6
+ */
+function secondAfter (instant: Date): Date {
+    return new Date(instant.valueOf() + 1000);
+}
+
+/**
+ * @summary Latest inclusive occurrence end that covers `t`.
+ * @description
+ *
+ * Among the stored `periodic` SET, take the farthest inclusive end of
+ * any `Period` occurrence that contains `t`. `null` means `t` is a
+ * hole in the union (X.520 clause 10.2).
+ *
+ * Occurrence bounds already include the `DayTimeBand` that contains
+ * `t`. Later bands of the same `Period` are found on the next walk
+ * step.
+ *
+ * @param {Period[]} periods Stored `TimeSpecification.time.periodic`.
+ * @param {Date} t Instant that must lie in the union.
+ * @returns {Date | null} Farthest inclusive end, or `null` if none
+ *  cover `t`.
+ * @function
+ * @author Cursor Grok 4.6
+ */
+function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null {
+    let farthest: Date | null = null;
+    for (const period of periods) {
+        const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, t);
+        if (!boundaries) {
+            continue;
+        }
+        const upper: Date = boundaries[1];
+        if ((farthest === null) || (upper.valueOf() > farthest.valueOf())) {
+            farthest = upper;
+        }
+    }
+    return farthest;
+}
+
+/**
+ * @summary Whether `[start, end]` ⊆ the union of `Period` occurrences.
+ * @description
+ *
+ * X.520 clause 10.2 `between` with `entirely` TRUE: the asserted band
+ * must lie inside the **stored times**. For `periodic`, that is the
+ * union of all `Period` occurrences (the SET), not one occurrence of
+ * one `Period`.
+ *
+ * Walk `t` from `start`; at each `t` take the farthest covering
+ * occurrence end and continue at the next second. A hole, or more
+ * than {@link MAX_ENTIRELY_COVER_STEPS} steps, fails. Open-ended
+ * assertions use `MAX_DATE`.
+ *
+ * @param {Period[]} periods Stored `TimeSpecification.time.periodic`.
+ * @param {Date} start Inclusive start of the asserted band (spec zone).
+ * @param {Date} end Inclusive end of the asserted band (spec zone).
+ * @returns {boolean} `true` iff every instant in `[start, end]` is
+ *  covered.
+ * @function
+ * @author Cursor Grok 4.6
+ */
+function periodsEntirelyCoverInterval (periods: Period[], start: Date, end: Date): boolean {
+    if (start.valueOf() > end.valueOf()) {
+        return false;
+    }
+    let t: Date = start;
+    let steps: number = 0;
+    while (t.valueOf() <= end.valueOf()) {
+        steps += 1;
+        if (steps > MAX_ENTIRELY_COVER_STEPS) {
+            return false;
+        }
+        const farthestEnd: Date | null = farthestOccurrenceEndCovering(periods, t);
+        if (farthestEnd === null) {
+            // No period covered that instant (a hole in the union).
+            return false;
+        }
+        t = secondAfter(farthestEnd);
+    }
+    return true;
+}
+
 function instantInPeriod (period: Period, time: Date): boolean {
     const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, time);
     if (!boundaries) {
@@ -70,6 +172,12 @@ function candidateInstantsOnDay (period: Period, day: Date): Date[] {
     return [ new Date(day.getFullYear(), day.getMonth(), day.getDate(), 12, 0, 0) ];
 }
 
+/**
+ * X.520 clause 10.2 `between` with `entirely` FALSE: any overlap with
+ * one `Period`. Endpoints first; otherwise a candidate instant in the
+ * interval (day scan limited to specified years, or two calendar
+ * years when years are omitted).
+ */
 function periodOverlapsInterval (period: Period, start: Date, end: Date): boolean {
     if (instantInPeriod(period, start) || instantInPeriod(period, end)) {
         return true;
@@ -103,20 +211,6 @@ function periodOverlapsInterval (period: Period, start: Date, end: Date): boolea
         }
     }
     return false;
-}
-
-function periodContainsInterval (period: Period, start: Date, end: Date): boolean {
-    const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, start);
-    if (!boundaries) {
-        return false;
-    }
-    const [ lower, upper ] = boundaries;
-    return (
-        (start.valueOf() >= lower.valueOf())
-        && (start.valueOf() <= upper.valueOf())
-        && (end.valueOf() >= lower.valueOf())
-        && (end.valueOf() <= upper.valueOf())
-    );
 }
 
 /** True if `time` falls in one occurrence of `period` (clause 10.2). */
@@ -161,7 +255,9 @@ function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification):
 
 /**
  * `between` evaluation: overlap, or containment when `entirely` is
- * TRUE. `notThisTime` inverts the result (clause 10.2).
+ * TRUE. Periodic `entirely` is a subset of the union of all `Period`
+ * occurrences, not of a single occurrence. `notThisTime` inverts the
+ * result (clause 10.2).
  */
 function timeSpecificationContains (spec: TimeSpecification, start: Date, end: Date, entirely: boolean = false): boolean {
     const result = ((): boolean => {
@@ -187,13 +283,14 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
                 ));
             }
         } else if ("periodic" in spec.time) {
-            return spec.time.periodic.some((period) => {
-                const adjustedStart = inSpecTimeZone(start, timezone);
-                const adjustedEnd = inSpecTimeZone(end, timezone);
-                return entirely
-                    ? periodContainsInterval(period, adjustedStart, adjustedEnd)
-                    : periodOverlapsInterval(period, adjustedStart, adjustedEnd);
-            });
+            const adjustedStart = inSpecTimeZone(start, timezone);
+            const adjustedEnd = inSpecTimeZone(end, timezone);
+            if (entirely) {
+                return periodsEntirelyCoverInterval(spec.time.periodic, adjustedStart, adjustedEnd);
+            }
+            return spec.time.periodic.some((period) =>
+                periodOverlapsInterval(period, adjustedStart, adjustedEnd)
+            );
         } else {
             throw new Error(); // There is no other option.
         }
@@ -209,7 +306,8 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
  * `notThisTime` negation). A `TimeAssertion` matches if the times
  * overlap: `now`/`at` must fall within the stored specification;
  * `between` overlaps unless `entirely` is TRUE, in which case the
- * whole asserted band must lie inside the stored times. Missing
+ * whole asserted band must lie inside the stored times (for
+ * `periodic`, the union of all `Period` occurrences). Missing
  * timezone is interpreted in the DSA's zone. Periodic SET OF is a
  * logical OR.
  */

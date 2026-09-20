@@ -13,11 +13,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FieldParamValues_maxFields, _decode_FieldParamValues_maxFields, _encode_FieldParamValues_maxFields } from "../CDS/FieldParamValues-maxFields.ta.mjs";
-// export { FieldParamValues_maxFields, _decode_FieldParamValues_maxFields, _encode_FieldParamValues_maxFields } from "../CDS/FieldParamValues-maxFields.ta.mjs";
 import { FieldParamValues_maxFieldElements, _decode_FieldParamValues_maxFieldElements, _encode_FieldParamValues_maxFieldElements } from "../CDS/FieldParamValues-maxFieldElements.ta.mjs";
-// export { FieldParamValues_maxFieldElements, _decode_FieldParamValues_maxFieldElements, _encode_FieldParamValues_maxFieldElements } from "../CDS/FieldParamValues-maxFieldElements.ta.mjs";
 import { FieldParamValues_accessOutside, _decode_FieldParamValues_accessOutside, _encode_FieldParamValues_accessOutside } from "../CDS/FieldParamValues-accessOutside.ta.mjs";
-// export { FieldParamValues_accessOutside, FieldParamValues_accessOutside_allowed /* IMPORTED_LONG_NAMED_INTEGER */, allowed /* IMPORTED_SHORT_NAMED_INTEGER */, FieldParamValues_accessOutside_notAllowed /* IMPORTED_LONG_NAMED_INTEGER */, notAllowed /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_FieldParamValues_accessOutside, _encode_FieldParamValues_accessOutside } from "../CDS/FieldParamValues-accessOutside.ta.mjs";
 
 
 /**

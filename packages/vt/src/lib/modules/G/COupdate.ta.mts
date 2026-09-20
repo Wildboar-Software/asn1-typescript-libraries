@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { COupdate_objectUpdate, _decode_COupdate_objectUpdate, _encode_COupdate_objectUpdate } from "../G/COupdate-objectUpdate.ta.mjs";
-// export { COupdate_objectUpdate, _decode_COupdate_objectUpdate, _encode_COupdate_objectUpdate } from "../G/COupdate-objectUpdate.ta.mjs";
 
 
 /**

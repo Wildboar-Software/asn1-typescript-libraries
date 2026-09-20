@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
-// export { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 import { VersionManagementProblem, _enum_for_VersionManagementProblem, _decode_VersionManagementProblem, _encode_VersionManagementProblem } from "../DFRAbstractService/VersionManagementProblem.ta.mjs";
-// export { VersionManagementProblem, _enum_for_VersionManagementProblem, VersionManagementProblem_inappropriate_object_class /* IMPORTED_LONG_ENUMERATION_ITEM */, inappropriate_object_class /* IMPORTED_SHORT_ENUMERATION_ITEM */, VersionManagementProblem_belongs_to_another_conceptual_document /* IMPORTED_LONG_ENUMERATION_ITEM */, belongs_to_another_conceptual_document /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_VersionManagementProblem, _encode_VersionManagementProblem } from "../DFRAbstractService/VersionManagementProblem.ta.mjs";
 
 
 /**

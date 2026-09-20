@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ErrorCode, _decode_ErrorCode, _encode_ErrorCode } from "../G/ErrorCode.ta.mjs";
-// export { ErrorCode, ErrorCode_collisionDetected /* IMPORTED_LONG_NAMED_INTEGER */, collisionDetected /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_vteParamNotSupported /* IMPORTED_LONG_NAMED_INTEGER */, vteParamNotSupported /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_vteParamCombNotSupported /* IMPORTED_LONG_NAMED_INTEGER */, vteParamCombNotSupported /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_vteIncomplete /* IMPORTED_LONG_NAMED_INTEGER */, vteIncomplete /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_vteProfileNotSupported /* IMPORTED_LONG_NAMED_INTEGER */, vteProfileNotSupported /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_vtModeNotSupported /* IMPORTED_LONG_NAMED_INTEGER */, vtModeNotSupported /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_lengthExceeded /* IMPORTED_LONG_NAMED_INTEGER */, lengthExceeded /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ErrorCode, _encode_ErrorCode } from "../G/ErrorCode.ta.mjs";
 
 
 /**

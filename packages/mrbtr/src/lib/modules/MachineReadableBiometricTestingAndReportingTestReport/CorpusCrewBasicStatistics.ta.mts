@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InfoCumulativeDistribution, _decode_InfoCumulativeDistribution, _encode_InfoCumulativeDistribution } from "../MachineReadableBiometricTestingAndReportingTestReport/InfoCumulativeDistribution.ta.mjs";
-// export { InfoCumulativeDistribution, _decode_InfoCumulativeDistribution, _encode_InfoCumulativeDistribution } from "../MachineReadableBiometricTestingAndReportingTestReport/InfoCumulativeDistribution.ta.mjs";
 
 
 /**

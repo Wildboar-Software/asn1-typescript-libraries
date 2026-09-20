@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
-// export { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 import { ReservationProblem, _enum_for_ReservationProblem, _decode_ReservationProblem, _encode_ReservationProblem } from "../DFRAbstractService/ReservationProblem.ta.mjs";
-// export { ReservationProblem, _enum_for_ReservationProblem, ReservationProblem_cannot_reserve /* IMPORTED_LONG_ENUMERATION_ITEM */, cannot_reserve /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReservationProblem_already_reserved /* IMPORTED_LONG_ENUMERATION_ITEM */, already_reserved /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReservationProblem_not_yet_reserved /* IMPORTED_LONG_ENUMERATION_ITEM */, not_yet_reserved /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReservationProblem_cannot_unreserve /* IMPORTED_LONG_ENUMERATION_ITEM */, cannot_unreserve /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReservationProblem_reservation_not_changed /* IMPORTED_LONG_ENUMERATION_ITEM */, reservation_not_changed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReservationProblem, _encode_ReservationProblem } from "../DFRAbstractService/ReservationProblem.ta.mjs";
 
 
 /**

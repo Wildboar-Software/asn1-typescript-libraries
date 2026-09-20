@@ -1,77 +1,16 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-import { SS_EventSpecification, _decode_SS_EventSpecification, _encode_SS_EventSpecification } from "../MAP-SS-DataTypes/SS-EventSpecification.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CCBS_RequestState, _enum_for_CCBS_RequestState, CCBS_RequestState_request /* IMPORTED_LONG_ENUMERATION_ITEM */, request /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_recall /* IMPORTED_LONG_ENUMERATION_ITEM */, recall /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_active /* IMPORTED_LONG_ENUMERATION_ITEM */, active /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_completed /* IMPORTED_LONG_ENUMERATION_ITEM */, completed /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_suspended /* IMPORTED_LONG_ENUMERATION_ITEM */, suspended /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_frozen /* IMPORTED_LONG_ENUMERATION_ITEM */, frozen /* IMPORTED_SHORT_ENUMERATION_ITEM */, CCBS_RequestState_deleted /* IMPORTED_LONG_ENUMERATION_ITEM */, deleted /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CCBS_RequestState, _encode_CCBS_RequestState } from "../MAP-SS-DataTypes/CCBS-RequestState.ta.mjs";
+import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { CCBS_RequestState, _decode_CCBS_RequestState, _encode_CCBS_RequestState, _enum_for_CCBS_RequestState } from "../MAP-SS-DataTypes/CCBS-RequestState.ta.mjs";
+import { SS_EventSpecification, _decode_SS_EventSpecification, _encode_SS_EventSpecification } from "../MAP-SS-DataTypes/SS-EventSpecification.ta.mjs";
 
 
 /**

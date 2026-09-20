@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExpressionDETCurve, _decode_ExpressionDETCurve, _encode_ExpressionDETCurve } from "../MachineReadableBiometricTestingAndReportingTestReport/ExpressionDETCurve.ta.mjs";
-// export { ExpressionDETCurve, _decode_ExpressionDETCurve, _encode_ExpressionDETCurve } from "../MachineReadableBiometricTestingAndReportingTestReport/ExpressionDETCurve.ta.mjs";
 
 
 /**

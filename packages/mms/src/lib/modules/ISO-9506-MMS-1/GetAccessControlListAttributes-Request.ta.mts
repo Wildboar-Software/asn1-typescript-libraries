@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { GetAccessControlListAttributes_Request_namedObject, _decode_GetAccessControlListAttributes_Request_namedObject, _encode_GetAccessControlListAttributes_Request_namedObject } from "../ISO-9506-MMS-1/GetAccessControlListAttributes-Request-namedObject.ta.mjs";
-// export { GetAccessControlListAttributes_Request_namedObject, _decode_GetAccessControlListAttributes_Request_namedObject, _encode_GetAccessControlListAttributes_Request_namedObject } from "../ISO-9506-MMS-1/GetAccessControlListAttributes-Request-namedObject.ta.mjs";
 
 
 /**

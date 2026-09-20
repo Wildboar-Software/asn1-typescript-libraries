@@ -12,13 +12,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS-1/Integer32.ta.mjs";
-// export { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS-1/Integer32.ta.mjs";
 import { Integer16, _decode_Integer16, _encode_Integer16 } from "../ISO-9506-MMS-1/Integer16.ta.mjs";
-// export { Integer16, _decode_Integer16, _encode_Integer16 } from "../ISO-9506-MMS-1/Integer16.ta.mjs";
 import { Integer8, _decode_Integer8, _encode_Integer8 } from "../ISO-9506-MMS-1/Integer8.ta.mjs";
-// export { Integer8, _decode_Integer8, _encode_Integer8 } from "../ISO-9506-MMS-1/Integer8.ta.mjs";
 import { Initiate_RequestPDU_initRequestDetail, _decode_Initiate_RequestPDU_initRequestDetail, _encode_Initiate_RequestPDU_initRequestDetail } from "../ISO-9506-MMS-1/Initiate-RequestPDU-initRequestDetail.ta.mjs";
-// export { Initiate_RequestPDU_initRequestDetail, _decode_Initiate_RequestPDU_initRequestDetail, _encode_Initiate_RequestPDU_initRequestDetail } from "../ISO-9506-MMS-1/Initiate-RequestPDU-initRequestDetail.ta.mjs";
 
 
 /**

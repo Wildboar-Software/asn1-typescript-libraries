@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { ULState, _decode_ULState, _encode_ULState } from "../MMS-Object-Module-1/ULState.ta.mjs";
-// export { ULState, ULState_non_existent /* IMPORTED_LONG_NAMED_INTEGER */, non_existent /* IMPORTED_SHORT_NAMED_INTEGER */, ULState_uploading /* IMPORTED_LONG_NAMED_INTEGER */, uploading /* IMPORTED_SHORT_NAMED_INTEGER */, ULState_uploaded /* IMPORTED_LONG_NAMED_INTEGER */, uploaded /* IMPORTED_SHORT_NAMED_INTEGER */, ULState_u1 /* IMPORTED_LONG_NAMED_INTEGER */, u1 /* IMPORTED_SHORT_NAMED_INTEGER */, ULState_u2 /* IMPORTED_LONG_NAMED_INTEGER */, u2 /* IMPORTED_SHORT_NAMED_INTEGER */, ULState_u3 /* IMPORTED_LONG_NAMED_INTEGER */, u3 /* IMPORTED_SHORT_NAMED_INTEGER */, ULState_u4 /* IMPORTED_LONG_NAMED_INTEGER */, u4 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ULState, _encode_ULState } from "../MMS-Object-Module-1/ULState.ta.mjs";
 
 
 /**

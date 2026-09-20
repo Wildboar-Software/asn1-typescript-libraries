@@ -12,23 +12,14 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ParameterOffers_typeIdentifier_Item, _decode_ParameterOffers_typeIdentifier_Item, _encode_ParameterOffers_typeIdentifier_Item } from "../CSS/ParameterOffers-typeIdentifier-Item.ta.mjs";
-// export { ParameterOffers_typeIdentifier_Item, _decode_ParameterOffers_typeIdentifier_Item, _encode_ParameterOffers_typeIdentifier_Item } from "../CSS/ParameterOffers-typeIdentifier-Item.ta.mjs";
 import { AccessRuleOffer, _decode_AccessRuleOffer, _encode_AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
-// export { AccessRuleOffer, AccessRuleOffer_wavar /* IMPORTED_LONG_NAMED_BIT */, wavar /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waci /* IMPORTED_LONG_NAMED_BIT */, waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waca /* IMPORTED_LONG_NAMED_BIT */, waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_nsac /* IMPORTED_LONG_NAMED_BIT */, nsac /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waci /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waca /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_no_access /* IMPORTED_LONG_NAMED_BIT */, no_access /* IMPORTED_SHORT_NAMED_BIT */, _decode_AccessRuleOffer, _encode_AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
 import { ParameterOffers_trigger, _decode_ParameterOffers_trigger, _encode_ParameterOffers_trigger } from "../CSS/ParameterOffers-trigger.ta.mjs";
-// export { ParameterOffers_trigger, ParameterOffers_trigger_yes /* IMPORTED_LONG_NAMED_BIT */, yes /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_trigger_no /* IMPORTED_LONG_NAMED_BIT */, no /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_trigger, _encode_ParameterOffers_trigger } from "../CSS/ParameterOffers-trigger.ta.mjs";
 import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
-// export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { ParameterOffers_category, _decode_ParameterOffers_category, _encode_ParameterOffers_category } from "../CSS/ParameterOffers-category.ta.mjs";
-// export { ParameterOffers_category, ParameterOffers_category_character /* IMPORTED_LONG_NAMED_BIT */, character /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_boolean /* IMPORTED_LONG_NAMED_BIT */, boolean_ /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_symbolic /* IMPORTED_LONG_NAMED_BIT */, symbolic /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_integer /* IMPORTED_LONG_NAMED_BIT */, integer /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_category_transparent /* IMPORTED_LONG_NAMED_BIT */, transparent /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_category, _encode_ParameterOffers_category } from "../CSS/ParameterOffers-category.ta.mjs";
 import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
-// export { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 import { ParameterOffers_priority, _decode_ParameterOffers_priority, _encode_ParameterOffers_priority } from "../CSS/ParameterOffers-priority.ta.mjs";
-// export { ParameterOffers_priority, ParameterOffers_priority_normal /* IMPORTED_LONG_NAMED_BIT */, normal /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_priority_high /* IMPORTED_LONG_NAMED_BIT */, high /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_priority_urgent /* IMPORTED_LONG_NAMED_BIT */, urgent /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_priority, _encode_ParameterOffers_priority } from "../CSS/ParameterOffers-priority.ta.mjs";
 import { ParameterOffers_structure, _decode_ParameterOffers_structure, _encode_ParameterOffers_structure } from "../CSS/ParameterOffers-structure.ta.mjs";
-// export { ParameterOffers_structure, _decode_ParameterOffers_structure, _encode_ParameterOffers_structure } from "../CSS/ParameterOffers-structure.ta.mjs";
 import { ElementParamOffer, _decode_ElementParamOffer, _encode_ElementParamOffer } from "../CSS/ElementParamOffer.ta.mjs";
-// export { ElementParamOffer, _decode_ElementParamOffer, _encode_ElementParamOffer } from "../CSS/ElementParamOffer.ta.mjs";
 
 
 /**

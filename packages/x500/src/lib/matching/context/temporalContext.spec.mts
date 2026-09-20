@@ -564,4 +564,168 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeSpecification(utcZone, DER),
         )).toBe(false);
     });
+
+    it("matches between+entirely when two Periods each cover half of the assertion", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 4, 1, 12, 0, 0),
+                new Date(2021, 4, 4, 12, 0, 0),
+                TRUE,
+            ),
+        };
+        const value = new TimeSpecification(
+            {
+                periodic: [
+                    new Period(
+                        undefined,
+                        { intDay: [ 1, 2 ] },
+                        undefined,
+                        { allMonths: null },
+                        [ 2021 ],
+                    ),
+                    new Period(
+                        undefined,
+                        { intDay: [ 3, 4 ] },
+                        undefined,
+                        { allMonths: null },
+                        [ 2021 ],
+                    ),
+                ],
+            },
+        );
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(true);
+    });
+
+    it("does not match between+entirely when the union of Periods has a hole", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 4, 1, 12, 0, 0),
+                new Date(2021, 4, 4, 12, 0, 0),
+                TRUE,
+            ),
+        };
+        const value = new TimeSpecification(
+            {
+                periodic: [
+                    new Period(
+                        undefined,
+                        { intDay: [ 1, 2 ] },
+                        undefined,
+                        { allMonths: null },
+                        [ 2021 ],
+                    ),
+                    new Period(
+                        undefined,
+                        { intDay: [ 4 ] },
+                        undefined,
+                        { allMonths: null },
+                        [ 2021 ],
+                    ),
+                ],
+            },
+        );
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(false);
+    });
+
+    it("matches between+entirely across abutting DayTimeBands of one Period", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 4, 10, 9, 0, 0),
+                new Date(2021, 4, 10, 17, 0, 0),
+                TRUE,
+            ),
+        };
+        const value = new TimeSpecification(
+            {
+                periodic: [
+                    new Period(
+                        [
+                            new DayTimeBand(
+                                new DayTime(9, 0, 0),
+                                new DayTime(12, 0, 0),
+                            ),
+                            new DayTimeBand(
+                                new DayTime(12, 0, 0),
+                                new DayTime(17, 0, 0),
+                            ),
+                        ],
+                    ),
+                ],
+            },
+        );
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(true);
+    });
+
+    it("matches between+entirely across DayTimeBands that meet at adjacent seconds", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 4, 10, 9, 0, 0),
+                new Date(2021, 4, 10, 17, 0, 0),
+                TRUE,
+            ),
+        };
+        const value = new TimeSpecification(
+            {
+                periodic: [
+                    new Period(
+                        [
+                            new DayTimeBand(
+                                new DayTime(9, 0, 0),
+                                new DayTime(12, 0, 0),
+                            ),
+                            new DayTimeBand(
+                                new DayTime(12, 0, 1),
+                                new DayTime(17, 0, 0),
+                            ),
+                        ],
+                    ),
+                ],
+            },
+        );
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(true);
+    });
+
+    it("matches between+entirely across abutting DayTimeBands from two Periods", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 4, 10, 9, 0, 0),
+                new Date(2021, 4, 10, 17, 0, 0),
+                TRUE,
+            ),
+        };
+        const value = new TimeSpecification(
+            {
+                periodic: [
+                    new Period([
+                        new DayTimeBand(
+                            new DayTime(9, 0, 0),
+                            new DayTime(12, 0, 0),
+                        ),
+                    ]),
+                    new Period([
+                        new DayTimeBand(
+                            new DayTime(12, 0, 0),
+                            new DayTime(17, 0, 0),
+                        ),
+                    ]),
+                ],
+            },
+        );
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(true);
+    });
 });

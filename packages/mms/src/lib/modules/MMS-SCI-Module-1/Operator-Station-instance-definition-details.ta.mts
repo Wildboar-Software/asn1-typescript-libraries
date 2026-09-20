@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Access_Control_List_instance, _decode_Access_Control_List_instance, _encode_Access_Control_List_instance } from "../MMS-SCI-Module-1/Access-Control-List-instance.ta.mjs";
-// export { Access_Control_List_instance, _decode_Access_Control_List_instance, _encode_Access_Control_List_instance } from "../MMS-SCI-Module-1/Access-Control-List-instance.ta.mjs";
 import { Operator_Station_instance_definition_details_stationType, _enum_for_Operator_Station_instance_definition_details_stationType, _decode_Operator_Station_instance_definition_details_stationType, _encode_Operator_Station_instance_definition_details_stationType } from "../MMS-SCI-Module-1/Operator-Station-instance-definition-details-stationType.ta.mjs";
-// export { Operator_Station_instance_definition_details_stationType, _enum_for_Operator_Station_instance_definition_details_stationType, Operator_Station_instance_definition_details_stationType_entry /* IMPORTED_LONG_ENUMERATION_ITEM */, entry /* IMPORTED_SHORT_ENUMERATION_ITEM */, Operator_Station_instance_definition_details_stationType_display /* IMPORTED_LONG_ENUMERATION_ITEM */, display /* IMPORTED_SHORT_ENUMERATION_ITEM */, Operator_Station_instance_definition_details_stationType_entry_display /* IMPORTED_LONG_ENUMERATION_ITEM */, entry_display /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Operator_Station_instance_definition_details_stationType, _encode_Operator_Station_instance_definition_details_stationType } from "../MMS-SCI-Module-1/Operator-Station-instance-definition-details-stationType.ta.mjs";
 
 
 /**
