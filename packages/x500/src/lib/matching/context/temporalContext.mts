@@ -97,6 +97,7 @@ function periodsEntirelyCoverInterval (periods: Period[], start: Date, end: Date
         }
         const farthestEnd: Date | null = farthestOccurrenceEndCovering(periods, t);
         if (farthestEnd === null) {
+            // No period covered that instant (a hole in the union).
             return false;
         }
         if (farthestEnd.valueOf() >= end.valueOf()) {
