@@ -35,6 +35,7 @@ const ALL_WEEKS_IN_YEAR: Set<number> = new Set(
  */
 const MAX_NEXT_START_ITERS = 4000;
 
+/** Decoded `Period` membership sets. `null` on a set = unconstrained. */
 interface PeriodWhitelists {
     years: Set<number> | null;
     months: Set<number> | null;
@@ -46,6 +47,21 @@ interface PeriodWhitelists {
     bands: DayTimeBand[] | null;
 }
 
+/**
+ * @summary Next year in `years` that is strictly after `afterYear`.
+ * @description
+ *
+ * Jumps a cursor out of a year that `Period.years` does not list,
+ * instead of walking day by day to 1 January of the next listed year.
+ *
+ * @param {Set<number>} years Listed `Period.years` values.
+ * @param {number} afterYear Calendar year that is not listed (or already
+ *  consumed).
+ * @returns {number | null} Smallest listed year greater than
+ *  `afterYear`, or `null` if none remain.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function nextListedYear (
     years: Set<number>,
     afterYear: number,
@@ -61,6 +77,19 @@ function nextListedYear (
     return best;
 }
 
+/**
+ * @summary Seconds from midnight of a `DayTimeBand` start.
+ * @description
+ *
+ * X.520 clause 10.2 `DayTime` is hour/minute/second. Missing fields
+ * default to 0 so an omitted start is midnight. Used only to order
+ * bands earliest-first before walking a civil day.
+ *
+ * @param {DayTimeBand} band One `Period.timesOfDay` member.
+ * @returns {number} `hour*3600 + minute*60 + second`.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function bandStartScore (band: DayTimeBand): number {
     return (
         (Number(band.startDayTime?.hour ?? 0) * 3600)
@@ -69,6 +98,19 @@ function bandStartScore (band: DayTimeBand): number {
     );
 }
 
+/**
+ * @summary Local start instant of `band` on civil day `day`.
+ * @description
+ *
+ * Combines `day`'s Y/M/D with the band's `startDayTime` clock. Missing
+ * hour/minute/second default to 0 (X.520 omitted start ⇒ midnight).
+ *
+ * @param {Date} day Any instant on the civil day (local).
+ * @param {DayTimeBand} band The band whose start clock is applied.
+ * @returns {Date} Local date-time at that band start.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function startOfBandOnDay (day: Date, band: DayTimeBand): Date {
     return new Date(
         day.getFullYear(),
@@ -80,6 +122,25 @@ function startOfBandOnDay (day: Date, band: DayTimeBand): Date {
     );
 }
 
+/**
+ * @summary Decode `Period` CHOICE fields into membership sets.
+ * @description
+ *
+ * `null` on a set means that element was omitted (unconstrained), or
+ * `weeks` is ignored because `days` is `dayOf`. `dayOf` leaves `days`
+ * null here and is expanded per civil day. `allMonths` / `allWeeks`
+ * become the full 1..12 / 1..5 (or 1..53) sets. Unrecognized CHOICE
+ * alternatives throw.
+ *
+ * `weeksAreOfMonth` is true when `months` is present (weeks of month).
+ * `daysAreWeekdays` is true when `weeks` is present, or when neither
+ * `months` nor `years` is (X.520 example: every Monday).
+ *
+ * @param {Period} period Stored periodic specification.
+ * @returns {PeriodWhitelists} Sets and flags used by the calendar walk.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function decodeWhitelists (period: Period): PeriodWhitelists {
     const usesDayOf = Boolean(period.days && ("dayOf" in period.days));
     const years: Set<number> | null = period.years
@@ -157,6 +218,23 @@ function decodeWhitelists (period: Period): PeriodWhitelists {
     };
 }
 
+/**
+ * @summary Day-number whitelist that applies to civil day `point`.
+ * @description
+ *
+ * `dayOf` is an occurrence of a named weekday in a month, so the set
+ * of calendar dates depends on that month (see
+ * {@link getDayOfMonthWhitelistFromXDayOf}). Other `days` CHOICE
+ * alternatives are static and come from the decoded whitelist.
+ *
+ * @param {Period} period Stored periodic specification.
+ * @param {Date} point Instant whose month is used for `dayOf`.
+ * @param {PeriodWhitelists} decoded Output of {@link decodeWhitelists}.
+ * @returns {Set<number> | null} Allowed day numbers, or `null` if
+ *  unconstrained.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function dayNumbersForPoint (period: Period, point: Date, decoded: PeriodWhitelists): Set<number> | null {
     if (decoded.usesDayOf && period.days && ("dayOf" in period.days)) {
         return getDayOfMonthWhitelistFromXDayOf(period.days.dayOf, point);
@@ -164,6 +242,21 @@ function dayNumbersForPoint (period: Period, point: Date, decoded: PeriodWhiteli
     return decoded.days;
 }
 
+/**
+ * @summary Whether `point`'s civil day is selected by `period`.
+ * @description
+ *
+ * Checks year, month, week (including 5/53 last-week aliases), and
+ * day. Does not apply `timesOfDay`; a matching day may still have no
+ * remaining band later than the walk cursor.
+ *
+ * @param {Period} period Stored periodic specification.
+ * @param {Date} point Instant whose civil day is tested (local).
+ * @param {PeriodWhitelists} decoded Output of {@link decodeWhitelists}.
+ * @returns {boolean} `true` if that civil day is allowed.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function civilDayAllowed (period: Period, point: Date, decoded: PeriodWhitelists): boolean {
     const {
         year,
@@ -181,6 +274,24 @@ function civilDayAllowed (period: Period, point: Date, decoded: PeriodWhitelists
     );
 }
 
+/**
+ * @summary First occurrence start on `day` that is not before `notBefore`.
+ * @description
+ *
+ * With `timesOfDay`, bands are already earliest-first; the first band
+ * whose start is `>= notBefore` wins. Without bands, the start is
+ * midnight of that civil day. `null` means every start on this day is
+ * already earlier than `notBefore`.
+ *
+ * @param {Date} day Instant on the allowed civil day (local).
+ * @param {PeriodWhitelists} decoded Output of {@link decodeWhitelists}.
+ * @param {Date} notBefore Inclusive earliest start the caller will
+ *  accept.
+ * @returns {Date | null} That start, or `null` if none remain on
+ *  `day`.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function firstStartOnAllowedDay (
     day: Date,
     decoded: PeriodWhitelists,
@@ -199,6 +310,23 @@ function firstStartOnAllowedDay (
     return (start.valueOf() >= notBefore.valueOf()) ? start : null;
 }
 
+/**
+ * @summary Jump `cursor` to the next listed year/month, if needed.
+ * @description
+ *
+ * If the cursor's year or month is not in the whitelist, return the
+ * first instant of the next listed year/month that is still within
+ * the window. Year 10000 and later is out of GeneralizedTime. If the
+ * cursor is already allowed, it is returned unchanged.
+ *
+ * @param {Date} cursor Current walk position (local).
+ * @param {PeriodWhitelists} decoded Output of {@link decodeWhitelists}.
+ * @param {Date} endInstant Inclusive window end (local).
+ * @returns {Date | null} Same cursor, a later first-of-month, or
+ *  `null` if none remain in the window.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function skipDisallowedYearMonth (
     cursor: Date,
     decoded: PeriodWhitelists,
@@ -257,6 +385,21 @@ function skipDisallowedYearMonth (
     return cursor;
 }
 
+/**
+ * @summary Advance `cursor` by one week, weekday, or civil day.
+ * @description
+ *
+ * When `weeks` is listed (and `dayOf` is not), step to the next
+ * Sunday-based week. When days are weekdays, step to the next listed
+ * weekday. Otherwise step one civil day. Year/month jumps are
+ * {@link skipDisallowedYearMonth}'s job.
+ *
+ * @param {Date} cursor Current walk position (local).
+ * @param {PeriodWhitelists} decoded Output of {@link decodeWhitelists}.
+ * @returns {Date} The next candidate civil-day start.
+ * @function
+ * @author Cursor Grok 4.6
+ */
 function advanceOneCivilUnit (cursor: Date, decoded: PeriodWhitelists): Date {
     if (decoded.weeks && !decoded.usesDayOf) {
         return addDays(startOfSundayBasedWeek(cursor), 7);
@@ -273,8 +416,23 @@ function advanceOneCivilUnit (cursor: Date, decoded: PeriodWhitelists): Date {
 }
 
 /**
- * First occurrence start at or after `t` that is not inside an occurrence
- * containing `t` (caller already observed a gap at `t`).
+ * @summary First occurrence start at or after `t` while `t` is a gap.
+ * @description
+ *
+ * Caller already saw that `t` is not inside an occurrence. If `t`'s
+ * civil day is allowed, a later `DayTimeBand` on that day may still
+ * start at or after `t`. Otherwise walk civil units (with year/month
+ * jumps) until a start `<= endInstant` is found or
+ * {@link MAX_NEXT_START_ITERS} is exhausted.
+ *
+ * @param {Period} period Stored periodic specification.
+ * @param {Date} t Instant known to lie in a gap (local).
+ * @param {Date} endInstant Inclusive window end (local).
+ * @param {PeriodWhitelists} decoded Output of {@link decodeWhitelists}.
+ * @returns {Date | null} Next occurrence start, or `null` if none
+ *  remain in the window.
+ * @function
+ * @author Cursor Grok 4.6
  */
 function nextOccurrenceStart (
     period: Period,

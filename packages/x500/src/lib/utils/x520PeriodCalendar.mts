@@ -286,6 +286,8 @@ function isX520WeekListed (
  * @param {number} numberOfLastWeek Last real week of that month or year.
  * @param {boolean} weekOfMonth `true` if `Period.months` is present.
  * @returns {boolean} `true` if the week is allowed.
+ * @function
+ * @author Cursor Grok 4.6
  */
 export
 function periodAllowsWeek (

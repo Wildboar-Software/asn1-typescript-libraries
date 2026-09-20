@@ -10,6 +10,7 @@
  * @param {Date} instant Inclusive end of the current occurrence.
  * @returns {Date} `instant` plus one second.
  * @function
+ * @author Cursor Grok 4.6
  */
 export
 function secondAfter (instant: Date): Date {

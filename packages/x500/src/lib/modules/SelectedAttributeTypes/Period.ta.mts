@@ -266,6 +266,7 @@ export class Period {
      * @param {Date} [endInstant] Inclusive window end (local).
      * @returns {IterableIterator<[Date, Date]>} Occurrence pairs.
      * @method
+     * @author Cursor Grok 4.6
      */
     public occurrences (
         startInstant: Date,
