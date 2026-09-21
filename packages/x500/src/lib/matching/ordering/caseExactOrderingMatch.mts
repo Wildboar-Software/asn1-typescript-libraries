@@ -3,7 +3,8 @@ import type { ASN1Element } from "@wildboar/asn1";
 import {
     _decode_UnboundedDirectoryString as _decode_UDS,
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
+import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
+import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.2
@@ -22,9 +23,12 @@ const caseExactOrderingMatch: OrderingMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): number => {
-    const a: string = directoryStringToString(_decode_UDS(assertion)).trim();
-    const v: string = directoryStringToString(_decode_UDS(value)).trim();
-    return a.localeCompare(v);
+    const a: string | undefined = prepString(directoryStringToString(_decode_UDS(assertion)));
+    const v: string | undefined = prepString(directoryStringToString(_decode_UDS(value)));
+    if ((a === undefined) || (v === undefined)) {
+        return Number.NaN;
+    }
+    return compareCodePoints(a, v);
 }
 
 export default caseExactOrderingMatch;

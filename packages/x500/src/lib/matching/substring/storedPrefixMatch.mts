@@ -4,7 +4,7 @@ import type { ASN1Element } from "@wildboar/asn1";
 import {
     _decode_UnboundedDirectoryString as _decode_UDS,
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
+import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 
 /**
@@ -15,24 +15,28 @@ import { prepString } from "../../utils/prepString.mjs";
  * substring match). Case and insignificant spaces are ignored
  * (clause 7.6). Typical use: stored area codes vs a presented
  * telephone number.
+ *
+ * `selection` is ignored: this is an equality matching rule whose
+ * assertion syntax is `UnboundedDirectoryString`.
  */
 export
 const storedPrefixMatch: SubstringsMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
-    selection?: SubstringSelection,
+    _selection?: SubstringSelection,
 ): boolean => {
-    let a: string = directoryStringToString(_decode_UDS(assertion));
-    let v: string = directoryStringToString(_decode_UDS(value));
-    if (v.startsWith(a)) {
-        return true;
-    }
-    a = prepString(a);
-    v = prepString(v);
-    if (a.length > v.length) {
+    const a: string | undefined = prepString(
+        directoryStringToString(_decode_UDS(assertion)),
+        { caseFold: true },
+    );
+    const v: string | undefined = prepString(
+        directoryStringToString(_decode_UDS(value)),
+        { caseFold: true },
+    );
+    if ((a === undefined) || (v === undefined)) {
         return false;
     }
-    return v.toUpperCase().startsWith(a.toUpperCase());
+    return a.startsWith(v);
 }
 
 export default storedPrefixMatch;
