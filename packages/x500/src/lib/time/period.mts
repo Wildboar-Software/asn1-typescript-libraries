@@ -28,6 +28,8 @@ import { DayTimeBand } from "../modules/SelectedAttributeTypes/DayTimeBand.ta.mj
 
 const X520_LAST_WEEK_OF_MONTH = 5;
 const X520_LAST_WEEK_OF_YEAR = 53;
+const MIN_GENERALIZED_TIME = new Date(0, 0, 1, 0, 0, 0, 0);
+const MAX_GENERALIZED_TIME = new Date(9999, 11, 31, 23, 59, 59, 999);
 
 // Joins abutting spans into a single contiguous span.
 // Where "abutting" is defined as two spans covering adjacent seconds.
@@ -217,16 +219,14 @@ function *intDays(days: number[], year: number, month?: number, week?: number): 
 function *bitDays(daysOfWeek: BIT_STRING, year: number, month?: number, week?: number): Generator<Date> {
     let start: Date;
     let end: Date;
+    // start-to-start because for loop below is exclusive-end.
     if (week) {
         start = startOfX520Week(year, month, week);
         end = addWeeks(start, 1);
-    }
-    else if (month) {
-        // start-to-start because for loop below is exclusive-end.
+    } else if (month) {
         start = startOfMonth(new Date(year, month - 1, 1));
         end = startOfMonth(new Date(year, month, 1));
     } else {
-        // start-to-start because for loop below is exclusive-end.
         start = startOfYear(new Date(year, 0, 1));
         end = startOfYear(new Date(year + 1, 0, 1));
     }
@@ -363,7 +363,6 @@ function *occurrencesWithinYear(
                 }
             }
             else {
-                // TODO: Merge adjacent months.
                 // Just return whole months.
                 const refdate = new Date(year, month - 1, 1);
                 yield [startOfMonth(refdate), endOfMonth(refdate)];
@@ -373,7 +372,10 @@ function *occurrencesWithinYear(
 }
 
 function *occurrencesInfinitely(p: Period, startInstant: Date): Generator<[Date, Date]> {
-    // TODO: If the period is empty, return one occurrence of MIN..MAX
+    if (p.isEmpty()) {
+        yield [MIN_GENERALIZED_TIME, MAX_GENERALIZED_TIME];
+        return;
+    }
     // This is calculated here to avoid recalculating it for each year.
     const bands = p.timesOfDay
         ? DayTimeBand.flatten(p.timesOfDay)
@@ -401,7 +403,6 @@ function *occurrencesInfinitely(p: Period, startInstant: Date): Generator<[Date,
     }
 }
 
-const MAX_GENERALIZED_TIME = new Date(9999, 11, 31, 23, 59, 59, 999);
 
 export
 function *occurrences(p: Period, startInstant: Date, endInstant: Date = MAX_GENERALIZED_TIME): Generator<[Date, Date]> {
