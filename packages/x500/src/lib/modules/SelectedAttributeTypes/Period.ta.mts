@@ -249,6 +249,25 @@ export class Period {
             _o._unrecognizedExtensionsList
         );
     }
+
+    /**
+     * @summary Checks if the Period is empty (no years, months, etc. specified)
+     * @description
+     *
+     * This checks if the Period has no times of day, days, weeks, months, or
+     * years. I think this would generally be interpreted to mean "any time."
+     *
+     * @returns {boolean} True if the Period is empty
+     * @public
+     * @method
+     */
+    public isEmpty(): boolean {
+        return this.timesOfDay === undefined
+            && this.days === undefined
+            && this.weeks === undefined
+            && this.months === undefined
+            && this.years === undefined;
+    }
 }
 
 /**
