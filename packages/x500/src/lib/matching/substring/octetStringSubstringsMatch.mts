@@ -1,11 +1,7 @@
 import SubstringsMatcher from "../../types/SubstringsMatcher.mjs";
 import SubstringSelection from "../../types/SubstringSelection.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
-import {
-    OctetSubstringAssertion,
-    _decode_OctetSubstringAssertion,
-} from "../../modules/SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
-import { Buffer } from "node:buffer";
+import { partitionOctets, substringPieces } from "../../utils/substringPartition.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.7
@@ -21,29 +17,12 @@ const octetStringSubstringsMatch: SubstringsMatcher = (
     value: ASN1Element,
     selection?: SubstringSelection,
 ): boolean => {
-    const v: Uint8Array = value.octetString;
-    const buf: Buffer = Buffer.from(v);
-    const osa: OctetSubstringAssertion = _decode_OctetSubstringAssertion(assertion);
-    return osa.every((o) => {
-        if ("initial" in o) {
-            if (o.initial.length > v.length) {
-                return false;
-            }
-            return !Buffer.compare(v.subarray(0, o.initial.length), o.initial);
-        } else if ("any_" in o) {
-            return (buf.indexOf(o.any_) > -1);
-        } else if ("final" in o) {
-            if (o.final.length > v.length) {
-                return false;
-            }
-            return !Buffer.compare(
-                v.subarray(v.length - o.final.length),
-                o.final,
-            );
-        } else {
-            return false;
-        }
-    });
+    const stored = value.octetString;
+    const needles = [];
+    for (const p of substringPieces(assertion, selection)) {
+        needles.push({ kind: p.kind, bytes: p.element.octetString });
+    }
+    return partitionOctets(stored, needles);
 }
 
 export default octetStringSubstringsMatch;

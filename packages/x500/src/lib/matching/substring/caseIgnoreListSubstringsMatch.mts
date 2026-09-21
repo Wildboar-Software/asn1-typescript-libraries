@@ -4,10 +4,17 @@ import type { ASN1Element } from "@wildboar/asn1";
 import {
     _decode_UnboundedDirectoryString as _decode_UDS,
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
-import {
-    _decode_SubstringAssertion,
-} from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
+import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
+import { prepString } from "../../utils/prepString.mjs";
+import { partitionStringList, substringPieces } from "../../utils/substringPartition.mjs";
+
+function ds (el: ASN1Element): string {
+    return directoryStringToString(_decode_UDS(el));
+}
+
+function prepare (s: string): string | undefined {
+    return prepString(s)?.toLowerCase();
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.8
@@ -24,44 +31,23 @@ const caseIgnoreListSubstringsMatch: SubstringsMatcher = (
     value: ASN1Element,
     selection?: SubstringSelection,
 ): boolean => {
-    // const sel: SubstringSelection = selection ?? SubstringSelection.any_;
-    const a = _decode_SubstringAssertion(assertion);
-    const v = value.sequenceOf.map((e) => directoryStringToString(_decode_UDS(e)));
-    if (v.length === 0) {
-        return false;
-    }
-    // NOTE: According to how the MR is defined, initial and final should only
-    // match against the first and last lines, respectively.
-    const firstStr: string = v[0];
-    const lastStr: string = v[v.length - 1];
-    for (const substr of a) {
-        if ("any_" in substr) {
-            const s: string = directoryStringToString(substr.any_);
-            let matched: boolean = false;
-            for (const str of v) {
-                if (str.indexOf(s) >= 0) {
-                    matched = true;
-                    break;
-                }
-            }
-            if (!matched) {
-                return false;
-            }
-        } else if ("initial" in substr) {
-            const s: string = directoryStringToString(substr.initial);
-            if (!firstStr.startsWith(s)) {
-                return false;
-            }
-        } else if ("final" in substr) {
-            const s: string = directoryStringToString(substr.final);
-            if (!lastStr.endsWith(s)) {
-                return false;
-            }
-        } else {
+    const lines: string[] = [];
+    for (const e of value.sequenceOf) {
+        const line = prepare(ds(e));
+        if (line === undefined) {
             return false;
         }
+        lines.push(line);
     }
-    return true;
+    const needles = [];
+    for (const p of substringPieces(assertion, selection)) {
+        const text = prepare(ds(p.element));
+        if (text === undefined) {
+            return false;
+        }
+        needles.push({ kind: p.kind, text });
+    }
+    return partitionStringList(lines, needles);
 }
 
 export default caseIgnoreListSubstringsMatch;
