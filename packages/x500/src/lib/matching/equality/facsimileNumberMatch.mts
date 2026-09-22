@@ -1,9 +1,6 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
-import {
-    TelephoneNumber,
-    _decode_TelephoneNumber,
-} from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+import telephoneNumberMatch from "./telephoneNumberMatch.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.13 `facsimileNumberMatch`.
@@ -17,10 +14,6 @@ export
 const facsimileNumberMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
-): boolean => {
-    const a: TelephoneNumber = _decode_TelephoneNumber(assertion).replace(/\D/g, "");
-    const v: TelephoneNumber = _decode_TelephoneNumber(value.sequence[0]).replace(/\D/g, "");
-    return (a === v);
-}
+): boolean => telephoneNumberMatch(assertion, value.sequence[0]);
 
 export default facsimileNumberMatch;
