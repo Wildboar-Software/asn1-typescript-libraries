@@ -441,10 +441,11 @@ export
 const enhancedCertificateMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean => {
     const a: EnhancedCertificateAssertion = _decode_EnhancedCertificateAssertion(assertion);
     const v: Certificate = _decode_Certificate(value);
-    return evaluateEnhancedCertificateAssertion(a, v);
+    return evaluateEnhancedCertificateAssertion(a, v, getEqualityMatcher);
 }
 
 export default enhancedCertificateMatch;

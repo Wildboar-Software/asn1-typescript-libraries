@@ -1,10 +1,20 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1Element, ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
 import {
     ProtocolInformation,
     _decode_ProtocolInformation,
 } from "../../modules/SelectedAttributeTypes/ProtocolInformation.ta.mjs";
-import { compareNSAP } from "../../comparators/compareNSAPs.mjs";
+import { Buffer } from "node:buffer";
+
+function presentedNAddress (assertion: ASN1Element): Uint8Array {
+    if (
+        (assertion.tagClass === ASN1TagClass.universal)
+        && (assertion.tagNumber === ASN1UniversalType.octetString)
+    ) {
+        return assertion.octetString;
+    }
+    return _decode_ProtocolInformation(assertion).nAddress;
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.12
@@ -19,9 +29,8 @@ const protocolInformationMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
-    const a: ProtocolInformation = _decode_ProtocolInformation(assertion);
     const v: ProtocolInformation = _decode_ProtocolInformation(value);
-    return compareNSAP(a.nAddress, v.nAddress);
+    return !Buffer.compare(presentedNAddress(assertion), v.nAddress);
 }
 
 export default protocolInformationMatch;

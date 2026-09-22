@@ -7,6 +7,11 @@ import compareGeneralName from "./compareGeneralName.mjs";
 
 /**
  * @summary Compare two `GeneralNames` values
+ * @description
+ *
+ * `GeneralNames` is a SEQUENCE OF names, but matching treats it as
+ * an unordered collection: each name on one side must pair with a
+ * distinct equal name on the other.
  * @param a One value
  * @param b The other
  * @param getEqualityMatcher A function that takes an attribute type and
@@ -20,14 +25,19 @@ function compareGeneralNames (
     b: GeneralNames,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
-    // TODO: At least group by types first.
     if (a.length !== b.length) {
         return false;
     }
-    for (let i = 0; i < a.length; i++) {
-        if (!compareGeneralName(a[i], b[i], getEqualityMatcher)) {
+    const used: boolean[] = new Array(b.length).fill(false);
+    for (const name of a) {
+        const index = b.findIndex((other, i) => (
+            !used[i]
+            && compareGeneralName(name, other, getEqualityMatcher)
+        ));
+        if (index < 0) {
             return false;
         }
+        used[index] = true;
     }
     return true;
 }

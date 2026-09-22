@@ -1,23 +1,24 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { ASN1Construction, ASN1Element, unpackBits } from "@wildboar/asn1";
+import { ASN1Construction, ASN1Element } from "@wildboar/asn1";
 import { compareBitStrings } from "../../comparators/compareBitStrings.mjs";
 import { Buffer } from "node:buffer";
 
-function lastBits (
-    numberOfTrailingBits: number,
-    lastByte: number,
-): Uint8ClampedArray {
-    return unpackBits(new Uint8Array([ lastByte ]))
-        .slice(0, -numberOfTrailingBits);
+function significantLastByte (unusedBits: number, lastByte: number): number {
+    if (unusedBits === 0) {
+        return lastByte;
+    }
+    const mask = (0xFF << unusedBits) & 0xFF;
+    return lastByte & mask;
 }
-
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.4 `bitStringMatch`.
  *
  * TRUE iff both BIT STRING values have the same number of bits and
- * the bits match bitwise. If the syntax is defined with a
- * `NamedBitList`, trailing zero bits in either value are ignored.
+ * the bits match bitwise. Unused BER padding bits in the last
+ * octet are ignored. NamedBitList trailing zeros are only omitted
+ * when the attribute syntax defines a NamedBitList; this matcher
+ * does not have that schema, so trailing content bits are compared.
  */
 export
 const bitStringMatch: EqualityMatcher = (
@@ -28,51 +29,26 @@ const bitStringMatch: EqualityMatcher = (
         (assertion.construction === ASN1Construction.primitive)
         && (value.construction === ASN1Construction.primitive)
     ) {
-        /**
-         * Short-circuit if the bit strings are obviously not the same.
-         */
         if (
             (assertion.value.length !== value.value.length)
-            || (assertion.value[0] !== value.value[0]) // Different number of padding bits.
+            || (assertion.value[0] !== value.value[0])
         ) {
             return false;
         }
-
-        /**
-         * We can compare whole bytes at a time until the final byte, which
-         * might have trailing bits, which can be 1 or 0 in BER, so we can't
-         * trust that the final byte will be the same to encode the same value
-         * if trailing bits are present.
-         */
+        const unusedBits = assertion.value[0];
         const wholeBytesComparison = Buffer.compare(
-            assertion.value.subarray(0, -1),
-            value.value.subarray(0, -1),
+            assertion.value.subarray(1, -1),
+            value.value.subarray(1, -1),
         );
         if (wholeBytesComparison) {
             return false;
         }
-
-        /**
-         * If there are no trailing bits, we can just compare the last byte
-         * directly.
-         */
-        const numberOfTrailingBits = assertion.value[0];
-        if (numberOfTrailingBits === 0) {
-            return (assertion.value[assertion.value.length - 1] === value.value[value.value.length - 1]);
-        } else {
-            const abits = lastBits(numberOfTrailingBits, assertion.value[assertion.value.length - 1]);
-            const vbits = lastBits(numberOfTrailingBits, value.value[value.value.length - 1]);
-            const trailingBitsCompare = Buffer.compare(
-                Buffer.from(abits.buffer),
-                Buffer.from(vbits.buffer),
-            );
-            return (trailingBitsCompare === 0);
-        }
+        const aLast = assertion.value[assertion.value.length - 1] ?? 0;
+        const vLast = value.value[value.value.length - 1] ?? 0;
+        return significantLastByte(unusedBits, aLast) === significantLastByte(unusedBits, vLast);
     }
 
-    const a = assertion.bitString;
-    const b = value.bitString;
-    return compareBitStrings(a, b);
+    return compareBitStrings(assertion.bitString, value.bitString);
 }
 
 export default bitStringMatch;

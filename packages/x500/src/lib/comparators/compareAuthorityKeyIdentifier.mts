@@ -16,7 +16,7 @@ import { Buffer } from "node:buffer";
  * @function
  */
 export
-function compareAttCertIssuer (
+function compareAuthorityKeyIdentifier (
     a: AuthorityKeyIdentifier,
     b: AuthorityKeyIdentifier,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
@@ -54,4 +54,4 @@ function compareAttCertIssuer (
     return true;
 }
 
-export default compareAttCertIssuer;
+export default compareAuthorityKeyIdentifier;

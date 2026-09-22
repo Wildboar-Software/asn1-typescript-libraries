@@ -83,6 +83,17 @@ function directorySubtree (...labels: string[]): GeneralSubtree {
     return new GeneralSubtree({ directoryName: name(...labels) });
 }
 
+describe("evaluateCertificateAssertion getEqualityMatcher", () => {
+    it("forwards getEqualityMatcher into issuer name comparison", () => {
+        const cert = certificate([]);
+        const issuerOnly = new CertificateAssertion(
+            undefined, name("issuer"),
+        );
+        expect(evaluateCertificateAssertion(issuerOnly, cert)).toBe(true);
+        expect(evaluateCertificateAssertion(issuerOnly, cert, () => () => false)).toBe(false);
+    });
+});
+
 describe("evaluateCertificateAssertion policy", () => {
     it("requires intersection of asserted and stored policy OIDs", () => {
         const cert = certificate([ policyExt(POLICY_B) ]);

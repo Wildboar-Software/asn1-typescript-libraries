@@ -6,7 +6,7 @@ import {
     _decode_NameAndOptionalUID,
 } from "../../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
 import compareDistinguishedName from "../../comparators/compareDistinguishedName.mjs";
-import { Buffer } from "node:buffer";
+import { compareBitStrings } from "../../comparators/compareBitStrings.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.11 `uniqueMemberMatch`.
@@ -24,28 +24,18 @@ const uniqueMemberMatch: EqualityMatcher = (
 ): boolean => {
     const a: NameAndOptionalUID = _decode_NameAndOptionalUID(assertion);
     const v: NameAndOptionalUID = _decode_NameAndOptionalUID(value);
-    const distinguishedNamesAreTheSame: boolean = compareDistinguishedName(a.dn, v.dn, getEqualityMatcher);
-    if (!distinguishedNamesAreTheSame) {
+    if (!compareDistinguishedName(a.dn, v.dn, getEqualityMatcher)) {
         return false;
     }
-
-    if (!a.uid && !v.uid) {
-        return distinguishedNamesAreTheSame;
+    if (!v.uid) {
+        return true;
     }
-    else if (!a.uid || !v.uid) { // One has a UID, but the other does not.
+    if (!a.uid) {
         return false;
     }
-
     const aBits: BIT_STRING = a.uid;
     const vBits: BIT_STRING = v.uid;
-
-    return (
-        distinguishedNamesAreTheSame
-        && !Buffer.compare(
-            Buffer.from(aBits.buffer),
-            Buffer.from(vBits.buffer),
-        )
-    );
+    return compareBitStrings(aBits, vBits);
 }
 
 export default uniqueMemberMatch;

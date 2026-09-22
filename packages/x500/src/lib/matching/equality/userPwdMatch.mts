@@ -4,6 +4,7 @@ import type { AlgorithmIdentifier } from "../../modules/AuthenticationFramework/
 import { UserPwd, _decode_UserPwd } from "../../modules/PasswordPolicy/UserPwd.ta.mjs";
 import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier.mjs";
 import compareElements from "../../comparators/compareElements.mjs";
+import { prepString } from "../../utils/prepString.mjs";
 import { Buffer } from "node:buffer";
 
 /**
@@ -34,7 +35,9 @@ function createUserPwdMatch (
         const a: UserPwd = _decode_UserPwd(assertion);
         const v: UserPwd = _decode_UserPwd(value);
         if (("clear" in a) && ("clear" in v)) {
-            return (a.clear === v.clear);
+            const ap = prepString(a.clear);
+            const vp = prepString(v.clear);
+            return (ap !== undefined) && (vp !== undefined) && (ap === vp);
         } else if (("encrypted" in a) && ("encrypted" in v)) {
             return (
                 !Buffer.compare(a.encrypted.encryptedString, v.encrypted.encryptedString)
