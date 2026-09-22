@@ -6,7 +6,7 @@ import { prepString } from "../../utils/prepString.mjs";
  * Rec. ITU-T X.520 (10/2019), clause 8.11.1
  * `caseExactIA5Match` (LDAP-defined).
  *
- * Compares IA5String values after string preparation (clause 7.2).
+ * Compares IA5String values after string preparation (clause 7).
  * TRUE iff the prepared strings have the same number of characters
  * and corresponding characters have the same code point. Case is
  * significant.
@@ -18,11 +18,7 @@ const caseExactIA5Match: EqualityMatcher = (
 ): boolean => {
     const a: string | undefined = prepString(assertion.ia5String);
     const v: string | undefined = prepString(value.ia5String);
-    if (a === undefined) {
-        return false;
-        // throw new Error("03635c43-6624-4af4-8432-a56b96f082cd: Invalid characters in caseExactIA5Match assertion.");
-    }
-    if (v === undefined) {
+    if ((a === undefined) || (v === undefined)) {
         return false;
     }
     return (a === v);
