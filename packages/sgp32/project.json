@@ -1,0 +1,25 @@
+{
+  "name": "sgp32",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/sgp32/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/sgp32",
+        "tsConfig": "packages/sgp32/tsconfig.lib.json",
+        "packageJson": "packages/sgp32/package.json",
+        "main": "packages/sgp32/src/index.mts",
+        "assets": [
+          "packages/sgp32/*.md",
+          "packages/sgp32/LICENSE.txt",
+          "packages/sgp32/package.json"
+        ]
+      }
+    }
+  }
+}
