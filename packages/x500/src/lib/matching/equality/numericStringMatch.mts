@@ -13,8 +13,8 @@ const numericStringMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
-    const a: string = assertion.numericString.replace(/\s+/, "");
-    const v: string = value.numericString.replace(/\s+/, "");
+    const a: string = assertion.numericString.replace(/\s+/g, "");
+    const v: string = value.numericString.replace(/\s+/g, "");
     return (a === v);
 }
 

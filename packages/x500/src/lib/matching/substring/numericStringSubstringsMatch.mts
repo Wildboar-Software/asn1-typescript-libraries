@@ -16,8 +16,8 @@ const numericStringSubstringsMatch: SubstringsMatcher = (
     selection?: SubstringSelection,
 ): boolean => {
     const sel: SubstringSelection = selection ?? SubstringSelection.any_;
-    const a: string = assertion.numericString.replace(/\s+/, "");
-    const v: string = value.numericString.replace(/\s+/, "");
+    const a: string = assertion.numericString.replace(/\s+/g, "");
+    const v: string = value.numericString.replace(/\s+/g, "");
     switch (sel) {
         case (SubstringSelection.initial): {
             return v.startsWith(a);
