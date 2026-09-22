@@ -37,10 +37,7 @@ const dualStringMatch: EqualityMatcher = (
     if ((vop === undefined) || (vob === undefined)) {
         return false;
     }
-    return (
-        (directoryStringToString(a.operation) === directoryStringToString(v.operation))
-        && (directoryStringToString(a.object) === directoryStringToString(v.object))
-    );
+    return ((aop === vop) && (aob === vob));
 }
 
 export default dualStringMatch;

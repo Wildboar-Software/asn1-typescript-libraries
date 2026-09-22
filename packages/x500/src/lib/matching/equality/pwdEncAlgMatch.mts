@@ -8,7 +8,7 @@ import {
     UserPwd,
     _decode_UserPwd,
 } from "../../modules/PasswordPolicy/UserPwd.ta.mjs";
-import compareElements from "../../comparators/compareElements.mjs";
+import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.10.2 `pwdEncAlgMatch`.
@@ -28,14 +28,7 @@ const pwdEncAlgMatch: EqualityMatcher = (
     if (!("encrypted" in v)) {
         return false;
     }
-    const alg = v.encrypted.algorithmIdentifier;
-    return (
-        (alg.algorithm.isEqualTo(a.algorithm))
-        && (
-            (alg.parameters === a.parameters)
-            || compareElements(alg.parameters, a.parameters)
-        )
-    );
+    return compareAlgorithmIdentifier(v.encrypted.algorithmIdentifier, a);
 }
 
 export default pwdEncAlgMatch;
