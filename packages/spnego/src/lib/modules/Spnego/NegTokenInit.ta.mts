@@ -1,0 +1,184 @@
+/* eslint-disable */
+import {
+    OCTET_STRING,
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spnego/MechTypeList.ta.mjs";
+// export { MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spnego/MechTypeList.ta.mjs";
+import { ContextFlags, _decode_ContextFlags, _encode_ContextFlags } from "../Spnego/ContextFlags.ta.mjs";
+// export { ContextFlags, ContextFlags_delegFlag /* IMPORTED_LONG_NAMED_BIT */, delegFlag /* IMPORTED_SHORT_NAMED_BIT */, ContextFlags_mutualFlag /* IMPORTED_LONG_NAMED_BIT */, mutualFlag /* IMPORTED_SHORT_NAMED_BIT */, ContextFlags_replayFlag /* IMPORTED_LONG_NAMED_BIT */, replayFlag /* IMPORTED_SHORT_NAMED_BIT */, ContextFlags_sequenceFlag /* IMPORTED_LONG_NAMED_BIT */, sequenceFlag /* IMPORTED_SHORT_NAMED_BIT */, ContextFlags_anonFlag /* IMPORTED_LONG_NAMED_BIT */, anonFlag /* IMPORTED_SHORT_NAMED_BIT */, ContextFlags_confFlag /* IMPORTED_LONG_NAMED_BIT */, confFlag /* IMPORTED_SHORT_NAMED_BIT */, ContextFlags_integFlag /* IMPORTED_LONG_NAMED_BIT */, integFlag /* IMPORTED_SHORT_NAMED_BIT */, _decode_ContextFlags, _encode_ContextFlags } from "../Spnego/ContextFlags.ta.mjs";
+
+
+/**
+ * @summary NegTokenInit
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * NegTokenInit ::= SEQUENCE {
+ *                             mechTypes       [0] MechTypeList  OPTIONAL,
+ *                             reqFlags        [1] ContextFlags  OPTIONAL,
+ *                             mechToken       [2] OCTET STRING  OPTIONAL,
+ *                             mechListMIC     [3] OCTET STRING  OPTIONAL
+ *                          }
+ * ```
+ * 
+ * @class
+ */
+export
+class NegTokenInit {
+    constructor (
+        /**
+         * @summary `mechTypes`.
+         * @public
+         * @readonly
+         */
+        readonly mechTypes: OPTIONAL<MechTypeList>,
+        /**
+         * @summary `reqFlags`.
+         * @public
+         * @readonly
+         */
+        readonly reqFlags: OPTIONAL<ContextFlags>,
+        /**
+         * @summary `mechToken`.
+         * @public
+         * @readonly
+         */
+        readonly mechToken: OPTIONAL<OCTET_STRING>,
+        /**
+         * @summary `mechListMIC`.
+         * @public
+         * @readonly
+         */
+        readonly mechListMIC: OPTIONAL<OCTET_STRING>
+    ) {}
+
+    /**
+     * @summary Restructures an object into a NegTokenInit
+     * @description
+     * 
+     * This takes an `object` and converts it to a `NegTokenInit`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `NegTokenInit`.
+     * @returns {NegTokenInit}
+     */
+    public static _from_object (_o: { [_K in keyof (NegTokenInit)]: (NegTokenInit)[_K] }): NegTokenInit {
+        return new NegTokenInit(_o.mechTypes, _o.reqFlags, _o.mechToken, _o.mechListMIC);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of NegTokenInit
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_NegTokenInit: $.ComponentSpec[] = [
+    new $.ComponentSpec("mechTypes", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("reqFlags", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("mechToken", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("mechListMIC", true, $.hasTag(_TagClass.context, 3))
+];
+
+/**
+ * @summary The Trailing Root Component Types of NegTokenInit
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_NegTokenInit: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of NegTokenInit
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_NegTokenInit: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_NegTokenInit: $.ASN1Decoder<NegTokenInit> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) NegTokenInit
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_NegTokenInit (el: _Element): NegTokenInit {
+    if (!_cached_decoder_for_NegTokenInit) { _cached_decoder_for_NegTokenInit = function (el: _Element): NegTokenInit {
+    let mechTypes: OPTIONAL<MechTypeList>;
+    let reqFlags: OPTIONAL<ContextFlags>;
+    let mechToken: OPTIONAL<OCTET_STRING>;
+    let mechListMIC: OPTIONAL<OCTET_STRING>;
+    const callbacks: $.DecodingMap = {
+        "mechTypes": (_el: _Element): void => { mechTypes = $._decode_explicit<MechTypeList>(() => _decode_MechTypeList)(_el); },
+        "reqFlags": (_el: _Element): void => { reqFlags = $._decode_explicit<ContextFlags>(() => _decode_ContextFlags)(_el); },
+        "mechToken": (_el: _Element): void => { mechToken = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "mechListMIC": (_el: _Element): void => { mechListMIC = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_NegTokenInit,
+        _extension_additions_list_spec_for_NegTokenInit,
+        _root_component_type_list_2_spec_for_NegTokenInit,
+        undefined,
+    );
+    return new NegTokenInit(
+        mechTypes,
+        reqFlags,
+        mechToken,
+        mechListMIC
+    );
+}; }
+    return _cached_decoder_for_NegTokenInit(el);
+}
+
+let _cached_encoder_for_NegTokenInit: $.ASN1Encoder<NegTokenInit> | null = null;
+
+/**
+ * @summary Encodes a(n) NegTokenInit into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The NegTokenInit, encoded as an ASN.1 Element.
+ */
+export
+function _encode_NegTokenInit (value: NegTokenInit, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_NegTokenInit) { _cached_encoder_for_NegTokenInit = function (value: NegTokenInit, elGetter: $.ASN1Encoder<NegTokenInit>): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* IF_ABSENT  */ ((value.mechTypes === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_MechTypeList, $.BER)(value.mechTypes, $.BER)),
+            /* IF_ABSENT  */ ((value.reqFlags === undefined) ? undefined : $._encode_explicit(_TagClass.context, 1, () => _encode_ContextFlags, $.BER)(value.reqFlags, $.BER)),
+            /* IF_ABSENT  */ ((value.mechToken === undefined) ? undefined : $._encode_explicit(_TagClass.context, 2, () => $._encodeOctetString, $.BER)(value.mechToken, $.BER)),
+            /* IF_ABSENT  */ ((value.mechListMIC === undefined) ? undefined : $._encode_explicit(_TagClass.context, 3, () => $._encodeOctetString, $.BER)(value.mechListMIC, $.BER))
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_NegTokenInit(value, elGetter);
+}
+
+
+/* eslint-enable */
