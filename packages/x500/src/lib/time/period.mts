@@ -36,8 +36,8 @@ const MAX_GENERALIZED_TIME = new Date(9999, 11, 31, 23, 59, 59, 999);
 // Joins abutting spans into a single contiguous span.
 // Where "abutting" is defined as two spans covering adjacent seconds.
 function *contiguator(
-    fn: Generator<[Date, Date]>,
-): Generator<[Date, Date]> {
+    fn: IterableIterator<[Date, Date]>,
+): IterableIterator<[Date, Date]> {
     let contig: [Date, Date] | undefined;
     for (const span of fn) {
         if (contig !== undefined) { // If we have a previous span...
@@ -59,7 +59,7 @@ function *contiguator(
     }
 }
 
-function *years(p: Period): Generator<number> {
+function *years(p: Period): IterableIterator<number> {
     if (!p.years) {
         return;
     }
@@ -79,7 +79,7 @@ function *years(p: Period): Generator<number> {
 
 const ALL_MONTHS = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ];
 
-function *months(p: Period): Generator<number> {
+function *months(p: Period): IterableIterator<number> {
     if (!p.months) {
         yield *ALL_MONTHS.values();
         return;
@@ -112,7 +112,7 @@ const ALL_WEEKS_OF_YEAR = [
 ];
 const ALL_WEEKS_OF_MONTH = [ 1, 2, 3, 4, 5 ];
 
-function *weeks(p: Period): Generator<number> {
+function *weeks(p: Period): IterableIterator<number> {
     if (!p.weeks) {
         return;
     }
@@ -171,7 +171,7 @@ function startOfX520Week(p: Period, year: number, month?: number, week?: number)
     return start;
 }
 
-function *intDays(p: Period, days: number[], year: number, month?: number, week?: number): Generator<Date> {
+function *intDays(p: Period, days: number[], year: number, month?: number, week?: number): IterableIterator<Date> {
     if (p.weeks && week) {
         // intDays is days of the week.
         let dow = 0;
@@ -226,7 +226,7 @@ function *intDays(p: Period, days: number[], year: number, month?: number, week?
     }
 }
 
-function *bitDays(p: Period, daysOfWeek: BIT_STRING, year: number, month?: number, week?: number): Generator<Date> {
+function *bitDays(p: Period, daysOfWeek: BIT_STRING, year: number, month?: number, week?: number): IterableIterator<Date> {
     let start: Date;
     let end: Date;
     // start-to-start because for loop below is exclusive-end.
@@ -247,7 +247,7 @@ function *bitDays(p: Period, daysOfWeek: BIT_STRING, year: number, month?: numbe
     }
 }
 
-function *xDaysOfMonth(occurrence: number, daymask: number, year: number, month?: number): Generator<Date> {
+function *xDaysOfMonth(occurrence: number, daymask: number, year: number, month?: number): IterableIterator<Date> {
     let start = startOfMonth(new Date(year, month - 1, 1));
     if (occurrence === X520_LAST_WEEK_OF_MONTH) {
         /* Within the weeks component, week 5 means "last week" of the month,
@@ -277,7 +277,7 @@ function *xDaysOfMonth(occurrence: number, daymask: number, year: number, month?
     }
 }
 
-function *xDays(xday: XDayOf, year: number, month?: number): Generator<Date> {
+function *xDays(xday: XDayOf, year: number, month?: number): IterableIterator<Date> {
     // Quote from ITU-T X.520 (2019):
     // > If the dayOf choice for days is specified, then the weeks element of
     // > Period is not meaningful if present, and is ignored.
@@ -304,7 +304,7 @@ function *xDays(xday: XDayOf, year: number, month?: number): Generator<Date> {
     }
 }
 
-function *allDays(p: Period, year: number, month?: number, week?: number): Generator<Date> {
+function *allDays(p: Period, year: number, month?: number, week?: number): IterableIterator<Date> {
     if (p.weeks) {
         const w = startOfX520Week(p, year, month, week);
         const end = addWeeks(w, 1);
@@ -326,7 +326,7 @@ function *allDays(p: Period, year: number, month?: number, week?: number): Gener
     }
 }
 
-function *days(p: Period, year: number, month?: number, week?: number): Generator<Date> {
+function *days(p: Period, year: number, month?: number, week?: number): IterableIterator<Date> {
     if (!p.days) {
         yield *allDays(p, year, month, week);
     } else if ("intDay" in p.days) {
@@ -343,7 +343,7 @@ function *days(p: Period, year: number, month?: number, week?: number): Generato
     }
 }
 
-function *timeBands(date: Date, bands: DayTimeBand[]): Generator<[Date, Date]> {
+function *timeBands(date: Date, bands: DayTimeBand[]): IterableIterator<[Date, Date]> {
     for (const band of bands) {
         const sod = startOfDay(date);
         const sob = band.startDayTime ?? DayTimeBand._default_value_for_startDayTime;
@@ -375,7 +375,7 @@ function *occurrencesWithinWeeks(
     month?: number,
     startInstant?: Date,
     bands?: DayTimeBand[],
-): Generator<[Date, Date]> {
+): IterableIterator<[Date, Date]> {
     const weeksIsFinestResolution = (p.weeks && !p.days && !p.timesOfDay);
     for (const week of weeks(p)) {
         if (weeksIsFinestResolution) {
@@ -403,7 +403,7 @@ function *daysOfWeeks(
     week: number,
     startInstant?: Date,
     bands?: DayTimeBand[],
-): Generator<[Date, Date]> {
+): IterableIterator<[Date, Date]> {
     for (const day of days(p, year, undefined, week)) {
         if (startInstant && day < startInstant) {
             continue;
@@ -421,7 +421,7 @@ function *occurrencesWithinYear(
     year: number,
     bands?: DayTimeBand[],
     startInstant?: Date,
-): Generator<[Date, Date]> {
+): IterableIterator<[Date, Date]> {
     const weeksIsFinestResolution = (p.weeks && !p.days && !p.timesOfDay);
     if (!p.months) {
         if (weeksIsFinestResolution) {
@@ -484,7 +484,7 @@ function *occurrencesWithinYear(
     }
 }
 
-function *occurrencesInfinitely(p: Period, startInstant: Date): Generator<[Date, Date]> {
+function *occurrencesInfinitely(p: Period, startInstant: Date): IterableIterator<[Date, Date]> {
     if (p.isEmpty()) {
         yield [MIN_GENERALIZED_TIME, MAX_GENERALIZED_TIME];
         return;
@@ -517,7 +517,7 @@ function *occurrencesInfinitely(p: Period, startInstant: Date): Generator<[Date,
 }
 
 export
-function *occurrences(p: Period, startInstant: Date, endInstant: Date = MAX_GENERALIZED_TIME): Generator<[Date, Date]> {
+function *occurrences(p: Period, startInstant: Date, endInstant: Date = MAX_GENERALIZED_TIME): IterableIterator<[Date, Date]> {
     for (const occur of contiguator(occurrencesInfinitely(p, startInstant))) {
         if (occur[0] > endInstant) {
             break;

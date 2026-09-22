@@ -27,6 +27,9 @@ import {
     _encode_Period_weeks,
 } from "../SelectedAttributeTypes/Period-weeks.ta.mjs";
 import isPositionalInt from "../../utils/isPositionalInt.mjs";
+import { occurrences } from "../../time/period.mjs";
+
+const MAX_GENERALIZED_TIME = new Date(9999, 11, 31, 23, 59, 59, 999);
 
 /**
  * @summary Period
@@ -267,6 +270,30 @@ export class Period {
             && this.weeks === undefined
             && this.months === undefined
             && this.years === undefined;
+    }
+
+    /**
+     * @summary Iterates over the occurrence timespans of the Period
+     * @description
+     *
+     * This starts iterating over occurrences of the Period from `startInstant`
+     * onwards, and the first occurrence MAY return a timespan that starts
+     * before `startInstant` (but MUST contain `startInstant`).
+     * 
+     * If `endInstant` is reached, the iteration stops. The last occurrence
+     * returned MAY end after `endInstant` and MAY NOT contain `endInstant`.
+     *
+     * @param startInstant The start instant
+     * @param endInstant The end instant
+     * @yields {[Date, Date]} The start and end times (inclusive) of a timespan
+     *  of an occurrence of the period.
+     * @returns An iterator over the occurrences of this period
+     * @public
+     * @method
+     * @generator
+     */
+    public occurrences(startInstant: Date, endInstant: Date = MAX_GENERALIZED_TIME): IterableIterator<[Date, Date]> {
+        return occurrences(this, startInstant, endInstant);
     }
 }
 
