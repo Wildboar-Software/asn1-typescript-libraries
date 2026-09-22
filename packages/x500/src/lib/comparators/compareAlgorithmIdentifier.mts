@@ -12,17 +12,16 @@ import compareElements from "./compareElements.mjs";
  */
 export
 function compareAlgorithmIdentifier (a: AlgorithmIdentifier, b: AlgorithmIdentifier): boolean {
-    return (
-        (a.algorithm.isEqualTo(b.algorithm))
-        && (
-            (a.parameters === b.parameters)
-            || (
-                a.parameters
-                && b.parameters
-                && compareElements(a.parameters, b.parameters)
-            )
-        )
-    );
+    if (!a.algorithm.isEqualTo(b.algorithm)) {
+        return false;
+    }
+    if (a.parameters === b.parameters) {
+        return true;
+    }
+    if (a.parameters && b.parameters) {
+        return compareElements(a.parameters, b.parameters);
+    }
+    return false;
 }
 
 export default compareAlgorithmIdentifier;
