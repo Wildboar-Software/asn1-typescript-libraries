@@ -40,4 +40,19 @@ describe("dnsNameMatch()", () => {
         const v1 = _encodeUTF8String(value1, BER);
         expect(dnsNameMatch(a, v1)).toBe(false);
     });
+
+    it("returns false when either value has more than one wildcard", () => {
+        const a = _encodeUTF8String("*.*.example.com", BER);
+        const same = _encodeUTF8String("*.*.example.com", BER);
+        const one = _encodeUTF8String("*.example.com", BER);
+        expect(dnsNameMatch(a, same)).toBe(false);
+        expect(dnsNameMatch(a, one)).toBe(false);
+    });
+
+    it("returns false for invalid input instead of throwing", () => {
+        const a = _encodeUTF8String("not a hostname", BER);
+        const v = _encodeUTF8String("example.com", BER);
+        expect(() => dnsNameMatch(a, v)).not.toThrow();
+        expect(dnsNameMatch(a, v)).toBe(false);
+    });
 });
