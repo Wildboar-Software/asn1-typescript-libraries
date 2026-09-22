@@ -5,6 +5,7 @@ import { UserPwd, _decode_UserPwd } from "../../modules/PasswordPolicy/UserPwd.t
 import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier.mjs";
 import compareElements from "../../comparators/compareElements.mjs";
 import { Buffer } from "node:buffer";
+import caseExactMatch from "./caseExactMatch.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.10.1 `userPwdMatch`.
@@ -34,7 +35,7 @@ function createUserPwdMatch (
         const a: UserPwd = _decode_UserPwd(assertion);
         const v: UserPwd = _decode_UserPwd(value);
         if (("clear" in a) && ("clear" in v)) {
-            return (a.clear === v.clear);
+            return caseExactMatch(assertion, value);
         } else if (("encrypted" in a) && ("encrypted" in v)) {
             return (
                 !Buffer.compare(a.encrypted.encryptedString, v.encrypted.encryptedString)
