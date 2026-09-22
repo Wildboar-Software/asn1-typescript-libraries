@@ -278,10 +278,12 @@ export class Period {
      *
      * This starts iterating over occurrences of the Period from `startInstant`
      * onwards, and the first occurrence MAY return a timespan that starts
-     * before `startInstant` (but MUST contain `startInstant`).
+     * before or after `startInstant`. The end of this timespan MUST be at
+     * or after `startInstant`.
      * 
      * If `endInstant` is reached, the iteration stops. The last occurrence
-     * returned MAY end after `endInstant` and MAY NOT contain `endInstant`.
+     * returned MAY end before, at, or after `endInstant` but it MUST NOT
+     * start after `endInstant`.
      *
      * @param startInstant The start instant
      * @param endInstant The end instant

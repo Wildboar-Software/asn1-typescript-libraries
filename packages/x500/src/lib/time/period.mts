@@ -343,7 +343,7 @@ function *days(p: Period, year: number, month?: number, week?: number): Iterable
     }
 }
 
-function *timeBands(date: Date, bands: DayTimeBand[]): IterableIterator<[Date, Date]> {
+function *timeBands(date: Date, bands: DayTimeBand[], startInstant?: Date): IterableIterator<[Date, Date]> {
     for (const band of bands) {
         const sod = startOfDay(date);
         const sob = band.startDayTime ?? DayTimeBand._default_value_for_startDayTime;
@@ -361,6 +361,9 @@ function *timeBands(date: Date, bands: DayTimeBand[]): IterableIterator<[Date, D
         }
         if (eob.second) {
             end = addSeconds(end, Number(eob.second));
+        }
+        if (startInstant && end < startInstant) {
+            continue;
         }
         if (start > end) {
             continue;
@@ -385,11 +388,11 @@ function *occurrencesWithinWeeks(
             continue;
         }
         for (const day of days(p, year, month, week)) {
-            if (startInstant && day < startInstant) {
+            if (startInstant && endOfDay(day) < startInstant) {
                 continue;
             }
             if (p.timesOfDay) {
-                yield *timeBands(day, bands);
+                yield *timeBands(day, bands, startInstant);
             } else {
                 yield [startOfDay(day), endOfDay(day)];
             }
@@ -405,11 +408,11 @@ function *daysOfWeeks(
     bands?: DayTimeBand[],
 ): IterableIterator<[Date, Date]> {
     for (const day of days(p, year, undefined, week)) {
-        if (startInstant && day < startInstant) {
+        if (startInstant && endOfDay(day) < startInstant) {
             continue;
         }
         if (p.timesOfDay) {
-            yield *timeBands(day, bands);
+            yield *timeBands(day, bands, startInstant);
         } else {
             yield [startOfDay(day), endOfDay(day)];
         }
@@ -423,6 +426,7 @@ function *occurrencesWithinYear(
     startInstant?: Date,
 ): IterableIterator<[Date, Date]> {
     const weeksIsFinestResolution = (p.weeks && !p.days && !p.timesOfDay);
+    // FIXME: I don't think you should need this if statement entirely.
     if (!p.months) {
         if (weeksIsFinestResolution) {
             // Weeks of the year.
@@ -434,11 +438,11 @@ function *occurrencesWithinYear(
                 // Days of the year
                 // TODO: Factor out this code: it is duplicated four times!
                 for (const day of days(p, year)) {
-                    if (startInstant && day < startInstant) {
+                    if (startInstant && endOfDay(day) < startInstant) {
                         continue;
                     }
                     if (p.timesOfDay) {
-                        yield *timeBands(day, bands);
+                        yield *timeBands(day, bands, startInstant);
                     } else {
                         yield [startOfDay(day), endOfDay(day)];
                     }
@@ -464,17 +468,21 @@ function *occurrencesWithinYear(
             yield *occurrencesWithinWeeks(p, year, month, startInstant, bands);
         } else if (p.days) {
             for (const day of days(p, year, month)) {
-                if (startInstant && day < startInstant) {
+                if (startInstant && endOfDay(day) < startInstant) {
                     continue;
                 }
                 if (p.timesOfDay) {
-                    yield *timeBands(day, bands);
+                    yield *timeBands(day, bands, startInstant);
                 } else {
                     yield [startOfDay(day), endOfDay(day)];
                 }
             }
         } else if (p.timesOfDay) {
-            // FIXME: Implement this. Just iterate over all days of the month.
+            const dom = getDaysInMonth(new Date(year, month - 1, 1));
+            for (let day = 1; day <= dom; day++) {
+                const d = new Date(year, month - 1, day);
+                yield *timeBands(d, bands, startInstant);
+            }
         }
         else {
             // Just return whole months.
