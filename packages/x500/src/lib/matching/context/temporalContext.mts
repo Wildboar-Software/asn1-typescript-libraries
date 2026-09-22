@@ -11,7 +11,7 @@ import {
 import type {
     Period,
 } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
-import { addHours } from "date-fns";
+import { addHours, addDays, startOfDay } from "date-fns";
 import boundariesOfPeriodOccurrence from "../../utils/boundariesOfPeriodOccurrence.mjs";
 
 const MAX_DATE: Date = new Date(8640000000000000);
@@ -146,6 +146,73 @@ function periodsEntirelyCoverInterval (periods: Period[], start: Date, end: Date
     }
     return true;
 }
+
+function instantInPeriod (period: Period, time: Date): boolean {
+    const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, time);
+    if (!boundaries) {
+        return false;
+    }
+    return (
+        (time.valueOf() >= boundaries[0].valueOf())
+        && (time.valueOf() <= boundaries[1].valueOf())
+    );
+}
+
+function candidateInstantsOnDay (period: Period, day: Date): Date[] {
+    if (period.timesOfDay?.length) {
+        return period.timesOfDay.map((tod) => new Date(
+            day.getFullYear(),
+            day.getMonth(),
+            day.getDate(),
+            Number(tod.startDayTime?.hour ?? 0),
+            Number(tod.startDayTime?.minute ?? 0),
+            Number(tod.startDayTime?.second ?? 0),
+        ));
+    }
+    return [ new Date(day.getFullYear(), day.getMonth(), day.getDate(), 12, 0, 0) ];
+}
+
+/**
+ * X.520 clause 10.2 `between` with `entirely` FALSE: any overlap with
+ * one `Period`. Endpoints first; otherwise a candidate instant in the
+ * interval (day scan limited to specified years, or two calendar
+ * years when years are omitted).
+ */
+function periodOverlapsInterval (period: Period, start: Date, end: Date): boolean {
+    if (instantInPeriod(period, start) || instantInPeriod(period, end)) {
+        return true;
+    }
+    const specifiedYears = period.years?.map(Number);
+    const minYear = start.getFullYear();
+    const yearList = specifiedYears
+        ? specifiedYears.filter((y) => (y >= minYear) && (y <= end.getFullYear()))
+        : Array.from(
+            { length: (Math.min(end.getFullYear(), minYear + 1) - minYear) + 1 },
+            (_, i) => (minYear + i),
+        );
+    for (const year of yearList) {
+        const rangeStart = new Date(Math.max(start.valueOf(), new Date(year, 0, 1).valueOf()));
+        const rangeEnd = new Date(Math.min(end.valueOf(), new Date(year, 11, 31, 23, 59, 59, 999).valueOf()));
+        if (rangeStart.valueOf() > rangeEnd.valueOf()) {
+            continue;
+        }
+        for (let day = startOfDay(rangeStart); day.valueOf() <= rangeEnd.valueOf(); day = addDays(day, 1)) {
+            for (const candidate of candidateInstantsOnDay(period, day)) {
+                if (
+                    (candidate.valueOf() < start.valueOf())
+                    || (candidate.valueOf() > end.valueOf())
+                ) {
+                    continue;
+                }
+                if (instantInPeriod(period, candidate)) {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+
 /** True if `time` falls in one occurrence of `period` (clause 10.2). */
 function timeFallsWithinPeriod (time: Date, period: Period, timezone: number | undefined): boolean {
     const adjustedTime = inSpecTimeZone(time, timezone);
@@ -221,22 +288,9 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
             if (entirely) {
                 return periodsEntirelyCoverInterval(spec.time.periodic, adjustedStart, adjustedEnd);
             }
-            return spec.time.periodic.some((period) => {
-                const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedStart);
-                if (!boundaries) {
-                    return false;
-                }
-                const [ lower, upper ] = boundaries;
-                const startWithinBounds: boolean = (
-                    (adjustedStart.valueOf() >= lower.valueOf())
-                    && (adjustedStart.valueOf() <= upper.valueOf())
-                );
-                const endWithinBounds: boolean = (
-                    (adjustedEnd.valueOf() >= lower.valueOf())
-                    && (adjustedEnd.valueOf() <= upper.valueOf())
-                );
-                return (startWithinBounds || endWithinBounds);
-            });
+            return spec.time.periodic.some((period) =>
+                periodOverlapsInterval(period, adjustedStart, adjustedEnd)
+            );
         } else {
             throw new Error(); // There is no other option.
         }

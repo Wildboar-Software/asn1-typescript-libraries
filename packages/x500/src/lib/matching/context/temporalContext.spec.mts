@@ -244,6 +244,59 @@ describe("evaluateTemporalContext", () => {
         expect(matches).toBe(true);
     });
 
+    it("matches a between assertion that covers a periodic occurrence without containing either endpoint", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2016, 0, 1, 12, 0, 0),
+                new Date(2016, 0, 31, 12, 0, 0),
+            ),
+        };
+        const value = new TimeSpecification(
+            {
+                periodic: [
+                    new Period(
+                        undefined,
+                        undefined,
+                        { intWeek: [ 2 ] },
+                        undefined,
+                        [ 2016 ],
+                    ),
+                ],
+            },
+        );
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(true);
+    });
+
+    it("matches a between assertion that overlaps a daily time band only after the start", () => {
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 4, 10, 18, 0, 0),
+                new Date(2021, 4, 11, 10, 0, 0),
+            ),
+        };
+        const value = new TimeSpecification(
+            {
+                periodic: [
+                    new Period(
+                        [
+                            new DayTimeBand(
+                                new DayTime(9, 0, 0),
+                                new DayTime(17, 0, 0),
+                            ),
+                        ],
+                    ),
+                ],
+            },
+        );
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(true);
+    });
+
     // I live in Florida, in the United States, which is UTC-04:00.
     // I am not sure if this test will work outside of my neighborhood.
     // Sorry if this breaks for you! Feel free to add a `.skip` in a PR if so.
