@@ -63,7 +63,10 @@ function *years(p: Period): Generator<number> {
     if (!p.years) {
         return;
     }
-    const years = p.years.map((y) => Number(y)).sort();
+    const years = p.years
+        .map((y) => Number(y))
+        .sort((a, b) => a - b)
+        ;
     let last = -1;
     for (const y of years) {
         if (y === last) {
@@ -86,7 +89,7 @@ function *months(p: Period): Generator<number> {
             .months
             .intMonth
             .map((m) => Number(m))
-            .sort()
+            .sort((a, b) => a - b)
             ;
         yield *months;
     }
@@ -119,7 +122,7 @@ function *weeks(p: Period): Generator<number> {
         const weeks = w
             .intWeek
             .map((w) => Number(w))
-            .sort()
+            .sort((a, b) => a - b)
             ;
         yield *weeks;
     }
@@ -169,7 +172,7 @@ function startOfX520Week(p: Period, year: number, month?: number, week?: number)
 }
 
 function *intDays(p: Period, days: number[], year: number, month?: number, week?: number): Generator<Date> {
-    if (week) {
+    if (p.weeks && week) {
         // intDays is days of the week.
         let dow = 0;
         for (const d of days) {
@@ -188,7 +191,7 @@ function *intDays(p: Period, days: number[], year: number, month?: number, week?
             }
         }
     }
-    else if (month) {
+    else if (p.months && month) {
         // intDays is days of the month.
         let dom = 0;
         for (const d of days) {
@@ -207,7 +210,7 @@ function *intDays(p: Period, days: number[], year: number, month?: number, week?
     }
     else {
         // intDays is days of the year.
-        const sorted = days.sort(); // mutates, but I think this is fine.
+        const sorted = days.sort((a, b) => a - b); // mutates, but I think this is fine.
         let last = -1;
         const base = new Date(year, 0, 1);
         for (const d of sorted) {
@@ -327,7 +330,10 @@ function *days(p: Period, year: number, month?: number, week?: number): Generato
     if (!p.days) {
         yield *allDays(p, year, month, week);
     } else if ("intDay" in p.days) {
-        const days = p.days.intDay.map((d) => Number(d)).sort();
+        const days = p.days.intDay
+            .map((d) => Number(d))
+            .sort((a, b) => a - b)
+            ;
         yield *intDays(p, days, year, month, week);
     } else if ("bitDay" in p.days) {
         yield *bitDays(p, p.days.bitDay, year, month, week);
@@ -391,6 +397,25 @@ function *occurrencesWithinWeeks(
     }
 }
 
+function *daysOfWeeks(
+    p: Period,
+    year: number,
+    week: number,
+    startInstant?: Date,
+    bands?: DayTimeBand[],
+): Generator<[Date, Date]> {
+    for (const day of days(p, year, undefined, week)) {
+        if (startInstant && day < startInstant) {
+            continue;
+        }
+        if (p.timesOfDay) {
+            yield *timeBands(day, bands);
+        } else {
+            yield [startOfDay(day), endOfDay(day)];
+        }
+    }
+}
+
 function *occurrencesWithinYear(
     p: Period,
     year: number,
@@ -398,10 +423,34 @@ function *occurrencesWithinYear(
     startInstant?: Date,
 ): Generator<[Date, Date]> {
     const weeksIsFinestResolution = (p.weeks && !p.days && !p.timesOfDay);
-    if (!p.months && weeksIsFinestResolution) {
-        // Weeks of the year.
-        yield *occurrencesWithinWeeks(p, year, undefined, startInstant, bands);
-        return;
+    if (!p.months) {
+        if (weeksIsFinestResolution) {
+            // Weeks of the year.
+            yield *occurrencesWithinWeeks(p, year, undefined, startInstant, bands);
+            return;
+        }
+        if (p.days) {
+            if (!p.weeks) {
+                // Days of the year
+                // TODO: Factor out this code: it is duplicated four times!
+                for (const day of days(p, year)) {
+                    if (startInstant && day < startInstant) {
+                        continue;
+                    }
+                    if (p.timesOfDay) {
+                        yield *timeBands(day, bands);
+                    } else {
+                        yield [startOfDay(day), endOfDay(day)];
+                    }
+                }
+                return;
+            } else {
+                for (const week of weeks(p)) {
+                    yield *daysOfWeeks(p, year, week, startInstant, bands);
+                }
+                return;
+            }
+        }
     }
     for (const month of months(p)) {
         if (
@@ -425,7 +474,7 @@ function *occurrencesWithinYear(
                 }
             }
         } else if (p.timesOfDay) {
-            // FIXME: Implement this.
+            // FIXME: Implement this. Just iterate over all days of the month.
         }
         else {
             // Just return whole months.
