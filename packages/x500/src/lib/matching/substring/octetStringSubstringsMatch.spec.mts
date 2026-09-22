@@ -85,4 +85,22 @@ describe("octetStringSubstringsMatch", () => {
             value,
         )).toBe(false);
     });
+
+    it("requires any_ pieces to match distinct later portions in order", () => {
+        const value = octetString([1, 2, 3]);
+        expect(octetStringSubstringsMatch(
+            assertion([
+                { initial: new Uint8Array([1, 2]) },
+                { any_: new Uint8Array([2, 3]) },
+            ]),
+            value,
+        )).toBe(false);
+        expect(octetStringSubstringsMatch(
+            assertion([
+                { any_: new Uint8Array([2, 3]) },
+                { any_: new Uint8Array([2]) },
+            ]),
+            value,
+        )).toBe(false);
+    });
 });

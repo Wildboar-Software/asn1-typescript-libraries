@@ -39,7 +39,7 @@ import { evaluateFilter, EvaluateFilterSettings } from "../../src/lib/utils/eval
 import type EqualityMatcher from "../../src/lib/types/EqualityMatcher.mjs";
 import type OrderingMatcher from "../../src/lib/types/OrderingMatcher.mjs";
 import type SubstringsMatcher from "../../src/lib/types/SubstringsMatcher.mjs";
-import SubstringSelection from "../../src/lib/types/SubstringSelection.mjs";
+import { partitionString, substringPieces } from "../../src/lib/utils/substringPartition.mjs";
 import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 
 const TRUE_ELEMENT = new asn1.DERElement(
@@ -94,22 +94,13 @@ const BOOLEAN_EQUALITY_MATCHING_RULE: EqualityMatcher = (assertion, value) => (a
 const INTEGER_ORDERING_RULE: OrderingMatcher = (assertion, value) => (assertion.value[0] - value.value[0]);
 
 const UTF8_SUBSTRING_RULE: SubstringsMatcher = (assertion, value, selection) => {
-    switch (selection) {
-    case (SubstringSelection.initial): {
-        return (value.utf8String.startsWith(assertion.utf8String));
-    }
-    case (SubstringSelection.any_): {
-        return (value.utf8String.indexOf(assertion.utf8String) > -1);
-    }
-    case (SubstringSelection.final): {
-        const val = value.utf8String;
-        const ass = assertion.utf8String;
-        return (val.indexOf(ass) === (val.length - ass.length - 1));
-    }
-    default: {
-        throw new Error();
-    }
-    }
+    return partitionString(
+        value.utf8String,
+        substringPieces(assertion, selection).map((p) => ({
+            kind: p.kind,
+            text: p.element.utf8String,
+        })),
+    );
 };
 
 const ALWAYS_COMPATIBLE: EvaluateFilterSettings["isMatchingRuleCompatibleWithAttributeType"] = () => true;

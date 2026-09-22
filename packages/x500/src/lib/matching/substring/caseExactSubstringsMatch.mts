@@ -4,7 +4,17 @@ import type { ASN1Element } from "@wildboar/asn1";
 import {
     _decode_UnboundedDirectoryString as _decode_UDS,
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
+import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
+import { prepString } from "../../utils/prepString.mjs";
+import { partitionString, substringPieces } from "../../utils/substringPartition.mjs";
+
+function ds (el: ASN1Element): string {
+    try {
+        return directoryStringToString(_decode_UDS(el));
+    } catch {
+        return el.utf8String;
+    }
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.3
@@ -15,8 +25,6 @@ import directoryStringToString from "../../stringifiers/directoryStringToString.
  * portions in order (`initial` prefixes, `final` suffixes). Case
  * is significant; insignificant spaces are removed (clause 7.6).
  * At most one `initial` and one `final`; `control` is ignored.
- * Corresponding characters (including combining sequences) must
- * be identical.
  */
 export
 const caseExactSubstringsMatch: SubstringsMatcher = (
@@ -24,24 +32,19 @@ const caseExactSubstringsMatch: SubstringsMatcher = (
     value: ASN1Element,
     selection?: SubstringSelection,
 ): boolean => {
-    const sel: SubstringSelection = selection ?? SubstringSelection.any_;
-    const a: string = directoryStringToString(_decode_UDS(assertion));
-    const v: string = directoryStringToString(_decode_UDS(value));
-    switch (sel) {
-        case (SubstringSelection.initial): {
-            return v.startsWith(a);
-        }
-        case (SubstringSelection.any_): {
-            return (v.indexOf(a) > -1);
-        }
-        case (SubstringSelection.final): {
-            return v.endsWith(a);
-        }
-        default: {
+    const stored = prepString(ds(value));
+    if (stored === undefined) {
+        return false;
+    }
+    const needles = [];
+    for (const p of substringPieces(assertion, selection)) {
+        const text = prepString(ds(p.element));
+        if (text === undefined) {
             return false;
         }
+        needles.push({ kind: p.kind, text });
     }
-
+    return partitionString(stored, needles);
 }
 
 export default caseExactSubstringsMatch;
