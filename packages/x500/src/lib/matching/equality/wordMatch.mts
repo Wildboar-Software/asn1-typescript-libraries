@@ -50,13 +50,13 @@ export
 const wordMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
-): boolean | false => {
+): boolean => {
     const ads = _decode_UnboundedDirectoryString(assertion);
     const vds = _decode_UnboundedDirectoryString(value);
     const astr: string | undefined = ps(ds(ads).trim())?.toUpperCase();
     const vstr: string | undefined = ps(ds(vds).trim())?.toUpperCase();
     if (!astr || !vstr) {
-        return undefined;
+        return false;
     }
     return containsWord(vstr, astr);
 }
