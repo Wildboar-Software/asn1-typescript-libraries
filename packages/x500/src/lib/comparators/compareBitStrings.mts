@@ -10,7 +10,12 @@ import { Buffer } from "node:buffer";
  */
 export
 function compareBitStrings (a: BIT_STRING, b: BIT_STRING): boolean {
-    return !Buffer.compare(Buffer.from(a.buffer), Buffer.from(b.buffer));
+    // `Buffer.from(bits.buffer)` copies the whole backing store, which can
+    // extend past the bit view (non-zero `byteOffset` or a longer buffer).
+    return !Buffer.compare(
+        Buffer.from(a.buffer, a.byteOffset, a.byteLength),
+        Buffer.from(b.buffer, b.byteOffset, b.byteLength),
+    );
 }
 
 export default compareBitStrings;
