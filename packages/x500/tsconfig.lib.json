@@ -30,6 +30,12 @@
   "references": [
     {
       "path": "../or-address/tsconfig.lib.json"
+    },
+    {
+      "path": "../pki-stub/tsconfig.lib.json"
+    },
+    {
+      "path": "../ldap/tsconfig.lib.json"
     }
   ]
 }

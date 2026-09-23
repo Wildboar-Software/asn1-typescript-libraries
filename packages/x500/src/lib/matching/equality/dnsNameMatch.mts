@@ -1,6 +1,6 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { domainToUnicode } from "node:url";
-import { _encode_UnboundedDirectoryString } from "packages/pki-stub/src/index.mjs";
+import { _encode_UnboundedDirectoryString } from "@wildboar/pki-stub/src/index.mjs";
 import { _encodeUTF8String, BER } from "@wildboar/asn1/functional";
 import caseIgnoreMatch from "./caseIgnoreMatch.mjs";
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
