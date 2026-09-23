@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "strictNullChecks": true,
     "rootDir": ".",
     "outDir": "../../dist/packages/presentation-address",
     "emitDeclarationOnly": false,

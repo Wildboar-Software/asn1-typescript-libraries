@@ -6,7 +6,8 @@
         "types": [
             "node"
         ],
-        "rootDir": "."
+        "strictNullChecks": true,
+    "rootDir": "."
     },
     "exclude": [
         "**/*.spec.mts"
