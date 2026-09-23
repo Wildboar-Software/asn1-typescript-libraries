@@ -7,7 +7,7 @@
       "node"
     ],
     "rootDir": ".",
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "forceConsistentCasingInFileNames": true

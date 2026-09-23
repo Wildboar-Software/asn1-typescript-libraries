@@ -242,12 +242,12 @@ export function _encode_EncryptedData(
                         [
                             /* IF_ABSENT  */ ((value.unprotectedAttrs === undefined)
                                 ? undefined
-                                : $._encode_implicit(
+                                : ($._encode_implicit(
                                     _TagClass.context,
                                     1,
                                     () => _encode_Attributes,
                                     $.DER,
-                                ))(value.unprotectedAttrs, $.DER),
+                                ))(value.unprotectedAttrs, $.DER)),
                         ],
                         value._unrecognizedExtensionsList
                             ? value._unrecognizedExtensionsList

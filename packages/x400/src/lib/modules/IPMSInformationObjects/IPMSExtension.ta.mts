@@ -70,7 +70,7 @@ export class IPMSExtension {
      * @method
      */
     public static get _default_value_for_value(): _Element {
-        return null;
+        return $._encodeNull(null, $.BER);
     }
 }
 

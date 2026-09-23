@@ -45,7 +45,7 @@ const gprsSSF_gsmSCFAbstractSyntax: ABSTRACT_SYNTAX<GenericGprsSSF_gsmSCF_PDUs> 
     },
     "&id": id_as_gprsSSF_gsmSCF_AS /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-    "&property": undefined,
+    "&property": new Uint8ClampedArray(),
 };
 
 /* eslint-enable */

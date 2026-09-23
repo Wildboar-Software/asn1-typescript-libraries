@@ -45,7 +45,7 @@ const cAP_U_ABORT_Reason_Abstract_Syntax: ABSTRACT_SYNTAX<CAP_U_ABORT_REASON> = 
     },
     "&id": id_CAP_U_ABORT_Reason /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-    "&property": undefined,
+    "&property": new Uint8ClampedArray(),
 };
 
 /* eslint-enable */

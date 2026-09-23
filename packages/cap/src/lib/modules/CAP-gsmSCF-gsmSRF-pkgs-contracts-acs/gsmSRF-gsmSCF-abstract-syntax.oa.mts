@@ -46,7 +46,7 @@ const gsmSRF_gsmSCF_abstract_syntax: ABSTRACT_SYNTAX<BASIC_gsmSRF_gsmSCF_PDUs> =
     },
     "&id": id_as_basic_gsmSRF_gsmSCF /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-    "&property": undefined,
+    "&property": new Uint8ClampedArray(),
 };
 
 /* eslint-enable */

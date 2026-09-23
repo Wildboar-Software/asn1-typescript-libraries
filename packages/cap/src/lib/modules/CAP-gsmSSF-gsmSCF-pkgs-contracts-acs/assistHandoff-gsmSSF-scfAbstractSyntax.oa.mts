@@ -46,7 +46,7 @@ const assistHandoff_gsmSSF_scfAbstractSyntax: ABSTRACT_SYNTAX<AssistHandoffsSF_g
     },
     "&id": id_as_assistHandoff_gsmSSF_scfAS /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-    "&property": undefined,
+    "&property": new Uint8ClampedArray(),
 };
 
 /* eslint-enable */

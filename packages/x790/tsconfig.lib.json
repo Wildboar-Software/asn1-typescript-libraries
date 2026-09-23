@@ -7,7 +7,7 @@
       "node"
     ],
     "strict": true,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "rootDir": "."
   },
   "exclude": [

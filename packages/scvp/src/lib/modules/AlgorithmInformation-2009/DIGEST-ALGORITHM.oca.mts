@@ -59,7 +59,7 @@ export interface DIGEST_ALGORITHM<
     /**
      * @summary &id
      */
-    readonly "&id"?: OBJECT_IDENTIFIER;
+    readonly "&id": OBJECT_IDENTIFIER;
     /**
      * @summary &Params
      */
