@@ -1,11 +1,14 @@
-import SubstringsMatcher from "../../types/SubstringsMatcher.mjs";
-import SubstringSelection from "../../types/SubstringSelection.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
-import {
-    OctetSubstringAssertion,
-    _decode_OctetSubstringAssertion,
-} from "../../modules/SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
 import { Buffer } from "node:buffer";
+import type SubstringSelection from "../../types/SubstringSelection.mjs";
+import type { OctetStringInput } from "../readValue.mjs";
+import type {
+    OctetSubstringAssertionInput,
+    PreparedOctetSubstring,
+} from "../readValue.mjs";
+import {
+    readOctetString,
+    readOctetSubstringAssertion,
+} from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.7
@@ -14,32 +17,52 @@ import { Buffer } from "node:buffer";
  * TRUE iff the stored OCTET STRING contains the presented
  * `OctetSubstringAssertion` octets with the same initial/any/final
  * partitioning as `caseIgnoreSubstringsMatch`.
+ *
+ * `assertion` is an element or an octet substring assertion.
+ * `value` is an element or a `Uint8Array`. `selection` is unused.
  */
 export
-const octetStringSubstringsMatch: SubstringsMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-    selection?: SubstringSelection,
-): boolean => {
-    const v: Uint8Array = value.octetString;
-    const buf: Buffer = Buffer.from(v);
-    const osa: OctetSubstringAssertion = _decode_OctetSubstringAssertion(assertion);
-    return osa.every((o) => {
-        if ("initial" in o) {
-            if (o.initial.length > v.length) {
+function octetStringSubstringsMatch (
+    assertion: OctetSubstringAssertionInput,
+    value: OctetStringInput,
+    _selection?: SubstringSelection,
+): boolean {
+    return octetStringSubstringsMatchTyped(
+        readOctetSubstringAssertion(assertion),
+        readOctetString(value),
+    );
+}
+
+/**
+ * `octetStringSubstringsMatch` on prepared octet pieces and a
+ * stored octet string.
+ *
+ * @param assertion Presented octet pieces.
+ * @param value Stored octets.
+ * @returns `true` when every piece matches.
+ */
+export
+function octetStringSubstringsMatchTyped (
+    assertion: readonly PreparedOctetSubstring[],
+    value: Uint8Array,
+): boolean {
+    const buf: Buffer = Buffer.from(value);
+    return assertion.every((o) => {
+        if (o.kind === "initial") {
+            if (o.octets.length > value.length) {
                 return false;
             }
-            return !Buffer.compare(v.subarray(0, o.initial.length), o.initial);
-        } else if ("any_" in o) {
-            return (buf.indexOf(o.any_) > -1);
-        } else if ("final" in o) {
-            if (o.final.length > v.length) {
+            return Buffer.compare(value.subarray(0, o.octets.length), o.octets) === 0;
+        } else if (o.kind === "any") {
+            return (buf.indexOf(o.octets) > -1);
+        } else if (o.kind === "final") {
+            if (o.octets.length > value.length) {
                 return false;
             }
-            return !Buffer.compare(
-                v.subarray(v.length - o.final.length),
-                o.final,
-            );
+            return Buffer.compare(
+                value.subarray(value.length - o.octets.length),
+                o.octets,
+            ) === 0;
         } else {
             return false;
         }

@@ -1,6 +1,10 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { ASN1Element, OBJECT_IDENTIFIER, BERElement } from "@wildboar/asn1";
-import { Buffer } from "node:buffer";
+import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ObjectIdentifierInput } from "../readValue.mjs";
+import {
+    readLeadingObjectIdentifier,
+    readObjectIdentifier,
+} from "../readValue.mjs";
+import { objectIdentifierMatchTyped } from "./objectIdentifierMatch.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.4.2
@@ -10,19 +14,35 @@ import { Buffer } from "node:buffer";
  * first component is a mandatory OID. TRUE iff that first
  * component matches via `objectIdentifierMatch`. The assertion
  * syntax is derived from the first SEQUENCE component.
+ *
+ * `assertion` is an element, object identifier, or dotted string.
+ * `value` is a SEQUENCE element, or that OID already.
  */
 export
-const objectIdentifierFirstComponentMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const innerValue = new BERElement();
-    innerValue.fromBytes(value.value); // Just reads the first element.
-    const a: OBJECT_IDENTIFIER = assertion.objectIdentifier;
-    const v: OBJECT_IDENTIFIER = innerValue.objectIdentifier;
-    // We can directly compare buffers because OBJECT IDENTIFIER is encoded the
-    // same way every time in {BER,CER,DER}.
-    return !Buffer.compare(assertion.value, innerValue.value);
+function objectIdentifierFirstComponentMatch (
+    assertion: ObjectIdentifierInput,
+    value: ObjectIdentifierInput,
+): boolean {
+    return objectIdentifierFirstComponentMatchTyped(
+        readObjectIdentifier(assertion),
+        readLeadingObjectIdentifier(value),
+    );
+}
+
+/**
+ * `objectIdentifierFirstComponentMatch` on the presented OID and
+ * the stored first component.
+ *
+ * @param assertion Presented object identifier.
+ * @param value Stored first component.
+ * @returns `true` when the object identifiers are equal.
+ */
+export
+function objectIdentifierFirstComponentMatchTyped (
+    assertion: OBJECT_IDENTIFIER,
+    value: OBJECT_IDENTIFIER,
+): boolean {
+    return objectIdentifierMatchTyped(assertion, value);
 }
 
 export default objectIdentifierFirstComponentMatch;

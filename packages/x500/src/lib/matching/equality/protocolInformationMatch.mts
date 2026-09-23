@@ -1,14 +1,25 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import {
     ASN1TagClass,
     ASN1UniversalType,
     type ASN1Element,
     type OCTET_STRING,
 } from "@wildboar/asn1";
-import { _decode_ProtocolInformation } from "../../modules/SelectedAttributeTypes/ProtocolInformation.ta.mjs";
+import {
+    ProtocolInformation,
+    _decode_ProtocolInformation,
+} from "../../modules/SelectedAttributeTypes/ProtocolInformation.ta.mjs";
 import { compareNSAP } from "../../comparators/compareNSAPs.mjs";
+import { isAsn1Element } from "../readValue.mjs";
 
-function assertedNAddress (assertion: ASN1Element): OCTET_STRING {
+function assertedNAddress (
+    assertion: ASN1Element | ProtocolInformation | Uint8Array,
+): OCTET_STRING {
+    if (assertion instanceof Uint8Array && !isAsn1Element(assertion)) {
+        return assertion;
+    }
+    if (!isAsn1Element(assertion)) {
+        return assertion.nAddress;
+    }
     if (
         assertion.tagClass === ASN1TagClass.universal
         && assertion.tagNumber === ASN1UniversalType.sequence
@@ -32,13 +43,31 @@ function assertedNAddress (assertion: ASN1Element): OCTET_STRING {
  * its `nAddress` is compared; its `profiles` are ignored.
  */
 export
-const protocolInformationMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const asserted: OCTET_STRING = assertedNAddress(assertion);
-    const stored: OCTET_STRING = _decode_ProtocolInformation(value).nAddress;
-    return compareNSAP(asserted, stored);
+function protocolInformationMatch (
+    assertion: ASN1Element | ProtocolInformation | Uint8Array,
+    value: ASN1Element | ProtocolInformation | Uint8Array,
+): boolean {
+    const stored = value instanceof Uint8Array && !isAsn1Element(value)
+        ? value
+        : isAsn1Element(value)
+            ? _decode_ProtocolInformation(value).nAddress
+            : value.nAddress;
+    return protocolInformationMatchTyped(assertedNAddress(assertion), stored);
+}
+
+/**
+ * `protocolInformationMatch` on two NSAP octet strings.
+ *
+ * @param assertion Presented NSAP.
+ * @param value Stored NSAP.
+ * @returns `true` when `compareNSAP` holds.
+ */
+export
+function protocolInformationMatchTyped (
+    assertion: Uint8Array,
+    value: Uint8Array,
+): boolean {
+    return compareNSAP(assertion, value);
 }
 
 export default protocolInformationMatch;

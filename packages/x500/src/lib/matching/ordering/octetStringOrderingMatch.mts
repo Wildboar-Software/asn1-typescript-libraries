@@ -1,6 +1,6 @@
-import OrderingMatcher from "../../types/OrderingMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
 import { Buffer } from "node:buffer";
+import type { OctetStringInput } from "../readValue.mjs";
+import { readOctetString } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.6
@@ -10,13 +10,33 @@ import { Buffer } from "node:buffer";
  * The first differing bit decides order (0 precedes 1). If one
  * string is a prefix of the other, the shorter precedes the
  * longer.
+ *
+ * Each argument may be an `ASN1Element` or a `Uint8Array`.
  */
 export
-const octetStringOrderingMatch: OrderingMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): number => {
-    return Buffer.compare(assertion.octetString, value.octetString);
+function octetStringOrderingMatch (
+    assertion: OctetStringInput,
+    value: OctetStringInput,
+): number {
+    return octetStringOrderingMatchTyped(
+        readOctetString(assertion),
+        readOctetString(value),
+    );
+}
+
+/**
+ * `octetStringOrderingMatch` on two byte strings.
+ *
+ * @param assertion Presented octets.
+ * @param value Stored octets.
+ * @returns Negative when `assertion` precedes `value`.
+ */
+export
+function octetStringOrderingMatchTyped (
+    assertion: Uint8Array,
+    value: Uint8Array,
+): number {
+    return Buffer.compare(assertion, value);
 }
 
 export default octetStringOrderingMatch;

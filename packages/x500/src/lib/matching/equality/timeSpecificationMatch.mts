@@ -1,5 +1,6 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import { ASN1Element, DERElement } from "@wildboar/asn1";
+import { isAsn1Element, readDecoded } from "../readValue.mjs";
+import type { Certificate } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
 import {
     AttributeCertificate,
     _decode_AttributeCertificate,
@@ -57,33 +58,53 @@ function periodHashKey(period: Period): string {
  * component present in the presented `TimeSpecification` matches
  * the corresponding stored extension component.
  */
-export
-const timeSpecificationMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    let exts: Extension[] | undefined;
-    try {
-        const acert = _decode_AttributeCertificate(value);
-        exts = acert.toBeSigned.extensions;
-    } catch {
-        const pkcert = _decode_Certificate(value);
-        exts = pkcert.toBeSigned.extensions;
+function certificateExtensions (
+    value: ASN1Element | AttributeCertificate | Certificate | TimeSpecification,
+): Extension[] | undefined {
+    if (!isAsn1Element(value)) {
+        if (!("toBeSigned" in value)) {
+            return undefined;
+        }
+        return value.toBeSigned.extensions;
     }
-    exts ??= [];
-    const ext: Extension | undefined = exts
-        .find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_timeSpecification));
+    try {
+        return _decode_AttributeCertificate(value).toBeSigned.extensions;
+    } catch {
+        return _decode_Certificate(value).toBeSigned.extensions;
+    }
+}
+
+export
+function timeSpecificationMatch (
+    assertion: ASN1Element | TimeSpecification,
+    value: ASN1Element | AttributeCertificate | Certificate | TimeSpecification,
+): boolean {
+    const assertedTime = readDecoded(assertion, _decode_TimeSpecification);
+    if (!isAsn1Element(value) && "time" in value && !("toBeSigned" in value)) {
+        return timeSpecificationMatchTyped(assertedTime, value);
+    }
+    const ext: Extension | undefined = certificateExtensions(value)
+        ?.find((item: Extension): boolean => item.extnId.isEqualTo(id_ce_timeSpecification));
     if (!ext) {
         return false;
     }
+    const el: DERElement = new DERElement();
+    el.fromBytes(ext.extnValue);
+    return timeSpecificationMatchTyped(assertedTime, _decode_TimeSpecification(el));
+}
 
-    const assertedTime: TimeSpecification = _decode_TimeSpecification(assertion);
-    const storedTime: TimeSpecification = ((): TimeSpecification => {
-        const el: DERElement = new DERElement();
-        el.fromBytes(ext.extnValue);
-        return _decode_TimeSpecification(el);
-    })();
-
+/**
+ * `timeSpecificationMatch` on two decoded time specifications.
+ *
+ * @param assertedTime Presented time specification.
+ * @param storedTime Stored time specification.
+ * @returns `true` when every presented component matches.
+ */
+export
+function timeSpecificationMatchTyped (
+    assertedTime: TimeSpecification,
+    storedTime: TimeSpecification,
+): boolean {
     if (
         (storedTime.notThisTime ?? TimeSpecification._default_value_for_notThisTime)
         !== (assertedTime.notThisTime ?? TimeSpecification._default_value_for_notThisTime)

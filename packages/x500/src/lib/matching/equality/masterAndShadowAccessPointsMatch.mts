@@ -1,5 +1,6 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { isAsn1Element, readDecoded } from "../readValue.mjs";
 import { _decodeSetOf } from "@wildboar/asn1/functional";
 import {
     Name,
@@ -25,17 +26,40 @@ function scoreName (name: Name): number {
  * after ordering the SET OF elements in any convenient fashion).
  */
 export
-const masterAndShadowAccessPointsMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function masterAndShadowAccessPointsMatch (
+    assertion: ASN1Element | readonly Name[],
+    value: ASN1Element | MasterAndShadowAccessPoints,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: Name[] = _decodeSetOf<Name>(() => _decode_Name)(assertion);
-    const v: MasterAndShadowAccessPoints = _decode_MasterAndShadowAccessPoints(value);
+): boolean {
+    const a: readonly Name[] = isAsn1Element(assertion)
+        ? _decodeSetOf<Name>(() => _decode_Name)(assertion)
+        : assertion;
+    return masterAndShadowAccessPointsMatchTyped(
+        a,
+        readDecoded(value, _decode_MasterAndShadowAccessPoints),
+        getEqualityMatcher,
+    );
+}
+
+/**
+ * `masterAndShadowAccessPointsMatch` on decoded names and access
+ * points. The name arrays are copied before sorting.
+ *
+ * @param a Presented ae-titles.
+ * @param v Stored access points.
+ * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @returns `true` when the ae-title sets match.
+ */
+export
+function masterAndShadowAccessPointsMatchTyped (
+    a: readonly Name[],
+    v: MasterAndShadowAccessPoints,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     if (a.length !== v.length) {
         return false;
     }
-    const sortedAssertedNames: Name[] = a.sort((a, b) => (scoreName(a) - scoreName(b)));
+    const sortedAssertedNames: Name[] = a.slice().sort((a, b) => (scoreName(a) - scoreName(b)));
     const sortedStoredNames: Name[] = v.map((n) => n.ae_title).sort((a, b) => (scoreName(a) - scoreName(b)));
     for (let i = 0; i < sortedAssertedNames.length; i++) {
         if (!compareName(sortedAssertedNames[i], sortedStoredNames[i], getEqualityMatcher)) {

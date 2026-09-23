@@ -1,5 +1,6 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
     AttributeCertificateAssertion,
     _decode_AttributeCertificateAssertion,
@@ -26,13 +27,32 @@ import compareGeneralNames from "../../comparators/compareGeneralNames.mjs";
  * AC `attributes`. At least one component shall be present.
  */
 export
-const attributeCertificateMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function attributeCertificateMatch (
+    assertion: ASN1Element | AttributeCertificateAssertion,
+    value: ASN1Element | AttributeCertificate,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: AttributeCertificateAssertion = _decode_AttributeCertificateAssertion(assertion);
-    const v: AttributeCertificate = _decode_AttributeCertificate(value);
+): boolean {
+    return attributeCertificateMatchTyped(
+        readDecoded(assertion, _decode_AttributeCertificateAssertion),
+        readDecoded(value, _decode_AttributeCertificate),
+        getEqualityMatcher,
+    );
+}
+
+/**
+ * `attributeCertificateMatch` on decoded values.
+ *
+ * @param a Presented assertion.
+ * @param v Stored attribute certificate.
+ * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @returns `true` when every present component matches.
+ */
+export
+function attributeCertificateMatchTyped (
+    a: AttributeCertificateAssertion,
+    v: AttributeCertificate,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     if (a.holder) {
         if (("baseCertificateID" in a.holder)) {
             if (!v.toBeSigned.holder.baseCertificateID) {

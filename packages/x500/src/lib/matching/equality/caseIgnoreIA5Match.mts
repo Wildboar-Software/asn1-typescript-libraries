@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
+import type { CharacterStringInput } from "../readValue.mjs";
+import { readIA5String } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 
 /**
@@ -10,17 +10,30 @@ import { prepString } from "../../utils/prepString.mjs";
  * TRUE iff the prepared strings have the same number of characters
  * and corresponding characters have the same code point after case
  * mapping.
+ *
+ * Each argument may be an `ASN1Element` or a string.
  */
 export
-const caseIgnoreIA5Match: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: string | undefined = prepString(assertion.ia5String);
-    const v: string | undefined = prepString(value.ia5String);
+function caseIgnoreIA5Match (
+    assertion: CharacterStringInput,
+    value: CharacterStringInput,
+): boolean {
+    return caseIgnoreIA5MatchTyped(readIA5String(assertion), readIA5String(value));
+}
+
+/**
+ * `caseIgnoreIA5Match` on two IA5 strings.
+ *
+ * @param assertion Presented string.
+ * @param value Stored string.
+ * @returns `true` when the prepared strings are equal ignoring case.
+ */
+export
+function caseIgnoreIA5MatchTyped (assertion: string, value: string): boolean {
+    const a: string | undefined = prepString(assertion);
+    const v: string | undefined = prepString(value);
     if (a === undefined) {
         return false;
-        // throw new Error("5f4ce135-89b5-482a-9c03-fe1d0c0ae483: Invalid characters in caseIgnoreIA5Match assertion.");
     }
     if (v === undefined) {
         return false;

@@ -1,4 +1,5 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import { isAsn1Element } from "../readValue.mjs";
 import { ASN1Element, DERElement, FALSE_BIT, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import compareName from "../../comparators/compareName.mjs";
 import {
@@ -414,6 +415,12 @@ function evaluateCertificateAssertion (
 }
 
 /**
+ * `certificateMatch` on a decoded assertion and certificate.
+ * Alias of {@link evaluateCertificateAssertion}.
+ */
+export const certificateMatchTyped = evaluateCertificateAssertion;
+
+/**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.2 `certificateMatch`.
  *
  * Selects one or more `Certificate` values by the characteristics
@@ -422,13 +429,14 @@ function evaluateCertificateAssertion (
  * {@link evaluateCertificateAssertion}.
  */
 export
-const certificateMatch : EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: CertificateAssertion = _decode_CertificateAssertion(assertion);
-    const v: Certificate = _decode_Certificate(value);
-    return evaluateCertificateAssertion(a, v);
+function certificateMatch (
+    assertion: ASN1Element | CertificateAssertion,
+    value: ASN1Element | Certificate,
+): boolean {
+    return certificateMatchTyped(
+        isAsn1Element(assertion) ? _decode_CertificateAssertion(assertion) : assertion,
+        isAsn1Element(value) ? _decode_Certificate(value) : value,
+    );
 }
 
 export default certificateMatch;

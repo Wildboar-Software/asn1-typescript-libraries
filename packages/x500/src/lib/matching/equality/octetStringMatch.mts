@@ -1,21 +1,36 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
 import { Buffer } from "node:buffer";
+import type { OctetStringInput } from "../readValue.mjs";
+import { readOctetString } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.5 `octetStringMatch`.
  *
  * TRUE iff the OCTET STRING values have the same length and
  * identical corresponding octets.
+ *
+ * Each argument may be an `ASN1Element` or a `Uint8Array`.
  */
 export
-const octetStringMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: Uint8Array = assertion.octetString;
-    const v: Uint8Array = value.octetString;
-    return !Buffer.compare(a, v);
+function octetStringMatch (
+    assertion: OctetStringInput,
+    value: OctetStringInput,
+): boolean {
+    return octetStringMatchTyped(
+        readOctetString(assertion),
+        readOctetString(value),
+    );
+}
+
+/**
+ * `octetStringMatch` on two byte strings.
+ *
+ * @param assertion Presented octets.
+ * @param value Stored octets.
+ * @returns `true` when the octets are identical.
+ */
+export
+function octetStringMatchTyped (assertion: Uint8Array, value: Uint8Array): boolean {
+    return Buffer.compare(assertion, value) === 0;
 }
 
 export default octetStringMatch;

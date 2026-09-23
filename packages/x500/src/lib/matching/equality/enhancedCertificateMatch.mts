@@ -1,4 +1,5 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import { isAsn1Element } from "../readValue.mjs";
 import { ASN1Element, DERElement, FALSE_BIT, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import compareName from "../../comparators/compareName.mjs";
 import {
@@ -428,6 +429,12 @@ function evaluateEnhancedCertificateAssertion (
 }
 
 /**
+ * `enhancedCertificateMatch` on a decoded assertion and certificate.
+ * Alias of {@link evaluateEnhancedCertificateAssertion}.
+ */
+export const enhancedCertificateMatchTyped = evaluateEnhancedCertificateAssertion;
+
+/**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.10
  * `enhancedCertificateMatch`.
  *
@@ -438,13 +445,14 @@ function evaluateEnhancedCertificateAssertion (
  * assertions may be combined in a search filter with AND/OR.
  */
 export
-const enhancedCertificateMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: EnhancedCertificateAssertion = _decode_EnhancedCertificateAssertion(assertion);
-    const v: Certificate = _decode_Certificate(value);
-    return evaluateEnhancedCertificateAssertion(a, v);
+function enhancedCertificateMatch (
+    assertion: ASN1Element | EnhancedCertificateAssertion,
+    value: ASN1Element | Certificate,
+): boolean {
+    return enhancedCertificateMatchTyped(
+        isAsn1Element(assertion) ? _decode_EnhancedCertificateAssertion(assertion) : assertion,
+        isAsn1Element(value) ? _decode_Certificate(value) : value,
+    );
 }
 
 export default enhancedCertificateMatch;

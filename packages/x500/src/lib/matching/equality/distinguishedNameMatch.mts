@@ -1,5 +1,6 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import compareDistinguishedName from "../../comparators/compareDistinguishedName.mjs";
 import {
     DistinguishedName,
@@ -17,16 +18,37 @@ import {
  *
  * `getEqualityMatcher` is required so nested naming attributes can
  * be compared with their own equality rules.
+ *
+ * Each argument may be an `ASN1Element` or a `DistinguishedName`.
  */
 export
-const distinguishedNameMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function distinguishedNameMatch (
+    assertion: ASN1Element | DistinguishedName,
+    value: ASN1Element | DistinguishedName,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: DistinguishedName = _decode_DistinguishedName(assertion);
-    const v: DistinguishedName = _decode_DistinguishedName(value);
-    return compareDistinguishedName(a, v, getEqualityMatcher);
+): boolean {
+    return distinguishedNameMatchTyped(
+        readDecoded(assertion, _decode_DistinguishedName),
+        readDecoded(value, _decode_DistinguishedName),
+        getEqualityMatcher,
+    );
+}
+
+/**
+ * `distinguishedNameMatch` on two decoded names.
+ *
+ * @param assertion Presented name.
+ * @param value Stored name.
+ * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @returns `true` when the names match.
+ */
+export
+function distinguishedNameMatchTyped (
+    assertion: DistinguishedName,
+    value: DistinguishedName,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
+    return compareDistinguishedName(assertion, value, getEqualityMatcher);
 }
 
 export default distinguishedNameMatch;

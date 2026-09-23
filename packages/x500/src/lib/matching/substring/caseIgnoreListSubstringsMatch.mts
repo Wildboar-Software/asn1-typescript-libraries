@@ -1,13 +1,13 @@
-import SubstringsMatcher from "../../types/SubstringsMatcher.mjs";
-import SubstringSelection from "../../types/SubstringSelection.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
+import type SubstringSelection from "../../types/SubstringSelection.mjs";
+import type {
+    DirectoryStringListInput,
+    PreparedSubstring,
+    SubstringAssertionInput,
+} from "../readValue.mjs";
 import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
-import {
-    _decode_SubstringAssertion,
-} from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
+    readDirectoryStringList,
+    readSubstringAssertion,
+} from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.8
@@ -17,28 +17,49 @@ import {
  * concatenation of stored `UnboundedDirectoryString` values, using
  * `caseIgnoreSubstringsMatch`. An `initial`/`any`/`final` piece
  * must not span more than one stored string.
+ *
+ * `assertion` is an element or a `SubstringAssertion` (directory
+ * strings or JavaScript strings). `value` is an element, a
+ * `PostalAddress` / `CaseIgnoreList`, or an array of strings.
+ * `selection` is accepted for `SubstringsMatcher` and is not used;
+ * the assertion carries initial, any, and final itself.
  */
 export
-const caseIgnoreListSubstringsMatch: SubstringsMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-    selection?: SubstringSelection,
-): boolean => {
-    // const sel: SubstringSelection = selection ?? SubstringSelection.any_;
-    const a = _decode_SubstringAssertion(assertion);
-    const v = value.sequenceOf.map((e) => directoryStringToString(_decode_UDS(e)));
-    if (v.length === 0) {
+function caseIgnoreListSubstringsMatch (
+    assertion: SubstringAssertionInput,
+    value: DirectoryStringListInput,
+    _selection?: SubstringSelection,
+): boolean {
+    return caseIgnoreListSubstringsMatchTyped(
+        readSubstringAssertion(assertion),
+        readDirectoryStringList(value),
+    );
+}
+
+/**
+ * `caseIgnoreListSubstringsMatch` on prepared pieces and stored
+ * lines. `initial` is tested against the first line and `final`
+ * against the last. `any` may match any line.
+ *
+ * @param assertion Presented substring pieces.
+ * @param value Stored lines.
+ * @returns `true` when every piece matches.
+ */
+export
+function caseIgnoreListSubstringsMatchTyped (
+    assertion: readonly PreparedSubstring[],
+    value: readonly string[],
+): boolean {
+    if (value.length === 0) {
         return false;
     }
-    // NOTE: According to how the MR is defined, initial and final should only
-    // match against the first and last lines, respectively.
-    const firstStr: string = v[0];
-    const lastStr: string = v[v.length - 1];
-    for (const substr of a) {
-        if ("any_" in substr) {
-            const s: string = directoryStringToString(substr.any_);
+    const firstStr: string = value[0];
+    const lastStr: string = value[value.length - 1];
+    for (const substr of assertion) {
+        if (substr.kind === "any") {
+            const s: string = substr.text;
             let matched: boolean = false;
-            for (const str of v) {
+            for (const str of value) {
                 if (str.indexOf(s) >= 0) {
                     matched = true;
                     break;
@@ -47,14 +68,12 @@ const caseIgnoreListSubstringsMatch: SubstringsMatcher = (
             if (!matched) {
                 return false;
             }
-        } else if ("initial" in substr) {
-            const s: string = directoryStringToString(substr.initial);
-            if (!firstStr.startsWith(s)) {
+        } else if (substr.kind === "initial") {
+            if (!firstStr.startsWith(substr.text)) {
                 return false;
             }
-        } else if ("final" in substr) {
-            const s: string = directoryStringToString(substr.final);
-            if (!lastStr.endsWith(s)) {
+        } else if (substr.kind === "final") {
+            if (!lastStr.endsWith(substr.text)) {
                 return false;
             }
         } else {

@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
+import { isAsn1Element, readDecoded } from "../readValue.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
@@ -15,14 +15,31 @@ import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdenti
  * of the stored value.
  */
 export
-const algorithmIdentifierMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: AlgorithmIdentifier = _decode_AlgorithmIdentifier(assertion);
-    const probablyAnAlgorithmIdentifier: ASN1Element = value.sequence[0];
-    const algId: AlgorithmIdentifier = _decode_AlgorithmIdentifier(probablyAnAlgorithmIdentifier);
-    return compareAlgorithmIdentifier(algId, a);
+function algorithmIdentifierMatch (
+    assertion: ASN1Element | AlgorithmIdentifier,
+    value: ASN1Element | AlgorithmIdentifier,
+): boolean {
+    const presented = readDecoded(assertion, _decode_AlgorithmIdentifier);
+    const stored = isAsn1Element(value)
+        ? _decode_AlgorithmIdentifier(value.sequence[0])
+        : value;
+    return algorithmIdentifierMatchTyped(presented, stored);
+}
+
+/**
+ * `algorithmIdentifierMatch` on two algorithm identifiers. `value`
+ * is the algorithm component of `SupportedAlgorithms`.
+ *
+ * @param assertion Presented algorithm.
+ * @param value Stored algorithm.
+ * @returns `true` when the algorithms are equal.
+ */
+export
+function algorithmIdentifierMatchTyped (
+    assertion: AlgorithmIdentifier,
+    value: AlgorithmIdentifier,
+): boolean {
+    return compareAlgorithmIdentifier(value, assertion);
 }
 
 export default algorithmIdentifierMatch;

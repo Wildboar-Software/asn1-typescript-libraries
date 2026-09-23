@@ -1,9 +1,8 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
 import {
-    AttributeOptionList,
     _decode_AttributeOptionList,
 } from "../../modules/SelectedAttributeTypes/AttributeOptionList.ta.mjs";
+import { isAsn1Element } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 10.4
@@ -14,17 +13,36 @@ import {
  * `ContextAssertion` matches a stored list if it is a subset,
  * ignoring letter case and option order. `ABSENT-MATCH` is FALSE:
  * a value without this context does not satisfy an assertion.
+ *
+ * Each argument may be an `ASN1Element` or an array of option
+ * strings (`AttributeOptionList`).
  */
 export
-const evaluateLDAPAttributeOptionContext: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: AttributeOptionList = _decode_AttributeOptionList(assertion);
-    const v: AttributeOptionList = _decode_AttributeOptionList(value);
-    const storedValues: Set<string> = new Set(v.map((str) => str.toLowerCase()));
-    for (let i = 0; i < a.length; i++) {
-        const assertedValue: string = a[i].toLowerCase();
+function evaluateLDAPAttributeOptionContext (
+    assertion: ASN1Element | readonly string[],
+    value: ASN1Element | readonly string[],
+): boolean {
+    const a = isAsn1Element(assertion) ? _decode_AttributeOptionList(assertion) : assertion;
+    const v = isAsn1Element(value) ? _decode_AttributeOptionList(value) : value;
+    return evaluateLDAPAttributeOptionContextTyped(a, v);
+}
+
+/**
+ * `ldapAttributeOptionContext` on two option lists. Asserted
+ * options must be a case-insensitive subset of the stored options.
+ *
+ * @param assertion Presented options.
+ * @param value Stored options.
+ * @returns `true` when every asserted option is stored.
+ */
+export
+function evaluateLDAPAttributeOptionContextTyped (
+    assertion: readonly string[],
+    value: readonly string[],
+): boolean {
+    const storedValues: Set<string> = new Set(value.map((str) => str.toLowerCase()));
+    for (let i = 0; i < assertion.length; i++) {
+        const assertedValue: string = assertion[i].toLowerCase();
         if (!storedValues.has(assertedValue)) {
             return false;
         }

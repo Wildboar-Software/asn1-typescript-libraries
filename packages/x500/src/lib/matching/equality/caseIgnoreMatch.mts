@@ -1,9 +1,7 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
-import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
+import type {
+    DirectoryStringInput,
+} from "../readValue.mjs";
+import { readDirectoryString } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 
 /**
@@ -17,17 +15,36 @@ import { prepString } from "../../utils/prepString.mjs";
  *
  * Used as the equality rule for many selected attribute types
  * (e.g. `commonName`, `organizationName`).
+ *
+ * `assertion` and `value` are read independently. Each may be an
+ * `ASN1Element`, a `DirectoryString` / `UnboundedDirectoryString`,
+ * or a JavaScript `string`.
  */
 export
-const caseIgnoreMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: string | undefined = prepString(directoryStringToString(_decode_UDS(assertion)));
-    const v: string | undefined = prepString(directoryStringToString(_decode_UDS(value)));
+function caseIgnoreMatch (
+    assertion: DirectoryStringInput,
+    value: DirectoryStringInput,
+): boolean {
+    return caseIgnoreMatchTyped(
+        readDirectoryString(assertion),
+        readDirectoryString(value),
+    );
+}
+
+/**
+ * `caseIgnoreMatch` on two strings. String preparation and case
+ * folding happen here so this function stays monomorphic.
+ *
+ * @param assertion Presented string.
+ * @param value Stored string.
+ * @returns `true` when the prepared strings are equal ignoring case.
+ */
+export
+function caseIgnoreMatchTyped (assertion: string, value: string): boolean {
+    const a: string | undefined = prepString(assertion);
+    const v: string | undefined = prepString(value);
     if (a === undefined) {
         return false;
-        // throw new Error("cdf4ca97-db0c-450c-87e7-74d826b9ed2a: Invalid characters in caseIgnoreMatch assertion.");
     }
     if (v === undefined) {
         return false;

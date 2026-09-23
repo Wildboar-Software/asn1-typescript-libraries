@@ -1,5 +1,6 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
     id_ce_basicAttConstraints,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-basicAttConstraints.va.mjs";
@@ -26,13 +27,32 @@ import compareIssuerSerial from "../../comparators/compareIssuerSerial.mjs";
  * `IssuerSerial` pointers.
  */
 export
-const authAttIdMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function authAttIdMatch (
+    assertion: ASN1Element | AuthorityAttributeIdentifierSyntax,
+    value: ASN1Element | AttributeCertificate,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const ass: AuthorityAttributeIdentifierSyntax = _decode_AuthorityAttributeIdentifierSyntax(assertion);
-    const val: AttributeCertificate = _decode_AttributeCertificate(value);
+): boolean {
+    return authAttIdMatchTyped(
+        readDecoded(assertion, _decode_AuthorityAttributeIdentifierSyntax),
+        readDecoded(value, _decode_AttributeCertificate),
+        getEqualityMatcher,
+    );
+}
+
+/**
+ * `authAttIdMatch` on decoded values.
+ *
+ * @param ass Presented authority attribute identifiers.
+ * @param val Stored attribute certificate.
+ * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @returns `true` when the issuer-serial lists match.
+ */
+export
+function authAttIdMatchTyped (
+    ass: AuthorityAttributeIdentifierSyntax,
+    val: AttributeCertificate,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     const ext: Extension | undefined = val.toBeSigned.extensions
         ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_basicAttConstraints)));
     if (!ext) {
