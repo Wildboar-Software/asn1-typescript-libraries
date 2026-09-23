@@ -1,6 +1,18 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
-import { domainToASCII } from "node:url";
+import { domainToUnicode } from "node:url";
+import { _encode_UnboundedDirectoryString } from "packages/pki-stub/src/index.mjs";
+import { _encodeUTF8String, BER } from "@wildboar/asn1/functional";
+import caseIgnoreMatch from "./caseIgnoreMatch.mjs";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+
+function compareLabels(a: string, b: string, wildcardAllowed: boolean): boolean {
+    if (a === "*" || b === "*") {
+        return wildcardAllowed;
+    }
+    const ads = _encodeUTF8String(a, BER);
+    const bds = _encodeUTF8String(b, BER);
+    return caseIgnoreMatch(ads, bds);
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.9.2 `dnsNameMatch`.
@@ -20,30 +32,39 @@ const dnsNameMatch: EqualityMatcher = (
     assertion: ASN1Element,
     value: ASN1Element,
 ): boolean => {
-    // We convert to ASCII because the correct DNS normalization is only
-    // ASCII-lowercasing, not Unicode lowercasing.
-    const a: string = domainToASCII(assertion.utf8String).toLowerCase();
-    const v: string = domainToASCII(value.utf8String).toLowerCase();
-    if (a === v) {
-        return true;
-    }
-    if (!a.startsWith("*.") && !v.startsWith("*.")) {
-        // The wildcard must be the leftmost label.
-        // It is not clear, but I think the wildcard MUST be the whole label.
+    // I checked: this preserves asterisks and periods.
+    const a = domainToUnicode(assertion.utf8String.trim());
+    const v = domainToUnicode(value.utf8String.trim());
+    if (a === "" || v === "") {
         return false;
     }
-    const alabels = a.split(".").slice(1);
-    const vlabels = v.split(".").slice(1);
-    if (alabels.length !== vlabels.length) {
-        return false;
-    }
-    const len = alabels.length;
-    for (let i = 0; i < len; i++) {
-        const alabel = alabels[i];
-        const vlabel = vlabels[i];
-        if (alabel !== vlabel) {
+
+    let i = 0;
+    let startA = 0;
+    let startV = 0;
+    while (i < 255) {
+        const wildcardAllowed: boolean = (
+            (startA === 0)
+            && (startV === 0)
+        );
+        const nextDotA = a.indexOf('.', startA);
+        const nextDotV = v.indexOf('.', startV);
+        if (nextDotA === -1) {
+            const labelA = a.slice(startA);
+            const labelV = v.slice(startV);
+            if (!compareLabels(labelA, labelV, wildcardAllowed)) {
+                return false;
+            }
+            break;
+        }
+        const labelA = a.slice(startA, nextDotA);
+        const labelV = v.slice(startV, nextDotV);
+        if (!compareLabels(labelA, labelV, wildcardAllowed)) {
             return false;
         }
+        startA = nextDotA + 1;
+        startV = nextDotV + 1;
+        i++;
     }
     return true;
 }
