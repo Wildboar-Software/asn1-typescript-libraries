@@ -226,11 +226,9 @@ export class ModifyEntryArgumentData implements CommonArguments {
      * @returns {ModifyEntryArgumentData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof ModifyEntryArgumentData]: ModifyEntryArgumentData[_K];
             }
-        >
     ): ModifyEntryArgumentData {
         return new ModifyEntryArgumentData(
             _o.object,
@@ -259,7 +257,7 @@ export class ModifyEntryArgumentData implements CommonArguments {
      * @method
      */
     public static get _default_value_for_serviceControls(): ServiceControls {
-        return ServiceControls._from_object({});
+        return ServiceControls._from_object({ _unrecognizedExtensionsList: [] });
     }
     /**
      * @summary Getter that returns the default value for `operationProgress`.
@@ -271,6 +269,7 @@ export class ModifyEntryArgumentData implements CommonArguments {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
+            _unrecognizedExtensionsList: [],
         });
     }
     /**

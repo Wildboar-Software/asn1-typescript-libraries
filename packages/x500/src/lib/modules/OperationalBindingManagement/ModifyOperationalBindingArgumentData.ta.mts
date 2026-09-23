@@ -138,11 +138,9 @@ export class ModifyOperationalBindingArgumentData {
      * @returns {ModifyOperationalBindingArgumentData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof ModifyOperationalBindingArgumentData]: ModifyOperationalBindingArgumentData[_K];
             }
-        >
     ): ModifyOperationalBindingArgumentData {
         return new ModifyOperationalBindingArgumentData(
             _o.bindingType,

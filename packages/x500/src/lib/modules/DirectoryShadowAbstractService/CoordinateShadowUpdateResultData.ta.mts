@@ -126,11 +126,9 @@ export class CoordinateShadowUpdateResultData implements CommonResultsSeq {
      * @returns {CoordinateShadowUpdateResultData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof CoordinateShadowUpdateResultData]: CoordinateShadowUpdateResultData[_K];
             }
-        >
     ): CoordinateShadowUpdateResultData {
         return new CoordinateShadowUpdateResultData(
             _o.agreementID,

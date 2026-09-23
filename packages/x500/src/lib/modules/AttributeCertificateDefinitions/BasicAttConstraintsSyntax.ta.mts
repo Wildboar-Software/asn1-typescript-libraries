@@ -63,11 +63,9 @@ export class BasicAttConstraintsSyntax {
      * @returns {BasicAttConstraintsSyntax}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof BasicAttConstraintsSyntax]: BasicAttConstraintsSyntax[_K];
             }
-        >
     ): BasicAttConstraintsSyntax {
         return new BasicAttConstraintsSyntax(
             _o.authority,

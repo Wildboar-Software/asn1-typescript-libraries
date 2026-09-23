@@ -119,11 +119,9 @@ export class RequestShadowUpdateArgumentData {
      * @returns {RequestShadowUpdateArgumentData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof RequestShadowUpdateArgumentData]: RequestShadowUpdateArgumentData[_K];
             }
-        >
     ): RequestShadowUpdateArgumentData {
         return new RequestShadowUpdateArgumentData(
             _o.agreementID,

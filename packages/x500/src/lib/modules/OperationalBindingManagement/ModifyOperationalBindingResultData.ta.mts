@@ -131,11 +131,9 @@ export class ModifyOperationalBindingResultData implements CommonResultsSeq {
      * @returns {ModifyOperationalBindingResultData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof ModifyOperationalBindingResultData]: ModifyOperationalBindingResultData[_K];
             }
-        >
     ): ModifyOperationalBindingResultData {
         return new ModifyOperationalBindingResultData(
             _o.newBindingID,

@@ -111,7 +111,7 @@ function evaluateCertificateAssertion (
     }
     if (assertion.subjectKeyIdentifier) {
         const ski: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectKeyIdentifier)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectKeyIdentifier)));
         if (!ski) {
             return false;
         }
@@ -123,7 +123,7 @@ function evaluateCertificateAssertion (
     }
     if (assertion.authorityKeyIdentifier) {
         const aki: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_authorityKeyIdentifier)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_authorityKeyIdentifier)));
         if (!aki) {
             return false;
         }
@@ -149,7 +149,7 @@ function evaluateCertificateAssertion (
 
     if (assertion.privateKeyValid) {
         const pkupExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_privateKeyUsagePeriod)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_privateKeyUsagePeriod)));
         if (pkupExt) {
             const el: DERElement = new DERElement();
             el.fromBytes(pkupExt.extnValue);
@@ -177,7 +177,7 @@ function evaluateCertificateAssertion (
 
     if (assertion.keyUsage) {
         const kuExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_keyUsage)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_keyUsage)));
         if (!kuExt) {
             return false;
         }
@@ -192,17 +192,18 @@ function evaluateCertificateAssertion (
         }
     }
 
-    if (assertion.subjectAltName) {
+    const subjectAltName = assertion.subjectAltName;
+    if (subjectAltName) {
         const sanExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
         if (!sanExt) {
             return false;
         }
         const el: DERElement = new DERElement();
         el.fromBytes(sanExt.extnValue);
         const sans: GeneralNames = _decode_GeneralNames(el);
-        if ("builtinNameForm" in assertion.subjectAltName) {
-            const altNameType: number = assertion.subjectAltName.builtinNameForm;
+        if ("builtinNameForm" in subjectAltName) {
+            const altNameType: number = subjectAltName.builtinNameForm;
             switch (altNameType) {
             case (AltNameType_builtinNameForm_rfc822Name as number): {
                 if (!sans.some((san): boolean => ("rfc822Name" in san))) {
@@ -253,15 +254,14 @@ function evaluateCertificateAssertion (
                 break;
             }
             }
-        } else if ("otherNameForm" in assertion.subjectAltName) {
+        } else if ("otherNameForm" in subjectAltName) {
+            const otherNameForm = subjectAltName.otherNameForm;
             if (!sans.some((san): boolean => {
-                if (!("otherNameForm" in assertion.subjectAltName)) {
-                    return false;
-                }
                 if (!("otherName" in san)) {
                     return false;
                 }
-                return (san.otherName.directReference.isEqualTo(assertion.subjectAltName.otherNameForm));
+                const directReference = san.otherName.directReference;
+                return !!directReference && directReference.isEqualTo(otherNameForm);
             })) {
                 return false;
             }
@@ -272,7 +272,7 @@ function evaluateCertificateAssertion (
 
     if (assertion.policy) {
         const cpExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_certificatePolicies)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_certificatePolicies)));
         if (!cpExt) {
             return false;
         }
@@ -292,9 +292,10 @@ function evaluateCertificateAssertion (
         }
     }
 
-    if (assertion.pathToName) {
+    const pathToName = assertion.pathToName;
+    if (pathToName) {
         const ncExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_nameConstraints)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_nameConstraints)));
         if (ncExt) {
             const el: DERElement = new DERElement();
             el.fromBytes(ncExt.extnValue);
@@ -304,7 +305,7 @@ function evaluateCertificateAssertion (
                     return false;
                 }
                 return dnWithinSubtree(
-                    assertion.pathToName.rdnSequence,
+                    pathToName.rdnSequence,
                     sub.base.directoryName.rdnSequence,
                     (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
                     (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
@@ -317,7 +318,7 @@ function evaluateCertificateAssertion (
                     return true;
                 }
                 return dnWithinSubtree(
-                    assertion.pathToName.rdnSequence,
+                    pathToName.rdnSequence,
                     sub.base.directoryName.rdnSequence,
                     (sub.minimum !== undefined) ? Number(sub.minimum) : undefined,
                     (sub.maximum !== undefined) ? Number(sub.maximum) : undefined,
@@ -364,7 +365,7 @@ function evaluateCertificateAssertion (
         }
 
         const sanExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
         if (sanExt) {
             const el: DERElement = new DERElement();
             el.fromBytes(sanExt.extnValue);

@@ -29,13 +29,13 @@ const pwdEncAlgMatch: EqualityMatcher = (
         return false;
     }
     const alg = v.encrypted.algorithmIdentifier;
-    return (
-        (alg.algorithm.isEqualTo(a.algorithm))
-        && (
-            (alg.parameters === a.parameters)
-            || compareElements(alg.parameters, a.parameters)
-        )
-    );
+    const sameParameters = alg.parameters === a.parameters
+        || (
+            alg.parameters !== undefined
+            && a.parameters !== undefined
+            && compareElements(alg.parameters, a.parameters)
+        );
+    return sameParameters && alg.algorithm.isEqualTo(a.algorithm);
 }
 
 export default pwdEncAlgMatch;

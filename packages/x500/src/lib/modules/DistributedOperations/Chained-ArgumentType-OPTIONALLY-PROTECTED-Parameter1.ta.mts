@@ -60,11 +60,9 @@ export class Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1 {
      * @returns {Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1]: Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1[_K];
             }
-        >
     ): Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1 {
         return new Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1(
             _o.chainedArgument,

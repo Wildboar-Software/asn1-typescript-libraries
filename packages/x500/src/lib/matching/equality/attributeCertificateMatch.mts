@@ -54,7 +54,8 @@ const attributeCertificateMatch: EqualityMatcher = (
             }
         }
     }
-    if (a.issuer && (!compareGeneralNames(a.issuer, v.toBeSigned.issuer.issuerName, getEqualityMatcher))) {
+    const issuerName = v.toBeSigned.issuer.issuerName;
+    if (a.issuer && (!issuerName || !compareGeneralNames(a.issuer, issuerName, getEqualityMatcher))) {
         return false;
     }
     if (

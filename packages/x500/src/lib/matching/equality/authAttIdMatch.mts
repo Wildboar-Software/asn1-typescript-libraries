@@ -34,7 +34,7 @@ const authAttIdMatch: EqualityMatcher = (
     const ass: AuthorityAttributeIdentifierSyntax = _decode_AuthorityAttributeIdentifierSyntax(assertion);
     const val: AttributeCertificate = _decode_AttributeCertificate(value);
     const ext: Extension | undefined = val.toBeSigned.extensions
-        .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_basicAttConstraints)));
+        ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_basicAttConstraints)));
     if (!ext) {
         return false;
     }

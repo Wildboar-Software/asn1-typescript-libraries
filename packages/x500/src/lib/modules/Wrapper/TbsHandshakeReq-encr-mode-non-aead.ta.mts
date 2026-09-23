@@ -57,11 +57,9 @@ export class TbsHandshakeReq_encr_mode_non_aead {
      * @returns {TbsHandshakeReq_encr_mode_non_aead}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof TbsHandshakeReq_encr_mode_non_aead]: TbsHandshakeReq_encr_mode_non_aead[_K];
             }
-        >
     ): TbsHandshakeReq_encr_mode_non_aead {
         return new TbsHandshakeReq_encr_mode_non_aead(_o.encr, _o.icvAlgID);
     }

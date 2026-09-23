@@ -138,11 +138,9 @@ export class CertificateListAssertion {
      * @returns {CertificateListAssertion}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof CertificateListAssertion]: CertificateListAssertion[_K];
             }
-        >
     ): CertificateListAssertion {
         return new CertificateListAssertion(
             _o.issuer,

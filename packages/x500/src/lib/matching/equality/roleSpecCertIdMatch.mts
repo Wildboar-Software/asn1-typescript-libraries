@@ -35,7 +35,7 @@ const roleSpecCertIdMatch: EqualityMatcher = (
     const a: RoleSpecCertIdentifierSyntax = _decode_RoleSpecCertIdentifierSyntax(assertion);
     const v: AttributeCertificate = _decode_AttributeCertificate(value);
     const rsci: Extension | undefined = v.toBeSigned.extensions
-        .find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_roleSpecCertIdentifier));
+        ?.find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_roleSpecCertIdentifier));
     if (!rsci) {
         return false;
     }

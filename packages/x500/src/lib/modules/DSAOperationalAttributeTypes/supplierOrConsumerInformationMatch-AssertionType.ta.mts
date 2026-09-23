@@ -55,11 +55,9 @@ export class supplierOrConsumerInformationMatch_AssertionType {
      * @returns {supplierOrConsumerInformationMatch_AssertionType}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof supplierOrConsumerInformationMatch_AssertionType]: supplierOrConsumerInformationMatch_AssertionType[_K];
             }
-        >
     ): supplierOrConsumerInformationMatch_AssertionType {
         return new supplierOrConsumerInformationMatch_AssertionType(
             _o.ae_title,

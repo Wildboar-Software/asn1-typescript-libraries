@@ -78,11 +78,9 @@ export class ListResultData_listInfo_subordinates_Item {
      * @returns {ListResultData_listInfo_subordinates_Item}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof ListResultData_listInfo_subordinates_Item]: ListResultData_listInfo_subordinates_Item[_K];
             }
-        >
     ): ListResultData_listInfo_subordinates_Item {
         return new ListResultData_listInfo_subordinates_Item(
             _o.rdn,

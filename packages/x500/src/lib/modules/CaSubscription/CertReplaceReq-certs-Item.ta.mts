@@ -70,11 +70,9 @@ export class CertReplaceReq_certs_Item {
      * @returns {CertReplaceReq_certs_Item}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof CertReplaceReq_certs_Item]: CertReplaceReq_certs_Item[_K];
             }
-        >
     ): CertReplaceReq_certs_Item {
         return new CertReplaceReq_certs_Item(
             _o.old,

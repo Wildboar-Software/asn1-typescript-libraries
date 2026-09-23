@@ -292,11 +292,10 @@ function gnWithinGeneralSubtree (
         }
         const gnontype = gn.otherName.directReference;
         const basetype = subtree.base.otherName.directReference;
-        if (!gnontype.isEqualTo(basetype)) {
+        if (!gnontype || !basetype || !gnontype.isEqualTo(basetype)) {
             return false;
         }
-        const ontype = gnontype;
-        if (ontype.isEqualTo(ID_SRV_NAME)) {
+        if (gnontype.isEqualTo(ID_SRV_NAME)) {
             const name = externalEncodingToElement(gn.otherName.encoding);
             const base = externalEncodingToElement(subtree.base.otherName.encoding);
             if (!name || !base) {

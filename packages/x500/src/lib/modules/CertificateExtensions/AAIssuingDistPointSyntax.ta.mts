@@ -117,11 +117,9 @@ export class AAIssuingDistPointSyntax {
      * @returns {AAIssuingDistPointSyntax}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof AAIssuingDistPointSyntax]: AAIssuingDistPointSyntax[_K];
             }
-        >
     ): AAIssuingDistPointSyntax {
         return new AAIssuingDistPointSyntax(
             _o.distributionPoint,
