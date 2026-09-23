@@ -56,9 +56,9 @@ const certificateListMatch : EqualityMatcher = (
     const a: CertificateListAssertion = _decode_CertificateListAssertion(assertion);
     const v: CertificateList = _decode_CertificateList(value);
     const crlNumberExt: Extension | undefined = v.toBeSigned.crlExtensions
-        .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_cRLNumber)));
+        ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_cRLNumber)));
     const idpExt: Extension | undefined = v.toBeSigned.crlExtensions
-        .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_issuingDistributionPoint)));
+        ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_issuingDistributionPoint)));
     const idp: IssuingDistPointSyntax | undefined = idpExt
         ? ((): IssuingDistPointSyntax => {
             const el: DERElement = new DERElement();
@@ -99,11 +99,10 @@ const certificateListMatch : EqualityMatcher = (
 
     if (
         a.reasonFlags
-        && idp
-        && idp.onlySomeReasons
+        && idp?.onlySomeReasons
         && !a.reasonFlags.some((reason: number, index: number) => (
             (reason === TRUE_BIT)
-            && (reason === (idp.onlySomeReasons[index] ?? FALSE_BIT))
+            && (reason === ((idp.onlySomeReasons ?? [])[index] ?? FALSE_BIT))
         ))
     ) {
         return false;
@@ -125,24 +124,25 @@ const certificateListMatch : EqualityMatcher = (
     }
 
     if (a.distributionPoint) {
-        if (!idp) {
+        const distributionPoint = idp?.distributionPoint;
+        if (!distributionPoint) {
             return false;
         }
-        if (("fullName" in a.distributionPoint) && ("fullName" in idp.distributionPoint)) {
+        if (("fullName" in a.distributionPoint) && ("fullName" in distributionPoint)) {
             if (
                 !a.distributionPoint.fullName.some((dpn1) => (
-                    ("fullName" in idp.distributionPoint)
-                    && (idp.distributionPoint.fullName
+                    ("fullName" in distributionPoint)
+                    && (distributionPoint.fullName
                         .some((dpn2): boolean => compareGeneralName(dpn1, dpn2, getEqualityMatcher)))
             ))) {
                 return false;
             }
         } else if (
             ("nameRelativeToCRLIssuer" in a.distributionPoint)
-            && ("nameRelativeToCRLIssuer" in idp.distributionPoint)
+            && ("nameRelativeToCRLIssuer" in distributionPoint)
             && !compareRelativeDistinguishedName(
                 a.distributionPoint.nameRelativeToCRLIssuer,
-                idp.distributionPoint.nameRelativeToCRLIssuer,
+                distributionPoint.nameRelativeToCRLIssuer,
                 getEqualityMatcher,
             )
         ) {
@@ -152,7 +152,7 @@ const certificateListMatch : EqualityMatcher = (
 
     if (a.authorityKeyIdentifier) {
         const aki: Extension | undefined = v.toBeSigned.crlExtensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_authorityKeyIdentifier)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_authorityKeyIdentifier)));
         if (!aki) {
             return false;
         }

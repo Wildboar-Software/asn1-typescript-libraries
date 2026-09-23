@@ -77,7 +77,7 @@ export type ExtensionInfo = {
 
 const CRITICAL: boolean = true;
 const NON_CRITICAL: boolean = false;
-const ALL_OPERATIONS: Partial<Operations> = undefined;
+const ALL_OPERATIONS: Partial<Operations> | undefined = undefined;
 const SEARCH = {
     search: true,
 };

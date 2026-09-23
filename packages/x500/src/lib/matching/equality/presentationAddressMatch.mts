@@ -7,13 +7,10 @@ import {
 import { Buffer } from "node:buffer";
 
 function bothUndefinedOrSame (a: Uint8Array | undefined, b: Uint8Array | undefined): boolean {
-    return (
-        ((a === undefined) && (b === undefined))
-        || (
-            (a && b)
-            && !Buffer.compare(a, b)
-        )
-    );
+    if (a === undefined || b === undefined) {
+        return a === undefined && b === undefined;
+    }
+    return Buffer.compare(a, b) === 0;
 }
 
 /**

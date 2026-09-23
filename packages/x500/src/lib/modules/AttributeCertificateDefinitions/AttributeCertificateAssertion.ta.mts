@@ -91,11 +91,9 @@ export class AttributeCertificateAssertion {
      * @returns {AttributeCertificateAssertion}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof AttributeCertificateAssertion]: AttributeCertificateAssertion[_K];
             }
-        >
     ): AttributeCertificateAssertion {
         return new AttributeCertificateAssertion(
             _o.holder,

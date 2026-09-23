@@ -40,6 +40,7 @@ function operationPermitted (
         (adds || imports)
         && (items.maxImmSub !== undefined)
         && ("entry" in request)
+        && typeof request.siblingsCount === "number"
         && Number.isSafeInteger(request.siblingsCount)
         && (request.siblingsCount > items.maxImmSub)
     ) {
@@ -52,6 +53,7 @@ function operationPermitted (
         adds
         && (maxValueCount !== undefined)
         && ("attributeType" in request)
+        && typeof request.valuesCount === "number"
         && Number.isSafeInteger(request.valuesCount)
         && (request.valuesCount > Number(maxValueCount))
     ) {

@@ -73,11 +73,9 @@ export class CertUpdateReq_certs_Item {
      * @returns {CertUpdateReq_certs_Item}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof CertUpdateReq_certs_Item]: CertUpdateReq_certs_Item[_K];
             }
-        >
     ): CertUpdateReq_certs_Item {
         return new CertUpdateReq_certs_Item(
             _o.subject,

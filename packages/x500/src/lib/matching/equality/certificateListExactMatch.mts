@@ -57,12 +57,18 @@ const certificateListExactMatch: EqualityMatcher = (
         return false;
     }
     if (a.distributionPoint) {
-        const ext: Extension = v.toBeSigned.crlExtensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_issuingDistributionPoint)));
+        const ext: Extension | undefined = v.toBeSigned.crlExtensions
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_issuingDistributionPoint)));
+        if (!ext) {
+            return false;
+        }
         const el: DERElement = new DERElement();
         el.fromBytes(ext.extnValue);
         const ips: IssuingDistPointSyntax = _decode_IssuingDistPointSyntax(el);
         const stored = ips.distributionPoint;
+        if (!stored) {
+            return false;
+        }
         if ("fullName" in stored) {
             if (!("fullName" in a.distributionPoint)) {
                 return false;

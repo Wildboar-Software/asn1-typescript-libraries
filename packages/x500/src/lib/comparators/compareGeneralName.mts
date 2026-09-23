@@ -35,7 +35,12 @@ function compareGeneralName (
             return false;
         }
 
-        if (a.otherName.directReference.toString() !== b.otherName.directReference.toString()) {
+        const aRef = a.otherName.directReference;
+        const bRef = b.otherName.directReference;
+        if (Boolean(aRef) !== Boolean(bRef)) {
+            return false;
+        }
+        if (aRef && bRef && aRef.toString() !== bRef.toString()) {
             return false;
         }
 

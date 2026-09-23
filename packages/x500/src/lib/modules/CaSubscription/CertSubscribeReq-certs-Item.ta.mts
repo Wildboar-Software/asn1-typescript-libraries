@@ -66,11 +66,9 @@ export class CertSubscribeReq_certs_Item {
      * @returns {CertSubscribeReq_certs_Item}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof CertSubscribeReq_certs_Item]: CertSubscribeReq_certs_Item[_K];
             }
-        >
     ): CertSubscribeReq_certs_Item {
         return new CertSubscribeReq_certs_Item(
             _o.subject,

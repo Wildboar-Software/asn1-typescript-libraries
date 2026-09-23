@@ -161,11 +161,9 @@ export class PartialOutcomeQualifier {
      * @returns {PartialOutcomeQualifier}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof PartialOutcomeQualifier]: PartialOutcomeQualifier[_K];
             }
-        >
     ): PartialOutcomeQualifier {
         return new PartialOutcomeQualifier(
             _o.limitProblem,
