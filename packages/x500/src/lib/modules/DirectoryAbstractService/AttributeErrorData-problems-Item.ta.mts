@@ -87,11 +87,9 @@ export class AttributeErrorData_problems_Item {
      * @returns {AttributeErrorData_problems_Item}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof AttributeErrorData_problems_Item]: AttributeErrorData_problems_Item[_K];
             }
-        >
     ): AttributeErrorData_problems_Item {
         return new AttributeErrorData_problems_Item(
             _o.problem,

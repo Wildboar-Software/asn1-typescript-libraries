@@ -29,23 +29,32 @@ const certificatePairExactMatch: EqualityMatcher = (
 ): boolean => {
     const a: CertificatePairExactAssertion = _decode_CertificatePairExactAssertion(assertion);
     const v: CertificatePair = _decode_CertificatePair(value);
-    {
+    const issuedTo = a.issuedToThisCAAssertion;
+    const issuedBy = a.issuedByThisCAAssertion;
+    if (!issuedTo && !issuedBy) {
+        return false;
+    }
+    if (issuedTo) {
         const cert = v.issuedToThisCA;
-        const assertedCert = a.issuedToThisCAAssertion;
-        if (Buffer.compare(cert.toBeSigned.serialNumber, assertedCert.serialNumber)) {
+        if (!cert) {
             return false;
         }
-        if (!compareName(cert.toBeSigned.issuer, assertedCert.issuer, getEqualityMatcher)) {
+        if (Buffer.compare(cert.toBeSigned.serialNumber, issuedTo.serialNumber)) {
+            return false;
+        }
+        if (!compareName(cert.toBeSigned.issuer, issuedTo.issuer, getEqualityMatcher)) {
             return false;
         }
     }
-    {
+    if (issuedBy) {
         const cert = v.issuedByThisCA;
-        const assertedCert = a.issuedByThisCAAssertion;
-        if (Buffer.compare(cert.toBeSigned.serialNumber, assertedCert.serialNumber)) {
+        if (!cert) {
             return false;
         }
-        if (!compareName(cert.toBeSigned.issuer, assertedCert.issuer, getEqualityMatcher)) {
+        if (Buffer.compare(cert.toBeSigned.serialNumber, issuedBy.serialNumber)) {
+            return false;
+        }
+        if (!compareName(cert.toBeSigned.issuer, issuedBy.issuer, getEqualityMatcher)) {
             return false;
         }
     }

@@ -60,7 +60,7 @@ function itemIsProtected (
             return false;
         }
     } else if ("attributeType" in request) {
-        return (
+        return Boolean(
             (
                 (protectedItems.allUserAttributeTypes === null)
                 && !request.operational
@@ -73,7 +73,8 @@ function itemIsProtected (
             )
         );
     } else if ("value" in request) {
-        return (
+        const contexts = request.contexts;
+        return Boolean(
             protectedItems.allAttributeValues
                 ?.some((av) => request.value.type_.isEqualTo(av))
             || (
@@ -139,10 +140,10 @@ function itemIsProtected (
             // || protectedItems.restrictedBy // Probably will never support this.
             //     ?.some((rb) => rb.type_.toString() === request.value.type_.toString())
             || (
-                request.contexts?.length
+                contexts?.length
                 && protectedItems.contexts?.every((ca) => evaluateContextAssertion(
                     ca,
-                    request.contexts,
+                    contexts,
                     settings.getContextMatcher,
                     settings.determineAbsentMatch,
                 )))

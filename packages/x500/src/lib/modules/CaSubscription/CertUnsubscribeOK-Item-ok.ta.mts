@@ -65,11 +65,9 @@ export class CertUnsubscribeOK_Item_ok {
      * @returns {CertUnsubscribeOK_Item_ok}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof CertUnsubscribeOK_Item_ok]: CertUnsubscribeOK_Item_ok[_K];
             }
-        >
     ): CertUnsubscribeOK_Item_ok {
         return new CertUnsubscribeOK_Item_ok(
             _o.subject,

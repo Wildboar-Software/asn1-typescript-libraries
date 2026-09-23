@@ -26,9 +26,13 @@ const certificatePairMatch: EqualityMatcher = (
 ): boolean => {
     const a: CertificatePairAssertion = _decode_CertificatePairAssertion(assertion);
     const v: CertificatePair = _decode_CertificatePair(value);
+    const issuedBy = a.issuedByThisCAAssertion;
+    const issuedTo = a.issuedToThisCAAssertion;
+    const issuedByCert = v.issuedByThisCA;
+    const issuedToCert = v.issuedToThisCA;
     return (
-        evaluateCertificateAssertion(a.issuedByThisCAAssertion, v.issuedByThisCA)
-        && evaluateCertificateAssertion(a.issuedToThisCAAssertion, v.issuedToThisCA)
+        (!issuedBy || (!!issuedByCert && evaluateCertificateAssertion(issuedBy, issuedByCert)))
+        && (!issuedTo || (!!issuedToCert && evaluateCertificateAssertion(issuedTo, issuedToCert)))
     );
 }
 

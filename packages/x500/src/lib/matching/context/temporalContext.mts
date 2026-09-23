@@ -184,7 +184,7 @@ function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification):
             throw new Error(); // There is no other option.
         }
     })();
-    return xor(result, spec.notThisTime);
+    return xor(result, spec.notThisTime ?? false);
 }
 
 /**
@@ -242,7 +242,7 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
             throw new Error(); // There is no other option.
         }
     })();
-    return xor(result, spec.notThisTime);
+    return xor(result, spec.notThisTime ?? false);
 }
 
 /**

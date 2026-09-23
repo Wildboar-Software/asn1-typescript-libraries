@@ -149,11 +149,9 @@ export class SubSchemaSyntax_Item_subSchema {
      * @returns {SubSchemaSyntax_Item_subSchema}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof SubSchemaSyntax_Item_subSchema]: SubSchemaSyntax_Item_subSchema[_K];
             }
-        >
     ): SubSchemaSyntax_Item_subSchema {
         return new SubSchemaSyntax_Item_subSchema(
             _o.structureRules,

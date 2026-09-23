@@ -128,11 +128,9 @@ export class UpdateShadowArgumentData {
      * @returns {UpdateShadowArgumentData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof UpdateShadowArgumentData]: UpdateShadowArgumentData[_K];
             }
-        >
     ): UpdateShadowArgumentData {
         return new UpdateShadowArgumentData(
             _o.agreementID,

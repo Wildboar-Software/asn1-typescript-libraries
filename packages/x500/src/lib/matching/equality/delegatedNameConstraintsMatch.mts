@@ -35,7 +35,7 @@ const delegatedNameConstraintsMatch: EqualityMatcher = (
     const a: NameConstraintsSyntax = _decode_NameConstraintsSyntax(assertion);
     const v: AttributeCertificate = _decode_AttributeCertificate(value);
     const ext: Extension | undefined = v.toBeSigned.extensions
-        .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_delegatedNameConstraints)));
+        ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_delegatedNameConstraints)));
     if (!ext) {
         return false;
     }

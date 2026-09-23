@@ -142,8 +142,14 @@ function *weeks(p: Period): IterableIterator<number> {
 }
 
 function startOfX520Week(p: Period, year: number, month?: number, week?: number): Date {
+    if (week === undefined) {
+        throw new Error("X.520 week number is required");
+    }
     let start: Date;
     if (p.months) {
+        if (month === undefined) {
+            throw new Error("X.520 month is required for a week-of-month");
+        }
         // weeks of the month.
         if (week === X520_LAST_WEEK_OF_MONTH) {
             if (month === 12) {
@@ -247,7 +253,7 @@ function *bitDays(p: Period, daysOfWeek: BIT_STRING, year: number, month?: numbe
     }
 }
 
-function *xDaysOfMonth(occurrence: number, daymask: number, year: number, month?: number): IterableIterator<Date> {
+function *xDaysOfMonth(occurrence: number, daymask: number, year: number, month: number): IterableIterator<Date> {
     let start = startOfMonth(new Date(year, month - 1, 1));
     if (occurrence === X520_LAST_WEEK_OF_MONTH) {
         /* Within the weeks component, week 5 means "last week" of the month,
@@ -311,7 +317,7 @@ function *allDays(p: Period, year: number, month?: number, week?: number): Itera
         for (let d = w; d < end; d = addDays(d, 1)) {
             yield d;
         }
-    } else if (p.months) {
+    } else if (p.months && month !== undefined) {
         const m = new Date(year, month - 1, 1);
         const end = endOfMonth(m);
         for (let d = m; d < end; d = addDays(d, 1)) {
@@ -343,7 +349,10 @@ function *days(p: Period, year: number, month?: number, week?: number): Iterable
     }
 }
 
-function *timeBands(date: Date, bands: DayTimeBand[], startInstant?: Date): IterableIterator<[Date, Date]> {
+function *timeBands(date: Date, bands: DayTimeBand[] | undefined, startInstant?: Date): IterableIterator<[Date, Date]> {
+    if (!bands) {
+        return;
+    }
     for (const band of bands) {
         const sod = startOfDay(date);
         const sob = band.startDayTime ?? DayTimeBand._default_value_for_startDayTime;

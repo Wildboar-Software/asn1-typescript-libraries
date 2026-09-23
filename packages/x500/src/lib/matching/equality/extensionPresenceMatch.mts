@@ -24,7 +24,7 @@ const extensionPresenceMatch: EqualityMatcher = (
 ): boolean => {
     const a: OBJECT_IDENTIFIER = assertion.objectIdentifier;
     const tbs: ASN1Element = value.sequence[0];
-    const pkcExt: ASN1Element = tbs.sequence
+    const pkcExt: ASN1Element | undefined = tbs.sequence
         .find((el) => (
             (el.tagClass === ASN1TagClass.context)
             && (el.construction === ASN1Construction.constructed)

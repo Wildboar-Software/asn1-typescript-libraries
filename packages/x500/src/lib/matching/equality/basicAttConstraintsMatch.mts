@@ -33,7 +33,7 @@ const basicAttConstraintsMatch: EqualityMatcher = (
     const a: BasicAttConstraintsSyntax = _decode_BasicAttConstraintsSyntax(assertion);
     const v: AttributeCertificate = _decode_AttributeCertificate(value);
     const ext: Extension | undefined = v.toBeSigned.extensions
-        .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_basicAttConstraints)));
+        ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_basicAttConstraints)));
     if (!ext) {
         return false;
     }

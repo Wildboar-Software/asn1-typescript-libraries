@@ -27,12 +27,15 @@ const storedPrefixMatch: SubstringsMatcher = (
     if (v.startsWith(a)) {
         return true;
     }
-    a = prepString(a);
-    v = prepString(v);
-    if (a.length > v.length) {
+    const preparedA = prepString(a);
+    const preparedV = prepString(v);
+    if (preparedA === undefined || preparedV === undefined) {
         return false;
     }
-    return v.toUpperCase().startsWith(a.toUpperCase());
+    if (preparedA.length > preparedV.length) {
+        return false;
+    }
+    return preparedV.toUpperCase().startsWith(preparedA.toUpperCase());
 }
 
 export default storedPrefixMatch;

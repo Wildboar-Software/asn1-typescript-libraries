@@ -50,14 +50,14 @@ function sort (
     const avalues: ATVAC[] = onlyRDN
         ? (a.name.rdnSequence[a.name.rdnSequence.length - 1]
             ?.map((atav): ATVAC => [ atav.type_, atav.value, [] ]) ?? [])
-        : a.information
+        : (a.information ?? [])
             .map((info) => ("attribute" in info) ? info.attribute : undefined)
             .filter((attr): attr is Attribute => !!attr)
             .flatMap(getValueTuplesFromAttribute);
     const bvalues: ATVAC[] = onlyRDN
         ? (b.name.rdnSequence[a.name.rdnSequence.length - 1]
             ?.map((atav): ATVAC => [ atav.type_, atav.value, [] ]) ?? [])
-        : b.information
+        : (b.information ?? [])
             .map((info) => ("attribute" in info) ? info.attribute : undefined)
             .filter((attr): attr is Attribute => !!attr)
             .flatMap(getValueTuplesFromAttribute);
@@ -73,10 +73,12 @@ function sort (
 
         const relevantAValues: ASN1Element[] = avalues
             .filter(([ type_ ]) =>key.type_.isEqualTo(type_))
-            .map(([ , value ]) => value);
+            .map(([ , value ]) => value)
+            .filter((value): value is ASN1Element => value !== undefined);
         const relevantBValues: ASN1Element[] = bvalues
             .filter(([ type_ ]) => key.type_.isEqualTo(type_))
-            .map(([ , value ]) => value);
+            .map(([ , value ]) => value)
+            .filter((value): value is ASN1Element => value !== undefined);
 
         const lowestAValue: ASN1Element = relevantAValues.sort((a, b) => orderer(a, b))[0];
         const lowestBValue: ASN1Element = relevantBValues.sort((a, b) => orderer(a, b))[0];

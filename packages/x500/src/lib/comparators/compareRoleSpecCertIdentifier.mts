@@ -28,10 +28,20 @@ function compareRoleSpecCertIdentifier (
     if (!compareGeneralName(a.roleCertIssuer, b.roleCertIssuer, getEqualityMatcher)) {
         return false;
     }
-    if (Buffer.compare(a.roleCertSerialNumber, b.roleCertSerialNumber)) {
+    const aSerial = a.roleCertSerialNumber;
+    const bSerial = b.roleCertSerialNumber;
+    if (Boolean(aSerial) !== Boolean(bSerial)) {
         return false;
     }
-    return ((!a && !b) || ((a && b) && compareGeneralNames(a.roleCertLocator, b.roleCertLocator, getEqualityMatcher)));
+    if (aSerial && bSerial && Buffer.compare(aSerial, bSerial)) {
+        return false;
+    }
+    const aLocator = a.roleCertLocator;
+    const bLocator = b.roleCertLocator;
+    if (!aLocator || !bLocator) {
+        return !aLocator && !bLocator;
+    }
+    return compareGeneralNames(aLocator, bLocator, getEqualityMatcher);
 }
 
 export default compareRoleSpecCertIdentifier;

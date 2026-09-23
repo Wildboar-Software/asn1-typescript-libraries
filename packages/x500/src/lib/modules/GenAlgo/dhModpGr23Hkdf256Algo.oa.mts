@@ -10,6 +10,7 @@ import {
     _decode_Payload23,
     _encode_Payload23,
 } from "../GenAlgo/Payload23.ta.mjs";
+import type { ASN1Encoder } from "@wildboar/asn1/functional";
 import { type ALGORITHM } from "@wildboar/pki-stub";
 /**
  * @summary dhModpGr23Hkdf256Algo
@@ -45,7 +46,7 @@ export const dhModpGr23Hkdf256Algo: ALGORITHM<Group23, Payload23> = {
     },
     encoderFor: {
         "&Type": _encode_Group23,
-        "&DynParms": _encode_Payload23,
+        "&DynParms": _encode_Payload23 as ASN1Encoder<Payload23 | undefined>,
     },
     "&id": id_algo_dhModpGr23Hkdf256Algo /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

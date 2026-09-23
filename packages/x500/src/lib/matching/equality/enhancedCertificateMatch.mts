@@ -110,7 +110,7 @@ function evaluateEnhancedCertificateAssertion (
     }
     if (assertion.subjectKeyIdentifier) {
         const ski: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectKeyIdentifier)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectKeyIdentifier)));
         if (!ski) {
             return false;
         }
@@ -122,7 +122,7 @@ function evaluateEnhancedCertificateAssertion (
     }
     if (assertion.authorityKeyIdentifier) {
         const aki: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_authorityKeyIdentifier)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_authorityKeyIdentifier)));
         if (!aki) {
             return false;
         }
@@ -148,7 +148,7 @@ function evaluateEnhancedCertificateAssertion (
 
     if (assertion.privateKeyValid) {
         const pkupExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_privateKeyUsagePeriod)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_privateKeyUsagePeriod)));
         if (pkupExt) {
             const el: DERElement = new DERElement();
             el.fromBytes(pkupExt.extnValue);
@@ -176,7 +176,7 @@ function evaluateEnhancedCertificateAssertion (
 
     if (assertion.keyUsage) {
         const kuExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_keyUsage)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_keyUsage)));
         if (!kuExt) {
             return false;
         }
@@ -191,21 +191,23 @@ function evaluateEnhancedCertificateAssertion (
         }
     }
 
-    if (assertion.subjectAltName) {
+    const subjectAltName = assertion.subjectAltName;
+    if (subjectAltName) {
         const sanExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
         if (!sanExt) {
             return false;
         }
         const el: DERElement = new DERElement();
         el.fromBytes(sanExt.extnValue);
         const sans: GeneralNames = _decode_GeneralNames(el);
-        if (assertion.subjectAltName.altNameValue) {
-            if (!sans.some((san): boolean => compareGeneralName(san, assertion.subjectAltName.altNameValue, getEqualityMatcher))) {
+        const altNameValue = subjectAltName.altNameValue;
+        if (altNameValue) {
+            if (!sans.some((san): boolean => compareGeneralName(san, altNameValue, getEqualityMatcher))) {
                 return false;
             }
-        } else if ("builtinNameForm" in assertion.subjectAltName.altnameType) {
-            const altNameType: number = assertion.subjectAltName.altnameType.builtinNameForm;
+        } else if ("builtinNameForm" in subjectAltName.altnameType) {
+            const altNameType: number = subjectAltName.altnameType.builtinNameForm;
             switch (altNameType) {
             case (AltNameType_builtinNameForm_rfc822Name as number): {
                 if (!sans.some((san): boolean => ("rfc822Name" in san))) {
@@ -256,16 +258,14 @@ function evaluateEnhancedCertificateAssertion (
                 break;
             }
             }
-        } else if ("otherNameForm" in assertion.subjectAltName.altnameType) {
+        } else if ("otherNameForm" in subjectAltName.altnameType) {
+            const otherName = subjectAltName.altnameType.otherNameForm;
             if (!sans.some((san): boolean => {
-                if (!("otherNameForm" in assertion.subjectAltName.altnameType)) {
-                    return false;
-                }
-                const otherName: OBJECT_IDENTIFIER = assertion.subjectAltName.altnameType.otherNameForm;
                 if (!("otherName" in san)) {
                     return false;
                 }
-                return (san.otherName.directReference.isEqualTo(otherName));
+                const directReference = san.otherName.directReference;
+                return !!directReference && directReference.isEqualTo(otherName);
             })) {
                 return false;
             }
@@ -276,7 +276,7 @@ function evaluateEnhancedCertificateAssertion (
 
     if (assertion.policy) {
         const cpExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_certificatePolicies)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_certificatePolicies)));
         if (!cpExt) {
             return false;
         }
@@ -298,7 +298,7 @@ function evaluateEnhancedCertificateAssertion (
 
     if (assertion.pathToName) {
         const ncExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_nameConstraints)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_nameConstraints)));
         if (ncExt) {
             const el: DERElement = new DERElement();
             el.fromBytes(ncExt.extnValue);
@@ -379,7 +379,7 @@ function evaluateEnhancedCertificateAssertion (
         }
 
         const sanExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
         if (sanExt) {
             const el: DERElement = new DERElement();
             el.fromBytes(sanExt.extnValue);
