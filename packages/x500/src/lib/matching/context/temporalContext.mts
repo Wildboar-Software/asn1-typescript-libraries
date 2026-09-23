@@ -1,7 +1,7 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
 import {
-    type TimeSpecification,
+    TimeSpecification,
     _decode_TimeSpecification,
 } from "../../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
 import {
@@ -184,7 +184,7 @@ function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification):
             throw new Error(); // There is no other option.
         }
     })();
-    return xor(result, spec.notThisTime ?? false);
+    return xor(result, spec.notThisTime ?? TimeSpecification._default_value_for_notThisTime);
 }
 
 /**
@@ -242,7 +242,7 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
             throw new Error(); // There is no other option.
         }
     })();
-    return xor(result, spec.notThisTime ?? false);
+    return xor(result, spec.notThisTime ?? TimeSpecification._default_value_for_notThisTime);
 }
 
 /**

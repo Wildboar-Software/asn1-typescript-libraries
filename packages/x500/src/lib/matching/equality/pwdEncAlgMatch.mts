@@ -35,7 +35,7 @@ const pwdEncAlgMatch: EqualityMatcher = (
             && a.parameters !== undefined
             && compareElements(alg.parameters, a.parameters)
         );
-    return alg.algorithm.isEqualTo(a.algorithm) && sameParameters;
+    return sameParameters && alg.algorithm.isEqualTo(a.algorithm);
 }
 
 export default pwdEncAlgMatch;

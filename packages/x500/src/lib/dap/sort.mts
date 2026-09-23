@@ -72,13 +72,15 @@ function sort (
         }
 
         const relevantAValues: ASN1Element[] = avalues
-            .filter(([ type_ ]) =>key.type_.isEqualTo(type_))
-            .map(([ , value ]) => value)
-            .filter((value): value is ASN1Element => value !== undefined);
+            .filter((tuple): tuple is [OBJECT_IDENTIFIER, ASN1Element, ATVAC[2]] => (
+                key.type_.isEqualTo(tuple[0]) && tuple[1] !== undefined
+            ))
+            .map(([, value]) => value);
         const relevantBValues: ASN1Element[] = bvalues
-            .filter(([ type_ ]) => key.type_.isEqualTo(type_))
-            .map(([ , value ]) => value)
-            .filter((value): value is ASN1Element => value !== undefined);
+            .filter((tuple): tuple is [OBJECT_IDENTIFIER, ASN1Element, ATVAC[2]] => (
+                key.type_.isEqualTo(tuple[0]) && tuple[1] !== undefined
+            ))
+            .map(([, value]) => value);
 
         const lowestAValue: ASN1Element = relevantAValues.sort((a, b) => orderer(a, b))[0];
         const lowestBValue: ASN1Element = relevantBValues.sort((a, b) => orderer(a, b))[0];
