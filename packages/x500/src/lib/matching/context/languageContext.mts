@@ -1,5 +1,4 @@
-import type { CharacterStringInput } from "../readValue.mjs";
-import { readPrintableString } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 10.1 `languageContext`.
@@ -15,12 +14,12 @@ import { readPrintableString } from "../readValue.mjs";
  */
 export
 function evaluateLanguageContext (
-    assertion: CharacterStringInput,
-    value: CharacterStringInput,
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
 ): boolean {
     return evaluateLanguageContextTyped(
-        readPrintableString(assertion),
-        readPrintableString(value),
+        typeof assertion === "string" ? assertion : assertion.printableString,
+        typeof value === "string" ? value : value.printableString,
     );
 }
 

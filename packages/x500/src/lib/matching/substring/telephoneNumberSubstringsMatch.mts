@@ -47,11 +47,11 @@ function telephoneNumberSubstringsMatchTyped (
     const v: string = value.replace(/\D/g, "");
     return assertion.every((str) => {
         if (str.kind === "initial") {
-            return v.startsWith(str.text);
+            return v.startsWith(str.value);
         } else if (str.kind === "any") {
-            return (v.indexOf(str.text) > -1);
+            return (v.indexOf(str.value) > -1);
         } else if (str.kind === "final") {
-            return v.endsWith(str.text);
+            return v.endsWith(str.value);
         } else {
             return false;
         }

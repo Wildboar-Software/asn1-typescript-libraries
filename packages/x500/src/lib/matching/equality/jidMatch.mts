@@ -1,5 +1,4 @@
-import type { CharacterStringInput } from "../readValue.mjs";
-import { readUTF8String } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.9.4 `jidMatch`.
@@ -13,10 +12,13 @@ import { readUTF8String } from "../readValue.mjs";
  */
 export
 function jidMatch (
-    assertion: CharacterStringInput,
-    value: CharacterStringInput,
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
 ): boolean {
-    return jidMatchTyped(readUTF8String(assertion), readUTF8String(value));
+    return jidMatchTyped(
+        typeof assertion === "string" ? assertion : assertion.utf8String,
+        typeof value === "string" ? value : value.utf8String,
+    );
 }
 
 /**

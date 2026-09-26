@@ -1,5 +1,4 @@
-import type { CharacterStringInput } from "../readValue.mjs";
-import { readUTF8String } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import { dnsNameMatchTyped } from "./dnsNameMatch.mjs";
 
@@ -14,10 +13,13 @@ import { dnsNameMatchTyped } from "./dnsNameMatch.mjs";
  */
 export
 function intEmailMatch (
-    assertion: CharacterStringInput,
-    value: CharacterStringInput,
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
 ): boolean {
-    return intEmailMatchTyped(readUTF8String(assertion), readUTF8String(value));
+    return intEmailMatchTyped(
+        typeof assertion === "string" ? assertion : assertion.utf8String,
+        typeof value === "string" ? value : value.utf8String,
+    );
 }
 
 /**

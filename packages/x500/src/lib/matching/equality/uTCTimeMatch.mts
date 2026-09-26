@@ -1,5 +1,5 @@
-import type { TimeInput } from "../readValue.mjs";
-import { readUTCTime } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
+import { isAsn1Element } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.3.1 `uTCTimeMatch`.
@@ -11,10 +11,13 @@ import { readUTCTime } from "../readValue.mjs";
  */
 export
 function uTCTimeMatch (
-    assertion: TimeInput,
-    value: TimeInput,
+    assertion: ASN1Element | Date,
+    value: ASN1Element | Date,
 ): boolean {
-    return uTCTimeMatchTyped(readUTCTime(assertion), readUTCTime(value));
+    return uTCTimeMatchTyped(
+        isAsn1Element(assertion) ? assertion.utcTime : assertion,
+        isAsn1Element(value) ? value.utcTime : value,
+    );
 }
 
 /**

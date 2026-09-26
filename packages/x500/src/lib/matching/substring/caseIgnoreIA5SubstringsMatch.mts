@@ -1,13 +1,10 @@
+import type { ASN1Element } from "@wildboar/asn1";
 import type SubstringSelection from "../../types/SubstringSelection.mjs";
-import type { CharacterStringInput } from "../readValue.mjs";
 import type {
     PreparedSubstring,
     SubstringAssertionInput,
 } from "../readValue.mjs";
-import {
-    readIA5String,
-    readSubstringAssertion,
-} from "../readValue.mjs";
+import { readSubstringAssertion } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.11.3
@@ -24,12 +21,12 @@ import {
 export
 function caseIgnoreIA5SubstringsMatch (
     assertion: SubstringAssertionInput,
-    value: CharacterStringInput,
+    value: ASN1Element | string,
     _selection?: SubstringSelection,
 ): boolean {
     return caseIgnoreIA5SubstringsMatchTyped(
         readSubstringAssertion(assertion),
-        readIA5String(value),
+        typeof value === "string" ? value : value.ia5String,
     );
 }
 
@@ -49,11 +46,11 @@ function caseIgnoreIA5SubstringsMatchTyped (
 ): boolean {
     return assertion.every((str) => {
         if (str.kind === "initial") {
-            return value.startsWith(str.text);
+            return value.startsWith(str.value);
         } else if (str.kind === "any") {
-            return (value.indexOf(str.text) > -1);
+            return (value.indexOf(str.value) > -1);
         } else if (str.kind === "final") {
-            return value.endsWith(str.text);
+            return value.endsWith(str.value);
         } else {
             return false;
         }

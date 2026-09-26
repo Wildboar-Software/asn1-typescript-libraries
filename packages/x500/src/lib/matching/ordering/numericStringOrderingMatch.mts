@@ -1,5 +1,4 @@
-import type { CharacterStringInput } from "../readValue.mjs";
-import { readNumericString } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.5
@@ -13,12 +12,12 @@ import { readNumericString } from "../readValue.mjs";
  */
 export
 function numericStringOrderingMatch (
-    assertion: CharacterStringInput,
-    value: CharacterStringInput,
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
 ): number {
     return numericStringOrderingMatchTyped(
-        readNumericString(assertion),
-        readNumericString(value),
+        typeof assertion === "string" ? assertion : assertion.numericString,
+        typeof value === "string" ? value : value.numericString,
     );
 }
 

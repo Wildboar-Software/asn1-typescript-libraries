@@ -57,7 +57,7 @@ function caseIgnoreListSubstringsMatchTyped (
     const lastStr: string = value[value.length - 1];
     for (const substr of assertion) {
         if (substr.kind === "any") {
-            const s: string = substr.text;
+            const s: string = substr.value;
             let matched: boolean = false;
             for (const str of value) {
                 if (str.indexOf(s) >= 0) {
@@ -69,11 +69,11 @@ function caseIgnoreListSubstringsMatchTyped (
                 return false;
             }
         } else if (substr.kind === "initial") {
-            if (!firstStr.startsWith(substr.text)) {
+            if (!firstStr.startsWith(substr.value)) {
                 return false;
             }
         } else if (substr.kind === "final") {
-            if (!lastStr.endsWith(substr.text)) {
+            if (!lastStr.endsWith(substr.value)) {
                 return false;
             }
         } else {

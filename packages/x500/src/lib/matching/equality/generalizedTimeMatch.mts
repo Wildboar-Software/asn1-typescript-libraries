@@ -1,5 +1,5 @@
-import type { TimeInput } from "../readValue.mjs";
-import { readGeneralizedTime } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
+import { isAsn1Element } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.3.3 `generalizedTimeMatch`.
@@ -12,12 +12,12 @@ import { readGeneralizedTime } from "../readValue.mjs";
  */
 export
 function generalizedTimeMatch (
-    assertion: TimeInput,
-    value: TimeInput,
+    assertion: ASN1Element | Date,
+    value: ASN1Element | Date,
 ): boolean {
     return generalizedTimeMatchTyped(
-        readGeneralizedTime(assertion),
-        readGeneralizedTime(value),
+        isAsn1Element(assertion) ? assertion.generalizedTime : assertion,
+        isAsn1Element(value) ? value.generalizedTime : value,
     );
 }
 

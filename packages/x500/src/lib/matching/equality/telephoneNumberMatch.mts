@@ -1,5 +1,4 @@
-import type { CharacterStringInput } from "../readValue.mjs";
-import { readPrintableString } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
 
 function normalizeTelephoneNumber (telephoneNumber: string): string {
     return telephoneNumber.replace(/[- ]/g, "");
@@ -20,12 +19,12 @@ function normalizeTelephoneNumber (telephoneNumber: string): string {
  */
 export
 function telephoneNumberMatch (
-    assertion: CharacterStringInput,
-    value: CharacterStringInput,
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
 ): boolean {
     return telephoneNumberMatchTyped(
-        readPrintableString(assertion),
-        readPrintableString(value),
+        typeof assertion === "string" ? assertion : assertion.printableString,
+        typeof value === "string" ? value : value.printableString,
     );
 }
 

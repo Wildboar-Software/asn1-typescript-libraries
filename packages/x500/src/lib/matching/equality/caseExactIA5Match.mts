@@ -1,5 +1,4 @@
-import type { CharacterStringInput } from "../readValue.mjs";
-import { readIA5String } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
 import { prepString } from "../../utils/prepString.mjs";
 
 /**
@@ -15,10 +14,13 @@ import { prepString } from "../../utils/prepString.mjs";
  */
 export
 function caseExactIA5Match (
-    assertion: CharacterStringInput,
-    value: CharacterStringInput,
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
 ): boolean {
-    return caseExactIA5MatchTyped(readIA5String(assertion), readIA5String(value));
+    return caseExactIA5MatchTyped(
+        typeof assertion === "string" ? assertion : assertion.ia5String,
+        typeof value === "string" ? value : value.ia5String,
+    );
 }
 
 /**

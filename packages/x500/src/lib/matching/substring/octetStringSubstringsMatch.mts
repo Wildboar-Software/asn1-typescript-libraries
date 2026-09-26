@@ -1,12 +1,12 @@
 import { Buffer } from "node:buffer";
+import type { ASN1Element } from "@wildboar/asn1";
 import type SubstringSelection from "../../types/SubstringSelection.mjs";
-import type { OctetStringInput } from "../readValue.mjs";
 import type {
     OctetSubstringAssertionInput,
     PreparedOctetSubstring,
 } from "../readValue.mjs";
 import {
-    readOctetString,
+    isAsn1Element,
     readOctetSubstringAssertion,
 } from "../readValue.mjs";
 
@@ -24,12 +24,12 @@ import {
 export
 function octetStringSubstringsMatch (
     assertion: OctetSubstringAssertionInput,
-    value: OctetStringInput,
+    value: ASN1Element | Uint8Array,
     _selection?: SubstringSelection,
 ): boolean {
     return octetStringSubstringsMatchTyped(
         readOctetSubstringAssertion(assertion),
-        readOctetString(value),
+        isAsn1Element(value) ? value.octetString : value,
     );
 }
 
@@ -49,19 +49,19 @@ function octetStringSubstringsMatchTyped (
     const buf: Buffer = Buffer.from(value);
     return assertion.every((o) => {
         if (o.kind === "initial") {
-            if (o.octets.length > value.length) {
+            if (o.value.length > value.length) {
                 return false;
             }
-            return Buffer.compare(value.subarray(0, o.octets.length), o.octets) === 0;
+            return Buffer.compare(value.subarray(0, o.value.length), o.value) === 0;
         } else if (o.kind === "any") {
-            return (buf.indexOf(o.octets) > -1);
+            return (buf.indexOf(o.value) > -1);
         } else if (o.kind === "final") {
-            if (o.octets.length > value.length) {
+            if (o.value.length > value.length) {
                 return false;
             }
             return Buffer.compare(
-                value.subarray(value.length - o.octets.length),
-                o.octets,
+                value.subarray(value.length - o.value.length),
+                o.value,
             ) === 0;
         } else {
             return false;

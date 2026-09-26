@@ -1,5 +1,4 @@
-import type { CharacterStringInput } from "../readValue.mjs";
-import { readUTF8String } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
 import { domainToUnicode } from "node:url";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 
@@ -27,10 +26,13 @@ function compareLabels (a: string, b: string, wildcardAllowed: boolean): boolean
  */
 export
 function dnsNameMatch (
-    assertion: CharacterStringInput,
-    value: CharacterStringInput,
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
 ): boolean {
-    return dnsNameMatchTyped(readUTF8String(assertion), readUTF8String(value));
+    return dnsNameMatchTyped(
+        typeof assertion === "string" ? assertion : assertion.utf8String,
+        typeof value === "string" ? value : value.utf8String,
+    );
 }
 
 /**

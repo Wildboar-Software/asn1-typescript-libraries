@@ -4,7 +4,6 @@ import {
     ASN1UniversalType,
     BERElement,
     ObjectIdentifier,
-    type BIT_STRING,
     type INTEGER,
     type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
@@ -191,30 +190,6 @@ function readBoolean (value: BooleanInput): boolean {
     return typeof value === "boolean" ? value : value.boolean;
 }
 
-/** OCTET STRING element or the octet contents. */
-export type OctetStringInput = ASN1Element | Uint8Array;
-
-/**
- * @param value Element or bytes.
- * @returns The octet contents.
- */
-export
-function readOctetString (value: OctetStringInput): Uint8Array {
-    return isAsn1Element(value) ? value.octetString : value;
-}
-
-/** BIT STRING element or one number per bit (`Uint8ClampedArray`). */
-export type BitStringInput = ASN1Element | BIT_STRING;
-
-/**
- * @param value Element or decoded bit string.
- * @returns One entry per significant bit.
- */
-export
-function readBitString (value: BitStringInput): BIT_STRING {
-    return value instanceof Uint8ClampedArray ? value : value.bitString;
-}
-
 /**
  * OBJECT IDENTIFIER element, `ObjectIdentifier`, or dotted-decimal
  * notation (`"2.5.4.3"`).
@@ -256,126 +231,75 @@ function readLeadingObjectIdentifier (value: ObjectIdentifierInput): OBJECT_IDEN
     return inner.objectIdentifier;
 }
 
-/** `GeneralizedTime` or `UTCTime` element, or a `Date` instant. */
-export type TimeInput = ASN1Element | Date;
-
 /**
- * @param value GeneralizedTime element or `Date`.
- * @returns The instant.
+ * One `initial`, `any`, or `final` substring piece, plus `control`
+ * and unrecognized choices so the typed matcher can reject them.
+ * `T` is the piece payload: a string or an octet string.
  */
-export
-function readGeneralizedTime (value: TimeInput): Date {
-    return isAsn1Element(value) ? value.generalizedTime : value;
-}
-
-/**
- * @param value UTCTime element or `Date`.
- * @returns The instant.
- */
-export
-function readUTCTime (value: TimeInput): Date {
-    return isAsn1Element(value) ? value.utcTime : value;
-}
-
-/** Character-string element or the decoded string. */
-export type CharacterStringInput = ASN1Element | string;
-
-/**
- * @param value Element or string.
- * @returns IA5String characters.
- */
-export
-function readIA5String (value: CharacterStringInput): string {
-    return typeof value === "string" ? value : value.ia5String;
-}
-
-/**
- * @param value Element or string.
- * @returns NumericString characters.
- */
-export
-function readNumericString (value: CharacterStringInput): string {
-    return typeof value === "string" ? value : value.numericString;
-}
-
-/**
- * @param value Element or string.
- * @returns UTF8String characters.
- */
-export
-function readUTF8String (value: CharacterStringInput): string {
-    return typeof value === "string" ? value : value.utf8String;
-}
-
-/**
- * @param value Element or string.
- * @returns PrintableString characters.
- */
-export
-function readPrintableString (value: CharacterStringInput): string {
-    return typeof value === "string" ? value : value.printableString;
-}
-
-/**
- * One substring piece after directory strings have been turned into
- * JavaScript strings. `control` and unrecognized choices are kept so
- * the typed matcher can reject them the way the specifications do.
- */
-export type PreparedSubstring =
-    | { readonly kind: "initial"; readonly text: string }
-    | { readonly kind: "any"; readonly text: string }
-    | { readonly kind: "final"; readonly text: string }
+export type PreparedSubstringPiece<T> =
+    | { readonly kind: "initial"; readonly value: T }
+    | { readonly kind: "any"; readonly value: T }
+    | { readonly kind: "final"; readonly value: T }
     | { readonly kind: "control" }
     | { readonly kind: "unknown" };
+
+/** Prepared `SubstringAssertion` pieces. */
+export type PreparedSubstring = PreparedSubstringPiece<string>;
+
+/** Prepared `OctetSubstringAssertion` pieces. */
+export type PreparedOctetSubstring = PreparedSubstringPiece<Uint8Array>;
+
+/**
+ * A CHOICE alternative before its component is converted to `T`.
+ * `control` exists only on `SubstringAssertion`.
+ */
+type SubstringAlternative<T> = {
+    readonly initial?: T;
+    readonly any_?: T;
+    readonly final?: T;
+    readonly control?: unknown;
+};
 
 /** Encoded `SubstringAssertion`, decoded items, or prepared pieces. */
 export type SubstringAssertionInput =
     | ASN1Element
-    | readonly (SubstringAssertion_Item | PreparedSubstring | {
-        readonly initial?: UnboundedDirectoryString | string;
-        readonly any_?: UnboundedDirectoryString | string;
-        readonly final?: UnboundedDirectoryString | string;
-        readonly control?: unknown;
-    })[];
+    | readonly (
+        | SubstringAssertion_Item
+        | PreparedSubstring
+        | SubstringAlternative<UnboundedDirectoryString | string>
+    )[];
 
-function isPreparedSubstring (value: object): value is PreparedSubstring {
-    if (!("kind" in value)) {
-        return false;
-    }
-    const kind = (value as { kind?: unknown }).kind;
-    return kind === "initial"
-        || kind === "any"
-        || kind === "final"
-        || kind === "control"
-        || kind === "unknown";
-}
+/** Encoded `OctetSubstringAssertion`, decoded items, or byte pieces. */
+export type OctetSubstringAssertionInput =
+    | ASN1Element
+    | readonly (
+        | OctetSubstringAssertion_Item
+        | PreparedOctetSubstring
+        | SubstringAlternative<Uint8Array>
+    )[];
 
-function pieceText (value: UnboundedDirectoryString | string): string {
-    return typeof value === "string" ? value : directoryStringToString(value);
-}
-
-function readSubstringItem (
-    item: SubstringAssertion_Item | PreparedSubstring | {
-        readonly initial?: UnboundedDirectoryString | string;
-        readonly any_?: UnboundedDirectoryString | string;
-        readonly final?: UnboundedDirectoryString | string;
-        readonly control?: unknown;
-    },
-): PreparedSubstring {
+/**
+ * Normalize one substring CHOICE, whether the payload is characters
+ * or octets. `convert` turns the raw component into `TOut`.
+ */
+function readSubstringPiece<TIn, TOut> (
+    item: ASN1Element | PreparedSubstringPiece<TOut> | SubstringAlternative<TIn>,
+    convert: (component: TIn) => TOut,
+): PreparedSubstringPiece<TOut> {
     if (isAsn1Element(item)) {
         return { kind: "unknown" };
     }
-    if (isPreparedSubstring(item)) {
+    if ("kind" in item) {
         return item;
     }
     if ("initial" in item && item.initial !== undefined) {
-        return { kind: "initial", text: pieceText(item.initial) };
+        return { kind: "initial", value: convert(item.initial) };
     }
     if ("any_" in item && item.any_ !== undefined) {
-        return { kind: "any", text: pieceText(item.any_) };
+        return { kind: "any", value: convert(item.any_) };
     }
     if ("final" in item && item.final !== undefined) {
-        return { kind: "final", text: pieceText(item.final) };
+        return { kind: "final", value: convert(item.final) };
     }
     if ("control" in item) {
         return { kind: "control" };
@@ -383,84 +307,37 @@ function readSubstringItem (
     return { kind: "unknown" };
 }
 
-/**
- * @param value Encoded or decoded substring assertion.
- * @returns Pieces whose text is a JavaScript string.
- */
-export
-function readSubstringAssertion (value: SubstringAssertionInput): PreparedSubstring[] {
-    const items = isAsn1Element(value) ? _decode_SubstringAssertion(value) : value;
-    const out = new Array<PreparedSubstring>(items.length);
+function readSubstringPieces<TIn, TOut> (
+    items: readonly (ASN1Element | PreparedSubstringPiece<TOut> | SubstringAlternative<TIn>)[],
+    convert: (component: TIn) => TOut,
+): PreparedSubstringPiece<TOut>[] {
+    const out = new Array<PreparedSubstringPiece<TOut>>(items.length);
     for (let i = 0; i < items.length; i++) {
-        out[i] = readSubstringItem(items[i]);
+        out[i] = readSubstringPiece(items[i], convert);
     }
     return out;
 }
 
 /**
- * One octet-substring piece. Unrecognized choices stay so the typed
- * matcher can fail them.
+ * @param value Encoded or decoded substring assertion.
+ * @returns Pieces whose payload is a JavaScript string.
  */
-export type PreparedOctetSubstring =
-    | { readonly kind: "initial"; readonly octets: Uint8Array }
-    | { readonly kind: "any"; readonly octets: Uint8Array }
-    | { readonly kind: "final"; readonly octets: Uint8Array }
-    | { readonly kind: "unknown" };
-
-/** Encoded `OctetSubstringAssertion`, decoded items, or byte pieces. */
-export type OctetSubstringAssertionInput =
-    | ASN1Element
-    | readonly (OctetSubstringAssertion_Item | PreparedOctetSubstring | {
-        readonly initial?: Uint8Array;
-        readonly any_?: Uint8Array;
-        readonly final?: Uint8Array;
-    })[];
-
-function isPreparedOctet (value: object): value is PreparedOctetSubstring {
-    if (!("kind" in value)) {
-        return false;
-    }
-    const kind = (value as { kind?: unknown }).kind;
-    return kind === "initial" || kind === "any" || kind === "final" || kind === "unknown";
-}
-
-function readOctetItem (
-    item: OctetSubstringAssertion_Item | PreparedOctetSubstring | {
-        readonly initial?: Uint8Array;
-        readonly any_?: Uint8Array;
-        readonly final?: Uint8Array;
-    },
-): PreparedOctetSubstring {
-    if (isAsn1Element(item)) {
-        return { kind: "unknown" };
-    }
-    if (isPreparedOctet(item)) {
-        return item;
-    }
-    if ("initial" in item && item.initial !== undefined) {
-        return { kind: "initial", octets: item.initial };
-    }
-    if ("any_" in item && item.any_ !== undefined) {
-        return { kind: "any", octets: item.any_ };
-    }
-    if ("final" in item && item.final !== undefined) {
-        return { kind: "final", octets: item.final };
-    }
-    return { kind: "unknown" };
+export
+function readSubstringAssertion (value: SubstringAssertionInput): PreparedSubstring[] {
+    const items = isAsn1Element(value) ? _decode_SubstringAssertion(value) : value;
+    return readSubstringPieces(items, (component) => (
+        typeof component === "string" ? component : directoryStringToString(component)
+    ));
 }
 
 /**
  * @param value Encoded or decoded octet substring assertion.
- * @returns Pieces whose payloads are byte strings.
+ * @returns Pieces whose payload is a byte string.
  */
 export
 function readOctetSubstringAssertion (
     value: OctetSubstringAssertionInput,
 ): PreparedOctetSubstring[] {
     const items = isAsn1Element(value) ? _decode_OctetSubstringAssertion(value) : value;
-    const out = new Array<PreparedOctetSubstring>(items.length);
-    for (let i = 0; i < items.length; i++) {
-        out[i] = readOctetItem(items[i]);
-    }
-    return out;
+    return readSubstringPieces(items, (component) => component);
 }

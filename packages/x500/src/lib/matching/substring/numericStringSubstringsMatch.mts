@@ -1,6 +1,5 @@
+import type { ASN1Element } from "@wildboar/asn1";
 import SubstringSelection from "../../types/SubstringSelection.mjs";
-import type { CharacterStringInput } from "../readValue.mjs";
-import { readNumericString } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.6
@@ -13,13 +12,13 @@ import { readNumericString } from "../readValue.mjs";
  */
 export
 function numericStringSubstringsMatch (
-    assertion: CharacterStringInput,
-    value: CharacterStringInput,
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
     selection?: SubstringSelection,
 ): boolean {
     return numericStringSubstringsMatchTyped(
-        readNumericString(assertion),
-        readNumericString(value),
+        typeof assertion === "string" ? assertion : assertion.numericString,
+        typeof value === "string" ? value : value.numericString,
         selection ?? SubstringSelection.any_,
     );
 }

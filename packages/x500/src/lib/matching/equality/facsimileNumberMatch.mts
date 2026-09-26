@@ -1,6 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import type { CharacterStringInput } from "../readValue.mjs";
-import { isAsn1Element, readPrintableString } from "../readValue.mjs";
+import { isAsn1Element } from "../readValue.mjs";
 import {
     _decode_TelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
@@ -23,7 +22,7 @@ import { telephoneNumberMatchTyped } from "./telephoneNumberMatch.mjs";
  */
 export
 function facsimileNumberMatch (
-    assertion: CharacterStringInput,
+    assertion: ASN1Element | string,
     value: ASN1Element | FacsimileTelephoneNumber | string,
 ): boolean {
     const stored = typeof value === "string"
@@ -31,7 +30,10 @@ function facsimileNumberMatch (
         : isAsn1Element(value)
             ? _decode_TelephoneNumber(value.sequence[0])
             : value.telephoneNumber;
-    return facsimileNumberMatchTyped(readPrintableString(assertion), stored);
+    return facsimileNumberMatchTyped(
+        typeof assertion === "string" ? assertion : assertion.printableString,
+        stored,
+    );
 }
 
 /**

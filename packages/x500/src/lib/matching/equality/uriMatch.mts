@@ -1,5 +1,4 @@
-import type { CharacterStringInput } from "../readValue.mjs";
-import { readUTF8String } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
 import { urlSchemeDefaultPort } from "./urlSchemeDefaultPort.mjs";
 
 /**
@@ -31,10 +30,13 @@ import { urlSchemeDefaultPort } from "./urlSchemeDefaultPort.mjs";
  */
 export
 function uriMatch (
-    assertion: CharacterStringInput,
-    value: CharacterStringInput,
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
 ): boolean {
-    return uriMatchTyped(readUTF8String(assertion), readUTF8String(value));
+    return uriMatchTyped(
+        typeof assertion === "string" ? assertion : assertion.utf8String,
+        typeof value === "string" ? value : value.utf8String,
+    );
 }
 
 /**

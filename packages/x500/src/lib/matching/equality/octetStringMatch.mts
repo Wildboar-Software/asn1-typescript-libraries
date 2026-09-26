@@ -1,6 +1,6 @@
 import { Buffer } from "node:buffer";
-import type { OctetStringInput } from "../readValue.mjs";
-import { readOctetString } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
+import { isAsn1Element } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.5 `octetStringMatch`.
@@ -12,12 +12,12 @@ import { readOctetString } from "../readValue.mjs";
  */
 export
 function octetStringMatch (
-    assertion: OctetStringInput,
-    value: OctetStringInput,
+    assertion: ASN1Element | Uint8Array,
+    value: ASN1Element | Uint8Array,
 ): boolean {
     return octetStringMatchTyped(
-        readOctetString(assertion),
-        readOctetString(value),
+        isAsn1Element(assertion) ? assertion.octetString : assertion,
+        isAsn1Element(value) ? value.octetString : value,
     );
 }
 

@@ -1,7 +1,5 @@
 import { Buffer } from "node:buffer";
-import type { BIT_STRING } from "@wildboar/asn1";
-import type { BitStringInput } from "../readValue.mjs";
-import { readBitString } from "../readValue.mjs";
+import type { ASN1Element, BIT_STRING } from "@wildboar/asn1";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.4 `bitStringMatch`.
@@ -16,10 +14,13 @@ import { readBitString } from "../readValue.mjs";
  */
 export
 function bitStringMatch (
-    assertion: BitStringInput,
-    value: BitStringInput,
+    assertion: ASN1Element | BIT_STRING,
+    value: ASN1Element | BIT_STRING,
 ): boolean {
-    return bitStringMatchTyped(readBitString(assertion), readBitString(value));
+    return bitStringMatchTyped(
+        assertion instanceof Uint8ClampedArray ? assertion : assertion.bitString,
+        value instanceof Uint8ClampedArray ? value : value.bitString,
+    );
 }
 
 /**
