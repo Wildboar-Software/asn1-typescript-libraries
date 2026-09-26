@@ -7,6 +7,13 @@
  * `undefined` (X.520 UNDEFINED).
  */
 
+/**
+ * Surrogates and U+FFFD, used by matchers that only need the
+ * Prohibit subset of clause 7.4 (no `/g`: `RegExp#test` must not
+ * retain `lastIndex` across calls).
+ */
+export const prohibitedCharacters: RegExp = /[\uD800-\uDFFF\uFFFD]+/;
+
 export type PrepInsignificant =
     | "directory" // clause 7.6.1
     | "numeric" // clause 7.6.2

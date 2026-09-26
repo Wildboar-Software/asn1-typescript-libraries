@@ -1,9 +1,5 @@
-import OrderingMatcher from "../../types/OrderingMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
-import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
+import type { DirectoryStringInput } from "../readValue.mjs";
+import { readDirectoryString } from "../readValue.mjs";
 import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
 
 /**
@@ -14,20 +10,33 @@ import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
  * during string preparation (clause 7.2). Insignificant spaces are
  * ignored (clause 7.6). Directory TRUE iff the stored value is
  * less than the presented value under Unicode code-point order.
+ *
+ * Each argument may be an `ASN1Element`, a directory string, or a
+ * JavaScript string. A negative result means `assertion` sorts
+ * before `value`.
  */
 export
-const caseIgnoreOrderingMatch: OrderingMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): number => {
-    const a: string | undefined = prepString(
-        directoryStringToString(_decode_UDS(assertion)),
-        { caseFold: true },
+function caseIgnoreOrderingMatch (
+    assertion: DirectoryStringInput,
+    value: DirectoryStringInput,
+): number {
+    return caseIgnoreOrderingMatchTyped(
+        readDirectoryString(assertion),
+        readDirectoryString(value),
     );
-    const v: string | undefined = prepString(
-        directoryStringToString(_decode_UDS(value)),
-        { caseFold: true },
-    );
+}
+
+/**
+ * `caseIgnoreOrderingMatch` on two strings.
+ *
+ * @param assertion Presented string.
+ * @param value Stored string.
+ * @returns Negative when `assertion` is less than `value`.
+ */
+export
+function caseIgnoreOrderingMatchTyped (assertion: string, value: string): number {
+    const a: string | undefined = prepString(assertion, { caseFold: true });
+    const v: string | undefined = prepString(value, { caseFold: true });
     if ((a === undefined) || (v === undefined)) {
         return Number.NaN;
     }

@@ -1,9 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
-import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
+import type { DirectoryStringListInput } from "../readValue.mjs";
+import { readDirectoryStringList } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 
 /**
@@ -13,27 +9,48 @@ import { prepString } from "../../utils/prepString.mjs";
  * postal address lines). TRUE iff both sequences have the same
  * number of strings and corresponding strings match as for
  * `caseIgnoreMatch` (case and insignificant spaces ignored).
+ *
+ * Each argument may be an `ASN1Element`, a `PostalAddress` or
+ * `CaseIgnoreList`, or an array of directory strings and/or
+ * JavaScript strings.
  */
 export
-const caseIgnoreListMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const aElements = assertion.sequenceOf;
-    const vElements = value.sequenceOf;
-    if (aElements.length !== vElements.length) {
+function caseIgnoreListMatch (
+    assertion: DirectoryStringListInput,
+    value: DirectoryStringListInput,
+): boolean {
+    return caseIgnoreListMatchTyped(
+        readDirectoryStringList(assertion),
+        readDirectoryStringList(value),
+    );
+}
+
+/**
+ * `caseIgnoreListMatch` on two lists of strings. Each line is
+ * prepared with case folding, matching `caseIgnoreMatch`.
+ *
+ * @param assertion Presented lines.
+ * @param value Stored lines.
+ * @returns `true` when every corresponding line matches.
+ */
+export
+function caseIgnoreListMatchTyped (
+    assertion: readonly string[],
+    value: readonly string[],
+): boolean {
+    if (assertion.length !== value.length) {
         return false;
     }
-    for (let i = 0; i < aElements.length; i++) {
-        const a: string | undefined = prepString(
-            directoryStringToString(_decode_UDS(aElements[i])),
-            { caseFold: true },
-        );
-        const v: string | undefined = prepString(
-            directoryStringToString(_decode_UDS(vElements[i])),
-            { caseFold: true },
-        );
-        if ((a === undefined) || (v === undefined) || (a !== v)) {
+    for (let i = 0; i < assertion.length; i++) {
+        const a: string | undefined = prepString(assertion[i], { caseFold: true });
+        const v: string | undefined = prepString(value[i], { caseFold: true });
+        if (a === undefined) {
+            return false;
+        }
+        if (v === undefined) {
+            return false;
+        }
+        if (a !== v) {
             return false;
         }
     }

@@ -1,5 +1,6 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
     PkiPath,
     _decode_PkiPath,
@@ -22,13 +23,32 @@ import compareName from "../../comparators/compareName.mjs";
  * the subject of the last. FALSE if either comparison fails.
  */
 export
-const pkiPathMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function pkiPathMatch (
+    assertion: ASN1Element | PkiPathMatchSyntax,
+    value: ASN1Element | PkiPath,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: PkiPathMatchSyntax = _decode_PkiPathMatchSyntax(assertion);
-    const v: PkiPath = _decode_PkiPath(value);
+): boolean {
+    return pkiPathMatchTyped(
+        readDecoded(assertion, _decode_PkiPathMatchSyntax),
+        readDecoded(value, _decode_PkiPath),
+        getEqualityMatcher,
+    );
+}
+
+/**
+ * `pkiPathMatch` on decoded values.
+ *
+ * @param a Presented endpoints.
+ * @param v Stored PKI path.
+ * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @returns `true` when the first issuer and last subject match.
+ */
+export
+function pkiPathMatchTyped (
+    a: PkiPathMatchSyntax,
+    v: PkiPath,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     const firstCert: Certificate = v[0];
     const lastCert: Certificate = v[v.length - 1];
     return (

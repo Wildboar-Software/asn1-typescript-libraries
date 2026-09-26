@@ -57,11 +57,9 @@ export class EncryptedPduInfo_pduEncryptionAlgorithm {
      * @returns {EncryptedPduInfo_pduEncryptionAlgorithm}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof EncryptedPduInfo_pduEncryptionAlgorithm]: EncryptedPduInfo_pduEncryptionAlgorithm[_K];
             }
-        >
     ): EncryptedPduInfo_pduEncryptionAlgorithm {
         return new EncryptedPduInfo_pduEncryptionAlgorithm(
             _o.algorithm,

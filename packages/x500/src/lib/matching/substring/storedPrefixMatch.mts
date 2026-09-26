@@ -1,42 +1,45 @@
-import SubstringsMatcher from "../../types/SubstringsMatcher.mjs";
-import SubstringSelection from "../../types/SubstringSelection.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
-import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
+import type { DirectoryStringInput } from "../readValue.mjs";
+import { readDirectoryString } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.9 `storedPrefixMatch`.
  *
- * TRUE iff the *stored* `UnboundedDirectoryString` is an initial
- * substring of the *presented* value (reversed from ordinary
- * substring match). Case and insignificant spaces are ignored
- * (clause 7.6). Typical use: stored area codes vs a presented
- * telephone number.
+ * TRUE iff the stored attribute value is an initial substring of the
+ * presented value. Corresponding characters are identical except for
+ * case. Insignificant spaces are ignored (clause 7.6.1): leading and
+ * trailing spaces are removed, and inner whitespace is one space.
+ * Typical use: a stored area code against a presented telephone number.
  *
- * `selection` is ignored: this is an equality matching rule whose
- * assertion syntax is `UnboundedDirectoryString`.
+ * Each argument may be an `ASN1Element`, a directory string, or a
+ * JavaScript string.
  */
 export
-const storedPrefixMatch: SubstringsMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-    _selection?: SubstringSelection,
-): boolean => {
-    const a: string | undefined = prepString(
-        directoryStringToString(_decode_UDS(assertion)),
-        { caseFold: true },
+function storedPrefixMatch (
+    assertion: DirectoryStringInput,
+    value: DirectoryStringInput,
+): boolean {
+    return storedPrefixMatchTyped(
+        readDirectoryString(assertion),
+        readDirectoryString(value),
     );
-    const v: string | undefined = prepString(
-        directoryStringToString(_decode_UDS(value)),
-        { caseFold: true },
-    );
-    if ((a === undefined) || (v === undefined)) {
+}
+
+/**
+ * `storedPrefixMatch` on two strings. `value` is the stored prefix.
+ *
+ * @param assertion Presented string.
+ * @param value Stored prefix.
+ * @returns `true` when the stored string is a prefix.
+ */
+export
+function storedPrefixMatchTyped (assertion: string, value: string): boolean {
+    const preparedA = prepString(assertion, { caseFold: true });
+    const preparedV = prepString(value, { caseFold: true });
+    if (preparedA === undefined || preparedV === undefined) {
         return false;
     }
-    return a.startsWith(v);
+    return preparedA.startsWith(preparedV);
 }
 
 export default storedPrefixMatch;

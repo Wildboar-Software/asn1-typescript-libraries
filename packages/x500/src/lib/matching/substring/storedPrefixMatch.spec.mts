@@ -1,23 +1,59 @@
-import { DERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
+import { DERElement, type ASN1Element } from "@wildboar/asn1";
+import { _encode_UnboundedDirectoryString } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import storedPrefixMatch from "./storedPrefixMatch.mjs";
 
-function utf8 (s: string): DERElement {
-    return new DERElement(
-        ASN1TagClass.universal,
-        ASN1Construction.primitive,
-        ASN1UniversalType.utf8String,
-        s,
+function uds (value: string): ASN1Element {
+    return _encode_UnboundedDirectoryString(
+        { uTF8String: value },
+        () => new DERElement(),
     );
 }
 
 describe("storedPrefixMatch", () => {
-    it("treats the stored value as a prefix of the presented value", () => {
-        expect(storedPrefixMatch(utf8("4155551212"), utf8("415"))).toBe(true);
-        expect(storedPrefixMatch(utf8("415"), utf8("4155551212"))).toBe(false);
-        expect(storedPrefixMatch(utf8("4155551212"), utf8("416"))).toBe(false);
+    it("matches when the stored value is a prefix of the assertion", () => {
+        expect(storedPrefixMatch(uds("7035551212"), uds("703"))).toBe(true);
+        expect(storedPrefixMatch(uds("703"), uds("703"))).toBe(true);
+        expect(storedPrefixMatch(uds("4155551212"), uds("415"))).toBe(true);
+    });
+
+    it("does not match when the stored value is longer than the assertion", () => {
+        expect(storedPrefixMatch(uds("703"), uds("7035551212"))).toBe(false);
+        expect(storedPrefixMatch(uds("7045551212"), uds("703"))).toBe(false);
+        expect(storedPrefixMatch(uds("415"), uds("4155551212"))).toBe(false);
+        expect(storedPrefixMatch(uds("4155551212"), uds("416"))).toBe(false);
     });
 
     it("ignores case", () => {
-        expect(storedPrefixMatch(utf8("HELLO WORLD"), utf8("hello"))).toBe(true);
+        expect(storedPrefixMatch(uds("aBcdef"), uds("AbC"))).toBe(true);
+        expect(storedPrefixMatch(uds("aBcdef"), uds("AbX"))).toBe(false);
+        expect(storedPrefixMatch(uds("HELLO WORLD"), uds("hello"))).toBe(true);
+    });
+
+    it("ignores leading and trailing spaces", () => {
+        expect(storedPrefixMatch(uds("  7035551212  "), uds(" 703 "))).toBe(true);
+        expect(storedPrefixMatch(uds("703555"), uds("\t703\n"))).toBe(true);
+    });
+
+    it("treats consecutive inner whitespace as one space", () => {
+        expect(storedPrefixMatch(uds("70   3555"), uds("70  3"))).toBe(true);
+        expect(storedPrefixMatch(uds("70 3555"), uds("70\t3"))).toBe(true);
+        expect(storedPrefixMatch(uds("a\nbcd"), uds("a b"))).toBe(true);
+    });
+
+    it("keeps a single inner space as significant", () => {
+        expect(storedPrefixMatch(uds("703555"), uds("70 3"))).toBe(false);
+        expect(storedPrefixMatch(uds("70 3555"), uds("703"))).toBe(false);
+    });
+
+    it("treats a string of only spaces as a single space", () => {
+        expect(storedPrefixMatch(uds("   "), uds(" "))).toBe(true);
+        expect(storedPrefixMatch(uds("\t\n"), uds("  "))).toBe(true);
+        expect(storedPrefixMatch(uds("703"), uds("   "))).toBe(false);
+        expect(storedPrefixMatch(uds("   "), uds("703"))).toBe(false);
+    });
+
+    it("returns false when preparation prohibits a character", () => {
+        expect(storedPrefixMatch(uds("703\uFFFD"), uds("703"))).toBe(false);
+        expect(storedPrefixMatch(uds("703555"), uds("703\uFFFD"))).toBe(false);
     });
 });

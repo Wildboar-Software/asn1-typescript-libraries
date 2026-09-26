@@ -1,10 +1,8 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
-import {
-    TelephoneNumber,
-    _decode_TelephoneNumber,
-} from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-import { prepString } from "../../utils/prepString.mjs";
+
+function normalizeTelephoneNumber (telephoneNumber: string): string {
+    return telephoneNumber.replace(/[- ]/g, "");
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.8 `telephoneNumberMatch`.
@@ -12,24 +10,35 @@ import { prepString } from "../../utils/prepString.mjs";
  * Equality of `TelephoneNumber` (clause 6.7.1). Same as
  * `caseIgnoreMatch` except hyphens and spaces are insignificant
  * and are removed during insignificant-character removal.
+ *
+ * DEVIATION: We do not lowercase the telephone number, because it is forbidden
+ * from containing alphabetic characters anyway.
+ *
+ * Each argument may be an `ASN1Element` or a string.
+ * `TelephoneNumber` decodes to `PrintableString`.
  */
 export
-const telephoneNumberMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: TelephoneNumber | undefined = prepString(_decode_TelephoneNumber(assertion), {
-        caseFold: true,
-        insignificant: "telephone",
-    });
-    const v: TelephoneNumber | undefined = prepString(_decode_TelephoneNumber(value), {
-        caseFold: true,
-        insignificant: "telephone",
-    });
-    if ((a === undefined) || (v === undefined)) {
-        return false;
-    }
-    return (a === v);
+function telephoneNumberMatch (
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
+): boolean {
+    return telephoneNumberMatchTyped(
+        typeof assertion === "string" ? assertion : assertion.printableString,
+        typeof value === "string" ? value : value.printableString,
+    );
+}
+
+/**
+ * `telephoneNumberMatch` on two telephone numbers. Hyphens and
+ * spaces are removed here.
+ *
+ * @param assertion Presented number.
+ * @param value Stored number.
+ * @returns `true` when the normalized numbers are equal.
+ */
+export
+function telephoneNumberMatchTyped (assertion: string, value: string): boolean {
+    return normalizeTelephoneNumber(assertion) === normalizeTelephoneNumber(value);
 }
 
 export default telephoneNumberMatch;

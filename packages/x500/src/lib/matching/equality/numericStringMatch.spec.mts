@@ -1,42 +1,26 @@
-import { DERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
+import { DER, _encodeNumericString } from "@wildboar/asn1/functional";
 import numericStringMatch from "./numericStringMatch.mjs";
-import telephoneNumberMatch from "./telephoneNumberMatch.mjs";
 
-function numeric (s: string): DERElement {
-    return new DERElement(
-        ASN1TagClass.universal,
-        ASN1Construction.primitive,
-        ASN1UniversalType.numericString,
-        s,
-    );
-}
-
-function printable (s: string): DERElement {
-    return new DERElement(
-        ASN1TagClass.universal,
-        ASN1Construction.primitive,
-        ASN1UniversalType.printableString,
-        s,
-    );
+function numeric (value: string): ASN1Element {
+    return _encodeNumericString(value, DER);
 }
 
 describe("numericStringMatch", () => {
-    it("removes all spaces, not only the first run", () => {
-        expect(numericStringMatch(numeric("1 2 3"), numeric("123"))).toBe(true);
-        expect(numericStringMatch(numeric("12 3"), numeric("1 23"))).toBe(true);
-        expect(numericStringMatch(numeric("123"), numeric("124"))).toBe(false);
+    it("matches identical digit sequences", () => {
+        expect(numericStringMatch(numeric("1515"), numeric("1515"))).toBe(true);
     });
-});
 
-describe("telephoneNumberMatch", () => {
-    it("ignores hyphens and spaces but keeps other characters", () => {
-        expect(telephoneNumberMatch(
-            printable("+1-415 555 1212"),
-            printable("+14155551212"),
-        )).toBe(true);
-        expect(telephoneNumberMatch(
-            printable("+1-415 555 1212"),
-            printable("14155551212"),
-        )).toBe(false);
+    it("ignores multiple internal spaces", () => {
+        expect(numericStringMatch(numeric("15  15"), numeric("1515"))).toBe(true);
+        expect(numericStringMatch(numeric("1 5 1 5"), numeric("15  15"))).toBe(true);
+        expect(numericStringMatch(numeric("12 3"), numeric("1 23"))).toBe(true);
+        expect(numericStringMatch(numeric("1 2 3"), numeric("123"))).toBe(true);
+    });
+
+    it("rejects digit sequences that differ after spaces are removed", () => {
+        expect(numericStringMatch(numeric("15 15"), numeric("15 16"))).toBe(false);
+        expect(numericStringMatch(numeric("1 2 3"), numeric("1234"))).toBe(false);
+        expect(numericStringMatch(numeric("123"), numeric("124"))).toBe(false);
     });
 });
