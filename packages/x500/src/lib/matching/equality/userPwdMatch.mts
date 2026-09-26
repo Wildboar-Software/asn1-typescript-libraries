@@ -24,8 +24,8 @@ function userPwdMatchTyped (
     if (ASN1Element.isElement(assertion) !== ASN1Element.isElement(value)) {
         return false;
     }
-    if (ASN1Element.isElement(assertion) && ASN1Element.isElement(value)) {
-        return compareElements(assertion, value);
+    if (ASN1Element.isElement(assertion)) {
+        return compareElements(assertion, value as ASN1Element);
     }
     if (("clear" in assertion) && ("clear" in value)) {
         return caseExactMatchTyped(assertion.clear, value.clear);
