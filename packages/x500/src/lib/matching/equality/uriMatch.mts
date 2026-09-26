@@ -1,4 +1,3 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
 import { urlSchemeDefaultPort } from "./urlSchemeDefaultPort.mjs";
 
@@ -26,15 +25,30 @@ import { urlSchemeDefaultPort } from "./urlSchemeDefaultPort.mjs";
  * Normalization is of the URI reference itself, so `urn:`,
  * empty-host forms such as `ldap:///`, and relative references
  * are compared the same way.
- * 
- * @author Cursor Grok 4.6
+ *
+ * Each argument may be an `ASN1Element` or a string.
  */
 export
-const uriMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    return normalizeUri(assertion.utf8String) === normalizeUri(value.utf8String);
+function uriMatch (
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
+): boolean {
+    return uriMatchTyped(
+        typeof assertion === "string" ? assertion : assertion.utf8String,
+        typeof value === "string" ? value : value.utf8String,
+    );
+}
+
+/**
+ * `uriMatch` on two URI strings.
+ *
+ * @param assertion Presented URI.
+ * @param value Stored URI.
+ * @returns `true` when the normalized URIs are equal.
+ */
+export
+function uriMatchTyped (assertion: string, value: string): boolean {
+    return normalizeUri(assertion) === normalizeUri(value);
 }
 
 export default uriMatch;

@@ -1,5 +1,6 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import compareName from "../../comparators/compareName.mjs";
 import {
     CertificateExactAssertion,
@@ -20,13 +21,32 @@ import { Buffer } from "node:buffer";
  * the stored certificate.
  */
 export
-const certificateExactMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function certificateExactMatch (
+    assertion: ASN1Element | CertificateExactAssertion,
+    value: ASN1Element | Certificate,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: CertificateExactAssertion = _decode_CertificateExactAssertion(assertion);
-    const v: Certificate = _decode_Certificate(value);
+): boolean {
+    return certificateExactMatchTyped(
+        readDecoded(assertion, _decode_CertificateExactAssertion),
+        readDecoded(value, _decode_Certificate),
+        getEqualityMatcher,
+    );
+}
+
+/**
+ * `certificateExactMatch` on a decoded assertion and certificate.
+ *
+ * @param a Presented serial number and issuer.
+ * @param v Stored certificate.
+ * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @returns `true` when the serial number and issuer match.
+ */
+export
+function certificateExactMatchTyped (
+    a: CertificateExactAssertion,
+    v: Certificate,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     if (Buffer.compare(v.toBeSigned.serialNumber, a.serialNumber)) {
         return false;
     }

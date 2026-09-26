@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import { ASN1Element } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import { evaluateCertificateAssertion } from "./certificateMatch.mjs";
 import {
     CertificatePairAssertion,
@@ -20,12 +20,28 @@ import {
  * assertion components must be present.
  */
 export
-const certificatePairMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: CertificatePairAssertion = _decode_CertificatePairAssertion(assertion);
-    const v: CertificatePair = _decode_CertificatePair(value);
+function certificatePairMatch (
+    assertion: ASN1Element | CertificatePairAssertion,
+    value: ASN1Element | CertificatePair,
+): boolean {
+    return certificatePairMatchTyped(
+        readDecoded(assertion, _decode_CertificatePairAssertion),
+        readDecoded(value, _decode_CertificatePair),
+    );
+}
+
+/**
+ * `certificatePairMatch` on decoded values.
+ *
+ * @param a Presented pair assertion.
+ * @param v Stored certificate pair.
+ * @returns `true` when every present component matches.
+ */
+export
+function certificatePairMatchTyped (
+    a: CertificatePairAssertion,
+    v: CertificatePair,
+): boolean {
     if (v.isEmpty()) {
         return false;
     }

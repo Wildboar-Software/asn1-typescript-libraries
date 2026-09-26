@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
     PwdEncAlg,
     _decode_PwdEncAlg,
@@ -19,12 +19,25 @@ import compareElements from "../../comparators/compareElements.mjs";
  * encrypted.
  */
 export
-const pwdEncAlgMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: PwdEncAlg = _decode_PwdEncAlg(assertion);
-    const v: UserPwd = _decode_UserPwd(value);
+function pwdEncAlgMatch (
+    assertion: ASN1Element | PwdEncAlg,
+    value: ASN1Element | UserPwd,
+): boolean {
+    return pwdEncAlgMatchTyped(
+        readDecoded(assertion, _decode_PwdEncAlg),
+        readDecoded(value, _decode_UserPwd),
+    );
+}
+
+/**
+ * `pwdEncAlgMatch` on a decoded algorithm and password.
+ *
+ * @param a Presented encryption algorithm.
+ * @param v Stored user password.
+ * @returns `true` when the stored password is encrypted with `a`.
+ */
+export
+function pwdEncAlgMatchTyped (a: PwdEncAlg, v: UserPwd): boolean {
     if (!("encrypted" in v)) {
         return false;
     }

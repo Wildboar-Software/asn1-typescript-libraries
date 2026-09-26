@@ -1,5 +1,6 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
     AttCertPath,
     _decode_AttCertPath,
@@ -22,15 +23,37 @@ import compareHolder from "../../comparators/compareHolder.mjs";
  * validated. TRUE iff `firstIssuer` matches the issuer of the
  * first AC in the SEQUENCE and `lastHolder` matches the holder of
  * the last. FALSE if either comparison fails.
+ *
+ * `assertion` may be an element or a `DelMatchSyntax`. `value` may
+ * be an element or an `AttCertPath`.
  */
 export
-const delegationPathMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function delegationPathMatch (
+    assertion: ASN1Element | DelMatchSyntax,
+    value: ASN1Element | AttCertPath,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: DelMatchSyntax = _decode_DelMatchSyntax(assertion);
-    const v: AttCertPath = _decode_AttCertPath(value);
+): boolean {
+    return delegationPathMatchTyped(
+        readDecoded(assertion, _decode_DelMatchSyntax),
+        readDecoded(value, _decode_AttCertPath),
+        getEqualityMatcher,
+    );
+}
+
+/**
+ * `delegationPathMatch` on decoded values.
+ *
+ * @param a Presented endpoints.
+ * @param v Stored attribute-certificate path.
+ * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @returns `true` when the first issuer and last holder match.
+ */
+export
+function delegationPathMatchTyped (
+    a: DelMatchSyntax,
+    v: AttCertPath,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     const firstCert: AttributeCertificate = v[0];
     const lastCert: AttributeCertificate = v[v.length - 1];
     if (!compareAttCertIssuer(a.firstIssuer, firstCert.toBeSigned.issuer)) {

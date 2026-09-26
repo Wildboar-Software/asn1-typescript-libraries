@@ -1,10 +1,6 @@
-import SubstringsMatcher from "../../types/SubstringsMatcher.mjs";
 import SubstringSelection from "../../types/SubstringSelection.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
-import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
+import type { DirectoryStringInput } from "../readValue.mjs";
+import { readDirectoryString } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.3
@@ -17,31 +13,52 @@ import directoryStringToString from "../../stringifiers/directoryStringToString.
  * At most one `initial` and one `final`; `control` is ignored.
  * Corresponding characters (including combining sequences) must
  * be identical.
+ *
+ * `assertion` and `value` may each be an element, a directory
+ * string, or a JavaScript string. This entry point compares one
+ * substring component; `selection` chooses initial, any, or final.
  */
 export
-const caseExactSubstringsMatch: SubstringsMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function caseExactSubstringsMatch (
+    assertion: DirectoryStringInput,
+    value: DirectoryStringInput,
     selection?: SubstringSelection,
-): boolean => {
-    const sel: SubstringSelection = selection ?? SubstringSelection.any_;
-    const a: string = directoryStringToString(_decode_UDS(assertion));
-    const v: string = directoryStringToString(_decode_UDS(value));
-    switch (sel) {
+): boolean {
+    return caseExactSubstringsMatchTyped(
+        readDirectoryString(assertion),
+        readDirectoryString(value),
+        selection ?? SubstringSelection.any_,
+    );
+}
+
+/**
+ * `caseExactSubstringsMatch` on two strings.
+ *
+ * @param assertion Presented substring.
+ * @param value Stored string.
+ * @param selection Which part of `value` must contain `assertion`.
+ * @returns `true` when the selected containment holds.
+ */
+export
+function caseExactSubstringsMatchTyped (
+    assertion: string,
+    value: string,
+    selection: SubstringSelection,
+): boolean {
+    switch (selection) {
         case (SubstringSelection.initial): {
-            return v.startsWith(a);
+            return value.startsWith(assertion);
         }
         case (SubstringSelection.any_): {
-            return (v.indexOf(a) > -1);
+            return (value.indexOf(assertion) > -1);
         }
         case (SubstringSelection.final): {
-            return v.endsWith(a);
+            return value.endsWith(assertion);
         }
         default: {
             return false;
         }
     }
-
 }
 
 export default caseExactSubstringsMatch;

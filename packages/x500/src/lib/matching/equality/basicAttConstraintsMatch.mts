@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
     id_ce_basicAttConstraints,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-basicAttConstraints.va.mjs";
@@ -26,12 +26,28 @@ import { DERElement } from "@wildboar/asn1";
  * component (`authority`, optional `pathLenConstraint`).
  */
 export
-const basicAttConstraintsMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: BasicAttConstraintsSyntax = _decode_BasicAttConstraintsSyntax(assertion);
-    const v: AttributeCertificate = _decode_AttributeCertificate(value);
+function basicAttConstraintsMatch (
+    assertion: ASN1Element | BasicAttConstraintsSyntax,
+    value: ASN1Element | AttributeCertificate,
+): boolean {
+    return basicAttConstraintsMatchTyped(
+        readDecoded(assertion, _decode_BasicAttConstraintsSyntax),
+        readDecoded(value, _decode_AttributeCertificate),
+    );
+}
+
+/**
+ * `basicAttConstraintsMatch` on decoded values.
+ *
+ * @param a Presented constraints.
+ * @param v Stored attribute certificate.
+ * @returns `true` when authority and path length match.
+ */
+export
+function basicAttConstraintsMatchTyped (
+    a: BasicAttConstraintsSyntax,
+    v: AttributeCertificate,
+): boolean {
     const ext: Extension | undefined = v.toBeSigned.extensions
         ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_basicAttConstraints)));
     if (!ext) {

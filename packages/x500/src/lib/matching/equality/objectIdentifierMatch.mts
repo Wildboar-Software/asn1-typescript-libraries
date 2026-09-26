@@ -1,6 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
-import { Buffer } from "node:buffer";
+import type { ObjectIdentifierInput } from "../readValue.mjs";
+import { readObjectIdentifier } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.501 (10/2019), clause 13.5.2
@@ -9,15 +8,16 @@ import { Buffer } from "node:buffer";
  * TRUE iff both OBJECT IDENTIFIER values have the same number of
  * integral components and each corresponding component is equal.
  * This is the inherent equality of ASN.1 object identifiers.
+ *
+ * Each argument may be an `ASN1Element`, an `OBJECT_IDENTIFIER`,
+ * or a dotted-decimal string.
  */
 export
-const objectIdentifierMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    // We can directly compare buffers because OBJECT IDENTIFIER is encoded the
-    // same way every time in {BER,CER,DER}.
-    return !Buffer.compare(assertion.value, value.value);
+function objectIdentifierMatch (
+    assertion: ObjectIdentifierInput,
+    value: ObjectIdentifierInput,
+): boolean {
+    return readObjectIdentifier(assertion).isEqualTo(readObjectIdentifier(value));
 }
 
 export default objectIdentifierMatch;

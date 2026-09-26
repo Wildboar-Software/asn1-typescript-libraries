@@ -1,5 +1,6 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
     SupplierAndConsumers,
     _decode_SupplierAndConsumers,
@@ -16,16 +17,38 @@ import compareName from "../../comparators/compareName.mjs";
  *
  * Equality for `SupplierAndConsumers` (and compatible types). TRUE
  * iff the `ae-title` components match as distinguished names.
+ *
+ * `assertion` may be an element or a `Name`. `value` may be an
+ * element or a `SupplierAndConsumers`.
  */
 export
-const supplierAndConsumersMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function supplierAndConsumersMatch (
+    assertion: ASN1Element | Name,
+    value: ASN1Element | SupplierAndConsumers,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: Name = _decode_Name(assertion);
-    const v: SupplierAndConsumers = _decode_SupplierAndConsumers(value);
-    return compareName(a, v.ae_title, getEqualityMatcher);
+): boolean {
+    return supplierAndConsumersMatchTyped(
+        readDecoded(assertion, _decode_Name),
+        readDecoded(value, _decode_SupplierAndConsumers),
+        getEqualityMatcher,
+    );
+}
+
+/**
+ * `supplierAndConsumersMatch` on a decoded name and value.
+ *
+ * @param assertion Presented `ae-title`.
+ * @param value Stored supplier and consumers.
+ * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @returns `true` when the names match.
+ */
+export
+function supplierAndConsumersMatchTyped (
+    assertion: Name,
+    value: SupplierAndConsumers,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
+    return compareName(assertion, value.ae_title, getEqualityMatcher);
 }
 
 export default supplierAndConsumersMatch;
