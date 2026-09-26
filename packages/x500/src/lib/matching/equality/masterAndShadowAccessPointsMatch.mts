@@ -1,6 +1,6 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { isAsn1Element, readDecoded } from "../readValue.mjs";
+import { ASN1Element, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import { _decodeSetOf } from "@wildboar/asn1/functional";
 import {
     Name,
@@ -31,7 +31,7 @@ function masterAndShadowAccessPointsMatch (
     value: ASN1Element | MasterAndShadowAccessPoints,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
-    const a: readonly Name[] = isAsn1Element(assertion)
+    const a: readonly Name[] = ASN1Element.isElement(assertion)
         ? _decodeSetOf<Name>(() => _decode_Name)(assertion)
         : assertion;
     return masterAndShadowAccessPointsMatchTyped(

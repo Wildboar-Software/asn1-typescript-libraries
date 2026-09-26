@@ -37,17 +37,6 @@ import type {
 import directoryStringToString from "../stringifiers/directoryStringToString.mjs";
 
 /**
- * `true` when `value` is an encoded ASN.1 element.
- *
- * Checked before decoded objects and native values so a wrapper can
- * branch once, then call a monomorphic typed matcher.
- */
-export
-function isAsn1Element (value: unknown): value is ASN1Element {
-    return ASN1Element.isElement(value);
-}
-
-/**
  * Decode `value` when it is an element; otherwise return it unchanged.
  * Assertion and value are coerced separately, so their runtime types
  * may differ.
@@ -57,17 +46,13 @@ function readDecoded<T> (
     value: ASN1Element | T,
     decode: (element: ASN1Element) => T,
 ): T {
-    return isAsn1Element(value) ? decode(value) : value;
-}
-
-function isUniversal (element: ASN1Element, tagNumber: ASN1UniversalType): boolean {
-    return element.tagClass === ASN1TagClass.universal
-        && element.tagNumber === tagNumber;
+    return ASN1Element.isElement(value) ? decode(value) : value;
 }
 
 /**
  * Encoded element, `DirectoryString` / `UnboundedDirectoryString`
- * CHOICE, or an already-transcoded JavaScript string.
+ * CHOICE, a universal `IA5String`, or an already-transcoded
+ * JavaScript string.
  */
 export type DirectoryStringInput =
     | ASN1Element
@@ -84,7 +69,13 @@ function readDirectoryString (value: DirectoryStringInput): string {
     if (typeof value === "string") {
         return value;
     }
-    if (isAsn1Element(value)) {
+    if (ASN1Element.isElement(value)) {
+        if (
+            value.tagClass === ASN1TagClass.universal
+            && value.tagNumber === ASN1UniversalType.ia5String
+        ) {
+            return value.ia5String;
+        }
         return directoryStringToString(_decode_UnboundedDirectoryString(value));
     }
     return directoryStringToString(value);
@@ -106,7 +97,7 @@ export type DirectoryStringListInput =
  */
 export
 function readDirectoryStringList (value: DirectoryStringListInput): string[] {
-    if (isAsn1Element(value)) {
+    if (ASN1Element.isElement(value)) {
         const elements = value.sequenceOf;
         const out = new Array<string>(elements.length);
         for (let i = 0; i < elements.length; i++) {
@@ -129,7 +120,11 @@ function readDirectoryStringList (value: DirectoryStringListInput): string[] {
  */
 export
 function readFirstDirectoryString (value: DirectoryStringInput): string | undefined {
-    if (isAsn1Element(value) && isUniversal(value, ASN1UniversalType.sequence)) {
+    if (
+        ASN1Element.isElement(value)
+        && value.tagClass === ASN1TagClass.universal
+        && value.tagNumber === ASN1UniversalType.sequence
+    ) {
         const first = value.sequence[0];
         if (!first) {
             return undefined;
@@ -168,26 +163,20 @@ function readLeadingInteger (value: IntegerInput): bigint {
         return readInteger(value);
     }
     if (
-        isUniversal(value, ASN1UniversalType.integer)
-        || isUniversal(value, ASN1UniversalType.enumerated)
+        (
+            value.tagClass === ASN1TagClass.universal
+            && value.tagNumber === ASN1UniversalType.integer
+        )
+        || (
+            value.tagClass === ASN1TagClass.universal
+            && value.tagNumber === ASN1UniversalType.enumerated
+        )
     ) {
         return readInteger(value);
     }
     const inner = new BERElement();
     inner.fromBytes(value.value);
     return readInteger(inner);
-}
-
-/** BOOLEAN element or a JavaScript boolean. */
-export type BooleanInput = ASN1Element | boolean;
-
-/**
- * @param value Element or boolean.
- * @returns The boolean value.
- */
-export
-function readBoolean (value: BooleanInput): boolean {
-    return typeof value === "boolean" ? value : value.boolean;
 }
 
 /**
@@ -205,7 +194,7 @@ function readObjectIdentifier (value: ObjectIdentifierInput): OBJECT_IDENTIFIER 
     if (typeof value === "string") {
         return ObjectIdentifier.fromString(value);
     }
-    if (isAsn1Element(value)) {
+    if (ASN1Element.isElement(value)) {
         return value.objectIdentifier;
     }
     return value;
@@ -220,10 +209,13 @@ function readLeadingObjectIdentifier (value: ObjectIdentifierInput): OBJECT_IDEN
     if (typeof value === "string") {
         return ObjectIdentifier.fromString(value);
     }
-    if (!isAsn1Element(value)) {
+    if (!ASN1Element.isElement(value)) {
         return value;
     }
-    if (isUniversal(value, ASN1UniversalType.objectIdentifier)) {
+    if (
+        value.tagClass === ASN1TagClass.universal
+        && value.tagNumber === ASN1UniversalType.objectIdentifier
+    ) {
         return value.objectIdentifier;
     }
     const inner = new BERElement();
@@ -286,7 +278,7 @@ function readSubstringPiece<TIn, TOut> (
     item: ASN1Element | PreparedSubstringPiece<TOut> | SubstringAlternative<TIn>,
     convert: (component: TIn) => TOut,
 ): PreparedSubstringPiece<TOut> {
-    if (isAsn1Element(item)) {
+    if (ASN1Element.isElement(item)) {
         return { kind: "unknown" };
     }
     if ("kind" in item) {
@@ -324,7 +316,7 @@ function readSubstringPieces<TIn, TOut> (
  */
 export
 function readSubstringAssertion (value: SubstringAssertionInput): PreparedSubstring[] {
-    const items = isAsn1Element(value) ? _decode_SubstringAssertion(value) : value;
+    const items = ASN1Element.isElement(value) ? _decode_SubstringAssertion(value) : value;
     return readSubstringPieces(items, (component) => (
         typeof component === "string" ? component : directoryStringToString(component)
     ));
@@ -338,6 +330,6 @@ export
 function readOctetSubstringAssertion (
     value: OctetSubstringAssertionInput,
 ): PreparedOctetSubstring[] {
-    const items = isAsn1Element(value) ? _decode_OctetSubstringAssertion(value) : value;
+    const items = ASN1Element.isElement(value) ? _decode_OctetSubstringAssertion(value) : value;
     return readSubstringPieces(items, (component) => component);
 }

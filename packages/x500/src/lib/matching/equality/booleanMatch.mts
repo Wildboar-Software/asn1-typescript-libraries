@@ -1,5 +1,4 @@
-import type { BooleanInput } from "../readValue.mjs";
-import { readBoolean } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.1 `booleanMatch`.
@@ -10,10 +9,13 @@ import { readBoolean } from "../readValue.mjs";
  */
 export
 function booleanMatch (
-    assertion: BooleanInput,
-    value: BooleanInput,
+    assertion: ASN1Element | boolean,
+    value: ASN1Element | boolean,
 ): boolean {
-    return booleanMatchTyped(readBoolean(assertion), readBoolean(value));
+    return booleanMatchTyped(
+        typeof assertion === "boolean" ? assertion : assertion.boolean,
+        typeof value === "boolean" ? value : value.boolean,
+    );
 }
 
 /**

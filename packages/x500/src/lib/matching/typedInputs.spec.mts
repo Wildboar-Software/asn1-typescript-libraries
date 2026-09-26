@@ -9,6 +9,7 @@ import {
 import {
     DER,
     _encodeBoolean,
+    _encodeIA5String,
     _encodeInteger,
     _encodeOctetString,
     _encodePrintableString,
@@ -44,6 +45,8 @@ describe("typed matching inputs", () => {
         expect(caseIgnoreMatch({ printableString: "Hello" }, "hello")).toBe(true);
         expect(caseIgnoreMatch("Hello", uds("hello"))).toBe(true);
         expect(caseIgnoreMatch(uds("Hello"), { uTF8String: "world" })).toBe(false);
+        expect(caseIgnoreMatch(_encodeIA5String("Hello", DER), "hello")).toBe(true);
+        expect(caseIgnoreMatch("world", _encodeIA5String("Hello", DER))).toBe(false);
         expect(caseIgnoreMatchTyped("Hello", "hello")).toBe(true);
     });
 

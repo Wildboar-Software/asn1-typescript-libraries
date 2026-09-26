@@ -1,5 +1,4 @@
-import type { ASN1Element } from "@wildboar/asn1";
-import { isAsn1Element } from "../readValue.mjs";
+import { ASN1Element } from "@wildboar/asn1";
 import {
     _decode_TelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
@@ -27,7 +26,7 @@ function facsimileNumberMatch (
 ): boolean {
     const stored = typeof value === "string"
         ? value
-        : isAsn1Element(value)
+        : ASN1Element.isElement(value)
             ? _decode_TelephoneNumber(value.sequence[0])
             : value.telephoneNumber;
     return facsimileNumberMatchTyped(

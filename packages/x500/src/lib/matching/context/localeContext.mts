@@ -1,5 +1,4 @@
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { ObjectIdentifier } from "@wildboar/asn1";
+import { ASN1Element, ObjectIdentifier, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
     _decode_LocaleContextSyntax,
 } from "../../modules/SelectedAttributeTypes/LocaleContextSyntax.ta.mjs";
@@ -11,7 +10,6 @@ import type {
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
 import compareElements from "../../comparators/compareElements.mjs";
-import { isAsn1Element } from "../readValue.mjs";
 
 /** Element, decoded choice, object identifier, or locale string. */
 export type LocaleContextInput =
@@ -29,7 +27,7 @@ function readLocale (value: LocaleContextInput): LocaleContextSyntax {
     if (typeof value === "string") {
         return { localeID2: { uTF8String: value } };
     }
-    if (isAsn1Element(value)) {
+    if (ASN1Element.isElement(value)) {
         return _decode_LocaleContextSyntax(value);
     }
     if (ObjectIdentifier.isOID(value)) {
@@ -62,17 +60,17 @@ function evaluateLocaleContext (
     const v = readLocale(value);
     if (
         ("localeID1" in a) && ("localeID1" in v)
-        && !isAsn1Element(a) && !isAsn1Element(v)
+        && !ASN1Element.isElement(a) && !ASN1Element.isElement(v)
     ) {
         return evaluateLocaleContextTyped(a, v);
     }
     if (
         ("localeID2" in a) && ("localeID2" in v)
-        && !isAsn1Element(a) && !isAsn1Element(v)
+        && !ASN1Element.isElement(a) && !ASN1Element.isElement(v)
     ) {
         return evaluateLocaleContextTyped(a, v);
     }
-    if (isAsn1Element(assertion) && isAsn1Element(value)) {
+    if (ASN1Element.isElement(assertion) && ASN1Element.isElement(value)) {
         return compareElements(assertion, value);
     }
     return false;
@@ -92,13 +90,13 @@ function evaluateLocaleContextTyped (
 ): boolean {
     if (
         ("localeID1" in assertion) && ("localeID1" in value)
-        && !isAsn1Element(assertion) && !isAsn1Element(value)
+        && !ASN1Element.isElement(assertion) && !ASN1Element.isElement(value)
     ) {
         return assertion.localeID1.isEqualTo(value.localeID1);
     }
     if (
         ("localeID2" in assertion) && ("localeID2" in value)
-        && !isAsn1Element(assertion) && !isAsn1Element(value)
+        && !ASN1Element.isElement(assertion) && !ASN1Element.isElement(value)
     ) {
         return directoryStringToString(assertion.localeID2)
             === directoryStringToString(value.localeID2);

@@ -1,5 +1,5 @@
-import type { ASN1Element } from "@wildboar/asn1";
-import { isAsn1Element, readDecoded } from "../readValue.mjs";
+import { ASN1Element } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
@@ -20,7 +20,7 @@ function algorithmIdentifierMatch (
     value: ASN1Element | AlgorithmIdentifier,
 ): boolean {
     const presented = readDecoded(assertion, _decode_AlgorithmIdentifier);
-    const stored = isAsn1Element(value)
+    const stored = ASN1Element.isElement(value)
         ? _decode_AlgorithmIdentifier(value.sequence[0])
         : value;
     return algorithmIdentifierMatchTyped(presented, stored);

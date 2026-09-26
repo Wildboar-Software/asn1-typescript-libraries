@@ -1,6 +1,5 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1Element } from "@wildboar/asn1";
 import { Buffer } from "node:buffer";
-import { isAsn1Element } from "../readValue.mjs";
 import type {
     AttributeCertificateExactAssertion,
 } from "../../modules/AttributeCertificateDefinitions/AttributeCertificateExactAssertion.ta.mjs";
@@ -20,7 +19,7 @@ import type {
 function exactOctets (
     value: ASN1Element | Uint8Array | AttributeCertificateExactAssertion | AttributeCertificate,
 ): Uint8Array {
-    if (isAsn1Element(value)) {
+    if (ASN1Element.isElement(value)) {
         return value.sequence[2].octetString;
     }
     if (value instanceof Uint8Array) {

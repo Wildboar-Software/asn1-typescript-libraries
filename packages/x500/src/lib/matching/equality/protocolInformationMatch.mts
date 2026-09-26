@@ -1,7 +1,7 @@
 import {
     ASN1TagClass,
     ASN1UniversalType,
-    type ASN1Element,
+    ASN1Element,
     type OCTET_STRING,
 } from "@wildboar/asn1";
 import {
@@ -9,15 +9,14 @@ import {
     _decode_ProtocolInformation,
 } from "../../modules/SelectedAttributeTypes/ProtocolInformation.ta.mjs";
 import { compareNSAP } from "../../comparators/compareNSAPs.mjs";
-import { isAsn1Element } from "../readValue.mjs";
 
 function assertedNAddress (
     assertion: ASN1Element | ProtocolInformation | Uint8Array,
 ): OCTET_STRING {
-    if (assertion instanceof Uint8Array && !isAsn1Element(assertion)) {
+    if (assertion instanceof Uint8Array && !ASN1Element.isElement(assertion)) {
         return assertion;
     }
-    if (!isAsn1Element(assertion)) {
+    if (!ASN1Element.isElement(assertion)) {
         return assertion.nAddress;
     }
     if (
@@ -47,9 +46,9 @@ function protocolInformationMatch (
     assertion: ASN1Element | ProtocolInformation | Uint8Array,
     value: ASN1Element | ProtocolInformation | Uint8Array,
 ): boolean {
-    const stored = value instanceof Uint8Array && !isAsn1Element(value)
+    const stored = value instanceof Uint8Array && !ASN1Element.isElement(value)
         ? value
-        : isAsn1Element(value)
+        : ASN1Element.isElement(value)
             ? _decode_ProtocolInformation(value).nAddress
             : value.nAddress;
     return protocolInformationMatchTyped(assertedNAddress(assertion), stored);

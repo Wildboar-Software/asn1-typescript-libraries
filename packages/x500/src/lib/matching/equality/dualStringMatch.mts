@@ -1,4 +1,4 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1Element } from "@wildboar/asn1";
 import {
     DualStringSyntax,
     _decode_DualStringSyntax,
@@ -7,7 +7,7 @@ import type {
     UnboundedDirectoryString,
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import type { DirectoryStringInput } from "../readValue.mjs";
-import { isAsn1Element, readDirectoryString } from "../readValue.mjs";
+import { readDirectoryString } from "../readValue.mjs";
 import { prohibitedCharacters } from "../../utils/prepString.mjs";
 
 /** Element, `DualStringSyntax`, or the two strings already extracted. */
@@ -20,7 +20,7 @@ export type DualStringInput =
     };
 
 function readDual (value: DualStringInput): { operation: string; object: string } {
-    if (isAsn1Element(value)) {
+    if (ASN1Element.isElement(value)) {
         const decoded = _decode_DualStringSyntax(value);
         return {
             operation: readDirectoryString(decoded.operation),

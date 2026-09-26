@@ -1,14 +1,11 @@
 import { Buffer } from "node:buffer";
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1Element } from "@wildboar/asn1";
 import type SubstringSelection from "../../types/SubstringSelection.mjs";
 import type {
     OctetSubstringAssertionInput,
     PreparedOctetSubstring,
 } from "../readValue.mjs";
-import {
-    isAsn1Element,
-    readOctetSubstringAssertion,
-} from "../readValue.mjs";
+import { readOctetSubstringAssertion } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.7
@@ -29,7 +26,7 @@ function octetStringSubstringsMatch (
 ): boolean {
     return octetStringSubstringsMatchTyped(
         readOctetSubstringAssertion(assertion),
-        isAsn1Element(value) ? value.octetString : value,
+        ASN1Element.isElement(value) ? value.octetString : value,
     );
 }
 

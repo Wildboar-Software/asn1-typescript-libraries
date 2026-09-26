@@ -1,10 +1,10 @@
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Element, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
     PolicySyntax,
     _decode_PolicySyntax,
 } from "../../modules/AuthenticationFramework/PolicySyntax.ta.mjs";
 import type { ObjectIdentifierInput } from "../readValue.mjs";
-import { isAsn1Element, readObjectIdentifier } from "../readValue.mjs";
+import { readObjectIdentifier } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.8 `policyMatch`.
@@ -20,7 +20,7 @@ function policyMatch (
     assertion: ObjectIdentifierInput,
     value: ASN1Element | PolicySyntax,
 ): boolean {
-    const stored = isAsn1Element(value) ? _decode_PolicySyntax(value) : value;
+    const stored = ASN1Element.isElement(value) ? _decode_PolicySyntax(value) : value;
     return policyMatchTyped(readObjectIdentifier(assertion), stored);
 }
 

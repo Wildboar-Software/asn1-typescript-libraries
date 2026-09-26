@@ -1,6 +1,5 @@
 import { Buffer } from "node:buffer";
-import type { ASN1Element } from "@wildboar/asn1";
-import { isAsn1Element } from "../readValue.mjs";
+import { ASN1Element } from "@wildboar/asn1";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.6
@@ -19,8 +18,8 @@ function octetStringOrderingMatch (
     value: ASN1Element | Uint8Array,
 ): number {
     return octetStringOrderingMatchTyped(
-        isAsn1Element(assertion) ? assertion.octetString : assertion,
-        isAsn1Element(value) ? value.octetString : value,
+        ASN1Element.isElement(assertion) ? assertion.octetString : assertion,
+        ASN1Element.isElement(value) ? value.octetString : value,
     );
 }
 

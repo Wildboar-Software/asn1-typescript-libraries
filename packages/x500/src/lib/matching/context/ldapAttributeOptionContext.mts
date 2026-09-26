@@ -1,8 +1,7 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1Element } from "@wildboar/asn1";
 import {
     _decode_AttributeOptionList,
 } from "../../modules/SelectedAttributeTypes/AttributeOptionList.ta.mjs";
-import { isAsn1Element } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 10.4
@@ -22,8 +21,8 @@ function evaluateLDAPAttributeOptionContext (
     assertion: ASN1Element | readonly string[],
     value: ASN1Element | readonly string[],
 ): boolean {
-    const a = isAsn1Element(assertion) ? _decode_AttributeOptionList(assertion) : assertion;
-    const v = isAsn1Element(value) ? _decode_AttributeOptionList(value) : value;
+    const a = ASN1Element.isElement(assertion) ? _decode_AttributeOptionList(assertion) : assertion;
+    const v = ASN1Element.isElement(value) ? _decode_AttributeOptionList(value) : value;
     return evaluateLDAPAttributeOptionContextTyped(a, v);
 }
 

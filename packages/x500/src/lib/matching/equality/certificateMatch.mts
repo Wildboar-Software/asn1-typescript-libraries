@@ -1,5 +1,4 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { isAsn1Element } from "../readValue.mjs";
 import { ASN1Element, DERElement, FALSE_BIT, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import compareName from "../../comparators/compareName.mjs";
 import {
@@ -435,8 +434,8 @@ function certificateMatch (
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     return certificateMatchTyped(
-        isAsn1Element(assertion) ? _decode_CertificateAssertion(assertion) : assertion,
-        isAsn1Element(value) ? _decode_Certificate(value) : value,
+        ASN1Element.isElement(assertion) ? _decode_CertificateAssertion(assertion) : assertion,
+        ASN1Element.isElement(value) ? _decode_Certificate(value) : value,
         getEqualityMatcher,
     );
 }

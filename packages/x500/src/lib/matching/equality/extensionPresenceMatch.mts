@@ -1,5 +1,5 @@
 import { ASN1Construction, ASN1Element, ASN1TagClass, ASN1UniversalType, OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { isAsn1Element, readObjectIdentifier } from "../readValue.mjs";
+import { readObjectIdentifier } from "../readValue.mjs";
 import type { ObjectIdentifierInput } from "../readValue.mjs";
 import type { Certificate } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
 import type { CertificateList } from "../../modules/AuthenticationFramework/CertificateList.ta.mjs";
@@ -24,7 +24,7 @@ import {
 function extensionsOf (
     value: ASN1Element | Certificate | CertificateList | AttributeCertificate,
 ): Extensions | undefined {
-    if (!isAsn1Element(value)) {
+    if (!ASN1Element.isElement(value)) {
         const signed = value.toBeSigned;
         if ("crlExtensions" in signed) {
             return signed.crlExtensions;

@@ -1,10 +1,10 @@
 import type SubstringSelection from "../../types/SubstringSelection.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1Element } from "@wildboar/asn1";
 import type {
     PreparedSubstring,
     SubstringAssertionInput,
 } from "../readValue.mjs";
-import { isAsn1Element, readSubstringAssertion } from "../readValue.mjs";
+import { readSubstringAssertion } from "../readValue.mjs";
 import {
     _decode_TelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
@@ -33,7 +33,7 @@ function facsimileNumberSubstringsMatch (
 ): boolean {
     const stored = typeof value === "string"
         ? value
-        : isAsn1Element(value)
+        : ASN1Element.isElement(value)
             ? _decode_TelephoneNumber(value.sequence[0])
             : value.telephoneNumber;
     return facsimileNumberSubstringsMatchTyped(readSubstringAssertion(assertion), stored);
