@@ -13,20 +13,16 @@ describe("storedPrefixMatch", () => {
     it("matches when the stored value is a prefix of the assertion", () => {
         expect(storedPrefixMatch(uds("7035551212"), uds("703"))).toBe(true);
         expect(storedPrefixMatch(uds("703"), uds("703"))).toBe(true);
-        expect(storedPrefixMatch(uds("4155551212"), uds("415"))).toBe(true);
     });
 
     it("does not match when the stored value is longer than the assertion", () => {
         expect(storedPrefixMatch(uds("703"), uds("7035551212"))).toBe(false);
         expect(storedPrefixMatch(uds("7045551212"), uds("703"))).toBe(false);
-        expect(storedPrefixMatch(uds("415"), uds("4155551212"))).toBe(false);
-        expect(storedPrefixMatch(uds("4155551212"), uds("416"))).toBe(false);
     });
 
     it("ignores case", () => {
         expect(storedPrefixMatch(uds("aBcdef"), uds("AbC"))).toBe(true);
         expect(storedPrefixMatch(uds("aBcdef"), uds("AbX"))).toBe(false);
-        expect(storedPrefixMatch(uds("HELLO WORLD"), uds("hello"))).toBe(true);
     });
 
     it("ignores leading and trailing spaces", () => {

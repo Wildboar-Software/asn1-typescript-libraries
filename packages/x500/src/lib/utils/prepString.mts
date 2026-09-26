@@ -1,49 +1,27 @@
-/**
- * String preparation for Rec. ITU-T X.520 (10/2019) clause 7.
- *
- * Six steps: Transcode (already done: JS strings are Unicode), Map,
- * Normalize (NFKC), Prohibit, Check bidi (no restrictions), then
- * Insignificant Character Removal. Failure at any step yields
- * `undefined` (X.520 UNDEFINED).
- */
+// Information on "\p{Cc}":
+// - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
+// - https://unicode.org/reports/tr18/#General_Category_Property
 
 /**
- * Surrogates and U+FFFD, used by matchers that only need the
- * Prohibit subset of clause 7.4 (no `/g`: `RegExp#test` must not
- * retain `lastIndex` across calls).
+ * Clause 7.2: TAB, LF, VT, FF, CR, and NEL map to SPACE. Applied
+ * before `mappedToNothing` so those controls are not deleted.
  */
+const controlsToSpace: RegExp = /[\t\n\v\f\r\u0085]/g;
+
+/**
+ * Clause 7.2 map-to-nothing: SOFT HYPHEN, MONGOLIAN TODO SOFT
+ * HYPHEN, COMBINING GRAPHEME JOINER, Mongolian free-variation
+ * selectors, variation selectors U+FE00..U+FE0F, OBJECT
+ * REPLACEMENT CHARACTER, ZERO WIDTH SPACE, remaining controls,
+ * and remaining format characters.
+ */
+const mappedToNothing: RegExp = /[\u00AD\u1806\u034F\u180B-\u180D\uFE00-\uFE0F\uFFFC\u200B\p{Cc}\p{Cf}]+/ug;
+
 export const prohibitedCharacters: RegExp = /[\uD800-\uDFFF\uFFFD]+/;
 
-export type PrepInsignificant =
-    | "directory" // clause 7.6.1
-    | "numeric" // clause 7.6.2
-    | "telephone" // clause 8.2.8 / 8.2.9
-    | "none";
-
-export interface PrepStringOptions {
-    /**
-     * Clause 7.2: case-fold as in IETF RFC 3454 B.2 during Map.
-     * Used by case-ignore, numeric, stored-prefix, and telephone matchers.
-     */
-    readonly caseFold?: boolean;
-    /**
-     * Clause 7.6 / 8.2.8 character removal. Default `directory`.
-     */
-    readonly insignificant?: PrepInsignificant;
-}
-
-const COMBINING_MARK = /^\p{M}/u;
-const PRIVATE_USE = /^\p{Co}$/u;
-const UNASSIGNED = /^\p{Cn}$/u;
-const CONTROL = /^\p{Cc}$/u;
-const FORMAT = /^\p{Cf}$/u;
-const SPACE_SEP = /^\p{Zs}$/u;
-const LINE_SEP = /^\p{Zl}$/u;
-const PARA_SEP = /^\p{Zp}$/u;
-
 /**
- * RFC 3454 B.2 / Unicode full case-fold mappings that are not the
- * same as `String.prototype.toLowerCase()`.
+ * RFC 3454 B.2 mappings that are not the same as
+ * `String.prototype.toLowerCase()`. Used when `caseFold` is set.
  */
 const FULL_CASE_FOLD: ReadonlyMap<number, string> = new Map([
     [0x00DF, "ss"],
@@ -69,210 +47,69 @@ const FULL_CASE_FOLD: ReadonlyMap<number, string> = new Map([
     [0xFB06, "st"],
 ]);
 
-function isSurrogateCodePoint (cp: number): boolean {
-    return (cp >= 0xD800) && (cp <= 0xDFFF);
-}
-
-function isNoncharacter (cp: number): boolean {
-    if ((cp >= 0xFDD0) && (cp <= 0xFDEF)) {
-        return true;
-    }
-    return ((cp & 0xFFFE) === 0xFFFE);
-}
-
-function isVariationSelector (cp: number): boolean {
-    return (
-        ((cp >= 0x180B) && (cp <= 0x180D))
-        || ((cp >= 0xFE00) && (cp <= 0xFE0F))
-    );
-}
-
-function mapsToNothing (cp: number): boolean {
-    return (
-        (cp === 0x00AD)
-        || (cp === 0x1806)
-        || (cp === 0x034F)
-        || (cp === 0xFFFC)
-        || (cp === 0x200B)
-        || isVariationSelector(cp)
-    );
-}
-
-function mapsToSpace (cp: number): boolean {
-    return (
-        (cp === 0x0009)
-        || (cp === 0x000A)
-        || (cp === 0x000B)
-        || (cp === 0x000C)
-        || (cp === 0x000D)
-        || (cp === 0x0085)
-    );
-}
-
-function foldCodePoint (cp: number): string {
-    const mapped = FULL_CASE_FOLD.get(cp);
-    if (mapped !== undefined) {
-        return mapped;
-    }
-    return String.fromCodePoint(cp).toLowerCase();
-}
-
-/**
- * Clause 7.2 Map. Returns the mapped character(s), which may be empty.
- */
-function mapCodePoint (cp: number, caseFold: boolean): string {
-    if (mapsToNothing(cp)) {
-        return "";
-    }
-    if (mapsToSpace(cp)) {
-        return " ";
-    }
-    const ch = String.fromCodePoint(cp);
-    if (CONTROL.test(ch) || FORMAT.test(ch)) {
-        return "";
-    }
-    if (SPACE_SEP.test(ch) || LINE_SEP.test(ch) || PARA_SEP.test(ch)) {
-        return " ";
-    }
-    return caseFold ? foldCodePoint(cp) : ch;
-}
-
-function isCombiningMark (cp: number): boolean {
-    return COMBINING_MARK.test(String.fromCodePoint(cp));
-}
-
-/**
- * Clause 7.4. `str` is already mapped and NFKC-normalized.
- */
-function isProhibited (str: string): boolean {
-    if (str.length === 0) {
-        return true;
-    }
-    const first = str.codePointAt(0);
-    if (first === undefined || isCombiningMark(first)) {
-        return true;
-    }
+function foldCase (str: string): string {
+    let out = "";
     for (const ch of str) {
-        const cp = ch.codePointAt(0)!;
-        if (
-            isSurrogateCodePoint(cp)
-            || isNoncharacter(cp)
-            || (cp === 0xFFFD)
-            || PRIVATE_USE.test(ch)
-            || UNASSIGNED.test(ch)
-        ) {
-            return true;
-        }
+        const mapped = FULL_CASE_FOLD.get(ch.codePointAt(0)!);
+        out += mapped ?? ch.toLowerCase();
     }
-    return false;
+    return out;
+}
+
+export interface PrepStringOptions {
+    /**
+     * Clause 7.2: case-fold as in IETF RFC 3454 B.2 during Map.
+     * Used by case-ignore and stored-prefix matchers.
+     */
+    readonly caseFold?: boolean;
 }
 
 /**
- * Clause 7.6.1: SPACE (U+0020) not followed by a combining mark.
- * `chars` is a code-point array (`[...str]`).
- */
-function isInsignificantSpace (chars: string[], index: number): boolean {
-    if (chars[index] !== " ") {
-        return false;
-    }
-    const next = chars[index + 1];
-    return (next === undefined) || !COMBINING_MARK.test(next);
-}
-
-function removeDirectorySpaces (str: string): string {
-    const chars = [...str];
-    let start = 0;
-    let end = chars.length;
-    while ((start < end) && isInsignificantSpace(chars, start)) {
-        start += 1;
-    }
-    while ((end > start) && isInsignificantSpace(chars, end - 1)) {
-        end -= 1;
-    }
-    if (start === end) {
-        // Entirely insignificant spaces → a single space.
-        return " ";
-    }
-    let out = "";
-    let inSpace = false;
-    for (let i = start; i < end; i++) {
-        if (isInsignificantSpace(chars, i)) {
-            if (!inSpace) {
-                out += " ";
-                inSpace = true;
-            }
-        } else {
-            out += chars[i];
-            inSpace = false;
-        }
-    }
-    return out;
-}
-
-function removeAllSpaces (str: string): string {
-    const chars = [...str];
-    let out = "";
-    for (let i = 0; i < chars.length; i++) {
-        if (!isInsignificantSpace(chars, i)) {
-            out += chars[i];
-        }
-    }
-    return out;
-}
-
-function removeTelephoneInsignificant (str: string): string {
-    const chars = [...str];
-    let out = "";
-    for (let i = 0; i < chars.length; i++) {
-        if ((chars[i] === "-") || isInsignificantSpace(chars, i)) {
-            continue;
-        }
-        out += chars[i];
-    }
-    return out;
-}
-
-/**
- * @summary Prepare a string for matching, per ITU-T X.520 clause 7.
+ * @summary Prepare a string for matching, per ITU Recommendation X.520, Section 7.
  * @description
  *
- * Applies Map (clause 7.2), NFKC (7.3), Prohibit (7.4), and
- * insignificant-character removal (7.6 / 8.2.8). The input is
- * already Unicode (clause 7.1). Clause 7.5 imposes no bidi checks.
+ * This function normalizes an input string for comparison in X.500 matching
+ * rules according to the procedures defined in
+ * [ITU Recommendation X.520 (2019)](https://www.itu.int/rec/T-REC-X.520/en),
+ * Section 7.
  *
- * @param {string} str The transcoded string.
- * @param {PrepStringOptions} [options] Case-folding and ICR mode.
- * @returns {string | undefined} The prepared string, or `undefined`
- *  if a step failed (UNDEFINED).
+ * The input string is already expected to be transcoded, thereby satisfying
+ * the procedures defined in section 7.1. There is nothing to be done relating
+ * to section 7.5. NumericString and TelephoneNumber insignificant-character
+ * removal (7.6.2 / 8.2.8) belong in those matching rules, not here:
+ * NumericString is only digits and SPACE, so Map and case-folding are no-ops.
+ *
+ * Prohibit (7.4) may run before or after Map: the two sets do not overlap.
+ *
+ * @param {string} str The string to be normalized.
+ * @param {PrepStringOptions} [options] `caseFold` applies RFC 3454 B.2 during Map.
+ * @returns {string | undefined} The normalized string, or `undefined` if there
+ *  was a prohibited character or the mapped string was empty.
  *
  * @function
  */
 export
 function prepString (str: string, options?: PrepStringOptions): string | undefined {
-    const caseFold = options?.caseFold === true;
-    const insignificant: PrepInsignificant = options?.insignificant ?? "directory";
-    let mapped = "";
-    for (const ch of str) {
-        mapped += mapCodePoint(ch.codePointAt(0)!, caseFold);
-    }
-    const normalized = mapped.normalize("NFKC");
-    if (isProhibited(normalized)) {
+    if (prohibitedCharacters.test(str)) { // 7.4: Prohibit
         return undefined;
     }
-    switch (insignificant) {
-        case "none": {
-            return normalized;
-        }
-        case "numeric": {
-            return removeAllSpaces(normalized);
-        }
-        case "telephone": {
-            return removeTelephoneInsignificant(normalized);
-        }
-        default: {
-            return removeDirectorySpaces(normalized);
-        }
+    // 7.2: Map. Controls that become SPACE are rewritten first so they
+    // are not deleted with the remaining Cc characters.
+    let mapped = str
+        .replace(controlsToSpace, " ")
+        .replace(mappedToNothing, "");
+    if (options?.caseFold === true) {
+        mapped = foldCase(mapped);
     }
+    mapped = mapped.normalize("NFKC"); // 7.3: Normalize
+    if (mapped.length === 0) {
+        return undefined;
+    }
+    // 7.6.1: consecutive whitespace is one SPACE; leading and
+    // trailing SPACE are removed; a string of only spaces becomes
+    // a single SPACE.
+    const trimmed = mapped.replace(/\s+/g, " ").trim();
+    return trimmed.length === 0 ? " " : trimmed;
 }
 
 /**

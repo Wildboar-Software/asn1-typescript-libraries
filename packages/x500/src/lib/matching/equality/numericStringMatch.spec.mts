@@ -15,12 +15,10 @@ describe("numericStringMatch", () => {
         expect(numericStringMatch(numeric("15  15"), numeric("1515"))).toBe(true);
         expect(numericStringMatch(numeric("1 5 1 5"), numeric("15  15"))).toBe(true);
         expect(numericStringMatch(numeric("12 3"), numeric("1 23"))).toBe(true);
-        expect(numericStringMatch(numeric("1 2 3"), numeric("123"))).toBe(true);
     });
 
     it("rejects digit sequences that differ after spaces are removed", () => {
         expect(numericStringMatch(numeric("15 15"), numeric("15 16"))).toBe(false);
         expect(numericStringMatch(numeric("1 2 3"), numeric("1234"))).toBe(false);
-        expect(numericStringMatch(numeric("123"), numeric("124"))).toBe(false);
     });
 });

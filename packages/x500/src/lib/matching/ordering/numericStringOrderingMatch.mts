@@ -1,5 +1,4 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import { compareCodePoints } from "../../utils/prepString.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.5
@@ -33,7 +32,7 @@ export
 function numericStringOrderingMatchTyped (assertion: string, value: string): number {
     const a: string = assertion.replace(/\s+/g, "");
     const v: string = value.replace(/\s+/g, "");
-    return compareCodePoints(a, v);
+    return a.localeCompare(v);
 }
 
 export default numericStringOrderingMatch;

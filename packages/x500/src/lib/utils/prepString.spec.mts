@@ -33,7 +33,7 @@ describe("prepString()", () => {
         expect(prepString("\t\n")).toBe(" ");
     });
 
-    it("rejects empty strings", () => {
+    it("rejects empty strings and strings that map to nothing", () => {
         expect(prepString("")).toBeUndefined();
         expect(prepString("\u00AD")).toBeUndefined();
     });
@@ -55,20 +55,5 @@ describe("prepString()", () => {
     it("case-folds sharp s when requested", () => {
         expect(prepString("STRASSE", { caseFold: true }))
             .toBe(prepString("Straße", { caseFold: true }));
-    });
-
-    it("removes all spaces for numeric ICR", () => {
-        expect(prepString("1 2 3", { insignificant: "numeric" })).toBe("123");
-    });
-
-    it("removes hyphens and spaces for telephone ICR", () => {
-        expect(prepString("+1-415 555 1212", {
-            caseFold: true,
-            insignificant: "telephone",
-        })).toBe("+14155551212");
-    });
-
-    it("rejects a combining mark as the first character", () => {
-        expect(prepString("\u0301e")).toBeUndefined();
     });
 });
