@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
     id_ce_acceptableCertPolicies,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-acceptableCertPolicies.va.mjs";
@@ -25,12 +25,28 @@ import { DERElement } from "@wildboar/asn1";
  * `AcceptableCertPoliciesSyntax` matches the stored policy set.
  */
 export
-const acceptableCertPoliciesMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: AcceptableCertPoliciesSyntax = _decode_AcceptableCertPoliciesSyntax(assertion);
-    const v: AttributeCertificate = _decode_AttributeCertificate(value);
+function acceptableCertPoliciesMatch (
+    assertion: ASN1Element | AcceptableCertPoliciesSyntax,
+    value: ASN1Element | AttributeCertificate,
+): boolean {
+    return acceptableCertPoliciesMatchTyped(
+        readDecoded(assertion, _decode_AcceptableCertPoliciesSyntax),
+        readDecoded(value, _decode_AttributeCertificate),
+    );
+}
+
+/**
+ * `acceptableCertPoliciesMatch` on a decoded policy list and AC.
+ *
+ * @param a Presented acceptable policies.
+ * @param v Stored attribute certificate.
+ * @returns `true` when every presented policy is stored.
+ */
+export
+function acceptableCertPoliciesMatchTyped (
+    a: AcceptableCertPoliciesSyntax,
+    v: AttributeCertificate,
+): boolean {
     const ext: Extension | undefined = v.toBeSigned.extensions
         ?.find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_acceptableCertPolicies));
     if (!ext) {

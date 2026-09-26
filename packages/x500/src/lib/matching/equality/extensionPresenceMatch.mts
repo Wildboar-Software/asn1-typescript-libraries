@@ -1,5 +1,9 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import { ASN1Construction, ASN1Element, ASN1TagClass, ASN1UniversalType, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { readObjectIdentifier } from "../readValue.mjs";
+import type { ObjectIdentifierInput } from "../readValue.mjs";
+import type { Certificate } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
+import type { CertificateList } from "../../modules/AuthenticationFramework/CertificateList.ta.mjs";
+import type { AttributeCertificate } from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
 import {
     Extension,
 } from "../../modules/AuthenticationFramework/Extension.ta.mjs";
@@ -17,12 +21,19 @@ import {
  * against attribute certificates; this implementation also accepts
  * public-key certificates, CRLs, and AVLs.
  */
-export
-const extensionPresenceMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: OBJECT_IDENTIFIER = assertion.objectIdentifier;
+function extensionsOf (
+    value: ASN1Element | Certificate | CertificateList | AttributeCertificate,
+): Extensions | undefined {
+    if (!ASN1Element.isElement(value)) {
+        const signed = value.toBeSigned;
+        if ("crlExtensions" in signed) {
+            return signed.crlExtensions;
+        }
+        if ("extensions" in signed) {
+            return signed.extensions;
+        }
+        return undefined;
+    }
     const tbs: ASN1Element = value.sequence[0];
     const pkcExt: ASN1Element | undefined = tbs.sequence
         .find((el) => (
@@ -30,9 +41,8 @@ const extensionPresenceMatch: EqualityMatcher = (
             && (el.construction === ASN1Construction.constructed)
             && (el.tagNumber === 3)
         ));
-    if (pkcExt) { // It is a public key certificate.
-        const exts: Extensions = _decode_Extensions(pkcExt.inner);
-        return exts.some((ext: Extension): boolean => (ext.extnId.isEqualTo(a)));
+    if (pkcExt) {
+        return _decode_Extensions(pkcExt.inner);
     }
     const lastElement: ASN1Element = tbs.sequence[tbs.sequence.length - 1];
     if (
@@ -40,17 +50,39 @@ const extensionPresenceMatch: EqualityMatcher = (
         && (lastElement.construction === ASN1Construction.constructed)
         && (lastElement.tagNumber === 0)
     ) {
-        const exts: Extensions = _decode_Extensions(lastElement.inner);
-        return exts.some((ext: Extension): boolean => (ext.extnId.isEqualTo(a)));
+        return _decode_Extensions(lastElement.inner);
     } else if (
         (lastElement.tagClass === ASN1TagClass.universal)
         && (lastElement.construction === ASN1Construction.constructed)
         && (lastElement.tagNumber === ASN1UniversalType.sequence)
     ) {
-        const exts: Extensions = _decode_Extensions(lastElement.inner);
-        return exts.some((ext: Extension): boolean => (ext.extnId.isEqualTo(a)));
+        return _decode_Extensions(lastElement.inner);
     }
-    return false;
+    return undefined;
+}
+
+export
+function extensionPresenceMatch (
+    assertion: ObjectIdentifierInput,
+    value: ASN1Element | Certificate | CertificateList | AttributeCertificate,
+): boolean {
+    return extensionPresenceMatchTyped(readObjectIdentifier(assertion), extensionsOf(value));
+}
+
+/**
+ * `extensionPresenceMatch` on an extension OID and the certificate's
+ * extension list.
+ *
+ * @param assertion Presented extension OID.
+ * @param extensions Stored extensions, if the certificate has any.
+ * @returns `true` when an extension has that OID.
+ */
+export
+function extensionPresenceMatchTyped (
+    assertion: OBJECT_IDENTIFIER,
+    extensions: readonly Extension[] | undefined,
+): boolean {
+    return Boolean(extensions?.some((ext: Extension): boolean => ext.extnId.isEqualTo(assertion)));
 }
 
 export default extensionPresenceMatch;

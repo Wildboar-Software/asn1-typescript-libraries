@@ -1,5 +1,6 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
     id_ce_roleSpecCertIdentifier,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-roleSpecCertIdentifier.va.mjs";
@@ -79,13 +80,32 @@ function assertRoleSpecCertIdentifier (
  * component.
  */
 export
-const roleSpecCertIdMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function roleSpecCertIdMatch (
+    assertion: ASN1Element | RoleSpecCertIdentifierSyntax,
+    value: ASN1Element | AttributeCertificate,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: RoleSpecCertIdentifierSyntax = _decode_RoleSpecCertIdentifierSyntax(assertion);
-    const v: AttributeCertificate = _decode_AttributeCertificate(value);
+): boolean {
+    return roleSpecCertIdMatchTyped(
+        readDecoded(assertion, _decode_RoleSpecCertIdentifierSyntax),
+        readDecoded(value, _decode_AttributeCertificate),
+        getEqualityMatcher,
+    );
+}
+
+/**
+ * `roleSpecCertIdMatch` on decoded values.
+ *
+ * @param a Presented role-specification certificate identifiers.
+ * @param v Stored attribute certificate.
+ * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @returns `true` when the stored extension matches.
+ */
+export
+function roleSpecCertIdMatchTyped (
+    a: RoleSpecCertIdentifierSyntax,
+    v: AttributeCertificate,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     const rsci: Extension | undefined = v.toBeSigned.extensions
         ?.find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_roleSpecCertIdentifier));
     if (!rsci) {

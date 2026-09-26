@@ -414,6 +414,12 @@ function evaluateCertificateAssertion (
 }
 
 /**
+ * `certificateMatch` on a decoded assertion and certificate.
+ * Alias of {@link evaluateCertificateAssertion}.
+ */
+export const certificateMatchTyped = evaluateCertificateAssertion;
+
+/**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.2 `certificateMatch`.
  *
  * Selects one or more `Certificate` values by the characteristics
@@ -422,14 +428,16 @@ function evaluateCertificateAssertion (
  * {@link evaluateCertificateAssertion}.
  */
 export
-const certificateMatch : EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function certificateMatch (
+    assertion: ASN1Element | CertificateAssertion,
+    value: ASN1Element | Certificate,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: CertificateAssertion = _decode_CertificateAssertion(assertion);
-    const v: Certificate = _decode_Certificate(value);
-    return evaluateCertificateAssertion(a, v, getEqualityMatcher);
+): boolean {
+    return certificateMatchTyped(
+        ASN1Element.isElement(assertion) ? _decode_CertificateAssertion(assertion) : assertion,
+        ASN1Element.isElement(value) ? _decode_Certificate(value) : value,
+        getEqualityMatcher,
+    );
 }
 
 export default certificateMatch;

@@ -1,9 +1,5 @@
-import SubstringsMatcher from "../../types/SubstringsMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
-import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
+import type { DirectoryStringInput } from "../readValue.mjs";
+import { readDirectoryString } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 
 /**
@@ -41,29 +37,36 @@ function prepare (input: string): string | undefined {
  * case. Insignificant spaces are ignored (clause 7.6.1): leading and
  * trailing spaces are removed, and inner whitespace is one space.
  * Typical use: a stored area code against a presented telephone number.
+ *
+ * Each argument may be an `ASN1Element`, a directory string, or a
+ * JavaScript string.
  */
 export
-const storedPrefixMatch: SubstringsMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: string = directoryStringToString(_decode_UDS(assertion));
-    const v: string = directoryStringToString(_decode_UDS(value));
-    if (v === "" || a === "") {
-        return false;
-    }
-    if (a.startsWith(v)) {
-        return true;
-    }
-    const preparedA = prepString(a);
-    const preparedV = prepString(v);
+function storedPrefixMatch (
+    assertion: DirectoryStringInput,
+    value: DirectoryStringInput,
+): boolean {
+    return storedPrefixMatchTyped(
+        readDirectoryString(assertion),
+        readDirectoryString(value),
+    );
+}
+
+/**
+ * `storedPrefixMatch` on two strings. `value` is the stored prefix.
+ *
+ * @param assertion Presented string.
+ * @param value Stored prefix.
+ * @returns `true` when the stored string is a prefix.
+ */
+export
+function storedPrefixMatchTyped (assertion: string, value: string): boolean {
+    const preparedA = prepare(assertion);
+    const preparedV = prepare(value);
     if (preparedA === undefined || preparedV === undefined) {
         return false;
     }
-    if (preparedV.length > preparedA.length) {
-        return false;
-    }
-    return preparedA.toUpperCase().startsWith(preparedV.toUpperCase());
+    return preparedA.startsWith(preparedV);
 }
 
 export default storedPrefixMatch;

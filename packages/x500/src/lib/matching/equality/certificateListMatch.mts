@@ -1,4 +1,5 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import { readDecoded } from "../readValue.mjs";
 import { ASN1Element, DERElement, FALSE_BIT, INTEGER, TRUE_BIT, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import compareName from "../../comparators/compareName.mjs";
 import {
@@ -48,13 +49,32 @@ import compareRelativeDistinguishedName from "../../comparators/compareRelativeD
  * required is not a match.
  */
 export
-const certificateListMatch : EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function certificateListMatch (
+    assertion: ASN1Element | CertificateListAssertion,
+    value: ASN1Element | CertificateList,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: CertificateListAssertion = _decode_CertificateListAssertion(assertion);
-    const v: CertificateList = _decode_CertificateList(value);
+): boolean {
+    return certificateListMatchTyped(
+        readDecoded(assertion, _decode_CertificateListAssertion),
+        readDecoded(value, _decode_CertificateList),
+        getEqualityMatcher,
+    );
+}
+
+/**
+ * `certificateListMatch` on a decoded assertion and CRL.
+ *
+ * @param a Presented CRL assertion.
+ * @param v Stored certificate list.
+ * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @returns `true` when every present component matches.
+ */
+export
+function certificateListMatchTyped (
+    a: CertificateListAssertion,
+    v: CertificateList,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     const crlNumberExt: Extension | undefined = v.toBeSigned.crlExtensions
         ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_cRLNumber)));
     const idpExt: Extension | undefined = v.toBeSigned.crlExtensions

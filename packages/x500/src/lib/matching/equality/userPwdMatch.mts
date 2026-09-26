@@ -1,11 +1,62 @@
-import type { EqualityMatcher } from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1Element } from "@wildboar/asn1";
 import type { AlgorithmIdentifier } from "../../modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { UserPwd, _decode_UserPwd } from "../../modules/PasswordPolicy/UserPwd.ta.mjs";
 import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier.mjs";
 import compareElements from "../../comparators/compareElements.mjs";
 import { Buffer } from "node:buffer";
-import caseExactMatch from "./caseExactMatch.mjs";
+import { caseExactMatchTyped } from "./caseExactMatch.mjs";
+import { readDecoded } from "../readValue.mjs";
+
+/**
+ * `userPwdMatch` on two decoded `UserPwd` values.
+ *
+ * @param encrypter Encrypts a clear password when the other side is encrypted.
+ * @param assertion Presented password.
+ * @param value Stored password.
+ * @returns `true` when the passwords match under clause 8.10.1.
+ */
+export
+function userPwdMatchTyped (
+    encrypter: (alg: AlgorithmIdentifier, clear: string) => Uint8Array | null,
+    assertion: UserPwd,
+    value: UserPwd,
+): boolean {
+    if (ASN1Element.isElement(assertion) !== ASN1Element.isElement(value)) {
+        return false;
+    }
+    if (ASN1Element.isElement(assertion)) {
+        return compareElements(assertion, value as ASN1Element);
+    }
+    if (("clear" in assertion) && ("clear" in value)) {
+        return caseExactMatchTyped(assertion.clear, value.clear);
+    }
+    if (("encrypted" in assertion) && ("encrypted" in value)) {
+        return (
+            Buffer.compare(assertion.encrypted.encryptedString, value.encrypted.encryptedString) === 0
+            && compareAlgorithmIdentifier(
+                assertion.encrypted.algorithmIdentifier,
+                value.encrypted.algorithmIdentifier,
+            )
+        );
+    }
+    if (("encrypted" in assertion) && ("clear" in value)) {
+        const alg = assertion.encrypted.algorithmIdentifier;
+        const result = encrypter(alg, value.clear);
+        if (!result) {
+            return false; // Algorithm not understood.
+        }
+        return Buffer.compare(result, assertion.encrypted.encryptedString) === 0;
+    }
+    if (("clear" in assertion) && ("encrypted" in value)) {
+        const alg = value.encrypted.algorithmIdentifier;
+        const result = encrypter(alg, assertion.clear);
+        if (!result) {
+            return false; // Algorithm not understood.
+        }
+        return Buffer.compare(result, value.encrypted.encryptedString) === 0;
+    }
+    return false;
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.10.1 `userPwdMatch`.
@@ -23,42 +74,25 @@ import caseExactMatch from "./caseExactMatch.mjs";
  *
  * `encrypter` supplies the encryption for mixed clear/encrypted
  * cases; returning `null` means the algorithm is not understood.
+ *
+ * The returned matcher accepts an `ASN1Element` or a `UserPwd` on
+ * each side, independently.
  */
 export
 function createUserPwdMatch (
     encrypter: (alg: AlgorithmIdentifier, clear: string) => Uint8Array | null,
-): EqualityMatcher {
+): (
+    assertion: ASN1Element | UserPwd,
+    value: ASN1Element | UserPwd,
+) => boolean {
     return (
-        assertion: ASN1Element,
-        value: ASN1Element,
-    ): boolean => {
-        const a: UserPwd = _decode_UserPwd(assertion);
-        const v: UserPwd = _decode_UserPwd(value);
-        if (("clear" in a) && ("clear" in v)) {
-            return caseExactMatch(assertion, value);
-        } else if (("encrypted" in a) && ("encrypted" in v)) {
-            return (
-                !Buffer.compare(a.encrypted.encryptedString, v.encrypted.encryptedString)
-                && compareAlgorithmIdentifier(a.encrypted.algorithmIdentifier, v.encrypted.algorithmIdentifier)
-            );
-        } else if (("encrypted" in a) && ("clear" in v)) {
-            const alg = a.encrypted.algorithmIdentifier;
-            const result = encrypter(alg, v.clear);
-            if (!result) {
-                return false; // Algorithm not understood.
-            }
-            return !Buffer.compare(result, a.encrypted.encryptedString);
-        } else if (("clear" in a) && ("encrypted" in v)) {
-            const alg = v.encrypted.algorithmIdentifier;
-            const result = encrypter(alg, a.clear);
-            if (!result) {
-                return false; // Algorithm not understood.
-            }
-            return !Buffer.compare(result, v.encrypted.encryptedString);
-        } else {
-            return compareElements(assertion, value);
-        }
-    }
+        assertion: ASN1Element | UserPwd,
+        value: ASN1Element | UserPwd,
+    ): boolean => userPwdMatchTyped(
+        encrypter,
+        readDecoded(assertion, _decode_UserPwd),
+        readDecoded(value, _decode_UserPwd),
+    );
 }
 
 export default createUserPwdMatch;

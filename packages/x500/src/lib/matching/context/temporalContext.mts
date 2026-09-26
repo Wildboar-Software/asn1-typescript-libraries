@@ -1,5 +1,5 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
     TimeSpecification,
     _decode_TimeSpecification,
@@ -246,6 +246,31 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
 }
 
 /**
+ * `temporalContext` on a decoded `TimeAssertion` and
+ * `TimeSpecification`.
+ *
+ * @param a Presented time assertion.
+ * @param v Stored time specification.
+ * @returns `true` when the assertion overlaps the specification.
+ */
+export
+function evaluateTemporalContextTyped (
+    a: TimeAssertion,
+    v: TimeSpecification,
+): boolean {
+    if ("now" in a) {
+        const now = new Date();
+        return timeFallsWithinTimeSpecification(now, v);
+    } else if ("at" in a) {
+        return timeFallsWithinTimeSpecification(a.at, v);
+    } else if ("between" in a) {
+        return timeSpecificationContains(v, a.between.startTime, a.between.endTime ?? MAX_DATE, a.between.entirely);
+    } else {
+        return false;
+    }
+}
+
+/**
  * Rec. ITU-T X.520 (10/2019), clause 10.2 `temporalContext`.
  *
  * Associates an attribute value with a `TimeSpecification`
@@ -257,24 +282,20 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
  * `periodic`, the union of all `Period` occurrences). Missing
  * timezone is interpreted in the DSA's zone. Periodic SET OF is a
  * logical OR.
+ *
+ * `assertion` may be an element, a `TimeAssertion`, or a `Date`
+ * (the `at` alternative). `value` may be an element or a
+ * `TimeSpecification`.
  */
 export
-const evaluateTemporalContext: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: TimeAssertion = _decode_TimeAssertion(assertion);
-    const v: TimeSpecification = _decode_TimeSpecification(value);
-    if ("now" in a) {
-        const now = new Date();
-        return timeFallsWithinTimeSpecification(now, v);
-    } else if ("at" in a) {
-        return timeFallsWithinTimeSpecification(a.at, v);
-    } else if ("between" in a) {
-        return timeSpecificationContains(v, a.between.startTime, a.between.endTime ?? MAX_DATE, a.between.entirely);
-    } else {
-        return false;
-    }
+function evaluateTemporalContext (
+    assertion: ASN1Element | TimeAssertion | Date,
+    value: ASN1Element | TimeSpecification,
+): boolean {
+    const a: TimeAssertion = assertion instanceof Date
+        ? { at: assertion }
+        : readDecoded(assertion, _decode_TimeAssertion);
+    return evaluateTemporalContextTyped(a, readDecoded(value, _decode_TimeSpecification));
 }
 
 export default evaluateTemporalContext;

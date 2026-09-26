@@ -1,17 +1,12 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { domainToUnicode } from "node:url";
-import { _encode_UnboundedDirectoryString } from "@wildboar/pki-stub/src/index.mjs";
-import { _encodeUTF8String, BER } from "@wildboar/asn1/functional";
-import caseIgnoreMatch from "./caseIgnoreMatch.mjs";
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 
-function compareLabels(a: string, b: string, wildcardAllowed: boolean): boolean {
+function compareLabels (a: string, b: string, wildcardAllowed: boolean): boolean {
     if (a === "*" || b === "*") {
         return wildcardAllowed;
     }
-    const ads = _encodeUTF8String(a, BER);
-    const bds = _encodeUTF8String(b, BER);
-    return caseIgnoreMatch(ads, bds);
+    return caseIgnoreMatchTyped(a, b);
 }
 
 /**
@@ -26,15 +21,32 @@ function compareLabels(a: string, b: string, wildcardAllowed: boolean): boolean 
  * label; remaining labels then match as above. `*.example.com`
  * matches `a.example.com` but not `a.b.example.com` or
  * `example.com`.
+ *
+ * Each argument may be an `ASN1Element` or a domain string.
  */
 export
-const dnsNameMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
+function dnsNameMatch (
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
+): boolean {
+    return dnsNameMatchTyped(
+        typeof assertion === "string" ? assertion : assertion.utf8String,
+        typeof value === "string" ? value : value.utf8String,
+    );
+}
+
+/**
+ * `dnsNameMatch` on two domain names.
+ *
+ * @param assertion Presented domain.
+ * @param value Stored domain.
+ * @returns `true` when the labels match.
+ */
+export
+function dnsNameMatchTyped (assertion: string, value: string): boolean {
     // I checked: this preserves asterisks and periods.
-    const a = domainToUnicode(assertion.utf8String.trim());
-    const v = domainToUnicode(value.utf8String.trim());
+    const a = domainToUnicode(assertion.trim());
+    const v = domainToUnicode(value.trim());
     if (a === "" || v === "") {
         return false;
     }

@@ -428,6 +428,12 @@ function evaluateEnhancedCertificateAssertion (
 }
 
 /**
+ * `enhancedCertificateMatch` on a decoded assertion and certificate.
+ * Alias of {@link evaluateEnhancedCertificateAssertion}.
+ */
+export const enhancedCertificateMatchTyped = evaluateEnhancedCertificateAssertion;
+
+/**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.10
  * `enhancedCertificateMatch`.
  *
@@ -438,14 +444,16 @@ function evaluateEnhancedCertificateAssertion (
  * assertions may be combined in a search filter with AND/OR.
  */
 export
-const enhancedCertificateMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function enhancedCertificateMatch (
+    assertion: ASN1Element | EnhancedCertificateAssertion,
+    value: ASN1Element | Certificate,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: EnhancedCertificateAssertion = _decode_EnhancedCertificateAssertion(assertion);
-    const v: Certificate = _decode_Certificate(value);
-    return evaluateEnhancedCertificateAssertion(a, v, getEqualityMatcher);
+): boolean {
+    return enhancedCertificateMatchTyped(
+        ASN1Element.isElement(assertion) ? _decode_EnhancedCertificateAssertion(assertion) : assertion,
+        ASN1Element.isElement(value) ? _decode_Certificate(value) : value,
+        getEqualityMatcher,
+    );
 }
 
 export default enhancedCertificateMatch;

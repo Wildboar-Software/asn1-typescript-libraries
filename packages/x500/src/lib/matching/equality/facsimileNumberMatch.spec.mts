@@ -69,6 +69,15 @@ describe("facsimileNumberMatch", () => {
         )).toBe(false);
     });
 
+    it("accepts a FacsimileTelephoneNumber on either side", () => {
+        const presented = new FacsimileTelephoneNumber("+1 703-555-1212", FINE_RESOLUTION);
+        const stored = new FacsimileTelephoneNumber("+17035551212");
+        expect(facsimileNumberMatch(presented, stored)).toBe(true);
+        expect(facsimileNumberMatch(presented, facsimile("+17035551212"))).toBe(true);
+        expect(facsimileNumberMatch(telephone("+17035551212"), stored)).toBe(true);
+        expect(facsimileNumberMatch(presented, facsimile("+1-703-555-1213"))).toBe(false);
+    });
+
     it("does not evaluate facsimile parameters", () => {
         expect(facsimileNumberMatch(
             telephone("+1 703-555-1212"),

@@ -1,4 +1,5 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import { readDecoded } from "../readValue.mjs";
 import { ASN1Element, DERElement, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import compareName from "../../comparators/compareName.mjs";
 import {
@@ -36,13 +37,32 @@ const SOUGHT_EXTENSION_OID: string = id_ce_issuingDistributionPoint.toString();
  * form.
  */
 export
-const certificateListExactMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function certificateListExactMatch (
+    assertion: ASN1Element | CertificateListExactAssertion,
+    value: ASN1Element | CertificateList,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: CertificateListExactAssertion = _decode_CertificateListExactAssertion(assertion);
-    const v: CertificateList = _decode_CertificateList(value);
+): boolean {
+    return certificateListExactMatchTyped(
+        readDecoded(assertion, _decode_CertificateListExactAssertion),
+        readDecoded(value, _decode_CertificateList),
+        getEqualityMatcher,
+    );
+}
+
+/**
+ * `certificateListExactMatch` on a decoded assertion and CRL.
+ *
+ * @param a Presented exact assertion.
+ * @param v Stored certificate list.
+ * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @returns `true` when issuer, thisUpdate, and distribution point match.
+ */
+export
+function certificateListExactMatchTyped (
+    a: CertificateListExactAssertion,
+    v: CertificateList,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     if (!compareName(v.toBeSigned.issuer, a.issuer, getEqualityMatcher)) {
         return false;
     }

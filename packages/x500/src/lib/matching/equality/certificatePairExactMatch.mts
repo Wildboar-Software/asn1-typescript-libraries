@@ -1,5 +1,6 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import compareName from "../../comparators/compareName.mjs";
 import {
     CertificatePairExactAssertion,
@@ -22,13 +23,32 @@ import { Buffer } from "node:buffer";
  * be present.
  */
 export
-const certificatePairExactMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function certificatePairExactMatch (
+    assertion: ASN1Element | CertificatePairExactAssertion,
+    value: ASN1Element | CertificatePair,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: CertificatePairExactAssertion = _decode_CertificatePairExactAssertion(assertion);
-    const v: CertificatePair = _decode_CertificatePair(value);
+): boolean {
+    return certificatePairExactMatchTyped(
+        readDecoded(assertion, _decode_CertificatePairExactAssertion),
+        readDecoded(value, _decode_CertificatePair),
+        getEqualityMatcher,
+    );
+}
+
+/**
+ * `certificatePairExactMatch` on decoded values.
+ *
+ * @param a Presented exact assertion.
+ * @param v Stored certificate pair.
+ * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @returns `true` when every present component matches.
+ */
+export
+function certificatePairExactMatchTyped (
+    a: CertificatePairExactAssertion,
+    v: CertificatePair,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
     const issuedTo = a.issuedToThisCAAssertion;
     const issuedBy = a.issuedByThisCAAssertion;
     if (!issuedTo && !issuedBy) {
