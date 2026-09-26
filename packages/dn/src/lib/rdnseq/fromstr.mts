@@ -1,44 +1,8 @@
 import { ParsedAttributeTypeAndValue } from "../ParsedAttributeTypeAndValue.mjs";
+import { attributeTypesAndValues } from "../rdn/fromstr.mjs";
+import isEscaped from "../isEscaped.mjs";
 
-const escape = "\\".charCodeAt(0);
 const comma = ",".charCodeAt(0);
-const plus = "+".charCodeAt(0);
-
-function isEscaped (str: string, index: number): boolean {
-    let backslashes = 0;
-    for (let i = index - 1; i >= 0 && str.charCodeAt(i) === escape; i--) {
-        backslashes++;
-    }
-    return (backslashes % 2) === 1;
-}
-
-function* attributeTypesAndValues (
-    rdn: string,
-): Generator<ParsedAttributeTypeAndValue, void, undefined> {
-    let start = 0;
-    for (let i = 0; i <= rdn.length; i++) {
-        const atEnd = i === rdn.length;
-        if (
-            !atEnd
-            && !(
-                (rdn.charCodeAt(i) === plus)
-                && !isEscaped(rdn, i)
-            )
-        ) {
-            continue;
-        }
-        const atav = rdn.slice(start, i);
-        const equalsIndex = atav.indexOf("=");
-        if (equalsIndex === -1) {
-            throw new SyntaxError("malformed attribute type and value");
-        }
-        yield new ParsedAttributeTypeAndValue(
-            atav.slice(0, equalsIndex),
-            atav.slice(equalsIndex + 1),
-        );
-        start = i + 1;
-    }
-}
 
 /**
  * @summary Parse a distinguished name according to RFC 4514.

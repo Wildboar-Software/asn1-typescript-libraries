@@ -24,18 +24,20 @@ RESOLVED: _Defer_ including `GeneralName` functionality in this package, because
 
 ## To Do
 
-- [ ] Should you even do this? This also requires `UnboundedDirectoryString`... or does it?
 - [ ] fromString
-- [ ] toString
+- [x] toString
 - [ ] toKey
 - [ ] compare
+- [ ] validateString
+- [ ] validateEncoding
 - [ ] toBerBytes()
 - [ ] toDerBytes()
 - [ ] getX500RDN() / getLdapRDN() (maybe these should be defined in the specific packages they are used in)
 - [ ] toInteropString() (no names + only #hex value syntax)
 - [ ] toJSON()
 - [ ] fromJSON()
-- [ ] isQualifiedCertsName()
+- [ ] isQualifiedCertsCompliant()
+- [ ] isIetfRfc4514Portable()
 - [ ] toASN1Representation()
 - [ ] isRootDseName()
 - [ ] isEncodedLength()
@@ -59,3 +61,5 @@ RESOLVED: _Defer_ including `GeneralName` functionality in this package, because
 - [ ] Does `GeneralName` code belong here too?
   - [ ] Kind of requires `or-address`, which comes with many transitive dependencies.
   - [ ] Would also require `EDIPartyName`
+- [ ] Support `uid` (UID     userId (0.9.2342.19200300.100.1.1))
+  - This is one of the required attributes in IETF RFC 4514

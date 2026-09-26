@@ -38,7 +38,7 @@ describe("rdnSequenceFromString()", () => {
         expect(rdn!.next()).toEqual({ done: true, value: undefined });
     });
 
-    it("parses the RFC 4514 examples without unescaping values", () => {
+    it("parses the RFC 4514 examples and escapes values", () => {
         expect(parse("UID=jsmith,DC=example,DC=net")).toEqual([
             [["UID", "jsmith"]],
             [["DC", "example"]],
@@ -50,39 +50,38 @@ describe("rdnSequenceFromString()", () => {
             [["DC", "net"]],
         ]);
         expect(parse("CN=James \\\"Jim\\\" Smith\\, III,DC=example,DC=net")).toEqual([
-            [["CN", "James \\\"Jim\\\" Smith\\, III"]],
+            [["CN", "James \"Jim\" Smith, III"]],
             [["DC", "example"]],
             [["DC", "net"]],
         ]);
         const carriageReturn = parse("CN=Before\\0dAfter,DC=example,DC=net");
-        expect(carriageReturn[0][0][1]).toBe("Before\\0dAfter");
-        expect(carriageReturn[0][0][1].includes("\r")).toBe(false);
+        expect(carriageReturn[0][0][1]).toBe("Before\rAfter");
         expect(parse("1.3.6.1.4.1.1466.0=#04024869")).toEqual([
             [["1.3.6.1.4.1.1466.0", "#04024869"]],
         ]);
         expect(parse("CN=Lu\\C4\\8Di\\C4\\87")).toEqual([
-            [["CN", "Lu\\C4\\8Di\\C4\\87"]],
+            [["CN", "Lučić"]],
         ]);
     });
 
-    it("keeps escapes and splits only on unescaped commas and pluses", () => {
+    it("escapes values and splits on unescaped commas and pluses", () => {
         expect(parse("sn=chunga\\+bunga\\=monkey\\00banana\\\\,st=Florida,c=US")).toEqual([
-            [["sn", "chunga\\+bunga\\=monkey\\00banana\\\\"]],
+            [["sn", "chunga+bunga=monkey\0banana\\"]],
             [["st", "Florida"]],
             [["c", "US"]],
         ]);
         expect(parse("cn=Smith\\, Jr+gn=Jonathan")).toEqual([
-            [["cn", "Smith\\, Jr"], ["gn", "Jonathan"]],
+            [["cn", "Smith, Jr"], ["gn", "Jonathan"]],
         ]);
         expect(parse("cn=foo\\\\,ou=People")).toEqual([
-            [["cn", "foo\\\\"]],
+            [["cn", "foo\\"]],
             [["ou", "People"]],
         ]);
         expect(parse("cn=a\\\\+ou=b")).toEqual([
-            [["cn", "a\\\\"], ["ou", "b"]],
+            [["cn", "a\\"], ["ou", "b"]],
         ]);
         expect(parse("cn=foo\\2Cou=bar")).toEqual([
-            [["cn", "foo\\2Cou=bar"]],
+            [["cn", "foo,ou=bar"]],
         ]);
         expect(parse("cn=a=b")).toEqual([
             [["cn", "a=b"]],
