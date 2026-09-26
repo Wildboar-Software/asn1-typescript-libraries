@@ -432,10 +432,12 @@ export
 function certificateMatch (
     assertion: ASN1Element | CertificateAssertion,
     value: ASN1Element | Certificate,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     return certificateMatchTyped(
         isAsn1Element(assertion) ? _decode_CertificateAssertion(assertion) : assertion,
         isAsn1Element(value) ? _decode_Certificate(value) : value,
+        getEqualityMatcher,
     );
 }
 

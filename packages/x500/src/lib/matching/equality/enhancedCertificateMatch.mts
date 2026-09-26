@@ -448,10 +448,12 @@ export
 function enhancedCertificateMatch (
     assertion: ASN1Element | EnhancedCertificateAssertion,
     value: ASN1Element | Certificate,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
     return enhancedCertificateMatchTyped(
         isAsn1Element(assertion) ? _decode_EnhancedCertificateAssertion(assertion) : assertion,
         isAsn1Element(value) ? _decode_Certificate(value) : value,
+        getEqualityMatcher,
     );
 }
 

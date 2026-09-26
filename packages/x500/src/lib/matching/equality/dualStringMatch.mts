@@ -8,7 +8,7 @@ import type {
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import type { DirectoryStringInput } from "../readValue.mjs";
 import { isAsn1Element, readDirectoryString } from "../readValue.mjs";
-import { prepString } from "../../utils/prepString.mjs";
+import { prohibitedCharacters } from "../../utils/prepString.mjs";
 
 /** Element, `DualStringSyntax`, or the two strings already extracted. */
 export type DualStringInput =
@@ -56,9 +56,9 @@ function dualStringMatch (
 }
 
 /**
- * `dualStringMatch` on the four character strings. Preparation is
- * used only to reject prohibited characters; the comparison itself
- * is case-sensitive and unprepared.
+ * `dualStringMatch` on the four character strings. Prohibited
+ * characters reject the match; the comparison itself is
+ * case-sensitive and unprepared.
  *
  * @param assertionOperation Presented operation.
  * @param assertionObject Presented object.
@@ -73,11 +73,12 @@ function dualStringMatchTyped (
     valueOperation: string,
     valueObject: string,
 ): boolean {
-    const aop = prepString(assertionOperation);
-    const vop = prepString(valueOperation);
-    const aob = prepString(assertionObject);
-    const vob = prepString(valueObject);
-    if (aop === undefined || aob === undefined || vop === undefined || vob === undefined) {
+    if (
+        prohibitedCharacters.test(assertionOperation)
+        || prohibitedCharacters.test(valueOperation)
+        || prohibitedCharacters.test(assertionObject)
+        || prohibitedCharacters.test(valueObject)
+    ) {
         return false;
     }
     return assertionOperation === valueOperation
