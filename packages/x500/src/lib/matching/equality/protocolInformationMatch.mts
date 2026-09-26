@@ -1,19 +1,31 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { ASN1Element, ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
+import {
+    ASN1TagClass,
+    ASN1UniversalType,
+    ASN1Element,
+    type OCTET_STRING,
+} from "@wildboar/asn1";
 import {
     ProtocolInformation,
     _decode_ProtocolInformation,
 } from "../../modules/SelectedAttributeTypes/ProtocolInformation.ta.mjs";
-import { Buffer } from "node:buffer";
+import { compareNSAP } from "../../comparators/compareNSAPs.mjs";
 
-function presentedNAddress (assertion: ASN1Element): Uint8Array {
-    if (
-        (assertion.tagClass === ASN1TagClass.universal)
-        && (assertion.tagNumber === ASN1UniversalType.octetString)
-    ) {
-        return assertion.octetString;
+function assertedNAddress (
+    assertion: ASN1Element | ProtocolInformation | Uint8Array,
+): OCTET_STRING {
+    if (assertion instanceof Uint8Array) {
+        return assertion;
     }
-    return _decode_ProtocolInformation(assertion).nAddress;
+    if (!ASN1Element.isElement(assertion)) {
+        return assertion.nAddress;
+    }
+    if (
+        assertion.tagClass === ASN1TagClass.universal
+        && assertion.tagNumber === ASN1UniversalType.sequence
+    ) {
+        return _decode_ProtocolInformation(assertion).nAddress;
+    }
+    return assertion.octetString;
 }
 
 /**
@@ -22,15 +34,27 @@ function presentedNAddress (assertion: ASN1Element): Uint8Array {
  *
  * Assertion syntax is the `nAddress` OCTET STRING of
  * `ProtocolInformation`. TRUE iff that presented NSAP matches the
- * stored `nAddress` as for `octetStringMatch`.
+ * stored `nAddress` under `compareNSAP`. Stored `profiles` are
+ * ignored.
+ *
+ * A presented `ProtocolInformation` is also accepted, although
+ * that is not the assertion syntax of this matching rule. Only
+ * its `nAddress` is compared; its `profiles` are ignored.
  */
 export
-const protocolInformationMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const v: ProtocolInformation = _decode_ProtocolInformation(value);
-    return !Buffer.compare(presentedNAddress(assertion), v.nAddress);
+function protocolInformationMatch (
+    assertion: ASN1Element | ProtocolInformation | Uint8Array,
+    value: ASN1Element | ProtocolInformation | Uint8Array,
+): boolean {
+    let stored: Uint8Array;
+    if (value instanceof Uint8Array) {
+        stored = value;
+    } else if (ASN1Element.isElement(value)) {
+        stored = _decode_ProtocolInformation(value).nAddress;
+    } else {
+        stored = value.nAddress;
+    }
+    return compareNSAP(assertedNAddress(assertion), stored);
 }
 
 export default protocolInformationMatch;

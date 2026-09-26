@@ -9,9 +9,9 @@ import compareGeneralName from "./compareGeneralName.mjs";
  * @summary Compare two `GeneralNames` values
  * @description
  *
- * `GeneralNames` is a SEQUENCE OF names, but matching treats it as
- * an unordered collection: each name on one side must pair with a
- * distinct equal name on the other.
+ * `GeneralNames` is a SEQUENCE SIZE (1..MAX) OF `GeneralName`. Encoding
+ * order is not significant for matching: each name on one side must
+ * pair with a distinct equal name on the other (multiset equality).
  * @param a One value
  * @param b The other
  * @param getEqualityMatcher A function that takes an attribute type and

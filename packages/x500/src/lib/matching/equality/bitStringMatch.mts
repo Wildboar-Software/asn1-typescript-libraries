@@ -1,54 +1,42 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { ASN1Construction, ASN1Element } from "@wildboar/asn1";
-import { compareBitStrings } from "../../comparators/compareBitStrings.mjs";
 import { Buffer } from "node:buffer";
-
-function significantLastByte (unusedBits: number, lastByte: number): number {
-    if (unusedBits === 0) {
-        return lastByte;
-    }
-    const mask = (0xFF << unusedBits) & 0xFF;
-    return lastByte & mask;
-}
+import type { ASN1Element, BIT_STRING } from "@wildboar/asn1";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.4 `bitStringMatch`.
  *
  * TRUE iff both BIT STRING values have the same number of bits and
- * the bits match bitwise. Unused BER padding bits in the last
- * octet are ignored. NamedBitList trailing zeros are only omitted
- * when the attribute syntax defines a NamedBitList; this matcher
- * does not have that schema, so trailing content bits are compared.
+ * the bits match bitwise. If the syntax is defined with a
+ * `NamedBitList`, trailing zero bits in either value are ignored.
+ *
+ * Each argument may be an `ASN1Element` or a decoded `BIT_STRING`
+ * (`Uint8ClampedArray`, one entry per bit). Constructed encodings
+ * are deconstructed while reading.
  */
 export
-const bitStringMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    if (
-        (assertion.construction === ASN1Construction.primitive)
-        && (value.construction === ASN1Construction.primitive)
-    ) {
-        if (
-            (assertion.value.length !== value.value.length)
-            || (assertion.value[0] !== value.value[0])
-        ) {
-            return false;
-        }
-        const unusedBits = assertion.value[0];
-        const wholeBytesComparison = Buffer.compare(
-            assertion.value.subarray(1, -1),
-            value.value.subarray(1, -1),
-        );
-        if (wholeBytesComparison) {
-            return false;
-        }
-        const aLast = assertion.value[assertion.value.length - 1] ?? 0;
-        const vLast = value.value[value.value.length - 1] ?? 0;
-        return significantLastByte(unusedBits, aLast) === significantLastByte(unusedBits, vLast);
-    }
+function bitStringMatch (
+    assertion: ASN1Element | BIT_STRING,
+    value: ASN1Element | BIT_STRING,
+): boolean {
+    return bitStringMatchTyped(
+        assertion instanceof Uint8ClampedArray ? assertion : assertion.bitString,
+        value instanceof Uint8ClampedArray ? value : value.bitString,
+    );
+}
 
-    return compareBitStrings(assertion.bitString, value.bitString);
+/**
+ * `bitStringMatch` on two decoded bit strings. Trailing zero bits
+ * that were not part of the bit string are already absent.
+ *
+ * @param assertion Presented bits.
+ * @param value Stored bits.
+ * @returns `true` when the bit strings are equal.
+ */
+export
+function bitStringMatchTyped (assertion: BIT_STRING, value: BIT_STRING): boolean {
+    return Buffer.compare(
+        Buffer.from(assertion.buffer, assertion.byteOffset, assertion.byteLength),
+        Buffer.from(value.buffer, value.byteOffset, value.byteLength),
+    ) === 0;
 }
 
 export default bitStringMatch;

@@ -94,11 +94,9 @@ export class ChangePasswordResultData implements CommonResultsSeq {
      * @returns {ChangePasswordResultData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof ChangePasswordResultData]: ChangePasswordResultData[_K];
             }
-        >
     ): ChangePasswordResultData {
         return new ChangePasswordResultData(
             _o._unrecognizedExtensionsList,

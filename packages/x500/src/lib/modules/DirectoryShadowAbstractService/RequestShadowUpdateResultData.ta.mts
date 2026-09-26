@@ -125,11 +125,9 @@ export class RequestShadowUpdateResultData implements CommonResultsSeq {
      * @returns {RequestShadowUpdateResultData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof RequestShadowUpdateResultData]: RequestShadowUpdateResultData[_K];
             }
-        >
     ): RequestShadowUpdateResultData {
         return new RequestShadowUpdateResultData(
             _o.agreementID,
