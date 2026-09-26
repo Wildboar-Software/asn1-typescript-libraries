@@ -1,4 +1,3 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
 
 /**
@@ -10,13 +9,17 @@ import type { ASN1Element } from "@wildboar/asn1";
  *
  * This implementation does not map ISO 639-2 alpha-2 codes to
  * alpha-3 (or vice versa) before comparing.
+ *
+ * Each argument may be an `ASN1Element` or a string.
  */
 export
-const evaluateLanguageContext: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    return (assertion.printableString === value.printableString);
+function evaluateLanguageContext (
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
+): boolean {
+    const presented = typeof assertion === "string" ? assertion : assertion.printableString;
+    const stored = typeof value === "string" ? value : value.printableString;
+    return presented === stored;
 }
 
 export default evaluateLanguageContext;

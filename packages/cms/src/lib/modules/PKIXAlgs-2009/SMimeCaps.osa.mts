@@ -41,17 +41,17 @@ import { sa_rsaWithSHA1 } from "../PKIXAlgs-2009/sa-rsaWithSHA1.oa.mjs";
  *
  */
 export const SMimeCaps: SMIME_CAPS[] = [
-    sa_rsaWithMD2["&smimeCaps"],
-    sa_rsaWithMD5["&smimeCaps"],
-    sa_rsaWithSHA1["&smimeCaps"],
-    sa_dsaWithSHA1["&smimeCaps"],
-    sa_dsaWithSHA224["&smimeCaps"],
-    sa_dsaWithSHA256["&smimeCaps"],
-    sa_ecdsaWithSHA1["&smimeCaps"],
-    sa_ecdsaWithSHA224["&smimeCaps"],
-    sa_ecdsaWithSHA256["&smimeCaps"],
-    sa_ecdsaWithSHA384["&smimeCaps"],
-    sa_ecdsaWithSHA512["&smimeCaps"],
+    sa_rsaWithMD2["&smimeCaps"]!,
+    sa_rsaWithMD5["&smimeCaps"]!,
+    sa_rsaWithSHA1["&smimeCaps"]!,
+    sa_dsaWithSHA1["&smimeCaps"]!,
+    sa_dsaWithSHA224["&smimeCaps"]!,
+    sa_dsaWithSHA256["&smimeCaps"]!,
+    sa_ecdsaWithSHA1["&smimeCaps"]!,
+    sa_ecdsaWithSHA224["&smimeCaps"]!,
+    sa_ecdsaWithSHA256["&smimeCaps"]!,
+    sa_ecdsaWithSHA384["&smimeCaps"]!,
+    sa_ecdsaWithSHA512["&smimeCaps"]!,
 ];
 
 /* eslint-enable */

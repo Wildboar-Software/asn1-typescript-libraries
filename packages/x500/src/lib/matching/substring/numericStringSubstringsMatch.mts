@@ -1,19 +1,57 @@
-import SubstringsMatcher from "../../types/SubstringsMatcher.mjs";
-import SubstringSelection from "../../types/SubstringSelection.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
-import { prepString } from "../../utils/prepString.mjs";
-import { partitionString, substringPieces } from "../../utils/substringPartition.mjs";
+import { ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
+import SubstringSelection from "../../types/SubstringSelection.mjs";
+import type {
+    PreparedSubstring,
+    SubstringAssertionInput,
+} from "../readValue.mjs";
+import { readSubstringAssertion } from "../readValue.mjs";
+import { partitionPreparedString } from "../../utils/substringPartition.mjs";
 
-function prepare (s: string): string | undefined {
-    return prepString(s.replace(/\s+/g, ""))?.toLowerCase();
+function numericText (value: ASN1Element | string): string {
+    return (typeof value === "string" ? value : value.numericString).replace(/\s+/g, "");
 }
 
-function numericFrom (el: ASN1Element): string {
-    try {
-        return el.numericString;
-    } catch {
-        return el.utf8String;
+function kindFromSelection (selection: SubstringSelection): "initial" | "any" | "final" | undefined {
+    switch (selection) {
+        case SubstringSelection.initial: return "initial";
+        case SubstringSelection.final: return "final";
+        case SubstringSelection.any_: return "any";
+        default: return undefined;
     }
+}
+
+function numericPieces (
+    assertion: ASN1Element | string,
+    selection?: SubstringSelection,
+): PreparedSubstring[] {
+    if (selection !== undefined) {
+        const kind = kindFromSelection(selection);
+        if (!kind) {
+            return [];
+        }
+        return [{ kind, value: numericText(assertion) }];
+    }
+    if (typeof assertion === "string") {
+        return [{ kind: "any", value: assertion.replace(/\s+/g, "") }];
+    }
+    if (
+        assertion.tagClass === ASN1TagClass.universal
+        && assertion.tagNumber === ASN1UniversalType.sequence
+    ) {
+        const out: PreparedSubstring[] = [];
+        for (const piece of readSubstringAssertion(assertion)) {
+            if (piece.kind === "control") {
+                continue;
+            }
+            if (piece.kind === "unknown") {
+                return [{ kind: "unknown" }];
+            }
+            out.push({ kind: piece.kind, value: piece.value.replace(/\s+/g, "") });
+        }
+        return out;
+    }
+    return [{ kind: "any", value: numericText(assertion) }];
 }
 
 /**
@@ -21,27 +59,39 @@ function numericFrom (el: ASN1Element): string {
  * `numericStringSubstringsMatch`.
  *
  * Same as `caseIgnoreSubstringsMatch` except all spaces are
- * removed from both strings (clause 7.6.2).
+ * removed from both strings (clause 7.6.2). NumericString does not
+ * need `prepString`.
+ *
+ * `assertion` may be a `SubstringAssertion` SEQUENCE, one numeric
+ * string plus `selection`, or a numeric string (treated as `any`).
+ * `value` is an element or a string.
  */
 export
-const numericStringSubstringsMatch: SubstringsMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function numericStringSubstringsMatch (
+    assertion: ASN1Element | string,
+    value: ASN1Element | string,
     selection?: SubstringSelection,
-): boolean => {
-    const stored = prepare(numericFrom(value));
-    if (stored === undefined) {
-        return false;
-    }
-    const needles = [];
-    for (const p of substringPieces(assertion, selection)) {
-        const text = prepare(numericFrom(p.element));
-        if (text === undefined) {
-            return false;
-        }
-        needles.push({ kind: p.kind, text });
-    }
-    return partitionString(stored, needles);
+): boolean {
+    return numericStringSubstringsMatchTyped(
+        numericPieces(assertion, selection),
+        numericText(value),
+    );
+}
+
+/**
+ * `numericStringSubstringsMatch` on prepared pieces whose spaces
+ * are already removed, and a stored numeric string.
+ *
+ * @param assertion Presented substring pieces.
+ * @param value Stored numeric string with spaces already removed.
+ * @returns `true` when the pieces partition `value` in order.
+ */
+export
+function numericStringSubstringsMatchTyped (
+    assertion: readonly PreparedSubstring[],
+    value: string,
+): boolean {
+    return partitionPreparedString(value, assertion);
 }
 
 export default numericStringSubstringsMatch;

@@ -1,7 +1,7 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
-    type TimeSpecification,
+    TimeSpecification,
     _decode_TimeSpecification,
 } from "../../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
 import {
@@ -12,7 +12,6 @@ import type {
     Period,
 } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { addHours } from "date-fns";
-import boundariesOfPeriodOccurrence from "../../utils/boundariesOfPeriodOccurrence.mjs";
 
 const MAX_DATE: Date = new Date(8640000000000000);
 const MIN_DATE: Date = new Date(-8640000000000000);
@@ -58,8 +57,7 @@ const MAX_ENTIRELY_COVER_STEPS = 1000;
  *
  * X.520 clause 10.2 `DayTime` is second-precision. The cover walk
  * advances by this amount after an occurrence end so
- * {@link boundariesOfPeriodOccurrence} can select a later
- * `DayTimeBand` (band matching ignores milliseconds).
+ * we can select a later `DayTimeBand` (band matching ignores milliseconds).
  *
  * @param {Date} instant Inclusive end of the current covering occurrence.
  * @returns {Date} `instant` plus one second.
@@ -92,11 +90,14 @@ function secondAfter (instant: Date): Date {
 function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null {
     let farthest: Date | null = null;
     for (const period of periods) {
-        const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, t);
+        const boundaries: [ Date, Date ] | null = period.occurrences(t).next().value ?? null;
         if (!boundaries) {
             continue;
         }
-        const upper: Date = boundaries[1];
+        const [lower, upper] = boundaries;
+        if (lower > t) {
+            continue;
+        }
         if ((farthest === null) || (upper.valueOf() > farthest.valueOf())) {
             farthest = upper;
         }
@@ -149,7 +150,7 @@ function periodsEntirelyCoverInterval (periods: Period[], start: Date, end: Date
 /** True if `time` falls in one occurrence of `period` (clause 10.2). */
 function timeFallsWithinPeriod (time: Date, period: Period, timezone: number | undefined): boolean {
     const adjustedTime = inSpecTimeZone(time, timezone);
-    const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedTime);
+    const boundaries: [ Date, Date ] | null = period.occurrences(adjustedTime).next().value ?? null;
     if (!boundaries) {
         return false;
     }
@@ -183,7 +184,7 @@ function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification):
             throw new Error(); // There is no other option.
         }
     })();
-    return xor(result, spec.notThisTime);
+    return xor(result, spec.notThisTime ?? TimeSpecification._default_value_for_notThisTime);
 }
 
 /**
@@ -222,7 +223,7 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
                 return periodsEntirelyCoverInterval(spec.time.periodic, adjustedStart, adjustedEnd);
             }
             return spec.time.periodic.some((period) => {
-                const boundaries: [ Date, Date ] | null = boundariesOfPeriodOccurrence(period, adjustedStart);
+                const boundaries: [ Date, Date ] | null = period.occurrences(adjustedStart).next().value ?? null;
                 if (!boundaries) {
                     return false;
                 }
@@ -241,7 +242,32 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
             throw new Error(); // There is no other option.
         }
     })();
-    return xor(result, spec.notThisTime);
+    return xor(result, spec.notThisTime ?? TimeSpecification._default_value_for_notThisTime);
+}
+
+/**
+ * `temporalContext` on a decoded `TimeAssertion` and
+ * `TimeSpecification`.
+ *
+ * @param a Presented time assertion.
+ * @param v Stored time specification.
+ * @returns `true` when the assertion overlaps the specification.
+ */
+export
+function evaluateTemporalContextTyped (
+    a: TimeAssertion,
+    v: TimeSpecification,
+): boolean {
+    if ("now" in a) {
+        const now = new Date();
+        return timeFallsWithinTimeSpecification(now, v);
+    } else if ("at" in a) {
+        return timeFallsWithinTimeSpecification(a.at, v);
+    } else if ("between" in a) {
+        return timeSpecificationContains(v, a.between.startTime, a.between.endTime ?? MAX_DATE, a.between.entirely);
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -256,24 +282,20 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
  * `periodic`, the union of all `Period` occurrences). Missing
  * timezone is interpreted in the DSA's zone. Periodic SET OF is a
  * logical OR.
+ *
+ * `assertion` may be an element, a `TimeAssertion`, or a `Date`
+ * (the `at` alternative). `value` may be an element or a
+ * `TimeSpecification`.
  */
 export
-const evaluateTemporalContext: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: TimeAssertion = _decode_TimeAssertion(assertion);
-    const v: TimeSpecification = _decode_TimeSpecification(value);
-    if ("now" in a) {
-        const now = new Date();
-        return timeFallsWithinTimeSpecification(now, v);
-    } else if ("at" in a) {
-        return timeFallsWithinTimeSpecification(a.at, v);
-    } else if ("between" in a) {
-        return timeSpecificationContains(v, a.between.startTime, a.between.endTime ?? MAX_DATE, a.between.entirely);
-    } else {
-        return false;
-    }
+function evaluateTemporalContext (
+    assertion: ASN1Element | TimeAssertion | Date,
+    value: ASN1Element | TimeSpecification,
+): boolean {
+    const a: TimeAssertion = assertion instanceof Date
+        ? { at: assertion }
+        : readDecoded(assertion, _decode_TimeAssertion);
+    return evaluateTemporalContextTyped(a, readDecoded(value, _decode_TimeSpecification));
 }
 
 export default evaluateTemporalContext;

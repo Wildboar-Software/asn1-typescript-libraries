@@ -204,3 +204,71 @@ function partitionStringList (lines: readonly string[], needles: readonly { kind
     }
     return true;
 }
+
+function isSubstringKind (kind: string): kind is SubstringKind {
+    return (kind === "initial") || (kind === "any") || (kind === "final");
+}
+
+/**
+ * Map prepared pieces onto {@link partitionString} needles. `control`
+ * is ignored; unrecognized kinds fail the match.
+ */
+export
+function partitionPreparedString (
+    stored: string,
+    pieces: readonly { readonly kind: string; readonly value?: string }[],
+): boolean {
+    const needles: { kind: SubstringKind; text: string }[] = [];
+    for (const p of pieces) {
+        if (p.kind === "control") {
+            continue;
+        }
+        if (!isSubstringKind(p.kind)) {
+            return false;
+        }
+        needles.push({ kind: p.kind, text: p.value ?? "" });
+    }
+    return partitionString(stored, needles);
+}
+
+/**
+ * Map prepared octet pieces onto {@link partitionOctets}.
+ */
+export
+function partitionPreparedOctets (
+    stored: Uint8Array,
+    pieces: readonly { readonly kind: string; readonly value?: Uint8Array }[],
+): boolean {
+    const needles: { kind: SubstringKind; bytes: Uint8Array }[] = [];
+    for (const p of pieces) {
+        if (p.kind === "control") {
+            continue;
+        }
+        if (!isSubstringKind(p.kind) || p.value === undefined) {
+            return false;
+        }
+        needles.push({ kind: p.kind, bytes: p.value });
+    }
+    return partitionOctets(stored, needles);
+}
+
+/**
+ * Map prepared pieces onto {@link partitionStringList}.
+ */
+export
+function partitionPreparedStringList (
+    lines: readonly string[],
+    pieces: readonly { readonly kind: string; readonly value?: string }[],
+): boolean {
+    const needles: { kind: SubstringKind; text: string }[] = [];
+    for (const p of pieces) {
+        if (p.kind === "control") {
+            continue;
+        }
+        if (!isSubstringKind(p.kind)) {
+            return false;
+        }
+        needles.push({ kind: p.kind, text: p.value ?? "" });
+    }
+    return partitionStringList(lines, needles);
+}

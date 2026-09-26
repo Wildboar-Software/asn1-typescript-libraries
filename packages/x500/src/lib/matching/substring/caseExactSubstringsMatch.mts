@@ -1,20 +1,15 @@
-import SubstringsMatcher from "../../types/SubstringsMatcher.mjs";
 import SubstringSelection from "../../types/SubstringSelection.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
+import type { DirectoryStringInput } from "../readValue.mjs";
+import type {
+    PreparedSubstring,
+    SubstringAssertionInput,
+} from "../readValue.mjs";
 import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
+    readDirectoryString,
+    readSubstringAssertionOrComponent,
+} from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
-import { partitionString, substringPieces } from "../../utils/substringPartition.mjs";
-
-function ds (el: ASN1Element): string {
-    try {
-        return directoryStringToString(_decode_UDS(el));
-    } catch {
-        return el.utf8String;
-    }
-}
+import { partitionPreparedString } from "../../utils/substringPartition.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.3
@@ -25,26 +20,56 @@ function ds (el: ASN1Element): string {
  * portions in order (`initial` prefixes, `final` suffixes). Case
  * is significant; insignificant spaces are removed (clause 7.6).
  * At most one `initial` and one `final`; `control` is ignored.
+ * Corresponding characters (including combining sequences) must
+ * be identical.
+ *
+ * `assertion` may be a `SubstringAssertion`, one component plus
+ * `selection`, a directory string, or a JavaScript string.
+ * `value` is an element, a directory string, or a JavaScript string.
  */
 export
-const caseExactSubstringsMatch: SubstringsMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function caseExactSubstringsMatch (
+    assertion: SubstringAssertionInput | DirectoryStringInput,
+    value: DirectoryStringInput,
     selection?: SubstringSelection,
-): boolean => {
-    const stored = prepString(ds(value));
+): boolean {
+    return caseExactSubstringsMatchTyped(
+        readSubstringAssertionOrComponent(assertion, selection),
+        readDirectoryString(value),
+    );
+}
+
+/**
+ * `caseExactSubstringsMatch` on prepared pieces and a stored string.
+ *
+ * @param assertion Presented substring pieces.
+ * @param value Stored string.
+ * @returns `true` when the pieces partition `value` in order.
+ */
+export
+function caseExactSubstringsMatchTyped (
+    assertion: readonly PreparedSubstring[],
+    value: string,
+): boolean {
+    const stored = prepString(value);
     if (stored === undefined) {
         return false;
     }
-    const needles = [];
-    for (const p of substringPieces(assertion, selection)) {
-        const text = prepString(ds(p.element));
+    const needles: PreparedSubstring[] = [];
+    for (const piece of assertion) {
+        if (piece.kind === "control") {
+            continue;
+        }
+        if (piece.kind === "unknown") {
+            return false;
+        }
+        const text = prepString(piece.value);
         if (text === undefined) {
             return false;
         }
-        needles.push({ kind: p.kind, text });
+        needles.push({ kind: piece.kind, value: text });
     }
-    return partitionString(stored, needles);
+    return partitionPreparedString(stored, needles);
 }
 
 export default caseExactSubstringsMatch;

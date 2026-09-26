@@ -1,27 +1,17 @@
-import SubstringsMatcher from "../../types/SubstringsMatcher.mjs";
-import SubstringSelection from "../../types/SubstringSelection.mjs";
+import type SubstringSelection from "../../types/SubstringSelection.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
+import type {
+    PreparedSubstring,
+    SubstringAssertionInput,
+} from "../readValue.mjs";
+import { readSubstringAssertion } from "../readValue.mjs";
 import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
-import { prepString } from "../../utils/prepString.mjs";
-import { partitionString, substringPieces } from "../../utils/substringPartition.mjs";
+    _decode_TelephoneNumber,
+} from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+import { partitionPreparedString } from "../../utils/substringPartition.mjs";
 
-function ds (el: ASN1Element): string {
-    try {
-        return directoryStringToString(_decode_UDS(el));
-    } catch {
-        try {
-            return el.printableString;
-        } catch {
-            return el.utf8String;
-        }
-    }
-}
-
-function prepareTelephone (s: string): string | undefined {
-    return prepString(s.replace(/[-\s]+/g, ""))?.toLowerCase();
+function normalizeTelephoneNumber (telephoneNumber: string): string {
+    return telephoneNumber.replace(/[- ]/g, "");
 }
 
 /**
@@ -31,26 +21,44 @@ function prepareTelephone (s: string): string | undefined {
  * Substring match of a telephone-number `PrintableString`. Same as
  * `caseExactSubstringsMatch` except hyphens and spaces are
  * insignificant and are removed during character removal.
+ *
+ * `assertion` is an element or a substring assertion. `value` is
+ * an element or the telephone-number string. `selection` is unused.
  */
 export
-const telephoneNumberSubstringsMatch: SubstringsMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-    selection?: SubstringSelection,
-): boolean => {
-    const stored = prepareTelephone(ds(value));
-    if (stored === undefined) {
-        return false;
-    }
-    const needles = [];
-    for (const p of substringPieces(assertion, selection)) {
-        const text = prepareTelephone(ds(p.element));
-        if (text === undefined) {
+function telephoneNumberSubstringsMatch (
+    assertion: SubstringAssertionInput,
+    value: ASN1Element | string,
+    _selection?: SubstringSelection,
+): boolean {
+    const stored = typeof value === "string" ? value : _decode_TelephoneNumber(value);
+    return telephoneNumberSubstringsMatchTyped(readSubstringAssertion(assertion), stored);
+}
+
+/**
+ * `telephoneNumberSubstringsMatch` on prepared pieces and a
+ * telephone number. Hyphens and spaces are removed; `+` is kept.
+ *
+ * @param assertion Presented substring pieces.
+ * @param value Stored telephone number.
+ * @returns `true` when the pieces partition the normalized number.
+ */
+export
+function telephoneNumberSubstringsMatchTyped (
+    assertion: readonly PreparedSubstring[],
+    value: string,
+): boolean {
+    const needles: PreparedSubstring[] = [];
+    for (const piece of assertion) {
+        if (piece.kind === "control") {
+            continue;
+        }
+        if (piece.kind === "unknown") {
             return false;
         }
-        needles.push({ kind: p.kind, text });
+        needles.push({ kind: piece.kind, value: normalizeTelephoneNumber(piece.value) });
     }
-    return partitionString(stored, needles);
+    return partitionPreparedString(normalizeTelephoneNumber(value), needles);
 }
 
 export default telephoneNumberSubstringsMatch;

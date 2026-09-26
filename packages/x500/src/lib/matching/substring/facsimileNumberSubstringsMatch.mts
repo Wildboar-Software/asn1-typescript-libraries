@@ -1,28 +1,17 @@
-import SubstringsMatcher from "../../types/SubstringsMatcher.mjs";
-import SubstringSelection from "../../types/SubstringSelection.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
+import type SubstringSelection from "../../types/SubstringSelection.mjs";
+import { ASN1Element } from "@wildboar/asn1";
+import type {
+    PreparedSubstring,
+    SubstringAssertionInput,
+} from "../readValue.mjs";
+import { readSubstringAssertion } from "../readValue.mjs";
 import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
-import { prepString } from "../../utils/prepString.mjs";
-import { partitionString, substringPieces } from "../../utils/substringPartition.mjs";
-
-function ds (el: ASN1Element): string {
-    try {
-        return directoryStringToString(_decode_UDS(el));
-    } catch {
-        try {
-            return el.printableString;
-        } catch {
-            return el.utf8String;
-        }
-    }
-}
-
-function prepareTelephone (s: string): string | undefined {
-    return prepString(s.replace(/[-\s]+/g, ""))?.toLowerCase();
-}
+    _decode_TelephoneNumber,
+} from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+import type {
+    FacsimileTelephoneNumber,
+} from "../../modules/SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
+import { telephoneNumberSubstringsMatchTyped } from "./telephoneNumberSubstringsMatch.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.14
@@ -30,27 +19,41 @@ function prepareTelephone (s: string): string | undefined {
  *
  * Substring-matches the first (`telephoneNumber`) element of a
  * facsimile sequence; `parameters` is not evaluated. Matching of
- * that number is as for `telephoneNumberSubstringsMatch`.
+ * that number is as for telephone-number matching (hyphens and
+ * spaces insignificant).
+ *
+ * `assertion` is an element or a substring assertion. `value` is a
+ * facsimile element, a `FacsimileTelephoneNumber`, or the
+ * telephone-number string. `selection` is unused.
  */
 export
-const facsimileNumberSubstringsMatch: SubstringsMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-    selection?: SubstringSelection,
-): boolean => {
-    const stored = prepareTelephone(ds(value.sequence[0]));
-    if (stored === undefined) {
-        return false;
-    }
-    const needles = [];
-    for (const p of substringPieces(assertion, selection)) {
-        const text = prepareTelephone(ds(p.element));
-        if (text === undefined) {
-            return false;
-        }
-        needles.push({ kind: p.kind, text });
-    }
-    return partitionString(stored, needles);
+function facsimileNumberSubstringsMatch (
+    assertion: SubstringAssertionInput,
+    value: ASN1Element | FacsimileTelephoneNumber | string,
+    _selection?: SubstringSelection,
+): boolean {
+    const stored = typeof value === "string"
+        ? value
+        : ASN1Element.isElement(value)
+            ? _decode_TelephoneNumber(value.sequence[0])
+            : value.telephoneNumber;
+    return facsimileNumberSubstringsMatchTyped(readSubstringAssertion(assertion), stored);
+}
+
+/**
+ * `facsimileNumberSubstringsMatch` on prepared pieces and the
+ * stored telephone number.
+ *
+ * @param assertion Presented substring pieces.
+ * @param value Stored telephone number.
+ * @returns `true` when the pieces partition the normalized number.
+ */
+export
+function facsimileNumberSubstringsMatchTyped (
+    assertion: readonly PreparedSubstring[],
+    value: string,
+): boolean {
+    return telephoneNumberSubstringsMatchTyped(assertion, value);
 }
 
 export default facsimileNumberSubstringsMatch;
