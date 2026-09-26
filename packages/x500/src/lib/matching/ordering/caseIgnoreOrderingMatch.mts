@@ -31,14 +31,19 @@ function caseIgnoreOrderingMatch (
  *
  * @param assertion Presented string.
  * @param value Stored string.
- * @returns Negative when `assertion` is less than `value`.
+ * @returns Negative when `assertion` is less than `value`. A string that
+ *  fails preparation sorts after any prepared string (`Array.sort`
+ *  treats `NaN` as `+0`, so it cannot be used for this).
  */
 export
 function caseIgnoreOrderingMatchTyped (assertion: string, value: string): number {
     const a: string | undefined = prepString(assertion, { caseFold: true });
+    if (a === undefined) {
+        return 1;
+    }
     const v: string | undefined = prepString(value, { caseFold: true });
-    if ((a === undefined) || (v === undefined)) {
-        return Number.NaN;
+    if (v === undefined) {
+        return -1;
     }
     return compareCodePoints(a, v);
 }
