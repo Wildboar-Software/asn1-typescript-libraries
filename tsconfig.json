@@ -189,7 +189,7 @@
     {
       "path": "./packages/map"
     },
-    {
+{
       "path": "./packages/scpp"
     },
     {
@@ -221,6 +221,12 @@
     },
     {
       "path": "./packages/mrbtr"
+    },
+    {
+      "path": "./packages/dn"
+    },
+    {
+      "path": "./packages/cif"
     }
   ],
   "compilerOptions": {
