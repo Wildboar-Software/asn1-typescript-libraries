@@ -1,6 +1,6 @@
 import { ParsedAttributeTypeAndValue } from "../ParsedAttributeTypeAndValue.mjs";
 import isEscaped from "../isEscaped.mjs";
-import { unescapeDistinguishedValue } from "../unescapeDistinguishedValue.mjs";
+import atavFromString from "../atav/fromstr.mjs";
 
 const plus = "+".charCodeAt(0);
 
@@ -20,14 +20,7 @@ export function* attributeTypesAndValues (
             continue;
         }
         const atav = rdn.slice(start, i);
-        const equalsIndex = atav.indexOf("=");
-        if (equalsIndex === -1) {
-            throw new SyntaxError("malformed attribute type and value");
-        }
-        yield new ParsedAttributeTypeAndValue(
-            atav.slice(0, equalsIndex),
-            unescapeDistinguishedValue(atav.slice(equalsIndex + 1)),
-        );
+        yield atavFromString(atav);
         start = i + 1;
     }
 }
