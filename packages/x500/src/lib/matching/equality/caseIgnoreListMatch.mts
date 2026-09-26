@@ -26,9 +26,8 @@ function caseIgnoreListMatch (
 }
 
 /**
- * `caseIgnoreListMatch` on two lists of strings. Each line is case
- * folded and then prepared, matching the historical order of those
- * steps for this rule.
+ * `caseIgnoreListMatch` on two lists of strings. Each line is
+ * prepared with case folding, matching `caseIgnoreMatch`.
  *
  * @param assertion Presented lines.
  * @param value Stored lines.
@@ -43,8 +42,8 @@ function caseIgnoreListMatchTyped (
         return false;
     }
     for (let i = 0; i < assertion.length; i++) {
-        const a: string | undefined = prepString(assertion[i].toLowerCase());
-        const v: string | undefined = prepString(value[i].toLowerCase());
+        const a: string | undefined = prepString(assertion[i], { caseFold: true });
+        const v: string | undefined = prepString(value[i], { caseFold: true });
         if (a === undefined) {
             return false;
         }
