@@ -13,22 +13,9 @@ function uTCTimeMatch (
     assertion: ASN1Element | Date,
     value: ASN1Element | Date,
 ): boolean {
-    return uTCTimeMatchTyped(
-        ASN1Element.isElement(assertion) ? assertion.utcTime : assertion,
-        ASN1Element.isElement(value) ? value.utcTime : value,
-    );
-}
-
-/**
- * `uTCTimeMatch` on two instants.
- *
- * @param assertion Presented time.
- * @param value Stored time.
- * @returns `true` when both instants have the same ISO-8601 form.
- */
-export
-function uTCTimeMatchTyped (assertion: Date, value: Date): boolean {
-    return assertion.toISOString() === value.toISOString();
+    const presented = ASN1Element.isElement(assertion) ? assertion.utcTime : assertion;
+    const stored = ASN1Element.isElement(value) ? value.utcTime : value;
+    return presented.toISOString() === stored.toISOString();
 }
 
 export default uTCTimeMatch;

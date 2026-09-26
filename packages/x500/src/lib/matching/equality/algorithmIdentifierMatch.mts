@@ -23,23 +23,7 @@ function algorithmIdentifierMatch (
     const stored = ASN1Element.isElement(value)
         ? _decode_AlgorithmIdentifier(value.sequence[0])
         : value;
-    return algorithmIdentifierMatchTyped(presented, stored);
-}
-
-/**
- * `algorithmIdentifierMatch` on two algorithm identifiers. `value`
- * is the algorithm component of `SupportedAlgorithms`.
- *
- * @param assertion Presented algorithm.
- * @param value Stored algorithm.
- * @returns `true` when the algorithms are equal.
- */
-export
-function algorithmIdentifierMatchTyped (
-    assertion: AlgorithmIdentifier,
-    value: AlgorithmIdentifier,
-): boolean {
-    return compareAlgorithmIdentifier(value, assertion);
+    return compareAlgorithmIdentifier(stored, presented);
 }
 
 export default algorithmIdentifierMatch;

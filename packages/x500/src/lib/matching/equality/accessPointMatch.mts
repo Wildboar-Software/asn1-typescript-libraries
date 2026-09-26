@@ -1,5 +1,10 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import {
+    ASN1Element,
+    ASN1TagClass,
+    ASN1UniversalType,
+    type OBJECT_IDENTIFIER,
+} from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import {
     Name,
@@ -10,6 +15,30 @@ import {
     _decode_AccessPoint,
 } from "../../modules/DistributedOperations/AccessPoint.ta.mjs";
 import compareName from "../../comparators/compareName.mjs";
+
+/**
+ * The assertion syntax is `Name`. A presented `AccessPoint` SET is
+ * also accepted: `ae-title` is context-specific tag 0, EXPLICIT.
+ */
+function readAssertedName (assertion: ASN1Element | Name): Name | null {
+    if (!ASN1Element.isElement(assertion)) {
+        return assertion;
+    }
+    if (
+        assertion.tagClass === ASN1TagClass.universal
+        && assertion.tagNumber === ASN1UniversalType.set
+    ) {
+        const aeTitle = assertion.set.find((component) => (
+            component.tagClass === ASN1TagClass.context
+            && component.tagNumber === 0
+        ));
+        if (!aeTitle) {
+            return null;
+        }
+        return _decode_Name(aeTitle.inner);
+    }
+    return _decode_Name(assertion);
+}
 
 /**
  * Rec. ITU-T X.501 (10/2019), clause 24.2.1.9.1 `accessPointMatch`.
@@ -27,8 +56,12 @@ function accessPointMatch (
     value: ASN1Element | AccessPoint,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
+    const name = readAssertedName(assertion);
+    if (!name) {
+        return false;
+    }
     return accessPointMatchTyped(
-        readDecoded(assertion, _decode_Name),
+        name,
         readDecoded(value, _decode_AccessPoint),
         getEqualityMatcher,
     );

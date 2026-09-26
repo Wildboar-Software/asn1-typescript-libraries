@@ -15,22 +15,9 @@ function jidMatch (
     assertion: ASN1Element | string,
     value: ASN1Element | string,
 ): boolean {
-    return jidMatchTyped(
-        typeof assertion === "string" ? assertion : assertion.utf8String,
-        typeof value === "string" ? value : value.utf8String,
-    );
-}
-
-/**
- * `jidMatch` on two JID strings.
- *
- * @param assertion Presented JID.
- * @param value Stored JID.
- * @returns `true` when the lowercased strings are equal.
- */
-export
-function jidMatchTyped (assertion: string, value: string): boolean {
-    return assertion.toLowerCase() === value.toLowerCase();
+    const presented = typeof assertion === "string" ? assertion : assertion.utf8String;
+    const stored = typeof value === "string" ? value : value.utf8String;
+    return presented.toLowerCase() === stored.toLowerCase();
 }
 
 export default jidMatch;

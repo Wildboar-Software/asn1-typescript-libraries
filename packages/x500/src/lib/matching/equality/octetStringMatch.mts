@@ -14,22 +14,9 @@ function octetStringMatch (
     assertion: ASN1Element | Uint8Array,
     value: ASN1Element | Uint8Array,
 ): boolean {
-    return octetStringMatchTyped(
-        ASN1Element.isElement(assertion) ? assertion.octetString : assertion,
-        ASN1Element.isElement(value) ? value.octetString : value,
-    );
-}
-
-/**
- * `octetStringMatch` on two byte strings.
- *
- * @param assertion Presented octets.
- * @param value Stored octets.
- * @returns `true` when the octets are identical.
- */
-export
-function octetStringMatchTyped (assertion: Uint8Array, value: Uint8Array): boolean {
-    return Buffer.compare(assertion, value) === 0;
+    const presented = ASN1Element.isElement(assertion) ? assertion.octetString : assertion;
+    const stored = ASN1Element.isElement(value) ? value.octetString : value;
+    return Buffer.compare(presented, stored) === 0;
 }
 
 export default octetStringMatch;

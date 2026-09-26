@@ -17,22 +17,9 @@ function evaluateLanguageContext (
     assertion: ASN1Element | string,
     value: ASN1Element | string,
 ): boolean {
-    return evaluateLanguageContextTyped(
-        typeof assertion === "string" ? assertion : assertion.printableString,
-        typeof value === "string" ? value : value.printableString,
-    );
-}
-
-/**
- * `languageContext` on two language codes.
- *
- * @param assertion Presented language code.
- * @param value Stored language code.
- * @returns `true` when the codes are identical.
- */
-export
-function evaluateLanguageContextTyped (assertion: string, value: string): boolean {
-    return assertion === value;
+    const presented = typeof assertion === "string" ? assertion : assertion.printableString;
+    const stored = typeof value === "string" ? value : value.printableString;
+    return presented === stored;
 }
 
 export default evaluateLanguageContext;

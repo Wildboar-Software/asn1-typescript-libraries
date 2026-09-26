@@ -15,22 +15,9 @@ function generalizedTimeOrderingMatch (
     assertion: ASN1Element | Date,
     value: ASN1Element | Date,
 ): number {
-    return generalizedTimeOrderingMatchTyped(
-        ASN1Element.isElement(assertion) ? assertion.generalizedTime : assertion,
-        ASN1Element.isElement(value) ? value.generalizedTime : value,
-    );
-}
-
-/**
- * `generalizedTimeOrderingMatch` on two instants.
- *
- * @param assertion Presented time.
- * @param value Stored time.
- * @returns Milliseconds of `assertion` minus milliseconds of `value`.
- */
-export
-function generalizedTimeOrderingMatchTyped (assertion: Date, value: Date): number {
-    return assertion.valueOf() - value.valueOf();
+    const presented = ASN1Element.isElement(assertion) ? assertion.generalizedTime : assertion;
+    const stored = ASN1Element.isElement(value) ? value.generalizedTime : value;
+    return presented.valueOf() - stored.valueOf();
 }
 
 export default generalizedTimeOrderingMatch;

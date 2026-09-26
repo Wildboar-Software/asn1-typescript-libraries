@@ -15,20 +15,7 @@ function integerOrderingMatch (
     assertion: IntegerInput,
     value: IntegerInput,
 ): number {
-    return integerOrderingMatchTyped(readInteger(assertion), readInteger(value));
-}
-
-/**
- * `integerOrderingMatch` on two integers. The difference is coerced
- * with `Number`, as before.
- *
- * @param assertion Presented integer.
- * @param value Stored integer.
- * @returns `Number(assertion - value)`.
- */
-export
-function integerOrderingMatchTyped (assertion: bigint, value: bigint): number {
-    return Number(assertion - value);
+    return Number(readInteger(assertion) - readInteger(value));
 }
 
 export default integerOrderingMatch;

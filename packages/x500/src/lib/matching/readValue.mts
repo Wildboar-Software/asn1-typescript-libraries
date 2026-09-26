@@ -51,8 +51,8 @@ function readDecoded<T> (
 
 /**
  * Encoded element, `DirectoryString` / `UnboundedDirectoryString`
- * CHOICE, a universal `IA5String`, or an already-transcoded
- * JavaScript string.
+ * CHOICE, a universal `IA5String`, `VisibleString`, or
+ * `ObjectDescriptor`, or an already-transcoded JavaScript string.
  */
 export type DirectoryStringInput =
     | ASN1Element
@@ -70,11 +70,16 @@ function readDirectoryString (value: DirectoryStringInput): string {
         return value;
     }
     if (ASN1Element.isElement(value)) {
-        if (
-            value.tagClass === ASN1TagClass.universal
-            && value.tagNumber === ASN1UniversalType.ia5String
-        ) {
-            return value.ia5String;
+        if (value.tagClass === ASN1TagClass.universal) {
+            if (value.tagNumber === ASN1UniversalType.ia5String) {
+                return value.ia5String;
+            }
+            if (value.tagNumber === ASN1UniversalType.visibleString) {
+                return value.visibleString;
+            }
+            if (value.tagNumber === ASN1UniversalType.objectDescriptor) {
+                return value.objectDescriptor;
+            }
         }
         return directoryStringToString(_decode_UnboundedDirectoryString(value));
     }
@@ -143,11 +148,11 @@ export type IntegerInput = ASN1Element | number | bigint;
  */
 export
 function readInteger (value: IntegerInput): bigint {
-    if (typeof value === "bigint") {
-        return value;
-    }
     if (typeof value === "number") {
         return BigInt(value);
+    }
+    if (typeof value === "bigint") {
+        return value;
     }
     const decoded: INTEGER = value.integer;
     return typeof decoded === "bigint" ? decoded : BigInt(decoded);
@@ -163,13 +168,10 @@ function readLeadingInteger (value: IntegerInput): bigint {
         return readInteger(value);
     }
     if (
-        (
-            value.tagClass === ASN1TagClass.universal
-            && value.tagNumber === ASN1UniversalType.integer
-        )
-        || (
-            value.tagClass === ASN1TagClass.universal
-            && value.tagNumber === ASN1UniversalType.enumerated
+        value.tagClass === ASN1TagClass.universal
+        && (
+            value.tagNumber === ASN1UniversalType.integer
+            || value.tagNumber === ASN1UniversalType.enumerated
         )
     ) {
         return readInteger(value);

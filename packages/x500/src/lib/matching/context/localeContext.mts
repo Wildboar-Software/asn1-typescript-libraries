@@ -58,48 +58,15 @@ function evaluateLocaleContext (
 ): boolean {
     const a = readLocale(assertion);
     const v = readLocale(value);
-    if (
-        ("localeID1" in a) && ("localeID1" in v)
-        && !ASN1Element.isElement(a) && !ASN1Element.isElement(v)
-    ) {
-        return evaluateLocaleContextTyped(a, v);
+    if (("localeID1" in a) && ("localeID1" in v)) {
+        return a.localeID1.isEqualTo(v.localeID1);
     }
-    if (
-        ("localeID2" in a) && ("localeID2" in v)
-        && !ASN1Element.isElement(a) && !ASN1Element.isElement(v)
-    ) {
-        return evaluateLocaleContextTyped(a, v);
+    if (("localeID2" in a) && ("localeID2" in v)) {
+        return directoryStringToString(a.localeID2)
+            === directoryStringToString(v.localeID2);
     }
     if (ASN1Element.isElement(assertion) && ASN1Element.isElement(value)) {
         return compareElements(assertion, value);
-    }
-    return false;
-}
-
-/**
- * `localeContext` when both sides use the same CHOICE alternative.
- *
- * @param assertion Presented locale.
- * @param value Stored locale.
- * @returns `true` when the identifiers are equal.
- */
-export
-function evaluateLocaleContextTyped (
-    assertion: LocaleContextSyntax,
-    value: LocaleContextSyntax,
-): boolean {
-    if (
-        ("localeID1" in assertion) && ("localeID1" in value)
-        && !ASN1Element.isElement(assertion) && !ASN1Element.isElement(value)
-    ) {
-        return assertion.localeID1.isEqualTo(value.localeID1);
-    }
-    if (
-        ("localeID2" in assertion) && ("localeID2" in value)
-        && !ASN1Element.isElement(assertion) && !ASN1Element.isElement(value)
-    ) {
-        return directoryStringToString(assertion.localeID2)
-            === directoryStringToString(value.localeID2);
     }
     return false;
 }

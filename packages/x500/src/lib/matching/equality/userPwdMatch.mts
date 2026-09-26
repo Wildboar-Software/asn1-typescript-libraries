@@ -21,11 +21,16 @@ function userPwdMatchTyped (
     assertion: UserPwd,
     value: UserPwd,
 ): boolean {
-    if (("clear" in assertion) && ("clear" in value)
-        && !ASN1Element.isElement(assertion) && !ASN1Element.isElement(value)) {
+    if (ASN1Element.isElement(assertion) !== ASN1Element.isElement(value)) {
+        return false;
+    }
+    if (ASN1Element.isElement(assertion) && ASN1Element.isElement(value)) {
+        return compareElements(assertion, value);
+    }
+    if (("clear" in assertion) && ("clear" in value)) {
         return caseExactMatchTyped(assertion.clear, value.clear);
-    } else if (("encrypted" in assertion) && ("encrypted" in value)
-        && !ASN1Element.isElement(assertion) && !ASN1Element.isElement(value)) {
+    }
+    if (("encrypted" in assertion) && ("encrypted" in value)) {
         return (
             Buffer.compare(assertion.encrypted.encryptedString, value.encrypted.encryptedString) === 0
             && compareAlgorithmIdentifier(
@@ -33,27 +38,24 @@ function userPwdMatchTyped (
                 value.encrypted.algorithmIdentifier,
             )
         );
-    } else if (("encrypted" in assertion) && ("clear" in value)
-        && !ASN1Element.isElement(assertion) && !ASN1Element.isElement(value)) {
+    }
+    if (("encrypted" in assertion) && ("clear" in value)) {
         const alg = assertion.encrypted.algorithmIdentifier;
         const result = encrypter(alg, value.clear);
         if (!result) {
             return false; // Algorithm not understood.
         }
         return Buffer.compare(result, assertion.encrypted.encryptedString) === 0;
-    } else if (("clear" in assertion) && ("encrypted" in value)
-        && !ASN1Element.isElement(assertion) && !ASN1Element.isElement(value)) {
+    }
+    if (("clear" in assertion) && ("encrypted" in value)) {
         const alg = value.encrypted.algorithmIdentifier;
         const result = encrypter(alg, assertion.clear);
         if (!result) {
             return false; // Algorithm not understood.
         }
         return Buffer.compare(result, value.encrypted.encryptedString) === 0;
-    } else if (ASN1Element.isElement(assertion) && ASN1Element.isElement(value)) {
-        return compareElements(assertion, value);
-    } else {
-        return false;
     }
+    return false;
 }
 
 /**

@@ -11,8 +11,10 @@ import {
     _encodeBoolean,
     _encodeIA5String,
     _encodeInteger,
+    _encodeObjectDescriptor,
     _encodeOctetString,
     _encodePrintableString,
+    _encodeVisibleString,
 } from "@wildboar/asn1/functional";
 import { _encode_UnboundedDirectoryString } from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import { TimeSpecification } from "../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
@@ -20,7 +22,7 @@ import { UUIDPair } from "../modules/SelectedAttributeTypes/UUIDPair.ta.mjs";
 import { booleanMatch } from "./equality/booleanMatch.mjs";
 import { caseIgnoreListMatch } from "./equality/caseIgnoreListMatch.mjs";
 import { caseIgnoreMatch, caseIgnoreMatchTyped } from "./equality/caseIgnoreMatch.mjs";
-import { integerMatch, integerMatchTyped } from "./equality/integerMatch.mjs";
+import { integerMatch } from "./equality/integerMatch.mjs";
 import { objectIdentifierMatch } from "./equality/objectIdentifierMatch.mjs";
 import { octetStringMatch } from "./equality/octetStringMatch.mjs";
 import { uUIDPairMatch } from "./equality/uUIDPairMatch.mjs";
@@ -47,6 +49,8 @@ describe("typed matching inputs", () => {
         expect(caseIgnoreMatch(uds("Hello"), { uTF8String: "world" })).toBe(false);
         expect(caseIgnoreMatch(_encodeIA5String("Hello", DER), "hello")).toBe(true);
         expect(caseIgnoreMatch("world", _encodeIA5String("Hello", DER))).toBe(false);
+        expect(caseIgnoreMatch(_encodeVisibleString("Hello", DER), "hello")).toBe(true);
+        expect(caseIgnoreMatch(_encodeObjectDescriptor("Hello", DER), "hello")).toBe(true);
         expect(caseIgnoreMatchTyped("Hello", "hello")).toBe(true);
     });
 
@@ -56,7 +60,7 @@ describe("typed matching inputs", () => {
         expect(integerMatch(two, 2)).toBe(true);
         expect(integerMatch(2n, two)).toBe(true);
         expect(integerMatch(2, 3n)).toBe(false);
-        expect(integerMatchTyped(2n, 2n)).toBe(true);
+        expect(integerMatch(2n, 2n)).toBe(true);
         expect(integerOrderingMatch(1, 2n)).toBeLessThan(0);
         expect(integerOrderingMatch(two, 1)).toBeGreaterThan(0);
         expect(integerOrderingMatch(2n, two)).toBe(0);

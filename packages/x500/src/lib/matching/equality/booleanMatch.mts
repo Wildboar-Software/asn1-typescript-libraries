@@ -12,22 +12,9 @@ function booleanMatch (
     assertion: ASN1Element | boolean,
     value: ASN1Element | boolean,
 ): boolean {
-    return booleanMatchTyped(
-        typeof assertion === "boolean" ? assertion : assertion.boolean,
-        typeof value === "boolean" ? value : value.boolean,
-    );
-}
-
-/**
- * `booleanMatch` on two booleans.
- *
- * @param assertion Presented boolean.
- * @param value Stored boolean.
- * @returns `true` when both are TRUE or both are FALSE.
- */
-export
-function booleanMatchTyped (assertion: boolean, value: boolean): boolean {
-    return assertion === value;
+    const presented = typeof assertion === "boolean" ? assertion : assertion.boolean;
+    const stored = typeof value === "boolean" ? value : value.boolean;
+    return presented === stored;
 }
 
 export default booleanMatch;

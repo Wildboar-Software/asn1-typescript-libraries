@@ -13,7 +13,7 @@ import { compareNSAP } from "../../comparators/compareNSAPs.mjs";
 function assertedNAddress (
     assertion: ASN1Element | ProtocolInformation | Uint8Array,
 ): OCTET_STRING {
-    if (assertion instanceof Uint8Array && !ASN1Element.isElement(assertion)) {
+    if (assertion instanceof Uint8Array) {
         return assertion;
     }
     if (!ASN1Element.isElement(assertion)) {
@@ -46,27 +46,15 @@ function protocolInformationMatch (
     assertion: ASN1Element | ProtocolInformation | Uint8Array,
     value: ASN1Element | ProtocolInformation | Uint8Array,
 ): boolean {
-    const stored = value instanceof Uint8Array && !ASN1Element.isElement(value)
-        ? value
-        : ASN1Element.isElement(value)
-            ? _decode_ProtocolInformation(value).nAddress
-            : value.nAddress;
-    return protocolInformationMatchTyped(assertedNAddress(assertion), stored);
-}
-
-/**
- * `protocolInformationMatch` on two NSAP octet strings.
- *
- * @param assertion Presented NSAP.
- * @param value Stored NSAP.
- * @returns `true` when `compareNSAP` holds.
- */
-export
-function protocolInformationMatchTyped (
-    assertion: Uint8Array,
-    value: Uint8Array,
-): boolean {
-    return compareNSAP(assertion, value);
+    let stored: Uint8Array;
+    if (value instanceof Uint8Array) {
+        stored = value;
+    } else if (ASN1Element.isElement(value)) {
+        stored = _decode_ProtocolInformation(value).nAddress;
+    } else {
+        stored = value.nAddress;
+    }
+    return compareNSAP(assertedNAddress(assertion), stored);
 }
 
 export default protocolInformationMatch;

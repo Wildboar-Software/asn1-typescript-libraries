@@ -1,4 +1,4 @@
-import { ASN1Element, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Element } from "@wildboar/asn1";
 import {
     PolicySyntax,
     _decode_PolicySyntax,
@@ -21,22 +21,7 @@ function policyMatch (
     value: ASN1Element | PolicySyntax,
 ): boolean {
     const stored = ASN1Element.isElement(value) ? _decode_PolicySyntax(value) : value;
-    return policyMatchTyped(readObjectIdentifier(assertion), stored);
-}
-
-/**
- * `policyMatch` on a policy OID and a `PolicySyntax`.
- *
- * @param assertion Presented policy identifier.
- * @param value Stored policy syntax.
- * @returns `true` when the policy identifiers are equal.
- */
-export
-function policyMatchTyped (
-    assertion: OBJECT_IDENTIFIER,
-    value: PolicySyntax,
-): boolean {
-    return value.policyIdentifier.isEqualTo(assertion);
+    return stored.policyIdentifier.isEqualTo(readObjectIdentifier(assertion));
 }
 
 export default policyMatch;

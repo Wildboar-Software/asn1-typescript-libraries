@@ -1,6 +1,5 @@
 import type { IntegerInput } from "../readValue.mjs";
 import { readInteger, readLeadingInteger } from "../readValue.mjs";
-import { integerMatchTyped } from "./integerMatch.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.4.1
@@ -20,26 +19,7 @@ function integerFirstComponentMatch (
     assertion: IntegerInput,
     value: IntegerInput,
 ): boolean {
-    return integerFirstComponentMatchTyped(
-        readInteger(assertion),
-        readLeadingInteger(value),
-    );
-}
-
-/**
- * `integerFirstComponentMatch` on the presented integer and the
- * stored first component.
- *
- * @param assertion Presented integer.
- * @param value Stored first component.
- * @returns `true` when the integers are equal.
- */
-export
-function integerFirstComponentMatchTyped (
-    assertion: bigint,
-    value: bigint,
-): boolean {
-    return integerMatchTyped(assertion, value);
+    return readInteger(assertion) === readLeadingInteger(value);
 }
 
 export default integerFirstComponentMatch;

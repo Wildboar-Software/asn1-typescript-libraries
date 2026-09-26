@@ -24,28 +24,16 @@ function facsimileNumberMatch (
     assertion: ASN1Element | string,
     value: ASN1Element | FacsimileTelephoneNumber | string,
 ): boolean {
-    const stored = typeof value === "string"
-        ? value
-        : ASN1Element.isElement(value)
-            ? _decode_TelephoneNumber(value.sequence[0])
-            : value.telephoneNumber;
-    return facsimileNumberMatchTyped(
-        typeof assertion === "string" ? assertion : assertion.printableString,
-        stored,
-    );
-}
-
-/**
- * `facsimileNumberMatch` on the presented number and the stored
- * telephone number. Hyphens and spaces are insignificant.
- *
- * @param assertion Presented number.
- * @param value Stored telephone number.
- * @returns `true` when `telephoneNumberMatch` holds.
- */
-export
-function facsimileNumberMatchTyped (assertion: string, value: string): boolean {
-    return telephoneNumberMatchTyped(assertion, value);
+    let stored: string;
+    if (typeof value === "string") {
+        stored = value;
+    } else if (ASN1Element.isElement(value)) {
+        stored = _decode_TelephoneNumber(value.sequence[0]);
+    } else {
+        stored = value.telephoneNumber;
+    }
+    const presented = typeof assertion === "string" ? assertion : assertion.printableString;
+    return telephoneNumberMatchTyped(presented, stored);
 }
 
 export default facsimileNumberMatch;

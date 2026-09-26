@@ -14,19 +14,7 @@ function integerMatch (
     assertion: IntegerInput,
     value: IntegerInput,
 ): boolean {
-    return integerMatchTyped(readInteger(assertion), readInteger(value));
-}
-
-/**
- * `integerMatch` on two `bigint` values.
- *
- * @param assertion Presented integer.
- * @param value Stored integer.
- * @returns `true` when the integers are equal.
- */
-export
-function integerMatchTyped (assertion: bigint, value: bigint): boolean {
-    return assertion === value;
+    return readInteger(assertion) === readInteger(value);
 }
 
 export default integerMatch;

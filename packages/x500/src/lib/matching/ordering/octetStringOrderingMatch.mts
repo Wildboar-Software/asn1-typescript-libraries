@@ -17,25 +17,9 @@ function octetStringOrderingMatch (
     assertion: ASN1Element | Uint8Array,
     value: ASN1Element | Uint8Array,
 ): number {
-    return octetStringOrderingMatchTyped(
-        ASN1Element.isElement(assertion) ? assertion.octetString : assertion,
-        ASN1Element.isElement(value) ? value.octetString : value,
-    );
-}
-
-/**
- * `octetStringOrderingMatch` on two byte strings.
- *
- * @param assertion Presented octets.
- * @param value Stored octets.
- * @returns Negative when `assertion` precedes `value`.
- */
-export
-function octetStringOrderingMatchTyped (
-    assertion: Uint8Array,
-    value: Uint8Array,
-): number {
-    return Buffer.compare(assertion, value);
+    const presented = ASN1Element.isElement(assertion) ? assertion.octetString : assertion;
+    const stored = ASN1Element.isElement(value) ? value.octetString : value;
+    return Buffer.compare(presented, stored);
 }
 
 export default octetStringOrderingMatch;

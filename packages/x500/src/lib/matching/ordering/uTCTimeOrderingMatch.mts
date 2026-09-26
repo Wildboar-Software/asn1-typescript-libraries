@@ -14,22 +14,9 @@ function uTCTimeOrderingMatch (
     assertion: ASN1Element | Date,
     value: ASN1Element | Date,
 ): number {
-    return uTCTimeOrderingMatchTyped(
-        ASN1Element.isElement(assertion) ? assertion.utcTime : assertion,
-        ASN1Element.isElement(value) ? value.utcTime : value,
-    );
-}
-
-/**
- * `uTCTimeOrderingMatch` on two instants.
- *
- * @param assertion Presented time.
- * @param value Stored time.
- * @returns Milliseconds of `assertion` minus milliseconds of `value`.
- */
-export
-function uTCTimeOrderingMatchTyped (assertion: Date, value: Date): number {
-    return assertion.valueOf() - value.valueOf();
+    const presented = ASN1Element.isElement(assertion) ? assertion.utcTime : assertion;
+    const stored = ASN1Element.isElement(value) ? value.utcTime : value;
+    return presented.valueOf() - stored.valueOf();
 }
 
 export default uTCTimeOrderingMatch;
