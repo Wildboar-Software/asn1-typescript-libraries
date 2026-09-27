@@ -24,7 +24,7 @@ RESOLVED: _Defer_ including `GeneralName` functionality in this package, because
 
 ## To Do
 
-- [ ] fromString
+- [x] fromString
 - [x] toString
 - [ ] toKey
 - [ ] compare

@@ -149,6 +149,35 @@ describe("distinguishedValueToString()", () => {
     });
 });
 
+describe("postal addresses", () => {
+    const postalAddress = ObjectIdentifier.fromParts([2, 5, 4, 16]);
+    const lines = ["123 Main St", "Apt 4", "Springfield", "IL", "62704", "US"];
+
+    function utf8Lines(text: readonly string[]): ASN1Element {
+        return _encodeSequence(text.map((line) => _encodeUTF8String(line, BER)), BER);
+    }
+
+    it("joins six directory-string lines with $", () => {
+        expect(distinguishedValueToString(postalAddress, utf8Lines(lines))).toBe(lines.join("$"));
+    });
+
+    it("stringifies each DirectoryString alternative in a line", () => {
+        const value = _encodeSequence([
+            _encodeUTF8String("utf8", BER),
+            _encodePrintableString("printable", BER),
+            _encodeBMPString("bmp", BER),
+            _encodeUniversalString("universal", BER),
+            _encodeTeletexString(new Uint8Array([0x41, 0xa4]), BER),
+            _encodeUTF8String("tail", BER),
+        ], BER);
+        expect(distinguishedValueToString(postalAddress, value)).toBe("utf8$printable$bmp$universal$A$$tail");
+    });
+
+    it("does not display an empty sequence", () => {
+        expect(distinguishedValueToString(ObjectIdentifier.fromParts([2, 5, 4, 3]), _encodeSequence([], BER))).toBeNull();
+    });
+});
+
 describe("attributeTypeAndValueToString()", () => {
     const commonName = ObjectIdentifier.fromParts([2, 5, 4, 3]);
 

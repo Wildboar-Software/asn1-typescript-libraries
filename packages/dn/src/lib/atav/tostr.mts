@@ -3,6 +3,7 @@ import type { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
 import { distinguishedTypeToFriendlyString } from "./distinguishedTypeToString.mjs";
 import teletexToString from "@wildboar/teletex";
 import { escapeDistinguishedValue } from "../escapeDistinguishedValue.mjs";
+import { id_at_postalAddress } from "./distinguishedTypeToString.mjs";
 
 /**
  * @internal
@@ -37,6 +38,34 @@ function defaultValueEncoder (value: ASN1Element): string {
     ).toString("hex");
 }
 
+const directoryStringTagNumbers = new Set([
+    ASN1UniversalType.teletexString,
+    ASN1UniversalType.printableString,
+    ASN1UniversalType.utf8String,
+    ASN1UniversalType.bmpString,
+    ASN1UniversalType.universalString,
+]);
+
+function looksLikeStringList(value: ASN1Element): boolean {
+    if (value.tagNumber !== ASN1UniversalType.sequence) {
+        return false;
+    }
+    const els = value.sequence;
+    if (els.length === 0) {
+        return false;
+    }
+    for (let i = 0; i < els.length; i++) {
+        if (!directoryStringTagNumbers.has(els[i].tagNumber)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function stringListToString(type_: OBJECT_IDENTIFIER, value: ASN1Element): string {
+    return value.sequence.map((el) => distinguishedValueToString(type_, el)).join("$");
+}
+
 export
 function distinguishedValueToString(type_: OBJECT_IDENTIFIER, value: ASN1Element): string | null {
     if (value.tagClass !== ASN1TagClass.universal) {
@@ -66,7 +95,12 @@ function distinguishedValueToString(type_: OBJECT_IDENTIFIER, value: ASN1Element
             .join(".");
         case (ASN1UniversalType.time): return value.time;
         case (ASN1UniversalType.sequence): {
-            // TODO: Handle PostalAddress
+            if (
+                type_.isEqualTo(id_at_postalAddress)
+                || looksLikeStringList(value)
+            ) {
+                return stringListToString(type_, value);
+            }
             return null;
         }
         case (ASN1UniversalType.numericString): return value.numericString;

@@ -32,6 +32,8 @@ export const id_at_dnsName: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([100]
 export const id_at_intEmail: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([104], id_at);
 export const id_at_jid: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([105], id_at);
 export const id_at_objectIdentifier: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([106], id_at);
+export const id_at_postalAddress: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([16], id_at);
+export const id_at_registeredAddress: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([26], id_at);
 
 const id_pilotAttributeType = ObjectIdentifier.fromParts([0, 9, 2342, 19200300, 100, 1]);
 
@@ -111,6 +113,8 @@ function distinguishedTypeToFriendlyString(attributeType: OBJECT_IDENTIFIER, lda
             case 51: return "houseIdentifier";
             case 54: return "dmdName";
             case 105: return "jid";
+            case 26: return "registeredAddress";
+            case 16: return "postalAddress";
             // These are not registered in the IANA registry for LDAP, so a
             // strict LDAP encoding treats them as unrecognized.
             case 89:  return ldapStrict ? null : "urnC";
