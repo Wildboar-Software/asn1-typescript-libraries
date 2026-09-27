@@ -178,6 +178,153 @@ describe("postal addresses", () => {
     });
 });
 
+describe("distinguishedValueToString() with comparable", () => {
+    const commonName = ObjectIdentifier.fromParts([2, 5, 4, 3]);
+    const serialNumber = ObjectIdentifier.fromParts([2, 5, 4, 5]);
+    const telephoneNumber = ObjectIdentifier.fromParts([2, 5, 4, 20]);
+    const postalAddress = ObjectIdentifier.fromParts([2, 5, 4, 16]);
+    const dnsName = ObjectIdentifier.fromParts([2, 5, 4, 100]);
+    const intEmail = ObjectIdentifier.fromParts([2, 5, 4, 104]);
+    const jid = ObjectIdentifier.fromParts([2, 5, 4, 105]);
+    const emailAddress = ObjectIdentifier.fromParts([1, 2, 840, 113549, 1, 9, 1]);
+    const homePhone = ObjectIdentifier.fromParts([0, 9, 2342, 19200300, 100, 1, 20]);
+    const mobile = ObjectIdentifier.fromParts([0, 9, 2342, 19200300, 100, 1, 41]);
+    const pager = ObjectIdentifier.fromParts([0, 9, 2342, 19200300, 100, 1, 42]);
+    const unrecognized = ObjectIdentifier.fromParts([1, 3, 6, 1, 4, 1, 99999, 1]);
+
+    const cmp = (type_: ObjectIdentifier, el: ASN1Element): string | null =>
+        distinguishedValueToString(type_, el, true);
+
+    it("does not normalize when comparable is not set", () => {
+        expect(distinguishedValueToString(commonName, _encodeUTF8String(" Jonathan  WILBUR ", BER)))
+            .toBe(" Jonathan  WILBUR ");
+    });
+
+    it("prepares and case-folds directory strings", () => {
+        expect(cmp(commonName, _encodeUTF8String("  Jonathan \t WILBUR ", BER))).toBe("jonathan wilbur");
+        expect(cmp(commonName, _encodePrintableString("Jonathan Wilbur", BER))).toBe("jonathan wilbur");
+        expect(cmp(commonName, _encodeBMPString("JONATHAN WILBUR", BER))).toBe("jonathan wilbur");
+        expect(cmp(commonName, _encodeUniversalString("jonathan wilbur", BER))).toBe("jonathan wilbur");
+        expect(cmp(commonName, _encodeTeletexString(new Uint8Array([0x41, 0x42]), BER))).toBe("ab");
+        expect(cmp(commonName, _encodeIA5String("ABC", BER))).toBe("abc");
+    });
+
+    it("applies full case folding", () => {
+        expect(cmp(commonName, _encodeUTF8String("Straße", BER)))
+            .toBe(cmp(commonName, _encodeUTF8String("STRASSE", BER)));
+    });
+
+    it("does not case-fold serialNumber", () => {
+        expect(cmp(serialNumber, _encodePrintableString("  ABC  123 ", BER))).toBe("ABC 123");
+    });
+
+    it("truncates UTCTime and GeneralizedTime to seconds", () => {
+        const fractional = (text: string): BERElement => {
+            const el = new BERElement(
+                ASN1TagClass.universal,
+                ASN1Construction.primitive,
+                ASN1UniversalType.generalizedTime,
+            );
+            el.value = new TextEncoder().encode(text);
+            return el;
+        };
+        expect(cmp(commonName, _encodeUTCTime(INSTANT, BER))).toBe("2020-01-02T03:04:05Z");
+        expect(cmp(commonName, _encodeGeneralizedTime(INSTANT, BER))).toBe("2020-01-02T03:04:05Z");
+        expect(cmp(commonName, fractional("20200102030405.123Z"))).toBe("2020-01-02T03:04:05Z");
+        expect(cmp(commonName, fractional("20200102030405.987Z"))).toBe("2020-01-02T03:04:05Z");
+        expect(distinguishedValueToString(commonName, fractional("20200102030405.123Z")))
+            .toBe("2020-01-02T03:04:05.123Z");
+    });
+
+    it("prepares and case-folds each line of a postal address", () => {
+        const value = _encodeSequence([
+            _encodeUTF8String("123  Main St", BER),
+            _encodePrintableString("SPRINGFIELD", BER),
+            _encodePrintableString("+1 555-1234", BER),
+        ], BER);
+        expect(cmp(postalAddress, value)).toBe("123 main st$springfield$+1 555-1234");
+    });
+
+    it("removes spaces and hyphens from PrintableStrings of unrecognized types that look like telephone numbers", () => {
+        expect(cmp(unrecognized, _encodePrintableString("+1 555-123-4567", BER))).toBe("+15551234567");
+        expect(cmp(unrecognized, _encodePrintableString(" +44 20 7946 0958 ", BER))).toBe("+442079460958");
+    });
+
+    it("does not treat values of recognized types as telephone numbers", () => {
+        expect(cmp(commonName, _encodePrintableString("+1 555-123-4567", BER))).toBe("+1 555-123-4567");
+    });
+
+    it("does not treat other strings as telephone numbers", () => {
+        expect(cmp(unrecognized, _encodeUTF8String("+1 555-123-4567", BER))).toBe("+1 555-123-4567");
+        expect(cmp(unrecognized, _encodePrintableString("1 555-123-4567", BER))).toBe("1 555-123-4567");
+        expect(cmp(unrecognized, _encodePrintableString("+1 555-123-4567 x", BER))).toBe("+1 555-123-4567 x");
+        expect(cmp(unrecognized, _encodePrintableString("+1 555-123-4567-", BER))).toBe("+1 555-123-4567-");
+        const long = "+1 234 567 890 123 456 789 012 3";
+        expect(long.length).toBe(32);
+        expect(cmp(unrecognized, _encodePrintableString(long, BER))).toBe(long);
+    });
+
+    it.each([
+        ["telephoneNumber", telephoneNumber],
+        ["homePhone", homePhone],
+        ["mobile", mobile],
+        ["pager", pager],
+    ])("removes spaces and hyphens from %s regardless of form", (_label, type_) => {
+        expect(cmp(type_, _encodePrintableString("(555) 123-4567", BER))).toBe("(555)1234567");
+        expect(cmp(type_, _encodeUTF8String("+1 555-123-4567 EXT 9", BER))).toBe("+15551234567ext9");
+    });
+
+    it("removes spaces from NumericStrings", () => {
+        expect(cmp(commonName, _encodeNumericString(" 123 456 ", BER))).toBe("123456");
+    });
+
+    it("normalizes dnsName to lowercase A-labels without a root dot", () => {
+        const expected = "xn--bcher-kva.example";
+        expect(cmp(dnsName, _encodeUTF8String("Bücher.EXAMPLE.", BER))).toBe(expected);
+        expect(cmp(dnsName, _encodeUTF8String("BÜCHER.example", BER))).toBe(expected);
+        expect(cmp(dnsName, _encodeUTF8String("XN--BCHER-KVA.example", BER))).toBe(expected);
+        expect(cmp(dnsName, _encodeUTF8String("Straße.de", BER))).toBe("xn--strae-oqa.de");
+    });
+
+    it("falls back to case folding for an invalid dnsName", () => {
+        expect(cmp(dnsName, _encodeUTF8String("Not A Domain", BER))).toBe("not a domain");
+    });
+
+    it("normalizes values of unrecognized types that look like DNS names", () => {
+        expect(cmp(unrecognized, _encodeIA5String("WWW.Example.COM", BER))).toBe("www.example.com");
+        expect(cmp(unrecognized, _encodeUTF8String("Bücher.example", BER))).toBe("xn--bcher-kva.example");
+        expect(cmp(unrecognized, _encodeUTF8String("_ldap._tcp.Example.com", BER))).toBe("_ldap._tcp.example.com");
+    });
+
+    it("does not treat values of recognized types as DNS names", () => {
+        expect(cmp(commonName, _encodeUTF8String("Bücher.example", BER))).toBe("bücher.example");
+    });
+
+    it("does not treat values without a plausible top-level domain as DNS names", () => {
+        expect(cmp(unrecognized, _encodeUTF8String("Bücher.123", BER))).toBe("bücher.123");
+        expect(cmp(unrecognized, _encodeUTF8String("Bücher", BER))).toBe("bücher");
+    });
+
+    it.each([
+        ["intEmail", intEmail],
+        ["emailAddress", emailAddress],
+        ["an unrecognized type", unrecognized],
+    ])("normalizes email addresses of %s", (_label, type_) => {
+        expect(cmp(type_, _encodeUTF8String("Jonathan.WILBUR@Bücher.EXAMPLE", BER)))
+            .toBe("jonathan.wilbur@xn--bcher-kva.example");
+        expect(cmp(type_, _encodeIA5String("Jonathan.Wilbur@xn--bcher-kva.example", BER)))
+            .toBe("jonathan.wilbur@xn--bcher-kva.example");
+    });
+
+    it("normalizes Jabber IDs, preserving the case of the resource", () => {
+        expect(cmp(jid, _encodeUTF8String("Juliet@Example.COM/Balcony", BER))).toBe("juliet@example.com/Balcony");
+        expect(cmp(jid, _encodeUTF8String("Juliet@Bücher.example", BER))).toBe("juliet@xn--bcher-kva.example");
+        expect(cmp(jid, _encodeUTF8String("Example.COM", BER))).toBe("example.com");
+        expect(cmp(unrecognized, _encodeUTF8String("Juliet@Example.COM/Balcony", BER)))
+            .toBe("juliet@example.com/Balcony");
+    });
+});
+
 describe("attributeTypeAndValueToString()", () => {
     const commonName = ObjectIdentifier.fromParts([2, 5, 4, 3]);
 
