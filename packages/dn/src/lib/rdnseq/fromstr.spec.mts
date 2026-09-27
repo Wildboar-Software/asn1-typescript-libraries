@@ -1,7 +1,7 @@
 import { ASN1UniversalType } from "@wildboar/asn1";
 import { describe, expect, it } from "vitest";
 import rdnSequenceFromString, { rdnSequenceFromStringX520 } from "./fromstr.mjs";
-import stringifyRDNSequence from "./tostr.mjs";
+import rdnSequenceToString from "./tostr.mjs";
 
 function parse (dn: string): string[][][] {
     const rdns: string[][][] = [];
@@ -125,14 +125,14 @@ describe("rdnSequenceFromStringX520()", () => {
         expect(dn[0][1].value.printableString).toBe("Wilbur");
         expect(dn[1][0].value.printableString).toBe("Florida");
         expect(dn[2][0].value.printableString).toBe("US");
-        expect(stringifyRDNSequence(dn)).toBe("gn=Jonathan+sn=Wilbur,st=Florida,c=US");
+        expect(rdnSequenceToString(dn)).toBe("gn=Jonathan+sn=Wilbur,st=Florida,c=US");
     });
 
     it("unescapes a value before encoding it", () => {
         const dn = rdnSequenceFromStringX520("cn=Lu\\C4\\8Di\\C4\\87,c=US");
         expect(dn[0][0].value.tagNumber).toBe(ASN1UniversalType.utf8String);
         expect(dn[0][0].value.utf8String).toBe("Lučić");
-        expect(stringifyRDNSequence(dn)).toBe("cn=Lučić,c=US");
+        expect(rdnSequenceToString(dn)).toBe("cn=Lučić,c=US");
     });
 
     it("propagates an attribute syntax error", () => {
@@ -144,6 +144,6 @@ describe("rdnSequenceFromStringX520()", () => {
         );
         const dn = rdnSequenceFromStringX520("uid=jsmith,dc=example,dc=net");
         expect(dn[1][0].value.ia5String).toBe("example");
-        expect(stringifyRDNSequence(dn)).toBe("uid=jsmith,dc=example,dc=net");
+        expect(rdnSequenceToString(dn)).toBe("uid=jsmith,dc=example,dc=net");
     });
 });

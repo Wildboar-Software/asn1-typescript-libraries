@@ -42,7 +42,7 @@ describe("AttributeTypeAndValue string forms", () => {
     it("produces identical keys for values that would match", () => {
         const a = new AttributeTypeAndValue(commonName, utf8Element("  Smith,  JOHN "));
         const b = new AttributeTypeAndValue(commonName, utf8Element("smith, john"));
-        expect(a.toKey()).toBe("2.5.4.3=smith\\, john");
+        expect(a.toKey()).toBe("2.5.4.3=smith, john");
         expect(a.toKey()).toBe(b.toKey());
     });
 });

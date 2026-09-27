@@ -338,4 +338,31 @@ export function attributeTypeAndValueToString(
     return `${key}=${value}`;
 }
 
+/**
+ * @summary Convert an attribute type and value to a comparison key
+ * @description
+ *
+ * Produces a string such that two attribute types and values that would
+ * match under the equality matching rule of their attribute type (probably)
+ * produce identical keys. The attribute type is always a numeric object
+ * identifier. The value is normalized by {@link distinguishedValueToString}
+ * with `comparable` set, or, if it has no string form, is its hexadecimal BER
+ * encoding, which is never escaped.
+ *
+ * @param atav The attribute type and value
+ * @param escape Whether to escape the value as in IETF RFC 4514
+ * @returns A string of the form `numericoid=normalizedvalue`
+ * @function
+ */
+export function attributeTypeAndValueToKey(
+    atav: AttributeTypeAndValue,
+    escape: boolean = false,
+): string {
+    const value: string | null = distinguishedValueToString(atav.type_, atav.value, true);
+    if (value === null) {
+        return unrecognizedToString(atav.type_, atav.value);
+    }
+    return `${atav.type_.toString()}=${escape ? escapeDistinguishedValue(value) : value}`;
+}
+
 export default attributeTypeAndValueToString;

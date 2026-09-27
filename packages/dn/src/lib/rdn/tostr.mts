@@ -6,15 +6,17 @@ import type { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
  * @description
  * 
  * This function stringifies a relative distinguished name according to
- * [IETF RFC 4514](https://www.rfc-editor.org/rfc/rfc4514).
+ * [IETF RFC 4514](https://www.rfc-editor.org/rfc/rfc4514). Each attribute
+ * type and value is converted as {@link AttributeTypeAndValue.toString}
+ * does, except that each value is escaped, and they are joined with `+` in
+ * their existing order.
  * 
  * @param rdn The relative distinguished name to stringify.
- * @param getEncoder A function that can be used to get a string encoder.
- * @param typeNameGetter A function that can be used to get an attribute type name.
- * @returns The stringified relative distinguished name.
+ * @returns A string of the form `type=value+type=value...`
  * @function
  */
-function stringifyRelativeDistinguishedName (
+export
+function relativeDistinguishedNameToString (
     rdn: AttributeTypeAndValue[],
 ): string {
     if (rdn.length === 0) {
@@ -28,4 +30,4 @@ function stringifyRelativeDistinguishedName (
         .join("+");
 }
 
-export default stringifyRelativeDistinguishedName;
+export default relativeDistinguishedNameToString;

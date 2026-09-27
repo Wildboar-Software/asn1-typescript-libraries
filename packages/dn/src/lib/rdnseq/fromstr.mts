@@ -56,6 +56,9 @@ function* rdnSequenceFromString (
  * types this module does not recognize, and values that do not fit their
  * directory syntax, throw `SyntaxError`.
  *
+ * Unlike IETF RFC 4514, the RDNs are not reversed: the first RDN in `str` is
+ * the first element of the result.
+ *
  * @param str The distinguished name, in RFC 4514 string form.
  * @returns The relative distinguished names, from left to right.
  * @function

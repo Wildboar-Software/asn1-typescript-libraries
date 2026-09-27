@@ -1,5 +1,5 @@
 import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, OBJECT_IDENTIFIER, ASN1Element } from "@wildboar/asn1";
-import stringifyRDNSequence from "./tostr.mjs";
+import rdnSequenceToString from "./tostr.mjs";
 import { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
 import { BER, _encodeUTF8String } from "@wildboar/asn1/functional";
 import { describe, it, expect } from "vitest";
@@ -26,13 +26,13 @@ const NAME_RDN: AttributeTypeAndValue[] = [
     new AttributeTypeAndValue(SURNAME, utf8Element("Wilbur")),
 ];
 
-describe("stringifyRDNSequence()", () => {
+describe("rdnSequenceToString()", () => {
     it("returns an empty string for an empty sequence", () => {
-        expect(stringifyRDNSequence([])).toBe("");
+        expect(rdnSequenceToString([])).toBe("");
     });
 
     it("stringifies a single RDN without a comma", () => {
-        expect(stringifyRDNSequence([BASE_RDN])).toBe("c=US");
+        expect(rdnSequenceToString([BASE_RDN])).toBe("c=US");
     });
 
     it("sorts a multi-valued RDN and separates RDNs with commas", () => {
@@ -41,7 +41,7 @@ describe("stringifyRDNSequence()", () => {
             STATE_RDN,
             BASE_RDN,
         ];
-        expect(stringifyRDNSequence(dn)).toBe("gn=Jonathan+sn=Wilbur,st=Florida,c=US");
+        expect(rdnSequenceToString(dn)).toBe("gn=Jonathan+sn=Wilbur,st=Florida,c=US");
     });
 
     it("stringifies a DN with escapes", () => {
@@ -53,6 +53,6 @@ describe("stringifyRDNSequence()", () => {
             BASE_RDN,
         ];
         const expected = "sn=chunga\\+bunga\\=monkey\\00banana\\\\,st=Florida,c=US";
-        expect(stringifyRDNSequence(dn)).toBe(expected);
+        expect(rdnSequenceToString(dn)).toBe(expected);
     });
 });
