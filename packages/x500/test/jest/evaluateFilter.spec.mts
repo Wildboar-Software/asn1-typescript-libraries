@@ -98,7 +98,7 @@ const UTF8_SUBSTRING_RULE: SubstringsMatcher = (assertion, value, selection) => 
         value.utf8String,
         substringPieces(assertion, selection).map((p) => ({
             kind: p.kind,
-            text: p.element.utf8String,
+            value: p.element.utf8String,
         })),
     );
 };

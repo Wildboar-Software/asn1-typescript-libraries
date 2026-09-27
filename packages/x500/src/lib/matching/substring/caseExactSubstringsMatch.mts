@@ -9,7 +9,7 @@ import {
     readSubstringAssertionOrComponent,
 } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
-import { partitionPreparedString } from "../../utils/substringPartition.mjs";
+import { partitionString } from "../../utils/substringPartition.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.3
@@ -69,7 +69,7 @@ function caseExactSubstringsMatchTyped (
         }
         needles.push({ kind: piece.kind, value: text });
     }
-    return partitionPreparedString(stored, needles);
+    return partitionString(stored, needles);
 }
 
 export default caseExactSubstringsMatch;

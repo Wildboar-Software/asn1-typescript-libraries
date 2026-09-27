@@ -3,22 +3,12 @@ import { ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
 import SubstringSelection from "../../types/SubstringSelection.mjs";
 import type {
     PreparedSubstring,
-    SubstringAssertionInput,
 } from "../readValue.mjs";
 import { readSubstringAssertion } from "../readValue.mjs";
-import { partitionPreparedString } from "../../utils/substringPartition.mjs";
+import { partitionString } from "../../utils/substringPartition.mjs";
 
 function numericText (value: ASN1Element | string): string {
     return (typeof value === "string" ? value : value.numericString).replace(/\s+/g, "");
-}
-
-function kindFromSelection (selection: SubstringSelection): "initial" | "any" | "final" | undefined {
-    switch (selection) {
-        case SubstringSelection.initial: return "initial";
-        case SubstringSelection.final: return "final";
-        case SubstringSelection.any_: return "any";
-        default: return undefined;
-    }
 }
 
 function numericPieces (
@@ -26,14 +16,10 @@ function numericPieces (
     selection?: SubstringSelection,
 ): PreparedSubstring[] {
     if (selection !== undefined) {
-        const kind = kindFromSelection(selection);
-        if (!kind) {
-            return [];
-        }
-        return [{ kind, value: numericText(assertion) }];
+        return [{ kind: selection, value: numericText(assertion) }];
     }
     if (typeof assertion === "string") {
-        return [{ kind: "any", value: assertion.replace(/\s+/g, "") }];
+        return [{ kind: SubstringSelection.any_, value: assertion.replace(/\s+/g, "") }];
     }
     if (
         assertion.tagClass === ASN1TagClass.universal
@@ -51,7 +37,7 @@ function numericPieces (
         }
         return out;
     }
-    return [{ kind: "any", value: numericText(assertion) }];
+    return [{ kind: SubstringSelection.any_, value: numericText(assertion) }];
 }
 
 /**
@@ -91,7 +77,7 @@ function numericStringSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
 ): boolean {
-    return partitionPreparedString(value, assertion);
+    return partitionString(value, assertion);
 }
 
 export default numericStringSubstringsMatch;

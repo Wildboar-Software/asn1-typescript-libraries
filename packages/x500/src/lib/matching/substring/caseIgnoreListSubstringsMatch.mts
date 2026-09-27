@@ -9,7 +9,7 @@ import {
     readSubstringAssertion,
 } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
-import { partitionPreparedStringList } from "../../utils/substringPartition.mjs";
+import { partitionStringList } from "../../utils/substringPartition.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.8
@@ -74,7 +74,7 @@ function caseIgnoreListSubstringsMatchTyped (
         }
         needles.push({ kind: piece.kind, value: text });
     }
-    return partitionPreparedStringList(lines, needles);
+    return partitionStringList(lines, needles);
 }
 
 export default caseIgnoreListSubstringsMatch;

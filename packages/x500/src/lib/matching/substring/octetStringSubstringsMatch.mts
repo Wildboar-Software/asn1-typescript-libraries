@@ -5,7 +5,7 @@ import type {
     PreparedOctetSubstring,
 } from "../readValue.mjs";
 import { readOctetSubstringAssertion } from "../readValue.mjs";
-import { partitionPreparedOctets } from "../../utils/substringPartition.mjs";
+import { partitionOctets } from "../../utils/substringPartition.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.7
@@ -43,7 +43,7 @@ function octetStringSubstringsMatchTyped (
     assertion: readonly PreparedOctetSubstring[],
     value: Uint8Array,
 ): boolean {
-    return partitionPreparedOctets(value, assertion);
+    return partitionOctets(value, assertion);
 }
 
 export default octetStringSubstringsMatch;

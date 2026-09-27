@@ -8,7 +8,7 @@ import { readSubstringAssertion } from "../readValue.mjs";
 import {
     _decode_TelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-import { partitionPreparedString } from "../../utils/substringPartition.mjs";
+import { partitionString } from "../../utils/substringPartition.mjs";
 
 function normalizeTelephoneNumber (telephoneNumber: string): string {
     return telephoneNumber.replace(/[- ]/g, "");
@@ -58,7 +58,7 @@ function telephoneNumberSubstringsMatchTyped (
         }
         needles.push({ kind: piece.kind, value: normalizeTelephoneNumber(piece.value) });
     }
-    return partitionPreparedString(normalizeTelephoneNumber(value), needles);
+    return partitionString(normalizeTelephoneNumber(value), needles);
 }
 
 export default telephoneNumberSubstringsMatch;

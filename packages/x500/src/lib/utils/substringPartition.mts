@@ -1,30 +1,33 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import { ASN1TagClass } from "@wildboar/asn1";
+import { ASN1Construction, ASN1TagClass } from "@wildboar/asn1";
 import SubstringSelection from "../types/SubstringSelection.mjs";
 import { Buffer } from "node:buffer";
 
-export type SubstringKind = "initial" | "any" | "final";
+/**
+ * One `initial` / `any` / `final` component, or a `control` /
+ * unrecognized piece so the matcher can skip or reject it.
+ */
+export type SubstringComponent<T> =
+    | { readonly kind: SubstringSelection; readonly value: T }
+    | { readonly kind: "control" }
+    | { readonly kind: "unknown" };
 
 export interface SubstringPiece {
-    readonly kind: SubstringKind;
+    readonly kind: SubstringSelection;
     readonly element: ASN1Element;
 }
 
-function kindFromSelection (selection: SubstringSelection): SubstringKind | undefined {
-    switch (selection) {
-        case SubstringSelection.initial: return "initial";
-        case SubstringSelection.final: return "final";
-        case SubstringSelection.any_: return "any";
-        default: return undefined;
-    }
-}
-
+/**
+ * `initial` / `any` / `final` are EXPLICIT [0]/[1]/[2] around a
+ * CHOICE or `ANY`, so the payload is the inner element. Primitive
+ * construction means IMPLICIT tagging (or an already-unwrapped
+ * component): `.inner` throws, and the outer element is the payload.
+ */
 function unwrapExplicit (el: ASN1Element): ASN1Element {
-    try {
-        return el.inner;
-    } catch {
+    if (el.construction !== ASN1Construction.constructed) {
         return el;
     }
+    return el.inner;
 }
 
 /**
@@ -40,11 +43,7 @@ function substringPieces (
     selection?: SubstringSelection,
 ): SubstringPiece[] {
     if (selection !== undefined) {
-        const kind = kindFromSelection(selection);
-        if (!kind) {
-            return [];
-        }
-        return [{ kind, element: assertion }];
+        return [{ kind: selection, element: assertion }];
     }
     try {
         const pieces: SubstringPiece[] = [];
@@ -53,52 +52,78 @@ function substringPieces (
                 continue;
             }
             if (el.tagNumber === 0) {
-                pieces.push({ kind: "initial", element: unwrapExplicit(el) });
+                pieces.push({ kind: SubstringSelection.initial, element: unwrapExplicit(el) });
             } else if (el.tagNumber === 1) {
-                pieces.push({ kind: "any", element: unwrapExplicit(el) });
+                pieces.push({ kind: SubstringSelection.any_, element: unwrapExplicit(el) });
             } else if (el.tagNumber === 2) {
-                pieces.push({ kind: "final", element: unwrapExplicit(el) });
+                pieces.push({ kind: SubstringSelection.final, element: unwrapExplicit(el) });
             }
         }
         return pieces;
     } catch {
-        return [{ kind: "any", element: assertion }];
+        return [{ kind: SubstringSelection.any_, element: assertion }];
     }
 }
 
+function components<T> (
+    pieces: readonly SubstringComponent<T>[],
+): { initial?: T; final?: T; anys: T[] } | undefined {
+    const anys: T[] = [];
+    let initial: T | undefined;
+    let final: T | undefined;
+    for (const p of pieces) {
+        switch (p.kind) {
+            case "control": {
+                break;
+            }
+            case "unknown": {
+                return undefined;
+            }
+            case SubstringSelection.initial: {
+                initial = p.value;
+                break;
+            }
+            case SubstringSelection.final: {
+                final = p.value;
+                break;
+            }
+            case SubstringSelection.any_: {
+                anys.push(p.value);
+                break;
+            }
+            default: {
+                return undefined;
+            }
+        }
+    }
+    return { initial, final, anys };
+}
+
 /**
- * TRUE iff `needles` partition `stored` in order: `initial` is a
+ * TRUE iff `pieces` partition `stored` in order: `initial` is a
  * prefix, `final` a suffix, and each `any` a distinct later
- * portion (clause 8.1.3).
+ * portion (clause 8.1.3). `control` is ignored; `unknown` fails.
  */
 export
-function partitionString (stored: string, needles: readonly { kind: SubstringKind; text: string }[]): boolean {
-    let initial: string | undefined;
-    let final: string | undefined;
-    const anys: string[] = [];
-    for (const n of needles) {
-        if (n.kind === "initial") {
-            initial = n.text;
-        } else if (n.kind === "final") {
-            final = n.text;
-        } else {
-            anys.push(n.text);
-        }
+function partitionString (stored: string, pieces: readonly SubstringComponent<string>[]): boolean {
+    const n = components(pieces);
+    if (!n) {
+        return false;
     }
     let s = stored;
-    if (initial !== undefined) {
-        if (!s.startsWith(initial)) {
+    if (n.initial !== undefined) {
+        if (!s.startsWith(n.initial)) {
             return false;
         }
-        s = s.slice(initial.length);
+        s = s.slice(n.initial.length);
     }
-    if (final !== undefined) {
-        if (!s.endsWith(final)) {
+    if (n.final !== undefined) {
+        if (!s.endsWith(n.final)) {
             return false;
         }
-        s = s.slice(0, s.length - final.length);
+        s = s.slice(0, s.length - n.final.length);
     }
-    for (const a of anys) {
+    for (const a of n.anys) {
         const i = s.indexOf(a);
         if (i < 0) {
             return false;
@@ -112,42 +137,34 @@ function partitionString (stored: string, needles: readonly { kind: SubstringKin
  * Same partitioning as {@link partitionString} over octets.
  */
 export
-function partitionOctets (stored: Uint8Array, needles: readonly { kind: SubstringKind; bytes: Uint8Array }[]): boolean {
-    let initial: Uint8Array | undefined;
-    let final: Uint8Array | undefined;
-    const anys: Uint8Array[] = [];
-    for (const n of needles) {
-        if (n.kind === "initial") {
-            initial = n.bytes;
-        } else if (n.kind === "final") {
-            final = n.bytes;
-        } else {
-            anys.push(n.bytes);
-        }
+function partitionOctets (stored: Uint8Array, pieces: readonly SubstringComponent<Uint8Array>[]): boolean {
+    const n = components(pieces);
+    if (!n) {
+        return false;
     }
     let start = 0;
     let end = stored.length;
-    if (initial) {
+    if (n.initial) {
         if (
-            (initial.length > (end - start))
-            || Buffer.compare(stored.subarray(start, start + initial.length), initial)
+            (n.initial.length > (end - start))
+            || Buffer.compare(stored.subarray(start, start + n.initial.length), n.initial)
         ) {
             return false;
         }
-        start += initial.length;
+        start += n.initial.length;
     }
-    if (final) {
+    if (n.final) {
         if (
-            (final.length > (end - start))
-            || Buffer.compare(stored.subarray(end - final.length, end), final)
+            (n.final.length > (end - start))
+            || Buffer.compare(stored.subarray(end - n.final.length, end), n.final)
         ) {
             return false;
         }
-        end -= final.length;
+        end -= n.final.length;
     }
     const buf = Buffer.from(stored.subarray(start, end));
     let offset = 0;
-    for (const a of anys) {
+    for (const a of n.anys) {
         const i = buf.indexOf(a, offset);
         if (i < 0) {
             return false;
@@ -162,31 +179,23 @@ function partitionOctets (stored: Uint8Array, needles: readonly { kind: Substrin
  * not span more than one stored string. Pieces still occur in order.
  */
 export
-function partitionStringList (lines: readonly string[], needles: readonly { kind: SubstringKind; text: string }[]): boolean {
-    if (lines.length === 0) {
-        return needles.length === 0;
-    }
-    let initial: string | undefined;
-    let final: string | undefined;
-    const anys: string[] = [];
-    for (const n of needles) {
-        if (n.kind === "initial") {
-            initial = n.text;
-        } else if (n.kind === "final") {
-            final = n.text;
-        } else {
-            anys.push(n.text);
-        }
-    }
-    if ((initial !== undefined) && !lines[0].startsWith(initial)) {
+function partitionStringList (lines: readonly string[], pieces: readonly SubstringComponent<string>[]): boolean {
+    const n = components(pieces);
+    if (!n) {
         return false;
     }
-    if ((final !== undefined) && !lines[lines.length - 1].endsWith(final)) {
+    if (lines.length === 0) {
+        return (n.initial === undefined) && (n.final === undefined) && (n.anys.length === 0);
+    }
+    if ((n.initial !== undefined) && !lines[0].startsWith(n.initial)) {
+        return false;
+    }
+    if ((n.final !== undefined) && !lines[lines.length - 1].endsWith(n.final)) {
         return false;
     }
     let lineIdx = 0;
-    let pos = initial ? initial.length : 0;
-    for (const a of anys) {
+    let pos = n.initial ? n.initial.length : 0;
+    for (const a of n.anys) {
         let found = false;
         while (lineIdx < lines.length) {
             const i = lines[lineIdx].indexOf(a, pos);
@@ -203,72 +212,4 @@ function partitionStringList (lines: readonly string[], needles: readonly { kind
         }
     }
     return true;
-}
-
-function isSubstringKind (kind: string): kind is SubstringKind {
-    return (kind === "initial") || (kind === "any") || (kind === "final");
-}
-
-/**
- * Map prepared pieces onto {@link partitionString} needles. `control`
- * is ignored; unrecognized kinds fail the match.
- */
-export
-function partitionPreparedString (
-    stored: string,
-    pieces: readonly { readonly kind: string; readonly value?: string }[],
-): boolean {
-    const needles: { kind: SubstringKind; text: string }[] = [];
-    for (const p of pieces) {
-        if (p.kind === "control") {
-            continue;
-        }
-        if (!isSubstringKind(p.kind)) {
-            return false;
-        }
-        needles.push({ kind: p.kind, text: p.value ?? "" });
-    }
-    return partitionString(stored, needles);
-}
-
-/**
- * Map prepared octet pieces onto {@link partitionOctets}.
- */
-export
-function partitionPreparedOctets (
-    stored: Uint8Array,
-    pieces: readonly { readonly kind: string; readonly value?: Uint8Array }[],
-): boolean {
-    const needles: { kind: SubstringKind; bytes: Uint8Array }[] = [];
-    for (const p of pieces) {
-        if (p.kind === "control") {
-            continue;
-        }
-        if (!isSubstringKind(p.kind) || p.value === undefined) {
-            return false;
-        }
-        needles.push({ kind: p.kind, bytes: p.value });
-    }
-    return partitionOctets(stored, needles);
-}
-
-/**
- * Map prepared pieces onto {@link partitionStringList}.
- */
-export
-function partitionPreparedStringList (
-    lines: readonly string[],
-    pieces: readonly { readonly kind: string; readonly value?: string }[],
-): boolean {
-    const needles: { kind: SubstringKind; text: string }[] = [];
-    for (const p of pieces) {
-        if (p.kind === "control") {
-            continue;
-        }
-        if (!isSubstringKind(p.kind)) {
-            return false;
-        }
-        needles.push({ kind: p.kind, text: p.value ?? "" });
-    }
-    return partitionStringList(lines, needles);
 }
