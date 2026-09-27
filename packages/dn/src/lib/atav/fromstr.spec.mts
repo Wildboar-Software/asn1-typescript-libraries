@@ -243,6 +243,37 @@ describe("atavFromStringX520()", () => {
         );
     });
 
+    it.each([
+        ["mHSCountryName", "2.6.10.3.11", 3, "GB"],
+        ["mHSADMDName", "2.6.10.3.9", 16, "ATT"],
+        ["mHSPRMDName", "2.6.10.3.25", 16, "ACME"],
+        ["mHSOrganizationName", "2.6.10.3.21", 64, "UCL"],
+        ["mHSOrganizationalUnitName", "2.6.10.3.22", 32, "CS"],
+        ["mHSCommonNameAttribute", "2.6.10.3.10", 64, "Steve Kille"],
+        ["mHSSurnameAttribute", "2.6.10.3.27", 40, "Kille"],
+        ["mHSGivenNameAttribute", "2.6.10.3.15", 16, "Steve"],
+        ["mHSInitialsAttribute", "2.6.10.3.16", 5, "S"],
+        ["mHSGenerationQualifierAttribute", "2.6.10.3.14", 3, "Jr"],
+        ["mHSNetworkAddressAttribute", "2.6.10.3.18", 16, "234273400148"],
+        ["mHSExtendedNetworkAddressAttribute", "2.6.10.3.13", 256, "3100123456"],
+        ["mHSTerminalIdentifierAttribute", "2.6.10.3.28", 24, "T-ID"],
+        ["mHSTerminalTypeAttribute", "2.6.10.3.29", 5, "3"],
+        ["mHSNumericUserIdentifierAttribute", "2.6.10.3.20", 32, "12345"],
+        ["mHSPDSNameAttribute", "2.6.10.3.23", 16, "PDS"],
+        ["mHSPostalCodeAttribute", "2.6.10.3.24", 16, "WC1E"],
+    ] as const)("encodes %s as a bounded DirectoryString", (type, oid, max, value) => {
+        const atav = parse(type, value);
+        expect(atav.type_.toString()).toBe(oid);
+        expect(atav.value.tagNumber).toBe(ASN1UniversalType.printableString);
+        expect(atav.value.printableString).toBe(value);
+        expect(() => parse(type, "")).toThrow(
+            new SyntaxError(`attribute type "${type}": length problem (value length 0, expected 1..${max})`),
+        );
+        expect(() => parse(type, "A".repeat(max + 1))).toThrow(
+            new SyntaxError(`attribute type "${type}": length problem (value length ${max + 1}, expected 1..${max})`),
+        );
+    });
+
     it("rejects an unrecognized attribute type", () => {
         expect(() => parse("foo", "example")).toThrow(new SyntaxError('unrecognized attribute type "foo"'));
     });

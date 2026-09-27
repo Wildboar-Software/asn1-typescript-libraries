@@ -53,6 +53,23 @@ import {
     id_homePhone,
     id_mail,
     id_mobile,
+    id_at_mhs_admd_name,
+    id_at_mhs_common_name,
+    id_at_mhs_country_name,
+    id_at_mhs_extended_network_address,
+    id_at_mhs_generation_qualifier,
+    id_at_mhs_given_name,
+    id_at_mhs_initials,
+    id_at_mhs_network_address,
+    id_at_mhs_numeric_user_identifier,
+    id_at_mhs_organization_name,
+    id_at_mhs_organizational_unit_name,
+    id_at_mhs_pds_name_attribute,
+    id_at_mhs_postal_code,
+    id_at_mhs_prmd_name,
+    id_at_mhs_surname,
+    id_at_mhs_terminal_identifier,
+    id_at_mhs_terminal_type,
     id_oidC,
     id_pager,
     id_roomNumber,
@@ -207,6 +224,9 @@ const utf8String = (value: string): ASN1Element => _encodeUTF8String(value, BER)
  * (`PrintableString` of size 1..32), `IA5String`, `CountryName` /
  * `CountryCode3c` (`PrintableString` of a fixed size), and `CountryCode3n`
  * (`NumericString` of size 3).
+ *
+ * ITU-T X.412 (1999) OR-address-subtree name forms use `DirectoryString`
+ * bounded by the MTS upper bound named in each attribute's `WITH SYNTAX`.
  */
 const x520AttributeSyntaxes: ReadonlyMap<string, X520AttributeSyntax> = new Map([
     ["c", { type: id_at_countryName, encode: withLength(2, 2)(encodePrintableString) }],
@@ -260,14 +280,31 @@ const x520AttributeSyntaxes: ReadonlyMap<string, X520AttributeSyntax> = new Map(
     ["dnsname", { type: id_at_dnsName, encode: utf8String }],
     ["dns name", { type: id_at_dnsName, encode: utf8String }],
     ["organizationidentifier", { type: id_at_organizationIdentifier, encode: directoryString }],
+    ["mhsadmdname", { type: id_at_mhs_admd_name, encode: withLength(1, 16)(encodeUnboundedDirectoryString) }],
+    ["mhscommonnameattribute", { type: id_at_mhs_common_name, encode: withLength(1, 64)(encodeUnboundedDirectoryString) }],
+    ["mhscountryname", { type: id_at_mhs_country_name, encode: withLength(1, 3)(encodeUnboundedDirectoryString) }],
+    ["mhsextendednetworkaddressattribute", { type: id_at_mhs_extended_network_address, encode: withLength(1, 256)(encodeUnboundedDirectoryString) }],
+    ["mhsgenerationqualifierattribute", { type: id_at_mhs_generation_qualifier, encode: withLength(1, 3)(encodeUnboundedDirectoryString) }],
+    ["mhsgivennameattribute", { type: id_at_mhs_given_name, encode: withLength(1, 16)(encodeUnboundedDirectoryString) }],
+    ["mhsinitialsattribute", { type: id_at_mhs_initials, encode: withLength(1, 5)(encodeUnboundedDirectoryString) }],
+    ["mhsnetworkaddressattribute", { type: id_at_mhs_network_address, encode: withLength(1, 16)(encodeUnboundedDirectoryString) }],
+    ["mhsnumericuseridentifierattribute", { type: id_at_mhs_numeric_user_identifier, encode: withLength(1, 32)(encodeUnboundedDirectoryString) }],
+    ["mhsorganizationname", { type: id_at_mhs_organization_name, encode: withLength(1, 64)(encodeUnboundedDirectoryString) }],
+    ["mhsorganizationalunitname", { type: id_at_mhs_organizational_unit_name, encode: withLength(1, 32)(encodeUnboundedDirectoryString) }],
+    ["mhspdsnameattribute", { type: id_at_mhs_pds_name_attribute, encode: withLength(1, 16)(encodeUnboundedDirectoryString) }],
+    ["mhspostalcodeattribute", { type: id_at_mhs_postal_code, encode: withLength(1, 16)(encodeUnboundedDirectoryString) }],
+    ["mhsprmdname", { type: id_at_mhs_prmd_name, encode: withLength(1, 16)(encodeUnboundedDirectoryString) }],
+    ["mhssurnameattribute", { type: id_at_mhs_surname, encode: withLength(1, 40)(encodeUnboundedDirectoryString) }],
+    ["mhsterminalidentifierattribute", { type: id_at_mhs_terminal_identifier, encode: withLength(1, 24)(encodeUnboundedDirectoryString) }],
+    ["mhsterminaltypeattribute", { type: id_at_mhs_terminal_type, encode: withLength(1, 5)(encodeUnboundedDirectoryString) }],
 ]);
 
 /**
- * @summary Parse a recognized X.520 attribute type and value.
+ * @summary Parse a recognized attribute type and value.
  * @description
  *
  * `strings.value` is the unescaped character value. The returned `value` is
- * a BER element of the attribute's X.520 directory syntax.
+ * a BER element of the attribute's directory syntax.
  *
  * @param strings The attribute type name and unescaped value.
  * @returns The attribute type OID and BER-encoded value.

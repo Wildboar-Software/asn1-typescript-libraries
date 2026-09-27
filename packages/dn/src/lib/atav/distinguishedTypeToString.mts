@@ -53,8 +53,33 @@ export const id_emailAddress: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([1]
 /** `{id 2}` from X.520, where `id` is `{joint-iso-itu-t registration-procedures(17) module(1) directory-defs(2)}`. */
 export const id_oidC: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([2, 17, 1, 2, 2]);
 
+/**
+ * `{id-at}` from ITU-T X.412 (1999),
+ * `{joint-iso-itu-t mhs(6) routing(10) 3}`.
+ */
+const id_at_mhs_routing = ObjectIdentifier.fromParts([2, 6, 10, 3]);
+
+/** Naming attributes of the X.412 OR-address-subtree name forms. */
+export const id_at_mhs_admd_name: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([9], id_at_mhs_routing);
+export const id_at_mhs_common_name: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([10], id_at_mhs_routing);
+export const id_at_mhs_country_name: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([11], id_at_mhs_routing);
+export const id_at_mhs_extended_network_address: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([13], id_at_mhs_routing);
+export const id_at_mhs_generation_qualifier: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([14], id_at_mhs_routing);
+export const id_at_mhs_given_name: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([15], id_at_mhs_routing);
+export const id_at_mhs_initials: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([16], id_at_mhs_routing);
+export const id_at_mhs_network_address: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([18], id_at_mhs_routing);
+export const id_at_mhs_numeric_user_identifier: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([20], id_at_mhs_routing);
+export const id_at_mhs_organization_name: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([21], id_at_mhs_routing);
+export const id_at_mhs_organizational_unit_name: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([22], id_at_mhs_routing);
+export const id_at_mhs_pds_name_attribute: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([23], id_at_mhs_routing);
+export const id_at_mhs_postal_code: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([24], id_at_mhs_routing);
+export const id_at_mhs_prmd_name: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([25], id_at_mhs_routing);
+export const id_at_mhs_surname: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([27], id_at_mhs_routing);
+export const id_at_mhs_terminal_identifier: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([28], id_at_mhs_routing);
+export const id_at_mhs_terminal_type: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([29], id_at_mhs_routing);
+
 export
-function distinguishedTypeToString(attributeType: OBJECT_IDENTIFIER): string {
+function distinguishedTypeToString(attributeType: OBJECT_IDENTIFIER, ldapStrict: boolean = false): string {
     const attr_type_bytes = attributeType.toBytesUnsafe();
 
     // Every short name below ends in a single-byte arc (< 128), so a matching
@@ -85,14 +110,15 @@ function distinguishedTypeToString(attributeType: OBJECT_IDENTIFIER): string {
             case 44: return "generationQualifier";
             case 51: return "houseIdentifier";
             case 54: return "dmdName";
-            case 89: return "urnC";
-            case 97: return "organizationIdentifier";
-            case 98: return "c3";
-            case 99: return "n3";
-            case 100: return "dnsName";
-            case 104: return "intEmail";
             case 105: return "jid";
-            case 106: return "objectIdentifier";
+            // These are not registered in the IANA registry for LDAP.
+            case 89:  return ldapStrict ? id_at_urnC.toString() : "urnC";
+            case 97:  return ldapStrict ? id_at_organizationIdentifier.toString() : "organizationIdentifier";
+            case 98:  return ldapStrict ? id_at_countryCode3c.toString() : "c3";
+            case 99:  return ldapStrict ? id_at_countryCode3n.toString() : "n3";
+            case 100: return ldapStrict ? id_at_dnsName.toString() : "dnsName";
+            case 104: return ldapStrict ? id_at_intEmail.toString() : "intEmail";
+            case 106: return ldapStrict ? id_at_objectIdentifier.toString() : "objectIdentifier";
             default:
                 return attributeType.toString();
         }
@@ -120,6 +146,34 @@ function distinguishedTypeToString(attributeType: OBJECT_IDENTIFIER): string {
         }
     }
 
+    // ITU-T X.412 (1999) OR-address-subtree name-form attributes: 2.6.10.3.<arc>
+    if (!ldapStrict && attr_type_bytes.length === 4) {
+        const prefix = id_at_mhs_routing.toBytesUnsafe();
+        if (Buffer.compare(attr_type_bytes.subarray(0, prefix.length), prefix) === 0) {
+            switch (attr_type_bytes[prefix.length]) {
+                case 9: return "mHSADMDName";
+                case 10: return "mHSCommonNameAttribute";
+                case 11: return "mHSCountryName";
+                case 13: return "mHSExtendedNetworkAddressAttribute";
+                case 14: return "mHSGenerationQualifierAttribute";
+                case 15: return "mHSGivenNameAttribute";
+                case 16: return "mHSInitialsAttribute";
+                case 18: return "mHSNetworkAddressAttribute";
+                case 20: return "mHSNumericUserIdentifierAttribute";
+                case 21: return "mHSOrganizationName";
+                case 22: return "mHSOrganizationalUnitName";
+                case 23: return "mHSPDSNameAttribute";
+                case 24: return "mHSPostalCodeAttribute";
+                case 25: return "mHSPRMDName";
+                case 27: return "mHSSurnameAttribute";
+                case 28: return "mHSTerminalIdentifierAttribute";
+                case 29: return "mHSTerminalTypeAttribute";
+                default:
+                    return attributeType.toString();
+            }
+        }
+    }
+
     if (
         (attr_type_bytes.length === 9)
         && (Buffer.compare(attr_type_bytes, id_emailAddress.toBytesUnsafe()) === 0)
@@ -128,7 +182,8 @@ function distinguishedTypeToString(attributeType: OBJECT_IDENTIFIER): string {
     }
 
     if (
-        (attr_type_bytes.length === 4)
+        !ldapStrict
+        && (attr_type_bytes.length === 4)
         && (Buffer.compare(attr_type_bytes, id_oidC.toBytesUnsafe()) === 0)
     ) {
         return "oidC";

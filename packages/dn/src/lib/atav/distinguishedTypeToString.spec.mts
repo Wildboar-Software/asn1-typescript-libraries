@@ -54,6 +54,23 @@ describe("distinguishedTypeToString()", () => {
             [[...pilot, 48], "buildingName"],
             [[1, 2, 840, 113549, 1, 9, 1], "emailAddress"],
             [[2, 17, 1, 2, 2], "oidC"],
+            [[2, 6, 10, 3, 9], "mHSADMDName"],
+            [[2, 6, 10, 3, 10], "mHSCommonNameAttribute"],
+            [[2, 6, 10, 3, 11], "mHSCountryName"],
+            [[2, 6, 10, 3, 13], "mHSExtendedNetworkAddressAttribute"],
+            [[2, 6, 10, 3, 14], "mHSGenerationQualifierAttribute"],
+            [[2, 6, 10, 3, 15], "mHSGivenNameAttribute"],
+            [[2, 6, 10, 3, 16], "mHSInitialsAttribute"],
+            [[2, 6, 10, 3, 18], "mHSNetworkAddressAttribute"],
+            [[2, 6, 10, 3, 20], "mHSNumericUserIdentifierAttribute"],
+            [[2, 6, 10, 3, 21], "mHSOrganizationName"],
+            [[2, 6, 10, 3, 22], "mHSOrganizationalUnitName"],
+            [[2, 6, 10, 3, 23], "mHSPDSNameAttribute"],
+            [[2, 6, 10, 3, 24], "mHSPostalCodeAttribute"],
+            [[2, 6, 10, 3, 25], "mHSPRMDName"],
+            [[2, 6, 10, 3, 27], "mHSSurnameAttribute"],
+            [[2, 6, 10, 3, 28], "mHSTerminalIdentifierAttribute"],
+            [[2, 6, 10, 3, 29], "mHSTerminalTypeAttribute"],
         ];
         for (const [arcs, shortName] of cases) {
             expect(distinguishedTypeToString(ObjectIdentifier.fromParts(arcs))).toBe(shortName);
@@ -68,5 +85,6 @@ describe("distinguishedTypeToString()", () => {
         expect(distinguishedTypeToString(ObjectIdentifier.fromParts([0, 9, 2342, 19200300, 100, 1, 99]))).toBe("0.9.2342.19200300.100.1.99");
         expect(distinguishedTypeToString(ObjectIdentifier.fromParts([1, 2, 840, 113549, 1, 9, 2]))).toBe("1.2.840.113549.1.9.2");
         expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 17, 1, 2, 3]))).toBe("2.17.1.2.3");
+        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 6, 10, 3, 12]))).toBe("2.6.10.3.12");
     });
 });
