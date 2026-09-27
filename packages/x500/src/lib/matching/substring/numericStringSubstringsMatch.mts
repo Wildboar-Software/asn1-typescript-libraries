@@ -77,7 +77,14 @@ function numericStringSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
 ): boolean {
-    return partitionString(value, assertion);
+    const p = partitionString(value);
+    p.next();
+    for (const piece of assertion) {
+        if (!p.next(piece).value) {
+            return false;
+        }
+    }
+    return p.next().value === true;
 }
 
 export default numericStringSubstringsMatch;

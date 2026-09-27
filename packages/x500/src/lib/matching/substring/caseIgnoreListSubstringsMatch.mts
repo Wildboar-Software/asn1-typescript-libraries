@@ -60,7 +60,8 @@ function caseIgnoreListSubstringsMatchTyped (
         }
         lines.push(prepared);
     }
-    const needles: PreparedSubstring[] = [];
+    const p = partitionStringList(lines);
+    p.next();
     for (const piece of assertion) {
         if (piece.kind === "control") {
             continue;
@@ -72,9 +73,11 @@ function caseIgnoreListSubstringsMatchTyped (
         if (text === undefined) {
             return false;
         }
-        needles.push({ kind: piece.kind, value: text });
+        if (!p.next({ kind: piece.kind, value: text }).value) {
+            return false;
+        }
     }
-    return partitionStringList(lines, needles);
+    return p.next().value === true;
 }
 
 export default caseIgnoreListSubstringsMatch;

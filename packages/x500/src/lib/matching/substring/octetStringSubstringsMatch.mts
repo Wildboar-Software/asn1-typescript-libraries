@@ -43,7 +43,14 @@ function octetStringSubstringsMatchTyped (
     assertion: readonly PreparedOctetSubstring[],
     value: Uint8Array,
 ): boolean {
-    return partitionOctets(value, assertion);
+    const p = partitionOctets(value);
+    p.next();
+    for (const piece of assertion) {
+        if (!p.next(piece).value) {
+            return false;
+        }
+    }
+    return p.next().value === true;
 }
 
 export default octetStringSubstringsMatch;

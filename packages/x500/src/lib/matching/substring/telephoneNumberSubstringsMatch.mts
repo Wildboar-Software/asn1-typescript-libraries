@@ -48,7 +48,8 @@ function telephoneNumberSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
 ): boolean {
-    const needles: PreparedSubstring[] = [];
+    const p = partitionString(normalizeTelephoneNumber(value));
+    p.next();
     for (const piece of assertion) {
         if (piece.kind === "control") {
             continue;
@@ -56,9 +57,11 @@ function telephoneNumberSubstringsMatchTyped (
         if (piece.kind === "unknown") {
             return false;
         }
-        needles.push({ kind: piece.kind, value: normalizeTelephoneNumber(piece.value) });
+        if (!p.next({ kind: piece.kind, value: normalizeTelephoneNumber(piece.value) }).value) {
+            return false;
+        }
     }
-    return partitionString(normalizeTelephoneNumber(value), needles);
+    return p.next().value === true;
 }
 
 export default telephoneNumberSubstringsMatch;

@@ -131,13 +131,14 @@ const BOOLEAN_EQUALITY_MATCHING_RULE: EqualityMatcher = (assertion, value) => (a
 const INTEGER_ORDERING_RULE: OrderingMatcher = (assertion, value) => (assertion.value[0] - value.value[0]);
 
 const UTF8_SUBSTRING_RULE: SubstringsMatcher = (assertion, value, selection) => {
-    return partitionString(
-        value.utf8String,
-        substringPieces(assertion, selection).map((p) => ({
-            kind: p.kind,
-            value: p.element.utf8String,
-        })),
-    );
+    const p = partitionString(value.utf8String);
+    p.next();
+    for (const piece of substringPieces(assertion, selection)) {
+        if (!p.next({ kind: piece.kind, value: piece.element.utf8String }).value) {
+            return false;
+        }
+    }
+    return p.next().value === true;
 };
 
 const ALWAYS_COMPATIBLE: EvaluateFilterSettings["isMatchingRuleCompatibleWithAttributeType"] = () => true;
