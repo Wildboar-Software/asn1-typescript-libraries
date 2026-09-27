@@ -1,5 +1,6 @@
 import type { DirectoryStringInput } from "../readValue.mjs";
 import { readDirectoryString } from "../readValue.mjs";
+import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.2
@@ -30,13 +31,21 @@ function caseIgnoreOrderingMatch (
  *
  * @param assertion Presented string.
  * @param value Stored string.
- * @returns Negative when `assertion` is less than `value`.
+ * @returns Negative when `assertion` is less than `value`. A string that
+ *  fails preparation sorts after any prepared string (`Array.sort`
+ *  treats `NaN` as `+0`, so it cannot be used for this).
  */
 export
 function caseIgnoreOrderingMatchTyped (assertion: string, value: string): number {
-    const a: string = assertion.trim().toLowerCase();
-    const v: string = value.trim().toLowerCase();
-    return a.localeCompare(v);
+    const a: string | undefined = prepString(assertion, { caseFold: true });
+    if (a === undefined) {
+        return 1;
+    }
+    const v: string | undefined = prepString(value, { caseFold: true });
+    if (v === undefined) {
+        return -1;
+    }
+    return compareCodePoints(a, v);
 }
 
 export default caseIgnoreOrderingMatch;

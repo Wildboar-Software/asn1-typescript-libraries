@@ -32,15 +32,15 @@ function caseIgnoreIA5Match (
  */
 export
 function caseIgnoreIA5MatchTyped (assertion: string, value: string): boolean {
-    const a: string | undefined = prepString(assertion);
-    const v: string | undefined = prepString(value);
+    const a: string | undefined = prepString(assertion, { caseFold: true });
+    const v: string | undefined = prepString(value, { caseFold: true });
     if (a === undefined) {
         return false;
     }
     if (v === undefined) {
         return false;
     }
-    return (a.toLowerCase() === v.toLowerCase());
+    return (a === v);
 }
 
 export default caseIgnoreIA5Match;
