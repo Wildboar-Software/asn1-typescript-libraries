@@ -3,7 +3,7 @@ import type { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
 import { distinguishedTypeToFriendlyString } from "./distinguishedTypeToString.mjs";
 import teletexToString from "@wildboar/teletex";
 import { escapeDistinguishedValue } from "../escapeDistinguishedValue.mjs";
-import { id_at_postalAddress } from "./distinguishedTypeToString.mjs";
+import { id_at_postalAddress, id_at_registeredAddress } from "./distinguishedTypeToString.mjs";
 
 /**
  * @internal
@@ -97,6 +97,7 @@ function distinguishedValueToString(type_: OBJECT_IDENTIFIER, value: ASN1Element
         case (ASN1UniversalType.sequence): {
             if (
                 type_.isEqualTo(id_at_postalAddress)
+                || type_.isEqualTo(id_at_registeredAddress)
                 || looksLikeStringList(value)
             ) {
                 return stringListToString(type_, value);
