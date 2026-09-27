@@ -1,5 +1,3 @@
-import type { ASN1Element } from "@wildboar/asn1";
-import { ASN1Construction, ASN1TagClass } from "@wildboar/asn1";
 import SubstringSelection from "../types/SubstringSelection.mjs";
 import { Buffer } from "node:buffer";
 
@@ -12,123 +10,67 @@ export type SubstringComponent<T> =
     | { readonly kind: "control" }
     | { readonly kind: "unknown" };
 
-export interface SubstringPiece {
-    readonly kind: SubstringSelection;
-    readonly element: ASN1Element;
+function misplacedInitial (): never {
+    throw new Error("SubstringAssertion initial is not first");
 }
 
-/**
- * `initial` / `any` / `final` are EXPLICIT [0]/[1]/[2] around a
- * CHOICE or `ANY`, so the payload is the inner element. Primitive
- * construction means IMPLICIT tagging (or an already-unwrapped
- * component): `.inner` throws, and the outer element is the payload.
- */
-function unwrapExplicit (el: ASN1Element): ASN1Element {
-    if (el.construction !== ASN1Construction.constructed) {
-        return el;
-    }
-    return el.inner;
-}
-
-/**
- * Rec. ITU-T X.520 (10/2019) clause 8.1.3: collect `initial` / `any` /
- * `final` pieces from either a single component plus `selection`
- * (as `evaluateFilter` historically passed) or a full
- * `SubstringAssertion` / `OctetSubstringAssertion` SEQUENCE.
- * `control` components are ignored.
- */
-export
-function substringPieces (
-    assertion: ASN1Element,
-    selection?: SubstringSelection,
-): SubstringPiece[] {
-    if (selection !== undefined) {
-        return [{ kind: selection, element: assertion }];
-    }
-    try {
-        const pieces: SubstringPiece[] = [];
-        for (const el of assertion.sequence) {
-            if (el.tagClass !== ASN1TagClass.context) {
-                continue;
-            }
-            if (el.tagNumber === 0) {
-                pieces.push({ kind: SubstringSelection.initial, element: unwrapExplicit(el) });
-            } else if (el.tagNumber === 1) {
-                pieces.push({ kind: SubstringSelection.any_, element: unwrapExplicit(el) });
-            } else if (el.tagNumber === 2) {
-                pieces.push({ kind: SubstringSelection.final, element: unwrapExplicit(el) });
-            }
-        }
-        return pieces;
-    } catch {
-        return [{ kind: SubstringSelection.any_, element: assertion }];
-    }
-}
-
-function components<T> (
-    pieces: readonly SubstringComponent<T>[],
-): { initial?: T; final?: T; anys: T[] } | undefined {
-    const anys: T[] = [];
-    let initial: T | undefined;
-    let final: T | undefined;
-    for (const p of pieces) {
-        switch (p.kind) {
-            case "control": {
-                break;
-            }
-            case "unknown": {
-                return undefined;
-            }
-            case SubstringSelection.initial: {
-                initial = p.value;
-                break;
-            }
-            case SubstringSelection.final: {
-                final = p.value;
-                break;
-            }
-            case SubstringSelection.any_: {
-                anys.push(p.value);
-                break;
-            }
-            default: {
-                return undefined;
-            }
-        }
-    }
-    return { initial, final, anys };
+function misplacedFinal (): never {
+    throw new Error("SubstringAssertion final is not last");
 }
 
 /**
  * TRUE iff `pieces` partition `stored` in order: `initial` is a
- * prefix, `final` a suffix, and each `any` a distinct later
- * portion (clause 8.1.3). `control` is ignored; `unknown` fails.
+ * prefix of the first element, `final` a suffix of the last, and
+ * each `any` a distinct later portion (clause 8.1.3). `control` is
+ * ignored; `unknown` fails. Throws if `initial` is not first or
+ * `final` is not last.
  */
 export
 function partitionString (stored: string, pieces: readonly SubstringComponent<string>[]): boolean {
-    const n = components(pieces);
-    if (!n) {
-        return false;
+    let start = 0;
+    let end = pieces.length;
+    while (start < end && pieces[start].kind === "control") {
+        start++;
+    }
+    while (end > start && pieces[end - 1].kind === "control") {
+        end--;
     }
     let s = stored;
-    if (n.initial !== undefined) {
-        if (!s.startsWith(n.initial)) {
+    if (start < end && pieces[start].kind === SubstringSelection.initial) {
+        const initial = pieces[start].value;
+        if (!s.startsWith(initial)) {
             return false;
         }
-        s = s.slice(n.initial.length);
+        s = s.slice(initial.length);
+        start++;
     }
-    if (n.final !== undefined) {
-        if (!s.endsWith(n.final)) {
+    if (start < end && pieces[end - 1].kind === SubstringSelection.final) {
+        const final = pieces[end - 1].value;
+        if (!s.endsWith(final)) {
             return false;
         }
-        s = s.slice(0, s.length - n.final.length);
+        s = s.slice(0, s.length - final.length);
+        end--;
     }
-    for (const a of n.anys) {
-        const i = s.indexOf(a);
-        if (i < 0) {
+    for (let i = start; i < end; i++) {
+        const p = pieces[i];
+        if (p.kind === "control") {
+            continue;
+        }
+        if (p.kind === "unknown") {
             return false;
         }
-        s = s.slice(i + a.length);
+        if (p.kind === SubstringSelection.initial) {
+            misplacedInitial();
+        }
+        if (p.kind === SubstringSelection.final) {
+            misplacedFinal();
+        }
+        const idx = s.indexOf(p.value);
+        if (idx < 0) {
+            return false;
+        }
+        s = s.slice(idx + p.value.length);
     }
     return true;
 }
@@ -138,38 +80,59 @@ function partitionString (stored: string, pieces: readonly SubstringComponent<st
  */
 export
 function partitionOctets (stored: Uint8Array, pieces: readonly SubstringComponent<Uint8Array>[]): boolean {
-    const n = components(pieces);
-    if (!n) {
-        return false;
-    }
     let start = 0;
-    let end = stored.length;
-    if (n.initial) {
+    let end = pieces.length;
+    while (start < end && pieces[start].kind === "control") {
+        start++;
+    }
+    while (end > start && pieces[end - 1].kind === "control") {
+        end--;
+    }
+    let from = 0;
+    let to = stored.length;
+    if (start < end && pieces[start].kind === SubstringSelection.initial) {
+        const initial = pieces[start].value;
         if (
-            (n.initial.length > (end - start))
-            || Buffer.compare(stored.subarray(start, start + n.initial.length), n.initial)
+            (initial.length > (to - from))
+            || Buffer.compare(stored.subarray(from, from + initial.length), initial)
         ) {
             return false;
         }
-        start += n.initial.length;
+        from += initial.length;
+        start++;
     }
-    if (n.final) {
+    if (start < end && pieces[end - 1].kind === SubstringSelection.final) {
+        const final = pieces[end - 1].value;
         if (
-            (n.final.length > (end - start))
-            || Buffer.compare(stored.subarray(end - n.final.length, end), n.final)
+            (final.length > (to - from))
+            || Buffer.compare(stored.subarray(to - final.length, to), final)
         ) {
             return false;
         }
-        end -= n.final.length;
+        to -= final.length;
+        end--;
     }
-    const buf = Buffer.from(stored.subarray(start, end));
+    const buf = Buffer.from(stored.subarray(from, to));
     let offset = 0;
-    for (const a of n.anys) {
-        const i = buf.indexOf(a, offset);
-        if (i < 0) {
+    for (let i = start; i < end; i++) {
+        const p = pieces[i];
+        if (p.kind === "control") {
+            continue;
+        }
+        if (p.kind === "unknown") {
             return false;
         }
-        offset = i + a.length;
+        if (p.kind === SubstringSelection.initial) {
+            misplacedInitial();
+        }
+        if (p.kind === SubstringSelection.final) {
+            misplacedFinal();
+        }
+        const idx = buf.indexOf(p.value, offset);
+        if (idx < 0) {
+            return false;
+        }
+        offset = idx + p.value.length;
     }
     return true;
 }
@@ -180,27 +143,58 @@ function partitionOctets (stored: Uint8Array, pieces: readonly SubstringComponen
  */
 export
 function partitionStringList (lines: readonly string[], pieces: readonly SubstringComponent<string>[]): boolean {
-    const n = components(pieces);
-    if (!n) {
-        return false;
+    let start = 0;
+    let end = pieces.length;
+    while (start < end && pieces[start].kind === "control") {
+        start++;
+    }
+    while (end > start && pieces[end - 1].kind === "control") {
+        end--;
     }
     if (lines.length === 0) {
-        return (n.initial === undefined) && (n.final === undefined) && (n.anys.length === 0);
+        for (let i = start; i < end; i++) {
+            if (pieces[i].kind !== "control") {
+                return false;
+            }
+        }
+        return true;
     }
-    if ((n.initial !== undefined) && !lines[0].startsWith(n.initial)) {
-        return false;
+    let pos = 0;
+    if (start < end && pieces[start].kind === SubstringSelection.initial) {
+        const initial = pieces[start].value;
+        if (!lines[0].startsWith(initial)) {
+            return false;
+        }
+        pos = initial.length;
+        start++;
     }
-    if ((n.final !== undefined) && !lines[lines.length - 1].endsWith(n.final)) {
-        return false;
+    if (start < end && pieces[end - 1].kind === SubstringSelection.final) {
+        const final = pieces[end - 1].value;
+        if (!lines[lines.length - 1].endsWith(final)) {
+            return false;
+        }
+        end--;
     }
     let lineIdx = 0;
-    let pos = n.initial ? n.initial.length : 0;
-    for (const a of n.anys) {
+    for (let i = start; i < end; i++) {
+        const p = pieces[i];
+        if (p.kind === "control") {
+            continue;
+        }
+        if (p.kind === "unknown") {
+            return false;
+        }
+        if (p.kind === SubstringSelection.initial) {
+            misplacedInitial();
+        }
+        if (p.kind === SubstringSelection.final) {
+            misplacedFinal();
+        }
         let found = false;
         while (lineIdx < lines.length) {
-            const i = lines[lineIdx].indexOf(a, pos);
-            if (i >= 0) {
-                pos = i + a.length;
+            const idx = lines[lineIdx].indexOf(p.value, pos);
+            if (idx >= 0) {
+                pos = idx + p.value.length;
                 found = true;
                 break;
             }

@@ -39,8 +39,45 @@ import { evaluateFilter, EvaluateFilterSettings } from "../../src/lib/utils/eval
 import type EqualityMatcher from "../../src/lib/types/EqualityMatcher.mjs";
 import type OrderingMatcher from "../../src/lib/types/OrderingMatcher.mjs";
 import type SubstringsMatcher from "../../src/lib/types/SubstringsMatcher.mjs";
-import { partitionString, substringPieces } from "../../src/lib/utils/substringPartition.mjs";
+import { partitionString } from "../../src/lib/utils/substringPartition.mjs";
+import SubstringSelection from "../../src/lib/types/SubstringSelection.mjs";
 import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+
+/**
+ * Collect `initial` / `any` / `final` pieces from a filter matcher
+ * call: either one component plus `selection`, or a SEQUENCE.
+ * EXPLICIT [0]/[1]/[2] payloads are the inner element; primitive
+ * construction means the outer element is the payload.
+ */
+function substringPieces (
+    assertion: asn1.ASN1Element,
+    selection?: SubstringSelection,
+): { kind: SubstringSelection; element: asn1.ASN1Element }[] {
+    if (selection !== undefined) {
+        return [{ kind: selection, element: assertion }];
+    }
+    const unwrap = (el: asn1.ASN1Element): asn1.ASN1Element => (
+        el.construction === asn1.ASN1Construction.constructed ? el.inner : el
+    );
+    try {
+        const pieces: { kind: SubstringSelection; element: asn1.ASN1Element }[] = [];
+        for (const el of assertion.sequence) {
+            if (el.tagClass !== asn1.ASN1TagClass.context) {
+                continue;
+            }
+            if (el.tagNumber === 0) {
+                pieces.push({ kind: SubstringSelection.initial, element: unwrap(el) });
+            } else if (el.tagNumber === 1) {
+                pieces.push({ kind: SubstringSelection.any_, element: unwrap(el) });
+            } else if (el.tagNumber === 2) {
+                pieces.push({ kind: SubstringSelection.final, element: unwrap(el) });
+            }
+        }
+        return pieces;
+    } catch {
+        return [{ kind: SubstringSelection.any_, element: assertion }];
+    }
+}
 
 const TRUE_ELEMENT = new asn1.DERElement(
     asn1.ASN1TagClass.universal,
