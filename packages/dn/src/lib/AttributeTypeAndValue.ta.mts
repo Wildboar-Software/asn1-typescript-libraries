@@ -9,7 +9,9 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     attributeTypeAndValueToString,
     defaultValueEncoder,
+    distinguishedValueToString,
 } from "./atav/tostr.mjs";
+import { escapeDistinguishedValue } from "./escapeDistinguishedValue.mjs";
 
 /**
  * JSON Encoding Rules encoding of {@link AttributeTypeAndValue}.
@@ -150,6 +152,34 @@ export class AttributeTypeAndValue {
      */
     public toInteropString(): string {
         return `${this.type_.toString()}=${defaultValueEncoder(this.value)}`;
+    }
+
+    /**
+     * @summary Convert this `AttributeTypeAndValue` to a comparison key
+     * @description
+     *
+     * Produces a string such that two `AttributeTypeAndValue`s that would
+     * match under the equality matching rule of their attribute type
+     * (probably) produce identical keys, so they can be compared byte-for-byte
+     * or used as map keys. Since the matching rule of an arbitrary attribute
+     * type cannot be known, the value normalization is heuristic: for
+     * instance, most strings are case-folded, and DNS names are converted to
+     * punycode.
+     *
+     * The attribute type is always a numeric object identifier, so keys do not
+     * change as attribute names become known. The value is escaped as in
+     * IETF RFC 4514, or, if it has no string form, is its hexadecimal BER
+     * encoding. The key is not meant to be displayed.
+     *
+     * @returns A string of the form `numericoid=normalizedvalue`
+     * @function
+     * @public
+     */
+    public toKey(): string {
+        const value: string | null = distinguishedValueToString(this.type_, this.value, true);
+        return `${this.type_.toString()}=${(value === null)
+            ? defaultValueEncoder(this.value)
+            : escapeDistinguishedValue(value)}`;
     }
 }
 
