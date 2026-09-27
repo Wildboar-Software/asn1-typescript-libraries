@@ -302,6 +302,69 @@ describe("normalizePeriod()", () => {
         );
     });
 
+    it("flattens overlapping timesOfDay bands", () => {
+        const morning = new DayTimeBand(new DayTime(9), new DayTime(12));
+        const midday = new DayTimeBand(new DayTime(11), new DayTime(14));
+        const union = new DayTimeBand(new DayTime(9), new DayTime(14));
+        expectSame(
+            new Period([midday, morning]),
+            new Period([union]),
+        );
+    });
+
+    it("flattens adjacent timesOfDay bands", () => {
+        const untilNoon = new DayTimeBand(new DayTime(9), new DayTime(12));
+        const fromNextSecond = new DayTimeBand(
+            new DayTime(12, 0, 1),
+            new DayTime(17),
+        );
+        const union = new DayTimeBand(new DayTime(9), new DayTime(17));
+        expectSame(
+            new Period([fromNextSecond, untilNoon]),
+            new Period([union]),
+        );
+    });
+
+    it("flattens multiple start-of-day bands into the latest end", () => {
+        const untilEight = new DayTimeBand(undefined, new DayTime(8));
+        const untilNoon = new DayTimeBand(undefined, new DayTime(12));
+        expectSame(
+            new Period([untilEight, untilNoon]),
+            new Period([untilNoon]),
+        );
+    });
+
+    it("flattens multiple end-of-day bands into the earliest start", () => {
+        const fromFive = new DayTimeBand(new DayTime(17), undefined);
+        const fromEight = new DayTimeBand(new DayTime(20), undefined);
+        expectSame(
+            new Period([fromEight, fromFive]),
+            new Period([fromFive]),
+        );
+    });
+
+    it("omits timesOfDay when flattened bands cover the whole day", () => {
+        const morning = new DayTimeBand(undefined, new DayTime(12));
+        const evening = new DayTimeBand(new DayTime(11), undefined);
+        expectSame(
+            new Period([morning, evening]),
+            new Period(),
+        );
+    });
+
+    it("keeps a gap between non-overlapping timesOfDay bands", () => {
+        const morning = new DayTimeBand(new DayTime(9), new DayTime(12));
+        const evening = new DayTimeBand(new DayTime(18), new DayTime(20));
+        const normalized = normalizePeriod(new Period([evening, morning]));
+        expect(normalized.timesOfDay).toHaveLength(2);
+        expect(normalized.timesOfDay![0].isEqualTo(morning)).toBe(true);
+        expect(normalized.timesOfDay![1].isEqualTo(evening)).toBe(true);
+        expectDifferent(
+            new Period([evening, morning]),
+            new Period([new DayTimeBand(new DayTime(9), new DayTime(20))]),
+        );
+    });
+
     it("sorts and de-duplicates years", () => {
         expectSame(
             new Period(undefined, undefined, undefined, undefined, [1996, 1995, 1996]),
