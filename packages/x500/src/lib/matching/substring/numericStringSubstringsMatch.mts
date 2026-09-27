@@ -1,14 +1,56 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
 import SubstringSelection from "../../types/SubstringSelection.mjs";
+import type {
+    PreparedSubstring,
+} from "../readValue.mjs";
+import { readSubstringAssertion } from "../readValue.mjs";
+import { matchSubstringPieces, partitionString } from "../../utils/substringPartition.mjs";
+
+function numericText (value: ASN1Element | string): string {
+    return (typeof value === "string" ? value : value.numericString).replace(/\s+/g, "");
+}
+
+function numericPieces (
+    assertion: ASN1Element | string,
+    selection?: SubstringSelection,
+): PreparedSubstring[] {
+    if (selection !== undefined) {
+        return [{ kind: selection, value: numericText(assertion) }];
+    }
+    if (typeof assertion === "string") {
+        return [{ kind: SubstringSelection.any_, value: assertion.replace(/\s+/g, "") }];
+    }
+    if (
+        assertion.tagClass === ASN1TagClass.universal
+        && assertion.tagNumber === ASN1UniversalType.sequence
+    ) {
+        const out: PreparedSubstring[] = [];
+        for (const piece of readSubstringAssertion(assertion)) {
+            if (piece.kind === "control") {
+                continue;
+            }
+            if (piece.kind === "unknown") {
+                return [{ kind: "unknown" }];
+            }
+            out.push({ kind: piece.kind, value: piece.value.replace(/\s+/g, "") });
+        }
+        return out;
+    }
+    return [{ kind: SubstringSelection.any_, value: numericText(assertion) }];
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.6
  * `numericStringSubstringsMatch`.
  *
  * Same as `caseIgnoreSubstringsMatch` except all spaces are
- * removed from both strings (clause 7.6.2).
+ * removed from both strings (clause 7.6.2). NumericString does not
+ * need `prepString`.
  *
- * Each string argument may be an `ASN1Element` or a string.
+ * `assertion` may be a `SubstringAssertion` SEQUENCE, one numeric
+ * string plus `selection`, or a numeric string (treated as `any`).
+ * `value` is an element or a string.
  */
 export
 function numericStringSubstringsMatch (
@@ -17,42 +59,25 @@ function numericStringSubstringsMatch (
     selection?: SubstringSelection,
 ): boolean {
     return numericStringSubstringsMatchTyped(
-        typeof assertion === "string" ? assertion : assertion.numericString,
-        typeof value === "string" ? value : value.numericString,
-        selection ?? SubstringSelection.any_,
+        numericPieces(assertion, selection),
+        numericText(value),
     );
 }
 
 /**
- * `numericStringSubstringsMatch` on two numeric strings.
+ * `numericStringSubstringsMatch` on prepared pieces whose spaces
+ * are already removed, and a stored numeric string.
  *
- * @param assertion Presented substring.
- * @param value Stored numeric string.
- * @param selection Which part of `value` must contain `assertion`.
- * @returns `true` when the selected containment holds.
+ * @param assertion Presented substring pieces.
+ * @param value Stored numeric string with spaces already removed.
+ * @returns `true` when the pieces partition `value` in order.
  */
 export
 function numericStringSubstringsMatchTyped (
-    assertion: string,
+    assertion: readonly PreparedSubstring[],
     value: string,
-    selection: SubstringSelection,
 ): boolean {
-    const a: string = assertion.replace(/\s+/g, "");
-    const v: string = value.replace(/\s+/g, "");
-    switch (selection) {
-        case (SubstringSelection.initial): {
-            return v.startsWith(a);
-        }
-        case (SubstringSelection.any_): {
-            return (v.indexOf(a) > -1);
-        }
-        case (SubstringSelection.final): {
-            return v.endsWith(a);
-        }
-        default: {
-            return false;
-        }
-    }
+    return matchSubstringPieces(partitionString(value), assertion, (text) => text);
 }
 
 export default numericStringSubstringsMatch;
