@@ -12,6 +12,7 @@ import {
     _encodeNumericString,
     _encodeObjectIdentifier,
     _encodePrintableString,
+    _encodeSequence,
     _encodeUTF8String,
 } from "@wildboar/asn1/functional";
 import { ParsedAttributeTypeAndValue } from "../ParsedAttributeTypeAndValue.mjs";
@@ -37,8 +38,10 @@ import {
     id_at_organizationName,
     id_at_organizationalUnitName,
     id_at_postOfficeBox,
+    id_at_postalAddress,
     id_at_postalCode,
     id_at_pseudonym,
+    id_at_registeredAddress,
     id_at_serialNumber,
     id_at_stateOrProvinceName,
     id_at_streetAddress,
@@ -170,6 +173,57 @@ function encodeIA5String(value: string, attributeType: string): ASN1Element {
 }
 
 /**
+ * @summary Split an LDAP Postal Address into its lines.
+ * @description
+ *
+ * [IETF RFC 4517](https://www.rfc-editor.org/rfc/rfc4517#section-3.3.28)
+ * section 3.3.28 encodes `PostalAddress` as `line *( "$" line )`. A `\`
+ * or `$` inside a line is written `\5C` or `\24`. Each line is an
+ * `UnboundedDirectoryString` (`SIZE (1..MAX)`).
+ */
+function postalAddressLines(value: string, attributeType: string): string[] {
+    const lines: string[] = [];
+    let line = "";
+    for (let i = 0; i < value.length; i++) {
+        const code = value.charCodeAt(i);
+        if (code === 0x24) {
+            lines.push(line);
+            line = "";
+            continue;
+        }
+        if (code === 0x5C) {
+            const hex = value.slice(i + 1, i + 3).toLowerCase();
+            if ((hex !== "24") && (hex !== "5c")) {
+                throw new SyntaxError(
+                    `attribute type ${JSON.stringify(attributeType)}: malformed escape`,
+                );
+            }
+            line += (hex === "24") ? "$" : "\\";
+            i += 2;
+            continue;
+        }
+        line += value.charAt(i);
+    }
+    lines.push(line);
+    return lines;
+}
+
+/**
+ * @summary Encode a `PostalAddress`.
+ * @description
+ *
+ * ITU-T X.520 (2019) `PostalAddress` is a `SEQUENCE SIZE (1..MAX) OF`
+ * `UnboundedDirectoryString`. `registeredAddress` uses the same syntax.
+ */
+function encodePostalAddress(value: string, attributeType: string): ASN1Element {
+    const encodeLine = withLength(1)(encodeUnboundedDirectoryString);
+    return _encodeSequence(
+        postalAddressLines(value, attributeType).map((line) => encodeLine(line, attributeType)),
+        BER,
+    );
+}
+
+/**
  * @summary Encode an `INTEGER`.
  */
 function encodeInteger(value: string, attributeType: string): ASN1Element {
@@ -220,10 +274,11 @@ const utf8String = (value: string): ASN1Element => _encodeUTF8String(value, BER)
  * Syntaxes are from ITU-T X.520 (2019) `SelectedAttributeTypes`,
  * IETF RFC 4524, IETF RFC 4519, and PKCS #9 `emailAddress`:
  * `UnboundedDirectoryString` (some COSINE attributes are bounded to 256
- * characters), `PrintableString`, `TelephoneNumber`
- * (`PrintableString` of size 1..32), `IA5String`, `CountryName` /
- * `CountryCode3c` (`PrintableString` of a fixed size), and `CountryCode3n`
- * (`NumericString` of size 3).
+ * characters), `PostalAddress` (a `SEQUENCE` of `UnboundedDirectoryString`,
+ * written as in IETF RFC 4517 section 3.3.28), `PrintableString`,
+ * `TelephoneNumber` (`PrintableString` of size 1..32), `IA5String`,
+ * `CountryName` / `CountryCode3c` (`PrintableString` of a fixed size), and
+ * `CountryCode3n` (`NumericString` of size 3).
  *
  * ITU-T X.412 (1999) OR-address-subtree name forms use `DirectoryString`
  * bounded by the MTS upper bound named in each attribute's `WITH SYNTAX`.
@@ -249,6 +304,8 @@ const x520AttributeSyntaxes: ReadonlyMap<string, X520AttributeSyntax> = new Map(
     ["street", { type: id_at_streetAddress, encode: directoryString }],
     ["streetaddress", { type: id_at_streetAddress, encode: directoryString }],
     ["postalcode", { type: id_at_postalCode, encode: directoryString }],
+    ["postaladdress", { type: id_at_postalAddress, encode: encodePostalAddress }],
+    ["registeredaddress", { type: id_at_registeredAddress, encode: encodePostalAddress }],
     ["telephonenumber", { type: id_at_telephoneNumber, encode: telephoneNumber }],
     ["dc", { type: id_dc, encode: encodeIA5String }],
     ["uid", { type: id_uid, encode: directoryString }],

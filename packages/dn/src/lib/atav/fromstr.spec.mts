@@ -274,6 +274,58 @@ describe("atavFromStringX520()", () => {
         );
     });
 
+    it.each([
+        ["postalAddress", "2.5.4.16"],
+        ["registeredAddress", "2.5.4.26"],
+    ] as const)("encodes %s as a PostalAddress", (type, oid) => {
+        const atav = parse(type, "1234 Main St.$Anytown, CA 12345$USA");
+        expect(atav.type_.toString()).toBe(oid);
+        expect(atav.value.tagNumber).toBe(ASN1UniversalType.sequence);
+        const lines = atav.value.sequence;
+        expect(lines.every((line) => line.tagNumber === ASN1UniversalType.printableString)).toBe(true);
+        expect(lines.map((line) => line.printableString)).toEqual([
+            "1234 Main St.",
+            "Anytown, CA 12345",
+            "USA",
+        ]);
+    });
+
+    it("encodes a non-printable postal-address line as UTF8String", () => {
+        const atav = parse("PostalAddress", "Jón$Reykjavík");
+        expect(atav.type_.toString()).toBe("2.5.4.16");
+        expect(atav.value.sequence.map((line) => line.utf8String)).toEqual(["Jón", "Reykjavík"]);
+    });
+
+    it("unescapes \\24 and \\5C inside a postal-address line", () => {
+        const atav = parse("postalAddress", "cost\\5Cunit$sweep\\24stakes$\\5cdollar");
+        expect(atav.value.sequence.map((line) => line.utf8String)).toEqual([
+            "cost\\unit",
+            "sweep$stakes",
+            "\\dollar",
+        ]);
+    });
+
+    it("rejects an empty postal-address line", () => {
+        const empty = new SyntaxError(
+            'attribute type "postalAddress": length problem (value length 0, expected at least 1)',
+        );
+        expect(() => parse("postalAddress", "")).toThrow(empty);
+        expect(() => parse("postalAddress", "a$")).toThrow(empty);
+        expect(() => parse("postalAddress", "$a")).toThrow(empty);
+        expect(() => parse("postalAddress", "a$$b")).toThrow(empty);
+        expect(() => parse("registeredAddress", "")).toThrow(
+            new SyntaxError('attribute type "registeredAddress": length problem (value length 0, expected at least 1)'),
+        );
+    });
+
+    it("rejects a malformed postal-address escape", () => {
+        const malformed = new SyntaxError('attribute type "postalAddress": malformed escape');
+        expect(() => parse("postalAddress", "a\\b")).toThrow(malformed);
+        expect(() => parse("postalAddress", "a\\")).toThrow(malformed);
+        expect(() => parse("postalAddress", "a\\2")).toThrow(malformed);
+        expect(() => parse("postalAddress", "a\\$")).toThrow(malformed);
+    });
+
     it("rejects an unrecognized attribute type", () => {
         expect(() => parse("foo", "example")).toThrow(new SyntaxError('unrecognized attribute type "foo"'));
     });
