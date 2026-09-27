@@ -77,6 +77,13 @@ describe("distinguishedTypeToString()", () => {
         }
     });
 
+    it("returns null for short names that are not LDAP descriptors when LDAP-strict", () => {
+        const unregistered = [89, 97, 98, 99, 100, 104, 106];
+        for (const arc of unregistered) {
+            expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 5, 4, arc]), true)).toBeNull();
+        }
+    });
+
     it("returns null when the type is not a known short name", () => {
         expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 5, 4, 15]))).toBeNull();
         expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 5, 4, 128]))).toBeNull();

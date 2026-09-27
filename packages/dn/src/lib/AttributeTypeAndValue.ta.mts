@@ -6,6 +6,10 @@ import {
     OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    attributeTypeAndValueToString,
+    defaultValueEncoder,
+} from "./atav/tostr.mjs";
 
 /**
  * JSON Encoding Rules encoding of {@link AttributeTypeAndValue}.
@@ -103,26 +107,49 @@ export class AttributeTypeAndValue {
      * @summary Convert this `AttributeTypeAndValue` to a string
      * @description
      *
-     * Returns the attribute type as a dot-delimited object identifier and the
-     * attribute value as `value.toString()`, with surrounding double quotes stripped,
-     * separated by `=`.
+     * Uses a short attribute name when one is known, including names that are
+     * not registered LDAP descriptors, and the value's native string form when
+     * the syntax is recognized. Otherwise the type is a numeric object
+     * identifier and the value is its hexadecimal BER encoding.
      *
      * @returns A string of the form `type=value`
      * @function
      * @public
      */
     public toString(): string {
-        const valueString = this.value.toString();
-        const firstCharacter = valueString.charAt(0);
-        const lastCharacter = valueString.charAt(valueString.length - 1);
-        const quotesSurroundValue = (
-            (valueString.length >= 2)
-            && ((firstCharacter === '"') && (lastCharacter === '"'))
-        );
-        const unquotedValue = quotesSurroundValue
-            ? valueString.slice(1, -1)
-            : valueString;
-        return `${this.type_.toString()}=${unquotedValue}`;
+        return attributeTypeAndValueToString(this, false, false);
+    }
+
+    /**
+     * @summary Convert this `AttributeTypeAndValue` to an LDAP string
+     * @description
+     *
+     * Like {@link toString}, except an attribute type that is not a registered
+     * LDAP descriptor is unrecognized: the type is a numeric object identifier
+     * and the value is its hexadecimal BER encoding.
+     *
+     * @returns A string of the form `type=value`
+     * @function
+     * @public
+     */
+    public toLdapString(): string {
+        return attributeTypeAndValueToString(this, false, true);
+    }
+
+    /**
+     * @summary Convert this `AttributeTypeAndValue` to an interoperable string
+     * @description
+     *
+     * Always writes the attribute type as a numeric object identifier and the
+     * attribute value with the unrecognized hexadecimal BER encoding (`#`
+     * followed by the hex octets of the value element).
+     *
+     * @returns A string of the form `numericoid=#hex`
+     * @function
+     * @public
+     */
+    public toInteropString(): string {
+        return `${this.type_.toString()}=${defaultValueEncoder(this.value)}`;
     }
 }
 

@@ -20,9 +20,22 @@ function utf8Element(s: string): DERElement {
     return el;
 }
 
-describe("AttributeTypeAndValue.toString()", () => {
-    it("joins the OID and unquoted value with an equals sign", () => {
+describe("AttributeTypeAndValue string forms", () => {
+    it("uses the short name for a registered LDAP attribute type", () => {
         const value = new AttributeTypeAndValue(commonName, utf8Element("CN"));
-        expect(value.toString()).toBe("2.5.4.3=CN");
+        expect(value.toString()).toBe("cn=CN");
+        expect(value.toLdapString()).toBe("cn=CN");
+    });
+
+    it("keeps a non-LDAP short name only outside the LDAP form", () => {
+        const organizationIdentifier = ObjectIdentifier.fromString("2.5.4.97");
+        const value = new AttributeTypeAndValue(organizationIdentifier, utf8Element("NTRUS-123"));
+        expect(value.toString()).toBe("organizationIdentifier=NTRUS-123");
+        expect(value.toLdapString()).toBe("2.5.4.97=#0c094e545255532d313233");
+    });
+
+    it("uses a numeric OID and the unrecognized hex value encoding", () => {
+        const value = new AttributeTypeAndValue(commonName, utf8Element("CN"));
+        expect(value.toInteropString()).toBe("2.5.4.3=#0c02434e");
     });
 });

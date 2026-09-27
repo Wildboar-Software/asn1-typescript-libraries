@@ -111,14 +111,15 @@ function distinguishedTypeToFriendlyString(attributeType: OBJECT_IDENTIFIER, lda
             case 51: return "houseIdentifier";
             case 54: return "dmdName";
             case 105: return "jid";
-            // These are not registered in the IANA registry for LDAP.
-            case 89:  return ldapStrict ? id_at_urnC.toString() : "urnC";
-            case 97:  return ldapStrict ? id_at_organizationIdentifier.toString() : "organizationIdentifier";
-            case 98:  return ldapStrict ? id_at_countryCode3c.toString() : "c3";
-            case 99:  return ldapStrict ? id_at_countryCode3n.toString() : "n3";
-            case 100: return ldapStrict ? id_at_dnsName.toString() : "dnsName";
-            case 104: return ldapStrict ? id_at_intEmail.toString() : "intEmail";
-            case 106: return ldapStrict ? id_at_objectIdentifier.toString() : "objectIdentifier";
+            // These are not registered in the IANA registry for LDAP, so a
+            // strict LDAP encoding treats them as unrecognized.
+            case 89:  return ldapStrict ? null : "urnC";
+            case 97:  return ldapStrict ? null : "organizationIdentifier";
+            case 98:  return ldapStrict ? null : "c3";
+            case 99:  return ldapStrict ? null : "n3";
+            case 100: return ldapStrict ? null : "dnsName";
+            case 104: return ldapStrict ? null : "intEmail";
+            case 106: return ldapStrict ? null : "objectIdentifier";
             default:
                 return null;
         }

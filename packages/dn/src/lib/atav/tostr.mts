@@ -102,8 +102,9 @@ function unrecognizedToString(type_: OBJECT_IDENTIFIER, value: ASN1Element): str
 export function attributeTypeAndValueToString(
     atav: AttributeTypeAndValue,
     escape: boolean = false,
+    ldapStrict: boolean = false,
 ): string {
-    const key: string | null = distinguishedTypeToFriendlyString(atav.type_);
+    const key: string | null = distinguishedTypeToFriendlyString(atav.type_, ldapStrict);
     if (key === null) {
         return unrecognizedToString(atav.type_, atav.value);
     }
