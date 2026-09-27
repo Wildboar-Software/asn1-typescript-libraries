@@ -8,7 +8,7 @@ import { readSubstringAssertion } from "../readValue.mjs";
 import {
     _decode_TelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-import { partitionString } from "../../utils/substringPartition.mjs";
+import { matchSubstringPieces, partitionString } from "../../utils/substringPartition.mjs";
 
 function normalizeTelephoneNumber (telephoneNumber: string): string {
     return telephoneNumber.replace(/[- ]/g, "");
@@ -48,20 +48,11 @@ function telephoneNumberSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
 ): boolean {
-    const p = partitionString(normalizeTelephoneNumber(value));
-    p.next();
-    for (const piece of assertion) {
-        if (piece.kind === "control") {
-            continue;
-        }
-        if (piece.kind === "unknown") {
-            return false;
-        }
-        if (!p.next({ kind: piece.kind, value: normalizeTelephoneNumber(piece.value) }).value) {
-            return false;
-        }
-    }
-    return p.next().value === true;
+    return matchSubstringPieces(
+        partitionString(normalizeTelephoneNumber(value)),
+        assertion,
+        (text) => normalizeTelephoneNumber(text),
+    );
 }
 
 export default telephoneNumberSubstringsMatch;

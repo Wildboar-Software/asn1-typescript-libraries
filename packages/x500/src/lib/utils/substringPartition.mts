@@ -16,6 +16,35 @@ export type SubstringPartitioner<T> = Generator<
     SubstringComponent<T> | undefined
 >;
 
+/**
+ * Start `partitioner`, prepare each assertion piece, and `next()` it
+ * in. Skips `control`, fails on `unknown` or a failed `prepare`.
+ */
+export
+function matchSubstringPieces<TIn, TOut> (
+    partitioner: SubstringPartitioner<TOut>,
+    pieces: Iterable<SubstringComponent<TIn>>,
+    prepare: (value: TIn) => TOut | undefined,
+): boolean {
+    partitioner.next();
+    for (const piece of pieces) {
+        if (piece.kind === "control") {
+            continue;
+        }
+        if (piece.kind === "unknown") {
+            return false;
+        }
+        const value = prepare(piece.value);
+        if (value === undefined) {
+            return false;
+        }
+        if (!partitioner.next({ kind: piece.kind, value }).value) {
+            return false;
+        }
+    }
+    return partitioner.next().value === true;
+}
+
 function misplacedInitial (): never {
     throw new Error("SubstringAssertion initial is not first");
 }

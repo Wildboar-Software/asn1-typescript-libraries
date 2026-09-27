@@ -5,7 +5,7 @@ import type {
     PreparedSubstring,
 } from "../readValue.mjs";
 import { readSubstringAssertion } from "../readValue.mjs";
-import { partitionString } from "../../utils/substringPartition.mjs";
+import { matchSubstringPieces, partitionString } from "../../utils/substringPartition.mjs";
 
 function numericText (value: ASN1Element | string): string {
     return (typeof value === "string" ? value : value.numericString).replace(/\s+/g, "");
@@ -77,14 +77,7 @@ function numericStringSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
 ): boolean {
-    const p = partitionString(value);
-    p.next();
-    for (const piece of assertion) {
-        if (!p.next(piece).value) {
-            return false;
-        }
-    }
-    return p.next().value === true;
+    return matchSubstringPieces(partitionString(value), assertion, (text) => text);
 }
 
 export default numericStringSubstringsMatch;

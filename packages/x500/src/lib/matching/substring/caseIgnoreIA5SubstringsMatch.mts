@@ -6,7 +6,7 @@ import type {
 } from "../readValue.mjs";
 import { readSubstringAssertionOrComponent } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
-import { partitionString } from "../../utils/substringPartition.mjs";
+import { matchSubstringPieces, partitionString } from "../../utils/substringPartition.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.11.3
@@ -49,24 +49,11 @@ function caseIgnoreIA5SubstringsMatchTyped (
     if (stored === undefined) {
         return false;
     }
-    const p = partitionString(stored);
-    p.next();
-    for (const piece of assertion) {
-        if (piece.kind === "control") {
-            continue;
-        }
-        if (piece.kind === "unknown") {
-            return false;
-        }
-        const text = prepString(piece.value, { caseFold: true });
-        if (text === undefined) {
-            return false;
-        }
-        if (!p.next({ kind: piece.kind, value: text }).value) {
-            return false;
-        }
-    }
-    return p.next().value === true;
+    return matchSubstringPieces(
+        partitionString(stored),
+        assertion,
+        (text) => prepString(text, { caseFold: true }),
+    );
 }
 
 export default caseIgnoreIA5SubstringsMatch;

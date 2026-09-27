@@ -5,7 +5,7 @@ import type {
     PreparedOctetSubstring,
 } from "../readValue.mjs";
 import { readOctetSubstringAssertion } from "../readValue.mjs";
-import { partitionOctets } from "../../utils/substringPartition.mjs";
+import { matchSubstringPieces, partitionOctets } from "../../utils/substringPartition.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.7
@@ -43,14 +43,7 @@ function octetStringSubstringsMatchTyped (
     assertion: readonly PreparedOctetSubstring[],
     value: Uint8Array,
 ): boolean {
-    const p = partitionOctets(value);
-    p.next();
-    for (const piece of assertion) {
-        if (!p.next(piece).value) {
-            return false;
-        }
-    }
-    return p.next().value === true;
+    return matchSubstringPieces(partitionOctets(value), assertion, (bytes) => bytes);
 }
 
 export default octetStringSubstringsMatch;
