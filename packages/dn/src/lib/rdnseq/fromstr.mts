@@ -1,4 +1,7 @@
+import { atavFromStringX520 } from "../atav/fromstr.mjs";
 import { ParsedAttributeTypeAndValue } from "../ParsedAttributeTypeAndValue.mjs";
+import type { RDNSequence } from "../RDNSequence.ta.mjs";
+import type { RelativeDistinguishedName } from "../RelativeDistinguishedName.ta.mjs";
 import { attributeTypesAndValues } from "../rdn/fromstr.mjs";
 import isEscaped from "../isEscaped.mjs";
 
@@ -42,6 +45,32 @@ function* rdnSequenceFromString (
         yield attributeTypesAndValues(str.slice(start, i));
         start = i + 1;
     }
+}
+
+/**
+ * @summary Parse a distinguished name into an `RDNSequence`.
+ * @description
+ *
+ * Splits `str` with {@link rdnSequenceFromString}, then encodes each
+ * attribute type and value with {@link atavFromStringX520}. Attribute
+ * types this module does not recognize, and values that do not fit their
+ * directory syntax, throw `SyntaxError`.
+ *
+ * @param str The distinguished name, in RFC 4514 string form.
+ * @returns The relative distinguished names, from left to right.
+ * @function
+ */
+export
+function rdnSequenceFromStringX520 (str: string): RDNSequence {
+    const rdns: RDNSequence = [];
+    for (const rdn of rdnSequenceFromString(str)) {
+        const atavs: RelativeDistinguishedName = [];
+        for (const atav of rdn) {
+            atavs.push(atavFromStringX520(atav));
+        }
+        rdns.push(atavs);
+    }
+    return rdns;
 }
 
 export default rdnSequenceFromString;

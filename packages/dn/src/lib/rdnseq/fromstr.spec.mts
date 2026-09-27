@@ -1,5 +1,7 @@
+import { ASN1UniversalType } from "@wildboar/asn1";
 import { describe, expect, it } from "vitest";
-import rdnSequenceFromString from "./fromstr.mjs";
+import rdnSequenceFromString, { rdnSequenceFromStringX520 } from "./fromstr.mjs";
+import stringifyRDNSequence from "./tostr.mjs";
 
 function parse (dn: string): string[][][] {
     const rdns: string[][][] = [];
@@ -103,5 +105,45 @@ describe("rdnSequenceFromString()", () => {
         expectSyntax(",cn=foo", "malformed attribute type and value");
         expectSyntax("cn=foo,,ou=bar", "malformed attribute type and value");
         expectSyntax("+cn=a", "malformed attribute type and value");
+    });
+});
+
+describe("rdnSequenceFromStringX520()", () => {
+    it("returns an empty sequence for an empty distinguished name", () => {
+        expect(rdnSequenceFromStringX520("")).toEqual([]);
+    });
+
+    it("encodes each RDN with its X.520 directory syntax", () => {
+        const dn = rdnSequenceFromStringX520("gn=Jonathan+sn=Wilbur,st=Florida,c=US");
+        expect(dn.map((rdn) => rdn.map((atav) => atav.type_.toString()))).toEqual([
+            ["2.5.4.42", "2.5.4.4"],
+            ["2.5.4.8"],
+            ["2.5.4.6"],
+        ]);
+        expect(dn[0][0].value.tagNumber).toBe(ASN1UniversalType.printableString);
+        expect(dn[0][0].value.printableString).toBe("Jonathan");
+        expect(dn[0][1].value.printableString).toBe("Wilbur");
+        expect(dn[1][0].value.printableString).toBe("Florida");
+        expect(dn[2][0].value.printableString).toBe("US");
+        expect(stringifyRDNSequence(dn)).toBe("gn=Jonathan+sn=Wilbur,st=Florida,c=US");
+    });
+
+    it("unescapes a value before encoding it", () => {
+        const dn = rdnSequenceFromStringX520("cn=Lu\\C4\\8Di\\C4\\87,c=US");
+        expect(dn[0][0].value.tagNumber).toBe(ASN1UniversalType.utf8String);
+        expect(dn[0][0].value.utf8String).toBe("Lučić");
+        expect(stringifyRDNSequence(dn)).toBe("cn=Lučić,c=US");
+    });
+
+    it("propagates an attribute syntax error", () => {
+        expect(() => rdnSequenceFromStringX520("c=USA,o=Wildboar")).toThrow(
+            new SyntaxError('attribute type "c": length problem (value length 3, expected 2)'),
+        );
+        expect(() => rdnSequenceFromStringX520("foo=example")).toThrow(
+            new SyntaxError('unrecognized attribute type "foo"'),
+        );
+        const dn = rdnSequenceFromStringX520("uid=jsmith,dc=example,dc=net");
+        expect(dn[1][0].value.ia5String).toBe("example");
+        expect(stringifyRDNSequence(dn)).toBe("uid=jsmith,dc=example,dc=net");
     });
 });

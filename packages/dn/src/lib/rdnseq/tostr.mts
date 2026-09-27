@@ -1,5 +1,5 @@
-import { type AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
 import stringifyRelativeDistinguishedName from "../rdn/tostr.mjs";
+import type { RDNSequence } from "../RDNSequence.ta.mjs";
 
 /**
  * @summary Stringify an RDN sequence according to RFC 4514.
@@ -15,9 +15,7 @@ import stringifyRelativeDistinguishedName from "../rdn/tostr.mjs";
  * @function
  */
 export
-function stringifyRDNSequence (
-    rdns: AttributeTypeAndValue[][],
-): string {
+function stringifyRDNSequence (rdns: RDNSequence): string {
     if (rdns.length === 0) {
         return "";
     }
