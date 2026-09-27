@@ -29,13 +29,19 @@
   ],
   "references": [
     {
+      "path": "../dn/tsconfig.lib.json"
+    },
+    {
+      "path": "../presentation-address/tsconfig.lib.json"
+    },
+    {
       "path": "../or-address/tsconfig.lib.json"
     },
     {
-      "path": "../pki-stub/tsconfig.lib.json"
+      "path": "../ldap/tsconfig.lib.json"
     },
     {
-      "path": "../ldap/tsconfig.lib.json"
+      "path": "../pki-stub/tsconfig.lib.json"
     }
   ]
 }

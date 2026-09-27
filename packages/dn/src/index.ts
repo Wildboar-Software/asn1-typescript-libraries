@@ -4,3 +4,9 @@ export { default as attributeTypeAndValueToString } from "./lib/atav/tostr.mjs";
 export { default as stringifyRelativeDistinguishedName } from "./lib/rdn/tostr.mjs";
 export { default as escapeDistinguishedValue } from "./lib/escapeDistinguishedValue.mjs";
 export { default as unescapeDistinguishedValue } from "./lib/unescapeDistinguishedValue.mjs";
+export {
+    compareCodePoints,
+    prepString,
+    prohibitedCharacters,
+} from "./lib/prepString.mjs";
+export type { PrepStringOptions } from "./lib/prepString.mjs";
