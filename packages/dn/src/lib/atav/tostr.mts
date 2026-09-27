@@ -1,6 +1,6 @@
-import { type ASN1Element, ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
+import { type ASN1Element, ASN1TagClass, ASN1UniversalType, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
-import { distinguishedTypeToString } from "./distinguishedTypeToString.mjs";
+import { distinguishedTypeToFriendlyString } from "./distinguishedTypeToString.mjs";
 import teletexToString from "@wildboar/teletex";
 import { escapeDistinguishedValue } from "../escapeDistinguishedValue.mjs";
 
@@ -30,15 +30,17 @@ function bytesToHex(bytes: Uint8Array): string {
  */
 export
 function defaultValueEncoder (value: ASN1Element): string {
-    return "#" + Array.from(value.toBytes())
-        .map((byte) => byte.toString(16).padStart(2, "0"))
-        .join("");
+    return "#" + Buffer.from(
+        value.toBytes().buffer,
+        value.toBytes().byteOffset,
+        value.toBytes().byteLength
+    ).toString("hex");
 }
 
 export
-function distinguishedValueToString(value: ASN1Element): string {
+function distinguishedValueToString(type_: OBJECT_IDENTIFIER, value: ASN1Element): string | null {
     if (value.tagClass !== ASN1TagClass.universal) {
-        return defaultValueEncoder(value);
+        return null;
     }
 
     switch (value.tagNumber) {
@@ -65,7 +67,7 @@ function distinguishedValueToString(value: ASN1Element): string {
         case (ASN1UniversalType.time): return value.time;
         case (ASN1UniversalType.sequence): {
             // TODO: Handle PostalAddress
-            return defaultValueEncoder(value);
+            return null;
         }
         case (ASN1UniversalType.numericString): return value.numericString;
         case (ASN1UniversalType.printableString): return value.printableString;
@@ -88,17 +90,27 @@ function distinguishedValueToString(value: ASN1Element): string {
         case (ASN1UniversalType.oidIRI): return value.oidIRI;
         case (ASN1UniversalType.roidIRI): return value.relativeOIDIRI;
         default: {
-            return defaultValueEncoder(value);
+            return null;
         }
     }
+}
+
+function unrecognizedToString(type_: OBJECT_IDENTIFIER, value: ASN1Element): string {
+    return `${type_.toString()}=${defaultValueEncoder(value)}`;
 }
 
 export function attributeTypeAndValueToString(
     atav: AttributeTypeAndValue,
     escape: boolean = false,
 ): string {
-    const key: string = distinguishedTypeToString(atav.type_);
-    let value: string = distinguishedValueToString(atav.value);
+    const key: string | null = distinguishedTypeToFriendlyString(atav.type_);
+    if (key === null) {
+        return unrecognizedToString(atav.type_, atav.value);
+    }
+    let value: string | null = distinguishedValueToString(atav.type_, atav.value);
+    if (value === null) {
+        return unrecognizedToString(atav.type_, atav.value);
+    }
     if (escape) {
         value = escapeDistinguishedValue(value);
     }

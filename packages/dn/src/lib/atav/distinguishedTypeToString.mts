@@ -79,7 +79,7 @@ export const id_at_mhs_terminal_identifier: OBJECT_IDENTIFIER = ObjectIdentifier
 export const id_at_mhs_terminal_type: OBJECT_IDENTIFIER = ObjectIdentifier.fromParts([29], id_at_mhs_routing);
 
 export
-function distinguishedTypeToString(attributeType: OBJECT_IDENTIFIER, ldapStrict: boolean = false): string {
+function distinguishedTypeToFriendlyString(attributeType: OBJECT_IDENTIFIER, ldapStrict: boolean = false): string | null {
     const attr_type_bytes = attributeType.toBytesUnsafe();
 
     // Every short name below ends in a single-byte arc (< 128), so a matching
@@ -87,7 +87,7 @@ function distinguishedTypeToString(attributeType: OBJECT_IDENTIFIER, ldapStrict:
     // TODO: Use ObjectIdentifier.isPrefixOf() when released
     if (attr_type_bytes.length === 3) {
         if (Buffer.compare(attr_type_bytes.subarray(0, 2), id_at.toBytesUnsafe()) !== 0) {
-            return attributeType.toString();
+            return null;
         }
         switch (attr_type_bytes[2]) {
             case 6: return "c";
@@ -120,7 +120,7 @@ function distinguishedTypeToString(attributeType: OBJECT_IDENTIFIER, ldapStrict:
             case 104: return ldapStrict ? id_at_intEmail.toString() : "intEmail";
             case 106: return ldapStrict ? id_at_objectIdentifier.toString() : "objectIdentifier";
             default:
-                return attributeType.toString();
+                return null;
         }
     }
 
@@ -128,7 +128,7 @@ function distinguishedTypeToString(attributeType: OBJECT_IDENTIFIER, ldapStrict:
     if (attr_type_bytes.length === 10) {
         const prefix = id_pilotAttributeType.toBytesUnsafe();
         if (Buffer.compare(attr_type_bytes.subarray(0, prefix.length), prefix) !== 0) {
-            return attributeType.toString();
+            return null;
         }
         switch (attr_type_bytes[prefix.length]) {
             case 25: return "dc";
@@ -142,7 +142,7 @@ function distinguishedTypeToString(attributeType: OBJECT_IDENTIFIER, ldapStrict:
             case 44: return "uniqueIdentifier";
             case 48: return "buildingName";
             default:
-                return attributeType.toString();
+                return null;
         }
     }
 
@@ -169,7 +169,7 @@ function distinguishedTypeToString(attributeType: OBJECT_IDENTIFIER, ldapStrict:
                 case 28: return "mHSTerminalIdentifierAttribute";
                 case 29: return "mHSTerminalTypeAttribute";
                 default:
-                    return attributeType.toString();
+                    return null;
             }
         }
     }
@@ -189,7 +189,7 @@ function distinguishedTypeToString(attributeType: OBJECT_IDENTIFIER, ldapStrict:
         return "oidC";
     }
 
-    return attributeType.toString();
+    return null;
 }
 
-export default distinguishedTypeToString;
+export default distinguishedTypeToFriendlyString;

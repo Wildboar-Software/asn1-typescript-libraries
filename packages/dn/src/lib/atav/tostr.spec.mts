@@ -90,7 +90,8 @@ describe("defaultValueEncoder()", () => {
 });
 
 describe("distinguishedValueToString()", () => {
-    const cases: ReadonlyArray<readonly [string, ASN1Element, string]> = [
+    const type_ = ObjectIdentifier.fromParts([2, 5, 4, 3]);
+    const cases: ReadonlyArray<readonly [string, ASN1Element, string | null]> = [
         ["TRUE", _encodeBoolean(true, BER), "TRUE"],
         ["FALSE", _encodeBoolean(false, BER), "FALSE"],
         ["a positive integer", _encodeInteger(42, BER), "42"],
@@ -106,7 +107,7 @@ describe("distinguishedValueToString()", () => {
         ["a UTF8String", _encodeUTF8String("Jonathan", BER), "Jonathan"],
         ["a relative OID", _encodeRelativeOID([1, 2, 3], BER), "1.2.3"],
         ["a TIME", _encodeTime("2020-01-02", BER), "2020-01-02"],
-        ["a SEQUENCE", _encodeSequence([], BER), "#3000"],
+        ["a SEQUENCE", _encodeSequence([], BER), null],
         ["a NumericString", _encodeNumericString("123", BER), "123"],
         ["a PrintableString", _encodePrintableString("Hi", BER), "Hi"],
         ["a TeletexString", _encodeTeletexString(new Uint8Array([0x41, 0xa4]), BER), "A$"],
@@ -126,23 +127,23 @@ describe("distinguishedValueToString()", () => {
         ],
         ["an OID-IRI", _encodeIRI("/ISO/Member", BER), "/ISO/Member"],
         ["a RELATIVE-OID-IRI", _encodeRelativeIRI("Member", BER), "Member"],
-        ["a non-universal element", contextElement(), "#8101ff"],
-        ["an unrecognized universal type", unrecognizedUniversal(), "#150101"],
+        ["a non-universal element", contextElement(), null],
+        ["an unrecognized universal type", unrecognizedUniversal(), null],
     ];
 
     it.each(cases)("stringifies %s", (_label, element, expected) => {
-        expect(distinguishedValueToString(element)).toBe(expected);
+        expect(distinguishedValueToString(type_, element)).toBe(expected);
     });
 
     it("stringifies a DATE as an ISO-8601 instant", () => {
         const localDate = new Date(2020, 0, 2);
-        expect(distinguishedValueToString(_encodeDate(localDate, BER))).toBe(localDate.toISOString());
+        expect(distinguishedValueToString(type_, _encodeDate(localDate, BER))).toBe(localDate.toISOString());
     });
 
     it("stringifies a TIME-OF-DAY as unpadded UTC hours, minutes, and seconds", () => {
         const element = _encodeTimeOfDay(new Date(2020, 0, 2, 15, 4, 5), BER);
         const tod = element.timeOfDay;
-        expect(distinguishedValueToString(element)).toBe(
+        expect(distinguishedValueToString(type_, element)).toBe(
             `${tod.getUTCHours()}:${tod.getUTCMinutes()}:${tod.getUTCSeconds()}`,
         );
     });

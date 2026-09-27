@@ -77,14 +77,14 @@ describe("distinguishedTypeToString()", () => {
         }
     });
 
-    it("returns the dotted OID when the type is not a known short name", () => {
-        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 5, 4, 15]))).toBe("2.5.4.15");
-        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 5, 4, 128]))).toBe("2.5.4.128");
-        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 5, 5, 3]))).toBe("2.5.5.3");
-        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([1, 2, 250]))).toBe("1.2.250");
-        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([0, 9, 2342, 19200300, 100, 1, 99]))).toBe("0.9.2342.19200300.100.1.99");
-        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([1, 2, 840, 113549, 1, 9, 2]))).toBe("1.2.840.113549.1.9.2");
-        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 17, 1, 2, 3]))).toBe("2.17.1.2.3");
-        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 6, 10, 3, 12]))).toBe("2.6.10.3.12");
+    it("returns null when the type is not a known short name", () => {
+        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 5, 4, 15]))).toBeNull();
+        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 5, 4, 128]))).toBeNull();
+        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 5, 5, 3]))).toBeNull();
+        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([1, 2, 250]))).toBeNull();
+        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([0, 9, 2342, 19200300, 100, 1, 99]))).toBeNull();
+        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([1, 2, 840, 113549, 1, 9, 2]))).toBeNull();
+        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 17, 1, 2, 3]))).toBeNull();
+        expect(distinguishedTypeToString(ObjectIdentifier.fromParts([2, 6, 10, 3, 12]))).toBeNull();
     });
 });
