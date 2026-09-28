@@ -24,6 +24,13 @@ import {
  */
 export type RDNSequence = RelativeDistinguishedName[]; // SequenceOfType
 
+export {
+    compareLdapRDNSequence,
+    compareRDNSequence,
+    compareRDNSequenceReverse,
+    compareX500RDNSequence,
+} from "./rdnseq/compare.mjs";
+
 /**
  * @summary Convert an `RDNSequence` to a comparison key
  * @description

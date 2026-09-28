@@ -6,6 +6,28 @@ export {
     default as attributeTypeAndValueToString,
     attributeTypeAndValueToKey,
 } from "./lib/atav/tostr.mjs";
+export {
+    compareAttributeTypeAndValue,
+    compareBytes,
+    type DistinguishedValueMatcher,
+    type GetDistinguishedValueMatcher,
+} from "./lib/atav/compare.mjs";
+export {
+    compareRelativeDistinguishedName,
+    type RelativeDistinguishedName,
+} from "./lib/RelativeDistinguishedName.ta.mjs";
+export {
+    compareLdapRDNSequence,
+    compareRDNSequence,
+    compareRDNSequenceReverse,
+    compareX500RDNSequence,
+    type RDNSequence,
+} from "./lib/RDNSequence.ta.mjs";
+export {
+    compareName,
+    compareNameReverse,
+    type Name,
+} from "./lib/Name.ta.mjs";
 export { default as relativeDistinguishedNameToString } from "./lib/rdn/tostr.mjs";
 export { default as rdnSequenceToString } from "./lib/rdnseq/tostr.mjs";
 export { default as escapeDistinguishedValue } from "./lib/escapeDistinguishedValue.mjs";

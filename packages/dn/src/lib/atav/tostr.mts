@@ -48,6 +48,7 @@ const directoryStringTagNumbers = new Set([
     ASN1UniversalType.universalString,
 ]);
 
+export
 function looksLikeStringList(value: ASN1Element): boolean {
     if (value.tagNumber !== ASN1UniversalType.sequence) {
         return false;
@@ -136,6 +137,7 @@ function normalizeTelephoneNumber (str: string): string {
     return caseIgnore(str).replace(/[ -]/g, "");
 }
 
+export
 function comparableString (
     type_: OBJECT_IDENTIFIER,
     tagNumber: number,

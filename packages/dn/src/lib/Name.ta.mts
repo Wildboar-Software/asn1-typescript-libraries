@@ -37,6 +37,11 @@ import {
  */
 export type Name = { rdnSequence: RDNSequence } /* CHOICE_ALT_ROOT */;
 
+export {
+    compareName,
+    compareNameReverse,
+} from "./name/compare.mjs";
+
 /**
  * @summary Decodes an ASN.1 element into a(n) Name
  * @function

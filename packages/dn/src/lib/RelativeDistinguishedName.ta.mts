@@ -29,6 +29,10 @@ import { attributeTypeAndValueToKey } from "./atav/tostr.mjs";
  */
 export type RelativeDistinguishedName = AttributeTypeAndValue[]; // SetOfType
 
+export {
+    compareRelativeDistinguishedName,
+} from "./rdn/compare.mjs";
+
 /**
  * @summary Convert a `RelativeDistinguishedName` to a comparison key
  * @description

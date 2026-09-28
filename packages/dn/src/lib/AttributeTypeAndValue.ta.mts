@@ -11,6 +11,10 @@ import {
     attributeTypeAndValueToString,
     defaultValueEncoder,
 } from "./atav/tostr.mjs";
+import {
+    compareAttributeTypeAndValue,
+    type GetDistinguishedValueMatcher,
+} from "./atav/compare.mjs";
 
 /**
  * JSON Encoding Rules encoding of {@link AttributeTypeAndValue}.
@@ -178,6 +182,28 @@ export class AttributeTypeAndValue {
      */
     public toKey(): string {
         return attributeTypeAndValueToKey(this, false);
+    }
+
+    /**
+     * @summary Compare this `AttributeTypeAndValue` with another for equality
+     * @description
+     *
+     * Two attribute type and value pairs match if they have the same attribute
+     * type and their values match under the equality matching rule of that type.
+     * If `getMatcher` is omitted or does not recognize the type, values are
+     * compared heuristically.
+     *
+     * @param other The other attribute type and value
+     * @param getMatcher Optional function to look up the equality matcher for an attribute type
+     * @returns `true` if they match; `false` otherwise
+     * @function
+     * @public
+     */
+    public compare(
+        other: AttributeTypeAndValue,
+        getMatcher?: GetDistinguishedValueMatcher,
+    ): boolean {
+        return compareAttributeTypeAndValue(this, other, getMatcher);
     }
 }
 
