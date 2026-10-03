@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+    isAttributeTypeAndValueString,
     validateAttributeTypeAndValueString,
     validateAttributeValueSemantics,
 } from "./validate.mjs";
@@ -228,6 +229,17 @@ describe("validateAttributeTypeAndValueString() with unescaped values", () => {
     it("rejects lone surrogates", () => {
         expectInvalid("cn=a\uD800b", false);
         expectInvalid("cn=\uDC00", false);
+    });
+});
+
+describe("isAttributeTypeAndValueString()", () => {
+    it("returns whether the string is valid", () => {
+        expect(isAttributeTypeAndValueString("cn=a,b")).toBe(true);
+        expect(isAttributeTypeAndValueString("cn=a,b", false)).toBe(true);
+        expect(isAttributeTypeAndValueString("cn=a,b", true)).toBe(false);
+        expect(isAttributeTypeAndValueString("cn=a\\,b", true)).toBe(true);
+        expect(isAttributeTypeAndValueString("cn")).toBe(false);
+        expect(isAttributeTypeAndValueString("1.2.3=foo", true)).toBe(false);
     });
 });
 

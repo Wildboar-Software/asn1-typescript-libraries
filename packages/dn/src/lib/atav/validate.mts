@@ -1,4 +1,8 @@
 import { unescapeDistinguishedValue } from "../unescapeDistinguishedValue.mjs";
+import type {
+    AttributeTypeAndValueString,
+    EscapedAttributeTypeAndValueString,
+} from "../brands.mjs";
 
 const SHARP: number = 0x23; // #
 const BACKSLASH: number = 0x5C; // \
@@ -351,13 +355,29 @@ function validateAttributeValueSemantics (
  *
  * @param atav The attribute type and value, e.g. `cn=Smith`.
  * @param escaped Whether the value is escaped per IETF RFC 4514.
+ * @throws {SyntaxError} If `atav` is invalid.
  * @function
  */
 export
 function validateAttributeTypeAndValueString (
     atav: string,
+    escaped: true,
+): asserts atav is EscapedAttributeTypeAndValueString;
+export
+function validateAttributeTypeAndValueString (
+    atav: string,
+    escaped?: false,
+): asserts atav is AttributeTypeAndValueString;
+export
+function validateAttributeTypeAndValueString (
+    atav: string,
+    escaped?: boolean,
+): asserts atav is AttributeTypeAndValueString | EscapedAttributeTypeAndValueString;
+export
+function validateAttributeTypeAndValueString (
+    atav: string,
     escaped: boolean = false,
-): void {
+): asserts atav is AttributeTypeAndValueString | EscapedAttributeTypeAndValueString {
     if (atav.indexOf("\0") !== -1) {
         throw new SyntaxError("null character in attribute type and value");
     }
@@ -397,6 +417,49 @@ function validateAttributeTypeAndValueString (
     } else {
         validateStringValue(value);
         validateAttributeValueSemantics(type, unescapeDistinguishedValue(value));
+    }
+}
+
+/**
+ * @summary Check whether a string is a valid `attributeTypeAndValue`.
+ * @description
+ *
+ * Returns whether {@link validateAttributeTypeAndValueString} accepts
+ * `atav`, which has the same meaning here.
+ *
+ * @param atav The attribute type and value, e.g. `cn=Smith`.
+ * @param escaped Whether the value is escaped per IETF RFC 4514.
+ * @returns Whether `atav` is valid.
+ * @function
+ */
+export
+function isAttributeTypeAndValueString (
+    atav: string,
+    escaped: true,
+): atav is EscapedAttributeTypeAndValueString;
+export
+function isAttributeTypeAndValueString (
+    atav: string,
+    escaped?: false,
+): atav is AttributeTypeAndValueString;
+export
+function isAttributeTypeAndValueString (
+    atav: string,
+    escaped?: boolean,
+): atav is AttributeTypeAndValueString | EscapedAttributeTypeAndValueString;
+export
+function isAttributeTypeAndValueString (
+    atav: string,
+    escaped: boolean = false,
+): atav is AttributeTypeAndValueString | EscapedAttributeTypeAndValueString {
+    try {
+        validateAttributeTypeAndValueString(atav, escaped);
+        return true;
+    } catch (e) {
+        if (e instanceof SyntaxError) {
+            return false;
+        }
+        throw e;
     }
 }
 

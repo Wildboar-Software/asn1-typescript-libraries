@@ -34,15 +34,24 @@ export { default as escapeDistinguishedValue } from "./lib/escapeDistinguishedVa
 export { default as unescapeDistinguishedValue } from "./lib/unescapeDistinguishedValue.mjs";
 export {
     default as validateAttributeTypeAndValueString,
+    isAttributeTypeAndValueString,
     validateAttributeValueSemantics,
     validateNumericOID,
 } from "./lib/atav/validate.mjs";
 export {
     default as validateRelativeDistinguishedNameString,
+    isRelativeDistinguishedNameString,
 } from "./lib/rdn/validate.mjs";
 export {
     default as validateRDNSequenceString,
+    isRDNSequenceString,
 } from "./lib/rdnseq/validate.mjs";
+export type {
+    AttributeTypeAndValueString,
+    EscapedAttributeTypeAndValueString,
+    RDNSequenceString,
+    RelativeDistinguishedNameString,
+} from "./lib/brands.mjs";
 export {
     compareCodePoints,
     prepString,

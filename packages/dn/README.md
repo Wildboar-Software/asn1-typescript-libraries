@@ -52,7 +52,7 @@ RESOLVED: _Defer_ including `GeneralName` functionality in this package, because
   - [ ] Multivalued RDN
   - [ ] Case Insensitive String
   - [ ] Case Sensitive String
-  - [ ] DN String
+  - [x] DN String
   - [ ] LDAPOrderedDN
   - [ ] X500OrderedDN
 - [ ] You could actually enforce entire name forms using branded types...

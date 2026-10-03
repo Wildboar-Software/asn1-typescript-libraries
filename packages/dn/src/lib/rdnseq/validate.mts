@@ -2,6 +2,7 @@ import isEscaped from "../isEscaped.mjs";
 import {
     validateRelativeDistinguishedNameString,
 } from "../rdn/validate.mjs";
+import type { RDNSequenceString } from "../brands.mjs";
 
 const COMMA: number = 0x2C; // ,
 
@@ -20,10 +21,13 @@ const COMMA: number = 0x2C; // ,
  * malformed escapes.
  *
  * @param dn The distinguished name, in RFC 4514 string form.
+ * @throws {SyntaxError} If `dn` is invalid.
  * @function
  */
 export
-function validateRDNSequenceString (dn: string): void {
+function validateRDNSequenceString (
+    dn: string,
+): asserts dn is RDNSequenceString {
     if (dn.length === 0) {
         return; // The empty DN is valid: it names the root DSE.
     }
@@ -45,6 +49,29 @@ function validateRDNSequenceString (dn: string): void {
         }
         validateRelativeDistinguishedNameString(rdn);
         start = i + 1;
+    }
+}
+
+/**
+ * @summary Check whether a string is a valid distinguished name.
+ * @description
+ *
+ * Returns whether {@link validateRDNSequenceString} accepts `dn`.
+ *
+ * @param dn The distinguished name, in RFC 4514 string form.
+ * @returns Whether `dn` is valid.
+ * @function
+ */
+export
+function isRDNSequenceString (dn: string): dn is RDNSequenceString {
+    try {
+        validateRDNSequenceString(dn);
+        return true;
+    } catch (e) {
+        if (e instanceof SyntaxError) {
+            return false;
+        }
+        throw e;
     }
 }
 

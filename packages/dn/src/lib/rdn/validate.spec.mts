@@ -1,5 +1,16 @@
 import { describe, expect, it } from "vitest";
-import validateRelativeDistinguishedNameString from "./validate.mjs";
+import validateRelativeDistinguishedNameString, {
+    isRelativeDistinguishedNameString,
+} from "./validate.mjs";
+
+describe("isRelativeDistinguishedNameString()", () => {
+    it("returns whether the string is valid", () => {
+        expect(isRelativeDistinguishedNameString("cn=a+sn=b")).toBe(true);
+        expect(isRelativeDistinguishedNameString("")).toBe(false);
+        expect(isRelativeDistinguishedNameString("cn=a,dc=b")).toBe(false);
+        expect(isRelativeDistinguishedNameString("cn=a++sn=b")).toBe(false);
+    });
+});
 
 function expectInvalid (rdn: string): void {
     let caught: unknown;

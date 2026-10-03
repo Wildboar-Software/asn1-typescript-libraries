@@ -1,5 +1,14 @@
 import { describe, expect, it } from "vitest";
-import validateRDNSequenceString from "./validate.mjs";
+import validateRDNSequenceString, { isRDNSequenceString } from "./validate.mjs";
+
+describe("isRDNSequenceString()", () => {
+    it("returns whether the string is valid", () => {
+        expect(isRDNSequenceString("")).toBe(true);
+        expect(isRDNSequenceString("cn=a+sn=b,dc=example")).toBe(true);
+        expect(isRDNSequenceString("cn=a,,dc=example")).toBe(false);
+        expect(isRDNSequenceString("1.2.3=foo")).toBe(false);
+    });
+});
 
 function expectInvalid (dn: string): void {
     let caught: unknown;
