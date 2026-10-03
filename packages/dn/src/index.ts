@@ -1,4 +1,22 @@
-export { AttributeTypeAndValue } from "./lib/AttributeTypeAndValue.ta.mjs";
+export {
+    AttributeTypeAndValue,
+    type AttributeTypeAndValueJER,
+    type AttributeTypeAndValueJSON,
+} from "./lib/AttributeTypeAndValue.ta.mjs";
+export {
+    relativeDistinguishedNameFromJSON,
+    relativeDistinguishedNameToJER,
+    relativeDistinguishedNameToJSON,
+    type RelativeDistinguishedNameJER,
+    type RelativeDistinguishedNameJSON,
+} from "./lib/rdn/tojson.mjs";
+export {
+    rdnSequenceFromJSON,
+    rdnSequenceToJER,
+    rdnSequenceToJSON,
+    type RDNSequenceJER,
+    type RDNSequenceJSON,
+} from "./lib/rdnseq/tojson.mjs";
 export { relativeDistinguishedNameToKey } from "./lib/RelativeDistinguishedName.ta.mjs";
 export { rdnSequenceToKey } from "./lib/RDNSequence.ta.mjs";
 export { default as distinguishedTypeToString } from "./lib/atav/distinguishedTypeToString.mjs";

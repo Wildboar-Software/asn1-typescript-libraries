@@ -74,3 +74,68 @@ describe("AttributeTypeAndValue string forms", () => {
         expect(a.toKey()).toBe(b.toKey());
     });
 });
+
+describe("AttributeTypeAndValue JSON", () => {
+    it("writes a numeric OID and the hex value encoding", () => {
+        const value = new AttributeTypeAndValue(commonName, utf8Element("CN"));
+        expect(value.toJSON()).toEqual({ type: "2.5.4.3", value: "#0c02434e" });
+        expect(JSON.parse(JSON.stringify(value))).toEqual({
+            type: "2.5.4.3",
+            value: "#0c02434e",
+        });
+    });
+
+    it("is reversed by fromJSON()", () => {
+        const value = new AttributeTypeAndValue(commonName, utf8Element("CN"));
+        const back = AttributeTypeAndValue.fromJSON(value.toJSON());
+        expect(back.type_.toString()).toBe("2.5.4.3");
+        expect(back.value.utf8String).toBe("CN");
+        expect(back.toJSON()).toEqual(value.toJSON());
+    });
+
+    it("round-trips an OID with an arc that overflows a double", () => {
+        const type = "2.999999999999999999999999.1";
+        const back = AttributeTypeAndValue.fromJSON({ type, value: "#0c02434e" });
+        expect(back.type_.toString()).toBe(type);
+        expect(back.toJSON().type).toBe(type);
+    });
+
+    it("rejects a malformed type", () => {
+        expect(() => AttributeTypeAndValue.fromJSON({ type: "cn", value: "#0c02434e" }))
+            .toThrow(SyntaxError);
+        expect(() => AttributeTypeAndValue.fromJSON({ type: "3.5", value: "#0c02434e" }))
+            .toThrow(SyntaxError);
+        expect(() => AttributeTypeAndValue.fromJSON({ type: 2.5 } as never))
+            .toThrow(SyntaxError);
+    });
+
+    it("rejects a malformed value", () => {
+        const type = "2.5.4.3";
+        expect(() => AttributeTypeAndValue.fromJSON({ type, value: "0c02434e" }))
+            .toThrow(SyntaxError);
+        expect(() => AttributeTypeAndValue.fromJSON({ type, value: "#0c02434" }))
+            .toThrow(SyntaxError);
+        expect(() => AttributeTypeAndValue.fromJSON({ type, value: "#" }))
+            .toThrow(SyntaxError);
+        expect(() => AttributeTypeAndValue.fromJSON({ type, value: "CN" }))
+            .toThrow(SyntaxError);
+        expect(() => AttributeTypeAndValue.fromJSON(null as never))
+            .toThrow(SyntaxError);
+    });
+
+    it("rejects a value that is not exactly one element", () => {
+        const type = "2.5.4.3";
+        expect(() => AttributeTypeAndValue.fromJSON({ type, value: "#0c02434e00" }))
+            .toThrow();
+        expect(() => AttributeTypeAndValue.fromJSON({ type, value: "#0c05434e" }))
+            .toThrow();
+    });
+});
+
+describe("AttributeTypeAndValue.toJER()", () => {
+    it("writes a numeric OID and the value's own toJSON()", () => {
+        const el = utf8Element("CN");
+        const value = new AttributeTypeAndValue(commonName, el);
+        expect(value.toJER()).toEqual({ type: "2.5.4.3", value: el.toJSON() });
+    });
+});

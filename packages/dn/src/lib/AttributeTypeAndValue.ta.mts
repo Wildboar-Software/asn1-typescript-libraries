@@ -6,6 +6,7 @@ import {
     ASN1TagClass as _TagClass,
     ASN1UniversalType as _UniversalType,
     OBJECT_IDENTIFIER,
+    ObjectIdentifier,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -17,14 +18,37 @@ import {
     compareAttributeTypeAndValue,
     type GetDistinguishedValueMatcher,
 } from "./atav/compare.mjs";
+import decodeBERElement from "./decodeBERElement.mjs";
 
 /**
- * JSON Encoding Rules encoding of {@link AttributeTypeAndValue}.
+ * @summary Reversible JSON encoding of an {@link AttributeTypeAndValue}.
+ * @description
+ *
+ * `type` is the numeric object identifier in dotted-decimal notation, and
+ * `value` is `#` followed by the hexadecimal BER encoding of the value
+ * element (the same form as IETF RFC 4514 uses for unrecognized syntaxes).
+ * This can be converted back with {@link AttributeTypeAndValue.fromJSON}.
  */
 export type AttributeTypeAndValueJSON = {
     type: string;
+    value: string;
+};
+
+/**
+ * @summary Irreversible JSON Encoding Rules encoding of an
+ * {@link AttributeTypeAndValue}.
+ * @description
+ *
+ * `type` is the numeric object identifier in dotted-decimal notation, and
+ * `value` is whatever the value element's `toJSON()` returns. The value
+ * cannot be converted back to an element from this.
+ */
+export type AttributeTypeAndValueJER = {
+    type: string;
     value: unknown;
 };
+
+const HEX_VALUE_RE: RegExp = /^#(?:[0-9A-Fa-f]{2})+$/;
 
 /**
  * @summary AttributeTypeAndValue
@@ -93,21 +117,80 @@ export class AttributeTypeAndValue {
     }
 
     /**
-     * @summary Convert this `AttributeTypeAndValue` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @summary Convert this `AttributeTypeAndValue` to reversible JSON
      * @description
      *
-     * Open-type `value` is encoded with {@link _Element.toJSON}. The ASN.1
-     * identifier `type` is used as the JSON member name.
+     * The `type` is written as a numeric object identifier, and the `value` is
+     * written as `#` followed by the hexadecimal BER encoding of the value
+     * element. Unlike {@link toJER}, this loses no information about the
+     * value, so {@link AttributeTypeAndValue.fromJSON} can reverse it. (The
+     * unrecognized extensions are not included, as with the string forms.)
      *
-     * @returns The JSON Encoding Rules encoding of this value
+     * @returns An object having a numeric OID `type` and a hex-encoded `value`
      * @function
      * @public
      */
     public toJSON(): AttributeTypeAndValueJSON {
         return {
-            type: this.type_.toJSON(),
+            type: this.type_.toString(),
+            value: defaultValueEncoder(this.value),
+        };
+    }
+
+    /**
+     * @summary Convert this `AttributeTypeAndValue` to irreversible JER
+     * @description
+     *
+     * Like {@link toJSON}, except the `value` is encoded by calling the
+     * `toJSON()` method of the value element, loosely following ITU-T X.697
+     * (JER). This is more readable, but it cannot be converted back into an
+     * `AttributeTypeAndValue`, because the value's syntax is not known.
+     *
+     * @returns An object having a numeric OID `type` and a JER `value`
+     * @function
+     * @public
+     */
+    public toJER(): AttributeTypeAndValueJER {
+        return {
+            type: this.type_.toString(),
             value: this.value.toJSON(),
         };
+    }
+
+    /**
+     * @summary Convert the output of {@link toJSON} back to an `AttributeTypeAndValue`
+     * @description
+     *
+     * @param json An object having a numeric OID `type` and a `value` of `#`
+     *  followed by the hexadecimal BER encoding of exactly one element
+     * @returns The `AttributeTypeAndValue`
+     * @throws {SyntaxError} If `type` is not a valid numeric object identifier,
+     *  or `value` is not a hexstring
+     * @throws {ASN1Error} If `value` is not exactly one BER element
+     * @function
+     * @public
+     * @static
+     */
+    public static fromJSON(json: AttributeTypeAndValueJSON): AttributeTypeAndValue {
+        if (typeof json !== "object" || json === null) {
+            throw new SyntaxError("AttributeTypeAndValue JSON must be an object");
+        }
+        const { type, value } = json;
+        if (typeof type !== "string") {
+            throw new SyntaxError("AttributeTypeAndValue JSON type must be a string");
+        }
+        if (typeof value !== "string" || !HEX_VALUE_RE.test(value)) {
+            throw new SyntaxError(
+                "AttributeTypeAndValue JSON value must be # followed by hexadecimal octets",
+            );
+        }
+        return new AttributeTypeAndValue(
+            ObjectIdentifier.fromStringWithBigArcs(type),
+            decodeBERElement(
+                Buffer.from(value.slice(1), "hex"),
+                "AttributeTypeAndValue.value",
+            ),
+        );
     }
 
     /**
