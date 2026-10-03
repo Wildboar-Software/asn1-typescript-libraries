@@ -33,6 +33,17 @@ export { default as rdnSequenceToString } from "./lib/rdnseq/tostr.mjs";
 export { default as escapeDistinguishedValue } from "./lib/escapeDistinguishedValue.mjs";
 export { default as unescapeDistinguishedValue } from "./lib/unescapeDistinguishedValue.mjs";
 export {
+    default as validateAttributeTypeAndValueString,
+    validateAttributeValueSemantics,
+    validateNumericOID,
+} from "./lib/atav/validate.mjs";
+export {
+    default as validateRelativeDistinguishedNameString,
+} from "./lib/rdn/validate.mjs";
+export {
+    default as validateRDNSequenceString,
+} from "./lib/rdnseq/validate.mjs";
+export {
     compareCodePoints,
     prepString,
     prohibitedCharacters,

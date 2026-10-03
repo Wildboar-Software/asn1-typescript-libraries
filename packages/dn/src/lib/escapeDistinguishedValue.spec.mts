@@ -16,6 +16,11 @@ describe("escapeDistinguishedValue()", () => {
         expect(escapeDistinguishedValue("  ")).toBe("\\ \\ ");
     });
 
+    it("leaves a trailing hash unescaped", () => {
+        // Per RFC 4514 section 2.4, only a leading `#` needs escaping.
+        expect(escapeDistinguishedValue("a#")).toBe("a#");
+    });
+
     it("escapes a trailing space and specials in the middle", () => {
         expect(escapeDistinguishedValue("a ")).toBe("a\\ ");
         expect(escapeDistinguishedValue("a b,")).toBe("a b\\,");
