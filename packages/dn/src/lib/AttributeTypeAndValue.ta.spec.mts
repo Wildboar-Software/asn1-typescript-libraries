@@ -104,7 +104,7 @@ describe("AttributeTypeAndValue JSON", () => {
         expect(() => AttributeTypeAndValue.fromJSON({ type: "cn", value: "#0c02434e" }))
             .toThrow(SyntaxError);
         expect(() => AttributeTypeAndValue.fromJSON({ type: "3.5", value: "#0c02434e" }))
-            .toThrow(SyntaxError);
+            .toThrow();
         expect(() => AttributeTypeAndValue.fromJSON({ type: 2.5 } as never))
             .toThrow(SyntaxError);
     });

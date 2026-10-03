@@ -18,6 +18,7 @@ import {
     compareAttributeTypeAndValue,
     type GetDistinguishedValueMatcher,
 } from "./atav/compare.mjs";
+import { getAttributeTypeAndValueEncodedLength } from "./atav/encodedLength.mjs";
 import decodeBERElement from "./decodeBERElement.mjs";
 
 /**
@@ -114,6 +115,22 @@ export class AttributeTypeAndValue {
             _o.value,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Get the length of the BER encoding of this `AttributeTypeAndValue`
+     * @description
+     *
+     * Calculates the number of bytes the BER encoding would occupy (using
+     * definite lengths) without producing the encoding. See
+     * {@link getAttributeTypeAndValueEncodedLength}.
+     *
+     * @returns The number of bytes in the BER encoding
+     * @function
+     * @public
+     */
+    public getEncodedLength(): number {
+        return getAttributeTypeAndValueEncodedLength(this);
     }
 
     /**

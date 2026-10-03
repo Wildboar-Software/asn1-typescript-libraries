@@ -125,3 +125,7 @@ export {
     prohibitedCharacters,
 } from "./lib/prepString.mjs";
 export type { PrepStringOptions } from "./lib/prepString.mjs";
+export { default as getAttributeTypeAndValueEncodedLength } from "./lib/atav/encodedLength.mjs";
+export { default as getRelativeDistinguishedNameEncodedLength } from "./lib/rdn/encodedLength.mjs";
+export { default as getRDNSequenceEncodedLength } from "./lib/rdnseq/encodedLength.mjs";
+export { default as getNameEncodedLength } from "./lib/name/encodedLength.mjs";

@@ -32,7 +32,7 @@ RESOLVED: _Defer_ including `GeneralName` functionality in this package, because
 - [ ] isIetfRfc4514Portable()
 - [ ] toASN1Representation()
 - [ ] isRootDseName()
-- [ ] isEncodedLength()
+- [x] getEncodedLength()
 - [ ] normalizeEncoding() - (convert all strings to primitive, trim padding, normalize telephone dashes to spaces)
 - [ ] atavs iterator
 - [ ] customizable delimiter
