@@ -70,17 +70,37 @@ export {
 } from "./lib/rdnseq/order.mjs";
 export type {
     AttributeTypeAndValueBER,
+    AttributeTypeAndValueOf,
     AttributeTypeAndValueString,
     DITOrder,
     EscapedAttributeTypeAndValueString,
+    ObjectIdentifierString,
     RDNSequenceAscending,
     RDNSequenceBER,
     RDNSequenceCastableToDITOrder,
     RDNSequenceDescending,
+    RDNSequenceEndingWith,
+    RDNSequenceOf,
+    RDNSequenceOfLength,
+    RDNSequenceStartingWith,
     RDNSequenceString,
     RelativeDistinguishedNameBER,
+    RelativeDistinguishedNameOf,
+    RelativeDistinguishedNameOfLength,
     RelativeDistinguishedNameString,
 } from "./lib/brands.mjs";
+export { isAttributeTypeAndValueOf } from "./lib/atav/brand.mjs";
+export {
+    isRelativeDistinguishedNameOf,
+    isRelativeDistinguishedNameOfLength,
+} from "./lib/rdn/brand.mjs";
+export {
+    isRDNSequenceEndingWith,
+    isRDNSequenceOf,
+    isRDNSequenceOfLength,
+    isRDNSequenceStartingWith,
+} from "./lib/rdnseq/brand.mjs";
+export * from "./lib/attributeTypes.mjs";
 export {
     compareCodePoints,
     prepString,

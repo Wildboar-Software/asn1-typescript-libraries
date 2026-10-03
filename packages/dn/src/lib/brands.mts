@@ -1,5 +1,8 @@
+import type { AttributeTypeAndValue } from "./AttributeTypeAndValue.ta.mjs";
 import type { RDNSequence } from "./RDNSequence.ta.mjs";
+import type { RelativeDistinguishedName } from "./RelativeDistinguishedName.ta.mjs";
 
+declare const attributeType: unique symbol;
 declare const rdnSequenceString: unique symbol;
 declare const relativeDistinguishedNameString: unique symbol;
 declare const escapedAttributeTypeAndValueString: unique symbol;
@@ -183,3 +186,144 @@ export
 type RDNSequenceCastableToDITOrder<O extends DITOrder> = RDNSequence & {
     readonly [ditOrder]?: O;
 };
+
+/**
+ * @summary An object identifier in dotted-decimal notation, such as
+ * `"2.5.4.3"`.
+ * @description
+ *
+ * This only checks the general shape of the string at compile time (a
+ * number, a dot, and then anything), which is enough to keep names such
+ * as `"commonName"` out of {@link AttributeTypeAndValueOf}. Use a
+ * string literal type, not `string`, wherever this is a type argument.
+ */
+export
+type ObjectIdentifierString = `${number}.${string}`;
+
+/**
+ * @summary An `AttributeTypeAndValue` whose attribute type is known at
+ * compile time to be the object identifier `T`.
+ * @description
+ *
+ * `T` is the dotted-decimal notation of the attribute type's object
+ * identifier, as a string literal type: for example,
+ * `AttributeTypeAndValueOf<"2.5.4.3">` is an `AttributeTypeAndValue`
+ * whose type is `commonName`. Produced by
+ * `isAttributeTypeAndValueOf()`.
+ *
+ * Any object identifier may be used, so this can be extended to
+ * attribute types that this library does not know about.
+ *
+ * The brands for two different object identifiers are mutually
+ * exclusive: neither is assignable to the other, and their
+ * intersection is `never`. If `T` is a union of object identifiers,
+ * this is an `AttributeTypeAndValue` whose type is any one of them.
+ */
+export
+type AttributeTypeAndValueOf<T extends ObjectIdentifierString> =
+    AttributeTypeAndValue & {
+        readonly [attributeType]: T;
+    };
+
+/**
+ * @summary A relative distinguished name that consists of exactly one
+ * attribute type and value, whose type is the object identifier `T`.
+ * @description
+ *
+ * This is a one-element tuple of {@link AttributeTypeAndValueOf}, so it
+ * is assignable to `RelativeDistinguishedName`, but a
+ * `RelativeDistinguishedName` is not assignable to it. RDNs for
+ * different object identifiers are not assignable to each other.
+ */
+export
+type RelativeDistinguishedNameOf<T extends ObjectIdentifierString> =
+    [AttributeTypeAndValueOf<T>];
+
+/**
+ * @summary An array of exactly `N` elements of type `E`.
+ * @description
+ *
+ * `N` must be a non-negative integer literal. If `N` is `number`, this
+ * is `E[]`. Because this is built recursively, `N` is limited by
+ * TypeScript's recursion depth for tuple types (about 1000).
+ */
+export
+type FixedLengthArray<
+    E,
+    N extends number,
+    Acc extends E[] = [],
+> = number extends N
+    ? E[]
+    : Acc["length"] extends N
+        ? Acc
+        : FixedLengthArray<E, N, [...Acc, E]>;
+
+/**
+ * @summary A relative distinguished name of exactly `N` attribute
+ * types and values.
+ * @description
+ *
+ * `N` may be `0` even though X.501 requires that a
+ * `RelativeDistinguishedName` have at least one element
+ * (`SIZE (1..MAX)`).
+ */
+export
+type RelativeDistinguishedNameOfLength<N extends number> =
+    FixedLengthArray<AttributeTypeAndValue, N>;
+
+/**
+ * @summary An `RDNSequence` of exactly `N` relative distinguished
+ * names.
+ * @description
+ *
+ * `N` may be `0`, which is the root DSE's name.
+ */
+export
+type RDNSequenceOfLength<N extends number> =
+    FixedLengthArray<RelativeDistinguishedName, N>;
+
+/**
+ * @summary An `RDNSequence` in which every RDN has exactly one
+ * attribute type and value, and whose type is the object identifier
+ * `T`.
+ * @description
+ *
+ * If `T` is a union, each RDN may use any one of the object
+ * identifiers in that union. For example, a DN made only of `oidC`,
+ * `oidC1` and `oidC2` RDNs, which can be converted to an object
+ * identifier, is
+ * `RDNSequenceOf<typeof oidC1OID | typeof oidC2OID | typeof oidCOID>`.
+ * An empty sequence is of every type.
+ */
+export
+type RDNSequenceOf<T extends ObjectIdentifierString> =
+    RelativeDistinguishedNameOf<T>[];
+
+/**
+ * @summary An `RDNSequence` of at least one RDN, whose first RDN is
+ * `R`.
+ * @description
+ *
+ * "First" refers to position in the array, not to the DIT: in DIT
+ * descending order (X.500) this is the top-level entry's RDN, and in DIT
+ * ascending order (LDAP) it is the RDN of the entry named. Intersect this with
+ * {@link RDNSequenceDescending} or {@link RDNSequenceAscending} to also
+ * require an order.
+ */
+export
+type RDNSequenceStartingWith<R extends RelativeDistinguishedName> =
+    [R, ...RelativeDistinguishedName[]];
+
+/**
+ * @summary An `RDNSequence` of at least one RDN, whose last RDN is `R`.
+ * @description
+ *
+ * "Last" refers to position in the array, not to the DIT: in DIT
+ * descending order (X.500) this is the RDN of the entry named, and in DIT
+ * ascending order (LDAP) it is the top-level entry's RDN. Intersect this with
+ * {@link RDNSequenceDescending} or {@link RDNSequenceAscending} to also
+ * require an order.
+ */
+export
+type RDNSequenceEndingWith<R extends RelativeDistinguishedName> =
+    [...RelativeDistinguishedName[], R];

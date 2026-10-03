@@ -24,15 +24,8 @@ RESOLVED: _Defer_ including `GeneralName` functionality in this package, because
 
 ## To Do
 
-- [x] fromString
-- [x] toString
-- [x] toKey
-- [x] compare
-- [x] validateString
-- [x] validateEncoding
 - [ ] toBerBytes()
 - [ ] toDerBytes()
-- [ ] getX500RDN() / getLdapRDN() (maybe these should be defined in the specific packages they are used in)
 - [ ] toInteropString() (no names + only #hex value syntax)
 - [ ] toJSON()
 - [ ] fromJSON()
@@ -46,16 +39,6 @@ RESOLVED: _Defer_ including `GeneralName` functionality in this package, because
 - [ ] customizable delimiter
 - [ ] toDnsName()
 - [ ] fromDnsName()
-- [ ] Type utilities:
-  - [ ] Non-empty DN
-  - [ ] Non-empty RDN
-  - [ ] Multivalued RDN
-  - [ ] Case Insensitive String
-  - [ ] Case Sensitive String
-  - [x] DN String
-  - [ ] LDAPOrderedDN
-  - [ ] X500OrderedDN
-- [ ] You could actually enforce entire name forms using branded types...
 - [ ] fromOID() / toOID()
 - [ ] `Name.toOID()`, etc.
 - [ ] Does `GeneralName` code belong here too?
