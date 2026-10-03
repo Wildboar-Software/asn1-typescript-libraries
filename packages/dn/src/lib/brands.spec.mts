@@ -2,12 +2,26 @@ import { describe, expect, expectTypeOf, it } from "vitest";
 import type {
     AttributeTypeAndValueBER,
     AttributeTypeAndValueString,
+    RDNSequenceAscending,
+    RDNSequenceDescending,
     EscapedAttributeTypeAndValueString,
     RDNSequenceBER,
     RDNSequenceString,
     RelativeDistinguishedNameBER,
     RelativeDistinguishedNameString,
 } from "./brands.mjs";
+import type { RDNSequence } from "./RDNSequence.ta.mjs";
+import type { RelativeDistinguishedName } from "./RelativeDistinguishedName.ta.mjs";
+import {
+    asDITAscending,
+    asDITDescending,
+    getRDNFromDITAscending,
+    getRDNFromDITDescending,
+    getTopLevelRDNFromDITAscending,
+    getTopLevelRDNFromDITDescending,
+    toDITAscending,
+    toDITDescending,
+} from "./rdnseq/order.mjs";
 import {
     isAttributeTypeAndValueBER,
     validateAttributeTypeAndValueBER,
@@ -183,5 +197,94 @@ describe("BER brands", () => {
         if (isAttributeTypeAndValueBER(atav)) {
             expectTypeOf(atav).toEqualTypeOf<AttributeTypeAndValueBER>();
         }
+    });
+});
+
+describe("DIT order brands", () => {
+    it("extend RDNSequence", () => {
+        expectTypeOf<RDNSequenceAscending>().toExtend<RDNSequence>();
+        expectTypeOf<RDNSequenceDescending>().toExtend<RDNSequence>();
+        expectTypeOf<RDNSequence>().not.toExtend<RDNSequenceAscending>();
+        expectTypeOf<RDNSequence>().not.toExtend<RDNSequenceDescending>();
+    });
+
+    it("are mutually exclusive", () => {
+        expectTypeOf<RDNSequenceAscending>()
+            .not.toExtend<RDNSequenceDescending>();
+        expectTypeOf<RDNSequenceDescending>()
+            .not.toExtend<RDNSequenceAscending>();
+        expectTypeOf<RDNSequenceAscending & RDNSequenceDescending>()
+            .toBeNever();
+    });
+
+    it("are applied by the cast functions", () => {
+        const rdns: RDNSequence = [];
+        expectTypeOf(asDITAscending(rdns))
+            .toEqualTypeOf<RDNSequenceAscending>();
+        expectTypeOf(asDITDescending(rdns))
+            .toEqualTypeOf<RDNSequenceDescending>();
+    });
+
+    it("can be cast to the same order but not the opposite order", () => {
+        const ascending = asDITAscending([]);
+        const descending = asDITDescending([]);
+        asDITAscending(ascending);
+        asDITDescending(descending);
+        // @ts-expect-error Reversal is required.
+        asDITAscending(descending);
+        // @ts-expect-error Reversal is required.
+        asDITDescending(ascending);
+    });
+
+    it("are swapped by the conversion functions", () => {
+        const ascending = asDITAscending([]);
+        const descending = asDITDescending([]);
+        expectTypeOf(toDITAscending(descending))
+            .toEqualTypeOf<RDNSequenceAscending>();
+        expectTypeOf(toDITDescending(ascending))
+            .toEqualTypeOf<RDNSequenceDescending>();
+    });
+
+    it("are required by the conversion and get functions", () => {
+        const rdns: RDNSequence = [];
+        const ascending = asDITAscending([]);
+        const descending = asDITDescending([]);
+        // @ts-expect-error Order is unknown.
+        toDITAscending(rdns);
+        // @ts-expect-error Already in DIT ascending order.
+        toDITAscending(ascending);
+        // @ts-expect-error Order is unknown.
+        toDITDescending(rdns);
+        // @ts-expect-error Already in DIT descending order.
+        toDITDescending(descending);
+        // @ts-expect-error Order is unknown.
+        getRDNFromDITAscending(rdns);
+        // @ts-expect-error Wrong order.
+        getRDNFromDITAscending(descending);
+        // @ts-expect-error Order is unknown.
+        getRDNFromDITDescending(rdns);
+        // @ts-expect-error Wrong order.
+        getRDNFromDITDescending(ascending);
+        // @ts-expect-error Order is unknown.
+        getTopLevelRDNFromDITAscending(rdns);
+        // @ts-expect-error Wrong order.
+        getTopLevelRDNFromDITAscending(descending);
+        // @ts-expect-error Order is unknown.
+        getTopLevelRDNFromDITDescending(rdns);
+        // @ts-expect-error Wrong order.
+        getTopLevelRDNFromDITDescending(ascending);
+        expectTypeOf(getRDNFromDITAscending(ascending))
+            .toEqualTypeOf<RelativeDistinguishedName | undefined>();
+        expectTypeOf(getRDNFromDITDescending(descending))
+            .toEqualTypeOf<RelativeDistinguishedName | undefined>();
+        expectTypeOf(getTopLevelRDNFromDITAscending(ascending))
+            .toEqualTypeOf<RelativeDistinguishedName | undefined>();
+        expectTypeOf(getTopLevelRDNFromDITDescending(descending))
+            .toEqualTypeOf<RelativeDistinguishedName | undefined>();
+    });
+
+    it("can still be used where an RDNSequence is expected", () => {
+        const length = (rdns: RDNSequence): number => rdns.length;
+        expect(length(asDITAscending([[], []]))).toBe(2);
     });
 });

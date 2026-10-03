@@ -58,11 +58,25 @@ export {
     default as validateRDNSequenceBER,
     isRDNSequenceBER,
 } from "./lib/rdnseq/validateBER.mjs";
+export {
+    asDITAscending,
+    asDITDescending,
+    getRDNFromDITAscending,
+    getRDNFromDITDescending,
+    getTopLevelRDNFromDITAscending,
+    getTopLevelRDNFromDITDescending,
+    toDITAscending,
+    toDITDescending,
+} from "./lib/rdnseq/order.mjs";
 export type {
     AttributeTypeAndValueBER,
     AttributeTypeAndValueString,
+    DITOrder,
     EscapedAttributeTypeAndValueString,
+    RDNSequenceAscending,
     RDNSequenceBER,
+    RDNSequenceCastableToDITOrder,
+    RDNSequenceDescending,
     RDNSequenceString,
     RelativeDistinguishedNameBER,
     RelativeDistinguishedNameString,

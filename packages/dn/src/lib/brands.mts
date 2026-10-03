@@ -1,3 +1,5 @@
+import type { RDNSequence } from "./RDNSequence.ta.mjs";
+
 declare const rdnSequenceString: unique symbol;
 declare const relativeDistinguishedNameString: unique symbol;
 declare const escapedAttributeTypeAndValueString: unique symbol;
@@ -5,6 +7,7 @@ declare const attributeTypeAndValueString: unique symbol;
 declare const rdnSequenceBER: unique symbol;
 declare const relativeDistinguishedNameBER: unique symbol;
 declare const attributeTypeAndValueBER: unique symbol;
+declare const ditOrder: unique symbol;
 
 /**
  * @summary A string validated as an IETF RFC 4514 distinguished name.
@@ -115,4 +118,68 @@ type RelativeDistinguishedNameBER = Uint8Array & {
 export
 type AttributeTypeAndValueBER = Uint8Array & {
     readonly [attributeTypeAndValueBER]: true;
+};
+
+/**
+ * @summary The order of the RDNs in a distinguished name, relative to
+ * the Directory Information Tree (DIT).
+ * @description
+ *
+ * - `"ascending"`: the first RDN is that of the entry named, and each
+ *   RDN after it is that of the superior of the one before it. This is
+ *   the order of LDAP strings (IETF RFC 4514, section 2.1).
+ * - `"descending"`: the first RDN is that of an entry immediately
+ *   subordinate to the root, and the last RDN is that of the entry
+ *   named. This is the order of an X.500 `RDNSequence`.
+ */
+export
+type DITOrder = "ascending" | "descending";
+
+/**
+ * @summary An `RDNSequence` whose RDNs are in DIT ascending order, as
+ * in LDAP.
+ * @description
+ *
+ * The first RDN is that of the entry named, and the last is that of an
+ * entry immediately subordinate to the root. Produced by
+ * `asDITAscending()` or `toDITAscending()`.
+ *
+ * This is mutually exclusive with {@link RDNSequenceDescending}:
+ * neither is assignable to the other, and their intersection is
+ * `never`.
+ */
+export
+type RDNSequenceAscending = RDNSequence & {
+    readonly [ditOrder]: "ascending";
+};
+
+/**
+ * @summary An `RDNSequence` whose RDNs are in DIT descending order, as
+ * in X.500.
+ * @description
+ *
+ * The first RDN is that of an entry immediately subordinate to the
+ * root, and the last is that of the entry named. Produced by
+ * `asDITDescending()` or `toDITDescending()`.
+ *
+ * This is mutually exclusive with {@link RDNSequenceAscending}:
+ * neither is assignable to the other, and their intersection is
+ * `never`.
+ */
+export
+type RDNSequenceDescending = RDNSequence & {
+    readonly [ditOrder]: "descending";
+};
+
+/**
+ * @summary An `RDNSequence` that is either not branded with a DIT order
+ * or is already branded with the DIT order `O`.
+ * @description
+ *
+ * Used to prevent an `RDNSequence` in one DIT order from being cast to
+ * the other without being reversed.
+ */
+export
+type RDNSequenceCastableToDITOrder<O extends DITOrder> = RDNSequence & {
+    readonly [ditOrder]?: O;
 };
