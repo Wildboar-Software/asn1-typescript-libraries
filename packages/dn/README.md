@@ -29,7 +29,7 @@ RESOLVED: _Defer_ including `GeneralName` functionality in this package, because
 - [x] toKey
 - [x] compare
 - [x] validateString
-- [ ] validateEncoding
+- [x] validateEncoding
 - [ ] toBerBytes()
 - [ ] toDerBytes()
 - [ ] getX500RDN() / getLdapRDN() (maybe these should be defined in the specific packages they are used in)

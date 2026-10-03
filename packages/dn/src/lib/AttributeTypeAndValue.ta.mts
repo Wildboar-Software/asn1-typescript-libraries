@@ -1,8 +1,10 @@
 /* eslint-disable */
 import {
+    ASN1Construction as _Construction,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    ASN1UniversalType as _UniversalType,
     OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -264,6 +266,16 @@ export function _decode_AttributeTypeAndValue(el: _Element): AttributeTypeAndVal
     }
     sequence[0].name = "type";
     sequence[1].name = "value";
+    if (
+        sequence[0].tagClass !== _TagClass.universal
+        || sequence[0].construction !== _Construction.primitive
+        || sequence[0].tagNumber !== _UniversalType.objectIdentifier
+    ) {
+        throw new _ConstructionError(
+            "AttributeTypeAndValue.type was not a primitive universal OBJECT IDENTIFIER.",
+            sequence[0],
+        );
+    }
     let type_!: OBJECT_IDENTIFIER;
     let value!: _Element;
     type_ = $._decodeObjectIdentifier(sequence[0]);

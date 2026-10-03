@@ -1,12 +1,17 @@
 import { describe, expect, it } from "vitest";
 import {
     ASN1Construction,
+    ASN1ConstructionError,
     ASN1TagClass,
     ASN1UniversalType,
+    BERElement,
     DERElement,
     ObjectIdentifier,
 } from "@wildboar/asn1";
-import { AttributeTypeAndValue } from "./AttributeTypeAndValue.ta.mjs";
+import {
+    AttributeTypeAndValue,
+    _decode_AttributeTypeAndValue,
+} from "./AttributeTypeAndValue.ta.mjs";
 
 const commonName = ObjectIdentifier.fromString("2.5.4.3");
 
@@ -19,6 +24,29 @@ function utf8Element(s: string): DERElement {
     el.utf8String = s;
     return el;
 }
+
+function decode (hex: string): AttributeTypeAndValue {
+    const el = new BERElement();
+    el.fromBytes(Buffer.from(hex.replace(/ /g, ""), "hex"));
+    return _decode_AttributeTypeAndValue(el);
+}
+
+describe("_decode_AttributeTypeAndValue()", () => {
+    it("decodes an object identifier type", () => {
+        const atav = decode("30 08 06 03 55 04 03 0C 01 61");
+        expect(atav.type_.toString()).toBe("2.5.4.3");
+        expect(atav.value.utf8String).toBe("a");
+    });
+
+    it("rejects types that are not a primitive universal object identifier", () => {
+        expect(() => decode("30 08 04 03 55 04 03 0C 01 61"))
+            .toThrow(ASN1ConstructionError);
+        expect(() => decode("30 08 26 03 55 04 03 0C 01 61"))
+            .toThrow(ASN1ConstructionError);
+        expect(() => decode("30 08 86 03 55 04 03 0C 01 61"))
+            .toThrow(ASN1ConstructionError);
+    });
+});
 
 describe("AttributeTypeAndValue string forms", () => {
     it("uses the short name for a registered LDAP attribute type", () => {

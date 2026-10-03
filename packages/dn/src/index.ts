@@ -46,10 +46,25 @@ export {
     default as validateRDNSequenceString,
     isRDNSequenceString,
 } from "./lib/rdnseq/validate.mjs";
+export {
+    default as validateAttributeTypeAndValueBER,
+    isAttributeTypeAndValueBER,
+} from "./lib/atav/validateBER.mjs";
+export {
+    default as validateRelativeDistinguishedNameBER,
+    isRelativeDistinguishedNameBER,
+} from "./lib/rdn/validateBER.mjs";
+export {
+    default as validateRDNSequenceBER,
+    isRDNSequenceBER,
+} from "./lib/rdnseq/validateBER.mjs";
 export type {
+    AttributeTypeAndValueBER,
     AttributeTypeAndValueString,
     EscapedAttributeTypeAndValueString,
+    RDNSequenceBER,
     RDNSequenceString,
+    RelativeDistinguishedNameBER,
     RelativeDistinguishedNameString,
 } from "./lib/brands.mjs";
 export {

@@ -2,6 +2,9 @@ declare const rdnSequenceString: unique symbol;
 declare const relativeDistinguishedNameString: unique symbol;
 declare const escapedAttributeTypeAndValueString: unique symbol;
 declare const attributeTypeAndValueString: unique symbol;
+declare const rdnSequenceBER: unique symbol;
+declare const relativeDistinguishedNameBER: unique symbol;
+declare const attributeTypeAndValueBER: unique symbol;
 
 /**
  * @summary A string validated as an IETF RFC 4514 distinguished name.
@@ -62,4 +65,54 @@ type EscapedAttributeTypeAndValueString = RelativeDistinguishedNameString & {
 export
 type AttributeTypeAndValueString = string & {
     readonly [attributeTypeAndValueString]: true;
+};
+
+/**
+ * @summary Bytes validated as the Basic Encoding Rules (BER) encoding
+ * of one `RDNSequence`.
+ * @description
+ *
+ * Produced by `validateRDNSequenceBER()` or `isRDNSequenceBER()`.
+ * Because `DistinguishedName ::= RDNSequence` and `Name` has only the
+ * `rdnSequence` alternative, which is not tagged, these bytes are also
+ * a valid BER encoding of a `DistinguishedName` and a `Name`.
+ *
+ * The bytes are not necessarily valid DER, and attribute values have
+ * not been verified.
+ */
+export
+type RDNSequenceBER = Uint8Array & {
+    readonly [rdnSequenceBER]: true;
+};
+
+/**
+ * @summary Bytes validated as the Basic Encoding Rules (BER) encoding
+ * of one `RelativeDistinguishedName`.
+ * @description
+ *
+ * Produced by `validateRelativeDistinguishedNameBER()` or
+ * `isRelativeDistinguishedNameBER()`.
+ *
+ * The bytes are not necessarily valid DER, and attribute values have
+ * not been verified.
+ */
+export
+type RelativeDistinguishedNameBER = Uint8Array & {
+    readonly [relativeDistinguishedNameBER]: true;
+};
+
+/**
+ * @summary Bytes validated as the Basic Encoding Rules (BER) encoding
+ * of one `AttributeTypeAndValue`.
+ * @description
+ *
+ * Produced by `validateAttributeTypeAndValueBER()` or
+ * `isAttributeTypeAndValueBER()`.
+ *
+ * The bytes are not necessarily valid DER, and the attribute value has
+ * not been verified.
+ */
+export
+type AttributeTypeAndValueBER = Uint8Array & {
+    readonly [attributeTypeAndValueBER]: true;
 };
