@@ -347,15 +347,3 @@ if (isRDNSequenceStartingWith(descending, countryNameOID)) {
 This package was mostly written by AI: specifically Claude Opus 5.5 and Claude
 Sonnet 5.5 in the Cursor IDE. Each feature was implemented as individual
 prompts and carefully reviewed and critiqued by a real human.
-
-## Should this even be a separate package?
-
-- No `PostalAddress`, `UUIDPair`, `FacsimileTelephoneNumber`, or `UnboundedDirectoryString`
-  - These are all pretty simple to handle as a one-off, though
-
-## To Do
-
-- [ ] Use newer `@wildboar/asn1`
-- [x] `package.json` details
-- [ ] JSR publication
-- [ ] Stricter Typescript

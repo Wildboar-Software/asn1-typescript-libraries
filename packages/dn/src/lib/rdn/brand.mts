@@ -1,6 +1,6 @@
+import { type DotDelimitedOidString } from "@wildboar/asn1";
 import type { RelativeDistinguishedName } from "../RelativeDistinguishedName.ta.mjs";
 import type {
-    ObjectIdentifierString,
     RelativeDistinguishedNameOf,
     RelativeDistinguishedNameOfLength,
 } from "../brands.mjs";
@@ -22,7 +22,7 @@ import { isAttributeTypeAndValueOf } from "../atav/brand.mjs";
  */
 export
 function isRelativeDistinguishedNameOf <
-    T extends ObjectIdentifierString,
+    T extends DotDelimitedOidString,
     R extends RelativeDistinguishedName = RelativeDistinguishedName,
 > (
     rdn: R,

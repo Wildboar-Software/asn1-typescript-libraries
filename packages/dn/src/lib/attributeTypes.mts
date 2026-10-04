@@ -1,3 +1,4 @@
+import type { DotDelimitedOidString } from "@wildboar/asn1";
 import type {
     AttributeTypeAndValueOf,
     RDNSequenceOf,
@@ -36,41 +37,41 @@ import type {
  */
 
 /** The `commonName` attribute type (ITU-T X.520). */
-export const commonNameOID = "2.5.4.3";
+export const commonNameOID = "2.5.4.3" as DotDelimitedOidString;
 /** The `surname` attribute type (ITU-T X.520). */
-export const surnameOID = "2.5.4.4";
+export const surnameOID = "2.5.4.4" as DotDelimitedOidString;
 /** The `serialNumber` attribute type (ITU-T X.520). */
-export const serialNumberOID = "2.5.4.5";
+export const serialNumberOID = "2.5.4.5" as DotDelimitedOidString;
 /** The `countryName` attribute type (ITU-T X.520). */
-export const countryNameOID = "2.5.4.6";
+export const countryNameOID = "2.5.4.6" as DotDelimitedOidString;
 /** The `localityName` attribute type (ITU-T X.520). */
-export const localityNameOID = "2.5.4.7";
+export const localityNameOID = "2.5.4.7" as DotDelimitedOidString;
 /** The `stateOrProvinceName` attribute type (ITU-T X.520). */
-export const stateOrProvinceNameOID = "2.5.4.8";
+export const stateOrProvinceNameOID = "2.5.4.8" as DotDelimitedOidString;
 /** The `streetAddress` attribute type (ITU-T X.520). */
-export const streetAddressOID = "2.5.4.9";
+export const streetAddressOID = "2.5.4.9" as DotDelimitedOidString;
 /** The `organizationName` attribute type (ITU-T X.520). */
-export const organizationNameOID = "2.5.4.10";
+export const organizationNameOID = "2.5.4.10" as DotDelimitedOidString;
 /** The `organizationalUnitName` attribute type (ITU-T X.520). */
-export const organizationalUnitNameOID = "2.5.4.11";
+export const organizationalUnitNameOID = "2.5.4.11" as DotDelimitedOidString;
 /** The `title` attribute type (ITU-T X.520). */
-export const titleOID = "2.5.4.12";
+export const titleOID = "2.5.4.12" as DotDelimitedOidString;
 /** The `givenName` attribute type (ITU-T X.520). */
-export const givenNameOID = "2.5.4.42";
+export const givenNameOID = "2.5.4.42" as DotDelimitedOidString;
 /** The `pseudonym` attribute type (ITU-T X.520). */
-export const pseudonymOID = "2.5.4.65";
+export const pseudonymOID = "2.5.4.65" as DotDelimitedOidString;
 /** The `urnC` attribute type (ITU-T X.520). */
-export const urnCOID = "2.5.4.89";
+export const urnCOID = "2.5.4.89" as DotDelimitedOidString;
 /** The `uid` attribute type (IETF RFC 4519). */
-export const uidOID = "0.9.2342.19200300.100.1.1";
+export const uidOID = "0.9.2342.19200300.100.1.1" as DotDelimitedOidString;
 /** The `domainComponent` attribute type (IETF RFC 4519). */
-export const domainComponentOID = "0.9.2342.19200300.100.1.25";
+export const domainComponentOID = "0.9.2342.19200300.100.1.25" as DotDelimitedOidString;
 /** The `oidC1` attribute type, the first arc of an OID (ITU-T X.520). */
-export const oidC1OID = "2.17.1.2.0";
+export const oidC1OID = "2.17.1.2.0" as DotDelimitedOidString;
 /** The `oidC2` attribute type, the second arc of an OID (ITU-T X.520). */
-export const oidC2OID = "2.17.1.2.1";
+export const oidC2OID = "2.17.1.2.1" as DotDelimitedOidString;
 /** The `oidC` attribute type, an arc of an OID (ITU-T X.520). */
-export const oidCOID = "2.17.1.2.2";
+export const oidCOID = "2.17.1.2.2" as DotDelimitedOidString;
 
 /** An ATAV whose attribute type is `commonName`. */
 export type CommonNameATAV = AttributeTypeAndValueOf<typeof commonNameOID>;

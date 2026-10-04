@@ -147,7 +147,6 @@ export type {
     DITOrder,
     NameBER,
     EscapedAttributeTypeAndValueString,
-    ObjectIdentifierString,
     RDNSequenceAscending,
     RDNSequenceBER,
     RDNSequenceCastableToDITOrder,

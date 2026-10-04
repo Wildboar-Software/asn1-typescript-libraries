@@ -1,6 +1,7 @@
 import type { AttributeTypeAndValue } from "./AttributeTypeAndValue.ta.mjs";
 import type { RDNSequence } from "./RDNSequence.ta.mjs";
 import type { RelativeDistinguishedName } from "./RelativeDistinguishedName.ta.mjs";
+import type { DotDelimitedOidString } from "@wildboar/asn1";
 
 declare const attributeType: unique symbol;
 declare const rdnSequenceString: unique symbol;
@@ -203,19 +204,6 @@ type RDNSequenceCastableToDITOrder<O extends DITOrder> = RDNSequence & {
 };
 
 /**
- * @summary An object identifier in dotted-decimal notation, such as
- * `"2.5.4.3"`.
- * @description
- *
- * This only checks the general shape of the string at compile time (a
- * number, a dot, and then anything), which is enough to keep names such
- * as `"commonName"` out of {@link AttributeTypeAndValueOf}. Use a
- * string literal type, not `string`, wherever this is a type argument.
- */
-export
-type ObjectIdentifierString = `${number}.${string}`;
-
-/**
  * @summary An `AttributeTypeAndValue` whose attribute type is known at
  * compile time to be the object identifier `T`.
  * @description
@@ -235,7 +223,7 @@ type ObjectIdentifierString = `${number}.${string}`;
  * this is an `AttributeTypeAndValue` whose type is any one of them.
  */
 export
-type AttributeTypeAndValueOf<T extends ObjectIdentifierString> =
+type AttributeTypeAndValueOf<T extends DotDelimitedOidString> =
     AttributeTypeAndValue & {
         readonly [attributeType]: T;
     };
@@ -251,7 +239,7 @@ type AttributeTypeAndValueOf<T extends ObjectIdentifierString> =
  * different object identifiers are not assignable to each other.
  */
 export
-type RelativeDistinguishedNameOf<T extends ObjectIdentifierString> =
+type RelativeDistinguishedNameOf<T extends DotDelimitedOidString> =
     [AttributeTypeAndValueOf<T>];
 
 /**
@@ -311,7 +299,7 @@ type RDNSequenceOfLength<N extends number> =
  * An empty sequence is of every type.
  */
 export
-type RDNSequenceOf<T extends ObjectIdentifierString> =
+type RDNSequenceOf<T extends DotDelimitedOidString> =
     RelativeDistinguishedNameOf<T>[];
 
 /**

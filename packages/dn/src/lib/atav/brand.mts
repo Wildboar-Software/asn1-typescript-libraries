@@ -1,8 +1,8 @@
 import type { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
 import type {
     AttributeTypeAndValueOf,
-    ObjectIdentifierString,
 } from "../brands.mjs";
+import type { DotDelimitedOidString } from "@wildboar/asn1";
 
 /**
  * @summary Test whether an `AttributeTypeAndValue` has one of the given
@@ -24,7 +24,7 @@ import type {
  * @function
  */
 export
-function isAttributeTypeAndValueOf <T extends ObjectIdentifierString>(
+function isAttributeTypeAndValueOf <T extends DotDelimitedOidString>(
     atav: AttributeTypeAndValue,
     types: T | readonly T[],
 ): atav is AttributeTypeAndValueOf<T> {

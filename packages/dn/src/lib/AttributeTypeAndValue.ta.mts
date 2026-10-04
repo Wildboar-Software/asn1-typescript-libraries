@@ -7,6 +7,7 @@ import {
     ASN1UniversalType as _UniversalType,
     type OBJECT_IDENTIFIER,
     ObjectIdentifier,
+    type DotDelimitedOidString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -41,7 +42,6 @@ import type {
     AttributeTypeAndValueOf,
     AttributeTypeAndValueString,
     EscapedAttributeTypeAndValueString,
-    ObjectIdentifierString,
 } from "./brands.mjs";
 import decodeBERElement from "./decodeBERElement.mjs";
 
@@ -384,7 +384,7 @@ export class AttributeTypeAndValue {
      * @function
      * @public
      */
-    public isOf<T extends ObjectIdentifierString>(
+    public isOf<T extends DotDelimitedOidString>(
         types: T | readonly T[],
     ): this is AttributeTypeAndValueOf<T> {
         return isAttributeTypeAndValueOf(this, types);
