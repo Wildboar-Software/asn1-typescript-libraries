@@ -44,6 +44,7 @@ export {
 export {
     compareName,
     compareNameReverse,
+    nameToKey,
     type Name,
 } from "./lib/Name.ta.mjs";
 export { default as relativeDistinguishedNameToString } from "./lib/rdn/tostr.mjs";
@@ -54,6 +55,21 @@ export { default as attributeTypeAndValueToASN1String } from "./lib/atav/toasn1.
 export { default as relativeDistinguishedNameToASN1String } from "./lib/rdn/toasn1.mjs";
 export { default as rdnSequenceToASN1String } from "./lib/rdnseq/toasn1.mjs";
 export { default as nameToASN1String } from "./lib/name/toasn1.mjs";
+export { default as nameToString } from "./lib/name/tostr.mjs";
+export { default as nameFromStringX520 } from "./lib/name/fromstr.mjs";
+export { default as nameToInteropString } from "./lib/name/tointerop.mjs";
+export {
+    nameFromJSON,
+    nameToJER,
+    nameToJSON,
+    type NameJER,
+    type NameJSON,
+} from "./lib/name/tojson.mjs";
+export {
+    default as validateNameBER,
+    isNameBER,
+    validateNameElement,
+} from "./lib/name/validateBER.mjs";
 export { default as escapeDistinguishedValue } from "./lib/escapeDistinguishedValue.mjs";
 export { default as unescapeDistinguishedValue } from "./lib/unescapeDistinguishedValue.mjs";
 export {
@@ -97,6 +113,7 @@ export type {
     AttributeTypeAndValueOf,
     AttributeTypeAndValueString,
     DITOrder,
+    NameBER,
     EscapedAttributeTypeAndValueString,
     ObjectIdentifierString,
     RDNSequenceAscending,

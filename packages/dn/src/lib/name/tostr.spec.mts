@@ -3,21 +3,25 @@ import { BER, _encodeUTF8String } from "@wildboar/asn1/functional";
 import { describe, expect, it } from "vitest";
 import { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
 import type { Name } from "../Name.ta.mjs";
-import { stringifyName } from "./tostr.mjs";
+import { nameToString } from "./tostr.mjs";
 
 const COUNTRY_NAME = ObjectIdentifier.fromParts([2, 5, 4, 6]);
 
-describe("stringifyName()", () => {
-    it("prefixes an RDN sequence", () => {
+describe("nameToString()", () => {
+    it("prefixes the RDN sequence with its alternative", () => {
         const name: Name = {
             rdnSequence: [
                 [new AttributeTypeAndValue(COUNTRY_NAME, _encodeUTF8String("US", BER))],
             ],
         };
-        expect(stringifyName(name)).toBe("rdnSequence:c=US");
+        expect(nameToString(name)).toBe("rdnSequence:c=US");
     });
 
-    it("returns an empty string for an unsupported alternative", () => {
-        expect(stringifyName({} as Name)).toBe("");
+    it("prefixes the root DSE too", () => {
+        expect(nameToString({ rdnSequence: [] })).toBe("rdnSequence:");
+    });
+
+    it("throws for an unsupported alternative", () => {
+        expect(() => nameToString({} as Name)).toThrow(TypeError);
     });
 });

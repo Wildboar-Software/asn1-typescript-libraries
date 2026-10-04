@@ -14,6 +14,7 @@ import {
     RDNSequence,
     _decode_RDNSequence,
     _encode_RDNSequence,
+    rdnSequenceToKey,
 } from "./RDNSequence.ta.mjs";
 
 /**
@@ -41,6 +42,32 @@ export {
     compareName,
     compareNameReverse,
 } from "./name/compare.mjs";
+
+/**
+ * @summary Convert a `Name` to a comparison key
+ * @description
+ *
+ * Two names that would match (probably) produce identical keys, so they can be
+ * used as map keys. The key is not meant to be displayed.
+ *
+ * `Name` is a `CHOICE`, and recent editions of ITU-T X.501 define more
+ * alternatives than the `rdnSequence` that this package supports. So that keys
+ * of different alternatives can never collide, the key is the name of the
+ * alternative, a colon, and the key of the value of that alternative. For
+ * `rdnSequence`, that is {@link rdnSequenceToKey}.
+ *
+ * @param name The directory name
+ * @returns A string of the form `rdnSequence:rdnkey,rdnkey...`
+ * @throws {TypeError} If `name` uses an alternative this package does not
+ * support.
+ * @function
+ */
+export function nameToKey(name: Name): string {
+    if ("rdnSequence" in name) {
+        return "rdnSequence:" + rdnSequenceToKey(name.rdnSequence);
+    }
+    throw new TypeError("Unsupported Name alternative");
+}
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Name

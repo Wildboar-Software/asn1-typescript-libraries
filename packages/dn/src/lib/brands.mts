@@ -93,6 +93,21 @@ type RDNSequenceBER = Uint8Array & {
 
 /**
  * @summary Bytes validated as the Basic Encoding Rules (BER) encoding
+ * of one `Name`.
+ * @description
+ *
+ * Produced by `validateNameBER()` or `isNameBER()`. This is the same
+ * type as {@link RDNSequenceBER}, since `Name` has only the untagged
+ * `rdnSequence` alternative.
+ *
+ * The bytes are not necessarily valid DER, and attribute values have
+ * not been verified.
+ */
+export
+type NameBER = RDNSequenceBER;
+
+/**
+ * @summary Bytes validated as the Basic Encoding Rules (BER) encoding
  * of one `RelativeDistinguishedName`.
  * @description
  *
