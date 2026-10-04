@@ -27,17 +27,12 @@ RESOLVED: _Defer_ including `GeneralName` functionality in this package, because
 - [ ] toBerBytes()
 - [ ] toDerBytes()
 - [ ] toInteropString() (no names + only #hex value syntax)
-- [x] toJSON() / fromJSON() / toJER()
-- [ ] isQualifiedCertsCompliant()
-- [ ] isIetfRfc4514Portable()
+- [x] isQualifiedCertsSubjectCompliant() / isQualifiedCertsIssuerCompliant()
+- [x] isIetfRfc4514Portable()
 - [ ] toASN1Representation()
 - [ ] isRootDseName()
-- [x] getEncodedLength()
 - [ ] normalizeEncoding() - (convert all strings to primitive, trim padding, normalize telephone dashes to spaces)
 - [ ] atavs iterator
-- [x] toDnsName()
-- [x] fromDnsName()
-- [x] dnFromOID() / dnToOID()
 - [ ] `Name.toOID()`, etc.
 - [ ] Support `uid` (UID     userId (0.9.2342.19200300.100.1.1))
   - This is one of the required attributes in IETF RFC 4514

@@ -135,3 +135,13 @@ export { default as getAttributeTypeAndValueEncodedLength } from "./lib/atav/enc
 export { default as getRelativeDistinguishedNameEncodedLength } from "./lib/rdn/encodedLength.mjs";
 export { default as getRDNSequenceEncodedLength } from "./lib/rdnseq/encodedLength.mjs";
 export { default as getNameEncodedLength } from "./lib/name/encodedLength.mjs";
+export {
+    isQualifiedCertsIssuerCompliant,
+    isQualifiedCertsSubjectCompliant,
+    qualifiedCertsIssuerAttributeTypes,
+    qualifiedCertsSubjectAttributeTypes,
+} from "./lib/qccompliance.mjs";
+export {
+    default as isIetfRfc4514Portable,
+    ietfRfc4514RequiredAttributeTypes,
+} from "./lib/rfc4514portable.mjs";

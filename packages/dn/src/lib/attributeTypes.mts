@@ -25,12 +25,12 @@ import type {
  *     isAttributeTypeAndValueOf,
  * } from "@wildboar/dn";
  *
- * export const titleOID = "2.5.4.12";
- * export type TitleATAV = AttributeTypeAndValueOf<typeof titleOID>;
- * export type TitleRDN = RelativeDistinguishedNameOf<typeof titleOID>;
+ * export const businessCategoryOID = "2.5.4.15";
+ * export type BusinessCategoryATAV = AttributeTypeAndValueOf<typeof businessCategoryOID>;
+ * export type BusinessCategoryRDN = RelativeDistinguishedNameOf<typeof businessCategoryOID>;
  *
- * if (isAttributeTypeAndValueOf(atav, titleOID)) {
- *     // atav is a TitleATAV here.
+ * if (isAttributeTypeAndValueOf(atav, businessCategoryOID)) {
+ *     // atav is a BusinessCategoryATAV here.
  * }
  * ```
  */
@@ -39,18 +39,26 @@ import type {
 export const commonNameOID = "2.5.4.3";
 /** The `surname` attribute type (ITU-T X.520). */
 export const surnameOID = "2.5.4.4";
+/** The `serialNumber` attribute type (ITU-T X.520). */
+export const serialNumberOID = "2.5.4.5";
 /** The `countryName` attribute type (ITU-T X.520). */
 export const countryNameOID = "2.5.4.6";
 /** The `localityName` attribute type (ITU-T X.520). */
 export const localityNameOID = "2.5.4.7";
 /** The `stateOrProvinceName` attribute type (ITU-T X.520). */
 export const stateOrProvinceNameOID = "2.5.4.8";
+/** The `streetAddress` attribute type (ITU-T X.520). */
+export const streetAddressOID = "2.5.4.9";
 /** The `organizationName` attribute type (ITU-T X.520). */
 export const organizationNameOID = "2.5.4.10";
 /** The `organizationalUnitName` attribute type (ITU-T X.520). */
 export const organizationalUnitNameOID = "2.5.4.11";
+/** The `title` attribute type (ITU-T X.520). */
+export const titleOID = "2.5.4.12";
 /** The `givenName` attribute type (ITU-T X.520). */
 export const givenNameOID = "2.5.4.42";
+/** The `pseudonym` attribute type (ITU-T X.520). */
+export const pseudonymOID = "2.5.4.65";
 /** The `urnC` attribute type (ITU-T X.520). */
 export const urnCOID = "2.5.4.89";
 /** The `uid` attribute type (IETF RFC 4519). */
