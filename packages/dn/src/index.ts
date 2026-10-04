@@ -57,6 +57,38 @@ export { default as rdnSequenceToASN1String } from "./lib/rdnseq/toasn1.mjs";
 export { default as nameToASN1String } from "./lib/name/toasn1.mjs";
 export { default as nameToString } from "./lib/name/tostr.mjs";
 export { default as nameFromStringX520 } from "./lib/name/fromstr.mjs";
+export {
+    default as rdnSequenceFromString,
+    rdnSequenceFromStringX520,
+} from "./lib/rdnseq/fromstr.mjs";
+export { default as attributeTypesAndValues } from "./lib/rdn/fromstr.mjs";
+export {
+    default as atavFromString,
+    atavFromStringX520,
+} from "./lib/atav/fromstr.mjs";
+export { ParsedAttributeTypeAndValue } from "./lib/ParsedAttributeTypeAndValue.mjs";
+export { default as hasOnlyAttributeTypes } from "./lib/hasOnlyAttributeTypes.mjs";
+export {
+    _decode_AttributeTypeAndValue,
+    _encode_AttributeTypeAndValue,
+    _root_component_type_list_1_spec_for_AttributeTypeAndValue,
+    _root_component_type_list_2_spec_for_AttributeTypeAndValue,
+    _extension_additions_list_spec_for_AttributeTypeAndValue,
+} from "./lib/AttributeTypeAndValue.ta.mjs";
+export {
+    _decode_RelativeDistinguishedName,
+    _encode_RelativeDistinguishedName,
+} from "./lib/RelativeDistinguishedName.ta.mjs";
+export {
+    _decode_RDNSequence,
+    _encode_RDNSequence,
+} from "./lib/RDNSequence.ta.mjs";
+export {
+    _decode_DistinguishedName,
+    _encode_DistinguishedName,
+    type DistinguishedName,
+} from "./lib/DistinguishedName.ta.mjs";
+export { _decode_Name, _encode_Name } from "./lib/Name.ta.mjs";
 export { default as nameToInteropString } from "./lib/name/tointerop.mjs";
 export {
     nameFromJSON,
