@@ -35,13 +35,9 @@ RESOLVED: _Defer_ including `GeneralName` functionality in this package, because
 - [x] getEncodedLength()
 - [ ] normalizeEncoding() - (convert all strings to primitive, trim padding, normalize telephone dashes to spaces)
 - [ ] atavs iterator
-- [ ] customizable delimiter
-- [ ] toDnsName()
+- [x] toDnsName()
 - [ ] fromDnsName()
 - [ ] fromOID() / toOID()
 - [ ] `Name.toOID()`, etc.
-- [ ] Does `GeneralName` code belong here too?
-  - [ ] Kind of requires `or-address`, which comes with many transitive dependencies.
-  - [ ] Would also require `EDIPartyName`
 - [ ] Support `uid` (UID     userId (0.9.2342.19200300.100.1.1))
   - This is one of the required attributes in IETF RFC 4514
