@@ -139,3 +139,42 @@ describe("AttributeTypeAndValue.toJER()", () => {
         expect(value.toJER()).toEqual({ type: "2.5.4.3", value: el.toJSON() });
     });
 });
+
+describe("AttributeTypeAndValue string methods", () => {
+    it("parses and round-trips X.520 strings", () => {
+        const parsed = AttributeTypeAndValue.parseString("cn=Smith\\, J");
+        expect(parsed.type).toBe("cn");
+        expect(parsed.value).toBe("Smith, J");
+        const atav = AttributeTypeAndValue.fromParsedX520(parsed);
+        expect(atav.toString()).toBe("cn=Smith, J");
+        expect(atav.toString(true)).toBe("cn=Smith\\, J");
+        expect(AttributeTypeAndValue.fromStringX520("cn=Smith").toString()).toBe("cn=Smith");
+    });
+
+    it("exposes the type name, value string, and key", () => {
+        const atav = new AttributeTypeAndValue(commonName, utf8Element("Ab"));
+        expect(atav.getTypeName()).toBe("cn");
+        expect(atav.valueToString()).toBe("Ab");
+        expect(atav.toKey()).toBe(atav.toKey(false));
+        expect(atav.compareValue(utf8Element("ab"))).toBe(true);
+    });
+
+    it("narrows with isOf()", () => {
+        const atav = new AttributeTypeAndValue(commonName, utf8Element("Ab"));
+        expect(atav.isOf("2.5.4.3")).toBe(true);
+        expect(atav.isOf(["2.5.4.4", "2.5.4.10"])).toBe(false);
+    });
+
+    it("validates strings", () => {
+        expect(AttributeTypeAndValue.isString("cn=Smith")).toBe(true);
+        expect(AttributeTypeAndValue.isString("=Smith")).toBe(false);
+        expect(() => AttributeTypeAndValue.validateString("nope")).toThrow(SyntaxError);
+    });
+
+    it("validates BER", () => {
+        const bytes = new Uint8Array(Buffer.from("30080603550403 0C0161".replace(/ /g, ""), "hex"));
+        expect(AttributeTypeAndValue.isBER(bytes)).toBe(true);
+        expect(AttributeTypeAndValue.isBER(new Uint8Array([0x04, 0x00]))).toBe(false);
+        expect(() => AttributeTypeAndValue.validateBER(bytes)).not.toThrow();
+    });
+});

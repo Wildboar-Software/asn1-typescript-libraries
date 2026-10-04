@@ -13,13 +13,36 @@ import {
     attributeTypeAndValueToKey,
     attributeTypeAndValueToString,
     defaultValueEncoder,
+    distinguishedValueToString,
 } from "./atav/tostr.mjs";
 import {
     compareAttributeTypeAndValue,
+    compareDistinguishedValuesHeuristically,
     type GetDistinguishedValueMatcher,
 } from "./atav/compare.mjs";
 import attributeTypeAndValueToASN1String from "./atav/toasn1.mjs";
 import { getAttributeTypeAndValueEncodedLength } from "./atav/encodedLength.mjs";
+import { distinguishedTypeToFriendlyString } from "./atav/distinguishedTypeToString.mjs";
+import { atavFromString, atavFromStringX520 } from "./atav/fromstr.mjs";
+import {
+    isAttributeTypeAndValueString,
+    validateAttributeTypeAndValueString,
+    validateAttributeValueSemantics,
+} from "./atav/validate.mjs";
+import {
+    isAttributeTypeAndValueBER,
+    validateAttributeTypeAndValueBER,
+    validateAttributeTypeAndValueElement,
+} from "./atav/validateBER.mjs";
+import { isAttributeTypeAndValueOf } from "./atav/brand.mjs";
+import type { ParsedAttributeTypeAndValue } from "./ParsedAttributeTypeAndValue.mjs";
+import type {
+    AttributeTypeAndValueBER,
+    AttributeTypeAndValueOf,
+    AttributeTypeAndValueString,
+    EscapedAttributeTypeAndValueString,
+    ObjectIdentifierString,
+} from "./brands.mjs";
 import decodeBERElement from "./decodeBERElement.mjs";
 
 /**
@@ -220,12 +243,13 @@ export class AttributeTypeAndValue {
      * the syntax is recognized. Otherwise the type is a numeric object
      * identifier and the value is its hexadecimal BER encoding.
      *
+     * @param escape Whether to escape the value as in IETF RFC 4514
      * @returns A string of the form `type=value`
      * @function
      * @public
      */
-    public toString(): string {
-        return attributeTypeAndValueToString(this, false, false);
+    public toString(escape: boolean = false): string {
+        return attributeTypeAndValueToString(this, escape, false);
     }
 
     /**
@@ -236,12 +260,13 @@ export class AttributeTypeAndValue {
      * LDAP descriptor is unrecognized: the type is a numeric object identifier
      * and the value is its hexadecimal BER encoding.
      *
+     * @param escape Whether to escape the value as in IETF RFC 4514
      * @returns A string of the form `type=value`
      * @function
      * @public
      */
-    public toLdapString(): string {
-        return attributeTypeAndValueToString(this, false, true);
+    public toLdapString(escape: boolean = false): string {
+        return attributeTypeAndValueToString(this, escape, true);
     }
 
     /**
@@ -291,17 +316,274 @@ export class AttributeTypeAndValue {
      *
      * The attribute type is always a numeric object identifier, so keys do not
      * change as attribute names become known. The value is not escaped; if it
-     * has no string form, it is its hexadecimal BER encoding. To escape the
-     * value, as is needed when embedding the key in an RDN or DN key, use
-     * `attributeTypeAndValueToKey()` with `escape` set, since the hexadecimal
-     * form must not be escaped. The key is not meant to be displayed.
+     * has no string form, it is its hexadecimal BER encoding. Set `escape` to
+     * escape the value, as is needed when embedding the key in an RDN or DN
+     * key; the hexadecimal form is never escaped. The key is not meant to be
+     * displayed.
      *
+     * @param escape Whether to escape the value as in IETF RFC 4514
      * @returns A string of the form `numericoid=normalizedvalue`
      * @function
      * @public
      */
-    public toKey(): string {
-        return attributeTypeAndValueToKey(this, false);
+    public toKey(escape: boolean = false): string {
+        return attributeTypeAndValueToKey(this, escape);
+    }
+
+    /**
+     * @summary Get the short name of this attribute's type
+     * @description
+     *
+     * Returns the short name used when writing this `AttributeTypeAndValue`
+     * as a string, such as `cn` or `o`, or `null` if the type has no known
+     * short name. See {@link distinguishedTypeToFriendlyString}.
+     *
+     * @param ldapStrict Whether to recognize only registered LDAP descriptors
+     * @returns The short name, or `null` if there is none
+     * @function
+     * @public
+     */
+    public getTypeName(ldapStrict: boolean = false): string | null {
+        return distinguishedTypeToFriendlyString(this.type_, ldapStrict);
+    }
+
+    /**
+     * @summary Convert only the value of this `AttributeTypeAndValue` to a string
+     * @description
+     *
+     * Returns the native string form of the value if its syntax is
+     * recognized. See {@link distinguishedValueToString}.
+     *
+     * @param comparable Whether to normalize the output for byte-wise comparison
+     * @returns The stringified value, or `null` if it cannot be stringified
+     * @function
+     * @public
+     */
+    public valueToString(comparable: boolean = false): string | null {
+        return distinguishedValueToString(this.type_, this.value, comparable);
+    }
+
+    /**
+     * @summary Test whether this `AttributeTypeAndValue` has one of the given types
+     * @description
+     *
+     * This does not change or copy this object; it only narrows its type. See
+     * {@link isAttributeTypeAndValueOf}.
+     *
+     * @param types An object identifier, or an array of them, in
+     *  dotted-decimal notation
+     * @returns Whether the attribute type is one of `types`
+     * @function
+     * @public
+     */
+    public isOf<T extends ObjectIdentifierString>(
+        types: T | readonly T[],
+    ): this is AttributeTypeAndValueOf<T> {
+        return isAttributeTypeAndValueOf(this, types);
+    }
+
+    /**
+     * @summary Compare a value with this one's, assuming the same attribute type
+     * @description
+     *
+     * Compares `value` with the value of this `AttributeTypeAndValue` heuristically,
+     * as if it were a distinguished value of this attribute type. See
+     * {@link compareDistinguishedValuesHeuristically}.
+     *
+     * @param value The distinguished value to compare to this one's value
+     * @returns `true` if the values (probably) match; `false` otherwise
+     * @function
+     * @public
+     */
+    public compareValue(value: _Element): boolean {
+        return compareDistinguishedValuesHeuristically(this.type_, this.value, value);
+    }
+
+    /**
+     * @summary Split a string such as `cn=Smith` into its type and value
+     * @description
+     *
+     * The value is unescaped as in IETF RFC 4514, but nothing is validated or
+     * recognized. See {@link atavFromString}.
+     *
+     * @param str The attribute type and value, e.g. `cn=Smith`
+     * @returns The attribute type name and unescaped value
+     * @throws {SyntaxError} If there is no equals sign
+     * @function
+     * @public
+     * @static
+     */
+    public static parseString(str: string): ParsedAttributeTypeAndValue {
+        return atavFromString(str);
+    }
+
+    /**
+     * @summary Parse a recognized attribute type and value
+     * @description
+     *
+     * Converts the output of {@link AttributeTypeAndValue.parseString} to an
+     * `AttributeTypeAndValue`, if the attribute type is one of the X.520
+     * attribute types this library knows the directory syntax of. See
+     * {@link atavFromStringX520}.
+     *
+     * @param parsed The attribute type name and unescaped value
+     * @returns The `AttributeTypeAndValue`
+     * @throws {SyntaxError} If the attribute type is not recognized or the
+     *  value is invalid for its syntax
+     * @function
+     * @public
+     * @static
+     */
+    public static fromParsedX520(parsed: ParsedAttributeTypeAndValue): AttributeTypeAndValue {
+        return atavFromStringX520(parsed);
+    }
+
+    /**
+     * @summary Parse a string such as `cn=Smith` to an `AttributeTypeAndValue`
+     * @description
+     *
+     * This is {@link AttributeTypeAndValue.parseString} followed by
+     * {@link AttributeTypeAndValue.fromParsedX520}.
+     *
+     * @param str The attribute type and value, e.g. `cn=Smith`
+     * @returns The `AttributeTypeAndValue`
+     * @throws {SyntaxError} If the string is malformed or the attribute type
+     *  is not recognized
+     * @function
+     * @public
+     * @static
+     */
+    public static fromStringX520(str: string): AttributeTypeAndValue {
+        return atavFromStringX520(atavFromString(str));
+    }
+
+    /**
+     * @summary Validate that a string is an `attributeTypeAndValue`
+     * @description
+     *
+     * See {@link validateAttributeTypeAndValueString}.
+     *
+     * @param atav The attribute type and value, e.g. `cn=Smith`
+     * @param escaped Whether the value is escaped per IETF RFC 4514
+     * @throws {SyntaxError} If `atav` is invalid
+     * @function
+     * @public
+     * @static
+     */
+    public static validateString(
+        atav: string,
+        escaped: true,
+    ): asserts atav is EscapedAttributeTypeAndValueString;
+    public static validateString(
+        atav: string,
+        escaped?: false,
+    ): asserts atav is AttributeTypeAndValueString;
+    public static validateString(
+        atav: string,
+        escaped?: boolean,
+    ): asserts atav is AttributeTypeAndValueString | EscapedAttributeTypeAndValueString;
+    public static validateString(
+        atav: string,
+        escaped: boolean = false,
+    ): asserts atav is AttributeTypeAndValueString | EscapedAttributeTypeAndValueString {
+        validateAttributeTypeAndValueString(atav, escaped);
+    }
+
+    /**
+     * @summary Check whether a string is a valid `attributeTypeAndValue`
+     * @description
+     *
+     * See {@link isAttributeTypeAndValueString}.
+     *
+     * @param atav The attribute type and value, e.g. `cn=Smith`
+     * @param escaped Whether the value is escaped per IETF RFC 4514
+     * @returns Whether `atav` is valid
+     * @function
+     * @public
+     * @static
+     */
+    public static isString(
+        atav: string,
+        escaped: true,
+    ): atav is EscapedAttributeTypeAndValueString;
+    public static isString(
+        atav: string,
+        escaped?: false,
+    ): atav is AttributeTypeAndValueString;
+    public static isString(
+        atav: string,
+        escaped?: boolean,
+    ): atav is AttributeTypeAndValueString | EscapedAttributeTypeAndValueString;
+    public static isString(
+        atav: string,
+        escaped: boolean = false,
+    ): atav is AttributeTypeAndValueString | EscapedAttributeTypeAndValueString {
+        return isAttributeTypeAndValueString(atav, escaped);
+    }
+
+    /**
+     * @summary Validate an unescaped attribute value against its type's rules
+     * @description
+     *
+     * See {@link validateAttributeValueSemantics}.
+     *
+     * @param type The attribute type name, as written in the DN
+     * @param value The unescaped string value
+     * @throws {SyntaxError} If the value is invalid
+     * @function
+     * @public
+     * @static
+     */
+    public static validateValueSemantics(type: string, value: string): void {
+        validateAttributeValueSemantics(type, value);
+    }
+
+    /**
+     * @summary Validate the BER encoding of an `AttributeTypeAndValue`
+     * @description
+     *
+     * See {@link validateAttributeTypeAndValueBER}.
+     *
+     * @param bytes The BER encoding
+     * @throws {ASN1Error} If `bytes` is invalid
+     * @function
+     * @public
+     * @static
+     */
+    public static validateBER(bytes: Uint8Array): asserts bytes is AttributeTypeAndValueBER {
+        validateAttributeTypeAndValueBER(bytes);
+    }
+
+    /**
+     * @summary Check whether bytes are a valid BER `AttributeTypeAndValue`
+     * @description
+     *
+     * See {@link isAttributeTypeAndValueBER}.
+     *
+     * @param bytes The BER encoding
+     * @returns Whether `bytes` is valid
+     * @function
+     * @public
+     * @static
+     */
+    public static isBER(bytes: Uint8Array): bytes is AttributeTypeAndValueBER {
+        return isAttributeTypeAndValueBER(bytes);
+    }
+
+    /**
+     * @summary Validate an element as an `AttributeTypeAndValue`
+     * @description
+     *
+     * See {@link validateAttributeTypeAndValueElement}.
+     *
+     * @param el The element
+     * @throws {ASN1Error} If `el` is invalid
+     * @function
+     * @public
+     * @static
+     */
+    public static validateElement(el: _Element): void {
+        validateAttributeTypeAndValueElement(el);
     }
 
     /**

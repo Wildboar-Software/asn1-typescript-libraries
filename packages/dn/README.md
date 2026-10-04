@@ -355,12 +355,8 @@ prompts and carefully reviewed and critiqued by a real human.
 
 ## To Do
 
-- [x] `oidC2` _can_ appear in the second RDN.
 - [ ] Use newer `@wildboar/asn1`
-- [x] Ensure everything is exported.
-- [ ] Export most ATAV functions as methods on ATAV
-- [x] README docs
-- [x] README showcase
+- [x] Export most ATAV functions as methods on ATAV
 - [ ] `package.json` details
 - [ ] JSR publication
 - [ ] Stricter Typescript
