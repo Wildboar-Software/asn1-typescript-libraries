@@ -132,6 +132,11 @@ export type DomainComponentRDNSequence =
     RDNSequenceOf<typeof domainComponentOID>;
 
 /**
+ * A DN made only of `urnC` RDNs, which can be converted to a URN.
+ */
+export type UrnCRDNSequence = RDNSequenceOf<typeof urnCOID>;
+
+/**
  * A DN made only of `oidC1`, `oidC2`, and `oidC` RDNs, which can be
  * converted to an object identifier.
  */

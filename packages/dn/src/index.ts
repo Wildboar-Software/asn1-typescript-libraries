@@ -129,6 +129,8 @@ export { default as toDnsName } from "./lib/rdnseq/todnsname.mjs";
 export { default as fromDnsName } from "./lib/rdnseq/fromdnsname.mjs";
 export { default as dnToOID } from "./lib/rdnseq/dntooid.mjs";
 export { default as dnFromOID } from "./lib/rdnseq/dnfromoid.mjs";
+export { default as dnToURN } from "./lib/rdnseq/dntourn.mjs";
+export { default as dnFromURN } from "./lib/rdnseq/dnfromurn.mjs";
 export { default as getAttributeTypeAndValueEncodedLength } from "./lib/atav/encodedLength.mjs";
 export { default as getRelativeDistinguishedNameEncodedLength } from "./lib/rdn/encodedLength.mjs";
 export { default as getRDNSequenceEncodedLength } from "./lib/rdnseq/encodedLength.mjs";
