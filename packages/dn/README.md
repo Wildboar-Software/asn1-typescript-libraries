@@ -21,7 +21,7 @@ Run `nx test dn` to execute the unit tests via [Vitest](https://vitest.dev/).
 - [ ] toDerBytes()
 - [x] toInteropString() (no names + only #hex value syntax)
 - [x] toASN1Representation()
-- [ ] isRootDseName()
+- [x] isRootDseName()
 - [ ] normalizeEncoding() - (convert all strings to primitive, trim padding, normalize telephone dashes to spaces)
 - [ ] atavs iterator
 - [ ] `Name.toOID()`, etc.

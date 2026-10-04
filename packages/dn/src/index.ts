@@ -151,3 +151,5 @@ export {
     default as isIetfRfc4514Portable,
     ietfRfc4514RequiredAttributeTypes,
 } from "./lib/rfc4514portable.mjs";
+export { default as isRootDseDN } from "./lib/dn/isRootDseDN.mjs";
+export { default as isRootDseName } from "./lib/name/isRootDseName.mjs";
