@@ -13,17 +13,17 @@ import {
     DERElement,
     ObjectIdentifier,
 } from "@wildboar/asn1";
-import { AttributeTypeAndValue } from "../dist/lib/AttributeTypeAndValue.ta.mjs";
-import { compareAttributeTypeAndValue } from "../dist/lib/atav/compare.mjs";
+import { AttributeTypeAndValue } from "../../../dist/packages/dn/src/lib/AttributeTypeAndValue.ta.mjs";
+import { compareAttributeTypeAndValue } from "../../../dist/packages/dn/src/lib/atav/compare.mjs";
 import {
     compareRelativeDistinguishedName,
     relativeDistinguishedNameToKey,
-} from "../dist/lib/RelativeDistinguishedName.ta.mjs";
+} from "../../../dist/packages/dn/src/lib/RelativeDistinguishedName.ta.mjs";
 import {
     compareRDNSequence,
     compareRDNSequenceReverse,
     rdnSequenceToKey,
-} from "../dist/lib/RDNSequence.ta.mjs";
+} from "../../../dist/packages/dn/src/lib/RDNSequence.ta.mjs";
 
 const id_at_commonName = ObjectIdentifier.fromParts([2, 5, 4, 3]);
 const id_at_surname = ObjectIdentifier.fromParts([2, 5, 4, 4]);
