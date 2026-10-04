@@ -3,8 +3,8 @@
 This is a package for all things related to X.500 directory names, notably
 including distinguished names (DNs). It is ESM-only and published both on
 [npmjs.com](https://www.npmjs.com/) and [jsr.io](https://jsr.io/). It has
-only a single dependency written by the same author and which itself has no
-dependencies.
+only two dependencies written by the same author and which themselves have no
+deeper dependencies. This package should work in any runtime or browser.
 
 This package defines four principal data types:
 
@@ -21,7 +21,8 @@ For each of the above (with some exceptions) this package defines functions for:
   [IETF RFC 4514](https://datatracker.ietf.org/doc/html/rfc4514)
 - Escaping and unescaping according to
   [IETF RFC 4514](https://datatracker.ietf.org/doc/html/rfc4514)
-- Validating strings without decoding according to [IETF RFC 4514]
+- Validating strings without decoding according to
+  [IETF RFC 4514](https://datatracker.ietf.org/doc/html/rfc4514)
 - Printing textual ASN.1 value notation
 - Converting to and from JSON
 - Converting to JSON Encoding Rules (JER)
