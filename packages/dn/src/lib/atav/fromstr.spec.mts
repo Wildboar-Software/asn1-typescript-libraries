@@ -182,6 +182,16 @@ describe("atavFromStringX520()", () => {
         );
     });
 
+    it("rejects a uid that is empty or longer than 256 characters", () => {
+        expect(parse("uid", "A".repeat(256)).value.printableString).toBe("A".repeat(256));
+        expect(() => parse("uid", "A".repeat(257))).toThrow(
+            new SyntaxError('attribute type "uid": length problem (value length 257, expected 1..256)'),
+        );
+        expect(() => parse("userid", "")).toThrow(
+            new SyntaxError('attribute type "userid": length problem (value length 0, expected 1..256)'),
+        );
+    });
+
     it("rejects a COSINE DirectoryString longer than 256 characters", () => {
         expect(() => parse("buildingName", "A".repeat(257))).toThrow(
             new SyntaxError('attribute type "buildingName": length problem (value length 257, expected 1..256)'),

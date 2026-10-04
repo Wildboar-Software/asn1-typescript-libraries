@@ -308,8 +308,10 @@ const x520AttributeSyntaxes: ReadonlyMap<string, X520AttributeSyntax> = new Map(
     ["registeredaddress", { type: id_at_registeredAddress, encode: encodePostalAddress }],
     ["telephonenumber", { type: id_at_telephoneNumber, encode: telephoneNumber }],
     ["dc", { type: id_dc, encode: encodeIA5String }],
-    ["uid", { type: id_uid, encode: directoryString }],
-    ["userid", { type: id_uid, encode: directoryString }],
+    // IETF RFC 4519 section 2.39: `uid` is a `DirectoryString` of size 1..256
+    // (`ub-user-identifier`). `userid` is the name used by IETF RFC 1274.
+    ["uid", { type: id_uid, encode: directoryString256 }],
+    ["userid", { type: id_uid, encode: directoryString256 }],
     ["documentidentifier", { type: id_documentIdentifier, encode: directoryString256 }],
     ["emailaddress", { type: id_emailAddress, encode: withLength(1, 255)(encodeIA5String) }],
     ["buildingname", { type: id_buildingName, encode: directoryString256 }],

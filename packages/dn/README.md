@@ -19,11 +19,8 @@ Run `nx test dn` to execute the unit tests via [Vitest](https://vitest.dev/).
 
 - [ ] toBerBytes()
 - [ ] toDerBytes()
-- [x] toInteropString() (no names + only #hex value syntax)
-- [x] toASN1Representation()
-- [x] isRootDseName()
 - [ ] normalizeEncoding() - (convert all strings to primitive, trim padding, normalize telephone dashes to spaces)
 - [ ] atavs iterator
 - [ ] `Name.toOID()`, etc.
-- [ ] Support `uid` (UID userId (0.9.2342.19200300.100.1.1))
+- [x] Support `uid` (UID userId (0.9.2342.19200300.100.1.1))
   - This is one of the required attributes in IETF RFC 4514
