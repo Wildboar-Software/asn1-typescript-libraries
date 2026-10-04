@@ -356,7 +356,6 @@ prompts and carefully reviewed and critiqued by a real human.
 ## To Do
 
 - [ ] Use newer `@wildboar/asn1`
-- [x] Export most ATAV functions as methods on ATAV
-- [ ] `package.json` details
+- [x] `package.json` details
 - [ ] JSR publication
 - [ ] Stricter Typescript
