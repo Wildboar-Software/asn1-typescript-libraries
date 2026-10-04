@@ -48,6 +48,8 @@ export {
 } from "./lib/Name.ta.mjs";
 export { default as relativeDistinguishedNameToString } from "./lib/rdn/tostr.mjs";
 export { default as rdnSequenceToString } from "./lib/rdnseq/tostr.mjs";
+export { default as relativeDistinguishedNameToInteropString } from "./lib/rdn/tointerop.mjs";
+export { default as rdnSequenceToInteropString } from "./lib/rdnseq/tointerop.mjs";
 export { default as escapeDistinguishedValue } from "./lib/escapeDistinguishedValue.mjs";
 export { default as unescapeDistinguishedValue } from "./lib/unescapeDistinguishedValue.mjs";
 export {

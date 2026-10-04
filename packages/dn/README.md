@@ -26,9 +26,7 @@ RESOLVED: _Defer_ including `GeneralName` functionality in this package, because
 
 - [ ] toBerBytes()
 - [ ] toDerBytes()
-- [ ] toInteropString() (no names + only #hex value syntax)
-- [x] isQualifiedCertsSubjectCompliant() / isQualifiedCertsIssuerCompliant()
-- [x] isIetfRfc4514Portable()
+- [x] toInteropString() (no names + only #hex value syntax)
 - [ ] toASN1Representation()
 - [ ] isRootDseName()
 - [ ] normalizeEncoding() - (convert all strings to primitive, trim padding, normalize telephone dashes to spaces)
