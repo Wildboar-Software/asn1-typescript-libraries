@@ -36,7 +36,7 @@ RESOLVED: _Defer_ including `GeneralName` functionality in this package, because
 - [ ] normalizeEncoding() - (convert all strings to primitive, trim padding, normalize telephone dashes to spaces)
 - [ ] atavs iterator
 - [x] toDnsName()
-- [ ] fromDnsName()
+- [x] fromDnsName()
 - [ ] fromOID() / toOID()
 - [ ] `Name.toOID()`, etc.
 - [ ] Support `uid` (UID     userId (0.9.2342.19200300.100.1.1))
