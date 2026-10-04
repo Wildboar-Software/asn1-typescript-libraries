@@ -50,6 +50,10 @@ export { default as relativeDistinguishedNameToString } from "./lib/rdn/tostr.mj
 export { default as rdnSequenceToString } from "./lib/rdnseq/tostr.mjs";
 export { default as relativeDistinguishedNameToInteropString } from "./lib/rdn/tointerop.mjs";
 export { default as rdnSequenceToInteropString } from "./lib/rdnseq/tointerop.mjs";
+export { default as attributeTypeAndValueToASN1String } from "./lib/atav/toasn1.mjs";
+export { default as relativeDistinguishedNameToASN1String } from "./lib/rdn/toasn1.mjs";
+export { default as rdnSequenceToASN1String } from "./lib/rdnseq/toasn1.mjs";
+export { default as nameToASN1String } from "./lib/name/toasn1.mjs";
 export { default as escapeDistinguishedValue } from "./lib/escapeDistinguishedValue.mjs";
 export { default as unescapeDistinguishedValue } from "./lib/unescapeDistinguishedValue.mjs";
 export {

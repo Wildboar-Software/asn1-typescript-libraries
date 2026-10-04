@@ -18,6 +18,7 @@ import {
     compareAttributeTypeAndValue,
     type GetDistinguishedValueMatcher,
 } from "./atav/compare.mjs";
+import attributeTypeAndValueToASN1String from "./atav/toasn1.mjs";
 import { getAttributeTypeAndValueEncodedLength } from "./atav/encodedLength.mjs";
 import decodeBERElement from "./decodeBERElement.mjs";
 
@@ -257,6 +258,23 @@ export class AttributeTypeAndValue {
      */
     public toInteropString(): string {
         return `${this.type_.toString()}=${defaultValueEncoder(this.value)}`;
+    }
+
+    /**
+     * @summary Convert this `AttributeTypeAndValue` to textual ASN.1 value notation
+     * @description
+     *
+     * Writes the type as a numeric object identifier and the value as the
+     * result of the value element's `toString()`, which is only a "good
+     * enough" approximation of ASN.1 value notation. See
+     * {@link attributeTypeAndValueToASN1String}.
+     *
+     * @returns A string of the form `{ type numericoid, value ... }`
+     * @function
+     * @public
+     */
+    public toASN1String(): string {
+        return attributeTypeAndValueToASN1String(this);
     }
 
     /**
