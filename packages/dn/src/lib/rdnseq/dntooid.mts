@@ -44,11 +44,13 @@ function getArc (value: ASN1Element): number | bigint | null {
  * - `oidC`, which is the next arc after those of `oidC1` and `oidC2`, if they
  *   are present.
  *
+ * If the first RDN has only `oidC1`, the second RDN may have only `oidC2`.
+ *
  * Every other RDN has exactly one attribute type and value, and its type is
  * `oidC`. The `oidC` arcs are appended to the object identifier from the
  * highest RDN down to the last one. For example, `{oidC1=2, oidC2=5, oidC=4},
- * {oidC=3}` and `{oidC=2}, {oidC=5}, {oidC=4}, {oidC=3}` both convert to
- * `2.5.4.3`.
+ * {oidC=3}`, `{oidC1=2}, {oidC2=5}, {oidC=4}, {oidC=3}`, and `{oidC=2},
+ * {oidC=5}, {oidC=4}, {oidC=3}` all convert to `2.5.4.3`.
  *
  * The attribute values of all three types have an `INTEGER` syntax, and
  * the arcs may be larger than `Number.MAX_SAFE_INTEGER`.
@@ -60,7 +62,8 @@ function getArc (value: ASN1Element): number | bigint | null {
  *   `oidC2`, or `oidC`, or has more than one of any of them;
  * - `oidC2` is present without `oidC1` in the first RDN;
  * - any other RDN does not have exactly one attribute type and value, whose
- *   type is `oidC`;
+ *   type is `oidC` (or `oidC2` for the second RDN, if the first RDN has only
+ *   `oidC1`);
  * - any value is not a universal `INTEGER`, or is negative; or
  * - the arcs do not make a valid object identifier: there are fewer than two,
  *   the first is greater than 2, or the second is greater than 39 when the
@@ -128,7 +131,24 @@ function dnToOID (rdns: RDNSequenceDescending): ObjectIdentifier | null {
     if (oidC !== null) {
         arcs.push(oidC);
     }
-    for (let i = 1; i < rdns.length; i++) {
+    let start: number = 1;
+    // `oidC2` may be the lone ATAV of the second RDN, but only if the first RDN
+    // is a lone `oidC1`. Otherwise, the arcs would be out of order.
+    if (
+        rdns.length > 1
+        && highest.length === 1
+        && oidC1 !== null
+        && rdns[1].length === 1
+        && rdns[1][0].type_.toString() === oidC2OID
+    ) {
+        const arc = getArc(rdns[1][0].value);
+        if (arc === null) {
+            return null;
+        }
+        arcs.push(arc);
+        start = 2;
+    }
+    for (let i = start; i < rdns.length; i++) {
         const rdn = rdns[i];
         if (rdn.length !== 1) {
             return null;

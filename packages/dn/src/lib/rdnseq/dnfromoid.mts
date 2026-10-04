@@ -16,6 +16,15 @@ function atav (type_: ObjectIdentifier, arc: number | bigint): AttributeTypeAndV
 }
 
 /**
+ * How {@link dnFromOID} represents the first two arcs of an object identifier:
+ *
+ * - `"none"`: as `oidC` values, like every other arc;
+ * - `"together"`: as `oidC1` and `oidC2` in the first RDN; or
+ * - `"separate"`: as `oidC1` in the first RDN and `oidC2` in the second.
+ */
+export type OidC1AndOidC2Mode = "none" | "together" | "separate";
+
+/**
  * @summary Convert an object identifier to an `RDNSequence` of `oidC1`,
  * `oidC2`, and `oidC` values.
  * @description
@@ -28,31 +37,43 @@ function atav (type_: ObjectIdentifier, arc: number | bigint): AttributeTypeAndV
  * descending order: the first RDN is that of the highest entry, which is
  * immediately subordinate to the root.
  *
- * If `useOidC1AndOidC2` is `false`, there is one RDN per arc, each having only
+ * If `useOidC1AndOidC2` is `"none"`, there is one RDN per arc, each having only
  * an `oidC` attribute. For example, `2.5.4.3` becomes `{oidC=2}, {oidC=5},
  * {oidC=4}, {oidC=3}`.
  *
- * If `useOidC1AndOidC2` is `true`, the first RDN has an `oidC1` attribute for
+ * If `useOidC1AndOidC2` is `"together"`, the first RDN has an `oidC1` attribute for
  * the first arc, an `oidC2` attribute for the second arc, and an `oidC`
  * attribute for the third arc, and each remaining arc has an RDN having only
  * an `oidC` attribute. For example, `2.5.4.3` becomes `{oidC1=2, oidC2=5,
  * oidC=4}, {oidC=3}`, and `2.5` becomes `{oidC1=2, oidC2=5}`.
  *
+ * If `useOidC1AndOidC2` is `"separate"`, the first RDN has only an `oidC1`
+ * attribute for the first arc, the second RDN has only an `oidC2` attribute for
+ * the second arc, and each remaining arc has an RDN having only an `oidC`
+ * attribute. For example, `2.5.4.3` becomes `{oidC1=2}, {oidC2=5}, {oidC=4},
+ * {oidC=3}`, and `2.5` becomes `{oidC1=2}, {oidC2=5}`.
+ *
  * @param oid The object identifier to convert.
- * @param useOidC1AndOidC2 Whether to use `oidC1` and `oidC2` for the first two
- *  arcs. The default is `false`.
+ * @param useOidC1AndOidC2 Whether and how to use `oidC1` and `oidC2` for the
+ *  first two arcs: `"none"` for neither, `"together"` for both in the first
+ *  RDN, or `"separate"` for `oidC1` in the first RDN and `oidC2` in the second.
+ *  The default is `"none"`.
  * @returns The RDNs, in DIT descending order.
  * @function
  */
 export
 function dnFromOID (
     oid: ObjectIdentifier,
-    useOidC1AndOidC2: boolean = false,
+    useOidC1AndOidC2: OidC1AndOidC2Mode = "none",
 ): RDNSequenceDescending {
     const arcs: (number | bigint)[] = oid.nodesBigAndSmall;
     const rdns: RDNSequence = [];
     let next: number = 0;
-    if (useOidC1AndOidC2) {
+    if (useOidC1AndOidC2 === "separate") {
+        rdns.push([ atav(oidC1Type, arcs[0]) ]);
+        rdns.push([ atav(oidC2Type, arcs[1]) ]);
+        next = 2;
+    } else if (useOidC1AndOidC2 === "together") {
         const highest: RelativeDistinguishedName = [
             atav(oidC1Type, arcs[0]),
             atav(oidC2Type, arcs[1]),

@@ -48,6 +48,42 @@ describe("dnToOID()", () => {
         expect(dnToOID(desc([c1(2), c(5)], [c(4)]))?.toString()).toBe("2.5.4");
     });
 
+    it("allows oidC2 as the lone ATAV of the second RDN after a lone oidC1", () => {
+        expect(dnToOID(desc([c1(2)], [c2(5)], [c(4)], [c(3)]))?.toString()).toBe("2.5.4.3");
+        expect(dnToOID(desc([c1(2)], [c2(5)], [c(4)]))?.toString()).toBe("2.5.4");
+        expect(dnToOID(desc([c1(1)], [c2(3)]))?.toString()).toBe("1.3");
+    });
+
+    it("converts a large oidC2 in the second RDN", () => {
+        const big = 2n ** 80n;
+        expect(dnToOID(desc([c1(2)], [c2(big)]))?.toString()).toBe(`2.${big}`);
+    });
+
+    it("returns null for an oidC2 in the second RDN that is not valid", () => {
+        // The first RDN has more than just oidC1.
+        expect(dnToOID(desc([c1(2), c(4)], [c2(5)]))).toBeNull();
+        expect(dnToOID(desc([c1(2), c2(5)], [c2(5)]))).toBeNull();
+        // The first RDN is not oidC1.
+        expect(dnToOID(desc([c(2)], [c2(5)]))).toBeNull();
+        expect(dnToOID(desc([c2(2)], [c2(5)]))).toBeNull();
+        // The second RDN has more than just oidC2.
+        expect(dnToOID(desc([c1(2)], [c2(5), c(4)]))).toBeNull();
+        expect(dnToOID(desc([c1(2)], [c2(5), c1(4)]))).toBeNull();
+        // oidC2 appears later than the second RDN.
+        expect(dnToOID(desc([c1(2)], [c(5)], [c2(4)]))).toBeNull();
+        expect(dnToOID(desc([c1(2)], [c2(5)], [c2(4)]))).toBeNull();
+        // The value is not a non-negative INTEGER.
+        expect(dnToOID(desc([c1(2)], [c2(-5)]))).toBeNull();
+        const text = new AttributeTypeAndValue(
+            ObjectIdentifier.fromString(oidC2OID),
+            _encodeUTF8String("5", BER),
+        );
+        expect(dnToOID(desc([c1(2)], [text]))).toBeNull();
+        // The arcs are not a valid object identifier.
+        expect(dnToOID(desc([c1(1)], [c2(40)]))).toBeNull();
+        expect(dnToOID(desc([c1(3)], [c2(1)]))).toBeNull();
+    });
+
     it("converts a two-arc name", () => {
         expect(dnToOID(desc([c1(1), c2(3)]))?.toString()).toBe("1.3");
     });
@@ -76,9 +112,9 @@ describe("dnToOID()", () => {
         expect(dnToOID(desc([c(2), c(5)], [c(4)]))).toBeNull();
     });
 
-    it("returns null if oidC1 or oidC2 is in an RDN that is not the highest", () => {
+    it("returns null if oidC1 is in an RDN that is not the highest", () => {
         expect(dnToOID(desc([c(2)], [c1(5)]))).toBeNull();
-        expect(dnToOID(desc([c1(2)], [c2(5)]))).toBeNull();
+        expect(dnToOID(desc([c1(2)], [c1(5)]))).toBeNull();
     });
 
     it("returns null if an RDN that is not the highest has more than one ATAV", () => {
@@ -132,23 +168,34 @@ describe("dnFromOID()", () => {
             [`${oidCOID}=4`],
             [`${oidCOID}=3`],
         ]);
-        expect(summarize(dnFromOID(oid, false))).toEqual(summarize(dnFromOID(oid)));
+        expect(summarize(dnFromOID(oid, "none"))).toEqual(summarize(dnFromOID(oid)));
     });
 
     it("creates oidC1, oidC2, and oidC in the highest RDN if requested", () => {
-        expect(summarize(dnFromOID(oid, true))).toEqual([
+        expect(summarize(dnFromOID(oid, "together"))).toEqual([
             [`${oidC1OID}=2`, `${oidC2OID}=5`, `${oidCOID}=4`],
             [`${oidCOID}=3`],
         ]);
     });
 
+    it("creates oidC1 and oidC2 in separate RDNs if requested", () => {
+        expect(summarize(dnFromOID(oid, "separate"))).toEqual([
+            [`${oidC1OID}=2`],
+            [`${oidC2OID}=5`],
+            [`${oidCOID}=4`],
+            [`${oidCOID}=3`],
+        ]);
+        const two = dnFromOID(ObjectIdentifier.fromString("2.5"), "separate");
+        expect(summarize(two)).toEqual([[`${oidC1OID}=2`], [`${oidC2OID}=5`]]);
+    });
+
     it("creates only oidC1 and oidC2 for a two-arc OID", () => {
-        const rdns = dnFromOID(ObjectIdentifier.fromString("2.5"), true);
+        const rdns = dnFromOID(ObjectIdentifier.fromString("2.5"), "together");
         expect(summarize(rdns)).toEqual([[`${oidC1OID}=2`, `${oidC2OID}=5`]]);
     });
 
     it("creates one oidC1, oidC2, and oidC RDN for a three-arc OID", () => {
-        const rdns = dnFromOID(ObjectIdentifier.fromString("1.3.6"), true);
+        const rdns = dnFromOID(ObjectIdentifier.fromString("1.3.6"), "together");
         expect(summarize(rdns)).toEqual([
             [`${oidC1OID}=1`, `${oidC2OID}=3`, `${oidCOID}=6`],
         ]);
@@ -171,7 +218,7 @@ describe("dnFromOID()", () => {
             `2.25.${2n ** 100n}`,
         ]) {
             const original = ObjectIdentifier.fromStringWithBigArcs(str);
-            for (const both of [false, true]) {
+            for (const both of ["none", "together", "separate"] as const) {
                 const back = dnToOID(dnFromOID(original, both));
                 expect(back?.toString(), `${str}, ${both}`).toBe(original.toString());
             }

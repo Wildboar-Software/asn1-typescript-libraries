@@ -1,8 +1,12 @@
 # X.500 Directory / LDAP Distinguished Names
 
 This is a package for all things related to X.500 directory names, notably
-including distinguished names (DNs). This package defines four principal
-data types:
+including distinguished names (DNs). It is ESM-only and published both on
+[npmjs.com](https://www.npmjs.com/) and [jsr.io](https://jsr.io/). It has
+only a single dependency written by the same author and which itself has no
+dependencies.
+
+This package defines four principal data types:
 
 - `AttributeTypeAndValue` (ATAV) - A single attribute type and one value
 - `RelativeDistinguishedName` (RDN) - An array of ATAVs that uniquely identifies an entry within a prefix
@@ -338,6 +342,12 @@ if (isRDNSequenceStartingWith(descending, countryNameOID)) {
 }
 ```
 
+## AI Usage Statement
+
+This package was mostly written by AI: specifically Claude Opus 5.5 and Claude
+Sonnet 5.5 in the Cursor IDE. Each feature was implemented as individual
+prompts and carefully reviewed and critiqued by a real human.
+
 ## Should this even be a separate package?
 
 - No `PostalAddress`, `UUIDPair`, `FacsimileTelephoneNumber`, or `UnboundedDirectoryString`
@@ -345,7 +355,7 @@ if (isRDNSequenceStartingWith(descending, countryNameOID)) {
 
 ## To Do
 
-- [ ] `oidC2` _can_ appear in the second RDN.
+- [x] `oidC2` _can_ appear in the second RDN.
 - [ ] Use newer `@wildboar/asn1`
 - [x] Ensure everything is exported.
 - [ ] Export most ATAV functions as methods on ATAV
