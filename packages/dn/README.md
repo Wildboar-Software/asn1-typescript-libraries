@@ -37,7 +37,7 @@ RESOLVED: _Defer_ including `GeneralName` functionality in this package, because
 - [ ] atavs iterator
 - [x] toDnsName()
 - [x] fromDnsName()
-- [ ] fromOID() / toOID()
+- [x] dnFromOID() / dnToOID()
 - [ ] `Name.toOID()`, etc.
 - [ ] Support `uid` (UID     userId (0.9.2342.19200300.100.1.1))
   - This is one of the required attributes in IETF RFC 4514
