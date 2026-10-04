@@ -1,5 +1,5 @@
 import type { DistinguishedName as DN } from "../DistinguishedName.ta.mjs";
-import { RDNSequenceOfLength } from "../brands.mjs";
+import type { RDNSequenceOfLength } from "../brands.mjs";
 
 /**
  * @summary Test whether a DN is a root DSE DN.

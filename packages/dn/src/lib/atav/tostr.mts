@@ -1,4 +1,4 @@
-import { type ASN1Element, ASN1TagClass, ASN1UniversalType, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type ASN1Element, ASN1TagClass, ASN1UniversalType, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { domainToASCII } from "node:url";
 import type { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
 import { distinguishedTypeToFriendlyString } from "./distinguishedTypeToString.mjs";

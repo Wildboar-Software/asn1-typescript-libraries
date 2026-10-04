@@ -1,4 +1,4 @@
-import { OBJECT_IDENTIFIER, ObjectIdentifier } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER, ObjectIdentifier } from "@wildboar/asn1";
 import { Buffer } from "node:buffer";
 
 const id_at = ObjectIdentifier.fromParts([2, 5, 4]);

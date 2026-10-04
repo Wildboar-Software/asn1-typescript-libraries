@@ -1,5 +1,5 @@
 export
-const backslashable = new Set<number>([
+const backslashable: Set<number> = new Set<number>([
     // " ",
     "\"".codePointAt(0)!,
     // "#",
@@ -13,7 +13,7 @@ const backslashable = new Set<number>([
 ]);
 
 export
-const hexable = new Set<number>([ 0 ]);
+const hexable: Set<number> = new Set<number>([ 0 ]);
 
 /**
  * Leading `#` or space, a trailing space, or one of `" + , ; < = > \ NUL`.

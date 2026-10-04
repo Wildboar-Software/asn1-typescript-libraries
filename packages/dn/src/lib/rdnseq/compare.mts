@@ -81,7 +81,11 @@ export function compareRDNSequenceReverse(
  * @returns `true` if all RDNs match; `false` otherwise
  * @function
  */
-export const compareX500RDNSequence = compareRDNSequenceReverse;
+export const compareX500RDNSequence: (
+    a: RDNSequence,
+    b: RDNSequence,
+    getMatcher?: GetDistinguishedValueMatcher,
+) => boolean = compareRDNSequenceReverse;
 
 /**
  * @summary Compare two `RDNSequence`s assuming LDAP ordering (lowest entry first)

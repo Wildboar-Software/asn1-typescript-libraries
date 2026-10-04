@@ -1,4 +1,3 @@
-import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type { RelativeDistinguishedName } from "../RelativeDistinguishedName.ta.mjs";
 import {
     compareAttributeTypeAndValue,

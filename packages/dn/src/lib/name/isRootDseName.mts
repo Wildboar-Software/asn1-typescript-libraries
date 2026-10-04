@@ -1,5 +1,5 @@
 import type { Name } from "../Name.ta.mjs";
-import { RDNSequenceOfLength } from "../brands.mjs";
+import type { RDNSequenceOfLength } from "../brands.mjs";
 
 /**
  * @summary Test whether a directory name is a root DSE name.

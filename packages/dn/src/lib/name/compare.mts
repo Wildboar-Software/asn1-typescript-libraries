@@ -1,8 +1,5 @@
 import type { Name } from "../Name.ta.mjs";
-import {
-    compareRDNSequence,
-    compareRDNSequenceReverse,
-} from "../rdnseq/compare.mjs";
+import { compareRDNSequence } from "../rdnseq/compare.mjs";
 import type { GetDistinguishedValueMatcher } from "../atav/compare.mjs";
 
 /**
