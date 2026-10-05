@@ -189,9 +189,6 @@
     {
       "path": "./packages/map"
     },
-{
-      "path": "./packages/scpp"
-    },
     {
       "path": "./packages/csta"
     },
@@ -227,6 +224,9 @@
     },
     {
       "path": "./packages/cif"
+    },
+    {
+      "path": "./packages/gn"
     }
   ],
   "compilerOptions": {
