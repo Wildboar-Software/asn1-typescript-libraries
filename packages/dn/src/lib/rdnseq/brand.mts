@@ -7,7 +7,7 @@ import type {
     RelativeDistinguishedNameOf,
 } from "../brands.mjs";
 import { isRelativeDistinguishedNameOf } from "../rdn/brand.mjs";
-import type { DotDelimitedOidString } from "@wildboar/asn1";
+import type { DotDelimitedOidBrand } from "../brands.mjs";
 
 /**
  * @summary Test whether an `RDNSequence` has exactly the given number of
@@ -53,7 +53,7 @@ function isRDNSequenceOfLength <
  */
 export
 function isRDNSequenceOf <
-    T extends DotDelimitedOidString,
+    T extends DotDelimitedOidBrand,
     D extends RDNSequence = RDNSequence,
 > (
     dn: D,
@@ -81,7 +81,7 @@ function isRDNSequenceOf <
  */
 export
 function isRDNSequenceStartingWith <
-    T extends DotDelimitedOidString,
+    T extends DotDelimitedOidBrand,
     D extends RDNSequence = RDNSequence,
 > (
     dn: D,
@@ -109,7 +109,7 @@ function isRDNSequenceStartingWith <
  */
 export
 function isRDNSequenceEndingWith <
-    T extends DotDelimitedOidString,
+    T extends DotDelimitedOidBrand,
     D extends RDNSequence = RDNSequence,
 > (
     dn: D,

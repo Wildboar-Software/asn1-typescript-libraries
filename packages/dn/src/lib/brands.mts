@@ -1,7 +1,6 @@
 import type { AttributeTypeAndValue } from "./AttributeTypeAndValue.ta.mjs";
 import type { RDNSequence } from "./RDNSequence.ta.mjs";
 import type { RelativeDistinguishedName } from "./RelativeDistinguishedName.ta.mjs";
-import type { DotDelimitedOidString } from "@wildboar/asn1";
 
 declare const attributeType: unique symbol;
 declare const rdnSequenceString: unique symbol;
@@ -12,6 +11,29 @@ declare const rdnSequenceBER: unique symbol;
 declare const relativeDistinguishedNameBER: unique symbol;
 declare const attributeTypeAndValueBER: unique symbol;
 declare const ditOrder: unique symbol;
+
+export type DotDelimitedOidBrand =
+    | `${"0" | "1" | "2"}.${number}`
+    | `${"0" | "1" | "2"}.${number}.${number}${string}`
+    ;
+
+// type IsDigits<S extends string> =
+//     S extends ""
+//         ? false
+//         : S extends `${Digit}${infer Rest}`
+//             ? Rest extends "" ? true : IsDigits<Rest>
+//             : false;
+
+// type ObjectIdentifierString<S extends string> =
+//     S extends `${infer Arc}.${infer Rest}`
+//         ? IsDigits<Arc> extends true
+//             ? ObjectIdentifierString<Rest> extends never
+//                 ? never
+//                 : S
+//             : never
+//         : IsDigits<S> extends true
+//             ? S
+//             : never;
 
 /**
  * @summary A string validated as an IETF RFC 4514 distinguished name.
@@ -223,7 +245,7 @@ type RDNSequenceCastableToDITOrder<O extends DITOrder> = RDNSequence & {
  * this is an `AttributeTypeAndValue` whose type is any one of them.
  */
 export
-type AttributeTypeAndValueOf<T extends DotDelimitedOidString> =
+type AttributeTypeAndValueOf<T extends DotDelimitedOidBrand> =
     AttributeTypeAndValue & {
         readonly [attributeType]: T;
     };
@@ -239,7 +261,7 @@ type AttributeTypeAndValueOf<T extends DotDelimitedOidString> =
  * different object identifiers are not assignable to each other.
  */
 export
-type RelativeDistinguishedNameOf<T extends DotDelimitedOidString> =
+type RelativeDistinguishedNameOf<T extends DotDelimitedOidBrand> =
     [AttributeTypeAndValueOf<T>];
 
 /**
@@ -299,7 +321,7 @@ type RDNSequenceOfLength<N extends number> =
  * An empty sequence is of every type.
  */
 export
-type RDNSequenceOf<T extends DotDelimitedOidString> =
+type RDNSequenceOf<T extends DotDelimitedOidBrand> =
     RelativeDistinguishedNameOf<T>[];
 
 /**

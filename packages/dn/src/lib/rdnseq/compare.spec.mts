@@ -47,7 +47,7 @@ describe("compareRDNSequence", () => {
         });
 
         it("returns false if one sequence is empty and the other is not", () => {
-            const seq: RDNSequence = [[[atav(id_at_commonName, "Smith")]]];
+            const seq: RDNSequence = [[atav(id_at_commonName, "Smith")]];
             expect(compareRDNSequence([], seq)).toBe(false);
             expect(compareRDNSequence(seq, [])).toBe(false);
         });

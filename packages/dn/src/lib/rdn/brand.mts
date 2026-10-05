@@ -1,10 +1,10 @@
-import { type DotDelimitedOidString } from "@wildboar/asn1";
 import type { RelativeDistinguishedName } from "../RelativeDistinguishedName.ta.mjs";
 import type {
     RelativeDistinguishedNameOf,
     RelativeDistinguishedNameOfLength,
 } from "../brands.mjs";
 import { isAttributeTypeAndValueOf } from "../atav/brand.mjs";
+import type { DotDelimitedOidBrand } from "../brands.mjs";
 
 /**
  * @summary Test whether a `RelativeDistinguishedName` consists of exactly
@@ -22,7 +22,7 @@ import { isAttributeTypeAndValueOf } from "../atav/brand.mjs";
  */
 export
 function isRelativeDistinguishedNameOf <
-    T extends DotDelimitedOidString,
+    T extends DotDelimitedOidBrand,
     R extends RelativeDistinguishedName = RelativeDistinguishedName,
 > (
     rdn: R,

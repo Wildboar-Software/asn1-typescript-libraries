@@ -7,7 +7,6 @@ import {
     ASN1UniversalType as _UniversalType,
     type OBJECT_IDENTIFIER,
     ObjectIdentifier,
-    type DotDelimitedOidString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -44,6 +43,7 @@ import type {
     EscapedAttributeTypeAndValueString,
 } from "./brands.mjs";
 import decodeBERElement from "./decodeBERElement.mjs";
+import type { DotDelimitedOidBrand } from "./brands.mjs";
 
 /**
  * @summary Reversible JSON encoding of an {@link AttributeTypeAndValue}.
@@ -384,7 +384,7 @@ export class AttributeTypeAndValue {
      * @function
      * @public
      */
-    public isOf<T extends DotDelimitedOidString>(
+    public isOf<T extends DotDelimitedOidBrand>(
         types: T | readonly T[],
     ): this is AttributeTypeAndValueOf<T> {
         return isAttributeTypeAndValueOf(this, types);

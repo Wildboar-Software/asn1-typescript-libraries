@@ -7,7 +7,7 @@
         "distinguished",
         "dn"
     ],
-    "version": "1.0.1",
+    "version": "1.0.2",
     "private": false,
     "license": "MIT",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
@@ -31,7 +31,7 @@
         "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
     },
     "dependencies": {
-        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@^11.4.0",
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
         "@wildboar/teletex": "npm:@jsr/wildboar__teletex@^1.0.2"
     },
     "type": "module",

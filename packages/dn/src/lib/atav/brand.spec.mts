@@ -4,9 +4,9 @@ import { BER, _encodeUTF8String } from "@wildboar/asn1/functional";
 import { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
 import type {
     AttributeTypeAndValueOf,
-    ObjectIdentifierString,
 } from "../brands.mjs";
 import { isAttributeTypeAndValueOf } from "./brand.mjs";
+import type { DotDelimitedOidBrand } from "../brands.mjs";
 
 function atavOf (arcs: number[], value: string): AttributeTypeAndValue {
     return new AttributeTypeAndValue(
@@ -42,8 +42,8 @@ describe("AttributeTypeAndValueOf", () => {
         expectTypeOf<AttributeTypeAndValueOf<string>>().toBeObject();
         // @ts-expect-error A name, not dotted-decimal notation.
         expectTypeOf<AttributeTypeAndValueOf<"commonName">>().toBeObject();
-        expectTypeOf<"2.5.4.3">().toExtend<ObjectIdentifierString>();
-        expectTypeOf<"commonName">().not.toExtend<ObjectIdentifierString>();
+        expectTypeOf<"2.5.4.3">().toExtend<DotDelimitedOidBrand>();
+        expectTypeOf<"commonName">().not.toExtend<DotDelimitedOidBrand>();
     });
 });
 
