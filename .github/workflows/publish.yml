@@ -48,7 +48,7 @@ jobs:
           # - "mms"
           # - "nlm"
           # - "ocsp"
-          # - "or-address"
+          - "or-address"
           # - "pc"
           # - "pkcs"
           # - "pki-stub"

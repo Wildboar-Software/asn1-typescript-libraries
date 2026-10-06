@@ -20,10 +20,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type TeletexOrganizationName = TeletexString; // TeletexString
 
 
-export const _decode_TeletexOrganizationName = $._decodeTeletexString;
+export const _decode_TeletexOrganizationName: $.ASN1Decoder<TeletexOrganizationName> = $._decodeTeletexString;
 
 
-export const _encode_TeletexOrganizationName = $._encodeTeletexString;
+export const _encode_TeletexOrganizationName: $.ASN1Encoder<TeletexOrganizationName> = $._encodeTeletexString;
 
 
 /* eslint-enable */

@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type PDSName = PrintableString; // PrintableString
 
 
-export const _decode_PDSName = $._decodePrintableString;
+export const _decode_PDSName: $.ASN1Decoder<PDSName> = $._decodePrintableString;
 
 
-export const _encode_PDSName = $._encodePrintableString;
+export const _encode_PDSName: $.ASN1Encoder<PDSName> = $._encodePrintableString;
 
 
 /* eslint-enable */
