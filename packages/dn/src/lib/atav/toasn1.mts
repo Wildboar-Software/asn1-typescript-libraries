@@ -21,7 +21,7 @@ export
 function attributeTypeAndValueToASN1String (
     atav: AttributeTypeAndValue,
 ): string {
-    return `{ type ${atav.type_.toString()}, value ${atav.value.toString()} }`;
+    return `{ type ${atav.type_.asn1Notation}, value ${atav.value.toString()} }`;
 }
 
 export default attributeTypeAndValueToASN1String;

@@ -19,7 +19,7 @@ describe("attributeTypeAndValueToASN1String()", () => {
     it("writes the numeric OID and the value's toString()", () => {
         const a = atav(commonNameOID, "Jonathan");
         expect(attributeTypeAndValueToASN1String(a))
-            .toBe(`{ type 2.5.4.3, value ${a.value.toString()} }`);
+            .toBe(`{ type { 2 5 4 3 }, value ${a.value.toString()} }`);
         expect(a.toASN1String()).toBe(attributeTypeAndValueToASN1String(a));
         expect(attributeTypeAndValueToASN1String(a)).toContain("Jonathan");
     });

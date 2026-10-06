@@ -7,7 +7,7 @@
         "distinguished",
         "dn"
     ],
-    "version": "1.0.2",
+    "version": "1.0.3",
     "private": false,
     "license": "MIT",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
