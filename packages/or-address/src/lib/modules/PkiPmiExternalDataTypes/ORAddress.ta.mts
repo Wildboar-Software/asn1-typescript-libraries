@@ -2,17 +2,17 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    BuiltInDomainDefinedAttributes,
+    type BuiltInDomainDefinedAttributes,
     _decode_BuiltInDomainDefinedAttributes,
     _encode_BuiltInDomainDefinedAttributes,
-    BuiltInStandardAttributes,
+    type BuiltInStandardAttributes,
     _decode_BuiltInStandardAttributes,
     _encode_BuiltInStandardAttributes,
-    ExtensionAttributes,
+    type ExtensionAttributes,
     _decode_ExtensionAttributes,
     _encode_ExtensionAttributes,
     _decode_TeletexPersonalName,
@@ -20,7 +20,6 @@ import {
     physical_delivery_country_name,
     unformatted_postal_address,
     universal_unformatted_postal_address,
-    ub_domain_defined_attribute_type_length,
     ub_domain_defined_attributes,
     ub_extension_attributes,
 } from "../PkiPmiExternalDataTypes/index.mjs";

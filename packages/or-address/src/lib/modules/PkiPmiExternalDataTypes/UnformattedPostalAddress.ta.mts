@@ -1,9 +1,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
-    PrintableString,
-    TeletexString,
+    type OPTIONAL,
+    type PrintableString,
+    type TeletexString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import teletexToString from "@wildboar/teletex";
@@ -118,7 +118,7 @@ export class UnformattedPostalAddress {
      * @public
      * @function
      */
-    public toJSON(): { "printable-address"?: string[], "teletex-string"?: string } {
+    public toJSON(): { "printable-address"?: string[] | undefined, "teletex-string"?: string | undefined } {
         return {
             "printable-address": this.printable_address?.map((s) => s.toString()),
             "teletex-string": this.teletex_string ? teletexToString(this.teletex_string) : undefined,

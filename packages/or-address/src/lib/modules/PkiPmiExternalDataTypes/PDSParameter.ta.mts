@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
-    PrintableString,
-    TeletexString,
+    type OPTIONAL,
+    type PrintableString,
+    type TeletexString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import teletexToString from "@wildboar/teletex";
@@ -83,7 +83,7 @@ export class PDSParameter {
      * @public
      * @function
      */
-    public toJSON(): { printable_string?: string, teletex_string?: string } {
+    public toJSON(): { printable_string?: string | undefined, teletex_string?: string | undefined } {
         return {
             printable_string: this.printable_string?.toString(),
             teletex_string: this.teletex_string

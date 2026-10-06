@@ -19,5 +19,16 @@
   ],
   "include": [
     "**/*.mts"
+  ],
+  "references": [
+    {
+      "path": "../tcap/tsconfig.lib.json"
+    },
+    {
+      "path": "../map/tsconfig.lib.json"
+    },
+    {
+      "path": "../rose/tsconfig.lib.json"
+    }
   ]
 }

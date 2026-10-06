@@ -12,7 +12,11 @@
   "include": [
     "src/**/*.mts",
   ],
-  "references": [],
+  "references": [
+    {
+      "path": "../presentation-address/tsconfig.lib.json"
+    }
+  ],
   "exclude": [
     "vite.config.ts",
     "vite.config.mts",

@@ -12,6 +12,8 @@ import { id_at_serialNumber } from "../modules/SelectedAttributeTypes/id-at-seri
 import { id_at_stateOrProvinceName } from "../modules/SelectedAttributeTypes/id-at-stateOrProvinceName.va.mjs";
 import { id_at_surname } from "../modules/SelectedAttributeTypes/id-at-surname.va.mjs";
 import { id_at_title } from "../modules/SelectedAttributeTypes/id-at-title.va.mjs";
+import { id_at_countryCode3c } from "../modules/SelectedAttributeTypes/id-at-countryCode3c.va.mjs";
+import { id_at_countryCode3n } from "../modules/SelectedAttributeTypes/id-at-countryCode3n.va.mjs";
 
 const ret: Record<string, string> = {};
 // Recognized attributes sourced from https://tools.ietf.org/html/rfc5280#section-4.1.2.4.
@@ -29,8 +31,9 @@ ret[id_at_givenName.toString()] = "gn";
 ret[id_at_initials.toString()] = "initials";
 ret[id_at_pseudonym.toString()] = "pseudonym";
 ret[id_at_generationQualifier.toString()] = "generationQualifier";
+ret[id_at_countryCode3c.toString()] = "c3";
+ret[id_at_countryCode3n.toString()] = "n3";
 
-/**
- * @deprecated
- */
+export const oidToAttributeNameMap = new Map<string, string>(Object.entries(ret));
+
 export default ret;

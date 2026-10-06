@@ -40,7 +40,6 @@
     "main": "./src/index.mjs",
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@^11.1.0",
-        "@wildboar/dn": "npm:@jsr/wildboar__dn@1.x.x",
         "@wildboar/ldap": "npm:@jsr/wildboar__ldap@2.x.x",
         "@wildboar/or-address": "npm:@jsr/wildboar__or-address@1.x.x",
         "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@2.x.x",

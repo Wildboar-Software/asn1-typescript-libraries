@@ -25,7 +25,7 @@
   ],
   "references": [
     {
-      "path": "../x500/tsconfig.lib.json"
+      "path": "../cms/tsconfig.lib.json"
     },
     {
       "path": "../cbeff/tsconfig.lib.json"

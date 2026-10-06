@@ -2,8 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    NumericString,
-    OPTIONAL,
+    type NumericString,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ub_e163_4_number_length } from "./ub-e163-4-number-length.va.mjs";
@@ -103,7 +103,7 @@ export class ExtendedNetworkAddress_e163_4_address {
      * @public
      * @function
      */
-    public toJSON(): { number: string, "sub-address"?: string } {
+    public toJSON(): { number: string, "sub-address"?: string | undefined } {
         return {
             number: this.number_.toString(),
             "sub-address": this.sub_address?.toString(),

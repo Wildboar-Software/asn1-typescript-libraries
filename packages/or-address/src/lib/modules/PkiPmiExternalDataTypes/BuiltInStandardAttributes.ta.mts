@@ -2,36 +2,36 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AdministrationDomainName,
+    type AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
 } from "../PkiPmiExternalDataTypes/AdministrationDomainName.ta.mjs";
 import {
-    CountryName,
+    type CountryName,
     _decode_CountryName,
     _encode_CountryName,
 } from "../PkiPmiExternalDataTypes/CountryName.ta.mjs";
 import {
-    NetworkAddress,
+    type NetworkAddress,
     _decode_NetworkAddress,
     _encode_NetworkAddress,
 } from "../PkiPmiExternalDataTypes/NetworkAddress.ta.mjs";
 import {
-    NumericUserIdentifier,
+    type NumericUserIdentifier,
     _decode_NumericUserIdentifier,
     _encode_NumericUserIdentifier,
 } from "../PkiPmiExternalDataTypes/NumericUserIdentifier.ta.mjs";
 import {
-    OrganizationalUnitNames,
+    type OrganizationalUnitNames,
     _decode_OrganizationalUnitNames,
     _encode_OrganizationalUnitNames,
 } from "../PkiPmiExternalDataTypes/OrganizationalUnitNames.ta.mjs";
 import {
-    OrganizationName,
+    type OrganizationName,
     _decode_OrganizationName,
     _encode_OrganizationName,
 } from "../PkiPmiExternalDataTypes/OrganizationName.ta.mjs";
@@ -41,12 +41,12 @@ import {
     _encode_PersonalName,
 } from "../PkiPmiExternalDataTypes/PersonalName.ta.mjs";
 import {
-    PrivateDomainName,
+    type PrivateDomainName,
     _decode_PrivateDomainName,
     _encode_PrivateDomainName,
 } from "../PkiPmiExternalDataTypes/PrivateDomainName.ta.mjs";
 import {
-    TerminalIdentifier,
+    type TerminalIdentifier,
     _decode_TerminalIdentifier,
     _encode_TerminalIdentifier,
 } from "../PkiPmiExternalDataTypes/TerminalIdentifier.ta.mjs";

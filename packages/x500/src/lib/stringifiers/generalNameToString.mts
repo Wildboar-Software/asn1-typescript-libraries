@@ -13,9 +13,6 @@ import nameToString from "./nameToString.mjs";
 //     registeredID               [8]  OBJECT IDENTIFIER,
 //     ... }
 
-/**
- * @deprecated
- */
 export default function generalNameToString(gn: GeneralName): string {
     const key = Object.keys(gn)[0];
     if ("otherName" in gn) {

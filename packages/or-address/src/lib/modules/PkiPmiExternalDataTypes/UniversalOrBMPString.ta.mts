@@ -2,12 +2,12 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
-    PrintableString,
+    type OPTIONAL,
+    type PrintableString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    UniversalOrBMPString_character_encoding,
+    type UniversalOrBMPString_character_encoding,
     _decode_UniversalOrBMPString_character_encoding,
     _encode_UniversalOrBMPString_character_encoding,
 } from "../PkiPmiExternalDataTypes/UniversalOrBMPString-character-encoding.ta.mjs";

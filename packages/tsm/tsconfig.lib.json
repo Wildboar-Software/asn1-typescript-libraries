@@ -23,13 +23,10 @@
   ],
   "references": [
     {
-      "path": "../x500/tsconfig.lib.json"
+      "path": "../tai/tsconfig.lib.json"
     },
     {
       "path": "../bip/tsconfig.lib.json"
-    },
-    {
-      "path": "../tai/tsconfig.lib.json"
     },
     {
       "path": "../acbio/tsconfig.lib.json"

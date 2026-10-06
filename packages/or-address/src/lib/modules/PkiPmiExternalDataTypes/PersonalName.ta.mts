@@ -2,8 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
-    PrintableString,
+    type OPTIONAL,
+    type PrintableString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { escape_oraddress_attribute_value, isPrintableString } from "../../utils.mjs";

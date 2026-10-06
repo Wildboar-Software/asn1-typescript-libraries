@@ -22,9 +22,6 @@
   ],
   "references": [
     {
-      "path": "../x500/tsconfig.lib.json"
-    },
-    {
       "path": "../rose/tsconfig.lib.json"
     }
   ]

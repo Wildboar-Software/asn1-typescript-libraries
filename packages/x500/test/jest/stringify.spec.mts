@@ -54,11 +54,11 @@ describe("Stringifiers", () => {
     };
 
     test("can stringify a DN", () => {
-        expect(rdnSequenceToString(dn)).toBe("gn=Mr. Is\\/uer, Jr.+sn=Mr. Is\\/uer, Jr./o=Mr. Is\\/uer, Jr.");
+        expect(rdnSequenceToString(dn)).toBe("gn=Mr. Is/uer\\, Jr.+sn=Mr. Is/uer\\, Jr.,o=Mr. Is/uer\\, Jr.");
     });
 
     test("can stringify a GeneralName", () => {
-        expect(generalNameToString(gn)).toBe("directoryName:gn=Mr. Is\\/uer, Jr.+sn=Mr. Is\\/uer, Jr./o=Mr. Is\\/uer, Jr.");
+        expect(generalNameToString(gn)).toBe("directoryName:gn=Mr. Is/uer\\, Jr.+sn=Mr. Is/uer\\, Jr.,o=Mr. Is/uer\\, Jr.");
     });
 
     test("can convert a string to an RDNSequence", () => {

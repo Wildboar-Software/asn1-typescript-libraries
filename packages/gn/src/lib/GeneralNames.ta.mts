@@ -4,11 +4,6 @@ import {
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-    DERElement,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -22,9 +17,9 @@ import {
  * @description
  *
  * A `SEQUENCE SIZE (1..MAX)` of {@link GeneralName}. Empty is not allowed.
- * Sequence order is the encoded order; matching is by the rules of each name
- * form, not by position. The issuing CA shall not assign the same name of a
- * given form to different entities.
+ * Sequence order is the encoded order. This package does not add comparison,
+ * string, or JSON functions for the sequence: it is an array, so those are
+ * ordinary array operations over the `GeneralName` functions.
  *
  * ### ASN.1 Definition:
  *
@@ -40,20 +35,41 @@ export type GeneralNames = GeneralName[]; // SequenceOfType
  * @param {_Element} el The element being decoded.
  * @returns {GeneralNames} The decoded data structure.
  */
-export function _decode_GeneralNames(el: _Element): GeneralNames {
-    return el.sequenceOf.map((x) => _decode_GeneralName(x));
-}
+export const _decode_GeneralNames: $.ASN1Decoder<GeneralNames> = $._decodeSequenceOf<GeneralName>(
+    () => _decode_GeneralName,
+);
 
 /**
  * @summary Encodes a(n) GeneralNames into an ASN.1 Element.
+ * @description
+ *
+ * The `elGetter` argument chooses the codec (BER, CER, or DER) for the
+ * sequence and for every name inside it.
+ *
  * @function
- * @param value The element being encoded.
+ * @param value The names being encoded.
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GeneralNames, encoded as an ASN.1 Element.
  */
-export function _encode_GeneralNames(value: GeneralNames, _elGetter: $.ASN1Encoder<GeneralNames>): _Element {
-    return DERElement.fromSequence(value.map((x) => _encode_GeneralName(x, $.DER)));
+export function _encode_GeneralNames(
+    value: GeneralNames,
+    elGetter: $.ASN1Encoder<GeneralNames>,
+): _Element {
+    const el: _Element = elGetter(value, elGetter);
+    const children: _Element[] = new Array(value.length);
+    for (let i: number = 0; i < value.length; i++) {
+        const name: GeneralName | undefined = value[i];
+        if (name === undefined) {
+            throw new TypeError("GeneralNames cannot contain an empty slot");
+        }
+        const childGetter: $.ASN1Encoder<GeneralName> = () => elGetter(value, elGetter);
+        children[i] = _encode_GeneralName(name, childGetter);
+    }
+    el.sequence = children;
+    el.tagClass = _TagClass.universal;
+    el.construction = _Construction.constructed;
+    el.tagNumber = _UniversalType.sequence;
+    return el;
 }
-
 
 /* eslint-enable */
