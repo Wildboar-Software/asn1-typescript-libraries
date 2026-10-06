@@ -27,20 +27,25 @@ import { teletexDomainDefinedAttributeFromString } from "../../parse.mjs";
  *
  */
 export class TeletexDomainDefinedAttribute {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: TeletexString;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: TeletexString;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: TeletexString,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: TeletexString
+        type_: TeletexString,
+        value: TeletexString
     ) {
+        this.type_ = type_;
+        this.value = value;
         // We use 32 here because I think diacritics don't count as characters
         // for these purposes. This limit is the worst-case scenario: a
         // diacritic on every character.

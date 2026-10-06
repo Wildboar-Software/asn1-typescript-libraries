@@ -69,39 +69,46 @@ const DELIMITER = ';'.charCodeAt(0);
  *
  */
 export class ORAddress {
+    /**
+     * @summary `built_in_standard_attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly built_in_standard_attributes: BuiltInStandardAttributes;
+    /**
+     * @summary `built_in_domain_defined_attributes`.
+     * @description
+     *
+     * SEQUENCE SIZE (1..4) of MD-defined PrintableString attributes
+     * (ITU-T X.402 (1999), §18.1). Omit this component rather than encode
+     * an empty SEQUENCE. Teletex/universal twins are extension attributes.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly built_in_domain_defined_attributes?: OPTIONAL<BuiltInDomainDefinedAttributes>;
+    /**
+     * @summary `extension_attributes`.
+     * @description
+     *
+     * SET SIZE (1..256) of `ExtensionAttribute` (ITU-T X.411 (1999),
+     * Annex A). SET order is insignificant; each `extension-type` must be
+     * unique. Omit rather than encode empty. Holds teletex/universal and
+     * physical-delivery attributes listed in X.402 Table 9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extension_attributes?: OPTIONAL<ExtensionAttributes>;
+
     constructor(
-        /**
-         * @summary `built_in_standard_attributes`.
-         * @public
-         * @readonly
-         */
-        readonly built_in_standard_attributes: BuiltInStandardAttributes,
-        /**
-         * @summary `built_in_domain_defined_attributes`.
-         * @description
-         *
-         * SEQUENCE SIZE (1..4) of MD-defined PrintableString attributes
-         * (ITU-T X.402 (1999), §18.1). Omit this component rather than encode
-         * an empty SEQUENCE. Teletex/universal twins are extension attributes.
-         *
-         * @public
-         * @readonly
-         */
-        readonly built_in_domain_defined_attributes?: OPTIONAL<BuiltInDomainDefinedAttributes>,
-        /**
-         * @summary `extension_attributes`.
-         * @description
-         *
-         * SET SIZE (1..256) of `ExtensionAttribute` (ITU-T X.411 (1999),
-         * Annex A). SET order is insignificant; each `extension-type` must be
-         * unique. Omit rather than encode empty. Holds teletex/universal and
-         * physical-delivery attributes listed in X.402 Table 9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extension_attributes?: OPTIONAL<ExtensionAttributes>
+        built_in_standard_attributes: BuiltInStandardAttributes,
+        built_in_domain_defined_attributes?: OPTIONAL<BuiltInDomainDefinedAttributes>,
+        extension_attributes?: OPTIONAL<ExtensionAttributes>
     ) {
+        this.built_in_standard_attributes = built_in_standard_attributes;
+        this.built_in_domain_defined_attributes = built_in_domain_defined_attributes;
+        this.extension_attributes = extension_attributes;
         if (
             this.built_in_domain_defined_attributes
             && (this.built_in_domain_defined_attributes.length > ub_domain_defined_attributes)

@@ -14,7 +14,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "verbatimModuleSyntax": true,
-    "erasableSyntaxOnly": false,
+    "erasableSyntaxOnly": true,
     "isolatedDeclarations": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

@@ -70,32 +70,41 @@ function universalOrBMPStringsAreEqual(
  *
  */
 export class UniversalPersonalName {
+    /**
+     * @summary `surname`.
+     * @public
+     * @readonly
+     */
+    public readonly surname: UniversalOrBMPString;
+    /**
+     * @summary `given_name`.
+     * @public
+     * @readonly
+     */
+    public readonly given_name?: OPTIONAL<UniversalOrBMPString>;
+    /**
+     * @summary `initials`.
+     * @public
+     * @readonly
+     */
+    public readonly initials?: OPTIONAL<UniversalOrBMPString>;
+    /**
+     * @summary `generation_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly generation_qualifier?: OPTIONAL<UniversalOrBMPString>;
+
     constructor(
-        /**
-         * @summary `surname`.
-         * @public
-         * @readonly
-         */
-        readonly surname: UniversalOrBMPString,
-        /**
-         * @summary `given_name`.
-         * @public
-         * @readonly
-         */
-        readonly given_name?: OPTIONAL<UniversalOrBMPString>,
-        /**
-         * @summary `initials`.
-         * @public
-         * @readonly
-         */
-        readonly initials?: OPTIONAL<UniversalOrBMPString>,
-        /**
-         * @summary `generation_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly generation_qualifier?: OPTIONAL<UniversalOrBMPString>
+        surname: UniversalOrBMPString,
+        given_name?: OPTIONAL<UniversalOrBMPString>,
+        initials?: OPTIONAL<UniversalOrBMPString>,
+        generation_qualifier?: OPTIONAL<UniversalOrBMPString>
     ) {
+        this.surname = surname;
+        this.given_name = given_name;
+        this.initials = initials;
+        this.generation_qualifier = generation_qualifier;
         const s = this.surname.toString();
         if (s.length > ub_universal_surname_length) {
             throw new Error("UniversalPersonalName.surname must be 64 characters or less");

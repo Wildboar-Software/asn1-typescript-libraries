@@ -34,26 +34,32 @@ import {
  *
  */
 export class UniversalOrBMPString {
+    /**
+     * @summary `character_encoding`.
+     * @public
+     * @readonly
+     */
+    public readonly character_encoding: UniversalOrBMPString_character_encoding;
+    /**
+     * @summary `iso_639_language_code`.
+     * @description
+     *
+     * ISO 639 language (2 chars) optionally plus space plus ISO 3166
+     * country (5 chars). **Ignored when comparing OR-addresses** (ITU-T
+     * X.402 (1999), §18.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iso_639_language_code?: OPTIONAL<PrintableString>;
+
     constructor(
-        /**
-         * @summary `character_encoding`.
-         * @public
-         * @readonly
-         */
-        readonly character_encoding: UniversalOrBMPString_character_encoding,
-        /**
-         * @summary `iso_639_language_code`.
-         * @description
-         *
-         * ISO 639 language (2 chars) optionally plus space plus ISO 3166
-         * country (5 chars). **Ignored when comparing OR-addresses** (ITU-T
-         * X.402 (1999), §18.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iso_639_language_code?: OPTIONAL<PrintableString>
-    ) {}
+        character_encoding: UniversalOrBMPString_character_encoding,
+        iso_639_language_code?: OPTIONAL<PrintableString>
+    ) {
+        this.character_encoding = character_encoding;
+        this.iso_639_language_code = iso_639_language_code;
+    }
 
     /**
      * @summary Restructures an object into a UniversalOrBMPString

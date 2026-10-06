@@ -23,20 +23,25 @@ import { ub_e163_4_sub_address_length } from "./ub-e163-4-sub-address-length.va.
  *
  */
 export class ExtendedNetworkAddress_e163_4_address {
+    /**
+     * @summary `number_`.
+     * @public
+     * @readonly
+     */
+    public readonly number_: NumericString;
+    /**
+     * @summary `sub_address`.
+     * @public
+     * @readonly
+     */
+    public readonly sub_address?: OPTIONAL<NumericString>;
+
     constructor(
-        /**
-         * @summary `number_`.
-         * @public
-         * @readonly
-         */
-        readonly number_: NumericString,
-        /**
-         * @summary `sub_address`.
-         * @public
-         * @readonly
-         */
-        readonly sub_address?: OPTIONAL<NumericString>
+        number_: NumericString,
+        sub_address?: OPTIONAL<NumericString>
     ) {
+        this.number_ = number_;
+        this.sub_address = sub_address;
         if (number_.length > ub_e163_4_number_length) {
             throw new Error("ExtendedNetworkAddress-e163-4-address.number must be 15 characters or less");
         }

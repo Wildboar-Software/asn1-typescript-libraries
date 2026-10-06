@@ -32,20 +32,26 @@ import { unformattedPostalAddressFromString } from "../../parse.mjs";
  *
  */
 export class UnformattedPostalAddress {
+    /**
+     * @summary `printable_address`.
+     * @public
+     * @readonly
+     */
+    public readonly printable_address?: OPTIONAL<PrintableString[]>;
+    /**
+     * @summary `teletex_string`.
+     * @public
+     * @readonly
+     */
+    public readonly teletex_string?: OPTIONAL<TeletexString>;
+
     constructor(
-        /**
-         * @summary `printable_address`.
-         * @public
-         * @readonly
-         */
-        readonly printable_address?: OPTIONAL<PrintableString[]>,
-        /**
-         * @summary `teletex_string`.
-         * @public
-         * @readonly
-         */
-        readonly teletex_string?: OPTIONAL<TeletexString>
-    ) {}
+        printable_address?: OPTIONAL<PrintableString[]>,
+        teletex_string?: OPTIONAL<TeletexString>
+    ) {
+        this.printable_address = printable_address;
+        this.teletex_string = teletex_string;
+    }
 
     /**
      * @summary Restructures an object into a UnformattedPostalAddress

@@ -105,91 +105,108 @@ const DELIMITER = ';'.charCodeAt(0);
  *
  */
 export class BuiltInStandardAttributes {
+    /**
+     * @summary `country_name`.
+     * @description
+     *
+     * ISO 3166 alpha-2 or X.121 DCC (ITU-T X.402 (1999), §18.3.3). The two
+     * encodings are equivalent for comparison (§18.4 b). `XX` is the
+     * international MD registration authority.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly country_name?: OPTIONAL<CountryName>;
+    /**
+     * @summary `administration_domain_name`.
+     * @description
+     *
+     * ADMD relative to `country_name` (ITU-T X.402 (1999), §18.3.1). A
+     * single space is "any ADMD"; a single `0` is an unreachable PRMD.
+     * Numeric vs Printable digits are equivalent. SIZE (0..16) allows empty
+     * strings.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly administration_domain_name?: OPTIONAL<AdministrationDomainName>;
+    /**
+     * @summary `network_address`.
+     * @public
+     * @readonly
+     */
+    public readonly network_address?: OPTIONAL<NetworkAddress>;
+    /**
+     * @summary `terminal_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly terminal_identifier?: OPTIONAL<TerminalIdentifier>;
+    /**
+     * @summary `private_domain_name`.
+     * @public
+     * @readonly
+     */
+    public readonly private_domain_name?: OPTIONAL<PrivateDomainName>;
+    /**
+     * @summary `organization_name`.
+     * @public
+     * @readonly
+     */
+    public readonly organization_name?: OPTIONAL<OrganizationName>;
+    /**
+     * @summary `numeric_user_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly numeric_user_identifier?: OPTIONAL<NumericUserIdentifier>;
+    /**
+     * @summary `personal_name`.
+     * @public
+     * @readonly
+     */
+    public readonly personal_name?: OPTIONAL<PersonalName>;
+    /**
+     * @summary `organizational_unit_names`.
+     *
+     * @remarks
+     * Order is significant—OU1 is the highest-level (most significant) organizational unit,
+     * OU2 is the next most significant, and so on through OU4 (least significant).
+     *
+     * Note: The order of organizational unit names in the encoded data structure is [OU1, OU2, OU3, OU4]
+     * (most significant to least significant).
+     *
+     * However, when writing the string representation for an O/R Address (see RFC 2156 and RFC 1685),
+     * the attributes are listed in reverse order: OU4 (if present) first, down to OU1 last.
+     * (See RFC 2156, Section 4.1.3: "The string representation reverses the order of the attributes—OU4, ..., OU1.")
+     *
+     * Always respect this order for both serialization and parsing to ensure interoperability.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly organizational_unit_names?: OPTIONAL<OrganizationalUnitNames>;
+
     constructor(
-        /**
-         * @summary `country_name`.
-         * @description
-         *
-         * ISO 3166 alpha-2 or X.121 DCC (ITU-T X.402 (1999), §18.3.3). The two
-         * encodings are equivalent for comparison (§18.4 b). `XX` is the
-         * international MD registration authority.
-         *
-         * @public
-         * @readonly
-         */
-        readonly country_name?: OPTIONAL<CountryName>,
-        /**
-         * @summary `administration_domain_name`.
-         * @description
-         *
-         * ADMD relative to `country_name` (ITU-T X.402 (1999), §18.3.1). A
-         * single space is "any ADMD"; a single `0` is an unreachable PRMD.
-         * Numeric vs Printable digits are equivalent. SIZE (0..16) allows empty
-         * strings.
-         *
-         * @public
-         * @readonly
-         */
-        readonly administration_domain_name?: OPTIONAL<AdministrationDomainName>,
-        /**
-         * @summary `network_address`.
-         * @public
-         * @readonly
-         */
-        readonly network_address?: OPTIONAL<NetworkAddress>,
-        /**
-         * @summary `terminal_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly terminal_identifier?: OPTIONAL<TerminalIdentifier>,
-        /**
-         * @summary `private_domain_name`.
-         * @public
-         * @readonly
-         */
-        readonly private_domain_name?: OPTIONAL<PrivateDomainName>,
-        /**
-         * @summary `organization_name`.
-         * @public
-         * @readonly
-         */
-        readonly organization_name?: OPTIONAL<OrganizationName>,
-        /**
-         * @summary `numeric_user_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly numeric_user_identifier?: OPTIONAL<NumericUserIdentifier>,
-        /**
-         * @summary `personal_name`.
-         * @public
-         * @readonly
-         */
-        readonly personal_name?: OPTIONAL<PersonalName>,
-        /**
-         /**
-          * @summary `organizational_unit_names`.
-          *
-          * @remarks
-          * Order is significant—OU1 is the highest-level (most significant) organizational unit,
-          * OU2 is the next most significant, and so on through OU4 (least significant).
-          *
-          * Note: The order of organizational unit names in the encoded data structure is [OU1, OU2, OU3, OU4]
-          * (most significant to least significant).
-          *
-          * However, when writing the string representation for an O/R Address (see RFC 2156 and RFC 1685),
-          * the attributes are listed in reverse order: OU4 (if present) first, down to OU1 last.
-          * (See RFC 2156, Section 4.1.3: "The string representation reverses the order of the attributes—OU4, ..., OU1.")
-          *
-          * Always respect this order for both serialization and parsing to ensure interoperability.
-          *
-          * @public
-          * @readonly
-          */
-   
-        readonly organizational_unit_names?: OPTIONAL<OrganizationalUnitNames>
+        country_name?: OPTIONAL<CountryName>,
+        administration_domain_name?: OPTIONAL<AdministrationDomainName>,
+        network_address?: OPTIONAL<NetworkAddress>,
+        terminal_identifier?: OPTIONAL<TerminalIdentifier>,
+        private_domain_name?: OPTIONAL<PrivateDomainName>,
+        organization_name?: OPTIONAL<OrganizationName>,
+        numeric_user_identifier?: OPTIONAL<NumericUserIdentifier>,
+        personal_name?: OPTIONAL<PersonalName>,
+        organizational_unit_names?: OPTIONAL<OrganizationalUnitNames>
     ) {
+        this.country_name = country_name;
+        this.administration_domain_name = administration_domain_name;
+        this.network_address = network_address;
+        this.terminal_identifier = terminal_identifier;
+        this.private_domain_name = private_domain_name;
+        this.organization_name = organization_name;
+        this.numeric_user_identifier = numeric_user_identifier;
+        this.personal_name = personal_name;
+        this.organizational_unit_names = organizational_unit_names;
         if (this.country_name) {
             if ("iso_3166_alpha2_code" in this.country_name) {
                 if (!/^[A-Z]{2}$/.test(this.country_name.iso_3166_alpha2_code)) {

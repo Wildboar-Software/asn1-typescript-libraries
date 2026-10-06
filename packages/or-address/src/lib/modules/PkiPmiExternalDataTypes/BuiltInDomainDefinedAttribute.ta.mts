@@ -30,20 +30,25 @@ import { builtInDomainDefinedAttributeFromString } from "../../parse.mjs";
  *
  */
 export class BuiltInDomainDefinedAttribute {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: PrintableString;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: PrintableString;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: PrintableString,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: PrintableString
+        type_: PrintableString,
+        value: PrintableString
     ) {
+        this.type_ = type_;
+        this.value = value;
         if (type_.length > ub_domain_defined_attribute_type_length) {
             throw new Error("BuiltInDomainDefinedAttribute.type must be 16 characters or less");
         }

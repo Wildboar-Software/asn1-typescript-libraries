@@ -71,32 +71,41 @@ function teletexStringsAreEqual(
  *
  */
 export class TeletexPersonalName {
+    /**
+     * @summary `surname`.
+     * @public
+     * @readonly
+     */
+    public readonly surname: TeletexString;
+    /**
+     * @summary `given_name`.
+     * @public
+     * @readonly
+     */
+    public readonly given_name?: OPTIONAL<TeletexString>;
+    /**
+     * @summary `initials`.
+     * @public
+     * @readonly
+     */
+    public readonly initials?: OPTIONAL<TeletexString>;
+    /**
+     * @summary `generation_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly generation_qualifier?: OPTIONAL<TeletexString>;
+
     constructor(
-        /**
-         * @summary `surname`.
-         * @public
-         * @readonly
-         */
-        readonly surname: TeletexString,
-        /**
-         * @summary `given_name`.
-         * @public
-         * @readonly
-         */
-        readonly given_name?: OPTIONAL<TeletexString>,
-        /**
-         * @summary `initials`.
-         * @public
-         * @readonly
-         */
-        readonly initials?: OPTIONAL<TeletexString>,
-        /**
-         * @summary `generation_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly generation_qualifier?: OPTIONAL<TeletexString>
+        surname: TeletexString,
+        given_name?: OPTIONAL<TeletexString>,
+        initials?: OPTIONAL<TeletexString>,
+        generation_qualifier?: OPTIONAL<TeletexString>
     ) {
+        this.surname = surname;
+        this.given_name = given_name;
+        this.initials = initials;
+        this.generation_qualifier = generation_qualifier;
         if (surname.length > ub_surname_length) {
             throw new Error("TeletexPersonalName.surname must be 40 characters or less");
         }
