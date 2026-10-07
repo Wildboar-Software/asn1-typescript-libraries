@@ -158,7 +158,7 @@ let _cached_encoder_for_ORAddress: $.ASN1Encoder<ORAddress> | null = null;
  */
 export
 function _encode_ORAddress (value: ORAddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ORAddress) { _cached_encoder_for_ORAddress = function (value: ORAddress, elGetter: $.ASN1Encoder<ORAddress>): _Element {
+    if (!_cached_encoder_for_ORAddress) { _cached_encoder_for_ORAddress = function (value: ORAddress): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_BuiltInStandardAttributes(value.built_in_standard_attributes, $.BER),

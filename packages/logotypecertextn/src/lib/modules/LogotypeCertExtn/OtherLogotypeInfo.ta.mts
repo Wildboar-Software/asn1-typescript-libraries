@@ -141,7 +141,7 @@ let _cached_encoder_for_OtherLogotypeInfo: $.ASN1Encoder<OtherLogotypeInfo> | nu
  */
 export
 function _encode_OtherLogotypeInfo (value: OtherLogotypeInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OtherLogotypeInfo) { _cached_encoder_for_OtherLogotypeInfo = function (value: OtherLogotypeInfo, elGetter: $.ASN1Encoder<OtherLogotypeInfo>): _Element {
+    if (!_cached_encoder_for_OtherLogotypeInfo) { _cached_encoder_for_OtherLogotypeInfo = function (value: OtherLogotypeInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeObjectIdentifier(value.logotypeType, $.BER),

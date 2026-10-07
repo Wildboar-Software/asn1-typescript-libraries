@@ -141,7 +141,7 @@ let _cached_encoder_for_HashAlgAndValue: $.ASN1Encoder<HashAlgAndValue> | null =
  */
 export
 function _encode_HashAlgAndValue (value: HashAlgAndValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HashAlgAndValue) { _cached_encoder_for_HashAlgAndValue = function (value: HashAlgAndValue, elGetter: $.ASN1Encoder<HashAlgAndValue>): _Element {
+    if (!_cached_encoder_for_HashAlgAndValue) { _cached_encoder_for_HashAlgAndValue = function (value: HashAlgAndValue): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_AlgorithmIdentifier(value.hashAlg, $.BER),

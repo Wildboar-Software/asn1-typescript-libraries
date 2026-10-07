@@ -152,7 +152,7 @@ let _cached_encoder_for_BuiltInDomainDefinedAttribute: $.ASN1Encoder<BuiltInDoma
  */
 export
 function _encode_BuiltInDomainDefinedAttribute (value: BuiltInDomainDefinedAttribute, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BuiltInDomainDefinedAttribute) { _cached_encoder_for_BuiltInDomainDefinedAttribute = function (value: BuiltInDomainDefinedAttribute, elGetter: $.ASN1Encoder<BuiltInDomainDefinedAttribute>): _Element {
+    if (!_cached_encoder_for_BuiltInDomainDefinedAttribute) { _cached_encoder_for_BuiltInDomainDefinedAttribute = function (value: BuiltInDomainDefinedAttribute): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodePrintableString(value.type_, $.BER),

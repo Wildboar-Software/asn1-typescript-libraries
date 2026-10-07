@@ -149,7 +149,7 @@ let _cached_encoder_for_LogotypeReference: $.ASN1Encoder<LogotypeReference> | nu
  */
 export
 function _encode_LogotypeReference (value: LogotypeReference, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LogotypeReference) { _cached_encoder_for_LogotypeReference = function (value: LogotypeReference, elGetter: $.ASN1Encoder<LogotypeReference>): _Element {
+    if (!_cached_encoder_for_LogotypeReference) { _cached_encoder_for_LogotypeReference = function (value: LogotypeReference): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeSequenceOf<HashAlgAndValue>(() => _encode_HashAlgAndValue, $.BER)(value.refStructHash, $.BER),

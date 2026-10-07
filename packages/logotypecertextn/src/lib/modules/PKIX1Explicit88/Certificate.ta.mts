@@ -155,7 +155,7 @@ let _cached_encoder_for_Certificate: $.ASN1Encoder<Certificate> | null = null;
  */
 export
 function _encode_Certificate (value: Certificate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Certificate) { _cached_encoder_for_Certificate = function (value: Certificate, elGetter: $.ASN1Encoder<Certificate>): _Element {
+    if (!_cached_encoder_for_Certificate) { _cached_encoder_for_Certificate = function (value: Certificate): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_TBSCertificate(value.tbsCertificate, $.BER),

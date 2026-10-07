@@ -162,7 +162,7 @@ let _cached_encoder_for_LogotypeDetails: $.ASN1Encoder<LogotypeDetails> | null =
  */
 export
 function _encode_LogotypeDetails (value: LogotypeDetails, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LogotypeDetails) { _cached_encoder_for_LogotypeDetails = function (value: LogotypeDetails, elGetter: $.ASN1Encoder<LogotypeDetails>): _Element {
+    if (!_cached_encoder_for_LogotypeDetails) { _cached_encoder_for_LogotypeDetails = function (value: LogotypeDetails): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeIA5String(value.mediaType, $.BER),

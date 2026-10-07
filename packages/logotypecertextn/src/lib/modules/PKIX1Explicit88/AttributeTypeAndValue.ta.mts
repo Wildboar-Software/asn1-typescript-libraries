@@ -142,7 +142,7 @@ let _cached_encoder_for_AttributeTypeAndValue: $.ASN1Encoder<AttributeTypeAndVal
  */
 export
 function _encode_AttributeTypeAndValue (value: AttributeTypeAndValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AttributeTypeAndValue) { _cached_encoder_for_AttributeTypeAndValue = function (value: AttributeTypeAndValue, elGetter: $.ASN1Encoder<AttributeTypeAndValue>): _Element {
+    if (!_cached_encoder_for_AttributeTypeAndValue) { _cached_encoder_for_AttributeTypeAndValue = function (value: AttributeTypeAndValue): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_AttributeType(value.type_, $.BER),

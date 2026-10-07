@@ -252,7 +252,7 @@ let _cached_encoder_for_TBSCertificate: $.ASN1Encoder<TBSCertificate> | null = n
  */
 export
 function _encode_TBSCertificate (value: TBSCertificate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TBSCertificate) { _cached_encoder_for_TBSCertificate = function (value: TBSCertificate, elGetter: $.ASN1Encoder<TBSCertificate>): _Element {
+    if (!_cached_encoder_for_TBSCertificate) { _cached_encoder_for_TBSCertificate = function (value: TBSCertificate): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.version === undefined || $.deepEq(value.version, TBSCertificate._default_value_for_version) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_Version, $.BER)(value.version, $.BER)),

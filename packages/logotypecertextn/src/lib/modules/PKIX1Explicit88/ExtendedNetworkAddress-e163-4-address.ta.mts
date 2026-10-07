@@ -152,7 +152,7 @@ let _cached_encoder_for_ExtendedNetworkAddress_e163_4_address: $.ASN1Encoder<Ext
  */
 export
 function _encode_ExtendedNetworkAddress_e163_4_address (value: ExtendedNetworkAddress_e163_4_address, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExtendedNetworkAddress_e163_4_address) { _cached_encoder_for_ExtendedNetworkAddress_e163_4_address = function (value: ExtendedNetworkAddress_e163_4_address, elGetter: $.ASN1Encoder<ExtendedNetworkAddress_e163_4_address>): _Element {
+    if (!_cached_encoder_for_ExtendedNetworkAddress_e163_4_address) { _cached_encoder_for_ExtendedNetworkAddress_e163_4_address = function (value: ExtendedNetworkAddress_e163_4_address): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeNumericString, $.BER)(value.number_, $.BER),

@@ -143,7 +143,7 @@ let _cached_encoder_for_LogotypeAudio: $.ASN1Encoder<LogotypeAudio> | null = nul
  */
 export
 function _encode_LogotypeAudio (value: LogotypeAudio, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LogotypeAudio) { _cached_encoder_for_LogotypeAudio = function (value: LogotypeAudio, elGetter: $.ASN1Encoder<LogotypeAudio>): _Element {
+    if (!_cached_encoder_for_LogotypeAudio) { _cached_encoder_for_LogotypeAudio = function (value: LogotypeAudio): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_LogotypeDetails(value.audioDetails, $.BER),
