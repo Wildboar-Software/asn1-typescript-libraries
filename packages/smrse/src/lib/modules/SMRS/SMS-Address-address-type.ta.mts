@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMS-Address-address-type ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * SMS-Address-address-type ::= INTEGER {
+ *     unknown-type (0),
+ *     internat-number (1),
+ *     national-number (2),
+ *     net-spec-number (3),
+ *     short-number (4)
+ * }
  * ```
  */
 export

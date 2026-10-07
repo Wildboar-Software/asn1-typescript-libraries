@@ -14,7 +14,9 @@ import { SemiOctetString, _decode_SemiOctetString, _encode_SemiOctetString } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMS-Address-address-value ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SMS-Address-address-value ::= CHOICE {
+ *     octet-format SemiOctetString
+ * }
  * ```
  */
 export
