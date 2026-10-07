@@ -53,7 +53,7 @@ jobs:
           # - "pc"
           # - "pkcs"
           # - "pki-stub"
-          # - "presentation-address"
+          - "presentation-address"
           # - "qc"
           # - "rinf"
           # - "rose"
