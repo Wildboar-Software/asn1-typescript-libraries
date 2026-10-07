@@ -137,7 +137,7 @@ function _decode_IAKERB_HEADER (el: _Element): IAKERB_HEADER {
     let target_realm!: UTF8String;
     let cookie: OPTIONAL<OCTET_STRING>;
     let header_flags: OPTIONAL<HeaderFlags>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "target-realm": (_el: _Element): void => { target_realm = $._decode_explicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "cookie": (_el: _Element): void => { cookie = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
