@@ -79,6 +79,7 @@ jobs:
           - "x400"
           - "x500"
           - "x700"
+          - "z3950"
     permissions:
       contents: read
       id-token: write
