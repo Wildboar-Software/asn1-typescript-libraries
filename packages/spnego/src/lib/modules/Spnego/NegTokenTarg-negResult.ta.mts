@@ -13,7 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NegTokenTarg-negResult ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * NegTokenTarg-negResult ::= ENUMERATED {
+ *     accept-completed    (0),
+ *     accept-incomplete   (1),
+ *     reject              (2),
+ *     request-mic         (3)
+ * }
  * ```
  * 
  * @enum {number}
@@ -33,7 +38,12 @@ enum _enum_for_NegTokenTarg_negResult {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NegTokenTarg-negResult ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * NegTokenTarg-negResult ::= ENUMERATED {
+ *     accept-completed    (0),
+ *     accept-incomplete   (1),
+ *     reject              (2),
+ *     request-mic         (3)
+ * }
  * ```
  * 
  * @enum {number}
@@ -48,7 +58,12 @@ type NegTokenTarg_negResult = _enum_for_NegTokenTarg_negResult;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NegTokenTarg-negResult ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * NegTokenTarg-negResult ::= ENUMERATED {
+ *     accept-completed    (0),
+ *     accept-incomplete   (1),
+ *     reject              (2),
+ *     request-mic         (3)
+ * }
  * ```
  * 
  * @enum {number}
