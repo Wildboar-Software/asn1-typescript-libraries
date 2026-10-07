@@ -44,7 +44,7 @@ export const message_transfer_abstract_syntax: ABSTRACT_SYNTAX<MTS_APDU> = {
     },
     '&id': id_as_mtse /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-    '&property': undefined,
+    '&property': new Uint8ClampedArray(),
 };
 
 /* eslint-enable */

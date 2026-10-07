@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OrganizationalUnitName,
+    type OrganizationalUnitName,
     _decode_OrganizationalUnitName,
     _encode_OrganizationalUnitName,
 } from "../PkiPmiExternalDataTypes/OrganizationalUnitName.ta.mjs";

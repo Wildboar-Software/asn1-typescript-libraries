@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import {
-    TeletexDomainDefinedAttributes,
+    type TeletexDomainDefinedAttributes,
     _decode_TeletexDomainDefinedAttributes,
     _encode_TeletexDomainDefinedAttributes,
 } from "../PkiPmiExternalDataTypes/TeletexDomainDefinedAttributes.ta.mjs";

@@ -11,19 +11,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PublicKeyObject, _get_decoder_for_PublicKeyObject, _get_encoder_for_PublicKeyObject } from "../CryptographicInformationFramework/PublicKeyObject.ta.mjs";
-// export { PublicKeyObject, _get_decoder_for_PublicKeyObject, _get_encoder_for_PublicKeyObject } from "../CryptographicInformationFramework/PublicKeyObject.ta.mjs";
 import { PublicRSAKeyAttributes, _decode_PublicRSAKeyAttributes, _encode_PublicRSAKeyAttributes } from "../CryptographicInformationFramework/PublicRSAKeyAttributes.ta.mjs";
-// export { PublicRSAKeyAttributes, _decode_PublicRSAKeyAttributes, _encode_PublicRSAKeyAttributes } from "../CryptographicInformationFramework/PublicRSAKeyAttributes.ta.mjs";
 import { PublicECKeyAttributes, _decode_PublicECKeyAttributes, _encode_PublicECKeyAttributes } from "../CryptographicInformationFramework/PublicECKeyAttributes.ta.mjs";
-// export { PublicECKeyAttributes, _decode_PublicECKeyAttributes, _encode_PublicECKeyAttributes } from "../CryptographicInformationFramework/PublicECKeyAttributes.ta.mjs";
 import { PublicDHKeyAttributes, _decode_PublicDHKeyAttributes, _encode_PublicDHKeyAttributes } from "../CryptographicInformationFramework/PublicDHKeyAttributes.ta.mjs";
-// export { PublicDHKeyAttributes, _decode_PublicDHKeyAttributes, _encode_PublicDHKeyAttributes } from "../CryptographicInformationFramework/PublicDHKeyAttributes.ta.mjs";
 import { PublicDSAKeyAttributes, _decode_PublicDSAKeyAttributes, _encode_PublicDSAKeyAttributes } from "../CryptographicInformationFramework/PublicDSAKeyAttributes.ta.mjs";
-// export { PublicDSAKeyAttributes, _decode_PublicDSAKeyAttributes, _encode_PublicDSAKeyAttributes } from "../CryptographicInformationFramework/PublicDSAKeyAttributes.ta.mjs";
 import { PublicKEAKeyAttributes, _decode_PublicKEAKeyAttributes, _encode_PublicKEAKeyAttributes } from "../CryptographicInformationFramework/PublicKEAKeyAttributes.ta.mjs";
-// export { PublicKEAKeyAttributes, _decode_PublicKEAKeyAttributes, _encode_PublicKEAKeyAttributes } from "../CryptographicInformationFramework/PublicKEAKeyAttributes.ta.mjs";
 import { GenericKeyAttributes, _decode_GenericKeyAttributes, _encode_GenericKeyAttributes } from "../CryptographicInformationFramework/GenericKeyAttributes.ta.mjs";
-// export { GenericKeyAttributes, _decode_GenericKeyAttributes, _encode_GenericKeyAttributes } from "../CryptographicInformationFramework/GenericKeyAttributes.ta.mjs";
 
 
 /**

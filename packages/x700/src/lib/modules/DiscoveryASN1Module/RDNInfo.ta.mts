@@ -15,7 +15,7 @@ import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from '@wildboar/cmip';
+} from '@wildboar/dn';
 import {
     GdmoObjectClass,
     _decode_GdmoObjectClass,

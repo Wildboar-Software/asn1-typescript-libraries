@@ -1,9 +1,6 @@
-import OrderingMatcher from "../../types/OrderingMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
-import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
+import type { DirectoryStringInput } from "../readValue.mjs";
+import { readDirectoryString } from "../readValue.mjs";
+import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.2
@@ -13,15 +10,42 @@ import directoryStringToString from "../../stringifiers/directoryStringToString.
  * during string preparation (clause 7.2). Insignificant spaces are
  * ignored (clause 7.6). Directory TRUE iff the stored value is
  * less than the presented value under Unicode code-point order.
+ *
+ * Each argument may be an `ASN1Element`, a directory string, or a
+ * JavaScript string. A negative result means `assertion` sorts
+ * before `value`.
  */
 export
-const caseIgnoreOrderingMatch: OrderingMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): number => {
-    const a: string = directoryStringToString(_decode_UDS(assertion)).trim().toLowerCase();
-    const v: string = directoryStringToString(_decode_UDS(value)).trim().toLowerCase();
-    return a.localeCompare(v);
+function caseIgnoreOrderingMatch (
+    assertion: DirectoryStringInput,
+    value: DirectoryStringInput,
+): number {
+    return caseIgnoreOrderingMatchTyped(
+        readDirectoryString(assertion),
+        readDirectoryString(value),
+    );
+}
+
+/**
+ * `caseIgnoreOrderingMatch` on two strings.
+ *
+ * @param assertion Presented string.
+ * @param value Stored string.
+ * @returns Negative when `assertion` is less than `value`. A string that
+ *  fails preparation sorts after any prepared string (`Array.sort`
+ *  treats `NaN` as `+0`, so it cannot be used for this).
+ */
+export
+function caseIgnoreOrderingMatchTyped (assertion: string, value: string): number {
+    const a: string | undefined = prepString(assertion, { caseFold: true });
+    if (a === undefined) {
+        return 1;
+    }
+    const v: string | undefined = prepString(value, { caseFold: true });
+    if (v === undefined) {
+        return -1;
+    }
+    return compareCodePoints(a, v);
 }
 
 export default caseIgnoreOrderingMatch;

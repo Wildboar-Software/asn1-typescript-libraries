@@ -1,5 +1,4 @@
 export {
-    type Priority,
     _decode_Priority,
-    _encode_Priority,
+    _encode_Priority, type Priority
 } from "@wildboar/rose";

@@ -1,87 +1,26 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LocationInformation, _decode_LocationInformation, _encode_LocationInformation } from "../MAP-MS-DataTypes/LocationInformation.ta.mjs";
-import { SubscriberState, _decode_SubscriberState, _encode_SubscriberState } from "../MAP-MS-DataTypes/SubscriberState.ta.mjs";
-import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_LocationInformationGPRS } from "../MAP-MS-DataTypes/LocationInformationGPRS.ta.mjs";
-import { PS_SubscriberState, _decode_PS_SubscriberState, _encode_PS_SubscriberState } from "../MAP-MS-DataTypes/PS-SubscriberState.ta.mjs";
 import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
-import { MS_Classmark2, _decode_MS_Classmark2, _encode_MS_Classmark2 } from "../MAP-MS-DataTypes/MS-Classmark2.ta.mjs";
-import { GPRSMSClass, _decode_GPRSMSClass, _encode_GPRSMSClass } from "../MAP-MS-DataTypes/GPRSMSClass.ta.mjs";
-import { MNPInfoRes, _decode_MNPInfoRes, _encode_MNPInfoRes } from "../MAP-MS-DataTypes/MNPInfoRes.ta.mjs";
-import { IMS_VoiceOverPS_SessionsInd, _enum_for_IMS_VoiceOverPS_SessionsInd, IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, imsVoiceOverPS_SessionsNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, imsVoiceOverPS_SessionsSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMS_VoiceOverPS_SessionsInd_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IMS_VoiceOverPS_SessionsInd, _encode_IMS_VoiceOverPS_SessionsInd } from "../MAP-MS-DataTypes/IMS-VoiceOverPS-SessionsInd.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
-import { Used_RAT_Type, _enum_for_Used_RAT_Type, Used_RAT_Type_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_geran /* IMPORTED_LONG_ENUMERATION_ITEM */, geran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_gan /* IMPORTED_LONG_ENUMERATION_ITEM */, gan /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_i_hspa_evolution /* IMPORTED_LONG_ENUMERATION_ITEM */, i_hspa_evolution /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_e_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, e_utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_nb_iot /* IMPORTED_LONG_ENUMERATION_ITEM */, nb_iot /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Used_RAT_Type, _encode_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
-import { LocationInformationEPS, _decode_LocationInformationEPS, _encode_LocationInformationEPS } from "../MAP-MS-DataTypes/LocationInformationEPS.ta.mjs";
-import { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../MAP-MS-DataTypes/TimeZone.ta.mjs";
-import { DaylightSavingTime, _enum_for_DaylightSavingTime, DaylightSavingTime_noAdjustment /* IMPORTED_LONG_ENUMERATION_ITEM */, noAdjustment /* IMPORTED_SHORT_ENUMERATION_ITEM */, DaylightSavingTime_plusOneHourAdjustment /* IMPORTED_LONG_ENUMERATION_ITEM */, plusOneHourAdjustment /* IMPORTED_SHORT_ENUMERATION_ITEM */, DaylightSavingTime_plusTwoHoursAdjustment /* IMPORTED_LONG_ENUMERATION_ITEM */, plusTwoHoursAdjustment /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DaylightSavingTime, _encode_DaylightSavingTime } from "../MAP-MS-DataTypes/DaylightSavingTime.ta.mjs";
+import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
+import { DaylightSavingTime, _decode_DaylightSavingTime, _encode_DaylightSavingTime, _enum_for_DaylightSavingTime } from "../MAP-MS-DataTypes/DaylightSavingTime.ta.mjs";
+import { GPRSMSClass, _decode_GPRSMSClass, _encode_GPRSMSClass } from "../MAP-MS-DataTypes/GPRSMSClass.ta.mjs";
+import { IMS_VoiceOverPS_SessionsInd, _decode_IMS_VoiceOverPS_SessionsInd, _encode_IMS_VoiceOverPS_SessionsInd, _enum_for_IMS_VoiceOverPS_SessionsInd } from "../MAP-MS-DataTypes/IMS-VoiceOverPS-SessionsInd.ta.mjs";
+import { LocationInformation, _decode_LocationInformation, _encode_LocationInformation } from "../MAP-MS-DataTypes/LocationInformation.ta.mjs";
 import { LocationInformation5GS, _decode_LocationInformation5GS, _encode_LocationInformation5GS } from "../MAP-MS-DataTypes/LocationInformation5GS.ta.mjs";
+import { LocationInformationEPS, _decode_LocationInformationEPS, _encode_LocationInformationEPS } from "../MAP-MS-DataTypes/LocationInformationEPS.ta.mjs";
+import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_LocationInformationGPRS } from "../MAP-MS-DataTypes/LocationInformationGPRS.ta.mjs";
+import { MNPInfoRes, _decode_MNPInfoRes, _encode_MNPInfoRes } from "../MAP-MS-DataTypes/MNPInfoRes.ta.mjs";
+import { MS_Classmark2, _decode_MS_Classmark2, _encode_MS_Classmark2 } from "../MAP-MS-DataTypes/MS-Classmark2.ta.mjs";
+import { PS_SubscriberState, _decode_PS_SubscriberState, _encode_PS_SubscriberState } from "../MAP-MS-DataTypes/PS-SubscriberState.ta.mjs";
+import { SubscriberState, _decode_SubscriberState, _encode_SubscriberState } from "../MAP-MS-DataTypes/SubscriberState.ta.mjs";
+import { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../MAP-MS-DataTypes/TimeZone.ta.mjs";
+import { Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
 
 
 /**

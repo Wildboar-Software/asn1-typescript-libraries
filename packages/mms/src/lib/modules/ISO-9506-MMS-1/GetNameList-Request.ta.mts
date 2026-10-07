@@ -12,11 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "../ISO-9506-MMS-1/ObjectClass.ta.mjs";
-// export { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "../ISO-9506-MMS-1/ObjectClass.ta.mjs";
 import { GetNameList_Request_objectScope, _decode_GetNameList_Request_objectScope, _encode_GetNameList_Request_objectScope } from "../ISO-9506-MMS-1/GetNameList-Request-objectScope.ta.mjs";
-// export { GetNameList_Request_objectScope, _decode_GetNameList_Request_objectScope, _encode_GetNameList_Request_objectScope } from "../ISO-9506-MMS-1/GetNameList-Request-objectScope.ta.mjs";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**

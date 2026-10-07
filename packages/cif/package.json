@@ -27,6 +27,8 @@
     "module": "./src/index.mjs",
     "main": "./src/index.mjs",
     "dependencies": {
+        "@wildboar/gn": "npm:@jsr/wildboar__gn@1.x.x",
+        "@wildboar/dn": "npm:@jsr/wildboar__dn@1.x.x",
         "@wildboar/ansi-x9-42": "npm:@jsr/wildboar__ansi-x9-42@^2.0.3",
         "@wildboar/ansi-x9-62": "npm:@jsr/wildboar__ansi-x9-62@^2.0.2",
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",

@@ -65,11 +65,9 @@ export class ACIItem_itemOrUserFirst_itemFirst {
      * @returns {ACIItem_itemOrUserFirst_itemFirst}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof ACIItem_itemOrUserFirst_itemFirst]: ACIItem_itemOrUserFirst_itemFirst[_K];
             }
-        >
     ): ACIItem_itemOrUserFirst_itemFirst {
         return new ACIItem_itemOrUserFirst_itemFirst(
             _o.protectedItems,
