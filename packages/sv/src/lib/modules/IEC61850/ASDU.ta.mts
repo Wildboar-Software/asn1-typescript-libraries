@@ -18,7 +18,13 @@ import { GmidData, _decode_GmidData, _encode_GmidData } from "../IEC61850/GmidDa
 /**
  * @summary ASDU
  * @description
- * 
+ *
+ * One sampled-values application service data unit.
+ * IEC 61850-9-2LE requires `svID`, `smpCnt`, `confRev`,
+ * `smpSynch`, and `seqData` in every ASDU. `datSet`,
+ * `refrTm`, `smpRate`, and `smpMod` may be omitted. The
+ * guide does not define `gmidData`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,60 +54,126 @@ class ASDU {
     constructor (
         /**
          * @summary `svID`.
+         * @description
+         *
+         * Sampled-values identifier: a user-defined string
+         * subscribers match to select this stream. It must be
+         * unique among publishers. 9-2LE uses `xxxxMUnn01` for
+         * MSVCB01 and `xxxxMUnn02` for MSVCB02, where `xxxxMUnn`
+         * is the logical-device name (clause 7.1.4, Table 8).
+         *
          * @public
          * @readonly
          */
         readonly svID: VisibleString,
         /**
          * @summary `datSet`.
+         * @description
+         *
+         * Reference to the data-set name. Optional. 9-2LE fixes
+         * the set to `xxxxMUnn/LLN0$PhsMeas1` and does not send
+         * this field (`OptFlds` data-set is FALSE; clause 7.1.4).
+         *
          * @public
          * @readonly
          */
         readonly datSet: OPTIONAL<VisibleString>,
         /**
          * @summary `smpCnt`.
+         * @description
+         *
+         * Index of this sampled-values message. While the merging
+         * unit is synchronized, including hold-over, 9-2LE
+         * clause 7.2.2 resets it on the synchronizing pulse.
+         * After hold-over it still wraps on that boundary (3999
+         * for 80 samples per period at 50 Hz).
+         *
          * @public
          * @readonly
          */
         readonly smpCnt: INTEGER,
         /**
          * @summary `confRev`.
+         * @description
+         *
+         * Configuration revision. 9-2LE fixes both the dataset
+         * and the MSVCB contents, so this value is 1
+         * (clause 7.1.4, Table 8).
+         *
          * @public
          * @readonly
          */
         readonly confRev: INTEGER,
         /**
          * @summary `refrTm`.
+         * @description
+         *
+         * Refresh time: a UTC timestamp of the sample. Optional.
+         * 9-2LE may include or omit it (`OptFlds` refresh-time
+         * is TRUE or FALSE; clause 7.1.4). See `UtcTime`.
+         *
          * @public
          * @readonly
          */
         readonly refrTm: OPTIONAL<UtcTime>,
         /**
          * @summary `smpSynch`.
+         * @description
+         *
+         * Clock used to send the sampled values. Optional in
+         * the ASN.1; 9-2LE requires it (`OptFlds` sample
+         * synchronized is TRUE). `0` is none, `1` is a local
+         * clock, and `2` is a global clock. See `ASDU_smpSynch`.
+         *
          * @public
          * @readonly
          */
         readonly smpSynch: OPTIONAL<ASDU_smpSynch>,
         /**
          * @summary `smpRate`.
+         * @description
+         *
+         * Number of samples per nominal period. Optional. When
+         * `smpMod` is present, it selects whether this count is
+         * samples per nominal period, samples per second, or
+         * seconds per sample. 9-2LE preconfigures 80 (MSVCB01)
+         * or 256 (MSVCB02) and does not send this field
+         * (`OptFlds` sample-rate is FALSE; clause 7.1.4).
+         *
          * @public
          * @readonly
          */
         readonly smpRate: OPTIONAL<INTEGER>,
         /**
          * @summary `seqData`.
+         * @description
+         *
+         * Sequence of measured current and voltage values.
+         * Required. See `Data` for the 9-2LE `PhsMeas1` layout,
+         * scaling, and quality bits (Figure 5).
+         *
          * @public
          * @readonly
          */
         readonly seqData: Data,
         /**
          * @summary `smpMod`.
+         * @description
+         *
+         * How `smpRate` relates to the nominal period. Optional.
+         * See `ASDU_smpMod`.
+         *
          * @public
          * @readonly
          */
         readonly smpMod: OPTIONAL<ASDU_smpMod>,
         /**
          * @summary `gmidData`.
+         * @description
+         *
+         * Optional. The IEC 61850-9-2LE guide does not define
+         * this field.
+         *
          * @public
          * @readonly
          */

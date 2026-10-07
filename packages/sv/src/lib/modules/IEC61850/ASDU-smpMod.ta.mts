@@ -7,7 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ASDU_smpMod
  * @description
- * 
+ *
+ * How `ASDU.smpRate` relates to the nominal period. Optional
+ * on an ASDU. `0` counts samples per nominal period, `1`
+ * counts samples per second, and `2` counts seconds per
+ * sample.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +28,11 @@ type ASDU_smpMod = INTEGER;
 
 /**
  * @summary ASDU_smpMod_samplesPerNormalPeriod
+ * @description
+ *
+ * `smpRate` is the number of samples per nominal period
+ * (`0`).
+ *
  * @constant
  * @type {number}
  */
@@ -31,6 +41,10 @@ const ASDU_smpMod_samplesPerNormalPeriod: ASDU_smpMod = 0; /* LONG_NAMED_INTEGER
 
 /**
  * @summary ASDU_smpMod_samplesPerNormalPeriod
+ * @description
+ *
+ * Same value as `ASDU_smpMod_samplesPerNormalPeriod`.
+ *
  * @constant
  * @type {number}
  */
@@ -39,6 +53,10 @@ const samplesPerNormalPeriod: ASDU_smpMod = ASDU_smpMod_samplesPerNormalPeriod; 
 
 /**
  * @summary ASDU_smpMod_samplesPerSecond
+ * @description
+ *
+ * `smpRate` is the number of samples per second (`1`).
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +65,10 @@ const ASDU_smpMod_samplesPerSecond: ASDU_smpMod = 1; /* LONG_NAMED_INTEGER_VALUE
 
 /**
  * @summary ASDU_smpMod_samplesPerSecond
+ * @description
+ *
+ * Same value as `ASDU_smpMod_samplesPerSecond`.
+ *
  * @constant
  * @type {number}
  */
@@ -55,6 +77,10 @@ const samplesPerSecond: ASDU_smpMod = ASDU_smpMod_samplesPerSecond; /* SHORT_NAM
 
 /**
  * @summary ASDU_smpMod_secondsPerSample
+ * @description
+ *
+ * `smpRate` is the number of seconds per sample (`2`).
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +89,10 @@ const ASDU_smpMod_secondsPerSample: ASDU_smpMod = 2; /* LONG_NAMED_INTEGER_VALUE
 
 /**
  * @summary ASDU_smpMod_secondsPerSample
+ * @description
+ *
+ * Same value as `ASDU_smpMod_secondsPerSample`.
+ *
  * @constant
  * @type {number}
  */

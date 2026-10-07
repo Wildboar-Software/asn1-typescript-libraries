@@ -13,7 +13,11 @@ import { ASDU, _decode_ASDU, _encode_ASDU } from "../IEC61850/ASDU.ta.mjs";
 /**
  * @summary SavPdu
  * @description
- * 
+ *
+ * One sampled-values APDU: how many ASDUs it carries, then
+ * those ASDUs. 9-2LE Figure 4 shows the encoding for the
+ * MSVCB02 definitions in clause 7.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +34,23 @@ class SavPdu {
     constructor (
         /**
          * @summary `noASDU`.
+         * @description
+         *
+         * Number of ASDUs in `seqASDU`. 9-2LE sends 1 ASDU per
+         * APDU on MSVCB01 (80 samples per nominal period) and 8
+         * on MSVCB02 (256 samples per nominal period)
+         * (clause 7.1.4, Table 9).
+         *
          * @public
          * @readonly
          */
         readonly noASDU: INTEGER,
         /**
          * @summary `seqASDU`.
+         * @description
+         *
+         * ASDUs in this APDU. Its length is `noASDU`.
+         *
          * @public
          * @readonly
          */

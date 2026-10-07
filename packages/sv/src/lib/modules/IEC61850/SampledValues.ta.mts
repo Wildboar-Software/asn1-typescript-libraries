@@ -10,7 +10,14 @@ import { SavPdu, _decode_SavPdu, _encode_SavPdu } from "../IEC61850/SavPdu.ta.mj
 /**
  * @summary SampledValues
  * @description
- * 
+ *
+ * Sampled-values application PDU. The only defined alternative
+ * is `savPdu`. IEC 61850-9-2LE supports only
+ * `SendMSVMessage`, so the flow is unidirectional from the
+ * merging unit to the subscribers (clause 2 and clause 6.1.3
+ * of the
+ * [9-2LE guideline, R2.1](http://www.tc57wg10.info/downloads/digifspec92ler21040707cb.pdf)).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
