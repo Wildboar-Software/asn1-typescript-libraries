@@ -2,6 +2,11 @@
     "name": "@wildboar/spnego",
     "type": "module",
     "version": "1.0.0",
+    "description": "ASN.1 data structures for the SPNEGO protocol",
+    "keywords": [
+        "spnego",
+        "gssapi"
+    ],
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"
