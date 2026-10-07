@@ -119,10 +119,8 @@ function _decode_AttributeCombinations (el: _Element): AttributeCombinations {
     }
     sequence[0].name = "defaultAttributeSet";
     sequence[1].name = "legalCombinations";
-    let defaultAttributeSet!: AttributeSetId;
-    let legalCombinations!: AttributeCombination[];
-    defaultAttributeSet = $._decode_implicit<AttributeSetId>(() => _decode_AttributeSetId)(sequence[0]);
-    legalCombinations = $._decode_implicit<AttributeCombination[]>(() => $._decodeSequenceOf<AttributeCombination>(() => _decode_AttributeCombination))(sequence[1]);
+    const defaultAttributeSet = $._decode_implicit<AttributeSetId>(() => _decode_AttributeSetId)(sequence[0]);
+    const legalCombinations = $._decode_implicit<AttributeCombination[]>(() => $._decodeSequenceOf<AttributeCombination>(() => _decode_AttributeCombination))(sequence[1]);
     return new AttributeCombinations(
         defaultAttributeSet,
         legalCombinations,

@@ -118,10 +118,8 @@ function _decode_Path_Item (el: _Element): Path_Item {
     }
     sequence[0].name = "tagType";
     sequence[1].name = "tagValue";
-    let tagType!: INTEGER;
-    let tagValue!: StringOrNumeric;
-    tagType = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    tagValue = $._decode_explicit<StringOrNumeric>(() => _decode_StringOrNumeric)(sequence[1]);
+    const tagType = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const tagValue = $._decode_explicit<StringOrNumeric>(() => _decode_StringOrNumeric)(sequence[1]);
     return new Path_Item(
         tagType,
         tagValue,

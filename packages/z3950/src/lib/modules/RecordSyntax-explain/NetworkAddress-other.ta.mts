@@ -117,10 +117,8 @@ function _decode_NetworkAddress_other (el: _Element): NetworkAddress_other {
     }
     sequence[0].name = "type";
     sequence[1].name = "address";
-    let type_!: InternationalString;
-    let address!: InternationalString;
-    type_ = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
-    address = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[1]);
+    const type_ = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
+    const address = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[1]);
     return new NetworkAddress_other(
         type_,
         address,

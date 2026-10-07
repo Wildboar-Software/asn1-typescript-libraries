@@ -119,10 +119,8 @@ function _decode_NetworkAddress_internetAddress (el: _Element): NetworkAddress_i
     }
     sequence[0].name = "hostAddress";
     sequence[1].name = "port";
-    let hostAddress!: InternationalString;
-    let port!: INTEGER;
-    hostAddress = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
-    port = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const hostAddress = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
+    const port = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new NetworkAddress_internetAddress(
         hostAddress,
         port,

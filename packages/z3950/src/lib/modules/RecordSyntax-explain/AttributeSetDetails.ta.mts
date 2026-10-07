@@ -116,10 +116,8 @@ function _decode_AttributeSetDetails (el: _Element): AttributeSetDetails {
     }
     sequence[0].name = "attributeSet";
     sequence[1].name = "attributesByType";
-    let attributeSet!: AttributeSetId;
-    let attributesByType!: AttributeTypeDetails[];
-    attributeSet = $._decode_implicit<AttributeSetId>(() => _decode_AttributeSetId)(sequence[0]);
-    attributesByType = $._decode_implicit<AttributeTypeDetails[]>(() => $._decodeSequenceOf<AttributeTypeDetails>(() => _decode_AttributeTypeDetails))(sequence[1]);
+    const attributeSet = $._decode_implicit<AttributeSetId>(() => _decode_AttributeSetId)(sequence[0]);
+    const attributesByType = $._decode_implicit<AttributeTypeDetails[]>(() => $._decodeSequenceOf<AttributeTypeDetails>(() => _decode_AttributeTypeDetails))(sequence[1]);
     return new AttributeSetDetails(
         attributeSet,
         attributesByType,

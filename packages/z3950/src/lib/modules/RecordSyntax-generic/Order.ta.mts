@@ -123,10 +123,8 @@ function _decode_Order (el: _Element): Order {
     }
     sequence[0].name = "ascending";
     sequence[1].name = "order";
-    let ascending!: BOOLEAN;
-    let order!: INTEGER;
-    ascending = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(sequence[0]);
-    order = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const ascending = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(sequence[0]);
+    const order = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new Order(
         ascending,
         order,
