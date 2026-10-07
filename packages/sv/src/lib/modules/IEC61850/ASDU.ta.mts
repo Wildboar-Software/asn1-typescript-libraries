@@ -4,19 +4,15 @@ import {
     OPTIONAL,
     VisibleString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
-// export { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
 import { ASDU_smpSynch, _decode_ASDU_smpSynch, _encode_ASDU_smpSynch } from "../IEC61850/ASDU-smpSynch.ta.mjs";
-// export { ASDU_smpSynch, ASDU_smpSynch_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, ASDU_smpSynch_local /* IMPORTED_LONG_NAMED_INTEGER */, local /* IMPORTED_SHORT_NAMED_INTEGER */, ASDU_smpSynch_global /* IMPORTED_LONG_NAMED_INTEGER */, global /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ASDU_smpSynch, _encode_ASDU_smpSynch } from "../IEC61850/ASDU-smpSynch.ta.mjs";
 import { Data, _decode_Data, _encode_Data } from "../IEC61850/Data.ta.mjs";
-// export { Data, _decode_Data, _encode_Data } from "../IEC61850/Data.ta.mjs";
 import { ASDU_smpMod, _decode_ASDU_smpMod, _encode_ASDU_smpMod } from "../IEC61850/ASDU-smpMod.ta.mjs";
-// export { ASDU_smpMod, ASDU_smpMod_samplesPerNormalPeriod /* IMPORTED_LONG_NAMED_INTEGER */, samplesPerNormalPeriod /* IMPORTED_SHORT_NAMED_INTEGER */, ASDU_smpMod_samplesPerSecond /* IMPORTED_LONG_NAMED_INTEGER */, samplesPerSecond /* IMPORTED_SHORT_NAMED_INTEGER */, ASDU_smpMod_secondsPerSample /* IMPORTED_LONG_NAMED_INTEGER */, secondsPerSample /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ASDU_smpMod, _encode_ASDU_smpMod } from "../IEC61850/ASDU-smpMod.ta.mjs";
 import { GmidData, _decode_GmidData, _encode_GmidData } from "../IEC61850/GmidData.ta.mjs";
-// export { GmidData, _decode_GmidData, _encode_GmidData } from "../IEC61850/GmidData.ta.mjs";
 
 
 /**
@@ -116,7 +112,17 @@ class ASDU {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (typeof smpCnt === "bigint" ? (smpCnt < 0n || smpCnt > 65535n) : (smpCnt < 0 || smpCnt > 65535)) {
+            throw new ASN1OverflowError("ASDU.smpCnt violates INTEGER constraint");
+        }
+        if (typeof confRev === "bigint" ? (confRev < 0n || confRev > 4294967295n) : (confRev < 0 || confRev > 4294967295)) {
+            throw new ASN1OverflowError("ASDU.confRev violates INTEGER constraint");
+        }
+        if (smpRate !== undefined && (typeof smpRate === "bigint" ? (smpRate < 0n || smpRate > 65535n) : (smpRate < 0 || smpRate > 65535))) {
+            throw new ASN1OverflowError("ASDU.smpRate violates INTEGER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ASDU
@@ -206,7 +212,7 @@ function _decode_ASDU (el: _Element): ASDU {
     let seqData!: Data;
     let smpMod: OPTIONAL<ASDU_smpMod>;
     let gmidData: OPTIONAL<GmidData>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "svID": (_el: _Element): void => { svID = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(_el); },
         "datSet": (_el: _Element): void => { datSet = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(_el); },
@@ -253,7 +259,7 @@ let _cached_encoder_for_ASDU: $.ASN1Encoder<ASDU> | null = null;
  */
 export
 function _encode_ASDU (value: ASDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ASDU) { _cached_encoder_for_ASDU = function (value: ASDU, elGetter: $.ASN1Encoder<ASDU>): _Element {
+    if (!_cached_encoder_for_ASDU) { _cached_encoder_for_ASDU = function (value: ASDU): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeVisibleString, $.BER)(value.svID, $.BER),

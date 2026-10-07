@@ -3,11 +3,11 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ASDU, _decode_ASDU, _encode_ASDU } from "../IEC61850/ASDU.ta.mjs";
-// export { ASDU, _decode_ASDU, _encode_ASDU } from "../IEC61850/ASDU.ta.mjs";
 
 
 /**
@@ -40,7 +40,11 @@ class SavPdu {
          * @readonly
          */
         readonly seqASDU: ASDU[]
-    ) {}
+    ) {
+        if (typeof noASDU === "bigint" ? (noASDU < 0n || noASDU > 65535n) : (noASDU < 0 || noASDU > 65535)) {
+            throw new ASN1OverflowError("SavPdu.noASDU violates INTEGER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a SavPdu
@@ -113,15 +117,15 @@ export
 function _decode_SavPdu (el: _Element): SavPdu {
     if (!_cached_decoder_for_SavPdu) { _cached_decoder_for_SavPdu = function (el: _Element): SavPdu {
     const sequence: _Element[] = el.sequence;
-    if (sequence.length < 2) {
+    const noASDUElement = sequence[0];
+    const seqASDUElement = sequence[1];
+    if (!noASDUElement || !seqASDUElement) {
         throw new _ConstructionError("SavPdu contained only " + sequence.length.toString() + " elements.");
     }
-    sequence[0].name = "noASDU";
-    sequence[1].name = "seqASDU";
-    let noASDU!: INTEGER;
-    let seqASDU!: ASDU[];
-    noASDU = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    seqASDU = $._decode_implicit<ASDU[]>(() => $._decodeSequenceOf<ASDU>(() => _decode_ASDU))(sequence[1]);
+    noASDUElement.name = "noASDU";
+    seqASDUElement.name = "seqASDU";
+    const noASDU: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(noASDUElement);
+    const seqASDU: ASDU[] = $._decode_implicit<ASDU[]>(() => $._decodeSequenceOf<ASDU>(() => _decode_ASDU))(seqASDUElement);
     return new SavPdu(
         noASDU,
         seqASDU,
@@ -142,7 +146,7 @@ let _cached_encoder_for_SavPdu: $.ASN1Encoder<SavPdu> | null = null;
  */
 export
 function _encode_SavPdu (value: SavPdu, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SavPdu) { _cached_encoder_for_SavPdu = function (value: SavPdu, elGetter: $.ASN1Encoder<SavPdu>): _Element {
+    if (!_cached_encoder_for_SavPdu) { _cached_encoder_for_SavPdu = function (value: SavPdu): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.noASDU, $.BER),
