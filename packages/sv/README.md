@@ -1,6 +1,7 @@
 # sv
 
-This module is ESM-only.
+ASN.1 data structures for the `IEC61850` module (`SampledValues`, `SavPdu`,
+and `ASDU`).
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -16,3 +17,12 @@ produced with it are released publicly under the
 If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
+
+## ESM-Only
+
+This module is ESM-only.
+
+## AI Usage Statement
+
+This package was onboarded from the raw Wildboar ASN.1 compiler outputs using
+AI (Grok 4.7) on 7 October 2026.

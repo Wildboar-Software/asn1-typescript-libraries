@@ -1,9 +1,7 @@
 {
     "name": "@wildboar/sv",
     "type": "module",
-    "version": "0.1.0",
-    "description": "",
-    "keywords": [],
+    "version": "1.0.0",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"
