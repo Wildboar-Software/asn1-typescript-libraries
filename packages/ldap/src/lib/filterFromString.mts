@@ -1,7 +1,7 @@
-import type { Filter } from "../modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs";
-import { AttributeValueAssertion } from "../modules/Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta.mjs";
-import { MatchingRuleAssertion } from "../modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.mjs";
-import { SubstringFilter } from "../modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.mjs";
+import type { Filter } from "./modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs";
+import { AttributeValueAssertion } from "./modules/Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta.mjs";
+import { MatchingRuleAssertion } from "./modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.mjs";
+import { SubstringFilter } from "./modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.mjs";
 import { Buffer } from "node:buffer";
 
 interface ParserState {

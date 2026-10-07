@@ -1,5 +1,5 @@
-import type { Filter } from "../modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs";
-import bytesToAscii from "../utils/bytesToAscii.mjs";
+import type { Filter } from "./modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs";
+import bytesToAscii from "./utils/bytesToAscii.mjs";
 
 const mustBeEscaped = new Set([
     "\x00",
