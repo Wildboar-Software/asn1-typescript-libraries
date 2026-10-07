@@ -4,7 +4,8 @@ import {
     OPTIONAL,
     VisibleString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
@@ -116,7 +117,17 @@ class ASDU {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (typeof smpCnt === "bigint" ? (smpCnt < 0n || smpCnt > 65535n) : (smpCnt < 0 || smpCnt > 65535)) {
+            throw new ASN1OverflowError("ASDU.smpCnt violates INTEGER constraint");
+        }
+        if (typeof confRev === "bigint" ? (confRev < 0n || confRev > 4294967295n) : (confRev < 0 || confRev > 4294967295)) {
+            throw new ASN1OverflowError("ASDU.confRev violates INTEGER constraint");
+        }
+        if (smpRate !== undefined && (typeof smpRate === "bigint" ? (smpRate < 0n || smpRate > 65535n) : (smpRate < 0 || smpRate > 65535))) {
+            throw new ASN1OverflowError("ASDU.smpRate violates INTEGER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ASDU

@@ -3,7 +3,8 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ASDU, _decode_ASDU, _encode_ASDU } from "../IEC61850/ASDU.ta.mjs";
@@ -40,7 +41,11 @@ class SavPdu {
          * @readonly
          */
         readonly seqASDU: ASDU[]
-    ) {}
+    ) {
+        if (typeof noASDU === "bigint" ? (noASDU < 0n || noASDU > 65535n) : (noASDU < 0 || noASDU > 65535)) {
+            throw new ASN1OverflowError("SavPdu.noASDU violates INTEGER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a SavPdu
