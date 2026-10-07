@@ -9,6 +9,8 @@ import * as $ from "@wildboar/asn1/functional";
 import { _decode_DiagFormat_sort_key, _encode_DiagFormat_sort_key, DiagFormat_sort_key } from "../DiagnosticFormatDiag1/DiagFormat-sort-key.ta.mjs";
 // export { DiagFormat_sort_key, DiagFormat_sort_key_tooMany /* IMPORTED_LONG_NAMED_INTEGER */, tooMany /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_sort_key_duplicate /* IMPORTED_LONG_NAMED_INTEGER */, duplicate /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagFormat_sort_key, _encode_DiagFormat_sort_key } from "../DiagnosticFormatDiag1/DiagFormat-sort-key.ta.mjs";
 import { _decode_DiagFormat_sort_illegal, _encode_DiagFormat_sort_illegal, DiagFormat_sort_illegal } from "../DiagnosticFormatDiag1/DiagFormat-sort-illegal.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
+import { SortElement, _decode_SortElement, _encode_SortElement } from "../Z39-50-APDU-1995/SortElement.ta.mjs";
 // export { DiagFormat_sort_illegal, DiagFormat_sort_illegal_relation /* IMPORTED_LONG_NAMED_INTEGER */, relation /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_sort_illegal_case /* IMPORTED_LONG_NAMED_INTEGER */, case_ /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_sort_illegal_action /* IMPORTED_LONG_NAMED_INTEGER */, action /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_sort_illegal_sort /* IMPORTED_LONG_NAMED_INTEGER */, sort /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagFormat_sort_illegal, _encode_DiagFormat_sort_illegal } from "../DiagnosticFormatDiag1/DiagFormat-sort-illegal.ta.mjs";
 
 

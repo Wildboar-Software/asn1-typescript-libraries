@@ -8,6 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeOccurrence_attributeValues, _decode_AttributeOccurrence_attributeValues, _encode_AttributeOccurrence_attributeValues } from "../RecordSyntax-explain/AttributeOccurrence-attributeValues.ta.mjs";
+import { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-1995/AttributeSetId.ta.mjs";
 // export { AttributeOccurrence_attributeValues, _decode_AttributeOccurrence_attributeValues, _encode_AttributeOccurrence_attributeValues } from "../RecordSyntax-explain/AttributeOccurrence-attributeValues.ta.mjs";
 
 

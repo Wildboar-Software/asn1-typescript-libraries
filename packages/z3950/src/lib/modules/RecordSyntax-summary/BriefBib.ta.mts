@@ -7,6 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FormatSpec, _decode_FormatSpec, _encode_FormatSpec } from "../RecordSyntax-summary/FormatSpec.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
+import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-1995/OtherInformation.ta.mjs";
 // export { FormatSpec, _decode_FormatSpec, _encode_FormatSpec } from "../RecordSyntax-summary/FormatSpec.ta.mjs";
 
 

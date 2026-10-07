@@ -7,6 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ResultsByDB_Item_databases, _decode_ResultsByDB_Item_databases, _encode_ResultsByDB_Item_databases } from "../UserInfoFormat-searchResult-1/ResultsByDB-Item-databases.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
 // export { ResultsByDB_Item_databases, _decode_ResultsByDB_Item_databases, _encode_ResultsByDB_Item_databases } from "../UserInfoFormat-searchResult-1/ResultsByDB-Item-databases.ta.mjs";
 
 

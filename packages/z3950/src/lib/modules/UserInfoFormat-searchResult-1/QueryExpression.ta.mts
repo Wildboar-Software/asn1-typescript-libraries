@@ -5,6 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { QueryExpression_term, _decode_QueryExpression_term, _encode_QueryExpression_term } from "../UserInfoFormat-searchResult-1/QueryExpression-term.ta.mjs";
+import { Query, _decode_Query, _encode_Query } from "../Z39-50-APDU-1995/Query.ta.mjs";
 // export { QueryExpression_term, _decode_QueryExpression_term, _encode_QueryExpression_term } from "../UserInfoFormat-searchResult-1/QueryExpression-term.ta.mjs";
 
 

@@ -6,6 +6,8 @@ import {
     NULL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-1995/AttributeList.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
 
 
 

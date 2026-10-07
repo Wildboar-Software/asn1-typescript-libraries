@@ -20,6 +20,8 @@ import { DatabaseList, _decode_DatabaseList, _encode_DatabaseList } from "../Rec
 import { NetworkAddress, _decode_NetworkAddress, _encode_NetworkAddress } from "../RecordSyntax-explain/NetworkAddress.ta.mjs";
 // export { NetworkAddress, _decode_NetworkAddress, _encode_NetworkAddress } from "../RecordSyntax-explain/NetworkAddress.ta.mjs";
 import { AccessInfo, _decode_AccessInfo, _encode_AccessInfo } from "../RecordSyntax-explain/AccessInfo.ta.mjs";
+import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-1995/IntUnit.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
 // export { AccessInfo, _decode_AccessInfo, _encode_AccessInfo } from "../RecordSyntax-explain/AccessInfo.ta.mjs";
 
 

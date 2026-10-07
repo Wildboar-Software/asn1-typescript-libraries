@@ -8,6 +8,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { Volume, _decode_Volume, _encode_Volume } from "../RecordSyntax-opac/Volume.ta.mjs";
 // export { Volume, _decode_Volume, _encode_Volume } from "../RecordSyntax-opac/Volume.ta.mjs";
 import { CircRecord, _decode_CircRecord, _encode_CircRecord } from "../RecordSyntax-opac/CircRecord.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
 // export { CircRecord, _decode_CircRecord, _encode_CircRecord } from "../RecordSyntax-opac/CircRecord.ta.mjs";
 
 

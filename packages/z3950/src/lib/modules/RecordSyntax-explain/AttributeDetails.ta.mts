@@ -10,6 +10,7 @@ import { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyn
 import { AttributeSetDetails, _decode_AttributeSetDetails, _encode_AttributeSetDetails } from "../RecordSyntax-explain/AttributeSetDetails.ta.mjs";
 // export { AttributeSetDetails, _decode_AttributeSetDetails, _encode_AttributeSetDetails } from "../RecordSyntax-explain/AttributeSetDetails.ta.mjs";
 import { AttributeCombinations, _decode_AttributeCombinations, _encode_AttributeCombinations } from "../RecordSyntax-explain/AttributeCombinations.ta.mjs";
+import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-1995/DatabaseName.ta.mjs";
 // export { AttributeCombinations, _decode_AttributeCombinations, _encode_AttributeCombinations } from "../RecordSyntax-explain/AttributeCombinations.ta.mjs";
 
 

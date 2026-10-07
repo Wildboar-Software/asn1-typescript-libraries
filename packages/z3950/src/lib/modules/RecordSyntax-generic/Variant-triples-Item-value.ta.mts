@@ -9,6 +9,9 @@ import {
     OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-1995/IntUnit.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
+import { Unit, _decode_Unit, _encode_Unit } from "../Z39-50-APDU-1995/Unit.ta.mjs";
 
 
 

@@ -13,6 +13,8 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
 import { AttributeCombinations, _decode_AttributeCombinations, _encode_AttributeCombinations } from "../RecordSyntax-explain/AttributeCombinations.ta.mjs";
 // export { AttributeCombinations, _decode_AttributeCombinations, _encode_AttributeCombinations } from "../RecordSyntax-explain/AttributeCombinations.ta.mjs";
 import { TermListDetails_scanInfo, _decode_TermListDetails_scanInfo, _encode_TermListDetails_scanInfo } from "../RecordSyntax-explain/TermListDetails-scanInfo.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
+import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-1995/Term.ta.mjs";
 // export { TermListDetails_scanInfo, _decode_TermListDetails_scanInfo, _encode_TermListDetails_scanInfo } from "../RecordSyntax-explain/TermListDetails-scanInfo.ta.mjs";
 
 

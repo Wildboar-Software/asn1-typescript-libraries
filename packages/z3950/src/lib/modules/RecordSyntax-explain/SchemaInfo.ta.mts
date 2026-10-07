@@ -13,6 +13,7 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
 import { SchemaInfo_tagTypeMapping_Item, _decode_SchemaInfo_tagTypeMapping_Item, _encode_SchemaInfo_tagTypeMapping_Item } from "../RecordSyntax-explain/SchemaInfo-tagTypeMapping-Item.ta.mjs";
 // export { SchemaInfo_tagTypeMapping_Item, _decode_SchemaInfo_tagTypeMapping_Item, _encode_SchemaInfo_tagTypeMapping_Item } from "../RecordSyntax-explain/SchemaInfo-tagTypeMapping-Item.ta.mjs";
 import { ElementInfo, _decode_ElementInfo, _encode_ElementInfo } from "../RecordSyntax-explain/ElementInfo.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
 // export { ElementInfo, _decode_ElementInfo, _encode_ElementInfo } from "../RecordSyntax-explain/ElementInfo.ta.mjs";
 
 

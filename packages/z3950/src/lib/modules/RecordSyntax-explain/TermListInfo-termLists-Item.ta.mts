@@ -9,6 +9,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 // export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 import { TermListInfo_termLists_Item_searchCost, _decode_TermListInfo_termLists_Item_searchCost, _encode_TermListInfo_termLists_Item_searchCost } from "../RecordSyntax-explain/TermListInfo-termLists-Item-searchCost.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
 // export { TermListInfo_termLists_Item_searchCost, TermListInfo_termLists_Item_searchCost_optimized /* IMPORTED_LONG_NAMED_INTEGER */, optimized /* IMPORTED_SHORT_NAMED_INTEGER */, TermListInfo_termLists_Item_searchCost_normal /* IMPORTED_LONG_NAMED_INTEGER */, normal /* IMPORTED_SHORT_NAMED_INTEGER */, TermListInfo_termLists_Item_searchCost_expensive /* IMPORTED_LONG_NAMED_INTEGER */, expensive /* IMPORTED_SHORT_NAMED_INTEGER */, TermListInfo_termLists_Item_searchCost_filter /* IMPORTED_LONG_NAMED_INTEGER */, filter /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TermListInfo_termLists_Item_searchCost, _encode_TermListInfo_termLists_Item_searchCost } from "../RecordSyntax-explain/TermListInfo-termLists-Item-searchCost.ta.mjs";
 
 

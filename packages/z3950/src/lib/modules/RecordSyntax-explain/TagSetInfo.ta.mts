@@ -11,6 +11,7 @@ import { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyn
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 // export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 import { TagSetInfo_elements_Item, _decode_TagSetInfo_elements_Item, _encode_TagSetInfo_elements_Item } from "../RecordSyntax-explain/TagSetInfo-elements-Item.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
 // export { TagSetInfo_elements_Item, _decode_TagSetInfo_elements_Item, _encode_TagSetInfo_elements_Item } from "../RecordSyntax-explain/TagSetInfo-elements-Item.ta.mjs";
 
 

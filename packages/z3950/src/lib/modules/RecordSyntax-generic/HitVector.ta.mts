@@ -7,6 +7,8 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-1995/IntUnit.ta.mjs";
+import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-1995/Term.ta.mjs";
 
 
 

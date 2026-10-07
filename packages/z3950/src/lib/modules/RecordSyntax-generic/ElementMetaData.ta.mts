@@ -16,6 +16,7 @@ import { HitVector, _decode_HitVector, _encode_HitVector } from "../RecordSyntax
 import { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-generic/Variant.ta.mjs";
 // export { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-generic/Variant.ta.mjs";
 import { TagPath, _decode_TagPath, _encode_TagPath } from "../RecordSyntax-generic/TagPath.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
 // export { TagPath, _decode_TagPath, _encode_TagPath } from "../RecordSyntax-generic/TagPath.ta.mjs";
 
 

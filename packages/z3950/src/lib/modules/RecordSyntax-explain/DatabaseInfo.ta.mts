@@ -22,6 +22,8 @@ import { DatabaseInfo_recordCount, _decode_DatabaseInfo_recordCount, _encode_Dat
 import { ContactInfo, _decode_ContactInfo, _encode_ContactInfo } from "../RecordSyntax-explain/ContactInfo.ta.mjs";
 // export { ContactInfo, _decode_ContactInfo, _encode_ContactInfo } from "../RecordSyntax-explain/ContactInfo.ta.mjs";
 import { AccessInfo, _decode_AccessInfo, _encode_AccessInfo } from "../RecordSyntax-explain/AccessInfo.ta.mjs";
+import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-1995/DatabaseName.ta.mjs";
+import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-1995/IntUnit.ta.mjs";
 // export { AccessInfo, _decode_AccessInfo, _encode_AccessInfo } from "../RecordSyntax-explain/AccessInfo.ta.mjs";
 
 

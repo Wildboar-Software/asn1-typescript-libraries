@@ -5,6 +5,8 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-1995/DatabaseName.ta.mjs";
+import { Specification, _decode_Specification, _encode_Specification } from "../Z39-50-APDU-1995/Specification.ta.mjs";
 
 
 

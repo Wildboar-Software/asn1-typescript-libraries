@@ -8,6 +8,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
 // export { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
 import { SortKeyDetails, _decode_SortKeyDetails, _encode_SortKeyDetails } from "../RecordSyntax-explain/SortKeyDetails.ta.mjs";
+import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-1995/DatabaseName.ta.mjs";
 // export { SortKeyDetails, _decode_SortKeyDetails, _encode_SortKeyDetails } from "../RecordSyntax-explain/SortKeyDetails.ta.mjs";
 
 
