@@ -109,13 +109,13 @@ class SearchInfoReport_Item {
  */
 export
 const _root_component_type_list_1_spec_for_SearchInfoReport_Item: $.ComponentSpec[] = [
-    /* FIXME: subqueryId COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("subqueryId", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("fullQuery", false, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("subqueryExpression", true, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("subqueryInterpretation", true, $.hasTag(_TagClass.context, 4)),
     new $.ComponentSpec("subqueryRecommendation", true, $.hasTag(_TagClass.context, 5)),
     new $.ComponentSpec("subqueryCount", true, $.hasTag(_TagClass.context, 6)),
-    /* FIXME: subqueryWeight COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("subqueryWeight", true, $.hasTag(_TagClass.context, 7)),
     new $.ComponentSpec("resultsByDB", true, $.hasTag(_TagClass.context, 8))
 ];
 

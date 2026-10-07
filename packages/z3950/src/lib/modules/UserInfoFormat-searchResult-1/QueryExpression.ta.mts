@@ -40,7 +40,7 @@ export
 function _decode_QueryExpression (el: _Element): QueryExpression {
     if (!_cached_decoder_for_QueryExpression) { _cached_decoder_for_QueryExpression = $._decode_inextensible_choice<QueryExpression>({
     "CONTEXT 1": [ "term", $._decode_implicit<QueryExpression_term>(() => _decode_QueryExpression_term) ],
-    "CONTEXT 2": [ "query", $._decode_implicit<Query>(() => _decode_Query) ]
+    "CONTEXT 2": [ "query", $._decode_explicit<Query>(() => _decode_Query) ]
 }); }
     return _cached_decoder_for_QueryExpression(el);
 }
@@ -58,7 +58,7 @@ export
 function _encode_QueryExpression (value: QueryExpression, elGetter: $.ASN1Encoder<any>): _Element {
     if (!_cached_encoder_for_QueryExpression) { _cached_encoder_for_QueryExpression = $._encode_choice<QueryExpression>({
     "term": $._encode_implicit(_TagClass.context, 1, () => _encode_QueryExpression_term, $.BER),
-    "query": $._encode_implicit(_TagClass.context, 2, () => _encode_Query, $.BER),
+    "query": $._encode_explicit(_TagClass.context, 2, () => _encode_Query, $.BER),
 }, $.BER); }
     return _cached_encoder_for_QueryExpression(value, elGetter);
 }

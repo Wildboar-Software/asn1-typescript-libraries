@@ -79,8 +79,8 @@ class Charge {
  */
 export
 const _root_component_type_list_1_spec_for_Charge: $.ComponentSpec[] = [
-    /* FIXME: cost COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: perWhat COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("cost", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("perWhat", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("text", true, $.hasTag(_TagClass.context, 3))
 ];
 

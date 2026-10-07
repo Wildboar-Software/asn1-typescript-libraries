@@ -124,8 +124,8 @@ class ElementSetDetails {
 export
 const _root_component_type_list_1_spec_for_ElementSetDetails: $.ComponentSpec[] = [
     new $.ComponentSpec("commonInfo", true, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: databaseName COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: elementSetName COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("databaseName", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("elementSetName", false, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("recordSyntax", false, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("schema", false, $.hasTag(_TagClass.context, 4)),
     new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 5)),

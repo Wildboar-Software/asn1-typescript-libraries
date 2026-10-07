@@ -72,7 +72,7 @@ class OmittedAttributeInterpretation {
  */
 export
 const _root_component_type_list_1_spec_for_OmittedAttributeInterpretation: $.ComponentSpec[] = [
-    /* FIXME: defaultValue COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("defaultValue", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("defaultDescription", true, $.hasTag(_TagClass.context, 1))
 ];
 

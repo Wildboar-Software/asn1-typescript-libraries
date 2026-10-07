@@ -127,15 +127,15 @@ class CircRecord {
 export
 const _root_component_type_list_1_spec_for_CircRecord: $.ComponentSpec[] = [
     new $.ComponentSpec("availableNow", false, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: availablityDate COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: availableThru COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: restrictions COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: itemId COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("availablityDate", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("availableThru", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("restrictions", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("itemId", true, $.hasTag(_TagClass.context, 5)),
     new $.ComponentSpec("renewable", false, $.hasTag(_TagClass.context, 6)),
     new $.ComponentSpec("onHold", false, $.hasTag(_TagClass.context, 7)),
-    /* FIXME: enumAndChron COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: midspine COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: temporaryLocation COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("enumAndChron", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("midspine", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("temporaryLocation", true, $.hasTag(_TagClass.context, 10))
 ];
 
 /**

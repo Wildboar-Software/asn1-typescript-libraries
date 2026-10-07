@@ -95,7 +95,7 @@ class TermListInfo_termLists_Item {
  */
 export
 const _root_component_type_list_1_spec_for_TermListInfo_termLists_Item: $.ComponentSpec[] = [
-    /* FIXME: name COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("name", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("title", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("searchCost", true, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("scanable", false, $.hasTag(_TagClass.context, 4)),

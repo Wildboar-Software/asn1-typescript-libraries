@@ -99,7 +99,7 @@ export
 const _root_component_type_list_1_spec_for_VariantSetInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("commonInfo", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("variantSet", false, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: name COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("name", false, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("variants", true, $.hasTag(_TagClass.context, 3))
 ];
 

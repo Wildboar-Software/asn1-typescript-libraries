@@ -69,7 +69,7 @@ class Path_Item {
 export
 const _root_component_type_list_1_spec_for_Path_Item: $.ComponentSpec[] = [
     new $.ComponentSpec("tagType", false, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: tagValue COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("tagValue", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

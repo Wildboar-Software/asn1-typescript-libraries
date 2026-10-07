@@ -73,7 +73,7 @@ function _decode_ElementData (el: _Element): ElementData {
     "UNIVERSAL 2": [ "numeric", $._decodeInteger ],
     "UNIVERSAL 24": [ "date", $._decodeGeneralizedTime ],
     "UNIVERSAL 8": [ "ext", $._decodeExternal ],
-    "*": [ "string_", _decode_InternationalString ],
+    "UNIVERSAL 27": [ "string_", _decode_InternationalString ],
     "UNIVERSAL 1": [ "trueOrFalse", $._decodeBoolean ],
     "UNIVERSAL 6": [ "oid", $._decodeObjectIdentifier ],
     "CONTEXT 1": [ "intUnit", $._decode_implicit<IntUnit>(() => _decode_IntUnit) ],
@@ -81,7 +81,7 @@ function _decode_ElementData (el: _Element): ElementData {
     "CONTEXT 3": [ "elementEmpty", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 4": [ "noDataRequested", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 5": [ "diagnostic", $._decode_implicit<EXTERNAL>(() => $._decodeExternal) ],
-    "CONTEXT 6": [ "subtree", $._decode_implicit<TaggedElement[]>(() => $._decodeSequenceOf<TaggedElement>(() => _decode_TaggedElement)) ]
+    "CONTEXT 6": [ "subtree", $._decode_explicit<TaggedElement[]>(() => $._decodeSequenceOf<TaggedElement>(() => _decode_TaggedElement)) ]
 }); }
     return _cached_decoder_for_ElementData(el);
 }
@@ -110,7 +110,7 @@ function _encode_ElementData (value: ElementData, elGetter: $.ASN1Encoder<any>):
     "elementEmpty": $._encode_implicit(_TagClass.context, 3, () => $._encodeNull, $.BER),
     "noDataRequested": $._encode_implicit(_TagClass.context, 4, () => $._encodeNull, $.BER),
     "diagnostic": $._encode_implicit(_TagClass.context, 5, () => $._encodeExternal, $.BER),
-    "subtree": $._encode_implicit(_TagClass.context, 6, () => $._encodeSequenceOf<TaggedElement>(() => _encode_TaggedElement, $.BER), $.BER),
+    "subtree": $._encode_explicit(_TagClass.context, 6, () => $._encodeSequenceOf<TaggedElement>(() => _encode_TaggedElement, $.BER), $.BER),
 }, $.BER); }
     return _cached_encoder_for_ElementData(value, elGetter);
 }

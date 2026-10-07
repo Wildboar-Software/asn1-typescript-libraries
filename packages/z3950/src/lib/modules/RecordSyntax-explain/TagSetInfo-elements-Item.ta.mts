@@ -96,12 +96,12 @@ class TagSetInfo_elements_Item {
  */
 export
 const _root_component_type_list_1_spec_for_TagSetInfo_elements_Item: $.ComponentSpec[] = [
-    /* FIXME: elementname COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("elementname", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("nicknames", true, $.hasTag(_TagClass.context, 2)),
-    /* FIXME: elementTag COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("elementTag", false, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 4)),
     new $.ComponentSpec("dataType", true, $.hasTag(_TagClass.context, 5)),
-    /* FIXME: otherTagInfo COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("otherTagInfo", true, $.hasTag(_TagClass.context, 201))
 ];
 
 /**

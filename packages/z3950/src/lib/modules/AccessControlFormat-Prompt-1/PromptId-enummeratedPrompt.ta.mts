@@ -69,7 +69,7 @@ class PromptId_enummeratedPrompt {
 export
 const _root_component_type_list_1_spec_for_PromptId_enummeratedPrompt: $.ComponentSpec[] = [
     new $.ComponentSpec("type", false, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: suggestedString COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("suggestedString", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

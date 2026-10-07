@@ -70,7 +70,7 @@ class SearchKey {
  */
 export
 const _root_component_type_list_1_spec_for_SearchKey: $.ComponentSpec[] = [
-    /* FIXME: searchKey COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("searchKey", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 1))
 ];
 

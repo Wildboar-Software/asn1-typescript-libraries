@@ -78,9 +78,9 @@ class Units {
  */
 export
 const _root_component_type_list_1_spec_for_Units: $.ComponentSpec[] = [
-    /* FIXME: name COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("name", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: unit COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("unit", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

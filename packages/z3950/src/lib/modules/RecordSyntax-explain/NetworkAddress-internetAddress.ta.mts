@@ -68,7 +68,7 @@ class NetworkAddress_internetAddress {
  */
 export
 const _root_component_type_list_1_spec_for_NetworkAddress_internetAddress: $.ComponentSpec[] = [
-    /* FIXME: hostAddress COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("hostAddress", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("port", false, $.hasTag(_TagClass.context, 1))
 ];
 

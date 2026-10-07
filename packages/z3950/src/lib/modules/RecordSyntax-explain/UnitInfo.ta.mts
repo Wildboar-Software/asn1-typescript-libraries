@@ -92,7 +92,7 @@ class UnitInfo {
 export
 const _root_component_type_list_1_spec_for_UnitInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("commonInfo", true, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: unitSystem COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("unitSystem", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("units", true, $.hasTag(_TagClass.context, 3))
 ];

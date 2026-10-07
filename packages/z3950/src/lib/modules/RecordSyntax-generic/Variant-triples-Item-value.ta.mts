@@ -48,7 +48,7 @@ export
 function _decode_Variant_triples_Item_value (el: _Element): Variant_triples_Item_value {
     if (!_cached_decoder_for_Variant_triples_Item_value) { _cached_decoder_for_Variant_triples_Item_value = $._decode_inextensible_choice<Variant_triples_Item_value>({
     "UNIVERSAL 2": [ "integer", $._decodeInteger ],
-    "*": [ "string_", _decode_InternationalString ],
+    "UNIVERSAL 27": [ "string_", _decode_InternationalString ],
     "UNIVERSAL 4": [ "octetString", $._decodeOctetString ],
     "UNIVERSAL 6": [ "oid", $._decodeObjectIdentifier ],
     "UNIVERSAL 1": [ "boolean_", $._decodeBoolean ],

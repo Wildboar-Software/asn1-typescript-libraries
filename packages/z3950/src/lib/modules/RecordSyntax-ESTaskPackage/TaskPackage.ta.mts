@@ -150,11 +150,11 @@ class TaskPackage {
 export
 const _root_component_type_list_1_spec_for_TaskPackage: $.ComponentSpec[] = [
     new $.ComponentSpec("packageType", false, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: packageName COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: userId COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: retentionTime COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: permissions COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: description COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("packageName", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("userId", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("retentionTime", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("permissions", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 6)),
     new $.ComponentSpec("targetReference", true, $.hasTag(_TagClass.context, 7)),
     new $.ComponentSpec("creationDateTime", true, $.hasTag(_TagClass.context, 8)),
     new $.ComponentSpec("taskStatus", false, $.hasTag(_TagClass.context, 9)),

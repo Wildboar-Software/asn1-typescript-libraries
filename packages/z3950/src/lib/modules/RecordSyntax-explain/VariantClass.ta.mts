@@ -87,7 +87,7 @@ class VariantClass {
  */
 export
 const _root_component_type_list_1_spec_for_VariantClass: $.ComponentSpec[] = [
-    /* FIXME: name COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("name", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("variantClass", false, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("variantTypes", false, $.hasTag(_TagClass.context, 3))

@@ -68,8 +68,8 @@ class HumanString_Item {
  */
 export
 const _root_component_type_list_1_spec_for_HumanString_Item: $.ComponentSpec[] = [
-    /* FIXME: language COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: text COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("language", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("text", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**

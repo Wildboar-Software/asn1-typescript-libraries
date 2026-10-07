@@ -84,10 +84,10 @@ class CategoryInfo {
  */
 export
 const _root_component_type_list_1_spec_for_CategoryInfo: $.ComponentSpec[] = [
-    /* FIXME: category COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: originalCategory COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("category", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("originalCategory", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 3)),
-    /* FIXME: asn1Module COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("asn1Module", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**

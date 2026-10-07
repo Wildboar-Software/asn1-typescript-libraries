@@ -313,7 +313,7 @@ class DatabaseInfo {
 export
 const _root_component_type_list_1_spec_for_DatabaseInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("commonInfo", true, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: name COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("name", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("explainDatabase", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("nicknames", true, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("icon", true, $.hasTag(_TagClass.context, 4)),
@@ -333,7 +333,7 @@ const _root_component_type_list_1_spec_for_DatabaseInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("hours", true, $.hasTag(_TagClass.context, 18)),
     new $.ComponentSpec("bestTime", true, $.hasTag(_TagClass.context, 19)),
     new $.ComponentSpec("lastUpdate", true, $.hasTag(_TagClass.context, 20)),
-    /* FIXME: updateInterval COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("updateInterval", true, $.hasTag(_TagClass.context, 21)),
     new $.ComponentSpec("coverage", true, $.hasTag(_TagClass.context, 22)),
     new $.ComponentSpec("proprietary", true, $.hasTag(_TagClass.context, 23)),
     new $.ComponentSpec("copyrightText", true, $.hasTag(_TagClass.context, 24)),

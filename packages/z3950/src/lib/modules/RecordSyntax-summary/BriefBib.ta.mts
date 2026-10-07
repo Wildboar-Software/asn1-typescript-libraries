@@ -156,20 +156,20 @@ class BriefBib {
  */
 export
 const _root_component_type_list_1_spec_for_BriefBib: $.ComponentSpec[] = [
-    /* FIXME: title COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: author COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: callNumber COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: recordType COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: bibliographicLevel COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("title", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("author", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("callNumber", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("recordType", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("bibliographicLevel", true, $.hasTag(_TagClass.context, 5)),
     new $.ComponentSpec("format", true, $.hasTag(_TagClass.context, 6)),
-    /* FIXME: publicationPlace COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: publicationDate COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: targetSystemKey COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: satisfyingElement COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("publicationPlace", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("publicationDate", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("targetSystemKey", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("satisfyingElement", true, $.hasTag(_TagClass.context, 10)),
     new $.ComponentSpec("rank", true, $.hasTag(_TagClass.context, 11)),
-    /* FIXME: documentId COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: abstract COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: otherInfo COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("documentId", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("abstract", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("otherInfo", true, $.hasTag(_TagClass.context, 201))
 ];
 
 /**

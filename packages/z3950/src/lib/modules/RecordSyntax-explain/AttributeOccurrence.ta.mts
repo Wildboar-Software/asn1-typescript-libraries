@@ -92,7 +92,7 @@ class AttributeOccurrence {
  */
 export
 const _root_component_type_list_1_spec_for_AttributeOccurrence: $.ComponentSpec[] = [
-    /* FIXME: attributeSet COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("attributeSet", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("attributeType", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("mustBeSupplied", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("attributeValues", false, $.hasAnyTag)

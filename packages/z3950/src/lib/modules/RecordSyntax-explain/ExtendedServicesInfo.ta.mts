@@ -167,7 +167,7 @@ export
 const _root_component_type_list_1_spec_for_ExtendedServicesInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("commonInfo", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("type", false, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: name COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("name", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("privateType", false, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("restrictionsApply", false, $.hasTag(_TagClass.context, 5)),
     new $.ComponentSpec("feeApply", false, $.hasTag(_TagClass.context, 6)),
@@ -176,7 +176,7 @@ const _root_component_type_list_1_spec_for_ExtendedServicesInfo: $.ComponentSpec
     new $.ComponentSpec("waitAction", false, $.hasTag(_TagClass.context, 9)),
     new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 10)),
     new $.ComponentSpec("specificExplain", true, $.hasTag(_TagClass.context, 11)),
-    /* FIXME: esASN COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("esASN", true, $.hasTag(_TagClass.context, 12))
 ];
 
 /**

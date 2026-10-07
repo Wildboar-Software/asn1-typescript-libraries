@@ -48,7 +48,7 @@ function _decode_DiagFormat_proximity (el: _Element): DiagFormat_proximity {
     "CONTEXT 3": [ "relation", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
     "CONTEXT 4": [ "unit", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
     "CONTEXT 5": [ "distance", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
-    "CONTEXT 6": [ "attributes", $._decode_implicit<AttributeList>(() => _decode_AttributeList) ],
+    "CONTEXT 6": [ "attributes", $._decode_explicit<AttributeList>(() => _decode_AttributeList) ],
     "CONTEXT 7": [ "ordered", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 8": [ "exclusion", $._decode_implicit<NULL>(() => $._decodeNull) ]
 }); }
@@ -72,7 +72,7 @@ function _encode_DiagFormat_proximity (value: DiagFormat_proximity, elGetter: $.
     "relation": $._encode_implicit(_TagClass.context, 3, () => $._encodeInteger, $.BER),
     "unit": $._encode_implicit(_TagClass.context, 4, () => $._encodeInteger, $.BER),
     "distance": $._encode_implicit(_TagClass.context, 5, () => $._encodeInteger, $.BER),
-    "attributes": $._encode_implicit(_TagClass.context, 6, () => _encode_AttributeList, $.BER),
+    "attributes": $._encode_explicit(_TagClass.context, 6, () => _encode_AttributeList, $.BER),
     "ordered": $._encode_implicit(_TagClass.context, 7, () => $._encodeNull, $.BER),
     "exclusion": $._encode_implicit(_TagClass.context, 8, () => $._encodeNull, $.BER),
 }, $.BER); }

@@ -117,9 +117,9 @@ class Challenge_Item {
 export
 const _root_component_type_list_1_spec_for_Challenge_Item: $.ComponentSpec[] = [
     new $.ComponentSpec("promptId", false, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: defaultResponse COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("defaultResponse", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("promptInfo", true, $.hasTag(_TagClass.context, 3)),
-    /* FIXME: regExpr COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("regExpr", true, $.hasTag(_TagClass.context, 4)),
     new $.ComponentSpec("responseRequired", true, $.hasTag(_TagClass.context, 5)),
     new $.ComponentSpec("allowedValues", true, $.hasTag(_TagClass.context, 6)),
     new $.ComponentSpec("shouldSave", true, $.hasTag(_TagClass.context, 7)),

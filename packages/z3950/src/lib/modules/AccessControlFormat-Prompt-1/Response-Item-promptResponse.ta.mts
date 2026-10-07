@@ -44,7 +44,7 @@ function _decode_Response_Item_promptResponse (el: _Element): Response_Item_prom
     "CONTEXT 1": [ "string_", $._decode_implicit<InternationalString>(() => _decode_InternationalString) ],
     "CONTEXT 2": [ "accept", $._decode_implicit<BOOLEAN>(() => $._decodeBoolean) ],
     "CONTEXT 3": [ "acknowledge", $._decode_implicit<NULL>(() => $._decodeNull) ],
-    "CONTEXT 4": [ "diagnostic", $._decode_implicit<DiagRec>(() => _decode_DiagRec) ],
+    "CONTEXT 4": [ "diagnostic", $._decode_explicit<DiagRec>(() => _decode_DiagRec) ],
     "CONTEXT 5": [ "encrypted", $._decode_implicit<Encryption>(() => _decode_Encryption) ]
 }); }
     return _cached_decoder_for_Response_Item_promptResponse(el);
@@ -65,7 +65,7 @@ function _encode_Response_Item_promptResponse (value: Response_Item_promptRespon
     "string_": $._encode_implicit(_TagClass.context, 1, () => _encode_InternationalString, $.BER),
     "accept": $._encode_implicit(_TagClass.context, 2, () => $._encodeBoolean, $.BER),
     "acknowledge": $._encode_implicit(_TagClass.context, 3, () => $._encodeNull, $.BER),
-    "diagnostic": $._encode_implicit(_TagClass.context, 4, () => _encode_DiagRec, $.BER),
+    "diagnostic": $._encode_explicit(_TagClass.context, 4, () => _encode_DiagRec, $.BER),
     "encrypted": $._encode_implicit(_TagClass.context, 5, () => _encode_Encryption, $.BER),
 }, $.BER); }
     return _cached_encoder_for_Response_Item_promptResponse(value, elGetter);

@@ -99,9 +99,9 @@ class HitVector {
  */
 export
 const _root_component_type_list_1_spec_for_HitVector: $.ComponentSpec[] = [
-    /* FIXME: satisfier COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: offsetIntoElement COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: length COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("satisfier", true, $.or($.hasTag(_TagClass.context, 45), $.hasTag(_TagClass.context, 215), $.hasTag(_TagClass.context, 216), $.hasTag(_TagClass.context, 217), $.hasTag(_TagClass.context, 218), $.hasTag(_TagClass.context, 219), $.hasTag(_TagClass.context, 220), $.hasTag(_TagClass.context, 221))),
+    new $.ComponentSpec("offsetIntoElement", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("length", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("hitRank", true, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("targetToken", true, $.hasTag(_TagClass.context, 4))
 ];

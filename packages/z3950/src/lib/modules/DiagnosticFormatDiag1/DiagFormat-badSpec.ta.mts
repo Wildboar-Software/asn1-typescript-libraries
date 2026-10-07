@@ -74,8 +74,8 @@ class DiagFormat_badSpec {
  */
 export
 const _root_component_type_list_1_spec_for_DiagFormat_badSpec: $.ComponentSpec[] = [
-    /* FIXME: spec COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: db COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("spec", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("db", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("goodOnes", true, $.hasTag(_TagClass.context, 3))
 ];
 

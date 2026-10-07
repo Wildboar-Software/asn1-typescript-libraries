@@ -70,8 +70,8 @@ class RecordTag {
  */
 export
 const _root_component_type_list_1_spec_for_RecordTag: $.ComponentSpec[] = [
-    /* FIXME: qualifier COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: tagValue COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("qualifier", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("tagValue", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**

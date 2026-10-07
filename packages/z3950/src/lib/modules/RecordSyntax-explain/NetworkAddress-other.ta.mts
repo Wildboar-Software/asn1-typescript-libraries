@@ -67,8 +67,8 @@ class NetworkAddress_other {
  */
 export
 const _root_component_type_list_1_spec_for_NetworkAddress_other: $.ComponentSpec[] = [
-    /* FIXME: type COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: address COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("type", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("address", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**

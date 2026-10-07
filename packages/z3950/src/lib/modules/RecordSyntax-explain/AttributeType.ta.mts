@@ -87,7 +87,7 @@ class AttributeType {
  */
 export
 const _root_component_type_list_1_spec_for_AttributeType: $.ComponentSpec[] = [
-    /* FIXME: name COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("name", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("attributeType", false, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("attributeValues", false, $.hasTag(_TagClass.context, 3))

@@ -104,7 +104,7 @@ class ElementInfo {
  */
 export
 const _root_component_type_list_1_spec_for_ElementInfo: $.ComponentSpec[] = [
-    /* FIXME: elementName COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("elementName", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("elementTagPath", false, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("dataType", true, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("required", false, $.hasTag(_TagClass.context, 4)),

@@ -69,7 +69,7 @@ class DiagFormat_dbUnavail_why {
 export
 const _root_component_type_list_1_spec_for_DiagFormat_dbUnavail_why: $.ComponentSpec[] = [
     new $.ComponentSpec("reasonCode", true, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: message COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("message", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

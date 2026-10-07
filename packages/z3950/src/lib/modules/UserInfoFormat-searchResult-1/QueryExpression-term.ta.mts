@@ -68,8 +68,8 @@ class QueryExpression_term {
  */
 export
 const _root_component_type_list_1_spec_for_QueryExpression_term: $.ComponentSpec[] = [
-    /* FIXME: queryTerm COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: termComment COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("queryTerm", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("termComment", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

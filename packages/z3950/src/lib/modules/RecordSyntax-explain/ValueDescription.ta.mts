@@ -52,7 +52,7 @@ export
 function _decode_ValueDescription (el: _Element): ValueDescription {
     if (!_cached_decoder_for_ValueDescription) { _cached_decoder_for_ValueDescription = $._decode_inextensible_choice<ValueDescription>({
     "UNIVERSAL 2": [ "integer", $._decodeInteger ],
-    "*": [ "string_", _decode_InternationalString ],
+    "UNIVERSAL 27": [ "string_", _decode_InternationalString ],
     "UNIVERSAL 4": [ "octets", $._decodeOctetString ],
     "UNIVERSAL 6": [ "oid", $._decodeObjectIdentifier ],
     "CONTEXT 1": [ "unit", $._decode_implicit<Unit>(() => _decode_Unit) ],

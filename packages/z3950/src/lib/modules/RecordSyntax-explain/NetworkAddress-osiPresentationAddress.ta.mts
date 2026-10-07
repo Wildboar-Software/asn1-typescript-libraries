@@ -79,10 +79,10 @@ class NetworkAddress_osiPresentationAddress {
  */
 export
 const _root_component_type_list_1_spec_for_NetworkAddress_osiPresentationAddress: $.ComponentSpec[] = [
-    /* FIXME: pSel COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: sSel COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: tSel COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: nSap COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("pSel", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("sSel", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("tSel", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("nSap", false, $.hasTag(_TagClass.context, 3))
 ];
 
 /**

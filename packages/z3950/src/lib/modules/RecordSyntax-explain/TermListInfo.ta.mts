@@ -128,7 +128,7 @@ class TermListInfo {
 export
 const _root_component_type_list_1_spec_for_TermListInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("commonInfo", true, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: databaseName COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("databaseName", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("termLists", false, $.hasTag(_TagClass.context, 2))
 ];
 

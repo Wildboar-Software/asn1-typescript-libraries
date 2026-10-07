@@ -77,7 +77,7 @@ class FormatSpec {
  */
 export
 const _root_component_type_list_1_spec_for_FormatSpec: $.ComponentSpec[] = [
-    /* FIXME: type COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("type", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("size", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("bestPosn", true, $.hasTag(_TagClass.context, 3))
 ];

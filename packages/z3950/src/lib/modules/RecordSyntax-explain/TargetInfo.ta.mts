@@ -231,7 +231,7 @@ class TargetInfo {
 export
 const _root_component_type_list_1_spec_for_TargetInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("commonInfo", true, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: name COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("name", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("recent-news", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("icon", true, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("namedResultSets", false, $.hasTag(_TagClass.context, 4)),
@@ -239,7 +239,7 @@ const _root_component_type_list_1_spec_for_TargetInfo: $.ComponentSpec[] = [
     new $.ComponentSpec("maxResultSets", true, $.hasTag(_TagClass.context, 6)),
     new $.ComponentSpec("maxResultSize", true, $.hasTag(_TagClass.context, 7)),
     new $.ComponentSpec("maxTerms", true, $.hasTag(_TagClass.context, 8)),
-    /* FIXME: timeoutInterval COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("timeoutInterval", true, $.hasTag(_TagClass.context, 9)),
     new $.ComponentSpec("welcomeMessage", true, $.hasTag(_TagClass.context, 10)),
     new $.ComponentSpec("contactInfo", true, $.hasTag(_TagClass.context, 11)),
     new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 12)),

@@ -73,7 +73,7 @@ class AttributeCombinations {
  */
 export
 const _root_component_type_list_1_spec_for_AttributeCombinations: $.ComponentSpec[] = [
-    /* FIXME: defaultAttributeSet COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("defaultAttributeSet", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("legalCombinations", false, $.hasTag(_TagClass.context, 1))
 ];
 

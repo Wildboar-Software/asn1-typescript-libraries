@@ -76,9 +76,9 @@ class Volume {
  */
 export
 const _root_component_type_list_1_spec_for_Volume: $.ComponentSpec[] = [
-    /* FIXME: enumeration COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: chronology COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: enumAndChron COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("enumeration", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("chronology", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("enumAndChron", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**

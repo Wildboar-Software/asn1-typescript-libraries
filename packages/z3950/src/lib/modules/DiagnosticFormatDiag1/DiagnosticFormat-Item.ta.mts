@@ -69,7 +69,7 @@ class DiagnosticFormat_Item {
 export
 const _root_component_type_list_1_spec_for_DiagnosticFormat_Item: $.ComponentSpec[] = [
     new $.ComponentSpec("diagnostic", true, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: message COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("message", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

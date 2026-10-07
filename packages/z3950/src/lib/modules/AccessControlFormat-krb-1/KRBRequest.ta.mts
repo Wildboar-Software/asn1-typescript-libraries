@@ -79,9 +79,9 @@ class KRBRequest {
  */
 export
 const _root_component_type_list_1_spec_for_KRBRequest: $.ComponentSpec[] = [
-    /* FIXME: service COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: instance COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: realm COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("service", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("instance", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("realm", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**

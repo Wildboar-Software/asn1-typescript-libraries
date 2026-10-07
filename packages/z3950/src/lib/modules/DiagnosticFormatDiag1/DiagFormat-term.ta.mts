@@ -69,7 +69,7 @@ class DiagFormat_term {
 export
 const _root_component_type_list_1_spec_for_DiagFormat_term: $.ComponentSpec[] = [
     new $.ComponentSpec("problem", true, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: term COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("term", false, $.hasTag(_TagClass.context, 2))
 ];
 
 /**

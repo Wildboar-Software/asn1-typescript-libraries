@@ -78,7 +78,7 @@ class Usage {
 export
 const _root_component_type_list_1_spec_for_Usage: $.ComponentSpec[] = [
     new $.ComponentSpec("type", false, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: restriction COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("restriction", true, $.hasTag(_TagClass.context, 2))
 ];
 
 /**
