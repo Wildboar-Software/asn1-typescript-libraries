@@ -3,9 +3,12 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    PrintableString
+    PrintableString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_domain_defined_attribute_value_length } from "../PKIX1Explicit88/ub-domain-defined-attribute-value-length.va.mjs";
+import { ub_domain_defined_attribute_type_length } from "../PKIX1Explicit88/ub-domain-defined-attribute-type-length.va.mjs";
 
 
 
@@ -40,7 +43,14 @@ class BuiltInDomainDefinedAttribute {
          * @readonly
          */
         readonly value: PrintableString
-    ) {}
+    ) {
+        if (type_.length < 1 || type_.length > Number(ub_domain_defined_attribute_type_length)) {
+            throw new ASN1SizeError("BuiltInDomainDefinedAttribute.type violates SIZE constraint");
+        }
+        if (value.length < 1 || value.length > Number(ub_domain_defined_attribute_value_length)) {
+            throw new ASN1SizeError("BuiltInDomainDefinedAttribute.value violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a BuiltInDomainDefinedAttribute

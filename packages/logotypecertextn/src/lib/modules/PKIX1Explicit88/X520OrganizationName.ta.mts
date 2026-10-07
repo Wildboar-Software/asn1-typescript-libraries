@@ -5,9 +5,11 @@ import {
     PrintableString,
     TeletexString,
     UniversalString,
-    UTF8String
+    UTF8String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_organization_name } from "../PKIX1Explicit88/ub-organization-name.va.mjs";
 
 
 
@@ -56,7 +58,12 @@ function _decode_X520OrganizationName (el: _Element): X520OrganizationName {
     "UNIVERSAL 12": [ "utf8String", $._decodeUTF8String ],
     "UNIVERSAL 30": [ "bmpString", $._decodeBMPString ]
 }); }
-    return _cached_decoder_for_X520OrganizationName(el);
+    const decoded = _cached_decoder_for_X520OrganizationName(el);
+    const text = Object.values(decoded)[0];
+    if (typeof text !== "string" || text.length < 1 || text.length > Number(ub_organization_name)) {
+        throw new ASN1SizeError("X520OrganizationName violates SIZE constraint");
+    }
+    return decoded;
 }
 
 let _cached_encoder_for_X520OrganizationName: $.ASN1Encoder<X520OrganizationName> | null = null;

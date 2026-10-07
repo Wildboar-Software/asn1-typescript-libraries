@@ -3,7 +3,8 @@ import {
     IA5String,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HashAlgAndValue, _decode_HashAlgAndValue, _encode_HashAlgAndValue } from "../LogotypeCertExtn/HashAlgAndValue.ta.mjs";
@@ -39,7 +40,14 @@ class LogotypeReference {
          * @readonly
          */
         readonly refStructURI: IA5String[]
-    ) {}
+    ) {
+        if (refStructHash.length < 1) {
+            throw new ASN1SizeError("LogotypeReference.refStructHash violates SIZE constraint");
+        }
+        if (refStructURI.length < 1) {
+            throw new ASN1SizeError("LogotypeReference.refStructURI violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a LogotypeReference

@@ -1,9 +1,11 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    NumericString
+    NumericString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_x121_address_length } from "../PKIX1Explicit88/ub-x121-address-length.va.mjs";
 
 
 
@@ -19,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type X121Address = NumericString; // NumericString
-export const _decode_X121Address = $._decodeNumericString;
+export const _decode_X121Address = (el: _Element): X121Address => {
+    const value = $._decodeNumericString(el);
+    if (value.length < 1 || value.length > Number(ub_x121_address_length)) {
+        throw new ASN1SizeError("X121Address violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_X121Address = $._encodeNumericString;
 
 

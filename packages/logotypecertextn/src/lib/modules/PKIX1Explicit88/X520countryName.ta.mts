@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    PrintableString
+    PrintableString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type X520countryName = PrintableString; // PrintableString
-export const _decode_X520countryName = $._decodePrintableString;
+export const _decode_X520countryName = (el: _Element): X520countryName => {
+    const value = $._decodePrintableString(el);
+    if (value.length !== 2) {
+        throw new ASN1SizeError("X520countryName violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_X520countryName = $._encodePrintableString;
 
 

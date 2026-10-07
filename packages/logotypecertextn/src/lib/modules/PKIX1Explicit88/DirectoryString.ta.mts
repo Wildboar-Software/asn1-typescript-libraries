@@ -5,7 +5,8 @@ import {
     PrintableString,
     TeletexString,
     UniversalString,
-    UTF8String
+    UTF8String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -51,7 +52,12 @@ function _decode_DirectoryString (el: _Element): DirectoryString {
     "UNIVERSAL 12": [ "utf8String", $._decodeUTF8String ],
     "UNIVERSAL 30": [ "bmpString", $._decodeBMPString ]
 }); }
-    return _cached_decoder_for_DirectoryString(el);
+    const decoded = _cached_decoder_for_DirectoryString(el);
+    const text = Object.values(decoded)[0];
+    if (typeof text !== "string" || text.length < 1) {
+        throw new ASN1SizeError("DirectoryString violates SIZE constraint");
+    }
+    return decoded;
 }
 
 let _cached_encoder_for_DirectoryString: $.ASN1Encoder<DirectoryString> | null = null;

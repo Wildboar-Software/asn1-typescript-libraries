@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeTypeAndValue, _decode_AttributeTypeAndValue, _encode_AttributeTypeAndValue } from "../PKIX1Explicit88/AttributeTypeAndValue.ta.mjs";
@@ -32,7 +33,11 @@ let _cached_decoder_for_RelativeDistinguishedName: $.ASN1Decoder<RelativeDisting
 export
 function _decode_RelativeDistinguishedName (el: _Element): RelativeDistinguishedName {
     if (!_cached_decoder_for_RelativeDistinguishedName) { _cached_decoder_for_RelativeDistinguishedName = $._decodeSetOf<AttributeTypeAndValue>(() => _decode_AttributeTypeAndValue); }
-    return _cached_decoder_for_RelativeDistinguishedName(el);
+    const decoded = _cached_decoder_for_RelativeDistinguishedName(el);
+    if (decoded.length < 1) {
+        throw new ASN1SizeError("RelativeDistinguishedName violates SIZE constraint");
+    }
+    return decoded;
 }
 
 let _cached_encoder_for_RelativeDistinguishedName: $.ASN1Encoder<RelativeDistinguishedName> | null = null;

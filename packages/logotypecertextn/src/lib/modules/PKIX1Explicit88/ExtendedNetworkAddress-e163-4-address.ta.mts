@@ -3,9 +3,12 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     NumericString,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_e163_4_sub_address_length } from "../PKIX1Explicit88/ub-e163-4-sub-address-length.va.mjs";
+import { ub_e163_4_number_length } from "../PKIX1Explicit88/ub-e163-4-number-length.va.mjs";
 
 
 
@@ -39,7 +42,14 @@ class ExtendedNetworkAddress_e163_4_address {
          * @readonly
          */
         readonly sub_address: OPTIONAL<NumericString>
-    ) {}
+    ) {
+        if (number_.length < 1 || number_.length > Number(ub_e163_4_number_length)) {
+            throw new ASN1SizeError("ExtendedNetworkAddress.e163-4-address.number violates SIZE constraint");
+        }
+        if (sub_address !== undefined && (sub_address.length < 1 || sub_address.length > Number(ub_e163_4_sub_address_length))) {
+            throw new ASN1SizeError("ExtendedNetworkAddress.e163-4-address.sub-address violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ExtendedNetworkAddress_e163_4_address

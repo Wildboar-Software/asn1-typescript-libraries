@@ -64,8 +64,10 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_extension_attributes } from "../PKIX1Explicit88/ub-extension-attributes.va.mjs";
 
 
 
@@ -100,7 +102,12 @@ class ExtensionAttribute {
          * @readonly
          */
         readonly extension_attribute_value: _Element
-    ) {}
+    ) {
+        const extensionAttributeType = typeof extension_attribute_type === "bigint" ? Number(extension_attribute_type) : extension_attribute_type;
+        if (extensionAttributeType < 0 || extensionAttributeType > Number(ub_extension_attributes)) {
+            throw new ASN1OverflowError("ExtensionAttribute.extension-attribute-type violates INTEGER range");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ExtensionAttribute

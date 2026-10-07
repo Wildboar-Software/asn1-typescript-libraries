@@ -1,9 +1,11 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    PrintableString
+    PrintableString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_organization_name_length } from "../PKIX1Explicit88/ub-organization-name-length.va.mjs";
 
 
 
@@ -20,7 +22,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type OrganizationName = PrintableString; // PrintableString
-export const _decode_OrganizationName = $._decodePrintableString;
+export const _decode_OrganizationName = (el: _Element): OrganizationName => {
+    const value = $._decodePrintableString(el);
+    if (value.length < 1 || value.length > Number(ub_organization_name_length)) {
+        throw new ASN1SizeError("OrganizationName violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_OrganizationName = $._encodePrintableString;
 
 

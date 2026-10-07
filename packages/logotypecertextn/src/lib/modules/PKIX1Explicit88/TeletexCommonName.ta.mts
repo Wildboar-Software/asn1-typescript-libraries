@@ -1,9 +1,11 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    TeletexString
+    TeletexString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_common_name_length } from "../PKIX1Explicit88/ub-common-name-length.va.mjs";
 
 
 
@@ -19,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type TeletexCommonName = TeletexString; // TeletexString
-export const _decode_TeletexCommonName = $._decodeTeletexString;
+export const _decode_TeletexCommonName = (el: _Element): TeletexCommonName => {
+    const value = $._decodeTeletexString(el);
+    if (value.length < 1 || value.length > Number(ub_common_name_length)) {
+        throw new ASN1SizeError("TeletexCommonName violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_TeletexCommonName = $._encodeTeletexString;
 
 

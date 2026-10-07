@@ -3,9 +3,14 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OPTIONAL,
-    PrintableString
+    PrintableString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_generation_qualifier_length } from "../PKIX1Explicit88/ub-generation-qualifier-length.va.mjs";
+import { ub_initials_length } from "../PKIX1Explicit88/ub-initials-length.va.mjs";
+import { ub_given_name_length } from "../PKIX1Explicit88/ub-given-name-length.va.mjs";
+import { ub_surname_length } from "../PKIX1Explicit88/ub-surname-length.va.mjs";
 
 
 
@@ -57,7 +62,20 @@ class PersonalName {
          * @readonly
          */
         readonly generation_qualifier: OPTIONAL<PrintableString>
-    ) {}
+    ) {
+        if (surname.length < 1 || surname.length > Number(ub_surname_length)) {
+            throw new ASN1SizeError("PersonalName.surname violates SIZE constraint");
+        }
+        if (given_name !== undefined && (given_name.length < 1 || given_name.length > Number(ub_given_name_length))) {
+            throw new ASN1SizeError("PersonalName.given-name violates SIZE constraint");
+        }
+        if (initials !== undefined && (initials.length < 1 || initials.length > Number(ub_initials_length))) {
+            throw new ASN1SizeError("PersonalName.initials violates SIZE constraint");
+        }
+        if (generation_qualifier !== undefined && (generation_qualifier.length < 1 || generation_qualifier.length > Number(ub_generation_qualifier_length))) {
+            throw new ASN1SizeError("PersonalName.generation-qualifier violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PersonalName

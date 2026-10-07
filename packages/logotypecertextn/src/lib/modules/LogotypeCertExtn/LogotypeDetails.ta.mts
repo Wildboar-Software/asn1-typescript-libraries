@@ -3,7 +3,8 @@ import {
     IA5String,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HashAlgAndValue, _decode_HashAlgAndValue, _encode_HashAlgAndValue } from "../LogotypeCertExtn/HashAlgAndValue.ta.mjs";
@@ -47,7 +48,14 @@ class LogotypeDetails {
          * @readonly
          */
         readonly logotypeURI: IA5String[]
-    ) {}
+    ) {
+        if (logotypeHash.length < 1) {
+            throw new ASN1SizeError("LogotypeDetails.logotypeHash violates SIZE constraint");
+        }
+        if (logotypeURI.length < 1) {
+            throw new ASN1SizeError("LogotypeDetails.logotypeURI violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a LogotypeDetails

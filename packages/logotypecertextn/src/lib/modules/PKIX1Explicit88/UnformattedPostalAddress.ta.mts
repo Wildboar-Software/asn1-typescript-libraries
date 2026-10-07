@@ -4,9 +4,13 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
     PrintableString,
-    TeletexString
+    TeletexString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_unformatted_address_length } from "../PKIX1Explicit88/ub-unformatted-address-length.va.mjs";
+import { ub_pds_parameter_length } from "../PKIX1Explicit88/ub-pds-parameter-length.va.mjs";
+import { ub_pds_physical_address_lines } from "../PKIX1Explicit88/ub-pds-physical-address-lines.va.mjs";
 
 
 
@@ -42,7 +46,21 @@ class UnformattedPostalAddress {
          * @readonly
          */
         readonly teletex_string: OPTIONAL<TeletexString>
-    ) {}
+    ) {
+        if (printable_address !== undefined) {
+            if (printable_address.length < 1 || printable_address.length > Number(ub_pds_physical_address_lines)) {
+                throw new ASN1SizeError("UnformattedPostalAddress.printable-address violates SIZE constraint");
+            }
+            for (const line of printable_address) {
+                if (line.length < 1 || line.length > Number(ub_pds_parameter_length)) {
+                    throw new ASN1SizeError("UnformattedPostalAddress.printable-address violates SIZE constraint");
+                }
+            }
+        }
+        if (teletex_string !== undefined && (teletex_string.length < 1 || teletex_string.length > Number(ub_unformatted_address_length))) {
+            throw new ASN1SizeError("UnformattedPostalAddress.teletex-string violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a UnformattedPostalAddress
