@@ -7,11 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NegTokenTarg_negResult, _decode_NegTokenTarg_negResult, _encode_NegTokenTarg_negResult, _enum_for_NegTokenTarg_negResult } from "../Spnego/NegTokenTarg-negResult.ta.mjs";
-// export { NegTokenTarg_negResult, _enum_for_NegTokenTarg_negResult, NegTokenTarg_negResult_accept_completed /* IMPORTED_LONG_ENUMERATION_ITEM */, accept_completed /* IMPORTED_SHORT_ENUMERATION_ITEM */, NegTokenTarg_negResult_accept_incomplete /* IMPORTED_LONG_ENUMERATION_ITEM */, accept_incomplete /* IMPORTED_SHORT_ENUMERATION_ITEM */, NegTokenTarg_negResult_reject /* IMPORTED_LONG_ENUMERATION_ITEM */, reject /* IMPORTED_SHORT_ENUMERATION_ITEM */, NegTokenTarg_negResult_request_mic /* IMPORTED_LONG_ENUMERATION_ITEM */, request_mic /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NegTokenTarg_negResult, _encode_NegTokenTarg_negResult } from "../Spnego/NegTokenTarg-negResult.ta.mjs";
 import { MechType, _decode_MechType, _encode_MechType } from "../Spnego/MechType.ta.mjs";
-// export { MechType, _decode_MechType, _encode_MechType } from "../Spnego/MechType.ta.mjs";
 import { MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spnego/MechTypeList.ta.mjs";
-// export { MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spnego/MechTypeList.ta.mjs";
 
 
 /**

@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NegTokenInit, _decode_NegTokenInit, _encode_NegTokenInit } from "../Spnego/NegTokenInit.ta.mjs";
-// export { NegTokenInit, _decode_NegTokenInit, _encode_NegTokenInit } from "../Spnego/NegTokenInit.ta.mjs";
 import { NegTokenTarg, _decode_NegTokenTarg, _encode_NegTokenTarg } from "../Spnego/NegTokenTarg.ta.mjs";
-// export { NegTokenTarg, _decode_NegTokenTarg, _encode_NegTokenTarg } from "../Spnego/NegTokenTarg.ta.mjs";
 
 
 /**
