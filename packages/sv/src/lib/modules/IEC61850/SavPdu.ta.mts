@@ -117,15 +117,17 @@ export
 function _decode_SavPdu (el: _Element): SavPdu {
     if (!_cached_decoder_for_SavPdu) { _cached_decoder_for_SavPdu = function (el: _Element): SavPdu {
     const sequence: _Element[] = el.sequence;
-    if (sequence.length < 2) {
+    const noASDUElement = sequence[0];
+    const seqASDUElement = sequence[1];
+    if (!noASDUElement || !seqASDUElement) {
         throw new _ConstructionError("SavPdu contained only " + sequence.length.toString() + " elements.");
     }
-    sequence[0].name = "noASDU";
-    sequence[1].name = "seqASDU";
+    noASDUElement.name = "noASDU";
+    seqASDUElement.name = "seqASDU";
     let noASDU!: INTEGER;
     let seqASDU!: ASDU[];
-    noASDU = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    seqASDU = $._decode_implicit<ASDU[]>(() => $._decodeSequenceOf<ASDU>(() => _decode_ASDU))(sequence[1]);
+    noASDU = $._decode_implicit<INTEGER>(() => $._decodeInteger)(noASDUElement);
+    seqASDU = $._decode_implicit<ASDU[]>(() => $._decodeSequenceOf<ASDU>(() => _decode_ASDU))(seqASDUElement);
     return new SavPdu(
         noASDU,
         seqASDU,
