@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HoldingsRecord, _decode_HoldingsRecord, _encode_HoldingsRecord } from "../RecordSyntax-opac/HoldingsRecord.ta.mjs";
-// export { HoldingsRecord, _decode_HoldingsRecord, _encode_HoldingsRecord } from "../RecordSyntax-opac/HoldingsRecord.ta.mjs";
 
 
 /**

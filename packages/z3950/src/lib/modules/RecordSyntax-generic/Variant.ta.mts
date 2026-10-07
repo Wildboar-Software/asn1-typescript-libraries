@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Variant_triples_Item, _decode_Variant_triples_Item, _encode_Variant_triples_Item } from "../RecordSyntax-generic/Variant-triples-Item.ta.mjs";
-// export { Variant_triples_Item, _decode_Variant_triples_Item, _encode_Variant_triples_Item } from "../RecordSyntax-generic/Variant-triples-Item.ta.mjs";
 
 
 /**

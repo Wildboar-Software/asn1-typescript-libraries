@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ResultsByDB_Item, _decode_ResultsByDB_Item, _encode_ResultsByDB_Item } from "../UserInfoFormat-searchResult-1/ResultsByDB-Item.ta.mjs";
-// export { ResultsByDB_Item, _decode_ResultsByDB_Item, _encode_ResultsByDB_Item } from "../UserInfoFormat-searchResult-1/ResultsByDB-Item.ta.mjs";
 
 
 /**

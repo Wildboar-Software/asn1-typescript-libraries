@@ -7,7 +7,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeCombination, _decode_AttributeCombination, _encode_AttributeCombination } from "../RecordSyntax-explain/AttributeCombination.ta.mjs";
 import { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-1995/AttributeSetId.ta.mjs";
-// export { AttributeCombination, _decode_AttributeCombination, _encode_AttributeCombination } from "../RecordSyntax-explain/AttributeCombination.ta.mjs";
 
 
 /**

@@ -5,13 +5,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PrivateCapabilities, _decode_PrivateCapabilities, _encode_PrivateCapabilities } from "../RecordSyntax-explain/PrivateCapabilities.ta.mjs";
-// export { PrivateCapabilities, _decode_PrivateCapabilities, _encode_PrivateCapabilities } from "../RecordSyntax-explain/PrivateCapabilities.ta.mjs";
 import { RpnCapabilities, _decode_RpnCapabilities, _encode_RpnCapabilities } from "../RecordSyntax-explain/RpnCapabilities.ta.mjs";
-// export { RpnCapabilities, _decode_RpnCapabilities, _encode_RpnCapabilities } from "../RecordSyntax-explain/RpnCapabilities.ta.mjs";
 import { Iso8777Capabilities, _decode_Iso8777Capabilities, _encode_Iso8777Capabilities } from "../RecordSyntax-explain/Iso8777Capabilities.ta.mjs";
-// export { Iso8777Capabilities, _decode_Iso8777Capabilities, _encode_Iso8777Capabilities } from "../RecordSyntax-explain/Iso8777Capabilities.ta.mjs";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
-// export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 
 
 /**

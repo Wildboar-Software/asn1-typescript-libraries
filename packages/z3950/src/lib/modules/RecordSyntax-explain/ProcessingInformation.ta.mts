@@ -8,13 +8,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
-// export { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
 import { ProcessingInformation_processingContext, _decode_ProcessingInformation_processingContext, _encode_ProcessingInformation_processingContext } from "../RecordSyntax-explain/ProcessingInformation-processingContext.ta.mjs";
-// export { ProcessingInformation_processingContext, ProcessingInformation_processingContext_access /* IMPORTED_LONG_NAMED_INTEGER */, access /* IMPORTED_SHORT_NAMED_INTEGER */, ProcessingInformation_processingContext_search /* IMPORTED_LONG_NAMED_INTEGER */, search /* IMPORTED_SHORT_NAMED_INTEGER */, ProcessingInformation_processingContext_retrieval /* IMPORTED_LONG_NAMED_INTEGER */, retrieval /* IMPORTED_SHORT_NAMED_INTEGER */, ProcessingInformation_processingContext_record_presentation /* IMPORTED_LONG_NAMED_INTEGER */, record_presentation /* IMPORTED_SHORT_NAMED_INTEGER */, ProcessingInformation_processingContext_record_handling /* IMPORTED_LONG_NAMED_INTEGER */, record_handling /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ProcessingInformation_processingContext, _encode_ProcessingInformation_processingContext } from "../RecordSyntax-explain/ProcessingInformation-processingContext.ta.mjs";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-1995/DatabaseName.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
-// export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 
 
 /**

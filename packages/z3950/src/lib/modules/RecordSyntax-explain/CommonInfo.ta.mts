@@ -8,7 +8,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { LanguageCode, _decode_LanguageCode, _encode_LanguageCode } from "../RecordSyntax-explain/LanguageCode.ta.mjs";
 import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-1995/OtherInformation.ta.mjs";
-// export { LanguageCode, _decode_LanguageCode, _encode_LanguageCode } from "../RecordSyntax-explain/LanguageCode.ta.mjs";
 
 
 /**

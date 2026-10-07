@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
-// export { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
 import { CategoryInfo, _decode_CategoryInfo, _encode_CategoryInfo } from "../RecordSyntax-explain/CategoryInfo.ta.mjs";
-// export { CategoryInfo, _decode_CategoryInfo, _encode_CategoryInfo } from "../RecordSyntax-explain/CategoryInfo.ta.mjs";
 
 
 /**

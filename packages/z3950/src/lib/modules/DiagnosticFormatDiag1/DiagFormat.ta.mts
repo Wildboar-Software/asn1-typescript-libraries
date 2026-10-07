@@ -5,33 +5,19 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagFormat_tooMany, _decode_DiagFormat_tooMany, _encode_DiagFormat_tooMany } from "../DiagnosticFormatDiag1/DiagFormat-tooMany.ta.mjs";
-// export { DiagFormat_tooMany, _decode_DiagFormat_tooMany, _encode_DiagFormat_tooMany } from "../DiagnosticFormatDiag1/DiagFormat-tooMany.ta.mjs";
 import { DiagFormat_badSpec, _decode_DiagFormat_badSpec, _encode_DiagFormat_badSpec } from "../DiagnosticFormatDiag1/DiagFormat-badSpec.ta.mjs";
-// export { DiagFormat_badSpec, _decode_DiagFormat_badSpec, _encode_DiagFormat_badSpec } from "../DiagnosticFormatDiag1/DiagFormat-badSpec.ta.mjs";
 import { DiagFormat_dbUnavail, _decode_DiagFormat_dbUnavail, _encode_DiagFormat_dbUnavail } from "../DiagnosticFormatDiag1/DiagFormat-dbUnavail.ta.mjs";
-// export { DiagFormat_dbUnavail, _decode_DiagFormat_dbUnavail, _encode_DiagFormat_dbUnavail } from "../DiagnosticFormatDiag1/DiagFormat-dbUnavail.ta.mjs";
 import { DiagFormat_unSupOp, _decode_DiagFormat_unSupOp, _encode_DiagFormat_unSupOp } from "../DiagnosticFormatDiag1/DiagFormat-unSupOp.ta.mjs";
-// export { DiagFormat_unSupOp, DiagFormat_unSupOp_and /* IMPORTED_LONG_NAMED_INTEGER */, and /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_unSupOp_or /* IMPORTED_LONG_NAMED_INTEGER */, or /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_unSupOp_and_not /* IMPORTED_LONG_NAMED_INTEGER */, and_not /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_unSupOp_prox /* IMPORTED_LONG_NAMED_INTEGER */, prox /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagFormat_unSupOp, _encode_DiagFormat_unSupOp } from "../DiagnosticFormatDiag1/DiagFormat-unSupOp.ta.mjs";
 import { DiagFormat_attribute, _decode_DiagFormat_attribute, _encode_DiagFormat_attribute } from "../DiagnosticFormatDiag1/DiagFormat-attribute.ta.mjs";
-// export { DiagFormat_attribute, _decode_DiagFormat_attribute, _encode_DiagFormat_attribute } from "../DiagnosticFormatDiag1/DiagFormat-attribute.ta.mjs";
 import { DiagFormat_attCombo, _decode_DiagFormat_attCombo, _encode_DiagFormat_attCombo } from "../DiagnosticFormatDiag1/DiagFormat-attCombo.ta.mjs";
-// export { DiagFormat_attCombo, _decode_DiagFormat_attCombo, _encode_DiagFormat_attCombo } from "../DiagnosticFormatDiag1/DiagFormat-attCombo.ta.mjs";
 import { DiagFormat_term, _decode_DiagFormat_term, _encode_DiagFormat_term } from "../DiagnosticFormatDiag1/DiagFormat-term.ta.mjs";
-// export { DiagFormat_term, _decode_DiagFormat_term, _encode_DiagFormat_term } from "../DiagnosticFormatDiag1/DiagFormat-term.ta.mjs";
 import { DiagFormat_proximity, _decode_DiagFormat_proximity, _encode_DiagFormat_proximity } from "../DiagnosticFormatDiag1/DiagFormat-proximity.ta.mjs";
-// export { DiagFormat_proximity, _decode_DiagFormat_proximity, _encode_DiagFormat_proximity } from "../DiagnosticFormatDiag1/DiagFormat-proximity.ta.mjs";
 import { DiagFormat_scan, _decode_DiagFormat_scan, _encode_DiagFormat_scan } from "../DiagnosticFormatDiag1/DiagFormat-scan.ta.mjs";
-// export { DiagFormat_scan, _decode_DiagFormat_scan, _encode_DiagFormat_scan } from "../DiagnosticFormatDiag1/DiagFormat-scan.ta.mjs";
 import { DiagFormat_sort, _decode_DiagFormat_sort, _encode_DiagFormat_sort } from "../DiagnosticFormatDiag1/DiagFormat-sort.ta.mjs";
-// export { DiagFormat_sort, _decode_DiagFormat_sort, _encode_DiagFormat_sort } from "../DiagnosticFormatDiag1/DiagFormat-sort.ta.mjs";
 import { DiagFormat_segmentation, _decode_DiagFormat_segmentation, _encode_DiagFormat_segmentation } from "../DiagnosticFormatDiag1/DiagFormat-segmentation.ta.mjs";
-// export { DiagFormat_segmentation, _decode_DiagFormat_segmentation, _encode_DiagFormat_segmentation } from "../DiagnosticFormatDiag1/DiagFormat-segmentation.ta.mjs";
 import { DiagFormat_extServices, _decode_DiagFormat_extServices, _encode_DiagFormat_extServices } from "../DiagnosticFormatDiag1/DiagFormat-extServices.ta.mjs";
-// export { DiagFormat_extServices, _decode_DiagFormat_extServices, _encode_DiagFormat_extServices } from "../DiagnosticFormatDiag1/DiagFormat-extServices.ta.mjs";
 import { DiagFormat_accessCtrl, _decode_DiagFormat_accessCtrl, _encode_DiagFormat_accessCtrl } from "../DiagnosticFormatDiag1/DiagFormat-accessCtrl.ta.mjs";
-// export { DiagFormat_accessCtrl, _decode_DiagFormat_accessCtrl, _encode_DiagFormat_accessCtrl } from "../DiagnosticFormatDiag1/DiagFormat-accessCtrl.ta.mjs";
 import { DiagFormat_recordSyntax, _decode_DiagFormat_recordSyntax, _encode_DiagFormat_recordSyntax } from "../DiagnosticFormatDiag1/DiagFormat-recordSyntax.ta.mjs";
-// export { DiagFormat_recordSyntax, _decode_DiagFormat_recordSyntax, _encode_DiagFormat_recordSyntax } from "../DiagnosticFormatDiag1/DiagFormat-recordSyntax.ta.mjs";
 
 
 /**

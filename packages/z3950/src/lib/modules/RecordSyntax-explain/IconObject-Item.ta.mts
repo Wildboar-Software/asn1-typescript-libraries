@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IconObject_Item_bodyType, _decode_IconObject_Item_bodyType, _encode_IconObject_Item_bodyType } from "../RecordSyntax-explain/IconObject-Item-bodyType.ta.mjs";
-// export { IconObject_Item_bodyType, _decode_IconObject_Item_bodyType, _encode_IconObject_Item_bodyType } from "../RecordSyntax-explain/IconObject-Item-bodyType.ta.mjs";
 
 
 /**

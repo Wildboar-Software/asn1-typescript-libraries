@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { KRBRequest, _decode_KRBRequest, _encode_KRBRequest } from "../AccessControlFormat-krb-1/KRBRequest.ta.mjs";
-// export { KRBRequest, _decode_KRBRequest, _encode_KRBRequest } from "../AccessControlFormat-krb-1/KRBRequest.ta.mjs";
 import { KRBResponse, _decode_KRBResponse, _encode_KRBResponse } from "../AccessControlFormat-krb-1/KRBResponse.ta.mjs";
-// export { KRBResponse, _decode_KRBResponse, _encode_KRBResponse } from "../AccessControlFormat-krb-1/KRBResponse.ta.mjs";
 
 
 /**

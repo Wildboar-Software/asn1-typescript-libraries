@@ -7,13 +7,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
-// export { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
-// export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 import { PerElementDetails, _decode_PerElementDetails, _encode_PerElementDetails } from "../RecordSyntax-explain/PerElementDetails.ta.mjs";
 import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-1995/DatabaseName.ta.mjs";
 import { ElementSetName, _decode_ElementSetName, _encode_ElementSetName } from "../Z39-50-APDU-1995/ElementSetName.ta.mjs";
-// export { PerElementDetails, _decode_PerElementDetails, _encode_PerElementDetails } from "../RecordSyntax-explain/PerElementDetails.ta.mjs";
 
 
 /**

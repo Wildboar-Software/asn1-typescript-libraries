@@ -7,10 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
-// export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 import { VariantType, _decode_VariantType, _encode_VariantType } from "../RecordSyntax-explain/VariantType.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
-// export { VariantType, _decode_VariantType, _encode_VariantType } from "../RecordSyntax-explain/VariantType.ta.mjs";
 
 
 /**

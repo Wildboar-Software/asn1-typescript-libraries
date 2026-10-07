@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SearchKey, _decode_SearchKey, _encode_SearchKey } from "../RecordSyntax-explain/SearchKey.ta.mjs";
-// export { SearchKey, _decode_SearchKey, _encode_SearchKey } from "../RecordSyntax-explain/SearchKey.ta.mjs";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
-// export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 
 
 /**

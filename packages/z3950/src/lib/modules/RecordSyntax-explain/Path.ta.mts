@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Path_Item, _decode_Path_Item, _encode_Path_Item } from "../RecordSyntax-explain/Path-Item.ta.mjs";
-// export { Path_Item, _decode_Path_Item, _encode_Path_Item } from "../RecordSyntax-explain/Path-Item.ta.mjs";
 
 
 /**

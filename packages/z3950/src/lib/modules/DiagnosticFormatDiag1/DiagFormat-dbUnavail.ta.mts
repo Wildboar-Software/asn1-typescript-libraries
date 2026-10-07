@@ -7,7 +7,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { DiagFormat_dbUnavail_why, _decode_DiagFormat_dbUnavail_why, _encode_DiagFormat_dbUnavail_why } from "../DiagnosticFormatDiag1/DiagFormat-dbUnavail-why.ta.mjs";
 import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-1995/DatabaseName.ta.mjs";
-// export { DiagFormat_dbUnavail_why, _decode_DiagFormat_dbUnavail_why, _encode_DiagFormat_dbUnavail_why } from "../DiagnosticFormatDiag1/DiagFormat-dbUnavail-why.ta.mjs";
 
 
 /**

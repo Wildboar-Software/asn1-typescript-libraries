@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProximitySupport_unitsSupported_Item, _decode_ProximitySupport_unitsSupported_Item, _encode_ProximitySupport_unitsSupported_Item } from "../RecordSyntax-explain/ProximitySupport-unitsSupported-Item.ta.mjs";
-// export { ProximitySupport_unitsSupported_Item, _decode_ProximitySupport_unitsSupported_Item, _encode_ProximitySupport_unitsSupported_Item } from "../RecordSyntax-explain/ProximitySupport-unitsSupported-Item.ta.mjs";
 
 
 /**

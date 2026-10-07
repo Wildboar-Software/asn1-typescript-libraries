@@ -8,11 +8,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { QueryExpression, _decode_QueryExpression, _encode_QueryExpression } from "../UserInfoFormat-searchResult-1/QueryExpression.ta.mjs";
-// export { QueryExpression, _decode_QueryExpression, _encode_QueryExpression } from "../UserInfoFormat-searchResult-1/QueryExpression.ta.mjs";
 import { ResultsByDB, _decode_ResultsByDB, _encode_ResultsByDB } from "../UserInfoFormat-searchResult-1/ResultsByDB.ta.mjs";
 import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-1995/IntUnit.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
-// export { ResultsByDB, _decode_ResultsByDB, _encode_ResultsByDB } from "../UserInfoFormat-searchResult-1/ResultsByDB.ta.mjs";
 
 
 /**

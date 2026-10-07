@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Challenge_Item, _decode_Challenge_Item, _encode_Challenge_Item } from "../AccessControlFormat-Prompt-1/Challenge-Item.ta.mjs";
-// export { Challenge_Item, _decode_Challenge_Item, _encode_Challenge_Item } from "../AccessControlFormat-Prompt-1/Challenge-Item.ta.mjs";
 
 
 /**

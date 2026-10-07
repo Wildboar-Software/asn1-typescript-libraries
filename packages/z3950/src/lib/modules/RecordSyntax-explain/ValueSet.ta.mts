@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ValueRange, _decode_ValueRange, _encode_ValueRange } from "../RecordSyntax-explain/ValueRange.ta.mjs";
-// export { ValueRange, _decode_ValueRange, _encode_ValueRange } from "../RecordSyntax-explain/ValueRange.ta.mjs";
 import { ValueDescription, _decode_ValueDescription, _encode_ValueDescription } from "../RecordSyntax-explain/ValueDescription.ta.mjs";
-// export { ValueDescription, _decode_ValueDescription, _encode_ValueDescription } from "../RecordSyntax-explain/ValueDescription.ta.mjs";
 
 
 /**

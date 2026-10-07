@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DRNType, _decode_DRNType, _encode_DRNType } from "../AccessControlFormat-des-1/DRNType.ta.mjs";
-// export { DRNType, _decode_DRNType, _encode_DRNType } from "../AccessControlFormat-des-1/DRNType.ta.mjs";
 
 
 /**

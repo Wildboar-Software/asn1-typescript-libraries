@@ -14,7 +14,6 @@ import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-1995/D
 import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-1995/IntUnit.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
 import { Permissions, _decode_Permissions, _encode_Permissions } from "../Z39-50-APDU-1995/Permissions.ta.mjs";
-// export { TaskPackage_taskStatus, TaskPackage_taskStatus_pending /* IMPORTED_LONG_NAMED_INTEGER */, pending /* IMPORTED_SHORT_NAMED_INTEGER */, TaskPackage_taskStatus_active /* IMPORTED_LONG_NAMED_INTEGER */, active /* IMPORTED_SHORT_NAMED_INTEGER */, TaskPackage_taskStatus_complete /* IMPORTED_LONG_NAMED_INTEGER */, complete /* IMPORTED_SHORT_NAMED_INTEGER */, TaskPackage_taskStatus_aborted /* IMPORTED_LONG_NAMED_INTEGER */, aborted /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TaskPackage_taskStatus, _encode_TaskPackage_taskStatus } from "../RecordSyntax-ESTaskPackage/TaskPackage-taskStatus.ta.mjs";
 
 
 /**

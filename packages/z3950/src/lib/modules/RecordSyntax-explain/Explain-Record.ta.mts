@@ -5,39 +5,22 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TargetInfo, _decode_TargetInfo, _encode_TargetInfo } from "../RecordSyntax-explain/TargetInfo.ta.mjs";
-// export { TargetInfo, _decode_TargetInfo, _encode_TargetInfo } from "../RecordSyntax-explain/TargetInfo.ta.mjs";
 import { DatabaseInfo, _decode_DatabaseInfo, _encode_DatabaseInfo } from "../RecordSyntax-explain/DatabaseInfo.ta.mjs";
-// export { DatabaseInfo, _decode_DatabaseInfo, _encode_DatabaseInfo } from "../RecordSyntax-explain/DatabaseInfo.ta.mjs";
 import { SchemaInfo, _decode_SchemaInfo, _encode_SchemaInfo } from "../RecordSyntax-explain/SchemaInfo.ta.mjs";
-// export { SchemaInfo, _decode_SchemaInfo, _encode_SchemaInfo } from "../RecordSyntax-explain/SchemaInfo.ta.mjs";
 import { TagSetInfo, _decode_TagSetInfo, _encode_TagSetInfo } from "../RecordSyntax-explain/TagSetInfo.ta.mjs";
-// export { TagSetInfo, _decode_TagSetInfo, _encode_TagSetInfo } from "../RecordSyntax-explain/TagSetInfo.ta.mjs";
 import { RecordSyntaxInfo, _decode_RecordSyntaxInfo, _encode_RecordSyntaxInfo } from "../RecordSyntax-explain/RecordSyntaxInfo.ta.mjs";
-// export { RecordSyntaxInfo, _decode_RecordSyntaxInfo, _encode_RecordSyntaxInfo } from "../RecordSyntax-explain/RecordSyntaxInfo.ta.mjs";
 import { AttributeSetInfo, _decode_AttributeSetInfo, _encode_AttributeSetInfo } from "../RecordSyntax-explain/AttributeSetInfo.ta.mjs";
-// export { AttributeSetInfo, _decode_AttributeSetInfo, _encode_AttributeSetInfo } from "../RecordSyntax-explain/AttributeSetInfo.ta.mjs";
 import { TermListInfo, _decode_TermListInfo, _encode_TermListInfo } from "../RecordSyntax-explain/TermListInfo.ta.mjs";
-// export { TermListInfo, _decode_TermListInfo, _encode_TermListInfo } from "../RecordSyntax-explain/TermListInfo.ta.mjs";
 import { ExtendedServicesInfo, _decode_ExtendedServicesInfo, _encode_ExtendedServicesInfo } from "../RecordSyntax-explain/ExtendedServicesInfo.ta.mjs";
-// export { ExtendedServicesInfo, _decode_ExtendedServicesInfo, _encode_ExtendedServicesInfo } from "../RecordSyntax-explain/ExtendedServicesInfo.ta.mjs";
 import { AttributeDetails, _decode_AttributeDetails, _encode_AttributeDetails } from "../RecordSyntax-explain/AttributeDetails.ta.mjs";
-// export { AttributeDetails, _decode_AttributeDetails, _encode_AttributeDetails } from "../RecordSyntax-explain/AttributeDetails.ta.mjs";
 import { TermListDetails, _decode_TermListDetails, _encode_TermListDetails } from "../RecordSyntax-explain/TermListDetails.ta.mjs";
-// export { TermListDetails, _decode_TermListDetails, _encode_TermListDetails } from "../RecordSyntax-explain/TermListDetails.ta.mjs";
 import { ElementSetDetails, _decode_ElementSetDetails, _encode_ElementSetDetails } from "../RecordSyntax-explain/ElementSetDetails.ta.mjs";
-// export { ElementSetDetails, _decode_ElementSetDetails, _encode_ElementSetDetails } from "../RecordSyntax-explain/ElementSetDetails.ta.mjs";
 import { RetrievalRecordDetails, _decode_RetrievalRecordDetails, _encode_RetrievalRecordDetails } from "../RecordSyntax-explain/RetrievalRecordDetails.ta.mjs";
-// export { RetrievalRecordDetails, _decode_RetrievalRecordDetails, _encode_RetrievalRecordDetails } from "../RecordSyntax-explain/RetrievalRecordDetails.ta.mjs";
 import { SortDetails, _decode_SortDetails, _encode_SortDetails } from "../RecordSyntax-explain/SortDetails.ta.mjs";
-// export { SortDetails, _decode_SortDetails, _encode_SortDetails } from "../RecordSyntax-explain/SortDetails.ta.mjs";
 import { ProcessingInformation, _decode_ProcessingInformation, _encode_ProcessingInformation } from "../RecordSyntax-explain/ProcessingInformation.ta.mjs";
-// export { ProcessingInformation, _decode_ProcessingInformation, _encode_ProcessingInformation } from "../RecordSyntax-explain/ProcessingInformation.ta.mjs";
 import { VariantSetInfo, _decode_VariantSetInfo, _encode_VariantSetInfo } from "../RecordSyntax-explain/VariantSetInfo.ta.mjs";
-// export { VariantSetInfo, _decode_VariantSetInfo, _encode_VariantSetInfo } from "../RecordSyntax-explain/VariantSetInfo.ta.mjs";
 import { UnitInfo, _decode_UnitInfo, _encode_UnitInfo } from "../RecordSyntax-explain/UnitInfo.ta.mjs";
-// export { UnitInfo, _decode_UnitInfo, _encode_UnitInfo } from "../RecordSyntax-explain/UnitInfo.ta.mjs";
 import { CategoryList, _decode_CategoryList, _encode_CategoryList } from "../RecordSyntax-explain/CategoryList.ta.mjs";
-// export { CategoryList, _decode_CategoryList, _encode_CategoryList } from "../RecordSyntax-explain/CategoryList.ta.mjs";
 
 
 /**

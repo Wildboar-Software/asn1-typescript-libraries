@@ -6,7 +6,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Encryption, _decode_Encryption, _encode_Encryption } from "../AccessControlFormat-Prompt-1/Encryption.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-1995/InternationalString.ta.mjs";
-// export { Encryption, _decode_Encryption, _encode_Encryption } from "../AccessControlFormat-Prompt-1/Encryption.ta.mjs";
 
 
 /**
