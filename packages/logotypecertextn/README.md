@@ -1,6 +1,9 @@
-# logotypecertextn
+# Logotype Certificate Extension in TypeScript
 
-This module is ESM-only.
+ASN.1 data structures for the logotype certificate extension in
+[IETF RFC 3709](https://datatracker.ietf.org/doc/html/rfc3709), together with
+the `PKIX1Explicit88` module from
+[IETF RFC 3280](https://datatracker.ietf.org/doc/html/rfc3280) that it imports.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -16,3 +19,12 @@ produced with it are released publicly under the
 If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
+
+## ESM-Only
+
+This module is ESM-only.
+
+## AI Usage Statement
+
+This package was onboarded from the raw Wildboar ASN.1 compiler outputs using
+AI (Cursor Grok 4.7) on 7 October 2026.
