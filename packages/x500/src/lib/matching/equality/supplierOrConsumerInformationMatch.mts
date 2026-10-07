@@ -9,7 +9,7 @@ import {
     supplierOrConsumerInformationMatch_AssertionType as AssertionType,
     _decode_supplierOrConsumerInformationMatch_AssertionType as _decode_AssertionType,
 } from "../../modules/DSAOperationalAttributeTypes/supplierOrConsumerInformationMatch-AssertionType.ta.mjs";
-import compareName from "../../comparators/compareName.mjs";
+import { compareName } from "@wildboar/dn";
 
 /**
  * Rec. ITU-T X.501 (10/2019), clause 24.2.1.9.3

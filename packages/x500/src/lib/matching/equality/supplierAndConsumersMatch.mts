@@ -9,7 +9,7 @@ import {
     Name,
     _decode_Name,
 } from "../../modules/InformationFramework/Name.ta.mjs";
-import compareName from "../../comparators/compareName.mjs";
+import { compareName } from "@wildboar/dn";
 
 /**
  * Rec. ITU-T X.501 (10/2019), clause 24.2.1.9.4

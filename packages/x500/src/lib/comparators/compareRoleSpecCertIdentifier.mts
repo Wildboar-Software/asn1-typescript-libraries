@@ -3,7 +3,7 @@ import type EqualityMatcher from "../types/EqualityMatcher.mjs";
 import {
     RoleSpecCertIdentifier,
 } from "../modules/AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta.mjs";
-import compareGeneralName from "./compareGeneralName.mjs";
+import { compareGeneralName } from "@wildboar/gn";
 import compareGeneralNames from "./compareGeneralNames.mjs";
 import { Buffer } from "node:buffer";
 

@@ -1,6 +1,6 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import { ASN1Element, DERElement, FALSE_BIT, OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import compareName from "../../comparators/compareName.mjs";
+import { compareName } from "@wildboar/dn";
 import {
     EnhancedCertificateAssertion,
     _decode_EnhancedCertificateAssertion,
@@ -60,7 +60,7 @@ import {
     AltNameType_builtinNameForm_registeredId,
 } from "../../modules/CertificateExtensions/AltNameType-builtinNameForm.ta.mjs";
 import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier.mjs";
-import compareGeneralName from "../../comparators/compareGeneralName.mjs";
+import { compareGeneralName } from "@wildboar/gn";
 import { getDateFromTime } from "@wildboar/pki-stub";
 import {
     CertificatePoliciesSyntax,
@@ -74,7 +74,6 @@ import {
     anyPolicy,
 } from "../../modules/CertificateExtensions/anyPolicy.va.mjs";
 import dnWithinSubtree from "../../utils/dnWithinSubtree.mjs";
-import compareGeneralNames from "../../comparators/compareGeneralNames.mjs";
 import { Buffer } from "node:buffer";
 
 const AKI_OID: string = id_ce_authorityKeyIdentifier.toString();

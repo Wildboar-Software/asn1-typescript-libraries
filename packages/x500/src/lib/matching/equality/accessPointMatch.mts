@@ -14,7 +14,7 @@ import {
     AccessPoint,
     _decode_AccessPoint,
 } from "../../modules/DistributedOperations/AccessPoint.ta.mjs";
-import compareName from "../../comparators/compareName.mjs";
+import { compareName } from "@wildboar/dn";
 
 /**
  * The assertion syntax is `Name`. A presented `AccessPoint` SET is

@@ -1,13 +1,12 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER, compareBitStrings } from "@wildboar/asn1";
 import type { ASN1Element } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import {
     NameAndOptionalUID,
     _decode_NameAndOptionalUID,
 } from "../../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
-import compareDistinguishedName from "../../comparators/compareDistinguishedName.mjs";
-import compareBitStrings from "../../comparators/compareBitStrings.mjs";
+import { compareRDNSequence } from "@wildboar/dn";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.11 `uniqueMemberMatch`.
@@ -48,7 +47,7 @@ function uniqueMemberMatchTyped (
     v: NameAndOptionalUID,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
-    if (!compareDistinguishedName(a.dn, v.dn, getEqualityMatcher)) {
+    if (!compareRDNSequence(a.dn, v.dn, getEqualityMatcher)) {
         return false;
     }
     // Clause 8.2.11: a stored `uid` that is absent matches any presented `uid`.

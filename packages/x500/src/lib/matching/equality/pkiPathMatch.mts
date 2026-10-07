@@ -12,7 +12,7 @@ import {
 import type {
     Certificate,
 } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
-import compareName from "../../comparators/compareName.mjs";
+import { compareName } from "@wildboar/dn";
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.9 `pkiPathMatch`.

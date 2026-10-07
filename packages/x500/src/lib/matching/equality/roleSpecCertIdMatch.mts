@@ -19,7 +19,7 @@ import type {
     Extension,
 } from "../../modules/AuthenticationFramework/Extension.ta.mjs";
 import { DERElement } from "@wildboar/asn1";
-import { compareGeneralName } from "../../comparators/compareGeneralName.mjs";
+import { compareGeneralName } from "@wildboar/gn";
 import { compareGeneralNames } from "../../comparators/compareGeneralNames.mjs";
 
 /**

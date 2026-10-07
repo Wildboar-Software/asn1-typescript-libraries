@@ -1,7 +1,7 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
-import compareName from "../../comparators/compareName.mjs";
+import { compareName } from "@wildboar/dn";
 import {
     CertificateExactAssertion,
     _decode_CertificateExactAssertion,

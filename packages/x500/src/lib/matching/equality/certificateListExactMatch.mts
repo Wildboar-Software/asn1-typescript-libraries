@@ -1,7 +1,7 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import { readDecoded } from "../readValue.mjs";
 import { ASN1Element, DERElement, OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import compareName from "../../comparators/compareName.mjs";
+import { compareName } from "@wildboar/dn";
 import {
     CertificateListExactAssertion,
     _decode_CertificateListExactAssertion,
@@ -21,7 +21,7 @@ import {
     _decode_IssuingDistPointSyntax,
 } from "../../modules/CertificateExtensions/IssuingDistPointSyntax.ta.mjs";
 import compareGeneralNames from "../../comparators/compareGeneralNames.mjs";
-import compareRelativeDistinguishedName from "../../comparators/compareRelativeDistinguishedName.mjs";
+import { compareRelativeDistinguishedName } from "@wildboar/dn";
 import compareElements from "../../comparators/compareElements.mjs";
 
 const SOUGHT_EXTENSION_OID: string = id_ce_issuingDistributionPoint.toString();

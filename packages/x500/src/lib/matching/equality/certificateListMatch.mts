@@ -1,7 +1,7 @@
 import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import { readDecoded } from "../readValue.mjs";
 import { ASN1Element, DERElement, FALSE_BIT, INTEGER, TRUE_BIT, OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import compareName from "../../comparators/compareName.mjs";
+import { compareName } from "@wildboar/dn";
 import {
     CertificateListAssertion,
     _decode_CertificateListAssertion,
@@ -33,8 +33,8 @@ import {
     IssuingDistPointSyntax,
     _decode_IssuingDistPointSyntax,
 } from "../../modules/CertificateExtensions/IssuingDistPointSyntax.ta.mjs";
-import compareGeneralName from "../../comparators/compareGeneralName.mjs";
-import compareRelativeDistinguishedName from "../../comparators/compareRelativeDistinguishedName.mjs";
+import { compareGeneralName } from "@wildboar/gn";
+import { compareRelativeDistinguishedName } from "@wildboar/dn";
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.6 `certificateListMatch`.

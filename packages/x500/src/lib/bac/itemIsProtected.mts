@@ -15,7 +15,7 @@ import {
     DistinguishedName,
     _decode_DistinguishedName,
 } from "../modules/InformationFramework/DistinguishedName.ta.mjs";
-import compareDistinguishedName from "../comparators/compareDistinguishedName.mjs";
+import { compareRDNSequence } from "@wildboar/dn";
 import { evaluateFilter, EvaluateFilterSettings } from "../utils/evaluateFilter.mjs";
 import {
     EntryInformation,
@@ -103,7 +103,7 @@ function itemIsProtected (
                         const dn: DistinguishedName = valueIsNameAndOptionalUID
                             ? _decode_NameAndOptionalUID(request.value.value).dn
                             : _decode_DistinguishedName(request.value.value);
-                        return compareDistinguishedName(
+                        return compareRDNSequence(
                             dn,
                             requester.dn,
                             settings.getEqualityMatcher,

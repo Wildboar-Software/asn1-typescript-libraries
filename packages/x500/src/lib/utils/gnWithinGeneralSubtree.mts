@@ -7,10 +7,10 @@ import type {
 import type {
     GeneralSubtree,
 } from "../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
-import compareDistinguishedName from "../comparators/compareDistinguishedName.mjs";
+import { compareRDNSequence } from "@wildboar/dn";
 import { domainToASCII } from "node:url";
 import { compareElements } from "../comparators/compareElements.mjs";
-import { compareGeneralName } from "../comparators/compareGeneralName.mjs";
+import { compareGeneralName } from "@wildboar/gn";
 
 const ID_SRV_NAME = ObjectIdentifier.fromString("1.3.6.1.5.5.7.8.7");
 
@@ -353,7 +353,7 @@ function gnWithinGeneralSubtree (
         if (entry.length > (base.length + maximum)) {
             return false;
         }
-        return compareDistinguishedName(
+        return compareRDNSequence(
             base,
             entry.slice(0, base.length),
             getEqualityMatcher ?? (() => compareElements),

@@ -10,7 +10,7 @@ import {
     MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
 } from "../../modules/DistributedOperations/MasterAndShadowAccessPoints.ta.mjs";
-import compareName from "../../comparators/compareName.mjs";
+import { compareName } from "@wildboar/dn";
 
 function scoreName (name: Name): number {
     return name.rdnSequence.reduce((p, c, i) => (p + (c.length * (10 ** i))), 0);

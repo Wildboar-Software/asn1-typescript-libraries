@@ -1,7 +1,7 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
-import compareDistinguishedName from "../../comparators/compareDistinguishedName.mjs";
+import { compareRDNSequence } from "@wildboar/dn";
 import {
     DistinguishedName,
     _decode_DistinguishedName,
@@ -48,7 +48,7 @@ function distinguishedNameMatchTyped (
     value: DistinguishedName,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
-    return compareDistinguishedName(assertion, value, getEqualityMatcher);
+    return compareRDNSequence(assertion, value, getEqualityMatcher);
 }
 
 export default distinguishedNameMatch;
