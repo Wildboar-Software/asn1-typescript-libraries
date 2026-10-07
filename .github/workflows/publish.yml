@@ -67,6 +67,7 @@ jobs:
           - "sec1"
           - "sio"
           - "snmp"
+          - "spnego"
           - "spkac"
           - "t38"
           - "tai"
