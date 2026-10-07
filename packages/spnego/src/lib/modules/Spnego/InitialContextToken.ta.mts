@@ -120,12 +120,15 @@ function _decode_InitialContextToken (el: _Element): InitialContextToken {
     if (sequence.length < 2) {
         throw new _ConstructionError("InitialContextToken contained only " + sequence.length.toString() + " elements.");
     }
-    sequence[0].name = "thisMech";
-    sequence[1].name = "innerContextToken";
-    let thisMech!: MechType;
-    let innerContextToken!: InnerContextToken;
-    thisMech = _decode_MechType(sequence[0]);
-    innerContextToken = _decode_InnerContextToken(sequence[1]);
+    const thisMechEl = sequence[0];
+    const innerContextTokenEl = sequence[1];
+    if (thisMechEl === undefined || innerContextTokenEl === undefined) {
+        throw new _ConstructionError("InitialContextToken contained only " + sequence.length.toString() + " elements.");
+    }
+    thisMechEl.name = "thisMech";
+    innerContextTokenEl.name = "innerContextToken";
+    const thisMech = _decode_MechType(thisMechEl);
+    const innerContextToken = _decode_InnerContextToken(innerContextTokenEl);
     return new InitialContextToken(
         thisMech,
         innerContextToken,
