@@ -68,6 +68,7 @@ jobs:
           - "sio"
           - "snmp"
           - "spkac"
+          - "sv"
           - "t38"
           - "tai"
           - "tal"
