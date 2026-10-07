@@ -190,35 +190,8 @@ const PrimitiveDataType_noneOfTheAbove: PrimitiveDataType = 100; /* LONG_NAMED_I
  */
 export
 const noneOfTheAbove: PrimitiveDataType = PrimitiveDataType_noneOfTheAbove; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_PrimitiveDataType: $.ASN1Decoder<PrimitiveDataType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) PrimitiveDataType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PrimitiveDataType (el: _Element): PrimitiveDataType {
-    if (!_cached_decoder_for_PrimitiveDataType) { _cached_decoder_for_PrimitiveDataType = $._decodeInteger; }
-    return _cached_decoder_for_PrimitiveDataType(el);
-}
-
-let _cached_encoder_for_PrimitiveDataType: $.ASN1Encoder<PrimitiveDataType> | null = null;
-
-/**
- * @summary Encodes a(n) PrimitiveDataType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PrimitiveDataType, encoded as an ASN.1 Element.
- */
-export
-function _encode_PrimitiveDataType (value: PrimitiveDataType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PrimitiveDataType) { _cached_encoder_for_PrimitiveDataType = $._encodeInteger; }
-    return _cached_encoder_for_PrimitiveDataType(value, elGetter);
-}
+export const _decode_PrimitiveDataType = $._decodeInteger;
+export const _encode_PrimitiveDataType = $._encodeInteger;
 
 
 /* eslint-enable */

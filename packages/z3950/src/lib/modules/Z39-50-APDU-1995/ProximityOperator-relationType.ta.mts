@@ -109,35 +109,7 @@ const ProximityOperator_relationType_notEqual: ProximityOperator_relationType = 
  */
 export
 const notEqual: ProximityOperator_relationType = ProximityOperator_relationType_notEqual; /* SHORT_NAMED_INTEGER_VALUE */
-
-
-let _cached_decoder_for_ProximityOperator_relationType: $.ASN1Decoder<ProximityOperator_relationType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ProximityOperator_relationType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ProximityOperator_relationType (el: _Element): ProximityOperator_relationType {
-    if (!_cached_decoder_for_ProximityOperator_relationType) { _cached_decoder_for_ProximityOperator_relationType = $._decodeInteger; }
-    return _cached_decoder_for_ProximityOperator_relationType(el);
-}
-
-let _cached_encoder_for_ProximityOperator_relationType: $.ASN1Encoder<ProximityOperator_relationType> | null = null;
-
-/**
- * @summary Encodes a(n) ProximityOperator_relationType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProximityOperator_relationType, encoded as an ASN.1 Element.
- */
-export
-function _encode_ProximityOperator_relationType (value: ProximityOperator_relationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProximityOperator_relationType) { _cached_encoder_for_ProximityOperator_relationType = $._encodeInteger; }
-    return _cached_encoder_for_ProximityOperator_relationType(value, elGetter);
-}
+export const _decode_ProximityOperator_relationType = $._decodeInteger;
+export const _encode_ProximityOperator_relationType = $._encodeInteger;
 
 /* eslint-enable */

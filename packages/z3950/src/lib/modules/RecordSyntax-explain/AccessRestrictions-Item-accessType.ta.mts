@@ -115,35 +115,8 @@ const AccessRestrictions_Item_accessType_by_database: AccessRestrictions_Item_ac
  */
 export
 const by_database: AccessRestrictions_Item_accessType = AccessRestrictions_Item_accessType_by_database; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_AccessRestrictions_Item_accessType: $.ASN1Decoder<AccessRestrictions_Item_accessType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AccessRestrictions_Item_accessType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AccessRestrictions_Item_accessType (el: _Element): AccessRestrictions_Item_accessType {
-    if (!_cached_decoder_for_AccessRestrictions_Item_accessType) { _cached_decoder_for_AccessRestrictions_Item_accessType = $._decodeInteger; }
-    return _cached_decoder_for_AccessRestrictions_Item_accessType(el);
-}
-
-let _cached_encoder_for_AccessRestrictions_Item_accessType: $.ASN1Encoder<AccessRestrictions_Item_accessType> | null = null;
-
-/**
- * @summary Encodes a(n) AccessRestrictions_Item_accessType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AccessRestrictions_Item_accessType, encoded as an ASN.1 Element.
- */
-export
-function _encode_AccessRestrictions_Item_accessType (value: AccessRestrictions_Item_accessType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccessRestrictions_Item_accessType) { _cached_encoder_for_AccessRestrictions_Item_accessType = $._encodeInteger; }
-    return _cached_encoder_for_AccessRestrictions_Item_accessType(value, elGetter);
-}
+export const _decode_AccessRestrictions_Item_accessType = $._decodeInteger;
+export const _encode_AccessRestrictions_Item_accessType = $._encodeInteger;
 
 
 /* eslint-enable */
