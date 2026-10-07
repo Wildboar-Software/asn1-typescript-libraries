@@ -147,7 +147,7 @@ let _cached_encoder_for_SavPdu: $.ASN1Encoder<SavPdu> | null = null;
  */
 export
 function _encode_SavPdu (value: SavPdu, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SavPdu) { _cached_encoder_for_SavPdu = function (value: SavPdu, elGetter: $.ASN1Encoder<SavPdu>): _Element {
+    if (!_cached_encoder_for_SavPdu) { _cached_encoder_for_SavPdu = function (value: SavPdu): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.noASDU, $.BER),

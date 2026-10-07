@@ -264,7 +264,7 @@ let _cached_encoder_for_ASDU: $.ASN1Encoder<ASDU> | null = null;
  */
 export
 function _encode_ASDU (value: ASDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ASDU) { _cached_encoder_for_ASDU = function (value: ASDU, elGetter: $.ASN1Encoder<ASDU>): _Element {
+    if (!_cached_encoder_for_ASDU) { _cached_encoder_for_ASDU = function (value: ASDU): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeVisibleString, $.BER)(value.svID, $.BER),
