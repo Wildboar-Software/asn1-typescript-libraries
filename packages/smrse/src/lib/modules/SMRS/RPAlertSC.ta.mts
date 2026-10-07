@@ -124,10 +124,8 @@ function _decode_RPAlertSC (el: _Element): RPAlertSC {
     }
     sequence[0].name = "ms-address";
     sequence[1].name = "message-reference";
-    let ms_address!: SMS_Address;
-    let message_reference!: RP_MR;
-    ms_address = _decode_SMS_Address(sequence[0]);
-    message_reference = _decode_RP_MR(sequence[1]);
+    const ms_address = _decode_SMS_Address(sequence[0]);
+    const message_reference = _decode_RP_MR(sequence[1]);
     return new RPAlertSC(
         ms_address,
         message_reference,

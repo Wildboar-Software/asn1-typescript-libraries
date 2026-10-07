@@ -144,12 +144,9 @@ function _decode_SMS_Address (el: _Element): SMS_Address {
     sequence[0].name = "address-type";
     sequence[1].name = "numbering-plan";
     sequence[2].name = "address-value";
-    let address_type!: SMS_Address_address_type;
-    let numbering_plan!: SMS_Address_numbering_plan;
-    let address_value!: SMS_Address_address_value;
-    address_type = _decode_SMS_Address_address_type(sequence[0]);
-    numbering_plan = _decode_SMS_Address_numbering_plan(sequence[1]);
-    address_value = _decode_SMS_Address_address_value(sequence[2]);
+    const address_type = _decode_SMS_Address_address_type(sequence[0]);
+    const numbering_plan = _decode_SMS_Address_numbering_plan(sequence[1]);
+    const address_value = _decode_SMS_Address_address_value(sequence[2]);
     return new SMS_Address(
         address_type,
         numbering_plan,

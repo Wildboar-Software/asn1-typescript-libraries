@@ -114,8 +114,7 @@ function _decode_SMR_Bind_Failure (el: _Element): SMR_Bind_Failure {
         throw new _ConstructionError("SMR-Bind-Failure contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "connect-fail-reason";
-    let connect_fail_reason!: Connect_fail;
-    connect_fail_reason = _decode_Connect_fail(sequence[0]);
+    const connect_fail_reason = _decode_Connect_fail(sequence[0]);
     return new SMR_Bind_Failure(
         connect_fail_reason,
         sequence.slice(1),

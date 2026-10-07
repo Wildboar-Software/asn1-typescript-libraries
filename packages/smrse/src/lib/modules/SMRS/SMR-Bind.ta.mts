@@ -124,10 +124,8 @@ function _decode_SMR_Bind (el: _Element): SMR_Bind {
     }
     sequence[0].name = "sc-address";
     sequence[1].name = "password";
-    let sc_address!: SMS_Address;
-    let password!: Password;
-    sc_address = _decode_SMS_Address(sequence[0]);
-    password = _decode_Password(sequence[1]);
+    const sc_address = _decode_SMS_Address(sequence[0]);
+    const password = _decode_Password(sequence[1]);
     return new SMR_Bind(
         sc_address,
         password,

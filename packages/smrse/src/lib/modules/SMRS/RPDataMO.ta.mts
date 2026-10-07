@@ -149,7 +149,7 @@ function _decode_RPDataMO (el: _Element): RPDataMO {
     let mo_user_data!: RP_UD;
     let origVMSCAddr: OPTIONAL<SMS_Address>;
     let moimsi: OPTIONAL<IMSI_Address>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mo-message-reference": (_el: _Element): void => { mo_message_reference = _decode_RP_MR(_el); },
         "mo-originating-address": (_el: _Element): void => { mo_originating_address = _decode_SMS_Address(_el); },

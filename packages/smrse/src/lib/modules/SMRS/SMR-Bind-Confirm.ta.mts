@@ -100,7 +100,7 @@ let _cached_decoder_for_SMR_Bind_Confirm: $.ASN1Decoder<SMR_Bind_Confirm> | null
 export
 function _decode_SMR_Bind_Confirm (el: _Element): SMR_Bind_Confirm {
     if (!_cached_decoder_for_SMR_Bind_Confirm) { _cached_decoder_for_SMR_Bind_Confirm = function (el: _Element): SMR_Bind_Confirm {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         
     };

@@ -100,7 +100,7 @@ let _cached_decoder_for_SMR_Unbind: $.ASN1Decoder<SMR_Unbind> | null = null;
 export
 function _decode_SMR_Unbind (el: _Element): SMR_Unbind {
     if (!_cached_decoder_for_SMR_Unbind) { _cached_decoder_for_SMR_Unbind = function (el: _Element): SMR_Unbind {
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         
     };

@@ -177,7 +177,7 @@ function _decode_RPDataMT (el: _Element): RPDataMT {
     let mt_user_data!: RP_UD;
     let mt_origVMSCAddr: OPTIONAL<SMS_Address>;
     let mt_tariffClass: OPTIONAL<SM_TC>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mt-priority-request": (_el: _Element): void => { mt_priority_request = $._decodeBoolean(_el); },
         "mt-mms": (_el: _Element): void => { mt_mms = $._decodeBoolean(_el); },

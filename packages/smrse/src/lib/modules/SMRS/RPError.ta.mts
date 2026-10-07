@@ -150,7 +150,7 @@ function _decode_RPError (el: _Element): RPError {
     let message_reference!: RP_MR;
     let alerting_MS_ISDN: OPTIONAL<SMS_Address>;
     let sm_diag_info: OPTIONAL<RP_UD>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "error-reason": (_el: _Element): void => { error_reason = _decode_Error_reason(_el); },
         "msg-waiting-set": (_el: _Element): void => { msg_waiting_set = $._decodeBoolean(_el); },
