@@ -1,11 +1,37 @@
-# sv
+# IEC 61850 Sampled Values Protocol
 
 ASN.1 data structures for the `IEC61850` module (`SampledValues`, `SavPdu`,
-and `ASDU`).
+and `ASDU`) describing a protocol for sampling analog values. This module is
+ESM-only.
+
+## Example Usage
+
+```typescript
+cosnt asdu = new ASDU(
+    "SV-IED/LLN0",
+    "DataSet1",
+    4000,
+    1,
+    new Uint8Array([0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x0a]),
+    ASDU_smpSynch_global,
+    4800,
+    new Uint8Array([0x00, 0x01, 0xff, 0x7f]),
+    ASDU_smpMod_samplesPerNormalPeriod,
+    new Uint8Array([0x01, 0x02, 0x03, 0x04, 0x05, 0x06]),
+);
+const original: SampledValues = {
+    savPdu: new SavPdu(1, [asdu]),
+};
+const encoded = _encode_SampledValues(original, $.BER).toBytes();
+```
+
+## Documentation
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
 that applies to this library and others to learn how to use this module.
+
+## ASN.1 Compiler
 
 These libraries were generated entirely or in part by the
 [ASN.1 Compilation Service](https://wildboarsoftware.com/asn1-compilation)
@@ -17,10 +43,6 @@ produced with it are released publicly under the
 If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
-
-## ESM-Only
-
-This module is ESM-only.
 
 ## AI Usage Statement
 

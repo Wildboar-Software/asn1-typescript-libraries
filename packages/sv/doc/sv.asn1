@@ -27,6 +27,7 @@ ASDU ::= SEQUENCE {
 	gmidData	[9] IMPLICIT GmidData OPTIONAL,
 	...
 }
+
 UtcTime ::= OCTET STRING
 Data ::= OCTET STRING
 GmidData ::= OCTET STRING
