@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MechType, _decode_MechType, _encode_MechType } from "../Spnego/MechType.ta.mjs";
-// export { MechType, _decode_MechType, _encode_MechType } from "../Spnego/MechType.ta.mjs";
 
 
 /**

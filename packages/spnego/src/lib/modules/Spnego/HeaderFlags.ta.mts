@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -500,35 +499,8 @@ const HeaderFlags_force_rediscovery: number = 31; /* LONG_NAMED_BIT */
  */
 export
 const force_rediscovery: number = HeaderFlags_force_rediscovery; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_HeaderFlags: $.ASN1Decoder<HeaderFlags> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) HeaderFlags
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_HeaderFlags (el: _Element): HeaderFlags {
-    if (!_cached_decoder_for_HeaderFlags) { _cached_decoder_for_HeaderFlags = $._decodeBitString; }
-    return _cached_decoder_for_HeaderFlags(el);
-}
-
-let _cached_encoder_for_HeaderFlags: $.ASN1Encoder<HeaderFlags> | null = null;
-
-/**
- * @summary Encodes a(n) HeaderFlags into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The HeaderFlags, encoded as an ASN.1 Element.
- */
-export
-function _encode_HeaderFlags (value: HeaderFlags, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HeaderFlags) { _cached_encoder_for_HeaderFlags = $._encodeBitString; }
-    return _cached_encoder_for_HeaderFlags(value, elGetter);
-}
+export const _decode_HeaderFlags = $._decodeBitString;
+export const _encode_HeaderFlags = $._encodeBitString;
 
 
 /* eslint-enable */

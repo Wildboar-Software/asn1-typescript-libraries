@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -13,7 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NegTokenTarg-negResult ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * NegTokenTarg-negResult ::= ENUMERATED {
+ *     accept-completed    (0),
+ *     accept-incomplete   (1),
+ *     reject              (2),
+ *     request-mic         (3)
+ * }
  * ```
  * 
  * @enum {number}
@@ -33,7 +35,12 @@ enum _enum_for_NegTokenTarg_negResult {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NegTokenTarg-negResult ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * NegTokenTarg-negResult ::= ENUMERATED {
+ *     accept-completed    (0),
+ *     accept-incomplete   (1),
+ *     reject              (2),
+ *     request-mic         (3)
+ * }
  * ```
  * 
  * @enum {number}
@@ -48,7 +55,12 @@ type NegTokenTarg_negResult = _enum_for_NegTokenTarg_negResult;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NegTokenTarg-negResult ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * NegTokenTarg-negResult ::= ENUMERATED {
+ *     accept-completed    (0),
+ *     accept-incomplete   (1),
+ *     reject              (2),
+ *     request-mic         (3)
+ * }
  * ```
  * 
  * @enum {number}
@@ -119,35 +131,8 @@ const NegTokenTarg_negResult_request_mic: NegTokenTarg_negResult = NegTokenTarg_
  */
 export
 const request_mic: NegTokenTarg_negResult = NegTokenTarg_negResult.request_mic; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_NegTokenTarg_negResult: $.ASN1Decoder<NegTokenTarg_negResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) NegTokenTarg_negResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_NegTokenTarg_negResult (el: _Element): NegTokenTarg_negResult {
-    if (!_cached_decoder_for_NegTokenTarg_negResult) { _cached_decoder_for_NegTokenTarg_negResult = $._decodeEnumerated; }
-    return _cached_decoder_for_NegTokenTarg_negResult(el);
-}
-
-let _cached_encoder_for_NegTokenTarg_negResult: $.ASN1Encoder<NegTokenTarg_negResult> | null = null;
-
-/**
- * @summary Encodes a(n) NegTokenTarg_negResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NegTokenTarg_negResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_NegTokenTarg_negResult (value: NegTokenTarg_negResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NegTokenTarg_negResult) { _cached_encoder_for_NegTokenTarg_negResult = $._encodeEnumerated; }
-    return _cached_encoder_for_NegTokenTarg_negResult(value, elGetter);
-}
+export const _decode_NegTokenTarg_negResult = $._decodeEnumerated;
+export const _encode_NegTokenTarg_negResult = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NegTokenInit, _decode_NegTokenInit, _encode_NegTokenInit } from "../Spnego/NegTokenInit.ta.mjs";
-// export { NegTokenInit, _decode_NegTokenInit, _encode_NegTokenInit } from "../Spnego/NegTokenInit.ta.mjs";
 import { NegTokenTarg, _decode_NegTokenTarg, _encode_NegTokenTarg } from "../Spnego/NegTokenTarg.ta.mjs";
-// export { NegTokenTarg, _decode_NegTokenTarg, _encode_NegTokenTarg } from "../Spnego/NegTokenTarg.ta.mjs";
 
 
 /**
@@ -38,8 +36,8 @@ let _cached_decoder_for_NegotiationToken: $.ASN1Decoder<NegotiationToken> | null
 export
 function _decode_NegotiationToken (el: _Element): NegotiationToken {
     if (!_cached_decoder_for_NegotiationToken) { _cached_decoder_for_NegotiationToken = $._decode_inextensible_choice<NegotiationToken>({
-    "CONTEXT 0": [ "negTokenInit", $._decode_implicit<NegTokenInit>(() => _decode_NegTokenInit) ],
-    "CONTEXT 1": [ "negTokenTarg", $._decode_implicit<NegTokenTarg>(() => _decode_NegTokenTarg) ]
+    "CONTEXT 0": [ "negTokenInit", $._decode_explicit<NegTokenInit>(() => _decode_NegTokenInit) ],
+    "CONTEXT 1": [ "negTokenTarg", $._decode_explicit<NegTokenTarg>(() => _decode_NegTokenTarg) ]
 }); }
     return _cached_decoder_for_NegotiationToken(el);
 }
@@ -56,8 +54,8 @@ let _cached_encoder_for_NegotiationToken: $.ASN1Encoder<NegotiationToken> | null
 export
 function _encode_NegotiationToken (value: NegotiationToken, elGetter: $.ASN1Encoder<any>): _Element {
     if (!_cached_encoder_for_NegotiationToken) { _cached_encoder_for_NegotiationToken = $._encode_choice<NegotiationToken>({
-    "negTokenInit": $._encode_implicit(_TagClass.context, 0, () => _encode_NegTokenInit, $.BER),
-    "negTokenTarg": $._encode_implicit(_TagClass.context, 1, () => _encode_NegTokenTarg, $.BER),
+    "negTokenInit": $._encode_explicit(_TagClass.context, 0, () => _encode_NegTokenInit, $.BER),
+    "negTokenTarg": $._encode_explicit(_TagClass.context, 1, () => _encode_NegTokenTarg, $.BER),
 }, $.BER); }
     return _cached_encoder_for_NegotiationToken(value, elGetter);
 }
