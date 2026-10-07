@@ -66,6 +66,7 @@ jobs:
           - "scvp"
           - "sec1"
           - "sio"
+          - "smrse"
           - "snmp"
           - "spkac"
           - "t38"

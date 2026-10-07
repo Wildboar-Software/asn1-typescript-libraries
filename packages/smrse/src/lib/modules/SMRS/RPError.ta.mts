@@ -7,13 +7,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Error_reason, _decode_Error_reason, _encode_Error_reason } from "../SMRS/Error-reason.ta.mjs";
-// export { Error_reason, Error_reason_unknown_subscriber /* IMPORTED_LONG_NAMED_INTEGER */, unknown_subscriber /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_illegal_subscriber /* IMPORTED_LONG_NAMED_INTEGER */, illegal_subscriber /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_teleservice_not_provisioned /* IMPORTED_LONG_NAMED_INTEGER */, teleservice_not_provisioned /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_call_barred /* IMPORTED_LONG_NAMED_INTEGER */, call_barred /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_cug_reject /* IMPORTED_LONG_NAMED_INTEGER */, cug_reject /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_sMS_ll_capabilities_not_prov /* IMPORTED_LONG_NAMED_INTEGER */, sMS_ll_capabilities_not_prov /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_error_in_MS /* IMPORTED_LONG_NAMED_INTEGER */, error_in_MS /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_facility_not_supported /* IMPORTED_LONG_NAMED_INTEGER */, facility_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_memory_capacity_exceeded /* IMPORTED_LONG_NAMED_INTEGER */, memory_capacity_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_absent_subscriber /* IMPORTED_LONG_NAMED_INTEGER */, absent_subscriber /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_ms_busy_for_MT_sms /* IMPORTED_LONG_NAMED_INTEGER */, ms_busy_for_MT_sms /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_system_failure /* IMPORTED_LONG_NAMED_INTEGER */, system_failure /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_illegal_equipment /* IMPORTED_LONG_NAMED_INTEGER */, illegal_equipment /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_no_resp_to_paging /* IMPORTED_LONG_NAMED_INTEGER */, no_resp_to_paging /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_gMSC_congestion /* IMPORTED_LONG_NAMED_INTEGER */, gMSC_congestion /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_dublicate_sm /* IMPORTED_LONG_NAMED_INTEGER */, dublicate_sm /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_sC_congestion /* IMPORTED_LONG_NAMED_INTEGER */, sC_congestion /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_mS_not_SC_Subscriber /* IMPORTED_LONG_NAMED_INTEGER */, mS_not_SC_Subscriber /* IMPORTED_SHORT_NAMED_INTEGER */, Error_reason_invalid_sme_address /* IMPORTED_LONG_NAMED_INTEGER */, invalid_sme_address /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Error_reason, _encode_Error_reason } from "../SMRS/Error-reason.ta.mjs";
 import { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
-// export { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
 import { SMS_Address, _decode_SMS_Address, _encode_SMS_Address } from "../SMRS/SMS-Address.ta.mjs";
-// export { SMS_Address, _decode_SMS_Address, _encode_SMS_Address } from "../SMRS/SMS-Address.ta.mjs";
 import { RP_UD, _decode_RP_UD, _encode_RP_UD } from "../SMRS/RP-UD.ta.mjs";
-// export { RP_UD, _decode_RP_UD, _encode_RP_UD } from "../SMRS/RP-UD.ta.mjs";
 
 
 /**
@@ -154,7 +150,7 @@ function _decode_RPError (el: _Element): RPError {
     let message_reference!: RP_MR;
     let alerting_MS_ISDN: OPTIONAL<SMS_Address>;
     let sm_diag_info: OPTIONAL<RP_UD>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "error-reason": (_el: _Element): void => { error_reason = _decode_Error_reason(_el); },
         "msg-waiting-set": (_el: _Element): void => { msg_waiting_set = $._decodeBoolean(_el); },

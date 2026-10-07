@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMS_Address, _decode_SMS_Address, _encode_SMS_Address } from "../SMRS/SMS-Address.ta.mjs";
-// export { SMS_Address, _decode_SMS_Address, _encode_SMS_Address } from "../SMRS/SMS-Address.ta.mjs";
 import { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
-// export { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
 
 
 /**
@@ -126,10 +124,8 @@ function _decode_RPAlertSC (el: _Element): RPAlertSC {
     }
     sequence[0].name = "ms-address";
     sequence[1].name = "message-reference";
-    let ms_address!: SMS_Address;
-    let message_reference!: RP_MR;
-    ms_address = _decode_SMS_Address(sequence[0]);
-    message_reference = _decode_RP_MR(sequence[1]);
+    const ms_address = _decode_SMS_Address(sequence[0]);
+    const message_reference = _decode_RP_MR(sequence[1]);
     return new RPAlertSC(
         ms_address,
         message_reference,

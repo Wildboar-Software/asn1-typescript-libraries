@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMS_Address_address_type, _decode_SMS_Address_address_type, _encode_SMS_Address_address_type } from "../SMRS/SMS-Address-address-type.ta.mjs";
-// export { SMS_Address_address_type, SMS_Address_address_type_unknown_type /* IMPORTED_LONG_NAMED_INTEGER */, unknown_type /* IMPORTED_SHORT_NAMED_INTEGER */, SMS_Address_address_type_internat_number /* IMPORTED_LONG_NAMED_INTEGER */, internat_number /* IMPORTED_SHORT_NAMED_INTEGER */, SMS_Address_address_type_national_number /* IMPORTED_LONG_NAMED_INTEGER */, national_number /* IMPORTED_SHORT_NAMED_INTEGER */, SMS_Address_address_type_net_spec_number /* IMPORTED_LONG_NAMED_INTEGER */, net_spec_number /* IMPORTED_SHORT_NAMED_INTEGER */, SMS_Address_address_type_short_number /* IMPORTED_LONG_NAMED_INTEGER */, short_number /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SMS_Address_address_type, _encode_SMS_Address_address_type } from "../SMRS/SMS-Address-address-type.ta.mjs";
 import { SMS_Address_numbering_plan, _decode_SMS_Address_numbering_plan, _encode_SMS_Address_numbering_plan } from "../SMRS/SMS-Address-numbering-plan.ta.mjs";
-// export { SMS_Address_numbering_plan, SMS_Address_numbering_plan_unknown_numbering /* IMPORTED_LONG_NAMED_INTEGER */, unknown_numbering /* IMPORTED_SHORT_NAMED_INTEGER */, SMS_Address_numbering_plan_iSDN_numbering /* IMPORTED_LONG_NAMED_INTEGER */, iSDN_numbering /* IMPORTED_SHORT_NAMED_INTEGER */, SMS_Address_numbering_plan_data_network_numbering /* IMPORTED_LONG_NAMED_INTEGER */, data_network_numbering /* IMPORTED_SHORT_NAMED_INTEGER */, SMS_Address_numbering_plan_telex_numbering /* IMPORTED_LONG_NAMED_INTEGER */, telex_numbering /* IMPORTED_SHORT_NAMED_INTEGER */, SMS_Address_numbering_plan_national_numbering /* IMPORTED_LONG_NAMED_INTEGER */, national_numbering /* IMPORTED_SHORT_NAMED_INTEGER */, SMS_Address_numbering_plan_private_numbering /* IMPORTED_LONG_NAMED_INTEGER */, private_numbering /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SMS_Address_numbering_plan, _encode_SMS_Address_numbering_plan } from "../SMRS/SMS-Address-numbering-plan.ta.mjs";
 import { SMS_Address_address_value, _decode_SMS_Address_address_value, _encode_SMS_Address_address_value } from "../SMRS/SMS-Address-address-value.ta.mjs";
-// export { SMS_Address_address_value, _decode_SMS_Address_address_value, _encode_SMS_Address_address_value } from "../SMRS/SMS-Address-address-value.ta.mjs";
 
 
 /**
@@ -147,12 +144,9 @@ function _decode_SMS_Address (el: _Element): SMS_Address {
     sequence[0].name = "address-type";
     sequence[1].name = "numbering-plan";
     sequence[2].name = "address-value";
-    let address_type!: SMS_Address_address_type;
-    let numbering_plan!: SMS_Address_numbering_plan;
-    let address_value!: SMS_Address_address_value;
-    address_type = _decode_SMS_Address_address_type(sequence[0]);
-    numbering_plan = _decode_SMS_Address_numbering_plan(sequence[1]);
-    address_value = _decode_SMS_Address_address_value(sequence[2]);
+    const address_type = _decode_SMS_Address_address_type(sequence[0]);
+    const numbering_plan = _decode_SMS_Address_numbering_plan(sequence[1]);
+    const address_value = _decode_SMS_Address_address_value(sequence[2]);
     return new SMS_Address(
         address_type,
         numbering_plan,

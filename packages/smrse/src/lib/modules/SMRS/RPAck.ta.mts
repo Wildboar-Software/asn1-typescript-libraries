@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
-// export { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
 
 
 /**
@@ -115,8 +114,7 @@ function _decode_RPAck (el: _Element): RPAck {
         throw new _ConstructionError("RPAck contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "message-reference";
-    let message_reference!: RP_MR;
-    message_reference = _decode_RP_MR(sequence[0]);
+    const message_reference = _decode_RP_MR(sequence[0]);
     return new RPAck(
         message_reference,
         sequence.slice(1),

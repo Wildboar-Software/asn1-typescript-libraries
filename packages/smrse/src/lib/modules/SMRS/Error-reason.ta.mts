@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -343,35 +342,8 @@ const Error_reason_invalid_sme_address: Error_reason = 104; /* LONG_NAMED_INTEGE
  */
 export
 const invalid_sme_address: Error_reason = Error_reason_invalid_sme_address; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_Error_reason: $.ASN1Decoder<Error_reason> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Error_reason
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Error_reason (el: _Element): Error_reason {
-    if (!_cached_decoder_for_Error_reason) { _cached_decoder_for_Error_reason = $._decodeInteger; }
-    return _cached_decoder_for_Error_reason(el);
-}
-
-let _cached_encoder_for_Error_reason: $.ASN1Encoder<Error_reason> | null = null;
-
-/**
- * @summary Encodes a(n) Error_reason into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Error_reason, encoded as an ASN.1 Element.
- */
-export
-function _encode_Error_reason (value: Error_reason, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Error_reason) { _cached_encoder_for_Error_reason = $._encodeInteger; }
-    return _cached_encoder_for_Error_reason(value, elGetter);
-}
+export const _decode_Error_reason = $._decodeInteger;
+export const _encode_Error_reason = $._encodeInteger;
 
 
 /* eslint-enable */
