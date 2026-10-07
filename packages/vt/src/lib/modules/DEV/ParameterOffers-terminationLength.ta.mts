@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
-// export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { ParameterOffers_terminationLength_eventId, _decode_ParameterOffers_terminationLength_eventId, _encode_ParameterOffers_terminationLength_eventId } from "../DEV/ParameterOffers-terminationLength-eventId.ta.mjs";
-// export { ParameterOffers_terminationLength_eventId, _decode_ParameterOffers_terminationLength_eventId, _encode_ParameterOffers_terminationLength_eventId } from "../DEV/ParameterOffers-terminationLength-eventId.ta.mjs";
 
 
 /**

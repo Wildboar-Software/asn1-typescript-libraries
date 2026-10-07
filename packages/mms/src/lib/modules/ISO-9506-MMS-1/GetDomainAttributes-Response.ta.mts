@@ -13,13 +13,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
-// export { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 import { DomainState, _decode_DomainState, _encode_DomainState } from "../MMS-Object-Module-1/DomainState.ta.mjs";
-// export { DomainState, DomainState_non_existent /* IMPORTED_LONG_NAMED_INTEGER */, non_existent /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_loading /* IMPORTED_LONG_NAMED_INTEGER */, loading /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_ready /* IMPORTED_LONG_NAMED_INTEGER */, ready /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_in_use /* IMPORTED_LONG_NAMED_INTEGER */, in_use /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_complete /* IMPORTED_LONG_NAMED_INTEGER */, complete /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_incomplete /* IMPORTED_LONG_NAMED_INTEGER */, incomplete /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_d1 /* IMPORTED_LONG_NAMED_INTEGER */, d1 /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_d2 /* IMPORTED_LONG_NAMED_INTEGER */, d2 /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_d3 /* IMPORTED_LONG_NAMED_INTEGER */, d3 /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_d4 /* IMPORTED_LONG_NAMED_INTEGER */, d4 /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_d5 /* IMPORTED_LONG_NAMED_INTEGER */, d5 /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_d6 /* IMPORTED_LONG_NAMED_INTEGER */, d6 /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_d7 /* IMPORTED_LONG_NAMED_INTEGER */, d7 /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_d8 /* IMPORTED_LONG_NAMED_INTEGER */, d8 /* IMPORTED_SHORT_NAMED_INTEGER */, DomainState_d9 /* IMPORTED_LONG_NAMED_INTEGER */, d9 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DomainState, _encode_DomainState } from "../MMS-Object-Module-1/DomainState.ta.mjs";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { Integer8, _decode_Integer8, _encode_Integer8 } from "../ISO-9506-MMS-1/Integer8.ta.mjs";
-// export { Integer8, _decode_Integer8, _encode_Integer8 } from "../ISO-9506-MMS-1/Integer8.ta.mjs";
 
 
 /**

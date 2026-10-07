@@ -12,41 +12,23 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
-// export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
 import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../Core-INAP-CS1-DataTypes/CalledPartyNumber.ta.mjs";
-// export { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../Core-INAP-CS1-DataTypes/CalledPartyNumber.ta.mjs";
 import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../Core-INAP-CS1-DataTypes/CallingPartyNumber.ta.mjs";
-// export { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../Core-INAP-CS1-DataTypes/CallingPartyNumber.ta.mjs";
 import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
-// export { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
 import { CGEncountered, _enum_for_CGEncountered, _decode_CGEncountered, _encode_CGEncountered } from "../Core-INAP-CS1-DataTypes/CGEncountered.ta.mjs";
-// export { CGEncountered, _enum_for_CGEncountered, CGEncountered_manualCGencountered /* IMPORTED_LONG_ENUMERATION_ITEM */, manualCGencountered /* IMPORTED_SHORT_ENUMERATION_ITEM */, CGEncountered_scpOverload /* IMPORTED_LONG_ENUMERATION_ITEM */, scpOverload /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CGEncountered, _encode_CGEncountered } from "../Core-INAP-CS1-DataTypes/CGEncountered.ta.mjs";
 import { IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../Core-INAP-CS1-DataTypes/IPSSPCapabilities.ta.mjs";
-// export { IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../Core-INAP-CS1-DataTypes/IPSSPCapabilities.ta.mjs";
 import { IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../Core-INAP-CS1-DataTypes/IPAvailable.ta.mjs";
-// export { IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../Core-INAP-CS1-DataTypes/IPAvailable.ta.mjs";
 import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../Core-INAP-CS1-DataTypes/LocationNumber.ta.mjs";
-// export { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../Core-INAP-CS1-DataTypes/LocationNumber.ta.mjs";
 import { OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../Core-INAP-CS1-DataTypes/OriginalCalledPartyID.ta.mjs";
-// export { OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../Core-INAP-CS1-DataTypes/OriginalCalledPartyID.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
-// export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 import { HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../Core-INAP-CS1-DataTypes/HighLayerCompatibility.ta.mjs";
-// export { HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../Core-INAP-CS1-DataTypes/HighLayerCompatibility.ta.mjs";
 import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../Core-INAP-CS1-DataTypes/ServiceInteractionIndicators.ta.mjs";
-// export { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../Core-INAP-CS1-DataTypes/ServiceInteractionIndicators.ta.mjs";
 import { AdditionalCallingPartyNumber, _decode_AdditionalCallingPartyNumber, _encode_AdditionalCallingPartyNumber } from "../Core-INAP-CS1-DataTypes/AdditionalCallingPartyNumber.ta.mjs";
-// export { AdditionalCallingPartyNumber, _decode_AdditionalCallingPartyNumber, _encode_AdditionalCallingPartyNumber } from "../Core-INAP-CS1-DataTypes/AdditionalCallingPartyNumber.ta.mjs";
 import { ForwardCallIndicators, _decode_ForwardCallIndicators, _encode_ForwardCallIndicators } from "../Core-INAP-CS1-DataTypes/ForwardCallIndicators.ta.mjs";
-// export { ForwardCallIndicators, _decode_ForwardCallIndicators, _encode_ForwardCallIndicators } from "../Core-INAP-CS1-DataTypes/ForwardCallIndicators.ta.mjs";
 import { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../Core-INAP-CS1-DataTypes/BearerCapability.ta.mjs";
-// export { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../Core-INAP-CS1-DataTypes/BearerCapability.ta.mjs";
 import { EventTypeBCSM, _enum_for_EventTypeBCSM, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../Core-INAP-CS1-DataTypes/EventTypeBCSM.ta.mjs";
-// export { EventTypeBCSM, _enum_for_EventTypeBCSM, EventTypeBCSM_origAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, origAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_collectedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, collectedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_analyzedInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, analyzedInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_routeSelectFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, routeSelectFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oCalledPartyBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, oCalledPartyBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, oNoAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, oAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oMidCall /* IMPORTED_LONG_ENUMERATION_ITEM */, oMidCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oDisconnect /* IMPORTED_LONG_ENUMERATION_ITEM */, oDisconnect /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oAbandon /* IMPORTED_LONG_ENUMERATION_ITEM */, oAbandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_termAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, termAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tCalledPartyBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, tCalledPartyBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, tNoAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, tAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tMidCall /* IMPORTED_LONG_ENUMERATION_ITEM */, tMidCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tDisconnect /* IMPORTED_LONG_ENUMERATION_ITEM */, tDisconnect /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tAbandon /* IMPORTED_LONG_ENUMERATION_ITEM */, tAbandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../Core-INAP-CS1-DataTypes/EventTypeBCSM.ta.mjs";
 import { RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../Core-INAP-CS1-DataTypes/RedirectingPartyID.ta.mjs";
-// export { RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../Core-INAP-CS1-DataTypes/RedirectingPartyID.ta.mjs";
 import { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../Core-INAP-CS1-DataTypes/RedirectionInformation.ta.mjs";
-// export { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../Core-INAP-CS1-DataTypes/RedirectionInformation.ta.mjs";
 
 
 /**

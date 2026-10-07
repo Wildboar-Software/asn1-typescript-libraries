@@ -1,81 +1,20 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_SS_InfoFor_CSE, _decode_Ext_SS_InfoFor_CSE, _encode_Ext_SS_InfoFor_CSE } from "../MAP-MS-DataTypes/Ext-SS-InfoFor-CSE.ta.mjs";
-import { CAMEL_SubscriptionInfo, _decode_CAMEL_SubscriptionInfo, _encode_CAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/CAMEL-SubscriptionInfo.ta.mjs";
+import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataTypes/ODB-Info.ta.mjs";
-import { CallWaitingData, _decode_CallWaitingData, _encode_CallWaitingData } from "../MAP-MS-DataTypes/CallWaitingData.ta.mjs";
 import { CallHoldData, _decode_CallHoldData, _encode_CallHoldData } from "../MAP-MS-DataTypes/CallHoldData.ta.mjs";
+import { CallWaitingData, _decode_CallWaitingData, _encode_CallWaitingData } from "../MAP-MS-DataTypes/CallWaitingData.ta.mjs";
+import { CAMEL_SubscriptionInfo, _decode_CAMEL_SubscriptionInfo, _encode_CAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/CAMEL-SubscriptionInfo.ta.mjs";
 import { ClipData, _decode_ClipData, _encode_ClipData } from "../MAP-MS-DataTypes/ClipData.ta.mjs";
 import { ClirData, _decode_ClirData, _encode_ClirData } from "../MAP-MS-DataTypes/ClirData.ta.mjs";
 import { EctData, _decode_EctData, _encode_EctData } from "../MAP-MS-DataTypes/EctData.ta.mjs";
-import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
+import { Ext_SS_InfoFor_CSE, _decode_Ext_SS_InfoFor_CSE, _encode_Ext_SS_InfoFor_CSE } from "../MAP-MS-DataTypes/Ext-SS-InfoFor-CSE.ta.mjs";
+import { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataTypes/ODB-Info.ta.mjs";
 
 
 /**

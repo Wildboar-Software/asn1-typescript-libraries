@@ -1,12 +1,18 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
-import type {
-    GeneralNames,
-} from "../modules/CertificateExtensions/GeneralNames.ta.mjs";
-import compareGeneralName from "./compareGeneralName.mjs";
+import {
+    type GeneralNames,
+    generalNameToKey,
+} from "@wildboar/gn";
 
 /**
  * @summary Compare two `GeneralNames` values
+ * @description
+ *
+ * `GeneralNames` is a SEQUENCE SIZE (1..MAX) OF `GeneralName`. Encoding
+ * order is not significant for matching: each name on one side must
+ * pair with a distinct equal name on the other (multiset equality).
+ *
  * @param a One value
  * @param b The other
  * @param getEqualityMatcher A function that takes an attribute type and
@@ -20,12 +26,15 @@ function compareGeneralNames (
     b: GeneralNames,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
-    // TODO: At least group by types first.
     if (a.length !== b.length) {
         return false;
     }
+    const aSet: Set<string> = new Set();
     for (let i = 0; i < a.length; i++) {
-        if (!compareGeneralName(a[i], b[i], getEqualityMatcher)) {
+        aSet.add(generalNameToKey(a[i]));
+    }
+    for (let i = 0; i < b.length; i++) {
+        if (!aSet.delete(generalNameToKey(b[i]))) {
             return false;
         }
     }

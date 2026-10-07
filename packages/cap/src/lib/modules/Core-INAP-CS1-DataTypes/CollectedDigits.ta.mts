@@ -17,7 +17,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ErrorTreatment, _enum_for_ErrorTreatment, ErrorTreatment_stdErrorAndInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ErrorTreatment, _encode_ErrorTreatment } from "../Core-INAP-CS1-DataTypes/ErrorTreatment.ta.mjs";
-// export { ErrorTreatment, _enum_for_ErrorTreatment, ErrorTreatment_stdErrorAndInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, stdErrorAndInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, ErrorTreatment_help /* IMPORTED_LONG_ENUMERATION_ITEM */, help /* IMPORTED_SHORT_ENUMERATION_ITEM */, ErrorTreatment_repeatPrompt /* IMPORTED_LONG_ENUMERATION_ITEM */, repeatPrompt /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ErrorTreatment, _encode_ErrorTreatment } from "../Core-INAP-CS1-DataTypes/ErrorTreatment.ta.mjs";
 
 
 /**

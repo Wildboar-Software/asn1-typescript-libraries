@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Access_Control_List_instance, _decode_Access_Control_List_instance, _encode_Access_Control_List_instance } from "../MMS-SCI-Module-1/Access-Control-List-instance.ta.mjs";
-// export { Access_Control_List_instance, _decode_Access_Control_List_instance, _encode_Access_Control_List_instance } from "../MMS-SCI-Module-1/Access-Control-List-instance.ta.mjs";
 import { Journal_Entry_instance, _decode_Journal_Entry_instance, _encode_Journal_Entry_instance } from "../MMS-SCI-Module-1/Journal-Entry-instance.ta.mjs";
-// export { Journal_Entry_instance, _decode_Journal_Entry_instance, _encode_Journal_Entry_instance } from "../MMS-SCI-Module-1/Journal-Entry-instance.ta.mjs";
 
 
 /**

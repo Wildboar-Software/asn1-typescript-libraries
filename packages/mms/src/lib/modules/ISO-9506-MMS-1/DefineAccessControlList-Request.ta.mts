@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { DefineAccessControlList_Request_accessControlListElements, _decode_DefineAccessControlList_Request_accessControlListElements, _encode_DefineAccessControlList_Request_accessControlListElements } from "../ISO-9506-MMS-1/DefineAccessControlList-Request-accessControlListElements.ta.mjs";
-// export { DefineAccessControlList_Request_accessControlListElements, _decode_DefineAccessControlList_Request_accessControlListElements, _encode_DefineAccessControlList_Request_accessControlListElements } from "../ISO-9506-MMS-1/DefineAccessControlList-Request-accessControlListElements.ta.mjs";
 
 
 /**
