@@ -17,6 +17,9 @@
   "references": [
     {
       "path": "../crmf/tsconfig.lib.json"
+    },
+    {
+      "path": "../gn/tsconfig.lib.json"
     }
   ]
 }

@@ -16,10 +16,10 @@
   ],
   "references": [
     {
-      "path": "../pki-stub/tsconfig.lib.json"
+      "path": "../attribute-asn1module/tsconfig.lib.json"
     },
     {
-      "path": "../attribute-asn1module/tsconfig.lib.json"
+      "path": "../dn/tsconfig.lib.json"
     }
   ]
 }

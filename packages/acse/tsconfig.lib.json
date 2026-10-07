@@ -16,8 +16,8 @@
         "**/*.mts"
     ],
     "references": [
-      {
-        "path": "../pki-stub/tsconfig.lib.json"
-      }
+        {
+            "path": "../dn/tsconfig.lib.json"
+        }
     ]
 }

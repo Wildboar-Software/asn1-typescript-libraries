@@ -16,7 +16,7 @@ import {
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "@wildboar/pki-stub";
-import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
+import { Name, _decode_Name, _encode_Name } from "@wildboar/dn";
 /**
  * @summary CertUpdateReq_certs_Item
  * @description

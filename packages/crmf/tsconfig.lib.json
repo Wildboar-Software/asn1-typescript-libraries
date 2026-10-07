@@ -17,6 +17,12 @@
   "references": [
     {
       "path": "../cms/tsconfig.lib.json"
+    },
+    {
+      "path": "../dn/tsconfig.lib.json"
+    },
+    {
+      "path": "../gn/tsconfig.lib.json"
     }
   ]
 }

@@ -17,6 +17,9 @@
   "references": [
     {
       "path": "../rose/tsconfig.lib.json"
+    },
+    {
+      "path": "../dn/tsconfig.lib.json"
     }
   ]
 }

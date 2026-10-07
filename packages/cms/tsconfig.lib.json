@@ -20,6 +20,9 @@
     },
     {
       "path": "../ansi-x9-42/tsconfig.lib.json"
+    },
+    {
+      "path": "../dn/tsconfig.lib.json"
     }
   ]
 }

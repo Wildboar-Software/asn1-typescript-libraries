@@ -29,6 +29,9 @@
     },
     {
       "path": "../cbeff/tsconfig.lib.json"
+    },
+    {
+      "path": "../dn/tsconfig.lib.json"
     }
   ]
 }

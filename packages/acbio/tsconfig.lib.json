@@ -21,6 +21,9 @@
       },
       {
         "path": "../cms/tsconfig.lib.json"
-      }
+      },
+    {
+      "path": "../dn/tsconfig.lib.json"
+    }
     ]
 }

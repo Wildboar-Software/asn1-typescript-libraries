@@ -42,6 +42,9 @@
     },
     {
       "path": "../pki-stub/tsconfig.lib.json"
+    },
+    {
+      "path": "../gn/tsconfig.lib.json"
     }
   ]
 }
