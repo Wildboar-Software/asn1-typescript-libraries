@@ -7,7 +7,7 @@
  * - `date` (Challenge_Item_dataType_date and PrimitiveDataType_date). Use the long forms.
  */
 export {
-    Challenge_Item_dataType,
+    type Challenge_Item_dataType,
     Challenge_Item_dataType_integer,
     integer,
     Challenge_Item_dataType_date,

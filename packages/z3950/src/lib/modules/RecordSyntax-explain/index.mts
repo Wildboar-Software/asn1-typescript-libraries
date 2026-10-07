@@ -10,7 +10,7 @@
  */
 export * from "./AccessInfo.ta.mjs";
 export {
-    AccessRestrictions_Item_accessType,
+    type AccessRestrictions_Item_accessType,
     AccessRestrictions_Item_accessType_any_,
     any_,
     AccessRestrictions_Item_accessType_search,
@@ -69,7 +69,7 @@ export * from "./Path-Item.ta.mjs";
 export * from "./Path.ta.mjs";
 export * from "./PerElementDetails.ta.mjs";
 export {
-    PrimitiveDataType,
+    type PrimitiveDataType,
     PrimitiveDataType_octetString,
     octetString,
     PrimitiveDataType_numeric,
@@ -95,7 +95,7 @@ export {
 export * from "./PrivateCapabilities-operators-Item.ta.mjs";
 export * from "./PrivateCapabilities.ta.mjs";
 export {
-    ProcessingInformation_processingContext,
+    type ProcessingInformation_processingContext,
     ProcessingInformation_processingContext_access,
     access,
     ProcessingInformation_processingContext_search,

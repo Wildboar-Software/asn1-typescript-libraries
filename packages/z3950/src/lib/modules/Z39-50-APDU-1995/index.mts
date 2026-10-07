@@ -27,7 +27,7 @@ export * from "./OtherInformation-Item-information.ta.mjs";
 export * from "./OtherInformation-Item.ta.mjs";
 export * from "./OtherInformation.ta.mjs";
 export {
-    Permissions_Item_allowableFunctions,
+    type Permissions_Item_allowableFunctions,
     Permissions_Item_allowableFunctions_delete_,
     delete_,
     Permissions_Item_allowableFunctions_modifyContents,

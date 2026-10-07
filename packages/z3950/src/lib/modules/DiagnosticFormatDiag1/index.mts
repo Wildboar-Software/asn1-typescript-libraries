@@ -16,7 +16,7 @@ export * from "./DiagFormat-dbUnavail.ta.mjs";
 export * from "./DiagFormat-extServices-immediate.ta.mjs";
 export * from "./DiagFormat-extServices-permission.ta.mjs";
 export {
-    DiagFormat_extServices_req,
+    type DiagFormat_extServices_req,
     DiagFormat_extServices_req_nameInUse,
     nameInUse,
     DiagFormat_extServices_req_noSuchName,
@@ -37,7 +37,7 @@ export * from "./DiagFormat-sort-illegal.ta.mjs";
 export * from "./DiagFormat-sort-key.ta.mjs";
 export * from "./DiagFormat-sort.ta.mjs";
 export {
-    DiagFormat_term_problem,
+    type DiagFormat_term_problem,
     DiagFormat_term_problem_codedValue,
     codedValue,
     DiagFormat_term_problem_unparsable,
