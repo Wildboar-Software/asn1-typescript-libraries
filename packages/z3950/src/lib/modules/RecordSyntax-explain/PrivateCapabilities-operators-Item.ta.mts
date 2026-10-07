@@ -17,7 +17,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PrivateCapabilities-operators-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PrivateCapabilities-operators-Item ::= SEQUENCE {
+ *     operator     [0] IMPLICIT InternationalString,
+ *     description  [1] IMPLICIT HumanString OPTIONAL
+ * }
  * ```
  * 
  * @class

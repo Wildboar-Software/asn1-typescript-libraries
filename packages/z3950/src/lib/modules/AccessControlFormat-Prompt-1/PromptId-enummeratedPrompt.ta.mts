@@ -17,7 +17,29 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PromptId-enummeratedPrompt ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PromptId-enummeratedPrompt ::= SEQUENCE {
+ *     type                  [1] IMPLICIT INTEGER{
+ *                                     groupId      (0),
+ *                                     userId       (1),
+ *                                     password     (2),
+ *                                     newPassword  (3),
+ *                                     copyright    (4),
+ *              -- When type on Challenge is
+ *              -- 'copyright', promptInfo has text of
+ *              -- copyright message to be displayed
+ *              -- verbatim to the user. If
+ *              -- promptResponse indicates
+ *              -- 'acceptance', this indicates the
+ *              -- user has been shown, and accepted,
+ *              -- the terms of the copyright. This is
+ *              -- not intended to be legally binding,
+ *              -- but provides a good-faith attempt
+ *              -- on the part of the target to inform
+ *              -- the user of the copyright.
+ *                                     sessionId    (5)},
+ *     suggestedString       [2] IMPLICIT
+ *                 InternationalString OPTIONAL
+ * }
  * ```
  * 
  * @class

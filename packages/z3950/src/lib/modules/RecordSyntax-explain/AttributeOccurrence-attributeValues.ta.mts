@@ -16,7 +16,12 @@ import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AttributeOccurrence-attributeValues ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AttributeOccurrence-attributeValues ::= CHOICE {
+ *     any-or-none   [3] IMPLICIT NULL,
+ *        -- All supported values are OK
+ *     specific      [4] IMPLICIT SEQUENCE OF
+ *                         StringOrNumeric
+ * }
  * ```
  */
 export

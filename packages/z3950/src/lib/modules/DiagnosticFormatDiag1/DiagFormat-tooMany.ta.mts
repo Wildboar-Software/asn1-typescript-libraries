@@ -17,7 +17,19 @@ import { _decode_DiagFormat_tooMany_tooManyWhat, _encode_DiagFormat_tooMany_tooM
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-tooMany ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-tooMany ::= SEQUENCE {
+ *     tooManyWhat    [1]   IMPLICIT INTEGER{
+ *                              argumentWords          (1),
+ *                              truncatedWords         (2),
+ *                              booleanOperators       (3),
+ *                              incompleteSubfields    (4),
+ *                              characters             (5),
+ *                              recordsRetrieved       (6),
+ *                              dataBasesSpecified     (7),
+ *                              resultSetsCreated      (8),
+ *                              indexTermsProcessed    (9)},
+ *     max            [2]   IMPLICIT INTEGER OPTIONAL
+ * }
  * ```
  * 
  * @class

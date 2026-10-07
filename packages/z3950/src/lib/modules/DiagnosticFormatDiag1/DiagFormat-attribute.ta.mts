@@ -18,7 +18,24 @@ import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-1995/Term.ta.mj
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-attribute ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-attribute ::= SEQUENCE {
+ *          -- Applies for unsupported attribute set,
+ *          -- attribute type, attribute value, or term (for
+ *          -- a given attribute type or value).
+ *     id         [1]    IMPLICIT OBJECT IDENTIFIER,
+ *                          -- if only "id" occurs, then
+ *                          -- attribute set is not supported
+ *     type       [2]    IMPLICIT INTEGER OPTIONAL,
+ *                          -- must occur if value occurs.
+ *     value      [3]    IMPLICIT INTEGER OPTIONAL,
+ *                          -- if omitted, and Type occurs,
+ *                          -- then Type is what is unsupported
+ *     term       [4]    Term OPTIONAL
+ *                          -- If occurs, term is illegal or
+ *                          -- not supported, for attribute
+ *                          -- value, if value occurs;
+ *                          -- otherwise, for type.
+ * }
  * ```
  * 
  * @class

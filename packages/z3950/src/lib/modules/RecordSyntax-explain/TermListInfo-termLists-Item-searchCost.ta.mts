@@ -14,7 +14,28 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TermListInfo-termLists-Item-searchCost ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * TermListInfo-termLists-Item-searchCost ::= INTEGER {
+ *     optimized    (0),
+ *        -- The attribute (or combination)
+ *        -- associated with this list will
+ *        -- do fast searches.
+ *     normal       (1),
+ *        -- The attribute (combination) will
+ *        -- work expected. So there's
+ *        -- probably an index for the
+ *        -- attribute (combination) or some
+ *        -- similar mechanism.
+ *     expensive    (2),
+ *        -- Can use the attribute
+ *        -- (combination), but it might not
+ *        -- provide satisfactory results.
+ *        -- Probably there is no index, or
+ *        -- post-processing of records is
+ *        -- required.
+ *     filter       (3)
+ *        -- can't search with this
+ *        -- attribute (combination) alone.
+ * }
  * ```
  */
 export

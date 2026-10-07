@@ -17,7 +17,19 @@ import { Specification, _decode_Specification, _encode_Specification } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-badSpec ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-badSpec ::= SEQUENCE {
+ *     -- element set name or specification
+ *       spec       [1] IMPLICIT Specification,
+ *                         -- esn or element spec not supported
+ *       db         [2] IMPLICIT DatabaseName OPTIONAL,
+ *                         -- if db specified, above spec not
+ *                         -- supported for db; otherwise,
+ *                         -- spec not supported period.
+ *       goodOnes   [3] IMPLICIT SEQUENCE OF Specification
+ *                                                 OPTIONAL
+ *                         -- target supplies ones that are
+ *                         -- supported
+ * }
  * ```
  * 
  * @class

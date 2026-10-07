@@ -16,7 +16,12 @@ import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-attCombo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-attCombo ::= SEQUENCE {
+ *        -- attribute combination not supported
+ *     unsupportedCombination    [1] IMPLICIT AttributeList,
+ *     recommendedAlternatives   [2] IMPLICIT SEQUENCE OF
+ *                                AttributeList OPTIONAL
+ * }
  * ```
  * 
  * @class

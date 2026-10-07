@@ -18,7 +18,27 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ResultsByDB-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ResultsByDB-Item ::= SEQUENCE {
+ *     databases       [1] CHOICE{
+ *                            all   [1] IMPLICIT NULL,
+ *                                         -- applies across all of the databases in
+ *                                         -- Search PDU
+ *                            list  [2] IMPLICIT SEQUENCE OF DatabaseName
+ *                                         -- applies across all databases in this
+ *                                         -- list
+ *                               },
+ *     count           [2] IMPLICIT INTEGER OPTIONAL,
+ *                            -- Number of records for query component (and, as
+ *                            -- above, if during search, via resource control,
+ *                            -- number of records so far).
+ *     resultSetName   [3] IMPLICIT InternationalString OPTIONAL
+ *                            -- Target-assigned result set by which subQuery is
+ *                            -- available. Should not be provided unless
+ *                            -- processing for this query component is concluded
+ *                            -- (i.e., when this report comes during search, via
+ *                            -- resource control, as opposed to after search, via
+ *                            -- additionalSearchInfo).
+ * }
  * ```
  * 
  * @class

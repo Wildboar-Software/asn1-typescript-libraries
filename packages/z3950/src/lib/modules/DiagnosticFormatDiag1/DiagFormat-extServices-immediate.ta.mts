@@ -14,7 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-extServices-immediate ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-extServices-immediate ::= INTEGER {
+ *     -- immediate execution:
+ *        failed          (1),
+ *        service         (2),
+ *           -- not supported for this service,
+ *       parameters       (3)
+ *           -- not supported for these
+ *           -- parameters.
+ * }
  * ```
  */
 export

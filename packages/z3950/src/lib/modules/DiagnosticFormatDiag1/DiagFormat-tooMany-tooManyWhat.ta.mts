@@ -14,7 +14,17 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-tooMany-tooManyWhat ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-tooMany-tooManyWhat ::= INTEGER {
+ *     argumentWords          (1),
+ *     truncatedWords         (2),
+ *     booleanOperators       (3),
+ *     incompleteSubfields    (4),
+ *     characters             (5),
+ *     recordsRetrieved       (6),
+ *     dataBasesSpecified     (7),
+ *     resultSetsCreated      (8),
+ *     indexTermsProcessed    (9)
+ * }
  * ```
  */
 export

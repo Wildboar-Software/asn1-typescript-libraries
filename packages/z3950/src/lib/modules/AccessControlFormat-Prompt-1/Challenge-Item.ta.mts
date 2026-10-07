@@ -23,7 +23,55 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Challenge-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Challenge-Item ::= SEQUENCE {
+ *        promptId         [1] PromptId,
+ *                               -- Target supplies a number (for an enumerated
+ *                               -- prompt) or string (for a non-enumerated
+ *                               -- prompt), for each prompt, and the origin
+ *                               -- returns it in response, for this prompt, so
+ *                               -- target may correlate the prompt response with
+ *                               -- the prompt.
+ *     defaultResponse    [2] IMPLICIT InternationalString OPTIONAL,
+ *     promptInfo         [3] CHOICE{
+ *                                character   [1] IMPLICIT InternationalString,
+ *                                encrypted   [2] IMPLICIT Encryption} OPTIONAL,
+ *                                     -- Information corresponding to an
+ *                                     -- emumerated prompt. For example if 'type',
+ *                                     -- within PromptId, is 'copyright', then
+ *                                     -- promptInfo may contain a copyright
+ *                                     -- statement.
+ *     regExpr            [4] IMPLICIT InternationalString OPTIONAL,
+ *                               -- A regular expression that promptResponse should
+ *                               -- match. See IEEE 1003.2 Volume 1, Section 2.8
+ *                               -- "Regular Expression Notation." For example if
+ *                               -- promptId is "Year of publication," regExpr
+ *                               -- might be "19[89][0-9]|20[0-9][0-9]".
+ *     responseRequired   [5] IMPLICIT NULL OPTIONAL,
+ *     allowedValues      [6] IMPLICIT SEQUENCE OF InternationalString OPTIONAL,
+ *                               -- e.g. promptId="Desired color"; allowed = 'red',
+ *                               -- 'blue','Green'.
+ *     shouldSave         [7] IMPLICIT NULL OPTIONAL,
+ *                               -- Target recommends that origin save the data
+ *                               -- that it prompts from the user corresponding to
+ *                               -- this prompt, because it is likely to be
+ *                               -- requested again (so origin might not have to
+ *                               -- prompt the user next time).
+ *     dataType           [8] IMPLICIT INTEGER{
+ *                                  integer         (1),
+ *                                  date            (2),
+ *                                  float           (3),
+ *                                  alphaNumeric    (4),
+ *                                  url-urn         (5),
+ *                                  boolean         (6)} OPTIONAL,
+ *                                     -- Target telling origin type of data it
+ *                                     -- wants. E.g., if "date" is specified,
+ *                                     -- presumably the origin will try to prompt
+ *                                     -- something "date-like" from the user.
+ *     diagnostic      [9] IMPLICIT EXTERNAL OPTIONAL
+ *                            -- Intended for repeat requests when there is an
+ *                            -- error the origin should report to the user from
+ *                            -- previous attempt.
+ * }
  * ```
  * 
  * @class

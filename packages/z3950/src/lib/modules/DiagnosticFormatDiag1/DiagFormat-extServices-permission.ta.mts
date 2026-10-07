@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-extServices-permission ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-extServices-permission ::= INTEGER {
+ *     -- permission denied on ES, because:
+ *        id             (1),
+ *           -- id not authorized, or
+ *        modifyDelete   (2)
+ * }
  * ```
  */
 export

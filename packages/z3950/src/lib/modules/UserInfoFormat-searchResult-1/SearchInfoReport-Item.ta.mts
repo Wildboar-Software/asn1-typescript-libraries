@@ -22,7 +22,31 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SearchInfoReport-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SearchInfoReport-Item ::= SEQUENCE {
+ *     subqueryId                [1] IMPLICIT InternationalString OPTIONAL,
+ *                                     -- shorthand identifier of subquery
+ *     fullQuery                 [2] IMPLICIT BOOLEAN,
+ *                                     -- 'true' means this is the full query;
+ *                                     -- 'false', a sub-query
+ *     subqueryExpression        [3] QueryExpression OPTIONAL,
+ *
+ *                                     -- A subquery of the query as submitted. May
+ *                                     -- be whole query; if so, "fullQuery" should
+ *                                     -- be 'true'.
+ *     subqueryInterpretation    [4] QueryExpression OPTIONAL,
+ *
+ *                                     -- how target interpreted subquery
+ *     subqueryRecommendation    [5] QueryExpression OPTIONAL,
+ *                                     -- target-recommended alternative
+ *     subqueryCount             [6] IMPLICIT INTEGER OPTIONAL,
+ *                                     -- Number of records for this subQuery,
+ *                                     -- across all of the specified databases.
+ *                                     -- (If during search, via resource control,
+ *                                     -- number of records so far).
+ *     subqueryWeight            [7] IMPLICIT IntUnit OPTIONAL,
+ *                                     -- relative weight of this subquery
+ *     resultsByDB               [8] IMPLICIT ResultsByDB OPTIONAL
+ * }
  * ```
  * 
  * @class

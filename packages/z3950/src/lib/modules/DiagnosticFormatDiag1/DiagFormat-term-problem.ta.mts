@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-term-problem ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-term-problem ::= INTEGER {
+ *     codedValue   (1),
+ *     unparsable   (2),
+ *     tooShort     (3),
+ *     type         (4)
+ * }
  * ```
  */
 export

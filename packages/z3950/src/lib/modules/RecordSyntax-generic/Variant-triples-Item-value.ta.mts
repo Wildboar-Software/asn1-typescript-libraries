@@ -22,7 +22,18 @@ import { Unit, _decode_Unit, _encode_Unit } from "../Z39-50-APDU-1995/Unit.ta.mj
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Variant-triples-Item-value ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Variant-triples-Item-value ::= CHOICE {
+ *                        integer INTEGER,
+ *                        string InternationalString,
+ *                        octetString OCTET STRING,
+ *                        oid OBJECT IDENTIFIER,
+ *                        boolean BOOLEAN,
+ *                        null NULL,
+ *     -- Following need context tags:
+ *        unit                [1] IMPLICIT Unit,
+ *        valueAndUnit        [2] IMPLICIT
+ *                                   IntUnit
+ * }
  * ```
  */
 export

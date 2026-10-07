@@ -17,7 +17,11 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NetworkAddress-internetAddress ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NetworkAddress-internetAddress ::= SEQUENCE {
+ *     hostAddress  [0] IMPLICIT
+ *                      InternationalString,
+ *     port         [1] IMPLICIT INTEGER
+ * }
  * ```
  * 
  * @class

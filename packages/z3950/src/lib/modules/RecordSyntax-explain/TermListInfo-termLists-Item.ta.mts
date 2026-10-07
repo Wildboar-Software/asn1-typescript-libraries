@@ -20,7 +20,51 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TermListInfo-termLists-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TermListInfo-termLists-Item ::= SEQUENCE {
+ *       name         [1] IMPLICIT InternationalString,
+ *       title        [2] IMPLICIT HumanString OPTIONAL,
+ *                           -- Title is for users to see
+ *                           -- and can differ by language.
+ *                           -- Name, on the other hand, is
+ *                           -- typically a short string
+ *                           -- not necessarily meant to be
+ *                           -- human-readable, and not
+ *                           -- variable by language.
+ *       searchCost   [3] IMPLICIT INTEGER {
+ *                           optimized    (0),
+ *                              -- The attribute (or combination)
+ *                              -- associated with this list will
+ *                              -- do fast searches.
+ *                           normal       (1),
+ *                              -- The attribute (combination) will
+ *                              -- work expected. So there's
+ *                              -- probably an index for the
+ *                              -- attribute (combination) or some
+ *                              -- similar mechanism.
+ *                           expensive    (2),
+ *                              -- Can use the attribute
+ *                              -- (combination), but it might not
+ *                              -- provide satisfactory results.
+ *                              -- Probably there is no index, or
+ *                              -- post-processing of records is
+ *                              -- required.
+ *                           filter       (3)
+ *                              -- can't search with this
+ *                              -- attribute (combination) alone.
+ *                                     } OPTIONAL,
+ *     scanable       [4] IMPLICIT BOOLEAN,
+ *                           -- 'true' means this list can be
+ *                           -- scanned.
+ *      broader       [5] IMPLICIT SEQUENCE OF InternationalString
+ *                                      OPTIONAL,
+ *      narrower      [6] IMPLICIT SEQUENCE OF InternationalString
+ *                                      OPTIONAL
+ *                           -- broader and narrower list
+ *                           -- alternative term lists related to
+ *                           -- this one. The term lists so listed
+ *                           -- should also be in this termLists
+ *                           -- structure.
+ * }
  * ```
  * 
  * @class

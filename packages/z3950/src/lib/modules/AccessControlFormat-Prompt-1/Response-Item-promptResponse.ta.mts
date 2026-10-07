@@ -19,7 +19,13 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Response-Item-promptResponse ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Response-Item-promptResponse ::= CHOICE {
+ *     string       [1] IMPLICIT InternationalString,
+ *     accept       [2] IMPLICIT BOOLEAN,
+ *     acknowledge  [3] IMPLICIT NULL,
+ *     diagnostic   [4] DiagRec,
+ *     encrypted    [5] IMPLICIT Encryption
+ * }
  * ```
  */
 export

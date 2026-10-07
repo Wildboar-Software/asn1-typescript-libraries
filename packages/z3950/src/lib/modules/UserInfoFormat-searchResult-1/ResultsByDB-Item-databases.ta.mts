@@ -16,7 +16,14 @@ import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ResultsByDB-Item-databases ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ResultsByDB-Item-databases ::= CHOICE {
+ *     all   [1] IMPLICIT NULL,
+ *                  -- applies across all of the databases in
+ *                  -- Search PDU
+ *     list  [2] IMPLICIT SEQUENCE OF DatabaseName
+ *                  -- applies across all databases in this
+ *                  -- list
+ * }
  * ```
  */
 export

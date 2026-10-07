@@ -18,7 +18,21 @@ import { Response_Item_promptResponse, _decode_Response_Item_promptResponse, _en
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Response-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Response-Item ::= SEQUENCE {
+ *       promptId      [1] PromptId,
+ *                            -- Corresponds to a prompt in the challenge, or
+ *                            -- may be unprompted, for example "newPassword."
+ *                            -- If unprompted, should be "enumerated."
+ *                            -- If this responds to a non-enumerated prompt,
+ *                            -- then nonEnumeratedPrompt should contain the
+ *                            -- prompt string from the challenge.
+ *     promptResponse  [2] CHOICE{
+ *                            string       [1] IMPLICIT InternationalString,
+ *                            accept       [2] IMPLICIT BOOLEAN,
+ *                            acknowledge  [3] IMPLICIT NULL,
+ *                            diagnostic   [4] DiagRec,
+ *                            encrypted    [5] IMPLICIT Encryption}
+ * }
  * ```
  * 
  * @class

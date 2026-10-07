@@ -18,7 +18,29 @@ import { Variant_triples_Item_value, _decode_Variant_triples_Item_value, _encode
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Variant-triples-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Variant-triples-Item ::= SEQUENCE {
+ *     variantSetId    [0]   IMPLICIT OBJECT IDENTIFIER
+ *                             OPTIONAL,
+ *                            -- If omitted,
+ *                            -- globalVariantSetId
+ *                            -- (above) applies, unless
+ *                            -- that too is omitted, in
+ *                            -- which case, default
+ *                            -- used.
+ *     class           [1]    IMPLICIT INTEGER,
+ *     type            [2]    IMPLICIT INTEGER,
+ *     value           [3]    CHOICE{
+ *                               integer INTEGER,
+ *                               string InternationalString,
+ *                               octetString OCTET STRING,
+ *                               oid OBJECT IDENTIFIER,
+ *                               boolean BOOLEAN,
+ *                               null NULL,
+ *            -- Following need context tags:
+ *               unit                [1] IMPLICIT Unit,
+ *               valueAndUnit        [2] IMPLICIT
+ *                                          IntUnit}
+ * }
  * ```
  * 
  * @class

@@ -18,7 +18,17 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SchemaInfo-tagTypeMapping-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SchemaInfo-tagTypeMapping-Item ::= SEQUENCE {
+ *     tagType         [0] IMPLICIT INTEGER,
+ *     tagSet          [1] IMPLICIT OBJECT IDENTIFIER
+ *                                   OPTIONAL,
+ *                           -- If tagSet is omitted, then
+ *                           -- this tagType is for a tagSet
+ *                           -- locally defined within the
+ *                           -- schema that cannot be
+ *                           -- referenced by another schema.
+ *     defaultTagType  [2] IMPLICIT NULL OPTIONAL
+ * }
  * ```
  * 
  * @class

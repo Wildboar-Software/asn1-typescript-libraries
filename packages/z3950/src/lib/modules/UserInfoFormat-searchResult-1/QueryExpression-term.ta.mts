@@ -17,7 +17,10 @@ import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-1995/Term.ta.mj
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * QueryExpression-term ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * QueryExpression-term ::= SEQUENCE {
+ *     queryTerm    [1] Term,
+ *     termComment  [2] IMPLICIT InternationalString OPTIONAL
+ * }
  * ```
  * 
  * @class

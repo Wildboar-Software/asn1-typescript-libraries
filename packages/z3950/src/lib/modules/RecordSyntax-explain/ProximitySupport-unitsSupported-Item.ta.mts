@@ -16,7 +16,13 @@ import { ProximitySupport_unitsSupported_Item_private, _decode_ProximitySupport_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProximitySupport-unitsSupported-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ProximitySupport-unitsSupported-Item ::= CHOICE {
+ *     known    [1] IMPLICIT INTEGER,
+ *           -- values from KnownProximityUnit
+ *     private  [2] IMPLICIT SEQUENCE{
+ *                     unit         [0] IMPLICIT INTEGER,
+ *                     description  [1] HumanString OPTIONAL}
+ * }
  * ```
  */
 export

@@ -16,7 +16,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-recordSyntax ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-recordSyntax ::= SEQUENCE {
+ *     -- record cannot be transferred in requested syntax
+ *            unsupportedSyntax         [1] IMPLICIT OBJECT
+ *                                             IDENTIFIER,
+ *            suggestedAlternatives     [2] IMPLICIT SEQUENCE OF
+ *                                          OBJECT IDENTIFIER
+ *                                             OPTIONAL
+ * }
  * ```
  * 
  * @class

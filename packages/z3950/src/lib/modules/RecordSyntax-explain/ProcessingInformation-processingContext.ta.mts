@@ -14,7 +14,19 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProcessingInformation-processingContext ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ProcessingInformation-processingContext ::= INTEGER {
+ *     access                 (0),
+ *        -- e.g. choosing databases
+ *     search                 (1),
+ *        -- e.g. "search strategies" or search forms
+ *     retrieval              (2),
+ *        -- e.g. recommended element combinations
+ *     record-presentation    (3),
+ *        -- display of retrieved records
+ *     record-handling        (4)
+ *        -- handling (e.g. saving) of retrieved
+ *        -- records
+ * }
  * ```
  */
 export

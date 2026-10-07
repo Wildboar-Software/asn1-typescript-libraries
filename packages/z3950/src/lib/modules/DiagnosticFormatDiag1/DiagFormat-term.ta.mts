@@ -17,7 +17,14 @@ import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-1995/Term.ta.mj
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-term ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-term ::= SEQUENCE {
+ *     problem      [1] IMPLICIT INTEGER{
+ *                          codedValue   (1),
+ *                          unparsable   (2),
+ *                          tooShort     (3),
+ *                          type         (4)} OPTIONAL,
+ *     term         [2] Term
+ * }
  * ```
  * 
  * @class

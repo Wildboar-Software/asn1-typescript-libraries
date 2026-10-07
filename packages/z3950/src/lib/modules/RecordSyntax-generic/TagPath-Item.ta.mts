@@ -17,7 +17,11 @@ import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TagPath-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TagPath-Item ::= SEQUENCE {
+ *     tagType         [1] IMPLICIT INTEGER OPTIONAL,
+ *     tagValue        [2] StringOrNumeric,
+ *     tagOccurrence   [3] IMPLICIT INTEGER OPTIONAL
+ * }
  * ```
  * 
  * @class

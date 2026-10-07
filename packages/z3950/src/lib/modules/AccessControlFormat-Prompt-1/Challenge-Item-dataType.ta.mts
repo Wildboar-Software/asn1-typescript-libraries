@@ -14,7 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Challenge-Item-dataType ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * Challenge-Item-dataType ::= INTEGER {
+ *     integer         (1),
+ *     date            (2),
+ *     float           (3),
+ *     alphaNumeric    (4),
+ *     url-urn         (5),
+ *     boolean         (6)
+ * }
  * ```
  */
 export

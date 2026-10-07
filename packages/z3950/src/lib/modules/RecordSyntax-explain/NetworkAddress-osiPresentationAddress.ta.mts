@@ -16,7 +16,14 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NetworkAddress-osiPresentationAddress ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NetworkAddress-osiPresentationAddress ::= SEQUENCE {
+ *     pSel      [0] IMPLICIT InternationalString,
+ *     sSel      [1] IMPLICIT InternationalString
+ *                          OPTIONAL,
+ *     tSel      [2] IMPLICIT InternationalString
+ *                          OPTIONAL,
+ *     nSap      [3] IMPLICIT InternationalString
+ * }
  * ```
  * 
  * @class

@@ -18,7 +18,11 @@ import { Charge, _decode_Charge, _encode_Charge } from "../RecordSyntax-explain/
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Costs-otherCharges-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Costs-otherCharges-Item ::= SEQUENCE {
+ *     -- Other charges
+ *                            forWhat  [1] IMPLICIT HumanString,
+ *                            charge   [2] IMPLICIT Charge
+ * }
  * ```
  * 
  * @class

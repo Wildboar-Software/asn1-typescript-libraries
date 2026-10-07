@@ -17,7 +17,19 @@ import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-dbUnavail ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-dbUnavail ::= SEQUENCE {
+ *     -- database unavailable
+ *                              db    [1] IMPLICIT DatabaseName,
+ *                              why   [2] IMPLICIT SEQUENCE{
+ *                                        reasonCode      [1] IMPLICIT INTEGER{
+ *                                                              doesNotExist        (0),
+ *                                                              existsButUnavail    (1),
+ *                                                              locked              (2),
+ *                                                              accessDenied        (3)}
+ *                                                                  OPTIONAL,
+ *                                        message         [2] IMPLICIT
+ *                                                    InternationalString OPTIONAL}
+ * }
  * ```
  * 
  * @class

@@ -16,7 +16,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Challenge-Item-promptInfo ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Challenge-Item-promptInfo ::= CHOICE {
+ *     character   [1] IMPLICIT InternationalString,
+ *     encrypted   [2] IMPLICIT Encryption
+ * }
  * ```
  */
 export
