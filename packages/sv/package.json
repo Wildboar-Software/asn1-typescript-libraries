@@ -5,7 +5,7 @@
         "iec61850"
     ],
     "type": "module",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"

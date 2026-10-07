@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  *
  * ASN.1 module `IEC61850`: sampled-value application PDUs (`SampledValues`,

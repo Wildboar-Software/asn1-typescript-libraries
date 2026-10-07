@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  *
  * IEC 61850 sampled-value PDUs. Import from `@wildboar/sv` or
