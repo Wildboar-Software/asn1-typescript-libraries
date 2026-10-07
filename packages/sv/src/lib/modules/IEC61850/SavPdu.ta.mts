@@ -124,10 +124,8 @@ function _decode_SavPdu (el: _Element): SavPdu {
     }
     noASDUElement.name = "noASDU";
     seqASDUElement.name = "seqASDU";
-    let noASDU!: INTEGER;
-    let seqASDU!: ASDU[];
-    noASDU = $._decode_implicit<INTEGER>(() => $._decodeInteger)(noASDUElement);
-    seqASDU = $._decode_implicit<ASDU[]>(() => $._decodeSequenceOf<ASDU>(() => _decode_ASDU))(seqASDUElement);
+    const noASDU: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(noASDUElement);
+    const seqASDU: ASDU[] = $._decode_implicit<ASDU[]>(() => $._decodeSequenceOf<ASDU>(() => _decode_ASDU))(seqASDUElement);
     return new SavPdu(
         noASDU,
         seqASDU,

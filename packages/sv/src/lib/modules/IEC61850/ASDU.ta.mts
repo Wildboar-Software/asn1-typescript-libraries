@@ -212,7 +212,7 @@ function _decode_ASDU (el: _Element): ASDU {
     let seqData!: Data;
     let smpMod: OPTIONAL<ASDU_smpMod>;
     let gmidData: OPTIONAL<GmidData>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "svID": (_el: _Element): void => { svID = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(_el); },
         "datSet": (_el: _Element): void => { datSet = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(_el); },
