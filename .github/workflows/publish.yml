@@ -43,7 +43,7 @@ jobs:
           # - "isis"
           # - "iso-9798-3-sasl"
           # - "kerberos5"
-          # - "ldap"
+          - "ldap"
           # # - "m3100"
           # - "map"
           # - "mms"
