@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ASDU-smpSynch ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ASDU-smpSynch ::= INTEGER {
+ *     none(0),
+ *     local(1),
+ *     global(2)
+ * }
  * ```
  */
 export
