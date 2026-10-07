@@ -1,9 +1,7 @@
 {
     "name": "@wildboar/z3950",
     "type": "module",
-    "version": "0.1.0",
-    "description": "",
-    "keywords": [],
+    "version": "1.0.0",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"
@@ -30,5 +28,22 @@
     "main": "./src/index.mjs",
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
+    },
+    "exports": {
+        ".": "./src/index.mts",
+        "./AccessControlFormat-des-1": "./src/lib/modules/AccessControlFormat-des-1/index.mts",
+        "./AccessControlFormat-krb-1": "./src/lib/modules/AccessControlFormat-krb-1/index.mts",
+        "./AccessControlFormat-Prompt-1": "./src/lib/modules/AccessControlFormat-Prompt-1/index.mts",
+        "./ANSI-Z39-50-ObjectIdentifier": "./src/lib/modules/ANSI-Z39-50-ObjectIdentifier/index.mts",
+        "./DiagnosticFormatDiag1": "./src/lib/modules/DiagnosticFormatDiag1/index.mts",
+        "./RecordSyntax-ESTaskPackage": "./src/lib/modules/RecordSyntax-ESTaskPackage/index.mts",
+        "./RecordSyntax-SUTRS": "./src/lib/modules/RecordSyntax-SUTRS/index.mts",
+        "./RecordSyntax-explain": "./src/lib/modules/RecordSyntax-explain/index.mts",
+        "./RecordSyntax-generic": "./src/lib/modules/RecordSyntax-generic/index.mts",
+        "./RecordSyntax-opac": "./src/lib/modules/RecordSyntax-opac/index.mts",
+        "./RecordSyntax-summary": "./src/lib/modules/RecordSyntax-summary/index.mts",
+        "./UserInfoFormat-searchResult-1": "./src/lib/modules/UserInfoFormat-searchResult-1/index.mts",
+        "./Z39-50-APDU-1995": "./src/lib/modules/Z39-50-APDU-1995/index.mts",
+        "./Z39-50-OCLC-UserInformation": "./src/lib/modules/Z39-50-OCLC-UserInformation/index.mts"
     }
 }
