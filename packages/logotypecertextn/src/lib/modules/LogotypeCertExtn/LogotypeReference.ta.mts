@@ -125,10 +125,8 @@ function _decode_LogotypeReference (el: _Element): LogotypeReference {
     }
     sequence[0].name = "refStructHash";
     sequence[1].name = "refStructURI";
-    let refStructHash!: HashAlgAndValue[];
-    let refStructURI!: IA5String[];
-    refStructHash = $._decodeSequenceOf<HashAlgAndValue>(() => _decode_HashAlgAndValue)(sequence[0]);
-    refStructURI = $._decodeSequenceOf<IA5String>(() => $._decodeIA5String)(sequence[1]);
+    const refStructHash: HashAlgAndValue[] = $._decodeSequenceOf<HashAlgAndValue>(() => _decode_HashAlgAndValue)(sequence[0]);
+    const refStructURI: IA5String[] = $._decodeSequenceOf<IA5String>(() => $._decodeIA5String)(sequence[1]);
     return new LogotypeReference(
         refStructHash,
         refStructURI,

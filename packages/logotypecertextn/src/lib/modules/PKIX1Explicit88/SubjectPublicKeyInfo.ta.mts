@@ -117,10 +117,8 @@ function _decode_SubjectPublicKeyInfo (el: _Element): SubjectPublicKeyInfo {
     }
     sequence[0].name = "algorithm";
     sequence[1].name = "subjectPublicKey";
-    let algorithm!: AlgorithmIdentifier;
-    let subjectPublicKey!: BIT_STRING;
-    algorithm = _decode_AlgorithmIdentifier(sequence[0]);
-    subjectPublicKey = $._decodeBitString(sequence[1]);
+    const algorithm: AlgorithmIdentifier = _decode_AlgorithmIdentifier(sequence[0]);
+    const subjectPublicKey: BIT_STRING = $._decodeBitString(sequence[1]);
     return new SubjectPublicKeyInfo(
         algorithm,
         subjectPublicKey,

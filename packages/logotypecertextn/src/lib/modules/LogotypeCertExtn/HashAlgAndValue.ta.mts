@@ -117,10 +117,8 @@ function _decode_HashAlgAndValue (el: _Element): HashAlgAndValue {
     }
     sequence[0].name = "hashAlg";
     sequence[1].name = "hashValue";
-    let hashAlg!: AlgorithmIdentifier;
-    let hashValue!: OCTET_STRING;
-    hashAlg = _decode_AlgorithmIdentifier(sequence[0]);
-    hashValue = $._decodeOctetString(sequence[1]);
+    const hashAlg: AlgorithmIdentifier = _decode_AlgorithmIdentifier(sequence[0]);
+    const hashValue: OCTET_STRING = $._decodeOctetString(sequence[1]);
     return new HashAlgAndValue(
         hashAlg,
         hashValue,

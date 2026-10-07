@@ -125,10 +125,8 @@ function _decode_ExtensionAttribute (el: _Element): ExtensionAttribute {
     }
     sequence[0].name = "extension-attribute-type";
     sequence[1].name = "extension-attribute-value";
-    let extension_attribute_type!: INTEGER;
-    let extension_attribute_value!: _Element;
-    extension_attribute_type = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    extension_attribute_value = $._decode_explicit<_Element>(() => $._decodeAny)(sequence[1]);
+    const extension_attribute_type: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const extension_attribute_value: _Element = $._decode_explicit<_Element>(() => $._decodeAny)(sequence[1]);
     return new ExtensionAttribute(
         extension_attribute_type,
         extension_attribute_value,

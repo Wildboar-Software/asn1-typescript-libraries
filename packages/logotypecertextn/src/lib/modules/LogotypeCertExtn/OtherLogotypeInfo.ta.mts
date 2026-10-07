@@ -117,10 +117,8 @@ function _decode_OtherLogotypeInfo (el: _Element): OtherLogotypeInfo {
     }
     sequence[0].name = "logotypeType";
     sequence[1].name = "info";
-    let logotypeType!: OBJECT_IDENTIFIER;
-    let info!: LogotypeInfo;
-    logotypeType = $._decodeObjectIdentifier(sequence[0]);
-    info = _decode_LogotypeInfo(sequence[1]);
+    const logotypeType: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const info: LogotypeInfo = _decode_LogotypeInfo(sequence[1]);
     return new OtherLogotypeInfo(
         logotypeType,
         info,

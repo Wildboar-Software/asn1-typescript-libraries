@@ -128,10 +128,8 @@ function _decode_TeletexDomainDefinedAttribute (el: _Element): TeletexDomainDefi
     }
     sequence[0].name = "type";
     sequence[1].name = "value";
-    let type_!: TeletexString;
-    let value!: TeletexString;
-    type_ = $._decodeTeletexString(sequence[0]);
-    value = $._decodeTeletexString(sequence[1]);
+    const type_: TeletexString = $._decodeTeletexString(sequence[0]);
+    const value: TeletexString = $._decodeTeletexString(sequence[1]);
     return new TeletexDomainDefinedAttribute(
         type_,
         value,

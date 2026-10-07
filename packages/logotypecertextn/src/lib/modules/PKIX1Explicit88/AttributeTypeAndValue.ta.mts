@@ -118,10 +118,8 @@ function _decode_AttributeTypeAndValue (el: _Element): AttributeTypeAndValue {
     }
     sequence[0].name = "type";
     sequence[1].name = "value";
-    let type_!: AttributeType;
-    let value!: AttributeValue;
-    type_ = _decode_AttributeType(sequence[0]);
-    value = _decode_AttributeValue(sequence[1]);
+    const type_: AttributeType = _decode_AttributeType(sequence[0]);
+    const value: AttributeValue = _decode_AttributeValue(sequence[1]);
     return new AttributeTypeAndValue(
         type_,
         value,

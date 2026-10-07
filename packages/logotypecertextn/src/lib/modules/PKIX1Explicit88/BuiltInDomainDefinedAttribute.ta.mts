@@ -128,10 +128,8 @@ function _decode_BuiltInDomainDefinedAttribute (el: _Element): BuiltInDomainDefi
     }
     sequence[0].name = "type";
     sequence[1].name = "value";
-    let type_!: PrintableString;
-    let value!: PrintableString;
-    type_ = $._decodePrintableString(sequence[0]);
-    value = $._decodePrintableString(sequence[1]);
+    const type_: PrintableString = $._decodePrintableString(sequence[0]);
+    const value: PrintableString = $._decodePrintableString(sequence[1]);
     return new BuiltInDomainDefinedAttribute(
         type_,
         value,

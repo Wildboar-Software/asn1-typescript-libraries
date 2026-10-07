@@ -115,10 +115,8 @@ function _decode_Validity (el: _Element): Validity {
     }
     sequence[0].name = "notBefore";
     sequence[1].name = "notAfter";
-    let notBefore!: Time;
-    let notAfter!: Time;
-    notBefore = _decode_Time(sequence[0]);
-    notAfter = _decode_Time(sequence[1]);
+    const notBefore: Time = _decode_Time(sequence[0]);
+    const notAfter: Time = _decode_Time(sequence[1]);
     return new Validity(
         notBefore,
         notAfter,

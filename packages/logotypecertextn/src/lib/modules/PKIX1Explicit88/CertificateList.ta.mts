@@ -128,12 +128,9 @@ function _decode_CertificateList (el: _Element): CertificateList {
     sequence[0].name = "tbsCertList";
     sequence[1].name = "signatureAlgorithm";
     sequence[2].name = "signature";
-    let tbsCertList!: TBSCertList;
-    let signatureAlgorithm!: AlgorithmIdentifier;
-    let signature!: BIT_STRING;
-    tbsCertList = _decode_TBSCertList(sequence[0]);
-    signatureAlgorithm = _decode_AlgorithmIdentifier(sequence[1]);
-    signature = $._decodeBitString(sequence[2]);
+    const tbsCertList: TBSCertList = _decode_TBSCertList(sequence[0]);
+    const signatureAlgorithm: AlgorithmIdentifier = _decode_AlgorithmIdentifier(sequence[1]);
+    const signature: BIT_STRING = $._decodeBitString(sequence[2]);
     return new CertificateList(
         tbsCertList,
         signatureAlgorithm,

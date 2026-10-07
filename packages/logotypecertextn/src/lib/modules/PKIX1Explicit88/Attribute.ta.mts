@@ -118,10 +118,8 @@ function _decode_Attribute (el: _Element): Attribute {
     }
     sequence[0].name = "type";
     sequence[1].name = "values";
-    let type_!: AttributeType;
-    let values!: AttributeValue[];
-    type_ = _decode_AttributeType(sequence[0]);
-    values = $._decodeSetOf<AttributeValue>(() => _decode_AttributeValue)(sequence[1]);
+    const type_: AttributeType = _decode_AttributeType(sequence[0]);
+    const values: AttributeValue[] = $._decodeSetOf<AttributeValue>(() => _decode_AttributeValue)(sequence[1]);
     return new Attribute(
         type_,
         values,

@@ -135,12 +135,9 @@ function _decode_LogotypeDetails (el: _Element): LogotypeDetails {
     sequence[0].name = "mediaType";
     sequence[1].name = "logotypeHash";
     sequence[2].name = "logotypeURI";
-    let mediaType!: IA5String;
-    let logotypeHash!: HashAlgAndValue[];
-    let logotypeURI!: IA5String[];
-    mediaType = $._decodeIA5String(sequence[0]);
-    logotypeHash = $._decodeSequenceOf<HashAlgAndValue>(() => _decode_HashAlgAndValue)(sequence[1]);
-    logotypeURI = $._decodeSequenceOf<IA5String>(() => $._decodeIA5String)(sequence[2]);
+    const mediaType: IA5String = $._decodeIA5String(sequence[0]);
+    const logotypeHash: HashAlgAndValue[] = $._decodeSequenceOf<HashAlgAndValue>(() => _decode_HashAlgAndValue)(sequence[1]);
+    const logotypeURI: IA5String[] = $._decodeSequenceOf<IA5String>(() => $._decodeIA5String)(sequence[2]);
     return new LogotypeDetails(
         mediaType,
         logotypeHash,
