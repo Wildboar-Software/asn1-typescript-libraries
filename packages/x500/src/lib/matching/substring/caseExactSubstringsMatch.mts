@@ -1,6 +1,15 @@
 import SubstringSelection from "../../types/SubstringSelection.mjs";
 import type { DirectoryStringInput } from "../readValue.mjs";
-import { readDirectoryString } from "../readValue.mjs";
+import type {
+    PreparedSubstring,
+    SubstringAssertionInput,
+} from "../readValue.mjs";
+import {
+    readDirectoryString,
+    readSubstringAssertionOrComponent,
+} from "../readValue.mjs";
+import { prepString } from "../../utils/prepString.mjs";
+import { matchSubstringPieces, partitionString } from "../../utils/substringPartition.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.3
@@ -14,51 +23,39 @@ import { readDirectoryString } from "../readValue.mjs";
  * Corresponding characters (including combining sequences) must
  * be identical.
  *
- * `assertion` and `value` may each be an element, a directory
- * string, or a JavaScript string. This entry point compares one
- * substring component; `selection` chooses initial, any, or final.
+ * `assertion` may be a `SubstringAssertion`, one component plus
+ * `selection`, a directory string, or a JavaScript string.
+ * `value` is an element, a directory string, or a JavaScript string.
  */
 export
 function caseExactSubstringsMatch (
-    assertion: DirectoryStringInput,
+    assertion: SubstringAssertionInput | DirectoryStringInput,
     value: DirectoryStringInput,
     selection?: SubstringSelection,
 ): boolean {
     return caseExactSubstringsMatchTyped(
-        readDirectoryString(assertion),
+        readSubstringAssertionOrComponent(assertion, selection),
         readDirectoryString(value),
-        selection ?? SubstringSelection.any_,
     );
 }
 
 /**
- * `caseExactSubstringsMatch` on two strings.
+ * `caseExactSubstringsMatch` on prepared pieces and a stored string.
  *
- * @param assertion Presented substring.
+ * @param assertion Presented substring pieces.
  * @param value Stored string.
- * @param selection Which part of `value` must contain `assertion`.
- * @returns `true` when the selected containment holds.
+ * @returns `true` when the pieces partition `value` in order.
  */
 export
 function caseExactSubstringsMatchTyped (
-    assertion: string,
+    assertion: readonly PreparedSubstring[],
     value: string,
-    selection: SubstringSelection,
 ): boolean {
-    switch (selection) {
-        case (SubstringSelection.initial): {
-            return value.startsWith(assertion);
-        }
-        case (SubstringSelection.any_): {
-            return (value.indexOf(assertion) > -1);
-        }
-        case (SubstringSelection.final): {
-            return value.endsWith(assertion);
-        }
-        default: {
-            return false;
-        }
+    const stored = prepString(value);
+    if (stored === undefined) {
+        return false;
     }
+    return matchSubstringPieces(partitionString(stored), assertion, (text) => prepString(text));
 }
 
 export default caseExactSubstringsMatch;

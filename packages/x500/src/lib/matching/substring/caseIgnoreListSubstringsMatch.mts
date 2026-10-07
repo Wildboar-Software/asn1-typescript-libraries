@@ -8,6 +8,8 @@ import {
     readDirectoryStringList,
     readSubstringAssertion,
 } from "../readValue.mjs";
+import { prepString } from "../../utils/prepString.mjs";
+import { matchSubstringPieces, partitionStringList } from "../../utils/substringPartition.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.8
@@ -16,7 +18,8 @@ import {
  * Presented `SubstringAssertion` is matched against the
  * concatenation of stored `UnboundedDirectoryString` values, using
  * `caseIgnoreSubstringsMatch`. An `initial`/`any`/`final` piece
- * must not span more than one stored string.
+ * must not span more than one stored string. Pieces still occur in
+ * order.
  *
  * `assertion` is an element or a `SubstringAssertion` (directory
  * strings or JavaScript strings). `value` is an element, a
@@ -38,49 +41,30 @@ function caseIgnoreListSubstringsMatch (
 
 /**
  * `caseIgnoreListSubstringsMatch` on prepared pieces and stored
- * lines. `initial` is tested against the first line and `final`
- * against the last. `any` may match any line.
+ * lines. Case is folded during string preparation.
  *
  * @param assertion Presented substring pieces.
  * @param value Stored lines.
- * @returns `true` when every piece matches.
+ * @returns `true` when the pieces partition the lines in order.
  */
 export
 function caseIgnoreListSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: readonly string[],
 ): boolean {
-    if (value.length === 0) {
-        return false;
-    }
-    const firstStr: string = value[0];
-    const lastStr: string = value[value.length - 1];
-    for (const substr of assertion) {
-        if (substr.kind === "any") {
-            const s: string = substr.value;
-            let matched: boolean = false;
-            for (const str of value) {
-                if (str.indexOf(s) >= 0) {
-                    matched = true;
-                    break;
-                }
-            }
-            if (!matched) {
-                return false;
-            }
-        } else if (substr.kind === "initial") {
-            if (!firstStr.startsWith(substr.value)) {
-                return false;
-            }
-        } else if (substr.kind === "final") {
-            if (!lastStr.endsWith(substr.value)) {
-                return false;
-            }
-        } else {
+    const lines: string[] = [];
+    for (const line of value) {
+        const prepared = prepString(line, { caseFold: true });
+        if (prepared === undefined) {
             return false;
         }
+        lines.push(prepared);
     }
-    return true;
+    return matchSubstringPieces(
+        partitionStringList(lines),
+        assertion,
+        (text) => prepString(text, { caseFold: true }),
+    );
 }
 
 export default caseIgnoreListSubstringsMatch;

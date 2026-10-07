@@ -4,7 +4,9 @@ import type {
     PreparedSubstring,
     SubstringAssertionInput,
 } from "../readValue.mjs";
-import { readSubstringAssertion } from "../readValue.mjs";
+import { readSubstringAssertionOrComponent } from "../readValue.mjs";
+import { prepString } from "../../utils/prepString.mjs";
+import { matchSubstringPieces, partitionString } from "../../utils/substringPartition.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.11.3
@@ -16,45 +18,42 @@ import { readSubstringAssertion } from "../readValue.mjs";
  * 8.1.3).
  *
  * `assertion` is an element or a substring assertion. `value` is
- * an element or an IA5 string. `selection` is unused.
+ * an element or an IA5 string.
  */
 export
 function caseIgnoreIA5SubstringsMatch (
     assertion: SubstringAssertionInput,
     value: ASN1Element | string,
-    _selection?: SubstringSelection,
+    selection?: SubstringSelection,
 ): boolean {
     return caseIgnoreIA5SubstringsMatchTyped(
-        readSubstringAssertion(assertion),
+        readSubstringAssertionOrComponent(assertion, selection),
         typeof value === "string" ? value : value.ia5String,
     );
 }
 
 /**
  * `caseIgnoreIA5SubstringsMatch` on prepared pieces and a stored
- * IA5 string. Case is not folded here, matching the previous
- * implementation.
+ * IA5 string. Case is folded during string preparation.
  *
  * @param assertion Presented substring pieces.
  * @param value Stored IA5 string.
- * @returns `true` when every piece matches.
+ * @returns `true` when the pieces partition `value` in order.
  */
 export
 function caseIgnoreIA5SubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
 ): boolean {
-    return assertion.every((str) => {
-        if (str.kind === "initial") {
-            return value.startsWith(str.value);
-        } else if (str.kind === "any") {
-            return (value.indexOf(str.value) > -1);
-        } else if (str.kind === "final") {
-            return value.endsWith(str.value);
-        } else {
-            return false;
-        }
-    });
+    const stored = prepString(value, { caseFold: true });
+    if (stored === undefined) {
+        return false;
+    }
+    return matchSubstringPieces(
+        partitionString(stored),
+        assertion,
+        (text) => prepString(text, { caseFold: true }),
+    );
 }
 
 export default caseIgnoreIA5SubstringsMatch;

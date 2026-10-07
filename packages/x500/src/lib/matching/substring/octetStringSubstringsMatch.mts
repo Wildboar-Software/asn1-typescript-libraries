@@ -1,4 +1,3 @@
-import { Buffer } from "node:buffer";
 import { ASN1Element } from "@wildboar/asn1";
 import type SubstringSelection from "../../types/SubstringSelection.mjs";
 import type {
@@ -6,6 +5,7 @@ import type {
     PreparedOctetSubstring,
 } from "../readValue.mjs";
 import { readOctetSubstringAssertion } from "../readValue.mjs";
+import { matchSubstringPieces, partitionOctets } from "../../utils/substringPartition.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.7
@@ -36,34 +36,14 @@ function octetStringSubstringsMatch (
  *
  * @param assertion Presented octet pieces.
  * @param value Stored octets.
- * @returns `true` when every piece matches.
+ * @returns `true` when the pieces partition `value` in order.
  */
 export
 function octetStringSubstringsMatchTyped (
     assertion: readonly PreparedOctetSubstring[],
     value: Uint8Array,
 ): boolean {
-    const buf: Buffer = Buffer.from(value);
-    return assertion.every((o) => {
-        if (o.kind === "initial") {
-            if (o.value.length > value.length) {
-                return false;
-            }
-            return Buffer.compare(value.subarray(0, o.value.length), o.value) === 0;
-        } else if (o.kind === "any") {
-            return (buf.indexOf(o.value) > -1);
-        } else if (o.kind === "final") {
-            if (o.value.length > value.length) {
-                return false;
-            }
-            return Buffer.compare(
-                value.subarray(value.length - o.value.length),
-                o.value,
-            ) === 0;
-        } else {
-            return false;
-        }
-    });
+    return matchSubstringPieces(partitionOctets(value), assertion, (bytes) => bytes);
 }
 
 export default octetStringSubstringsMatch;

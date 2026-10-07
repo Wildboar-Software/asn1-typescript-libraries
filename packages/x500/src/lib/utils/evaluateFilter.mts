@@ -31,13 +31,16 @@ import type {
 import type {
     FilterItem_substrings,
 } from "../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Construction, ASN1Element, ASN1TagClass, ASN1UniversalType, DERElement, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { BER } from "@wildboar/asn1/functional";
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
 import type OrderingMatcher from "../types/OrderingMatcher.mjs";
 import type SubstringsMatcher from "../types/SubstringsMatcher.mjs";
 import type ApproxMatcher from "../types/ApproxMatcher.mjs";
 import type ContextMatcher from "../types/ContextMatcher.mjs";
-import SubstringSelection from "../types/SubstringSelection.mjs";
+import {
+    _encode_FilterItem_substrings_strings_Item,
+} from "../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
 import evaluateContextAssertion from "./evaluateContextAssertion.mjs";
 import { id_mr_nullMatch } from "../modules/SelectedAttributeTypes/id-mr-nullMatch.va.mjs";
 import { id_mr_approximateStringMatch } from "../modules/SelectedAttributeTypes/id-mr-approximateStringMatch.va.mjs";
@@ -720,6 +723,18 @@ function evaluateOrdering (
     return matchedValues;
 }
 
+function encodeSubstringFilterAssertion (
+    strings: FilterItem_substrings["strings"],
+): ASN1Element {
+    const el = new DERElement(
+        ASN1TagClass.universal,
+        ASN1Construction.constructed,
+        ASN1UniversalType.sequence,
+    );
+    el.sequence = strings.map((item) => _encode_FilterItem_substrings_strings_Item(item, BER));
+    return el;
+}
+
 export
 function evaluateSubstring (
     sub: FilterItem_substrings,
@@ -733,21 +748,8 @@ function evaluateSubstring (
     if (!options.permittedToMatch(sub.type_)) {
         return undefined;
     }
+    const assertion = encodeSubstringFilterAssertion(sub.strings);
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
-    const assertions: [ ASN1Element, SubstringSelection ][] = sub.strings
-        .map((str) => {
-            if ("initial" in str) {
-                return [ str.initial, SubstringSelection.initial ];
-            } else if ("any_" in str) {
-                return [ str.any_, SubstringSelection.any_ ];
-            } else if ("final" in str) {
-                return [ str.final, SubstringSelection.final ];
-            } else {
-                // Control attributes will not be supported. These are way too complex.
-                return undefined;
-            }
-        })
-        .filter((a): a is [ ASN1Element, SubstringSelection ] => !!a);
     const matchedValues: MatchedValue[] = [];
     const friendTypes: OBJECT_IDENTIFIER[] = [
         sub.type_,
@@ -773,10 +775,7 @@ function evaluateSubstring (
                 if (!options.permittedToMatch(profile.attributeType, default_value)) {
                     continue;
                 }
-                if (!assertions.every(([ assertion, selection ]) => (
-                    options.permittedToMatch(profile.attributeType, default_value)
-                    && matcher!(assertion, default_value, selection)
-                ))) {
+                if (!matcher!(assertion, default_value)) {
                     continue;
                 }
                 matchedValues.push({
@@ -796,10 +795,10 @@ function evaluateSubstring (
     }
     for (const attr of relevantAttributes) {
         for (const value of attr.values) {
-            if (assertions.every(([ assertion, selection ]) => (
+            if (
                 options.permittedToMatch(attr.type_, value)
-                && matcher!(assertion, value, selection)
-            ))) {
+                && matcher!(assertion, value)
+            ) {
                 matchedValues.push({
                     type: attr.type_,
                     value,
@@ -810,10 +809,10 @@ function evaluateSubstring (
             }
         }
         for (const vwc of attr.valuesWithContext ?? []) {
-            if (assertions.every(([ assertion, selection ]) => (
+            if (
                 options.permittedToMatch(attr.type_, vwc.value)
-                && matcher!(assertion, vwc.value, selection)
-            ))) {
+                && matcher!(assertion, vwc.value)
+            ) {
                 matchedValues.push({
                     type: attr.type_,
                     value: vwc.value,
