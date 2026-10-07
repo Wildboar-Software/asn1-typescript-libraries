@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SemiOctetString, _decode_SemiOctetString, _encode_SemiOctetString } from "../SMRS/SemiOctetString.ta.mjs";
-// export { SemiOctetString, _decode_SemiOctetString, _encode_SemiOctetString } from "../SMRS/SemiOctetString.ta.mjs";
 
 
 /**
