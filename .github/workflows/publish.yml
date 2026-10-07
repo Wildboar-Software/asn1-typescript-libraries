@@ -38,6 +38,7 @@ jobs:
           # - "fast-infoset"
           # - "ftam"
           # - "gmi-attributemodule"
+          - "gn"
           # - "guls"
           # - "isis"
           # - "iso-9798-3-sasl"
