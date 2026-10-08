@@ -14,7 +14,21 @@ import { LogotypeAudio, _decode_LogotypeAudio, _encode_LogotypeAudio } from "../
 /**
  * @summary LogotypeData
  * @description
- * 
+ *
+ * Image files and optional audio files for a single logotype. An
+ * indirect `.LTD` file is the DER encoding of this structure.
+ *
+ * Several images, or several audio files, are variants of the same
+ * picture or the same audio. A spoken message in another language
+ * counts as such a variant. A client displays at most one of the
+ * images, and plays at most one of the audio sequences, for a given
+ * logotype at the same time. It may show the image without audio, or
+ * play the audio without an image. Logotypes of different types may
+ * be on screen together. Clients should cache what they fetch.
+ *
+ * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3)
+ * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,13 +43,29 @@ export
 class LogotypeData {
     constructor (
         /**
-         * @summary `image`.
+         * Image-file variants of this logotype. Every logotype included
+         * in a certificate has at least one image, even though this
+         * component is optional in the ASN.1. Clients accept
+         * `image/jpeg` and `image/gif`. Animated images should not be
+         * used. At least one variant should be between 60×45 and
+         * 200×150 pixels.
+         *
+         * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3)
+         * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
          * @public
          * @readonly
          */
         readonly image: OPTIONAL<LogotypeImage[]>,
         /**
-         * @summary `audio`.
+         * Audio-file variants of this logotype. Optional for the
+         * certificate and optional for implementations. A client that
+         * does support audio accepts `audio/mpeg`. At least one
+         * variant should play for between 1 and 30 seconds. At most
+         * one sequence from this logotype plays at a time, and
+         * [section 6](https://www.rfc-editor.org/rfc/rfc3709#section-6)
+         * also allows only one logotype audio sequence in total.
+         *
+         * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3).
          * @public
          * @readonly
          */

@@ -14,7 +14,15 @@ import { HashAlgAndValue, _decode_HashAlgAndValue, _encode_HashAlgAndValue } fro
 /**
  * @summary LogotypeReference
  * @description
- * 
+ *
+ * Indirect address of one logotype. Each `refStructURI` points at a
+ * binary file whose contents are the DER encoding of
+ * {@link LogotypeData}. The file name should use the extension `LTD`.
+ * Hashes and URI replicas follow the same rules as
+ * {@link LogotypeDetails}.
+ *
+ * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,13 +37,23 @@ export
 class LogotypeReference {
     constructor (
         /**
-         * @summary `refStructHash`.
+         * One-way hashes of the entire `.LTD` file. One of them is a
+         * SHA-1 hash of the whole file. The client computes one of the
+         * identified hashes and discards the file on mismatch.
+         *
+         * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
          * @public
          * @readonly
          */
         readonly refStructHash: HashAlgAndValue[],
         /**
-         * @summary `refStructURI`.
+         * Replicas of the same `.LTD` file. Every URI uses the `http`
+         * or `ftp` scheme, and at least one uses `http`. Clients fetch
+         * with HTTP/1.1, and may use FTP. If one URI fails, try
+         * another in the sequence. The named file is DER-encoded
+         * {@link LogotypeData} and its name should end in `.LTD`.
+         *
+         * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
          * @public
          * @readonly
          */

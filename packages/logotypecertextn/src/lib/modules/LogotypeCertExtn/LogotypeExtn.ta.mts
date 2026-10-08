@@ -14,7 +14,34 @@ import { OtherLogotypeInfo, _decode_OtherLogotypeInfo, _encode_OtherLogotypeInfo
 /**
  * @summary LogotypeExtn
  * @description
- * 
+ *
+ * Value of the non-critical {@link id_pe_logotype} extension. It may
+ * appear in an end-entity certificate, a CA certificate, or an
+ * attribute certificate. At least one component is present. Use a
+ * community, issuer, or subject logotype whenever one applies.
+ *
+ * Logotypes are for human recognition. Certification path validation
+ * ignores this extension, as does any other automated processing.
+ * Display logotypes only for a certificate whose path has validated,
+ * and display them alongside the certificate's other identity
+ * information. A client that cannot present a logotype behaves as
+ * though the extension were absent, and does not report an error.
+ * Subject to local policy, a client may show none, one, or many
+ * logotypes. When several types are on screen together, the binding
+ * between each image and its logotype type (community, issuer,
+ * subject, or other) has to be unambiguous. A client plays at most one
+ * logotype audio sequence at a time, and can disable fetching; a
+ * cached copy may still be shown.
+ *
+ * Fetching a logotype lets an observer of that host see that a client
+ * holds a certificate which references it. A cache hides later uses;
+ * an uncached fetch also shows how often.
+ *
+ * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1),
+ * [section 5](https://www.rfc-editor.org/rfc/rfc3709#section-5),
+ * [section 6](https://www.rfc-editor.org/rfc/rfc3709#section-6),
+ * and [section 7](https://www.rfc-editor.org/rfc/rfc3709#section-7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,25 +58,60 @@ export
 class LogotypeExtn {
     constructor (
         /**
-         * @summary `communityLogos`.
+         * Community logotypes for communities with which the issuer is
+         * affiliated. Each entry is a different community. A community
+         * logotype is a shared service mark: many issuers co-brand one
+         * widely recognized mark, as independent card issuers do with
+         * a global card brand. Order is preference, most preferred
+         * first and least preferred last. A client may show a subset
+         * of this sequence.
+         *
+         * The issuer asserts the affiliation. How the issuer checks
+         * that claim is outside the scope of RFC 3709.
+         *
+         * [RFC 3709, section 2](https://www.rfc-editor.org/rfc/rfc3709#section-2)
+         * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
          * @public
          * @readonly
          */
         readonly communityLogos: OPTIONAL<LogotypeInfo[]>,
         /**
-         * @summary `issuerLogo`.
+         * Logotype of the organization named as the issuer. It is
+         * consistent with, and its presence requires, an organization
+         * name in the organization attribute of the issuer field. The
+         * issuer asserts this representation. How that is checked is
+         * outside the scope of RFC 3709.
+         *
+         * [RFC 3709, section 2](https://www.rfc-editor.org/rfc/rfc3709#section-2)
+         * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
          * @public
          * @readonly
          */
         readonly issuerLogo: OPTIONAL<LogotypeInfo>,
         /**
-         * @summary `subjectLogo`.
+         * Logotype of the organization named as the subject. It is
+         * consistent with, and its presence requires, an organization
+         * name in the organization attribute of the subject field.
+         * The issuer asserts this representation. How that is checked
+         * is outside the scope of RFC 3709.
+         *
+         * [RFC 3709, section 2](https://www.rfc-editor.org/rfc/rfc3709#section-2)
+         * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
          * @public
          * @readonly
          */
         readonly subjectLogo: OPTIONAL<LogotypeInfo>,
         /**
-         * @summary `otherLogos`.
+         * Logotypes outside the three standard classes: partners,
+         * products, services, or anything else the local application
+         * chooses to show. Each entry's OID selects the class. This
+         * specification defines {@link id_logo_loyalty} (more than one
+         * is allowed) and {@link id_logo_background} (at most one).
+         * Any other OID is a local definition, and what it means is up
+         * to the application that displays it.
+         *
+         * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1)
+         * and [section 4.2](https://www.rfc-editor.org/rfc/rfc3709#section-4.2).
          * @public
          * @readonly
          */

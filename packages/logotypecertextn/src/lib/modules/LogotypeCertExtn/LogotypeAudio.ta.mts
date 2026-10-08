@@ -14,7 +14,13 @@ import { LogotypeAudioInfo, _decode_LogotypeAudioInfo, _encode_LogotypeAudioInfo
 /**
  * @summary LogotypeAudio
  * @description
- * 
+ *
+ * One audio file for a logotype: where to obtain it, and optionally
+ * duration, channel, and language metadata for choosing among
+ * variants.
+ *
+ * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,13 +35,14 @@ export
 class LogotypeAudio {
     constructor (
         /**
-         * @summary `audioDetails`.
+         * How to fetch and authenticate this audio file.
          * @public
          * @readonly
          */
         readonly audioDetails: LogotypeDetails,
         /**
-         * @summary `audioInfo`.
+         * Duration, channel layout, sample rate, and language. Absent
+         * when the issuer supplies none.
          * @public
          * @readonly
          */

@@ -13,7 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LogotypeAudioInfo
  * @description
- * 
+ *
+ * Metadata a client uses to choose among audio variants of one
+ * logotype.
+ *
+ * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,31 +36,42 @@ export
 class LogotypeAudioInfo {
     constructor (
         /**
-         * @summary `fileSize`.
+         * Length of the audio file, in octets.
          * @public
          * @readonly
          */
         readonly fileSize: INTEGER,
         /**
-         * @summary `playTime`.
+         * Duration in milliseconds. At least one audio file of the
+         * logotype should last between 1 and 30 seconds (1000 through
+         * 30000).
+         *
+         * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3).
          * @public
          * @readonly
          */
         readonly playTime: INTEGER,
         /**
-         * @summary `channels`.
+         * Channel count. 1 is mono, 2 is stereo, and 4 is quad.
+         * RFC 3709 assigns no meaning to any other value.
          * @public
          * @readonly
          */
         readonly channels: INTEGER,
         /**
-         * @summary `sampleRate`.
+         * Samples per second. Absent when not stated.
          * @public
          * @readonly
          */
         readonly sampleRate: OPTIONAL<INTEGER>,
         /**
-         * @summary `language`.
+         * Language of the spoken content, as an
+         * [RFC 3066](https://www.rfc-editor.org/rfc/rfc3066) language
+         * tag. Another language is still a variant of the same audio.
+         * Absent when no language is claimed.
+         *
+         * [RFC 3709, section 3](https://www.rfc-editor.org/rfc/rfc3709#section-3)
+         * and [section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
          * @public
          * @readonly
          */

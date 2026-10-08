@@ -14,7 +14,12 @@ import { LogotypeImageInfo, _decode_LogotypeImageInfo, _encode_LogotypeImageInfo
 /**
  * @summary LogotypeImage
  * @description
- * 
+ *
+ * One image file for a logotype: where to obtain it, and optionally
+ * the metadata a client uses to pick among variants.
+ *
+ * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,13 +34,14 @@ export
 class LogotypeImage {
     constructor (
         /**
-         * @summary `imageDetails`.
+         * How to fetch and authenticate this image file.
          * @public
          * @readonly
          */
         readonly imageDetails: LogotypeDetails,
         /**
-         * @summary `imageInfo`.
+         * Pixel size, color, and language, used to choose among image
+         * variants. Absent when the issuer supplies none.
          * @public
          * @readonly
          */

@@ -1,11 +1,16 @@
 /**
+ * @module
  * @description
  *
  * ASN.1 module `LogotypeCertExtn`
  * `{iso(1) identified-organization(3) dod(6) internet(1) security(5) mechanisms(5) pkix(7) id-mod(0) id-mod-logotype(22)}`
- * from [IETF RFC 3709](https://datatracker.ietf.org/doc/html/rfc3709).
- * Logotype certificate extension (`id-pe-logotype`) and the image, audio,
- * and indirect-reference types it carries.
+ * from [IETF RFC 3709](https://www.rfc-editor.org/rfc/rfc3709),
+ * [Appendix A](https://www.rfc-editor.org/rfc/rfc3709#page-17).
+ *
+ * Non-critical `id-pe-logotype` extension, plus the image, audio, and
+ * indirect-reference types it carries. Logotypes are for human
+ * display after a certificate has validated. Certification path
+ * validation ignores them.
  */
 export * from "./HashAlgAndValue.ta.mjs";
 export * from "./id-logo-background.va.mjs";

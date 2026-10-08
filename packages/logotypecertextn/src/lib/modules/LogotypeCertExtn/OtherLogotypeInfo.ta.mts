@@ -13,7 +13,17 @@ import { LogotypeInfo, _decode_LogotypeInfo, _encode_LogotypeInfo } from "../Log
 /**
  * @summary OtherLogotypeInfo
  * @description
- * 
+ *
+ * One logotype whose class is an object identifier, used when none of
+ * the three standard positions in {@link LogotypeExtn} fits. The OID
+ * is either defined locally or one of the identifiers in
+ * [section 4.2](https://www.rfc-editor.org/rfc/rfc3709#section-4.2).
+ * What the logotype means in a given application is decided by that
+ * application.
+ *
+ * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1)
+ * and [section 4.2](https://www.rfc-editor.org/rfc/rfc3709#section-4.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,13 +38,17 @@ export
 class OtherLogotypeInfo {
     constructor (
         /**
-         * @summary `logotypeType`.
+         * Class of this logotype. {@link id_logo_loyalty} and
+         * {@link id_logo_background} are defined here; any other OID
+         * is a local definition.
+         *
+         * [RFC 3709, section 4.2](https://www.rfc-editor.org/rfc/rfc3709#section-4.2).
          * @public
          * @readonly
          */
         readonly logotypeType: OBJECT_IDENTIFIER,
         /**
-         * @summary `info`.
+         * The logotype data, addressed directly or indirectly.
          * @public
          * @readonly
          */

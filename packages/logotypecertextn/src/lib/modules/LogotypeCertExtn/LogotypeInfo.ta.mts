@@ -13,7 +13,19 @@ import { LogotypeReference, _decode_LogotypeReference, _encode_LogotypeReference
 /**
  * @summary LogotypeInfo
  * @description
- * 
+ *
+ * One logotype, either as references to its image and audio files
+ * (`direct`) or as a reference to an external logotype-data file
+ * (`indirect`). Clients accept both forms. Certificate issuers
+ * support direct addressing, and should support indirect addressing.
+ * Direct addressing is intended for one or a few image and audio
+ * alternatives. Indirect addressing is intended for many: the
+ * certificate then holds one hashed pointer, and the file it names
+ * is a DER-encoded {@link LogotypeData} (see
+ * {@link LogotypeReference}).
+ *
+ * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

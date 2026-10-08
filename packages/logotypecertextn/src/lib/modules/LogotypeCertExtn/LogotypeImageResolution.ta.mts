@@ -11,7 +11,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LogotypeImageResolution
  * @description
- * 
+ *
+ * Color depth of a logotype image. `numBits` is the resolution in
+ * bits. `tableSize` is the number of colors or grey tones. RFC 3709
+ * does not say which alternative applies to a given image.
+ *
+ * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
