@@ -34,6 +34,7 @@
         "./PKIX1Implicit88": "./src/lib/modules/PKIX1Implicit88/index.mjs"
     },
     "dependencies": {
-        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/x500": "npm:@jsr/wildboar__x500@2.x.x"
     }
 }
