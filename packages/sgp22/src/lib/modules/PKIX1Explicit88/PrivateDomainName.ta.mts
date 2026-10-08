@@ -4,6 +4,8 @@ import {
     NumericString,
     PrintableString
 } from "@wildboar/asn1";
+import { ub_domain_name_length } from "./ub-domain-name-length.va.mjs";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -39,7 +41,12 @@ function _decode_PrivateDomainName (el: _Element): PrivateDomainName {
     "UNIVERSAL 18": [ "numeric", $._decodeNumericString ],
     "UNIVERSAL 19": [ "printable", $._decodePrintableString ]
 }); }
-    return _cached_decoder_for_PrivateDomainName(el);
+    const value = _cached_decoder_for_PrivateDomainName(el);
+    const text = Object.values(value)[0] as string | Uint8Array;
+    if (text.length < 1 || text.length > Number(ub_domain_name_length)) {
+        throw new ASN1SizeError("PrivateDomainName violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_PrivateDomainName: $.ASN1Encoder<PrivateDomainName> | null = null;

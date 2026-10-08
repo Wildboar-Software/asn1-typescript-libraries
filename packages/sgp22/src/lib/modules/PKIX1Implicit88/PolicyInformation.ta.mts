@@ -4,6 +4,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CertPolicyId, _decode_CertPolicyId, _encode_CertPolicyId } from "../PKIX1Implicit88/CertPolicyId.ta.mjs";
 // export { CertPolicyId, _decode_CertPolicyId, _encode_CertPolicyId } from "../PKIX1Implicit88/CertPolicyId.ta.mjs";
@@ -41,7 +42,11 @@ class PolicyInformation {
          * @readonly
          */
         readonly policyQualifiers: OPTIONAL<PolicyQualifierInfo[]>
-    ) {}
+    ) {
+        if (this.policyQualifiers !== undefined && (this.policyQualifiers.length < 1)) {
+            throw new ASN1SizeError("PolicyInformation.policyQualifiers violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PolicyInformation

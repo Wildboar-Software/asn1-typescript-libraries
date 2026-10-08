@@ -2,6 +2,7 @@
 import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessDescription, _decode_AccessDescription, _encode_AccessDescription } from "../PKIX1Implicit88/AccessDescription.ta.mjs";
 // export { AccessDescription, _decode_AccessDescription, _encode_AccessDescription } from "../PKIX1Implicit88/AccessDescription.ta.mjs";
@@ -32,7 +33,11 @@ let _cached_decoder_for_SubjectInfoAccessSyntax: $.ASN1Decoder<SubjectInfoAccess
 export
 function _decode_SubjectInfoAccessSyntax (el: _Element): SubjectInfoAccessSyntax {
     if (!_cached_decoder_for_SubjectInfoAccessSyntax) { _cached_decoder_for_SubjectInfoAccessSyntax = $._decodeSequenceOf<AccessDescription>(() => _decode_AccessDescription); }
-    return _cached_decoder_for_SubjectInfoAccessSyntax(el);
+    const value = _cached_decoder_for_SubjectInfoAccessSyntax(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("SubjectInfoAccessSyntax violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_SubjectInfoAccessSyntax: $.ASN1Encoder<SubjectInfoAccessSyntax> | null = null;

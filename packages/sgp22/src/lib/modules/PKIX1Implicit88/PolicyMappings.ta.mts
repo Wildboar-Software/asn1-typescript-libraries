@@ -2,6 +2,7 @@
 import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PolicyMappings_Item, _decode_PolicyMappings_Item, _encode_PolicyMappings_Item } from "../PKIX1Implicit88/PolicyMappings-Item.ta.mjs";
 // export { PolicyMappings_Item, _decode_PolicyMappings_Item, _encode_PolicyMappings_Item } from "../PKIX1Implicit88/PolicyMappings-Item.ta.mjs";
@@ -33,7 +34,11 @@ let _cached_decoder_for_PolicyMappings: $.ASN1Decoder<PolicyMappings> | null = n
 export
 function _decode_PolicyMappings (el: _Element): PolicyMappings {
     if (!_cached_decoder_for_PolicyMappings) { _cached_decoder_for_PolicyMappings = $._decodeSequenceOf<PolicyMappings_Item>(() => _decode_PolicyMappings_Item); }
-    return _cached_decoder_for_PolicyMappings(el);
+    const value = _cached_decoder_for_PolicyMappings(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("PolicyMappings violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_PolicyMappings: $.ASN1Encoder<PolicyMappings> | null = null;

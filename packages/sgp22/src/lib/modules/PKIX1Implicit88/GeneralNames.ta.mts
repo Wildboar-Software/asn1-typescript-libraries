@@ -2,6 +2,7 @@
 import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeneralName, _decode_GeneralName, _encode_GeneralName } from "../PKIX1Implicit88/GeneralName.ta.mjs";
 // export { GeneralName, _decode_GeneralName, _encode_GeneralName } from "../PKIX1Implicit88/GeneralName.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_GeneralNames: $.ASN1Decoder<GeneralNames> | null = null;
 export
 function _decode_GeneralNames (el: _Element): GeneralNames {
     if (!_cached_decoder_for_GeneralNames) { _cached_decoder_for_GeneralNames = $._decodeSequenceOf<GeneralName>(() => _decode_GeneralName); }
-    return _cached_decoder_for_GeneralNames(el);
+    const value = _cached_decoder_for_GeneralNames(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("GeneralNames violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_GeneralNames: $.ASN1Encoder<GeneralNames> | null = null;

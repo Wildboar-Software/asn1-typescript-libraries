@@ -4,6 +4,9 @@ import {
     NumericString,
     PrintableString
 } from "@wildboar/asn1";
+import { ub_country_name_alpha_length } from "./ub-country-name-alpha-length.va.mjs";
+import { ub_country_name_numeric_length } from "./ub-country-name-numeric-length.va.mjs";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -41,7 +44,14 @@ function _decode_PhysicalDeliveryCountryName (el: _Element): PhysicalDeliveryCou
     "UNIVERSAL 18": [ "x121_dcc_code", $._decodeNumericString ],
     "UNIVERSAL 19": [ "iso_3166_alpha2_code", $._decodePrintableString ]
 }); }
-    return _cached_decoder_for_PhysicalDeliveryCountryName(el);
+    const value = _cached_decoder_for_PhysicalDeliveryCountryName(el);
+    if ("x121_dcc_code" in value && value.x121_dcc_code.length !== Number(ub_country_name_numeric_length)) {
+        throw new ASN1SizeError("PhysicalDeliveryCountryName violates SIZE constraint");
+    }
+    if ("iso_3166_alpha2_code" in value && value.iso_3166_alpha2_code.length !== Number(ub_country_name_alpha_length)) {
+        throw new ASN1SizeError("PhysicalDeliveryCountryName violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_PhysicalDeliveryCountryName: $.ASN1Encoder<PhysicalDeliveryCountryName> | null = null;

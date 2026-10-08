@@ -3,6 +3,8 @@ import {
     ASN1Element as _Element,
     PrintableString
 } from "@wildboar/asn1";
+import { ub_serial_number } from "./ub-serial-number.va.mjs";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -19,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type X520SerialNumber = PrintableString; // PrintableString
-export const _decode_X520SerialNumber = $._decodePrintableString;
+export function _decode_X520SerialNumber (el: _Element): X520SerialNumber {
+    const value = $._decodePrintableString(el);
+    if (value.length < 1 || value.length > Number(ub_serial_number)) {
+        throw new ASN1SizeError("X520SerialNumber violates SIZE constraint");
+    }
+    return value;
+}
 export const _encode_X520SerialNumber = $._encodePrintableString;
 
 

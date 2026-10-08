@@ -6,6 +6,8 @@ import {
     PrintableString,
     TeletexString
 } from "@wildboar/asn1";
+import { ub_pds_parameter_length } from "./ub-pds-parameter-length.va.mjs";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -41,7 +43,14 @@ class PDSParameter {
          * @readonly
          */
         readonly teletex_string: OPTIONAL<TeletexString>
-    ) {}
+    ) {
+        if (this.printable_string !== undefined && (this.printable_string.length < 1 || this.printable_string.length > Number(ub_pds_parameter_length))) {
+            throw new ASN1SizeError("PDSParameter.printable-string violates SIZE constraint");
+        }
+        if (this.teletex_string !== undefined && (this.teletex_string.length < 1 || this.teletex_string.length > Number(ub_pds_parameter_length))) {
+            throw new ASN1SizeError("PDSParameter.teletex-string violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PDSParameter

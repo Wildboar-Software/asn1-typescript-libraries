@@ -2,6 +2,7 @@
 import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PolicyInformation, _decode_PolicyInformation, _encode_PolicyInformation } from "../PKIX1Implicit88/PolicyInformation.ta.mjs";
 // export { PolicyInformation, _decode_PolicyInformation, _encode_PolicyInformation } from "../PKIX1Implicit88/PolicyInformation.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_CertificatePolicies: $.ASN1Decoder<CertificatePolicies> 
 export
 function _decode_CertificatePolicies (el: _Element): CertificatePolicies {
     if (!_cached_decoder_for_CertificatePolicies) { _cached_decoder_for_CertificatePolicies = $._decodeSequenceOf<PolicyInformation>(() => _decode_PolicyInformation); }
-    return _cached_decoder_for_CertificatePolicies(el);
+    const value = _cached_decoder_for_CertificatePolicies(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("CertificatePolicies violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_CertificatePolicies: $.ASN1Encoder<CertificatePolicies> | null = null;

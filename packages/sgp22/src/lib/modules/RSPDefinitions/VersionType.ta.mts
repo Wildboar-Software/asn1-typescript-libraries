@@ -3,6 +3,7 @@ import {
     ASN1Element as _Element,
     OCTET_STRING
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -19,7 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type VersionType = OCTET_STRING; // OctetStringType
-export const _decode_VersionType = $._decodeOctetString;
+export function _decode_VersionType (el: _Element): VersionType {
+    const value = $._decodeOctetString(el);
+    if (value.length < 3 || value.length > 3) {
+        throw new ASN1SizeError("VersionType violates SIZE constraint");
+    }
+    return value;
+}
 export const _encode_VersionType = $._encodeOctetString;
 
 

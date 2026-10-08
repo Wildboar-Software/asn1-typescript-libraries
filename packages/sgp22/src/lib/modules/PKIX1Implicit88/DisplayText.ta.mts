@@ -6,6 +6,7 @@ import {
     UTF8String,
     VisibleString
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -47,7 +48,12 @@ function _decode_DisplayText (el: _Element): DisplayText {
     "UNIVERSAL 30": [ "bmpString", $._decodeBMPString ],
     "UNIVERSAL 12": [ "utf8String", $._decodeUTF8String ]
 }); }
-    return _cached_decoder_for_DisplayText(el);
+    const value = _cached_decoder_for_DisplayText(el);
+    const text = Object.values(value)[0] as string | Uint8Array;
+    if (text.length < 1 || text.length > 200) {
+        throw new ASN1SizeError("DisplayText violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_DisplayText: $.ASN1Encoder<DisplayText> | null = null;

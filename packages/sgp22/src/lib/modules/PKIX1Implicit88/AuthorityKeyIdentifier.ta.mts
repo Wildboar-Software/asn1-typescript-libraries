@@ -4,6 +4,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
+import { ASN1ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { KeyIdentifier, _decode_KeyIdentifier, _encode_KeyIdentifier } from "../PKIX1Implicit88/KeyIdentifier.ta.mjs";
 // export { KeyIdentifier, _decode_KeyIdentifier, _encode_KeyIdentifier } from "../PKIX1Implicit88/KeyIdentifier.ta.mjs";
@@ -49,7 +50,13 @@ class AuthorityKeyIdentifier {
          * @readonly
          */
         readonly authorityCertSerialNumber: OPTIONAL<CertificateSerialNumber>
-    ) {}
+    ) {
+        const issuerPresent = this.authorityCertIssuer !== undefined;
+        const serialPresent = this.authorityCertSerialNumber !== undefined;
+        if (issuerPresent !== serialPresent) {
+            throw new ASN1ConstructionError("AuthorityKeyIdentifier authorityCertIssuer and authorityCertSerialNumber must both be present or both be absent");
+        }
+    }
 
     /**
      * @summary Restructures an object into a AuthorityKeyIdentifier

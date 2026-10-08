@@ -2,6 +2,7 @@
 import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeneralSubtree, _decode_GeneralSubtree, _encode_GeneralSubtree } from "../PKIX1Implicit88/GeneralSubtree.ta.mjs";
 // export { GeneralSubtree, _decode_GeneralSubtree, _encode_GeneralSubtree } from "../PKIX1Implicit88/GeneralSubtree.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_GeneralSubtrees: $.ASN1Decoder<GeneralSubtrees> | null =
 export
 function _decode_GeneralSubtrees (el: _Element): GeneralSubtrees {
     if (!_cached_decoder_for_GeneralSubtrees) { _cached_decoder_for_GeneralSubtrees = $._decodeSequenceOf<GeneralSubtree>(() => _decode_GeneralSubtree); }
-    return _cached_decoder_for_GeneralSubtrees(el);
+    const value = _cached_decoder_for_GeneralSubtrees(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("GeneralSubtrees violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_GeneralSubtrees: $.ASN1Encoder<GeneralSubtrees> | null = null;

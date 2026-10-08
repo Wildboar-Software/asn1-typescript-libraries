@@ -2,6 +2,7 @@
 import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Attribute, _decode_Attribute, _encode_Attribute } from "../PKIX1Explicit88/Attribute.ta.mjs";
 // export { Attribute, _decode_Attribute, _encode_Attribute } from "../PKIX1Explicit88/Attribute.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_SubjectDirectoryAttributes: $.ASN1Decoder<SubjectDirecto
 export
 function _decode_SubjectDirectoryAttributes (el: _Element): SubjectDirectoryAttributes {
     if (!_cached_decoder_for_SubjectDirectoryAttributes) { _cached_decoder_for_SubjectDirectoryAttributes = $._decodeSequenceOf<Attribute>(() => _decode_Attribute); }
-    return _cached_decoder_for_SubjectDirectoryAttributes(el);
+    const value = _cached_decoder_for_SubjectDirectoryAttributes(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("SubjectDirectoryAttributes violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_SubjectDirectoryAttributes: $.ASN1Encoder<SubjectDirectoryAttributes> | null = null;

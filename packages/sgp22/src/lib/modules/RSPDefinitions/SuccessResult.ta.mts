@@ -5,6 +5,7 @@ import {
     ASN1TagClass as _TagClass,
     OCTET_STRING
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -39,7 +40,11 @@ class SuccessResult {
          * @readonly
          */
         readonly simaResponse: OCTET_STRING
-    ) {}
+    ) {
+        if (this.aid.length < 5 || this.aid.length > 16) {
+            throw new ASN1SizeError("SuccessResult.aid violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a SuccessResult

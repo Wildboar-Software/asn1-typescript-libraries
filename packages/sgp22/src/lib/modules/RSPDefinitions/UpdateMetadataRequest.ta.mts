@@ -7,6 +7,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
+import { ASN1ConstructionError } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IconType, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
 // export { IconType, IconType_jpg /* IMPORTED_LONG_NAMED_INTEGER */, jpg /* IMPORTED_SHORT_NAMED_INTEGER */, IconType_png /* IMPORTED_LONG_NAMED_INTEGER */, png /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
@@ -81,7 +83,20 @@ class UpdateMetadataRequest {
          * @readonly
          */
         readonly reserved103: OPTIONAL<BOOLEAN>
-    ) {}
+    ) {
+        if (this.serviceProviderName !== undefined && (this.serviceProviderName.length > 32)) {
+            throw new ASN1SizeError("UpdateMetadataRequest.serviceProviderName violates SIZE constraint");
+        }
+        if (this.profileName !== undefined && (this.profileName.length > 64)) {
+            throw new ASN1SizeError("UpdateMetadataRequest.profileName violates SIZE constraint");
+        }
+        if (this.icon !== undefined && (this.icon.length > 1024)) {
+            throw new ASN1SizeError("UpdateMetadataRequest.icon violates SIZE constraint");
+        }
+        if (this.icon !== undefined && this.iconType === undefined) {
+            throw new ASN1ConstructionError("UpdateMetadataRequest.icon requires iconType");
+        }
+    }
 
     /**
      * @summary Restructures an object into a UpdateMetadataRequest

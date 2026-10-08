@@ -4,6 +4,8 @@ import {
     NumericString,
     PrintableString
 } from "@wildboar/asn1";
+import { ub_postal_code_length } from "./ub-postal-code-length.va.mjs";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -39,7 +41,12 @@ function _decode_PostalCode (el: _Element): PostalCode {
     "UNIVERSAL 18": [ "numeric_code", $._decodeNumericString ],
     "UNIVERSAL 19": [ "printable_code", $._decodePrintableString ]
 }); }
-    return _cached_decoder_for_PostalCode(el);
+    const value = _cached_decoder_for_PostalCode(el);
+    const text = Object.values(value)[0] as string | Uint8Array;
+    if (text.length < 1 || text.length > Number(ub_postal_code_length)) {
+        throw new ASN1SizeError("PostalCode violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_PostalCode: $.ASN1Encoder<PostalCode> | null = null;

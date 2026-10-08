@@ -2,6 +2,8 @@
 import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
+import { ub_extension_attributes } from "./ub-extension-attributes.va.mjs";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionAttribute, _decode_ExtensionAttribute, _encode_ExtensionAttribute } from "../PKIX1Explicit88/ExtensionAttribute.ta.mjs";
 // export { ExtensionAttribute, _decode_ExtensionAttribute, _encode_ExtensionAttribute } from "../PKIX1Explicit88/ExtensionAttribute.ta.mjs";
@@ -32,7 +34,11 @@ let _cached_decoder_for_ExtensionAttributes: $.ASN1Decoder<ExtensionAttributes> 
 export
 function _decode_ExtensionAttributes (el: _Element): ExtensionAttributes {
     if (!_cached_decoder_for_ExtensionAttributes) { _cached_decoder_for_ExtensionAttributes = $._decodeSetOf<ExtensionAttribute>(() => _decode_ExtensionAttribute); }
-    return _cached_decoder_for_ExtensionAttributes(el);
+    const value = _cached_decoder_for_ExtensionAttributes(el);
+    if (value.length < 1 || value.length > Number(ub_extension_attributes)) {
+        throw new ASN1SizeError("ExtensionAttributes violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_ExtensionAttributes: $.ASN1Encoder<ExtensionAttributes> | null = null;

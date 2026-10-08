@@ -5,6 +5,11 @@ import {
     OPTIONAL,
     TeletexString
 } from "@wildboar/asn1";
+import { ub_generation_qualifier_length } from "./ub-generation-qualifier-length.va.mjs";
+import { ub_initials_length } from "./ub-initials-length.va.mjs";
+import { ub_given_name_length } from "./ub-given-name-length.va.mjs";
+import { ub_surname_length } from "./ub-surname-length.va.mjs";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -57,7 +62,20 @@ class TeletexPersonalName {
          * @readonly
          */
         readonly generation_qualifier: OPTIONAL<TeletexString>
-    ) {}
+    ) {
+        if (this.surname.length < 1 || this.surname.length > Number(ub_surname_length)) {
+            throw new ASN1SizeError("TeletexPersonalName.surname violates SIZE constraint");
+        }
+        if (this.given_name !== undefined && (this.given_name.length < 1 || this.given_name.length > Number(ub_given_name_length))) {
+            throw new ASN1SizeError("TeletexPersonalName.given-name violates SIZE constraint");
+        }
+        if (this.initials !== undefined && (this.initials.length < 1 || this.initials.length > Number(ub_initials_length))) {
+            throw new ASN1SizeError("TeletexPersonalName.initials violates SIZE constraint");
+        }
+        if (this.generation_qualifier !== undefined && (this.generation_qualifier.length < 1 || this.generation_qualifier.length > Number(ub_generation_qualifier_length))) {
+            throw new ASN1SizeError("TeletexPersonalName.generation-qualifier violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TeletexPersonalName

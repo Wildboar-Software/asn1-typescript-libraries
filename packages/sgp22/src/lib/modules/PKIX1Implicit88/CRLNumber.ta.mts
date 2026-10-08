@@ -3,6 +3,7 @@ import {
     ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
+import { ASN1OverflowError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -19,7 +20,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CRLNumber = INTEGER;
-export const _decode_CRLNumber = $._decodeInteger;
+export function _decode_CRLNumber (el: _Element): CRLNumber {
+    const value = $._decodeInteger(el);
+    const numeric = typeof value === "bigint" ? value : BigInt(value);
+    if (numeric < 0n) {
+        throw new ASN1OverflowError("CRLNumber violates INTEGER range constraint");
+    }
+    return value;
+}
 export const _encode_CRLNumber = $._encodeInteger;
 
 

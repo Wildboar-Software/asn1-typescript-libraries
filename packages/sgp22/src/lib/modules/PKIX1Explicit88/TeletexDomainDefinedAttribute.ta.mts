@@ -5,6 +5,9 @@ import {
     ASN1TagClass as _TagClass,
     TeletexString
 } from "@wildboar/asn1";
+import { ub_domain_defined_attribute_value_length } from "./ub-domain-defined-attribute-value-length.va.mjs";
+import { ub_domain_defined_attribute_type_length } from "./ub-domain-defined-attribute-type-length.va.mjs";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -40,7 +43,14 @@ class TeletexDomainDefinedAttribute {
          * @readonly
          */
         readonly value: TeletexString
-    ) {}
+    ) {
+        if (this.type_.length < 1 || this.type_.length > Number(ub_domain_defined_attribute_type_length)) {
+            throw new ASN1SizeError("TeletexDomainDefinedAttribute.type violates SIZE constraint");
+        }
+        if (this.value.length < 1 || this.value.length > Number(ub_domain_defined_attribute_value_length)) {
+            throw new ASN1SizeError("TeletexDomainDefinedAttribute.value violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TeletexDomainDefinedAttribute

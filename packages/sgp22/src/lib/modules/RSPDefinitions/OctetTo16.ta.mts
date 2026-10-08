@@ -3,6 +3,7 @@ import {
     ASN1Element as _Element,
     OCTET_STRING
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -19,7 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type OctetTo16 = OCTET_STRING; // OctetStringType
-export const _decode_OctetTo16 = $._decodeOctetString;
+export function _decode_OctetTo16 (el: _Element): OctetTo16 {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 16) {
+        throw new ASN1SizeError("OctetTo16 violates SIZE constraint");
+    }
+    return value;
+}
 export const _encode_OctetTo16 = $._encodeOctetString;
 
 

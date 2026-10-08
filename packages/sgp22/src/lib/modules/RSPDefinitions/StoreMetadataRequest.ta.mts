@@ -7,6 +7,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
+import { ASN1ConstructionError } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
 // export { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
@@ -142,7 +144,20 @@ class StoreMetadataRequest {
          * @readonly
          */
         readonly iotSpecificMetadata: OPTIONAL<StoreMetadataRequest_iotSpecificMetadata>
-    ) {}
+    ) {
+        if (this.serviceProviderName.length > 32) {
+            throw new ASN1SizeError("StoreMetadataRequest.serviceProviderName violates SIZE constraint");
+        }
+        if (this.profileName.length > 64) {
+            throw new ASN1SizeError("StoreMetadataRequest.profileName violates SIZE constraint");
+        }
+        if (this.icon !== undefined && (this.icon.length > 1024)) {
+            throw new ASN1SizeError("StoreMetadataRequest.icon violates SIZE constraint");
+        }
+        if (this.icon !== undefined && this.iconType === undefined) {
+            throw new ASN1ConstructionError("StoreMetadataRequest.icon requires iconType");
+        }
+    }
 
     /**
      * @summary Restructures an object into a StoreMetadataRequest

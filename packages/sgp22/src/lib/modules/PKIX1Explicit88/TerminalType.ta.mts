@@ -3,6 +3,8 @@ import {
     ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
+import { ub_integer_options } from "./ub-integer-options.va.mjs";
+import { ASN1OverflowError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -121,7 +123,14 @@ const TerminalType_videotex: TerminalType = 8; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const videotex: TerminalType = TerminalType_videotex; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_TerminalType = $._decodeInteger;
+export function _decode_TerminalType (el: _Element): TerminalType {
+    const value = $._decodeInteger(el);
+    const numeric = typeof value === "bigint" ? value : BigInt(value);
+    if (numeric < 0n || numeric > BigInt(ub_integer_options)) {
+        throw new ASN1OverflowError("TerminalType violates INTEGER range constraint");
+    }
+    return value;
+}
 export const _encode_TerminalType = $._encodeInteger;
 
 

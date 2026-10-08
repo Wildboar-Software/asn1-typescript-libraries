@@ -7,6 +7,8 @@ import {
     UniversalString,
     UTF8String
 } from "@wildboar/asn1";
+import { ub_name } from "./ub-name.va.mjs";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -51,7 +53,12 @@ function _decode_X520name (el: _Element): X520name {
     "UNIVERSAL 12": [ "utf8String", $._decodeUTF8String ],
     "UNIVERSAL 30": [ "bmpString", $._decodeBMPString ]
 }); }
-    return _cached_decoder_for_X520name(el);
+    const value = _cached_decoder_for_X520name(el);
+    const text = Object.values(value)[0] as string | Uint8Array;
+    if (text.length < 1 || text.length > Number(ub_name)) {
+        throw new ASN1SizeError("X520name violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_X520name: $.ASN1Encoder<X520name> | null = null;

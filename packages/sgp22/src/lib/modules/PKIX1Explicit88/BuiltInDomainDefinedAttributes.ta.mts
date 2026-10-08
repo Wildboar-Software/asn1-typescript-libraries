@@ -2,6 +2,8 @@
 import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
+import { ub_domain_defined_attributes } from "./ub-domain-defined-attributes.va.mjs";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BuiltInDomainDefinedAttribute, _decode_BuiltInDomainDefinedAttribute, _encode_BuiltInDomainDefinedAttribute } from "../PKIX1Explicit88/BuiltInDomainDefinedAttribute.ta.mjs";
 // export { BuiltInDomainDefinedAttribute, _decode_BuiltInDomainDefinedAttribute, _encode_BuiltInDomainDefinedAttribute } from "../PKIX1Explicit88/BuiltInDomainDefinedAttribute.ta.mjs";
@@ -33,7 +35,11 @@ let _cached_decoder_for_BuiltInDomainDefinedAttributes: $.ASN1Decoder<BuiltInDom
 export
 function _decode_BuiltInDomainDefinedAttributes (el: _Element): BuiltInDomainDefinedAttributes {
     if (!_cached_decoder_for_BuiltInDomainDefinedAttributes) { _cached_decoder_for_BuiltInDomainDefinedAttributes = $._decodeSequenceOf<BuiltInDomainDefinedAttribute>(() => _decode_BuiltInDomainDefinedAttribute); }
-    return _cached_decoder_for_BuiltInDomainDefinedAttributes(el);
+    const value = _cached_decoder_for_BuiltInDomainDefinedAttributes(el);
+    if (value.length < 1 || value.length > Number(ub_domain_defined_attributes)) {
+        throw new ASN1SizeError("BuiltInDomainDefinedAttributes violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_BuiltInDomainDefinedAttributes: $.ASN1Encoder<BuiltInDomainDefinedAttributes> | null = null;

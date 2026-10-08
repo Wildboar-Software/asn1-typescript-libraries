@@ -2,6 +2,8 @@
 import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
+import { ub_organizational_units } from "./ub-organizational-units.va.mjs";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TeletexOrganizationalUnitName, _decode_TeletexOrganizationalUnitName, _encode_TeletexOrganizationalUnitName } from "../PKIX1Explicit88/TeletexOrganizationalUnitName.ta.mjs";
 // export { TeletexOrganizationalUnitName, _decode_TeletexOrganizationalUnitName, _encode_TeletexOrganizationalUnitName } from "../PKIX1Explicit88/TeletexOrganizationalUnitName.ta.mjs";
@@ -32,7 +34,11 @@ let _cached_decoder_for_TeletexOrganizationalUnitNames: $.ASN1Decoder<TeletexOrg
 export
 function _decode_TeletexOrganizationalUnitNames (el: _Element): TeletexOrganizationalUnitNames {
     if (!_cached_decoder_for_TeletexOrganizationalUnitNames) { _cached_decoder_for_TeletexOrganizationalUnitNames = $._decodeSequenceOf<TeletexOrganizationalUnitName>(() => _decode_TeletexOrganizationalUnitName); }
-    return _cached_decoder_for_TeletexOrganizationalUnitNames(el);
+    const value = _cached_decoder_for_TeletexOrganizationalUnitNames(el);
+    if (value.length < 1 || value.length > Number(ub_organizational_units)) {
+        throw new ASN1SizeError("TeletexOrganizationalUnitNames violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_TeletexOrganizationalUnitNames: $.ASN1Encoder<TeletexOrganizationalUnitNames> | null = null;

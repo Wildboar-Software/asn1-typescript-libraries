@@ -5,6 +5,7 @@ import {
     OCTET_STRING,
     OPTIONAL
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -52,7 +53,11 @@ class PresentationAddress {
          * @readonly
          */
         readonly nAddresses: OCTET_STRING[]
-    ) {}
+    ) {
+        if (this.nAddresses.length < 1) {
+            throw new ASN1SizeError("PresentationAddress.nAddresses violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PresentationAddress

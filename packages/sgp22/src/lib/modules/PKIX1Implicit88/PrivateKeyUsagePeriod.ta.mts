@@ -5,6 +5,7 @@ import {
     GeneralizedTime,
     OPTIONAL
 } from "@wildboar/asn1";
+import { ASN1ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -38,7 +39,11 @@ class PrivateKeyUsagePeriod {
          * @readonly
          */
         readonly notAfter: OPTIONAL<GeneralizedTime>
-    ) {}
+    ) {
+        if (this.notBefore === undefined && this.notAfter === undefined) {
+            throw new ASN1ConstructionError("PrivateKeyUsagePeriod requires notBefore or notAfter");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PrivateKeyUsagePeriod

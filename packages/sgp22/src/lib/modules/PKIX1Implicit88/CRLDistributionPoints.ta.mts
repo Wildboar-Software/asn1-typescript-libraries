@@ -2,6 +2,7 @@
 import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DistributionPoint, _decode_DistributionPoint, _encode_DistributionPoint } from "../PKIX1Implicit88/DistributionPoint.ta.mjs";
 // export { DistributionPoint, _decode_DistributionPoint, _encode_DistributionPoint } from "../PKIX1Implicit88/DistributionPoint.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_CRLDistributionPoints: $.ASN1Decoder<CRLDistributionPoin
 export
 function _decode_CRLDistributionPoints (el: _Element): CRLDistributionPoints {
     if (!_cached_decoder_for_CRLDistributionPoints) { _cached_decoder_for_CRLDistributionPoints = $._decodeSequenceOf<DistributionPoint>(() => _decode_DistributionPoint); }
-    return _cached_decoder_for_CRLDistributionPoints(el);
+    const value = _cached_decoder_for_CRLDistributionPoints(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("CRLDistributionPoints violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_CRLDistributionPoints: $.ASN1Encoder<CRLDistributionPoints> | null = null;

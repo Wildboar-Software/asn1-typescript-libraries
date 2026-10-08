@@ -2,6 +2,7 @@
 import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { KeyPurposeId, _decode_KeyPurposeId, _encode_KeyPurposeId } from "../PKIX1Implicit88/KeyPurposeId.ta.mjs";
 // export { KeyPurposeId, _decode_KeyPurposeId, _encode_KeyPurposeId } from "../PKIX1Implicit88/KeyPurposeId.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_ExtKeyUsageSyntax: $.ASN1Decoder<ExtKeyUsageSyntax> | nu
 export
 function _decode_ExtKeyUsageSyntax (el: _Element): ExtKeyUsageSyntax {
     if (!_cached_decoder_for_ExtKeyUsageSyntax) { _cached_decoder_for_ExtKeyUsageSyntax = $._decodeSequenceOf<KeyPurposeId>(() => _decode_KeyPurposeId); }
-    return _cached_decoder_for_ExtKeyUsageSyntax(el);
+    const value = _cached_decoder_for_ExtKeyUsageSyntax(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("ExtKeyUsageSyntax violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_ExtKeyUsageSyntax: $.ASN1Encoder<ExtKeyUsageSyntax> | null = null;

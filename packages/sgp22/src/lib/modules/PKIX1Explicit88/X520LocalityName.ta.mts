@@ -7,6 +7,8 @@ import {
     UniversalString,
     UTF8String
 } from "@wildboar/asn1";
+import { ub_locality_name } from "./ub-locality-name.va.mjs";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -51,7 +53,12 @@ function _decode_X520LocalityName (el: _Element): X520LocalityName {
     "UNIVERSAL 12": [ "utf8String", $._decodeUTF8String ],
     "UNIVERSAL 30": [ "bmpString", $._decodeBMPString ]
 }); }
-    return _cached_decoder_for_X520LocalityName(el);
+    const value = _cached_decoder_for_X520LocalityName(el);
+    const text = Object.values(value)[0] as string | Uint8Array;
+    if (text.length < 1 || text.length > Number(ub_locality_name)) {
+        throw new ASN1SizeError("X520LocalityName violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_X520LocalityName: $.ASN1Encoder<X520LocalityName> | null = null;

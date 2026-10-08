@@ -6,6 +6,7 @@ import {
     INTEGER,
     OPTIONAL
 } from "@wildboar/asn1";
+import { ASN1OverflowError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -39,7 +40,14 @@ class BasicConstraints {
          * @readonly
          */
         readonly pathLenConstraint: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+        if (this.pathLenConstraint !== undefined) {
+            const numeric = typeof this.pathLenConstraint === "bigint" ? this.pathLenConstraint : BigInt(this.pathLenConstraint);
+            if (numeric < 0n) {
+                throw new ASN1OverflowError("BasicConstraints.pathLenConstraint violates INTEGER range constraint");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a BasicConstraints
