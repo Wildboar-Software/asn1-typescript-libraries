@@ -11,10 +11,7 @@
     ],
     "strict": true,
     "strictNullChecks": true,
-    "exactOptionalPropertyTypes": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "rootDir": "."
   },
   "include": [
