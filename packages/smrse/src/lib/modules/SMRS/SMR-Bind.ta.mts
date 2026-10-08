@@ -12,6 +12,20 @@ import { Password, _decode_Password, _encode_Password } from "../SMRS/Password.t
 /**
  * @summary SMR_Bind
  * @description
+ *
+ * SMR-BIND argument. The party designated to establish the
+ * association sends this before any other SMRSE service. The peer
+ * answers with `SMR-Bind-Confirm` or `SMR-Bind-Failure`
+ * ([ETSI TR 101 635 V7.0.0](https://www.etsi.org/deliver/etsi_tr/101600_101699/101635/07.00.00_60/tr_101635v070000p.pdf)
+ * clauses 3.1 and 3.3).
+ *
+ * Clause 3.2's `SMR-Bind-Parameters` also carries `pswNeeded` and
+ * `iniType`, and makes `password` optional. This profile sends the
+ * service-centre address and a mandatory password.
+ *
+ * Carried in N-CONNECT user data. If the network does not support
+ * 128 octets of NS-user-data, clause 3.4 carries it in the first
+ * N-DATA after connect.
  * 
  * ### ASN.1 Definition:
  * 
@@ -30,18 +44,37 @@ class SMR_Bind {
     constructor (
         /**
          * @summary `sc_address`.
+         * @description
+         *
+         * PLMN address of the service centre as seen by mobile
+         * stations. Clause 3.2 uses that description for
+         * `iSDNAddress` inside `Name`. The Nokia profile also
+         * requires the international format.
+         *
          * @public
          * @readonly
          */
         readonly sc_address: SMS_Address,
         /**
          * @summary `password`.
+         * @description
+         *
+         * May assist in authentication (clause 3.2). The report
+         * limits it to `ub-password-length` (20) and makes it
+         * optional on bind. This profile requires it. `Password`
+         * does not enforce the length.
+         *
          * @public
          * @readonly
          */
         readonly password: Password,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions after the root components. The Nokia
+         * profile leaves the sequence open.
+         *
          * @public
          * @readonly
          */

@@ -9,6 +9,12 @@ import { SemiOctetString, _decode_SemiOctetString, _encode_SemiOctetString } fro
 /**
  * @summary SMS_Address_address_value
  * @description
+ *
+ * Digits of an `SMS-Address`. The only defined alternative is
+ * `octet-format`, a `SemiOctetString` of binary-coded decimal
+ * digits.
+ * [ETSI TR 101 635 V7.0.0](https://www.etsi.org/deliver/etsi_tr/101600_101699/101635/07.00.00_60/tr_101635v070000p.pdf)
+ * clause 3.2 marks every other format as for further study.
  * 
  * ### ASN.1 Definition:
  * 

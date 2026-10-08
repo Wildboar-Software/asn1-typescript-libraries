@@ -9,6 +9,22 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SMR_Bind_Confirm
  * @description
+ *
+ * Acceptance of SMR-BIND. The peer sends this to accept the
+ * association. This profile sends an empty sequence.
+ *
+ * Clause 3.2's `SMR-Bind-confirm` instead carries the responder's
+ * name, an optional password, the responder type, `transient`, and
+ * the connect time. `transient` TRUE forces the association to be
+ * unbound once nothing remains to send (clauses 3.2 and 3.3.2).
+ * This confirm cannot express that flag.
+ *
+ * Carried in N-CONNECT response/confirm user data. If 128 octets of
+ * NS-user-data are not supported, clause 3.4 carries it as the
+ * second N-DATA on the connection.
+ *
+ * [ETSI TR 101 635 V7.0.0](https://www.etsi.org/deliver/etsi_tr/101600_101699/101635/07.00.00_60/tr_101635v070000p.pdf)
+ * clauses 3.1, 3.2, and 3.4.
  * 
  * ### ASN.1 Definition:
  * 
@@ -25,6 +41,11 @@ class SMR_Bind_Confirm {
     constructor (
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions. The Nokia profile leaves the sequence
+         * open; the root is empty.
+         *
          * @public
          * @readonly
          */

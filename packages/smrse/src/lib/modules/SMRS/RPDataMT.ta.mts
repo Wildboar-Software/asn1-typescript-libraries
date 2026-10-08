@@ -15,6 +15,20 @@ import { SM_TC, _decode_SM_TC, _encode_SM_TC } from "../SMRS/SM-TC.ta.mjs";
 /**
  * @summary RPDataMT
  * @description
+ *
+ * SMR-MT-DATA. The service centre sends one SMS transfer-layer PDU
+ * to the GMSC, which relays it to the addressed mobile station. The
+ * result is `RPAck` or `RPError` after that attempt. Carried in
+ * N-DATA. After an N-RESET, an unacknowledged SMR-MT-DATA is sent
+ * again
+ * ([ETSI TR 101 635 V7.0.0](https://www.etsi.org/deliver/etsi_tr/101600_101699/101635/07.00.00_60/tr_101635v070000p.pdf)
+ * clauses 3.1 and 3.3).
+ *
+ * Clause 3.2 wraps this value in `RELAYapdus` with context tag 1.
+ * This profile encodes `RPDataMT` itself. Clause 3.2 also
+ * context-tags the two leading booleans and makes
+ * `mt-more-messages-to-send` optional; this profile calls that flag
+ * `mt-mms` and requires it.
  * 
  * ### ASN.1 Definition:
  * 
@@ -39,54 +53,102 @@ class RPDataMT {
     constructor (
         /**
          * @summary `mt_priority_request`.
+         * @description
+         *
+         * Priority request. Clause 3.2 includes the flag and does not
+         * state when it is set.
+         *
          * @public
          * @readonly
          */
         readonly mt_priority_request: BOOLEAN,
         /**
          * @summary `mt_mms`.
+         * @description
+         *
+         * More messages to send. When this mechanism is used, clause
+         * 2.2 requires `mt-message-reference` to stay unchanged until
+         * every message for that destination has been sent. Clause
+         * 3.2 names the flag `mt-more-messages-to-send` and makes it
+         * optional.
+         *
          * @public
          * @readonly
          */
         readonly mt_mms: BOOLEAN,
         /**
          * @summary `mt_message_reference`.
+         * @description
+         *
+         * Correlates this relay with `RPAck` or `RPError`. When
+         * `mt-mms` is used, clause 2.2 keeps this value unchanged
+         * until every message to that destination has been sent.
+         *
          * @public
          * @readonly
          */
         readonly mt_message_reference: RP_MR,
         /**
          * @summary `mt_originating_address`.
+         * @description
+         *
+         * Originating address of the mobile-terminated relay. The
+         * report does not add a format constraint for this component.
+         *
          * @public
          * @readonly
          */
         readonly mt_originating_address: SMS_Address,
         /**
          * @summary `mt_destination_address`.
+         * @description
+         *
+         * Address of the mobile station the GMSC relays toward
+         * (clause 3.1).
+         *
          * @public
          * @readonly
          */
         readonly mt_destination_address: SMS_Address,
         /**
          * @summary `mt_user_data`.
+         * @description
+         *
+         * The SMS transfer-layer PDU being relayed (clause 3.1).
+         *
          * @public
          * @readonly
          */
         readonly mt_user_data: RP_UD,
         /**
          * @summary `mt_origVMSCAddr`.
+         * @description
+         *
+         * Originating mobile station's VMSC address. Optional Nokia
+         * component. Clause 3.2 has no such field.
+         *
          * @public
          * @readonly
          */
         readonly mt_origVMSCAddr: OPTIONAL<SMS_Address>,
         /**
          * @summary `mt_tariffClass`.
+         * @description
+         *
+         * Service tariff. Optional Nokia component. The report does
+         * not define the tariff numbering.
+         *
          * @public
          * @readonly
          */
         readonly mt_tariffClass: OPTIONAL<SM_TC>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions after the root components. The Nokia
+         * profile leaves the sequence open.
+         *
          * @public
          * @readonly
          */

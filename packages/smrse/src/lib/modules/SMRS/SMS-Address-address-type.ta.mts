@@ -9,6 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SMS_Address_address_type
  * @description
+ *
+ * Kind of number in an `SMS-Address`.
+ * [ETSI TR 101 635 V7.0.0](https://www.etsi.org/deliver/etsi_tr/101600_101699/101635/07.00.00_60/tr_101635v070000p.pdf)
+ * clause 3.2 names value 1 `international-number` and value 3
+ * `network-specific-number`. The list ends at short number (4).
+ * Clause 2 also assigns alphanumeric (5) and abbreviated (6); this
+ * profile does not. The Nokia profile text restricts the integer
+ * to 0..15. This module does not enforce that range.
  * 
  * ### ASN.1 Definition:
  * 
@@ -43,6 +51,11 @@ const unknown_type: SMS_Address_address_type = SMS_Address_address_type_unknown_
 
 /**
  * @summary SMS_Address_address_type_internat_number
+ * @description
+ *
+ * International number. Clause 3.2 names this
+ * `international-number`.
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +64,11 @@ const SMS_Address_address_type_internat_number: SMS_Address_address_type = 1; /*
 
 /**
  * @summary SMS_Address_address_type_internat_number
+ * @description
+ *
+ * International number. Clause 3.2 names this
+ * `international-number`.
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +93,11 @@ const national_number: SMS_Address_address_type = SMS_Address_address_type_natio
 
 /**
  * @summary SMS_Address_address_type_net_spec_number
+ * @description
+ *
+ * Network-specific number. Clause 3.2 names this
+ * `network-specific-number`.
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +106,11 @@ const SMS_Address_address_type_net_spec_number: SMS_Address_address_type = 3; /*
 
 /**
  * @summary SMS_Address_address_type_net_spec_number
+ * @description
+ *
+ * Network-specific number. Clause 3.2 names this
+ * `network-specific-number`.
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +119,12 @@ const net_spec_number: SMS_Address_address_type = SMS_Address_address_type_net_s
 
 /**
  * @summary SMS_Address_address_type_short_number
+ * @description
+ *
+ * Short number. Last address type defined in clause 3.2. Clause 2's
+ * alphanumeric (5) and abbreviated (6) types are not in this
+ * profile.
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +133,12 @@ const SMS_Address_address_type_short_number: SMS_Address_address_type = 4; /* LO
 
 /**
  * @summary SMS_Address_address_type_short_number
+ * @description
+ *
+ * Short number. Last address type defined in clause 3.2. Clause 2's
+ * alphanumeric (5) and abbreviated (6) types are not in this
+ * profile.
+ *
  * @constant
  * @type {number}
  */

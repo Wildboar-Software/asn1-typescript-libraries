@@ -11,6 +11,15 @@ import { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
 /**
  * @summary RPAck
  * @description
+ *
+ * Successful relay. The GMSC sends this when the mobile station has
+ * received the short message. The service centre sends this when it
+ * has received a mobile-originated short message
+ * ([ETSI TR 101 635 V7.0.0](https://www.etsi.org/deliver/etsi_tr/101600_101699/101635/07.00.00_60/tr_101635v070000p.pdf)
+ * clause 3.1).
+ *
+ * Clause 3.2 wraps this value in `RELAYapdus` with context tag 4.
+ * This profile encodes `RPAck` itself.
  * 
  * ### ASN.1 Definition:
  * 
@@ -28,12 +37,22 @@ class RPAck {
     constructor (
         /**
          * @summary `message_reference`.
+         * @description
+         *
+         * Message reference of the `RPDataMT` or `RPDataMO` being
+         * acknowledged.
+         *
          * @public
          * @readonly
          */
         readonly message_reference: RP_MR,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions after `message-reference`. The Nokia
+         * profile leaves the sequence open.
+         *
          * @public
          * @readonly
          */

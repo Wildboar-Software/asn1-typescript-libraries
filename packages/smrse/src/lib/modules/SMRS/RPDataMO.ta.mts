@@ -14,6 +14,17 @@ import { IMSI_Address, _decode_IMSI_Address, _encode_IMSI_Address } from "../SMR
 /**
  * @summary RPDataMO
  * @description
+ *
+ * SMR-MO-DATA. The GMSC sends one SMS transfer-layer PDU to the
+ * service centre. The result is `RPAck` or `RPError`. Carried in
+ * N-DATA. After an N-RESET, an unacknowledged SMR-MO-DATA is sent
+ * again
+ * ([ETSI TR 101 635 V7.0.0](https://www.etsi.org/deliver/etsi_tr/101600_101699/101635/07.00.00_60/tr_101635v070000p.pdf)
+ * clauses 3.1 and 3.3). Clause 2 names the invoking entity the
+ * IWMSC; clause 3.1 names the GMSC.
+ *
+ * Clause 3.2 wraps this value in `RELAYapdus` with context tag 2.
+ * This profile encodes `RPDataMO` itself.
  * 
  * ### ASN.1 Definition:
  * 
@@ -35,36 +46,66 @@ class RPDataMO {
     constructor (
         /**
          * @summary `mo_message_reference`.
+         * @description
+         *
+         * Correlates this relay with `RPAck` or `RPError`.
+         *
          * @public
          * @readonly
          */
         readonly mo_message_reference: RP_MR,
         /**
          * @summary `mo_originating_address`.
+         * @description
+         *
+         * Originating address of the mobile-originated short message.
+         * The report does not add a format constraint for this
+         * component.
+         *
          * @public
          * @readonly
          */
         readonly mo_originating_address: SMS_Address,
         /**
          * @summary `mo_user_data`.
+         * @description
+         *
+         * The SMS transfer-layer PDU being relayed (clause 3.1).
+         *
          * @public
          * @readonly
          */
         readonly mo_user_data: RP_UD,
         /**
          * @summary `origVMSCAddr`.
+         * @description
+         *
+         * Originating mobile station's VMSC address. Optional Nokia
+         * component. Clause 3.2 has no such field.
+         *
          * @public
          * @readonly
          */
         readonly origVMSCAddr: OPTIONAL<SMS_Address>,
         /**
          * @summary `moimsi`.
+         * @description
+         *
+         * Originating mobile station's IMSI. Optional Nokia
+         * component. The Nokia profile limits `IMSI-Address` to 1..8
+         * octets; this module does not enforce that size.
+         *
          * @public
          * @readonly
          */
         readonly moimsi: OPTIONAL<IMSI_Address>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions after the root components. The Nokia
+         * profile leaves the sequence open.
+         *
          * @public
          * @readonly
          */

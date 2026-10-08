@@ -13,6 +13,21 @@ import { SMS_Address_address_value, _decode_SMS_Address_address_value, _encode_S
 /**
  * @summary SMS_Address
  * @description
+ *
+ * Address on bind, relay, alert, and error PDUs. The only defined
+ * digit format is `octet-format`; clause 3.2 leaves any other
+ * format for further study. Each octet holds two binary-coded
+ * decimal digits. The report does not state nibble order.
+ *
+ * [ETSI TR 101 635 V7.0.0](https://www.etsi.org/deliver/etsi_tr/101600_101699/101635/07.00.00_60/tr_101635v070000p.pdf)
+ * clause 3.2 tags the sequence application 0 and limits the digit
+ * string to 1..10 octets. This profile omits that tag, and this
+ * module does not enforce the size. The Nokia profile text also
+ * restricts both integers to 0..15; this module does not.
+ *
+ * The clause 3.2 address-type list ends at short number. It omits
+ * clause 2's alphanumeric (5) and abbreviated (6) types. The
+ * numbering-plan list omits clause 2's ERMES plan (10).
  * 
  * ### ASN.1 Definition:
  * 
@@ -48,18 +63,34 @@ class SMS_Address {
     constructor (
         /**
          * @summary `address_type`.
+         * @description
+         *
+         * Unknown, international, national, network-specific, or
+         * short number. Named values are on
+         * `SMS-Address-address-type`.
+         *
          * @public
          * @readonly
          */
         readonly address_type: SMS_Address_address_type,
         /**
          * @summary `numbering_plan`.
+         * @description
+         *
+         * Numbering plan of `address-value`. Values 2, 5, 6, and 7
+         * are not assigned in clause 3.2.
+         *
          * @public
          * @readonly
          */
         readonly numbering_plan: SMS_Address_numbering_plan,
         /**
          * @summary `address_value`.
+         * @description
+         *
+         * The digits. Clause 3.2 defines only the semi-octet
+         * alternative.
+         *
          * @public
          * @readonly
          */

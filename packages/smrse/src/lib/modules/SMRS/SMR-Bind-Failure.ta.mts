@@ -11,6 +11,18 @@ import { _decode_Connect_fail, _encode_Connect_fail, Connect_fail } from "../SMR
 /**
  * @summary SMR_Bind_Failure
  * @description
+ *
+ * Rejection of SMR-BIND. Carried in N-DISCONNECT user data. If the
+ * network does not support 128 octets of NS-user-data, clause 3.1
+ * discards these parameters rather than sending them on a later
+ * N-DATA.
+ *
+ * Clause 3.2 also has an optional `alternative-system` name, used
+ * when the operator wants the peer to try another service centre or
+ * MSC. This profile does not include that component.
+ *
+ * [ETSI TR 101 635 V7.0.0](https://www.etsi.org/deliver/etsi_tr/101600_101699/101635/07.00.00_60/tr_101635v070000p.pdf)
+ * clauses 3.1 and 3.2.
  * 
  * ### ASN.1 Definition:
  * 
@@ -28,12 +40,23 @@ class SMR_Bind_Failure {
     constructor (
         /**
          * @summary `connect_fail_reason`.
+         * @description
+         *
+         * Why the responder rejected the association. Values 0 to 4
+         * are clause 3.2; `inv-SC-addr` (5) is a Nokia addition.
+         * See `Connect-fail`.
+         *
          * @public
          * @readonly
          */
         readonly connect_fail_reason: Connect_fail,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions after `connect-fail-reason`. The Nokia
+         * profile leaves the sequence open.
+         *
          * @public
          * @readonly
          */

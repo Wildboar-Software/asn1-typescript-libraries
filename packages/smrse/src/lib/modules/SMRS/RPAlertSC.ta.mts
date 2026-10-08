@@ -12,6 +12,21 @@ import { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
 /**
  * @summary RPAlertSC
  * @description
+ *
+ * SMR-ALERT. The GMSC tells the service centre that a mobile
+ * station which was previously unattainable has recovered
+ * ([ETSI TR 101 635 V7.0.0](https://www.etsi.org/deliver/etsi_tr/101600_101699/101635/07.00.00_60/tr_101635v070000p.pdf)
+ * clause 3.1). Clause 3.1 says the operation reports no outcome,
+ * and clause 3.2 defines `RPAlertSC` as an `SMS-Address` that must
+ * be an international ISDN address.
+ *
+ * This profile sends a sequence and adds `message-reference`
+ * because the alert is acknowledged. On a transient association,
+ * clause 3.3.2 applies a guard timer after the alert before
+ * `SMR-Unbind`.
+ *
+ * Clause 3.2 wraps the alert in `RELAYapdus` with context tag 3.
+ * This profile encodes `RPAlertSC` itself.
  * 
  * ### ASN.1 Definition:
  * 
@@ -30,18 +45,34 @@ class RPAlertSC {
     constructor (
         /**
          * @summary `ms_address`.
+         * @description
+         *
+         * International ISDN address of the mobile station that
+         * recovered (clause 3.2).
+         *
          * @public
          * @readonly
          */
         readonly ms_address: SMS_Address,
         /**
          * @summary `message_reference`.
+         * @description
+         *
+         * Present so the alert can be acknowledged. Clause 3.2's
+         * `RPAlertSC` has no message reference, and clause 3.1 says
+         * SMR-ALERT reports no outcome.
+         *
          * @public
          * @readonly
          */
         readonly message_reference: RP_MR,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions after the root components. The Nokia
+         * profile leaves the sequence open.
+         *
          * @public
          * @readonly
          */

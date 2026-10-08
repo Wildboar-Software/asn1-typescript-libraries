@@ -9,6 +9,23 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SMR_Unbind
  * @description
+ *
+ * Release of the association (clause 3.1). This profile sends an
+ * empty sequence. Clause 3.2 defines `SMR-Unbind` as the UTC time
+ * at which the association was connected (`Time-when-connected`).
+ *
+ * On a semi-permanent connection this is not normally sent
+ * (clause 3.3.1). On a transient connection it may be sent once
+ * every relay has completed with `RPAck` or `RPError`, and after a
+ * guard timer following an alert (clause 3.3.2).
+ *
+ * Carried in N-DISCONNECT user data. If 128 octets of NS-user-data
+ * are not supported, clause 3.4 carries it in an N-DATA preceding
+ * the disconnect. Clause 3.2 wraps it as `RELAYdiscs` choice
+ * `unbindreq` with context tag 2; this module does not.
+ *
+ * [ETSI TR 101 635 V7.0.0](https://www.etsi.org/deliver/etsi_tr/101600_101699/101635/07.00.00_60/tr_101635v070000p.pdf)
+ * clauses 3.1, 3.2, 3.3, and 3.4.
  * 
  * ### ASN.1 Definition:
  * 
@@ -25,6 +42,11 @@ class SMR_Unbind {
     constructor (
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions. The Nokia profile leaves the sequence
+         * open; the root is empty.
+         *
          * @public
          * @readonly
          */
