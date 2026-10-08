@@ -195,7 +195,7 @@ let _cached_encoder_for_LogotypeImageInfo: $.ASN1Encoder<LogotypeImageInfo> | nu
  */
 export
 function _encode_LogotypeImageInfo (value: LogotypeImageInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LogotypeImageInfo) { _cached_encoder_for_LogotypeImageInfo = function (value: LogotypeImageInfo, elGetter: $.ASN1Encoder<LogotypeImageInfo>): _Element {
+    if (!_cached_encoder_for_LogotypeImageInfo) { _cached_encoder_for_LogotypeImageInfo = function (value: LogotypeImageInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.type_ === undefined || $.deepEq(value.type_, LogotypeImageInfo._default_value_for_type_) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_LogotypeImageType, $.BER)(value.type_, $.BER)),

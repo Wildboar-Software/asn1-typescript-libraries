@@ -3,7 +3,8 @@ import {
     IA5String,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HashAlgAndValue, _decode_HashAlgAndValue, _encode_HashAlgAndValue } from "../LogotypeCertExtn/HashAlgAndValue.ta.mjs";
@@ -47,7 +48,14 @@ class LogotypeDetails {
          * @readonly
          */
         readonly logotypeURI: IA5String[]
-    ) {}
+    ) {
+        if (logotypeHash.length < 1) {
+            throw new ASN1SizeError("LogotypeDetails.logotypeHash violates SIZE constraint");
+        }
+        if (logotypeURI.length < 1) {
+            throw new ASN1SizeError("LogotypeDetails.logotypeURI violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a LogotypeDetails
@@ -127,12 +135,9 @@ function _decode_LogotypeDetails (el: _Element): LogotypeDetails {
     sequence[0].name = "mediaType";
     sequence[1].name = "logotypeHash";
     sequence[2].name = "logotypeURI";
-    let mediaType!: IA5String;
-    let logotypeHash!: HashAlgAndValue[];
-    let logotypeURI!: IA5String[];
-    mediaType = $._decodeIA5String(sequence[0]);
-    logotypeHash = $._decodeSequenceOf<HashAlgAndValue>(() => _decode_HashAlgAndValue)(sequence[1]);
-    logotypeURI = $._decodeSequenceOf<IA5String>(() => $._decodeIA5String)(sequence[2]);
+    const mediaType: IA5String = $._decodeIA5String(sequence[0]);
+    const logotypeHash: HashAlgAndValue[] = $._decodeSequenceOf<HashAlgAndValue>(() => _decode_HashAlgAndValue)(sequence[1]);
+    const logotypeURI: IA5String[] = $._decodeSequenceOf<IA5String>(() => $._decodeIA5String)(sequence[2]);
     return new LogotypeDetails(
         mediaType,
         logotypeHash,
@@ -154,7 +159,7 @@ let _cached_encoder_for_LogotypeDetails: $.ASN1Encoder<LogotypeDetails> | null =
  */
 export
 function _encode_LogotypeDetails (value: LogotypeDetails, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LogotypeDetails) { _cached_encoder_for_LogotypeDetails = function (value: LogotypeDetails, elGetter: $.ASN1Encoder<LogotypeDetails>): _Element {
+    if (!_cached_encoder_for_LogotypeDetails) { _cached_encoder_for_LogotypeDetails = function (value: LogotypeDetails): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeIA5String(value.mediaType, $.BER),

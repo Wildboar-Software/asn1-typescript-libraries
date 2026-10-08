@@ -165,7 +165,7 @@ let _cached_encoder_for_LogotypeExtn: $.ASN1Encoder<LogotypeExtn> | null = null;
  */
 export
 function _encode_LogotypeExtn (value: LogotypeExtn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LogotypeExtn) { _cached_encoder_for_LogotypeExtn = function (value: LogotypeExtn, elGetter: $.ASN1Encoder<LogotypeExtn>): _Element {
+    if (!_cached_encoder_for_LogotypeExtn) { _cached_encoder_for_LogotypeExtn = function (value: LogotypeExtn): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.communityLogos === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => $._encodeSequenceOf<LogotypeInfo>(() => _encode_LogotypeInfo, $.BER), $.BER)(value.communityLogos, $.BER)),

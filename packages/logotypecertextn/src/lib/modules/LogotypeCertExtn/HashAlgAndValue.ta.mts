@@ -6,8 +6,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../PKIX1Explicit88/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../PKIX1Explicit88/AlgorithmIdentifier.ta.mjs";
+import {
+    AlgorithmIdentifier,
+    _decode_AlgorithmIdentifier,
+    _encode_AlgorithmIdentifier,
+} from "@wildboar/pki-stub";
 
 
 /**
@@ -117,10 +120,8 @@ function _decode_HashAlgAndValue (el: _Element): HashAlgAndValue {
     }
     sequence[0].name = "hashAlg";
     sequence[1].name = "hashValue";
-    let hashAlg!: AlgorithmIdentifier;
-    let hashValue!: OCTET_STRING;
-    hashAlg = _decode_AlgorithmIdentifier(sequence[0]);
-    hashValue = $._decodeOctetString(sequence[1]);
+    const hashAlg: AlgorithmIdentifier = _decode_AlgorithmIdentifier(sequence[0]);
+    const hashValue: OCTET_STRING = $._decodeOctetString(sequence[1]);
     return new HashAlgAndValue(
         hashAlg,
         hashValue,
@@ -141,7 +142,7 @@ let _cached_encoder_for_HashAlgAndValue: $.ASN1Encoder<HashAlgAndValue> | null =
  */
 export
 function _encode_HashAlgAndValue (value: HashAlgAndValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HashAlgAndValue) { _cached_encoder_for_HashAlgAndValue = function (value: HashAlgAndValue, elGetter: $.ASN1Encoder<HashAlgAndValue>): _Element {
+    if (!_cached_encoder_for_HashAlgAndValue) { _cached_encoder_for_HashAlgAndValue = function (value: HashAlgAndValue): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_AlgorithmIdentifier(value.hashAlg, $.BER),

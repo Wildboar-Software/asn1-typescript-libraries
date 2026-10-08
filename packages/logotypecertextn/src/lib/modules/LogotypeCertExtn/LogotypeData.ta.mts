@@ -143,7 +143,7 @@ let _cached_encoder_for_LogotypeData: $.ASN1Encoder<LogotypeData> | null = null;
  */
 export
 function _encode_LogotypeData (value: LogotypeData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LogotypeData) { _cached_encoder_for_LogotypeData = function (value: LogotypeData, elGetter: $.ASN1Encoder<LogotypeData>): _Element {
+    if (!_cached_encoder_for_LogotypeData) { _cached_encoder_for_LogotypeData = function (value: LogotypeData): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.image === undefined) ? undefined : $._encodeSequenceOf<LogotypeImage>(() => _encode_LogotypeImage, $.BER)(value.image, $.BER)),

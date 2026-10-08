@@ -3,7 +3,8 @@ import {
     IA5String,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HashAlgAndValue, _decode_HashAlgAndValue, _encode_HashAlgAndValue } from "../LogotypeCertExtn/HashAlgAndValue.ta.mjs";
@@ -39,7 +40,14 @@ class LogotypeReference {
          * @readonly
          */
         readonly refStructURI: IA5String[]
-    ) {}
+    ) {
+        if (refStructHash.length < 1) {
+            throw new ASN1SizeError("LogotypeReference.refStructHash violates SIZE constraint");
+        }
+        if (refStructURI.length < 1) {
+            throw new ASN1SizeError("LogotypeReference.refStructURI violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a LogotypeReference
@@ -117,10 +125,8 @@ function _decode_LogotypeReference (el: _Element): LogotypeReference {
     }
     sequence[0].name = "refStructHash";
     sequence[1].name = "refStructURI";
-    let refStructHash!: HashAlgAndValue[];
-    let refStructURI!: IA5String[];
-    refStructHash = $._decodeSequenceOf<HashAlgAndValue>(() => _decode_HashAlgAndValue)(sequence[0]);
-    refStructURI = $._decodeSequenceOf<IA5String>(() => $._decodeIA5String)(sequence[1]);
+    const refStructHash: HashAlgAndValue[] = $._decodeSequenceOf<HashAlgAndValue>(() => _decode_HashAlgAndValue)(sequence[0]);
+    const refStructURI: IA5String[] = $._decodeSequenceOf<IA5String>(() => $._decodeIA5String)(sequence[1]);
     return new LogotypeReference(
         refStructHash,
         refStructURI,
@@ -141,7 +147,7 @@ let _cached_encoder_for_LogotypeReference: $.ASN1Encoder<LogotypeReference> | nu
  */
 export
 function _encode_LogotypeReference (value: LogotypeReference, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LogotypeReference) { _cached_encoder_for_LogotypeReference = function (value: LogotypeReference, elGetter: $.ASN1Encoder<LogotypeReference>): _Element {
+    if (!_cached_encoder_for_LogotypeReference) { _cached_encoder_for_LogotypeReference = function (value: LogotypeReference): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeSequenceOf<HashAlgAndValue>(() => _encode_HashAlgAndValue, $.BER)(value.refStructHash, $.BER),
