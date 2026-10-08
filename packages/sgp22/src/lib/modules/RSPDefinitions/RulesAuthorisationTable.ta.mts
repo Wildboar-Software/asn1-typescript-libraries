@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProfilePolicyAuthorisationRule, _decode_ProfilePolicyAuthorisationRule, _encode_ProfilePolicyAuthorisationRule } from "../RSPDefinitions/ProfilePolicyAuthorisationRule.ta.mjs";
-// export { ProfilePolicyAuthorisationRule, _decode_ProfilePolicyAuthorisationRule, _encode_ProfilePolicyAuthorisationRule } from "../RSPDefinitions/ProfilePolicyAuthorisationRule.ta.mjs";
 
 
 /**

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Octet1, _decode_Octet1, _encode_Octet1 } from "../RSPDefinitions/Octet1.ta.mjs";
-// export { Octet1, _decode_Octet1, _encode_Octet1 } from "../RSPDefinitions/Octet1.ta.mjs";
 import { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
-// export { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
 
 
 /**

@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CancelSessionOk, _decode_CancelSessionOk, _encode_CancelSessionOk } from "../RSPDefinitions/CancelSessionOk.ta.mjs";
-// export { CancelSessionOk, _decode_CancelSessionOk, _encode_CancelSessionOk } from "../RSPDefinitions/CancelSessionOk.ta.mjs";
 import { CancelSessionResponseEs9_cancelSessionError, _decode_CancelSessionResponseEs9_cancelSessionError, _encode_CancelSessionResponseEs9_cancelSessionError } from "../RSPDefinitions/CancelSessionResponseEs9-cancelSessionError.ta.mjs";
-// export { CancelSessionResponseEs9_cancelSessionError, CancelSessionResponseEs9_cancelSessionError_invalidTransactionId /* IMPORTED_LONG_NAMED_INTEGER */, invalidTransactionId /* IMPORTED_SHORT_NAMED_INTEGER */, CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid /* IMPORTED_LONG_NAMED_INTEGER */, euiccSignatureInvalid /* IMPORTED_SHORT_NAMED_INTEGER */, CancelSessionResponseEs9_cancelSessionError_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CancelSessionResponseEs9_cancelSessionError, _encode_CancelSessionResponseEs9_cancelSessionError } from "../RSPDefinitions/CancelSessionResponseEs9-cancelSessionError.ta.mjs";
 
 
 /**

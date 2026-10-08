@@ -11,21 +11,13 @@ import { ASN1ConstructionError } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
-// export { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
 import { IconType, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
-// export { IconType, IconType_jpg /* IMPORTED_LONG_NAMED_INTEGER */, jpg /* IMPORTED_SHORT_NAMED_INTEGER */, IconType_png /* IMPORTED_LONG_NAMED_INTEGER */, png /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
 import { ProfileClass, _decode_ProfileClass, _encode_ProfileClass, operational /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../RSPDefinitions/ProfileClass.ta.mjs";
-// export { ProfileClass, ProfileClass_test /* IMPORTED_LONG_NAMED_INTEGER */, test /* IMPORTED_SHORT_NAMED_INTEGER */, ProfileClass_provisioning /* IMPORTED_LONG_NAMED_INTEGER */, provisioning /* IMPORTED_SHORT_NAMED_INTEGER */, ProfileClass_operational /* IMPORTED_LONG_NAMED_INTEGER */, operational /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ProfileClass, _encode_ProfileClass } from "../RSPDefinitions/ProfileClass.ta.mjs";
 import { NotificationConfigurationInformation, _decode_NotificationConfigurationInformation, _encode_NotificationConfigurationInformation } from "../RSPDefinitions/NotificationConfigurationInformation.ta.mjs";
-// export { NotificationConfigurationInformation, _decode_NotificationConfigurationInformation, _encode_NotificationConfigurationInformation } from "../RSPDefinitions/NotificationConfigurationInformation.ta.mjs";
 import { OperatorId, _decode_OperatorId, _encode_OperatorId } from "../RSPDefinitions/OperatorId.ta.mjs";
-// export { OperatorId, _decode_OperatorId, _encode_OperatorId } from "../RSPDefinitions/OperatorId.ta.mjs";
 import { PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
-// export { PprIds, PprIds_pprUpdateControl /* IMPORTED_LONG_NAMED_BIT */, pprUpdateControl /* IMPORTED_SHORT_NAMED_BIT */, PprIds_ppr1 /* IMPORTED_LONG_NAMED_BIT */, ppr1 /* IMPORTED_SHORT_NAMED_BIT */, PprIds_ppr2 /* IMPORTED_LONG_NAMED_BIT */, ppr2 /* IMPORTED_SHORT_NAMED_BIT */, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
 import { VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
-// export { VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
 import { StoreMetadataRequest_iotSpecificMetadata, _decode_StoreMetadataRequest_iotSpecificMetadata, _encode_StoreMetadataRequest_iotSpecificMetadata } from "../RSPDefinitions/StoreMetadataRequest-iotSpecificMetadata.ta.mjs";
-// export { StoreMetadataRequest_iotSpecificMetadata, _decode_StoreMetadataRequest_iotSpecificMetadata, _encode_StoreMetadataRequest_iotSpecificMetadata } from "../RSPDefinitions/StoreMetadataRequest-iotSpecificMetadata.ta.mjs";
 
 
 /**

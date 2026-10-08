@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LpaeActivationRequest_lpaeOption, _decode_LpaeActivationRequest_lpaeOption, _encode_LpaeActivationRequest_lpaeOption } from "../RSPDefinitions/LpaeActivationRequest-lpaeOption.ta.mjs";
-// export { LpaeActivationRequest_lpaeOption, LpaeActivationRequest_lpaeOption_activateCatBasedLpae /* IMPORTED_LONG_NAMED_BIT */, activateCatBasedLpae /* IMPORTED_SHORT_NAMED_BIT */, LpaeActivationRequest_lpaeOption_activateScwsBasedLpae /* IMPORTED_LONG_NAMED_BIT */, activateScwsBasedLpae /* IMPORTED_SHORT_NAMED_BIT */, _decode_LpaeActivationRequest_lpaeOption, _encode_LpaeActivationRequest_lpaeOption } from "../RSPDefinitions/LpaeActivationRequest-lpaeOption.ta.mjs";
 
 
 /**

@@ -5,15 +5,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InitiateAuthenticationResponse, _decode_InitiateAuthenticationResponse, _encode_InitiateAuthenticationResponse } from "../RSPDefinitions/InitiateAuthenticationResponse.ta.mjs";
-// export { InitiateAuthenticationResponse, _decode_InitiateAuthenticationResponse, _encode_InitiateAuthenticationResponse } from "../RSPDefinitions/InitiateAuthenticationResponse.ta.mjs";
 import { AuthenticateClientResponseEs9, _decode_AuthenticateClientResponseEs9, _encode_AuthenticateClientResponseEs9 } from "../RSPDefinitions/AuthenticateClientResponseEs9.ta.mjs";
-// export { AuthenticateClientResponseEs9, _decode_AuthenticateClientResponseEs9, _encode_AuthenticateClientResponseEs9 } from "../RSPDefinitions/AuthenticateClientResponseEs9.ta.mjs";
 import { GetBoundProfilePackageResponse, _decode_GetBoundProfilePackageResponse, _encode_GetBoundProfilePackageResponse } from "../RSPDefinitions/GetBoundProfilePackageResponse.ta.mjs";
-// export { GetBoundProfilePackageResponse, _decode_GetBoundProfilePackageResponse, _encode_GetBoundProfilePackageResponse } from "../RSPDefinitions/GetBoundProfilePackageResponse.ta.mjs";
 import { CancelSessionResponseEs9, _decode_CancelSessionResponseEs9, _encode_CancelSessionResponseEs9 } from "../RSPDefinitions/CancelSessionResponseEs9.ta.mjs";
-// export { CancelSessionResponseEs9, _decode_CancelSessionResponseEs9, _encode_CancelSessionResponseEs9 } from "../RSPDefinitions/CancelSessionResponseEs9.ta.mjs";
 import { AuthenticateClientResponseEs11, _decode_AuthenticateClientResponseEs11, _encode_AuthenticateClientResponseEs11 } from "../RSPDefinitions/AuthenticateClientResponseEs11.ta.mjs";
-// export { AuthenticateClientResponseEs11, _decode_AuthenticateClientResponseEs11, _encode_AuthenticateClientResponseEs11 } from "../RSPDefinitions/AuthenticateClientResponseEs11.ta.mjs";
 
 
 /**

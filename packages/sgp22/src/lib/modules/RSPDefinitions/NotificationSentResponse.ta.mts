@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_NotificationSentResponse_deleteNotificationStatus, _encode_NotificationSentResponse_deleteNotificationStatus, NotificationSentResponse_deleteNotificationStatus } from "../RSPDefinitions/NotificationSentResponse-deleteNotificationStatus.ta.mjs";
-// export { NotificationSentResponse_deleteNotificationStatus, NotificationSentResponse_deleteNotificationStatus_ok /* IMPORTED_LONG_NAMED_INTEGER */, ok /* IMPORTED_SHORT_NAMED_INTEGER */, NotificationSentResponse_deleteNotificationStatus_nothingToDelete /* IMPORTED_LONG_NAMED_INTEGER */, nothingToDelete /* IMPORTED_SHORT_NAMED_INTEGER */, NotificationSentResponse_deleteNotificationStatus_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_NotificationSentResponse_deleteNotificationStatus, _encode_NotificationSentResponse_deleteNotificationStatus } from "../RSPDefinitions/NotificationSentResponse-deleteNotificationStatus.ta.mjs";
 
 
 /**

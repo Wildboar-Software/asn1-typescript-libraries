@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InitialiseSecureChannelRequest, _decode_InitialiseSecureChannelRequest, _encode_InitialiseSecureChannelRequest } from "../RSPDefinitions/InitialiseSecureChannelRequest.ta.mjs";
-// export { InitialiseSecureChannelRequest, _decode_InitialiseSecureChannelRequest, _encode_InitialiseSecureChannelRequest } from "../RSPDefinitions/InitialiseSecureChannelRequest.ta.mjs";
 
 
 /**

@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NotificationMetadata, _decode_NotificationMetadata, _encode_NotificationMetadata } from "../RSPDefinitions/NotificationMetadata.ta.mjs";
-// export { NotificationMetadata, _decode_NotificationMetadata, _encode_NotificationMetadata } from "../RSPDefinitions/NotificationMetadata.ta.mjs";
 import { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
-// export { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
 
 
 /**

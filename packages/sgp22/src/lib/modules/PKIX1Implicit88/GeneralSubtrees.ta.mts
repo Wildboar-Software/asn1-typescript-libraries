@@ -5,7 +5,6 @@ import {
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeneralSubtree, _decode_GeneralSubtree, _encode_GeneralSubtree } from "../PKIX1Implicit88/GeneralSubtree.ta.mjs";
-// export { GeneralSubtree, _decode_GeneralSubtree, _encode_GeneralSubtree } from "../PKIX1Implicit88/GeneralSubtree.ta.mjs";
 
 
 /**

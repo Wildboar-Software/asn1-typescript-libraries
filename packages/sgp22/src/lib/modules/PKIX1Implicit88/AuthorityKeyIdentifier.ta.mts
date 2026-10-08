@@ -7,11 +7,8 @@ import {
 import { ASN1ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { KeyIdentifier, _decode_KeyIdentifier, _encode_KeyIdentifier } from "../PKIX1Implicit88/KeyIdentifier.ta.mjs";
-// export { KeyIdentifier, _decode_KeyIdentifier, _encode_KeyIdentifier } from "../PKIX1Implicit88/KeyIdentifier.ta.mjs";
 import { GeneralNames, _decode_GeneralNames, _encode_GeneralNames } from "../PKIX1Implicit88/GeneralNames.ta.mjs";
-// export { GeneralNames, _decode_GeneralNames, _encode_GeneralNames } from "../PKIX1Implicit88/GeneralNames.ta.mjs";
 import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../PKIX1Explicit88/CertificateSerialNumber.ta.mjs";
-// export { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../PKIX1Explicit88/CertificateSerialNumber.ta.mjs";
 
 
 /**

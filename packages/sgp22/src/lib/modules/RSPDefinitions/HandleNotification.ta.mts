@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PendingNotification, _decode_PendingNotification, _encode_PendingNotification } from "../RSPDefinitions/PendingNotification.ta.mjs";
-// export { PendingNotification, _decode_PendingNotification, _encode_PendingNotification } from "../RSPDefinitions/PendingNotification.ta.mjs";
 
 
 /**

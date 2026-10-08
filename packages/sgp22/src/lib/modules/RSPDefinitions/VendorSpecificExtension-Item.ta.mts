@@ -6,7 +6,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { OPENTYPE } from "../RSPDefinitions/OPENTYPE.oca.mjs";
 
 
 /**

@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { VendorSpecificExtension_Item, _decode_VendorSpecificExtension_Item, _encode_VendorSpecificExtension_Item } from "../RSPDefinitions/VendorSpecificExtension-Item.ta.mjs";
-// export { VendorSpecificExtension_Item, _decode_VendorSpecificExtension_Item, _encode_VendorSpecificExtension_Item } from "../RSPDefinitions/VendorSpecificExtension-Item.ta.mjs";
 
 
 /**

@@ -4,7 +4,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_rspExt } from "../RSPDefinitions/id-rspExt.va.mjs";
-// export { id_rspExt } from "../RSPDefinitions/id-rspExt.va.mjs";
 
 
 /**

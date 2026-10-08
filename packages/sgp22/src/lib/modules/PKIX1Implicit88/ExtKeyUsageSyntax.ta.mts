@@ -5,7 +5,6 @@ import {
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { KeyPurposeId, _decode_KeyPurposeId, _encode_KeyPurposeId } from "../PKIX1Implicit88/KeyPurposeId.ta.mjs";
-// export { KeyPurposeId, _decode_KeyPurposeId, _encode_KeyPurposeId } from "../PKIX1Implicit88/KeyPurposeId.ta.mjs";
 
 
 /**

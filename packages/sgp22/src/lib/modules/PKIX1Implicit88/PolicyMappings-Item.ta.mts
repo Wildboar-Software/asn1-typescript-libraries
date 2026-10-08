@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CertPolicyId, _decode_CertPolicyId, _encode_CertPolicyId } from "../PKIX1Implicit88/CertPolicyId.ta.mjs";
-// export { CertPolicyId, _decode_CertPolicyId, _encode_CertPolicyId } from "../PKIX1Implicit88/CertPolicyId.ta.mjs";
 
 
 /**

@@ -5,7 +5,6 @@ import {
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Attribute, _decode_Attribute, _encode_Attribute } from "../PKIX1Explicit88/Attribute.ta.mjs";
-// export { Attribute, _decode_Attribute, _encode_Attribute } from "../PKIX1Explicit88/Attribute.ta.mjs";
 
 
 /**

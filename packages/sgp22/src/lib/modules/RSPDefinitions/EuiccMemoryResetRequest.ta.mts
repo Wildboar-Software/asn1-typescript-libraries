@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_EuiccMemoryResetRequest_resetOptions, _encode_EuiccMemoryResetRequest_resetOptions, EuiccMemoryResetRequest_resetOptions } from "../RSPDefinitions/EuiccMemoryResetRequest-resetOptions.ta.mjs";
-// export { EuiccMemoryResetRequest_resetOptions, EuiccMemoryResetRequest_resetOptions_deleteOperationalProfiles /* IMPORTED_LONG_NAMED_BIT */, deleteOperationalProfiles /* IMPORTED_SHORT_NAMED_BIT */, EuiccMemoryResetRequest_resetOptions_deleteFieldLoadedTestProfiles /* IMPORTED_LONG_NAMED_BIT */, deleteFieldLoadedTestProfiles /* IMPORTED_SHORT_NAMED_BIT */, EuiccMemoryResetRequest_resetOptions_resetDefaultSmdpAddress /* IMPORTED_LONG_NAMED_BIT */, resetDefaultSmdpAddress /* IMPORTED_SHORT_NAMED_BIT */, _decode_EuiccMemoryResetRequest_resetOptions, _encode_EuiccMemoryResetRequest_resetOptions } from "../RSPDefinitions/EuiccMemoryResetRequest-resetOptions.ta.mjs";
 
 
 /**

@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TBSCertList, _decode_TBSCertList, _encode_TBSCertList } from "../PKIX1Explicit88/TBSCertList.ta.mjs";
-// export { TBSCertList, _decode_TBSCertList, _encode_TBSCertList } from "../PKIX1Explicit88/TBSCertList.ta.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../PKIX1Explicit88/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../PKIX1Explicit88/AlgorithmIdentifier.ta.mjs";
 
 
 /**

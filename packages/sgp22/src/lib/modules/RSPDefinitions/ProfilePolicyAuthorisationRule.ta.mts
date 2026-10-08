@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
-// export { PprIds, PprIds_pprUpdateControl /* IMPORTED_LONG_NAMED_BIT */, pprUpdateControl /* IMPORTED_SHORT_NAMED_BIT */, PprIds_ppr1 /* IMPORTED_LONG_NAMED_BIT */, ppr1 /* IMPORTED_SHORT_NAMED_BIT */, PprIds_ppr2 /* IMPORTED_LONG_NAMED_BIT */, ppr2 /* IMPORTED_SHORT_NAMED_BIT */, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
 import { OperatorId, _decode_OperatorId, _encode_OperatorId } from "../RSPDefinitions/OperatorId.ta.mjs";
-// export { OperatorId, _decode_OperatorId, _encode_OperatorId } from "../RSPDefinitions/OperatorId.ta.mjs";
 import { ProfilePolicyAuthorisationRule_pprFlags, _decode_ProfilePolicyAuthorisationRule_pprFlags, _encode_ProfilePolicyAuthorisationRule_pprFlags } from "../RSPDefinitions/ProfilePolicyAuthorisationRule-pprFlags.ta.mjs";
-// export { ProfilePolicyAuthorisationRule_pprFlags, ProfilePolicyAuthorisationRule_pprFlags_consentRequired /* IMPORTED_LONG_NAMED_BIT */, consentRequired /* IMPORTED_SHORT_NAMED_BIT */, _decode_ProfilePolicyAuthorisationRule_pprFlags, _encode_ProfilePolicyAuthorisationRule_pprFlags } from "../RSPDefinitions/ProfilePolicyAuthorisationRule-pprFlags.ta.mjs";
 
 
 /**

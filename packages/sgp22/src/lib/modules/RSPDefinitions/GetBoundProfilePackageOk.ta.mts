@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { BoundProfilePackage, _decode_BoundProfilePackage, _encode_BoundProfilePackage } from "../RSPDefinitions/BoundProfilePackage.ta.mjs";
-// export { BoundProfilePackage, _decode_BoundProfilePackage, _encode_BoundProfilePackage } from "../RSPDefinitions/BoundProfilePackage.ta.mjs";
 
 
 /**

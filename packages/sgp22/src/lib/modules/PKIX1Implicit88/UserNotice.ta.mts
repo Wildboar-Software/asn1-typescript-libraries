@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NoticeReference, _decode_NoticeReference, _encode_NoticeReference } from "../PKIX1Implicit88/NoticeReference.ta.mjs";
-// export { NoticeReference, _decode_NoticeReference, _encode_NoticeReference } from "../PKIX1Implicit88/NoticeReference.ta.mjs";
 import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../PKIX1Implicit88/DisplayText.ta.mjs";
-// export { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../PKIX1Implicit88/DisplayText.ta.mjs";
 
 
 /**

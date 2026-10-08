@@ -7,11 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RemoteOpId, _decode_RemoteOpId, _encode_RemoteOpId } from "../RSPDefinitions/RemoteOpId.ta.mjs";
-// export { RemoteOpId, _decode_RemoteOpId, _encode_RemoteOpId } from "../RSPDefinitions/RemoteOpId.ta.mjs";
 import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { ControlRefTemplate, _decode_ControlRefTemplate, _encode_ControlRefTemplate } from "../RSPDefinitions/ControlRefTemplate.ta.mjs";
-// export { ControlRefTemplate, _decode_ControlRefTemplate, _encode_ControlRefTemplate } from "../RSPDefinitions/ControlRefTemplate.ta.mjs";
 
 
 /**

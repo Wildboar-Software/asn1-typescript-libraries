@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProfileInstallationResult, _decode_ProfileInstallationResult, _encode_ProfileInstallationResult } from "../RSPDefinitions/ProfileInstallationResult.ta.mjs";
-// export { ProfileInstallationResult, _decode_ProfileInstallationResult, _encode_ProfileInstallationResult } from "../RSPDefinitions/ProfileInstallationResult.ta.mjs";
 import { OtherSignedNotification, _decode_OtherSignedNotification, _encode_OtherSignedNotification } from "../RSPDefinitions/OtherSignedNotification.ta.mjs";
-// export { OtherSignedNotification, _decode_OtherSignedNotification, _encode_OtherSignedNotification } from "../RSPDefinitions/OtherSignedNotification.ta.mjs";
 
 
 /**

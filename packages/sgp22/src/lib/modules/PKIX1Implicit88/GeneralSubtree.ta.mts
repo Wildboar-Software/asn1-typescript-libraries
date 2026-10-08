@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeneralName, _decode_GeneralName, _encode_GeneralName } from "../PKIX1Implicit88/GeneralName.ta.mjs";
-// export { GeneralName, _decode_GeneralName, _encode_GeneralName } from "../PKIX1Implicit88/GeneralName.ta.mjs";
 import { BaseDistance, _decode_BaseDistance, _encode_BaseDistance } from "../PKIX1Implicit88/BaseDistance.ta.mjs";
-// export { BaseDistance, _decode_BaseDistance, _encode_BaseDistance } from "../PKIX1Implicit88/BaseDistance.ta.mjs";
 
 
 /**

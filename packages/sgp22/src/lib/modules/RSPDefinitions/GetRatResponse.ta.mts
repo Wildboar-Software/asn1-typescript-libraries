@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RulesAuthorisationTable, _decode_RulesAuthorisationTable, _encode_RulesAuthorisationTable } from "../RSPDefinitions/RulesAuthorisationTable.ta.mjs";
-// export { RulesAuthorisationTable, _decode_RulesAuthorisationTable, _encode_RulesAuthorisationTable } from "../RSPDefinitions/RulesAuthorisationTable.ta.mjs";
 
 
 /**

@@ -4,7 +4,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_ad } from "../PKIX1Explicit88/id-ad.va.mjs";
-// export { id_ad } from "../PKIX1Explicit88/id-ad.va.mjs";
 
 
 /**

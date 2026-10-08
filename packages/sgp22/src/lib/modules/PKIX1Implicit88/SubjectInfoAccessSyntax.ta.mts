@@ -5,7 +5,6 @@ import {
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessDescription, _decode_AccessDescription, _encode_AccessDescription } from "../PKIX1Implicit88/AccessDescription.ta.mjs";
-// export { AccessDescription, _decode_AccessDescription, _encode_AccessDescription } from "../PKIX1Implicit88/AccessDescription.ta.mjs";
 
 
 /**

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
-// export { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
 import { ISDRProprietaryApplicationTemplate_lpaeSupport, _decode_ISDRProprietaryApplicationTemplate_lpaeSupport, _encode_ISDRProprietaryApplicationTemplate_lpaeSupport } from "../RSPDefinitions/ISDRProprietaryApplicationTemplate-lpaeSupport.ta.mjs";
-// export { ISDRProprietaryApplicationTemplate_lpaeSupport, ISDRProprietaryApplicationTemplate_lpaeSupport_lpaeUsingCat /* IMPORTED_LONG_NAMED_BIT */, lpaeUsingCat /* IMPORTED_SHORT_NAMED_BIT */, ISDRProprietaryApplicationTemplate_lpaeSupport_lpaeUsingScws /* IMPORTED_LONG_NAMED_BIT */, lpaeUsingScws /* IMPORTED_SHORT_NAMED_BIT */, _decode_ISDRProprietaryApplicationTemplate_lpaeSupport, _encode_ISDRProprietaryApplicationTemplate_lpaeSupport } from "../RSPDefinitions/ISDRProprietaryApplicationTemplate-lpaeSupport.ta.mjs";
 
 
 /**

@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DpProprietaryData, _decode_DpProprietaryData, _encode_DpProprietaryData } from "../RSPDefinitions/DpProprietaryData.ta.mjs";
-// export { DpProprietaryData, _decode_DpProprietaryData, _encode_DpProprietaryData } from "../RSPDefinitions/DpProprietaryData.ta.mjs";
 
 
 /**

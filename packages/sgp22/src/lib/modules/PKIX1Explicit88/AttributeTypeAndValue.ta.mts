@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../PKIX1Explicit88/AttributeType.ta.mjs";
-// export { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../PKIX1Explicit88/AttributeType.ta.mjs";
 import { AttributeValue, _decode_AttributeValue, _encode_AttributeValue } from "../PKIX1Explicit88/AttributeValue.ta.mjs";
-// export { AttributeValue, _decode_AttributeValue, _encode_AttributeValue } from "../PKIX1Explicit88/AttributeValue.ta.mjs";
 
 
 /**

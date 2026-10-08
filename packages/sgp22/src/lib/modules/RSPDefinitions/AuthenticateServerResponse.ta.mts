@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthenticateResponseOk, _decode_AuthenticateResponseOk, _encode_AuthenticateResponseOk } from "../RSPDefinitions/AuthenticateResponseOk.ta.mjs";
-// export { AuthenticateResponseOk, _decode_AuthenticateResponseOk, _encode_AuthenticateResponseOk } from "../RSPDefinitions/AuthenticateResponseOk.ta.mjs";
 import { AuthenticateResponseError, _decode_AuthenticateResponseError, _encode_AuthenticateResponseError } from "../RSPDefinitions/AuthenticateResponseError.ta.mjs";
-// export { AuthenticateResponseError, _decode_AuthenticateResponseError, _encode_AuthenticateResponseError } from "../RSPDefinitions/AuthenticateResponseError.ta.mjs";
 
 
 /**

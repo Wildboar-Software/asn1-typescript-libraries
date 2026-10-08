@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeneralSubtrees, _decode_GeneralSubtrees, _encode_GeneralSubtrees } from "../PKIX1Implicit88/GeneralSubtrees.ta.mjs";
-// export { GeneralSubtrees, _decode_GeneralSubtrees, _encode_GeneralSubtrees } from "../PKIX1Implicit88/GeneralSubtrees.ta.mjs";
 
 
 /**

@@ -6,7 +6,6 @@ import { ub_organizational_units } from "./ub-organizational-units.va.mjs";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OrganizationalUnitName, _decode_OrganizationalUnitName, _encode_OrganizationalUnitName } from "../PKIX1Explicit88/OrganizationalUnitName.ta.mjs";
-// export { OrganizationalUnitName, _decode_OrganizationalUnitName, _encode_OrganizationalUnitName } from "../PKIX1Explicit88/OrganizationalUnitName.ta.mjs";
 
 
 /**

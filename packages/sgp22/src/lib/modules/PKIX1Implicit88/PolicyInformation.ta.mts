@@ -7,9 +7,7 @@ import {
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CertPolicyId, _decode_CertPolicyId, _encode_CertPolicyId } from "../PKIX1Implicit88/CertPolicyId.ta.mjs";
-// export { CertPolicyId, _decode_CertPolicyId, _encode_CertPolicyId } from "../PKIX1Implicit88/CertPolicyId.ta.mjs";
 import { PolicyQualifierInfo, _decode_PolicyQualifierInfo, _encode_PolicyQualifierInfo } from "../PKIX1Implicit88/PolicyQualifierInfo.ta.mjs";
-// export { PolicyQualifierInfo, _decode_PolicyQualifierInfo, _encode_PolicyQualifierInfo } from "../PKIX1Implicit88/PolicyQualifierInfo.ta.mjs";
 
 
 /**

@@ -5,7 +5,6 @@ import {
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DistributionPoint, _decode_DistributionPoint, _encode_DistributionPoint } from "../PKIX1Implicit88/DistributionPoint.ta.mjs";
-// export { DistributionPoint, _decode_DistributionPoint, _encode_DistributionPoint } from "../PKIX1Implicit88/DistributionPoint.ta.mjs";
 
 
 /**
