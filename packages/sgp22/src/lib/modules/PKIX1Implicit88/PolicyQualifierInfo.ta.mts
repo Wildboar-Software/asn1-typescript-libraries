@@ -93,7 +93,12 @@ class PolicyQualifierInfo {
          * @readonly
          */
         readonly policyQualifierId: PolicyQualifierId,
-// FIXME: readonly qualifier: AnyType
+        /**
+         * @summary `qualifier`.
+         * @public
+         * @readonly
+         */
+        readonly qualifier: _Element
     ) {}
 
     /**
@@ -109,7 +114,7 @@ class PolicyQualifierInfo {
      * @returns {PolicyQualifierInfo}
      */
     public static _from_object (_o: { [_K in keyof (PolicyQualifierInfo)]: (PolicyQualifierInfo)[_K] }): PolicyQualifierInfo {
-        return new PolicyQualifierInfo(_o.policyQualifierId, _o.);
+        return new PolicyQualifierInfo(_o.policyQualifierId, _o.qualifier);
     }
 
 
@@ -173,7 +178,7 @@ function _decode_PolicyQualifierInfo (el: _Element): PolicyQualifierInfo {
     sequence[0].name = "policyQualifierId";
     sequence[1].name = "qualifier";
     let policyQualifierId!: PolicyQualifierId;
-    let qualifier!: /* FIXME: qualifier COULD_NOT_COMPILE_TYPE */;
+    let qualifier!: _Element;
     policyQualifierId = _decode_PolicyQualifierId(sequence[0]);
     qualifier = $._decodeAny(sequence[1]);
     return new PolicyQualifierInfo(

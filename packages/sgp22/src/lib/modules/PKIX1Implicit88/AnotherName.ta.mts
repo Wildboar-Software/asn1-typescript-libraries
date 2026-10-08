@@ -92,7 +92,12 @@ class AnotherName {
          * @readonly
          */
         readonly type_id: OBJECT_IDENTIFIER,
-// FIXME: readonly value: PrefixedType
+        /**
+         * @summary `value`.
+         * @public
+         * @readonly
+         */
+        readonly value: _Element
     ) {}
 
     /**
@@ -108,7 +113,7 @@ class AnotherName {
      * @returns {AnotherName}
      */
     public static _from_object (_o: { [_K in keyof (AnotherName)]: (AnotherName)[_K] }): AnotherName {
-        return new AnotherName(_o.type_id, _o.);
+        return new AnotherName(_o.type_id, _o.value);
     }
 
 
@@ -172,9 +177,9 @@ function _decode_AnotherName (el: _Element): AnotherName {
     sequence[0].name = "type-id";
     sequence[1].name = "value";
     let type_id!: OBJECT_IDENTIFIER;
-    let value!: /* FIXME: value COULD_NOT_COMPILE_TYPE */;
+    let value!: _Element;
     type_id = $._decodeObjectIdentifier(sequence[0]);
-    
+    value = $._decode_explicit<_Element>(() => $._decodeAny)(sequence[1]);
     return new AnotherName(
         type_id,
         value,
