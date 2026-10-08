@@ -132,6 +132,13 @@ const ALL_MONTHS_IN_YEAR: Set<number> = new Set([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
  * @returns {Date | null} A `Date` whose value is the lower bound of the
  *  period's occurrence if the point in time falls within the bounds of an
  *  occurrence or `null` if it does not fall within the bounds of any occurrence.
+ * @function
+ * 
+ * @deprecated Use `Period.occurrences` instead. This function is overly
+ *  complex and buggy. AI code reviews turned up a lot of issues with it,
+ *  but all of the AI proposed solutions made the complexity a lot worse. I
+ *  (kind of) re-wrote this functionality as `Period.occurrences`, which is
+ *  still pretty complicated, but less so.
  */
 export
 function boundariesOfPeriodOccurrence (period: Period, point: Date): [ Date, Date ] | null {

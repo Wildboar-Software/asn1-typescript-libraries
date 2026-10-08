@@ -11,11 +11,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ObjectUpdate_display, _decode_ObjectUpdate_display, _encode_ObjectUpdate_display } from "../ISO9041-VTP/ObjectUpdate-display.ta.mjs";
-// export { ObjectUpdate_display, _decode_ObjectUpdate_display, _encode_ObjectUpdate_display } from "../ISO9041-VTP/ObjectUpdate-display.ta.mjs";
 import { _decode_COupdate, _encode_COupdate, COupdate } from "../G/COupdate.ta.mjs";
-// export { COupdate, _decode_COupdate, _encode_COupdate } from "../G/COupdate.ta.mjs";
 import { _decode_RIOreference, _encode_RIOreference, RIOreference } from "../G/RIOreference.ta.mjs";
-// export { RIOreference, _decode_RIOreference, _encode_RIOreference } from "../G/RIOreference.ta.mjs";
 
 
 /**

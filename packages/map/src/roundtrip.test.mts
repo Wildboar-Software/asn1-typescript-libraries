@@ -1,14 +1,14 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
-    MAP_OpenInfo,
-    _encode_MAP_OpenInfo,
-    _decode_MAP_OpenInfo,
-} from "./lib/modules/MAP-DialogueInformation/MAP-OpenInfo.ta.mjs";
-import {
     type MAP_DialoguePDU,
-    _encode_MAP_DialoguePDU,
     _decode_MAP_DialoguePDU,
+    _encode_MAP_DialoguePDU,
 } from "./lib/modules/MAP-DialogueInformation/MAP-DialoguePDU.ta.mjs";
+import {
+    MAP_OpenInfo,
+    _decode_MAP_OpenInfo,
+    _encode_MAP_OpenInfo,
+} from "./lib/modules/MAP-DialogueInformation/MAP-OpenInfo.ta.mjs";
 
 describe("MAP-DialoguePDU", () => {
     test("round-trips a map-open dialogue PDU", () => {

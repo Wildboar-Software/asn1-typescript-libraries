@@ -16,7 +16,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Path_efidOrTagChoice, _decode_Path_efidOrTagChoice, _encode_Path_efidOrTagChoice } from "../CryptographicInformationFramework/Path-efidOrTagChoice.ta.mjs";
 import { cia_ub_index } from "../CryptographicInformationFramework/cia-ub-index.va.mjs";
-// export { Path_efidOrTagChoice, _decode_Path_efidOrTagChoice, _encode_Path_efidOrTagChoice } from "../CryptographicInformationFramework/Path-efidOrTagChoice.ta.mjs";
 
 
 /**

@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InvokeIdType, _decode_InvokeIdType, _encode_InvokeIdType } from "../IN-CS2-datatypes/InvokeIdType.ta.mjs";
-// export { InvokeIdType, _decode_InvokeIdType, _encode_InvokeIdType } from "../IN-CS2-datatypes/InvokeIdType.ta.mjs";
 
 
 /**

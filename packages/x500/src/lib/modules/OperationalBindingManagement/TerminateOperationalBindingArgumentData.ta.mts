@@ -108,11 +108,9 @@ export class TerminateOperationalBindingArgumentData {
      * @returns {TerminateOperationalBindingArgumentData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof TerminateOperationalBindingArgumentData]: TerminateOperationalBindingArgumentData[_K];
             }
-        >
     ): TerminateOperationalBindingArgumentData {
         return new TerminateOperationalBindingArgumentData(
             _o.bindingType,

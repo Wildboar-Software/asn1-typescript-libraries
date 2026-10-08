@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CounterID, _decode_CounterID, _encode_CounterID } from "../IN-CS2-datatypes/CounterID.ta.mjs";
-// export { CounterID, _decode_CounterID, _encode_CounterID } from "../IN-CS2-datatypes/CounterID.ta.mjs";
 import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
-// export { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
 
 
 /**

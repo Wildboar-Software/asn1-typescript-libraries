@@ -12,15 +12,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TestCrewInformation, _decode_TestCrewInformation, _encode_TestCrewInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/TestCrewInformation.ta.mjs";
-// export { TestCrewInformation, _decode_TestCrewInformation, _encode_TestCrewInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/TestCrewInformation.ta.mjs";
 import { LevelPolicyAssistance, _decode_LevelPolicyAssistance, _encode_LevelPolicyAssistance } from "../MachineReadableBiometricTestingAndReportingTestReport/LevelPolicyAssistance.ta.mjs";
-// export { LevelPolicyAssistance, _decode_LevelPolicyAssistance, _encode_LevelPolicyAssistance } from "../MachineReadableBiometricTestingAndReportingTestReport/LevelPolicyAssistance.ta.mjs";
 import { EnvironmentalInformation, _decode_EnvironmentalInformation, _encode_EnvironmentalInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/EnvironmentalInformation.ta.mjs";
-// export { EnvironmentalInformation, _decode_EnvironmentalInformation, _encode_EnvironmentalInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/EnvironmentalInformation.ta.mjs";
 import { Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
-// export { Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
 import { TestResult, _decode_TestResult, _encode_TestResult } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResult.ta.mjs";
-// export { TestResult, _decode_TestResult, _encode_TestResult } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResult.ta.mjs";
 
 
 /**
