@@ -24,5 +24,10 @@
   ],
   "include": [
     "**/*.mts"
+  ],
+  "references": [
+    {
+      "path": "../pki-stub/tsconfig.lib.json"
+    }
   ]
 }

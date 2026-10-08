@@ -1,6 +1,6 @@
 import { ASN1SizeError, ObjectIdentifier as _OID } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AlgorithmIdentifier } from "./lib/modules/PKIX1Explicit88/AlgorithmIdentifier.ta.mjs";
+import { AlgorithmIdentifier } from "@wildboar/pki-stub";
 import {
     HashAlgAndValue,
 } from "./lib/modules/LogotypeCertExtn/HashAlgAndValue.ta.mjs";

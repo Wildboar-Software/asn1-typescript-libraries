@@ -1,9 +1,9 @@
 # Logotype Certificate Extension in TypeScript
 
 ASN.1 data structures for the logotype certificate extension in
-[IETF RFC 3709](https://datatracker.ietf.org/doc/html/rfc3709), together with
-the `PKIX1Explicit88` module from
-[IETF RFC 3280](https://datatracker.ietf.org/doc/html/rfc3280) that it imports.
+[IETF RFC 3709](https://datatracker.ietf.org/doc/html/rfc3709).
+`AlgorithmIdentifier` is provided by
+[`@wildboar/pki-stub`](https://jsr.io/@wildboar/pki-stub).
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
