@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SetDefaultDpAddressResponse-setDefaultDpAddressResult ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * SetDefaultDpAddressResponse-setDefaultDpAddressResult ::= INTEGER {
+ *     ok(0),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

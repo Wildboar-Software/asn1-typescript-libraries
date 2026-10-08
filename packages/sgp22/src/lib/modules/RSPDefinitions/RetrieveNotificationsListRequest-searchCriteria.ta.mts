@@ -16,7 +16,10 @@ import { NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RetrieveNotificationsListRequest-searchCriteria ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RetrieveNotificationsListRequest-searchCriteria ::= CHOICE {
+ *     seqNumber [0] INTEGER,
+ *     profileManagementOperation [1] NotificationEvent
+ * }
  * ```
  */
 export

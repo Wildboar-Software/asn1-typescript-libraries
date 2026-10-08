@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ISDRProprietaryApplicationTemplate-lpaeSupport ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * ISDRProprietaryApplicationTemplate-lpaeSupport ::= BIT STRING {
+ *     lpaeUsingCat(0), -- LPA in the eUICC using Card Application Toolkit
+ *     lpaeUsingScws(1) -- LPA in the eUICC using Smartcard Web Server
+ * }
  * ```
  */
 export

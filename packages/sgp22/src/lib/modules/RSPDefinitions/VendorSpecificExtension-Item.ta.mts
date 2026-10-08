@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * VendorSpecificExtension-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * VendorSpecificExtension-Item ::= SEQUENCE {
+ *     vendorOid [0] OPENTYPE.&typeId, -- OID of the vendor who defined this specific extension
+ *     vendorSpecificData [1] OPENTYPE.&Type
+ * }
  * ```
  * 
  * @class

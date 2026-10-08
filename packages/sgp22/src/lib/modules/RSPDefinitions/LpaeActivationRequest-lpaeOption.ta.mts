@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LpaeActivationRequest-lpaeOption ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * LpaeActivationRequest-lpaeOption ::= BIT STRING {
+ *     activateCatBasedLpae(0), -- LPAe with LUIe based on CAT
+ *     activateScwsBasedLpae(1) -- LPAe with LUIe based on SCWS
+ * }
  * ```
  */
 export

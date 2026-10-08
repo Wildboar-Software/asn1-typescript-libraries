@@ -14,7 +14,21 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AuthenticateClientResponseEs9-authenticateClientError ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * AuthenticateClientResponseEs9-authenticateClientError ::= INTEGER {
+ *     eumCertificateInvalid(1),
+ *     eumCertificateExpired(2),
+ *     euiccCertificateInvalid(3),
+ *     euiccCertificateExpired(4),
+ *     euiccSignatureInvalid(5),
+ *     matchingIdRefused(6),
+ *     eidMismatch(7),
+ *     noEligibleProfile(8),
+ *     ciPKUnknown(9),
+ *     invalidTransactionId(10),
+ *     insufficientMemory(11), -- Note: values 12-17 are reserved for future versions of SGP.22
+ *     downloadOrderExpired(18),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

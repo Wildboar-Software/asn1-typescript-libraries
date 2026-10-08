@@ -14,7 +14,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ListNotificationResponse-listNotificationsResultError ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ListNotificationResponse-listNotificationsResultError ::= INTEGER {
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

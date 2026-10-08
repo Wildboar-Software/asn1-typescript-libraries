@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SetNicknameResponse-setNicknameResult ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * SetNicknameResponse-setNicknameResult ::= INTEGER {
+ *     ok(0),
+ *     iccidNotFound(1),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

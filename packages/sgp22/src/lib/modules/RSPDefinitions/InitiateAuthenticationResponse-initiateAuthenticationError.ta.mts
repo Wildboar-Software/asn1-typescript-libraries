@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * InitiateAuthenticationResponse-initiateAuthenticationError ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * InitiateAuthenticationResponse-initiateAuthenticationError ::= INTEGER {
+ *     invalidDpAddress(1),
+ *     euiccVersionNotSupportedByDp(2),
+ *     ciPKIdNotSupported(3)
+ * }
  * ```
  */
 export

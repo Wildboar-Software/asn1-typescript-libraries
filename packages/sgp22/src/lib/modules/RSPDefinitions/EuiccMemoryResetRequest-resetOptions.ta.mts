@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EuiccMemoryResetRequest-resetOptions ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * EuiccMemoryResetRequest-resetOptions ::= BIT STRING {
+ *     deleteOperationalProfiles(0),
+ *     deleteFieldLoadedTestProfiles(1),
+ *     resetDefaultSmdpAddress(2)
+ * }
  * ```
  */
 export

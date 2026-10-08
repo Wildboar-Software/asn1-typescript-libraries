@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationSentResponse-deleteNotificationStatus ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * NotificationSentResponse-deleteNotificationStatus ::= INTEGER {
+ *     ok(0),
+ *     nothingToDelete(1),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

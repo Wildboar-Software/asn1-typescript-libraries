@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ExtendedNetworkAddress-e163-4-address ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ExtendedNetworkAddress-e163-4-address ::= SEQUENCE {
+ *     number [0] IMPLICIT NumericString (SIZE (1..ub-e163-4-number-length)),
+ *     sub-address [1] IMPLICIT NumericString (SIZE (1..ub-e163-4-sub-address-length)) OPTIONAL
+ * }
  * ```
  * 
  * @class

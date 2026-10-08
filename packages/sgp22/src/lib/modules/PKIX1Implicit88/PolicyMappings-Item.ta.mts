@@ -16,7 +16,10 @@ import { CertPolicyId, _decode_CertPolicyId, _encode_CertPolicyId } from "../PKI
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PolicyMappings-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PolicyMappings-Item ::= SEQUENCE {
+ *     issuerDomainPolicy CertPolicyId,
+ *     subjectDomainPolicy CertPolicyId
+ * }
  * ```
  * 
  * @class

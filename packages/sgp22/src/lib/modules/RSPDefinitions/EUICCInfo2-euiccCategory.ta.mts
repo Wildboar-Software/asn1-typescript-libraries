@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EUICCInfo2-euiccCategory ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * EUICCInfo2-euiccCategory ::= INTEGER {
+ *     other(0),
+ *     basicEuicc(1),
+ *     mediumEuicc(2),
+ *     contactlessEuicc(3)
+ * }
  * ```
  */
 export

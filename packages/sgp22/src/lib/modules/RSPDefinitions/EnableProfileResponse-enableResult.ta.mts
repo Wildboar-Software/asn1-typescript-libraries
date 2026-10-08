@@ -14,7 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EnableProfileResponse-enableResult ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * EnableProfileResponse-enableResult ::= INTEGER {
+ *     ok(0),
+ *     iccidOrAidNotFound(1),
+ *     profileNotInDisabledState(2),
+ *     disallowedByPolicy(3),
+ *     wrongProfileReenabling(4),
+ *     catBusy(5),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

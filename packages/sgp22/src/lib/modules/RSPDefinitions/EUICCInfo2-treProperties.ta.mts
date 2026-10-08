@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EUICCInfo2-treProperties ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * EUICCInfo2-treProperties ::= BIT STRING {
+ *     isDiscrete(0),
+ *     isIntegrated(1),
+ *     usesRemoteMemory(2) -- refers to the usage of remote memory protected by the Remote Memory Protection Function described in SGP.21 [4]
+ * }
  * ```
  */
 export

@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LpaeActivationResponse-lpaeActivationResult ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * LpaeActivationResponse-lpaeActivationResult ::= INTEGER {
+ *     ok(0),
+ *     notSupported(1)
+ * }
  * ```
  */
 export

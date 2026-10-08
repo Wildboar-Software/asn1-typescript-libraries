@@ -14,7 +14,16 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetBoundProfilePackageResponse-getBoundProfilePackageError ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * GetBoundProfilePackageResponse-getBoundProfilePackageError ::= INTEGER {
+ *     euiccSignatureInvalid(1),
+ *     confirmationCodeMissing(2),
+ *     confirmationCodeRefused(3),
+ *     confirmationCodeRetriesExceeded(4),
+ *     bppRebindingRefused(5),
+ *     deprecated(6), -- this value is no longer used.
+ *     invalidTransactionId(95),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

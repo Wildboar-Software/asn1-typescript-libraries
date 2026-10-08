@@ -19,7 +19,11 @@ import { ProfileClass, _decode_ProfileClass, _encode_ProfileClass } from "../RSP
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileInfoListRequest-searchCriteria ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileInfoListRequest-searchCriteria ::= CHOICE {
+ *     isdpAid [APPLICATION 15] OctetTo16, -- AID of the ISD-P, tag '4F'
+ *     iccid Iccid, -- ICCID, tag '5A'
+ *     profileClass [21] ProfileClass -- Tag '95'
+ * }
  * ```
  */
 export

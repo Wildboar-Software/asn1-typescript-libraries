@@ -14,7 +14,16 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AuthenticateClientResponseEs11-authenticateClientError ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * AuthenticateClientResponseEs11-authenticateClientError ::= INTEGER {
+ *     eumCertificateInvalid(1),
+ *     eumCertificateExpired(2),
+ *     euiccCertificateInvalid(3),
+ *     euiccCertificateExpired(4),
+ *     euiccSignatureInvalid(5),
+ *     eventIdUnknown(6),
+ *     invalidTransactionId(7),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

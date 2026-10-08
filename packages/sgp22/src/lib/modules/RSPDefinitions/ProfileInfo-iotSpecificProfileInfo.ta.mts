@@ -13,7 +13,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileInfo-iotSpecificProfileInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileInfo-iotSpecificProfileInfo ::= SEQUENCE {
+ *     -- Data objects and their tags, to be specified in SGP.32 [97]
+ * }
  * ```
  * 
  * @class

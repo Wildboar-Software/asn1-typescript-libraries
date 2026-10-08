@@ -16,7 +16,10 @@ import { ErrorResult, _decode_ErrorResult, _encode_ErrorResult } from "../RSPDef
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileInstallationResultData-finalResult ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileInstallationResultData-finalResult ::= CHOICE {
+ *     successResult SuccessResult,
+ *     errorResult ErrorResult
+ * }
  * ```
  */
 export
