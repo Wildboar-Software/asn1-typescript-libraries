@@ -3,10 +3,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExtensionAttributeJSON } from "../../types.mjs";
+import type { ExtensionAttributeJSON } from "../../types.mjs";
 
 /**
  * @summary ExtensionAttribute
@@ -29,20 +29,26 @@ import { ExtensionAttributeJSON } from "../../types.mjs";
  *
  */
 export class ExtensionAttribute {
+    /**
+     * @summary `extension_attribute_type`.
+     * @public
+     * @readonly
+     */
+    public readonly extension_attribute_type: INTEGER;
+    /**
+     * @summary `extension_attribute_value`.
+     * @public
+     * @readonly
+     */
+    public readonly extension_attribute_value: _Element;
+
     constructor(
-        /**
-         * @summary `extension_attribute_type`.
-         * @public
-         * @readonly
-         */
-        readonly extension_attribute_type: INTEGER,
-        /**
-         * @summary `extension_attribute_value`.
-         * @public
-         * @readonly
-         */
-        readonly extension_attribute_value: _Element
-    ) {}
+        extension_attribute_type: INTEGER,
+        extension_attribute_value: _Element
+    ) {
+        this.extension_attribute_type = extension_attribute_type;
+        this.extension_attribute_value = extension_attribute_value;
+    }
 
     /**
      * @summary Restructures an object into a ExtensionAttribute

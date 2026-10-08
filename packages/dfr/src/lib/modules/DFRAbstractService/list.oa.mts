@@ -11,29 +11,17 @@ import {
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ListArgument, _decode_ListArgument, _encode_ListArgument } from "../DFRAbstractService/ListArgument.ta.mjs";
-// export { ListArgument, _decode_ListArgument, _encode_ListArgument } from "../DFRAbstractService/ListArgument.ta.mjs";
 import { ListResult, _decode_ListResult, _encode_ListResult } from "../DFRAbstractService/ListResult.ta.mjs";
-// export { ListResult, _decode_ListResult, _encode_ListResult } from "../DFRAbstractService/ListResult.ta.mjs";
 import { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
-// export { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
 import { accessError } from "../DFRAbstractService/accessError.oa.mjs";
-// export { accessError } from "../DFRAbstractService/accessError.oa.mjs";
 import { attributeError } from "../DFRAbstractService/attributeError.oa.mjs";
-// export { attributeError } from "../DFRAbstractService/attributeError.oa.mjs";
 import { nameError } from "../DFRAbstractService/nameError.oa.mjs";
-// export { nameError } from "../DFRAbstractService/nameError.oa.mjs";
 import { reservationError } from "../DFRAbstractService/reservationError.oa.mjs";
-// export { reservationError } from "../DFRAbstractService/reservationError.oa.mjs";
 import { securityError } from "../DFRAbstractService/securityError.oa.mjs";
-// export { securityError } from "../DFRAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DFRAbstractService/serviceError.oa.mjs";
-// export { serviceError } from "../DFRAbstractService/serviceError.oa.mjs";
 import { id_opcode_list } from "../DFRAbstractService/id-opcode-list.va.mjs";
-// export { id_opcode_list } from "../DFRAbstractService/id-opcode-list.va.mjs";
 
 
 /**

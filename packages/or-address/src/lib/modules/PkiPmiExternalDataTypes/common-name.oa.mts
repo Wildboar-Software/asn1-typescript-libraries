@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    CommonName,
+    type CommonName,
     _decode_CommonName,
     _encode_CommonName,
 } from "../PkiPmiExternalDataTypes/CommonName.ta.mjs";

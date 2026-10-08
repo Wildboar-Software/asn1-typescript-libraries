@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IrisInformation_eye, _enum_for_IrisInformation_eye, _decode_IrisInformation_eye, _encode_IrisInformation_eye } from "../CryptographicInformationFramework/IrisInformation-eye.ta.mjs";
-// export { IrisInformation_eye, _enum_for_IrisInformation_eye, IrisInformation_eye_left /* IMPORTED_LONG_ENUMERATION_ITEM */, left /* IMPORTED_SHORT_ENUMERATION_ITEM */, IrisInformation_eye_right /* IMPORTED_LONG_ENUMERATION_ITEM */, right /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IrisInformation_eye, _encode_IrisInformation_eye } from "../CryptographicInformationFramework/IrisInformation-eye.ta.mjs";
 
 
 /**

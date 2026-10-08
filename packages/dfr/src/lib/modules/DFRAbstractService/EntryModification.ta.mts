@@ -12,17 +12,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationFramework/Attribute.ta.mjs";
-// export { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationFramework/Attribute.ta.mjs";
 import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
-// export { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
 import { EntryModification_copy_attributes_from, _decode_EntryModification_copy_attributes_from, _encode_EntryModification_copy_attributes_from } from "../DFRAbstractService/EntryModification-copy-attributes-from.ta.mjs";
-// export { EntryModification_copy_attributes_from, _decode_EntryModification_copy_attributes_from, _encode_EntryModification_copy_attributes_from } from "../DFRAbstractService/EntryModification-copy-attributes-from.ta.mjs";
 import { EntryModification_add_values_from, _decode_EntryModification_add_values_from, _encode_EntryModification_add_values_from } from "../DFRAbstractService/EntryModification-add-values-from.ta.mjs";
-// export { EntryModification_add_values_from, _decode_EntryModification_add_values_from, _encode_EntryModification_add_values_from } from "../DFRAbstractService/EntryModification-add-values-from.ta.mjs";
 import { DfrObjectContent, _decode_DfrObjectContent, _encode_DfrObjectContent } from "../DFRAbstractService/DfrObjectContent.ta.mjs";
-// export { DfrObjectContent, _decode_DfrObjectContent, _encode_DfrObjectContent } from "../DFRAbstractService/DfrObjectContent.ta.mjs";
 import { SourceEntry, _decode_SourceEntry, _encode_SourceEntry } from "../DFRAbstractService/SourceEntry.ta.mjs";
-// export { SourceEntry, _decode_SourceEntry, _encode_SourceEntry } from "../DFRAbstractService/SourceEntry.ta.mjs";
 
 
 /**

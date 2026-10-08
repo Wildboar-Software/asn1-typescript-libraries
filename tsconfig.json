@@ -190,9 +190,6 @@
       "path": "./packages/map"
     },
     {
-      "path": "./packages/scpp"
-    },
-    {
       "path": "./packages/csta"
     },
     {
@@ -224,6 +221,24 @@
     },
     {
       "path": "./packages/logotypecertextn"
+    },
+    {
+      "path": "./packages/smrse"
+    },
+    {
+      "path": "./packages/spnego"
+    },
+    {
+      "path": "./packages/sv"
+    },
+    {
+      "path": "./packages/dn"
+    },
+    {
+      "path": "./packages/cif"
+    },
+    {
+      "path": "./packages/gn"
     }
   ],
   "compilerOptions": {

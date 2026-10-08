@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DfrEntryList_Item, _decode_DfrEntryList_Item, _encode_DfrEntryList_Item } from "../DFRAbstractService/DfrEntryList-Item.ta.mjs";
-// export { DfrEntryList_Item, _decode_DfrEntryList_Item, _encode_DfrEntryList_Item } from "../DFRAbstractService/DfrEntryList-Item.ta.mjs";
 
 
 /**

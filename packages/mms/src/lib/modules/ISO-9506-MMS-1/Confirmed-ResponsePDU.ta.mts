@@ -12,11 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
-// export { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
 import { ConfirmedServiceResponse, _decode_ConfirmedServiceResponse, _encode_ConfirmedServiceResponse } from "../ISO-9506-MMS-1/ConfirmedServiceResponse.ta.mjs";
-// export { ConfirmedServiceResponse, _decode_ConfirmedServiceResponse, _encode_ConfirmedServiceResponse } from "../ISO-9506-MMS-1/ConfirmedServiceResponse.ta.mjs";
 import { Response_Detail, _decode_Response_Detail, _encode_Response_Detail } from "../ISO-9506-MMS-1/Response-Detail.ta.mjs";
-// export { Response_Detail, _decode_Response_Detail, _encode_Response_Detail } from "../ISO-9506-MMS-1/Response-Detail.ta.mjs";
 
 
 /**

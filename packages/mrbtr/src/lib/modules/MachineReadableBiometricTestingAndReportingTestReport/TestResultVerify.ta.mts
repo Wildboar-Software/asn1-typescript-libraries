@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ResultMatchVerify, _decode_ResultMatchVerify, _encode_ResultMatchVerify } from "../MachineReadableBiometricTestingAndReportingTestReport/ResultMatchVerify.ta.mjs";
-// export { ResultMatchVerify, _decode_ResultMatchVerify, _encode_ResultMatchVerify } from "../MachineReadableBiometricTestingAndReportingTestReport/ResultMatchVerify.ta.mjs";
 import { StatisticInformationSet, _decode_StatisticInformationSet, _encode_StatisticInformationSet } from "../MachineReadableBiometricTestingAndReportingTestReport/StatisticInformationSet.ta.mjs";
-// export { StatisticInformationSet, _decode_StatisticInformationSet, _encode_StatisticInformationSet } from "../MachineReadableBiometricTestingAndReportingTestReport/StatisticInformationSet.ta.mjs";
 
 
 /**

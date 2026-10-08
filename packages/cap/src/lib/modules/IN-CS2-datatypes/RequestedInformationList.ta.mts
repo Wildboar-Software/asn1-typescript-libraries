@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedInformation, _decode_RequestedInformation, _encode_RequestedInformation } from "../IN-CS2-datatypes/RequestedInformation.ta.mjs";
-// export { RequestedInformation, _decode_RequestedInformation, _encode_RequestedInformation } from "../IN-CS2-datatypes/RequestedInformation.ta.mjs";
 
 
 /**

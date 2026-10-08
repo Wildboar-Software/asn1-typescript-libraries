@@ -13,35 +13,20 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CommonUpdateArguments, _encode_CommonUpdateArguments } from "../DFRAbstractService/CommonUpdateArguments.ta.mjs";
-// export { CommonUpdateArguments, _decode_CommonUpdateArguments, _encode_CommonUpdateArguments } from "../DFRAbstractService/CommonUpdateArguments.ta.mjs";
 import { Token, _decode_Token, _encode_Token } from "../DOR-definition/Token.ta.mjs";
-// export { Token, _decode_Token, _encode_Token } from "../DOR-definition/Token.ta.mjs";
 import { _decode_CommonArguments, _encode_CommonArguments } from "../DFRAbstractService/CommonArguments.ta.mjs";
-// export { CommonArguments, _decode_CommonArguments, _encode_CommonArguments } from "../DFRAbstractService/CommonArguments.ta.mjs";
 import { DfrObjectClass, _enum_for_DfrObjectClass, _decode_DfrObjectClass, _encode_DfrObjectClass } from "../DFRAbstractService/DfrObjectClass.ta.mjs";
-// export { DfrObjectClass, _enum_for_DfrObjectClass, DfrObjectClass_dfr_document /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_document /* IMPORTED_SHORT_ENUMERATION_ITEM */, DfrObjectClass_dfr_root_group /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_root_group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DfrObjectClass_dfr_proper_group /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_proper_group /* IMPORTED_SHORT_ENUMERATION_ITEM */, DfrObjectClass_dfr_reference /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_reference /* IMPORTED_SHORT_ENUMERATION_ITEM */, DfrObjectClass_dfr_search_result_list /* IMPORTED_LONG_ENUMERATION_ITEM */, dfr_search_result_list /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DfrObjectClass, _encode_DfrObjectClass } from "../DFRAbstractService/DfrObjectClass.ta.mjs";
 import { CommonUpdateArguments_entry, _decode_CommonUpdateArguments_entry, _encode_CommonUpdateArguments_entry } from "../DFRAbstractService/CommonUpdateArguments-entry.ta.mjs";
-// export { CommonUpdateArguments_entry, _decode_CommonUpdateArguments_entry, _encode_CommonUpdateArguments_entry } from "../DFRAbstractService/CommonUpdateArguments-entry.ta.mjs";
 import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
-// export { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 import { GroupMemberPosition, _decode_GroupMemberPosition, _encode_GroupMemberPosition } from "../DFRAbstractService/GroupMemberPosition.ta.mjs";
-// export { GroupMemberPosition, _decode_GroupMemberPosition, _encode_GroupMemberPosition } from "../DFRAbstractService/GroupMemberPosition.ta.mjs";
 import { EntryModification, _decode_EntryModification, _encode_EntryModification } from "../DFRAbstractService/EntryModification.ta.mjs";
-// export { EntryModification, _decode_EntryModification, _encode_EntryModification } from "../DFRAbstractService/EntryModification.ta.mjs";
 import { EntryInformationSelection, _decode_EntryInformationSelection, _encode_EntryInformationSelection } from "../DFRAbstractService/EntryInformationSelection.ta.mjs";
-// export { EntryInformationSelection, _decode_EntryInformationSelection, _encode_EntryInformationSelection } from "../DFRAbstractService/EntryInformationSelection.ta.mjs";
 import { Requested_QoS_level, _decode_Requested_QoS_level, _encode_Requested_QoS_level } from "../DOR-definition/Requested-QoS-level.ta.mjs";
-// export { Requested_QoS_level, _decode_Requested_QoS_level, _encode_Requested_QoS_level } from "../DOR-definition/Requested-QoS-level.ta.mjs";
 import { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
-// export { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
 import { Reservation, _decode_Reservation, _encode_Reservation } from "../DFRAbstractService/Reservation.ta.mjs";
-// export { Reservation, _decode_Reservation, _encode_Reservation } from "../DFRAbstractService/Reservation.ta.mjs";
 import { ErrorHandlingMode, _decode_ErrorHandlingMode, _encode_ErrorHandlingMode } from "../DFRAbstractService/ErrorHandlingMode.ta.mjs";
-// export { ErrorHandlingMode, _decode_ErrorHandlingMode, _encode_ErrorHandlingMode } from "../DFRAbstractService/ErrorHandlingMode.ta.mjs";
 import { Priority, _enum_for_Priority, Priority_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Priority, _encode_Priority } from "../DFRAbstractService/Priority.ta.mjs";
-// export { Priority, _enum_for_Priority, Priority_low /* IMPORTED_LONG_ENUMERATION_ITEM */, low /* IMPORTED_SHORT_ENUMERATION_ITEM */, Priority_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, medium /* IMPORTED_SHORT_ENUMERATION_ITEM */, Priority_high /* IMPORTED_LONG_ENUMERATION_ITEM */, high /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Priority, _encode_Priority } from "../DFRAbstractService/Priority.ta.mjs";
 import { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstractService/Privileges.ta.mjs";
-// export { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstractService/Privileges.ta.mjs";
 
 
 /**

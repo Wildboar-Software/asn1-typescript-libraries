@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, PrintableString } from "@wildboar/asn1";
+import { ASN1Element as _Element, type PrintableString } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -18,8 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export type CommonName = PrintableString; // PrintableString
 
-export const _decode_CommonName = $._decodePrintableString;
+export const _decode_CommonName: $.ASN1Decoder<CommonName> = $._decodePrintableString;
 
-export const _encode_CommonName = $._encodePrintableString;
+export const _encode_CommonName: $.ASN1Encoder<CommonName> = $._encodePrintableString;
 
 /* eslint-enable */

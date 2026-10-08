@@ -15,7 +15,7 @@ import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/cmip';
+} from '@wildboar/dn';
 /**
  * @summary DomainIdentity
  * @description

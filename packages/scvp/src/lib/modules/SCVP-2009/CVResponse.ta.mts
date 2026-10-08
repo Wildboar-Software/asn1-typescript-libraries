@@ -34,7 +34,7 @@ import {
   type GeneralNames,
   _decode_GeneralNames,
   _encode_GeneralNames,
-} from '@wildboar/x500/CertificateExtensions';
+} from '@wildboar/gn';
 import {
   ReplyObjects,
   _decode_ReplyObjects,

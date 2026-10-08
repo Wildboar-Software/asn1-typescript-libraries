@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DfrUniquePermanentIdentifier, _decode_DfrUniquePermanentIdentifier, _encode_DfrUniquePermanentIdentifier } from "../DFRAbstractService/DfrUniquePermanentIdentifier.ta.mjs";
-// export { DfrUniquePermanentIdentifier, _decode_DfrUniquePermanentIdentifier, _encode_DfrUniquePermanentIdentifier } from "../DFRAbstractService/DfrUniquePermanentIdentifier.ta.mjs";
 import { DfrPathName, _decode_DfrPathName, _encode_DfrPathName } from "../DFRAbstractService/DfrPathName.ta.mjs";
-// export { DfrPathName, _decode_DfrPathName, _encode_DfrPathName } from "../DFRAbstractService/DfrPathName.ta.mjs";
 
 
 /**
