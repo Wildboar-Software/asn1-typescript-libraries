@@ -129,7 +129,7 @@ let _cached_encoder_for_EnableProfileResponse: $.ASN1Encoder<EnableProfileRespon
  */
 export
 function _encode_EnableProfileResponse (value: EnableProfileResponse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EnableProfileResponse) { _cached_encoder_for_EnableProfileResponse = $._encode_implicit(_TagClass.context, 49, () => function (value: EnableProfileResponse, elGetter: $.ASN1Encoder<EnableProfileResponse>): _Element {
+    if (!_cached_encoder_for_EnableProfileResponse) { _cached_encoder_for_EnableProfileResponse = $._encode_implicit(_TagClass.context, 49, () => function (value: EnableProfileResponse): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_EnableProfileResponse_enableResult(value.enableResult, $.BER)

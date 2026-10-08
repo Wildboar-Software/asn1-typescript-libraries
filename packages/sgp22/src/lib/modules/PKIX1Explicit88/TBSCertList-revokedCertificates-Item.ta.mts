@@ -157,7 +157,7 @@ let _cached_encoder_for_TBSCertList_revokedCertificates_Item: $.ASN1Encoder<TBSC
  */
 export
 function _encode_TBSCertList_revokedCertificates_Item (value: TBSCertList_revokedCertificates_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TBSCertList_revokedCertificates_Item) { _cached_encoder_for_TBSCertList_revokedCertificates_Item = function (value: TBSCertList_revokedCertificates_Item, elGetter: $.ASN1Encoder<TBSCertList_revokedCertificates_Item>): _Element {
+    if (!_cached_encoder_for_TBSCertList_revokedCertificates_Item) { _cached_encoder_for_TBSCertList_revokedCertificates_Item = function (value: TBSCertList_revokedCertificates_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_CertificateSerialNumber(value.userCertificate, $.BER),

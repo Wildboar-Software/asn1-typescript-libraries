@@ -141,7 +141,7 @@ let _cached_encoder_for_PolicyConstraints: $.ASN1Encoder<PolicyConstraints> | nu
  */
 export
 function _encode_PolicyConstraints (value: PolicyConstraints, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PolicyConstraints) { _cached_encoder_for_PolicyConstraints = function (value: PolicyConstraints, elGetter: $.ASN1Encoder<PolicyConstraints>): _Element {
+    if (!_cached_encoder_for_PolicyConstraints) { _cached_encoder_for_PolicyConstraints = function (value: PolicyConstraints): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.requireExplicitPolicy === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_SkipCerts, $.BER)(value.requireExplicitPolicy, $.BER)),

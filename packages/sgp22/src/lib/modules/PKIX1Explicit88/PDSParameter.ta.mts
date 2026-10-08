@@ -157,7 +157,7 @@ let _cached_encoder_for_PDSParameter: $.ASN1Encoder<PDSParameter> | null = null;
  */
 export
 function _encode_PDSParameter (value: PDSParameter, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDSParameter) { _cached_encoder_for_PDSParameter = function (value: PDSParameter, elGetter: $.ASN1Encoder<PDSParameter>): _Element {
+    if (!_cached_encoder_for_PDSParameter) { _cached_encoder_for_PDSParameter = function (value: PDSParameter): _Element {
     return $._encodeSet(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.printable_string === undefined) ? undefined : $._encodePrintableString(value.printable_string, $.BER)),

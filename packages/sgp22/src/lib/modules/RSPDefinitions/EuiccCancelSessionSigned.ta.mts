@@ -156,7 +156,7 @@ let _cached_encoder_for_EuiccCancelSessionSigned: $.ASN1Encoder<EuiccCancelSessi
  */
 export
 function _encode_EuiccCancelSessionSigned (value: EuiccCancelSessionSigned, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EuiccCancelSessionSigned) { _cached_encoder_for_EuiccCancelSessionSigned = function (value: EuiccCancelSessionSigned, elGetter: $.ASN1Encoder<EuiccCancelSessionSigned>): _Element {
+    if (!_cached_encoder_for_EuiccCancelSessionSigned) { _cached_encoder_for_EuiccCancelSessionSigned = function (value: EuiccCancelSessionSigned): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_TransactionId(value.transactionId, $.BER),

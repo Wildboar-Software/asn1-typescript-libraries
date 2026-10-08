@@ -156,7 +156,7 @@ let _cached_encoder_for_AuthenticateClientRequest: $.ASN1Encoder<AuthenticateCli
  */
 export
 function _encode_AuthenticateClientRequest (value: AuthenticateClientRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateClientRequest) { _cached_encoder_for_AuthenticateClientRequest = $._encode_implicit(_TagClass.context, 59, () => function (value: AuthenticateClientRequest, elGetter: $.ASN1Encoder<AuthenticateClientRequest>): _Element {
+    if (!_cached_encoder_for_AuthenticateClientRequest) { _cached_encoder_for_AuthenticateClientRequest = $._encode_implicit(_TagClass.context, 59, () => function (value: AuthenticateClientRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

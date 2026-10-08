@@ -141,7 +141,7 @@ let _cached_encoder_for_NameConstraints: $.ASN1Encoder<NameConstraints> | null =
  */
 export
 function _encode_NameConstraints (value: NameConstraints, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NameConstraints) { _cached_encoder_for_NameConstraints = function (value: NameConstraints, elGetter: $.ASN1Encoder<NameConstraints>): _Element {
+    if (!_cached_encoder_for_NameConstraints) { _cached_encoder_for_NameConstraints = function (value: NameConstraints): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.permittedSubtrees === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_GeneralSubtrees, $.BER)(value.permittedSubtrees, $.BER)),

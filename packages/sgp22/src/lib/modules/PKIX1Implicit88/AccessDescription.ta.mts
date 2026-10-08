@@ -141,7 +141,7 @@ let _cached_encoder_for_AccessDescription: $.ASN1Encoder<AccessDescription> | nu
  */
 export
 function _encode_AccessDescription (value: AccessDescription, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccessDescription) { _cached_encoder_for_AccessDescription = function (value: AccessDescription, elGetter: $.ASN1Encoder<AccessDescription>): _Element {
+    if (!_cached_encoder_for_AccessDescription) { _cached_encoder_for_AccessDescription = function (value: AccessDescription): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeObjectIdentifier(value.accessMethod, $.BER),

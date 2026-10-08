@@ -176,7 +176,7 @@ let _cached_encoder_for_BoundProfilePackage: $.ASN1Encoder<BoundProfilePackage> 
  */
 export
 function _encode_BoundProfilePackage (value: BoundProfilePackage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BoundProfilePackage) { _cached_encoder_for_BoundProfilePackage = $._encode_implicit(_TagClass.context, 54, () => function (value: BoundProfilePackage, elGetter: $.ASN1Encoder<BoundProfilePackage>): _Element {
+    if (!_cached_encoder_for_BoundProfilePackage) { _cached_encoder_for_BoundProfilePackage = $._encode_implicit(_TagClass.context, 54, () => function (value: BoundProfilePackage): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 35, () => _encode_InitialiseSecureChannelRequest, $.BER)(value.initialiseSecureChannelRequest, $.BER),

@@ -314,7 +314,7 @@ let _cached_encoder_for_StoreMetadataRequest: $.ASN1Encoder<StoreMetadataRequest
  */
 export
 function _encode_StoreMetadataRequest (value: StoreMetadataRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_StoreMetadataRequest) { _cached_encoder_for_StoreMetadataRequest = $._encode_implicit(_TagClass.context, 37, () => function (value: StoreMetadataRequest, elGetter: $.ASN1Encoder<StoreMetadataRequest>): _Element {
+    if (!_cached_encoder_for_StoreMetadataRequest) { _cached_encoder_for_StoreMetadataRequest = $._encode_implicit(_TagClass.context, 37, () => function (value: StoreMetadataRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Iccid(value.iccid, $.BER),

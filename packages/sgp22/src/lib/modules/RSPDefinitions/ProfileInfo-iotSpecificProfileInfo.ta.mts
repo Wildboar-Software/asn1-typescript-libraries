@@ -123,7 +123,7 @@ let _cached_encoder_for_ProfileInfo_iotSpecificProfileInfo: $.ASN1Encoder<Profil
  */
 export
 function _encode_ProfileInfo_iotSpecificProfileInfo (value: ProfileInfo_iotSpecificProfileInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProfileInfo_iotSpecificProfileInfo) { _cached_encoder_for_ProfileInfo_iotSpecificProfileInfo = function (value: ProfileInfo_iotSpecificProfileInfo, elGetter: $.ASN1Encoder<ProfileInfo_iotSpecificProfileInfo>): _Element {
+    if (!_cached_encoder_for_ProfileInfo_iotSpecificProfileInfo) { _cached_encoder_for_ProfileInfo_iotSpecificProfileInfo = function (): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

@@ -141,7 +141,7 @@ let _cached_encoder_for_VendorSpecificExtension_Item: $.ASN1Encoder<VendorSpecif
  */
 export
 function _encode_VendorSpecificExtension_Item (value: VendorSpecificExtension_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_VendorSpecificExtension_Item) { _cached_encoder_for_VendorSpecificExtension_Item = function (value: VendorSpecificExtension_Item, elGetter: $.ASN1Encoder<VendorSpecificExtension_Item>): _Element {
+    if (!_cached_encoder_for_VendorSpecificExtension_Item) { _cached_encoder_for_VendorSpecificExtension_Item = function (value: VendorSpecificExtension_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeObjectIdentifier, $.BER)(value.vendorOid, $.BER),

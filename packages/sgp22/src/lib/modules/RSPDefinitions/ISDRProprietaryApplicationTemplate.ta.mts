@@ -147,7 +147,7 @@ let _cached_encoder_for_ISDRProprietaryApplicationTemplate: $.ASN1Encoder<ISDRPr
  */
 export
 function _encode_ISDRProprietaryApplicationTemplate (value: ISDRProprietaryApplicationTemplate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ISDRProprietaryApplicationTemplate) { _cached_encoder_for_ISDRProprietaryApplicationTemplate = $._encode_implicit(_TagClass.private, 0, () => function (value: ISDRProprietaryApplicationTemplate, elGetter: $.ASN1Encoder<ISDRProprietaryApplicationTemplate>): _Element {
+    if (!_cached_encoder_for_ISDRProprietaryApplicationTemplate) { _cached_encoder_for_ISDRProprietaryApplicationTemplate = $._encode_implicit(_TagClass.private, 0, () => function (value: ISDRProprietaryApplicationTemplate): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_VersionType, $.BER)(value.svn, $.BER),

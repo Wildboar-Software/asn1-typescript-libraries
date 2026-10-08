@@ -184,7 +184,7 @@ let _cached_encoder_for_InitiateAuthenticationOkEs9: $.ASN1Encoder<InitiateAuthe
  */
 export
 function _encode_InitiateAuthenticationOkEs9 (value: InitiateAuthenticationOkEs9, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitiateAuthenticationOkEs9) { _cached_encoder_for_InitiateAuthenticationOkEs9 = function (value: InitiateAuthenticationOkEs9, elGetter: $.ASN1Encoder<InitiateAuthenticationOkEs9>): _Element {
+    if (!_cached_encoder_for_InitiateAuthenticationOkEs9) { _cached_encoder_for_InitiateAuthenticationOkEs9 = function (value: InitiateAuthenticationOkEs9): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

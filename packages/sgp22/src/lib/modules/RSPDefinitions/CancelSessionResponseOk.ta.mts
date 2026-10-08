@@ -142,7 +142,7 @@ let _cached_encoder_for_CancelSessionResponseOk: $.ASN1Encoder<CancelSessionResp
  */
 export
 function _encode_CancelSessionResponseOk (value: CancelSessionResponseOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CancelSessionResponseOk) { _cached_encoder_for_CancelSessionResponseOk = function (value: CancelSessionResponseOk, elGetter: $.ASN1Encoder<CancelSessionResponseOk>): _Element {
+    if (!_cached_encoder_for_CancelSessionResponseOk) { _cached_encoder_for_CancelSessionResponseOk = function (value: CancelSessionResponseOk): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_EuiccCancelSessionSigned(value.euiccCancelSessionSigned, $.BER),

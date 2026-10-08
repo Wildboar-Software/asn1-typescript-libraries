@@ -143,7 +143,7 @@ let _cached_encoder_for_UserNotice: $.ASN1Encoder<UserNotice> | null = null;
  */
 export
 function _encode_UserNotice (value: UserNotice, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UserNotice) { _cached_encoder_for_UserNotice = function (value: UserNotice, elGetter: $.ASN1Encoder<UserNotice>): _Element {
+    if (!_cached_encoder_for_UserNotice) { _cached_encoder_for_UserNotice = function (value: UserNotice): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.noticeRef === undefined) ? undefined : _encode_NoticeReference(value.noticeRef, $.BER)),

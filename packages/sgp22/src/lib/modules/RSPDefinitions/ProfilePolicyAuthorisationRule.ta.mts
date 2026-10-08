@@ -157,7 +157,7 @@ let _cached_encoder_for_ProfilePolicyAuthorisationRule: $.ASN1Encoder<ProfilePol
  */
 export
 function _encode_ProfilePolicyAuthorisationRule (value: ProfilePolicyAuthorisationRule, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProfilePolicyAuthorisationRule) { _cached_encoder_for_ProfilePolicyAuthorisationRule = function (value: ProfilePolicyAuthorisationRule, elGetter: $.ASN1Encoder<ProfilePolicyAuthorisationRule>): _Element {
+    if (!_cached_encoder_for_ProfilePolicyAuthorisationRule) { _cached_encoder_for_ProfilePolicyAuthorisationRule = function (value: ProfilePolicyAuthorisationRule): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_PprIds(value.pprIds, $.BER),

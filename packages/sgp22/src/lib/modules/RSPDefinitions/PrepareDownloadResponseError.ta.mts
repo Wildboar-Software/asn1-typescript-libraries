@@ -143,7 +143,7 @@ let _cached_encoder_for_PrepareDownloadResponseError: $.ASN1Encoder<PrepareDownl
  */
 export
 function _encode_PrepareDownloadResponseError (value: PrepareDownloadResponseError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PrepareDownloadResponseError) { _cached_encoder_for_PrepareDownloadResponseError = function (value: PrepareDownloadResponseError, elGetter: $.ASN1Encoder<PrepareDownloadResponseError>): _Element {
+    if (!_cached_encoder_for_PrepareDownloadResponseError) { _cached_encoder_for_PrepareDownloadResponseError = function (value: PrepareDownloadResponseError): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

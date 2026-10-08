@@ -143,7 +143,7 @@ let _cached_encoder_for_ProfileInstallationResult: $.ASN1Encoder<ProfileInstalla
  */
 export
 function _encode_ProfileInstallationResult (value: ProfileInstallationResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProfileInstallationResult) { _cached_encoder_for_ProfileInstallationResult = $._encode_implicit(_TagClass.context, 55, () => function (value: ProfileInstallationResult, elGetter: $.ASN1Encoder<ProfileInstallationResult>): _Element {
+    if (!_cached_encoder_for_ProfileInstallationResult) { _cached_encoder_for_ProfileInstallationResult = $._encode_implicit(_TagClass.context, 55, () => function (value: ProfileInstallationResult): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 39, () => _encode_ProfileInstallationResultData, $.BER)(value.profileInstallationResultData, $.BER),

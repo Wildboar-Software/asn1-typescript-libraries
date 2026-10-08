@@ -215,7 +215,7 @@ let _cached_encoder_for_IssuingDistributionPoint: $.ASN1Encoder<IssuingDistribut
  */
 export
 function _encode_IssuingDistributionPoint (value: IssuingDistributionPoint, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IssuingDistributionPoint) { _cached_encoder_for_IssuingDistributionPoint = function (value: IssuingDistributionPoint, elGetter: $.ASN1Encoder<IssuingDistributionPoint>): _Element {
+    if (!_cached_encoder_for_IssuingDistributionPoint) { _cached_encoder_for_IssuingDistributionPoint = function (value: IssuingDistributionPoint): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.distributionPoint === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_DistributionPointName, $.BER)(value.distributionPoint, $.BER)),

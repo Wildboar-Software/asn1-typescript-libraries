@@ -141,7 +141,7 @@ let _cached_encoder_for_CertificationDataObject: $.ASN1Encoder<CertificationData
  */
 export
 function _encode_CertificationDataObject (value: CertificationDataObject, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CertificationDataObject) { _cached_encoder_for_CertificationDataObject = function (value: CertificationDataObject, elGetter: $.ASN1Encoder<CertificationDataObject>): _Element {
+    if (!_cached_encoder_for_CertificationDataObject) { _cached_encoder_for_CertificationDataObject = function (value: CertificationDataObject): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeUTF8String(value.platformLabel, $.BER),

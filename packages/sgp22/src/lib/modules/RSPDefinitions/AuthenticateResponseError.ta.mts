@@ -143,7 +143,7 @@ let _cached_encoder_for_AuthenticateResponseError: $.ASN1Encoder<AuthenticateRes
  */
 export
 function _encode_AuthenticateResponseError (value: AuthenticateResponseError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateResponseError) { _cached_encoder_for_AuthenticateResponseError = function (value: AuthenticateResponseError, elGetter: $.ASN1Encoder<AuthenticateResponseError>): _Element {
+    if (!_cached_encoder_for_AuthenticateResponseError) { _cached_encoder_for_AuthenticateResponseError = function (value: AuthenticateResponseError): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

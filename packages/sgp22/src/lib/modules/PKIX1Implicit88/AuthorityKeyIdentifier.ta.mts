@@ -163,7 +163,7 @@ let _cached_encoder_for_AuthorityKeyIdentifier: $.ASN1Encoder<AuthorityKeyIdenti
  */
 export
 function _encode_AuthorityKeyIdentifier (value: AuthorityKeyIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthorityKeyIdentifier) { _cached_encoder_for_AuthorityKeyIdentifier = function (value: AuthorityKeyIdentifier, elGetter: $.ASN1Encoder<AuthorityKeyIdentifier>): _Element {
+    if (!_cached_encoder_for_AuthorityKeyIdentifier) { _cached_encoder_for_AuthorityKeyIdentifier = function (value: AuthorityKeyIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.keyIdentifier === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_KeyIdentifier, $.BER)(value.keyIdentifier, $.BER)),

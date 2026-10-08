@@ -182,7 +182,7 @@ let _cached_encoder_for_InitialiseSecureChannelRequest: $.ASN1Encoder<Initialise
  */
 export
 function _encode_InitialiseSecureChannelRequest (value: InitialiseSecureChannelRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitialiseSecureChannelRequest) { _cached_encoder_for_InitialiseSecureChannelRequest = $._encode_implicit(_TagClass.context, 35, () => function (value: InitialiseSecureChannelRequest, elGetter: $.ASN1Encoder<InitialiseSecureChannelRequest>): _Element {
+    if (!_cached_encoder_for_InitialiseSecureChannelRequest) { _cached_encoder_for_InitialiseSecureChannelRequest = $._encode_implicit(_TagClass.context, 35, () => function (value: InitialiseSecureChannelRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_RemoteOpId(value.remoteOpId, $.BER),

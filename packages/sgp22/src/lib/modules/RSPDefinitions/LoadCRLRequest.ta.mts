@@ -130,7 +130,7 @@ let _cached_encoder_for_LoadCRLRequest: $.ASN1Encoder<LoadCRLRequest> | null = n
  */
 export
 function _encode_LoadCRLRequest (value: LoadCRLRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LoadCRLRequest) { _cached_encoder_for_LoadCRLRequest = $._encode_implicit(_TagClass.context, 53, () => function (value: LoadCRLRequest, elGetter: $.ASN1Encoder<LoadCRLRequest>): _Element {
+    if (!_cached_encoder_for_LoadCRLRequest) { _cached_encoder_for_LoadCRLRequest = $._encode_implicit(_TagClass.context, 53, () => function (value: LoadCRLRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_CertificateList(value.crl, $.BER)

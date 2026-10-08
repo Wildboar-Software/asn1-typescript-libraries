@@ -160,7 +160,7 @@ let _cached_encoder_for_GeneralSubtree: $.ASN1Encoder<GeneralSubtree> | null = n
  */
 export
 function _encode_GeneralSubtree (value: GeneralSubtree, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GeneralSubtree) { _cached_encoder_for_GeneralSubtree = function (value: GeneralSubtree, elGetter: $.ASN1Encoder<GeneralSubtree>): _Element {
+    if (!_cached_encoder_for_GeneralSubtree) { _cached_encoder_for_GeneralSubtree = function (value: GeneralSubtree): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_GeneralName(value.base, $.BER),

@@ -143,7 +143,7 @@ let _cached_encoder_for_CtxParamsForCommonAuthentication: $.ASN1Encoder<CtxParam
  */
 export
 function _encode_CtxParamsForCommonAuthentication (value: CtxParamsForCommonAuthentication, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CtxParamsForCommonAuthentication) { _cached_encoder_for_CtxParamsForCommonAuthentication = function (value: CtxParamsForCommonAuthentication, elGetter: $.ASN1Encoder<CtxParamsForCommonAuthentication>): _Element {
+    if (!_cached_encoder_for_CtxParamsForCommonAuthentication) { _cached_encoder_for_CtxParamsForCommonAuthentication = function (value: CtxParamsForCommonAuthentication): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.matchingId === undefined) ? undefined : $._encodeUTF8String(value.matchingId, $.BER)),

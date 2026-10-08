@@ -141,7 +141,7 @@ let _cached_encoder_for_EventEntries: $.ASN1Encoder<EventEntries> | null = null;
  */
 export
 function _encode_EventEntries (value: EventEntries, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EventEntries) { _cached_encoder_for_EventEntries = function (value: EventEntries, elGetter: $.ASN1Encoder<EventEntries>): _Element {
+    if (!_cached_encoder_for_EventEntries) { _cached_encoder_for_EventEntries = function (value: EventEntries): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeUTF8String(value.eventId, $.BER),

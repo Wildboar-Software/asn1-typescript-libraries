@@ -219,7 +219,7 @@ let _cached_encoder_for_UpdateMetadataRequest: $.ASN1Encoder<UpdateMetadataReque
  */
 export
 function _encode_UpdateMetadataRequest (value: UpdateMetadataRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UpdateMetadataRequest) { _cached_encoder_for_UpdateMetadataRequest = $._encode_implicit(_TagClass.context, 42, () => function (value: UpdateMetadataRequest, elGetter: $.ASN1Encoder<UpdateMetadataRequest>): _Element {
+    if (!_cached_encoder_for_UpdateMetadataRequest) { _cached_encoder_for_UpdateMetadataRequest = $._encode_implicit(_TagClass.context, 42, () => function (value: UpdateMetadataRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.serviceProviderName === undefined) ? undefined : $._encode_implicit(_TagClass.context, 17, () => $._encodeUTF8String, $.BER)(value.serviceProviderName, $.BER)),

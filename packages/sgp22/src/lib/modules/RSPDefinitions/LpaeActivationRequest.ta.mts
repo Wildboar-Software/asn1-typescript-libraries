@@ -132,7 +132,7 @@ let _cached_encoder_for_LpaeActivationRequest: $.ASN1Encoder<LpaeActivationReque
  */
 export
 function _encode_LpaeActivationRequest (value: LpaeActivationRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LpaeActivationRequest) { _cached_encoder_for_LpaeActivationRequest = $._encode_implicit(_TagClass.context, 66, () => function (value: LpaeActivationRequest, elGetter: $.ASN1Encoder<LpaeActivationRequest>): _Element {
+    if (!_cached_encoder_for_LpaeActivationRequest) { _cached_encoder_for_LpaeActivationRequest = $._encode_implicit(_TagClass.context, 66, () => function (value: LpaeActivationRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_LpaeActivationRequest_lpaeOption(value.lpaeOption, $.BER)

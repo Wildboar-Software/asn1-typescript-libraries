@@ -146,7 +146,7 @@ let _cached_encoder_for_PrivateKeyUsagePeriod: $.ASN1Encoder<PrivateKeyUsagePeri
  */
 export
 function _encode_PrivateKeyUsagePeriod (value: PrivateKeyUsagePeriod, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PrivateKeyUsagePeriod) { _cached_encoder_for_PrivateKeyUsagePeriod = function (value: PrivateKeyUsagePeriod, elGetter: $.ASN1Encoder<PrivateKeyUsagePeriod>): _Element {
+    if (!_cached_encoder_for_PrivateKeyUsagePeriod) { _cached_encoder_for_PrivateKeyUsagePeriod = function (value: PrivateKeyUsagePeriod): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.notBefore === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeGeneralizedTime, $.BER)(value.notBefore, $.BER)),

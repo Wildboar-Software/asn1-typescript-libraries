@@ -142,7 +142,7 @@ let _cached_encoder_for_NotificationConfigurationInformation: $.ASN1Encoder<Noti
  */
 export
 function _encode_NotificationConfigurationInformation (value: NotificationConfigurationInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotificationConfigurationInformation) { _cached_encoder_for_NotificationConfigurationInformation = function (value: NotificationConfigurationInformation, elGetter: $.ASN1Encoder<NotificationConfigurationInformation>): _Element {
+    if (!_cached_encoder_for_NotificationConfigurationInformation) { _cached_encoder_for_NotificationConfigurationInformation = function (value: NotificationConfigurationInformation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_NotificationEvent(value.profileManagementOperation, $.BER),

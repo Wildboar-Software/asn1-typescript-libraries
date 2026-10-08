@@ -123,7 +123,7 @@ let _cached_encoder_for_GetEuiccInfo2Request: $.ASN1Encoder<GetEuiccInfo2Request
  */
 export
 function _encode_GetEuiccInfo2Request (value: GetEuiccInfo2Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetEuiccInfo2Request) { _cached_encoder_for_GetEuiccInfo2Request = $._encode_implicit(_TagClass.context, 34, () => function (value: GetEuiccInfo2Request, elGetter: $.ASN1Encoder<GetEuiccInfo2Request>): _Element {
+    if (!_cached_encoder_for_GetEuiccInfo2Request) { _cached_encoder_for_GetEuiccInfo2Request = $._encode_implicit(_TagClass.context, 34, () => function (): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }, $.BER); }

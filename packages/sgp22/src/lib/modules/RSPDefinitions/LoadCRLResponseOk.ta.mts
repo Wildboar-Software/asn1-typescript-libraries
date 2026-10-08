@@ -131,7 +131,7 @@ let _cached_encoder_for_LoadCRLResponseOk: $.ASN1Encoder<LoadCRLResponseOk> | nu
  */
 export
 function _encode_LoadCRLResponseOk (value: LoadCRLResponseOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LoadCRLResponseOk) { _cached_encoder_for_LoadCRLResponseOk = function (value: LoadCRLResponseOk, elGetter: $.ASN1Encoder<LoadCRLResponseOk>): _Element {
+    if (!_cached_encoder_for_LoadCRLResponseOk) { _cached_encoder_for_LoadCRLResponseOk = function (value: LoadCRLResponseOk): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.missingParts === undefined) ? undefined : $._encodeSequenceOf<INTEGER>(() => $._encodeInteger, $.BER)(value.missingParts, $.BER))

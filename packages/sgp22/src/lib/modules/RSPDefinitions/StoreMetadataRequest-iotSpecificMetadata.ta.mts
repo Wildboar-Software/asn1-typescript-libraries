@@ -123,7 +123,7 @@ let _cached_encoder_for_StoreMetadataRequest_iotSpecificMetadata: $.ASN1Encoder<
  */
 export
 function _encode_StoreMetadataRequest_iotSpecificMetadata (value: StoreMetadataRequest_iotSpecificMetadata, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_StoreMetadataRequest_iotSpecificMetadata) { _cached_encoder_for_StoreMetadataRequest_iotSpecificMetadata = function (value: StoreMetadataRequest_iotSpecificMetadata, elGetter: $.ASN1Encoder<StoreMetadataRequest_iotSpecificMetadata>): _Element {
+    if (!_cached_encoder_for_StoreMetadataRequest_iotSpecificMetadata) { _cached_encoder_for_StoreMetadataRequest_iotSpecificMetadata = function (): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

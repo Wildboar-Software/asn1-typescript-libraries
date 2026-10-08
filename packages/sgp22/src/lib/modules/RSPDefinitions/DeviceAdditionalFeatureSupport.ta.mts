@@ -143,7 +143,7 @@ let _cached_encoder_for_DeviceAdditionalFeatureSupport: $.ASN1Encoder<DeviceAddi
  */
 export
 function _encode_DeviceAdditionalFeatureSupport (value: DeviceAdditionalFeatureSupport, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DeviceAdditionalFeatureSupport) { _cached_encoder_for_DeviceAdditionalFeatureSupport = function (value: DeviceAdditionalFeatureSupport, elGetter: $.ASN1Encoder<DeviceAdditionalFeatureSupport>): _Element {
+    if (!_cached_encoder_for_DeviceAdditionalFeatureSupport) { _cached_encoder_for_DeviceAdditionalFeatureSupport = function (value: DeviceAdditionalFeatureSupport): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.naiSupport === undefined) ? undefined : _encode_VersionType(value.naiSupport, $.BER)),

@@ -212,7 +212,7 @@ let _cached_encoder_for_TBSCertList: $.ASN1Encoder<TBSCertList> | null = null;
  */
 export
 function _encode_TBSCertList (value: TBSCertList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TBSCertList) { _cached_encoder_for_TBSCertList = function (value: TBSCertList, elGetter: $.ASN1Encoder<TBSCertList>): _Element {
+    if (!_cached_encoder_for_TBSCertList) { _cached_encoder_for_TBSCertList = function (value: TBSCertList): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.version === undefined) ? undefined : _encode_Version(value.version, $.BER)),

@@ -190,7 +190,7 @@ let _cached_encoder_for_TeletexPersonalName: $.ASN1Encoder<TeletexPersonalName> 
  */
 export
 function _encode_TeletexPersonalName (value: TeletexPersonalName, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TeletexPersonalName) { _cached_encoder_for_TeletexPersonalName = function (value: TeletexPersonalName, elGetter: $.ASN1Encoder<TeletexPersonalName>): _Element {
+    if (!_cached_encoder_for_TeletexPersonalName) { _cached_encoder_for_TeletexPersonalName = function (value: TeletexPersonalName): _Element {
     return $._encodeSet(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeTeletexString, $.BER)(value.surname, $.BER),

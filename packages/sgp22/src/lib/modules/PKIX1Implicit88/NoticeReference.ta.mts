@@ -141,7 +141,7 @@ let _cached_encoder_for_NoticeReference: $.ASN1Encoder<NoticeReference> | null =
  */
 export
 function _encode_NoticeReference (value: NoticeReference, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NoticeReference) { _cached_encoder_for_NoticeReference = function (value: NoticeReference, elGetter: $.ASN1Encoder<NoticeReference>): _Element {
+    if (!_cached_encoder_for_NoticeReference) { _cached_encoder_for_NoticeReference = function (value: NoticeReference): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_DisplayText(value.organization, $.BER),

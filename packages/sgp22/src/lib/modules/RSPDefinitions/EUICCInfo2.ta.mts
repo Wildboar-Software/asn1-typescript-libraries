@@ -424,7 +424,7 @@ let _cached_encoder_for_EUICCInfo2: $.ASN1Encoder<EUICCInfo2> | null = null;
  */
 export
 function _encode_EUICCInfo2 (value: EUICCInfo2, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EUICCInfo2) { _cached_encoder_for_EUICCInfo2 = $._encode_implicit(_TagClass.context, 34, () => function (value: EUICCInfo2, elGetter: $.ASN1Encoder<EUICCInfo2>): _Element {
+    if (!_cached_encoder_for_EUICCInfo2) { _cached_encoder_for_EUICCInfo2 = $._encode_implicit(_TagClass.context, 34, () => function (value: EUICCInfo2): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_VersionType, $.BER)(value.profileVersion, $.BER),

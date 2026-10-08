@@ -184,7 +184,7 @@ let _cached_encoder_for_AuthenticateServerRequest: $.ASN1Encoder<AuthenticateSer
  */
 export
 function _encode_AuthenticateServerRequest (value: AuthenticateServerRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateServerRequest) { _cached_encoder_for_AuthenticateServerRequest = $._encode_implicit(_TagClass.context, 56, () => function (value: AuthenticateServerRequest, elGetter: $.ASN1Encoder<AuthenticateServerRequest>): _Element {
+    if (!_cached_encoder_for_AuthenticateServerRequest) { _cached_encoder_for_AuthenticateServerRequest = $._encode_implicit(_TagClass.context, 56, () => function (value: AuthenticateServerRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ServerSigned1(value.serverSigned1, $.BER),

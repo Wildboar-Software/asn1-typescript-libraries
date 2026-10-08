@@ -239,7 +239,7 @@ let _cached_encoder_for_BuiltInStandardAttributes: $.ASN1Encoder<BuiltInStandard
  */
 export
 function _encode_BuiltInStandardAttributes (value: BuiltInStandardAttributes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BuiltInStandardAttributes) { _cached_encoder_for_BuiltInStandardAttributes = function (value: BuiltInStandardAttributes, elGetter: $.ASN1Encoder<BuiltInStandardAttributes>): _Element {
+    if (!_cached_encoder_for_BuiltInStandardAttributes) { _cached_encoder_for_BuiltInStandardAttributes = function (value: BuiltInStandardAttributes): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.country_name === undefined) ? undefined : _encode_CountryName(value.country_name, $.BER)),

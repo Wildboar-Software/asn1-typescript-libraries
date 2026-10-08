@@ -168,7 +168,7 @@ let _cached_encoder_for_AuthenticateResponseOk: $.ASN1Encoder<AuthenticateRespon
  */
 export
 function _encode_AuthenticateResponseOk (value: AuthenticateResponseOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateResponseOk) { _cached_encoder_for_AuthenticateResponseOk = function (value: AuthenticateResponseOk, elGetter: $.ASN1Encoder<AuthenticateResponseOk>): _Element {
+    if (!_cached_encoder_for_AuthenticateResponseOk) { _cached_encoder_for_AuthenticateResponseOk = function (value: AuthenticateResponseOk): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_EuiccSigned1(value.euiccSigned1, $.BER),

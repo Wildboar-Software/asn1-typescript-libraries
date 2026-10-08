@@ -143,7 +143,7 @@ let _cached_encoder_for_CancelSessionRequest: $.ASN1Encoder<CancelSessionRequest
  */
 export
 function _encode_CancelSessionRequest (value: CancelSessionRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CancelSessionRequest) { _cached_encoder_for_CancelSessionRequest = $._encode_implicit(_TagClass.context, 65, () => function (value: CancelSessionRequest, elGetter: $.ASN1Encoder<CancelSessionRequest>): _Element {
+    if (!_cached_encoder_for_CancelSessionRequest) { _cached_encoder_for_CancelSessionRequest = $._encode_implicit(_TagClass.context, 65, () => function (value: CancelSessionRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_TransactionId(value.transactionId, $.BER),

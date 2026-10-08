@@ -142,7 +142,7 @@ let _cached_encoder_for_PrepareDownloadResponseOk: $.ASN1Encoder<PrepareDownload
  */
 export
 function _encode_PrepareDownloadResponseOk (value: PrepareDownloadResponseOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PrepareDownloadResponseOk) { _cached_encoder_for_PrepareDownloadResponseOk = function (value: PrepareDownloadResponseOk, elGetter: $.ASN1Encoder<PrepareDownloadResponseOk>): _Element {
+    if (!_cached_encoder_for_PrepareDownloadResponseOk) { _cached_encoder_for_PrepareDownloadResponseOk = function (value: PrepareDownloadResponseOk): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_EUICCSigned2(value.euiccSigned2, $.BER),

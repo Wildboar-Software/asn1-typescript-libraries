@@ -190,7 +190,7 @@ let _cached_encoder_for_PersonalName: $.ASN1Encoder<PersonalName> | null = null;
  */
 export
 function _encode_PersonalName (value: PersonalName, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PersonalName) { _cached_encoder_for_PersonalName = function (value: PersonalName, elGetter: $.ASN1Encoder<PersonalName>): _Element {
+    if (!_cached_encoder_for_PersonalName) { _cached_encoder_for_PersonalName = function (value: PersonalName): _Element {
     return $._encodeSet(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodePrintableString, $.BER)(value.surname, $.BER),

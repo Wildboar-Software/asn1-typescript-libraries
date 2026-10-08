@@ -122,7 +122,7 @@ let _cached_encoder_for_IoTSpecificInfo: $.ASN1Encoder<IoTSpecificInfo> | null =
  */
 export
 function _encode_IoTSpecificInfo (value: IoTSpecificInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IoTSpecificInfo) { _cached_encoder_for_IoTSpecificInfo = function (value: IoTSpecificInfo, elGetter: $.ASN1Encoder<IoTSpecificInfo>): _Element {
+    if (!_cached_encoder_for_IoTSpecificInfo) { _cached_encoder_for_IoTSpecificInfo = function (): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

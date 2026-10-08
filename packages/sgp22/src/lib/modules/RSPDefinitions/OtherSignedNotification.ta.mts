@@ -168,7 +168,7 @@ let _cached_encoder_for_OtherSignedNotification: $.ASN1Encoder<OtherSignedNotifi
  */
 export
 function _encode_OtherSignedNotification (value: OtherSignedNotification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OtherSignedNotification) { _cached_encoder_for_OtherSignedNotification = function (value: OtherSignedNotification, elGetter: $.ASN1Encoder<OtherSignedNotification>): _Element {
+    if (!_cached_encoder_for_OtherSignedNotification) { _cached_encoder_for_OtherSignedNotification = function (value: OtherSignedNotification): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_NotificationMetadata(value.tbsOtherNotification, $.BER),

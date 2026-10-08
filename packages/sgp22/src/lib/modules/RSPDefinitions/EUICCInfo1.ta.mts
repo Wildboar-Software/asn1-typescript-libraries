@@ -155,7 +155,7 @@ let _cached_encoder_for_EUICCInfo1: $.ASN1Encoder<EUICCInfo1> | null = null;
  */
 export
 function _encode_EUICCInfo1 (value: EUICCInfo1, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EUICCInfo1) { _cached_encoder_for_EUICCInfo1 = $._encode_implicit(_TagClass.context, 32, () => function (value: EUICCInfo1, elGetter: $.ASN1Encoder<EUICCInfo1>): _Element {
+    if (!_cached_encoder_for_EUICCInfo1) { _cached_encoder_for_EUICCInfo1 = $._encode_implicit(_TagClass.context, 32, () => function (value: EUICCInfo1): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_VersionType, $.BER)(value.svn, $.BER),

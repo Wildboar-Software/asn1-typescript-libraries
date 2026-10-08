@@ -367,7 +367,7 @@ let _cached_encoder_for_ProfileInfo: $.ASN1Encoder<ProfileInfo> | null = null;
  */
 export
 function _encode_ProfileInfo (value: ProfileInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProfileInfo) { _cached_encoder_for_ProfileInfo = $._encode_implicit(_TagClass.private, 3, () => function (value: ProfileInfo, elGetter: $.ASN1Encoder<ProfileInfo>): _Element {
+    if (!_cached_encoder_for_ProfileInfo) { _cached_encoder_for_ProfileInfo = $._encode_implicit(_TagClass.private, 3, () => function (value: ProfileInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.iccid === undefined) ? undefined : _encode_Iccid(value.iccid, $.BER)),

@@ -141,7 +141,7 @@ let _cached_encoder_for_PolicyMappings_Item: $.ASN1Encoder<PolicyMappings_Item> 
  */
 export
 function _encode_PolicyMappings_Item (value: PolicyMappings_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PolicyMappings_Item) { _cached_encoder_for_PolicyMappings_Item = function (value: PolicyMappings_Item, elGetter: $.ASN1Encoder<PolicyMappings_Item>): _Element {
+    if (!_cached_encoder_for_PolicyMappings_Item) { _cached_encoder_for_PolicyMappings_Item = function (value: PolicyMappings_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_CertPolicyId(value.issuerDomainPolicy, $.BER),

@@ -147,7 +147,7 @@ let _cached_encoder_for_SetNicknameRequest: $.ASN1Encoder<SetNicknameRequest> | 
  */
 export
 function _encode_SetNicknameRequest (value: SetNicknameRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SetNicknameRequest) { _cached_encoder_for_SetNicknameRequest = $._encode_implicit(_TagClass.context, 41, () => function (value: SetNicknameRequest, elGetter: $.ASN1Encoder<SetNicknameRequest>): _Element {
+    if (!_cached_encoder_for_SetNicknameRequest) { _cached_encoder_for_SetNicknameRequest = $._encode_implicit(_TagClass.context, 41, () => function (value: SetNicknameRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Iccid(value.iccid, $.BER),

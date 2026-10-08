@@ -156,7 +156,7 @@ let _cached_encoder_for_BasicConstraints: $.ASN1Encoder<BasicConstraints> | null
  */
 export
 function _encode_BasicConstraints (value: BasicConstraints, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BasicConstraints) { _cached_encoder_for_BasicConstraints = function (value: BasicConstraints, elGetter: $.ASN1Encoder<BasicConstraints>): _Element {
+    if (!_cached_encoder_for_BasicConstraints) { _cached_encoder_for_BasicConstraints = function (value: BasicConstraints): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.cA === undefined || $.deepEq(value.cA, BasicConstraints._default_value_for_cA) ? undefined : $._encodeBoolean(value.cA, $.BER)),

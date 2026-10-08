@@ -168,7 +168,7 @@ let _cached_encoder_for_NotificationMetadata: $.ASN1Encoder<NotificationMetadata
  */
 export
 function _encode_NotificationMetadata (value: NotificationMetadata, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotificationMetadata) { _cached_encoder_for_NotificationMetadata = $._encode_implicit(_TagClass.context, 47, () => function (value: NotificationMetadata, elGetter: $.ASN1Encoder<NotificationMetadata>): _Element {
+    if (!_cached_encoder_for_NotificationMetadata) { _cached_encoder_for_NotificationMetadata = $._encode_implicit(_TagClass.context, 47, () => function (value: NotificationMetadata): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.seqNumber, $.BER),

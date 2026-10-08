@@ -141,7 +141,7 @@ let _cached_encoder_for_EDIPartyName: $.ASN1Encoder<EDIPartyName> | null = null;
  */
 export
 function _encode_EDIPartyName (value: EDIPartyName, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EDIPartyName) { _cached_encoder_for_EDIPartyName = function (value: EDIPartyName, elGetter: $.ASN1Encoder<EDIPartyName>): _Element {
+    if (!_cached_encoder_for_EDIPartyName) { _cached_encoder_for_EDIPartyName = function (value: EDIPartyName): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.nameAssigner === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_DirectoryString, $.BER)(value.nameAssigner, $.BER)),

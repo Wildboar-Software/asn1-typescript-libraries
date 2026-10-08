@@ -158,7 +158,7 @@ let _cached_encoder_for_ProfileInfoListRequest: $.ASN1Encoder<ProfileInfoListReq
  */
 export
 function _encode_ProfileInfoListRequest (value: ProfileInfoListRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProfileInfoListRequest) { _cached_encoder_for_ProfileInfoListRequest = $._encode_implicit(_TagClass.context, 45, () => function (value: ProfileInfoListRequest, elGetter: $.ASN1Encoder<ProfileInfoListRequest>): _Element {
+    if (!_cached_encoder_for_ProfileInfoListRequest) { _cached_encoder_for_ProfileInfoListRequest = $._encode_implicit(_TagClass.context, 45, () => function (value: ProfileInfoListRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.searchCriteria === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => _encode_ProfileInfoListRequest_searchCriteria, $.BER)(value.searchCriteria, $.BER)),

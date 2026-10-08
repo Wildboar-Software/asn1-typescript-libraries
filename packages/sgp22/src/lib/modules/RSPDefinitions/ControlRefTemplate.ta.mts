@@ -155,7 +155,7 @@ let _cached_encoder_for_ControlRefTemplate: $.ASN1Encoder<ControlRefTemplate> | 
  */
 export
 function _encode_ControlRefTemplate (value: ControlRefTemplate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ControlRefTemplate) { _cached_encoder_for_ControlRefTemplate = function (value: ControlRefTemplate, elGetter: $.ASN1Encoder<ControlRefTemplate>): _Element {
+    if (!_cached_encoder_for_ControlRefTemplate) { _cached_encoder_for_ControlRefTemplate = function (value: ControlRefTemplate): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_Octet1, $.BER)(value.keyType, $.BER),

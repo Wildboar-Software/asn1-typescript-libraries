@@ -184,7 +184,7 @@ let _cached_encoder_for_AuthenticateClientOk: $.ASN1Encoder<AuthenticateClientOk
  */
 export
 function _encode_AuthenticateClientOk (value: AuthenticateClientOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateClientOk) { _cached_encoder_for_AuthenticateClientOk = function (value: AuthenticateClientOk, elGetter: $.ASN1Encoder<AuthenticateClientOk>): _Element {
+    if (!_cached_encoder_for_AuthenticateClientOk) { _cached_encoder_for_AuthenticateClientOk = function (value: AuthenticateClientOk): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

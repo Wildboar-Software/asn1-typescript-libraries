@@ -156,7 +156,7 @@ let _cached_encoder_for_ErrorResult: $.ASN1Encoder<ErrorResult> | null = null;
  */
 export
 function _encode_ErrorResult (value: ErrorResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ErrorResult) { _cached_encoder_for_ErrorResult = function (value: ErrorResult, elGetter: $.ASN1Encoder<ErrorResult>): _Element {
+    if (!_cached_encoder_for_ErrorResult) { _cached_encoder_for_ErrorResult = function (value: ErrorResult): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_BppCommandId(value.bppCommandId, $.BER),

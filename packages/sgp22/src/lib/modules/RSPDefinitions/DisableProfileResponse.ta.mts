@@ -129,7 +129,7 @@ let _cached_encoder_for_DisableProfileResponse: $.ASN1Encoder<DisableProfileResp
  */
 export
 function _encode_DisableProfileResponse (value: DisableProfileResponse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DisableProfileResponse) { _cached_encoder_for_DisableProfileResponse = $._encode_implicit(_TagClass.context, 50, () => function (value: DisableProfileResponse, elGetter: $.ASN1Encoder<DisableProfileResponse>): _Element {
+    if (!_cached_encoder_for_DisableProfileResponse) { _cached_encoder_for_DisableProfileResponse = $._encode_implicit(_TagClass.context, 50, () => function (value: DisableProfileResponse): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_DisableProfileResponse_disableResult(value.disableResult, $.BER)

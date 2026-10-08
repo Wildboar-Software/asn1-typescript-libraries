@@ -156,7 +156,7 @@ let _cached_encoder_for_InitiateAuthenticationRequest: $.ASN1Encoder<InitiateAut
  */
 export
 function _encode_InitiateAuthenticationRequest (value: InitiateAuthenticationRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitiateAuthenticationRequest) { _cached_encoder_for_InitiateAuthenticationRequest = $._encode_implicit(_TagClass.context, 57, () => function (value: InitiateAuthenticationRequest, elGetter: $.ASN1Encoder<InitiateAuthenticationRequest>): _Element {
+    if (!_cached_encoder_for_InitiateAuthenticationRequest) { _cached_encoder_for_InitiateAuthenticationRequest = $._encode_implicit(_TagClass.context, 57, () => function (value: InitiateAuthenticationRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_Octet16, $.BER)(value.euiccChallenge, $.BER),

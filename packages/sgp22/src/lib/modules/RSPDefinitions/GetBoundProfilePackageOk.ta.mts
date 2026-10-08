@@ -143,7 +143,7 @@ let _cached_encoder_for_GetBoundProfilePackageOk: $.ASN1Encoder<GetBoundProfileP
  */
 export
 function _encode_GetBoundProfilePackageOk (value: GetBoundProfilePackageOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetBoundProfilePackageOk) { _cached_encoder_for_GetBoundProfilePackageOk = function (value: GetBoundProfilePackageOk, elGetter: $.ASN1Encoder<GetBoundProfilePackageOk>): _Element {
+    if (!_cached_encoder_for_GetBoundProfilePackageOk) { _cached_encoder_for_GetBoundProfilePackageOk = function (value: GetBoundProfilePackageOk): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

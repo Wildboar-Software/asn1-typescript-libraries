@@ -168,7 +168,7 @@ let _cached_encoder_for_ServerSigned1: $.ASN1Encoder<ServerSigned1> | null = nul
  */
 export
 function _encode_ServerSigned1 (value: ServerSigned1, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServerSigned1) { _cached_encoder_for_ServerSigned1 = function (value: ServerSigned1, elGetter: $.ASN1Encoder<ServerSigned1>): _Element {
+    if (!_cached_encoder_for_ServerSigned1) { _cached_encoder_for_ServerSigned1 = function (value: ServerSigned1): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

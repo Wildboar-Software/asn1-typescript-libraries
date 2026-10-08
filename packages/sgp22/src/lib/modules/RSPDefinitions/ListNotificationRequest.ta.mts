@@ -131,7 +131,7 @@ let _cached_encoder_for_ListNotificationRequest: $.ASN1Encoder<ListNotificationR
  */
 export
 function _encode_ListNotificationRequest (value: ListNotificationRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ListNotificationRequest) { _cached_encoder_for_ListNotificationRequest = $._encode_implicit(_TagClass.context, 40, () => function (value: ListNotificationRequest, elGetter: $.ASN1Encoder<ListNotificationRequest>): _Element {
+    if (!_cached_encoder_for_ListNotificationRequest) { _cached_encoder_for_ListNotificationRequest = $._encode_implicit(_TagClass.context, 40, () => function (value: ListNotificationRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.profileManagementOperation === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_NotificationEvent, $.BER)(value.profileManagementOperation, $.BER))

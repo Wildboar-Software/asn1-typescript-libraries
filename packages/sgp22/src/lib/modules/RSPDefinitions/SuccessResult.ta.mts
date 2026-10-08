@@ -146,7 +146,7 @@ let _cached_encoder_for_SuccessResult: $.ASN1Encoder<SuccessResult> | null = nul
  */
 export
 function _encode_SuccessResult (value: SuccessResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SuccessResult) { _cached_encoder_for_SuccessResult = function (value: SuccessResult, elGetter: $.ASN1Encoder<SuccessResult>): _Element {
+    if (!_cached_encoder_for_SuccessResult) { _cached_encoder_for_SuccessResult = function (value: SuccessResult): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.application, 15, () => $._encodeOctetString, $.BER)(value.aid, $.BER),

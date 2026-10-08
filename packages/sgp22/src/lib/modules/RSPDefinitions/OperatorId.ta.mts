@@ -153,7 +153,7 @@ let _cached_encoder_for_OperatorId: $.ASN1Encoder<OperatorId> | null = null;
  */
 export
 function _encode_OperatorId (value: OperatorId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OperatorId) { _cached_encoder_for_OperatorId = function (value: OperatorId, elGetter: $.ASN1Encoder<OperatorId>): _Element {
+    if (!_cached_encoder_for_OperatorId) { _cached_encoder_for_OperatorId = function (value: OperatorId): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeOctetString(value.mccMnc, $.BER),
