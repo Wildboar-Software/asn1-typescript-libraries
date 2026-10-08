@@ -131,35 +131,8 @@ const CancelSessionReason_undefinedReason: CancelSessionReason = 127; /* LONG_NA
  */
 export
 const undefinedReason: CancelSessionReason = CancelSessionReason_undefinedReason; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_CancelSessionReason: $.ASN1Decoder<CancelSessionReason> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CancelSessionReason
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CancelSessionReason (el: _Element): CancelSessionReason {
-    if (!_cached_decoder_for_CancelSessionReason) { _cached_decoder_for_CancelSessionReason = $._decodeInteger; }
-    return _cached_decoder_for_CancelSessionReason(el);
-}
-
-let _cached_encoder_for_CancelSessionReason: $.ASN1Encoder<CancelSessionReason> | null = null;
-
-/**
- * @summary Encodes a(n) CancelSessionReason into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CancelSessionReason, encoded as an ASN.1 Element.
- */
-export
-function _encode_CancelSessionReason (value: CancelSessionReason, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CancelSessionReason) { _cached_encoder_for_CancelSessionReason = $._encodeInteger; }
-    return _cached_encoder_for_CancelSessionReason(value, elGetter);
-}
+export const _decode_CancelSessionReason = $._decodeInteger;
+export const _encode_CancelSessionReason = $._encodeInteger;
 
 
 /* eslint-enable */

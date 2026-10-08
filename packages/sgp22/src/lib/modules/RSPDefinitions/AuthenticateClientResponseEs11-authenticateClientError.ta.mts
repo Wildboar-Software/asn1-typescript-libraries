@@ -147,35 +147,8 @@ const AuthenticateClientResponseEs11_authenticateClientError_undefinedError: Aut
  */
 export
 const undefinedError: AuthenticateClientResponseEs11_authenticateClientError = AuthenticateClientResponseEs11_authenticateClientError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_AuthenticateClientResponseEs11_authenticateClientError: $.ASN1Decoder<AuthenticateClientResponseEs11_authenticateClientError> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AuthenticateClientResponseEs11_authenticateClientError
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AuthenticateClientResponseEs11_authenticateClientError (el: _Element): AuthenticateClientResponseEs11_authenticateClientError {
-    if (!_cached_decoder_for_AuthenticateClientResponseEs11_authenticateClientError) { _cached_decoder_for_AuthenticateClientResponseEs11_authenticateClientError = $._decodeInteger; }
-    return _cached_decoder_for_AuthenticateClientResponseEs11_authenticateClientError(el);
-}
-
-let _cached_encoder_for_AuthenticateClientResponseEs11_authenticateClientError: $.ASN1Encoder<AuthenticateClientResponseEs11_authenticateClientError> | null = null;
-
-/**
- * @summary Encodes a(n) AuthenticateClientResponseEs11_authenticateClientError into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AuthenticateClientResponseEs11_authenticateClientError, encoded as an ASN.1 Element.
- */
-export
-function _encode_AuthenticateClientResponseEs11_authenticateClientError (value: AuthenticateClientResponseEs11_authenticateClientError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateClientResponseEs11_authenticateClientError) { _cached_encoder_for_AuthenticateClientResponseEs11_authenticateClientError = $._encodeInteger; }
-    return _cached_encoder_for_AuthenticateClientResponseEs11_authenticateClientError(value, elGetter);
-}
+export const _decode_AuthenticateClientResponseEs11_authenticateClientError = $._decodeInteger;
+export const _encode_AuthenticateClientResponseEs11_authenticateClientError = $._encodeInteger;
 
 
 /* eslint-enable */

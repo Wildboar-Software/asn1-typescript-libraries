@@ -19,35 +19,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type InvalidityDate = GeneralizedTime; // GeneralizedTime
-
-let _cached_decoder_for_InvalidityDate: $.ASN1Decoder<InvalidityDate> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) InvalidityDate
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_InvalidityDate (el: _Element): InvalidityDate {
-    if (!_cached_decoder_for_InvalidityDate) { _cached_decoder_for_InvalidityDate = $._decodeGeneralizedTime; }
-    return _cached_decoder_for_InvalidityDate(el);
-}
-
-let _cached_encoder_for_InvalidityDate: $.ASN1Encoder<InvalidityDate> | null = null;
-
-/**
- * @summary Encodes a(n) InvalidityDate into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InvalidityDate, encoded as an ASN.1 Element.
- */
-export
-function _encode_InvalidityDate (value: InvalidityDate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InvalidityDate) { _cached_encoder_for_InvalidityDate = $._encodeGeneralizedTime; }
-    return _cached_encoder_for_InvalidityDate(value, elGetter);
-}
+export const _decode_InvalidityDate = $._decodeGeneralizedTime;
+export const _encode_InvalidityDate = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

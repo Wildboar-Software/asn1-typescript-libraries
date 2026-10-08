@@ -154,35 +154,8 @@ const ReasonFlags_aACompromise: number = 8; /* LONG_NAMED_BIT */
  */
 export
 const aACompromise: number = ReasonFlags_aACompromise; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_ReasonFlags: $.ASN1Decoder<ReasonFlags> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ReasonFlags
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ReasonFlags (el: _Element): ReasonFlags {
-    if (!_cached_decoder_for_ReasonFlags) { _cached_decoder_for_ReasonFlags = $._decodeBitString; }
-    return _cached_decoder_for_ReasonFlags(el);
-}
-
-let _cached_encoder_for_ReasonFlags: $.ASN1Encoder<ReasonFlags> | null = null;
-
-/**
- * @summary Encodes a(n) ReasonFlags into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReasonFlags, encoded as an ASN.1 Element.
- */
-export
-function _encode_ReasonFlags (value: ReasonFlags, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReasonFlags) { _cached_encoder_for_ReasonFlags = $._encodeBitString; }
-    return _cached_encoder_for_ReasonFlags(value, elGetter);
-}
+export const _decode_ReasonFlags = $._decodeBitString;
+export const _encode_ReasonFlags = $._encodeBitString;
 
 
 /* eslint-enable */

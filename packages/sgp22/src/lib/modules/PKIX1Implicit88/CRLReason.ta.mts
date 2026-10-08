@@ -251,35 +251,8 @@ const CRLReason_aACompromise: CRLReason = CRLReason.aACompromise; /* LONG_NAMED_
  */
 export
 const aACompromise: CRLReason = CRLReason.aACompromise; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_CRLReason: $.ASN1Decoder<CRLReason> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CRLReason
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CRLReason (el: _Element): CRLReason {
-    if (!_cached_decoder_for_CRLReason) { _cached_decoder_for_CRLReason = $._decodeEnumerated; }
-    return _cached_decoder_for_CRLReason(el);
-}
-
-let _cached_encoder_for_CRLReason: $.ASN1Encoder<CRLReason> | null = null;
-
-/**
- * @summary Encodes a(n) CRLReason into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CRLReason, encoded as an ASN.1 Element.
- */
-export
-function _encode_CRLReason (value: CRLReason, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CRLReason) { _cached_encoder_for_CRLReason = $._encodeEnumerated; }
-    return _cached_encoder_for_CRLReason(value, elGetter);
-}
+export const _decode_CRLReason = $._decodeEnumerated;
+export const _encode_CRLReason = $._encodeEnumerated;
 
 
 /* eslint-enable */

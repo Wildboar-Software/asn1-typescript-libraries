@@ -47,35 +47,8 @@ const LpaeActivationRequest_lpaeOption_activateScwsBasedLpae: number = 1; /* LON
  */
 export
 const activateScwsBasedLpae: number = LpaeActivationRequest_lpaeOption_activateScwsBasedLpae; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_LpaeActivationRequest_lpaeOption: $.ASN1Decoder<LpaeActivationRequest_lpaeOption> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) LpaeActivationRequest_lpaeOption
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_LpaeActivationRequest_lpaeOption (el: _Element): LpaeActivationRequest_lpaeOption {
-    if (!_cached_decoder_for_LpaeActivationRequest_lpaeOption) { _cached_decoder_for_LpaeActivationRequest_lpaeOption = $._decodeBitString; }
-    return _cached_decoder_for_LpaeActivationRequest_lpaeOption(el);
-}
-
-let _cached_encoder_for_LpaeActivationRequest_lpaeOption: $.ASN1Encoder<LpaeActivationRequest_lpaeOption> | null = null;
-
-/**
- * @summary Encodes a(n) LpaeActivationRequest_lpaeOption into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LpaeActivationRequest_lpaeOption, encoded as an ASN.1 Element.
- */
-export
-function _encode_LpaeActivationRequest_lpaeOption (value: LpaeActivationRequest_lpaeOption, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LpaeActivationRequest_lpaeOption) { _cached_encoder_for_LpaeActivationRequest_lpaeOption = $._encodeBitString; }
-    return _cached_encoder_for_LpaeActivationRequest_lpaeOption(value, elGetter);
-}
+export const _decode_LpaeActivationRequest_lpaeOption = $._decodeBitString;
+export const _encode_LpaeActivationRequest_lpaeOption = $._encodeBitString;
 
 
 /* eslint-enable */

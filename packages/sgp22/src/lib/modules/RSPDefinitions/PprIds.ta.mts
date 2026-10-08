@@ -65,35 +65,8 @@ const PprIds_ppr2: number = 2; /* LONG_NAMED_BIT */
  */
 export
 const ppr2: number = PprIds_ppr2; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_PprIds: $.ASN1Decoder<PprIds> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) PprIds
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PprIds (el: _Element): PprIds {
-    if (!_cached_decoder_for_PprIds) { _cached_decoder_for_PprIds = $._decodeBitString; }
-    return _cached_decoder_for_PprIds(el);
-}
-
-let _cached_encoder_for_PprIds: $.ASN1Encoder<PprIds> | null = null;
-
-/**
- * @summary Encodes a(n) PprIds into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PprIds, encoded as an ASN.1 Element.
- */
-export
-function _encode_PprIds (value: PprIds, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PprIds) { _cached_encoder_for_PprIds = $._encodeBitString; }
-    return _cached_encoder_for_PprIds(value, elGetter);
-}
+export const _decode_PprIds = $._decodeBitString;
+export const _encode_PprIds = $._encodeBitString;
 
 
 /* eslint-enable */

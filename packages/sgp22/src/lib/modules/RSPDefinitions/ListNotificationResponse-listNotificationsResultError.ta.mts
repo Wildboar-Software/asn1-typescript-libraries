@@ -35,35 +35,8 @@ const ListNotificationResponse_listNotificationsResultError_undefinedError: List
  */
 export
 const undefinedError: ListNotificationResponse_listNotificationsResultError = ListNotificationResponse_listNotificationsResultError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ListNotificationResponse_listNotificationsResultError: $.ASN1Decoder<ListNotificationResponse_listNotificationsResultError> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ListNotificationResponse_listNotificationsResultError
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ListNotificationResponse_listNotificationsResultError (el: _Element): ListNotificationResponse_listNotificationsResultError {
-    if (!_cached_decoder_for_ListNotificationResponse_listNotificationsResultError) { _cached_decoder_for_ListNotificationResponse_listNotificationsResultError = $._decodeInteger; }
-    return _cached_decoder_for_ListNotificationResponse_listNotificationsResultError(el);
-}
-
-let _cached_encoder_for_ListNotificationResponse_listNotificationsResultError: $.ASN1Encoder<ListNotificationResponse_listNotificationsResultError> | null = null;
-
-/**
- * @summary Encodes a(n) ListNotificationResponse_listNotificationsResultError into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ListNotificationResponse_listNotificationsResultError, encoded as an ASN.1 Element.
- */
-export
-function _encode_ListNotificationResponse_listNotificationsResultError (value: ListNotificationResponse_listNotificationsResultError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ListNotificationResponse_listNotificationsResultError) { _cached_encoder_for_ListNotificationResponse_listNotificationsResultError = $._encodeInteger; }
-    return _cached_encoder_for_ListNotificationResponse_listNotificationsResultError(value, elGetter);
-}
+export const _decode_ListNotificationResponse_listNotificationsResultError = $._decodeInteger;
+export const _encode_ListNotificationResponse_listNotificationsResultError = $._encodeInteger;
 
 
 /* eslint-enable */

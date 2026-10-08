@@ -80,35 +80,8 @@ const NotificationEvent_notificationDelete: number = 3; /* LONG_NAMED_BIT */
  */
 export
 const notificationDelete: number = NotificationEvent_notificationDelete; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_NotificationEvent: $.ASN1Decoder<NotificationEvent> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) NotificationEvent
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_NotificationEvent (el: _Element): NotificationEvent {
-    if (!_cached_decoder_for_NotificationEvent) { _cached_decoder_for_NotificationEvent = $._decodeBitString; }
-    return _cached_decoder_for_NotificationEvent(el);
-}
-
-let _cached_encoder_for_NotificationEvent: $.ASN1Encoder<NotificationEvent> | null = null;
-
-/**
- * @summary Encodes a(n) NotificationEvent into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NotificationEvent, encoded as an ASN.1 Element.
- */
-export
-function _encode_NotificationEvent (value: NotificationEvent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotificationEvent) { _cached_encoder_for_NotificationEvent = $._encodeBitString; }
-    return _cached_encoder_for_NotificationEvent(value, elGetter);
-}
+export const _decode_NotificationEvent = $._decodeBitString;
+export const _encode_NotificationEvent = $._encodeBitString;
 
 
 /* eslint-enable */

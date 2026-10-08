@@ -67,35 +67,8 @@ const CancelSessionResponseEs9_cancelSessionError_undefinedError: CancelSessionR
  */
 export
 const undefinedError: CancelSessionResponseEs9_cancelSessionError = CancelSessionResponseEs9_cancelSessionError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_CancelSessionResponseEs9_cancelSessionError: $.ASN1Decoder<CancelSessionResponseEs9_cancelSessionError> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CancelSessionResponseEs9_cancelSessionError
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CancelSessionResponseEs9_cancelSessionError (el: _Element): CancelSessionResponseEs9_cancelSessionError {
-    if (!_cached_decoder_for_CancelSessionResponseEs9_cancelSessionError) { _cached_decoder_for_CancelSessionResponseEs9_cancelSessionError = $._decodeInteger; }
-    return _cached_decoder_for_CancelSessionResponseEs9_cancelSessionError(el);
-}
-
-let _cached_encoder_for_CancelSessionResponseEs9_cancelSessionError: $.ASN1Encoder<CancelSessionResponseEs9_cancelSessionError> | null = null;
-
-/**
- * @summary Encodes a(n) CancelSessionResponseEs9_cancelSessionError into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CancelSessionResponseEs9_cancelSessionError, encoded as an ASN.1 Element.
- */
-export
-function _encode_CancelSessionResponseEs9_cancelSessionError (value: CancelSessionResponseEs9_cancelSessionError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CancelSessionResponseEs9_cancelSessionError) { _cached_encoder_for_CancelSessionResponseEs9_cancelSessionError = $._encodeInteger; }
-    return _cached_encoder_for_CancelSessionResponseEs9_cancelSessionError(value, elGetter);
-}
+export const _decode_CancelSessionResponseEs9_cancelSessionError = $._decodeInteger;
+export const _encode_CancelSessionResponseEs9_cancelSessionError = $._encodeInteger;
 
 
 /* eslint-enable */

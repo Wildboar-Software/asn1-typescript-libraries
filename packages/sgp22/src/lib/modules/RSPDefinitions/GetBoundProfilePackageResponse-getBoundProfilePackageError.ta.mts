@@ -147,35 +147,8 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_undefinedError:
  */
 export
 const undefinedError: GetBoundProfilePackageResponse_getBoundProfilePackageError = GetBoundProfilePackageResponse_getBoundProfilePackageError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_GetBoundProfilePackageResponse_getBoundProfilePackageError: $.ASN1Decoder<GetBoundProfilePackageResponse_getBoundProfilePackageError> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) GetBoundProfilePackageResponse_getBoundProfilePackageError
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_GetBoundProfilePackageResponse_getBoundProfilePackageError (el: _Element): GetBoundProfilePackageResponse_getBoundProfilePackageError {
-    if (!_cached_decoder_for_GetBoundProfilePackageResponse_getBoundProfilePackageError) { _cached_decoder_for_GetBoundProfilePackageResponse_getBoundProfilePackageError = $._decodeInteger; }
-    return _cached_decoder_for_GetBoundProfilePackageResponse_getBoundProfilePackageError(el);
-}
-
-let _cached_encoder_for_GetBoundProfilePackageResponse_getBoundProfilePackageError: $.ASN1Encoder<GetBoundProfilePackageResponse_getBoundProfilePackageError> | null = null;
-
-/**
- * @summary Encodes a(n) GetBoundProfilePackageResponse_getBoundProfilePackageError into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The GetBoundProfilePackageResponse_getBoundProfilePackageError, encoded as an ASN.1 Element.
- */
-export
-function _encode_GetBoundProfilePackageResponse_getBoundProfilePackageError (value: GetBoundProfilePackageResponse_getBoundProfilePackageError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetBoundProfilePackageResponse_getBoundProfilePackageError) { _cached_encoder_for_GetBoundProfilePackageResponse_getBoundProfilePackageError = $._encodeInteger; }
-    return _cached_encoder_for_GetBoundProfilePackageResponse_getBoundProfilePackageError(value, elGetter);
-}
+export const _decode_GetBoundProfilePackageResponse_getBoundProfilePackageError = $._decodeInteger;
+export const _encode_GetBoundProfilePackageResponse_getBoundProfilePackageError = $._encodeInteger;
 
 
 /* eslint-enable */

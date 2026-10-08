@@ -67,35 +67,8 @@ const NotificationSentResponse_deleteNotificationStatus_undefinedError: Notifica
  */
 export
 const undefinedError: NotificationSentResponse_deleteNotificationStatus = NotificationSentResponse_deleteNotificationStatus_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_NotificationSentResponse_deleteNotificationStatus: $.ASN1Decoder<NotificationSentResponse_deleteNotificationStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) NotificationSentResponse_deleteNotificationStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_NotificationSentResponse_deleteNotificationStatus (el: _Element): NotificationSentResponse_deleteNotificationStatus {
-    if (!_cached_decoder_for_NotificationSentResponse_deleteNotificationStatus) { _cached_decoder_for_NotificationSentResponse_deleteNotificationStatus = $._decodeInteger; }
-    return _cached_decoder_for_NotificationSentResponse_deleteNotificationStatus(el);
-}
-
-let _cached_encoder_for_NotificationSentResponse_deleteNotificationStatus: $.ASN1Encoder<NotificationSentResponse_deleteNotificationStatus> | null = null;
-
-/**
- * @summary Encodes a(n) NotificationSentResponse_deleteNotificationStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NotificationSentResponse_deleteNotificationStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_NotificationSentResponse_deleteNotificationStatus (value: NotificationSentResponse_deleteNotificationStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotificationSentResponse_deleteNotificationStatus) { _cached_encoder_for_NotificationSentResponse_deleteNotificationStatus = $._encodeInteger; }
-    return _cached_encoder_for_NotificationSentResponse_deleteNotificationStatus(value, elGetter);
-}
+export const _decode_NotificationSentResponse_deleteNotificationStatus = $._decodeInteger;
+export const _encode_NotificationSentResponse_deleteNotificationStatus = $._encodeInteger;
 
 
 /* eslint-enable */

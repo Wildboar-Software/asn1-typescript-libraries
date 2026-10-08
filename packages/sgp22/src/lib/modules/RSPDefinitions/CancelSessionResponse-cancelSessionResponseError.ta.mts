@@ -51,35 +51,8 @@ const CancelSessionResponse_cancelSessionResponseError_undefinedError: CancelSes
  */
 export
 const undefinedError: CancelSessionResponse_cancelSessionResponseError = CancelSessionResponse_cancelSessionResponseError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_CancelSessionResponse_cancelSessionResponseError: $.ASN1Decoder<CancelSessionResponse_cancelSessionResponseError> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CancelSessionResponse_cancelSessionResponseError
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CancelSessionResponse_cancelSessionResponseError (el: _Element): CancelSessionResponse_cancelSessionResponseError {
-    if (!_cached_decoder_for_CancelSessionResponse_cancelSessionResponseError) { _cached_decoder_for_CancelSessionResponse_cancelSessionResponseError = $._decodeInteger; }
-    return _cached_decoder_for_CancelSessionResponse_cancelSessionResponseError(el);
-}
-
-let _cached_encoder_for_CancelSessionResponse_cancelSessionResponseError: $.ASN1Encoder<CancelSessionResponse_cancelSessionResponseError> | null = null;
-
-/**
- * @summary Encodes a(n) CancelSessionResponse_cancelSessionResponseError into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CancelSessionResponse_cancelSessionResponseError, encoded as an ASN.1 Element.
- */
-export
-function _encode_CancelSessionResponse_cancelSessionResponseError (value: CancelSessionResponse_cancelSessionResponseError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CancelSessionResponse_cancelSessionResponseError) { _cached_encoder_for_CancelSessionResponse_cancelSessionResponseError = $._encodeInteger; }
-    return _cached_encoder_for_CancelSessionResponse_cancelSessionResponseError(value, elGetter);
-}
+export const _decode_CancelSessionResponse_cancelSessionResponseError = $._decodeInteger;
+export const _encode_CancelSessionResponse_cancelSessionResponseError = $._encodeInteger;
 
 
 /* eslint-enable */
