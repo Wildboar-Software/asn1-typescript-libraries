@@ -40,7 +40,23 @@ import { SMS_Address_address_value, _decode_SMS_Address_address_value, _encode_S
  *     }
  * }
  * ```
- * 
+ *
+ * Address of an SC, an MS, or (where the module adds it) a VMSC on the
+ * SC–MSC relay.
+ *
+ * Clauses 2.2 and 3.2 tag the sequence `[APPLICATION 0]`. This module
+ * does not. The only defined `address-value` alternative is
+ * `octet-format`; other formats are for further study. Clause 2.2 also
+ * names `alphanumeric-number` (5), `abbreviated-number` (6), and
+ * `ERMES-numbering` (10), which are absent here.
+ *
+ * An alert MS address, and clause 2.2's optional `rp-msidsn` on
+ * `RPError`, must be an international ISDN address. Use
+ * `internat-number` with `iSDN-numbering` (E.164; clause 1.2
+ * reference [5]). SMS-MAP accepts a service-centre address only in
+ * international E.164, and an MS ISDN number in national or
+ * international E.164 (clause 4.2.4).
+ *
  * @class
  */
 export
@@ -48,18 +64,36 @@ class SMS_Address {
     constructor (
         /**
          * @summary `address_type`.
+         * @description
+         *
+         * Nature of the address. Named values are on
+         * `SMS_Address_address_type`. Clause 3.2 spells value 1
+         * `international-number` and value 3 `network-specific-number`;
+         * this module shortens both.
+         *
          * @public
          * @readonly
          */
         readonly address_type: SMS_Address_address_type,
         /**
          * @summary `numbering_plan`.
+         * @description
+         *
+         * Numbering plan of `address_value`. Named values are on
+         * `SMS_Address_numbering_plan`. `iSDN-numbering` is E.164.
+         *
          * @public
          * @readonly
          */
         readonly numbering_plan: SMS_Address_numbering_plan,
         /**
          * @summary `address_value`.
+         * @description
+         *
+         * The address digits. Only `octet-format` (`SemiOctetString`)
+         * is defined; other formats are for further study
+         * (clauses 2.2 and 3.2).
+         *
          * @public
          * @readonly
          */

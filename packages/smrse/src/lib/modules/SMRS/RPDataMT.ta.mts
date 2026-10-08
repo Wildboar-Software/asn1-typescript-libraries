@@ -31,7 +31,29 @@ import { SM_TC, _decode_SM_TC, _encode_SM_TC } from "../SMRS/SM-TC.ta.mjs";
  *     ...
  * }
  * ```
- * 
+ *
+ * Argument of SMR-MT-DATA (`Forward-MS-Terminated-Short-Message`).
+ * The SC invokes it to relay one SMS transfer-layer PDU to the GMSC,
+ * which relays it on to the addressed MS. `RPAck` or `RPError` is
+ * returned only after that attempt toward the MS has finished
+ * (clauses 2.1 and 3.1).
+ *
+ * On the OSI stack the operation's local value is 1 (clause 2.2). On
+ * the convergence-function stack the PDU is N-DATA user data, choice
+ * `rpdatamt` (clause 3.2).
+ *
+ * Mobile-terminated failures from the PLMN are `unknown-subscriber`,
+ * `teleservice-not-provisioned`, `call-barred`,
+ * `facility-not-supported`, `memory-capacity-exceeded`,
+ * `absent-subscriber`, `ms-busy-for-MT-sms`,
+ * `sMS-ll-capabilities-not-prov`, `error-in-MS`, `illegal-subscriber`,
+ * `illegal-equipment`, and `system-failure` (clause 2.2). Clause 2.5
+ * marks SC congestion, an invalid SME address, and "MS not SC
+ * subscriber" as not applicable to mobile-terminated SMS.
+ *
+ * After an N-RESET, an unacknowledged SMR-MT-DATA is retransmitted
+ * (clause 3.3).
+ *
  * @class
  */
 export
@@ -39,48 +61,100 @@ class RPDataMT {
     constructor (
         /**
          * @summary `mt_priority_request`.
+         * @description
+         *
+         * Priority request for this mobile-terminated short message.
+         * The report does not define which boolean value means
+         * "priority". In SMS-MAP the GMSC does not examine the
+         * corresponding `sm-RP-PRI`; it forwards that parameter in
+         * Send Routing Information for Short Message (clause 4.2.4).
+         *
          * @public
          * @readonly
          */
         readonly mt_priority_request: BOOLEAN,
         /**
          * @summary `mt_mms`.
+         * @description
+         *
+         * More messages to send to this destination. Clause 2.2 names
+         * the flag `mt-more-messages-to-send` and makes it optional;
+         * this module requires it. While the mechanism is in use,
+         * `mt_message_reference` stays unchanged until every message
+         * to that destination has been sent (clause 2.2).
+         *
          * @public
          * @readonly
          */
         readonly mt_mms: BOOLEAN,
         /**
          * @summary `mt_message_reference`.
+         * @description
+         *
+         * Reference correlated with the later `RPAck` or `RPError`.
+         * See `mt_mms` for the rule that freezes this value across a
+         * more-messages-to-send sequence.
+         *
          * @public
          * @readonly
          */
         readonly mt_message_reference: RP_MR,
         /**
          * @summary `mt_originating_address`.
+         * @description
+         *
+         * Originating RP address. For mobile-terminated relay that is
+         * the service centre. SMS-MAP accepts the corresponding
+         * `serviceCentreAddress` only as an international E.164 number
+         * (clause 4.2.4).
+         *
          * @public
          * @readonly
          */
         readonly mt_originating_address: SMS_Address,
         /**
          * @summary `mt_destination_address`.
+         * @description
+         *
+         * Destination RP address: the MS the short message is for.
+         * SMS-MAP accepts the corresponding `msIsdn` only as a national
+         * or international E.164 number (clause 4.2.4).
+         *
          * @public
          * @readonly
          */
         readonly mt_destination_address: SMS_Address,
         /**
          * @summary `mt_user_data`.
+         * @description
+         *
+         * The SMS transfer-layer PDU (`RP-UD`). SMS-MAP forwards the
+         * corresponding `sm-RP-UI` through the GMSC without analysing
+         * it (clause 4.2.4).
+         *
          * @public
          * @readonly
          */
         readonly mt_user_data: RP_UD,
         /**
          * @summary `mt_origVMSCAddr`.
+         * @description
+         *
+         * Address of the originator's visited MSC. Not in TR 101 635.
+         * The SMRP profile this module follows adds it.
+         *
          * @public
          * @readonly
          */
         readonly mt_origVMSCAddr: OPTIONAL<SMS_Address>,
         /**
          * @summary `mt_tariffClass`.
+         * @description
+         *
+         * Service tariff (`SM-TC`). Not in TR 101 635, and the report
+         * assigns no meaning to the integers. The SMRP profile adds
+         * the field.
+         *
          * @public
          * @readonly
          */

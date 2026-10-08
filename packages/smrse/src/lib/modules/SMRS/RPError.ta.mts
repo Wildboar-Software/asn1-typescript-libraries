@@ -28,7 +28,21 @@ import { RP_UD, _decode_RP_UD, _encode_RP_UD } from "../SMRS/RP-UD.ta.mjs";
  *     ...
  * }
  * ```
- * 
+ *
+ * Failure of SMR-MT-DATA or SMR-MO-DATA.
+ *
+ * From the GMSC toward the SC, the MS did not receive the short
+ * message. From the SC toward the GMSC, the SC did not receive it
+ * (clause 3.1). Carried as N-DATA user data, choice `rperror`
+ * (clause 3.2). On the OSI stack each named failure is an
+ * ABSTRACT-ERROR whose parameter is this sequence (clause 2.2).
+ *
+ * Clause 2.2 includes an optional `rp-msidsn`, which must be an
+ * international ISDN address, and an optional `rp-user-data`. This
+ * module names those `alerting-MS-ISDN` and `sm-diag-info`. Clause 3.2
+ * has neither. Which `error-reason` values apply to each direction is
+ * listed on `RPDataMT` and `RPDataMO`.
+ *
  * @class
  */
 export
@@ -36,30 +50,61 @@ class RPError {
     constructor (
         /**
          * @summary `error_reason`.
+         * @description
+         *
+         * Which failure occurred. Use the `Error-reason` numbers, not
+         * the SMS-MAP error codes of clause 4.2.6, which differ.
+         *
          * @public
          * @readonly
          */
         readonly error_reason: Error_reason,
         /**
          * @summary `msg_waiting_set`.
+         * @description
+         *
+         * Whether the service centre address has been entered in the
+         * HLR message-waiting list. Clause 4.2.6 (version 1
+         * `AbsentSubscriber`) may carry that indication. When the
+         * GMSC's Set Message Waiting Data toward the HLR succeeds, the
+         * absent-subscriber error sent to the SC has it set
+         * (clause 4.2.4). Clause 2.2 tags this boolean `[1]`; this
+         * module does not.
+         *
          * @public
          * @readonly
          */
         readonly msg_waiting_set: BOOLEAN,
         /**
          * @summary `message_reference`.
+         * @description
+         *
+         * The `RP-MR` of the relay that failed.
+         *
          * @public
          * @readonly
          */
         readonly message_reference: RP_MR,
         /**
          * @summary `alerting_MS_ISDN`.
+         * @description
+         *
+         * Clause 2.2's optional `rp-msidsn`. When present it must be an
+         * international ISDN address (`internat-number` and
+         * `iSDN-numbering`). The report does not say in which failures
+         * to include it. Clause 3.2 omits it.
+         *
          * @public
          * @readonly
          */
         readonly alerting_MS_ISDN: OPTIONAL<SMS_Address>,
         /**
          * @summary `sm_diag_info`.
+         * @description
+         *
+         * Clause 2.2's optional `rp-user-data`. The report does not
+         * define these octets. Clause 3.2 omits the component.
+         *
          * @public
          * @readonly
          */

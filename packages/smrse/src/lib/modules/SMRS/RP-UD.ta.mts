@@ -17,6 +17,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * RP-UD  ::=  OCTET STRING (SIZE (1..164))
  * ```
+ *
+ * User data of a relay PDU: one SMS transfer-layer PDU, carried
+ * octet for octet. Length 1..164 (clauses 2.2 and 3.2). Those clauses
+ * tag it `[APPLICATION 3]`; this module does not.
+ *
+ * The GMSC does not interpret the corresponding SMS-MAP `sm-RP-UI`; it
+ * forwards that parameter unchanged (clause 4.2.4). The length bound
+ * of `sm-RP-UI` is not this one.
  */
 export
 type RP_UD = OCTET_STRING; // OctetStringType

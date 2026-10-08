@@ -14,7 +14,11 @@ import {
  * ```asn1
  * ub-password-length INTEGER ::= 20
  * ```
- * 
+ *
+ * Upper bound on `Password` in clauses 2.2 and 3.2, which write it as
+ * `PrintableString (SIZE (0..ub-password-length))`. This module's
+ * `Password` assignment does not apply that size constraint.
+ *
  * @constant
  */
 export

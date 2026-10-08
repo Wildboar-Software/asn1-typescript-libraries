@@ -20,7 +20,16 @@ import { _decode_Connect_fail, _encode_Connect_fail, Connect_fail } from "../SMR
  *     ...
  * }
  * ```
- * 
+ *
+ * Rejection of an attempted application association (clause 3.1).
+ *
+ * Mapped to N-DISCONNECT request/indication. If the network does not
+ * support 128 octets of NS-user-data, these parameters are discarded
+ * and not sent (clause 3.1).
+ *
+ * Clauses 2.2 and 3.2 may also include `alternative-system`, naming
+ * another SC or MSC the initiator might try. This module does not.
+ *
  * @class
  */
 export
@@ -28,6 +37,11 @@ class SMR_Bind_Failure {
     constructor (
         /**
          * @summary `connect_fail_reason`.
+         * @description
+         *
+         * Why the association was refused. The indications and their
+         * shortened names are on `Connect-fail`.
+         *
          * @public
          * @readonly
          */

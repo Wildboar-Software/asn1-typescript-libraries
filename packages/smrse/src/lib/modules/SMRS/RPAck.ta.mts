@@ -20,7 +20,19 @@ import { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
  *     ...
  * }
  * ```
- * 
+ *
+ * Successful result of SMR-MT-DATA or SMR-MO-DATA.
+ *
+ * From the GMSC toward the SC, the MS has received the short message.
+ * From the SC toward the GMSC, the SC has received it (clause 3.1).
+ * Carried as N-DATA user data, choice `rpack` (clause 3.2). On the OSI
+ * stack it is the RESULT of the abstract operation (clause 2.2).
+ *
+ * SMR-ALERT, as specified in the report, has no result. This module's
+ * `RPAlertSC` adds a message reference because that profile
+ * acknowledges alerts; the report does not name this PDU as the alert
+ * acknowledgement.
+ *
  * @class
  */
 export
@@ -28,6 +40,12 @@ class RPAck {
     constructor (
         /**
          * @summary `message_reference`.
+         * @description
+         *
+         * The `RP-MR` of the relay being acknowledged. For a
+         * more-messages-to-send sequence this is the reference shared
+         * by every message to that destination (clause 2.2).
+         *
          * @public
          * @readonly
          */

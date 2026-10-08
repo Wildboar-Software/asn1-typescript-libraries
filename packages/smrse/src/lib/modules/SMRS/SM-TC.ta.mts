@@ -17,6 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * SM-TC  ::=  INTEGER (0..65535)
  * ```
+ *
+ * Tariff class carried in `RPDataMT.mt-tariffClass`. TR 101 635 does
+ * not define this type or assign meanings to the integers. The SMRP
+ * profile this module follows calls the field a service tariff.
  */
 export
 type SM_TC = INTEGER;

@@ -17,7 +17,22 @@ import * as $ from "@wildboar/asn1/functional";
  *     ...
  * }
  * ```
- * 
+ *
+ * Positive reply to `SMR-Bind`: the responder accepts the application
+ * association (clause 3.1).
+ *
+ * On the convergence-function stack it is carried in N-CONNECT
+ * response/confirm user data, or as the second N-DATA when 128 octets
+ * of NS-user-data are not supported (clauses 3.1 and 3.4).
+ *
+ * Clause 3.2 returns the responder's name, an optional password, the
+ * system type, a `transient` flag, and the connect time. Clause 2.2
+ * also returns the negotiated set of operations. `transient` TRUE
+ * forces the association, and the connections under it, to be unbound
+ * as soon as nothing remains to be done. This confirm is empty, so
+ * none of those parameters are present. The SMRP profile states that
+ * the sequence is intentionally empty.
+ *
  * @class
  */
 export

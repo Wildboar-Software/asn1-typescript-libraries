@@ -17,6 +17,16 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * RP-MR  ::=  INTEGER (0..65535)
  * ```
+ *
+ * Message reference tying an `RPDataMT`, `RPDataMO`, or `RPAlertSC` to
+ * its `RPAck` or `RPError`.
+ *
+ * Clauses 2.2 and 3.2 define this as `[APPLICATION 2] INTEGER (0..255)`.
+ * This module drops the application tag and allows 0..65535.
+ *
+ * While more-messages-to-send is in use on `RPDataMT`, the reference
+ * stays unchanged until every message to that destination has been sent
+ * (clause 2.2).
  */
 export
 type RP_MR = INTEGER;

@@ -15,6 +15,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * IMSI-Address  ::=  OCTET STRING
  * ```
+ *
+ * Originating subscriber's IMSI, carried in `RPDataMO.moimsi`.
+ * TR 101 635 does not define this type. The SMRP profile this module
+ * follows sizes it `OCTET STRING (SIZE (1..8))`; this assignment does
+ * not.
  */
 export
 type IMSI_Address = OCTET_STRING; // OctetStringType

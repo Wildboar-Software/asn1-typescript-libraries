@@ -22,12 +22,20 @@ import * as $ from "@wildboar/asn1/functional";
  *     private-numbering (9)
  * }
  * ```
+ *
+ * Numbering plan of an `SMS-Address`. The names and numbers are those
+ * of clauses 2.2 and 3.2. Clause 2.2 also names `ERMES-numbering` (10),
+ * which this module does not. There is no value 2, 5, 6, or 7.
  */
 export
 type SMS_Address_numbering_plan = INTEGER;
 
 /**
  * @summary SMS_Address_numbering_plan_unknown_numbering
+ * @description
+ *
+ * Numbering plan is unknown (`unknown-numbering` in clause 3.2).
+ *
  * @constant
  * @type {number}
  */
@@ -35,7 +43,12 @@ export
 const SMS_Address_numbering_plan_unknown_numbering: SMS_Address_numbering_plan = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary SMS_Address_numbering_plan_unknown_numbering
+ * @summary `unknown_numbering`.
+ * @description
+ *
+ * Numbering plan is unknown. Same value as
+ * {@link SMS_Address_numbering_plan_unknown_numbering}.
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +57,12 @@ const unknown_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_plan
 
 /**
  * @summary SMS_Address_numbering_plan_iSDN_numbering
+ * @description
+ *
+ * ISDN / telephony numbering plan (E.164; clause 1.2 reference [5]).
+ * Use this with `internat-number` where the report requires an
+ * international ISDN address.
+ *
  * @constant
  * @type {number}
  */
@@ -51,7 +70,12 @@ export
 const SMS_Address_numbering_plan_iSDN_numbering: SMS_Address_numbering_plan = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary SMS_Address_numbering_plan_iSDN_numbering
+ * @summary `iSDN_numbering`.
+ * @description
+ *
+ * ISDN / telephony numbering plan (E.164). Same value as
+ * {@link SMS_Address_numbering_plan_iSDN_numbering}.
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +84,14 @@ const iSDN_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_plan_iS
 
 /**
  * @summary SMS_Address_numbering_plan_data_network_numbering
+ * @description
+ *
+ * Data-network numbering plan (`data-network-numbering` in clause 3.2).
+ * The report does not say which numbering recommendation the digits
+ * follow. The printed SMR-BIND parameters carry a PSPDN address as a
+ * separate X.121 string (`dataNetworkAddress`); this module's
+ * `SMR-Bind` does not.
+ *
  * @constant
  * @type {number}
  */
@@ -67,7 +99,12 @@ export
 const SMS_Address_numbering_plan_data_network_numbering: SMS_Address_numbering_plan = 3; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary SMS_Address_numbering_plan_data_network_numbering
+ * @summary `data_network_numbering`.
+ * @description
+ *
+ * Data-network numbering plan. Same value as
+ * {@link SMS_Address_numbering_plan_data_network_numbering}.
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +113,10 @@ const data_network_numbering: SMS_Address_numbering_plan = SMS_Address_numbering
 
 /**
  * @summary SMS_Address_numbering_plan_telex_numbering
+ * @description
+ *
+ * Telex numbering plan (`telex-numbering` in clause 3.2).
+ *
  * @constant
  * @type {number}
  */
@@ -83,7 +124,12 @@ export
 const SMS_Address_numbering_plan_telex_numbering: SMS_Address_numbering_plan = 4; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary SMS_Address_numbering_plan_telex_numbering
+ * @summary `telex_numbering`.
+ * @description
+ *
+ * Telex numbering plan. Same value as
+ * {@link SMS_Address_numbering_plan_telex_numbering}.
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +138,11 @@ const telex_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_plan_t
 
 /**
  * @summary SMS_Address_numbering_plan_national_numbering
+ * @description
+ *
+ * National numbering plan (`national-numbering` in clause 3.2). This
+ * is the plan, not the national nature of address (`national-number`).
+ *
  * @constant
  * @type {number}
  */
@@ -99,7 +150,12 @@ export
 const SMS_Address_numbering_plan_national_numbering: SMS_Address_numbering_plan = 8; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary SMS_Address_numbering_plan_national_numbering
+ * @summary `national_numbering`.
+ * @description
+ *
+ * National numbering plan. Same value as
+ * {@link SMS_Address_numbering_plan_national_numbering}.
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +164,10 @@ const national_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_pla
 
 /**
  * @summary SMS_Address_numbering_plan_private_numbering
+ * @description
+ *
+ * Private numbering plan (`private-numbering` in clause 3.2).
+ *
  * @constant
  * @type {number}
  */
@@ -115,7 +175,12 @@ export
 const SMS_Address_numbering_plan_private_numbering: SMS_Address_numbering_plan = 9; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
- * @summary SMS_Address_numbering_plan_private_numbering
+ * @summary `private_numbering`.
+ * @description
+ *
+ * Private numbering plan. Same value as
+ * {@link SMS_Address_numbering_plan_private_numbering}.
+ *
  * @constant
  * @type {number}
  */

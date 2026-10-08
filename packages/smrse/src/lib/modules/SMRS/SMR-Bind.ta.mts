@@ -22,7 +22,23 @@ import { Password, _decode_Password, _encode_Password } from "../SMRS/Password.t
  *     ... 
  * }
  * ```
- * 
+ *
+ * Argument of SMR-BIND. The party that establishes the application
+ * association must invoke it before any other SMRSE service. The peer
+ * accepts with `SMR-Bind-Confirm` or rejects with `SMR-Bind-Failure`
+ * (clauses 2.1 and 3.1).
+ *
+ * On the OSI stack it is the ABSTRACT-BIND, used to exchange identities
+ * and a password (clauses 2.1 and 2.2). On the convergence-function
+ * stack it is carried in N-CONNECT request/indication user data, or in
+ * the first N-DATA if the network does not support 128 octets of
+ * NS-user-data (clauses 3.1 and 3.4).
+ *
+ * Clauses 2.2 and 3.2 define a richer argument: a `Name`, an optional
+ * password, `pswNeeded`, a system type, and, in clause 2.2, a
+ * negotiation of which relay operations the association will carry.
+ * This module sends only the SC address and a password.
+ *
  * @class
  */
 export
@@ -30,12 +46,26 @@ class SMR_Bind {
     constructor (
         /**
          * @summary `sc_address`.
+         * @description
+         *
+         * PLMN address of the SC as seen by mobile stations, in
+         * international form. Clauses 2.2 and 3.2 carry the same datum
+         * as `iSDNAddress` inside `Name`, and use that same value in
+         * both BIND and CONFIRM. This module places it only here.
+         *
          * @public
          * @readonly
          */
         readonly sc_address: SMS_Address,
         /**
          * @summary `password`.
+         * @description
+         *
+         * May assist in authentication (clauses 2.2 and 3.2). Those
+         * clauses make it optional and limit it by `ub-password-length`.
+         * This component is mandatory, and `Password` is an
+         * unconstrained `PrintableString`.
+         *
          * @public
          * @readonly
          */

@@ -15,6 +15,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * Password  ::=  PrintableString
  * ```
+ *
+ * Password that may assist in authentication of an SMR-BIND
+ * (clauses 2.2 and 3.2). The printed assignments constrain it to
+ * `PrintableString (SIZE (0..ub-password-length))`, with
+ * `ub-password-length` equal to 20. This assignment does not.
  */
 export
 type Password = PrintableString; // PrintableString

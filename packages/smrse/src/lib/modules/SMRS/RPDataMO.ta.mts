@@ -27,7 +27,25 @@ import { IMSI_Address, _decode_IMSI_Address, _encode_IMSI_Address } from "../SMR
  *     ...
  * }
  * ```
- * 
+ *
+ * Argument of SMR-MO-DATA (`Forward-MS-Originated-Short-Message`).
+ * Relays one SMS transfer-layer PDU from the MSC to the SC. Clause 2.1
+ * names the sender the IWMSC; clause 3.1 names it the GMSC. Success is
+ * `RPAck` and failure is `RPError` (clause 3.1).
+ *
+ * On the OSI stack the operation's local value is 2 (clause 2.2). On
+ * the convergence-function stack the PDU is N-DATA user data, choice
+ * `rpdatamo` (clause 3.2).
+ *
+ * Failures are `sC-congestion`, `mS-not-SC-Subscriber`,
+ * `invalid-sme-address`, and `system-failure` (clause 2.2). Clause 2.5
+ * maps the first three onto MAP `SM-DeliveryFailure` causes 4, 6, and
+ * 5, all mobile-originated only, and maps a system failure onto MAP
+ * `SystemFailure`.
+ *
+ * After an N-RESET, an unacknowledged SMR-MO-DATA is retransmitted
+ * (clause 3.3).
+ *
  * @class
  */
 export
@@ -35,30 +53,56 @@ class RPDataMO {
     constructor (
         /**
          * @summary `mo_message_reference`.
+         * @description
+         *
+         * Reference correlated with the later `RPAck` or `RPError`.
+         *
          * @public
          * @readonly
          */
         readonly mo_message_reference: RP_MR,
         /**
          * @summary `mo_originating_address`.
+         * @description
+         *
+         * Originating RP address: the MS that submitted the short
+         * message. SMS-MAP treats the corresponding `msIsdn` as that
+         * originating address (clause 4.2.4).
+         *
          * @public
          * @readonly
          */
         readonly mo_originating_address: SMS_Address,
         /**
          * @summary `mo_user_data`.
+         * @description
+         *
+         * The SMS transfer-layer PDU (`RP-UD`). A syntactically invalid
+         * SME address in the mobile-originated short message is
+         * reported as `invalid-sme-address` (clause 4.2.6).
+         *
          * @public
          * @readonly
          */
         readonly mo_user_data: RP_UD,
         /**
          * @summary `origVMSCAddr`.
+         * @description
+         *
+         * Address of the originator's visited MSC. Not in TR 101 635.
+         * The SMRP profile this module follows adds it.
+         *
          * @public
          * @readonly
          */
         readonly origVMSCAddr: OPTIONAL<SMS_Address>,
         /**
          * @summary `moimsi`.
+         * @description
+         *
+         * IMSI of the originating subscriber. Not in TR 101 635. The
+         * SMRP profile this module follows adds it. See `IMSI-Address`.
+         *
          * @public
          * @readonly
          */

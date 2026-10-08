@@ -22,7 +22,23 @@ import { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
  *     ...
  * }
  * ```
- * 
+ *
+ * Argument of SMR-ALERT (`Alert-SC`). The MSC (clause 2.1) or GMSC
+ * (clause 3.1) tells the SC that an MS which was previously
+ * unattainable has recovered operation. The report says the operation
+ * reports no outcome (clauses 2.1 and 3.1), so a lost alert is not
+ * signalled. On the OSI stack the local value is 3 (clause 2.2). On
+ * the convergence-function stack it is N-DATA user data, choice
+ * `rpalertsc` (clause 3.2).
+ *
+ * Clauses 2.2 and 3.2 define this as an `SMS-Address` that must be an
+ * international ISDN address. This module makes it a sequence and adds
+ * `message-reference`. The SMRP profile says alerts are acknowledged
+ * in that implementation, which is why the reference was added. The
+ * report itself still gives alerts no response: wait out a guard time
+ * after the last alert before `SMR-Unbind` (clause 2.3.2). An alert
+ * that collides with unbind may be lost (clause 2.2).
+ *
  * @class
  */
 export
@@ -30,12 +46,24 @@ class RPAlertSC {
     constructor (
         /**
          * @summary `ms_address`.
+         * @description
+         *
+         * MS that has recovered. Must be an international ISDN address
+         * (clauses 2.2 and 3.2): `internat-number` with
+         * `iSDN-numbering`.
+         *
          * @public
          * @readonly
          */
         readonly ms_address: SMS_Address,
         /**
          * @summary `message_reference`.
+         * @description
+         *
+         * Reference for this alert. Not in TR 101 635. The SMRP profile
+         * adds it so the alert can be acknowledged. The report does not
+         * define an acknowledgement PDU for SMR-ALERT.
+         *
          * @public
          * @readonly
          */

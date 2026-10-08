@@ -17,6 +17,10 @@ import { SemiOctetString, _decode_SemiOctetString, _encode_SemiOctetString } fro
  *     octet-format SemiOctetString
  * }
  * ```
+ *
+ * Digits of an `SMS-Address`. The only alternative in clauses 2.2 and
+ * 3.2 is `octet-format` (`SemiOctetString`). Other formats are for
+ * further study.
  */
 export
 type SMS_Address_address_value =
