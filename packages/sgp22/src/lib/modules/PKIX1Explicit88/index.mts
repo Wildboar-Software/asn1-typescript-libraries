@@ -34,6 +34,15 @@ export {
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
 
+export type {
+    AttributeValue,
+} from "./AttributeValue.ta.mjs";
+
+export {
+    _decode_AttributeValue,
+    _encode_AttributeValue,
+} from "./AttributeValue.ta.mjs";
+
 export {
     AttributeTypeAndValue,
     _root_component_type_list_1_spec_for_AttributeTypeAndValue,

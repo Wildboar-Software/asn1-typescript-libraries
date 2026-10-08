@@ -88,10 +88,6 @@ export {
     _encode_CRLNumber,
 } from "./CRLNumber.ta.mjs";
 
-export type {
-    CRLReason,
-} from "./CRLReason.ta.mjs";
-
 export {
     _enum_for_CRLReason,
     CRLReason,
