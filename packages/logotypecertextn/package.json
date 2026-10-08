@@ -1,6 +1,13 @@
 {
     "name": "@wildboar/logotypecertextn",
     "type": "module",
+    "description": "Logotypes in X.509 public-key and attribute certificates, from RFC 3709.",
+    "keywords": [
+        "logotype",
+        "cert",
+        "extn",
+        "x509"
+    ],
     "version": "1.0.0",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
