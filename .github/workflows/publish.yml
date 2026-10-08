@@ -54,6 +54,7 @@ jobs:
           # - "pkcs"
           # - "pki-stub"
           - "presentation-address"
+          - "smrse"
           - "spnego"
           - "sv"
           # - "qc"

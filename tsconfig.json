@@ -220,8 +220,11 @@
       "path": "./packages/mrbtr"
     },
     {
+      "path": "./packages/smrse"
+    },
+    {
       "path": "./packages/spnego"
-    }
+    },
     {
       "path": "./packages/sv"
     },
