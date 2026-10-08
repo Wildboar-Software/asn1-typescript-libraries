@@ -1,5 +1,7 @@
 # sgp22
 
+ASN.1 data structures for GSMA SGP.22 Remote SIM Provisioning.
+
 This module is ESM-only.
 
 See the
@@ -16,3 +18,8 @@ produced with it are released publicly under the
 If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
+
+## AI Usage Statement
+
+This package was onboarded from the raw ASN.1 compiler outputs using AI
+(Grok 4.7) on October 8, 2026.
