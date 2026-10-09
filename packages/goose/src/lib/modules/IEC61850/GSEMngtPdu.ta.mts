@@ -118,15 +118,15 @@ export
 function _decode_GSEMngtPdu (el: _Element): GSEMngtPdu {
     if (!_cached_decoder_for_GSEMngtPdu) { _cached_decoder_for_GSEMngtPdu = function (el: _Element): GSEMngtPdu {
     const sequence: _Element[] = el.sequence;
-    if (sequence.length < 2) {
+    const stateIDElement = sequence[0];
+    const requestRespElement = sequence[1];
+    if (stateIDElement === undefined || requestRespElement === undefined) {
         throw new _ConstructionError("GSEMngtPdu contained only " + sequence.length.toString() + " elements.");
     }
-    sequence[0].name = "stateID";
-    sequence[1].name = "requestResp";
-    let stateID!: INTEGER;
-    let requestResp!: RequestResponse;
-    stateID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    requestResp = _decode_RequestResponse(sequence[1]);
+    stateIDElement.name = "stateID";
+    requestRespElement.name = "requestResp";
+    const stateID: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(stateIDElement);
+    const requestResp: RequestResponse = _decode_RequestResponse(requestRespElement);
     return new GSEMngtPdu(
         stateID,
         requestResp,

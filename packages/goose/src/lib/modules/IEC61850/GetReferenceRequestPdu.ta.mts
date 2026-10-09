@@ -120,15 +120,15 @@ export
 function _decode_GetReferenceRequestPdu (el: _Element): GetReferenceRequestPdu {
     if (!_cached_decoder_for_GetReferenceRequestPdu) { _cached_decoder_for_GetReferenceRequestPdu = function (el: _Element): GetReferenceRequestPdu {
     const sequence: _Element[] = el.sequence;
-    if (sequence.length < 2) {
+    const identElement = sequence[0];
+    const offsetElement = sequence[1];
+    if (identElement === undefined || offsetElement === undefined) {
         throw new _ConstructionError("GetReferenceRequestPdu contained only " + sequence.length.toString() + " elements.");
     }
-    sequence[0].name = "ident";
-    sequence[1].name = "offset";
-    let ident!: VisibleString;
-    let offset!: INTEGER[];
-    ident = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(sequence[0]);
-    offset = $._decode_implicit<INTEGER[]>(() => $._decodeSequenceOf<INTEGER>(() => $._decodeInteger))(sequence[1]);
+    identElement.name = "ident";
+    offsetElement.name = "offset";
+    const ident: VisibleString = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(identElement);
+    const offset: INTEGER[] = $._decode_implicit<INTEGER[]>(() => $._decodeSequenceOf<INTEGER>(() => $._decodeInteger))(offsetElement);
     return new GetReferenceRequestPdu(
         ident,
         offset,
