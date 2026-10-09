@@ -1,5 +1,7 @@
 /* eslint-disable */
 import {
+    ASN1Error,
+    ASN1SizeError,
     BOOLEAN,
     IA5String,
     OCTET_STRING,
@@ -10,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GLBExtensions, _decode_GLBExtensions, _encode_GLBExtensions } from "../PKIS/GLBExtensions.ta.mjs";
-// export { GLBExtensions, _decode_GLBExtensions, _encode_GLBExtensions } from "../PKIS/GLBExtensions.ta.mjs";
 
 
 /**
@@ -106,7 +107,17 @@ class SecurityAttributes {
          * @readonly
          */
         readonly gLBExtensions: GLBExtensions
-    ) {}
+    ) {
+        if (versionNumber.length !== 2) {
+            throw new ASN1SizeError("SecurityAttributes.versionNumber violates SIZE constraint");
+        }
+        if (nSI !== true) {
+            throw new ASN1Error("SecurityAttributes.nSI violates BOOLEAN (TRUE) constraint");
+        }
+        if (securityTM !== "Novell Security Attribute(tm)") {
+            throw new ASN1Error("SecurityAttributes.securityTM violates single-value constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a SecurityAttributes
@@ -223,7 +234,7 @@ let _cached_encoder_for_SecurityAttributes: $.ASN1Encoder<SecurityAttributes> | 
  */
 export
 function _encode_SecurityAttributes (value: SecurityAttributes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SecurityAttributes) { _cached_encoder_for_SecurityAttributes = function (value: SecurityAttributes, elGetter: $.ASN1Encoder<SecurityAttributes>): _Element {
+    if (!_cached_encoder_for_SecurityAttributes) { _cached_encoder_for_SecurityAttributes = function (value: SecurityAttributes): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeOctetString(value.versionNumber, $.BER),

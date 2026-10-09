@@ -6,6 +6,7 @@ import {
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 
 
 
@@ -49,7 +50,10 @@ class CryptoQualityPair {
          * @readonly
          */
         readonly cryptoModuleRating: INTEGER
-    ) {}
+    ) {
+        assertIntegerRange(cryptoModuleCriteria, 0n, 255n, "CryptoQualityPair.cryptoModuleCriteria");
+        assertIntegerRange(cryptoModuleRating, 0n, 255n, "CryptoQualityPair.cryptoModuleRating");
+    }
 
     /**
      * @summary Restructures an object into a CryptoQualityPair
@@ -151,7 +155,7 @@ let _cached_encoder_for_CryptoQualityPair: $.ASN1Encoder<CryptoQualityPair> | nu
  */
 export
 function _encode_CryptoQualityPair (value: CryptoQualityPair, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CryptoQualityPair) { _cached_encoder_for_CryptoQualityPair = function (value: CryptoQualityPair, elGetter: $.ASN1Encoder<CryptoQualityPair>): _Element {
+    if (!_cached_encoder_for_CryptoQualityPair) { _cached_encoder_for_CryptoQualityPair = function (value: CryptoQualityPair): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.cryptoModuleCriteria, $.BER),

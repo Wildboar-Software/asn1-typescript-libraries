@@ -6,6 +6,7 @@ import {
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 
 
 
@@ -52,7 +53,10 @@ class CompusecQualityPair {
          * @readonly
          */
         readonly compusecRating: INTEGER
-    ) {}
+    ) {
+        assertIntegerRange(compusecCriteria, 0n, 255n, "CompusecQualityPair.compusecCriteria");
+        assertIntegerRange(compusecRating, 0n, 255n, "CompusecQualityPair.compusecRating");
+    }
 
     /**
      * @summary Restructures an object into a CompusecQualityPair
@@ -154,7 +158,7 @@ let _cached_encoder_for_CompusecQualityPair: $.ASN1Encoder<CompusecQualityPair> 
  */
 export
 function _encode_CompusecQualityPair (value: CompusecQualityPair, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompusecQualityPair) { _cached_encoder_for_CompusecQualityPair = function (value: CompusecQualityPair, elGetter: $.ASN1Encoder<CompusecQualityPair>): _Element {
+    if (!_cached_encoder_for_CompusecQualityPair) { _cached_encoder_for_CompusecQualityPair = function (value: CompusecQualityPair): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.compusecCriteria, $.BER),

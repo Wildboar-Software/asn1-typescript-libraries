@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SingletonChoice, _decode_SingletonChoice, _encode_SingletonChoice } from "../PKIS/SingletonChoice.ta.mjs";
-// export { SingletonChoice, _decode_SingletonChoice, _encode_SingletonChoice } from "../PKIS/SingletonChoice.ta.mjs";
 
 
 /**
@@ -31,7 +31,11 @@ let _cached_decoder_for_Singletons: $.ASN1Decoder<Singletons> | null = null;
 export
 function _decode_Singletons (el: _Element): Singletons {
     if (!_cached_decoder_for_Singletons) { _cached_decoder_for_Singletons = $._decodeSequenceOf<SingletonChoice>(() => _decode_SingletonChoice); }
-    return _cached_decoder_for_Singletons(el);
+    const value = _cached_decoder_for_Singletons(el);
+    if (value.length < 1 || value.length > 16) {
+        throw new ASN1SizeError("Singletons violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_Singletons: $.ASN1Encoder<Singletons> | null = null;

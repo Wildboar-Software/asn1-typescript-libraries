@@ -7,6 +7,7 @@ import {
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 
 
 
@@ -68,7 +69,10 @@ class SingletonRange {
          * @readonly
          */
         readonly singletonValue: BOOLEAN
-    ) {}
+    ) {
+        assertIntegerRange(singletonLowerBound, 0n, 9223372036854775807n, "SingletonRange.singletonLowerBound");
+        assertIntegerRange(singletonUpperBound, 0n, 9223372036854775807n, "SingletonRange.singletonUpperBound");
+    }
 
     /**
      * @summary Restructures an object into a SingletonRange
@@ -175,7 +179,7 @@ let _cached_encoder_for_SingletonRange: $.ASN1Encoder<SingletonRange> | null = n
  */
 export
 function _encode_SingletonRange (value: SingletonRange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SingletonRange) { _cached_encoder_for_SingletonRange = function (value: SingletonRange, elGetter: $.ASN1Encoder<SingletonRange>): _Element {
+    if (!_cached_encoder_for_SingletonRange) { _cached_encoder_for_SingletonRange = function (value: SingletonRange): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.singletonLowerBound, $.BER),

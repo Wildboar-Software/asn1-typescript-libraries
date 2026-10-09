@@ -2,11 +2,11 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SecurityLabelType1, _decode_SecurityLabelType1, _encode_SecurityLabelType1 } from "../PKIS/SecurityLabelType1.ta.mjs";
-// export { SecurityLabelType1, _decode_SecurityLabelType1, _encode_SecurityLabelType1 } from "../PKIS/SecurityLabelType1.ta.mjs";
 
 
 /**
@@ -46,7 +46,11 @@ class EnterpriseId {
          * @readonly
          */
         readonly enterpriseLabel: SecurityLabelType1[]
-    ) {}
+    ) {
+        if (enterpriseLabel.length !== 1) {
+            throw new ASN1SizeError("EnterpriseId.enterpriseLabel violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a EnterpriseId
@@ -153,7 +157,7 @@ let _cached_encoder_for_EnterpriseId: $.ASN1Encoder<EnterpriseId> | null = null;
  */
 export
 function _encode_EnterpriseId (value: EnterpriseId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EnterpriseId) { _cached_encoder_for_EnterpriseId = function (value: EnterpriseId, elGetter: $.ASN1Encoder<EnterpriseId>): _Element {
+    if (!_cached_encoder_for_EnterpriseId) { _cached_encoder_for_EnterpriseId = function (value: EnterpriseId): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SecurityLabelType1, $.BER)(value.rootLabel, $.BER),

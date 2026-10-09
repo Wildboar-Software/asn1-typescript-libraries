@@ -51,6 +51,7 @@ jobs:
           - "mms"
           - "mrbtr"
           - "nlm"
+          - "novell_pkis"
           - "ocsp"
           - "or-address"
           - "pc"

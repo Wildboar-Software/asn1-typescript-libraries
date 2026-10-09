@@ -4,8 +4,8 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 import { SingletonRange, _decode_SingletonRange, _encode_SingletonRange } from "../PKIS/SingletonRange.ta.mjs";
-// export { SingletonRange, _decode_SingletonRange, _encode_SingletonRange } from "../PKIS/SingletonRange.ta.mjs";
 
 
 /**
@@ -46,7 +46,11 @@ function _decode_SingletonChoice (el: _Element): SingletonChoice {
     "UNIVERSAL 2": [ "uniqueSingleton", $._decodeInteger ],
     "UNIVERSAL 16": [ "singletonRange", _decode_SingletonRange ]
 }); }
-    return _cached_decoder_for_SingletonChoice(el);
+    const value = _cached_decoder_for_SingletonChoice(el);
+    if ("uniqueSingleton" in value) {
+        assertIntegerRange(value.uniqueSingleton, 0n, 9223372036854775807n, "SingletonChoice.uniqueSingleton");
+    }
+    return value;
 }
 
 let _cached_encoder_for_SingletonChoice: $.ASN1Encoder<SingletonChoice> | null = null;

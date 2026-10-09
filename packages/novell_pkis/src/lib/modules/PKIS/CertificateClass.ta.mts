@@ -7,6 +7,7 @@ import {
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 
 
 
@@ -44,7 +45,9 @@ class CertificateClass {
          * @readonly
          */
         readonly certificateValid: BOOLEAN
-    ) {}
+    ) {
+        assertIntegerRange(classValue, 0n, 255n, "CertificateClass.classValue");
+    }
 
     /**
      * @summary Restructures an object into a CertificateClass
@@ -146,7 +149,7 @@ let _cached_encoder_for_CertificateClass: $.ASN1Encoder<CertificateClass> | null
  */
 export
 function _encode_CertificateClass (value: CertificateClass, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CertificateClass) { _cached_encoder_for_CertificateClass = function (value: CertificateClass, elGetter: $.ASN1Encoder<CertificateClass>): _Element {
+    if (!_cached_encoder_for_CertificateClass) { _cached_encoder_for_CertificateClass = function (value: CertificateClass): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.classValue, $.BER),

@@ -3,7 +3,7 @@ import {
     ObjectIdentifier as _OID,
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
-
+import { pkiAttributeType } from "../PKIS/pkiAttributeType.va.mjs";
 
 
 /**
@@ -13,14 +13,14 @@ import {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * pa-sa OBJECT IDENTIFIER ::= { pkiAttributeType (1) }
+ * pa-sa OBJECT IDENTIFIER ::= { pkiAttributeType 1 }
  * ```
  * 
  * @constant
  */
 export
 const pa_sa: OBJECT_IDENTIFIER = _OID.fromParts([
-    /* pkiAttributeType */ 1,
-]);
+    1,
+], pkiAttributeType);
 
 /* eslint-enable */

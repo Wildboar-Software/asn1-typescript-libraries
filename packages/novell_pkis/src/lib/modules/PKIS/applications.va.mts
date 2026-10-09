@@ -4,7 +4,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { novell } from "../PKIS/novell.va.mjs";
-// export { novell } from "../PKIS/novell.va.mjs";
 
 
 /**

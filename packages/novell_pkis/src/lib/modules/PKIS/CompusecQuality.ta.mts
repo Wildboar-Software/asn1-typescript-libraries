@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CompusecQualityPair, _decode_CompusecQualityPair, _encode_CompusecQualityPair } from "../PKIS/CompusecQualityPair.ta.mjs";
-// export { CompusecQualityPair, _decode_CompusecQualityPair, _encode_CompusecQualityPair } from "../PKIS/CompusecQualityPair.ta.mjs";
 
 
 /**
@@ -32,7 +32,11 @@ let _cached_decoder_for_CompusecQuality: $.ASN1Decoder<CompusecQuality> | null =
 export
 function _decode_CompusecQuality (el: _Element): CompusecQuality {
     if (!_cached_decoder_for_CompusecQuality) { _cached_decoder_for_CompusecQuality = $._decodeSequenceOf<CompusecQualityPair>(() => _decode_CompusecQualityPair); }
-    return _cached_decoder_for_CompusecQuality(el);
+    const value = _cached_decoder_for_CompusecQuality(el);
+    if (value.length !== 1) {
+        throw new ASN1SizeError("CompusecQuality violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_CompusecQuality: $.ASN1Encoder<CompusecQuality> | null = null;

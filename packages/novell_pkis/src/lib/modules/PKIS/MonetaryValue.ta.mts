@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Currency, _decode_Currency, _encode_Currency } from "../PKIS/Currency.ta.mjs";
-// export { Currency, _decode_Currency, _encode_Currency } from "../PKIS/Currency.ta.mjs";
 
 
 /**
@@ -154,7 +153,7 @@ let _cached_encoder_for_MonetaryValue: $.ASN1Encoder<MonetaryValue> | null = nul
  */
 export
 function _encode_MonetaryValue (value: MonetaryValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MonetaryValue) { _cached_encoder_for_MonetaryValue = function (value: MonetaryValue, elGetter: $.ASN1Encoder<MonetaryValue>): _Element {
+    if (!_cached_encoder_for_MonetaryValue) { _cached_encoder_for_MonetaryValue = function (value: MonetaryValue): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Currency(value.currency, $.BER),

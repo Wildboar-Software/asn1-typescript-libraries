@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     BOOLEAN,
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
@@ -7,10 +8,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 import { CompusecQuality, _decode_CompusecQuality, _encode_CompusecQuality } from "../PKIS/CompusecQuality.ta.mjs";
-// export { CompusecQuality, _decode_CompusecQuality, _encode_CompusecQuality } from "../PKIS/CompusecQuality.ta.mjs";
 import { CryptoQuality, _decode_CryptoQuality, _encode_CryptoQuality } from "../PKIS/CryptoQuality.ta.mjs";
-// export { CryptoQuality, _decode_CryptoQuality, _encode_CryptoQuality } from "../PKIS/CryptoQuality.ta.mjs";
 
 
 /**
@@ -77,7 +77,15 @@ class Quality {
          * @readonly
          */
         readonly keyStorageQuality: INTEGER
-    ) {}
+    ) {
+        if (compusecQuality.length !== 1) {
+            throw new ASN1SizeError("Quality.compusecQuality violates SIZE constraint");
+        }
+        if (cryptoQuality.length !== 1) {
+            throw new ASN1SizeError("Quality.cryptoQuality violates SIZE constraint");
+        }
+        assertIntegerRange(keyStorageQuality, 0n, 255n, "Quality.keyStorageQuality");
+    }
 
     /**
      * @summary Restructures an object into a Quality
@@ -189,7 +197,7 @@ let _cached_encoder_for_Quality: $.ASN1Encoder<Quality> | null = null;
  */
 export
 function _encode_Quality (value: Quality, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Quality) { _cached_encoder_for_Quality = function (value: Quality, elGetter: $.ASN1Encoder<Quality>): _Element {
+    if (!_cached_encoder_for_Quality) { _cached_encoder_for_Quality = function (value: Quality): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeBoolean(value.enforceQuality, $.BER),
