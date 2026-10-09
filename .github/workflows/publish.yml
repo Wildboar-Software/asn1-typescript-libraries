@@ -53,6 +53,7 @@ jobs:
           - "nlm"
           - "ocsp"
           - "or-address"
+          - "p772"
           - "pc"
           - "pkcs"
           - "pki-stub"
