@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IconObject_Item_bodyType, _decode_IconObject_Item_bodyType, _encode_IconObject_Item_bodyType } from "../RecordSyntax-explain/IconObject-Item-bodyType.ta.mjs";
-// export { IconObject_Item_bodyType, _decode_IconObject_Item_bodyType, _encode_IconObject_Item_bodyType } from "../RecordSyntax-explain/IconObject-Item-bodyType.ta.mjs";
 
 
 /**
@@ -17,7 +16,16 @@ import { IconObject_Item_bodyType, _decode_IconObject_Item_bodyType, _encode_Ico
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IconObject-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * IconObject-Item ::= SEQUENCE {
+ *     -- Note that the "SEQUENCE OF" is to allow alternative
+ *     -- representations of the same Icon; it is not intended to allow multiple icons.
+ *     bodyType [1] CHOICE {
+ *         ianaType [1] IMPLICIT InternationalString,
+ *         z3950type [2] IMPLICIT InternationalString,
+ *         otherType [3] IMPLICIT InternationalString
+ *     },
+ *     content [2] IMPLICIT OCTET STRING
+ * }
  * ```
  * 
  * @class
@@ -121,10 +129,8 @@ function _decode_IconObject_Item (el: _Element): IconObject_Item {
     }
     sequence[0].name = "bodyType";
     sequence[1].name = "content";
-    let bodyType!: IconObject_Item_bodyType;
-    let content!: OCTET_STRING;
-    bodyType = $._decode_explicit<IconObject_Item_bodyType>(() => _decode_IconObject_Item_bodyType)(sequence[0]);
-    content = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const bodyType: IconObject_Item_bodyType = $._decode_explicit<IconObject_Item_bodyType>(() => _decode_IconObject_Item_bodyType)(sequence[0]);
+    const content: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new IconObject_Item(
         bodyType,
         content,

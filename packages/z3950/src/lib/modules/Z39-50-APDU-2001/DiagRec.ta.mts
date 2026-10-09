@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DefaultDiagFormat, _decode_DefaultDiagFormat, _encode_DefaultDiagFormat } from "../Z39-50-APDU-2001/DefaultDiagFormat.ta.mjs";
-// export { DefaultDiagFormat, _decode_DefaultDiagFormat, _encode_DefaultDiagFormat } from "../Z39-50-APDU-2001/DefaultDiagFormat.ta.mjs";
 
 
 /**

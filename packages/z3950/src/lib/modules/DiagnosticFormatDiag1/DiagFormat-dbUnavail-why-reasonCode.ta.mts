@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -14,7 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-dbUnavail-why-reasonCode ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-dbUnavail-why-reasonCode ::= INTEGER {
+ *     doesNotExist (0),
+ *     existsButUnavail (1),
+ *     locked (2),
+ *     accessDenied (3)
+ * }
  * ```
  */
 export
@@ -83,35 +87,8 @@ const DiagFormat_dbUnavail_why_reasonCode_accessDenied: DiagFormat_dbUnavail_why
  */
 export
 const accessDenied: DiagFormat_dbUnavail_why_reasonCode = DiagFormat_dbUnavail_why_reasonCode_accessDenied; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DiagFormat_dbUnavail_why_reasonCode: $.ASN1Decoder<DiagFormat_dbUnavail_why_reasonCode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DiagFormat_dbUnavail_why_reasonCode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DiagFormat_dbUnavail_why_reasonCode (el: _Element): DiagFormat_dbUnavail_why_reasonCode {
-    if (!_cached_decoder_for_DiagFormat_dbUnavail_why_reasonCode) { _cached_decoder_for_DiagFormat_dbUnavail_why_reasonCode = $._decodeInteger; }
-    return _cached_decoder_for_DiagFormat_dbUnavail_why_reasonCode(el);
-}
-
-let _cached_encoder_for_DiagFormat_dbUnavail_why_reasonCode: $.ASN1Encoder<DiagFormat_dbUnavail_why_reasonCode> | null = null;
-
-/**
- * @summary Encodes a(n) DiagFormat_dbUnavail_why_reasonCode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DiagFormat_dbUnavail_why_reasonCode, encoded as an ASN.1 Element.
- */
-export
-function _encode_DiagFormat_dbUnavail_why_reasonCode (value: DiagFormat_dbUnavail_why_reasonCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DiagFormat_dbUnavail_why_reasonCode) { _cached_encoder_for_DiagFormat_dbUnavail_why_reasonCode = $._encodeInteger; }
-    return _cached_encoder_for_DiagFormat_dbUnavail_why_reasonCode(value, elGetter);
-}
+export const _decode_DiagFormat_dbUnavail_why_reasonCode = $._decodeInteger;
+export const _encode_DiagFormat_dbUnavail_why_reasonCode = $._encodeInteger;
 
 
 /* eslint-enable */

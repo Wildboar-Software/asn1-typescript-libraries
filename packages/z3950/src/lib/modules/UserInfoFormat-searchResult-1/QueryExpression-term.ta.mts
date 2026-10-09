@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mjs";
-// export { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**
@@ -18,7 +16,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * QueryExpression-term ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * QueryExpression-term ::= SEQUENCE {
+ *     queryTerm [1] Term,
+ *     termComment [2] IMPLICIT InternationalString OPTIONAL
+ * }
  * ```
  * 
  * @class

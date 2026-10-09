@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } from "../ESFormat-PeriodicQuerySchedule/ClientPartToKeep.ta.mjs";
-// export { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } from "../ESFormat-PeriodicQuerySchedule/ClientPartToKeep.ta.mjs";
 import { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNotToKeep } from "../ESFormat-PeriodicQuerySchedule/ClientPartNotToKeep.ta.mjs";
-// export { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNotToKeep } from "../ESFormat-PeriodicQuerySchedule/ClientPartNotToKeep.ta.mjs";
 
 
 /**
@@ -18,7 +16,10 @@ import { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNot
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PeriodicQuerySchedule-esRequest ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PeriodicQuerySchedule-esRequest ::= SEQUENCE {
+ *     toKeep [1] ClientPartToKeep,
+ *     notToKeep [2] ClientPartNotToKeep
+ * }
  * ```
  * 
  * @class
@@ -122,10 +123,8 @@ function _decode_PeriodicQuerySchedule_esRequest (el: _Element): PeriodicQuerySc
     }
     sequence[0].name = "toKeep";
     sequence[1].name = "notToKeep";
-    let toKeep!: ClientPartToKeep;
-    let notToKeep!: ClientPartNotToKeep;
-    toKeep = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
-    notToKeep = $._decode_explicit<ClientPartNotToKeep>(() => _decode_ClientPartNotToKeep)(sequence[1]);
+    const toKeep: ClientPartToKeep = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
+    const notToKeep: ClientPartNotToKeep = $._decode_explicit<ClientPartNotToKeep>(() => _decode_ClientPartNotToKeep)(sequence[1]);
     return new PeriodicQuerySchedule_esRequest(
         toKeep,
         notToKeep,

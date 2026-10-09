@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ClientPartNotToKeep_records_ranges_Item, _decode_ClientPartNotToKeep_records_ranges_Item, _encode_ClientPartNotToKeep_records_ranges_Item } from "../ESFormat-ExportInvocation/ClientPartNotToKeep-records-ranges-Item.ta.mjs";
-// export { ClientPartNotToKeep_records_ranges_Item, _decode_ClientPartNotToKeep_records_ranges_Item, _encode_ClientPartNotToKeep_records_ranges_Item } from "../ESFormat-ExportInvocation/ClientPartNotToKeep-records-ranges-Item.ta.mjs";
 
 
 /**
@@ -16,7 +15,14 @@ import { ClientPartNotToKeep_records_ranges_Item, _decode_ClientPartNotToKeep_re
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ClientPartNotToKeep-records ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ClientPartNotToKeep-records ::= CHOICE {
+ *     all [1] IMPLICIT NULL,
+ *     ranges [2] IMPLICIT SEQUENCE OF SEQUENCE {
+ *         start [1] IMPLICIT INTEGER,
+ *         count [2] IMPLICIT INTEGER OPTIONAL  -- Count may be omitted only on last range,
+ *         -- to indicate "all remaining records beginning with 'start'."
+ *     }
+ * }
  * ```
  */
 export

@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -14,7 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TermListInfo-termLists-Item-searchCost ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * TermListInfo-termLists-Item-searchCost ::= INTEGER {
+ *     -- see comment 6
+ *     optimized (0),
+ *     normal (1),
+ *     expensive (2),
+ *     filter (3)
+ * }
  * ```
  */
 export
@@ -83,35 +88,8 @@ const TermListInfo_termLists_Item_searchCost_filter: TermListInfo_termLists_Item
  */
 export
 const filter: TermListInfo_termLists_Item_searchCost = TermListInfo_termLists_Item_searchCost_filter; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_TermListInfo_termLists_Item_searchCost: $.ASN1Decoder<TermListInfo_termLists_Item_searchCost> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) TermListInfo_termLists_Item_searchCost
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TermListInfo_termLists_Item_searchCost (el: _Element): TermListInfo_termLists_Item_searchCost {
-    if (!_cached_decoder_for_TermListInfo_termLists_Item_searchCost) { _cached_decoder_for_TermListInfo_termLists_Item_searchCost = $._decodeInteger; }
-    return _cached_decoder_for_TermListInfo_termLists_Item_searchCost(el);
-}
-
-let _cached_encoder_for_TermListInfo_termLists_Item_searchCost: $.ASN1Encoder<TermListInfo_termLists_Item_searchCost> | null = null;
-
-/**
- * @summary Encodes a(n) TermListInfo_termLists_Item_searchCost into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TermListInfo_termLists_Item_searchCost, encoded as an ASN.1 Element.
- */
-export
-function _encode_TermListInfo_termLists_Item_searchCost (value: TermListInfo_termLists_Item_searchCost, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TermListInfo_termLists_Item_searchCost) { _cached_encoder_for_TermListInfo_termLists_Item_searchCost = $._encodeInteger; }
-    return _cached_encoder_for_TermListInfo_termLists_Item_searchCost(value, elGetter);
-}
+export const _decode_TermListInfo_termLists_Item_searchCost = $._decodeInteger;
+export const _encode_TermListInfo_termLists_Item_searchCost = $._encodeInteger;
 
 
 /* eslint-enable */

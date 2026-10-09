@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_DiagFormat_tooMany_tooManyWhat, _encode_DiagFormat_tooMany_tooManyWhat, DiagFormat_tooMany_tooManyWhat } from "../DiagnosticFormatDiag1/DiagFormat-tooMany-tooManyWhat.ta.mjs";
-// export { DiagFormat_tooMany_tooManyWhat, DiagFormat_tooMany_tooManyWhat_argumentWords /* IMPORTED_LONG_NAMED_INTEGER */, argumentWords /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_tooMany_tooManyWhat_truncatedWords /* IMPORTED_LONG_NAMED_INTEGER */, truncatedWords /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_tooMany_tooManyWhat_booleanOperators /* IMPORTED_LONG_NAMED_INTEGER */, booleanOperators /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_tooMany_tooManyWhat_incompleteSubfields /* IMPORTED_LONG_NAMED_INTEGER */, incompleteSubfields /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_tooMany_tooManyWhat_characters /* IMPORTED_LONG_NAMED_INTEGER */, characters /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_tooMany_tooManyWhat_recordsRetrieved /* IMPORTED_LONG_NAMED_INTEGER */, recordsRetrieved /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_tooMany_tooManyWhat_dataBasesSpecified /* IMPORTED_LONG_NAMED_INTEGER */, dataBasesSpecified /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_tooMany_tooManyWhat_resultSetsCreated /* IMPORTED_LONG_NAMED_INTEGER */, resultSetsCreated /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_tooMany_tooManyWhat_indexTermsProcessed /* IMPORTED_LONG_NAMED_INTEGER */, indexTermsProcessed /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagFormat_tooMany_tooManyWhat, _encode_DiagFormat_tooMany_tooManyWhat } from "../DiagnosticFormatDiag1/DiagFormat-tooMany-tooManyWhat.ta.mjs";
 
 
 /**
@@ -17,7 +16,20 @@ import { _decode_DiagFormat_tooMany_tooManyWhat, _encode_DiagFormat_tooMany_tooM
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-tooMany ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-tooMany ::= SEQUENCE {
+ *     tooManyWhat [1] IMPLICIT INTEGER {
+ *         argumentWords (1),
+ *         truncatedWords (2),
+ *         booleanOperators (3),
+ *         incompleteSubfields (4),
+ *         characters (5),
+ *         recordsRetrieved (6),
+ *         dataBasesSpecified (7),
+ *         resultSetsCreated (8),
+ *         indexTermsProcessed (9)
+ *     },
+ *     max [2] IMPLICIT INTEGER OPTIONAL
+ * }
  * ```
  * 
  * @class

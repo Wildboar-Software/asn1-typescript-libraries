@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AccessControlRequest-securityChallenge ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AccessControlRequest-securityChallenge ::= CHOICE {
+ *     simpleForm [37] IMPLICIT OCTET STRING,
+ *     externallyDefined [0] EXTERNAL
+ * }
  * ```
  */
 export

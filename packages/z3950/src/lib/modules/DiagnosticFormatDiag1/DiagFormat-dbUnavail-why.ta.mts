@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagFormat_dbUnavail_why_reasonCode, _decode_DiagFormat_dbUnavail_why_reasonCode, _encode_DiagFormat_dbUnavail_why_reasonCode } from "../DiagnosticFormatDiag1/DiagFormat-dbUnavail-why-reasonCode.ta.mjs";
-// export { DiagFormat_dbUnavail_why_reasonCode, DiagFormat_dbUnavail_why_reasonCode_doesNotExist /* IMPORTED_LONG_NAMED_INTEGER */, doesNotExist /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_dbUnavail_why_reasonCode_existsButUnavail /* IMPORTED_LONG_NAMED_INTEGER */, existsButUnavail /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_dbUnavail_why_reasonCode_locked /* IMPORTED_LONG_NAMED_INTEGER */, locked /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_dbUnavail_why_reasonCode_accessDenied /* IMPORTED_LONG_NAMED_INTEGER */, accessDenied /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagFormat_dbUnavail_why_reasonCode, _encode_DiagFormat_dbUnavail_why_reasonCode } from "../DiagnosticFormatDiag1/DiagFormat-dbUnavail-why-reasonCode.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**
@@ -18,7 +16,15 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-dbUnavail-why ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-dbUnavail-why ::= SEQUENCE {
+ *     reasonCode [1] IMPLICIT INTEGER {
+ *         doesNotExist (0),
+ *         existsButUnavail (1),
+ *         locked (2),
+ *         accessDenied (3)
+ *     } OPTIONAL,
+ *     message [2] IMPLICIT InternationalString OPTIONAL
+ * }
  * ```
  * 
  * @class

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
-// export { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
 import { SortKey, _decode_SortKey, _encode_SortKey } from "../Z39-50-APDU-2001/SortKey.ta.mjs";
-// export { SortKey, _decode_SortKey, _encode_SortKey } from "../Z39-50-APDU-2001/SortKey.ta.mjs";
 
 
 /**
@@ -18,7 +16,10 @@ import { SortKey, _decode_SortKey, _encode_SortKey } from "../Z39-50-APDU-2001/S
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SortElement-datbaseSpecific-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SortElement-datbaseSpecific-Item ::= SEQUENCE {
+ *     databaseName DatabaseName,
+ *     dbSort SortKey
+ * }
  * ```
  * 
  * @class
@@ -122,10 +123,8 @@ function _decode_SortElement_datbaseSpecific_Item (el: _Element): SortElement_da
     }
     sequence[0].name = "databaseName";
     sequence[1].name = "dbSort";
-    let databaseName!: DatabaseName;
-    let dbSort!: SortKey;
-    databaseName = _decode_DatabaseName(sequence[0]);
-    dbSort = _decode_SortKey(sequence[1]);
+    const databaseName: DatabaseName = _decode_DatabaseName(sequence[0]);
+    const dbSort: SortKey = _decode_SortKey(sequence[1]);
     return new SortElement_datbaseSpecific_Item(
         databaseName,
         dbSort,

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../ElementSpecification-eSpec-q/RPNStructure.ta.mjs";
-// export { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../ElementSpecification-eSpec-q/RPNStructure.ta.mjs";
 import { RPNStructure_rpnRpnOp_op, _decode_RPNStructure_rpnRpnOp_op, _encode_RPNStructure_rpnRpnOp_op } from "../ElementSpecification-eSpec-q/RPNStructure-rpnRpnOp-op.ta.mjs";
-// export { RPNStructure_rpnRpnOp_op, _decode_RPNStructure_rpnRpnOp_op, _encode_RPNStructure_rpnRpnOp_op } from "../ElementSpecification-eSpec-q/RPNStructure-rpnRpnOp-op.ta.mjs";
 
 
 /**
@@ -18,7 +16,15 @@ import { RPNStructure_rpnRpnOp_op, _decode_RPNStructure_rpnRpnOp_op, _encode_RPN
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RPNStructure-rpnRpnOp ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RPNStructure-rpnRpnOp ::= SEQUENCE {
+ *     rpn1 RPNStructure,
+ *     rpn2 RPNStructure,
+ *     op [46] CHOICE {
+ *         and [0] IMPLICIT NULL,
+ *         or [1] IMPLICIT NULL,
+ *         and-not [2] IMPLICIT NULL
+ *     }
+ * }
  * ```
  * 
  * @class
@@ -132,12 +138,9 @@ function _decode_RPNStructure_rpnRpnOp (el: _Element): RPNStructure_rpnRpnOp {
     sequence[0].name = "rpn1";
     sequence[1].name = "rpn2";
     sequence[2].name = "op";
-    let rpn1!: RPNStructure;
-    let rpn2!: RPNStructure;
-    let op!: RPNStructure_rpnRpnOp_op;
-    rpn1 = _decode_RPNStructure(sequence[0]);
-    rpn2 = _decode_RPNStructure(sequence[1]);
-    op = $._decode_explicit<RPNStructure_rpnRpnOp_op>(() => _decode_RPNStructure_rpnRpnOp_op)(sequence[2]);
+    const rpn1: RPNStructure = _decode_RPNStructure(sequence[0]);
+    const rpn2: RPNStructure = _decode_RPNStructure(sequence[1]);
+    const op: RPNStructure_rpnRpnOp_op = $._decode_explicit<RPNStructure_rpnRpnOp_op>(() => _decode_RPNStructure_rpnRpnOp_op)(sequence[2]);
     return new RPNStructure_rpnRpnOp(
         rpn1,
         rpn2,

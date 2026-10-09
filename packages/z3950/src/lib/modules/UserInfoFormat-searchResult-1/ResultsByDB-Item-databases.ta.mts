@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
-// export { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
 
 
 /**
@@ -16,7 +15,11 @@ import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ResultsByDB-Item-databases ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ResultsByDB-Item-databases ::= CHOICE {
+ *     all [1] IMPLICIT NULL,
+ *     --Applies across all of the databases in Search APDU
+ *     list [2] IMPLICIT SEQUENCE OF DatabaseName  --Applies across all databases in this list
+ * }
  * ```
  */
 export

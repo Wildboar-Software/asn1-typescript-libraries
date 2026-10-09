@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -14,7 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-scan-posInResponse ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-scan-posInResponse ::= INTEGER {
+ *     -- value of positionIn-
+ *     -- Response not supported
+ *     mustBeOne (1),
+ *     mustBePositive (2),
+ *     mustBeNonNegative (3),
+ *     other (4)
+ * }
  * ```
  */
 export
@@ -83,35 +89,8 @@ const DiagFormat_scan_posInResponse_other: DiagFormat_scan_posInResponse = 4; /*
  */
 export
 const other: DiagFormat_scan_posInResponse = DiagFormat_scan_posInResponse_other; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DiagFormat_scan_posInResponse: $.ASN1Decoder<DiagFormat_scan_posInResponse> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DiagFormat_scan_posInResponse
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DiagFormat_scan_posInResponse (el: _Element): DiagFormat_scan_posInResponse {
-    if (!_cached_decoder_for_DiagFormat_scan_posInResponse) { _cached_decoder_for_DiagFormat_scan_posInResponse = $._decodeInteger; }
-    return _cached_decoder_for_DiagFormat_scan_posInResponse(el);
-}
-
-let _cached_encoder_for_DiagFormat_scan_posInResponse: $.ASN1Encoder<DiagFormat_scan_posInResponse> | null = null;
-
-/**
- * @summary Encodes a(n) DiagFormat_scan_posInResponse into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DiagFormat_scan_posInResponse, encoded as an ASN.1 Element.
- */
-export
-function _encode_DiagFormat_scan_posInResponse (value: DiagFormat_scan_posInResponse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DiagFormat_scan_posInResponse) { _cached_encoder_for_DiagFormat_scan_posInResponse = $._encodeInteger; }
-    return _cached_encoder_for_DiagFormat_scan_posInResponse(value, elGetter);
-}
+export const _decode_DiagFormat_scan_posInResponse = $._decodeInteger;
+export const _encode_DiagFormat_scan_posInResponse = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**
@@ -15,7 +14,11 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IconObject-Item-bodyType ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * IconObject-Item-bodyType ::= CHOICE {
+ *     ianaType [1] IMPLICIT InternationalString,
+ *     z3950type [2] IMPLICIT InternationalString,
+ *     otherType [3] IMPLICIT InternationalString
+ * }
  * ```
  */
 export

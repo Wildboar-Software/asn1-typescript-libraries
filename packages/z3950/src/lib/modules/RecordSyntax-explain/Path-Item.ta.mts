@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } from "../Z39-50-APDU-2001/StringOrNumeric.ta.mjs";
-// export { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } from "../Z39-50-APDU-2001/StringOrNumeric.ta.mjs";
 
 
 /**
@@ -17,7 +16,10 @@ import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Path-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Path-Item ::= SEQUENCE {
+ *     tagType [1] IMPLICIT INTEGER,
+ *     tagValue [2] StringOrNumeric
+ * }
  * ```
  * 
  * @class
@@ -121,10 +123,8 @@ function _decode_Path_Item (el: _Element): Path_Item {
     }
     sequence[0].name = "tagType";
     sequence[1].name = "tagValue";
-    let tagType!: INTEGER;
-    let tagValue!: StringOrNumeric;
-    tagType = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    tagValue = $._decode_explicit<StringOrNumeric>(() => _decode_StringOrNumeric)(sequence[1]);
+    const tagType: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const tagValue: StringOrNumeric = $._decode_explicit<StringOrNumeric>(() => _decode_StringOrNumeric)(sequence[1]);
     return new Path_Item(
         tagType,
         tagValue,

@@ -8,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DefaultDiagFormat_addinfo, _decode_DefaultDiagFormat_addinfo, _encode_DefaultDiagFormat_addinfo } from "../Z39-50-APDU-2001/DefaultDiagFormat-addinfo.ta.mjs";
-// export { DefaultDiagFormat_addinfo, _decode_DefaultDiagFormat_addinfo, _encode_DefaultDiagFormat_addinfo } from "../Z39-50-APDU-2001/DefaultDiagFormat-addinfo.ta.mjs";
 
 
 /**
@@ -140,12 +139,9 @@ function _decode_DefaultDiagFormat (el: _Element): DefaultDiagFormat {
     sequence[0].name = "diagnosticSetId";
     sequence[1].name = "condition";
     sequence[2].name = "addinfo";
-    let diagnosticSetId!: OBJECT_IDENTIFIER;
-    let condition!: INTEGER;
-    let addinfo!: DefaultDiagFormat_addinfo;
-    diagnosticSetId = $._decodeObjectIdentifier(sequence[0]);
-    condition = $._decodeInteger(sequence[1]);
-    addinfo = _decode_DefaultDiagFormat_addinfo(sequence[2]);
+    const diagnosticSetId: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const condition: INTEGER = $._decodeInteger(sequence[1]);
+    const addinfo: DefaultDiagFormat_addinfo = _decode_DefaultDiagFormat_addinfo(sequence[2]);
     return new DefaultDiagFormat(
         diagnosticSetId,
         condition,

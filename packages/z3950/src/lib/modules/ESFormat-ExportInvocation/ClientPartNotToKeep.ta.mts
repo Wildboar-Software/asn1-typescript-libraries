@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { ClientPartNotToKeep_records, _decode_ClientPartNotToKeep_records, _encode_ClientPartNotToKeep_records } from "../ESFormat-ExportInvocation/ClientPartNotToKeep-records.ta.mjs";
-// export { ClientPartNotToKeep_records, _decode_ClientPartNotToKeep_records, _encode_ClientPartNotToKeep_records } from "../ESFormat-ExportInvocation/ClientPartNotToKeep-records.ta.mjs";
 
 
 /**
@@ -133,10 +131,8 @@ function _decode_ClientPartNotToKeep (el: _Element): ClientPartNotToKeep {
     }
     sequence[0].name = "resultSetId";
     sequence[1].name = "records";
-    let resultSetId!: InternationalString;
-    let records!: ClientPartNotToKeep_records;
-    resultSetId = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
-    records = $._decode_explicit<ClientPartNotToKeep_records>(() => _decode_ClientPartNotToKeep_records)(sequence[1]);
+    const resultSetId: InternationalString = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
+    const records: ClientPartNotToKeep_records = $._decode_explicit<ClientPartNotToKeep_records>(() => _decode_ClientPartNotToKeep_records)(sequence[1]);
     return new ClientPartNotToKeep(
         resultSetId,
         records,

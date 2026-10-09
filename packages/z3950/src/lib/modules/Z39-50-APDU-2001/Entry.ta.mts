@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TermInfo, _decode_TermInfo, _encode_TermInfo } from "../Z39-50-APDU-2001/TermInfo.ta.mjs";
-// export { TermInfo, _decode_TermInfo, _encode_TermInfo } from "../Z39-50-APDU-2001/TermInfo.ta.mjs";
 import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
-// export { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
 
 
 /**

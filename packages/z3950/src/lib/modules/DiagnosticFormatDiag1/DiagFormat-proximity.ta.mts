@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
-// export { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
 
 
 /**
@@ -19,7 +17,25 @@ import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-proximity ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-proximity ::= CHOICE {
+ *     -- proximity diagnostics:
+ *     resultSets [1] IMPLICIT NULL,
+ *     -- proximity between sets not supported
+ *     badSet [2] IMPLICIT InternationalString,
+ *     -- bad result set specified
+ *     relation [3] IMPLICIT INTEGER,
+ *     -- 1 to 6 ; relation not supported
+ *     unit [4] IMPLICIT INTEGER,
+ *     -- unsupported unit code
+ *     distance [5] IMPLICIT INTEGER,
+ *     -- unsupported distance
+ *     attributes [6] AttributeList,
+ *     --   proximity not supported with
+ *     -- specified attribute combination
+ *     ordered [7] IMPLICIT NULL,
+ *     -- ordered flag not supported
+ *     exclusion [8] IMPLICIT NULL  -- exclusion flag not supported
+ * }
  * ```
  */
 export

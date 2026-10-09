@@ -8,21 +8,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
-// export { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
 import { ExtendedServicesRequest_function, _decode_ExtendedServicesRequest_function, _encode_ExtendedServicesRequest_function } from "../Z39-50-APDU-2001/ExtendedServicesRequest-function.ta.mjs";
-// export { ExtendedServicesRequest_function, ExtendedServicesRequest_function_create /* IMPORTED_LONG_NAMED_INTEGER */, create /* IMPORTED_SHORT_NAMED_INTEGER */, ExtendedServicesRequest_function_delete /* IMPORTED_LONG_NAMED_INTEGER */, delete_ /* IMPORTED_SHORT_NAMED_INTEGER */, ExtendedServicesRequest_function_modify /* IMPORTED_LONG_NAMED_INTEGER */, modify /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ExtendedServicesRequest_function, _encode_ExtendedServicesRequest_function } from "../Z39-50-APDU-2001/ExtendedServicesRequest-function.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/IntUnit.ta.mjs";
-// export { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/IntUnit.ta.mjs";
 import { Permissions, _decode_Permissions, _encode_Permissions } from "../Z39-50-APDU-2001/Permissions.ta.mjs";
-// export { Permissions, _decode_Permissions, _encode_Permissions } from "../Z39-50-APDU-2001/Permissions.ta.mjs";
 import { ExtendedServicesRequest_waitAction, _decode_ExtendedServicesRequest_waitAction, _encode_ExtendedServicesRequest_waitAction } from "../Z39-50-APDU-2001/ExtendedServicesRequest-waitAction.ta.mjs";
-// export { ExtendedServicesRequest_waitAction, ExtendedServicesRequest_waitAction_wait /* IMPORTED_LONG_NAMED_INTEGER */, wait /* IMPORTED_SHORT_NAMED_INTEGER */, ExtendedServicesRequest_waitAction_waitIfPossible /* IMPORTED_LONG_NAMED_INTEGER */, waitIfPossible /* IMPORTED_SHORT_NAMED_INTEGER */, ExtendedServicesRequest_waitAction_dontWait /* IMPORTED_LONG_NAMED_INTEGER */, dontWait /* IMPORTED_SHORT_NAMED_INTEGER */, ExtendedServicesRequest_waitAction_dontReturnPackage /* IMPORTED_LONG_NAMED_INTEGER */, dontReturnPackage /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ExtendedServicesRequest_waitAction, _encode_ExtendedServicesRequest_waitAction } from "../Z39-50-APDU-2001/ExtendedServicesRequest-waitAction.ta.mjs";
 import { ElementSetName, _decode_ElementSetName, _encode_ElementSetName } from "../Z39-50-APDU-2001/ElementSetName.ta.mjs";
-// export { ElementSetName, _decode_ElementSetName, _encode_ElementSetName } from "../Z39-50-APDU-2001/ElementSetName.ta.mjs";
 import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
-// export { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**

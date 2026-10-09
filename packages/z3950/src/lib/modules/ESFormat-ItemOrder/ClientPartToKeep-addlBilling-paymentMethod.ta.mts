@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CreditCardInfo, _decode_CreditCardInfo, _encode_CreditCardInfo } from "../ESFormat-ItemOrder/CreditCardInfo.ta.mjs";
-// export { CreditCardInfo, _decode_CreditCardInfo, _encode_CreditCardInfo } from "../ESFormat-ItemOrder/CreditCardInfo.ta.mjs";
 
 
 /**
@@ -17,7 +16,15 @@ import { CreditCardInfo, _decode_CreditCardInfo, _encode_CreditCardInfo } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ClientPartToKeep-addlBilling-paymentMethod ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ClientPartToKeep-addlBilling-paymentMethod ::= CHOICE {
+ *     billInvoice [0] IMPLICIT NULL,
+ *     prepay [1] IMPLICIT NULL,
+ *     depositAccount [2] IMPLICIT NULL,
+ *     creditCard [3] IMPLICIT CreditCardInfo,
+ *     cardInfoPreviouslySupplied [4] IMPLICIT NULL,
+ *     privateKnown [5] IMPLICIT NULL,
+ *     privateNotKnown [6] IMPLICIT EXTERNAL
+ * }
  * ```
  */
 export

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ResultSetId, _decode_ResultSetId, _encode_ResultSetId } from "../Z39-50-APDU-2001/ResultSetId.ta.mjs";
-// export { ResultSetId, _decode_ResultSetId, _encode_ResultSetId } from "../Z39-50-APDU-2001/ResultSetId.ta.mjs";
 import { DeleteSetStatus, _decode_DeleteSetStatus, _encode_DeleteSetStatus } from "../Z39-50-APDU-2001/DeleteSetStatus.ta.mjs";
-// export { DeleteSetStatus, _decode_DeleteSetStatus, _encode_DeleteSetStatus } from "../Z39-50-APDU-2001/DeleteSetStatus.ta.mjs";
 
 
 /**
@@ -18,7 +16,10 @@ import { DeleteSetStatus, _decode_DeleteSetStatus, _encode_DeleteSetStatus } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ListStatuses-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ListStatuses-Item ::= SEQUENCE {
+ *     id ResultSetId,
+ *     status DeleteSetStatus
+ * }
  * ```
  * 
  * @class
@@ -122,10 +123,8 @@ function _decode_ListStatuses_Item (el: _Element): ListStatuses_Item {
     }
     sequence[0].name = "id";
     sequence[1].name = "status";
-    let id!: ResultSetId;
-    let status!: DeleteSetStatus;
-    id = _decode_ResultSetId(sequence[0]);
-    status = _decode_DeleteSetStatus(sequence[1]);
+    const id: ResultSetId = _decode_ResultSetId(sequence[0]);
+    const status: DeleteSetStatus = _decode_DeleteSetStatus(sequence[1]);
     return new ListStatuses_Item(
         id,
         status,

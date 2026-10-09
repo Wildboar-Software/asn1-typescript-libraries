@@ -16,7 +16,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Occurrences-values ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Occurrences-values ::= SEQUENCE {
+ *     start [1] IMPLICIT INTEGER,
+ *     -- If 'start' alone is included, then
+ *     -- single occurrence is requested
+ *     howMany [2] IMPLICIT INTEGER OPTIONAL  -- For example, if 'start' is 5 and 'howMany' is 6,
+ *     -- then request is for "occurrences 5 through 10."
+ * }
  * ```
  * 
  * @class

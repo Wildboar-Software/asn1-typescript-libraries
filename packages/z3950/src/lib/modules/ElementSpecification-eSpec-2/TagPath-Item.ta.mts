@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TagPath_Item_specificTag, _decode_TagPath_Item_specificTag, _encode_TagPath_Item_specificTag } from "../ElementSpecification-eSpec-2/TagPath-Item-specificTag.ta.mjs";
-// export { TagPath_Item_specificTag, _decode_TagPath_Item_specificTag, _encode_TagPath_Item_specificTag } from "../ElementSpecification-eSpec-2/TagPath-Item-specificTag.ta.mjs";
 import { Occurrences, _decode_Occurrences, _encode_Occurrences } from "../ElementSpecification-eSpec-2/Occurrences.ta.mjs";
-// export { Occurrences, _decode_Occurrences, _encode_Occurrences } from "../ElementSpecification-eSpec-2/Occurrences.ta.mjs";
 
 
 /**
@@ -18,7 +16,23 @@ import { Occurrences, _decode_Occurrences, _encode_Occurrences } from "../Elemen
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TagPath-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * TagPath-Item ::= CHOICE {
+ *     specificTag [1] IMPLICIT SEQUENCE {
+ *         -- The following line, schemaId is the
+ *         -- only difference in this definition from that of eSpec-1.
+ *         schemaId [0] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+ *         -- see comment 3
+ *         tagType [1] IMPLICIT INTEGER OPTIONAL,
+ *         -- If omitted, then 'defaultTagType' (above) applies,
+ *         -- if supplied, and if not supplied, then default
+ *         -- listed in schema applies
+ *         tagValue [2] StringOrNumeric,
+ *         occurrence [3] Occurrences OPTIONAL  -- default is "first occurrence"
+ *     },
+ *     wildThing [2] Occurrences,
+ *     -- See comment 4
+ *     wildPath [3] IMPLICIT NULL  -- See comment 5.
+ * }
  * ```
  */
 export

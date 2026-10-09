@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OmittedAttributeInterpretation, _decode_OmittedAttributeInterpretation, _encode_OmittedAttributeInterpretation } from "../RecordSyntax-explain/OmittedAttributeInterpretation.ta.mjs";
-// export { OmittedAttributeInterpretation, _decode_OmittedAttributeInterpretation, _encode_OmittedAttributeInterpretation } from "../RecordSyntax-explain/OmittedAttributeInterpretation.ta.mjs";
 import { AttributeValue, _decode_AttributeValue, _encode_AttributeValue } from "../RecordSyntax-explain/AttributeValue.ta.mjs";
-// export { AttributeValue, _decode_AttributeValue, _encode_AttributeValue } from "../RecordSyntax-explain/AttributeValue.ta.mjs";
 
 
 /**

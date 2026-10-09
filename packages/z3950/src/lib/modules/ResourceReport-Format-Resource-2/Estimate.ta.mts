@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } from "../Z39-50-APDU-2001/StringOrNumeric.ta.mjs";
-// export { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } from "../Z39-50-APDU-2001/StringOrNumeric.ta.mjs";
 import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/IntUnit.ta.mjs";
-// export { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/IntUnit.ta.mjs";
 
 
 /**
@@ -130,10 +128,8 @@ function _decode_Estimate (el: _Element): Estimate {
     }
     sequence[0].name = "type";
     sequence[1].name = "value";
-    let type_!: StringOrNumeric;
-    let value!: IntUnit;
-    type_ = $._decode_explicit<StringOrNumeric>(() => _decode_StringOrNumeric)(sequence[0]);
-    value = $._decode_implicit<IntUnit>(() => _decode_IntUnit)(sequence[1]);
+    const type_: StringOrNumeric = $._decode_explicit<StringOrNumeric>(() => _decode_StringOrNumeric)(sequence[0]);
+    const value: IntUnit = $._decode_implicit<IntUnit>(() => _decode_IntUnit)(sequence[1]);
     return new Estimate(
         type_,
         value,

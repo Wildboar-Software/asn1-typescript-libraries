@@ -5,11 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_DiagFormat_extServices_req, _encode_DiagFormat_extServices_req, DiagFormat_extServices_req } from "../DiagnosticFormatDiag1/DiagFormat-extServices-req.ta.mjs";
-// export { DiagFormat_extServices_req, DiagFormat_extServices_req_nameInUse /* IMPORTED_LONG_NAMED_INTEGER */, nameInUse /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_extServices_req_noSuchName /* IMPORTED_LONG_NAMED_INTEGER */, noSuchName /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_extServices_req_quota /* IMPORTED_LONG_NAMED_INTEGER */, quota /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_extServices_req_type /* IMPORTED_LONG_NAMED_INTEGER */, type_ /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagFormat_extServices_req, _encode_DiagFormat_extServices_req } from "../DiagnosticFormatDiag1/DiagFormat-extServices-req.ta.mjs";
 import { _decode_DiagFormat_extServices_permission, _encode_DiagFormat_extServices_permission, DiagFormat_extServices_permission } from "../DiagnosticFormatDiag1/DiagFormat-extServices-permission.ta.mjs";
-// export { DiagFormat_extServices_permission, DiagFormat_extServices_permission_id /* IMPORTED_LONG_NAMED_INTEGER */, id /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_extServices_permission_modifyDelete /* IMPORTED_LONG_NAMED_INTEGER */, modifyDelete /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagFormat_extServices_permission, _encode_DiagFormat_extServices_permission } from "../DiagnosticFormatDiag1/DiagFormat-extServices-permission.ta.mjs";
 import { _decode_DiagFormat_extServices_immediate, _encode_DiagFormat_extServices_immediate, DiagFormat_extServices_immediate } from "../DiagnosticFormatDiag1/DiagFormat-extServices-immediate.ta.mjs";
-// export { DiagFormat_extServices_immediate, DiagFormat_extServices_immediate_failed /* IMPORTED_LONG_NAMED_INTEGER */, failed /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_extServices_immediate_service /* IMPORTED_LONG_NAMED_INTEGER */, service /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_extServices_immediate_parameters /* IMPORTED_LONG_NAMED_INTEGER */, parameters /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagFormat_extServices_immediate, _encode_DiagFormat_extServices_immediate } from "../DiagnosticFormatDiag1/DiagFormat-extServices-immediate.ta.mjs";
 
 
 /**
@@ -19,7 +16,34 @@ import { _decode_DiagFormat_extServices_immediate, _encode_DiagFormat_extService
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-extServices ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-extServices ::= CHOICE {
+ *     req [1] IMPLICIT INTEGER {
+ *         -- bad request
+ *         nameInUse (1),
+ *         -- package name already in use
+ *         noSuchName (2),
+ *         -- no such package, on
+ *         -- modify/delete
+ *         quota (3),
+ *         -- quota exceeded
+ *         type (4)
+ *     },
+ *     -- extended service type not supported
+ *     permission [2] IMPLICIT INTEGER {
+ *         -- permission denied on ES, because:
+ *         id (1),
+ *         -- id not authorized, or
+ *         modifyDelete (2)
+ *     },
+ *     -- cannot modify or delete
+ *     immediate [3] IMPLICIT INTEGER {
+ *         -- immediate execution:
+ *         failed (1),
+ *         service (2),
+ *         -- not supported for this service,
+ *         parameters (3)  -- not supported for these parameters.
+ *     }
+ * }
  * ```
  */
 export

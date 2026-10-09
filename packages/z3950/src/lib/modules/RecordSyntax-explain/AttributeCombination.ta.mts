@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeOccurrence, _decode_AttributeOccurrence, _encode_AttributeOccurrence } from "../RecordSyntax-explain/AttributeOccurrence.ta.mjs";
-// export { AttributeOccurrence, _decode_AttributeOccurrence, _encode_AttributeOccurrence } from "../RecordSyntax-explain/AttributeOccurrence.ta.mjs";
 
 
 /**

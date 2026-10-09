@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-PersistentResultSet/ServerPart.ta.mjs";
-// export { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-PersistentResultSet/ServerPart.ta.mjs";
 
 
 /**
@@ -17,7 +16,10 @@ import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PersistentResultSet-taskPackage ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PersistentResultSet-taskPackage ::= SEQUENCE {
+ *     clientPart [1] IMPLICIT NULL,
+ *     serverPart [2] ServerPart OPTIONAL
+ * }
  * ```
  * 
  * @class

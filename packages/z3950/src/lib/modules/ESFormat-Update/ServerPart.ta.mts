@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServerPart_updateStatus, _decode_ServerPart_updateStatus, _encode_ServerPart_updateStatus } from "../ESFormat-Update/ServerPart-updateStatus.ta.mjs";
-// export { ServerPart_updateStatus, ServerPart_updateStatus_success /* IMPORTED_LONG_NAMED_INTEGER */, success /* IMPORTED_SHORT_NAMED_INTEGER */, ServerPart_updateStatus_partial /* IMPORTED_LONG_NAMED_INTEGER */, partial /* IMPORTED_SHORT_NAMED_INTEGER */, ServerPart_updateStatus_failure /* IMPORTED_LONG_NAMED_INTEGER */, failure /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ServerPart_updateStatus, _encode_ServerPart_updateStatus } from "../ESFormat-Update/ServerPart-updateStatus.ta.mjs";
 import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
-// export { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
 import { TaskPackageRecordStructure, _decode_TaskPackageRecordStructure, _encode_TaskPackageRecordStructure } from "../ESFormat-Update/TaskPackageRecordStructure.ta.mjs";
-// export { TaskPackageRecordStructure, _decode_TaskPackageRecordStructure, _encode_TaskPackageRecordStructure } from "../ESFormat-Update/TaskPackageRecordStructure.ta.mjs";
 
 
 /**

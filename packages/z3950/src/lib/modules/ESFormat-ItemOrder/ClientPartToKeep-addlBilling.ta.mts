@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ClientPartToKeep_addlBilling_paymentMethod, _decode_ClientPartToKeep_addlBilling_paymentMethod, _encode_ClientPartToKeep_addlBilling_paymentMethod } from "../ESFormat-ItemOrder/ClientPartToKeep-addlBilling-paymentMethod.ta.mjs";
-// export { ClientPartToKeep_addlBilling_paymentMethod, _decode_ClientPartToKeep_addlBilling_paymentMethod, _encode_ClientPartToKeep_addlBilling_paymentMethod } from "../ESFormat-ItemOrder/ClientPartToKeep-addlBilling-paymentMethod.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**
@@ -18,7 +16,28 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ClientPartToKeep-addlBilling ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ClientPartToKeep-addlBilling ::= SEQUENCE {
+ *     paymentMethod [1] CHOICE {
+ *         billInvoice [0] IMPLICIT NULL,
+ *         prepay [1] IMPLICIT NULL,
+ *         depositAccount [2] IMPLICIT NULL,
+ *         creditCard [3] IMPLICIT CreditCardInfo,
+ *         cardInfoPreviouslySupplied [4] IMPLICIT NULL,
+ *         privateKnown [5] IMPLICIT NULL,
+ *         privateNotKnown [6] IMPLICIT EXTERNAL
+ *     },
+ *     customerReference [2] IMPLICIT InternationalString OPTIONAL,
+ *     --An identifier assigned by the client
+ *     --to identify the customer.
+ *     --It could be used when the client want
+ *     --to search for Item Order task packages
+ *     --for a specific customer.
+ *     customerPONumber [3] IMPLICIT InternationalString OPTIONAL  --A purchase order number assigned by the
+ *     --customer (as opposed to one that might be
+ *     --assigned by the supplier). Similarly, a client
+ *     --may search for a task package knowing
+ *     --only the customer reference.
+ * }
  * ```
  * 
  * @class

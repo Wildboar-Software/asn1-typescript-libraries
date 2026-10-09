@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Update_esRequest, _decode_Update_esRequest, _encode_Update_esRequest } from "../ESFormat-Update/Update-esRequest.ta.mjs";
-// export { Update_esRequest, _decode_Update_esRequest, _encode_Update_esRequest } from "../ESFormat-Update/Update-esRequest.ta.mjs";
 import { Update_taskPackage, _decode_Update_taskPackage, _encode_Update_taskPackage } from "../ESFormat-Update/Update-taskPackage.ta.mjs";
-// export { Update_taskPackage, _decode_Update_taskPackage, _encode_Update_taskPackage } from "../ESFormat-Update/Update-taskPackage.ta.mjs";
 
 
 /**

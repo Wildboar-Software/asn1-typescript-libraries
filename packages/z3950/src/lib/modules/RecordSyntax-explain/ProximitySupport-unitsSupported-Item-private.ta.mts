@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
-// export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 
 
 /**
@@ -17,7 +16,10 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProximitySupport-unitsSupported-Item-private ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ProximitySupport-unitsSupported-Item-private ::= SEQUENCE {
+ *     unit [0] IMPLICIT INTEGER,
+ *     description [1] HumanString OPTIONAL
+ * }
  * ```
  * 
  * @class

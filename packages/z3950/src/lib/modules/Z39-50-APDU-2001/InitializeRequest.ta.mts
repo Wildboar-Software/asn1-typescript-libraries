@@ -1,81 +1,17 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
     EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    INTEGER,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
-// export { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
 import { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../Z39-50-APDU-2001/ProtocolVersion.ta.mjs";
-// export { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../Z39-50-APDU-2001/ProtocolVersion.ta.mjs";
 import { Options, _decode_Options, _encode_Options } from "../Z39-50-APDU-2001/Options.ta.mjs";
-// export { Options, _decode_Options, _encode_Options } from "../Z39-50-APDU-2001/Options.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
-// export { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**
@@ -135,7 +71,12 @@ class InitializeRequest {
      * @readonly
      */
     readonly exceptionalRecordSize: INTEGER;
-    // FIXME: readonly idAuthentication: PrefixedType
+    /**
+     * @summary `idAuthentication`.
+     * @public
+     * @readonly
+     */
+    readonly idAuthentication: OPTIONAL<_Element>;
     /**
      * @summary `implementationId`.
      * @public
@@ -173,6 +114,7 @@ class InitializeRequest {
         options: Options,
         preferredMessageSize: INTEGER,
         exceptionalRecordSize: INTEGER,
+        idAuthentication: OPTIONAL<_Element>,
         implementationId: OPTIONAL<InternationalString>,
         implementationName: OPTIONAL<InternationalString>,
         implementationVersion: OPTIONAL<InternationalString>,
@@ -184,6 +126,7 @@ class InitializeRequest {
         this.options = options;
         this.preferredMessageSize = preferredMessageSize;
         this.exceptionalRecordSize = exceptionalRecordSize;
+        this.idAuthentication = idAuthentication;
         this.implementationId = implementationId;
         this.implementationName = implementationName;
         this.implementationVersion = implementationVersion;
@@ -204,7 +147,7 @@ class InitializeRequest {
      * @returns {InitializeRequest}
      */
     public static _from_object (_o: { [_K in keyof (InitializeRequest)]: (InitializeRequest)[_K] }): InitializeRequest {
-        return new InitializeRequest(_o.referenceId, _o.protocolVersion, _o.options, _o.preferredMessageSize, _o.exceptionalRecordSize, _o.implementationId, _o.implementationName, _o.implementationVersion, _o.userInformationField, _o.otherInfo);
+        return new InitializeRequest(_o.referenceId, _o.protocolVersion, _o.options, _o.preferredMessageSize, _o.exceptionalRecordSize, _o.idAuthentication, _o.implementationId, _o.implementationName, _o.implementationVersion, _o.userInformationField, _o.otherInfo);
     }
 
 
@@ -275,7 +218,7 @@ function _decode_InitializeRequest (el: _Element): InitializeRequest {
     let options!: Options;
     let preferredMessageSize!: INTEGER;
     let exceptionalRecordSize!: INTEGER;
-    let idAuthentication: OPTIONAL</* FIXME: idAuthentication COULD_NOT_COMPILE_TYPE */>;
+    let idAuthentication: OPTIONAL<_Element>;
     let implementationId: OPTIONAL<InternationalString>;
     let implementationName: OPTIONAL<InternationalString>;
     let implementationVersion: OPTIONAL<InternationalString>;
@@ -287,7 +230,7 @@ function _decode_InitializeRequest (el: _Element): InitializeRequest {
         "options": (_el: _Element): void => { options = _decode_Options(_el); },
         "preferredMessageSize": (_el: _Element): void => { preferredMessageSize = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "exceptionalRecordSize": (_el: _Element): void => { exceptionalRecordSize = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "idAuthentication": (_el: _Element): void => { idAuthentication = /* FIXME: COULD_NOT_COMPILE_TYPE_DECODER */ },
+        "idAuthentication": (_el: _Element): void => { idAuthentication = $._decode_explicit<_Element>(() => $._decodeAny)(_el); },
         "implementationId": (_el: _Element): void => { implementationId = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); },
         "implementationName": (_el: _Element): void => { implementationName = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); },
         "implementationVersion": (_el: _Element): void => { implementationVersion = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); },

@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
-// export { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
 import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
-// export { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
 import { TermListInfo_termLists_Item, _decode_TermListInfo_termLists_Item, _encode_TermListInfo_termLists_Item } from "../RecordSyntax-explain/TermListInfo-termLists-Item.ta.mjs";
-// export { TermListInfo_termLists_Item, _decode_TermListInfo_termLists_Item, _encode_TermListInfo_termLists_Item } from "../RecordSyntax-explain/TermListInfo-termLists-Item.ta.mjs";
 
 
 /**

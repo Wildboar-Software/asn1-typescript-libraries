@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
-// export { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
 import { Specification, _decode_Specification, _encode_Specification } from "../Z39-50-APDU-2001/Specification.ta.mjs";
-// export { Specification, _decode_Specification, _encode_Specification } from "../Z39-50-APDU-2001/Specification.ta.mjs";
 
 
 /**
@@ -18,7 +16,10 @@ import { Specification, _decode_Specification, _encode_Specification } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CompSpec-dbSpecific-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CompSpec-dbSpecific-Item ::= SEQUENCE {
+ *     db [1] DatabaseName,
+ *     spec [2] IMPLICIT Specification
+ * }
  * ```
  * 
  * @class
@@ -122,10 +123,8 @@ function _decode_CompSpec_dbSpecific_Item (el: _Element): CompSpec_dbSpecific_It
     }
     sequence[0].name = "db";
     sequence[1].name = "spec";
-    let db!: DatabaseName;
-    let spec!: Specification;
-    db = $._decode_explicit<DatabaseName>(() => _decode_DatabaseName)(sequence[0]);
-    spec = $._decode_implicit<Specification>(() => _decode_Specification)(sequence[1]);
+    const db: DatabaseName = $._decode_explicit<DatabaseName>(() => _decode_DatabaseName)(sequence[0]);
+    const spec: Specification = $._decode_implicit<Specification>(() => _decode_Specification)(sequence[1]);
     return new CompSpec_dbSpecific_Item(
         db,
         spec,

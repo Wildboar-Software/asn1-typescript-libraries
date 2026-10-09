@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -14,7 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TaskPackageRecordStructure-recordStatus ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * TaskPackageRecordStructure-recordStatus ::= INTEGER {
+ *     success (1),
+ *     queued (2),
+ *     inProcess (3),
+ *     failure (4)
+ * }
  * ```
  */
 export
@@ -83,35 +87,8 @@ const TaskPackageRecordStructure_recordStatus_failure: TaskPackageRecordStructur
  */
 export
 const failure: TaskPackageRecordStructure_recordStatus = TaskPackageRecordStructure_recordStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_TaskPackageRecordStructure_recordStatus: $.ASN1Decoder<TaskPackageRecordStructure_recordStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) TaskPackageRecordStructure_recordStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TaskPackageRecordStructure_recordStatus (el: _Element): TaskPackageRecordStructure_recordStatus {
-    if (!_cached_decoder_for_TaskPackageRecordStructure_recordStatus) { _cached_decoder_for_TaskPackageRecordStructure_recordStatus = $._decodeInteger; }
-    return _cached_decoder_for_TaskPackageRecordStructure_recordStatus(el);
-}
-
-let _cached_encoder_for_TaskPackageRecordStructure_recordStatus: $.ASN1Encoder<TaskPackageRecordStructure_recordStatus> | null = null;
-
-/**
- * @summary Encodes a(n) TaskPackageRecordStructure_recordStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TaskPackageRecordStructure_recordStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_TaskPackageRecordStructure_recordStatus (value: TaskPackageRecordStructure_recordStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TaskPackageRecordStructure_recordStatus) { _cached_encoder_for_TaskPackageRecordStructure_recordStatus = $._encodeInteger; }
-    return _cached_encoder_for_TaskPackageRecordStructure_recordStatus(value, elGetter);
-}
+export const _decode_TaskPackageRecordStructure_recordStatus = $._decodeInteger;
+export const _encode_TaskPackageRecordStructure_recordStatus = $._encodeInteger;
 
 
 /* eslint-enable */

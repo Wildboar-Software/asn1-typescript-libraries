@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagFormat_term_problem, _decode_DiagFormat_term_problem, _encode_DiagFormat_term_problem } from "../DiagnosticFormatDiag1/DiagFormat-term-problem.ta.mjs";
-// export { DiagFormat_term_problem, DiagFormat_term_problem_codedValue /* IMPORTED_LONG_NAMED_INTEGER */, codedValue /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_term_problem_unparsable /* IMPORTED_LONG_NAMED_INTEGER */, unparsable /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_term_problem_tooShort /* IMPORTED_LONG_NAMED_INTEGER */, tooShort /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_term_problem_type /* IMPORTED_LONG_NAMED_INTEGER */, type_ /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagFormat_term_problem, _encode_DiagFormat_term_problem } from "../DiagnosticFormatDiag1/DiagFormat-term-problem.ta.mjs";
 import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mjs";
-// export { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mjs";
 
 
 /**
@@ -18,7 +16,15 @@ import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mj
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-term ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-term ::= SEQUENCE {
+ *     problem [1] IMPLICIT INTEGER {
+ *         codedValue (1),
+ *         unparsable (2),
+ *         tooShort (3),
+ *         type (4)
+ *     } OPTIONAL,
+ *     term [2] Term
+ * }
  * ```
  * 
  * @class

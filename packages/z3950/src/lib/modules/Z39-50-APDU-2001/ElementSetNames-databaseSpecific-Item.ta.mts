@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
-// export { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
 import { ElementSetName, _decode_ElementSetName, _encode_ElementSetName } from "../Z39-50-APDU-2001/ElementSetName.ta.mjs";
-// export { ElementSetName, _decode_ElementSetName, _encode_ElementSetName } from "../Z39-50-APDU-2001/ElementSetName.ta.mjs";
 
 
 /**
@@ -18,7 +16,10 @@ import { ElementSetName, _decode_ElementSetName, _encode_ElementSetName } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ElementSetNames-databaseSpecific-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ElementSetNames-databaseSpecific-Item ::= SEQUENCE {
+ *     dbName DatabaseName,
+ *     esn ElementSetName
+ * }
  * ```
  * 
  * @class
@@ -122,10 +123,8 @@ function _decode_ElementSetNames_databaseSpecific_Item (el: _Element): ElementSe
     }
     sequence[0].name = "dbName";
     sequence[1].name = "esn";
-    let dbName!: DatabaseName;
-    let esn!: ElementSetName;
-    dbName = _decode_DatabaseName(sequence[0]);
-    esn = _decode_ElementSetName(sequence[1]);
+    const dbName: DatabaseName = _decode_DatabaseName(sequence[0]);
+    const esn: ElementSetName = _decode_ElementSetName(sequence[1]);
     return new ElementSetNames_databaseSpecific_Item(
         dbName,
         esn,

@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ResultsByDB_Item_databases, _decode_ResultsByDB_Item_databases, _encode_ResultsByDB_Item_databases } from "../UserInfoFormat-searchResult-1/ResultsByDB-Item-databases.ta.mjs";
-// export { ResultsByDB_Item_databases, _decode_ResultsByDB_Item_databases, _encode_ResultsByDB_Item_databases } from "../UserInfoFormat-searchResult-1/ResultsByDB-Item-databases.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**
@@ -19,7 +17,18 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ResultsByDB-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ResultsByDB-Item ::= SEQUENCE {
+ *     databases [1] CHOICE {
+ *         all [1] IMPLICIT NULL,
+ *         --Applies across all of the databases in Search APDU
+ *         list [2] IMPLICIT SEQUENCE OF DatabaseName  --Applies across all databases in this list
+ *     },
+ *     count [2] IMPLICIT INTEGER OPTIONAL,
+ *     --Number of records for query component
+ *     --(and, as above, if during search, via resource control,
+ *     -- number of records so far)
+ *     resultSetName [3] IMPLICIT InternationalString OPTIONAL  --See comment 1.
+ * }
  * ```
  * 
  * @class

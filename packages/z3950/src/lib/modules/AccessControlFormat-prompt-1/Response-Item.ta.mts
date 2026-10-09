@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PromptId, _decode_PromptId, _encode_PromptId } from "../AccessControlFormat-prompt-1/PromptId.ta.mjs";
-// export { PromptId, _decode_PromptId, _encode_PromptId } from "../AccessControlFormat-prompt-1/PromptId.ta.mjs";
 import { Response_Item_promptResponse, _decode_Response_Item_promptResponse, _encode_Response_Item_promptResponse } from "../AccessControlFormat-prompt-1/Response-Item-promptResponse.ta.mjs";
-// export { Response_Item_promptResponse, _decode_Response_Item_promptResponse, _encode_Response_Item_promptResponse } from "../AccessControlFormat-prompt-1/Response-Item-promptResponse.ta.mjs";
 
 
 /**
@@ -18,7 +16,17 @@ import { Response_Item_promptResponse, _decode_Response_Item_promptResponse, _en
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Response-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Response-Item ::= SEQUENCE {
+ *     promptId [1] PromptId,
+ *     -- See comment 6
+ *     promptResponse [2] CHOICE {
+ *         string [1] IMPLICIT InternationalString,
+ *         accept [2] IMPLICIT BOOLEAN,
+ *         acknowledge [3] IMPLICIT NULL,
+ *         diagnostic [4] DiagRec,
+ *         encrypted [5] IMPLICIT Encryption
+ *     }
+ * }
  * ```
  * 
  * @class
@@ -122,10 +130,8 @@ function _decode_Response_Item (el: _Element): Response_Item {
     }
     sequence[0].name = "promptId";
     sequence[1].name = "promptResponse";
-    let promptId!: PromptId;
-    let promptResponse!: Response_Item_promptResponse;
-    promptId = $._decode_explicit<PromptId>(() => _decode_PromptId)(sequence[0]);
-    promptResponse = $._decode_explicit<Response_Item_promptResponse>(() => _decode_Response_Item_promptResponse)(sequence[1]);
+    const promptId: PromptId = $._decode_explicit<PromptId>(() => _decode_PromptId)(sequence[0]);
+    const promptResponse: Response_Item_promptResponse = $._decode_explicit<Response_Item_promptResponse>(() => _decode_Response_Item_promptResponse)(sequence[1]);
     return new Response_Item(
         promptId,
         promptResponse,

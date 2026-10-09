@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessRestrictions_Item, _decode_AccessRestrictions_Item, _encode_AccessRestrictions_Item } from "../RecordSyntax-explain/AccessRestrictions-Item.ta.mjs";
-// export { AccessRestrictions_Item, _decode_AccessRestrictions_Item, _encode_AccessRestrictions_Item } from "../RecordSyntax-explain/AccessRestrictions-Item.ta.mjs";
 
 
 /**

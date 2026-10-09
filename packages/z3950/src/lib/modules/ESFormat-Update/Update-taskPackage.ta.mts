@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } from "../ESFormat-Update/ClientPartToKeep.ta.mjs";
-// export { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } from "../ESFormat-Update/ClientPartToKeep.ta.mjs";
 import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-Update/ServerPart.ta.mjs";
-// export { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-Update/ServerPart.ta.mjs";
 
 
 /**
@@ -18,7 +16,10 @@ import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Update-taskPackage ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Update-taskPackage ::= SEQUENCE {
+ *     clientPart [1] ClientPartToKeep,
+ *     serverPart [2] ServerPart
+ * }
  * ```
  * 
  * @class
@@ -122,10 +123,8 @@ function _decode_Update_taskPackage (el: _Element): Update_taskPackage {
     }
     sequence[0].name = "clientPart";
     sequence[1].name = "serverPart";
-    let clientPart!: ClientPartToKeep;
-    let serverPart!: ServerPart;
-    clientPart = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
-    serverPart = $._decode_explicit<ServerPart>(() => _decode_ServerPart)(sequence[1]);
+    const clientPart: ClientPartToKeep = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
+    const serverPart: ServerPart = $._decode_explicit<ServerPart>(() => _decode_ServerPart)(sequence[1]);
     return new Update_taskPackage(
         clientPart,
         serverPart,

@@ -7,13 +7,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { ClientPartToKeep_resultSetDisposition, _decode_ClientPartToKeep_resultSetDisposition, _encode_ClientPartToKeep_resultSetDisposition } from "../ESFormat-PeriodicQuerySchedule/ClientPartToKeep-resultSetDisposition.ta.mjs";
-// export { ClientPartToKeep_resultSetDisposition, ClientPartToKeep_resultSetDisposition_replace /* IMPORTED_LONG_NAMED_INTEGER */, replace /* IMPORTED_SHORT_NAMED_INTEGER */, ClientPartToKeep_resultSetDisposition_append /* IMPORTED_LONG_NAMED_INTEGER */, append /* IMPORTED_SHORT_NAMED_INTEGER */, ClientPartToKeep_resultSetDisposition_createNew /* IMPORTED_LONG_NAMED_INTEGER */, createNew /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ClientPartToKeep_resultSetDisposition, _encode_ClientPartToKeep_resultSetDisposition } from "../ESFormat-PeriodicQuerySchedule/ClientPartToKeep-resultSetDisposition.ta.mjs";
 import { Destination, _decode_Destination, _encode_Destination } from "../ESFormat-ExportSpecification/Destination.ta.mjs";
-// export { Destination, _decode_Destination, _encode_Destination } from "../ESFormat-ExportSpecification/Destination.ta.mjs";
 import { ClientPartToKeep_exportParameters, _decode_ClientPartToKeep_exportParameters, _encode_ClientPartToKeep_exportParameters } from "../ESFormat-PeriodicQuerySchedule/ClientPartToKeep-exportParameters.ta.mjs";
-// export { ClientPartToKeep_exportParameters, _decode_ClientPartToKeep_exportParameters, _encode_ClientPartToKeep_exportParameters } from "../ESFormat-PeriodicQuerySchedule/ClientPartToKeep-exportParameters.ta.mjs";
 
 
 /**

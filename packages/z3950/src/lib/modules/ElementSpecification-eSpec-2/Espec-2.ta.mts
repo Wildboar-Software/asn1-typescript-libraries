@@ -8,11 +8,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-generic/Variant.ta.mjs";
-// export { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-generic/Variant.ta.mjs";
 import { ElementRequest, _decode_ElementRequest, _encode_ElementRequest } from "../ElementSpecification-eSpec-2/ElementRequest.ta.mjs";
-// export { ElementRequest, _decode_ElementRequest, _encode_ElementRequest } from "../ElementSpecification-eSpec-2/ElementRequest.ta.mjs";
 
 
 /**

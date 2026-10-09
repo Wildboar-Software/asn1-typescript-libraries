@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Query, _decode_Query, _encode_Query } from "../Z39-50-APDU-2001/Query.ta.mjs";
-// export { Query, _decode_Query, _encode_Query } from "../Z39-50-APDU-2001/Query.ta.mjs";
 
 
 /**

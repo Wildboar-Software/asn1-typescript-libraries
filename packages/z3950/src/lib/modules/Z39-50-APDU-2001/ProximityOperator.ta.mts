@@ -8,9 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProximityOperator_relationType, _decode_ProximityOperator_relationType, _encode_ProximityOperator_relationType } from "../Z39-50-APDU-2001/ProximityOperator-relationType.ta.mjs";
-// export { ProximityOperator_relationType, ProximityOperator_relationType_lessThan /* IMPORTED_LONG_NAMED_INTEGER */, lessThan /* IMPORTED_SHORT_NAMED_INTEGER */, ProximityOperator_relationType_lessThanOrEqual /* IMPORTED_LONG_NAMED_INTEGER */, lessThanOrEqual /* IMPORTED_SHORT_NAMED_INTEGER */, ProximityOperator_relationType_equal /* IMPORTED_LONG_NAMED_INTEGER */, equal /* IMPORTED_SHORT_NAMED_INTEGER */, ProximityOperator_relationType_greaterThanOrEqual /* IMPORTED_LONG_NAMED_INTEGER */, greaterThanOrEqual /* IMPORTED_SHORT_NAMED_INTEGER */, ProximityOperator_relationType_greaterThan /* IMPORTED_LONG_NAMED_INTEGER */, greaterThan /* IMPORTED_SHORT_NAMED_INTEGER */, ProximityOperator_relationType_notEqual /* IMPORTED_LONG_NAMED_INTEGER */, notEqual /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ProximityOperator_relationType, _encode_ProximityOperator_relationType } from "../Z39-50-APDU-2001/ProximityOperator-relationType.ta.mjs";
 import { ProximityOperator_proximityUnitCode, _decode_ProximityOperator_proximityUnitCode, _encode_ProximityOperator_proximityUnitCode } from "../Z39-50-APDU-2001/ProximityOperator-proximityUnitCode.ta.mjs";
-// export { ProximityOperator_proximityUnitCode, _decode_ProximityOperator_proximityUnitCode, _encode_ProximityOperator_proximityUnitCode } from "../Z39-50-APDU-2001/ProximityOperator-proximityUnitCode.ta.mjs";
 
 
 /**

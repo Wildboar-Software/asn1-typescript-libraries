@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
-// export { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
 import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
-// export { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
 
 
 /**
@@ -18,7 +16,10 @@ import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SortKey-sortAttributes ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SortKey-sortAttributes ::= SEQUENCE {
+ *     id AttributeSetId,
+ *     list AttributeList
+ * }
  * ```
  * 
  * @class
@@ -122,10 +123,8 @@ function _decode_SortKey_sortAttributes (el: _Element): SortKey_sortAttributes {
     }
     sequence[0].name = "id";
     sequence[1].name = "list";
-    let id!: AttributeSetId;
-    let list!: AttributeList;
-    id = _decode_AttributeSetId(sequence[0]);
-    list = _decode_AttributeList(sequence[1]);
+    const id: AttributeSetId = _decode_AttributeSetId(sequence[0]);
+    const list: AttributeList = _decode_AttributeList(sequence[1]);
     return new SortKey_sortAttributes(
         id,
         list,

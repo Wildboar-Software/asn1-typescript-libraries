@@ -6,15 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } from "../Z39-50-APDU-2001/StringOrNumeric.ta.mjs";
-// export { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } from "../Z39-50-APDU-2001/StringOrNumeric.ta.mjs";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
-// export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 import { PrimitiveDataType, _decode_PrimitiveDataType, _encode_PrimitiveDataType } from "../RecordSyntax-explain/PrimitiveDataType.ta.mjs";
-// export { PrimitiveDataType, PrimitiveDataType_octetString /* IMPORTED_LONG_NAMED_INTEGER */, octetString /* IMPORTED_SHORT_NAMED_INTEGER */, PrimitiveDataType_numeric /* IMPORTED_LONG_NAMED_INTEGER */, numeric /* IMPORTED_SHORT_NAMED_INTEGER */, PrimitiveDataType_date /* IMPORTED_LONG_NAMED_INTEGER */, date /* IMPORTED_SHORT_NAMED_INTEGER */, PrimitiveDataType_external /* IMPORTED_LONG_NAMED_INTEGER */, external /* IMPORTED_SHORT_NAMED_INTEGER */, PrimitiveDataType_string /* IMPORTED_LONG_NAMED_INTEGER */, string_ /* IMPORTED_SHORT_NAMED_INTEGER */, PrimitiveDataType_trueOrFalse /* IMPORTED_LONG_NAMED_INTEGER */, trueOrFalse /* IMPORTED_SHORT_NAMED_INTEGER */, PrimitiveDataType_oid /* IMPORTED_LONG_NAMED_INTEGER */, oid /* IMPORTED_SHORT_NAMED_INTEGER */, PrimitiveDataType_intUnit /* IMPORTED_LONG_NAMED_INTEGER */, intUnit /* IMPORTED_SHORT_NAMED_INTEGER */, PrimitiveDataType_empty /* IMPORTED_LONG_NAMED_INTEGER */, empty /* IMPORTED_SHORT_NAMED_INTEGER */, PrimitiveDataType_noneOfTheAbove /* IMPORTED_LONG_NAMED_INTEGER */, noneOfTheAbove /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_PrimitiveDataType, _encode_PrimitiveDataType } from "../RecordSyntax-explain/PrimitiveDataType.ta.mjs";
 import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
-// export { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**
@@ -24,7 +19,16 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TagSetInfo-elements-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TagSetInfo-elements-Item ::= SEQUENCE {
+ *     elementname [1] IMPLICIT InternationalString,
+ *     nicknames [2] IMPLICIT SEQUENCE OF InternationalString OPTIONAL,
+ *     elementTag [3] StringOrNumeric,
+ *     description [4] IMPLICIT HumanString OPTIONAL,
+ *     dataType [5] PrimitiveDataType OPTIONAL,
+ *     -- If the data type is expected to be structured,
+ *     -- that is described in the schema info, and datatype is omitted here.
+ *     otherTagInfo OtherInformation OPTIONAL
+ * }
  * ```
  * 
  * @class

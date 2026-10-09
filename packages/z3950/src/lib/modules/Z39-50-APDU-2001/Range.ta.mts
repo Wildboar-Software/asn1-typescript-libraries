@@ -123,10 +123,8 @@ function _decode_Range (el: _Element): Range {
     }
     sequence[0].name = "startingPosition";
     sequence[1].name = "numberOfRecords";
-    let startingPosition!: INTEGER;
-    let numberOfRecords!: INTEGER;
-    startingPosition = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    numberOfRecords = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const startingPosition: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const numberOfRecords: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new Range(
         startingPosition,
         numberOfRecords,

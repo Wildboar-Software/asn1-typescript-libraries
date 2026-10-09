@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
-// export { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
 import { AttributeTypeDetails, _decode_AttributeTypeDetails, _encode_AttributeTypeDetails } from "../RecordSyntax-explain/AttributeTypeDetails.ta.mjs";
-// export { AttributeTypeDetails, _decode_AttributeTypeDetails, _encode_AttributeTypeDetails } from "../RecordSyntax-explain/AttributeTypeDetails.ta.mjs";
 
 
 /**
@@ -125,10 +123,8 @@ function _decode_AttributeSetDetails (el: _Element): AttributeSetDetails {
     }
     sequence[0].name = "attributeSet";
     sequence[1].name = "attributesByType";
-    let attributeSet!: AttributeSetId;
-    let attributesByType!: AttributeTypeDetails[];
-    attributeSet = $._decode_implicit<AttributeSetId>(() => _decode_AttributeSetId)(sequence[0]);
-    attributesByType = $._decode_implicit<AttributeTypeDetails[]>(() => $._decodeSequenceOf<AttributeTypeDetails>(() => _decode_AttributeTypeDetails))(sequence[1]);
+    const attributeSet: AttributeSetId = $._decode_implicit<AttributeSetId>(() => _decode_AttributeSetId)(sequence[0]);
+    const attributesByType: AttributeTypeDetails[] = $._decode_implicit<AttributeTypeDetails[]>(() => $._decodeSequenceOf<AttributeTypeDetails>(() => _decode_AttributeTypeDetails))(sequence[1]);
     return new AttributeSetDetails(
         attributeSet,
         attributesByType,

@@ -8,13 +8,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PromptId, _decode_PromptId, _encode_PromptId } from "../AccessControlFormat-prompt-1/PromptId.ta.mjs";
-// export { PromptId, _decode_PromptId, _encode_PromptId } from "../AccessControlFormat-prompt-1/PromptId.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { Challenge_Item_promptInfo, _decode_Challenge_Item_promptInfo, _encode_Challenge_Item_promptInfo } from "../AccessControlFormat-prompt-1/Challenge-Item-promptInfo.ta.mjs";
-// export { Challenge_Item_promptInfo, _decode_Challenge_Item_promptInfo, _encode_Challenge_Item_promptInfo } from "../AccessControlFormat-prompt-1/Challenge-Item-promptInfo.ta.mjs";
 import { Challenge_Item_dataType, _decode_Challenge_Item_dataType, _encode_Challenge_Item_dataType } from "../AccessControlFormat-prompt-1/Challenge-Item-dataType.ta.mjs";
-// export { Challenge_Item_dataType, Challenge_Item_dataType_integer /* IMPORTED_LONG_NAMED_INTEGER */, integer /* IMPORTED_SHORT_NAMED_INTEGER */, Challenge_Item_dataType_date /* IMPORTED_LONG_NAMED_INTEGER */, date /* IMPORTED_SHORT_NAMED_INTEGER */, Challenge_Item_dataType_float /* IMPORTED_LONG_NAMED_INTEGER */, float /* IMPORTED_SHORT_NAMED_INTEGER */, Challenge_Item_dataType_alphaNumeric /* IMPORTED_LONG_NAMED_INTEGER */, alphaNumeric /* IMPORTED_SHORT_NAMED_INTEGER */, Challenge_Item_dataType_url_urn /* IMPORTED_LONG_NAMED_INTEGER */, url_urn /* IMPORTED_SHORT_NAMED_INTEGER */, Challenge_Item_dataType_boolean /* IMPORTED_LONG_NAMED_INTEGER */, boolean_ /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Challenge_Item_dataType, _encode_Challenge_Item_dataType } from "../AccessControlFormat-prompt-1/Challenge-Item-dataType.ta.mjs";
 
 
 /**
@@ -24,7 +20,34 @@ import { Challenge_Item_dataType, _decode_Challenge_Item_dataType, _encode_Chall
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Challenge-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Challenge-Item ::= SEQUENCE {
+ *     promptId [1] PromptId,
+ *     -- See comment 1
+ *     defaultResponse [2] IMPLICIT InternationalString OPTIONAL,
+ *     promptInfo [3] CHOICE {
+ *         character [1] IMPLICIT InternationalString,
+ *         encrypted [2] IMPLICIT Encryption
+ *     } OPTIONAL,
+ *     -- See comment 2
+ *     regExpr [4] IMPLICIT InternationalString OPTIONAL,
+ *     -- See comment 3
+ *     responseRequired [5] IMPLICIT NULL OPTIONAL,
+ *     allowedValues [6] IMPLICIT SEQUENCE OF InternationalString OPTIONAL,
+ *     --e.g. promptId="Desired color"; allowed = 'red', 'blue','Green'
+ *     shouldSave [7] IMPLICIT NULL OPTIONAL,
+ *     -- See comment 4
+ *     dataType [8] IMPLICIT INTEGER {
+ *         integer (1),
+ *         date (2),
+ *         float (3),
+ *         alphaNumeric (4),
+ *         url-urn (5),
+ *         boolean (6)
+ *     } OPTIONAL,
+ *     -- See comment 5
+ *     diagnostic [9] IMPLICIT EXTERNAL OPTIONAL  -- Intended for repeat requests when there is an error
+ *     -- the client should report to the user from previous attempt.
+ * }
  * ```
  * 
  * @class

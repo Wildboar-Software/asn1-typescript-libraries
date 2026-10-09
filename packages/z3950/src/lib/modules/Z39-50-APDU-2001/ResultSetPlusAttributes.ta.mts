@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ResultSetId, _decode_ResultSetId, _encode_ResultSetId } from "../Z39-50-APDU-2001/ResultSetId.ta.mjs";
-// export { ResultSetId, _decode_ResultSetId, _encode_ResultSetId } from "../Z39-50-APDU-2001/ResultSetId.ta.mjs";
 import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
-// export { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
 
 
 /**
@@ -125,10 +123,8 @@ function _decode_ResultSetPlusAttributes (el: _Element): ResultSetPlusAttributes
     }
     sequence[0].name = "resultSet";
     sequence[1].name = "attributes";
-    let resultSet!: ResultSetId;
-    let attributes!: AttributeList;
-    resultSet = _decode_ResultSetId(sequence[0]);
-    attributes = _decode_AttributeList(sequence[1]);
+    const resultSet: ResultSetId = _decode_ResultSetId(sequence[0]);
+    const attributes: AttributeList = _decode_AttributeList(sequence[1]);
     return new ResultSetPlusAttributes(
         resultSet,
         attributes,

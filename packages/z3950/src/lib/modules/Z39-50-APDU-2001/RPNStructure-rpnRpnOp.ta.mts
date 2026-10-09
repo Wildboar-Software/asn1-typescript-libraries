@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../Z39-50-APDU-2001/RPNStructure.ta.mjs";
-// export { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../Z39-50-APDU-2001/RPNStructure.ta.mjs";
 import { Operator, _decode_Operator, _encode_Operator } from "../Z39-50-APDU-2001/Operator.ta.mjs";
-// export { Operator, _decode_Operator, _encode_Operator } from "../Z39-50-APDU-2001/Operator.ta.mjs";
 
 
 /**
@@ -18,7 +16,11 @@ import { Operator, _decode_Operator, _encode_Operator } from "../Z39-50-APDU-200
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RPNStructure-rpnRpnOp ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RPNStructure-rpnRpnOp ::= SEQUENCE {
+ *     rpn1 RPNStructure,
+ *     rpn2 RPNStructure,
+ *     op Operator
+ * }
  * ```
  * 
  * @class
@@ -132,12 +134,9 @@ function _decode_RPNStructure_rpnRpnOp (el: _Element): RPNStructure_rpnRpnOp {
     sequence[0].name = "rpn1";
     sequence[1].name = "rpn2";
     sequence[2].name = "op";
-    let rpn1!: RPNStructure;
-    let rpn2!: RPNStructure;
-    let op!: Operator;
-    rpn1 = _decode_RPNStructure(sequence[0]);
-    rpn2 = _decode_RPNStructure(sequence[1]);
-    op = _decode_Operator(sequence[2]);
+    const rpn1: RPNStructure = _decode_RPNStructure(sequence[0]);
+    const rpn2: RPNStructure = _decode_RPNStructure(sequence[1]);
+    const op: Operator = _decode_Operator(sequence[2]);
     return new RPNStructure_rpnRpnOp(
         rpn1,
         rpn2,

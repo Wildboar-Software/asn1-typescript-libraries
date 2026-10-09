@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProximitySupport_unitsSupported_Item_private, _decode_ProximitySupport_unitsSupported_Item_private, _encode_ProximitySupport_unitsSupported_Item_private } from "../RecordSyntax-explain/ProximitySupport-unitsSupported-Item-private.ta.mjs";
-// export { ProximitySupport_unitsSupported_Item_private, _decode_ProximitySupport_unitsSupported_Item_private, _encode_ProximitySupport_unitsSupported_Item_private } from "../RecordSyntax-explain/ProximitySupport-unitsSupported-Item-private.ta.mjs";
 
 
 /**
@@ -16,7 +15,14 @@ import { ProximitySupport_unitsSupported_Item_private, _decode_ProximitySupport_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProximitySupport-unitsSupported-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ProximitySupport-unitsSupported-Item ::= CHOICE {
+ *     known [1] IMPLICIT INTEGER,
+ *     -- Values from KnownProximityUnit
+ *     private [2] IMPLICIT SEQUENCE {
+ *         unit [0] IMPLICIT INTEGER,
+ *         description [1] HumanString OPTIONAL
+ *     }
+ * }
  * ```
  */
 export

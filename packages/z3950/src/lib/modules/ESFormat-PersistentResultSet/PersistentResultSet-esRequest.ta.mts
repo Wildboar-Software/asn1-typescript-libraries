@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNotToKeep } from "../ESFormat-PersistentResultSet/ClientPartNotToKeep.ta.mjs";
-// export { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNotToKeep } from "../ESFormat-PersistentResultSet/ClientPartNotToKeep.ta.mjs";
 
 
 /**
@@ -17,7 +16,10 @@ import { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNot
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PersistentResultSet-esRequest ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PersistentResultSet-esRequest ::= SEQUENCE {
+ *     toKeep [1] IMPLICIT NULL,
+ *     notToKeep [2] ClientPartNotToKeep OPTIONAL
+ * }
  * ```
  * 
  * @class

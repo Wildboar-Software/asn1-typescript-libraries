@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
-// export { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
 import { DiagFormat_scan_posInResponse, _decode_DiagFormat_scan_posInResponse, _encode_DiagFormat_scan_posInResponse } from "../DiagnosticFormatDiag1/DiagFormat-scan-posInResponse.ta.mjs";
-// export { DiagFormat_scan_posInResponse, DiagFormat_scan_posInResponse_mustBeOne /* IMPORTED_LONG_NAMED_INTEGER */, mustBeOne /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_scan_posInResponse_mustBePositive /* IMPORTED_LONG_NAMED_INTEGER */, mustBePositive /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_scan_posInResponse_mustBeNonNegative /* IMPORTED_LONG_NAMED_INTEGER */, mustBeNonNegative /* IMPORTED_SHORT_NAMED_INTEGER */, DiagFormat_scan_posInResponse_other /* IMPORTED_LONG_NAMED_INTEGER */, other /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagFormat_scan_posInResponse, _encode_DiagFormat_scan_posInResponse } from "../DiagnosticFormatDiag1/DiagFormat-scan-posInResponse.ta.mjs";
 
 
 /**
@@ -18,7 +16,35 @@ import { DiagFormat_scan_posInResponse, _decode_DiagFormat_scan_posInResponse, _
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-scan ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-scan ::= CHOICE {
+ *     -- scan diagnostics:
+ *     nonZeroStepSize [0] IMPLICIT NULL,
+ *     -- only zero step size
+ *     -- supported
+ *     specifiedStepSize [1] IMPLICIT NULL,
+ *     -- specified step size not
+ *     -- supported
+ *     termList1 [3] IMPLICIT NULL,
+ *     -- term list not supported
+ *     -- (no alternative supplied)
+ *     termList2 [4] IMPLICIT SEQUENCE OF AttributeList,
+ *     -- term list not supported
+ *     -- (alternatives supplied)
+ *     posInResponse [5] IMPLICIT INTEGER {
+ *         -- value of positionIn-
+ *         -- Response not supported
+ *         mustBeOne (1),
+ *         mustBePositive (2),
+ *         mustBeNonNegative (3),
+ *         other (4)
+ *     },
+ *     resources [6] IMPLICIT NULL,
+ *     -- resources exhausted
+ *     -- looking for satisfying
+ *     -- terms
+ *     endOfList [7] IMPLICIT NULL  -- beginning or end of term
+ *     -- list
+ * }
  * ```
  */
 export

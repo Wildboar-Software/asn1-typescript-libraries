@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { Encryption, _decode_Encryption, _encode_Encryption } from "../AccessControlFormat-prompt-1/Encryption.ta.mjs";
-// export { Encryption, _decode_Encryption, _encode_Encryption } from "../AccessControlFormat-prompt-1/Encryption.ta.mjs";
 
 
 /**
@@ -17,7 +15,10 @@ import { Encryption, _decode_Encryption, _encode_Encryption } from "../AccessCon
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Challenge-Item-promptInfo ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Challenge-Item-promptInfo ::= CHOICE {
+ *     character [1] IMPLICIT InternationalString,
+ *     encrypted [2] IMPLICIT Encryption
+ * }
  * ```
  */
 export

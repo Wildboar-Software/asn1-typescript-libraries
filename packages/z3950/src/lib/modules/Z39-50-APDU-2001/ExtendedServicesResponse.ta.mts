@@ -7,13 +7,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
-// export { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
 import { ExtendedServicesResponse_operationStatus, _decode_ExtendedServicesResponse_operationStatus, _encode_ExtendedServicesResponse_operationStatus } from "../Z39-50-APDU-2001/ExtendedServicesResponse-operationStatus.ta.mjs";
-// export { ExtendedServicesResponse_operationStatus, ExtendedServicesResponse_operationStatus_done /* IMPORTED_LONG_NAMED_INTEGER */, done /* IMPORTED_SHORT_NAMED_INTEGER */, ExtendedServicesResponse_operationStatus_accepted /* IMPORTED_LONG_NAMED_INTEGER */, accepted /* IMPORTED_SHORT_NAMED_INTEGER */, ExtendedServicesResponse_operationStatus_failure /* IMPORTED_LONG_NAMED_INTEGER */, failure /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ExtendedServicesResponse_operationStatus, _encode_ExtendedServicesResponse_operationStatus } from "../Z39-50-APDU-2001/ExtendedServicesResponse-operationStatus.ta.mjs";
 import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
-// export { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
 import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
-// export { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**

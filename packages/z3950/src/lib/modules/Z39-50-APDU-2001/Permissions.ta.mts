@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Permissions_Item, _decode_Permissions_Item, _encode_Permissions_Item } from "../Z39-50-APDU-2001/Permissions-Item.ta.mjs";
-// export { Permissions_Item, _decode_Permissions_Item, _encode_Permissions_Item } from "../Z39-50-APDU-2001/Permissions-Item.ta.mjs";
 
 
 /**

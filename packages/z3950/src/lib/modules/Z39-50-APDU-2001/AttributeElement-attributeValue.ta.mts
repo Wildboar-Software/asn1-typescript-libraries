@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeElement_attributeValue_complex, _decode_AttributeElement_attributeValue_complex, _encode_AttributeElement_attributeValue_complex } from "../Z39-50-APDU-2001/AttributeElement-attributeValue-complex.ta.mjs";
-// export { AttributeElement_attributeValue_complex, _decode_AttributeElement_attributeValue_complex, _encode_AttributeElement_attributeValue_complex } from "../Z39-50-APDU-2001/AttributeElement-attributeValue-complex.ta.mjs";
 
 
 /**
@@ -16,7 +15,14 @@ import { AttributeElement_attributeValue_complex, _decode_AttributeElement_attri
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AttributeElement-attributeValue ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AttributeElement-attributeValue ::= CHOICE {
+ *     numeric [121] IMPLICIT INTEGER,
+ *     -- If version 2 is in force, must select 'numeric' for attributeValue
+ *     complex [224] IMPLICIT SEQUENCE {
+ *         list [1] IMPLICIT SEQUENCE OF StringOrNumeric,
+ *         semanticAction [2] IMPLICIT SEQUENCE OF INTEGER OPTIONAL
+ *     }  -- See comment 10.
+ * }
  * ```
  */
 export

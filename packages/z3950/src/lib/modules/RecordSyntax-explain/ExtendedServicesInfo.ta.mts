@@ -9,13 +9,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
-// export { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { ExtendedServicesInfo_waitAction, _decode_ExtendedServicesInfo_waitAction, _encode_ExtendedServicesInfo_waitAction } from "../RecordSyntax-explain/ExtendedServicesInfo-waitAction.ta.mjs";
-// export { ExtendedServicesInfo_waitAction, ExtendedServicesInfo_waitAction_waitSupported /* IMPORTED_LONG_NAMED_INTEGER */, waitSupported /* IMPORTED_SHORT_NAMED_INTEGER */, ExtendedServicesInfo_waitAction_waitAlways /* IMPORTED_LONG_NAMED_INTEGER */, waitAlways /* IMPORTED_SHORT_NAMED_INTEGER */, ExtendedServicesInfo_waitAction_waitNotSupported /* IMPORTED_LONG_NAMED_INTEGER */, waitNotSupported /* IMPORTED_SHORT_NAMED_INTEGER */, ExtendedServicesInfo_waitAction_depends /* IMPORTED_LONG_NAMED_INTEGER */, depends /* IMPORTED_SHORT_NAMED_INTEGER */, ExtendedServicesInfo_waitAction_notSaying /* IMPORTED_LONG_NAMED_INTEGER */, notSaying /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ExtendedServicesInfo_waitAction, _encode_ExtendedServicesInfo_waitAction } from "../RecordSyntax-explain/ExtendedServicesInfo-waitAction.ta.mjs";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
-// export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 
 
 /**

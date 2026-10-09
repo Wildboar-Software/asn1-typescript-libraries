@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Charge, _decode_Charge, _encode_Charge } from "../RecordSyntax-explain/Charge.ta.mjs";
-// export { Charge, _decode_Charge, _encode_Charge } from "../RecordSyntax-explain/Charge.ta.mjs";
 import { Costs_otherCharges_Item, _decode_Costs_otherCharges_Item, _encode_Costs_otherCharges_Item } from "../RecordSyntax-explain/Costs-otherCharges-Item.ta.mjs";
-// export { Costs_otherCharges_Item, _decode_Costs_otherCharges_Item, _encode_Costs_otherCharges_Item } from "../RecordSyntax-explain/Costs-otherCharges-Item.ta.mjs";
 
 
 /**

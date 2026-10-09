@@ -7,13 +7,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
-// export { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
 import { PresentStatus, _decode_PresentStatus, _encode_PresentStatus } from "../Z39-50-APDU-2001/PresentStatus.ta.mjs";
-// export { PresentStatus, _decode_PresentStatus, _encode_PresentStatus } from "../Z39-50-APDU-2001/PresentStatus.ta.mjs";
 import { Records, _decode_Records, _encode_Records } from "../Z39-50-APDU-2001/Records.ta.mjs";
-// export { Records, _decode_Records, _encode_Records } from "../Z39-50-APDU-2001/Records.ta.mjs";
 import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
-// export { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**

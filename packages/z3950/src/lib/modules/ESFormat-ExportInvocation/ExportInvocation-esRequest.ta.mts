@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } from "../ESFormat-ExportInvocation/ClientPartToKeep.ta.mjs";
-// export { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } from "../ESFormat-ExportInvocation/ClientPartToKeep.ta.mjs";
 import { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNotToKeep } from "../ESFormat-ExportInvocation/ClientPartNotToKeep.ta.mjs";
-// export { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNotToKeep } from "../ESFormat-ExportInvocation/ClientPartNotToKeep.ta.mjs";
 
 
 /**
@@ -18,7 +16,10 @@ import { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNot
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ExportInvocation-esRequest ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ExportInvocation-esRequest ::= SEQUENCE {
+ *     toKeep [1] ClientPartToKeep,
+ *     notToKeep [2] ClientPartNotToKeep
+ * }
  * ```
  * 
  * @class
@@ -122,10 +123,8 @@ function _decode_ExportInvocation_esRequest (el: _Element): ExportInvocation_esR
     }
     sequence[0].name = "toKeep";
     sequence[1].name = "notToKeep";
-    let toKeep!: ClientPartToKeep;
-    let notToKeep!: ClientPartNotToKeep;
-    toKeep = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
-    notToKeep = $._decode_explicit<ClientPartNotToKeep>(() => _decode_ClientPartNotToKeep)(sequence[1]);
+    const toKeep: ClientPartToKeep = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
+    const notToKeep: ClientPartNotToKeep = $._decode_explicit<ClientPartNotToKeep>(() => _decode_ClientPartNotToKeep)(sequence[1]);
     return new ExportInvocation_esRequest(
         toKeep,
         notToKeep,

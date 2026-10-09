@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../ElementSpecification-eSpec-q/RPNStructure.ta.mjs";
-// export { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../ElementSpecification-eSpec-q/RPNStructure.ta.mjs";
 
 
 /**
@@ -123,10 +122,8 @@ function _decode_ValueRestrictor (el: _Element): ValueRestrictor {
     }
     sequence[0].name = "attributeSetId";
     sequence[1].name = "nodeSelectionCriteria";
-    let attributeSetId!: OBJECT_IDENTIFIER;
-    let nodeSelectionCriteria!: RPNStructure;
-    attributeSetId = $._decodeObjectIdentifier(sequence[0]);
-    nodeSelectionCriteria = _decode_RPNStructure(sequence[1]);
+    const attributeSetId: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const nodeSelectionCriteria: RPNStructure = _decode_RPNStructure(sequence[1]);
     return new ValueRestrictor(
         attributeSetId,
         nodeSelectionCriteria,

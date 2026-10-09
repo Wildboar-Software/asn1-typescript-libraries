@@ -5,11 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NetworkAddress_internetAddress, _decode_NetworkAddress_internetAddress, _encode_NetworkAddress_internetAddress } from "../RecordSyntax-explain/NetworkAddress-internetAddress.ta.mjs";
-// export { NetworkAddress_internetAddress, _decode_NetworkAddress_internetAddress, _encode_NetworkAddress_internetAddress } from "../RecordSyntax-explain/NetworkAddress-internetAddress.ta.mjs";
 import { NetworkAddress_depricated, _decode_NetworkAddress_depricated, _encode_NetworkAddress_depricated } from "../RecordSyntax-explain/NetworkAddress-depricated.ta.mjs";
-// export { NetworkAddress_depricated, _decode_NetworkAddress_depricated, _encode_NetworkAddress_depricated } from "../RecordSyntax-explain/NetworkAddress-depricated.ta.mjs";
 import { NetworkAddress_other, _decode_NetworkAddress_other, _encode_NetworkAddress_other } from "../RecordSyntax-explain/NetworkAddress-other.ta.mjs";
-// export { NetworkAddress_other, _decode_NetworkAddress_other, _encode_NetworkAddress_other } from "../RecordSyntax-explain/NetworkAddress-other.ta.mjs";
 
 
 /**

@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ClientPartToKeep_exportSpec, _decode_ClientPartToKeep_exportSpec, _encode_ClientPartToKeep_exportSpec } from "../ESFormat-ExportInvocation/ClientPartToKeep-exportSpec.ta.mjs";
-// export { ClientPartToKeep_exportSpec, _decode_ClientPartToKeep_exportSpec, _encode_ClientPartToKeep_exportSpec } from "../ESFormat-ExportInvocation/ClientPartToKeep-exportSpec.ta.mjs";
 
 
 /**
@@ -127,10 +126,8 @@ function _decode_ClientPartToKeep (el: _Element): ClientPartToKeep {
     }
     sequence[0].name = "exportSpec";
     sequence[1].name = "numberOfCopies";
-    let exportSpec!: ClientPartToKeep_exportSpec;
-    let numberOfCopies!: INTEGER;
-    exportSpec = $._decode_explicit<ClientPartToKeep_exportSpec>(() => _decode_ClientPartToKeep_exportSpec)(sequence[0]);
-    numberOfCopies = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const exportSpec: ClientPartToKeep_exportSpec = $._decode_explicit<ClientPartToKeep_exportSpec>(() => _decode_ClientPartToKeep_exportSpec)(sequence[0]);
+    const numberOfCopies: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new ClientPartToKeep(
         exportSpec,
         numberOfCopies,

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } from "../ESFormat-ItemOrder/ClientPartToKeep.ta.mjs";
-// export { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } from "../ESFormat-ItemOrder/ClientPartToKeep.ta.mjs";
 import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-ItemOrder/ServerPart.ta.mjs";
-// export { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-ItemOrder/ServerPart.ta.mjs";
 
 
 /**
@@ -18,7 +16,10 @@ import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ItemOrder-taskPackage ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ItemOrder-taskPackage ::= SEQUENCE {
+ *     clientPart [1] ClientPartToKeep OPTIONAL,
+ *     serverPart [2] ServerPart
+ * }
  * ```
  * 
  * @class

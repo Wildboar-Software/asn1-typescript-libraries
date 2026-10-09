@@ -7,13 +7,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { Path, _decode_Path, _encode_Path } from "../RecordSyntax-explain/Path.ta.mjs";
-// export { Path, _decode_Path, _encode_Path } from "../RecordSyntax-explain/Path.ta.mjs";
 import { ElementDataType, _decode_ElementDataType, _encode_ElementDataType } from "../RecordSyntax-explain/ElementDataType.ta.mjs";
-// export { ElementDataType, _decode_ElementDataType, _encode_ElementDataType } from "../RecordSyntax-explain/ElementDataType.ta.mjs";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
-// export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 
 
 /**

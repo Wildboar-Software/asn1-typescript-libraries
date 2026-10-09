@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ClientPartToKeep_action, _decode_ClientPartToKeep_action, _encode_ClientPartToKeep_action } from "../ESFormat-Update/ClientPartToKeep-action.ta.mjs";
-// export { ClientPartToKeep_action, ClientPartToKeep_action_recordInsert /* IMPORTED_LONG_NAMED_INTEGER */, recordInsert /* IMPORTED_SHORT_NAMED_INTEGER */, ClientPartToKeep_action_recordReplace /* IMPORTED_LONG_NAMED_INTEGER */, recordReplace /* IMPORTED_SHORT_NAMED_INTEGER */, ClientPartToKeep_action_recordDelete /* IMPORTED_LONG_NAMED_INTEGER */, recordDelete /* IMPORTED_SHORT_NAMED_INTEGER */, ClientPartToKeep_action_elementUpdate /* IMPORTED_LONG_NAMED_INTEGER */, elementUpdate /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ClientPartToKeep_action, _encode_ClientPartToKeep_action } from "../ESFormat-Update/ClientPartToKeep-action.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**

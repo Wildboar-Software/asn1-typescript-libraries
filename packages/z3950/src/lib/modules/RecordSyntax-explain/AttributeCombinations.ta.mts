@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
-// export { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
 import { AttributeCombination, _decode_AttributeCombination, _encode_AttributeCombination } from "../RecordSyntax-explain/AttributeCombination.ta.mjs";
-// export { AttributeCombination, _decode_AttributeCombination, _encode_AttributeCombination } from "../RecordSyntax-explain/AttributeCombination.ta.mjs";
 
 
 /**
@@ -127,10 +125,8 @@ function _decode_AttributeCombinations (el: _Element): AttributeCombinations {
     }
     sequence[0].name = "defaultAttributeSet";
     sequence[1].name = "legalCombinations";
-    let defaultAttributeSet!: AttributeSetId;
-    let legalCombinations!: AttributeCombination[];
-    defaultAttributeSet = $._decode_implicit<AttributeSetId>(() => _decode_AttributeSetId)(sequence[0]);
-    legalCombinations = $._decode_implicit<AttributeCombination[]>(() => $._decodeSequenceOf<AttributeCombination>(() => _decode_AttributeCombination))(sequence[1]);
+    const defaultAttributeSet: AttributeSetId = $._decode_implicit<AttributeSetId>(() => _decode_AttributeSetId)(sequence[0]);
+    const legalCombinations: AttributeCombination[] = $._decode_implicit<AttributeCombination[]>(() => $._decodeSequenceOf<AttributeCombination>(() => _decode_AttributeCombination))(sequence[1]);
     return new AttributeCombinations(
         defaultAttributeSet,
         legalCombinations,

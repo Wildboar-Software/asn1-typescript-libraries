@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Specification, _decode_Specification, _encode_Specification } from "../Z39-50-APDU-2001/Specification.ta.mjs";
-// export { Specification, _decode_Specification, _encode_Specification } from "../Z39-50-APDU-2001/Specification.ta.mjs";
 import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
-// export { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
 
 
 /**
@@ -18,7 +16,17 @@ import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-badSpec ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-badSpec ::= SEQUENCE {
+ *     -- element set name or specification
+ *     spec [1] IMPLICIT Specification,
+ *     -- esn or element spec not supported
+ *     db [2] IMPLICIT DatabaseName OPTIONAL,
+ *     -- if db specified, above spec not
+ *     -- supported for db; otherwise,
+ *     -- spec not supported period.
+ *     goodOnes [3] IMPLICIT SEQUENCE OF Specification OPTIONAL  -- target supplies ones that are
+ *     -- supported
+ * }
  * ```
  * 
  * @class

@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Occurrences_values, _decode_Occurrences_values, _encode_Occurrences_values } from "../ElementSpecification-eSpec-2/Occurrences-values.ta.mjs";
-// export { Occurrences_values, _decode_Occurrences_values, _encode_Occurrences_values } from "../ElementSpecification-eSpec-2/Occurrences-values.ta.mjs";
 
 
 /**

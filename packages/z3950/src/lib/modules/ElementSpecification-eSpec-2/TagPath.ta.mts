@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TagPath_Item, _decode_TagPath_Item, _encode_TagPath_Item } from "../ElementSpecification-eSpec-2/TagPath-Item.ta.mjs";
-// export { TagPath_Item, _decode_TagPath_Item, _encode_TagPath_Item } from "../ElementSpecification-eSpec-2/TagPath-Item.ta.mjs";
 
 
 /**

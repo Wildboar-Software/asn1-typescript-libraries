@@ -15,7 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DatabaseInfo-recordCount ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DatabaseInfo-recordCount ::= CHOICE {
+ *     actualNumber [0] IMPLICIT INTEGER,
+ *     approxNumber [1] IMPLICIT INTEGER
+ * }
  * ```
  */
 export

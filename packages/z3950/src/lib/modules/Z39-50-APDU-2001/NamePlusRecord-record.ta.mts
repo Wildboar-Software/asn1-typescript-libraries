@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
-// export { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
 import { FragmentSyntax, _decode_FragmentSyntax, _encode_FragmentSyntax } from "../Z39-50-APDU-2001/FragmentSyntax.ta.mjs";
-// export { FragmentSyntax, _decode_FragmentSyntax, _encode_FragmentSyntax } from "../Z39-50-APDU-2001/FragmentSyntax.ta.mjs";
 
 
 /**
@@ -18,7 +16,15 @@ import { FragmentSyntax, _decode_FragmentSyntax, _encode_FragmentSyntax } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NamePlusRecord-record ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * NamePlusRecord-record ::= CHOICE {
+ *     retrievalRecord [1] EXTERNAL,
+ *     surrogateDiagnostic [2] DiagRec,
+ *     --Must select one of the above two, retrievalRecord or surrogateDiagnostic,
+ *     --unless 'level 2 segmentation' is in effect.
+ *     startingFragment [3] FragmentSyntax,
+ *     intermediateFragment [4] FragmentSyntax,
+ *     finalFragment [5] FragmentSyntax
+ * }
  * ```
  */
 export

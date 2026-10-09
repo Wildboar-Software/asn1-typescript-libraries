@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
-// export { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
 import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mjs";
-// export { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mjs";
 
 
 /**
@@ -125,10 +123,8 @@ function _decode_AttributesPlusTerm (el: _Element): AttributesPlusTerm {
     }
     sequence[0].name = "attributes";
     sequence[1].name = "term";
-    let attributes!: AttributeList;
-    let term!: Term;
-    attributes = _decode_AttributeList(sequence[0]);
-    term = _decode_Term(sequence[1]);
+    const attributes: AttributeList = _decode_AttributeList(sequence[0]);
+    const term: Term = _decode_Term(sequence[1]);
     return new AttributesPlusTerm(
         attributes,
         term,

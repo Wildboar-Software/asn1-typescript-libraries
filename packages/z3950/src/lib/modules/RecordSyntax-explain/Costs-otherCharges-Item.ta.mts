@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
-// export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 import { Charge, _decode_Charge, _encode_Charge } from "../RecordSyntax-explain/Charge.ta.mjs";
-// export { Charge, _decode_Charge, _encode_Charge } from "../RecordSyntax-explain/Charge.ta.mjs";
 
 
 /**
@@ -18,7 +16,10 @@ import { Charge, _decode_Charge, _encode_Charge } from "../RecordSyntax-explain/
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Costs-otherCharges-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Costs-otherCharges-Item ::= SEQUENCE {
+ *     forWhat [1] IMPLICIT HumanString,
+ *     charge [2] IMPLICIT Charge
+ * }
  * ```
  * 
  * @class
@@ -122,10 +123,8 @@ function _decode_Costs_otherCharges_Item (el: _Element): Costs_otherCharges_Item
     }
     sequence[0].name = "forWhat";
     sequence[1].name = "charge";
-    let forWhat!: HumanString;
-    let charge!: Charge;
-    forWhat = $._decode_implicit<HumanString>(() => _decode_HumanString)(sequence[0]);
-    charge = $._decode_implicit<Charge>(() => _decode_Charge)(sequence[1]);
+    const forWhat: HumanString = $._decode_implicit<HumanString>(() => _decode_HumanString)(sequence[0]);
+    const charge: Charge = $._decode_implicit<Charge>(() => _decode_Charge)(sequence[1]);
     return new Costs_otherCharges_Item(
         forWhat,
         charge,

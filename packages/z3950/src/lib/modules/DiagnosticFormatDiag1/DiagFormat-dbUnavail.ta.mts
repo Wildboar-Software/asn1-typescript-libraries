@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
-// export { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
 import { DiagFormat_dbUnavail_why, _decode_DiagFormat_dbUnavail_why, _encode_DiagFormat_dbUnavail_why } from "../DiagnosticFormatDiag1/DiagFormat-dbUnavail-why.ta.mjs";
-// export { DiagFormat_dbUnavail_why, _decode_DiagFormat_dbUnavail_why, _encode_DiagFormat_dbUnavail_why } from "../DiagnosticFormatDiag1/DiagFormat-dbUnavail-why.ta.mjs";
 
 
 /**
@@ -18,7 +16,19 @@ import { DiagFormat_dbUnavail_why, _decode_DiagFormat_dbUnavail_why, _encode_Dia
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-dbUnavail ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-dbUnavail ::= SEQUENCE {
+ *     -- database unavailable
+ *     db [1] IMPLICIT DatabaseName,
+ *     why [2] IMPLICIT SEQUENCE {
+ *         reasonCode [1] IMPLICIT INTEGER {
+ *             doesNotExist (0),
+ *             existsButUnavail (1),
+ *             locked (2),
+ *             accessDenied (3)
+ *         } OPTIONAL,
+ *         message [2] IMPLICIT InternationalString OPTIONAL
+ *     }
+ * }
  * ```
  * 
  * @class
@@ -122,10 +132,8 @@ function _decode_DiagFormat_dbUnavail (el: _Element): DiagFormat_dbUnavail {
     }
     sequence[0].name = "db";
     sequence[1].name = "why";
-    let db!: DatabaseName;
-    let why!: DiagFormat_dbUnavail_why;
-    db = $._decode_implicit<DatabaseName>(() => _decode_DatabaseName)(sequence[0]);
-    why = $._decode_implicit<DiagFormat_dbUnavail_why>(() => _decode_DiagFormat_dbUnavail_why)(sequence[1]);
+    const db: DatabaseName = $._decode_implicit<DatabaseName>(() => _decode_DatabaseName)(sequence[0]);
+    const why: DiagFormat_dbUnavail_why = $._decode_implicit<DiagFormat_dbUnavail_why>(() => _decode_DiagFormat_dbUnavail_why)(sequence[1]);
     return new DiagFormat_dbUnavail(
         db,
         why,

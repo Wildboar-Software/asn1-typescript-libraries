@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
-// export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 
 
 /**
@@ -16,7 +15,11 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SortKeyDetails-sortType ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SortKeyDetails-sortType ::= CHOICE {
+ *     character [0] IMPLICIT NULL,
+ *     numeric [1] IMPLICIT NULL,
+ *     structured [2] IMPLICIT HumanString
+ * }
  * ```
  */
 export

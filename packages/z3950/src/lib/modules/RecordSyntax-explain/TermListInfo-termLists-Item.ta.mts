@@ -7,11 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
-// export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 import { TermListInfo_termLists_Item_searchCost, _decode_TermListInfo_termLists_Item_searchCost, _encode_TermListInfo_termLists_Item_searchCost } from "../RecordSyntax-explain/TermListInfo-termLists-Item-searchCost.ta.mjs";
-// export { TermListInfo_termLists_Item_searchCost, TermListInfo_termLists_Item_searchCost_optimized /* IMPORTED_LONG_NAMED_INTEGER */, optimized /* IMPORTED_SHORT_NAMED_INTEGER */, TermListInfo_termLists_Item_searchCost_normal /* IMPORTED_LONG_NAMED_INTEGER */, normal /* IMPORTED_SHORT_NAMED_INTEGER */, TermListInfo_termLists_Item_searchCost_expensive /* IMPORTED_LONG_NAMED_INTEGER */, expensive /* IMPORTED_SHORT_NAMED_INTEGER */, TermListInfo_termLists_Item_searchCost_filter /* IMPORTED_LONG_NAMED_INTEGER */, filter /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TermListInfo_termLists_Item_searchCost, _encode_TermListInfo_termLists_Item_searchCost } from "../RecordSyntax-explain/TermListInfo-termLists-Item-searchCost.ta.mjs";
 
 
 /**
@@ -21,7 +18,24 @@ import { TermListInfo_termLists_Item_searchCost, _decode_TermListInfo_termLists_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TermListInfo-termLists-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TermListInfo-termLists-Item ::= SEQUENCE {
+ *     name [1] IMPLICIT InternationalString,
+ *     title [2] IMPLICIT HumanString OPTIONAL,
+ *     -- see comment 5
+ *     searchCost [3] IMPLICIT INTEGER {
+ *         -- see comment 6
+ *         optimized (0),
+ *         normal (1),
+ *         expensive (2),
+ *         filter (3)
+ *     } OPTIONAL,
+ *     scanable [4] IMPLICIT BOOLEAN,
+ *     -- 'true' means this list can be scanned
+ *     -- see comment 7
+ *     broader [5] IMPLICIT SEQUENCE OF InternationalString OPTIONAL,
+ *     narrower [6] IMPLICIT SEQUENCE OF InternationalString OPTIONAL  -- Broader and narrower list alternative term lists related to this one.
+ *     -- The term lists so listed should also be in this termLists structure.
+ * }  -- No non-brief elements
  * ```
  * 
  * @class

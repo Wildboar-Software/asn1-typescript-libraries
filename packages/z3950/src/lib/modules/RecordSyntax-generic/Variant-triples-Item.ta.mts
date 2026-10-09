@@ -8,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Variant_triples_Item_value, _decode_Variant_triples_Item_value, _encode_Variant_triples_Item_value } from "../RecordSyntax-generic/Variant-triples-Item-value.ta.mjs";
-// export { Variant_triples_Item_value, _decode_Variant_triples_Item_value, _encode_Variant_triples_Item_value } from "../RecordSyntax-generic/Variant-triples-Item-value.ta.mjs";
 
 
 /**
@@ -18,7 +17,24 @@ import { Variant_triples_Item_value, _decode_Variant_triples_Item_value, _encode
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Variant-triples-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Variant-triples-Item ::= SEQUENCE {
+ *     variantSetId [0] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+ *     -- If omitted, globalVariantSetId (above) applies,
+ *     -- unless that too is omitted, in which case, default used.
+ *     class [1] IMPLICIT INTEGER,
+ *     type [2] IMPLICIT INTEGER,
+ *     value [3] CHOICE {
+ *         integer INTEGER,
+ *         string InternationalString,
+ *         octets OCTET STRING,
+ *         oid OBJECT IDENTIFIER,
+ *         bool BOOLEAN,
+ *         null NULL,
+ *         -- Following need context tags:
+ *         unit [1] IMPLICIT Unit,
+ *         valueAndUnit [2] IMPLICIT IntUnit
+ *     }
+ * }
  * ```
  * 
  * @class

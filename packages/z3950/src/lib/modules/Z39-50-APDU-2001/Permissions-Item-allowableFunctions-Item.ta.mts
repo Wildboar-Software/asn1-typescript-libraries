@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -14,7 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Permissions-Item-allowableFunctions-Item ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * Permissions-Item-allowableFunctions-Item ::= INTEGER {
+ *     delete (1),
+ *     modifyContents (2),
+ *     modifyPermissions (3),
+ *     present (4),
+ *     invoke (5)
+ * }
  * ```
  */
 export
@@ -99,35 +104,8 @@ const Permissions_Item_allowableFunctions_Item_invoke: Permissions_Item_allowabl
  */
 export
 const invoke: Permissions_Item_allowableFunctions_Item = Permissions_Item_allowableFunctions_Item_invoke; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_Permissions_Item_allowableFunctions_Item: $.ASN1Decoder<Permissions_Item_allowableFunctions_Item> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Permissions_Item_allowableFunctions_Item
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Permissions_Item_allowableFunctions_Item (el: _Element): Permissions_Item_allowableFunctions_Item {
-    if (!_cached_decoder_for_Permissions_Item_allowableFunctions_Item) { _cached_decoder_for_Permissions_Item_allowableFunctions_Item = $._decodeInteger; }
-    return _cached_decoder_for_Permissions_Item_allowableFunctions_Item(el);
-}
-
-let _cached_encoder_for_Permissions_Item_allowableFunctions_Item: $.ASN1Encoder<Permissions_Item_allowableFunctions_Item> | null = null;
-
-/**
- * @summary Encodes a(n) Permissions_Item_allowableFunctions_Item into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Permissions_Item_allowableFunctions_Item, encoded as an ASN.1 Element.
- */
-export
-function _encode_Permissions_Item_allowableFunctions_Item (value: Permissions_Item_allowableFunctions_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Permissions_Item_allowableFunctions_Item) { _cached_encoder_for_Permissions_Item_allowableFunctions_Item = $._encodeInteger; }
-    return _cached_encoder_for_Permissions_Item_allowableFunctions_Item(value, elGetter);
-}
+export const _decode_Permissions_Item_allowableFunctions_Item = $._decodeInteger;
+export const _encode_Permissions_Item_allowableFunctions_Item = $._encodeInteger;
 
 
 /* eslint-enable */

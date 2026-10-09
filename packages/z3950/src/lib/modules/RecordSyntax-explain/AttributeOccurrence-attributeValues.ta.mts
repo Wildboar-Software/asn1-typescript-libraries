@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } from "../Z39-50-APDU-2001/StringOrNumeric.ta.mjs";
-// export { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } from "../Z39-50-APDU-2001/StringOrNumeric.ta.mjs";
 
 
 /**
@@ -16,7 +15,11 @@ import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AttributeOccurrence-attributeValues ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AttributeOccurrence-attributeValues ::= CHOICE {
+ *     any-or-none [3] IMPLICIT NULL,
+ *     -- All supported values are OK
+ *     specific [4] IMPLICIT SEQUENCE OF StringOrNumeric  -- Only these values allowed
+ * }
  * ```
  */
 export

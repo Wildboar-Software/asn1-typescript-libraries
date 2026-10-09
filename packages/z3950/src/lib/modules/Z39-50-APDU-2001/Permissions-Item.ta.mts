@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { Permissions_Item_allowableFunctions_Item, _decode_Permissions_Item_allowableFunctions_Item, _encode_Permissions_Item_allowableFunctions_Item } from "../Z39-50-APDU-2001/Permissions-Item-allowableFunctions-Item.ta.mjs";
-// export { Permissions_Item_allowableFunctions_Item, Permissions_Item_allowableFunctions_Item_delete /* IMPORTED_LONG_NAMED_INTEGER */, delete_ /* IMPORTED_SHORT_NAMED_INTEGER */, Permissions_Item_allowableFunctions_Item_modifyContents /* IMPORTED_LONG_NAMED_INTEGER */, modifyContents /* IMPORTED_SHORT_NAMED_INTEGER */, Permissions_Item_allowableFunctions_Item_modifyPermissions /* IMPORTED_LONG_NAMED_INTEGER */, modifyPermissions /* IMPORTED_SHORT_NAMED_INTEGER */, Permissions_Item_allowableFunctions_Item_present /* IMPORTED_LONG_NAMED_INTEGER */, present /* IMPORTED_SHORT_NAMED_INTEGER */, Permissions_Item_allowableFunctions_Item_invoke /* IMPORTED_LONG_NAMED_INTEGER */, invoke /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Permissions_Item_allowableFunctions_Item, _encode_Permissions_Item_allowableFunctions_Item } from "../Z39-50-APDU-2001/Permissions-Item-allowableFunctions-Item.ta.mjs";
 
 
 /**
@@ -18,7 +16,16 @@ import { Permissions_Item_allowableFunctions_Item, _decode_Permissions_Item_allo
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Permissions-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Permissions-Item ::= SEQUENCE {
+ *     userId [1] IMPLICIT InternationalString,
+ *     allowableFunctions [2] IMPLICIT SEQUENCE OF INTEGER {
+ *         delete (1),
+ *         modifyContents (2),
+ *         modifyPermissions (3),
+ *         present (4),
+ *         invoke (5)
+ *     }
+ * }
  * ```
  * 
  * @class
@@ -122,10 +129,8 @@ function _decode_Permissions_Item (el: _Element): Permissions_Item {
     }
     sequence[0].name = "userId";
     sequence[1].name = "allowableFunctions";
-    let userId!: InternationalString;
-    let allowableFunctions!: Permissions_Item_allowableFunctions_Item[];
-    userId = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
-    allowableFunctions = $._decode_implicit<Permissions_Item_allowableFunctions_Item[]>(() => $._decodeSequenceOf<Permissions_Item_allowableFunctions_Item>(() => _decode_Permissions_Item_allowableFunctions_Item))(sequence[1]);
+    const userId: InternationalString = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
+    const allowableFunctions: Permissions_Item_allowableFunctions_Item[] = $._decode_implicit<Permissions_Item_allowableFunctions_Item[]>(() => $._decodeSequenceOf<Permissions_Item_allowableFunctions_Item>(() => _decode_Permissions_Item_allowableFunctions_Item))(sequence[1]);
     return new Permissions_Item(
         userId,
         allowableFunctions,

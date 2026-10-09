@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
-// export { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
 import { OccurrenceByAttributes_Item_occurrences, _decode_OccurrenceByAttributes_Item_occurrences, _encode_OccurrenceByAttributes_Item_occurrences } from "../Z39-50-APDU-2001/OccurrenceByAttributes-Item-occurrences.ta.mjs";
-// export { OccurrenceByAttributes_Item_occurrences, _decode_OccurrenceByAttributes_Item_occurrences, _encode_OccurrenceByAttributes_Item_occurrences } from "../Z39-50-APDU-2001/OccurrenceByAttributes-Item-occurrences.ta.mjs";
 import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
-// export { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**
@@ -20,7 +17,19 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * OccurrenceByAttributes-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * OccurrenceByAttributes-Item ::= SEQUENCE {
+ *     attributes [1] AttributeList,
+ *     occurrences CHOICE {
+ *         global [2] INTEGER,
+ *         byDatabase [3] IMPLICIT SEQUENCE OF SEQUENCE {
+ *             db DatabaseName,
+ *             num [1] IMPLICIT INTEGER OPTIONAL,
+ *             otherDbInfo OtherInformation OPTIONAL
+ *         }
+ *     } OPTIONAL,
+ *     otherOccurInfo OtherInformation OPTIONAL
+ * }  --End auxiliary definitions for Scan
+ * --Sort APDUs
  * ```
  * 
  * @class

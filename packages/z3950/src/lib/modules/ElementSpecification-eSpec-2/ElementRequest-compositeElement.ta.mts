@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ElementRequest_compositeElement_elementList, _decode_ElementRequest_compositeElement_elementList, _encode_ElementRequest_compositeElement_elementList } from "../ElementSpecification-eSpec-2/ElementRequest-compositeElement-elementList.ta.mjs";
-// export { ElementRequest_compositeElement_elementList, _decode_ElementRequest_compositeElement_elementList, _encode_ElementRequest_compositeElement_elementList } from "../ElementSpecification-eSpec-2/ElementRequest-compositeElement-elementList.ta.mjs";
 import { TagPath, _decode_TagPath, _encode_TagPath } from "../ElementSpecification-eSpec-2/TagPath.ta.mjs";
-// export { TagPath, _decode_TagPath, _encode_TagPath } from "../ElementSpecification-eSpec-2/TagPath.ta.mjs";
 import { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-generic/Variant.ta.mjs";
-// export { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-generic/Variant.ta.mjs";
 
 
 /**
@@ -20,7 +17,18 @@ import { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-gener
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ElementRequest-compositeElement ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ElementRequest-compositeElement ::= SEQUENCE {
+ *     elementList [1] CHOICE {
+ *         primitives [1] IMPLICIT SEQUENCE OF InternationalString,
+ *         -- Client may specify one or more element set names,
+ *         -- each identifying a set of elements, and the composite element is the union
+ *         specs [2] IMPLICIT SEQUENCE OF SimpleElement
+ *     },
+ *     deliveryTag [2] IMPLICIT TagPath,
+ *     -- DeliveryTag tagPath for compositeElement
+ *     -- may not include wildThing or wildPath
+ *     variantRequest [3] IMPLICIT Variant OPTIONAL
+ * }
  * ```
  * 
  * @class

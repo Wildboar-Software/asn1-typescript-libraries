@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Unit, _decode_Unit, _encode_Unit } from "../Z39-50-APDU-2001/Unit.ta.mjs";
-// export { Unit, _decode_Unit, _encode_Unit } from "../Z39-50-APDU-2001/Unit.ta.mjs";
 
 
 /**
@@ -124,10 +123,8 @@ function _decode_IntUnit (el: _Element): IntUnit {
     }
     sequence[0].name = "value";
     sequence[1].name = "unitUsed";
-    let value!: INTEGER;
-    let unitUsed!: Unit;
-    value = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    unitUsed = $._decode_implicit<Unit>(() => _decode_Unit)(sequence[1]);
+    const value: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const unitUsed: Unit = $._decode_implicit<Unit>(() => _decode_Unit)(sequence[1]);
     return new IntUnit(
         value,
         unitUsed,

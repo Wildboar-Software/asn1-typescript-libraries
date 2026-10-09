@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProximityOperator, _decode_ProximityOperator, _encode_ProximityOperator } from "../Z39-50-APDU-2001/ProximityOperator.ta.mjs";
-// export { ProximityOperator, _decode_ProximityOperator, _encode_ProximityOperator } from "../Z39-50-APDU-2001/ProximityOperator.ta.mjs";
 
 
 /**

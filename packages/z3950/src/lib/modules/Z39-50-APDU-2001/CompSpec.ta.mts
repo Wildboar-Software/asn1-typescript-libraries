@@ -8,9 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Specification, _decode_Specification, _encode_Specification } from "../Z39-50-APDU-2001/Specification.ta.mjs";
-// export { Specification, _decode_Specification, _encode_Specification } from "../Z39-50-APDU-2001/Specification.ta.mjs";
 import { CompSpec_dbSpecific_Item, _decode_CompSpec_dbSpecific_Item, _encode_CompSpec_dbSpecific_Item } from "../Z39-50-APDU-2001/CompSpec-dbSpecific-Item.ta.mjs";
-// export { CompSpec_dbSpecific_Item, _decode_CompSpec_dbSpecific_Item, _encode_CompSpec_dbSpecific_Item } from "../Z39-50-APDU-2001/CompSpec-dbSpecific-Item.ta.mjs";
 
 
 /**

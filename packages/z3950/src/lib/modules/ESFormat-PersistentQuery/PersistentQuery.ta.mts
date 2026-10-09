@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PersistentQuery_esRequest, _decode_PersistentQuery_esRequest, _encode_PersistentQuery_esRequest } from "../ESFormat-PersistentQuery/PersistentQuery-esRequest.ta.mjs";
-// export { PersistentQuery_esRequest, _decode_PersistentQuery_esRequest, _encode_PersistentQuery_esRequest } from "../ESFormat-PersistentQuery/PersistentQuery-esRequest.ta.mjs";
 import { PersistentQuery_taskPackage, _decode_PersistentQuery_taskPackage, _encode_PersistentQuery_taskPackage } from "../ESFormat-PersistentQuery/PersistentQuery-taskPackage.ta.mjs";
-// export { PersistentQuery_taskPackage, _decode_PersistentQuery_taskPackage, _encode_PersistentQuery_taskPackage } from "../ESFormat-PersistentQuery/PersistentQuery-taskPackage.ta.mjs";
 
 
 /**

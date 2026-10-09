@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -14,7 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ClientPartToKeep-action ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ClientPartToKeep-action ::= INTEGER {
+ *     recordInsert (1),
+ *     recordReplace (2),
+ *     recordDelete (3),
+ *     elementUpdate (4)
+ * }
  * ```
  */
 export
@@ -83,35 +87,8 @@ const ClientPartToKeep_action_elementUpdate: ClientPartToKeep_action = 4; /* LON
  */
 export
 const elementUpdate: ClientPartToKeep_action = ClientPartToKeep_action_elementUpdate; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ClientPartToKeep_action: $.ASN1Decoder<ClientPartToKeep_action> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ClientPartToKeep_action
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ClientPartToKeep_action (el: _Element): ClientPartToKeep_action {
-    if (!_cached_decoder_for_ClientPartToKeep_action) { _cached_decoder_for_ClientPartToKeep_action = $._decodeInteger; }
-    return _cached_decoder_for_ClientPartToKeep_action(el);
-}
-
-let _cached_encoder_for_ClientPartToKeep_action: $.ASN1Encoder<ClientPartToKeep_action> | null = null;
-
-/**
- * @summary Encodes a(n) ClientPartToKeep_action into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ClientPartToKeep_action, encoded as an ASN.1 Element.
- */
-export
-function _encode_ClientPartToKeep_action (value: ClientPartToKeep_action, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ClientPartToKeep_action) { _cached_encoder_for_ClientPartToKeep_action = $._encodeInteger; }
-    return _cached_encoder_for_ClientPartToKeep_action(value, elGetter);
-}
+export const _decode_ClientPartToKeep_action = $._decodeInteger;
+export const _encode_ClientPartToKeep_action = $._encodeInteger;
 
 
 /* eslint-enable */

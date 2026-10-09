@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CompSpec, _decode_CompSpec, _encode_CompSpec } from "../Z39-50-APDU-2001/CompSpec.ta.mjs";
-// export { CompSpec, _decode_CompSpec, _encode_CompSpec } from "../Z39-50-APDU-2001/CompSpec.ta.mjs";
 import { Destination, _decode_Destination, _encode_Destination } from "../ESFormat-ExportSpecification/Destination.ta.mjs";
-// export { Destination, _decode_Destination, _encode_Destination } from "../ESFormat-ExportSpecification/Destination.ta.mjs";
 
 
 /**
@@ -124,10 +122,8 @@ function _decode_ClientPartToKeep (el: _Element): ClientPartToKeep {
     }
     sequence[0].name = "composition";
     sequence[1].name = "exportDestination";
-    let composition!: CompSpec;
-    let exportDestination!: Destination;
-    composition = $._decode_implicit<CompSpec>(() => _decode_CompSpec)(sequence[0]);
-    exportDestination = $._decode_explicit<Destination>(() => _decode_Destination)(sequence[1]);
+    const composition: CompSpec = $._decode_implicit<CompSpec>(() => _decode_CompSpec)(sequence[0]);
+    const exportDestination: Destination = $._decode_explicit<Destination>(() => _decode_Destination)(sequence[1]);
     return new ClientPartToKeep(
         composition,
         exportDestination,

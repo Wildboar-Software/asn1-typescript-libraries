@@ -7,11 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SuppliedRecords_Item_recordId, _decode_SuppliedRecords_Item_recordId, _encode_SuppliedRecords_Item_recordId } from "../ESFormat-Update/SuppliedRecords-Item-recordId.ta.mjs";
-// export { SuppliedRecords_Item_recordId, _decode_SuppliedRecords_Item_recordId, _encode_SuppliedRecords_Item_recordId } from "../ESFormat-Update/SuppliedRecords-Item-recordId.ta.mjs";
 import { SuppliedRecords_Item_supplementalId, _decode_SuppliedRecords_Item_supplementalId, _encode_SuppliedRecords_Item_supplementalId } from "../ESFormat-Update/SuppliedRecords-Item-supplementalId.ta.mjs";
-// export { SuppliedRecords_Item_supplementalId, _decode_SuppliedRecords_Item_supplementalId, _encode_SuppliedRecords_Item_supplementalId } from "../ESFormat-Update/SuppliedRecords-Item-supplementalId.ta.mjs";
 import { CorrelationInfo, _decode_CorrelationInfo, _encode_CorrelationInfo } from "../ESFormat-Update/CorrelationInfo.ta.mjs";
-// export { CorrelationInfo, _decode_CorrelationInfo, _encode_CorrelationInfo } from "../ESFormat-Update/CorrelationInfo.ta.mjs";
 
 
 /**
@@ -21,7 +18,20 @@ import { CorrelationInfo, _decode_CorrelationInfo, _encode_CorrelationInfo } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SuppliedRecords-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SuppliedRecords-Item ::= SEQUENCE {
+ *     recordId [1] CHOICE {
+ *         number [1] IMPLICIT INTEGER,
+ *         string [2] IMPLICIT InternationalString,
+ *         opaque [3] IMPLICIT OCTET STRING
+ *     } OPTIONAL,
+ *     supplementalId [2] CHOICE {
+ *         timeStamp [1] IMPLICIT GeneralizedTime,
+ *         versionNumber [2] IMPLICIT InternationalString,
+ *         previousVersion [3] IMPLICIT EXTERNAL
+ *     } OPTIONAL,
+ *     correlationInfo [3] IMPLICIT CorrelationInfo OPTIONAL,
+ *     record [4] IMPLICIT EXTERNAL
+ * }
  * ```
  * 
  * @class

@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**
@@ -16,7 +15,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NetworkAddress-other ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NetworkAddress-other ::= SEQUENCE {
+ *     type [0] IMPLICIT InternationalString,
+ *     address [1] IMPLICIT InternationalString
+ * }
  * ```
  * 
  * @class
@@ -120,10 +122,8 @@ function _decode_NetworkAddress_other (el: _Element): NetworkAddress_other {
     }
     sequence[0].name = "type";
     sequence[1].name = "address";
-    let type_!: InternationalString;
-    let address!: InternationalString;
-    type_ = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
-    address = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[1]);
+    const type_: InternationalString = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
+    const address: InternationalString = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[1]);
     return new NetworkAddress_other(
         type_,
         address,

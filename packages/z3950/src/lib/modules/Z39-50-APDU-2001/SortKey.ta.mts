@@ -5,11 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { Specification, _decode_Specification, _encode_Specification } from "../Z39-50-APDU-2001/Specification.ta.mjs";
-// export { Specification, _decode_Specification, _encode_Specification } from "../Z39-50-APDU-2001/Specification.ta.mjs";
 import { SortKey_sortAttributes, _decode_SortKey_sortAttributes, _encode_SortKey_sortAttributes } from "../Z39-50-APDU-2001/SortKey-sortAttributes.ta.mjs";
-// export { SortKey_sortAttributes, _decode_SortKey_sortAttributes, _encode_SortKey_sortAttributes } from "../Z39-50-APDU-2001/SortKey-sortAttributes.ta.mjs";
 
 
 /**
