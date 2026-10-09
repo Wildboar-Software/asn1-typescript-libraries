@@ -1,4 +1,6 @@
 /**
+ * @module
+ * @description
  * Locally registered OCLC user information `{Z39-50 10 1000 17 1}` (ANSI/NISO
  * Z39.50-2003 OID.6). The standard does not define the fields.
  */
