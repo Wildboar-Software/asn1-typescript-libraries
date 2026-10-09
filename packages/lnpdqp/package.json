@@ -28,6 +28,10 @@
     "types": "./src/index.d.mts",
     "module": "./src/index.mjs",
     "main": "./src/index.mjs",
+    "exports": {
+        ".": "./src/index.mts",
+        "./LNPDQP-Protocol": "./src/lib/modules/LNPDQP-Protocol/index.mts"
+    },
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
     }
