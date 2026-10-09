@@ -2,8 +2,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "dist",
-    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
+    "outDir": "../../dist/packages/novell_pkis",
+    "tsBuildInfoFile": "../../dist/packages/novell_pkis/tsconfig.lib.tsbuildinfo",
     "emitDeclarationOnly": false,
     "declaration": true,
     "forceConsistentCasingInFileNames": true,
