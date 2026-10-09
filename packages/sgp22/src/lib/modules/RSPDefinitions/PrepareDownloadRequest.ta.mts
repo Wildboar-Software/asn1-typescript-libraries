@@ -8,7 +8,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { SmdpSigned2, _decode_SmdpSigned2, _encode_SmdpSigned2 } from "../RSPDefinitions/SmdpSigned2.ta.mjs";
 import { Octet32, _decode_Octet32, _encode_Octet32 } from "../RSPDefinitions/Octet32.ta.mjs";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
+import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
 
 
 /**

@@ -11,7 +11,6 @@ import * as $ from "@wildboar/asn1/functional";
 import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
 import { UICCCapability, _decode_UICCCapability, _encode_UICCCapability } from "../PEDefinitions/UICCCapability.ta.mjs";
 import { RspCapability, _decode_RspCapability, _encode_RspCapability } from "../RSPDefinitions/RspCapability.ta.mjs";
-import { SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "../PKIX1Implicit88/SubjectKeyIdentifier.ta.mjs";
 import { EUICCInfo2_euiccCategory, _decode_EUICCInfo2_euiccCategory, _encode_EUICCInfo2_euiccCategory } from "../RSPDefinitions/EUICCInfo2-euiccCategory.ta.mjs";
 import { PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
 import { CertificationDataObject, _decode_CertificationDataObject, _encode_CertificationDataObject } from "../RSPDefinitions/CertificationDataObject.ta.mjs";
@@ -122,13 +121,13 @@ class EUICCInfo2 {
          * @public
          * @readonly
          */
-        readonly euiccCiPKIdListForVerification: SubjectKeyIdentifier[],
+        readonly euiccCiPKIdListForVerification: OCTET_STRING[],
         /**
          * @summary `euiccCiPKIdListForSigning`.
          * @public
          * @readonly
          */
-        readonly euiccCiPKIdListForSigning: SubjectKeyIdentifier[],
+        readonly euiccCiPKIdListForSigning: OCTET_STRING[],
         /**
          * @summary `euiccCategory`.
          * @public
@@ -188,7 +187,7 @@ class EUICCInfo2 {
          * @public
          * @readonly
          */
-        readonly euiccCiPKIdListForSigningV3: OPTIONAL<SubjectKeyIdentifier[]>,
+        readonly euiccCiPKIdListForSigningV3: OPTIONAL<OCTET_STRING[]>,
         /**
          * @summary `additionalEuiccInfo`.
          * @public
@@ -325,8 +324,8 @@ function _decode_EUICCInfo2 (el: _Element): EUICCInfo2 {
     let ts102241Version: OPTIONAL<VersionType>;
     let globalplatformVersion: OPTIONAL<VersionType>;
     let rspCapability!: RspCapability;
-    let euiccCiPKIdListForVerification!: SubjectKeyIdentifier[];
-    let euiccCiPKIdListForSigning!: SubjectKeyIdentifier[];
+    let euiccCiPKIdListForVerification!: OCTET_STRING[];
+    let euiccCiPKIdListForSigning!: OCTET_STRING[];
     let euiccCategory: OPTIONAL<EUICCInfo2_euiccCategory>;
     let forbiddenProfilePolicyRules: OPTIONAL<PprIds>;
     let ppVersion!: VersionType;
@@ -336,7 +335,7 @@ function _decode_EUICCInfo2 (el: _Element): EUICCInfo2 {
     let treProductReference: OPTIONAL<UTF8String>;
     let additionalEuiccProfilePackageVersions: OPTIONAL<VersionType[]>;
     let lpaMode: OPTIONAL<LpaMode>;
-    let euiccCiPKIdListForSigningV3: OPTIONAL<SubjectKeyIdentifier[]>;
+    let euiccCiPKIdListForSigningV3: OPTIONAL<OCTET_STRING[]>;
     let additionalEuiccInfo: OPTIONAL<OCTET_STRING>;
     let highestSvn: OPTIONAL<VersionType>;
     let iotSpecificInfo: OPTIONAL<IoTSpecificInfo>;
@@ -350,8 +349,8 @@ function _decode_EUICCInfo2 (el: _Element): EUICCInfo2 {
         "ts102241Version": (_el: _Element): void => { ts102241Version = $._decode_implicit<VersionType>(() => _decode_VersionType)(_el); },
         "globalplatformVersion": (_el: _Element): void => { globalplatformVersion = $._decode_implicit<VersionType>(() => _decode_VersionType)(_el); },
         "rspCapability": (_el: _Element): void => { rspCapability = $._decode_implicit<RspCapability>(() => _decode_RspCapability)(_el); },
-        "euiccCiPKIdListForVerification": (_el: _Element): void => { euiccCiPKIdListForVerification = $._decode_implicit<SubjectKeyIdentifier[]>(() => $._decodeSequenceOf<SubjectKeyIdentifier>(() => _decode_SubjectKeyIdentifier))(_el); },
-        "euiccCiPKIdListForSigning": (_el: _Element): void => { euiccCiPKIdListForSigning = $._decode_implicit<SubjectKeyIdentifier[]>(() => $._decodeSequenceOf<SubjectKeyIdentifier>(() => _decode_SubjectKeyIdentifier))(_el); },
+        "euiccCiPKIdListForVerification": (_el: _Element): void => { euiccCiPKIdListForVerification = $._decode_implicit<OCTET_STRING[]>(() => $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString))(_el); },
+        "euiccCiPKIdListForSigning": (_el: _Element): void => { euiccCiPKIdListForSigning = $._decode_implicit<OCTET_STRING[]>(() => $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString))(_el); },
         "euiccCategory": (_el: _Element): void => { euiccCategory = $._decode_implicit<EUICCInfo2_euiccCategory>(() => _decode_EUICCInfo2_euiccCategory)(_el); },
         "forbiddenProfilePolicyRules": (_el: _Element): void => { forbiddenProfilePolicyRules = $._decode_implicit<PprIds>(() => _decode_PprIds)(_el); },
         "ppVersion": (_el: _Element): void => { ppVersion = _decode_VersionType(_el); },
@@ -361,7 +360,7 @@ function _decode_EUICCInfo2 (el: _Element): EUICCInfo2 {
         "treProductReference": (_el: _Element): void => { treProductReference = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "additionalEuiccProfilePackageVersions": (_el: _Element): void => { additionalEuiccProfilePackageVersions = $._decode_implicit<VersionType[]>(() => $._decodeSequenceOf<VersionType>(() => _decode_VersionType))(_el); },
         "lpaMode": (_el: _Element): void => { lpaMode = $._decode_implicit<LpaMode>(() => _decode_LpaMode)(_el); },
-        "euiccCiPKIdListForSigningV3": (_el: _Element): void => { euiccCiPKIdListForSigningV3 = $._decode_implicit<SubjectKeyIdentifier[]>(() => $._decodeSequenceOf<SubjectKeyIdentifier>(() => _decode_SubjectKeyIdentifier))(_el); },
+        "euiccCiPKIdListForSigningV3": (_el: _Element): void => { euiccCiPKIdListForSigningV3 = $._decode_implicit<OCTET_STRING[]>(() => $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString))(_el); },
         "additionalEuiccInfo": (_el: _Element): void => { additionalEuiccInfo = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "highestSvn": (_el: _Element): void => { highestSvn = $._decode_implicit<VersionType>(() => _decode_VersionType)(_el); },
         "iotSpecificInfo": (_el: _Element): void => { iotSpecificInfo = $._decode_implicit<IoTSpecificInfo>(() => _decode_IoTSpecificInfo)(_el); },
@@ -425,8 +424,8 @@ function _encode_EUICCInfo2 (value: EUICCInfo2, elGetter: $.ASN1Encoder<any>): _
             /* IF_ABSENT  */ ((value.ts102241Version === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => _encode_VersionType, $.BER)(value.ts102241Version, $.BER)),
             /* IF_ABSENT  */ ((value.globalplatformVersion === undefined) ? undefined : $._encode_implicit(_TagClass.context, 7, () => _encode_VersionType, $.BER)(value.globalplatformVersion, $.BER)),
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 8, () => _encode_RspCapability, $.BER)(value.rspCapability, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 9, () => $._encodeSequenceOf<SubjectKeyIdentifier>(() => _encode_SubjectKeyIdentifier, $.BER), $.BER)(value.euiccCiPKIdListForVerification, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 10, () => $._encodeSequenceOf<SubjectKeyIdentifier>(() => _encode_SubjectKeyIdentifier, $.BER), $.BER)(value.euiccCiPKIdListForSigning, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 9, () => $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.BER), $.BER)(value.euiccCiPKIdListForVerification, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 10, () => $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.BER), $.BER)(value.euiccCiPKIdListForSigning, $.BER),
             /* IF_ABSENT  */ ((value.euiccCategory === undefined) ? undefined : $._encode_implicit(_TagClass.context, 11, () => _encode_EUICCInfo2_euiccCategory, $.BER)(value.euiccCategory, $.BER)),
             /* IF_ABSENT  */ ((value.forbiddenProfilePolicyRules === undefined) ? undefined : $._encode_implicit(_TagClass.context, 25, () => _encode_PprIds, $.BER)(value.forbiddenProfilePolicyRules, $.BER)),
             /* REQUIRED   */ _encode_VersionType(value.ppVersion, $.BER),
@@ -436,7 +435,7 @@ function _encode_EUICCInfo2 (value: EUICCInfo2, elGetter: $.ASN1Encoder<any>): _
             /* IF_ABSENT  */ ((value.treProductReference === undefined) ? undefined : $._encode_implicit(_TagClass.context, 14, () => $._encodeUTF8String, $.BER)(value.treProductReference, $.BER)),
             /* IF_ABSENT  */ ((value.additionalEuiccProfilePackageVersions === undefined) ? undefined : $._encode_implicit(_TagClass.context, 15, () => $._encodeSequenceOf<VersionType>(() => _encode_VersionType, $.BER), $.BER)(value.additionalEuiccProfilePackageVersions, $.BER)),
             /* IF_ABSENT  */ ((value.lpaMode === undefined) ? undefined : $._encode_implicit(_TagClass.context, 16, () => _encode_LpaMode, $.BER)(value.lpaMode, $.BER)),
-            /* IF_ABSENT  */ ((value.euiccCiPKIdListForSigningV3 === undefined) ? undefined : $._encode_implicit(_TagClass.context, 17, () => $._encodeSequenceOf<SubjectKeyIdentifier>(() => _encode_SubjectKeyIdentifier, $.BER), $.BER)(value.euiccCiPKIdListForSigningV3, $.BER)),
+            /* IF_ABSENT  */ ((value.euiccCiPKIdListForSigningV3 === undefined) ? undefined : $._encode_implicit(_TagClass.context, 17, () => $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.BER), $.BER)(value.euiccCiPKIdListForSigningV3, $.BER)),
             /* IF_ABSENT  */ ((value.additionalEuiccInfo === undefined) ? undefined : $._encode_implicit(_TagClass.context, 18, () => $._encodeOctetString, $.BER)(value.additionalEuiccInfo, $.BER)),
             /* IF_ABSENT  */ ((value.highestSvn === undefined) ? undefined : $._encode_implicit(_TagClass.context, 19, () => _encode_VersionType, $.BER)(value.highestSvn, $.BER)),
             /* IF_ABSENT  */ ((value.iotSpecificInfo === undefined) ? undefined : $._encode_implicit(_TagClass.context, 20, () => _encode_IoTSpecificInfo, $.BER)(value.iotSpecificInfo, $.BER)),

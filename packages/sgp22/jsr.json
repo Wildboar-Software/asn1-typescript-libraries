@@ -5,9 +5,7 @@
   "exports": {
     ".": "./src/index.mts",
     "./RSPDefinitions": "./src/lib/modules/RSPDefinitions/index.mts",
-    "./PEDefinitions": "./src/lib/modules/PEDefinitions/index.mts",
-    "./PKIX1Explicit88": "./src/lib/modules/PKIX1Explicit88/index.mts",
-    "./PKIX1Implicit88": "./src/lib/modules/PKIX1Implicit88/index.mts"
+    "./PEDefinitions": "./src/lib/modules/PEDefinitions/index.mts"
   },
   "publish": {
     "include": [

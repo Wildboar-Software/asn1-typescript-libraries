@@ -2,11 +2,11 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
-import { SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "../PKIX1Implicit88/SubjectKeyIdentifier.ta.mjs";
 
 
 /**
@@ -39,13 +39,13 @@ class EUICCInfo1 {
          * @public
          * @readonly
          */
-        readonly euiccCiPKIdListForVerification: SubjectKeyIdentifier[],
+        readonly euiccCiPKIdListForVerification: OCTET_STRING[],
         /**
          * @summary `euiccCiPKIdListForSigning`.
          * @public
          * @readonly
          */
-        readonly euiccCiPKIdListForSigning: SubjectKeyIdentifier[]
+        readonly euiccCiPKIdListForSigning: OCTET_STRING[]
     ) {}
 
     /**
@@ -127,11 +127,11 @@ function _decode_EUICCInfo1 (el: _Element): EUICCInfo1 {
     sequence[1].name = "euiccCiPKIdListForVerification";
     sequence[2].name = "euiccCiPKIdListForSigning";
     let svn!: VersionType;
-    let euiccCiPKIdListForVerification!: SubjectKeyIdentifier[];
-    let euiccCiPKIdListForSigning!: SubjectKeyIdentifier[];
+    let euiccCiPKIdListForVerification!: OCTET_STRING[];
+    let euiccCiPKIdListForSigning!: OCTET_STRING[];
     svn = $._decode_implicit<VersionType>(() => _decode_VersionType)(sequence[0]);
-    euiccCiPKIdListForVerification = $._decode_implicit<SubjectKeyIdentifier[]>(() => $._decodeSequenceOf<SubjectKeyIdentifier>(() => _decode_SubjectKeyIdentifier))(sequence[1]);
-    euiccCiPKIdListForSigning = $._decode_implicit<SubjectKeyIdentifier[]>(() => $._decodeSequenceOf<SubjectKeyIdentifier>(() => _decode_SubjectKeyIdentifier))(sequence[2]);
+    euiccCiPKIdListForVerification = $._decode_implicit<OCTET_STRING[]>(() => $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString))(sequence[1]);
+    euiccCiPKIdListForSigning = $._decode_implicit<OCTET_STRING[]>(() => $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString))(sequence[2]);
     return new EUICCInfo1(
         svn,
         euiccCiPKIdListForVerification,
@@ -157,8 +157,8 @@ function _encode_EUICCInfo1 (value: EUICCInfo1, elGetter: $.ASN1Encoder<any>): _
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_VersionType, $.BER)(value.svn, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 9, () => $._encodeSequenceOf<SubjectKeyIdentifier>(() => _encode_SubjectKeyIdentifier, $.BER), $.BER)(value.euiccCiPKIdListForVerification, $.BER),
-            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 10, () => $._encodeSequenceOf<SubjectKeyIdentifier>(() => _encode_SubjectKeyIdentifier, $.BER), $.BER)(value.euiccCiPKIdListForSigning, $.BER)
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 9, () => $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.BER), $.BER)(value.euiccCiPKIdListForVerification, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 10, () => $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.BER), $.BER)(value.euiccCiPKIdListForSigning, $.BER)
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }, $.BER); }

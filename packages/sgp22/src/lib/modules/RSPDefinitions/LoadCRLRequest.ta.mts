@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CertificateList, _decode_CertificateList, _encode_CertificateList } from "../PKIX1Explicit88/CertificateList.ta.mjs";
+import { type CertificateList, _decode_CertificateList, _encode_CertificateList } from "../RSPDefinitions/CertificateList.ta.mjs";
 
 
 /**

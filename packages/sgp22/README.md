@@ -2,10 +2,10 @@
 
 ASN.1 data structures for GSMA SGP.22 Remote SIM Provisioning.
 
-`Certificate`, `CertificateList`, and `Time` are re-exported from
-`@wildboar/x500` AuthenticationFramework (`Certificate` and `Time` are the
-`@wildboar/pki-stub` definitions). `SubjectKeyIdentifier` is re-exported from
-`@wildboar/x500` CertificateExtensions.
+`Certificate` and `Time` are imported from `@wildboar/pki-stub`.
+`SubjectKeyIdentifier` is an `OCTET STRING`. `CertificateList` is defined in
+this package as `SIGNED{CertificateListContent}` using `@wildboar/pki-stub`
+components, because `pki-stub` does not export `CertificateList`.
 
 This module is ESM-only.
 
