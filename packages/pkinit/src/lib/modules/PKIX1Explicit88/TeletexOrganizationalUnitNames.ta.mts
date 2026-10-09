@@ -6,7 +6,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { TeletexOrganizationalUnitName, _decode_TeletexOrganizationalUnitName, _encode_TeletexOrganizationalUnitName } from "../PKIX1Explicit88/TeletexOrganizationalUnitName.ta.mjs";
 import { ub_organizational_units } from "../PKIX1Explicit88/ub-organizational-units.va.mjs";
-// export { TeletexOrganizationalUnitName, _decode_TeletexOrganizationalUnitName, _encode_TeletexOrganizationalUnitName } from "../PKIX1Explicit88/TeletexOrganizationalUnitName.ta.mjs";
 
 
 /**

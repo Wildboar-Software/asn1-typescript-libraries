@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Realm, _decode_Realm, _encode_Realm } from "../KerberosV5Spec2/Realm.ta.mjs";
-// export { Realm, _decode_Realm, _encode_Realm } from "../KerberosV5Spec2/Realm.ta.mjs";
 import { PrincipalName, _decode_PrincipalName, _encode_PrincipalName } from "../KerberosV5Spec2/PrincipalName.ta.mjs";
-// export { PrincipalName, _decode_PrincipalName, _encode_PrincipalName } from "../KerberosV5Spec2/PrincipalName.ta.mjs";
 
 
 /**

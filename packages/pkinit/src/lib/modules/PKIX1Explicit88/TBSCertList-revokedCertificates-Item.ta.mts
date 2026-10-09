@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../PKIX1Explicit88/CertificateSerialNumber.ta.mjs";
-// export { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../PKIX1Explicit88/CertificateSerialNumber.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../PKIX1Explicit88/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../PKIX1Explicit88/Time.ta.mjs";
 import { Extensions, _decode_Extensions, _encode_Extensions } from "../PKIX1Explicit88/Extensions.ta.mjs";
-// export { Extensions, _decode_Extensions, _encode_Extensions } from "../PKIX1Explicit88/Extensions.ta.mjs";
 
 
 /**

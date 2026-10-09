@@ -6,7 +6,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionAttribute, _decode_ExtensionAttribute, _encode_ExtensionAttribute } from "../PKIX1Explicit88/ExtensionAttribute.ta.mjs";
 import { ub_extension_attributes } from "../PKIX1Explicit88/ub-extension-attributes.va.mjs";
-// export { ExtensionAttribute, _decode_ExtensionAttribute, _encode_ExtensionAttribute } from "../PKIX1Explicit88/ExtensionAttribute.ta.mjs";
 
 
 /**

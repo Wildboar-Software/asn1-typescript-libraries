@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RDNSequence, _decode_RDNSequence, _encode_RDNSequence } from "../PKIX1Explicit88/RDNSequence.ta.mjs";
-// export { RDNSequence, _decode_RDNSequence, _encode_RDNSequence } from "../PKIX1Explicit88/RDNSequence.ta.mjs";
 
 
 /**

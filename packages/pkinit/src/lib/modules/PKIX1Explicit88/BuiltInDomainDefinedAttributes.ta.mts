@@ -6,7 +6,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { BuiltInDomainDefinedAttribute, _decode_BuiltInDomainDefinedAttribute, _encode_BuiltInDomainDefinedAttribute } from "../PKIX1Explicit88/BuiltInDomainDefinedAttribute.ta.mjs";
 import { ub_domain_defined_attributes } from "../PKIX1Explicit88/ub-domain-defined-attributes.va.mjs";
-// export { BuiltInDomainDefinedAttribute, _decode_BuiltInDomainDefinedAttribute, _encode_BuiltInDomainDefinedAttribute } from "../PKIX1Explicit88/BuiltInDomainDefinedAttribute.ta.mjs";
 
 
 /**

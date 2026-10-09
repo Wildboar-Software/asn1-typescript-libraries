@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ContentInfo, _decode_ContentInfo, _encode_ContentInfo } from "../CryptographicMessageSyntax/ContentInfo.ta.mjs";
-// export { ContentInfo, _decode_ContentInfo, _encode_ContentInfo } from "../CryptographicMessageSyntax/ContentInfo.ta.mjs";
 import { TrustedCA, _decode_TrustedCA, _encode_TrustedCA } from "../KerberosV5-PK-INIT-SPEC/TrustedCA.ta.mjs";
-// export { TrustedCA, _decode_TrustedCA, _encode_TrustedCA } from "../KerberosV5-PK-INIT-SPEC/TrustedCA.ta.mjs";
 
 
 /**

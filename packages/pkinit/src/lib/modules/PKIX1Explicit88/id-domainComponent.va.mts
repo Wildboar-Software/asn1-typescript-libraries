@@ -3,7 +3,6 @@ import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
 import { AttributeType } from "../PKIX1Explicit88/AttributeType.ta.mjs";
-// export { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../PKIX1Explicit88/AttributeType.ta.mjs";
 
 
 /**

@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../PKIX1Explicit88/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../PKIX1Explicit88/Extension.ta.mjs";
 
 
 /**
