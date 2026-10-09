@@ -121,35 +121,8 @@ const TerminalType_videotex: TerminalType = 8; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const videotex: TerminalType = TerminalType_videotex; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_TerminalType: $.ASN1Decoder<TerminalType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) TerminalType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TerminalType (el: _Element): TerminalType {
-    if (!_cached_decoder_for_TerminalType) { _cached_decoder_for_TerminalType = $._decodeInteger; }
-    return _cached_decoder_for_TerminalType(el);
-}
-
-let _cached_encoder_for_TerminalType: $.ASN1Encoder<TerminalType> | null = null;
-
-/**
- * @summary Encodes a(n) TerminalType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TerminalType, encoded as an ASN.1 Element.
- */
-export
-function _encode_TerminalType (value: TerminalType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TerminalType) { _cached_encoder_for_TerminalType = $._encodeInteger; }
-    return _cached_encoder_for_TerminalType(value, elGetter);
-}
+export const _decode_TerminalType = $._decodeInteger;
+export const _encode_TerminalType = $._encodeInteger;
 
 
 /* eslint-enable */

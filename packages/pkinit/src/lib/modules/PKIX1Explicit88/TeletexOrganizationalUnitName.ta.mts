@@ -20,35 +20,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type TeletexOrganizationalUnitName = TeletexString; // TeletexString
-
-let _cached_decoder_for_TeletexOrganizationalUnitName: $.ASN1Decoder<TeletexOrganizationalUnitName> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) TeletexOrganizationalUnitName
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TeletexOrganizationalUnitName (el: _Element): TeletexOrganizationalUnitName {
-    if (!_cached_decoder_for_TeletexOrganizationalUnitName) { _cached_decoder_for_TeletexOrganizationalUnitName = $._decodeTeletexString; }
-    return _cached_decoder_for_TeletexOrganizationalUnitName(el);
-}
-
-let _cached_encoder_for_TeletexOrganizationalUnitName: $.ASN1Encoder<TeletexOrganizationalUnitName> | null = null;
-
-/**
- * @summary Encodes a(n) TeletexOrganizationalUnitName into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TeletexOrganizationalUnitName, encoded as an ASN.1 Element.
- */
-export
-function _encode_TeletexOrganizationalUnitName (value: TeletexOrganizationalUnitName, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TeletexOrganizationalUnitName) { _cached_encoder_for_TeletexOrganizationalUnitName = $._encodeTeletexString; }
-    return _cached_encoder_for_TeletexOrganizationalUnitName(value, elGetter);
-}
+export const _decode_TeletexOrganizationalUnitName = $._decodeTeletexString;
+export const _encode_TeletexOrganizationalUnitName = $._encodeTeletexString;
 
 
 /* eslint-enable */
