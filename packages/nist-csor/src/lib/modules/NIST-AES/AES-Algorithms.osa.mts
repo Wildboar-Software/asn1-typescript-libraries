@@ -1,10 +1,8 @@
 /* eslint-disable */
+import { type ALGORITHM } from "../NIST-AES/ALGORITHM.oca.mjs";
 import { AES_128_Algorithms } from "../NIST-AES/AES-128-Algorithms.osa.mjs";
-// export { AES_128_Algorithms } from "../NIST-AES/AES-128-Algorithms.osa.mjs";
 import { AES_192_Algorithms } from "../NIST-AES/AES-192-Algorithms.osa.mjs";
-// export { AES_192_Algorithms } from "../NIST-AES/AES-192-Algorithms.osa.mjs";
 import { AES_256_Algorithms } from "../NIST-AES/AES-256-Algorithms.osa.mjs";
-// export { AES_256_Algorithms } from "../NIST-AES/AES-256-Algorithms.osa.mjs";
 
 
 /**

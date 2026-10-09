@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    ASN1OverflowError,
+    INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,21 +21,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type NumberOfBits = INTEGER;
 
-let _cached_decoder_for_NumberOfBits: $.ASN1Decoder<NumberOfBits> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NumberOfBits
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NumberOfBits (el: _Element): NumberOfBits {
-    if (!_cached_decoder_for_NumberOfBits) { _cached_decoder_for_NumberOfBits = $._decodeInteger; }
-    return _cached_decoder_for_NumberOfBits(el);
-}
-
-let _cached_encoder_for_NumberOfBits: $.ASN1Encoder<NumberOfBits> | null = null;
+export const _decode_NumberOfBits = (el: _Element): NumberOfBits => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 1 || n > 128) {
+        throw new ASN1OverflowError("NumberOfBits violates INTEGER range");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) NumberOfBits into an ASN.1 Element.
@@ -43,11 +43,7 @@ let _cached_encoder_for_NumberOfBits: $.ASN1Encoder<NumberOfBits> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NumberOfBits, encoded as an ASN.1 Element.
  */
-export
-function _encode_NumberOfBits (value: NumberOfBits, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NumberOfBits) { _cached_encoder_for_NumberOfBits = $._encodeInteger; }
-    return _cached_encoder_for_NumberOfBits(value, elGetter);
-}
+export const _encode_NumberOfBits = $._encodeInteger;
 
 
 /* eslint-enable */

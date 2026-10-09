@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AES_IV, _decode_AES_IV, _encode_AES_IV } from "../NIST-AES/AES-IV.ta.mjs";
-// export { AES_IV, _decode_AES_IV, _encode_AES_IV } from "../NIST-AES/AES-IV.ta.mjs";
 import { NumberOfBits, _decode_NumberOfBits, _encode_NumberOfBits } from "../NIST-AES/NumberOfBits.ta.mjs";
-// export { NumberOfBits, _decode_NumberOfBits, _encode_NumberOfBits } from "../NIST-AES/NumberOfBits.ta.mjs";
 
 
 /**
@@ -117,12 +115,15 @@ function _decode_CFBParameters (el: _Element): CFBParameters {
     if (sequence.length < 2) {
         throw new _ConstructionError("CFBParameters contained only " + sequence.length.toString() + " elements.");
     }
-    sequence[0].name = "aes-IV";
-    sequence[1].name = "numberOfBits";
-    let aes_IV!: AES_IV;
-    let numberOfBits!: NumberOfBits;
-    aes_IV = _decode_AES_IV(sequence[0]);
-    numberOfBits = _decode_NumberOfBits(sequence[1]);
+    const aesIVElement = sequence[0];
+    const numberOfBitsElement = sequence[1];
+    if (!aesIVElement || !numberOfBitsElement) {
+        throw new _ConstructionError("CFBParameters contained only " + sequence.length.toString() + " elements.");
+    }
+    aesIVElement.name = "aes-IV";
+    numberOfBitsElement.name = "numberOfBits";
+    const aes_IV: AES_IV = _decode_AES_IV(aesIVElement);
+    const numberOfBits: NumberOfBits = _decode_NumberOfBits(numberOfBitsElement);
     return new CFBParameters(
         aes_IV,
         numberOfBits,
@@ -143,7 +144,7 @@ let _cached_encoder_for_CFBParameters: $.ASN1Encoder<CFBParameters> | null = nul
  */
 export
 function _encode_CFBParameters (value: CFBParameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CFBParameters) { _cached_encoder_for_CFBParameters = function (value: CFBParameters, elGetter: $.ASN1Encoder<CFBParameters>): _Element {
+    if (!_cached_encoder_for_CFBParameters) { _cached_encoder_for_CFBParameters = function (value: CFBParameters): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_AES_IV(value.aes_IV, $.BER),
