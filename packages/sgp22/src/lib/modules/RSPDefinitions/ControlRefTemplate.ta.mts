@@ -13,6 +13,14 @@ import { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitio
  * @summary ControlRefTemplate
  * @description
  * 
+ * Subset of the GlobalPlatform control reference template describing the keys
+ * to agree. For AES-128, `keyType` is `'88'` and `keyLen` is `'10'`. For SM4,
+ * `keyType` is `'89'` and `keyLen` is `'10'`. Anything else is
+ * `unsupportedCrtValues`. Host ID is part of the key-derivation SharedInfo,
+ * together with the EID. SCP identifier `'90'` and key-usage qualifier `'95'`
+ * are not used; key usage is implied by `remoteOpId`. SGP.22 v3.1 §5.5.1 and
+ * §2.6.4.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +38,33 @@ class ControlRefTemplate {
     constructor (
         /**
          * @summary `keyType`.
+         * @description
+         * 
+         * GlobalPlatform key type. `'88'` for AES, `'89'` for SM4. Tag `'80'`.
+         * SGP.22 v3.1 §5.5.1.
+         * 
          * @public
          * @readonly
          */
         readonly keyType: Octet1,
         /**
          * @summary `keyLen`.
+         * @description
+         * 
+         * Key length in octets. `'10'` (16 octets) for both AES-128 and SM4 in
+         * this specification. Tag `'81'`. SGP.22 v3.1 §5.5.1.
+         * 
          * @public
          * @readonly
          */
         readonly keyLen: Octet1,
         /**
          * @summary `hostId`.
+         * @description
+         * 
+         * Host identifier, tag `'84'`. Its length and value are the HostID-LV
+         * input to X9.63 key derivation, next to the EID. SGP.22 v3.1 §2.6.4.2.
+         * 
          * @public
          * @readonly
          */

@@ -13,6 +13,10 @@ import { EUICCSigned2, _decode_EUICCSigned2, _encode_EUICCSigned2 } from "../RSP
  * @summary PrepareDownloadResponseOk
  * @description
  * 
+ * Successful PrepareDownload. `euiccSigned2` is signed by SK.EUICC.SIG. The LPA
+ * passes this whole response to ES9+.GetBoundProfilePackage. SGP.22 v3.1 §5.7.5
+ * and §5.6.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +33,22 @@ class PrepareDownloadResponseOk {
     constructor (
         /**
          * @summary `euiccSigned2`.
+         * @description
+         * 
+         * eUICC one-time public key and optional Confirmation Code hash. SGP.22
+         * v3.1 §5.7.5.
+         * 
          * @public
          * @readonly
          */
         readonly euiccSigned2: EUICCSigned2,
         /**
          * @summary `euiccSignature2`.
+         * @description
+         * 
+         * Signature under SK.EUICC.SIG, tag `'5F37'`. The SM-DP+ verifies it
+         * over `euiccSigned2` and `smdpSignature2`. SGP.22 v3.1 §5.6.2.
+         * 
          * @public
          * @readonly
          */

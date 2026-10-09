@@ -12,6 +12,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Octet32
  * @description
  * 
+ * Thirty-two octets. Carries the hashed Confirmation Code, which is
+ * SHA-256(SHA-256(UTF-8 Confirmation Code) concatenated with the
+ * TransactionID). SGP.22 v3.1 §3.1.3 and §4.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

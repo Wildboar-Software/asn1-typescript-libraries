@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SetNicknameResponse_setNicknameResult
  * @description
  * 
+ * `ok` (0), `iccidNotFound` (1), or `undefinedError` (127). SGP.22 v3.1
+ * §5.7.21.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +29,10 @@ type SetNicknameResponse_setNicknameResult = INTEGER;
 
 /**
  * @summary SetNicknameResponse_setNicknameResult_ok
+ * @description
+ * 
+ * The nickname was stored. SGP.22 v3.1 §5.7.21.
+ * 
  * @constant
  * @type {number}
  */
@@ -34,6 +41,10 @@ const SetNicknameResponse_setNicknameResult_ok: SetNicknameResponse_setNicknameR
 
 /**
  * @summary SetNicknameResponse_setNicknameResult_ok
+ * @description
+ * 
+ * The nickname was stored. SGP.22 v3.1 §5.7.21.
+ * 
  * @constant
  * @type {number}
  */
@@ -42,6 +53,10 @@ const ok: SetNicknameResponse_setNicknameResult = SetNicknameResponse_setNicknam
 
 /**
  * @summary SetNicknameResponse_setNicknameResult_iccidNotFound
+ * @description
+ * 
+ * No installed Profile has that ICCID. SGP.22 v3.1 §5.7.21.
+ * 
  * @constant
  * @type {number}
  */
@@ -50,6 +65,10 @@ const SetNicknameResponse_setNicknameResult_iccidNotFound: SetNicknameResponse_s
 
 /**
  * @summary SetNicknameResponse_setNicknameResult_iccidNotFound
+ * @description
+ * 
+ * No installed Profile has that ICCID. SGP.22 v3.1 §5.7.21.
+ * 
  * @constant
  * @type {number}
  */
@@ -58,6 +77,10 @@ const iccidNotFound: SetNicknameResponse_setNicknameResult = SetNicknameResponse
 
 /**
  * @summary SetNicknameResponse_setNicknameResult_undefinedError
+ * @description
+ * 
+ * SetNickname failed for another reason. SGP.22 v3.1 §5.7.21.
+ * 
  * @constant
  * @type {number}
  */
@@ -66,6 +89,10 @@ const SetNicknameResponse_setNicknameResult_undefinedError: SetNicknameResponse_
 
 /**
  * @summary SetNicknameResponse_setNicknameResult_undefinedError
+ * @description
+ * 
+ * SetNickname failed for another reason. SGP.22 v3.1 §5.7.21.
+ * 
  * @constant
  * @type {number}
  */

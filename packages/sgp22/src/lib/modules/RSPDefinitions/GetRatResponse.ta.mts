@@ -12,6 +12,10 @@ import { RulesAuthorisationTable, _decode_RulesAuthorisationTable, _encode_Rules
  * @summary GetRatResponse
  * @description
  * 
+ * The eUICC Rules Authorisation Table. It is set at manufacture or during
+ * initial device setup, before any operational Profile is installed, and
+ * ES10c.eUICCMemoryReset does not change it. SGP.22 v3.1 §2.9.2 and §5.7.22.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +31,10 @@ class GetRatResponse {
     constructor (
         /**
          * @summary `rat`.
+         * @description
+         * 
+         * The Rules Authorisation Table. SGP.22 v3.1 §2.9.2.
+         * 
          * @public
          * @readonly
          */

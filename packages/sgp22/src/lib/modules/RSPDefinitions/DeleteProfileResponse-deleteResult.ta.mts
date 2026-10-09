@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DeleteProfileResponse_deleteResult
  * @description
  * 
+ * Result code of ES10c.DeleteProfile. SGP.22 v3.1 §5.7.18.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +30,11 @@ type DeleteProfileResponse_deleteResult = INTEGER;
 
 /**
  * @summary DeleteProfileResponse_deleteResult_ok
+ * @description
+ * 
+ * The ISD-P and its components were deleted. Configured delete notifications
+ * are generated, except for a Test Profile. SGP.22 v3.1 §5.7.18.
+ * 
  * @constant
  * @type {number}
  */
@@ -36,6 +43,11 @@ const DeleteProfileResponse_deleteResult_ok: DeleteProfileResponse_deleteResult 
 
 /**
  * @summary DeleteProfileResponse_deleteResult_ok
+ * @description
+ * 
+ * The ISD-P and its components were deleted. Configured delete notifications
+ * are generated, except for a Test Profile. SGP.22 v3.1 §5.7.18.
+ * 
  * @constant
  * @type {number}
  */
@@ -44,6 +56,10 @@ const ok: DeleteProfileResponse_deleteResult = DeleteProfileResponse_deleteResul
 
 /**
  * @summary DeleteProfileResponse_deleteResult_iccidOrAidNotFound
+ * @description
+ * 
+ * No Profile has that ICCID or ISD-P AID. SGP.22 v3.1 §5.7.18.
+ * 
  * @constant
  * @type {number}
  */
@@ -52,6 +68,10 @@ const DeleteProfileResponse_deleteResult_iccidOrAidNotFound: DeleteProfileRespon
 
 /**
  * @summary DeleteProfileResponse_deleteResult_iccidOrAidNotFound
+ * @description
+ * 
+ * No Profile has that ICCID or ISD-P AID. SGP.22 v3.1 §5.7.18.
+ * 
  * @constant
  * @type {number}
  */
@@ -60,6 +80,10 @@ const iccidOrAidNotFound: DeleteProfileResponse_deleteResult = DeleteProfileResp
 
 /**
  * @summary DeleteProfileResponse_deleteResult_profileNotInDisabledState
+ * @description
+ * 
+ * The Profile is still enabled. Disable it first. SGP.22 v3.1 §5.7.18.
+ * 
  * @constant
  * @type {number}
  */
@@ -68,6 +92,10 @@ const DeleteProfileResponse_deleteResult_profileNotInDisabledState: DeleteProfil
 
 /**
  * @summary DeleteProfileResponse_deleteResult_profileNotInDisabledState
+ * @description
+ * 
+ * The Profile is still enabled. Disable it first. SGP.22 v3.1 §5.7.18.
+ * 
  * @constant
  * @type {number}
  */
@@ -76,6 +104,10 @@ const profileNotInDisabledState: DeleteProfileResponse_deleteResult = DeleteProf
 
 /**
  * @summary DeleteProfileResponse_deleteResult_disallowedByPolicy
+ * @description
+ * 
+ * PPR2 forbids deleting this Profile. SGP.22 v3.1 §5.7.18.
+ * 
  * @constant
  * @type {number}
  */
@@ -84,6 +116,10 @@ const DeleteProfileResponse_deleteResult_disallowedByPolicy: DeleteProfileRespon
 
 /**
  * @summary DeleteProfileResponse_deleteResult_disallowedByPolicy
+ * @description
+ * 
+ * PPR2 forbids deleting this Profile. SGP.22 v3.1 §5.7.18.
+ * 
  * @constant
  * @type {number}
  */
@@ -92,6 +128,10 @@ const disallowedByPolicy: DeleteProfileResponse_deleteResult = DeleteProfileResp
 
 /**
  * @summary DeleteProfileResponse_deleteResult_undefinedError
+ * @description
+ * 
+ * Delete failed for another reason. SGP.22 v3.1 §5.7.18.
+ * 
  * @constant
  * @type {number}
  */
@@ -100,6 +140,10 @@ const DeleteProfileResponse_deleteResult_undefinedError: DeleteProfileResponse_d
 
 /**
  * @summary DeleteProfileResponse_deleteResult_undefinedError
+ * @description
+ * 
+ * Delete failed for another reason. SGP.22 v3.1 §5.7.18.
+ * 
  * @constant
  * @type {number}
  */

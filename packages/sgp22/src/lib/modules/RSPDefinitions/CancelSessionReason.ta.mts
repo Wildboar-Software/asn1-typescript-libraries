@@ -11,6 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CancelSessionReason
  * @description
  * 
+ * Why an RSP session is being cancelled. The eUICC signs the reason so the
+ * SM-DP+ can record it. SGP.22 v3.1 §5.7.14. v3.1 adds reasons 16-25 and 27-30
+ * (enterprise, LPA proxy, RPM, device change, and so on) that this module does
+ * not declare. v3.1 notes that cancel reasons added since v3.0.0 are aligned
+ * with `ErrorReason`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,6 +28,11 @@ type CancelSessionReason = INTEGER;
 
 /**
  * @summary CancelSessionReason_endUserRejection
+ * @description
+ * 
+ * The End User rejected the download or the pending operation. SGP.22 v3.1
+ * §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -30,6 +41,11 @@ const CancelSessionReason_endUserRejection: CancelSessionReason = 0; /* LONG_NAM
 
 /**
  * @summary CancelSessionReason_endUserRejection
+ * @description
+ * 
+ * The End User rejected the download or the pending operation. SGP.22 v3.1
+ * §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -38,6 +54,11 @@ const endUserRejection: CancelSessionReason = CancelSessionReason_endUserRejecti
 
 /**
  * @summary CancelSessionReason_postponed
+ * @description
+ * 
+ * The operation is postponed. The eUICC may keep the unused one-time key pair
+ * for a retry. SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -46,6 +67,11 @@ const CancelSessionReason_postponed: CancelSessionReason = 1; /* LONG_NAMED_INTE
 
 /**
  * @summary CancelSessionReason_postponed
+ * @description
+ * 
+ * The operation is postponed. The eUICC may keep the unused one-time key pair
+ * for a retry. SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -54,6 +80,11 @@ const postponed: CancelSessionReason = CancelSessionReason_postponed; /* SHORT_N
 
 /**
  * @summary CancelSessionReason_timeout
+ * @description
+ * 
+ * The session timed out. The eUICC may keep the unused one-time key pair for a
+ * retry. SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -62,6 +93,11 @@ const CancelSessionReason_timeout: CancelSessionReason = 2; /* LONG_NAMED_INTEGE
 
 /**
  * @summary CancelSessionReason_timeout
+ * @description
+ * 
+ * The session timed out. The eUICC may keep the unused one-time key pair for a
+ * retry. SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -70,6 +106,11 @@ const timeout: CancelSessionReason = CancelSessionReason_timeout; /* SHORT_NAMED
 
 /**
  * @summary CancelSessionReason_pprNotAllowed
+ * @description
+ * 
+ * The LPA's check of the Rules Authorisation Table rejected the Profile's PPRs.
+ * SGP.22 v3.1 §2.9.2.4 and §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -78,6 +119,11 @@ const CancelSessionReason_pprNotAllowed: CancelSessionReason = 3; /* LONG_NAMED_
 
 /**
  * @summary CancelSessionReason_pprNotAllowed
+ * @description
+ * 
+ * The LPA's check of the Rules Authorisation Table rejected the Profile's PPRs.
+ * SGP.22 v3.1 §2.9.2.4 and §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -86,6 +132,11 @@ const pprNotAllowed: CancelSessionReason = CancelSessionReason_pprNotAllowed; /*
 
 /**
  * @summary CancelSessionReason_metadataMismatch
+ * @description
+ * 
+ * Metadata presented to the End User does not match what the LPA will install.
+ * SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -94,6 +145,11 @@ const CancelSessionReason_metadataMismatch: CancelSessionReason = 4; /* LONG_NAM
 
 /**
  * @summary CancelSessionReason_metadataMismatch
+ * @description
+ * 
+ * Metadata presented to the End User does not match what the LPA will install.
+ * SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -102,6 +158,11 @@ const metadataMismatch: CancelSessionReason = CancelSessionReason_metadataMismat
 
 /**
  * @summary CancelSessionReason_loadBppExecutionError
+ * @description
+ * 
+ * LoadBoundProfilePackage failed, and the LPA is cancelling the server session
+ * with that result. SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -110,6 +171,11 @@ const CancelSessionReason_loadBppExecutionError: CancelSessionReason = 5; /* LON
 
 /**
  * @summary CancelSessionReason_loadBppExecutionError
+ * @description
+ * 
+ * LoadBoundProfilePackage failed, and the LPA is cancelling the server session
+ * with that result. SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -118,6 +184,10 @@ const loadBppExecutionError: CancelSessionReason = CancelSessionReason_loadBppEx
 
 /**
  * @summary CancelSessionReason_undefinedReason
+ * @description
+ * 
+ * No more specific reason. SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -126,6 +196,10 @@ const CancelSessionReason_undefinedReason: CancelSessionReason = 127; /* LONG_NA
 
 /**
  * @summary CancelSessionReason_undefinedReason
+ * @description
+ * 
+ * No more specific reason. SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */

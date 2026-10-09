@@ -12,6 +12,11 @@ import { ProfileInfoListError, _decode_ProfileInfoListError, _encode_ProfileInfo
  * @summary ProfileInfoListResponse
  * @description
  * 
+ * ES10c.GetProfilesInfo response. One `ProfileInfo` per matching Profile, or an
+ * error. An empty success list means no Profile matched. If a state change is
+ * still waiting for REFRESH, a request that asks for profile state fails with
+ * status word `'6985'` for local management. SGP.22 v3.1 §5.7.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

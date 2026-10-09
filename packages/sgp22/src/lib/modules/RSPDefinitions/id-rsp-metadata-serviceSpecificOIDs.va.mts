@@ -10,6 +10,11 @@ import { id_rsp_metadata } from "../RSPDefinitions/id-rsp-metadata.va.mjs";
  * @summary id_rsp_metadata_serviceSpecificOIDs
  * @description
  * 
+ * Arc for service-specific metadata OIDs under `id-rsp-metadata`. A
+ * `VendorSpecificExtension` entry identifies its definition by OID. SGP.22 v3.1
+ * §5.5.3 requires that service-specific data not change RSP procedures or
+ * interoperability.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

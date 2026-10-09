@@ -13,6 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SetDefaultDpAddressRequest
  * @description
  * 
+ * ES10a.SetDefaultDpAddress. Sets the default SM-DP+ address kept by the eUICC,
+ * as an FQDN. Used when the LPA has no Activation Code and falls back to the
+ * configured default. SGP.22 v3.1 §5.7.4 and §3.1.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +32,10 @@ class SetDefaultDpAddressRequest {
     constructor (
         /**
          * @summary `defaultDpAddress`.
+         * @description
+         * 
+         * New default SM-DP+ address, as an FQDN. SGP.22 v3.1 §5.7.4.
+         * 
          * @public
          * @readonly
          */

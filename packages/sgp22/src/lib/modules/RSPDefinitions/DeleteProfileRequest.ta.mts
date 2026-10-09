@@ -12,6 +12,11 @@ import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.
  * @summary DeleteProfileRequest
  * @description
  * 
+ * ES10c.DeleteProfile. Deletes the ISD-P and every component of the Profile.
+ * The Profile must be disabled. PPR2 makes this `disallowedByPolicy`. A
+ * provisioning Profile is not deleted by an End User action. SGP.22 v3.1
+ * §5.7.18 and §2.4.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

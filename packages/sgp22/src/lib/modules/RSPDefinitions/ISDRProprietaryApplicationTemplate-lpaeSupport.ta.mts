@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ISDRProprietaryApplicationTemplate_lpaeSupport
  * @description
  * 
+ * Which on-card LPA options the ISD-R reports at selection time. The Device may
+ * activate exactly one of them with `LpaeActivationRequest` when it supports
+ * that option. SGP.22 v3.1 §5.7.1. v3.1 also allocates bits for "an enabled
+ * Profile is present" and for E4 ENVELOPE, which this module does not declare.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +30,10 @@ type ISDRProprietaryApplicationTemplate_lpaeSupport = BIT_STRING;
 
 /**
  * @summary ISDRProprietaryApplicationTemplate_lpaeSupport_lpaeUsingCat
+ * @description
+ * 
+ * An LPA in the eUICC can use the Card Application Toolkit. SGP.22 v3.1 §5.7.1.
+ * 
  * @constant
  */
 export
@@ -32,6 +41,10 @@ const ISDRProprietaryApplicationTemplate_lpaeSupport_lpaeUsingCat: number = 0; /
 
 /**
  * @summary lpaeUsingCat
+ * @description
+ * 
+ * An LPA in the eUICC can use the Card Application Toolkit. SGP.22 v3.1 §5.7.1.
+ * 
  * @constant
  */
 export
@@ -39,6 +52,10 @@ const lpaeUsingCat: number = ISDRProprietaryApplicationTemplate_lpaeSupport_lpae
 
 /**
  * @summary ISDRProprietaryApplicationTemplate_lpaeSupport_lpaeUsingScws
+ * @description
+ * 
+ * An LPA in the eUICC can use the Smart Card Web Server. SGP.22 v3.1 §5.7.1.
+ * 
  * @constant
  */
 export
@@ -46,6 +63,10 @@ const ISDRProprietaryApplicationTemplate_lpaeSupport_lpaeUsingScws: number = 1; 
 
 /**
  * @summary lpaeUsingScws
+ * @description
+ * 
+ * An LPA in the eUICC can use the Smart Card Web Server. SGP.22 v3.1 §5.7.1.
+ * 
  * @constant
  */
 export

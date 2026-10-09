@@ -14,6 +14,11 @@ import { Octet32, _decode_Octet32, _encode_Octet32 } from "../RSPDefinitions/Oct
  * @summary EUICCSigned2
  * @description
  * 
+ * eUICC contribution to profile binding: the session id, otPK.EUICC.KA, and the
+ * hashed Confirmation Code when the End User entered one. The SM-DP+ verifies
+ * the signature over this data and checks the hash before releasing the Bound
+ * Profile Package. SGP.22 v3.1 §5.7.5 and §5.6.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +36,35 @@ class EUICCSigned2 {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Must be the session id. A mismatch is `invalidTransactionId` on the
+         * eUICC side of later checks, and an unknown id at the SM-DP+. SGP.22
+         * v3.1 §5.7.5.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `euiccOtpk`.
+         * @description
+         * 
+         * otPK.EUICC.KA, tag `'5F49'`. Input to the SM-DP+ side of the key
+         * agreement. SGP.22 v3.1 §2.6.4 and §5.7.5.
+         * 
          * @public
          * @readonly
          */
         readonly euiccOtpk: OCTET_STRING,
         /**
          * @summary `hashCc`.
+         * @description
+         * 
+         * Confirmation Code hash, echoed from the request when the user entered
+         * a code. The SM-DP+ compares SHA-256(stored hash concatenated with the
+         * TransactionID) to this value. SGP.22 v3.1 §3.1.3.
+         * 
          * @public
          * @readonly
          */

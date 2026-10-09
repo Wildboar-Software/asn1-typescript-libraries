@@ -13,6 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LoadCRLResponseOk
  * @description
  * 
+ * The eUICC accepted a CRL loaded by the pre-v3 ES10b.LoadCRL function.
+ * `missingParts`, when present, lists partial-CRL segment numbers that are
+ * still absent. SGP.22 v3.1 does not define this response; §4.6.1 forbids delta
+ * CRLs.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +33,12 @@ class LoadCRLResponseOk {
     constructor (
         /**
          * @summary `missingParts`.
+         * @description
+         * 
+         * Partial-CRL segment numbers still missing after a successful pre-v3
+         * LoadCRL. Omitted when the CRL is complete. SGP.22 v3.1 does not
+         * define this field.
+         * 
          * @public
          * @readonly
          */

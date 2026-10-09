@@ -12,6 +12,12 @@ import { PendingNotification, _decode_PendingNotification, _encode_PendingNotifi
  * @summary HandleNotification
  * @description
  * 
+ * ES9+.HandleNotification (and the ES2+ notification path uses the same
+ * pending-notification content). The LPA forwards a `ProfileInstallationResult`
+ * or an `OtherSignedNotification` that it retrieved from the eUICC. The SM-DP+
+ * records the terminal state of the download or of the enable, disable, or
+ * delete. SGP.22 v3.1 §5.6.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +33,11 @@ class HandleNotification {
     constructor (
         /**
          * @summary `pendingNotification`.
+         * @description
+         * 
+         * A Profile Installation Result or another signed notification, as
+         * retrieved from the eUICC. SGP.22 v3.1 §5.6.4.
+         * 
          * @public
          * @readonly
          */

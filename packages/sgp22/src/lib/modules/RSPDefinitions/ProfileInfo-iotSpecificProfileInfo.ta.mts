@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProfileInfo_iotSpecificProfileInfo
  * @description
  * 
+ * Empty sequence reserved for IoT profile information defined in SGP.32. SGP.22
+ * v3.1 Annex H does not include this field on `ProfileInfo`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

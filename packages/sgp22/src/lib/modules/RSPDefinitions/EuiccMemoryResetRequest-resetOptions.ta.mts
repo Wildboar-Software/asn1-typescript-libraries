@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EuiccMemoryResetRequest_resetOptions
  * @description
  * 
+ * Which parts of eUICC memory to clear. At least the bits the LPA wants cleared
+ * are set. SGP.22 v3.1 §5.7.19.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +29,11 @@ type EuiccMemoryResetRequest_resetOptions = BIT_STRING;
 
 /**
  * @summary EuiccMemoryResetRequest_resetOptions_deleteOperationalProfiles
+ * @description
+ * 
+ * Delete installed operational Profiles. Does not delete a provisioning
+ * Profile. SGP.22 v3.1 §5.7.19 and §2.4.5.2.
+ * 
  * @constant
  */
 export
@@ -33,6 +41,11 @@ const EuiccMemoryResetRequest_resetOptions_deleteOperationalProfiles: number = 0
 
 /**
  * @summary deleteOperationalProfiles
+ * @description
+ * 
+ * Delete installed operational Profiles. Does not delete a provisioning
+ * Profile. SGP.22 v3.1 §5.7.19 and §2.4.5.2.
+ * 
  * @constant
  */
 export
@@ -40,6 +53,10 @@ const deleteOperationalProfiles: number = EuiccMemoryResetRequest_resetOptions_d
 
 /**
  * @summary EuiccMemoryResetRequest_resetOptions_deleteFieldLoadedTestProfiles
+ * @description
+ * 
+ * Delete test Profiles that were loaded in the field. SGP.22 v3.1 §5.7.19.
+ * 
  * @constant
  */
 export
@@ -47,6 +64,10 @@ const EuiccMemoryResetRequest_resetOptions_deleteFieldLoadedTestProfiles: number
 
 /**
  * @summary deleteFieldLoadedTestProfiles
+ * @description
+ * 
+ * Delete test Profiles that were loaded in the field. SGP.22 v3.1 §5.7.19.
+ * 
  * @constant
  */
 export
@@ -54,6 +75,10 @@ const deleteFieldLoadedTestProfiles: number = EuiccMemoryResetRequest_resetOptio
 
 /**
  * @summary EuiccMemoryResetRequest_resetOptions_resetDefaultSmdpAddress
+ * @description
+ * 
+ * Clear the configured default SM-DP+ address. SGP.22 v3.1 §5.7.19.
+ * 
  * @constant
  */
 export
@@ -61,6 +86,10 @@ const EuiccMemoryResetRequest_resetOptions_resetDefaultSmdpAddress: number = 2; 
 
 /**
  * @summary resetDefaultSmdpAddress
+ * @description
+ * 
+ * Clear the configured default SM-DP+ address. SGP.22 v3.1 §5.7.19.
+ * 
  * @constant
  */
 export

@@ -12,6 +12,10 @@ import { AuthenticateClientResponseEs11_authenticateClientError, _decode_Authent
  * @summary AuthenticateClientResponseEs11
  * @description
  * 
+ * ES11.AuthenticateClient response from an SM-DS. Success is a list of event
+ * records. `eventIdUnknown` means the MatchingID is not an event this SM-DS
+ * holds. SGP.22 v3.1 §5.8.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

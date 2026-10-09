@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GetEuiccInfo1Request
  * @description
  * 
+ * ES10b.GetEUICCInfo request for `EUICCInfo1`. Empty. The LPA reads this before
+ * the RSP Server is authenticated, and sends it in InitiateAuthentication.
+ * SGP.22 v3.1 §5.7.8 and §4.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

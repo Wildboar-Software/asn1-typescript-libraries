@@ -10,6 +10,12 @@ import { ProfilePolicyAuthorisationRule, _decode_ProfilePolicyAuthorisationRule,
  * @summary RulesAuthorisationTable
  * @description
  * 
+ * Ordered list of Profile Policy Authorisation Rules. Order matters when
+ * several rules match the same owner: the End User consent flag of the first
+ * match is the one that applies. No rule for a PPR means that PPR is forbidden
+ * for every owner. An eUICC that supports multiple enabled Profiles does not
+ * contain a rule for PPR1. SGP.22 v3.1 §2.9.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LoadCRLResponseError
  * @description
  * 
+ * Error from the pre-v3 ES10b.LoadCRL function. SGP.22 v3.1 §5.7.12 withdraws
+ * the function and does not define these codes.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,6 +25,11 @@ type LoadCRLResponseError = INTEGER;
 
 /**
  * @summary LoadCRLResponseError_invalidSignature
+ * @description
+ * 
+ * The CRL signature did not verify. Pre-v3 ES10b.LoadCRL. SGP.22 v3.1 §5.7.12
+ * withdraws that function and does not define this code.
+ * 
  * @constant
  * @type {number}
  */
@@ -30,6 +38,11 @@ const LoadCRLResponseError_invalidSignature: LoadCRLResponseError = 1; /* LONG_N
 
 /**
  * @summary LoadCRLResponseError_invalidSignature
+ * @description
+ * 
+ * The CRL signature did not verify. Pre-v3 ES10b.LoadCRL. SGP.22 v3.1 §5.7.12
+ * withdraws that function and does not define this code.
+ * 
  * @constant
  * @type {number}
  */
@@ -38,6 +51,11 @@ const invalidSignature: LoadCRLResponseError = LoadCRLResponseError_invalidSigna
 
 /**
  * @summary LoadCRLResponseError_invalidCRLFormat
+ * @description
+ * 
+ * The CRL encoding is not a CRL this eUICC accepts. Not defined by SGP.22 v3.1,
+ * which withdraws LoadCRL.
+ * 
  * @constant
  * @type {number}
  */
@@ -46,6 +64,11 @@ const LoadCRLResponseError_invalidCRLFormat: LoadCRLResponseError = 2; /* LONG_N
 
 /**
  * @summary LoadCRLResponseError_invalidCRLFormat
+ * @description
+ * 
+ * The CRL encoding is not a CRL this eUICC accepts. Not defined by SGP.22 v3.1,
+ * which withdraws LoadCRL.
+ * 
  * @constant
  * @type {number}
  */
@@ -54,6 +77,11 @@ const invalidCRLFormat: LoadCRLResponseError = LoadCRLResponseError_invalidCRLFo
 
 /**
  * @summary LoadCRLResponseError_notEnoughMemorySpace
+ * @description
+ * 
+ * The eUICC cannot store this CRL. Not defined by SGP.22 v3.1, which withdraws
+ * LoadCRL.
+ * 
  * @constant
  * @type {number}
  */
@@ -62,6 +90,11 @@ const LoadCRLResponseError_notEnoughMemorySpace: LoadCRLResponseError = 3; /* LO
 
 /**
  * @summary LoadCRLResponseError_notEnoughMemorySpace
+ * @description
+ * 
+ * The eUICC cannot store this CRL. Not defined by SGP.22 v3.1, which withdraws
+ * LoadCRL.
+ * 
  * @constant
  * @type {number}
  */
@@ -70,6 +103,11 @@ const notEnoughMemorySpace: LoadCRLResponseError = LoadCRLResponseError_notEnoug
 
 /**
  * @summary LoadCRLResponseError_verificationKeyNotFound
+ * @description
+ * 
+ * No local key verifies this CRL. Not defined by SGP.22 v3.1, which withdraws
+ * LoadCRL.
+ * 
  * @constant
  * @type {number}
  */
@@ -78,6 +116,11 @@ const LoadCRLResponseError_verificationKeyNotFound: LoadCRLResponseError = 4; /*
 
 /**
  * @summary LoadCRLResponseError_verificationKeyNotFound
+ * @description
+ * 
+ * No local key verifies this CRL. Not defined by SGP.22 v3.1, which withdraws
+ * LoadCRL.
+ * 
  * @constant
  * @type {number}
  */
@@ -86,6 +129,12 @@ const verificationKeyNotFound: LoadCRLResponseError = LoadCRLResponseError_verif
 
 /**
  * @summary LoadCRLResponseError_fresherCrlAlreadyLoaded
+ * @description
+ * 
+ * A CRL with a higher cRLNumber for this scope is already stored. Not defined
+ * by SGP.22 v3.1, which withdraws LoadCRL. v3.1 §4.6.1 still requires cRLNumber
+ * to increase by one at each publication.
+ * 
  * @constant
  * @type {number}
  */
@@ -94,6 +143,12 @@ const LoadCRLResponseError_fresherCrlAlreadyLoaded: LoadCRLResponseError = 5; /*
 
 /**
  * @summary LoadCRLResponseError_fresherCrlAlreadyLoaded
+ * @description
+ * 
+ * A CRL with a higher cRLNumber for this scope is already stored. Not defined
+ * by SGP.22 v3.1, which withdraws LoadCRL. v3.1 §4.6.1 still requires cRLNumber
+ * to increase by one at each publication.
+ * 
  * @constant
  * @type {number}
  */
@@ -102,6 +157,11 @@ const fresherCrlAlreadyLoaded: LoadCRLResponseError = LoadCRLResponseError_fresh
 
 /**
  * @summary LoadCRLResponseError_baseCrlMissing
+ * @description
+ * 
+ * A partial CRL arrived and its base CRL is not present. Not defined by SGP.22
+ * v3.1. v3.1 §4.6.1 forbids delta CRLs and requires a complete base list.
+ * 
  * @constant
  * @type {number}
  */
@@ -110,6 +170,11 @@ const LoadCRLResponseError_baseCrlMissing: LoadCRLResponseError = 6; /* LONG_NAM
 
 /**
  * @summary LoadCRLResponseError_baseCrlMissing
+ * @description
+ * 
+ * A partial CRL arrived and its base CRL is not present. Not defined by SGP.22
+ * v3.1. v3.1 §4.6.1 forbids delta CRLs and requires a complete base list.
+ * 
  * @constant
  * @type {number}
  */
@@ -118,6 +183,11 @@ const baseCrlMissing: LoadCRLResponseError = LoadCRLResponseError_baseCrlMissing
 
 /**
  * @summary LoadCRLResponseError_undefinedError
+ * @description
+ * 
+ * LoadCRL failed for another reason. Not defined by SGP.22 v3.1, which
+ * withdraws the function.
+ * 
  * @constant
  * @type {number}
  */
@@ -126,6 +196,11 @@ const LoadCRLResponseError_undefinedError: LoadCRLResponseError = 127; /* LONG_N
 
 /**
  * @summary LoadCRLResponseError_undefinedError
+ * @description
+ * 
+ * LoadCRL failed for another reason. Not defined by SGP.22 v3.1, which
+ * withdraws the function.
+ * 
  * @constant
  * @type {number}
  */

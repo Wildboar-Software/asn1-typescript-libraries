@@ -12,6 +12,10 @@ import { RetrieveNotificationsListResponse_notificationsListResultError, _decode
  * @summary RetrieveNotificationsListResponse
  * @description
  * 
+ * ES10b.RetrieveNotificationsList response. Each pending notification is either
+ * a Profile Installation Result or another signed notification (enable,
+ * disable, delete). SGP.22 v3.1 §5.7.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

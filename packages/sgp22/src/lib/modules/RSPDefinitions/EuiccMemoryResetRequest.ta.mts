@@ -12,6 +12,11 @@ import { _decode_EuiccMemoryResetRequest_resetOptions, _encode_EuiccMemoryResetR
  * @summary EuiccMemoryResetRequest
  * @description
  * 
+ * ES10c.eUICCMemoryReset. Deletes operational Profiles, field-loaded test
+ * Profiles, or both, and can clear the default SM-DP+ address. It does not
+ * change the Rules Authorisation Table, and it does not delete a provisioning
+ * Profile. SGP.22 v3.1 §5.7.19 and §2.9.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +35,12 @@ class EuiccMemoryResetRequest {
     constructor (
         /**
          * @summary `resetOptions`.
+         * @description
+         * 
+         * Operational profiles, field-loaded test profiles, and/or the default
+         * SM-DP+ address. Does not touch the RAT or a provisioning Profile.
+         * SGP.22 v3.1 §5.7.19.
+         * 
          * @public
          * @readonly
          */

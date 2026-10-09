@@ -16,6 +16,11 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  * @summary AuthenticateClientOk
  * @description
  * 
+ * The SM-DP+ accepted the eUICC and has a Profile to offer. `profileMetaData`
+ * is what the LPA shows the End User and checks against the Rules Authorisation
+ * Table. `smdpSigned2` and CERT.DPpb.SIG are the inputs to
+ * ES10b.PrepareDownload. SGP.22 v3.1 §5.6.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,30 +40,52 @@ class AuthenticateClientOk {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Same session id. SGP.22 v3.1 §5.6.3.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `profileMetaData`.
+         * @description
+         * 
+         * Metadata the LPA displays and checks against the RAT before download
+         * continues. SGP.22 v3.1 §5.6.3 and §2.9.2.4.
+         * 
          * @public
          * @readonly
          */
         readonly profileMetaData: StoreMetadataRequest,
         /**
          * @summary `smdpSigned2`.
+         * @description
+         * 
+         * Binding data for ES10b.PrepareDownload, including `ccRequiredFlag`.
+         * SGP.22 v3.1 §5.6.3.
+         * 
          * @public
          * @readonly
          */
         readonly smdpSigned2: SmdpSigned2,
         /**
          * @summary `smdpSignature2`.
+         * @description
+         * 
+         * Signature under SK.DPpb.SIG, tag `'5F37'`. SGP.22 v3.1 §5.6.3.
+         * 
          * @public
          * @readonly
          */
         readonly smdpSignature2: OCTET_STRING,
         /**
          * @summary `smdpCertificate`.
+         * @description
+         * 
+         * CERT.DPpb.SIG, passed through to PrepareDownload. SGP.22 v3.1 §5.6.3.
+         * 
          * @public
          * @readonly
          */

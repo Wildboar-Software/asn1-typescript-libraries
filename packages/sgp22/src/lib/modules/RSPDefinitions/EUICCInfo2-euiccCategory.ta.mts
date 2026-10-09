@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EUICCInfo2_euiccCategory
  * @description
  * 
+ * Deprecated eUICC category. SGP.22 v3.1 Annex H still lists other, basic,
+ * medium, and contactless, and marks the field deprecated.
+ * Eligibility uses the other fields of `EUICCInfo2`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +31,11 @@ type EUICCInfo2_euiccCategory = INTEGER;
 
 /**
  * @summary EUICCInfo2_euiccCategory_other
+ * @description
+ * 
+ * Category other than basic, medium, or contactless. Deprecated in SGP.22 v3.1
+ * Annex H.
+ * 
  * @constant
  * @type {number}
  */
@@ -35,6 +44,11 @@ const EUICCInfo2_euiccCategory_other: EUICCInfo2_euiccCategory = 0; /* LONG_NAME
 
 /**
  * @summary EUICCInfo2_euiccCategory_other
+ * @description
+ * 
+ * Category other than basic, medium, or contactless. Deprecated in SGP.22 v3.1
+ * Annex H.
+ * 
  * @constant
  * @type {number}
  */
@@ -43,6 +57,10 @@ const other: EUICCInfo2_euiccCategory = EUICCInfo2_euiccCategory_other; /* SHORT
 
 /**
  * @summary EUICCInfo2_euiccCategory_basicEuicc
+ * @description
+ * 
+ * Basic eUICC. Deprecated in SGP.22 v3.1 Annex H.
+ * 
  * @constant
  * @type {number}
  */
@@ -51,6 +69,10 @@ const EUICCInfo2_euiccCategory_basicEuicc: EUICCInfo2_euiccCategory = 1; /* LONG
 
 /**
  * @summary EUICCInfo2_euiccCategory_basicEuicc
+ * @description
+ * 
+ * Basic eUICC. Deprecated in SGP.22 v3.1 Annex H.
+ * 
  * @constant
  * @type {number}
  */
@@ -59,6 +81,10 @@ const basicEuicc: EUICCInfo2_euiccCategory = EUICCInfo2_euiccCategory_basicEuicc
 
 /**
  * @summary EUICCInfo2_euiccCategory_mediumEuicc
+ * @description
+ * 
+ * Medium eUICC. Deprecated in SGP.22 v3.1 Annex H.
+ * 
  * @constant
  * @type {number}
  */
@@ -67,6 +93,10 @@ const EUICCInfo2_euiccCategory_mediumEuicc: EUICCInfo2_euiccCategory = 2; /* LON
 
 /**
  * @summary EUICCInfo2_euiccCategory_mediumEuicc
+ * @description
+ * 
+ * Medium eUICC. Deprecated in SGP.22 v3.1 Annex H.
+ * 
  * @constant
  * @type {number}
  */
@@ -75,6 +105,10 @@ const mediumEuicc: EUICCInfo2_euiccCategory = EUICCInfo2_euiccCategory_mediumEui
 
 /**
  * @summary EUICCInfo2_euiccCategory_contactlessEuicc
+ * @description
+ * 
+ * Contactless eUICC. Deprecated in SGP.22 v3.1 Annex H.
+ * 
  * @constant
  * @type {number}
  */
@@ -83,6 +117,10 @@ const EUICCInfo2_euiccCategory_contactlessEuicc: EUICCInfo2_euiccCategory = 3; /
 
 /**
  * @summary EUICCInfo2_euiccCategory_contactlessEuicc
+ * @description
+ * 
+ * Contactless eUICC. Deprecated in SGP.22 v3.1 Annex H.
+ * 
  * @constant
  * @type {number}
  */

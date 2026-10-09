@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EuiccMemoryResetResponse_resetResult
  * @description
  * 
+ * `ok` (0), `nothingToDelete` (1), `catBusy` (5), or `undefinedError` (127).
+ * SGP.22 v3.1 §5.7.19.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +30,10 @@ type EuiccMemoryResetResponse_resetResult = INTEGER;
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_ok
+ * @description
+ * 
+ * The requested reset completed. SGP.22 v3.1 §5.7.19.
+ * 
  * @constant
  * @type {number}
  */
@@ -35,6 +42,10 @@ const EuiccMemoryResetResponse_resetResult_ok: EuiccMemoryResetResponse_resetRes
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_ok
+ * @description
+ * 
+ * The requested reset completed. SGP.22 v3.1 §5.7.19.
+ * 
  * @constant
  * @type {number}
  */
@@ -43,6 +54,10 @@ const ok: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetR
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_nothingToDelete
+ * @description
+ * 
+ * Nothing matched the requested options. SGP.22 v3.1 §5.7.19.
+ * 
  * @constant
  * @type {number}
  */
@@ -51,6 +66,10 @@ const EuiccMemoryResetResponse_resetResult_nothingToDelete: EuiccMemoryResetResp
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_nothingToDelete
+ * @description
+ * 
+ * Nothing matched the requested options. SGP.22 v3.1 §5.7.19.
+ * 
  * @constant
  * @type {number}
  */
@@ -59,6 +78,10 @@ const nothingToDelete: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetRe
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_catBusy
+ * @description
+ * 
+ * A proactive session prevented the reset. SGP.22 v3.1 §5.7.19.
+ * 
  * @constant
  * @type {number}
  */
@@ -67,6 +90,10 @@ const EuiccMemoryResetResponse_resetResult_catBusy: EuiccMemoryResetResponse_res
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_catBusy
+ * @description
+ * 
+ * A proactive session prevented the reset. SGP.22 v3.1 §5.7.19.
+ * 
  * @constant
  * @type {number}
  */
@@ -75,6 +102,10 @@ const catBusy: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_r
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_undefinedError
+ * @description
+ * 
+ * The reset failed for another reason. SGP.22 v3.1 §5.7.19.
+ * 
  * @constant
  * @type {number}
  */
@@ -83,6 +114,10 @@ const EuiccMemoryResetResponse_resetResult_undefinedError: EuiccMemoryResetRespo
 
 /**
  * @summary EuiccMemoryResetResponse_resetResult_undefinedError
+ * @description
+ * 
+ * The reset failed for another reason. SGP.22 v3.1 §5.7.19.
+ * 
  * @constant
  * @type {number}
  */

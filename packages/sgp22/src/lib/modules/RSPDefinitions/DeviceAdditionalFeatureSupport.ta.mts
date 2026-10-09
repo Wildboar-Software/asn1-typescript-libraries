@@ -13,6 +13,10 @@ import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDef
  * @summary DeviceAdditionalFeatureSupport
  * @description
  * 
+ * Optional device features beyond the radio-release list. SGP.22 v3.1 Annex H
+ * defines `naiSupport` only. This module also carries
+ * `groupOfDeviceManufacturerOid`, which v3.1 does not define.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +33,25 @@ class DeviceAdditionalFeatureSupport {
     constructor (
         /**
          * @summary `naiSupport`.
+         * @description
+         * 
+         * Highest version of Network Access Identifier support, if the Device
+         * has it. Relevant to a Profile that uses an NAI instead of an IMSI.
+         * SGP.22 v3.1 Annex H. The module comment on LoadProfileElements notes
+         * that EFIMSI may be absent in that case.
+         * 
          * @public
          * @readonly
          */
         readonly naiSupport: OPTIONAL<VersionType>,
         /**
          * @summary `groupOfDeviceManufacturerOid`.
+         * @description
+         * 
+         * OID of the device manufacturer, or of a group of manufacturers, as
+         * this module's ASN.1 comment attributes to SGP.29. SGP.22 v3.1 Annex H
+         * does not include this component.
+         * 
          * @public
          * @readonly
          */

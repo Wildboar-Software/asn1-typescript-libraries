@@ -9,6 +9,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SegmentedCrlList
  * @description
  * 
+ * Sequence of PKIX certificate lists. This module uses it for segmented CRLs.
+ * SGP.22 v3.1 §4.6.1 requires a complete base CRL, forbids delta CRLs, and does
+ * not define this type. v3 CRL stapling carries CRLs in the
+ * mutual-authentication exchange instead.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

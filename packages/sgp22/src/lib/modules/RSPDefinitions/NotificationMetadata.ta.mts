@@ -15,6 +15,11 @@ import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.
  * @summary NotificationMetadata
  * @description
  * 
+ * Unsigned description of one pending notification: a sequence number assigned
+ * by the eUICC, exactly one event bit, the recipient FQDN, and the ICCID when
+ * the notification is tied to a Profile. The LPA uses the sequence number to
+ * retrieve and then delete the notification. SGP.22 v3.1 §5.7.9 and §5.7.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +38,45 @@ class NotificationMetadata {
     constructor (
         /**
          * @summary `seqNumber`.
+         * @description
+         * 
+         * eUICC-assigned sequence number. The LPA passes it to
+         * RetrieveNotificationsList and, after a successful send, to
+         * RemoveNotificationFromList. SGP.22 v3.1 §5.7.9.
+         * 
          * @public
          * @readonly
          */
         readonly seqNumber: INTEGER,
         /**
          * @summary `profileManagementOperation`.
+         * @description
+         * 
+         * Exactly one bit set: install, enable, disable, or delete. SGP.22 v3.1
+         * §5.7.9. The ASN.1 comment in this module states that restriction.
+         * 
          * @public
          * @readonly
          */
         readonly profileManagementOperation: NotificationEvent,
         /**
          * @summary `notificationAddress`.
+         * @description
+         * 
+         * FQDN the signed notification is sent to. Copied from the matching
+         * metadata entry. SGP.22 v3.1 §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly notificationAddress: UTF8String,
         /**
          * @summary `iccid`.
+         * @description
+         * 
+         * Profile the notification is about. Omitted when the notification is
+         * not tied to one Profile. SGP.22 v3.1 §5.7.9.
+         * 
          * @public
          * @readonly
          */

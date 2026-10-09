@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GetEuiccInfo2Request
  * @description
  * 
+ * ES10b.GetEUICCInfo request for `EUICCInfo2`. Empty. `EUICCInfo2` is disclosed
+ * to an RSP Server only after that server has been authenticated, inside
+ * `euiccSigned1`. SGP.22 v3.1 §4.3 and §5.7.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult
  * @description
  * 
+ * `ok` (0) or `undefinedError` (127). SGP.22 v3.1 §5.7.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +27,10 @@ type SetDefaultDpAddressResponse_setDefaultDpAddressResult = INTEGER;
 
 /**
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok
+ * @description
+ * 
+ * The default SM-DP+ address was stored. SGP.22 v3.1 §5.7.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -33,6 +39,10 @@ const SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok: SetDefaultDpAddr
 
 /**
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok
+ * @description
+ * 
+ * The default SM-DP+ address was stored. SGP.22 v3.1 §5.7.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -41,6 +51,10 @@ const ok: SetDefaultDpAddressResponse_setDefaultDpAddressResult = SetDefaultDpAd
 
 /**
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError
+ * @description
+ * 
+ * The address was not stored. SGP.22 v3.1 §5.7.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -49,6 +63,10 @@ const SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError: SetD
 
 /**
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError
+ * @description
+ * 
+ * The address was not stored. SGP.22 v3.1 §5.7.4.
+ * 
  * @constant
  * @type {number}
  */

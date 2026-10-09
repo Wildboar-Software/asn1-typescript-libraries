@@ -14,6 +14,12 @@ import { ProfilePolicyAuthorisationRule_pprFlags, _decode_ProfilePolicyAuthorisa
  * @summary ProfilePolicyAuthorisationRule
  * @description
  * 
+ * One row of the Rules Authorisation Table: which PPRs, which Profile Owners
+ * may set them, and whether the End User must consent before installation.
+ * During download the LPA walks these rules and cancels the session with
+ * `pprNotAllowed` when the metadata is not allowed. SGP.22 v3.1 §2.9.2.1 and
+ * §3.1.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +37,33 @@ class ProfilePolicyAuthorisationRule {
     constructor (
         /**
          * @summary `pprIds`.
+         * @description
+         * 
+         * Which PPRs this rule authorises. One or more of PPR1 and PPR2.
+         * `pprUpdateControl` is not a PPR. SGP.22 v3.1 §2.9.2.1.
+         * 
          * @public
          * @readonly
          */
         readonly pprIds: PprIds,
         /**
          * @summary `allowedOperators`.
+         * @description
+         * 
+         * Profile Owners allowed to use those PPRs. Compared with
+         * `profileOwner`. Wildcards are defined in SGP.22 v3.1 §2.9.2.1.
+         * 
          * @public
          * @readonly
          */
         readonly allowedOperators: OperatorId[],
         /**
          * @summary `pprFlags`.
+         * @description
+         * 
+         * `consentRequired` forces the LPA to ask the End User before
+         * installing a Profile that uses these PPRs. SGP.22 v3.1 §2.9.2.1.
+         * 
          * @public
          * @readonly
          */

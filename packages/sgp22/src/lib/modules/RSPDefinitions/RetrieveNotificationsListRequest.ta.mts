@@ -12,6 +12,10 @@ import { RetrieveNotificationsListRequest_searchCriteria, _decode_RetrieveNotifi
  * @summary RetrieveNotificationsListRequest
  * @description
  * 
+ * ES10b.RetrieveNotificationsList request. With no criteria, the eUICC returns
+ * pending notifications within the command size limit. Otherwise it filters by
+ * sequence number or by event. SGP.22 v3.1 §5.7.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +34,11 @@ class RetrieveNotificationsListRequest {
     constructor (
         /**
          * @summary `searchCriteria`.
+         * @description
+         * 
+         * One sequence number, or an event filter. Omit to take pending
+         * notifications up to the command size. SGP.22 v3.1 §5.7.10.
+         * 
          * @public
          * @readonly
          */

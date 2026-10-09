@@ -12,6 +12,10 @@ import { ListNotificationResponse_listNotificationsResultError, _decode_ListNoti
  * @summary ListNotificationResponse
  * @description
  * 
+ * ES10b.ListNotification response: metadata of pending notifications, or
+ * `undefinedError`. The metadata is not the signed notification body; use
+ * ES10b.RetrieveNotificationsList for that. SGP.22 v3.1 §5.7.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

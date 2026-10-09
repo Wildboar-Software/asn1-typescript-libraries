@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DisableProfileResponse_disableResult
  * @description
  * 
+ * Result code of ES10c.DisableProfile. There is no value 4 in this enumeration.
+ * SGP.22 v3.1 §5.7.17.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,11 @@ type DisableProfileResponse_disableResult = INTEGER;
 
 /**
  * @summary DisableProfileResponse_disableResult_ok
+ * @description
+ * 
+ * The disable was accepted. If `refreshFlag` was true, it completes only after
+ * REFRESH. SGP.22 v3.1 §5.7.17.
+ * 
  * @constant
  * @type {number}
  */
@@ -37,6 +45,11 @@ const DisableProfileResponse_disableResult_ok: DisableProfileResponse_disableRes
 
 /**
  * @summary DisableProfileResponse_disableResult_ok
+ * @description
+ * 
+ * The disable was accepted. If `refreshFlag` was true, it completes only after
+ * REFRESH. SGP.22 v3.1 §5.7.17.
+ * 
  * @constant
  * @type {number}
  */
@@ -45,6 +58,10 @@ const ok: DisableProfileResponse_disableResult = DisableProfileResponse_disableR
 
 /**
  * @summary DisableProfileResponse_disableResult_iccidOrAidNotFound
+ * @description
+ * 
+ * No Profile has that ICCID or ISD-P AID. SGP.22 v3.1 §5.7.17.
+ * 
  * @constant
  * @type {number}
  */
@@ -53,6 +70,10 @@ const DisableProfileResponse_disableResult_iccidOrAidNotFound: DisableProfileRes
 
 /**
  * @summary DisableProfileResponse_disableResult_iccidOrAidNotFound
+ * @description
+ * 
+ * No Profile has that ICCID or ISD-P AID. SGP.22 v3.1 §5.7.17.
+ * 
  * @constant
  * @type {number}
  */
@@ -61,6 +82,10 @@ const iccidOrAidNotFound: DisableProfileResponse_disableResult = DisableProfileR
 
 /**
  * @summary DisableProfileResponse_disableResult_profileNotInEnabledState
+ * @description
+ * 
+ * The Profile is not enabled. SGP.22 v3.1 §5.7.17.
+ * 
  * @constant
  * @type {number}
  */
@@ -69,6 +94,10 @@ const DisableProfileResponse_disableResult_profileNotInEnabledState: DisableProf
 
 /**
  * @summary DisableProfileResponse_disableResult_profileNotInEnabledState
+ * @description
+ * 
+ * The Profile is not enabled. SGP.22 v3.1 §5.7.17.
+ * 
  * @constant
  * @type {number}
  */
@@ -77,6 +106,10 @@ const profileNotInEnabledState: DisableProfileResponse_disableResult = DisablePr
 
 /**
  * @summary DisableProfileResponse_disableResult_disallowedByPolicy
+ * @description
+ * 
+ * PPR1 forbids disabling this Profile. SGP.22 v3.1 §5.7.17.
+ * 
  * @constant
  * @type {number}
  */
@@ -85,6 +118,10 @@ const DisableProfileResponse_disableResult_disallowedByPolicy: DisableProfileRes
 
 /**
  * @summary DisableProfileResponse_disableResult_disallowedByPolicy
+ * @description
+ * 
+ * PPR1 forbids disabling this Profile. SGP.22 v3.1 §5.7.17.
+ * 
  * @constant
  * @type {number}
  */
@@ -93,6 +130,10 @@ const disallowedByPolicy: DisableProfileResponse_disableResult = DisableProfileR
 
 /**
  * @summary DisableProfileResponse_disableResult_catBusy
+ * @description
+ * 
+ * A proactive session blocked the disable. SGP.22 v3.1 §5.7.17.
+ * 
  * @constant
  * @type {number}
  */
@@ -101,6 +142,10 @@ const DisableProfileResponse_disableResult_catBusy: DisableProfileResponse_disab
 
 /**
  * @summary DisableProfileResponse_disableResult_catBusy
+ * @description
+ * 
+ * A proactive session blocked the disable. SGP.22 v3.1 §5.7.17.
+ * 
  * @constant
  * @type {number}
  */
@@ -109,6 +154,10 @@ const catBusy: DisableProfileResponse_disableResult = DisableProfileResponse_dis
 
 /**
  * @summary DisableProfileResponse_disableResult_undefinedError
+ * @description
+ * 
+ * Disable failed for another reason. SGP.22 v3.1 §5.7.17.
+ * 
  * @constant
  * @type {number}
  */
@@ -117,6 +166,10 @@ const DisableProfileResponse_disableResult_undefinedError: DisableProfileRespons
 
 /**
  * @summary DisableProfileResponse_disableResult_undefinedError
+ * @description
+ * 
+ * Disable failed for another reason. SGP.22 v3.1 §5.7.17.
+ * 
  * @constant
  * @type {number}
  */

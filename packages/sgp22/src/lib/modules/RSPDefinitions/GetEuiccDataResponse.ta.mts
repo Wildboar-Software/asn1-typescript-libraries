@@ -12,6 +12,9 @@ import { Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Oct
  * @summary GetEuiccDataResponse
  * @description
  * 
+ * The EID, sixteen octets, tag `'5A'`. The text form used in the Device
+ * Information Code is 32 decimal digits. SGP.22 v3.1 §5.7.20 and §4.3.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +30,10 @@ class GetEuiccDataResponse {
     constructor (
         /**
          * @summary `eidValue`.
+         * @description
+         * 
+         * EID, sixteen octets, tag `'5A'`. SGP.22 v3.1 §4.3.1 and §5.7.20.
+         * 
          * @public
          * @readonly
          */

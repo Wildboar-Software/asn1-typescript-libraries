@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary VersionType
  * @description
  * 
+ * Three-octet specification or release number: major, minor, revision, each as
+ * a binary value. When a revision is not used, the third octet is `00`. The
+ * comment in SGP.22 v3.1 Annex H gives `'02 00 0C'` for v2.0.12. Radio
+ * capabilities in `DeviceCapabilities` usually encode a 3GPP release N as `{N,
+ * 0, 0}` (§4.2).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

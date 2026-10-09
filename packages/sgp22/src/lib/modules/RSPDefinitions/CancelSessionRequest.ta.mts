@@ -13,6 +13,13 @@ import { CancelSessionReason, _decode_CancelSessionReason, _encode_CancelSession
  * @summary CancelSessionRequest
  * @description
  * 
+ * ES10b.CancelSession. The LPA asks the eUICC to drop the ongoing RSP session
+ * and to sign the reason, which the LPA then shows to the RSP Server. If the
+ * TransactionID is unknown and the only command so far was GetEUICCChallenge,
+ * the eUICC still discards that session and returns `invalidTransactionId`. For
+ * `postponed` or `timeout` the eUICC may keep the unused one-time key pair,
+ * with the SM-DP+ identity, for a retry. SGP.22 v3.1 §5.7.14.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +36,23 @@ class CancelSessionRequest {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Session to cancel. Unknown id yields `invalidTransactionId`, and a
+         * session that never left GetEUICCChallenge is still discarded. SGP.22
+         * v3.1 §5.7.14.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `reason`.
+         * @description
+         * 
+         * Why the LPA is cancelling. The eUICC signs this reason. SGP.22 v3.1
+         * §5.7.14.
+         * 
          * @public
          * @readonly
          */

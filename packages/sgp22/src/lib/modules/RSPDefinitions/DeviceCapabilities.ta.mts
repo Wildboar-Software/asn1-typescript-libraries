@@ -15,6 +15,11 @@ import { DeviceAdditionalFeatureSupport, _decode_DeviceAdditionalFeatureSupport,
  * @summary DeviceCapabilities
  * @description
  * 
+ * Highest fully supported release of each access technology the Device
+ * implements, plus contactless, CRL, LPA, CAT, form factor, and extra features.
+ * Absent means not supported. The Device sets every capability it supports.
+ * SGP.22 v3.1 §4.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,90 +50,169 @@ class DeviceCapabilities {
     constructor (
         /**
          * @summary `gsmSupportedRelease`.
+         * @description
+         * 
+         * Highest 3GPP release N of GSM/GERAN, coded `{N, 0, 0}`. Omit if GERAN
+         * is not supported. SGP.22 v3.1 §4.2.
+         * 
          * @public
          * @readonly
          */
         readonly gsmSupportedRelease: OPTIONAL<VersionType>,
         /**
          * @summary `utranSupportedRelease`.
+         * @description
+         * 
+         * Highest 3GPP release N of UMTS/UTRAN, coded `{N, 0, 0}`. Omit if
+         * UTRAN is not supported. SGP.22 v3.1 §4.2.
+         * 
          * @public
          * @readonly
          */
         readonly utranSupportedRelease: OPTIONAL<VersionType>,
         /**
          * @summary `cdma2000onexSupportedRelease`.
+         * @description
+         * 
+         * Present only if cdma2000 1X is supported, and then coded `{1, 0, 0}`.
+         * SGP.22 v3.1 §4.2.
+         * 
          * @public
          * @readonly
          */
         readonly cdma2000onexSupportedRelease: OPTIONAL<VersionType>,
         /**
          * @summary `cdma2000hrpdSupportedRelease`.
+         * @description
+         * 
+         * cdma2000 HRPD revision: Rev 0, A, or B coded as `{1, 0, 0}`, `{2, 0,
+         * 0}`, or `{3, 0, 0}`. Omit if HRPD is not supported. SGP.22 v3.1 §4.2.
+         * 
          * @public
          * @readonly
          */
         readonly cdma2000hrpdSupportedRelease: OPTIONAL<VersionType>,
         /**
          * @summary `cdma2000ehrpdSupportedRelease`.
+         * @description
+         * 
+         * Highest 3GPP release N of cdma2000 eHRPD, coded `{N, 0, 0}`. Omit if
+         * eHRPD is not supported. SGP.22 v3.1 §4.2.
+         * 
          * @public
          * @readonly
          */
         readonly cdma2000ehrpdSupportedRelease: OPTIONAL<VersionType>,
         /**
          * @summary `eutranEpcSupportedRelease`.
+         * @description
+         * 
+         * Highest 3GPP release N of LTE/E-UTRAN on the Evolved Packet Core,
+         * coded `{N, 0, 0}`. Omit if LTE is not supported. SGP.22 v3.1 §4.2.
+         * 
          * @public
          * @readonly
          */
         readonly eutranEpcSupportedRelease: OPTIONAL<VersionType>,
         /**
          * @summary `contactlessSupportedRelease`.
+         * @description
+         * 
+         * Highest version and revision of GSMA TS.26 for NFC, coded `{version,
+         * revision, 0}`. Covers SWP, HCI, and the associated APIs. Omit if NFC
+         * is not supported. SGP.22 v3.1 §4.2.
+         * 
          * @public
          * @readonly
          */
         readonly contactlessSupportedRelease: OPTIONAL<VersionType>,
         /**
          * @summary `rspCrlSupportedVersion`.
+         * @description
+         * 
+         * Highest SGP.22 version for which the Device supports loading a CRL as
+         * that function was defined in v2 §5.7.12. Omit if it does not. v3.1 no
+         * longer supports ES10b.LoadCRL. SGP.22 v3.1 §4.2.
+         * 
          * @public
          * @readonly
          */
         readonly rspCrlSupportedVersion: OPTIONAL<VersionType>,
         /**
          * @summary `nrEpcSupportedRelease`.
+         * @description
+         * 
+         * Highest 3GPP release N of NR with a 4G core (EPC), coded `{N, 0, 0}`.
+         * Sent only when the eUICC supports extensible DeviceInfo. SGP.22 v3.1
+         * §4.2.
+         * 
          * @public
          * @readonly
          */
         readonly nrEpcSupportedRelease: OPTIONAL<VersionType>,
         /**
          * @summary `nr5gcSupportedRelease`.
+         * @description
+         * 
+         * Highest 3GPP release N of NR with a 5G core, coded `{N, 0, 0}`. Sent
+         * only when the eUICC supports extensible DeviceInfo. SGP.22 v3.1 §4.2.
+         * 
          * @public
          * @readonly
          */
         readonly nr5gcSupportedRelease: OPTIONAL<VersionType>,
         /**
          * @summary `eutran5gcSupportedRelease`.
+         * @description
+         * 
+         * Highest 3GPP release N of E-UTRAN with a 5G core, coded `{N, 0, 0}`.
+         * Sent only when the eUICC supports extensible DeviceInfo. SGP.22 v3.1
+         * §4.2.
+         * 
          * @public
          * @readonly
          */
         readonly eutran5gcSupportedRelease: OPTIONAL<VersionType>,
         /**
          * @summary `lpaSvn`.
+         * @description
+         * 
+         * LPA specification version, for information. SGP.22 v3.1 §4.2 includes
+         * it when DeviceInfo is extensible. This module's ASN.1 comment says it
+         * is not defined by the version of the module.
+         * 
          * @public
          * @readonly
          */
         readonly lpaSvn: OPTIONAL<VersionType>,
         /**
          * @summary `catSupportedClasses`.
+         * @description
+         * 
+         * Card Application Toolkit letter classes from ETSI TS 102 223. SGP.22
+         * v3.1 Annex H. See `CatSupportedClasses`.
+         * 
          * @public
          * @readonly
          */
         readonly catSupportedClasses: OPTIONAL<CatSupportedClasses>,
         /**
          * @summary `euiccFormFactorType`.
+         * @description
+         * 
+         * Removable (0) or non-removable (1) eUICC, as SGP.22 v3.1 Annex H
+         * defines `EuiccFormFactorType`.
+         * 
          * @public
          * @readonly
          */
         readonly euiccFormFactorType: OPTIONAL<EuiccFormFactorType>,
         /**
          * @summary `deviceAdditionalFeatureSupport`.
+         * @description
+         * 
+         * Further device features. SGP.22 v3.1 §4.2 defines NAI support here.
+         * 
          * @public
          * @readonly
          */

@@ -14,6 +14,16 @@ import { AuthenticateServerResponse, _decode_AuthenticateServerResponse, _encode
  * @summary AuthenticateClientRequest
  * @description
  * 
+ * ES9+.AuthenticateClient or ES11.AuthenticateClient. Carries the TransactionID
+ * and the ES10b.AuthenticateServer response. The SM-DP+ verifies the eUICC
+ * signature and certificate chain, applies the MatchingID to the pending order,
+ * checks eligibility and memory, and either returns Profile Metadata plus
+ * `smdpSigned2` or an error. The SM-DS verifies the same signature and returns
+ * event records instead. SGP.22 v3.1 §5.6.3 and §5.8.2.
+ *
+ * `useMatchingIdForAcr` is in this module with a comment pointing at §5.6.3.
+ * SGP.22 v3.1 §5.6.3 does not define that component.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +41,35 @@ class AuthenticateClientRequest {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Session from InitiateAuthentication. Unknown id is
+         * `invalidTransactionId`. SGP.22 v3.1 §5.6.3.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `authenticateServerResponse`.
+         * @description
+         * 
+         * The ES10b.AuthenticateServer response, success or error. The server
+         * verifies `euiccSignature1` and the certificate chain. SGP.22 v3.1
+         * §5.6.3.
+         * 
          * @public
          * @readonly
          */
         readonly authenticateServerResponse: AuthenticateServerResponse,
         /**
          * @summary `useMatchingIdForAcr`.
+         * @description
+         * 
+         * Present, as a NULL, when the MatchingID is to be used for Activation
+         * Code retrieval. This module's ASN.1 comment points at §5.6.3. SGP.22
+         * v3.1 §5.6.3 does not define this component.
+         * 
          * @public
          * @readonly
          */

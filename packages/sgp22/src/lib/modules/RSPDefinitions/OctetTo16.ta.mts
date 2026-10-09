@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OctetTo16
  * @description
  * 
+ * One to sixteen octets. Used for an ISD-P AID and for the Control Reference
+ * Template host identifier. SGP.22 v3.1 Annex H.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

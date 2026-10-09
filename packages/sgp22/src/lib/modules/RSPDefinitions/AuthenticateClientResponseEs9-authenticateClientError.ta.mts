@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AuthenticateClientResponseEs9_authenticateClientError
  * @description
  * 
+ * Why the SM-DP+ rejected ES9+.AuthenticateClient. Values 12-17 are reserved in
+ * this module. SGP.22 v3.1 §5.6.3 defines further codes in that range and
+ * beyond (enterprise, device change, RPM) that this module does not declare.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +40,10 @@ type AuthenticateClientResponseEs9_authenticateClientError = INTEGER;
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_eumCertificateInvalid
+ * @description
+ * 
+ * CERT.EUM.SIG did not verify or is not acceptable. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -44,6 +52,10 @@ const AuthenticateClientResponseEs9_authenticateClientError_eumCertificateInvali
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_eumCertificateInvalid
+ * @description
+ * 
+ * CERT.EUM.SIG did not verify or is not acceptable. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -52,6 +64,10 @@ const eumCertificateInvalid: AuthenticateClientResponseEs9_authenticateClientErr
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_eumCertificateExpired
+ * @description
+ * 
+ * CERT.EUM.SIG is outside its validity. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -60,6 +76,10 @@ const AuthenticateClientResponseEs9_authenticateClientError_eumCertificateExpire
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_eumCertificateExpired
+ * @description
+ * 
+ * CERT.EUM.SIG is outside its validity. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -68,6 +88,10 @@ const eumCertificateExpired: AuthenticateClientResponseEs9_authenticateClientErr
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateInvalid
+ * @description
+ * 
+ * CERT.EUICC.SIG did not verify or is not acceptable. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -76,6 +100,10 @@ const AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateInva
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateInvalid
+ * @description
+ * 
+ * CERT.EUICC.SIG did not verify or is not acceptable. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -84,6 +112,10 @@ const euiccCertificateInvalid: AuthenticateClientResponseEs9_authenticateClientE
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateExpired
+ * @description
+ * 
+ * CERT.EUICC.SIG is outside its validity. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -92,6 +124,10 @@ const AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateExpi
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_euiccCertificateExpired
+ * @description
+ * 
+ * CERT.EUICC.SIG is outside its validity. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -100,6 +136,10 @@ const euiccCertificateExpired: AuthenticateClientResponseEs9_authenticateClientE
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_euiccSignatureInvalid
+ * @description
+ * 
+ * `euiccSignature1` did not verify under PK.EUICC.SIG. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -108,6 +148,10 @@ const AuthenticateClientResponseEs9_authenticateClientError_euiccSignatureInvali
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_euiccSignatureInvalid
+ * @description
+ * 
+ * `euiccSignature1` did not verify under PK.EUICC.SIG. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -116,6 +160,11 @@ const euiccSignatureInvalid: AuthenticateClientResponseEs9_authenticateClientErr
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_matchingIdRefused
+ * @description
+ * 
+ * The MatchingID is missing, unknown, or not usable for this eUICC. SGP.22 v3.1
+ * §4.1.1 and §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -124,6 +173,11 @@ const AuthenticateClientResponseEs9_authenticateClientError_matchingIdRefused: A
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_matchingIdRefused
+ * @description
+ * 
+ * The MatchingID is missing, unknown, or not usable for this eUICC. SGP.22 v3.1
+ * §4.1.1 and §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -132,6 +186,11 @@ const matchingIdRefused: AuthenticateClientResponseEs9_authenticateClientError =
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_eidMismatch
+ * @description
+ * 
+ * The EID in the eUICC certificate is not the one the order was bound to.
+ * SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -140,6 +199,11 @@ const AuthenticateClientResponseEs9_authenticateClientError_eidMismatch: Authent
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_eidMismatch
+ * @description
+ * 
+ * The EID in the eUICC certificate is not the one the order was bound to.
+ * SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -148,6 +212,11 @@ const eidMismatch: AuthenticateClientResponseEs9_authenticateClientError = Authe
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_noEligibleProfile
+ * @description
+ * 
+ * No pending Profile matches this device, eUICC, and order. SGP.22 v3.1 §5.6.3
+ * and Annex F.
+ * 
  * @constant
  * @type {number}
  */
@@ -156,6 +225,11 @@ const AuthenticateClientResponseEs9_authenticateClientError_noEligibleProfile: A
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_noEligibleProfile
+ * @description
+ * 
+ * No pending Profile matches this device, eUICC, and order. SGP.22 v3.1 §5.6.3
+ * and Annex F.
+ * 
  * @constant
  * @type {number}
  */
@@ -164,6 +238,11 @@ const noEligibleProfile: AuthenticateClientResponseEs9_authenticateClientError =
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_ciPKUnknown
+ * @description
+ * 
+ * The eUICC chain does not terminate at a CI public key the SM-DP+ knows.
+ * SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -172,6 +251,11 @@ const AuthenticateClientResponseEs9_authenticateClientError_ciPKUnknown: Authent
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_ciPKUnknown
+ * @description
+ * 
+ * The eUICC chain does not terminate at a CI public key the SM-DP+ knows.
+ * SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -180,6 +264,10 @@ const ciPKUnknown: AuthenticateClientResponseEs9_authenticateClientError = Authe
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_invalidTransactionId
+ * @description
+ * 
+ * The TransactionID is not an open SM-DP+ session. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -188,6 +276,10 @@ const AuthenticateClientResponseEs9_authenticateClientError_invalidTransactionId
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_invalidTransactionId
+ * @description
+ * 
+ * The TransactionID is not an open SM-DP+ session. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -196,6 +288,11 @@ const invalidTransactionId: AuthenticateClientResponseEs9_authenticateClientErro
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_insufficientMemory
+ * @description
+ * 
+ * EUICCInfo2 says the eUICC does not have enough free memory for the Profile.
+ * SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -204,6 +301,11 @@ const AuthenticateClientResponseEs9_authenticateClientError_insufficientMemory: 
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_insufficientMemory
+ * @description
+ * 
+ * EUICCInfo2 says the eUICC does not have enough free memory for the Profile.
+ * SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -212,6 +314,11 @@ const insufficientMemory: AuthenticateClientResponseEs9_authenticateClientError 
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_downloadOrderExpired
+ * @description
+ * 
+ * The download order is no longer valid. SGP.22 v3.1 §5.6.3. Values 12-17 are
+ * reserved in this module.
+ * 
  * @constant
  * @type {number}
  */
@@ -220,6 +327,11 @@ const AuthenticateClientResponseEs9_authenticateClientError_downloadOrderExpired
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_downloadOrderExpired
+ * @description
+ * 
+ * The download order is no longer valid. SGP.22 v3.1 §5.6.3. Values 12-17 are
+ * reserved in this module.
+ * 
  * @constant
  * @type {number}
  */
@@ -228,6 +340,10 @@ const downloadOrderExpired: AuthenticateClientResponseEs9_authenticateClientErro
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_undefinedError
+ * @description
+ * 
+ * AuthenticateClient failed for another reason. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -236,6 +352,10 @@ const AuthenticateClientResponseEs9_authenticateClientError_undefinedError: Auth
 
 /**
  * @summary AuthenticateClientResponseEs9_authenticateClientError_undefinedError
+ * @description
+ * 
+ * AuthenticateClient failed for another reason. SGP.22 v3.1 §5.6.3.
+ * 
  * @constant
  * @type {number}
  */

@@ -10,6 +10,12 @@ import { id_rspRole } from "../RSPDefinitions/id-rspRole.va.mjs";
  * @summary id_rspRole_euicc
  * @description
  * 
+ * Variant O Certificate Policies value for CERT.EUICC.SIG. The arc `{id-rspRole
+ * 1}` is what SGP.22 v3.1 Annex H calls `id-rspRole-euicc-v2`. v3.1 uses that
+ * OID for a certificate in a Variant O chain, and a different arc
+ * (`{id-rspRole-eumSubCa 0}`) for `id-rspRole-euicc` in Variants Ov3, A, B, and
+ * C. §4.5.2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

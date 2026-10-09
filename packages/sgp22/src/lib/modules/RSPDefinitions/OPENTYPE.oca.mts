@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OPENTYPE
  * @description
  * 
+ * ASN.1 class pairing an object identifier with an open type. A
+ * `VendorSpecificExtension` entry uses `&typeId` as the vendor OID and `&Type`
+ * as that vendor's data. SGP.22 v3.1 Annex H.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

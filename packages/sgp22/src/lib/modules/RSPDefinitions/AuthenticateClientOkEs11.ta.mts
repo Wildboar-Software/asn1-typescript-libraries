@@ -13,6 +13,11 @@ import { EventEntries, _decode_EventEntries, _encode_EventEntries } from "../RSP
  * @summary AuthenticateClientOkEs11
  * @description
  * 
+ * Events waiting for this eUICC. Each entry is an event identifier and the RSP
+ * Server address (typically an SM-DP+ FQDN) the LPA should contact. The LPA
+ * then runs ES9+ using that address and the event id as the MatchingID. SGP.22
+ * v3.1 §5.8.2 and §3.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +34,21 @@ class AuthenticateClientOkEs11 {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * ES11 session id. SGP.22 v3.1 §5.8.2.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `eventEntries`.
+         * @description
+         * 
+         * Zero or more events. Each one names an RSP Server the LPA should
+         * call. SGP.22 v3.1 §5.8.2 and §3.6.2.
+         * 
          * @public
          * @readonly
          */

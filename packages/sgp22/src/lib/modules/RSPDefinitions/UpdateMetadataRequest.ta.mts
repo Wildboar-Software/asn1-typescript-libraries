@@ -19,6 +19,15 @@ import { VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_Vendo
  * @summary UpdateMetadataRequest
  * @description
  * 
+ * ES6.UpdateMetadata command data, sent by the Operator to the ISD-P to change
+ * Profile Metadata already stored on the eUICC. Only the present fields are
+ * updated. This version of the specification only unsets Profile Policy Rules:
+ * `pprUpdateControl` must be 0 and the stored bits are ANDed with the request.
+ * Icon type and icon are added or removed together. SGP.22 v3.1 §5.4.1. v3.1
+ * adds further metadata (RPM, enterprise, device change, a tag list of objects
+ * to delete) that this module does not include. `reserved103` is reserved for
+ * SGP.32 and is not in v3.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,42 +49,79 @@ class UpdateMetadataRequest {
     constructor (
         /**
          * @summary `serviceProviderName`.
+         * @description
+         * 
+         * Service provider name shown by the LPA, at most 32 UTF-8 characters.
+         * The SM-DP+ does not send an empty string. SGP.22 v3.1 §5.4.1 and
+         * §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly serviceProviderName: OPTIONAL<UTF8String>,
         /**
          * @summary `profileName`.
+         * @description
+         * 
+         * Profile name (the short description in SGP.21), at most 64 UTF-8
+         * characters. Not sent empty. SGP.22 v3.1 §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly profileName: OPTIONAL<UTF8String>,
         /**
          * @summary `iconType`.
+         * @description
+         * 
+         * Present only together with `icon`. JPG or PNG. SGP.22 v3.1 §5.4.1.
+         * 
          * @public
          * @readonly
          */
         readonly iconType: OPTIONAL<IconType>,
         /**
          * @summary `icon`.
+         * @description
+         * 
+         * 64 by 64 pixel icon, at most 1024 octets. Present only when
+         * `iconType` is present. SGP.22 v3.1 §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly icon: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `profilePolicyRules`.
+         * @description
+         * 
+         * Replacement PPR bits. `pprUpdateControl` must be 0. Each stored PPR
+         * bit is ANDed with the corresponding bit here, so rules can be cleared
+         * and not set. A 1 in `pprUpdateControl` is `pprUpdateInvalidSetting`.
+         * SGP.22 v3.1 §5.4.1.
+         * 
          * @public
          * @readonly
          */
         readonly profilePolicyRules: OPTIONAL<PprIds>,
         /**
          * @summary `serviceSpecificDataStoredInEuicc`.
+         * @description
+         * 
+         * Vendor data the eUICC stores. Included only when the eUICC reported
+         * `serviceSpecificDataSupport`. SGP.22 v3.1 §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly serviceSpecificDataStoredInEuicc: OPTIONAL<VendorSpecificExtension>,
         /**
          * @summary `reserved103`.
+         * @description
+         * 
+         * Boolean reserved for SGP.32, tag `'9F67'`. SGP.22 v3.1 Annex H does
+         * not define this component.
+         * 
          * @public
          * @readonly
          */

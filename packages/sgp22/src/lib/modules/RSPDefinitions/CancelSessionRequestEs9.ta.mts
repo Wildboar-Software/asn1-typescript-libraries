@@ -13,6 +13,10 @@ import { CancelSessionResponse, _decode_CancelSessionResponse, _encode_CancelSes
  * @summary CancelSessionRequestEs9
  * @description
  * 
+ * ES9+.CancelSession. The LPA sends the TransactionID and the signed
+ * ES10b.CancelSession response. The SM-DP+ records the reason and ends the
+ * session. SGP.22 v3.1 §5.6.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +33,21 @@ class CancelSessionRequestEs9 {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Session the signed cancellation belongs to. SGP.22 v3.1 §5.6.5.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `cancelSessionResponse`.
+         * @description
+         * 
+         * The ES10b.CancelSession response, including the eUICC signature.
+         * SGP.22 v3.1 §5.6.5.
+         * 
          * @public
          * @readonly
          */

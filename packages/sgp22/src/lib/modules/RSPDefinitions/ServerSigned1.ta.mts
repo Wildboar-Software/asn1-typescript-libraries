@@ -14,6 +14,11 @@ import { Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Oct
  * @summary ServerSigned1
  * @description
  * 
+ * Data signed by the RSP Server (SK of CERT.DPauth.SIG or CERT.DSauth.SIG) and
+ * checked by the eUICC. Binds the server's TransactionID, the eUICC challenge,
+ * the server address the LPA contacted, and a server challenge that the eUICC
+ * must echo. SGP.22 v3.1 §5.7.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +37,44 @@ class ServerSigned1 {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Session id the RSP Server just allocated. SGP.22 v3.1 §5.6.1.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `euiccChallenge`.
+         * @description
+         * 
+         * Must equal the challenge from ES10b.GetEUICCChallenge. Otherwise the
+         * eUICC returns `euiccChallengeMismatch`. SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */
         readonly euiccChallenge: Octet16,
         /**
          * @summary `serverAddress`.
+         * @description
+         * 
+         * FQDN of the RSP Server the LPA contacted. The server itself rejects
+         * InitiateAuthentication if this is not its own address. SGP.22 v3.1
+         * §5.6.1.
+         * 
          * @public
          * @readonly
          */
         readonly serverAddress: UTF8String,
         /**
          * @summary `serverChallenge`.
+         * @description
+         * 
+         * Server nonce that `euiccSigned1` must echo, so the eUICC signature is
+         * bound to this server challenge. SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */

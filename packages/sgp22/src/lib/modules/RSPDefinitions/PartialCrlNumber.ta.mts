@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PartialCrlNumber
  * @description
  * 
+ * Integer value of the v2 partial-CRL segment-number extension. SGP.22 v3.1
+ * does not define this type.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

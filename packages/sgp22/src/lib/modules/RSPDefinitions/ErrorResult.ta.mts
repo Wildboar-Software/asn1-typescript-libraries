@@ -14,6 +14,13 @@ import { _decode_ErrorReason, _encode_ErrorReason, ErrorReason } from "../RSPDef
  * @summary ErrorResult
  * @description
  * 
+ * Failed ES8+ command. `bppCommandId` selects the command, `errorReason` the
+ * cause. Authorised combinations are in SGP.22 v3.1 §2.5.6.1 Table 4a.
+ * `simaResponse`, when present, is the Profile Package Interpreter response;
+ * v3.1 calls it `ppiResponse`. Insufficient memory and interruption are
+ * temporary (the SM-DP+ may retry until the download retry limit). Every other
+ * reason is permanent.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +38,33 @@ class ErrorResult {
     constructor (
         /**
          * @summary `bppCommandId`.
+         * @description
+         * 
+         * ES8+ command that failed. SGP.22 v3.1 §2.5.6.1 Table 4a.
+         * 
          * @public
          * @readonly
          */
         readonly bppCommandId: BppCommandId,
         /**
          * @summary `errorReason`.
+         * @description
+         * 
+         * Cause. Only the combinations in SGP.22 v3.1 §2.5.6.1 Table 4a are
+         * authorised. Memory and interruption are temporary; other reasons are
+         * permanent.
+         * 
          * @public
          * @readonly
          */
         readonly errorReason: ErrorReason,
         /**
          * @summary `simaResponse`.
+         * @description
+         * 
+         * Profile Package Interpreter response, present when a Profile Element
+         * produced the error. SGP.22 v3.1 calls this `ppiResponse`.
+         * 
          * @public
          * @readonly
          */

@@ -13,6 +13,12 @@ import { PrepareDownloadResponse, _decode_PrepareDownloadResponse, _encode_Prepa
  * @summary GetBoundProfilePackageRequest
  * @description
  * 
+ * ES9+.GetBoundProfilePackage. The LPA submits the PrepareDownload response.
+ * The SM-DP+ checks the session, verifies `euiccSignature2` over `euiccSigned2`
+ * and `smdpSignature2` with PK.EUICC.SIG, and checks the Confirmation Code hash
+ * if the order requires one. It then binds or reuses a Bound Profile Package
+ * for this eUICC's one-time key. SGP.22 v3.1 §5.6.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +35,22 @@ class GetBoundProfilePackageRequest {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Must identify an ongoing session. Otherwise the SM-DP+ reports an
+         * unknown TransactionID. SGP.22 v3.1 §5.6.2.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `prepareDownloadResponse`.
+         * @description
+         * 
+         * The ES10b.PrepareDownload response. The SM-DP+ verifies
+         * `euiccSignature2` and the Confirmation Code hash. SGP.22 v3.1 §5.6.2.
+         * 
          * @public
          * @readonly
          */

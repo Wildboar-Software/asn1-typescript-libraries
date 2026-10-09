@@ -10,6 +10,10 @@ import { id_rsp } from "../RSPDefinitions/id-rsp.va.mjs";
  * @summary id_rsp_metadata
  * @description
  * 
+ * Metadata arc `{id-rsp metadata(3)}`. Parent of service-specific metadata
+ * OIDs. SGP.22 v3.1 Annex H defines `id-rsp` but the metadata children in this
+ * module are not in that annex.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

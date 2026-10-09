@@ -10,6 +10,10 @@ import { id_rspRole } from "../RSPDefinitions/id-rspRole.va.mjs";
  * @summary id_rspRole_ds_tls
  * @description
  * 
+ * Variant O Certificate Policies value for CERT.DS.TLS, the SM-DS certificate
+ * used to establish TLS. The arc `{id-rspRole 6}` is what SGP.22 v3.1 Annex H
+ * calls `id-rspRole-ds-tls-v2`. §4.5.2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

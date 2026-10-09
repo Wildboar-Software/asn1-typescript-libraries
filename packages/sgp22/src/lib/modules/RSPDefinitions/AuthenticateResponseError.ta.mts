@@ -13,6 +13,9 @@ import { AuthenticateErrorCode, _decode_AuthenticateErrorCode, _encode_Authentic
  * @summary AuthenticateResponseError
  * @description
  * 
+ * ES10b.AuthenticateServer failed. The TransactionID is returned with an
+ * `AuthenticateErrorCode`. SGP.22 v3.1 §5.7.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +32,21 @@ class AuthenticateResponseError {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Session the error belongs to. SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `authenticateErrorCode`.
+         * @description
+         * 
+         * Certificate, signature, curve, session, OID, challenge, or CI-key
+         * failure. SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */

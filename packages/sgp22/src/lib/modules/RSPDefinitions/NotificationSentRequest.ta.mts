@@ -13,6 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NotificationSentRequest
  * @description
  * 
+ * ES10b.RemoveNotificationFromList request. After the LPA has successfully
+ * delivered the notification, it deletes the eUICC copy by sequence number.
+ * SGP.22 v3.1 §5.7.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +32,11 @@ class NotificationSentRequest {
     constructor (
         /**
          * @summary `seqNumber`.
+         * @description
+         * 
+         * Sequence number of the notification the LPA has delivered and now
+         * wants removed. SGP.22 v3.1 §5.7.11.
+         * 
          * @public
          * @readonly
          */

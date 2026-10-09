@@ -13,6 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ReplaceSessionKeysRequest
  * @description
  * 
+ * ES8+.ReplaceSessionKeys. Replaces both BSP session keys (S-ENC and S-MAC)
+ * with the Profile Protection Keys PPK-ENC and PPK-CMAC, and installs a new
+ * initial MAC chaining value. Both keys are replaced; the command cannot
+ * replace only one. The new keys must be the same length as the old ones, and
+ * of the same algorithm. Later `'86'` TLVs use the new keys when the SM-DP+
+ * chose that protection mode. The command itself is encrypted under the keys
+ * being replaced. SGP.22 v3.1 §5.5.4 and §2.5.4.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +41,33 @@ class ReplaceSessionKeysRequest {
     constructor (
         /**
          * @summary `initialMacChainingValue`.
+         * @description
+         * 
+         * MAC chaining value used for the first block protected by the new
+         * keys. SGP.22 v3.1 §5.5.4.
+         * 
          * @public
          * @readonly
          */
         readonly initialMacChainingValue: OCTET_STRING,
         /**
          * @summary `ppkEnc`.
+         * @description
+         * 
+         * PPK-ENC, the profile-protection encryption key. Same length and
+         * algorithm as S-ENC. SGP.22 v3.1 §5.5.4.
+         * 
          * @public
          * @readonly
          */
         readonly ppkEnc: OCTET_STRING,
         /**
          * @summary `ppkCmac`.
+         * @description
+         * 
+         * PPK-CMAC, the profile-protection MAC key. Same length and algorithm
+         * as S-MAC. SGP.22 v3.1 §5.5.4.
+         * 
          * @public
          * @readonly
          */

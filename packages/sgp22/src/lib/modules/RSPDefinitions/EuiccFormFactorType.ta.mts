@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EuiccFormFactorType
  * @description
  * 
+ * Whether the eUICC can be removed. SGP.22 v3.1 Annex H defines
+ * `removableEuicc` (0) and `nonRemovableEuicc` (1). This module types the value
+ * as an un-named INTEGER. The IMEI should be present when the form factor is
+ * non-removable (§4.2).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

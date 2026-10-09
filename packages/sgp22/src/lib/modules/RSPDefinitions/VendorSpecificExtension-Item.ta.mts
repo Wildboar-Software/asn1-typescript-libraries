@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary VendorSpecificExtension_Item
  * @description
  * 
+ * One vendor extension: the vendor's OID and the open value that vendor
+ * defined. SGP.22 v3.1 Annex H.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +31,22 @@ class VendorSpecificExtension_Item {
     constructor (
         /**
          * @summary `vendorOid`.
+         * @description
+         * 
+         * OID of the vendor that defined `vendorSpecificData`. SGP.22 v3.1
+         * Annex H.
+         * 
          * @public
          * @readonly
          */
         readonly vendorOid: OBJECT_IDENTIFIER,
         /**
          * @summary `vendorSpecificData`.
+         * @description
+         * 
+         * Open type identified by `vendorOid`. Must not change non-vendor RSP
+         * behaviour. SGP.22 v3.1 §5.5.3.
+         * 
          * @public
          * @readonly
          */

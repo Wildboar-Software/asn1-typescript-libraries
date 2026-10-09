@@ -10,6 +10,10 @@ import { id_rspExt } from "../RSPDefinitions/id-rspExt.va.mjs";
  * @summary id_rsp_totalPartialCrlNumber
  * @description
  * 
+ * v2 extension OID `{id-rspExt 2}` for `TotalPartialCrlNumber`. SGP.22 v3.1
+ * §4.6.1 forbids delta CRLs and does not define partial-CRL segmentation. See
+ * `id-rspExt`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

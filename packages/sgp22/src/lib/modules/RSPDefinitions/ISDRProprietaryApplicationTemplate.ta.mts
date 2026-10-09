@@ -13,6 +13,12 @@ import { ISDRProprietaryApplicationTemplate_lpaeSupport, _decode_ISDRProprietary
  * @summary ISDRProprietaryApplicationTemplate
  * @description
  * 
+ * Extra FCI returned when the ISD-R is selected, after the GlobalPlatform FCI
+ * objects. A v1 eUICC does not return it. SGP.22 v3.1 §5.7.1 calls `svn`
+ * `lowestSvn` and deprecates it: the LPA learns eUICC capabilities from
+ * ES10b.GetEUICCInfo, not from this field. `lpaeSupport` says whether an LPA
+ * inside the eUICC can be activated over CAT or SCWS.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +38,23 @@ class ISDRProprietaryApplicationTemplate {
     constructor (
         /**
          * @summary `svn`.
+         * @description
+         * 
+         * SGP.22 version in the select response. v3.1 §5.7.1 calls this
+         * `lowestSvn` and deprecates it; the LPA uses ES10b.GetEUICCInfo
+         * instead.
+         * 
          * @public
          * @readonly
          */
         readonly svn: VersionType,
         /**
          * @summary `lpaeSupport`.
+         * @description
+         * 
+         * On-card LPA transports the eUICC supports. Absent if it reports none.
+         * SGP.22 v3.1 §5.7.1.
+         * 
          * @public
          * @readonly
          */

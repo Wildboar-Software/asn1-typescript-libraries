@@ -12,6 +12,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EuiccSignPIR
  * @description
  * 
+ * eUICC signature over `ProfileInstallationResultData`, tag `'5F37'`. SGP.22
+ * v3.1 §2.5.6 names this type `EuiccSign` and uses the same tag for other eUICC
+ * signatures as well.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,6 +12,10 @@ import { CancelSessionResponse_cancelSessionResponseError, _decode_CancelSession
  * @summary CancelSessionResponse
  * @description
  * 
+ * ES10b.CancelSession response. Success is the signed cancellation. The error
+ * alternative is `invalidTransactionId` or `undefinedError`. SGP.22 v3.1
+ * §5.7.14.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

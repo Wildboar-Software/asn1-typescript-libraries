@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Octet1
  * @description
  * 
+ * Fixed length of one octet. Used for the Control Reference Template key type
+ * and key length, and for the single tag in ES10c.GetEID. SGP.22 v3.1 Annex H.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

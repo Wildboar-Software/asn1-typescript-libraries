@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IoTSpecificInfo
  * @description
  * 
+ * Placeholder on `EUICCInfo2`. SGP.22 v3.1 Annex H reserves it for SGP.32 and
+ * leaves the sequence empty. This module does the same.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DpProprietaryData
  * @description
  * 
+ * SM-DP+ proprietary data stored in the ISD-P. `dpOid` is an OID in the tree of
+ * the SM-DP+ that created the Profile. Further data objects defined by that
+ * SM-DP+ may follow. Maximum size, including tag and length, is 128 octets.
+ * SGP.22 v3.1 §5.5.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +34,12 @@ class DpProprietaryData {
     constructor (
         /**
          * @summary `dpOid`.
+         * @description
+         * 
+         * OID in the tree of the SM-DP+ that created the Profile. Further
+         * SM-DP+-defined objects may follow inside the same sequence. SGP.22
+         * v3.1 §5.5.2.
+         * 
          * @public
          * @readonly
          */

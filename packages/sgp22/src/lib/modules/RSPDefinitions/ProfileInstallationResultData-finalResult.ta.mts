@@ -11,6 +11,11 @@ import { ErrorResult, _decode_ErrorResult, _encode_ErrorResult } from "../RSPDef
  * @summary ProfileInstallationResultData_finalResult
  * @description
  * 
+ * Outcome of loading the Bound Profile Package. `successResult` carries the new
+ * ISD-P AID. `errorResult` names the ES8+ command and the cause. Insufficient
+ * memory and interruption are temporary; other reasons are permanent. SGP.22
+ * v3.1 §2.5.6 and §2.5.6.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

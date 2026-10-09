@@ -13,6 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EuiccConfiguredAddressesResponse
  * @description
  * 
+ * Addresses configured in the eUICC for profile discovery. The root SM-DS
+ * address is always present. The default SM-DP+ address is optional. SGP.22
+ * v3.1 §5.7.3. v3.1 has renamed related fields as the specification added root
+ * and alternative SM-DS addresses; this module has the two addresses above.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +34,21 @@ class EuiccConfiguredAddressesResponse {
     constructor (
         /**
          * @summary `defaultDpAddress`.
+         * @description
+         * 
+         * Configured default SM-DP+ FQDN. Omitted if none is set. SGP.22 v3.1
+         * §5.7.3.
+         * 
          * @public
          * @readonly
          */
         readonly defaultDpAddress: OPTIONAL<UTF8String>,
         /**
          * @summary `rootDsAddress`.
+         * @description
+         * 
+         * Root SM-DS FQDN. Always present. SGP.22 v3.1 §5.7.3.
+         * 
          * @public
          * @readonly
          */

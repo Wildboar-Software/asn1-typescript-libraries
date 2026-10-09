@@ -12,6 +12,8 @@ import { _decode_DisableProfileResponse_disableResult, _encode_DisableProfileRes
  * @summary DisableProfileResponse
  * @description
  * 
+ * Result of ES10c.DisableProfile. SGP.22 v3.1 §5.7.17.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +29,11 @@ class DisableProfileResponse {
     constructor (
         /**
          * @summary `disableResult`.
+         * @description
+         * 
+         * `ok`, not found, not enabled, disallowed by policy (PPR1), CAT busy,
+         * or undefined. SGP.22 v3.1 §5.7.17.
+         * 
          * @public
          * @readonly
          */

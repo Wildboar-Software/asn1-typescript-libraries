@@ -12,6 +12,12 @@ import { OtherSignedNotification, _decode_OtherSignedNotification, _encode_Other
  * @summary PendingNotification
  * @description
  * 
+ * One notification waiting on the eUICC. Installation uses
+ * `ProfileInstallationResult`. Enable, disable, and delete use
+ * `OtherSignedNotification`. The LPA forwards either form in
+ * ES9+.HandleNotification or ES2+.HandleNotification. SGP.22 v3.1 §5.7.10 and
+ * §5.6.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

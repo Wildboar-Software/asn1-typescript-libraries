@@ -13,6 +13,15 @@ import { EnableProfileRequest_profileIdentifier, _decode_EnableProfileRequest_pr
  * @summary EnableProfileRequest
  * @description
  * 
+ * ES10c.EnableProfile. Enables the identified Profile and disables whatever is
+ * enabled on the target port, as one operation: on failure both stay as they
+ * were. `refreshFlag` false means the eUICC performs the switch and returns;
+ * true means it marks the profiles, returns `ok`, and completes the switch only
+ * after a successful REFRESH (eUICC Profile State Change, or UICC Reset). The
+ * Device must arrange the conditions in §3.2.1 before calling with
+ * `refreshFlag` false. SGP.22 v3.1 §5.7.16. v3.1 adds an optional target eSIM
+ * port for MEP, which this module does not include.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +41,23 @@ class EnableProfileRequest {
     constructor (
         /**
          * @summary `profileIdentifier`.
+         * @description
+         * 
+         * ISD-P AID or ICCID of the Profile to enable. Unknown value is
+         * `iccidOrAidNotFound`. SGP.22 v3.1 §5.7.16.
+         * 
          * @public
          * @readonly
          */
         readonly profileIdentifier: EnableProfileRequest_profileIdentifier,
         /**
          * @summary `refreshFlag`.
+         * @description
+         * 
+         * True: complete the switch only after REFRESH. False: switch
+         * immediately and reset PIN state on the target port. A proactive
+         * session may yield `catBusy` in either case. SGP.22 v3.1 §5.7.16.
+         * 
          * @public
          * @readonly
          */

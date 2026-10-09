@@ -13,6 +13,12 @@ import { NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent
  * @summary NotificationConfigurationInformation
  * @description
  * 
+ * One notification subscription stored in Profile Metadata: an event bit and
+ * the FQDN that should receive it. After a successful install, enable, disable,
+ * or delete, the eUICC generates one signed notification per matching entry. No
+ * notifications are generated for a Test Profile or when the operation fails.
+ * SGP.22 v3.1 §5.5.3 and §5.5.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +35,21 @@ class NotificationConfigurationInformation {
     constructor (
         /**
          * @summary `profileManagementOperation`.
+         * @description
+         * 
+         * Event bits that trigger a notification to `notificationAddress`. One
+         * entry may name more than one event. SGP.22 v3.1 §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly profileManagementOperation: NotificationEvent,
         /**
          * @summary `notificationAddress`.
+         * @description
+         * 
+         * FQDN the LPA forwards the notification to. SGP.22 v3.1 §5.5.3.
+         * 
          * @public
          * @readonly
          */

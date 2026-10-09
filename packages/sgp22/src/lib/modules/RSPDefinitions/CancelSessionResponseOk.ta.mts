@@ -13,6 +13,9 @@ import { EuiccCancelSessionSigned, _decode_EuiccCancelSessionSigned, _encode_Eui
  * @summary CancelSessionResponseOk
  * @description
  * 
+ * Signed session cancellation. The LPA submits this to the RSP Server as
+ * ES9+.CancelSession. SGP.22 v3.1 §5.7.14 and §5.6.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +32,20 @@ class CancelSessionResponseOk {
     constructor (
         /**
          * @summary `euiccCancelSessionSigned`.
+         * @description
+         * 
+         * TransactionID, SM-DP+ OID, and reason. SGP.22 v3.1 §5.7.14.
+         * 
          * @public
          * @readonly
          */
         readonly euiccCancelSessionSigned: EuiccCancelSessionSigned,
         /**
          * @summary `euiccCancelSessionSignature`.
+         * @description
+         * 
+         * Signature under SK.EUICC.SIG, tag `'5F37'`. SGP.22 v3.1 §5.7.14.
+         * 
          * @public
          * @readonly
          */

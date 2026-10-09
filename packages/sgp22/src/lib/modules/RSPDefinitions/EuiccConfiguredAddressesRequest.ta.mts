@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EuiccConfiguredAddressesRequest
  * @description
  * 
+ * ES10a.GetEuiccConfiguredData request. Empty. The ISD-R (LPA Services) returns
+ * the configured default SM-DP+ address, if any, and the root SM-DS address.
+ * SGP.22 v3.1 §5.7.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

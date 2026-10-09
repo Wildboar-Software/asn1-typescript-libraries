@@ -13,6 +13,9 @@ import { DownloadErrorCode, _decode_DownloadErrorCode, _encode_DownloadErrorCode
  * @summary PrepareDownloadResponseError
  * @description
  * 
+ * PrepareDownload failed. The TransactionID is echoed with a
+ * `DownloadErrorCode`. SGP.22 v3.1 §5.7.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +32,21 @@ class PrepareDownloadResponseError {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Session the error belongs to. SGP.22 v3.1 §5.7.5.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `downloadErrorCode`.
+         * @description
+         * 
+         * Certificate, signature, curve, session, or TransactionID failure.
+         * SGP.22 v3.1 §5.7.5.
+         * 
          * @public
          * @readonly
          */

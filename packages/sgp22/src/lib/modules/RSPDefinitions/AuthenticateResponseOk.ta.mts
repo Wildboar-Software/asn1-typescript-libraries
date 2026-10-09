@@ -14,6 +14,11 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  * @summary AuthenticateResponseOk
  * @description
  * 
+ * eUICC proof for the RSP Server. `euiccSigned1` is signed by SK.EUICC.SIG. The
+ * chain is CERT.EUICC.SIG signed by the EUM and CERT.EUM.SIG signed by the CI
+ * the server selected. The LPA forwards this response inside ES9+ or ES11
+ * AuthenticateClient. SGP.22 v3.1 §5.7.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +37,41 @@ class AuthenticateResponseOk {
     constructor (
         /**
          * @summary `euiccSigned1`.
+         * @description
+         * 
+         * Signed eUICC response, including `EUICCInfo2`. SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */
         readonly euiccSigned1: EuiccSigned1,
         /**
          * @summary `euiccSignature1`.
+         * @description
+         * 
+         * Signature under SK.EUICC.SIG, tag `'5F37'`. SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */
         readonly euiccSignature1: OCTET_STRING,
         /**
          * @summary `euiccCertificate`.
+         * @description
+         * 
+         * CERT.EUICC.SIG, signed by the EUM. SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */
         readonly euiccCertificate: Certificate,
         /**
          * @summary `eumCertificate`.
+         * @description
+         * 
+         * CERT.EUM.SIG, signed by the CI identified by `euiccCiPKIdToBeUsed`.
+         * SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */

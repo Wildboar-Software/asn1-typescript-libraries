@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary StoreMetadataRequest_iotSpecificMetadata
  * @description
  * 
+ * Empty sequence reserved for IoT metadata defined in SGP.32. SGP.22 v3.1
+ * §5.5.3 does not include this field.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

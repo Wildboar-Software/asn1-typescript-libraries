@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LpaeActivationResponse_lpaeActivationResult
  * @description
  * 
+ * `ok` (0) or `notSupported` (1) for LPAe activation. SGP.22 v3.1 §5.7.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +27,10 @@ type LpaeActivationResponse_lpaeActivationResult = INTEGER;
 
 /**
  * @summary LpaeActivationResponse_lpaeActivationResult_ok
+ * @description
+ * 
+ * LPAe was activated. SGP.22 v3.1 §5.7.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -33,6 +39,10 @@ const LpaeActivationResponse_lpaeActivationResult_ok: LpaeActivationResponse_lpa
 
 /**
  * @summary LpaeActivationResponse_lpaeActivationResult_ok
+ * @description
+ * 
+ * LPAe was activated. SGP.22 v3.1 §5.7.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -41,6 +51,10 @@ const ok: LpaeActivationResponse_lpaeActivationResult = LpaeActivationResponse_l
 
 /**
  * @summary LpaeActivationResponse_lpaeActivationResult_notSupported
+ * @description
+ * 
+ * The requested LPAe option is not supported. SGP.22 v3.1 §5.7.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -49,6 +63,10 @@ const LpaeActivationResponse_lpaeActivationResult_notSupported: LpaeActivationRe
 
 /**
  * @summary LpaeActivationResponse_lpaeActivationResult_notSupported
+ * @description
+ * 
+ * The requested LPAe option is not supported. SGP.22 v3.1 §5.7.1.
+ * 
  * @constant
  * @type {number}
  */

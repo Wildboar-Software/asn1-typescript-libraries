@@ -13,6 +13,16 @@ import { ProfileInfoListRequest_searchCriteria, _decode_ProfileInfoListRequest_s
  * @summary ProfileInfoListRequest
  * @description
  * 
+ * ES10c.GetProfilesInfo request. With no search criterion, every installed
+ * Profile is eligible. Otherwise the eUICC matches an ISD-P AID, an ICCID, or a
+ * profile class. `tagList` is a concatenation of BER tags (tag `'5C'`, no
+ * delimiters) selecting which `ProfileInfo` fields to return. If it is absent,
+ * the eUICC returns the default set: ICCID, ISD-P AID, state, nickname,
+ * service-provider name, profile name, icon type, icon, and profile class. A
+ * requested object that the Profile does not have is omitted, not defaulted.
+ * SGP.22 v3.1 §5.7.15. `iotSpecificTagList` is reserved for SGP.32 and is not
+ * in the v3.1 request.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +44,35 @@ class ProfileInfoListRequest {
     constructor (
         /**
          * @summary `searchCriteria`.
+         * @description
+         * 
+         * AID, ICCID, or profile class. Omit to return every installed Profile.
+         * SGP.22 v3.1 §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly searchCriteria: OPTIONAL<ProfileInfoListRequest_searchCriteria>,
         /**
          * @summary `tagList`.
+         * @description
+         * 
+         * Concatenated BER tags, tag `'5C'`, selecting `ProfileInfo` fields.
+         * Absent means the default set (ICCID, AID, state, nickname, provider
+         * name, profile name, icon type, icon, profile class). SGP.22 v3.1
+         * §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly tagList: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `iotSpecificTagList`.
+         * @description
+         * 
+         * Tag `'5D'`. Reserved for SGP.32. SGP.22 v3.1 §5.7.15 does not define
+         * this component.
+         * 
          * @public
          * @readonly
          */

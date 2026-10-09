@@ -12,6 +12,8 @@ import { _decode_SetDefaultDpAddressResponse_setDefaultDpAddressResult, _encode_
  * @summary SetDefaultDpAddressResponse
  * @description
  * 
+ * Result of ES10a.SetDefaultDpAddress. SGP.22 v3.1 §5.7.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +29,10 @@ class SetDefaultDpAddressResponse {
     constructor (
         /**
          * @summary `setDefaultDpAddressResult`.
+         * @description
+         * 
+         * `ok` or `undefinedError`. SGP.22 v3.1 §5.7.4.
+         * 
          * @public
          * @readonly
          */

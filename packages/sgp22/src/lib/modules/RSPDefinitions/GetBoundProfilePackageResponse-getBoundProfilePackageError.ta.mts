@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError
  * @description
  * 
+ * Error codes of ES9+.GetBoundProfilePackage. SGP.22 v3.1 §5.6.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +33,10 @@ type GetBoundProfilePackageResponse_getBoundProfilePackageError = INTEGER;
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_euiccSignatureInvalid
+ * @description
+ * 
+ * `euiccSignature2` did not verify under PK.EUICC.SIG. SGP.22 v3.1 §5.6.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -39,6 +45,10 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_euiccSignatureI
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_euiccSignatureInvalid
+ * @description
+ * 
+ * `euiccSignature2` did not verify under PK.EUICC.SIG. SGP.22 v3.1 §5.6.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -47,6 +57,11 @@ const euiccSignatureInvalid: GetBoundProfilePackageResponse_getBoundProfilePacka
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeMissing
+ * @description
+ * 
+ * The order requires a Confirmation Code and `hashCc` was absent. SGP.22 v3.1
+ * §5.6.2 and §4.7.
+ * 
  * @constant
  * @type {number}
  */
@@ -55,6 +70,11 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCod
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeMissing
+ * @description
+ * 
+ * The order requires a Confirmation Code and `hashCc` was absent. SGP.22 v3.1
+ * §5.6.2 and §4.7.
+ * 
  * @constant
  * @type {number}
  */
@@ -63,6 +83,11 @@ const confirmationCodeMissing: GetBoundProfilePackageResponse_getBoundProfilePac
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeRefused
+ * @description
+ * 
+ * The hashed Confirmation Code does not match. The SM-DP+ counts the attempt.
+ * SGP.22 v3.1 §5.6.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -71,6 +96,11 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCod
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeRefused
+ * @description
+ * 
+ * The hashed Confirmation Code does not match. The SM-DP+ counts the attempt.
+ * SGP.22 v3.1 §5.6.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -79,6 +109,11 @@ const confirmationCodeRefused: GetBoundProfilePackageResponse_getBoundProfilePac
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeRetriesExceeded
+ * @description
+ * 
+ * Too many wrong Confirmation Codes. The download order is terminated. SGP.22
+ * v3.1 §4.7 and §5.6.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -87,6 +122,11 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCod
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_confirmationCodeRetriesExceeded
+ * @description
+ * 
+ * Too many wrong Confirmation Codes. The download order is terminated. SGP.22
+ * v3.1 §4.7 and §5.6.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -95,6 +135,12 @@ const confirmationCodeRetriesExceeded: GetBoundProfilePackageResponse_getBoundPr
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_bppRebindingRefused
+ * @description
+ * 
+ * The BPP is not available for a new binding (Profile - Unavailable,
+ * 8.2/3.7). A previous BPP for this eUICC is reused when otPK.EUICC.KA
+ * matches, and rebound when it does not. SGP.22 v3.1 §5.6.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -103,6 +149,12 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_bppRebindingRef
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_bppRebindingRefused
+ * @description
+ * 
+ * The BPP is not available for a new binding (Profile - Unavailable,
+ * 8.2/3.7). A previous BPP for this eUICC is reused when otPK.EUICC.KA
+ * matches, and rebound when it does not. SGP.22 v3.1 §5.6.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -111,6 +163,12 @@ const bppRebindingRefused: GetBoundProfilePackageResponse_getBoundProfilePackage
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_deprecated
+ * @description
+ * 
+ * Value 6. This module calls it `deprecated` and comments that it is no
+ * longer used. SGP.22 v3.1 Annex H names the same integer
+ * `downloadOrderExpired`.
+ * 
  * @constant
  * @type {number}
  */
@@ -119,6 +177,12 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_deprecated: Get
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_deprecated
+ * @description
+ * 
+ * Value 6. This module calls it `deprecated` and comments that it is no
+ * longer used. SGP.22 v3.1 Annex H names the same integer
+ * `downloadOrderExpired`.
+ * 
  * @constant
  * @type {number}
  */
@@ -127,6 +191,11 @@ const deprecated: GetBoundProfilePackageResponse_getBoundProfilePackageError = G
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_invalidTransactionId
+ * @description
+ * 
+ * The TransactionID is not an open session. Value 95 in this module. SGP.22
+ * v3.1 §5.6.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -135,6 +204,11 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_invalidTransact
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_invalidTransactionId
+ * @description
+ * 
+ * The TransactionID is not an open session. Value 95 in this module. SGP.22
+ * v3.1 §5.6.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -143,6 +217,10 @@ const invalidTransactionId: GetBoundProfilePackageResponse_getBoundProfilePackag
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_undefinedError
+ * @description
+ * 
+ * GetBoundProfilePackage failed for another reason. SGP.22 v3.1 §5.6.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -151,6 +229,10 @@ const GetBoundProfilePackageResponse_getBoundProfilePackageError_undefinedError:
 
 /**
  * @summary GetBoundProfilePackageResponse_getBoundProfilePackageError_undefinedError
+ * @description
+ * 
+ * GetBoundProfilePackage failed for another reason. SGP.22 v3.1 §5.6.2.
+ * 
  * @constant
  * @type {number}
  */

@@ -10,6 +10,10 @@ import {
  * @summary id_rsp
  * @description
  * 
+ * GSMA Remote SIM Provisioning arc `{joint-iso-itu-t(2)
+ * international-organizations(23) gsma(146) rsp(1)}`. Parent of the
+ * certificate-object and metadata arcs. SGP.22 v3.1 Annex H.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

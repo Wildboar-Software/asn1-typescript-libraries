@@ -12,6 +12,8 @@ import { _decode_SetNicknameResponse_setNicknameResult, _encode_SetNicknameRespo
  * @summary SetNicknameResponse
  * @description
  * 
+ * Result of ES10c.SetNickname. SGP.22 v3.1 §5.7.21.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +29,10 @@ class SetNicknameResponse {
     constructor (
         /**
          * @summary `setNicknameResult`.
+         * @description
+         * 
+         * `ok`, `iccidNotFound`, or `undefinedError`. SGP.22 v3.1 §5.7.21.
+         * 
          * @public
          * @readonly
          */

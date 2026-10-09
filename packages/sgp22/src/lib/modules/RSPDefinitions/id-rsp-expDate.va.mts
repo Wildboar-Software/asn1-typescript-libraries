@@ -10,6 +10,9 @@ import { id_rspExt } from "../RSPDefinitions/id-rspExt.va.mjs";
  * @summary id_rsp_expDate
  * @description
  * 
+ * v2 extension OID `{id-rspExt 1}` for `ExpirationDate`. SGP.22 v3.1 Annex H
+ * does not define this extension. See `id-rspExt`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

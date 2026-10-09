@@ -27,6 +27,20 @@ import { ProfileInfo_iotSpecificProfileInfo, _decode_ProfileInfo_iotSpecificProf
  * @summary ProfileInfo
  * @description
  * 
+ * One installed Profile, as returned by ES10c.GetProfilesInfo. Fields are
+ * present only when requested by the tag list (or by the default set) and
+ * stored for that Profile. `profileState` is the current state, with an
+ * exception for local management on MEP-B when the Profile is enabled on a port
+ * other than the command port: that value is EUM-specific. `profileOwner` is
+ * returned only if it was stored or if EFIMSI is present and EFIMSI, EFGID1,
+ * and EFGID2 are not PIN protected. `profilePolicyRules` lists every PPR set on
+ * the Profile. SGP.22 v3.1 §5.7.15.
+ *
+ * v3.1 adds RPM, enterprise, device-change, enabled-port, and size fields that
+ * this module does not include. `ecallIndication`, `fallbackAttribute`,
+ * `fallbackAllowed`, and `iotSpecificProfileInfo` are reserved for SGP.32 and
+ * are not in the v3.1 `ProfileInfo`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,108 +75,201 @@ class ProfileInfo {
     constructor (
         /**
          * @summary `iccid`.
+         * @description
+         * 
+         * Profile ICCID, tag `'5A'`. Part of the default GetProfilesInfo set.
+         * SGP.22 v3.1 §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly iccid: OPTIONAL<Iccid>,
         /**
          * @summary `isdpAid`.
+         * @description
+         * 
+         * AID of the ISD-P that holds the Profile, tag `'4F'`. Part of the
+         * default set. SGP.22 v3.1 §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly isdpAid: OPTIONAL<OctetTo16>,
         /**
          * @summary `profileState`.
+         * @description
+         * 
+         * Enabled or disabled, tag `'9F70'`. Part of the default set. Not
+         * reliable while a REFRESH state change is still open. SGP.22 v3.1
+         * §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly profileState: OPTIONAL<ProfileState>,
         /**
          * @summary `profileNickname`.
+         * @description
+         * 
+         * End User nickname from ES10c.SetNickname, tag `'90'`, at most 64
+         * characters. Part of the default set. Not operator-signed metadata.
+         * SGP.22 v3.1 §5.7.15 and §5.7.21.
+         * 
          * @public
          * @readonly
          */
         readonly profileNickname: OPTIONAL<UTF8String>,
         /**
          * @summary `serviceProviderName`.
+         * @description
+         * 
+         * Provider name from metadata, tag `'91'`, at most 32 characters. Part
+         * of the default set. SGP.22 v3.1 §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly serviceProviderName: OPTIONAL<UTF8String>,
         /**
          * @summary `profileName`.
+         * @description
+         * 
+         * Profile name from metadata, tag `'92'`, at most 64 characters. Part
+         * of the default set. SGP.22 v3.1 §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly profileName: OPTIONAL<UTF8String>,
         /**
          * @summary `iconType`.
+         * @description
+         * 
+         * JPG or PNG, tag `'93'`. Part of the default set. Present when an icon
+         * was stored. SGP.22 v3.1 §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly iconType: OPTIONAL<IconType>,
         /**
          * @summary `icon`.
+         * @description
+         * 
+         * Embedded icon, tag `'94'`, at most 1024 octets. Part of the default
+         * set. Returned only when it was stored with `iconType`. SGP.22 v3.1
+         * §5.5.3 and §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly icon: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `profileClass`.
+         * @description
+         * 
+         * Test, provisioning, or operational, tag `'95'`. Part of the default
+         * set. Provisioning profiles are not shown in the LUI. SGP.22 v3.1
+         * §2.4.5 and §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly profileClass: OPTIONAL<ProfileClass>,
         /**
          * @summary `notificationConfigurationInfo`.
+         * @description
+         * 
+         * Notification subscriptions, tag `'B6'`. Not in the default set;
+         * request the tag. SGP.22 v3.1 §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly notificationConfigurationInfo: OPTIONAL<NotificationConfigurationInformation[]>,
         /**
          * @summary `profileOwner`.
+         * @description
+         * 
+         * Owner MCC-MNC and GIDs, tag `'B7'`. Returned only if stored, or if
+         * EFIMSI is present and the IMSI and GID files are not PIN protected.
+         * SGP.22 v3.1 §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly profileOwner: OPTIONAL<OperatorId>,
         /**
          * @summary `dpProprietaryData`.
+         * @description
+         * 
+         * SM-DP+ proprietary data from ConfigureISDP, tag `'B8'`. Not in the
+         * default set. SGP.22 v3.1 §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly dpProprietaryData: OPTIONAL<DpProprietaryData>,
         /**
          * @summary `profilePolicyRules`.
+         * @description
+         * 
+         * All PPRs currently set, tag `'99'`. Not in the default set. SGP.22
+         * v3.1 §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly profilePolicyRules: OPTIONAL<PprIds>,
         /**
          * @summary `serviceSpecificDataStoredInEuicc`.
+         * @description
+         * 
+         * Vendor data that was stored, tag `'BF22'`. Not in the default set.
+         * SGP.22 v3.1 §5.7.15.
+         * 
          * @public
          * @readonly
          */
         readonly serviceSpecificDataStoredInEuicc: OPTIONAL<VendorSpecificExtension>,
         /**
          * @summary `ecallIndication`.
+         * @description
+         * 
+         * Reserved for SGP.32, tag `'9F7B'`. Not in SGP.22 v3.1 `ProfileInfo`.
+         * 
          * @public
          * @readonly
          */
         readonly ecallIndication: OPTIONAL<BOOLEAN>,
         /**
          * @summary `fallbackAttribute`.
+         * @description
+         * 
+         * Reserved for SGP.32, tag `'9F26'`. Defaults to false, so an absent
+         * value is not a fallback profile. Not in SGP.22 v3.1 `ProfileInfo`.
+         * 
          * @public
          * @readonly
          */
         readonly fallbackAttribute: OPTIONAL<BOOLEAN>,
         /**
          * @summary `fallbackAllowed`.
+         * @description
+         * 
+         * Reserved for SGP.32, tag `'9F67'`. Not in SGP.22 v3.1 `ProfileInfo`.
+         * 
          * @public
          * @readonly
          */
         readonly fallbackAllowed: OPTIONAL<BOOLEAN>,
         /**
          * @summary `iotSpecificProfileInfo`.
+         * @description
+         * 
+         * Reserved for SGP.32, tag `'BF64'`. Empty in this module. Not in
+         * SGP.22 v3.1 `ProfileInfo`.
+         * 
          * @public
          * @readonly
          */

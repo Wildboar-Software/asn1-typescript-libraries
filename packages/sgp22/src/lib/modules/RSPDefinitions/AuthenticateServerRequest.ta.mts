@@ -15,6 +15,16 @@ import { CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefini
  * @summary AuthenticateServerRequest
  * @description
  * 
+ * ES10b.AuthenticateServer. The eUICC authenticates the RSP Server before it
+ * signs anything or reveals `EUICCInfo2`. It checks that a session exists,
+ * verifies the server certificate chain to an eSIM CA Root CA it knows, checks
+ * that the certificate is CERT.DPauth.SIG or CERT.DSauth.SIG, verifies
+ * `serverSignature1` over `serverSigned1`, and checks that the echoed challenge
+ * matches the one it issued. On success it signs `euiccSigned1` and returns its
+ * certificate chain. SGP.22 v3.1 §5.7.13. v3.1 adds certificate-chain variants,
+ * CRL stapling, and `euiccCiPKIdToBeUsedV3`, which this module does not
+ * include.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,30 +44,59 @@ class AuthenticateServerRequest {
     constructor (
         /**
          * @summary `serverSigned1`.
+         * @description
+         * 
+         * Server-signed session binding. SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */
         readonly serverSigned1: ServerSigned1,
         /**
          * @summary `serverSignature1`.
+         * @description
+         * 
+         * Signature over `serverSigned1`, tag `'5F37'`, under the key in
+         * `serverCertificate`. Invalid signature yields `invalidSignature`.
+         * SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */
         readonly serverSignature1: OCTET_STRING,
         /**
          * @summary `euiccCiPKIdToBeUsed`.
+         * @description
+         * 
+         * Which eSIM CA Root CA key the eUICC must use to sign. Chosen by the
+         * server from `euiccCiPKIdListForSigning`. Unknown or unusable yields
+         * `ciPKUnknown`. Not covered by `serverSignature1`. SGP.22 v3.1 §5.6.1
+         * and §5.7.13.
+         * 
          * @public
          * @readonly
          */
         readonly euiccCiPKIdToBeUsed: OCTET_STRING,
         /**
          * @summary `serverCertificate`.
+         * @description
+         * 
+         * CERT.DPauth.SIG or CERT.DSauth.SIG. Any other role OID is
+         * `invalidOid`. An invalid chain is `invalidCertificate`. SGP.22 v3.1
+         * §5.7.13.
+         * 
          * @public
          * @readonly
          */
         readonly serverCertificate: Certificate,
         /**
          * @summary `ctxParams1`.
+         * @description
+         * 
+         * MatchingID and DeviceInfo for this session. The eUICC copies them
+         * into `euiccSigned1` so the server sees the same context under the
+         * eUICC signature. SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */

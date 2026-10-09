@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CancelSessionResponse_cancelSessionResponseError
  * @description
  * 
+ * Error from ES10b.CancelSession: `invalidTransactionId` (5) or
+ * `undefinedError` (127). SGP.22 v3.1 §5.7.14.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +28,11 @@ type CancelSessionResponse_cancelSessionResponseError = INTEGER;
 
 /**
  * @summary CancelSessionResponse_cancelSessionResponseError_invalidTransactionId
+ * @description
+ * 
+ * The TransactionID is not the open session. A session that never progressed
+ * past GetEUICCChallenge is still dropped. SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -33,6 +41,11 @@ const CancelSessionResponse_cancelSessionResponseError_invalidTransactionId: Can
 
 /**
  * @summary CancelSessionResponse_cancelSessionResponseError_invalidTransactionId
+ * @description
+ * 
+ * The TransactionID is not the open session. A session that never progressed
+ * past GetEUICCChallenge is still dropped. SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -41,6 +54,10 @@ const invalidTransactionId: CancelSessionResponse_cancelSessionResponseError = C
 
 /**
  * @summary CancelSessionResponse_cancelSessionResponseError_undefinedError
+ * @description
+ * 
+ * CancelSession failed for another reason. SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */
@@ -49,6 +66,10 @@ const CancelSessionResponse_cancelSessionResponseError_undefinedError: CancelSes
 
 /**
  * @summary CancelSessionResponse_cancelSessionResponseError_undefinedError
+ * @description
+ * 
+ * CancelSession failed for another reason. SGP.22 v3.1 §5.7.14.
+ * 
  * @constant
  * @type {number}
  */

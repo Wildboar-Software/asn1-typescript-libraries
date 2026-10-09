@@ -12,6 +12,12 @@ import { InitiateAuthenticationResponse_initiateAuthenticationError, _decode_Ini
  * @summary InitiateAuthenticationResponse
  * @description
  * 
+ * Success or error of InitiateAuthentication. The integer errors in this module
+ * (`invalidDpAddress`, `euiccVersionNotSupportedByDp`, `ciPKIdNotSupported`)
+ * are the ASN.1 form. v3.1 §5.6.1 also specifies the corresponding function
+ * status codes (SM-DP+ Address - Refused, Security configuration - Unsupported,
+ * SM-DP+ Certificate - Unavailable).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CancelSessionResponseEs9_cancelSessionError
  * @description
  * 
+ * The SM-DP+ rejected the cancellation: unknown TransactionID (1), eUICC
+ * signature invalid (2), or `undefinedError` (127). SGP.22 v3.1 §5.6.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +29,10 @@ type CancelSessionResponseEs9_cancelSessionError = INTEGER;
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_invalidTransactionId
+ * @description
+ * 
+ * The SM-DP+ does not know this TransactionID. SGP.22 v3.1 §5.6.5.
+ * 
  * @constant
  * @type {number}
  */
@@ -34,6 +41,10 @@ const CancelSessionResponseEs9_cancelSessionError_invalidTransactionId: CancelSe
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_invalidTransactionId
+ * @description
+ * 
+ * The SM-DP+ does not know this TransactionID. SGP.22 v3.1 §5.6.5.
+ * 
  * @constant
  * @type {number}
  */
@@ -42,6 +53,10 @@ const invalidTransactionId: CancelSessionResponseEs9_cancelSessionError = Cancel
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid
+ * @description
+ * 
+ * The eUICC signature on the cancel data did not verify. SGP.22 v3.1 §5.6.5.
+ * 
  * @constant
  * @type {number}
  */
@@ -50,6 +65,10 @@ const CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid: CancelS
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid
+ * @description
+ * 
+ * The eUICC signature on the cancel data did not verify. SGP.22 v3.1 §5.6.5.
+ * 
  * @constant
  * @type {number}
  */
@@ -58,6 +77,10 @@ const euiccSignatureInvalid: CancelSessionResponseEs9_cancelSessionError = Cance
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_undefinedError
+ * @description
+ * 
+ * CancelSession failed for another reason. SGP.22 v3.1 §5.6.5.
+ * 
  * @constant
  * @type {number}
  */
@@ -66,6 +89,10 @@ const CancelSessionResponseEs9_cancelSessionError_undefinedError: CancelSessionR
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_undefinedError
+ * @description
+ * 
+ * CancelSession failed for another reason. SGP.22 v3.1 §5.6.5.
+ * 
  * @constant
  * @type {number}
  */

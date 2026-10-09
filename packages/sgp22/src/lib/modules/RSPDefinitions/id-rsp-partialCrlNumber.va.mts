@@ -10,6 +10,9 @@ import { id_rspExt } from "../RSPDefinitions/id-rspExt.va.mjs";
  * @summary id_rsp_partialCrlNumber
  * @description
  * 
+ * v2 extension OID `{id-rspExt 3}` for `PartialCrlNumber`. SGP.22 v3.1 does not
+ * define partial CRLs. See `id-rspExt`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

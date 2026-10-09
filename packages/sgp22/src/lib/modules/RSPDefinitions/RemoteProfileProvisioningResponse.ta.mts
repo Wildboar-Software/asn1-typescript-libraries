@@ -15,6 +15,10 @@ import { AuthenticateClientResponseEs11, _decode_AuthenticateClientResponseEs11,
  * @summary RemoteProfileProvisioningResponse
  * @description
  * 
+ * ASN.1 response binding for ES9+ and ES11 (SGP.22 v3.1 §6.6). The
+ * AuthenticateClient response from an SM-DS uses the ES11 choice, tag `'BF40'`,
+ * rather than the ES9+ choice.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

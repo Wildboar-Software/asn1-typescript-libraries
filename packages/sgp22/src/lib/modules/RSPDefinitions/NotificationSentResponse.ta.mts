@@ -12,6 +12,8 @@ import { _decode_NotificationSentResponse_deleteNotificationStatus, _encode_Noti
  * @summary NotificationSentResponse
  * @description
  * 
+ * Result of deleting one pending notification. SGP.22 v3.1 §5.7.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +29,10 @@ class NotificationSentResponse {
     constructor (
         /**
          * @summary `deleteNotificationStatus`.
+         * @description
+         * 
+         * Whether that sequence number was removed. SGP.22 v3.1 §5.7.11.
+         * 
          * @public
          * @readonly
          */

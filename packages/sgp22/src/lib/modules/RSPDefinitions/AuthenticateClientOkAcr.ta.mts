@@ -13,6 +13,10 @@ import { StoreMetadataRequest, _decode_StoreMetadataRequest, _encode_StoreMetada
  * @summary AuthenticateClientOkAcr
  * @description
  * 
+ * AuthenticateClient success that returns Profile Metadata without the binding
+ * signature. This module defines it for Activation Code retrieval. SGP.22 v3.1
+ * §5.6.3 does not define this alternative; see `ActivationCodeRetrievalInfo`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +33,22 @@ class AuthenticateClientOkAcr {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Same session id. SGP.22 v3.1 does not define this success
+         * alternative.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `profileMetaData`.
+         * @description
+         * 
+         * Metadata returned for Activation Code retrieval, without
+         * `smdpSigned2`. Not defined in SGP.22 v3.1 §5.6.3.
+         * 
          * @public
          * @readonly
          */

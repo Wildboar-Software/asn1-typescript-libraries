@@ -15,6 +15,15 @@ import { ControlRefTemplate, _decode_ControlRefTemplate, _encode_ControlRefTempl
  * @summary InitialiseSecureChannelRequest
  * @description
  * 
+ * ES8+.InitialiseSecureChannel, the first and only clear TLV of a Bound Profile
+ * Package. It opens the BPP Security Protocol session: remote operation,
+ * TransactionID, key description, the SM-DP+ one-time public key (otPK.DP.KA),
+ * and a signature under SK.DPpb.SIG covering those fields plus the eUICC
+ * one-time public key from PrepareDownload. The eUICC rejects the command if a
+ * secure-channel session is already open. Session keys S-ENC and S-MAC and the
+ * initial MAC chaining value are derived from the two one-time keys. SGP.22
+ * v3.1 §5.5.1 and §2.6.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,30 +43,59 @@ class InitialiseSecureChannelRequest {
     constructor (
         /**
          * @summary `remoteOpId`.
+         * @description
+         * 
+         * Must be `installBoundProfilePackage`. That value also fixes the key
+         * usage to MAC and encryption. SGP.22 v3.1 §5.5.1.
+         * 
          * @public
          * @readonly
          */
         readonly remoteOpId: RemoteOpId,
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Must match the ongoing RSP session from ES10b.PrepareDownload.
+         * Otherwise `invalidTransactionId`. SGP.22 v3.1 §5.5.1.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `controlRefTemplate`.
+         * @description
+         * 
+         * Key type, key length, and host id for the key agreement. Checked
+         * against the selected algorithm. SGP.22 v3.1 §5.5.1.
+         * 
          * @public
          * @readonly
          */
         readonly controlRefTemplate: ControlRefTemplate,
         /**
          * @summary `smdpOtpk`.
+         * @description
+         * 
+         * otPK.DP.KA, tag `'5F49'`. The eUICC combines it with otSK.EUICC.KA to
+         * derive S-ENC, S-MAC, and the initial MAC chaining value. SGP.22 v3.1
+         * §2.6.4 and §5.5.1.
+         * 
          * @public
          * @readonly
          */
         readonly smdpOtpk: OCTET_STRING,
         /**
          * @summary `smdpSign`.
+         * @description
+         * 
+         * Signature under SK.DPpb.SIG over `remoteOpId`, `transactionId`,
+         * `controlRefTemplate`, `smdpOtpk`, and the `euiccOtpk` from
+         * PrepareDownload. Tag `'5F37'`. Failure is `invalidSignature`, the
+         * session context is discarded, and installation stops. SGP.22 v3.1
+         * §5.5.1.
+         * 
          * @public
          * @readonly
          */

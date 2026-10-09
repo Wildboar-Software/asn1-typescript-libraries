@@ -15,6 +15,12 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  * @summary InitiateAuthenticationOkEs9
  * @description
  * 
+ * Successful ES9+ InitiateAuthentication. The LPA feeds `serverSigned1`, the
+ * signature, the chosen CI key identifier, and `serverCertificate` into
+ * ES10b.AuthenticateServer. `euiccCiPKIdToBeUsed` is not itself signed; the
+ * SM-DP+ is held to it because it later checks that the eUICC certificate
+ * chains to that key. SGP.22 v3.1 §5.6.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,30 +40,54 @@ class InitiateAuthenticationOkEs9 {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * New session id. Unique for the life of this SM-DP+. SGP.22 v3.1
+         * §5.6.1.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `serverSigned1`.
+         * @description
+         * 
+         * Input to ES10b.AuthenticateServer. SGP.22 v3.1 §5.6.1.
+         * 
          * @public
          * @readonly
          */
         readonly serverSigned1: ServerSigned1,
         /**
          * @summary `serverSignature1`.
+         * @description
+         * 
+         * Signature over `serverSigned1`, tag `'5F37'`. SGP.22 v3.1 §5.6.1.
+         * 
          * @public
          * @readonly
          */
         readonly serverSignature1: OCTET_STRING,
         /**
          * @summary `euiccCiPKIdToBeUsed`.
+         * @description
+         * 
+         * CI public key the eUICC must sign with. Taken from
+         * `euiccCiPKIdListForSigning` unless the server cannot support any of
+         * them. SGP.22 v3.1 §5.6.1.
+         * 
          * @public
          * @readonly
          */
         readonly euiccCiPKIdToBeUsed: OCTET_STRING,
         /**
          * @summary `serverCertificate`.
+         * @description
+         * 
+         * CERT.DPauth.SIG (or CERT.DSauth.SIG on ES11) to give the eUICC.
+         * SGP.22 v3.1 §5.6.1.
+         * 
          * @public
          * @readonly
          */

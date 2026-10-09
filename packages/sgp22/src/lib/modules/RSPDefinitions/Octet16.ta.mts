@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Octet16
  * @description
  * 
+ * Sixteen octets. Used for the eUICC challenge, the RSP Server challenge, and
+ * the EID returned by ES10c.GetEID. SGP.22 v3.1 Annex H, §5.7.7, §5.7.20.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

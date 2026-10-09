@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ListNotificationResponse_listNotificationsResultError
  * @description
  * 
+ * Error alternative of ES10b.ListNotification. This module defines
+ * `undefinedError` (127). SGP.22 v3.1 §5.7.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +27,10 @@ type ListNotificationResponse_listNotificationsResultError = INTEGER;
 
 /**
  * @summary ListNotificationResponse_listNotificationsResultError_undefinedError
+ * @description
+ * 
+ * ListNotification failed. SGP.22 v3.1 §5.7.9.
+ * 
  * @constant
  * @type {number}
  */
@@ -32,6 +39,10 @@ const ListNotificationResponse_listNotificationsResultError_undefinedError: List
 
 /**
  * @summary ListNotificationResponse_listNotificationsResultError_undefinedError
+ * @description
+ * 
+ * ListNotification failed. SGP.22 v3.1 §5.7.9.
+ * 
  * @constant
  * @type {number}
  */

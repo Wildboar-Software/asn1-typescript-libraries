@@ -15,6 +15,11 @@ import { HandleNotification, _decode_HandleNotification, _encode_HandleNotificat
  * @summary RemoteProfileProvisioningRequest
  * @description
  * 
+ * ASN.1 function binding used on ES9+ and ES11 when the HTTP body is ASN.1
+ * rather than JSON (SGP.22 v3.1 §6.6). Tag `'A2'`. Each alternative is one
+ * function: InitiateAuthentication, AuthenticateClient, GetBoundProfilePackage,
+ * CancelSession, or HandleNotification.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

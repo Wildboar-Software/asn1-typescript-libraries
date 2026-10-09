@@ -10,6 +10,13 @@ import { VendorSpecificExtension_Item, _decode_VendorSpecificExtension_Item, _en
  * @summary VendorSpecificExtension
  * @description
  * 
+ * Vendor-defined metadata. Each entry is a vendor OID plus open data.
+ * Service-specific data must not change the Profile Management operations in
+ * SGP.22 or the interoperability of Devices, Profiles, and SM-DP+s. The SM-DP+
+ * includes it only when the eUICC set `serviceSpecificDataSupport`. Data marked
+ * not stored in the eUICC is not written. SGP.22 v3.1 §5.5.3. Annex P discusses
+ * use of this type.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GetRatRequest
  * @description
  * 
+ * ES10b.GetRAT request. Empty. Returns the Rules Authorisation Table that the
+ * Profile Policy Enabler and the LPA use to decide whether a Profile's PPRs may
+ * be installed. SGP.22 v3.1 §5.7.22 and §2.9.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

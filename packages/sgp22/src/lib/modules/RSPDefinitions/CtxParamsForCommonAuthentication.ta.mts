@@ -13,6 +13,14 @@ import { DeviceInfo, _decode_DeviceInfo, _encode_DeviceInfo } from "../RSPDefini
  * @summary CtxParamsForCommonAuthentication
  * @description
  * 
+ * Context for a profile download, RPM, or event retrieval. `matchingId` is the
+ * Activation Code token or an SM-DS event identifier. It may be omitted or
+ * empty; both mean "no MatchingID". A non-empty value is uppercase A-Z, digits,
+ * and hyphen, and the SM-DP+ uses it to select the pending order. `deviceInfo`
+ * is the eligibility input. SGP.22 v3.1 §4.1.1 and §5.7.13. v3.1 adds
+ * `matchingIdSource` and other fields under the `v3ObjectsInCtxParamsCASupport`
+ * capability; this module does not.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +37,23 @@ class CtxParamsForCommonAuthentication {
     constructor (
         /**
          * @summary `matchingId`.
+         * @description
+         * 
+         * Activation Code token or SM-DS event id. Omitted or empty both mean
+         * there is no MatchingID. A present value has non-zero length and
+         * contains only `A-Z`, `0-9`, and `-`. SGP.22 v3.1 §4.1.1.
+         * 
          * @public
          * @readonly
          */
         readonly matchingId: OPTIONAL<UTF8String>,
         /**
          * @summary `deviceInfo`.
+         * @description
+         * 
+         * TAC, capabilities, and optional IMEI for the eligibility check.
+         * SGP.22 v3.1 §4.2.
+         * 
          * @public
          * @readonly
          */

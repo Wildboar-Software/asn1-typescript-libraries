@@ -13,6 +13,9 @@ import { ProfileClass, _decode_ProfileClass, _encode_ProfileClass } from "../RSP
  * @summary ProfileInfoListRequest_searchCriteria
  * @description
  * 
+ * Which installed Profiles ES10c.GetProfilesInfo should describe. Omit the
+ * whole criterion to list all of them. SGP.22 v3.1 §5.7.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

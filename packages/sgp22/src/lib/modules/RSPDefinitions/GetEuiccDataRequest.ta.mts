@@ -12,6 +12,9 @@ import { Octet1, _decode_Octet1, _encode_Octet1 } from "../RSPDefinitions/Octet1
  * @summary GetEuiccDataRequest
  * @description
  * 
+ * ES10c.GetEID request. `tagList` is a single octet and its value is `'5A'`,
+ * the ICCID/EID tag. Any other tag list is invalid. SGP.22 v3.1 §5.7.20.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +30,10 @@ class GetEuiccDataRequest {
     constructor (
         /**
          * @summary `tagList`.
+         * @description
+         * 
+         * One octet whose value is `'5A'`. SGP.22 v3.1 §5.7.20.
+         * 
          * @public
          * @readonly
          */

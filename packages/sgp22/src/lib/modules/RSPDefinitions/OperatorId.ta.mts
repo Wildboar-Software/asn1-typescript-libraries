@@ -13,6 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OperatorId
  * @description
  * 
+ * Profile Owner, compared with the Allowed Operators list of the Rules
+ * Authorisation Table and with EFIMSI / EFGID1 / EFGID2. In a PPAR, an MCC or
+ * MNC nibble of `'E'` is a wildcard, an empty `gid1` or `gid2` is a wildcard,
+ * and an omitted GID matches only an absent GID. A single owner of MCC-MNC
+ * `'EEEEEE'` with empty GIDs allows every owner. When this value is the
+ * `profileOwner` of a Profile, wildcards are forbidden and the fields must
+ * match the profile files. SGP.22 v3.1 §2.9.2.1 and §5.5.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +38,38 @@ class OperatorId {
     constructor (
         /**
          * @summary `mccMnc`.
+         * @description
+         * 
+         * Mobile Country Code and Mobile Network Code, three octets, coded as
+         * in 3GPP TS 24.008. In a PPAR, a nibble of `'E'` is a wildcard. In
+         * `profileOwner`, wildcards are not allowed, and the value must match
+         * EFIMSI. SGP.22 v3.1 §2.9.2.1 and §5.5.5.
+         * 
          * @public
          * @readonly
          */
         readonly mccMnc: OCTET_STRING,
         /**
          * @summary `gid1`.
+         * @description
+         * 
+         * Contents of EFGID1 (file `'6F3E'`, 3GPP TS 31.102). Empty (length
+         * zero) is a wildcard in a PPAR. Omitted matches only a `profileOwner`
+         * that also omits it. If present on `profileOwner`, EFGID1 must exist,
+         * match, and be marked available in EFUST. SGP.22 v3.1 §2.9.2.1 and
+         * §5.5.5.
+         * 
          * @public
          * @readonly
          */
         readonly gid1: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `gid2`.
+         * @description
+         * 
+         * Contents of EFGID2 (file `'6F3F'`). Same wildcard and EFUST rules as
+         * `gid1`. SGP.22 v3.1 §2.9.2.1 and §5.5.5.
+         * 
          * @public
          * @readonly
          */

@@ -16,6 +16,12 @@ import { CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefini
  * @summary EuiccSigned1
  * @description
  * 
+ * What the eUICC signs after accepting the RSP Server. It echoes the
+ * TransactionID, server address, and server challenge, and discloses
+ * `EUICCInfo2` and the same context the LPA presented. The server verifies this
+ * signature with PK.EUICC.SIG before returning profile metadata or event
+ * records. SGP.22 v3.1 §5.7.13 and §5.6.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,30 +41,52 @@ class EuiccSigned1 {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Echo of the server TransactionID. SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `serverAddress`.
+         * @description
+         * 
+         * Echo of the server address from `serverSigned1`. SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */
         readonly serverAddress: UTF8String,
         /**
          * @summary `serverChallenge`.
+         * @description
+         * 
+         * Echo of the server challenge. SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */
         readonly serverChallenge: Octet16,
         /**
          * @summary `euiccInfo2`.
+         * @description
+         * 
+         * Full eUICC information. Disclosed only after the server certificate
+         * verified. SGP.22 v3.1 §4.3.
+         * 
          * @public
          * @readonly
          */
         readonly euiccInfo2: EUICCInfo2,
         /**
          * @summary `ctxParams1`.
+         * @description
+         * 
+         * The same context the LPA submitted, now under the eUICC signature.
+         * SGP.22 v3.1 §5.7.13.
+         * 
          * @public
          * @readonly
          */

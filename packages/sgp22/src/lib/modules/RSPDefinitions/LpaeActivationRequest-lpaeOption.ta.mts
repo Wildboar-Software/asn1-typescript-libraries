@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LpaeActivationRequest_lpaeOption
  * @description
  * 
+ * Which on-card LPA to activate. Exactly one bit is set. SGP.22 v3.1 §5.7.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +27,10 @@ type LpaeActivationRequest_lpaeOption = BIT_STRING;
 
 /**
  * @summary LpaeActivationRequest_lpaeOption_activateCatBasedLpae
+ * @description
+ * 
+ * Activate LPAe with the user interface driven by CAT. SGP.22 v3.1 §5.7.1.
+ * 
  * @constant
  */
 export
@@ -32,6 +38,10 @@ const LpaeActivationRequest_lpaeOption_activateCatBasedLpae: number = 0; /* LONG
 
 /**
  * @summary activateCatBasedLpae
+ * @description
+ * 
+ * Activate LPAe with the user interface driven by CAT. SGP.22 v3.1 §5.7.1.
+ * 
  * @constant
  */
 export
@@ -39,6 +49,11 @@ const activateCatBasedLpae: number = LpaeActivationRequest_lpaeOption_activateCa
 
 /**
  * @summary LpaeActivationRequest_lpaeOption_activateScwsBasedLpae
+ * @description
+ * 
+ * Activate LPAe with the user interface driven by the Smart Card Web Server.
+ * SGP.22 v3.1 §5.7.1.
+ * 
  * @constant
  */
 export
@@ -46,6 +61,11 @@ const LpaeActivationRequest_lpaeOption_activateScwsBasedLpae: number = 1; /* LON
 
 /**
  * @summary activateScwsBasedLpae
+ * @description
+ * 
+ * Activate LPAe with the user interface driven by the Smart Card Web Server.
+ * SGP.22 v3.1 §5.7.1.
+ * 
  * @constant
  */
 export

@@ -12,6 +12,10 @@ import { PrepareDownloadResponseError, _decode_PrepareDownloadResponseError, _en
  * @summary PrepareDownloadResponse
  * @description
  * 
+ * ES10b.PrepareDownload response. Either the eUICC signature that
+ * ES9+.GetBoundProfilePackage will check, or a download error. SGP.22 v3.1
+ * §5.7.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

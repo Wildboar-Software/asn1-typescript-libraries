@@ -14,6 +14,10 @@ import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.
  * @summary SetNicknameRequest
  * @description
  * 
+ * ES10c.SetNickname. Stores an End User nickname for the Profile identified by
+ * ICCID. The nickname is at most 64 UTF-8 characters and is not part of the
+ * signed Profile Metadata from the SM-DP+. SGP.22 v3.1 §5.7.21.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +34,21 @@ class SetNicknameRequest {
     constructor (
         /**
          * @summary `iccid`.
+         * @description
+         * 
+         * Profile to rename. Unknown ICCID is `iccidNotFound`. SGP.22 v3.1
+         * §5.7.21.
+         * 
          * @public
          * @readonly
          */
         readonly iccid: Iccid,
         /**
          * @summary `profileNickname`.
+         * @description
+         * 
+         * UTF-8 nickname, 0 to 64 characters. SGP.22 v3.1 §5.7.21.
+         * 
          * @public
          * @readonly
          */

@@ -15,6 +15,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ActivationCodeRetrievalInfo
  * @description
  * 
+ * Service-specific choice for Activation Code retrieval, identified by
+ * `id-rsp-metadata-activationCodeRetrievalInfo`. SGP.22 v3.1 Annex H does not
+ * define this type. The alternatives are the Activation Code for a re-download
+ * (at most 255 characters), a boolean that retrieval is available, or a delay
+ * in minutes until the SM-DP+ expects to be ready.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

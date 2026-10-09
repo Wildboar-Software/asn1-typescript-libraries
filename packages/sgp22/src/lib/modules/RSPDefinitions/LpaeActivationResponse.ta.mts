@@ -12,6 +12,9 @@ import { _decode_LpaeActivationResponse_lpaeActivationResult, _encode_LpaeActiva
  * @summary LpaeActivationResponse
  * @description
  * 
+ * Result of `LpaeActivationRequest`. `ok` or `notSupported`. SGP.22 v3.1
+ * §5.7.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +30,10 @@ class LpaeActivationResponse {
     constructor (
         /**
          * @summary `lpaeActivationResult`.
+         * @description
+         * 
+         * `ok` or `notSupported`. SGP.22 v3.1 §5.7.1.
+         * 
          * @public
          * @readonly
          */

@@ -12,6 +12,8 @@ import { CancelSessionResponseEs9_cancelSessionError, _decode_CancelSessionRespo
  * @summary CancelSessionResponseEs9
  * @description
  * 
+ * ES9+.CancelSession response. Success has no output data. SGP.22 v3.1 §5.6.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

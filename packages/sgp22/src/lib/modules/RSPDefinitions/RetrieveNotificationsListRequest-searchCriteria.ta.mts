@@ -12,6 +12,9 @@ import { NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent
  * @summary RetrieveNotificationsListRequest_searchCriteria
  * @description
  * 
+ * Filter for ES10b.RetrieveNotificationsList: one sequence number, or an event
+ * bit-mask. SGP.22 v3.1 §5.7.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

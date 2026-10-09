@@ -14,6 +14,11 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  * @summary OtherSignedNotification
  * @description
  * 
+ * Signed notification for an operation other than installation. The eUICC signs
+ * `tbsOtherNotification` with SK.EUICC.SIG. The chain is CERT.EUICC signed by
+ * the EUM, and CERT.EUM signed by the CI that the notification's recipient must
+ * be able to trust. SGP.22 v3.1 §5.7.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +37,43 @@ class OtherSignedNotification {
     constructor (
         /**
          * @summary `tbsOtherNotification`.
+         * @description
+         * 
+         * The metadata that is signed. Enable, disable, and delete use this
+         * form rather than `ProfileInstallationResult`. SGP.22 v3.1 §5.7.10.
+         * 
          * @public
          * @readonly
          */
         readonly tbsOtherNotification: NotificationMetadata,
         /**
          * @summary `euiccNotificationSignature`.
+         * @description
+         * 
+         * Signature under SK.EUICC.SIG over `tbsOtherNotification`, tag
+         * `'5F37'`. SGP.22 v3.1 §5.7.10.
+         * 
          * @public
          * @readonly
          */
         readonly euiccNotificationSignature: OCTET_STRING,
         /**
          * @summary `euiccCertificate`.
+         * @description
+         * 
+         * CERT.EUICC.SIG, signed by the EUM. SGP.22 v3.1 §5.7.10.
+         * 
          * @public
          * @readonly
          */
         readonly euiccCertificate: Certificate,
         /**
          * @summary `eumCertificate`.
+         * @description
+         * 
+         * CERT.EUM.SIG, signed by the CI. The receiver uses it to verify
+         * `euiccCertificate`. SGP.22 v3.1 §5.7.10.
+         * 
          * @public
          * @readonly
          */

@@ -10,6 +10,10 @@ import { id_rsp_metadata_serviceSpecificOIDs } from "../RSPDefinitions/id-rsp-me
  * @summary id_rsp_metadata_activationCodeRetrievalInfo
  * @description
  * 
+ * OID of `ActivationCodeRetrievalInfo` when carried as service-specific
+ * metadata. SGP.22 v3.1 Annex H does not assign this OID. The module places it
+ * at `{id-rsp-metadata-serviceSpecificOIDs 1}`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

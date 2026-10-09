@@ -12,6 +12,9 @@ import { LoadCRLResponseError, _decode_LoadCRLResponseError, _encode_LoadCRLResp
  * @summary LoadCRLResponse
  * @description
  * 
+ * Response of the pre-v3 ES10b.LoadCRL function. SGP.22 v3.1 §5.7.12 withdraws
+ * that function and does not define this choice.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

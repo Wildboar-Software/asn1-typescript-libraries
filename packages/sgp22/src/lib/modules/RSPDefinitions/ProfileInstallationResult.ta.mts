@@ -13,6 +13,13 @@ import { EuiccSignPIR, _decode_EuiccSignPIR, _encode_EuiccSignPIR } from "../RSP
  * @summary ProfileInstallationResult
  * @description
  * 
+ * Signed result of loading a Bound Profile Package. The eUICC returns it after
+ * the last BPP TLV, or immediately after the first TLV that fails, and may also
+ * return it if installation is interrupted. On success the eUICC generates the
+ * configured `OtherSignedNotification` values after this result; on failure it
+ * generates only this result. The LPA delivers it to the SM-DP+ with
+ * ES9+.HandleNotification. SGP.22 v3.1 §2.5.6 and §5.5.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +36,21 @@ class ProfileInstallationResult {
     constructor (
         /**
          * @summary `profileInstallationResultData`.
+         * @description
+         * 
+         * The signed content. Tag `'BF27'`. SGP.22 v3.1 §2.5.6.
+         * 
          * @public
          * @readonly
          */
         readonly profileInstallationResultData: ProfileInstallationResultData,
         /**
          * @summary `euiccSignPIR`.
+         * @description
+         * 
+         * eUICC signature over `profileInstallationResultData`. Tag `'5F37'`.
+         * SGP.22 v3.1 §2.5.6.
+         * 
          * @public
          * @readonly
          */

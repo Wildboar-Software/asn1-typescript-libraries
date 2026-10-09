@@ -12,6 +12,9 @@ import { _decode_EuiccMemoryResetResponse_resetResult, _encode_EuiccMemoryResetR
  * @summary EuiccMemoryResetResponse
  * @description
  * 
+ * Result of ES10c.eUICCMemoryReset. `catBusy` means a proactive session blocked
+ * a reset that needs REFRESH. SGP.22 v3.1 §5.7.19.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +30,11 @@ class EuiccMemoryResetResponse {
     constructor (
         /**
          * @summary `resetResult`.
+         * @description
+         * 
+         * `ok`, `nothingToDelete`, `catBusy`, or `undefinedError`. SGP.22 v3.1
+         * §5.7.19.
+         * 
          * @public
          * @readonly
          */

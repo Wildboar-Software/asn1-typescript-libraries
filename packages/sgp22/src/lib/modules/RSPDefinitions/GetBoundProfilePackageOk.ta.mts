@@ -13,6 +13,9 @@ import { BoundProfilePackage, _decode_BoundProfilePackage, _encode_BoundProfileP
  * @summary GetBoundProfilePackageOk
  * @description
  * 
+ * Session id plus the Bound Profile Package to load with
+ * ES10b.LoadBoundProfilePackage. SGP.22 v3.1 §5.6.2 and §5.7.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +32,21 @@ class GetBoundProfilePackageOk {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Same session id. SGP.22 v3.1 §5.6.2.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `boundProfilePackage`.
+         * @description
+         * 
+         * Package to segment and send with ES10b.LoadBoundProfilePackage.
+         * SGP.22 v3.1 §2.5.5 and §5.7.6.
+         * 
          * @public
          * @readonly
          */

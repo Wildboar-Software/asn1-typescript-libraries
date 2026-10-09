@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RemoteOpId
  * @description
  * 
+ * Remote operation requested by ES8+.InitialiseSecureChannel. This module
+ * defines only `installBoundProfilePackage`. Any other value is rejected with
+ * `unsupportedRemoteOperationType`, and the operation also selects the implicit
+ * key-usage qualifier (MAC and encryption). SGP.22 v3.1 §5.5.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +28,11 @@ type RemoteOpId = INTEGER;
 
 /**
  * @summary RemoteOpId_installBoundProfilePackage
+ * @description
+ * 
+ * Install a Bound Profile Package. The only remote operation this module
+ * defines. Implies MAC and encryption. SGP.22 v3.1 §5.5.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -31,6 +41,11 @@ const RemoteOpId_installBoundProfilePackage: RemoteOpId = 1; /* LONG_NAMED_INTEG
 
 /**
  * @summary RemoteOpId_installBoundProfilePackage
+ * @description
+ * 
+ * Install a Bound Profile Package. The only remote operation this module
+ * defines. Implies MAC and encryption. SGP.22 v3.1 §5.5.1.
+ * 
  * @constant
  * @type {number}
  */

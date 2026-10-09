@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AuthenticateClientResponseEs11_authenticateClientError
  * @description
  * 
+ * Why the SM-DS rejected ES11.AuthenticateClient. SGP.22 v3.1 §5.8.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +33,10 @@ type AuthenticateClientResponseEs11_authenticateClientError = INTEGER;
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_eumCertificateInvalid
+ * @description
+ * 
+ * CERT.EUM.SIG did not verify. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -39,6 +45,10 @@ const AuthenticateClientResponseEs11_authenticateClientError_eumCertificateInval
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_eumCertificateInvalid
+ * @description
+ * 
+ * CERT.EUM.SIG did not verify. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -47,6 +57,10 @@ const eumCertificateInvalid: AuthenticateClientResponseEs11_authenticateClientEr
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpired
+ * @description
+ * 
+ * CERT.EUM.SIG is outside its validity. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -55,6 +69,10 @@ const AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpir
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpired
+ * @description
+ * 
+ * CERT.EUM.SIG is outside its validity. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -63,6 +81,10 @@ const eumCertificateExpired: AuthenticateClientResponseEs11_authenticateClientEr
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInvalid
+ * @description
+ * 
+ * CERT.EUICC.SIG did not verify. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -71,6 +93,10 @@ const AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInv
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInvalid
+ * @description
+ * 
+ * CERT.EUICC.SIG did not verify. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -79,6 +105,10 @@ const euiccCertificateInvalid: AuthenticateClientResponseEs11_authenticateClient
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExpired
+ * @description
+ * 
+ * CERT.EUICC.SIG is outside its validity. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -87,6 +117,10 @@ const AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExp
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExpired
+ * @description
+ * 
+ * CERT.EUICC.SIG is outside its validity. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -95,6 +129,10 @@ const euiccCertificateExpired: AuthenticateClientResponseEs11_authenticateClient
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInvalid
+ * @description
+ * 
+ * `euiccSignature1` did not verify. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -103,6 +141,10 @@ const AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInval
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInvalid
+ * @description
+ * 
+ * `euiccSignature1` did not verify. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -111,6 +153,11 @@ const euiccSignatureInvalid: AuthenticateClientResponseEs11_authenticateClientEr
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown
+ * @description
+ * 
+ * The MatchingID is not an event identifier this SM-DS holds for this eUICC.
+ * SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -119,6 +166,11 @@ const AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown: Aut
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown
+ * @description
+ * 
+ * The MatchingID is not an event identifier this SM-DS holds for this eUICC.
+ * SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -127,6 +179,10 @@ const eventIdUnknown: AuthenticateClientResponseEs11_authenticateClientError = A
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionId
+ * @description
+ * 
+ * The TransactionID is not an open SM-DS session. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -135,6 +191,10 @@ const AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionI
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionId
+ * @description
+ * 
+ * The TransactionID is not an open SM-DS session. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -143,6 +203,10 @@ const invalidTransactionId: AuthenticateClientResponseEs11_authenticateClientErr
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_undefinedError
+ * @description
+ * 
+ * ES11 AuthenticateClient failed for another reason. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -151,6 +215,10 @@ const AuthenticateClientResponseEs11_authenticateClientError_undefinedError: Aut
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_undefinedError
+ * @description
+ * 
+ * ES11 AuthenticateClient failed for another reason. SGP.22 v3.1 §5.8.2.
+ * 
  * @constant
  * @type {number}
  */

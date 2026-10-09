@@ -10,6 +10,9 @@ import { type Time, _decode_Time, _encode_Time } from "@wildboar/pki-stub";
  * @summary ExpirationDate
  * @description
  * 
+ * Value of the v2 `id-rsp-expDate` extension. Typed as the PKIX `Time` imported
+ * by this module. SGP.22 v3.1 Annex H does not define this type.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

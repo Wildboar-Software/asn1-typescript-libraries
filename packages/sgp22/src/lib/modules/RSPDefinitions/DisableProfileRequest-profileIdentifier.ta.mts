@@ -12,6 +12,8 @@ import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.
  * @summary DisableProfileRequest_profileIdentifier
  * @description
  * 
+ * Profile to disable, by ISD-P AID or ICCID. SGP.22 v3.1 §5.7.17.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

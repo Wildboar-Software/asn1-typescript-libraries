@@ -12,6 +12,11 @@ import { LpaeActivationRequest_lpaeOption, _decode_LpaeActivationRequest_lpaeOpt
  * @summary LpaeActivationRequest
  * @description
  * 
+ * Sent to the ISD-R, on the ES10 transport, to activate an LPA that runs inside
+ * the eUICC. Exactly one bit of `lpaeOption` is set. If the Device supports
+ * LUId, LPDd, and LDSd and does not send this request, the eUICC does not
+ * activate LPAe. Resetting the eUICC deactivates LPAe. SGP.22 v3.1 §5.7.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +35,10 @@ class LpaeActivationRequest {
     constructor (
         /**
          * @summary `lpaeOption`.
+         * @description
+         * 
+         * Exactly one of CAT-based or SCWS-based LPAe. SGP.22 v3.1 §5.7.1.
+         * 
          * @public
          * @readonly
          */

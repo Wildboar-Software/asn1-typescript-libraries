@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProfileInfoListError
  * @description
  * 
+ * ES10c.GetProfilesInfo failed. SGP.22 v3.1 §5.7.15 also defines
+ * `profileChangeOngoing` (11) for RPM, which this module does not declare.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,6 +25,10 @@ type ProfileInfoListError = INTEGER;
 
 /**
  * @summary ProfileInfoListError_incorrectInputValues
+ * @description
+ * 
+ * Search criteria or tag list is not acceptable. SGP.22 v3.1 §5.7.15.
+ * 
  * @constant
  * @type {number}
  */
@@ -30,6 +37,10 @@ const ProfileInfoListError_incorrectInputValues: ProfileInfoListError = 1; /* LO
 
 /**
  * @summary ProfileInfoListError_incorrectInputValues
+ * @description
+ * 
+ * Search criteria or tag list is not acceptable. SGP.22 v3.1 §5.7.15.
+ * 
  * @constant
  * @type {number}
  */
@@ -38,6 +49,10 @@ const incorrectInputValues: ProfileInfoListError = ProfileInfoListError_incorrec
 
 /**
  * @summary ProfileInfoListError_undefinedError
+ * @description
+ * 
+ * GetProfilesInfo failed for another reason. SGP.22 v3.1 §5.7.15.
+ * 
  * @constant
  * @type {number}
  */
@@ -46,6 +61,10 @@ const ProfileInfoListError_undefinedError: ProfileInfoListError = 127; /* LONG_N
 
 /**
  * @summary ProfileInfoListError_undefinedError
+ * @description
+ * 
+ * GetProfilesInfo failed for another reason. SGP.22 v3.1 §5.7.15.
+ * 
  * @constant
  * @type {number}
  */

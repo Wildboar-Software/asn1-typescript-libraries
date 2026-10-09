@@ -14,6 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SuccessResult
  * @description
  * 
+ * Successful ES8+ installation. `aid` is the ISD-P created for the Profile.
+ * `simaResponse` is the Profile Package Interpreter responses (one or more
+ * `EUICCResponse` values, as defined by the eUICC Profile Package
+ * specification). SGP.22 v3.1 §2.5.6 calls that field `ppiResponse`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +35,22 @@ class SuccessResult {
     constructor (
         /**
          * @summary `aid`.
+         * @description
+         * 
+         * AID of the ISD-P that now contains the Profile. Five to sixteen
+         * octets. SGP.22 v3.1 §2.5.6.
+         * 
          * @public
          * @readonly
          */
         readonly aid: OCTET_STRING,
         /**
          * @summary `simaResponse`.
+         * @description
+         * 
+         * One or more `EUICCResponse` values from the Profile Package
+         * Interpreter. SGP.22 v3.1 calls this `ppiResponse`.
+         * 
          * @public
          * @readonly
          */

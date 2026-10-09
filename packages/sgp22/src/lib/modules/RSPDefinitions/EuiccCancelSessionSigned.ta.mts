@@ -14,6 +14,9 @@ import { CancelSessionReason, _decode_CancelSessionReason, _encode_CancelSession
  * @summary EuiccCancelSessionSigned
  * @description
  * 
+ * What the eUICC signs when a session is cancelled: TransactionID, the SM-DP+
+ * OID taken from CERT.DPauth, and the reason. SGP.22 v3.1 §5.7.14.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +34,30 @@ class EuiccCancelSessionSigned {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Session being cancelled. SGP.22 v3.1 §5.7.14.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `smdpOid`.
+         * @description
+         * 
+         * SM-DP+ OID from CERT.DPauth.SIG. SGP.22 v3.1 §5.7.14.
+         * 
          * @public
          * @readonly
          */
         readonly smdpOid: OBJECT_IDENTIFIER,
         /**
          * @summary `reason`.
+         * @description
+         * 
+         * The reason from the request, now signed. SGP.22 v3.1 §5.7.14.
+         * 
          * @public
          * @readonly
          */

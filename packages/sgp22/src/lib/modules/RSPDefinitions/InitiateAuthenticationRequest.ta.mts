@@ -14,6 +14,14 @@ import { EUICCInfo1, _decode_EUICCInfo1, _encode_EUICCInfo1 } from "../RSPDefini
  * @summary InitiateAuthenticationRequest
  * @description
  * 
+ * ES9+.InitiateAuthentication and ES11.InitiateAuthentication. The LPA sends
+ * the eUICC challenge, the server address it is contacting, and `EUICCInfo1`.
+ * The server checks the address (case-insensitive), picks a CI public key and a
+ * server certificate the eUICC can verify, allocates a TransactionID and a
+ * server challenge, and signs `serverSigned1`. SGP.22 v3.1 §5.6.1 and §5.8.1.
+ * v3.1 also takes `lpaRspCapability` and returns chain and CRL-stapling data
+ * that this module does not include.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +39,33 @@ class InitiateAuthenticationRequest {
     constructor (
         /**
          * @summary `euiccChallenge`.
+         * @description
+         * 
+         * From ES10b.GetEUICCChallenge. SGP.22 v3.1 §5.6.1.
+         * 
          * @public
          * @readonly
          */
         readonly euiccChallenge: Octet16,
         /**
          * @summary `smdpAddress`.
+         * @description
+         * 
+         * FQDN the LPA believes it is calling. The server compares it to its
+         * own address, case-insensitive, and refuses a mismatch. SGP.22 v3.1
+         * §5.6.1.
+         * 
          * @public
          * @readonly
          */
         readonly smdpAddress: UTF8String,
         /**
          * @summary `euiccInfo1`.
+         * @description
+         * 
+         * From ES10b.GetEUICCInfo. The server uses the CI key lists and the
+         * SVN. SGP.22 v3.1 §5.6.1. The encoded object includes its tag.
+         * 
          * @public
          * @readonly
          */

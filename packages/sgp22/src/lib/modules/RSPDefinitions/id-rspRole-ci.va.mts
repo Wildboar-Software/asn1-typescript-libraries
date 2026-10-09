@@ -10,6 +10,10 @@ import { id_rspRole } from "../RSPDefinitions/id-rspRole.va.mjs";
  * @summary id_rspRole_ci
  * @description
  * 
+ * Certificate Policies value of CERT.CI.SIG, the self-signed eSIM CA Root CA
+ * certificate (keyCertSign and cRLSign). Same arc in SGP.22 v3.1 Annex H.
+ * §4.5.2.1.0.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

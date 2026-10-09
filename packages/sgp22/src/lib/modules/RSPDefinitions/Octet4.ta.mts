@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Octet4
  * @description
  * 
+ * Four octets. `DeviceInfo.tac` is a Type Allocation Code in telephony BCD
+ * (3GPP TS 23.003 / TS 29.002). SGP.22 v3.1 §4.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

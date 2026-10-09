@@ -12,6 +12,9 @@ import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.
  * @summary EnableProfileRequest_profileIdentifier
  * @description
  * 
+ * Profile to enable, by ISD-P AID (tag `'4F'`) or ICCID (tag `'5A'`). SGP.22
+ * v3.1 §5.7.16.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

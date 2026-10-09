@@ -12,6 +12,11 @@ import { _decode_EnableProfileResponse_enableResult, _encode_EnableProfileRespon
  * @summary EnableProfileResponse
  * @description
  * 
+ * Result of ES10c.EnableProfile. `ok` with `refreshFlag` true means the switch
+ * is pending REFRESH, not that the Profile is already enabled. SGP.22 v3.1
+ * §5.7.16. v3.1 adds enterprise, RPM, and MEP error codes that this module does
+ * not declare.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +32,12 @@ class EnableProfileResponse {
     constructor (
         /**
          * @summary `enableResult`.
+         * @description
+         * 
+         * `ok`, not found, not disabled, disallowed by policy, wrong profile
+         * re-enabled after a test profile, CAT busy, or undefined. SGP.22 v3.1
+         * §5.7.16.
+         * 
          * @public
          * @readonly
          */

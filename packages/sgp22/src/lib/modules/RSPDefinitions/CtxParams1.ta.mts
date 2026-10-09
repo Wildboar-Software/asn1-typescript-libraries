@@ -10,6 +10,11 @@ import { CtxParamsForCommonAuthentication, _decode_CtxParamsForCommonAuthenticat
  * @summary CtxParams1
  * @description
  * 
+ * Context of ES10b.AuthenticateServer. This module defines only common
+ * authentication (MatchingID plus DeviceInfo). SGP.22 v3.1 Annex H allows
+ * further alternatives, including device change, profile recovery, and
+ * push-service registration, which this module does not declare.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

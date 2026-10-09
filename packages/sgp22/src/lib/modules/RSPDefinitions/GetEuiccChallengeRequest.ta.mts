@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GetEuiccChallengeRequest
  * @description
  * 
+ * ES10b.GetEUICCChallenge request. Empty. Starts an RSP session on the eUICC by
+ * asking it for a fresh challenge. Must be called before
+ * ES10b.AuthenticateServer, which otherwise returns `noSessionContext`. SGP.22
+ * v3.1 §5.7.7 and §5.7.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

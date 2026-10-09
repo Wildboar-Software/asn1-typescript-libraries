@@ -15,6 +15,12 @@ import { ProfileInstallationResultData_finalResult, _decode_ProfileInstallationR
  * @summary ProfileInstallationResultData
  * @description
  * 
+ * Content covered by `euiccSignPIR`. Identifies the session, the Profile, and
+ * the SM-DP+ (the OID from CERT.DPpb), and says whether installation succeeded.
+ * SGP.22 v3.1 §2.5.6. v3.1 names the signature type `EuiccSign` and the
+ * profile-element responses `ppiResponse`; this module keeps the earlier names
+ * `EuiccSignPIR` and `simaResponse`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +42,44 @@ class ProfileInstallationResultData {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * TransactionID the SM-DP+ assigned to this download. SGP.22 v3.1
+         * §2.5.6.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `notificationMetadata`.
+         * @description
+         * 
+         * Sequence number, operation, recipient address, and ICCID of this
+         * installation result, so it can sit in the notification list beside
+         * enable, disable, and delete notifications. SGP.22 v3.1 §2.5.6.
+         * 
          * @public
          * @readonly
          */
         readonly notificationMetadata: NotificationMetadata,
         /**
          * @summary `smdpOid`.
+         * @description
+         * 
+         * OID of the SM-DP+ that bound the package. Same value as in
+         * CERT.DPpb.SIG. SGP.22 v3.1 §2.5.6.
+         * 
          * @public
          * @readonly
          */
         readonly smdpOid: OBJECT_IDENTIFIER,
         /**
          * @summary `finalResult`.
+         * @description
+         * 
+         * `successResult` or `errorResult`. SGP.22 v3.1 §2.5.6.
+         * 
          * @public
          * @readonly
          */

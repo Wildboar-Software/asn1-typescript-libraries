@@ -24,6 +24,15 @@ import { StoreMetadataRequest_iotSpecificMetadata, _decode_StoreMetadataRequest_
  * @summary StoreMetadataRequest
  * @description
  * 
+ * ES8+.StoreMetadata, and also the Profile Metadata returned to the LPA by
+ * ES9+.AuthenticateClient for display and for the profile-policy check. The
+ * eUICC stores the present objects except
+ * `serviceSpecificDataNotStoredInEuicc`. ICCID, profile class, owner, and PPRs
+ * are checked before anything is stored; failure stops installation. The `'88'`
+ * TLVs that carry this command are MACed and not encrypted. SGP.22 v3.1 §5.5.3
+ * and §2.5.4.3. v3.1 adds RPM, enterprise, LPA-proxy, device-change, and other
+ * metadata this module does not include.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,84 +63,158 @@ class StoreMetadataRequest {
     constructor (
         /**
          * @summary `iccid`.
+         * @description
+         * 
+         * Must differ from every installed Profile, and must equal EFICCID.
+         * SGP.22 v3.1 §5.5.3 and §5.5.5.
+         * 
          * @public
          * @readonly
          */
         readonly iccid: Iccid,
         /**
          * @summary `serviceProviderName`.
+         * @description
+         * 
+         * Shown by the LPA. At most 32 UTF-8 characters, not empty. SGP.22 v3.1
+         * §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly serviceProviderName: UTF8String,
         /**
          * @summary `profileName`.
+         * @description
+         * 
+         * Short description from SGP.21. At most 64 UTF-8 characters, not
+         * empty. SGP.22 v3.1 §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly profileName: UTF8String,
         /**
          * @summary `iconType`.
+         * @description
+         * 
+         * Required when `icon` is present. JPG or PNG. SGP.22 v3.1 §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly iconType: OPTIONAL<IconType>,
         /**
          * @summary `icon`.
+         * @description
+         * 
+         * 64 by 64 pixel image, at most 1024 octets. Present only if `iconType`
+         * is present. SGP.22 v3.1 §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly icon: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `profileClass`.
+         * @description
+         * 
+         * Defaults to operational. An unsupported class is
+         * `unsupportedProfileClass`. SGP.22 v3.1 §2.4.5 and §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly profileClass: OPTIONAL<ProfileClass>,
         /**
          * @summary `notificationConfigurationInfo`.
+         * @description
+         * 
+         * Where to send install, enable, disable, and delete notifications. The
+         * same event bit may be repeated with a different FQDN. SGP.22 v3.1
+         * §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly notificationConfigurationInfo: OPTIONAL<NotificationConfigurationInformation[]>,
         /**
          * @summary `profileOwner`.
+         * @description
+         * 
+         * Required when PPRs are present, forbidden when the Profile has no
+         * EFIMSI, and then MCC-MNC must not contain `'E'`. Checked against
+         * EFIMSI and the GID files during LoadProfileElements. SGP.22 v3.1
+         * §5.5.3 and §5.5.5.
+         * 
          * @public
          * @readonly
          */
         readonly profileOwner: OPTIONAL<OperatorId>,
         /**
          * @summary `profilePolicyRules`.
+         * @description
+         * 
+         * The PPRs set in the Profile. Omit it when none are set; omitted means
+         * every PPR bit is zero. Must not be present if the Profile has no
+         * EFIMSI. The eUICC allows them only when the RAT authorises this
+         * owner. Otherwise `pprNotAllowed`. SGP.22 v3.1 §4.4.2 and §2.9.3.1.
+         * 
          * @public
          * @readonly
          */
         readonly profilePolicyRules: OPTIONAL<PprIds>,
         /**
          * @summary `serviceSpecificDataStoredInEuicc`.
+         * @description
+         * 
+         * Vendor data written to the eUICC. Only if
+         * `serviceSpecificDataSupport` is set. SGP.22 v3.1 §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly serviceSpecificDataStoredInEuicc: OPTIONAL<VendorSpecificExtension>,
         /**
          * @summary `serviceSpecificDataNotStoredInEuicc`.
+         * @description
+         * 
+         * Vendor data the LPA may read and the eUICC must not store. Only if
+         * `serviceSpecificDataSupport` is set. SGP.22 v3.1 §5.5.3.
+         * 
          * @public
          * @readonly
          */
         readonly serviceSpecificDataNotStoredInEuicc: OPTIONAL<VendorSpecificExtension>,
         /**
          * @summary `ecallIndication`.
+         * @description
+         * 
+         * Reserved for SGP.32, tag `'9F7B'`. SGP.22 v3.1 §5.5.3 does not define
+         * this component.
+         * 
          * @public
          * @readonly
          */
         readonly ecallIndication: OPTIONAL<BOOLEAN>,
         /**
          * @summary `fallbackAllowed`.
+         * @description
+         * 
+         * Reserved for SGP.32, tag `'9F67'`. SGP.22 v3.1 §5.5.3 does not define
+         * this component.
+         * 
          * @public
          * @readonly
          */
         readonly fallbackAllowed: OPTIONAL<BOOLEAN>,
         /**
          * @summary `iotSpecificMetadata`.
+         * @description
+         * 
+         * Reserved for SGP.32, tag `'BF64'`. Empty in this module. SGP.22 v3.1
+         * §5.5.3 does not define this component.
+         * 
          * @public
          * @readonly
          */

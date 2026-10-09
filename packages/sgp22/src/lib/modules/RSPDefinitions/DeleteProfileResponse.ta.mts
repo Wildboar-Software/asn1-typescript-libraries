@@ -12,6 +12,9 @@ import { _decode_DeleteProfileResponse_deleteResult, _encode_DeleteProfileRespon
  * @summary DeleteProfileResponse
  * @description
  * 
+ * Result of ES10c.DeleteProfile. On success the eUICC generates the configured
+ * delete notifications, except for a Test Profile. SGP.22 v3.1 §5.7.18.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +30,11 @@ class DeleteProfileResponse {
     constructor (
         /**
          * @summary `deleteResult`.
+         * @description
+         * 
+         * `ok`, not found, not disabled, disallowed by policy (PPR2), or
+         * undefined. SGP.22 v3.1 §5.7.18.
+         * 
          * @public
          * @readonly
          */

@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RetrieveNotificationsListResponse_notificationsListResultError
  * @description
  * 
+ * Error alternative of ES10b.RetrieveNotificationsList. This module defines
+ * `undefinedError` (127). SGP.22 v3.1 §5.7.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +27,10 @@ type RetrieveNotificationsListResponse_notificationsListResultError = INTEGER;
 
 /**
  * @summary RetrieveNotificationsListResponse_notificationsListResultError_undefinedError
+ * @description
+ * 
+ * RetrieveNotificationsList failed. SGP.22 v3.1 §5.7.10.
+ * 
  * @constant
  * @type {number}
  */
@@ -32,6 +39,10 @@ const RetrieveNotificationsListResponse_notificationsListResultError_undefinedEr
 
 /**
  * @summary RetrieveNotificationsListResponse_notificationsListResultError_undefinedError
+ * @description
+ * 
+ * RetrieveNotificationsList failed. SGP.22 v3.1 §5.7.10.
+ * 
  * @constant
  * @type {number}
  */

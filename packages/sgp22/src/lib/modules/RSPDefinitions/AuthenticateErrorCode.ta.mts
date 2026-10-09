@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AuthenticateErrorCode
  * @description
  * 
+ * Why the eUICC rejected the RSP Server. SGP.22 v3.1 §5.7.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,6 +24,10 @@ type AuthenticateErrorCode = INTEGER;
 
 /**
  * @summary AuthenticateErrorCode_invalidCertificate
+ * @description
+ * 
+ * The RSP Server certificate chain is invalid. SGP.22 v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -30,6 +36,10 @@ const AuthenticateErrorCode_invalidCertificate: AuthenticateErrorCode = 1; /* LO
 
 /**
  * @summary AuthenticateErrorCode_invalidCertificate
+ * @description
+ * 
+ * The RSP Server certificate chain is invalid. SGP.22 v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -38,6 +48,10 @@ const invalidCertificate: AuthenticateErrorCode = AuthenticateErrorCode_invalidC
 
 /**
  * @summary AuthenticateErrorCode_invalidSignature
+ * @description
+ * 
+ * `serverSignature1` over `serverSigned1` did not verify. SGP.22 v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -46,6 +60,10 @@ const AuthenticateErrorCode_invalidSignature: AuthenticateErrorCode = 2; /* LONG
 
 /**
  * @summary AuthenticateErrorCode_invalidSignature
+ * @description
+ * 
+ * `serverSignature1` over `serverSigned1` did not verify. SGP.22 v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -54,6 +72,11 @@ const invalidSignature: AuthenticateErrorCode = AuthenticateErrorCode_invalidSig
 
 /**
  * @summary AuthenticateErrorCode_unsupportedCurve
+ * @description
+ * 
+ * The server key uses a curve the eUICC does not implement. SGP.22 v3.1
+ * §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -62,6 +85,11 @@ const AuthenticateErrorCode_unsupportedCurve: AuthenticateErrorCode = 3; /* LONG
 
 /**
  * @summary AuthenticateErrorCode_unsupportedCurve
+ * @description
+ * 
+ * The server key uses a curve the eUICC does not implement. SGP.22 v3.1
+ * §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -70,6 +98,10 @@ const unsupportedCurve: AuthenticateErrorCode = AuthenticateErrorCode_unsupporte
 
 /**
  * @summary AuthenticateErrorCode_noSessionContext
+ * @description
+ * 
+ * GetEUICCChallenge has not opened a session. SGP.22 v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -78,6 +110,10 @@ const AuthenticateErrorCode_noSessionContext: AuthenticateErrorCode = 4; /* LONG
 
 /**
  * @summary AuthenticateErrorCode_noSessionContext
+ * @description
+ * 
+ * GetEUICCChallenge has not opened a session. SGP.22 v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -86,6 +122,11 @@ const noSessionContext: AuthenticateErrorCode = AuthenticateErrorCode_noSessionC
 
 /**
  * @summary AuthenticateErrorCode_invalidOid
+ * @description
+ * 
+ * The server certificate is neither CERT.DPauth.SIG nor CERT.DSauth.SIG. SGP.22
+ * v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -94,6 +135,11 @@ const AuthenticateErrorCode_invalidOid: AuthenticateErrorCode = 5; /* LONG_NAMED
 
 /**
  * @summary AuthenticateErrorCode_invalidOid
+ * @description
+ * 
+ * The server certificate is neither CERT.DPauth.SIG nor CERT.DSauth.SIG. SGP.22
+ * v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -102,6 +148,11 @@ const invalidOid: AuthenticateErrorCode = AuthenticateErrorCode_invalidOid; /* S
 
 /**
  * @summary AuthenticateErrorCode_euiccChallengeMismatch
+ * @description
+ * 
+ * `serverSigned1.euiccChallenge` is not the challenge the eUICC issued. SGP.22
+ * v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -110,6 +161,11 @@ const AuthenticateErrorCode_euiccChallengeMismatch: AuthenticateErrorCode = 6; /
 
 /**
  * @summary AuthenticateErrorCode_euiccChallengeMismatch
+ * @description
+ * 
+ * `serverSigned1.euiccChallenge` is not the challenge the eUICC issued. SGP.22
+ * v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -118,6 +174,11 @@ const euiccChallengeMismatch: AuthenticateErrorCode = AuthenticateErrorCode_euic
 
 /**
  * @summary AuthenticateErrorCode_ciPKUnknown
+ * @description
+ * 
+ * The CI public key needed to verify the chain, or the CI key the server asked
+ * the eUICC to sign with, is not available. SGP.22 v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -126,6 +187,11 @@ const AuthenticateErrorCode_ciPKUnknown: AuthenticateErrorCode = 7; /* LONG_NAME
 
 /**
  * @summary AuthenticateErrorCode_ciPKUnknown
+ * @description
+ * 
+ * The CI public key needed to verify the chain, or the CI key the server asked
+ * the eUICC to sign with, is not available. SGP.22 v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -134,6 +200,11 @@ const ciPKUnknown: AuthenticateErrorCode = AuthenticateErrorCode_ciPKUnknown; /*
 
 /**
  * @summary AuthenticateErrorCode_undefinedError
+ * @description
+ * 
+ * AuthenticateServer failed for a reason this enumeration does not name. SGP.22
+ * v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */
@@ -142,6 +213,11 @@ const AuthenticateErrorCode_undefinedError: AuthenticateErrorCode = 127; /* LONG
 
 /**
  * @summary AuthenticateErrorCode_undefinedError
+ * @description
+ * 
+ * AuthenticateServer failed for a reason this enumeration does not name. SGP.22
+ * v3.1 §5.7.13.
+ * 
  * @constant
  * @type {number}
  */

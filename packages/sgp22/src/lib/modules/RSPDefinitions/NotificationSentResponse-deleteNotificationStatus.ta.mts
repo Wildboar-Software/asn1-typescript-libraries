@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NotificationSentResponse_deleteNotificationStatus
  * @description
  * 
+ * `ok` (0), `nothingToDelete` (1), or `undefinedError` (127). SGP.22 v3.1
+ * §5.7.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +29,10 @@ type NotificationSentResponse_deleteNotificationStatus = INTEGER;
 
 /**
  * @summary NotificationSentResponse_deleteNotificationStatus_ok
+ * @description
+ * 
+ * The notification with that sequence number was removed. SGP.22 v3.1 §5.7.11.
+ * 
  * @constant
  * @type {number}
  */
@@ -34,6 +41,10 @@ const NotificationSentResponse_deleteNotificationStatus_ok: NotificationSentResp
 
 /**
  * @summary NotificationSentResponse_deleteNotificationStatus_ok
+ * @description
+ * 
+ * The notification with that sequence number was removed. SGP.22 v3.1 §5.7.11.
+ * 
  * @constant
  * @type {number}
  */
@@ -42,6 +53,10 @@ const ok: NotificationSentResponse_deleteNotificationStatus = NotificationSentRe
 
 /**
  * @summary NotificationSentResponse_deleteNotificationStatus_nothingToDelete
+ * @description
+ * 
+ * No pending notification has that sequence number. SGP.22 v3.1 §5.7.11.
+ * 
  * @constant
  * @type {number}
  */
@@ -50,6 +65,10 @@ const NotificationSentResponse_deleteNotificationStatus_nothingToDelete: Notific
 
 /**
  * @summary NotificationSentResponse_deleteNotificationStatus_nothingToDelete
+ * @description
+ * 
+ * No pending notification has that sequence number. SGP.22 v3.1 §5.7.11.
+ * 
  * @constant
  * @type {number}
  */
@@ -58,6 +77,10 @@ const nothingToDelete: NotificationSentResponse_deleteNotificationStatus = Notif
 
 /**
  * @summary NotificationSentResponse_deleteNotificationStatus_undefinedError
+ * @description
+ * 
+ * The notification was not removed. SGP.22 v3.1 §5.7.11.
+ * 
  * @constant
  * @type {number}
  */
@@ -66,6 +89,10 @@ const NotificationSentResponse_deleteNotificationStatus_undefinedError: Notifica
 
 /**
  * @summary NotificationSentResponse_deleteNotificationStatus_undefinedError
+ * @description
+ * 
+ * The notification was not removed. SGP.22 v3.1 §5.7.11.
+ * 
  * @constant
  * @type {number}
  */

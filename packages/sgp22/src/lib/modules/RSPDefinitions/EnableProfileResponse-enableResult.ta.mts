@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EnableProfileResponse_enableResult
  * @description
  * 
+ * Result code of ES10c.EnableProfile. SGP.22 v3.1 §5.7.16.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +32,11 @@ type EnableProfileResponse_enableResult = INTEGER;
 
 /**
  * @summary EnableProfileResponse_enableResult_ok
+ * @description
+ * 
+ * The enable was accepted. If `refreshFlag` was true, the Profile is not
+ * enabled until REFRESH succeeds. SGP.22 v3.1 §5.7.16.
+ * 
  * @constant
  * @type {number}
  */
@@ -38,6 +45,11 @@ const EnableProfileResponse_enableResult_ok: EnableProfileResponse_enableResult 
 
 /**
  * @summary EnableProfileResponse_enableResult_ok
+ * @description
+ * 
+ * The enable was accepted. If `refreshFlag` was true, the Profile is not
+ * enabled until REFRESH succeeds. SGP.22 v3.1 §5.7.16.
+ * 
  * @constant
  * @type {number}
  */
@@ -46,6 +58,10 @@ const ok: EnableProfileResponse_enableResult = EnableProfileResponse_enableResul
 
 /**
  * @summary EnableProfileResponse_enableResult_iccidOrAidNotFound
+ * @description
+ * 
+ * No Profile has that ICCID or ISD-P AID. SGP.22 v3.1 §5.7.16.
+ * 
  * @constant
  * @type {number}
  */
@@ -54,6 +70,10 @@ const EnableProfileResponse_enableResult_iccidOrAidNotFound: EnableProfileRespon
 
 /**
  * @summary EnableProfileResponse_enableResult_iccidOrAidNotFound
+ * @description
+ * 
+ * No Profile has that ICCID or ISD-P AID. SGP.22 v3.1 §5.7.16.
+ * 
  * @constant
  * @type {number}
  */
@@ -62,6 +82,10 @@ const iccidOrAidNotFound: EnableProfileResponse_enableResult = EnableProfileResp
 
 /**
  * @summary EnableProfileResponse_enableResult_profileNotInDisabledState
+ * @description
+ * 
+ * The target Profile is not disabled. SGP.22 v3.1 §5.7.16.
+ * 
  * @constant
  * @type {number}
  */
@@ -70,6 +94,10 @@ const EnableProfileResponse_enableResult_profileNotInDisabledState: EnableProfil
 
 /**
  * @summary EnableProfileResponse_enableResult_profileNotInDisabledState
+ * @description
+ * 
+ * The target Profile is not disabled. SGP.22 v3.1 §5.7.16.
+ * 
  * @constant
  * @type {number}
  */
@@ -78,6 +106,11 @@ const profileNotInDisabledState: EnableProfileResponse_enableResult = EnableProf
 
 /**
  * @summary EnableProfileResponse_enableResult_disallowedByPolicy
+ * @description
+ * 
+ * PPR1 on the Profile currently enabled on the target port forbids disabling
+ * it. Not applied when the target is a Test Profile. SGP.22 v3.1 §5.7.16.
+ * 
  * @constant
  * @type {number}
  */
@@ -86,6 +119,11 @@ const EnableProfileResponse_enableResult_disallowedByPolicy: EnableProfileRespon
 
 /**
  * @summary EnableProfileResponse_enableResult_disallowedByPolicy
+ * @description
+ * 
+ * PPR1 on the Profile currently enabled on the target port forbids disabling
+ * it. Not applied when the target is a Test Profile. SGP.22 v3.1 §5.7.16.
+ * 
  * @constant
  * @type {number}
  */
@@ -94,6 +132,12 @@ const disallowedByPolicy: EnableProfileResponse_enableResult = EnableProfileResp
 
 /**
  * @summary EnableProfileResponse_enableResult_wrongProfileReenabling
+ * @description
+ * 
+ * A Test Profile is enabled, and the target is neither another Test Profile nor
+ * the operational Profile that was enabled before the Test Profile. SGP.22 v3.1
+ * §5.7.16.
+ * 
  * @constant
  * @type {number}
  */
@@ -102,6 +146,12 @@ const EnableProfileResponse_enableResult_wrongProfileReenabling: EnableProfileRe
 
 /**
  * @summary EnableProfileResponse_enableResult_wrongProfileReenabling
+ * @description
+ * 
+ * A Test Profile is enabled, and the target is neither another Test Profile nor
+ * the operational Profile that was enabled before the Test Profile. SGP.22 v3.1
+ * §5.7.16.
+ * 
  * @constant
  * @type {number}
  */
@@ -110,6 +160,11 @@ const wrongProfileReenabling: EnableProfileResponse_enableResult = EnableProfile
 
 /**
  * @summary EnableProfileResponse_enableResult_catBusy
+ * @description
+ * 
+ * A proactive CAT session is open on the target port, and the eUICC did not
+ * terminate it. The Device may end that session and retry. SGP.22 v3.1 §5.7.16.
+ * 
  * @constant
  * @type {number}
  */
@@ -118,6 +173,11 @@ const EnableProfileResponse_enableResult_catBusy: EnableProfileResponse_enableRe
 
 /**
  * @summary EnableProfileResponse_enableResult_catBusy
+ * @description
+ * 
+ * A proactive CAT session is open on the target port, and the eUICC did not
+ * terminate it. The Device may end that session and retry. SGP.22 v3.1 §5.7.16.
+ * 
  * @constant
  * @type {number}
  */
@@ -126,6 +186,10 @@ const catBusy: EnableProfileResponse_enableResult = EnableProfileResponse_enable
 
 /**
  * @summary EnableProfileResponse_enableResult_undefinedError
+ * @description
+ * 
+ * Enable failed for another reason. SGP.22 v3.1 §5.7.16.
+ * 
  * @constant
  * @type {number}
  */
@@ -134,6 +198,10 @@ const EnableProfileResponse_enableResult_undefinedError: EnableProfileResponse_e
 
 /**
  * @summary EnableProfileResponse_enableResult_undefinedError
+ * @description
+ * 
+ * Enable failed for another reason. SGP.22 v3.1 §5.7.16.
+ * 
  * @constant
  * @type {number}
  */

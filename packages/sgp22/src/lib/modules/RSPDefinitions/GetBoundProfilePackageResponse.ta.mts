@@ -12,6 +12,11 @@ import { GetBoundProfilePackageResponse_getBoundProfilePackageError, _decode_Get
  * @summary GetBoundProfilePackageResponse
  * @description
  * 
+ * The Bound Profile Package, or an error (bad eUICC signature, missing or wrong
+ * Confirmation Code, retries exceeded, rebinding refused, unknown
+ * TransactionID). SGP.22 v3.1 §5.6.2. Value 6 is `deprecated` here; v3.1
+ * Annex H names that value `downloadOrderExpired`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

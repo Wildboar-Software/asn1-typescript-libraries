@@ -12,6 +12,10 @@ import { AuthenticateResponseError, _decode_AuthenticateResponseError, _encode_A
  * @summary AuthenticateServerResponse
  * @description
  * 
+ * ES10b.AuthenticateServer response. Success carries the eUICC signature and
+ * certificate chain. Failure carries an `AuthenticateErrorCode` and does not
+ * reveal `EUICCInfo2`. SGP.22 v3.1 §5.7.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,6 +12,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Octet8
  * @description
  * 
+ * Eight octets. `DeviceInfo.imei` is the IMEI including the check digit, in
+ * telephony BCD, with the check digit in the low nibble of the last octet and
+ * an 'F' filler in the high nibble. SGP.22 v3.1 §4.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

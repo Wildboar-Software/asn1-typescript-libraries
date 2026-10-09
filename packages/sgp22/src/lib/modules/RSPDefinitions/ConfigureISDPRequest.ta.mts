@@ -12,6 +12,12 @@ import { DpProprietaryData, _decode_DpProprietaryData, _encode_DpProprietaryData
  * @summary ConfigureISDPRequest
  * @description
  * 
+ * ES8+.ConfigureISDP. The eUICC creates the ISD-P, assigns an AID from the
+ * range reserved in SGP.02, and stores the optional SM-DP+ proprietary data.
+ * Proprietary data longer than 128 octets including its tag and length is
+ * `incorrectInputValues`. The TLV is encrypted and MACed with the session keys.
+ * SGP.22 v3.1 §5.5.2 and §2.5.4.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +33,12 @@ class ConfigureISDPRequest {
     constructor (
         /**
          * @summary `dpProprietaryData`.
+         * @description
+         * 
+         * Optional SM-DP+ data stored in the new ISD-P. Longer than 128 octets
+         * including tag and length is `incorrectInputValues`. SGP.22 v3.1
+         * §5.5.2.
+         * 
          * @public
          * @readonly
          */

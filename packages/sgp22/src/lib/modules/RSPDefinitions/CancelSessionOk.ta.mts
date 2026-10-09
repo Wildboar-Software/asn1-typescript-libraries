@@ -10,6 +10,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CancelSessionOk
  * @description
  * 
+ * Successful ES9+.CancelSession. No fields. SGP.22 v3.1 §5.6.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

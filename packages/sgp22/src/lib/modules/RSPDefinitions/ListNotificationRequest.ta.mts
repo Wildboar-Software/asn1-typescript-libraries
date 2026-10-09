@@ -12,6 +12,10 @@ import { NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent
  * @summary ListNotificationRequest
  * @description
  * 
+ * ES10b.ListNotification request. An omitted event returns every pending
+ * notification's metadata; a present event filters by that bit. SGP.22 v3.1
+ * §5.7.9. The eUICC keeps notifications until the LPA confirms they were sent.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +31,11 @@ class ListNotificationRequest {
     constructor (
         /**
          * @summary `profileManagementOperation`.
+         * @description
+         * 
+         * If present, only notifications of these events are listed. If
+         * omitted, all pending notifications are listed. SGP.22 v3.1 §5.7.9.
+         * 
          * @public
          * @readonly
          */

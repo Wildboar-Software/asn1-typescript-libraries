@@ -14,6 +14,12 @@ import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../
  * @summary SmdpSigned2
  * @description
  * 
+ * Data signed by the SM-DP+ Profile Package Binding key and checked by the
+ * eUICC in ES10b.PrepareDownload. `ccRequiredFlag` tells the LPA to collect a
+ * Confirmation Code from the End User before continuing. `bppEuiccOtpk`, when
+ * present, is an otPK.EUICC.KA already used to bind a BPP, so the eUICC can
+ * reuse that key pair instead of generating a new one. SGP.22 v3.1 §5.7.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +37,35 @@ class SmdpSigned2 {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         * 
+         * Session id the SM-DP+ assigned. SGP.22 v3.1 §5.7.5.
+         * 
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `ccRequiredFlag`.
+         * @description
+         * 
+         * True when the End User must enter the Confirmation Code before the
+         * LPA calls GetBoundProfilePackage. The code is distributed out of
+         * band. SGP.22 v3.1 §4.7 and §5.7.5.
+         * 
          * @public
          * @readonly
          */
         readonly ccRequiredFlag: BOOLEAN,
         /**
          * @summary `bppEuiccOtpk`.
+         * @description
+         * 
+         * otPK.EUICC.KA already used to bind a BPP for this eUICC, tag
+         * `'5F49'`. Present when the SM-DP+ wants the eUICC to reuse that key
+         * pair so a previously generated package can be re-signed rather than
+         * rebuilt. SGP.22 v3.1 §5.6.2 and §5.7.5.
+         * 
          * @public
          * @readonly
          */

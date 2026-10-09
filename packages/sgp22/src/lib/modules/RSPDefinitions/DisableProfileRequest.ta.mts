@@ -13,6 +13,12 @@ import { DisableProfileRequest_profileIdentifier, _decode_DisableProfileRequest_
  * @summary DisableProfileRequest
  * @description
  * 
+ * ES10c.DisableProfile. Disables the identified Profile. The same `refreshFlag`
+ * rules as EnableProfile apply. PPR1, if enforced, makes this
+ * `disallowedByPolicy`. A provisioning Profile is not disabled merely because
+ * an operational Profile with PPR1 is enabled. SGP.22 v3.1 §5.7.17 and
+ * §2.4.5.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +38,20 @@ class DisableProfileRequest {
     constructor (
         /**
          * @summary `profileIdentifier`.
+         * @description
+         * 
+         * ISD-P AID or ICCID of the Profile to disable. SGP.22 v3.1 §5.7.17.
+         * 
          * @public
          * @readonly
          */
         readonly profileIdentifier: DisableProfileRequest_profileIdentifier,
         /**
          * @summary `refreshFlag`.
+         * @description
+         * 
+         * Same REFRESH rule as EnableProfile. SGP.22 v3.1 §5.7.17.
+         * 
          * @public
          * @readonly
          */

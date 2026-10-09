@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TotalPartialCrlNumber
  * @description
  * 
+ * Integer value of the v2 total partial-CRL count extension. SGP.22 v3.1 does
+ * not define this type. See `id-rsp-totalPartialCrlNumber`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

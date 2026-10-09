@@ -13,6 +13,11 @@ import { AuthenticateClientOkAcr, _decode_AuthenticateClientOkAcr, _encode_Authe
  * @summary AuthenticateClientResponseEs9
  * @description
  * 
+ * ES9+.AuthenticateClient response. `authenticateClientOk` continues a
+ * download. `authenticateClientOkAcr` returns metadata when Activation Code
+ * retrieval applies; v3.1 §5.6.3 does not define that alternative. The error
+ * codes are the ASN.1 status of the function. SGP.22 v3.1 §5.6.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

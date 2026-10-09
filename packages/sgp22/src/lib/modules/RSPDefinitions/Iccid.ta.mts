@@ -13,6 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Iccid
  * @description
  * 
+ * Integrated Circuit Card Identifier, ten octets, coded as in EFICCID, and
+ * tagged `'5A'` (APPLICATION 26). It identifies the Profile. The value stored
+ * in Profile Metadata must equal EFICCID or installation fails with
+ * `installFailedDueToDataMismatch`. SGP.22 v3.1 Annex H and §5.5.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,10 @@ import { id_rsp } from "../RSPDefinitions/id-rsp.va.mjs";
  * @summary id_rsp_cert_objects
  * @description
  * 
+ * Certificate objects under `id-rsp`. SGP.22 v3.1 Annex H notes that value 0
+ * under this arc was assigned in v2 (this module's `id-rspExt`). v3 places RSP
+ * certificate extensions at `{id-rsp-cert-objects 2}`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

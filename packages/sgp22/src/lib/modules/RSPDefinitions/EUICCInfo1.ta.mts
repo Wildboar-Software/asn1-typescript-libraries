@@ -13,6 +13,15 @@ import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDef
  * @summary EUICCInfo1
  * @description
  * 
+ * Subset of eUICC information that may be sent to an RSP Server before that
+ * server is authenticated. It carries the supported SGP.22 version and the eSIM
+ * CA Root CA public-key identifiers the eUICC can use to verify signatures and
+ * to create them. The server uses the lists to pick CERT.DPauth.SIG or
+ * CERT.DSauth.SIG and to tell the eUICC which CI key to sign with. SGP.22 v3.1
+ * §4.3 and §5.6.1. v3.1 adds `euiccCiPKIdListForSigningV3`,
+ * `euiccRspCapability`, and `highestSvn`, which this module places only on
+ * `EUICCInfo2` (and marks unused).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +39,39 @@ class EUICCInfo1 {
     constructor (
         /**
          * @summary `svn`.
+         * @description
+         * 
+         * SGP.22 version the eUICC supports. v3.1 Annex H names the
+         * corresponding field `lowestSvn`. The SM-DP+ rejects a version it does
+         * not support. SGP.22 v3.1 §4.3 and §5.6.1.
+         * 
          * @public
          * @readonly
          */
         readonly svn: VersionType,
         /**
          * @summary `euiccCiPKIdListForVerification`.
+         * @description
+         * 
+         * Subject key identifiers of eSIM CA Root CA keys the eUICC can use to
+         * verify signatures. The server must choose a CERT.DPauth.SIG or
+         * CERT.DSauth.SIG that chains to one of these. SGP.22 v3.1 §4.3 and
+         * §5.6.1.
+         * 
          * @public
          * @readonly
          */
         readonly euiccCiPKIdListForVerification: OCTET_STRING[],
         /**
          * @summary `euiccCiPKIdListForSigning`.
+         * @description
+         * 
+         * Subject key identifiers of eSIM CA Root CA keys under which the eUICC
+         * can create signatures that a Variant O chain can verify. The server
+         * picks one and returns it as `euiccCiPKIdToBeUsed`. SGP.22 v3.1 §4.3.
+         * v3.1 separates Variant Ov3/A/B/C keys into
+         * `euiccCiPKIdListForSigningV3`.
+         * 
          * @public
          * @readonly
          */
