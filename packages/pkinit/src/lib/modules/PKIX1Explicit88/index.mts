@@ -3,6 +3,7 @@ export * from "./AlgorithmIdentifier.ta.mjs";
 export * from "./Attribute.ta.mjs";
 export * from "./AttributeType.ta.mjs";
 export * from "./AttributeTypeAndValue.ta.mjs";
+export * from "./AttributeValue.ta.mjs";
 export * from "./BuiltInDomainDefinedAttribute.ta.mjs";
 export * from "./BuiltInDomainDefinedAttributes.ta.mjs";
 export * from "./BuiltInStandardAttributes.ta.mjs";
