@@ -110,8 +110,8 @@ const ServerPart_updateStatus_failure: ServerPart_updateStatus = 3; /* LONG_NAME
  */
 export
 const failure: ServerPart_updateStatus = ServerPart_updateStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServerPart_updateStatus = $._decodeInteger;
-export const _encode_ServerPart_updateStatus = $._encodeInteger;
+export const _decode_ServerPart_updateStatus: $.ASN1Decoder<ServerPart_updateStatus> = $._decodeInteger;
+export const _encode_ServerPart_updateStatus: $.ASN1Encoder<ServerPart_updateStatus> = $._encodeInteger;
 
 
 /* eslint-enable */

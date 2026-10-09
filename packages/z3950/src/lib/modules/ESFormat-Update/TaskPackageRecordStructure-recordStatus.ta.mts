@@ -143,8 +143,8 @@ const TaskPackageRecordStructure_recordStatus_failure: TaskPackageRecordStructur
  */
 export
 const failure: TaskPackageRecordStructure_recordStatus = TaskPackageRecordStructure_recordStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_TaskPackageRecordStructure_recordStatus = $._decodeInteger;
-export const _encode_TaskPackageRecordStructure_recordStatus = $._encodeInteger;
+export const _decode_TaskPackageRecordStructure_recordStatus: $.ASN1Decoder<TaskPackageRecordStructure_recordStatus> = $._decodeInteger;
+export const _encode_TaskPackageRecordStructure_recordStatus: $.ASN1Encoder<TaskPackageRecordStructure_recordStatus> = $._encodeInteger;
 
 
 /* eslint-enable */

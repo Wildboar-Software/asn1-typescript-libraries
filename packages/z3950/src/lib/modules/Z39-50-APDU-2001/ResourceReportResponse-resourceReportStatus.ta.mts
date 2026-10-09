@@ -236,8 +236,8 @@ const ResourceReportResponse_resourceReportStatus_failure_6: ResourceReportRespo
  */
 export
 const failure_6: ResourceReportResponse_resourceReportStatus = ResourceReportResponse_resourceReportStatus_failure_6; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ResourceReportResponse_resourceReportStatus = $._decodeInteger;
-export const _encode_ResourceReportResponse_resourceReportStatus = $._encodeInteger;
+export const _decode_ResourceReportResponse_resourceReportStatus: $.ASN1Decoder<ResourceReportResponse_resourceReportStatus> = $._decodeInteger;
+export const _encode_ResourceReportResponse_resourceReportStatus: $.ASN1Encoder<ResourceReportResponse_resourceReportStatus> = $._encodeInteger;
 
 
 /* eslint-enable */

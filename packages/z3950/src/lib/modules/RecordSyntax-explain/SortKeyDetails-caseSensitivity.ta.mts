@@ -111,8 +111,8 @@ const SortKeyDetails_caseSensitivity_default_no: SortKeyDetails_caseSensitivity 
  */
 export
 const default_no: SortKeyDetails_caseSensitivity = SortKeyDetails_caseSensitivity_default_no; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_SortKeyDetails_caseSensitivity = $._decodeInteger;
-export const _encode_SortKeyDetails_caseSensitivity = $._encodeInteger;
+export const _decode_SortKeyDetails_caseSensitivity: $.ASN1Decoder<SortKeyDetails_caseSensitivity> = $._decodeInteger;
+export const _encode_SortKeyDetails_caseSensitivity: $.ASN1Encoder<SortKeyDetails_caseSensitivity> = $._encodeInteger;
 
 
 /* eslint-enable */

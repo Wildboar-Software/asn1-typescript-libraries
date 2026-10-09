@@ -106,8 +106,8 @@ const TriggerResourceControlRequest_requestedAction_cancel: TriggerResourceContr
  */
 export
 const cancel: TriggerResourceControlRequest_requestedAction = TriggerResourceControlRequest_requestedAction_cancel; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_TriggerResourceControlRequest_requestedAction = $._decodeInteger;
-export const _encode_TriggerResourceControlRequest_requestedAction = $._encodeInteger;
+export const _decode_TriggerResourceControlRequest_requestedAction: $.ASN1Decoder<TriggerResourceControlRequest_requestedAction> = $._decodeInteger;
+export const _encode_TriggerResourceControlRequest_requestedAction: $.ASN1Encoder<TriggerResourceControlRequest_requestedAction> = $._encodeInteger;
 
 
 /* eslint-enable */

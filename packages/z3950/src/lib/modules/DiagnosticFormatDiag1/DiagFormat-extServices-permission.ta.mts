@@ -74,8 +74,8 @@ const DiagFormat_extServices_permission_modifyDelete: DiagFormat_extServices_per
  */
 export
 const modifyDelete: DiagFormat_extServices_permission = DiagFormat_extServices_permission_modifyDelete; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DiagFormat_extServices_permission = $._decodeInteger;
-export const _encode_DiagFormat_extServices_permission = $._encodeInteger;
+export const _decode_DiagFormat_extServices_permission: $.ASN1Decoder<DiagFormat_extServices_permission> = $._decodeInteger;
+export const _encode_DiagFormat_extServices_permission: $.ASN1Encoder<DiagFormat_extServices_permission> = $._encodeInteger;
 
 
 /* eslint-enable */

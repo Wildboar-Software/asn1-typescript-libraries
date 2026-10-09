@@ -95,8 +95,8 @@ const Usage_type_licensePointer: Usage_type = 3; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const licensePointer: Usage_type = Usage_type_licensePointer; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_Usage_type = $._decodeInteger;
-export const _encode_Usage_type = $._encodeInteger;
+export const _decode_Usage_type: $.ASN1Decoder<Usage_type> = $._decodeInteger;
+export const _encode_Usage_type: $.ASN1Encoder<Usage_type> = $._encodeInteger;
 
 
 /* eslint-enable */

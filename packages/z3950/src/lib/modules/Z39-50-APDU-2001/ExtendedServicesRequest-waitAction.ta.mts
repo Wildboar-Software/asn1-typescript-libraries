@@ -134,8 +134,8 @@ const ExtendedServicesRequest_waitAction_dontReturnPackage: ExtendedServicesRequ
  */
 export
 const dontReturnPackage: ExtendedServicesRequest_waitAction = ExtendedServicesRequest_waitAction_dontReturnPackage; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ExtendedServicesRequest_waitAction = $._decodeInteger;
-export const _encode_ExtendedServicesRequest_waitAction = $._encodeInteger;
+export const _decode_ExtendedServicesRequest_waitAction: $.ASN1Decoder<ExtendedServicesRequest_waitAction> = $._decodeInteger;
+export const _encode_ExtendedServicesRequest_waitAction: $.ASN1Encoder<ExtendedServicesRequest_waitAction> = $._encodeInteger;
 
 
 /* eslint-enable */

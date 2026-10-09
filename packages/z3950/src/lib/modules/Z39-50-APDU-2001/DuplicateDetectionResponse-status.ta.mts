@@ -76,8 +76,8 @@ const DuplicateDetectionResponse_status_failure: DuplicateDetectionResponse_stat
  */
 export
 const failure: DuplicateDetectionResponse_status = DuplicateDetectionResponse_status_failure; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DuplicateDetectionResponse_status = $._decodeInteger;
-export const _encode_DuplicateDetectionResponse_status = $._encodeInteger;
+export const _decode_DuplicateDetectionResponse_status: $.ASN1Decoder<DuplicateDetectionResponse_status> = $._decodeInteger;
+export const _encode_DuplicateDetectionResponse_status: $.ASN1Encoder<DuplicateDetectionResponse_status> = $._encodeInteger;
 
 
 /* eslint-enable */

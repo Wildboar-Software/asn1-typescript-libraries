@@ -113,8 +113,8 @@ const TermListInfo_termLists_Item_searchCost_filter: TermListInfo_termLists_Item
  */
 export
 const filter: TermListInfo_termLists_Item_searchCost = TermListInfo_termLists_Item_searchCost_filter; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_TermListInfo_termLists_Item_searchCost = $._decodeInteger;
-export const _encode_TermListInfo_termLists_Item_searchCost = $._encodeInteger;
+export const _decode_TermListInfo_termLists_Item_searchCost: $.ASN1Decoder<TermListInfo_termLists_Item_searchCost> = $._decodeInteger;
+export const _encode_TermListInfo_termLists_Item_searchCost: $.ASN1Encoder<TermListInfo_termLists_Item_searchCost> = $._encodeInteger;
 
 
 /* eslint-enable */

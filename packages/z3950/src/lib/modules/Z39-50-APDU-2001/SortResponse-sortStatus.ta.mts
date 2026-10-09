@@ -101,8 +101,8 @@ const SortResponse_sortStatus_failure: SortResponse_sortStatus = 2; /* LONG_NAME
  */
 export
 const failure: SortResponse_sortStatus = SortResponse_sortStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_SortResponse_sortStatus = $._decodeInteger;
-export const _encode_SortResponse_sortStatus = $._encodeInteger;
+export const _decode_SortResponse_sortStatus: $.ASN1Decoder<SortResponse_sortStatus> = $._decodeInteger;
+export const _encode_SortResponse_sortStatus: $.ASN1Encoder<SortResponse_sortStatus> = $._encodeInteger;
 
 
 /* eslint-enable */

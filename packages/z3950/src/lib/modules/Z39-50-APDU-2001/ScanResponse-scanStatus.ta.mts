@@ -210,8 +210,8 @@ const ScanResponse_scanStatus_failure: ScanResponse_scanStatus = 6; /* LONG_NAME
  */
 export
 const failure: ScanResponse_scanStatus = ScanResponse_scanStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ScanResponse_scanStatus = $._decodeInteger;
-export const _encode_ScanResponse_scanStatus = $._encodeInteger;
+export const _decode_ScanResponse_scanStatus: $.ASN1Decoder<ScanResponse_scanStatus> = $._decodeInteger;
+export const _encode_ScanResponse_scanStatus: $.ASN1Encoder<ScanResponse_scanStatus> = $._encodeInteger;
 
 
 /* eslint-enable */

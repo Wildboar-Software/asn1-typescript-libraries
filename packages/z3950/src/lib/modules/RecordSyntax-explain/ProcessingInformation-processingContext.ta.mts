@@ -144,8 +144,8 @@ const ProcessingInformation_processingContext_record_handling: ProcessingInforma
  */
 export
 const record_handling: ProcessingInformation_processingContext = ProcessingInformation_processingContext_record_handling; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ProcessingInformation_processingContext = $._decodeInteger;
-export const _encode_ProcessingInformation_processingContext = $._encodeInteger;
+export const _decode_ProcessingInformation_processingContext: $.ASN1Decoder<ProcessingInformation_processingContext> = $._decodeInteger;
+export const _encode_ProcessingInformation_processingContext: $.ASN1Encoder<ProcessingInformation_processingContext> = $._encodeInteger;
 
 
 /* eslint-enable */

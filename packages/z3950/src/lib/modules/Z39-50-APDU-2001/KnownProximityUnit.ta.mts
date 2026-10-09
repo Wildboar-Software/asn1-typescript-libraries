@@ -310,8 +310,8 @@ const KnownProximityUnit_byte: KnownProximityUnit = 11; /* LONG_NAMED_INTEGER_VA
  */
 export
 const byte: KnownProximityUnit = KnownProximityUnit_byte; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_KnownProximityUnit = $._decodeInteger;
-export const _encode_KnownProximityUnit = $._encodeInteger;
+export const _decode_KnownProximityUnit: $.ASN1Decoder<KnownProximityUnit> = $._decodeInteger;
+export const _encode_KnownProximityUnit: $.ASN1Encoder<KnownProximityUnit> = $._encodeInteger;
 
 
 /* eslint-enable */

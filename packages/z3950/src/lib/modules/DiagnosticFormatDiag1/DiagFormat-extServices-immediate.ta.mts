@@ -101,8 +101,8 @@ const DiagFormat_extServices_immediate_parameters: DiagFormat_extServices_immedi
  */
 export
 const parameters: DiagFormat_extServices_immediate = DiagFormat_extServices_immediate_parameters; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DiagFormat_extServices_immediate = $._decodeInteger;
-export const _encode_DiagFormat_extServices_immediate = $._encodeInteger;
+export const _decode_DiagFormat_extServices_immediate: $.ASN1Decoder<DiagFormat_extServices_immediate> = $._decodeInteger;
+export const _encode_DiagFormat_extServices_immediate: $.ASN1Encoder<DiagFormat_extServices_immediate> = $._encodeInteger;
 
 
 /* eslint-enable */

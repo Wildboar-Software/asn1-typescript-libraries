@@ -25,8 +25,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type InternationalString = GeneralString; // GeneralString
-export const _decode_InternationalString = $._decodeGeneralString;
-export const _encode_InternationalString = $._encodeGeneralString;
+export const _decode_InternationalString: $.ASN1Decoder<InternationalString> = $._decodeGeneralString;
+export const _encode_InternationalString: $.ASN1Encoder<InternationalString> = $._encodeGeneralString;
 
 
 /* eslint-enable */

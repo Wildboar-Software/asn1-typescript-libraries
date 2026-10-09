@@ -73,8 +73,8 @@ const DiagFormat_sort_key_duplicate: DiagFormat_sort_key = 2; /* LONG_NAMED_INTE
  */
 export
 const duplicate: DiagFormat_sort_key = DiagFormat_sort_key_duplicate; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DiagFormat_sort_key = $._decodeInteger;
-export const _encode_DiagFormat_sort_key = $._encodeInteger;
+export const _decode_DiagFormat_sort_key: $.ASN1Decoder<DiagFormat_sort_key> = $._decodeInteger;
+export const _encode_DiagFormat_sort_key: $.ASN1Encoder<DiagFormat_sort_key> = $._encodeInteger;
 
 
 /* eslint-enable */

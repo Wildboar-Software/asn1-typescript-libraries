@@ -244,8 +244,8 @@ const PrimitiveDataType_noneOfTheAbove: PrimitiveDataType = 100; /* LONG_NAMED_I
  */
 export
 const noneOfTheAbove: PrimitiveDataType = PrimitiveDataType_noneOfTheAbove; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_PrimitiveDataType = $._decodeInteger;
-export const _encode_PrimitiveDataType = $._encodeInteger;
+export const _decode_PrimitiveDataType: $.ASN1Decoder<PrimitiveDataType> = $._decodeInteger;
+export const _encode_PrimitiveDataType: $.ASN1Encoder<PrimitiveDataType> = $._encodeInteger;
 
 
 /* eslint-enable */

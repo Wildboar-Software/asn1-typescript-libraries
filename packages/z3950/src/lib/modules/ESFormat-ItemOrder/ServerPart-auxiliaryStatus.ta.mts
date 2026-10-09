@@ -170,8 +170,8 @@ const ServerPart_auxiliaryStatus_filledCopyright: ServerPart_auxiliaryStatus = 5
  */
 export
 const filledCopyright: ServerPart_auxiliaryStatus = ServerPart_auxiliaryStatus_filledCopyright; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServerPart_auxiliaryStatus = $._decodeInteger;
-export const _encode_ServerPart_auxiliaryStatus = $._encodeInteger;
+export const _decode_ServerPart_auxiliaryStatus: $.ASN1Decoder<ServerPart_auxiliaryStatus> = $._decodeInteger;
+export const _encode_ServerPart_auxiliaryStatus: $.ASN1Encoder<ServerPart_auxiliaryStatus> = $._encodeInteger;
 
 
 /* eslint-enable */

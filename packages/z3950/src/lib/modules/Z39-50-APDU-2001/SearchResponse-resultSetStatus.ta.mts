@@ -106,8 +106,8 @@ const SearchResponse_resultSetStatus_none: SearchResponse_resultSetStatus = 3; /
  */
 export
 const none: SearchResponse_resultSetStatus = SearchResponse_resultSetStatus_none; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_SearchResponse_resultSetStatus = $._decodeInteger;
-export const _encode_SearchResponse_resultSetStatus = $._encodeInteger;
+export const _decode_SearchResponse_resultSetStatus: $.ASN1Decoder<SearchResponse_resultSetStatus> = $._decodeInteger;
+export const _encode_SearchResponse_resultSetStatus: $.ASN1Encoder<SearchResponse_resultSetStatus> = $._encodeInteger;
 
 
 /* eslint-enable */

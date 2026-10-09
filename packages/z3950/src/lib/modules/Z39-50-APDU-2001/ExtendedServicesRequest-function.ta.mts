@@ -105,8 +105,8 @@ const ExtendedServicesRequest_function_modify: ExtendedServicesRequest_function 
  */
 export
 const modify: ExtendedServicesRequest_function = ExtendedServicesRequest_function_modify; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ExtendedServicesRequest_function = $._decodeInteger;
-export const _encode_ExtendedServicesRequest_function = $._encodeInteger;
+export const _decode_ExtendedServicesRequest_function: $.ASN1Decoder<ExtendedServicesRequest_function> = $._decodeInteger;
+export const _encode_ExtendedServicesRequest_function: $.ASN1Encoder<ExtendedServicesRequest_function> = $._encodeInteger;
 
 
 /* eslint-enable */

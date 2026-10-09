@@ -126,8 +126,8 @@ const DiagFormat_scan_posInResponse_other: DiagFormat_scan_posInResponse = 4; /*
  */
 export
 const other: DiagFormat_scan_posInResponse = DiagFormat_scan_posInResponse_other; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DiagFormat_scan_posInResponse = $._decodeInteger;
-export const _encode_DiagFormat_scan_posInResponse = $._encodeInteger;
+export const _decode_DiagFormat_scan_posInResponse: $.ASN1Decoder<DiagFormat_scan_posInResponse> = $._decodeInteger;
+export const _encode_DiagFormat_scan_posInResponse: $.ASN1Encoder<DiagFormat_scan_posInResponse> = $._encodeInteger;
 
 
 /* eslint-enable */

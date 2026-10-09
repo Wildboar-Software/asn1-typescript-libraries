@@ -25,8 +25,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AttributeSetId = OBJECT_IDENTIFIER; // ObjectIdentifierType
-export const _decode_AttributeSetId = $._decodeObjectIdentifier;
-export const _encode_AttributeSetId = $._encodeObjectIdentifier;
+export const _decode_AttributeSetId: $.ASN1Decoder<AttributeSetId> = $._decodeObjectIdentifier;
+export const _encode_AttributeSetId: $.ASN1Encoder<AttributeSetId> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

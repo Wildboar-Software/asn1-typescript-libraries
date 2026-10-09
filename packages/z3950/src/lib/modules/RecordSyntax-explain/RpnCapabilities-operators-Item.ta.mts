@@ -111,8 +111,8 @@ const RpnCapabilities_operators_Item_prox: RpnCapabilities_operators_Item = 3; /
  */
 export
 const prox: RpnCapabilities_operators_Item = RpnCapabilities_operators_Item_prox; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_RpnCapabilities_operators_Item = $._decodeInteger;
-export const _encode_RpnCapabilities_operators_Item = $._encodeInteger;
+export const _decode_RpnCapabilities_operators_Item: $.ASN1Decoder<RpnCapabilities_operators_Item> = $._decodeInteger;
+export const _encode_RpnCapabilities_operators_Item: $.ASN1Encoder<RpnCapabilities_operators_Item> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -80,8 +80,8 @@ const DeleteResultSetRequest_deleteFunction_all: DeleteResultSetRequest_deleteFu
  */
 export
 const all: DeleteResultSetRequest_deleteFunction = DeleteResultSetRequest_deleteFunction_all; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DeleteResultSetRequest_deleteFunction = $._decodeInteger;
-export const _encode_DeleteResultSetRequest_deleteFunction = $._encodeInteger;
+export const _decode_DeleteResultSetRequest_deleteFunction: $.ASN1Decoder<DeleteResultSetRequest_deleteFunction> = $._decodeInteger;
+export const _encode_DeleteResultSetRequest_deleteFunction: $.ASN1Encoder<DeleteResultSetRequest_deleteFunction> = $._encodeInteger;
 
 
 /* eslint-enable */

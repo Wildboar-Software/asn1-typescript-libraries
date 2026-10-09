@@ -131,8 +131,8 @@ const SortKeySpec_sortRelation_descendingByfrequency: SortKeySpec_sortRelation =
  */
 export
 const descendingByfrequency: SortKeySpec_sortRelation = SortKeySpec_sortRelation_descendingByfrequency; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_SortKeySpec_sortRelation = $._decodeInteger;
-export const _encode_SortKeySpec_sortRelation = $._encodeInteger;
+export const _decode_SortKeySpec_sortRelation: $.ASN1Decoder<SortKeySpec_sortRelation> = $._decodeInteger;
+export const _encode_SortKeySpec_sortRelation: $.ASN1Encoder<SortKeySpec_sortRelation> = $._encodeInteger;
 
 
 /* eslint-enable */

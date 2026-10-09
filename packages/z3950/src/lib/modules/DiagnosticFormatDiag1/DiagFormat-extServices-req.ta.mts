@@ -131,8 +131,8 @@ const DiagFormat_extServices_req_type_: DiagFormat_extServices_req = 4; /* LONG_
  */
 export
 const type_: DiagFormat_extServices_req = DiagFormat_extServices_req_type_; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DiagFormat_extServices_req = $._decodeInteger;
-export const _encode_DiagFormat_extServices_req = $._encodeInteger;
+export const _decode_DiagFormat_extServices_req: $.ASN1Decoder<DiagFormat_extServices_req> = $._decodeInteger;
+export const _encode_DiagFormat_extServices_req: $.ASN1Encoder<DiagFormat_extServices_req> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -23,8 +23,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ResourceReportId = OBJECT_IDENTIFIER; // ObjectIdentifierType
-export const _decode_ResourceReportId = $._decodeObjectIdentifier;
-export const _encode_ResourceReportId = $._encodeObjectIdentifier;
+export const _decode_ResourceReportId: $.ASN1Decoder<ResourceReportId> = $._decodeObjectIdentifier;
+export const _encode_ResourceReportId: $.ASN1Encoder<ResourceReportId> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

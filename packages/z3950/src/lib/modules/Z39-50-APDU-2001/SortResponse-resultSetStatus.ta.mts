@@ -129,8 +129,8 @@ const SortResponse_resultSetStatus_none: SortResponse_resultSetStatus = 4; /* LO
  */
 export
 const none: SortResponse_resultSetStatus = SortResponse_resultSetStatus_none; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_SortResponse_resultSetStatus = $._decodeInteger;
-export const _encode_SortResponse_resultSetStatus = $._encodeInteger;
+export const _decode_SortResponse_resultSetStatus: $.ASN1Decoder<SortResponse_resultSetStatus> = $._decodeInteger;
+export const _encode_SortResponse_resultSetStatus: $.ASN1Encoder<SortResponse_resultSetStatus> = $._encodeInteger;
 
 
 /* eslint-enable */

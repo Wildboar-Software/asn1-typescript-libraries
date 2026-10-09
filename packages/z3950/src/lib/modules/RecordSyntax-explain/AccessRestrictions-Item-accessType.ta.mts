@@ -156,8 +156,8 @@ const AccessRestrictions_Item_accessType_by_database: AccessRestrictions_Item_ac
  */
 export
 const by_database: AccessRestrictions_Item_accessType = AccessRestrictions_Item_accessType_by_database; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_AccessRestrictions_Item_accessType = $._decodeInteger;
-export const _encode_AccessRestrictions_Item_accessType = $._encodeInteger;
+export const _decode_AccessRestrictions_Item_accessType: $.ASN1Decoder<AccessRestrictions_Item_accessType> = $._decodeInteger;
+export const _encode_AccessRestrictions_Item_accessType: $.ASN1Encoder<AccessRestrictions_Item_accessType> = $._encodeInteger;
 
 
 /* eslint-enable */

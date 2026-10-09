@@ -185,8 +185,8 @@ const ProximityOperator_relationType_notEqual: ProximityOperator_relationType = 
  */
 export
 const notEqual: ProximityOperator_relationType = ProximityOperator_relationType_notEqual; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ProximityOperator_relationType = $._decodeInteger;
-export const _encode_ProximityOperator_relationType = $._encodeInteger;
+export const _decode_ProximityOperator_relationType: $.ASN1Decoder<ProximityOperator_relationType> = $._decodeInteger;
+export const _encode_ProximityOperator_relationType: $.ASN1Encoder<ProximityOperator_relationType> = $._encodeInteger;
 
 
 /* eslint-enable */

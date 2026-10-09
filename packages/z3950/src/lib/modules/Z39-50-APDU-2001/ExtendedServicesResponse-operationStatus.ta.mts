@@ -105,8 +105,8 @@ const ExtendedServicesResponse_operationStatus_failure: ExtendedServicesResponse
  */
 export
 const failure: ExtendedServicesResponse_operationStatus = ExtendedServicesResponse_operationStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ExtendedServicesResponse_operationStatus = $._decodeInteger;
-export const _encode_ExtendedServicesResponse_operationStatus = $._encodeInteger;
+export const _decode_ExtendedServicesResponse_operationStatus: $.ASN1Decoder<ExtendedServicesResponse_operationStatus> = $._decodeInteger;
+export const _encode_ExtendedServicesResponse_operationStatus: $.ASN1Encoder<ExtendedServicesResponse_operationStatus> = $._encodeInteger;
 
 
 /* eslint-enable */

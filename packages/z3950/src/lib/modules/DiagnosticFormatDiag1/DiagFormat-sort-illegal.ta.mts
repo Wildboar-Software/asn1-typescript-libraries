@@ -126,8 +126,8 @@ const DiagFormat_sort_illegal_sort: DiagFormat_sort_illegal = 4; /* LONG_NAMED_I
  */
 export
 const sort: DiagFormat_sort_illegal = DiagFormat_sort_illegal_sort; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DiagFormat_sort_illegal = $._decodeInteger;
-export const _encode_DiagFormat_sort_illegal = $._encodeInteger;
+export const _decode_DiagFormat_sort_illegal: $.ASN1Decoder<DiagFormat_sort_illegal> = $._decodeInteger;
+export const _encode_DiagFormat_sort_illegal: $.ASN1Encoder<DiagFormat_sort_illegal> = $._encodeInteger;
 
 
 /* eslint-enable */

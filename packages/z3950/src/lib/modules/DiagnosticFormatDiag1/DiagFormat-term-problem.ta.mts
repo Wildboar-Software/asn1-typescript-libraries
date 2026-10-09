@@ -126,8 +126,8 @@ const DiagFormat_term_problem_type_: DiagFormat_term_problem = 4; /* LONG_NAMED_
  */
 export
 const type_: DiagFormat_term_problem = DiagFormat_term_problem_type_; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DiagFormat_term_problem = $._decodeInteger;
-export const _encode_DiagFormat_term_problem = $._encodeInteger;
+export const _decode_DiagFormat_term_problem: $.ASN1Decoder<DiagFormat_term_problem> = $._decodeInteger;
+export const _encode_DiagFormat_term_problem: $.ASN1Encoder<DiagFormat_term_problem> = $._encodeInteger;
 
 
 /* eslint-enable */

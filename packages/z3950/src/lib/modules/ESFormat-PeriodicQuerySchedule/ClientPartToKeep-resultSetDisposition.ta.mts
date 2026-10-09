@@ -118,8 +118,8 @@ const ClientPartToKeep_resultSetDisposition_createNew: ClientPartToKeep_resultSe
  */
 export
 const createNew: ClientPartToKeep_resultSetDisposition = ClientPartToKeep_resultSetDisposition_createNew; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ClientPartToKeep_resultSetDisposition = $._decodeInteger;
-export const _encode_ClientPartToKeep_resultSetDisposition = $._encodeInteger;
+export const _decode_ClientPartToKeep_resultSetDisposition: $.ASN1Decoder<ClientPartToKeep_resultSetDisposition> = $._decodeInteger;
+export const _encode_ClientPartToKeep_resultSetDisposition: $.ASN1Encoder<ClientPartToKeep_resultSetDisposition> = $._encodeInteger;
 
 
 /* eslint-enable */

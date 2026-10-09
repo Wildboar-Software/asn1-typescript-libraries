@@ -139,8 +139,8 @@ const ClientPartToKeep_action_elementUpdate: ClientPartToKeep_action = 4; /* LON
  */
 export
 const elementUpdate: ClientPartToKeep_action = ClientPartToKeep_action_elementUpdate; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ClientPartToKeep_action = $._decodeInteger;
-export const _encode_ClientPartToKeep_action = $._encodeInteger;
+export const _decode_ClientPartToKeep_action: $.ASN1Decoder<ClientPartToKeep_action> = $._decodeInteger;
+export const _encode_ClientPartToKeep_action: $.ASN1Encoder<ClientPartToKeep_action> = $._encodeInteger;
 
 
 /* eslint-enable */

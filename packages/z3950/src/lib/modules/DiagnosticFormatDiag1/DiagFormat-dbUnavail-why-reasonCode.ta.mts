@@ -124,8 +124,8 @@ const DiagFormat_dbUnavail_why_reasonCode_accessDenied: DiagFormat_dbUnavail_why
  */
 export
 const accessDenied: DiagFormat_dbUnavail_why_reasonCode = DiagFormat_dbUnavail_why_reasonCode_accessDenied; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DiagFormat_dbUnavail_why_reasonCode = $._decodeInteger;
-export const _encode_DiagFormat_dbUnavail_why_reasonCode = $._encodeInteger;
+export const _decode_DiagFormat_dbUnavail_why_reasonCode: $.ASN1Decoder<DiagFormat_dbUnavail_why_reasonCode> = $._decodeInteger;
+export const _encode_DiagFormat_dbUnavail_why_reasonCode: $.ASN1Encoder<DiagFormat_dbUnavail_why_reasonCode> = $._encodeInteger;
 
 
 /* eslint-enable */

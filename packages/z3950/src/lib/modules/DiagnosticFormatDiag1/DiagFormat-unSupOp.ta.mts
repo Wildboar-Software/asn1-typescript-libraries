@@ -123,8 +123,8 @@ const DiagFormat_unSupOp_prox: DiagFormat_unSupOp = 3; /* LONG_NAMED_INTEGER_VAL
  */
 export
 const prox: DiagFormat_unSupOp = DiagFormat_unSupOp_prox; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DiagFormat_unSupOp = $._decodeInteger;
-export const _encode_DiagFormat_unSupOp = $._encodeInteger;
+export const _decode_DiagFormat_unSupOp: $.ASN1Decoder<DiagFormat_unSupOp> = $._decodeInteger;
+export const _encode_DiagFormat_unSupOp: $.ASN1Encoder<DiagFormat_unSupOp> = $._encodeInteger;
 
 
 /* eslint-enable */

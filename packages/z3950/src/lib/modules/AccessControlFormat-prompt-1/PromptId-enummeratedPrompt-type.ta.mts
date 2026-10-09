@@ -179,8 +179,8 @@ const PromptId_enummeratedPrompt_type_sessionId: PromptId_enummeratedPrompt_type
  */
 export
 const sessionId: PromptId_enummeratedPrompt_type = PromptId_enummeratedPrompt_type_sessionId; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_PromptId_enummeratedPrompt_type = $._decodeInteger;
-export const _encode_PromptId_enummeratedPrompt_type = $._encodeInteger;
+export const _decode_PromptId_enummeratedPrompt_type: $.ASN1Decoder<PromptId_enummeratedPrompt_type> = $._decodeInteger;
+export const _encode_PromptId_enummeratedPrompt_type: $.ASN1Encoder<PromptId_enummeratedPrompt_type> = $._encodeInteger;
 
 
 /* eslint-enable */

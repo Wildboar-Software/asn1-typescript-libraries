@@ -154,8 +154,8 @@ const Permissions_Item_allowableFunctions_Item_invoke: Permissions_Item_allowabl
  */
 export
 const invoke: Permissions_Item_allowableFunctions_Item = Permissions_Item_allowableFunctions_Item_invoke; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_Permissions_Item_allowableFunctions_Item = $._decodeInteger;
-export const _encode_Permissions_Item_allowableFunctions_Item = $._encodeInteger;
+export const _decode_Permissions_Item_allowableFunctions_Item: $.ASN1Decoder<Permissions_Item_allowableFunctions_Item> = $._decodeInteger;
+export const _encode_Permissions_Item_allowableFunctions_Item: $.ASN1Encoder<Permissions_Item_allowableFunctions_Item> = $._encodeInteger;
 
 
 /* eslint-enable */

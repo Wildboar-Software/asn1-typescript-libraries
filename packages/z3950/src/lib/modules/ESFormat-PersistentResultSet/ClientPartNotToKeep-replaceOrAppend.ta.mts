@@ -82,8 +82,8 @@ const ClientPartNotToKeep_replaceOrAppend_append: ClientPartNotToKeep_replaceOrA
  */
 export
 const append: ClientPartNotToKeep_replaceOrAppend = ClientPartNotToKeep_replaceOrAppend_append; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ClientPartNotToKeep_replaceOrAppend = $._decodeInteger;
-export const _encode_ClientPartNotToKeep_replaceOrAppend = $._encodeInteger;
+export const _decode_ClientPartNotToKeep_replaceOrAppend: $.ASN1Decoder<ClientPartNotToKeep_replaceOrAppend> = $._decodeInteger;
+export const _encode_ClientPartNotToKeep_replaceOrAppend: $.ASN1Encoder<ClientPartNotToKeep_replaceOrAppend> = $._encodeInteger;
 
 
 /* eslint-enable */

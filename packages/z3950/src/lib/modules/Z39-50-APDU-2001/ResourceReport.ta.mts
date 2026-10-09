@@ -24,8 +24,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ResourceReport = EXTERNAL; // ExternalType
-export const _decode_ResourceReport = $._decodeExternal;
-export const _encode_ResourceReport = $._encodeExternal;
+export const _decode_ResourceReport: $.ASN1Decoder<ResourceReport> = $._decodeExternal;
+export const _encode_ResourceReport: $.ASN1Encoder<ResourceReport> = $._encodeExternal;
 
 
 /* eslint-enable */

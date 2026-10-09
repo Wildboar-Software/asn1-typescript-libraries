@@ -174,8 +174,8 @@ const Challenge_Item_dataType_boolean_: Challenge_Item_dataType = 6; /* LONG_NAM
  */
 export
 const boolean_: Challenge_Item_dataType = Challenge_Item_dataType_boolean_; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_Challenge_Item_dataType = $._decodeInteger;
-export const _encode_Challenge_Item_dataType = $._encodeInteger;
+export const _decode_Challenge_Item_dataType: $.ASN1Decoder<Challenge_Item_dataType> = $._decodeInteger;
+export const _encode_Challenge_Item_dataType: $.ASN1Encoder<Challenge_Item_dataType> = $._encodeInteger;
 
 
 /* eslint-enable */

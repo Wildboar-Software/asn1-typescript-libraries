@@ -105,8 +105,8 @@ const ResourceControlRequest_partialResultsAvailable_none: ResourceControlReques
  */
 export
 const none: ResourceControlRequest_partialResultsAvailable = ResourceControlRequest_partialResultsAvailable_none; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ResourceControlRequest_partialResultsAvailable = $._decodeInteger;
-export const _encode_ResourceControlRequest_partialResultsAvailable = $._encodeInteger;
+export const _decode_ResourceControlRequest_partialResultsAvailable: $.ASN1Decoder<ResourceControlRequest_partialResultsAvailable> = $._decodeInteger;
+export const _encode_ResourceControlRequest_partialResultsAvailable: $.ASN1Encoder<ResourceControlRequest_partialResultsAvailable> = $._encodeInteger;
 
 
 /* eslint-enable */

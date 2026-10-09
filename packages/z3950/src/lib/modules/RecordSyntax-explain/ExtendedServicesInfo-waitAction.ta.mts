@@ -136,8 +136,8 @@ const ExtendedServicesInfo_waitAction_notSaying: ExtendedServicesInfo_waitAction
  */
 export
 const notSaying: ExtendedServicesInfo_waitAction = ExtendedServicesInfo_waitAction_notSaying; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ExtendedServicesInfo_waitAction = $._decodeInteger;
-export const _encode_ExtendedServicesInfo_waitAction = $._encodeInteger;
+export const _decode_ExtendedServicesInfo_waitAction: $.ASN1Decoder<ExtendedServicesInfo_waitAction> = $._decodeInteger;
+export const _encode_ExtendedServicesInfo_waitAction: $.ASN1Encoder<ExtendedServicesInfo_waitAction> = $._encodeInteger;
 
 
 /* eslint-enable */

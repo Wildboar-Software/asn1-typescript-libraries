@@ -122,8 +122,8 @@ const TaskPackage_taskStatus_aborted: TaskPackage_taskStatus = 3; /* LONG_NAMED_
  */
 export
 const aborted: TaskPackage_taskStatus = TaskPackage_taskStatus_aborted; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_TaskPackage_taskStatus = $._decodeInteger;
-export const _encode_TaskPackage_taskStatus = $._encodeInteger;
+export const _decode_TaskPackage_taskStatus: $.ASN1Decoder<TaskPackage_taskStatus> = $._decodeInteger;
+export const _encode_TaskPackage_taskStatus: $.ASN1Encoder<TaskPackage_taskStatus> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -249,8 +249,8 @@ const DiagFormat_tooMany_tooManyWhat_indexTermsProcessed: DiagFormat_tooMany_too
  */
 export
 const indexTermsProcessed: DiagFormat_tooMany_tooManyWhat = DiagFormat_tooMany_tooManyWhat_indexTermsProcessed; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DiagFormat_tooMany_tooManyWhat = $._decodeInteger;
-export const _encode_DiagFormat_tooMany_tooManyWhat = $._encodeInteger;
+export const _decode_DiagFormat_tooMany_tooManyWhat: $.ASN1Decoder<DiagFormat_tooMany_tooManyWhat> = $._decodeInteger;
+export const _encode_DiagFormat_tooMany_tooManyWhat: $.ASN1Encoder<DiagFormat_tooMany_tooManyWhat> = $._encodeInteger;
 
 
 /* eslint-enable */
