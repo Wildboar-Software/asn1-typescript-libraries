@@ -1,15 +1,20 @@
 {
   "name": "@wildboar/lnpdqp",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "exports": {
-    ".": "./src/index.mts"
+    ".": "./src/index.mts",
+    "./LNPDQP-Protocol": "./src/lib/modules/LNPDQP-Protocol/index.mts"
   },
   "publish": {
     "include": [
       "LICENSE.txt",
       "README.md",
       "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
     ]
   }
 }
