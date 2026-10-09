@@ -1,0 +1,9 @@
+{
+  "name": "@wildboar/z3950",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/z3950/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project @wildboar/z3950 --web",
+  "targets": {}
+}

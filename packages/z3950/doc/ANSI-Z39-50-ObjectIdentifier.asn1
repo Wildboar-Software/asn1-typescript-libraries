@@ -1,0 +1,28 @@
+ANSI-Z39-50-ObjectIdentifier
+DEFINITIONS ::= BEGIN
+
+z39-50 OBJECT IDENTIFIER ::= {
+    iso(1)
+    member-body(2)
+    us(840)
+    ansi-standard-Z39-50(10003)
+}
+
+-- thus {z39-50} is shorthand for {1 2 840 10003}
+z39-50-APDU             OBJECT IDENTIFIER ::= {z39-50 2}    -- See OID.3
+-- and {z39-50 2} is shorthand for {1 2 840 10003 2} and so on.
+z39-50-attributeSet     OBJECT IDENTIFIER ::= {z39-50 3}    -- See Appendix ATR
+z39-50-diagnostic       OBJECT IDENTIFIER ::= {z39-50 4}    -- See Appendix DIAG
+z39-50-recordSyntax     OBJECT IDENTIFIER ::= {z39-50 5}    -- See Appendix REC
+z39-50-resourceReport   OBJECT IDENTIFIER ::= {z39-50 7}    -- See Appendix RSC
+z39-50-accessControl    OBJECT IDENTIFIER ::= {z39-50 8}    -- See Appendix ACC
+z39-50-extendedService  OBJECT IDENTIFIER ::= {z39-50 9}    -- See Appendix EXT
+z39-50-userInfoFormat   OBJECT IDENTIFIER ::= {z39-50 10}   -- See Appendix USR
+z39-50-elementSpec      OBJECT IDENTIFIER ::= {z39-50 11}   -- See Appendix ESP
+z39-50-variantSet       OBJECT IDENTIFIER ::= {z39-50 12}   -- See Appendix VAR
+z39-50-schema           OBJECT IDENTIFIER ::= {z39-50 13}   -- See Appendix TAG
+z39-50-tagSet           OBJECT IDENTIFIER ::= {z39-50 14}   -- See Appendix TAG
+z39-50-negotiation      OBJECT IDENTIFIER ::= {z39-50 15}
+z39-50-query            OBJECT IDENTIFIER ::= {z39-50 16}
+
+END
