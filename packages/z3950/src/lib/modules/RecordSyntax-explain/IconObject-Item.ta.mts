@@ -129,10 +129,8 @@ function _decode_IconObject_Item (el: _Element): IconObject_Item {
     }
     sequence[0].name = "bodyType";
     sequence[1].name = "content";
-    let bodyType!: IconObject_Item_bodyType;
-    let content!: OCTET_STRING;
-    bodyType = $._decode_explicit<IconObject_Item_bodyType>(() => _decode_IconObject_Item_bodyType)(sequence[0]);
-    content = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const bodyType: IconObject_Item_bodyType = $._decode_explicit<IconObject_Item_bodyType>(() => _decode_IconObject_Item_bodyType)(sequence[0]);
+    const content: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new IconObject_Item(
         bodyType,
         content,

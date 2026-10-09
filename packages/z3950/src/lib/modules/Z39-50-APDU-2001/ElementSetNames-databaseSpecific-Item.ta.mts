@@ -123,10 +123,8 @@ function _decode_ElementSetNames_databaseSpecific_Item (el: _Element): ElementSe
     }
     sequence[0].name = "dbName";
     sequence[1].name = "esn";
-    let dbName!: DatabaseName;
-    let esn!: ElementSetName;
-    dbName = _decode_DatabaseName(sequence[0]);
-    esn = _decode_ElementSetName(sequence[1]);
+    const dbName: DatabaseName = _decode_DatabaseName(sequence[0]);
+    const esn: ElementSetName = _decode_ElementSetName(sequence[1]);
     return new ElementSetNames_databaseSpecific_Item(
         dbName,
         esn,

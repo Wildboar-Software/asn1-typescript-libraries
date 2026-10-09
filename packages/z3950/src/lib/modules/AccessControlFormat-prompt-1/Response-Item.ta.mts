@@ -130,10 +130,8 @@ function _decode_Response_Item (el: _Element): Response_Item {
     }
     sequence[0].name = "promptId";
     sequence[1].name = "promptResponse";
-    let promptId!: PromptId;
-    let promptResponse!: Response_Item_promptResponse;
-    promptId = $._decode_explicit<PromptId>(() => _decode_PromptId)(sequence[0]);
-    promptResponse = $._decode_explicit<Response_Item_promptResponse>(() => _decode_Response_Item_promptResponse)(sequence[1]);
+    const promptId: PromptId = $._decode_explicit<PromptId>(() => _decode_PromptId)(sequence[0]);
+    const promptResponse: Response_Item_promptResponse = $._decode_explicit<Response_Item_promptResponse>(() => _decode_Response_Item_promptResponse)(sequence[1]);
     return new Response_Item(
         promptId,
         promptResponse,

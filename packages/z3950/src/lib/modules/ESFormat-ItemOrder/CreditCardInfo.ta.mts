@@ -133,12 +133,9 @@ function _decode_CreditCardInfo (el: _Element): CreditCardInfo {
     sequence[0].name = "nameOnCard";
     sequence[1].name = "expirationDate";
     sequence[2].name = "cardNumber";
-    let nameOnCard!: InternationalString;
-    let expirationDate!: InternationalString;
-    let cardNumber!: InternationalString;
-    nameOnCard = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
-    expirationDate = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[1]);
-    cardNumber = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[2]);
+    const nameOnCard: InternationalString = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
+    const expirationDate: InternationalString = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[1]);
+    const cardNumber: InternationalString = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[2]);
     return new CreditCardInfo(
         nameOnCard,
         expirationDate,

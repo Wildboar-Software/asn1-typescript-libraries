@@ -123,10 +123,8 @@ function _decode_Update_esRequest (el: _Element): Update_esRequest {
     }
     sequence[0].name = "toKeep";
     sequence[1].name = "notToKeep";
-    let toKeep!: ClientPartToKeep;
-    let notToKeep!: ClientPartNotToKeep;
-    toKeep = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
-    notToKeep = $._decode_explicit<ClientPartNotToKeep>(() => _decode_ClientPartNotToKeep)(sequence[1]);
+    const toKeep: ClientPartToKeep = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
+    const notToKeep: ClientPartNotToKeep = $._decode_explicit<ClientPartNotToKeep>(() => _decode_ClientPartNotToKeep)(sequence[1]);
     return new Update_esRequest(
         toKeep,
         notToKeep,

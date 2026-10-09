@@ -123,10 +123,8 @@ function _decode_ExportSpecification_taskPackage (el: _Element): ExportSpecifica
     }
     sequence[0].name = "clientPart";
     sequence[1].name = "serverPart";
-    let clientPart!: ClientPartToKeep;
-    let serverPart!: NULL;
-    clientPart = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
-    serverPart = $._decode_implicit<NULL>(() => $._decodeNull)(sequence[1]);
+    const clientPart: ClientPartToKeep = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
+    const serverPart: NULL = $._decode_implicit<NULL>(() => $._decodeNull)(sequence[1]);
     return new ExportSpecification_taskPackage(
         clientPart,
         serverPart,

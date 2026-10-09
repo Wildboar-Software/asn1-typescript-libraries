@@ -134,12 +134,9 @@ function _decode_RPNStructure_rpnRpnOp (el: _Element): RPNStructure_rpnRpnOp {
     sequence[0].name = "rpn1";
     sequence[1].name = "rpn2";
     sequence[2].name = "op";
-    let rpn1!: RPNStructure;
-    let rpn2!: RPNStructure;
-    let op!: Operator;
-    rpn1 = _decode_RPNStructure(sequence[0]);
-    rpn2 = _decode_RPNStructure(sequence[1]);
-    op = _decode_Operator(sequence[2]);
+    const rpn1: RPNStructure = _decode_RPNStructure(sequence[0]);
+    const rpn2: RPNStructure = _decode_RPNStructure(sequence[1]);
+    const op: Operator = _decode_Operator(sequence[2]);
     return new RPNStructure_rpnRpnOp(
         rpn1,
         rpn2,

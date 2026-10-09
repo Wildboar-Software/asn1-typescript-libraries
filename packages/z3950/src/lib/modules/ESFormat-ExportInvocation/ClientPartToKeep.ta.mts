@@ -126,10 +126,8 @@ function _decode_ClientPartToKeep (el: _Element): ClientPartToKeep {
     }
     sequence[0].name = "exportSpec";
     sequence[1].name = "numberOfCopies";
-    let exportSpec!: ClientPartToKeep_exportSpec;
-    let numberOfCopies!: INTEGER;
-    exportSpec = $._decode_explicit<ClientPartToKeep_exportSpec>(() => _decode_ClientPartToKeep_exportSpec)(sequence[0]);
-    numberOfCopies = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const exportSpec: ClientPartToKeep_exportSpec = $._decode_explicit<ClientPartToKeep_exportSpec>(() => _decode_ClientPartToKeep_exportSpec)(sequence[0]);
+    const numberOfCopies: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new ClientPartToKeep(
         exportSpec,
         numberOfCopies,

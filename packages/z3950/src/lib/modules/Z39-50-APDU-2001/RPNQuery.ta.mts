@@ -123,10 +123,8 @@ function _decode_RPNQuery (el: _Element): RPNQuery {
     }
     sequence[0].name = "attributeSet";
     sequence[1].name = "rpn";
-    let attributeSet!: AttributeSetId;
-    let rpn!: RPNStructure;
-    attributeSet = _decode_AttributeSetId(sequence[0]);
-    rpn = _decode_RPNStructure(sequence[1]);
+    const attributeSet: AttributeSetId = _decode_AttributeSetId(sequence[0]);
+    const rpn: RPNStructure = _decode_RPNStructure(sequence[1]);
     return new RPNQuery(
         attributeSet,
         rpn,

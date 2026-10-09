@@ -123,10 +123,8 @@ function _decode_ClientPartNotToKeep_resultSetItem (el: _Element): ClientPartNot
     }
     sequence[0].name = "resultSetId";
     sequence[1].name = "item";
-    let resultSetId!: InternationalString;
-    let item!: INTEGER;
-    resultSetId = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
-    item = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const resultSetId: InternationalString = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
+    const item: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new ClientPartNotToKeep_resultSetItem(
         resultSetId,
         item,

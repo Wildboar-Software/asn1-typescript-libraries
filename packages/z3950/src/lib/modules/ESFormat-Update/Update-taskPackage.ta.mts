@@ -123,10 +123,8 @@ function _decode_Update_taskPackage (el: _Element): Update_taskPackage {
     }
     sequence[0].name = "clientPart";
     sequence[1].name = "serverPart";
-    let clientPart!: ClientPartToKeep;
-    let serverPart!: ServerPart;
-    clientPart = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
-    serverPart = $._decode_explicit<ServerPart>(() => _decode_ServerPart)(sequence[1]);
+    const clientPart: ClientPartToKeep = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
+    const serverPart: ServerPart = $._decode_explicit<ServerPart>(() => _decode_ServerPart)(sequence[1]);
     return new Update_taskPackage(
         clientPart,
         serverPart,

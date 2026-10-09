@@ -123,10 +123,8 @@ function _decode_Costs_otherCharges_Item (el: _Element): Costs_otherCharges_Item
     }
     sequence[0].name = "forWhat";
     sequence[1].name = "charge";
-    let forWhat!: HumanString;
-    let charge!: Charge;
-    forWhat = $._decode_implicit<HumanString>(() => _decode_HumanString)(sequence[0]);
-    charge = $._decode_implicit<Charge>(() => _decode_Charge)(sequence[1]);
+    const forWhat: HumanString = $._decode_implicit<HumanString>(() => _decode_HumanString)(sequence[0]);
+    const charge: Charge = $._decode_implicit<Charge>(() => _decode_Charge)(sequence[1]);
     return new Costs_otherCharges_Item(
         forWhat,
         charge,

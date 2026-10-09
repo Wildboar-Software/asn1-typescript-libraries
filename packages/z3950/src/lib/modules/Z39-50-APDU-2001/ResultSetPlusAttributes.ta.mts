@@ -123,10 +123,8 @@ function _decode_ResultSetPlusAttributes (el: _Element): ResultSetPlusAttributes
     }
     sequence[0].name = "resultSet";
     sequence[1].name = "attributes";
-    let resultSet!: ResultSetId;
-    let attributes!: AttributeList;
-    resultSet = _decode_ResultSetId(sequence[0]);
-    attributes = _decode_AttributeList(sequence[1]);
+    const resultSet: ResultSetId = _decode_ResultSetId(sequence[0]);
+    const attributes: AttributeList = _decode_AttributeList(sequence[1]);
     return new ResultSetPlusAttributes(
         resultSet,
         attributes,

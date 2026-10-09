@@ -123,10 +123,8 @@ function _decode_SortElement_datbaseSpecific_Item (el: _Element): SortElement_da
     }
     sequence[0].name = "databaseName";
     sequence[1].name = "dbSort";
-    let databaseName!: DatabaseName;
-    let dbSort!: SortKey;
-    databaseName = _decode_DatabaseName(sequence[0]);
-    dbSort = _decode_SortKey(sequence[1]);
+    const databaseName: DatabaseName = _decode_DatabaseName(sequence[0]);
+    const dbSort: SortKey = _decode_SortKey(sequence[1]);
     return new SortElement_datbaseSpecific_Item(
         databaseName,
         dbSort,

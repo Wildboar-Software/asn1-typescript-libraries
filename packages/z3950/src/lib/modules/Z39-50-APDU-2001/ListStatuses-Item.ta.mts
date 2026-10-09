@@ -123,10 +123,8 @@ function _decode_ListStatuses_Item (el: _Element): ListStatuses_Item {
     }
     sequence[0].name = "id";
     sequence[1].name = "status";
-    let id!: ResultSetId;
-    let status!: DeleteSetStatus;
-    id = _decode_ResultSetId(sequence[0]);
-    status = _decode_DeleteSetStatus(sequence[1]);
+    const id: ResultSetId = _decode_ResultSetId(sequence[0]);
+    const status: DeleteSetStatus = _decode_DeleteSetStatus(sequence[1]);
     return new ListStatuses_Item(
         id,
         status,

@@ -123,10 +123,8 @@ function _decode_ExportSpecification_esRequest (el: _Element): ExportSpecificati
     }
     sequence[0].name = "toKeep";
     sequence[1].name = "notToKeep";
-    let toKeep!: ClientPartToKeep;
-    let notToKeep!: NULL;
-    toKeep = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
-    notToKeep = $._decode_implicit<NULL>(() => $._decodeNull)(sequence[1]);
+    const toKeep: ClientPartToKeep = $._decode_explicit<ClientPartToKeep>(() => _decode_ClientPartToKeep)(sequence[0]);
+    const notToKeep: NULL = $._decode_implicit<NULL>(() => $._decodeNull)(sequence[1]);
     return new ExportSpecification_esRequest(
         toKeep,
         notToKeep,

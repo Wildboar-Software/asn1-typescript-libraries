@@ -128,10 +128,8 @@ function _decode_Estimate (el: _Element): Estimate {
     }
     sequence[0].name = "type";
     sequence[1].name = "value";
-    let type_!: StringOrNumeric;
-    let value!: IntUnit;
-    type_ = $._decode_explicit<StringOrNumeric>(() => _decode_StringOrNumeric)(sequence[0]);
-    value = $._decode_implicit<IntUnit>(() => _decode_IntUnit)(sequence[1]);
+    const type_: StringOrNumeric = $._decode_explicit<StringOrNumeric>(() => _decode_StringOrNumeric)(sequence[0]);
+    const value: IntUnit = $._decode_implicit<IntUnit>(() => _decode_IntUnit)(sequence[1]);
     return new Estimate(
         type_,
         value,

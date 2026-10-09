@@ -123,10 +123,8 @@ function _decode_SortKey_sortAttributes (el: _Element): SortKey_sortAttributes {
     }
     sequence[0].name = "id";
     sequence[1].name = "list";
-    let id!: AttributeSetId;
-    let list!: AttributeList;
-    id = _decode_AttributeSetId(sequence[0]);
-    list = _decode_AttributeList(sequence[1]);
+    const id: AttributeSetId = _decode_AttributeSetId(sequence[0]);
+    const list: AttributeList = _decode_AttributeList(sequence[1]);
     return new SortKey_sortAttributes(
         id,
         list,

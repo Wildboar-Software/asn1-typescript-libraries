@@ -132,10 +132,8 @@ function _decode_DiagFormat_dbUnavail (el: _Element): DiagFormat_dbUnavail {
     }
     sequence[0].name = "db";
     sequence[1].name = "why";
-    let db!: DatabaseName;
-    let why!: DiagFormat_dbUnavail_why;
-    db = $._decode_implicit<DatabaseName>(() => _decode_DatabaseName)(sequence[0]);
-    why = $._decode_implicit<DiagFormat_dbUnavail_why>(() => _decode_DiagFormat_dbUnavail_why)(sequence[1]);
+    const db: DatabaseName = $._decode_implicit<DatabaseName>(() => _decode_DatabaseName)(sequence[0]);
+    const why: DiagFormat_dbUnavail_why = $._decode_implicit<DiagFormat_dbUnavail_why>(() => _decode_DiagFormat_dbUnavail_why)(sequence[1]);
     return new DiagFormat_dbUnavail(
         db,
         why,

@@ -129,10 +129,8 @@ function _decode_Permissions_Item (el: _Element): Permissions_Item {
     }
     sequence[0].name = "userId";
     sequence[1].name = "allowableFunctions";
-    let userId!: InternationalString;
-    let allowableFunctions!: Permissions_Item_allowableFunctions_Item[];
-    userId = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
-    allowableFunctions = $._decode_implicit<Permissions_Item_allowableFunctions_Item[]>(() => $._decodeSequenceOf<Permissions_Item_allowableFunctions_Item>(() => _decode_Permissions_Item_allowableFunctions_Item))(sequence[1]);
+    const userId: InternationalString = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(sequence[0]);
+    const allowableFunctions: Permissions_Item_allowableFunctions_Item[] = $._decode_implicit<Permissions_Item_allowableFunctions_Item[]>(() => $._decodeSequenceOf<Permissions_Item_allowableFunctions_Item>(() => _decode_Permissions_Item_allowableFunctions_Item))(sequence[1]);
     return new Permissions_Item(
         userId,
         allowableFunctions,

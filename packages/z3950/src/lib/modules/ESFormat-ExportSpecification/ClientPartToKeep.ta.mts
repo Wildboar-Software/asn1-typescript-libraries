@@ -122,10 +122,8 @@ function _decode_ClientPartToKeep (el: _Element): ClientPartToKeep {
     }
     sequence[0].name = "composition";
     sequence[1].name = "exportDestination";
-    let composition!: CompSpec;
-    let exportDestination!: Destination;
-    composition = $._decode_implicit<CompSpec>(() => _decode_CompSpec)(sequence[0]);
-    exportDestination = $._decode_explicit<Destination>(() => _decode_Destination)(sequence[1]);
+    const composition: CompSpec = $._decode_implicit<CompSpec>(() => _decode_CompSpec)(sequence[0]);
+    const exportDestination: Destination = $._decode_explicit<Destination>(() => _decode_Destination)(sequence[1]);
     return new ClientPartToKeep(
         composition,
         exportDestination,

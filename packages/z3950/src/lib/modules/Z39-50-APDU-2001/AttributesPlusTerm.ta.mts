@@ -123,10 +123,8 @@ function _decode_AttributesPlusTerm (el: _Element): AttributesPlusTerm {
     }
     sequence[0].name = "attributes";
     sequence[1].name = "term";
-    let attributes!: AttributeList;
-    let term!: Term;
-    attributes = _decode_AttributeList(sequence[0]);
-    term = _decode_Term(sequence[1]);
+    const attributes: AttributeList = _decode_AttributeList(sequence[0]);
+    const term: Term = _decode_Term(sequence[1]);
     return new AttributesPlusTerm(
         attributes,
         term,
