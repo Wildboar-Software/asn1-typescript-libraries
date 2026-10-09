@@ -135,7 +135,12 @@ class InitializeRequest {
      * @readonly
      */
     readonly exceptionalRecordSize: INTEGER;
-    // FIXME: readonly idAuthentication: PrefixedType
+    /**
+     * @summary `idAuthentication`.
+     * @public
+     * @readonly
+     */
+    readonly idAuthentication: OPTIONAL<_Element>;
     /**
      * @summary `implementationId`.
      * @public
@@ -173,6 +178,7 @@ class InitializeRequest {
         options: Options,
         preferredMessageSize: INTEGER,
         exceptionalRecordSize: INTEGER,
+        idAuthentication: OPTIONAL<_Element>,
         implementationId: OPTIONAL<InternationalString>,
         implementationName: OPTIONAL<InternationalString>,
         implementationVersion: OPTIONAL<InternationalString>,
@@ -184,6 +190,7 @@ class InitializeRequest {
         this.options = options;
         this.preferredMessageSize = preferredMessageSize;
         this.exceptionalRecordSize = exceptionalRecordSize;
+        this.idAuthentication = idAuthentication;
         this.implementationId = implementationId;
         this.implementationName = implementationName;
         this.implementationVersion = implementationVersion;
@@ -204,7 +211,7 @@ class InitializeRequest {
      * @returns {InitializeRequest}
      */
     public static _from_object (_o: { [_K in keyof (InitializeRequest)]: (InitializeRequest)[_K] }): InitializeRequest {
-        return new InitializeRequest(_o.referenceId, _o.protocolVersion, _o.options, _o.preferredMessageSize, _o.exceptionalRecordSize, _o.implementationId, _o.implementationName, _o.implementationVersion, _o.userInformationField, _o.otherInfo);
+        return new InitializeRequest(_o.referenceId, _o.protocolVersion, _o.options, _o.preferredMessageSize, _o.exceptionalRecordSize, _o.idAuthentication, _o.implementationId, _o.implementationName, _o.implementationVersion, _o.userInformationField, _o.otherInfo);
     }
 
 
@@ -275,7 +282,7 @@ function _decode_InitializeRequest (el: _Element): InitializeRequest {
     let options!: Options;
     let preferredMessageSize!: INTEGER;
     let exceptionalRecordSize!: INTEGER;
-    let idAuthentication: OPTIONAL</* FIXME: idAuthentication COULD_NOT_COMPILE_TYPE */>;
+    let idAuthentication: OPTIONAL<_Element>;
     let implementationId: OPTIONAL<InternationalString>;
     let implementationName: OPTIONAL<InternationalString>;
     let implementationVersion: OPTIONAL<InternationalString>;
@@ -287,7 +294,7 @@ function _decode_InitializeRequest (el: _Element): InitializeRequest {
         "options": (_el: _Element): void => { options = _decode_Options(_el); },
         "preferredMessageSize": (_el: _Element): void => { preferredMessageSize = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "exceptionalRecordSize": (_el: _Element): void => { exceptionalRecordSize = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "idAuthentication": (_el: _Element): void => { idAuthentication = /* FIXME: COULD_NOT_COMPILE_TYPE_DECODER */ },
+        "idAuthentication": (_el: _Element): void => { idAuthentication = $._decode_explicit<_Element>(() => $._decodeAny)(_el); },
         "implementationId": (_el: _Element): void => { implementationId = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); },
         "implementationName": (_el: _Element): void => { implementationName = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); },
         "implementationVersion": (_el: _Element): void => { implementationVersion = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); },
