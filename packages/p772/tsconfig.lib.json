@@ -13,9 +13,13 @@
     ]
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.mts"
   ],
-  "references": [],
+  "references": [
+    {
+      "path": "../x400/tsconfig.lib.json"
+    }
+  ],
   "exclude": [
     "vite.config.ts",
     "vite.config.mts",

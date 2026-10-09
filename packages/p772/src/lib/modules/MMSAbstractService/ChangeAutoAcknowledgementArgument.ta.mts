@@ -5,6 +5,11 @@ import {
     BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    SupplementaryInformation,
+    _decode_SupplementaryInformation,
+    _encode_SupplementaryInformation,
+} from "@wildboar/x400/MTSAbstractService";
 
 
 
@@ -69,7 +74,7 @@ class ChangeAutoAcknowledgementArgument {
 export
 const _root_component_type_list_1_spec_for_ChangeAutoAcknowledgementArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("auto-acknowledge-MMs", false, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: auto-acknowledge-suppl-receipt-info COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("auto-acknowledge-suppl-receipt-info", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**

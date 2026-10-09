@@ -5,6 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    ReportDeliveryEnvelope,
+    _decode_ReportDeliveryEnvelope,
+    _encode_ReportDeliveryEnvelope,
+} from "@wildboar/x400/MTSAbstractService";
 import { InformationObject, _decode_InformationObject, _encode_InformationObject } from "../MMSInformationObjects/InformationObject.ta.mjs";
 // export { InformationObject, _decode_InformationObject, _encode_InformationObject } from "../MMSInformationObjects/InformationObject.ta.mjs";
 
@@ -69,7 +74,7 @@ class ReceiveReportArgument {
  */
 export
 const _root_component_type_list_1_spec_for_ReceiveReportArgument: $.ComponentSpec[] = [
-    /* FIXME: envelope COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("envelope", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("undelivered-object", true, $.hasTag(_TagClass.context, 1))
 ];
 

@@ -5,6 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    SecurityLabel,
+    _decode_SecurityLabel,
+    _encode_SecurityLabel,
+} from "@wildboar/x400/MTSAbstractService";
 import { BodyPartSecurityLabel, _decode_BodyPartSecurityLabel, _encode_BodyPartSecurityLabel } from "../MMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs";
 // export { BodyPartSecurityLabel, _decode_BodyPartSecurityLabel, _encode_BodyPartSecurityLabel } from "../MMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs";
 
@@ -77,8 +82,8 @@ class SecurityInformationLabels {
  */
 export
 const _root_component_type_list_1_spec_for_SecurityInformationLabels: $.ComponentSpec[] = [
-    /* FIXME: content-security-label COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: heading-security-label COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("content-security-label", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("heading-security-label", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("body-part-security-labels", true, $.hasTag(_TagClass.context, 2))
 ];
 

@@ -1,73 +1,32 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    CommonFields,
+    _root_component_type_list_1_spec_for_CommonFields,
+    _root_component_type_list_2_spec_for_CommonFields,
+    _extension_additions_list_spec_for_CommonFields,
+    SubjectIPMField,
+    _decode_SubjectIPMField,
+    _encode_SubjectIPMField,
+    IPNOriginatorField,
+    _decode_IPNOriginatorField,
+    _encode_IPNOriginatorField,
+    IPMIntendedRecipientField,
+    _decode_IPMIntendedRecipientField,
+    _encode_IPMIntendedRecipientField,
+    ConversionEITsField,
+    _decode_ConversionEITsField,
+    _encode_ConversionEITsField,
+    NotificationExtensionsField,
+    _decode_NotificationExtensionsField,
+    _encode_NotificationExtensionsField,
+} from "@wildboar/x400/IPMSInformationObjects";
 import { MN_choice, _decode_MN_choice, _encode_MN_choice } from "../MMSInformationObjects/MN-choice.ta.mjs";
-// export { MN_choice, _decode_MN_choice, _encode_MN_choice } from "../MMSInformationObjects/MN-choice.ta.mjs";
 
 
 /**
@@ -89,9 +48,38 @@ import { MN_choice, _decode_MN_choice, _encode_MN_choice } from "../MMSInformati
  * @class
  */
 export
-class MN {
+class MN implements CommonFields {
     constructor (
-readonly _componentsOf_CommonFields: CommonFields,
+        /**
+         * @summary `subject_ipm`.
+         * @public
+         * @readonly
+         */
+        readonly subject_ipm: SubjectIPMField,
+        /**
+         * @summary `ipn_originator`.
+         * @public
+         * @readonly
+         */
+        readonly ipn_originator: OPTIONAL<IPNOriginatorField>,
+        /**
+         * @summary `ipm_intended_recipient`.
+         * @public
+         * @readonly
+         */
+        readonly ipm_intended_recipient: OPTIONAL<IPMIntendedRecipientField>,
+        /**
+         * @summary `conversion_eits`.
+         * @public
+         * @readonly
+         */
+        readonly conversion_eits: OPTIONAL<ConversionEITsField>,
+        /**
+         * @summary `notification_extensions`.
+         * @public
+         * @readonly
+         */
+        readonly notification_extensions: OPTIONAL<NotificationExtensionsField>,
         /**
          * @summary `choice`.
          * @public
@@ -113,7 +101,14 @@ readonly _componentsOf_CommonFields: CommonFields,
      * @returns {MN}
      */
     public static _from_object (_o: { [_K in keyof (MN)]: (MN)[_K] }): MN {
-        return new MN(_o._componentsOf_CommonFields, _o.choice);
+        return new MN(
+            _o.subject_ipm,
+            _o.ipn_originator,
+            _o.ipm_intended_recipient,
+            _o.conversion_eits,
+            _o.notification_extensions,
+            _o.choice
+        );
     }
 
 
@@ -129,7 +124,7 @@ readonly _componentsOf_CommonFields: CommonFields,
  */
 export
 const _root_component_type_list_1_spec_for_MN: $.ComponentSpec[] = [
-    /* FIXME: COULD_NOT_COMPILE_COMPONENTS_OF DefinedType */,
+    ..._root_component_type_list_1_spec_for_CommonFields,
     new $.ComponentSpec("choice", false, $.hasTag(_TagClass.context, 0))
 ];
 
@@ -143,7 +138,7 @@ const _root_component_type_list_1_spec_for_MN: $.ComponentSpec[] = [
  */
 export
 const _root_component_type_list_2_spec_for_MN: $.ComponentSpec[] = [
-    
+    ..._root_component_type_list_2_spec_for_CommonFields,
 ];
 
 /**
@@ -156,7 +151,7 @@ const _root_component_type_list_2_spec_for_MN: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_MN: $.ComponentSpec[] = [
-    
+    ..._extension_additions_list_spec_for_CommonFields,
 ];
 
 let _cached_decoder_for_MN: $.ASN1Decoder<MN> | null = null;
@@ -171,11 +166,20 @@ export
 function _decode_MN (el: _Element): MN {
     if (!_cached_decoder_for_MN) { _cached_decoder_for_MN = function (el: _Element): MN {
     /* START_OF_SET_COMPONENT_DECLARATIONS */
-    let _componentsOf!: CommonFields;
+    let subject_ipm!: SubjectIPMField;
+    let ipn_originator: OPTIONAL<IPNOriginatorField>;
+    let ipm_intended_recipient: OPTIONAL<IPMIntendedRecipientField>;
+    let conversion_eits: OPTIONAL<ConversionEITsField>;
+    let notification_extensions: OPTIONAL<NotificationExtensionsField>;
     let choice!: MN_choice;
     /* END_OF_SET_COMPONENT_DECLARATIONS */
     /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
+        "subject-ipm": (_el: _Element): void => { subject_ipm = _decode_SubjectIPMField(_el); },
+        "ipn-originator": (_el: _Element): void => { ipn_originator = $._decode_implicit<IPNOriginatorField>(() => _decode_IPNOriginatorField)(_el); },
+        "ipm-intended-recipient": (_el: _Element): void => { ipm_intended_recipient = $._decode_implicit<IPMIntendedRecipientField>(() => _decode_IPMIntendedRecipientField)(_el); },
+        "conversion-eits": (_el: _Element): void => { conversion_eits = _decode_ConversionEITsField(_el); },
+        "notification-extensions": (_el: _Element): void => { notification_extensions = $._decode_implicit<NotificationExtensionsField>(() => _decode_NotificationExtensionsField)(_el); },
         "choice": (_el: _Element): void => { choice = $._decode_explicit<MN_choice>(() => _decode_MN_choice)(_el); }
     };
     /* END_OF_CALLBACKS_MAP */
@@ -186,7 +190,11 @@ function _decode_MN (el: _Element): MN {
         undefined,
     );
     return new MN( /* SET_CONSTRUCTOR_CALL */
-        _componentsOf,
+        subject_ipm,
+        ipn_originator,
+        ipm_intended_recipient,
+        conversion_eits,
+        notification_extensions,
         choice
     );
 }; }
@@ -203,11 +211,15 @@ let _cached_encoder_for_MN: $.ASN1Encoder<MN> | null = null;
  * @returns {_Element} The MN, encoded as an ASN.1 Element.
  */
 export
-function _encode_MN (value: MN, elGetter: $.ASN1Encoder<any>): _Element {
+function _encode_MN (value: MN, elGetter: $.ASN1Encoder<MN>): _Element {
     if (!_cached_encoder_for_MN) { _cached_encoder_for_MN = function (value: MN, elGetter: $.ASN1Encoder<MN>): _Element {
     return $._encodeSet(([] as (_Element | undefined)[]).concat(
         [
-            /* FIXME: COULD_NOT_COMPILE_COMPONENTS_OF DefinedType */,
+            /* REQUIRED   */ _encode_SubjectIPMField(value.subject_ipm, $.BER),
+            /* IF_ABSENT  */ ((value.ipn_originator === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => _encode_IPNOriginatorField, $.BER)(value.ipn_originator, $.BER)),
+            /* IF_ABSENT  */ ((value.ipm_intended_recipient === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_IPMIntendedRecipientField, $.BER)(value.ipm_intended_recipient, $.BER)),
+            /* IF_ABSENT  */ ((value.conversion_eits === undefined) ? undefined : _encode_ConversionEITsField(value.conversion_eits, $.BER)),
+            /* IF_ABSENT  */ ((value.notification_extensions === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_NotificationExtensionsField, $.BER)(value.notification_extensions, $.BER)),
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_MN_choice, $.BER)(value.choice, $.BER)
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);

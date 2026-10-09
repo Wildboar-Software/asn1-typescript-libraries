@@ -5,6 +5,11 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    ORDescriptor,
+    _decode_ORDescriptor,
+    _encode_ORDescriptor,
+} from "@wildboar/x400/IPMSInformationObjects";
 import { _decode_AddressListDesignator_type, _encode_AddressListDesignator_type, AddressListDesignator_type } from "../MMSHeadingExtensions/AddressListDesignator-type.ta.mjs";
 // export { AddressListDesignator_type, AddressListDesignator_type_primaryAddressList /* IMPORTED_LONG_NAMED_INTEGER */, primaryAddressList /* IMPORTED_SHORT_NAMED_INTEGER */, AddressListDesignator_type_copyAddressList /* IMPORTED_LONG_NAMED_INTEGER */, copyAddressList /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AddressListDesignator_type, _encode_AddressListDesignator_type } from "../MMSHeadingExtensions/AddressListDesignator-type.ta.mjs";
 import { _decode_AddressListRequest, _encode_AddressListRequest, AddressListRequest } from "../MMSHeadingExtensions/AddressListRequest.ta.mjs";
@@ -86,7 +91,7 @@ class AddressListDesignator {
 export
 const _root_component_type_list_1_spec_for_AddressListDesignator: $.ComponentSpec[] = [
     new $.ComponentSpec("type", false, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: listName COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("listName", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("notificationRequest", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("replyRequest", true, $.hasTag(_TagClass.context, 3))
 ];

@@ -6,6 +6,19 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    ORName,
+    _decode_ORName,
+    _encode_ORName,
+} from "@wildboar/x400/MTSAbstractService";
+import {
+    Heading,
+    _decode_Heading,
+    _encode_Heading,
+    AutoForwardComment,
+    _decode_AutoForwardComment,
+    _encode_AutoForwardComment,
+} from "@wildboar/x400/IPMSInformationObjects";
 
 
 
@@ -85,8 +98,8 @@ export
 const _root_component_type_list_1_spec_for_ChangeAutoForwardingArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("autoforward-MMs", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("auto-forward-recipients", true, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: auto-forward-heading COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: auto-forward-comment COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("auto-forward-heading", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("auto-forward-comment", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**

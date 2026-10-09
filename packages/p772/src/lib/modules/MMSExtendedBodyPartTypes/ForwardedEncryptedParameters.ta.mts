@@ -5,6 +5,14 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    MessageDeliveryTime,
+    _decode_MessageDeliveryTime,
+    _encode_MessageDeliveryTime,
+    OtherMessageDeliveryFields,
+    _decode_OtherMessageDeliveryFields,
+    _encode_OtherMessageDeliveryFields,
+} from "@wildboar/x400/MTSAbstractService";
 
 
 
@@ -68,8 +76,8 @@ class ForwardedEncryptedParameters {
  */
 export
 const _root_component_type_list_1_spec_for_ForwardedEncryptedParameters: $.ComponentSpec[] = [
-    /* FIXME: delivery-time COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: delivery-envelope COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("delivery-time", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("delivery-envelope", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
