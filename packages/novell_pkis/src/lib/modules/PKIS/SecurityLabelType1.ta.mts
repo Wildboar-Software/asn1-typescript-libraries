@@ -10,7 +10,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 import { Singletons, _decode_Singletons, _encode_Singletons } from "../PKIS/Singletons.ta.mjs";
-// export { Singletons, _decode_Singletons, _encode_Singletons } from "../PKIS/Singletons.ta.mjs";
 
 
 /**

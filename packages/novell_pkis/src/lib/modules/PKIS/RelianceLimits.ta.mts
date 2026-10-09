@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MonetaryValue, _decode_MonetaryValue, _encode_MonetaryValue } from "../PKIS/MonetaryValue.ta.mjs";
-// export { MonetaryValue, _decode_MonetaryValue, _encode_MonetaryValue } from "../PKIS/MonetaryValue.ta.mjs";
 
 
 /**

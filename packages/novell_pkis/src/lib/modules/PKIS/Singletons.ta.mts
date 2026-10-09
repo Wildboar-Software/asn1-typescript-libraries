@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SingletonChoice, _decode_SingletonChoice, _encode_SingletonChoice } from "../PKIS/SingletonChoice.ta.mjs";
-// export { SingletonChoice, _decode_SingletonChoice, _encode_SingletonChoice } from "../PKIS/SingletonChoice.ta.mjs";
 
 
 /**

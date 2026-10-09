@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GLBExtensions, _decode_GLBExtensions, _encode_GLBExtensions } from "../PKIS/GLBExtensions.ta.mjs";
-// export { GLBExtensions, _decode_GLBExtensions, _encode_GLBExtensions } from "../PKIS/GLBExtensions.ta.mjs";
 
 
 /**

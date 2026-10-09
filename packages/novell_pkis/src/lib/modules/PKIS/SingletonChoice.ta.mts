@@ -6,7 +6,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 import { SingletonRange, _decode_SingletonRange, _encode_SingletonRange } from "../PKIS/SingletonRange.ta.mjs";
-// export { SingletonRange, _decode_SingletonRange, _encode_SingletonRange } from "../PKIS/SingletonRange.ta.mjs";
 
 
 /**

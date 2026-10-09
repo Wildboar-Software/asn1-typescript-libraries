@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Quality, _decode_Quality, _encode_Quality } from "../PKIS/Quality.ta.mjs";
-// export { Quality, _decode_Quality, _encode_Quality } from "../PKIS/Quality.ta.mjs";
 
 
 /**

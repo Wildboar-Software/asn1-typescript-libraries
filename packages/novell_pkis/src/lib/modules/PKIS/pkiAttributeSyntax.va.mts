@@ -4,7 +4,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { pki } from "../PKIS/pki.va.mjs";
-// export { pki } from "../PKIS/pki.va.mjs";
 
 
 /**

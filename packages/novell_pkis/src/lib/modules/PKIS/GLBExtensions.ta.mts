@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { KeyQuality, _decode_KeyQuality, _encode_KeyQuality } from "../PKIS/KeyQuality.ta.mjs";
-// export { KeyQuality, _decode_KeyQuality, _encode_KeyQuality } from "../PKIS/KeyQuality.ta.mjs";
 import { CryptoProcessQuality, _decode_CryptoProcessQuality, _encode_CryptoProcessQuality } from "../PKIS/CryptoProcessQuality.ta.mjs";
-// export { CryptoProcessQuality, _decode_CryptoProcessQuality, _encode_CryptoProcessQuality } from "../PKIS/CryptoProcessQuality.ta.mjs";
 import { CertificateClass, _decode_CertificateClass, _encode_CertificateClass } from "../PKIS/CertificateClass.ta.mjs";
-// export { CertificateClass, _decode_CertificateClass, _encode_CertificateClass } from "../PKIS/CertificateClass.ta.mjs";
 import { EnterpriseId, _decode_EnterpriseId, _encode_EnterpriseId } from "../PKIS/EnterpriseId.ta.mjs";
-// export { EnterpriseId, _decode_EnterpriseId, _encode_EnterpriseId } from "../PKIS/EnterpriseId.ta.mjs";
 
 
 /**

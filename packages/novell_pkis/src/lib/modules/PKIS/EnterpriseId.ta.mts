@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SecurityLabelType1, _decode_SecurityLabelType1, _encode_SecurityLabelType1 } from "../PKIS/SecurityLabelType1.ta.mjs";
-// export { SecurityLabelType1, _decode_SecurityLabelType1, _encode_SecurityLabelType1 } from "../PKIS/SecurityLabelType1.ta.mjs";
 
 
 /**

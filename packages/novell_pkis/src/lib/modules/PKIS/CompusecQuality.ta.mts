@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CompusecQualityPair, _decode_CompusecQualityPair, _encode_CompusecQualityPair } from "../PKIS/CompusecQualityPair.ta.mjs";
-// export { CompusecQualityPair, _decode_CompusecQualityPair, _encode_CompusecQualityPair } from "../PKIS/CompusecQualityPair.ta.mjs";
 
 
 /**

@@ -10,9 +10,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 import { CompusecQuality, _decode_CompusecQuality, _encode_CompusecQuality } from "../PKIS/CompusecQuality.ta.mjs";
-// export { CompusecQuality, _decode_CompusecQuality, _encode_CompusecQuality } from "../PKIS/CompusecQuality.ta.mjs";
 import { CryptoQuality, _decode_CryptoQuality, _encode_CryptoQuality } from "../PKIS/CryptoQuality.ta.mjs";
-// export { CryptoQuality, _decode_CryptoQuality, _encode_CryptoQuality } from "../PKIS/CryptoQuality.ta.mjs";
 
 
 /**

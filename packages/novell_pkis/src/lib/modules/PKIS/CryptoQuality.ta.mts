@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CryptoQualityPair, _decode_CryptoQualityPair, _encode_CryptoQualityPair } from "../PKIS/CryptoQualityPair.ta.mjs";
-// export { CryptoQualityPair, _decode_CryptoQualityPair, _encode_CryptoQualityPair } from "../PKIS/CryptoQualityPair.ta.mjs";
 
 
 /**
