@@ -2,9 +2,11 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_military_number_of_sics } from "../MMSUpperBounds/ub-military-number-of-sics.va.mjs";
 import { Sic, _decode_Sic, _encode_Sic } from "../MMSHeadingExtensions/Sic.ta.mjs";
 // export { Sic, _decode_Sic, _encode_Sic } from "../MMSHeadingExtensions/Sic.ta.mjs";
 import { DistributionExtensionField, _decode_DistributionExtensionField, _encode_DistributionExtensionField } from "../MMSHeadingExtensions/DistributionExtensionField.ta.mjs";
@@ -41,7 +43,14 @@ class DistributionCodes {
          * @readonly
          */
         readonly dist_Extensions: OPTIONAL<DistributionExtensionField[]>
-    ) {}
+    ) {
+        if (
+            sics !== undefined
+            && (sics.length < 1 || sics.length > ub_military_number_of_sics)
+        ) {
+            throw new ASN1SizeError("DistributionCodes.sics violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a DistributionCodes
