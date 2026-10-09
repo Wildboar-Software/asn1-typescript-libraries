@@ -55,6 +55,7 @@ jobs:
           - "or-address"
           - "pc"
           - "pkcs"
+          - "pkinit"
           - "pki-stub"
           - "presentation-address"
           - "qc"
