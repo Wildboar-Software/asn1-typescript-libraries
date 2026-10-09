@@ -302,7 +302,8 @@ convention and the scope MUST be the project name (what Nx calls it).
    file to more efficient aliases. Definitely do this for anything that is
    an alias to a universal ASN.1 type, but I am not sure if this can be done
    safely for other types. If this causes problems, just undo these changes
-   or skip them.
+   or skip them. Check the output of this for "slow types" (as documented
+   [here](https://jsr.io/docs/about-slow-types)).
 5. All of the symbols, decoders and encoders for types, named integers, bits,
    and enum variants, "component specs," and anything else produced by the ASN.1
    compilation needs to be exported from `src/index.mts`. If there are name
