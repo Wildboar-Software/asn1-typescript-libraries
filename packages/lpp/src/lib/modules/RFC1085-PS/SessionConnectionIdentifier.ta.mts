@@ -119,7 +119,7 @@ let _cached_decoder_for_SessionConnectionIdentifier: $.ASN1Decoder<SessionConnec
  */
 export
 function _decode_SessionConnectionIdentifier (el: _Element): SessionConnectionIdentifier {
-    if (!_cached_decoder_for_SessionConnectionIdentifier) { _cached_decoder_for_SessionConnectionIdentifier = $._decode_implicit<SessionConnectionIdentifier>(() => function (el: _Element): SessionConnectionIdentifier {
+    if (!_cached_decoder_for_SessionConnectionIdentifier) { _cached_decoder_for_SessionConnectionIdentifier = $._decode_explicit<SessionConnectionIdentifier>(() => function (el: _Element): SessionConnectionIdentifier {
     let callingSSUserReference!: T61String;
     let commonReference!: UTCTime;
     let additionalReferenceInformation: OPTIONAL<T61String>;
@@ -154,7 +154,7 @@ let _cached_encoder_for_SessionConnectionIdentifier: $.ASN1Encoder<SessionConnec
  */
 export
 function _encode_SessionConnectionIdentifier (value: SessionConnectionIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SessionConnectionIdentifier) { _cached_encoder_for_SessionConnectionIdentifier = $._encode_implicit(_TagClass.context, 0, () => function (value: SessionConnectionIdentifier, elGetter: $.ASN1Encoder<SessionConnectionIdentifier>): _Element {
+    if (!_cached_encoder_for_SessionConnectionIdentifier) { _cached_encoder_for_SessionConnectionIdentifier = $._encode_explicit(_TagClass.context, 0, () => function (value: SessionConnectionIdentifier, elGetter: $.ASN1Encoder<SessionConnectionIdentifier>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeT61String(value.callingSSUserReference, $.BER),
