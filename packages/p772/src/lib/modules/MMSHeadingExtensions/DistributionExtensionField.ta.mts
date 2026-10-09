@@ -92,7 +92,12 @@ class DistributionExtensionField {
          * @readonly
          */
         readonly dist_type: OBJECT_IDENTIFIER,
-// FIXME: readonly dist-value: AnyType
+        /**
+         * @summary `dist_value`.
+         * @public
+         * @readonly
+         */
+        readonly dist_value: _Element
     ) {}
 
     /**
@@ -108,7 +113,7 @@ class DistributionExtensionField {
      * @returns {DistributionExtensionField}
      */
     public static _from_object (_o: { [_K in keyof (DistributionExtensionField)]: (DistributionExtensionField)[_K] }): DistributionExtensionField {
-        return new DistributionExtensionField(_o.dist_type, _o.);
+        return new DistributionExtensionField(_o.dist_type, _o.dist_value);
     }
 
 
@@ -172,7 +177,7 @@ function _decode_DistributionExtensionField (el: _Element): DistributionExtensio
     sequence[0].name = "dist-type";
     sequence[1].name = "dist-value";
     let dist_type!: OBJECT_IDENTIFIER;
-    let dist_value!: /* FIXME: dist-value COULD_NOT_COMPILE_TYPE */;
+    let dist_value!: _Element;
     dist_type = $._decodeObjectIdentifier(sequence[0]);
     dist_value = $._decodeAny(sequence[1]);
     return new DistributionExtensionField(
