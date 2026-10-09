@@ -3,7 +3,7 @@ import {
     ObjectIdentifier as _OID,
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
-
+import { pkiAttributeType } from "../PKIS/pkiAttributeType.va.mjs";
 
 
 /**
@@ -20,7 +20,7 @@ import {
  */
 export
 const pa_rl: OBJECT_IDENTIFIER = _OID.fromParts([
-    /* pkiAttributeType */ 2,
-]);
+    2,
+], pkiAttributeType);
 
 /* eslint-enable */
