@@ -173,7 +173,7 @@ let _cached_encoder_for_ConnectResponse_PDU: $.ASN1Encoder<ConnectResponse_PDU> 
  */
 export
 function _encode_ConnectResponse_PDU (value: ConnectResponse_PDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConnectResponse_PDU) { _cached_encoder_for_ConnectResponse_PDU = $._encode_implicit(_TagClass.context, 1, () => function (value: ConnectResponse_PDU, elGetter: $.ASN1Encoder<ConnectResponse_PDU>): _Element {
+    if (!_cached_encoder_for_ConnectResponse_PDU) { _cached_encoder_for_ConnectResponse_PDU = $._encode_implicit(_TagClass.context, 1, () => function (value: ConnectResponse_PDU): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.reference === undefined) ? undefined : _encode_SessionConnectionIdentifier(value.reference, $.BER)),

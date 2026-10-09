@@ -195,7 +195,7 @@ let _cached_encoder_for_ConnectRequest_PDU: $.ASN1Encoder<ConnectRequest_PDU> | 
  */
 export
 function _encode_ConnectRequest_PDU (value: ConnectRequest_PDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConnectRequest_PDU) { _cached_encoder_for_ConnectRequest_PDU = $._encode_implicit(_TagClass.context, 0, () => function (value: ConnectRequest_PDU, elGetter: $.ASN1Encoder<ConnectRequest_PDU>): _Element {
+    if (!_cached_encoder_for_ConnectRequest_PDU) { _cached_encoder_for_ConnectRequest_PDU = $._encode_implicit(_TagClass.context, 0, () => function (value: ConnectRequest_PDU): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ConnectRequest_PDU_version, $.BER)(value.version, $.BER),

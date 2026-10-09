@@ -154,7 +154,7 @@ let _cached_encoder_for_SessionConnectionIdentifier: $.ASN1Encoder<SessionConnec
  */
 export
 function _encode_SessionConnectionIdentifier (value: SessionConnectionIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SessionConnectionIdentifier) { _cached_encoder_for_SessionConnectionIdentifier = $._encode_explicit(_TagClass.context, 0, () => function (value: SessionConnectionIdentifier, elGetter: $.ASN1Encoder<SessionConnectionIdentifier>): _Element {
+    if (!_cached_encoder_for_SessionConnectionIdentifier) { _cached_encoder_for_SessionConnectionIdentifier = $._encode_explicit(_TagClass.context, 0, () => function (value: SessionConnectionIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeT61String(value.callingSSUserReference, $.BER),

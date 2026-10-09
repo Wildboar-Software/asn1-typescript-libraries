@@ -145,7 +145,7 @@ let _cached_encoder_for_ReleaseResponse_PDU: $.ASN1Encoder<ReleaseResponse_PDU> 
  */
 export
 function _encode_ReleaseResponse_PDU (value: ReleaseResponse_PDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReleaseResponse_PDU) { _cached_encoder_for_ReleaseResponse_PDU = $._encode_implicit(_TagClass.context, 3, () => function (value: ReleaseResponse_PDU, elGetter: $.ASN1Encoder<ReleaseResponse_PDU>): _Element {
+    if (!_cached_encoder_for_ReleaseResponse_PDU) { _cached_encoder_for_ReleaseResponse_PDU = $._encode_implicit(_TagClass.context, 3, () => function (value: ReleaseResponse_PDU): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.reference === undefined) ? undefined : _encode_SessionConnectionIdentifier(value.reference, $.BER)),

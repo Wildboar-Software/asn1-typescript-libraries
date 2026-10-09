@@ -160,7 +160,7 @@ let _cached_encoder_for_Abort_PDU: $.ASN1Encoder<Abort_PDU> | null = null;
  */
 export
 function _encode_Abort_PDU (value: Abort_PDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Abort_PDU) { _cached_encoder_for_Abort_PDU = $._encode_explicit(_TagClass.context, 4, () => function (value: Abort_PDU, elGetter: $.ASN1Encoder<Abort_PDU>): _Element {
+    if (!_cached_encoder_for_Abort_PDU) { _cached_encoder_for_Abort_PDU = $._encode_explicit(_TagClass.context, 4, () => function (value: Abort_PDU): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.reference === undefined) ? undefined : _encode_SessionConnectionIdentifier(value.reference, $.BER)),
