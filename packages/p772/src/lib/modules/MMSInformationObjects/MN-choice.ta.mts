@@ -25,7 +25,11 @@ import {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MN-choice ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * MN-choice ::= CHOICE {
+  mn-non-receipt-fields              [0]  NonReceiptFields,
+  mn-receipt-fields                  [1]  ReceiptFields,
+  mn-other-notification-type-fields  [2]  OtherNotificationTypeFields
+}
  * ```
  */
 export

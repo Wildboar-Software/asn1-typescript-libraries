@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AddressListDesignator-type ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * AddressListDesignator-type ::= INTEGER {
+  primaryAddressList(0),
+  copyAddressList(1)
+}
  * ```
  */
 export

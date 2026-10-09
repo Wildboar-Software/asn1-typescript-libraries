@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * OtherRecipientDesignator-type ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * OtherRecipientDesignator-type ::= INTEGER {
+  primary(0),
+  copy(1)
+}
  * ```
  */
 export
