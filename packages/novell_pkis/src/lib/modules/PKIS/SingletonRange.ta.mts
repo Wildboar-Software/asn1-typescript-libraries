@@ -7,6 +7,7 @@ import {
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 
 
 
@@ -68,7 +69,10 @@ class SingletonRange {
          * @readonly
          */
         readonly singletonValue: BOOLEAN
-    ) {}
+    ) {
+        assertIntegerRange(singletonLowerBound, 0n, 9223372036854775807n, "SingletonRange.singletonLowerBound");
+        assertIntegerRange(singletonUpperBound, 0n, 9223372036854775807n, "SingletonRange.singletonUpperBound");
+    }
 
     /**
      * @summary Restructures an object into a SingletonRange

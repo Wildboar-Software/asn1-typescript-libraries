@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     BIT_STRING,
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
@@ -7,6 +8,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 import { Singletons, _decode_Singletons, _encode_Singletons } from "../PKIS/Singletons.ta.mjs";
 // export { Singletons, _decode_Singletons, _encode_Singletons } from "../PKIS/Singletons.ta.mjs";
 
@@ -100,7 +102,23 @@ class SecurityLabelType1 {
          * @readonly
          */
         readonly integritySingletons1: Singletons
-    ) {}
+    ) {
+        assertIntegerRange(labelType1, 0n, 255n, "SecurityLabelType1.labelType1");
+        assertIntegerRange(secrecyLevel1, 0n, 255n, "SecurityLabelType1.secrecyLevel1");
+        assertIntegerRange(integrityLevel1, 0n, 255n, "SecurityLabelType1.integrityLevel1");
+        if (secrecyCategories1.length !== 96) {
+            throw new ASN1SizeError("SecurityLabelType1.secrecyCategories1 violates SIZE constraint");
+        }
+        if (integrityCategories1.length !== 64) {
+            throw new ASN1SizeError("SecurityLabelType1.integrityCategories1 violates SIZE constraint");
+        }
+        if (secrecySingletons1.length < 1 || secrecySingletons1.length > 16) {
+            throw new ASN1SizeError("SecurityLabelType1.secrecySingletons1 violates SIZE constraint");
+        }
+        if (integritySingletons1.length < 1 || integritySingletons1.length > 16) {
+            throw new ASN1SizeError("SecurityLabelType1.integritySingletons1 violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a SecurityLabelType1

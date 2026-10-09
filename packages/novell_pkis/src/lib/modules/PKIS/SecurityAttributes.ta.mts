@@ -1,5 +1,7 @@
 /* eslint-disable */
 import {
+    ASN1Error,
+    ASN1SizeError,
     BOOLEAN,
     IA5String,
     OCTET_STRING,
@@ -106,7 +108,17 @@ class SecurityAttributes {
          * @readonly
          */
         readonly gLBExtensions: GLBExtensions
-    ) {}
+    ) {
+        if (versionNumber.length !== 2) {
+            throw new ASN1SizeError("SecurityAttributes.versionNumber violates SIZE constraint");
+        }
+        if (nSI !== true) {
+            throw new ASN1Error("SecurityAttributes.nSI violates BOOLEAN (TRUE) constraint");
+        }
+        if (securityTM !== "Novell Security Attribute(tm)") {
+            throw new ASN1Error("SecurityAttributes.securityTM violates single-value constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a SecurityAttributes

@@ -7,6 +7,7 @@ import {
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 
 
 
@@ -44,7 +45,9 @@ class CertificateClass {
          * @readonly
          */
         readonly certificateValid: BOOLEAN
-    ) {}
+    ) {
+        assertIntegerRange(classValue, 0n, 255n, "CertificateClass.classValue");
+    }
 
     /**
      * @summary Restructures an object into a CertificateClass

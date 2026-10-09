@@ -6,6 +6,7 @@ import {
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 
 
 
@@ -52,7 +53,10 @@ class CompusecQualityPair {
          * @readonly
          */
         readonly compusecRating: INTEGER
-    ) {}
+    ) {
+        assertIntegerRange(compusecCriteria, 0n, 255n, "CompusecQualityPair.compusecCriteria");
+        assertIntegerRange(compusecRating, 0n, 255n, "CompusecQualityPair.compusecRating");
+    }
 
     /**
      * @summary Restructures an object into a CompusecQualityPair

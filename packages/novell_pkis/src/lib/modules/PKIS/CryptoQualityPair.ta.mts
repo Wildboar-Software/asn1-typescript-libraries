@@ -6,6 +6,7 @@ import {
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 
 
 
@@ -49,7 +50,10 @@ class CryptoQualityPair {
          * @readonly
          */
         readonly cryptoModuleRating: INTEGER
-    ) {}
+    ) {
+        assertIntegerRange(cryptoModuleCriteria, 0n, 255n, "CryptoQualityPair.cryptoModuleCriteria");
+        assertIntegerRange(cryptoModuleRating, 0n, 255n, "CryptoQualityPair.cryptoModuleRating");
+    }
 
     /**
      * @summary Restructures an object into a CryptoQualityPair

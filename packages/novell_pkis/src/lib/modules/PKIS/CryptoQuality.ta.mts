@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CryptoQualityPair, _decode_CryptoQualityPair, _encode_CryptoQualityPair } from "../PKIS/CryptoQualityPair.ta.mjs";
@@ -32,7 +33,11 @@ let _cached_decoder_for_CryptoQuality: $.ASN1Decoder<CryptoQuality> | null = nul
 export
 function _decode_CryptoQuality (el: _Element): CryptoQuality {
     if (!_cached_decoder_for_CryptoQuality) { _cached_decoder_for_CryptoQuality = $._decodeSequenceOf<CryptoQualityPair>(() => _decode_CryptoQualityPair); }
-    return _cached_decoder_for_CryptoQuality(el);
+    const value = _cached_decoder_for_CryptoQuality(el);
+    if (value.length !== 1) {
+        throw new ASN1SizeError("CryptoQuality violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_CryptoQuality: $.ASN1Encoder<CryptoQuality> | null = null;
