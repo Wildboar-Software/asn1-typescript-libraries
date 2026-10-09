@@ -14,6 +14,25 @@ import { EnterpriseId, _decode_EnterpriseId, _encode_EnterpriseId } from "../PKI
 /**
  * @summary GLBExtensions
  * @description
+ *
+ * The four Novell Security Attributes over which a greatest lower bound
+ * is computed, from the end-entity certificate up to the Root Certifier.
+ * §3.1.
+ *
+ * For an ordered numeric component the bound is the lowest value in the
+ * chain. For a boolean or category bit the bound is TRUE only when that
+ * bit is TRUE in every certificate; otherwise it is FALSE. Set A
+ * dominates set B when every numeric value in A is greater than or
+ * equal to the corresponding value in B, and every boolean that is TRUE
+ * in B is TRUE in A. Integrity levels are numbered in the opposite
+ * direction from secrecy levels (0 is high integrity, 255 is low) so
+ * that the same dominance relation covers Bell-LaPadula secrecy and
+ * Biba integrity.
+ *
+ * Algorithm type and key length participate in the bound but are read
+ * from elsewhere in the certificate, not stored here. If the algorithm
+ * types in the chain differ, that part of the bound is not comparable.
+ * §4 and §4.5.
  * 
  * ### ASN.1 Definition:
  * 
@@ -35,24 +54,54 @@ class GLBExtensions {
     constructor (
         /**
          * @summary `keyQuality`.
+         * @description
+         *
+         * Static quality of the key pair already generated for the
+         * subject. A statement of fact, not a promise about later use.
+         * If this is too weak, the other attributes are not a reason to
+         * trust the binding, because the private key may not be under
+         * the subject's exclusive control. §4.
+         *
          * @public
          * @readonly
          */
         readonly keyQuality: KeyQuality,
         /**
          * @summary `cryptoProcessQuality`.
+         * @description
+         *
+         * Minimum quality the subscriber commits to for every later
+         * process that uses the key, through the end of the certificate
+         * validity or the private-key validity, whichever is first.
+         * It is the trusted-path indication: that what was intended to
+         * be signed is what was signed. §4.
+         *
          * @public
          * @readonly
          */
         readonly cryptoProcessQuality: CryptoProcessQuality,
         /**
          * @summary `certificateClass`.
+         * @description
+         *
+         * Due diligence applied to the subject name and other
+         * attributes. The chain bound is the lowest class in the chain.
+         * PKIS certificates that leave the organization are expected to
+         * show that no external due diligence was done. §5.
+         *
          * @public
          * @readonly
          */
         readonly certificateClass: CertificateClass,
         /**
          * @summary `enterpriseId`.
+         * @description
+         *
+         * Mandatory access control label: root, registry, and
+         * enterprise. Membership and rights are expressed here so they
+         * do not have to be encoded as a shared distinguished name.
+         * §6.
+         *
          * @public
          * @readonly
          */

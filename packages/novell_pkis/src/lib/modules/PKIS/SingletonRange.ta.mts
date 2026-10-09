@@ -14,6 +14,11 @@ import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 /**
  * @summary SingletonRange
  * @description
+ *
+ * An inclusive range of singleton indexes, all set to
+ * `singletonValue`. Ranges may overlap. A `uniqueSingleton` can
+ * override a range and a range can override a `uniqueSingleton`, in
+ * the order of the enclosing `Singletons` sequence. Appendix F.
  * 
  * ### ASN.1 Definition:
  * 
@@ -53,18 +58,34 @@ class SingletonRange {
     constructor (
         /**
          * @summary `singletonLowerBound`.
+         * @description
+         *
+         * First singleton index in the range, inclusive. Coded
+         * explicitly. The value that would have been the default is 0.
+         *
          * @public
          * @readonly
          */
         readonly singletonLowerBound: INTEGER,
         /**
          * @summary `singletonUpperBound`.
+         * @description
+         *
+         * Last singleton index in the range, inclusive. Coded
+         * explicitly. The value that would have been the default is
+         * 9223372036854775807 (2^63-1). Equal bounds set one singleton.
+         *
          * @public
          * @readonly
          */
         readonly singletonUpperBound: INTEGER,
         /**
          * @summary `singletonValue`.
+         * @description
+         *
+         * TRUE or FALSE for every index from the lower bound through
+         * the upper bound.
+         *
          * @public
          * @readonly
          */

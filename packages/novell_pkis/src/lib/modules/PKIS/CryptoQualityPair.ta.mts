@@ -13,6 +13,13 @@ import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 /**
  * @summary CryptoQualityPair
  * @description
+ *
+ * A cryptographic-module evaluation criterion and the rating under that
+ * criterion. Display names: "Crypto Module Criteria" and "Crypto
+ * Module Rating". FIPS 140-1 is the only unclassified criteria the
+ * document treats as accepted. Extra levels exist here because of
+ * "designed to meet" claims and because FIPS 140-1 covers FIPS
+ * algorithms (DSA, DES) and not, for example, RSA. §4.2.
  * 
  * ### ASN.1 Definition:
  * 
@@ -40,12 +47,60 @@ class CryptoQualityPair {
     constructor (
         /**
          * @summary `cryptoModuleCriteria`.
+         * @description
+         *
+         * Which module-evaluation scheme `cryptoModuleRating` uses.
+         * Coded explicitly. The ASN.1 assigns 1 to FIPS 140-1 and
+         * reserves every other value. Appendix B's heading writes
+         * `cryptoModuleCriteria(0)` for that same FIPS 140-1 table.
+         *
          * @public
          * @readonly
          */
         readonly cryptoModuleCriteria: INTEGER,
         /**
          * @summary `cryptoModuleRating`.
+         * @description
+         *
+         * Rating under `cryptoModuleCriteria`. Appendix B is the FIPS
+         * 140-1 scale. The ASN.1 comment says 0 is reserved (an
+         * encoding error) and 1 is unevaluated/unknown. Appendix B
+         * assigns 0 to unevaluated/unknown and does not define 1.
+         * NICI had not been evaluated against FIPS 140-1, so its
+         * rating is 10. §4.
+         *
+         * | Value | FIPS 140-1 rating (Appendix B) |
+         * | ---: | --- |
+         * | 0 | Unevaluated. Unknown. No claims. |
+         * | 5 | Unevaluated. Unmodified commercial toolkit binary. |
+         * | 10 | Unevaluated. Vendor-inspected or enhanced commercial source. |
+         * | 25 | Claimed designed to meet level 1, except the FIPS-algorithm restriction. |
+         * | 30 | Claimed designed to meet level 1. |
+         * | 35 | Evaluated at level 1 except the FIPS-algorithm restriction; changed since, without reevaluation. |
+         * | 40 | Evaluated at level 1; changed since, without reevaluation. |
+         * | 45 | Evaluated at level 1, except the FIPS-algorithm restriction. |
+         * | 50 | Evaluated at level 1. |
+         * | 75 | Claimed designed to meet level 2, except the FIPS-algorithm restriction. |
+         * | 80 | Claimed designed to meet level 2. |
+         * | 85 | Evaluated at level 2 except the FIPS-algorithm restriction; changed since. |
+         * | 90 | Evaluated at level 2; changed since. |
+         * | 95 | Evaluated at level 2, except the FIPS-algorithm restriction. |
+         * | 100 | Evaluated at level 2. |
+         * | 125 | Claimed designed to meet level 3, except the FIPS-algorithm restriction. |
+         * | 130 | Claimed designed to meet level 3. |
+         * | 135 | Evaluated at level 3 except the FIPS-algorithm restriction; changed since. |
+         * | 140 | Evaluated at level 3; changed since. |
+         * | 145 | Evaluated at level 3, except the FIPS-algorithm restriction. |
+         * | 150 | Evaluated at level 3. |
+         * | 175 | Claimed designed to meet level 4, except the FIPS-algorithm restriction. |
+         * | 180 | Claimed designed to meet level 4. |
+         * | 185 | Evaluated at level 4 except the FIPS-algorithm restriction; changed since. |
+         * | 190 | Evaluated at level 4; changed since. |
+         * | 195 | Evaluated at level 4, except the FIPS-algorithm restriction. |
+         * | 200 | Evaluated at level 4. |
+         *
+         * Other values are reserved.
+         *
          * @public
          * @readonly
          */

@@ -9,6 +9,15 @@ import { Quality, _decode_Quality, _encode_Quality } from "../PKIS/Quality.ta.mj
 /**
  * @summary KeyQuality
  * @description
+ *
+ * Quality of the public/private key pair (or the secret key, for a
+ * symmetric algorithm) named by the certificate, as a fact about how
+ * that key was generated and stored. The subscriber represents it to
+ * the CA on behalf of the subject. Display name: "Key Quality". §4.
+ *
+ * For PKIS and NICI 1.0, `enforceQuality` in this attribute is FALSE.
+ * On Novell's B3 generation platform it is TRUE only while the private
+ * key stays on that platform. §4.4.
  * 
  * ### ASN.1 Definition:
  * 

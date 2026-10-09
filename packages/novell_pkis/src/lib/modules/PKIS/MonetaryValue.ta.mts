@@ -12,6 +12,9 @@ import { Currency, _decode_Currency, _encode_Currency } from "../PKIS/Currency.t
 /**
  * @summary MonetaryValue
  * @description
+ *
+ * An exact decimal amount: `amount * (10 ** amtExp10)`, taken from SET
+ * and draft ANSI X9.45. §2, Appendix F.
  * 
  * ### ASN.1 Definition:
  * 
@@ -30,18 +33,32 @@ class MonetaryValue {
     constructor (
         /**
          * @summary `currency`.
+         * @description
+         *
+         * ISO 4217 numeric code. Display the three-letter alphabetic
+         * code; a translated currency name may be appended, for
+         * example `USD-Estados Unidos Dollar`. §2.
+         *
          * @public
          * @readonly
          */
         readonly currency: Currency,
         /**
          * @summary `amount`.
+         * @description
+         *
+         * Significand. The value is `amount * (10 ** amtExp10)`.
+         *
          * @public
          * @readonly
          */
         readonly amount: INTEGER,
         /**
          * @summary `amtExp10`.
+         * @description
+         *
+         * Base-10 exponent applied to `amount`.
+         *
          * @public
          * @readonly
          */

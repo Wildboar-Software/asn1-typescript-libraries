@@ -9,6 +9,10 @@ import { novell } from "../PKIS/novell.va.mjs";
 /**
  * @summary applications
  * @description
+ *
+ * Novell applications arc, `{ novell 1 }`. The PKI attribute identifiers
+ * in this module hang under `pki`, which is `{ applications 9 }`.
+ * Appendix F does not assign any other application under this arc.
  * 
  * ### ASN.1 Definition:
  * 

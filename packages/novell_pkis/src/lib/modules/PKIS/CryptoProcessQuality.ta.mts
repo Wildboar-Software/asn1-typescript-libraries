@@ -9,6 +9,16 @@ import { Quality, _decode_Quality, _encode_Quality } from "../PKIS/Quality.ta.mj
 /**
  * @summary CryptoProcessQuality
  * @description
+ *
+ * Minimum process quality the subscriber commits will apply whenever
+ * the key is used. Display name: "Crypto Process Quality". Unlike
+ * `KeyQuality`, this is a commitment about future operations, not a
+ * measurement of a key that already exists. §4.
+ *
+ * If `enforceQuality` is TRUE here and FALSE on `KeyQuality`, the
+ * platform is not required to enforce the criteria technically; the
+ * subscriber is representing that procedural controls will keep them.
+ * §4.4.
  * 
  * ### ASN.1 Definition:
  * 

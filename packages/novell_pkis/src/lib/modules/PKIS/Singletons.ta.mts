@@ -10,6 +10,14 @@ import { SingletonChoice, _decode_SingletonChoice, _encode_SingletonChoice } fro
 /**
  * @summary Singletons
  * @description
+ *
+ * From 1 to 16 singleton settings, applied in order from the first
+ * element to the last. Sixteen is an arbitrary cap. A later element
+ * overrides an overlapping earlier one. DER encodes only the elements
+ * that are present. §6.2, Appendix F.
+ *
+ * Novell labels initialize the whole range to FALSE and then turn on
+ * the singletons that should be set. §7.1.
  * 
  * ### ASN.1 Definition:
  * 

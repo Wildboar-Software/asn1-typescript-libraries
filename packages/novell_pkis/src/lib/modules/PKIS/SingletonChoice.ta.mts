@@ -11,6 +11,11 @@ import { SingletonRange, _decode_SingletonRange, _encode_SingletonRange } from "
 /**
  * @summary SingletonChoice
  * @description
+ *
+ * Either one singleton forced TRUE, or a range set to TRUE or FALSE.
+ * There is no single-value encoding for FALSE; a FALSE singleton is a
+ * range whose bounds are equal. The upper bound is 2^63-1, sized for a
+ * 15-digit national identifier multiplied by 1024. §6.2.
  * 
  * ### ASN.1 Definition:
  * 

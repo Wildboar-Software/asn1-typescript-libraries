@@ -9,6 +9,11 @@ import {
 /**
  * @summary novell
  * @description
+ *
+ * Novell's organization arc under the US joint-iso-ccitt name-registration
+ * arc: `2.16.840.1.113719`. Appendix F introduces it as the root of the
+ * PKI attribute identifiers. §7 uses the same numeric organization id,
+ * 113719, inside enterprise-identifier singletons.
  * 
  * ### ASN.1 Definition:
  * 

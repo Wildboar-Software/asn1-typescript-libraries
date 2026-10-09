@@ -1,9 +1,16 @@
 /**
+ * @module
  * @description
  *
- * ASN.1 module `PKIS`
- * `{ joint-iso-ccitt(2) country(16) us(840) organization(1) novell(113719) }`
- * from Novell Certificate Attributes version 1.0 (`pkisv10`).
+ * ASN.1 module `PKIS`,
+ * `{ joint-iso-ccitt(2) country(16) us(840) organization(1) novell(113719) }`,
+ * from *Novell Certificate Extension Attributes* (7 August 1998,
+ * document version 0.99; `pkisv10`), Appendix F.
+ *
+ * The module defines the Novell Security Attributes extension (`pa_sa`)
+ * and the separate Reliance Limits attribute (`pa_rl`). It does not
+ * assign any attribute syntaxes or object classes under
+ * `pkiAttributeSyntax` or `pkiObjectClass`.
  */
 export * from "./novell.va.mjs";
 export * from "./applications.va.mjs";

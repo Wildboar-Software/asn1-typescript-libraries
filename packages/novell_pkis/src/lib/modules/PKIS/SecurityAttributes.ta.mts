@@ -17,6 +17,21 @@ import { GLBExtensions, _decode_GLBExtensions, _encode_GLBExtensions } from "../
 /**
  * @summary SecurityAttributes
  * @description
+ *
+ * Value of the Novell Security Attributes extension (`pa_sa`). It
+ * carries a version, a nonverified-subscriber flag, the trademark
+ * string, a URL for this definition, and the four attributes over
+ * which NICI computes a greatest lower bound (`gLBExtensions`).
+ *
+ * Licensed software compares those four attributes across the whole
+ * chain, from the end entity up to the self-signed Root Certifier, and
+ * exposes the bound to the application. A relying party that does not
+ * implement the extension can be misled if the Novell root is imported,
+ * which is why the NICI Licensed CA certificate marks this extension
+ * critical. §1, §3, §3.2.
+ *
+ * If the definitions of any coded values change, `versionNumber` is
+ * updated and `uriReference` is revised to the matching document. §4.5.
  * 
  * ### ASN.1 Definition:
  * 
@@ -79,30 +94,78 @@ class SecurityAttributes {
     constructor (
         /**
          * @summary `versionNumber`.
+         * @description
+         *
+         * Two octets: major version, then minor version. The initial
+         * value is `01 00`. A later document that changes the meaning
+         * of a coded value uses a new version and a revised URL. §4.5,
+         * Appendix F.
+         *
          * @public
          * @readonly
          */
         readonly versionNumber: OCTET_STRING,
         /**
          * @summary `nSI`.
+         * @description
+         *
+         * Nonverified Subscriber Information, applying to every value
+         * in the extension. TRUE means the subscriber represented the
+         * values as correct and the CA did not independently validate
+         * them. FALSE means the issuing CA verified all of them by the
+         * means in its certificate policy or practice statement. The
+         * CA still must not issue a certificate it has reason to
+         * believe is inaccurate, except a test certificate
+         * (`certificateValid` FALSE). Most certificates are expected
+         * to set this TRUE, because several of the values cannot be
+         * confirmed without knowing how NICI was installed, or without
+         * predicting future process quality. §3.2.
+         *
+         * The ASN.1 constrains the field to TRUE, so this module
+         * rejects FALSE.
+         *
          * @public
          * @readonly
          */
         readonly nSI: BOOLEAN,
         /**
          * @summary `securityTM`.
+         * @description
+         *
+         * Must be exactly `Novell Security Attribute(tm)`, in English,
+         * whenever it is shown to a user. A translation may be shown
+         * in addition. Licensees check for this string in any attribute
+         * whose OID identifies it as a Novell Security attribute.
+         * Some PKIS 1.0 display code still shows the earlier name
+         * "Novell Registered Attributes(tm)". §3.2 and the terminology
+         * footnote in §1.
+         *
          * @public
          * @readonly
          */
         readonly securityTM: PrintableString,
         /**
          * @summary `uriReference`.
+         * @description
+         *
+         * Location of the syntax and semantics. The initial value in
+         * Appendix F is
+         * `http://developer.novell.com/repository/attributes/certattrs_v10.htm`.
+         * Included in all NICI and PKIS certificates. §3.2's prose
+         * example differs (a space in the host path, and `PKISv10`).
+         * IA5String, because the URL may contain an underscore.
+         *
          * @public
          * @readonly
          */
         readonly uriReference: IA5String,
         /**
          * @summary `gLBExtensions`.
+         * @description
+         *
+         * The four attributes whose greatest lower bound is computed
+         * over the certificate chain. §3.1.
+         *
          * @public
          * @readonly
          */

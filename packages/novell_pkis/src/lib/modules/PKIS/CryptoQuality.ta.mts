@@ -10,6 +10,10 @@ import { CryptoQualityPair, _decode_CryptoQualityPair, _encode_CryptoQualityPair
 /**
  * @summary CryptoQuality
  * @description
+ *
+ * One or more cryptographic-module criterion/rating pairs. The prose
+ * allows several pairs. This module's SIZE constraint is exactly one,
+ * and the initial release supplies only one pair. §4.2, Appendix F.
  * 
  * ### ASN.1 Definition:
  * 

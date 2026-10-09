@@ -9,6 +9,9 @@ import { pki } from "../PKIS/pki.va.mjs";
 /**
  * @summary pkiObjectClass
  * @description
+ *
+ * Arc for Novell PKI object classes, `{ pki 6 }`. This version of the
+ * specification does not assign any object class under it. Appendix F.
  * 
  * ### ASN.1 Definition:
  * 

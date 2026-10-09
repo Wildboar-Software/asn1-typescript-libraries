@@ -9,6 +9,9 @@ import { pki } from "../PKIS/pki.va.mjs";
 /**
  * @summary pkiAttributeType
  * @description
+ *
+ * Arc for Novell PKI attribute-type OIDs, `{ pki 4 }`. This version
+ * assigns `pa_sa` (1) and `pa_rl` (2) under it. Appendix F.
  * 
  * ### ASN.1 Definition:
  * 

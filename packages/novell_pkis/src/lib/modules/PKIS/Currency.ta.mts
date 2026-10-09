@@ -11,6 +11,15 @@ import { assertIntegerRange } from "../../assertIntegerRange.mjs";
 /**
  * @summary Currency
  * @description
+ *
+ * ISO 4217 numeric currency code, from 1 through 999. Appendix E is a
+ * non-authoritative copy of ISO 4217 table A.1 as updated through
+ * 17 April 1998, ordered by English country name. US Dollar (USD) is
+ * 840. Euro (EUR) is 978, effective 1 January 1999. For a reliance
+ * limit, gold (XAU, 959), palladium (XPD, 964), platinum (XPT, 962),
+ * and silver (XAG, 961) are denominated in grams; ISO 4217 itself does
+ * not define a unit for those codes. Later codes belong to the ISO
+ * 4217 maintenance agency. §2, Appendix E.
  * 
  * ### ASN.1 Definition:
  * 

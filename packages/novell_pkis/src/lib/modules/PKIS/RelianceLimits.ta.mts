@@ -11,6 +11,23 @@ import { MonetaryValue, _decode_MonetaryValue, _encode_MonetaryValue } from "../
 /**
  * @summary RelianceLimits
  * @description
+ *
+ * A monetary cap, negotiated by the CA and the subscriber, above which
+ * reliance on a signature verified by the certificate should not be
+ * treated as commercially reasonable. Display name: "Reliance Limits".
+ * §2.
+ *
+ * One component is a per-transaction cap, in the sense of the Utah
+ * Digital Signature Act and similar statutes. The other is an aggregate
+ * cap for the certificate, in the sense of a per-certificate liability
+ * limit. Neither is a closed-loop count of signatures. Omitting the
+ * attribute is different from a limit of zero: the document's reading
+ * of those statutes is that only a licensed CA can cap liability this
+ * way, and without a stated limit ordinary liability rules apply.
+ *
+ * This attribute is not inside the Novell Security Attributes
+ * extension, and the initial PKIS release does not put it in
+ * certificates. §2, §3.
  * 
  * ### ASN.1 Definition:
  * 
@@ -28,12 +45,22 @@ class RelianceLimits {
     constructor (
         /**
          * @summary `perTransactionLimit`.
+         * @description
+         *
+         * Cap for one transaction. Display name: "Per Transaction
+         * Reliance Limit". §2.
+         *
          * @public
          * @readonly
          */
         readonly perTransactionLimit: MonetaryValue,
         /**
          * @summary `perCertificateLimit`.
+         * @description
+         *
+         * Aggregate cap for the certificate. Display name: "Per
+         * Certificate Reliance Limit". §2.
+         *
          * @public
          * @readonly
          */

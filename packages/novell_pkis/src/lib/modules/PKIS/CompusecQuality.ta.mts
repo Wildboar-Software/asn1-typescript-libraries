@@ -10,6 +10,10 @@ import { CompusecQualityPair, _decode_CompusecQualityPair, _encode_CompusecQuali
 /**
  * @summary CompusecQuality
  * @description
+ *
+ * One or more computer-security criterion/rating pairs. The prose
+ * allows several pairs. This module's SIZE constraint is exactly one,
+ * and the first release supplies only the TCSEC pair. §4.1, Appendix F.
  * 
  * ### ASN.1 Definition:
  * 
