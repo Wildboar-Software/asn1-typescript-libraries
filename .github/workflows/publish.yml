@@ -45,6 +45,7 @@ jobs:
           # - "kerberos5"
           - "ldap"
           # - "m3100"
+          - "nist-csor"
           - "novell_pkis"
           - "logotypecertextn"
           - "or-address"

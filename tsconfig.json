@@ -220,6 +220,9 @@
       "path": "./packages/mrbtr"
     },
     {
+      "path": "./packages/nist-csor"
+    },
+    {
       "path": "./packages/novell_pkis"
     },
     {
