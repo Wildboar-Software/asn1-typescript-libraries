@@ -179,7 +179,7 @@ let _cached_encoder_for_SingletonRange: $.ASN1Encoder<SingletonRange> | null = n
  */
 export
 function _encode_SingletonRange (value: SingletonRange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SingletonRange) { _cached_encoder_for_SingletonRange = function (value: SingletonRange, elGetter: $.ASN1Encoder<SingletonRange>): _Element {
+    if (!_cached_encoder_for_SingletonRange) { _cached_encoder_for_SingletonRange = function (value: SingletonRange): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.singletonLowerBound, $.BER),

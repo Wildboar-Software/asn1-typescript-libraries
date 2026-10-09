@@ -173,7 +173,7 @@ let _cached_encoder_for_GLBExtensions: $.ASN1Encoder<GLBExtensions> | null = nul
  */
 export
 function _encode_GLBExtensions (value: GLBExtensions, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GLBExtensions) { _cached_encoder_for_GLBExtensions = function (value: GLBExtensions, elGetter: $.ASN1Encoder<GLBExtensions>): _Element {
+    if (!_cached_encoder_for_GLBExtensions) { _cached_encoder_for_GLBExtensions = function (value: GLBExtensions): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_KeyQuality, $.BER)(value.keyQuality, $.BER),

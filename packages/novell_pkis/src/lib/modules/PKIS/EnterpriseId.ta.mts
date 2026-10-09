@@ -158,7 +158,7 @@ let _cached_encoder_for_EnterpriseId: $.ASN1Encoder<EnterpriseId> | null = null;
  */
 export
 function _encode_EnterpriseId (value: EnterpriseId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EnterpriseId) { _cached_encoder_for_EnterpriseId = function (value: EnterpriseId, elGetter: $.ASN1Encoder<EnterpriseId>): _Element {
+    if (!_cached_encoder_for_EnterpriseId) { _cached_encoder_for_EnterpriseId = function (value: EnterpriseId): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SecurityLabelType1, $.BER)(value.rootLabel, $.BER),

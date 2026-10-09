@@ -155,7 +155,7 @@ let _cached_encoder_for_CryptoQualityPair: $.ASN1Encoder<CryptoQualityPair> | nu
  */
 export
 function _encode_CryptoQualityPair (value: CryptoQualityPair, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CryptoQualityPair) { _cached_encoder_for_CryptoQualityPair = function (value: CryptoQualityPair, elGetter: $.ASN1Encoder<CryptoQualityPair>): _Element {
+    if (!_cached_encoder_for_CryptoQualityPair) { _cached_encoder_for_CryptoQualityPair = function (value: CryptoQualityPair): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.cryptoModuleCriteria, $.BER),

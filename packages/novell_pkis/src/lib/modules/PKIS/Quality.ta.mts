@@ -199,7 +199,7 @@ let _cached_encoder_for_Quality: $.ASN1Encoder<Quality> | null = null;
  */
 export
 function _encode_Quality (value: Quality, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Quality) { _cached_encoder_for_Quality = function (value: Quality, elGetter: $.ASN1Encoder<Quality>): _Element {
+    if (!_cached_encoder_for_Quality) { _cached_encoder_for_Quality = function (value: Quality): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeBoolean(value.enforceQuality, $.BER),

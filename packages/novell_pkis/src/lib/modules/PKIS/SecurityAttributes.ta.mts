@@ -235,7 +235,7 @@ let _cached_encoder_for_SecurityAttributes: $.ASN1Encoder<SecurityAttributes> | 
  */
 export
 function _encode_SecurityAttributes (value: SecurityAttributes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SecurityAttributes) { _cached_encoder_for_SecurityAttributes = function (value: SecurityAttributes, elGetter: $.ASN1Encoder<SecurityAttributes>): _Element {
+    if (!_cached_encoder_for_SecurityAttributes) { _cached_encoder_for_SecurityAttributes = function (value: SecurityAttributes): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeOctetString(value.versionNumber, $.BER),

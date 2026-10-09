@@ -141,7 +141,7 @@ let _cached_encoder_for_RelianceLimits: $.ASN1Encoder<RelianceLimits> | null = n
  */
 export
 function _encode_RelianceLimits (value: RelianceLimits, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RelianceLimits) { _cached_encoder_for_RelianceLimits = function (value: RelianceLimits, elGetter: $.ASN1Encoder<RelianceLimits>): _Element {
+    if (!_cached_encoder_for_RelianceLimits) { _cached_encoder_for_RelianceLimits = function (value: RelianceLimits): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_MonetaryValue(value.perTransactionLimit, $.BER),

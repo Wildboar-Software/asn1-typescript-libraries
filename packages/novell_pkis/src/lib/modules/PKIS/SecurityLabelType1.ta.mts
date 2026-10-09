@@ -245,7 +245,7 @@ let _cached_encoder_for_SecurityLabelType1: $.ASN1Encoder<SecurityLabelType1> | 
  */
 export
 function _encode_SecurityLabelType1 (value: SecurityLabelType1, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SecurityLabelType1) { _cached_encoder_for_SecurityLabelType1 = function (value: SecurityLabelType1, elGetter: $.ASN1Encoder<SecurityLabelType1>): _Element {
+    if (!_cached_encoder_for_SecurityLabelType1) { _cached_encoder_for_SecurityLabelType1 = function (value: SecurityLabelType1): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeInteger(value.labelType1, $.BER),
