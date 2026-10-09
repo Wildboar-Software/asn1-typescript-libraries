@@ -147,35 +147,8 @@ const ResourceReportResponse_resourceReportStatus_failure_6: ResourceReportRespo
  */
 export
 const failure_6: ResourceReportResponse_resourceReportStatus = ResourceReportResponse_resourceReportStatus_failure_6; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ResourceReportResponse_resourceReportStatus: $.ASN1Decoder<ResourceReportResponse_resourceReportStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ResourceReportResponse_resourceReportStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ResourceReportResponse_resourceReportStatus (el: _Element): ResourceReportResponse_resourceReportStatus {
-    if (!_cached_decoder_for_ResourceReportResponse_resourceReportStatus) { _cached_decoder_for_ResourceReportResponse_resourceReportStatus = $._decodeInteger; }
-    return _cached_decoder_for_ResourceReportResponse_resourceReportStatus(el);
-}
-
-let _cached_encoder_for_ResourceReportResponse_resourceReportStatus: $.ASN1Encoder<ResourceReportResponse_resourceReportStatus> | null = null;
-
-/**
- * @summary Encodes a(n) ResourceReportResponse_resourceReportStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ResourceReportResponse_resourceReportStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_ResourceReportResponse_resourceReportStatus (value: ResourceReportResponse_resourceReportStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ResourceReportResponse_resourceReportStatus) { _cached_encoder_for_ResourceReportResponse_resourceReportStatus = $._encodeInteger; }
-    return _cached_encoder_for_ResourceReportResponse_resourceReportStatus(value, elGetter);
-}
+export const _decode_ResourceReportResponse_resourceReportStatus = $._decodeInteger;
+export const _encode_ResourceReportResponse_resourceReportStatus = $._encodeInteger;
 
 
 /* eslint-enable */

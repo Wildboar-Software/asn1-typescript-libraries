@@ -67,35 +67,8 @@ const ResourceControlRequest_partialResultsAvailable_none: ResourceControlReques
  */
 export
 const none: ResourceControlRequest_partialResultsAvailable = ResourceControlRequest_partialResultsAvailable_none; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ResourceControlRequest_partialResultsAvailable: $.ASN1Decoder<ResourceControlRequest_partialResultsAvailable> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ResourceControlRequest_partialResultsAvailable
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ResourceControlRequest_partialResultsAvailable (el: _Element): ResourceControlRequest_partialResultsAvailable {
-    if (!_cached_decoder_for_ResourceControlRequest_partialResultsAvailable) { _cached_decoder_for_ResourceControlRequest_partialResultsAvailable = $._decodeInteger; }
-    return _cached_decoder_for_ResourceControlRequest_partialResultsAvailable(el);
-}
-
-let _cached_encoder_for_ResourceControlRequest_partialResultsAvailable: $.ASN1Encoder<ResourceControlRequest_partialResultsAvailable> | null = null;
-
-/**
- * @summary Encodes a(n) ResourceControlRequest_partialResultsAvailable into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ResourceControlRequest_partialResultsAvailable, encoded as an ASN.1 Element.
- */
-export
-function _encode_ResourceControlRequest_partialResultsAvailable (value: ResourceControlRequest_partialResultsAvailable, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ResourceControlRequest_partialResultsAvailable) { _cached_encoder_for_ResourceControlRequest_partialResultsAvailable = $._encodeInteger; }
-    return _cached_encoder_for_ResourceControlRequest_partialResultsAvailable(value, elGetter);
-}
+export const _decode_ResourceControlRequest_partialResultsAvailable = $._decodeInteger;
+export const _encode_ResourceControlRequest_partialResultsAvailable = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -207,35 +207,8 @@ const KnownProximityUnit_byte: KnownProximityUnit = 11; /* LONG_NAMED_INTEGER_VA
  */
 export
 const byte: KnownProximityUnit = KnownProximityUnit_byte; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_KnownProximityUnit: $.ASN1Decoder<KnownProximityUnit> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) KnownProximityUnit
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_KnownProximityUnit (el: _Element): KnownProximityUnit {
-    if (!_cached_decoder_for_KnownProximityUnit) { _cached_decoder_for_KnownProximityUnit = $._decodeInteger; }
-    return _cached_decoder_for_KnownProximityUnit(el);
-}
-
-let _cached_encoder_for_KnownProximityUnit: $.ASN1Encoder<KnownProximityUnit> | null = null;
-
-/**
- * @summary Encodes a(n) KnownProximityUnit into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The KnownProximityUnit, encoded as an ASN.1 Element.
- */
-export
-function _encode_KnownProximityUnit (value: KnownProximityUnit, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KnownProximityUnit) { _cached_encoder_for_KnownProximityUnit = $._encodeInteger; }
-    return _cached_encoder_for_KnownProximityUnit(value, elGetter);
-}
+export const _decode_KnownProximityUnit = $._decodeInteger;
+export const _encode_KnownProximityUnit = $._encodeInteger;
 
 
 /* eslint-enable */

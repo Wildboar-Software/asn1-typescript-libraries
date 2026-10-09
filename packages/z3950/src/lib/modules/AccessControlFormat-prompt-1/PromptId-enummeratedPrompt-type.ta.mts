@@ -115,35 +115,8 @@ const PromptId_enummeratedPrompt_type_sessionId: PromptId_enummeratedPrompt_type
  */
 export
 const sessionId: PromptId_enummeratedPrompt_type = PromptId_enummeratedPrompt_type_sessionId; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_PromptId_enummeratedPrompt_type: $.ASN1Decoder<PromptId_enummeratedPrompt_type> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) PromptId_enummeratedPrompt_type
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PromptId_enummeratedPrompt_type (el: _Element): PromptId_enummeratedPrompt_type {
-    if (!_cached_decoder_for_PromptId_enummeratedPrompt_type) { _cached_decoder_for_PromptId_enummeratedPrompt_type = $._decodeInteger; }
-    return _cached_decoder_for_PromptId_enummeratedPrompt_type(el);
-}
-
-let _cached_encoder_for_PromptId_enummeratedPrompt_type: $.ASN1Encoder<PromptId_enummeratedPrompt_type> | null = null;
-
-/**
- * @summary Encodes a(n) PromptId_enummeratedPrompt_type into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PromptId_enummeratedPrompt_type, encoded as an ASN.1 Element.
- */
-export
-function _encode_PromptId_enummeratedPrompt_type (value: PromptId_enummeratedPrompt_type, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PromptId_enummeratedPrompt_type) { _cached_encoder_for_PromptId_enummeratedPrompt_type = $._encodeInteger; }
-    return _cached_encoder_for_PromptId_enummeratedPrompt_type(value, elGetter);
-}
+export const _decode_PromptId_enummeratedPrompt_type = $._decodeInteger;
+export const _encode_PromptId_enummeratedPrompt_type = $._encodeInteger;
 
 
 /* eslint-enable */

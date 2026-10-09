@@ -67,35 +67,8 @@ const SearchResponse_resultSetStatus_none: SearchResponse_resultSetStatus = 3; /
  */
 export
 const none: SearchResponse_resultSetStatus = SearchResponse_resultSetStatus_none; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_SearchResponse_resultSetStatus: $.ASN1Decoder<SearchResponse_resultSetStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) SearchResponse_resultSetStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_SearchResponse_resultSetStatus (el: _Element): SearchResponse_resultSetStatus {
-    if (!_cached_decoder_for_SearchResponse_resultSetStatus) { _cached_decoder_for_SearchResponse_resultSetStatus = $._decodeInteger; }
-    return _cached_decoder_for_SearchResponse_resultSetStatus(el);
-}
-
-let _cached_encoder_for_SearchResponse_resultSetStatus: $.ASN1Encoder<SearchResponse_resultSetStatus> | null = null;
-
-/**
- * @summary Encodes a(n) SearchResponse_resultSetStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SearchResponse_resultSetStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_SearchResponse_resultSetStatus (value: SearchResponse_resultSetStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SearchResponse_resultSetStatus) { _cached_encoder_for_SearchResponse_resultSetStatus = $._encodeInteger; }
-    return _cached_encoder_for_SearchResponse_resultSetStatus(value, elGetter);
-}
+export const _decode_SearchResponse_resultSetStatus = $._decodeInteger;
+export const _encode_SearchResponse_resultSetStatus = $._encodeInteger;
 
 
 /* eslint-enable */

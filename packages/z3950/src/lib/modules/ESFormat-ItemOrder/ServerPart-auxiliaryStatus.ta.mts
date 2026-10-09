@@ -99,35 +99,8 @@ const ServerPart_auxiliaryStatus_filledCopyright: ServerPart_auxiliaryStatus = 5
  */
 export
 const filledCopyright: ServerPart_auxiliaryStatus = ServerPart_auxiliaryStatus_filledCopyright; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServerPart_auxiliaryStatus: $.ASN1Decoder<ServerPart_auxiliaryStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServerPart_auxiliaryStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServerPart_auxiliaryStatus (el: _Element): ServerPart_auxiliaryStatus {
-    if (!_cached_decoder_for_ServerPart_auxiliaryStatus) { _cached_decoder_for_ServerPart_auxiliaryStatus = $._decodeInteger; }
-    return _cached_decoder_for_ServerPart_auxiliaryStatus(el);
-}
-
-let _cached_encoder_for_ServerPart_auxiliaryStatus: $.ASN1Encoder<ServerPart_auxiliaryStatus> | null = null;
-
-/**
- * @summary Encodes a(n) ServerPart_auxiliaryStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServerPart_auxiliaryStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServerPart_auxiliaryStatus (value: ServerPart_auxiliaryStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServerPart_auxiliaryStatus) { _cached_encoder_for_ServerPart_auxiliaryStatus = $._encodeInteger; }
-    return _cached_encoder_for_ServerPart_auxiliaryStatus(value, elGetter);
-}
+export const _decode_ServerPart_auxiliaryStatus = $._decodeInteger;
+export const _encode_ServerPart_auxiliaryStatus = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -131,35 +131,8 @@ const ScanResponse_scanStatus_failure: ScanResponse_scanStatus = 6; /* LONG_NAME
  */
 export
 const failure: ScanResponse_scanStatus = ScanResponse_scanStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ScanResponse_scanStatus: $.ASN1Decoder<ScanResponse_scanStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ScanResponse_scanStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ScanResponse_scanStatus (el: _Element): ScanResponse_scanStatus {
-    if (!_cached_decoder_for_ScanResponse_scanStatus) { _cached_decoder_for_ScanResponse_scanStatus = $._decodeInteger; }
-    return _cached_decoder_for_ScanResponse_scanStatus(el);
-}
-
-let _cached_encoder_for_ScanResponse_scanStatus: $.ASN1Encoder<ScanResponse_scanStatus> | null = null;
-
-/**
- * @summary Encodes a(n) ScanResponse_scanStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ScanResponse_scanStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_ScanResponse_scanStatus (value: ScanResponse_scanStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ScanResponse_scanStatus) { _cached_encoder_for_ScanResponse_scanStatus = $._encodeInteger; }
-    return _cached_encoder_for_ScanResponse_scanStatus(value, elGetter);
-}
+export const _decode_ScanResponse_scanStatus = $._decodeInteger;
+export const _encode_ScanResponse_scanStatus = $._encodeInteger;
 
 
 /* eslint-enable */

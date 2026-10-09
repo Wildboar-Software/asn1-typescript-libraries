@@ -115,35 +115,8 @@ const Challenge_Item_dataType_boolean_: Challenge_Item_dataType = 6; /* LONG_NAM
  */
 export
 const boolean_: Challenge_Item_dataType = Challenge_Item_dataType_boolean_; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_Challenge_Item_dataType: $.ASN1Decoder<Challenge_Item_dataType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Challenge_Item_dataType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Challenge_Item_dataType (el: _Element): Challenge_Item_dataType {
-    if (!_cached_decoder_for_Challenge_Item_dataType) { _cached_decoder_for_Challenge_Item_dataType = $._decodeInteger; }
-    return _cached_decoder_for_Challenge_Item_dataType(el);
-}
-
-let _cached_encoder_for_Challenge_Item_dataType: $.ASN1Encoder<Challenge_Item_dataType> | null = null;
-
-/**
- * @summary Encodes a(n) Challenge_Item_dataType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Challenge_Item_dataType, encoded as an ASN.1 Element.
- */
-export
-function _encode_Challenge_Item_dataType (value: Challenge_Item_dataType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Challenge_Item_dataType) { _cached_encoder_for_Challenge_Item_dataType = $._encodeInteger; }
-    return _cached_encoder_for_Challenge_Item_dataType(value, elGetter);
-}
+export const _decode_Challenge_Item_dataType = $._decodeInteger;
+export const _encode_Challenge_Item_dataType = $._encodeInteger;
 
 
 /* eslint-enable */
