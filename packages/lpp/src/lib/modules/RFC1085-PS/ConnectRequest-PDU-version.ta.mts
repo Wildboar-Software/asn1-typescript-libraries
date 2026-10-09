@@ -14,7 +14,8 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ConnectRequest-PDU-version ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * -- version-1 corresponds to to this memo
+ * ConnectRequest-PDU-version ::= INTEGER { version-1(0) }
  * ```
  */
 export
