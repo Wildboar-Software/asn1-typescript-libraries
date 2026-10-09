@@ -17,7 +17,10 @@ import { RequestResults, _decode_RequestResults, _encode_RequestResults } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PositiveNegative-responsePositive ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PositiveNegative-responsePositive ::= SEQUENCE {
+ *     datSet   [0] IMPLICIT VisibleString OPTIONAL,
+ *     result   [1] IMPLICIT SEQUENCE OF RequestResults
+ * }
  * ```
  * 
  * @class
