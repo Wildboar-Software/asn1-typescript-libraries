@@ -15,11 +15,11 @@ pkiAttributeSyntax OBJECT IDENTIFIER ::= {pki at(5) }
 pkiObjectClass OBJECT IDENTIFIER ::= {pki at(6) }
 
 -- The following unique PKI attributes are hereby defined under the novell applications pki arc:
-pa-sa OBJECT IDENTIFIER ::= { pkiAttributeType (1) }
+pa-sa OBJECT IDENTIFIER ::= { pkiAttributeType 1 }
  -- securityAttributes
  -- 2.16.840.113719.1.9.4.1
 
-pa-rl OBJECT IDENTIFIER ::= { pkiAttributeType (2) }
+pa-rl OBJECT IDENTIFIER ::= { pkiAttributeType 2 }
  -- relianceLimit
  -- 2.16.840.113719.1.9.4.2
 
