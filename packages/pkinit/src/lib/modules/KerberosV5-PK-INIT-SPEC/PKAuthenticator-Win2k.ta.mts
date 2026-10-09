@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1OverflowError,
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
@@ -72,7 +73,16 @@ class PKAuthenticator_Win2k {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        const cusecNumber = typeof this.cusec === "bigint" ? Number(this.cusec) : this.cusec;
+        if (cusecNumber < 0 || cusecNumber > 4294967295) {
+            throw new ASN1OverflowError("PKAuthenticator-Win2k.cusec violates INTEGER range");
+        }
+        const nonceNumber = typeof this.nonce === "bigint" ? Number(this.nonce) : this.nonce;
+        if (nonceNumber < -2147483648 || nonceNumber > 2147483647) {
+            throw new ASN1OverflowError("PKAuthenticator-Win2k.nonce violates INTEGER range");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PKAuthenticator_Win2k

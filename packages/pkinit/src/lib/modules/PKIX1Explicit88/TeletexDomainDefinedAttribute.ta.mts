@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -40,7 +41,14 @@ class TeletexDomainDefinedAttribute {
          * @readonly
          */
         readonly value: TeletexString
-    ) {}
+    ) {
+        if (this.type_.length < 1) {
+            throw new ASN1SizeError("TeletexDomainDefinedAttribute.type violates SIZE constraint");
+        }
+        if (this.value.length < 1) {
+            throw new ASN1SizeError("TeletexDomainDefinedAttribute.value violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TeletexDomainDefinedAttribute

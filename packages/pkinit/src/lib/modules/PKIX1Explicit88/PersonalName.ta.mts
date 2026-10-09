@@ -1,11 +1,16 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OPTIONAL,
     PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_generation_qualifier_length } from "../PKIX1Explicit88/ub-generation-qualifier-length.va.mjs";
+import { ub_initials_length } from "../PKIX1Explicit88/ub-initials-length.va.mjs";
+import { ub_given_name_length } from "../PKIX1Explicit88/ub-given-name-length.va.mjs";
+import { ub_surname_length } from "../PKIX1Explicit88/ub-surname-length.va.mjs";
 
 
 
@@ -57,7 +62,20 @@ class PersonalName {
          * @readonly
          */
         readonly generation_qualifier: OPTIONAL<PrintableString>
-    ) {}
+    ) {
+        if (this.surname.length < 1 || this.surname.length > Number(ub_surname_length)) {
+            throw new ASN1SizeError("PersonalName.surname violates SIZE constraint");
+        }
+        if (this.given_name !== undefined && (this.given_name.length < 1 || this.given_name.length > Number(ub_given_name_length))) {
+            throw new ASN1SizeError("PersonalName.given-name violates SIZE constraint");
+        }
+        if (this.initials !== undefined && (this.initials.length < 1 || this.initials.length > Number(ub_initials_length))) {
+            throw new ASN1SizeError("PersonalName.initials violates SIZE constraint");
+        }
+        if (this.generation_qualifier !== undefined && (this.generation_qualifier.length < 1 || this.generation_qualifier.length > Number(ub_generation_qualifier_length))) {
+            throw new ASN1SizeError("PersonalName.generation-qualifier violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PersonalName

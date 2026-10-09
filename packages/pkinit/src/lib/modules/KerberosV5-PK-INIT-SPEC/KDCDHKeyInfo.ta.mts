@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1OverflowError,
     BIT_STRING,
     INTEGER,
     OPTIONAL,
@@ -67,7 +68,12 @@ class KDCDHKeyInfo {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        const nonceNumber = typeof this.nonce === "bigint" ? Number(this.nonce) : this.nonce;
+        if (nonceNumber < 0 || nonceNumber > 4294967295) {
+            throw new ASN1OverflowError("KDCDHKeyInfo.nonce violates INTEGER range");
+        }
+    }
 
     /**
      * @summary Restructures an object into a KDCDHKeyInfo

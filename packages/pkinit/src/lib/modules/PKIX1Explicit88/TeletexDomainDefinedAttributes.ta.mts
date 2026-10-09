@@ -1,8 +1,10 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_domain_defined_attributes } from "../PKIX1Explicit88/ub-domain-defined-attributes.va.mjs";
 import { TeletexDomainDefinedAttribute, _decode_TeletexDomainDefinedAttribute, _encode_TeletexDomainDefinedAttribute } from "../PKIX1Explicit88/TeletexDomainDefinedAttribute.ta.mjs";
 // export { TeletexDomainDefinedAttribute, _decode_TeletexDomainDefinedAttribute, _encode_TeletexDomainDefinedAttribute } from "../PKIX1Explicit88/TeletexDomainDefinedAttribute.ta.mjs";
 
@@ -32,7 +34,11 @@ let _cached_decoder_for_TeletexDomainDefinedAttributes: $.ASN1Decoder<TeletexDom
 export
 function _decode_TeletexDomainDefinedAttributes (el: _Element): TeletexDomainDefinedAttributes {
     if (!_cached_decoder_for_TeletexDomainDefinedAttributes) { _cached_decoder_for_TeletexDomainDefinedAttributes = $._decodeSequenceOf<TeletexDomainDefinedAttribute>(() => _decode_TeletexDomainDefinedAttribute); }
-    return _cached_decoder_for_TeletexDomainDefinedAttributes(el);
+    const value = _cached_decoder_for_TeletexDomainDefinedAttributes(el);
+    if (value.length < 1 || value.length > Number(ub_domain_defined_attributes)) {
+        throw new ASN1SizeError("TeletexDomainDefinedAttributes violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_TeletexDomainDefinedAttributes: $.ASN1Encoder<TeletexDomainDefinedAttributes> | null = null;

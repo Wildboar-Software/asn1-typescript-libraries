@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
@@ -52,7 +53,11 @@ class PresentationAddress {
          * @readonly
          */
         readonly nAddresses: OCTET_STRING[]
-    ) {}
+    ) {
+        if (this.nAddresses.length < 1) {
+            throw new ASN1SizeError("PresentationAddress.nAddresses violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PresentationAddress

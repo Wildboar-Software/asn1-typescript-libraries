@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     ASN1Element as _Element,
     BMPString,
     PrintableString,
@@ -8,6 +9,7 @@ import {
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_organizational_unit_name } from "../PKIX1Explicit88/ub-organizational-unit-name.va.mjs";
 
 
 
@@ -56,7 +58,13 @@ function _decode_X520OrganizationalUnitName (el: _Element): X520OrganizationalUn
     "UNIVERSAL 12": [ "utf8String", $._decodeUTF8String ],
     "UNIVERSAL 30": [ "bmpString", $._decodeBMPString ]
 }); }
-    return _cached_decoder_for_X520OrganizationalUnitName(el);
+    const value = _cached_decoder_for_X520OrganizationalUnitName(el);
+    const chosen = Object.values(value)[0];
+    const teletex = "teletexString" in value;
+    if (chosen.length < 1 || (!teletex && chosen.length > Number(ub_organizational_unit_name))) {
+        throw new ASN1SizeError("X520OrganizationalUnitName violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_X520OrganizationalUnitName: $.ASN1Encoder<X520OrganizationalUnitName> | null = null;

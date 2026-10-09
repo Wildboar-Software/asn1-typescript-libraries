@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1OverflowError,
     itu_t,
     itu_r,
     ccitt,
@@ -66,6 +67,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_extension_attributes } from "../PKIX1Explicit88/ub-extension-attributes.va.mjs";
 
 
 
@@ -100,7 +102,14 @@ class ExtensionAttribute {
          * @readonly
          */
         readonly extension_attribute_value: _Element
-    ) {}
+    ) {
+        const extensionAttributeType = typeof this.extension_attribute_type === "bigint"
+            ? Number(this.extension_attribute_type)
+            : this.extension_attribute_type;
+        if (extensionAttributeType < 0 || extensionAttributeType > Number(ub_extension_attributes)) {
+            throw new ASN1OverflowError("ExtensionAttribute.extension-attribute-type violates INTEGER range");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ExtensionAttribute

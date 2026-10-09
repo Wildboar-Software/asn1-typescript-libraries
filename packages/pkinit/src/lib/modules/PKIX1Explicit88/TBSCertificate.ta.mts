@@ -1,11 +1,12 @@
 /* eslint-disable */
 import {
+    ASN1ConstructionError,
     OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Version, _decode_Version, _encode_Version, v1 /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../PKIX1Explicit88/Version.ta.mjs";
+import { Version, _decode_Version, _encode_Version, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, v2 /* IMPORTED_SHORT_NAMED_INTEGER */, v3 /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../PKIX1Explicit88/Version.ta.mjs";
 // export { Version, Version_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, Version_v2 /* IMPORTED_LONG_NAMED_INTEGER */, v2 /* IMPORTED_SHORT_NAMED_INTEGER */, Version_v3 /* IMPORTED_LONG_NAMED_INTEGER */, v3 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Version, _encode_Version } from "../PKIX1Explicit88/Version.ta.mjs";
 import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../PKIX1Explicit88/CertificateSerialNumber.ta.mjs";
 // export { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../PKIX1Explicit88/CertificateSerialNumber.ta.mjs";
@@ -111,7 +112,21 @@ class TBSCertificate {
          * @readonly
          */
         readonly extensions: OPTIONAL<Extensions>
-    ) {}
+    ) {
+        const versionNumber = this.version === undefined
+            ? Number(v1)
+            : (typeof this.version === "bigint" ? Number(this.version) : this.version);
+        if (
+            (this.issuerUniqueID !== undefined || this.subjectUniqueID !== undefined)
+            && versionNumber !== Number(v2)
+            && versionNumber !== Number(v3)
+        ) {
+            throw new ASN1ConstructionError("TBSCertificate unique identifiers require version v2 or v3");
+        }
+        if (this.extensions !== undefined && versionNumber !== Number(v3)) {
+            throw new ASN1ConstructionError("TBSCertificate extensions require version v3");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TBSCertificate

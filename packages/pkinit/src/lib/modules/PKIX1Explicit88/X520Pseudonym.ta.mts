@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     ASN1Element as _Element,
     BMPString,
     PrintableString,
@@ -8,6 +9,7 @@ import {
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_pseudonym } from "../PKIX1Explicit88/ub-pseudonym.va.mjs";
 
 
 
@@ -51,7 +53,13 @@ function _decode_X520Pseudonym (el: _Element): X520Pseudonym {
     "UNIVERSAL 12": [ "utf8String", $._decodeUTF8String ],
     "UNIVERSAL 30": [ "bmpString", $._decodeBMPString ]
 }); }
-    return _cached_decoder_for_X520Pseudonym(el);
+    const value = _cached_decoder_for_X520Pseudonym(el);
+    const chosen = Object.values(value)[0];
+    const teletex = "teletexString" in value;
+    if (chosen.length < 1 || (!teletex && chosen.length > Number(ub_pseudonym))) {
+        throw new ASN1SizeError("X520Pseudonym violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_X520Pseudonym: $.ASN1Encoder<X520Pseudonym> | null = null;

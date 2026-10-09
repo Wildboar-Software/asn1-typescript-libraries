@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     ASN1Element as _Element,
     BMPString,
     PrintableString,
@@ -51,7 +52,13 @@ function _decode_DirectoryString (el: _Element): DirectoryString {
     "UNIVERSAL 12": [ "utf8String", $._decodeUTF8String ],
     "UNIVERSAL 30": [ "bmpString", $._decodeBMPString ]
 }); }
-    return _cached_decoder_for_DirectoryString(el);
+    const value = _cached_decoder_for_DirectoryString(el);
+    const chosen = Object.values(value)[0];
+    const teletex = "teletexString" in value;
+    if (chosen.length < 1) {
+        throw new ASN1SizeError("DirectoryString violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_DirectoryString: $.ASN1Encoder<DirectoryString> | null = null;

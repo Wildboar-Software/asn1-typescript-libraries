@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1OverflowError,
     INTEGER,
     OCTET_STRING,
     OPTIONAL,
@@ -92,7 +93,16 @@ class PKAuthenticator {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        const cusecNumber = typeof this.cusec === "bigint" ? Number(this.cusec) : this.cusec;
+        if (cusecNumber < 0 || cusecNumber > 999999) {
+            throw new ASN1OverflowError("PKAuthenticator.cusec violates INTEGER range");
+        }
+        const nonceNumber = typeof this.nonce === "bigint" ? Number(this.nonce) : this.nonce;
+        if (nonceNumber < 0 || nonceNumber > 4294967295) {
+            throw new ASN1OverflowError("PKAuthenticator.nonce violates INTEGER range");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PKAuthenticator

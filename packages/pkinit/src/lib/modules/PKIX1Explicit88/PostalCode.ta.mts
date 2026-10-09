@@ -1,10 +1,12 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     ASN1Element as _Element,
     NumericString,
     PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_postal_code_length } from "../PKIX1Explicit88/ub-postal-code-length.va.mjs";
 
 
 
@@ -39,7 +41,11 @@ function _decode_PostalCode (el: _Element): PostalCode {
     "UNIVERSAL 18": [ "numeric_code", $._decodeNumericString ],
     "UNIVERSAL 19": [ "printable_code", $._decodePrintableString ]
 }); }
-    return _cached_decoder_for_PostalCode(el);
+    const value = _cached_decoder_for_PostalCode(el);
+    if (Object.values(value)[0].length < 1 || Object.values(value)[0].length > Number(ub_postal_code_length)) {
+        throw new ASN1SizeError("PostalCode violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_PostalCode: $.ASN1Encoder<PostalCode> | null = null;

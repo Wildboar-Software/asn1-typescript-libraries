@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OPTIONAL,
@@ -57,7 +58,20 @@ class TeletexPersonalName {
          * @readonly
          */
         readonly generation_qualifier: OPTIONAL<TeletexString>
-    ) {}
+    ) {
+        if (this.surname.length < 1) {
+            throw new ASN1SizeError("TeletexPersonalName.surname violates SIZE constraint");
+        }
+        if (this.given_name !== undefined && this.given_name.length < 1) {
+            throw new ASN1SizeError("TeletexPersonalName.given-name violates SIZE constraint");
+        }
+        if (this.initials !== undefined && this.initials.length < 1) {
+            throw new ASN1SizeError("TeletexPersonalName.initials violates SIZE constraint");
+        }
+        if (this.generation_qualifier !== undefined && this.generation_qualifier.length < 1) {
+            throw new ASN1SizeError("TeletexPersonalName.generation-qualifier violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TeletexPersonalName

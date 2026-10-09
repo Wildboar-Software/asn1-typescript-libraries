@@ -1,11 +1,13 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     NumericString,
     PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_domain_name_length } from "../PKIX1Explicit88/ub-domain-name-length.va.mjs";
 
 
 
@@ -40,7 +42,11 @@ function _decode_AdministrationDomainName (el: _Element): AdministrationDomainNa
     "UNIVERSAL 18": [ "numeric", $._decodeNumericString ],
     "UNIVERSAL 19": [ "printable", $._decodePrintableString ]
 })); }
-    return _cached_decoder_for_AdministrationDomainName(el);
+    const value = _cached_decoder_for_AdministrationDomainName(el);
+    if (Object.values(value)[0].length > Number(ub_domain_name_length)) {
+        throw new ASN1SizeError("AdministrationDomainName violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_AdministrationDomainName: $.ASN1Encoder<AdministrationDomainName> | null = null;
