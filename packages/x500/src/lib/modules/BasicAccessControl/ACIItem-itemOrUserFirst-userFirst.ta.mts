@@ -65,11 +65,9 @@ export class ACIItem_itemOrUserFirst_userFirst {
      * @returns {ACIItem_itemOrUserFirst_userFirst}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof ACIItem_itemOrUserFirst_userFirst]: ACIItem_itemOrUserFirst_userFirst[_K];
             }
-        >
     ): ACIItem_itemOrUserFirst_userFirst {
         return new ACIItem_itemOrUserFirst_userFirst(
             _o.userClasses,

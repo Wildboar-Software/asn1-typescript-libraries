@@ -11,11 +11,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InbandInfo, _decode_InbandInfo, _encode_InbandInfo } from "../Core-INAP-CS1-DataTypes/InbandInfo.ta.mjs";
-// export { InbandInfo, _decode_InbandInfo, _encode_InbandInfo } from "../Core-INAP-CS1-DataTypes/InbandInfo.ta.mjs";
 import { Tone, _decode_Tone, _encode_Tone } from "../Core-INAP-CS1-DataTypes/Tone.ta.mjs";
-// export { Tone, _decode_Tone, _encode_Tone } from "../Core-INAP-CS1-DataTypes/Tone.ta.mjs";
 import { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../Core-INAP-CS1-DataTypes/DisplayInformation.ta.mjs";
-// export { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../Core-INAP-CS1-DataTypes/DisplayInformation.ta.mjs";
 
 
 /**

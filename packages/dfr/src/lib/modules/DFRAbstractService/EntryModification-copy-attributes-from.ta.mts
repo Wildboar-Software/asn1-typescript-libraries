@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SourceEntry, _decode_SourceEntry, _encode_SourceEntry } from "../DFRAbstractService/SourceEntry.ta.mjs";
-// export { SourceEntry, _decode_SourceEntry, _encode_SourceEntry } from "../DFRAbstractService/SourceEntry.ta.mjs";
 import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
-// export { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
 
 
 /**

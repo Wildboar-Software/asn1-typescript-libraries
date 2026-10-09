@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Journal_instance_definition_details, _decode_Journal_instance_definition_details, _encode_Journal_instance_definition_details } from "../MMS-SCI-Module-1/Journal-instance-definition-details.ta.mjs";
-// export { Journal_instance_definition_details, _decode_Journal_instance_definition_details, _encode_Journal_instance_definition_details } from "../MMS-SCI-Module-1/Journal-instance-definition-details.ta.mjs";
 
 
 /**

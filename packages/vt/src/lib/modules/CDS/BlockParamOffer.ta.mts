@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BlockParamOffer_capability, _decode_BlockParamOffer_capability, _encode_BlockParamOffer_capability } from "../CDS/BlockParamOffer-capability.ta.mjs";
-// export { BlockParamOffer_capability, BlockParamOffer_capability_yes /* IMPORTED_LONG_NAMED_BIT */, yes /* IMPORTED_SHORT_NAMED_BIT */, BlockParamOffer_capability_no /* IMPORTED_LONG_NAMED_BIT */, no /* IMPORTED_SHORT_NAMED_BIT */, _decode_BlockParamOffer_capability, _encode_BlockParamOffer_capability } from "../CDS/BlockParamOffer-capability.ta.mjs";
 import { BlockParamOffer_bound, _decode_BlockParamOffer_bound, _encode_BlockParamOffer_bound } from "../CDS/BlockParamOffer-bound.ta.mjs";
-// export { BlockParamOffer_bound, _decode_BlockParamOffer_bound, _encode_BlockParamOffer_bound } from "../CDS/BlockParamOffer-bound.ta.mjs";
 
 
 /**

@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } from "../Core-INAP-CS1-DataTypes/IPRoutingAddress.ta.mjs";
-// export { IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } from "../Core-INAP-CS1-DataTypes/IPRoutingAddress.ta.mjs";
 
 
 /**

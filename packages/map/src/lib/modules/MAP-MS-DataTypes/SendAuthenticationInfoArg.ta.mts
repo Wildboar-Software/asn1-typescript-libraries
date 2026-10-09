@@ -1,77 +1,17 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
+import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { NumberOfRequestedVectors, _decode_NumberOfRequestedVectors, _encode_NumberOfRequestedVectors } from "../MAP-MS-DataTypes/NumberOfRequestedVectors.ta.mjs";
 import { Re_synchronisationInfo, _decode_Re_synchronisationInfo, _encode_Re_synchronisationInfo } from "../MAP-MS-DataTypes/Re-synchronisationInfo.ta.mjs";
-import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { RequestingNodeType, _enum_for_RequestingNodeType, RequestingNodeType_vlr /* IMPORTED_LONG_ENUMERATION_ITEM */, vlr /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_sgsn /* IMPORTED_LONG_ENUMERATION_ITEM */, sgsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_s_cscf /* IMPORTED_LONG_ENUMERATION_ITEM */, s_cscf /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_bsf /* IMPORTED_LONG_ENUMERATION_ITEM */, bsf /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_gan_aaa_server /* IMPORTED_LONG_ENUMERATION_ITEM */, gan_aaa_server /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_wlan_aaa_server /* IMPORTED_LONG_ENUMERATION_ITEM */, wlan_aaa_server /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_mme /* IMPORTED_LONG_ENUMERATION_ITEM */, mme /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestingNodeType_mme_sgsn /* IMPORTED_LONG_ENUMERATION_ITEM */, mme_sgsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestingNodeType, _encode_RequestingNodeType } from "../MAP-MS-DataTypes/RequestingNodeType.ta.mjs";
-import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
+import { RequestingNodeType, _decode_RequestingNodeType, _encode_RequestingNodeType, _enum_for_RequestingNodeType } from "../MAP-MS-DataTypes/RequestingNodeType.ta.mjs";
 
 
 /**

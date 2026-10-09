@@ -1,6 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { ASN1Element, BERElement } from "@wildboar/asn1";
-import { Buffer } from "node:buffer";
+import type { IntegerInput } from "../readValue.mjs";
+import { readInteger, readLeadingInteger } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.4.1
@@ -10,17 +9,17 @@ import { Buffer } from "node:buffer";
  * component is a mandatory INTEGER. TRUE iff that first component
  * equals the presented integer. The assertion syntax is derived
  * from the first SEQUENCE component.
+ *
+ * `assertion` is an element, `number`, or `bigint`. `value` is a
+ * SEQUENCE element, or that integer already (element, `number`, or
+ * `bigint`).
  */
 export
-const integerFirstComponentMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const value_ = new BERElement();
-    value_.fromBytes(value.value); // Just reads the first element from the bytes.
-    // We can directly compare buffers because INTEGER is encoded the same way
-    // every time in {BER,CER,DER}.
-    return !Buffer.compare(assertion.value, value_.value);
+function integerFirstComponentMatch (
+    assertion: IntegerInput,
+    value: IntegerInput,
+): boolean {
+    return readInteger(assertion) === readLeadingInteger(value);
 }
 
 export default integerFirstComponentMatch;

@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FEICOupdate_Item, _decode_FEICOupdate_Item, _encode_FEICOupdate_Item } from "../G/FEICOupdate-Item.ta.mjs";
-// export { FEICOupdate_Item, _decode_FEICOupdate_Item, _encode_FEICOupdate_Item } from "../G/FEICOupdate-Item.ta.mjs";
 
 
 /**

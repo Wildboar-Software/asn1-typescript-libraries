@@ -8,7 +8,6 @@
  * code is one octet: bits 8-5 identify the group and bits 4-1 the specific
  * service (3GPP TS 29.002 V19.1.0 clauses 7.6.4.1 and 17.7.5).
  */
-export * from "./SS-Code.ta.mjs";
 export * from "./allAdditionalInfoTransferSS.va.mjs";
 export * from "./allBarringSS.va.mjs";
 export * from "./allCallCompletionSS.va.mjs";
@@ -76,6 +75,7 @@ export * from "./plmn-specificSS-E.va.mjs";
 export * from "./plmn-specificSS-F.va.mjs";
 export * from "./plmnoperator.va.mjs";
 export * from "./serviceType.va.mjs";
+export * from "./SS-Code.ta.mjs";
 export * from "./transferToThirdParty.va.mjs";
 export * from "./universal.va.mjs";
 export * from "./uus1.va.mjs";

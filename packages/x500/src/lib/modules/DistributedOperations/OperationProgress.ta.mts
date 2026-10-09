@@ -83,7 +83,7 @@ export class OperationProgress {
      * @returns {OperationProgress}
      */
     public static _from_object(
-        _o: Partial<{ [_K in keyof OperationProgress]: OperationProgress[_K] }>
+        _o: { [_K in keyof OperationProgress]: OperationProgress[_K] }
     ): OperationProgress {
         return new OperationProgress(
             _o.nameResolutionPhase,
