@@ -1,6 +1,9 @@
 /* eslint-disable */
-
-
+import { type ALGORITHM } from "../NIST-AES/ALGORITHM.oca.mjs";
+import { aes_256_CFB } from "../NIST-AES/aes-256-CFB.oa.mjs";
+import { aes_256_CBC } from "../NIST-AES/aes-256-CBC.oa.mjs";
+import { aes_256_ECB } from "../NIST-AES/aes-256-ECB.oa.mjs";
+import { aes_256_OFB } from "../NIST-AES/aes-256-OFB.oa.mjs";
 
 /**
  * @summary AES_256_Algorithms
