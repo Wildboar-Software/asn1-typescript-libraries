@@ -160,7 +160,7 @@ let _cached_encoder_for_ProvideInstructionArg: $.ASN1Encoder<ProvideInstructionA
  */
 export
 function _encode_ProvideInstructionArg (value: ProvideInstructionArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProvideInstructionArg) { _cached_encoder_for_ProvideInstructionArg = $._encode_implicit(_TagClass.private, 18, () => function (value: ProvideInstructionArg, elGetter: $.ASN1Encoder<ProvideInstructionArg>): _Element {
+    if (!_cached_encoder_for_ProvideInstructionArg) { _cached_encoder_for_ProvideInstructionArg = $._encode_implicit(_TagClass.private, 18, () => function (value: ProvideInstructionArg): _Element {
     return $._encodeSet(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 10, () => _encode_ServiceKey, $.BER)(value.calledPartyNumber, $.BER),

@@ -148,7 +148,7 @@ let _cached_encoder_for_ConnectionControlArg: $.ASN1Encoder<ConnectionControlArg
  */
 export
 function _encode_ConnectionControlArg (value: ConnectionControlArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConnectionControlArg) { _cached_encoder_for_ConnectionControlArg = $._encode_implicit(_TagClass.private, 18, () => function (value: ConnectionControlArg, elGetter: $.ASN1Encoder<ConnectionControlArg>): _Element {
+    if (!_cached_encoder_for_ConnectionControlArg) { _cached_encoder_for_ConnectionControlArg = $._encode_implicit(_TagClass.private, 18, () => function (value: ConnectionControlArg): _Element {
     return $._encodeSet(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 4, () => _encode_Digits, $.BER)(value.digits, $.BER),
