@@ -1,11 +1,17 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
+import {
+    ProbeSubmissionIdentifier,
+    _decode_ProbeSubmissionIdentifier,
+    _encode_ProbeSubmissionIdentifier,
+    ProbeSubmissionTime,
+    _decode_ProbeSubmissionTime,
+    _encode_ProbeSubmissionTime,
+} from "@wildboar/x400/MTSAbstractService";
 
 /**
  * @summary OriginateProbeResult
@@ -54,7 +60,6 @@ class OriginateProbeResult {
         return new OriginateProbeResult(_o.submission_identifier, _o.submission_time);
     }
 
-
 }
 
 /**
@@ -67,8 +72,8 @@ class OriginateProbeResult {
  */
 export
 const _root_component_type_list_1_spec_for_OriginateProbeResult: $.ComponentSpec[] = [
-    /* FIXME: submission-identifier COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: submission-time COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("submission-identifier", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("submission-time", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -153,6 +158,5 @@ function _encode_OriginateProbeResult (value: OriginateProbeResult, elGetter: $.
 }; }
     return _cached_encoder_for_OriginateProbeResult(value, elGetter);
 }
-
 
 /* eslint-enable */

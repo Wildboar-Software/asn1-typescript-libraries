@@ -2,12 +2,20 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BodyPartSequenceNumber, _decode_BodyPartSequenceNumber, _encode_BodyPartSequenceNumber } from "../MMSHeadingExtensions/BodyPartSequenceNumber.ta.mjs";
+import {
+    SecurityLabel,
+    _decode_SecurityLabel,
+    _encode_SecurityLabel,
+} from "@wildboar/x400/MTSAbstractService";
+import {
+    BodyPartSequenceNumber,
+    _decode_BodyPartSequenceNumber,
+    _encode_BodyPartSequenceNumber,
+} from "../MMSHeadingExtensions/BodyPartSequenceNumber.ta.mjs";
 // export { BodyPartSequenceNumber, _decode_BodyPartSequenceNumber, _encode_BodyPartSequenceNumber } from "../MMSHeadingExtensions/BodyPartSequenceNumber.ta.mjs";
-
 
 /**
  * @summary BodyPartSecurityLabel
@@ -56,7 +64,6 @@ class BodyPartSecurityLabel {
         return new BodyPartSecurityLabel(_o.body_part_security_label, _o.body_part_sequence_number);
     }
 
-
 }
 
 /**
@@ -69,7 +76,7 @@ class BodyPartSecurityLabel {
  */
 export
 const _root_component_type_list_1_spec_for_BodyPartSecurityLabel: $.ComponentSpec[] = [
-    /* FIXME: body-part-security-label COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("body-part-security-label", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("body-part-sequence-number", true, $.hasTag(_TagClass.context, 1))
 ];
 
@@ -155,6 +162,5 @@ function _encode_BodyPartSecurityLabel (value: BodyPartSecurityLabel, elGetter: 
 }; }
     return _cached_encoder_for_BodyPartSecurityLabel(value, elGetter);
 }
-
 
 /* eslint-enable */

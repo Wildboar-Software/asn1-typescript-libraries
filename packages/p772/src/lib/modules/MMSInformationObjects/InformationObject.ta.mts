@@ -1,11 +1,17 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
+import {
+    IPM,
+    _decode_IPM,
+    _encode_IPM,
+    IPN,
+    _decode_IPN,
+    _encode_IPN,
+} from "@wildboar/x400/IPMSInformationObjects";
 
 /**
  * @summary InformationObject
@@ -57,6 +63,5 @@ function _encode_InformationObject (value: InformationObject, elGetter: $.ASN1En
 }, $.BER); }
     return _cached_encoder_for_InformationObject(value, elGetter);
 }
-
 
 /* eslint-enable */

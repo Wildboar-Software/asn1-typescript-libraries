@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary MMHSPrecedence
@@ -167,35 +164,7 @@ const MMHSPrecedence_override_2: MMHSPrecedence = 18; /* LONG_NAMED_INTEGER_VALU
  */
 export
 const override_2: MMHSPrecedence = MMHSPrecedence_override_2; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_MMHSPrecedence: $.ASN1Decoder<MMHSPrecedence> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) MMHSPrecedence
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MMHSPrecedence (el: _Element): MMHSPrecedence {
-    if (!_cached_decoder_for_MMHSPrecedence) { _cached_decoder_for_MMHSPrecedence = $._decodeInteger; }
-    return _cached_decoder_for_MMHSPrecedence(el);
-}
-
-let _cached_encoder_for_MMHSPrecedence: $.ASN1Encoder<MMHSPrecedence> | null = null;
-
-/**
- * @summary Encodes a(n) MMHSPrecedence into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MMHSPrecedence, encoded as an ASN.1 Element.
- */
-export
-function _encode_MMHSPrecedence (value: MMHSPrecedence, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMHSPrecedence) { _cached_encoder_for_MMHSPrecedence = $._encodeInteger; }
-    return _cached_encoder_for_MMHSPrecedence(value, elGetter);
-}
-
+export const _decode_MMHSPrecedence = $._decodeInteger;
+export const _encode_MMHSPrecedence = $._encodeInteger;
 
 /* eslint-enable */

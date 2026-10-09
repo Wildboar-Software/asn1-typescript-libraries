@@ -1,11 +1,17 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
+import {
+    MessageSubmissionIdentifier,
+    _decode_MessageSubmissionIdentifier,
+    _encode_MessageSubmissionIdentifier,
+    MessageSubmissionTime,
+    _decode_MessageSubmissionTime,
+    _encode_MessageSubmissionTime,
+} from "@wildboar/x400/MTSAbstractService";
 
 /**
  * @summary OriginateMRNResult
@@ -54,7 +60,6 @@ class OriginateMRNResult {
         return new OriginateMRNResult(_o.submission_identifier, _o.submission_time);
     }
 
-
 }
 
 /**
@@ -67,8 +72,8 @@ class OriginateMRNResult {
  */
 export
 const _root_component_type_list_1_spec_for_OriginateMRNResult: $.ComponentSpec[] = [
-    /* FIXME: submission-identifier COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: submission-time COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("submission-identifier", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("submission-time", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -153,6 +158,5 @@ function _encode_OriginateMRNResult (value: OriginateMRNResult, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_OriginateMRNResult(value, elGetter);
 }
-
 
 /* eslint-enable */

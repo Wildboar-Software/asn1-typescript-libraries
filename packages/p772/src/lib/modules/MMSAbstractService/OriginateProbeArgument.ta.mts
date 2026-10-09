@@ -1,12 +1,20 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
+import {
+    ProbeSubmissionEnvelope,
+    _decode_ProbeSubmissionEnvelope,
+    _encode_ProbeSubmissionEnvelope,
+} from "@wildboar/x400/MTSAbstractService";
+import {
+    MM,
+    _decode_MM,
+    _encode_MM,
+} from "../MMSInformationObjects/MM.ta.mjs";
 // export { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
-
 
 /**
  * @summary OriginateProbeArgument
@@ -55,7 +63,6 @@ class OriginateProbeArgument {
         return new OriginateProbeArgument(_o.envelope, _o.content);
     }
 
-
 }
 
 /**
@@ -68,7 +75,7 @@ class OriginateProbeArgument {
  */
 export
 const _root_component_type_list_1_spec_for_OriginateProbeArgument: $.ComponentSpec[] = [
-    /* FIXME: envelope COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("envelope", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("content", false, $.hasTag(_TagClass.context, 1))
 ];
 
@@ -154,6 +161,5 @@ function _encode_OriginateProbeArgument (value: OriginateProbeArgument, elGetter
 }; }
     return _cached_encoder_for_OriginateProbeArgument(value, elGetter);
 }
-
 
 /* eslint-enable */

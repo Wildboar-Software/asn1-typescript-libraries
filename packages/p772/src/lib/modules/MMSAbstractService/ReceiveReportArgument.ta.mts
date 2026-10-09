@@ -2,12 +2,20 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InformationObject, _decode_InformationObject, _encode_InformationObject } from "../MMSInformationObjects/InformationObject.ta.mjs";
+import {
+    ReportDeliveryEnvelope,
+    _decode_ReportDeliveryEnvelope,
+    _encode_ReportDeliveryEnvelope,
+} from "@wildboar/x400/MTSAbstractService";
+import {
+    InformationObject,
+    _decode_InformationObject,
+    _encode_InformationObject,
+} from "../MMSInformationObjects/InformationObject.ta.mjs";
 // export { InformationObject, _decode_InformationObject, _encode_InformationObject } from "../MMSInformationObjects/InformationObject.ta.mjs";
-
 
 /**
  * @summary ReceiveReportArgument
@@ -56,7 +64,6 @@ class ReceiveReportArgument {
         return new ReceiveReportArgument(_o.envelope, _o.undelivered_object);
     }
 
-
 }
 
 /**
@@ -69,7 +76,7 @@ class ReceiveReportArgument {
  */
 export
 const _root_component_type_list_1_spec_for_ReceiveReportArgument: $.ComponentSpec[] = [
-    /* FIXME: envelope COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("envelope", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("undelivered-object", true, $.hasTag(_TagClass.context, 1))
 ];
 
@@ -155,6 +162,5 @@ function _encode_ReceiveReportArgument (value: ReceiveReportArgument, elGetter: 
 }; }
     return _cached_encoder_for_ReceiveReportArgument(value, elGetter);
 }
-
 
 /* eslint-enable */

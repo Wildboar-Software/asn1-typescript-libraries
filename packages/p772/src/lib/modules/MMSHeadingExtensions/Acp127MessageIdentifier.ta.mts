@@ -1,11 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
+import {
+    MilitaryString,
+    _decode_MilitaryString,
+    _encode_MilitaryString,
+} from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
 // export { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
-
 
 /**
  * @summary Acp127MessageIdentifier
@@ -48,6 +51,5 @@ function _encode_Acp127MessageIdentifier (value: Acp127MessageIdentifier, elGett
     if (!_cached_encoder_for_Acp127MessageIdentifier) { _cached_encoder_for_Acp127MessageIdentifier = _encode_MilitaryString; }
     return _cached_encoder_for_Acp127MessageIdentifier(value, elGetter);
 }
-
 
 /* eslint-enable */

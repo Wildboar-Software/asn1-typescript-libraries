@@ -1,11 +1,18 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
+import {
+    Heading,
+    _decode_Heading,
+    _encode_Heading,
+    Body,
+    _decode_Body,
+    _encode_Body,
+} from "@wildboar/x400/IPMSInformationObjects";
 
 /**
  * @summary MM
@@ -53,7 +60,6 @@ class MM {
         return new MM(_o.mmheading, _o.mmbody);
     }
 
-
 }
 
 /**
@@ -66,8 +72,8 @@ class MM {
  */
 export
 const _root_component_type_list_1_spec_for_MM: $.ComponentSpec[] = [
-    /* FIXME: mmheading COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: mmbody COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("mmheading", false, $.hasTag(_TagClass.universal, 17)),
+    new $.ComponentSpec("mmbody", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -147,6 +153,5 @@ function _encode_MM (value: MM, elGetter: $.ASN1Encoder<any>): _Element {
 }; }
     return _cached_encoder_for_MM(value, elGetter);
 }
-
 
 /* eslint-enable */

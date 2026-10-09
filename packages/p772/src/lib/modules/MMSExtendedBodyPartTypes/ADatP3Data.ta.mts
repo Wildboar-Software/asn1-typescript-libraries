@@ -2,11 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String
+    IA5String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ADatP3Data
@@ -59,6 +57,5 @@ function _encode_ADatP3Data (value: ADatP3Data, elGetter: $.ASN1Encoder<any>): _
 }, $.BER); }
     return _cached_encoder_for_ADatP3Data(value, elGetter);
 }
-
 
 /* eslint-enable */

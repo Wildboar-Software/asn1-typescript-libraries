@@ -2,11 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN
+    BOOLEAN,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ChangeAutoDiscardArgument
@@ -54,7 +52,6 @@ class ChangeAutoDiscardArgument {
     public static _from_object (_o: { [_K in keyof (ChangeAutoDiscardArgument)]: (ChangeAutoDiscardArgument)[_K] }): ChangeAutoDiscardArgument {
         return new ChangeAutoDiscardArgument(_o.auto_discard_expired_MMs, _o.auto_discard_obsolete_MMs);
     }
-
 
 }
 
@@ -154,6 +151,5 @@ function _encode_ChangeAutoDiscardArgument (value: ChangeAutoDiscardArgument, el
 }; }
     return _cached_encoder_for_ChangeAutoDiscardArgument(value, elGetter);
 }
-
 
 /* eslint-enable */

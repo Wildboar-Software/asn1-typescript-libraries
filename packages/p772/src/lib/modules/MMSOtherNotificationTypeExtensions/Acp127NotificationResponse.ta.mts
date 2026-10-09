@@ -2,18 +2,38 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Acp127NotificationType, _decode_Acp127NotificationType, _encode_Acp127NotificationType } from "../MMSPerRecipientSpecifierExtensions/Acp127NotificationType.ta.mjs";
+import {
+    ReceiptTimeField,
+    _decode_ReceiptTimeField,
+    _encode_ReceiptTimeField,
+} from "@wildboar/x400/IPMSInformationObjects";
+import {
+    Acp127NotificationType,
+    _decode_Acp127NotificationType,
+    _encode_Acp127NotificationType,
+} from "../MMSPerRecipientSpecifierExtensions/Acp127NotificationType.ta.mjs";
 // export { Acp127NotificationType, Acp127NotificationType_acp127_nn /* IMPORTED_LONG_NAMED_BIT */, acp127_nn /* IMPORTED_SHORT_NAMED_BIT */, Acp127NotificationType_acp127_pn /* IMPORTED_LONG_NAMED_BIT */, acp127_pn /* IMPORTED_SHORT_NAMED_BIT */, Acp127NotificationType_acp127_tn /* IMPORTED_LONG_NAMED_BIT */, acp127_tn /* IMPORTED_SHORT_NAMED_BIT */, _decode_Acp127NotificationType, _encode_Acp127NotificationType } from "../MMSPerRecipientSpecifierExtensions/Acp127NotificationType.ta.mjs";
-import { AddressListIndicator, _decode_AddressListIndicator, _encode_AddressListIndicator } from "../MMSOtherNotificationTypeExtensions/AddressListIndicator.ta.mjs";
+import {
+    AddressListIndicator,
+    _decode_AddressListIndicator,
+    _encode_AddressListIndicator,
+} from "../MMSOtherNotificationTypeExtensions/AddressListIndicator.ta.mjs";
 // export { AddressListIndicator, _decode_AddressListIndicator, _encode_AddressListIndicator } from "../MMSOtherNotificationTypeExtensions/AddressListIndicator.ta.mjs";
-import { Acp127Recipient, _decode_Acp127Recipient, _encode_Acp127Recipient } from "../MMSOtherNotificationTypeExtensions/Acp127Recipient.ta.mjs";
+import {
+    Acp127Recipient,
+    _decode_Acp127Recipient,
+    _encode_Acp127Recipient,
+} from "../MMSOtherNotificationTypeExtensions/Acp127Recipient.ta.mjs";
 // export { Acp127Recipient, _decode_Acp127Recipient, _encode_Acp127Recipient } from "../MMSOtherNotificationTypeExtensions/Acp127Recipient.ta.mjs";
-import { Acp127SuppInfo, _decode_Acp127SuppInfo, _encode_Acp127SuppInfo } from "../MMSOtherNotificationTypeExtensions/Acp127SuppInfo.ta.mjs";
+import {
+    Acp127SuppInfo,
+    _decode_Acp127SuppInfo,
+    _encode_Acp127SuppInfo,
+} from "../MMSOtherNotificationTypeExtensions/Acp127SuppInfo.ta.mjs";
 // export { Acp127SuppInfo, _decode_Acp127SuppInfo, _encode_Acp127SuppInfo } from "../MMSOtherNotificationTypeExtensions/Acp127SuppInfo.ta.mjs";
-
 
 /**
  * @summary Acp127NotificationResponse
@@ -83,7 +103,6 @@ class Acp127NotificationResponse {
         return new Acp127NotificationResponse(_o.acp127_notification_type, _o.receipt_time, _o.addressListIndicator, _o.acp127_recipient, _o.acp127_supp_info);
     }
 
-
 }
 
 /**
@@ -97,7 +116,7 @@ class Acp127NotificationResponse {
 export
 const _root_component_type_list_1_spec_for_Acp127NotificationResponse: $.ComponentSpec[] = [
     new $.ComponentSpec("acp127-notification-type", false, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: receipt-time COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("receipt-time", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("addressListIndicator", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("acp127-recipient", true, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("acp127-supp-info", true, $.hasTag(_TagClass.context, 4))
@@ -197,6 +216,5 @@ function _encode_Acp127NotificationResponse (value: Acp127NotificationResponse, 
 }; }
     return _cached_encoder_for_Acp127NotificationResponse(value, elGetter);
 }
-
 
 /* eslint-enable */

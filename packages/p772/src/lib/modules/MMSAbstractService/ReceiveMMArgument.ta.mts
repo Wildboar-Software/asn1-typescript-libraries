@@ -1,12 +1,20 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
+import {
+    MessageDeliveryEnvelope,
+    _decode_MessageDeliveryEnvelope,
+    _encode_MessageDeliveryEnvelope,
+} from "@wildboar/x400/MTSAbstractService";
+import {
+    MM,
+    _decode_MM,
+    _encode_MM,
+} from "../MMSInformationObjects/MM.ta.mjs";
 // export { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
-
 
 /**
  * @summary ReceiveMMArgument
@@ -55,7 +63,6 @@ class ReceiveMMArgument {
         return new ReceiveMMArgument(_o.envelope, _o.content);
     }
 
-
 }
 
 /**
@@ -68,7 +75,7 @@ class ReceiveMMArgument {
  */
 export
 const _root_component_type_list_1_spec_for_ReceiveMMArgument: $.ComponentSpec[] = [
-    /* FIXME: envelope COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("envelope", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("content", false, $.hasTag(_TagClass.context, 1))
 ];
 
@@ -154,6 +161,5 @@ function _encode_ReceiveMMArgument (value: ReceiveMMArgument, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_ReceiveMMArgument(value, elGetter);
 }
-
 
 /* eslint-enable */

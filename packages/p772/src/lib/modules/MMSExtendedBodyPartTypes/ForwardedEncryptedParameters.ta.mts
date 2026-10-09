@@ -2,11 +2,17 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
+import {
+    MessageDeliveryTime,
+    _decode_MessageDeliveryTime,
+    _encode_MessageDeliveryTime,
+    OtherMessageDeliveryFields,
+    _decode_OtherMessageDeliveryFields,
+    _encode_OtherMessageDeliveryFields,
+} from "@wildboar/x400/MTSAbstractService";
 
 /**
  * @summary ForwardedEncryptedParameters
@@ -55,7 +61,6 @@ class ForwardedEncryptedParameters {
         return new ForwardedEncryptedParameters(_o.delivery_time, _o.delivery_envelope);
     }
 
-
 }
 
 /**
@@ -68,8 +73,8 @@ class ForwardedEncryptedParameters {
  */
 export
 const _root_component_type_list_1_spec_for_ForwardedEncryptedParameters: $.ComponentSpec[] = [
-    /* FIXME: delivery-time COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: delivery-envelope COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("delivery-time", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("delivery-envelope", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -154,6 +159,5 @@ function _encode_ForwardedEncryptedParameters (value: ForwardedEncryptedParamete
 }; }
     return _cached_encoder_for_ForwardedEncryptedParameters(value, elGetter);
 }
-
 
 /* eslint-enable */

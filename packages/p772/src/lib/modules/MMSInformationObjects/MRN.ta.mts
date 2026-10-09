@@ -1,11 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MN, _decode_MN, _encode_MN } from "../MMSInformationObjects/MN.ta.mjs";
+import {
+    MN,
+    _decode_MN,
+    _encode_MN,
+} from "../MMSInformationObjects/MN.ta.mjs";
 // export { MN, _decode_MN, _encode_MN } from "../MMSInformationObjects/MN.ta.mjs";
-
 
 /**
  * @summary MRN
@@ -48,6 +51,5 @@ function _encode_MRN (value: MRN, elGetter: $.ASN1Encoder<any>): _Element {
     if (!_cached_encoder_for_MRN) { _cached_encoder_for_MRN = _encode_MN; }
     return _cached_encoder_for_MRN(value, elGetter);
 }
-
 
 /* eslint-enable */

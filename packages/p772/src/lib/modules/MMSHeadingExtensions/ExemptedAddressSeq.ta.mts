@@ -1,11 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExemptedAddress, _decode_ExemptedAddress, _encode_ExemptedAddress } from "../MMSHeadingExtensions/ExemptedAddress.ta.mjs";
+import {
+    ExemptedAddress,
+    _decode_ExemptedAddress,
+    _encode_ExemptedAddress,
+} from "../MMSHeadingExtensions/ExemptedAddress.ta.mjs";
 // export { ExemptedAddress, _decode_ExemptedAddress, _encode_ExemptedAddress } from "../MMSHeadingExtensions/ExemptedAddress.ta.mjs";
-
 
 /**
  * @summary ExemptedAddressSeq
@@ -48,6 +51,5 @@ function _encode_ExemptedAddressSeq (value: ExemptedAddressSeq, elGetter: $.ASN1
     if (!_cached_encoder_for_ExemptedAddressSeq) { _cached_encoder_for_ExemptedAddressSeq = $._encodeSequenceOf<ExemptedAddress>(() => _encode_ExemptedAddress, $.BER); }
     return _cached_encoder_for_ExemptedAddressSeq(value, elGetter);
 }
-
 
 /* eslint-enable */

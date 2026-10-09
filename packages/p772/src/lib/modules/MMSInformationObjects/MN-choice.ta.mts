@@ -1,11 +1,20 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
+import {
+    NonReceiptFields,
+    _decode_NonReceiptFields,
+    _encode_NonReceiptFields,
+    ReceiptFields,
+    _decode_ReceiptFields,
+    _encode_ReceiptFields,
+    OtherNotificationTypeFields,
+    _decode_OtherNotificationTypeFields,
+    _encode_OtherNotificationTypeFields,
+} from "@wildboar/x400/IPMSInformationObjects";
 
 /**
  * @summary MN_choice
@@ -14,7 +23,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MN-choice ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * MN-choice ::= CHOICE {
+  mn-non-receipt-fields              [0]  NonReceiptFields,
+  mn-receipt-fields                  [1]  ReceiptFields,
+  mn-other-notification-type-fields  [2]  OtherNotificationTypeFields
+}
  * ```
  */
 export
@@ -59,6 +72,5 @@ function _encode_MN_choice (value: MN_choice, elGetter: $.ASN1Encoder<any>): _El
 }, $.BER); }
     return _cached_encoder_for_MN_choice(value, elGetter);
 }
-
 
 /* eslint-enable */

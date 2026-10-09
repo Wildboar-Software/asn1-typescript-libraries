@@ -2,14 +2,21 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TypeMessage, _decode_TypeMessage, _encode_TypeMessage } from "../MMSHeadingExtensions/TypeMessage.ta.mjs";
+import {
+    TypeMessage,
+    _decode_TypeMessage,
+    _encode_TypeMessage,
+} from "../MMSHeadingExtensions/TypeMessage.ta.mjs";
 // export { TypeMessage, TypeMessage_exercise /* IMPORTED_LONG_NAMED_INTEGER */, exercise /* IMPORTED_SHORT_NAMED_INTEGER */, TypeMessage_operation /* IMPORTED_LONG_NAMED_INTEGER */, operation /* IMPORTED_SHORT_NAMED_INTEGER */, TypeMessage_project /* IMPORTED_LONG_NAMED_INTEGER */, project /* IMPORTED_SHORT_NAMED_INTEGER */, TypeMessage_drill /* IMPORTED_LONG_NAMED_INTEGER */, drill /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TypeMessage, _encode_TypeMessage } from "../MMSHeadingExtensions/TypeMessage.ta.mjs";
-import { MessageIdentifier, _decode_MessageIdentifier, _encode_MessageIdentifier } from "../MMSHeadingExtensions/MessageIdentifier.ta.mjs";
+import {
+    MessageIdentifier,
+    _decode_MessageIdentifier,
+    _encode_MessageIdentifier,
+} from "../MMSHeadingExtensions/MessageIdentifier.ta.mjs";
 // export { MessageIdentifier, _decode_MessageIdentifier, _encode_MessageIdentifier } from "../MMSHeadingExtensions/MessageIdentifier.ta.mjs";
-
 
 /**
  * @summary MessageType
@@ -57,7 +64,6 @@ class MessageType {
     public static _from_object (_o: { [_K in keyof (MessageType)]: (MessageType)[_K] }): MessageType {
         return new MessageType(_o.type_, _o.identifier);
     }
-
 
 }
 
@@ -157,6 +163,5 @@ function _encode_MessageType (value: MessageType, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_MessageType(value, elGetter);
 }
-
 
 /* eslint-enable */

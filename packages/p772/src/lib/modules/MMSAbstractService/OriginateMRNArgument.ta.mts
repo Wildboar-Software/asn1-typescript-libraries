@@ -1,12 +1,20 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MRN, _decode_MRN, _encode_MRN } from "../MMSInformationObjects/MRN.ta.mjs";
+import {
+    MessageSubmissionEnvelope,
+    _decode_MessageSubmissionEnvelope,
+    _encode_MessageSubmissionEnvelope,
+} from "@wildboar/x400/MTSAbstractService";
+import {
+    MRN,
+    _decode_MRN,
+    _encode_MRN,
+} from "../MMSInformationObjects/MRN.ta.mjs";
 // export { MRN, _decode_MRN, _encode_MRN } from "../MMSInformationObjects/MRN.ta.mjs";
-
 
 /**
  * @summary OriginateMRNArgument
@@ -55,7 +63,6 @@ class OriginateMRNArgument {
         return new OriginateMRNArgument(_o.envelope, _o.content);
     }
 
-
 }
 
 /**
@@ -68,7 +75,7 @@ class OriginateMRNArgument {
  */
 export
 const _root_component_type_list_1_spec_for_OriginateMRNArgument: $.ComponentSpec[] = [
-    /* FIXME: envelope COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("envelope", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("content", false, $.hasTag(_TagClass.context, 1))
 ];
 
@@ -154,6 +161,5 @@ function _encode_OriginateMRNArgument (value: OriginateMRNArgument, elGetter: $.
 }; }
     return _cached_encoder_for_OriginateMRNArgument(value, elGetter);
 }
-
 
 /* eslint-enable */

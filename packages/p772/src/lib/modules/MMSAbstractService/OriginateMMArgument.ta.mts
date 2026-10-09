@@ -1,12 +1,20 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
+import {
+    MessageSubmissionEnvelope,
+    _decode_MessageSubmissionEnvelope,
+    _encode_MessageSubmissionEnvelope,
+} from "@wildboar/x400/MTSAbstractService";
+import {
+    MM,
+    _decode_MM,
+    _encode_MM,
+} from "../MMSInformationObjects/MM.ta.mjs";
 // export { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
-
 
 /**
  * @summary OriginateMMArgument
@@ -55,7 +63,6 @@ class OriginateMMArgument {
         return new OriginateMMArgument(_o.envelope, _o.content);
     }
 
-
 }
 
 /**
@@ -68,7 +75,7 @@ class OriginateMMArgument {
  */
 export
 const _root_component_type_list_1_spec_for_OriginateMMArgument: $.ComponentSpec[] = [
-    /* FIXME: envelope COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("envelope", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("content", false, $.hasTag(_TagClass.context, 1))
 ];
 
@@ -154,6 +161,5 @@ function _encode_OriginateMMArgument (value: OriginateMMArgument, elGetter: $.AS
 }; }
     return _cached_encoder_for_OriginateMMArgument(value, elGetter);
 }
-
 
 /* eslint-enable */

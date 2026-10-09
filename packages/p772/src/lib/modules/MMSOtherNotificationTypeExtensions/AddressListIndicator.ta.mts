@@ -1,11 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AddressListDesignator, _decode_AddressListDesignator, _encode_AddressListDesignator } from "../MMSHeadingExtensions/AddressListDesignator.ta.mjs";
+import {
+    AddressListDesignator,
+    _decode_AddressListDesignator,
+    _encode_AddressListDesignator,
+} from "../MMSHeadingExtensions/AddressListDesignator.ta.mjs";
 // export { AddressListDesignator, _decode_AddressListDesignator, _encode_AddressListDesignator } from "../MMSHeadingExtensions/AddressListDesignator.ta.mjs";
-
 
 /**
  * @summary AddressListIndicator
@@ -48,6 +51,5 @@ function _encode_AddressListIndicator (value: AddressListIndicator, elGetter: $.
     if (!_cached_encoder_for_AddressListIndicator) { _cached_encoder_for_AddressListIndicator = $._encodeSequenceOf<AddressListDesignator>(() => _encode_AddressListDesignator, $.BER); }
     return _cached_encoder_for_AddressListIndicator(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary OtherRecipientDesignator_type
@@ -14,7 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * OtherRecipientDesignator-type ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * OtherRecipientDesignator-type ::= INTEGER {
+  primary(0),
+  copy(1)
+}
  * ```
  */
 export
@@ -51,35 +51,7 @@ const OtherRecipientDesignator_type_copy: OtherRecipientDesignator_type = 1; /* 
  */
 export
 const copy: OtherRecipientDesignator_type = OtherRecipientDesignator_type_copy; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_OtherRecipientDesignator_type: $.ASN1Decoder<OtherRecipientDesignator_type> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) OtherRecipientDesignator_type
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_OtherRecipientDesignator_type (el: _Element): OtherRecipientDesignator_type {
-    if (!_cached_decoder_for_OtherRecipientDesignator_type) { _cached_decoder_for_OtherRecipientDesignator_type = $._decodeInteger; }
-    return _cached_decoder_for_OtherRecipientDesignator_type(el);
-}
-
-let _cached_encoder_for_OtherRecipientDesignator_type: $.ASN1Encoder<OtherRecipientDesignator_type> | null = null;
-
-/**
- * @summary Encodes a(n) OtherRecipientDesignator_type into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The OtherRecipientDesignator_type, encoded as an ASN.1 Element.
- */
-export
-function _encode_OtherRecipientDesignator_type (value: OtherRecipientDesignator_type, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OtherRecipientDesignator_type) { _cached_encoder_for_OtherRecipientDesignator_type = $._encodeInteger; }
-    return _cached_encoder_for_OtherRecipientDesignator_type(value, elGetter);
-}
-
+export const _decode_OtherRecipientDesignator_type = $._decodeInteger;
+export const _encode_OtherRecipientDesignator_type = $._encodeInteger;
 
 /* eslint-enable */
