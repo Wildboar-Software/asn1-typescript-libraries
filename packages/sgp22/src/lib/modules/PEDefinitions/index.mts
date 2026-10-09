@@ -1,3 +1,9 @@
+/**
+ * @module
+ * @description
+ * ASN.1 data structures for GSMA SGP.22 Personalization Elements
+ * (PE).
+ */
 export type {
     UICCCapability,
 } from "./UICCCapability.ta.mjs";

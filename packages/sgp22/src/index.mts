@@ -1,4 +1,6 @@
 /**
+ * @module
+ * @description
  * ASN.1 for GSMA consumer Remote SIM Provisioning (SGP.22).
  *
  * Comments cite SGP.22 v3.1. Where this module still uses an earlier

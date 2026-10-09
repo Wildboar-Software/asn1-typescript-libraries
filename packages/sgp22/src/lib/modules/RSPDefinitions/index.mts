@@ -1,3 +1,9 @@
+/**
+ * @module
+ * @description
+ * ASN.1 data structures for GSMA SGP.22 Remote SIM Provisioning
+ * (RSP).
+ */
 export type {
     ActivationCodeRetrievalInfo,
 } from "./ActivationCodeRetrievalInfo.ta.mjs";
