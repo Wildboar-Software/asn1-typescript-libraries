@@ -15,6 +15,9 @@ import { Occurrences, _decode_Occurrences, _encode_Occurrences } from "../Elemen
  * @summary TagPath_Item_specificTag
  * @description
  * 
+ * One tag on an eSpec-2 path (ANSI/NISO Z39.50-2003, RET.3.1.1.1, ASN1.13). A
+ * schema id on the tag is the only structural addition to eSpec-1 (ESP.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,24 +41,44 @@ export
 class TagPath_Item_specificTag {
     /**
      * @summary `schemaId`.
+     * @description
+     * 
+     * Present only when this tag type is interpreted under a schema other than
+     * the schema on the `compSpec` that carries this eSpec. It qualifies the
+     * tag type and nothing else (ASN1.13 comment 3).
      * @public
      * @readonly
      */
     readonly schemaId: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `tagType`.
+     * @description
+     * 
+     * Integer shorthand for a tag set, bound by the schema. If omitted, the
+     * eSpec default tag type applies when the request set one; otherwise the
+     * schema default applies (ASN1.13). Well-known values are 1 tagSet-M, 2
+     * tagSet-G, and 3 a locally defined tag (Appendix TAG).
      * @public
      * @readonly
      */
     readonly tagType: OPTIONAL<INTEGER>;
     /**
      * @summary `tagValue`.
+     * @description
+     * 
+     * Name of the element in that tag set, an integer or a string (RET.2.1.2).
      * @public
      * @readonly
      */
     readonly tagValue: StringOrNumeric;
     /**
      * @summary `occurrence`.
+     * @description
+     * 
+     * Which siblings with this tag to return. Omitted means the first (ASN1.13,
+     * RET.3.1.1.2). `last` is the last occurrence when the count is unknown.
+     * `all`, or a start and a count, makes this one simple request return more
+     * than one element (RET.3.1.1.3).
      * @public
      * @readonly
      */

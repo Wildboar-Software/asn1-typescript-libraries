@@ -14,6 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary InfoCategory
  * @description
  * 
+ * Optional category on an Other-information item (ANSI/NISO Z39.50-2003 §4.1,
+ * comment 5). The category may be absent, present without a type id, or present
+ * with a type id. No category values are known to have been assigned, and no
+ * categories are known to be in use. A category without a type id is for
+ * partners with a prior agreement. When a type id is present it identifies a
+ * registration agent, not a classification.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +36,24 @@ export
 class InfoCategory {
     /**
      * @summary `categoryTypeId`.
+     * @description
+     * 
+     * Registration authority for `categoryValue`, when the partners use a
+     * qualified category (ANSI/NISO Z39.50-2003 §4.1, comment 5). The standard
+     * names no authorities.
+     * 
      * @public
      * @readonly
      */
     readonly categoryTypeId: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `categoryValue`.
+     * @description
+     * 
+     * Integer distinguishing a category under `categoryTypeId`. The standard
+     * states that no values are known to have been assigned or to be in use
+     * (ANSI/NISO Z39.50-2003 §4.1, comment 5).
+     * 
      * @public
      * @readonly
      */

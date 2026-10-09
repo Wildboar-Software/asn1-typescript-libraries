@@ -16,6 +16,28 @@ import { ElementRequest, _decode_ElementRequest, _encode_ElementRequest } from "
  * @summary Espec_2
  * @description
  * 
+ * Element specification format eSpec-2 (ANSI/NISO Z39.50-2003, ESP.1, RET.3.1,
+ * ASN1.13). Object identifier `{Z39-50-elementSpec eSpec-2(2)}`
+ * (`1.2.840.10003.11.2`).
+ * 
+ * Send it as the element specification inside `compSpec` on a version-3 Present
+ * (§3.6.1). A Search, or a Present without `compSpec`, can only name an element
+ * set (§3.6.2). In version 2 the element specification is only an element set
+ * name. Names are case-insensitive. `F` means the full abstract record. `B`
+ * means brief, and this standard does not say which elements that includes.
+ * 
+ * eSpec-2 replaces eSpec-1 (`1.2.840.10003.11.1`). The only structural addition
+ * is a schema id on a tag, so a valid eSpec-1 value is a valid eSpec-2 value. A
+ * server that implements eSpec-2 should accept the eSpec-1 object identifier
+ * and read the value as eSpec-2. A client faced with a server that does not
+ * support eSpec-2 may send the eSpec-1 identifier only when the value uses no
+ * schema id (ESP.1).
+ * 
+ * The schema plus this specification produce an abstract database record; a
+ * record syntax then produces the retrieval record (§3.6). The retrieval text
+ * assumes GRS-1, but eSpec-2 may be paired with another syntax, such as SUTRS
+ * (RET.3).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,30 +61,53 @@ export
 class Espec_2 {
     /**
      * @summary `elementSetNames`.
+     * @description
+     * 
+     * Additional simple requests. Each name selects a set of elements, and each
+     * of those elements is requested as a simple element at occurrence 1
+     * (ASN1.13 comment 1). `F` and `B` have the meanings in §3.6.2.
      * @public
      * @readonly
      */
     readonly elementSetNames: OPTIONAL<InternationalString[]>;
     /**
      * @summary `defaultVariantSetId`.
+     * @description
+     * 
+     * Variant set used when a variant request omits its set id. If the request
+     * includes a variant but neither this nor that set id is present, the
+     * variant request is in error (RET.3.1.1.5).
      * @public
      * @readonly
      */
     readonly defaultVariantSetId: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `defaultVariantRequest`.
+     * @description
+     * 
+     * Applied to each simple request that has no variant of its own. Not
+     * applied to a composite. If a simple request omits both, it has no variant
+     * (ASN1.13 comment 2, RET.3.1.1.5).
      * @public
      * @readonly
      */
     readonly defaultVariantRequest: OPTIONAL<Variant>;
     /**
      * @summary `defaultTagType`.
+     * @description
+     * 
+     * Tag type used when a specific tag omits one. If this is omitted too, the
+     * schema's default applies (ASN1.13).
      * @public
      * @readonly
      */
     readonly defaultTagType: OPTIONAL<INTEGER>;
     /**
      * @summary `elements`.
+     * @description
+     * 
+     * The simple and composite requests. Element set names on this
+     * specification add further simple requests (RET.3.1).
      * @public
      * @readonly
      */

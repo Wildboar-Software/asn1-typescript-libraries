@@ -12,6 +12,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary StringOrNumeric
  * @description
  * 
+ * A character string or an integer, used where a complex attribute value or a
+ * unit token may be either (ANSI/NISO Z39.50-2003 §4.1, comment 10). The
+ * standard assigns no further meaning to the choice.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

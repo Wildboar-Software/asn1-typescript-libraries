@@ -13,6 +13,8 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary DiagnosticFormat_Item
  * @description
  * 
+ * One diag-1 record: an optional diagnostic and an optional message (DIAG.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +33,22 @@ export
 class DiagnosticFormat_Item {
     /**
      * @summary `diagnostic`.
+     * @description
+     * 
+     * Default diagnostic record, or the structured diag-1 form. Absent if only
+     * a message is sent (DIAG.1).
+     * 
      * @public
      * @readonly
      */
     readonly diagnostic: OPTIONAL<DiagnosticFormat_Item_diagnostic>;
     /**
      * @summary `message`.
+     * @description
+     * 
+     * Optional text beside the diagnostic. The diag-1 definition does not
+     * constrain it.
+     * 
      * @public
      * @readonly
      */

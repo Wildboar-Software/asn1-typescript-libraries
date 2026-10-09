@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TriggerResourceControlRequest_requestedAction
  * @description
  * 
+ * Action the client asks for during an active operation (ANSI/NISO Z39.50-2003
+ * §3.2.6.2.1). The server is not obliged to take it.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +28,11 @@ type TriggerResourceControlRequest_requestedAction = INTEGER;
 
 /**
  * @summary TriggerResourceControlRequest_requestedAction_resourceReport
+ * @description
+ * 
+ * Ask the server to send a Resource-control request with response-required off
+ * (ANSI/NISO Z39.50-2003 §3.2.6.2.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -33,6 +41,12 @@ const TriggerResourceControlRequest_requestedAction_resourceReport: TriggerResou
 
 /**
  * @summary TriggerResourceControlRequest_requestedAction_resourceReport
+ * @description
+ * 
+ * Short name for
+ * `TriggerResourceControlRequest_requestedAction_resourceReport`. Request a
+ * report and no response (§3.2.6.2.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -41,6 +55,11 @@ const resourceReport: TriggerResourceControlRequest_requestedAction = TriggerRes
 
 /**
  * @summary TriggerResourceControlRequest_requestedAction_resourceControl
+ * @description
+ * 
+ * Ask the server to send a Resource-control request with response-required on
+ * (ANSI/NISO Z39.50-2003 §3.2.6.2.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -49,6 +68,12 @@ const TriggerResourceControlRequest_requestedAction_resourceControl: TriggerReso
 
 /**
  * @summary TriggerResourceControlRequest_requestedAction_resourceControl
+ * @description
+ * 
+ * Short name for
+ * `TriggerResourceControlRequest_requestedAction_resourceControl`. Request full
+ * resource control (§3.2.6.2.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -57,6 +82,12 @@ const resourceControl: TriggerResourceControlRequest_requestedAction = TriggerRe
 
 /**
  * @summary TriggerResourceControlRequest_requestedAction_cancel
+ * @description
+ * 
+ * Ask the server to terminate the operation (ANSI/NISO Z39.50-2003 §3.2.6.2.1).
+ * If the server honors this, the terminating response indicates termination at
+ * client request.
+ * 
  * @constant
  * @type {number}
  */
@@ -65,6 +96,11 @@ const TriggerResourceControlRequest_requestedAction_cancel: TriggerResourceContr
 
 /**
  * @summary TriggerResourceControlRequest_requestedAction_cancel
+ * @description
+ * 
+ * Short name for `TriggerResourceControlRequest_requestedAction_cancel`. Ask to
+ * terminate the operation (§3.2.6.2.1).
+ * 
  * @constant
  * @type {number}
  */

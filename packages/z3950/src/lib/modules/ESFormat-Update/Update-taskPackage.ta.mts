@@ -13,6 +13,11 @@ import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-
  * @summary Update_taskPackage
  * @description
  * 
+ * Database Update task package: the retained action and database, and the
+ * server's status, task-level diagnostics, and per-record results.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,26 @@ export
 class Update_taskPackage {
     /**
      * @summary `clientPart`.
+     * @description
+     * 
+     * Action, database name, schema, and element-set name supplied by the
+     * client.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */
     readonly clientPart: ClientPartToKeep;
     /**
      * @summary `serverPart`.
+     * @description
+     * 
+     * Update status once the task is complete or rejected, optional task-level
+     * diagnostics, and one structure per supplied record.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.1.5.1.
+     * 
      * @public
      * @readonly
      */

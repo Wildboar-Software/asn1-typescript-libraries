@@ -10,6 +10,11 @@ import { OccurrenceByAttributes_Item, _decode_OccurrenceByAttributes_Item, _enco
  * @summary OccurrenceByAttributes
  * @description
  * 
+ * Per-attribute occurrence information for one Scan term (ANSI/NISO Z39.50-2003
+ * §3.2.8.1.7). Each item names attributes and may give a record count for all
+ * databases or a count per database. Counts may be omitted. A count is a number
+ * of records.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

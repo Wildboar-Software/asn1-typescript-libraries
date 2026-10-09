@@ -10,6 +10,14 @@ import { HumanString_Item, _decode_HumanString_Item, _encode_HumanString_Item } 
  * @summary HumanString
  * @description
  * 
+ * Human-readable text, for an element the client is expected to present to the
+ * user. Each element is one string with an optional language code. Separate
+ * languages of an Explain record are separate records, selected by
+ * HumanStringLanguage at search time, not by this list. Alternative formats
+ * such as ASCII, HTML, or PDF are requested with version 3 variants, not with
+ * this type. The standard does not say whether several elements are
+ * translations of one another. ANSI/NISO Z39.50-2003 §3.2.10.1.2, §3.2.10.2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

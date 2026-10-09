@@ -1,3 +1,9 @@
+/**
+ * @module
+ * @description
+ * Object-class arcs under `{Z39-50}` (ANSI/NISO Z39.50-2003 OID.1 through
+ * OID.7, ASN1.2).
+ */
 export {
     z39_50_APDU,
 } from "./z39-50-APDU.va.mjs";

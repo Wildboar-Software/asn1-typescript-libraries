@@ -13,6 +13,11 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * @summary CategoryInfo
  * @description
  * 
+ * One Explain category the server supports, as listed by the single
+ * CategoryList record. Original term, description, and ASN.1 need appear only
+ * when the server supports a category this standard does not define, or a
+ * revision of one it does. ANSI/NISO Z39.50-2003 §3.2.10.3.17.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,24 +35,40 @@ export
 class CategoryInfo {
     /**
      * @summary `category`.
+     * @description
+     * Brief. Search term to use with Use attribute ExplainCategory for records
+     * of this category. ANSI/NISO Z39.50-2003 §3.2.10.3.17.
      * @public
      * @readonly
      */
     readonly category: InternationalString;
     /**
      * @summary `originalCategory`.
+     * @description
+     * Original search term, when the server supports a revision of a category
+     * defined in this standard. The standard says this need appear only for a
+     * category the standard does not define, or such a revision. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.17.
      * @public
      * @readonly
      */
     readonly originalCategory: OPTIONAL<InternationalString>;
     /**
      * @summary `description`.
+     * @description
+     * Human-readable description. The standard says this need appear only for a
+     * category the standard does not define, or a revision of one it does.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.17.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `asn1Module`.
+     * @description
+     * ASN.1 definition of the record for this category. The standard says this
+     * need appear only for a category the standard does not define, or a
+     * revision of one it does. ANSI/NISO Z39.50-2003 §3.2.10.3.17.
      * @public
      * @readonly
      */

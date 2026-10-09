@@ -12,6 +12,11 @@ import { ElementRequest_compositeElement, _decode_ElementRequest_compositeElemen
  * @summary ElementRequest
  * @description
  * 
+ * One element request: a simple element, or a composite built from simple
+ * elements (ANSI/NISO Z39.50-2003, RET.3.1, ASN1.13). A simple request can
+ * still select many nodes, when the path ends on a non-leaf, occurrence is
+ * `all` or a range, or the path contains a wildcard (RET.3.1.1.3).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

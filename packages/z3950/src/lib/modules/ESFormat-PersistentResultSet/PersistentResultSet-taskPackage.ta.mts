@@ -13,6 +13,12 @@ import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-
  * @summary PersistentResultSet_taskPackage
  * @description
  * 
+ * Persistent Result Set task package. The client part is empty. The server
+ * part names a transient result set only when the package is presented,
+ * and may give the record count.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.1, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,25 @@ export
 class PersistentResultSet_taskPackage {
     /**
      * @summary `clientPart`.
+     * @description
+     * 
+     * Empty. No client parameter of this service is stored in the package.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.1, EXT.2.
+     * 
      * @public
      * @readonly
      */
     readonly clientPart: NULL;
     /**
      * @summary `serverPart`.
+     * @description
+     * 
+     * Transient result-set name supplied when the package is presented, and
+     * optionally how many records the persistent result set contains.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.1.
+     * 
      * @public
      * @readonly
      */

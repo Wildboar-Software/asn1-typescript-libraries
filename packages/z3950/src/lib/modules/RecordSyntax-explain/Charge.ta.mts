@@ -14,6 +14,11 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * @summary Charge
  * @description
  * 
+ * One machine-readable charge, with optional human-readable text. The category
+ * prose asks for connect, present, and search costs in both forms, and does not
+ * say which component is the present charge. REC.1; ANSI/NISO Z39.50-2003
+ * §3.2.10.3.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +36,27 @@ export
 class Charge {
     /**
      * @summary `cost`.
+     * @description
+     * Amount of the charge. The standard does not define the numeric unit
+     * beyond this component. REC.1.
      * @public
      * @readonly
      */
     readonly cost: IntUnit;
     /**
      * @summary `perWhat`.
+     * @description
+     * What the cost is charged per. The comment gives second, minute, line, and
+     * record as examples. REC.1.
      * @public
      * @readonly
      */
     readonly perWhat: OPTIONAL<Unit>;
     /**
      * @summary `text`.
+     * @description
+     * Human-readable statement of this charge. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.2.
      * @public
      * @readonly
      */

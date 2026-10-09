@@ -14,6 +14,17 @@ import { UnitType, _decode_UnitType, _encode_UnitType } from "../RecordSyntax-ex
 /**
  * @summary UnitInfo
  * @description
+ * A unit-system definition supported by the server. ANSI/NISO Z39.50-2003
+ * §3.2.10.3.16.
+ * 
+ * Search with ExplainCategory `UnitInfo` and UnitSystem. The search may also
+ * use HumanStringLanguage, DateAdded, DateChanged, or DateExpires. ANSI/NISO
+ * Z39.50-2003 §3.2.10.1.2 and §3.2.10.1.3.
+ * 
+ * The unit-system name is the key. It was made optional in the 2001
+ * version because of a defect report; the standard does not describe that
+ * defect. There are no other brief elements. The list of unit types is
+ * mandatory in a full record. ANSI/NISO Z39.50-2003 ASN.1 comment 1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -37,24 +48,41 @@ export
 class UnitInfo {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates this Explain record was added and last changed, when it expires,
+     * and the language of its human-readable text. Element set `B` includes
+     * this component except `otherInfo`. DateAdded, DateChanged, and
+     * DateExpires search these dates. ANSI/NISO Z39.50-2003 §3.2.10.3,
+     * §3.2.10.1.3; ASN.1 comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `unitSystem`.
+     * @description
+     * Name of the unit system. Key, searched with UnitSystem. Optional since
+     * the 2001 edition, after a defect report. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.16; Explain ASN.1.
      * @public
      * @readonly
      */
     readonly unitSystem: OPTIONAL<InternationalString>;
     /**
      * @summary `description`.
+     * @description
+     * Human-readable description of the unit system. Non-brief. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.16.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `units`.
+     * @description
+     * Unit types in this system. For each, a name, a description, and a list of
+     * units. Non-brief, and mandatory in a full record. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.16.
      * @public
      * @readonly
      */

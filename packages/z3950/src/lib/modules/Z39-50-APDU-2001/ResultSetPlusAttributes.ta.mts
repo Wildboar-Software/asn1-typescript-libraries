@@ -13,6 +13,14 @@ import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../
  * @summary ResultSetPlusAttributes
  * @description
  * 
+ * Restriction operand: the records of a result set, limited by the supplied
+ * attributes (ANSI/NISO Z39.50-2003 §3.7.3). Support requires the extended
+ * result set model for restriction. The server keeps information for each
+ * record as a surrogate for the search that created the set; the manner is not
+ * prescribed (Appendix ERS). Version 2 allows this operand only in a type-101
+ * query. Version 3 also allows it in type-1. A version-2 type-1 query that
+ * includes it may be treated as a protocol error (§3.7, §4.4.2.2.3).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +36,22 @@ export
 class ResultSetPlusAttributes {
     /**
      * @summary `resultSet`.
+     * @description
+     * 
+     * Transient result set to restrict (ANSI/NISO Z39.50-2003 §3.7.3).
+     * 
      * @public
      * @readonly
      */
     readonly resultSet: ResultSetId;
     /**
      * @summary `attributes`.
+     * @description
+     * 
+     * Attributes applied as the restriction. A result set for a term,
+     * restricted to an author access point, retains the entries in which that
+     * term occurs as an author (§3.7.3).
+     * 
      * @public
      * @readonly
      */

@@ -17,6 +17,10 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary ScanResponse
  * @description
  * 
+ * Server reply to Scan. It gives the scan status, the step size actually used
+ * when the server chose it, how many entries came back, and where the starting
+ * term sits among them (ANSI/NISO Z39.50-2003 §3.2.8.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,48 +51,95 @@ export
 class ScanResponse {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Reference-id of the Scan request. Omit it when the request omitted it
+     * (ANSI/NISO Z39.50-2003 §3.4).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `stepSize`.
+     * @description
+     * 
+     * Step size the server used. The server includes it when the client omitted
+     * step size and the server selected one (ANSI/NISO Z39.50-2003 §3.2.8.1.3).
+     * 
      * @public
      * @readonly
      */
     readonly stepSize: OPTIONAL<INTEGER>;
     /**
      * @summary `scanStatus`.
+     * @description
+     * 
+     * Result of the scan. If fewer entries come back than were requested, this
+     * status is the reason (ANSI/NISO Z39.50-2003 §3.2.8.1.4, §3.2.8.1.6).
+     * 
      * @public
      * @readonly
      */
     readonly scanStatus: ScanResponse_scanStatus;
     /**
      * @summary `numberOfEntriesReturned`.
+     * @description
+     * 
+     * How many entries the response actually contains (ANSI/NISO Z39.50-2003
+     * §3.2.8.1.4).
+     * 
      * @public
      * @readonly
      */
     readonly numberOfEntriesReturned: INTEGER;
     /**
      * @summary `positionOfTerm`.
+     * @description
+     * 
+     * Actual position of the chosen starting term among the returned entries.
+     * If it is lower than the position the client asked for, the low end of the
+     * list had fewer terms. A matching position together with a short count
+     * does not by itself mean the high end is exhausted; that conclusion
+     * requires scan status partial-5 (ANSI/NISO Z39.50-2003 §3.2.8.1.5).
+     * 
      * @public
      * @readonly
      */
     readonly positionOfTerm: OPTIONAL<INTEGER>;
     /**
      * @summary `entries`.
+     * @description
+     * 
+     * Term-list entries, surrogate diagnostics, and any non-surrogate
+     * diagnostics (ANSI/NISO Z39.50-2003 §3.2.8.1.7). On failure, none of the
+     * expected entries are returned and one or more non-surrogate diagnostics
+     * are.
+     * 
      * @public
      * @readonly
      */
     readonly entries: OPTIONAL<ListEntries>;
     /**
      * @summary `attributeSet`.
+     * @description
+     * 
+     * Attribute set for attribute lists in this response that omit their own
+     * set id, both in term information and in occurrence counts (ANSI/NISO
+     * Z39.50-2003 §4.1, comment 3).
+     * 
      * @public
      * @readonly
      */
     readonly attributeSet: OPTIONAL<AttributeSetId>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. The peer should
+     * expect it and need not interpret it, in either version (ANSI/NISO
+     * Z39.50-2003 §3.2.8.1.8, §4.4.2.2.21).
+     * 
      * @public
      * @readonly
      */

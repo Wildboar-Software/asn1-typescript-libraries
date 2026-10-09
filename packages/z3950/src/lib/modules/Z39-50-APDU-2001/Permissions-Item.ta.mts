@@ -13,6 +13,9 @@ import { Permissions_Item_allowableFunctions_Item, _decode_Permissions_Item_allo
  * @summary Permissions_Item
  * @description
  * 
+ * Functions one user, or one group named like a user, may apply to a task
+ * package (ANSI/NISO Z39.50-2003 §3.2.9.3).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +37,22 @@ export
 class Permissions_Item {
     /**
      * @summary `userId`.
+     * @description
+     * 
+     * User, or group, these functions apply to. A group name is syntactically a
+     * user id (ANSI/NISO Z39.50-2003 §3.2.9.3).
+     * 
      * @public
      * @readonly
      */
     readonly userId: InternationalString;
     /**
      * @summary `allowableFunctions`.
+     * @description
+     * 
+     * Operations this user may perform on the package: delete, modify contents,
+     * modify permissions, present, and invoke (ANSI/NISO Z39.50-2003 §3.2.9.3).
+     * 
      * @public
      * @readonly
      */

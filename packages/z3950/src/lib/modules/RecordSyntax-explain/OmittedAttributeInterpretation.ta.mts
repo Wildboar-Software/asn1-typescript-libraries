@@ -12,6 +12,12 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
 /**
  * @summary OmittedAttributeInterpretation
  * @description
+ * What the server does when an attribute type is omitted from a search of a
+ * database. It is the default recorded for that type in AttributeDetails, not
+ * its own Explain category. A human-readable description should generally be
+ * supplied. Both components may be absent: the server then allows the type to
+ * be omitted and does not say what it will do. ANSI/NISO Z39.50-2003
+ * §3.2.10.3.9; ASN.1 comment 9.
  * 
  * ### ASN.1 Definition:
  * 
@@ -29,12 +35,20 @@ export
 class OmittedAttributeInterpretation {
     /**
      * @summary `defaultValue`.
+     * @description
+     * Present when the server applies a specific default if this attribute type
+     * is omitted. ANSI/NISO Z39.50-2003 §3.2.10.3.9; ASN.1 comment on this
+     * component.
      * @public
      * @readonly
      */
     readonly defaultValue: OPTIONAL<StringOrNumeric>;
     /**
      * @summary `defaultDescription`.
+     * @description
+     * Human-readable account of the default behavior. The standard says this
+     * should generally be provided. ANSI/NISO Z39.50-2003 §3.2.10.3.9; ASN.1
+     * comment 9.
      * @public
      * @readonly
      */

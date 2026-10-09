@@ -18,6 +18,14 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * @summary ExtendedServicesInfo
  * @description
  * 
+ * One extended service. One record per service the server supports. Search
+ * ExplainCategory `ExtendedServicesInfo` with the service's object identifier
+ * (Use ExtendedServiceOID). ATR.1 Table 2 spells that category term
+ * extendedServicesInfo; matching is case-insensitive. Element set `description`
+ * returns the brief elements plus description. `specificExplain` returns those
+ * plus the service-specific Explain data. `asn` returns every element except
+ * specificExplain. ANSI/NISO Z39.50-2003 §3.2.10.1.1, §3.2.10.3.8; REC.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,72 +67,119 @@ export
 class ExtendedServicesInfo {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates, language, and other information about this Explain record.
+     * otherInfo is omitted from element set `B`. REC.1 Comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `type_`.
+     * @description
+     * Brief. Key. Object identifier of the extended service. Search with Use
+     * ExtendedServiceOID. For version 2, prefer the oid as a dotted character
+     * string; for version 3, as an OBJECT IDENTIFIER. ATR.1 note 4; ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.8.
      * @public
      * @readonly
      */
     readonly type_: OBJECT_IDENTIFIER;
     /**
      * @summary `name`.
+     * @description
+     * Brief. Name by which the extended service is known. Should be supplied
+     * when the service is private. REC.1; ANSI/NISO Z39.50-2003 §3.2.10.3.8.
      * @public
      * @readonly
      */
     readonly name: OPTIONAL<InternationalString>;
     /**
      * @summary `privateType`.
+     * @description
+     * Brief. Whether this is a private extended service. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.8.
      * @public
      * @readonly
      */
     readonly privateType: BOOLEAN;
     /**
      * @summary `restrictionsApply`.
+     * @description
+     * Brief. Whether restrictions apply. If so, see description. REC.1;
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.8.
      * @public
      * @readonly
      */
     readonly restrictionsApply: BOOLEAN;
     /**
      * @summary `feeApply`.
+     * @description
+     * Brief. Whether a fee applies. If so, see description. REC.1; ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.8.
      * @public
      * @readonly
      */
     readonly feeApply: BOOLEAN;
     /**
      * @summary `available`.
+     * @description
+     * Brief. Whether the service is available. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.8.
      * @public
      * @readonly
      */
     readonly available: BOOLEAN;
     /**
      * @summary `retentionSupported`.
+     * @description
+     * Brief. Whether retention is supported. ANSI/NISO Z39.50-2003 §3.2.10.3.8.
+     * Retention-time on an extended-service request is the period after which
+     * the server may delete the task package (§3.2.9.1.5). This flag is not
+     * defined more precisely than the category prose.
      * @public
      * @readonly
      */
     readonly retentionSupported: BOOLEAN;
     /**
      * @summary `waitAction`.
+     * @description
+     * Brief. What level of wait-action is supported. The five named levels are
+     * not the four Wait-action values on an extended-service request, and the
+     * standard does not map one list onto the other. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.8, §3.2.9.1.13.
      * @public
      * @readonly
      */
     readonly waitAction: ExtendedServicesInfo_waitAction;
     /**
      * @summary `description`.
+     * @description
+     * Non-brief. Human-readable description. Element set `description` returns
+     * the brief elements plus this. If restrictions or a fee apply, this is
+     * where they are described. REC.1; ANSI/NISO Z39.50-2003 §3.2.10.3.8.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `specificExplain`.
+     * @description
+     * Non-brief. Explain elements defined by this extended service. Use the
+     * service's object identifier and select choice explain. The format is
+     * developed with that service's definition. Element set `specificExplain`
+     * returns the preceding elements plus this. REC.1; ANSI/NISO Z39.50-2003
+     * §3.2.10.3.8.
      * @public
      * @readonly
      */
     readonly specificExplain: OPTIONAL<EXTERNAL>;
     /**
      * @summary `esASN`.
+     * @description
+     * Non-brief. ASN.1 module for this extended service's Explain definition.
+     * Element set `asn` returns every element except specificExplain. REC.1;
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.8.
      * @public
      * @readonly
      */

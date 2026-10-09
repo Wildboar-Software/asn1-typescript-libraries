@@ -27,6 +27,35 @@ import { CategoryList, _decode_CategoryList, _encode_CategoryList } from "../Rec
  * @summary Explain_Record
  * @description
  * 
+ * One information category from the Explain database IR-Explain-1. Search that
+ * database with attribute set exp-1. The Use attribute ExplainCategory takes
+ * the category term; terms are matched case-insensitive. Supplying each key for
+ * the category should return at most one record. A Present request should name
+ * the Explain syntax as the preferred record syntax. Element set `B` returns
+ * commonInfo except otherInfo, the keys, and the non-key brief elements. `F`
+ * adds the non-brief elements. `description` returns the brief elements plus
+ * description, and any extra descriptive elements the category designates.
+ * HumanStringLanguage, DateAdded, DateChanged, and DateExpires may be combined
+ * with any of these searches. Some elements marked optional are mandatory in a
+ * full record; those are identified in the category. ANSI/NISO Z39.50-2003
+ * §3.2.10, §3.2.10.1.1, §3.2.10.2, §3.2.10.2.2; REC.1 Comment 1; ATR.1.
+ * 
+ * Category term and keys (§3.2.10.1.1 and ATR.1 Table 2). TargetInfo, key
+ * server name (the category term alone is enough; Comment 2). DatabaseInfo,
+ * database name. SchemaInfo, schema oid. TagSetInfo, tag set oid.
+ * RecordSyntaxInfo, record syntax oid. AttributeSetInfo, attribute set oid.
+ * TermListInfo, database name. ExtendedServicesInfo, extended service oid
+ * (Table 2 spells the term extendedServicesInfo). AttributeDetails, database
+ * name. TermListDetails, term list name. ElementSetDetails, database name,
+ * element set name, and record syntax oid. RetrievalRecordDetails, database
+ * name, schema oid, and record syntax oid. SortDetails, database name.
+ * Processing, database name, processing context, name, and oid. VariantSetInfo,
+ * variant set oid. UnitInfo, unit system name. CategoryList, no key.
+ * 
+ * Where the key is an object identifier: for version 2, prefer a character
+ * string of integers separated by periods; for version 3, prefer an OBJECT
+ * IDENTIFIER. ATR.1 note 4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

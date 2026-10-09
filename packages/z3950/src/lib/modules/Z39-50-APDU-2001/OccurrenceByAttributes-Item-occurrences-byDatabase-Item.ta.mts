@@ -14,6 +14,10 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary OccurrenceByAttributes_Item_occurrences_byDatabase_Item
  * @description
  * 
+ * Record count for one database within a Scan occurrence breakdown (ANSI/NISO
+ * Z39.50-2003 §3.2.8.1.7). The count may be omitted, in which case the database
+ * is only reported as one where the term occurs.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +34,32 @@ export
 class OccurrenceByAttributes_Item_occurrences_byDatabase_Item {
     /**
      * @summary `db`.
+     * @description
+     * 
+     * Database this count applies to (ANSI/NISO Z39.50-2003 §3.2.8.1.7).
+     * 
      * @public
      * @readonly
      */
     readonly db: DatabaseName;
     /**
      * @summary `num`.
+     * @description
+     * 
+     * How many records in `db` contain the term. Omit it to name the database
+     * without a count (ANSI/NISO Z39.50-2003 §3.2.8.1.7).
+     * 
      * @public
      * @readonly
      */
     readonly num: OPTIONAL<INTEGER>;
     /**
      * @summary `otherDbInfo`.
+     * @description
+     * 
+     * Further information about this database. The standard does not specify
+     * its contents (ANSI/NISO Z39.50-2003 §4.1).
+     * 
      * @public
      * @readonly
      */

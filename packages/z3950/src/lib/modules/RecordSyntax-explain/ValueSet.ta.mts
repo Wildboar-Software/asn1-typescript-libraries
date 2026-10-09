@@ -11,6 +11,8 @@ import { ValueDescription, _decode_ValueDescription, _encode_ValueDescription } 
 /**
  * @summary ValueSet
  * @description
+ * The values supported for a variant type: either a range or an enumerated
+ * list. ANSI/NISO Z39.50-2003 §3.2.10.3.15; Explain ASN.1.
  * 
  * ### ASN.1 Definition:
  * 

@@ -13,6 +13,12 @@ import { ClientPartNotToKeep_resultSetItem, _decode_ClientPartNotToKeep_resultSe
  * @summary ClientPartNotToKeep
  * @description
  * 
+ * The requested item (`requestedItem`). Supply at least one of a
+ * result-set entry and an externally defined item request, and both may be
+ * supplied. This part is not kept as the client sent it.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +40,31 @@ export
 class ClientPartNotToKeep {
     /**
      * @summary `resultSetItem`.
+     * @description
+     * 
+     * A transient result set belonging to the current Z-association, and the
+     * ordinal of an entry in that result.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly resultSetItem: OPTIONAL<ClientPartNotToKeep_resultSetItem>;
     /**
      * @summary `itemRequest`.
+     * @description
+     * 
+     * A request whose format is defined outside this standard. It may be an
+     * Interlibrary Loan Request APDU of ISO 10161. Z39.50 does not require the
+     * encoding to be BER. When the request is an ILL APDU identified by
+     * `{iso standard 10161 abstract-syntax (2) ill-APDUs (1)}`
+     * (OID 1.0.10161.2.1), it is ASN.1 but need not be BER; it may be
+     * EDIFACT as the ILL standard provides. If BER is used, that encoding
+     * may be wrapped in Base64 in store-and-forward mode.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */

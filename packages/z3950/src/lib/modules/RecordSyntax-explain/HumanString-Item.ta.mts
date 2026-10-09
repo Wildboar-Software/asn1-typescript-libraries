@@ -13,6 +13,9 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary HumanString_Item
  * @description
  * 
+ * One language-tagged string inside a HumanString. ANSI/NISO Z39.50-2003
+ * §3.2.10.1.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +31,18 @@ export
 class HumanString_Item {
     /**
      * @summary `language`.
+     * @description
+     * Language of this string, as a Z39.53 three-character code. The standard
+     * does not say whether omission falls back to the record's
+     * humanString-Language. REC.1; ANSI/NISO Z39.50-2003 §3.2.10.1.2.
      * @public
      * @readonly
      */
     readonly language: OPTIONAL<LanguageCode>;
     /**
      * @summary `text`.
+     * @description
+     * The human-readable text. ANSI/NISO Z39.50-2003 §3.2.10.2.1.
      * @public
      * @readonly
      */

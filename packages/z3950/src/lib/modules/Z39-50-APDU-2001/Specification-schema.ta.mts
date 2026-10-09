@@ -12,6 +12,12 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary Specification_schema
  * @description
  * 
+ * Identifier of a retrieval schema (ANSI/NISO Z39.50-2003 §3.6). `oid` is the
+ * schema's object identifier. `uri` is a string identifier and may be used only
+ * when option bit 21 (string schema) has been negotiated (§3.2.1.1.3). The
+ * server must then recognize string identifiers and need not support any
+ * particular schema (§4.4.2.2.30).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

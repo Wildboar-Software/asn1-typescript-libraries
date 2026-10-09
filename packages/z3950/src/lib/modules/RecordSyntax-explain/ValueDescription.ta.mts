@@ -15,6 +15,12 @@ import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/I
 /**
  * @summary ValueDescription
  * @description
+ * One supported variant value, either inside a range or in an enumeration. An
+ * object identifier or a unit alone cannot be used in a range. A unit alone
+ * specifies a unit without a magnitude; a value together with a unit specifies
+ * both. The standard does not further define the integer, string, octet-string,
+ * or object identifier alternatives. ANSI/NISO Z39.50-2003 Explain ASN.1; APDU
+ * comment 6 on IntUnit.
  * 
  * ### ASN.1 Definition:
  * 

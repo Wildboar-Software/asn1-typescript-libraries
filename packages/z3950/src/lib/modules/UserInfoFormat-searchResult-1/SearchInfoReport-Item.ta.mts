@@ -17,6 +17,8 @@ import { ResultsByDB, _decode_ResultsByDB, _encode_ResultsByDB } from "../UserIn
  * @summary SearchInfoReport_Item
  * @description
  * 
+ * One query component in a SearchResult-1 report (USR.1, ASN1.11).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,48 +50,83 @@ export
 class SearchInfoReport_Item {
     /**
      * @summary `subqueryId`.
+     * @description
+     * 
+     * Shorthand identifier of the subquery.
+     * 
      * @public
      * @readonly
      */
     readonly subqueryId: OPTIONAL<InternationalString>;
     /**
      * @summary `fullQuery`.
+     * @description
+     * 
+     * True when this is the whole query; false when it is a subquery.
+     * 
      * @public
      * @readonly
      */
     readonly fullQuery: BOOLEAN;
     /**
      * @summary `subqueryExpression`.
+     * @description
+     * 
+     * A subquery of the query as submitted. It may be the whole query; then
+     * fullQuery should be true.
+     * 
      * @public
      * @readonly
      */
     readonly subqueryExpression: OPTIONAL<QueryExpression>;
     /**
      * @summary `subqueryInterpretation`.
+     * @description
+     * 
+     * How the server interpreted the subquery.
+     * 
      * @public
      * @readonly
      */
     readonly subqueryInterpretation: OPTIONAL<QueryExpression>;
     /**
      * @summary `subqueryRecommendation`.
+     * @description
+     * 
+     * An alternative the server recommends.
+     * 
      * @public
      * @readonly
      */
     readonly subqueryRecommendation: OPTIONAL<QueryExpression>;
     /**
      * @summary `subqueryCount`.
+     * @description
+     * 
+     * Records for this subquery across the specified databases. During a
+     * search, via resource control, the count so far.
+     * 
      * @public
      * @readonly
      */
     readonly subqueryCount: OPTIONAL<INTEGER>;
     /**
      * @summary `subqueryWeight`.
+     * @description
+     * 
+     * Relative weight of this subquery.
+     * 
      * @public
      * @readonly
      */
     readonly subqueryWeight: OPTIONAL<IntUnit>;
     /**
      * @summary `resultsByDB`.
+     * @description
+     * 
+     * The same count broken out by database, or across all databases in the
+     * Search.
+     * 
      * @public
      * @readonly
      */

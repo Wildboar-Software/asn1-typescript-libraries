@@ -12,6 +12,21 @@ import { ItemOrder_taskPackage, _decode_ItemOrder_taskPackage, _encode_ItemOrder
  * @summary ItemOrder
  * @description
  * 
+ * Submits an item order to the server. The client identifies the item by
+ * an externally defined request (which may be an ISO 10161 ILL-Request
+ * APDU), by a result-set entry, or by both, and may add a description, a
+ * contact, and billing. The server copies or builds an item request into
+ * the package and reports status. The status report's definition is
+ * outside this standard.
+ * 
+ * `notToKeep` is the requested item and is not retained as submitted.
+ * `toKeep` (description, contact, billing) is optional and is the task
+ * package's `clientPart`. The server part holds the item request it stored
+ * and the status. On modify, supplied values replace the corresponding
+ * package values; an omitted optional parameter is left unchanged.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4, EXT.2, §3.2.9.1.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

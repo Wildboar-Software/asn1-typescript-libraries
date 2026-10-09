@@ -9,6 +9,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PrimitiveDataType
  * @description
+ * Primitive datatype of a schema element, a tag-set element, or a variant
+ * value. The standard names the values and does not define them further, except
+ * `noneOfTheAbove`: see the element's description. If a tag-set element's
+ * datatype is structured, the schema describes it and this value is omitted on
+ * the tag-set element. ANSI/NISO Z39.50-2003 Explain ASN.1; §3.2.10.3.4.
  * 
  * ### ASN.1 Definition:
  * 
@@ -32,6 +37,9 @@ type PrimitiveDataType = INTEGER;
 
 /**
  * @summary PrimitiveDataType_octetString
+ * @description
+ * Named primitive `octetString`. The standard does not define this value beyond
+ * that name.
  * @constant
  * @type {number}
  */
@@ -40,6 +48,8 @@ const PrimitiveDataType_octetString: PrimitiveDataType = 0; /* LONG_NAMED_INTEGE
 
 /**
  * @summary PrimitiveDataType_octetString
+ * @description
+ * Short name for `PrimitiveDataType_octetString`.
  * @constant
  * @type {number}
  */
@@ -48,6 +58,9 @@ const octetString: PrimitiveDataType = PrimitiveDataType_octetString; /* SHORT_N
 
 /**
  * @summary PrimitiveDataType_numeric
+ * @description
+ * Named primitive `numeric`. The standard does not define this value beyond
+ * that name.
  * @constant
  * @type {number}
  */
@@ -56,6 +69,8 @@ const PrimitiveDataType_numeric: PrimitiveDataType = 1; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary PrimitiveDataType_numeric
+ * @description
+ * Short name for `PrimitiveDataType_numeric`.
  * @constant
  * @type {number}
  */
@@ -64,6 +79,9 @@ const numeric: PrimitiveDataType = PrimitiveDataType_numeric; /* SHORT_NAMED_INT
 
 /**
  * @summary PrimitiveDataType_date
+ * @description
+ * Named primitive `date`. The standard does not define this value beyond that
+ * name.
  * @constant
  * @type {number}
  */
@@ -72,6 +90,8 @@ const PrimitiveDataType_date: PrimitiveDataType = 2; /* LONG_NAMED_INTEGER_VALUE
 
 /**
  * @summary PrimitiveDataType_date
+ * @description
+ * Short name for `PrimitiveDataType_date`.
  * @constant
  * @type {number}
  */
@@ -80,6 +100,9 @@ const date: PrimitiveDataType = PrimitiveDataType_date; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary PrimitiveDataType_external
+ * @description
+ * Named primitive `external`. The standard does not define this value beyond
+ * that name.
  * @constant
  * @type {number}
  */
@@ -88,6 +111,8 @@ const PrimitiveDataType_external: PrimitiveDataType = 3; /* LONG_NAMED_INTEGER_V
 
 /**
  * @summary PrimitiveDataType_external
+ * @description
+ * Short name for `PrimitiveDataType_external`.
  * @constant
  * @type {number}
  */
@@ -96,6 +121,9 @@ const external: PrimitiveDataType = PrimitiveDataType_external; /* SHORT_NAMED_I
 
 /**
  * @summary PrimitiveDataType_string_
+ * @description
+ * Named primitive `string`. The standard does not define this value beyond that
+ * name.
  * @constant
  * @type {number}
  */
@@ -104,6 +132,8 @@ const PrimitiveDataType_string_: PrimitiveDataType = 4; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary PrimitiveDataType_string_
+ * @description
+ * Short name for `PrimitiveDataType_string_`.
  * @constant
  * @type {number}
  */
@@ -112,6 +142,9 @@ const string_: PrimitiveDataType = PrimitiveDataType_string_; /* SHORT_NAMED_INT
 
 /**
  * @summary PrimitiveDataType_trueOrFalse
+ * @description
+ * Named primitive `trueOrFalse`. The standard does not define this value beyond
+ * that name.
  * @constant
  * @type {number}
  */
@@ -120,6 +153,8 @@ const PrimitiveDataType_trueOrFalse: PrimitiveDataType = 5; /* LONG_NAMED_INTEGE
 
 /**
  * @summary PrimitiveDataType_trueOrFalse
+ * @description
+ * Short name for `PrimitiveDataType_trueOrFalse`.
  * @constant
  * @type {number}
  */
@@ -128,6 +163,9 @@ const trueOrFalse: PrimitiveDataType = PrimitiveDataType_trueOrFalse; /* SHORT_N
 
 /**
  * @summary PrimitiveDataType_oid
+ * @description
+ * Named primitive `oid`. The standard does not define this value beyond that
+ * name.
  * @constant
  * @type {number}
  */
@@ -136,6 +174,8 @@ const PrimitiveDataType_oid: PrimitiveDataType = 6; /* LONG_NAMED_INTEGER_VALUE 
 
 /**
  * @summary PrimitiveDataType_oid
+ * @description
+ * Short name for `PrimitiveDataType_oid`.
  * @constant
  * @type {number}
  */
@@ -144,6 +184,9 @@ const oid: PrimitiveDataType = PrimitiveDataType_oid; /* SHORT_NAMED_INTEGER_VAL
 
 /**
  * @summary PrimitiveDataType_intUnit
+ * @description
+ * Named primitive `intUnit`. The standard does not define this value beyond
+ * that name.
  * @constant
  * @type {number}
  */
@@ -152,6 +195,8 @@ const PrimitiveDataType_intUnit: PrimitiveDataType = 7; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary PrimitiveDataType_intUnit
+ * @description
+ * Short name for `PrimitiveDataType_intUnit`.
  * @constant
  * @type {number}
  */
@@ -160,6 +205,9 @@ const intUnit: PrimitiveDataType = PrimitiveDataType_intUnit; /* SHORT_NAMED_INT
 
 /**
  * @summary PrimitiveDataType_empty
+ * @description
+ * Named primitive `empty`. The standard does not define this value beyond that
+ * name.
  * @constant
  * @type {number}
  */
@@ -168,6 +216,8 @@ const PrimitiveDataType_empty: PrimitiveDataType = 8; /* LONG_NAMED_INTEGER_VALU
 
 /**
  * @summary PrimitiveDataType_empty
+ * @description
+ * Short name for `PrimitiveDataType_empty`.
  * @constant
  * @type {number}
  */
@@ -176,6 +226,9 @@ const empty: PrimitiveDataType = PrimitiveDataType_empty; /* SHORT_NAMED_INTEGER
 
 /**
  * @summary PrimitiveDataType_noneOfTheAbove
+ * @description
+ * Not one of the named primitives. The element's description carries the
+ * datatype. ANSI/NISO Z39.50-2003 Explain ASN.1 (`noneOfTheAbove`).
  * @constant
  * @type {number}
  */
@@ -184,6 +237,8 @@ const PrimitiveDataType_noneOfTheAbove: PrimitiveDataType = 100; /* LONG_NAMED_I
 
 /**
  * @summary PrimitiveDataType_noneOfTheAbove
+ * @description
+ * Short name for `PrimitiveDataType_noneOfTheAbove`.
  * @constant
  * @type {number}
  */

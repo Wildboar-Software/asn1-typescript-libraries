@@ -13,6 +13,11 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * @summary ContactInfo
  * @description
  * 
+ * Contact for the organization supporting the server, or for a database's
+ * producer, supplier, or submission address. The standard does not define the
+ * individual elements beyond their names. ANSI/NISO Z39.50-2003 §3.2.10.3.1,
+ * §3.2.10.3.2; REC.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,30 +36,41 @@ export
 class ContactInfo {
     /**
      * @summary `name`.
+     * @description
+     * Name of the contact. REC.1 does not define this element further.
      * @public
      * @readonly
      */
     readonly name: OPTIONAL<InternationalString>;
     /**
      * @summary `description`.
+     * @description
+     * Human-readable description of the contact. REC.1 does not define this
+     * element further.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `address`.
+     * @description
+     * Human-readable address. REC.1 does not define the format.
      * @public
      * @readonly
      */
     readonly address: OPTIONAL<HumanString>;
     /**
      * @summary `email`.
+     * @description
+     * Email address. REC.1 does not define the format.
      * @public
      * @readonly
      */
     readonly email: OPTIONAL<InternationalString>;
     /**
      * @summary `phone`.
+     * @description
+     * Telephone number. REC.1 does not define the format.
      * @public
      * @readonly
      */

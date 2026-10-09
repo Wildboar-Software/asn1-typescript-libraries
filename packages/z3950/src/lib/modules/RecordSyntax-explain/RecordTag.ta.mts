@@ -11,6 +11,9 @@ import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } fro
 /**
  * @summary RecordTag
  * @description
+ * Tag of one element in a retrieval record, as cited from per-element details.
+ * It may be omitted when tags do not fit the record syntax, or when the client
+ * can be expected to know the tag. ANSI/NISO Z39.50-2003 §3.2.10.3.12.
  * 
  * ### ASN.1 Definition:
  * 
@@ -28,12 +31,18 @@ export
 class RecordTag {
     /**
      * @summary `qualifier`.
+     * @description
+     * Optional qualifier for the tag. The standard's example is a tag set for
+     * GRS-1. It does not define other uses. ANSI/NISO Z39.50-2003 Explain
+     * ASN.1.
      * @public
      * @readonly
      */
     readonly qualifier: OPTIONAL<StringOrNumeric>;
     /**
      * @summary `tagValue`.
+     * @description
+     * The tag itself. ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */

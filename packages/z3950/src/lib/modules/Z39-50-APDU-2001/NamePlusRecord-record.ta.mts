@@ -12,7 +12,18 @@ import { FragmentSyntax, _decode_FragmentSyntax, _encode_FragmentSyntax } from "
 /**
  * @summary NamePlusRecord_record
  * @description
- * 
+ *
+ * The record or fragment inside one `NamePlusRecord`.
+ * `retrievalRecord` is the retrieval record produced by applying a
+ * record syntax to the abstract database record. `surrogateDiagnostic`
+ * replaces a retrieval record that cannot be included. Unless level-2
+ * segmentation is in effect, one of those two must be selected. The
+ * three fragment alternatives are a proper substring of a retrieval
+ * record and are valid only under level-2 segmentation. A starting
+ * fragment begins the record, a final fragment ends it, and an
+ * intermediate fragment does neither. A diagnostic is not segmented.
+ * §3.1.5, §3.2.3.2.1, §3.3.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

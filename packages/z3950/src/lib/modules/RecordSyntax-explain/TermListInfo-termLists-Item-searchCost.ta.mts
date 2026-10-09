@@ -9,6 +9,9 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TermListInfo_termLists_Item_searchCost
  * @description
+ * How expensive a search is when it uses the attributes associated with a term
+ * list. To learn the attribute combination, retrieve the TermListDetails
+ * record. ANSI/NISO Z39.50-2003 §3.2.10.3.7; ASN.1 comment 6.
  * 
  * ### ASN.1 Definition:
  * 
@@ -27,6 +30,9 @@ type TermListInfo_termLists_Item_searchCost = INTEGER;
 
 /**
  * @summary TermListInfo_termLists_Item_searchCost_optimized
+ * @description
+ * The associated attribute or combination will do fast searches. ANSI/NISO
+ * Z39.50-2003 §3.2.10.3.7; ASN.1 comment 6.
  * @constant
  * @type {number}
  */
@@ -35,6 +41,8 @@ const TermListInfo_termLists_Item_searchCost_optimized: TermListInfo_termLists_I
 
 /**
  * @summary TermListInfo_termLists_Item_searchCost_optimized
+ * @description
+ * Short name for `TermListInfo_termLists_Item_searchCost_optimized`.
  * @constant
  * @type {number}
  */
@@ -43,6 +51,10 @@ const optimized: TermListInfo_termLists_Item_searchCost = TermListInfo_termLists
 
 /**
  * @summary TermListInfo_termLists_Item_searchCost_normal
+ * @description
+ * The associated attribute or combination will work as expected. There is
+ * probably an index, or some similar mechanism. ANSI/NISO Z39.50-2003
+ * §3.2.10.3.7; ASN.1 comment 6.
  * @constant
  * @type {number}
  */
@@ -51,6 +63,8 @@ const TermListInfo_termLists_Item_searchCost_normal: TermListInfo_termLists_Item
 
 /**
  * @summary TermListInfo_termLists_Item_searchCost_normal
+ * @description
+ * Short name for `TermListInfo_termLists_Item_searchCost_normal`.
  * @constant
  * @type {number}
  */
@@ -59,6 +73,10 @@ const normal: TermListInfo_termLists_Item_searchCost = TermListInfo_termLists_It
 
 /**
  * @summary TermListInfo_termLists_Item_searchCost_expensive
+ * @description
+ * The attribute or combination can be used, but it might not give satisfactory
+ * results. There is probably no index, or records must be post-processed.
+ * ANSI/NISO Z39.50-2003 §3.2.10.3.7; ASN.1 comment 6.
  * @constant
  * @type {number}
  */
@@ -67,6 +85,8 @@ const TermListInfo_termLists_Item_searchCost_expensive: TermListInfo_termLists_I
 
 /**
  * @summary TermListInfo_termLists_Item_searchCost_expensive
+ * @description
+ * Short name for `TermListInfo_termLists_Item_searchCost_expensive`.
  * @constant
  * @type {number}
  */
@@ -75,6 +95,9 @@ const expensive: TermListInfo_termLists_Item_searchCost = TermListInfo_termLists
 
 /**
  * @summary TermListInfo_termLists_Item_searchCost_filter
+ * @description
+ * Cannot search with this attribute or combination alone. ANSI/NISO Z39.50-2003
+ * §3.2.10.3.7; ASN.1 comment 6.
  * @constant
  * @type {number}
  */
@@ -83,6 +106,8 @@ const TermListInfo_termLists_Item_searchCost_filter: TermListInfo_termLists_Item
 
 /**
  * @summary TermListInfo_termLists_Item_searchCost_filter
+ * @description
+ * Short name for `TermListInfo_termLists_Item_searchCost_filter`.
  * @constant
  * @type {number}
  */

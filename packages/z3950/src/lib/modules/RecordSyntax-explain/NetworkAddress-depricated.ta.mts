@@ -11,6 +11,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
 /**
  * @summary NetworkAddress_depricated
  * @description
+ * Deprecated alternative of NetworkAddress. The ASN.1 marks this alternative
+ * deprecated in Z39.50-2003 (spelled `depricated` there). The standard does not
+ * name a replacement and does not define these components. ANSI/NISO
+ * Z39.50-2003 Explain ASN.1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -29,24 +33,36 @@ export
 class NetworkAddress_depricated {
     /**
      * @summary `depricated0`.
+     * @description
+     * The standard marks the alternative deprecated and does not define this
+     * component. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */
     readonly depricated0: InternationalString;
     /**
      * @summary `depricated1`.
+     * @description
+     * The standard marks the alternative deprecated and does not define this
+     * component. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */
     readonly depricated1: OPTIONAL<InternationalString>;
     /**
      * @summary `depricated2`.
+     * @description
+     * The standard marks the alternative deprecated and does not define this
+     * component. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */
     readonly depricated2: OPTIONAL<InternationalString>;
     /**
      * @summary `depricated3`.
+     * @description
+     * The standard marks the alternative deprecated and does not define this
+     * component. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */

@@ -12,6 +12,14 @@ import { Destination_other, _decode_Destination_other, _encode_Destination_other
  * @summary Destination
  * @description
  * 
+ * Where to deliver exported records, or where to send a Periodic Query
+ * alert. The client gives an address or other destination instruction.
+ * Forms enumerated by the standard are phone, fax, X.400, e-mail, pager,
+ * FTP, FTAM, and printer, plus an `other` vehicle. Service examples are
+ * e-mail, a printer, a fax number, and, for alerts, a pager.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.6, EXT.1.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

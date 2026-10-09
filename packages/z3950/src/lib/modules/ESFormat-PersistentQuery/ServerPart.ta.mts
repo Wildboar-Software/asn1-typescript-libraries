@@ -10,6 +10,12 @@ import { Query, _decode_Query, _encode_Query } from "../Z39-50-APDU-2001/Query.t
  * @summary ServerPart
  * @description
  * 
+ * The actual query stored in the package. If the client supplied a query,
+ * the server uses it. If the client supplied a task-package name, the
+ * server copies the corresponding query.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

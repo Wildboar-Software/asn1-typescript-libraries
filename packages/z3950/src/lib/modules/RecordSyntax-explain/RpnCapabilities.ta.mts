@@ -13,6 +13,12 @@ import { ProximitySupport, _decode_ProximitySupport, _encode_ProximitySupport } 
 /**
  * @summary RpnCapabilities
  * @description
+ * Operators and operands supported for a type-1 (RPN) or type-101 (extended
+ * RPN) query. Support of the type-1 query does not imply support of any defined
+ * operator or operand. The server designates what it supports through Explain
+ * or outside the standard. For type-1, proximity and the Restriction operand
+ * are version 3 only; for type-101 they are valid in version 2 and version 3.
+ * ANSI/NISO Z39.50-2003 §3.7, §3.2.2.1.1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -37,24 +43,38 @@ export
 class RpnCapabilities {
     /**
      * @summary `operators`.
+     * @description
+     * Which of AND, OR, AND-NOT, and Prox are supported. Omitted means all of
+     * those operators are supported. ANSI/NISO Z39.50-2003 §3.7.1; Explain
+     * ASN.1.
      * @public
      * @readonly
      */
     readonly operators: OPTIONAL<RpnCapabilities_operators_Item[]>;
     /**
      * @summary `resultSetAsOperandSupported`.
+     * @description
+     * Whether a result-set id may be an operand. ANSI/NISO Z39.50-2003 §3.7.
      * @public
      * @readonly
      */
     readonly resultSetAsOperandSupported: BOOLEAN;
     /**
      * @summary `restrictionOperandSupported`.
+     * @description
+     * Whether the Restriction operand (a result set restricted by attributes)
+     * is supported. Support requires the extended result set model for
+     * restriction. ANSI/NISO Z39.50-2003 §3.7, §3.7.3.
      * @public
      * @readonly
      */
     readonly restrictionOperandSupported: BOOLEAN;
     /**
      * @summary `proximity`.
+     * @description
+     * Proximity support. A server that claims Prox should also say whether it
+     * supports the extended result set model for proximity. ANSI/NISO
+     * Z39.50-2003 §3.7.
      * @public
      * @readonly
      */

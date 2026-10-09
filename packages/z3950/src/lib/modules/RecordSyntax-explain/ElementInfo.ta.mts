@@ -16,6 +16,9 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * @summary ElementInfo
  * @description
  * 
+ * One element of an abstract record structure, used by a schema and by a record
+ * syntax. ANSI/NISO Z39.50-2003 §3.2.10.3.3, §3.2.10.3.5; REC.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,36 +39,54 @@ export
 class ElementInfo {
     /**
      * @summary `elementName`.
+     * @description
+     * Name of the element. ANSI/NISO Z39.50-2003 §3.2.10.3.3.
      * @public
      * @readonly
      */
     readonly elementName: InternationalString;
     /**
      * @summary `elementTagPath`.
+     * @description
+     * Tag path of the element. REC.1 does not define how to interpret the path
+     * beyond identifying the element.
      * @public
      * @readonly
      */
     readonly elementTagPath: Path;
     /**
      * @summary `dataType`.
+     * @description
+     * Datatype of the element. If omitted, the datatype is not specified.
+     * REC.1.
      * @public
      * @readonly
      */
     readonly dataType: OPTIONAL<ElementDataType>;
     /**
      * @summary `required`.
+     * @description
+     * Whether the element is required. REC.1 does not define this flag further.
+     * The stronger rule that the server always supplies the element is stated
+     * for per-element retrieval details, not here.
      * @public
      * @readonly
      */
     readonly required: BOOLEAN;
     /**
      * @summary `repeatable`.
+     * @description
+     * Whether the element is repeatable. REC.1 does not define this flag
+     * further.
      * @public
      * @readonly
      */
     readonly repeatable: BOOLEAN;
     /**
      * @summary `description`.
+     * @description
+     * Human-readable description of the element. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.3.
      * @public
      * @readonly
      */

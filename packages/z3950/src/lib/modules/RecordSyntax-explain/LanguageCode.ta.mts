@@ -10,6 +10,11 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary LanguageCode
  * @description
  * 
+ * Three-character language code from ANSI/NISO Z39.53-1994. This is the term
+ * for Use attribute HumanStringLanguage, and the language of human-readable
+ * text in an Explain record and in a HumanString. This standard does not list
+ * the codes. ANSI/NISO Z39.50-2003 §3.2.10.1.2; REC.1; ATR.1 note 2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

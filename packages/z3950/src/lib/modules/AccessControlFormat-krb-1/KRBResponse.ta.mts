@@ -13,6 +13,8 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary KRBResponse
  * @description
  * 
+ * The client returns a ticket for the requested service (ASN1.9.3).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +30,21 @@ export
 class KRBResponse {
     /**
      * @summary `userid`.
+     * @description
+     * 
+     * Optional userid sent with the ticket. ASN1.9.3 does not define it
+     * further.
+     * 
      * @public
      * @readonly
      */
     readonly userid: OPTIONAL<InternationalString>;
     /**
      * @summary `ticket`.
+     * @description
+     * 
+     * The ticket for the requested service.
+     * 
      * @public
      * @readonly
      */

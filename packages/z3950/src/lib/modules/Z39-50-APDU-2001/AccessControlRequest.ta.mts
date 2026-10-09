@@ -14,6 +14,20 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary AccessControlRequest
  * @description
  * 
+ * Server challenge to the client, for access control or authentication
+ * (ANSI/NISO Z39.50-2003 §3.2.5.1). The challenge may belong to an active
+ * operation or to the Z-association. The client must be prepared to answer when
+ * access control is in effect. A challenge received when access control is not
+ * in effect may be treated as a protocol error (§4.4.2.2.14).
+ * 
+ * With concurrent operations, a Reference-id ties the challenge to that
+ * operation; omitting it means the challenge concerns the Z-association. With
+ * serial operations, the server may challenge only during an active operation,
+ * and the messages carry that operation's Reference-id. The server may suspend
+ * the operation until the client responds. A failed challenge may end the
+ * operation, or, during Search or Present, may be reported as a surrogate
+ * diagnostic for one record.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +47,37 @@ export
 class AccessControlRequest {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Present when the challenge belongs to an operation, and equal to that
+     * operation's Reference-id. Omitted when concurrent operations is in effect
+     * and the challenge concerns the Z-association (ANSI/NISO Z39.50-2003
+     * §3.2.5.1.3, §3.4).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `securityChallenge`.
+     * @description
+     * 
+     * The challenge. Format and content are registered, or agreed by the client
+     * and server outside this exchange. Appendix ACC defines prompt-1, des-1,
+     * and krb-1 for the externally defined alternative (ANSI/NISO Z39.50-2003
+     * §3.2.5.1.1).
+     * 
      * @public
      * @readonly
      */
     readonly securityChallenge: AccessControlRequest_securityChallenge;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. Version 3 only
+     * (ANSI/NISO Z39.50-2003 §3.2.5.1.2).
+     * 
      * @public
      * @readonly
      */

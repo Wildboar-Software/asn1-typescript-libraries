@@ -15,6 +15,9 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
 /**
  * @summary TagSetInfo_elements_Item
  * @description
+ * One element of a tag set, as listed in TagSetInfo. If the datatype is
+ * structured, the schema describes it and the datatype is omitted here.
+ * ANSI/NISO Z39.50-2003 §3.2.10.3.4.
  * 
  * ### ASN.1 Definition:
  * 
@@ -37,36 +40,51 @@ export
 class TagSetInfo_elements_Item {
     /**
      * @summary `elementname`.
+     * @description
+     * Name of the element. ANSI/NISO Z39.50-2003 §3.2.10.3.4.
      * @public
      * @readonly
      */
     readonly elementname: InternationalString;
     /**
      * @summary `nicknames`.
+     * @description
+     * Nicknames for the element. ANSI/NISO Z39.50-2003 §3.2.10.3.4.
      * @public
      * @readonly
      */
     readonly nicknames: OPTIONAL<InternationalString[]>;
     /**
      * @summary `elementTag`.
+     * @description
+     * Tag assigned to the element. ANSI/NISO Z39.50-2003 §3.2.10.3.4.
      * @public
      * @readonly
      */
     readonly elementTag: StringOrNumeric;
     /**
      * @summary `description`.
+     * @description
+     * Description of the element, in human-readable text. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.4.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `dataType`.
+     * @description
+     * Datatype of the element. Omit it when the datatype is structured; that
+     * case is described in the schema. ANSI/NISO Z39.50-2003 §3.2.10.3.4.
      * @public
      * @readonly
      */
     readonly dataType: OPTIONAL<PrimitiveDataType>;
     /**
      * @summary `otherTagInfo`.
+     * @description
+     * The standard does not define this component. ANSI/NISO Z39.50-2003
+     * Explain ASN.1.
      * @public
      * @readonly
      */

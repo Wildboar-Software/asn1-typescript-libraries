@@ -11,6 +11,14 @@ import { AttributeElement, _decode_AttributeElement, _encode_AttributeElement } 
  * @summary AttributeList
  * @description
  * 
+ * Attributes qualifying one search term, Scan term, or sort access point
+ * (ANSI/NISO Z39.50-2003 §3.7.1, §3.2.8.1.2). Whether a type may repeat, and
+ * what repetition means, is defined by the attribute set. Repetition is not a
+ * substitute for a boolean operator (Appendix Arch, ARCH 3.1.5). For a Class 1
+ * set, an access-point attribute is mandatory in an operand, and repeated
+ * values of one type use the complex attribute value (ARCH 3.2.1, ARCH
+ * 3.1.5.1). This edition does not register bib-1 values.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

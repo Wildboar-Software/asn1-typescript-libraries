@@ -10,6 +10,26 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary UserInfo_1
  * @description
  * 
+ * UserInfo-1 `{Z39-50-userInfoFormat 3}` is the same structure as otherInfo,
+ * registered so userInformationField (an EXTERNAL) can carry it (USR.3,
+ * ASN1.12). Use it on InitializeRequest and InitializeResponse when otherInfo
+ * cannot be used, including whenever version 3 is not in force.
+ * 
+ * USR.2: otherInfo was added in Z39.50-1995 and is valid only when version 3 is
+ * in force. During initialization the version may still be unsettled, so
+ * otherInfo on Init is not recommended. Put externally defined Init information
+ * in userInformationField and identify it with this OID. Nothing is lost:
+ * UserInfo-1 matches otherInfo.
+ * 
+ * The structure may hold any number of items. Any item may include a category,
+ * and each is characterInfo, binaryInfo, externallyDefinedInfo, or an OID.
+ * Category is optional; diagnostics and negotiation records need not include
+ * one. A diagnostic is externallyDefinedInfo (DIAG.3): a General Diagnostic
+ * Container inside this value, inside userInformationField. A negotiation
+ * record is externallyDefinedInfo or an OID, and the OID identifies a
+ * negotiation-record definition. Init examples are General Diagnostic Set
+ * conditions 1010 through 1013.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

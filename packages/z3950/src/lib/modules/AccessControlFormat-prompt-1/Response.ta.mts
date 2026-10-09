@@ -10,6 +10,9 @@ import { Response_Item, _decode_Response_Item, _encode_Response_Item } from "../
  * @summary Response
  * @description
  * 
+ * The answers to a prompt-1 challenge, one entry per prompt (ASN1.9.1). The
+ * client sends this as securityChallengeResponse (§3.2.5).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

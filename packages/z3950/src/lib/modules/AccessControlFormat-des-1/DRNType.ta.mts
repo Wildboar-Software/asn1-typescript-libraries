@@ -13,6 +13,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DRNType
  * @description
  * 
+ * Random number for des-1, with optional user id and salt (ASN1.9.2). The
+ * standard does not define the octet layout or how the number is checked.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +32,30 @@ export
 class DRNType {
     /**
      * @summary `userId`.
+     * @description
+     * 
+     * Optional user id. ASN1.9.2 does not define the octets.
+     * 
      * @public
      * @readonly
      */
     readonly userId: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `salt`.
+     * @description
+     * 
+     * Optional salt. ASN1.9.2 does not define the octets.
+     * 
      * @public
      * @readonly
      */
     readonly salt: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `randomNumber`.
+     * @description
+     * 
+     * The random number. ASN1.9.2 does not say how it is produced or verified.
+     * 
      * @public
      * @readonly
      */

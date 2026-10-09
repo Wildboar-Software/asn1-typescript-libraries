@@ -9,6 +9,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ProcessingInformation_processingContext
  * @description
+ * Processing context of a Processing record. The exp-1 search terms for Use
+ * attribute ProcessingContext are Access, Search, Retrieval,
+ * RecordPresentation, and RecordHandling. ANSI/NISO Z39.50-2003 §3.2.10.3.14;
+ * Appendix ATR, table 3.
  * 
  * ### ASN.1 Definition:
  * 
@@ -34,6 +38,9 @@ type ProcessingInformation_processingContext = INTEGER;
 
 /**
  * @summary ProcessingInformation_processingContext_access
+ * @description
+ * Access context, for example choosing databases. The ProcessingContext search
+ * term is Access. ANSI/NISO Z39.50-2003 §3.2.10.3.14; Appendix ATR, table 3.
  * @constant
  * @type {number}
  */
@@ -42,6 +49,8 @@ const ProcessingInformation_processingContext_access: ProcessingInformation_proc
 
 /**
  * @summary ProcessingInformation_processingContext_access
+ * @description
+ * Short name for `ProcessingInformation_processingContext_access`.
  * @constant
  * @type {number}
  */
@@ -50,6 +59,10 @@ const access: ProcessingInformation_processingContext = ProcessingInformation_pr
 
 /**
  * @summary ProcessingInformation_processingContext_search
+ * @description
+ * Search context, for example search strategies or search forms. The
+ * ProcessingContext search term is Search. ANSI/NISO Z39.50-2003 §3.2.10.3.14;
+ * Appendix ATR, table 3.
  * @constant
  * @type {number}
  */
@@ -58,6 +71,8 @@ const ProcessingInformation_processingContext_search: ProcessingInformation_proc
 
 /**
  * @summary ProcessingInformation_processingContext_search
+ * @description
+ * Short name for `ProcessingInformation_processingContext_search`.
  * @constant
  * @type {number}
  */
@@ -66,6 +81,10 @@ const search: ProcessingInformation_processingContext = ProcessingInformation_pr
 
 /**
  * @summary ProcessingInformation_processingContext_retrieval
+ * @description
+ * Retrieval context, for example recommended element combinations. The
+ * ProcessingContext search term is Retrieval. ANSI/NISO Z39.50-2003
+ * §3.2.10.3.14; Appendix ATR, table 3.
  * @constant
  * @type {number}
  */
@@ -74,6 +93,8 @@ const ProcessingInformation_processingContext_retrieval: ProcessingInformation_p
 
 /**
  * @summary ProcessingInformation_processingContext_retrieval
+ * @description
+ * Short name for `ProcessingInformation_processingContext_retrieval`.
  * @constant
  * @type {number}
  */
@@ -82,6 +103,10 @@ const retrieval: ProcessingInformation_processingContext = ProcessingInformation
 
 /**
  * @summary ProcessingInformation_processingContext_record_presentation
+ * @description
+ * Display of retrieved records. The ProcessingContext search term is
+ * RecordPresentation. ANSI/NISO Z39.50-2003 §3.2.10.3.14; Appendix ATR, table
+ * 3.
  * @constant
  * @type {number}
  */
@@ -90,6 +115,8 @@ const ProcessingInformation_processingContext_record_presentation: ProcessingInf
 
 /**
  * @summary ProcessingInformation_processingContext_record_presentation
+ * @description
+ * Short name for `ProcessingInformation_processingContext_record_presentation`.
  * @constant
  * @type {number}
  */
@@ -98,6 +125,10 @@ const record_presentation: ProcessingInformation_processingContext = ProcessingI
 
 /**
  * @summary ProcessingInformation_processingContext_record_handling
+ * @description
+ * Handling of retrieved records, for example saving them. The ProcessingContext
+ * search term is RecordHandling. ANSI/NISO Z39.50-2003 §3.2.10.3.14; Appendix
+ * ATR, table 3.
  * @constant
  * @type {number}
  */
@@ -106,6 +137,8 @@ const ProcessingInformation_processingContext_record_handling: ProcessingInforma
 
 /**
  * @summary ProcessingInformation_processingContext_record_handling
+ * @description
+ * Short name for `ProcessingInformation_processingContext_record_handling`.
  * @constant
  * @type {number}
  */

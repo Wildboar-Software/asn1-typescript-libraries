@@ -1,3 +1,9 @@
+/**
+ * @module
+ * @description
+ * Access-control format prompt-1 `{Z39-50-accessControl 1}` (ANSI/NISO
+ * Z39.50-2003 appendix ACC, ASN1.9.1, §3.2.5).
+ */
 export type {
     Challenge_Item_dataType,
 } from "./Challenge-Item-dataType.ta.mjs";

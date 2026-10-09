@@ -17,6 +17,10 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary SortResponse
  * @description
  * 
+ * Server reply to Sort. It reports whether the sort was performed and, when the
+ * sort was not performed, what remains of the named output result set
+ * (ANSI/NISO Z39.50-2003 §3.2.7.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,36 +53,73 @@ export
 class SortResponse {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Reference-id of the Sort request. Omit it when the request omitted it
+     * (ANSI/NISO Z39.50-2003 §3.4).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `sortStatus`.
+     * @description
+     * 
+     * Whether the sort ran (ANSI/NISO Z39.50-2003 §3.2.7.1.4). `success` means
+     * it did. `partial-1` means it did, and one or more records lacked a value
+     * in a sort element. `failure` means it did not, and `diagnostics` carries
+     * one or more diagnostic records.
+     * 
      * @public
      * @readonly
      */
     readonly sortStatus: SortResponse_sortStatus;
     /**
      * @summary `resultSetStatus`.
+     * @description
+     * 
+     * Disposition of the sorted-result-set name. The server supplies it if and
+     * only if `sortStatus` is `failure` (ANSI/NISO Z39.50-2003 §3.2.7.1.5).
+     * 
      * @public
      * @readonly
      */
     readonly resultSetStatus: OPTIONAL<SortResponse_resultSetStatus>;
     /**
      * @summary `diagnostics`.
+     * @description
+     * 
+     * One or more diagnostic records, included when `sortStatus` is `failure`
+     * (ANSI/NISO Z39.50-2003 §3.2.7.1.6).
+     * 
      * @public
      * @readonly
      */
     readonly diagnostics: OPTIONAL<DiagRec[]>;
     /**
      * @summary `resultCount`.
+     * @description
+     * 
+     * Size of the output result set. The server is never required to send it,
+     * there is no default, and the client draws no conclusion from its absence
+     * (ANSI/NISO Z39.50-2003 §3.2.7.1.7). The server sends it only when option
+     * bit 16 was negotiated together with Sort. If that bit was not negotiated,
+     * a client may treat its presence as a protocol error (§3.2.1.1.3,
+     * §4.4.2.2.26).
+     * 
      * @public
      * @readonly
      */
     readonly resultCount: OPTIONAL<INTEGER>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. The peer should
+     * expect it and need not interpret it, in either version (ANSI/NISO
+     * Z39.50-2003 §3.2.7.1.8, §4.4.2.2.21).
+     * 
      * @public
      * @readonly
      */

@@ -13,6 +13,12 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary CircRecord
  * @description
  * 
+ * One circulating item (module ASN.1: the parent repeats for each circulating
+ * item). No component is commented.
+ * 
+ * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+ * semantics.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,60 +42,100 @@ export
 class CircRecord {
     /**
      * @summary `availableNow`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly availableNow: BOOLEAN;
     /**
      * @summary `availablityDate`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly availablityDate: OPTIONAL<InternationalString>;
     /**
      * @summary `availableThru`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly availableThru: OPTIONAL<InternationalString>;
     /**
      * @summary `restrictions`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly restrictions: OPTIONAL<InternationalString>;
     /**
      * @summary `itemId`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly itemId: OPTIONAL<InternationalString>;
     /**
      * @summary `renewable`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly renewable: BOOLEAN;
     /**
      * @summary `onHold`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly onHold: BOOLEAN;
     /**
      * @summary `enumAndChron`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly enumAndChron: OPTIONAL<InternationalString>;
     /**
      * @summary `midspine`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly midspine: OPTIONAL<InternationalString>;
     /**
      * @summary `temporaryLocation`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */

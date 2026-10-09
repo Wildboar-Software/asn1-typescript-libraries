@@ -14,6 +14,10 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * @summary AttributeValue
  * @description
  * 
+ * One value of an attribute, as supported for a database, including partial
+ * support and, for Use attributes, finer and coarser alternatives. ANSI/NISO
+ * Z39.50-2003 §3.2.10.3.9; REC.1 Comment 10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,30 +36,46 @@ export
 class AttributeValue {
     /**
      * @summary `value`.
+     * @description
+     * The attribute value. ANSI/NISO Z39.50-2003 §3.2.10.3.9.
      * @public
      * @readonly
      */
     readonly value: StringOrNumeric;
     /**
      * @summary `description`.
+     * @description
+     * Human-readable description of this value. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.9.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `subAttributes`.
+     * @description
+     * For Use attributes: alternative values that reach the same aspect of the
+     * record in greater detail. ANSI/NISO Z39.50-2003 §3.2.10.3.9.
      * @public
      * @readonly
      */
     readonly subAttributes: OPTIONAL<StringOrNumeric[]>;
     /**
      * @summary `superAttributes`.
+     * @description
+     * For Use attributes: alternative values that reach the same aspect of the
+     * record at a coarser level. ANSI/NISO Z39.50-2003 §3.2.10.3.9.
      * @public
      * @readonly
      */
     readonly superAttributes: OPTIONAL<StringOrNumeric[]>;
     /**
      * @summary `partialSupport`.
+     * @description
+     * Present when the value is accepted but might not be processed in the
+     * expected way, and might not give the expected results. For a composite
+     * database this can mean only some sub-databases support the attribute and
+     * the others ignore it. Comment 10; ANSI/NISO Z39.50-2003 §3.2.10.3.9.
      * @public
      * @readonly
      */

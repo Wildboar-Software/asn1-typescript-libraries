@@ -16,6 +16,24 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * @summary AttributeSetInfo
  * @description
  * 
+ * Description of one attribute set. One record per set the server supports. Not
+ * specific to a database; per-database search behavior is AttributeDetails.
+ * Search ExplainCategory `AttributeSetInfo` with AttributeSetOID as the key.
+ * The description should match the published definition. The server may omit
+ * attributes it does not support under any circumstances. `attributes` is
+ * mandatory in a full record. ANSI/NISO Z39.50-2003 §3.2.10.1.1, §3.2.10.3.6;
+ * REC.1 Comment 1.
+ * 
+ * When this record describes exp-1, that set has a single Use type and imports
+ * bib-1 Relation, Position, Structure, Truncation, and Completeness, identified
+ * by the exp-1 object identifier. A server supporting Explain should support
+ * relation `equal`, position `any position in field`, and structure `key`. If
+ * it searches date ranges, it should also support one or more of `less than`,
+ * `less than or equal`, `greater than`, and `greater or equal`. Clients should
+ * not expect truncation, completeness, or the other bib-1 relation, position,
+ * and structure values, though a server may offer them. ANSI/NISO Z39.50-2003
+ * §3.2.10.1; ATR.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +56,48 @@ export
 class AttributeSetInfo {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates, language, and other information about this Explain record.
+     * otherInfo is omitted from element set `B`. REC.1 Comment 1; ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `attributeSet`.
+     * @description
+     * Brief. Key. Object identifier of the attribute set. Search with Use
+     * AttributeSetOID. For version 2, prefer the oid as a dotted character
+     * string; for version 3, as an OBJECT IDENTIFIER. ATR.1 note 4; ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.6.
      * @public
      * @readonly
      */
     readonly attributeSet: AttributeSetId;
     /**
      * @summary `name`.
+     * @description
+     * Brief. Name of the attribute set. ANSI/NISO Z39.50-2003 §3.2.10.3.6.
      * @public
      * @readonly
      */
     readonly name: InternationalString;
     /**
      * @summary `attributes`.
+     * @description
+     * Non-brief. Mandatory in a full record. For each attribute type, its name,
+     * description, integer value, and values. Unsupported attributes may be
+     * omitted. Comment 1; ANSI/NISO Z39.50-2003 §3.2.10.3.6.
      * @public
      * @readonly
      */
     readonly attributes: OPTIONAL<AttributeType[]>;
     /**
      * @summary `description`.
+     * @description
+     * Non-brief. Human-readable description of the attribute set. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.6.
      * @public
      * @readonly
      */

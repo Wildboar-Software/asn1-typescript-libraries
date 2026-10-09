@@ -1,3 +1,9 @@
+/**
+ * @module
+ * @description
+ * ANSI/NISO Z39.50-2003 ASN.1: the APDUs, plus the formats defined in the
+ * appendices.
+ */
 export * as ANSI_Z39_50_ObjectIdentifier from "./lib/modules/ANSI-Z39-50-ObjectIdentifier/index.mjs";
 export * as AccessControlFormat_des_1 from "./lib/modules/AccessControlFormat-des-1/index.mjs";
 export * as AccessControlFormat_krb_1 from "./lib/modules/AccessControlFormat-krb-1/index.mjs";

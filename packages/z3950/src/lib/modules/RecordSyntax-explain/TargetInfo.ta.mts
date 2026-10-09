@@ -21,6 +21,21 @@ import { AccessInfo, _decode_AccessInfo, _encode_AccessInfo } from "../RecordSyn
 /**
  * @summary TargetInfo
  * @description
+ * Information about the server. The Explain database contains one such record.
+ * ANSI/NISO Z39.50-2003 §3.2.10.3.1.
+ * 
+ * Search with ExplainCategory `TargetInfo`. The key is the server name
+ * (ServerName), but a query need not supply it: that single operand is enough.
+ * The key is still useful to confirm that the client reached the intended
+ * server or Explain database. The search may also use HumanStringLanguage,
+ * DateAdded, DateChanged, or DateExpires. ANSI/NISO Z39.50-2003 §3.2.10.1.2 and
+ * §3.2.10.1.3.
+ * 
+ * Element set `B` retrieves brief elements. `brief-1` is the same without the
+ * icon. Element set `description` retrieves the brief elements plus the contact
+ * information and the description. `F` also retrieves the other non-brief
+ * elements. Some components marked optional are mandatory in a full record.
+ * ANSI/NISO Z39.50-2003 ASN.1 comment 1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -68,126 +83,208 @@ export
 class TargetInfo {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates this Explain record was added and last changed, when it expires,
+     * and the language of its human-readable text. Element set `B` includes
+     * this component except `otherInfo`. DateAdded, DateChanged, and
+     * DateExpires search these dates. ANSI/NISO Z39.50-2003 §3.2.10.3,
+     * §3.2.10.1.3; ASN.1 comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `name`.
+     * @description
+     * The one name of the server, in human-readable text. Key. A search for
+     * this record need not include ServerName. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.1; ASN.1 comment 2.
      * @public
      * @readonly
      */
     readonly name: InternationalString;
     /**
      * @summary `recent_news`.
+     * @description
+     * Recent news of interest to people using this server, in human-readable
+     * text. Brief. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly recent_news: OPTIONAL<HumanString>;
     /**
      * @summary `icon`.
+     * @description
+     * Icon used to represent this server, in machine-presentable form. Brief.
+     * Element set `brief-1` omits it and is otherwise the same as `B`.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly icon: OPTIONAL<IconObject>;
     /**
      * @summary `namedResultSets`.
+     * @description
+     * Whether result set names other than `default` are supported. Brief.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly namedResultSets: BOOLEAN;
     /**
      * @summary `multipleDBsearch`.
+     * @description
+     * Whether more than one database can be named in one Search request. Brief.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly multipleDBsearch: BOOLEAN;
     /**
      * @summary `maxResultSets`.
+     * @description
+     * Maximum number of concurrent result sets for one Z-association. If the
+     * value is 2, creating A and then B means creating C exceeds the maximum.
+     * What the server does then is not specified: it might delete A, or it
+     * might return an error. Deleting B first would allow C. Brief. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly maxResultSets: OPTIONAL<INTEGER>;
     /**
      * @summary `maxResultSize`.
+     * @description
+     * Maximum size, in records, of a result set. Brief. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly maxResultSize: OPTIONAL<INTEGER>;
     /**
      * @summary `maxTerms`.
+     * @description
+     * Maximum number of terms allowed in one Search request. The server decides
+     * what counts. It might mean operands, or operands of the form
+     * attributes-plus-term. In the standard's example, result set A is cat AND
+     * dog, and result set B is (result set A) AND moon. That second search has
+     * one term, two operands, and three terms altogether. Brief. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly maxTerms: OPTIONAL<INTEGER>;
     /**
      * @summary `timeoutInterval`.
+     * @description
+     * Interval after which the server triggers an event if there has been no
+     * activity. The standard does not name the event. Brief. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly timeoutInterval: OPTIONAL<IntUnit>;
     /**
      * @summary `welcomeMessage`.
+     * @description
+     * Welcome message from the server, to be displayed by the client. Brief.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly welcomeMessage: OPTIONAL<HumanString>;
     /**
      * @summary `contactInfo`.
+     * @description
+     * Contact information for the organization supporting this server.
+     * Non-brief. Element set `description` returns this and the description,
+     * along with the brief elements. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly contactInfo: OPTIONAL<ContactInfo>;
     /**
      * @summary `description`.
+     * @description
+     * Description of the server, in human-readable text. Non-brief, and
+     * included in element set `description`. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `nicknames`.
+     * @description
+     * Nicknames or alternate names by which the server is known. Non-brief.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly nicknames: OPTIONAL<InternationalString[]>;
     /**
      * @summary `usage_restrictions`.
+     * @description
+     * Restrictions pertaining to this server, in human-readable text.
+     * Non-brief. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly usage_restrictions: OPTIONAL<HumanString>;
     /**
      * @summary `paymentAddr`.
+     * @description
+     * Payment address, for example a business office, for the organization
+     * supporting this server. Non-brief. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly paymentAddr: OPTIONAL<HumanString>;
     /**
      * @summary `hours`.
+     * @description
+     * Hours of operation. Non-brief. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly hours: OPTIONAL<HumanString>;
     /**
      * @summary `dbCombinations`.
+     * @description
+     * Supported combinations of databases. Databases that may be searched
+     * together can be listed here. Non-brief. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.1; ASN.1 comment 1.
      * @public
      * @readonly
      */
     readonly dbCombinations: OPTIONAL<DatabaseList[]>;
     /**
      * @summary `addresses`.
+     * @description
+     * Addresses of the server, including Internet address and port. Non-brief.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly addresses: OPTIONAL<NetworkAddress[]>;
     /**
      * @summary `languages`.
+     * @description
+     * Languages supported for message strings. Each value is a three-character
+     * language code from Z39.53-1994. Non-brief. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.1; Explain ASN.1.
      * @public
      * @readonly
      */
     readonly languages: OPTIONAL<InternationalString[]>;
     /**
      * @summary `commonAccessInfo`.
+     * @description
+     * Facilities the server supports for one or more databases: query types and
+     * their details, diagnostic sets, attribute sets, schemas, record syntaxes,
+     * resource challenges, access challenges, cost, variant sets, element set
+     * names, and unit systems. Which of these a particular database supports is
+     * in that database's record. Every object listed for a database should also
+     * be listed here. Non-brief. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */

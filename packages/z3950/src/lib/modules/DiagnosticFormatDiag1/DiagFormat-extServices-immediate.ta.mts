@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagFormat_extServices_immediate
  * @description
  * 
+ * Immediate execution of an extended service failed or is not supported
+ * (diag-1, DIAG.1 conditions 224, 225, and 226).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +30,10 @@ type DiagFormat_extServices_immediate = INTEGER;
 
 /**
  * @summary DiagFormat_extServices_immediate_failed
+ * @description
+ * 
+ * Immediate execution failed (DIAG.1 condition 224).
+ * 
  * @constant
  * @type {number}
  */
@@ -35,6 +42,10 @@ const DiagFormat_extServices_immediate_failed: DiagFormat_extServices_immediate 
 
 /**
  * @summary DiagFormat_extServices_immediate_failed
+ * @description
+ * 
+ * Immediate execution failed (DIAG.1 condition 224).
+ * 
  * @constant
  * @type {number}
  */
@@ -43,6 +54,10 @@ const failed: DiagFormat_extServices_immediate = DiagFormat_extServices_immediat
 
 /**
  * @summary DiagFormat_extServices_immediate_service
+ * @description
+ * 
+ * Immediate execution is not supported for this service (DIAG.1 condition 225).
+ * 
  * @constant
  * @type {number}
  */
@@ -51,6 +66,10 @@ const DiagFormat_extServices_immediate_service: DiagFormat_extServices_immediate
 
 /**
  * @summary DiagFormat_extServices_immediate_service
+ * @description
+ * 
+ * Immediate execution is not supported for this service (DIAG.1 condition 225).
+ * 
  * @constant
  * @type {number}
  */
@@ -59,6 +78,11 @@ const service: DiagFormat_extServices_immediate = DiagFormat_extServices_immedia
 
 /**
  * @summary DiagFormat_extServices_immediate_parameters
+ * @description
+ * 
+ * Immediate execution is not supported for these parameters (DIAG.1 condition
+ * 226).
+ * 
  * @constant
  * @type {number}
  */
@@ -67,6 +91,11 @@ const DiagFormat_extServices_immediate_parameters: DiagFormat_extServices_immedi
 
 /**
  * @summary DiagFormat_extServices_immediate_parameters
+ * @description
+ * 
+ * Immediate execution is not supported for these parameters (DIAG.1 condition
+ * 226).
+ * 
  * @constant
  * @type {number}
  */

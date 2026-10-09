@@ -14,6 +14,12 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary ResourceReportRequest
  * @description
  * 
+ * Client request for a resource report on a completed operation, or on the
+ * whole Z-association (ANSI/NISO Z39.50-2003 §3.2.6.3). This is a confirmed
+ * operation. The server must respond and need not include a report. For an
+ * operation that is still active, use Trigger-resource-control instead. The
+ * service is negotiated (§4.4.2.2.13).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +37,49 @@ export
 class ResourceReportRequest {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Client-assigned identifier of this Resource-report operation. It may
+     * differ from `opId`. It is recommended that `opId` not equal the
+     * Reference-id of some other active operation (ANSI/NISO Z39.50-2003 §3.4,
+     * §3.2.6.3.2).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `opId`.
+     * @description
+     * 
+     * Reference-id of a completed operation to report on: the most recently
+     * completed operation that used that Reference-id. Version 3 only. If the
+     * client will ask for a report later, it must not reuse that Reference-id
+     * first. Omit `opId` to ask for a report on the Z-association (ANSI/NISO
+     * Z39.50-2003 §3.2.6.3.2).
+     * 
      * @public
      * @readonly
      */
     readonly opId: OPTIONAL<ReferenceId>;
     /**
      * @summary `prefResourceReportFormat`.
+     * @description
+     * 
+     * Resource-report format the client prefers (ANSI/NISO Z39.50-2003
+     * §3.2.6.3.1).
+     * 
      * @public
      * @readonly
      */
     readonly prefResourceReportFormat: OPTIONAL<ResourceReportId>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. Version 3 only
+     * (ANSI/NISO Z39.50-2003 §3.2.6.3.5).
+     * 
      * @public
      * @readonly
      */

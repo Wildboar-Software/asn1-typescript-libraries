@@ -12,7 +12,18 @@ import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/D
 /**
  * @summary Records
  * @description
- * 
+ *
+ * Records parameter of a Search or Present response.
+ * `responseRecords` is the sequence of retrieval records and
+ * surrogate diagnostics, in result-set order. The database name must
+ * accompany the first record and any record from a different database
+ * than its predecessor. `nonSurrogateDiagnostic` is one diagnostic
+ * saying the operation cannot be processed; version 2 uses this form.
+ * `multipleNonSurDiagnostics` is one or more such diagnostics;
+ * version 3. Whenever search status or present status is failure, at
+ * least one non-surrogate diagnostic is required. §3.2.2.1.7,
+ * §3.2.3.1.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

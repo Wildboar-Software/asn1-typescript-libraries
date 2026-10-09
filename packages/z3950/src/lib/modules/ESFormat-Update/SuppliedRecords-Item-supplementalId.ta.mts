@@ -13,6 +13,13 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary SuppliedRecords_Item_supplementalId
  * @description
  * 
+ * Supplemental identification of the database record, or of the correct
+ * version: a timestamp, a version number, or another form such as a
+ * previous version. For element update this identifies the record, not an
+ * element.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

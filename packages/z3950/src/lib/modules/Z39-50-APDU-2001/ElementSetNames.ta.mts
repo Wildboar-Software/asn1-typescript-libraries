@@ -11,7 +11,16 @@ import { ElementSetNames_databaseSpecific_Item, _decode_ElementSetNames_database
 /**
  * @summary ElementSetNames
  * @description
- * 
+ *
+ * Element set names for records returned by Search or Present when
+ * Comp-spec is omitted (always, on Search, and whenever version 2 is
+ * in force). Either one name for every database, or a list of
+ * database-name / element-set-name pairs. The server first applies
+ * the default schema, then the element set name: the listed name when
+ * that database is named and the name is valid for its default
+ * schema; otherwise the database's default element set name.
+ * §3.6.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

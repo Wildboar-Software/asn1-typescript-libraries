@@ -13,6 +13,12 @@ import { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNot
  * @summary PeriodicQuerySchedule_esRequest
  * @description
  * 
+ * Client parameters of a Periodic Query Schedule request, split into what
+ * is retained and what the server may replace (period, expiration, query,
+ * result-set package).
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.3, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,26 @@ export
 class PeriodicQuerySchedule_esRequest {
     /**
      * @summary `toKeep`.
+     * @description
+     * 
+     * Parameters retained in the task package, including whether the schedule
+     * is to be active. On modify this may be as little as the active flag.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3, EXT.2.
+     * 
      * @public
      * @readonly
      */
     readonly toKeep: ClientPartToKeep;
     /**
      * @summary `notToKeep`.
+     * @description
+     * 
+     * The query, the client's suggested period and expiration, and related
+     * parameters the server may override. Not retained as submitted.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3, EXT.2.
+     * 
      * @public
      * @readonly
      */

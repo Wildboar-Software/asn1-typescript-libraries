@@ -15,6 +15,12 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary SortRequest
  * @description
  * 
+ * Client request to sort one result set, or to merge several result sets and
+ * then sort them (ANSI/NISO Z39.50-2003 §3.2.7.1). The server orders the result
+ * by the sort sequence, major key first, and later positional retrieval uses
+ * that order. Sort is negotiated separately. A Sort request when Sort is not in
+ * effect may be treated as a protocol error (§4.4.2.2.13).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,30 +41,62 @@ export
 class SortRequest {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Client-assigned identifier of this Sort operation. Mandatory when
+     * concurrent operations is in effect. When serial operations is in effect
+     * it may be omitted and is then null, and every other message of the
+     * operation omits it too (ANSI/NISO Z39.50-2003 §3.4, §3.5).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `inputResultSetNames`.
+     * @description
+     * 
+     * Names of the result sets to sort, or to merge and then sort (ANSI/NISO
+     * Z39.50-2003 §3.2.7.1.1).
+     * 
      * @public
      * @readonly
      */
     readonly inputResultSetNames: InternationalString[];
     /**
      * @summary `sortedResultSetName`.
+     * @description
+     * 
+     * Name of the sorted result set. If that name already exists, including as
+     * one of the inputs, a processed sort deletes it and creates a new set of
+     * that name. If the name is new, the inputs are left unchanged. If the sort
+     * is not processed, `resultSetStatus` on the response describes this set
+     * (ANSI/NISO Z39.50-2003 §3.2.7.1.2).
+     * 
      * @public
      * @readonly
      */
     readonly sortedResultSetName: InternationalString;
     /**
      * @summary `sortSequence`.
+     * @description
+     * 
+     * Sort keys from major to minor. Each key carries a direction, case
+     * handling where it applies, and the action when a record has no value for
+     * the key (ANSI/NISO Z39.50-2003 §3.2.7.1.3).
+     * 
      * @public
      * @readonly
      */
     readonly sortSequence: SortKeySpec[];
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. The peer should
+     * expect it and need not interpret it, in either version (ANSI/NISO
+     * Z39.50-2003 §3.2.7.1.8, §4.4.2.2.21).
+     * 
      * @public
      * @readonly
      */

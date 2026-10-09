@@ -12,6 +12,10 @@ import { NetworkAddress_other, _decode_NetworkAddress_other, _encode_NetworkAddr
 /**
  * @summary NetworkAddress
  * @description
+ * One network address of the server, carried in TargetInfo. The Explain
+ * description of the server lists an Internet address and port. This choice is
+ * that Internet host and port, a deprecated alternative, or some other address.
+ * ANSI/NISO Z39.50-2003 §3.2.10.3.1.
  * 
  * ### ASN.1 Definition:
  * 

@@ -11,7 +11,20 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ReferenceId
  * @description
- * 
+ *
+ * Client-assigned identifier of one operation. The same value appears
+ * on every message of that operation. Opaque octets: the standard
+ * assigns no meaning and no data type beyond that. When serial
+ * operations are in effect the parameter may be omitted; the id is
+ * then null, and every message of the operation omits it. When
+ * concurrent operations are in effect it is mandatory on an
+ * initiating request, except Init (negotiation is not finished).
+ * Close is not part of an operation; its rules are in §3.2.11.1.5.
+ * Reuse after the operation ends implies no relationship to the
+ * earlier operation. While serial operations are in effect, a wrong
+ * value may be ignored or treated as a protocol error.
+ * §3.4, §3.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

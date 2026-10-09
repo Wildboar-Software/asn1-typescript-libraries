@@ -13,6 +13,18 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary CorrelationInfo
  * @description
  * 
+ * Client information hung on one record of an Update task package, so that
+ * whoever later retrieves the package can tell which supplied record a
+ * result belongs to. The client may include a note, an identifier, or
+ * both. The server should treat this as opaque: it should not process it
+ * or change it. The note is human-readable and not for the server to
+ * process. The identifier need only be unique within this task package,
+ * not across packages; an integer is enough. The same record in two
+ * packages may have different ids, and an id may be reused for a different
+ * record in another package.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +41,31 @@ export
 class CorrelationInfo {
     /**
      * @summary `note`.
+     * @description
+     * 
+     * Human-readable note about this record's update, for example why it was
+     * updated, who updated it, or what kind of update it was. Not for the
+     * server to process. The client may have expected a different user to read
+     * it later.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */
     readonly note: OPTIONAL<InternationalString>;
     /**
      * @summary `id`.
+     * @description
+     * 
+     * Identifier of this record within the task package only. It is not
+     * required to be a unique id of the database record. The client can keep a
+     * table from these ids to the records it submitted, because the package
+     * might omit the record or the record might have no unambiguous id of its
+     * own.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */

@@ -13,6 +13,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Encryption
  * @description
  * 
+ * Encrypted prompt text or an encrypted answer (ASN1.9.1). No algorithm is
+ * named.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +33,31 @@ export
 class Encryption {
     /**
      * @summary `cryptType`.
+     * @description
+     * 
+     * ASN1.9.1 does not define these octets.
+     * 
      * @public
      * @readonly
      */
     readonly cryptType: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `credential`.
+     * @description
+     * 
+     * A random number, salt, or other factor.
+     * 
      * @public
      * @readonly
      */
     readonly credential: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `data`.
+     * @description
+     * 
+     * ASN1.9.1 does not define these octets beyond their place in this
+     * sequence.
+     * 
      * @public
      * @readonly
      */

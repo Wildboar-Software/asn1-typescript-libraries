@@ -15,6 +15,17 @@ import { CompSpec_dbSpecific_Item, _decode_CompSpec_dbSpecific_Item, _encode_Com
  * @summary CompSpec
  * @description
  * 
+ * Composition specification on a Present request. It may be sent only when
+ * version 3 is in force and the request omits element-set names (ANSI/NISO
+ * Z39.50-2003 §3.2.3.1.6, §3.6). Version 2 has no composition specification
+ * (§3.6.2). If the server does not support it, that is not a protocol error
+ * (§4.4.2.2.7).
+ * 
+ * For each record the server applies the schema's abstract record structure,
+ * then an element specification, then a record syntax, producing a retrieval
+ * record (§3.6). A specification may name a database, or one specification may
+ * apply to every record.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,24 +53,50 @@ export
 class CompSpec {
     /**
      * @summary `selectAlternativeSyntax`.
+     * @description
+     * 
+     * When true, the server may choose a record syntax of its own after every
+     * syntax in `recordSyntax` has been found unsupported (ANSI/NISO
+     * Z39.50-2003 §4.1). The comments in the ASN.1 are part of the standard.
+     * 
      * @public
      * @readonly
      */
     readonly selectAlternativeSyntax: BOOLEAN;
     /**
      * @summary `generic`.
+     * @description
+     * 
+     * Composition used for a record whose database is not listed in
+     * `dbSpecific`, and for every record when no database is named (ANSI/NISO
+     * Z39.50-2003 §3.6.1). At least one of `generic` and `dbSpecific` must
+     * occur; both may (§4.1).
+     * 
      * @public
      * @readonly
      */
     readonly generic: OPTIONAL<Specification>;
     /**
      * @summary `dbSpecific`.
+     * @description
+     * 
+     * Database name paired with the composition to apply to records from that
+     * database, when the server can apply it (ANSI/NISO Z39.50-2003 §3.6.1).
+     * 
      * @public
      * @readonly
      */
     readonly dbSpecific: OPTIONAL<CompSpec_dbSpecific_Item[]>;
     /**
      * @summary `recordSyntax`.
+     * @description
+     * 
+     * Abstract-syntax identifiers the client requests, in preference order. The
+     * server selects the first syntax it can support (ANSI/NISO Z39.50-2003
+     * §4.1). If the list is exhausted and `selectAlternativeSyntax` is false,
+     * the server should return a diagnostic such as 238 and should not
+     * substitute another syntax (§3.6.3).
+     * 
      * @public
      * @readonly
      */

@@ -13,6 +13,10 @@ import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../
  * @summary SortKey_sortAttributes
  * @description
  * 
+ * Sort key expressed as a search access point (ANSI/NISO Z39.50-2003
+ * §3.2.7.1.3, §4.1 comment 12). Several attributes may be supplied; they should
+ * resolve to one abstract access point.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +32,22 @@ export
 class SortKey_sortAttributes {
     /**
      * @summary `id`.
+     * @description
+     * 
+     * Attribute set that defines the access point (ANSI/NISO Z39.50-2003 §4.1,
+     * comment 12).
+     * 
      * @public
      * @readonly
      */
     readonly id: AttributeSetId;
     /**
      * @summary `list`.
+     * @description
+     * 
+     * Attributes that together name one access point (ANSI/NISO Z39.50-2003
+     * §4.1, comment 12).
+     * 
      * @public
      * @readonly
      */

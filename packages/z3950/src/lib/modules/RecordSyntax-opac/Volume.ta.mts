@@ -12,6 +12,12 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary Volume
  * @description
  * 
+ * One volume held (module ASN.1: the parent repeats for each volume held). None
+ * of the components is commented.
+ * 
+ * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+ * semantics.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,18 +34,30 @@ export
 class Volume {
     /**
      * @summary `enumeration`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly enumeration: OPTIONAL<InternationalString>;
     /**
      * @summary `chronology`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly chronology: OPTIONAL<InternationalString>;
     /**
      * @summary `enumAndChron`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */

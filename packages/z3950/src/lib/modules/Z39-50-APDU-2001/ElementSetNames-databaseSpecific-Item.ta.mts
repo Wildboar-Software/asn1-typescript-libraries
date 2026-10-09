@@ -12,7 +12,12 @@ import { ElementSetName, _decode_ElementSetName, _encode_ElementSetName } from "
 /**
  * @summary ElementSetNames_databaseSpecific_Item
  * @description
- * 
+ *
+ * One database and the element set name to apply to its records when
+ * Comp-spec is omitted. If `esn` is valid for that database's default
+ * schema, the server applies it; otherwise it applies the default
+ * element set name. §3.6.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,24 @@ export
 class ElementSetNames_databaseSpecific_Item {
     /**
      * @summary `dbName`.
+     * @description
+     *
+     * Database whose records take `esn`, when that name is valid for
+     * the database's default schema. Case-insensitive. §3.6.2,
+     * §3.2.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly dbName: DatabaseName;
     /**
      * @summary `esn`.
+     * @description
+     *
+     * Element set name for `dbName`. Case-insensitive. `"F"` means
+     * full (no elements dropped). `"B"` means brief; this standard
+     * does not define which elements that includes. §3.6.2.
+     *
      * @public
      * @readonly
      */

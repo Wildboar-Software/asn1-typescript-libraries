@@ -10,6 +10,21 @@ import { DiagnosticFormat_Item, _decode_DiagnosticFormat_Item, _encode_Diagnosti
  * @summary DiagnosticFormat
  * @description
  * 
+ * diag-1 `{z39-50-diagnostic diag-1(2)}` is a list of diagnostic records
+ * (ANSI/NISO Z39.50-2003 DIAG.1). Each record may include a message and either
+ * a default diagnostic or the structured diag-1 form.
+ * 
+ * When version 2 is in force, a diagnostic record is DefaultDiagFormat:
+ * diagnostic-set OID, condition integer, and addinfo. When version 3 is in
+ * force, that form may still be used, or the record may be an EXTERNAL whose
+ * OID identifies a diagnostic format rather than a diagnostic set.
+ * 
+ * When `defaultDiagRec` uses the General Diagnostic Set
+ * `{Z39-50-diagnostic 1}` (bib-1, renamed), `condition` is a DIAG.1
+ * code. Those codes, and what addinfo must carry, are documented on
+ * `DefaultDiagFormat.condition`. `explicitDiagnostic` is the
+ * structured form; see `DiagFormat`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

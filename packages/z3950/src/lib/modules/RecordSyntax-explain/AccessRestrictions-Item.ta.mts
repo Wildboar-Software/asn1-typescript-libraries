@@ -14,6 +14,10 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * @summary AccessRestrictions_Item
  * @description
  * 
+ * One access restriction in an AccessRestrictions list: which kind of access,
+ * optional text, and optional access challenges. REC.1 does not define the
+ * access-type values beyond their names. ANSI/NISO Z39.50-2003 §3.2.10.3.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +41,29 @@ export
 class AccessRestrictions_Item {
     /**
      * @summary `accessType`.
+     * @description
+     * Kind of access this restriction covers. REC.1 lists any, search, present,
+     * specific-elements, extended-services, and by-database, and does not
+     * define them further.
      * @public
      * @readonly
      */
     readonly accessType: AccessRestrictions_Item_accessType;
     /**
      * @summary `accessText`.
+     * @description
+     * Human-readable description of access control. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly accessText: OPTIONAL<HumanString>;
     /**
      * @summary `accessChallenges`.
+     * @description
+     * Access challenges that apply to this kind of access. The standard
+     * identifies them only as object identifiers. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.1.
      * @public
      * @readonly
      */

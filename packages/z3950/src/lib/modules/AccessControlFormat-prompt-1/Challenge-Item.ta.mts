@@ -17,6 +17,8 @@ import { Challenge_Item_dataType, _decode_Challenge_Item_dataType, _encode_Chall
  * @summary Challenge_Item
  * @description
  * 
+ * One prompt in a prompt-1 challenge (ASN1.9.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,54 +58,98 @@ export
 class Challenge_Item {
     /**
      * @summary `promptId`.
+     * @description
+     * 
+     * Which prompt this is. The client returns the same id so the server can
+     * match the answer (comment 1).
+     * 
      * @public
      * @readonly
      */
     readonly promptId: PromptId;
     /**
      * @summary `defaultResponse`.
+     * @description
+     * 
+     * ASN1.9.1 includes this and does not say how the client uses it.
+     * 
      * @public
      * @readonly
      */
     readonly defaultResponse: OPTIONAL<InternationalString>;
     /**
      * @summary `promptInfo`.
+     * @description
+     * 
+     * Text to show for an enumerated prompt. For copyright, the copyright
+     * statement (comment 2).
+     * 
      * @public
      * @readonly
      */
     readonly promptInfo: OPTIONAL<Challenge_Item_promptInfo>;
     /**
      * @summary `regExpr`.
+     * @description
+     * 
+     * A regular expression the answer should match (IEEE 1003.2 Volume 1,
+     * section 2.8). A year-of-publication prompt may use
+     * `19[89][0-9]|20[0-9][0-9]` (comment 3).
+     * 
      * @public
      * @readonly
      */
     readonly regExpr: OPTIONAL<InternationalString>;
     /**
      * @summary `responseRequired`.
+     * @description
+     * 
+     * Present when an answer to this prompt is required.
+     * 
      * @public
      * @readonly
      */
     readonly responseRequired: OPTIONAL<NULL>;
     /**
      * @summary `allowedValues`.
+     * @description
+     * 
+     * Values the server will accept. A color prompt may allow red, blue, and
+     * green.
+     * 
      * @public
      * @readonly
      */
     readonly allowedValues: OPTIONAL<InternationalString[]>;
     /**
      * @summary `shouldSave`.
+     * @description
+     * 
+     * Present when the server recommends saving the user's answer, because this
+     * prompt is likely to be asked again (comment 4).
+     * 
      * @public
      * @readonly
      */
     readonly shouldSave: OPTIONAL<NULL>;
     /**
      * @summary `dataType`.
+     * @description
+     * 
+     * Kind of value the server wants prompted (comment 5). If date is selected,
+     * the client should prompt for something date-like.
+     * 
      * @public
      * @readonly
      */
     readonly dataType: OPTIONAL<Challenge_Item_dataType>;
     /**
      * @summary `diagnostic`.
+     * @description
+     * 
+     * On a repeated challenge, an error from the previous attempt that the
+     * client should show the user.
+     * 
      * @public
      * @readonly
      */

@@ -12,6 +12,12 @@ import { Encryption, _decode_Encryption, _encode_Encryption } from "../AccessCon
  * @summary Challenge_Item_promptInfo
  * @description
  * 
+ * Prompt text for an enumerated prompt (ASN1.9.1 comment 2). For copyright,
+ * this is the statement to display verbatim.
+ * 
+ * - character: the text in the clear.
+ * - encrypted: the text inside Encryption. ASN1.9.1 does not name an algorithm.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

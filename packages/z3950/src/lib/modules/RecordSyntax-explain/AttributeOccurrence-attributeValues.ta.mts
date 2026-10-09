@@ -12,6 +12,10 @@ import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } fro
  * @summary AttributeOccurrence_attributeValues
  * @description
  * 
+ * Which values of one attribute type are legal in a combination. `any-or-none`
+ * means all supported values are acceptable. `specific` means only the listed
+ * values are allowed. REC.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,16 @@ import { OtherInformation_Item, _decode_OtherInformation_Item, _encode_OtherInfo
 /**
  * @summary OtherInformation
  * @description
- * 
+ *
+ * Additional information not specified by the standard. The parameter
+ * appears on every APDU, and its use is valid only when version 3 is
+ * in force. On Init, prefer `userInformationField` with UserInfo-1,
+ * which has this same structure, because the version is not yet
+ * known (USR.2). Each item may omit its category. No category values
+ * are known to have been registered (comment 5). When encapsulation
+ * is in effect, a nested APDU is carried as `externallyDefinedInfo`
+ * with object identifier `1.2.840.10003.2.1`. §4.3, comment 5, USR.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

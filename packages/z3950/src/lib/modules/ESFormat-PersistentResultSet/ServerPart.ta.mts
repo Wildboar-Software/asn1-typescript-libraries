@@ -13,6 +13,11 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary ServerPart
  * @description
  * 
+ * Server parameters of a persistent result set, supplied when the task
+ * package is presented. Not included on an ES response.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +37,28 @@ export
 class ServerPart {
     /**
      * @summary `serverSuppliedResultSet`.
+     * @description
+     * 
+     * Name of a transient result set on this Z-association, a copy of the
+     * persistent result set this package represents. The server includes it
+     * only when the package is retrieved, not on an ES response, and omits it
+     * when the Present element set says not to include it. The name may be
+     * used anywhere a result-set name may be used.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.1.
+     * 
      * @public
      * @readonly
      */
     readonly serverSuppliedResultSet: OPTIONAL<InternationalString>;
     /**
      * @summary `numberOfRecords`.
+     * @description
+     * 
+     * Total number of records in the persistent result set. Optional.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.1.
+     * 
      * @public
      * @readonly
      */

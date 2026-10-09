@@ -13,6 +13,7 @@ import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } fro
 /**
  * @summary Units
  * @description
+ * One unit within a unit type. ANSI/NISO Z39.50-2003 §3.2.10.3.16.
  * 
  * ### ASN.1 Definition:
  * 
@@ -30,18 +31,25 @@ export
 class Units {
     /**
      * @summary `name`.
+     * @description
+     * Name of the unit. ANSI/NISO Z39.50-2003 §3.2.10.3.16.
      * @public
      * @readonly
      */
     readonly name: OPTIONAL<InternationalString>;
     /**
      * @summary `description`.
+     * @description
+     * Description of the unit. ANSI/NISO Z39.50-2003 §3.2.10.3.16.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `unit`.
+     * @description
+     * Identifier of the unit. The standard does not define this value beyond
+     * its role as that identifier. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */

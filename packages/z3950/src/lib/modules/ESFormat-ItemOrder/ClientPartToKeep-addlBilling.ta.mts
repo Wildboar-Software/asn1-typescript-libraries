@@ -13,6 +13,11 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary ClientPartToKeep_addlBilling
  * @description
  * 
+ * Optional billing for an item order: payment method, and optionally a
+ * client customer reference and a customer purchase-order number.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,18 +51,39 @@ export
 class ClientPartToKeep_addlBilling {
     /**
      * @summary `paymentMethod`.
+     * @description
+     * 
+     * How the client will pay. Credit card is one of the alternatives; the
+     * standard does not further define the private alternatives.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly paymentMethod: ClientPartToKeep_addlBilling_paymentMethod;
     /**
      * @summary `customerReference`.
+     * @description
+     * 
+     * Identifier the client assigns to identify the customer. A client may
+     * search Item Order task packages for a specific customer with it.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly customerReference: OPTIONAL<InternationalString>;
     /**
      * @summary `customerPONumber`.
+     * @description
+     * 
+     * Purchase-order number assigned by the customer, rather than one the
+     * supplier might assign.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */

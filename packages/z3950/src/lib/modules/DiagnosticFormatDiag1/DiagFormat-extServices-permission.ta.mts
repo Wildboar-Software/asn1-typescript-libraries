@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagFormat_extServices_permission
  * @description
  * 
+ * Extended services were denied (diag-1) because the id is not authorized
+ * (DIAG.1 condition 222) or the package cannot be modified or deleted (223).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +29,10 @@ type DiagFormat_extServices_permission = INTEGER;
 
 /**
  * @summary DiagFormat_extServices_permission_id
+ * @description
+ * 
+ * Permission denied: id not authorized (DIAG.1 condition 222).
+ * 
  * @constant
  * @type {number}
  */
@@ -34,6 +41,10 @@ const DiagFormat_extServices_permission_id: DiagFormat_extServices_permission = 
 
 /**
  * @summary DiagFormat_extServices_permission_id
+ * @description
+ * 
+ * Permission denied: id not authorized (DIAG.1 condition 222).
+ * 
  * @constant
  * @type {number}
  */
@@ -42,6 +53,10 @@ const id: DiagFormat_extServices_permission = DiagFormat_extServices_permission_
 
 /**
  * @summary DiagFormat_extServices_permission_modifyDelete
+ * @description
+ * 
+ * Permission denied: cannot modify or delete (DIAG.1 condition 223).
+ * 
  * @constant
  * @type {number}
  */
@@ -50,6 +65,10 @@ const DiagFormat_extServices_permission_modifyDelete: DiagFormat_extServices_per
 
 /**
  * @summary DiagFormat_extServices_permission_modifyDelete
+ * @description
+ * 
+ * Permission denied: cannot modify or delete (DIAG.1 condition 223).
+ * 
  * @constant
  * @type {number}
  */

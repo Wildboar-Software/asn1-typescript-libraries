@@ -14,6 +14,14 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary CommonInfo
  * @description
  * 
+ * Information about the Explain record itself, not about the entity it
+ * describes. Every category record carries it. Element set `B` includes it
+ * except otherInfo. DateAdded, DateChanged, and DateExpires search these dates
+ * and may be combined with any category search. The language element selects
+ * among separate records, one per language; it is aimed at version 2, and
+ * version 3 should use variants instead. ANSI/NISO Z39.50-2003 §3.2.10.1.2,
+ * §3.2.10.1.3, §3.2.10.3; REC.1 Comment 1; ATR.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,30 +41,49 @@ export
 class CommonInfo {
     /**
      * @summary `dateAdded`.
+     * @description
+     * When this Explain record was first added to the Explain database. Search
+     * with Use DateAdded. ATR.1; ANSI/NISO Z39.50-2003 §3.2.10.1.3.
      * @public
      * @readonly
      */
     readonly dateAdded: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `dateChanged`.
+     * @description
+     * When this Explain record was last updated. Search with Use DateChanged.
+     * ATR.1; ANSI/NISO Z39.50-2003 §3.2.10.1.3.
      * @public
      * @readonly
      */
     readonly dateChanged: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `expiry`.
+     * @description
+     * When cached copies of this Explain record should be discarded. Search
+     * with Use DateExpires. ATR.1 calls this element expiryDate. ATR.1;
+     * ANSI/NISO Z39.50-2003 §3.2.10.1.3.
      * @public
      * @readonly
      */
     readonly expiry: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `humanString_Language`.
+     * @description
+     * Language of the human-readable text in this record, as a three-character
+     * code from ANSI/NISO Z39.53-1994. Search with Use HumanStringLanguage.
+     * Different languages are different records, so language is selected by the
+     * search. Intended primarily for version 2; version 3 should use variants.
+     * ANSI/NISO Z39.50-2003 §3.2.10.1.2, §3.2.10.2.1.
      * @public
      * @readonly
      */
     readonly humanString_Language: OPTIONAL<LanguageCode>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * Not part of the brief element set. REC.1 Comment 1 does not say what to
+     * put here.
      * @public
      * @readonly
      */

@@ -13,6 +13,19 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RetentionCriterion
  * @description
  * 
+ * Which members of a duplicate class are kept (ANSI/NISO Z39.50-2003
+ * §3.2.7.2.5). Values 5 through 100 are reserved.
+ * 
+ * `numberOfEntries` is N greater than 0: keep up to N entries. N = 1 keeps the
+ * representative only. It may be combined with duplicates-only and with
+ * discard-result-set-duplicates, and not with percent-of-entries.
+ * `percentOfEntries` is an integer from 1 to 100; 100 keeps every entry. It may
+ * be combined the same way, and not with number-of-entries. `duplicatesOnly`
+ * discards the representative and should be used only when clustering is
+ * individual entries. `discardRsDuplicates` drops items that point at the same
+ * database record, and does that before number or percent selection when those
+ * are also present.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

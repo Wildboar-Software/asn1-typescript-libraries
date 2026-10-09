@@ -13,6 +13,19 @@ import { Occurrences, _decode_Occurrences, _encode_Occurrences } from "../Elemen
  * @summary TagPath_Item
  * @description
  * 
+ * One step of an eSpec-2 tag path (ANSI/NISO Z39.50-2003, RET.3.1.1.4,
+ * ASN1.13).
+ * 
+ * `specificTag` names one tag. `wildThing` selects the Nth element at this
+ * level no matter what its tag is. Occurrence `all` selects every element at
+ * this level (comment 4). The path `1/2` plus wildThing occurrence 3 is the
+ * third child of node 1/2 (RET.3.1.1.4.1).
+ * 
+ * `wildPath` matches any run of tags, at this level or below, such that the
+ * next step of this path follows that run. It cannot be the last step. Use it
+ * to collect one known tag at any depth, such as every caption (RET.3.1.1.4.2,
+ * comment 5).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SortKeySpec_missingValueAction
  * @description
  * 
+ * Server action when a record has no value for this sort key (ANSI/NISO
+ * Z39.50-2003 §3.2.7.1.3). `null` means supply a null value for the missing
+ * value (§4.1). The standard does not further define `abort`.
+ * `missingValueData` is an octet string supplied in place of the missing value;
+ * the standard does not define how those octets are interpreted.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

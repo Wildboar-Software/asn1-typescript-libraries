@@ -13,6 +13,11 @@ import { CategoryInfo, _decode_CategoryInfo, _encode_CategoryInfo } from "../Rec
  * @summary CategoryList
  * @description
  * 
+ * Explain categories the server supports. One such record is expected for the
+ * Explain database. There is no key. Every element is brief. Search
+ * ExplainCategory `CategoryList`. ANSI/NISO Z39.50-2003 §3.2.10.1.1,
+ * §3.2.10.3.17; REC.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +34,19 @@ export
 class CategoryList {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates, language, and other information about this Explain record.
+     * otherInfo is omitted from element set `B`. REC.1 Comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `categories`.
+     * @description
+     * One entry per supported category: the ExplainCategory search term, and,
+     * for a private or revised category, the original term, a description, and
+     * ASN.1. All of this record is brief. ANSI/NISO Z39.50-2003 §3.2.10.3.17.
      * @public
      * @readonly
      */

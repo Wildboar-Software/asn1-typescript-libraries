@@ -12,6 +12,10 @@ import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/D
  * @summary Entry
  * @description
  * 
+ * One Scan response entry (ANSI/NISO Z39.50-2003 §3.2.8.1.7). `termInfo`
+ * describes a term that occurs in one of the databases named on the request.
+ * `surrogateDiagnostic` stands in for an entry that could not be returned.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

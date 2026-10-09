@@ -15,6 +15,8 @@ import { AttributeOccurrence_attributeValues, _decode_AttributeOccurrence_attrib
  * @summary AttributeOccurrence
  * @description
  * 
+ * Legal values for one attribute type inside a combination pattern. REC.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,24 +40,35 @@ export
 class AttributeOccurrence {
     /**
      * @summary `attributeSet`.
+     * @description
+     * Attribute set of this type in the combination. The standard does not say
+     * what omission means. REC.1.
      * @public
      * @readonly
      */
     readonly attributeSet: OPTIONAL<AttributeSetId>;
     /**
      * @summary `attributeType`.
+     * @description
+     * Attribute type these values apply to. REC.1.
      * @public
      * @readonly
      */
     readonly attributeType: INTEGER;
     /**
      * @summary `mustBeSupplied`.
+     * @description
+     * Present when this attribute type must be supplied in the combination.
+     * REC.1 does not define the flag further.
      * @public
      * @readonly
      */
     readonly mustBeSupplied: OPTIONAL<NULL>;
     /**
      * @summary `attributeValues`.
+     * @description
+     * `any-or-none` means every supported value is acceptable. `specific` lists
+     * the only values allowed. REC.1.
      * @public
      * @readonly
      */

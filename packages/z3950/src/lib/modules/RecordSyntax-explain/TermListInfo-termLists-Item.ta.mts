@@ -14,6 +14,11 @@ import { TermListInfo_termLists_Item_searchCost, _decode_TermListInfo_termLists_
 /**
  * @summary TermListInfo_termLists_Item
  * @description
+ * Summary of one term list in TermListInfo. The name is the key of the
+ * corresponding TermListDetails record and must be unique for the database. A
+ * list may exist to speed searching, as an index, even when it cannot be
+ * scanned. Broader and narrower names are other lists in this same record.
+ * ANSI/NISO Z39.50-2003 §3.2.10.3.7; ASN.1 comments 5 and 7.
  * 
  * ### ASN.1 Definition:
  * 
@@ -44,36 +49,59 @@ export
 class TermListInfo_termLists_Item {
     /**
      * @summary `name`.
+     * @description
+     * Name of the term list. Unique for the database. This is the TermListName
+     * to use when searching for the TermListDetails record. Typically a short
+     * string, not necessarily human-readable, and not varied by language.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.7; ASN.1 comment 5.
      * @public
      * @readonly
      */
     readonly name: InternationalString;
     /**
      * @summary `title`.
+     * @description
+     * Title for users to see. It need not be unique, and it can differ by
+     * language. ANSI/NISO Z39.50-2003 §3.2.10.3.7; ASN.1 comment 5.
      * @public
      * @readonly
      */
     readonly title: OPTIONAL<HumanString>;
     /**
      * @summary `searchCost`.
+     * @description
+     * How expensive it is to search with the attributes associated with this
+     * list. The combination itself is in the TermListDetails record. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.7; ASN.1 comment 6.
      * @public
      * @readonly
      */
     readonly searchCost: OPTIONAL<TermListInfo_termLists_Item_searchCost>;
     /**
      * @summary `scanable`.
+     * @description
+     * Whether the list may be scanned. `true` means it can. A list can still be
+     * an index used to speed search when this is false; a
+     * social-security-number index is the standard's example. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.7; ASN.1 comment 7.
      * @public
      * @readonly
      */
     readonly scanable: BOOLEAN;
     /**
      * @summary `broader`.
+     * @description
+     * Names of alternative, broader term lists. Each name should also appear in
+     * this database's term-list summary. ANSI/NISO Z39.50-2003 §3.2.10.3.7.
      * @public
      * @readonly
      */
     readonly broader: OPTIONAL<InternationalString[]>;
     /**
      * @summary `narrower`.
+     * @description
+     * Names of alternative, narrower term lists. Each name should also appear
+     * in this database's term-list summary. ANSI/NISO Z39.50-2003 §3.2.10.3.7.
      * @public
      * @readonly
      */

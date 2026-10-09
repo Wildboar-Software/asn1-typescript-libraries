@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PromptId_enummeratedPrompt_type
  * @description
  * 
+ * Registered prompt ids for prompt-1 (ASN1.9.1). groupId, userId, password, and
+ * sessionId are names only. newPassword and copyright have comments 6 and 7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,10 @@ type PromptId_enummeratedPrompt_type = INTEGER;
 
 /**
  * @summary PromptId_enummeratedPrompt_type_groupId
+ * @description
+ * 
+ * Enumerated prompt groupId. ASN1.9.1 names it and does not define it further.
+ * 
  * @constant
  * @type {number}
  */
@@ -37,6 +44,10 @@ const PromptId_enummeratedPrompt_type_groupId: PromptId_enummeratedPrompt_type =
 
 /**
  * @summary PromptId_enummeratedPrompt_type_groupId
+ * @description
+ * 
+ * Enumerated prompt groupId. ASN1.9.1 names it and does not define it further.
+ * 
  * @constant
  * @type {number}
  */
@@ -45,6 +56,10 @@ const groupId: PromptId_enummeratedPrompt_type = PromptId_enummeratedPrompt_type
 
 /**
  * @summary PromptId_enummeratedPrompt_type_userId
+ * @description
+ * 
+ * Enumerated prompt userId. ASN1.9.1 names it and does not define it further.
+ * 
  * @constant
  * @type {number}
  */
@@ -53,6 +68,10 @@ const PromptId_enummeratedPrompt_type_userId: PromptId_enummeratedPrompt_type = 
 
 /**
  * @summary PromptId_enummeratedPrompt_type_userId
+ * @description
+ * 
+ * Enumerated prompt userId. ASN1.9.1 names it and does not define it further.
+ * 
  * @constant
  * @type {number}
  */
@@ -61,6 +80,10 @@ const userId: PromptId_enummeratedPrompt_type = PromptId_enummeratedPrompt_type_
 
 /**
  * @summary PromptId_enummeratedPrompt_type_password
+ * @description
+ * 
+ * Enumerated prompt password. ASN1.9.1 names it and does not define it further.
+ * 
  * @constant
  * @type {number}
  */
@@ -69,6 +92,10 @@ const PromptId_enummeratedPrompt_type_password: PromptId_enummeratedPrompt_type 
 
 /**
  * @summary PromptId_enummeratedPrompt_type_password
+ * @description
+ * 
+ * Enumerated prompt password. ASN1.9.1 names it and does not define it further.
+ * 
  * @constant
  * @type {number}
  */
@@ -77,6 +104,11 @@ const password: PromptId_enummeratedPrompt_type = PromptId_enummeratedPrompt_typ
 
 /**
  * @summary PromptId_enummeratedPrompt_type_newPassword
+ * @description
+ * 
+ * Prompt for a new password. Sent unprompted, this id must be enumerated
+ * (ASN1.9.1 comment 6).
+ * 
  * @constant
  * @type {number}
  */
@@ -85,6 +117,11 @@ const PromptId_enummeratedPrompt_type_newPassword: PromptId_enummeratedPrompt_ty
 
 /**
  * @summary PromptId_enummeratedPrompt_type_newPassword
+ * @description
+ * 
+ * Prompt for a new password. Sent unprompted, this id must be enumerated
+ * (ASN1.9.1 comment 6).
+ * 
  * @constant
  * @type {number}
  */
@@ -93,6 +130,11 @@ const newPassword: PromptId_enummeratedPrompt_type = PromptId_enummeratedPrompt_
 
 /**
  * @summary PromptId_enummeratedPrompt_type_copyright
+ * @description
+ * 
+ * Copyright prompt. promptInfo is the statement to display verbatim (ASN1.9.1
+ * comment 7).
+ * 
  * @constant
  * @type {number}
  */
@@ -101,6 +143,11 @@ const PromptId_enummeratedPrompt_type_copyright: PromptId_enummeratedPrompt_type
 
 /**
  * @summary PromptId_enummeratedPrompt_type_copyright
+ * @description
+ * 
+ * Copyright prompt. promptInfo is the statement to display verbatim (ASN1.9.1
+ * comment 7).
+ * 
  * @constant
  * @type {number}
  */
@@ -109,6 +156,11 @@ const copyright: PromptId_enummeratedPrompt_type = PromptId_enummeratedPrompt_ty
 
 /**
  * @summary PromptId_enummeratedPrompt_type_sessionId
+ * @description
+ * 
+ * Enumerated prompt sessionId. ASN1.9.1 names it and does not define it
+ * further.
+ * 
  * @constant
  * @type {number}
  */
@@ -117,6 +169,11 @@ const PromptId_enummeratedPrompt_type_sessionId: PromptId_enummeratedPrompt_type
 
 /**
  * @summary PromptId_enummeratedPrompt_type_sessionId
+ * @description
+ * 
+ * Enumerated prompt sessionId. ASN1.9.1 names it and does not define it
+ * further.
+ * 
  * @constant
  * @type {number}
  */

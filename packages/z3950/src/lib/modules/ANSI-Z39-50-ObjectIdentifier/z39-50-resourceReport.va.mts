@@ -10,6 +10,11 @@ import { z39_50 } from "../ANSI-Z39-50-ObjectIdentifier/z39-50.va.mjs";
  * @summary z39_50_resourceReport
  * @description
  * 
+ * Object-class arc under which resource-report format OIDs are assigned,
+ * `{Z39-50 7}` (OID.2 value 7, appendix RSC). resource-1 is
+ * `{Z39-50-resourceReport 1}`; resource-2 is `{Z39-50-resourceReport 2}`. OID.2
+ * value 6 is no longer assigned.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

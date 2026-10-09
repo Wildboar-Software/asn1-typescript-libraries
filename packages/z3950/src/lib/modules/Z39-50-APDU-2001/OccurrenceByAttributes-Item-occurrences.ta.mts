@@ -12,6 +12,10 @@ import { OccurrenceByAttributes_Item_occurrences_byDatabase_Item, _decode_Occurr
  * @summary OccurrenceByAttributes_Item_occurrences
  * @description
  * 
+ * Where a Scan occurrence count is totaled (ANSI/NISO Z39.50-2003 §3.2.8.1.7).
+ * `global` is one record count. `byDatabase` lists databases and, for each, an
+ * optional record count.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,6 +14,10 @@ import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } fro
  * @summary AttributeDescription
  * @description
  * 
+ * One attribute value in an attribute-set description. Equivalences come from
+ * the attribute set definition, not from what this server does. ANSI/NISO
+ * Z39.50-2003 §3.2.10.3.6; REC.1 Comment 4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +36,35 @@ export
 class AttributeDescription {
     /**
      * @summary `name`.
+     * @description
+     * Name of this attribute value. ANSI/NISO Z39.50-2003 §3.2.10.3.6.
      * @public
      * @readonly
      */
     readonly name: OPTIONAL<InternationalString>;
     /**
      * @summary `description`.
+     * @description
+     * Human-readable description of this value. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.6.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `attributeValue`.
+     * @description
+     * The value defined for this attribute. ANSI/NISO Z39.50-2003 §3.2.10.3.6.
      * @public
      * @readonly
      */
     readonly attributeValue: StringOrNumeric;
     /**
      * @summary `equivalentAttributes`.
+     * @description
+     * Equivalent attribute values. Each occurrence is an attribute value from a
+     * different attribute. Take them from the attribute set definition, not
+     * from server behavior. Comment 4; ANSI/NISO Z39.50-2003 §3.2.10.3.6.
      * @public
      * @readonly
      */

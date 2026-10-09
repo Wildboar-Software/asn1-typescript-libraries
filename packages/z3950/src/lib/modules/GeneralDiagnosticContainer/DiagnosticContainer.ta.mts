@@ -10,6 +10,23 @@ import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/D
  * @summary DiagnosticContainer
  * @description
  * 
+ * Operation-level diagnostics under one well-known OID,
+ * generalDiagnosticContainer `{Z39-50-diagnostic 4}`, so a client can see that
+ * diagnostics are inside even when it does not recognize the OIDs they use
+ * (DIAG.2, ASN1.3). The container is independent of service and of status. It
+ * is for otherInfo, or for userInformationField used to simulate otherInfo
+ * (USR.2), including diagnostics in an InitResponse (DIAG.3). It does not
+ * replace the diagnostics already defined for each service.
+ * 
+ * Example: a Search may succeed while the server does not execute APDUs
+ * encapsulated in that Search (§4.3). The server still returns a diagnostic
+ * such as an unsupported encapsulated sequence. Search's own diagnostic does
+ * not fit that case when search status is success.
+ * 
+ * Each element is a DiagRec. Version 2 must use DefaultDiagFormat. Version 3
+ * may use an EXTERNAL instead. The module header in ASN1.3 writes the OID arc
+ * as Z39-50-diagnosticFormat; DIAG.2 assigns `{Z39-50-diagnostic 4}`.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

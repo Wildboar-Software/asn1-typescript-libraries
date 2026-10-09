@@ -10,6 +10,9 @@ import { ResultsByDB_Item, _decode_ResultsByDB_Item, _encode_ResultsByDB_Item } 
  * @summary ResultsByDB
  * @description
  * 
+ * Per-database counts for one query component (ASN1.11). Each entry is either
+ * every database in the Search or an explicit list.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

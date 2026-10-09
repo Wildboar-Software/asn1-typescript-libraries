@@ -13,6 +13,12 @@ import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-
  * @summary ExportInvocation_taskPackage
  * @description
  * 
+ * Export Invocation task package: the retained client parameters and the
+ * server's optional progress report. Absent server part means the server
+ * has not supplied quantity or cost.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.7, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,26 @@ export
 class ExportInvocation_taskPackage {
     /**
      * @summary `clientPart`.
+     * @description
+     * 
+     * Export specification and copy count supplied by the client and kept in
+     * the package.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.7, EXT.2.
+     * 
      * @public
      * @readonly
      */
     readonly clientPart: ClientPartToKeep;
     /**
      * @summary `serverPart`.
+     * @description
+     * 
+     * Optional estimate and accrued quantity and cost. The server need not
+     * supply any of them.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.7.
+     * 
      * @public
      * @readonly
      */

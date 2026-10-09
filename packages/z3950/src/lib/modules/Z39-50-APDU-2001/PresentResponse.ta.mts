@@ -15,7 +15,14 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
 /**
  * @summary PresentResponse
  * @description
- * 
+ *
+ * Last segment of an aggregate Present response, and the terminating
+ * response of the Present operation. If no Segment requests were
+ * sent, this message alone is a simple Present response.
+ * `presentStatus` refers to the whole aggregate, not only this
+ * message. `numberOfRecordsReturned` and `nextResultSetPosition`
+ * likewise cover the aggregate. §3.2.3, §3.2.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,36 +42,74 @@ export
 class PresentResponse {
     /**
      * @summary `referenceId`.
+     * @description
+     *
+     * The reference-id of the Present operation. Include the same
+     * value when the request included one; omit it when the request
+     * omitted it. §3.4.
+     *
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `numberOfRecordsReturned`.
+     * @description
+     *
+     * Total number of records in the aggregate Present response, not
+     * only in this message. §3.2.3.1.9.
+     *
      * @public
      * @readonly
      */
     readonly numberOfRecordsReturned: INTEGER;
     /**
      * @summary `nextResultSetPosition`.
+     * @description
+     *
+     * M+1, where M is the result-set position of the last record
+     * included in the aggregate response. Zero when M is the position
+     * of the last result-set item. §3.2.3.1.9.
+     *
      * @public
      * @readonly
      */
     readonly nextResultSetPosition: INTEGER;
     /**
      * @summary `presentStatus`.
+     * @description
+     *
+     * Mandatory. Same values as Present-status on a Search response.
+     * Refers to the aggregate Present response. §3.2.3.1.10,
+     * §3.2.2.1.11.
+     *
      * @public
      * @readonly
      */
     readonly presentStatus: PresentStatus;
     /**
      * @summary `records`.
+     * @description
+     *
+     * Response records, or, when level-2 segmentation is in effect, a
+     * final fragment followed by zero or more response records. If
+     * this operation sent no Segment requests, this may instead be one
+     * or more non-surrogate diagnostics (exactly one when version 2 is
+     * in force) saying why the request cannot be processed. Positions
+     * are ascending; gaps occur only when `additionalRanges` was
+     * requested, and then they match those gaps. §3.2.3.1.8.
+     *
      * @public
      * @readonly
      */
     readonly records: OPTIONAL<Records>;
     /**
      * @summary `otherInfo`.
+     * @description
+     *
+     * Additional information not specified by the standard. Version 3
+     * only. §3.2.3.1.11.
+     *
      * @public
      * @readonly
      */

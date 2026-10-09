@@ -12,6 +12,23 @@ import { ProximityOperator, _decode_ProximityOperator, _encode_ProximityOperator
  * @summary Operator
  * @description
  * 
+ * Operator applied to the two operands most recently pushed while evaluating a
+ * type-1 or type-101 query (ANSI/NISO Z39.50-2003 §3.7.1). `and` is the
+ * intersection of S1 and S2, `or` is their union, and `and-not` is the part of
+ * S1 absent from S2.
+ * 
+ * `prox` is the proximity test in §3.7.2. When both operands are
+ * attribute-plus-term, the result is the subset of (S1 AND S2) for which the
+ * test holds. Otherwise the server must support the extended result set model
+ * for proximity, or the query is in error. Support of proximity between two
+ * terms does not require that model (§3.7.2.2).
+ * 
+ * When version 2 is in force, a type-1 query uses `and`, `or`, or `and-not`.
+ * `prox` is allowed in version 2 only on a type-101 query, and in version 3 it
+ * may occur in type-1. A version-2 type-1 query that includes `prox` may be
+ * treated as a protocol error (§3.7, §4.4.2.2.3). Support of type-1 does not
+ * include any particular operator.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

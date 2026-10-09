@@ -12,6 +12,11 @@ import { SimpleElement, _decode_SimpleElement, _encode_SimpleElement } from "../
  * @summary ElementRequest_compositeElement_elementList
  * @description
  * 
+ * How a composite names its parts (ANSI/NISO Z39.50-2003, ASN1.13, RET.3.1.2).
+ * `primitives` is one or more element set names; the composite is their union,
+ * and each chosen element is a simple request at occurrence 1. `specs` lists
+ * simple elements explicitly.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

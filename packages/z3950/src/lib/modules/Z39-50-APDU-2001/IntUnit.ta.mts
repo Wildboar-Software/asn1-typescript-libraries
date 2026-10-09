@@ -13,6 +13,11 @@ import { Unit, _decode_Unit, _encode_Unit } from "../Z39-50-APDU-2001/Unit.ta.mj
  * @summary IntUnit
  * @description
  * 
+ * An integer together with the unit in which it is expressed (ANSI/NISO
+ * Z39.50-2003 §4.1, comment 6). Used when a value and a unit are supplied as a
+ * pair, including a version-3 search term and an extended-services retention
+ * period.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,22 @@ export
 class IntUnit {
     /**
      * @summary `value`.
+     * @description
+     * 
+     * Magnitude, interpreted in `unitUsed` (ANSI/NISO Z39.50-2003 §4.1, comment
+     * 6).
+     * 
      * @public
      * @readonly
      */
     readonly value: INTEGER;
     /**
      * @summary `unitUsed`.
+     * @description
+     * 
+     * Unit that applies to `value`. A unit without a value uses `Unit` alone
+     * (ANSI/NISO Z39.50-2003 §4.1, comment 6).
+     * 
      * @public
      * @readonly
      */

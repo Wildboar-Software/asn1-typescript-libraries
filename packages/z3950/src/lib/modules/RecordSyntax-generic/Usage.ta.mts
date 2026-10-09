@@ -13,6 +13,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary Usage
  * @description
  * 
+ * Redistribution rule for one element (ANSI/NISO Z39.50-2003, RET.3.2.3,
+ * ASN1.6). TagSet-M `recordUsage` and `restriction` are the record-level
+ * analogues (TAG.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +36,21 @@ export
 class Usage {
     /**
      * @summary `type_`.
+     * @description
+     * 
+     * 1 if the element is freely redistributable. 2 if the restriction is a
+     * statement. 3 if the restriction is a pointer to a license (ASN1.6).
      * @public
      * @readonly
      */
     readonly type_: Usage_type;
     /**
      * @summary `restriction`.
+     * @description
+     * 
+     * Present when the element is not freely redistributable. A statement when
+     * the usage code is 2, or a license pointer when the code is 3 (ASN1.6,
+     * RET.3.2.3).
      * @public
      * @readonly
      */

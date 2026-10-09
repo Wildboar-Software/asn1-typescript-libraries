@@ -10,6 +10,12 @@ import { SuppliedRecords, _decode_SuppliedRecords, _encode_SuppliedRecords } fro
  * @summary ClientPartNotToKeep
  * @description
  * 
+ * The records the client supplies for the update. Not retained as
+ * submitted. The task package instead carries a server structure per
+ * record.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,6 +14,9 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary OccurrenceByAttributes_Item
  * @description
  * 
+ * Occurrence information for one attribute combination on a Scan term
+ * (ANSI/NISO Z39.50-2003 §3.2.8.1.7).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,18 +41,34 @@ export
 class OccurrenceByAttributes_Item {
     /**
      * @summary `attributes`.
+     * @description
+     * 
+     * Attributes this occurrence information describes (ANSI/NISO Z39.50-2003
+     * §3.2.8.1.7).
+     * 
      * @public
      * @readonly
      */
     readonly attributes: AttributeList;
     /**
      * @summary `occurrences`.
+     * @description
+     * 
+     * Record count for those attributes, either one total or a breakdown by
+     * database. The count may be omitted entirely (ANSI/NISO Z39.50-2003
+     * §3.2.8.1.7).
+     * 
      * @public
      * @readonly
      */
     readonly occurrences: OPTIONAL<OccurrenceByAttributes_Item_occurrences>;
     /**
      * @summary `otherOccurInfo`.
+     * @description
+     * 
+     * Further occurrence information. The standard does not specify its
+     * contents (ANSI/NISO Z39.50-2003 §4.1).
+     * 
      * @public
      * @readonly
      */

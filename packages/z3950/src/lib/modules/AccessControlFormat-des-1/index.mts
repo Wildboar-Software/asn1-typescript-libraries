@@ -1,3 +1,9 @@
+/**
+ * @module
+ * @description
+ * Access-control format des-1 `{Z39-50-accessControl 2}` (ANSI/NISO Z39.50-2003
+ * appendix ACC, ASN1.9.2, §3.2.5).
+ */
 export type {
     DES_RN_Object,
 } from "./DES-RN-Object.ta.mjs";

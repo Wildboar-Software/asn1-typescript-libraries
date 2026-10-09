@@ -12,6 +12,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DatabaseInfo_recordCount
  * @description
  * 
+ * Record count for a database, and whether it is exact. `actualNumber` is the
+ * accurate count. `approxNumber` is an estimate. ANSI/NISO Z39.50-2003
+ * §3.2.10.3.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

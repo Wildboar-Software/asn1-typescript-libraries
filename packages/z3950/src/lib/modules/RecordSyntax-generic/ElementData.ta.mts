@@ -20,6 +20,27 @@ import { TaggedElement, _decode_TaggedElement, _encode_TaggedElement } from "../
  * @summary ElementData
  * @description
  * 
+ * Contents of a GRS-1 node (ANSI/NISO Z39.50-2003, RET.3.2.1.2, RET.3.2.2,
+ * REC.3.1, ASN1.6).
+ * 
+ * Data alternatives are `octets`, `numeric`, `date`, `ext`, `string`,
+ * `trueOrFalse`, `oid`, and `intUnit`. An applied variant on the tagged element
+ * may further describe that data.
+ * 
+ * `string` always uses the InternationalString tag. Under version 2 the
+ * repertoire collapses to VisibleString, but the tag stays InternationalString.
+ * VisibleString (tag 26) is not used.
+ * 
+ * Embed a MARC record in `ext`, as an EXTERNAL whose object identifier is the
+ * MARC format (MARC21 is `1.2.840.10003.5.10`). Use `ext` even when an applied
+ * variant also names the format (REC.3.1).
+ * 
+ * `elementNotThere` means the element was requested but is absent.
+ * `elementEmpty` means it is present and empty. `noDataRequested` means a
+ * variant request asked for no data, usually so metadata can come back alone.
+ * `diagnostic` is a failure for this element. `subtree` is the child list of a
+ * non-leaf; GRS-1 recurses (RET.3.2.1.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,6 +12,23 @@ import { ExportSpecification_taskPackage, _decode_ExportSpecification_taskPackag
  * @summary ExportSpecification
  * @description
  * 
+ * Establishes an export specification the server can later invoke, more
+ * than once and with several invocations at the same time, via Export
+ * Invocation. The specification names a delivery destination and the
+ * composition of the records to deliver (one or more result-set records).
+ * Delivery may be fax, electronic mail, file transfer, or a
+ * server-supported printer; the destination may be a printer or another
+ * device.
+ * 
+ * Nothing the client sends is discarded, and the server adds no
+ * service-specific parameters: `notToKeep` and `serverPart` are empty.
+ * `toKeep` and `clientPart` are the specification. On modify, supplied
+ * values replace the corresponding package values; an omitted optional
+ * parameter is left unchanged. Package name, permissions, and task status
+ * are on the ES operation.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.6, EXT.2, §3.2.9.1.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Permissions_Item_allowableFunctions_Item
  * @description
  * 
+ * One operation another user may perform on a task package (ANSI/NISO
+ * Z39.50-2003 §3.2.9.3). Invoke allows that user to reference the package from
+ * another extended service, such as a periodic query that uses a saved query.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +31,10 @@ type Permissions_Item_allowableFunctions_Item = INTEGER;
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_delete_
+ * @description
+ * 
+ * The user may delete the task package (ANSI/NISO Z39.50-2003 §3.2.9.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -35,6 +43,11 @@ const Permissions_Item_allowableFunctions_Item_delete_: Permissions_Item_allowab
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_delete_
+ * @description
+ * 
+ * Short name for `Permissions_Item_allowableFunctions_Item_delete_`. May delete
+ * the package (§3.2.9.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -43,6 +56,10 @@ const delete_: Permissions_Item_allowableFunctions_Item = Permissions_Item_allow
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_modifyContents
+ * @description
+ * 
+ * The user may modify the package contents (ANSI/NISO Z39.50-2003 §3.2.9.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -51,6 +68,11 @@ const Permissions_Item_allowableFunctions_Item_modifyContents: Permissions_Item_
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_modifyContents
+ * @description
+ * 
+ * Short name for `Permissions_Item_allowableFunctions_Item_modifyContents`. May
+ * modify contents (§3.2.9.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -59,6 +81,10 @@ const modifyContents: Permissions_Item_allowableFunctions_Item = Permissions_Ite
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_modifyPermissions
+ * @description
+ * 
+ * The user may replace the permissions list (ANSI/NISO Z39.50-2003 §3.2.9.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -67,6 +93,11 @@ const Permissions_Item_allowableFunctions_Item_modifyPermissions: Permissions_It
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_modifyPermissions
+ * @description
+ * 
+ * Short name for `Permissions_Item_allowableFunctions_Item_modifyPermissions`.
+ * May change permissions (§3.2.9.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -75,6 +106,10 @@ const modifyPermissions: Permissions_Item_allowableFunctions_Item = Permissions_
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_present
+ * @description
+ * 
+ * The user may retrieve the package (ANSI/NISO Z39.50-2003 §3.2.9.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -83,6 +118,11 @@ const Permissions_Item_allowableFunctions_Item_present: Permissions_Item_allowab
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_present
+ * @description
+ * 
+ * Short name for `Permissions_Item_allowableFunctions_Item_present`. May
+ * retrieve the package (§3.2.9.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -91,6 +131,11 @@ const present: Permissions_Item_allowableFunctions_Item = Permissions_Item_allow
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_invoke
+ * @description
+ * 
+ * The user may invoke the package from another extended service (ANSI/NISO
+ * Z39.50-2003 §3.2.9.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -99,6 +144,11 @@ const Permissions_Item_allowableFunctions_Item_invoke: Permissions_Item_allowabl
 
 /**
  * @summary Permissions_Item_allowableFunctions_Item_invoke
+ * @description
+ * 
+ * Short name for `Permissions_Item_allowableFunctions_Item_invoke`. May invoke
+ * the package (§3.2.9.3).
+ * 
  * @constant
  * @type {number}
  */

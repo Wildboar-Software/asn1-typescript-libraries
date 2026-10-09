@@ -16,7 +16,17 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
 /**
  * @summary Close
  * @description
- * 
+ *
+ * Close service message. Request and response are the same APDU.
+ * Version 3 only. Either client or server may send it. All active
+ * operations end at once. The sender waits for a Close response,
+ * discards intervening messages, and treats the Z-association as
+ * closed. The receiver does the same after sending its response. If
+ * both sides send Close at the same time, each treats the peer
+ * message as the response. After Close is sent or received, no
+ * operation may start. A later Init may open another Z-association.
+ * §3.2.11.1, §3.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,36 +51,74 @@ export
 class Close {
     /**
      * @summary `referenceId`.
+     * @description
+     *
+     * Close is not part of an operation. The client may include or
+     * omit this on a request or a response. The server should omit it
+     * on a Close request. On a response to a request that included
+     * one, the server may echo that value or omit the parameter. If
+     * the request omitted it, the server should omit it. §3.2.11.1.5,
+     * §3.4.
+     *
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `closeReason`.
+     * @description
+     *
+     * Why this side is closing the Z-association. When the message is
+     * sent as a response, `responseToPeer` may be used. §3.2.11.1.1.
+     *
      * @public
      * @readonly
      */
     readonly closeReason: CloseReason;
     /**
      * @summary `diagnosticInformation`.
+     * @description
+     *
+     * Optional text from the server, with further diagnostic
+     * information. The client does not send this parameter.
+     * §3.2.11.1.2.
+     *
      * @public
      * @readonly
      */
     readonly diagnosticInformation: OPTIONAL<InternationalString>;
     /**
      * @summary `resourceReportFormat`.
+     * @description
+     *
+     * Client only, and only on a Close request. Asks the server to
+     * include a resource report in the response. The server may
+     * include or omit a report either way. §3.2.11.1.3.
+     *
      * @public
      * @readonly
      */
     readonly resourceReportFormat: OPTIONAL<ResourceReportId>;
     /**
      * @summary `resourceReport`.
+     * @description
+     *
+     * Server only. On a Close request the server may include a
+     * resource report on its own. On a Close response it may include
+     * one on its own or because the client sent
+     * `resourceReportFormat`. §3.2.11.1.3, §3.2.6.1.1.
+     *
      * @public
      * @readonly
      */
     readonly resourceReport: OPTIONAL<ResourceReport>;
     /**
      * @summary `otherInfo`.
+     * @description
+     *
+     * Additional information not specified by the standard.
+     * §3.2.11.1.4.
+     *
      * @public
      * @readonly
      */

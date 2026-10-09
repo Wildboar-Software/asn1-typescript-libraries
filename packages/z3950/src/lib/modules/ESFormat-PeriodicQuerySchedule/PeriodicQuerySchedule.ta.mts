@@ -12,6 +12,32 @@ import { PeriodicQuerySchedule_taskPackage, _decode_PeriodicQuerySchedule_taskPa
  * @summary PeriodicQuerySchedule
  * @description
  * 
+ * Asks the server to establish a schedule that runs a saved query
+ * repeatedly, and optionally to activate that schedule on creation or on a
+ * later modify. Each run may post results to a persistent result set,
+ * export them, or both, and may alert a destination.
+ * 
+ * Client parameters that stay in the package (`toKeep` / `clientPart`) are
+ * the active flag, result-set disposition, alert destination, and export
+ * parameters, plus database names only when option bit 20 is not in
+ * effect. The query, the client's suggested period and expiration, and the
+ * result-set package name are not kept as submitted (`notToKeep`); the
+ * server part holds the query it will run, the period and expiration it
+ * settled on, and invocation statistics. On modify, supplied values
+ * replace the corresponding package values; an omitted optional parameter
+ * is left unchanged. A modify may carry as little as the active flag.
+ * 
+ * If option bit 20 was negotiated, this definition applies; otherwise the
+ * Z39.50-1995 definition applies. Under bit 20, database names must not
+ * occur in the client part to keep, must not occur in the client part not
+ * to keep unless the bit is set, and must occur in the server part. They
+ * must not occur in the server part when the bit is not set. Additional
+ * search information must not occur in the client part not to keep or in
+ * the server part unless bit 20 is set. Last-query time and last-result
+ * number are optional if bit 20 is set and mandatory otherwise.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.3, EXT.2, §3.2.1.1.3, §3.2.9.1.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

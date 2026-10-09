@@ -14,6 +14,12 @@ import { DBName, _decode_DBName, _encode_DBName } from "../Z39-50-OCLC-UserInfor
  * @summary OCLC_UserInformation
  * @description
  * 
+ * Locally registered user information `{z39-50-userInformation local(1000)
+ * oclc(17) oclc-1(1)}`, that is `{Z39-50 10 1000 17 1}` (OID.6). 10 is the
+ * user-information object class, 1000 marks a local object, 17 is the
+ * implementor index, and 1 is this object. ANSI/NISO Z39.50-2003 does not
+ * define this format or its fields.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +37,40 @@ export
 class OCLC_UserInformation {
     /**
      * @summary `motd`.
+     * @description
+     * 
+     * Z39.50-2003 does not define this field (OID.6).
+     * 
      * @public
      * @readonly
      */
     readonly motd: OPTIONAL<VisibleString>;
     /**
      * @summary `dblist`.
+     * @description
+     * 
+     * Z39.50-2003 does not define this field (OID.6).
+     * 
      * @public
      * @readonly
      */
     readonly dblist: OPTIONAL<DBName[]>;
     /**
      * @summary `failReason`.
+     * @description
+     * 
+     * Z39.50-2003 does not define this field (OID.6).
+     * 
      * @public
      * @readonly
      */
     readonly failReason: OPTIONAL<BOOLEAN>;
     /**
      * @summary `text`.
+     * @description
+     * 
+     * Z39.50-2003 does not define this field (OID.6).
+     * 
      * @public
      * @readonly
      */

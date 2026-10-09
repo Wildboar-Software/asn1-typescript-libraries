@@ -13,6 +13,9 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary PromptId_enummeratedPrompt
  * @description
  * 
+ * A registered prompt id (ASN1.9.1). The standard spells the name
+ * enummeratedPrompt.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +39,21 @@ export
 class PromptId_enummeratedPrompt {
     /**
      * @summary `type_`.
+     * @description
+     * 
+     * Which registered prompt. Copyright and newPassword have further rules;
+     * the others are names only.
+     * 
      * @public
      * @readonly
      */
     readonly type_: PromptId_enummeratedPrompt_type;
     /**
      * @summary `suggestedString`.
+     * @description
+     * 
+     * ASN1.9.1 includes this and does not say how the client uses it.
+     * 
      * @public
      * @readonly
      */

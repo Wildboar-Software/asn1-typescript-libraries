@@ -15,6 +15,10 @@ import { AttributeDescription, _decode_AttributeDescription, _encode_AttributeDe
  * @summary AttributeType
  * @description
  * 
+ * One attribute type in an attribute-set description: name, description,
+ * integer type value, and the attributes of that type. ANSI/NISO Z39.50-2003
+ * §3.2.10.3.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +36,34 @@ export
 class AttributeType {
     /**
      * @summary `name`.
+     * @description
+     * Name of this attribute type. ANSI/NISO Z39.50-2003 §3.2.10.3.6.
      * @public
      * @readonly
      */
     readonly name: OPTIONAL<InternationalString>;
     /**
      * @summary `description`.
+     * @description
+     * Human-readable description of this attribute type. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.6.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `attributeType`.
+     * @description
+     * Integer value of the attribute type. ANSI/NISO Z39.50-2003 §3.2.10.3.6.
      * @public
      * @readonly
      */
     readonly attributeType: INTEGER;
     /**
      * @summary `attributeValues`.
+     * @description
+     * Attributes of this type: name, description, value, and equivalent
+     * attributes. ANSI/NISO Z39.50-2003 §3.2.10.3.6.
      * @public
      * @readonly
      */

@@ -13,6 +13,12 @@ import { Costs_otherCharges_Item, _decode_Costs_otherCharges_Item, _encode_Costs
  * @summary Costs
  * @description
  * 
+ * Machine-readable charges for a server or database. The category prose
+ * requires connect, present, and search costs, each also in human-readable
+ * text, and does not name which component is the present charge. REC.1 comments
+ * label connect, time-based, per-record, per-search, and subscription charges.
+ * ANSI/NISO Z39.50-2003 §3.2.10.3.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,36 +41,50 @@ export
 class Costs {
     /**
      * @summary `connectCharge`.
+     * @description
+     * Per-connection charge. REC.1.
      * @public
      * @readonly
      */
     readonly connectCharge: OPTIONAL<Charge>;
     /**
      * @summary `connectTime`.
+     * @description
+     * Time-based charge. REC.1.
      * @public
      * @readonly
      */
     readonly connectTime: OPTIONAL<Charge>;
     /**
      * @summary `displayCharge`.
+     * @description
+     * Per-record charge. REC.1. The standard does not say that this is the
+     * present charge named in §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly displayCharge: OPTIONAL<Charge>;
     /**
      * @summary `searchCharge`.
+     * @description
+     * Per-search charge. REC.1; ANSI/NISO Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly searchCharge: OPTIONAL<Charge>;
     /**
      * @summary `subscriptCharge`.
+     * @description
+     * Subscription charge. REC.1.
      * @public
      * @readonly
      */
     readonly subscriptCharge: OPTIONAL<Charge>;
     /**
      * @summary `otherCharges`.
+     * @description
+     * Charges other than the named ones. Each element says what the charge is
+     * for. REC.1.
      * @public
      * @readonly
      */

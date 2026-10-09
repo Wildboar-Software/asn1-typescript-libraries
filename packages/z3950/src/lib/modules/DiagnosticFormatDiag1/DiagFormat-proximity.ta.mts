@@ -14,6 +14,24 @@ import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../
  * @summary DiagFormat_proximity
  * @description
  * 
+ * Proximity failure (diag-1).
+ * 
+ * - resultSets: proximity between result sets is not supported (DIAG.1
+ *   condition 129).
+ * - badSet: the named result set is illegal in a proximity search (condition
+ *   130). Addinfo is the result set name.
+ * - relation: proximity relation not supported (condition 131). The diag-1
+ *   comment restricts the value to 1 through 6 and does not define those six
+ *   values.
+ * - unit: proximity unit code not supported (condition 132).
+ * - distance: that distance is not supported (condition 202). Addinfo is the
+ *   distance.
+ * - attributes: proximity is not supported with this attribute combination
+ *   (condition 201). DIAG.1 addinfo is the list.
+ * - ordered: the ordered flag is not supported (condition 203).
+ * - exclusion: the exclusion flag is not supported. DIAG.1 has no condition
+ *   with this wording.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

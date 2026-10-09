@@ -11,6 +11,25 @@ import { DRNType, _decode_DRNType, _encode_DRNType } from "../AccessControlForma
  * @summary DES_RN_Object
  * @description
  * 
+ * Access-control formats are carried in securityChallenge and
+ * securityChallengeResponse, and in Init idAuthentication (appendix ACC). The
+ * server challenges the client, either for one active operation or for the
+ * Z-association (§3.2.5). Under concurrent operations a reference-id ties the
+ * challenge to that operation; omitting it means the association. Under serial
+ * operations the challenge belongs to the active operation and carries its
+ * reference-id. The client must answer while access control is in effect. The
+ * server may challenge again before the terminating response, and may suspend
+ * the operation until the answer arrives. If the answer is acceptable,
+ * processing continues as if there had been no challenge. If it is not, the
+ * operation may end in an access-control failure. During Init the server may
+ * reject the association or refuse one proposed capability. During Search or
+ * Present it may substitute the surrogate diagnostic that the security
+ * challenge failed and the record was not included.
+ * 
+ * des-1 `{Z39-50-accessControl 2}` carries a random number, and optionally a
+ * user id and a salt, as either the challenge or the response (ASN1.9.2). The
+ * standard does not describe the DES computation.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

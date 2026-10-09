@@ -13,6 +13,11 @@ import { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNot
  * @summary PersistentResultSet_esRequest
  * @description
  * 
+ * Client parameters of a Persistent Result Set request. Nothing is
+ * retained in a client part. On delete, the not-to-keep part is omitted.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.1, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,27 @@ export
 class PersistentResultSet_esRequest {
     /**
      * @summary `toKeep`.
+     * @description
+     * 
+     * Empty. This service retains no client-supplied parameter in the task
+     * package.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.1, EXT.2.
+     * 
      * @public
      * @readonly
      */
     readonly toKeep: NULL;
     /**
      * @summary `notToKeep`.
+     * @description
+     * 
+     * The transient result set to save, and on modify whether to replace or
+     * append. Mandatory when the function is create or modify. Not included
+     * when the function is delete.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.1.
+     * 
      * @public
      * @readonly
      */

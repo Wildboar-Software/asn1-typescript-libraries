@@ -14,6 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Order
  * @description
  * 
+ * Order of sibling elements that share a tag, under a non-leaf (ANSI/NISO
+ * Z39.50-2003, RET.3.2.3.2, ASN1.6). The codes match tagSet-M `elementOrdering`
+ * unless the schema overrides them. That tagSet-M element applies throughout
+ * the record; this applies only under the node that carries it.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,24 @@ export
 class Order {
     /**
      * @summary `ascending`.
+     * @description
+     * 
+     * True means the values are monotonically non-decreasing. False means
+     * monotonically non-increasing (ASN1.6).
      * @public
      * @readonly
      */
     readonly ascending: BOOLEAN;
     /**
      * @summary `order`.
+     * @description
+     * 
+     * Same codes as tagSet-M `elementOrdering` (TAG.1, RET.3.4.1.2.3). The
+     * schema may override them. 1: normal consumption, such as pages or frames.
+     * 2: chronological. 3: semantic size, such as increasingly comprehensive
+     * abstracts. 4: generality, such as zoom-out. 5: explicitly unordered. 6:
+     * undefined, or by private agreement. 7: singleton; never more than one
+     * occurrence.
      * @public
      * @readonly
      */

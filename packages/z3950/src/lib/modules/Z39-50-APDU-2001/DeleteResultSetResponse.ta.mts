@@ -16,7 +16,11 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
 /**
  * @summary DeleteResultSetResponse
  * @description
- * 
+ *
+ * Server report of a Delete operation. `deleteOperationStatus` is
+ * success or failure-3 through failure-9. Per-set statuses use a
+ * different subset of `DeleteSetStatus`. §3.2.4.1, §3.2.4.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,42 +41,84 @@ export
 class DeleteResultSetResponse {
     /**
      * @summary `referenceId`.
+     * @description
+     *
+     * The reference-id from the Delete request. Include the same value
+     * when the request included one; omit it when the request omitted
+     * it. §3.4.
+     *
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `deleteOperationStatus`.
+     * @description
+     *
+     * Status of the delete request: success, or failure-3 through
+     * failure-9. Failure-7 and failure-8 occur only on bulk-delete.
+     * §3.2.4.1.3, §3.2.4.1.4.
+     *
      * @public
      * @readonly
      */
     readonly deleteOperationStatus: DeleteSetStatus;
     /**
      * @summary `deleteListStatuses`.
+     * @description
+     *
+     * Present when the request function was `list`. The same result
+     * sets as the request, each with a status of success, failure-1
+     * through failure-6, or failure-10. §3.2.4.1.4.
+     *
      * @public
      * @readonly
      */
     readonly deleteListStatuses: OPTIONAL<ListStatuses>;
     /**
      * @summary `numberNotDeleted`.
+     * @description
+     *
+     * How many result sets were not deleted. Occurs only when the
+     * function was bulk-delete and `deleteOperationStatus` is
+     * failure-8. §3.2.4.1.5.
+     *
      * @public
      * @readonly
      */
     readonly numberNotDeleted: OPTIONAL<INTEGER>;
     /**
      * @summary `bulkStatuses`.
+     * @description
+     *
+     * Statuses for result sets not deleted on a bulk-delete whose
+     * operation status is failure-8. The server need not status every
+     * such set; it may stop at the first failure and return one
+     * status. Statuses that do not fit in this message may be
+     * discarded. §3.2.4.1.5.
+     *
      * @public
      * @readonly
      */
     readonly bulkStatuses: OPTIONAL<ListStatuses>;
     /**
      * @summary `deleteMessage`.
+     * @description
+     *
+     * Optional text. The status table allows it with failure-3
+     * (system problem at the server). §3.2.4.1.6, §3.2.4.1.4.
+     *
      * @public
      * @readonly
      */
     readonly deleteMessage: OPTIONAL<InternationalString>;
     /**
      * @summary `otherInfo`.
+     * @description
+     *
+     * Additional information not specified by the standard. Version 3
+     * only. §3.2.4.1.7.
+     *
      * @public
      * @readonly
      */

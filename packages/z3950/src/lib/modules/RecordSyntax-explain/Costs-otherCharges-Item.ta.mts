@@ -13,6 +13,9 @@ import { Charge, _decode_Charge, _encode_Charge } from "../RecordSyntax-explain/
  * @summary Costs_otherCharges_Item
  * @description
  * 
+ * One charge that is not connect, time, per-record, per-search, or
+ * subscription. REC.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +31,16 @@ export
 class Costs_otherCharges_Item {
     /**
      * @summary `forWhat`.
+     * @description
+     * Human-readable statement of what this charge is for. REC.1.
      * @public
      * @readonly
      */
     readonly forWhat: HumanString;
     /**
      * @summary `charge`.
+     * @description
+     * The charge. REC.1.
      * @public
      * @readonly
      */

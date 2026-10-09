@@ -12,6 +12,31 @@ import { PersistentResultSet_taskPackage, _decode_PersistentResultSet_taskPackag
  * @summary PersistentResultSet
  * @description
  * 
+ * Creates a persistent result set from a transient result set on the
+ * current Z-association. The transient result set is unchanged and remains
+ * available. The persistent result set is kept for later use on this or
+ * another Z-association, and is removed by deleting the task package (when
+ * the user has delete permission).
+ * 
+ * A Present of this package, using the ResultSetName element
+ * specification, returns a server-supplied transient result-set name. That
+ * name may be used on this Z-association anywhere a result-set name may be
+ * used. The server includes that name only when the package is presented,
+ * not on an ES response, and omits it when the element set says to. How
+ * the server saves records is not specified: a later restore need not
+ * match the original result set. The saved records are not in the ES
+ * database and cannot be presented or modified directly; a client restores
+ * the result set, and may then modify and save it again.
+ * 
+ * No client parameter is retained: `toKeep` and `clientPart` are empty.
+ * `notToKeep` is the transient result set name and, on modify, whether to
+ * replace or append. The server part is the presented name and the record
+ * count. On modify, the named result set replaces or is appended to the
+ * persistent result set, and only if the user has modify-contents
+ * permission.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.1, EXT.2, §3.2.9.1.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

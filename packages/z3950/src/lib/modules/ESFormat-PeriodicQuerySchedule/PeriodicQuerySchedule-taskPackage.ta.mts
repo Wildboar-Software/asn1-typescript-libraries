@@ -13,6 +13,12 @@ import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-
  * @summary PeriodicQuerySchedule_taskPackage
  * @description
  * 
+ * Periodic Query Schedule task package: retained client parameters and the
+ * server's actual query, period, expiration, result-set package, and
+ * invocation counts.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.3, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,25 @@ export
 class PeriodicQuerySchedule_taskPackage {
     /**
      * @summary `clientPart`.
+     * @description
+     * 
+     * Retained client parameters, including whether the schedule is active.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly clientPart: ClientPartToKeep;
     /**
      * @summary `serverPart`.
+     * @description
+     * 
+     * The query, period, and expiration the server is using, the persistent
+     * result-set package, and when the query last ran.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */

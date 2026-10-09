@@ -13,6 +13,9 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary DiagFormat_dbUnavail_why
  * @description
  * 
+ * Why a database is unavailable (diag-1). The reason, when present, selects
+ * DIAG.1 condition 235, 109, 29, or 236.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +36,21 @@ export
 class DiagFormat_dbUnavail_why {
     /**
      * @summary `reasonCode`.
+     * @description
+     * 
+     * doesNotExist (235), existsButUnavail (109), locked (29), or accessDenied
+     * (236). Omitted if only a message is sent.
+     * 
      * @public
      * @readonly
      */
     readonly reasonCode: OPTIONAL<DiagFormat_dbUnavail_why_reasonCode>;
     /**
      * @summary `message`.
+     * @description
+     * 
+     * Optional text. The diag-1 definition does not constrain it.
+     * 
      * @public
      * @readonly
      */

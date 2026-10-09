@@ -14,6 +14,10 @@ import { Variant_triples_Item_value, _decode_Variant_triples_Item_value, _encode
  * @summary Variant_triples_Item
  * @description
  * 
+ * One variant specifier (ANSI/NISO Z39.50-2003, Appendix VAR, RET.2.3, ASN1.6).
+ * Class and type are integers from the variant set. The value's datatype is the
+ * one that set defines for that type.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,24 +47,45 @@ export
 class Variant_triples_Item {
     /**
      * @summary `variantSetId`.
+     * @description
+     * 
+     * Variant set that interprets this triple. If omitted, the set on the
+     * enclosing variant applies. If that is omitted too, the default is used
+     * (ASN1.6).
      * @public
      * @readonly
      */
     readonly variantSetId: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `class_`.
+     * @description
+     * 
+     * Class in the variant set. Variant-1 (RET.3.3.1): 1 variant id; 2
+     * body-part type; 3 formatting; 4 language and character set; 5 piece; 6
+     * metadata requested (request only); 7 metadata returned (applied or
+     * supported variant); 8 highlighting; 9 miscellaneous.
      * @public
      * @readonly
      */
     readonly class_: INTEGER;
     /**
      * @summary `type_`.
+     * @description
+     * 
+     * Type within the class. Appendix VAR gives the integer, the meaning, and
+     * the datatype for variant-1. Some types are legal only on a request, or
+     * only on an applied variant.
      * @public
      * @readonly
      */
     readonly type_: INTEGER;
     /**
      * @summary `value`.
+     * @description
+     * 
+     * Value for this class and type. Use the alternative whose datatype
+     * Appendix VAR assigns. `unit` and `valueAndUnit` are context-tagged; the
+     * other alternatives are not (ASN1.6).
      * @public
      * @readonly
      */

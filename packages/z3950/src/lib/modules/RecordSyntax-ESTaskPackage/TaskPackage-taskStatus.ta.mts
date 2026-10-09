@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TaskPackage_taskStatus
  * @description
  * 
+ * Progress of an extended-services task (ANSI/NISO Z39.50-2003, §3.2.9.1.10,
+ * §3.2.9.5). It is stored on the task package and is not a parameter of the ES
+ * response. It is not specific to the service type, and complete does not mean
+ * success. The client learns progress by retrieving the package again.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +31,12 @@ type TaskPackage_taskStatus = INTEGER;
 
 /**
  * @summary TaskPackage_taskStatus_pending
+ * @description
+ * 
+ * The task passed a preliminary check and is queued (§3.2.9.5). This state can
+ * be skipped when the server starts the task immediately. If the request fails
+ * that check, the server may create no package; if it does, the status is
+ * aborted rather than pending.
  * @constant
  * @type {number}
  */
@@ -34,6 +45,9 @@ const TaskPackage_taskStatus_pending: TaskPackage_taskStatus = 0; /* LONG_NAMED_
 
 /**
  * @summary TaskPackage_taskStatus_pending
+ * @description
+ * 
+ * Short name for `TaskPackage_taskStatus_pending`: the task is queued.
  * @constant
  * @type {number}
  */
@@ -42,6 +56,10 @@ const pending: TaskPackage_taskStatus = TaskPackage_taskStatus_pending; /* SHORT
 
 /**
  * @summary TaskPackage_taskStatus_active
+ * @description
+ * 
+ * The task has started. That may happen before the ES response is sent
+ * (§3.2.9.5).
  * @constant
  * @type {number}
  */
@@ -50,6 +68,9 @@ const TaskPackage_taskStatus_active: TaskPackage_taskStatus = 1; /* LONG_NAMED_I
 
 /**
  * @summary TaskPackage_taskStatus_active
+ * @description
+ * 
+ * Short name for `TaskPackage_taskStatus_active`: the task has started.
  * @constant
  * @type {number}
  */
@@ -58,6 +79,10 @@ const active: TaskPackage_taskStatus = TaskPackage_taskStatus_active; /* SHORT_N
 
 /**
  * @summary TaskPackage_taskStatus_complete
+ * @description
+ * 
+ * The task has finished. This does not say that it finished successfully
+ * (§3.2.9.5).
  * @constant
  * @type {number}
  */
@@ -66,6 +91,9 @@ const TaskPackage_taskStatus_complete: TaskPackage_taskStatus = 2; /* LONG_NAMED
 
 /**
  * @summary TaskPackage_taskStatus_complete
+ * @description
+ * 
+ * Short name for `TaskPackage_taskStatus_complete`: the task has finished.
  * @constant
  * @type {number}
  */
@@ -74,6 +102,10 @@ const complete: TaskPackage_taskStatus = TaskPackage_taskStatus_complete; /* SHO
 
 /**
  * @summary TaskPackage_taskStatus_aborted
+ * @description
+ * 
+ * The task was aborted, or it failed the preliminary check and a package was
+ * still created (§3.2.9.5).
  * @constant
  * @type {number}
  */
@@ -82,6 +114,9 @@ const TaskPackage_taskStatus_aborted: TaskPackage_taskStatus = 3; /* LONG_NAMED_
 
 /**
  * @summary TaskPackage_taskStatus_aborted
+ * @description
+ * 
+ * Short name for `TaskPackage_taskStatus_aborted`: the task was aborted.
  * @constant
  * @type {number}
  */

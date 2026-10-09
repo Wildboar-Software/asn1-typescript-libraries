@@ -12,6 +12,24 @@ import { ExportInvocation_taskPackage, _decode_ExportInvocation_taskPackage, _en
  * @summary ExportInvocation
  * @description
  * 
+ * Invokes an export specification so the server can deliver one or more
+ * result-set records. The client supplies the specification, or the name
+ * of one established by an Export Specification task, the transient result
+ * set, which records, and how many copies. The server may report quantity
+ * and cost as the export proceeds.
+ * 
+ * On an ES request this is Task-specific-parameters (`esRequest`). As a
+ * task package (`taskPackage`) it is returned on an ES response or
+ * retrieved from the extended-services database. `toKeep` is what the
+ * client asks to retain and is the same structure as `clientPart`;
+ * `notToKeep` is not retained. Server progress is `serverPart`. Package
+ * name, permissions, and task status belong to the ES operation, not to
+ * this package. On modify, values present in the request replace the
+ * corresponding package values; an omitted optional parameter is left
+ * unchanged.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.7, EXT.2, §3.2.9.1.1, §3.1.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

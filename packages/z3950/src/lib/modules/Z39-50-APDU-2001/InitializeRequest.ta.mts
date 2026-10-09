@@ -17,7 +17,15 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
 /**
  * @summary InitializeRequest
  * @description
- * 
+ *
+ * Client request of the Init service. Proposes initialization
+ * parameters. The values in the server response are the ones in
+ * effect for the Z-association. If the server accepts and the client
+ * will not use those values, the client may Close and try Init
+ * again. If the server rejects, the client may try Init again. No
+ * other operation may start while Init is in progress.
+ * §3.2.1.1, §3.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,66 +51,153 @@ export
 class InitializeRequest {
     /**
      * @summary `referenceId`.
+     * @description
+     *
+     * Client-assigned identifier of this Init operation. Optional on
+     * Init: concurrent operations is not in effect until negotiation
+     * finishes. If omitted under serial operations, the id is null and
+     * the response omits it too. Opaque octets; no meaning beyond
+     * identifying the operation. §3.2.1.1.9, §3.4, §3.5.
+     *
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `protocolVersion`.
+     * @description
+     *
+     * Every protocol version this client supports. The highest version
+     * also set by the server is in force. Bits above version 3 are
+     * ignored. Versions 1 and 2 are the same; a version-2 system
+     * should also set version 1. If no version is shared, the server
+     * should reject the association. §3.2.1.1.1, comment 9.
+     *
      * @public
      * @readonly
      */
     readonly protocolVersion: ProtocolVersion;
     /**
      * @summary `options`.
+     * @description
+     *
+     * Client proposal for each capability. The server response, not
+     * this proposal, decides what is in effect. For a client-initiated
+     * operation, if the client sets the bit off the server must set it
+     * off too. §3.2.1.1.3.
+     *
      * @public
      * @readonly
      */
     readonly options: Options;
     /**
      * @summary `preferredMessageSize`.
+     * @description
+     *
+     * Proposed preferred message size, in bytes. The server response
+     * value overrides the proposal. Must be less than or equal to
+     * `exceptionalRecordSize`. Both sizes zero means no preference.
+     * Message size is the sum of the response records, excluding
+     * protocol control information, and need not be enforced exactly.
+     * §3.2.1.1.4.
+     *
      * @public
      * @readonly
      */
     readonly preferredMessageSize: INTEGER;
     /**
      * @summary `exceptionalRecordSize`.
+     * @description
+     *
+     * Proposed maximum size, in bytes, of one record on Present when
+     * a single record larger than the preferred message size is
+     * requested. Must be greater than or equal to
+     * `preferredMessageSize`. Equal values mean that special case
+     * will not apply. The server response overrides the proposal.
+     * §3.2.1.1.4.
+     *
      * @public
      * @readonly
      */
     readonly exceptionalRecordSize: INTEGER;
     /**
      * @summary `idAuthentication`.
+     * @description
+     *
+     * Optional credential the server uses to decide whether this
+     * client may communicate with it. Whether it is supplied, and the
+     * value, are agreed outside this standard. The ASN.1 keeps `ANY`
+     * for older versions. Comment 8 recommends a choice of open
+     * `VisibleString`, `idPass` (`groupId`, `userId`, `password`),
+     * `anonymous`, or `other` as `EXTERNAL` (access-control formats
+     * may be used). §3.2.1.1.2, comment 8.
+     *
      * @public
      * @readonly
      */
     readonly idAuthentication: OPTIONAL<_Element>;
     /**
      * @summary `implementationId`.
+     * @description
+     *
+     * Optional identifier of this client implementation, unique within
+     * the client system. For implementers to tell implementations
+     * apart. No effect on the protocol. §3.2.1.1.6.
+     *
      * @public
      * @readonly
      */
     readonly implementationId: OPTIONAL<InternationalString>;
     /**
      * @summary `implementationName`.
+     * @description
+     *
+     * Optional descriptive name of the client implementation. For
+     * implementers. No effect on the protocol. §3.2.1.1.6.
+     *
      * @public
      * @readonly
      */
     readonly implementationName: OPTIONAL<InternationalString>;
     /**
      * @summary `implementationVersion`.
+     * @description
+     *
+     * Optional descriptive version of the client implementation. For
+     * implementers. No effect on the protocol. §3.2.1.1.6.
+     *
      * @public
      * @readonly
      */
     readonly implementationVersion: OPTIONAL<InternationalString>;
     /**
      * @summary `userInformationField`.
+     * @description
+     *
+     * Additional information not specified by this standard. During
+     * Init, externally defined information should be carried here,
+     * with object identifier UserInfo-1
+     * `{Z39-50-userInfoFormat 3}`, which has the same structure as
+     * `OtherInformation`. Use this instead of `otherInfo` while the
+     * version in force is still unknown. A diagnostic belongs in
+     * `externallyDefinedInfo`. A negotiation record is
+     * `externallyDefinedInfo` or `oid`, identified by its object
+     * identifier. §3.2.1.1.7, USR.2, USR.3.
+     *
      * @public
      * @readonly
      */
     readonly userInformationField: OPTIONAL<EXTERNAL>;
     /**
      * @summary `otherInfo`.
+     * @description
+     *
+     * Additional information not specified by the standard. Valid only
+     * when version 3 is in force. Use on Init, especially on the
+     * request, is not recommended, because version 2 or 3 is not yet
+     * known. The same information can be sent in
+     * `userInformationField` as UserInfo-1. §3.2.1.1.8, USR.2.
+     *
      * @public
      * @readonly
      */

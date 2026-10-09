@@ -13,6 +13,9 @@ import { DiagFormat_dbUnavail_why, _decode_DiagFormat_dbUnavail_why, _encode_Dia
  * @summary DiagFormat_dbUnavail
  * @description
  * 
+ * A named database cannot be used (diag-1). Matches DIAG.1 conditions 29, 109,
+ * 235, and 236, whose addinfo is the database name.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +40,20 @@ export
 class DiagFormat_dbUnavail {
     /**
      * @summary `db`.
+     * @description
+     * 
+     * Database name. This is the addinfo of the matching DIAG.1 condition.
+     * 
      * @public
      * @readonly
      */
     readonly db: DatabaseName;
     /**
      * @summary `why`.
+     * @description
+     * 
+     * Why the database cannot be used, and an optional message.
+     * 
      * @public
      * @readonly
      */

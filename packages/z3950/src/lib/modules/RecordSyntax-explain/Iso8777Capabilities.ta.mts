@@ -13,6 +13,12 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * @summary Iso8777Capabilities
  * @description
  * 
+ * What the server or database supports for a type-2 query. Type-2 is the ISO
+ * 8777 query, specified in ISO 8777. A client need not send it. A server should
+ * expect it but need not support it, and must not treat an unsupported type-2
+ * query as a protocol error. ANSI/NISO Z39.50-2003 §3.2.2.1.1, §4.4.2.2.4;
+ * REC.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,18 @@ export
 class Iso8777Capabilities {
     /**
      * @summary `searchKeys`.
+     * @description
+     * Field names that may be searched. REC.1.
      * @public
      * @readonly
      */
     readonly searchKeys: SearchKey[];
     /**
      * @summary `restrictions`.
+     * @description
+     * Human-readable restrictions. REC.1 says that omitting this means
+     * supported, not specifying units. The standard does not define those
+     * units.
      * @public
      * @readonly
      */

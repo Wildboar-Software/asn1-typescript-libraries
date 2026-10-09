@@ -13,6 +13,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagFormat_segmentation
  * @description
  * 
+ * The record will not fit the requested segmentation (diag-1).
+ * 
+ * - segmentCount: the server cannot guarantee the record will fit in the
+ *   specified segments. It suggests retrieving again without max-segment-count
+ *   (DIAG.1 condition 217).
+ * - segmentSize: the record cannot be split so the largest fragment fits in
+ *   max-segment-size. The value is the smallest acceptable max-segment-size, in
+ *   bytes (condition 242).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

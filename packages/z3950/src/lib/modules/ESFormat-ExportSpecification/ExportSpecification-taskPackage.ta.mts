@@ -13,6 +13,11 @@ import { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } 
  * @summary ExportSpecification_taskPackage
  * @description
  * 
+ * Export Specification task package. The server keeps the client's
+ * specification and supplies no service-specific server part.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.6, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,24 @@ export
 class ExportSpecification_taskPackage {
     /**
      * @summary `clientPart`.
+     * @description
+     * 
+     * The composition and destination the client supplied.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.6.
+     * 
      * @public
      * @readonly
      */
     readonly clientPart: ClientPartToKeep;
     /**
      * @summary `serverPart`.
+     * @description
+     * 
+     * Empty. The server supplies no service-specific parameter for this task.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.6, EXT.2.
+     * 
      * @public
      * @readonly
      */

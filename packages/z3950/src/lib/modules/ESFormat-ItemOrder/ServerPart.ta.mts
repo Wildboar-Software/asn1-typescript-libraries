@@ -13,6 +13,12 @@ import { ServerPart_auxiliaryStatus, _decode_ServerPart_auxiliaryStatus, _encode
  * @summary ServerPart
  * @description
  * 
+ * What the server records for an item order: the item request it stored, a
+ * status or error report defined outside this standard, and an optional
+ * auxiliary status.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +45,46 @@ export
 class ServerPart {
     /**
      * @summary `itemRequest`.
+     * @description
+     * 
+     * If the client sent an external item request (for example an interlibrary
+     * loan request), the server copies it here, and may modify it first. If
+     * the client sent only a result-set item, the server may construct a
+     * corresponding item request; if it does not, the requested item is not
+     * identified in the task package. When this value is an ILL-Request APDU,
+     * use OID 1.0.10161.2.1. Contents of an ILL APDU are defined by ISO 10161,
+     * not by Z39.50.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly itemRequest: OPTIONAL<EXTERNAL>;
     /**
      * @summary `statusOrErrorReport`.
+     * @description
+     * 
+     * Status or error report supplied by the server. Its definition is
+     * external to this standard and may be based on the StatusOrErrorReport
+     * APDU of the ILL protocol. When it is that ILL APDU, use OID
+     * 1.0.10161.2.1.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly statusOrErrorReport: OPTIONAL<EXTERNAL>;
     /**
      * @summary `auxiliaryStatus`.
+     * @description
+     * 
+     * Optional supplement to whatever status the status or error report
+     * carries. The standard names the values and does not define them further.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */

@@ -12,6 +12,12 @@ import { AttributeElement_attributeValue_complex, _decode_AttributeElement_attri
  * @summary AttributeElement_attributeValue
  * @description
  * 
+ * Value of one attribute (ANSI/NISO Z39.50-2003 §4.1). `numeric` is an integer
+ * from the attribute set. Version 2 must use `numeric`. `complex` supplies
+ * several values of this type, and optional semantic-action codes. Version 3
+ * provides `complex`; Class 1 prescribes it when a type repeats (Appendix Arch,
+ * ARCH 3.1.5.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

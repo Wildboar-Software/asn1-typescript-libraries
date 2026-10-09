@@ -12,7 +12,13 @@ import { DeleteSetStatus, _decode_DeleteSetStatus, _encode_DeleteSetStatus } fro
 /**
  * @summary ListStatuses_Item
  * @description
- * 
+ *
+ * One result set and the status of deleting it. On a list request the
+ * status may be success, failure-1 through failure-6, or failure-10.
+ * On bulk-delete failure-8, the server reports sets it did not
+ * delete and is not required to report every one. §3.2.4.1.4,
+ * §3.2.4.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,23 @@ export
 class ListStatuses_Item {
     /**
      * @summary `id`.
+     * @description
+     *
+     * Result set this status applies to. On a list Delete response,
+     * one of the names from the request. §3.2.4.1.4.
+     *
      * @public
      * @readonly
      */
     readonly id: ResultSetId;
     /**
      * @summary `status`.
+     * @description
+     *
+     * Per-set delete status. List responses use success, failure-1
+     * through failure-6, and failure-10. Failure-10 (result set in
+     * use) may be used only when version 3 is in force. §3.2.4.1.4.
+     *
      * @public
      * @readonly
      */

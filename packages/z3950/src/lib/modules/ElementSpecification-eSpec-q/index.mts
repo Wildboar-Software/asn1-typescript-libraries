@@ -1,3 +1,20 @@
+/**
+ * @module
+ * @description
+ * ASN.1 module for element specification format eSpec-q (ANSI/NISO Z39.50-2003,
+ * ESP.2, ASN1.14).
+ * 
+ * Object identifier `{Z39-50-elementSpec eSpec-q(3)}` on arc `{Z39-50 11}`
+ * (`1.2.840.10003.11.3`). Sent inside `compSpec` (§3.6.1). A value restrictor,
+ * in the form of a type-1 query (§3.7), limits which information is retrieved.
+ * An optional element selector (for example eSpec-2, or an element set name)
+ * then chooses elements. If the selector is omitted, the server chooses the
+ * element set.
+ * 
+ * The RPN here is narrower than a general type-1 query: the only operand is
+ * attributes plus term, and the only operators are and, or, and and-not.
+ */
+
 export {
     AttributesPlusTerm,
     _root_component_type_list_1_spec_for_AttributesPlusTerm,

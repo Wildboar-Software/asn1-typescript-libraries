@@ -11,6 +11,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary IconObject_Item_bodyType
  * @description
  * 
+ * How an icon body is labeled. `ianaType`, `z3950type`, and `otherType` are the
+ * three labels REC.1 names. The standard does not define the string
+ * vocabularies.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

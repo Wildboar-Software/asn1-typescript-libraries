@@ -1,3 +1,11 @@
+/**
+ * @module
+ * @description
+ * Persistent Query extended service (ANSI/NISO Z39.50-2003 EXT.1.2).
+ * 
+ * Task-specific parameters for saving a Z39.50 query: what the client
+ * sends on the ES request, and the task package the server keeps.
+ */
 export type {
     ClientPartNotToKeep,
 } from "./ClientPartNotToKeep.ta.mjs";

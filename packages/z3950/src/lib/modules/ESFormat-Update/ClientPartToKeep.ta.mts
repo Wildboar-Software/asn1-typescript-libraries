@@ -14,6 +14,11 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary ClientPartToKeep
  * @description
  * 
+ * Update parameters kept in the task package. Action, database name, and
+ * schema are specified once and apply to every record in the package.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +41,53 @@ export
 class ClientPartToKeep {
     /**
      * @summary `action`.
+     * @description
+     * 
+     * `recordInsert`, `recordReplace`, `recordDelete`, or `elementUpdate`. The
+     * same action applies to every record in this package.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */
     readonly action: ClientPartToKeep_action;
     /**
      * @summary `databaseName`.
+     * @description
+     * 
+     * Database to which the action applies. One database for every record in
+     * this package.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */
     readonly databaseName: InternationalString;
     /**
      * @summary `schema`.
+     * @description
+     * 
+     * Database schema that applies to this update. Optional. One schema for
+     * every record in this package. The standard does not define the schema
+     * further here.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */
     readonly schema: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `elementSetName`.
+     * @description
+     * 
+     * Which elements of the updated records to include in the task package. If
+     * omitted, updated records are not included in the task package.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */

@@ -13,6 +13,9 @@ import { Specification, _decode_Specification, _encode_Specification } from "../
  * @summary CompSpec_dbSpecific_Item
  * @description
  * 
+ * Composition to apply to records from one database when a Present request
+ * includes a composition specification (ANSI/NISO Z39.50-2003 §3.6.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +31,21 @@ export
 class CompSpec_dbSpecific_Item {
     /**
      * @summary `db`.
+     * @description
+     * 
+     * Database whose records use `spec` (ANSI/NISO Z39.50-2003 §3.6.1).
+     * 
      * @public
      * @readonly
      */
     readonly db: DatabaseName;
     /**
      * @summary `spec`.
+     * @description
+     * 
+     * Schema and element specification for records from `db` (ANSI/NISO
+     * Z39.50-2003 §3.6.1).
+     * 
      * @public
      * @readonly
      */

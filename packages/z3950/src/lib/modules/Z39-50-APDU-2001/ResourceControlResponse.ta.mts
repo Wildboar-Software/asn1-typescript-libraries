@@ -14,6 +14,11 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary ResourceControlResponse
  * @description
  * 
+ * Client answer to a Resource-control request that required a response
+ * (ANSI/NISO Z39.50-2003 §3.2.6.1). It says whether the server should continue
+ * the operation. If the client says to stop, the later terminating response may
+ * still show that the operation completed.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +36,48 @@ export
 class ResourceControlResponse {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Reference-id of the Resource-control request, when that request belonged
+     * to an operation (ANSI/NISO Z39.50-2003 §3.2.6.1, §3.4).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `continueFlag`.
+     * @description
+     * 
+     * Whether the server should continue the operation. Valid only when the
+     * request belonged to an operation (ANSI/NISO Z39.50-2003 §3.2.6.1.6).
+     * 
      * @public
      * @readonly
      */
     readonly continueFlag: BOOLEAN;
     /**
      * @summary `resultSetWanted`.
+     * @description
+     * 
+     * Whether the server should keep a partial Search result set. Valid only
+     * during Search, when partial results are subset or interim, and
+     * `continueFlag` says not to continue. Yes means keep the set for later
+     * Present requests. No means the server may delete it; result-set status
+     * none on the Search response means it did (ANSI/NISO Z39.50-2003
+     * §3.2.6.1.7).
+     * 
      * @public
      * @readonly
      */
     readonly resultSetWanted: OPTIONAL<BOOLEAN>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. Version 3 only
+     * (ANSI/NISO Z39.50-2003 §3.2.6.1.8).
+     * 
      * @public
      * @readonly
      */

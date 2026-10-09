@@ -13,6 +13,10 @@ import { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../Ele
  * @summary ValueRestrictor
  * @description
  * 
+ * The type-1 query inside eSpec-q (ANSI/NISO Z39.50-2003, ESP.2, §3.7,
+ * ASN1.14). The RPN in this module allows only an attributes-plus-term operand,
+ * and only the operators and, or, and and-not.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +31,19 @@ export
 class ValueRestrictor {
     /**
      * @summary `attributeSetId`.
+     * @description
+     * 
+     * Attribute set for the restrictor, in the same role as `attributeSet` on a
+     * type-1 `RPNQuery` (§3.7, ESP.2).
      * @public
      * @readonly
      */
     readonly attributeSetId: OBJECT_IDENTIFIER;
     /**
      * @summary `nodeSelectionCriteria`.
+     * @description
+     * 
+     * RPN that decides which nodes the restrictor keeps (ESP.2, ASN1.14).
      * @public
      * @readonly
      */

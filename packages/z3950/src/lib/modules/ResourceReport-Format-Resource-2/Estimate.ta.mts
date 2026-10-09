@@ -13,6 +13,10 @@ import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/I
  * @summary Estimate
  * @description
  * 
+ * One resource estimate in resource-2 (ASN1.8). Numeric categories 1-16 are the
+ * resource-1 categories; Z39.50-2003 does not list them (see Z39.50-1995
+ * appendix RSC.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +37,23 @@ export
 class Estimate {
     /**
      * @summary `type_`.
+     * @description
+     * 
+     * Resource category. Numbers 1-16 match resource-1. Any other number or a
+     * string is an extension. This standard does not define the sixteen names.
+     * 
      * @public
      * @readonly
      */
     readonly type_: StringOrNumeric;
     /**
      * @summary `value`.
+     * @description
+     * 
+     * The amount. For currency, unitSystem is `z3950` (case insensitive),
+     * unitType is `iso4217-1990` (case insensitive), and the unit is an ISO
+     * 4217-1990 currency code.
+     * 
      * @public
      * @readonly
      */

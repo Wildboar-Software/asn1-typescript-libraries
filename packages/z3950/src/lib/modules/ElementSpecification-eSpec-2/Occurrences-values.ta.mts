@@ -13,6 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Occurrences_values
  * @description
  * 
+ * A contiguous run of occurrences (ANSI/NISO Z39.50-2003, ASN1.13). Start alone
+ * requests that one occurrence. Start 5 and a count of 6 requests occurrences 5
+ * through 10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +35,20 @@ export
 class Occurrences_values {
     /**
      * @summary `start`.
+     * @description
+     * 
+     * Occurrence at which the run begins. If the count is omitted, only this
+     * occurrence is requested (ASN1.13).
      * @public
      * @readonly
      */
     readonly start: INTEGER;
     /**
      * @summary `howMany`.
+     * @description
+     * 
+     * How many occurrences to return, starting at `start`. Start 5 and a count
+     * of 6 means occurrences 5 through 10 (ASN1.13).
      * @public
      * @readonly
      */

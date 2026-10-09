@@ -1,3 +1,13 @@
+/**
+ * @module
+ * @description
+ * Periodic Query Schedule extended service (ANSI/NISO Z39.50-2003
+ * EXT.1.3).
+ * 
+ * Task-specific parameters for a schedule that reruns a query. Option bit
+ * 20 (§3.2.1.1.3) selects this definition over the Z39.50-1995 rules for
+ * where database names and related parameters occur.
+ */
 export type {
     ClientPartNotToKeep_querySpec,
 } from "./ClientPartNotToKeep-querySpec.ta.mjs";

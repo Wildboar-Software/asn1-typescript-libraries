@@ -1,3 +1,25 @@
+/**
+ * @module
+ * @description
+ * ASN.1 module `RecordSyntax-generic`: Generic Record Syntax 1 (ANSI/NISO
+ * Z39.50-2003, REC.3, RET.3.2, ASN1.6).
+ * 
+ * Object identifier `{Z39-50-recordSyntax grs-1(105)}` on arc `{Z39-50 5}`
+ * (`1.2.840.10003.5.105`). The client sends that OID as the preferred record
+ * syntax, or inside `compSpec`. The server applies the syntax to the abstract
+ * database record produced by the schema and the element specification (§3.6,
+ * §3.6.3). If the requested syntax cannot be supplied, the server uses a
+ * diagnostic such as 238, 239, 227, or 1070, and does not substitute another
+ * syntax when a preferred syntax was given.
+ * 
+ * The record is a tree of tagged elements, or several trees when the abstract
+ * record has no root. Tag type 1 is tagSet-M, 2 is tagSet-G, and 3 is a local
+ * tag; from 4 the schema binds the type (Appendix TAG). Variants use variant-1,
+ * `{Z39-50-variantSet 1}` (`1.2.840.10003.12.1`), unless a set id or tagSet-M
+ * says otherwise (Appendix VAR). Embed MARC with `ElementData` alternative
+ * `ext` and the MARC format OID (REC.3.1).
+ */
+
 export type {
     ElementData,
 } from "./ElementData.ta.mjs";

@@ -1,3 +1,9 @@
+/**
+ * @module
+ * @description
+ * User-information format SearchResult-1 `{Z39-50-userInfoFormat 1}` (ANSI/NISO
+ * Z39.50-2003 USR.1, ASN1.11).
+ */
 export {
     QueryExpression_term,
     _root_component_type_list_1_spec_for_QueryExpression_term,

@@ -1,3 +1,11 @@
+/**
+ * @module
+ * @description
+ * Export Specification extended service (ANSI/NISO Z39.50-2003 EXT.1.6).
+ * 
+ * Task-specific parameters for establishing an export specification that a
+ * later Export Invocation task can run.
+ */
 export {
     ClientPartToKeep,
     _root_component_type_list_1_spec_for_ClientPartToKeep,

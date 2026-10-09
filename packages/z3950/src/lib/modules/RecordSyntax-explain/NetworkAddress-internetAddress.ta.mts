@@ -12,6 +12,8 @@ import { InternationalString, _decode_InternationalString, _encode_International
 /**
  * @summary NetworkAddress_internetAddress
  * @description
+ * Internet host and port for the server, the address form named in the
+ * TargetInfo category. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -28,12 +30,16 @@ export
 class NetworkAddress_internetAddress {
     /**
      * @summary `hostAddress`.
+     * @description
+     * Internet address of the server. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly hostAddress: InternationalString;
     /**
      * @summary `port`.
+     * @description
+     * Port number. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */

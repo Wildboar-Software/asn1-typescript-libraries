@@ -18,6 +18,17 @@ import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/I
  * @summary Variant_triples_Item_value
  * @description
  * 
+ * Datatype of one variant specifier (ANSI/NISO Z39.50-2003, Appendix VAR,
+ * ASN1.6). Pick the alternative that matches the datatype for that class and
+ * type.
+ * 
+ * `null` is a real value for types that carry none, including a metadata
+ * request and "no data". `unit` is a unit with no magnitude, such as "size in
+ * pages". `valueAndUnit` is a magnitude and a unit, such as a cost or a page
+ * offset. `octets` covers a variant id, a highlight string, and a server token.
+ * `string` covers media types, language, and several formatting parameters.
+ * `oid` covers a body-part identifier, a character-set id, or an encoding id.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

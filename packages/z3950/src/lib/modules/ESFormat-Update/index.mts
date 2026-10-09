@@ -1,3 +1,12 @@
+/**
+ * @module
+ * @description
+ * Database Update extended service (ANSI/NISO Z39.50-2003 EXT.1.5).
+ * 
+ * Task-specific parameters for inserting, replacing, deleting, or updating
+ * records: what the client sends on the ES request, and the task package
+ * the server keeps.
+ */
 export type {
     ClientPartNotToKeep,
 } from "./ClientPartNotToKeep.ta.mjs";

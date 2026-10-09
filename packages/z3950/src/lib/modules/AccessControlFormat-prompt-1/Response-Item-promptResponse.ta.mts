@@ -15,6 +15,18 @@ import { Encryption, _decode_Encryption, _encode_Encryption } from "../AccessCon
  * @summary Response_Item_promptResponse
  * @description
  * 
+ * The user's answer to one prompt (ASN1.9.1).
+ * 
+ * - string: the answer text.
+ * - accept: acceptance. For a copyright prompt, acceptance means the user was
+ *   shown the statement and accepted the terms. Not legally binding; a
+ *   good-faith notice (comment 7). The standard does not define a false value.
+ * - acknowledge: acknowledgement. ASN1.9.1 does not define it beyond this
+ *   alternative.
+ * - diagnostic: a diagnostic instead of an answer. The standard does not say
+ *   which diagnostic set to use.
+ * - encrypted: the answer inside Encryption. No algorithm is named.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

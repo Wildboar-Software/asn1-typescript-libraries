@@ -1,3 +1,11 @@
+/**
+ * @module
+ * @description
+ * Persistent Result Set extended service (ANSI/NISO Z39.50-2003 EXT.1.1).
+ * 
+ * Task-specific parameters for saving a transient result set: what the
+ * client sends on the ES request, and the task package the server keeps.
+ */
 export type {
     ClientPartNotToKeep_replaceOrAppend,
 } from "./ClientPartNotToKeep-replaceOrAppend.ta.mjs";

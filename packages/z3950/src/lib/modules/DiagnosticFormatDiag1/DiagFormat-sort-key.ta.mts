@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagFormat_sort_key
  * @description
  * 
+ * Sort-key failure (diag-1): too many keys (DIAG.1 condition 211) or a
+ * duplicate key (212).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +28,10 @@ type DiagFormat_sort_key = INTEGER;
 
 /**
  * @summary DiagFormat_sort_key_tooMany
+ * @description
+ * 
+ * Too many sort keys (DIAG.1 condition 211). Addinfo is the number.
+ * 
  * @constant
  * @type {number}
  */
@@ -33,6 +40,10 @@ const DiagFormat_sort_key_tooMany: DiagFormat_sort_key = 1; /* LONG_NAMED_INTEGE
 
 /**
  * @summary DiagFormat_sort_key_tooMany
+ * @description
+ * 
+ * Too many sort keys (DIAG.1 condition 211). Addinfo is the number.
+ * 
  * @constant
  * @type {number}
  */
@@ -41,6 +52,10 @@ const tooMany: DiagFormat_sort_key = DiagFormat_sort_key_tooMany; /* SHORT_NAMED
 
 /**
  * @summary DiagFormat_sort_key_duplicate
+ * @description
+ * 
+ * Duplicate sort keys (DIAG.1 condition 212). Addinfo is the key.
+ * 
  * @constant
  * @type {number}
  */
@@ -49,6 +64,10 @@ const DiagFormat_sort_key_duplicate: DiagFormat_sort_key = 2; /* LONG_NAMED_INTE
 
 /**
  * @summary DiagFormat_sort_key_duplicate
+ * @description
+ * 
+ * Duplicate sort keys (DIAG.1 condition 212). Addinfo is the key.
+ * 
  * @constant
  * @type {number}
  */

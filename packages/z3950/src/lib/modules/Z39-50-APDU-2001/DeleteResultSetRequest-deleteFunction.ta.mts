@@ -9,7 +9,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DeleteResultSetRequest_deleteFunction
  * @description
- * 
+ *
+ * What the Delete request deletes. `list` names specific result sets.
+ * `all` is bulk-delete: every result set currently on the server that
+ * was created during this Z-association. §3.2.4.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +28,12 @@ type DeleteResultSetRequest_deleteFunction = INTEGER;
 
 /**
  * @summary DeleteResultSetRequest_deleteFunction_list
+ * @description
+ *
+ * Value 0. Delete the result sets named in `resultSetList`.
+ * `resultSetList` occurs if and only if this value is chosen.
+ * §3.2.4.1.1, §3.2.4.1.2.
+ *
  * @constant
  * @type {number}
  */
@@ -32,6 +42,11 @@ const DeleteResultSetRequest_deleteFunction_list: DeleteResultSetRequest_deleteF
 
 /**
  * @summary DeleteResultSetRequest_deleteFunction_list
+ * @description
+ *
+ * Short name for `DeleteResultSetRequest_deleteFunction_list`.
+ * Value 0: delete the named result sets. §3.2.4.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -40,6 +55,12 @@ const list: DeleteResultSetRequest_deleteFunction = DeleteResultSetRequest_delet
 
 /**
  * @summary DeleteResultSetRequest_deleteFunction_all
+ * @description
+ *
+ * Value 1. Bulk-delete: delete every result set currently on the
+ * server that was created during this Z-association. The service
+ * calls this function bulk-delete. §3.2.4.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -48,6 +69,12 @@ const DeleteResultSetRequest_deleteFunction_all: DeleteResultSetRequest_deleteFu
 
 /**
  * @summary DeleteResultSetRequest_deleteFunction_all
+ * @description
+ *
+ * Short name for `DeleteResultSetRequest_deleteFunction_all`.
+ * Value 1: bulk-delete every result set from this Z-association.
+ * §3.2.4.1.1.
+ *
  * @constant
  * @type {number}
  */

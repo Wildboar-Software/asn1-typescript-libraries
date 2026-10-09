@@ -1,3 +1,9 @@
+/**
+ * @module
+ * @description
+ * Access-control format krb-1 `{Z39-50-accessControl 3}` (ANSI/NISO Z39.50-2003
+ * appendix ACC, ASN1.9.3, §3.2.5).
+ */
 export type {
     KRBObject,
 } from "./KRBObject.ta.mjs";

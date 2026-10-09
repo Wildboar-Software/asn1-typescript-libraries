@@ -12,6 +12,15 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary PromptId
  * @description
  * 
+ * Correlates a prompt with its answer (ASN1.9.1 comments 1 and 6). The server
+ * sends an enumerated number or a non-enumerated string; the client returns the
+ * same value.
+ * 
+ * - enummeratedPrompt: one of the registered prompt ids (the standard spells it
+ *   with two m's), plus an optional suggested string.
+ * - nonEnumeratedPrompt: the prompt string. On a response to such a prompt,
+ *   echo the string from the challenge.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

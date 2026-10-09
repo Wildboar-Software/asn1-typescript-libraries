@@ -17,6 +17,11 @@ import { AttributeCombinations, _decode_AttributeCombinations, _encode_Attribute
 /**
  * @summary PerElementDetails
  * @description
+ * One element of a retrieval record, or of an element set. It is the
+ * per-element information of RetrievalRecordDetails and of ElementSetDetails.
+ * These details are the default mapping of schema elements into the record
+ * element; a client request that re-tags the record can change that mapping.
+ * ANSI/NISO Z39.50-2003 §3.2.10.3.11, §3.2.10.3.12; ASN.1 comment 8.
  * 
  * ### ASN.1 Definition:
  * 
@@ -53,96 +58,143 @@ export
 class PerElementDetails {
     /**
      * @summary `name`.
+     * @description
+     * Name of the element. If omitted, the record syntax's name for this
+     * element is appropriate. ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly name: OPTIONAL<InternationalString>;
     /**
      * @summary `recordTag`.
+     * @description
+     * Tag of the element in the retrieval record, if any. May be omitted when
+     * tags are inappropriate for the record syntax, or when the client can be
+     * expected to know the tag. ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly recordTag: OPTIONAL<RecordTag>;
     /**
      * @summary `schemaTags`.
+     * @description
+     * Schema elements whose information is combined to produce the data sent
+     * under the record tag. The contents text may describe that logic.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly schemaTags: OPTIONAL<Path[]>;
     /**
      * @summary `maxSize`.
+     * @description
+     * Maximum size of the element. ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly maxSize: OPTIONAL<INTEGER>;
     /**
      * @summary `minSize`.
+     * @description
+     * Minimum size of the element. ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly minSize: OPTIONAL<INTEGER>;
     /**
      * @summary `avgSize`.
+     * @description
+     * Average size of the element. ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly avgSize: OPTIONAL<INTEGER>;
     /**
      * @summary `fixedSize`.
+     * @description
+     * Size of the element when it is fixed length. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly fixedSize: OPTIONAL<INTEGER>;
     /**
      * @summary `repeatable`.
+     * @description
+     * Whether the element is repeatable. ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly repeatable: BOOLEAN;
     /**
      * @summary `required`.
+     * @description
+     * Whether the server will always supply the element. That is what
+     * `required` means here. ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly required: BOOLEAN;
     /**
      * @summary `description`.
+     * @description
+     * Description of the element, in human-readable text. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `contents`.
+     * @description
+     * Description of the element's contents, in human-readable text. It may
+     * describe how the listed schema elements are combined into the record tag.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly contents: OPTIONAL<HumanString>;
     /**
      * @summary `billingInfo`.
+     * @description
+     * Charging or billing issues for this element, in human-readable text.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly billingInfo: OPTIONAL<HumanString>;
     /**
      * @summary `restrictions`.
+     * @description
+     * Restrictions on use and access, such as copyright or proprietary limits,
+     * in human-readable text. ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly restrictions: OPTIONAL<HumanString>;
     /**
      * @summary `alternateNames`.
+     * @description
+     * Alternate names for this element. ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly alternateNames: OPTIONAL<InternationalString[]>;
     /**
      * @summary `genericNames`.
+     * @description
+     * Generic names for this element. For example, a geographicSubject element
+     * might also be under the generic name subject. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly genericNames: OPTIONAL<InternationalString[]>;
     /**
      * @summary `searchAccess`.
+     * @description
+     * Attribute combinations corresponding to this element. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */

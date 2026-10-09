@@ -13,6 +13,10 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
 /**
  * @summary PrivateCapabilities
  * @description
+ * Details of a privately defined query type (QueryTypeDetails alternative
+ * `private`, context tag 0). Query type-0 may be used only when the client and
+ * server have a prior agreement outside the standard. ANSI/NISO Z39.50-2003
+ * §3.2.2.1.1; Explain ASN.1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -34,18 +38,27 @@ export
 class PrivateCapabilities {
     /**
      * @summary `operators`.
+     * @description
+     * Operators of this private query. The standard does not define them beyond
+     * an operator string and an optional description. The list itself may be
+     * omitted. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */
     readonly operators: OPTIONAL<PrivateCapabilities_operators_Item[]>;
     /**
      * @summary `searchKeys`.
+     * @description
+     * Field names that can be searched. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */
     readonly searchKeys: OPTIONAL<SearchKey[]>;
     /**
      * @summary `description`.
+     * @description
+     * Human-readable description of the private query type. The standard does
+     * not say what it must contain. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */

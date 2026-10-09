@@ -12,6 +12,8 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
 /**
  * @summary ProximitySupport_unitsSupported_Item_private
  * @description
+ * A private proximity unit: a server-defined unit code and an optional
+ * human-readable description. ANSI/NISO Z39.50-2003 Explain ASN.1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -28,12 +30,18 @@ export
 class ProximitySupport_unitsSupported_Item_private {
     /**
      * @summary `unit`.
+     * @description
+     * Private proximity unit code. The standard does not assign these integers.
+     * ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */
     readonly unit: INTEGER;
     /**
      * @summary `description`.
+     * @description
+     * Optional human-readable description of the private unit. The standard
+     * does not say what it must contain. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */

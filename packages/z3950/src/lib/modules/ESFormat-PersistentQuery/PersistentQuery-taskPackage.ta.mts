@@ -13,6 +13,11 @@ import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-
  * @summary PersistentQuery_taskPackage
  * @description
  * 
+ * Persistent Query task package: optional retained database names and
+ * additional search information, and the actual query the server stored.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.2, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,27 @@ export
 class PersistentQuery_taskPackage {
     /**
      * @summary `clientPart`.
+     * @description
+     * 
+     * Database names and additional search information the client supplied,
+     * when present.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.2.
+     * 
      * @public
      * @readonly
      */
     readonly clientPart: OPTIONAL<ClientPartToKeep>;
     /**
      * @summary `serverPart`.
+     * @description
+     * 
+     * The actual query. If the client sent a query, this is that query. If the
+     * client named another persistent-query package, this is a copy of that
+     * package's query.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.2.
+     * 
      * @public
      * @readonly
      */

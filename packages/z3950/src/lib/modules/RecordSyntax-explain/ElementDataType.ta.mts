@@ -12,6 +12,12 @@ import { ElementInfo, _decode_ElementInfo, _encode_ElementInfo } from "../Record
  * @summary ElementDataType
  * @description
  * 
+ * Datatype of an element in a schema or record-syntax abstract structure.
+ * `primitive` is one of octetString, numeric, date, external, string,
+ * trueOrFalse, oid, intUnit, empty, or noneOfTheAbove (see the element's
+ * description). `structured` is a nested list of elements. If ElementInfo omits
+ * the datatype, it is not specified. REC.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

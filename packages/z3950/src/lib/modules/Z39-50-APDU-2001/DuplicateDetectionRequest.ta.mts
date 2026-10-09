@@ -19,6 +19,11 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary DuplicateDetectionRequest
  * @description
  * 
+ * Client request that the server merge one or more transient result sets of
+ * this Z-association, partition them into duplicate classes, and build one
+ * output result set (ANSI/NISO Z39.50-2003 §3.2.7.2). The service is negotiated
+ * (§4.4.2.2.13).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,54 +49,112 @@ export
 class DuplicateDetectionRequest {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Client-assigned identifier of this operation. Mandatory when concurrent
+     * operations is in effect. When serial operations is in effect it may be
+     * omitted and is then null (ANSI/NISO Z39.50-2003 §3.4, §3.5).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `inputResultSetIds`.
+     * @description
+     * 
+     * Transient result sets of this Z-association to merge (ANSI/NISO
+     * Z39.50-2003 §3.2.7.2.1).
+     * 
      * @public
      * @readonly
      */
     readonly inputResultSetIds: InternationalString[];
     /**
      * @summary `outputResultSetName`.
+     * @description
+     * 
+     * Name of the single result set the server builds from the merged inputs
+     * (ANSI/NISO Z39.50-2003 §3.2.7.2.1).
+     * 
      * @public
      * @readonly
      */
     readonly outputResultSetName: InternationalString;
     /**
      * @summary `applicablePortionOfRecord`.
+     * @description
+     * 
+     * Which part of a record is compared, for example one or more fields. If
+     * omitted, the server chooses. The EXTERNAL's contents are not defined by
+     * this APDU (ANSI/NISO Z39.50-2003 §3.2.7.2.2).
+     * 
      * @public
      * @readonly
      */
     readonly applicablePortionOfRecord: OPTIONAL<EXTERNAL>;
     /**
      * @summary `duplicateDetectionCriteria`.
+     * @description
+     * 
+     * Tests that decide which items are duplicates. If omitted, the server
+     * chooses its own tests. The criteria partition an intermediate set so that
+     * each input item is in exactly one class and two items share a class if
+     * and only if they are duplicates (ANSI/NISO Z39.50-2003 §3.2.7.2.3).
+     * 
      * @public
      * @readonly
      */
     readonly duplicateDetectionCriteria: OPTIONAL<DuplicateDetectionCriterion[]>;
     /**
      * @summary `clustering`.
+     * @description
+     * 
+     * True means one output item per equivalence class, with duplicates kept as
+     * metadata (clusters). False means a separate item for each retained
+     * record, grouped by class (individual entries). It may be omitted only
+     * when retention is number-of-entries with value 1, which keeps the
+     * representative record only (ANSI/NISO Z39.50-2003 §3.2.7.2.4).
+     * 
      * @public
      * @readonly
      */
     readonly clustering: OPTIONAL<BOOLEAN>;
     /**
      * @summary `retentionCriteria`.
+     * @description
+     * 
+     * Which records from each equivalence class are kept (ANSI/NISO Z39.50-2003
+     * §3.2.7.2.5). One or more criteria may be supplied. The list may be
+     * extended; values 5 through 100 are reserved.
+     * 
      * @public
      * @readonly
      */
     readonly retentionCriteria: RetentionCriterion[];
     /**
      * @summary `sortCriteria`.
+     * @description
+     * 
+     * How to choose the representative record and how to order records inside a
+     * class. Order among classes is unaffected. If clustering is clusters, the
+     * result-set order is unaffected, though the criteria still choose the
+     * representative and the order of duplicates inside a cluster record. When
+     * several criteria are present, the first is major and is the only one that
+     * selects the representative (ANSI/NISO Z39.50-2003 §3.2.7.2.6).
+     * 
      * @public
      * @readonly
      */
     readonly sortCriteria: OPTIONAL<SortCriterion[]>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. The peer should
+     * expect it and need not interpret it (ANSI/NISO Z39.50-2003 §3.2.7.2.10,
+     * §4.4.2.2.21).
+     * 
      * @public
      * @readonly
      */

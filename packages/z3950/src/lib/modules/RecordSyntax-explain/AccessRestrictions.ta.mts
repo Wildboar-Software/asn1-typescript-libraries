@@ -10,6 +10,12 @@ import { AccessRestrictions_Item, _decode_AccessRestrictions_Item, _encode_Acces
  * @summary AccessRestrictions
  * @description
  * 
+ * Access restrictions for the server or a database. Each element is one
+ * restriction: the kind of access, optional human-readable text, and optional
+ * access-challenge object identifiers. The standard does not define the
+ * access-type enumerants beyond their names. ANSI/NISO Z39.50-2003 §3.2.10.3.1,
+ * §3.2.10.3.2; REC.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

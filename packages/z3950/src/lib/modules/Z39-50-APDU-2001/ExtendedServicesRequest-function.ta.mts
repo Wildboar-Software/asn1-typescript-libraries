@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ExtendedServicesRequest_function
  * @description
  * 
+ * What the ES request does to a task package (ANSI/NISO Z39.50-2003
+ * §3.2.9.1.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +28,11 @@ type ExtendedServicesRequest_function = INTEGER;
 
 /**
  * @summary ExtendedServicesRequest_function_create
+ * @description
+ * 
+ * Create a task package, named by package-name when that parameter is present
+ * (ANSI/NISO Z39.50-2003 §3.2.9.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -33,6 +41,11 @@ const ExtendedServicesRequest_function_create: ExtendedServicesRequest_function 
 
 /**
  * @summary ExtendedServicesRequest_function_create
+ * @description
+ * 
+ * Short name for `ExtendedServicesRequest_function_create`. Create a task
+ * package (§3.2.9.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -41,6 +54,12 @@ const create: ExtendedServicesRequest_function = ExtendedServicesRequest_functio
 
 /**
  * @summary ExtendedServicesRequest_function_delete_
+ * @description
+ * 
+ * Delete the named task package. If the task has not started, it should not be
+ * started. If it is active, the server should terminate it or refuse the
+ * request (ANSI/NISO Z39.50-2003 §3.2.9.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -49,6 +68,11 @@ const ExtendedServicesRequest_function_delete_: ExtendedServicesRequest_function
 
 /**
  * @summary ExtendedServicesRequest_function_delete_
+ * @description
+ * 
+ * Short name for `ExtendedServicesRequest_function_delete_`. Delete the named
+ * task package (§3.2.9.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -57,6 +81,12 @@ const delete_: ExtendedServicesRequest_function = ExtendedServicesRequest_functi
 
 /**
  * @summary ExtendedServicesRequest_function_modify
+ * @description
+ * 
+ * Replace task-package parameters with the values in this request. An omitted
+ * optional parameter is left unchanged, so restoring a default means sending
+ * that default (ANSI/NISO Z39.50-2003 §3.2.9.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -65,6 +95,11 @@ const ExtendedServicesRequest_function_modify: ExtendedServicesRequest_function 
 
 /**
  * @summary ExtendedServicesRequest_function_modify
+ * @description
+ * 
+ * Short name for `ExtendedServicesRequest_function_modify`. Replace parameters
+ * on the named package (§3.2.9.1.1).
+ * 
  * @constant
  * @type {number}
  */

@@ -12,6 +12,16 @@ import { DiagFormat, _decode_DiagFormat, _encode_DiagFormat } from "../Diagnosti
  * @summary DiagnosticFormat_Item_diagnostic
  * @description
  * 
+ * Either a DefaultDiagFormat record or structured diag-1 (DIAG.1).
+ * 
+ * `defaultDiagRec` is the version-2 form, still used in version 3:
+ * diagnostic-set OID, condition, and addinfo. For general-diagnostics
+ * `{Z39-50-diagnostic 1}`, the condition codes are listed on DiagnosticFormat.
+ * 
+ * `explicitDiagnostic` is format diag-1 `{z39-50-diagnostic diag-1(2)}`, an
+ * EXTERNAL diagnostic format rather than a diagnostic set. Version 3 may use
+ * that form.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

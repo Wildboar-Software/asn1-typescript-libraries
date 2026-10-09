@@ -19,6 +19,11 @@ import { TagPath, _decode_TagPath, _encode_TagPath } from "../RecordSyntax-gener
  * @summary ElementMetaData
  * @description
  * 
+ * Metadata on a GRS-1 node (ANSI/NISO Z39.50-2003, RET.3.2.3, ASN1.6). It may
+ * accompany the data, or stand alone when a variant request asked for no data.
+ * It is not defined for an absent element, an empty element, or a diagnostic.
+ * Ordering of children is the one case defined for a non-leaf.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,60 +53,103 @@ export
 class ElementMetaData {
     /**
      * @summary `seriesOrder`.
+     * @description
+     * 
+     * How immediate children that share a tag are ordered. Only on a non-leaf
+     * (ASN1.6, RET.3.2.3.2).
      * @public
      * @readonly
      */
     readonly seriesOrder: OPTIONAL<Order>;
     /**
      * @summary `usageRight`.
+     * @description
+     * 
+     * Whether this element may be redistributed. If it may not, the server
+     * supplies a restriction statement or a license pointer (RET.3.2.3).
      * @public
      * @readonly
      */
     readonly usageRight: OPTIONAL<Usage>;
     /**
      * @summary `hits`.
+     * @description
+     * 
+     * Fragments of this element that satisfied the search which put the record
+     * in the result set. Meaningful only for that search (RET.3.2.3.1). A
+     * location is variant-specific; a token need not be.
      * @public
      * @readonly
      */
     readonly hits: OPTIONAL<HitVector[]>;
     /**
      * @summary `displayName`.
+     * @description
+     * 
+     * Name the server suggests the client display for this element (ASN1.6,
+     * RET.3.2.3).
      * @public
      * @readonly
      */
     readonly displayName: OPTIONAL<InternationalString>;
     /**
      * @summary `supportedVariants`.
+     * @description
+     * 
+     * Forms of this element the server can supply (RET.2.3, RET.3.3.2). They
+     * are returned on the element, not inside the applied variant. An entry may
+     * carry a variant id the client can send back, during this Z-association,
+     * instead of repeating the triple list.
      * @public
      * @readonly
      */
     readonly supportedVariants: OPTIONAL<Variant[]>;
     /**
      * @summary `message`.
+     * @description
+     * 
+     * Text the server asks the client to display, associated with this element
+     * (RET.3.2.3).
      * @public
      * @readonly
      */
     readonly message: OPTIONAL<InternationalString>;
     /**
      * @summary `elementDescriptor`.
+     * @description
+     * 
+     * The ASN.1 comment's only example is a DTD. ANSI/NISO Z39.50-2003 gives no
+     * further semantics (ASN1.6).
      * @public
      * @readonly
      */
     readonly elementDescriptor: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `surrogateFor`.
+     * @description
+     * 
+     * This element is a surrogate, for example a thumbnail, for the element at
+     * this path. Both elements must be in this record (ASN1.6 comment 1).
      * @public
      * @readonly
      */
     readonly surrogateFor: OPTIONAL<TagPath>;
     /**
      * @summary `surrogateElement`.
+     * @description
+     * 
+     * The element at this path is a surrogate for this element. Both must be in
+     * this record (ASN1.6 comment 1).
      * @public
      * @readonly
      */
     readonly surrogateElement: OPTIONAL<TagPath>;
     /**
      * @summary `other`.
+     * @description
+     * 
+     * Externally defined metadata. ANSI/NISO Z39.50-2003 gives no further
+     * semantics (ASN1.6).
      * @public
      * @readonly
      */

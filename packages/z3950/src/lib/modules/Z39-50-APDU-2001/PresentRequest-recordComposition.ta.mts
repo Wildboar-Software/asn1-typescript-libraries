@@ -11,7 +11,15 @@ import { CompSpec, _decode_CompSpec, _encode_CompSpec } from "../Z39-50-APDU-200
 /**
  * @summary PresentRequest_recordComposition
  * @description
- * 
+ *
+ * How the client wants retrieved records composed. `simple` is
+ * element-set names and must be chosen when version 2 is in force;
+ * the default schema and §3.6.2 apply. `complex` is a composition
+ * specification (schema, element specification, and optional record
+ * syntaxes). It may be used only when version 3 is in force and
+ * element-set names are omitted. If this parameter is omitted
+ * entirely, §3.6.2 applies. §3.2.3.1.4, §3.2.3.1.6, §3.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

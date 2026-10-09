@@ -12,6 +12,13 @@ import { Query, _decode_Query, _encode_Query } from "../Z39-50-APDU-2001/Query.t
  * @summary QueryExpression
  * @description
  * 
+ * A query component as submitted, as the server interpreted it, or as the
+ * server recommends (ASN1.11). Which of those it is depends on the
+ * SearchInfoReport component that carries it.
+ * 
+ * - term: one term, with an optional comment.
+ * - query: a query.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

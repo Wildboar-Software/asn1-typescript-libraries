@@ -13,7 +13,16 @@ import { InternationalString, _decode_InternationalString, _encode_International
 /**
  * @summary OtherInformation_Item_information
  * @description
- * 
+ *
+ * Payload of one `OtherInformation` item. `characterInfo` is a
+ * character string. `binaryInfo` is opaque octets. The standard does
+ * not further distinguish those two. `externallyDefinedInfo` carries
+ * an `EXTERNAL`: diagnostics should use it, and an encapsulated APDU
+ * uses it with object identifier `1.2.840.10003.2.1`. `oid` is an
+ * object identifier; a negotiation record may be this choice, in
+ * which case the identifier names the negotiation-record definition.
+ * §4.3, USR.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

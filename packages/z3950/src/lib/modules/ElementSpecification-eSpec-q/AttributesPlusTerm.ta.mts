@@ -13,6 +13,10 @@ import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mj
  * @summary AttributesPlusTerm
  * @description
  * 
+ * One leaf of the eSpec-q restrictor: an access point and a term (ANSI/NISO
+ * Z39.50-2003, ESP.2, §3.7). In the holdings example the access point is
+ * `institutionOrSiteId` and the term is an institution code.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +32,20 @@ export
 class AttributesPlusTerm {
     /**
      * @summary `attributes`.
+     * @description
+     * 
+     * Attribute list that names the access point the term is compared with
+     * (ESP.2, §3.7).
      * @public
      * @readonly
      */
     readonly attributes: AttributeList;
     /**
      * @summary `term`.
+     * @description
+     * 
+     * Value the selected nodes must match, under the restrictor's attribute set
+     * (ESP.2).
      * @public
      * @readonly
      */

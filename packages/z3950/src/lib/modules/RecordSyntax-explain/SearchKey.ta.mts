@@ -12,6 +12,8 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
 /**
  * @summary SearchKey
  * @description
+ * A field name that can be searched, listed for a private query type or for an
+ * ISO 8777 query type. ANSI/NISO Z39.50-2003 Explain ASN.1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -28,12 +30,19 @@ export
 class SearchKey {
     /**
      * @summary `searchKey`.
+     * @description
+     * The field name. The standard calls these the field names that can be
+     * searched, and does not define a vocabulary. ANSI/NISO Z39.50-2003 Explain
+     * ASN.1.
      * @public
      * @readonly
      */
     readonly searchKey: InternationalString;
     /**
      * @summary `description`.
+     * @description
+     * Optional human-readable description of the field. The standard does not
+     * say what it must contain. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */

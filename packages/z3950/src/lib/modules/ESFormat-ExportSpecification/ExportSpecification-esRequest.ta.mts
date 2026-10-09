@@ -13,6 +13,11 @@ import { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } 
  * @summary ExportSpecification_esRequest
  * @description
  * 
+ * Client parameters of an Export Specification request. Everything the
+ * client supplies is retained; there is no not-to-keep parameter.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.6, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,26 @@ export
 class ExportSpecification_esRequest {
     /**
      * @summary `toKeep`.
+     * @description
+     * 
+     * Record composition and export destination. This is the specification
+     * that later Export Invocation tasks invoke.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.6.
+     * 
      * @public
      * @readonly
      */
     readonly toKeep: ClientPartToKeep;
     /**
      * @summary `notToKeep`.
+     * @description
+     * 
+     * Empty. Export Specification has no client parameter that is left out of
+     * the task package.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.6, EXT.2.
+     * 
      * @public
      * @readonly
      */

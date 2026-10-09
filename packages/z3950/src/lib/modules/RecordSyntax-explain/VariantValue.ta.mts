@@ -12,6 +12,8 @@ import { ValueSet, _decode_ValueSet, _encode_ValueSet } from "../RecordSyntax-ex
 /**
  * @summary VariantValue
  * @description
+ * Datatype of a variant value, and the values supported for a variant type when
+ * those values are supplied. ANSI/NISO Z39.50-2003 §3.2.10.3.15.
  * 
  * ### ASN.1 Definition:
  * 
@@ -28,12 +30,19 @@ export
 class VariantValue {
     /**
      * @summary `dataType`.
+     * @description
+     * Primitive datatype of the variant value. ANSI/NISO Z39.50-2003 Explain
+     * ASN.1; §3.2.10.3.15.
      * @public
      * @readonly
      */
     readonly dataType: PrimitiveDataType;
     /**
      * @summary `values`.
+     * @description
+     * Supported values, as a range or as an enumeration. Optional. The category
+     * prose calls these the list of supported values for the type. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.15.
      * @public
      * @readonly
      */

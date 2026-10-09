@@ -12,6 +12,11 @@ import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39
  * @summary ResultsByDB_Item_databases
  * @description
  * 
+ * Which databases a SearchResult-1 count covers (ASN1.11).
+ * 
+ * - all: every database named in the Search APDU.
+ * - list: the databases in this list.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

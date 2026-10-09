@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagFormat_scan_posInResponse
  * @description
  * 
+ * Why a Scan position-in-response was rejected (diag-1, DIAG.1 condition 233).
+ * The comment names these four cases and does not define `other` further.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +31,10 @@ type DiagFormat_scan_posInResponse = INTEGER;
 
 /**
  * @summary DiagFormat_scan_posInResponse_mustBeOne
+ * @description
+ * 
+ * position-in-response must be one (DIAG.1 condition 233).
+ * 
  * @constant
  * @type {number}
  */
@@ -36,6 +43,10 @@ const DiagFormat_scan_posInResponse_mustBeOne: DiagFormat_scan_posInResponse = 1
 
 /**
  * @summary DiagFormat_scan_posInResponse_mustBeOne
+ * @description
+ * 
+ * position-in-response must be one (DIAG.1 condition 233).
+ * 
  * @constant
  * @type {number}
  */
@@ -44,6 +55,10 @@ const mustBeOne: DiagFormat_scan_posInResponse = DiagFormat_scan_posInResponse_m
 
 /**
  * @summary DiagFormat_scan_posInResponse_mustBePositive
+ * @description
+ * 
+ * position-in-response must be positive (DIAG.1 condition 233).
+ * 
  * @constant
  * @type {number}
  */
@@ -52,6 +67,10 @@ const DiagFormat_scan_posInResponse_mustBePositive: DiagFormat_scan_posInRespons
 
 /**
  * @summary DiagFormat_scan_posInResponse_mustBePositive
+ * @description
+ * 
+ * position-in-response must be positive (DIAG.1 condition 233).
+ * 
  * @constant
  * @type {number}
  */
@@ -60,6 +79,10 @@ const mustBePositive: DiagFormat_scan_posInResponse = DiagFormat_scan_posInRespo
 
 /**
  * @summary DiagFormat_scan_posInResponse_mustBeNonNegative
+ * @description
+ * 
+ * position-in-response must be non-negative (DIAG.1 condition 233).
+ * 
  * @constant
  * @type {number}
  */
@@ -68,6 +91,10 @@ const DiagFormat_scan_posInResponse_mustBeNonNegative: DiagFormat_scan_posInResp
 
 /**
  * @summary DiagFormat_scan_posInResponse_mustBeNonNegative
+ * @description
+ * 
+ * position-in-response must be non-negative (DIAG.1 condition 233).
+ * 
  * @constant
  * @type {number}
  */
@@ -76,6 +103,11 @@ const mustBeNonNegative: DiagFormat_scan_posInResponse = DiagFormat_scan_posInRe
 
 /**
  * @summary DiagFormat_scan_posInResponse_other
+ * @description
+ * 
+ * position-in-response is unsupported for some other reason (DIAG.1 condition
+ * 233). The standard does not say which.
+ * 
  * @constant
  * @type {number}
  */
@@ -84,6 +116,11 @@ const DiagFormat_scan_posInResponse_other: DiagFormat_scan_posInResponse = 4; /*
 
 /**
  * @summary DiagFormat_scan_posInResponse_other
+ * @description
+ * 
+ * position-in-response is unsupported for some other reason (DIAG.1 condition
+ * 233). The standard does not say which.
+ * 
  * @constant
  * @type {number}
  */

@@ -12,6 +12,9 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary KRBRequest
  * @description
  * 
+ * The server requests a ticket for the given service, instance, and realm
+ * (ASN1.9.3).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,18 +31,31 @@ export
 class KRBRequest {
     /**
      * @summary `service`.
+     * @description
+     * 
+     * Service the ticket is for.
+     * 
      * @public
      * @readonly
      */
     readonly service: InternationalString;
     /**
      * @summary `instance`.
+     * @description
+     * 
+     * Instance named in the ticket request. ASN1.9.3 does not define it
+     * further.
+     * 
      * @public
      * @readonly
      */
     readonly instance: OPTIONAL<InternationalString>;
     /**
      * @summary `realm`.
+     * @description
+     * 
+     * Realm named in the ticket request. ASN1.9.3 does not define it further.
+     * 
      * @public
      * @readonly
      */

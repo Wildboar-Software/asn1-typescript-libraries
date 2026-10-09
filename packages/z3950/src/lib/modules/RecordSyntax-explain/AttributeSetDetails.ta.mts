@@ -13,6 +13,9 @@ import { AttributeTypeDetails, _decode_AttributeTypeDetails, _encode_AttributeTy
  * @summary AttributeSetDetails
  * @description
  * 
+ * One attribute set as supported for a database, inside AttributeDetails.
+ * ANSI/NISO Z39.50-2003 §3.2.10.3.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +31,18 @@ export
 class AttributeSetDetails {
     /**
      * @summary `attributeSet`.
+     * @description
+     * Object identifier of the attribute set. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.9.
      * @public
      * @readonly
      */
     readonly attributeSet: AttributeSetId;
     /**
      * @summary `attributesByType`.
+     * @description
+     * Each attribute of this set for the database: type, default if omitted,
+     * and per-value support. ANSI/NISO Z39.50-2003 §3.2.10.3.9.
      * @public
      * @readonly
      */

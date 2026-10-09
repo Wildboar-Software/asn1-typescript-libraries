@@ -13,6 +13,9 @@ import { Operator, _decode_Operator, _encode_Operator } from "../Z39-50-APDU-200
  * @summary RPNStructure_rpnRpnOp
  * @description
  * 
+ * Complex operand in a type-1 or type-101 query: two subtrees and the operator
+ * applied to them (ANSI/NISO Z39.50-2003 §3.7.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +32,34 @@ export
 class RPNStructure_rpnRpnOp {
     /**
      * @summary `rpn1`.
+     * @description
+     * 
+     * Left operand, set S1 when the operator is applied (ANSI/NISO Z39.50-2003
+     * §3.7.1).
+     * 
      * @public
      * @readonly
      */
     readonly rpn1: RPNStructure;
     /**
      * @summary `rpn2`.
+     * @description
+     * 
+     * Right operand, set S2 when the operator is applied (ANSI/NISO Z39.50-2003
+     * §3.7.1).
+     * 
      * @public
      * @readonly
      */
     readonly rpn2: RPNStructure;
     /**
      * @summary `op`.
+     * @description
+     * 
+     * Operator applied to S1 and S2. `and` is intersection, `or` is union,
+     * `and-not` is the part of S1 absent from S2, and `prox` is the proximity
+     * test in §3.7.2 (ANSI/NISO Z39.50-2003 §3.7.1).
+     * 
      * @public
      * @readonly
      */

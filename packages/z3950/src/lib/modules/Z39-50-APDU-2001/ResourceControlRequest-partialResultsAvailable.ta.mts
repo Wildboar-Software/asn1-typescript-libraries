@@ -10,6 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ResourceControlRequest_partialResultsAvailable
  * @description
  * 
+ * How complete a Search result set is when the server sends a Resource-control
+ * request (ANSI/NISO Z39.50-2003 §3.2.6.1.2). Meaningful only during Search. If
+ * the client stops the search and result-set-wanted is on, subset and interim
+ * mean the server will accept later Present requests. `none` means the server
+ * need not. While the operation is not suspended, this picture can change. The
+ * Search response is authoritative.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +32,10 @@ type ResourceControlRequest_partialResultsAvailable = INTEGER;
 
 /**
  * @summary ResourceControlRequest_partialResultsAvailable_subset
+ * @description
+ * 
+ * Partial, valid results are available (ANSI/NISO Z39.50-2003 §3.2.6.1.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -33,6 +44,11 @@ const ResourceControlRequest_partialResultsAvailable_subset: ResourceControlRequ
 
 /**
  * @summary ResourceControlRequest_partialResultsAvailable_subset
+ * @description
+ * 
+ * Short name for `ResourceControlRequest_partialResultsAvailable_subset`.
+ * Partial, valid results (§3.2.6.1.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -41,6 +57,11 @@ const subset: ResourceControlRequest_partialResultsAvailable = ResourceControlRe
 
 /**
  * @summary ResourceControlRequest_partialResultsAvailable_interim
+ * @description
+ * 
+ * Partial results are available and are not necessarily valid (ANSI/NISO
+ * Z39.50-2003 §3.2.6.1.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -49,6 +70,11 @@ const ResourceControlRequest_partialResultsAvailable_interim: ResourceControlReq
 
 /**
  * @summary ResourceControlRequest_partialResultsAvailable_interim
+ * @description
+ * 
+ * Short name for `ResourceControlRequest_partialResultsAvailable_interim`.
+ * Partial results, not necessarily valid (§3.2.6.1.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -57,6 +83,10 @@ const interim: ResourceControlRequest_partialResultsAvailable = ResourceControlR
 
 /**
  * @summary ResourceControlRequest_partialResultsAvailable_none
+ * @description
+ * 
+ * No results are available (ANSI/NISO Z39.50-2003 §3.2.6.1.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -65,6 +95,11 @@ const ResourceControlRequest_partialResultsAvailable_none: ResourceControlReques
 
 /**
  * @summary ResourceControlRequest_partialResultsAvailable_none
+ * @description
+ * 
+ * Short name for `ResourceControlRequest_partialResultsAvailable_none`. No
+ * results available (§3.2.6.1.2).
+ * 
  * @constant
  * @type {number}
  */

@@ -12,6 +12,20 @@ import { PersistentQuery_taskPackage, _decode_PersistentQuery_taskPackage, _enco
  * @summary PersistentQuery
  * @description
  * 
+ * Saves a Z39.50 query for later reference, on this Z-association or a
+ * later one. The client supplies either the query or the name of another
+ * persistent query to copy, and may supply database names and additional
+ * search information.
+ * 
+ * The query-or-package-name input is not retained (`notToKeep`). The
+ * server part is the actual query: the client's query, or a copy of the
+ * named package's query. Database names and additional search information
+ * are kept (`toKeep` / `clientPart`). On modify, supplied values replace
+ * the corresponding package values; an omitted optional parameter is left
+ * unchanged.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.2, EXT.2, §3.2.9.1.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

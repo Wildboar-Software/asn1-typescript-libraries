@@ -12,6 +12,8 @@ import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../
  * @summary DiagFormat_attCombo
  * @description
  * 
+ * An attribute combination is not supported (diag-1, DIAG.1 condition 123).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +30,20 @@ export
 class DiagFormat_attCombo {
     /**
      * @summary `unsupportedCombination`.
+     * @description
+     * 
+     * The combination that is not supported.
+     * 
      * @public
      * @readonly
      */
     readonly unsupportedCombination: AttributeList;
     /**
      * @summary `recommendedAlternatives`.
+     * @description
+     * 
+     * Combinations the server recommends instead, when it supplies any.
+     * 
      * @public
      * @readonly
      */

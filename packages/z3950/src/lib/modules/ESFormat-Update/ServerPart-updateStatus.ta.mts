@@ -10,6 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServerPart_updateStatus
  * @description
  * 
+ * Outcome of the update task as a whole, as distinct from each record. Not
+ * set until the task is complete or rejected, and not until every record
+ * has a final record status. `partial` means the task is finished and only
+ * some records succeeded.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.1.5.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +32,12 @@ type ServerPart_updateStatus = INTEGER;
 
 /**
  * @summary ServerPart_updateStatus_success
+ * @description
+ * 
+ * The update was performed successfully. Every record status is success.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.1.5.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -33,6 +46,10 @@ const ServerPart_updateStatus_success: ServerPart_updateStatus = 1; /* LONG_NAME
 
 /**
  * @summary ServerPart_updateStatus_success
+ * @description
+ * 
+ * Update succeeded for every record (EXT.1.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -41,6 +58,14 @@ const success: ServerPart_updateStatus = ServerPart_updateStatus_success; /* SHO
 
 /**
  * @summary ServerPart_updateStatus_partial
+ * @description
+ * 
+ * The update failed for one or more records. The task is done; this does
+ * not mean the task is only partly done. Some record statuses are success
+ * and some are not.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.1.5.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -49,6 +74,10 @@ const ServerPart_updateStatus_partial: ServerPart_updateStatus = 2; /* LONG_NAME
 
 /**
  * @summary ServerPart_updateStatus_partial
+ * @description
+ * 
+ * Task finished; only some records were updated (EXT.1.5.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -57,6 +86,13 @@ const partial: ServerPart_updateStatus = ServerPart_updateStatus_partial; /* SHO
 
 /**
  * @summary ServerPart_updateStatus_failure
+ * @description
+ * 
+ * The server rejected execution of the task. One or more non-surrogate
+ * diagnostics should be supplied as global diagnostics.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5.
+ * 
  * @constant
  * @type {number}
  */
@@ -65,6 +101,10 @@ const ServerPart_updateStatus_failure: ServerPart_updateStatus = 3; /* LONG_NAME
 
 /**
  * @summary ServerPart_updateStatus_failure
+ * @description
+ * 
+ * Server rejected the task; see global diagnostics (EXT.1.5).
+ * 
  * @constant
  * @type {number}
  */

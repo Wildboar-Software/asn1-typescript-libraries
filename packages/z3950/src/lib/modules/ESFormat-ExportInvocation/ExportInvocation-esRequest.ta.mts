@@ -13,6 +13,11 @@ import { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNot
  * @summary ExportInvocation_esRequest
  * @description
  * 
+ * Client parameters of an Export Invocation request. `toKeep` is retained
+ * in the task package; `notToKeep` (which records to export) is not.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.7, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,26 @@ export
 class ExportInvocation_esRequest {
     /**
      * @summary `toKeep`.
+     * @description
+     * 
+     * Export specification (by name or by value) and the number of copies.
+     * Retained as the task package's client part.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.7, EXT.2.
+     * 
      * @public
      * @readonly
      */
     readonly toKeep: ClientPartToKeep;
     /**
      * @summary `notToKeep`.
+     * @description
+     * 
+     * Which transient result set, and which of its records, to export. Not
+     * retained in the task package.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.7, EXT.2.
+     * 
      * @public
      * @readonly
      */

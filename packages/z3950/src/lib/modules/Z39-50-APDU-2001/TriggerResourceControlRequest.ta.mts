@@ -16,6 +16,16 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary TriggerResourceControlRequest
  * @description
  * 
+ * Client signal, during an active operation other than Init, asking the server
+ * to send a resource report, to invoke full resource control, or to cancel
+ * (ANSI/NISO Z39.50-2003 §3.2.6.2). There is no response. The server need not
+ * act. A trigger that arrives after the operation ends, or while the server is
+ * already waiting for a Resource-control response, is ignored. The service is
+ * negotiated (§4.4.2.2.13). If the server accepts trigger-resource-control but
+ * resource-control is not in effect, the client may use only cancel
+ * (§3.2.1.1.3). A request when the service is not in effect may be treated as
+ * a protocol error.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +48,57 @@ export
 class TriggerResourceControlRequest {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Reference-id of the active operation. This request does not start an
+     * operation (ANSI/NISO Z39.50-2003 §3.4, §3.2.6.2).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `requestedAction`.
+     * @description
+     * 
+     * What the client asks the server to do: send a report with no response
+     * required, send a Resource-control request that requires a response, or
+     * cancel the operation (ANSI/NISO Z39.50-2003 §3.2.6.2.1).
+     * 
      * @public
      * @readonly
      */
     readonly requestedAction: TriggerResourceControlRequest_requestedAction;
     /**
      * @summary `prefResourceReportFormat`.
+     * @description
+     * 
+     * Resource-report format the client prefers, when it wants a report
+     * (ANSI/NISO Z39.50-2003 §3.2.6.2.2).
+     * 
      * @public
      * @readonly
      */
     readonly prefResourceReportFormat: OPTIONAL<ResourceReportId>;
     /**
      * @summary `resultSetWanted`.
+     * @description
+     * 
+     * On a Search, and only when the action is cancel: whether the client wants
+     * the server to keep the possibly partial result set for later Present
+     * requests (ANSI/NISO Z39.50-2003 §3.2.6.2.3).
+     * 
      * @public
      * @readonly
      */
     readonly resultSetWanted: OPTIONAL<BOOLEAN>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. Version 3 only
+     * (ANSI/NISO Z39.50-2003 §3.2.6.2.4).
+     * 
      * @public
      * @readonly
      */

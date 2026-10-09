@@ -34,7 +34,15 @@ import { DuplicateDetectionResponse, _decode_DuplicateDetectionResponse, _encode
 /**
  * @summary APDU
  * @description
- * 
+ *
+ * One Z39.50 message transferred between client and server. Each
+ * alternative is one service request or response. Tags 37 through 42
+ * are unused. A malformed APDU, invalid data, or a message out of
+ * sequence is a protocol error. Unknown elements and unknown option
+ * bits on an Init APDU are ignored. On a protocol error the receiver
+ * may Close with reason protocol error when version 3 is in force,
+ * drop the connection, or ignore the error. §4.1, §4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

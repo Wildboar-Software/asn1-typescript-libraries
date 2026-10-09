@@ -12,6 +12,11 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary ClientPartToKeep_contact
  * @description
  * 
+ * Contact person for the order: name, phone number, and electronic mail
+ * address. Each part is optional.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,18 +33,36 @@ export
 class ClientPartToKeep_contact {
     /**
      * @summary `name`.
+     * @description
+     * 
+     * Name of the contact person.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly name: OPTIONAL<InternationalString>;
     /**
      * @summary `phone`.
+     * @description
+     * 
+     * Phone number of the contact person.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly phone: OPTIONAL<InternationalString>;
     /**
      * @summary `email`.
+     * @description
+     * 
+     * Electronic mail address of the contact person.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */

@@ -14,6 +14,19 @@ import { VariantClass, _decode_VariantClass, _encode_VariantClass } from "../Rec
 /**
  * @summary VariantSetInfo
  * @description
+ * A variant set definition supported by the server: the classes, types, and
+ * values of that set. Support of the definition does not mean it is supported
+ * for any particular database or element. ANSI/NISO Z39.50-2003 §3.2.10.3.15;
+ * ASN.1 comment 12.
+ * 
+ * Search with ExplainCategory `VariantSetInfo` and VariantSetOID. The search
+ * may also use HumanStringLanguage, DateAdded, DateChanged, or DateExpires.
+ * ANSI/NISO Z39.50-2003 §3.2.10.1.2 and §3.2.10.1.3. As a search term, version
+ * 2 should use a dotted decimal character string; version 3 should use an
+ * object identifier. ANSI/NISO Z39.50-2003 Appendix ATR, note 4.
+ * 
+ * The classes are non-brief and mandatory in a full record. ANSI/NISO
+ * Z39.50-2003 ASN.1 comment 1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -37,24 +50,42 @@ export
 class VariantSetInfo {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates this Explain record was added and last changed, when it expires,
+     * and the language of its human-readable text. Element set `B` includes
+     * this component except `otherInfo`. DateAdded, DateChanged, and
+     * DateExpires search these dates. ANSI/NISO Z39.50-2003 §3.2.10.3,
+     * §3.2.10.1.3; ASN.1 comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `variantSet`.
+     * @description
+     * Object identifier of the variant set definition. Key, searched with
+     * VariantSetOID. As a search term, version 2 should use a dotted decimal
+     * character string; version 3 should use an object identifier. ANSI/NISO
+     * Z39.50-2003 Appendix ATR, note 4.
      * @public
      * @readonly
      */
     readonly variantSet: OBJECT_IDENTIFIER;
     /**
      * @summary `name`.
+     * @description
+     * Name of the variant set. Brief, and not a key. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.15.
      * @public
      * @readonly
      */
     readonly name: InternationalString;
     /**
      * @summary `variants`.
+     * @description
+     * Supported classes. For each class, the supported types, and for each
+     * type, the supported values. Non-brief, and mandatory in a full record.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.15.
      * @public
      * @readonly
      */

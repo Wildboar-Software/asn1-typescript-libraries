@@ -10,6 +10,12 @@ import { SuppliedRecords_Item, _decode_SuppliedRecords_Item, _encode_SuppliedRec
  * @summary SuppliedRecords
  * @description
  * 
+ * One or more records for a database update. With each record the client
+ * may supply a record id, supplemental identification, and correlation
+ * information. What the record must contain depends on the action.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

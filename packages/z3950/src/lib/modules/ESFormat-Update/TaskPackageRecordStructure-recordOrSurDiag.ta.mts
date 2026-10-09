@@ -12,6 +12,15 @@ import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/D
  * @summary TaskPackageRecordStructure_recordOrSurDiag
  * @description
  * 
+ * Either the updated record or a surrogate diagnostic for one supplied
+ * record. Choose the record when record status is success and an
+ * element-set name was supplied; the elements included follow that name.
+ * Choose the diagnostic when record status is failure. Omit the choice
+ * entirely when there is no element-set name and status is success, or
+ * when status is queued or in process.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

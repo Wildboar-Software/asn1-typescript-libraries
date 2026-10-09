@@ -15,6 +15,10 @@ import { SortKeySpec_missingValueAction, _decode_SortKeySpec_missingValueAction,
  * @summary SortKeySpec
  * @description
  * 
+ * One sort element: the key, the direction, case handling, and the action when
+ * a record has no value for the key (ANSI/NISO Z39.50-2003 §3.2.7.1.3). The
+ * sequence on the Sort request is major key first.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,24 +50,49 @@ export
 class SortKeySpec {
     /**
      * @summary `sortElement`.
+     * @description
+     * 
+     * Sort key, as a private key, a retrieval element, or a search access
+     * point. The server designates keys through Explain or by agreement outside
+     * this standard (ANSI/NISO Z39.50-2003 §3.2.7.1.3).
+     * 
      * @public
      * @readonly
      */
     readonly sortElement: SortElement;
     /**
      * @summary `sortRelation`.
+     * @description
+     * 
+     * Direction of this key: ascending or descending, or either direction by
+     * frequency of the key value (ANSI/NISO Z39.50-2003 §3.2.7.1.3, §4.1
+     * comment 4).
+     * 
      * @public
      * @readonly
      */
     readonly sortRelation: SortKeySpec_sortRelation;
     /**
      * @summary `caseSensitivity`.
+     * @description
+     * 
+     * Whether letter case distinguishes values, when case applies to this key
+     * (ANSI/NISO Z39.50-2003 §3.2.7.1.3). The standard does not define the
+     * comparison beyond these two codes.
+     * 
      * @public
      * @readonly
      */
     readonly caseSensitivity: SortKeySpec_caseSensitivity;
     /**
      * @summary `missingValueAction`.
+     * @description
+     * 
+     * What the server does when a record lacks a value for this key (ANSI/NISO
+     * Z39.50-2003 §3.2.7.1.3). The standard defines the null action in the
+     * ASN.1 comment and does not further define `abort` or the octets of
+     * `missingValueData`.
+     * 
      * @public
      * @readonly
      */

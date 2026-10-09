@@ -10,7 +10,15 @@ import { InternationalString, _decode_InternationalString, _encode_International
 /**
  * @summary ElementSetName
  * @description
- * 
+ *
+ * Primitive name of an element specification. Case-insensitive. The
+ * server must treat `"F"` as full: applying it leaves the abstract
+ * database record unchanged. The server must treat `"B"` as brief.
+ * This standard does not define which elements `"B"` includes; unless
+ * the client knows the server's definition for that schema, it should
+ * not assume particular elements. Used when Comp-spec is omitted,
+ * after the default schema for the database. §3.6, §3.6.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

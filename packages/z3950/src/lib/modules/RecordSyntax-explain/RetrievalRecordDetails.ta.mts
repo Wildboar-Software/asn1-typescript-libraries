@@ -15,6 +15,20 @@ import { PerElementDetails, _decode_PerElementDetails, _encode_PerElementDetails
 /**
  * @summary RetrievalRecordDetails
  * @description
+ * The elements of a retrieval record for one database, one schema, and one
+ * record syntax. The elements are relative to the schema. There is one such
+ * Explain record for each combination. The mapping of schema elements into
+ * record elements may differ for each combination; the per-element details are
+ * the default mapping, and client-requested re-tagging can change it. ANSI/NISO
+ * Z39.50-2003 §3.2.10.3.12; ASN.1 comment 8.
+ * 
+ * Search with ExplainCategory `RetrievalRecordDetails`, DatabaseName,
+ * SchemaOID, and RecordSyntaxOID. The search may also use HumanStringLanguage,
+ * DateAdded, DateChanged, or DateExpires. ANSI/NISO Z39.50-2003 §3.2.10.1.2 and
+ * §3.2.10.1.3.
+ * 
+ * Only the keys are brief. The per-element details are mandatory in a full
+ * record. ANSI/NISO Z39.50-2003 ASN.1 comment 1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -38,36 +52,62 @@ export
 class RetrievalRecordDetails {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates this Explain record was added and last changed, when it expires,
+     * and the language of its human-readable text. Element set `B` includes
+     * this component except `otherInfo`. DateAdded, DateChanged, and
+     * DateExpires search these dates. ANSI/NISO Z39.50-2003 §3.2.10.3,
+     * §3.2.10.1.3; ASN.1 comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `databaseName`.
+     * @description
+     * Database to which this record pertains. Key, searched with DatabaseName.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.12.
      * @public
      * @readonly
      */
     readonly databaseName: DatabaseName;
     /**
      * @summary `schema`.
+     * @description
+     * Schema that defines the elements. Key, searched with SchemaOID. As a
+     * search term, version 2 should use a dotted decimal character string;
+     * version 3 should use an object identifier. ANSI/NISO Z39.50-2003 Appendix
+     * ATR, note 4.
      * @public
      * @readonly
      */
     readonly schema: OBJECT_IDENTIFIER;
     /**
      * @summary `recordSyntax`.
+     * @description
+     * Record syntax of the retrieval record. Key, searched with
+     * RecordSyntaxOID. As a search term, version 2 should use a dotted decimal
+     * character string; version 3 should use an object identifier. ANSI/NISO
+     * Z39.50-2003 Appendix ATR, note 4.
      * @public
      * @readonly
      */
     readonly recordSyntax: OBJECT_IDENTIFIER;
     /**
      * @summary `description`.
+     * @description
+     * Human-readable text, non-brief. §3.2.10.3.12 does not say what this
+     * text must contain. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `detailsPerElement`.
+     * @description
+     * For each element described by the syntax, the per-element details.
+     * Non-brief, and mandatory in a full record. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.12.
      * @public
      * @readonly
      */

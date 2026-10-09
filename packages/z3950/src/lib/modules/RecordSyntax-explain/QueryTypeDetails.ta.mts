@@ -13,6 +13,20 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
 /**
  * @summary QueryTypeDetails
  * @description
+ * One query type supported by the server or by a database, as listed in
+ * AccessInfo. Context tags match the Query choice on Search. ANSI/NISO
+ * Z39.50-2003 §3.2.10.3.1, §3.2.2.1.1.
+ * 
+ * `private` (tag 0) carries the details of a query that, like type-0, may
+ * be used only under a prior agreement outside the standard. `rpn` (tag 1)
+ * is the type-1 Reverse Polish Notation query (§3.7). `iso8777` (tag 2) is
+ * the type-2 query, specified in ISO 8777. `z39-58` (tag 100) is
+ * human-readable text for query type-100, the Common Command Language
+ * query, whose syntax this standard does not specify. `erpn` (tag 101) is
+ * the type-101 extended RPN query: the same as type-1, except proximity
+ * and restriction are valid in version 2 as well as version 3.
+ * `rankedList` (tag 102) is human-readable text for query type-102, the
+ * Ranked List query, which the standard leaves to a later version.
  * 
  * ### ASN.1 Definition:
  * 

@@ -13,6 +13,13 @@ import { ClientPartNotToKeep_replaceOrAppend, _decode_ClientPartNotToKeep_replac
  * @summary ClientPartNotToKeep
  * @description
  * 
+ * The transient result set to make persistent, and on modify whether to
+ * replace the saved result set or append to it. Not retained. The result
+ * set name is mandatory unless the function is delete. Replace-or-append
+ * occurs only when the function is modify.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +40,30 @@ export
 class ClientPartNotToKeep {
     /**
      * @summary `clientSuppliedResultSet`.
+     * @description
+     * 
+     * Name of a transient result set on this Z-association. On create, the
+     * server makes a persistent result set from it. On modify, the server
+     * replaces the persistent result set or appends this result set to it.
+     * Mandatory when the function is create or modify; omitted when the
+     * function is delete.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.1.
+     * 
      * @public
      * @readonly
      */
     readonly clientSuppliedResultSet: OPTIONAL<InternationalString>;
     /**
      * @summary `replaceOrAppend`.
+     * @description
+     * 
+     * On modify only, and only when the user has modify-contents permission:
+     * `replace` means the named result set replaces the persistent result set;
+     * `append` means it is appended.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.1.
+     * 
      * @public
      * @readonly
      */

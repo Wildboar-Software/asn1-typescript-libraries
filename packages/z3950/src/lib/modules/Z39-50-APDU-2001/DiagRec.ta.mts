@@ -10,7 +10,15 @@ import { DefaultDiagFormat, _decode_DefaultDiagFormat, _encode_DefaultDiagFormat
 /**
  * @summary DiagRec
  * @description
- * 
+ *
+ * One diagnostic record, used as a surrogate (in place of a retrieval
+ * record) or as a non-surrogate (the operation cannot be processed).
+ * `defaultFormat` must be chosen when version 2 is in effect.
+ * `externallyDefined` is the external diagnostic form and is a
+ * version-3 feature. When search status or present status is failure,
+ * at least one non-surrogate is required; version 2 supplies exactly
+ * one. §3.2.2.1.7, §4.4.2.1 items 17 and 18.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

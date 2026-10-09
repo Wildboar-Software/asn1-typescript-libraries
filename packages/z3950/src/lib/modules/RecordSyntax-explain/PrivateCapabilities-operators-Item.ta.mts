@@ -12,6 +12,9 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
 /**
  * @summary PrivateCapabilities_operators_Item
  * @description
+ * One operator in PrivateCapabilities. The standard does not define the
+ * operator string; it is part of the prior agreement for a type-0 query.
+ * ANSI/NISO Z39.50-2003 §3.2.2.1.1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -28,12 +31,18 @@ export
 class PrivateCapabilities_operators_Item {
     /**
      * @summary `operator`.
+     * @description
+     * Name of the operator. The standard does not define the vocabulary.
+     * ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */
     readonly operator: InternationalString;
     /**
      * @summary `description`.
+     * @description
+     * Optional human-readable description of the operator. The standard does
+     * not say what it must contain. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */

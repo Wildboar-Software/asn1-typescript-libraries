@@ -13,6 +13,15 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary ResourceReport
  * @description
  * 
+ * resource-2 `{Z39-50-resourceReport 2}` reports current and estimated resource
+ * consumption (appendix RSC, ASN1.8, §3.2.6.1.1). It is the Resource-report
+ * parameter of resource control.
+ * 
+ * resource-1 `{Z39-50-resourceReport 1}` (1992) has 16 categories and no
+ * extension. resource-2 (1995) keeps those 16 and allows more, so it is a
+ * compatible superset. This standard does not repeat the resource-1 definition.
+ * A client should still recognize the resource-1 OID.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +37,20 @@ export
 class ResourceReport {
     /**
      * @summary `estimates`.
+     * @description
+     * 
+     * Resource estimates. Omitted when the report is only a message.
+     * 
      * @public
      * @readonly
      */
     readonly estimates: OPTIONAL<Estimate[]>;
     /**
      * @summary `message`.
+     * @description
+     * 
+     * Optional note. ASN1.8 does not constrain the text.
+     * 
      * @public
      * @readonly
      */

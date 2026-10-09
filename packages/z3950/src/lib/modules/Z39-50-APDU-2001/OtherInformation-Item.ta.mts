@@ -12,7 +12,15 @@ import { OtherInformation_Item_information, _decode_OtherInformation_Item_inform
 /**
  * @summary OtherInformation_Item
  * @description
- * 
+ *
+ * One unit of `OtherInformation`. The category is optional.
+ * Diagnostics and negotiation records need not carry a category.
+ * Three forms are defined: no category; a category with no
+ * `categoryTypeId` (meaning by prior agreement); or a category whose
+ * `categoryTypeId` names a registration agent, not a classification.
+ * No `categoryValue` values are known to have been adopted.
+ * Comment 5, USR.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +41,29 @@ export
 class OtherInformation_Item {
     /**
      * @summary `category`.
+     * @description
+     *
+     * Optional classification of this item. Omit it in the usual case.
+     * With no `categoryTypeId`, the value is meaningful only by prior
+     * agreement. With `categoryTypeId`, that object identifier names a
+     * registration agent, not a classification scheme. No
+     * `categoryValue` is known to have been registered. Comment 5.
+     *
      * @public
      * @readonly
      */
     readonly category: OPTIONAL<InfoCategory>;
     /**
      * @summary `information`.
+     * @description
+     *
+     * The item itself: a character string, opaque octets, an
+     * `EXTERNAL`, or an object identifier. A diagnostic should be
+     * `externallyDefinedInfo`. A negotiation record is
+     * `externallyDefinedInfo` or `oid`, identified by the object
+     * identifier. An encapsulated APDU is `externallyDefinedInfo`
+     * with OID `1.2.840.10003.2.1`. §4.3, USR.2.
+     *
      * @public
      * @readonly
      */

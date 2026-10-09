@@ -14,6 +14,8 @@ import { Units, _decode_Units, _encode_Units } from "../RecordSyntax-explain/Uni
 /**
  * @summary UnitType
  * @description
+ * One unit type in a unit system. The category lists, for each type, a name, a
+ * description, and the units of that type. ANSI/NISO Z39.50-2003 §3.2.10.3.16.
  * 
  * ### ASN.1 Definition:
  * 
@@ -32,24 +34,34 @@ export
 class UnitType {
     /**
      * @summary `name`.
+     * @description
+     * Name of the unit type. ANSI/NISO Z39.50-2003 §3.2.10.3.16.
      * @public
      * @readonly
      */
     readonly name: OPTIONAL<InternationalString>;
     /**
      * @summary `description`.
+     * @description
+     * Description of the unit type. ANSI/NISO Z39.50-2003 §3.2.10.3.16.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `unitType`.
+     * @description
+     * Identifier of the unit type. The standard does not define this value
+     * beyond its role as that identifier. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */
     readonly unitType: StringOrNumeric;
     /**
      * @summary `units`.
+     * @description
+     * Units of this type, each with a name and a description. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.16.
      * @public
      * @readonly
      */

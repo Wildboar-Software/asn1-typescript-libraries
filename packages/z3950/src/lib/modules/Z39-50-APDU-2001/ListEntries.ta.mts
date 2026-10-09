@@ -13,6 +13,12 @@ import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/D
  * @summary ListEntries
  * @description
  * 
+ * Entries returned by Scan (ANSI/NISO Z39.50-2003 §3.2.8.1.7). At least one of
+ * the term entries and the non-surrogate diagnostics must occur. The term
+ * entries number either the count requested or, when scan status explains a
+ * shortfall, fewer, including zero. Non-surrogate diagnostics may say the
+ * operation cannot be processed.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +35,22 @@ export
 class ListEntries {
     /**
      * @summary `entries`.
+     * @description
+     * 
+     * Term-list entries or surrogate diagnostics (ANSI/NISO Z39.50-2003
+     * §3.2.8.1.7).
+     * 
      * @public
      * @readonly
      */
     readonly entries: OPTIONAL<Entry[]>;
     /**
      * @summary `nonsurrogateDiagnostics`.
+     * @description
+     * 
+     * Diagnostics that apply to the Scan operation, including the case where no
+     * entries can be processed (ANSI/NISO Z39.50-2003 §3.2.8.1.7).
+     * 
      * @public
      * @readonly
      */

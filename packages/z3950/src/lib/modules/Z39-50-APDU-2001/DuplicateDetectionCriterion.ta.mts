@@ -14,6 +14,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DuplicateDetectionCriterion
  * @description
  * 
+ * One test for deciding that two result-set items are duplicates (ANSI/NISO
+ * Z39.50-2003 §3.2.7.2.3). The list may be extended; values 6 through 100 are
+ * reserved. If the client supplies no criterion, the server chooses the tests.
+ * 
+ * `levelOfMatch` is a percentage from 1 to 100. 100 means records are
+ * duplicates only when they are identical. `caseSensitive` and
+ * `punctuationSensitive` make case or punctuation count. `regularExpression`
+ * carries a regular expression as an EXTERNAL; this standard does not define
+ * that encoding. `rsDuplicates` treats two items as duplicates when they point
+ * at the same database record.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

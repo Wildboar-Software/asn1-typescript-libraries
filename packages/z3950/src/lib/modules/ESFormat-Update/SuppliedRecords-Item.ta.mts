@@ -15,6 +15,15 @@ import { CorrelationInfo, _decode_CorrelationInfo, _encode_CorrelationInfo } fro
  * @summary SuppliedRecords_Item
  * @description
  * 
+ * One record in an update, plus optional record id, supplemental id, and
+ * correlation information. For insert or replace, supply the whole record.
+ * For replace or delete, the record or its ids must identify the database
+ * record. For delete, identification is enough and the whole record need
+ * not be supplied. For element update, supply elements so the server can
+ * find the corresponding elements.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,24 +49,58 @@ export
 class SuppliedRecords_Item {
     /**
      * @summary `recordId`.
+     * @description
+     * 
+     * Optional record id for this supplied record. The standard does not
+     * define the number, string, and opaque forms beyond those alternatives.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */
     readonly recordId: OPTIONAL<SuppliedRecords_Item_recordId>;
     /**
      * @summary `supplementalId`.
+     * @description
+     * 
+     * Optional extra identification of the database record, or of the correct
+     * version: a timestamp, a version number, or another form such as a
+     * previous version of the record. For element update this may identify the
+     * record, not an element.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */
     readonly supplementalId: OPTIONAL<SuppliedRecords_Item_supplementalId>;
     /**
      * @summary `correlationInfo`.
+     * @description
+     * 
+     * Optional note, identifier, or both, stored with this record so a later
+     * retrieval of the package can tie the server's per-record result back to
+     * what the client sent. Opaque to the server, which should not process or
+     * change it.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */
     readonly correlationInfo: OPTIONAL<CorrelationInfo>;
     /**
      * @summary `record`.
+     * @description
+     * 
+     * The supplied record. Whole record for insert or replace. For delete,
+     * identifying information is required but the whole record need not be
+     * supplied. For element update, the elements replace the corresponding
+     * elements of the database record.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */

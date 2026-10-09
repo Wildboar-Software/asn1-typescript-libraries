@@ -12,6 +12,12 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary CreditCardInfo
  * @description
  * 
+ * Credit-card information the client may supply with the payment method.
+ * The standard does not define the format of these three values beyond the
+ * names name on card, expiration date, and card number.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,18 +34,36 @@ export
 class CreditCardInfo {
     /**
      * @summary `nameOnCard`.
+     * @description
+     * 
+     * Name on the card. The standard does not define the format.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly nameOnCard: InternationalString;
     /**
      * @summary `expirationDate`.
+     * @description
+     * 
+     * Expiration date of the card. The standard does not define the format.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly expirationDate: InternationalString;
     /**
      * @summary `cardNumber`.
+     * @description
+     * 
+     * Card number. The standard does not define the format.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */

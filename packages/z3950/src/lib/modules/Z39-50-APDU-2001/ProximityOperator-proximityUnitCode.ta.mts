@@ -12,6 +12,11 @@ import { KnownProximityUnit, _decode_KnownProximityUnit, _encode_KnownProximityU
  * @summary ProximityOperator_proximityUnitCode
  * @description
  * 
+ * Unit in which proximity distance is measured (ANSI/NISO Z39.50-2003
+ * §3.7.2.1). `known` is one of the units registered as `KnownProximityUnit`.
+ * `private` is an integer whose meaning is a prior agreement. This standard
+ * assigns no private codes.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

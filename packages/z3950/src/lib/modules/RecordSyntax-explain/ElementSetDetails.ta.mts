@@ -17,6 +17,17 @@ import { PerElementDetails, _decode_PerElementDetails, _encode_PerElementDetails
  * @summary ElementSetDetails
  * @description
  * 
+ * One element set for one record syntax for one database. There is one record
+ * for each such triple. Search ExplainCategory `ElementSetDetails`. With
+ * RecordSyntaxOID and DatabaseName, the result is the element set names for
+ * that syntax and database. With only ElementSetName, several records may
+ * match, because the name is repeated per syntax and database. All three keys
+ * together select one record. The schema may be private to the server. Its
+ * abstract structure and tag sets being in the Explain database does not mean
+ * complex retrieval specification is supported. `detailsPerElement` is
+ * mandatory in a full record. ANSI/NISO Z39.50-2003 §3.2.10.1.1, §3.2.10.3.11;
+ * REC.1 Comment 11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,42 +53,66 @@ export
 class ElementSetDetails {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates, language, and other information about this Explain record.
+     * otherInfo is omitted from element set `B`. REC.1 Comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `databaseName`.
+     * @description
+     * Brief. Key. Database this element set belongs to. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.11.
      * @public
      * @readonly
      */
     readonly databaseName: DatabaseName;
     /**
      * @summary `elementSetName`.
+     * @description
+     * Brief. Key. Element set name described by this record. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.11.
      * @public
      * @readonly
      */
     readonly elementSetName: ElementSetName;
     /**
      * @summary `recordSyntax`.
+     * @description
+     * Brief. Key. Record syntax this element set belongs to. Search with Use
+     * RecordSyntaxOID. For version 2, prefer the oid as a dotted character
+     * string; for version 3, as an OBJECT IDENTIFIER. ATR.1 note 4; ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.11.
      * @public
      * @readonly
      */
     readonly recordSyntax: OBJECT_IDENTIFIER;
     /**
      * @summary `schema`.
+     * @description
+     * Brief, but not a key. Schema for which this element set is defined. It
+     * may be private. Comment 11; ANSI/NISO Z39.50-2003 §3.2.10.3.11.
      * @public
      * @readonly
      */
     readonly schema: OBJECT_IDENTIFIER;
     /**
      * @summary `description`.
+     * @description
+     * Non-brief. Human-readable description of the element set. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.11.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `detailsPerElement`.
+     * @description
+     * Non-brief. Mandatory in a full record. For each element, the same
+     * information RetrievalRecordDetails gives per element. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.11.
      * @public
      * @readonly
      */

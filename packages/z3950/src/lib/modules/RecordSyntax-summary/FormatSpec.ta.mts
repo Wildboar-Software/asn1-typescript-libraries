@@ -13,6 +13,12 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary FormatSpec
  * @description
  * 
+ * A format named on a summary record (module ASN.1). The definition has no
+ * comments.
+ * 
+ * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no further
+ * semantics for this type.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +35,30 @@ export
 class FormatSpec {
     /**
      * @summary `type_`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly type_: InternationalString;
     /**
      * @summary `size`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly size: OPTIONAL<INTEGER>;
     /**
      * @summary `bestPosn`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */

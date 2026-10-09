@@ -16,6 +16,10 @@ import { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-gener
  * @summary TaggedElement
  * @description
  * 
+ * One node of a GRS-1 tree (ANSI/NISO Z39.50-2003, RET.3.2.1, ASN1.6). A leaf
+ * carries data, an empty indication, or a diagnostic. A non-leaf carries its
+ * subordinate nodes, recursively.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,36 +44,67 @@ export
 class TaggedElement {
     /**
      * @summary `tagType`.
+     * @description
+     * 
+     * Tag-set shorthand for this element. If omitted, use the tagSet-M default
+     * carried in the record; otherwise use the default stated by the schema
+     * (ASN1.6). For every schema, 1 is tagSet-M, 2 is tagSet-G, and 3 is a tag
+     * the server defines locally. From 4 upward the schema binds the integer to
+     * a tag set (Appendix TAG).
      * @public
      * @readonly
      */
     readonly tagType: OPTIONAL<INTEGER>;
     /**
      * @summary `tagValue`.
+     * @description
+     * 
+     * Element name in the tag set selected by the tag type. Either an integer
+     * or a string (RET.2.1.1, RET.2.1.2). String tags are the usual form of a
+     * locally defined tag (tag type 3).
      * @public
      * @readonly
      */
     readonly tagValue: StringOrNumeric;
     /**
      * @summary `tagOccurrence`.
+     * @description
+     * 
+     * 1-based occurrence of this tag among siblings with the same parent. If
+     * omitted, the server is not saying, or occurrence does not apply. There is
+     * no default (ASN1.6).
      * @public
      * @readonly
      */
     readonly tagOccurrence: OPTIONAL<INTEGER>;
     /**
      * @summary `content`.
+     * @description
+     * 
+     * What this node holds: data, an explicit empty reason, a diagnostic, or
+     * the child nodes when the node is not a leaf (RET.3.2.1.2).
      * @public
      * @readonly
      */
     readonly content: ElementData;
     /**
      * @summary `metaData`.
+     * @description
+     * 
+     * Metadata for this node. It may accompany data, or stand in place of data
+     * when the request asked for none. Not defined when the node is absent,
+     * empty, or a diagnostic (RET.3.2.3).
      * @public
      * @readonly
      */
     readonly metaData: OPTIONAL<ElementMetaData>;
     /**
      * @summary `appliedVariant`.
+     * @description
+     * 
+     * Variant the server applied to this element (RET.2.3). Omit it when none
+     * was applied. On a returned record, tagSet-M `defaultVariantSpec` covers
+     * later elements that omit one (RET.3.4.1.2.4).
      * @public
      * @readonly
      */

@@ -14,6 +14,10 @@ import { VariantType, _decode_VariantType, _encode_VariantType } from "../Record
 /**
  * @summary VariantClass
  * @description
+ * One class in a variant set definition. The class has a name, a description,
+ * and the types supported for that class. The integer identifies the class
+ * within the variant set; Explain does not assign those integers. ANSI/NISO
+ * Z39.50-2003 §3.2.10.3.15.
  * 
  * ### ASN.1 Definition:
  * 
@@ -32,24 +36,35 @@ export
 class VariantClass {
     /**
      * @summary `name`.
+     * @description
+     * Name of the class. ANSI/NISO Z39.50-2003 §3.2.10.3.15.
      * @public
      * @readonly
      */
     readonly name: OPTIONAL<InternationalString>;
     /**
      * @summary `description`.
+     * @description
+     * Description of the class. ANSI/NISO Z39.50-2003 §3.2.10.3.15.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `variantClass`.
+     * @description
+     * Class identifier within the variant set. The Explain category does not
+     * assign these integers; they belong to the variant set definition.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.15.
      * @public
      * @readonly
      */
     readonly variantClass: INTEGER;
     /**
      * @summary `variantTypes`.
+     * @description
+     * Types supported for this class. For each, a name, a description, and the
+     * supported values. ANSI/NISO Z39.50-2003 §3.2.10.3.15.
      * @public
      * @readonly
      */

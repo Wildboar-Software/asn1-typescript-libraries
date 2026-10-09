@@ -13,6 +13,16 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary Period
  * @description
  * 
+ * Time between invocations of a periodic query. It may be a number of
+ * days, a frequency, or continuous. Continuous means the search runs
+ * continuously, or at the server's discretion. The frequency examples in
+ * the service definition are daily, business daily, weekly, and monthly;
+ * only business-daily and continuous are named alternatives here. `other`
+ * is an unconstrained string, and the standard does not bind those
+ * examples to it. The server may override the client's period.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

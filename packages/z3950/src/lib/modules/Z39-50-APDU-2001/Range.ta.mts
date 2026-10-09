@@ -13,6 +13,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Range
  * @description
  * 
+ * An additional contiguous range of result-set records requested on Present,
+ * beyond the primary start position and count (ANSI/NISO Z39.50-2003
+ * §3.2.3.1.2). Additional ranges may be sent only when version 3 is in force.
+ * For the first range, the start must be at least the primary start plus the
+ * primary count. For consecutive ranges, the next start must be greater than
+ * the previous start plus the previous count. A server that does not support
+ * additional ranges should fail the Present with present-status failure and
+ * diagnostic 243.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +37,22 @@ export
 class Range {
     /**
      * @summary `startingPosition`.
+     * @description
+     * 
+     * Ordinal of the first record of this range in the result set. Position 1
+     * is the first record (ANSI/NISO Z39.50-2003 §3.2.3.1.1, §3.2.3.1.2).
+     * 
      * @public
      * @readonly
      */
     readonly startingPosition: INTEGER;
     /**
      * @summary `numberOfRecords`.
+     * @description
+     * 
+     * How many records to return beginning at `startingPosition` (ANSI/NISO
+     * Z39.50-2003 §3.2.3.1.1).
+     * 
      * @public
      * @readonly
      */

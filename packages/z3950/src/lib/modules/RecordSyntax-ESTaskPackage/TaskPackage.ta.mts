@@ -20,6 +20,20 @@ import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/D
  * @summary TaskPackage
  * @description
  * 
+ * Extended-services task package as a retrieval record (ANSI/NISO Z39.50-2003,
+ * REC.4, ASN1.7, §3.2.9). Record-syntax OID `{Z39-50-recordSyntax
+ * esTaskPackage(106)}` (`1.2.840.10003.5.106`).
+ * 
+ * Servers that support extended services keep these records in the database
+ * `IR-Extend-1`. The client retrieves them with Search and Present (§3.2.9.2).
+ * The package may also be returned on the ES response when the wait action
+ * allows it (§3.2.9.1.13, §3.2.9.1.17). Which portion comes back depends on the
+ * element set named by Elements (§3.2.9.1.14).
+ * 
+ * Parameters common to every extended service are these components. The
+ * service-specific part is an EXTERNAL. Task status reports progress only. It
+ * does not say that the task succeeded (§3.2.9.5).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,66 +66,117 @@ export
 class TaskPackage {
     /**
      * @summary `packageType`.
+     * @description
+     * 
+     * Object identifier of the extended service (ASN1.7, §3.2.9.1.2). This
+     * standard registers persistent result set, persistent query, periodic
+     * query schedule, item order, database update, export specification, and
+     * export invocation (Appendix EXT).
      * @public
      * @readonly
      */
     readonly packageType: OBJECT_IDENTIFIER;
     /**
      * @summary `packageName`.
+     * @description
+     * 
+     * Name the client may supply. The triple of package type, user id, and this
+     * name must be unique, and that triple is how the package is referred to
+     * later. Supply a name if the client will refer to the package
+     * (§3.2.9.1.3).
      * @public
      * @readonly
      */
     readonly packageName: OPTIONAL<InternationalString>;
     /**
      * @summary `userId`.
+     * @description
+     * 
+     * User associated with the package. If the client omits it on the request,
+     * the server may use the current user. The server may refuse a user id
+     * other than the client's own (§3.2.9.1.4).
      * @public
      * @readonly
      */
     readonly userId: OPTIONAL<InternationalString>;
     /**
      * @summary `retentionTime`.
+     * @description
+     * 
+     * How long the server keeps the package. The server may override the value
+     * from the request. Zero means the package is not kept after the task
+     * completes (§3.2.9.1.5).
      * @public
      * @readonly
      */
     readonly retentionTime: OPTIONAL<IntUnit>;
     /**
      * @summary `permissions`.
+     * @description
+     * 
+     * Who may access the package. If absent, only the creating user may. Each
+     * entry is a user id, or a group name in the same form, and a set of
+     * operations: Delete, Modify-Contents, Modify-Permissions, Present, and
+     * Invoke (§3.2.9.1.6, §3.2.9.3).
      * @public
      * @readonly
      */
     readonly permissions: OPTIONAL<Permissions>;
     /**
      * @summary `description`.
+     * @description
+     * 
+     * Client text describing the package. For example, the result set of a
+     * persistent result set, or the query of a persistent query (§3.2.9.1.7).
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<InternationalString>;
     /**
      * @summary `serverReference`.
+     * @description
+     * 
+     * Identifier the server assigns to the package (§3.2.9.1.8).
      * @public
      * @readonly
      */
     readonly serverReference: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `creationDateTime`.
+     * @description
+     * 
+     * When the server created the package (§3.2.9.1.9).
      * @public
      * @readonly
      */
     readonly creationDateTime: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `taskStatus`.
+     * @description
+     * 
+     * Progress of the task: pending, active, complete, or aborted. It exists
+     * only on the package. Complete means the task finished, not that it
+     * succeeded (§3.2.9.1.10, §3.2.9.5).
      * @public
      * @readonly
      */
     readonly taskStatus: TaskPackage_taskStatus;
     /**
      * @summary `packageDiagnostics`.
+     * @description
+     * 
+     * Diagnostics the server places in the package (§3.2.9.1.11).
      * @public
      * @readonly
      */
     readonly packageDiagnostics: OPTIONAL<DiagRec[]>;
     /**
      * @summary `taskSpecificParameters`.
+     * @description
+     * 
+     * Parameters defined by the extended service. Encode them as an EXTERNAL
+     * whose object identifier is the same as the package type, and select the
+     * taskPackage alternative (§3.2.9.1.12, ASN1.7).
      * @public
      * @readonly
      */

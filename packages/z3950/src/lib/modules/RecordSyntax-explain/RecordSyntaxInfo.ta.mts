@@ -15,6 +15,21 @@ import { ElementInfo, _decode_ElementInfo, _encode_ElementInfo } from "../Record
 /**
  * @summary RecordSyntaxInfo
  * @description
+ * Descriptive information about one abstract record syntax. There is one
+ * Explain record for each abstract record syntax the server supports. It is not
+ * specific to a database. The description should match the syntax's definition;
+ * the server may omit items it does not support. ANSI/NISO Z39.50-2003
+ * §3.2.10.3.5; ASN.1 comment 1.
+ * 
+ * Search with ExplainCategory `RecordSyntaxInfo` and RecordSyntaxOID. The
+ * search may also use HumanStringLanguage, DateAdded, DateChanged, or
+ * DateExpires. ANSI/NISO Z39.50-2003 §3.2.10.1.2 and §3.2.10.1.3. As a search
+ * term, version 2 should use a dotted decimal character string; version 3
+ * should use an object identifier. ANSI/NISO Z39.50-2003 Appendix ATR, note 4.
+ * 
+ * Element set `B` retrieves brief elements; `F` adds non-brief elements.
+ * Some components marked optional are mandatory in a full record. ANSI/NISO
+ * Z39.50-2003 ASN.1 comment 1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -41,42 +56,69 @@ export
 class RecordSyntaxInfo {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates this Explain record was added and last changed, when it expires,
+     * and the language of its human-readable text. Element set `B` includes
+     * this component except `otherInfo`. DateAdded, DateChanged, and
+     * DateExpires search these dates. ANSI/NISO Z39.50-2003 §3.2.10.3,
+     * §3.2.10.1.3; ASN.1 comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `recordSyntax`.
+     * @description
+     * Object identifier of the abstract record syntax. Key, searched with
+     * RecordSyntaxOID. As a search term, version 2 should use a dotted decimal
+     * character string; version 3 should use an object identifier. ANSI/NISO
+     * Z39.50-2003 Appendix ATR, note 4.
      * @public
      * @readonly
      */
     readonly recordSyntax: OBJECT_IDENTIFIER;
     /**
      * @summary `name`.
+     * @description
+     * A name by which this syntax is known. Brief, and not a key. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.5.
      * @public
      * @readonly
      */
     readonly name: InternationalString;
     /**
      * @summary `transferSyntaxes`.
+     * @description
+     * Transfer syntaxes supported for this abstract syntax, by object
+     * identifier. Non-brief. ANSI/NISO Z39.50-2003 §3.2.10.3.5.
      * @public
      * @readonly
      */
     readonly transferSyntaxes: OPTIONAL<OBJECT_IDENTIFIER[]>;
     /**
      * @summary `description`.
+     * @description
+     * Description of this abstract record syntax, in human-readable text.
+     * Non-brief. ANSI/NISO Z39.50-2003 §3.2.10.3.5.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `asn1Module`.
+     * @description
+     * An ASN.1 module describing the syntax. Non-brief. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.5.
      * @public
      * @readonly
      */
     readonly asn1Module: OPTIONAL<InternationalString>;
     /**
      * @summary `abstractStructure`.
+     * @description
+     * The record structure defined by this syntax. Omitting it means only that
+     * the server is not using Explain to describe the structure, not that the
+     * syntax has no structure. Non-brief. ANSI/NISO Z39.50-2003 §3.2.10.3.5.
      * @public
      * @readonly
      */

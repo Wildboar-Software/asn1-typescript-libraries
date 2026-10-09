@@ -14,6 +14,10 @@ import { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-gener
  * @summary ElementRequest_compositeElement
  * @description
  * 
+ * Several elements combined into one (ANSI/NISO Z39.50-2003, RET.3.1.2,
+ * ASN1.13). The server merges them, applies any variant given for the package,
+ * and presents the result under the delivery tag.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +41,31 @@ export
 class ElementRequest_compositeElement {
     /**
      * @summary `elementList`.
+     * @description
+     * 
+     * What to merge: element set names, whose union is the composite, or an
+     * explicit list of simple elements (ASN1.13, RET.3.1.2).
      * @public
      * @readonly
      */
     readonly elementList: ElementRequest_compositeElement_elementList;
     /**
      * @summary `deliveryTag`.
+     * @description
+     * 
+     * Tag path under which the server presents the composite. It must not
+     * contain `wildThing` or `wildPath` (ASN1.13).
      * @public
      * @readonly
      */
     readonly deliveryTag: TagPath;
     /**
      * @summary `variantRequest`.
+     * @description
+     * 
+     * Variant applied to the merged element, for example the media type of the
+     * package (RET.3.1.2). The eSpec default variant request does not apply to
+     * a composite (ASN1.13 comment 2).
      * @public
      * @readonly
      */

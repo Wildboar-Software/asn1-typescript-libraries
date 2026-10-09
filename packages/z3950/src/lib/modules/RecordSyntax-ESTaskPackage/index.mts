@@ -1,3 +1,18 @@
+/**
+ * @module
+ * @description
+ * ASN.1 module `RecordSyntax-ESTaskPackage`: the retrieval record for an
+ * extended-services task package (ANSI/NISO Z39.50-2003, REC.4, ASN1.7,
+ * §3.2.9).
+ * 
+ * Object identifier `{Z39-50-recordSyntax esTaskPackage(106)}` on arc `{Z39-50
+ * 5}` (`1.2.840.10003.5.106`). Packages are records in the database
+ * `IR-Extend-1`, retrieved by Search and Present, and may also be returned on
+ * the ES response. Common parameters are on `TaskPackage`. Service-specific
+ * parameters are an EXTERNAL using the same OID as the package type, selecting
+ * the taskPackage alternative.
+ */
+
 export type {
     TaskPackage_taskStatus,
 } from "./TaskPackage-taskStatus.ta.mjs";

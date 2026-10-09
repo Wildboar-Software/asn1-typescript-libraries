@@ -13,6 +13,11 @@ import { Destination, _decode_Destination, _encode_Destination } from "../ESForm
  * @summary ClientPartToKeep
  * @description
  * 
+ * The export specification itself: how records are composed for delivery,
+ * and where they are delivered. Both are kept in the task package.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,27 @@ export
 class ClientPartToKeep {
     /**
      * @summary `composition`.
+     * @description
+     * 
+     * Record syntax, element specification, variants, and similar instructions
+     * for the records to be exported. The standard does not define those
+     * pieces further here.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.6.
+     * 
      * @public
      * @readonly
      */
     readonly composition: CompSpec;
     /**
      * @summary `exportDestination`.
+     * @description
+     * 
+     * An address or other destination instruction, for example an e-mail
+     * address, a printer address, or a fax number.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.6.
+     * 
      * @public
      * @readonly
      */

@@ -9,6 +9,8 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SortKeyDetails_caseSensitivity
  * @description
+ * How case is treated for a sort key, including the default when the sort
+ * request does not say. ANSI/NISO Z39.50-2003 §3.2.10.3.13; Explain ASN.1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -30,6 +32,8 @@ type SortKeyDetails_caseSensitivity = INTEGER;
 
 /**
  * @summary SortKeyDetails_caseSensitivity_always
+ * @description
+ * The key is always case-sensitive. ANSI/NISO Z39.50-2003 Explain ASN.1.
  * @constant
  * @type {number}
  */
@@ -38,6 +42,8 @@ const SortKeyDetails_caseSensitivity_always: SortKeyDetails_caseSensitivity = 0;
 
 /**
  * @summary SortKeyDetails_caseSensitivity_always
+ * @description
+ * Short name for `SortKeyDetails_caseSensitivity_always`.
  * @constant
  * @type {number}
  */
@@ -46,6 +52,8 @@ const always: SortKeyDetails_caseSensitivity = SortKeyDetails_caseSensitivity_al
 
 /**
  * @summary SortKeyDetails_caseSensitivity_never
+ * @description
+ * The key is never case-sensitive. ANSI/NISO Z39.50-2003 Explain ASN.1.
  * @constant
  * @type {number}
  */
@@ -54,6 +62,8 @@ const SortKeyDetails_caseSensitivity_never: SortKeyDetails_caseSensitivity = 1; 
 
 /**
  * @summary SortKeyDetails_caseSensitivity_never
+ * @description
+ * Short name for `SortKeyDetails_caseSensitivity_never`.
  * @constant
  * @type {number}
  */
@@ -62,6 +72,9 @@ const never: SortKeyDetails_caseSensitivity = SortKeyDetails_caseSensitivity_nev
 
 /**
  * @summary SortKeyDetails_caseSensitivity_default_yes
+ * @description
+ * Case sensitivity is as specified on the request. If the request does not
+ * specify, the key is case-sensitive. ANSI/NISO Z39.50-2003 Explain ASN.1.
  * @constant
  * @type {number}
  */
@@ -70,6 +83,8 @@ const SortKeyDetails_caseSensitivity_default_yes: SortKeyDetails_caseSensitivity
 
 /**
  * @summary SortKeyDetails_caseSensitivity_default_yes
+ * @description
+ * Short name for `SortKeyDetails_caseSensitivity_default_yes`.
  * @constant
  * @type {number}
  */
@@ -78,6 +93,9 @@ const default_yes: SortKeyDetails_caseSensitivity = SortKeyDetails_caseSensitivi
 
 /**
  * @summary SortKeyDetails_caseSensitivity_default_no
+ * @description
+ * Case sensitivity is as specified on the request. If the request does not
+ * specify, the key is not case-sensitive. ANSI/NISO Z39.50-2003 Explain ASN.1.
  * @constant
  * @type {number}
  */
@@ -86,6 +104,8 @@ const SortKeyDetails_caseSensitivity_default_no: SortKeyDetails_caseSensitivity 
 
 /**
  * @summary SortKeyDetails_caseSensitivity_default_no
+ * @description
+ * Short name for `SortKeyDetails_caseSensitivity_default_no`.
  * @constant
  * @type {number}
  */

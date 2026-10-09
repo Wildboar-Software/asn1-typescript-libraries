@@ -13,6 +13,11 @@ import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mj
  * @summary AttributesPlusTerm
  * @description
  * 
+ * Attribute list plus term. In a type-1 or type-101 query it is a simple
+ * operand, evaluated against the databases named in the Search request
+ * (ANSI/NISO Z39.50-2003 §3.7.1). On Scan it is the term list and the starting
+ * term (§3.2.8.1.2).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,23 @@ export
 class AttributesPlusTerm {
     /**
      * @summary `attributes`.
+     * @description
+     * 
+     * Attributes that qualify the term. On Scan they select which term list to
+     * scan (ANSI/NISO Z39.50-2003 §3.2.8.1.2, §3.7.1).
+     * 
      * @public
      * @readonly
      */
     readonly attributes: AttributeList;
     /**
      * @summary `term`.
+     * @description
+     * 
+     * Search term, or the presumed starting entry of a Scan. If no Scan entry
+     * matches, the first entry with a higher value is the starting point
+     * (ANSI/NISO Z39.50-2003 §3.2.8.1.2).
+     * 
      * @public
      * @readonly
      */

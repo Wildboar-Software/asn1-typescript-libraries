@@ -13,6 +13,13 @@ import { CreditCardInfo, _decode_CreditCardInfo, _encode_CreditCardInfo } from "
  * @summary ClientPartToKeep_addlBilling_paymentMethod
  * @description
  * 
+ * Payment method for an item order: bill invoice, prepay, deposit account,
+ * credit card, card information previously supplied, or a private method.
+ * `privateKnown` and `privateNotKnown` are not defined beyond those names.
+ * Credit-card details, when used, are the card information in this module.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

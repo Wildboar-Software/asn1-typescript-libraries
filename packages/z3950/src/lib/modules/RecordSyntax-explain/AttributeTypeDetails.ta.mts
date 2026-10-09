@@ -14,6 +14,10 @@ import { AttributeValue, _decode_AttributeValue, _encode_AttributeValue } from "
  * @summary AttributeTypeDetails
  * @description
  * 
+ * One attribute type as it can be used to search a database. If no values are
+ * listed, every value of this type is fully supported and the AttributeSetInfo
+ * descriptions are enough. REC.1; ANSI/NISO Z39.50-2003 §3.2.10.3.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +34,28 @@ export
 class AttributeTypeDetails {
     /**
      * @summary `attributeType`.
+     * @description
+     * The attribute type. ANSI/NISO Z39.50-2003 §3.2.10.3.9.
      * @public
      * @readonly
      */
     readonly attributeType: INTEGER;
     /**
      * @summary `defaultIfOmitted`.
+     * @description
+     * Value and human-readable behavior used when the attribute is omitted.
+     * Both parts may be absent: the server allows the type to be omitted and
+     * does not say what it will do. A human-readable description should
+     * generally be provided. Comment 9; ANSI/NISO Z39.50-2003 §3.2.10.3.9.
      * @public
      * @readonly
      */
     readonly defaultIfOmitted: OPTIONAL<OmittedAttributeInterpretation>;
     /**
      * @summary `attributeValues`.
+     * @description
+     * Per-value support. If this is absent, every value of this type is fully
+     * supported and the AttributeSetInfo descriptions are adequate. REC.1.
      * @public
      * @readonly
      */

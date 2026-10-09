@@ -14,6 +14,11 @@ import { ClientPartToKeep_addlBilling, _decode_ClientPartToKeep_addlBilling, _en
  * @summary ClientPartToKeep
  * @description
  * 
+ * Item Order parameters the client may supply and that are kept in the
+ * task package. All are optional.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,18 +61,40 @@ export
 class ClientPartToKeep {
     /**
      * @summary `supplDescription`.
+     * @description
+     * 
+     * Additional descriptive information about the requested item,
+     * supplementing the requested item itself. The standard does not define
+     * the format.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly supplDescription: OPTIONAL<EXTERNAL>;
     /**
      * @summary `contact`.
+     * @description
+     * 
+     * Optional name, phone number, and electronic mail address of a contact
+     * person.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly contact: OPTIONAL<ClientPartToKeep_contact>;
     /**
      * @summary `addlBilling`.
+     * @description
+     * 
+     * Optional payment method, credit-card information, customer reference,
+     * and customer purchase-order number.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */

@@ -14,7 +14,15 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
 /**
  * @summary Segment
  * @description
- * 
+ *
+ * One segment of an aggregate Present response, other than the last.
+ * A non-confirmed message from the server during a Present operation.
+ * Version 3 only, and only when segmentation is in effect. If the
+ * requested records fit in one segment, the server sends only a
+ * Present response. The last segment is always a Present response.
+ * Level 1: each segment holds a whole number of records. Level 2:
+ * records may span segments. §3.2.3.2, §3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +41,50 @@ export
 class Segment {
     /**
      * @summary `referenceId`.
+     * @description
+     *
+     * Reference-id of the Present operation this segment belongs to.
+     * Include it when the Present request included one; omit it when
+     * the request omitted it. §3.4, §3.2.3.2.
+     *
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `numberOfRecordsReturned`.
+     * @description
+     *
+     * Number of response records and starting fragments in this
+     * segment, not in the aggregate response. §3.2.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly numberOfRecordsReturned: INTEGER;
     /**
      * @summary `segmentRecords`.
+     * @description
+     *
+     * Level 1: a sequence of whole response records. Level 2: may also
+     * include fragments. It may be a final fragment (not in the first
+     * segment), then zero or more response records, then a starting
+     * fragment. If neither fragment is present there is at least one
+     * response record. A diagnostic record is not segmented. Database
+     * names follow the same rules as on a Present response.
+     * §3.2.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly segmentRecords: NamePlusRecord[];
     /**
      * @summary `otherInfo`.
+     * @description
+     *
+     * Additional information not specified by the standard. The
+     * Segment service itself is version 3 only. §3.2.3.2.3.
+     *
      * @public
      * @readonly
      */

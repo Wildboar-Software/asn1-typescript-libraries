@@ -12,6 +12,10 @@ import { ProximitySupport_unitsSupported_Item, _decode_ProximitySupport_unitsSup
 /**
  * @summary ProximitySupport
  * @description
+ * Whether an RPN or extended-RPN query type supports proximity, and which
+ * units. If the server claims the Prox operator, it should also say whether it
+ * supports the extended result set model for proximity. ANSI/NISO Z39.50-2003
+ * §3.7; Explain ASN.1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -36,12 +40,19 @@ export
 class ProximitySupport {
     /**
      * @summary `anySupport`.
+     * @description
+     * `false` means no proximity support, in which case the unit list is not
+     * supplied. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */
     readonly anySupport: BOOLEAN;
     /**
      * @summary `unitsSupported`.
+     * @description
+     * Proximity units the server supports. Not supplied when proximity is not
+     * supported. Each unit is either a known unit code or a private unit.
+     * ANSI/NISO Z39.50-2003 Explain ASN.1; §3.7.
      * @public
      * @readonly
      */

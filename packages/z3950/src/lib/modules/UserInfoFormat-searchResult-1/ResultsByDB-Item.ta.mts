@@ -14,6 +14,9 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary ResultsByDB_Item
  * @description
  * 
+ * How many records one query component produced in a set of databases
+ * (ASN1.11).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +40,34 @@ export
 class ResultsByDB_Item {
     /**
      * @summary `databases`.
+     * @description
+     * 
+     * `all` means every database in the Search APDU. `list` means the databases
+     * named here.
+     * 
      * @public
      * @readonly
      */
     readonly databases: ResultsByDB_Item_databases;
     /**
      * @summary `count`.
+     * @description
+     * 
+     * Records for this query component in those databases. During a search, via
+     * resource control, the count so far.
+     * 
      * @public
      * @readonly
      */
     readonly count: OPTIONAL<INTEGER>;
     /**
      * @summary `resultSetName`.
+     * @description
+     * 
+     * Server-assigned result set for this subquery. Do not send it until
+     * processing for this component has finished. On a resource-control report
+     * during the search, omit it (ASN1.11 comment 1, USR.1).
+     * 
      * @public
      * @readonly
      */

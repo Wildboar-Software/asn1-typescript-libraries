@@ -14,6 +14,10 @@ import { VariantValue, _decode_VariantValue, _encode_VariantValue } from "../Rec
 /**
  * @summary VariantType
  * @description
+ * One type within a variant class. The type has a name, a description, and the
+ * values supported for that type. The integer identifies the type within the
+ * variant set; Explain does not assign those integers. ANSI/NISO Z39.50-2003
+ * §3.2.10.3.15.
  * 
  * ### ASN.1 Definition:
  * 
@@ -32,24 +36,35 @@ export
 class VariantType {
     /**
      * @summary `name`.
+     * @description
+     * Name of the type. ANSI/NISO Z39.50-2003 §3.2.10.3.15.
      * @public
      * @readonly
      */
     readonly name: OPTIONAL<InternationalString>;
     /**
      * @summary `description`.
+     * @description
+     * Description of the type. ANSI/NISO Z39.50-2003 §3.2.10.3.15.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `variantType`.
+     * @description
+     * Type identifier within the variant set. The Explain category does not
+     * assign these integers; they belong to the variant set definition.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.15.
      * @public
      * @readonly
      */
     readonly variantType: INTEGER;
     /**
      * @summary `variantValue`.
+     * @description
+     * Values supported for this type. Optional. The standard does not say what
+     * omission means. ANSI/NISO Z39.50-2003 §3.2.10.3.15.
      * @public
      * @readonly
      */

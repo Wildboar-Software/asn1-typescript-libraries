@@ -12,6 +12,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RPNStructure_rpnRpnOp_op
  * @description
  * 
+ * Boolean operator of an eSpec-q restrictor (ANSI/NISO Z39.50-2003, §3.7,
+ * ASN1.14). `and`, `or`, and `and-not` are the type-1 operators. This module
+ * does not define proximity.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

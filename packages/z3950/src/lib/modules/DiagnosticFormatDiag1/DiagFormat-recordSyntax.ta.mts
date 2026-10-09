@@ -13,6 +13,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagFormat_recordSyntax
  * @description
  * 
+ * The record cannot be transferred in the requested syntax (diag-1). Matches
+ * DIAG.1 conditions 238 and 239.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +32,22 @@ export
 class DiagFormat_recordSyntax {
     /**
      * @summary `unsupportedSyntax`.
+     * @description
+     * 
+     * The syntax that cannot be used (DIAG.1 condition 239). Addinfo is the
+     * syntax.
+     * 
      * @public
      * @readonly
      */
     readonly unsupportedSyntax: OBJECT_IDENTIFIER;
     /**
      * @summary `suggestedAlternatives`.
+     * @description
+     * 
+     * Syntaxes the server suggests instead (condition 238). Addinfo is the
+     * alternative syntax or syntaxes.
+     * 
      * @public
      * @readonly
      */

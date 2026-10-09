@@ -12,6 +12,11 @@ import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/I
  * @summary ServerPart
  * @description
  * 
+ * Optional server report of how large the export is and what it has cost
+ * so far. Every parameter is optional.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,24 +34,51 @@ export
 class ServerPart {
     /**
      * @summary `estimatedQuantity`.
+     * @description
+     * 
+     * Server estimate of the number of pages, message packets, or similar
+     * units in the information to be exported. The standard does not fix the
+     * unit beyond that.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.7.
+     * 
      * @public
      * @readonly
      */
     readonly estimatedQuantity: OPTIONAL<IntUnit>;
     /**
      * @summary `quantitySoFar`.
+     * @description
+     * 
+     * Amount actually exported so far, in the same kind of units as the
+     * estimate (pages, message packets, and so on).
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.7.
+     * 
      * @public
      * @readonly
      */
     readonly quantitySoFar: OPTIONAL<IntUnit>;
     /**
      * @summary `estimatedCost`.
+     * @description
+     * 
+     * Server estimate of the cost to export this information.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.7.
+     * 
      * @public
      * @readonly
      */
     readonly estimatedCost: OPTIONAL<IntUnit>;
     /**
      * @summary `costSoFar`.
+     * @description
+     * 
+     * Cost accrued so far.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.7.
+     * 
      * @public
      * @readonly
      */

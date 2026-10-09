@@ -13,6 +13,19 @@ import { DiagFormat_scan_posInResponse, _decode_DiagFormat_scan_posInResponse, _
  * @summary DiagFormat_scan
  * @description
  * 
+ * Scan failure (diag-1).
+ * 
+ * - nonZeroStepSize: only a zero step size is supported (DIAG.1 condition 205).
+ * - specifiedStepSize: the specified step size is not supported (condition
+ *   206).
+ * - termList1: the term list is not supported, and no alternative is supplied.
+ * - termList2: the term list is not supported; alternatives are supplied
+ *   (condition 232). Addinfo is the alternative term list.
+ * - posInResponse: that position-in-response is not supported (condition 233).
+ * - resources: resources were exhausted while looking for satisfying terms
+ *   (condition 240).
+ * - endOfList: beginning or end of the term list (condition 241).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

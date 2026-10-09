@@ -13,6 +13,9 @@ import { RPNStructure_rpnRpnOp_op, _decode_RPNStructure_rpnRpnOp_op, _encode_RPN
  * @summary RPNStructure_rpnRpnOp
  * @description
  * 
+ * Two eSpec-q subqueries and the type-1 operator that joins them (ANSI/NISO
+ * Z39.50-2003, ASN1.14, §3.7).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +36,29 @@ export
 class RPNStructure_rpnRpnOp {
     /**
      * @summary `rpn1`.
+     * @description
+     * 
+     * First argument of the operator, in the order a type-1 RPN writes its two
+     * arguments (§3.7).
      * @public
      * @readonly
      */
     readonly rpn1: RPNStructure;
     /**
      * @summary `rpn2`.
+     * @description
+     * 
+     * Second argument of the operator (§3.7).
      * @public
      * @readonly
      */
     readonly rpn2: RPNStructure;
     /**
      * @summary `op`.
+     * @description
+     * 
+     * `and`, `or`, or `and-not`. Proximity is not defined for this restrictor
+     * (ASN1.14, §3.7).
      * @public
      * @readonly
      */

@@ -15,6 +15,12 @@ import { AttributeCombinations, _decode_AttributeCombinations, _encode_Attribute
  * @summary AttributeDetails
  * @description
  * 
+ * How one database can be searched: each supported attribute, and the
+ * combinations that are allowed. One record per supported database. Search
+ * ExplainCategory `AttributeDetails` with DatabaseName as the key.
+ * `attributesBySet` is mandatory in a full record. ANSI/NISO Z39.50-2003
+ * §3.2.10.1.1, §3.2.10.3.9; REC.1 Comment 8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +41,38 @@ export
 class AttributeDetails {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates, language, and other information about this Explain record.
+     * otherInfo is omitted from element set `B`. REC.1 Comment 1; ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `databaseName`.
+     * @description
+     * Brief. Key. Database these attributes apply to. Search with Use
+     * DatabaseName. ANSI/NISO Z39.50-2003 §3.2.10.1.1, §3.2.10.3.9.
      * @public
      * @readonly
      */
     readonly databaseName: DatabaseName;
     /**
      * @summary `attributesBySet`.
+     * @description
+     * Non-brief. Mandatory in a full record. For each attribute set supported
+     * for the database, the set's object identifier and each attribute in that
+     * set. ANSI/NISO Z39.50-2003 §3.2.10.3.9.
      * @public
      * @readonly
      */
     readonly attributesBySet: OPTIONAL<AttributeSetDetails[]>;
     /**
      * @summary `attributeCombinations`.
+     * @description
+     * Non-brief. All attribute combinations supported for the database.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.9.
      * @public
      * @readonly
      */

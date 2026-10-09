@@ -13,6 +13,9 @@ import { SortKey, _decode_SortKey, _encode_SortKey } from "../Z39-50-APDU-2001/S
  * @summary SortElement_datbaseSpecific_Item
  * @description
  * 
+ * Sort key to use for records from one database (ANSI/NISO Z39.50-2003
+ * §3.2.7.1.3).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +31,22 @@ export
 class SortElement_datbaseSpecific_Item {
     /**
      * @summary `databaseName`.
+     * @description
+     * 
+     * Database whose records are ordered by `dbSort` (ANSI/NISO Z39.50-2003
+     * §3.2.7.1.3).
+     * 
      * @public
      * @readonly
      */
     readonly databaseName: DatabaseName;
     /**
      * @summary `dbSort`.
+     * @description
+     * 
+     * Sort key for records from `databaseName` (ANSI/NISO Z39.50-2003
+     * §3.2.7.1.3, §4.1 comment 12).
+     * 
      * @public
      * @readonly
      */

@@ -12,6 +12,13 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary Specification_elementSpec
  * @description
  * 
+ * Element specification applied to an abstract database record (ANSI/NISO
+ * Z39.50-2003 §3.6). `elementSetName` is a primitive name. The server must
+ * recognize "F" as full, a null transformation, and "B" as brief. This standard
+ * does not define brief. Names are case-insensitive (§3.6.2). `externalEspec`
+ * is an element-specification format carried as an EXTERNAL; the APDU does not
+ * define its contents (Appendix RET).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

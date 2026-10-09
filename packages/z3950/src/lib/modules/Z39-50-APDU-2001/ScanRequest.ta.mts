@@ -17,6 +17,12 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary ScanRequest
  * @description
  * 
+ * Client request to scan an ordered term list, such as subjects, names, or
+ * titles (ANSI/NISO Z39.50-2003 §3.2.8.1). The server defines the order. The
+ * list is a generalization of an index and need not be one. Scan is negotiated
+ * separately. A Scan request when Scan is not in effect may be treated as a
+ * protocol error (§4.4.2.2.13).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,48 +45,101 @@ export
 class ScanRequest {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Client-assigned identifier of this Scan operation. Mandatory when
+     * concurrent operations is in effect. When serial operations is in effect
+     * it may be omitted and is then null, and every other message of the
+     * operation omits it too (ANSI/NISO Z39.50-2003 §3.4, §3.5).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `databaseNames`.
+     * @description
+     * 
+     * Databases to which the term list belongs (ANSI/NISO Z39.50-2003
+     * §3.2.8.1.1).
+     * 
      * @public
      * @readonly
      */
     readonly databaseNames: DatabaseName[];
     /**
      * @summary `attributeSet`.
+     * @description
+     * 
+     * Default attribute set for the term-list attributes. It may be omitted
+     * only when every attribute pair carries its own set id. An unqualified
+     * pair is an error; the server may treat it as a protocol error or fail the
+     * Scan with diagnostic 1051 (ANSI/NISO Z39.50-2003 §4.1, comment 2).
+     * 
      * @public
      * @readonly
      */
     readonly attributeSet: OPTIONAL<AttributeSetId>;
     /**
      * @summary `termListAndStartPoint`.
+     * @description
+     * 
+     * Attributes that select the term list, and the term where scanning starts.
+     * The term is a presumed entry. If none matches, the first higher-valued
+     * entry is the start (ANSI/NISO Z39.50-2003 §3.2.8.1.2).
+     * 
      * @public
      * @readonly
      */
     readonly termListAndStartPoint: AttributesPlusTerm;
     /**
      * @summary `stepSize`.
+     * @description
+     * 
+     * How many term-list entries to skip between adjacent entries in the
+     * response. Zero means skip none. If the client omits it, the server
+     * chooses the step and returns that step. If the server cannot support the
+     * requested step, it sets scan status to failure and returns a
+     * non-surrogate diagnostic (ANSI/NISO Z39.50-2003 §3.2.8.1.3).
+     * 
      * @public
      * @readonly
      */
     readonly stepSize: OPTIONAL<INTEGER>;
     /**
      * @summary `numberOfTermsRequested`.
+     * @description
+     * 
+     * How many entries the client wants returned (ANSI/NISO Z39.50-2003
+     * §3.2.8.1.4).
+     * 
      * @public
      * @readonly
      */
     readonly numberOfTermsRequested: INTEGER;
     /**
      * @summary `preferredPositionInResponse`.
+     * @description
+     * 
+     * Preferred index, among the returned entries, of the starting term. 1 is
+     * the first returned entry. 0 means the returned entries begin at the term
+     * immediately after the start. The requested count plus one means the
+     * client wants terms immediately before the start. The standard's example
+     * also uses negative positions to step further past the start (ANSI/NISO
+     * Z39.50-2003 §3.2.8.1.5).
+     * 
      * @public
      * @readonly
      */
     readonly preferredPositionInResponse: OPTIONAL<INTEGER>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. The peer should
+     * expect it and need not interpret it, in either version (ANSI/NISO
+     * Z39.50-2003 §3.2.8.1.8, §4.4.2.2.21).
+     * 
      * @public
      * @readonly
      */

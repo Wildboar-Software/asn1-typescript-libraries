@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Challenge_Item_dataType
  * @description
  * 
+ * Kind of data the server wants the client to prompt for (ASN1.9.1 comment 5).
+ * The only further rule is the date example: prompt for something date-like.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +31,10 @@ type Challenge_Item_dataType = INTEGER;
 
 /**
  * @summary Challenge_Item_dataType_integer
+ * @description
+ * 
+ * Integer data. ASN1.9.1 names it and gives no further rule.
+ * 
  * @constant
  * @type {number}
  */
@@ -36,6 +43,10 @@ const Challenge_Item_dataType_integer: Challenge_Item_dataType = 1; /* LONG_NAME
 
 /**
  * @summary Challenge_Item_dataType_integer
+ * @description
+ * 
+ * Integer data. ASN1.9.1 names it and gives no further rule.
+ * 
  * @constant
  * @type {number}
  */
@@ -44,6 +55,11 @@ const integer: Challenge_Item_dataType = Challenge_Item_dataType_integer; /* SHO
 
 /**
  * @summary Challenge_Item_dataType_date
+ * @description
+ * 
+ * A date. The client should prompt for something date-like (ASN1.9.1 comment
+ * 5).
+ * 
  * @constant
  * @type {number}
  */
@@ -52,6 +68,11 @@ const Challenge_Item_dataType_date: Challenge_Item_dataType = 2; /* LONG_NAMED_I
 
 /**
  * @summary Challenge_Item_dataType_date
+ * @description
+ * 
+ * A date. The client should prompt for something date-like (ASN1.9.1 comment
+ * 5).
+ * 
  * @constant
  * @type {number}
  */
@@ -60,6 +81,10 @@ const date: Challenge_Item_dataType = Challenge_Item_dataType_date; /* SHORT_NAM
 
 /**
  * @summary Challenge_Item_dataType_float
+ * @description
+ * 
+ * Floating-point data. ASN1.9.1 names it and gives no further rule.
+ * 
  * @constant
  * @type {number}
  */
@@ -68,6 +93,10 @@ const Challenge_Item_dataType_float: Challenge_Item_dataType = 3; /* LONG_NAMED_
 
 /**
  * @summary Challenge_Item_dataType_float
+ * @description
+ * 
+ * Floating-point data. ASN1.9.1 names it and gives no further rule.
+ * 
  * @constant
  * @type {number}
  */
@@ -76,6 +105,10 @@ const float: Challenge_Item_dataType = Challenge_Item_dataType_float; /* SHORT_N
 
 /**
  * @summary Challenge_Item_dataType_alphaNumeric
+ * @description
+ * 
+ * Alphanumeric data. ASN1.9.1 names it and gives no further rule.
+ * 
  * @constant
  * @type {number}
  */
@@ -84,6 +117,10 @@ const Challenge_Item_dataType_alphaNumeric: Challenge_Item_dataType = 4; /* LONG
 
 /**
  * @summary Challenge_Item_dataType_alphaNumeric
+ * @description
+ * 
+ * Alphanumeric data. ASN1.9.1 names it and gives no further rule.
+ * 
  * @constant
  * @type {number}
  */
@@ -92,6 +129,10 @@ const alphaNumeric: Challenge_Item_dataType = Challenge_Item_dataType_alphaNumer
 
 /**
  * @summary Challenge_Item_dataType_url_urn
+ * @description
+ * 
+ * A URL or URN. ASN1.9.1 names it and gives no further rule.
+ * 
  * @constant
  * @type {number}
  */
@@ -100,6 +141,10 @@ const Challenge_Item_dataType_url_urn: Challenge_Item_dataType = 5; /* LONG_NAME
 
 /**
  * @summary Challenge_Item_dataType_url_urn
+ * @description
+ * 
+ * A URL or URN. ASN1.9.1 names it and gives no further rule.
+ * 
  * @constant
  * @type {number}
  */
@@ -108,6 +153,10 @@ const url_urn: Challenge_Item_dataType = Challenge_Item_dataType_url_urn; /* SHO
 
 /**
  * @summary Challenge_Item_dataType_boolean_
+ * @description
+ * 
+ * A boolean. ASN1.9.1 names it and gives no further rule.
+ * 
  * @constant
  * @type {number}
  */
@@ -116,6 +165,10 @@ const Challenge_Item_dataType_boolean_: Challenge_Item_dataType = 6; /* LONG_NAM
 
 /**
  * @summary Challenge_Item_dataType_boolean_
+ * @description
+ * 
+ * A boolean. ASN1.9.1 names it and gives no further rule.
+ * 
  * @constant
  * @type {number}
  */

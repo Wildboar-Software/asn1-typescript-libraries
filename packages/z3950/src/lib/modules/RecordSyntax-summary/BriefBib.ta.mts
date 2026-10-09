@@ -15,6 +15,14 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary BriefBib
  * @description
  * 
+ * Summary-record bibliographic item (module OID `{z39-50-recordSyntax
+ * summary(103)}`, `1.2.840.10003.5.103`).
+ * 
+ * ANSI/NISO Z39.50-2003 removed OPAC and Summary from Appendix REC and does not
+ * define this type. The module ASN.1 names the components and supplies no
+ * comments. The phrase "summary record" in the Explain service (§3.2.10.2.2)
+ * means an abbreviated Explain record, not this syntax.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,84 +49,140 @@ export
 class BriefBib {
     /**
      * @summary `title`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly title: InternationalString;
     /**
      * @summary `author`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly author: OPTIONAL<InternationalString>;
     /**
      * @summary `callNumber`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly callNumber: OPTIONAL<InternationalString>;
     /**
      * @summary `recordType`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly recordType: OPTIONAL<InternationalString>;
     /**
      * @summary `bibliographicLevel`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly bibliographicLevel: OPTIONAL<InternationalString>;
     /**
      * @summary `format`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly format: OPTIONAL<FormatSpec[]>;
     /**
      * @summary `publicationPlace`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly publicationPlace: OPTIONAL<InternationalString>;
     /**
      * @summary `publicationDate`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly publicationDate: OPTIONAL<InternationalString>;
     /**
      * @summary `targetSystemKey`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly targetSystemKey: OPTIONAL<InternationalString>;
     /**
      * @summary `satisfyingElement`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly satisfyingElement: OPTIONAL<InternationalString>;
     /**
      * @summary `rank`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly rank: OPTIONAL<INTEGER>;
     /**
      * @summary `documentId`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly documentId: OPTIONAL<InternationalString>;
     /**
      * @summary `abstract`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly abstract: OPTIONAL<InternationalString>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the Summary record syntax and gives no
+     * further semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */

@@ -14,6 +14,18 @@ import { TaskPackageRecordStructure_recordStatus, _decode_TaskPackageRecordStruc
  * @summary TaskPackageRecordStructure
  * @description
  * 
+ * Server's per-record result inside an Update task package. There should
+ * be one for every supplied record, created when the package is created,
+ * initially with correlation information and status `queued`. The record
+ * is added when processing of that record finishes. Record status then
+ * moves to success or failure, possibly via `inProcess`. The server may
+ * skip `queued` or `inProcess`. Once success or failure, it should not
+ * change. While task status is pending, every record is queued. While
+ * active, some may be otherwise. When task status is complete or aborted,
+ * none should still be queued.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.1.5.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,18 +54,45 @@ export
 class TaskPackageRecordStructure {
     /**
      * @summary `recordOrSurDiag`.
+     * @description
+     * 
+     * The updated record, or a surrogate diagnostic. Use the record when
+     * record status is success and an element-set name was supplied. Use a
+     * diagnostic when record status is failure. Omit this when the element-set
+     * name was omitted and record status is success, or when record status is
+     * queued or in process.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */
     readonly recordOrSurDiag: OPTIONAL<TaskPackageRecordStructure_recordOrSurDiag>;
     /**
      * @summary `correlationInfo`.
+     * @description
+     * 
+     * The correlation note or id the client supplied for this record, when the
+     * client supplied one. The server should not process or change it.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */
     readonly correlationInfo: OPTIONAL<CorrelationInfo>;
     /**
      * @summary `recordStatus`.
+     * @description
+     * 
+     * `success`, `queued`, `inProcess`, or `failure` for this record. Starts
+     * as `queued`. Becomes `success` or `failure` when the update of this
+     * record finishes, and should not change after that. `queued` may mean the
+     * update is already in process if the server does not distinguish that
+     * from `inProcess`.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.1.5.1.
+     * 
      * @public
      * @readonly
      */

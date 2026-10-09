@@ -14,6 +14,11 @@ import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } fro
  * @summary Unit
  * @description
  * 
+ * A unit of measure, without a numeric value (ANSI/NISO Z39.50-2003 §4.1,
+ * comment 6). `IntUnit` is used when a value and a unit travel together. The
+ * comment illustrates a system, a type, a unit name, and a scale factor; this
+ * standard does not register a vocabulary.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,24 +36,44 @@ export
 class Unit {
     /**
      * @summary `unitSystem`.
+     * @description
+     * 
+     * Unit system. The ASN.1 comment gives 'SI' as an example. The standard
+     * registers no values (ANSI/NISO Z39.50-2003 §4.1, comment 6).
+     * 
      * @public
      * @readonly
      */
     readonly unitSystem: OPTIONAL<InternationalString>;
     /**
      * @summary `unitType`.
+     * @description
+     * 
+     * Kind of unit. The ASN.1 comment gives 'mass' as an example. The standard
+     * registers no values (ANSI/NISO Z39.50-2003 §4.1, comment 6).
+     * 
      * @public
      * @readonly
      */
     readonly unitType: OPTIONAL<StringOrNumeric>;
     /**
      * @summary `unit`.
+     * @description
+     * 
+     * Unit name. The ASN.1 comment gives 'kilograms' as an example. The
+     * standard registers no values (ANSI/NISO Z39.50-2003 §4.1, comment 6).
+     * 
      * @public
      * @readonly
      */
     readonly unit: OPTIONAL<StringOrNumeric>;
     /**
      * @summary `scaleFactor`.
+     * @description
+     * 
+     * Power of ten applied to the unit. The ASN.1 comment says 9 means 10**9
+     * (ANSI/NISO Z39.50-2003 §4.1, comment 6).
+     * 
      * @public
      * @readonly
      */

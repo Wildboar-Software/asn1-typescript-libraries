@@ -13,6 +13,12 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary SuppliedRecords_Item_recordId
  * @description
  * 
+ * Optional record id accompanying one supplied update record. The standard
+ * calls this a record id and does not define the number, string, and
+ * opaque alternatives further.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

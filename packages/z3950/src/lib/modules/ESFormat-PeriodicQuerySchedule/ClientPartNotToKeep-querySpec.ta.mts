@@ -12,6 +12,13 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary ClientPartNotToKeep_querySpec
  * @description
  * 
+ * The query to run on the schedule: either the query itself or the name of
+ * a Persistent Query package whose query the server copies. Mandatory on
+ * create. If this is a query, or the named package lists no databases,
+ * database names are required.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

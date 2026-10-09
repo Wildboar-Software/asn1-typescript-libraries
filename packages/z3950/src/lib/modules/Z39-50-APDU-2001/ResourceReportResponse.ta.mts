@@ -15,6 +15,10 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary ResourceReportResponse
  * @description
  * 
+ * Server reply to Resource-report. A report may be included, in the preferred
+ * format, in another format, or not at all, as `resourceReportStatus` says
+ * (ANSI/NISO Z39.50-2003 §3.2.6.3).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,24 +45,44 @@ export
 class ResourceReportResponse {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Reference-id of the Resource-report request. Omit it when the request
+     * omitted it (ANSI/NISO Z39.50-2003 §3.4).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `resourceReportStatus`.
+     * @description
+     * 
+     * Whether a report is included and why it might be missing or partial
+     * (ANSI/NISO Z39.50-2003 §3.2.6.3.3).
+     * 
      * @public
      * @readonly
      */
     readonly resourceReportStatus: ResourceReportResponse_resourceReportStatus;
     /**
      * @summary `resourceReport`.
+     * @description
+     * 
+     * The report, when status is success or partial (ANSI/NISO Z39.50-2003
+     * §3.2.6.3.4, §3.2.6.1.1).
+     * 
      * @public
      * @readonly
      */
     readonly resourceReport: OPTIONAL<ResourceReport>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. Version 3 only
+     * (ANSI/NISO Z39.50-2003 §3.2.6.3.5).
+     * 
      * @public
      * @readonly
      */

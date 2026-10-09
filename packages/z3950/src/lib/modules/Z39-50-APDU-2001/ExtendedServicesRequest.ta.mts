@@ -21,6 +21,15 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary ExtendedServicesRequest
  * @description
  * 
+ * Client request to create, modify, or delete a task package on the server
+ * (ANSI/NISO Z39.50-2003 §3.2.9.1). The request and response are the ES
+ * operation. The task itself is outside that operation and may outlive the
+ * Z-association. The server checks the request and answers accepted or
+ * rejected. Extended Services is negotiated (§4.4.2.2.13). If the operation
+ * aborts, no terminating response arrives and wait-action is treated as
+ * do-not-send-task-package; the client may search the ES database IR-Extend-1
+ * (§3.2.9.4).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,72 +70,153 @@ export
 class ExtendedServicesRequest {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Client-assigned identifier of this ES operation. Mandatory when
+     * concurrent operations is in effect. When serial operations is in effect
+     * it may be omitted and is then null (ANSI/NISO Z39.50-2003 §3.4, §3.5).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `function_`.
+     * @description
+     * 
+     * Create, delete, or modify a task package (ANSI/NISO Z39.50-2003
+     * §3.2.9.1.1). Create builds a package and uses `packageName` when
+     * supplied. Delete or modify names an existing package. The server may
+     * still refuse, for example because the task has started or the package is
+     * in use.
+     * 
      * @public
      * @readonly
      */
     readonly function_: ExtendedServicesRequest_function;
     /**
      * @summary `packageType`.
+     * @description
+     * 
+     * Which extended service to run (ANSI/NISO Z39.50-2003 §3.2.9.1.2). This
+     * standard registers persistent result set, persistent query, periodic
+     * query schedule, item order, database update, export specification, and
+     * export invocation, as object identifiers under `{Z39-50-extendedServices
+     * 1}` through 7 (Appendix EXT).
+     * 
      * @public
      * @readonly
      */
     readonly packageType: OBJECT_IDENTIFIER;
     /**
      * @summary `packageName`.
+     * @description
+     * 
+     * Client name for the package. With package type and user id it must be
+     * unique or the request is in error, and that triple is how the package is
+     * referenced later. Mandatory on modify and delete; optional on create
+     * (ANSI/NISO Z39.50-2003 §3.2.9.1.3, §4.1).
+     * 
      * @public
      * @readonly
      */
     readonly packageName: OPTIONAL<InternationalString>;
     /**
      * @summary `userId`.
+     * @description
+     * 
+     * User associated with the package. If omitted, it may default to the
+     * current user. A server may refuse a user id other than the client's own.
+     * Mandatory on create; send it on modify when it is being changed
+     * (ANSI/NISO Z39.50-2003 §3.2.9.1.4, §4.1).
+     * 
      * @public
      * @readonly
      */
     readonly userId: OPTIONAL<InternationalString>;
     /**
      * @summary `retentionTime`.
+     * @description
+     * 
+     * How long the server should keep the package, for example in hours or
+     * days. The server may override it. Zero means the package is not kept
+     * after the task completes (ANSI/NISO Z39.50-2003 §3.2.9.1.5).
+     * 
      * @public
      * @readonly
      */
     readonly retentionTime: OPTIONAL<IntUnit>;
     /**
      * @summary `permissions`.
+     * @description
+     * 
+     * Who else may access the package, and which functions they may use. If
+     * omitted, only the creating user may access it (ANSI/NISO Z39.50-2003
+     * §3.2.9.1.6, §3.2.9.3).
+     * 
      * @public
      * @readonly
      */
     readonly permissions: OPTIONAL<Permissions>;
     /**
      * @summary `description`.
+     * @description
+     * 
+     * Client description of the package, for example of a saved result set or a
+     * saved query (ANSI/NISO Z39.50-2003 §3.2.9.1.7).
+     * 
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<InternationalString>;
     /**
      * @summary `taskSpecificParameters`.
+     * @description
+     * 
+     * Parameters defined by the particular extended service, as an EXTERNAL
+     * whose object identifier is that service and whose chosen alternative is
+     * `esRequest`. Mandatory on create. On modify, include it when those
+     * parameters change. It is not needed on delete (ANSI/NISO Z39.50-2003
+     * §3.2.9.1.12, §4.1). The task-package definitions are in Appendix EXT.
+     * 
      * @public
      * @readonly
      */
     readonly taskSpecificParameters: OPTIONAL<EXTERNAL>;
     /**
      * @summary `waitAction`.
+     * @description
+     * 
+     * Whether the server should finish the task before the ES response, and
+     * whether that response may carry the task package (ANSI/NISO Z39.50-2003
+     * §3.2.9.1.13).
+     * 
      * @public
      * @readonly
      */
     readonly waitAction: ExtendedServicesRequest_waitAction;
     /**
      * @summary `elements`.
+     * @description
+     * 
+     * Element set name for the task package if the response returns one. The
+     * client may send it only when wait-action is other than
+     * do-not-send-task-package (ANSI/NISO Z39.50-2003 §3.2.9.1.14). The ES
+     * database defines element sets Identification, UniqueName, Permissions,
+     * Status, and Brief, besides full (§3.2.9.2).
+     * 
      * @public
      * @readonly
      */
     readonly elements: OPTIONAL<ElementSetName>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. The peer should
+     * expect it and need not interpret it, in either version (ANSI/NISO
+     * Z39.50-2003 §3.2.9.1.18, §4.4.2.2.21).
+     * 
      * @public
      * @readonly
      */

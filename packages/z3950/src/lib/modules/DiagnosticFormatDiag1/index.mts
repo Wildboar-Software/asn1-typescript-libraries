@@ -1,3 +1,10 @@
+/**
+ * @module
+ * @description
+ * Diagnostic format diag-1 `{z39-50-diagnostic diag-1(2)}`
+ * (ANSI/NISO Z39.50-2003 DIAG.1). General Diagnostic Set condition
+ * codes are documented on `DefaultDiagFormat.condition`.
+ */
 export type {
     DiagFormat_accessCtrl,
 } from "./DiagFormat-accessCtrl.ta.mjs";

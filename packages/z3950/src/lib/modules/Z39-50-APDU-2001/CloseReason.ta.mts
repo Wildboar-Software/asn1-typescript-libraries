@@ -11,7 +11,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CloseReason
  * @description
- * 
+ *
+ * Why the sender is closing the Z-association. The service lists
+ * finished, shutdown, system problem, cost limits, resources,
+ * security violation, protocol error, lack of activity, unspecified,
+ * and response to a Close request. The standard does not define the
+ * named reasons beyond those labels, except protocol error (§4.2)
+ * and response to a Close request. Both request and response carry
+ * this parameter. §3.2.11.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +42,11 @@ type CloseReason = INTEGER;
 
 /**
  * @summary CloseReason_finished
+ * @description
+ *
+ * Value 0. The sender is closing because it is finished. The standard
+ * lists this reason and does not define it further. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -42,6 +55,11 @@ const CloseReason_finished: CloseReason = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_finished
+ * @description
+ *
+ * Short name for `CloseReason_finished`. Value 0: finished. The
+ * standard does not define this reason further. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -50,6 +68,11 @@ const finished: CloseReason = CloseReason_finished; /* SHORT_NAMED_INTEGER_VALUE
 
 /**
  * @summary CloseReason_shutdown
+ * @description
+ *
+ * Value 1. The sender is closing because of shutdown. The standard
+ * lists this reason and does not define it further. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +81,11 @@ const CloseReason_shutdown: CloseReason = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_shutdown
+ * @description
+ *
+ * Short name for `CloseReason_shutdown`. Value 1: shutdown. The
+ * standard does not define this reason further. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -66,6 +94,12 @@ const shutdown: CloseReason = CloseReason_shutdown; /* SHORT_NAMED_INTEGER_VALUE
 
 /**
  * @summary CloseReason_systemProblem
+ * @description
+ *
+ * Value 2. The sender is closing because of a system problem. The
+ * standard lists this reason and does not define it further.
+ * §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +108,11 @@ const CloseReason_systemProblem: CloseReason = 2; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_systemProblem
+ * @description
+ *
+ * Short name for `CloseReason_systemProblem`. Value 2: system
+ * problem. The standard does not define it further. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +121,11 @@ const systemProblem: CloseReason = CloseReason_systemProblem; /* SHORT_NAMED_INT
 
 /**
  * @summary CloseReason_costLimit
+ * @description
+ *
+ * Value 3. The sender is closing because of cost limits. The standard
+ * lists this reason and does not define it further. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +134,11 @@ const CloseReason_costLimit: CloseReason = 3; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_costLimit
+ * @description
+ *
+ * Short name for `CloseReason_costLimit`. Value 3: cost limits. The
+ * standard does not define this reason further. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -98,6 +147,11 @@ const costLimit: CloseReason = CloseReason_costLimit; /* SHORT_NAMED_INTEGER_VAL
 
 /**
  * @summary CloseReason_resources
+ * @description
+ *
+ * Value 4. The sender is closing because of resources. The standard
+ * lists this reason and does not define it further. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -106,6 +160,11 @@ const CloseReason_resources: CloseReason = 4; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_resources
+ * @description
+ *
+ * Short name for `CloseReason_resources`. Value 4: resources. The
+ * standard does not define this reason further. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -114,6 +173,12 @@ const resources: CloseReason = CloseReason_resources; /* SHORT_NAMED_INTEGER_VAL
 
 /**
  * @summary CloseReason_securityViolation
+ * @description
+ *
+ * Value 5. The sender is closing because of a security violation. The
+ * standard lists this reason and does not define it further.
+ * §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -122,6 +187,11 @@ const CloseReason_securityViolation: CloseReason = 5; /* LONG_NAMED_INTEGER_VALU
 
 /**
  * @summary CloseReason_securityViolation
+ * @description
+ *
+ * Short name for `CloseReason_securityViolation`. Value 5: security
+ * violation. The standard does not define it further. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -130,6 +200,13 @@ const securityViolation: CloseReason = CloseReason_securityViolation; /* SHORT_N
 
 /**
  * @summary CloseReason_protocolError
+ * @description
+ *
+ * Value 6. The sender detected a protocol error. When version 3 is in
+ * force, Close with this reason is one of the actions the standard
+ * allows; the receiver may instead drop the connection or ignore the
+ * error. §3.2.11.1.1, §4.2.
+ *
  * @constant
  * @type {number}
  */
@@ -138,6 +215,12 @@ const CloseReason_protocolError: CloseReason = 6; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_protocolError
+ * @description
+ *
+ * Short name for `CloseReason_protocolError`. Value 6: protocol
+ * error. One version-3 response to a protocol error. §3.2.11.1.1,
+ * §4.2.
+ *
  * @constant
  * @type {number}
  */
@@ -146,6 +229,12 @@ const protocolError: CloseReason = CloseReason_protocolError; /* SHORT_NAMED_INT
 
 /**
  * @summary CloseReason_lackOfActivity
+ * @description
+ *
+ * Value 7. The sender is closing because of lack of activity. The
+ * standard lists this reason and does not define it further.
+ * §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -154,6 +243,11 @@ const CloseReason_lackOfActivity: CloseReason = 7; /* LONG_NAMED_INTEGER_VALUE *
 
 /**
  * @summary CloseReason_lackOfActivity
+ * @description
+ *
+ * Short name for `CloseReason_lackOfActivity`. Value 7: lack of
+ * activity. The standard does not define it further. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -162,6 +256,13 @@ const lackOfActivity: CloseReason = CloseReason_lackOfActivity; /* SHORT_NAMED_I
 
 /**
  * @summary CloseReason_responseToPeer
+ * @description
+ *
+ * Value 8. "Response to Close request." Optional when this APDU is
+ * sent as a Close response. If both sides send Close at once, each
+ * peer message is taken as the response even when this value is not
+ * used. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -170,6 +271,11 @@ const CloseReason_responseToPeer: CloseReason = 8; /* LONG_NAMED_INTEGER_VALUE *
 
 /**
  * @summary CloseReason_responseToPeer
+ * @description
+ *
+ * Short name for `CloseReason_responseToPeer`. Value 8: this message
+ * is a Close response. Optional. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -178,6 +284,12 @@ const responseToPeer: CloseReason = CloseReason_responseToPeer; /* SHORT_NAMED_I
 
 /**
  * @summary CloseReason_unspecified
+ * @description
+ *
+ * Value 9. The sender is closing and does not give a specific reason.
+ * The standard lists this value and does not define it further.
+ * §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */
@@ -186,6 +298,11 @@ const CloseReason_unspecified: CloseReason = 9; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_unspecified
+ * @description
+ *
+ * Short name for `CloseReason_unspecified`. Value 9: unspecified. The
+ * standard does not define this reason further. §3.2.11.1.1.
+ *
  * @constant
  * @type {number}
  */

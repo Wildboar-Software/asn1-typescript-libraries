@@ -16,6 +16,11 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary ExtendedServicesResponse
  * @description
  * 
+ * Server reply that ends the ES operation. It does not by itself mean the task
+ * has finished (ANSI/NISO Z39.50-2003 §3.2.9.1). Operation status is distinct
+ * from task status, which lives in the task package and moves from pending
+ * through active to complete or aborted (§3.2.9.5).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,30 +46,59 @@ export
 class ExtendedServicesResponse {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Reference-id of the ES request. Omit it when the request omitted it
+     * (ANSI/NISO Z39.50-2003 §3.4).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `operationStatus`.
+     * @description
+     * 
+     * Status of the ES operation: done, accepted, or failure (ANSI/NISO
+     * Z39.50-2003 §3.2.9.1.15). It is set once, when the operation completes.
+     * 
      * @public
      * @readonly
      */
     readonly operationStatus: ExtendedServicesResponse_operationStatus;
     /**
      * @summary `diagnostics`.
+     * @description
+     * 
+     * Diagnostics supplied when operation status is failure (ANSI/NISO
+     * Z39.50-2003 §3.2.9.1.15, §3.2.9.1.16).
+     * 
      * @public
      * @readonly
      */
     readonly diagnostics: OPTIONAL<DiagRec[]>;
     /**
      * @summary `taskPackage`.
+     * @description
+     * 
+     * The task package, included when operation status is done. How much of it
+     * appears depends on `elements` from the request. The EXTERNAL uses record
+     * syntax `{Z39-50-recordSyntax 106}`, and the service-specific part uses
+     * that service's object identifier with alternative `taskPackage`
+     * (ANSI/NISO Z39.50-2003 §3.2.9.1.17, §4.1).
+     * 
      * @public
      * @readonly
      */
     readonly taskPackage: OPTIONAL<EXTERNAL>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. The peer should
+     * expect it and need not interpret it, in either version (ANSI/NISO
+     * Z39.50-2003 §3.2.9.1.18, §4.4.2.2.21).
+     * 
      * @public
      * @readonly
      */

@@ -17,6 +17,17 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary ServerPart
  * @description
  * 
+ * What the server records for a periodic query: the query it will run, the
+ * period and expiration it settled on, the result-set package, and how the
+ * last runs went. Database names must occur if option bit 20 is set and
+ * must not occur if it is not. Additional search information must not
+ * occur unless bit 20 is set. Last-query time and last-result number are
+ * optional if bit 20 is set and mandatory otherwise; the 2001 ASN.1 also
+ * leaves them optional because neither has a value between creation of the
+ * package and the first execution.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.3, §3.2.1.1.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,54 +62,122 @@ export
 class ServerPart {
     /**
      * @summary `databaseNames`.
+     * @description
+     * 
+     * Must occur if option bit 20 is set, and must not occur if option bit 20
+     * is not set. This is the server's list of databases for the schedule.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3, §3.2.1.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly databaseNames: OPTIONAL<InternationalString[]>;
     /**
      * @summary `actualQuery`.
+     * @description
+     * 
+     * The query the server will run. If the client supplied a query, the
+     * server uses it. If the client supplied a Persistent Query package name,
+     * the server copies that package's query.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly actualQuery: Query;
     /**
      * @summary `serverStatedPeriod`.
+     * @description
+     * 
+     * Period the server will use. It may match the client's suggestion. The
+     * server may override the client.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly serverStatedPeriod: Period;
     /**
      * @summary `expiration`.
+     * @description
+     * 
+     * When the server will stop running this schedule. It may match the
+     * client's proposal or override it. If omitted, there is no expiration.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly expiration: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `resultSetPackage`.
+     * @description
+     * 
+     * Name of the Persistent Result Set package that receives results. May be
+     * omitted only when export parameters were supplied. If the client
+     * supplied a name, the server supplies that same name.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly resultSetPackage: OPTIONAL<InternationalString>;
     /**
      * @summary `lastQueryTime`.
+     * @description
+     * 
+     * Last time this periodic query was invoked. Optional if option bit 20 is
+     * set, and mandatory otherwise. There is no value between creation of the
+     * package and the first execution.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3, §3.2.1.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly lastQueryTime: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `lastResultNumber`.
+     * @description
+     * 
+     * How many new records the last invocation obtained. Optional if option
+     * bit 20 is set, and mandatory otherwise. There is no value between
+     * creation of the package and the first execution.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3, §3.2.1.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly lastResultNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `numberSinceModify`.
+     * @description
+     * 
+     * Total records obtained by running the query since this package was last
+     * modified. Optional.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly numberSinceModify: OPTIONAL<INTEGER>;
     /**
      * @summary `additionalSearchInfo`.
+     * @description
+     * 
+     * Must not occur unless option bit 20 is set. Additional search
+     * information; the service definition says the client may supply
+     * information that this definition does not specify.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3, §3.2.1.1.3.
+     * 
      * @public
      * @readonly
      */

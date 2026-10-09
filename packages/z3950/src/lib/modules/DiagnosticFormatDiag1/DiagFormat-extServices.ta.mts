@@ -13,6 +13,14 @@ import { _decode_DiagFormat_extServices_immediate, _encode_DiagFormat_extService
  * @summary DiagFormat_extServices
  * @description
  * 
+ * Extended-services failure (diag-1), DIAG.1 conditions 218-226.
+ * 
+ * - req: the request itself is bad (218-221).
+ * - permission: the id is not authorized (222), or the package cannot be
+ *   modified or deleted (223).
+ * - immediate: immediate execution failed (224), is not supported for this
+ *   service (225), or is not supported for these parameters (226).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

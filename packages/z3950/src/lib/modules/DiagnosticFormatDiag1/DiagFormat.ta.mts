@@ -24,6 +24,11 @@ import { DiagFormat_recordSyntax, _decode_DiagFormat_recordSyntax, _encode_DiagF
  * @summary DiagFormat
  * @description
  * 
+ * Structured diagnostic format diag-1 `{z39-50-diagnostic diag-1(2)}` (DIAG.1).
+ * Each alternative is one family of General Diagnostic Set conditions, with the
+ * addinfo carried in components instead of a single string. The flat codes are
+ * listed on DiagnosticFormat.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

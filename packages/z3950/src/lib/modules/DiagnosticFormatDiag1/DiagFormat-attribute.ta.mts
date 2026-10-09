@@ -14,6 +14,10 @@ import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mj
  * @summary DiagFormat_attribute
  * @description
  * 
+ * An attribute set, attribute type, attribute value, or term is not supported
+ * (diag-1). Covers DIAG.1 conditions 113, 115, 121, and 126, and the value
+ * conditions 114 and 117-122.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,24 +46,46 @@ export
 class DiagFormat_attribute {
     /**
      * @summary `id`.
+     * @description
+     * 
+     * Attribute-set OID. If this is the only component present, the set is not
+     * supported (DIAG.1 condition 121; addinfo is the oid).
+     * 
      * @public
      * @readonly
      */
     readonly id: OBJECT_IDENTIFIER;
     /**
      * @summary `type_`.
+     * @description
+     * 
+     * Attribute type. Required when a value is present. If the value is
+     * omitted, this type is what is unsupported (condition 113; addinfo is the
+     * type).
+     * 
      * @public
      * @readonly
      */
     readonly type_: OPTIONAL<INTEGER>;
     /**
      * @summary `value`.
+     * @description
+     * 
+     * Attribute value that is unsupported. DIAG.1 splits that case by type: Use
+     * (114), Relation (117), Structure (118), Position (119), Truncation (120),
+     * Completeness (122). This format does not say which.
+     * 
      * @public
      * @readonly
      */
     readonly value: OPTIONAL<INTEGER>;
     /**
      * @summary `term`.
+     * @description
+     * 
+     * Present when the term is illegal or unsupported: for the value, if a
+     * value is present; otherwise for the type (conditions 115 and 126).
+     * 
      * @public
      * @readonly
      */

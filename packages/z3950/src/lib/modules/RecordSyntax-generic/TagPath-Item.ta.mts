@@ -13,6 +13,9 @@ import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } fro
  * @summary TagPath_Item
  * @description
  * 
+ * One step of a GRS-1 tag path (ANSI/NISO Z39.50-2003, ASN1.6, RET.2.1.5). The
+ * triple matches a tagged element: tag type, tag value, and occurrence.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +32,31 @@ export
 class TagPath_Item {
     /**
      * @summary `tagType`.
+     * @description
+     * 
+     * Tag-set shorthand for this step. Omitted, it is filled the same way as on
+     * a tagged element: the tagSet-M default in the record, otherwise the
+     * schema default (ASN1.6, Appendix TAG).
      * @public
      * @readonly
      */
     readonly tagType: OPTIONAL<INTEGER>;
     /**
      * @summary `tagValue`.
+     * @description
+     * 
+     * Element name at this step, an integer or a string (RET.2.1.2).
      * @public
      * @readonly
      */
     readonly tagValue: StringOrNumeric;
     /**
      * @summary `tagOccurrence`.
+     * @description
+     * 
+     * 1-based occurrence of this tag among siblings. On a tagged element,
+     * omitting it means the server is not saying, and there is no default
+     * (ASN1.6). The path uses that same triple.
      * @public
      * @readonly
      */

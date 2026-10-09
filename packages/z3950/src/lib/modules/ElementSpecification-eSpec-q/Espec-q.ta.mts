@@ -13,6 +13,22 @@ import { ValueRestrictor, _decode_ValueRestrictor, _encode_ValueRestrictor } fro
  * @summary Espec_q
  * @description
  * 
+ * Element specification that first restricts by value, then optionally selects
+ * elements (ANSI/NISO Z39.50-2003, ESP.2, ASN1.14). Object identifier
+ * `{Z39-50-elementSpec eSpec-q(3)}` (`1.2.840.10003.11.3`).
+ * 
+ * Place it in `compSpec` (§3.6.1). The restrictor is a type-1 query (§3.7) used
+ * to limit what is retrieved, not to build the result set. The selector, if
+ * present, is another element specification (eSpec-2 is the example, and it may
+ * be only an element set name) and chooses elements subject to that limit. If
+ * the selector is omitted, the server chooses the element set.
+ * 
+ * ESP.2 applies this to holdings under schema `1.2.840.10003.13.7`. The
+ * restrictor matches access point `institutionOrSiteId` to an institution code
+ * such as `MdMC-T`. The selector asks for `siteLocation`, `dateOfReport`,
+ * `numberOfCopies`, and `UnionCatLendingInfo`. Both apply to each result-set
+ * record named in the Present.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +43,20 @@ export
 class Espec_q {
     /**
      * @summary `valueRestrictor`.
+     * @description
+     * 
+     * Type-1 query that limits which information is retrieved from records
+     * already selected (ESP.2, §3.7).
      * @public
      * @readonly
      */
     readonly valueRestrictor: ValueRestrictor;
     /**
      * @summary `elementSelector`.
+     * @description
+     * 
+     * Another element specification, carried externally, applied after the
+     * value restrictor. If omitted, the server chooses the element set (ESP.2).
      * @public
      * @readonly
      */

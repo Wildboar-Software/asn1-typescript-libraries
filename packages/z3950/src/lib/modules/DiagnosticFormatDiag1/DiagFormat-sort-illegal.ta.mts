@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagFormat_sort_illegal
  * @description
  * 
+ * The sort was illegal (diag-1): relation (214), case (215), missing-data
+ * action (216), or the sort itself (237). DIAG.1. Condition 213 is the separate
+ * case of an unsupported missing-data action.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +33,10 @@ type DiagFormat_sort_illegal = INTEGER;
 
 /**
  * @summary DiagFormat_sort_illegal_relation
+ * @description
+ * 
+ * Illegal sort relation (DIAG.1 condition 214). Addinfo is the relation.
+ * 
  * @constant
  * @type {number}
  */
@@ -37,6 +45,10 @@ const DiagFormat_sort_illegal_relation: DiagFormat_sort_illegal = 1; /* LONG_NAM
 
 /**
  * @summary DiagFormat_sort_illegal_relation
+ * @description
+ * 
+ * Illegal sort relation (DIAG.1 condition 214). Addinfo is the relation.
+ * 
  * @constant
  * @type {number}
  */
@@ -45,6 +57,10 @@ const relation: DiagFormat_sort_illegal = DiagFormat_sort_illegal_relation; /* S
 
 /**
  * @summary DiagFormat_sort_illegal_case_
+ * @description
+ * 
+ * Illegal case value (DIAG.1 condition 215). Addinfo is the value.
+ * 
  * @constant
  * @type {number}
  */
@@ -53,6 +69,10 @@ const DiagFormat_sort_illegal_case_: DiagFormat_sort_illegal = 2; /* LONG_NAMED_
 
 /**
  * @summary DiagFormat_sort_illegal_case_
+ * @description
+ * 
+ * Illegal case value (DIAG.1 condition 215). Addinfo is the value.
+ * 
  * @constant
  * @type {number}
  */
@@ -61,6 +81,10 @@ const case_: DiagFormat_sort_illegal = DiagFormat_sort_illegal_case_; /* SHORT_N
 
 /**
  * @summary DiagFormat_sort_illegal_action
+ * @description
+ * 
+ * Illegal missing-data action (DIAG.1 condition 216). Addinfo is the value.
+ * 
  * @constant
  * @type {number}
  */
@@ -69,6 +93,10 @@ const DiagFormat_sort_illegal_action: DiagFormat_sort_illegal = 3; /* LONG_NAMED
 
 /**
  * @summary DiagFormat_sort_illegal_action
+ * @description
+ * 
+ * Illegal missing-data action (DIAG.1 condition 216). Addinfo is the value.
+ * 
  * @constant
  * @type {number}
  */
@@ -77,6 +105,10 @@ const action: DiagFormat_sort_illegal = DiagFormat_sort_illegal_action; /* SHORT
 
 /**
  * @summary DiagFormat_sort_illegal_sort
+ * @description
+ * 
+ * Illegal sort (DIAG.1 condition 237).
+ * 
  * @constant
  * @type {number}
  */
@@ -85,6 +117,10 @@ const DiagFormat_sort_illegal_sort: DiagFormat_sort_illegal = 4; /* LONG_NAMED_I
 
 /**
  * @summary DiagFormat_sort_illegal_sort
+ * @description
+ * 
+ * Illegal sort (DIAG.1 condition 237).
+ * 
  * @constant
  * @type {number}
  */

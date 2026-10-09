@@ -15,6 +15,10 @@ import { ProximityOperator_proximityUnitCode, _decode_ProximityOperator_proximit
  * @summary ProximityOperator
  * @description
  * 
+ * Proximity test (ProxTest) applied by the `prox` operator (ANSI/NISO
+ * Z39.50-2003 §3.7.2.1). Distance is a non-negative difference between the
+ * ordinal positions of the two operands.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,30 +47,59 @@ export
 class ProximityOperator {
     /**
      * @summary `exclusion`.
+     * @description
+     * 
+     * When true, the test is negated. The example in §3.7.2.1 is 'cat' within 5
+     * words of 'hat' versus 'cat' outside that window. The standard does not
+     * state what omission means.
+     * 
      * @public
      * @readonly
      */
     readonly exclusion: OPTIONAL<BOOLEAN>;
     /**
      * @summary `distance`.
+     * @description
+     * 
+     * Non-negative difference of ordinals, in the chosen unit. Distance 0 with
+     * unit paragraph means the same paragraph (ANSI/NISO Z39.50-2003 §3.7.2.1).
+     * 
      * @public
      * @readonly
      */
     readonly distance: INTEGER;
     /**
      * @summary `ordered`.
+     * @description
+     * 
+     * When true, the test is right proximity only: the left ordinal must not
+     * exceed the right, and distance is compared with right minus left. When
+     * false, either order is accepted, and distance is compared with the
+     * absolute difference (ANSI/NISO Z39.50-2003 §3.7.2.1).
+     * 
      * @public
      * @readonly
      */
     readonly ordered: BOOLEAN;
     /**
      * @summary `relationType`.
+     * @description
+     * 
+     * How the positional difference is compared with `distance`: less than,
+     * less than or equal, equal, greater than or equal, greater than, or not
+     * equal (ANSI/NISO Z39.50-2003 §3.7.2.1).
+     * 
      * @public
      * @readonly
      */
     readonly relationType: ProximityOperator_relationType;
     /**
      * @summary `proximityUnitCode`.
+     * @description
+     * 
+     * Unit of the ordinals. `known` is a unit from this standard. `private` is
+     * a privately defined unit (ANSI/NISO Z39.50-2003 §3.7.2.1).
+     * 
      * @public
      * @readonly
      */

@@ -9,7 +9,13 @@ import { ListStatuses_Item, _decode_ListStatuses_Item, _encode_ListStatuses_Item
 /**
  * @summary ListStatuses
  * @description
- * 
+ *
+ * Result-set name paired with a delete status. On a list Delete
+ * response, the same result sets as the request, each with its
+ * status. On a bulk-delete whose operation status is failure-8, the
+ * statuses of sets that were not deleted (`bulkStatuses`).
+ * §3.2.4.1.4, §3.2.4.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

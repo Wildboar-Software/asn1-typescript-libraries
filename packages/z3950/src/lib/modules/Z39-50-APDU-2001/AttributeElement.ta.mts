@@ -14,6 +14,17 @@ import { AttributeElement_attributeValue, _decode_AttributeElement_attributeValu
  * @summary AttributeElement
  * @description
  * 
+ * One attribute type and value inside an attribute list (ANSI/NISO Z39.50-2003
+ * §4.1). The type code and the meaning of the value come from the attribute
+ * set, which this edition does not fix; bib-1 is not registered here. Class 1
+ * types are described, without numeric codes, in Appendix Arch (ARCH 3.2).
+ * 
+ * When version 2 is in force the value must be numeric. A version-2 type-1
+ * query that uses multiple attribute sets, a complex value, multiple term
+ * datatypes, restriction, or proximity may be treated as a protocol error. In
+ * version 3 the server must not treat an unsupported use of those features as
+ * a protocol error (§4.4.2.2.3).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +51,40 @@ export
 class AttributeElement {
     /**
      * @summary `attributeSet`.
+     * @description
+     * 
+     * Attribute set for this element only. It overrides the default set on the
+     * RPN query or Scan request. It must be omitted when version 2 is in force.
+     * On Scan, if the request omits its attribute set, every element must carry
+     * one; an unqualified pair is an error, for which diagnostic 1051 is
+     * defined (ANSI/NISO Z39.50-2003 §4.1, comment 2).
+     * 
      * @public
      * @readonly
      */
     readonly attributeSet: OPTIONAL<AttributeSetId>;
     /**
      * @summary `attributeType`.
+     * @description
+     * 
+     * Attribute type code assigned by the governing attribute set. This
+     * standard does not assign those integers. Appendix Arch describes Class 1
+     * types (access point, qualifiers, language, content authority, expansion,
+     * comparison, format/structure, occurrence, indirection, and query
+     * management) without numbers (ARCH 3.2).
+     * 
      * @public
      * @readonly
      */
     readonly attributeType: INTEGER;
     /**
      * @summary `attributeValue`.
+     * @description
+     * 
+     * Value of this attribute. Version 2 requires the numeric alternative. The
+     * complex alternative is a version 3 feature (ANSI/NISO Z39.50-2003 §4.1,
+     * §4.4.2.2.3).
+     * 
      * @public
      * @readonly
      */

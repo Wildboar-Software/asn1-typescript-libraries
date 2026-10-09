@@ -12,6 +12,10 @@ import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } fro
 /**
  * @summary Path_Item
  * @description
+ * One node of a Path. A tag type qualifies a tag value. Tag types 1, 2, and 3
+ * mean tagSet-M, tagSet-G, and a tag defined locally by the server. Other tag
+ * types are assigned by the schema. ANSI/NISO Z39.50-2003 §2 (Tag, TagType,
+ * TagValue); Appendix TAG.
  * 
  * ### ASN.1 Definition:
  * 
@@ -28,12 +32,20 @@ export
 class Path_Item {
     /**
      * @summary `tagType`.
+     * @description
+     * Integer shorthand for the tag set that qualifies the tag value. The
+     * schema maps tag types to tag sets. Types 1 through 3 are tagSet-M,
+     * tagSet-G, and locally defined tags. ANSI/NISO Z39.50-2003 §2 (TagType);
+     * Appendix TAG.
      * @public
      * @readonly
      */
     readonly tagType: INTEGER;
     /**
      * @summary `tagValue`.
+     * @description
+     * Identifier of this node. It may be an integer or a character string. The
+     * tag type qualifies it. ANSI/NISO Z39.50-2003 §2 (TagValue); Appendix TAG.
      * @public
      * @readonly
      */

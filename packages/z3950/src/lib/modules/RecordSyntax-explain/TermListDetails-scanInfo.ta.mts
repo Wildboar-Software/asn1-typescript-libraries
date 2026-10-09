@@ -13,6 +13,10 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
 /**
  * @summary TermListDetails_scanInfo
  * @description
+ * Scan parameters for a term list that can be scanned. Supplied only when the
+ * list is scanable. If the list is scanable and this is omitted, the server
+ * does not consider step size, collating sequence, or order important.
+ * ANSI/NISO Z39.50-2003 §3.2.10.3.10.
  * 
  * ### ASN.1 Definition:
  * 
@@ -30,18 +34,26 @@ export
 class TermListDetails_scanInfo {
     /**
      * @summary `maxStepSize`.
+     * @description
+     * Largest step size supported for Scan. ANSI/NISO Z39.50-2003 §3.2.10.3.10.
      * @public
      * @readonly
      */
     readonly maxStepSize: OPTIONAL<INTEGER>;
     /**
      * @summary `collatingSequence`.
+     * @description
+     * Collating sequence, for example ASCII, in human-readable text. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.10.
      * @public
      * @readonly
      */
     readonly collatingSequence: OPTIONAL<HumanString>;
     /**
      * @summary `increasing`.
+     * @description
+     * Order of the list, ascending or descending. The standard does not say
+     * which value means which. ANSI/NISO Z39.50-2003 §3.2.10.3.10.
      * @public
      * @readonly
      */

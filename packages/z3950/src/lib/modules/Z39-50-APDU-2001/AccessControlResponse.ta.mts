@@ -15,6 +15,11 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary AccessControlResponse
  * @description
  * 
+ * Client answer to an Access-control challenge (ANSI/NISO Z39.50-2003
+ * §3.2.5.1). If the answer is acceptable, suspended work continues as if the
+ * challenge had not occurred. If it is not, the server may end one or more
+ * operations, refuse a capability, or close the Z-association.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,24 +43,45 @@ export
 class AccessControlResponse {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * The Reference-id from the Access-control request, when that request
+     * included one (ANSI/NISO Z39.50-2003 §3.2.5.1.3).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `securityChallengeResponse`.
+     * @description
+     * 
+     * The client's answer, in the form agreed for the challenge. Mandatory in
+     * version 2. In version 3 it may be omitted, and a diagnostic must then be
+     * present (ANSI/NISO Z39.50-2003 §4.1).
+     * 
      * @public
      * @readonly
      */
     readonly securityChallengeResponse: OPTIONAL<AccessControlResponse_securityChallengeResponse>;
     /**
      * @summary `diagnostic`.
+     * @description
+     * 
+     * Diagnostic accompanying the answer. Version 3 only. Required when the
+     * challenge response is omitted (ANSI/NISO Z39.50-2003 §4.1).
+     * 
      * @public
      * @readonly
      */
     readonly diagnostic: OPTIONAL<DiagRec>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. Version 3 only
+     * (ANSI/NISO Z39.50-2003 §3.2.5.1.2).
+     * 
      * @public
      * @readonly
      */

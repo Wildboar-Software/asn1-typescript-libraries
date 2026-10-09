@@ -18,6 +18,19 @@ import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/I
  * @summary Term
  * @description
  * 
+ * Term in a search operand or a Scan entry (ANSI/NISO Z39.50-2003 §4.1).
+ * `general` is an octet string and is the only alternative when version 2 is in
+ * force. Every other alternative may be used only when version 3 is in force.
+ * Multiple term datatypes in a type-1 query are a version 3 feature
+ * (§4.4.2.2.3).
+ * 
+ * `integerAndUnit` pairs an integer with a unit (comment 6). The standard does
+ * not further define when `null` is used, nor the search meaning of `numeric`,
+ * `characterString`, `oid`, `dateTime`, or `external` beyond those datatypes.
+ * An attribute set may still require a format/structure attribute except where
+ * the datatype already fixes the format, as with an integer or generalized time
+ * (Appendix Arch, ARCH 3.1.4).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,13 @@ import { Permissions_Item, _decode_Permissions_Item, _encode_Permissions_Item } 
  * @summary Permissions
  * @description
  * 
+ * Access rights for users other than the package creator (ANSI/NISO Z39.50-2003
+ * §3.2.9.3). The creating user may always apply any ES function, retrieve the
+ * full package, and invoke it. If the client omits permissions on create, only
+ * that user may access the package. A group name, if the server provides
+ * groups, has the same syntax as a user id. This standard does not describe how
+ * group membership is reported.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,12 @@ import { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../Z39
  * @summary RPNQuery
  * @description
  * 
+ * Body of a type-1 or type-101 query (ANSI/NISO Z39.50-2003 §3.7). The client
+ * transmits a left post-order sequence of operands and operators. The server
+ * pushes each operand and applies each operator to the two operands most
+ * recently pushed. When evaluation finishes, one object must remain on the
+ * stack; otherwise the query is in error (§3.7.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,25 @@ export
 class RPNQuery {
     /**
      * @summary `attributeSet`.
+     * @description
+     * 
+     * Default attribute-set identifier for this query. An attribute element may
+     * carry its own set identifier, which overrides this value for that
+     * attribute only. The per-attribute identifier must be omitted when version
+     * 2 is in force, so this value then applies to every attribute (ANSI/NISO
+     * Z39.50-2003 §4.1).
+     * 
      * @public
      * @readonly
      */
     readonly attributeSet: AttributeSetId;
     /**
      * @summary `rpn`.
+     * @description
+     * 
+     * Root of the RPN tree: one operand, or two subtrees combined by an
+     * operator (ANSI/NISO Z39.50-2003 §3.7.1).
+     * 
      * @public
      * @readonly
      */

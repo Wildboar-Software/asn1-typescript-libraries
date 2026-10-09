@@ -12,6 +12,11 @@ import { RPNStructure_rpnRpnOp, _decode_RPNStructure_rpnRpnOp, _encode_RPNStruct
  * @summary RPNStructure
  * @description
  * 
+ * One restrictor operand, or two subqueries joined by a Boolean operator
+ * (ANSI/NISO Z39.50-2003, ASN1.14, §3.7). `op` is a single attributes-plus-term
+ * leaf. `rpnRpnOp` combines two subqueries. This module defines no result-set
+ * operand and no proximity operator.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

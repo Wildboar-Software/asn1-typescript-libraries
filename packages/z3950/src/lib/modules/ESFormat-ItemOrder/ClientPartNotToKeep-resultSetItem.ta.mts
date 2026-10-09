@@ -13,6 +13,11 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary ClientPartNotToKeep_resultSetItem
  * @description
  * 
+ * One entry of a transient result set on this Z-association, identifying
+ * the item to order.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,24 @@ export
 class ClientPartNotToKeep_resultSetItem {
     /**
      * @summary `resultSetId`.
+     * @description
+     * 
+     * Name of a transient result set belonging to the current Z-association.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly resultSetId: InternationalString;
     /**
      * @summary `item`.
+     * @description
+     * 
+     * Ordinal number of an entry within that result set.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */

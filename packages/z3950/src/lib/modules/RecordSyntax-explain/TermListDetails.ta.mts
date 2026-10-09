@@ -17,6 +17,15 @@ import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mj
 /**
  * @summary TermListDetails
  * @description
+ * Descriptive information for one term list. There is one record for each term
+ * list named by a TermListInfo record. ANSI/NISO Z39.50-2003 §3.2.10.3.10.
+ * 
+ * Search with ExplainCategory `TermListDetails` and TermListName. The search
+ * may also use HumanStringLanguage, DateAdded, DateChanged, or DateExpires.
+ * ANSI/NISO Z39.50-2003 §3.2.10.1.2 and §3.2.10.1.3.
+ * 
+ * The name is the only brief element. The attribute combination is
+ * mandatory in a full record. ANSI/NISO Z39.50-2003 ASN.1 comment 1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -47,42 +56,71 @@ export
 class TermListDetails {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates this Explain record was added and last changed, when it expires,
+     * and the language of its human-readable text. Element set `B` includes
+     * this component except `otherInfo`. DateAdded, DateChanged, and
+     * DateExpires search these dates. ANSI/NISO Z39.50-2003 §3.2.10.3,
+     * §3.2.10.1.3; ASN.1 comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `termListName`.
+     * @description
+     * Name of the term list. Key, searched with TermListName. It is the name
+     * recorded for this list in TermListInfo, unique for the database. Brief.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.7, §3.2.10.3.10.
      * @public
      * @readonly
      */
     readonly termListName: InternationalString;
     /**
      * @summary `description`.
+     * @description
+     * Human-readable description of the term list. Non-brief. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.10.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `attributes`.
+     * @description
+     * Attribute combination corresponding to this list: the pattern of
+     * attributes that hit it. If the list may be scanned, Scan uses this
+     * combination. Non-brief, and mandatory in a full record. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.10.
      * @public
      * @readonly
      */
     readonly attributes: OPTIONAL<AttributeCombinations>;
     /**
      * @summary `scanInfo`.
+     * @description
+     * Scan step size, collating sequence, and order. Occurs only if the list is
+     * scanable. If the list is scanable and this is omitted, the server does
+     * not consider these important. Non-brief. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.10.
      * @public
      * @readonly
      */
     readonly scanInfo: OPTIONAL<TermListDetails_scanInfo>;
     /**
      * @summary `estNumberTerms`.
+     * @description
+     * Estimated number of terms. Non-brief. ANSI/NISO Z39.50-2003 §3.2.10.3.10.
      * @public
      * @readonly
      */
     readonly estNumberTerms: OPTIONAL<INTEGER>;
     /**
      * @summary `sampleTerms`.
+     * @description
+     * Sample terms. They are not guaranteed to be valid. Optimally they are a
+     * uniformly distributed sampling of the list. Non-brief. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.10.
      * @public
      * @readonly
      */

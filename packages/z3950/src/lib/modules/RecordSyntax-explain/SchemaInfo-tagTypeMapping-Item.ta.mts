@@ -14,6 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SchemaInfo_tagTypeMapping_Item
  * @description
+ * One tag-type assignment in a schema. The schema lists each tag set its
+ * abstract record structure references and designates an integer to use as the
+ * tag type for that tag set. Tag types 1, 2, and 3 are tagSet-M, tagSet-G, and
+ * locally defined tags. ANSI/NISO Z39.50-2003 Appendix RET.2.2.2; Appendix TAG.
  * 
  * ### ASN.1 Definition:
  * 
@@ -33,18 +37,28 @@ export
 class SchemaInfo_tagTypeMapping_Item {
     /**
      * @summary `tagType`.
+     * @description
+     * Tag type designated for this tag set within the schema. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.3; Appendix RET.2.2.2.
      * @public
      * @readonly
      */
     readonly tagType: INTEGER;
     /**
      * @summary `tagSet`.
+     * @description
+     * Object identifier of the tag set. If omitted, this tag type is for a tag
+     * set defined locally in the schema, and another schema cannot reference
+     * it. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */
     readonly tagSet: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `defaultTagType`.
+     * @description
+     * The standard does not define this flag. ANSI/NISO Z39.50-2003 Explain
+     * ASN.1.
      * @public
      * @readonly
      */

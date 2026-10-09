@@ -12,6 +12,11 @@ import { ExportSpecification, _decode_ExportSpecification, _encode_ExportSpecifi
  * @summary ClientPartToKeep_exportSpec
  * @description
  * 
+ * Either the name of an export specification established by an Export
+ * Specification task, or the specification itself.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.6, EXT.1.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

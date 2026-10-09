@@ -9,6 +9,12 @@ import { Path_Item, _decode_Path_Item, _encode_Path_Item } from "../RecordSyntax
 /**
  * @summary Path
  * @description
+ * A tag path: the nodes from the root of a hierarchical record to the node the
+ * path represents. Each step is a tag, and a tag is a tag type plus a tag
+ * value. A path that ends on a leaf represents an element; otherwise it
+ * represents the subtree rooted at that node. Referenced by schema element
+ * definitions and by the schema tags listed for a retrieval element. ANSI/NISO
+ * Z39.50-2003 §2 (Tag, TagPath), Appendix TAG, Appendix RET.2.1.5.
  * 
  * ### ASN.1 Definition:
  * 

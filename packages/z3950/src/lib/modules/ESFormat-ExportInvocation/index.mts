@@ -1,3 +1,11 @@
+/**
+ * @module
+ * @description
+ * Export Invocation extended service (ANSI/NISO Z39.50-2003 EXT.1.7).
+ * 
+ * Task-specific parameters for invoking an export specification: what the
+ * client sends on the ES request, and the task package the server keeps.
+ */
 export {
     ClientPartNotToKeep_records_ranges_Item,
     _root_component_type_list_1_spec_for_ClientPartNotToKeep_records_ranges_Item,

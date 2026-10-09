@@ -18,6 +18,10 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary TermInfo
  * @description
  * 
+ * One term from a scanned term list, plus optional display and occurrence
+ * information (ANSI/NISO Z39.50-2003 §3.2.8.1.7). A count is a number of
+ * records. This standard provides no count of how many times the term occurs.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,42 +43,80 @@ export
 class TermInfo {
     /**
      * @summary `term`.
+     * @description
+     * 
+     * The term as it occurs in the term list (ANSI/NISO Z39.50-2003 §4.1,
+     * comment 11).
+     * 
      * @public
      * @readonly
      */
     readonly term: Term;
     /**
      * @summary `displayTerm`.
+     * @description
+     * 
+     * Text to show instead of `term`. Its presence means the server does not
+     * consider `term` suitable for display. It is not itself an entry in the
+     * term list (ANSI/NISO Z39.50-2003 §4.1, comment 11).
+     * 
      * @public
      * @readonly
      */
     readonly displayTerm: OPTIONAL<InternationalString>;
     /**
      * @summary `suggestedAttributes`.
+     * @description
+     * 
+     * Attributes the server suggests for a later Scan, for example when several
+     * indexes are scanned together (ANSI/NISO Z39.50-2003 §3.2.8.1.7).
+     * 
      * @public
      * @readonly
      */
     readonly suggestedAttributes: OPTIONAL<AttributeList>;
     /**
      * @summary `alternativeTerm`.
+     * @description
+     * 
+     * Suggested alternative terms, each an attribute list plus a term
+     * (ANSI/NISO Z39.50-2003 §3.2.8.1.7).
+     * 
      * @public
      * @readonly
      */
     readonly alternativeTerm: OPTIONAL<AttributesPlusTerm[]>;
     /**
      * @summary `globalOccurrences`.
+     * @description
+     * 
+     * How many records contain the term, across the databases named on the
+     * request. This is a record count, not a count of term occurrences
+     * (ANSI/NISO Z39.50-2003 §3.2.8.1.7).
+     * 
      * @public
      * @readonly
      */
     readonly globalOccurrences: OPTIONAL<INTEGER>;
     /**
      * @summary `byAttributes`.
+     * @description
+     * 
+     * Record counts broken down by attribute, and possibly by database. The
+     * list may name databases and attributes and omit counts (ANSI/NISO
+     * Z39.50-2003 §3.2.8.1.7).
+     * 
      * @public
      * @readonly
      */
     readonly byAttributes: OPTIONAL<OccurrenceByAttributes>;
     /**
      * @summary `otherTermInfo`.
+     * @description
+     * 
+     * Further information about this entry. The standard does not specify its
+     * contents (ANSI/NISO Z39.50-2003 §3.2.8.1.7).
+     * 
      * @public
      * @readonly
      */

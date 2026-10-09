@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ResourceReportResponse_resourceReportStatus
  * @description
  * 
+ * Whether the Resource-report response includes a report (ANSI/NISO Z39.50-2003
+ * §3.2.6.3.3). Failure-5 and failure-6 apply only when version 3 is in force.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +33,11 @@ type ResourceReportResponse_resourceReportStatus = INTEGER;
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_success
+ * @description
+ * 
+ * A report is included, in the preferred format when the request named one
+ * (ANSI/NISO Z39.50-2003 §3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -38,6 +46,11 @@ const ResourceReportResponse_resourceReportStatus_success: ResourceReportRespons
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_success
+ * @description
+ * 
+ * Short name for `ResourceReportResponse_resourceReportStatus_success`. Report
+ * included in the preferred format (§3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -46,6 +59,11 @@ const success: ResourceReportResponse_resourceReportStatus = ResourceReportRespo
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_partial
+ * @description
+ * 
+ * A report is included, but not in the preferred format. Applies only when the
+ * request named a format (ANSI/NISO Z39.50-2003 §3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -54,6 +72,11 @@ const ResourceReportResponse_resourceReportStatus_partial: ResourceReportRespons
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_partial
+ * @description
+ * 
+ * Short name for `ResourceReportResponse_resourceReportStatus_partial`. Report
+ * included in another format (§3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -62,6 +85,11 @@ const partial: ResourceReportResponse_resourceReportStatus = ResourceReportRespo
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_1
+ * @description
+ * 
+ * The server cannot supply a resource report (ANSI/NISO Z39.50-2003
+ * §3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -70,6 +98,11 @@ const ResourceReportResponse_resourceReportStatus_failure_1: ResourceReportRespo
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_1
+ * @description
+ * 
+ * Short name for `ResourceReportResponse_resourceReportStatus_failure_1`.
+ * Server cannot supply a report (§3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -78,6 +111,11 @@ const failure_1: ResourceReportResponse_resourceReportStatus = ResourceReportRes
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_2
+ * @description
+ * 
+ * The server ended the operation because of resource limits (ANSI/NISO
+ * Z39.50-2003 §3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -86,6 +124,11 @@ const ResourceReportResponse_resourceReportStatus_failure_2: ResourceReportRespo
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_2
+ * @description
+ * 
+ * Short name for `ResourceReportResponse_resourceReportStatus_failure_2`.
+ * Operation ended for resource limits (§3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -94,6 +137,10 @@ const failure_2: ResourceReportResponse_resourceReportStatus = ResourceReportRes
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_3
+ * @description
+ * 
+ * Access-control failure (ANSI/NISO Z39.50-2003 §3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -102,6 +149,11 @@ const ResourceReportResponse_resourceReportStatus_failure_3: ResourceReportRespo
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_3
+ * @description
+ * 
+ * Short name for `ResourceReportResponse_resourceReportStatus_failure_3`.
+ * Access-control failure (§3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -110,6 +162,10 @@ const failure_3: ResourceReportResponse_resourceReportStatus = ResourceReportRes
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_4
+ * @description
+ * 
+ * Unspecified failure (ANSI/NISO Z39.50-2003 §3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -118,6 +174,11 @@ const ResourceReportResponse_resourceReportStatus_failure_4: ResourceReportRespo
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_4
+ * @description
+ * 
+ * Short name for `ResourceReportResponse_resourceReportStatus_failure_4`.
+ * Unspecified failure (§3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -126,6 +187,11 @@ const failure_4: ResourceReportResponse_resourceReportStatus = ResourceReportRes
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_5
+ * @description
+ * 
+ * No known operation has the requested id. Version 3 only (ANSI/NISO
+ * Z39.50-2003 §3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -134,6 +200,11 @@ const ResourceReportResponse_resourceReportStatus_failure_5: ResourceReportRespo
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_5
+ * @description
+ * 
+ * Short name for `ResourceReportResponse_resourceReportStatus_failure_5`.
+ * Unknown operation id; version 3 (§3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -142,6 +213,11 @@ const failure_5: ResourceReportResponse_resourceReportStatus = ResourceReportRes
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_6
+ * @description
+ * 
+ * An operation with the requested id is still active. Version 3 only (ANSI/NISO
+ * Z39.50-2003 §3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -150,6 +226,11 @@ const ResourceReportResponse_resourceReportStatus_failure_6: ResourceReportRespo
 
 /**
  * @summary ResourceReportResponse_resourceReportStatus_failure_6
+ * @description
+ * 
+ * Short name for `ResourceReportResponse_resourceReportStatus_failure_6`. That
+ * operation is still active; version 3 (§3.2.6.3.3).
+ * 
  * @constant
  * @type {number}
  */

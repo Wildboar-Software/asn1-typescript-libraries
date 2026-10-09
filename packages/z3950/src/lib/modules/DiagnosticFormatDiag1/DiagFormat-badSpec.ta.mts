@@ -13,6 +13,9 @@ import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39
  * @summary DiagFormat_badSpec
  * @description
  * 
+ * An element-set name or element specification is not supported (diag-1).
+ * Matches DIAG.1 conditions 24 and 25.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +38,31 @@ export
 class DiagFormat_badSpec {
     /**
      * @summary `spec`.
+     * @description
+     * 
+     * The element-set name or element specification that was rejected.
+     * 
      * @public
      * @readonly
      */
     readonly spec: Specification;
     /**
      * @summary `db`.
+     * @description
+     * 
+     * Present when that specification is unsupported for this database. Absent
+     * when it is unsupported outright.
+     * 
      * @public
      * @readonly
      */
     readonly db: OPTIONAL<DatabaseName>;
     /**
      * @summary `goodOnes`.
+     * @description
+     * 
+     * Specifications the server does support, when it supplies them.
+     * 
      * @public
      * @readonly
      */

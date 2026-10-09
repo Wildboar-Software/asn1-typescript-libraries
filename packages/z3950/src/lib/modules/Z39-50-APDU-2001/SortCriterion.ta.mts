@@ -12,6 +12,21 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary SortCriterion
  * @description
  * 
+ * How to pick the representative record of a duplicate class and how to order
+ * records inside that class (ANSI/NISO Z39.50-2003 §3.2.7.2.6). It does not
+ * order the classes themselves. Values 7 through 100 are reserved. If several
+ * criteria are supplied, only the first selects the representative; the
+ * sequence is major to minor.
+ * 
+ * `mostComprehensive` selects the longest record and orders duplicates by
+ * descending comprehensiveness. `leastComprehensive` selects the shortest and
+ * orders by ascending comprehensiveness. `mostRecent` selects the newest and
+ * orders by ascending age. `oldest` selects the oldest and orders by descending
+ * age. `leastCost` selects the least expensive and orders by ascending cost.
+ * `preferredDatabases` lists databases from most preferred to least; the
+ * representative comes from the most preferred database that has a record in
+ * the class.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

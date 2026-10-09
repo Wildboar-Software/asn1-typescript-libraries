@@ -12,6 +12,12 @@ import { ExportSpecification, _decode_ExportSpecification, _encode_ExportSpecifi
  * @summary ClientPartToKeep_exportParameters
  * @description
  * 
+ * An export specification to apply to newly posted periodic-query results,
+ * either by package name or by including the specification. Include this
+ * only when those results should be exported.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.3, EXT.1.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

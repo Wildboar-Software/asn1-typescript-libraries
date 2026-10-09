@@ -17,7 +17,16 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
 /**
  * @summary SearchResponse
  * @description
- * 
+ *
+ * Terminating response of a Search operation. Reports how many
+ * records were identified and, when piggybacking applies, returns
+ * response records. The search succeeds only if the server can
+ * identify the records, report the count, and establish a result set,
+ * including a count of zero. Exactly one of `resultSetStatus` and
+ * `presentStatus` occurs: result-set status if and only if the search
+ * failed, present status if and only if it succeeded. A Search
+ * response is not segmented. §3.2.2.1, §3.2.2.1.11, §3.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,60 +55,135 @@ export
 class SearchResponse {
     /**
      * @summary `referenceId`.
+     * @description
+     *
+     * The reference-id from the Search request. Include the same value
+     * when the request included one; omit it when the request omitted
+     * it. §3.4.
+     *
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `resultCount`.
+     * @description
+     *
+     * Number of database records identified by the result set. Zero
+     * when the set is empty. A negative value is a protocol violation.
+     * When version 3 is in force the client may Close with reason
+     * protocol error. §3.2.2.1.8.
+     *
      * @public
      * @readonly
      */
     readonly resultCount: INTEGER;
     /**
      * @summary `numberOfRecordsReturned`.
+     * @description
+     *
+     * Total records returned in this Search response, including
+     * surrogate and non-surrogate diagnostics. §3.2.2.1.8.
+     *
      * @public
      * @readonly
      */
     readonly numberOfRecordsReturned: INTEGER;
     /**
      * @summary `nextResultSetPosition`.
+     * @description
+     *
+     * M+1, where M is the result-set position of the database record
+     * for the last response record returned. Zero when M equals
+     * `resultCount`. §3.2.2.1.9.
+     *
      * @public
      * @readonly
      */
     readonly nextResultSetPosition: INTEGER;
     /**
      * @summary `searchStatus`.
+     * @description
+     *
+     * Search-phase outcome. Success means the server identified which
+     * records meet the query, reported the count, and established a
+     * result set. A count of zero is success. Success does not mean
+     * response records were returned. Failure means the search did not
+     * complete: none of the expected response records are returned,
+     * and at least one non-surrogate diagnostic is supplied (exactly
+     * one when version 2 is in force). The 2003 ASN.1 does not state
+     * which boolean value encodes success. §3.2.2.1.10, §3.2.2.1.11.
+     *
      * @public
      * @readonly
      */
     readonly searchStatus: BOOLEAN;
     /**
      * @summary `resultSetStatus`.
+     * @description
+     *
+     * Present if and only if `searchStatus` is failure. `subset`:
+     * partial, valid results exist. `interim`: partial results exist,
+     * not necessarily valid. `none`: no result set. The result set
+     * exists when the value is subset or interim. §3.2.2.1.11.
+     *
      * @public
      * @readonly
      */
     readonly resultSetStatus: OPTIONAL<SearchResponse_resultSetStatus>;
     /**
      * @summary `presentStatus`.
+     * @description
+     *
+     * Present if and only if `searchStatus` is success. Reports the
+     * retrieval phase: all expected records, a partial return, or
+     * none. When the client asked for no records (small-set bound 0
+     * and large-set bound 1), use success. Failure here requires at
+     * least one non-surrogate diagnostic. §3.2.2.1.11.
+     *
      * @public
      * @readonly
      */
     readonly presentStatus: OPTIONAL<PresentStatus>;
     /**
      * @summary `records`.
+     * @description
+     *
+     * Response records in result-set order, or one or more
+     * non-surrogate diagnostics explaining why the search or the
+     * presentation cannot be done. Version 2: a single non-surrogate
+     * diagnostic. Version 3: one or more. The database name must
+     * accompany the first record and any record from a database
+     * different from its predecessor. A server that does not
+     * piggyback, when records were expected, should set search status
+     * success, present status failure, and diagnostic 1005 or 1006.
+     * §3.2.2.1.7.
+     *
      * @public
      * @readonly
      */
     readonly records: OPTIONAL<Records>;
     /**
      * @summary `additionalSearchInfo`.
+     * @description
+     *
+     * Version 3 only. By-product of the search, such as intermediate
+     * result counts, why particular records were returned, or whether
+     * an attribute was used. The request may have named the preferred
+     * format. SearchResponse-1 is defined in Appendix USR.
+     * §3.2.2.1.12.
+     *
      * @public
      * @readonly
      */
     readonly additionalSearchInfo: OPTIONAL<OtherInformation>;
     /**
      * @summary `otherInfo`.
+     * @description
+     *
+     * Additional information not specified by the standard. Version 3
+     * only. §3.2.2.1.13.
+     *
      * @public
      * @readonly
      */

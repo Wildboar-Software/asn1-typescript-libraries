@@ -11,6 +11,9 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
 /**
  * @summary SortKeyDetails_sortType
  * @description
+ * The kind of a sort key: character, numeric, or structured. For a structured
+ * key the server supplies human-readable text. The standard does not say what
+ * that text must contain. ANSI/NISO Z39.50-2003 §3.2.10.3.13.
  * 
  * ### ASN.1 Definition:
  * 

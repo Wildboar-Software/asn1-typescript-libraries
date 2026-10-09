@@ -18,6 +18,13 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary AccessInfo
  * @description
  * 
+ * Facilities required to use the server, or one database. If a client can
+ * handle none of the record syntaxes a database can provide, it might choose
+ * not to access that database. On the server record, each listed object is
+ * supported for one or more databases; retrieve that database's record to see
+ * which. Every object listed for a database should also appear on the server's
+ * AccessInfo. REC.1 Comment 13; ANSI/NISO Z39.50-2003 §3.2.10.3.1, §3.2.10.3.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,66 +50,92 @@ export
 class AccessInfo {
     /**
      * @summary `queryTypesSupported`.
+     * @description
+     * Query types supported, with details for each. Type-2 is the ISO 8777
+     * query. ANSI/NISO Z39.50-2003 §3.2.10.3.1, §3.2.2.1.1.
      * @public
      * @readonly
      */
     readonly queryTypesSupported: OPTIONAL<QueryTypeDetails[]>;
     /**
      * @summary `diagnosticsSets`.
+     * @description
+     * Diagnostic sets supported. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly diagnosticsSets: OPTIONAL<OBJECT_IDENTIFIER[]>;
     /**
      * @summary `attributeSetIds`.
+     * @description
+     * Attribute sets supported. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly attributeSetIds: OPTIONAL<AttributeSetId[]>;
     /**
      * @summary `schemas`.
+     * @description
+     * Schemas supported. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly schemas: OPTIONAL<OBJECT_IDENTIFIER[]>;
     /**
      * @summary `recordSyntaxes`.
+     * @description
+     * Record syntaxes supported. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly recordSyntaxes: OPTIONAL<OBJECT_IDENTIFIER[]>;
     /**
      * @summary `resourceChallenges`.
+     * @description
+     * Resource challenges supported. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly resourceChallenges: OPTIONAL<OBJECT_IDENTIFIER[]>;
     /**
      * @summary `restrictedAccess`.
+     * @description
+     * Access restrictions, including human-readable access-control text and
+     * access-challenge object identifiers. ANSI/NISO Z39.50-2003 §3.2.10.3.1,
+     * §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly restrictedAccess: OPTIONAL<AccessRestrictions>;
     /**
      * @summary `costInfo`.
+     * @description
+     * Cost information for connect, present, and search, in machine-readable
+     * form and in human-readable text. ANSI/NISO Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly costInfo: OPTIONAL<Costs>;
     /**
      * @summary `variantSets`.
+     * @description
+     * Variant sets supported. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly variantSets: OPTIONAL<OBJECT_IDENTIFIER[]>;
     /**
      * @summary `elementSetNames`.
+     * @description
+     * Element set names supported. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */
     readonly elementSetNames: OPTIONAL<ElementSetName[]>;
     /**
      * @summary `unitSystems`.
+     * @description
+     * Unit systems supported. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */

@@ -10,6 +10,12 @@ import { IconObject_Item, _decode_IconObject_Item, _encode_IconObject_Item } fro
  * @summary IconObject
  * @description
  * 
+ * An icon in machine-presentable form, used for the server or a database. Each
+ * element is an alternative representation of the same icon, not another icon.
+ * Element set `brief-1` on TargetInfo and DatabaseInfo is brief with the icon
+ * omitted. The standard does not define the body-type strings. ANSI/NISO
+ * Z39.50-2003 §3.2.10.3.1, §3.2.10.3.2; REC.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

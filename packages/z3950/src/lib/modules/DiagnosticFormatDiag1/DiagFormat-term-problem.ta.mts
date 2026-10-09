@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagFormat_term_problem
  * @description
  * 
+ * What is wrong with the term (diag-1): coded value (124), unparsable value
+ * (127), too short (9), or unsupported type (229). DIAG.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +29,11 @@ type DiagFormat_term_problem = INTEGER;
 
 /**
  * @summary DiagFormat_term_problem_codedValue
+ * @description
+ * 
+ * Unsupported coded value for term (DIAG.1 condition 124). Addinfo is the
+ * value.
+ * 
  * @constant
  * @type {number}
  */
@@ -34,6 +42,11 @@ const DiagFormat_term_problem_codedValue: DiagFormat_term_problem = 1; /* LONG_N
 
 /**
  * @summary DiagFormat_term_problem_codedValue
+ * @description
+ * 
+ * Unsupported coded value for term (DIAG.1 condition 124). Addinfo is the
+ * value.
+ * 
  * @constant
  * @type {number}
  */
@@ -42,6 +55,11 @@ const codedValue: DiagFormat_term_problem = DiagFormat_term_problem_codedValue; 
 
 /**
  * @summary DiagFormat_term_problem_unparsable
+ * @description
+ * 
+ * Unparsable format for un-normalized value (DIAG.1 condition 127). Addinfo is
+ * the value.
+ * 
  * @constant
  * @type {number}
  */
@@ -50,6 +68,11 @@ const DiagFormat_term_problem_unparsable: DiagFormat_term_problem = 2; /* LONG_N
 
 /**
  * @summary DiagFormat_term_problem_unparsable
+ * @description
+ * 
+ * Unparsable format for un-normalized value (DIAG.1 condition 127). Addinfo is
+ * the value.
+ * 
  * @constant
  * @type {number}
  */
@@ -58,6 +81,10 @@ const unparsable: DiagFormat_term_problem = DiagFormat_term_problem_unparsable; 
 
 /**
  * @summary DiagFormat_term_problem_tooShort
+ * @description
+ * 
+ * Truncated words too short (DIAG.1 condition 9).
+ * 
  * @constant
  * @type {number}
  */
@@ -66,6 +93,10 @@ const DiagFormat_term_problem_tooShort: DiagFormat_term_problem = 3; /* LONG_NAM
 
 /**
  * @summary DiagFormat_term_problem_tooShort
+ * @description
+ * 
+ * Truncated words too short (DIAG.1 condition 9).
+ * 
  * @constant
  * @type {number}
  */
@@ -74,6 +105,10 @@ const tooShort: DiagFormat_term_problem = DiagFormat_term_problem_tooShort; /* S
 
 /**
  * @summary DiagFormat_term_problem_type_
+ * @description
+ * 
+ * Term type not supported (DIAG.1 condition 229). Addinfo is the type.
+ * 
  * @constant
  * @type {number}
  */
@@ -82,6 +117,10 @@ const DiagFormat_term_problem_type_: DiagFormat_term_problem = 4; /* LONG_NAMED_
 
 /**
  * @summary DiagFormat_term_problem_type_
+ * @description
+ * 
+ * Term type not supported (DIAG.1 condition 229). Addinfo is the type.
+ * 
  * @constant
  * @type {number}
  */

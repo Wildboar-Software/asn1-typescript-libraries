@@ -15,6 +15,9 @@ import { SortKeyDetails_caseSensitivity, _decode_SortKeyDetails_caseSensitivity,
 /**
  * @summary SortKeyDetails
  * @description
+ * One sort key in SortDetails. A key may be specified as a record element, as
+ * an attribute combination, or both; each listed specification or combination
+ * is a way of specifying this same key. ANSI/NISO Z39.50-2003 §3.2.10.3.13.
  * 
  * ### ASN.1 Definition:
  * 
@@ -47,30 +50,47 @@ export
 class SortKeyDetails {
     /**
      * @summary `description`.
+     * @description
+     * Human-readable description of the sort key. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.13.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `elementSpecifications`.
+     * @description
+     * When the key is a record element, specifications of that element. Each
+     * specification is a way of specifying this same sort key. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.13.
      * @public
      * @readonly
      */
     readonly elementSpecifications: OPTIONAL<Specification[]>;
     /**
      * @summary `attributeSpecifications`.
+     * @description
+     * When the key is an attribute combination, that combination. Each
+     * combination is a way of specifying this same sort key. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.13.
      * @public
      * @readonly
      */
     readonly attributeSpecifications: OPTIONAL<AttributeCombinations>;
     /**
      * @summary `sortType`.
+     * @description
+     * Kind of key: character, numeric, or structured. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.13.
      * @public
      * @readonly
      */
     readonly sortType: OPTIONAL<SortKeyDetails_sortType>;
     /**
      * @summary `caseSensitivity`.
+     * @description
+     * Whether the key is case-sensitive, including what happens when the
+     * request does not say. ANSI/NISO Z39.50-2003 §3.2.10.3.13.
      * @public
      * @readonly
      */

@@ -13,6 +13,8 @@ import { Response_Item_promptResponse, _decode_Response_Item_promptResponse, _en
  * @summary Response_Item
  * @description
  * 
+ * One answer in a prompt-1 response (ASN1.9.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +37,23 @@ export
 class Response_Item {
     /**
      * @summary `promptId`.
+     * @description
+     * 
+     * The challenge prompt this answers, or an unprompted id. Unprompted
+     * newPassword must be enumerated. A non-enumerated prompt echoes the
+     * challenge's prompt string (comment 6).
+     * 
      * @public
      * @readonly
      */
     readonly promptId: PromptId;
     /**
      * @summary `promptResponse`.
+     * @description
+     * 
+     * The answer: text, acceptance, an acknowledgement, a diagnostic, or
+     * encrypted data.
+     * 
      * @public
      * @readonly
      */

@@ -10,7 +10,16 @@ import { InternationalString, _decode_InternationalString, _encode_International
 /**
  * @summary DatabaseName
  * @description
- * 
+ *
+ * Name of a database at the server. Case-insensitive. There is no
+ * default database. The server designates, through Explain or outside
+ * this standard, which names may appear on a Search and in which
+ * combinations. Multi-database search in one request is optional; the
+ * server may fail it with diagnostic 111 (too many databases; addinfo
+ * maximum 1) or diagnostic 23 (combination not supported). A server
+ * may expose virtual databases instead of combinations.
+ * §3.2.2.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,17 @@ import { InternationalString, _decode_InternationalString, _encode_International
 /**
  * @summary ResultSetId
  * @description
- * 
+ *
+ * Name of a result set, for reference later in the same Z-association.
+ * Case-sensitive. The server must support `"default"`. If the client
+ * uses `"default"`, Replace-indicator must be on. Any other name
+ * requires the named-result-sets option (bit 14). A `"default"` set
+ * lasts until another default set replaces it, the server deletes it,
+ * or the Z-association ends. Any other set lasts until Delete,
+ * replacement with Replace-indicator on, unilateral server deletion,
+ * or the end of the Z-association. The server may delete a result set
+ * at any time. §3.1.6.1, §3.2.2.1.3, §3.2.1.1.3 note 5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

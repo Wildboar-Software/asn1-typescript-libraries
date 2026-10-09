@@ -1,3 +1,11 @@
+/**
+ * @module
+ * @description
+ * Z39.50 APDUs, module `Z39-50-APDU-2001` (version 3 / 2001
+ * definition). Object identifier `{Z39-50 2 1}`
+ * (`{1 2 840 10003 2 1}`). Messages of the Information Retrieval
+ * protocol between client and server. ANSI/NISO Z39.50-2003 §4.1.
+ */
 export type {
     APDU,
 } from "./APDU.ta.mjs";

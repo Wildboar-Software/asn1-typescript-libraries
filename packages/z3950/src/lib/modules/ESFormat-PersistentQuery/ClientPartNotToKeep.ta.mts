@@ -12,6 +12,12 @@ import { Query, _decode_Query, _encode_Query } from "../Z39-50-APDU-2001/Query.t
  * @summary ClientPartNotToKeep
  * @description
  * 
+ * What the client asks to save: the query itself, or the name of another
+ * persistent query whose query the server copies into this package. Not
+ * retained as submitted.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

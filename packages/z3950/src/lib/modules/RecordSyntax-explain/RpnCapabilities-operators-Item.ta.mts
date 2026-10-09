@@ -9,6 +9,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RpnCapabilities_operators_Item
  * @description
+ * One operator in the RPN operator list. If that list is omitted, all four
+ * operators are supported. AND is the intersection of the two operand sets, OR
+ * is their union, and AND-NOT is the left set minus the right set. Prox is the
+ * proximity operator. ANSI/NISO Z39.50-2003 §3.7.1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -26,6 +30,9 @@ type RpnCapabilities_operators_Item = INTEGER;
 
 /**
  * @summary RpnCapabilities_operators_Item_and
+ * @description
+ * AND: the result is the intersection of the left and right operand sets.
+ * ANSI/NISO Z39.50-2003 §3.7.1.
  * @constant
  * @type {number}
  */
@@ -34,6 +41,8 @@ const RpnCapabilities_operators_Item_and: RpnCapabilities_operators_Item = 0; /*
 
 /**
  * @summary RpnCapabilities_operators_Item_and
+ * @description
+ * Short name for `RpnCapabilities_operators_Item_and`.
  * @constant
  * @type {number}
  */
@@ -42,6 +51,9 @@ const and: RpnCapabilities_operators_Item = RpnCapabilities_operators_Item_and; 
 
 /**
  * @summary RpnCapabilities_operators_Item_or
+ * @description
+ * OR: the result is the union of the left and right operand sets. ANSI/NISO
+ * Z39.50-2003 §3.7.1.
  * @constant
  * @type {number}
  */
@@ -50,6 +62,8 @@ const RpnCapabilities_operators_Item_or: RpnCapabilities_operators_Item = 1; /* 
 
 /**
  * @summary RpnCapabilities_operators_Item_or
+ * @description
+ * Short name for `RpnCapabilities_operators_Item_or`.
  * @constant
  * @type {number}
  */
@@ -58,6 +72,9 @@ const or: RpnCapabilities_operators_Item = RpnCapabilities_operators_Item_or; /*
 
 /**
  * @summary RpnCapabilities_operators_Item_and_not
+ * @description
+ * AND-NOT: records in the left operand set that are not in the right operand
+ * set. ANSI/NISO Z39.50-2003 §3.7.1.
  * @constant
  * @type {number}
  */
@@ -66,6 +83,8 @@ const RpnCapabilities_operators_Item_and_not: RpnCapabilities_operators_Item = 2
 
 /**
  * @summary RpnCapabilities_operators_Item_and_not
+ * @description
+ * Short name for `RpnCapabilities_operators_Item_and_not`.
  * @constant
  * @type {number}
  */
@@ -74,6 +93,9 @@ const and_not: RpnCapabilities_operators_Item = RpnCapabilities_operators_Item_a
 
 /**
  * @summary RpnCapabilities_operators_Item_prox
+ * @description
+ * Proximity. For a type-1 query this operator is valid only in version 3; for
+ * type-101 it is valid in version 2 and version 3. ANSI/NISO Z39.50-2003 §3.7.
  * @constant
  * @type {number}
  */
@@ -82,6 +104,8 @@ const RpnCapabilities_operators_Item_prox: RpnCapabilities_operators_Item = 3; /
 
 /**
  * @summary RpnCapabilities_operators_Item_prox
+ * @description
+ * Short name for `RpnCapabilities_operators_Item_prox`.
  * @constant
  * @type {number}
  */

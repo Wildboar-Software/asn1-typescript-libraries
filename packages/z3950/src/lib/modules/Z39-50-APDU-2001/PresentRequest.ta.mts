@@ -17,7 +17,14 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
 /**
  * @summary PresentRequest
  * @description
- * 
+ *
+ * Client request of the Present service. Asks for response records by
+ * position within a result set the server is maintaining. The server
+ * answers with a Present response. If segmentation is in effect and
+ * the records will not fit in one message, the server may send zero
+ * or more Segment requests first. Those segments plus the Present
+ * response are the aggregate Present response. §3.2.3, §3.2.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,66 +54,158 @@ export
 class PresentRequest {
     /**
      * @summary `referenceId`.
+     * @description
+     *
+     * Client-assigned identifier of this Present operation. The same
+     * value must appear on every Segment and on the Present response.
+     * Mandatory when concurrent operations are in effect; optional
+     * when serial operations are in effect (omission means null).
+     * §3.4, §3.5.
+     *
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `resultSetId`.
+     * @description
+     *
+     * Name of a transient result set, created during this
+     * Z-association, from which records are retrieved. §3.2.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly resultSetId: ResultSetId;
     /**
      * @summary `resultSetStartPoint`.
+     * @description
+     *
+     * First result-set position requested (M). Together with
+     * `numberOfRecordsRequested` (N) this asks for N records beginning
+     * at record M. Positions begin at 1. §3.2.3.1.1, §3.1.6.
+     *
      * @public
      * @readonly
      */
     readonly resultSetStartPoint: INTEGER;
     /**
      * @summary `numberOfRecordsRequested`.
+     * @description
+     *
+     * How many records (N), beginning at `resultSetStartPoint`. When
+     * version 2 is in force, N greater than (result count − M) + 1 is
+     * a protocol error. When version 3 is in force it need not be:
+     * the server may treat it as a protocol error (diagnostic 13 as a
+     * non-surrogate) or return surrogate diagnostic 13 for each
+     * missing record. Requesting a single record allows that record
+     * to exceed Preferred-message-size up to Exceptional-record-size,
+     * when no segmentation applies. §3.2.3.1.1, §3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly numberOfRecordsRequested: INTEGER;
     /**
      * @summary `additionalRanges`.
+     * @description
+     *
+     * Further ranges, each a pair (M, N) as in §3.2.3.1.1. Version 3
+     * only. The first M must be greater than or equal to the sum of
+     * `resultSetStartPoint` and `numberOfRecordsRequested`. For
+     * consecutive pairs, M1 + N1 must be less than M2. If the server
+     * does not support this parameter, it should fail the Present
+     * with present-status failure and non-surrogate diagnostic 243.
+     * §3.2.3.1.2.
+     *
      * @public
      * @readonly
      */
     readonly additionalRanges: OPTIONAL<Range[]>;
     /**
      * @summary `recordComposition`.
+     * @description
+     *
+     * Desired composition of the retrieved records. If omitted, the
+     * default schema and §3.6.2 apply. `simple` is element-set names
+     * and is required when version 2 is in force. `complex` is
+     * Comp-spec, version 3 only, and only when element-set names are
+     * omitted. §3.2.3.1.4, §3.2.3.1.6, §3.6.
+     *
      * @public
      * @readonly
      */
     readonly recordComposition: OPTIONAL<PresentRequest_recordComposition>;
     /**
      * @summary `preferredRecordSyntax`.
+     * @description
+     *
+     * Object identifier of the abstract syntax requested for retrieval
+     * records. When supplied, and Comp-spec supplies no record-syntax
+     * identifiers, the server should not return records in another
+     * syntax. Unavailable records get a surrogate such as diagnostic
+     * 238; the server may fail the request with 227, 239, or 1070.
+     * When omitted, the server may choose a syntax or fail with 1071
+     * or 1069. §3.2.3.1.5, §3.6.3.
+     *
      * @public
      * @readonly
      */
     readonly preferredRecordSyntax: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `maxSegmentCount`.
+     * @description
+     *
+     * Version 3 only, and only when level-1 or level-2 segmentation is
+     * in effect. Maximum number of segments in the aggregate Present
+     * response. Value 1 means no segmentation for this operation, and
+     * `maxRecordSize` should be omitted; §3.3.1 then applies.
+     * §3.2.3.1.7, §3.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly maxSegmentCount: OPTIONAL<INTEGER>;
     /**
      * @summary `maxRecordSize`.
+     * @description
+     *
+     * Version 3 only, and only when level-2 segmentation is in effect.
+     * Largest retrieval record allowed in the aggregate response. Must
+     * be greater than or equal to `maxSegmentSize`. If
+     * `maxSegmentCount` is also present, this must not exceed the
+     * product of segment size and segment count. If this is omitted
+     * and `maxSegmentCount` is greater than 1, that product is the
+     * maximum record size. While level 2 is in effect,
+     * Exceptional-record-size from Init does not apply unless
+     * `maxSegmentCount` is 1. §3.2.3.1.7, §3.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly maxRecordSize: OPTIONAL<INTEGER>;
     /**
      * @summary `maxSegmentSize`.
+     * @description
+     *
+     * Version 3 only, and only when level-2 segmentation is in effect.
+     * Largest allowable segment of this Present operation. If present,
+     * it overrides Preferred-message-size for this operation only. If
+     * absent, it takes the value of Preferred-message-size. The sum of
+     * record and fragment sizes in a segment, excluding protocol
+     * control information, must not exceed it. §3.2.3.1.7, §3.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly maxSegmentSize: OPTIONAL<INTEGER>;
     /**
      * @summary `otherInfo`.
+     * @description
+     *
+     * Additional information not specified by the standard. Version 3
+     * only. §3.2.3.1.11.
+     *
      * @public
      * @readonly
      */

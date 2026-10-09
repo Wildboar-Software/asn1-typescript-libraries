@@ -15,6 +15,11 @@ import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/I
  * @summary HitVector
  * @description
  * 
+ * One satisfying fragment inside an element (ANSI/NISO Z39.50-2003,
+ * RET.3.2.3.1, ASN1.6). The server may return part of the element and point at
+ * fragments it left out, so the client can ask for those next. Variant-1
+ * highlighting (class 8) is an alternative (RET.3.3.1.8).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,30 +41,55 @@ export
 class HitVector {
     /**
      * @summary `satisfier`.
+     * @description
+     * 
+     * A term from the query that occurs in this fragment. Omit it when the
+     * server is not naming that term (RET.3.2.3.1).
      * @public
      * @readonly
      */
     readonly satisfier: OPTIONAL<Term>;
     /**
      * @summary `offsetIntoElement`.
+     * @description
+     * 
+     * Where the fragment starts, in a unit such as pages or bytes.
+     * Variant-specific. Omit it on a non-variant-specific hit; that hit then
+     * carries only a token (RET.3.2.3.1).
      * @public
      * @readonly
      */
     readonly offsetIntoElement: OPTIONAL<IntUnit>;
     /**
      * @summary `length`.
+     * @description
+     * 
+     * Length of the fragment, in the same kind of unit as the offset.
+     * Variant-specific. Ranking several hits on one page requires a finer unit
+     * than a page (RET.3.2.3.1).
      * @public
      * @readonly
      */
     readonly length: OPTIONAL<IntUnit>;
     /**
      * @summary `hitRank`.
+     * @description
+     * 
+     * Rank among the hit vectors for this element. A positive integer no larger
+     * than the number of those vectors. More than one hit may share a rank
+     * (RET.3.2.3.1).
      * @public
      * @readonly
      */
     readonly hitRank: OPTIONAL<INTEGER>;
     /**
      * @summary `serverToken`.
+     * @description
+     * 
+     * Identifier for this fragment. During the same Z-association the client
+     * may send it in a variant request (variant-1 class 5, type 7) to retrieve
+     * or refer to the fragment (ASN1.6, RET.3.2.3.1). A token may be
+     * variant-specific or not. Location and a token may both be present.
      * @public
      * @readonly
      */

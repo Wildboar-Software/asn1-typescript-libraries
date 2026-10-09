@@ -16,6 +16,11 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary DuplicateDetectionResponse
  * @description
  * 
+ * Server reply to Duplicate Detection (ANSI/NISO Z39.50-2003 §3.2.7.2). Status
+ * is success or failure. On success the result count is the size of the output
+ * result set and must be present. Diagnostics may always be included; on
+ * failure at least one must be.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,30 +42,56 @@ export
 class DuplicateDetectionResponse {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Reference-id of the request. Omit it when the request omitted it
+     * (ANSI/NISO Z39.50-2003 §3.4).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `status`.
+     * @description
+     * 
+     * Success or failure of duplicate detection (ANSI/NISO Z39.50-2003
+     * §3.2.7.2.7).
+     * 
      * @public
      * @readonly
      */
     readonly status: DuplicateDetectionResponse_status;
     /**
      * @summary `resultSetCount`.
+     * @description
+     * 
+     * Size of the output result set. Required when status is success (ANSI/NISO
+     * Z39.50-2003 §3.2.7.2.8).
+     * 
      * @public
      * @readonly
      */
     readonly resultSetCount: OPTIONAL<INTEGER>;
     /**
      * @summary `diagnostics`.
+     * @description
+     * 
+     * Diagnostic records. At least one is required when status is failure. The
+     * server may include diagnostics on success as well (ANSI/NISO Z39.50-2003
+     * §3.2.7.2.9).
+     * 
      * @public
      * @readonly
      */
     readonly diagnostics: OPTIONAL<DiagRec[]>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define (ANSI/NISO
+     * Z39.50-2003 §3.2.7.2.10, §4.4.2.2.21).
+     * 
      * @public
      * @readonly
      */

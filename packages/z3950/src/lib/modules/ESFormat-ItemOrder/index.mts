@@ -1,3 +1,11 @@
+/**
+ * @module
+ * @description
+ * Item Order extended service (ANSI/NISO Z39.50-2003 EXT.1.4).
+ * 
+ * Task-specific parameters for submitting an item order: what the client
+ * sends on the ES request, and the task package the server keeps.
+ */
 export {
     ClientPartNotToKeep_resultSetItem,
     _root_component_type_list_1_spec_for_ClientPartNotToKeep_resultSetItem,

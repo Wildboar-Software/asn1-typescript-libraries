@@ -12,6 +12,21 @@ import { Update_taskPackage, _decode_Update_taskPackage, _encode_Update_taskPack
  * @summary Update
  * @description
  * 
+ * Asks the server to update a database: insert records, replace or delete
+ * existing records, or replace elements within records. One action, one
+ * database name, and one schema apply to every record in the package; a
+ * different action needs another task package. The definition does not
+ * address concurrency.
+ * 
+ * Action, database, schema, and element-set name are retained (`toKeep` /
+ * `clientPart`). The supplied records are not retained as submitted
+ * (`notToKeep`); the server part reports update status, task-level
+ * diagnostics, and a per-record structure. On modify, supplied values
+ * replace the corresponding package values; an omitted optional parameter
+ * is left unchanged.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.2, §3.2.9.1.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,9 @@ import { _decode_DiagFormat_tooMany_tooManyWhat, _encode_DiagFormat_tooMany_tooM
  * @summary DiagFormat_tooMany
  * @description
  * 
+ * A limit was exceeded (diag-1). The DIAG.1 conditions are 5, 6, 7, 8, 11, 12,
+ * 111, 112, and 234, depending on which limit.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +41,22 @@ export
 class DiagFormat_tooMany {
     /**
      * @summary `tooManyWhat`.
+     * @description
+     * 
+     * Which limit was exceeded. The named values are the DIAG.1 conditions
+     * listed on that enumeration.
+     * 
      * @public
      * @readonly
      */
     readonly tooManyWhat: DiagFormat_tooMany_tooManyWhat;
     /**
      * @summary `max`.
+     * @description
+     * 
+     * The limit, when the server sends one. DIAG.1 puts this in addinfo
+     * (maximum, or the number of terms).
+     * 
      * @public
      * @readonly
      */

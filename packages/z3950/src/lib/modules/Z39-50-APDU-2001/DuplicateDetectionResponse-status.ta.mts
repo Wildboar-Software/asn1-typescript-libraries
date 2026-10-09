@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DuplicateDetectionResponse_status
  * @description
  * 
+ * Whether duplicate detection produced the output result set (ANSI/NISO
+ * Z39.50-2003 §3.2.7.2.7).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +27,11 @@ type DuplicateDetectionResponse_status = INTEGER;
 
 /**
  * @summary DuplicateDetectionResponse_status_success
+ * @description
+ * 
+ * The output result set was built. The response includes its size (ANSI/NISO
+ * Z39.50-2003 §3.2.7.2.7, §3.2.7.2.8).
+ * 
  * @constant
  * @type {number}
  */
@@ -32,6 +40,11 @@ const DuplicateDetectionResponse_status_success: DuplicateDetectionResponse_stat
 
 /**
  * @summary DuplicateDetectionResponse_status_success
+ * @description
+ * 
+ * Short name for `DuplicateDetectionResponse_status_success`. The output result
+ * set was built (§3.2.7.2.7).
+ * 
  * @constant
  * @type {number}
  */
@@ -40,6 +53,11 @@ const success: DuplicateDetectionResponse_status = DuplicateDetectionResponse_st
 
 /**
  * @summary DuplicateDetectionResponse_status_failure
+ * @description
+ * 
+ * The request failed. At least one diagnostic is included (ANSI/NISO
+ * Z39.50-2003 §3.2.7.2.7, §3.2.7.2.9).
+ * 
  * @constant
  * @type {number}
  */
@@ -48,6 +66,11 @@ const DuplicateDetectionResponse_status_failure: DuplicateDetectionResponse_stat
 
 /**
  * @summary DuplicateDetectionResponse_status_failure
+ * @description
+ * 
+ * Short name for `DuplicateDetectionResponse_status_failure`. The request
+ * failed (§3.2.7.2.7).
+ * 
  * @constant
  * @type {number}
  */

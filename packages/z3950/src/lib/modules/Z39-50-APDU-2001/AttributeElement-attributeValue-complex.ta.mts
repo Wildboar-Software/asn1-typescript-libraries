@@ -13,6 +13,12 @@ import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } fro
  * @summary AttributeElement_attributeValue_complex
  * @description
  * 
+ * Several values of one attribute type, plus optional semantic actions
+ * (ANSI/NISO Z39.50-2003 §4.1, comment 10). The attribute set states whether a
+ * list is allowed, whether entries are strings or integers, the allowed values,
+ * and the meaning of each semantic action. This standard assigns none of those
+ * codes.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,24 @@ export
 class AttributeElement_attributeValue_complex {
     /**
      * @summary `list`.
+     * @description
+     * 
+     * Values for this attribute type. Each is a string or an integer, as the
+     * attribute set allows (ANSI/NISO Z39.50-2003 §4.1, comment 10).
+     * 
      * @public
      * @readonly
      */
     readonly list: StringOrNumeric[];
     /**
      * @summary `semanticAction`.
+     * @description
+     * 
+     * Codes that select a semantic alternative defined by the attribute set,
+     * such as how repeated access-point values are read (Appendix Arch, ARCH
+     * 3.1.5). This standard assigns no values. Omit the parameter when no such
+     * action applies.
+     * 
      * @public
      * @readonly
      */

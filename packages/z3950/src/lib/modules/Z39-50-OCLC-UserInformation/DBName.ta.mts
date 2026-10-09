@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DBName
  * @description
  * 
+ * Z39.50-2003 does not define this string. It occurs only inside the locally
+ * registered OCLC user-information object (OID.6).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

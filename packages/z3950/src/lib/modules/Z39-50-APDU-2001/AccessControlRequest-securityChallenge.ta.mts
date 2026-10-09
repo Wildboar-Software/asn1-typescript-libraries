@@ -13,6 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AccessControlRequest_securityChallenge
  * @description
  * 
+ * Challenge sent by the server (ANSI/NISO Z39.50-2003 §3.2.5.1.1). `simpleForm`
+ * is an octet string. This standard does not define its layout.
+ * `externallyDefined` carries a registered format. Appendix ACC registers
+ * prompt-1, des-1, and krb-1. Either parameter may instead follow a prior
+ * agreement.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,10 @@ import { Challenge_Item, _decode_Challenge_Item, _encode_Challenge_Item } from "
  * @summary Challenge
  * @description
  * 
+ * The prompts in a prompt-1 challenge, one entry per prompt (ASN1.9.1). The
+ * server sends this as securityChallenge or as Init idAuthentication (§3.2.5,
+ * appendix ACC).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

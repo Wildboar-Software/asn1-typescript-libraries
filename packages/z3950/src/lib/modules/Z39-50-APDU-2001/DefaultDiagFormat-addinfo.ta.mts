@@ -10,7 +10,14 @@ import { InternationalString, _decode_InternationalString, _encode_International
 /**
  * @summary DefaultDiagFormat_addinfo
  * @description
- * 
+ *
+ * Additional information on a default-format diagnostic.
+ * `v2Addinfo` is the VisibleString repertoire and is used when
+ * version 2 is in force. `v3Addinfo` is an InternationalString and is
+ * used when version 3 is in force. A server should always supply one
+ * of them. See `DefaultDiagFormat` for what the string contains.
+ * Comment 1, §DIAG.1, §4.4.2.1 items 19 and 20.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

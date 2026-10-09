@@ -13,6 +13,8 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary QueryExpression_term
  * @description
  * 
+ * A single term inside a SearchResult-1 query expression (ASN1.11).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +30,20 @@ export
 class QueryExpression_term {
     /**
      * @summary `queryTerm`.
+     * @description
+     * 
+     * The term.
+     * 
      * @public
      * @readonly
      */
     readonly queryTerm: Term;
     /**
      * @summary `termComment`.
+     * @description
+     * 
+     * Comment on the term. ASN1.11 does not constrain the text.
+     * 
      * @public
      * @readonly
      */

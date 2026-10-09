@@ -16,6 +16,18 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary ResourceControlRequest
  * @description
  * 
+ * Server notice about resource consumption, sent when resource control is in
+ * effect (ANSI/NISO Z39.50-2003 §3.2.6.1). It may belong to an active operation
+ * or, when concurrent operations is in effect and Reference-id is omitted, to
+ * the Z-association. A request received when resource control is not in effect
+ * may be treated as a protocol error (§4.4.2.2.14).
+ * 
+ * If a response is required, the client must send one and the server waits
+ * before the terminating response. If not, the client must not respond. Several
+ * such requests may arrive during one operation. If the client says to stop,
+ * the terminating response may still report that the operation finished,
+ * because the server may complete it before the answer arrives.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,42 +52,86 @@ export
 class ResourceControlRequest {
     /**
      * @summary `referenceId`.
+     * @description
+     * 
+     * Present when the request belongs to an operation, and equal to that
+     * operation's Reference-id. Omitted when concurrent operations is in effect
+     * and the request concerns the Z-association (ANSI/NISO Z39.50-2003
+     * §3.2.6.1, §3.4).
+     * 
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `suspendedFlag`.
+     * @description
+     * 
+     * Whether processing of the operation is suspended until the
+     * Resource-control response. Valid only when the request belongs to an
+     * operation, and present if and only if a response is required (ANSI/NISO
+     * Z39.50-2003 §3.2.6.1.3).
+     * 
      * @public
      * @readonly
      */
     readonly suspendedFlag: OPTIONAL<BOOLEAN>;
     /**
      * @summary `resourceReport`.
+     * @description
+     * 
+     * Current and estimated resource consumption at the server. Formats
+     * resource-1 and resource-2 are defined in Appendix RSC (ANSI/NISO
+     * Z39.50-2003 §3.2.6.1.1).
+     * 
      * @public
      * @readonly
      */
     readonly resourceReport: OPTIONAL<ResourceReport>;
     /**
      * @summary `partialResultsAvailable`.
+     * @description
+     * 
+     * Status of a result set being built by Search. Meaningful only as part of
+     * a Search. If the client then stops the operation and asks to keep the
+     * set, the server will accept later Present requests when the value is
+     * subset or interim (ANSI/NISO Z39.50-2003 §3.2.6.1.2). Search-status and
+     * result-set-status on the Search response remain authoritative.
+     * 
      * @public
      * @readonly
      */
     readonly partialResultsAvailable: OPTIONAL<ResourceControlRequest_partialResultsAvailable>;
     /**
      * @summary `responseRequired`.
+     * @description
+     * 
+     * Whether the client must send a Resource-control response (ANSI/NISO
+     * Z39.50-2003 §3.2.6.1.4). When false, the client must not respond.
+     * 
      * @public
      * @readonly
      */
     readonly responseRequired: BOOLEAN;
     /**
      * @summary `triggeredRequestFlag`.
+     * @description
+     * 
+     * Whether this request was sent because of a Trigger-resource-control
+     * request. Valid only when the request belongs to an operation. The server
+     * may omit it (ANSI/NISO Z39.50-2003 §3.2.6.1.5).
+     * 
      * @public
      * @readonly
      */
     readonly triggeredRequestFlag: OPTIONAL<BOOLEAN>;
     /**
      * @summary `otherInfo`.
+     * @description
+     * 
+     * Additional information this standard does not define. Version 3 only
+     * (ANSI/NISO Z39.50-2003 §3.2.6.1.8).
+     * 
      * @public
      * @readonly
      */

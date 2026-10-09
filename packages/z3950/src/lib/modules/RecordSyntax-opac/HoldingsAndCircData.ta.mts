@@ -14,6 +14,15 @@ import { CircRecord, _decode_CircRecord, _encode_CircRecord } from "../RecordSyn
  * @summary HoldingsAndCircData
  * @description
  * 
+ * Structured holdings for display (module ASN.1). The comment on this type says
+ * the elements are required to display holdings in conformance with NISO
+ * standards, and it maps individual components to MARC holdings leader, 007,
+ * 008, 852, 843, 845, and 85x/86x positions. Those mappings are the only
+ * semantics given.
+ * 
+ * ANSI/NISO Z39.50-2003 removed the OPAC record syntax from Appendix REC and
+ * adds no prose for this type.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,114 +63,211 @@ export
 class HoldingsAndCircData {
     /**
      * @summary `typeOfRecord`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings leader position 06 (LDR 06),
+     * among the elements it says are required to display holdings in
+     * conformance with NISO standards. ANSI/NISO Z39.50-2003 gives no further
+     * semantics.
      * @public
      * @readonly
      */
     readonly typeOfRecord: OPTIONAL<InternationalString>;
     /**
      * @summary `encodingLevel`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings leader position 017 (LDR
+     * 017), among the elements it says are required to display holdings in
+     * conformance with NISO standards. ANSI/NISO Z39.50-2003 gives no further
+     * semantics.
      * @public
      * @readonly
      */
     readonly encodingLevel: OPTIONAL<InternationalString>;
     /**
      * @summary `format`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings 007 positions 00-01, among
+     * the elements it says are required to display holdings in conformance with
+     * NISO standards. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly format: OPTIONAL<InternationalString>;
     /**
      * @summary `receiptAcqStatus`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings 008 position 06, among the
+     * elements it says are required to display holdings in conformance with
+     * NISO standards. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly receiptAcqStatus: OPTIONAL<InternationalString>;
     /**
      * @summary `generalRetention`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings 008 position 12, among the
+     * elements it says are required to display holdings in conformance with
+     * NISO standards. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly generalRetention: OPTIONAL<InternationalString>;
     /**
      * @summary `completeness`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings 008 position 16, among the
+     * elements it says are required to display holdings in conformance with
+     * NISO standards. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly completeness: OPTIONAL<InternationalString>;
     /**
      * @summary `dateOfReport`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings 008 positions 26-31, among
+     * the elements it says are required to display holdings in conformance with
+     * NISO standards. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly dateOfReport: OPTIONAL<InternationalString>;
     /**
      * @summary `nucCode`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings 852 subfield $a, among the
+     * elements it says are required to display holdings in conformance with
+     * NISO standards. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly nucCode: OPTIONAL<InternationalString>;
     /**
      * @summary `localLocation`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings 852 subfield $b, among the
+     * elements it says are required to display holdings in conformance with
+     * NISO standards. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly localLocation: OPTIONAL<InternationalString>;
     /**
      * @summary `shelvingLocation`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings 852 subfield $c, among the
+     * elements it says are required to display holdings in conformance with
+     * NISO standards. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly shelvingLocation: OPTIONAL<InternationalString>;
     /**
      * @summary `callNumber`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings 852 subfields $h and $i,
+     * among the elements it says are required to display holdings in
+     * conformance with NISO standards. ANSI/NISO Z39.50-2003 gives no further
+     * semantics.
      * @public
      * @readonly
      */
     readonly callNumber: OPTIONAL<InternationalString>;
     /**
      * @summary `shelvingData`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings 852 subfields $j through $m,
+     * among the elements it says are required to display holdings in
+     * conformance with NISO standards. ANSI/NISO Z39.50-2003 gives no further
+     * semantics.
      * @public
      * @readonly
      */
     readonly shelvingData: OPTIONAL<InternationalString>;
     /**
      * @summary `copyNumber`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings 852 subfield $t, among the
+     * elements it says are required to display holdings in conformance with
+     * NISO standards. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly copyNumber: OPTIONAL<InternationalString>;
     /**
      * @summary `publicNote`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings 852 subfield $z, among the
+     * elements it says are required to display holdings in conformance with
+     * NISO standards. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly publicNote: OPTIONAL<InternationalString>;
     /**
      * @summary `reproductionNote`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings field 843, among the elements
+     * it says are required to display holdings in conformance with NISO
+     * standards. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly reproductionNote: OPTIONAL<InternationalString>;
     /**
      * @summary `termsUseRepro`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings field 845, among the elements
+     * it says are required to display holdings in conformance with NISO
+     * standards. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly termsUseRepro: OPTIONAL<InternationalString>;
     /**
      * @summary `enumAndChron`.
+     * @description
+     * 
+     * The module ASN.1 maps this to MARC holdings fields 85x and 86x, among the
+     * elements it says are required to display holdings in conformance with
+     * NISO standards. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly enumAndChron: OPTIONAL<InternationalString>;
     /**
      * @summary `volumes`.
+     * @description
+     * 
+     * The module ASN.1 says this repeats for each volume held. It does not
+     * define a volume. ANSI/NISO Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */
     readonly volumes: OPTIONAL<Volume[]>;
     /**
      * @summary `circulationData`.
+     * @description
+     * 
+     * The module ASN.1 says this repeats for each circulating item. ANSI/NISO
+     * Z39.50-2003 gives no further semantics.
      * @public
      * @readonly
      */

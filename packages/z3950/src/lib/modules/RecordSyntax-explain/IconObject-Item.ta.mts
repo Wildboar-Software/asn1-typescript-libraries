@@ -13,6 +13,9 @@ import { IconObject_Item_bodyType, _decode_IconObject_Item_bodyType, _encode_Ico
  * @summary IconObject_Item
  * @description
  * 
+ * One representation of an icon. The list that contains it is alternative
+ * representations of that same icon. REC.1; ANSI/NISO Z39.50-2003 §3.2.10.3.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +37,17 @@ export
 class IconObject_Item {
     /**
      * @summary `bodyType`.
+     * @description
+     * How the body is typed: an IANA type, a Z39.50 type, or some other type.
+     * REC.1 does not define those string values.
      * @public
      * @readonly
      */
     readonly bodyType: IconObject_Item_bodyType;
     /**
      * @summary `content`.
+     * @description
+     * The icon, in machine-presentable form. ANSI/NISO Z39.50-2003 §3.2.10.3.1.
      * @public
      * @readonly
      */

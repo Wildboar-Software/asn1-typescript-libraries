@@ -13,6 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ClientPartNotToKeep_records_ranges_Item
  * @description
  * 
+ * One range of result-set records to export. Count may be omitted only on
+ * the last range, meaning all remaining records beginning at `start`.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +34,25 @@ export
 class ClientPartNotToKeep_records_ranges_Item {
     /**
      * @summary `start`.
+     * @description
+     * 
+     * Position of the first record in this range.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.7.
+     * 
      * @public
      * @readonly
      */
     readonly start: INTEGER;
     /**
      * @summary `count`.
+     * @description
+     * 
+     * How many records in this range. Omitted only on the last range, to mean
+     * every remaining record beginning at `start`.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.7.
+     * 
      * @public
      * @readonly
      */

@@ -13,6 +13,40 @@ import { RPNQuery, _decode_RPNQuery, _encode_RPNQuery } from "../Z39-50-APDU-200
  * @summary Query
  * @description
  * 
+ * Query on a Search request. The chosen alternative is the query type and
+ * identifies the syntax (ANSI/NISO Z39.50-2003 §3.2.2.1.1).
+ * 
+ * `type-0` may be used only when the client and server have an agreement
+ * outside this standard.
+ * 
+ * `type-1` is the Reverse Polish Notation query specified in §3.7. A conforming
+ * server must support a type-1 query. That does not imply support of any
+ * defined operator or operand.
+ * 
+ * `type-2` is the ISO 8777 query, as specified in ISO 8777.
+ * 
+ * `type-100` is the Common Command Language query. This standard does not
+ * specify its syntax.
+ * 
+ * `type-101` is the extended RPN query, with the same structure as type-1.
+ * Proximity and restriction are valid in version 2 and in version 3. In a
+ * type-1 query they are valid only in version 3. Including either in a
+ * version-2 type-1 query is a protocol error (§3.7).
+ * 
+ * `type-102` is the Ranked List query. This standard names it for version 3 and
+ * supplies no definition. In version 2, a server that receives a type-102 query
+ * may treat that as a protocol error (§4.4.2.2.5). In version 3, an unsupported
+ * type-102 query must not be treated as a protocol error.
+ * 
+ * `type-104` is an externally defined query. When the query-type-104 option bit
+ * is negotiated, the client may send type-104 queries and the server must
+ * recognize them. Recognition does not commit the server to any particular
+ * external definition (§3.2.1.1.3, §4.4.2.2.28).
+ * 
+ * An unsupported query of type 0, 2, 100, or 101 must not be treated as a
+ * protocol error. The server should return a diagnostic that the query type is
+ * not supported (§4.4.2.2.4).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

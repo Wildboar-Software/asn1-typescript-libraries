@@ -13,6 +13,9 @@ import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mj
  * @summary DiagFormat_term
  * @description
  * 
+ * The term is illegal, unparsable, too short, or of an unsupported type
+ * (diag-1). Matches DIAG.1 conditions 9, 124, 127, and 229.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +36,21 @@ export
 class DiagFormat_term {
     /**
      * @summary `problem`.
+     * @description
+     * 
+     * Which term failure, when the server distinguishes them. Omitted if only
+     * the term is sent.
+     * 
      * @public
      * @readonly
      */
     readonly problem: OPTIONAL<DiagFormat_term_problem>;
     /**
      * @summary `term`.
+     * @description
+     * 
+     * The term. DIAG.1 puts it in addinfo for conditions 115, 124, and 126.
+     * 
      * @public
      * @readonly
      */

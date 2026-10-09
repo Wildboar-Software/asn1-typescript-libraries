@@ -13,6 +13,11 @@ import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-
  * @summary ItemOrder_taskPackage
  * @description
  * 
+ * Item Order task package: retained client description, contact, and
+ * billing, plus the server's item request and status.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,26 @@ export
 class ItemOrder_taskPackage {
     /**
      * @summary `clientPart`.
+     * @description
+     * 
+     * Supplemental description, contact, and billing, when the client supplied
+     * them.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly clientPart: OPTIONAL<ClientPartToKeep>;
     /**
      * @summary `serverPart`.
+     * @description
+     * 
+     * The item request the server stored, a status or error report defined
+     * outside this standard, and an optional auxiliary status.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */

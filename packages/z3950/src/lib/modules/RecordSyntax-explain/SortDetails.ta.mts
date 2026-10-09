@@ -13,6 +13,15 @@ import { SortKeyDetails, _decode_SortKeyDetails, _encode_SortKeyDetails } from "
 /**
  * @summary SortDetails
  * @description
+ * Sorting capabilities the server supports for one database. There is one
+ * Explain record per database. ANSI/NISO Z39.50-2003 §3.2.10.3.13.
+ * 
+ * Search with ExplainCategory `SortDetails` and DatabaseName. The search may
+ * also use HumanStringLanguage, DateAdded, DateChanged, or DateExpires.
+ * ANSI/NISO Z39.50-2003 §3.2.10.1.2 and §3.2.10.1.3.
+ * 
+ * There are no non-key brief elements. The sort keys are mandatory in a
+ * full record. ANSI/NISO Z39.50-2003 ASN.1 comment 1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -34,18 +43,30 @@ export
 class SortDetails {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates this Explain record was added and last changed, when it expires,
+     * and the language of its human-readable text. Element set `B` includes
+     * this component except `otherInfo`. DateAdded, DateChanged, and
+     * DateExpires search these dates. ANSI/NISO Z39.50-2003 §3.2.10.3,
+     * §3.2.10.1.3; ASN.1 comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `databaseName`.
+     * @description
+     * Database this sort description applies to. Key, searched with
+     * DatabaseName. ANSI/NISO Z39.50-2003 §3.2.10.3.13.
      * @public
      * @readonly
      */
     readonly databaseName: DatabaseName;
     /**
      * @summary `sortKeys`.
+     * @description
+     * Sort keys the server supports for this database. Non-brief, and mandatory
+     * in a full record. ANSI/NISO Z39.50-2003 §3.2.10.3.13.
      * @public
      * @readonly
      */

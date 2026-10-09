@@ -12,6 +12,11 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary Destination_other
  * @description
  * 
+ * A destination that is not one of the enumerated vehicles. The standard
+ * does not define this form beyond an optional vehicle and a destination.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,26 @@ export
 class Destination_other {
     /**
      * @summary `vehicle`.
+     * @description
+     * 
+     * Optional name of the delivery vehicle. The standard does not define the
+     * vocabulary.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.6.
+     * 
      * @public
      * @readonly
      */
     readonly vehicle: OPTIONAL<InternationalString>;
     /**
      * @summary `destination`.
+     * @description
+     * 
+     * Destination address for that vehicle. The standard does not define the
+     * format.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.6.
+     * 
      * @public
      * @readonly
      */

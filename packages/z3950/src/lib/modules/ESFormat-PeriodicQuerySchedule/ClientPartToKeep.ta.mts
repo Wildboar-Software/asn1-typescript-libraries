@@ -16,6 +16,13 @@ import { ClientPartToKeep_exportParameters, _decode_ClientPartToKeep_exportParam
  * @summary ClientPartToKeep
  * @description
  * 
+ * Periodic Query parameters kept in the task package. Database names must
+ * not occur here if option bit 20 is set (§3.2.1.1.3). On create, if a
+ * result set is named, result-set disposition is mandatory and must be
+ * replace or append.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.3, §3.2.1.1.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,30 +54,76 @@ export
 class ClientPartToKeep {
     /**
      * @summary `activeFlag`.
+     * @description
+     * 
+     * On create, set means activate as soon as the parameters are received and
+     * validated; clear means create the schedule but do not activate it. On
+     * modify, which may contain as little as this flag, the client activates
+     * or deactivates the schedule. In the package, this is whether the
+     * schedule is active.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly activeFlag: BOOLEAN;
     /**
      * @summary `databaseNames`.
+     * @description
+     * 
+     * Must not occur if option bit 20 is set. When that bit was not
+     * negotiated, this is where the client lists databases (the 1995
+     * placement). The list is required if the client supplied a query rather
+     * than a persistent-query package name, or if that package lists no
+     * databases.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3, §3.2.1.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly databaseNames: OPTIONAL<InternationalString[]>;
     /**
      * @summary `resultSetDisposition`.
+     * @description
+     * 
+     * `createNew`, `replace`, or `append`: create a new result set each time
+     * the query runs, replace the existing result set, or append new results.
+     * Use `createNew` only when client and server have agreed how to name the
+     * resulting package, and only if no result set is specified. Mandatory on
+     * create when a result set is specified, and then it must be `replace` or
+     * `append`. If the period is continuous, `append` is recommended.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly resultSetDisposition: OPTIONAL<ClientPartToKeep_resultSetDisposition>;
     /**
      * @summary `alertDestination`.
+     * @description
+     * 
+     * Optional address for alerts when new periodic-query results arrive, for
+     * example a fax number, e-mail address, or pager number.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly alertDestination: OPTIONAL<Destination>;
     /**
      * @summary `exportParameters`.
+     * @description
+     * 
+     * Optional name, or the contents, of an export specification. Include it
+     * only when newly posted results should be exported. New results may also
+     * be posted to the result set when that is specified as well.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3, EXT.1.6.
+     * 
      * @public
      * @readonly
      */

@@ -10,6 +10,10 @@ import { TagPath_Item, _decode_TagPath_Item, _encode_TagPath_Item } from "../Rec
  * @summary TagPath
  * @description
  * 
+ * Path of an element inside a GRS-1 record (ANSI/NISO Z39.50-2003, ASN1.6).
+ * Used when one element points at another in the same record. Each step is a
+ * tag. Unlike an eSpec-2 path, there is no wildcard and no schema id.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

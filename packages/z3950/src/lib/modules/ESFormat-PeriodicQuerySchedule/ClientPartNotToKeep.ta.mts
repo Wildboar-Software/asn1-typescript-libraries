@@ -16,6 +16,13 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary ClientPartNotToKeep
  * @description
  * 
+ * Periodic Query parameters the client suggests and the server may
+ * override, so they are not kept as submitted. The query is mandatory on
+ * create, as is the suggested period. Database names and additional search
+ * information must not occur unless option bit 20 is set.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.3, §3.2.1.1.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,36 +49,89 @@ export
 class ClientPartNotToKeep {
     /**
      * @summary `databaseNames`.
+     * @description
+     * 
+     * Must not occur unless option bit 20 is set. When the bit is set, the
+     * client may list databases here. The list is required if `querySpec` is a
+     * query rather than a persistent-query package name, or if that package
+     * lists no databases. The server's list is in the server part.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3, §3.2.1.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly databaseNames: OPTIONAL<InternationalString[]>;
     /**
      * @summary `querySpec`.
+     * @description
+     * 
+     * Either a query or the name of a Persistent Query package. Mandatory on
+     * create. If this is a query, or the named package lists no databases,
+     * database names are required (placed according to option bit 20).
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly querySpec: OPTIONAL<ClientPartNotToKeep_querySpec>;
     /**
      * @summary `clientSuggestedPeriod`.
+     * @description
+     * 
+     * Client's proposed time between runs. Mandatory on create. The server may
+     * override it; the value in the package is the server part's period.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly clientSuggestedPeriod: OPTIONAL<Period>;
     /**
      * @summary `expiration`.
+     * @description
+     * 
+     * Optional date and time at which the server should stop running this
+     * schedule. Omitting it proposes no expiration. The server may override
+     * the value. If the client supplies one and the server does not support
+     * expiration, the server should reject the ES request. The package carries
+     * the server's value.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly expiration: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `resultSetPackage`.
+     * @description
+     * 
+     * Optional name of an existing Persistent Result Set package. If the
+     * client omits it, the server creates a persistent result set unless
+     * export parameters are included. The server part carries the name the
+     * package will use.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly resultSetPackage: OPTIONAL<InternationalString>;
     /**
      * @summary `additionalSearchInfo`.
+     * @description
+     * 
+     * Must not occur unless option bit 20 is set. Additional search
+     * information not specified by the Periodic Query definition. On a Search
+     * this parameter carries preferred format or content (request) or
+     * by-products of the search (response), and only when version 3 is in
+     * force.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.3, §3.2.1.1.3, §3.2.2.1.12.
+     * 
      * @public
      * @readonly
      */

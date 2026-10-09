@@ -18,7 +18,14 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
 /**
  * @summary InitializeResponse
  * @description
- * 
+ *
+ * Server response of the Init service. These values, which may differ
+ * from the client proposals, are in effect for the Z-association.
+ * `result` true accepts and establishes the association; false
+ * rejects it, and the client may send another Init. If the client
+ * will not use the accepted values, it may Close and try Init again.
+ * §3.2.1.1, §3.2.1.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,66 +51,143 @@ export
 class InitializeResponse {
     /**
      * @summary `referenceId`.
+     * @description
+     *
+     * The reference-id from the Init request, when the request
+     * included one. If the request omitted it, omit it here. Opaque
+     * octets. Concurrent operations is not in effect during Init.
+     * §3.2.1.1.9, §3.4, §3.5.
+     *
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `protocolVersion`.
+     * @description
+     *
+     * Every protocol version this server supports. The highest version
+     * also proposed by the client is in force. Bits above version 3
+     * are ignored. Versions 1 and 2 are the same; a version-2 system
+     * should also set version 1. If no version is shared, set
+     * `result` to reject. §3.2.1.1.1, comment 9.
+     *
      * @public
      * @readonly
      */
     readonly protocolVersion: ProtocolVersion;
     /**
      * @summary `options`.
+     * @description
+     *
+     * Server decision for each capability. These bits, not the client
+     * proposal, are in effect. For a client-initiated operation, if
+     * the client set the bit off the server must set it off too.
+     * §3.2.1.1.3.
+     *
      * @public
      * @readonly
      */
     readonly options: Options;
     /**
      * @summary `preferredMessageSize`.
+     * @description
+     *
+     * Preferred message size, in bytes, that the server will use. It
+     * overrides the client proposal. Must be less than or equal to
+     * `exceptionalRecordSize`. Both sizes zero means the client must
+     * accept arbitrarily large records and messages. §3.2.1.1.4.
+     *
      * @public
      * @readonly
      */
     readonly preferredMessageSize: INTEGER;
     /**
      * @summary `exceptionalRecordSize`.
+     * @description
+     *
+     * Maximum size, in bytes, of one record on Present when a single
+     * record larger than the preferred message size is requested.
+     * Overrides the client proposal. Must be greater than or equal to
+     * `preferredMessageSize`. Equal values mean that special case
+     * will not apply. §3.2.1.1.4.
+     *
      * @public
      * @readonly
      */
     readonly exceptionalRecordSize: INTEGER;
     /**
      * @summary `result`.
+     * @description
+     *
+     * TRUE accepts the Z-association. FALSE rejects it. On reject the
+     * client may send another Init request. ASN.1 comment: reject =
+     * FALSE; accept = TRUE. §3.2.1.1.5.
+     *
      * @public
      * @readonly
      */
     readonly result: BOOLEAN;
     /**
      * @summary `implementationId`.
+     * @description
+     *
+     * Optional identifier of this server implementation, unique within
+     * the server system. For implementers to tell implementations
+     * apart. No effect on the protocol. §3.2.1.1.6.
+     *
      * @public
      * @readonly
      */
     readonly implementationId: OPTIONAL<InternationalString>;
     /**
      * @summary `implementationName`.
+     * @description
+     *
+     * Optional descriptive name of the server implementation. For
+     * implementers. No effect on the protocol. §3.2.1.1.6.
+     *
      * @public
      * @readonly
      */
     readonly implementationName: OPTIONAL<InternationalString>;
     /**
      * @summary `implementationVersion`.
+     * @description
+     *
+     * Optional descriptive version of the server implementation. For
+     * implementers. No effect on the protocol. §3.2.1.1.6.
+     *
      * @public
      * @readonly
      */
     readonly implementationVersion: OPTIONAL<InternationalString>;
     /**
      * @summary `userInformationField`.
+     * @description
+     *
+     * Additional information not specified by this standard. During
+     * Init, externally defined information should be carried here,
+     * with object identifier UserInfo-1
+     * `{Z39-50-userInfoFormat 3}`, which has the same structure as
+     * `OtherInformation`. A diagnostic in an Init response should be
+     * `externallyDefinedInfo` inside that structure. §3.2.1.1.7,
+     * USR.2, USR.3.
+     *
      * @public
      * @readonly
      */
     readonly userInformationField: OPTIONAL<EXTERNAL>;
     /**
      * @summary `otherInfo`.
+     * @description
+     *
+     * Additional information not specified by the standard. Valid only
+     * when version 3 is in force. Use on Init is not recommended,
+     * because version 2 or 3 may not yet be known. The same
+     * information can be sent in `userInformationField` as UserInfo-1.
+     * §3.2.1.1.8, USR.2.
+     *
      * @public
      * @readonly
      */

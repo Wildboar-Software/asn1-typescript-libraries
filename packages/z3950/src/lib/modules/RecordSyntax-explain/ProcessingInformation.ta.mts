@@ -17,6 +17,21 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
 /**
  * @summary ProcessingInformation
  * @description
+ * How the server believes the client should process data for presentation to
+ * the user. Instructions are defined externally. For one database and one
+ * processing context there may be several sets, distinguished by name, and each
+ * set may be offered in more than one abstract syntax, distinguished by object
+ * identifier. ANSI/NISO Z39.50-2003 §3.2.10.3.14.
+ * 
+ * Search with ExplainCategory `Processing` (table 2). Keys are DatabaseName,
+ * ProcessingContext, ProcessingName, and ProcessingOID. ProcessingContext terms
+ * are Access, Search, Retrieval, RecordPresentation, and RecordHandling. The
+ * search may also use HumanStringLanguage, DateAdded, DateChanged, or
+ * DateExpires. ANSI/NISO Z39.50-2003 §3.2.10.1.2 and §3.2.10.1.3.
+ * 
+ * There are no non-key brief elements. Element set `description` retrieves
+ * everything except the instructions. The instructions are mandatory in a full
+ * record. ANSI/NISO Z39.50-2003 ASN.1 comment 1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -53,42 +68,71 @@ export
 class ProcessingInformation {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates this Explain record was added and last changed, when it expires,
+     * and the language of its human-readable text. Element set `B` includes
+     * this component except `otherInfo`. DateAdded, DateChanged, and
+     * DateExpires search these dates. ANSI/NISO Z39.50-2003 §3.2.10.3,
+     * §3.2.10.1.3; ASN.1 comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `databaseName`.
+     * @description
+     * Full name of the database these instructions apply to. Key, searched with
+     * DatabaseName. ANSI/NISO Z39.50-2003 §3.2.10.3.14; Appendix ATR, table 1.
      * @public
      * @readonly
      */
     readonly databaseName: DatabaseName;
     /**
      * @summary `processingContext`.
+     * @description
+     * Context these instructions apply to: access, search, retrieval, record
+     * presentation, or record handling. Key, searched with ProcessingContext.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.14; Appendix ATR, table 3.
      * @public
      * @readonly
      */
     readonly processingContext: ProcessingInformation_processingContext;
     /**
      * @summary `name`.
+     * @description
+     * Name of this set of instructions. Key, searched with ProcessingName.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.14.
      * @public
      * @readonly
      */
     readonly name: InternationalString;
     /**
      * @summary `oid`.
+     * @description
+     * Object identifier of the abstract syntax of the externally defined
+     * instructions. Key, searched with ProcessingOID. As a search term, version
+     * 2 should use a dotted decimal character string; version 3 should use an
+     * object identifier. ANSI/NISO Z39.50-2003 Appendix ATR, note 4.
      * @public
      * @readonly
      */
     readonly oid: OBJECT_IDENTIFIER;
     /**
      * @summary `description`.
+     * @description
+     * Human-readable description of the instructions. Included when the element
+     * set name is `description`. ANSI/NISO Z39.50-2003 §3.2.10.3.14.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `instructions`.
+     * @description
+     * Machine-processable instructions, defined outside this standard, in the
+     * abstract syntax identified by the object identifier. Omitted from element
+     * set `description`. Mandatory in a full record. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.14.
      * @public
      * @readonly
      */

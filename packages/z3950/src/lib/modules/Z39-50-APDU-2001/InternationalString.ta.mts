@@ -9,7 +9,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary InternationalString
  * @description
- * 
+ *
+ * Character string used throughout the protocol. When version 2 is in
+ * force, only the VisibleString repertoire may be used. When version
+ * 3 is in force, GeneralString semantics apply unless initialization
+ * negotiation changes them. Defined in Z39.50-1995 in place of
+ * VisibleString. Where the identifier is `IMPLICIT`, the tag does not
+ * distinguish the two repertoires. Comment 7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

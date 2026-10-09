@@ -12,6 +12,13 @@ import { HoldingsAndCircData, _decode_HoldingsAndCircData, _encode_HoldingsAndCi
  * @summary HoldingsRecord
  * @description
  * 
+ * One holdings item inside an OPAC record (module ASN.1). Either an EXTERNAL
+ * MARC holdings record, or the structured holdings-and-circulation alternative.
+ * The ASN.1 does not say which to send.
+ * 
+ * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+ * semantics.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

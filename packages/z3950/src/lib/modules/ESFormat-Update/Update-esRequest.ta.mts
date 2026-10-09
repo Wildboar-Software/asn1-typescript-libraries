@@ -13,6 +13,11 @@ import { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNot
  * @summary Update_esRequest
  * @description
  * 
+ * Client parameters of a Database Update request: the action and its
+ * scope, which are retained, and the records to apply, which are not.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,26 @@ export
 class Update_esRequest {
     /**
      * @summary `toKeep`.
+     * @description
+     * 
+     * Action, database name, optional schema, and optional element-set name.
+     * These apply to every supplied record and are kept in the package.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */
     readonly toKeep: ClientPartToKeep;
     /**
      * @summary `notToKeep`.
+     * @description
+     * 
+     * The records to insert, replace, delete, or update, with optional
+     * identifiers and correlation data. Not retained as submitted.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */

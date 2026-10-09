@@ -14,7 +14,14 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
 /**
  * @summary DeleteResultSetRequest
  * @description
- * 
+ *
+ * Client request of the Delete service. Asks the server to delete
+ * named result sets, or every result set created during this
+ * Z-association. Result sets disappear when the association ends.
+ * Deleting one the client no longer needs can keep the server from
+ * unilaterally dropping a set the client still needs, and can avoid
+ * charges for holding results. §3.2.4.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +42,48 @@ export
 class DeleteResultSetRequest {
     /**
      * @summary `referenceId`.
+     * @description
+     *
+     * Client-assigned identifier of this Delete operation. Mandatory
+     * when concurrent operations are in effect; optional when serial
+     * operations are in effect (omission means null). §3.4, §3.5.
+     *
      * @public
      * @readonly
      */
     readonly referenceId: OPTIONAL<ReferenceId>;
     /**
      * @summary `deleteFunction`.
+     * @description
+     *
+     * `list` (0): delete the result sets named in `resultSetList`.
+     * `all` (1): bulk-delete every result set on the server that was
+     * created during this Z-association. The service name for `all`
+     * is bulk-delete. §3.2.4.1.1.
+     *
      * @public
      * @readonly
      */
     readonly deleteFunction: DeleteResultSetRequest_deleteFunction;
     /**
      * @summary `resultSetList`.
+     * @description
+     *
+     * Present if and only if `deleteFunction` is `list`. Result sets
+     * created during this Z-association that the client wants deleted.
+     * §3.2.4.1.2.
+     *
      * @public
      * @readonly
      */
     readonly resultSetList: OPTIONAL<ResultSetId[]>;
     /**
      * @summary `otherInfo`.
+     * @description
+     *
+     * Additional information not specified by the standard. Version 3
+     * only. §3.2.4.1.7.
+     *
      * @public
      * @readonly
      */

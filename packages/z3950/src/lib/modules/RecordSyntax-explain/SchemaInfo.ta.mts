@@ -16,6 +16,22 @@ import { ElementInfo, _decode_ElementInfo, _encode_ElementInfo } from "../Record
 /**
  * @summary SchemaInfo
  * @description
+ * Descriptive information about a database schema. There is one Explain record
+ * for each schema the server supports. It is not specific to a database. A
+ * schema is a shared understanding of the information in the database's
+ * records, so that portions of that information can be retrieved. Its primary
+ * component is an abstract record structure. ANSI/NISO Z39.50-2003 §3.2.10.3.3;
+ * Appendix TAG.
+ * 
+ * Search with ExplainCategory `SchemaInfo` and SchemaOID. The search may also
+ * use HumanStringLanguage, DateAdded, DateChanged, or DateExpires. ANSI/NISO
+ * Z39.50-2003 §3.2.10.1.2 and §3.2.10.1.3. As a search term, version 2 should
+ * use a dotted decimal character string; version 3 should use an object
+ * identifier. ANSI/NISO Z39.50-2003 Appendix ATR, note 4.
+ * 
+ * Element set `B` retrieves brief elements; `F` adds non-brief elements.
+ * Some components marked optional are mandatory in a full record. ANSI/NISO
+ * Z39.50-2003 ASN.1 comment 1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -45,36 +61,60 @@ export
 class SchemaInfo {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates this Explain record was added and last changed, when it expires,
+     * and the language of its human-readable text. Element set `B` includes
+     * this component except `otherInfo`. DateAdded, DateChanged, and
+     * DateExpires search these dates. ANSI/NISO Z39.50-2003 §3.2.10.3,
+     * §3.2.10.1.3; ASN.1 comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `schema`.
+     * @description
+     * Object identifier of the schema definition. Key, searched with SchemaOID.
+     * As a search term, version 2 should use a dotted decimal character string;
+     * version 3 should use an object identifier. ANSI/NISO Z39.50-2003 Appendix
+     * ATR, note 4.
      * @public
      * @readonly
      */
     readonly schema: OBJECT_IDENTIFIER;
     /**
      * @summary `name`.
+     * @description
+     * Name of this schema. Brief, and not a key. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.3.
      * @public
      * @readonly
      */
     readonly name: InternationalString;
     /**
      * @summary `description`.
+     * @description
+     * Description of this schema, in human-readable text. Non-brief. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.3.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `tagTypeMapping`.
+     * @description
+     * Tag sets used by this schema, and the tag type designated for each.
+     * Non-brief. ANSI/NISO Z39.50-2003 §3.2.10.3.3; Appendix RET.2.2.2.
      * @public
      * @readonly
      */
     readonly tagTypeMapping: OPTIONAL<SchemaInfo_tagTypeMapping_Item[]>;
     /**
      * @summary `recordStructure`.
+     * @description
+     * Abstract record structure defined by this schema: the schema elements,
+     * each identified by a tag path. Non-brief. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.3; Appendix TAG.
      * @public
      * @readonly
      */

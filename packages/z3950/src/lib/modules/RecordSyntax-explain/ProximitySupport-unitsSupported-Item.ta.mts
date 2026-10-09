@@ -11,6 +11,12 @@ import { ProximitySupport_unitsSupported_Item_private, _decode_ProximitySupport_
 /**
  * @summary ProximitySupport_unitsSupported_Item
  * @description
+ * One proximity unit in ProximitySupport. `known` is a value of
+ * KnownProximityUnit: character (1), word (2), sentence (3), paragraph (4),
+ * section (5), chapter (6), document (7), element (8), subelement (9),
+ * elementType (10), or byte (11). Byte is version 3 only. `private` is a
+ * server-defined unit. ANSI/NISO Z39.50-2003 Explain ASN.1; KnownProximityUnit
+ * in the Search APDU.
  * 
  * ### ASN.1 Definition:
  * 

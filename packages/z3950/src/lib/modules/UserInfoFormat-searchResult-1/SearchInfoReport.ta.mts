@@ -10,6 +10,17 @@ import { SearchInfoReport_Item, _decode_SearchInfoReport_Item, _encode_SearchInf
  * @summary SearchInfoReport
  * @description
  * 
+ * SearchResult-1 `{Z39-50-userInfoFormat 1}` reports one query component at a
+ * time: the whole query or a subquery, optionally limited to some of the
+ * databases in the Search (USR.1, ASN1.11). The server may also create a result
+ * set for each component.
+ * 
+ * Primarily this is additionalSearchInfo on a Search response. It may also be
+ * the resource report on a resource-control request, to report search progress.
+ * Used that way, the server should not create a result set for a component
+ * until processing of that component is finished (§3.2.6.1.2 allows the client
+ * to ask for this format via trigger-resource-control).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

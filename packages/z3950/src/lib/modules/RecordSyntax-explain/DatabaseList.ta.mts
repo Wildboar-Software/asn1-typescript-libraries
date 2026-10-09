@@ -10,6 +10,11 @@ import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39
  * @summary DatabaseList
  * @description
  * 
+ * A list of database names. Used for databases that may be searched together
+ * with a given database, for the databases combined into one logical database,
+ * and for combinations the server supports. Each element is one database name.
+ * ANSI/NISO Z39.50-2003 §3.2.10.3.1, §3.2.10.3.2; REC.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

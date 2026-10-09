@@ -10,6 +10,12 @@ import { AttributeOccurrence, _decode_AttributeOccurrence, _encode_AttributeOccu
  * @summary AttributeCombination
  * @description
  * 
+ * One legal combination of attributes: a pattern, not one query. Each element
+ * lists the legal values for one attribute type in that combination. Used for
+ * the combinations a database supports, and for the combination that hits a
+ * term list (that combination is also what Scan uses when the list is
+ * scanable). REC.1; ANSI/NISO Z39.50-2003 §3.2.10.3.9, §3.2.10.3.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

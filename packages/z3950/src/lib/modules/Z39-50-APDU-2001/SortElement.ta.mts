@@ -12,6 +12,10 @@ import { SortElement_datbaseSpecific_Item, _decode_SortElement_datbaseSpecific_I
  * @summary SortElement
  * @description
  * 
+ * Where a sort key is found (ANSI/NISO Z39.50-2003 §3.2.7.1.3). `generic` is
+ * one key applied to every record. `datbaseSpecific` (the ASN.1 spelling) pairs
+ * each database with its own key.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

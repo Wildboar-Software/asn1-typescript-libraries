@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AccessRestrictions_Item_accessType
  * @description
  * 
+ * Kind of access a restriction applies to. REC.1 names any, search, present,
+ * specific-elements, extended-services, and by-database, and does not define
+ * those values further. ANSI/NISO Z39.50-2003 §3.2.10.3.1 lists access
+ * challenges separately and does not map them onto these integers.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +33,9 @@ type AccessRestrictions_Item_accessType = INTEGER;
 
 /**
  * @summary AccessRestrictions_Item_accessType_any_
+ * @description
+ * `any` (0). Kind of access named by REC.1. The standard does not define this
+ * enumerant further.
  * @constant
  * @type {number}
  */
@@ -36,6 +44,8 @@ const AccessRestrictions_Item_accessType_any_: AccessRestrictions_Item_accessTyp
 
 /**
  * @summary AccessRestrictions_Item_accessType_any_
+ * @description
+ * `any` (0). REC.1 does not define this kind further.
  * @constant
  * @type {number}
  */
@@ -44,6 +54,9 @@ const any_: AccessRestrictions_Item_accessType = AccessRestrictions_Item_accessT
 
 /**
  * @summary AccessRestrictions_Item_accessType_search
+ * @description
+ * `search` (1). Kind of access named by REC.1. The standard does not define
+ * this enumerant further.
  * @constant
  * @type {number}
  */
@@ -52,6 +65,8 @@ const AccessRestrictions_Item_accessType_search: AccessRestrictions_Item_accessT
 
 /**
  * @summary AccessRestrictions_Item_accessType_search
+ * @description
+ * `search` (1). REC.1 does not define this kind further.
  * @constant
  * @type {number}
  */
@@ -60,6 +75,9 @@ const search: AccessRestrictions_Item_accessType = AccessRestrictions_Item_acces
 
 /**
  * @summary AccessRestrictions_Item_accessType_present
+ * @description
+ * `present` (2). Kind of access named by REC.1. The standard does not define
+ * this enumerant further.
  * @constant
  * @type {number}
  */
@@ -68,6 +86,8 @@ const AccessRestrictions_Item_accessType_present: AccessRestrictions_Item_access
 
 /**
  * @summary AccessRestrictions_Item_accessType_present
+ * @description
+ * `present` (2). REC.1 does not define this kind further.
  * @constant
  * @type {number}
  */
@@ -76,6 +96,9 @@ const present: AccessRestrictions_Item_accessType = AccessRestrictions_Item_acce
 
 /**
  * @summary AccessRestrictions_Item_accessType_specific_elements
+ * @description
+ * `specific-elements` (3). Kind of access named by REC.1. The standard does not
+ * define this enumerant further.
  * @constant
  * @type {number}
  */
@@ -84,6 +107,8 @@ const AccessRestrictions_Item_accessType_specific_elements: AccessRestrictions_I
 
 /**
  * @summary AccessRestrictions_Item_accessType_specific_elements
+ * @description
+ * `specific-elements` (3). REC.1 does not define this kind further.
  * @constant
  * @type {number}
  */
@@ -92,6 +117,9 @@ const specific_elements: AccessRestrictions_Item_accessType = AccessRestrictions
 
 /**
  * @summary AccessRestrictions_Item_accessType_extended_services
+ * @description
+ * `extended-services` (4). Kind of access named by REC.1. The standard does not
+ * define this enumerant further.
  * @constant
  * @type {number}
  */
@@ -100,6 +128,8 @@ const AccessRestrictions_Item_accessType_extended_services: AccessRestrictions_I
 
 /**
  * @summary AccessRestrictions_Item_accessType_extended_services
+ * @description
+ * `extended-services` (4). REC.1 does not define this kind further.
  * @constant
  * @type {number}
  */
@@ -108,6 +138,9 @@ const extended_services: AccessRestrictions_Item_accessType = AccessRestrictions
 
 /**
  * @summary AccessRestrictions_Item_accessType_by_database
+ * @description
+ * `by-database` (5). Kind of access named by REC.1. The standard does not
+ * define this enumerant further.
  * @constant
  * @type {number}
  */
@@ -116,6 +149,8 @@ const AccessRestrictions_Item_accessType_by_database: AccessRestrictions_Item_ac
 
 /**
  * @summary AccessRestrictions_Item_accessType_by_database
+ * @description
+ * `by-database` (5). REC.1 does not define this kind further.
  * @constant
  * @type {number}
  */

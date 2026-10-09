@@ -13,6 +13,10 @@ import { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-gener
  * @summary SimpleElement
  * @description
  * 
+ * Request for the node at a tag path, with an optional variant (ANSI/NISO
+ * Z39.50-2003, RET.3.1.1). A path that ends on a non-leaf requests the whole
+ * subtree. GRS-1 returns that subtree by recursion (RET.3.2.1.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +32,22 @@ export
 class SimpleElement {
     /**
      * @summary `path`.
+     * @description
+     * 
+     * Tags from the root of the abstract record down to the requested node
+     * (RET.3.1.1, RET.2.1.5).
      * @public
      * @readonly
      */
     readonly path: TagPath;
     /**
      * @summary `variantRequest`.
+     * @description
+     * 
+     * Form of the element: composition, language, character set, formatting, or
+     * a fragment (RET.2.1.6). If omitted, the default variant request on the
+     * eSpec applies when one was set. If neither is present, this request has
+     * no variant (RET.3.1.1.5).
      * @public
      * @readonly
      */

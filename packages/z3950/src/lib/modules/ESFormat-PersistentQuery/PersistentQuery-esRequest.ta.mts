@@ -13,6 +13,12 @@ import { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNot
  * @summary PersistentQuery_esRequest
  * @description
  * 
+ * Client parameters of a Persistent Query request. Database names and
+ * additional search information may be omitted; the query or the package
+ * to copy may not.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.2, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,26 @@ export
 class PersistentQuery_esRequest {
     /**
      * @summary `toKeep`.
+     * @description
+     * 
+     * Optional database names and additional search information, retained in
+     * the task package.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.2.
+     * 
      * @public
      * @readonly
      */
     readonly toKeep: OPTIONAL<ClientPartToKeep>;
     /**
      * @summary `notToKeep`.
+     * @description
+     * 
+     * Either the query to save or the name of another persistent query to
+     * copy. Not retained as submitted; the server part holds the actual query.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.2.
+     * 
      * @public
      * @readonly
      */

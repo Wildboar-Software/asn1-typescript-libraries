@@ -14,6 +14,13 @@ import { TaskPackageRecordStructure, _decode_TaskPackageRecordStructure, _encode
  * @summary ServerPart
  * @description
  * 
+ * Server report for a database update. Update status is present in the
+ * package only when task status is complete or aborted, and is not set
+ * until every record has a final record status. Task-level diagnostics are
+ * for a rejected task, not for a single record.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.1.5.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +44,48 @@ export
 class ServerPart {
     /**
      * @summary `updateStatus`.
+     * @description
+     * 
+     * `success`, `partial`, or `failure`. Occurs only when task status is
+     * complete or aborted. Not set until record status is set for every
+     * record. `success` means every record succeeded. `partial` means the task
+     * is done but only some records were updated, not that the task is still
+     * in progress. `failure` means the server rejected the task.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.1.5.1.
+     * 
      * @public
      * @readonly
      */
     readonly updateStatus: ServerPart_updateStatus;
     /**
      * @summary `globalDiagnostics`.
+     * @description
+     * 
+     * One or more non-surrogate diagnostics for the task, not for individual
+     * records. Supplied when update status is failure.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */
     readonly globalDiagnostics: OPTIONAL<DiagRec[]>;
     /**
      * @summary `taskPackageRecords`.
+     * @description
+     * 
+     * One structure per supplied record. The server should create each
+     * structure when it creates the package, with correlation information and
+     * status; the record itself is included only when processing of that
+     * record is complete. When task status is complete, each structure may
+     * include part or all of the updated record (per the element-set name) or
+     * a surrogate diagnostic when that record failed. When task status is
+     * pending or active, completed records are reported that way, and records
+     * not yet complete carry correlation information and status only.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.5.
+     * 
      * @public
      * @readonly
      */

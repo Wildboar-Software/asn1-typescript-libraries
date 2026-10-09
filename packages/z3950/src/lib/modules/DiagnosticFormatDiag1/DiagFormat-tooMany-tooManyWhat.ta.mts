@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagFormat_tooMany_tooManyWhat
  * @description
  * 
+ * Which limit a diag-1 tooMany diagnostic reports. Values match DIAG.1
+ * conditions 5, 6, 7, 8, 11, 12, 111, 112, and 234.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +34,10 @@ type DiagFormat_tooMany_tooManyWhat = INTEGER;
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_argumentWords
+ * @description
+ * 
+ * Too many argument words (DIAG.1 condition 5).
+ * 
  * @constant
  * @type {number}
  */
@@ -39,6 +46,10 @@ const DiagFormat_tooMany_tooManyWhat_argumentWords: DiagFormat_tooMany_tooManyWh
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_argumentWords
+ * @description
+ * 
+ * Too many argument words (DIAG.1 condition 5).
+ * 
  * @constant
  * @type {number}
  */
@@ -47,6 +58,10 @@ const argumentWords: DiagFormat_tooMany_tooManyWhat = DiagFormat_tooMany_tooMany
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_truncatedWords
+ * @description
+ * 
+ * Too many truncated words (DIAG.1 condition 7).
+ * 
  * @constant
  * @type {number}
  */
@@ -55,6 +70,10 @@ const DiagFormat_tooMany_tooManyWhat_truncatedWords: DiagFormat_tooMany_tooManyW
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_truncatedWords
+ * @description
+ * 
+ * Too many truncated words (DIAG.1 condition 7).
+ * 
  * @constant
  * @type {number}
  */
@@ -63,6 +82,10 @@ const truncatedWords: DiagFormat_tooMany_tooManyWhat = DiagFormat_tooMany_tooMan
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_booleanOperators
+ * @description
+ * 
+ * Too many boolean operators (DIAG.1 condition 6).
+ * 
  * @constant
  * @type {number}
  */
@@ -71,6 +94,10 @@ const DiagFormat_tooMany_tooManyWhat_booleanOperators: DiagFormat_tooMany_tooMan
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_booleanOperators
+ * @description
+ * 
+ * Too many boolean operators (DIAG.1 condition 6).
+ * 
  * @constant
  * @type {number}
  */
@@ -79,6 +106,10 @@ const booleanOperators: DiagFormat_tooMany_tooManyWhat = DiagFormat_tooMany_tooM
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_incompleteSubfields
+ * @description
+ * 
+ * Too many incomplete subfields (DIAG.1 condition 8).
+ * 
  * @constant
  * @type {number}
  */
@@ -87,6 +118,10 @@ const DiagFormat_tooMany_tooManyWhat_incompleteSubfields: DiagFormat_tooMany_too
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_incompleteSubfields
+ * @description
+ * 
+ * Too many incomplete subfields (DIAG.1 condition 8).
+ * 
  * @constant
  * @type {number}
  */
@@ -95,6 +130,10 @@ const incompleteSubfields: DiagFormat_tooMany_tooManyWhat = DiagFormat_tooMany_t
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_characters
+ * @description
+ * 
+ * Too many characters in the search statement (DIAG.1 condition 11).
+ * 
  * @constant
  * @type {number}
  */
@@ -103,6 +142,10 @@ const DiagFormat_tooMany_tooManyWhat_characters: DiagFormat_tooMany_tooManyWhat 
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_characters
+ * @description
+ * 
+ * Too many characters in the search statement (DIAG.1 condition 11).
+ * 
  * @constant
  * @type {number}
  */
@@ -111,6 +154,10 @@ const characters: DiagFormat_tooMany_tooManyWhat = DiagFormat_tooMany_tooManyWha
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_recordsRetrieved
+ * @description
+ * 
+ * Too many records retrieved (DIAG.1 condition 12).
+ * 
  * @constant
  * @type {number}
  */
@@ -119,6 +166,10 @@ const DiagFormat_tooMany_tooManyWhat_recordsRetrieved: DiagFormat_tooMany_tooMan
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_recordsRetrieved
+ * @description
+ * 
+ * Too many records retrieved (DIAG.1 condition 12).
+ * 
  * @constant
  * @type {number}
  */
@@ -127,6 +178,10 @@ const recordsRetrieved: DiagFormat_tooMany_tooManyWhat = DiagFormat_tooMany_tooM
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_dataBasesSpecified
+ * @description
+ * 
+ * Too many databases specified (DIAG.1 condition 111). Addinfo is the maximum.
+ * 
  * @constant
  * @type {number}
  */
@@ -135,6 +190,10 @@ const DiagFormat_tooMany_tooManyWhat_dataBasesSpecified: DiagFormat_tooMany_tooM
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_dataBasesSpecified
+ * @description
+ * 
+ * Too many databases specified (DIAG.1 condition 111). Addinfo is the maximum.
+ * 
  * @constant
  * @type {number}
  */
@@ -143,6 +202,10 @@ const dataBasesSpecified: DiagFormat_tooMany_tooManyWhat = DiagFormat_tooMany_to
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_resultSetsCreated
+ * @description
+ * 
+ * Too many result sets created (DIAG.1 condition 112). Addinfo is the maximum.
+ * 
  * @constant
  * @type {number}
  */
@@ -151,6 +214,10 @@ const DiagFormat_tooMany_tooManyWhat_resultSetsCreated: DiagFormat_tooMany_tooMa
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_resultSetsCreated
+ * @description
+ * 
+ * Too many result sets created (DIAG.1 condition 112). Addinfo is the maximum.
+ * 
  * @constant
  * @type {number}
  */
@@ -159,6 +226,11 @@ const resultSetsCreated: DiagFormat_tooMany_tooManyWhat = DiagFormat_tooMany_too
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_indexTermsProcessed
+ * @description
+ * 
+ * Too many index terms processed (DIAG.1 condition 234). Addinfo is the number
+ * of terms.
+ * 
  * @constant
  * @type {number}
  */
@@ -167,6 +239,11 @@ const DiagFormat_tooMany_tooManyWhat_indexTermsProcessed: DiagFormat_tooMany_too
 
 /**
  * @summary DiagFormat_tooMany_tooManyWhat_indexTermsProcessed
+ * @description
+ * 
+ * Too many index terms processed (DIAG.1 condition 234). Addinfo is the number
+ * of terms.
+ * 
  * @constant
  * @type {number}
  */

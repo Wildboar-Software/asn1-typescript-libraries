@@ -12,6 +12,12 @@ import { ClientPartNotToKeep_records_ranges_Item, _decode_ClientPartNotToKeep_re
  * @summary ClientPartNotToKeep_records
  * @description
  * 
+ * All records in the result set, or a set of ranges. In a range list the
+ * last range may omit its count, meaning every remaining record beginning
+ * at that start position.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

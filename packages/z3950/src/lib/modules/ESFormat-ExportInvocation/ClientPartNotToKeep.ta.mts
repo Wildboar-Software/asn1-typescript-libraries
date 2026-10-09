@@ -13,6 +13,11 @@ import { ClientPartNotToKeep_records, _decode_ClientPartNotToKeep_records, _enco
  * @summary ClientPartNotToKeep
  * @description
  * 
+ * Client parameters of Export Invocation that are not kept in the task
+ * package: the transient result set and the records selected from it.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.7, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,27 @@ export
 class ClientPartNotToKeep {
     /**
      * @summary `resultSetId`.
+     * @description
+     * 
+     * Name of a transient result set from which records are selected for
+     * export.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.7.
+     * 
      * @public
      * @readonly
      */
     readonly resultSetId: InternationalString;
     /**
      * @summary `records`.
+     * @description
+     * 
+     * Which records to export: every record in the result set, or a set of
+     * ranges. The last range may mean all records beginning with a given
+     * record.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.7.
+     * 
      * @public
      * @readonly
      */

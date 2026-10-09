@@ -24,6 +24,16 @@ import { AccessInfo, _decode_AccessInfo, _encode_AccessInfo } from "../RecordSyn
  * @summary DatabaseInfo
  * @description
  * 
+ * One database, including restrictions and parameters. One record per database
+ * the server supports. Search ExplainCategory `DatabaseInfo` with DatabaseName
+ * as the key. Also searchable by Availability `yes`, Supplier, Producer,
+ * Proprietary `no`, and UserFee `no` (§3.2.10.1.4), and by Keyword and
+ * ExplainDatabase (ATR.1 notes 5 and 6). A record with sub-databases is one
+ * logical database; the listed databases remain available on their own.
+ * `proprietary` is mandatory in a full record. Element set `B` is brief;
+ * `brief-1` is that brief record without the icon. ANSI/NISO Z39.50-2003
+ * §3.2.10.1.1, §3.2.10.3.2; REC.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -85,180 +95,287 @@ export
 class DatabaseInfo {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates, language, and other information about this Explain record.
+     * otherInfo is omitted from element set `B`. REC.1 Comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `name`.
+     * @description
+     * Brief. Key. The one full database name. Typically a short string, not
+     * human-readable, and not varied by language. Search with Use DatabaseName.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly name: DatabaseName;
     /**
      * @summary `explainDatabase`.
+     * @description
+     * Brief. Present when this database is the Explain database, or an Explain
+     * database for a different server, possibly on another host. How to reach
+     * that server is outside this standard. One suggested agreement is that the
+     * database name is a URL. To search these records, combine ExplainCategory
+     * `DatabaseInfo` with ExplainDatabase; the term is NULL in version 3 and
+     * otherwise ignored, and Relation is omitted or AlwaysMatches. Comment 3;
+     * ATR.1 note 6.
      * @public
      * @readonly
      */
     readonly explainDatabase: OPTIONAL<NULL>;
     /**
      * @summary `nicknames`.
+     * @description
+     * Brief. Short or alternate names for the database. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly nicknames: OPTIONAL<DatabaseName[]>;
     /**
      * @summary `icon`.
+     * @description
+     * Brief. Icon for this database, in machine-presentable form. Element set
+     * `brief-1` is brief with this omitted. ANSI/NISO Z39.50-2003 §3.2.10.3.2;
+     * REC.1.
      * @public
      * @readonly
      */
     readonly icon: OPTIONAL<IconObject>;
     /**
      * @summary `user_fee`.
+     * @description
+     * Brief. Whether access to this database is charged. Search UserFee `no`
+     * for databases with no user fee. ANSI/NISO Z39.50-2003 §3.2.10.1.4,
+     * §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly user_fee: BOOLEAN;
     /**
      * @summary `available`.
+     * @description
+     * Brief. Whether the database is currently available. Search Availability
+     * `yes` for databases that are. ANSI/NISO Z39.50-2003 §3.2.10.1.4,
+     * §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly available: BOOLEAN;
     /**
      * @summary `titleString`.
+     * @description
+     * Brief. Human-readable title, as opposed to the database name. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly titleString: OPTIONAL<HumanString>;
     /**
      * @summary `keywords`.
+     * @description
+     * Non-brief. Keywords for the database. Search with Use Keyword, combined
+     * with ExplainCategory `DatabaseInfo`, for terms that match one of the
+     * query terms. ANSI/NISO Z39.50-2003 §3.2.10.3.2; ATR.1 note 5.
      * @public
      * @readonly
      */
     readonly keywords: OPTIONAL<HumanString[]>;
     /**
      * @summary `description`.
+     * @description
+     * Non-brief. Human-readable description of the database. Element set
+     * `description` returns the brief elements plus this element. ANSI/NISO
+     * Z39.50-2003 §3.2.10.2.2, §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly description: OPTIONAL<HumanString>;
     /**
      * @summary `associatedDbs`.
+     * @description
+     * Non-brief. Databases the server allows, and possibly encourages, to be
+     * searched together with this one. REC.1; ANSI/NISO Z39.50-2003
+     * §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly associatedDbs: OPTIONAL<DatabaseList>;
     /**
      * @summary `subDbs`.
+     * @description
+     * Non-brief. When present, this database is a composite of these databases.
+     * The individual databases are also available. REC.1; ANSI/NISO Z39.50-2003
+     * §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly subDbs: OPTIONAL<DatabaseList>;
     /**
      * @summary `disclaimers`.
+     * @description
+     * Non-brief. Human-readable disclaimers. ANSI/NISO Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly disclaimers: OPTIONAL<HumanString>;
     /**
      * @summary `news`.
+     * @description
+     * Non-brief. Human-readable news about this database. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly news: OPTIONAL<HumanString>;
     /**
      * @summary `recordCount`.
+     * @description
+     * Non-brief. How many records the database has, either an exact count or an
+     * estimate. ANSI/NISO Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly recordCount: OPTIONAL<DatabaseInfo_recordCount>;
     /**
      * @summary `defaultOrder`.
+     * @description
+     * Non-brief. Human-readable description of the default order in which
+     * records are presented. ANSI/NISO Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly defaultOrder: OPTIONAL<HumanString>;
     /**
      * @summary `avRecordSize`.
+     * @description
+     * Non-brief. Estimated average record size, in bytes. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly avRecordSize: OPTIONAL<INTEGER>;
     /**
      * @summary `maxRecordSize`.
+     * @description
+     * Non-brief. Maximum record size, in bytes. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly maxRecordSize: OPTIONAL<INTEGER>;
     /**
      * @summary `hours`.
+     * @description
+     * Non-brief. Human-readable hours when this database is available.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly hours: OPTIONAL<HumanString>;
     /**
      * @summary `bestTime`.
+     * @description
+     * Non-brief. Human-readable best time to access this database. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly bestTime: OPTIONAL<HumanString>;
     /**
      * @summary `lastUpdate`.
+     * @description
+     * Non-brief. Time of last update of this database. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly lastUpdate: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `updateInterval`.
+     * @description
+     * Non-brief. Update cycle or interval for this database. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly updateInterval: OPTIONAL<IntUnit>;
     /**
      * @summary `coverage`.
+     * @description
+     * Non-brief. Human-readable coverage dates of this database. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly coverage: OPTIONAL<HumanString>;
     /**
      * @summary `proprietary`.
+     * @description
+     * Non-brief. Whether the database contains proprietary information.
+     * Mandatory in a full record. Search Proprietary `no` for databases that
+     * are not proprietary. ANSI/NISO Z39.50-2003 §3.2.10.1.4, §3.2.10.3.2;
+     * REC.1.
      * @public
      * @readonly
      */
     readonly proprietary: OPTIONAL<BOOLEAN>;
     /**
      * @summary `copyrightText`.
+     * @description
+     * Non-brief. Human-readable copyright issues for this database. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly copyrightText: OPTIONAL<HumanString>;
     /**
      * @summary `copyrightNotice`.
+     * @description
+     * Non-brief. Copyright notice the server expects the client to display to
+     * the user when it can. Human-readable. ANSI/NISO Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly copyrightNotice: OPTIONAL<HumanString>;
     /**
      * @summary `producerContactInfo`.
+     * @description
+     * Non-brief. Description and contact for the database producer. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly producerContactInfo: OPTIONAL<ContactInfo>;
     /**
      * @summary `supplierContactInfo`.
+     * @description
+     * Non-brief. Description and contact for the database supplier. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly supplierContactInfo: OPTIONAL<ContactInfo>;
     /**
      * @summary `submissionContactInfo`.
+     * @description
+     * Non-brief. How to submit material for inclusion in this database, in
+     * human-readable contact form. ANSI/NISO Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */
     readonly submissionContactInfo: OPTIONAL<ContactInfo>;
     /**
      * @summary `accessInfo`.
+     * @description
+     * Non-brief. Query types, diagnostic sets, attribute sets, schemas, record
+     * syntaxes, resource challenges (the category prose says resource reports),
+     * access control, costs, variant sets, element set names, and unit systems
+     * for this database. Every item listed here should also be listed on the
+     * server AccessInfo. REC.1; ANSI/NISO Z39.50-2003 §3.2.10.3.2.
      * @public
      * @readonly
      */

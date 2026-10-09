@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServerPart_auxiliaryStatus
  * @description
  * 
+ * Auxiliary item-order status, supplementing the externally defined status
+ * or error report. The standard names these values and does not define
+ * them further.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +33,13 @@ type ServerPart_auxiliaryStatus = INTEGER;
 
 /**
  * @summary ServerPart_auxiliaryStatus_notReceived
+ * @description
+ * 
+ * Auxiliary status `notReceived`. EXT.1.4 allows the server to supply an
+ * auxiliary status and does not define this value beyond the name.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -35,6 +48,11 @@ const ServerPart_auxiliaryStatus_notReceived: ServerPart_auxiliaryStatus = 1; /*
 
 /**
  * @summary ServerPart_auxiliaryStatus_notReceived
+ * @description
+ * 
+ * Auxiliary status `notReceived` (EXT.1.4). The standard does not define
+ * it beyond the name.
+ * 
  * @constant
  * @type {number}
  */
@@ -43,6 +61,13 @@ const notReceived: ServerPart_auxiliaryStatus = ServerPart_auxiliaryStatus_notRe
 
 /**
  * @summary ServerPart_auxiliaryStatus_loanQueue
+ * @description
+ * 
+ * Auxiliary status `loanQueue`. EXT.1.4 does not define this value beyond
+ * the name.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -51,6 +76,11 @@ const ServerPart_auxiliaryStatus_loanQueue: ServerPart_auxiliaryStatus = 2; /* L
 
 /**
  * @summary ServerPart_auxiliaryStatus_loanQueue
+ * @description
+ * 
+ * Auxiliary status `loanQueue` (EXT.1.4). The standard does not define it
+ * beyond the name.
+ * 
  * @constant
  * @type {number}
  */
@@ -59,6 +89,13 @@ const loanQueue: ServerPart_auxiliaryStatus = ServerPart_auxiliaryStatus_loanQue
 
 /**
  * @summary ServerPart_auxiliaryStatus_forwarded
+ * @description
+ * 
+ * Auxiliary status `forwarded`. EXT.1.4 does not define this value beyond
+ * the name.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -67,6 +104,11 @@ const ServerPart_auxiliaryStatus_forwarded: ServerPart_auxiliaryStatus = 3; /* L
 
 /**
  * @summary ServerPart_auxiliaryStatus_forwarded
+ * @description
+ * 
+ * Auxiliary status `forwarded` (EXT.1.4). The standard does not define it
+ * beyond the name.
+ * 
  * @constant
  * @type {number}
  */
@@ -75,6 +117,13 @@ const forwarded: ServerPart_auxiliaryStatus = ServerPart_auxiliaryStatus_forward
 
 /**
  * @summary ServerPart_auxiliaryStatus_unfilledCopyright
+ * @description
+ * 
+ * Auxiliary status `unfilledCopyright`. EXT.1.4 does not define this value
+ * beyond the name.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -83,6 +132,11 @@ const ServerPart_auxiliaryStatus_unfilledCopyright: ServerPart_auxiliaryStatus =
 
 /**
  * @summary ServerPart_auxiliaryStatus_unfilledCopyright
+ * @description
+ * 
+ * Auxiliary status `unfilledCopyright` (EXT.1.4). The standard does not
+ * define it beyond the name.
+ * 
  * @constant
  * @type {number}
  */
@@ -91,6 +145,13 @@ const unfilledCopyright: ServerPart_auxiliaryStatus = ServerPart_auxiliaryStatus
 
 /**
  * @summary ServerPart_auxiliaryStatus_filledCopyright
+ * @description
+ * 
+ * Auxiliary status `filledCopyright`. EXT.1.4 does not define this value
+ * beyond the name.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -99,6 +160,11 @@ const ServerPart_auxiliaryStatus_filledCopyright: ServerPart_auxiliaryStatus = 5
 
 /**
  * @summary ServerPart_auxiliaryStatus_filledCopyright
+ * @description
+ * 
+ * Auxiliary status `filledCopyright` (EXT.1.4). The standard does not
+ * define it beyond the name.
+ * 
  * @constant
  * @type {number}
  */

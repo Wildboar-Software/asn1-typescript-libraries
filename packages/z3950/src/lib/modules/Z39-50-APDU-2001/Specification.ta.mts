@@ -13,6 +13,12 @@ import { Specification_elementSpec, _decode_Specification_elementSpec, _encode_S
  * @summary Specification
  * @description
  * 
+ * Schema and element specification used to form an abstract database record
+ * (ANSI/NISO Z39.50-2003 §3.6). The server then applies a record syntax to
+ * produce a retrieval record (Appendix RET). As a sort key, the element
+ * specification or element set name should resolve to a single element; several
+ * elements leave the key undefined (§3.2.7.1.3, §4.1 comment 12).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +41,26 @@ export
 class Specification {
     /**
      * @summary `schema`.
+     * @description
+     * 
+     * Schema that defines the abstract record structure. If it is omitted, the
+     * server uses the default schema for the database (ANSI/NISO Z39.50-2003
+     * §3.6.1). A string identifier is allowed only when option bit 21 is
+     * negotiated (§3.2.1.1.3).
+     * 
      * @public
      * @readonly
      */
     readonly schema: OPTIONAL<Specification_schema>;
     /**
      * @summary `elementSpec`.
+     * @description
+     * 
+     * Element set name or externally defined element specification, applied
+     * after the abstract record structure (ANSI/NISO Z39.50-2003 §3.6.1). The
+     * standard does not say which specification the server uses when this is
+     * omitted and a schema is present.
+     * 
      * @public
      * @readonly
      */

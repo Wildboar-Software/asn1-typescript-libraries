@@ -16,6 +16,28 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary DiagFormat_sort
  * @description
  * 
+ * Sort failure (diag-1).
+ * 
+ * - sequence: cannot sort according to the sequence (DIAG.1 condition 207).
+ *   Addinfo is the sequence.
+ * - noRsName: no result set name was supplied (condition 208).
+ * - tooMany: too many input result sets (condition 230). The value is the
+ *   maximum.
+ * - incompatible: record formats cannot be sorted together (condition 231).
+ * - generic: generic sort is not supported; only database-specific sort is
+ *   (condition 209).
+ * - dbSpecific: database-specific sort is not supported (condition 210).
+ * - sortElement: a sort element was rejected. The diag-1 comment does not say
+ *   why.
+ * - key: too many sort keys, or a duplicate key (conditions 211 and 212).
+ * - action: the missing-data action is unsupported (condition 213).
+ * - illegal: the relation, case value, missing-data action, or sort is illegal
+ *   (conditions 214, 215, 216, and 237).
+ * - inputTooLarge: one or more named input result sets are too large to sort.
+ *   DIAG.1 has no condition with this wording.
+ * - aggregateTooLarge: the aggregate result set is too large. DIAG.1 has no
+ *   condition with this wording.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

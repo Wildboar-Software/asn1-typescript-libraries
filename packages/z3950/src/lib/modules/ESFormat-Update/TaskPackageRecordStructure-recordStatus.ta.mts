@@ -10,6 +10,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TaskPackageRecordStructure_recordStatus
  * @description
  * 
+ * Status of the update of one record. A client can poll the task package
+ * and watch these change. `queued` is the initial value. The server may
+ * set `inProcess` and may skip either `queued` or `inProcess`. The ending
+ * value is `success` or `failure`, and it should not change after that.
+ * When task status is pending, all are `queued`. When task status is
+ * complete or aborted, none should be `queued`.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.1.5.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +35,14 @@ type TaskPackageRecordStructure_recordStatus = INTEGER;
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_success
+ * @description
+ * 
+ * This record was updated successfully. Once set, the status should not
+ * change. Include the record in the per-record structure when an
+ * element-set name was supplied.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.1.5.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -34,6 +51,10 @@ const TaskPackageRecordStructure_recordStatus_success: TaskPackageRecordStructur
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_success
+ * @description
+ * 
+ * This record was updated successfully (EXT.1.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -42,6 +63,14 @@ const success: TaskPackageRecordStructure_recordStatus = TaskPackageRecordStruct
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_queued
+ * @description
+ * 
+ * This record is queued for update, or the update is already in process if
+ * the server does not distinguish that case. Initial status. When task
+ * status is pending, every record is queued.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.1.5.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -50,6 +79,10 @@ const TaskPackageRecordStructure_recordStatus_queued: TaskPackageRecordStructure
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_queued
+ * @description
+ * 
+ * Queued for update, or in process if undistinguished (EXT.1.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -58,6 +91,14 @@ const queued: TaskPackageRecordStructure_recordStatus = TaskPackageRecordStructu
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_inProcess
+ * @description
+ * 
+ * The update of this record is in process. The server may skip this
+ * status, and may use `queued` instead when it does not distinguish the
+ * two.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.1.5.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -66,6 +107,10 @@ const TaskPackageRecordStructure_recordStatus_inProcess: TaskPackageRecordStruct
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_inProcess
+ * @description
+ * 
+ * Update of this record is in process (EXT.1.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -74,6 +119,13 @@ const inProcess: TaskPackageRecordStructure_recordStatus = TaskPackageRecordStru
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_failure
+ * @description
+ * 
+ * The update of this record failed. A surrogate diagnostic should be
+ * supplied instead of the record. Once set, the status should not change.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.5, EXT.1.5.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -82,6 +134,10 @@ const TaskPackageRecordStructure_recordStatus_failure: TaskPackageRecordStructur
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_failure
+ * @description
+ * 
+ * Update of this record failed; supply a surrogate diagnostic (EXT.1.5).
+ * 
  * @constant
  * @type {number}
  */

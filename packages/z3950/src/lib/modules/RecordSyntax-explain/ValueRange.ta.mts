@@ -11,6 +11,9 @@ import { ValueDescription, _decode_ValueDescription, _encode_ValueDescription } 
 /**
  * @summary ValueRange
  * @description
+ * Inclusive bounds of a variant value. At least one bound is required; both may
+ * be supplied. An object identifier or a unit alone cannot be used as a bound.
+ * ANSI/NISO Z39.50-2003 Explain ASN.1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -28,12 +31,18 @@ export
 class ValueRange {
     /**
      * @summary `lower`.
+     * @description
+     * Lower bound. Optional only when the upper bound is present. At least one
+     * of the two bounds is required. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */
     readonly lower: OPTIONAL<ValueDescription>;
     /**
      * @summary `upper`.
+     * @description
+     * Upper bound. Optional only when the lower bound is present. At least one
+     * of the two bounds is required. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */

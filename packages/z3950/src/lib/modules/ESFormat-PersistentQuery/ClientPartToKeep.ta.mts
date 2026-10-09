@@ -13,6 +13,11 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * @summary ClientPartToKeep
  * @description
  * 
+ * Optional database list and additional search information saved with a
+ * persistent query. The query itself is not in this part.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.2, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,28 @@ export
 class ClientPartToKeep {
     /**
      * @summary `dbNames`.
+     * @description
+     * 
+     * Optional list of databases to save with the query.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.2.
+     * 
      * @public
      * @readonly
      */
     readonly dbNames: OPTIONAL<InternationalString[]>;
     /**
      * @summary `additionalSearchInfo`.
+     * @description
+     * 
+     * Optional additional search information saved with the query. On Search,
+     * the client uses this to indicate preferred format or content and the
+     * server uses it for by-products of the search (for example intermediate
+     * result counts). Version 3 only. The persistent-query definition does not
+     * add rules beyond that.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.2, §3.2.2.1.12.
+     * 
      * @public
      * @readonly
      */

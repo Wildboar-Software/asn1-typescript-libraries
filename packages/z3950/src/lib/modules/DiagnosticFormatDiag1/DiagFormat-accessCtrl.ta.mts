@@ -13,6 +13,21 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagFormat_accessCtrl
  * @description
  * 
+ * Access-control challenge failure (diag-1). DIAG.1 does not assign these
+ * alternatives their own condition numbers. The diag-1 comments are:
+ * 
+ * - noUser: no user to display the challenge to.
+ * - refused: the user refused the access-control information.
+ * - simple: only the simple form is supported; the server used an externally
+ *   defined form.
+ * - oid: an OID is not supported. The client supplies suggested alternative
+ *   OIDs.
+ * - alternative: the client insists on a different challenge, for example
+ *   stronger authentication or stronger access control, and supplies suggested
+ *   OIDs.
+ * - pwdInv: password invalid.
+ * - pwdExp: password expired.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

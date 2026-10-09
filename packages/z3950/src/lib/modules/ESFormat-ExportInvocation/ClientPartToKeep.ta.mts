@@ -13,6 +13,11 @@ import { ClientPartToKeep_exportSpec, _decode_ClientPartToKeep_exportSpec, _enco
  * @summary ClientPartToKeep
  * @description
  * 
+ * Client parameters of Export Invocation that are kept in the task
+ * package: which export specification to run, and how many copies.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.7, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +36,25 @@ export
 class ClientPartToKeep {
     /**
      * @summary `exportSpec`.
+     * @description
+     * 
+     * The package name, or the actual contents, of an export specification
+     * (one established by Export Specification, or supplied inline).
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.6, EXT.1.7.
+     * 
      * @public
      * @readonly
      */
     readonly exportSpec: ClientPartToKeep_exportSpec;
     /**
      * @summary `numberOfCopies`.
+     * @description
+     * 
+     * How many copies the client requests.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.7.
+     * 
      * @public
      * @readonly
      */

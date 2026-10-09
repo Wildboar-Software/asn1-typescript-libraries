@@ -13,6 +13,17 @@ import { TermListInfo_termLists_Item, _decode_TermListInfo_termLists_Item, _enco
 /**
  * @summary TermListInfo
  * @description
+ * Term lists supported for one database. There is one Explain record per
+ * database. Each listed term list has a TermListDetails record. ANSI/NISO
+ * Z39.50-2003 §3.2.10.3.7.
+ * 
+ * Search with ExplainCategory `TermListInfo` and DatabaseName (Appendix ATR,
+ * table 2; §3.2.10.1.1). The search may also use HumanStringLanguage,
+ * DateAdded, DateChanged, or DateExpires. ANSI/NISO Z39.50-2003 §3.2.10.1.2
+ * and §3.2.10.1.3.
+ * 
+ * There are no non-brief elements, so element sets `B` and `F` return the
+ * same information. ANSI/NISO Z39.50-2003 ASN.1 comment 1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -51,18 +62,30 @@ export
 class TermListInfo {
     /**
      * @summary `commonInfo`.
+     * @description
+     * Dates this Explain record was added and last changed, when it expires,
+     * and the language of its human-readable text. Element set `B` includes
+     * this component except `otherInfo`. DateAdded, DateChanged, and
+     * DateExpires search these dates. ANSI/NISO Z39.50-2003 §3.2.10.3,
+     * §3.2.10.1.3; ASN.1 comment 1.
      * @public
      * @readonly
      */
     readonly commonInfo: OPTIONAL<CommonInfo>;
     /**
      * @summary `databaseName`.
+     * @description
+     * Full database name. Only one. Key, searched with DatabaseName. Brief.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.7.
      * @public
      * @readonly
      */
     readonly databaseName: DatabaseName;
     /**
      * @summary `termLists`.
+     * @description
+     * Summary of each term list associated with this database. Brief. There is
+     * a TermListDetails record for each. ANSI/NISO Z39.50-2003 §3.2.10.3.7.
      * @public
      * @readonly
      */

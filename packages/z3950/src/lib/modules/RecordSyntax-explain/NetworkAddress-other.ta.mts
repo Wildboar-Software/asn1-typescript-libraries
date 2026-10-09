@@ -11,6 +11,9 @@ import { InternationalString, _decode_InternationalString, _encode_International
 /**
  * @summary NetworkAddress_other
  * @description
+ * A server address that is neither the Internet host-and-port form nor the
+ * deprecated alternative. The standard does not define the vocabulary of
+ * address kinds. ANSI/NISO Z39.50-2003 Explain ASN.1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -27,12 +30,18 @@ export
 class NetworkAddress_other {
     /**
      * @summary `type_`.
+     * @description
+     * Kind of address. The standard does not define the allowed values.
+     * ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */
     readonly type_: InternationalString;
     /**
      * @summary `address`.
+     * @description
+     * The address, in the form named alongside it. The standard does not define
+     * that form. ANSI/NISO Z39.50-2003 Explain ASN.1.
      * @public
      * @readonly
      */

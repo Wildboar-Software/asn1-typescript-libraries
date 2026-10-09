@@ -12,6 +12,11 @@ import { Occurrences_values, _decode_Occurrences_values, _encode_Occurrences_val
  * @summary Occurrences
  * @description
  * 
+ * Which occurrences to return (ANSI/NISO Z39.50-2003, RET.3.1.1.2, ASN1.13).
+ * `all` means every match. `last` means the last occurrence, for when the
+ * client does not know the count. `values` is a start and an optional count. If
+ * the occurrence is omitted entirely, the first is requested.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

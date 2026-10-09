@@ -1,3 +1,9 @@
+/**
+ * @module
+ * @description
+ * Resource-report format resource-2 `{Z39-50-resourceReport 2}` (ANSI/NISO
+ * Z39.50-2003 appendix RSC, ASN1.8).
+ */
 export {
     Estimate,
     _root_component_type_list_1_spec_for_Estimate,

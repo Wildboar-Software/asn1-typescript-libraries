@@ -13,6 +13,14 @@ import { HoldingsRecord, _decode_HoldingsRecord, _encode_HoldingsRecord } from "
  * @summary OPACRecord
  * @description
  * 
+ * OPAC record (module OID `{z39-50-recordSyntax opac(102)}`,
+ * `1.2.840.10003.5.102`).
+ * 
+ * ANSI/NISO Z39.50-2003 removed OPAC and Summary from Appendix REC and does not
+ * define this syntax. The only OPAC sentence left is an example of nested GRS-1
+ * records (a bibliographic record, holdings, and circulation) under tagSet-M,
+ * which is not a definition of this type (RET.3.4.1.2.5).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +36,20 @@ export
 class OPACRecord {
     /**
      * @summary `bibliographicRecord`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */
     readonly bibliographicRecord: OPTIONAL<EXTERNAL>;
     /**
      * @summary `holdingsData`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
      * @public
      * @readonly
      */

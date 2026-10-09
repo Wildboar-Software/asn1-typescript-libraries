@@ -1,3 +1,22 @@
+/**
+ * @module
+ * @description
+ * ASN.1 module for element specification format eSpec-2 (ANSI/NISO Z39.50-2003,
+ * ESP.1, RET.3.1, ASN1.13).
+ * 
+ * Object identifier `{Z39-50-elementSpec eSpec-2(2)}` on arc `{Z39-50 11}`
+ * (`1.2.840.10003.11.2`). In version 3 the client sends it inside `compSpec`
+ * (§3.6.1). An element set name, including `F` (full) and `B` (brief), is the
+ * other way to select elements, and the only way on a Search or when `compSpec`
+ * is omitted (§3.6.2). Version 2 allows only an element set name.
+ * 
+ * eSpec-2 is a compatible extension of eSpec-1 (`1.2.840.10003.11.1`): the
+ * addition is `schemaId` on a tag. Servers should accept an eSpec-1 OID as
+ * eSpec-2. Tag paths name elements by tag type, tag value, and occurrence, and
+ * may use `wildThing` or `wildPath`. A variant request on a simple element
+ * selects the form of that element (Appendix VAR).
+ */
+
 export type {
     ElementRequest_compositeElement_elementList,
 } from "./ElementRequest-compositeElement-elementList.ta.mjs";

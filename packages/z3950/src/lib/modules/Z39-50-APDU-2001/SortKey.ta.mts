@@ -13,6 +13,12 @@ import { SortKey_sortAttributes, _decode_SortKey_sortAttributes, _encode_SortKey
  * @summary SortKey
  * @description
  * 
+ * One sort key, in one of three forms (ANSI/NISO Z39.50-2003 §3.2.7.1.3, §4.1
+ * comment 12). `privateSortKey` is a string whose meaning is a prior agreement,
+ * not a schema field and not an attribute. `elementSpec` is a retrieval element
+ * and should resolve to a single element. `sortAttributes` is a search access
+ * point and should likewise resolve to a single access point.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

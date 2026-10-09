@@ -12,7 +12,15 @@ import { NamePlusRecord_record, _decode_NamePlusRecord_record, _encode_NamePlusR
 /**
  * @summary NamePlusRecord
  * @description
- * 
+ *
+ * One response record in a Search response, Present response, or
+ * Segment, optionally tagged with its database. The database name
+ * must accompany the first response record or starting fragment of
+ * the first segment, and any record or starting fragment from a
+ * database different from its immediate predecessor. The name need
+ * not be one of the databases listed on the Search that created the
+ * result set. §3.2.2.1.7, §3.2.3.1.8, §3.2.3.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +44,28 @@ export
 class NamePlusRecord {
     /**
      * @summary `name`.
+     * @description
+     *
+     * Database in which this record resides. Required on the first
+     * record or starting fragment of the aggregate response, and on
+     * any record or starting fragment whose database differs from the
+     * previous one. Otherwise optional. Case-insensitive.
+     * §3.2.2.1.7, §3.2.3.1.8.
+     *
      * @public
      * @readonly
      */
     readonly name: OPTIONAL<DatabaseName>;
     /**
      * @summary `record`.
+     * @description
+     *
+     * Retrieval record or surrogate diagnostic. Unless level-2
+     * segmentation is in effect, one of those two must be chosen.
+     * Under level 2, a starting, intermediate, or final fragment may
+     * be used instead. A diagnostic record is not segmented.
+     * §3.2.3.2.1, §3.3.3.1.
+     *
      * @public
      * @readonly
      */

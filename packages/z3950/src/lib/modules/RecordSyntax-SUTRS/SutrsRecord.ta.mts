@@ -10,6 +10,22 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * @summary SutrsRecord
  * @description
  * 
+ * Simple Unstructured Text Record Syntax (ANSI/NISO Z39.50-2003, REC.2,
+ * ASN1.5). Record-syntax OID `{Z39-50-recordSyntax sutrs(101)}`
+ * (`1.2.840.10003.5.101`). The server applies this syntax after the schema
+ * and the element specification (§3.6.3).
+ * 
+ * The record is one string of text, for display with little or no parsing.
+ * Elements inside the text are not identified. End each line with ASCII LF
+ * (`X'0A'`). Prefer lines of at most 72 characters unless a variant request
+ * asks for another maximum. That limit is a best effort, not a hard cap
+ * (REC.2).
+ * 
+ * Read this InternationalString as GeneralString (ASN1.5 comment 1). Under
+ * version 2 the characters must still be from the VisibleString repertoire,
+ * even though the tag remains GeneralString. A value that is valid for version
+ * 3 may be invalid for version 2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,11 @@ import { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNot
  * @summary ItemOrder_esRequest
  * @description
  * 
+ * Client parameters of an Item Order request. The requested item is not
+ * retained as submitted; description, contact, and billing are.
+ * 
+ * ANSI/NISO Z39.50-2003 EXT.1.4, EXT.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,27 @@ export
 class ItemOrder_esRequest {
     /**
      * @summary `toKeep`.
+     * @description
+     * 
+     * Optional supplemental description, contact person, and billing. Retained
+     * in the task package. Omitted when the client supplies none of them.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly toKeep: OPTIONAL<ClientPartToKeep>;
     /**
      * @summary `notToKeep`.
+     * @description
+     * 
+     * The requested item. At least one of a result-set entry and an external
+     * item request must be supplied, and both may be. Not retained as the
+     * client sent it; see the server part for what the package stores.
+     * 
+     * ANSI/NISO Z39.50-2003 EXT.1.4.
+     * 
      * @public
      * @readonly
      */

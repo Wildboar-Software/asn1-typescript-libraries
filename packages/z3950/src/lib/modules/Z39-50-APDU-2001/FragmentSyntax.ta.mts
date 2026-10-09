@@ -11,7 +11,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FragmentSyntax
  * @description
- * 
+ *
+ * One fragment of a retrieval record under level-2 segmentation. A
+ * fragment is a proper substring of the record, treated as a string
+ * of bytes. The concatenation of the fragments from one segmentation
+ * of a record, excluding protocol control information, equals the
+ * record. The client cannot predict where the server will split.
+ * Diagnostic records are not fragmented. `externallyTagged` carries
+ * the fragment as an `EXTERNAL`; `notExternallyTagged` carries it as
+ * octets. The standard does not say when to choose one alternative
+ * over the other. §3.3.3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

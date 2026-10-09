@@ -12,6 +12,11 @@ import { RPNStructure_rpnRpnOp, _decode_RPNStructure_rpnRpnOp, _encode_RPNStruct
  * @summary RPNStructure
  * @description
  * 
+ * One node of a type-1 or type-101 query tree (ANSI/NISO Z39.50-2003 §3.7.1).
+ * `op` is a simple operand, a leaf. `rpnRpnOp` is a complex operand: the left
+ * subtree, the right subtree, and the operator, in the post-order the client
+ * sends.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

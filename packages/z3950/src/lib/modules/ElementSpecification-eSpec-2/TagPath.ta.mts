@@ -10,6 +10,11 @@ import { TagPath_Item, _decode_TagPath_Item, _encode_TagPath_Item } from "../Ele
  * @summary TagPath
  * @description
  * 
+ * Path from the root of the abstract record to the requested node (ANSI/NISO
+ * Z39.50-2003, RET.3.1.1, ASN1.13). Each step is a specific tag, `wildThing`,
+ * or `wildPath`. `wildPath` must not be last. A path that ends on a non-leaf
+ * requests the whole subtree.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

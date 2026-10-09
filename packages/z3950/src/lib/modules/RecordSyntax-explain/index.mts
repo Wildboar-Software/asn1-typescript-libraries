@@ -1,3 +1,13 @@
+/**
+ * @module
+ * @description
+ * Explain record syntax (REC.1), ANSI/NISO Z39.50-2003 §3.2.10.
+ *
+ * Object identifier `{z39-50-recordSyntax explain(100)}`. Servers that
+ * support Explain provide the database IR-Explain-1, searched with
+ * attribute set exp-1, and return these records in this syntax.
+ */
+
 export {
     AccessInfo,
     _root_component_type_list_1_spec_for_AccessInfo,

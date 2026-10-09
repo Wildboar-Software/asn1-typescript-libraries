@@ -13,6 +13,9 @@ import { AttributeCombination, _decode_AttributeCombination, _encode_AttributeCo
  * @summary AttributeCombinations
  * @description
  * 
+ * Attribute combinations supported for a database, or the combination
+ * corresponding to a term list. REC.1; ANSI/NISO Z39.50-2003 §3.2.10.3.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +33,18 @@ export
 class AttributeCombinations {
     /**
      * @summary `defaultAttributeSet`.
+     * @description
+     * Default attribute set for these combinations. Probably a good choice as
+     * the default on searches, but that is not required. REC.1.
      * @public
      * @readonly
      */
     readonly defaultAttributeSet: AttributeSetId;
     /**
      * @summary `legalCombinations`.
+     * @description
+     * Patterns of legal attribute combinations. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.9.
      * @public
      * @readonly
      */

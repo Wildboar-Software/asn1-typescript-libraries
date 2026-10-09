@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ExtendedServicesResponse_operationStatus
  * @description
  * 
+ * Status of the ES operation, as distinct from task status inside the package
+ * (ANSI/NISO Z39.50-2003 §3.2.9.1.15, §3.2.9.5).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +28,11 @@ type ExtendedServicesResponse_operationStatus = INTEGER;
 
 /**
  * @summary ExtendedServicesResponse_operationStatus_done
+ * @description
+ * 
+ * The request was accepted, the task is complete, and the results are in the
+ * task package (ANSI/NISO Z39.50-2003 §3.2.9.1.15).
+ * 
  * @constant
  * @type {number}
  */
@@ -33,6 +41,11 @@ const ExtendedServicesResponse_operationStatus_done: ExtendedServicesResponse_op
 
 /**
  * @summary ExtendedServicesResponse_operationStatus_done
+ * @description
+ * 
+ * Short name for `ExtendedServicesResponse_operationStatus_done`. Task
+ * complete; package included (§3.2.9.1.15).
+ * 
  * @constant
  * @type {number}
  */
@@ -41,6 +54,12 @@ const done: ExtendedServicesResponse_operationStatus = ExtendedServicesResponse_
 
 /**
  * @summary ExtendedServicesResponse_operationStatus_accepted
+ * @description
+ * 
+ * The request was accepted and the task is queued or in process. This
+ * corresponds to task status pending or active (ANSI/NISO Z39.50-2003
+ * §3.2.9.1.15, §3.2.9.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -49,6 +68,11 @@ const ExtendedServicesResponse_operationStatus_accepted: ExtendedServicesRespons
 
 /**
  * @summary ExtendedServicesResponse_operationStatus_accepted
+ * @description
+ * 
+ * Short name for `ExtendedServicesResponse_operationStatus_accepted`. Task
+ * queued or running (§3.2.9.1.15).
+ * 
  * @constant
  * @type {number}
  */
@@ -57,6 +81,12 @@ const accepted: ExtendedServicesResponse_operationStatus = ExtendedServicesRespo
 
 /**
  * @summary ExtendedServicesResponse_operationStatus_failure
+ * @description
+ * 
+ * The request was refused. One or more diagnostics are supplied. The package
+ * may never have been created because the request failed preliminary inspection
+ * (ANSI/NISO Z39.50-2003 §3.2.9.1.15, §3.2.9.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -65,6 +95,11 @@ const ExtendedServicesResponse_operationStatus_failure: ExtendedServicesResponse
 
 /**
  * @summary ExtendedServicesResponse_operationStatus_failure
+ * @description
+ * 
+ * Short name for `ExtendedServicesResponse_operationStatus_failure`. Request
+ * refused, with diagnostics (§3.2.9.1.15).
+ * 
  * @constant
  * @type {number}
  */

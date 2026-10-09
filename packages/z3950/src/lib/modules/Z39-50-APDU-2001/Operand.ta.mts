@@ -13,6 +13,26 @@ import { ResultSetPlusAttributes, _decode_ResultSetPlusAttributes, _encode_Resul
  * @summary Operand
  * @description
  * 
+ * Simple operand, a leaf of a type-1 or type-101 query. Each operand represents
+ * a set of database records (ANSI/NISO Z39.50-2003 §3.7.1).
+ * 
+ * `attrTerm` is an attribute list plus a term, evaluated against the databases
+ * named in the Search request.
+ * 
+ * `resultSet` is the set of records identified by that transient result set.
+ * Those records stay in the result even when they belong to a database that
+ * this Search does not name (§3.7.1).
+ * 
+ * `resultAttr` restricts a result set by an attribute list (§3.7.3). The server
+ * must support the extended result set model for restriction; otherwise the
+ * query is in error. This standard does not prescribe how the server stores the
+ * surrogate of the search that created the set (Appendix ERS).
+ * 
+ * When version 2 is in force, a type-1 query uses `attrTerm` or `resultSet`.
+ * `resultAttr` is allowed in version 2 only on a type-101 query. In version 3
+ * it may occur in a type-1 query. A version-2 type-1 query that includes it may
+ * be treated as a protocol error (§3.7, §4.4.2.2.3).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
