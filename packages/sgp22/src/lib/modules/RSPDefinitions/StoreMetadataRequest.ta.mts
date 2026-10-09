@@ -256,7 +256,7 @@ class StoreMetadataRequest {
      * @static
      * @method
      */
-    public static get _default_value_for_profileClass () { return operational; }
+    public static get _default_value_for_profileClass (): ProfileClass { return operational; }
 }
 
 /**
