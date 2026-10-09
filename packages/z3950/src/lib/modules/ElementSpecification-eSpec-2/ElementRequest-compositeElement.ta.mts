@@ -20,7 +20,18 @@ import { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-gener
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ElementRequest-compositeElement ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ElementRequest-compositeElement ::= SEQUENCE {
+ *     elementList [1] CHOICE {
+ *         primitives [1] IMPLICIT SEQUENCE OF InternationalString,
+ *         -- Client may specify one or more element set names,
+ *         -- each identifying a set of elements, and the composite element is the union
+ *         specs [2] IMPLICIT SEQUENCE OF SimpleElement
+ *     },
+ *     deliveryTag [2] IMPLICIT TagPath,
+ *     -- DeliveryTag tagPath for compositeElement
+ *     -- may not include wildThing or wildPath
+ *     variantRequest [3] IMPLICIT Variant OPTIONAL
+ * }
  * ```
  * 
  * @class

@@ -24,7 +24,34 @@ import { Challenge_Item_dataType, _decode_Challenge_Item_dataType, _encode_Chall
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Challenge-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Challenge-Item ::= SEQUENCE {
+ *     promptId [1] PromptId,
+ *     -- See comment 1
+ *     defaultResponse [2] IMPLICIT InternationalString OPTIONAL,
+ *     promptInfo [3] CHOICE {
+ *         character [1] IMPLICIT InternationalString,
+ *         encrypted [2] IMPLICIT Encryption
+ *     } OPTIONAL,
+ *     -- See comment 2
+ *     regExpr [4] IMPLICIT InternationalString OPTIONAL,
+ *     -- See comment 3
+ *     responseRequired [5] IMPLICIT NULL OPTIONAL,
+ *     allowedValues [6] IMPLICIT SEQUENCE OF InternationalString OPTIONAL,
+ *     --e.g. promptId="Desired color"; allowed = 'red', 'blue','Green'
+ *     shouldSave [7] IMPLICIT NULL OPTIONAL,
+ *     -- See comment 4
+ *     dataType [8] IMPLICIT INTEGER {
+ *         integer (1),
+ *         date (2),
+ *         float (3),
+ *         alphaNumeric (4),
+ *         url-urn (5),
+ *         boolean (6)
+ *     } OPTIONAL,
+ *     -- See comment 5
+ *     diagnostic [9] IMPLICIT EXTERNAL OPTIONAL  -- Intended for repeat requests when there is an error
+ *     -- the client should report to the user from previous attempt.
+ * }
  * ```
  * 
  * @class

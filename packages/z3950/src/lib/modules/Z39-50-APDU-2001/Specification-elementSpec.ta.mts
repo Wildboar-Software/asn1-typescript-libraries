@@ -16,7 +16,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Specification-elementSpec ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Specification-elementSpec ::= CHOICE {
+ *     elementSetName [1] IMPLICIT InternationalString,
+ *     externalEspec [2] IMPLICIT EXTERNAL
+ * }
  * ```
  */
 export

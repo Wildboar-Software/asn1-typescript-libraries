@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SortKeySpec-caseSensitivity ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * SortKeySpec-caseSensitivity ::= INTEGER {
+ *     caseSensitive (0),
+ *     caseInsensitive (1)
+ * }
  * ```
  */
 export

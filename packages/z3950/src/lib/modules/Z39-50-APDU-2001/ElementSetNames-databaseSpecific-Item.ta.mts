@@ -18,7 +18,10 @@ import { ElementSetName, _decode_ElementSetName, _encode_ElementSetName } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ElementSetNames-databaseSpecific-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ElementSetNames-databaseSpecific-Item ::= SEQUENCE {
+ *     dbName DatabaseName,
+ *     esn ElementSetName
+ * }
  * ```
  * 
  * @class

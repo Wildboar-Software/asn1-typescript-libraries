@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DeleteResultSetRequest-deleteFunction ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DeleteResultSetRequest-deleteFunction ::= INTEGER {
+ *     list (0),
+ *     all (1)
+ * }
  * ```
  */
 export

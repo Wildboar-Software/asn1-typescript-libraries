@@ -16,7 +16,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Specification-schema ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Specification-schema ::= CHOICE {
+ *     oid [1] IMPLICIT OBJECT IDENTIFIER,
+ *     uri [300] IMPLICIT InternationalString  -- only if option bit 21 has been negotiated
+ * }
  * ```
  */
 export

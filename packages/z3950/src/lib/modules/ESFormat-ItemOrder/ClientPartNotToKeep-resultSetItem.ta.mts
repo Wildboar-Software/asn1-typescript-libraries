@@ -17,7 +17,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ClientPartNotToKeep-resultSetItem ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ClientPartNotToKeep-resultSetItem ::= SEQUENCE {
+ *     resultSetId [1] IMPLICIT InternationalString,
+ *     item [2] IMPLICIT INTEGER
+ * }
  * ```
  * 
  * @class

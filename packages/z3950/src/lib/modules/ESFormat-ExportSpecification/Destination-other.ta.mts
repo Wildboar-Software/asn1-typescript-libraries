@@ -16,7 +16,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Destination-other ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Destination-other ::= SEQUENCE {
+ *     vehicle [1] IMPLICIT InternationalString OPTIONAL,
+ *     destination [2] IMPLICIT InternationalString
+ * }
  * ```
  * 
  * @class

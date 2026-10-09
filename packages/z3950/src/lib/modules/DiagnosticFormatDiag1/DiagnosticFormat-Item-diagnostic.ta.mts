@@ -17,7 +17,10 @@ import { DiagFormat, _decode_DiagFormat, _encode_DiagFormat } from "../Diagnosti
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagnosticFormat-Item-diagnostic ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagnosticFormat-Item-diagnostic ::= CHOICE {
+ *     defaultDiagRec [1] IMPLICIT DefaultDiagFormat,
+ *     explicitDiagnostic [2] DiagFormat
+ * }
  * ```
  */
 export

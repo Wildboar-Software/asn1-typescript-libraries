@@ -18,7 +18,13 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagnosticFormat-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagnosticFormat-Item ::= SEQUENCE {
+ *     diagnostic [1] CHOICE {
+ *         defaultDiagRec [1] IMPLICIT DefaultDiagFormat,
+ *         explicitDiagnostic [2] DiagFormat
+ *     } OPTIONAL,
+ *     message [2] IMPLICIT InternationalString OPTIONAL
+ * }
  * ```
  * 
  * @class

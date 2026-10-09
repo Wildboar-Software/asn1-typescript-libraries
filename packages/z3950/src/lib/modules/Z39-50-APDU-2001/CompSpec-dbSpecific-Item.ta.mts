@@ -18,7 +18,10 @@ import { Specification, _decode_Specification, _encode_Specification } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CompSpec-dbSpecific-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CompSpec-dbSpecific-Item ::= SEQUENCE {
+ *     db [1] DatabaseName,
+ *     spec [2] IMPLICIT Specification
+ * }
  * ```
  * 
  * @class

@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-dbUnavail-why-reasonCode ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-dbUnavail-why-reasonCode ::= INTEGER {
+ *     doesNotExist (0),
+ *     existsButUnavail (1),
+ *     locked (2),
+ *     accessDenied (3)
+ * }
  * ```
  */
 export

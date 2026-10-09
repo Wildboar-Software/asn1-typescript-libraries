@@ -17,7 +17,10 @@ import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AttributeElement-attributeValue-complex ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * AttributeElement-attributeValue-complex ::= SEQUENCE {
+ *     list [1] IMPLICIT SEQUENCE OF StringOrNumeric,
+ *     semanticAction [2] IMPLICIT SEQUENCE OF INTEGER OPTIONAL
+ * }  -- See comment 10.
  * ```
  * 
  * @class

@@ -19,7 +19,18 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AccessRestrictions-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * AccessRestrictions-Item ::= SEQUENCE {
+ *     accessType [0] INTEGER {
+ *         any (0),
+ *         search (1),
+ *         present (2),
+ *         specific-elements (3),
+ *         extended-services (4),
+ *         by-database (5)
+ *     },
+ *     accessText [1] IMPLICIT HumanString OPTIONAL,
+ *     accessChallenges [2] IMPLICIT SEQUENCE OF OBJECT IDENTIFIER OPTIONAL
+ * }
  * ```
  * 
  * @class

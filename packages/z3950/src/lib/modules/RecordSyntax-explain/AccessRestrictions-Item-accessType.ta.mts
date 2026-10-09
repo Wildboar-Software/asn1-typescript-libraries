@@ -14,7 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AccessRestrictions-Item-accessType ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * AccessRestrictions-Item-accessType ::= INTEGER {
+ *     any (0),
+ *     search (1),
+ *     present (2),
+ *     specific-elements (3),
+ *     extended-services (4),
+ *     by-database (5)
+ * }
  * ```
  */
 export

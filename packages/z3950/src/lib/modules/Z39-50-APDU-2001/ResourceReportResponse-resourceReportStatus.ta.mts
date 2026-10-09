@@ -14,7 +14,16 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ResourceReportResponse-resourceReportStatus ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ResourceReportResponse-resourceReportStatus ::= INTEGER {
+ *     success (0),
+ *     partial (1),
+ *     failure-1 (2),
+ *     failure-2 (3),
+ *     failure-3 (4),
+ *     failure-4 (5),
+ *     failure-5 (6),
+ *     failure-6 (7)
+ * }
  * ```
  */
 export

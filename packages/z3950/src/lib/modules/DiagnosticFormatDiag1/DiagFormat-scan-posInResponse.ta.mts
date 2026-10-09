@@ -14,7 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-scan-posInResponse ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-scan-posInResponse ::= INTEGER {
+ *     -- value of positionIn-
+ *     -- Response not supported
+ *     mustBeOne (1),
+ *     mustBePositive (2),
+ *     mustBeNonNegative (3),
+ *     other (4)
+ * }
  * ```
  */
 export

@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ClientPartNotToKeep-replaceOrAppend ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ClientPartNotToKeep-replaceOrAppend ::= INTEGER {
+ *     -- Only if function is "modify"
+ *     replace (1),
+ *     append (2)
+ * }
  * ```
  */
 export

@@ -14,7 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PromptId-enummeratedPrompt-type ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * PromptId-enummeratedPrompt-type ::= INTEGER {
+ *     groupId (0),
+ *     userId (1),
+ *     password (2),
+ *     newPassword (3),
+ *     copyright (4),
+ *     -- See comment 7
+ *     sessionId (5)
+ * }
  * ```
  */
 export

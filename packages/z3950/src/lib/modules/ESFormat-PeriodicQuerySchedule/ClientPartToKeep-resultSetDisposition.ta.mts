@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ClientPartToKeep-resultSetDisposition ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ClientPartToKeep-resultSetDisposition ::= INTEGER {
+ *     replace (1),
+ *     append (2),
+ *     createNew (3)  -- Only if client and server have agreement about naming
+ *     -- convention for the resulting package,
+ *     -- and only if no result set is specified
+ * }
  * ```
  */
 export

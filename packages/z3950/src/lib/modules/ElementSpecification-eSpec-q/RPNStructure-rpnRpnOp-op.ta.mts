@@ -15,7 +15,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RPNStructure-rpnRpnOp-op ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RPNStructure-rpnRpnOp-op ::= CHOICE {
+ *     and [0] IMPLICIT NULL,
+ *     or [1] IMPLICIT NULL,
+ *     and-not [2] IMPLICIT NULL
+ * }
  * ```
  */
 export

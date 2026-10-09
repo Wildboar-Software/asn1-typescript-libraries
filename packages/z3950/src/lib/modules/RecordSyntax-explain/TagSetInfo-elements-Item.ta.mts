@@ -24,7 +24,16 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TagSetInfo-elements-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TagSetInfo-elements-Item ::= SEQUENCE {
+ *     elementname [1] IMPLICIT InternationalString,
+ *     nicknames [2] IMPLICIT SEQUENCE OF InternationalString OPTIONAL,
+ *     elementTag [3] StringOrNumeric,
+ *     description [4] IMPLICIT HumanString OPTIONAL,
+ *     dataType [5] PrimitiveDataType OPTIONAL,
+ *     -- If the data type is expected to be structured,
+ *     -- that is described in the schema info, and datatype is omitted here.
+ *     otherTagInfo OtherInformation OPTIONAL
+ * }
  * ```
  * 
  * @class

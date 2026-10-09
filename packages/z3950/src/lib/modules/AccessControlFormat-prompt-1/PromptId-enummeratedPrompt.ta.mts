@@ -18,7 +18,18 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PromptId-enummeratedPrompt ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PromptId-enummeratedPrompt ::= SEQUENCE {
+ *     type [1] IMPLICIT INTEGER {
+ *         groupId (0),
+ *         userId (1),
+ *         password (2),
+ *         newPassword (3),
+ *         copyright (4),
+ *         -- See comment 7
+ *         sessionId (5)
+ *     },
+ *     suggestedString [2] IMPLICIT InternationalString OPTIONAL
+ * }
  * ```
  * 
  * @class

@@ -18,7 +18,12 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * OtherInformation-Item-information ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * OtherInformation-Item-information ::= CHOICE {
+ *     characterInfo [2] IMPLICIT InternationalString,
+ *     binaryInfo [3] IMPLICIT OCTET STRING,
+ *     externallyDefinedInfo [4] IMPLICIT EXTERNAL,
+ *     oid [5] IMPLICIT OBJECT IDENTIFIER
+ * }
  * ```
  */
 export

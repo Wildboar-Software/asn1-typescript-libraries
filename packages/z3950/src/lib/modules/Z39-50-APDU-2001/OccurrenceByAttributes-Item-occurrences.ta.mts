@@ -16,7 +16,14 @@ import { OccurrenceByAttributes_Item_occurrences_byDatabase_Item, _decode_Occurr
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * OccurrenceByAttributes-Item-occurrences ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * OccurrenceByAttributes-Item-occurrences ::= CHOICE {
+ *     global [2] INTEGER,
+ *     byDatabase [3] IMPLICIT SEQUENCE OF SEQUENCE {
+ *         db DatabaseName,
+ *         num [1] IMPLICIT INTEGER OPTIONAL,
+ *         otherDbInfo OtherInformation OPTIONAL
+ *     }
+ * }
  * ```
  */
 export

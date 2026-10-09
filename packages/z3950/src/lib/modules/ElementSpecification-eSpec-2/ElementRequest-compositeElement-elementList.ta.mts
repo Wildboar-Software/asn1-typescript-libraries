@@ -17,7 +17,12 @@ import { SimpleElement, _decode_SimpleElement, _encode_SimpleElement } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ElementRequest-compositeElement-elementList ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ElementRequest-compositeElement-elementList ::= CHOICE {
+ *     primitives [1] IMPLICIT SEQUENCE OF InternationalString,
+ *     -- Client may specify one or more element set names,
+ *     -- each identifying a set of elements, and the composite element is the union
+ *     specs [2] IMPLICIT SEQUENCE OF SimpleElement
+ * }
  * ```
  */
 export

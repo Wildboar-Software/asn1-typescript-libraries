@@ -18,7 +18,10 @@ import { ClientPartNotToKeep, _decode_ClientPartNotToKeep, _encode_ClientPartNot
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PersistentQuery-esRequest ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PersistentQuery-esRequest ::= SEQUENCE {
+ *     toKeep [1] ClientPartToKeep OPTIONAL,
+ *     notToKeep [2] ClientPartNotToKeep
+ * }
  * ```
  * 
  * @class

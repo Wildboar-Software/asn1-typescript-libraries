@@ -18,7 +18,10 @@ import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ItemOrder-taskPackage ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ItemOrder-taskPackage ::= SEQUENCE {
+ *     clientPart [1] ClientPartToKeep OPTIONAL,
+ *     serverPart [2] ServerPart
+ * }
  * ```
  * 
  * @class

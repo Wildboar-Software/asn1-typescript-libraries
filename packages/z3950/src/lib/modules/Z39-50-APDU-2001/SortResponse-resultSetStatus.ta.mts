@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SortResponse-resultSetStatus ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * SortResponse-resultSetStatus ::= INTEGER {
+ *     empty (1),
+ *     interim (2),
+ *     unchanged (3),
+ *     none (4)
+ * }
  * ```
  */
 export

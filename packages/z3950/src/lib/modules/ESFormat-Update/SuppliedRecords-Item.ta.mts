@@ -21,7 +21,20 @@ import { CorrelationInfo, _decode_CorrelationInfo, _encode_CorrelationInfo } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SuppliedRecords-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SuppliedRecords-Item ::= SEQUENCE {
+ *     recordId [1] CHOICE {
+ *         number [1] IMPLICIT INTEGER,
+ *         string [2] IMPLICIT InternationalString,
+ *         opaque [3] IMPLICIT OCTET STRING
+ *     } OPTIONAL,
+ *     supplementalId [2] CHOICE {
+ *         timeStamp [1] IMPLICIT GeneralizedTime,
+ *         versionNumber [2] IMPLICIT InternationalString,
+ *         previousVersion [3] IMPLICIT EXTERNAL
+ *     } OPTIONAL,
+ *     correlationInfo [3] IMPLICIT CorrelationInfo OPTIONAL,
+ *     record [4] IMPLICIT EXTERNAL
+ * }
  * ```
  * 
  * @class

@@ -18,7 +18,10 @@ import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SortKey-sortAttributes ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SortKey-sortAttributes ::= SEQUENCE {
+ *     id AttributeSetId,
+ *     list AttributeList
+ * }
  * ```
  * 
  * @class

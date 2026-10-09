@@ -16,7 +16,11 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ClientPartToKeep-contact ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ClientPartToKeep-contact ::= SEQUENCE {
+ *     name [1] IMPLICIT InternationalString OPTIONAL,
+ *     phone [2] IMPLICIT InternationalString OPTIONAL,
+ *     email [3] IMPLICIT InternationalString OPTIONAL
+ * }
  * ```
  * 
  * @class

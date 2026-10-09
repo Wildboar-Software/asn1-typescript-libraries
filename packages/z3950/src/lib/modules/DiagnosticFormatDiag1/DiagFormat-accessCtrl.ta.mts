@@ -16,7 +16,26 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-accessCtrl ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-accessCtrl ::= CHOICE {
+ *     noUser [1] IMPLICIT NULL,
+ *     -- no user to display challenge to
+ *     refused [2] IMPLICIT NULL,
+ *     -- access control information refused by user
+ *     simple [3] IMPLICIT NULL,
+ *     -- only simple form supported (target used externally defined)
+ *     oid [4] IMPLICIT SEQUENCE OF OBJECT IDENTIFIER,
+ *     -- oid not supported (origin supplies alternative suggested oids)
+ *     alternative [5] IMPLICIT SEQUENCE OF OBJECT IDENTIFIER,
+ *     -- origin insists that target use
+ *     -- an alternative challenge for
+ *     -- this data (e.g. stronger
+ *     -- authentication or stronger
+ *     -- Access control). The origin
+ *     -- supplies suggested alternative oids.
+ *     pwdInv [6] IMPLICIT NULL,
+ *     -- password invalid
+ *     pwdExp [7] IMPLICIT NULL  -- password expired
+ * }
  * ```
  */
 export

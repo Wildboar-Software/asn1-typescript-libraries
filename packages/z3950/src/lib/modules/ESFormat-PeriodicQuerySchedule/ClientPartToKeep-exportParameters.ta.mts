@@ -17,7 +17,10 @@ import { ExportSpecification, _decode_ExportSpecification, _encode_ExportSpecifi
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ClientPartToKeep-exportParameters ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ClientPartToKeep-exportParameters ::= CHOICE {
+ *     packageName [1] IMPLICIT InternationalString,
+ *     exportPackage [2] ExportSpecification
+ * }
  * ```
  */
 export

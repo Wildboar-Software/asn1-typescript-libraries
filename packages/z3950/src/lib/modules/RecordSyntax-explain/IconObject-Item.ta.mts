@@ -17,7 +17,16 @@ import { IconObject_Item_bodyType, _decode_IconObject_Item_bodyType, _encode_Ico
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IconObject-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * IconObject-Item ::= SEQUENCE {
+ *     -- Note that the "SEQUENCE OF" is to allow alternative
+ *     -- representations of the same Icon; it is not intended to allow multiple icons.
+ *     bodyType [1] CHOICE {
+ *         ianaType [1] IMPLICIT InternationalString,
+ *         z3950type [2] IMPLICIT InternationalString,
+ *         otherType [3] IMPLICIT InternationalString
+ *     },
+ *     content [2] IMPLICIT OCTET STRING
+ * }
  * ```
  * 
  * @class

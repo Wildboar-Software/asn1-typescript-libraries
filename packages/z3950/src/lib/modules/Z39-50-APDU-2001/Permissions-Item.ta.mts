@@ -18,7 +18,16 @@ import { Permissions_Item_allowableFunctions_Item, _decode_Permissions_Item_allo
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Permissions-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Permissions-Item ::= SEQUENCE {
+ *     userId [1] IMPLICIT InternationalString,
+ *     allowableFunctions [2] IMPLICIT SEQUENCE OF INTEGER {
+ *         delete (1),
+ *         modifyContents (2),
+ *         modifyPermissions (3),
+ *         present (4),
+ *         invoke (5)
+ *     }
+ * }
  * ```
  * 
  * @class

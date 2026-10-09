@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DuplicateDetectionResponse-status ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DuplicateDetectionResponse-status ::= INTEGER {
+ *     success (0),
+ *     failure (1)
+ * }
  * ```
  */
 export

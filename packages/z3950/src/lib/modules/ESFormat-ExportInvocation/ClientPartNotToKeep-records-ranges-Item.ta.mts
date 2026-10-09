@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ClientPartNotToKeep-records-ranges-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ClientPartNotToKeep-records-ranges-Item ::= SEQUENCE {
+ *     start [1] IMPLICIT INTEGER,
+ *     count [2] IMPLICIT INTEGER OPTIONAL  -- Count may be omitted only on last range,
+ *     -- to indicate "all remaining records beginning with 'start'."
+ * }
  * ```
  * 
  * @class

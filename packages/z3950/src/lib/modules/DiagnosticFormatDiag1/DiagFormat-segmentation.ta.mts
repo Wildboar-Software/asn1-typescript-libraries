@@ -16,7 +16,21 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-segmentation ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-segmentation ::= CHOICE {
+ *     segmentCount [0] IMPLICIT NULL,
+ *     -- Cannot guarantee record will fit
+ *     -- within max segments. Target
+ *     -- suggests that origin try again
+ *     -- to retrieve record, without
+ *     -- including max-segment-count.
+ *     segmentSize [1] IMPLICIT INTEGER  -- record cannot be segmented into
+ *     -- fragments such that the largest
+ *     -- will fit within max segment
+ *     -- size specified. Target supplies (in
+ *     -- bytes) the smallest acceptable value.
+ *     -- of Max-segment-size to retrieve
+ *     -- the record.
+ * }
  * ```
  */
 export

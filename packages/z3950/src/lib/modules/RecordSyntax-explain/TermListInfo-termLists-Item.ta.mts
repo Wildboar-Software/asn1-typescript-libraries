@@ -21,7 +21,24 @@ import { TermListInfo_termLists_Item_searchCost, _decode_TermListInfo_termLists_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TermListInfo-termLists-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TermListInfo-termLists-Item ::= SEQUENCE {
+ *     name [1] IMPLICIT InternationalString,
+ *     title [2] IMPLICIT HumanString OPTIONAL,
+ *     -- see comment 5
+ *     searchCost [3] IMPLICIT INTEGER {
+ *         -- see comment 6
+ *         optimized (0),
+ *         normal (1),
+ *         expensive (2),
+ *         filter (3)
+ *     } OPTIONAL,
+ *     scanable [4] IMPLICIT BOOLEAN,
+ *     -- 'true' means this list can be scanned
+ *     -- see comment 7
+ *     broader [5] IMPLICIT SEQUENCE OF InternationalString OPTIONAL,
+ *     narrower [6] IMPLICIT SEQUENCE OF InternationalString OPTIONAL  -- Broader and narrower list alternative term lists related to this one.
+ *     -- The term lists so listed should also be in this termLists structure.
+ * }  -- No non-brief elements
  * ```
  * 
  * @class

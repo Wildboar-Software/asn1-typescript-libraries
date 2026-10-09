@@ -16,7 +16,10 @@ import { KnownProximityUnit, _decode_KnownProximityUnit, _encode_KnownProximityU
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProximityOperator-proximityUnitCode ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ProximityOperator-proximityUnitCode ::= CHOICE {
+ *     known [1] IMPLICIT KnownProximityUnit,
+ *     private [2] IMPLICIT INTEGER
+ * }
  * ```
  */
 export

@@ -14,7 +14,17 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-extServices-req ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-extServices-req ::= INTEGER {
+ *     -- bad request
+ *     nameInUse (1),
+ *     -- package name already in use
+ *     noSuchName (2),
+ *     -- no such package, on
+ *     -- modify/delete
+ *     quota (3),
+ *     -- quota exceeded
+ *     type (4)
+ * }
  * ```
  */
 export

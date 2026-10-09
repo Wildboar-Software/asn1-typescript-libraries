@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Permissions-Item-allowableFunctions-Item ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * Permissions-Item-allowableFunctions-Item ::= INTEGER {
+ *     delete (1),
+ *     modifyContents (2),
+ *     modifyPermissions (3),
+ *     present (4),
+ *     invoke (5)
+ * }
  * ```
  */
 export

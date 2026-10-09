@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TermListInfo-termLists-Item-searchCost ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * TermListInfo-termLists-Item-searchCost ::= INTEGER {
+ *     -- see comment 6
+ *     optimized (0),
+ *     normal (1),
+ *     expensive (2),
+ *     filter (3)
+ * }
  * ```
  */
 export

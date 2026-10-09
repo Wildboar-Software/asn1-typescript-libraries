@@ -14,7 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-sort-illegal ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-sort-illegal ::= INTEGER {
+ *     relation (1),
+ *     -- illegal sort relation
+ *     case (2),
+ *     -- illegal case value
+ *     action (3),
+ *     -- illegal missing data action
+ *     sort (4)
+ * }
  * ```
  */
 export

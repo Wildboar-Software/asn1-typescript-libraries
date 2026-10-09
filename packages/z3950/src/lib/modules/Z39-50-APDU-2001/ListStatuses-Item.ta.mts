@@ -18,7 +18,10 @@ import { DeleteSetStatus, _decode_DeleteSetStatus, _encode_DeleteSetStatus } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ListStatuses-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ListStatuses-Item ::= SEQUENCE {
+ *     id ResultSetId,
+ *     status DeleteSetStatus
+ * }
  * ```
  * 
  * @class

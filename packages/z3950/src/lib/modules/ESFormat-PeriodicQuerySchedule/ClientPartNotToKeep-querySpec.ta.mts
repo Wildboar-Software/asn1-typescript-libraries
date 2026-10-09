@@ -17,7 +17,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ClientPartNotToKeep-querySpec ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ClientPartNotToKeep-querySpec ::= CHOICE {
+ *     actualQuery [1] Query,
+ *     packageName [2] IMPLICIT InternationalString
+ * }
  * ```
  */
 export

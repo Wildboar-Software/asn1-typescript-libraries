@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TriggerResourceControlRequest-requestedAction ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * TriggerResourceControlRequest-requestedAction ::= INTEGER {
+ *     resourceReport (1),
+ *     resourceControl (2),
+ *     cancel (3)
+ * }
  * ```
  */
 export

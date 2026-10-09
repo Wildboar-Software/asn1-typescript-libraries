@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TaskPackageRecordStructure-recordStatus ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * TaskPackageRecordStructure-recordStatus ::= INTEGER {
+ *     success (1),
+ *     queued (2),
+ *     inProcess (3),
+ *     failure (4)
+ * }
  * ```
  */
 export

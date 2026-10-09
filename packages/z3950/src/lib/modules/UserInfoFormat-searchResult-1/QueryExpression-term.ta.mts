@@ -18,7 +18,10 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * QueryExpression-term ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * QueryExpression-term ::= SEQUENCE {
+ *     queryTerm [1] Term,
+ *     termComment [2] IMPLICIT InternationalString OPTIONAL
+ * }
  * ```
  * 
  * @class

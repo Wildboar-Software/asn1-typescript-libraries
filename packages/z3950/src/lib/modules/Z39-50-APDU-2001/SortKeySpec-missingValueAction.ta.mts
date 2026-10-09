@@ -16,7 +16,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SortKeySpec-missingValueAction ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SortKeySpec-missingValueAction ::= CHOICE {
+ *     abort [1] IMPLICIT NULL,
+ *     null [2] IMPLICIT NULL,
+ *     -- Supply a null value for missing value
+ *     missingValueData [3] IMPLICIT OCTET STRING
+ * }
  * ```
  */
 export

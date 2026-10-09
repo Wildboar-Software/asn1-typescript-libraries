@@ -24,7 +24,17 @@ import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/I
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Variant-triples-Item-value ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Variant-triples-Item-value ::= CHOICE {
+ *     integer INTEGER,
+ *     string InternationalString,
+ *     octets OCTET STRING,
+ *     oid OBJECT IDENTIFIER,
+ *     bool BOOLEAN,
+ *     null NULL,
+ *     -- Following need context tags:
+ *     unit [1] IMPLICIT Unit,
+ *     valueAndUnit [2] IMPLICIT IntUnit
+ * }
  * ```
  */
 export

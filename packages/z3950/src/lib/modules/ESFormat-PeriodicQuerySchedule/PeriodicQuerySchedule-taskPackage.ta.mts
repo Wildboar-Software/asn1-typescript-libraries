@@ -18,7 +18,10 @@ import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PeriodicQuerySchedule-taskPackage ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PeriodicQuerySchedule-taskPackage ::= SEQUENCE {
+ *     clientPart [1] ClientPartToKeep,
+ *     serverPart [2] ServerPart
+ * }
  * ```
  * 
  * @class

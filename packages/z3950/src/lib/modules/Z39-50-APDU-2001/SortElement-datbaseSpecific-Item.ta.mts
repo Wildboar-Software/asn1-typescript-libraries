@@ -18,7 +18,10 @@ import { SortKey, _decode_SortKey, _encode_SortKey } from "../Z39-50-APDU-2001/S
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SortElement-datbaseSpecific-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SortElement-datbaseSpecific-Item ::= SEQUENCE {
+ *     databaseName DatabaseName,
+ *     dbSort SortKey
+ * }
  * ```
  * 
  * @class

@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ClientPartToKeep-action ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ClientPartToKeep-action ::= INTEGER {
+ *     recordInsert (1),
+ *     recordReplace (2),
+ *     recordDelete (3),
+ *     elementUpdate (4)
+ * }
  * ```
  */
 export

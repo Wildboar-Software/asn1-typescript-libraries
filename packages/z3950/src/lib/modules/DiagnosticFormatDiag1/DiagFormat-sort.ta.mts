@@ -23,7 +23,45 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-sort ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-sort ::= CHOICE {
+ *     sequence [0] IMPLICIT NULL,
+ *     -- cannot sort according to sequence
+ *     noRsName [1] IMPLICIT NULL,
+ *     -- no result set name supplied
+ *     tooMany [2] IMPLICIT INTEGER,
+ *     -- Too many input result sets, maximum supplied.
+ *     incompatible [3] IMPLICIT NULL,
+ *     -- records with different formats not compatible for sorting
+ *     generic [4] IMPLICIT NULL,
+ *     -- generic sort not supported (db specific only)
+ *     dbSpecific [5] IMPLICIT NULL,
+ *     -- db specific sort not supported
+ *     sortElement [6] SortElement,
+ *     key [7] IMPLICIT INTEGER {
+ *         tooMany (1),
+ *         -- too many sort keys
+ *         duplicate (2)
+ *     },
+ *     -- duplicate sort keys
+ *     action [8] IMPLICIT NULL,
+ *     -- unuspported missing data action
+ *     illegal [9] IMPLICIT INTEGER {
+ *         relation (1),
+ *         -- illegal sort relation
+ *         case (2),
+ *         -- illegal case value
+ *         action (3),
+ *         -- illegal missing data action
+ *         sort (4)
+ *     },
+ *     -- illegal sort
+ *     inputTooLarge [10] IMPLICIT SEQUENCE OF InternationalString,
+ *     -- one or more of the
+ *     -- input result sets too
+ *     -- large to sort
+ *     aggregateTooLarge [11] IMPLICIT NULL  --  aggregate result set
+ *     -- too large
+ * }
  * ```
  */
 export

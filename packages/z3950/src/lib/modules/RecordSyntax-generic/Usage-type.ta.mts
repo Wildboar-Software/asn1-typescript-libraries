@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Usage-type ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * Usage-type ::= INTEGER {
+ *     redistributable (1),
+ *     -- Element is freely redistributable
+ *     restricted (2),
+ *     -- Restriction contains statement
+ *     licensePointer (3)  -- Restriction contains license pointer
+ * }
  * ```
  */
 export

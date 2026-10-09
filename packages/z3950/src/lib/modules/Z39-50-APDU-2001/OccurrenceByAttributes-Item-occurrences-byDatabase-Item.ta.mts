@@ -19,7 +19,11 @@ import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * OccurrenceByAttributes-Item-occurrences-byDatabase-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * OccurrenceByAttributes-Item-occurrences-byDatabase-Item ::= SEQUENCE {
+ *     db DatabaseName,
+ *     num [1] IMPLICIT INTEGER OPTIONAL,
+ *     otherDbInfo OtherInformation OPTIONAL
+ * }
  * ```
  * 
  * @class

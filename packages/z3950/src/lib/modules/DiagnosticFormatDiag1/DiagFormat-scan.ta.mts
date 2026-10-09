@@ -18,7 +18,35 @@ import { DiagFormat_scan_posInResponse, _decode_DiagFormat_scan_posInResponse, _
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-scan ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-scan ::= CHOICE {
+ *     -- scan diagnostics:
+ *     nonZeroStepSize [0] IMPLICIT NULL,
+ *     -- only zero step size
+ *     -- supported
+ *     specifiedStepSize [1] IMPLICIT NULL,
+ *     -- specified step size not
+ *     -- supported
+ *     termList1 [3] IMPLICIT NULL,
+ *     -- term list not supported
+ *     -- (no alternative supplied)
+ *     termList2 [4] IMPLICIT SEQUENCE OF AttributeList,
+ *     -- term list not supported
+ *     -- (alternatives supplied)
+ *     posInResponse [5] IMPLICIT INTEGER {
+ *         -- value of positionIn-
+ *         -- Response not supported
+ *         mustBeOne (1),
+ *         mustBePositive (2),
+ *         mustBeNonNegative (3),
+ *         other (4)
+ *     },
+ *     resources [6] IMPLICIT NULL,
+ *     -- resources exhausted
+ *     -- looking for satisfying
+ *     -- terms
+ *     endOfList [7] IMPLICIT NULL  -- beginning or end of term
+ *     -- list
+ * }
  * ```
  */
 export

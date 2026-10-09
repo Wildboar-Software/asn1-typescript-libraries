@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SortKeySpec-sortRelation ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * SortKeySpec-sortRelation ::= INTEGER {
+ *     ascending (0),
+ *     descending (1),
+ *     ascendingByFrequency (3),
+ *     descendingByfrequency (4)
+ * }
  * ```
  */
 export

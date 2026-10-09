@@ -20,7 +20,18 @@ import { Occurrences, _decode_Occurrences, _encode_Occurrences } from "../Elemen
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TagPath-Item-specificTag ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TagPath-Item-specificTag ::= SEQUENCE {
+ *     -- The following line, schemaId is the
+ *     -- only difference in this definition from that of eSpec-1.
+ *     schemaId [0] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+ *     -- see comment 3
+ *     tagType [1] IMPLICIT INTEGER OPTIONAL,
+ *     -- If omitted, then 'defaultTagType' (above) applies,
+ *     -- if supplied, and if not supplied, then default
+ *     -- listed in schema applies
+ *     tagValue [2] StringOrNumeric,
+ *     occurrence [3] Occurrences OPTIONAL  -- default is "first occurrence"
+ * }
  * ```
  * 
  * @class

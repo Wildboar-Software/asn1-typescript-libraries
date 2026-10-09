@@ -18,7 +18,15 @@ import { OtherInformation_Item_information, _decode_OtherInformation_Item_inform
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * OtherInformation-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * OtherInformation-Item ::= SEQUENCE {
+ *     category [1] IMPLICIT InfoCategory OPTIONAL,
+ *     information CHOICE {
+ *         characterInfo [2] IMPLICIT InternationalString,
+ *         binaryInfo [3] IMPLICIT OCTET STRING,
+ *         externallyDefinedInfo [4] IMPLICIT EXTERNAL,
+ *         oid [5] IMPLICIT OBJECT IDENTIFIER
+ *     }
+ * }
  * ```
  * 
  * @class

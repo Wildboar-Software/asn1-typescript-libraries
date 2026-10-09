@@ -18,7 +18,15 @@ import { RPNStructure_rpnRpnOp_op, _decode_RPNStructure_rpnRpnOp_op, _encode_RPN
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RPNStructure-rpnRpnOp ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RPNStructure-rpnRpnOp ::= SEQUENCE {
+ *     rpn1 RPNStructure,
+ *     rpn2 RPNStructure,
+ *     op [46] CHOICE {
+ *         and [0] IMPLICIT NULL,
+ *         or [1] IMPLICIT NULL,
+ *         and-not [2] IMPLICIT NULL
+ *     }
+ * }
  * ```
  * 
  * @class

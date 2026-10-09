@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RpnCapabilities-operators-Item ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * RpnCapabilities-operators-Item ::= INTEGER {
+ *     and (0),
+ *     or (1),
+ *     and-not (2),
+ *     prox (3)
+ * }
  * ```
  */
 export

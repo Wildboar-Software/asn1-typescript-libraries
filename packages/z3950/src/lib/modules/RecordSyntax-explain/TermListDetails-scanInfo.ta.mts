@@ -18,7 +18,11 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TermListDetails-scanInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TermListDetails-scanInfo ::= SEQUENCE {
+ *     maxStepSize [0] IMPLICIT INTEGER OPTIONAL,
+ *     collatingSequence [1] IMPLICIT HumanString OPTIONAL,
+ *     increasing [2] IMPLICIT BOOLEAN OPTIONAL
+ * }
  * ```
  * 
  * @class

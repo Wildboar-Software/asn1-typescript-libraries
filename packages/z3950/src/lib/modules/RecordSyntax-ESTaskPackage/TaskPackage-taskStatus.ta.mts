@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TaskPackage-taskStatus ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * TaskPackage-taskStatus ::= INTEGER {
+ *     pending (0),
+ *     active (1),
+ *     complete (2),
+ *     aborted (3)
+ * }
  * ```
  */
 export

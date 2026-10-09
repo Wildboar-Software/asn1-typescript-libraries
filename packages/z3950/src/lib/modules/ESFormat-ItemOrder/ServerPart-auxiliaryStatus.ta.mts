@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServerPart-auxiliaryStatus ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ServerPart-auxiliaryStatus ::= INTEGER {
+ *     notReceived (1),
+ *     loanQueue (2),
+ *     forwarded (3),
+ *     unfilledCopyright (4),
+ *     filledCopyright (5)
+ * }
  * ```
  */
 export

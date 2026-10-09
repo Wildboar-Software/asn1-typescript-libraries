@@ -16,7 +16,11 @@ import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/D
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TaskPackageRecordStructure-recordOrSurDiag ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * TaskPackageRecordStructure-recordOrSurDiag ::= CHOICE {
+ *     record [1] IMPLICIT EXTERNAL,
+ *     -- Choose 'record' if recordStatus is 'success', and elementSetName was supplied.
+ *     diagnostic [2] DiagRec  -- Choose 'diagnostic', if RecordStatus is failure
+ * }
  * ```
  */
 export

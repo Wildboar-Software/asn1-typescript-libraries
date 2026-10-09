@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagFormat-unSupOp ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagFormat-unSupOp ::= INTEGER {
+ *     -- unsupported operator
+ *     and (0),
+ *     or (1),
+ *     and-not (2),
+ *     prox (3)
+ * }
  * ```
  */
 export

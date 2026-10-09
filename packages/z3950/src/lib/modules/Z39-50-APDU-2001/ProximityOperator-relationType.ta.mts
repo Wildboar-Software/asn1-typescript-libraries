@@ -14,7 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProximityOperator-relationType ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ProximityOperator-relationType ::= INTEGER {
+ *     lessThan (1),
+ *     lessThanOrEqual (2),
+ *     equal (3),
+ *     greaterThanOrEqual (4),
+ *     greaterThan (5),
+ *     notEqual (6)
+ * }
  * ```
  */
 export

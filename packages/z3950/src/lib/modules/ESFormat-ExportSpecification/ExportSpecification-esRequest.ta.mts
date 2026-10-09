@@ -17,7 +17,10 @@ import { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ExportSpecification-esRequest ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ExportSpecification-esRequest ::= SEQUENCE {
+ *     toKeep [1] ClientPartToKeep,
+ *     notToKeep [2] IMPLICIT NULL
+ * }
  * ```
  * 
  * @class

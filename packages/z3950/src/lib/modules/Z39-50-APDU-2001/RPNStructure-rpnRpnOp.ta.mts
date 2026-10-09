@@ -18,7 +18,11 @@ import { Operator, _decode_Operator, _encode_Operator } from "../Z39-50-APDU-200
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RPNStructure-rpnRpnOp ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RPNStructure-rpnRpnOp ::= SEQUENCE {
+ *     rpn1 RPNStructure,
+ *     rpn2 RPNStructure,
+ *     op Operator
+ * }
  * ```
  * 
  * @class

@@ -15,7 +15,12 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DefaultDiagFormat-addinfo ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DefaultDiagFormat-addinfo ::= CHOICE {
+ *     v2Addinfo VisibleString,
+ *     --Version 2
+ *     v3Addinfo InternationalString  --Version 3
+ *     -- SEE COMMENT 1
+ * }
  * ```
  */
 export

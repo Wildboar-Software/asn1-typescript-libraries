@@ -16,7 +16,11 @@ import { HumanString, _decode_HumanString, _encode_HumanString } from "../Record
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SortKeyDetails-sortType ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SortKeyDetails-sortType ::= CHOICE {
+ *     character [0] IMPLICIT NULL,
+ *     numeric [1] IMPLICIT NULL,
+ *     structured [2] IMPLICIT HumanString
+ * }
  * ```
  */
 export

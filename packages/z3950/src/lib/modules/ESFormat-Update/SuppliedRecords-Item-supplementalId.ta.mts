@@ -17,7 +17,11 @@ import { InternationalString, _decode_InternationalString, _encode_International
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SuppliedRecords-Item-supplementalId ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SuppliedRecords-Item-supplementalId ::= CHOICE {
+ *     timeStamp [1] IMPLICIT GeneralizedTime,
+ *     versionNumber [2] IMPLICIT InternationalString,
+ *     previousVersion [3] IMPLICIT EXTERNAL
+ * }
  * ```
  */
 export
