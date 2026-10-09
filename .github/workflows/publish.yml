@@ -50,6 +50,7 @@ jobs:
           # - "pkcs"
           # - "pki-stub"
           - "presentation-address"
+          - "sgp22"
           - "smrse"
           - "spnego"
           - "sv"
