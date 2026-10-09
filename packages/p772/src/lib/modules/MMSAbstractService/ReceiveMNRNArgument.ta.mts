@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -9,9 +9,12 @@ import {
     _decode_MessageDeliveryEnvelope,
     _encode_MessageDeliveryEnvelope,
 } from "@wildboar/x400/MTSAbstractService";
-import { MNRN, _decode_MNRN, _encode_MNRN } from "../MMSInformationObjects/MNRN.ta.mjs";
+import {
+    MNRN,
+    _decode_MNRN,
+    _encode_MNRN,
+} from "../MMSInformationObjects/MNRN.ta.mjs";
 // export { MNRN, _decode_MNRN, _encode_MNRN } from "../MMSInformationObjects/MNRN.ta.mjs";
-
 
 /**
  * @summary ReceiveMNRNArgument
@@ -59,7 +62,6 @@ class ReceiveMNRNArgument {
     public static _from_object (_o: { [_K in keyof (ReceiveMNRNArgument)]: (ReceiveMNRNArgument)[_K] }): ReceiveMNRNArgument {
         return new ReceiveMNRNArgument(_o.envelope, _o.content);
     }
-
 
 }
 
@@ -159,6 +161,5 @@ function _encode_ReceiveMNRNArgument (value: ReceiveMNRNArgument, elGetter: $.AS
 }; }
     return _cached_encoder_for_ReceiveMNRNArgument(value, elGetter);
 }
-
 
 /* eslint-enable */

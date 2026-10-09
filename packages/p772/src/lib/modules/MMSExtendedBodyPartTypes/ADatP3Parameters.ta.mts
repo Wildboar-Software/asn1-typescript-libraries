@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ADatP3Parameters
@@ -21,6 +18,5 @@ export
 type ADatP3Parameters = INTEGER;
 export const _decode_ADatP3Parameters = $._decodeInteger;
 export const _encode_ADatP3Parameters = $._encodeInteger;
-
 
 /* eslint-enable */

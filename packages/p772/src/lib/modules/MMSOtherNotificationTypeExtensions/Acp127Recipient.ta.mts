@@ -2,12 +2,12 @@
 import {
     ASN1Element as _Element,
     ASN1SizeError,
-    PrintableString
+    PrintableString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ub_military_bigstring } from "../MMSUpperBounds/ub-military-bigstring.va.mjs";
-
-
+import {
+    ub_military_bigstring,
+} from "../MMSUpperBounds/ub-military-bigstring.va.mjs";
 
 /**
  * @summary Acp127Recipient
@@ -29,6 +29,5 @@ export function _decode_Acp127Recipient (el: _Element): Acp127Recipient {
     return value;
 }
 export const _encode_Acp127Recipient = $._encodePrintableString;
-
 
 /* eslint-enable */

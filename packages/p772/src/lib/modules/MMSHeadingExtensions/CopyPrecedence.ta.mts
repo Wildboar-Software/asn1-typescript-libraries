@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary CopyPrecedence
@@ -169,6 +166,5 @@ export
 const override_2: CopyPrecedence = CopyPrecedence_override_2; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CopyPrecedence = $._decodeInteger;
 export const _encode_CopyPrecedence = $._encodeInteger;
-
 
 /* eslint-enable */

@@ -2,7 +2,7 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -10,9 +10,12 @@ import {
     _decode_SecurityLabel,
     _encode_SecurityLabel,
 } from "@wildboar/x400/MTSAbstractService";
-import { BodyPartSecurityLabel, _decode_BodyPartSecurityLabel, _encode_BodyPartSecurityLabel } from "../MMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs";
+import {
+    BodyPartSecurityLabel,
+    _decode_BodyPartSecurityLabel,
+    _encode_BodyPartSecurityLabel,
+} from "../MMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs";
 // export { BodyPartSecurityLabel, _decode_BodyPartSecurityLabel, _encode_BodyPartSecurityLabel } from "../MMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs";
-
 
 /**
  * @summary SecurityInformationLabels
@@ -68,7 +71,6 @@ class SecurityInformationLabels {
     public static _from_object (_o: { [_K in keyof (SecurityInformationLabels)]: (SecurityInformationLabels)[_K] }): SecurityInformationLabels {
         return new SecurityInformationLabels(_o.content_security_label, _o.heading_security_label, _o.body_part_security_labels);
     }
-
 
 }
 
@@ -169,6 +171,5 @@ function _encode_SecurityInformationLabels (value: SecurityInformationLabels, el
 }; }
     return _cached_encoder_for_SecurityInformationLabels(value, elGetter);
 }
-
 
 /* eslint-enable */

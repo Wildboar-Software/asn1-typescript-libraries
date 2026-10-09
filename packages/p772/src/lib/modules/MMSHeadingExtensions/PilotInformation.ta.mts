@@ -2,7 +2,7 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -15,11 +15,18 @@ import {
     _decode_SecurityLabel,
     _encode_SecurityLabel,
 } from "@wildboar/x400/MTSAbstractService";
-import { MMHSPrecedence, _decode_MMHSPrecedence, _encode_MMHSPrecedence } from "../MMSHeadingExtensions/MMHSPrecedence.ta.mjs";
+import {
+    MMHSPrecedence,
+    _decode_MMHSPrecedence,
+    _encode_MMHSPrecedence,
+} from "../MMSHeadingExtensions/MMHSPrecedence.ta.mjs";
 // export { MMHSPrecedence, MMHSPrecedence_deferred /* IMPORTED_LONG_NAMED_INTEGER */, deferred /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_routine /* IMPORTED_LONG_NAMED_INTEGER */, routine /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_priority /* IMPORTED_LONG_NAMED_INTEGER */, priority /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_immediate /* IMPORTED_LONG_NAMED_INTEGER */, immediate /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_flash /* IMPORTED_LONG_NAMED_INTEGER */, flash /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_override /* IMPORTED_LONG_NAMED_INTEGER */, override /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_ecp /* IMPORTED_LONG_NAMED_INTEGER */, ecp /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_critic /* IMPORTED_LONG_NAMED_INTEGER */, critic /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_override_2 /* IMPORTED_LONG_NAMED_INTEGER */, override_2 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_MMHSPrecedence, _encode_MMHSPrecedence } from "../MMSHeadingExtensions/MMHSPrecedence.ta.mjs";
-import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
+import {
+    MilitaryString,
+    _decode_MilitaryString,
+    _encode_MilitaryString,
+} from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
 // export { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
-
 
 /**
  * @summary PilotInformation
@@ -83,7 +90,6 @@ class PilotInformation {
     public static _from_object (_o: { [_K in keyof (PilotInformation)]: (PilotInformation)[_K] }): PilotInformation {
         return new PilotInformation(_o.pilotPrecedence, _o.pilotRecipient, _o.pilotSecurity, _o.pilotHandling);
     }
-
 
 }
 
@@ -189,6 +195,5 @@ function _encode_PilotInformation (value: PilotInformation, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_PilotInformation(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -1,11 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OtherRecipientDesignator, _decode_OtherRecipientDesignator, _encode_OtherRecipientDesignator } from "../MMSHeadingExtensions/OtherRecipientDesignator.ta.mjs";
+import {
+    OtherRecipientDesignator,
+    _decode_OtherRecipientDesignator,
+    _encode_OtherRecipientDesignator,
+} from "../MMSHeadingExtensions/OtherRecipientDesignator.ta.mjs";
 // export { OtherRecipientDesignator, _decode_OtherRecipientDesignator, _encode_OtherRecipientDesignator } from "../MMSHeadingExtensions/OtherRecipientDesignator.ta.mjs";
-
 
 /**
  * @summary OtherRecipientDesignatorSeq
@@ -48,6 +51,5 @@ function _encode_OtherRecipientDesignatorSeq (value: OtherRecipientDesignatorSeq
     if (!_cached_encoder_for_OtherRecipientDesignatorSeq) { _cached_encoder_for_OtherRecipientDesignatorSeq = $._encodeSequenceOf<OtherRecipientDesignator>(() => _encode_OtherRecipientDesignator, $.BER); }
     return _cached_encoder_for_OtherRecipientDesignatorSeq(value, elGetter);
 }
-
 
 /* eslint-enable */

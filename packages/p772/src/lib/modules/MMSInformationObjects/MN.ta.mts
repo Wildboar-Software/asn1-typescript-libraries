@@ -26,8 +26,11 @@ import {
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
 } from "@wildboar/x400/IPMSInformationObjects";
-import { MN_choice, _decode_MN_choice, _encode_MN_choice } from "../MMSInformationObjects/MN-choice.ta.mjs";
-
+import {
+    MN_choice,
+    _decode_MN_choice,
+    _encode_MN_choice,
+} from "../MMSInformationObjects/MN-choice.ta.mjs";
 
 /**
  * @summary MN
@@ -110,7 +113,6 @@ class MN implements CommonFields {
             _o.choice
         );
     }
-
 
 }
 
@@ -226,6 +228,5 @@ function _encode_MN (value: MN, elGetter: $.ASN1Encoder<MN>): _Element {
 }; }
     return _cached_encoder_for_MN(value, elGetter);
 }
-
 
 /* eslint-enable */

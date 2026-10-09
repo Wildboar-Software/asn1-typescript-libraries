@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PriorityLevelQualifier
@@ -93,6 +89,5 @@ export
 const high: PriorityLevelQualifier = PriorityLevelQualifier.high; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PriorityLevelQualifier = $._decodeEnumerated;
 export const _encode_PriorityLevelQualifier = $._encodeEnumerated;
-
 
 /* eslint-enable */

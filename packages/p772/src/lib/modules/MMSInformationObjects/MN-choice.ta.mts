@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -15,8 +15,6 @@ import {
     _decode_OtherNotificationTypeFields,
     _encode_OtherNotificationTypeFields,
 } from "@wildboar/x400/IPMSInformationObjects";
-
-
 
 /**
  * @summary MN_choice
@@ -74,6 +72,5 @@ function _encode_MN_choice (value: MN_choice, elGetter: $.ASN1Encoder<any>): _El
 }, $.BER); }
     return _cached_encoder_for_MN_choice(value, elGetter);
 }
-
 
 /* eslint-enable */

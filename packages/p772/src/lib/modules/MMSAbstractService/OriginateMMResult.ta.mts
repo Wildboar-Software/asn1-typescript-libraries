@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -12,8 +12,6 @@ import {
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
 } from "@wildboar/x400/MTSAbstractService";
-
-
 
 /**
  * @summary OriginateMMResult
@@ -61,7 +59,6 @@ class OriginateMMResult {
     public static _from_object (_o: { [_K in keyof (OriginateMMResult)]: (OriginateMMResult)[_K] }): OriginateMMResult {
         return new OriginateMMResult(_o.submission_identifier, _o.submission_time);
     }
-
 
 }
 
@@ -161,6 +158,5 @@ function _encode_OriginateMMResult (value: OriginateMMResult, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_OriginateMMResult(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -2,12 +2,12 @@
 import {
     ASN1Element as _Element,
     ASN1SizeError,
-    IA5String
+    IA5String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ub_data_size } from "../MMSUpperBounds/ub-data-size.va.mjs";
-
-
+import {
+    ub_data_size,
+} from "../MMSUpperBounds/ub-data-size.va.mjs";
 
 /**
  * @summary ACP127DataData
@@ -29,6 +29,5 @@ export function _decode_ACP127DataData (el: _Element): ACP127DataData {
     return value;
 }
 export const _encode_ACP127DataData = $._encodeIA5String;
-
 
 /* eslint-enable */

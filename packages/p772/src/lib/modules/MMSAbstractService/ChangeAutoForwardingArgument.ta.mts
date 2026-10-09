@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     BOOLEAN,
-    OPTIONAL
+    OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -19,8 +19,6 @@ import {
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
 } from "@wildboar/x400/IPMSInformationObjects";
-
-
 
 /**
  * @summary ChangeAutoForwardingArgument
@@ -82,7 +80,6 @@ class ChangeAutoForwardingArgument {
     public static _from_object (_o: { [_K in keyof (ChangeAutoForwardingArgument)]: (ChangeAutoForwardingArgument)[_K] }): ChangeAutoForwardingArgument {
         return new ChangeAutoForwardingArgument(_o.autoforward_MMs, _o.auto_forward_recipients, _o.auto_forward_heading, _o.auto_forward_comment);
     }
-
 
 }
 
@@ -192,6 +189,5 @@ function _encode_ChangeAutoForwardingArgument (value: ChangeAutoForwardingArgume
 }; }
     return _cached_encoder_for_ChangeAutoForwardingArgument(value, elGetter);
 }
-
 
 /* eslint-enable */

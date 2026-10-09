@@ -3,15 +3,24 @@ import {
     OPTIONAL,
     ASN1Element as _Element,
     ASN1SizeError,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ub_military_number_of_sics } from "../MMSUpperBounds/ub-military-number-of-sics.va.mjs";
-import { Sic, _decode_Sic, _encode_Sic } from "../MMSHeadingExtensions/Sic.ta.mjs";
+import {
+    ub_military_number_of_sics,
+} from "../MMSUpperBounds/ub-military-number-of-sics.va.mjs";
+import {
+    Sic,
+    _decode_Sic,
+    _encode_Sic,
+} from "../MMSHeadingExtensions/Sic.ta.mjs";
 // export { Sic, _decode_Sic, _encode_Sic } from "../MMSHeadingExtensions/Sic.ta.mjs";
-import { DistributionExtensionField, _decode_DistributionExtensionField, _encode_DistributionExtensionField } from "../MMSHeadingExtensions/DistributionExtensionField.ta.mjs";
+import {
+    DistributionExtensionField,
+    _decode_DistributionExtensionField,
+    _encode_DistributionExtensionField,
+} from "../MMSHeadingExtensions/DistributionExtensionField.ta.mjs";
 // export { DistributionExtensionField, _decode_DistributionExtensionField, _encode_DistributionExtensionField } from "../MMSHeadingExtensions/DistributionExtensionField.ta.mjs";
-
 
 /**
  * @summary DistributionCodes
@@ -67,7 +76,6 @@ class DistributionCodes {
     public static _from_object (_o: { [_K in keyof (DistributionCodes)]: (DistributionCodes)[_K] }): DistributionCodes {
         return new DistributionCodes(_o.sics, _o.dist_Extensions);
     }
-
 
 }
 
@@ -167,6 +175,5 @@ function _encode_DistributionCodes (value: DistributionCodes, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_DistributionCodes(value, elGetter);
 }
-
 
 /* eslint-enable */

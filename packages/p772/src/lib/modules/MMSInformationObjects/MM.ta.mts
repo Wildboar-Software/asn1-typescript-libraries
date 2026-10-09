@@ -14,8 +14,6 @@ import {
     _encode_Body,
 } from "@wildboar/x400/IPMSInformationObjects";
 
-
-
 /**
  * @summary MM
  * @description
@@ -61,7 +59,6 @@ class MM {
     public static _from_object (_o: { [_K in keyof (MM)]: (MM)[_K] }): MM {
         return new MM(_o.mmheading, _o.mmbody);
     }
-
 
 }
 
@@ -156,6 +153,5 @@ function _encode_MM (value: MM, elGetter: $.ASN1Encoder<any>): _Element {
 }; }
     return _cached_encoder_for_MM(value, elGetter);
 }
-
 
 /* eslint-enable */

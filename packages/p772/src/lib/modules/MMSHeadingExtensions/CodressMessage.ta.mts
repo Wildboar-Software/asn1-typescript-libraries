@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary CodressMessage
@@ -21,6 +18,5 @@ export
 type CodressMessage = INTEGER;
 export const _decode_CodressMessage = $._decodeInteger;
 export const _encode_CodressMessage = $._encodeInteger;
-
 
 /* eslint-enable */

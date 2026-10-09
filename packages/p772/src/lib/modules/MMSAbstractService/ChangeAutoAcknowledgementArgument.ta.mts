@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN
+    BOOLEAN,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -10,8 +10,6 @@ import {
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
 } from "@wildboar/x400/MTSAbstractService";
-
-
 
 /**
  * @summary ChangeAutoAcknowledgementArgument
@@ -59,7 +57,6 @@ class ChangeAutoAcknowledgementArgument {
     public static _from_object (_o: { [_K in keyof (ChangeAutoAcknowledgementArgument)]: (ChangeAutoAcknowledgementArgument)[_K] }): ChangeAutoAcknowledgementArgument {
         return new ChangeAutoAcknowledgementArgument(_o.auto_acknowledge_MMs, _o.auto_acknowledge_suppl_receipt_info);
     }
-
 
 }
 
@@ -159,6 +156,5 @@ function _encode_ChangeAutoAcknowledgementArgument (value: ChangeAutoAcknowledge
 }; }
     return _cached_encoder_for_ChangeAutoAcknowledgementArgument(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -13,8 +13,6 @@ import {
     _decode_OtherMessageDeliveryFields,
     _encode_OtherMessageDeliveryFields,
 } from "@wildboar/x400/MTSAbstractService";
-
-
 
 /**
  * @summary ForwardedEncryptedParameters
@@ -62,7 +60,6 @@ class ForwardedEncryptedParameters {
     public static _from_object (_o: { [_K in keyof (ForwardedEncryptedParameters)]: (ForwardedEncryptedParameters)[_K] }): ForwardedEncryptedParameters {
         return new ForwardedEncryptedParameters(_o.delivery_time, _o.delivery_envelope);
     }
-
 
 }
 
@@ -162,6 +159,5 @@ function _encode_ForwardedEncryptedParameters (value: ForwardedEncryptedParamete
 }; }
     return _cached_encoder_for_ForwardedEncryptedParameters(value, elGetter);
 }
-
 
 /* eslint-enable */

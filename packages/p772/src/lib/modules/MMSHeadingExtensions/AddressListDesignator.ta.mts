@@ -2,7 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -10,11 +10,18 @@ import {
     _decode_ORDescriptor,
     _encode_ORDescriptor,
 } from "@wildboar/x400/IPMSInformationObjects";
-import { _decode_AddressListDesignator_type, _encode_AddressListDesignator_type, AddressListDesignator_type } from "../MMSHeadingExtensions/AddressListDesignator-type.ta.mjs";
+import {
+    _decode_AddressListDesignator_type,
+    _encode_AddressListDesignator_type,
+    AddressListDesignator_type,
+} from "../MMSHeadingExtensions/AddressListDesignator-type.ta.mjs";
 // export { AddressListDesignator_type, AddressListDesignator_type_primaryAddressList /* IMPORTED_LONG_NAMED_INTEGER */, primaryAddressList /* IMPORTED_SHORT_NAMED_INTEGER */, AddressListDesignator_type_copyAddressList /* IMPORTED_LONG_NAMED_INTEGER */, copyAddressList /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AddressListDesignator_type, _encode_AddressListDesignator_type } from "../MMSHeadingExtensions/AddressListDesignator-type.ta.mjs";
-import { _decode_AddressListRequest, _encode_AddressListRequest, AddressListRequest } from "../MMSHeadingExtensions/AddressListRequest.ta.mjs";
+import {
+    _decode_AddressListRequest,
+    _encode_AddressListRequest,
+    AddressListRequest,
+} from "../MMSHeadingExtensions/AddressListRequest.ta.mjs";
 // export { AddressListRequest, AddressListRequest_action /* IMPORTED_LONG_NAMED_INTEGER */, action /* IMPORTED_SHORT_NAMED_INTEGER */, AddressListRequest_info /* IMPORTED_LONG_NAMED_INTEGER */, info /* IMPORTED_SHORT_NAMED_INTEGER */, AddressListRequest_both /* IMPORTED_LONG_NAMED_INTEGER */, both /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AddressListRequest, _encode_AddressListRequest } from "../MMSHeadingExtensions/AddressListRequest.ta.mjs";
-
 
 /**
  * @summary AddressListDesignator
@@ -76,7 +83,6 @@ class AddressListDesignator {
     public static _from_object (_o: { [_K in keyof (AddressListDesignator)]: (AddressListDesignator)[_K] }): AddressListDesignator {
         return new AddressListDesignator(_o.type_, _o.listName, _o.notificationRequest, _o.replyRequest);
     }
-
 
 }
 
@@ -186,6 +192,5 @@ function _encode_AddressListDesignator (value: AddressListDesignator, elGetter: 
 }; }
     return _cached_encoder_for_AddressListDesignator(value, elGetter);
 }
-
 
 /* eslint-enable */

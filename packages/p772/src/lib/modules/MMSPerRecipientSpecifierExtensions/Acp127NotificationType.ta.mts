@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    BIT_STRING
+    BIT_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary Acp127NotificationType
@@ -66,6 +63,5 @@ export
 const acp127_tn: number = Acp127NotificationType_acp127_tn; /* SHORT_NAMED_BIT */
 export const _decode_Acp127NotificationType = $._decodeBitString;
 export const _encode_Acp127NotificationType = $._encodeBitString;
-
 
 /* eslint-enable */

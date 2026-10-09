@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -12,8 +12,6 @@ import {
     _decode_ProbeSubmissionTime,
     _encode_ProbeSubmissionTime,
 } from "@wildboar/x400/MTSAbstractService";
-
-
 
 /**
  * @summary OriginateProbeResult
@@ -61,7 +59,6 @@ class OriginateProbeResult {
     public static _from_object (_o: { [_K in keyof (OriginateProbeResult)]: (OriginateProbeResult)[_K] }): OriginateProbeResult {
         return new OriginateProbeResult(_o.submission_identifier, _o.submission_time);
     }
-
 
 }
 
@@ -161,6 +158,5 @@ function _encode_OriginateProbeResult (value: OriginateProbeResult, elGetter: $.
 }; }
     return _cached_encoder_for_OriginateProbeResult(value, elGetter);
 }
-
 
 /* eslint-enable */

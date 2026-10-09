@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary OtherRecipientDesignator_type
@@ -56,6 +53,5 @@ export
 const copy: OtherRecipientDesignator_type = OtherRecipientDesignator_type_copy; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_OtherRecipientDesignator_type = $._decodeInteger;
 export const _encode_OtherRecipientDesignator_type = $._encodeInteger;
-
 
 /* eslint-enable */

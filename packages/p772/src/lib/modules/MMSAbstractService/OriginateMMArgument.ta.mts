@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -9,9 +9,12 @@ import {
     _decode_MessageSubmissionEnvelope,
     _encode_MessageSubmissionEnvelope,
 } from "@wildboar/x400/MTSAbstractService";
-import { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
+import {
+    MM,
+    _decode_MM,
+    _encode_MM,
+} from "../MMSInformationObjects/MM.ta.mjs";
 // export { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
-
 
 /**
  * @summary OriginateMMArgument
@@ -59,7 +62,6 @@ class OriginateMMArgument {
     public static _from_object (_o: { [_K in keyof (OriginateMMArgument)]: (OriginateMMArgument)[_K] }): OriginateMMArgument {
         return new OriginateMMArgument(_o.envelope, _o.content);
     }
-
 
 }
 
@@ -159,6 +161,5 @@ function _encode_OriginateMMArgument (value: OriginateMMArgument, elGetter: $.AS
 }; }
     return _cached_encoder_for_OriginateMMArgument(value, elGetter);
 }
-
 
 /* eslint-enable */

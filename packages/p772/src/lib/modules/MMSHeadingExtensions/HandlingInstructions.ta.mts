@@ -1,11 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
+import {
+    MilitaryString,
+    _decode_MilitaryString,
+    _encode_MilitaryString,
+} from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
 // export { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
-
 
 /**
  * @summary HandlingInstructions
@@ -48,6 +51,5 @@ function _encode_HandlingInstructions (value: HandlingInstructions, elGetter: $.
     if (!_cached_encoder_for_HandlingInstructions) { _cached_encoder_for_HandlingInstructions = $._encodeSequenceOf<MilitaryString>(() => _encode_MilitaryString, $.BER); }
     return _cached_encoder_for_HandlingInstructions(value, elGetter);
 }
-
 
 /* eslint-enable */

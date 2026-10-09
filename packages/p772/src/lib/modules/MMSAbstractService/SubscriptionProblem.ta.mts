@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SubscriptionProblem
@@ -90,6 +86,5 @@ export
 const mts_eos_not_subcribed: SubscriptionProblem = SubscriptionProblem.mts_eos_not_subcribed; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SubscriptionProblem = $._decodeEnumerated;
 export const _encode_SubscriptionProblem = $._encodeEnumerated;
-
 
 /* eslint-enable */

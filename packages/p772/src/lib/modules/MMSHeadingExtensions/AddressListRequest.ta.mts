@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary AddressListRequest
@@ -69,6 +66,5 @@ export
 const both: AddressListRequest = AddressListRequest_both; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AddressListRequest = $._decodeInteger;
 export const _encode_AddressListRequest = $._encodeInteger;
-
 
 /* eslint-enable */

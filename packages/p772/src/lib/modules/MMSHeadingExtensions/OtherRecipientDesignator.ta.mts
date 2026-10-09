@@ -1,14 +1,21 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OtherRecipientDesignator_type, _decode_OtherRecipientDesignator_type, _encode_OtherRecipientDesignator_type } from "../MMSHeadingExtensions/OtherRecipientDesignator-type.ta.mjs";
+import {
+    OtherRecipientDesignator_type,
+    _decode_OtherRecipientDesignator_type,
+    _encode_OtherRecipientDesignator_type,
+} from "../MMSHeadingExtensions/OtherRecipientDesignator-type.ta.mjs";
 // export { OtherRecipientDesignator_type, OtherRecipientDesignator_type_primary /* IMPORTED_LONG_NAMED_INTEGER */, primary /* IMPORTED_SHORT_NAMED_INTEGER */, OtherRecipientDesignator_type_copy /* IMPORTED_LONG_NAMED_INTEGER */, copy /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_OtherRecipientDesignator_type, _encode_OtherRecipientDesignator_type } from "../MMSHeadingExtensions/OtherRecipientDesignator-type.ta.mjs";
-import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
+import {
+    MilitaryString,
+    _decode_MilitaryString,
+    _encode_MilitaryString,
+} from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
 // export { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
-
 
 /**
  * @summary OtherRecipientDesignator
@@ -56,7 +63,6 @@ class OtherRecipientDesignator {
     public static _from_object (_o: { [_K in keyof (OtherRecipientDesignator)]: (OtherRecipientDesignator)[_K] }): OtherRecipientDesignator {
         return new OtherRecipientDesignator(_o.type_, _o.designator);
     }
-
 
 }
 
@@ -156,6 +162,5 @@ function _encode_OtherRecipientDesignator (value: OtherRecipientDesignator, elGe
 }; }
     return _cached_encoder_for_OtherRecipientDesignator(value, elGetter);
 }
-
 
 /* eslint-enable */

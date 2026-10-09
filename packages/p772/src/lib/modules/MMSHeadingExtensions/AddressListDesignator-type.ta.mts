@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary AddressListDesignator_type
@@ -56,6 +53,5 @@ export
 const copyAddressList: AddressListDesignator_type = AddressListDesignator_type_copyAddressList; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AddressListDesignator_type = $._decodeInteger;
 export const _encode_AddressListDesignator_type = $._encodeInteger;
-
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -8,8 +8,6 @@ import {
     _decode_ORDescriptor,
     _encode_ORDescriptor,
 } from "@wildboar/x400/IPMSInformationObjects";
-
-
 
 /**
  * @summary ExemptedAddress
@@ -52,6 +50,5 @@ function _encode_ExemptedAddress (value: ExemptedAddress, elGetter: $.ASN1Encode
     if (!_cached_encoder_for_ExemptedAddress) { _cached_encoder_for_ExemptedAddress = _encode_ORDescriptor; }
     return _cached_encoder_for_ExemptedAddress(value, elGetter);
 }
-
 
 /* eslint-enable */

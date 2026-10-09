@@ -2,7 +2,7 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -10,9 +10,12 @@ import {
     _decode_ReportDeliveryEnvelope,
     _encode_ReportDeliveryEnvelope,
 } from "@wildboar/x400/MTSAbstractService";
-import { InformationObject, _decode_InformationObject, _encode_InformationObject } from "../MMSInformationObjects/InformationObject.ta.mjs";
+import {
+    InformationObject,
+    _decode_InformationObject,
+    _encode_InformationObject,
+} from "../MMSInformationObjects/InformationObject.ta.mjs";
 // export { InformationObject, _decode_InformationObject, _encode_InformationObject } from "../MMSInformationObjects/InformationObject.ta.mjs";
-
 
 /**
  * @summary ReceiveReportArgument
@@ -60,7 +63,6 @@ class ReceiveReportArgument {
     public static _from_object (_o: { [_K in keyof (ReceiveReportArgument)]: (ReceiveReportArgument)[_K] }): ReceiveReportArgument {
         return new ReceiveReportArgument(_o.envelope, _o.undelivered_object);
     }
-
 
 }
 
@@ -160,6 +162,5 @@ function _encode_ReceiveReportArgument (value: ReceiveReportArgument, elGetter: 
 }; }
     return _cached_encoder_for_ReceiveReportArgument(value, elGetter);
 }
-
 
 /* eslint-enable */

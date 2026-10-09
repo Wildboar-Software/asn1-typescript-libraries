@@ -1,9 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
 } from "@wildboar/asn1";
-
-
 
 /**
  * @summary ub_military_sic

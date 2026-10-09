@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -8,8 +8,6 @@ import {
     _decode_IPM,
     _encode_IPM,
 } from "@wildboar/x400/IPMSInformationObjects";
-
-
 
 /**
  * @summary MMMessageData
@@ -52,6 +50,5 @@ function _encode_MMMessageData (value: MMMessageData, elGetter: $.ASN1Encoder<an
     if (!_cached_encoder_for_MMMessageData) { _cached_encoder_for_MMMessageData = _encode_IPM; }
     return _cached_encoder_for_MMMessageData(value, elGetter);
 }
-
 
 /* eslint-enable */

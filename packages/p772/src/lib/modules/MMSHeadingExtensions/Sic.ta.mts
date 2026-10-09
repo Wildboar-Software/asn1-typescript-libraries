@@ -2,13 +2,15 @@
 import {
     ASN1Element as _Element,
     ASN1SizeError,
-    PrintableString
+    PrintableString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { lb_military_sic } from "../MMSUpperBounds/lb-military-sic.va.mjs";
-import { ub_military_sic } from "../MMSUpperBounds/ub-military-sic.va.mjs";
-
-
+import {
+    lb_military_sic,
+} from "../MMSUpperBounds/lb-military-sic.va.mjs";
+import {
+    ub_military_sic,
+} from "../MMSUpperBounds/ub-military-sic.va.mjs";
 
 /**
  * @summary Sic
@@ -30,6 +32,5 @@ export function _decode_Sic (el: _Element): Sic {
     return value;
 }
 export const _encode_Sic = $._encodePrintableString;
-
 
 /* eslint-enable */

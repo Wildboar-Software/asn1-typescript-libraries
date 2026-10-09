@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TypeMessage
@@ -85,6 +82,5 @@ export
 const drill: TypeMessage = TypeMessage_drill; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_TypeMessage = $._decodeInteger;
 export const _encode_TypeMessage = $._encodeInteger;
-
 
 /* eslint-enable */

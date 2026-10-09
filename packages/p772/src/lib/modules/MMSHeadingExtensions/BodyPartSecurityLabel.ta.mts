@@ -2,7 +2,7 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -10,9 +10,12 @@ import {
     _decode_SecurityLabel,
     _encode_SecurityLabel,
 } from "@wildboar/x400/MTSAbstractService";
-import { BodyPartSequenceNumber, _decode_BodyPartSequenceNumber, _encode_BodyPartSequenceNumber } from "../MMSHeadingExtensions/BodyPartSequenceNumber.ta.mjs";
+import {
+    BodyPartSequenceNumber,
+    _decode_BodyPartSequenceNumber,
+    _encode_BodyPartSequenceNumber,
+} from "../MMSHeadingExtensions/BodyPartSequenceNumber.ta.mjs";
 // export { BodyPartSequenceNumber, _decode_BodyPartSequenceNumber, _encode_BodyPartSequenceNumber } from "../MMSHeadingExtensions/BodyPartSequenceNumber.ta.mjs";
-
 
 /**
  * @summary BodyPartSecurityLabel
@@ -60,7 +63,6 @@ class BodyPartSecurityLabel {
     public static _from_object (_o: { [_K in keyof (BodyPartSecurityLabel)]: (BodyPartSecurityLabel)[_K] }): BodyPartSecurityLabel {
         return new BodyPartSecurityLabel(_o.body_part_security_label, _o.body_part_sequence_number);
     }
-
 
 }
 
@@ -160,6 +162,5 @@ function _encode_BodyPartSecurityLabel (value: BodyPartSecurityLabel, elGetter: 
 }; }
     return _cached_encoder_for_BodyPartSecurityLabel(value, elGetter);
 }
-
 
 /* eslint-enable */
