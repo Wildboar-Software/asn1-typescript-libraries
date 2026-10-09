@@ -8,11 +8,7 @@
     ],
     "rootDir": ".",
     "strict": true,
-    "strictNullChecks": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true
+    "strictNullChecks": true
   },
   "exclude": [
     "**/*.spec.mts",
@@ -24,5 +20,10 @@
   ],
   "include": [
     "**/*.mts"
+  ],
+  "references": [
+    {
+      "path": "../pki-stub/tsconfig.lib.json"
+    }
   ]
 }

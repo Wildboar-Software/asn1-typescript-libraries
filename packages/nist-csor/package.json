@@ -31,6 +31,7 @@
         "./NIST-AES": "./src/lib/modules/NIST-AES/index.mts"
     },
     "dependencies": {
-        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@^2.0.4"
     }
 }
