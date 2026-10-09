@@ -5,15 +5,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InitiateAuthenticationRequest, _decode_InitiateAuthenticationRequest, _encode_InitiateAuthenticationRequest } from "../RSPDefinitions/InitiateAuthenticationRequest.ta.mjs";
-// export { InitiateAuthenticationRequest, _decode_InitiateAuthenticationRequest, _encode_InitiateAuthenticationRequest } from "../RSPDefinitions/InitiateAuthenticationRequest.ta.mjs";
 import { AuthenticateClientRequest, _decode_AuthenticateClientRequest, _encode_AuthenticateClientRequest } from "../RSPDefinitions/AuthenticateClientRequest.ta.mjs";
-// export { AuthenticateClientRequest, _decode_AuthenticateClientRequest, _encode_AuthenticateClientRequest } from "../RSPDefinitions/AuthenticateClientRequest.ta.mjs";
 import { GetBoundProfilePackageRequest, _decode_GetBoundProfilePackageRequest, _encode_GetBoundProfilePackageRequest } from "../RSPDefinitions/GetBoundProfilePackageRequest.ta.mjs";
-// export { GetBoundProfilePackageRequest, _decode_GetBoundProfilePackageRequest, _encode_GetBoundProfilePackageRequest } from "../RSPDefinitions/GetBoundProfilePackageRequest.ta.mjs";
 import { CancelSessionRequestEs9, _decode_CancelSessionRequestEs9, _encode_CancelSessionRequestEs9 } from "../RSPDefinitions/CancelSessionRequestEs9.ta.mjs";
-// export { CancelSessionRequestEs9, _decode_CancelSessionRequestEs9, _encode_CancelSessionRequestEs9 } from "../RSPDefinitions/CancelSessionRequestEs9.ta.mjs";
 import { HandleNotification, _decode_HandleNotification, _encode_HandleNotification } from "../RSPDefinitions/HandleNotification.ta.mjs";
-// export { HandleNotification, _decode_HandleNotification, _encode_HandleNotification } from "../RSPDefinitions/HandleNotification.ta.mjs";
 
 
 /**

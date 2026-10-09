@@ -6,6 +6,7 @@ import {
     INTEGER,
     UTF8String
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -45,7 +46,11 @@ function _decode_ActivationCodeRetrievalInfo (el: _Element): ActivationCodeRetri
     "CONTEXT 2": [ "activationCodeRetrievalAvailable", $._decode_implicit<BOOLEAN>(() => $._decodeBoolean) ],
     "CONTEXT 3": [ "retryDelay", $._decode_implicit<INTEGER>(() => $._decodeInteger) ]
 }); }
-    return _cached_decoder_for_ActivationCodeRetrievalInfo(el);
+    const value = _cached_decoder_for_ActivationCodeRetrievalInfo(el);
+    if ("activationCodeForProfileRedownload" in value && value.activationCodeForProfileRedownload.length > 255) {
+        throw new ASN1SizeError("ActivationCodeRetrievalInfo.activationCodeForProfileRedownload violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_ActivationCodeRetrievalInfo: $.ASN1Encoder<ActivationCodeRetrievalInfo> | null = null;

@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { Octet32, _decode_Octet32, _encode_Octet32 } from "../RSPDefinitions/Octet32.ta.mjs";
-// export { Octet32, _decode_Octet32, _encode_Octet32 } from "../RSPDefinitions/Octet32.ta.mjs";
 
 
 /**
@@ -156,7 +154,7 @@ let _cached_encoder_for_EUICCSigned2: $.ASN1Encoder<EUICCSigned2> | null = null;
  */
 export
 function _encode_EUICCSigned2 (value: EUICCSigned2, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EUICCSigned2) { _cached_encoder_for_EUICCSigned2 = function (value: EUICCSigned2, elGetter: $.ASN1Encoder<EUICCSigned2>): _Element {
+    if (!_cached_encoder_for_EUICCSigned2) { _cached_encoder_for_EUICCSigned2 = function (value: EUICCSigned2): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

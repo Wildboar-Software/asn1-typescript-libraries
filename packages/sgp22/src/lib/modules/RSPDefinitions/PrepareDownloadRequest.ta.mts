@@ -7,11 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SmdpSigned2, _decode_SmdpSigned2, _encode_SmdpSigned2 } from "../RSPDefinitions/SmdpSigned2.ta.mjs";
-// export { SmdpSigned2, _decode_SmdpSigned2, _encode_SmdpSigned2 } from "../RSPDefinitions/SmdpSigned2.ta.mjs";
 import { Octet32, _decode_Octet32, _encode_Octet32 } from "../RSPDefinitions/Octet32.ta.mjs";
-// export { Octet32, _decode_Octet32, _encode_Octet32 } from "../RSPDefinitions/Octet32.ta.mjs";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
-// export { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
+import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
 
 
 /**
@@ -169,7 +166,7 @@ let _cached_encoder_for_PrepareDownloadRequest: $.ASN1Encoder<PrepareDownloadReq
  */
 export
 function _encode_PrepareDownloadRequest (value: PrepareDownloadRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PrepareDownloadRequest) { _cached_encoder_for_PrepareDownloadRequest = $._encode_implicit(_TagClass.context, 33, () => function (value: PrepareDownloadRequest, elGetter: $.ASN1Encoder<PrepareDownloadRequest>): _Element {
+    if (!_cached_encoder_for_PrepareDownloadRequest) { _cached_encoder_for_PrepareDownloadRequest = $._encode_implicit(_TagClass.context, 33, () => function (value: PrepareDownloadRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_SmdpSigned2(value.smdpSigned2, $.BER),

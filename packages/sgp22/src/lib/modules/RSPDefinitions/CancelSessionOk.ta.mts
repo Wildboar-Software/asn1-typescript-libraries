@@ -122,7 +122,7 @@ let _cached_encoder_for_CancelSessionOk: $.ASN1Encoder<CancelSessionOk> | null =
  */
 export
 function _encode_CancelSessionOk (value: CancelSessionOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CancelSessionOk) { _cached_encoder_for_CancelSessionOk = function (value: CancelSessionOk, elGetter: $.ASN1Encoder<CancelSessionOk>): _Element {
+    if (!_cached_encoder_for_CancelSessionOk) { _cached_encoder_for_CancelSessionOk = function (): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PendingNotification, _decode_PendingNotification, _encode_PendingNotification } from "../RSPDefinitions/PendingNotification.ta.mjs";
-// export { PendingNotification, _decode_PendingNotification, _encode_PendingNotification } from "../RSPDefinitions/PendingNotification.ta.mjs";
 
 
 /**
@@ -129,7 +128,7 @@ let _cached_encoder_for_HandleNotification: $.ASN1Encoder<HandleNotification> | 
  */
 export
 function _encode_HandleNotification (value: HandleNotification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HandleNotification) { _cached_encoder_for_HandleNotification = $._encode_implicit(_TagClass.context, 61, () => function (value: HandleNotification, elGetter: $.ASN1Encoder<HandleNotification>): _Element {
+    if (!_cached_encoder_for_HandleNotification) { _cached_encoder_for_HandleNotification = $._encode_implicit(_TagClass.context, 61, () => function (value: HandleNotification): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_PendingNotification(value.pendingNotification, $.BER)

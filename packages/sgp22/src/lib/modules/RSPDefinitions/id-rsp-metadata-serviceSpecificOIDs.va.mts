@@ -4,7 +4,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_rsp_metadata } from "../RSPDefinitions/id-rsp-metadata.va.mjs";
-// export { id_rsp_metadata } from "../RSPDefinitions/id-rsp-metadata.va.mjs";
 
 
 /**

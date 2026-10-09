@@ -4,6 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     OCTET_STRING
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -32,7 +33,11 @@ let _cached_decoder_for_Iccid: $.ASN1Decoder<Iccid> | null = null;
 export
 function _decode_Iccid (el: _Element): Iccid {
     if (!_cached_decoder_for_Iccid) { _cached_decoder_for_Iccid = $._decode_implicit<Iccid>(() => $._decodeOctetString); }
-    return _cached_decoder_for_Iccid(el);
+    const value = _cached_decoder_for_Iccid(el);
+    if (value.length !== 10) {
+        throw new ASN1SizeError("Iccid violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_Iccid: $.ASN1Encoder<Iccid> | null = null;

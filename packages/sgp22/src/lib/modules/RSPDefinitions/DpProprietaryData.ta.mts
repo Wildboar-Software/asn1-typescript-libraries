@@ -130,7 +130,7 @@ let _cached_encoder_for_DpProprietaryData: $.ASN1Encoder<DpProprietaryData> | nu
  */
 export
 function _encode_DpProprietaryData (value: DpProprietaryData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DpProprietaryData) { _cached_encoder_for_DpProprietaryData = function (value: DpProprietaryData, elGetter: $.ASN1Encoder<DpProprietaryData>): _Element {
+    if (!_cached_encoder_for_DpProprietaryData) { _cached_encoder_for_DpProprietaryData = function (value: DpProprietaryData): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeObjectIdentifier(value.dpOid, $.BER)

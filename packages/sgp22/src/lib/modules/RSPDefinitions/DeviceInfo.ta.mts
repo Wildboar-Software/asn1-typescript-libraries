@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Octet4, _decode_Octet4, _encode_Octet4 } from "../RSPDefinitions/Octet4.ta.mjs";
-// export { Octet4, _decode_Octet4, _encode_Octet4 } from "../RSPDefinitions/Octet4.ta.mjs";
 import { DeviceCapabilities, _decode_DeviceCapabilities, _encode_DeviceCapabilities } from "../RSPDefinitions/DeviceCapabilities.ta.mjs";
-// export { DeviceCapabilities, _decode_DeviceCapabilities, _encode_DeviceCapabilities } from "../RSPDefinitions/DeviceCapabilities.ta.mjs";
 import { Octet8, _decode_Octet8, _encode_Octet8 } from "../RSPDefinitions/Octet8.ta.mjs";
-// export { Octet8, _decode_Octet8, _encode_Octet8 } from "../RSPDefinitions/Octet8.ta.mjs";
 
 
 /**
@@ -157,7 +154,7 @@ let _cached_encoder_for_DeviceInfo: $.ASN1Encoder<DeviceInfo> | null = null;
  */
 export
 function _encode_DeviceInfo (value: DeviceInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DeviceInfo) { _cached_encoder_for_DeviceInfo = function (value: DeviceInfo, elGetter: $.ASN1Encoder<DeviceInfo>): _Element {
+    if (!_cached_encoder_for_DeviceInfo) { _cached_encoder_for_DeviceInfo = function (value: DeviceInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Octet4(value.tac, $.BER),

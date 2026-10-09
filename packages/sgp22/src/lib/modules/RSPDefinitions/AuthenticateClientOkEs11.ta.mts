@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { EventEntries, _decode_EventEntries, _encode_EventEntries } from "../RSPDefinitions/EventEntries.ta.mjs";
-// export { EventEntries, _decode_EventEntries, _encode_EventEntries } from "../RSPDefinitions/EventEntries.ta.mjs";
 
 
 /**
@@ -143,7 +141,7 @@ let _cached_encoder_for_AuthenticateClientOkEs11: $.ASN1Encoder<AuthenticateClie
  */
 export
 function _encode_AuthenticateClientOkEs11 (value: AuthenticateClientOkEs11, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateClientOkEs11) { _cached_encoder_for_AuthenticateClientOkEs11 = function (value: AuthenticateClientOkEs11, elGetter: $.ASN1Encoder<AuthenticateClientOkEs11>): _Element {
+    if (!_cached_encoder_for_AuthenticateClientOkEs11) { _cached_encoder_for_AuthenticateClientOkEs11 = function (value: AuthenticateClientOkEs11): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_TransactionId(value.transactionId, $.BER),

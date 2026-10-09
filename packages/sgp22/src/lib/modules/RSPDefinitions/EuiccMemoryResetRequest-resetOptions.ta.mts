@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EuiccMemoryResetRequest-resetOptions ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * EuiccMemoryResetRequest-resetOptions ::= BIT STRING {
+ *     deleteOperationalProfiles(0),
+ *     deleteFieldLoadedTestProfiles(1),
+ *     resetDefaultSmdpAddress(2)
+ * }
  * ```
  */
 export
@@ -61,35 +65,8 @@ const EuiccMemoryResetRequest_resetOptions_resetDefaultSmdpAddress: number = 2; 
  */
 export
 const resetDefaultSmdpAddress: number = EuiccMemoryResetRequest_resetOptions_resetDefaultSmdpAddress; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_EuiccMemoryResetRequest_resetOptions: $.ASN1Decoder<EuiccMemoryResetRequest_resetOptions> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EuiccMemoryResetRequest_resetOptions
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EuiccMemoryResetRequest_resetOptions (el: _Element): EuiccMemoryResetRequest_resetOptions {
-    if (!_cached_decoder_for_EuiccMemoryResetRequest_resetOptions) { _cached_decoder_for_EuiccMemoryResetRequest_resetOptions = $._decodeBitString; }
-    return _cached_decoder_for_EuiccMemoryResetRequest_resetOptions(el);
-}
-
-let _cached_encoder_for_EuiccMemoryResetRequest_resetOptions: $.ASN1Encoder<EuiccMemoryResetRequest_resetOptions> | null = null;
-
-/**
- * @summary Encodes a(n) EuiccMemoryResetRequest_resetOptions into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EuiccMemoryResetRequest_resetOptions, encoded as an ASN.1 Element.
- */
-export
-function _encode_EuiccMemoryResetRequest_resetOptions (value: EuiccMemoryResetRequest_resetOptions, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EuiccMemoryResetRequest_resetOptions) { _cached_encoder_for_EuiccMemoryResetRequest_resetOptions = $._encodeBitString; }
-    return _cached_encoder_for_EuiccMemoryResetRequest_resetOptions(value, elGetter);
-}
+export const _decode_EuiccMemoryResetRequest_resetOptions = $._decodeBitString;
+export const _encode_EuiccMemoryResetRequest_resetOptions = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EUICCInfo2-euiccCategory ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * EUICCInfo2-euiccCategory ::= INTEGER {
+ *     other(0),
+ *     basicEuicc(1),
+ *     mediumEuicc(2),
+ *     contactlessEuicc(3)
+ * }
  * ```
  */
 export
@@ -83,35 +88,8 @@ const EUICCInfo2_euiccCategory_contactlessEuicc: EUICCInfo2_euiccCategory = 3; /
  */
 export
 const contactlessEuicc: EUICCInfo2_euiccCategory = EUICCInfo2_euiccCategory_contactlessEuicc; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_EUICCInfo2_euiccCategory: $.ASN1Decoder<EUICCInfo2_euiccCategory> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EUICCInfo2_euiccCategory
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EUICCInfo2_euiccCategory (el: _Element): EUICCInfo2_euiccCategory {
-    if (!_cached_decoder_for_EUICCInfo2_euiccCategory) { _cached_decoder_for_EUICCInfo2_euiccCategory = $._decodeInteger; }
-    return _cached_decoder_for_EUICCInfo2_euiccCategory(el);
-}
-
-let _cached_encoder_for_EUICCInfo2_euiccCategory: $.ASN1Encoder<EUICCInfo2_euiccCategory> | null = null;
-
-/**
- * @summary Encodes a(n) EUICCInfo2_euiccCategory into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EUICCInfo2_euiccCategory, encoded as an ASN.1 Element.
- */
-export
-function _encode_EUICCInfo2_euiccCategory (value: EUICCInfo2_euiccCategory, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EUICCInfo2_euiccCategory) { _cached_encoder_for_EUICCInfo2_euiccCategory = $._encodeInteger; }
-    return _cached_encoder_for_EUICCInfo2_euiccCategory(value, elGetter);
-}
+export const _decode_EUICCInfo2_euiccCategory = $._decodeInteger;
+export const _encode_EUICCInfo2_euiccCategory = $._encodeInteger;
 
 
 /* eslint-enable */

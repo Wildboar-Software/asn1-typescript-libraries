@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PrepareDownloadResponseOk, _decode_PrepareDownloadResponseOk, _encode_PrepareDownloadResponseOk } from "../RSPDefinitions/PrepareDownloadResponseOk.ta.mjs";
-// export { PrepareDownloadResponseOk, _decode_PrepareDownloadResponseOk, _encode_PrepareDownloadResponseOk } from "../RSPDefinitions/PrepareDownloadResponseOk.ta.mjs";
 import { PrepareDownloadResponseError, _decode_PrepareDownloadResponseError, _encode_PrepareDownloadResponseError } from "../RSPDefinitions/PrepareDownloadResponseError.ta.mjs";
-// export { PrepareDownloadResponseError, _decode_PrepareDownloadResponseError, _encode_PrepareDownloadResponseError } from "../RSPDefinitions/PrepareDownloadResponseError.ta.mjs";
 
 
 /**

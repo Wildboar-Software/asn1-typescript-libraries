@@ -156,7 +156,7 @@ let _cached_encoder_for_ReplaceSessionKeysRequest: $.ASN1Encoder<ReplaceSessionK
  */
 export
 function _encode_ReplaceSessionKeysRequest (value: ReplaceSessionKeysRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReplaceSessionKeysRequest) { _cached_encoder_for_ReplaceSessionKeysRequest = $._encode_implicit(_TagClass.context, 38, () => function (value: ReplaceSessionKeysRequest, elGetter: $.ASN1Encoder<ReplaceSessionKeysRequest>): _Element {
+    if (!_cached_encoder_for_ReplaceSessionKeysRequest) { _cached_encoder_for_ReplaceSessionKeysRequest = $._encode_implicit(_TagClass.context, 38, () => function (value: ReplaceSessionKeysRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeOctetString(value.initialMacChainingValue, $.BER),

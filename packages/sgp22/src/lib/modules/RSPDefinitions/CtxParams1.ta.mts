@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CtxParamsForCommonAuthentication, _decode_CtxParamsForCommonAuthentication, _encode_CtxParamsForCommonAuthentication } from "../RSPDefinitions/CtxParamsForCommonAuthentication.ta.mjs";
-// export { CtxParamsForCommonAuthentication, _decode_CtxParamsForCommonAuthentication, _encode_CtxParamsForCommonAuthentication } from "../RSPDefinitions/CtxParamsForCommonAuthentication.ta.mjs";
 
 
 /**

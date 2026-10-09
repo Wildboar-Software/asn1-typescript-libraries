@@ -5,8 +5,6 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CertificateList, _decode_CertificateList, _encode_CertificateList } from "../PKIX1Explicit88/CertificateList.ta.mjs";
-// export { CertificateList, _decode_CertificateList, _encode_CertificateList } from "../PKIX1Explicit88/CertificateList.ta.mjs";
 
 
 /**
@@ -32,7 +30,7 @@ class LoadCRLRequest {
          * @public
          * @readonly
          */
-        readonly crl: CertificateList
+        readonly crl: _Element
     ) {}
 
     /**
@@ -109,8 +107,7 @@ function _decode_LoadCRLRequest (el: _Element): LoadCRLRequest {
         throw new _ConstructionError("LoadCRLRequest contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "crl";
-    let crl!: CertificateList;
-    crl = _decode_CertificateList(sequence[0]);
+    const crl: _Element = $._decodeAny(sequence[0]);
     return new LoadCRLRequest(
         crl,
 
@@ -130,10 +127,10 @@ let _cached_encoder_for_LoadCRLRequest: $.ASN1Encoder<LoadCRLRequest> | null = n
  */
 export
 function _encode_LoadCRLRequest (value: LoadCRLRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LoadCRLRequest) { _cached_encoder_for_LoadCRLRequest = $._encode_implicit(_TagClass.context, 53, () => function (value: LoadCRLRequest, elGetter: $.ASN1Encoder<LoadCRLRequest>): _Element {
+    if (!_cached_encoder_for_LoadCRLRequest) { _cached_encoder_for_LoadCRLRequest = $._encode_implicit(_TagClass.context, 53, () => function (value: LoadCRLRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
-            /* REQUIRED   */ _encode_CertificateList(value.crl, $.BER)
+            /* REQUIRED   */ $._encodeAny(value.crl, $.BER)
         ],
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }, $.BER); }

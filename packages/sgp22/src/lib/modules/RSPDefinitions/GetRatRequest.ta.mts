@@ -124,7 +124,7 @@ let _cached_encoder_for_GetRatRequest: $.ASN1Encoder<GetRatRequest> | null = nul
  */
 export
 function _encode_GetRatRequest (value: GetRatRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetRatRequest) { _cached_encoder_for_GetRatRequest = $._encode_implicit(_TagClass.context, 67, () => function (value: GetRatRequest, elGetter: $.ASN1Encoder<GetRatRequest>): _Element {
+    if (!_cached_encoder_for_GetRatRequest) { _cached_encoder_for_GetRatRequest = $._encode_implicit(_TagClass.context, 67, () => function (): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }, $.BER); }

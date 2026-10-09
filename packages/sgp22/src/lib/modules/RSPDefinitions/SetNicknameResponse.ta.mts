@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_SetNicknameResponse_setNicknameResult, _encode_SetNicknameResponse_setNicknameResult, SetNicknameResponse_setNicknameResult } from "../RSPDefinitions/SetNicknameResponse-setNicknameResult.ta.mjs";
-// export { SetNicknameResponse_setNicknameResult, SetNicknameResponse_setNicknameResult_ok /* IMPORTED_LONG_NAMED_INTEGER */, ok /* IMPORTED_SHORT_NAMED_INTEGER */, SetNicknameResponse_setNicknameResult_iccidNotFound /* IMPORTED_LONG_NAMED_INTEGER */, iccidNotFound /* IMPORTED_SHORT_NAMED_INTEGER */, SetNicknameResponse_setNicknameResult_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SetNicknameResponse_setNicknameResult, _encode_SetNicknameResponse_setNicknameResult } from "../RSPDefinitions/SetNicknameResponse-setNicknameResult.ta.mjs";
 
 
 /**
@@ -129,7 +128,7 @@ let _cached_encoder_for_SetNicknameResponse: $.ASN1Encoder<SetNicknameResponse> 
  */
 export
 function _encode_SetNicknameResponse (value: SetNicknameResponse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SetNicknameResponse) { _cached_encoder_for_SetNicknameResponse = $._encode_implicit(_TagClass.context, 41, () => function (value: SetNicknameResponse, elGetter: $.ASN1Encoder<SetNicknameResponse>): _Element {
+    if (!_cached_encoder_for_SetNicknameResponse) { _cached_encoder_for_SetNicknameResponse = $._encode_implicit(_TagClass.context, 41, () => function (value: SetNicknameResponse): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_SetNicknameResponse_setNicknameResult(value.setNicknameResult, $.BER)

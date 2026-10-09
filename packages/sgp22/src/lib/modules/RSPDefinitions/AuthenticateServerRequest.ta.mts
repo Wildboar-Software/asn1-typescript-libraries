@@ -7,13 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServerSigned1, _decode_ServerSigned1, _encode_ServerSigned1 } from "../RSPDefinitions/ServerSigned1.ta.mjs";
-// export { ServerSigned1, _decode_ServerSigned1, _encode_ServerSigned1 } from "../RSPDefinitions/ServerSigned1.ta.mjs";
-import { SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "../PKIX1Implicit88/SubjectKeyIdentifier.ta.mjs";
-// export { SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "../PKIX1Implicit88/SubjectKeyIdentifier.ta.mjs";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
-// export { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
+import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
 import { CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefinitions/CtxParams1.ta.mjs";
-// export { CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefinitions/CtxParams1.ta.mjs";
 
 
 /**
@@ -54,7 +49,7 @@ class AuthenticateServerRequest {
          * @public
          * @readonly
          */
-        readonly euiccCiPKIdToBeUsed: SubjectKeyIdentifier,
+        readonly euiccCiPKIdToBeUsed: OCTET_STRING,
         /**
          * @summary `serverCertificate`.
          * @public
@@ -153,12 +148,12 @@ function _decode_AuthenticateServerRequest (el: _Element): AuthenticateServerReq
     sequence[4].name = "ctxParams1";
     let serverSigned1!: ServerSigned1;
     let serverSignature1!: OCTET_STRING;
-    let euiccCiPKIdToBeUsed!: SubjectKeyIdentifier;
+    let euiccCiPKIdToBeUsed!: OCTET_STRING;
     let serverCertificate!: Certificate;
     let ctxParams1!: CtxParams1;
     serverSigned1 = _decode_ServerSigned1(sequence[0]);
     serverSignature1 = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
-    euiccCiPKIdToBeUsed = _decode_SubjectKeyIdentifier(sequence[2]);
+    euiccCiPKIdToBeUsed = $._decodeOctetString(sequence[2]);
     serverCertificate = _decode_Certificate(sequence[3]);
     ctxParams1 = _decode_CtxParams1(sequence[4]);
     return new AuthenticateServerRequest(
@@ -184,12 +179,12 @@ let _cached_encoder_for_AuthenticateServerRequest: $.ASN1Encoder<AuthenticateSer
  */
 export
 function _encode_AuthenticateServerRequest (value: AuthenticateServerRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateServerRequest) { _cached_encoder_for_AuthenticateServerRequest = $._encode_implicit(_TagClass.context, 56, () => function (value: AuthenticateServerRequest, elGetter: $.ASN1Encoder<AuthenticateServerRequest>): _Element {
+    if (!_cached_encoder_for_AuthenticateServerRequest) { _cached_encoder_for_AuthenticateServerRequest = $._encode_implicit(_TagClass.context, 56, () => function (value: AuthenticateServerRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ServerSigned1(value.serverSigned1, $.BER),
             /* REQUIRED   */ $._encode_implicit(_TagClass.application, 55, () => $._encodeOctetString, $.BER)(value.serverSignature1, $.BER),
-            /* REQUIRED   */ _encode_SubjectKeyIdentifier(value.euiccCiPKIdToBeUsed, $.BER),
+            /* REQUIRED   */ $._encodeOctetString(value.euiccCiPKIdToBeUsed, $.BER),
             /* REQUIRED   */ _encode_Certificate(value.serverCertificate, $.BER),
             /* REQUIRED   */ _encode_CtxParams1(value.ctxParams1, $.BER)
         ],

@@ -129,7 +129,7 @@ let _cached_encoder_for_NotificationSentRequest: $.ASN1Encoder<NotificationSentR
  */
 export
 function _encode_NotificationSentRequest (value: NotificationSentRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotificationSentRequest) { _cached_encoder_for_NotificationSentRequest = $._encode_implicit(_TagClass.context, 48, () => function (value: NotificationSentRequest, elGetter: $.ASN1Encoder<NotificationSentRequest>): _Element {
+    if (!_cached_encoder_for_NotificationSentRequest) { _cached_encoder_for_NotificationSentRequest = $._encode_implicit(_TagClass.context, 48, () => function (value: NotificationSentRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.seqNumber, $.BER)

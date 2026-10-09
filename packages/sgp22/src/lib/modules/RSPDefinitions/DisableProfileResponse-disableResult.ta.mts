@@ -14,7 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DisableProfileResponse-disableResult ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DisableProfileResponse-disableResult ::= INTEGER {
+ *     ok(0),
+ *     iccidOrAidNotFound(1),
+ *     profileNotInEnabledState(2),
+ *     disallowedByPolicy(3),
+ *     catBusy(5),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export
@@ -115,35 +122,8 @@ const DisableProfileResponse_disableResult_undefinedError: DisableProfileRespons
  */
 export
 const undefinedError: DisableProfileResponse_disableResult = DisableProfileResponse_disableResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DisableProfileResponse_disableResult: $.ASN1Decoder<DisableProfileResponse_disableResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DisableProfileResponse_disableResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DisableProfileResponse_disableResult (el: _Element): DisableProfileResponse_disableResult {
-    if (!_cached_decoder_for_DisableProfileResponse_disableResult) { _cached_decoder_for_DisableProfileResponse_disableResult = $._decodeInteger; }
-    return _cached_decoder_for_DisableProfileResponse_disableResult(el);
-}
-
-let _cached_encoder_for_DisableProfileResponse_disableResult: $.ASN1Encoder<DisableProfileResponse_disableResult> | null = null;
-
-/**
- * @summary Encodes a(n) DisableProfileResponse_disableResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DisableProfileResponse_disableResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_DisableProfileResponse_disableResult (value: DisableProfileResponse_disableResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DisableProfileResponse_disableResult) { _cached_encoder_for_DisableProfileResponse_disableResult = $._encodeInteger; }
-    return _cached_encoder_for_DisableProfileResponse_disableResult(value, elGetter);
-}
+export const _decode_DisableProfileResponse_disableResult = $._decodeInteger;
+export const _encode_DisableProfileResponse_disableResult = $._encodeInteger;
 
 
 /* eslint-enable */

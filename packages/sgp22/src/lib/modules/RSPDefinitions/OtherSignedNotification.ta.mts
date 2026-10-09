@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NotificationMetadata, _decode_NotificationMetadata, _encode_NotificationMetadata } from "../RSPDefinitions/NotificationMetadata.ta.mjs";
-// export { NotificationMetadata, _decode_NotificationMetadata, _encode_NotificationMetadata } from "../RSPDefinitions/NotificationMetadata.ta.mjs";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
-// export { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
+import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
 
 
 /**
@@ -168,7 +166,7 @@ let _cached_encoder_for_OtherSignedNotification: $.ASN1Encoder<OtherSignedNotifi
  */
 export
 function _encode_OtherSignedNotification (value: OtherSignedNotification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OtherSignedNotification) { _cached_encoder_for_OtherSignedNotification = function (value: OtherSignedNotification, elGetter: $.ASN1Encoder<OtherSignedNotification>): _Element {
+    if (!_cached_encoder_for_OtherSignedNotification) { _cached_encoder_for_OtherSignedNotification = function (value: OtherSignedNotification): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_NotificationMetadata(value.tbsOtherNotification, $.BER),

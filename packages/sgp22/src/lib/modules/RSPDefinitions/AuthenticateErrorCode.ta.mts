@@ -147,35 +147,8 @@ const AuthenticateErrorCode_undefinedError: AuthenticateErrorCode = 127; /* LONG
  */
 export
 const undefinedError: AuthenticateErrorCode = AuthenticateErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_AuthenticateErrorCode: $.ASN1Decoder<AuthenticateErrorCode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AuthenticateErrorCode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AuthenticateErrorCode (el: _Element): AuthenticateErrorCode {
-    if (!_cached_decoder_for_AuthenticateErrorCode) { _cached_decoder_for_AuthenticateErrorCode = $._decodeInteger; }
-    return _cached_decoder_for_AuthenticateErrorCode(el);
-}
-
-let _cached_encoder_for_AuthenticateErrorCode: $.ASN1Encoder<AuthenticateErrorCode> | null = null;
-
-/**
- * @summary Encodes a(n) AuthenticateErrorCode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AuthenticateErrorCode, encoded as an ASN.1 Element.
- */
-export
-function _encode_AuthenticateErrorCode (value: AuthenticateErrorCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateErrorCode) { _cached_encoder_for_AuthenticateErrorCode = $._encodeInteger; }
-    return _cached_encoder_for_AuthenticateErrorCode(value, elGetter);
-}
+export const _decode_AuthenticateErrorCode = $._decodeInteger;
+export const _encode_AuthenticateErrorCode = $._encodeInteger;
 
 
 /* eslint-enable */

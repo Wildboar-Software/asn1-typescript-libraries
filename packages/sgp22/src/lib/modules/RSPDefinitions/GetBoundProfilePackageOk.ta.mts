@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { BoundProfilePackage, _decode_BoundProfilePackage, _encode_BoundProfilePackage } from "../RSPDefinitions/BoundProfilePackage.ta.mjs";
-// export { BoundProfilePackage, _decode_BoundProfilePackage, _encode_BoundProfilePackage } from "../RSPDefinitions/BoundProfilePackage.ta.mjs";
 
 
 /**
@@ -143,7 +141,7 @@ let _cached_encoder_for_GetBoundProfilePackageOk: $.ASN1Encoder<GetBoundProfileP
  */
 export
 function _encode_GetBoundProfilePackageOk (value: GetBoundProfilePackageOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetBoundProfilePackageOk) { _cached_encoder_for_GetBoundProfilePackageOk = function (value: GetBoundProfilePackageOk, elGetter: $.ASN1Encoder<GetBoundProfilePackageOk>): _Element {
+    if (!_cached_encoder_for_GetBoundProfilePackageOk) { _cached_encoder_for_GetBoundProfilePackageOk = function (value: GetBoundProfilePackageOk): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

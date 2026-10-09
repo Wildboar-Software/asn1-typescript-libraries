@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LpaeActivationRequest_lpaeOption, _decode_LpaeActivationRequest_lpaeOption, _encode_LpaeActivationRequest_lpaeOption } from "../RSPDefinitions/LpaeActivationRequest-lpaeOption.ta.mjs";
-// export { LpaeActivationRequest_lpaeOption, LpaeActivationRequest_lpaeOption_activateCatBasedLpae /* IMPORTED_LONG_NAMED_BIT */, activateCatBasedLpae /* IMPORTED_SHORT_NAMED_BIT */, LpaeActivationRequest_lpaeOption_activateScwsBasedLpae /* IMPORTED_LONG_NAMED_BIT */, activateScwsBasedLpae /* IMPORTED_SHORT_NAMED_BIT */, _decode_LpaeActivationRequest_lpaeOption, _encode_LpaeActivationRequest_lpaeOption } from "../RSPDefinitions/LpaeActivationRequest-lpaeOption.ta.mjs";
 
 
 /**
@@ -132,7 +131,7 @@ let _cached_encoder_for_LpaeActivationRequest: $.ASN1Encoder<LpaeActivationReque
  */
 export
 function _encode_LpaeActivationRequest (value: LpaeActivationRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LpaeActivationRequest) { _cached_encoder_for_LpaeActivationRequest = $._encode_implicit(_TagClass.context, 66, () => function (value: LpaeActivationRequest, elGetter: $.ASN1Encoder<LpaeActivationRequest>): _Element {
+    if (!_cached_encoder_for_LpaeActivationRequest) { _cached_encoder_for_LpaeActivationRequest = $._encode_implicit(_TagClass.context, 66, () => function (value: LpaeActivationRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_LpaeActivationRequest_lpaeOption(value.lpaeOption, $.BER)

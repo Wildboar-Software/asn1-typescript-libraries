@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EuiccSigned1, _decode_EuiccSigned1, _encode_EuiccSigned1 } from "../RSPDefinitions/EuiccSigned1.ta.mjs";
-// export { EuiccSigned1, _decode_EuiccSigned1, _encode_EuiccSigned1 } from "../RSPDefinitions/EuiccSigned1.ta.mjs";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
-// export { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
+import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
 
 
 /**
@@ -168,7 +166,7 @@ let _cached_encoder_for_AuthenticateResponseOk: $.ASN1Encoder<AuthenticateRespon
  */
 export
 function _encode_AuthenticateResponseOk (value: AuthenticateResponseOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateResponseOk) { _cached_encoder_for_AuthenticateResponseOk = function (value: AuthenticateResponseOk, elGetter: $.ASN1Encoder<AuthenticateResponseOk>): _Element {
+    if (!_cached_encoder_for_AuthenticateResponseOk) { _cached_encoder_for_AuthenticateResponseOk = function (value: AuthenticateResponseOk): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_EuiccSigned1(value.euiccSigned1, $.BER),

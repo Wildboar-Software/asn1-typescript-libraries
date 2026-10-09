@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Octet1, _decode_Octet1, _encode_Octet1 } from "../RSPDefinitions/Octet1.ta.mjs";
-// export { Octet1, _decode_Octet1, _encode_Octet1 } from "../RSPDefinitions/Octet1.ta.mjs";
 
 
 /**
@@ -129,7 +128,7 @@ let _cached_encoder_for_GetEuiccDataRequest: $.ASN1Encoder<GetEuiccDataRequest> 
  */
 export
 function _encode_GetEuiccDataRequest (value: GetEuiccDataRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetEuiccDataRequest) { _cached_encoder_for_GetEuiccDataRequest = $._encode_implicit(_TagClass.context, 62, () => function (value: GetEuiccDataRequest, elGetter: $.ASN1Encoder<GetEuiccDataRequest>): _Element {
+    if (!_cached_encoder_for_GetEuiccDataRequest) { _cached_encoder_for_GetEuiccDataRequest = $._encode_implicit(_TagClass.context, 62, () => function (value: GetEuiccDataRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.application, 28, () => _encode_Octet1, $.BER)(value.tagList, $.BER)

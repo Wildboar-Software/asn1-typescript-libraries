@@ -65,6 +65,7 @@ jobs:
           - "scrypt-0"
           - "scvp"
           - "sec1"
+          - "sgp22"
           - "sio"
           - "snmp"
           - "spkac"

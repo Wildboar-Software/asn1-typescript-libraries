@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DeleteProfileResponse-deleteResult ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DeleteProfileResponse-deleteResult ::= INTEGER {
+ *     ok(0),
+ *     iccidOrAidNotFound(1),
+ *     profileNotInDisabledState(2),
+ *     disallowedByPolicy(3),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export
@@ -99,35 +105,8 @@ const DeleteProfileResponse_deleteResult_undefinedError: DeleteProfileResponse_d
  */
 export
 const undefinedError: DeleteProfileResponse_deleteResult = DeleteProfileResponse_deleteResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DeleteProfileResponse_deleteResult: $.ASN1Decoder<DeleteProfileResponse_deleteResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DeleteProfileResponse_deleteResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DeleteProfileResponse_deleteResult (el: _Element): DeleteProfileResponse_deleteResult {
-    if (!_cached_decoder_for_DeleteProfileResponse_deleteResult) { _cached_decoder_for_DeleteProfileResponse_deleteResult = $._decodeInteger; }
-    return _cached_decoder_for_DeleteProfileResponse_deleteResult(el);
-}
-
-let _cached_encoder_for_DeleteProfileResponse_deleteResult: $.ASN1Encoder<DeleteProfileResponse_deleteResult> | null = null;
-
-/**
- * @summary Encodes a(n) DeleteProfileResponse_deleteResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeleteProfileResponse_deleteResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_DeleteProfileResponse_deleteResult (value: DeleteProfileResponse_deleteResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DeleteProfileResponse_deleteResult) { _cached_encoder_for_DeleteProfileResponse_deleteResult = $._encodeInteger; }
-    return _cached_encoder_for_DeleteProfileResponse_deleteResult(value, elGetter);
-}
+export const _decode_DeleteProfileResponse_deleteResult = $._decodeInteger;
+export const _encode_DeleteProfileResponse_deleteResult = $._encodeInteger;
 
 
 /* eslint-enable */

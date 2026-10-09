@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Octet1, _decode_Octet1, _encode_Octet1 } from "../RSPDefinitions/Octet1.ta.mjs";
-// export { Octet1, _decode_Octet1, _encode_Octet1 } from "../RSPDefinitions/Octet1.ta.mjs";
 import { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
-// export { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
 
 
 /**
@@ -155,7 +153,7 @@ let _cached_encoder_for_ControlRefTemplate: $.ASN1Encoder<ControlRefTemplate> | 
  */
 export
 function _encode_ControlRefTemplate (value: ControlRefTemplate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ControlRefTemplate) { _cached_encoder_for_ControlRefTemplate = function (value: ControlRefTemplate, elGetter: $.ASN1Encoder<ControlRefTemplate>): _Element {
+    if (!_cached_encoder_for_ControlRefTemplate) { _cached_encoder_for_ControlRefTemplate = function (value: ControlRefTemplate): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_Octet1, $.BER)(value.keyType, $.BER),

@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { AuthenticateServerResponse, _decode_AuthenticateServerResponse, _encode_AuthenticateServerResponse } from "../RSPDefinitions/AuthenticateServerResponse.ta.mjs";
-// export { AuthenticateServerResponse, _decode_AuthenticateServerResponse, _encode_AuthenticateServerResponse } from "../RSPDefinitions/AuthenticateServerResponse.ta.mjs";
 
 
 /**
@@ -156,7 +154,7 @@ let _cached_encoder_for_AuthenticateClientRequest: $.ASN1Encoder<AuthenticateCli
  */
 export
 function _encode_AuthenticateClientRequest (value: AuthenticateClientRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateClientRequest) { _cached_encoder_for_AuthenticateClientRequest = $._encode_implicit(_TagClass.context, 59, () => function (value: AuthenticateClientRequest, elGetter: $.ASN1Encoder<AuthenticateClientRequest>): _Element {
+    if (!_cached_encoder_for_AuthenticateClientRequest) { _cached_encoder_for_AuthenticateClientRequest = $._encode_implicit(_TagClass.context, 59, () => function (value: AuthenticateClientRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

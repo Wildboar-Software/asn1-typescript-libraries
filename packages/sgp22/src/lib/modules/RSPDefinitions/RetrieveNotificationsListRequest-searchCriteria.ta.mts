@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent } from "../RSPDefinitions/NotificationEvent.ta.mjs";
-// export { NotificationEvent, NotificationEvent_notificationInstall /* IMPORTED_LONG_NAMED_BIT */, notificationInstall /* IMPORTED_SHORT_NAMED_BIT */, NotificationEvent_notificationEnable /* IMPORTED_LONG_NAMED_BIT */, notificationEnable /* IMPORTED_SHORT_NAMED_BIT */, NotificationEvent_notificationDisable /* IMPORTED_LONG_NAMED_BIT */, notificationDisable /* IMPORTED_SHORT_NAMED_BIT */, NotificationEvent_notificationDelete /* IMPORTED_LONG_NAMED_BIT */, notificationDelete /* IMPORTED_SHORT_NAMED_BIT */, _decode_NotificationEvent, _encode_NotificationEvent } from "../RSPDefinitions/NotificationEvent.ta.mjs";
 
 
 /**
@@ -16,7 +15,10 @@ import { NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RetrieveNotificationsListRequest-searchCriteria ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RetrieveNotificationsListRequest-searchCriteria ::= CHOICE {
+ *     seqNumber [0] INTEGER,
+ *     profileManagementOperation [1] NotificationEvent
+ * }
  * ```
  */
 export

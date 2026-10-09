@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Octet16.ta.mjs";
-// export { Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Octet16.ta.mjs";
 
 
 /**
@@ -168,7 +166,7 @@ let _cached_encoder_for_ServerSigned1: $.ASN1Encoder<ServerSigned1> | null = nul
  */
 export
 function _encode_ServerSigned1 (value: ServerSigned1, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServerSigned1) { _cached_encoder_for_ServerSigned1 = function (value: ServerSigned1, elGetter: $.ASN1Encoder<ServerSigned1>): _Element {
+    if (!_cached_encoder_for_ServerSigned1) { _cached_encoder_for_ServerSigned1 = function (value: ServerSigned1): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

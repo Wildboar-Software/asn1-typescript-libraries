@@ -7,13 +7,12 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
+import { ASN1ConstructionError } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IconType, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
-// export { IconType, IconType_jpg /* IMPORTED_LONG_NAMED_INTEGER */, jpg /* IMPORTED_SHORT_NAMED_INTEGER */, IconType_png /* IMPORTED_LONG_NAMED_INTEGER */, png /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
 import { PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
-// export { PprIds, PprIds_pprUpdateControl /* IMPORTED_LONG_NAMED_BIT */, pprUpdateControl /* IMPORTED_SHORT_NAMED_BIT */, PprIds_ppr1 /* IMPORTED_LONG_NAMED_BIT */, ppr1 /* IMPORTED_SHORT_NAMED_BIT */, PprIds_ppr2 /* IMPORTED_LONG_NAMED_BIT */, ppr2 /* IMPORTED_SHORT_NAMED_BIT */, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
 import { VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
-// export { VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
 
 
 /**
@@ -81,7 +80,20 @@ class UpdateMetadataRequest {
          * @readonly
          */
         readonly reserved103: OPTIONAL<BOOLEAN>
-    ) {}
+    ) {
+        if (this.serviceProviderName !== undefined && (this.serviceProviderName.length > 32)) {
+            throw new ASN1SizeError("UpdateMetadataRequest.serviceProviderName violates SIZE constraint");
+        }
+        if (this.profileName !== undefined && (this.profileName.length > 64)) {
+            throw new ASN1SizeError("UpdateMetadataRequest.profileName violates SIZE constraint");
+        }
+        if (this.icon !== undefined && (this.icon.length > 1024)) {
+            throw new ASN1SizeError("UpdateMetadataRequest.icon violates SIZE constraint");
+        }
+        if (this.icon !== undefined && this.iconType === undefined) {
+            throw new ASN1ConstructionError("UpdateMetadataRequest.icon requires iconType");
+        }
+    }
 
     /**
      * @summary Restructures an object into a UpdateMetadataRequest
@@ -204,7 +216,7 @@ let _cached_encoder_for_UpdateMetadataRequest: $.ASN1Encoder<UpdateMetadataReque
  */
 export
 function _encode_UpdateMetadataRequest (value: UpdateMetadataRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UpdateMetadataRequest) { _cached_encoder_for_UpdateMetadataRequest = $._encode_implicit(_TagClass.context, 42, () => function (value: UpdateMetadataRequest, elGetter: $.ASN1Encoder<UpdateMetadataRequest>): _Element {
+    if (!_cached_encoder_for_UpdateMetadataRequest) { _cached_encoder_for_UpdateMetadataRequest = $._encode_implicit(_TagClass.context, 42, () => function (value: UpdateMetadataRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.serviceProviderName === undefined) ? undefined : $._encode_implicit(_TagClass.context, 17, () => $._encodeUTF8String, $.BER)(value.serviceProviderName, $.BER)),

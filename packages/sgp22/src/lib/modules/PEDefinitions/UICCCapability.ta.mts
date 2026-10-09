@@ -505,35 +505,8 @@ const UICCCapability_iotminimal: number = 31; /* LONG_NAMED_BIT */
  */
 export
 const iotminimal: number = UICCCapability_iotminimal; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_UICCCapability: $.ASN1Decoder<UICCCapability> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) UICCCapability
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_UICCCapability (el: _Element): UICCCapability {
-    if (!_cached_decoder_for_UICCCapability) { _cached_decoder_for_UICCCapability = $._decodeBitString; }
-    return _cached_decoder_for_UICCCapability(el);
-}
-
-let _cached_encoder_for_UICCCapability: $.ASN1Encoder<UICCCapability> | null = null;
-
-/**
- * @summary Encodes a(n) UICCCapability into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UICCCapability, encoded as an ASN.1 Element.
- */
-export
-function _encode_UICCCapability (value: UICCCapability, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UICCCapability) { _cached_encoder_for_UICCCapability = $._encodeBitString; }
-    return _cached_encoder_for_UICCCapability(value, elGetter);
-}
+export const _decode_UICCCapability = $._decodeBitString;
+export const _encode_UICCCapability = $._encodeBitString;
 
 
 /* eslint-enable */

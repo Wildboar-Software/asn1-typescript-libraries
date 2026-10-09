@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EuiccMemoryResetResponse-resetResult ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * EuiccMemoryResetResponse-resetResult ::= INTEGER {
+ *     ok(0),
+ *     nothingToDelete(1),
+ *     catBusy(5),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export
@@ -83,35 +88,8 @@ const EuiccMemoryResetResponse_resetResult_undefinedError: EuiccMemoryResetRespo
  */
 export
 const undefinedError: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_EuiccMemoryResetResponse_resetResult: $.ASN1Decoder<EuiccMemoryResetResponse_resetResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EuiccMemoryResetResponse_resetResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EuiccMemoryResetResponse_resetResult (el: _Element): EuiccMemoryResetResponse_resetResult {
-    if (!_cached_decoder_for_EuiccMemoryResetResponse_resetResult) { _cached_decoder_for_EuiccMemoryResetResponse_resetResult = $._decodeInteger; }
-    return _cached_decoder_for_EuiccMemoryResetResponse_resetResult(el);
-}
-
-let _cached_encoder_for_EuiccMemoryResetResponse_resetResult: $.ASN1Encoder<EuiccMemoryResetResponse_resetResult> | null = null;
-
-/**
- * @summary Encodes a(n) EuiccMemoryResetResponse_resetResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EuiccMemoryResetResponse_resetResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_EuiccMemoryResetResponse_resetResult (value: EuiccMemoryResetResponse_resetResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EuiccMemoryResetResponse_resetResult) { _cached_encoder_for_EuiccMemoryResetResponse_resetResult = $._encodeInteger; }
-    return _cached_encoder_for_EuiccMemoryResetResponse_resetResult(value, elGetter);
-}
+export const _decode_EuiccMemoryResetResponse_resetResult = $._decodeInteger;
+export const _encode_EuiccMemoryResetResponse_resetResult = $._encodeInteger;
 
 
 /* eslint-enable */

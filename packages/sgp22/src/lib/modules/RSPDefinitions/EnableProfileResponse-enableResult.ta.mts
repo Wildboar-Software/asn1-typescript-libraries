@@ -14,7 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EnableProfileResponse-enableResult ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * EnableProfileResponse-enableResult ::= INTEGER {
+ *     ok(0),
+ *     iccidOrAidNotFound(1),
+ *     profileNotInDisabledState(2),
+ *     disallowedByPolicy(3),
+ *     wrongProfileReenabling(4),
+ *     catBusy(5),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export
@@ -131,35 +139,8 @@ const EnableProfileResponse_enableResult_undefinedError: EnableProfileResponse_e
  */
 export
 const undefinedError: EnableProfileResponse_enableResult = EnableProfileResponse_enableResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_EnableProfileResponse_enableResult: $.ASN1Decoder<EnableProfileResponse_enableResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EnableProfileResponse_enableResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EnableProfileResponse_enableResult (el: _Element): EnableProfileResponse_enableResult {
-    if (!_cached_decoder_for_EnableProfileResponse_enableResult) { _cached_decoder_for_EnableProfileResponse_enableResult = $._decodeInteger; }
-    return _cached_decoder_for_EnableProfileResponse_enableResult(el);
-}
-
-let _cached_encoder_for_EnableProfileResponse_enableResult: $.ASN1Encoder<EnableProfileResponse_enableResult> | null = null;
-
-/**
- * @summary Encodes a(n) EnableProfileResponse_enableResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EnableProfileResponse_enableResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_EnableProfileResponse_enableResult (value: EnableProfileResponse_enableResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EnableProfileResponse_enableResult) { _cached_encoder_for_EnableProfileResponse_enableResult = $._encodeInteger; }
-    return _cached_encoder_for_EnableProfileResponse_enableResult(value, elGetter);
-}
+export const _decode_EnableProfileResponse_enableResult = $._decodeInteger;
+export const _encode_EnableProfileResponse_enableResult = $._encodeInteger;
 
 
 /* eslint-enable */

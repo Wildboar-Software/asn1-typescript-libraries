@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
-// export { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
 import { ISDRProprietaryApplicationTemplate_lpaeSupport, _decode_ISDRProprietaryApplicationTemplate_lpaeSupport, _encode_ISDRProprietaryApplicationTemplate_lpaeSupport } from "../RSPDefinitions/ISDRProprietaryApplicationTemplate-lpaeSupport.ta.mjs";
-// export { ISDRProprietaryApplicationTemplate_lpaeSupport, ISDRProprietaryApplicationTemplate_lpaeSupport_lpaeUsingCat /* IMPORTED_LONG_NAMED_BIT */, lpaeUsingCat /* IMPORTED_SHORT_NAMED_BIT */, ISDRProprietaryApplicationTemplate_lpaeSupport_lpaeUsingScws /* IMPORTED_LONG_NAMED_BIT */, lpaeUsingScws /* IMPORTED_SHORT_NAMED_BIT */, _decode_ISDRProprietaryApplicationTemplate_lpaeSupport, _encode_ISDRProprietaryApplicationTemplate_lpaeSupport } from "../RSPDefinitions/ISDRProprietaryApplicationTemplate-lpaeSupport.ta.mjs";
 
 
 /**
@@ -147,7 +145,7 @@ let _cached_encoder_for_ISDRProprietaryApplicationTemplate: $.ASN1Encoder<ISDRPr
  */
 export
 function _encode_ISDRProprietaryApplicationTemplate (value: ISDRProprietaryApplicationTemplate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ISDRProprietaryApplicationTemplate) { _cached_encoder_for_ISDRProprietaryApplicationTemplate = $._encode_implicit(_TagClass.private, 0, () => function (value: ISDRProprietaryApplicationTemplate, elGetter: $.ASN1Encoder<ISDRProprietaryApplicationTemplate>): _Element {
+    if (!_cached_encoder_for_ISDRProprietaryApplicationTemplate) { _cached_encoder_for_ISDRProprietaryApplicationTemplate = $._encode_implicit(_TagClass.private, 0, () => function (value: ISDRProprietaryApplicationTemplate): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_VersionType, $.BER)(value.svn, $.BER),

@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
-// export { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
 import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
-// export { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
 
 
 /**
@@ -17,7 +15,10 @@ import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DisableProfileRequest-profileIdentifier ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DisableProfileRequest-profileIdentifier ::= CHOICE {
+ *     isdpAid [APPLICATION 15] OctetTo16, -- AID, tag '4F'
+ *     iccid Iccid -- ICCID, tag '5A'
+ * }
  * ```
  */
 export

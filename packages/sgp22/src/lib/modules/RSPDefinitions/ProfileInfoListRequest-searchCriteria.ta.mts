@@ -5,11 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
-// export { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
 import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
-// export { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
 import { ProfileClass, _decode_ProfileClass, _encode_ProfileClass } from "../RSPDefinitions/ProfileClass.ta.mjs";
-// export { ProfileClass, ProfileClass_test /* IMPORTED_LONG_NAMED_INTEGER */, test /* IMPORTED_SHORT_NAMED_INTEGER */, ProfileClass_provisioning /* IMPORTED_LONG_NAMED_INTEGER */, provisioning /* IMPORTED_SHORT_NAMED_INTEGER */, ProfileClass_operational /* IMPORTED_LONG_NAMED_INTEGER */, operational /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ProfileClass, _encode_ProfileClass } from "../RSPDefinitions/ProfileClass.ta.mjs";
 
 
 /**
@@ -19,7 +16,11 @@ import { ProfileClass, _decode_ProfileClass, _encode_ProfileClass } from "../RSP
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileInfoListRequest-searchCriteria ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileInfoListRequest-searchCriteria ::= CHOICE {
+ *     isdpAid [APPLICATION 15] OctetTo16, -- AID of the ISD-P, tag '4F'
+ *     iccid Iccid, -- ICCID, tag '5A'
+ *     profileClass [21] ProfileClass -- Tag '95'
+ * }
  * ```
  */
 export

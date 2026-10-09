@@ -115,35 +115,8 @@ const BppCommandId_loadProfileElements: BppCommandId = 5; /* LONG_NAMED_INTEGER_
  */
 export
 const loadProfileElements: BppCommandId = BppCommandId_loadProfileElements; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_BppCommandId: $.ASN1Decoder<BppCommandId> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) BppCommandId
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_BppCommandId (el: _Element): BppCommandId {
-    if (!_cached_decoder_for_BppCommandId) { _cached_decoder_for_BppCommandId = $._decodeInteger; }
-    return _cached_decoder_for_BppCommandId(el);
-}
-
-let _cached_encoder_for_BppCommandId: $.ASN1Encoder<BppCommandId> | null = null;
-
-/**
- * @summary Encodes a(n) BppCommandId into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BppCommandId, encoded as an ASN.1 Element.
- */
-export
-function _encode_BppCommandId (value: BppCommandId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BppCommandId) { _cached_encoder_for_BppCommandId = $._encodeInteger; }
-    return _cached_encoder_for_BppCommandId(value, elGetter);
-}
+export const _decode_BppCommandId = $._decodeInteger;
+export const _encode_BppCommandId = $._encodeInteger;
 
 
 /* eslint-enable */

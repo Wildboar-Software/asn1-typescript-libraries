@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DpProprietaryData, _decode_DpProprietaryData, _encode_DpProprietaryData } from "../RSPDefinitions/DpProprietaryData.ta.mjs";
-// export { DpProprietaryData, _decode_DpProprietaryData, _encode_DpProprietaryData } from "../RSPDefinitions/DpProprietaryData.ta.mjs";
 
 
 /**
@@ -131,7 +130,7 @@ let _cached_encoder_for_ConfigureISDPRequest: $.ASN1Encoder<ConfigureISDPRequest
  */
 export
 function _encode_ConfigureISDPRequest (value: ConfigureISDPRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConfigureISDPRequest) { _cached_encoder_for_ConfigureISDPRequest = $._encode_implicit(_TagClass.context, 36, () => function (value: ConfigureISDPRequest, elGetter: $.ASN1Encoder<ConfigureISDPRequest>): _Element {
+    if (!_cached_encoder_for_ConfigureISDPRequest) { _cached_encoder_for_ConfigureISDPRequest = $._encode_implicit(_TagClass.context, 36, () => function (value: ConfigureISDPRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.dpProprietaryData === undefined) ? undefined : $._encode_implicit(_TagClass.context, 24, () => _encode_DpProprietaryData, $.BER)(value.dpProprietaryData, $.BER))

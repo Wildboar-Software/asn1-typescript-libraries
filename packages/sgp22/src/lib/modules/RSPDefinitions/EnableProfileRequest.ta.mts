@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EnableProfileRequest_profileIdentifier, _decode_EnableProfileRequest_profileIdentifier, _encode_EnableProfileRequest_profileIdentifier } from "../RSPDefinitions/EnableProfileRequest-profileIdentifier.ta.mjs";
-// export { EnableProfileRequest_profileIdentifier, _decode_EnableProfileRequest_profileIdentifier, _encode_EnableProfileRequest_profileIdentifier } from "../RSPDefinitions/EnableProfileRequest-profileIdentifier.ta.mjs";
 
 
 /**
@@ -145,7 +144,7 @@ let _cached_encoder_for_EnableProfileRequest: $.ASN1Encoder<EnableProfileRequest
  */
 export
 function _encode_EnableProfileRequest (value: EnableProfileRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EnableProfileRequest) { _cached_encoder_for_EnableProfileRequest = $._encode_implicit(_TagClass.context, 49, () => function (value: EnableProfileRequest, elGetter: $.ASN1Encoder<EnableProfileRequest>): _Element {
+    if (!_cached_encoder_for_EnableProfileRequest) { _cached_encoder_for_EnableProfileRequest = $._encode_implicit(_TagClass.context, 49, () => function (value: EnableProfileRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_EnableProfileRequest_profileIdentifier(value.profileIdentifier, $.BER),

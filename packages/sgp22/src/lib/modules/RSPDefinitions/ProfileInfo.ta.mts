@@ -7,29 +7,20 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
+import { ASN1ConstructionError } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
-// export { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
 import { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
-// export { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
 import { ProfileState, _decode_ProfileState, _encode_ProfileState } from "../RSPDefinitions/ProfileState.ta.mjs";
-// export { ProfileState, ProfileState_disabled /* IMPORTED_LONG_NAMED_INTEGER */, disabled /* IMPORTED_SHORT_NAMED_INTEGER */, ProfileState_enabled /* IMPORTED_LONG_NAMED_INTEGER */, enabled /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ProfileState, _encode_ProfileState } from "../RSPDefinitions/ProfileState.ta.mjs";
 import { IconType, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
-// export { IconType, IconType_jpg /* IMPORTED_LONG_NAMED_INTEGER */, jpg /* IMPORTED_SHORT_NAMED_INTEGER */, IconType_png /* IMPORTED_LONG_NAMED_INTEGER */, png /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
 import { ProfileClass, _decode_ProfileClass, _encode_ProfileClass } from "../RSPDefinitions/ProfileClass.ta.mjs";
-// export { ProfileClass, ProfileClass_test /* IMPORTED_LONG_NAMED_INTEGER */, test /* IMPORTED_SHORT_NAMED_INTEGER */, ProfileClass_provisioning /* IMPORTED_LONG_NAMED_INTEGER */, provisioning /* IMPORTED_SHORT_NAMED_INTEGER */, ProfileClass_operational /* IMPORTED_LONG_NAMED_INTEGER */, operational /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ProfileClass, _encode_ProfileClass } from "../RSPDefinitions/ProfileClass.ta.mjs";
 import { NotificationConfigurationInformation, _decode_NotificationConfigurationInformation, _encode_NotificationConfigurationInformation } from "../RSPDefinitions/NotificationConfigurationInformation.ta.mjs";
-// export { NotificationConfigurationInformation, _decode_NotificationConfigurationInformation, _encode_NotificationConfigurationInformation } from "../RSPDefinitions/NotificationConfigurationInformation.ta.mjs";
 import { OperatorId, _decode_OperatorId, _encode_OperatorId } from "../RSPDefinitions/OperatorId.ta.mjs";
-// export { OperatorId, _decode_OperatorId, _encode_OperatorId } from "../RSPDefinitions/OperatorId.ta.mjs";
 import { DpProprietaryData, _decode_DpProprietaryData, _encode_DpProprietaryData } from "../RSPDefinitions/DpProprietaryData.ta.mjs";
-// export { DpProprietaryData, _decode_DpProprietaryData, _encode_DpProprietaryData } from "../RSPDefinitions/DpProprietaryData.ta.mjs";
 import { PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
-// export { PprIds, PprIds_pprUpdateControl /* IMPORTED_LONG_NAMED_BIT */, pprUpdateControl /* IMPORTED_SHORT_NAMED_BIT */, PprIds_ppr1 /* IMPORTED_LONG_NAMED_BIT */, ppr1 /* IMPORTED_SHORT_NAMED_BIT */, PprIds_ppr2 /* IMPORTED_LONG_NAMED_BIT */, ppr2 /* IMPORTED_SHORT_NAMED_BIT */, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
 import { VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
-// export { VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
 import { ProfileInfo_iotSpecificProfileInfo, _decode_ProfileInfo_iotSpecificProfileInfo, _encode_ProfileInfo_iotSpecificProfileInfo } from "../RSPDefinitions/ProfileInfo-iotSpecificProfileInfo.ta.mjs";
-// export { ProfileInfo_iotSpecificProfileInfo, _decode_ProfileInfo_iotSpecificProfileInfo, _encode_ProfileInfo_iotSpecificProfileInfo } from "../RSPDefinitions/ProfileInfo-iotSpecificProfileInfo.ta.mjs";
 
 
 /**
@@ -176,7 +167,23 @@ class ProfileInfo {
          * @readonly
          */
         readonly iotSpecificProfileInfo: OPTIONAL<ProfileInfo_iotSpecificProfileInfo>
-    ) {}
+    ) {
+        if (this.profileNickname !== undefined && (this.profileNickname.length > 64)) {
+            throw new ASN1SizeError("ProfileInfo.profileNickname violates SIZE constraint");
+        }
+        if (this.serviceProviderName !== undefined && (this.serviceProviderName.length > 32)) {
+            throw new ASN1SizeError("ProfileInfo.serviceProviderName violates SIZE constraint");
+        }
+        if (this.profileName !== undefined && (this.profileName.length > 64)) {
+            throw new ASN1SizeError("ProfileInfo.profileName violates SIZE constraint");
+        }
+        if (this.icon !== undefined && (this.icon.length > 1024)) {
+            throw new ASN1SizeError("ProfileInfo.icon violates SIZE constraint");
+        }
+        if (this.icon !== undefined && this.iconType === undefined) {
+            throw new ASN1ConstructionError("ProfileInfo.icon requires iconType");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ProfileInfo
@@ -349,7 +356,7 @@ let _cached_encoder_for_ProfileInfo: $.ASN1Encoder<ProfileInfo> | null = null;
  */
 export
 function _encode_ProfileInfo (value: ProfileInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProfileInfo) { _cached_encoder_for_ProfileInfo = $._encode_implicit(_TagClass.private, 3, () => function (value: ProfileInfo, elGetter: $.ASN1Encoder<ProfileInfo>): _Element {
+    if (!_cached_encoder_for_ProfileInfo) { _cached_encoder_for_ProfileInfo = $._encode_implicit(_TagClass.private, 3, () => function (value: ProfileInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.iccid === undefined) ? undefined : _encode_Iccid(value.iccid, $.BER)),

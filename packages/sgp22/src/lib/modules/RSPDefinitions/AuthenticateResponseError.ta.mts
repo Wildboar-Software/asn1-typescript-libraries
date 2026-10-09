@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { AuthenticateErrorCode, _decode_AuthenticateErrorCode, _encode_AuthenticateErrorCode } from "../RSPDefinitions/AuthenticateErrorCode.ta.mjs";
-// export { AuthenticateErrorCode, AuthenticateErrorCode_invalidCertificate /* IMPORTED_LONG_NAMED_INTEGER */, invalidCertificate /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateErrorCode_invalidSignature /* IMPORTED_LONG_NAMED_INTEGER */, invalidSignature /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateErrorCode_unsupportedCurve /* IMPORTED_LONG_NAMED_INTEGER */, unsupportedCurve /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateErrorCode_noSessionContext /* IMPORTED_LONG_NAMED_INTEGER */, noSessionContext /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateErrorCode_invalidOid /* IMPORTED_LONG_NAMED_INTEGER */, invalidOid /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateErrorCode_euiccChallengeMismatch /* IMPORTED_LONG_NAMED_INTEGER */, euiccChallengeMismatch /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateErrorCode_ciPKUnknown /* IMPORTED_LONG_NAMED_INTEGER */, ciPKUnknown /* IMPORTED_SHORT_NAMED_INTEGER */, AuthenticateErrorCode_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AuthenticateErrorCode, _encode_AuthenticateErrorCode } from "../RSPDefinitions/AuthenticateErrorCode.ta.mjs";
 
 
 /**
@@ -143,7 +141,7 @@ let _cached_encoder_for_AuthenticateResponseError: $.ASN1Encoder<AuthenticateRes
  */
 export
 function _encode_AuthenticateResponseError (value: AuthenticateResponseError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateResponseError) { _cached_encoder_for_AuthenticateResponseError = function (value: AuthenticateResponseError, elGetter: $.ASN1Encoder<AuthenticateResponseError>): _Element {
+    if (!_cached_encoder_for_AuthenticateResponseError) { _cached_encoder_for_AuthenticateResponseError = function (value: AuthenticateResponseError): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

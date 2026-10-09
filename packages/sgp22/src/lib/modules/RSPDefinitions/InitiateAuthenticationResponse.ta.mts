@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InitiateAuthenticationOkEs9, _decode_InitiateAuthenticationOkEs9, _encode_InitiateAuthenticationOkEs9 } from "../RSPDefinitions/InitiateAuthenticationOkEs9.ta.mjs";
-// export { InitiateAuthenticationOkEs9, _decode_InitiateAuthenticationOkEs9, _encode_InitiateAuthenticationOkEs9 } from "../RSPDefinitions/InitiateAuthenticationOkEs9.ta.mjs";
 import { InitiateAuthenticationResponse_initiateAuthenticationError, _decode_InitiateAuthenticationResponse_initiateAuthenticationError, _encode_InitiateAuthenticationResponse_initiateAuthenticationError } from "../RSPDefinitions/InitiateAuthenticationResponse-initiateAuthenticationError.ta.mjs";
-// export { InitiateAuthenticationResponse_initiateAuthenticationError, InitiateAuthenticationResponse_initiateAuthenticationError_invalidDpAddress /* IMPORTED_LONG_NAMED_INTEGER */, invalidDpAddress /* IMPORTED_SHORT_NAMED_INTEGER */, InitiateAuthenticationResponse_initiateAuthenticationError_euiccVersionNotSupportedByDp /* IMPORTED_LONG_NAMED_INTEGER */, euiccVersionNotSupportedByDp /* IMPORTED_SHORT_NAMED_INTEGER */, InitiateAuthenticationResponse_initiateAuthenticationError_ciPKIdNotSupported /* IMPORTED_LONG_NAMED_INTEGER */, ciPKIdNotSupported /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_InitiateAuthenticationResponse_initiateAuthenticationError, _encode_InitiateAuthenticationResponse_initiateAuthenticationError } from "../RSPDefinitions/InitiateAuthenticationResponse-initiateAuthenticationError.ta.mjs";
 
 
 /**

@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RulesAuthorisationTable, _decode_RulesAuthorisationTable, _encode_RulesAuthorisationTable } from "../RSPDefinitions/RulesAuthorisationTable.ta.mjs";
-// export { RulesAuthorisationTable, _decode_RulesAuthorisationTable, _encode_RulesAuthorisationTable } from "../RSPDefinitions/RulesAuthorisationTable.ta.mjs";
 
 
 /**
@@ -129,7 +128,7 @@ let _cached_encoder_for_GetRatResponse: $.ASN1Encoder<GetRatResponse> | null = n
  */
 export
 function _encode_GetRatResponse (value: GetRatResponse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetRatResponse) { _cached_encoder_for_GetRatResponse = $._encode_implicit(_TagClass.context, 67, () => function (value: GetRatResponse, elGetter: $.ASN1Encoder<GetRatResponse>): _Element {
+    if (!_cached_encoder_for_GetRatResponse) { _cached_encoder_for_GetRatResponse = $._encode_implicit(_TagClass.context, 67, () => function (value: GetRatResponse): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_RulesAuthorisationTable(value.rat, $.BER)

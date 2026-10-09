@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RetrieveNotificationsListRequest_searchCriteria, _decode_RetrieveNotificationsListRequest_searchCriteria, _encode_RetrieveNotificationsListRequest_searchCriteria } from "../RSPDefinitions/RetrieveNotificationsListRequest-searchCriteria.ta.mjs";
-// export { RetrieveNotificationsListRequest_searchCriteria, _decode_RetrieveNotificationsListRequest_searchCriteria, _encode_RetrieveNotificationsListRequest_searchCriteria } from "../RSPDefinitions/RetrieveNotificationsListRequest-searchCriteria.ta.mjs";
 
 
 /**
@@ -134,7 +133,7 @@ let _cached_encoder_for_RetrieveNotificationsListRequest: $.ASN1Encoder<Retrieve
  */
 export
 function _encode_RetrieveNotificationsListRequest (value: RetrieveNotificationsListRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RetrieveNotificationsListRequest) { _cached_encoder_for_RetrieveNotificationsListRequest = $._encode_implicit(_TagClass.context, 43, () => function (value: RetrieveNotificationsListRequest, elGetter: $.ASN1Encoder<RetrieveNotificationsListRequest>): _Element {
+    if (!_cached_encoder_for_RetrieveNotificationsListRequest) { _cached_encoder_for_RetrieveNotificationsListRequest = $._encode_implicit(_TagClass.context, 43, () => function (value: RetrieveNotificationsListRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.searchCriteria === undefined) ? undefined : _encode_RetrieveNotificationsListRequest_searchCriteria(value.searchCriteria, $.BER))

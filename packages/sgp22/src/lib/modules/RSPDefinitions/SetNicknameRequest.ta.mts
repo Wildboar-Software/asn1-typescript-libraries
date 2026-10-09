@@ -5,9 +5,9 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
-// export { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
 
 
 /**
@@ -40,7 +40,11 @@ class SetNicknameRequest {
          * @readonly
          */
         readonly profileNickname: UTF8String
-    ) {}
+    ) {
+        if (this.profileNickname.length > 64) {
+            throw new ASN1SizeError("SetNicknameRequest.profileNickname violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a SetNicknameRequest
@@ -142,7 +146,7 @@ let _cached_encoder_for_SetNicknameRequest: $.ASN1Encoder<SetNicknameRequest> | 
  */
 export
 function _encode_SetNicknameRequest (value: SetNicknameRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SetNicknameRequest) { _cached_encoder_for_SetNicknameRequest = $._encode_implicit(_TagClass.context, 41, () => function (value: SetNicknameRequest, elGetter: $.ASN1Encoder<SetNicknameRequest>): _Element {
+    if (!_cached_encoder_for_SetNicknameRequest) { _cached_encoder_for_SetNicknameRequest = $._encode_implicit(_TagClass.context, 41, () => function (value: SetNicknameRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Iccid(value.iccid, $.BER),

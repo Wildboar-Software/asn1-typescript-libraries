@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent } from "../RSPDefinitions/NotificationEvent.ta.mjs";
-// export { NotificationEvent, NotificationEvent_notificationInstall /* IMPORTED_LONG_NAMED_BIT */, notificationInstall /* IMPORTED_SHORT_NAMED_BIT */, NotificationEvent_notificationEnable /* IMPORTED_LONG_NAMED_BIT */, notificationEnable /* IMPORTED_SHORT_NAMED_BIT */, NotificationEvent_notificationDisable /* IMPORTED_LONG_NAMED_BIT */, notificationDisable /* IMPORTED_SHORT_NAMED_BIT */, NotificationEvent_notificationDelete /* IMPORTED_LONG_NAMED_BIT */, notificationDelete /* IMPORTED_SHORT_NAMED_BIT */, _decode_NotificationEvent, _encode_NotificationEvent } from "../RSPDefinitions/NotificationEvent.ta.mjs";
 
 
 /**
@@ -142,7 +141,7 @@ let _cached_encoder_for_NotificationConfigurationInformation: $.ASN1Encoder<Noti
  */
 export
 function _encode_NotificationConfigurationInformation (value: NotificationConfigurationInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotificationConfigurationInformation) { _cached_encoder_for_NotificationConfigurationInformation = function (value: NotificationConfigurationInformation, elGetter: $.ASN1Encoder<NotificationConfigurationInformation>): _Element {
+    if (!_cached_encoder_for_NotificationConfigurationInformation) { _cached_encoder_for_NotificationConfigurationInformation = function (value: NotificationConfigurationInformation): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_NotificationEvent(value.profileManagementOperation, $.BER),

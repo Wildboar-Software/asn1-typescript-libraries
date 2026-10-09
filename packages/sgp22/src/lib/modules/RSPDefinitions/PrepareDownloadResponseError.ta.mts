@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { DownloadErrorCode, _decode_DownloadErrorCode, _encode_DownloadErrorCode } from "../RSPDefinitions/DownloadErrorCode.ta.mjs";
-// export { DownloadErrorCode, DownloadErrorCode_invalidCertificate /* IMPORTED_LONG_NAMED_INTEGER */, invalidCertificate /* IMPORTED_SHORT_NAMED_INTEGER */, DownloadErrorCode_invalidSignature /* IMPORTED_LONG_NAMED_INTEGER */, invalidSignature /* IMPORTED_SHORT_NAMED_INTEGER */, DownloadErrorCode_unsupportedCurve /* IMPORTED_LONG_NAMED_INTEGER */, unsupportedCurve /* IMPORTED_SHORT_NAMED_INTEGER */, DownloadErrorCode_noSessionContext /* IMPORTED_LONG_NAMED_INTEGER */, noSessionContext /* IMPORTED_SHORT_NAMED_INTEGER */, DownloadErrorCode_invalidTransactionId /* IMPORTED_LONG_NAMED_INTEGER */, invalidTransactionId /* IMPORTED_SHORT_NAMED_INTEGER */, DownloadErrorCode_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DownloadErrorCode, _encode_DownloadErrorCode } from "../RSPDefinitions/DownloadErrorCode.ta.mjs";
 
 
 /**
@@ -143,7 +141,7 @@ let _cached_encoder_for_PrepareDownloadResponseError: $.ASN1Encoder<PrepareDownl
  */
 export
 function _encode_PrepareDownloadResponseError (value: PrepareDownloadResponseError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PrepareDownloadResponseError) { _cached_encoder_for_PrepareDownloadResponseError = function (value: PrepareDownloadResponseError, elGetter: $.ASN1Encoder<PrepareDownloadResponseError>): _Element {
+    if (!_cached_encoder_for_PrepareDownloadResponseError) { _cached_encoder_for_PrepareDownloadResponseError = function (value: PrepareDownloadResponseError): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),
