@@ -116,10 +116,8 @@ function _decode_CL_UserData_PDU (el: _Element): CL_UserData_PDU {
     }
     sequence[0].name = "reference";
     sequence[1].name = "user-data";
-    let reference!: SessionConnectionIdentifier;
-    let user_data!: _Element;
-    reference = _decode_SessionConnectionIdentifier(sequence[0]);
-    user_data = $._decode_explicit<_Element>(() => $._decodeAny)(sequence[1]);
+    const reference = _decode_SessionConnectionIdentifier(sequence[0]);
+    const user_data = $._decode_explicit<_Element>(() => $._decodeAny)(sequence[1]);
     return new CL_UserData_PDU(
         reference,
         user_data
