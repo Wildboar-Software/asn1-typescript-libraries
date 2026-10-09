@@ -86,8 +86,8 @@ const GlbErrors_controlBlockConfigurationError: GlbErrors = 3; /* LONG_NAMED_INT
  */
 export
 const controlBlockConfigurationError: GlbErrors = GlbErrors_controlBlockConfigurationError; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_GlbErrors = $._decodeInteger;
-export const _encode_GlbErrors = $._encodeInteger;
+export const _decode_GlbErrors: $.ASN1Decoder<GlbErrors> = $._decodeInteger;
+export const _encode_GlbErrors: $.ASN1Encoder<GlbErrors> = $._encodeInteger;
 
 
 /* eslint-enable */

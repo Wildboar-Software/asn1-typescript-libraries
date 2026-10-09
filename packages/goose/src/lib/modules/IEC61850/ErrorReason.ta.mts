@@ -52,8 +52,8 @@ const ErrorReason_notFound: ErrorReason = 1; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const notFound: ErrorReason = ErrorReason_notFound; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ErrorReason = $._decodeInteger;
-export const _encode_ErrorReason = $._encodeInteger;
+export const _decode_ErrorReason: $.ASN1Decoder<ErrorReason> = $._decodeInteger;
+export const _encode_ErrorReason: $.ASN1Encoder<ErrorReason> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -138,14 +138,14 @@ class IECGoosePdu {
      * @static
      * @method
      */
-    public static get _default_value_for_simulation () { return false; }
+    public static get _default_value_for_simulation (): boolean { return false; }
     /**
      * @summary Getter that returns the default value for `ndsCom`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_ndsCom () { return false; }
+    public static get _default_value_for_ndsCom (): boolean { return false; }
 }
 
 /**

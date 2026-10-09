@@ -137,7 +137,7 @@ function _decode_GSEMngtResponsePdu (el: _Element): GSEMngtResponsePdu {
     let ident!: VisibleString;
     let confRev: OPTIONAL<INTEGER>;
     let posNeg!: PositiveNegative;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ident": (_el: _Element): void => { ident = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(_el); },
         "confRev": (_el: _Element): void => { confRev = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
