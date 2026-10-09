@@ -1,16 +1,4 @@
-import { ObjectIdentifier } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import {
-    AlgorithmIdentifier,
-    AttributeTypeAndValue,
-    SIGNED,
-} from "@wildboar/pki-stub";
-import {
-    CertificateListContent,
-    RevokedCertificate,
-    _decode_CertificateList,
-    _encode_CertificateList,
-} from "./lib/modules/RSPDefinitions/CertificateList.ta.mjs";
 import {
     UICCCapability_contactlessSupport,
     UICCCapability_iotminimal,
@@ -24,6 +12,15 @@ import {
     _decode_EUICCInfo2,
     _encode_EUICCInfo2,
 } from "./lib/modules/RSPDefinitions/EUICCInfo2.ta.mjs";
+import {
+    LoadCRLRequest,
+    _decode_LoadCRLRequest,
+    _encode_LoadCRLRequest,
+} from "./lib/modules/RSPDefinitions/LoadCRLRequest.ta.mjs";
+import {
+    _decode_SegmentedCrlList,
+    _encode_SegmentedCrlList,
+} from "./lib/modules/RSPDefinitions/SegmentedCrlList.ta.mjs";
 import {
     EUICCInfo2_euiccCategory_basicEuicc,
 } from "./lib/modules/RSPDefinitions/EUICCInfo2-euiccCategory.ta.mjs";
@@ -115,39 +112,14 @@ describe("SGP.22 encode/decode round-trips", () => {
         expect(decoded.iotSpecificInfo).toEqual(new IoTSpecificInfo());
     });
 
-    test("round-trips a CertificateList built from pki-stub components", () => {
-        const sha256WithRsa = ObjectIdentifier.fromParts([1, 2, 840, 113549, 1, 1, 11]);
-        const commonName = ObjectIdentifier.fromParts([2, 5, 4, 3]);
-        const thisUpdate = new Date(Date.UTC(2026, 0, 15, 0, 0, 0));
-        const nextUpdate = new Date(Date.UTC(2026, 6, 15, 0, 0, 0));
-        const revocationDate = new Date(Date.UTC(2026, 2, 1, 0, 0, 0));
-        const original = new SIGNED(
-            new CertificateListContent(
-                undefined,
-                new AlgorithmIdentifier(sha256WithRsa),
-                {
-                    rdnSequence: [[
-                        new AttributeTypeAndValue(
-                            commonName,
-                            $._encodeUTF8String("Example CA", $.BER),
-                        ),
-                    ]],
-                },
-                { utcTime: thisUpdate },
-                { utcTime: nextUpdate },
-                [new RevokedCertificate(new Uint8Array([0x01]), { utcTime: revocationDate })],
-            ),
-            new AlgorithmIdentifier(sha256WithRsa),
-            new Uint8ClampedArray([1, 0, 1]),
+    test("round-trips an unparsed CRL element", () => {
+        const crl = $._encodeInteger(1, $.BER);
+        const decodedRequest = _decode_LoadCRLRequest(
+            _encode_LoadCRLRequest(new LoadCRLRequest(crl), $.BER),
         );
-        const decoded = _decode_CertificateList(_encode_CertificateList(original, $.BER));
-        expect(decoded.toBeSigned.signature.algorithm.toString()).toBe(sha256WithRsa.toString());
-        expect(decoded.toBeSigned.issuer.rdnSequence[0][0].type_.toString()).toBe(commonName.toString());
-        expect(decoded.toBeSigned.thisUpdate).toEqual({ utcTime: thisUpdate });
-        expect(decoded.toBeSigned.nextUpdate).toEqual({ utcTime: nextUpdate });
-        const revoked = decoded.toBeSigned.revokedCertificates?.[0];
-        expect(revoked?.serialNumber).toEqual(new Uint8Array([0x01]));
-        expect(revoked?.revocationDate).toEqual({ utcTime: revocationDate });
-        expect(Array.from(decoded.signature)).toEqual([1, 0, 1]);
+        expect(decodedRequest.crl.toBytes()).toEqual(crl.toBytes());
+        const decodedList = _decode_SegmentedCrlList(_encode_SegmentedCrlList([crl], $.BER));
+        expect(decodedList).toHaveLength(1);
+        expect(decodedList[0].toBytes()).toEqual(crl.toBytes());
     });
 });

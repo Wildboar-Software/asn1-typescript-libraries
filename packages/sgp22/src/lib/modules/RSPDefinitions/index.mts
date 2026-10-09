@@ -192,24 +192,6 @@ export {
 } from "./BppCommandId.ta.mjs";
 
 export {
-    CertificateListContent,
-    RevokedCertificate,
-    _decode_CertificateListContent,
-    _decode_RevokedCertificate,
-    _encode_CertificateListContent,
-    _encode_RevokedCertificate,
-} from "./CertificateList.ta.mjs";
-
-export type {
-    CertificateList,
-} from "./CertificateList.ta.mjs";
-
-export {
-    _decode_CertificateList,
-    _encode_CertificateList,
-} from "./CertificateList.ta.mjs";
-
-export {
     CancelSessionOk,
     _root_component_type_list_1_spec_for_CancelSessionOk,
     _root_component_type_list_2_spec_for_CancelSessionOk,

@@ -3,7 +3,6 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { type CertificateList, _decode_CertificateList, _encode_CertificateList } from "../RSPDefinitions/CertificateList.ta.mjs";
 
 
 /**
@@ -17,7 +16,7 @@ import { type CertificateList, _decode_CertificateList, _encode_CertificateList 
  * ```
  */
 export
-type SegmentedCrlList = CertificateList[]; // SequenceOfType
+type SegmentedCrlList = _Element[]; // SequenceOfType
 
 let _cached_decoder_for_SegmentedCrlList: $.ASN1Decoder<SegmentedCrlList> | null = null;
 
@@ -29,7 +28,7 @@ let _cached_decoder_for_SegmentedCrlList: $.ASN1Decoder<SegmentedCrlList> | null
  */
 export
 function _decode_SegmentedCrlList (el: _Element): SegmentedCrlList {
-    if (!_cached_decoder_for_SegmentedCrlList) { _cached_decoder_for_SegmentedCrlList = $._decodeSequenceOf<CertificateList>(() => _decode_CertificateList); }
+    if (!_cached_decoder_for_SegmentedCrlList) { _cached_decoder_for_SegmentedCrlList = $._decodeSequenceOf<_Element>(() => $._decodeAny); }
     return _cached_decoder_for_SegmentedCrlList(el);
 }
 
@@ -44,7 +43,7 @@ let _cached_encoder_for_SegmentedCrlList: $.ASN1Encoder<SegmentedCrlList> | null
  */
 export
 function _encode_SegmentedCrlList (value: SegmentedCrlList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SegmentedCrlList) { _cached_encoder_for_SegmentedCrlList = $._encodeSequenceOf<CertificateList>(() => _encode_CertificateList, $.BER); }
+    if (!_cached_encoder_for_SegmentedCrlList) { _cached_encoder_for_SegmentedCrlList = $._encodeSequenceOf<_Element>(() => $._encodeAny, $.BER); }
     return _cached_encoder_for_SegmentedCrlList(value, elGetter);
 }
 

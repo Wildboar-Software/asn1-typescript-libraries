@@ -3,9 +3,8 @@
 ASN.1 data structures for GSMA SGP.22 Remote SIM Provisioning.
 
 `Certificate` and `Time` are imported from `@wildboar/pki-stub`.
-`SubjectKeyIdentifier` is an `OCTET STRING`. `CertificateList` is defined in
-this package as `SIGNED{CertificateListContent}` using `@wildboar/pki-stub`
-components, because `pki-stub` does not export `CertificateList`.
+`SubjectKeyIdentifier` is an `OCTET STRING`. A CRL in `LoadCRLRequest` and
+`SegmentedCrlList` is carried as an `ASN1Element`.
 
 This module is ESM-only.
 
