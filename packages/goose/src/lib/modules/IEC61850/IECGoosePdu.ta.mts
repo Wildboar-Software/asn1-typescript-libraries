@@ -9,9 +9,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
-// export { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
 import { Data, _decode_Data, _encode_Data } from "../IEC61850/Data.ta.mjs";
-// export { Data, _decode_Data, _encode_Data } from "../IEC61850/Data.ta.mjs";
 
 
 /**

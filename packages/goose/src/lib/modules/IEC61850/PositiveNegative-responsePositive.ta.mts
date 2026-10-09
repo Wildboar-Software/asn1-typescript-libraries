@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestResults, _decode_RequestResults, _encode_RequestResults } from "../IEC61850/RequestResults.ta.mjs";
-// export { RequestResults, _decode_RequestResults, _encode_RequestResults } from "../IEC61850/RequestResults.ta.mjs";
 
 
 /**

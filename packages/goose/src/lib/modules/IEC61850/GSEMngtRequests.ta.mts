@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GetReferenceRequestPdu, _decode_GetReferenceRequestPdu, _encode_GetReferenceRequestPdu } from "../IEC61850/GetReferenceRequestPdu.ta.mjs";
-// export { GetReferenceRequestPdu, _decode_GetReferenceRequestPdu, _encode_GetReferenceRequestPdu } from "../IEC61850/GetReferenceRequestPdu.ta.mjs";
 import { GetElementRequestPdu, _decode_GetElementRequestPdu, _encode_GetElementRequestPdu } from "../IEC61850/GetElementRequestPdu.ta.mjs";
-// export { GetElementRequestPdu, _decode_GetElementRequestPdu, _encode_GetElementRequestPdu } from "../IEC61850/GetElementRequestPdu.ta.mjs";
 
 
 /**

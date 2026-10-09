@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GSEMngtRequests, _decode_GSEMngtRequests, _encode_GSEMngtRequests } from "../IEC61850/GSEMngtRequests.ta.mjs";
-// export { GSEMngtRequests, _decode_GSEMngtRequests, _encode_GSEMngtRequests } from "../IEC61850/GSEMngtRequests.ta.mjs";
 import { GSEMngtResponses, _decode_GSEMngtResponses, _encode_GSEMngtResponses } from "../IEC61850/GSEMngtResponses.ta.mjs";
-// export { GSEMngtResponses, _decode_GSEMngtResponses, _encode_GSEMngtResponses } from "../IEC61850/GSEMngtResponses.ta.mjs";
 
 
 /**

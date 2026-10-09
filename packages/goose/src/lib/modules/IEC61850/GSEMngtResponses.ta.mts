@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GSEMngtResponsePdu, _decode_GSEMngtResponsePdu, _encode_GSEMngtResponsePdu } from "../IEC61850/GSEMngtResponsePdu.ta.mjs";
-// export { GSEMngtResponsePdu, _decode_GSEMngtResponsePdu, _encode_GSEMngtResponsePdu } from "../IEC61850/GSEMngtResponsePdu.ta.mjs";
 
 
 /**

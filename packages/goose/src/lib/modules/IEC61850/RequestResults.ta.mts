@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ErrorReason, _encode_ErrorReason, ErrorReason } from "../IEC61850/ErrorReason.ta.mjs";
-// export { ErrorReason, ErrorReason_other /* IMPORTED_LONG_NAMED_INTEGER */, other /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorReason_notFound /* IMPORTED_LONG_NAMED_INTEGER */, notFound /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ErrorReason, _encode_ErrorReason } from "../IEC61850/ErrorReason.ta.mjs";
 
 
 /**
