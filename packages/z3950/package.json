@@ -1,21 +1,61 @@
 {
-  "name": "@wildboar/z3950",
-  "version": "0.0.1",
-  "private": true,
-  "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "development": "./src/index.ts",
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
+    "name": "@wildboar/z3950",
+    "type": "module",
+    "version": "1.0.0",
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
+    "exports": {
+        ".": "./src/index.mjs",
+        "./ANSI-Z39-50-ObjectIdentifier": "./src/lib/modules/ANSI-Z39-50-ObjectIdentifier/index.mjs",
+        "./AccessControlFormat-des-1": "./src/lib/modules/AccessControlFormat-des-1/index.mjs",
+        "./AccessControlFormat-krb-1": "./src/lib/modules/AccessControlFormat-krb-1/index.mjs",
+        "./AccessControlFormat-prompt-1": "./src/lib/modules/AccessControlFormat-prompt-1/index.mjs",
+        "./DiagnosticFormatDiag1": "./src/lib/modules/DiagnosticFormatDiag1/index.mjs",
+        "./ESFormat-ExportInvocation": "./src/lib/modules/ESFormat-ExportInvocation/index.mjs",
+        "./ESFormat-ExportSpecification": "./src/lib/modules/ESFormat-ExportSpecification/index.mjs",
+        "./ESFormat-ItemOrder": "./src/lib/modules/ESFormat-ItemOrder/index.mjs",
+        "./ESFormat-PeriodicQuerySchedule": "./src/lib/modules/ESFormat-PeriodicQuerySchedule/index.mjs",
+        "./ESFormat-PersistentQuery": "./src/lib/modules/ESFormat-PersistentQuery/index.mjs",
+        "./ESFormat-PersistentResultSet": "./src/lib/modules/ESFormat-PersistentResultSet/index.mjs",
+        "./ESFormat-Update": "./src/lib/modules/ESFormat-Update/index.mjs",
+        "./ElementSpecification-eSpec-2": "./src/lib/modules/ElementSpecification-eSpec-2/index.mjs",
+        "./ElementSpecification-eSpec-q": "./src/lib/modules/ElementSpecification-eSpec-q/index.mjs",
+        "./GeneralDiagnosticContainer": "./src/lib/modules/GeneralDiagnosticContainer/index.mjs",
+        "./RecordSyntax-ESTaskPackage": "./src/lib/modules/RecordSyntax-ESTaskPackage/index.mjs",
+        "./RecordSyntax-SUTRS": "./src/lib/modules/RecordSyntax-SUTRS/index.mjs",
+        "./RecordSyntax-explain": "./src/lib/modules/RecordSyntax-explain/index.mjs",
+        "./RecordSyntax-generic": "./src/lib/modules/RecordSyntax-generic/index.mjs",
+        "./RecordSyntax-opac": "./src/lib/modules/RecordSyntax-opac/index.mjs",
+        "./RecordSyntax-summary": "./src/lib/modules/RecordSyntax-summary/index.mjs",
+        "./ResourceReport-Format-Resource-2": "./src/lib/modules/ResourceReport-Format-Resource-2/index.mjs",
+        "./UserInfoFormat-searchResult-1": "./src/lib/modules/UserInfoFormat-searchResult-1/index.mjs",
+        "./UserInfoFormat-userInfo-1": "./src/lib/modules/UserInfoFormat-userInfo-1/index.mjs",
+        "./Z39-50-APDU-2001": "./src/lib/modules/Z39-50-APDU-2001/index.mjs",
+        "./Z39-50-OCLC-UserInformation": "./src/lib/modules/Z39-50-OCLC-UserInformation/index.mjs"
+    },
+    "dependencies": {
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
     }
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  }
 }
