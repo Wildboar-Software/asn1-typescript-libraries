@@ -92,7 +92,12 @@ class AlgorithmIdentifier {
          * @readonly
          */
         readonly algorithm: OBJECT_IDENTIFIER,
-// FIXME: readonly parameters: AnyType
+        /**
+         * @summary `parameters`.
+         * @public
+         * @readonly
+         */
+        readonly parameters?: OPTIONAL<_Element>
     ) {}
 
     /**
@@ -108,7 +113,7 @@ class AlgorithmIdentifier {
      * @returns {AlgorithmIdentifier}
      */
     public static _from_object (_o: { [_K in keyof (AlgorithmIdentifier)]: (AlgorithmIdentifier)[_K] }): AlgorithmIdentifier {
-        return new AlgorithmIdentifier(_o.algorithm, _o.);
+        return new AlgorithmIdentifier(_o.algorithm, _o.parameters);
     }
 
 
@@ -166,7 +171,7 @@ export
 function _decode_AlgorithmIdentifier (el: _Element): AlgorithmIdentifier {
     if (!_cached_decoder_for_AlgorithmIdentifier) { _cached_decoder_for_AlgorithmIdentifier = function (el: _Element): AlgorithmIdentifier {
     let algorithm!: OBJECT_IDENTIFIER;
-    let parameters: OPTIONAL</* FIXME: parameters COULD_NOT_COMPILE_TYPE */>;
+    let parameters: OPTIONAL<_Element>;
     const callbacks: $.DecodingMap = {
         "algorithm": (_el: _Element): void => { algorithm = $._decodeObjectIdentifier(_el); },
         "parameters": (_el: _Element): void => { parameters = $._decodeAny(_el); }
