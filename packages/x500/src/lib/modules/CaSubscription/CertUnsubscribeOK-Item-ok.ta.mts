@@ -10,7 +10,7 @@ import {
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "@wildboar/pki-stub";
-import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
+import { Name, _decode_Name, _encode_Name } from "@wildboar/dn";
 /**
  * @summary CertUnsubscribeOK_Item_ok
  * @description
@@ -65,11 +65,9 @@ export class CertUnsubscribeOK_Item_ok {
      * @returns {CertUnsubscribeOK_Item_ok}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof CertUnsubscribeOK_Item_ok]: CertUnsubscribeOK_Item_ok[_K];
             }
-        >
     ): CertUnsubscribeOK_Item_ok {
         return new CertUnsubscribeOK_Item_ok(
             _o.subject,

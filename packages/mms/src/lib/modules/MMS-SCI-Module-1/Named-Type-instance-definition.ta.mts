@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Named_Type_instance_definition_details, _decode_Named_Type_instance_definition_details, _encode_Named_Type_instance_definition_details } from "../MMS-SCI-Module-1/Named-Type-instance-definition-details.ta.mjs";
-// export { Named_Type_instance_definition_details, _decode_Named_Type_instance_definition_details, _encode_Named_Type_instance_definition_details } from "../MMS-SCI-Module-1/Named-Type-instance-definition-details.ta.mjs";
 
 
 /**

@@ -51,11 +51,9 @@ export class CertSubscribeOK_Item_not_ok {
      * @returns {CertSubscribeOK_Item_not_ok}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof CertSubscribeOK_Item_not_ok]: CertSubscribeOK_Item_not_ok[_K];
             }
-        >
     ): CertSubscribeOK_Item_not_ok {
         return new CertSubscribeOK_Item_not_ok(
             _o.status,

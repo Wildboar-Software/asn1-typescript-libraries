@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TraceItem, _decode_TraceItem, _encode_TraceItem } from "../IN-CS2-datatypes/TraceItem.ta.mjs";
-// export { TraceItem, _decode_TraceItem, _encode_TraceItem } from "../IN-CS2-datatypes/TraceItem.ta.mjs";
 
 
 /**

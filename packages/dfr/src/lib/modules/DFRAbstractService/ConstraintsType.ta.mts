@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NameConstraint, _enum_for_NameConstraint, _decode_NameConstraint, _encode_NameConstraint } from "../DFRAbstractService/NameConstraint.ta.mjs";
-// export { NameConstraint, _enum_for_NameConstraint, NameConstraint_no_name_constraint /* IMPORTED_LONG_ENUMERATION_ITEM */, no_name_constraint /* IMPORTED_SHORT_ENUMERATION_ITEM */, NameConstraint_local_unambiguity /* IMPORTED_LONG_ENUMERATION_ITEM */, local_unambiguity /* IMPORTED_SHORT_ENUMERATION_ITEM */, NameConstraint_global_unambiguity /* IMPORTED_LONG_ENUMERATION_ITEM */, global_unambiguity /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NameConstraint, _encode_NameConstraint } from "../DFRAbstractService/NameConstraint.ta.mjs";
 import { VersionConstraint, _enum_for_VersionConstraint, _decode_VersionConstraint, _encode_VersionConstraint } from "../DFRAbstractService/VersionConstraint.ta.mjs";
-// export { VersionConstraint, _enum_for_VersionConstraint, VersionConstraint_no_version_constraint /* IMPORTED_LONG_ENUMERATION_ITEM */, no_version_constraint /* IMPORTED_SHORT_ENUMERATION_ITEM */, VersionConstraint_version_unambiguity /* IMPORTED_LONG_ENUMERATION_ITEM */, version_unambiguity /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_VersionConstraint, _encode_VersionConstraint } from "../DFRAbstractService/VersionConstraint.ta.mjs";
 
 
 /**

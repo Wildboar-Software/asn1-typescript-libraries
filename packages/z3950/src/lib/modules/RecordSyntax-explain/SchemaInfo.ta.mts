@@ -1,0 +1,280 @@
+/* eslint-disable */
+import {
+    OBJECT_IDENTIFIER,
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
+import { SchemaInfo_tagTypeMapping_Item, _decode_SchemaInfo_tagTypeMapping_Item, _encode_SchemaInfo_tagTypeMapping_Item } from "../RecordSyntax-explain/SchemaInfo-tagTypeMapping-Item.ta.mjs";
+import { ElementInfo, _decode_ElementInfo, _encode_ElementInfo } from "../RecordSyntax-explain/ElementInfo.ta.mjs";
+
+
+/**
+ * @summary SchemaInfo
+ * @description
+ * Descriptive information about a database schema. There is one Explain record
+ * for each schema the server supports. It is not specific to a database. A
+ * schema is a shared understanding of the information in the database's
+ * records, so that portions of that information can be retrieved. Its primary
+ * component is an abstract record structure. ANSI/NISO Z39.50-2003 §3.2.10.3.3;
+ * Appendix TAG.
+ * 
+ * Search with ExplainCategory `SchemaInfo` and SchemaOID. The search may also
+ * use HumanStringLanguage, DateAdded, DateChanged, or DateExpires. ANSI/NISO
+ * Z39.50-2003 §3.2.10.1.2 and §3.2.10.1.3. As a search term, version 2 should
+ * use a dotted decimal character string; version 3 should use an object
+ * identifier. ANSI/NISO Z39.50-2003 Appendix ATR, note 4.
+ * 
+ * Element set `B` retrieves brief elements; `F` adds non-brief elements.
+ * Some components marked optional are mandatory in a full record. ANSI/NISO
+ * Z39.50-2003 ASN.1 comment 1.
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * SchemaInfo ::= SEQUENCE {
+ *     commonInfo      [0] IMPLICIT CommonInfo OPTIONAL,
+ *     -- Key elements follow:
+ *     schema          [1] IMPLICIT OBJECT IDENTIFIER,
+ *     -- Non-key brief elements follow:
+ *     name            [2] IMPLICIT InternationalString,
+ *     -- Non-brief elements follow:
+ *     description     [3] IMPLICIT HumanString OPTIONAL,
+ *     tagTypeMapping  [4] IMPLICIT SEQUENCE OF SEQUENCE {
+ *         tagType         [0] IMPLICIT INTEGER,
+ *         tagSet          [1] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+ *         -- If tagSet is omitted, then this tagType is for a tagSet
+ *         -- locally defined within the schema that cannot be referenced by another schema.
+ *         defaultTagType  [2] IMPLICIT NULL OPTIONAL
+ *     } OPTIONAL,
+ *     recordStructure [5] IMPLICIT SEQUENCE OF ElementInfo OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class SchemaInfo {
+    /**
+     * @summary `commonInfo`.
+     * @description
+     * Dates this Explain record was added and last changed, when it expires,
+     * and the language of its human-readable text. Element set `B` includes
+     * this component except `otherInfo`. DateAdded, DateChanged, and
+     * DateExpires search these dates. ANSI/NISO Z39.50-2003 §3.2.10.3,
+     * §3.2.10.1.3; ASN.1 comment 1.
+     * @public
+     * @readonly
+     */
+    readonly commonInfo: OPTIONAL<CommonInfo>;
+    /**
+     * @summary `schema`.
+     * @description
+     * Object identifier of the schema definition. Key, searched with SchemaOID.
+     * As a search term, version 2 should use a dotted decimal character string;
+     * version 3 should use an object identifier. ANSI/NISO Z39.50-2003 Appendix
+     * ATR, note 4.
+     * @public
+     * @readonly
+     */
+    readonly schema: OBJECT_IDENTIFIER;
+    /**
+     * @summary `name`.
+     * @description
+     * Name of this schema. Brief, and not a key. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.3.
+     * @public
+     * @readonly
+     */
+    readonly name: InternationalString;
+    /**
+     * @summary `description`.
+     * @description
+     * Description of this schema, in human-readable text. Non-brief. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.3.
+     * @public
+     * @readonly
+     */
+    readonly description: OPTIONAL<HumanString>;
+    /**
+     * @summary `tagTypeMapping`.
+     * @description
+     * Tag sets used by this schema, and the tag type designated for each.
+     * Non-brief. ANSI/NISO Z39.50-2003 §3.2.10.3.3; Appendix RET.2.2.2.
+     * @public
+     * @readonly
+     */
+    readonly tagTypeMapping: OPTIONAL<SchemaInfo_tagTypeMapping_Item[]>;
+    /**
+     * @summary `recordStructure`.
+     * @description
+     * Abstract record structure defined by this schema: the schema elements,
+     * each identified by a tag path. Non-brief. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.3; Appendix TAG.
+     * @public
+     * @readonly
+     */
+    readonly recordStructure: OPTIONAL<ElementInfo[]>;
+
+    constructor (
+        commonInfo: OPTIONAL<CommonInfo>,
+        schema: OBJECT_IDENTIFIER,
+        name: InternationalString,
+        description: OPTIONAL<HumanString>,
+        tagTypeMapping: OPTIONAL<SchemaInfo_tagTypeMapping_Item[]>,
+        recordStructure: OPTIONAL<ElementInfo[]>
+    ) {
+        this.commonInfo = commonInfo;
+        this.schema = schema;
+        this.name = name;
+        this.description = description;
+        this.tagTypeMapping = tagTypeMapping;
+        this.recordStructure = recordStructure;
+    }
+
+    /**
+     * @summary Restructures an object into a SchemaInfo
+     * @description
+     * 
+     * This takes an `object` and converts it to a `SchemaInfo`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `SchemaInfo`.
+     * @returns {SchemaInfo}
+     */
+    public static _from_object (_o: { [_K in keyof (SchemaInfo)]: (SchemaInfo)[_K] }): SchemaInfo {
+        return new SchemaInfo(_o.commonInfo, _o.schema, _o.name, _o.description, _o.tagTypeMapping, _o.recordStructure);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of SchemaInfo
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_SchemaInfo: $.ComponentSpec[] = [
+    new $.ComponentSpec("commonInfo", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("schema", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("name", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("tagTypeMapping", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("recordStructure", true, $.hasTag(_TagClass.context, 5))
+];
+
+/**
+ * @summary The Trailing Root Component Types of SchemaInfo
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_SchemaInfo: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of SchemaInfo
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_SchemaInfo: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_SchemaInfo: $.ASN1Decoder<SchemaInfo> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) SchemaInfo
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_SchemaInfo (el: _Element): SchemaInfo {
+    if (!_cached_decoder_for_SchemaInfo) { _cached_decoder_for_SchemaInfo = function (el: _Element): SchemaInfo {
+    let commonInfo: OPTIONAL<CommonInfo>;
+    let schema!: OBJECT_IDENTIFIER;
+    let name!: InternationalString;
+    let description: OPTIONAL<HumanString>;
+    let tagTypeMapping: OPTIONAL<SchemaInfo_tagTypeMapping_Item[]>;
+    let recordStructure: OPTIONAL<ElementInfo[]>;
+    const callbacks: $.DecodingMap = {
+        "commonInfo": (_el: _Element): void => { commonInfo = $._decode_implicit<CommonInfo>(() => _decode_CommonInfo)(_el); },
+        "schema": (_el: _Element): void => { schema = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
+        "name": (_el: _Element): void => { name = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); },
+        "description": (_el: _Element): void => { description = $._decode_implicit<HumanString>(() => _decode_HumanString)(_el); },
+        "tagTypeMapping": (_el: _Element): void => { tagTypeMapping = $._decode_implicit<SchemaInfo_tagTypeMapping_Item[]>(() => $._decodeSequenceOf<SchemaInfo_tagTypeMapping_Item>(() => _decode_SchemaInfo_tagTypeMapping_Item))(_el); },
+        "recordStructure": (_el: _Element): void => { recordStructure = $._decode_implicit<ElementInfo[]>(() => $._decodeSequenceOf<ElementInfo>(() => _decode_ElementInfo))(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_SchemaInfo,
+        _extension_additions_list_spec_for_SchemaInfo,
+        _root_component_type_list_2_spec_for_SchemaInfo,
+        undefined,
+    );
+    return new SchemaInfo(
+        commonInfo,
+        schema,
+        name,
+        description,
+        tagTypeMapping,
+        recordStructure
+    );
+}; }
+    return _cached_decoder_for_SchemaInfo(el);
+}
+
+let _cached_encoder_for_SchemaInfo: $.ASN1Encoder<SchemaInfo> | null = null;
+
+/**
+ * @summary Encodes a(n) SchemaInfo into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The SchemaInfo, encoded as an ASN.1 Element.
+ */
+export
+function _encode_SchemaInfo (value: SchemaInfo, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_SchemaInfo) { _cached_encoder_for_SchemaInfo = function (value: SchemaInfo, elGetter: $.ASN1Encoder<SchemaInfo>): _Element {
+    const _components: _Element[] = new Array(6);
+    let _components_i = 0;
+    if (value.commonInfo !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_CommonInfo, $.BER)(value.commonInfo, $.BER);
+    }
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeObjectIdentifier, $.BER)(value.schema, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_InternationalString, $.BER)(value.name, $.BER);
+    if (value.description !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 3, () => _encode_HumanString, $.BER)(value.description, $.BER);
+    }
+    if (value.tagTypeMapping !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 4, () => $._encodeSequenceOf<SchemaInfo_tagTypeMapping_Item>(() => _encode_SchemaInfo_tagTypeMapping_Item, $.BER), $.BER)(value.tagTypeMapping, $.BER);
+    }
+    if (value.recordStructure !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 5, () => $._encodeSequenceOf<ElementInfo>(() => _encode_ElementInfo, $.BER), $.BER)(value.recordStructure, $.BER);
+    }
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_SchemaInfo(value, elGetter);
+}
+
+
+/* eslint-enable */

@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
     AttributeDescriptorSyntax,
     _decode_AttributeDescriptorSyntax,
@@ -17,12 +17,28 @@ import { Buffer } from "node:buffer";
  * component.
  */
 export
-const attDescriptor: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: AttributeDescriptorSyntax = _decode_AttributeDescriptorSyntax(assertion);
-    const v: AttributeDescriptorSyntax = _decode_AttributeDescriptorSyntax(value);
+function attDescriptor (
+    assertion: ASN1Element | AttributeDescriptorSyntax,
+    value: ASN1Element | AttributeDescriptorSyntax,
+): boolean {
+    return attDescriptorTyped(
+        readDecoded(assertion, _decode_AttributeDescriptorSyntax),
+        readDecoded(value, _decode_AttributeDescriptorSyntax),
+    );
+}
+
+/**
+ * `attDescriptor` on two decoded attribute descriptors.
+ *
+ * @param a Presented descriptor.
+ * @param v Stored descriptor.
+ * @returns `true` when the compared components match.
+ */
+export
+function attDescriptorTyped (
+    a: AttributeDescriptorSyntax,
+    v: AttributeDescriptorSyntax,
+): boolean {
 
     if (a.identifier.toString() !== v.identifier.toString()) {
         return false;

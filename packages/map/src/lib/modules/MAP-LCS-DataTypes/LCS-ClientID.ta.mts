@@ -1,78 +1,17 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LCSClientType, _enum_for_LCSClientType, LCSClientType_emergencyServices /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientType_valueAddedServices /* IMPORTED_LONG_ENUMERATION_ITEM */, valueAddedServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientType_plmnOperatorServices /* IMPORTED_LONG_ENUMERATION_ITEM */, plmnOperatorServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientType_lawfulInterceptServices /* IMPORTED_LONG_ENUMERATION_ITEM */, lawfulInterceptServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCSClientType, _encode_LCSClientType } from "../MAP-LCS-DataTypes/LCSClientType.ta.mjs";
-import { LCSClientExternalID, _decode_LCSClientExternalID, _encode_LCSClientExternalID } from "../MAP-CommonDataTypes/LCSClientExternalID.ta.mjs";
 import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-import { LCSClientInternalID, _enum_for_LCSClientInternalID, LCSClientInternalID_broadcastService /* IMPORTED_LONG_ENUMERATION_ITEM */, broadcastService /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_o_andM_HPLMN /* IMPORTED_LONG_ENUMERATION_ITEM */, o_andM_HPLMN /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_o_andM_VPLMN /* IMPORTED_LONG_ENUMERATION_ITEM */, o_andM_VPLMN /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_anonymousLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, anonymousLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LCSClientInternalID_targetMSsubscribedService /* IMPORTED_LONG_ENUMERATION_ITEM */, targetMSsubscribedService /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LCSClientInternalID, _encode_LCSClientInternalID } from "../MAP-CommonDataTypes/LCSClientInternalID.ta.mjs";
+import { LCSClientExternalID, _decode_LCSClientExternalID, _encode_LCSClientExternalID } from "../MAP-CommonDataTypes/LCSClientExternalID.ta.mjs";
+import { LCSClientInternalID, _decode_LCSClientInternalID, _encode_LCSClientInternalID, _enum_for_LCSClientInternalID } from "../MAP-CommonDataTypes/LCSClientInternalID.ta.mjs";
 import { LCSClientName, _decode_LCSClientName, _encode_LCSClientName } from "../MAP-LCS-DataTypes/LCSClientName.ta.mjs";
-import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
+import { LCSClientType, _decode_LCSClientType, _encode_LCSClientType, _enum_for_LCSClientType } from "../MAP-LCS-DataTypes/LCSClientType.ta.mjs";
 import { LCSRequestorID, _decode_LCSRequestorID, _encode_LCSRequestorID } from "../MAP-LCS-DataTypes/LCSRequestorID.ta.mjs";
+import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
 
 
 /**

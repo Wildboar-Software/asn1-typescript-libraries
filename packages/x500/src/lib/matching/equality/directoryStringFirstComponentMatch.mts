@@ -1,10 +1,9 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
+import type { DirectoryStringInput } from "../readValue.mjs";
 import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
-import { prepString } from "../../utils/prepString.mjs";
+    readDirectoryString,
+    readFirstDirectoryString,
+} from "../readValue.mjs";
+import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.4.3
@@ -14,26 +13,40 @@ import { prepString } from "../../utils/prepString.mjs";
  * whose first component is a mandatory `DirectoryString`. TRUE iff
  * that first component matches via `caseIgnoreMatch`. The
  * assertion syntax is derived from the first SEQUENCE component.
+ *
+ * `assertion` is an element, directory string, or string. `value`
+ * is that same set, or a SEQUENCE element whose first component is
+ * the directory string. A missing first component is FALSE.
  */
 export
-const directoryStringFirstComponentMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const v0 = value.sequence[0];
-    if (!v0) {
+function directoryStringFirstComponentMatch (
+    assertion: DirectoryStringInput,
+    value: DirectoryStringInput,
+): boolean {
+    const first = readFirstDirectoryString(value);
+    if (first === undefined) {
         return false;
     }
-    const a: string | undefined = prepString(directoryStringToString(_decode_UDS(assertion)));
-    const v: string | undefined = prepString(directoryStringToString(_decode_UDS(v0)));
-    if (a === undefined) {
-        return false;
-        // throw new Error("b9f14526-160b-4c83-b59c-a98ce4453f39: Invalid characters in directoryStringFirstComponentMatch assertion.");
-    }
-    if (v === undefined) {
-        return false;
-    }
-    return (a.toLowerCase() === v.toLowerCase());
+    return directoryStringFirstComponentMatchTyped(
+        readDirectoryString(assertion),
+        first,
+    );
+}
+
+/**
+ * `directoryStringFirstComponentMatch` on the presented string and
+ * the stored first component. Comparison is `caseIgnoreMatch`.
+ *
+ * @param assertion Presented directory string.
+ * @param value Stored first component.
+ * @returns `true` when `caseIgnoreMatch` holds.
+ */
+export
+function directoryStringFirstComponentMatchTyped (
+    assertion: string,
+    value: string,
+): boolean {
+    return caseIgnoreMatchTyped(assertion, value);
 }
 
 export default directoryStringFirstComponentMatch;
