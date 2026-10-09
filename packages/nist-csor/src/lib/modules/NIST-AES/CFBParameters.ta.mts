@@ -122,10 +122,8 @@ function _decode_CFBParameters (el: _Element): CFBParameters {
     }
     aesIVElement.name = "aes-IV";
     numberOfBitsElement.name = "numberOfBits";
-    let aes_IV!: AES_IV;
-    let numberOfBits!: NumberOfBits;
-    aes_IV = _decode_AES_IV(aesIVElement);
-    numberOfBits = _decode_NumberOfBits(numberOfBitsElement);
+    const aes_IV: AES_IV = _decode_AES_IV(aesIVElement);
+    const numberOfBits: NumberOfBits = _decode_NumberOfBits(numberOfBitsElement);
     return new CFBParameters(
         aes_IV,
         numberOfBits,
