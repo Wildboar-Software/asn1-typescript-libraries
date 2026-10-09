@@ -54,6 +54,7 @@ jobs:
           - "smrse"
           - "spnego"
           - "sv"
+          - "z3950"
           # - "qc"
           # - "rinf"
           # - "rose"

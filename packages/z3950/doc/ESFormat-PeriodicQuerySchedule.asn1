@@ -1,0 +1,93 @@
+ESFormat-PeriodicQuerySchedule
+{z39-50-extendedService periodicQuerySchedule(3)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    Query, InternationalString, IntUnit, OtherInformation
+        FROM Z39-50-APDU-2001
+
+    ExportSpecification, Destination
+        FROM ESFormat-ExportSpecification
+    ;
+
+PeriodicQuerySchedule ::= CHOICE {
+    esRequest       [1] IMPLICIT SEQUENCE {
+        toKeep          [1] ClientPartToKeep,
+        notToKeep       [2] ClientPartNotToKeep
+    },
+    taskPackage     [2] IMPLICIT SEQUENCE {
+        clientPart      [1] ClientPartToKeep,
+        serverPart      [2] ServerPart
+    }
+}
+
+ClientPartToKeep ::= SEQUENCE{
+    activeFlag                  [1] IMPLICIT BOOLEAN,
+    databaseNames               [2] IMPLICIT SEQUENCE OF InternationalString OPTIONAL,
+    --databaseNames must not occur if option bit 20 is set
+    resultSetDisposition        [3] IMPLICIT INTEGER {
+        replace           (1),
+        append            (2),
+        createNew         (3)
+        -- Only if client and server have agreement about naming
+        -- convention for the resulting package,
+        -- and only if no result set is specified
+    } OPTIONAL,
+    -- Mandatory on 'create' if result set is specified,
+    -- in which case it must be 'replace' or 'append
+    alertDestination            [4] Destination OPTIONAL,
+    exportParameters            [5] CHOICE {
+        packageName     [1] IMPLICIT InternationalString,
+        exportPackage   [2] ExportSpecification
+    } OPTIONAL
+}
+
+ClientPartNotToKeep ::= SEQUENCE {
+    databaseNames   [0] IMPLICIT SEQUENCE OF InternationalString OPTIONAL,
+    --Must not occur unless option bit 20 is set
+    querySpec       [1] CHOICE{
+        actualQuery     [1] Query,
+        packageName     [2] IMPLICIT InternationalString
+    } OPTIONAL,
+    --Mandatory for 'create'
+    clientSuggestedPeriod       [2] Period OPTIONAL,
+    -- mandatory for 'create'
+    expiration                  [3] IMPLICIT GeneralizedTime OPTIONAL,
+    resultSetPackage            [4] IMPLICIT InternationalString OPTIONAL,
+    additionalSearchInfo        [5] OtherInformation OPTIONAL
+    -- Must not occur unless option bit 20 is set
+}
+
+ServerPart ::= SEQUENCE{
+    databaseNames           [0] IMPLICIT SEQUENCE OF InternationalString OPTIONAL,
+    -- databaseNames must occur if bit 20 is set
+    -- and must not occur if option bit 20 is not set
+    actualQuery             [1] Query,
+    serverStatedPeriod      [2] Period,
+    --Server supplies the period, which may be same as client proposed
+    expiration              [3] IMPLICIT GeneralizedTime OPTIONAL,
+    --Server supplies value for task package.
+    --It may be the same as client proposed or different from
+    --(and overrides) client proposal, but if omitted, there is no expiration.
+    resultSetPackage        [4] IMPLICIT InternationalString OPTIONAL,
+    --May be omitted only if exportParameters was supplied.
+    --Server supplies same name as client supplied, if client did supply a name.
+    lastQueryTime           [5] IMPLICIT GeneralizedTime OPTIONAL,
+    lastResultNumber        [6] IMPLICIT INTEGER OPTIONAL,
+    --Above two were made optional in 2001 version,
+    --because there won’t be any value for these between
+    --the time the package is created and the first query is executed.
+    numberSinceModify       [7] IMPLICIT INTEGER OPTIONAL,
+    additionalSearchInfo    [8] OtherInformation OPTIONAL
+    --Must not occur unless option bit 20 is set
+}
+
+Period ::= CHOICE {
+    unit            [1] IMPLICIT IntUnit,
+    businessDaily   [2] IMPLICIT NULL,
+    continuous      [3] IMPLICIT NULL,
+    other           [4] IMPLICIT InternationalString
+}
+
+END

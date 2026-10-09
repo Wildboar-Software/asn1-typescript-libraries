@@ -242,6 +242,9 @@
     },
     {
       "path": "./packages/gn"
+    },
+    {
+      "path": "./packages/z3950"
     }
   ],
   "compilerOptions": {

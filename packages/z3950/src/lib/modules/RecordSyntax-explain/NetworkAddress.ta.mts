@@ -1,0 +1,81 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { NetworkAddress_internetAddress, _decode_NetworkAddress_internetAddress, _encode_NetworkAddress_internetAddress } from "../RecordSyntax-explain/NetworkAddress-internetAddress.ta.mjs";
+import { NetworkAddress_depricated, _decode_NetworkAddress_depricated, _encode_NetworkAddress_depricated } from "../RecordSyntax-explain/NetworkAddress-depricated.ta.mjs";
+import { NetworkAddress_other, _decode_NetworkAddress_other, _encode_NetworkAddress_other } from "../RecordSyntax-explain/NetworkAddress-other.ta.mjs";
+
+
+/**
+ * @summary NetworkAddress
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * NetworkAddress  ::=  CHOICE {
+ *     internetAddress [0] IMPLICIT SEQUENCE {
+ *         hostAddress     [0] IMPLICIT InternationalString,
+ *         port            [1] IMPLICIT INTEGER},
+ *     depricated      [1] IMPLICIT SEQUENCE {
+ *         depricated0       [0] IMPLICIT InternationalString,
+ *         depricated1       [1] IMPLICIT InternationalString OPTIONAL,
+ *         depricated2       [2] IMPLICIT InternationalString OPTIONAL,
+ *         depricated3       [3] IMPLICIT InternationalString
+ *     },
+ *     -- This element depricated in Z39.50-2003
+ *     other           [2] IMPLICIT SEQUENCE {
+ *         type    [0] IMPLICIT InternationalString,
+ *         address [1] IMPLICIT InternationalString
+ *     }
+ * }
+ * ```
+ */
+export
+type NetworkAddress =
+    { internetAddress: NetworkAddress_internetAddress } /* CHOICE_ALT_ROOT */
+    | { depricated: NetworkAddress_depricated } /* CHOICE_ALT_ROOT */
+    | { other: NetworkAddress_other } /* CHOICE_ALT_ROOT */;
+
+let _cached_decoder_for_NetworkAddress: $.ASN1Decoder<NetworkAddress> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) NetworkAddress
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_NetworkAddress (el: _Element): NetworkAddress {
+    if (!_cached_decoder_for_NetworkAddress) { _cached_decoder_for_NetworkAddress = $._decode_inextensible_choice<NetworkAddress>({
+    "CONTEXT 0": [ "internetAddress", $._decode_implicit<NetworkAddress_internetAddress>(() => _decode_NetworkAddress_internetAddress) ],
+    "CONTEXT 1": [ "depricated", $._decode_implicit<NetworkAddress_depricated>(() => _decode_NetworkAddress_depricated) ],
+    "CONTEXT 2": [ "other", $._decode_implicit<NetworkAddress_other>(() => _decode_NetworkAddress_other) ]
+}); }
+    return _cached_decoder_for_NetworkAddress(el);
+}
+
+let _cached_encoder_for_NetworkAddress: $.ASN1Encoder<NetworkAddress> | null = null;
+
+/**
+ * @summary Encodes a(n) NetworkAddress into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The NetworkAddress, encoded as an ASN.1 Element.
+ */
+export
+function _encode_NetworkAddress (value: NetworkAddress, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_NetworkAddress) { _cached_encoder_for_NetworkAddress = $._encode_choice<NetworkAddress>({
+    "internetAddress": $._encode_implicit(_TagClass.context, 0, () => _encode_NetworkAddress_internetAddress, $.BER),
+    "depricated": $._encode_implicit(_TagClass.context, 1, () => _encode_NetworkAddress_depricated, $.BER),
+    "other": $._encode_implicit(_TagClass.context, 2, () => _encode_NetworkAddress_other, $.BER),
+}, $.BER); }
+    return _cached_encoder_for_NetworkAddress(value, elGetter);
+}
+
+
+/* eslint-enable */
