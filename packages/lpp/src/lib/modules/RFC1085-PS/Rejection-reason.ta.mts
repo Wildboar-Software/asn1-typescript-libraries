@@ -88,35 +88,8 @@ const Rejection_reason_protocol_version_not_supported: Rejection_reason = 4; /* 
  */
 export
 const protocol_version_not_supported: Rejection_reason = Rejection_reason_protocol_version_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_Rejection_reason: $.ASN1Decoder<Rejection_reason> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Rejection_reason
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Rejection_reason (el: _Element): Rejection_reason {
-    if (!_cached_decoder_for_Rejection_reason) { _cached_decoder_for_Rejection_reason = $._decodeInteger; }
-    return _cached_decoder_for_Rejection_reason(el);
-}
-
-let _cached_encoder_for_Rejection_reason: $.ASN1Encoder<Rejection_reason> | null = null;
-
-/**
- * @summary Encodes a(n) Rejection_reason into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Rejection_reason, encoded as an ASN.1 Element.
- */
-export
-function _encode_Rejection_reason (value: Rejection_reason, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Rejection_reason) { _cached_encoder_for_Rejection_reason = $._encodeInteger; }
-    return _cached_encoder_for_Rejection_reason(value, elGetter);
-}
+export const _decode_Rejection_reason: $.ASN1Decoder<Rejection_reason> = $._decodeInteger;
+export const _encode_Rejection_reason: $.ASN1Encoder<Rejection_reason> = $._encodeInteger;
 
 
 /* eslint-enable */
