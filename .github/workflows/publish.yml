@@ -50,6 +50,7 @@ jobs:
           - "map"
           - "mms"
           - "mrbtr"
+          - "nist-csor"
           - "nlm"
           - "ocsp"
           - "or-address"
