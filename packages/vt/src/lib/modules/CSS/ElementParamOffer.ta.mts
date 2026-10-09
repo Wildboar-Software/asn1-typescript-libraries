@@ -13,11 +13,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
-// export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { ElementParamOffer_category, _decode_ElementParamOffer_category, _encode_ElementParamOffer_category } from "../CSS/ElementParamOffer-category.ta.mjs";
-// export { ElementParamOffer_category, ElementParamOffer_category_character /* IMPORTED_LONG_NAMED_BIT */, character /* IMPORTED_SHORT_NAMED_BIT */, ElementParamOffer_category_boolean /* IMPORTED_LONG_NAMED_BIT */, boolean_ /* IMPORTED_SHORT_NAMED_BIT */, ElementParamOffer_category_symbolic /* IMPORTED_LONG_NAMED_BIT */, symbolic /* IMPORTED_SHORT_NAMED_BIT */, ElementParamOffer_category_integer /* IMPORTED_LONG_NAMED_BIT */, integer /* IMPORTED_SHORT_NAMED_BIT */, ElementParamOffer_category_transparent /* IMPORTED_LONG_NAMED_BIT */, transparent /* IMPORTED_SHORT_NAMED_BIT */, _decode_ElementParamOffer_category, _encode_ElementParamOffer_category } from "../CSS/ElementParamOffer-category.ta.mjs";
 import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
-// export { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 
 
 /**

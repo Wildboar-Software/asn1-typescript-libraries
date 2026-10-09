@@ -1,12 +1,11 @@
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
-import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER, compareBitStrings } from "@wildboar/asn1";
 import type {
     AttCertIssuer,
 } from "../modules/AttributeCertificateDefinitions/AttCertIssuer.ta.mjs";
 import compareGeneralNames from "./compareGeneralNames.mjs";
 import compareIssuerSerial from "./compareIssuerSerial.mjs";
 import compareAlgorithmIdentifier from "./compareAlgorithmIdentifier.mjs";
-import compareBitStrings from "./compareBitStrings.mjs";
 
 /**
  * @summary Compare two `AttCertIssuer` values

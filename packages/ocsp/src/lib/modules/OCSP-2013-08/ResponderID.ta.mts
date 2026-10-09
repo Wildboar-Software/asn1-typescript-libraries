@@ -5,7 +5,7 @@ import {
     Name,
     _decode_Name,
     _encode_Name,
-} from "@wildboar/pki-stub";
+} from "@wildboar/dn";
 import {
     KeyHash,
     _decode_KeyHash,

@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PathOrObjects, _get_decoder_for_PathOrObjects, _get_encoder_for_PathOrObjects } from "../CryptographicInformationFramework/PathOrObjects.ta.mjs";
-// export { PathOrObjects, _get_decoder_for_PathOrObjects, _get_encoder_for_PathOrObjects } from "../CryptographicInformationFramework/PathOrObjects.ta.mjs";
 import { DataContainerObjectChoice, _decode_DataContainerObjectChoice, _encode_DataContainerObjectChoice } from "../CryptographicInformationFramework/DataContainerObjectChoice.ta.mjs";
-// export { DataContainerObjectChoice, _decode_DataContainerObjectChoice, _encode_DataContainerObjectChoice } from "../CryptographicInformationFramework/DataContainerObjectChoice.ta.mjs";
 
 
 /**

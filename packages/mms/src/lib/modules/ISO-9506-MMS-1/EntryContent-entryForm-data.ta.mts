@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EntryContent_entryForm_data_event, _decode_EntryContent_entryForm_data_event, _encode_EntryContent_entryForm_data_event } from "../ISO-9506-MMS-1/EntryContent-entryForm-data-event.ta.mjs";
-// export { EntryContent_entryForm_data_event, _decode_EntryContent_entryForm_data_event, _encode_EntryContent_entryForm_data_event } from "../ISO-9506-MMS-1/EntryContent-entryForm-data-event.ta.mjs";
 import { Journal_Variable, _decode_Journal_Variable, _encode_Journal_Variable } from "../MMS-Object-Module-1/Journal-Variable.ta.mjs";
-// export { Journal_Variable, _decode_Journal_Variable, _encode_Journal_Variable } from "../MMS-Object-Module-1/Journal-Variable.ta.mjs";
 
 
 /**

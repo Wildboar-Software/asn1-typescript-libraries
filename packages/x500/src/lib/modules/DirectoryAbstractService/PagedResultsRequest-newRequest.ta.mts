@@ -113,11 +113,9 @@ export class PagedResultsRequest_newRequest {
      * @returns {PagedResultsRequest_newRequest}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof PagedResultsRequest_newRequest]: PagedResultsRequest_newRequest[_K];
             }
-        >
     ): PagedResultsRequest_newRequest {
         return new PagedResultsRequest_newRequest(
             _o.pageSize,

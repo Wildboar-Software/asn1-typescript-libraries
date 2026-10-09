@@ -65,11 +65,9 @@ export class CertificatePairExactAssertion {
      * @returns {CertificatePairExactAssertion}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof CertificatePairExactAssertion]: CertificatePairExactAssertion[_K];
             }
-        >
     ): CertificatePairExactAssertion {
         return new CertificatePairExactAssertion(
             _o.issuedToThisCAAssertion,

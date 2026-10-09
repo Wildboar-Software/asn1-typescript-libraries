@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Access_Control_List_instance_definition_details, _decode_Access_Control_List_instance_definition_details, _encode_Access_Control_List_instance_definition_details } from "../MMS-SCI-Module-1/Access-Control-List-instance-definition-details.ta.mjs";
-// export { Access_Control_List_instance_definition_details, _decode_Access_Control_List_instance_definition_details, _encode_Access_Control_List_instance_definition_details } from "../MMS-SCI-Module-1/Access-Control-List-instance-definition-details.ta.mjs";
 
 
 /**

@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SearchDomain_Item, _decode_SearchDomain_Item, _encode_SearchDomain_Item } from "../DFRAbstractService/SearchDomain-Item.ta.mjs";
-// export { SearchDomain_Item, _decode_SearchDomain_Item, _encode_SearchDomain_Item } from "../DFRAbstractService/SearchDomain-Item.ta.mjs";
 
 
 /**

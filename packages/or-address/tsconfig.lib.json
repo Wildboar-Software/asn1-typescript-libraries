@@ -1,17 +1,37 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
-    "declaration": true,
+    "rootDir": "src",
+    "outDir": "../../dist/packages/or-address",
+    "tsBuildInfoFile": "../../dist/packages/or-address/tsconfig.lib.tsbuildinfo",
+    "emitDeclarationOnly": false,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictBuiltinIteratorReturn": true,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
+    "isolatedDeclarations": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noUncheckedSideEffectImports": true,
+    "importHelpers": true,
     "types": [
       "node"
-    ],
-    "rootDir": "."
+    ]
   },
   "include": [
     "src/**/*.mts",
   ],
-  "references": [],
+  "references": [
+    {
+      "path": "../presentation-address/tsconfig.lib.json"
+    }
+  ],
   "exclude": [
     "vite.config.ts",
     "vite.config.mts",

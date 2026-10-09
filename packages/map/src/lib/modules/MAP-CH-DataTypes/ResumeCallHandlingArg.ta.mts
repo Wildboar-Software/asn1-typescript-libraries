@@ -1,82 +1,22 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
-import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-import { ForwardingData, _decode_ForwardingData, _encode_ForwardingData } from "../MAP-CH-DataTypes/ForwardingData.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { CUG_CheckInfo, _decode_CUG_CheckInfo, _encode_CUG_CheckInfo } from "../MAP-CH-DataTypes/CUG-CheckInfo.ta.mjs";
-import { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.ta.mjs";
-import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { ForwardingData, _decode_ForwardingData, _encode_ForwardingData } from "../MAP-CH-DataTypes/ForwardingData.ta.mjs";
 import { UU_Data, _decode_UU_Data, _encode_UU_Data } from "../MAP-CH-DataTypes/UU-Data.ta.mjs";
+import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
+import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { D_CSI, _decode_D_CSI, _encode_D_CSI } from "../MAP-MS-DataTypes/D-CSI.ta.mjs";
 import { O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode_O_BcsmCamelTDPCriteriaList } from "../MAP-MS-DataTypes/O-BcsmCamelTDPCriteriaList.ta.mjs";
+import { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.ta.mjs";
 
 
 /**

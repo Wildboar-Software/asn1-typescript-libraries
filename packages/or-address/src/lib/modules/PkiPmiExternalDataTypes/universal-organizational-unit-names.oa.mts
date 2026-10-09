@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import {
-    UniversalOrganizationalUnitNames,
+    type UniversalOrganizationalUnitNames,
     _decode_UniversalOrganizationalUnitNames,
     _encode_UniversalOrganizationalUnitNames,
 } from "../PkiPmiExternalDataTypes/UniversalOrganizationalUnitNames.ta.mjs";
