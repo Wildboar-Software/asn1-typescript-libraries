@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1SizeError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    ASN1SizeError,
     NumericString,
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ub_e163_4_sub_address_length } from "../PKIX1Explicit88/ub-e163-4-sub-address-length.va.mjs";
 import { ub_e163_4_number_length } from "../PKIX1Explicit88/ub-e163-4-number-length.va.mjs";
+import { ub_e163_4_sub_address_length } from "../PKIX1Explicit88/ub-e163-4-sub-address-length.va.mjs";
 
 
 
@@ -155,7 +155,7 @@ let _cached_encoder_for_ExtendedNetworkAddress_e163_4_address: $.ASN1Encoder<Ext
  */
 export
 function _encode_ExtendedNetworkAddress_e163_4_address (value: ExtendedNetworkAddress_e163_4_address, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExtendedNetworkAddress_e163_4_address) { _cached_encoder_for_ExtendedNetworkAddress_e163_4_address = function (value: ExtendedNetworkAddress_e163_4_address, elGetter: $.ASN1Encoder<ExtendedNetworkAddress_e163_4_address>): _Element {
+    if (!_cached_encoder_for_ExtendedNetworkAddress_e163_4_address) { _cached_encoder_for_ExtendedNetworkAddress_e163_4_address = function (value: ExtendedNetworkAddress_e163_4_address): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeNumericString, $.BER)(value.number_, $.BER),

@@ -186,7 +186,7 @@ let _cached_encoder_for_ExternalPrincipalIdentifier: $.ASN1Encoder<ExternalPrinc
  */
 export
 function _encode_ExternalPrincipalIdentifier (value: ExternalPrincipalIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExternalPrincipalIdentifier) { _cached_encoder_for_ExternalPrincipalIdentifier = function (value: ExternalPrincipalIdentifier, elGetter: $.ASN1Encoder<ExternalPrincipalIdentifier>): _Element {
+    if (!_cached_encoder_for_ExternalPrincipalIdentifier) { _cached_encoder_for_ExternalPrincipalIdentifier = function (value: ExternalPrincipalIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_Name, $.BER)(value.subjectName, $.BER),

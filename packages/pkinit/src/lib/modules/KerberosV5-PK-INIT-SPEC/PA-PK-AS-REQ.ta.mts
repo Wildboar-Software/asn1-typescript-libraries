@@ -189,7 +189,7 @@ let _cached_encoder_for_PA_PK_AS_REQ: $.ASN1Encoder<PA_PK_AS_REQ> | null = null;
  */
 export
 function _encode_PA_PK_AS_REQ (value: PA_PK_AS_REQ, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PA_PK_AS_REQ) { _cached_encoder_for_PA_PK_AS_REQ = function (value: PA_PK_AS_REQ, elGetter: $.ASN1Encoder<PA_PK_AS_REQ>): _Element {
+    if (!_cached_encoder_for_PA_PK_AS_REQ) { _cached_encoder_for_PA_PK_AS_REQ = function (value: PA_PK_AS_REQ): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_ContentInfo, $.BER)(value.signedAuthPack, $.BER),

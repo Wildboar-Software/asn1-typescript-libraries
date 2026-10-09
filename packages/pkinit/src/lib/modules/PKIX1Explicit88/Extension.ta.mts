@@ -160,7 +160,7 @@ let _cached_encoder_for_Extension: $.ASN1Encoder<Extension> | null = null;
  */
 export
 function _encode_Extension (value: Extension, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Extension) { _cached_encoder_for_Extension = function (value: Extension, elGetter: $.ASN1Encoder<Extension>): _Element {
+    if (!_cached_encoder_for_Extension) { _cached_encoder_for_Extension = function (value: Extension): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeObjectIdentifier(value.extnID, $.BER),

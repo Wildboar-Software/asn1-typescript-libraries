@@ -139,7 +139,7 @@ let _cached_encoder_for_Validity: $.ASN1Encoder<Validity> | null = null;
  */
 export
 function _encode_Validity (value: Validity, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Validity) { _cached_encoder_for_Validity = function (value: Validity, elGetter: $.ASN1Encoder<Validity>): _Element {
+    if (!_cached_encoder_for_Validity) { _cached_encoder_for_Validity = function (value: Validity): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Time(value.notBefore, $.BER),

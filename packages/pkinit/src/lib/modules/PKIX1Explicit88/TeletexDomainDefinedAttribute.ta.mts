@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1SizeError,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    ASN1SizeError,
     TeletexString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -150,7 +150,7 @@ let _cached_encoder_for_TeletexDomainDefinedAttribute: $.ASN1Encoder<TeletexDoma
  */
 export
 function _encode_TeletexDomainDefinedAttribute (value: TeletexDomainDefinedAttribute, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TeletexDomainDefinedAttribute) { _cached_encoder_for_TeletexDomainDefinedAttribute = function (value: TeletexDomainDefinedAttribute, elGetter: $.ASN1Encoder<TeletexDomainDefinedAttribute>): _Element {
+    if (!_cached_encoder_for_TeletexDomainDefinedAttribute) { _cached_encoder_for_TeletexDomainDefinedAttribute = function (value: TeletexDomainDefinedAttribute): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeTeletexString(value.type_, $.BER),

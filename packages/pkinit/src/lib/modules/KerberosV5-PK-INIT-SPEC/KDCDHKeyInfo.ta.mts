@@ -182,7 +182,7 @@ let _cached_encoder_for_KDCDHKeyInfo: $.ASN1Encoder<KDCDHKeyInfo> | null = null;
  */
 export
 function _encode_KDCDHKeyInfo (value: KDCDHKeyInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KDCDHKeyInfo) { _cached_encoder_for_KDCDHKeyInfo = function (value: KDCDHKeyInfo, elGetter: $.ASN1Encoder<KDCDHKeyInfo>): _Element {
+    if (!_cached_encoder_for_KDCDHKeyInfo) { _cached_encoder_for_KDCDHKeyInfo = function (value: KDCDHKeyInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeBitString, $.BER)(value.subjectPublicKey, $.BER),

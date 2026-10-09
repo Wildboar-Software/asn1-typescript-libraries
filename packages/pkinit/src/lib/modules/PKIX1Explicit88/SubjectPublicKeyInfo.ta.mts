@@ -141,7 +141,7 @@ let _cached_encoder_for_SubjectPublicKeyInfo: $.ASN1Encoder<SubjectPublicKeyInfo
  */
 export
 function _encode_SubjectPublicKeyInfo (value: SubjectPublicKeyInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SubjectPublicKeyInfo) { _cached_encoder_for_SubjectPublicKeyInfo = function (value: SubjectPublicKeyInfo, elGetter: $.ASN1Encoder<SubjectPublicKeyInfo>): _Element {
+    if (!_cached_encoder_for_SubjectPublicKeyInfo) { _cached_encoder_for_SubjectPublicKeyInfo = function (value: SubjectPublicKeyInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_AlgorithmIdentifier(value.algorithm, $.BER),

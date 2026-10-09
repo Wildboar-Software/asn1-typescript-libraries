@@ -212,7 +212,7 @@ let _cached_encoder_for_AuthPack: $.ASN1Encoder<AuthPack> | null = null;
  */
 export
 function _encode_AuthPack (value: AuthPack, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthPack) { _cached_encoder_for_AuthPack = function (value: AuthPack, elGetter: $.ASN1Encoder<AuthPack>): _Element {
+    if (!_cached_encoder_for_AuthPack) { _cached_encoder_for_AuthPack = function (value: AuthPack): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_PKAuthenticator, $.BER)(value.pkAuthenticator, $.BER),

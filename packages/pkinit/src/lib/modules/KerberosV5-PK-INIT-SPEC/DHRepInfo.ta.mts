@@ -180,7 +180,7 @@ let _cached_encoder_for_DHRepInfo: $.ASN1Encoder<DHRepInfo> | null = null;
  */
 export
 function _encode_DHRepInfo (value: DHRepInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DHRepInfo) { _cached_encoder_for_DHRepInfo = function (value: DHRepInfo, elGetter: $.ASN1Encoder<DHRepInfo>): _Element {
+    if (!_cached_encoder_for_DHRepInfo) { _cached_encoder_for_DHRepInfo = function (value: DHRepInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_ContentInfo, $.BER)(value.dhSignedData, $.BER),

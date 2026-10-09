@@ -143,7 +143,7 @@ let _cached_encoder_for_KRB5PrincipalName: $.ASN1Encoder<KRB5PrincipalName> | nu
  */
 export
 function _encode_KRB5PrincipalName (value: KRB5PrincipalName, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KRB5PrincipalName) { _cached_encoder_for_KRB5PrincipalName = function (value: KRB5PrincipalName, elGetter: $.ASN1Encoder<KRB5PrincipalName>): _Element {
+    if (!_cached_encoder_for_KRB5PrincipalName) { _cached_encoder_for_KRB5PrincipalName = function (value: KRB5PrincipalName): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_Realm, $.BER)(value.realm, $.BER),

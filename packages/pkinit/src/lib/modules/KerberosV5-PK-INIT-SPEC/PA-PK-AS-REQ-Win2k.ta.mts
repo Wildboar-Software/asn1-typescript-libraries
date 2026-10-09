@@ -176,7 +176,7 @@ let _cached_encoder_for_PA_PK_AS_REQ_Win2k: $.ASN1Encoder<PA_PK_AS_REQ_Win2k> | 
  */
 export
 function _encode_PA_PK_AS_REQ_Win2k (value: PA_PK_AS_REQ_Win2k, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PA_PK_AS_REQ_Win2k) { _cached_encoder_for_PA_PK_AS_REQ_Win2k = function (value: PA_PK_AS_REQ_Win2k, elGetter: $.ASN1Encoder<PA_PK_AS_REQ_Win2k>): _Element {
+    if (!_cached_encoder_for_PA_PK_AS_REQ_Win2k) { _cached_encoder_for_PA_PK_AS_REQ_Win2k = function (value: PA_PK_AS_REQ_Win2k): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_ContentInfo, $.BER)(value.signed_auth_pack, $.BER),

@@ -4,8 +4,8 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ub_extension_attributes } from "../PKIX1Explicit88/ub-extension-attributes.va.mjs";
 import { ExtensionAttribute, _decode_ExtensionAttribute, _encode_ExtensionAttribute } from "../PKIX1Explicit88/ExtensionAttribute.ta.mjs";
+import { ub_extension_attributes } from "../PKIX1Explicit88/ub-extension-attributes.va.mjs";
 // export { ExtensionAttribute, _decode_ExtensionAttribute, _encode_ExtensionAttribute } from "../PKIX1Explicit88/ExtensionAttribute.ta.mjs";
 
 

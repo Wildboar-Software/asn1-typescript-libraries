@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1SizeError,
     ASN1Element as _Element,
+    ASN1SizeError,
     NumericString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

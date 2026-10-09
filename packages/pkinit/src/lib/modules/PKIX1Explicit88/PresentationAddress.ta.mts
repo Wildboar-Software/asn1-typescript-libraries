@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1SizeError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    ASN1SizeError,
     OCTET_STRING,
     OPTIONAL
 } from "@wildboar/asn1";
@@ -168,7 +168,7 @@ let _cached_encoder_for_PresentationAddress: $.ASN1Encoder<PresentationAddress> 
  */
 export
 function _encode_PresentationAddress (value: PresentationAddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PresentationAddress) { _cached_encoder_for_PresentationAddress = function (value: PresentationAddress, elGetter: $.ASN1Encoder<PresentationAddress>): _Element {
+    if (!_cached_encoder_for_PresentationAddress) { _cached_encoder_for_PresentationAddress = function (value: PresentationAddress): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.pSelector === undefined) ? undefined : $._encode_explicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.pSelector, $.BER)),

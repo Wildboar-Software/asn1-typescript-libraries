@@ -4,8 +4,8 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ub_domain_defined_attributes } from "../PKIX1Explicit88/ub-domain-defined-attributes.va.mjs";
 import { TeletexDomainDefinedAttribute, _decode_TeletexDomainDefinedAttribute, _encode_TeletexDomainDefinedAttribute } from "../PKIX1Explicit88/TeletexDomainDefinedAttribute.ta.mjs";
+import { ub_domain_defined_attributes } from "../PKIX1Explicit88/ub-domain-defined-attributes.va.mjs";
 // export { TeletexDomainDefinedAttribute, _decode_TeletexDomainDefinedAttribute, _encode_TeletexDomainDefinedAttribute } from "../PKIX1Explicit88/TeletexDomainDefinedAttribute.ta.mjs";
 
 

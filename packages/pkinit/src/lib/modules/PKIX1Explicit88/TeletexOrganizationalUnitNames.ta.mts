@@ -4,8 +4,8 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ub_organizational_units } from "../PKIX1Explicit88/ub-organizational-units.va.mjs";
 import { TeletexOrganizationalUnitName, _decode_TeletexOrganizationalUnitName, _encode_TeletexOrganizationalUnitName } from "../PKIX1Explicit88/TeletexOrganizationalUnitName.ta.mjs";
+import { ub_organizational_units } from "../PKIX1Explicit88/ub-organizational-units.va.mjs";
 // export { TeletexOrganizationalUnitName, _decode_TeletexOrganizationalUnitName, _encode_TeletexOrganizationalUnitName } from "../PKIX1Explicit88/TeletexOrganizationalUnitName.ta.mjs";
 
 

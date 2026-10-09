@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    ASN1SizeError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    ASN1SizeError,
     OPTIONAL,
     PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ub_generation_qualifier_length } from "../PKIX1Explicit88/ub-generation-qualifier-length.va.mjs";
-import { ub_initials_length } from "../PKIX1Explicit88/ub-initials-length.va.mjs";
 import { ub_given_name_length } from "../PKIX1Explicit88/ub-given-name-length.va.mjs";
+import { ub_initials_length } from "../PKIX1Explicit88/ub-initials-length.va.mjs";
 import { ub_surname_length } from "../PKIX1Explicit88/ub-surname-length.va.mjs";
 
 
@@ -190,7 +190,7 @@ let _cached_encoder_for_PersonalName: $.ASN1Encoder<PersonalName> | null = null;
  */
 export
 function _encode_PersonalName (value: PersonalName, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PersonalName) { _cached_encoder_for_PersonalName = function (value: PersonalName, elGetter: $.ASN1Encoder<PersonalName>): _Element {
+    if (!_cached_encoder_for_PersonalName) { _cached_encoder_for_PersonalName = function (value: PersonalName): _Element {
     return $._encodeSet(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodePrintableString, $.BER)(value.surname, $.BER),

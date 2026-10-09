@@ -223,7 +223,7 @@ let _cached_encoder_for_PKAuthenticator: $.ASN1Encoder<PKAuthenticator> | null =
  */
 export
 function _encode_PKAuthenticator (value: PKAuthenticator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PKAuthenticator) { _cached_encoder_for_PKAuthenticator = function (value: PKAuthenticator, elGetter: $.ASN1Encoder<PKAuthenticator>): _Element {
+    if (!_cached_encoder_for_PKAuthenticator) { _cached_encoder_for_PKAuthenticator = function (value: PKAuthenticator): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.cusec, $.BER),

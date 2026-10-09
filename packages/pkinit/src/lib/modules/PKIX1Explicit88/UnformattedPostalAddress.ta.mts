@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1SizeError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    ASN1SizeError,
     OPTIONAL,
     PrintableString,
     TeletexString
@@ -166,7 +166,7 @@ let _cached_encoder_for_UnformattedPostalAddress: $.ASN1Encoder<UnformattedPosta
  */
 export
 function _encode_UnformattedPostalAddress (value: UnformattedPostalAddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UnformattedPostalAddress) { _cached_encoder_for_UnformattedPostalAddress = function (value: UnformattedPostalAddress, elGetter: $.ASN1Encoder<UnformattedPostalAddress>): _Element {
+    if (!_cached_encoder_for_UnformattedPostalAddress) { _cached_encoder_for_UnformattedPostalAddress = function (value: UnformattedPostalAddress): _Element {
     return $._encodeSet(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.printable_address === undefined) ? undefined : $._encodeSequenceOf<PrintableString>(() => $._encodePrintableString, $.BER)(value.printable_address, $.BER)),

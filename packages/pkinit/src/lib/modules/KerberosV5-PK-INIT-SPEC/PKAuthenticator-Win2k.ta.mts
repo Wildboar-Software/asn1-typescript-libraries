@@ -199,7 +199,7 @@ let _cached_encoder_for_PKAuthenticator_Win2k: $.ASN1Encoder<PKAuthenticator_Win
  */
 export
 function _encode_PKAuthenticator_Win2k (value: PKAuthenticator_Win2k, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PKAuthenticator_Win2k) { _cached_encoder_for_PKAuthenticator_Win2k = function (value: PKAuthenticator_Win2k, elGetter: $.ASN1Encoder<PKAuthenticator_Win2k>): _Element {
+    if (!_cached_encoder_for_PKAuthenticator_Win2k) { _cached_encoder_for_PKAuthenticator_Win2k = function (value: PKAuthenticator_Win2k): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_PrincipalName, $.BER)(value.kdcName, $.BER),
