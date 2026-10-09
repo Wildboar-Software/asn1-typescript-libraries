@@ -18,12 +18,8 @@ import { id_aes192_ECB } from "../NIST-AES/id-aes192-ECB.va.mjs";
  */
 export const aes_192_ECB: ALGORITHM = {
     class: "ALGORITHM",
-    decoderFor: {
-        "&Type": undefined,
-    },
-    encoderFor: {
-        "&Type": undefined,
-    },
+    decoderFor: {},
+    encoderFor: {},
     "&id": id_aes192_ECB /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };

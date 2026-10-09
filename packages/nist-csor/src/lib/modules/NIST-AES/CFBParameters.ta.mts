@@ -115,12 +115,17 @@ function _decode_CFBParameters (el: _Element): CFBParameters {
     if (sequence.length < 2) {
         throw new _ConstructionError("CFBParameters contained only " + sequence.length.toString() + " elements.");
     }
-    sequence[0].name = "aes-IV";
-    sequence[1].name = "numberOfBits";
+    const aesIVElement = sequence[0];
+    const numberOfBitsElement = sequence[1];
+    if (!aesIVElement || !numberOfBitsElement) {
+        throw new _ConstructionError("CFBParameters contained only " + sequence.length.toString() + " elements.");
+    }
+    aesIVElement.name = "aes-IV";
+    numberOfBitsElement.name = "numberOfBits";
     let aes_IV!: AES_IV;
     let numberOfBits!: NumberOfBits;
-    aes_IV = _decode_AES_IV(sequence[0]);
-    numberOfBits = _decode_NumberOfBits(sequence[1]);
+    aes_IV = _decode_AES_IV(aesIVElement);
+    numberOfBits = _decode_NumberOfBits(numberOfBitsElement);
     return new CFBParameters(
         aes_IV,
         numberOfBits,
