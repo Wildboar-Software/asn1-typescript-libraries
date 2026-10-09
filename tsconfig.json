@@ -220,6 +220,9 @@
       "path": "./packages/mrbtr"
     },
     {
+      "path": "./packages/novell_pkis"
+    },
+    {
       "path": "./packages/logotypecertextn"
     },
     {
