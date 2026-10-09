@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../ElementSpecification-eSpec-q/RPNStructure.ta.mjs";
-// export { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../ElementSpecification-eSpec-q/RPNStructure.ta.mjs";
 import { RPNStructure_rpnRpnOp_op, _decode_RPNStructure_rpnRpnOp_op, _encode_RPNStructure_rpnRpnOp_op } from "../ElementSpecification-eSpec-q/RPNStructure-rpnRpnOp-op.ta.mjs";
-// export { RPNStructure_rpnRpnOp_op, _decode_RPNStructure_rpnRpnOp_op, _encode_RPNStructure_rpnRpnOp_op } from "../ElementSpecification-eSpec-q/RPNStructure-rpnRpnOp-op.ta.mjs";
 
 
 /**

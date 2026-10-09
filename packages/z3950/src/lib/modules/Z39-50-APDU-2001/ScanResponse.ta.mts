@@ -7,15 +7,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
-// export { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
 import { ScanResponse_scanStatus, _decode_ScanResponse_scanStatus, _encode_ScanResponse_scanStatus } from "../Z39-50-APDU-2001/ScanResponse-scanStatus.ta.mjs";
-// export { ScanResponse_scanStatus, ScanResponse_scanStatus_success /* IMPORTED_LONG_NAMED_INTEGER */, success /* IMPORTED_SHORT_NAMED_INTEGER */, ScanResponse_scanStatus_partial_1 /* IMPORTED_LONG_NAMED_INTEGER */, partial_1 /* IMPORTED_SHORT_NAMED_INTEGER */, ScanResponse_scanStatus_partial_2 /* IMPORTED_LONG_NAMED_INTEGER */, partial_2 /* IMPORTED_SHORT_NAMED_INTEGER */, ScanResponse_scanStatus_partial_3 /* IMPORTED_LONG_NAMED_INTEGER */, partial_3 /* IMPORTED_SHORT_NAMED_INTEGER */, ScanResponse_scanStatus_partial_4 /* IMPORTED_LONG_NAMED_INTEGER */, partial_4 /* IMPORTED_SHORT_NAMED_INTEGER */, ScanResponse_scanStatus_partial_5 /* IMPORTED_LONG_NAMED_INTEGER */, partial_5 /* IMPORTED_SHORT_NAMED_INTEGER */, ScanResponse_scanStatus_failure /* IMPORTED_LONG_NAMED_INTEGER */, failure /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ScanResponse_scanStatus, _encode_ScanResponse_scanStatus } from "../Z39-50-APDU-2001/ScanResponse-scanStatus.ta.mjs";
 import { ListEntries, _decode_ListEntries, _encode_ListEntries } from "../Z39-50-APDU-2001/ListEntries.ta.mjs";
-// export { ListEntries, _decode_ListEntries, _encode_ListEntries } from "../Z39-50-APDU-2001/ListEntries.ta.mjs";
 import { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
-// export { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
 import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
-// export { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**

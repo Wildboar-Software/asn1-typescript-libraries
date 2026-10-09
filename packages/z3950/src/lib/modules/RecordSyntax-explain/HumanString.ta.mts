@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HumanString_Item, _decode_HumanString_Item, _encode_HumanString_Item } from "../RecordSyntax-explain/HumanString-Item.ta.mjs";
-// export { HumanString_Item, _decode_HumanString_Item, _encode_HumanString_Item } from "../RecordSyntax-explain/HumanString-Item.ta.mjs";
 
 
 /**

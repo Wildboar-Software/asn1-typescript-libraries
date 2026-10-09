@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IconObject_Item, _decode_IconObject_Item, _encode_IconObject_Item } from "../RecordSyntax-explain/IconObject-Item.ta.mjs";
-// export { IconObject_Item, _decode_IconObject_Item, _encode_IconObject_Item } from "../RecordSyntax-explain/IconObject-Item.ta.mjs";
 
 
 /**

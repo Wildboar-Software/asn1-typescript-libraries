@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Specification_schema, _decode_Specification_schema, _encode_Specification_schema } from "../Z39-50-APDU-2001/Specification-schema.ta.mjs";
-// export { Specification_schema, _decode_Specification_schema, _encode_Specification_schema } from "../Z39-50-APDU-2001/Specification-schema.ta.mjs";
 import { Specification_elementSpec, _decode_Specification_elementSpec, _encode_Specification_elementSpec } from "../Z39-50-APDU-2001/Specification-elementSpec.ta.mjs";
-// export { Specification_elementSpec, _decode_Specification_elementSpec, _encode_Specification_elementSpec } from "../Z39-50-APDU-2001/Specification-elementSpec.ta.mjs";
 
 
 /**

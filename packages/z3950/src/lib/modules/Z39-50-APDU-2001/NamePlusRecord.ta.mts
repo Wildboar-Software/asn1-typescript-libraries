@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
-// export { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
 import { NamePlusRecord_record, _decode_NamePlusRecord_record, _encode_NamePlusRecord_record } from "../Z39-50-APDU-2001/NamePlusRecord-record.ta.mjs";
-// export { NamePlusRecord_record, _decode_NamePlusRecord_record, _encode_NamePlusRecord_record } from "../Z39-50-APDU-2001/NamePlusRecord-record.ta.mjs";
 
 
 /**

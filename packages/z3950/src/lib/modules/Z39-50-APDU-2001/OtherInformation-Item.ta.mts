@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InfoCategory, _decode_InfoCategory, _encode_InfoCategory } from "../Z39-50-APDU-2001/InfoCategory.ta.mjs";
-// export { InfoCategory, _decode_InfoCategory, _encode_InfoCategory } from "../Z39-50-APDU-2001/InfoCategory.ta.mjs";
 import { OtherInformation_Item_information, _decode_OtherInformation_Item_information, _encode_OtherInformation_Item_information } from "../Z39-50-APDU-2001/OtherInformation-Item-information.ta.mjs";
-// export { OtherInformation_Item_information, _decode_OtherInformation_Item_information, _encode_OtherInformation_Item_information } from "../Z39-50-APDU-2001/OtherInformation-Item-information.ta.mjs";
 
 
 /**

@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
-// export { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
 import { DeleteResultSetRequest_deleteFunction, _decode_DeleteResultSetRequest_deleteFunction, _encode_DeleteResultSetRequest_deleteFunction } from "../Z39-50-APDU-2001/DeleteResultSetRequest-deleteFunction.ta.mjs";
-// export { DeleteResultSetRequest_deleteFunction, DeleteResultSetRequest_deleteFunction_list /* IMPORTED_LONG_NAMED_INTEGER */, list /* IMPORTED_SHORT_NAMED_INTEGER */, DeleteResultSetRequest_deleteFunction_all /* IMPORTED_LONG_NAMED_INTEGER */, all /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeleteResultSetRequest_deleteFunction, _encode_DeleteResultSetRequest_deleteFunction } from "../Z39-50-APDU-2001/DeleteResultSetRequest-deleteFunction.ta.mjs";
 import { ResultSetId, _decode_ResultSetId, _encode_ResultSetId } from "../Z39-50-APDU-2001/ResultSetId.ta.mjs";
-// export { ResultSetId, _decode_ResultSetId, _encode_ResultSetId } from "../Z39-50-APDU-2001/ResultSetId.ta.mjs";
 import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
-// export { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**

@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SuppliedRecords, _decode_SuppliedRecords, _encode_SuppliedRecords } from "../ESFormat-Update/SuppliedRecords.ta.mjs";
-// export { SuppliedRecords, _decode_SuppliedRecords, _encode_SuppliedRecords } from "../ESFormat-Update/SuppliedRecords.ta.mjs";
 
 
 /**

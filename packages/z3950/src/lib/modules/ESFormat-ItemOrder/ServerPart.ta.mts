@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServerPart_auxiliaryStatus, _decode_ServerPart_auxiliaryStatus, _encode_ServerPart_auxiliaryStatus } from "../ESFormat-ItemOrder/ServerPart-auxiliaryStatus.ta.mjs";
-// export { ServerPart_auxiliaryStatus, ServerPart_auxiliaryStatus_notReceived /* IMPORTED_LONG_NAMED_INTEGER */, notReceived /* IMPORTED_SHORT_NAMED_INTEGER */, ServerPart_auxiliaryStatus_loanQueue /* IMPORTED_LONG_NAMED_INTEGER */, loanQueue /* IMPORTED_SHORT_NAMED_INTEGER */, ServerPart_auxiliaryStatus_forwarded /* IMPORTED_LONG_NAMED_INTEGER */, forwarded /* IMPORTED_SHORT_NAMED_INTEGER */, ServerPart_auxiliaryStatus_unfilledCopyright /* IMPORTED_LONG_NAMED_INTEGER */, unfilledCopyright /* IMPORTED_SHORT_NAMED_INTEGER */, ServerPart_auxiliaryStatus_filledCopyright /* IMPORTED_LONG_NAMED_INTEGER */, filledCopyright /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ServerPart_auxiliaryStatus, _encode_ServerPart_auxiliaryStatus } from "../ESFormat-ItemOrder/ServerPart-auxiliaryStatus.ta.mjs";
 
 
 /**

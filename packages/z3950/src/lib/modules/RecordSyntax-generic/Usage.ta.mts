@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Usage_type, _decode_Usage_type, _encode_Usage_type } from "../RecordSyntax-generic/Usage-type.ta.mjs";
-// export { Usage_type, Usage_type_redistributable /* IMPORTED_LONG_NAMED_INTEGER */, redistributable /* IMPORTED_SHORT_NAMED_INTEGER */, Usage_type_restricted /* IMPORTED_LONG_NAMED_INTEGER */, restricted /* IMPORTED_SHORT_NAMED_INTEGER */, Usage_type_licensePointer /* IMPORTED_LONG_NAMED_INTEGER */, licensePointer /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Usage_type, _encode_Usage_type } from "../RecordSyntax-generic/Usage-type.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**

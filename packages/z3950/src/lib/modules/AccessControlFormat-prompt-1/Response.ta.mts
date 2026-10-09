@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Response_Item, _decode_Response_Item, _encode_Response_Item } from "../AccessControlFormat-prompt-1/Response-Item.ta.mjs";
-// export { Response_Item, _decode_Response_Item, _encode_Response_Item } from "../AccessControlFormat-prompt-1/Response-Item.ta.mjs";
 
 
 /**

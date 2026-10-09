@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RpnCapabilities_operators_Item, _decode_RpnCapabilities_operators_Item, _encode_RpnCapabilities_operators_Item } from "../RecordSyntax-explain/RpnCapabilities-operators-Item.ta.mjs";
-// export { RpnCapabilities_operators_Item, RpnCapabilities_operators_Item_and /* IMPORTED_LONG_NAMED_INTEGER */, and /* IMPORTED_SHORT_NAMED_INTEGER */, RpnCapabilities_operators_Item_or /* IMPORTED_LONG_NAMED_INTEGER */, or /* IMPORTED_SHORT_NAMED_INTEGER */, RpnCapabilities_operators_Item_and_not /* IMPORTED_LONG_NAMED_INTEGER */, and_not /* IMPORTED_SHORT_NAMED_INTEGER */, RpnCapabilities_operators_Item_prox /* IMPORTED_LONG_NAMED_INTEGER */, prox /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RpnCapabilities_operators_Item, _encode_RpnCapabilities_operators_Item } from "../RecordSyntax-explain/RpnCapabilities-operators-Item.ta.mjs";
 import { ProximitySupport, _decode_ProximitySupport, _encode_ProximitySupport } from "../RecordSyntax-explain/ProximitySupport.ta.mjs";
-// export { ProximitySupport, _decode_ProximitySupport, _encode_ProximitySupport } from "../RecordSyntax-explain/ProximitySupport.ta.mjs";
 
 
 /**

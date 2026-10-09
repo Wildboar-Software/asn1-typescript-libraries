@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RPNQuery, _decode_RPNQuery, _encode_RPNQuery } from "../Z39-50-APDU-2001/RPNQuery.ta.mjs";
-// export { RPNQuery, _decode_RPNQuery, _encode_RPNQuery } from "../Z39-50-APDU-2001/RPNQuery.ta.mjs";
 
 
 /**

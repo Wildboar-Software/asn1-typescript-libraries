@@ -6,15 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
-// export { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 import { Specification, _decode_Specification, _encode_Specification } from "../Z39-50-APDU-2001/Specification.ta.mjs";
-// export { Specification, _decode_Specification, _encode_Specification } from "../Z39-50-APDU-2001/Specification.ta.mjs";
 import { AttributeCombinations, _decode_AttributeCombinations, _encode_AttributeCombinations } from "../RecordSyntax-explain/AttributeCombinations.ta.mjs";
-// export { AttributeCombinations, _decode_AttributeCombinations, _encode_AttributeCombinations } from "../RecordSyntax-explain/AttributeCombinations.ta.mjs";
 import { SortKeyDetails_sortType, _decode_SortKeyDetails_sortType, _encode_SortKeyDetails_sortType } from "../RecordSyntax-explain/SortKeyDetails-sortType.ta.mjs";
-// export { SortKeyDetails_sortType, _decode_SortKeyDetails_sortType, _encode_SortKeyDetails_sortType } from "../RecordSyntax-explain/SortKeyDetails-sortType.ta.mjs";
 import { SortKeyDetails_caseSensitivity, _decode_SortKeyDetails_caseSensitivity, _encode_SortKeyDetails_caseSensitivity } from "../RecordSyntax-explain/SortKeyDetails-caseSensitivity.ta.mjs";
-// export { SortKeyDetails_caseSensitivity, SortKeyDetails_caseSensitivity_always /* IMPORTED_LONG_NAMED_INTEGER */, always /* IMPORTED_SHORT_NAMED_INTEGER */, SortKeyDetails_caseSensitivity_never /* IMPORTED_LONG_NAMED_INTEGER */, never /* IMPORTED_SHORT_NAMED_INTEGER */, SortKeyDetails_caseSensitivity_default_yes /* IMPORTED_LONG_NAMED_INTEGER */, default_yes /* IMPORTED_SHORT_NAMED_INTEGER */, SortKeyDetails_caseSensitivity_default_no /* IMPORTED_LONG_NAMED_INTEGER */, default_no /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SortKeyDetails_caseSensitivity, _encode_SortKeyDetails_caseSensitivity } from "../RecordSyntax-explain/SortKeyDetails-caseSensitivity.ta.mjs";
 
 
 /**

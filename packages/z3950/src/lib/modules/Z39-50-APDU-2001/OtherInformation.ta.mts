@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OtherInformation_Item, _decode_OtherInformation_Item, _encode_OtherInformation_Item } from "../Z39-50-APDU-2001/OtherInformation-Item.ta.mjs";
-// export { OtherInformation_Item, _decode_OtherInformation_Item, _encode_OtherInformation_Item } from "../Z39-50-APDU-2001/OtherInformation-Item.ta.mjs";
 
 
 /**

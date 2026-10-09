@@ -7,13 +7,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } from "../Z39-50-APDU-2001/StringOrNumeric.ta.mjs";
-// export { StringOrNumeric, _decode_StringOrNumeric, _encode_StringOrNumeric } from "../Z39-50-APDU-2001/StringOrNumeric.ta.mjs";
 import { ElementData, _decode_ElementData, _encode_ElementData } from "../RecordSyntax-generic/ElementData.ta.mjs";
-// export { ElementData, _decode_ElementData, _encode_ElementData } from "../RecordSyntax-generic/ElementData.ta.mjs";
 import { ElementMetaData, _decode_ElementMetaData, _encode_ElementMetaData } from "../RecordSyntax-generic/ElementMetaData.ta.mjs";
-// export { ElementMetaData, _decode_ElementMetaData, _encode_ElementMetaData } from "../RecordSyntax-generic/ElementMetaData.ta.mjs";
 import { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-generic/Variant.ta.mjs";
-// export { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-generic/Variant.ta.mjs";
 
 
 /**

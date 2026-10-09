@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } from "../ESFormat-PeriodicQuerySchedule/ClientPartToKeep.ta.mjs";
-// export { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } from "../ESFormat-PeriodicQuerySchedule/ClientPartToKeep.ta.mjs";
 import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-PeriodicQuerySchedule/ServerPart.ta.mjs";
-// export { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-PeriodicQuerySchedule/ServerPart.ta.mjs";
 
 
 /**

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Estimate, _decode_Estimate, _encode_Estimate } from "../ResourceReport-Format-Resource-2/Estimate.ta.mjs";
-// export { Estimate, _decode_Estimate, _encode_Estimate } from "../ResourceReport-Format-Resource-2/Estimate.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**

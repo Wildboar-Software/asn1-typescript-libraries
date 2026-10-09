@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { KnownProximityUnit, _decode_KnownProximityUnit, _encode_KnownProximityUnit } from "../Z39-50-APDU-2001/KnownProximityUnit.ta.mjs";
-// export { KnownProximityUnit, KnownProximityUnit_character /* IMPORTED_LONG_NAMED_INTEGER */, character /* IMPORTED_SHORT_NAMED_INTEGER */, KnownProximityUnit_word /* IMPORTED_LONG_NAMED_INTEGER */, word /* IMPORTED_SHORT_NAMED_INTEGER */, KnownProximityUnit_sentence /* IMPORTED_LONG_NAMED_INTEGER */, sentence /* IMPORTED_SHORT_NAMED_INTEGER */, KnownProximityUnit_paragraph /* IMPORTED_LONG_NAMED_INTEGER */, paragraph /* IMPORTED_SHORT_NAMED_INTEGER */, KnownProximityUnit_section /* IMPORTED_LONG_NAMED_INTEGER */, section /* IMPORTED_SHORT_NAMED_INTEGER */, KnownProximityUnit_chapter /* IMPORTED_LONG_NAMED_INTEGER */, chapter /* IMPORTED_SHORT_NAMED_INTEGER */, KnownProximityUnit_document /* IMPORTED_LONG_NAMED_INTEGER */, document /* IMPORTED_SHORT_NAMED_INTEGER */, KnownProximityUnit_element /* IMPORTED_LONG_NAMED_INTEGER */, element /* IMPORTED_SHORT_NAMED_INTEGER */, KnownProximityUnit_subelement /* IMPORTED_LONG_NAMED_INTEGER */, subelement /* IMPORTED_SHORT_NAMED_INTEGER */, KnownProximityUnit_elementType /* IMPORTED_LONG_NAMED_INTEGER */, elementType /* IMPORTED_SHORT_NAMED_INTEGER */, KnownProximityUnit_byte /* IMPORTED_LONG_NAMED_INTEGER */, byte /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_KnownProximityUnit, _encode_KnownProximityUnit } from "../Z39-50-APDU-2001/KnownProximityUnit.ta.mjs";
 
 
 /**

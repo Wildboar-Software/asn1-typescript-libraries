@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CreditCardInfo, _decode_CreditCardInfo, _encode_CreditCardInfo } from "../ESFormat-ItemOrder/CreditCardInfo.ta.mjs";
-// export { CreditCardInfo, _decode_CreditCardInfo, _encode_CreditCardInfo } from "../ESFormat-ItemOrder/CreditCardInfo.ta.mjs";
 
 
 /**

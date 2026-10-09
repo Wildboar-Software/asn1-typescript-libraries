@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PromptId_enummeratedPrompt, _decode_PromptId_enummeratedPrompt, _encode_PromptId_enummeratedPrompt } from "../AccessControlFormat-prompt-1/PromptId-enummeratedPrompt.ta.mjs";
-// export { PromptId_enummeratedPrompt, _decode_PromptId_enummeratedPrompt, _encode_PromptId_enummeratedPrompt } from "../AccessControlFormat-prompt-1/PromptId-enummeratedPrompt.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**

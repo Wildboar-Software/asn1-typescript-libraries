@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TagPath_Item_specificTag, _decode_TagPath_Item_specificTag, _encode_TagPath_Item_specificTag } from "../ElementSpecification-eSpec-2/TagPath-Item-specificTag.ta.mjs";
-// export { TagPath_Item_specificTag, _decode_TagPath_Item_specificTag, _encode_TagPath_Item_specificTag } from "../ElementSpecification-eSpec-2/TagPath-Item-specificTag.ta.mjs";
 import { Occurrences, _decode_Occurrences, _encode_Occurrences } from "../ElementSpecification-eSpec-2/Occurrences.ta.mjs";
-// export { Occurrences, _decode_Occurrences, _encode_Occurrences } from "../ElementSpecification-eSpec-2/Occurrences.ta.mjs";
 
 
 /**

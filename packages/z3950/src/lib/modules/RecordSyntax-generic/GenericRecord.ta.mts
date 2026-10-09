@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TaggedElement, _decode_TaggedElement, _encode_TaggedElement } from "../RecordSyntax-generic/TaggedElement.ta.mjs";
-// export { TaggedElement, _decode_TaggedElement, _encode_TaggedElement } from "../RecordSyntax-generic/TaggedElement.ta.mjs";
 
 
 /**

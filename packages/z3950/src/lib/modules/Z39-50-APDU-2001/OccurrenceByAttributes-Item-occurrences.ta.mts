@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OccurrenceByAttributes_Item_occurrences_byDatabase_Item, _decode_OccurrenceByAttributes_Item_occurrences_byDatabase_Item, _encode_OccurrenceByAttributes_Item_occurrences_byDatabase_Item } from "../Z39-50-APDU-2001/OccurrenceByAttributes-Item-occurrences-byDatabase-Item.ta.mjs";
-// export { OccurrenceByAttributes_Item_occurrences_byDatabase_Item, _decode_OccurrenceByAttributes_Item_occurrences_byDatabase_Item, _encode_OccurrenceByAttributes_Item_occurrences_byDatabase_Item } from "../Z39-50-APDU-2001/OccurrenceByAttributes-Item-occurrences-byDatabase-Item.ta.mjs";
 
 
 /**

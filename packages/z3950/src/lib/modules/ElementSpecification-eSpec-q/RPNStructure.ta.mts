@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributesPlusTerm, _decode_AttributesPlusTerm, _encode_AttributesPlusTerm } from "../ElementSpecification-eSpec-q/AttributesPlusTerm.ta.mjs";
-// export { AttributesPlusTerm, _decode_AttributesPlusTerm, _encode_AttributesPlusTerm } from "../ElementSpecification-eSpec-q/AttributesPlusTerm.ta.mjs";
 import { RPNStructure_rpnRpnOp, _decode_RPNStructure_rpnRpnOp, _encode_RPNStructure_rpnRpnOp } from "../ElementSpecification-eSpec-q/RPNStructure-rpnRpnOp.ta.mjs";
-// export { RPNStructure_rpnRpnOp, _decode_RPNStructure_rpnRpnOp, _encode_RPNStructure_rpnRpnOp } from "../ElementSpecification-eSpec-q/RPNStructure-rpnRpnOp.ta.mjs";
 
 
 /**

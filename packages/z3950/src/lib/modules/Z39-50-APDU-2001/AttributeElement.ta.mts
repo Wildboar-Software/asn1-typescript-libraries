@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
-// export { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
 import { AttributeElement_attributeValue, _decode_AttributeElement_attributeValue, _encode_AttributeElement_attributeValue } from "../Z39-50-APDU-2001/AttributeElement-attributeValue.ta.mjs";
-// export { AttributeElement_attributeValue, _decode_AttributeElement_attributeValue, _encode_AttributeElement_attributeValue } from "../Z39-50-APDU-2001/AttributeElement-attributeValue.ta.mjs";
 
 
 /**

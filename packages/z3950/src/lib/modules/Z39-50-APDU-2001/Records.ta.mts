@@ -5,11 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NamePlusRecord, _decode_NamePlusRecord, _encode_NamePlusRecord } from "../Z39-50-APDU-2001/NamePlusRecord.ta.mjs";
-// export { NamePlusRecord, _decode_NamePlusRecord, _encode_NamePlusRecord } from "../Z39-50-APDU-2001/NamePlusRecord.ta.mjs";
 import { DefaultDiagFormat, _decode_DefaultDiagFormat, _encode_DefaultDiagFormat } from "../Z39-50-APDU-2001/DefaultDiagFormat.ta.mjs";
-// export { DefaultDiagFormat, _decode_DefaultDiagFormat, _encode_DefaultDiagFormat } from "../Z39-50-APDU-2001/DefaultDiagFormat.ta.mjs";
 import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
-// export { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
 
 
 /**

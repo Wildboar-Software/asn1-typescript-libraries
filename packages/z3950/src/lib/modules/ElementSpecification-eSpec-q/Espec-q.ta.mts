@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ValueRestrictor, _decode_ValueRestrictor, _encode_ValueRestrictor } from "../ElementSpecification-eSpec-q/ValueRestrictor.ta.mjs";
-// export { ValueRestrictor, _decode_ValueRestrictor, _encode_ValueRestrictor } from "../ElementSpecification-eSpec-q/ValueRestrictor.ta.mjs";
 
 
 /**

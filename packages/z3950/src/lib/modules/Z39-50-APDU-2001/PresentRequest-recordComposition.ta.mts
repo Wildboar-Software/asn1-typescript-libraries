@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ElementSetNames, _decode_ElementSetNames, _encode_ElementSetNames } from "../Z39-50-APDU-2001/ElementSetNames.ta.mjs";
-// export { ElementSetNames, _decode_ElementSetNames, _encode_ElementSetNames } from "../Z39-50-APDU-2001/ElementSetNames.ta.mjs";
 import { CompSpec, _decode_CompSpec, _encode_CompSpec } from "../Z39-50-APDU-2001/CompSpec.ta.mjs";
-// export { CompSpec, _decode_CompSpec, _encode_CompSpec } from "../Z39-50-APDU-2001/CompSpec.ta.mjs";
 
 
 /**

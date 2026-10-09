@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SimpleElement, _decode_SimpleElement, _encode_SimpleElement } from "../ElementSpecification-eSpec-2/SimpleElement.ta.mjs";
-// export { SimpleElement, _decode_SimpleElement, _encode_SimpleElement } from "../ElementSpecification-eSpec-2/SimpleElement.ta.mjs";
 import { ElementRequest_compositeElement, _decode_ElementRequest_compositeElement, _encode_ElementRequest_compositeElement } from "../ElementSpecification-eSpec-2/ElementRequest-compositeElement.ta.mjs";
-// export { ElementRequest_compositeElement, _decode_ElementRequest_compositeElement, _encode_ElementRequest_compositeElement } from "../ElementSpecification-eSpec-2/ElementRequest-compositeElement.ta.mjs";
 
 
 /**

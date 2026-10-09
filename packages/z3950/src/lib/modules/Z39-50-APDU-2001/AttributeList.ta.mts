@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeElement, _decode_AttributeElement, _encode_AttributeElement } from "../Z39-50-APDU-2001/AttributeElement.ta.mjs";
-// export { AttributeElement, _decode_AttributeElement, _encode_AttributeElement } from "../Z39-50-APDU-2001/AttributeElement.ta.mjs";
 
 
 /**

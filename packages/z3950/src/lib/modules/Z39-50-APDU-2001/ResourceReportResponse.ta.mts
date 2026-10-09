@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
-// export { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
 import { ResourceReportResponse_resourceReportStatus, _decode_ResourceReportResponse_resourceReportStatus, _encode_ResourceReportResponse_resourceReportStatus } from "../Z39-50-APDU-2001/ResourceReportResponse-resourceReportStatus.ta.mjs";
-// export { ResourceReportResponse_resourceReportStatus, ResourceReportResponse_resourceReportStatus_success /* IMPORTED_LONG_NAMED_INTEGER */, success /* IMPORTED_SHORT_NAMED_INTEGER */, ResourceReportResponse_resourceReportStatus_partial /* IMPORTED_LONG_NAMED_INTEGER */, partial /* IMPORTED_SHORT_NAMED_INTEGER */, ResourceReportResponse_resourceReportStatus_failure_1 /* IMPORTED_LONG_NAMED_INTEGER */, failure_1 /* IMPORTED_SHORT_NAMED_INTEGER */, ResourceReportResponse_resourceReportStatus_failure_2 /* IMPORTED_LONG_NAMED_INTEGER */, failure_2 /* IMPORTED_SHORT_NAMED_INTEGER */, ResourceReportResponse_resourceReportStatus_failure_3 /* IMPORTED_LONG_NAMED_INTEGER */, failure_3 /* IMPORTED_SHORT_NAMED_INTEGER */, ResourceReportResponse_resourceReportStatus_failure_4 /* IMPORTED_LONG_NAMED_INTEGER */, failure_4 /* IMPORTED_SHORT_NAMED_INTEGER */, ResourceReportResponse_resourceReportStatus_failure_5 /* IMPORTED_LONG_NAMED_INTEGER */, failure_5 /* IMPORTED_SHORT_NAMED_INTEGER */, ResourceReportResponse_resourceReportStatus_failure_6 /* IMPORTED_LONG_NAMED_INTEGER */, failure_6 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ResourceReportResponse_resourceReportStatus, _encode_ResourceReportResponse_resourceReportStatus } from "../Z39-50-APDU-2001/ResourceReportResponse-resourceReportStatus.ta.mjs";
 import { ResourceReport, _decode_ResourceReport, _encode_ResourceReport } from "../Z39-50-APDU-2001/ResourceReport.ta.mjs";
-// export { ResourceReport, _decode_ResourceReport, _encode_ResourceReport } from "../Z39-50-APDU-2001/ResourceReport.ta.mjs";
 import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
-// export { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PromptId_enummeratedPrompt_type, _decode_PromptId_enummeratedPrompt_type, _encode_PromptId_enummeratedPrompt_type } from "../AccessControlFormat-prompt-1/PromptId-enummeratedPrompt-type.ta.mjs";
-// export { PromptId_enummeratedPrompt_type, PromptId_enummeratedPrompt_type_groupId /* IMPORTED_LONG_NAMED_INTEGER */, groupId /* IMPORTED_SHORT_NAMED_INTEGER */, PromptId_enummeratedPrompt_type_userId /* IMPORTED_LONG_NAMED_INTEGER */, userId /* IMPORTED_SHORT_NAMED_INTEGER */, PromptId_enummeratedPrompt_type_password /* IMPORTED_LONG_NAMED_INTEGER */, password /* IMPORTED_SHORT_NAMED_INTEGER */, PromptId_enummeratedPrompt_type_newPassword /* IMPORTED_LONG_NAMED_INTEGER */, newPassword /* IMPORTED_SHORT_NAMED_INTEGER */, PromptId_enummeratedPrompt_type_copyright /* IMPORTED_LONG_NAMED_INTEGER */, copyright /* IMPORTED_SHORT_NAMED_INTEGER */, PromptId_enummeratedPrompt_type_sessionId /* IMPORTED_LONG_NAMED_INTEGER */, sessionId /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_PromptId_enummeratedPrompt_type, _encode_PromptId_enummeratedPrompt_type } from "../AccessControlFormat-prompt-1/PromptId-enummeratedPrompt-type.ta.mjs";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**

@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeElement_attributeValue_complex, _decode_AttributeElement_attributeValue_complex, _encode_AttributeElement_attributeValue_complex } from "../Z39-50-APDU-2001/AttributeElement-attributeValue-complex.ta.mjs";
-// export { AttributeElement_attributeValue_complex, _decode_AttributeElement_attributeValue_complex, _encode_AttributeElement_attributeValue_complex } from "../Z39-50-APDU-2001/AttributeElement-attributeValue-complex.ta.mjs";
 
 
 /**

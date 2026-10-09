@@ -5,11 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributesPlusTerm, _decode_AttributesPlusTerm, _encode_AttributesPlusTerm } from "../Z39-50-APDU-2001/AttributesPlusTerm.ta.mjs";
-// export { AttributesPlusTerm, _decode_AttributesPlusTerm, _encode_AttributesPlusTerm } from "../Z39-50-APDU-2001/AttributesPlusTerm.ta.mjs";
 import { ResultSetId, _decode_ResultSetId, _encode_ResultSetId } from "../Z39-50-APDU-2001/ResultSetId.ta.mjs";
-// export { ResultSetId, _decode_ResultSetId, _encode_ResultSetId } from "../Z39-50-APDU-2001/ResultSetId.ta.mjs";
 import { ResultSetPlusAttributes, _decode_ResultSetPlusAttributes, _encode_ResultSetPlusAttributes } from "../Z39-50-APDU-2001/ResultSetPlusAttributes.ta.mjs";
-// export { ResultSetPlusAttributes, _decode_ResultSetPlusAttributes, _encode_ResultSetPlusAttributes } from "../Z39-50-APDU-2001/ResultSetPlusAttributes.ta.mjs";
 
 
 /**

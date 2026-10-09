@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SortElement, _decode_SortElement, _encode_SortElement } from "../Z39-50-APDU-2001/SortElement.ta.mjs";
-// export { SortElement, _decode_SortElement, _encode_SortElement } from "../Z39-50-APDU-2001/SortElement.ta.mjs";
 import { SortKeySpec_sortRelation, _decode_SortKeySpec_sortRelation, _encode_SortKeySpec_sortRelation } from "../Z39-50-APDU-2001/SortKeySpec-sortRelation.ta.mjs";
-// export { SortKeySpec_sortRelation, SortKeySpec_sortRelation_ascending /* IMPORTED_LONG_NAMED_INTEGER */, ascending /* IMPORTED_SHORT_NAMED_INTEGER */, SortKeySpec_sortRelation_descending /* IMPORTED_LONG_NAMED_INTEGER */, descending /* IMPORTED_SHORT_NAMED_INTEGER */, SortKeySpec_sortRelation_ascendingByFrequency /* IMPORTED_LONG_NAMED_INTEGER */, ascendingByFrequency /* IMPORTED_SHORT_NAMED_INTEGER */, SortKeySpec_sortRelation_descendingByfrequency /* IMPORTED_LONG_NAMED_INTEGER */, descendingByfrequency /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SortKeySpec_sortRelation, _encode_SortKeySpec_sortRelation } from "../Z39-50-APDU-2001/SortKeySpec-sortRelation.ta.mjs";
 import { SortKeySpec_caseSensitivity, _decode_SortKeySpec_caseSensitivity, _encode_SortKeySpec_caseSensitivity } from "../Z39-50-APDU-2001/SortKeySpec-caseSensitivity.ta.mjs";
-// export { SortKeySpec_caseSensitivity, SortKeySpec_caseSensitivity_caseSensitive /* IMPORTED_LONG_NAMED_INTEGER */, caseSensitive /* IMPORTED_SHORT_NAMED_INTEGER */, SortKeySpec_caseSensitivity_caseInsensitive /* IMPORTED_LONG_NAMED_INTEGER */, caseInsensitive /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SortKeySpec_caseSensitivity, _encode_SortKeySpec_caseSensitivity } from "../Z39-50-APDU-2001/SortKeySpec-caseSensitivity.ta.mjs";
 import { SortKeySpec_missingValueAction, _decode_SortKeySpec_missingValueAction, _encode_SortKeySpec_missingValueAction } from "../Z39-50-APDU-2001/SortKeySpec-missingValueAction.ta.mjs";
-// export { SortKeySpec_missingValueAction, _decode_SortKeySpec_missingValueAction, _encode_SortKeySpec_missingValueAction } from "../Z39-50-APDU-2001/SortKeySpec-missingValueAction.ta.mjs";
 
 
 /**

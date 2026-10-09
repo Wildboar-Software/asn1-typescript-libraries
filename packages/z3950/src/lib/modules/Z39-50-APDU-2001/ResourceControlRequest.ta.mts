@@ -7,13 +7,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
-// export { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
 import { ResourceReport, _decode_ResourceReport, _encode_ResourceReport } from "../Z39-50-APDU-2001/ResourceReport.ta.mjs";
-// export { ResourceReport, _decode_ResourceReport, _encode_ResourceReport } from "../Z39-50-APDU-2001/ResourceReport.ta.mjs";
 import { ResourceControlRequest_partialResultsAvailable, _decode_ResourceControlRequest_partialResultsAvailable, _encode_ResourceControlRequest_partialResultsAvailable } from "../Z39-50-APDU-2001/ResourceControlRequest-partialResultsAvailable.ta.mjs";
-// export { ResourceControlRequest_partialResultsAvailable, ResourceControlRequest_partialResultsAvailable_subset /* IMPORTED_LONG_NAMED_INTEGER */, subset /* IMPORTED_SHORT_NAMED_INTEGER */, ResourceControlRequest_partialResultsAvailable_interim /* IMPORTED_LONG_NAMED_INTEGER */, interim /* IMPORTED_SHORT_NAMED_INTEGER */, ResourceControlRequest_partialResultsAvailable_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ResourceControlRequest_partialResultsAvailable, _encode_ResourceControlRequest_partialResultsAvailable } from "../Z39-50-APDU-2001/ResourceControlRequest-partialResultsAvailable.ta.mjs";
 import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
-// export { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**

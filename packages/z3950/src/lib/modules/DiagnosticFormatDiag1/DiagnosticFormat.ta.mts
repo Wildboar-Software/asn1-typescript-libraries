@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagnosticFormat_Item, _decode_DiagnosticFormat_Item, _encode_DiagnosticFormat_Item } from "../DiagnosticFormatDiag1/DiagnosticFormat-Item.ta.mjs";
-// export { DiagnosticFormat_Item, _decode_DiagnosticFormat_Item, _encode_DiagnosticFormat_Item } from "../DiagnosticFormatDiag1/DiagnosticFormat-Item.ta.mjs";
 
 
 /**

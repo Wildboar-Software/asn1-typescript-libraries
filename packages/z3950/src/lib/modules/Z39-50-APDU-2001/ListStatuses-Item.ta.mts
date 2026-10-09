@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ResultSetId, _decode_ResultSetId, _encode_ResultSetId } from "../Z39-50-APDU-2001/ResultSetId.ta.mjs";
-// export { ResultSetId, _decode_ResultSetId, _encode_ResultSetId } from "../Z39-50-APDU-2001/ResultSetId.ta.mjs";
 import { DeleteSetStatus, _decode_DeleteSetStatus, _encode_DeleteSetStatus } from "../Z39-50-APDU-2001/DeleteSetStatus.ta.mjs";
-// export { DeleteSetStatus, _decode_DeleteSetStatus, _encode_DeleteSetStatus } from "../Z39-50-APDU-2001/DeleteSetStatus.ta.mjs";
 
 
 /**

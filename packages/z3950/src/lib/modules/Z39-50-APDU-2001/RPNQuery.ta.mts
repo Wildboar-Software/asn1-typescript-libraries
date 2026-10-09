@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
-// export { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
 import { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../Z39-50-APDU-2001/RPNStructure.ta.mjs";
-// export { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../Z39-50-APDU-2001/RPNStructure.ta.mjs";
 
 
 /**

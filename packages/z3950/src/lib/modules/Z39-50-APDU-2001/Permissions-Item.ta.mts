@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-// export { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { Permissions_Item_allowableFunctions_Item, _decode_Permissions_Item_allowableFunctions_Item, _encode_Permissions_Item_allowableFunctions_Item } from "../Z39-50-APDU-2001/Permissions-Item-allowableFunctions-Item.ta.mjs";
-// export { Permissions_Item_allowableFunctions_Item, Permissions_Item_allowableFunctions_Item_delete /* IMPORTED_LONG_NAMED_INTEGER */, delete_ /* IMPORTED_SHORT_NAMED_INTEGER */, Permissions_Item_allowableFunctions_Item_modifyContents /* IMPORTED_LONG_NAMED_INTEGER */, modifyContents /* IMPORTED_SHORT_NAMED_INTEGER */, Permissions_Item_allowableFunctions_Item_modifyPermissions /* IMPORTED_LONG_NAMED_INTEGER */, modifyPermissions /* IMPORTED_SHORT_NAMED_INTEGER */, Permissions_Item_allowableFunctions_Item_present /* IMPORTED_LONG_NAMED_INTEGER */, present /* IMPORTED_SHORT_NAMED_INTEGER */, Permissions_Item_allowableFunctions_Item_invoke /* IMPORTED_LONG_NAMED_INTEGER */, invoke /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Permissions_Item_allowableFunctions_Item, _encode_Permissions_Item_allowableFunctions_Item } from "../Z39-50-APDU-2001/Permissions-Item-allowableFunctions-Item.ta.mjs";
 
 
 /**

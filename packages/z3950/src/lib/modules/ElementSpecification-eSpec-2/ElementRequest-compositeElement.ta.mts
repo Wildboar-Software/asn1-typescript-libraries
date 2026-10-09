@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ElementRequest_compositeElement_elementList, _decode_ElementRequest_compositeElement_elementList, _encode_ElementRequest_compositeElement_elementList } from "../ElementSpecification-eSpec-2/ElementRequest-compositeElement-elementList.ta.mjs";
-// export { ElementRequest_compositeElement_elementList, _decode_ElementRequest_compositeElement_elementList, _encode_ElementRequest_compositeElement_elementList } from "../ElementSpecification-eSpec-2/ElementRequest-compositeElement-elementList.ta.mjs";
 import { TagPath, _decode_TagPath, _encode_TagPath } from "../ElementSpecification-eSpec-2/TagPath.ta.mjs";
-// export { TagPath, _decode_TagPath, _encode_TagPath } from "../ElementSpecification-eSpec-2/TagPath.ta.mjs";
 import { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-generic/Variant.ta.mjs";
-// export { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-generic/Variant.ta.mjs";
 
 
 /**

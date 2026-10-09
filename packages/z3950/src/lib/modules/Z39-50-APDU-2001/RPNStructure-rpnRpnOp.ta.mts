@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../Z39-50-APDU-2001/RPNStructure.ta.mjs";
-// export { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../Z39-50-APDU-2001/RPNStructure.ta.mjs";
 import { Operator, _decode_Operator, _encode_Operator } from "../Z39-50-APDU-2001/Operator.ta.mjs";
-// export { Operator, _decode_Operator, _encode_Operator } from "../Z39-50-APDU-2001/Operator.ta.mjs";
 
 
 /**
