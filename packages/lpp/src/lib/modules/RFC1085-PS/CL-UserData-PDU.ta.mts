@@ -94,7 +94,12 @@ class CL_UserData_PDU {
          * @readonly
          */
         readonly reference: SessionConnectionIdentifier,
-// FIXME: readonly user-data: PrefixedType
+        /**
+         * @summary `user_data`.
+         * @public
+         * @readonly
+         */
+        readonly user_data: _Element
     ) {}
 
     /**
@@ -110,7 +115,7 @@ class CL_UserData_PDU {
      * @returns {CL_UserData_PDU}
      */
     public static _from_object (_o: { [_K in keyof (CL_UserData_PDU)]: (CL_UserData_PDU)[_K] }): CL_UserData_PDU {
-        return new CL_UserData_PDU(_o.reference, _o.);
+        return new CL_UserData_PDU(_o.reference, _o.user_data);
     }
 
 
@@ -174,13 +179,12 @@ function _decode_CL_UserData_PDU (el: _Element): CL_UserData_PDU {
     sequence[0].name = "reference";
     sequence[1].name = "user-data";
     let reference!: SessionConnectionIdentifier;
-    let user_data!: /* FIXME: user-data COULD_NOT_COMPILE_TYPE */;
+    let user_data!: _Element;
     reference = _decode_SessionConnectionIdentifier(sequence[0]);
-    
+    user_data = $._decode_explicit<_Element>(() => $._decodeAny)(sequence[1]);
     return new CL_UserData_PDU(
         reference,
-        user_data,
-
+        user_data
     );
 }); }
     return _cached_decoder_for_CL_UserData_PDU(el);
