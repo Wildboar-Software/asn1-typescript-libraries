@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ParameterIdents, _decode_ParameterIdents, _encode_ParameterIdents } from "../DEV/ParameterIdents.ta.mjs";
-// export { ParameterIdents, _decode_ParameterIdents, _encode_ParameterIdents } from "../DEV/ParameterIdents.ta.mjs";
 
 
 /**

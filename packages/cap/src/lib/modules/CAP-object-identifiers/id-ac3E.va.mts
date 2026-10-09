@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { id_CAP3OE } from "../CAP-object-identifiers/id-CAP3OE.va.mjs";
-// export { id_CAP3OE } from "../CAP-object-identifiers/id-CAP3OE.va.mjs";
 
 
 /**

@@ -11,13 +11,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TestResultEnrol, _decode_TestResultEnrol, _encode_TestResultEnrol } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResultEnrol.ta.mjs";
-// export { TestResultEnrol, _decode_TestResultEnrol, _encode_TestResultEnrol } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResultEnrol.ta.mjs";
 import { TestResultAcquire, _decode_TestResultAcquire, _encode_TestResultAcquire } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResultAcquire.ta.mjs";
-// export { TestResultAcquire, _decode_TestResultAcquire, _encode_TestResultAcquire } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResultAcquire.ta.mjs";
 import { TestResultVerify, _decode_TestResultVerify, _encode_TestResultVerify } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResultVerify.ta.mjs";
-// export { TestResultVerify, _decode_TestResultVerify, _encode_TestResultVerify } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResultVerify.ta.mjs";
 import { TestResultIdentify, _decode_TestResultIdentify, _encode_TestResultIdentify } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResultIdentify.ta.mjs";
-// export { TestResultIdentify, _decode_TestResultIdentify, _encode_TestResultIdentify } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResultIdentify.ta.mjs";
 
 
 /**

@@ -1,0 +1,82 @@
+ElementSpecification-eSpec-2
+{z39-50-elementSpec eSpec-2(2)}
+DEFINITIONS ::=
+--For detailed semantics, see Appendix RET.
+BEGIN
+IMPORTS
+
+    Variant
+        FROM RecordSyntax-generic
+
+    StringOrNumeric, InternationalString
+        FROM Z39-50-APDU-2001
+    ;
+
+Espec-2 ::= SEQUENCE {
+    elementSetNames         [1] IMPLICIT SEQUENCE OF InternationalString OPTIONAL,
+    -- See comment 1
+    defaultVariantSetId     [2] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+    -- If supplied, applies whenever variantRequest does not include variantSetId
+    defaultVariantRequest   [3] IMPLICIT Variant OPTIONAL,
+    -- See comment 2.
+    defaultTagType          [4] IMPLICIT INTEGER OPTIONAL,
+    -- If supplied, applies whenever 'tagType'
+    -- (within 'tag' within TagPath) is omitted
+    elements                [5] IMPLICIT SEQUENCE OF ElementRequest OPTIONAL
+}
+
+ElementRequest::= CHOICE {
+    simpleElement       [1] IMPLICIT SimpleElement,
+    compositeElement    [2] IMPLICIT SEQUENCE {
+        elementList         [1] CHOICE {
+            primitives          [1] IMPLICIT SEQUENCE OF InternationalString,
+            -- Client may specify one or more element set names,
+            -- each identifying a set of elements, and the composite element is the union
+            specs               [2] IMPLICIT SEQUENCE OF SimpleElement
+        },
+        deliveryTag         [2] IMPLICIT TagPath,
+        -- DeliveryTag tagPath for compositeElement
+        -- may not include wildThing or wildPath
+        variantRequest      [3] IMPLICIT Variant OPTIONAL
+    }
+}
+
+SimpleElement ::= SEQUENCE {
+    path            [1] IMPLICIT TagPath,
+    variantRequest  [2] IMPLICIT Variant OPTIONAL
+}
+
+TagPath ::= SEQUENCE OF CHOICE {
+    specificTag [1] IMPLICIT SEQUENCE {
+        -- The following line, schemaId is the
+        -- only difference in this definition from that of eSpec-1.
+        schemaId    [0] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+        -- see comment 3
+        tagType     [1] IMPLICIT INTEGER OPTIONAL,
+        -- If omitted, then 'defaultTagType' (above) applies,
+        -- if supplied, and if not supplied, then default
+        -- listed in schema applies
+        tagValue    [2] StringOrNumeric,
+        occurrence  [3] Occurrences OPTIONAL
+        -- default is "first occurrence"
+    },
+    wildThing   [2] Occurrences,
+    -- See comment 4
+    wildPath    [3] IMPLICIT NULL
+    -- See comment 5.
+}
+
+Occurrences ::= CHOICE {
+    all     [1] IMPLICIT NULL,
+    last    [2] IMPLICIT NULL,
+    values  [3] IMPLICIT SEQUENCE {
+        start   [1] IMPLICIT INTEGER,
+        -- If 'start' alone is included, then
+        -- single occurrence is requested
+        howMany [2] IMPLICIT INTEGER OPTIONAL
+        -- For example, if 'start' is 5 and 'howMany' is 6,
+        -- then request is for "occurrences 5 through 10."
+    }
+}
+
+END

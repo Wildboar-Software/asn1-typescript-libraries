@@ -1,5 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1Element } from "@wildboar/asn1";
+import { readDecoded } from "../readValue.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
@@ -15,14 +15,15 @@ import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdenti
  * of the stored value.
  */
 export
-const algorithmIdentifierMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: AlgorithmIdentifier = _decode_AlgorithmIdentifier(assertion);
-    const probablyAnAlgorithmIdentifier: ASN1Element = value.sequence[0];
-    const algId: AlgorithmIdentifier = _decode_AlgorithmIdentifier(probablyAnAlgorithmIdentifier);
-    return compareAlgorithmIdentifier(algId, a);
+function algorithmIdentifierMatch (
+    assertion: ASN1Element | AlgorithmIdentifier,
+    value: ASN1Element | AlgorithmIdentifier,
+): boolean {
+    const presented = readDecoded(assertion, _decode_AlgorithmIdentifier);
+    const stored = ASN1Element.isElement(value)
+        ? _decode_AlgorithmIdentifier(value.sequence[0])
+        : value;
+    return compareAlgorithmIdentifier(stored, presented);
 }
 
 export default algorithmIdentifierMatch;

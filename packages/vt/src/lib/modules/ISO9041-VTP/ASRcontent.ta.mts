@@ -12,15 +12,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_Result3, _encode_Result3, type Result3 } from "../G/Result3.ta.mjs";
-// export { Result3, _decode_Result3, _encode_Result3 } from "../G/Result3.ta.mjs";
 import { _decode_ImplementationIdent, _encode_ImplementationIdent, ImplementationIdent } from "../G/ImplementationIdent.ta.mjs";
-// export { ImplementationIdent, _decode_ImplementationIdent, _encode_ImplementationIdent } from "../G/ImplementationIdent.ta.mjs";
 import { _decode_ProtocolVersion, _encode_ProtocolVersion, type ProtocolVersion } from "../G/ProtocolVersion.ta.mjs";
-// export { ProtocolVersion, ProtocolVersion_version1 /* IMPORTED_LONG_NAMED_BIT */, version1 /* IMPORTED_SHORT_NAMED_BIT */, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../G/ProtocolVersion.ta.mjs";
 import { _decode_ProfileArgumValueList, _encode_ProfileArgumValueList, ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
-// export { ProfileArgumValueList, _decode_ProfileArgumValueList, _encode_ProfileArgumValueList } from "../G/ProfileArgumValueList.ta.mjs";
 import { _decode_FunctionalUnits, _encode_FunctionalUnits, type FunctionalUnits } from "../G/FunctionalUnits.ta.mjs";
-// export { FunctionalUnits, FunctionalUnits_profileSwitch /* IMPORTED_LONG_NAMED_BIT */, profileSwitch /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_multipleIntNeg /* IMPORTED_LONG_NAMED_BIT */, multipleIntNeg /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_negotiatedRelease /* IMPORTED_LONG_NAMED_BIT */, negotiatedRelease /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_urgentData /* IMPORTED_LONG_NAMED_BIT */, urgentData /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_destructiveBreak /* IMPORTED_LONG_NAMED_BIT */, destructiveBreak /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_enhancedAccess /* IMPORTED_LONG_NAMED_BIT */, enhancedAccess /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_structuredCOs /* IMPORTED_LONG_NAMED_BIT */, structuredCOs /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_blocks /* IMPORTED_LONG_NAMED_BIT */, blocks /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_fields /* IMPORTED_LONG_NAMED_BIT */, fields /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_referenceInfOs /* IMPORTED_LONG_NAMED_BIT */, referenceInfOs /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_ripple /* IMPORTED_LONG_NAMED_BIT */, ripple /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_exceptions /* IMPORTED_LONG_NAMED_BIT */, exceptions /* IMPORTED_SHORT_NAMED_BIT */, FunctionalUnits_contextRetention /* IMPORTED_LONG_NAMED_BIT */, contextRetention /* IMPORTED_SHORT_NAMED_BIT */, _decode_FunctionalUnits, _encode_FunctionalUnits } from "../G/FunctionalUnits.ta.mjs";
 
 
 /**

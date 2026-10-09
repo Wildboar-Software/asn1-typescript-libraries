@@ -12,10 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FingerPrintInformation, _decode_FingerPrintInformation, _encode_FingerPrintInformation } from "../CryptographicInformationFramework/FingerPrintInformation.ta.mjs";
-// export { FingerPrintInformation, _decode_FingerPrintInformation, _encode_FingerPrintInformation } from "../CryptographicInformationFramework/FingerPrintInformation.ta.mjs";
 import { IrisInformation, _decode_IrisInformation, _encode_IrisInformation } from "../CryptographicInformationFramework/IrisInformation.ta.mjs";
 import { cia_ub_biometricTypes } from "../CryptographicInformationFramework/cia-ub-biometricTypes.va.mjs";
-// export { IrisInformation, _decode_IrisInformation, _encode_IrisInformation } from "../CryptographicInformationFramework/IrisInformation.ta.mjs";
 
 
 // TODO: CHECK_RECURSIVE_DEFINITION

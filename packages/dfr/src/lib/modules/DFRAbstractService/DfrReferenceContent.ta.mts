@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
-// export { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
 
 
 /**

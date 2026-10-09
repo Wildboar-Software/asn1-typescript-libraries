@@ -14,7 +14,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DataParameters_floating_point, _decode_DataParameters_floating_point, _encode_DataParameters_floating_point } from "../MMS-SCI-Module-1/DataParameters-floating-point.ta.mjs";
-// export { DataParameters_floating_point, _decode_DataParameters_floating_point, _encode_DataParameters_floating_point } from "../MMS-SCI-Module-1/DataParameters-floating-point.ta.mjs";
 
 
 /**

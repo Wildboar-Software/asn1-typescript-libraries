@@ -11,11 +11,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MessageID, _decode_MessageID, _encode_MessageID } from "../IN-CS2-datatypes/MessageID.ta.mjs";
-// export { MessageID, _decode_MessageID, _encode_MessageID } from "../IN-CS2-datatypes/MessageID.ta.mjs";
 import { ToneId, _decode_ToneId, _encode_ToneId } from "../IN-CS2-datatypes/ToneId.ta.mjs";
-// export { ToneId, _decode_ToneId, _encode_ToneId } from "../IN-CS2-datatypes/ToneId.ta.mjs";
 import { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS2-datatypes/DisplayInformation.ta.mjs";
-// export { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS2-datatypes/DisplayInformation.ta.mjs";
 
 
 /**
