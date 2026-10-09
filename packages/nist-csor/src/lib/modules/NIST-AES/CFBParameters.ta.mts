@@ -143,7 +143,7 @@ let _cached_encoder_for_CFBParameters: $.ASN1Encoder<CFBParameters> | null = nul
  */
 export
 function _encode_CFBParameters (value: CFBParameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CFBParameters) { _cached_encoder_for_CFBParameters = function (value: CFBParameters, elGetter: $.ASN1Encoder<CFBParameters>): _Element {
+    if (!_cached_encoder_for_CFBParameters) { _cached_encoder_for_CFBParameters = function (value: CFBParameters): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_AES_IV(value.aes_IV, $.BER),
