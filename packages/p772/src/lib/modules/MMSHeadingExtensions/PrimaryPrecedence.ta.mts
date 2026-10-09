@@ -167,35 +167,8 @@ const PrimaryPrecedence_override_2: PrimaryPrecedence = 18; /* LONG_NAMED_INTEGE
  */
 export
 const override_2: PrimaryPrecedence = PrimaryPrecedence_override_2; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_PrimaryPrecedence: $.ASN1Decoder<PrimaryPrecedence> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) PrimaryPrecedence
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PrimaryPrecedence (el: _Element): PrimaryPrecedence {
-    if (!_cached_decoder_for_PrimaryPrecedence) { _cached_decoder_for_PrimaryPrecedence = $._decodeInteger; }
-    return _cached_decoder_for_PrimaryPrecedence(el);
-}
-
-let _cached_encoder_for_PrimaryPrecedence: $.ASN1Encoder<PrimaryPrecedence> | null = null;
-
-/**
- * @summary Encodes a(n) PrimaryPrecedence into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PrimaryPrecedence, encoded as an ASN.1 Element.
- */
-export
-function _encode_PrimaryPrecedence (value: PrimaryPrecedence, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PrimaryPrecedence) { _cached_encoder_for_PrimaryPrecedence = $._encodeInteger; }
-    return _cached_encoder_for_PrimaryPrecedence(value, elGetter);
-}
+export const _decode_PrimaryPrecedence = $._decodeInteger;
+export const _encode_PrimaryPrecedence = $._encodeInteger;
 
 
 /* eslint-enable */
