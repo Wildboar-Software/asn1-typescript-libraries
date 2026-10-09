@@ -13,7 +13,7 @@ import { pkiAttributeType } from "../PKIS/pkiAttributeType.va.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * pa-sa OBJECT IDENTIFIER ::= { pkiAttributeType (1) }
+ * pa-sa OBJECT IDENTIFIER ::= { pkiAttributeType 1 }
  * ```
  * 
  * @constant
