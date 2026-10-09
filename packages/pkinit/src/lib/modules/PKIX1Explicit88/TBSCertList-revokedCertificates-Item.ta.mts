@@ -20,7 +20,12 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../PKIX1Expl
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TBSCertList-revokedCertificates-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TBSCertList-revokedCertificates-Item ::= SEQUENCE {
+ *     userCertificate         CertificateSerialNumber,
+ *     revocationDate          Time,
+ *     crlEntryExtensions      Extensions OPTIONAL
+ *                                    -- if present, MUST be v2
+ * }
  * ```
  * 
  * @class
