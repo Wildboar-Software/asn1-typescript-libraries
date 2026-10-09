@@ -1,8 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element,
-    OCTET_STRING
-} from "@wildboar/asn1";
+import { OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -14,7 +11,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TimeOfDay  ::=  OCTET STRING
+ * TimeOfDay ::= OCTET STRING -- (SIZE (4 | 6))
  * ```
  */
 export
