@@ -1,15 +1,27 @@
 {
   "name": "@wildboar/p772",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "exports": {
-    ".": "./src/index.mts"
+    ".": "./src/index.mts",
+    "./MMSAbstractService": "./src/lib/modules/MMSAbstractService/index.mts",
+    "./MMSExtendedBodyPartTypes": "./src/lib/modules/MMSExtendedBodyPartTypes/index.mts",
+    "./MMSHeadingExtensions": "./src/lib/modules/MMSHeadingExtensions/index.mts",
+    "./MMSInformationObjects": "./src/lib/modules/MMSInformationObjects/index.mts",
+    "./MMSObjectIdentifiers": "./src/lib/modules/MMSObjectIdentifiers/index.mts",
+    "./MMSOtherNotificationTypeExtensions": "./src/lib/modules/MMSOtherNotificationTypeExtensions/index.mts",
+    "./MMSPerRecipientSpecifierExtensions": "./src/lib/modules/MMSPerRecipientSpecifierExtensions/index.mts",
+    "./MMSUpperBounds": "./src/lib/modules/MMSUpperBounds/index.mts"
   },
   "publish": {
     "include": [
       "LICENSE.txt",
       "README.md",
       "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
     ]
   }
 }
