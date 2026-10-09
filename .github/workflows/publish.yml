@@ -44,6 +44,7 @@ jobs:
           # - "iso-9798-3-sasl"
           # - "kerberos5"
           - "ldap"
+          - "lnpdqp"
           # - "m3100"
           - "nist-csor"
           - "novell_pkis"
