@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EventConditionStatus, _decode_EventConditionStatus, _encode_EventConditionStatus } from "../ISO-9506-MMS-1/EventConditionStatus.ta.mjs";
-// export { EventConditionStatus, _decode_EventConditionStatus, _encode_EventConditionStatus } from "../ISO-9506-MMS-1/EventConditionStatus.ta.mjs";
 
 
 /**

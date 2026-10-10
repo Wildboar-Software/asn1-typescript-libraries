@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import {
-    PhysicalDeliveryOfficeNumber,
+    type PhysicalDeliveryOfficeNumber,
     _decode_PhysicalDeliveryOfficeNumber,
     _encode_PhysicalDeliveryOfficeNumber,
 } from "../PkiPmiExternalDataTypes/PhysicalDeliveryOfficeNumber.ta.mjs";

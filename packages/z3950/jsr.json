@@ -1,0 +1,45 @@
+{
+  "name": "@wildboar/z3950",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts",
+    "./ANSI-Z39-50-ObjectIdentifier": "./src/lib/modules/ANSI-Z39-50-ObjectIdentifier/index.mts",
+    "./AccessControlFormat-des-1": "./src/lib/modules/AccessControlFormat-des-1/index.mts",
+    "./AccessControlFormat-krb-1": "./src/lib/modules/AccessControlFormat-krb-1/index.mts",
+    "./AccessControlFormat-prompt-1": "./src/lib/modules/AccessControlFormat-prompt-1/index.mts",
+    "./DiagnosticFormatDiag1": "./src/lib/modules/DiagnosticFormatDiag1/index.mts",
+    "./ESFormat-ExportInvocation": "./src/lib/modules/ESFormat-ExportInvocation/index.mts",
+    "./ESFormat-ExportSpecification": "./src/lib/modules/ESFormat-ExportSpecification/index.mts",
+    "./ESFormat-ItemOrder": "./src/lib/modules/ESFormat-ItemOrder/index.mts",
+    "./ESFormat-PeriodicQuerySchedule": "./src/lib/modules/ESFormat-PeriodicQuerySchedule/index.mts",
+    "./ESFormat-PersistentQuery": "./src/lib/modules/ESFormat-PersistentQuery/index.mts",
+    "./ESFormat-PersistentResultSet": "./src/lib/modules/ESFormat-PersistentResultSet/index.mts",
+    "./ESFormat-Update": "./src/lib/modules/ESFormat-Update/index.mts",
+    "./ElementSpecification-eSpec-2": "./src/lib/modules/ElementSpecification-eSpec-2/index.mts",
+    "./ElementSpecification-eSpec-q": "./src/lib/modules/ElementSpecification-eSpec-q/index.mts",
+    "./GeneralDiagnosticContainer": "./src/lib/modules/GeneralDiagnosticContainer/index.mts",
+    "./RecordSyntax-ESTaskPackage": "./src/lib/modules/RecordSyntax-ESTaskPackage/index.mts",
+    "./RecordSyntax-SUTRS": "./src/lib/modules/RecordSyntax-SUTRS/index.mts",
+    "./RecordSyntax-explain": "./src/lib/modules/RecordSyntax-explain/index.mts",
+    "./RecordSyntax-generic": "./src/lib/modules/RecordSyntax-generic/index.mts",
+    "./RecordSyntax-opac": "./src/lib/modules/RecordSyntax-opac/index.mts",
+    "./RecordSyntax-summary": "./src/lib/modules/RecordSyntax-summary/index.mts",
+    "./ResourceReport-Format-Resource-2": "./src/lib/modules/ResourceReport-Format-Resource-2/index.mts",
+    "./UserInfoFormat-searchResult-1": "./src/lib/modules/UserInfoFormat-searchResult-1/index.mts",
+    "./UserInfoFormat-userInfo-1": "./src/lib/modules/UserInfoFormat-userInfo-1/index.mts",
+    "./Z39-50-APDU-2001": "./src/lib/modules/Z39-50-APDU-2001/index.mts",
+    "./Z39-50-OCLC-UserInformation": "./src/lib/modules/Z39-50-OCLC-UserInformation/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.spec.mts",
+      "src/**/*.test.mts"
+    ]
+  }
+}

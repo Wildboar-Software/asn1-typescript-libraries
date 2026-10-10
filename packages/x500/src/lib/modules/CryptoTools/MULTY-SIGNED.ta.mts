@@ -84,7 +84,7 @@ export class MULTY_SIGNED<ToBeSigned> {
      * @returns {MULTY_SIGNED}
      */
     public static _from_object(
-        _o: Partial<{ [_K in keyof MULTY_SIGNED<any>]: MULTY_SIGNED<any>[_K] }>
+        _o: { [_K in keyof MULTY_SIGNED<any>]: MULTY_SIGNED<any>[_K] }
     ): MULTY_SIGNED<any> {
         return new MULTY_SIGNED(
             _o.toBeSigned,

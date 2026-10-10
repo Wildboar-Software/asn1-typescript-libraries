@@ -184,7 +184,7 @@ export class ServiceControls {
      * @returns {ServiceControls}
      */
     public static _from_object(
-        _o: Partial<{ [_K in keyof ServiceControls]: ServiceControls[_K] }>
+        _o: { [_K in keyof ServiceControls]: ServiceControls[_K] }
     ): ServiceControls {
         return new ServiceControls(
             _o.options,

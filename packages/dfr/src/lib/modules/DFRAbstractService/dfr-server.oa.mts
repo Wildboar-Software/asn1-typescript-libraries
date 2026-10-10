@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { type ROS_OBJECT_CLASS } from "../Remote-Operations-Information-Objects/ROS-OBJECT-CLASS.oca.mjs";
 import { dfr_contract } from "../DFRAbstractService/dfr-contract.oa.mjs";
-// export { dfr_contract } from "../DFRAbstractService/dfr-contract.oa.mjs";
 import { id_dfr_server } from "../DFRObjectIdentifiers/id-dfr-server.va.mjs";
-// export { id_dfr_server } from "../DFRObjectIdentifiers/id-dfr-server.va.mjs";
 
 
 /**

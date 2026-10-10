@@ -13,10 +13,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
 import { AuthReference, _decode_AuthReference, _encode_AuthReference } from "../CryptographicInformationFramework/AuthReference.ta.mjs";
 import { cia_ub_securityConditions } from "../CryptographicInformationFramework/cia-ub-securityConditions.va.mjs";
-// export { AuthReference, _decode_AuthReference, _encode_AuthReference } from "../CryptographicInformationFramework/AuthReference.ta.mjs";
 
 
 // TODO: CHECK_RECURSIVE_DEFINITION

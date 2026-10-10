@@ -32,20 +32,25 @@ import { universalDomainDefinedAttributeFromString } from "../../parse.mjs";
  *
  */
 export class UniversalDomainDefinedAttribute {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: UniversalOrBMPString;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: UniversalOrBMPString;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: UniversalOrBMPString,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: UniversalOrBMPString
+        type_: UniversalOrBMPString,
+        value: UniversalOrBMPString
     ) {
+        this.type_ = type_;
+        this.value = value;
         const t = this.type_.toString();
         const v = this.value.toString();
         if (t.length > ub_domain_defined_attribute_type_length) {

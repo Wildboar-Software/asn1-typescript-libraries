@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { INTEGER } from "@wildboar/asn1";
+import type { INTEGER } from "@wildboar/asn1";
 
 /**
  * @summary ub_universal_given_name_length

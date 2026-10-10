@@ -14,9 +14,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
-// export { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
 import { DOupdate_copyFromBuffer_structure, _decode_DOupdate_copyFromBuffer_structure, _encode_DOupdate_copyFromBuffer_structure } from "../ISO9041-VTP/DOupdate-copyFromBuffer-structure.ta.mjs";
-// export { DOupdate_copyFromBuffer_structure, DOupdate_copyFromBuffer_structure_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, DOupdate_copyFromBuffer_structure_x /* IMPORTED_LONG_NAMED_INTEGER */, x /* IMPORTED_SHORT_NAMED_INTEGER */, DOupdate_copyFromBuffer_structure_xAndy /* IMPORTED_LONG_NAMED_INTEGER */, xAndy /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DOupdate_copyFromBuffer_structure, _encode_DOupdate_copyFromBuffer_structure } from "../ISO9041-VTP/DOupdate-copyFromBuffer-structure.ta.mjs";
 
 
 /**

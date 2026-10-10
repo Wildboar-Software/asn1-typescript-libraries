@@ -21,8 +21,8 @@ function utf8Element(s: string): DERElement {
 }
 
 describe("AttributeTypeAndValue.toString()", () => {
-    it("joins the OID and unquoted value with an equals sign", () => {
+    it("uses the short attribute name and the native string value", () => {
         const value = new AttributeTypeAndValue(commonName, utf8Element("CN"));
-        expect(value.toString()).toBe("2.5.4.3=CN");
+        expect(value.toString()).toBe("cn=CN");
     });
 });

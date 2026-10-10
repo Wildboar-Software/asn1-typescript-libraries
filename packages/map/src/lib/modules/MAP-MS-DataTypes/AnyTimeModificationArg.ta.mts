@@ -1,86 +1,26 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { ModificationRequestFor_CF_Info, _decode_ModificationRequestFor_CF_Info, _encode_ModificationRequestFor_CF_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CF-Info.ta.mjs";
-import { ModificationRequestFor_CB_Info, _decode_ModificationRequestFor_CB_Info, _encode_ModificationRequestFor_CB_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CB-Info.ta.mjs";
-import { ModificationRequestFor_CSI, _decode_ModificationRequestFor_CSI, _encode_ModificationRequestFor_CSI } from "../MAP-MS-DataTypes/ModificationRequestFor-CSI.ta.mjs";
+import { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { ModificationRequestFor_ODB_data, _decode_ModificationRequestFor_ODB_data, _encode_ModificationRequestFor_ODB_data } from "../MAP-MS-DataTypes/ModificationRequestFor-ODB-data.ta.mjs";
-import { ModificationRequestFor_IP_SM_GW_Data, _decode_ModificationRequestFor_IP_SM_GW_Data, _encode_ModificationRequestFor_IP_SM_GW_Data } from "../MAP-MS-DataTypes/ModificationRequestFor-IP-SM-GW-Data.ta.mjs";
-import { RequestedServingNode, RequestedServingNode_mmeAndSgsn /* IMPORTED_LONG_NAMED_BIT */, mmeAndSgsn /* IMPORTED_SHORT_NAMED_BIT */, _decode_RequestedServingNode, _encode_RequestedServingNode } from "../MAP-MS-DataTypes/RequestedServingNode.ta.mjs";
-import { ModificationRequestFor_CSG, _decode_ModificationRequestFor_CSG, _encode_ModificationRequestFor_CSG } from "../MAP-MS-DataTypes/ModificationRequestFor-CSG.ta.mjs";
-import { ModificationRequestFor_CW_Info, _decode_ModificationRequestFor_CW_Info, _encode_ModificationRequestFor_CW_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CW-Info.ta.mjs";
+import { ModificationRequestFor_CB_Info, _decode_ModificationRequestFor_CB_Info, _encode_ModificationRequestFor_CB_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CB-Info.ta.mjs";
+import { ModificationRequestFor_CF_Info, _decode_ModificationRequestFor_CF_Info, _encode_ModificationRequestFor_CF_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CF-Info.ta.mjs";
+import { ModificationRequestFor_CH_Info, _decode_ModificationRequestFor_CH_Info, _encode_ModificationRequestFor_CH_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CH-Info.ta.mjs";
 import { ModificationRequestFor_CLIP_Info, _decode_ModificationRequestFor_CLIP_Info, _encode_ModificationRequestFor_CLIP_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CLIP-Info.ta.mjs";
 import { ModificationRequestFor_CLIR_Info, _decode_ModificationRequestFor_CLIR_Info, _encode_ModificationRequestFor_CLIR_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CLIR-Info.ta.mjs";
-import { ModificationRequestFor_CH_Info, _decode_ModificationRequestFor_CH_Info, _encode_ModificationRequestFor_CH_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CH-Info.ta.mjs";
+import { ModificationRequestFor_CSG, _decode_ModificationRequestFor_CSG, _encode_ModificationRequestFor_CSG } from "../MAP-MS-DataTypes/ModificationRequestFor-CSG.ta.mjs";
+import { ModificationRequestFor_CSI, _decode_ModificationRequestFor_CSI, _encode_ModificationRequestFor_CSI } from "../MAP-MS-DataTypes/ModificationRequestFor-CSI.ta.mjs";
+import { ModificationRequestFor_CW_Info, _decode_ModificationRequestFor_CW_Info, _encode_ModificationRequestFor_CW_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-CW-Info.ta.mjs";
 import { ModificationRequestFor_ECT_Info, _decode_ModificationRequestFor_ECT_Info, _encode_ModificationRequestFor_ECT_Info } from "../MAP-MS-DataTypes/ModificationRequestFor-ECT-Info.ta.mjs";
+import { ModificationRequestFor_IP_SM_GW_Data, _decode_ModificationRequestFor_IP_SM_GW_Data, _encode_ModificationRequestFor_IP_SM_GW_Data } from "../MAP-MS-DataTypes/ModificationRequestFor-IP-SM-GW-Data.ta.mjs";
+import { ModificationRequestFor_ODB_data, _decode_ModificationRequestFor_ODB_data, _encode_ModificationRequestFor_ODB_data } from "../MAP-MS-DataTypes/ModificationRequestFor-ODB-data.ta.mjs";
+import { RequestedServingNode, _decode_RequestedServingNode, _encode_RequestedServingNode } from "../MAP-MS-DataTypes/RequestedServingNode.ta.mjs";
 
 
 /**

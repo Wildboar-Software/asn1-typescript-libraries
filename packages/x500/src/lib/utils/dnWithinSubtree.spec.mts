@@ -5,7 +5,7 @@ import {
     type RelativeDistinguishedName,
     AttributeTypeAndValue,
 } from "../modules/InformationFramework/index.mjs";
-import compareDistinguishedName from "../comparators/compareDistinguishedName.mjs";
+import { compareRDNSequence } from "@wildboar/dn";
 import { commonName } from "../modules/SelectedAttributeTypes/index.mjs";
 import { DER } from "@wildboar/asn1/functional";
 import dnWithinSubtree from "./dnWithinSubtree.mjs";
