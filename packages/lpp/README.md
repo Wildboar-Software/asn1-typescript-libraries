@@ -1,13 +1,9 @@
-# LNPDQP ASN.1 in Typescript
+# Lightweight Presentation Protocol (LPP) in TypeScript
 
-ASN.1 data structures for Local Number Portability Database Query Protocol (LNPDQP),
-which is defined in GR-533, Issue 2 (2001). This module is ESM-only.
-
-UPDATE: This protocol looks to be virtually unused anywhere. It is apparently so
-unheard of that my PR to add this package comes up in Brave Search results before
-the protocol specification itself. The protocol specification is about $445, so
-I'll pass on this. Plus all of these data types look to be extremely trivial.
-I plan to remove this module.
+ASN.1 data structures based on the ASN.1 definitions in
+[IETF RFC 1085](https://datatracker.ietf.org/doc/html/rfc1085),
+which defines ISO presentation services on top of TCP/IP.
+This module is ESM-only.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -24,7 +20,21 @@ If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
 
+## Example Usage
+
+```typescript
+const original = new ConnectRequest_PDU(
+    ConnectRequest_PDU_version_version_1,
+    sampleReference(new Uint8Array([0x63])),
+    new Uint8Array([0x01, 0x02]),
+    new Uint8Array([0x03]),
+    ObjectIdentifier.fromParts([1, 2, 3]),
+    roseInvoke(),
+);
+const encoded = _encode_ConnectRequest_PDU(original, $.BER).toBytes();
+```
+
 ## AI Usage Statement
 
-This package was onboarded from the raw compiler outputs using AI
+This package was onboarded from the raw ASN.1 compiler outputs using AI
 (Grok 4.7) on 9 October 2026.
