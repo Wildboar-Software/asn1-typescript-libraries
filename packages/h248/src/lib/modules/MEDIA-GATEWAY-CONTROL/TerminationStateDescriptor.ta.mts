@@ -143,7 +143,7 @@ function _decode_TerminationStateDescriptor (el: _Element): TerminationStateDesc
     let propertyParms!: PropertyParm[];
     let eventBufferControl: OPTIONAL<EventBufferControl>;
     let serviceState: OPTIONAL<ServiceState>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "propertyParms": (_el: _Element): void => { propertyParms = $._decode_implicit<PropertyParm[]>(() => $._decodeSequenceOf<PropertyParm>(() => _decode_PropertyParm))(_el); },
         "eventBufferControl": (_el: _Element): void => { eventBufferControl = $._decode_implicit<EventBufferControl>(() => _decode_EventBufferControl)(_el); },

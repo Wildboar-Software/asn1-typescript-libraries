@@ -121,7 +121,7 @@ function _decode_SecondEventsDescriptor (el: _Element): SecondEventsDescriptor {
     if (!_cached_decoder_for_SecondEventsDescriptor) { _cached_decoder_for_SecondEventsDescriptor = function (el: _Element): SecondEventsDescriptor {
     let requestID: OPTIONAL<RequestID>;
     let eventList!: SecondRequestedEvent[];
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "requestID": (_el: _Element): void => { requestID = $._decode_implicit<RequestID>(() => _decode_RequestID)(_el); },
         "eventList": (_el: _Element): void => { eventList = $._decode_implicit<SecondRequestedEvent[]>(() => $._decodeSequenceOf<SecondRequestedEvent>(() => _decode_SecondRequestedEvent))(_el); }

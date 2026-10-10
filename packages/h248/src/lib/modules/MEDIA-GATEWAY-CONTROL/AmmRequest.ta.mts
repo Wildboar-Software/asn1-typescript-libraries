@@ -127,10 +127,8 @@ function _decode_AmmRequest (el: _Element): AmmRequest {
     }
     sequence[0].name = "terminationID";
     sequence[1].name = "descriptors";
-    let terminationID!: TerminationIDList;
-    let descriptors!: AmmDescriptor[];
-    terminationID = $._decode_implicit<TerminationIDList>(() => _decode_TerminationIDList)(sequence[0]);
-    descriptors = $._decode_implicit<AmmDescriptor[]>(() => $._decodeSequenceOf<AmmDescriptor>(() => _decode_AmmDescriptor))(sequence[1]);
+    const terminationID: TerminationIDList = $._decode_implicit<TerminationIDList>(() => _decode_TerminationIDList)(sequence[0]);
+    const descriptors: AmmDescriptor[] = $._decode_implicit<AmmDescriptor[]>(() => $._decodeSequenceOf<AmmDescriptor>(() => _decode_AmmDescriptor))(sequence[1]);
     return new AmmRequest(
         terminationID,
         descriptors,

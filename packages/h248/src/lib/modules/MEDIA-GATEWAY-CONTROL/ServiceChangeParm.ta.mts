@@ -241,7 +241,7 @@ function _decode_ServiceChangeParm (el: _Element): ServiceChangeParm {
     let nonStandardData: OPTIONAL<NonStandardData>;
     let serviceChangeInfo: OPTIONAL<AuditDescriptor>;
     let serviceChangeIncompleteFlag: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "serviceChangeMethod": (_el: _Element): void => { serviceChangeMethod = $._decode_implicit<ServiceChangeMethod>(() => _decode_ServiceChangeMethod)(_el); },
         "serviceChangeAddress": (_el: _Element): void => { serviceChangeAddress = $._decode_explicit<ServiceChangeAddress>(() => _decode_ServiceChangeAddress)(_el); },

@@ -197,7 +197,7 @@ function _decode_ContextAttrAuditRequest (el: _Element): ContextAttrAuditRequest
     let selectemergency: OPTIONAL<BOOLEAN>;
     let selectiepscallind: OPTIONAL<BOOLEAN>;
     let selectLogic: OPTIONAL<SelectLogic>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "topology": (_el: _Element): void => { topology = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "emergency": (_el: _Element): void => { emergency = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

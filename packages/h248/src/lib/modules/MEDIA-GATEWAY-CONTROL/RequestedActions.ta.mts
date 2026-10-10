@@ -160,7 +160,7 @@ function _decode_RequestedActions (el: _Element): RequestedActions {
     let signalsDescriptor: OPTIONAL<SignalsDescriptor>;
     let notifyBehaviour: OPTIONAL<NotifyBehaviour>;
     let resetEventsDescriptor: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "keepActive": (_el: _Element): void => { keepActive = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },
         "eventDM": (_el: _Element): void => { eventDM = $._decode_explicit<EventDM>(() => _decode_EventDM)(_el); },

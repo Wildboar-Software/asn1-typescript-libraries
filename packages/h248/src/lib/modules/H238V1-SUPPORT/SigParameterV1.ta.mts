@@ -120,10 +120,8 @@ function _decode_SigParameterV1 (el: _Element): SigParameterV1 {
     }
     sequence[0].name = "sigParameterName";
     sequence[1].name = "value";
-    let sigParameterName!: SigParameterName;
-    let value!: SigParamValueV1;
-    sigParameterName = $._decode_implicit<SigParameterName>(() => _decode_SigParameterName)(sequence[0]);
-    value = $._decode_implicit<SigParamValueV1>(() => _decode_SigParamValueV1)(sequence[1]);
+    const sigParameterName: SigParameterName = $._decode_implicit<SigParameterName>(() => _decode_SigParameterName)(sequence[0]);
+    const value: SigParamValueV1 = $._decode_implicit<SigParamValueV1>(() => _decode_SigParamValueV1)(sequence[1]);
     return new SigParameterV1(
         sigParameterName,
         value,

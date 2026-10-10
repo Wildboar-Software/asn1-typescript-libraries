@@ -129,7 +129,7 @@ function _decode_IndAudLocalRemoteDescriptor (el: _Element): IndAudLocalRemoteDe
     if (!_cached_decoder_for_IndAudLocalRemoteDescriptor) { _cached_decoder_for_IndAudLocalRemoteDescriptor = function (el: _Element): IndAudLocalRemoteDescriptor {
     let propGroupID: OPTIONAL<INTEGER>;
     let propGrps!: IndAudPropertyGroup;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "propGroupID": (_el: _Element): void => { propGroupID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "propGrps": (_el: _Element): void => { propGrps = $._decode_implicit<IndAudPropertyGroup>(() => _decode_IndAudPropertyGroup)(_el); }

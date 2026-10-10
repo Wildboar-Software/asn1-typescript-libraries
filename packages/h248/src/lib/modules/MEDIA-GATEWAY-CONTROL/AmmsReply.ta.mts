@@ -121,7 +121,7 @@ function _decode_AmmsReply (el: _Element): AmmsReply {
     if (!_cached_decoder_for_AmmsReply) { _cached_decoder_for_AmmsReply = function (el: _Element): AmmsReply {
     let terminationID!: TerminationIDList;
     let terminationAudit: OPTIONAL<TerminationAudit>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "terminationID": (_el: _Element): void => { terminationID = $._decode_implicit<TerminationIDList>(() => _decode_TerminationIDList)(_el); },
         "terminationAudit": (_el: _Element): void => { terminationAudit = $._decode_implicit<TerminationAudit>(() => _decode_TerminationAudit)(_el); }

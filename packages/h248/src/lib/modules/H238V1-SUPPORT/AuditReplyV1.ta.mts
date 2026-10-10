@@ -118,10 +118,8 @@ function _decode_AuditReplyV1 (el: _Element): AuditReplyV1 {
     }
     sequence[0].name = "terminationID";
     sequence[1].name = "auditResult";
-    let terminationID!: TerminationID;
-    let auditResult!: AuditResultV1;
-    terminationID = $._decode_implicit<TerminationID>(() => _decode_TerminationID)(sequence[0]);
-    auditResult = $._decode_explicit<AuditResultV1>(() => _decode_AuditResultV1)(sequence[1]);
+    const terminationID: TerminationID = $._decode_implicit<TerminationID>(() => _decode_TerminationID)(sequence[0]);
+    const auditResult: AuditResultV1 = $._decode_explicit<AuditResultV1>(() => _decode_AuditResultV1)(sequence[1]);
     return new AuditReplyV1(
         terminationID,
         auditResult,

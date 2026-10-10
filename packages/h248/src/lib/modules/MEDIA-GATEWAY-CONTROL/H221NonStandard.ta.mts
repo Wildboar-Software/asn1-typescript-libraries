@@ -169,14 +169,10 @@ function _decode_H221NonStandard (el: _Element): H221NonStandard {
     sequence[1].name = "t35CountryCode2";
     sequence[2].name = "t35Extension";
     sequence[3].name = "manufacturerCode";
-    let t35CountryCode1!: INTEGER;
-    let t35CountryCode2!: INTEGER;
-    let t35Extension!: INTEGER;
-    let manufacturerCode!: INTEGER;
-    t35CountryCode1 = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    t35CountryCode2 = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
-    t35Extension = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[2]);
-    manufacturerCode = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[3]);
+    const t35CountryCode1: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const t35CountryCode2: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const t35Extension: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[2]);
+    const manufacturerCode: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[3]);
     return new H221NonStandard(
         t35CountryCode1,
         t35CountryCode2,

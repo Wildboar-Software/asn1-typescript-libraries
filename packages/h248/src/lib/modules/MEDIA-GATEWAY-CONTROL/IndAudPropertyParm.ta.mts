@@ -120,7 +120,7 @@ function _decode_IndAudPropertyParm (el: _Element): IndAudPropertyParm {
     if (!_cached_decoder_for_IndAudPropertyParm) { _cached_decoder_for_IndAudPropertyParm = function (el: _Element): IndAudPropertyParm {
     let name!: PkgdName;
     let propertyParms: OPTIONAL<PropertyParm>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "name": (_el: _Element): void => { name = $._decode_implicit<PkgdName>(() => _decode_PkgdName)(_el); },
         "propertyParms": (_el: _Element): void => { propertyParms = $._decode_implicit<PropertyParm>(() => _decode_PropertyParm)(_el); }

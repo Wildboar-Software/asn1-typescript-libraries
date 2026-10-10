@@ -121,7 +121,7 @@ function _decode_IndAudEventBufferDescriptor (el: _Element): IndAudEventBufferDe
     if (!_cached_decoder_for_IndAudEventBufferDescriptor) { _cached_decoder_for_IndAudEventBufferDescriptor = function (el: _Element): IndAudEventBufferDescriptor {
     let eventName!: PkgdName;
     let streamID: OPTIONAL<StreamID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eventName": (_el: _Element): void => { eventName = $._decode_implicit<PkgdName>(() => _decode_PkgdName)(_el); },
         "streamID": (_el: _Element): void => { streamID = $._decode_implicit<StreamID>(() => _decode_StreamID)(_el); }

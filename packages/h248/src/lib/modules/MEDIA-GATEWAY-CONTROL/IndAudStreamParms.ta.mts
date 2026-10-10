@@ -139,7 +139,7 @@ function _decode_IndAudStreamParms (el: _Element): IndAudStreamParms {
     let localDescriptor: OPTIONAL<IndAudLocalRemoteDescriptor>;
     let remoteDescriptor: OPTIONAL<IndAudLocalRemoteDescriptor>;
     let statisticsDescriptor: OPTIONAL<IndAudStatisticsDescriptor>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "localControlDescriptor": (_el: _Element): void => { localControlDescriptor = $._decode_implicit<IndAudLocalControlDescriptor>(() => _decode_IndAudLocalControlDescriptor)(_el); },
         "localDescriptor": (_el: _Element): void => { localDescriptor = $._decode_implicit<IndAudLocalRemoteDescriptor>(() => _decode_IndAudLocalRemoteDescriptor)(_el); },

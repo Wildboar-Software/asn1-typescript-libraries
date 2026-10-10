@@ -145,7 +145,7 @@ function _decode_IndAudTerminationStateDescriptor (el: _Element): IndAudTerminat
     let eventBufferControl: OPTIONAL<NULL>;
     let serviceState: OPTIONAL<NULL>;
     let serviceStateSel: OPTIONAL<ServiceState>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "propertyParms": (_el: _Element): void => { propertyParms = $._decode_implicit<IndAudPropertyParm[]>(() => $._decodeSequenceOf<IndAudPropertyParm>(() => _decode_IndAudPropertyParm))(_el); },
         "eventBufferControl": (_el: _Element): void => { eventBufferControl = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

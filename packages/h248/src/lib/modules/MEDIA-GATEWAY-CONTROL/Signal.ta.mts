@@ -225,7 +225,7 @@ function _decode_Signal (el: _Element): Signal {
     let direction: OPTIONAL<SignalDirection>;
     let requestID: OPTIONAL<RequestID>;
     let intersigDelay: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "signalName": (_el: _Element): void => { signalName = $._decode_implicit<SignalName>(() => _decode_SignalName)(_el); },
         "streamID": (_el: _Element): void => { streamID = $._decode_implicit<StreamID>(() => _decode_StreamID)(_el); },

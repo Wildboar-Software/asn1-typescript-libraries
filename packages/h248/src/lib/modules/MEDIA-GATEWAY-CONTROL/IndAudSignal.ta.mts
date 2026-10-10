@@ -130,7 +130,7 @@ function _decode_IndAudSignal (el: _Element): IndAudSignal {
     let signalName!: PkgdName;
     let streamID: OPTIONAL<StreamID>;
     let signalRequestID: OPTIONAL<RequestID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "signalName": (_el: _Element): void => { signalName = $._decode_implicit<PkgdName>(() => _decode_PkgdName)(_el); },
         "streamID": (_el: _Element): void => { streamID = $._decode_implicit<StreamID>(() => _decode_StreamID)(_el); },

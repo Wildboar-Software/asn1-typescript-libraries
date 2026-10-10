@@ -139,7 +139,7 @@ function _decode_StreamParms (el: _Element): StreamParms {
     let localDescriptor: OPTIONAL<LocalRemoteDescriptor>;
     let remoteDescriptor: OPTIONAL<LocalRemoteDescriptor>;
     let statisticsDescriptor: OPTIONAL<StatisticsDescriptor>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "localControlDescriptor": (_el: _Element): void => { localControlDescriptor = $._decode_implicit<LocalControlDescriptor>(() => _decode_LocalControlDescriptor)(_el); },
         "localDescriptor": (_el: _Element): void => { localDescriptor = $._decode_implicit<LocalRemoteDescriptor>(() => _decode_LocalRemoteDescriptor)(_el); },

@@ -118,10 +118,8 @@ function _decode_ObservedEventsDescriptor (el: _Element): ObservedEventsDescript
     }
     sequence[0].name = "requestId";
     sequence[1].name = "observedEventLst";
-    let requestId!: RequestID;
-    let observedEventLst!: ObservedEvent[];
-    requestId = $._decode_implicit<RequestID>(() => _decode_RequestID)(sequence[0]);
-    observedEventLst = $._decode_implicit<ObservedEvent[]>(() => $._decodeSequenceOf<ObservedEvent>(() => _decode_ObservedEvent))(sequence[1]);
+    const requestId: RequestID = $._decode_implicit<RequestID>(() => _decode_RequestID)(sequence[0]);
+    const observedEventLst: ObservedEvent[] = $._decode_implicit<ObservedEvent[]>(() => $._decodeSequenceOf<ObservedEvent>(() => _decode_ObservedEvent))(sequence[1]);
     return new ObservedEventsDescriptor(
         requestId,
         observedEventLst,

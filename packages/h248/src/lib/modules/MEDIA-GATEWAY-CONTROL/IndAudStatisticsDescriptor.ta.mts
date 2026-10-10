@@ -108,8 +108,7 @@ function _decode_IndAudStatisticsDescriptor (el: _Element): IndAudStatisticsDesc
         throw new _ConstructionError("IndAudStatisticsDescriptor contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "statName";
-    let statName!: PkgdName;
-    statName = $._decode_implicit<PkgdName>(() => _decode_PkgdName)(sequence[0]);
+    const statName: PkgdName = $._decode_implicit<PkgdName>(() => _decode_PkgdName)(sequence[0]);
     return new IndAudStatisticsDescriptor(
         statName,
 

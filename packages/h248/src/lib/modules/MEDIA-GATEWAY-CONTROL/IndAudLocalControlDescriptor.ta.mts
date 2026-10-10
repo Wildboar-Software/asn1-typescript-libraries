@@ -154,7 +154,7 @@ function _decode_IndAudLocalControlDescriptor (el: _Element): IndAudLocalControl
     let reserveGroup: OPTIONAL<NULL>;
     let propertyParms: OPTIONAL<IndAudPropertyParm[]>;
     let streamModeSel: OPTIONAL<StreamMode>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "streamMode": (_el: _Element): void => { streamMode = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "reserveValue": (_el: _Element): void => { reserveValue = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

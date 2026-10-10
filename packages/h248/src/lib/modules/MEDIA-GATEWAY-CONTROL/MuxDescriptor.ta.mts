@@ -137,7 +137,7 @@ function _decode_MuxDescriptor (el: _Element): MuxDescriptor {
     let muxType!: MuxType;
     let termList!: TerminationID[];
     let nonStandardData: OPTIONAL<NonStandardData>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "muxType": (_el: _Element): void => { muxType = $._decode_implicit<MuxType>(() => _decode_MuxType)(_el); },
         "termList": (_el: _Element): void => { termList = $._decode_implicit<TerminationID[]>(() => $._decodeSequenceOf<TerminationID>(() => _decode_TerminationID))(_el); },

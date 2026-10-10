@@ -131,7 +131,7 @@ function _decode_SegmentReply (el: _Element): SegmentReply {
     let transactionId!: TransactionId;
     let segmentNumber!: SegmentNumber;
     let segmentationComplete: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "transactionId": (_el: _Element): void => { transactionId = $._decode_implicit<TransactionId>(() => _decode_TransactionId)(_el); },
         "segmentNumber": (_el: _Element): void => { segmentNumber = $._decode_implicit<SegmentNumber>(() => _decode_SegmentNumber)(_el); },

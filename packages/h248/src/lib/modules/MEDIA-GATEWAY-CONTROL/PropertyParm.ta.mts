@@ -138,7 +138,7 @@ function _decode_PropertyParm (el: _Element): PropertyParm {
     let propertyName!: PkgdName;
     let value!: PropertyID[];
     let extraInfo: OPTIONAL<PropertyParm_extraInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "propertyName": (_el: _Element): void => { propertyName = $._decode_implicit<PkgdName>(() => _decode_PkgdName)(_el); },
         "value": (_el: _Element): void => { value = $._decode_implicit<PropertyID[]>(() => $._decodeSequenceOf<PropertyID>(() => _decode_PropertyID))(_el); },

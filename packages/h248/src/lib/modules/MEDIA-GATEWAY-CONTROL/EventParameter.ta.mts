@@ -141,7 +141,7 @@ function _decode_EventParameter (el: _Element): EventParameter {
     let eventParameterName!: EventParameterName;
     let eventParamValue!: EventParamValues;
     let extraInfo: OPTIONAL<EventParameter_extraInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eventParameterName": (_el: _Element): void => { eventParameterName = $._decode_implicit<EventParameterName>(() => _decode_EventParameterName)(_el); },
         "eventParamValue": (_el: _Element): void => { eventParamValue = $._decode_implicit<EventParamValues>(() => _decode_EventParamValues)(_el); },

@@ -130,10 +130,8 @@ function _decode_TerminationID (el: _Element): TerminationID {
     }
     sequence[0].name = "wildcard";
     sequence[1].name = "id";
-    let wildcard!: WildcardField[];
-    let id!: OCTET_STRING;
-    wildcard = $._decode_implicit<WildcardField[]>(() => $._decodeSequenceOf<WildcardField>(() => _decode_WildcardField))(sequence[0]);
-    id = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const wildcard: WildcardField[] = $._decode_implicit<WildcardField[]>(() => $._decodeSequenceOf<WildcardField>(() => _decode_WildcardField))(sequence[0]);
+    const id: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new TerminationID(
         wildcard,
         id,

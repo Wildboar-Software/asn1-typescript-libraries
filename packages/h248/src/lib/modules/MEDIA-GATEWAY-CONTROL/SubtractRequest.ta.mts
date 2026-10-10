@@ -121,7 +121,7 @@ function _decode_SubtractRequest (el: _Element): SubtractRequest {
     if (!_cached_decoder_for_SubtractRequest) { _cached_decoder_for_SubtractRequest = function (el: _Element): SubtractRequest {
     let terminationID!: TerminationIDList;
     let auditDescriptor: OPTIONAL<AuditDescriptor>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "terminationID": (_el: _Element): void => { terminationID = $._decode_implicit<TerminationIDList>(() => _decode_TerminationIDList)(_el); },
         "auditDescriptor": (_el: _Element): void => { auditDescriptor = $._decode_implicit<AuditDescriptor>(() => _decode_AuditDescriptor)(_el); }

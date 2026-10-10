@@ -131,7 +131,7 @@ function _decode_EventSpec (el: _Element): EventSpec {
     let eventName!: EventName;
     let streamID: OPTIONAL<StreamID>;
     let eventParList!: EventParameter[];
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eventName": (_el: _Element): void => { eventName = $._decode_implicit<EventName>(() => _decode_EventName)(_el); },
         "streamID": (_el: _Element): void => { streamID = $._decode_implicit<StreamID>(() => _decode_StreamID)(_el); },

@@ -172,7 +172,7 @@ function _decode_ContextRequest (el: _Element): ContextRequest {
     let iepscallind: OPTIONAL<BOOLEAN>;
     let contextProp: OPTIONAL<PropertyParm[]>;
     let contextList: OPTIONAL<ContextIDinList[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "priority": (_el: _Element): void => { priority = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "emergency": (_el: _Element): void => { emergency = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

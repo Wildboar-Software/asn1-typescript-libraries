@@ -159,7 +159,7 @@ function _decode_ServiceChangeResParm (el: _Element): ServiceChangeResParm {
     let serviceChangeVersion: OPTIONAL<INTEGER>;
     let serviceChangeProfile: OPTIONAL<ServiceChangeProfile>;
     let timestamp: OPTIONAL<TimeNotation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "serviceChangeMgcId": (_el: _Element): void => { serviceChangeMgcId = $._decode_explicit<MId>(() => _decode_MId)(_el); },
         "serviceChangeAddress": (_el: _Element): void => { serviceChangeAddress = $._decode_explicit<ServiceChangeAddress>(() => _decode_ServiceChangeAddress)(_el); },

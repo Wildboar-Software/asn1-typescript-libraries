@@ -131,10 +131,8 @@ function _decode_IndAudPackagesDescriptor (el: _Element): IndAudPackagesDescript
     }
     sequence[0].name = "packageName";
     sequence[1].name = "packageVersion";
-    let packageName!: Name;
-    let packageVersion!: INTEGER;
-    packageName = $._decode_implicit<Name>(() => _decode_Name)(sequence[0]);
-    packageVersion = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const packageName: Name = $._decode_implicit<Name>(() => _decode_Name)(sequence[0]);
+    const packageVersion: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new IndAudPackagesDescriptor(
         packageName,
         packageVersion,

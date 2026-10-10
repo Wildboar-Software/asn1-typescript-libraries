@@ -118,10 +118,8 @@ function _decode_NonStandardData (el: _Element): NonStandardData {
     }
     sequence[0].name = "nonStandardIdentifier";
     sequence[1].name = "data";
-    let nonStandardIdentifier!: NonStandardIdentifier;
-    let data!: OCTET_STRING;
-    nonStandardIdentifier = $._decode_explicit<NonStandardIdentifier>(() => _decode_NonStandardIdentifier)(sequence[0]);
-    data = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const nonStandardIdentifier: NonStandardIdentifier = $._decode_explicit<NonStandardIdentifier>(() => _decode_NonStandardIdentifier)(sequence[0]);
+    const data: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new NonStandardData(
         nonStandardIdentifier,
         data,

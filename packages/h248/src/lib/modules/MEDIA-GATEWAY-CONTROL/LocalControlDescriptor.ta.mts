@@ -146,7 +146,7 @@ function _decode_LocalControlDescriptor (el: _Element): LocalControlDescriptor {
     let reserveValue: OPTIONAL<BOOLEAN>;
     let reserveGroup: OPTIONAL<BOOLEAN>;
     let propertyParms!: PropertyParm[];
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "streamMode": (_el: _Element): void => { streamMode = $._decode_implicit<StreamMode>(() => _decode_StreamMode)(_el); },
         "reserveValue": (_el: _Element): void => { reserveValue = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

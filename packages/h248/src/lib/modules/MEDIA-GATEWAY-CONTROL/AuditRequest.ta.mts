@@ -130,7 +130,7 @@ function _decode_AuditRequest (el: _Element): AuditRequest {
     let terminationID!: TerminationID;
     let auditDescriptor!: AuditDescriptor;
     let terminationIDList: OPTIONAL<TerminationIDList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "terminationID": (_el: _Element): void => { terminationID = $._decode_implicit<TerminationID>(() => _decode_TerminationID)(_el); },
         "auditDescriptor": (_el: _Element): void => { auditDescriptor = $._decode_implicit<AuditDescriptor>(() => _decode_AuditDescriptor)(_el); },

@@ -125,10 +125,8 @@ function _decode_TermListAuditResult (el: _Element): TermListAuditResult {
     }
     sequence[0].name = "terminationIDList";
     sequence[1].name = "terminationAuditResult";
-    let terminationIDList!: TerminationIDList;
-    let terminationAuditResult!: TerminationAudit;
-    terminationIDList = $._decode_implicit<TerminationIDList>(() => _decode_TerminationIDList)(sequence[0]);
-    terminationAuditResult = $._decode_implicit<TerminationAudit>(() => _decode_TerminationAudit)(sequence[1]);
+    const terminationIDList: TerminationIDList = $._decode_implicit<TerminationIDList>(() => _decode_TerminationIDList)(sequence[0]);
+    const terminationAuditResult: TerminationAudit = $._decode_implicit<TerminationAudit>(() => _decode_TerminationAudit)(sequence[1]);
     return new TermListAuditResult(
         terminationIDList,
         terminationAuditResult,

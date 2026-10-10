@@ -178,7 +178,7 @@ function _decode_DigitMapValue (el: _Element): DigitMapValue {
     let longTimer: OPTIONAL<INTEGER>;
     let digitMapBody!: IA5String;
     let durationTimer: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "startTimer": (_el: _Element): void => { startTimer = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "shortTimer": (_el: _Element): void => { shortTimer = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },

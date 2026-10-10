@@ -131,7 +131,7 @@ function _decode_IndAudEventsDescriptor (el: _Element): IndAudEventsDescriptor {
     let requestID: OPTIONAL<RequestID>;
     let pkgdName!: PkgdName;
     let streamID: OPTIONAL<StreamID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "requestID": (_el: _Element): void => { requestID = $._decode_implicit<RequestID>(() => _decode_RequestID)(_el); },
         "pkgdName": (_el: _Element): void => { pkgdName = $._decode_implicit<PkgdName>(() => _decode_PkgdName)(_el); },

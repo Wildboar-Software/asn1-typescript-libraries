@@ -125,10 +125,8 @@ function _decode_TransactionRequest (el: _Element): TransactionRequest {
     }
     sequence[0].name = "transactionId";
     sequence[1].name = "actions";
-    let transactionId!: TransactionId;
-    let actions!: ActionRequest[];
-    transactionId = $._decode_implicit<TransactionId>(() => _decode_TransactionId)(sequence[0]);
-    actions = $._decode_implicit<ActionRequest[]>(() => $._decodeSequenceOf<ActionRequest>(() => _decode_ActionRequest))(sequence[1]);
+    const transactionId: TransactionId = $._decode_implicit<TransactionId>(() => _decode_TransactionId)(sequence[0]);
+    const actions: ActionRequest[] = $._decode_implicit<ActionRequest[]>(() => $._decodeSequenceOf<ActionRequest>(() => _decode_ActionRequest))(sequence[1]);
     return new TransactionRequest(
         transactionId,
         actions,

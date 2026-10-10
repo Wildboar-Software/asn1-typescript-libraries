@@ -139,7 +139,7 @@ function _decode_SigParameter (el: _Element): SigParameter {
     let sigParameterName!: SigParameterName;
     let value!: SigParamValues;
     let extraInfo: OPTIONAL<SigParameter_extraInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sigParameterName": (_el: _Element): void => { sigParameterName = $._decode_implicit<SigParameterName>(() => _decode_SigParameterName)(_el); },
         "value": (_el: _Element): void => { value = $._decode_implicit<SigParamValues>(() => _decode_SigParamValues)(_el); },

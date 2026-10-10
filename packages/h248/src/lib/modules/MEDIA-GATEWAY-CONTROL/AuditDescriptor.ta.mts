@@ -132,7 +132,7 @@ function _decode_AuditDescriptor (el: _Element): AuditDescriptor {
     if (!_cached_decoder_for_AuditDescriptor) { _cached_decoder_for_AuditDescriptor = function (el: _Element): AuditDescriptor {
     let auditToken: OPTIONAL<AuditDescriptor_auditToken>;
     let auditPropertyToken: OPTIONAL<IndAuditParameter[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "auditToken": (_el: _Element): void => { auditToken = $._decode_implicit<AuditDescriptor_auditToken>(() => _decode_AuditDescriptor_auditToken)(_el); },
         "auditPropertyToken": (_el: _Element): void => { auditPropertyToken = $._decode_implicit<IndAuditParameter[]>(() => $._decodeSequenceOf<IndAuditParameter>(() => _decode_IndAuditParameter))(_el); }

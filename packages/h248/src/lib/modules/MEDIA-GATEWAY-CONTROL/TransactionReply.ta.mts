@@ -153,7 +153,7 @@ function _decode_TransactionReply (el: _Element): TransactionReply {
     let transactionResult!: TransactionReply_transactionResult;
     let segmentNumber: OPTIONAL<SegmentNumber>;
     let segmentationComplete: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "transactionId": (_el: _Element): void => { transactionId = $._decode_implicit<TransactionId>(() => _decode_TransactionId)(_el); },
         "immAckRequired": (_el: _Element): void => { immAckRequired = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

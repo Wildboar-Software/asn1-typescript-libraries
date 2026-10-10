@@ -118,10 +118,8 @@ function _decode_IndAudStreamDescriptor (el: _Element): IndAudStreamDescriptor {
     }
     sequence[0].name = "streamID";
     sequence[1].name = "streamParms";
-    let streamID!: StreamID;
-    let streamParms!: IndAudStreamParms;
-    streamID = $._decode_implicit<StreamID>(() => _decode_StreamID)(sequence[0]);
-    streamParms = $._decode_implicit<IndAudStreamParms>(() => _decode_IndAudStreamParms)(sequence[1]);
+    const streamID: StreamID = $._decode_implicit<StreamID>(() => _decode_StreamID)(sequence[0]);
+    const streamParms: IndAudStreamParms = $._decode_implicit<IndAudStreamParms>(() => _decode_IndAudStreamParms)(sequence[1]);
     return new IndAudStreamDescriptor(
         streamID,
         streamParms,

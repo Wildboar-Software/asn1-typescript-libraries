@@ -115,8 +115,7 @@ function _decode_ServiceChangeProfile (el: _Element): ServiceChangeProfile {
         throw new _ConstructionError("ServiceChangeProfile contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "profileName";
-    let profileName!: IA5String;
-    profileName = $._decode_implicit<IA5String>(() => $._decodeIA5String)(sequence[0]);
+    const profileName: IA5String = $._decode_implicit<IA5String>(() => $._decodeIA5String)(sequence[0]);
     return new ServiceChangeProfile(
         profileName,
 

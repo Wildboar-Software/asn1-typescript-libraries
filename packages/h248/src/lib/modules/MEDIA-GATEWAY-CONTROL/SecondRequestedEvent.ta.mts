@@ -141,7 +141,7 @@ function _decode_SecondRequestedEvent (el: _Element): SecondRequestedEvent {
     let streamID: OPTIONAL<StreamID>;
     let eventAction: OPTIONAL<SecondRequestedActions>;
     let evParList!: EventParameter[];
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pkgdName": (_el: _Element): void => { pkgdName = $._decode_implicit<PkgdName>(() => _decode_PkgdName)(_el); },
         "streamID": (_el: _Element): void => { streamID = $._decode_implicit<StreamID>(() => _decode_StreamID)(_el); },

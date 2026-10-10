@@ -171,7 +171,7 @@ function _decode_TopologyRequest (el: _Element): TopologyRequest {
     let topologyDirection!: TopologyRequest_topologyDirection;
     let streamID: OPTIONAL<StreamID>;
     let topologyDirectionExtension: OPTIONAL<TopologyRequest_topologyDirectionExtension>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "terminationFrom": (_el: _Element): void => { terminationFrom = $._decode_implicit<TerminationID>(() => _decode_TerminationID)(_el); },
         "terminationTo": (_el: _Element): void => { terminationTo = $._decode_implicit<TerminationID>(() => _decode_TerminationID)(_el); },
