@@ -12,7 +12,20 @@ import { TariffSwitchCurrency, _decode_TariffSwitchCurrency, _encode_TariffSwitc
 /**
  * @summary TariffCurrency
  * @description
- * 
+ *
+ * Currency-format tariff inside a CRGT. Both components are
+ * optional, but the first CRGT shall contain a current tariff, and
+ * a next tariff without its switch-over time (or the reverse) is
+ * not accepted. Sending the current tariff alone deletes a stored
+ * next tariff and its switch-over time.
+ *
+ * The current tariff and the next tariff have the same parameter
+ * structure. Call-attempt and call-setup charges are also placed in
+ * the first next tariff, so they still apply if the switch-over
+ * time has already passed when charging starts.
+ *
+ * [ES 201 296 V1.3.1, clauses 6.1.1, 6.1.2.3, 6.3.9, and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,13 +41,18 @@ export
 class TariffCurrency {
     constructor (
         /**
-         * @summary `currentTariffCurrency`.
+         * Tariff applied at the start of charging, or the
+         * replacement when the current tariff changes. A CRGT that
+         * only carries this component deletes a stored next tariff
+         * and its switch-over time (clause 6.1.2.3).
          * @public
          * @readonly
          */
         readonly currentTariffCurrency: OPTIONAL<TariffCurrencyFormat>,
         /**
-         * @summary `tariffSwitchCurrency`.
+         * Next tariff and the GMT time it becomes active. The two
+         * are always sent together. Omit this component to delete a
+         * previously stored next tariff (clause 6.1.2.3).
          * @public
          * @readonly
          */

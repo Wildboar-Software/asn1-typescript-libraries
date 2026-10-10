@@ -15,7 +15,24 @@ import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs"
 /**
  * @summary ChargingAcknowledgementInformation
  * @description
- * 
+ *
+ * CRGA. Response or confirmation for CRGT, AOCRG, START, and STOP
+ * (table 2). The sender of CRGT or AOCRG starts timer Tcrga
+ * (6 s to 15 s) and cancels it on this acknowledgement. A connection
+ * control point does the same for START and STOP. While Tcrga runs,
+ * another CRGT or AOCRG is not sent. Expiry, a "not accepted"
+ * result, or `Charging_Error` makes the exchange release the call
+ * or continue it (table 1).
+ *
+ * The first acknowledgement of a CRGT or AOCRG carries the
+ * registration or generation point's origination identifier and the
+ * determination point's identifier as the destination, so the two
+ * directions can be matched (clause 6.4.1). START and STOP
+ * acknowledgements do the same for the connection control point
+ * (clause 6.4.2).
+ *
+ * [ES 201 296 V1.3.1, clauses 6.1.4, 6.3.6, 6.4, and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,25 +52,34 @@ export
 class ChargingAcknowledgementInformation {
     constructor (
         /**
-         * @summary `acknowledgementIndicators`.
+         * `accepted` set means the message was accepted. Clear means
+         * it was not. See
+         * {@link ChargingAcknowledgementInformation_acknowledgementIndicators}.
          * @public
          * @readonly
          */
         readonly acknowledgementIndicators: ChargingAcknowledgementInformation_acknowledgementIndicators,
         /**
-         * @summary `extensions`.
+         * Network-operator extension. Clause 9 calls this a sequence
+         * for possible extensions. This module allows one.
          * @public
          * @readonly
          */
         readonly extensions: OPTIONAL<ExtensionField[]>,
         /**
-         * @summary `originationIdentification`.
+         * Charging reference assigned by the exchange sending this
+         * acknowledgement. For the first CRGT or AOCRG reply this is
+         * the registration or generation point. It stays that value
+         * for the life of the instance (clause 6.4.1).
          * @public
          * @readonly
          */
         readonly originationIdentification: ChargingReferenceIdentification,
         /**
-         * @summary `destinationIdentification`.
+         * Charging reference of the exchange that sent the request.
+         * Equal to that request's origination identifier. Always
+         * present, including on the first acknowledgement
+         * (clause 6.4).
          * @public
          * @readonly
          */

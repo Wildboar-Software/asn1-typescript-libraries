@@ -10,7 +10,14 @@ import { type EXTENSION } from "../Tariffing-Data-Types/EXTENSION.oca.mjs";
 /**
  * @summary firstExtension
  * @description
- * 
+ *
+ * Example {@link EXTENSION} only. Clause 9 says it is just an
+ * example: syntax `NULL`, criticality `ignore`, identified by
+ * `local:1`. It is the sole member of the extensible
+ * {@link SupportedExtensions} set shipped in this module.
+ *
+ * [ES 201 296 V1.3.1, clause 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

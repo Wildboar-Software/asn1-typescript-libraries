@@ -16,7 +16,24 @@ import { minCommunicationTariffNum } from "../Tariffing-Data-Types/minCommunicat
 /**
  * @summary TariffPulseFormat
  * @description
- * 
+ *
+ * One meter-pulse tariff: a communication sequence of one to four
+ * subtariffs, plus optional call-attempt and call-setup pulse
+ * counts. Communication pulses are applied once per charge-unit
+ * time interval.
+ *
+ * Charging starts at the first subtariff. Each subtariff except the
+ * last has a limited duration; the last may be unlimited (`0`).
+ * When a duration expires, the next subtariff is applied. At the
+ * end of the sequence, `tariffControlIndicators` say whether it
+ * starts again. A pulse-format minimum communication charge is the
+ * first subtariff with its pulse count, the required duration, and
+ * a time interval of zero. After a call-setup charge has been
+ * applied, later call-attempt and call-setup charges are ignored
+ * (clause 6.3.2).
+ *
+ * [ES 201 296 V1.3.1, clauses 6.1.1, 6.3.1, and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,25 +54,36 @@ export
 class TariffPulseFormat {
     constructor (
         /**
-         * @summary `communicationChargeSequencePulse`.
+         * Successive communication subtariffs, one to four. Applied
+         * from the start of the communication, in order. Zero
+         * pulses means the communication is free. Omit when this
+         * tariff has no communication charge; if the sequence
+         * matters, send all of it.
          * @public
          * @readonly
          */
         readonly communicationChargeSequencePulse: OPTIONAL<CommunicationChargePulse[]>,
         /**
-         * @summary `tariffControlIndicators`.
+         * Whether the communication sequence is applied again after
+         * its last subtariff. See
+         * {@link TariffPulseFormat_tariffControlIndicators}.
          * @public
          * @readonly
          */
         readonly tariffControlIndicators: TariffPulseFormat_tariffControlIndicators,
         /**
-         * @summary `callAttemptChargePulse`.
+         * Pulses charged only for an unsuccessful call. Also sent in
+         * the first next tariff. Not made when the count is zero or
+         * this field is absent, and not applied again on a later
+         * tariff change.
          * @public
          * @readonly
          */
         readonly callAttemptChargePulse: OPTIONAL<PulseUnits>,
         /**
-         * @summary `callSetupChargePulse`.
+         * Pulses charged once at the start of charging. Sent in the
+         * first CRGT and in the first next tariff. Not made when the
+         * count is zero or this field is absent.
          * @public
          * @readonly
          */

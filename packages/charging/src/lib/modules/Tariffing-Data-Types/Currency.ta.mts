@@ -41,7 +41,16 @@ enum _enum_for_Currency {
 /**
  * @summary Currency
  * @description
- * 
+ *
+ * Currency of a currency-format tariff or add-on charge. Clause 1
+ * leaves which currency a network uses out of scope. `noIndication`
+ * means no currency is indicated. Further currencies may be added:
+ * the enumeration is extensible. The identifiers follow clause 9,
+ * including `portugeseEscudo` and `luxembourgian-Franc` (the
+ * TypeScript name replaces the hyphen with an underscore).
+ *
+ * [ES 201 296 V1.3.1, clauses 1 and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -83,6 +92,8 @@ export
 type Currency = _enum_for_Currency | ENUMERATED;
 
 /**
+ * No currency is indicated (clause 9). Which currency a network
+ * uses is outside ES 201 296 (clause 1).
  * @summary Currency_noIndication
  * @constant
  * @type {number}
@@ -91,6 +102,8 @@ export
 const Currency_noIndication: Currency = 0; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * No currency is indicated (clause 9). Which currency a network
+ * uses is outside ES 201 296 (clause 1).
  * @summary noIndication
  * @constant
  * @type {number}

@@ -17,7 +17,22 @@ import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs"
 /**
  * @summary StopCharging
  * @description
- * 
+ *
+ * STOP request or indication. Stops charge generation or
+ * registration for one operator, or for several, at the end of a
+ * connection configuration. The connection from the A party to the
+ * connection control point stays up. If that connection toward the
+ * registration or generation point is cleared, Release is sent and
+ * STOP is not (clause 6.2.4).
+ *
+ * `networkOperators` is mandatory when there are several charge
+ * determination points. If it is absent and there is only one, that
+ * tariff is stopped. On receipt, charging stops for the listed
+ * operators, and the call-attempt charge is taken when
+ * `stopIndicators` says it applies (clause 6.3.5).
+ *
+ * [ES 201 296 V1.3.1, clauses 5.1, 6.2.4, 6.3.5, and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,25 +52,30 @@ export
 class StopCharging {
     constructor (
         /**
-         * @summary `stopIndicators`.
+         * Whether the call-attempt charge applies as tariffing
+         * stops. See {@link StopCharging_stopIndicators}.
          * @public
          * @readonly
          */
         readonly stopIndicators: StopCharging_stopIndicators,
         /**
-         * @summary `networkOperators`.
+         * Operators whose tariffs stop. At most six. Required when
+         * more than one charge determination point is configured.
+         * Absent, with only one such point, stops that tariff.
          * @public
          * @readonly
          */
         readonly networkOperators: OPTIONAL<NetworkIdentification[]>,
         /**
-         * @summary `extensions`.
+         * Network-operator extension. This module allows one.
          * @public
          * @readonly
          */
         readonly extensions: OPTIONAL<ExtensionField[]>,
         /**
-         * @summary `originationIdentification`.
+         * Charging reference assigned by the connection control
+         * point. The acknowledgement returns this value as its
+         * destination identifier (clause 6.4.2).
          * @public
          * @readonly
          */

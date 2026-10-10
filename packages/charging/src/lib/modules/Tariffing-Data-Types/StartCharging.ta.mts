@@ -16,7 +16,24 @@ import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs"
 /**
  * @summary StartCharging
  * @description
- * 
+ *
+ * START request or indication. Starts charge generation or
+ * registration for one operator, or for several. A connection
+ * control point sends it when Answer cannot be forwarded to the
+ * registration or generation point (clause 6.2.2). On receipt,
+ * charging starts for every listed operator, and call-setup charges
+ * are taken where they apply (clause 6.3.4). Answer itself starts
+ * tariffs that are not marked delay-until-start.
+ *
+ * `networkOperators` is mandatory when there are several charge
+ * determination points. If it is absent and there is only one, that
+ * tariff is started. The sender starts timer Tcrga (6 s to 15 s).
+ * A START is not accepted while Answer has not been received, on an
+ * ASN.1 error, or when a listed network is unknown or has no
+ * bilateral agreement (clause 6.3.9 c).
+ *
+ * [ES 201 296 V1.3.1, clauses 6.2.2, 6.3.4, and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,19 +50,24 @@ export
 class StartCharging {
     constructor (
         /**
-         * @summary `networkOperators`.
+         * Operators whose tariffs start. At most six. Required when
+         * more than one charge determination point is configured.
+         * Absent, with only one such point, starts that tariff.
          * @public
          * @readonly
          */
         readonly networkOperators: OPTIONAL<NetworkIdentification[]>,
         /**
-         * @summary `extensions`.
+         * Network-operator extension. This module allows one.
          * @public
          * @readonly
          */
         readonly extensions: OPTIONAL<ExtensionField[]>,
         /**
-         * @summary `originationIdentification`.
+         * Charging reference assigned by the connection control
+         * point. The acknowledgement returns this value as its
+         * destination identifier (clause 6.4.2). There is no
+         * destination field on START itself.
          * @public
          * @readonly
          */

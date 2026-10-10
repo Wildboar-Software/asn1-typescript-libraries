@@ -14,7 +14,27 @@ import { StopCharging, _decode_StopCharging, _encode_StopCharging } from "../Tar
 /**
  * @summary ChargingMessageType
  * @description
- * 
+ *
+ * One charging message, carried as the encapsulated application
+ * information of an APM Application Transport parameter. The
+ * application context identifier is "charging ASE" (value 3). The
+ * Charging ASE encodes and checks this value with the Basic Encoding
+ * Rules before passing it in `APM_U_Data`.
+ *
+ * The alternatives are the primitives in clause 6.5:
+ *
+ * - `crgt`: CRGT request or indication. Tariff for the call.
+ * - `aocrg`: AOCRG request or indication. One extra charge that
+ *   does not change the tariff.
+ * - `crga`: response or confirmation for CRGT, AOCRG, START, and
+ *   STOP.
+ * - `start`: START request or indication. Start registration or
+ *   generation for the listed operators.
+ * - `stop`: STOP request or indication. Stop it without clearing
+ *   the whole call.
+ *
+ * [ES 201 296 V1.3.1, clauses 6.5, 8.3, and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

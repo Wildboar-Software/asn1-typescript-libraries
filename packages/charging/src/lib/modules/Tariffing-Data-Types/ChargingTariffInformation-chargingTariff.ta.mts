@@ -11,7 +11,16 @@ import { TariffPulse, _decode_TariffPulse, _encode_TariffPulse } from "../Tariff
 /**
  * @summary ChargingTariffInformation_chargingTariff
  * @description
- * 
+ *
+ * The tariff in a CRGT, either currency or meter pulses. Every
+ * charging message for one call uses the format of the first CRGT,
+ * or of the first AOCRG if that came first. A later message in the
+ * other format is not accepted (clause 6.3.9). Pulse and currency
+ * are not converted by this specification; the value of one pulse
+ * is a bilateral agreement (clause 6.1 c).
+ *
+ * [ES 201 296 V1.3.1, clauses 6.1 c and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

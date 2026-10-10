@@ -12,7 +12,17 @@ import { TariffSwitchoverTime, _decode_TariffSwitchoverTime, _encode_TariffSwitc
 /**
  * @summary TariffSwitchCurrency
  * @description
- * 
+ *
+ * Next currency tariff and the absolute time it replaces the
+ * current one. The two are never sent separately. A charge
+ * determination point does not send a switch-over more than
+ * 23 hours and 45 minutes ahead, and sends a forthcoming one at
+ * least 12 minutes before it is due (clauses 6.1 a and 6.1.2.2).
+ * Replacing this stored pair does not restart charging and does
+ * not use `ChargingControlIndicators` (clause 6.3.2.2).
+ *
+ * [ES 201 296 V1.3.1, clauses 6.1.2.2 and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,13 +38,16 @@ export
 class TariffSwitchCurrency {
     constructor (
         /**
-         * @summary `nextTariffCurrency`.
+         * Tariff that becomes active at `tariffSwitchoverTime`.
+         * Include the call-attempt and call-setup charges here on
+         * the first next tariff (clauses 6.1.1.2 and 6.1.1.3).
          * @public
          * @readonly
          */
         readonly nextTariffCurrency: TariffCurrencyFormat,
         /**
-         * @summary `tariffSwitchoverTime`.
+         * GMT time of day at which `nextTariffCurrency` replaces
+         * the current tariff. See {@link TariffSwitchoverTime}.
          * @public
          * @readonly
          */

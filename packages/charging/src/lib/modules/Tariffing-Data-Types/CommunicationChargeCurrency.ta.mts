@@ -13,7 +13,15 @@ import { SubTariffControl, _decode_SubTariffControl, _encode_SubTariffControl } 
 /**
  * @summary CommunicationChargeCurrency
  * @description
- * 
+ *
+ * One subtariff in a currency communication sequence: a currency
+ * amount per the networks' fixed time unit, how long it lasts, and
+ * whether it is periodic or a one-time charge. The time unit (for
+ * example one second) is agreed and is not transferred. A product
+ * of zero is free.
+ *
+ * [ES 201 296 V1.3.1, clauses 3.1, 6.1.1.4, and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,19 +37,22 @@ export
 class CommunicationChargeCurrency {
     constructor (
         /**
-         * @summary `currencyFactorScale`.
+         * Currency amount for this subtariff. Factor times scale.
+         * Zero means this part of the communication is free.
          * @public
          * @readonly
          */
         readonly currencyFactorScale: CurrencyFactorScale,
         /**
-         * @summary `tariffDuration`.
+         * Seconds this subtariff stays in force. `0` is unlimited
+         * and is only for the last subtariff of the sequence.
          * @public
          * @readonly
          */
         readonly tariffDuration: TariffDuration,
         /**
-         * @summary `subTariffControl`.
+         * Periodic charge, or a one-time charge used as a minimum
+         * communication charge. See {@link SubTariffControl}.
          * @public
          * @readonly
          */

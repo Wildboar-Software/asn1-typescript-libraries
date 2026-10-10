@@ -12,7 +12,17 @@ import { CriticalityType, CriticalityType_ignore /* IMPORTED_LONG_ENUMERATION_IT
 /**
  * @summary ExtensionField
  * @description
- * 
+ *
+ * One network-operator extension of a charging argument. The
+ * contents are operator specific. The module comment says use of
+ * the ITU-T Q.1400 extension is for further study, and that the
+ * extension marker also marks later minor INAP additions. The
+ * commentary example, with type `local:1`, criticality `abort`, and
+ * a BOOLEAN true, is a sequence of that integer, enumerated `1`,
+ * and an explicit tagged BOOLEAN.
+ *
+ * [ES 201 296 V1.3.1, clause 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,19 +41,22 @@ export
 class ExtensionField {
     constructor (
         /**
-         * @summary `type_`.
+         * {@link Code} of an {@link EXTENSION} in
+         * {@link SupportedExtensions}.
          * @public
          * @readonly
          */
         readonly type_: Code,
         /**
-         * @summary `criticality`.
+         * What to do if the extension is not applied. Defaults to
+         * {@link ignore}. See {@link CriticalityType}.
          * @public
          * @readonly
          */
         readonly criticality: OPTIONAL<CriticalityType>,
         /**
-         * @summary `value`.
+         * The extension value, open type of the `&ExtensionType`
+         * identified by `type_`.
          * @public
          * @readonly
          */

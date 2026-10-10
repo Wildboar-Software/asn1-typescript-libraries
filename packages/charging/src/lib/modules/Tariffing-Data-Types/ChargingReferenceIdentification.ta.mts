@@ -12,7 +12,23 @@ import { ReferenceID, _decode_ReferenceID, _encode_ReferenceID } from "../Tariff
 /**
  * @summary ChargingReferenceIdentification
  * @description
- * 
+ *
+ * Charging reference identifier: the network plus a reference
+ * chosen by that exchange. The two exchanges assign identifiers
+ * independently. A released reference should not be reused at once.
+ * The pair that belongs to one tariff determination instance, or to
+ * one connection-control instance, stays constant for the life of
+ * the call. Different instances of the same call use different
+ * identifiers.
+ *
+ * On the first CRGT or AOCRG the determination point sends only its
+ * own identifier as the origination. The first acknowledgement
+ * returns that value as the destination and adds the registration
+ * or generation point's identifier as the origination. Later
+ * requests from the determination point carry both.
+ *
+ * [ES 201 296 V1.3.1, clauses 6.4 and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,13 +43,15 @@ export
 class ChargingReferenceIdentification {
     constructor (
         /**
-         * @summary `networkIdentification`.
+         * Network that assigned this reference. See
+         * {@link NetworkIdentification}.
          * @public
          * @readonly
          */
         readonly networkIdentification: NetworkIdentification,
         /**
-         * @summary `referenceID`.
+         * Reference assigned by that exchange. Not reused
+         * immediately after release. See {@link ReferenceID}.
          * @public
          * @readonly
          */

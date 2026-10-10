@@ -17,7 +17,19 @@ import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs"
 /**
  * @summary AddOnChargingInformation
  * @description
- * 
+ *
+ * AOCRG request or indication. One extra charge for the call. It
+ * does not change the tariff in force. It is allowed only after
+ * charging has started; an earlier AOCRG is not accepted.
+ *
+ * The amount is either currency or meter pulses, and that choice
+ * must be the format fixed by the first CRGT or the first AOCRG of
+ * the call. The charge determination point starts timer Tcrga
+ * (6 s to 15 s) and does not send another CRGT or AOCRG while it
+ * runs (clauses 6.1.4 and 10).
+ *
+ * [ES 201 296 V1.3.1, clauses 6.1.2.4, 6.3.2.4, and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,37 +52,55 @@ export
 class AddOnChargingInformation {
     constructor (
         /**
-         * @summary `chargingControlIndicators`.
+         * Advice of charge versus subscriber charging. The immediate
+         * tariff-change and delay-until-start bits are defined for
+         * this field on every CRGT and AOCRG; clause 6.1.2.4 says an
+         * add-on charge does not change the current tariff. See
+         * {@link ChargingControlIndicators}.
          * @public
          * @readonly
          */
         readonly chargingControlIndicators: ChargingControlIndicators,
         /**
-         * @summary `addOncharge`.
+         * The extra charge, in currency or in meter pulses. Must
+         * match the format of the first CRGT or AOCRG of the call.
+         * An absent amount is not accepted (clause 6.3.9 b).
          * @public
          * @readonly
          */
         readonly addOncharge: AddOnChargingInformation_addOncharge,
         /**
-         * @summary `extensions`.
+         * Network-operator extension. This module allows one
+         * (`numOfExtensions`), and marks that limit network specific.
          * @public
          * @readonly
          */
         readonly extensions: OPTIONAL<ExtensionField[]>,
         /**
-         * @summary `originationIdentification`.
+         * Charging reference of the sender. On the first AOCRG this
+         * is the determination point's identifier and
+         * `destinationIdentification` is absent. Later AOCRG messages
+         * for the same instance keep this value and name the other
+         * exchange as the destination. See clause 6.4.1.
          * @public
          * @readonly
          */
         readonly originationIdentification: ChargingReferenceIdentification,
         /**
-         * @summary `destinationIdentification`.
+         * Charging reference of the other exchange. Absent on the
+         * first AOCRG. Present on every later AOCRG for that
+         * instance (clause 6.4.1). A bad or unallocated pair is not
+         * accepted (clause 6.3.9).
          * @public
          * @readonly
          */
         readonly destinationIdentification: OPTIONAL<ChargingReferenceIdentification>,
         /**
-         * @summary `currency`.
+         * Currency named for this message. Which currency a network
+         * uses is outside this specification (clause 1).
+         * `noIndication` means none is indicated. Clause 9 does not
+         * say what to put here when the add-on charge is in pulse
+         * format.
          * @public
          * @readonly
          */

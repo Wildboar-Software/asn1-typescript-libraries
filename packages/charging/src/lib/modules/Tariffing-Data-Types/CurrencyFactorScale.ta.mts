@@ -14,7 +14,15 @@ import { noScale } from "../Tariffing-Data-Types/noScale.va.mjs";
 /**
  * @summary CurrencyFactorScale
  * @description
- * 
+ *
+ * A currency amount: {@link CurrencyFactor} multiplied by
+ * `10` to the power of {@link CurrencyScale}. Both components
+ * default to zero, and clause 9 says "no charge" means the value
+ * is zero. A product of zero is free for a communication charge
+ * and suppresses a call-attempt or call-setup charge.
+ *
+ * [ES 201 296 V1.3.1, clause 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,13 +37,14 @@ export
 class CurrencyFactorScale {
     constructor (
         /**
-         * @summary `currencyFactor`.
+         * Mantissa. Defaults to {@link noCharge} (`0`).
          * @public
          * @readonly
          */
         readonly currencyFactor: OPTIONAL<CurrencyFactor>,
         /**
-         * @summary `currencyScale`.
+         * Power of ten. Defaults to {@link noScale} (`0`), so the
+         * scale is 1.
          * @public
          * @readonly
          */

@@ -17,7 +17,27 @@ import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs"
 /**
  * @summary ChargingTariffInformation
  * @description
- * 
+ *
+ * CRGT request or indication. Explicit tariff data for the
+ * originating subscriber exchange and the charge registration
+ * exchange, during call set-up and in the active phase. The first
+ * CRGT fixes the format, currency or pulse, for the whole call.
+ * Later CRGT or AOCRG messages in the other format are rejected.
+ *
+ * During set-up a new CRGT replaces the previous one, up to Answer.
+ * After charging has started, a CRGT changes the current tariff,
+ * supplies or replaces the next tariff and its switch-over time, or
+ * deletes that next tariff by sending the current tariff alone.
+ * A next tariff more than 23 hours and 45 minutes ahead is not
+ * sent; one that will be needed is sent at least 12 minutes before
+ * the switch, or at least before it (clauses 6.1.2 and 6.1.3).
+ *
+ * The charge determination point starts timer Tcrga (6 s to 15 s)
+ * when it sends this message and does not send another CRGT or
+ * AOCRG while the timer runs (clauses 6.1.4 and 10).
+ *
+ * [ES 201 296 V1.3.1, clauses 6.1.1, 6.1.2, and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,37 +60,56 @@ export
 class ChargingTariffInformation {
     constructor (
         /**
-         * @summary `chargingControlIndicators`.
+         * Advice of charge versus subscriber charging, whether an
+         * immediate tariff change restarts charging, and whether
+         * tariffing waits for START. See
+         * {@link ChargingControlIndicators}.
          * @public
          * @readonly
          */
         readonly chargingControlIndicators: ChargingControlIndicators,
         /**
-         * @summary `chargingTariff`.
+         * The tariff, in currency or in meter pulses. The choice on
+         * the first CRGT is the format of every later charging
+         * message for the call. See
+         * {@link ChargingTariffInformation_chargingTariff}.
          * @public
          * @readonly
          */
         readonly chargingTariff: ChargingTariffInformation_chargingTariff,
         /**
-         * @summary `extensions`.
+         * Network-operator extension. This module allows one
+         * (`numOfExtensions`), and marks that limit network specific.
          * @public
          * @readonly
          */
         readonly extensions: OPTIONAL<ExtensionField[]>,
         /**
-         * @summary `originationIdentification`.
+         * Charging reference of the sender. On the first CRGT this
+         * is the determination point's identifier and
+         * `destinationIdentification` is absent. Later CRGT messages
+         * for the same tariff determination instance keep this value
+         * and add the registration or generation point's identifier
+         * as the destination. See clause 6.4.1.
          * @public
          * @readonly
          */
         readonly originationIdentification: ChargingReferenceIdentification,
         /**
-         * @summary `destinationIdentification`.
+         * Charging reference of the other exchange. Absent on the
+         * first CRGT. Present on every later CRGT for that tariff
+         * determination instance (clause 6.4.1). A CRGT whose
+         * destination is not allocated, or whose identifier pair is
+         * wrong, is not accepted (clause 6.3.9).
          * @public
          * @readonly
          */
         readonly destinationIdentification: OPTIONAL<ChargingReferenceIdentification>,
         /**
-         * @summary `currency`.
+         * Currency named for this message. Which currency a network
+         * uses is outside this specification (clause 1).
+         * `noIndication` means none is indicated. Clause 9 does not
+         * say what to put here when the tariff is in pulse format.
          * @public
          * @readonly
          */

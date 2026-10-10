@@ -11,7 +11,15 @@ import { PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing
 /**
  * @summary AddOnChargingInformation_addOncharge
  * @description
- * 
+ *
+ * The add-on amount. Either a currency amount or a meter-pulse
+ * count, never both. The choice must be the format fixed by the
+ * first CRGT or the first AOCRG of the call. An AOCRG without this
+ * amount is not accepted (clause 6.3.9 b). The charge is added and
+ * the current tariff is left as it is.
+ *
+ * [ES 201 296 V1.3.1, clauses 6.1.2.4 and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

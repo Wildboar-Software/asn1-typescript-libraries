@@ -3,8 +3,11 @@
  *
  * ASN.1 module `Tariffing-Data-Types`
  * `{itu-t(0) identified-organization(4) etsi(0) 1296 version3(4)}`
- * from ETSI ES 201 296 V1.3.1. Charging common data types for the
- * ISUP APM Charging ASE and INAP charging operations.
+ * from
+ * [ETSI ES 201 296 V1.3.1](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf),
+ * clause 9. Charging common data types for the ISUP APM Charging ASE
+ * and for INAP charging operations. The five messages are the
+ * alternatives of {@link ChargingMessageType}.
  *
  * The short named bit `non_cyclicTariff` is defined by both
  * `TariffCurrencyFormat` and `TariffPulseFormat`. Only the long forms

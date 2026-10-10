@@ -13,7 +13,15 @@ import { TariffDuration, _decode_TariffDuration, _encode_TariffDuration } from "
 /**
  * @summary CommunicationChargePulse
  * @description
- * 
+ *
+ * One subtariff in a meter-pulse communication sequence: how many
+ * pulses, how often, and for how long. Zero pulses means the
+ * communication is free. A minimum communication charge uses a
+ * time interval of zero, the pulse count, and the duration of that
+ * minimum (clause 6.1.1.4 e).
+ *
+ * [ES 201 296 V1.3.1, clauses 3.1, 6.1.1.4, and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,19 +37,23 @@ export
 class CommunicationChargePulse {
     constructor (
         /**
-         * @summary `pulseUnits`.
+         * Pulses applied each {@link ChargeUnitTimeInterval}. Zero
+         * means this part of the communication is free.
          * @public
          * @readonly
          */
         readonly pulseUnits: PulseUnits,
         /**
-         * @summary `chargeUnitTimeInterval`.
+         * Interval between pulse applications. `0` is no periodic
+         * metering, which is how a pulse-format minimum charge is
+         * marked.
          * @public
          * @readonly
          */
         readonly chargeUnitTimeInterval: ChargeUnitTimeInterval,
         /**
-         * @summary `tariffDuration`.
+         * Seconds this subtariff stays in force. `0` is unlimited
+         * and is only for the last subtariff of the sequence.
          * @public
          * @readonly
          */
