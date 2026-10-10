@@ -4,6 +4,7 @@ ASN.1 data structures for Public Key Cryptography for Initial Authentication
 in Kerberos (PKINIT). This package exports `KerberosV5-PK-INIT-SPEC`.
 Kerberos types come from `@wildboar/kerberos5`, PKIX types from
 `@wildboar/pki-stub`, and CMS types from `@wildboar/cms`.
+This module is ESM-only.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -19,10 +20,6 @@ produced with it are released publicly under the
 If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
-
-## ESM-Only
-
-This module is ESM-only.
 
 ## AI Usage Statement
 
