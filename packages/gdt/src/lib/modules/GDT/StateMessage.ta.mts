@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { StateAction, _decode_StateAction, _encode_StateAction } from "../GDT/StateAction.ta.mjs";
-// export { StateAction, StateAction_sta_update /* IMPORTED_LONG_NAMED_INTEGER */, sta_update /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_StateAction, _encode_StateAction } from "../GDT/StateAction.ta.mjs";
 import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
-// export { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -132,7 +130,7 @@ function _decode_StateMessage (el: _Element): StateMessage {
     let stmch_id!: OCTET_STRING;
     let state_action!: StateAction;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "stmch-id": (_el: _Element): void => { stmch_id = $._decodeOctetString(_el); },
         "state-action": (_el: _Element): void => { state_action = _decode_StateAction(_el); },
@@ -165,7 +163,7 @@ let _cached_encoder_for_StateMessage: $.ASN1Encoder<StateMessage> | null = null;
  */
 export
 function _encode_StateMessage (value: StateMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_StateMessage) { _cached_encoder_for_StateMessage = function (value: StateMessage, elGetter: $.ASN1Encoder<StateMessage>): _Element {
+    if (!_cached_encoder_for_StateMessage) { _cached_encoder_for_StateMessage = function (value: StateMessage): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeOctetString(value.stmch_id, $.BER),

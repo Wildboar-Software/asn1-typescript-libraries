@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NotifyMessageType, _decode_NotifyMessageType, _encode_NotifyMessageType } from "../GDT/NotifyMessageType.ta.mjs";
-// export { NotifyMessageType, _decode_NotifyMessageType, _encode_NotifyMessageType } from "../GDT/NotifyMessageType.ta.mjs";
 import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
-// export { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -132,7 +130,7 @@ function _decode_NotifyMessage (el: _Element): NotifyMessage {
     let message_type!: NotifyMessageType;
     let message: OPTIONAL<OCTET_STRING>;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "message-type": (_el: _Element): void => { message_type = _decode_NotifyMessageType(_el); },
         "message": (_el: _Element): void => { message = $._decodeOctetString(_el); },
@@ -165,7 +163,7 @@ let _cached_encoder_for_NotifyMessage: $.ASN1Encoder<NotifyMessage> | null = nul
  */
 export
 function _encode_NotifyMessage (value: NotifyMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotifyMessage) { _cached_encoder_for_NotifyMessage = function (value: NotifyMessage, elGetter: $.ASN1Encoder<NotifyMessage>): _Element {
+    if (!_cached_encoder_for_NotifyMessage) { _cached_encoder_for_NotifyMessage = function (value: NotifyMessage): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_NotifyMessageType(value.message_type, $.BER),

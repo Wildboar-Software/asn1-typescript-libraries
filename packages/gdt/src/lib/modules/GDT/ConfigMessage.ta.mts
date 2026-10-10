@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ConfigAction, _decode_ConfigAction, _encode_ConfigAction } from "../GDT/ConfigAction.ta.mjs";
-// export { ConfigAction, ConfigAction_ca_cfg_get /* IMPORTED_LONG_NAMED_INTEGER */, ca_cfg_get /* IMPORTED_SHORT_NAMED_INTEGER */, ConfigAction_ca_cfg_set /* IMPORTED_LONG_NAMED_INTEGER */, ca_cfg_set /* IMPORTED_SHORT_NAMED_INTEGER */, ConfigAction_ca_cfg_replicate /* IMPORTED_LONG_NAMED_INTEGER */, ca_cfg_replicate /* IMPORTED_SHORT_NAMED_INTEGER */, ConfigAction_ca_cfg_ac /* IMPORTED_LONG_NAMED_INTEGER */, ca_cfg_ac /* IMPORTED_SHORT_NAMED_INTEGER */, ConfigAction_ca_cfg_result /* IMPORTED_LONG_NAMED_INTEGER */, ca_cfg_result /* IMPORTED_SHORT_NAMED_INTEGER */, ConfigAction_ca_cfg_user_login /* IMPORTED_LONG_NAMED_INTEGER */, ca_cfg_user_login /* IMPORTED_SHORT_NAMED_INTEGER */, ConfigAction_ca_cfg_user_logout /* IMPORTED_LONG_NAMED_INTEGER */, ca_cfg_user_logout /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ConfigAction, _encode_ConfigAction } from "../GDT/ConfigAction.ta.mjs";
 import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
-// export { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -132,7 +130,7 @@ function _decode_ConfigMessage (el: _Element): ConfigMessage {
     let action!: ConfigAction;
     let payload: OPTIONAL<OCTET_STRING>;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "action": (_el: _Element): void => { action = _decode_ConfigAction(_el); },
         "payload": (_el: _Element): void => { payload = $._decodeOctetString(_el); },
@@ -165,7 +163,7 @@ let _cached_encoder_for_ConfigMessage: $.ASN1Encoder<ConfigMessage> | null = nul
  */
 export
 function _encode_ConfigMessage (value: ConfigMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConfigMessage) { _cached_encoder_for_ConfigMessage = function (value: ConfigMessage, elGetter: $.ASN1Encoder<ConfigMessage>): _Element {
+    if (!_cached_encoder_for_ConfigMessage) { _cached_encoder_for_ConfigMessage = function (value: ConfigMessage): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ConfigAction(value.action, $.BER),

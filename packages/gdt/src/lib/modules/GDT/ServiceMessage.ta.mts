@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceId, _decode_ServiceId, _encode_ServiceId } from "../GDT/ServiceId.ta.mjs";
-// export { ServiceId, ServiceId_sid_stp_routing /* IMPORTED_LONG_NAMED_INTEGER */, sid_stp_routing /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceId_sid_sgn_forward /* IMPORTED_LONG_NAMED_INTEGER */, sid_sgn_forward /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceId_sid_fgn_filtering /* IMPORTED_LONG_NAMED_INTEGER */, sid_fgn_filtering /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceId_sid_security /* IMPORTED_LONG_NAMED_INTEGER */, sid_security /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceId_sid_pdn_filtering /* IMPORTED_LONG_NAMED_INTEGER */, sid_pdn_filtering /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceId_sid_sysagent /* IMPORTED_LONG_NAMED_INTEGER */, sid_sysagent /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ServiceId, _encode_ServiceId } from "../GDT/ServiceId.ta.mjs";
 import { ServiceAction, _decode_ServiceAction, _encode_ServiceAction } from "../GDT/ServiceAction.ta.mjs";
-// export { ServiceAction, ServiceAction_srvca_request /* IMPORTED_LONG_NAMED_INTEGER */, srvca_request /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceAction_srvca_result /* IMPORTED_LONG_NAMED_INTEGER */, srvca_result /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceAction_srvca_default /* IMPORTED_LONG_NAMED_INTEGER */, srvca_default /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceAction_srvca_na /* IMPORTED_LONG_NAMED_INTEGER */, srvca_na /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ServiceAction, _encode_ServiceAction } from "../GDT/ServiceAction.ta.mjs";
 import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
-// export { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -133,7 +130,7 @@ function _decode_ServiceMessage (el: _Element): ServiceMessage {
     let service_id!: ServiceId;
     let service_action!: ServiceAction;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "service-id": (_el: _Element): void => { service_id = _decode_ServiceId(_el); },
         "service-action": (_el: _Element): void => { service_action = _decode_ServiceAction(_el); },
@@ -166,7 +163,7 @@ let _cached_encoder_for_ServiceMessage: $.ASN1Encoder<ServiceMessage> | null = n
  */
 export
 function _encode_ServiceMessage (value: ServiceMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceMessage) { _cached_encoder_for_ServiceMessage = function (value: ServiceMessage, elGetter: $.ASN1Encoder<ServiceMessage>): _Element {
+    if (!_cached_encoder_for_ServiceMessage) { _cached_encoder_for_ServiceMessage = function (value: ServiceMessage): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ServiceId(value.service_id, $.BER),

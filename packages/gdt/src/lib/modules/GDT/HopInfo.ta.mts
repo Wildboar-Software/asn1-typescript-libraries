@@ -119,15 +119,15 @@ export
 function _decode_HopInfo (el: _Element): HopInfo {
     if (!_cached_decoder_for_HopInfo) { _cached_decoder_for_HopInfo = function (el: _Element): HopInfo {
     const sequence: _Element[] = el.sequence;
-    if (sequence.length < 2) {
+    const currentHopElement: _Element | undefined = sequence[0];
+    const maxHopsElement: _Element | undefined = sequence[1];
+    if (sequence.length < 2 || currentHopElement === undefined || maxHopsElement === undefined) {
         throw new _ConstructionError("HopInfo contained only " + sequence.length.toString() + " elements.");
     }
-    sequence[0].name = "current-hop";
-    sequence[1].name = "max-hops";
-    let current_hop!: INTEGER;
-    let max_hops!: INTEGER;
-    current_hop = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    max_hops = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    currentHopElement.name = "current-hop";
+    maxHopsElement.name = "max-hops";
+    const current_hop: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(currentHopElement);
+    const max_hops: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(maxHopsElement);
     return new HopInfo(
         current_hop,
         max_hops,
@@ -148,7 +148,7 @@ let _cached_encoder_for_HopInfo: $.ASN1Encoder<HopInfo> | null = null;
  */
 export
 function _encode_HopInfo (value: HopInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HopInfo) { _cached_encoder_for_HopInfo = function (value: HopInfo, elGetter: $.ASN1Encoder<HopInfo>): _Element {
+    if (!_cached_encoder_for_HopInfo) { _cached_encoder_for_HopInfo = function (value: HopInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.current_hop, $.BER),

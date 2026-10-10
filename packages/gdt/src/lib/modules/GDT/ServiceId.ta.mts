@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -122,35 +121,8 @@ const ServiceId_sid_sysagent: ServiceId = 47; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const sid_sysagent: ServiceId = ServiceId_sid_sysagent; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ServiceId: $.ASN1Decoder<ServiceId> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceId
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceId (el: _Element): ServiceId {
-    if (!_cached_decoder_for_ServiceId) { _cached_decoder_for_ServiceId = $._decodeInteger; }
-    return _cached_decoder_for_ServiceId(el);
-}
-
-let _cached_encoder_for_ServiceId: $.ASN1Encoder<ServiceId> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceId into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceId, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceId (value: ServiceId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceId) { _cached_encoder_for_ServiceId = $._encodeInteger; }
-    return _cached_encoder_for_ServiceId(value, elGetter);
-}
+export const _decode_ServiceId = $._decodeInteger;
+export const _encode_ServiceId = $._encodeInteger;
 
 
 /* eslint-enable */

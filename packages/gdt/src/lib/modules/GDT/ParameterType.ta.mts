@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -3812,35 +3811,8 @@ const ParameterType_pt_m3ua_asp_label: ParameterType = 233; /* LONG_NAMED_INTEGE
  */
 export
 const pt_m3ua_asp_label: ParameterType = ParameterType_pt_m3ua_asp_label; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ParameterType: $.ASN1Decoder<ParameterType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ParameterType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ParameterType (el: _Element): ParameterType {
-    if (!_cached_decoder_for_ParameterType) { _cached_decoder_for_ParameterType = $._decodeInteger; }
-    return _cached_decoder_for_ParameterType(el);
-}
-
-let _cached_encoder_for_ParameterType: $.ASN1Encoder<ParameterType> | null = null;
-
-/**
- * @summary Encodes a(n) ParameterType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ParameterType, encoded as an ASN.1 Element.
- */
-export
-function _encode_ParameterType (value: ParameterType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterType) { _cached_encoder_for_ParameterType = $._encodeInteger; }
-    return _cached_encoder_for_ParameterType(value, elGetter);
-}
+export const _decode_ParameterType = $._decodeInteger;
+export const _encode_ParameterType = $._encodeInteger;
 
 
 /* eslint-enable */

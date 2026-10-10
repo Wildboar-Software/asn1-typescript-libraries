@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PayloadType, _decode_PayloadType, _encode_PayloadType } from "../GDT/PayloadType.ta.mjs";
-// export { PayloadType, PayloadType_dmt_unknown /* IMPORTED_LONG_NAMED_INTEGER */, dmt_unknown /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_r14p /* IMPORTED_LONG_NAMED_INTEGER */, dmt_r14p /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_layer2 /* IMPORTED_LONG_NAMED_INTEGER */, dmt_layer2 /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_ip /* IMPORTED_LONG_NAMED_INTEGER */, dmt_ip /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_sctp /* IMPORTED_LONG_NAMED_INTEGER */, dmt_sctp /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_tcp /* IMPORTED_LONG_NAMED_INTEGER */, dmt_tcp /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_udp /* IMPORTED_LONG_NAMED_INTEGER */, dmt_udp /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_m3ua /* IMPORTED_LONG_NAMED_INTEGER */, dmt_m3ua /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_m2ua /* IMPORTED_LONG_NAMED_INTEGER */, dmt_m2ua /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_mtp3 /* IMPORTED_LONG_NAMED_INTEGER */, dmt_mtp3 /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_isup /* IMPORTED_LONG_NAMED_INTEGER */, dmt_isup /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_h248 /* IMPORTED_LONG_NAMED_INTEGER */, dmt_h248 /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_sccp /* IMPORTED_LONG_NAMED_INTEGER */, dmt_sccp /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_smstpdu /* IMPORTED_LONG_NAMED_INTEGER */, dmt_smstpdu /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_smpp /* IMPORTED_LONG_NAMED_INTEGER */, dmt_smpp /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_tcap /* IMPORTED_LONG_NAMED_INTEGER */, dmt_tcap /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_rtp /* IMPORTED_LONG_NAMED_INTEGER */, dmt_rtp /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_sip /* IMPORTED_LONG_NAMED_INTEGER */, dmt_sip /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_pop3 /* IMPORTED_LONG_NAMED_INTEGER */, dmt_pop3 /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_imap /* IMPORTED_LONG_NAMED_INTEGER */, dmt_imap /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_http /* IMPORTED_LONG_NAMED_INTEGER */, dmt_http /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_radius /* IMPORTED_LONG_NAMED_INTEGER */, dmt_radius /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_dhcp /* IMPORTED_LONG_NAMED_INTEGER */, dmt_dhcp /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_smtp /* IMPORTED_LONG_NAMED_INTEGER */, dmt_smtp /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_m2pa /* IMPORTED_LONG_NAMED_INTEGER */, dmt_m2pa /* IMPORTED_SHORT_NAMED_INTEGER */, PayloadType_dmt_mtp2 /* IMPORTED_LONG_NAMED_INTEGER */, dmt_mtp2 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_PayloadType, _encode_PayloadType } from "../GDT/PayloadType.ta.mjs";
 import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
-// export { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -132,7 +130,7 @@ function _decode_PacketFwdMessage (el: _Element): PacketFwdMessage {
     let payload_type!: PayloadType;
     let payload: OPTIONAL<OCTET_STRING>;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "payload-type": (_el: _Element): void => { payload_type = _decode_PayloadType(_el); },
         "payload": (_el: _Element): void => { payload = $._decodeOctetString(_el); },
@@ -165,7 +163,7 @@ let _cached_encoder_for_PacketFwdMessage: $.ASN1Encoder<PacketFwdMessage> | null
  */
 export
 function _encode_PacketFwdMessage (value: PacketFwdMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PacketFwdMessage) { _cached_encoder_for_PacketFwdMessage = function (value: PacketFwdMessage, elGetter: $.ASN1Encoder<PacketFwdMessage>): _Element {
+    if (!_cached_encoder_for_PacketFwdMessage) { _cached_encoder_for_PacketFwdMessage = function (value: PacketFwdMessage): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_PayloadType(value.payload_type, $.BER),
