@@ -120,7 +120,7 @@ function _decode_AuthMessage (el: _Element): AuthMessage {
     if (!_cached_decoder_for_AuthMessage) { _cached_decoder_for_AuthMessage = function (el: _Element): AuthMessage {
     let auth_action!: AuthAction;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "auth-action": (_el: _Element): void => { auth_action = _decode_AuthAction(_el); },
         "params": (_el: _Element): void => { params = _decode_Parameters(_el); }

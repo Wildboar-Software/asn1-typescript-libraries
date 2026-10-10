@@ -120,7 +120,7 @@ function _decode_EndPointDescriptor (el: _Element): EndPointDescriptor {
     if (!_cached_decoder_for_EndPointDescriptor) { _cached_decoder_for_EndPointDescriptor = function (el: _Element): EndPointDescriptor {
     let type_!: IA5String;
     let id: OPTIONAL<IA5String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "type": (_el: _Element): void => { type_ = $._decode_implicit<IA5String>(() => $._decodeIA5String)(_el); },
         "id": (_el: _Element): void => { id = $._decode_implicit<IA5String>(() => $._decodeIA5String)(_el); }

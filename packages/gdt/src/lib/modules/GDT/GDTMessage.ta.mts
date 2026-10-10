@@ -120,7 +120,7 @@ function _decode_GDTMessage (el: _Element): GDTMessage {
     if (!_cached_decoder_for_GDTMessage) { _cached_decoder_for_GDTMessage = function (el: _Element): GDTMessage {
     let header!: Header;
     let body: OPTIONAL<Body>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "header": (_el: _Element): void => { header = _decode_Header(_el); },
         "body": (_el: _Element): void => { body = _decode_Body(_el); }

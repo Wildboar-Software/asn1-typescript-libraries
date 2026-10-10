@@ -132,7 +132,7 @@ function _decode_EncryptionInfo (el: _Element): EncryptionInfo {
     if (!_cached_decoder_for_EncryptionInfo) { _cached_decoder_for_EncryptionInfo = function (el: _Element): EncryptionInfo {
     let enc_type!: OCTET_STRING;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "enc-type": (_el: _Element): void => { enc_type = $._decodeOctetString(_el); },
         "params": (_el: _Element): void => { params = _decode_Parameters(_el); }

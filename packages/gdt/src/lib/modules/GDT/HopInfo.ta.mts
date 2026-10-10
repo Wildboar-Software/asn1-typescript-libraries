@@ -126,10 +126,8 @@ function _decode_HopInfo (el: _Element): HopInfo {
     }
     currentHopElement.name = "current-hop";
     maxHopsElement.name = "max-hops";
-    let current_hop!: INTEGER;
-    let max_hops!: INTEGER;
-    current_hop = $._decode_implicit<INTEGER>(() => $._decodeInteger)(currentHopElement);
-    max_hops = $._decode_implicit<INTEGER>(() => $._decodeInteger)(maxHopsElement);
+    const current_hop: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(currentHopElement);
+    const max_hops: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(maxHopsElement);
     return new HopInfo(
         current_hop,
         max_hops,

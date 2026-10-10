@@ -120,7 +120,7 @@ function _decode_FilterMessage (el: _Element): FilterMessage {
     if (!_cached_decoder_for_FilterMessage) { _cached_decoder_for_FilterMessage = function (el: _Element): FilterMessage {
     let filter_action!: FilterAction;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "filter-action": (_el: _Element): void => { filter_action = _decode_FilterAction(_el); },
         "params": (_el: _Element): void => { params = _decode_Parameters(_el); }

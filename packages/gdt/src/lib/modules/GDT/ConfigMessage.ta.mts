@@ -130,7 +130,7 @@ function _decode_ConfigMessage (el: _Element): ConfigMessage {
     let action!: ConfigAction;
     let payload: OPTIONAL<OCTET_STRING>;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "action": (_el: _Element): void => { action = _decode_ConfigAction(_el); },
         "payload": (_el: _Element): void => { payload = $._decodeOctetString(_el); },

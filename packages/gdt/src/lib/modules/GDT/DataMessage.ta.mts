@@ -130,7 +130,7 @@ function _decode_DataMessage (el: _Element): DataMessage {
     let payload_type!: PayloadType;
     let payload: OPTIONAL<OCTET_STRING>;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "payload-type": (_el: _Element): void => { payload_type = _decode_PayloadType(_el); },
         "payload": (_el: _Element): void => { payload = $._decodeOctetString(_el); },

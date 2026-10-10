@@ -130,7 +130,7 @@ function _decode_ServiceMessage (el: _Element): ServiceMessage {
     let service_id!: ServiceId;
     let service_action!: ServiceAction;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "service-id": (_el: _Element): void => { service_id = _decode_ServiceId(_el); },
         "service-action": (_el: _Element): void => { service_action = _decode_ServiceAction(_el); },

@@ -120,7 +120,7 @@ function _decode_Parameter (el: _Element): Parameter {
     if (!_cached_decoder_for_Parameter) { _cached_decoder_for_Parameter = function (el: _Element): Parameter {
     let id!: ParameterType;
     let value: OPTIONAL<OCTET_STRING[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "id": (_el: _Element): void => { id = _decode_ParameterType(_el); },
         "value": (_el: _Element): void => { value = $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString)(_el); }

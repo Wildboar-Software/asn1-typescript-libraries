@@ -120,7 +120,7 @@ function _decode_RoutingMessage (el: _Element): RoutingMessage {
     if (!_cached_decoder_for_RoutingMessage) { _cached_decoder_for_RoutingMessage = function (el: _Element): RoutingMessage {
     let routing_action!: RoutingAction;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "routing-action": (_el: _Element): void => { routing_action = _decode_RoutingAction(_el); },
         "params": (_el: _Element): void => { params = _decode_Parameters(_el); }

@@ -130,7 +130,7 @@ function _decode_NotifyMessage (el: _Element): NotifyMessage {
     let message_type!: NotifyMessageType;
     let message: OPTIONAL<OCTET_STRING>;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "message-type": (_el: _Element): void => { message_type = _decode_NotifyMessageType(_el); },
         "message": (_el: _Element): void => { message = $._decodeOctetString(_el); },

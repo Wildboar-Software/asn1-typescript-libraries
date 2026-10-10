@@ -120,7 +120,7 @@ function _decode_StatsMessage (el: _Element): StatsMessage {
     if (!_cached_decoder_for_StatsMessage) { _cached_decoder_for_StatsMessage = function (el: _Element): StatsMessage {
     let stats_action!: StatsAction;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "stats-action": (_el: _Element): void => { stats_action = _decode_StatsAction(_el); },
         "params": (_el: _Element): void => { params = _decode_Parameters(_el); }

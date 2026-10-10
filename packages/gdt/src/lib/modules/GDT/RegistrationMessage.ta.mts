@@ -120,7 +120,7 @@ function _decode_RegistrationMessage (el: _Element): RegistrationMessage {
     if (!_cached_decoder_for_RegistrationMessage) { _cached_decoder_for_RegistrationMessage = function (el: _Element): RegistrationMessage {
     let reg_action!: RegistrationAction;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "reg-action": (_el: _Element): void => { reg_action = _decode_RegistrationAction(_el); },
         "params": (_el: _Element): void => { params = _decode_Parameters(_el); }

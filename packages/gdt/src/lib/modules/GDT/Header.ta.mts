@@ -188,7 +188,7 @@ function _decode_Header (el: _Element): Header {
     let enc_info: OPTIONAL<EncryptionInfo>;
     let hop_info: OPTIONAL<HopInfo>;
     let status: OPTIONAL<ErrorCode>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "version": (_el: _Element): void => { version = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "source": (_el: _Element): void => { source = $._decode_implicit<EndPointDescriptor>(() => _decode_EndPointDescriptor)(_el); },

@@ -130,7 +130,7 @@ function _decode_StateMessage (el: _Element): StateMessage {
     let stmch_id!: OCTET_STRING;
     let state_action!: StateAction;
     let params: OPTIONAL<Parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "stmch-id": (_el: _Element): void => { stmch_id = $._decodeOctetString(_el); },
         "state-action": (_el: _Element): void => { state_action = _decode_StateAction(_el); },
