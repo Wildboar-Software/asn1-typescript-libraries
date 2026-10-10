@@ -28,12 +28,12 @@
     "main": "./src/index.mjs",
     "exports": {
         ".": "./src/index.mjs",
-        "./KerberosV5-PK-INIT-SPEC": "./src/lib/modules/KerberosV5-PK-INIT-SPEC/index.mjs",
-        "./PKIX1Explicit88": "./src/lib/modules/PKIX1Explicit88/index.mjs"
+        "./KerberosV5-PK-INIT-SPEC": "./src/lib/modules/KerberosV5-PK-INIT-SPEC/index.mjs"
     },
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/cms": "npm:@jsr/wildboar__cms@^2.0.2",
         "@wildboar/kerberos5": "npm:@jsr/wildboar__kerberos5@^2.0.2",
-        "@wildboar/pkcs": "npm:@jsr/wildboar__pkcs@^2.0.3"
+        "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@^2.0.4"
     }
 }

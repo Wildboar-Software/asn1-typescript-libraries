@@ -4,8 +4,7 @@
   "license": "MIT",
   "exports": {
     ".": "./src/index.mts",
-    "./KerberosV5-PK-INIT-SPEC": "./src/lib/modules/KerberosV5-PK-INIT-SPEC/index.mts",
-    "./PKIX1Explicit88": "./src/lib/modules/PKIX1Explicit88/index.mts"
+    "./KerberosV5-PK-INIT-SPEC": "./src/lib/modules/KerberosV5-PK-INIT-SPEC/index.mts"
   },
   "publish": {
     "include": [

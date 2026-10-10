@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DHRepInfo, _decode_DHRepInfo, _encode_DHRepInfo } from "../KerberosV5-PK-INIT-SPEC/DHRepInfo.ta.mjs";
-import { ContentInfo, _decode_ContentInfo, _encode_ContentInfo } from "../CryptographicMessageSyntax/ContentInfo.ta.mjs";
+import { ContentInfo, _decode_ContentInfo, _encode_ContentInfo } from "@wildboar/cms";
 
 
 /**

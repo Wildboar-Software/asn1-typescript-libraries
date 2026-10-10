@@ -1,7 +1,9 @@
 # PKINIT
 
 ASN.1 data structures for Public Key Cryptography for Initial Authentication
-in Kerberos (PKINIT).
+in Kerberos (PKINIT). This package exports `KerberosV5-PK-INIT-SPEC`.
+Kerberos types come from `@wildboar/kerberos5`, PKIX types from
+`@wildboar/pki-stub`, and CMS types from `@wildboar/cms`.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)

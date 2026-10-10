@@ -8,7 +8,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "../KerberosV5Spec2/KerberosTime.ta.mjs";
+import { KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "@wildboar/kerberos5";
 import { PAChecksum2, _decode_PAChecksum2, _encode_PAChecksum2 } from "../KerberosV5-PK-INIT-SPEC/PAChecksum2.ta.mjs";
 
 

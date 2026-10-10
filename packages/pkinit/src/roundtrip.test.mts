@@ -1,7 +1,6 @@
 import { ObjectIdentifier } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AlgorithmIdentifier } from "./lib/modules/PKIX1Explicit88/AlgorithmIdentifier.ta.mjs";
-import { SubjectPublicKeyInfo } from "./lib/modules/PKIX1Explicit88/SubjectPublicKeyInfo.ta.mjs";
+import { AlgorithmIdentifier, SubjectPublicKeyInfo } from "@wildboar/pki-stub";
 import {
     AuthPack,
     _decode_AuthPack,
