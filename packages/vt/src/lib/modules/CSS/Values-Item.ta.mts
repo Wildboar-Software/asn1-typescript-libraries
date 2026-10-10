@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ParameterValues, _decode_ParameterValues, _encode_ParameterValues } from "../CSS/ParameterValues.ta.mjs";
-// export { ParameterValues, _decode_ParameterValues, _encode_ParameterValues } from "../CSS/ParameterValues.ta.mjs";
 
 
 /**

@@ -1,9 +1,9 @@
 
 
 import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs";
-import encodeLDAPOID from "../lib/encodeLDAPOID";
+import encodeLDAPOID from "../lib/encodeLDAPOID.mjs";
 import { ObjectIdentifier } from "@wildboar/asn1";
-import destringifyFilter from "../lib/destringifiers/Filter";
+import destringifyFilter from "../lib/filterFromString.mjs";
 
 // Filter ::= CHOICE {
 //     and              [0]  SET SIZE (1..MAX) OF filter Filter,

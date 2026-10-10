@@ -64,14 +64,14 @@ done
 
 ## To Do
 
+- [ ] `sv` package: implement the framing that goes around this too. It's a simple protocol.
+- [ ] Prune `nist-csor`, `lnpdqp`, and `gdt`: these modules are stupid. Get rid of them.
 - [ ] Publish NPM packages with Provenance
 - [ ] Refactor `XSD` into a separate module
 - [ ] Documentation
-- [ ] MMS
 - [ ] SNMPv3 (No formal module.)
 - [ ] F515 (No artifact for this...)
 - [ ] CAP (I already have code out there for this.)
-- [ ] [CSTA](https://www.ecma-international.org/wp-content/uploads/ECMA-285_4th_edition_december_2011.pdf)
 - [ ] Prettify
 - [ ] Implement XER for CINF
 - [ ] Implement XER for RINF

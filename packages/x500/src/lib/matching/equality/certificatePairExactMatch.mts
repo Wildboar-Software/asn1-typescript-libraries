@@ -1,6 +1,7 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import compareName from "../../comparators/compareName.mjs";
+import { readDecoded } from "../readValue.mjs";
+import { compareName } from "@wildboar/dn";
 import {
     CertificatePairExactAssertion,
     _decode_CertificatePairExactAssertion,
@@ -22,30 +23,58 @@ import { Buffer } from "node:buffer";
  * be present.
  */
 export
-const certificatePairExactMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function certificatePairExactMatch (
+    assertion: ASN1Element | CertificatePairExactAssertion,
+    value: ASN1Element | CertificatePair,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean => {
-    const a: CertificatePairExactAssertion = _decode_CertificatePairExactAssertion(assertion);
-    const v: CertificatePair = _decode_CertificatePair(value);
-    {
+): boolean {
+    return certificatePairExactMatchTyped(
+        readDecoded(assertion, _decode_CertificatePairExactAssertion),
+        readDecoded(value, _decode_CertificatePair),
+        getEqualityMatcher,
+    );
+}
+
+/**
+ * `certificatePairExactMatch` on decoded values.
+ *
+ * @param a Presented exact assertion.
+ * @param v Stored certificate pair.
+ * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @returns `true` when every present component matches.
+ */
+export
+function certificatePairExactMatchTyped (
+    a: CertificatePairExactAssertion,
+    v: CertificatePair,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
+    const issuedTo = a.issuedToThisCAAssertion;
+    const issuedBy = a.issuedByThisCAAssertion;
+    if (!issuedTo && !issuedBy) {
+        return false;
+    }
+    if (issuedTo) {
         const cert = v.issuedToThisCA;
-        const assertedCert = a.issuedToThisCAAssertion;
-        if (Buffer.compare(cert.toBeSigned.serialNumber, assertedCert.serialNumber)) {
+        if (!cert) {
             return false;
         }
-        if (!compareName(cert.toBeSigned.issuer, assertedCert.issuer, getEqualityMatcher)) {
+        if (Buffer.compare(cert.toBeSigned.serialNumber, issuedTo.serialNumber)) {
+            return false;
+        }
+        if (!compareName(cert.toBeSigned.issuer, issuedTo.issuer, getEqualityMatcher)) {
             return false;
         }
     }
-    {
+    if (issuedBy) {
         const cert = v.issuedByThisCA;
-        const assertedCert = a.issuedByThisCAAssertion;
-        if (Buffer.compare(cert.toBeSigned.serialNumber, assertedCert.serialNumber)) {
+        if (!cert) {
             return false;
         }
-        if (!compareName(cert.toBeSigned.issuer, assertedCert.issuer, getEqualityMatcher)) {
+        if (Buffer.compare(cert.toBeSigned.serialNumber, issuedBy.serialNumber)) {
+            return false;
+        }
+        if (!compareName(cert.toBeSigned.issuer, issuedBy.issuer, getEqualityMatcher)) {
             return false;
         }
     }

@@ -302,7 +302,8 @@ convention and the scope MUST be the project name (what Nx calls it).
    file to more efficient aliases. Definitely do this for anything that is
    an alias to a universal ASN.1 type, but I am not sure if this can be done
    safely for other types. If this causes problems, just undo these changes
-   or skip them.
+   or skip them. Check the output of this for "slow types" (as documented
+   [here](https://jsr.io/docs/about-slow-types)).
 5. All of the symbols, decoders and encoders for types, named integers, bits,
    and enum variants, "component specs," and anything else produced by the ASN.1
    compilation needs to be exported from `src/index.mts`. If there are name
@@ -379,11 +380,12 @@ convention and the scope MUST be the project name (what Nx calls it).
     before. Add an "AI Usage Statement" section clarifying that this package
     was onboarded from the raw compiler outputs using AI, and name the model
     name and date.
-15. Try to tighten up the Typescript in `tsconfig.json` for the project.
+15. Tighten up the Typescript in `tsconfig.json` for the project.
     Enforce `strictNullChecks` and try to fix any obvious errors. If you
     encounter an error that does not have an obvious resolution, just
     leave `strictNullChecks` off. Add other stricter configs and see if you
-    can fix those without enormous code changes.
+    can fix those without enormous code changes. Look at other projects in
+    this repo if you need examples.
 16. Check for slow types using `deno lint --rules-include=no-slow-types`.
     Generally, these can be fixed by simply adding a return type to a function.
     Sometimes constants need a typing that is easy and obvious to add.

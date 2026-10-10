@@ -116,6 +116,7 @@ function startOfFirstX520WeekOfMonth (year: number, month: number): Date {
     return startOfSundayBasedWeek(new Date(year, month - 1, 4));
 }
 
+export
 function startOfFirstX520WeekOfYear (year: number): Date {
     return startOfSundayBasedWeek(new Date(year, 0, 4));
 }

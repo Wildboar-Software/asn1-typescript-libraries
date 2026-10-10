@@ -14,9 +14,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFramework/Path.ta.mjs";
-// export { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFramework/Path.ta.mjs";
 import { SecurityFileOrObject, _decode_SecurityFileOrObject, _encode_SecurityFileOrObject } from "../CryptographicInformationFramework/SecurityFileOrObject.ta.mjs";
-// export { SecurityFileOrObject, _decode_SecurityFileOrObject, _encode_SecurityFileOrObject } from "../CryptographicInformationFramework/SecurityFileOrObject.ta.mjs";
 
 
 /**

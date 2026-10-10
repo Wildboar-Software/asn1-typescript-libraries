@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RepertoireFontIdent_alternatives, _decode_RepertoireFontIdent_alternatives, _encode_RepertoireFontIdent_alternatives } from "../CDS/RepertoireFontIdent-alternatives.ta.mjs";
-// export { RepertoireFontIdent_alternatives, _decode_RepertoireFontIdent_alternatives, _encode_RepertoireFontIdent_alternatives } from "../CDS/RepertoireFontIdent-alternatives.ta.mjs";
 
 
 /**

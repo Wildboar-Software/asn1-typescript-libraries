@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FontAssignment_value, _decode_FontAssignment_value, _encode_FontAssignment_value } from "../CDS/FontAssignment-value.ta.mjs";
-// export { FontAssignment_value, _decode_FontAssignment_value, _encode_FontAssignment_value } from "../CDS/FontAssignment-value.ta.mjs";
 
 
 /**

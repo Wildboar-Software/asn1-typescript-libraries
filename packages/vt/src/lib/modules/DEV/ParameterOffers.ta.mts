@@ -13,27 +13,16 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_AccessRuleOffer, _encode_AccessRuleOffer, type AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
-// export { AccessRuleOffer, AccessRuleOffer_wavar /* IMPORTED_LONG_NAMED_BIT */, wavar /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waci /* IMPORTED_LONG_NAMED_BIT */, waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_waca /* IMPORTED_LONG_NAMED_BIT */, waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_nsac /* IMPORTED_LONG_NAMED_BIT */, nsac /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waci /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waci /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_wavar_and_waca /* IMPORTED_LONG_NAMED_BIT */, wavar_and_waca /* IMPORTED_SHORT_NAMED_BIT */, AccessRuleOffer_no_access /* IMPORTED_LONG_NAMED_BIT */, no_access /* IMPORTED_SHORT_NAMED_BIT */, _decode_AccessRuleOffer, _encode_AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
 import { ParameterOffers_defaultCOPriority, _decode_ParameterOffers_defaultCOPriority, _encode_ParameterOffers_defaultCOPriority } from "../DEV/ParameterOffers-defaultCOPriority.ta.mjs";
-// export { ParameterOffers_defaultCOPriority, ParameterOffers_defaultCOPriority_normal /* IMPORTED_LONG_NAMED_BIT */, normal /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_defaultCOPriority_high /* IMPORTED_LONG_NAMED_BIT */, high /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_defaultCOPriority_urgent /* IMPORTED_LONG_NAMED_BIT */, urgent /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_defaultCOPriority, _encode_ParameterOffers_defaultCOPriority } from "../DEV/ParameterOffers-defaultCOPriority.ta.mjs";
 import { _decode_CompoundRepertoireOffer, _encode_CompoundRepertoireOffer, CompoundRepertoireOffer } from "../CDS/CompoundRepertoireOffer.ta.mjs";
-// export { CompoundRepertoireOffer, _decode_CompoundRepertoireOffer, _encode_CompoundRepertoireOffer } from "../CDS/CompoundRepertoireOffer.ta.mjs";
 import { _decode_CompoundEmphasisOffer, _encode_CompoundEmphasisOffer, type CompoundEmphasisOffer } from "../CDS/CompoundEmphasisOffer.ta.mjs";
-// export { CompoundEmphasisOffer, _decode_CompoundEmphasisOffer, _encode_CompoundEmphasisOffer } from "../CDS/CompoundEmphasisOffer.ta.mjs";
 import { _decode_CompoundColourOffer, _encode_CompoundColourOffer, CompoundColourOffer } from "../CDS/CompoundColourOffer.ta.mjs";
-// export { CompoundColourOffer, _decode_CompoundColourOffer, _encode_CompoundColourOffer } from "../CDS/CompoundColourOffer.ta.mjs";
 import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
-// export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 import { ParameterOffers_terminationEventList_Item_Item, _decode_ParameterOffers_terminationEventList_Item_Item, _encode_ParameterOffers_terminationEventList_Item_Item } from "../DEV/ParameterOffers-terminationEventList-Item-Item.ta.mjs";
-// export { ParameterOffers_terminationEventList_Item_Item, _decode_ParameterOffers_terminationEventList_Item_Item, _encode_ParameterOffers_terminationEventList_Item_Item } from "../DEV/ParameterOffers-terminationEventList-Item-Item.ta.mjs";
 import { ParameterOffers_terminationLength, _decode_ParameterOffers_terminationLength, _encode_ParameterOffers_terminationLength } from "../DEV/ParameterOffers-terminationLength.ta.mjs";
-// export { ParameterOffers_terminationLength, _decode_ParameterOffers_terminationLength, _encode_ParameterOffers_terminationLength } from "../DEV/ParameterOffers-terminationLength.ta.mjs";
 import { ParameterOffers_terminationTimeout, _decode_ParameterOffers_terminationTimeout, _encode_ParameterOffers_terminationTimeout } from "../DEV/ParameterOffers-terminationTimeout.ta.mjs";
-// export { ParameterOffers_terminationTimeout, _decode_ParameterOffers_terminationTimeout, _encode_ParameterOffers_terminationTimeout } from "../DEV/ParameterOffers-terminationTimeout.ta.mjs";
 import { ParameterOffers_defaultCOtrigger, _decode_ParameterOffers_defaultCOtrigger, _encode_ParameterOffers_defaultCOtrigger } from "../DEV/ParameterOffers-defaultCOtrigger.ta.mjs";
-// export { ParameterOffers_defaultCOtrigger, ParameterOffers_defaultCOtrigger_notSelected /* IMPORTED_LONG_NAMED_BIT */, notSelected /* IMPORTED_SHORT_NAMED_BIT */, ParameterOffers_defaultCOtrigger_selected /* IMPORTED_LONG_NAMED_BIT */, selected /* IMPORTED_SHORT_NAMED_BIT */, _decode_ParameterOffers_defaultCOtrigger, _encode_ParameterOffers_defaultCOtrigger } from "../DEV/ParameterOffers-defaultCOtrigger.ta.mjs";
 import { ParameterOffers_defaultCOinitialValue_Item, _decode_ParameterOffers_defaultCOinitialValue_Item, _encode_ParameterOffers_defaultCOinitialValue_Item } from "../DEV/ParameterOffers-defaultCOinitialValue-Item.ta.mjs";
-// export { ParameterOffers_defaultCOinitialValue_Item, _decode_ParameterOffers_defaultCOinitialValue_Item, _encode_ParameterOffers_defaultCOinitialValue_Item } from "../DEV/ParameterOffers-defaultCOinitialValue-Item.ta.mjs";
 
 
 /**

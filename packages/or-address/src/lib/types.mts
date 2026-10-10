@@ -40,15 +40,15 @@ export type PersonalNameJSON = {
     /**
      * The given name of the personal name
      */
-    "given-name"?: string;
+    "given-name"?: string | undefined;
     /**
      * The initials of the personal name
      */
-    "initials"?: string;
+    "initials"?: string | undefined;
     /**
      * The generation qualifier of the personal name
      */
-    "generation-qualifier"?: string;
+    "generation-qualifier"?: string | undefined;
 };
 
 /**
@@ -63,39 +63,39 @@ export type BuiltInStandardAttributesJSON = {
      * You can tell one from the other: the X.121 DCC is all numeric.
      * The ISO 3166-1 alpha-2 code is two letters.
      */
-    "country-name"?: string;
+    "country-name"?: string | undefined;
     /**
      * The administration domain name of the built in standard attributes
      */
-    "administration-domain-name"?: string;
+    "administration-domain-name"?: string | undefined;
     /**
      * The network address of the built in standard attributes
      */
-    "network-address"?: string;
+    "network-address"?: string | undefined;
     /**
      * The terminal identifier of the built in standard attributes
      */
-    "terminal-identifier"?: string;
+    "terminal-identifier"?: string | undefined;
     /**
      * The private domain name of the built in standard attributes
      */
-    "private-domain-name"?: string;
+    "private-domain-name"?: string | undefined;
     /**
      * The organization name of the built in standard attributes
      */
-    "organization-name"?: string;
+    "organization-name"?: string | undefined;
     /**
      * The numeric user identifier of the built in standard attributes
      */
-    "numeric-user-identifier"?: string;
+    "numeric-user-identifier"?: string | undefined;
     /**
      * The personal name of the built in standard attributes
      */
-    "personal-name"?: PersonalNameJSON;
+    "personal-name"?: PersonalNameJSON | undefined;
     /**
      * The organizational unit names of the built in standard attributes
      */
-    "organizational-unit-names"?: string[];
+    "organizational-unit-names"?: string[] | undefined;
 };
 
 /**
@@ -137,11 +137,11 @@ export type ORAddressJSON = {
     /**
      * The built in domain defined attributes of the O/R address
      */
-    "built-in-domain-defined-attributes"?: DomainDefinedAttributeJSON[];
+    "built-in-domain-defined-attributes"?: DomainDefinedAttributeJSON[] | undefined;
     /**
      * The extension attributes of the O/R address
      */
-    "extension-attributes"?: ExtensionAttributeJSON[];
+    "extension-attributes"?: ExtensionAttributeJSON[] | undefined;
 };
 
 /**
@@ -153,24 +153,24 @@ export type ORAddressAttributes = {
     /**
      * Country, which is either an ISO 3166-1 alpha-2 code or an X.121 DCC code.
      */
-    country?: string;
+    country?: string | undefined;
     /**
      * Administration domain name, which is always a printable string.
      * (A numeric string is always a printable string.)
      */
-    administration_domain_name?: string;
+    administration_domain_name?: string | undefined;
     /**
      * Network address for X.121 DCC.
      */
-    network_address?: string;
+    network_address?: string | undefined;
     /**
      * Numeric Terminal identifier.
      */
-    terminal_identifier?: string;
+    terminal_identifier?: string | undefined;
     /**
      * Private domain name (PRMD).
      */
-    private_domain_name?: string;
+    private_domain_name?: string | undefined;
     /**
      * Organization name.
      */
@@ -178,7 +178,7 @@ export type ORAddressAttributes = {
     /**
      * Numeric user identifier.
      */
-    numeric_user_identifier?: string;
+    numeric_user_identifier?: string | undefined;
     /**
      * Personal name.
      */
@@ -256,7 +256,7 @@ export type ORAddressAttributes = {
     /**
      * ISDN addresses (telephone numbers).
      */
-    isdn_addresses: { number: string; subaddress?: string }[];
+    isdn_addresses: { number: string; subaddress?: string | undefined }[];
     /**
      * Presentation addresses.
      */

@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Named_Variable_List_instance_definition_details, _decode_Named_Variable_List_instance_definition_details, _encode_Named_Variable_List_instance_definition_details } from "../MMS-SCI-Module-1/Named-Variable-List-instance-definition-details.ta.mjs";
-// export { Named_Variable_List_instance_definition_details, _decode_Named_Variable_List_instance_definition_details, _encode_Named_Variable_List_instance_definition_details } from "../MMS-SCI-Module-1/Named-Variable-List-instance-definition-details.ta.mjs";
 
 
 /**
