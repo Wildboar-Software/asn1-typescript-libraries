@@ -8,11 +8,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FlowDescription, _decode_FlowDescription, _encode_FlowDescription } from "../TS33128Payloads/FlowDescription.ta.mjs";
-// export { FlowDescription, _decode_FlowDescription, _encode_FlowDescription } from "../TS33128Payloads/FlowDescription.ta.mjs";
 import { EthFlowDescription, _decode_EthFlowDescription, _encode_EthFlowDescription } from "../TS33128Payloads/EthFlowDescription.ta.mjs";
-// export { EthFlowDescription, _decode_EthFlowDescription, _encode_EthFlowDescription } from "../TS33128Payloads/EthFlowDescription.ta.mjs";
 import { FlowDirection, _decode_FlowDirection, _encode_FlowDirection, _enum_for_FlowDirection } from "../TS33128Payloads/FlowDirection.ta.mjs";
-// export { FlowDirection, _enum_for_FlowDirection, FlowDirection_downlinkOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, downlinkOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, FlowDirection_uplinkOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, uplinkOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, FlowDirection_dowlinkAndUplink /* IMPORTED_LONG_ENUMERATION_ITEM */, dowlinkAndUplink /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FlowDirection, _encode_FlowDirection } from "../TS33128Payloads/FlowDirection.ta.mjs";
 
 
 /**

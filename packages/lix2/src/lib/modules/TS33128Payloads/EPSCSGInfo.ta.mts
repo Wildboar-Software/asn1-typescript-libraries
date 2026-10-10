@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CSGID, _decode_CSGID, _encode_CSGID } from "../TS33128Payloads/CSGID.ta.mjs";
-// export { CSGID, _decode_CSGID, _encode_CSGID } from "../TS33128Payloads/CSGID.ta.mjs";
 import { CSGMembershipIndication, _decode_CSGMembershipIndication, _encode_CSGMembershipIndication, _enum_for_CSGMembershipIndication } from "../TS33128Payloads/CSGMembershipIndication.ta.mjs";
-// export { CSGMembershipIndication, _enum_for_CSGMembershipIndication, CSGMembershipIndication_notCSGMember /* IMPORTED_LONG_ENUMERATION_ITEM */, notCSGMember /* IMPORTED_SHORT_ENUMERATION_ITEM */, CSGMembershipIndication_cSGMember /* IMPORTED_LONG_ENUMERATION_ITEM */, cSGMember /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CSGMembershipIndication, _encode_CSGMembershipIndication } from "../TS33128Payloads/CSGMembershipIndication.ta.mjs";
 
 
 /**

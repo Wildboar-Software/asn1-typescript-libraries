@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { XMLNamespace, _decode_XMLNamespace, _encode_XMLNamespace } from "../TS33128Payloads/XMLNamespace.ta.mjs";
-// export { XMLNamespace, _decode_XMLNamespace, _encode_XMLNamespace } from "../TS33128Payloads/XMLNamespace.ta.mjs";
 import { XMLValue, _decode_XMLValue, _encode_XMLValue } from "../TS33128Payloads/XMLValue.ta.mjs";
-// export { XMLValue, _decode_XMLValue, _encode_XMLValue } from "../TS33128Payloads/XMLValue.ta.mjs";
 
 
 /**

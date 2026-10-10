@@ -10,29 +10,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13OfferedPSK, _decode_TLS13OfferedPSK, _encode_TLS13OfferedPSK } from "../TS33128Payloads/TLS13OfferedPSK.ta.mjs";
-// export { TLS13OfferedPSK, _decode_TLS13OfferedPSK, _encode_TLS13OfferedPSK } from "../TS33128Payloads/TLS13OfferedPSK.ta.mjs";
 import { TLS13PSKKeyExchangeMode, _decode_TLS13PSKKeyExchangeMode, _encode_TLS13PSKKeyExchangeMode } from "../TS33128Payloads/TLS13PSKKeyExchangeMode.ta.mjs";
-// export { TLS13PSKKeyExchangeMode, _enum_for_TLS13PSKKeyExchangeMode, TLS13PSKKeyExchangeMode_pSKKE /* IMPORTED_LONG_ENUMERATION_ITEM */, pSKKE /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13PSKKeyExchangeMode_pSKDHEKE /* IMPORTED_LONG_ENUMERATION_ITEM */, pSKDHEKE /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLS13PSKKeyExchangeMode, _encode_TLS13PSKKeyExchangeMode } from "../TS33128Payloads/TLS13PSKKeyExchangeMode.ta.mjs";
 import { TLS13PSKInfo, _decode_TLS13PSKInfo, _encode_TLS13PSKInfo } from "../TS33128Payloads/TLS13PSKInfo.ta.mjs";
-// export { TLS13PSKInfo, _decode_TLS13PSKInfo, _encode_TLS13PSKInfo } from "../TS33128Payloads/TLS13PSKInfo.ta.mjs";
 import { TLS13KDFAlgorithm, _decode_TLS13KDFAlgorithm, _encode_TLS13KDFAlgorithm, _enum_for_TLS13KDFAlgorithm } from "../TS33128Payloads/TLS13KDFAlgorithm.ta.mjs";
-// export { TLS13KDFAlgorithm, _enum_for_TLS13KDFAlgorithm, TLS13KDFAlgorithm_rfc5869 /* IMPORTED_LONG_ENUMERATION_ITEM */, rfc5869 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLS13KDFAlgorithm, _encode_TLS13KDFAlgorithm } from "../TS33128Payloads/TLS13KDFAlgorithm.ta.mjs";
 import { TLS13CipherSuite, _decode_TLS13CipherSuite, _encode_TLS13CipherSuite } from "../TS33128Payloads/TLS13CipherSuite.ta.mjs";
-// export { TLS13CipherSuite, _decode_TLS13CipherSuite, _encode_TLS13CipherSuite } from "../TS33128Payloads/TLS13CipherSuite.ta.mjs";
 import { TLS13Extension, _decode_TLS13Extension, _encode_TLS13Extension } from "../TS33128Payloads/TLS13Extension.ta.mjs";
-// export { TLS13Extension, _decode_TLS13Extension, _encode_TLS13Extension } from "../TS33128Payloads/TLS13Extension.ta.mjs";
 import { TLS13Certificate, _decode_TLS13Certificate, _encode_TLS13Certificate } from "../TS33128Payloads/TLS13Certificate.ta.mjs";
-// export { TLS13Certificate, _decode_TLS13Certificate, _encode_TLS13Certificate } from "../TS33128Payloads/TLS13Certificate.ta.mjs";
 import { TLS13EarlySecretInfo, _decode_TLS13EarlySecretInfo, _encode_TLS13EarlySecretInfo } from "../TS33128Payloads/TLS13EarlySecretInfo.ta.mjs";
-// export { TLS13EarlySecretInfo, _decode_TLS13EarlySecretInfo, _encode_TLS13EarlySecretInfo } from "../TS33128Payloads/TLS13EarlySecretInfo.ta.mjs";
 import { TLS13EstablishedSecrets, _decode_TLS13EstablishedSecrets, _encode_TLS13EstablishedSecrets } from "../TS33128Payloads/TLS13EstablishedSecrets.ta.mjs";
-// export { TLS13EstablishedSecrets, _decode_TLS13EstablishedSecrets, _encode_TLS13EstablishedSecrets } from "../TS33128Payloads/TLS13EstablishedSecrets.ta.mjs";
 import { TLS13HandshakeSecretInfo, _decode_TLS13HandshakeSecretInfo, _encode_TLS13HandshakeSecretInfo } from "../TS33128Payloads/TLS13HandshakeSecretInfo.ta.mjs";
-// export { TLS13HandshakeSecretInfo, _decode_TLS13HandshakeSecretInfo, _encode_TLS13HandshakeSecretInfo } from "../TS33128Payloads/TLS13HandshakeSecretInfo.ta.mjs";
 import { TLS13MasterSecretInfo, _decode_TLS13MasterSecretInfo, _encode_TLS13MasterSecretInfo } from "../TS33128Payloads/TLS13MasterSecretInfo.ta.mjs";
-// export { TLS13MasterSecretInfo, _decode_TLS13MasterSecretInfo, _encode_TLS13MasterSecretInfo } from "../TS33128Payloads/TLS13MasterSecretInfo.ta.mjs";
 import { TLS13NewSessionTicket, _decode_TLS13NewSessionTicket, _encode_TLS13NewSessionTicket } from "../TS33128Payloads/TLS13NewSessionTicket.ta.mjs";
-// export { TLS13NewSessionTicket, _decode_TLS13NewSessionTicket, _encode_TLS13NewSessionTicket } from "../TS33128Payloads/TLS13NewSessionTicket.ta.mjs";
 
 
 /**

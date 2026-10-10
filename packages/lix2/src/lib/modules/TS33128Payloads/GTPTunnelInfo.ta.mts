@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FiveGSGTPTunnels, _decode_FiveGSGTPTunnels, _encode_FiveGSGTPTunnels } from "../TS33128Payloads/FiveGSGTPTunnels.ta.mjs";
-// export { FiveGSGTPTunnels, _decode_FiveGSGTPTunnels, _encode_FiveGSGTPTunnels } from "../TS33128Payloads/FiveGSGTPTunnels.ta.mjs";
 import { EPSGTPTunnels, _decode_EPSGTPTunnels, _encode_EPSGTPTunnels } from "../TS33128Payloads/EPSGTPTunnels.ta.mjs";
-// export { EPSGTPTunnels, _decode_EPSGTPTunnels, _encode_EPSGTPTunnels } from "../TS33128Payloads/EPSGTPTunnels.ta.mjs";
 
 
 /**

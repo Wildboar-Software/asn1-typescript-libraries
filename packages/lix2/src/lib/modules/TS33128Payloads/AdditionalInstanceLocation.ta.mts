@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SIPEndpoint, _decode_SIPEndpoint, _encode_SIPEndpoint } from "../TS33128Payloads/SIPEndpoint.ta.mjs";
-// export { SIPEndpoint, _decode_SIPEndpoint, _encode_SIPEndpoint } from "../TS33128Payloads/SIPEndpoint.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-// export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 
 
 /**

@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PANIHeaderInfo, _decode_PANIHeaderInfo, _encode_PANIHeaderInfo } from "../TS33128Payloads/PANIHeaderInfo.ta.mjs";
-// export { PANIHeaderInfo, _decode_PANIHeaderInfo, _encode_PANIHeaderInfo } from "../TS33128Payloads/PANIHeaderInfo.ta.mjs";
 import { SIPGeolocationHeaderInfo, _decode_SIPGeolocationHeaderInfo, _encode_SIPGeolocationHeaderInfo } from "../TS33128Payloads/SIPGeolocationHeaderInfo.ta.mjs";
-// export { SIPGeolocationHeaderInfo, _decode_SIPGeolocationHeaderInfo, _encode_SIPGeolocationHeaderInfo } from "../TS33128Payloads/SIPGeolocationHeaderInfo.ta.mjs";
 import { SIPCNIHeaderInfo, _decode_SIPCNIHeaderInfo, _encode_SIPCNIHeaderInfo } from "../TS33128Payloads/SIPCNIHeaderInfo.ta.mjs";
-// export { SIPCNIHeaderInfo, _decode_SIPCNIHeaderInfo, _encode_SIPCNIHeaderInfo } from "../TS33128Payloads/SIPCNIHeaderInfo.ta.mjs";
 
 
 /**

@@ -6,27 +6,16 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeographicArea, _decode_GeographicArea, _encode_GeographicArea } from "../TS33128Payloads/GeographicArea.ta.mjs";
-// export { GeographicArea, _decode_GeographicArea, _encode_GeographicArea } from "../TS33128Payloads/GeographicArea.ta.mjs";
 import { AccuracyFulfilmentIndicator, _decode_AccuracyFulfilmentIndicator, _encode_AccuracyFulfilmentIndicator, _enum_for_AccuracyFulfilmentIndicator } from "../TS33128Payloads/AccuracyFulfilmentIndicator.ta.mjs";
-// export { AccuracyFulfilmentIndicator, _enum_for_AccuracyFulfilmentIndicator, AccuracyFulfilmentIndicator_requestedAccuracyFulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedAccuracyFulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedAccuracyNotFulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccuracyFulfilmentIndicator, _encode_AccuracyFulfilmentIndicator } from "../TS33128Payloads/AccuracyFulfilmentIndicator.ta.mjs";
 import { AgeOfLocation, _decode_AgeOfLocation, _encode_AgeOfLocation } from "../TS33128Payloads/AgeOfLocation.ta.mjs";
-// export { AgeOfLocation, _decode_AgeOfLocation, _encode_AgeOfLocation } from "../TS33128Payloads/AgeOfLocation.ta.mjs";
 import { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } from "../TS33128Payloads/VelocityEstimate.ta.mjs";
-// export { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } from "../TS33128Payloads/VelocityEstimate.ta.mjs";
 import { CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../TS33128Payloads/CivicAddress.ta.mjs";
-// export { CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../TS33128Payloads/CivicAddress.ta.mjs";
 import { PositioningMethodAndUsage, _decode_PositioningMethodAndUsage, _encode_PositioningMethodAndUsage } from "../TS33128Payloads/PositioningMethodAndUsage.ta.mjs";
-// export { PositioningMethodAndUsage, _decode_PositioningMethodAndUsage, _encode_PositioningMethodAndUsage } from "../TS33128Payloads/PositioningMethodAndUsage.ta.mjs";
 import { GNSSPositioningMethodAndUsage, _decode_GNSSPositioningMethodAndUsage, _encode_GNSSPositioningMethodAndUsage } from "../TS33128Payloads/GNSSPositioningMethodAndUsage.ta.mjs";
-// export { GNSSPositioningMethodAndUsage, _decode_GNSSPositioningMethodAndUsage, _encode_GNSSPositioningMethodAndUsage } from "../TS33128Payloads/GNSSPositioningMethodAndUsage.ta.mjs";
 import { ECGI, _decode_ECGI, _encode_ECGI } from "../TS33128Payloads/ECGI.ta.mjs";
-// export { ECGI, _decode_ECGI, _encode_ECGI } from "../TS33128Payloads/ECGI.ta.mjs";
 import { NCGI, _decode_NCGI, _encode_NCGI } from "../TS33128Payloads/NCGI.ta.mjs";
-// export { NCGI, _decode_NCGI, _encode_NCGI } from "../TS33128Payloads/NCGI.ta.mjs";
 import { Altitude, _decode_Altitude, _encode_Altitude } from "../TS33128Payloads/Altitude.ta.mjs";
-// export { Altitude, _decode_Altitude, _encode_Altitude } from "../TS33128Payloads/Altitude.ta.mjs";
 import { BarometricPressure, _decode_BarometricPressure, _encode_BarometricPressure } from "../TS33128Payloads/BarometricPressure.ta.mjs";
-// export { BarometricPressure, _decode_BarometricPressure, _encode_BarometricPressure } from "../TS33128Payloads/BarometricPressure.ta.mjs";
 
 
 /**

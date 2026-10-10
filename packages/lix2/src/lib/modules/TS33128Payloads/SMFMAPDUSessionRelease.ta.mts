@@ -7,27 +7,16 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
-// export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 import { PEI, _decode_PEI, _encode_PEI } from "../TS33128Payloads/PEI.ta.mjs";
-// export { PEI, _decode_PEI, _encode_PEI } from "../TS33128Payloads/PEI.ta.mjs";
 import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
-// export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 import { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS33128Payloads/PDUSessionID.ta.mjs";
-// export { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS33128Payloads/PDUSessionID.ta.mjs";
 import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
-// export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-// export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 import { SMFErrorCodes, _decode_SMFErrorCodes, _encode_SMFErrorCodes } from "../TS33128Payloads/SMFErrorCodes.ta.mjs";
-// export { SMFErrorCodes, _decode_SMFErrorCodes, _encode_SMFErrorCodes } from "../TS33128Payloads/SMFErrorCodes.ta.mjs";
 import { NGAPCauseInt, _decode_NGAPCauseInt, _encode_NGAPCauseInt } from "../TS33128Payloads/NGAPCauseInt.ta.mjs";
-// export { NGAPCauseInt, _decode_NGAPCauseInt, _encode_NGAPCauseInt } from "../TS33128Payloads/NGAPCauseInt.ta.mjs";
 import { FiveGMMCause, _decode_FiveGMMCause, _encode_FiveGMMCause } from "../TS33128Payloads/FiveGMMCause.ta.mjs";
-// export { FiveGMMCause, _decode_FiveGMMCause, _encode_FiveGMMCause } from "../TS33128Payloads/FiveGMMCause.ta.mjs";
 import { PCCRuleIDSet, _decode_PCCRuleIDSet, _encode_PCCRuleIDSet } from "../TS33128Payloads/PCCRuleIDSet.ta.mjs";
-// export { PCCRuleIDSet, _decode_PCCRuleIDSet, _encode_PCCRuleIDSet } from "../TS33128Payloads/PCCRuleIDSet.ta.mjs";
 import { EPSPDNConnectionRelease, _decode_EPSPDNConnectionRelease, _encode_EPSPDNConnectionRelease } from "../TS33128Payloads/EPSPDNConnectionRelease.ta.mjs";
-// export { EPSPDNConnectionRelease, _decode_EPSPDNConnectionRelease, _encode_EPSPDNConnectionRelease } from "../TS33128Payloads/EPSPDNConnectionRelease.ta.mjs";
 
 
 /**

@@ -5,11 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMSTPDU, _decode_SMSTPDU, _encode_SMSTPDU } from "../TS33128Payloads/SMSTPDU.ta.mjs";
-// export { SMSTPDU, _decode_SMSTPDU, _encode_SMSTPDU } from "../TS33128Payloads/SMSTPDU.ta.mjs";
 import { TruncatedSMSTPDU, _decode_TruncatedSMSTPDU, _encode_TruncatedSMSTPDU } from "../TS33128Payloads/TruncatedSMSTPDU.ta.mjs";
-// export { TruncatedSMSTPDU, _decode_TruncatedSMSTPDU, _encode_TruncatedSMSTPDU } from "../TS33128Payloads/TruncatedSMSTPDU.ta.mjs";
 import { ThreeGPP2SMSTPDU, _decode_ThreeGPP2SMSTPDU, _encode_ThreeGPP2SMSTPDU } from "../TS33128Payloads/ThreeGPP2SMSTPDU.ta.mjs";
-// export { ThreeGPP2SMSTPDU, _decode_ThreeGPP2SMSTPDU, _encode_ThreeGPP2SMSTPDU } from "../TS33128Payloads/ThreeGPP2SMSTPDU.ta.mjs";
 
 
 /**

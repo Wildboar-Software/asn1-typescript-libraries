@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ECGI, _decode_ECGI, _encode_ECGI } from "../TS33128Payloads/ECGI.ta.mjs";
-// export { ECGI, _decode_ECGI, _encode_ECGI } from "../TS33128Payloads/ECGI.ta.mjs";
 import { CellPortionID, _decode_CellPortionID, _encode_CellPortionID } from "../TS33128Payloads/CellPortionID.ta.mjs";
-// export { CellPortionID, _decode_CellPortionID, _encode_CellPortionID } from "../TS33128Payloads/CellPortionID.ta.mjs";
 
 
 /**

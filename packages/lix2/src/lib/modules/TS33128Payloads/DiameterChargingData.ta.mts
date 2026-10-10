@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EncapsulatedRfChargingData, _decode_EncapsulatedRfChargingData, _encode_EncapsulatedRfChargingData } from "../TS33128Payloads/EncapsulatedRfChargingData.ta.mjs";
-// export { EncapsulatedRfChargingData, _decode_EncapsulatedRfChargingData, _encode_EncapsulatedRfChargingData } from "../TS33128Payloads/EncapsulatedRfChargingData.ta.mjs";
 
 
 /**

@@ -8,21 +8,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCC, _decode_MCC, _encode_MCC } from "../TS33128Payloads/MCC.ta.mjs";
-// export { MCC, _decode_MCC, _encode_MCC } from "../TS33128Payloads/MCC.ta.mjs";
 import { MNC, _decode_MNC, _encode_MNC } from "../TS33128Payloads/MNC.ta.mjs";
-// export { MNC, _decode_MNC, _encode_MNC } from "../TS33128Payloads/MNC.ta.mjs";
 import { RoutingIndicator, _decode_RoutingIndicator, _encode_RoutingIndicator } from "../TS33128Payloads/RoutingIndicator.ta.mjs";
-// export { RoutingIndicator, _decode_RoutingIndicator, _encode_RoutingIndicator } from "../TS33128Payloads/RoutingIndicator.ta.mjs";
 import { ProtectionSchemeID, _decode_ProtectionSchemeID, _encode_ProtectionSchemeID } from "../TS33128Payloads/ProtectionSchemeID.ta.mjs";
-// export { ProtectionSchemeID, _decode_ProtectionSchemeID, _encode_ProtectionSchemeID } from "../TS33128Payloads/ProtectionSchemeID.ta.mjs";
 import { HomeNetworkPublicKeyID, _decode_HomeNetworkPublicKeyID, _encode_HomeNetworkPublicKeyID } from "../TS33128Payloads/HomeNetworkPublicKeyID.ta.mjs";
-// export { HomeNetworkPublicKeyID, _decode_HomeNetworkPublicKeyID, _encode_HomeNetworkPublicKeyID } from "../TS33128Payloads/HomeNetworkPublicKeyID.ta.mjs";
 import { SchemeOutput, _decode_SchemeOutput, _encode_SchemeOutput } from "../TS33128Payloads/SchemeOutput.ta.mjs";
-// export { SchemeOutput, _decode_SchemeOutput, _encode_SchemeOutput } from "../TS33128Payloads/SchemeOutput.ta.mjs";
 import { SUPIType, _decode_SUPIType, _encode_SUPIType } from "../TS33128Payloads/SUPIType.ta.mjs";
-// export { SUPIType, _decode_SUPIType, _encode_SUPIType } from "../TS33128Payloads/SUPIType.ta.mjs";
 import { HomeNetworkIdentifier, _decode_HomeNetworkIdentifier, _encode_HomeNetworkIdentifier } from "../TS33128Payloads/HomeNetworkIdentifier.ta.mjs";
-// export { HomeNetworkIdentifier, _decode_HomeNetworkIdentifier, _encode_HomeNetworkIdentifier } from "../TS33128Payloads/HomeNetworkIdentifier.ta.mjs";
 
 
 /**

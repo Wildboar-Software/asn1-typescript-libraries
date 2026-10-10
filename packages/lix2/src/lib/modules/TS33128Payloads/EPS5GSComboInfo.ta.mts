@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EPSInterworkingIndication, _decode_EPSInterworkingIndication, _encode_EPSInterworkingIndication, _enum_for_EPSInterworkingIndication } from "../TS33128Payloads/EPSInterworkingIndication.ta.mjs";
-// export { EPSInterworkingIndication, _enum_for_EPSInterworkingIndication, EPSInterworkingIndication_none /* IMPORTED_LONG_ENUMERATION_ITEM */, none /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSInterworkingIndication_withN26 /* IMPORTED_LONG_ENUMERATION_ITEM */, withN26 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSInterworkingIndication_withoutN26 /* IMPORTED_LONG_ENUMERATION_ITEM */, withoutN26 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSInterworkingIndication_iwkNon3GPP /* IMPORTED_LONG_ENUMERATION_ITEM */, iwkNon3GPP /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EPSInterworkingIndication, _encode_EPSInterworkingIndication } from "../TS33128Payloads/EPSInterworkingIndication.ta.mjs";
 import { EPSSubscriberIDs, _decode_EPSSubscriberIDs, _encode_EPSSubscriberIDs } from "../TS33128Payloads/EPSSubscriberIDs.ta.mjs";
-// export { EPSSubscriberIDs, _decode_EPSSubscriberIDs, _encode_EPSSubscriberIDs } from "../TS33128Payloads/EPSSubscriberIDs.ta.mjs";
 import { EPSPDNCnxInfo, _decode_EPSPDNCnxInfo, _encode_EPSPDNCnxInfo } from "../TS33128Payloads/EPSPDNCnxInfo.ta.mjs";
-// export { EPSPDNCnxInfo, _decode_EPSPDNCnxInfo, _encode_EPSPDNCnxInfo } from "../TS33128Payloads/EPSPDNCnxInfo.ta.mjs";
 import { EPSBearerInfo, _decode_EPSBearerInfo, _encode_EPSBearerInfo } from "../TS33128Payloads/EPSBearerInfo.ta.mjs";
-// export { EPSBearerInfo, _decode_EPSBearerInfo, _encode_EPSBearerInfo } from "../TS33128Payloads/EPSBearerInfo.ta.mjs";
 
 
 /**

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LAI, _decode_LAI, _encode_LAI } from "../TS33128Payloads/LAI.ta.mjs";
-// export { LAI, _decode_LAI, _encode_LAI } from "../TS33128Payloads/LAI.ta.mjs";
 import { CellID, _decode_CellID, _encode_CellID } from "../TS33128Payloads/CellID.ta.mjs";
-// export { CellID, _decode_CellID, _encode_CellID } from "../TS33128Payloads/CellID.ta.mjs";
 
 
 /**

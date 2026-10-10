@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-// export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 import { SMSTPDUData, _decode_SMSTPDUData, _encode_SMSTPDUData } from "../TS33128Payloads/SMSTPDUData.ta.mjs";
-// export { SMSTPDUData, _decode_SMSTPDUData, _encode_SMSTPDUData } from "../TS33128Payloads/SMSTPDUData.ta.mjs";
 import { SMSMessageType, _decode_SMSMessageType, _encode_SMSMessageType, _enum_for_SMSMessageType } from "../TS33128Payloads/SMSMessageType.ta.mjs";
-// export { SMSMessageType, _enum_for_SMSMessageType, SMSMessageType_deliver /* IMPORTED_LONG_ENUMERATION_ITEM */, deliver /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSMessageType_deliverReportAck /* IMPORTED_LONG_ENUMERATION_ITEM */, deliverReportAck /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSMessageType_deliverReportError /* IMPORTED_LONG_ENUMERATION_ITEM */, deliverReportError /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSMessageType_statusReport /* IMPORTED_LONG_ENUMERATION_ITEM */, statusReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSMessageType_command /* IMPORTED_LONG_ENUMERATION_ITEM */, command /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSMessageType_submit /* IMPORTED_LONG_ENUMERATION_ITEM */, submit /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSMessageType_submitReportAck /* IMPORTED_LONG_ENUMERATION_ITEM */, submitReportAck /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSMessageType_submitReportError /* IMPORTED_LONG_ENUMERATION_ITEM */, submitReportError /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSMessageType_reserved /* IMPORTED_LONG_ENUMERATION_ITEM */, reserved /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMSMessageType, _encode_SMSMessageType } from "../TS33128Payloads/SMSMessageType.ta.mjs";
 import { SMSRPMessageReference, _decode_SMSRPMessageReference, _encode_SMSRPMessageReference } from "../TS33128Payloads/SMSRPMessageReference.ta.mjs";
-// export { SMSRPMessageReference, _decode_SMSRPMessageReference, _encode_SMSRPMessageReference } from "../TS33128Payloads/SMSRPMessageReference.ta.mjs";
 
 
 /**

@@ -9,11 +9,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TraceDepth, _decode_TraceDepth, _encode_TraceDepth, _enum_for_TraceDepth } from "../TS33128Payloads/TraceDepth.ta.mjs";
-// export { TraceDepth, _enum_for_TraceDepth, TraceDepth_minimum /* IMPORTED_LONG_ENUMERATION_ITEM */, minimum /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, medium /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_maximum /* IMPORTED_LONG_ENUMERATION_ITEM */, maximum /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_minimumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, minimumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_mediumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, mediumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_maximumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, maximumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceDepth, _encode_TraceDepth } from "../TS33128Payloads/TraceDepth.ta.mjs";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../TS33128Payloads/IPAddress.ta.mjs";
-// export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../TS33128Payloads/IPAddress.ta.mjs";
 import { MDTConfiguration, _decode_MDTConfiguration, _encode_MDTConfiguration, _enum_for_MDTConfiguration } from "../TS33128Payloads/MDTConfiguration.ta.mjs";
-// export { MDTConfiguration, _enum_for_MDTConfiguration, MDTConfiguration_mDTConfigurationNR /* IMPORTED_LONG_ENUMERATION_ITEM */, mDTConfigurationNR /* IMPORTED_SHORT_ENUMERATION_ITEM */, MDTConfiguration_mDTConfigurationEUTRA /* IMPORTED_LONG_ENUMERATION_ITEM */, mDTConfigurationEUTRA /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MDTConfiguration, _encode_MDTConfiguration } from "../TS33128Payloads/MDTConfiguration.ta.mjs";
 
 
 /**

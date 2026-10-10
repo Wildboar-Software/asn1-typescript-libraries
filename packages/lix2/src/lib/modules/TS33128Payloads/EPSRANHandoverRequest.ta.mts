@@ -6,21 +6,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
-// export { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
 import { EPSHandoverType, _decode_EPSHandoverType, _encode_EPSHandoverType } from "../TS33128Payloads/EPSHandoverType.ta.mjs";
-// export { EPSHandoverType, _decode_EPSHandoverType, _encode_EPSHandoverType } from "../TS33128Payloads/EPSHandoverType.ta.mjs";
 import { EPSRANCause, _decode_EPSRANCause, _encode_EPSRANCause } from "../TS33128Payloads/EPSRANCause.ta.mjs";
-// export { EPSRANCause, _decode_EPSRANCause, _encode_EPSRANCause } from "../TS33128Payloads/EPSRANCause.ta.mjs";
 import { RANSourceToTargetContainer, _decode_RANSourceToTargetContainer, _encode_RANSourceToTargetContainer } from "../TS33128Payloads/RANSourceToTargetContainer.ta.mjs";
-// export { RANSourceToTargetContainer, _decode_RANSourceToTargetContainer, _encode_RANSourceToTargetContainer } from "../TS33128Payloads/RANSourceToTargetContainer.ta.mjs";
 import { EPSCSGInfo, _decode_EPSCSGInfo, _encode_EPSCSGInfo } from "../TS33128Payloads/EPSCSGInfo.ta.mjs";
-// export { EPSCSGInfo, _decode_EPSCSGInfo, _encode_EPSCSGInfo } from "../TS33128Payloads/EPSCSGInfo.ta.mjs";
 import { RANTargetToSourceContainer, _decode_RANTargetToSourceContainer, _encode_RANTargetToSourceContainer } from "../TS33128Payloads/RANTargetToSourceContainer.ta.mjs";
-// export { RANTargetToSourceContainer, _decode_RANTargetToSourceContainer, _encode_RANTargetToSourceContainer } from "../TS33128Payloads/RANTargetToSourceContainer.ta.mjs";
 import { CSGID, _decode_CSGID, _encode_CSGID } from "../TS33128Payloads/CSGID.ta.mjs";
-// export { CSGID, _decode_CSGID, _encode_CSGID } from "../TS33128Payloads/CSGID.ta.mjs";
 import { EPSRANUEContext, _decode_EPSRANUEContext, _encode_EPSRANUEContext } from "../TS33128Payloads/EPSRANUEContext.ta.mjs";
-// export { EPSRANUEContext, _decode_EPSRANUEContext, _encode_EPSRANUEContext } from "../TS33128Payloads/EPSRANUEContext.ta.mjs";
 
 
 /**

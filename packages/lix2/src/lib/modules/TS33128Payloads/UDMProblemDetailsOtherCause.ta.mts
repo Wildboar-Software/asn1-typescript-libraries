@@ -8,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UDMInvalidParameters, _decode_UDMInvalidParameters, _encode_UDMInvalidParameters } from "../TS33128Payloads/UDMInvalidParameters.ta.mjs";
-// export { UDMInvalidParameters, _decode_UDMInvalidParameters, _encode_UDMInvalidParameters } from "../TS33128Payloads/UDMInvalidParameters.ta.mjs";
 
 
 /**

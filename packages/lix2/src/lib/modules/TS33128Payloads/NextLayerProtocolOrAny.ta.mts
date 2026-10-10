@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NextLayerProtocol, _decode_NextLayerProtocol, _encode_NextLayerProtocol } from "../TS33128Payloads/NextLayerProtocol.ta.mjs";
-// export { NextLayerProtocol, _decode_NextLayerProtocol, _encode_NextLayerProtocol } from "../TS33128Payloads/NextLayerProtocol.ta.mjs";
 import { AnyNextLayerProtocol, _decode_AnyNextLayerProtocol, _encode_AnyNextLayerProtocol } from "../TS33128Payloads/AnyNextLayerProtocol.ta.mjs";
-// export { AnyNextLayerProtocol, _enum_for_AnyNextLayerProtocol, AnyNextLayerProtocol_ip /* IMPORTED_LONG_ENUMERATION_ITEM */, ip /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AnyNextLayerProtocol, _encode_AnyNextLayerProtocol } from "../TS33128Payloads/AnyNextLayerProtocol.ta.mjs";
 
 
 /**

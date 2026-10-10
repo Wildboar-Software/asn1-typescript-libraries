@@ -6,23 +6,14 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NEFFailureCause, _decode_NEFFailureCause, _encode_NEFFailureCause, _enum_for_NEFFailureCause } from "../TS33128Payloads/NEFFailureCause.ta.mjs";
-// export { NEFFailureCause, _enum_for_NEFFailureCause, NEFFailureCause_userUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */, userUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFFailureCause_niddConfigurationNotAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, niddConfigurationNotAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFFailureCause_contextNotFound /* IMPORTED_LONG_ENUMERATION_ITEM */, contextNotFound /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFFailureCause_portNotFree /* IMPORTED_LONG_ENUMERATION_ITEM */, portNotFree /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFFailureCause_portNotAssociatedWithSpecifiedApplication /* IMPORTED_LONG_ENUMERATION_ITEM */, portNotAssociatedWithSpecifiedApplication /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NEFFailureCause, _encode_NEFFailureCause } from "../TS33128Payloads/NEFFailureCause.ta.mjs";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
-// export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
-// export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 import { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS33128Payloads/PDUSessionID.ta.mjs";
-// export { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS33128Payloads/PDUSessionID.ta.mjs";
 import { DNN, _decode_DNN, _encode_DNN } from "../TS33128Payloads/DNN.ta.mjs";
-// export { DNN, _decode_DNN, _encode_DNN } from "../TS33128Payloads/DNN.ta.mjs";
 import { SNSSAI, _decode_SNSSAI, _encode_SNSSAI } from "../TS33128Payloads/SNSSAI.ta.mjs";
-// export { SNSSAI, _decode_SNSSAI, _encode_SNSSAI } from "../TS33128Payloads/SNSSAI.ta.mjs";
 import { RDSPortNumber, _decode_RDSPortNumber, _encode_RDSPortNumber } from "../TS33128Payloads/RDSPortNumber.ta.mjs";
-// export { RDSPortNumber, _decode_RDSPortNumber, _encode_RDSPortNumber } from "../TS33128Payloads/RDSPortNumber.ta.mjs";
 import { ApplicationID, _decode_ApplicationID, _encode_ApplicationID } from "../TS33128Payloads/ApplicationID.ta.mjs";
-// export { ApplicationID, _decode_ApplicationID, _encode_ApplicationID } from "../TS33128Payloads/ApplicationID.ta.mjs";
 import { AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs";
-// export { AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs";
 
 
 /**

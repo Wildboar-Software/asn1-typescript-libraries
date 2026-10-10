@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PTCTargetInformation, _decode_PTCTargetInformation, _encode_PTCTargetInformation } from "../TS33128Payloads/PTCTargetInformation.ta.mjs";
-// export { PTCTargetInformation, _decode_PTCTargetInformation, _encode_PTCTargetInformation } from "../TS33128Payloads/PTCTargetInformation.ta.mjs";
 import { PTCChatGroupID, _decode_PTCChatGroupID, _encode_PTCChatGroupID } from "../TS33128Payloads/PTCChatGroupID.ta.mjs";
-// export { PTCChatGroupID, _decode_PTCChatGroupID, _encode_PTCChatGroupID } from "../TS33128Payloads/PTCChatGroupID.ta.mjs";
 
 
 /**

@@ -8,19 +8,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ECGI, _decode_ECGI, _encode_ECGI } from "../TS33128Payloads/ECGI.ta.mjs";
-// export { ECGI, _decode_ECGI, _encode_ECGI } from "../TS33128Payloads/ECGI.ta.mjs";
 import { TAI, _decode_TAI, _encode_TAI } from "../TS33128Payloads/TAI.ta.mjs";
-// export { TAI, _decode_TAI, _encode_TAI } from "../TS33128Payloads/TAI.ta.mjs";
 import { GeographicalInformationOctet, _decode_GeographicalInformationOctet, _encode_GeographicalInformationOctet } from "../TS33128Payloads/GeographicalInformationOctet.ta.mjs";
-// export { GeographicalInformationOctet, _decode_GeographicalInformationOctet, _encode_GeographicalInformationOctet } from "../TS33128Payloads/GeographicalInformationOctet.ta.mjs";
 import { GeodeticInformationOctet, _decode_GeodeticInformationOctet, _encode_GeodeticInformationOctet } from "../TS33128Payloads/GeodeticInformationOctet.ta.mjs";
-// export { GeodeticInformationOctet, _decode_GeodeticInformationOctet, _encode_GeodeticInformationOctet } from "../TS33128Payloads/GeodeticInformationOctet.ta.mjs";
 import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformation } from "../TS33128Payloads/UserCSGInformation.ta.mjs";
-// export { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformation } from "../TS33128Payloads/UserCSGInformation.ta.mjs";
 import { ENbID, _decode_ENbID, _encode_ENbID } from "../TS33128Payloads/ENbID.ta.mjs";
-// export { ENbID, _decode_ENbID, _encode_ENbID } from "../TS33128Payloads/ENbID.ta.mjs";
 import { CellInformation, _decode_CellInformation, _encode_CellInformation } from "../TS33128Payloads/CellInformation.ta.mjs";
-// export { CellInformation, _decode_CellInformation, _encode_CellInformation } from "../TS33128Payloads/CellInformation.ta.mjs";
 
 
 /**

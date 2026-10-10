@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMSPreviouslySent, _decode_MMSPreviouslySent, _encode_MMSPreviouslySent } from "../TS33128Payloads/MMSPreviouslySent.ta.mjs";
-// export { MMSPreviouslySent, _decode_MMSPreviouslySent, _encode_MMSPreviouslySent } from "../TS33128Payloads/MMSPreviouslySent.ta.mjs";
 
 
 /**

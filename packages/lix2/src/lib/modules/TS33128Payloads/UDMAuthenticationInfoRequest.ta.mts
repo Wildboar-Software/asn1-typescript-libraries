@@ -8,17 +8,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UDMInfoRequestType, _decode_UDMInfoRequestType, _encode_UDMInfoRequestType, _enum_for_UDMInfoRequestType } from "../TS33128Payloads/UDMInfoRequestType.ta.mjs";
-// export { UDMInfoRequestType, _enum_for_UDMInfoRequestType, UDMInfoRequestType_hSS /* IMPORTED_LONG_ENUMERATION_ITEM */, hSS /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMInfoRequestType_aUSF /* IMPORTED_LONG_ENUMERATION_ITEM */, aUSF /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMInfoRequestType_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UDMInfoRequestType, _encode_UDMInfoRequestType } from "../TS33128Payloads/UDMInfoRequestType.ta.mjs";
 import { SubscriberIdentifier, _decode_SubscriberIdentifier, _encode_SubscriberIdentifier } from "../TS33128Payloads/SubscriberIdentifier.ta.mjs";
-// export { SubscriberIdentifier, _decode_SubscriberIdentifier, _encode_SubscriberIdentifier } from "../TS33128Payloads/SubscriberIdentifier.ta.mjs";
 import { PrimaryAuthenticationType, _decode_PrimaryAuthenticationType, _encode_PrimaryAuthenticationType, _enum_for_PrimaryAuthenticationType } from "../TS33128Payloads/PrimaryAuthenticationType.ta.mjs";
-// export { PrimaryAuthenticationType, _enum_for_PrimaryAuthenticationType, PrimaryAuthenticationType_eAPAKAPrime /* IMPORTED_LONG_ENUMERATION_ITEM */, eAPAKAPrime /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrimaryAuthenticationType_fiveGAKA /* IMPORTED_LONG_ENUMERATION_ITEM */, fiveGAKA /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrimaryAuthenticationType_eAPTLS /* IMPORTED_LONG_ENUMERATION_ITEM */, eAPTLS /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrimaryAuthenticationType_none /* IMPORTED_LONG_ENUMERATION_ITEM */, none /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrimaryAuthenticationType_ePSAKA /* IMPORTED_LONG_ENUMERATION_ITEM */, ePSAKA /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrimaryAuthenticationType_eAPAKA /* IMPORTED_LONG_ENUMERATION_ITEM */, eAPAKA /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrimaryAuthenticationType_iMSAKA /* IMPORTED_LONG_ENUMERATION_ITEM */, iMSAKA /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrimaryAuthenticationType_gBAAKA /* IMPORTED_LONG_ENUMERATION_ITEM */, gBAAKA /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrimaryAuthenticationType_uMTSAKA /* IMPORTED_LONG_ENUMERATION_ITEM */, uMTSAKA /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PrimaryAuthenticationType, _encode_PrimaryAuthenticationType } from "../TS33128Payloads/PrimaryAuthenticationType.ta.mjs";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
-// export { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
 import { NFID, _decode_NFID, _encode_NFID } from "../TS33128Payloads/NFID.ta.mjs";
-// export { NFID, _decode_NFID, _encode_NFID } from "../TS33128Payloads/NFID.ta.mjs";
 import { CAGID, _decode_CAGID, _encode_CAGID } from "../TS33128Payloads/CAGID.ta.mjs";
-// export { CAGID, _decode_CAGID, _encode_CAGID } from "../TS33128Payloads/CAGID.ta.mjs";
 
 
 /**

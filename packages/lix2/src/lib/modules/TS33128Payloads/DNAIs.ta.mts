@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DNAI, _decode_DNAI, _encode_DNAI } from "../TS33128Payloads/DNAI.ta.mjs";
-// export { DNAI, _decode_DNAI, _encode_DNAI } from "../TS33128Payloads/DNAI.ta.mjs";
 
 
 /**

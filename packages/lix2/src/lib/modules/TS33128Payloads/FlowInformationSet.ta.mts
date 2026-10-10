@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FlowInformation, _decode_FlowInformation, _encode_FlowInformation } from "../TS33128Payloads/FlowInformation.ta.mjs";
-// export { FlowInformation, _decode_FlowInformation, _encode_FlowInformation } from "../TS33128Payloads/FlowInformation.ta.mjs";
 
 
 /**

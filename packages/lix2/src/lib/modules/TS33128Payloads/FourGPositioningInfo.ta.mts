@@ -6,19 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LocationData, _decode_LocationData, _encode_LocationData } from "../TS33128Payloads/LocationData.ta.mjs";
-// export { LocationData, _decode_LocationData, _encode_LocationData } from "../TS33128Payloads/LocationData.ta.mjs";
 import { CGI, _decode_CGI, _encode_CGI } from "../TS33128Payloads/CGI.ta.mjs";
-// export { CGI, _decode_CGI, _encode_CGI } from "../TS33128Payloads/CGI.ta.mjs";
 import { SAI, _decode_SAI, _encode_SAI } from "../TS33128Payloads/SAI.ta.mjs";
-// export { SAI, _decode_SAI, _encode_SAI } from "../TS33128Payloads/SAI.ta.mjs";
 import { ESMLCCellInfo, _decode_ESMLCCellInfo, _encode_ESMLCCellInfo } from "../TS33128Payloads/ESMLCCellInfo.ta.mjs";
-// export { ESMLCCellInfo, _decode_ESMLCCellInfo, _encode_ESMLCCellInfo } from "../TS33128Payloads/ESMLCCellInfo.ta.mjs";
 import { GERANPositioningInfo, _decode_GERANPositioningInfo, _encode_GERANPositioningInfo } from "../TS33128Payloads/GERANPositioningInfo.ta.mjs";
-// export { GERANPositioningInfo, _decode_GERANPositioningInfo, _encode_GERANPositioningInfo } from "../TS33128Payloads/GERANPositioningInfo.ta.mjs";
 import { UTRANPositioningInfo, _decode_UTRANPositioningInfo, _encode_UTRANPositioningInfo } from "../TS33128Payloads/UTRANPositioningInfo.ta.mjs";
-// export { UTRANPositioningInfo, _decode_UTRANPositioningInfo, _encode_UTRANPositioningInfo } from "../TS33128Payloads/UTRANPositioningInfo.ta.mjs";
 import { RawMLPResponse, _decode_RawMLPResponse, _encode_RawMLPResponse } from "../TS33128Payloads/RawMLPResponse.ta.mjs";
-// export { RawMLPResponse, _decode_RawMLPResponse, _encode_RawMLPResponse } from "../TS33128Payloads/RawMLPResponse.ta.mjs";
 
 
 /**

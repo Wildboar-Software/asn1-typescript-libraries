@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
-// export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
-// export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 import { FiveGProSeMessage, _decode_FiveGProSeMessage, _encode_FiveGProSeMessage } from "../TS33128Payloads/FiveGProSeMessage.ta.mjs";
-// export { FiveGProSeMessage, _decode_FiveGProSeMessage, _encode_FiveGProSeMessage } from "../TS33128Payloads/FiveGProSeMessage.ta.mjs";
 
 
 /**

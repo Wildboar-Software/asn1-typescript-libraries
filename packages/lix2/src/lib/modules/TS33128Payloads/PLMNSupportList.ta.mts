@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PLMNSupportItem, _decode_PLMNSupportItem, _encode_PLMNSupportItem } from "../TS33128Payloads/PLMNSupportItem.ta.mjs";
-// export { PLMNSupportItem, _decode_PLMNSupportItem, _encode_PLMNSupportItem } from "../TS33128Payloads/PLMNSupportItem.ta.mjs";
 
 
 /**

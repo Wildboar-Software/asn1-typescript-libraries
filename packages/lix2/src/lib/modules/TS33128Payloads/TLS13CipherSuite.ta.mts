@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLSCipherSuite, _decode_TLSCipherSuite, _encode_TLSCipherSuite } from "../TS33128Payloads/TLSCipherSuite.ta.mjs";
-// export { TLSCipherSuite, _decode_TLSCipherSuite, _encode_TLSCipherSuite } from "../TS33128Payloads/TLSCipherSuite.ta.mjs";
 
 
 /**

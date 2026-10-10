@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PASSporTHeader, _decode_PASSporTHeader, _encode_PASSporTHeader } from "../TS33128Payloads/PASSporTHeader.ta.mjs";
-// export { PASSporTHeader, _decode_PASSporTHeader, _encode_PASSporTHeader } from "../TS33128Payloads/PASSporTHeader.ta.mjs";
 import { PASSporTPayload, _decode_PASSporTPayload, _encode_PASSporTPayload } from "../TS33128Payloads/PASSporTPayload.ta.mjs";
-// export { PASSporTPayload, _decode_PASSporTPayload, _encode_PASSporTPayload } from "../TS33128Payloads/PASSporTPayload.ta.mjs";
 
 
 /**

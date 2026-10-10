@@ -6,15 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
-// export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 import { UEContextInfo, _decode_UEContextInfo, _encode_UEContextInfo } from "../TS33128Payloads/UEContextInfo.ta.mjs";
-// export { UEContextInfo, _decode_UEContextInfo, _encode_UEContextInfo } from "../TS33128Payloads/UEContextInfo.ta.mjs";
 import { FiveGSUserStateInfo, _decode_FiveGSUserStateInfo, _encode_FiveGSUserStateInfo } from "../TS33128Payloads/FiveGSUserStateInfo.ta.mjs";
-// export { FiveGSUserStateInfo, _decode_FiveGSUserStateInfo, _encode_FiveGSUserStateInfo } from "../TS33128Payloads/FiveGSUserStateInfo.ta.mjs";
 import { FiveGSRVCCInfo, _decode_FiveGSRVCCInfo, _encode_FiveGSRVCCInfo } from "../TS33128Payloads/FiveGSRVCCInfo.ta.mjs";
-// export { FiveGSRVCCInfo, _decode_FiveGSRVCCInfo, _encode_FiveGSRVCCInfo } from "../TS33128Payloads/FiveGSRVCCInfo.ta.mjs";
 import { UDMProblemDetails, _decode_UDMProblemDetails, _encode_UDMProblemDetails } from "../TS33128Payloads/UDMProblemDetails.ta.mjs";
-// export { UDMProblemDetails, _decode_UDMProblemDetails, _encode_UDMProblemDetails } from "../TS33128Payloads/UDMProblemDetails.ta.mjs";
 
 
 /**

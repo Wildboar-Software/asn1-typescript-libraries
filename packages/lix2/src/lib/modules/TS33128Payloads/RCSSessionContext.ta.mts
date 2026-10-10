@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MIMEEntity, _decode_MIMEEntity, _encode_MIMEEntity } from "../TS33128Payloads/MIMEEntity.ta.mjs";
-// export { MIMEEntity, _decode_MIMEEntity, _encode_MIMEEntity } from "../TS33128Payloads/MIMEEntity.ta.mjs";
 
 
 /**

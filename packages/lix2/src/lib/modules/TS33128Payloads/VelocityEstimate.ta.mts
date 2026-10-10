@@ -5,13 +5,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HorizontalVelocity, _decode_HorizontalVelocity, _encode_HorizontalVelocity } from "../TS33128Payloads/HorizontalVelocity.ta.mjs";
-// export { HorizontalVelocity, _decode_HorizontalVelocity, _encode_HorizontalVelocity } from "../TS33128Payloads/HorizontalVelocity.ta.mjs";
 import { HorizontalWithVerticalVelocity, _decode_HorizontalWithVerticalVelocity, _encode_HorizontalWithVerticalVelocity } from "../TS33128Payloads/HorizontalWithVerticalVelocity.ta.mjs";
-// export { HorizontalWithVerticalVelocity, _decode_HorizontalWithVerticalVelocity, _encode_HorizontalWithVerticalVelocity } from "../TS33128Payloads/HorizontalWithVerticalVelocity.ta.mjs";
 import { HorizontalVelocityWithUncertainty, _decode_HorizontalVelocityWithUncertainty, _encode_HorizontalVelocityWithUncertainty } from "../TS33128Payloads/HorizontalVelocityWithUncertainty.ta.mjs";
-// export { HorizontalVelocityWithUncertainty, _decode_HorizontalVelocityWithUncertainty, _encode_HorizontalVelocityWithUncertainty } from "../TS33128Payloads/HorizontalVelocityWithUncertainty.ta.mjs";
 import { HorizontalWithVerticalVelocityAndUncertainty, _decode_HorizontalWithVerticalVelocityAndUncertainty, _encode_HorizontalWithVerticalVelocityAndUncertainty } from "../TS33128Payloads/HorizontalWithVerticalVelocityAndUncertainty.ta.mjs";
-// export { HorizontalWithVerticalVelocityAndUncertainty, _decode_HorizontalWithVerticalVelocityAndUncertainty, _encode_HorizontalWithVerticalVelocityAndUncertainty } from "../TS33128Payloads/HorizontalWithVerticalVelocityAndUncertainty.ta.mjs";
 
 
 /**

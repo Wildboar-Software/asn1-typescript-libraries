@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_MMSPeriodFormat, _encode_MMSPeriodFormat, _enum_for_MMSPeriodFormat, MMSPeriodFormat } from "../TS33128Payloads/MMSPeriodFormat.ta.mjs";
-// export { MMSPeriodFormat, _enum_for_MMSPeriodFormat, MMSPeriodFormat_absolute /* IMPORTED_LONG_ENUMERATION_ITEM */, absolute /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSPeriodFormat_relative /* IMPORTED_LONG_ENUMERATION_ITEM */, relative /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMSPeriodFormat, _encode_MMSPeriodFormat } from "../TS33128Payloads/MMSPeriodFormat.ta.mjs";
 
 
 /**

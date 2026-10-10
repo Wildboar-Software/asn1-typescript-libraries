@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiscoveredEAS, _decode_DiscoveredEAS, _encode_DiscoveredEAS } from "../TS33128Payloads/DiscoveredEAS.ta.mjs";
-// export { DiscoveredEAS, _decode_DiscoveredEAS, _encode_DiscoveredEAS } from "../TS33128Payloads/DiscoveredEAS.ta.mjs";
 import { EDNConfigurationInfo, _decode_EDNConfigurationInfo, _encode_EDNConfigurationInfo } from "../TS33128Payloads/EDNConfigurationInfo.ta.mjs";
-// export { EDNConfigurationInfo, _decode_EDNConfigurationInfo, _encode_EDNConfigurationInfo } from "../TS33128Payloads/EDNConfigurationInfo.ta.mjs";
 
 
 /**

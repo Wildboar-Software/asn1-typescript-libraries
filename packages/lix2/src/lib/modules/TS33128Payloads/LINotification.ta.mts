@@ -7,13 +7,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LINotificationType, _decode_LINotificationType, _encode_LINotificationType, _enum_for_LINotificationType } from "../TS33128Payloads/LINotificationType.ta.mjs";
-// export { LINotificationType, _enum_for_LINotificationType, LINotificationType_activation /* IMPORTED_LONG_ENUMERATION_ITEM */, activation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LINotificationType_deactivation /* IMPORTED_LONG_ENUMERATION_ITEM */, deactivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, LINotificationType_modification /* IMPORTED_LONG_ENUMERATION_ITEM */, modification /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LINotificationType, _encode_LINotificationType } from "../TS33128Payloads/LINotificationType.ta.mjs";
 import { TargetIdentifier, _decode_TargetIdentifier, _encode_TargetIdentifier } from "../TS33128Payloads/TargetIdentifier.ta.mjs";
-// export { TargetIdentifier, _decode_TargetIdentifier, _encode_TargetIdentifier } from "../TS33128Payloads/TargetIdentifier.ta.mjs";
 import { LIAppliedDeliveryInformation, _decode_LIAppliedDeliveryInformation, _encode_LIAppliedDeliveryInformation } from "../TS33128Payloads/LIAppliedDeliveryInformation.ta.mjs";
-// export { LIAppliedDeliveryInformation, _decode_LIAppliedDeliveryInformation, _encode_LIAppliedDeliveryInformation } from "../TS33128Payloads/LIAppliedDeliveryInformation.ta.mjs";
 import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
-// export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 
 
 /**

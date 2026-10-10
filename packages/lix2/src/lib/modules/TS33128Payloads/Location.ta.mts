@@ -6,19 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LocationInfo, _decode_LocationInfo, _encode_LocationInfo } from "../TS33128Payloads/LocationInfo.ta.mjs";
-// export { LocationInfo, _decode_LocationInfo, _encode_LocationInfo } from "../TS33128Payloads/LocationInfo.ta.mjs";
 import { PositioningInfo, _decode_PositioningInfo, _encode_PositioningInfo } from "../TS33128Payloads/PositioningInfo.ta.mjs";
-// export { PositioningInfo, _decode_PositioningInfo, _encode_PositioningInfo } from "../TS33128Payloads/PositioningInfo.ta.mjs";
 import { LocationPresenceReport, _decode_LocationPresenceReport, _encode_LocationPresenceReport } from "../TS33128Payloads/LocationPresenceReport.ta.mjs";
-// export { LocationPresenceReport, _decode_LocationPresenceReport, _encode_LocationPresenceReport } from "../TS33128Payloads/LocationPresenceReport.ta.mjs";
 import { FourGPositioningInfo, _decode_FourGPositioningInfo, _encode_FourGPositioningInfo } from "../TS33128Payloads/FourGPositioningInfo.ta.mjs";
-// export { FourGPositioningInfo, _decode_FourGPositioningInfo, _encode_FourGPositioningInfo } from "../TS33128Payloads/FourGPositioningInfo.ta.mjs";
 import { FourGLocationInfo, _decode_FourGLocationInfo, _encode_FourGLocationInfo } from "../TS33128Payloads/FourGLocationInfo.ta.mjs";
-// export { FourGLocationInfo, _decode_FourGLocationInfo, _encode_FourGLocationInfo } from "../TS33128Payloads/FourGLocationInfo.ta.mjs";
 import { IMSLocation, _decode_IMSLocation, _encode_IMSLocation } from "../TS33128Payloads/IMSLocation.ta.mjs";
-// export { IMSLocation, _decode_IMSLocation, _encode_IMSLocation } from "../TS33128Payloads/IMSLocation.ta.mjs";
 import { CoarseLocation, _decode_CoarseLocation, _encode_CoarseLocation } from "../TS33128Payloads/CoarseLocation.ta.mjs";
-// export { CoarseLocation, _decode_CoarseLocation, _encode_CoarseLocation } from "../TS33128Payloads/CoarseLocation.ta.mjs";
 
 
 /**

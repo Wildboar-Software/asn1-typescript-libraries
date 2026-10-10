@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PDNPCO, _decode_PDNPCO, _encode_PDNPCO } from "../TS33128Payloads/PDNPCO.ta.mjs";
-// export { PDNPCO, _decode_PDNPCO, _encode_PDNPCO } from "../TS33128Payloads/PDNPCO.ta.mjs";
 
 
 /**

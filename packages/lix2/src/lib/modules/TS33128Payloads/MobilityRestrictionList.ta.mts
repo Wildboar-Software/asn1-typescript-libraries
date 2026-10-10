@@ -6,15 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
-// export { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
 import { EquivalentPLMNs, _decode_EquivalentPLMNs, _encode_EquivalentPLMNs } from "../TS33128Payloads/EquivalentPLMNs.ta.mjs";
-// export { EquivalentPLMNs, _decode_EquivalentPLMNs, _encode_EquivalentPLMNs } from "../TS33128Payloads/EquivalentPLMNs.ta.mjs";
 import { RATRestrictions, _decode_RATRestrictions, _encode_RATRestrictions } from "../TS33128Payloads/RATRestrictions.ta.mjs";
-// export { RATRestrictions, _decode_RATRestrictions, _encode_RATRestrictions } from "../TS33128Payloads/RATRestrictions.ta.mjs";
 import { ForbiddenAreaInformation, _decode_ForbiddenAreaInformation, _encode_ForbiddenAreaInformation } from "../TS33128Payloads/ForbiddenAreaInformation.ta.mjs";
-// export { ForbiddenAreaInformation, _decode_ForbiddenAreaInformation, _encode_ForbiddenAreaInformation } from "../TS33128Payloads/ForbiddenAreaInformation.ta.mjs";
 import { ServiceAreaInformation, _decode_ServiceAreaInformation, _encode_ServiceAreaInformation } from "../TS33128Payloads/ServiceAreaInformation.ta.mjs";
-// export { ServiceAreaInformation, _decode_ServiceAreaInformation, _encode_ServiceAreaInformation } from "../TS33128Payloads/ServiceAreaInformation.ta.mjs";
 
 
 /**

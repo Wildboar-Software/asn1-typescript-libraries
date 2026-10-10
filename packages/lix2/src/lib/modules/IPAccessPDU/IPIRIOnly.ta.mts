@@ -8,10 +8,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPInformation, _decode_IPInformation, _encode_IPInformation } from "../IPAccessPDU/IPInformation.ta.mjs";
-// export { IPInformation, _decode_IPInformation, _encode_IPInformation } from "../IPAccessPDU/IPInformation.ta.mjs";
 import { ProtocolInformation, _decode_ProtocolInformation, _encode_ProtocolInformation } from "../IPAccessPDU/ProtocolInformation.ta.mjs";
 import { PDSRInformation, _decode_PDSRInformation, _encode_PDSRInformation } from "../IPAccessPDU/PDSRInformation.ta.mjs";
-// export { ProtocolInformation, _decode_ProtocolInformation, _encode_ProtocolInformation } from "../IPAccessPDU/ProtocolInformation.ta.mjs";
 
 
 /**

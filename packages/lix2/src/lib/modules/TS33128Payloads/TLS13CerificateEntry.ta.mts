@@ -8,9 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13CertificateType, _decode_TLS13CertificateType, _encode_TLS13CertificateType, _enum_for_TLS13CertificateType } from "../TS33128Payloads/TLS13CertificateType.ta.mjs";
-// export { TLS13CertificateType, _enum_for_TLS13CertificateType, TLS13CertificateType_x509 /* IMPORTED_LONG_ENUMERATION_ITEM */, x509 /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13CertificateType_rawPublicKey /* IMPORTED_LONG_ENUMERATION_ITEM */, rawPublicKey /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLS13CertificateType, _encode_TLS13CertificateType } from "../TS33128Payloads/TLS13CertificateType.ta.mjs";
 import { TLS13Extension, _decode_TLS13Extension, _encode_TLS13Extension } from "../TS33128Payloads/TLS13Extension.ta.mjs";
-// export { TLS13Extension, _decode_TLS13Extension, _encode_TLS13Extension } from "../TS33128Payloads/TLS13Extension.ta.mjs";
 
 
 /**

@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMEServedGUMMEI, _decode_MMEServedGUMMEI, _encode_MMEServedGUMMEI } from "../TS33128Payloads/MMEServedGUMMEI.ta.mjs";
-// export { MMEServedGUMMEI, _decode_MMEServedGUMMEI, _encode_MMEServedGUMMEI } from "../TS33128Payloads/MMEServedGUMMEI.ta.mjs";
 
 
 /**

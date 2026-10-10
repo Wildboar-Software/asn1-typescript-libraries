@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ConnectedENGNB, _decode_ConnectedENGNB, _encode_ConnectedENGNB } from "../TS33128Payloads/ConnectedENGNB.ta.mjs";
-// export { ConnectedENGNB, _decode_ConnectedENGNB, _encode_ConnectedENGNB } from "../TS33128Payloads/ConnectedENGNB.ta.mjs";
 
 
 /**

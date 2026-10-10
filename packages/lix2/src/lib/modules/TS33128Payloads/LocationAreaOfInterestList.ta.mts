@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AreaOfInterestItem, _decode_AreaOfInterestItem, _encode_AreaOfInterestItem } from "../TS33128Payloads/AreaOfInterestItem.ta.mjs";
-// export { AreaOfInterestItem, _decode_AreaOfInterestItem, _encode_AreaOfInterestItem } from "../TS33128Payloads/AreaOfInterestItem.ta.mjs";
 
 
 /**

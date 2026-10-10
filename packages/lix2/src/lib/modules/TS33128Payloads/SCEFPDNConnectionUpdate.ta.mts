@@ -6,25 +6,15 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
 import { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
-// export { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
 import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
-// export { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 import { Initiator, _decode_Initiator, _encode_Initiator, _enum_for_Initiator } from "../TS33128Payloads/Initiator.ta.mjs";
-// export { Initiator, _enum_for_Initiator, Initiator_uE /* IMPORTED_LONG_ENUMERATION_ITEM */, uE /* IMPORTED_SHORT_ENUMERATION_ITEM */, Initiator_network /* IMPORTED_LONG_ENUMERATION_ITEM */, network /* IMPORTED_SHORT_ENUMERATION_ITEM */, Initiator_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Initiator, _encode_Initiator } from "../TS33128Payloads/Initiator.ta.mjs";
 import { RDSPortNumber, _decode_RDSPortNumber, _encode_RDSPortNumber } from "../TS33128Payloads/RDSPortNumber.ta.mjs";
-// export { RDSPortNumber, _decode_RDSPortNumber, _encode_RDSPortNumber } from "../TS33128Payloads/RDSPortNumber.ta.mjs";
 import { ApplicationID, _decode_ApplicationID, _encode_ApplicationID } from "../TS33128Payloads/ApplicationID.ta.mjs";
-// export { ApplicationID, _decode_ApplicationID, _encode_ApplicationID } from "../TS33128Payloads/ApplicationID.ta.mjs";
 import { SCSASID, _decode_SCSASID, _encode_SCSASID } from "../TS33128Payloads/SCSASID.ta.mjs";
-// export { SCSASID, _decode_SCSASID, _encode_SCSASID } from "../TS33128Payloads/SCSASID.ta.mjs";
 import { RDSAction, _decode_RDSAction, _encode_RDSAction, _enum_for_RDSAction } from "../TS33128Payloads/RDSAction.ta.mjs";
-// export { RDSAction, _enum_for_RDSAction, RDSAction_reservePort /* IMPORTED_LONG_ENUMERATION_ITEM */, reservePort /* IMPORTED_SHORT_ENUMERATION_ITEM */, RDSAction_releasePort /* IMPORTED_LONG_ENUMERATION_ITEM */, releasePort /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RDSAction, _encode_RDSAction } from "../TS33128Payloads/RDSAction.ta.mjs";
 import { SerializationFormat, _decode_SerializationFormat, _encode_SerializationFormat, _enum_for_SerializationFormat } from "../TS33128Payloads/SerializationFormat.ta.mjs";
-// export { SerializationFormat, _enum_for_SerializationFormat, SerializationFormat_xml /* IMPORTED_LONG_ENUMERATION_ITEM */, xml /* IMPORTED_SHORT_ENUMERATION_ITEM */, SerializationFormat_json /* IMPORTED_LONG_ENUMERATION_ITEM */, json /* IMPORTED_SHORT_ENUMERATION_ITEM */, SerializationFormat_cbor /* IMPORTED_LONG_ENUMERATION_ITEM */, cbor /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SerializationFormat, _encode_SerializationFormat } from "../TS33128Payloads/SerializationFormat.ta.mjs";
 import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
-// export { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
 
 
 /**

@@ -6,15 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCC, _decode_MCC, _encode_MCC } from "../TS33128Payloads/MCC.ta.mjs";
-// export { MCC, _decode_MCC, _encode_MCC } from "../TS33128Payloads/MCC.ta.mjs";
 import { MNC, _decode_MNC, _encode_MNC } from "../TS33128Payloads/MNC.ta.mjs";
-// export { MNC, _decode_MNC, _encode_MNC } from "../TS33128Payloads/MNC.ta.mjs";
 import { MMEGroupID, _decode_MMEGroupID, _encode_MMEGroupID } from "../TS33128Payloads/MMEGroupID.ta.mjs";
-// export { MMEGroupID, _decode_MMEGroupID, _encode_MMEGroupID } from "../TS33128Payloads/MMEGroupID.ta.mjs";
 import { MMECode, _decode_MMECode, _encode_MMECode } from "../TS33128Payloads/MMECode.ta.mjs";
-// export { MMECode, _decode_MMECode, _encode_MMECode } from "../TS33128Payloads/MMECode.ta.mjs";
 import { TMSI, _decode_TMSI, _encode_TMSI } from "../TS33128Payloads/TMSI.ta.mjs";
-// export { TMSI, _decode_TMSI, _encode_TMSI } from "../TS33128Payloads/TMSI.ta.mjs";
 
 
 /**

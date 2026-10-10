@@ -5,11 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NchfChargingDataRequest, _decode_NchfChargingDataRequest, _encode_NchfChargingDataRequest } from "../TS33128Payloads/NchfChargingDataRequest.ta.mjs";
-// export { NchfChargingDataRequest, _decode_NchfChargingDataRequest, _encode_NchfChargingDataRequest } from "../TS33128Payloads/NchfChargingDataRequest.ta.mjs";
 import { RfChargingDataRequest, _decode_RfChargingDataRequest, _encode_RfChargingDataRequest } from "../TS33128Payloads/RfChargingDataRequest.ta.mjs";
-// export { RfChargingDataRequest, _decode_RfChargingDataRequest, _encode_RfChargingDataRequest } from "../TS33128Payloads/RfChargingDataRequest.ta.mjs";
 import { TranslatedChargingDataInfo, _decode_TranslatedChargingDataInfo, _encode_TranslatedChargingDataInfo } from "../TS33128Payloads/TranslatedChargingDataInfo.ta.mjs";
-// export { TranslatedChargingDataInfo, _decode_TranslatedChargingDataInfo, _encode_TranslatedChargingDataInfo } from "../TS33128Payloads/TranslatedChargingDataInfo.ta.mjs";
 
 
 /**

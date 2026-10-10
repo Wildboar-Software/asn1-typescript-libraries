@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RCSSessionLeg, _decode_RCSSessionLeg, _encode_RCSSessionLeg, _enum_for_RCSSessionLeg } from "../TS33128Payloads/RCSSessionLeg.ta.mjs";
-// export { RCSSessionLeg, _enum_for_RCSSessionLeg, RCSSessionLeg_remoteLeg /* IMPORTED_LONG_ENUMERATION_ITEM */, remoteLeg /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionLeg_localLeg /* IMPORTED_LONG_ENUMERATION_ITEM */, localLeg /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RCSSessionLeg, _encode_RCSSessionLeg } from "../TS33128Payloads/RCSSessionLeg.ta.mjs";
 import { IMSPayload, _decode_IMSPayload, _encode_IMSPayload } from "../TS33128Payloads/IMSPayload.ta.mjs";
-// export { IMSPayload, _decode_IMSPayload, _encode_IMSPayload } from "../TS33128Payloads/IMSPayload.ta.mjs";
 
 
 /**

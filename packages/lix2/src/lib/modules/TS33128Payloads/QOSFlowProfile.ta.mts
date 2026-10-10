@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FiveQI, _decode_FiveQI, _encode_FiveQI } from "../TS33128Payloads/FiveQI.ta.mjs";
-// export { FiveQI, _decode_FiveQI, _encode_FiveQI } from "../TS33128Payloads/FiveQI.ta.mjs";
 
 
 /**

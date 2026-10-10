@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
-// export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SBIType.ta.mjs";
-// export { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SBIType.ta.mjs";
 import { NAOperationType, _decode_NAOperationType, _encode_NAOperationType, _enum_for_NAOperationType } from "../TS33128Payloads/NAOperationType.ta.mjs";
-// export { NAOperationType, _enum_for_NAOperationType, NAOperationType_createNetworkAssistanceSession /* IMPORTED_LONG_ENUMERATION_ITEM */, createNetworkAssistanceSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, NAOperationType_retrieveNetworkAssistanceSession /* IMPORTED_LONG_ENUMERATION_ITEM */, retrieveNetworkAssistanceSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, NAOperationType_updateNetworkAssistanceSession /* IMPORTED_LONG_ENUMERATION_ITEM */, updateNetworkAssistanceSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, NAOperationType_patchNetworkAssistanceSession /* IMPORTED_LONG_ENUMERATION_ITEM */, patchNetworkAssistanceSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, NAOperationType_destroyNetworkAssistanceSession /* IMPORTED_LONG_ENUMERATION_ITEM */, destroyNetworkAssistanceSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, NAOperationType_requestBitRateRecommendation /* IMPORTED_LONG_ENUMERATION_ITEM */, requestBitRateRecommendation /* IMPORTED_SHORT_ENUMERATION_ITEM */, NAOperationType_requestDeliveryBoost /* IMPORTED_LONG_ENUMERATION_ITEM */, requestDeliveryBoost /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NAOperationType, _encode_NAOperationType } from "../TS33128Payloads/NAOperationType.ta.mjs";
 
 
 /**

@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceAreaInfo, _decode_ServiceAreaInfo, _encode_ServiceAreaInfo } from "../TS33128Payloads/ServiceAreaInfo.ta.mjs";
-// export { ServiceAreaInfo, _decode_ServiceAreaInfo, _encode_ServiceAreaInfo } from "../TS33128Payloads/ServiceAreaInfo.ta.mjs";
 
 
 /**

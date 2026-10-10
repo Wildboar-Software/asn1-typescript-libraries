@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMSQuotaUnit, _decode_MMSQuotaUnit, _encode_MMSQuotaUnit, _enum_for_MMSQuotaUnit } from "../TS33128Payloads/MMSQuotaUnit.ta.mjs";
-// export { MMSQuotaUnit, _enum_for_MMSQuotaUnit, MMSQuotaUnit_numMessages /* IMPORTED_LONG_ENUMERATION_ITEM */, numMessages /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSQuotaUnit_bytes /* IMPORTED_LONG_ENUMERATION_ITEM */, bytes /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMSQuotaUnit, _encode_MMSQuotaUnit } from "../TS33128Payloads/MMSQuotaUnit.ta.mjs";
 
 
 /**

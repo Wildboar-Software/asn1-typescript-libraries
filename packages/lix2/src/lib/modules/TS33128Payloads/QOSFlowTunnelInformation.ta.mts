@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FTEID, _decode_FTEID, _encode_FTEID } from "../TS33128Payloads/FTEID.ta.mjs";
-// export { FTEID, _decode_FTEID, _encode_FTEID } from "../TS33128Payloads/FTEID.ta.mjs";
 import { QOSFlowLists, _decode_QOSFlowLists, _encode_QOSFlowLists } from "../TS33128Payloads/QOSFlowLists.ta.mjs";
-// export { QOSFlowLists, _decode_QOSFlowLists, _encode_QOSFlowLists } from "../TS33128Payloads/QOSFlowLists.ta.mjs";
 
 
 /**

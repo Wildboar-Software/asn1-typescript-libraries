@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RATRestrictionItem, _decode_RATRestrictionItem, _encode_RATRestrictionItem } from "../TS33128Payloads/RATRestrictionItem.ta.mjs";
-// export { RATRestrictionItem, _decode_RATRestrictionItem, _encode_RATRestrictionItem } from "../TS33128Payloads/RATRestrictionItem.ta.mjs";
 
 
 /**

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_FiveGSUserState, _encode_FiveGSUserState, _enum_for_FiveGSUserState, FiveGSUserState } from "../TS33128Payloads/FiveGSUserState.ta.mjs";
-// export { FiveGSUserState, _enum_for_FiveGSUserState, FiveGSUserState_deregistered /* IMPORTED_LONG_ENUMERATION_ITEM */, deregistered /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGSUserState_registeredNotReachableForPaging /* IMPORTED_LONG_ENUMERATION_ITEM */, registeredNotReachableForPaging /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGSUserState_registeredReachableForPaging /* IMPORTED_LONG_ENUMERATION_ITEM */, registeredReachableForPaging /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGSUserState_connectedNotReachableForPaging /* IMPORTED_LONG_ENUMERATION_ITEM */, connectedNotReachableForPaging /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGSUserState_connectedReachableForPaging /* IMPORTED_LONG_ENUMERATION_ITEM */, connectedReachableForPaging /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGSUserState_notProvidedFromAMF /* IMPORTED_LONG_ENUMERATION_ITEM */, notProvidedFromAMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FiveGSUserState, _encode_FiveGSUserState } from "../TS33128Payloads/FiveGSUserState.ta.mjs";
 import { _decode_AccessType, _encode_AccessType, _enum_for_AccessType, AccessType } from "../TS33128Payloads/AccessType.ta.mjs";
-// export { AccessType, _enum_for_AccessType, AccessType_threeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_nonThreeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, nonThreeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_threeGPPandNonThreeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPandNonThreeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessType, _encode_AccessType } from "../TS33128Payloads/AccessType.ta.mjs";
 
 
 /**

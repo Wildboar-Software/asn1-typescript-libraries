@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EASCharacteristics, _decode_EASCharacteristics, _encode_EASCharacteristics } from "../TS33128Payloads/EASCharacteristics.ta.mjs";
-// export { EASCharacteristics, _decode_EASCharacteristics, _encode_EASCharacteristics } from "../TS33128Payloads/EASCharacteristics.ta.mjs";
 
 
 /**

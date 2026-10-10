@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PFDFlowDescription, _decode_PFDFlowDescription, _encode_PFDFlowDescription } from "../TS33128Payloads/PFDFlowDescription.ta.mjs";
-// export { PFDFlowDescription, _decode_PFDFlowDescription, _encode_PFDFlowDescription } from "../TS33128Payloads/PFDFlowDescription.ta.mjs";
 
 
 /**

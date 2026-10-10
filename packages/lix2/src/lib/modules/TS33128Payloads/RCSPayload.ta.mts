@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EncapsulatedRCSPayload, _decode_EncapsulatedRCSPayload, _encode_EncapsulatedRCSPayload } from "../TS33128Payloads/EncapsulatedRCSPayload.ta.mjs";
-// export { EncapsulatedRCSPayload, _decode_EncapsulatedRCSPayload, _encode_EncapsulatedRCSPayload } from "../TS33128Payloads/EncapsulatedRCSPayload.ta.mjs";
 import { ModifiedRCSPayload, _decode_ModifiedRCSPayload, _encode_ModifiedRCSPayload } from "../TS33128Payloads/ModifiedRCSPayload.ta.mjs";
-// export { ModifiedRCSPayload, _decode_ModifiedRCSPayload, _encode_ModifiedRCSPayload } from "../TS33128Payloads/ModifiedRCSPayload.ta.mjs";
 
 
 /**
