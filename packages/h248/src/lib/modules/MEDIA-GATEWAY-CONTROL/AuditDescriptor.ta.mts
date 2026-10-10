@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuditDescriptor_auditToken, _decode_AuditDescriptor_auditToken, _encode_AuditDescriptor_auditToken } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor-auditToken.ta.mjs";
-// export { AuditDescriptor_auditToken, AuditDescriptor_auditToken_muxToken /* IMPORTED_LONG_NAMED_BIT */, muxToken /* IMPORTED_SHORT_NAMED_BIT */, AuditDescriptor_auditToken_modemToken /* IMPORTED_LONG_NAMED_BIT */, modemToken /* IMPORTED_SHORT_NAMED_BIT */, AuditDescriptor_auditToken_mediaToken /* IMPORTED_LONG_NAMED_BIT */, mediaToken /* IMPORTED_SHORT_NAMED_BIT */, AuditDescriptor_auditToken_eventsToken /* IMPORTED_LONG_NAMED_BIT */, eventsToken /* IMPORTED_SHORT_NAMED_BIT */, AuditDescriptor_auditToken_signalsToken /* IMPORTED_LONG_NAMED_BIT */, signalsToken /* IMPORTED_SHORT_NAMED_BIT */, AuditDescriptor_auditToken_digitMapToken /* IMPORTED_LONG_NAMED_BIT */, digitMapToken /* IMPORTED_SHORT_NAMED_BIT */, AuditDescriptor_auditToken_statsToken /* IMPORTED_LONG_NAMED_BIT */, statsToken /* IMPORTED_SHORT_NAMED_BIT */, AuditDescriptor_auditToken_observedEventsToken /* IMPORTED_LONG_NAMED_BIT */, observedEventsToken /* IMPORTED_SHORT_NAMED_BIT */, AuditDescriptor_auditToken_packagesToken /* IMPORTED_LONG_NAMED_BIT */, packagesToken /* IMPORTED_SHORT_NAMED_BIT */, AuditDescriptor_auditToken_eventBufferToken /* IMPORTED_LONG_NAMED_BIT */, eventBufferToken /* IMPORTED_SHORT_NAMED_BIT */, _decode_AuditDescriptor_auditToken, _encode_AuditDescriptor_auditToken } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor-auditToken.ta.mjs";
 import { IndAuditParameter, _decode_IndAuditParameter, _encode_IndAuditParameter } from "../MEDIA-GATEWAY-CONTROL/IndAuditParameter.ta.mjs";
-// export { IndAuditParameter, _decode_IndAuditParameter, _encode_IndAuditParameter } from "../MEDIA-GATEWAY-CONTROL/IndAuditParameter.ta.mjs";
 
 
 /**

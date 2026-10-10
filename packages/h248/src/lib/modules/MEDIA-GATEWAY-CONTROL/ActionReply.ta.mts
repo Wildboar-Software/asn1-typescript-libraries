@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ContextID, _decode_ContextID, _encode_ContextID } from "../MEDIA-GATEWAY-CONTROL/ContextID.ta.mjs";
-// export { ContextID, _decode_ContextID, _encode_ContextID } from "../MEDIA-GATEWAY-CONTROL/ContextID.ta.mjs";
 import { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
-// export { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
 import { ContextRequest, _decode_ContextRequest, _encode_ContextRequest } from "../MEDIA-GATEWAY-CONTROL/ContextRequest.ta.mjs";
-// export { ContextRequest, _decode_ContextRequest, _encode_ContextRequest } from "../MEDIA-GATEWAY-CONTROL/ContextRequest.ta.mjs";
 import { CommandReply, _decode_CommandReply, _encode_CommandReply } from "../MEDIA-GATEWAY-CONTROL/CommandReply.ta.mjs";
-// export { CommandReply, _decode_CommandReply, _encode_CommandReply } from "../MEDIA-GATEWAY-CONTROL/CommandReply.ta.mjs";
 
 
 /**

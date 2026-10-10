@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudPropertyParm, _decode_IndAudPropertyParm, _encode_IndAudPropertyParm } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyParm.ta.mjs";
-// export { IndAudPropertyParm, _decode_IndAudPropertyParm, _encode_IndAudPropertyParm } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyParm.ta.mjs";
 import { ServiceState, _decode_ServiceState, _encode_ServiceState, _enum_for_ServiceState } from "../MEDIA-GATEWAY-CONTROL/ServiceState.ta.mjs";
-// export { ServiceState, _enum_for_ServiceState, ServiceState_test /* IMPORTED_LONG_ENUMERATION_ITEM */, test /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceState_outOfSvc /* IMPORTED_LONG_ENUMERATION_ITEM */, outOfSvc /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceState_inSvc /* IMPORTED_LONG_ENUMERATION_ITEM */, inSvc /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ServiceState, _encode_ServiceState } from "../MEDIA-GATEWAY-CONTROL/ServiceState.ta.mjs";
 
 
 /**

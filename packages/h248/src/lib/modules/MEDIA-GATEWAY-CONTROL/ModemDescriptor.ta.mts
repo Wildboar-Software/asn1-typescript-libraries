@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ModemType, _decode_ModemType, _encode_ModemType } from "../MEDIA-GATEWAY-CONTROL/ModemType.ta.mjs";
-// export { ModemType, _enum_for_ModemType, ModemType_v18 /* IMPORTED_LONG_ENUMERATION_ITEM */, v18 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModemType_v22 /* IMPORTED_LONG_ENUMERATION_ITEM */, v22 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModemType_v22bis /* IMPORTED_LONG_ENUMERATION_ITEM */, v22bis /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModemType_v32 /* IMPORTED_LONG_ENUMERATION_ITEM */, v32 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModemType_v32bis /* IMPORTED_LONG_ENUMERATION_ITEM */, v32bis /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModemType_v34 /* IMPORTED_LONG_ENUMERATION_ITEM */, v34 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModemType_v90 /* IMPORTED_LONG_ENUMERATION_ITEM */, v90 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModemType_v91 /* IMPORTED_LONG_ENUMERATION_ITEM */, v91 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModemType_synchISDN /* IMPORTED_LONG_ENUMERATION_ITEM */, synchISDN /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ModemType, _encode_ModemType } from "../MEDIA-GATEWAY-CONTROL/ModemType.ta.mjs";
 import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
-// export { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
 import { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } from "../MEDIA-GATEWAY-CONTROL/NonStandardData.ta.mjs";
-// export { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } from "../MEDIA-GATEWAY-CONTROL/NonStandardData.ta.mjs";
 
 
 /**

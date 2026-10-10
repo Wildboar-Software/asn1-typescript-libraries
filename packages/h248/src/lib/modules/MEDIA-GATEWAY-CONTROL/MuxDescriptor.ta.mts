@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MuxType, _decode_MuxType, _encode_MuxType, _enum_for_MuxType } from "../MEDIA-GATEWAY-CONTROL/MuxType.ta.mjs";
-// export { MuxType, _enum_for_MuxType, MuxType_h221 /* IMPORTED_LONG_ENUMERATION_ITEM */, h221 /* IMPORTED_SHORT_ENUMERATION_ITEM */, MuxType_h223 /* IMPORTED_LONG_ENUMERATION_ITEM */, h223 /* IMPORTED_SHORT_ENUMERATION_ITEM */, MuxType_h226 /* IMPORTED_LONG_ENUMERATION_ITEM */, h226 /* IMPORTED_SHORT_ENUMERATION_ITEM */, MuxType_v76 /* IMPORTED_LONG_ENUMERATION_ITEM */, v76 /* IMPORTED_SHORT_ENUMERATION_ITEM */, MuxType_nx64k /* IMPORTED_LONG_ENUMERATION_ITEM */, nx64k /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MuxType, _encode_MuxType } from "../MEDIA-GATEWAY-CONTROL/MuxType.ta.mjs";
 import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
-// export { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
 import { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } from "../MEDIA-GATEWAY-CONTROL/NonStandardData.ta.mjs";
-// export { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } from "../MEDIA-GATEWAY-CONTROL/NonStandardData.ta.mjs";
 
 
 /**

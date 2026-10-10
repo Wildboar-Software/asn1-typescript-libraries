@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
-// export { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
 import { AmmDescriptor, _decode_AmmDescriptor, _encode_AmmDescriptor } from "../MEDIA-GATEWAY-CONTROL/AmmDescriptor.ta.mjs";
-// export { AmmDescriptor, _decode_AmmDescriptor, _encode_AmmDescriptor } from "../MEDIA-GATEWAY-CONTROL/AmmDescriptor.ta.mjs";
 
 
 /**

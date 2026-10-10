@@ -5,13 +5,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AmmsReply, _decode_AmmsReply, _encode_AmmsReply } from "../MEDIA-GATEWAY-CONTROL/AmmsReply.ta.mjs";
-// export { AmmsReply, _decode_AmmsReply, _encode_AmmsReply } from "../MEDIA-GATEWAY-CONTROL/AmmsReply.ta.mjs";
 import { AuditReply, _decode_AuditReply, _encode_AuditReply } from "../MEDIA-GATEWAY-CONTROL/AuditReply.ta.mjs";
-// export { AuditReply, _decode_AuditReply, _encode_AuditReply } from "../MEDIA-GATEWAY-CONTROL/AuditReply.ta.mjs";
 import { NotifyReply, _decode_NotifyReply, _encode_NotifyReply } from "../MEDIA-GATEWAY-CONTROL/NotifyReply.ta.mjs";
-// export { NotifyReply, _decode_NotifyReply, _encode_NotifyReply } from "../MEDIA-GATEWAY-CONTROL/NotifyReply.ta.mjs";
 import { ServiceChangeReply, _decode_ServiceChangeReply, _encode_ServiceChangeReply } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeReply.ta.mjs";
-// export { ServiceChangeReply, _decode_ServiceChangeReply, _encode_ServiceChangeReply } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeReply.ta.mjs";
 
 
 /**

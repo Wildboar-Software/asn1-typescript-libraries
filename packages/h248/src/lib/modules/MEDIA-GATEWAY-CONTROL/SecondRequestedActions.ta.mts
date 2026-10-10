@@ -8,11 +8,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EventDM, _decode_EventDM, _encode_EventDM } from "../MEDIA-GATEWAY-CONTROL/EventDM.ta.mjs";
-// export { EventDM, _decode_EventDM, _encode_EventDM } from "../MEDIA-GATEWAY-CONTROL/EventDM.ta.mjs";
 import { SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
-// export { SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
 import { NotifyBehaviour, _decode_NotifyBehaviour, _encode_NotifyBehaviour } from "../MEDIA-GATEWAY-CONTROL/NotifyBehaviour.ta.mjs";
-// export { NotifyBehaviour, _decode_NotifyBehaviour, _encode_NotifyBehaviour } from "../MEDIA-GATEWAY-CONTROL/NotifyBehaviour.ta.mjs";
 
 
 /**

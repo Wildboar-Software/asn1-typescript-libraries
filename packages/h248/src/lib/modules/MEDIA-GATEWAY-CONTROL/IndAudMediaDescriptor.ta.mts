@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudTerminationStateDescriptor, _decode_IndAudTerminationStateDescriptor, _encode_IndAudTerminationStateDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudTerminationStateDescriptor.ta.mjs";
-// export { IndAudTerminationStateDescriptor, _decode_IndAudTerminationStateDescriptor, _encode_IndAudTerminationStateDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudTerminationStateDescriptor.ta.mjs";
 import { IndAudMediaDescriptor_streams, _decode_IndAudMediaDescriptor_streams, _encode_IndAudMediaDescriptor_streams } from "../MEDIA-GATEWAY-CONTROL/IndAudMediaDescriptor-streams.ta.mjs";
-// export { IndAudMediaDescriptor_streams, _decode_IndAudMediaDescriptor_streams, _encode_IndAudMediaDescriptor_streams } from "../MEDIA-GATEWAY-CONTROL/IndAudMediaDescriptor-streams.ta.mjs";
 
 
 /**

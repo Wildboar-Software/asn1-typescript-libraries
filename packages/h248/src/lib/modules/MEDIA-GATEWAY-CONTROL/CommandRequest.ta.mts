@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Command, _decode_Command, _encode_Command } from "../MEDIA-GATEWAY-CONTROL/Command.ta.mjs";
-// export { Command, _decode_Command, _encode_Command } from "../MEDIA-GATEWAY-CONTROL/Command.ta.mjs";
 
 
 /**

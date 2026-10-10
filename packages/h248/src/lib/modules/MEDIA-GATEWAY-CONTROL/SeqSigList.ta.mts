@@ -8,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Signal, _decode_Signal, _encode_Signal } from "../MEDIA-GATEWAY-CONTROL/Signal.ta.mjs";
-// export { Signal, _decode_Signal, _encode_Signal } from "../MEDIA-GATEWAY-CONTROL/Signal.ta.mjs";
 
 
 /**

@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PropertyGroup, _decode_PropertyGroup, _encode_PropertyGroup } from "../MEDIA-GATEWAY-CONTROL/PropertyGroup.ta.mjs";
-// export { PropertyGroup, _decode_PropertyGroup, _encode_PropertyGroup } from "../MEDIA-GATEWAY-CONTROL/PropertyGroup.ta.mjs";
 
 
 /**

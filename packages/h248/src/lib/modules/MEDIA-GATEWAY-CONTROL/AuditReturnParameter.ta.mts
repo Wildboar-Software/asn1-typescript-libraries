@@ -5,29 +5,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
-// export { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
 import { MediaDescriptor, _decode_MediaDescriptor, _encode_MediaDescriptor } from "../MEDIA-GATEWAY-CONTROL/MediaDescriptor.ta.mjs";
-// export { MediaDescriptor, _decode_MediaDescriptor, _encode_MediaDescriptor } from "../MEDIA-GATEWAY-CONTROL/MediaDescriptor.ta.mjs";
 import { ModemDescriptor, _decode_ModemDescriptor, _encode_ModemDescriptor } from "../MEDIA-GATEWAY-CONTROL/ModemDescriptor.ta.mjs";
-// export { ModemDescriptor, _decode_ModemDescriptor, _encode_ModemDescriptor } from "../MEDIA-GATEWAY-CONTROL/ModemDescriptor.ta.mjs";
 import { MuxDescriptor, _decode_MuxDescriptor, _encode_MuxDescriptor } from "../MEDIA-GATEWAY-CONTROL/MuxDescriptor.ta.mjs";
-// export { MuxDescriptor, _decode_MuxDescriptor, _encode_MuxDescriptor } from "../MEDIA-GATEWAY-CONTROL/MuxDescriptor.ta.mjs";
 import { EventsDescriptor, _decode_EventsDescriptor, _encode_EventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/EventsDescriptor.ta.mjs";
-// export { EventsDescriptor, _decode_EventsDescriptor, _encode_EventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/EventsDescriptor.ta.mjs";
 import { EventBufferDescriptor, _decode_EventBufferDescriptor, _encode_EventBufferDescriptor } from "../MEDIA-GATEWAY-CONTROL/EventBufferDescriptor.ta.mjs";
-// export { EventBufferDescriptor, _decode_EventBufferDescriptor, _encode_EventBufferDescriptor } from "../MEDIA-GATEWAY-CONTROL/EventBufferDescriptor.ta.mjs";
 import { SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
-// export { SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
 import { DigitMapDescriptor, _decode_DigitMapDescriptor, _encode_DigitMapDescriptor } from "../MEDIA-GATEWAY-CONTROL/DigitMapDescriptor.ta.mjs";
-// export { DigitMapDescriptor, _decode_DigitMapDescriptor, _encode_DigitMapDescriptor } from "../MEDIA-GATEWAY-CONTROL/DigitMapDescriptor.ta.mjs";
 import { ObservedEventsDescriptor, _decode_ObservedEventsDescriptor, _encode_ObservedEventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/ObservedEventsDescriptor.ta.mjs";
-// export { ObservedEventsDescriptor, _decode_ObservedEventsDescriptor, _encode_ObservedEventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/ObservedEventsDescriptor.ta.mjs";
 import { StatisticsDescriptor, _decode_StatisticsDescriptor, _encode_StatisticsDescriptor } from "../MEDIA-GATEWAY-CONTROL/StatisticsDescriptor.ta.mjs";
-// export { StatisticsDescriptor, _decode_StatisticsDescriptor, _encode_StatisticsDescriptor } from "../MEDIA-GATEWAY-CONTROL/StatisticsDescriptor.ta.mjs";
 import { PackagesDescriptor, _decode_PackagesDescriptor, _encode_PackagesDescriptor } from "../MEDIA-GATEWAY-CONTROL/PackagesDescriptor.ta.mjs";
-// export { PackagesDescriptor, _decode_PackagesDescriptor, _encode_PackagesDescriptor } from "../MEDIA-GATEWAY-CONTROL/PackagesDescriptor.ta.mjs";
 import { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor.ta.mjs";
-// export { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor.ta.mjs";
 
 
 /**

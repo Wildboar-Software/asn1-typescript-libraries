@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { StreamMode, _decode_StreamMode, _encode_StreamMode, _enum_for_StreamMode } from "../MEDIA-GATEWAY-CONTROL/StreamMode.ta.mjs";
-// export { StreamMode, _enum_for_StreamMode, StreamMode_sendOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, sendOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, StreamMode_recvOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, recvOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, StreamMode_sendRecv /* IMPORTED_LONG_ENUMERATION_ITEM */, sendRecv /* IMPORTED_SHORT_ENUMERATION_ITEM */, StreamMode_inactive /* IMPORTED_LONG_ENUMERATION_ITEM */, inactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, StreamMode_loopBack /* IMPORTED_LONG_ENUMERATION_ITEM */, loopBack /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_StreamMode, _encode_StreamMode } from "../MEDIA-GATEWAY-CONTROL/StreamMode.ta.mjs";
 import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
-// export { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
 
 
 /**

@@ -9,19 +9,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SignalName, _decode_SignalName, _encode_SignalName } from "../MEDIA-GATEWAY-CONTROL/SignalName.ta.mjs";
-// export { SignalName, _decode_SignalName, _encode_SignalName } from "../MEDIA-GATEWAY-CONTROL/SignalName.ta.mjs";
 import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
-// export { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
 import { SignalType, _decode_SignalType, _encode_SignalType, _enum_for_SignalType } from "../MEDIA-GATEWAY-CONTROL/SignalType.ta.mjs";
-// export { SignalType, _enum_for_SignalType, SignalType_brief /* IMPORTED_LONG_ENUMERATION_ITEM */, brief /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignalType_onOff /* IMPORTED_LONG_ENUMERATION_ITEM */, onOff /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignalType_timeOut /* IMPORTED_LONG_ENUMERATION_ITEM */, timeOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SignalType, _encode_SignalType } from "../MEDIA-GATEWAY-CONTROL/SignalType.ta.mjs";
 import { NotifyCompletion, _decode_NotifyCompletion, _encode_NotifyCompletion } from "../MEDIA-GATEWAY-CONTROL/NotifyCompletion.ta.mjs";
-// export { NotifyCompletion, NotifyCompletion_onTimeOut /* IMPORTED_LONG_NAMED_BIT */, onTimeOut /* IMPORTED_SHORT_NAMED_BIT */, NotifyCompletion_onInterruptByEvent /* IMPORTED_LONG_NAMED_BIT */, onInterruptByEvent /* IMPORTED_SHORT_NAMED_BIT */, NotifyCompletion_onInterruptByNewSignalDescr /* IMPORTED_LONG_NAMED_BIT */, onInterruptByNewSignalDescr /* IMPORTED_SHORT_NAMED_BIT */, NotifyCompletion_otherReason /* IMPORTED_LONG_NAMED_BIT */, otherReason /* IMPORTED_SHORT_NAMED_BIT */, NotifyCompletion_onIteration /* IMPORTED_LONG_NAMED_BIT */, onIteration /* IMPORTED_SHORT_NAMED_BIT */, _decode_NotifyCompletion, _encode_NotifyCompletion } from "../MEDIA-GATEWAY-CONTROL/NotifyCompletion.ta.mjs";
 import { SigParameter, _decode_SigParameter, _encode_SigParameter } from "../MEDIA-GATEWAY-CONTROL/SigParameter.ta.mjs";
-// export { SigParameter, _decode_SigParameter, _encode_SigParameter } from "../MEDIA-GATEWAY-CONTROL/SigParameter.ta.mjs";
 import { SignalDirection, _decode_SignalDirection, _encode_SignalDirection, _enum_for_SignalDirection } from "../MEDIA-GATEWAY-CONTROL/SignalDirection.ta.mjs";
-// export { SignalDirection, _enum_for_SignalDirection, SignalDirection_internal /* IMPORTED_LONG_ENUMERATION_ITEM */, internal /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignalDirection_external /* IMPORTED_LONG_ENUMERATION_ITEM */, external /* IMPORTED_SHORT_ENUMERATION_ITEM */, SignalDirection_both /* IMPORTED_LONG_ENUMERATION_ITEM */, both /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SignalDirection, _encode_SignalDirection } from "../MEDIA-GATEWAY-CONTROL/SignalDirection.ta.mjs";
 import { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
-// export { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
 
 
 /**

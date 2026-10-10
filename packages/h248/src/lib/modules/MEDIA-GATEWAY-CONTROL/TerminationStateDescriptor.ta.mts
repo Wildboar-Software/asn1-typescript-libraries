@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
-// export { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
 import { EventBufferControl, _decode_EventBufferControl, _encode_EventBufferControl, _enum_for_EventBufferControl } from "../MEDIA-GATEWAY-CONTROL/EventBufferControl.ta.mjs";
-// export { EventBufferControl, _enum_for_EventBufferControl, EventBufferControl_off /* IMPORTED_LONG_ENUMERATION_ITEM */, off /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventBufferControl_lockStep /* IMPORTED_LONG_ENUMERATION_ITEM */, lockStep /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EventBufferControl, _encode_EventBufferControl } from "../MEDIA-GATEWAY-CONTROL/EventBufferControl.ta.mjs";
 import { ServiceState, _decode_ServiceState, _encode_ServiceState, _enum_for_ServiceState } from "../MEDIA-GATEWAY-CONTROL/ServiceState.ta.mjs";
-// export { ServiceState, _enum_for_ServiceState, ServiceState_test /* IMPORTED_LONG_ENUMERATION_ITEM */, test /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceState_outOfSvc /* IMPORTED_LONG_ENUMERATION_ITEM */, outOfSvc /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceState_inSvc /* IMPORTED_LONG_ENUMERATION_ITEM */, inSvc /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ServiceState, _encode_ServiceState } from "../MEDIA-GATEWAY-CONTROL/ServiceState.ta.mjs";
 
 
 /**

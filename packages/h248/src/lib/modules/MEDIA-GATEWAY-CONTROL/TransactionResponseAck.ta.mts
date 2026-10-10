@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TransactionAck, _decode_TransactionAck, _encode_TransactionAck } from "../MEDIA-GATEWAY-CONTROL/TransactionAck.ta.mjs";
-// export { TransactionAck, _decode_TransactionAck, _encode_TransactionAck } from "../MEDIA-GATEWAY-CONTROL/TransactionAck.ta.mjs";
 
 
 /**

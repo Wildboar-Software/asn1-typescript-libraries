@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
-// export { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
 import { RequestedEvent, _decode_RequestedEvent, _encode_RequestedEvent } from "../MEDIA-GATEWAY-CONTROL/RequestedEvent.ta.mjs";
-// export { RequestedEvent, _decode_RequestedEvent, _encode_RequestedEvent } from "../MEDIA-GATEWAY-CONTROL/RequestedEvent.ta.mjs";
 
 
 /**

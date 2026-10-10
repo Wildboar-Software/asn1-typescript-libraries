@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Signal, _decode_Signal, _encode_Signal } from "../MEDIA-GATEWAY-CONTROL/Signal.ta.mjs";
-// export { Signal, _decode_Signal, _encode_Signal } from "../MEDIA-GATEWAY-CONTROL/Signal.ta.mjs";
 import { SeqSigList, _decode_SeqSigList, _encode_SeqSigList } from "../MEDIA-GATEWAY-CONTROL/SeqSigList.ta.mjs";
-// export { SeqSigList, _decode_SeqSigList, _encode_SeqSigList } from "../MEDIA-GATEWAY-CONTROL/SeqSigList.ta.mjs";
 
 
 /**

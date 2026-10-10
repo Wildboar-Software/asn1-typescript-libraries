@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ErrorCode, _decode_ErrorCode, _encode_ErrorCode } from "../MEDIA-GATEWAY-CONTROL/ErrorCode.ta.mjs";
-// export { ErrorCode, _decode_ErrorCode, _encode_ErrorCode } from "../MEDIA-GATEWAY-CONTROL/ErrorCode.ta.mjs";
 import { ErrorText, _decode_ErrorText, _encode_ErrorText } from "../MEDIA-GATEWAY-CONTROL/ErrorText.ta.mjs";
-// export { ErrorText, _decode_ErrorText, _encode_ErrorText } from "../MEDIA-GATEWAY-CONTROL/ErrorText.ta.mjs";
 
 
 /**

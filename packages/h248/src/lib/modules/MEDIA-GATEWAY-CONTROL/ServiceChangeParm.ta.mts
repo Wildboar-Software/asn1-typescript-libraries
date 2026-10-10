@@ -9,21 +9,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceChangeMethod, _decode_ServiceChangeMethod, _encode_ServiceChangeMethod, _enum_for_ServiceChangeMethod } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeMethod.ta.mjs";
-// export { ServiceChangeMethod, _enum_for_ServiceChangeMethod, ServiceChangeMethod_failover /* IMPORTED_LONG_ENUMERATION_ITEM */, failover /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceChangeMethod_forced /* IMPORTED_LONG_ENUMERATION_ITEM */, forced /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceChangeMethod_graceful /* IMPORTED_LONG_ENUMERATION_ITEM */, graceful /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceChangeMethod_restart /* IMPORTED_LONG_ENUMERATION_ITEM */, restart /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceChangeMethod_disconnected /* IMPORTED_LONG_ENUMERATION_ITEM */, disconnected /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceChangeMethod_handOff /* IMPORTED_LONG_ENUMERATION_ITEM */, handOff /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ServiceChangeMethod, _encode_ServiceChangeMethod } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeMethod.ta.mjs";
 import { ServiceChangeAddress, _decode_ServiceChangeAddress, _encode_ServiceChangeAddress } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeAddress.ta.mjs";
-// export { ServiceChangeAddress, _decode_ServiceChangeAddress, _encode_ServiceChangeAddress } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeAddress.ta.mjs";
 import { ServiceChangeProfile, _decode_ServiceChangeProfile, _encode_ServiceChangeProfile } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeProfile.ta.mjs";
-// export { ServiceChangeProfile, _decode_ServiceChangeProfile, _encode_ServiceChangeProfile } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeProfile.ta.mjs";
 import { SCreasonValue, _decode_SCreasonValue, _encode_SCreasonValue } from "../MEDIA-GATEWAY-CONTROL/SCreasonValue.ta.mjs";
-// export { SCreasonValue, _decode_SCreasonValue, _encode_SCreasonValue } from "../MEDIA-GATEWAY-CONTROL/SCreasonValue.ta.mjs";
 import { MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
-// export { MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
 import { TimeNotation, _decode_TimeNotation, _encode_TimeNotation } from "../MEDIA-GATEWAY-CONTROL/TimeNotation.ta.mjs";
-// export { TimeNotation, _decode_TimeNotation, _encode_TimeNotation } from "../MEDIA-GATEWAY-CONTROL/TimeNotation.ta.mjs";
 import { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } from "../MEDIA-GATEWAY-CONTROL/NonStandardData.ta.mjs";
-// export { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } from "../MEDIA-GATEWAY-CONTROL/NonStandardData.ta.mjs";
 import { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor.ta.mjs";
-// export { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor.ta.mjs";
 
 
 /**

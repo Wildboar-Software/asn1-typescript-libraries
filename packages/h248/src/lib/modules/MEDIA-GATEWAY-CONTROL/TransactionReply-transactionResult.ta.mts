@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
-// export { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
 import { ActionReply, _decode_ActionReply, _encode_ActionReply } from "../MEDIA-GATEWAY-CONTROL/ActionReply.ta.mjs";
-// export { ActionReply, _decode_ActionReply, _encode_ActionReply } from "../MEDIA-GATEWAY-CONTROL/ActionReply.ta.mjs";
 
 
 /**

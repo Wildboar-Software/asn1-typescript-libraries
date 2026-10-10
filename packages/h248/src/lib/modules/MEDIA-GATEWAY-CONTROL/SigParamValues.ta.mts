@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SigParamValue, _decode_SigParamValue, _encode_SigParamValue } from "../MEDIA-GATEWAY-CONTROL/SigParamValue.ta.mjs";
-// export { SigParamValue, _decode_SigParamValue, _encode_SigParamValue } from "../MEDIA-GATEWAY-CONTROL/SigParamValue.ta.mjs";
 
 
 /**

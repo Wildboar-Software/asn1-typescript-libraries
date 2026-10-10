@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EventParameterName, _decode_EventParameterName, _encode_EventParameterName } from "../MEDIA-GATEWAY-CONTROL/EventParameterName.ta.mjs";
-// export { EventParameterName, _decode_EventParameterName, _encode_EventParameterName } from "../MEDIA-GATEWAY-CONTROL/EventParameterName.ta.mjs";
 import { EventParamValues, _decode_EventParamValues, _encode_EventParamValues } from "../MEDIA-GATEWAY-CONTROL/EventParamValues.ta.mjs";
-// export { EventParamValues, _decode_EventParamValues, _encode_EventParamValues } from "../MEDIA-GATEWAY-CONTROL/EventParamValues.ta.mjs";
 import { EventParameter_extraInfo, _decode_EventParameter_extraInfo, _encode_EventParameter_extraInfo } from "../MEDIA-GATEWAY-CONTROL/EventParameter-extraInfo.ta.mjs";
-// export { EventParameter_extraInfo, _decode_EventParameter_extraInfo, _encode_EventParameter_extraInfo } from "../MEDIA-GATEWAY-CONTROL/EventParameter-extraInfo.ta.mjs";
 
 
 /**

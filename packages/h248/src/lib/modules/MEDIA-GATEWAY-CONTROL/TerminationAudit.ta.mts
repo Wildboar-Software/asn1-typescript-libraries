@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuditReturnParameter, _decode_AuditReturnParameter, _encode_AuditReturnParameter } from "../MEDIA-GATEWAY-CONTROL/AuditReturnParameter.ta.mjs";
-// export { AuditReturnParameter, _decode_AuditReturnParameter, _encode_AuditReturnParameter } from "../MEDIA-GATEWAY-CONTROL/AuditReturnParameter.ta.mjs";
 
 
 /**

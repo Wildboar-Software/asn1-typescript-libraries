@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RegulatedEmbeddedDescriptor, _decode_RegulatedEmbeddedDescriptor, _encode_RegulatedEmbeddedDescriptor } from "../MEDIA-GATEWAY-CONTROL/RegulatedEmbeddedDescriptor.ta.mjs";
-// export { RegulatedEmbeddedDescriptor, _decode_RegulatedEmbeddedDescriptor, _encode_RegulatedEmbeddedDescriptor } from "../MEDIA-GATEWAY-CONTROL/RegulatedEmbeddedDescriptor.ta.mjs";
 
 
 /**

@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NonStandardIdentifier, _decode_NonStandardIdentifier, _encode_NonStandardIdentifier } from "../MEDIA-GATEWAY-CONTROL/NonStandardIdentifier.ta.mjs";
-// export { NonStandardIdentifier, _decode_NonStandardIdentifier, _encode_NonStandardIdentifier } from "../MEDIA-GATEWAY-CONTROL/NonStandardIdentifier.ta.mjs";
 
 
 /**

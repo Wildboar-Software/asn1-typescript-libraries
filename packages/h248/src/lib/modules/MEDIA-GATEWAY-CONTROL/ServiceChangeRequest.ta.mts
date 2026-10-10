@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
-// export { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
 import { ServiceChangeParm, _decode_ServiceChangeParm, _encode_ServiceChangeParm } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeParm.ta.mjs";
-// export { ServiceChangeParm, _decode_ServiceChangeParm, _encode_ServiceChangeParm } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeParm.ta.mjs";
 
 
 /**

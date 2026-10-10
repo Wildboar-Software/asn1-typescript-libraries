@@ -8,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { WildcardField, _decode_WildcardField, _encode_WildcardField } from "../MEDIA-GATEWAY-CONTROL/WildcardField.ta.mjs";
-// export { WildcardField, _decode_WildcardField, _encode_WildcardField } from "../MEDIA-GATEWAY-CONTROL/WildcardField.ta.mjs";
 
 
 /**

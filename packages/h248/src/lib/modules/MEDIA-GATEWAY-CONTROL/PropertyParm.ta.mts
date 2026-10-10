@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
-// export { PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
 import { PropertyID, _decode_PropertyID, _encode_PropertyID } from "../MEDIA-GATEWAY-CONTROL/PropertyID.ta.mjs";
-// export { PropertyID, _decode_PropertyID, _encode_PropertyID } from "../MEDIA-GATEWAY-CONTROL/PropertyID.ta.mjs";
 import { PropertyParm_extraInfo, _decode_PropertyParm_extraInfo, _encode_PropertyParm_extraInfo } from "../MEDIA-GATEWAY-CONTROL/PropertyParm-extraInfo.ta.mjs";
-// export { PropertyParm_extraInfo, _decode_PropertyParm_extraInfo, _encode_PropertyParm_extraInfo } from "../MEDIA-GATEWAY-CONTROL/PropertyParm-extraInfo.ta.mjs";
 
 
 /**

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthenticationHeader, _decode_AuthenticationHeader, _encode_AuthenticationHeader } from "../MEDIA-GATEWAY-CONTROL/AuthenticationHeader.ta.mjs";
-// export { AuthenticationHeader, _decode_AuthenticationHeader, _encode_AuthenticationHeader } from "../MEDIA-GATEWAY-CONTROL/AuthenticationHeader.ta.mjs";
 import { Message, _decode_Message, _encode_Message } from "../MEDIA-GATEWAY-CONTROL/Message.ta.mjs";
-// export { Message, _decode_Message, _encode_Message } from "../MEDIA-GATEWAY-CONTROL/Message.ta.mjs";
 
 
 /**

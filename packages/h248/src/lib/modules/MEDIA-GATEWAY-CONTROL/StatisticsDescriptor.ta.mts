@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { StatisticsParameter, _decode_StatisticsParameter, _encode_StatisticsParameter } from "../MEDIA-GATEWAY-CONTROL/StatisticsParameter.ta.mjs";
-// export { StatisticsParameter, _decode_StatisticsParameter, _encode_StatisticsParameter } from "../MEDIA-GATEWAY-CONTROL/StatisticsParameter.ta.mjs";
 
 
 /**
