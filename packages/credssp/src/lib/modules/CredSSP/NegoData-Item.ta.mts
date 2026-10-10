@@ -16,7 +16,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NegoData-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NegoData-Item ::= SEQUENCE {
+ *     negoToken    [0] OCTET STRING
+ * }
  * ```
  * 
  * @class
