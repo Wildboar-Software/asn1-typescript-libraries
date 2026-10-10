@@ -111,15 +111,17 @@ export
 function _decode_CompressedData (el: _Element): CompressedData {
     if (!_cached_decoder_for_CompressedData) { _cached_decoder_for_CompressedData = function (el: _Element): CompressedData {
     const sequence: _Element[] = el.sequence;
-    if (sequence.length < 2) {
+    const compressionAlgorithmElement = sequence[0];
+    const compressedContentInfoElement = sequence[1];
+    if (sequence.length < 2 || !compressionAlgorithmElement || !compressedContentInfoElement) {
         throw new _ConstructionError("CompressedData contained only " + sequence.length.toString() + " elements.");
     }
-    sequence[0].name = "compressionAlgorithm";
-    sequence[1].name = "compressedContentInfo";
+    compressionAlgorithmElement.name = "compressionAlgorithm";
+    compressedContentInfoElement.name = "compressedContentInfo";
     let compressionAlgorithm!: CompressionAlgorithmIdentifier;
     let compressedContentInfo!: CompressedContentInfo;
-    compressionAlgorithm = _decode_CompressionAlgorithmIdentifier(sequence[0]);
-    compressedContentInfo = _decode_CompressedContentInfo(sequence[1]);
+    compressionAlgorithm = _decode_CompressionAlgorithmIdentifier(compressionAlgorithmElement);
+    compressedContentInfo = _decode_CompressedContentInfo(compressedContentInfoElement);
     return new CompressedData(
         compressionAlgorithm,
         compressedContentInfo,
@@ -140,7 +142,7 @@ let _cached_encoder_for_CompressedData: $.ASN1Encoder<CompressedData> | null = n
  */
 export
 function _encode_CompressedData (value: CompressedData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompressedData) { _cached_encoder_for_CompressedData = function (value: CompressedData, elGetter: $.ASN1Encoder<CompressedData>): _Element {
+    if (!_cached_encoder_for_CompressedData) { _cached_encoder_for_CompressedData = function (value: CompressedData, _elGetter: $.ASN1Encoder<CompressedData>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_CompressionAlgorithmIdentifier(value.compressionAlgorithm, $.BER),
