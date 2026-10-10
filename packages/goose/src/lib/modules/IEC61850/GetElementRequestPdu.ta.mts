@@ -119,15 +119,15 @@ export
 function _decode_GetElementRequestPdu (el: _Element): GetElementRequestPdu {
     if (!_cached_decoder_for_GetElementRequestPdu) { _cached_decoder_for_GetElementRequestPdu = function (el: _Element): GetElementRequestPdu {
     const sequence: _Element[] = el.sequence;
-    if (sequence.length < 2) {
+    const identElement = sequence[0];
+    const referencesElement = sequence[1];
+    if (identElement === undefined || referencesElement === undefined) {
         throw new _ConstructionError("GetElementRequestPdu contained only " + sequence.length.toString() + " elements.");
     }
-    sequence[0].name = "ident";
-    sequence[1].name = "references";
-    let ident!: VisibleString;
-    let references!: VisibleString[];
-    ident = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(sequence[0]);
-    references = $._decode_implicit<VisibleString[]>(() => $._decodeSequenceOf<VisibleString>(() => $._decodeVisibleString))(sequence[1]);
+    identElement.name = "ident";
+    referencesElement.name = "references";
+    const ident: VisibleString = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(identElement);
+    const references: VisibleString[] = $._decode_implicit<VisibleString[]>(() => $._decodeSequenceOf<VisibleString>(() => $._decodeVisibleString))(referencesElement);
     return new GetElementRequestPdu(
         ident,
         references,

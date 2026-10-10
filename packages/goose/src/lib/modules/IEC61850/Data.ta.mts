@@ -12,13 +12,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FloatingPoint, _decode_FloatingPoint, _encode_FloatingPoint } from "../IEC61850/FloatingPoint.ta.mjs";
-// export { FloatingPoint, _decode_FloatingPoint, _encode_FloatingPoint } from "../IEC61850/FloatingPoint.ta.mjs";
 import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../IEC61850/TimeOfDay.ta.mjs";
-// export { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../IEC61850/TimeOfDay.ta.mjs";
 import { MMSString, _decode_MMSString, _encode_MMSString } from "../IEC61850/MMSString.ta.mjs";
-// export { MMSString, _decode_MMSString, _encode_MMSString } from "../IEC61850/MMSString.ta.mjs";
 import { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
-// export { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
 
 
 // TODO: CHECK_RECURSIVE_DEFINITION
