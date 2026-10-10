@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TariffPulseFormat, _decode_TariffPulseFormat, _encode_TariffPulseFormat } from "../Tariffing-Data-Types/TariffPulseFormat.ta.mjs";
-// export { TariffPulseFormat, _decode_TariffPulseFormat, _encode_TariffPulseFormat } from "../Tariffing-Data-Types/TariffPulseFormat.ta.mjs";
 import { TariffSwitchPulse, _decode_TariffSwitchPulse, _encode_TariffSwitchPulse } from "../Tariffing-Data-Types/TariffSwitchPulse.ta.mjs";
-// export { TariffSwitchPulse, _decode_TariffSwitchPulse, _encode_TariffSwitchPulse } from "../Tariffing-Data-Types/TariffSwitchPulse.ta.mjs";
 
 
 /**
@@ -143,7 +141,7 @@ let _cached_encoder_for_TariffPulse: $.ASN1Encoder<TariffPulse> | null = null;
  */
 export
 function _encode_TariffPulse (value: TariffPulse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TariffPulse) { _cached_encoder_for_TariffPulse = function (value: TariffPulse, elGetter: $.ASN1Encoder<TariffPulse>): _Element {
+    if (!_cached_encoder_for_TariffPulse) { _cached_encoder_for_TariffPulse = function (value: TariffPulse, _elGetter: $.ASN1Encoder<TariffPulse>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.currentTariffPulse === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_TariffPulseFormat, $.BER)(value.currentTariffPulse, $.BER)),

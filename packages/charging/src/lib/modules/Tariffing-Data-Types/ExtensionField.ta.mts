@@ -7,7 +7,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Code, _decode_Code, _encode_Code } from "../Tariffing-Data-Types/Code.ta.mjs";
 import { CriticalityType, CriticalityType_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_CriticalityType, _encode_CriticalityType, _enum_for_CriticalityType } from "../Tariffing-Data-Types/CriticalityType.ta.mjs";
-// export { CriticalityType, _enum_for_CriticalityType, CriticalityType_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, ignore /* IMPORTED_SHORT_ENUMERATION_ITEM */, CriticalityType_abort /* IMPORTED_LONG_ENUMERATION_ITEM */, abort /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CriticalityType, _encode_CriticalityType } from "../Tariffing-Data-Types/CriticalityType.ta.mjs";
 
 
 /**
@@ -168,7 +167,7 @@ let _cached_encoder_for_ExtensionField: $.ASN1Encoder<ExtensionField> | null = n
  */
 export
 function _encode_ExtensionField (value: ExtensionField, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExtensionField) { _cached_encoder_for_ExtensionField = function (value: ExtensionField, elGetter: $.ASN1Encoder<ExtensionField>): _Element {
+    if (!_cached_encoder_for_ExtensionField) { _cached_encoder_for_ExtensionField = function (value: ExtensionField, _elGetter: $.ASN1Encoder<ExtensionField>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Code(value.type_, $.BER),

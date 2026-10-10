@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CurrencyFactor, _decode_CurrencyFactor, _encode_CurrencyFactor } from "../Tariffing-Data-Types/CurrencyFactor.ta.mjs";
-// export { CurrencyFactor, _decode_CurrencyFactor, _encode_CurrencyFactor } from "../Tariffing-Data-Types/CurrencyFactor.ta.mjs";
 import { noCharge } from "../Tariffing-Data-Types/noCharge.va.mjs";
-// export { noCharge } from "../Tariffing-Data-Types/noCharge.va.mjs";
 import { CurrencyScale, _decode_CurrencyScale, _encode_CurrencyScale } from "../Tariffing-Data-Types/CurrencyScale.ta.mjs";
-// export { CurrencyScale, _decode_CurrencyScale, _encode_CurrencyScale } from "../Tariffing-Data-Types/CurrencyScale.ta.mjs";
 import { noScale } from "../Tariffing-Data-Types/noScale.va.mjs";
-// export { noScale } from "../Tariffing-Data-Types/noScale.va.mjs";
 
 
 /**
@@ -160,7 +156,7 @@ let _cached_encoder_for_CurrencyFactorScale: $.ASN1Encoder<CurrencyFactorScale> 
  */
 export
 function _encode_CurrencyFactorScale (value: CurrencyFactorScale, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CurrencyFactorScale) { _cached_encoder_for_CurrencyFactorScale = function (value: CurrencyFactorScale, elGetter: $.ASN1Encoder<CurrencyFactorScale>): _Element {
+    if (!_cached_encoder_for_CurrencyFactorScale) { _cached_encoder_for_CurrencyFactorScale = function (value: CurrencyFactorScale, _elGetter: $.ASN1Encoder<CurrencyFactorScale>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_DEFAULT */ (value.currencyFactor === undefined || $.deepEq(value.currencyFactor, CurrencyFactorScale._default_value_for_currencyFactor) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_CurrencyFactor, $.BER)(value.currencyFactor, $.BER)),

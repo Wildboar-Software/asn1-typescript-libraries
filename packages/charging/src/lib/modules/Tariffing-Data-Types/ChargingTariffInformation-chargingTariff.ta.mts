@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TariffCurrency, _decode_TariffCurrency, _encode_TariffCurrency } from "../Tariffing-Data-Types/TariffCurrency.ta.mjs";
-// export { TariffCurrency, _decode_TariffCurrency, _encode_TariffCurrency } from "../Tariffing-Data-Types/TariffCurrency.ta.mjs";
 import { TariffPulse, _decode_TariffPulse, _encode_TariffPulse } from "../Tariffing-Data-Types/TariffPulse.ta.mjs";
-// export { TariffPulse, _decode_TariffPulse, _encode_TariffPulse } from "../Tariffing-Data-Types/TariffPulse.ta.mjs";
 
 
 /**
