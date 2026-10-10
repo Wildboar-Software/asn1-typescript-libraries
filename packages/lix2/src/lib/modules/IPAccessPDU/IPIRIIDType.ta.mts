@@ -6,6 +6,7 @@ import {
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../IPAccessPDU/IPAddress.ta.mjs";
 
 
 

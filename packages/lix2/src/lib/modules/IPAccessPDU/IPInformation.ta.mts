@@ -5,6 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPv4Information, _decode_IPv4Information, _encode_IPv4Information } from "../IPAccessPDU/IPv4Information.ta.mjs";
+import { IPv6Information, _decode_IPv6Information, _encode_IPv6Information } from "../IPAccessPDU/IPv6Information.ta.mjs";
 // export { IPv4Information, _decode_IPv4Information, _encode_IPv4Information } from "../IPAccessPDU/IPv4Information.ta.mjs";
 
 
