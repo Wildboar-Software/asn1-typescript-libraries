@@ -117,10 +117,8 @@ function _decode_TSRemoteGuardPackageCred (el: _Element): TSRemoteGuardPackageCr
     }
     sequence[0].name = "packageName";
     sequence[1].name = "credBuffer";
-    let packageName!: OCTET_STRING;
-    let credBuffer!: OCTET_STRING;
-    packageName = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    credBuffer = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const packageName: OCTET_STRING = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const credBuffer: OCTET_STRING = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new TSRemoteGuardPackageCred(
         packageName,
         credBuffer,

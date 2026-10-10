@@ -108,8 +108,7 @@ function _decode_NegoData_Item (el: _Element): NegoData_Item {
         throw new _ConstructionError("NegoData-Item contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "negoToken";
-    let negoToken!: OCTET_STRING;
-    negoToken = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const negoToken: OCTET_STRING = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
     return new NegoData_Item(
         negoToken,
 

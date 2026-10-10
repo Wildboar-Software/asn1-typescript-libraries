@@ -118,10 +118,8 @@ function _decode_TSCredentials (el: _Element): TSCredentials {
     }
     sequence[0].name = "credType";
     sequence[1].name = "credentials";
-    let credType!: INTEGER;
-    let credentials!: OCTET_STRING;
-    credType = $._decode_explicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    credentials = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const credType: INTEGER = $._decode_explicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const credentials: OCTET_STRING = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new TSCredentials(
         credType,
         credentials,
