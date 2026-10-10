@@ -121,10 +121,8 @@ function _decode_CompressedContentInfo (el: _Element): CompressedContentInfo {
     }
     contentTypeElement.name = "contentType";
     compressedContentElement.name = "compressedContent";
-    let contentType!: CompressedContentInfo_contentType;
-    let compressedContent!: CompressedContent;
-    contentType = _decode_CompressedContentInfo_contentType(contentTypeElement);
-    compressedContent = $._decode_explicit<CompressedContent>(() => _decode_CompressedContent)(compressedContentElement);
+    const contentType: CompressedContentInfo_contentType = _decode_CompressedContentInfo_contentType(contentTypeElement);
+    const compressedContent: CompressedContent = $._decode_explicit<CompressedContent>(() => _decode_CompressedContent)(compressedContentElement);
     return new CompressedContentInfo(
         contentType,
         compressedContent,
