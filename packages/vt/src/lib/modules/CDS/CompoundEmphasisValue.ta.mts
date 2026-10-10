@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CompoundEmphasisValue_Item, _decode_CompoundEmphasisValue_Item, _encode_CompoundEmphasisValue_Item } from "../CDS/CompoundEmphasisValue-Item.ta.mjs";
-// export { CompoundEmphasisValue_Item, _decode_CompoundEmphasisValue_Item, _encode_CompoundEmphasisValue_Item } from "../CDS/CompoundEmphasisValue-Item.ta.mjs";
 
 
 /**

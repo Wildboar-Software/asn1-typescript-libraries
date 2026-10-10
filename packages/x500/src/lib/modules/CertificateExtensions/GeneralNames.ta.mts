@@ -1,5 +1,5 @@
 /**
- * Re-export of {@link GeneralNames} from `@wildboar/pki-stub`.
+ * Re-export of {@link GeneralNames} from `@wildboar/gn`.
  *
  * SEQUENCE SIZE (1..MAX) OF GeneralName — empty not allowed; order is
  * encoding order. `directoryName` is EXPLICIT [4]; DN RDN order is X.501
@@ -8,8 +8,8 @@
  */
 export type {
     GeneralNames,
-} from "@wildboar/pki-stub";
+} from "@wildboar/gn";
 export {
     _decode_GeneralNames,
     _encode_GeneralNames,
-} from "@wildboar/pki-stub";
+} from "@wildboar/gn";

@@ -13,15 +13,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
 import { CredentialIdentifier, _decode_CredentialIdentifier, _encode_CredentialIdentifier } from "../CryptographicInformationFramework/CredentialIdentifier.ta.mjs";
-// export { CredentialIdentifier, _decode_CredentialIdentifier, _encode_CredentialIdentifier } from "../CryptographicInformationFramework/CredentialIdentifier.ta.mjs";
 import { CertHash, _decode_CertHash, _encode_CertHash } from "../CryptographicInformationFramework/CertHash.ta.mjs";
-// export { CertHash, _decode_CertHash, _encode_CertHash } from "../CryptographicInformationFramework/CertHash.ta.mjs";
 import { Usage, _decode_Usage, _encode_Usage } from "../CryptographicInformationFramework/Usage.ta.mjs";
-// export { Usage, _decode_Usage, _encode_Usage } from "../CryptographicInformationFramework/Usage.ta.mjs";
 import { Validity, _decode_Validity, _encode_Validity } from "../AuthenticationFramework/Validity.ta.mjs";
-// export { Validity, _decode_Validity, _encode_Validity } from "../AuthenticationFramework/Validity.ta.mjs";
 
 
 /**

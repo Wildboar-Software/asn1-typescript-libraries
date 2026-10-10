@@ -1,0 +1,25 @@
+{
+  "name": "sgp22",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/sgp22/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/sgp22",
+        "tsConfig": "packages/sgp22/tsconfig.lib.json",
+        "packageJson": "packages/sgp22/package.json",
+        "main": "packages/sgp22/src/index.mts",
+        "assets": [
+          "packages/sgp22/*.md",
+          "packages/sgp22/LICENSE.txt",
+          "packages/sgp22/package.json"
+        ]
+      }
+    }
+  }
+}

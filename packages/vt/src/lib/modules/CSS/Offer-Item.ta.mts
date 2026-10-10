@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ParameterOffers, _decode_ParameterOffers, _encode_ParameterOffers } from "../CSS/ParameterOffers.ta.mjs";
-// export { ParameterOffers, _decode_ParameterOffers, _encode_ParameterOffers } from "../CSS/ParameterOffers.ta.mjs";
 
 
 /**

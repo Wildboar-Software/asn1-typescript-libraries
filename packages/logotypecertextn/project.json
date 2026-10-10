@@ -1,0 +1,25 @@
+{
+  "name": "logotypecertextn",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/logotypecertextn/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/logotypecertextn",
+        "tsConfig": "packages/logotypecertextn/tsconfig.lib.json",
+        "packageJson": "packages/logotypecertextn/package.json",
+        "main": "packages/logotypecertextn/src/index.mts",
+        "assets": [
+          "packages/logotypecertextn/*.md",
+          "packages/logotypecertextn/LICENSE.txt",
+          "packages/logotypecertextn/package.json"
+        ]
+      }
+    }
+  }
+}

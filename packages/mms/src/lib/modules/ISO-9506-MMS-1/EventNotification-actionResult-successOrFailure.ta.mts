@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EventNotification_actionResult_successOrFailure_success, _decode_EventNotification_actionResult_successOrFailure_success, _encode_EventNotification_actionResult_successOrFailure_success } from "../ISO-9506-MMS-1/EventNotification-actionResult-successOrFailure-success.ta.mjs";
-// export { EventNotification_actionResult_successOrFailure_success, _decode_EventNotification_actionResult_successOrFailure_success, _encode_EventNotification_actionResult_successOrFailure_success } from "../ISO-9506-MMS-1/EventNotification-actionResult-successOrFailure-success.ta.mjs";
 import { EventNotification_actionResult_successOrFailure_failure, _decode_EventNotification_actionResult_successOrFailure_failure, _encode_EventNotification_actionResult_successOrFailure_failure } from "../ISO-9506-MMS-1/EventNotification-actionResult-successOrFailure-failure.ta.mjs";
-// export { EventNotification_actionResult_successOrFailure_failure, _decode_EventNotification_actionResult_successOrFailure_failure, _encode_EventNotification_actionResult_successOrFailure_failure } from "../ISO-9506-MMS-1/EventNotification-actionResult-successOrFailure-failure.ta.mjs";
 
 
 /**

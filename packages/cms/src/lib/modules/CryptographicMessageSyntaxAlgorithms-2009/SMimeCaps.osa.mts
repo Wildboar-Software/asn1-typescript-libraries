@@ -35,14 +35,14 @@ import { maca_hMAC_SHA1 } from "../CryptographicMessageSyntaxAlgorithms-2009/mac
  *
  */
 export const SMimeCaps: SMIME_CAPS[] = [
-    kaa_esdh["&smimeCaps"],
-    kaa_ssdh["&smimeCaps"],
-    kt_rsa["&smimeCaps"],
-    kwa_3DESWrap["&smimeCaps"],
-    kwa_RC2Wrap["&smimeCaps"],
-    cea_3DES_cbc["&smimeCaps"],
-    cea_RC2_cbc["&smimeCaps"],
-    maca_hMAC_SHA1["&smimeCaps"],
+    kaa_esdh["&smimeCaps"]!,
+    kaa_ssdh["&smimeCaps"]!,
+    kt_rsa["&smimeCaps"]!,
+    kwa_3DESWrap["&smimeCaps"]!,
+    kwa_RC2Wrap["&smimeCaps"]!,
+    cea_3DES_cbc["&smimeCaps"]!,
+    cea_RC2_cbc["&smimeCaps"]!,
+    maca_hMAC_SHA1["&smimeCaps"]!,
 ];
 
 /* eslint-enable */

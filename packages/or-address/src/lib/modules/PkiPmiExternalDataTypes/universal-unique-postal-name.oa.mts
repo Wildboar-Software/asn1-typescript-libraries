@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import {
-    UniversalUniquePostalName,
+    type UniversalUniquePostalName,
     _decode_UniversalUniquePostalName,
     _encode_UniversalUniquePostalName,
 } from "../PkiPmiExternalDataTypes/UniversalUniquePostalName.ta.mjs";

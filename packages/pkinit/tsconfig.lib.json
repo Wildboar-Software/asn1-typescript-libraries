@@ -1,0 +1,26 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "../../dist/packages/pkinit",
+    "tsBuildInfoFile": "../../dist/packages/pkinit/tsconfig.lib.tsbuildinfo",
+    "emitDeclarationOnly": false,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitOverride": true,
+    "importHelpers": false,
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "src/**/*.mts"
+  ],
+  "references": [],
+  "exclude": [
+    "src/**/*.test.mts",
+    "src/**/*.spec.mts",
+    "vitest.config.mts"
+  ]
+}

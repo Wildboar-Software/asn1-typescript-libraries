@@ -1,0 +1,28 @@
+AccessControlFormat-krb-1
+{z39-50-accessControlFormat krb-1(3)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    InternationalString
+        FROM Z39-50-APDU-2001
+    ;
+
+KRBObject ::= CHOICE {
+    challenge   [1] IMPLICIT KRBRequest,
+    response    [2] IMPLICIT KRBResponse}
+
+KRBRequest ::= SEQUENCE {
+    service     [1] IMPLICIT InternationalString,
+    instance    [2] IMPLICIT InternationalString OPTIONAL,
+    realm       [3] IMPLICIT InternationalString OPTIONAL
+}
+
+--Server requests a ticket for the given service, instance, and realm
+KRBResponse ::= SEQUENCE {
+    userid      [1] IMPLICIT InternationalString OPTIONAL,
+    ticket      [2] IMPLICIT OCTET STRING
+}
+-- Client responds with a ticket for the requested service
+
+END

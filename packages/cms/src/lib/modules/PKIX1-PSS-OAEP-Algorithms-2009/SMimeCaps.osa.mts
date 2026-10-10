@@ -24,8 +24,8 @@ import { sa_rsaSSA_PSS } from "../PKIX1-PSS-OAEP-Algorithms-2009/sa-rsaSSA-PSS.o
  *
  */
 export const SMimeCaps: SMIME_CAPS[] = [
-    sa_rsaSSA_PSS["&smimeCaps"],
-    kta_rsaES_OAEP["&smimeCaps"],
+    sa_rsaSSA_PSS["&smimeCaps"]!,
+    kta_rsaES_OAEP["&smimeCaps"]!,
 ];
 
 /* eslint-enable */
