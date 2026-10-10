@@ -26,20 +26,26 @@ import { RequestResults, _decode_RequestResults, _encode_RequestResults } from "
  */
 export
 class PositiveNegative_responsePositive {
+    /**
+     * @summary `datSet`.
+     * @public
+     * @readonly
+     */
+    public readonly datSet: OPTIONAL<VisibleString>;
+    /**
+     * @summary `result`.
+     * @public
+     * @readonly
+     */
+    public readonly result: RequestResults[];
+
     constructor (
-        /**
-         * @summary `datSet`.
-         * @public
-         * @readonly
-         */
-        readonly datSet: OPTIONAL<VisibleString>,
-        /**
-         * @summary `result`.
-         * @public
-         * @readonly
-         */
-        readonly result: RequestResults[]
-    ) {}
+        datSet: OPTIONAL<VisibleString>,
+        result: RequestResults[]
+    ) {
+        this.datSet = datSet;
+        this.result = result;
+    }
 
     /**
      * @summary Restructures an object into a PositiveNegative_responsePositive

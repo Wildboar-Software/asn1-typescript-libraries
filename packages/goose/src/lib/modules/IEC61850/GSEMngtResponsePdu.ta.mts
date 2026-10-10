@@ -36,32 +36,42 @@ import { PositiveNegative, _decode_PositiveNegative, _encode_PositiveNegative } 
  */
 export
 class GSEMngtResponsePdu {
+    /**
+     * @summary `ident`.
+     * @public
+     * @readonly
+     */
+    public readonly ident: VisibleString;
+    /**
+     * @summary `confRev`.
+     * @public
+     * @readonly
+     */
+    public readonly confRev: OPTIONAL<INTEGER>;
+    /**
+     * @summary `posNeg`.
+     * @public
+     * @readonly
+     */
+    public readonly posNeg: PositiveNegative;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ident`.
-         * @public
-         * @readonly
-         */
-        readonly ident: VisibleString,
-        /**
-         * @summary `confRev`.
-         * @public
-         * @readonly
-         */
-        readonly confRev: OPTIONAL<INTEGER>,
-        /**
-         * @summary `posNeg`.
-         * @public
-         * @readonly
-         */
-        readonly posNeg: PositiveNegative,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ident: VisibleString,
+        confRev: OPTIONAL<INTEGER>,
+        posNeg: PositiveNegative,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ident = ident;
+        this.confRev = confRev;
+        this.posNeg = posNeg;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a GSEMngtResponsePdu

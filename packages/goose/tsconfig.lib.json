@@ -14,6 +14,8 @@
     "noUnusedLocals": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "erasableSyntaxOnly": true,
+    "isolatedModules": true,
     "importHelpers": true,
     "types": [
       "node"

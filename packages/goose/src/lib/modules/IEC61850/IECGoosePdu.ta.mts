@@ -41,80 +41,106 @@ import { Data, _decode_Data, _encode_Data } from "../IEC61850/Data.ta.mjs";
  */
 export
 class IECGoosePdu {
+    /**
+     * @summary `gocbRef`.
+     * @public
+     * @readonly
+     */
+    public readonly gocbRef: VisibleString;
+    /**
+     * @summary `timeAllowedtoLive`.
+     * @public
+     * @readonly
+     */
+    public readonly timeAllowedtoLive: INTEGER;
+    /**
+     * @summary `datSet`.
+     * @public
+     * @readonly
+     */
+    public readonly datSet: VisibleString;
+    /**
+     * @summary `goID`.
+     * @public
+     * @readonly
+     */
+    public readonly goID: OPTIONAL<VisibleString>;
+    /**
+     * @summary `t`.
+     * @public
+     * @readonly
+     */
+    public readonly t: UtcTime;
+    /**
+     * @summary `stNum`.
+     * @public
+     * @readonly
+     */
+    public readonly stNum: INTEGER;
+    /**
+     * @summary `sqNum`.
+     * @public
+     * @readonly
+     */
+    public readonly sqNum: INTEGER;
+    /**
+     * @summary `simulation`.
+     * @public
+     * @readonly
+     */
+    public readonly simulation: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `confRev`.
+     * @public
+     * @readonly
+     */
+    public readonly confRev: INTEGER;
+    /**
+     * @summary `ndsCom`.
+     * @public
+     * @readonly
+     */
+    public readonly ndsCom: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `numDatSetEntries`.
+     * @public
+     * @readonly
+     */
+    public readonly numDatSetEntries: INTEGER;
+    /**
+     * @summary `allData`.
+     * @public
+     * @readonly
+     */
+    public readonly allData: Data[];
+
     constructor (
-        /**
-         * @summary `gocbRef`.
-         * @public
-         * @readonly
-         */
-        readonly gocbRef: VisibleString,
-        /**
-         * @summary `timeAllowedtoLive`.
-         * @public
-         * @readonly
-         */
-        readonly timeAllowedtoLive: INTEGER,
-        /**
-         * @summary `datSet`.
-         * @public
-         * @readonly
-         */
-        readonly datSet: VisibleString,
-        /**
-         * @summary `goID`.
-         * @public
-         * @readonly
-         */
-        readonly goID: OPTIONAL<VisibleString>,
-        /**
-         * @summary `t`.
-         * @public
-         * @readonly
-         */
-        readonly t: UtcTime,
-        /**
-         * @summary `stNum`.
-         * @public
-         * @readonly
-         */
-        readonly stNum: INTEGER,
-        /**
-         * @summary `sqNum`.
-         * @public
-         * @readonly
-         */
-        readonly sqNum: INTEGER,
-        /**
-         * @summary `simulation`.
-         * @public
-         * @readonly
-         */
-        readonly simulation: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `confRev`.
-         * @public
-         * @readonly
-         */
-        readonly confRev: INTEGER,
-        /**
-         * @summary `ndsCom`.
-         * @public
-         * @readonly
-         */
-        readonly ndsCom: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `numDatSetEntries`.
-         * @public
-         * @readonly
-         */
-        readonly numDatSetEntries: INTEGER,
-        /**
-         * @summary `allData`.
-         * @public
-         * @readonly
-         */
-        readonly allData: Data[]
-    ) {}
+        gocbRef: VisibleString,
+        timeAllowedtoLive: INTEGER,
+        datSet: VisibleString,
+        goID: OPTIONAL<VisibleString>,
+        t: UtcTime,
+        stNum: INTEGER,
+        sqNum: INTEGER,
+        simulation: OPTIONAL<BOOLEAN>,
+        confRev: INTEGER,
+        ndsCom: OPTIONAL<BOOLEAN>,
+        numDatSetEntries: INTEGER,
+        allData: Data[]
+    ) {
+        this.gocbRef = gocbRef;
+        this.timeAllowedtoLive = timeAllowedtoLive;
+        this.datSet = datSet;
+        this.goID = goID;
+        this.t = t;
+        this.stNum = stNum;
+        this.sqNum = sqNum;
+        this.simulation = simulation;
+        this.confRev = confRev;
+        this.ndsCom = ndsCom;
+        this.numDatSetEntries = numDatSetEntries;
+        this.allData = allData;
+    }
 
     /**
      * @summary Restructures an object into a IECGoosePdu

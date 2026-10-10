@@ -32,20 +32,26 @@ import { RequestResponse, _decode_RequestResponse, _encode_RequestResponse } fro
  */
 export
 class GSEMngtPdu {
+    /**
+     * @summary `stateID`.
+     * @public
+     * @readonly
+     */
+    public readonly stateID: INTEGER;
+    /**
+     * @summary `requestResp`.
+     * @public
+     * @readonly
+     */
+    public readonly requestResp: RequestResponse;
+
     constructor (
-        /**
-         * @summary `stateID`.
-         * @public
-         * @readonly
-         */
-        readonly stateID: INTEGER,
-        /**
-         * @summary `requestResp`.
-         * @public
-         * @readonly
-         */
-        readonly requestResp: RequestResponse
-    ) {}
+        stateID: INTEGER,
+        requestResp: RequestResponse
+    ) {
+        this.stateID = stateID;
+        this.requestResp = requestResp;
+    }
 
     /**
      * @summary Restructures an object into a GSEMngtPdu

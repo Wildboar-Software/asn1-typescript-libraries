@@ -28,26 +28,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class GetReferenceRequestPdu {
+    /**
+     * @summary `ident`.
+     * @public
+     * @readonly
+     */
+    public readonly ident: VisibleString;
+    /**
+     * @summary `offset`.
+     * @public
+     * @readonly
+     */
+    public readonly offset: INTEGER[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ident`.
-         * @public
-         * @readonly
-         */
-        readonly ident: VisibleString,
-        /**
-         * @summary `offset`.
-         * @public
-         * @readonly
-         */
-        readonly offset: INTEGER[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ident: VisibleString,
+        offset: INTEGER[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ident = ident;
+        this.offset = offset;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a GetReferenceRequestPdu

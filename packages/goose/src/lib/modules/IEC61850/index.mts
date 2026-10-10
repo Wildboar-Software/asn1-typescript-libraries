@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  *
  * ASN.1 module `IEC61850`: GOOSE and GOOSE-management PDUs, and the
