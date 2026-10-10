@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type UTRANGANSSPositioningData = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_UTRANGANSSPositioningData: $.ASN1Decoder<UTRANGANSSPositioningData> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UTRANGANSSPositioningData
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UTRANGANSSPositioningData (el: _Element): UTRANGANSSPositioningData {
-    if (!_cached_decoder_for_UTRANGANSSPositioningData) { _cached_decoder_for_UTRANGANSSPositioningData = $._decodeOctetString; }
-    return _cached_decoder_for_UTRANGANSSPositioningData(el);
-}
-
-let _cached_encoder_for_UTRANGANSSPositioningData: $.ASN1Encoder<UTRANGANSSPositioningData> | null = null;
+export const _decode_UTRANGANSSPositioningData = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) UTRANGANSSPositioningData into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_UTRANGANSSPositioningData: $.ASN1Encoder<UTRANGANSSPosit
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UTRANGANSSPositioningData, encoded as an ASN.1 Element.
  */
-export
-function _encode_UTRANGANSSPositioningData (value: UTRANGANSSPositioningData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UTRANGANSSPositioningData) { _cached_encoder_for_UTRANGANSSPositioningData = $._encodeOctetString; }
-    return _cached_encoder_for_UTRANGANSSPositioningData(value, elGetter);
-}
+export const _encode_UTRANGANSSPositioningData = $._encodeOctetString;
 
 
 /* eslint-enable */

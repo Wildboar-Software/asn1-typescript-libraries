@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type LAC = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_LAC: $.ASN1Decoder<LAC> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LAC
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LAC (el: _Element): LAC {
-    if (!_cached_decoder_for_LAC) { _cached_decoder_for_LAC = $._decodeOctetString; }
-    return _cached_decoder_for_LAC(el);
-}
-
-let _cached_encoder_for_LAC: $.ASN1Encoder<LAC> | null = null;
+export const _decode_LAC = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) LAC into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_LAC: $.ASN1Encoder<LAC> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LAC, encoded as an ASN.1 Element.
  */
-export
-function _encode_LAC (value: LAC, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LAC) { _cached_encoder_for_LAC = $._encodeOctetString; }
-    return _cached_encoder_for_LAC(value, elGetter);
-}
+export const _encode_LAC = $._encodeOctetString;
 
 
 /* eslint-enable */

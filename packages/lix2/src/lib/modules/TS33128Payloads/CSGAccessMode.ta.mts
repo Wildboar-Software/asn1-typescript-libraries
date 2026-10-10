@@ -98,21 +98,13 @@ const CSGAccessMode_hybridMode: CSGAccessMode = CSGAccessMode.hybridMode; /* LON
 export
 const hybridMode: CSGAccessMode = CSGAccessMode.hybridMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_CSGAccessMode: $.ASN1Decoder<CSGAccessMode> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CSGAccessMode
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CSGAccessMode (el: _Element): CSGAccessMode {
-    if (!_cached_decoder_for_CSGAccessMode) { _cached_decoder_for_CSGAccessMode = $._decodeEnumerated; }
-    return _cached_decoder_for_CSGAccessMode(el);
-}
-
-let _cached_encoder_for_CSGAccessMode: $.ASN1Encoder<CSGAccessMode> | null = null;
+export const _decode_CSGAccessMode = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CSGAccessMode into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_CSGAccessMode: $.ASN1Encoder<CSGAccessMode> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CSGAccessMode, encoded as an ASN.1 Element.
  */
-export
-function _encode_CSGAccessMode (value: CSGAccessMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CSGAccessMode) { _cached_encoder_for_CSGAccessMode = $._encodeEnumerated; }
-    return _cached_encoder_for_CSGAccessMode(value, elGetter);
-}
+export const _encode_CSGAccessMode = $._encodeEnumerated;
 
 
 /* eslint-enable */

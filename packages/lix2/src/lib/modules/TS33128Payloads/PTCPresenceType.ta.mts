@@ -98,21 +98,13 @@ const PTCPresenceType_pTCGroup: PTCPresenceType = PTCPresenceType.pTCGroup; /* L
 export
 const pTCGroup: PTCPresenceType = PTCPresenceType.pTCGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCPresenceType: $.ASN1Decoder<PTCPresenceType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PTCPresenceType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PTCPresenceType (el: _Element): PTCPresenceType {
-    if (!_cached_decoder_for_PTCPresenceType) { _cached_decoder_for_PTCPresenceType = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCPresenceType(el);
-}
-
-let _cached_encoder_for_PTCPresenceType: $.ASN1Encoder<PTCPresenceType> | null = null;
+export const _decode_PTCPresenceType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PTCPresenceType into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_PTCPresenceType: $.ASN1Encoder<PTCPresenceType> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PTCPresenceType, encoded as an ASN.1 Element.
  */
-export
-function _encode_PTCPresenceType (value: PTCPresenceType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCPresenceType) { _cached_encoder_for_PTCPresenceType = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCPresenceType(value, elGetter);
-}
+export const _encode_PTCPresenceType = $._encodeEnumerated;
 
 
 /* eslint-enable */

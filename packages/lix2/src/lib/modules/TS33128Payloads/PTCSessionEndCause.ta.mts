@@ -178,21 +178,13 @@ const PTCSessionEndCause_allMediaTypesInactive: PTCSessionEndCause = PTCSessionE
 export
 const allMediaTypesInactive: PTCSessionEndCause = PTCSessionEndCause.allMediaTypesInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCSessionEndCause: $.ASN1Decoder<PTCSessionEndCause> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PTCSessionEndCause
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PTCSessionEndCause (el: _Element): PTCSessionEndCause {
-    if (!_cached_decoder_for_PTCSessionEndCause) { _cached_decoder_for_PTCSessionEndCause = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCSessionEndCause(el);
-}
-
-let _cached_encoder_for_PTCSessionEndCause: $.ASN1Encoder<PTCSessionEndCause> | null = null;
+export const _decode_PTCSessionEndCause = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PTCSessionEndCause into an ASN.1 Element.
@@ -201,11 +193,7 @@ let _cached_encoder_for_PTCSessionEndCause: $.ASN1Encoder<PTCSessionEndCause> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PTCSessionEndCause, encoded as an ASN.1 Element.
  */
-export
-function _encode_PTCSessionEndCause (value: PTCSessionEndCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCSessionEndCause) { _cached_encoder_for_PTCSessionEndCause = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCSessionEndCause(value, elGetter);
-}
+export const _encode_PTCSessionEndCause = $._encodeEnumerated;
 
 
 /* eslint-enable */

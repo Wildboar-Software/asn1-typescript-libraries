@@ -98,21 +98,13 @@ const RoamerInOut_out_bound: RoamerInOut = RoamerInOut.out_bound; /* LONG_NAMED_
 export
 const out_bound: RoamerInOut = RoamerInOut.out_bound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RoamerInOut: $.ASN1Decoder<RoamerInOut> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RoamerInOut
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RoamerInOut (el: _Element): RoamerInOut {
-    if (!_cached_decoder_for_RoamerInOut) { _cached_decoder_for_RoamerInOut = $._decodeEnumerated; }
-    return _cached_decoder_for_RoamerInOut(el);
-}
-
-let _cached_encoder_for_RoamerInOut: $.ASN1Encoder<RoamerInOut> | null = null;
+export const _decode_RoamerInOut = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RoamerInOut into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_RoamerInOut: $.ASN1Encoder<RoamerInOut> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RoamerInOut, encoded as an ASN.1 Element.
  */
-export
-function _encode_RoamerInOut (value: RoamerInOut, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RoamerInOut) { _cached_encoder_for_RoamerInOut = $._encodeEnumerated; }
-    return _cached_encoder_for_RoamerInOut(value, elGetter);
-}
+export const _encode_RoamerInOut = $._encodeEnumerated;
 
 
 /* eslint-enable */

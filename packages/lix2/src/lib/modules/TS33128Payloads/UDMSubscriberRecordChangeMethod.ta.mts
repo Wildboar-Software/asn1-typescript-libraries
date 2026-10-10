@@ -198,21 +198,13 @@ const UDMSubscriberRecordChangeMethod_multipleIDChanges: UDMSubscriberRecordChan
 export
 const multipleIDChanges: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.multipleIDChanges; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_UDMSubscriberRecordChangeMethod: $.ASN1Decoder<UDMSubscriberRecordChangeMethod> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UDMSubscriberRecordChangeMethod
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UDMSubscriberRecordChangeMethod (el: _Element): UDMSubscriberRecordChangeMethod {
-    if (!_cached_decoder_for_UDMSubscriberRecordChangeMethod) { _cached_decoder_for_UDMSubscriberRecordChangeMethod = $._decodeEnumerated; }
-    return _cached_decoder_for_UDMSubscriberRecordChangeMethod(el);
-}
-
-let _cached_encoder_for_UDMSubscriberRecordChangeMethod: $.ASN1Encoder<UDMSubscriberRecordChangeMethod> | null = null;
+export const _decode_UDMSubscriberRecordChangeMethod = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) UDMSubscriberRecordChangeMethod into an ASN.1 Element.
@@ -221,11 +213,7 @@ let _cached_encoder_for_UDMSubscriberRecordChangeMethod: $.ASN1Encoder<UDMSubscr
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UDMSubscriberRecordChangeMethod, encoded as an ASN.1 Element.
  */
-export
-function _encode_UDMSubscriberRecordChangeMethod (value: UDMSubscriberRecordChangeMethod, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UDMSubscriberRecordChangeMethod) { _cached_encoder_for_UDMSubscriberRecordChangeMethod = $._encodeEnumerated; }
-    return _cached_encoder_for_UDMSubscriberRecordChangeMethod(value, elGetter);
-}
+export const _encode_UDMSubscriberRecordChangeMethod = $._encodeEnumerated;
 
 
 /* eslint-enable */

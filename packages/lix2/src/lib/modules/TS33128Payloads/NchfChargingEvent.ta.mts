@@ -478,21 +478,13 @@ const NchfChargingEvent_rangingSLChargingInformation: NchfChargingEvent = NchfCh
 export
 const rangingSLChargingInformation: NchfChargingEvent = NchfChargingEvent.rangingSLChargingInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_NchfChargingEvent: $.ASN1Decoder<NchfChargingEvent> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NchfChargingEvent
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NchfChargingEvent (el: _Element): NchfChargingEvent {
-    if (!_cached_decoder_for_NchfChargingEvent) { _cached_decoder_for_NchfChargingEvent = $._decodeEnumerated; }
-    return _cached_decoder_for_NchfChargingEvent(el);
-}
-
-let _cached_encoder_for_NchfChargingEvent: $.ASN1Encoder<NchfChargingEvent> | null = null;
+export const _decode_NchfChargingEvent = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NchfChargingEvent into an ASN.1 Element.
@@ -501,11 +493,7 @@ let _cached_encoder_for_NchfChargingEvent: $.ASN1Encoder<NchfChargingEvent> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NchfChargingEvent, encoded as an ASN.1 Element.
  */
-export
-function _encode_NchfChargingEvent (value: NchfChargingEvent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NchfChargingEvent) { _cached_encoder_for_NchfChargingEvent = $._encodeEnumerated; }
-    return _cached_encoder_for_NchfChargingEvent(value, elGetter);
-}
+export const _encode_NchfChargingEvent = $._encodeEnumerated;
 
 
 /* eslint-enable */

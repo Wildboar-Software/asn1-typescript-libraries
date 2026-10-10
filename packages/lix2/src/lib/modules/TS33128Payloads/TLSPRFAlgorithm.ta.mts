@@ -78,21 +78,13 @@ const TLSPRFAlgorithm_rfc5246: TLSPRFAlgorithm = TLSPRFAlgorithm.rfc5246; /* LON
 export
 const rfc5246: TLSPRFAlgorithm = TLSPRFAlgorithm.rfc5246; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TLSPRFAlgorithm: $.ASN1Decoder<TLSPRFAlgorithm> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TLSPRFAlgorithm
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TLSPRFAlgorithm (el: _Element): TLSPRFAlgorithm {
-    if (!_cached_decoder_for_TLSPRFAlgorithm) { _cached_decoder_for_TLSPRFAlgorithm = $._decodeEnumerated; }
-    return _cached_decoder_for_TLSPRFAlgorithm(el);
-}
-
-let _cached_encoder_for_TLSPRFAlgorithm: $.ASN1Encoder<TLSPRFAlgorithm> | null = null;
+export const _decode_TLSPRFAlgorithm = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TLSPRFAlgorithm into an ASN.1 Element.
@@ -101,11 +93,7 @@ let _cached_encoder_for_TLSPRFAlgorithm: $.ASN1Encoder<TLSPRFAlgorithm> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TLSPRFAlgorithm, encoded as an ASN.1 Element.
  */
-export
-function _encode_TLSPRFAlgorithm (value: TLSPRFAlgorithm, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TLSPRFAlgorithm) { _cached_encoder_for_TLSPRFAlgorithm = $._encodeEnumerated; }
-    return _cached_encoder_for_TLSPRFAlgorithm(value, elGetter);
-}
+export const _encode_TLSPRFAlgorithm = $._encodeEnumerated;
 
 
 /* eslint-enable */

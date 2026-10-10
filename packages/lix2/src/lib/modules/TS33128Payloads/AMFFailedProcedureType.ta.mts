@@ -118,21 +118,13 @@ const AMFFailedProcedureType_pDUSessionEstablishment: AMFFailedProcedureType = A
 export
 const pDUSessionEstablishment: AMFFailedProcedureType = AMFFailedProcedureType.pDUSessionEstablishment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AMFFailedProcedureType: $.ASN1Decoder<AMFFailedProcedureType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AMFFailedProcedureType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AMFFailedProcedureType (el: _Element): AMFFailedProcedureType {
-    if (!_cached_decoder_for_AMFFailedProcedureType) { _cached_decoder_for_AMFFailedProcedureType = $._decodeEnumerated; }
-    return _cached_decoder_for_AMFFailedProcedureType(el);
-}
-
-let _cached_encoder_for_AMFFailedProcedureType: $.ASN1Encoder<AMFFailedProcedureType> | null = null;
+export const _decode_AMFFailedProcedureType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AMFFailedProcedureType into an ASN.1 Element.
@@ -141,11 +133,7 @@ let _cached_encoder_for_AMFFailedProcedureType: $.ASN1Encoder<AMFFailedProcedure
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AMFFailedProcedureType, encoded as an ASN.1 Element.
  */
-export
-function _encode_AMFFailedProcedureType (value: AMFFailedProcedureType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFFailedProcedureType) { _cached_encoder_for_AMFFailedProcedureType = $._encodeEnumerated; }
-    return _cached_encoder_for_AMFFailedProcedureType(value, elGetter);
-}
+export const _encode_AMFFailedProcedureType = $._encodeEnumerated;
 
 
 /* eslint-enable */

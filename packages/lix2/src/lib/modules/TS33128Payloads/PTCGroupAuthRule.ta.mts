@@ -258,21 +258,13 @@ const PTCGroupAuthRule_forbidAnonymity: PTCGroupAuthRule = PTCGroupAuthRule.forb
 export
 const forbidAnonymity: PTCGroupAuthRule = PTCGroupAuthRule.forbidAnonymity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCGroupAuthRule: $.ASN1Decoder<PTCGroupAuthRule> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PTCGroupAuthRule
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PTCGroupAuthRule (el: _Element): PTCGroupAuthRule {
-    if (!_cached_decoder_for_PTCGroupAuthRule) { _cached_decoder_for_PTCGroupAuthRule = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCGroupAuthRule(el);
-}
-
-let _cached_encoder_for_PTCGroupAuthRule: $.ASN1Encoder<PTCGroupAuthRule> | null = null;
+export const _decode_PTCGroupAuthRule = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PTCGroupAuthRule into an ASN.1 Element.
@@ -281,11 +273,7 @@ let _cached_encoder_for_PTCGroupAuthRule: $.ASN1Encoder<PTCGroupAuthRule> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PTCGroupAuthRule, encoded as an ASN.1 Element.
  */
-export
-function _encode_PTCGroupAuthRule (value: PTCGroupAuthRule, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCGroupAuthRule) { _cached_encoder_for_PTCGroupAuthRule = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCGroupAuthRule(value, elGetter);
-}
+export const _encode_PTCGroupAuthRule = $._encodeEnumerated;
 
 
 /* eslint-enable */

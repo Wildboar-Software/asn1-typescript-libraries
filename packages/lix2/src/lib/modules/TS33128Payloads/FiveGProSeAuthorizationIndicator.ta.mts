@@ -98,21 +98,13 @@ const FiveGProSeAuthorizationIndicator_notAuthorized: FiveGProSeAuthorizationInd
 export
 const notAuthorized: FiveGProSeAuthorizationIndicator = FiveGProSeAuthorizationIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_FiveGProSeAuthorizationIndicator: $.ASN1Decoder<FiveGProSeAuthorizationIndicator> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) FiveGProSeAuthorizationIndicator
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_FiveGProSeAuthorizationIndicator (el: _Element): FiveGProSeAuthorizationIndicator {
-    if (!_cached_decoder_for_FiveGProSeAuthorizationIndicator) { _cached_decoder_for_FiveGProSeAuthorizationIndicator = $._decodeEnumerated; }
-    return _cached_decoder_for_FiveGProSeAuthorizationIndicator(el);
-}
-
-let _cached_encoder_for_FiveGProSeAuthorizationIndicator: $.ASN1Encoder<FiveGProSeAuthorizationIndicator> | null = null;
+export const _decode_FiveGProSeAuthorizationIndicator = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) FiveGProSeAuthorizationIndicator into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_FiveGProSeAuthorizationIndicator: $.ASN1Encoder<FiveGPro
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FiveGProSeAuthorizationIndicator, encoded as an ASN.1 Element.
  */
-export
-function _encode_FiveGProSeAuthorizationIndicator (value: FiveGProSeAuthorizationIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FiveGProSeAuthorizationIndicator) { _cached_encoder_for_FiveGProSeAuthorizationIndicator = $._encodeEnumerated; }
-    return _cached_encoder_for_FiveGProSeAuthorizationIndicator(value, elGetter);
-}
+export const _encode_FiveGProSeAuthorizationIndicator = $._encodeEnumerated;
 
 
 /* eslint-enable */

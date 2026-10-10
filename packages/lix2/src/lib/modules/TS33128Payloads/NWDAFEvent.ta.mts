@@ -198,21 +198,13 @@ const NWDAFEvent_pDUSessionTraffic: NWDAFEvent = NWDAFEvent.pDUSessionTraffic; /
 export
 const pDUSessionTraffic: NWDAFEvent = NWDAFEvent.pDUSessionTraffic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_NWDAFEvent: $.ASN1Decoder<NWDAFEvent> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NWDAFEvent
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NWDAFEvent (el: _Element): NWDAFEvent {
-    if (!_cached_decoder_for_NWDAFEvent) { _cached_decoder_for_NWDAFEvent = $._decodeEnumerated; }
-    return _cached_decoder_for_NWDAFEvent(el);
-}
-
-let _cached_encoder_for_NWDAFEvent: $.ASN1Encoder<NWDAFEvent> | null = null;
+export const _decode_NWDAFEvent = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NWDAFEvent into an ASN.1 Element.
@@ -221,11 +213,7 @@ let _cached_encoder_for_NWDAFEvent: $.ASN1Encoder<NWDAFEvent> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NWDAFEvent, encoded as an ASN.1 Element.
  */
-export
-function _encode_NWDAFEvent (value: NWDAFEvent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NWDAFEvent) { _cached_encoder_for_NWDAFEvent = $._encodeEnumerated; }
-    return _cached_encoder_for_NWDAFEvent(value, elGetter);
-}
+export const _encode_NWDAFEvent = $._encodeEnumerated;
 
 
 /* eslint-enable */

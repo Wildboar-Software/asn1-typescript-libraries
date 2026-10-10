@@ -98,21 +98,13 @@ const AMFDirection_uEInitiated: AMFDirection = AMFDirection.uEInitiated; /* LONG
 export
 const uEInitiated: AMFDirection = AMFDirection.uEInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AMFDirection: $.ASN1Decoder<AMFDirection> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AMFDirection
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AMFDirection (el: _Element): AMFDirection {
-    if (!_cached_decoder_for_AMFDirection) { _cached_decoder_for_AMFDirection = $._decodeEnumerated; }
-    return _cached_decoder_for_AMFDirection(el);
-}
-
-let _cached_encoder_for_AMFDirection: $.ASN1Encoder<AMFDirection> | null = null;
+export const _decode_AMFDirection = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AMFDirection into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_AMFDirection: $.ASN1Encoder<AMFDirection> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AMFDirection, encoded as an ASN.1 Element.
  */
-export
-function _encode_AMFDirection (value: AMFDirection, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFDirection) { _cached_encoder_for_AMFDirection = $._encodeEnumerated; }
-    return _cached_encoder_for_AMFDirection(value, elGetter);
-}
+export const _encode_AMFDirection = $._encodeEnumerated;
 
 
 /* eslint-enable */

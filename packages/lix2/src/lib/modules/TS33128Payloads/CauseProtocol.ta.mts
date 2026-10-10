@@ -198,21 +198,13 @@ const CauseProtocol_unspecified: CauseProtocol = CauseProtocol.unspecified; /* L
 export
 const unspecified: CauseProtocol = CauseProtocol.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_CauseProtocol: $.ASN1Decoder<CauseProtocol> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CauseProtocol
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CauseProtocol (el: _Element): CauseProtocol {
-    if (!_cached_decoder_for_CauseProtocol) { _cached_decoder_for_CauseProtocol = $._decodeEnumerated; }
-    return _cached_decoder_for_CauseProtocol(el);
-}
-
-let _cached_encoder_for_CauseProtocol: $.ASN1Encoder<CauseProtocol> | null = null;
+export const _decode_CauseProtocol = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CauseProtocol into an ASN.1 Element.
@@ -221,11 +213,7 @@ let _cached_encoder_for_CauseProtocol: $.ASN1Encoder<CauseProtocol> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CauseProtocol, encoded as an ASN.1 Element.
  */
-export
-function _encode_CauseProtocol (value: CauseProtocol, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CauseProtocol) { _cached_encoder_for_CauseProtocol = $._encodeEnumerated; }
-    return _cached_encoder_for_CauseProtocol(value, elGetter);
-}
+export const _encode_CauseProtocol = $._encodeEnumerated;
 
 
 /* eslint-enable */

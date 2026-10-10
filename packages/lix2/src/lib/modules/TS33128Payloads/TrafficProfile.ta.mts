@@ -158,21 +158,13 @@ const TrafficProfile_multiTrans: TrafficProfile = TrafficProfile.multiTrans; /* 
 export
 const multiTrans: TrafficProfile = TrafficProfile.multiTrans; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TrafficProfile: $.ASN1Decoder<TrafficProfile> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TrafficProfile
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TrafficProfile (el: _Element): TrafficProfile {
-    if (!_cached_decoder_for_TrafficProfile) { _cached_decoder_for_TrafficProfile = $._decodeEnumerated; }
-    return _cached_decoder_for_TrafficProfile(el);
-}
-
-let _cached_encoder_for_TrafficProfile: $.ASN1Encoder<TrafficProfile> | null = null;
+export const _decode_TrafficProfile = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TrafficProfile into an ASN.1 Element.
@@ -181,11 +173,7 @@ let _cached_encoder_for_TrafficProfile: $.ASN1Encoder<TrafficProfile> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TrafficProfile, encoded as an ASN.1 Element.
  */
-export
-function _encode_TrafficProfile (value: TrafficProfile, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TrafficProfile) { _cached_encoder_for_TrafficProfile = $._encodeEnumerated; }
-    return _cached_encoder_for_TrafficProfile(value, elGetter);
-}
+export const _encode_TrafficProfile = $._encodeEnumerated;
 
 
 /* eslint-enable */

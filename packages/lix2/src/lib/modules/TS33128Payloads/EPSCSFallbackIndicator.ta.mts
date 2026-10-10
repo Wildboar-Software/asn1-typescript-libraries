@@ -98,21 +98,13 @@ const EPSCSFallbackIndicator_cSFallbackHighPriority: EPSCSFallbackIndicator = EP
 export
 const cSFallbackHighPriority: EPSCSFallbackIndicator = EPSCSFallbackIndicator.cSFallbackHighPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_EPSCSFallbackIndicator: $.ASN1Decoder<EPSCSFallbackIndicator> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EPSCSFallbackIndicator
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EPSCSFallbackIndicator (el: _Element): EPSCSFallbackIndicator {
-    if (!_cached_decoder_for_EPSCSFallbackIndicator) { _cached_decoder_for_EPSCSFallbackIndicator = $._decodeEnumerated; }
-    return _cached_decoder_for_EPSCSFallbackIndicator(el);
-}
-
-let _cached_encoder_for_EPSCSFallbackIndicator: $.ASN1Encoder<EPSCSFallbackIndicator> | null = null;
+export const _decode_EPSCSFallbackIndicator = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) EPSCSFallbackIndicator into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_EPSCSFallbackIndicator: $.ASN1Encoder<EPSCSFallbackIndic
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EPSCSFallbackIndicator, encoded as an ASN.1 Element.
  */
-export
-function _encode_EPSCSFallbackIndicator (value: EPSCSFallbackIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSCSFallbackIndicator) { _cached_encoder_for_EPSCSFallbackIndicator = $._encodeEnumerated; }
-    return _cached_encoder_for_EPSCSFallbackIndicator(value, elGetter);
-}
+export const _encode_EPSCSFallbackIndicator = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -138,21 +138,13 @@ const RCSRegistrationType_networkDeregistration: RCSRegistrationType = RCSRegist
 export
 const networkDeregistration: RCSRegistrationType = RCSRegistrationType.networkDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RCSRegistrationType: $.ASN1Decoder<RCSRegistrationType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RCSRegistrationType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RCSRegistrationType (el: _Element): RCSRegistrationType {
-    if (!_cached_decoder_for_RCSRegistrationType) { _cached_decoder_for_RCSRegistrationType = $._decodeEnumerated; }
-    return _cached_decoder_for_RCSRegistrationType(el);
-}
-
-let _cached_encoder_for_RCSRegistrationType: $.ASN1Encoder<RCSRegistrationType> | null = null;
+export const _decode_RCSRegistrationType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RCSRegistrationType into an ASN.1 Element.
@@ -161,11 +153,7 @@ let _cached_encoder_for_RCSRegistrationType: $.ASN1Encoder<RCSRegistrationType> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RCSRegistrationType, encoded as an ASN.1 Element.
  */
-export
-function _encode_RCSRegistrationType (value: RCSRegistrationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RCSRegistrationType) { _cached_encoder_for_RCSRegistrationType = $._encodeEnumerated; }
-    return _cached_encoder_for_RCSRegistrationType(value, elGetter);
-}
+export const _encode_RCSRegistrationType = $._encodeEnumerated;
 
 
 /* eslint-enable */

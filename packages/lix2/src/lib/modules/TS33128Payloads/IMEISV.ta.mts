@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type IMEISV = NumericString; // NumericString
 
-let _cached_decoder_for_IMEISV: $.ASN1Decoder<IMEISV> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IMEISV
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IMEISV (el: _Element): IMEISV {
-    if (!_cached_decoder_for_IMEISV) { _cached_decoder_for_IMEISV = $._decodeNumericString; }
-    return _cached_decoder_for_IMEISV(el);
-}
-
-let _cached_encoder_for_IMEISV: $.ASN1Encoder<IMEISV> | null = null;
+export const _decode_IMEISV = $._decodeNumericString;
 
 /**
  * @summary Encodes a(n) IMEISV into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_IMEISV: $.ASN1Encoder<IMEISV> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IMEISV, encoded as an ASN.1 Element.
  */
-export
-function _encode_IMEISV (value: IMEISV, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IMEISV) { _cached_encoder_for_IMEISV = $._encodeNumericString; }
-    return _cached_encoder_for_IMEISV(value, elGetter);
-}
+export const _encode_IMEISV = $._encodeNumericString;
 
 
 /* eslint-enable */

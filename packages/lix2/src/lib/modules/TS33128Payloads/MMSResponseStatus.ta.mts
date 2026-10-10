@@ -578,21 +578,13 @@ const MMSResponseStatus_errorPermanentLackOfPrepaid: MMSResponseStatus = MMSResp
 export
 const errorPermanentLackOfPrepaid: MMSResponseStatus = MMSResponseStatus.errorPermanentLackOfPrepaid; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MMSResponseStatus: $.ASN1Decoder<MMSResponseStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MMSResponseStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MMSResponseStatus (el: _Element): MMSResponseStatus {
-    if (!_cached_decoder_for_MMSResponseStatus) { _cached_decoder_for_MMSResponseStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_MMSResponseStatus(el);
-}
-
-let _cached_encoder_for_MMSResponseStatus: $.ASN1Encoder<MMSResponseStatus> | null = null;
+export const _decode_MMSResponseStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MMSResponseStatus into an ASN.1 Element.
@@ -601,11 +593,7 @@ let _cached_encoder_for_MMSResponseStatus: $.ASN1Encoder<MMSResponseStatus> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MMSResponseStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_MMSResponseStatus (value: MMSResponseStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSResponseStatus) { _cached_encoder_for_MMSResponseStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_MMSResponseStatus(value, elGetter);
-}
+export const _encode_MMSResponseStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -98,21 +98,13 @@ const PTCRegistrationOutcome_failure: PTCRegistrationOutcome = PTCRegistrationOu
 export
 const failure: PTCRegistrationOutcome = PTCRegistrationOutcome.failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCRegistrationOutcome: $.ASN1Decoder<PTCRegistrationOutcome> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PTCRegistrationOutcome
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PTCRegistrationOutcome (el: _Element): PTCRegistrationOutcome {
-    if (!_cached_decoder_for_PTCRegistrationOutcome) { _cached_decoder_for_PTCRegistrationOutcome = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCRegistrationOutcome(el);
-}
-
-let _cached_encoder_for_PTCRegistrationOutcome: $.ASN1Encoder<PTCRegistrationOutcome> | null = null;
+export const _decode_PTCRegistrationOutcome = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PTCRegistrationOutcome into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_PTCRegistrationOutcome: $.ASN1Encoder<PTCRegistrationOut
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PTCRegistrationOutcome, encoded as an ASN.1 Element.
  */
-export
-function _encode_PTCRegistrationOutcome (value: PTCRegistrationOutcome, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCRegistrationOutcome) { _cached_encoder_for_PTCRegistrationOutcome = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCRegistrationOutcome(value, elGetter);
-}
+export const _encode_PTCRegistrationOutcome = $._encodeEnumerated;
 
 
 /* eslint-enable */

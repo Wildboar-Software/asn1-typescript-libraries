@@ -118,21 +118,13 @@ const AFKeyRemovalCause_applicationSpecific: AFKeyRemovalCause = AFKeyRemovalCau
 export
 const applicationSpecific: AFKeyRemovalCause = AFKeyRemovalCause.applicationSpecific; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AFKeyRemovalCause: $.ASN1Decoder<AFKeyRemovalCause> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AFKeyRemovalCause
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AFKeyRemovalCause (el: _Element): AFKeyRemovalCause {
-    if (!_cached_decoder_for_AFKeyRemovalCause) { _cached_decoder_for_AFKeyRemovalCause = $._decodeEnumerated; }
-    return _cached_decoder_for_AFKeyRemovalCause(el);
-}
-
-let _cached_encoder_for_AFKeyRemovalCause: $.ASN1Encoder<AFKeyRemovalCause> | null = null;
+export const _decode_AFKeyRemovalCause = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AFKeyRemovalCause into an ASN.1 Element.
@@ -141,11 +133,7 @@ let _cached_encoder_for_AFKeyRemovalCause: $.ASN1Encoder<AFKeyRemovalCause> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AFKeyRemovalCause, encoded as an ASN.1 Element.
  */
-export
-function _encode_AFKeyRemovalCause (value: AFKeyRemovalCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AFKeyRemovalCause) { _cached_encoder_for_AFKeyRemovalCause = $._encodeEnumerated; }
-    return _cached_encoder_for_AFKeyRemovalCause(value, elGetter);
-}
+export const _encode_AFKeyRemovalCause = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -119,21 +119,13 @@ const PDSRSummaryTriggerIPaccess_endOfFlow: PDSRSummaryTriggerIPaccess = 4; /* L
 export
 const endOfFlow: PDSRSummaryTriggerIPaccess = PDSRSummaryTriggerIPaccess_endOfFlow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PDSRSummaryTriggerIPaccess: $.ASN1Decoder<PDSRSummaryTriggerIPaccess> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PDSRSummaryTriggerIPaccess
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PDSRSummaryTriggerIPaccess (el: _Element): PDSRSummaryTriggerIPaccess {
-    if (!_cached_decoder_for_PDSRSummaryTriggerIPaccess) { _cached_decoder_for_PDSRSummaryTriggerIPaccess = $._decodeEnumerated; }
-    return _cached_decoder_for_PDSRSummaryTriggerIPaccess(el);
-}
-
-let _cached_encoder_for_PDSRSummaryTriggerIPaccess: $.ASN1Encoder<PDSRSummaryTriggerIPaccess> | null = null;
+export const _decode_PDSRSummaryTriggerIPaccess = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PDSRSummaryTriggerIPaccess into an ASN.1 Element.
@@ -142,11 +134,7 @@ let _cached_encoder_for_PDSRSummaryTriggerIPaccess: $.ASN1Encoder<PDSRSummaryTri
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PDSRSummaryTriggerIPaccess, encoded as an ASN.1 Element.
  */
-export
-function _encode_PDSRSummaryTriggerIPaccess (value: PDSRSummaryTriggerIPaccess, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDSRSummaryTriggerIPaccess) { _cached_encoder_for_PDSRSummaryTriggerIPaccess = $._encodeEnumerated; }
-    return _cached_encoder_for_PDSRSummaryTriggerIPaccess(value, elGetter);
-}
+export const _encode_PDSRSummaryTriggerIPaccess = $._encodeEnumerated;
 
 
 /* eslint-enable */

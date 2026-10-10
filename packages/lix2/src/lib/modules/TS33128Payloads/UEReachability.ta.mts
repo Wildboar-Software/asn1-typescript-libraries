@@ -118,21 +118,13 @@ const UEReachability_regulatoryOnly: UEReachability = UEReachability.regulatoryO
 export
 const regulatoryOnly: UEReachability = UEReachability.regulatoryOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_UEReachability: $.ASN1Decoder<UEReachability> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UEReachability
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UEReachability (el: _Element): UEReachability {
-    if (!_cached_decoder_for_UEReachability) { _cached_decoder_for_UEReachability = $._decodeEnumerated; }
-    return _cached_decoder_for_UEReachability(el);
-}
-
-let _cached_encoder_for_UEReachability: $.ASN1Encoder<UEReachability> | null = null;
+export const _decode_UEReachability = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) UEReachability into an ASN.1 Element.
@@ -141,11 +133,7 @@ let _cached_encoder_for_UEReachability: $.ASN1Encoder<UEReachability> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UEReachability, encoded as an ASN.1 Element.
  */
-export
-function _encode_UEReachability (value: UEReachability, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UEReachability) { _cached_encoder_for_UEReachability = $._encodeEnumerated; }
-    return _cached_encoder_for_UEReachability(value, elGetter);
-}
+export const _encode_UEReachability = $._encodeEnumerated;
 
 
 /* eslint-enable */

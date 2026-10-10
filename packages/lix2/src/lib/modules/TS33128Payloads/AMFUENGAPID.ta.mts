@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type AMFUENGAPID = INTEGER;
 
-let _cached_decoder_for_AMFUENGAPID: $.ASN1Decoder<AMFUENGAPID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AMFUENGAPID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AMFUENGAPID (el: _Element): AMFUENGAPID {
-    if (!_cached_decoder_for_AMFUENGAPID) { _cached_decoder_for_AMFUENGAPID = $._decodeInteger; }
-    return _cached_decoder_for_AMFUENGAPID(el);
-}
-
-let _cached_encoder_for_AMFUENGAPID: $.ASN1Encoder<AMFUENGAPID> | null = null;
+export const _decode_AMFUENGAPID = $._decodeInteger;
 
 /**
  * @summary Encodes a(n) AMFUENGAPID into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_AMFUENGAPID: $.ASN1Encoder<AMFUENGAPID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AMFUENGAPID, encoded as an ASN.1 Element.
  */
-export
-function _encode_AMFUENGAPID (value: AMFUENGAPID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFUENGAPID) { _cached_encoder_for_AMFUENGAPID = $._encodeInteger; }
-    return _cached_encoder_for_AMFUENGAPID(value, elGetter);
-}
+export const _encode_AMFUENGAPID = $._encodeInteger;
 
 
 /* eslint-enable */

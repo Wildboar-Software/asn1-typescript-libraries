@@ -237,21 +237,13 @@ const AccessEventType_unknown: AccessEventType = 10; /* LONG_NAMED_ENUMERATED_VA
 export
 const unknown: AccessEventType = AccessEventType_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AccessEventType: $.ASN1Decoder<AccessEventType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AccessEventType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AccessEventType (el: _Element): AccessEventType {
-    if (!_cached_decoder_for_AccessEventType) { _cached_decoder_for_AccessEventType = $._decodeEnumerated; }
-    return _cached_decoder_for_AccessEventType(el);
-}
-
-let _cached_encoder_for_AccessEventType: $.ASN1Encoder<AccessEventType> | null = null;
+export const _decode_AccessEventType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AccessEventType into an ASN.1 Element.
@@ -260,11 +252,7 @@ let _cached_encoder_for_AccessEventType: $.ASN1Encoder<AccessEventType> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AccessEventType, encoded as an ASN.1 Element.
  */
-export
-function _encode_AccessEventType (value: AccessEventType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccessEventType) { _cached_encoder_for_AccessEventType = $._encodeEnumerated; }
-    return _cached_encoder_for_AccessEventType(value, elGetter);
-}
+export const _encode_AccessEventType = $._encodeEnumerated;
 
 
 /* eslint-enable */

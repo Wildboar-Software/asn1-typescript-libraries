@@ -198,21 +198,13 @@ const AMFRegistrationType_disasterInitial: AMFRegistrationType = AMFRegistration
 export
 const disasterInitial: AMFRegistrationType = AMFRegistrationType.disasterInitial; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AMFRegistrationType: $.ASN1Decoder<AMFRegistrationType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AMFRegistrationType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AMFRegistrationType (el: _Element): AMFRegistrationType {
-    if (!_cached_decoder_for_AMFRegistrationType) { _cached_decoder_for_AMFRegistrationType = $._decodeEnumerated; }
-    return _cached_decoder_for_AMFRegistrationType(el);
-}
-
-let _cached_encoder_for_AMFRegistrationType: $.ASN1Encoder<AMFRegistrationType> | null = null;
+export const _decode_AMFRegistrationType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AMFRegistrationType into an ASN.1 Element.
@@ -221,11 +213,7 @@ let _cached_encoder_for_AMFRegistrationType: $.ASN1Encoder<AMFRegistrationType> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AMFRegistrationType, encoded as an ASN.1 Element.
  */
-export
-function _encode_AMFRegistrationType (value: AMFRegistrationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFRegistrationType) { _cached_encoder_for_AMFRegistrationType = $._encodeEnumerated; }
-    return _cached_encoder_for_AMFRegistrationType(value, elGetter);
-}
+export const _encode_AMFRegistrationType = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SHAKENFailureStatusCode = INTEGER;
 
-let _cached_decoder_for_SHAKENFailureStatusCode: $.ASN1Decoder<SHAKENFailureStatusCode> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SHAKENFailureStatusCode
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SHAKENFailureStatusCode (el: _Element): SHAKENFailureStatusCode {
-    if (!_cached_decoder_for_SHAKENFailureStatusCode) { _cached_decoder_for_SHAKENFailureStatusCode = $._decodeInteger; }
-    return _cached_decoder_for_SHAKENFailureStatusCode(el);
-}
-
-let _cached_encoder_for_SHAKENFailureStatusCode: $.ASN1Encoder<SHAKENFailureStatusCode> | null = null;
+export const _decode_SHAKENFailureStatusCode = $._decodeInteger;
 
 /**
  * @summary Encodes a(n) SHAKENFailureStatusCode into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_SHAKENFailureStatusCode: $.ASN1Encoder<SHAKENFailureStat
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SHAKENFailureStatusCode, encoded as an ASN.1 Element.
  */
-export
-function _encode_SHAKENFailureStatusCode (value: SHAKENFailureStatusCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SHAKENFailureStatusCode) { _cached_encoder_for_SHAKENFailureStatusCode = $._encodeInteger; }
-    return _cached_encoder_for_SHAKENFailureStatusCode(value, elGetter);
-}
+export const _encode_SHAKENFailureStatusCode = $._encodeInteger;
 
 
 /* eslint-enable */

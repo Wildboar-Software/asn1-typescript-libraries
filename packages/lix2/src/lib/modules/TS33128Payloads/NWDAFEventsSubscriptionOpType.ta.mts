@@ -118,21 +118,13 @@ const NWDAFEventsSubscriptionOpType_dELETE: NWDAFEventsSubscriptionOpType = NWDA
 export
 const dELETE: NWDAFEventsSubscriptionOpType = NWDAFEventsSubscriptionOpType.dELETE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_NWDAFEventsSubscriptionOpType: $.ASN1Decoder<NWDAFEventsSubscriptionOpType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NWDAFEventsSubscriptionOpType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NWDAFEventsSubscriptionOpType (el: _Element): NWDAFEventsSubscriptionOpType {
-    if (!_cached_decoder_for_NWDAFEventsSubscriptionOpType) { _cached_decoder_for_NWDAFEventsSubscriptionOpType = $._decodeEnumerated; }
-    return _cached_decoder_for_NWDAFEventsSubscriptionOpType(el);
-}
-
-let _cached_encoder_for_NWDAFEventsSubscriptionOpType: $.ASN1Encoder<NWDAFEventsSubscriptionOpType> | null = null;
+export const _decode_NWDAFEventsSubscriptionOpType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NWDAFEventsSubscriptionOpType into an ASN.1 Element.
@@ -141,11 +133,7 @@ let _cached_encoder_for_NWDAFEventsSubscriptionOpType: $.ASN1Encoder<NWDAFEvents
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NWDAFEventsSubscriptionOpType, encoded as an ASN.1 Element.
  */
-export
-function _encode_NWDAFEventsSubscriptionOpType (value: NWDAFEventsSubscriptionOpType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NWDAFEventsSubscriptionOpType) { _cached_encoder_for_NWDAFEventsSubscriptionOpType = $._encodeEnumerated; }
-    return _cached_encoder_for_NWDAFEventsSubscriptionOpType(value, elGetter);
-}
+export const _encode_NWDAFEventsSubscriptionOpType = $._encodeEnumerated;
 
 
 /* eslint-enable */

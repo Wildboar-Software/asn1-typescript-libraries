@@ -86,21 +86,13 @@ const IPAddress_iP_assignment_notKnown: IPAddress_iP_assignment = 3; /* LONG_NAM
 export
 const notKnown: IPAddress_iP_assignment = IPAddress_iP_assignment_notKnown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_IPAddress_iP_assignment: $.ASN1Decoder<IPAddress_iP_assignment> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IPAddress_iP_assignment
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IPAddress_iP_assignment (el: _Element): IPAddress_iP_assignment {
-    if (!_cached_decoder_for_IPAddress_iP_assignment) { _cached_decoder_for_IPAddress_iP_assignment = $._decodeEnumerated; }
-    return _cached_decoder_for_IPAddress_iP_assignment(el);
-}
-
-let _cached_encoder_for_IPAddress_iP_assignment: $.ASN1Encoder<IPAddress_iP_assignment> | null = null;
+export const _decode_IPAddress_iP_assignment = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) IPAddress_iP_assignment into an ASN.1 Element.
@@ -109,11 +101,7 @@ let _cached_encoder_for_IPAddress_iP_assignment: $.ASN1Encoder<IPAddress_iP_assi
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IPAddress_iP_assignment, encoded as an ASN.1 Element.
  */
-export
-function _encode_IPAddress_iP_assignment (value: IPAddress_iP_assignment, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IPAddress_iP_assignment) { _cached_encoder_for_IPAddress_iP_assignment = $._encodeEnumerated; }
-    return _cached_encoder_for_IPAddress_iP_assignment(value, elGetter);
-}
+export const _encode_IPAddress_iP_assignment = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -98,21 +98,13 @@ const CauseTransport_unspecified: CauseTransport = CauseTransport.unspecified; /
 export
 const unspecified: CauseTransport = CauseTransport.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_CauseTransport: $.ASN1Decoder<CauseTransport> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CauseTransport
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CauseTransport (el: _Element): CauseTransport {
-    if (!_cached_decoder_for_CauseTransport) { _cached_decoder_for_CauseTransport = $._decodeEnumerated; }
-    return _cached_decoder_for_CauseTransport(el);
-}
-
-let _cached_encoder_for_CauseTransport: $.ASN1Encoder<CauseTransport> | null = null;
+export const _decode_CauseTransport = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CauseTransport into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_CauseTransport: $.ASN1Encoder<CauseTransport> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CauseTransport, encoded as an ASN.1 Element.
  */
-export
-function _encode_CauseTransport (value: CauseTransport, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CauseTransport) { _cached_encoder_for_CauseTransport = $._encodeEnumerated; }
-    return _cached_encoder_for_CauseTransport(value, elGetter);
-}
+export const _encode_CauseTransport = $._encodeEnumerated;
 
 
 /* eslint-enable */

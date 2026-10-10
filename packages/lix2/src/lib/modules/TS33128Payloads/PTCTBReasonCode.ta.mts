@@ -158,21 +158,13 @@ const PTCTBReasonCode_tBPrevented: PTCTBReasonCode = PTCTBReasonCode.tBPrevented
 export
 const tBPrevented: PTCTBReasonCode = PTCTBReasonCode.tBPrevented; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCTBReasonCode: $.ASN1Decoder<PTCTBReasonCode> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PTCTBReasonCode
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PTCTBReasonCode (el: _Element): PTCTBReasonCode {
-    if (!_cached_decoder_for_PTCTBReasonCode) { _cached_decoder_for_PTCTBReasonCode = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCTBReasonCode(el);
-}
-
-let _cached_encoder_for_PTCTBReasonCode: $.ASN1Encoder<PTCTBReasonCode> | null = null;
+export const _decode_PTCTBReasonCode = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PTCTBReasonCode into an ASN.1 Element.
@@ -181,11 +173,7 @@ let _cached_encoder_for_PTCTBReasonCode: $.ASN1Encoder<PTCTBReasonCode> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PTCTBReasonCode, encoded as an ASN.1 Element.
  */
-export
-function _encode_PTCTBReasonCode (value: PTCTBReasonCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCTBReasonCode) { _cached_encoder_for_PTCTBReasonCode = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCTBReasonCode(value, elGetter);
-}
+export const _encode_PTCTBReasonCode = $._encodeEnumerated;
 
 
 /* eslint-enable */

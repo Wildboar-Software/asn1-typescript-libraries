@@ -78,21 +78,13 @@ const AnyNextLayerProtocol_ip: AnyNextLayerProtocol = AnyNextLayerProtocol.ip; /
 export
 const ip: AnyNextLayerProtocol = AnyNextLayerProtocol.ip; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AnyNextLayerProtocol: $.ASN1Decoder<AnyNextLayerProtocol> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AnyNextLayerProtocol
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AnyNextLayerProtocol (el: _Element): AnyNextLayerProtocol {
-    if (!_cached_decoder_for_AnyNextLayerProtocol) { _cached_decoder_for_AnyNextLayerProtocol = $._decodeEnumerated; }
-    return _cached_decoder_for_AnyNextLayerProtocol(el);
-}
-
-let _cached_encoder_for_AnyNextLayerProtocol: $.ASN1Encoder<AnyNextLayerProtocol> | null = null;
+export const _decode_AnyNextLayerProtocol = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AnyNextLayerProtocol into an ASN.1 Element.
@@ -101,11 +93,7 @@ let _cached_encoder_for_AnyNextLayerProtocol: $.ASN1Encoder<AnyNextLayerProtocol
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AnyNextLayerProtocol, encoded as an ASN.1 Element.
  */
-export
-function _encode_AnyNextLayerProtocol (value: AnyNextLayerProtocol, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AnyNextLayerProtocol) { _cached_encoder_for_AnyNextLayerProtocol = $._encodeEnumerated; }
-    return _cached_encoder_for_AnyNextLayerProtocol(value, elGetter);
-}
+export const _encode_AnyNextLayerProtocol = $._encodeEnumerated;
 
 
 /* eslint-enable */

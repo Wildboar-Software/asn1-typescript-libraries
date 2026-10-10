@@ -278,21 +278,13 @@ const FailureResponse_error503: FailureResponse = FailureResponse.error503; /* L
 export
 const error503: FailureResponse = FailureResponse.error503; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_FailureResponse: $.ASN1Decoder<FailureResponse> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) FailureResponse
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_FailureResponse (el: _Element): FailureResponse {
-    if (!_cached_decoder_for_FailureResponse) { _cached_decoder_for_FailureResponse = $._decodeEnumerated; }
-    return _cached_decoder_for_FailureResponse(el);
-}
-
-let _cached_encoder_for_FailureResponse: $.ASN1Encoder<FailureResponse> | null = null;
+export const _decode_FailureResponse = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) FailureResponse into an ASN.1 Element.
@@ -301,11 +293,7 @@ let _cached_encoder_for_FailureResponse: $.ASN1Encoder<FailureResponse> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FailureResponse, encoded as an ASN.1 Element.
  */
-export
-function _encode_FailureResponse (value: FailureResponse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FailureResponse) { _cached_encoder_for_FailureResponse = $._encodeEnumerated; }
-    return _cached_encoder_for_FailureResponse(value, elGetter);
-}
+export const _encode_FailureResponse = $._encodeEnumerated;
 
 
 /* eslint-enable */

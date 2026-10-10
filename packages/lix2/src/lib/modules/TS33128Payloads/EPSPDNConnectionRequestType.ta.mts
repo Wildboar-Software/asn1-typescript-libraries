@@ -178,21 +178,13 @@ const EPSPDNConnectionRequestType_reserved: EPSPDNConnectionRequestType = EPSPDN
 export
 const reserved: EPSPDNConnectionRequestType = EPSPDNConnectionRequestType.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_EPSPDNConnectionRequestType: $.ASN1Decoder<EPSPDNConnectionRequestType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EPSPDNConnectionRequestType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EPSPDNConnectionRequestType (el: _Element): EPSPDNConnectionRequestType {
-    if (!_cached_decoder_for_EPSPDNConnectionRequestType) { _cached_decoder_for_EPSPDNConnectionRequestType = $._decodeEnumerated; }
-    return _cached_decoder_for_EPSPDNConnectionRequestType(el);
-}
-
-let _cached_encoder_for_EPSPDNConnectionRequestType: $.ASN1Encoder<EPSPDNConnectionRequestType> | null = null;
+export const _decode_EPSPDNConnectionRequestType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) EPSPDNConnectionRequestType into an ASN.1 Element.
@@ -201,11 +193,7 @@ let _cached_encoder_for_EPSPDNConnectionRequestType: $.ASN1Encoder<EPSPDNConnect
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EPSPDNConnectionRequestType, encoded as an ASN.1 Element.
  */
-export
-function _encode_EPSPDNConnectionRequestType (value: EPSPDNConnectionRequestType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSPDNConnectionRequestType) { _cached_encoder_for_EPSPDNConnectionRequestType = $._encodeEnumerated; }
-    return _cached_encoder_for_EPSPDNConnectionRequestType(value, elGetter);
-}
+export const _encode_EPSPDNConnectionRequestType = $._encodeEnumerated;
 
 
 /* eslint-enable */

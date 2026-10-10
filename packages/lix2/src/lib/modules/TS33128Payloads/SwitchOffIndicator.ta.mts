@@ -98,21 +98,13 @@ const SwitchOffIndicator_switchOff: SwitchOffIndicator = SwitchOffIndicator.swit
 export
 const switchOff: SwitchOffIndicator = SwitchOffIndicator.switchOff; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SwitchOffIndicator: $.ASN1Decoder<SwitchOffIndicator> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SwitchOffIndicator
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SwitchOffIndicator (el: _Element): SwitchOffIndicator {
-    if (!_cached_decoder_for_SwitchOffIndicator) { _cached_decoder_for_SwitchOffIndicator = $._decodeEnumerated; }
-    return _cached_decoder_for_SwitchOffIndicator(el);
-}
-
-let _cached_encoder_for_SwitchOffIndicator: $.ASN1Encoder<SwitchOffIndicator> | null = null;
+export const _decode_SwitchOffIndicator = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SwitchOffIndicator into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_SwitchOffIndicator: $.ASN1Encoder<SwitchOffIndicator> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SwitchOffIndicator, encoded as an ASN.1 Element.
  */
-export
-function _encode_SwitchOffIndicator (value: SwitchOffIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SwitchOffIndicator) { _cached_encoder_for_SwitchOffIndicator = $._encodeEnumerated; }
-    return _cached_encoder_for_SwitchOffIndicator(value, elGetter);
-}
+export const _encode_SwitchOffIndicator = $._encodeEnumerated;
 
 
 /* eslint-enable */

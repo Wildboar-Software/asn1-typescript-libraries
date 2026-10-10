@@ -138,21 +138,13 @@ const EPSInterworkingIndication_iwkNon3GPP: EPSInterworkingIndication = EPSInter
 export
 const iwkNon3GPP: EPSInterworkingIndication = EPSInterworkingIndication.iwkNon3GPP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_EPSInterworkingIndication: $.ASN1Decoder<EPSInterworkingIndication> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EPSInterworkingIndication
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EPSInterworkingIndication (el: _Element): EPSInterworkingIndication {
-    if (!_cached_decoder_for_EPSInterworkingIndication) { _cached_decoder_for_EPSInterworkingIndication = $._decodeEnumerated; }
-    return _cached_decoder_for_EPSInterworkingIndication(el);
-}
-
-let _cached_encoder_for_EPSInterworkingIndication: $.ASN1Encoder<EPSInterworkingIndication> | null = null;
+export const _decode_EPSInterworkingIndication = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) EPSInterworkingIndication into an ASN.1 Element.
@@ -161,11 +153,7 @@ let _cached_encoder_for_EPSInterworkingIndication: $.ASN1Encoder<EPSInterworking
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EPSInterworkingIndication, encoded as an ASN.1 Element.
  */
-export
-function _encode_EPSInterworkingIndication (value: EPSInterworkingIndication, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSInterworkingIndication) { _cached_encoder_for_EPSInterworkingIndication = $._encodeEnumerated; }
-    return _cached_encoder_for_EPSInterworkingIndication(value, elGetter);
-}
+export const _encode_EPSInterworkingIndication = $._encodeEnumerated;
 
 
 /* eslint-enable */

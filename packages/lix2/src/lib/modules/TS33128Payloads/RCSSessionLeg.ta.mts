@@ -98,21 +98,13 @@ const RCSSessionLeg_localLeg: RCSSessionLeg = RCSSessionLeg.localLeg; /* LONG_NA
 export
 const localLeg: RCSSessionLeg = RCSSessionLeg.localLeg; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RCSSessionLeg: $.ASN1Decoder<RCSSessionLeg> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RCSSessionLeg
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RCSSessionLeg (el: _Element): RCSSessionLeg {
-    if (!_cached_decoder_for_RCSSessionLeg) { _cached_decoder_for_RCSSessionLeg = $._decodeEnumerated; }
-    return _cached_decoder_for_RCSSessionLeg(el);
-}
-
-let _cached_encoder_for_RCSSessionLeg: $.ASN1Encoder<RCSSessionLeg> | null = null;
+export const _decode_RCSSessionLeg = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RCSSessionLeg into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_RCSSessionLeg: $.ASN1Encoder<RCSSessionLeg> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RCSSessionLeg, encoded as an ASN.1 Element.
  */
-export
-function _encode_RCSSessionLeg (value: RCSSessionLeg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RCSSessionLeg) { _cached_encoder_for_RCSSessionLeg = $._encodeEnumerated; }
-    return _cached_encoder_for_RCSSessionLeg(value, elGetter);
-}
+export const _encode_RCSSessionLeg = $._encodeEnumerated;
 
 
 /* eslint-enable */

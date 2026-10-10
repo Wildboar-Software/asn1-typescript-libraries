@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SBIValue = UTF8String; // UTF8String
 
-let _cached_decoder_for_SBIValue: $.ASN1Decoder<SBIValue> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SBIValue
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SBIValue (el: _Element): SBIValue {
-    if (!_cached_decoder_for_SBIValue) { _cached_decoder_for_SBIValue = $._decodeUTF8String; }
-    return _cached_decoder_for_SBIValue(el);
-}
-
-let _cached_encoder_for_SBIValue: $.ASN1Encoder<SBIValue> | null = null;
+export const _decode_SBIValue = $._decodeUTF8String;
 
 /**
  * @summary Encodes a(n) SBIValue into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_SBIValue: $.ASN1Encoder<SBIValue> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SBIValue, encoded as an ASN.1 Element.
  */
-export
-function _encode_SBIValue (value: SBIValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SBIValue) { _cached_encoder_for_SBIValue = $._encodeUTF8String; }
-    return _cached_encoder_for_SBIValue(value, elGetter);
-}
+export const _encode_SBIValue = $._encodeUTF8String;
 
 
 /* eslint-enable */

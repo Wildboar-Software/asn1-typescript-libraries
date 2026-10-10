@@ -98,21 +98,13 @@ const V2XUEAuthorizationIndicator_notAuthorized: V2XUEAuthorizationIndicator = V
 export
 const notAuthorized: V2XUEAuthorizationIndicator = V2XUEAuthorizationIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_V2XUEAuthorizationIndicator: $.ASN1Decoder<V2XUEAuthorizationIndicator> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) V2XUEAuthorizationIndicator
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_V2XUEAuthorizationIndicator (el: _Element): V2XUEAuthorizationIndicator {
-    if (!_cached_decoder_for_V2XUEAuthorizationIndicator) { _cached_decoder_for_V2XUEAuthorizationIndicator = $._decodeEnumerated; }
-    return _cached_decoder_for_V2XUEAuthorizationIndicator(el);
-}
-
-let _cached_encoder_for_V2XUEAuthorizationIndicator: $.ASN1Encoder<V2XUEAuthorizationIndicator> | null = null;
+export const _decode_V2XUEAuthorizationIndicator = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) V2XUEAuthorizationIndicator into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_V2XUEAuthorizationIndicator: $.ASN1Encoder<V2XUEAuthoriz
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The V2XUEAuthorizationIndicator, encoded as an ASN.1 Element.
  */
-export
-function _encode_V2XUEAuthorizationIndicator (value: V2XUEAuthorizationIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_V2XUEAuthorizationIndicator) { _cached_encoder_for_V2XUEAuthorizationIndicator = $._encodeEnumerated; }
-    return _cached_encoder_for_V2XUEAuthorizationIndicator(value, elGetter);
-}
+export const _encode_V2XUEAuthorizationIndicator = $._encodeEnumerated;
 
 
 /* eslint-enable */

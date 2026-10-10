@@ -98,21 +98,13 @@ const MMStatusExtension_rejectionByOtherRS: MMStatusExtension = MMStatusExtensio
 export
 const rejectionByOtherRS: MMStatusExtension = MMStatusExtension.rejectionByOtherRS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MMStatusExtension: $.ASN1Decoder<MMStatusExtension> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MMStatusExtension
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MMStatusExtension (el: _Element): MMStatusExtension {
-    if (!_cached_decoder_for_MMStatusExtension) { _cached_decoder_for_MMStatusExtension = $._decodeEnumerated; }
-    return _cached_decoder_for_MMStatusExtension(el);
-}
-
-let _cached_encoder_for_MMStatusExtension: $.ASN1Encoder<MMStatusExtension> | null = null;
+export const _decode_MMStatusExtension = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MMStatusExtension into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_MMStatusExtension: $.ASN1Encoder<MMStatusExtension> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MMStatusExtension, encoded as an ASN.1 Element.
  */
-export
-function _encode_MMStatusExtension (value: MMStatusExtension, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMStatusExtension) { _cached_encoder_for_MMStatusExtension = $._encodeEnumerated; }
-    return _cached_encoder_for_MMStatusExtension(value, elGetter);
-}
+export const _encode_MMStatusExtension = $._encodeEnumerated;
 
 
 /* eslint-enable */

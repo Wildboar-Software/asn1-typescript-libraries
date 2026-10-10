@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type QOSFlowDescription = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_QOSFlowDescription: $.ASN1Decoder<QOSFlowDescription> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) QOSFlowDescription
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_QOSFlowDescription (el: _Element): QOSFlowDescription {
-    if (!_cached_decoder_for_QOSFlowDescription) { _cached_decoder_for_QOSFlowDescription = $._decodeOctetString; }
-    return _cached_decoder_for_QOSFlowDescription(el);
-}
-
-let _cached_encoder_for_QOSFlowDescription: $.ASN1Encoder<QOSFlowDescription> | null = null;
+export const _decode_QOSFlowDescription = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) QOSFlowDescription into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_QOSFlowDescription: $.ASN1Encoder<QOSFlowDescription> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The QOSFlowDescription, encoded as an ASN.1 Element.
  */
-export
-function _encode_QOSFlowDescription (value: QOSFlowDescription, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_QOSFlowDescription) { _cached_encoder_for_QOSFlowDescription = $._encodeOctetString; }
-    return _cached_encoder_for_QOSFlowDescription(value, elGetter);
-}
+export const _encode_QOSFlowDescription = $._encodeOctetString;
 
 
 /* eslint-enable */

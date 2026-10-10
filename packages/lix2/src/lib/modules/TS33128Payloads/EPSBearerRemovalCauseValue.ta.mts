@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type EPSBearerRemovalCauseValue = INTEGER;
 
-let _cached_decoder_for_EPSBearerRemovalCauseValue: $.ASN1Decoder<EPSBearerRemovalCauseValue> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EPSBearerRemovalCauseValue
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EPSBearerRemovalCauseValue (el: _Element): EPSBearerRemovalCauseValue {
-    if (!_cached_decoder_for_EPSBearerRemovalCauseValue) { _cached_decoder_for_EPSBearerRemovalCauseValue = $._decodeInteger; }
-    return _cached_decoder_for_EPSBearerRemovalCauseValue(el);
-}
-
-let _cached_encoder_for_EPSBearerRemovalCauseValue: $.ASN1Encoder<EPSBearerRemovalCauseValue> | null = null;
+export const _decode_EPSBearerRemovalCauseValue = $._decodeInteger;
 
 /**
  * @summary Encodes a(n) EPSBearerRemovalCauseValue into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_EPSBearerRemovalCauseValue: $.ASN1Encoder<EPSBearerRemov
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EPSBearerRemovalCauseValue, encoded as an ASN.1 Element.
  */
-export
-function _encode_EPSBearerRemovalCauseValue (value: EPSBearerRemovalCauseValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSBearerRemovalCauseValue) { _cached_encoder_for_EPSBearerRemovalCauseValue = $._encodeInteger; }
-    return _cached_encoder_for_EPSBearerRemovalCauseValue(value, elGetter);
-}
+export const _encode_EPSBearerRemovalCauseValue = $._encodeInteger;
 
 
 /* eslint-enable */

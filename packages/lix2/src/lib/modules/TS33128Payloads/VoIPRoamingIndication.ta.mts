@@ -118,21 +118,13 @@ const VoIPRoamingIndication_roamingN9HR: VoIPRoamingIndication = VoIPRoamingIndi
 export
 const roamingN9HR: VoIPRoamingIndication = VoIPRoamingIndication.roamingN9HR; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_VoIPRoamingIndication: $.ASN1Decoder<VoIPRoamingIndication> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) VoIPRoamingIndication
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_VoIPRoamingIndication (el: _Element): VoIPRoamingIndication {
-    if (!_cached_decoder_for_VoIPRoamingIndication) { _cached_decoder_for_VoIPRoamingIndication = $._decodeEnumerated; }
-    return _cached_decoder_for_VoIPRoamingIndication(el);
-}
-
-let _cached_encoder_for_VoIPRoamingIndication: $.ASN1Encoder<VoIPRoamingIndication> | null = null;
+export const _decode_VoIPRoamingIndication = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) VoIPRoamingIndication into an ASN.1 Element.
@@ -141,11 +133,7 @@ let _cached_encoder_for_VoIPRoamingIndication: $.ASN1Encoder<VoIPRoamingIndicati
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The VoIPRoamingIndication, encoded as an ASN.1 Element.
  */
-export
-function _encode_VoIPRoamingIndication (value: VoIPRoamingIndication, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_VoIPRoamingIndication) { _cached_encoder_for_VoIPRoamingIndication = $._encodeEnumerated; }
-    return _cached_encoder_for_VoIPRoamingIndication(value, elGetter);
-}
+export const _encode_VoIPRoamingIndication = $._encodeEnumerated;
 
 
 /* eslint-enable */

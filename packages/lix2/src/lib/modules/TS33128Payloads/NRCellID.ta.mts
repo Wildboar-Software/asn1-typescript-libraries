@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type NRCellID = BIT_STRING;
 
-let _cached_decoder_for_NRCellID: $.ASN1Decoder<NRCellID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NRCellID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NRCellID (el: _Element): NRCellID {
-    if (!_cached_decoder_for_NRCellID) { _cached_decoder_for_NRCellID = $._decodeBitString; }
-    return _cached_decoder_for_NRCellID(el);
-}
-
-let _cached_encoder_for_NRCellID: $.ASN1Encoder<NRCellID> | null = null;
+export const _decode_NRCellID = $._decodeBitString;
 
 /**
  * @summary Encodes a(n) NRCellID into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_NRCellID: $.ASN1Encoder<NRCellID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NRCellID, encoded as an ASN.1 Element.
  */
-export
-function _encode_NRCellID (value: NRCellID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NRCellID) { _cached_encoder_for_NRCellID = $._encodeBitString; }
-    return _cached_encoder_for_NRCellID(value, elGetter);
-}
+export const _encode_NRCellID = $._encodeBitString;
 
 
 /* eslint-enable */

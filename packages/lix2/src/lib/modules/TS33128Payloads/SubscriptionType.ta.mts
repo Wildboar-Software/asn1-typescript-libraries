@@ -118,21 +118,13 @@ const SubscriptionType_unsubscription: SubscriptionType = SubscriptionType.unsub
 export
 const unsubscription: SubscriptionType = SubscriptionType.unsubscription; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SubscriptionType: $.ASN1Decoder<SubscriptionType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SubscriptionType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SubscriptionType (el: _Element): SubscriptionType {
-    if (!_cached_decoder_for_SubscriptionType) { _cached_decoder_for_SubscriptionType = $._decodeEnumerated; }
-    return _cached_decoder_for_SubscriptionType(el);
-}
-
-let _cached_encoder_for_SubscriptionType: $.ASN1Encoder<SubscriptionType> | null = null;
+export const _decode_SubscriptionType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SubscriptionType into an ASN.1 Element.
@@ -141,11 +133,7 @@ let _cached_encoder_for_SubscriptionType: $.ASN1Encoder<SubscriptionType> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubscriptionType, encoded as an ASN.1 Element.
  */
-export
-function _encode_SubscriptionType (value: SubscriptionType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SubscriptionType) { _cached_encoder_for_SubscriptionType = $._encodeEnumerated; }
-    return _cached_encoder_for_SubscriptionType(value, elGetter);
-}
+export const _encode_SubscriptionType = $._encodeEnumerated;
 
 
 /* eslint-enable */

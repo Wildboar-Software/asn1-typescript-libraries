@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type HomeNetworkPublicKeyID = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_HomeNetworkPublicKeyID: $.ASN1Decoder<HomeNetworkPublicKeyID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) HomeNetworkPublicKeyID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_HomeNetworkPublicKeyID (el: _Element): HomeNetworkPublicKeyID {
-    if (!_cached_decoder_for_HomeNetworkPublicKeyID) { _cached_decoder_for_HomeNetworkPublicKeyID = $._decodeOctetString; }
-    return _cached_decoder_for_HomeNetworkPublicKeyID(el);
-}
-
-let _cached_encoder_for_HomeNetworkPublicKeyID: $.ASN1Encoder<HomeNetworkPublicKeyID> | null = null;
+export const _decode_HomeNetworkPublicKeyID = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) HomeNetworkPublicKeyID into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_HomeNetworkPublicKeyID: $.ASN1Encoder<HomeNetworkPublicK
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The HomeNetworkPublicKeyID, encoded as an ASN.1 Element.
  */
-export
-function _encode_HomeNetworkPublicKeyID (value: HomeNetworkPublicKeyID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HomeNetworkPublicKeyID) { _cached_encoder_for_HomeNetworkPublicKeyID = $._encodeOctetString; }
-    return _cached_encoder_for_HomeNetworkPublicKeyID(value, elGetter);
-}
+export const _encode_HomeNetworkPublicKeyID = $._encodeOctetString;
 
 
 /* eslint-enable */

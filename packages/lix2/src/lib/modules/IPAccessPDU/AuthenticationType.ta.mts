@@ -124,21 +124,13 @@ const AuthenticationType_diameterAAA: AuthenticationType = 4; /* LONG_NAMED_ENUM
 export
 const diameterAAA: AuthenticationType = AuthenticationType_diameterAAA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AuthenticationType: $.ASN1Decoder<AuthenticationType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthenticationType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AuthenticationType (el: _Element): AuthenticationType {
-    if (!_cached_decoder_for_AuthenticationType) { _cached_decoder_for_AuthenticationType = $._decodeEnumerated; }
-    return _cached_decoder_for_AuthenticationType(el);
-}
-
-let _cached_encoder_for_AuthenticationType: $.ASN1Encoder<AuthenticationType> | null = null;
+export const _decode_AuthenticationType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AuthenticationType into an ASN.1 Element.
@@ -147,11 +139,7 @@ let _cached_encoder_for_AuthenticationType: $.ASN1Encoder<AuthenticationType> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AuthenticationType, encoded as an ASN.1 Element.
  */
-export
-function _encode_AuthenticationType (value: AuthenticationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticationType) { _cached_encoder_for_AuthenticationType = $._encodeEnumerated; }
-    return _cached_encoder_for_AuthenticationType(value, elGetter);
-}
+export const _encode_AuthenticationType = $._encodeEnumerated;
 
 
 /* eslint-enable */

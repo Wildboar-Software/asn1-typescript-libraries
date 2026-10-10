@@ -98,21 +98,13 @@ const PartyIndication_calledParty: PartyIndication = PartyIndication.calledParty
 export
 const calledParty: PartyIndication = PartyIndication.calledParty; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PartyIndication: $.ASN1Decoder<PartyIndication> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PartyIndication
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PartyIndication (el: _Element): PartyIndication {
-    if (!_cached_decoder_for_PartyIndication) { _cached_decoder_for_PartyIndication = $._decodeEnumerated; }
-    return _cached_decoder_for_PartyIndication(el);
-}
-
-let _cached_encoder_for_PartyIndication: $.ASN1Encoder<PartyIndication> | null = null;
+export const _decode_PartyIndication = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PartyIndication into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_PartyIndication: $.ASN1Encoder<PartyIndication> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PartyIndication, encoded as an ASN.1 Element.
  */
-export
-function _encode_PartyIndication (value: PartyIndication, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PartyIndication) { _cached_encoder_for_PartyIndication = $._encodeEnumerated; }
-    return _cached_encoder_for_PartyIndication(value, elGetter);
-}
+export const _encode_PartyIndication = $._encodeEnumerated;
 
 
 /* eslint-enable */

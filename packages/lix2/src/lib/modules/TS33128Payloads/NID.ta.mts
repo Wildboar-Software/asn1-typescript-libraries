@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type NID = UTF8String; // UTF8String
 
-let _cached_decoder_for_NID: $.ASN1Decoder<NID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NID (el: _Element): NID {
-    if (!_cached_decoder_for_NID) { _cached_decoder_for_NID = $._decodeUTF8String; }
-    return _cached_decoder_for_NID(el);
-}
-
-let _cached_encoder_for_NID: $.ASN1Encoder<NID> | null = null;
+export const _decode_NID = $._decodeUTF8String;
 
 /**
  * @summary Encodes a(n) NID into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_NID: $.ASN1Encoder<NID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NID, encoded as an ASN.1 Element.
  */
-export
-function _encode_NID (value: NID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NID) { _cached_encoder_for_NID = $._encodeUTF8String; }
-    return _cached_encoder_for_NID(value, elGetter);
-}
+export const _encode_NID = $._encodeUTF8String;
 
 
 /* eslint-enable */

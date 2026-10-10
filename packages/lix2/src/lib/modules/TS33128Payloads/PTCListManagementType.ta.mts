@@ -158,21 +158,13 @@ const PTCListManagementType_requestUnsuccessful: PTCListManagementType = PTCList
 export
 const requestUnsuccessful: PTCListManagementType = PTCListManagementType.requestUnsuccessful; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCListManagementType: $.ASN1Decoder<PTCListManagementType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PTCListManagementType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PTCListManagementType (el: _Element): PTCListManagementType {
-    if (!_cached_decoder_for_PTCListManagementType) { _cached_decoder_for_PTCListManagementType = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCListManagementType(el);
-}
-
-let _cached_encoder_for_PTCListManagementType: $.ASN1Encoder<PTCListManagementType> | null = null;
+export const _decode_PTCListManagementType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PTCListManagementType into an ASN.1 Element.
@@ -181,11 +173,7 @@ let _cached_encoder_for_PTCListManagementType: $.ASN1Encoder<PTCListManagementTy
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PTCListManagementType, encoded as an ASN.1 Element.
  */
-export
-function _encode_PTCListManagementType (value: PTCListManagementType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCListManagementType) { _cached_encoder_for_PTCListManagementType = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCListManagementType(value, elGetter);
-}
+export const _encode_PTCListManagementType = $._encodeEnumerated;
 
 
 /* eslint-enable */

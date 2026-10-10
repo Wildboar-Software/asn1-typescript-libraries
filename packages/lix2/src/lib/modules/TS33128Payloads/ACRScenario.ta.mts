@@ -178,21 +178,13 @@ const ACRScenario_eELManagedACR: ACRScenario = ACRScenario.eELManagedACR; /* LON
 export
 const eELManagedACR: ACRScenario = ACRScenario.eELManagedACR; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ACRScenario: $.ASN1Decoder<ACRScenario> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ACRScenario
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ACRScenario (el: _Element): ACRScenario {
-    if (!_cached_decoder_for_ACRScenario) { _cached_decoder_for_ACRScenario = $._decodeEnumerated; }
-    return _cached_decoder_for_ACRScenario(el);
-}
-
-let _cached_encoder_for_ACRScenario: $.ASN1Encoder<ACRScenario> | null = null;
+export const _decode_ACRScenario = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ACRScenario into an ASN.1 Element.
@@ -201,11 +193,7 @@ let _cached_encoder_for_ACRScenario: $.ASN1Encoder<ACRScenario> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ACRScenario, encoded as an ASN.1 Element.
  */
-export
-function _encode_ACRScenario (value: ACRScenario, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ACRScenario) { _cached_encoder_for_ACRScenario = $._encodeEnumerated; }
-    return _cached_encoder_for_ACRScenario(value, elGetter);
-}
+export const _encode_ACRScenario = $._encodeEnumerated;
 
 
 /* eslint-enable */

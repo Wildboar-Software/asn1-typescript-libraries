@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type MCC = NumericString; // NumericString
 
-let _cached_decoder_for_MCC: $.ASN1Decoder<MCC> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MCC
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MCC (el: _Element): MCC {
-    if (!_cached_decoder_for_MCC) { _cached_decoder_for_MCC = $._decodeNumericString; }
-    return _cached_decoder_for_MCC(el);
-}
-
-let _cached_encoder_for_MCC: $.ASN1Encoder<MCC> | null = null;
+export const _decode_MCC = $._decodeNumericString;
 
 /**
  * @summary Encodes a(n) MCC into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_MCC: $.ASN1Encoder<MCC> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MCC, encoded as an ASN.1 Element.
  */
-export
-function _encode_MCC (value: MCC, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCC) { _cached_encoder_for_MCC = $._encodeNumericString; }
-    return _cached_encoder_for_MCC(value, elGetter);
-}
+export const _encode_MCC = $._encodeNumericString;
 
 
 /* eslint-enable */

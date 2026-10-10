@@ -209,21 +209,13 @@ const PacketReportTrigger_reportEnd: PacketReportTrigger = 10; /* LONG_NAMED_ENU
 export
 const reportEnd: PacketReportTrigger = PacketReportTrigger_reportEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PacketReportTrigger: $.ASN1Decoder<PacketReportTrigger> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PacketReportTrigger
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PacketReportTrigger (el: _Element): PacketReportTrigger {
-    if (!_cached_decoder_for_PacketReportTrigger) { _cached_decoder_for_PacketReportTrigger = $._decodeEnumerated; }
-    return _cached_decoder_for_PacketReportTrigger(el);
-}
-
-let _cached_encoder_for_PacketReportTrigger: $.ASN1Encoder<PacketReportTrigger> | null = null;
+export const _decode_PacketReportTrigger = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PacketReportTrigger into an ASN.1 Element.
@@ -232,11 +224,7 @@ let _cached_encoder_for_PacketReportTrigger: $.ASN1Encoder<PacketReportTrigger> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PacketReportTrigger, encoded as an ASN.1 Element.
  */
-export
-function _encode_PacketReportTrigger (value: PacketReportTrigger, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PacketReportTrigger) { _cached_encoder_for_PacketReportTrigger = $._encodeEnumerated; }
-    return _cached_encoder_for_PacketReportTrigger(value, elGetter);
-}
+export const _encode_PacketReportTrigger = $._encodeEnumerated;
 
 
 /* eslint-enable */

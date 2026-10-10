@@ -218,21 +218,13 @@ const S8HRMessageCause_hRLIEnabled: S8HRMessageCause = S8HRMessageCause.hRLIEnab
 export
 const hRLIEnabled: S8HRMessageCause = S8HRMessageCause.hRLIEnabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_S8HRMessageCause: $.ASN1Decoder<S8HRMessageCause> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) S8HRMessageCause
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_S8HRMessageCause (el: _Element): S8HRMessageCause {
-    if (!_cached_decoder_for_S8HRMessageCause) { _cached_decoder_for_S8HRMessageCause = $._decodeEnumerated; }
-    return _cached_decoder_for_S8HRMessageCause(el);
-}
-
-let _cached_encoder_for_S8HRMessageCause: $.ASN1Encoder<S8HRMessageCause> | null = null;
+export const _decode_S8HRMessageCause = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) S8HRMessageCause into an ASN.1 Element.
@@ -241,11 +233,7 @@ let _cached_encoder_for_S8HRMessageCause: $.ASN1Encoder<S8HRMessageCause> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The S8HRMessageCause, encoded as an ASN.1 Element.
  */
-export
-function _encode_S8HRMessageCause (value: S8HRMessageCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_S8HRMessageCause) { _cached_encoder_for_S8HRMessageCause = $._encodeEnumerated; }
-    return _cached_encoder_for_S8HRMessageCause(value, elGetter);
-}
+export const _encode_S8HRMessageCause = $._encodeEnumerated;
 
 
 /* eslint-enable */

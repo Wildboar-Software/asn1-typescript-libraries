@@ -98,21 +98,13 @@ const EPSAttachResult_combinedEPSIMSI: EPSAttachResult = EPSAttachResult.combine
 export
 const combinedEPSIMSI: EPSAttachResult = EPSAttachResult.combinedEPSIMSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_EPSAttachResult: $.ASN1Decoder<EPSAttachResult> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EPSAttachResult
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EPSAttachResult (el: _Element): EPSAttachResult {
-    if (!_cached_decoder_for_EPSAttachResult) { _cached_decoder_for_EPSAttachResult = $._decodeEnumerated; }
-    return _cached_decoder_for_EPSAttachResult(el);
-}
-
-let _cached_encoder_for_EPSAttachResult: $.ASN1Encoder<EPSAttachResult> | null = null;
+export const _decode_EPSAttachResult = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) EPSAttachResult into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_EPSAttachResult: $.ASN1Encoder<EPSAttachResult> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EPSAttachResult, encoded as an ASN.1 Element.
  */
-export
-function _encode_EPSAttachResult (value: EPSAttachResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSAttachResult) { _cached_encoder_for_EPSAttachResult = $._encodeEnumerated; }
-    return _cached_encoder_for_EPSAttachResult(value, elGetter);
-}
+export const _encode_EPSAttachResult = $._encodeEnumerated;
 
 
 /* eslint-enable */

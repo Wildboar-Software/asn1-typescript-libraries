@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type MSISDN = NumericString; // NumericString
 
-let _cached_decoder_for_MSISDN: $.ASN1Decoder<MSISDN> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MSISDN
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MSISDN (el: _Element): MSISDN {
-    if (!_cached_decoder_for_MSISDN) { _cached_decoder_for_MSISDN = $._decodeNumericString; }
-    return _cached_decoder_for_MSISDN(el);
-}
-
-let _cached_encoder_for_MSISDN: $.ASN1Encoder<MSISDN> | null = null;
+export const _decode_MSISDN = $._decodeNumericString;
 
 /**
  * @summary Encodes a(n) MSISDN into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_MSISDN: $.ASN1Encoder<MSISDN> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MSISDN, encoded as an ASN.1 Element.
  */
-export
-function _encode_MSISDN (value: MSISDN, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MSISDN) { _cached_encoder_for_MSISDN = $._encodeNumericString; }
-    return _cached_encoder_for_MSISDN(value, elGetter);
-}
+export const _encode_MSISDN = $._encodeNumericString;
 
 
 /* eslint-enable */

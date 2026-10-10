@@ -198,21 +198,13 @@ const PTCAccessPolicyType_requestUnsuccessful: PTCAccessPolicyType = PTCAccessPo
 export
 const requestUnsuccessful: PTCAccessPolicyType = PTCAccessPolicyType.requestUnsuccessful; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCAccessPolicyType: $.ASN1Decoder<PTCAccessPolicyType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PTCAccessPolicyType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PTCAccessPolicyType (el: _Element): PTCAccessPolicyType {
-    if (!_cached_decoder_for_PTCAccessPolicyType) { _cached_decoder_for_PTCAccessPolicyType = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCAccessPolicyType(el);
-}
-
-let _cached_encoder_for_PTCAccessPolicyType: $.ASN1Encoder<PTCAccessPolicyType> | null = null;
+export const _decode_PTCAccessPolicyType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PTCAccessPolicyType into an ASN.1 Element.
@@ -221,11 +213,7 @@ let _cached_encoder_for_PTCAccessPolicyType: $.ASN1Encoder<PTCAccessPolicyType> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PTCAccessPolicyType, encoded as an ASN.1 Element.
  */
-export
-function _encode_PTCAccessPolicyType (value: PTCAccessPolicyType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCAccessPolicyType) { _cached_encoder_for_PTCAccessPolicyType = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCAccessPolicyType(value, elGetter);
-}
+export const _encode_PTCAccessPolicyType = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -118,21 +118,13 @@ const RCSSessionEndpoints_localAndRemote: RCSSessionEndpoints = RCSSessionEndpoi
 export
 const localAndRemote: RCSSessionEndpoints = RCSSessionEndpoints.localAndRemote; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RCSSessionEndpoints: $.ASN1Decoder<RCSSessionEndpoints> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RCSSessionEndpoints
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RCSSessionEndpoints (el: _Element): RCSSessionEndpoints {
-    if (!_cached_decoder_for_RCSSessionEndpoints) { _cached_decoder_for_RCSSessionEndpoints = $._decodeEnumerated; }
-    return _cached_decoder_for_RCSSessionEndpoints(el);
-}
-
-let _cached_encoder_for_RCSSessionEndpoints: $.ASN1Encoder<RCSSessionEndpoints> | null = null;
+export const _decode_RCSSessionEndpoints = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RCSSessionEndpoints into an ASN.1 Element.
@@ -141,11 +133,7 @@ let _cached_encoder_for_RCSSessionEndpoints: $.ASN1Encoder<RCSSessionEndpoints> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RCSSessionEndpoints, encoded as an ASN.1 Element.
  */
-export
-function _encode_RCSSessionEndpoints (value: RCSSessionEndpoints, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RCSSessionEndpoints) { _cached_encoder_for_RCSSessionEndpoints = $._encodeEnumerated; }
-    return _cached_encoder_for_RCSSessionEndpoints(value, elGetter);
-}
+export const _encode_RCSSessionEndpoints = $._encodeEnumerated;
 
 
 /* eslint-enable */

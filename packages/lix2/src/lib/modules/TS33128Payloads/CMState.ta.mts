@@ -98,21 +98,13 @@ const CMState_connected: CMState = CMState.connected; /* LONG_NAMED_ENUMERATED_V
 export
 const connected: CMState = CMState.connected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_CMState: $.ASN1Decoder<CMState> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CMState
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CMState (el: _Element): CMState {
-    if (!_cached_decoder_for_CMState) { _cached_decoder_for_CMState = $._decodeEnumerated; }
-    return _cached_decoder_for_CMState(el);
-}
-
-let _cached_encoder_for_CMState: $.ASN1Encoder<CMState> | null = null;
+export const _decode_CMState = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CMState into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_CMState: $.ASN1Encoder<CMState> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CMState, encoded as an ASN.1 Element.
  */
-export
-function _encode_CMState (value: CMState, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CMState) { _cached_encoder_for_CMState = $._encodeEnumerated; }
-    return _cached_encoder_for_CMState(value, elGetter);
-}
+export const _encode_CMState = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -138,21 +138,13 @@ const UDMCancelLocationMethod_unknown: UDMCancelLocationMethod = UDMCancelLocati
 export
 const unknown: UDMCancelLocationMethod = UDMCancelLocationMethod.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_UDMCancelLocationMethod: $.ASN1Decoder<UDMCancelLocationMethod> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UDMCancelLocationMethod
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UDMCancelLocationMethod (el: _Element): UDMCancelLocationMethod {
-    if (!_cached_decoder_for_UDMCancelLocationMethod) { _cached_decoder_for_UDMCancelLocationMethod = $._decodeEnumerated; }
-    return _cached_decoder_for_UDMCancelLocationMethod(el);
-}
-
-let _cached_encoder_for_UDMCancelLocationMethod: $.ASN1Encoder<UDMCancelLocationMethod> | null = null;
+export const _decode_UDMCancelLocationMethod = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) UDMCancelLocationMethod into an ASN.1 Element.
@@ -161,11 +153,7 @@ let _cached_encoder_for_UDMCancelLocationMethod: $.ASN1Encoder<UDMCancelLocation
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UDMCancelLocationMethod, encoded as an ASN.1 Element.
  */
-export
-function _encode_UDMCancelLocationMethod (value: UDMCancelLocationMethod, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UDMCancelLocationMethod) { _cached_encoder_for_UDMCancelLocationMethod = $._encodeEnumerated; }
-    return _cached_encoder_for_UDMCancelLocationMethod(value, elGetter);
-}
+export const _encode_UDMCancelLocationMethod = $._encodeEnumerated;
 
 
 /* eslint-enable */

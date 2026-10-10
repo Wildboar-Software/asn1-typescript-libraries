@@ -220,21 +220,13 @@ const InternetAccessType_wireless_other: InternetAccessType = 9; /* LONG_NAMED_E
 export
 const wireless_other: InternetAccessType = InternetAccessType_wireless_other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_InternetAccessType: $.ASN1Decoder<InternetAccessType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) InternetAccessType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_InternetAccessType (el: _Element): InternetAccessType {
-    if (!_cached_decoder_for_InternetAccessType) { _cached_decoder_for_InternetAccessType = $._decodeEnumerated; }
-    return _cached_decoder_for_InternetAccessType(el);
-}
-
-let _cached_encoder_for_InternetAccessType: $.ASN1Encoder<InternetAccessType> | null = null;
+export const _decode_InternetAccessType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) InternetAccessType into an ASN.1 Element.
@@ -243,11 +235,7 @@ let _cached_encoder_for_InternetAccessType: $.ASN1Encoder<InternetAccessType> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InternetAccessType, encoded as an ASN.1 Element.
  */
-export
-function _encode_InternetAccessType (value: InternetAccessType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InternetAccessType) { _cached_encoder_for_InternetAccessType = $._encodeEnumerated; }
-    return _cached_encoder_for_InternetAccessType(value, elGetter);
-}
+export const _encode_InternetAccessType = $._encodeEnumerated;
 
 
 /* eslint-enable */

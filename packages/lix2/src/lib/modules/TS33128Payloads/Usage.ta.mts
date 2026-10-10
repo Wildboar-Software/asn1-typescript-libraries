@@ -158,21 +158,13 @@ const Usage_successMethodNotDetermined: Usage = Usage.successMethodNotDetermined
 export
 const successMethodNotDetermined: Usage = Usage.successMethodNotDetermined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_Usage: $.ASN1Decoder<Usage> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Usage
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Usage (el: _Element): Usage {
-    if (!_cached_decoder_for_Usage) { _cached_decoder_for_Usage = $._decodeEnumerated; }
-    return _cached_decoder_for_Usage(el);
-}
-
-let _cached_encoder_for_Usage: $.ASN1Encoder<Usage> | null = null;
+export const _decode_Usage = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) Usage into an ASN.1 Element.
@@ -181,11 +173,7 @@ let _cached_encoder_for_Usage: $.ASN1Encoder<Usage> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Usage, encoded as an ASN.1 Element.
  */
-export
-function _encode_Usage (value: Usage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Usage) { _cached_encoder_for_Usage = $._encodeEnumerated; }
-    return _cached_encoder_for_Usage(value, elGetter);
-}
+export const _encode_Usage = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -98,21 +98,13 @@ const MMSQuotaUnit_bytes: MMSQuotaUnit = MMSQuotaUnit.bytes; /* LONG_NAMED_ENUME
 export
 const bytes: MMSQuotaUnit = MMSQuotaUnit.bytes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MMSQuotaUnit: $.ASN1Decoder<MMSQuotaUnit> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MMSQuotaUnit
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MMSQuotaUnit (el: _Element): MMSQuotaUnit {
-    if (!_cached_decoder_for_MMSQuotaUnit) { _cached_decoder_for_MMSQuotaUnit = $._decodeEnumerated; }
-    return _cached_decoder_for_MMSQuotaUnit(el);
-}
-
-let _cached_encoder_for_MMSQuotaUnit: $.ASN1Encoder<MMSQuotaUnit> | null = null;
+export const _decode_MMSQuotaUnit = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MMSQuotaUnit into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_MMSQuotaUnit: $.ASN1Encoder<MMSQuotaUnit> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MMSQuotaUnit, encoded as an ASN.1 Element.
  */
-export
-function _encode_MMSQuotaUnit (value: MMSQuotaUnit, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSQuotaUnit) { _cached_encoder_for_MMSQuotaUnit = $._encodeEnumerated; }
-    return _cached_encoder_for_MMSQuotaUnit(value, elGetter);
-}
+export const _encode_MMSQuotaUnit = $._encodeEnumerated;
 
 
 /* eslint-enable */

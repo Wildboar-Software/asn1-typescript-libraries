@@ -118,21 +118,13 @@ const FlowDirection_dowlinkAndUplink: FlowDirection = FlowDirection.dowlinkAndUp
 export
 const dowlinkAndUplink: FlowDirection = FlowDirection.dowlinkAndUplink; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_FlowDirection: $.ASN1Decoder<FlowDirection> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) FlowDirection
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_FlowDirection (el: _Element): FlowDirection {
-    if (!_cached_decoder_for_FlowDirection) { _cached_decoder_for_FlowDirection = $._decodeEnumerated; }
-    return _cached_decoder_for_FlowDirection(el);
-}
-
-let _cached_encoder_for_FlowDirection: $.ASN1Encoder<FlowDirection> | null = null;
+export const _decode_FlowDirection = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) FlowDirection into an ASN.1 Element.
@@ -141,11 +133,7 @@ let _cached_encoder_for_FlowDirection: $.ASN1Encoder<FlowDirection> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FlowDirection, encoded as an ASN.1 Element.
  */
-export
-function _encode_FlowDirection (value: FlowDirection, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FlowDirection) { _cached_encoder_for_FlowDirection = $._encodeEnumerated; }
-    return _cached_encoder_for_FlowDirection(value, elGetter);
-}
+export const _encode_FlowDirection = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type EASID = UTF8String; // UTF8String
 
-let _cached_decoder_for_EASID: $.ASN1Decoder<EASID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EASID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EASID (el: _Element): EASID {
-    if (!_cached_decoder_for_EASID) { _cached_decoder_for_EASID = $._decodeUTF8String; }
-    return _cached_decoder_for_EASID(el);
-}
-
-let _cached_encoder_for_EASID: $.ASN1Encoder<EASID> | null = null;
+export const _decode_EASID = $._decodeUTF8String;
 
 /**
  * @summary Encodes a(n) EASID into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_EASID: $.ASN1Encoder<EASID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EASID, encoded as an ASN.1 Element.
  */
-export
-function _encode_EASID (value: EASID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EASID) { _cached_encoder_for_EASID = $._encodeUTF8String; }
-    return _cached_encoder_for_EASID(value, elGetter);
-}
+export const _encode_EASID = $._encodeUTF8String;
 
 
 /* eslint-enable */

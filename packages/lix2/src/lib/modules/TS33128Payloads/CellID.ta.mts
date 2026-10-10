@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type CellID = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_CellID: $.ASN1Decoder<CellID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CellID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CellID (el: _Element): CellID {
-    if (!_cached_decoder_for_CellID) { _cached_decoder_for_CellID = $._decodeOctetString; }
-    return _cached_decoder_for_CellID(el);
-}
-
-let _cached_encoder_for_CellID: $.ASN1Encoder<CellID> | null = null;
+export const _decode_CellID = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) CellID into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_CellID: $.ASN1Encoder<CellID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CellID, encoded as an ASN.1 Element.
  */
-export
-function _encode_CellID (value: CellID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CellID) { _cached_encoder_for_CellID = $._encodeOctetString; }
-    return _cached_encoder_for_CellID(value, elGetter);
-}
+export const _encode_CellID = $._encodeOctetString;
 
 
 /* eslint-enable */

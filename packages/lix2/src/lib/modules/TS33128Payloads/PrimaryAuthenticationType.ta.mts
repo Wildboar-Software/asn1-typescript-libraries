@@ -238,21 +238,13 @@ const PrimaryAuthenticationType_uMTSAKA: PrimaryAuthenticationType = PrimaryAuth
 export
 const uMTSAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.uMTSAKA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PrimaryAuthenticationType: $.ASN1Decoder<PrimaryAuthenticationType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PrimaryAuthenticationType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PrimaryAuthenticationType (el: _Element): PrimaryAuthenticationType {
-    if (!_cached_decoder_for_PrimaryAuthenticationType) { _cached_decoder_for_PrimaryAuthenticationType = $._decodeEnumerated; }
-    return _cached_decoder_for_PrimaryAuthenticationType(el);
-}
-
-let _cached_encoder_for_PrimaryAuthenticationType: $.ASN1Encoder<PrimaryAuthenticationType> | null = null;
+export const _decode_PrimaryAuthenticationType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PrimaryAuthenticationType into an ASN.1 Element.
@@ -261,11 +253,7 @@ let _cached_encoder_for_PrimaryAuthenticationType: $.ASN1Encoder<PrimaryAuthenti
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PrimaryAuthenticationType, encoded as an ASN.1 Element.
  */
-export
-function _encode_PrimaryAuthenticationType (value: PrimaryAuthenticationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PrimaryAuthenticationType) { _cached_encoder_for_PrimaryAuthenticationType = $._encodeEnumerated; }
-    return _cached_encoder_for_PrimaryAuthenticationType(value, elGetter);
-}
+export const _encode_PrimaryAuthenticationType = $._encodeEnumerated;
 
 
 /* eslint-enable */

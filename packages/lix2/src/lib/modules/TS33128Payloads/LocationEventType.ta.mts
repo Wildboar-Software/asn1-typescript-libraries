@@ -178,21 +178,13 @@ const LocationEventType_cancelLocationReportingForTheUE: LocationEventType = Loc
 export
 const cancelLocationReportingForTheUE: LocationEventType = LocationEventType.cancelLocationReportingForTheUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_LocationEventType: $.ASN1Decoder<LocationEventType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LocationEventType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LocationEventType (el: _Element): LocationEventType {
-    if (!_cached_decoder_for_LocationEventType) { _cached_decoder_for_LocationEventType = $._decodeEnumerated; }
-    return _cached_decoder_for_LocationEventType(el);
-}
-
-let _cached_encoder_for_LocationEventType: $.ASN1Encoder<LocationEventType> | null = null;
+export const _decode_LocationEventType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LocationEventType into an ASN.1 Element.
@@ -201,11 +193,7 @@ let _cached_encoder_for_LocationEventType: $.ASN1Encoder<LocationEventType> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LocationEventType, encoded as an ASN.1 Element.
  */
-export
-function _encode_LocationEventType (value: LocationEventType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LocationEventType) { _cached_encoder_for_LocationEventType = $._encodeEnumerated; }
-    return _cached_encoder_for_LocationEventType(value, elGetter);
-}
+export const _encode_LocationEventType = $._encodeEnumerated;
 
 
 /* eslint-enable */

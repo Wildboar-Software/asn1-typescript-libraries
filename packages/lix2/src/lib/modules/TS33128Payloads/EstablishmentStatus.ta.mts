@@ -98,21 +98,13 @@ const EstablishmentStatus_released: EstablishmentStatus = EstablishmentStatus.re
 export
 const released: EstablishmentStatus = EstablishmentStatus.released; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_EstablishmentStatus: $.ASN1Decoder<EstablishmentStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EstablishmentStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EstablishmentStatus (el: _Element): EstablishmentStatus {
-    if (!_cached_decoder_for_EstablishmentStatus) { _cached_decoder_for_EstablishmentStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_EstablishmentStatus(el);
-}
-
-let _cached_encoder_for_EstablishmentStatus: $.ASN1Encoder<EstablishmentStatus> | null = null;
+export const _decode_EstablishmentStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) EstablishmentStatus into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_EstablishmentStatus: $.ASN1Encoder<EstablishmentStatus> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EstablishmentStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_EstablishmentStatus (value: EstablishmentStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EstablishmentStatus) { _cached_encoder_for_EstablishmentStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_EstablishmentStatus(value, elGetter);
-}
+export const _encode_EstablishmentStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

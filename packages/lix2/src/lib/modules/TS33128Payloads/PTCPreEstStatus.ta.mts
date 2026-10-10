@@ -118,21 +118,13 @@ const PTCPreEstStatus_released: PTCPreEstStatus = PTCPreEstStatus.released; /* L
 export
 const released: PTCPreEstStatus = PTCPreEstStatus.released; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCPreEstStatus: $.ASN1Decoder<PTCPreEstStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PTCPreEstStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PTCPreEstStatus (el: _Element): PTCPreEstStatus {
-    if (!_cached_decoder_for_PTCPreEstStatus) { _cached_decoder_for_PTCPreEstStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCPreEstStatus(el);
-}
-
-let _cached_encoder_for_PTCPreEstStatus: $.ASN1Encoder<PTCPreEstStatus> | null = null;
+export const _decode_PTCPreEstStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PTCPreEstStatus into an ASN.1 Element.
@@ -141,11 +133,7 @@ let _cached_encoder_for_PTCPreEstStatus: $.ASN1Encoder<PTCPreEstStatus> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PTCPreEstStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_PTCPreEstStatus (value: PTCPreEstStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCPreEstStatus) { _cached_encoder_for_PTCPreEstStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCPreEstStatus(value, elGetter);
-}
+export const _encode_PTCPreEstStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

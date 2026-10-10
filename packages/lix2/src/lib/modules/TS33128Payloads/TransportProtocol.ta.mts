@@ -98,21 +98,13 @@ const TransportProtocol_tCP: TransportProtocol = TransportProtocol.tCP; /* LONG_
 export
 const tCP: TransportProtocol = TransportProtocol.tCP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TransportProtocol: $.ASN1Decoder<TransportProtocol> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TransportProtocol
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TransportProtocol (el: _Element): TransportProtocol {
-    if (!_cached_decoder_for_TransportProtocol) { _cached_decoder_for_TransportProtocol = $._decodeEnumerated; }
-    return _cached_decoder_for_TransportProtocol(el);
-}
-
-let _cached_encoder_for_TransportProtocol: $.ASN1Encoder<TransportProtocol> | null = null;
+export const _decode_TransportProtocol = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TransportProtocol into an ASN.1 Element.
@@ -121,11 +113,7 @@ let _cached_encoder_for_TransportProtocol: $.ASN1Encoder<TransportProtocol> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TransportProtocol, encoded as an ASN.1 Element.
  */
-export
-function _encode_TransportProtocol (value: TransportProtocol, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TransportProtocol) { _cached_encoder_for_TransportProtocol = $._encodeEnumerated; }
-    return _cached_encoder_for_TransportProtocol(value, elGetter);
-}
+export const _encode_TransportProtocol = $._encodeEnumerated;
 
 
 /* eslint-enable */

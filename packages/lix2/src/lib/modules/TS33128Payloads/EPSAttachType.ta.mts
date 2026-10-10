@@ -158,21 +158,13 @@ const EPSAttachType_reserved: EPSAttachType = EPSAttachType.reserved; /* LONG_NA
 export
 const reserved: EPSAttachType = EPSAttachType.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_EPSAttachType: $.ASN1Decoder<EPSAttachType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EPSAttachType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EPSAttachType (el: _Element): EPSAttachType {
-    if (!_cached_decoder_for_EPSAttachType) { _cached_decoder_for_EPSAttachType = $._decodeEnumerated; }
-    return _cached_decoder_for_EPSAttachType(el);
-}
-
-let _cached_encoder_for_EPSAttachType: $.ASN1Encoder<EPSAttachType> | null = null;
+export const _decode_EPSAttachType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) EPSAttachType into an ASN.1 Element.
@@ -181,11 +173,7 @@ let _cached_encoder_for_EPSAttachType: $.ASN1Encoder<EPSAttachType> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EPSAttachType, encoded as an ASN.1 Element.
  */
-export
-function _encode_EPSAttachType (value: EPSAttachType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSAttachType) { _cached_encoder_for_EPSAttachType = $._encodeEnumerated; }
-    return _cached_encoder_for_EPSAttachType(value, elGetter);
-}
+export const _encode_EPSAttachType = $._encodeEnumerated;
 
 
 /* eslint-enable */

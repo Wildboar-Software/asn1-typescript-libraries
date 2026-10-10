@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type ACID = UTF8String; // UTF8String
 
-let _cached_decoder_for_ACID: $.ASN1Decoder<ACID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ACID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ACID (el: _Element): ACID {
-    if (!_cached_decoder_for_ACID) { _cached_decoder_for_ACID = $._decodeUTF8String; }
-    return _cached_decoder_for_ACID(el);
-}
-
-let _cached_encoder_for_ACID: $.ASN1Encoder<ACID> | null = null;
+export const _decode_ACID = $._decodeUTF8String;
 
 /**
  * @summary Encodes a(n) ACID into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_ACID: $.ASN1Encoder<ACID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ACID, encoded as an ASN.1 Element.
  */
-export
-function _encode_ACID (value: ACID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ACID) { _cached_encoder_for_ACID = $._encodeUTF8String; }
-    return _cached_encoder_for_ACID(value, elGetter);
-}
+export const _encode_ACID = $._encodeUTF8String;
 
 
 /* eslint-enable */

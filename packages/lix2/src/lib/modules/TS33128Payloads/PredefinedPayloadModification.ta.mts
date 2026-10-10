@@ -358,21 +358,13 @@ const PredefinedPayloadModification_threeGPP2SMSUserDataRedaction: PredefinedPay
 export
 const threeGPP2SMSUserDataRedaction: PredefinedPayloadModification = PredefinedPayloadModification.threeGPP2SMSUserDataRedaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PredefinedPayloadModification: $.ASN1Decoder<PredefinedPayloadModification> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PredefinedPayloadModification
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PredefinedPayloadModification (el: _Element): PredefinedPayloadModification {
-    if (!_cached_decoder_for_PredefinedPayloadModification) { _cached_decoder_for_PredefinedPayloadModification = $._decodeEnumerated; }
-    return _cached_decoder_for_PredefinedPayloadModification(el);
-}
-
-let _cached_encoder_for_PredefinedPayloadModification: $.ASN1Encoder<PredefinedPayloadModification> | null = null;
+export const _decode_PredefinedPayloadModification = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PredefinedPayloadModification into an ASN.1 Element.
@@ -381,11 +373,7 @@ let _cached_encoder_for_PredefinedPayloadModification: $.ASN1Encoder<PredefinedP
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PredefinedPayloadModification, encoded as an ASN.1 Element.
  */
-export
-function _encode_PredefinedPayloadModification (value: PredefinedPayloadModification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PredefinedPayloadModification) { _cached_encoder_for_PredefinedPayloadModification = $._encodeEnumerated; }
-    return _cached_encoder_for_PredefinedPayloadModification(value, elGetter);
-}
+export const _encode_PredefinedPayloadModification = $._encodeEnumerated;
 
 
 /* eslint-enable */

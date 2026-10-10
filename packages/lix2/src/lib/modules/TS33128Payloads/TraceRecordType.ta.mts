@@ -138,21 +138,13 @@ const TraceRecordType_traceDeactivation: TraceRecordType = TraceRecordType.trace
 export
 const traceDeactivation: TraceRecordType = TraceRecordType.traceDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TraceRecordType: $.ASN1Decoder<TraceRecordType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceRecordType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TraceRecordType (el: _Element): TraceRecordType {
-    if (!_cached_decoder_for_TraceRecordType) { _cached_decoder_for_TraceRecordType = $._decodeEnumerated; }
-    return _cached_decoder_for_TraceRecordType(el);
-}
-
-let _cached_encoder_for_TraceRecordType: $.ASN1Encoder<TraceRecordType> | null = null;
+export const _decode_TraceRecordType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TraceRecordType into an ASN.1 Element.
@@ -161,11 +153,7 @@ let _cached_encoder_for_TraceRecordType: $.ASN1Encoder<TraceRecordType> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TraceRecordType, encoded as an ASN.1 Element.
  */
-export
-function _encode_TraceRecordType (value: TraceRecordType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TraceRecordType) { _cached_encoder_for_TraceRecordType = $._encodeEnumerated; }
-    return _cached_encoder_for_TraceRecordType(value, elGetter);
-}
+export const _encode_TraceRecordType = $._encodeEnumerated;
 
 
 /* eslint-enable */

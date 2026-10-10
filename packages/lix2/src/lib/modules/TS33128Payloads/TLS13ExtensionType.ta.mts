@@ -498,21 +498,13 @@ const TLS13ExtensionType_keyShare: TLS13ExtensionType = TLS13ExtensionType.keySh
 export
 const keyShare: TLS13ExtensionType = TLS13ExtensionType.keyShare; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TLS13ExtensionType: $.ASN1Decoder<TLS13ExtensionType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TLS13ExtensionType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TLS13ExtensionType (el: _Element): TLS13ExtensionType {
-    if (!_cached_decoder_for_TLS13ExtensionType) { _cached_decoder_for_TLS13ExtensionType = $._decodeEnumerated; }
-    return _cached_decoder_for_TLS13ExtensionType(el);
-}
-
-let _cached_encoder_for_TLS13ExtensionType: $.ASN1Encoder<TLS13ExtensionType> | null = null;
+export const _decode_TLS13ExtensionType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TLS13ExtensionType into an ASN.1 Element.
@@ -521,11 +513,7 @@ let _cached_encoder_for_TLS13ExtensionType: $.ASN1Encoder<TLS13ExtensionType> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TLS13ExtensionType, encoded as an ASN.1 Element.
  */
-export
-function _encode_TLS13ExtensionType (value: TLS13ExtensionType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TLS13ExtensionType) { _cached_encoder_for_TLS13ExtensionType = $._encodeEnumerated; }
-    return _cached_encoder_for_TLS13ExtensionType(value, elGetter);
-}
+export const _encode_TLS13ExtensionType = $._encodeEnumerated;
 
 
 /* eslint-enable */

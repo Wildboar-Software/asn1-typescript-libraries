@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type PGWRNSI = BOOLEAN; // BooleanType
 
-let _cached_decoder_for_PGWRNSI: $.ASN1Decoder<PGWRNSI> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PGWRNSI
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PGWRNSI (el: _Element): PGWRNSI {
-    if (!_cached_decoder_for_PGWRNSI) { _cached_decoder_for_PGWRNSI = $._decodeBoolean; }
-    return _cached_decoder_for_PGWRNSI(el);
-}
-
-let _cached_encoder_for_PGWRNSI: $.ASN1Encoder<PGWRNSI> | null = null;
+export const _decode_PGWRNSI = $._decodeBoolean;
 
 /**
  * @summary Encodes a(n) PGWRNSI into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_PGWRNSI: $.ASN1Encoder<PGWRNSI> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PGWRNSI, encoded as an ASN.1 Element.
  */
-export
-function _encode_PGWRNSI (value: PGWRNSI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PGWRNSI) { _cached_encoder_for_PGWRNSI = $._encodeBoolean; }
-    return _cached_encoder_for_PGWRNSI(value, elGetter);
-}
+export const _encode_PGWRNSI = $._encodeBoolean;
 
 
 /* eslint-enable */

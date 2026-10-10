@@ -178,21 +178,13 @@ const RCSSessionResult_legRemovalComplete: RCSSessionResult = RCSSessionResult.l
 export
 const legRemovalComplete: RCSSessionResult = RCSSessionResult.legRemovalComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RCSSessionResult: $.ASN1Decoder<RCSSessionResult> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RCSSessionResult
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RCSSessionResult (el: _Element): RCSSessionResult {
-    if (!_cached_decoder_for_RCSSessionResult) { _cached_decoder_for_RCSSessionResult = $._decodeEnumerated; }
-    return _cached_decoder_for_RCSSessionResult(el);
-}
-
-let _cached_encoder_for_RCSSessionResult: $.ASN1Encoder<RCSSessionResult> | null = null;
+export const _decode_RCSSessionResult = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RCSSessionResult into an ASN.1 Element.
@@ -201,11 +193,7 @@ let _cached_encoder_for_RCSSessionResult: $.ASN1Encoder<RCSSessionResult> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RCSSessionResult, encoded as an ASN.1 Element.
  */
-export
-function _encode_RCSSessionResult (value: RCSSessionResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RCSSessionResult) { _cached_encoder_for_RCSSessionResult = $._encodeEnumerated; }
-    return _cached_encoder_for_RCSSessionResult(value, elGetter);
-}
+export const _encode_RCSSessionResult = $._encodeEnumerated;
 
 
 /* eslint-enable */

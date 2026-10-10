@@ -158,21 +158,13 @@ const PTCSessionType_groupSession: PTCSessionType = PTCSessionType.groupSession;
 export
 const groupSession: PTCSessionType = PTCSessionType.groupSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCSessionType: $.ASN1Decoder<PTCSessionType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PTCSessionType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PTCSessionType (el: _Element): PTCSessionType {
-    if (!_cached_decoder_for_PTCSessionType) { _cached_decoder_for_PTCSessionType = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCSessionType(el);
-}
-
-let _cached_encoder_for_PTCSessionType: $.ASN1Encoder<PTCSessionType> | null = null;
+export const _decode_PTCSessionType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PTCSessionType into an ASN.1 Element.
@@ -181,11 +173,7 @@ let _cached_encoder_for_PTCSessionType: $.ASN1Encoder<PTCSessionType> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PTCSessionType, encoded as an ASN.1 Element.
  */
-export
-function _encode_PTCSessionType (value: PTCSessionType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCSessionType) { _cached_encoder_for_PTCSessionType = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCSessionType(value, elGetter);
-}
+export const _encode_PTCSessionType = $._encodeEnumerated;
 
 
 /* eslint-enable */

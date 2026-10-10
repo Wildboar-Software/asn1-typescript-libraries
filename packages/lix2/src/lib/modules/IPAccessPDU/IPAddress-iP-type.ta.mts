@@ -64,21 +64,13 @@ const IPAddress_iP_type_iPV6: IPAddress_iP_type = 1; /* LONG_NAMED_ENUMERATED_VA
 export
 const iPV6: IPAddress_iP_type = IPAddress_iP_type_iPV6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_IPAddress_iP_type: $.ASN1Decoder<IPAddress_iP_type> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IPAddress_iP_type
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IPAddress_iP_type (el: _Element): IPAddress_iP_type {
-    if (!_cached_decoder_for_IPAddress_iP_type) { _cached_decoder_for_IPAddress_iP_type = $._decodeEnumerated; }
-    return _cached_decoder_for_IPAddress_iP_type(el);
-}
-
-let _cached_encoder_for_IPAddress_iP_type: $.ASN1Encoder<IPAddress_iP_type> | null = null;
+export const _decode_IPAddress_iP_type = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) IPAddress_iP_type into an ASN.1 Element.
@@ -87,11 +79,7 @@ let _cached_encoder_for_IPAddress_iP_type: $.ASN1Encoder<IPAddress_iP_type> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IPAddress_iP_type, encoded as an ASN.1 Element.
  */
-export
-function _encode_IPAddress_iP_type (value: IPAddress_iP_type, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IPAddress_iP_type) { _cached_encoder_for_IPAddress_iP_type = $._encodeEnumerated; }
-    return _cached_encoder_for_IPAddress_iP_type(value, elGetter);
-}
+export const _encode_IPAddress_iP_type = $._encodeEnumerated;
 
 
 /* eslint-enable */

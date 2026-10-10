@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type BitrateBinKBPS = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_BitrateBinKBPS: $.ASN1Decoder<BitrateBinKBPS> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) BitrateBinKBPS
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_BitrateBinKBPS (el: _Element): BitrateBinKBPS {
-    if (!_cached_decoder_for_BitrateBinKBPS) { _cached_decoder_for_BitrateBinKBPS = $._decodeOctetString; }
-    return _cached_decoder_for_BitrateBinKBPS(el);
-}
-
-let _cached_encoder_for_BitrateBinKBPS: $.ASN1Encoder<BitrateBinKBPS> | null = null;
+export const _decode_BitrateBinKBPS = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) BitrateBinKBPS into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_BitrateBinKBPS: $.ASN1Encoder<BitrateBinKBPS> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BitrateBinKBPS, encoded as an ASN.1 Element.
  */
-export
-function _encode_BitrateBinKBPS (value: BitrateBinKBPS, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BitrateBinKBPS) { _cached_encoder_for_BitrateBinKBPS = $._encodeOctetString; }
-    return _cached_encoder_for_BitrateBinKBPS(value, elGetter);
-}
+export const _encode_BitrateBinKBPS = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -138,21 +138,13 @@ const MMSMessageClass_auto: MMSMessageClass = MMSMessageClass.auto; /* LONG_NAME
 export
 const auto: MMSMessageClass = MMSMessageClass.auto; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MMSMessageClass: $.ASN1Decoder<MMSMessageClass> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MMSMessageClass
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MMSMessageClass (el: _Element): MMSMessageClass {
-    if (!_cached_decoder_for_MMSMessageClass) { _cached_decoder_for_MMSMessageClass = $._decodeEnumerated; }
-    return _cached_decoder_for_MMSMessageClass(el);
-}
-
-let _cached_encoder_for_MMSMessageClass: $.ASN1Encoder<MMSMessageClass> | null = null;
+export const _decode_MMSMessageClass = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MMSMessageClass into an ASN.1 Element.
@@ -161,11 +153,7 @@ let _cached_encoder_for_MMSMessageClass: $.ASN1Encoder<MMSMessageClass> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MMSMessageClass, encoded as an ASN.1 Element.
  */
-export
-function _encode_MMSMessageClass (value: MMSMessageClass, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSMessageClass) { _cached_encoder_for_MMSMessageClass = $._encodeEnumerated; }
-    return _cached_encoder_for_MMSMessageClass(value, elGetter);
-}
+export const _encode_MMSMessageClass = $._encodeEnumerated;
 
 
 /* eslint-enable */

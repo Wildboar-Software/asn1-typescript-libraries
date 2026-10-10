@@ -298,21 +298,13 @@ const NWDAFAnalyticsInfoResponseCode_serviceUnavailable503: NWDAFAnalyticsInfoRe
 export
 const serviceUnavailable503: NWDAFAnalyticsInfoResponseCode = NWDAFAnalyticsInfoResponseCode.serviceUnavailable503; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_NWDAFAnalyticsInfoResponseCode: $.ASN1Decoder<NWDAFAnalyticsInfoResponseCode> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NWDAFAnalyticsInfoResponseCode
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NWDAFAnalyticsInfoResponseCode (el: _Element): NWDAFAnalyticsInfoResponseCode {
-    if (!_cached_decoder_for_NWDAFAnalyticsInfoResponseCode) { _cached_decoder_for_NWDAFAnalyticsInfoResponseCode = $._decodeEnumerated; }
-    return _cached_decoder_for_NWDAFAnalyticsInfoResponseCode(el);
-}
-
-let _cached_encoder_for_NWDAFAnalyticsInfoResponseCode: $.ASN1Encoder<NWDAFAnalyticsInfoResponseCode> | null = null;
+export const _decode_NWDAFAnalyticsInfoResponseCode = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NWDAFAnalyticsInfoResponseCode into an ASN.1 Element.
@@ -321,11 +313,7 @@ let _cached_encoder_for_NWDAFAnalyticsInfoResponseCode: $.ASN1Encoder<NWDAFAnaly
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NWDAFAnalyticsInfoResponseCode, encoded as an ASN.1 Element.
  */
-export
-function _encode_NWDAFAnalyticsInfoResponseCode (value: NWDAFAnalyticsInfoResponseCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NWDAFAnalyticsInfoResponseCode) { _cached_encoder_for_NWDAFAnalyticsInfoResponseCode = $._encodeEnumerated; }
-    return _cached_encoder_for_NWDAFAnalyticsInfoResponseCode(value, elGetter);
-}
+export const _encode_NWDAFAnalyticsInfoResponseCode = $._encodeEnumerated;
 
 
 /* eslint-enable */

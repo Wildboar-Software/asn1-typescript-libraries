@@ -158,21 +158,13 @@ const HandoverState_cancelled: HandoverState = HandoverState.cancelled; /* LONG_
 export
 const cancelled: HandoverState = HandoverState.cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_HandoverState: $.ASN1Decoder<HandoverState> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) HandoverState
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_HandoverState (el: _Element): HandoverState {
-    if (!_cached_decoder_for_HandoverState) { _cached_decoder_for_HandoverState = $._decodeEnumerated; }
-    return _cached_decoder_for_HandoverState(el);
-}
-
-let _cached_encoder_for_HandoverState: $.ASN1Encoder<HandoverState> | null = null;
+export const _decode_HandoverState = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) HandoverState into an ASN.1 Element.
@@ -181,11 +173,7 @@ let _cached_encoder_for_HandoverState: $.ASN1Encoder<HandoverState> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The HandoverState, encoded as an ASN.1 Element.
  */
-export
-function _encode_HandoverState (value: HandoverState, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HandoverState) { _cached_encoder_for_HandoverState = $._encodeEnumerated; }
-    return _cached_encoder_for_HandoverState(value, elGetter);
-}
+export const _encode_HandoverState = $._encodeEnumerated;
 
 
 /* eslint-enable */

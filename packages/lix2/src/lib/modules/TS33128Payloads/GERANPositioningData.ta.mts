@@ -20,21 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type GERANPositioningData = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_GERANPositioningData: $.ASN1Decoder<GERANPositioningData> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GERANPositioningData
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GERANPositioningData (el: _Element): GERANPositioningData {
-    if (!_cached_decoder_for_GERANPositioningData) { _cached_decoder_for_GERANPositioningData = $._decodeOctetString; }
-    return _cached_decoder_for_GERANPositioningData(el);
-}
-
-let _cached_encoder_for_GERANPositioningData: $.ASN1Encoder<GERANPositioningData> | null = null;
+export const _decode_GERANPositioningData = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) GERANPositioningData into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_GERANPositioningData: $.ASN1Encoder<GERANPositioningData
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GERANPositioningData, encoded as an ASN.1 Element.
  */
-export
-function _encode_GERANPositioningData (value: GERANPositioningData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GERANPositioningData) { _cached_encoder_for_GERANPositioningData = $._encodeOctetString; }
-    return _cached_encoder_for_GERANPositioningData(value, elGetter);
-}
+export const _encode_GERANPositioningData = $._encodeOctetString;
 
 
 /* eslint-enable */

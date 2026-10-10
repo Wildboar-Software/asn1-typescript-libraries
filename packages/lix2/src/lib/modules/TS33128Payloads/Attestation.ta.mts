@@ -118,21 +118,13 @@ const Attestation_attestationC: Attestation = Attestation.attestationC; /* LONG_
 export
 const attestationC: Attestation = Attestation.attestationC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_Attestation: $.ASN1Decoder<Attestation> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Attestation
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Attestation (el: _Element): Attestation {
-    if (!_cached_decoder_for_Attestation) { _cached_decoder_for_Attestation = $._decodeEnumerated; }
-    return _cached_decoder_for_Attestation(el);
-}
-
-let _cached_encoder_for_Attestation: $.ASN1Encoder<Attestation> | null = null;
+export const _decode_Attestation = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) Attestation into an ASN.1 Element.
@@ -141,11 +133,7 @@ let _cached_encoder_for_Attestation: $.ASN1Encoder<Attestation> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Attestation, encoded as an ASN.1 Element.
  */
-export
-function _encode_Attestation (value: Attestation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Attestation) { _cached_encoder_for_Attestation = $._encodeEnumerated; }
-    return _cached_encoder_for_Attestation(value, elGetter);
-}
+export const _encode_Attestation = $._encodeEnumerated;
 
 
 /* eslint-enable */
