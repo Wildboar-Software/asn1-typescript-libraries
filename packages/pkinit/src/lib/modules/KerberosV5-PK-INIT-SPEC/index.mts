@@ -1,3 +1,17 @@
+/**
+ * @module
+ * @description
+ *
+ * ASN.1 module `KerberosV5-PK-INIT-SPEC`
+ * `{iso(1) identified-organization(3) dod(6) internet(1)
+ * security(5) kerberosV5(2) modules(4) pkinit(5)}`
+ * (1.3.6.1.5.2.4.5),
+ * [RFC 4556 Appendix A](https://datatracker.ietf.org/doc/html/rfc4556#appendix-A).
+ *
+ * Tagging is `EXPLICIT TAGS`. Kerberos types come from
+ * `@wildboar/kerberos5`, PKIX types from `@wildboar/pki-stub`,
+ * and CMS types from `@wildboar/cms`.
+ */
 export * from "./AD-INITIAL-VERIFIED-CAS.ta.mjs";
 export * from "./ad-initial-verified-cas.va.mjs";
 export * from "./AuthPack.ta.mjs";
