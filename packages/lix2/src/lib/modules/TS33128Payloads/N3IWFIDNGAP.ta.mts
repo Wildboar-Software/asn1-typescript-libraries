@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    BIT_STRING
+    BIT_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ type N3IWFIDNGAP = BIT_STRING;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_N3IWFIDNGAP = $._decodeBitString;
+export const _decode_N3IWFIDNGAP = (el: _Element): N3IWFIDNGAP => {
+    const value = $._decodeBitString(el);
+    if (value.length < 16 || value.length > 16) {
+        throw new ASN1SizeError("N3IWFIDNGAP violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) N3IWFIDNGAP into an ASN.1 Element.

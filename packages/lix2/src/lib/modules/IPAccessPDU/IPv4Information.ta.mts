@@ -4,6 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
     OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -103,7 +104,29 @@ class IPv4Information {
          * @readonly
          */
         readonly options: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (this.totalLength !== undefined && (this.totalLength.length < 2 || this.totalLength.length > 2)) {
+            throw new ASN1SizeError("IPv4Information.totalLength violates SIZE constraint");
+        }
+        if (this.identification !== undefined && (this.identification.length < 2 || this.identification.length > 2)) {
+            throw new ASN1SizeError("IPv4Information.identification violates SIZE constraint");
+        }
+        if (this.fragment !== undefined && (this.fragment.length < 2 || this.fragment.length > 2)) {
+            throw new ASN1SizeError("IPv4Information.fragment violates SIZE constraint");
+        }
+        if (this.headerChecksum !== undefined && (this.headerChecksum.length < 2 || this.headerChecksum.length > 2)) {
+            throw new ASN1SizeError("IPv4Information.headerChecksum violates SIZE constraint");
+        }
+        if (this.source !== undefined && (this.source.length < 4 || this.source.length > 4)) {
+            throw new ASN1SizeError("IPv4Information.source violates SIZE constraint");
+        }
+        if (this.destination !== undefined && (this.destination.length < 4 || this.destination.length > 4)) {
+            throw new ASN1SizeError("IPv4Information.destination violates SIZE constraint");
+        }
+        if (this.options !== undefined && (this.options.length < 0 || this.options.length > 40)) {
+            throw new ASN1SizeError("IPv4Information.options violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a IPv4Information

@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,14 @@ type IPv6FlowLabel = INTEGER;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_IPv6FlowLabel = $._decodeInteger;
+export const _decode_IPv6FlowLabel = (el: _Element): IPv6FlowLabel => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 1048575n) {
+        throw new ASN1OverflowError("IPv6FlowLabel violates INTEGER range constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) IPv6FlowLabel into an ASN.1 Element.

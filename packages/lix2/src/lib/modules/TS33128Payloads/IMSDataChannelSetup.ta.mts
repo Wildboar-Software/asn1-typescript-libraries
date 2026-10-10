@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMPU, _decode_IMPU, _encode_IMPU } from "../TS33128Payloads/IMPU.ta.mjs";
@@ -63,7 +64,11 @@ class IMSDataChannelSetup {
          * @readonly
          */
         readonly mediaInstructionData: OPTIONAL<SBIType>
-    ) {}
+    ) {
+        if (this.calledIdentity !== undefined && (this.calledIdentity.length < 1)) {
+            throw new ASN1SizeError("IMSDataChannelSetup.calledIdentity violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a IMSDataChannelSetup

@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ type IPv4Address = OCTET_STRING; // OctetStringType
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_IPv4Address = $._decodeOctetString;
+export const _decode_IPv4Address = (el: _Element): IPv4Address => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 4 || value.length > 4) {
+        throw new ASN1SizeError("IPv4Address violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) IPv4Address into an ASN.1 Element.

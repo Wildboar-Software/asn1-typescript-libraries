@@ -2,7 +2,8 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PTCIdentifiers, _decode_PTCIdentifiers, _encode_PTCIdentifiers } from "../TS33128Payloads/PTCIdentifiers.ta.mjs";
@@ -33,7 +34,11 @@ class PTCTargetInformation {
          * @readonly
          */
         readonly identifiers: PTCIdentifiers[]
-    ) {}
+    ) {
+        if (this.identifiers !== undefined && (this.identifiers.length < 1)) {
+            throw new ASN1SizeError("PTCTargetInformation.identifiers violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PTCTargetInformation

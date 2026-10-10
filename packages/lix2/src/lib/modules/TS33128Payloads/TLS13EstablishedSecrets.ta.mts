@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -33,7 +34,11 @@ class TLS13EstablishedSecrets {
          * @readonly
          */
         readonly dHE: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (this.dHE !== undefined && (this.dHE.length < 1 || this.dHE.length > 65535)) {
+            throw new ASN1SizeError("TLS13EstablishedSecrets.dHE violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TLS13EstablishedSecrets

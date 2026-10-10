@@ -2,7 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING
+    BIT_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -44,7 +45,26 @@ function _decode_NGENbID (el: _Element): NGENbID {
     "CONTEXT 2": [ "shortMacroNGENbID", $._decode_implicit<BIT_STRING>(() => $._decodeBitString) ],
     "CONTEXT 3": [ "longMacroNGENbID", $._decode_implicit<BIT_STRING>(() => $._decodeBitString) ]
 }); }
-    return _cached_decoder_for_NGENbID(el);
+    const _value = _cached_decoder_for_NGENbID(el);
+    if (_value !== undefined && typeof _value === "object" && "macroNGENbID" in _value) {
+        const _v = _value.macroNGENbID;
+        if (_v.length < 20 || _v.length > 20) {
+            throw new ASN1SizeError("NGENbID.macroNGENbID violates SIZE constraint");
+        }
+    }
+    if (_value !== undefined && typeof _value === "object" && "shortMacroNGENbID" in _value) {
+        const _v = _value.shortMacroNGENbID;
+        if (_v.length < 18 || _v.length > 18) {
+            throw new ASN1SizeError("NGENbID.shortMacroNGENbID violates SIZE constraint");
+        }
+    }
+    if (_value !== undefined && typeof _value === "object" && "longMacroNGENbID" in _value) {
+        const _v = _value.longMacroNGENbID;
+        if (_v.length < 21 || _v.length > 21) {
+            throw new ASN1SizeError("NGENbID.longMacroNGENbID violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_NGENbID: $.ASN1Encoder<NGENbID> | null = null;

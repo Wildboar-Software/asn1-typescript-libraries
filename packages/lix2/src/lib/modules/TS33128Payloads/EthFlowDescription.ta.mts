@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128Payloads/MACAddress.ta.mjs";
@@ -89,7 +90,11 @@ class EthFlowDescription {
          * @readonly
          */
         readonly destMacAddrEnd: OPTIONAL<MACAddress>
-    ) {}
+    ) {
+        if (this.ethType !== undefined && (this.ethType.length < 2 || this.ethType.length > 2)) {
+            throw new ASN1SizeError("EthFlowDescription.ethType violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a EthFlowDescription

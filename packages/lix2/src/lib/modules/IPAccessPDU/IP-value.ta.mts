@@ -4,6 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     OCTET_STRING,
     IA5String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -50,7 +51,20 @@ function _decode_IP_value (el: _Element): IP_value {
     "CONTEXT 1": [ "iPBinaryAddress", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 2": [ "iPTextAddress", $._decode_implicit<IA5String>(() => $._decodeIA5String) ]
 }); }
-    return _cached_decoder_for_IP_value(el);
+    const _value = _cached_decoder_for_IP_value(el);
+    if (_value !== undefined && typeof _value === "object" && "iPBinaryAddress" in _value) {
+        const _v = _value.iPBinaryAddress;
+        if (_v.length < 4 || _v.length > 16) {
+            throw new ASN1SizeError("IP_value.iPBinaryAddress violates SIZE constraint");
+        }
+    }
+    if (_value !== undefined && typeof _value === "object" && "iPTextAddress" in _value) {
+        const _v = _value.iPTextAddress;
+        if (_v.length < 7 || _v.length > 45) {
+            throw new ASN1SizeError("IP_value.iPTextAddress violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_IP_value: $.ASN1Encoder<IP_value> | null = null;

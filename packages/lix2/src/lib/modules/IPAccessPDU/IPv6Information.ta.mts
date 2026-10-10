@@ -4,6 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
     OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -75,7 +76,20 @@ class IPv6Information {
          * @readonly
          */
         readonly destination: OCTET_STRING
-    ) {}
+    ) {
+        if (this.flowLabel !== undefined && (this.flowLabel.length < 20 || this.flowLabel.length > 20)) {
+            throw new ASN1SizeError("IPv6Information.flowLabel violates SIZE constraint");
+        }
+        if (this.payloadLength !== undefined && (this.payloadLength.length < 4 || this.payloadLength.length > 4)) {
+            throw new ASN1SizeError("IPv6Information.payloadLength violates SIZE constraint");
+        }
+        if (this.source !== undefined && (this.source.length < 16 || this.source.length > 16)) {
+            throw new ASN1SizeError("IPv6Information.source violates SIZE constraint");
+        }
+        if (this.destination !== undefined && (this.destination.length < 16 || this.destination.length > 16)) {
+            throw new ASN1SizeError("IPv6Information.destination violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a IPv6Information

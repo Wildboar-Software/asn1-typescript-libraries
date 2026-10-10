@@ -4,7 +4,9 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -55,7 +57,26 @@ class SNSSAI {
          * @readonly
          */
         readonly mappedHPLMNSliceDifferentiator: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (this.sliceServiceType !== undefined) {
+            const _n = typeof this.sliceServiceType === "bigint" ? this.sliceServiceType : BigInt(this.sliceServiceType);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("SNSSAI.sliceServiceType violates INTEGER range constraint");
+            }
+        }
+        if (this.sliceDifferentiator !== undefined && (this.sliceDifferentiator.length < 3 || this.sliceDifferentiator.length > 3)) {
+            throw new ASN1SizeError("SNSSAI.sliceDifferentiator violates SIZE constraint");
+        }
+        if (this.mappedHPLMNSliceServiceType !== undefined) {
+            const _n = typeof this.mappedHPLMNSliceServiceType === "bigint" ? this.mappedHPLMNSliceServiceType : BigInt(this.mappedHPLMNSliceServiceType);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("SNSSAI.mappedHPLMNSliceServiceType violates INTEGER range constraint");
+            }
+        }
+        if (this.mappedHPLMNSliceDifferentiator !== undefined && (this.mappedHPLMNSliceDifferentiator.length < 3 || this.mappedHPLMNSliceDifferentiator.length > 3)) {
+            throw new ASN1SizeError("SNSSAI.mappedHPLMNSliceDifferentiator violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a SNSSAI

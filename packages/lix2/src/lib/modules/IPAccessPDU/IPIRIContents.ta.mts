@@ -6,7 +6,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../IPAccessPDU/IPAddress.ta.mjs";
@@ -273,7 +275,41 @@ class IPIRIContents {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (this.targetNetworkID !== undefined && (this.targetNetworkID.length < 1 || this.targetNetworkID.length > 20)) {
+            throw new ASN1SizeError("IPIRIContents.targetNetworkID violates SIZE constraint");
+        }
+        if (this.targetCPEID !== undefined && (this.targetCPEID.length < 1 || this.targetCPEID.length > 128)) {
+            throw new ASN1SizeError("IPIRIContents.targetCPEID violates SIZE constraint");
+        }
+        if (this.targetLocation !== undefined && (this.targetLocation.length < 1 || this.targetLocation.length > 64)) {
+            throw new ASN1SizeError("IPIRIContents.targetLocation violates SIZE constraint");
+        }
+        if (this.pOPPortNumber !== undefined) {
+            const _n = typeof this.pOPPortNumber === "bigint" ? this.pOPPortNumber : BigInt(this.pOPPortNumber);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("IPIRIContents.pOPPortNumber violates INTEGER range constraint");
+            }
+        }
+        if (this.callBackNumber !== undefined && (this.callBackNumber.length < 1 || this.callBackNumber.length > 20)) {
+            throw new ASN1SizeError("IPIRIContents.callBackNumber violates SIZE constraint");
+        }
+        if (this.octetsReceived !== undefined) {
+            const _n = typeof this.octetsReceived === "bigint" ? this.octetsReceived : BigInt(this.octetsReceived);
+            if (_n < 0n || _n > 18446744073709551615n) {
+                throw new ASN1OverflowError("IPIRIContents.octetsReceived violates INTEGER range constraint");
+            }
+        }
+        if (this.octetsTransmitted !== undefined) {
+            const _n = typeof this.octetsTransmitted === "bigint" ? this.octetsTransmitted : BigInt(this.octetsTransmitted);
+            if (_n < 0n || _n > 18446744073709551615n) {
+                throw new ASN1OverflowError("IPIRIContents.octetsTransmitted violates INTEGER range constraint");
+            }
+        }
+        if (this.pOPPhoneNumber !== undefined && (this.pOPPhoneNumber.length < 1 || this.pOPPhoneNumber.length > 20)) {
+            throw new ASN1SizeError("IPIRIContents.pOPPhoneNumber violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a IPIRIContents

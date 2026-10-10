@@ -4,6 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     OPTIONAL,
     OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -54,7 +55,20 @@ class UDPInformation {
          * @readonly
          */
         readonly checkSum: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (this.sourcePort !== undefined && (this.sourcePort.length < 2 || this.sourcePort.length > 2)) {
+            throw new ASN1SizeError("UDPInformation.sourcePort violates SIZE constraint");
+        }
+        if (this.destinationPort !== undefined && (this.destinationPort.length < 2 || this.destinationPort.length > 2)) {
+            throw new ASN1SizeError("UDPInformation.destinationPort violates SIZE constraint");
+        }
+        if (this.length !== undefined && (this.length.length < 2 || this.length.length > 2)) {
+            throw new ASN1SizeError("UDPInformation.length violates SIZE constraint");
+        }
+        if (this.checkSum !== undefined && (this.checkSum.length < 2 || this.checkSum.length > 2)) {
+            throw new ASN1SizeError("UDPInformation.checkSum violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a UDPInformation

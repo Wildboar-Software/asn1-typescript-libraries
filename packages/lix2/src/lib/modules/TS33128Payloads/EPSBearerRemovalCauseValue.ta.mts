@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,14 @@ type EPSBearerRemovalCauseValue = INTEGER;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_EPSBearerRemovalCauseValue = $._decodeInteger;
+export const _decode_EPSBearerRemovalCauseValue = (el: _Element): EPSBearerRemovalCauseValue => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 255n) {
+        throw new ASN1OverflowError("EPSBearerRemovalCauseValue violates INTEGER range constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) EPSBearerRemovalCauseValue into an ASN.1 Element.

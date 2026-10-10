@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ type GeographicalInformationOctet = OCTET_STRING; // OctetStringType
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_GeographicalInformationOctet = $._decodeOctetString;
+export const _decode_GeographicalInformationOctet = (el: _Element): GeographicalInformationOctet => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 8 || value.length > 8) {
+        throw new ASN1SizeError("GeographicalInformationOctet violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) GeographicalInformationOctet into an ASN.1 Element.

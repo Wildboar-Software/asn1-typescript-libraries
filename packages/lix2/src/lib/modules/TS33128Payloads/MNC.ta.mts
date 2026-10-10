@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    NumericString
+    NumericString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ type MNC = NumericString; // NumericString
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_MNC = $._decodeNumericString;
+export const _decode_MNC = (el: _Element): MNC => {
+    const value = $._decodeNumericString(el);
+    if (value.length < 2 || value.length > 3) {
+        throw new ASN1SizeError("MNC violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) MNC into an ASN.1 Element.

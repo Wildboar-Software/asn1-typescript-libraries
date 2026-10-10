@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
@@ -114,7 +115,23 @@ class StartOfInterceptWithEstablisedRCSSession {
          * @readonly
          */
         readonly additionalInstanceLocation: OPTIONAL<AdditionalInstanceLocation[]>
-    ) {}
+    ) {
+        if (this.rCSTargetIdentities !== undefined && (this.rCSTargetIdentities.length < 1)) {
+            throw new ASN1SizeError("StartOfInterceptWithEstablisedRCSSession.rCSTargetIdentities violates SIZE constraint");
+        }
+        if (this.participants !== undefined && (this.participants.length < 1)) {
+            throw new ASN1SizeError("StartOfInterceptWithEstablisedRCSSession.participants violates SIZE constraint");
+        }
+        if (this.rCSSessionLegs !== undefined && (this.rCSSessionLegs.length < 1)) {
+            throw new ASN1SizeError("StartOfInterceptWithEstablisedRCSSession.rCSSessionLegs violates SIZE constraint");
+        }
+        if (this.rCSSessionInformation !== undefined && (this.rCSSessionInformation.length < 1)) {
+            throw new ASN1SizeError("StartOfInterceptWithEstablisedRCSSession.rCSSessionInformation violates SIZE constraint");
+        }
+        if (this.additionalInstanceLocation !== undefined && (this.additionalInstanceLocation.length < 1)) {
+            throw new ASN1SizeError("StartOfInterceptWithEstablisedRCSSession.additionalInstanceLocation violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a StartOfInterceptWithEstablisedRCSSession

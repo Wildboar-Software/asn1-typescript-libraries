@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    BIT_STRING
+    BIT_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ type NRCellID = BIT_STRING;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_NRCellID = $._decodeBitString;
+export const _decode_NRCellID = (el: _Element): NRCellID => {
+    const value = $._decodeBitString(el);
+    if (value.length < 36 || value.length > 36) {
+        throw new ASN1SizeError("NRCellID violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) NRCellID into an ASN.1 Element.

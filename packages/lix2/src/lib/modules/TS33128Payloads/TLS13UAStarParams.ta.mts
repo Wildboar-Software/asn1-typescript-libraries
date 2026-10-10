@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13OfferedPSK, _decode_TLS13OfferedPSK, _encode_TLS13OfferedPSK } from "../TS33128Payloads/TLS13OfferedPSK.ta.mjs";
@@ -305,7 +307,50 @@ class TLS13UAStarParams {
          * @readonly
          */
         readonly tLSResumptionTickets: OPTIONAL<TLS13NewSessionTicket[]>
-    ) {}
+    ) {
+        if (this.selectedPSKIdentity !== undefined) {
+            const _n = typeof this.selectedPSKIdentity === "bigint" ? this.selectedPSKIdentity : BigInt(this.selectedPSKIdentity);
+            if (_n < 0n || _n > 65535n) {
+                throw new ASN1OverflowError("TLS13UAStarParams.selectedPSKIdentity violates INTEGER range constraint");
+            }
+        }
+        if (this.clientRandom !== undefined && (this.clientRandom.length < 32 || this.clientRandom.length > 32)) {
+            throw new ASN1SizeError("TLS13UAStarParams.clientRandom violates SIZE constraint");
+        }
+        if (this.serverRandom !== undefined && (this.serverRandom.length < 32 || this.serverRandom.length > 32)) {
+            throw new ASN1SizeError("TLS13UAStarParams.serverRandom violates SIZE constraint");
+        }
+        if (this.legacySessionID !== undefined && (this.legacySessionID.length < 0 || this.legacySessionID.length > 32)) {
+            throw new ASN1SizeError("TLS13UAStarParams.legacySessionID violates SIZE constraint");
+        }
+        if (this.binderKey !== undefined && (this.binderKey.length < 1 || this.binderKey.length > 65535)) {
+            throw new ASN1SizeError("TLS13UAStarParams.binderKey violates SIZE constraint");
+        }
+        if (this.clientEarlyTrafficSecret !== undefined && (this.clientEarlyTrafficSecret.length < 1 || this.clientEarlyTrafficSecret.length > 65535)) {
+            throw new ASN1SizeError("TLS13UAStarParams.clientEarlyTrafficSecret violates SIZE constraint");
+        }
+        if (this.earlyExporterMasterSecret !== undefined && (this.earlyExporterMasterSecret.length < 1 || this.earlyExporterMasterSecret.length > 65535)) {
+            throw new ASN1SizeError("TLS13UAStarParams.earlyExporterMasterSecret violates SIZE constraint");
+        }
+        if (this.clientHandshakeTrafficSecret !== undefined && (this.clientHandshakeTrafficSecret.length < 1 || this.clientHandshakeTrafficSecret.length > 65535)) {
+            throw new ASN1SizeError("TLS13UAStarParams.clientHandshakeTrafficSecret violates SIZE constraint");
+        }
+        if (this.serverHandshakeTrafficSecret !== undefined && (this.serverHandshakeTrafficSecret.length < 1 || this.serverHandshakeTrafficSecret.length > 65535)) {
+            throw new ASN1SizeError("TLS13UAStarParams.serverHandshakeTrafficSecret violates SIZE constraint");
+        }
+        if (this.clientApplicationTrafficSecret !== undefined && (this.clientApplicationTrafficSecret.length < 1 || this.clientApplicationTrafficSecret.length > 65535)) {
+            throw new ASN1SizeError("TLS13UAStarParams.clientApplicationTrafficSecret violates SIZE constraint");
+        }
+        if (this.serverApplicationTrafficSecret !== undefined && (this.serverApplicationTrafficSecret.length < 1 || this.serverApplicationTrafficSecret.length > 65535)) {
+            throw new ASN1SizeError("TLS13UAStarParams.serverApplicationTrafficSecret violates SIZE constraint");
+        }
+        if (this.exporterMasterSecret !== undefined && (this.exporterMasterSecret.length < 1 || this.exporterMasterSecret.length > 65535)) {
+            throw new ASN1SizeError("TLS13UAStarParams.exporterMasterSecret violates SIZE constraint");
+        }
+        if (this.resumptionMasterSecret !== undefined && (this.resumptionMasterSecret.length < 1 || this.resumptionMasterSecret.length > 65535)) {
+            throw new ASN1SizeError("TLS13UAStarParams.resumptionMasterSecret violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TLS13UAStarParams

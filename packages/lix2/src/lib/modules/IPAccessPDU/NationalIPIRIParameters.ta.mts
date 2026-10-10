@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    PrintableString
+    PrintableString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -49,7 +50,11 @@ class NationalIPIRIParameters {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (this.countryCode !== undefined && (this.countryCode.length < 2 || this.countryCode.length > 2)) {
+            throw new ASN1SizeError("NationalIPIRIParameters.countryCode violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a NationalIPIRIParameters

@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_ForbiddenTACs: $.ASN1Decoder<ForbiddenTACs> | null = nul
 export
 function _decode_ForbiddenTACs (el: _Element): ForbiddenTACs {
     if (!_cached_decoder_for_ForbiddenTACs) { _cached_decoder_for_ForbiddenTACs = $._decodeSequenceOf<TAC>(() => _decode_TAC); }
-    return _cached_decoder_for_ForbiddenTACs(el);
+    const _value = _cached_decoder_for_ForbiddenTACs(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("ForbiddenTACs violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_ForbiddenTACs: $.ASN1Encoder<ForbiddenTACs> | null = null;

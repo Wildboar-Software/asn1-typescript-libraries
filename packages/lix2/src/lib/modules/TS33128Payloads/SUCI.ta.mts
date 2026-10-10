@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCC, _decode_MCC, _encode_MCC } from "../TS33128Payloads/MCC.ta.mjs";
@@ -106,7 +107,14 @@ class SUCI {
          * @readonly
          */
         readonly homeNetworkIdentifier: OPTIONAL<HomeNetworkIdentifier>
-    ) {}
+    ) {
+        if (this.routingIndicatorLength !== undefined) {
+            const _n = typeof this.routingIndicatorLength === "bigint" ? this.routingIndicatorLength : BigInt(this.routingIndicatorLength);
+            if (_n < 1n || _n > 4n) {
+                throw new ASN1OverflowError("SUCI.routingIndicatorLength violates INTEGER range constraint");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a SUCI

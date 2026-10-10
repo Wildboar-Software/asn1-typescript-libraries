@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13ExtensionType, _decode_TLS13ExtensionType, _encode_TLS13ExtensionType, _enum_for_TLS13ExtensionType } from "../TS33128Payloads/TLS13ExtensionType.ta.mjs";
@@ -41,7 +42,11 @@ class TLS13Extension {
          * @readonly
          */
         readonly extensionData: OCTET_STRING
-    ) {}
+    ) {
+        if (this.extensionData !== undefined && (this.extensionData.length < 0 || this.extensionData.length > 65535)) {
+            throw new ASN1SizeError("TLS13Extension.extensionData violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TLS13Extension

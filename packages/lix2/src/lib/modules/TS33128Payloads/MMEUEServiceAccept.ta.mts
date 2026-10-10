@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
@@ -89,7 +90,20 @@ class MMEUEServiceAccept {
          * @readonly
          */
         readonly controlPlaneServiceType: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (this.serviceType !== undefined && (this.serviceType.length < 1 || this.serviceType.length > 1)) {
+            throw new ASN1SizeError("MMEUEServiceAccept.serviceType violates SIZE constraint");
+        }
+        if (this.cSFBResponse !== undefined && (this.cSFBResponse.length < 1 || this.cSFBResponse.length > 1)) {
+            throw new ASN1SizeError("MMEUEServiceAccept.cSFBResponse violates SIZE constraint");
+        }
+        if (this.uEEPSBearerContextStatus !== undefined && (this.uEEPSBearerContextStatus.length < 2 || this.uEEPSBearerContextStatus.length > 2)) {
+            throw new ASN1SizeError("MMEUEServiceAccept.uEEPSBearerContextStatus violates SIZE constraint");
+        }
+        if (this.controlPlaneServiceType !== undefined && (this.controlPlaneServiceType.length < 1 || this.controlPlaneServiceType.length > 1)) {
+            throw new ASN1SizeError("MMEUEServiceAccept.controlPlaneServiceType violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a MMEUEServiceAccept

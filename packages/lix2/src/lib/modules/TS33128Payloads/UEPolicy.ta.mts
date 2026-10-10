@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ type UEPolicy = OCTET_STRING; // OctetStringType
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_UEPolicy = $._decodeOctetString;
+export const _decode_UEPolicy = (el: _Element): UEPolicy => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 16 || value.length > 65540) {
+        throw new ASN1SizeError("UEPolicy violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) UEPolicy into an ASN.1 Element.

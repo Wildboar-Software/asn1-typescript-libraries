@@ -2,7 +2,8 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
@@ -51,7 +52,11 @@ class NWDAFRoamingAnalyticsNotification {
          * @readonly
          */
         readonly nWDAFEventsNotification: SBIType
-    ) {}
+    ) {
+        if (this.nWDAFNotifiedEventList !== undefined && (this.nWDAFNotifiedEventList.length < 1)) {
+            throw new ASN1SizeError("NWDAFRoamingAnalyticsNotification.nWDAFNotifiedEventList violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a NWDAFRoamingAnalyticsNotification

@@ -5,6 +5,7 @@ import {
     OPTIONAL,
     OCTET_STRING,
     BIT_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -99,7 +100,38 @@ class TCPInformation {
          * @readonly
          */
         readonly options: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (this.sourcePort !== undefined && (this.sourcePort.length < 2 || this.sourcePort.length > 2)) {
+            throw new ASN1SizeError("TCPInformation.sourcePort violates SIZE constraint");
+        }
+        if (this.destinationPort !== undefined && (this.destinationPort.length < 2 || this.destinationPort.length > 2)) {
+            throw new ASN1SizeError("TCPInformation.destinationPort violates SIZE constraint");
+        }
+        if (this.sequenceNumber !== undefined && (this.sequenceNumber.length < 4 || this.sequenceNumber.length > 4)) {
+            throw new ASN1SizeError("TCPInformation.sequenceNumber violates SIZE constraint");
+        }
+        if (this.ackNumber !== undefined && (this.ackNumber.length < 4 || this.ackNumber.length > 4)) {
+            throw new ASN1SizeError("TCPInformation.ackNumber violates SIZE constraint");
+        }
+        if (this.dataOffset !== undefined && (this.dataOffset.length < 4 || this.dataOffset.length > 4)) {
+            throw new ASN1SizeError("TCPInformation.dataOffset violates SIZE constraint");
+        }
+        if (this.controlBits !== undefined && (this.controlBits.length < 6 || this.controlBits.length > 6)) {
+            throw new ASN1SizeError("TCPInformation.controlBits violates SIZE constraint");
+        }
+        if (this.windowSize !== undefined && (this.windowSize.length < 2 || this.windowSize.length > 2)) {
+            throw new ASN1SizeError("TCPInformation.windowSize violates SIZE constraint");
+        }
+        if (this.checkSum !== undefined && (this.checkSum.length < 2 || this.checkSum.length > 2)) {
+            throw new ASN1SizeError("TCPInformation.checkSum violates SIZE constraint");
+        }
+        if (this.urgentPointer !== undefined && (this.urgentPointer.length < 2 || this.urgentPointer.length > 2)) {
+            throw new ASN1SizeError("TCPInformation.urgentPointer violates SIZE constraint");
+        }
+        if (this.options !== undefined && (this.options.length < 0 || this.options.length > 40)) {
+            throw new ASN1SizeError("TCPInformation.options violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TCPInformation

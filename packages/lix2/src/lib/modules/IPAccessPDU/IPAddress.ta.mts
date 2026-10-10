@@ -5,6 +5,8 @@ import {
     OPTIONAL,
     INTEGER,
     OCTET_STRING,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress_iP_type, _decode_IPAddress_iP_type, _encode_IPAddress_iP_type, _enum_for_IPAddress_iP_type } from "../IPAccessPDU/IPAddress-iP-type.ta.mjs";
@@ -85,7 +87,17 @@ class IPAddress {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (this.iPv6PrefixLength !== undefined) {
+            const _n = typeof this.iPv6PrefixLength === "bigint" ? this.iPv6PrefixLength : BigInt(this.iPv6PrefixLength);
+            if (_n < 1n || _n > 128n) {
+                throw new ASN1OverflowError("IPAddress.iPv6PrefixLength violates INTEGER range constraint");
+            }
+        }
+        if (this.iPv4SubnetMask !== undefined && (this.iPv4SubnetMask.length < 4 || this.iPv4SubnetMask.length > 4)) {
+            throw new ASN1SizeError("IPAddress.iPv4SubnetMask violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a IPAddress

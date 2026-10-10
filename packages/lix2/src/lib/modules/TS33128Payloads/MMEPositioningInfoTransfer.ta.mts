@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
@@ -82,7 +83,11 @@ class MMEPositioningInfoTransfer {
          * @readonly
          */
         readonly mMELCSCorrelationId: OCTET_STRING
-    ) {}
+    ) {
+        if (this.mMELCSCorrelationId !== undefined && (this.mMELCSCorrelationId.length < 4 || this.mMELCSCorrelationId.length > 4)) {
+            throw new ASN1SizeError("MMEPositioningInfoTransfer.mMELCSCorrelationId violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a MMEPositioningInfoTransfer

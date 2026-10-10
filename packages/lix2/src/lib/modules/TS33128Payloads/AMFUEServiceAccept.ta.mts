@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
@@ -110,7 +111,17 @@ class AMFUEServiceAccept {
          * @readonly
          */
         readonly uERequestType: OPTIONAL<MUSIMUERequestType>
-    ) {}
+    ) {
+        if (this.serviceType !== undefined && (this.serviceType.length < 1 || this.serviceType.length > 1)) {
+            throw new ASN1SizeError("AMFUEServiceAccept.serviceType violates SIZE constraint");
+        }
+        if (this.uplinkDataStatus !== undefined && (this.uplinkDataStatus.length < 2 || this.uplinkDataStatus.length > 32)) {
+            throw new ASN1SizeError("AMFUEServiceAccept.uplinkDataStatus violates SIZE constraint");
+        }
+        if (this.pDUSessionStatus !== undefined && (this.pDUSessionStatus.length < 2 || this.pDUSessionStatus.length > 32)) {
+            throw new ASN1SizeError("AMFUEServiceAccept.pDUSessionStatus violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a AMFUEServiceAccept

@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HSSIdentities, _decode_HSSIdentities, _encode_HSSIdentities } from "../TS33128Payloads/HSSIdentities.ta.mjs";
@@ -67,7 +68,11 @@ class IMSHSSSubscriberRecordChange {
          * @readonly
          */
         readonly previousIMEI: OPTIONAL<IMEI>
-    ) {}
+    ) {
+        if (this.mSISDNs !== undefined && (this.mSISDNs.length < 1)) {
+            throw new ASN1SizeError("IMSHSSSubscriberRecordChange.mSISDNs violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a IMSHSSSubscriberRecordChange

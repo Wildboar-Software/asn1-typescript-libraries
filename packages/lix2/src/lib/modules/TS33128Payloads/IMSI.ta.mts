@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    NumericString
+    NumericString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,13 @@ type IMSI = NumericString; // NumericString
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_IMSI = $._decodeNumericString;
+export const _decode_IMSI = (el: _Element): IMSI => {
+    const value = $._decodeNumericString(el);
+    if (value.length < 6 || value.length > 15) {
+        throw new ASN1SizeError("IMSI violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) IMSI into an ASN.1 Element.

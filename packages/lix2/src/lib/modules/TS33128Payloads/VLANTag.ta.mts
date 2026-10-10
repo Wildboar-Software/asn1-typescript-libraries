@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING
+    BIT_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -47,7 +48,17 @@ class VLANTag {
          * @readonly
          */
         readonly vLANID: BIT_STRING
-    ) {}
+    ) {
+        if (this.priority !== undefined && (this.priority.length < 3 || this.priority.length > 3)) {
+            throw new ASN1SizeError("VLANTag.priority violates SIZE constraint");
+        }
+        if (this.cFI !== undefined && (this.cFI.length < 1 || this.cFI.length > 1)) {
+            throw new ASN1SizeError("VLANTag.cFI violates SIZE constraint");
+        }
+        if (this.vLANID !== undefined && (this.vLANID.length < 12 || this.vLANID.length > 12)) {
+            throw new ASN1SizeError("VLANTag.vLANID violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a VLANTag

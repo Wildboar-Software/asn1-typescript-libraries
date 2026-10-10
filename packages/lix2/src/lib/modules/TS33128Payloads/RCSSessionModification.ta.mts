@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
@@ -110,7 +111,11 @@ class RCSSessionModification {
          * @readonly
          */
         readonly location: OPTIONAL<Location>
-    ) {}
+    ) {
+        if (this.rCSTargetIdentities !== undefined && (this.rCSTargetIdentities.length < 1)) {
+            throw new ASN1SizeError("RCSSessionModification.rCSTargetIdentities violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a RCSSessionModification

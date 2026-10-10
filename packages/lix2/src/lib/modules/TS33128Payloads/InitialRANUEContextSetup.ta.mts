@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AMFUENGAPID, _decode_AMFUENGAPID, _encode_AMFUENGAPID } from "../TS33128Payloads/AMFUENGAPID.ta.mjs";
@@ -183,7 +184,11 @@ class InitialRANUEContextSetup {
          * @readonly
          */
         readonly mobileIABAuthorizedIndicator: OPTIONAL<MobileIABAuthorizedIndicator>
-    ) {}
+    ) {
+        if (this.pDUSessionSetupRequest !== undefined && (this.pDUSessionSetupRequest.length < 1)) {
+            throw new ASN1SizeError("InitialRANUEContextSetup.pDUSessionSetupRequest violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a InitialRANUEContextSetup

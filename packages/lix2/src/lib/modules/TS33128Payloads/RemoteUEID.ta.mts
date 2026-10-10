@@ -2,7 +2,8 @@
 import {
     BIT_STRING,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
@@ -58,7 +59,20 @@ function _decode_RemoteUEID (el: _Element): RemoteUEID {
     "CONTEXT 5": [ "iMEI", $._decode_implicit<IMEI>(() => _decode_IMEI) ],
     "CONTEXT 6": [ "iMEISV", $._decode_implicit<IMEISV>(() => _decode_IMEISV) ]
 }); }
-    return _cached_decoder_for_RemoteUEID(el);
+    const _value = _cached_decoder_for_RemoteUEID(el);
+    if (_value !== undefined && typeof _value === "object" && "uPPRUKID64BitString" in _value) {
+        const _v = _value.uPPRUKID64BitString;
+        if (_v.length < 64 || _v.length > 64) {
+            throw new ASN1SizeError("RemoteUEID.uPPRUKID64BitString violates SIZE constraint");
+        }
+    }
+    if (_value !== undefined && typeof _value === "object" && "cPPRUKID64BitString" in _value) {
+        const _v = _value.cPPRUKID64BitString;
+        if (_v.length < 64 || _v.length > 64) {
+            throw new ASN1SizeError("RemoteUEID.cPPRUKID64BitString violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_RemoteUEID: $.ASN1Encoder<RemoteUEID> | null = null;

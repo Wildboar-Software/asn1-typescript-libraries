@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13CertificateType, _decode_TLS13CertificateType, _encode_TLS13CertificateType, _enum_for_TLS13CertificateType } from "../TS33128Payloads/TLS13CertificateType.ta.mjs";
@@ -50,7 +51,11 @@ class TLS13CerificateEntry {
          * @readonly
          */
         readonly extensions: OPTIONAL<TLS13Extension[]>
-    ) {}
+    ) {
+        if (this.tLSCertificateData !== undefined && (this.tLSCertificateData.length < 1 || this.tLSCertificateData.length > 16777215)) {
+            throw new ASN1SizeError("TLS13CerificateEntry.tLSCertificateData violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TLS13CerificateEntry

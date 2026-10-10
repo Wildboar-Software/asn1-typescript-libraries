@@ -3,7 +3,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
@@ -86,7 +87,11 @@ class NWDAFRoamingAnalyticsSubscription {
          * @readonly
          */
         readonly nWDAFEventsSubscriptionResponseCode: NWDAFEventsSubscriptionResponseCode
-    ) {}
+    ) {
+        if (this.nWDAFSubscribedEventList !== undefined && (this.nWDAFSubscribedEventList.length < 1)) {
+            throw new ASN1SizeError("NWDAFRoamingAnalyticsSubscription.nWDAFSubscribedEventList violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a NWDAFRoamingAnalyticsSubscription

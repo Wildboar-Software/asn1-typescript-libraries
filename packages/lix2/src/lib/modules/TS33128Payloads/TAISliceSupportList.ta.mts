@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SNSSAI, _decode_SNSSAI, _encode_SNSSAI } from "../TS33128Payloads/SNSSAI.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_TAISliceSupportList: $.ASN1Decoder<TAISliceSupportList> 
 export
 function _decode_TAISliceSupportList (el: _Element): TAISliceSupportList {
     if (!_cached_decoder_for_TAISliceSupportList) { _cached_decoder_for_TAISliceSupportList = $._decodeSequenceOf<SNSSAI>(() => _decode_SNSSAI); }
-    return _cached_decoder_for_TAISliceSupportList(el);
+    const _value = _cached_decoder_for_TAISliceSupportList(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("TAISliceSupportList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_TAISliceSupportList: $.ASN1Encoder<TAISliceSupportList> | null = null;
