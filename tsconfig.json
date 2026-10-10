@@ -220,7 +220,10 @@
       "path": "./packages/mrbtr"
     },
     {
-      "path": "./packages/gdt"
+      "path": "./packages/credssp"
+    },
+    {
+      "path": "./packages/charging"
     },
     {
       "path": "./packages/goose"
