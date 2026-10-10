@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CompressedContentInfo_contentType, _decode_CompressedContentInfo_contentType, _encode_CompressedContentInfo_contentType } from "../CompressedDataType/CompressedContentInfo-contentType.ta.mjs";
-// export { CompressedContentInfo_contentType, _decode_CompressedContentInfo_contentType, _encode_CompressedContentInfo_contentType } from "../CompressedDataType/CompressedContentInfo-contentType.ta.mjs";
 import { CompressedContent, _decode_CompressedContent, _encode_CompressedContent } from "../CompressedDataType/CompressedContent.ta.mjs";
-// export { CompressedContent, _decode_CompressedContent, _encode_CompressedContent } from "../CompressedDataType/CompressedContent.ta.mjs";
 
 
 /**
