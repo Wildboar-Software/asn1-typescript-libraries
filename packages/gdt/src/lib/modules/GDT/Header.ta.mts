@@ -8,14 +8,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EndPointDescriptor, _decode_EndPointDescriptor, _encode_EndPointDescriptor } from "../GDT/EndPointDescriptor.ta.mjs";
-// export { EndPointDescriptor, _decode_EndPointDescriptor, _encode_EndPointDescriptor } from "../GDT/EndPointDescriptor.ta.mjs";
 import { SequenceFlag, _decode_SequenceFlag, _encode_SequenceFlag } from "../GDT/SequenceFlag.ta.mjs";
-// export { SequenceFlag, SequenceFlag_sf_start /* IMPORTED_LONG_NAMED_INTEGER */, sf_start /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_continue /* IMPORTED_LONG_NAMED_INTEGER */, sf_continue /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_end /* IMPORTED_LONG_NAMED_INTEGER */, sf_end /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_stateless_no_reply /* IMPORTED_LONG_NAMED_INTEGER */, sf_stateless_no_reply /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_stateless /* IMPORTED_LONG_NAMED_INTEGER */, sf_stateless /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_stream_complete /* IMPORTED_LONG_NAMED_INTEGER */, sf_stream_complete /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_continue_wait /* IMPORTED_LONG_NAMED_INTEGER */, sf_continue_wait /* IMPORTED_SHORT_NAMED_INTEGER */, SequenceFlag_sf_heartbeat /* IMPORTED_LONG_NAMED_INTEGER */, sf_heartbeat /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SequenceFlag, _encode_SequenceFlag } from "../GDT/SequenceFlag.ta.mjs";
 import { HopInfo, _decode_HopInfo, _encode_HopInfo } from "../GDT/HopInfo.ta.mjs";
-// export { HopInfo, _decode_HopInfo, _encode_HopInfo } from "../GDT/HopInfo.ta.mjs";
 import { ErrorCode, _decode_ErrorCode, _encode_ErrorCode } from "../GDT/ErrorCode.ta.mjs";
 import { EncryptionInfo, _decode_EncryptionInfo, _encode_EncryptionInfo } from "../GDT/EncryptionInfo.ta.mjs";
-// export { ErrorCode, ErrorCode_err_ok /* IMPORTED_LONG_NAMED_INTEGER */, err_ok /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_out_of_sequence /* IMPORTED_LONG_NAMED_INTEGER */, err_out_of_sequence /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unknown_sequence /* IMPORTED_LONG_NAMED_INTEGER */, err_unknown_sequence /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unsupported_version /* IMPORTED_LONG_NAMED_INTEGER */, err_unsupported_version /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_timeout /* IMPORTED_LONG_NAMED_INTEGER */, err_timeout /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unknown_route /* IMPORTED_LONG_NAMED_INTEGER */, err_unknown_route /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_routing_not_supported /* IMPORTED_LONG_NAMED_INTEGER */, err_routing_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_max_hops_exceeded /* IMPORTED_LONG_NAMED_INTEGER */, err_max_hops_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unknown_error /* IMPORTED_LONG_NAMED_INTEGER */, err_unknown_error /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ErrorCode, _encode_ErrorCode } from "../GDT/ErrorCode.ta.mjs";
 
 
 /**
@@ -237,7 +233,7 @@ let _cached_encoder_for_Header: $.ASN1Encoder<Header> | null = null;
  */
 export
 function _encode_Header (value: Header, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Header) { _cached_encoder_for_Header = function (value: Header, elGetter: $.ASN1Encoder<Header>): _Element {
+    if (!_cached_encoder_for_Header) { _cached_encoder_for_Header = function (value: Header): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.version, $.BER),

@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Parameter, _decode_Parameter, _encode_Parameter } from "../GDT/Parameter.ta.mjs";
-// export { Parameter, _decode_Parameter, _encode_Parameter } from "../GDT/Parameter.ta.mjs";
 
 
 /**

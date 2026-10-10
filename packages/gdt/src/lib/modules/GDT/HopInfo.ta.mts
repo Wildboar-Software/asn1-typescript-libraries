@@ -148,7 +148,7 @@ let _cached_encoder_for_HopInfo: $.ASN1Encoder<HopInfo> | null = null;
  */
 export
 function _encode_HopInfo (value: HopInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HopInfo) { _cached_encoder_for_HopInfo = function (value: HopInfo, elGetter: $.ASN1Encoder<HopInfo>): _Element {
+    if (!_cached_encoder_for_HopInfo) { _cached_encoder_for_HopInfo = function (value: HopInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.current_hop, $.BER),

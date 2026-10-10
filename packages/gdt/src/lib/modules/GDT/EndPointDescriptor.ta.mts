@@ -151,7 +151,7 @@ let _cached_encoder_for_EndPointDescriptor: $.ASN1Encoder<EndPointDescriptor> | 
  */
 export
 function _encode_EndPointDescriptor (value: EndPointDescriptor, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EndPointDescriptor) { _cached_encoder_for_EndPointDescriptor = function (value: EndPointDescriptor, elGetter: $.ASN1Encoder<EndPointDescriptor>): _Element {
+    if (!_cached_encoder_for_EndPointDescriptor) { _cached_encoder_for_EndPointDescriptor = function (value: EndPointDescriptor): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeIA5String, $.BER)(value.type_, $.BER),

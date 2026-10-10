@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RegistrationAction, _decode_RegistrationAction, _encode_RegistrationAction } from "../GDT/RegistrationAction.ta.mjs";
-// export { RegistrationAction, RegistrationAction_ra_reg_request /* IMPORTED_LONG_NAMED_INTEGER */, ra_reg_request /* IMPORTED_SHORT_NAMED_INTEGER */, RegistrationAction_ra_reg_result /* IMPORTED_LONG_NAMED_INTEGER */, ra_reg_result /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RegistrationAction, _encode_RegistrationAction } from "../GDT/RegistrationAction.ta.mjs";
 import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
-// export { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -153,7 +151,7 @@ let _cached_encoder_for_RegistrationMessage: $.ASN1Encoder<RegistrationMessage> 
  */
 export
 function _encode_RegistrationMessage (value: RegistrationMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RegistrationMessage) { _cached_encoder_for_RegistrationMessage = function (value: RegistrationMessage, elGetter: $.ASN1Encoder<RegistrationMessage>): _Element {
+    if (!_cached_encoder_for_RegistrationMessage) { _cached_encoder_for_RegistrationMessage = function (value: RegistrationMessage): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_RegistrationAction(value.reg_action, $.BER),

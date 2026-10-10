@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Header, _decode_Header, _encode_Header } from "../GDT/Header.ta.mjs";
-// export { Header, _decode_Header, _encode_Header } from "../GDT/Header.ta.mjs";
 import { Body, _decode_Body, _encode_Body } from "../GDT/Body.ta.mjs";
-// export { Body, _decode_Body, _encode_Body } from "../GDT/Body.ta.mjs";
 
 
 /**
@@ -153,7 +151,7 @@ let _cached_encoder_for_GDTMessage: $.ASN1Encoder<GDTMessage> | null = null;
  */
 export
 function _encode_GDTMessage (value: GDTMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GDTMessage) { _cached_encoder_for_GDTMessage = function (value: GDTMessage, elGetter: $.ASN1Encoder<GDTMessage>): _Element {
+    if (!_cached_encoder_for_GDTMessage) { _cached_encoder_for_GDTMessage = function (value: GDTMessage): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Header(value.header, $.BER),

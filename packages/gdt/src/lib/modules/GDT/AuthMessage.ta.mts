@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthAction, _decode_AuthAction, _encode_AuthAction } from "../GDT/AuthAction.ta.mjs";
-// export { AuthAction, AuthAction_aa_auth_request /* IMPORTED_LONG_NAMED_INTEGER */, aa_auth_request /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAction_aa_auth_result /* IMPORTED_LONG_NAMED_INTEGER */, aa_auth_result /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AuthAction, _encode_AuthAction } from "../GDT/AuthAction.ta.mjs";
 import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
-// export { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -153,7 +151,7 @@ let _cached_encoder_for_AuthMessage: $.ASN1Encoder<AuthMessage> | null = null;
  */
 export
 function _encode_AuthMessage (value: AuthMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthMessage) { _cached_encoder_for_AuthMessage = function (value: AuthMessage, elGetter: $.ASN1Encoder<AuthMessage>): _Element {
+    if (!_cached_encoder_for_AuthMessage) { _cached_encoder_for_AuthMessage = function (value: AuthMessage): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_AuthAction(value.auth_action, $.BER),

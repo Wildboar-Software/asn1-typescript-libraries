@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RoutingAction, _decode_RoutingAction, _encode_RoutingAction } from "../GDT/RoutingAction.ta.mjs";
-// export { RoutingAction, RoutingAction_roua_route_set /* IMPORTED_LONG_NAMED_INTEGER */, roua_route_set /* IMPORTED_SHORT_NAMED_INTEGER */, RoutingAction_roua_route_get /* IMPORTED_LONG_NAMED_INTEGER */, roua_route_get /* IMPORTED_SHORT_NAMED_INTEGER */, RoutingAction_roua_route_result /* IMPORTED_LONG_NAMED_INTEGER */, roua_route_result /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RoutingAction, _encode_RoutingAction } from "../GDT/RoutingAction.ta.mjs";
 import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
-// export { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -153,7 +151,7 @@ let _cached_encoder_for_RoutingMessage: $.ASN1Encoder<RoutingMessage> | null = n
  */
 export
 function _encode_RoutingMessage (value: RoutingMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RoutingMessage) { _cached_encoder_for_RoutingMessage = function (value: RoutingMessage, elGetter: $.ASN1Encoder<RoutingMessage>): _Element {
+    if (!_cached_encoder_for_RoutingMessage) { _cached_encoder_for_RoutingMessage = function (value: RoutingMessage): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_RoutingAction(value.routing_action, $.BER),

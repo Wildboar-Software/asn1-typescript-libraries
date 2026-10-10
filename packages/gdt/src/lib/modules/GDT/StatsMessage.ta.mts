@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { StatsAction, _decode_StatsAction, _encode_StatsAction } from "../GDT/StatsAction.ta.mjs";
-// export { StatsAction, StatsAction_sa_request /* IMPORTED_LONG_NAMED_INTEGER */, sa_request /* IMPORTED_SHORT_NAMED_INTEGER */, StatsAction_sa_result /* IMPORTED_LONG_NAMED_INTEGER */, sa_result /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_StatsAction, _encode_StatsAction } from "../GDT/StatsAction.ta.mjs";
 import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
-// export { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -153,7 +151,7 @@ let _cached_encoder_for_StatsMessage: $.ASN1Encoder<StatsMessage> | null = null;
  */
 export
 function _encode_StatsMessage (value: StatsMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_StatsMessage) { _cached_encoder_for_StatsMessage = function (value: StatsMessage, elGetter: $.ASN1Encoder<StatsMessage>): _Element {
+    if (!_cached_encoder_for_StatsMessage) { _cached_encoder_for_StatsMessage = function (value: StatsMessage): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_StatsAction(value.stats_action, $.BER),

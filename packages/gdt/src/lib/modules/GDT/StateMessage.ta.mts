@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { StateAction, _decode_StateAction, _encode_StateAction } from "../GDT/StateAction.ta.mjs";
-// export { StateAction, StateAction_sta_update /* IMPORTED_LONG_NAMED_INTEGER */, sta_update /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_StateAction, _encode_StateAction } from "../GDT/StateAction.ta.mjs";
 import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
-// export { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -165,7 +163,7 @@ let _cached_encoder_for_StateMessage: $.ASN1Encoder<StateMessage> | null = null;
  */
 export
 function _encode_StateMessage (value: StateMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_StateMessage) { _cached_encoder_for_StateMessage = function (value: StateMessage, elGetter: $.ASN1Encoder<StateMessage>): _Element {
+    if (!_cached_encoder_for_StateMessage) { _cached_encoder_for_StateMessage = function (value: StateMessage): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeOctetString(value.stmch_id, $.BER),

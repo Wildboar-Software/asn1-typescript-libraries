@@ -163,7 +163,7 @@ let _cached_encoder_for_EncryptionInfo: $.ASN1Encoder<EncryptionInfo> | null = n
  */
 export
 function _encode_EncryptionInfo (value: EncryptionInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EncryptionInfo) { _cached_encoder_for_EncryptionInfo = function (value: EncryptionInfo, elGetter: $.ASN1Encoder<EncryptionInfo>): _Element {
+    if (!_cached_encoder_for_EncryptionInfo) { _cached_encoder_for_EncryptionInfo = function (value: EncryptionInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeOctetString(value.enc_type, $.BER),
