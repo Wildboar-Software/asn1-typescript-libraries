@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CompressedContentInfo_contentType, _decode_CompressedContentInfo_contentType, _encode_CompressedContentInfo_contentType } from "../CompressedDataType/CompressedContentInfo-contentType.ta.mjs";
-// export { CompressedContentInfo_contentType, _decode_CompressedContentInfo_contentType, _encode_CompressedContentInfo_contentType } from "../CompressedDataType/CompressedContentInfo-contentType.ta.mjs";
 import { CompressedContent, _decode_CompressedContent, _encode_CompressedContent } from "../CompressedDataType/CompressedContent.ta.mjs";
-// export { CompressedContent, _decode_CompressedContent, _encode_CompressedContent } from "../CompressedDataType/CompressedContent.ta.mjs";
 
 
 /**
@@ -116,15 +114,15 @@ export
 function _decode_CompressedContentInfo (el: _Element): CompressedContentInfo {
     if (!_cached_decoder_for_CompressedContentInfo) { _cached_decoder_for_CompressedContentInfo = function (el: _Element): CompressedContentInfo {
     const sequence: _Element[] = el.sequence;
-    if (sequence.length < 2) {
+    const contentTypeElement = sequence[0];
+    const compressedContentElement = sequence[1];
+    if (sequence.length < 2 || !contentTypeElement || !compressedContentElement) {
         throw new _ConstructionError("CompressedContentInfo contained only " + sequence.length.toString() + " elements.");
     }
-    sequence[0].name = "contentType";
-    sequence[1].name = "compressedContent";
-    let contentType!: CompressedContentInfo_contentType;
-    let compressedContent!: CompressedContent;
-    contentType = _decode_CompressedContentInfo_contentType(sequence[0]);
-    compressedContent = $._decode_explicit<CompressedContent>(() => _decode_CompressedContent)(sequence[1]);
+    contentTypeElement.name = "contentType";
+    compressedContentElement.name = "compressedContent";
+    const contentType: CompressedContentInfo_contentType = _decode_CompressedContentInfo_contentType(contentTypeElement);
+    const compressedContent: CompressedContent = $._decode_explicit<CompressedContent>(() => _decode_CompressedContent)(compressedContentElement);
     return new CompressedContentInfo(
         contentType,
         compressedContent,
@@ -145,7 +143,7 @@ let _cached_encoder_for_CompressedContentInfo: $.ASN1Encoder<CompressedContentIn
  */
 export
 function _encode_CompressedContentInfo (value: CompressedContentInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompressedContentInfo) { _cached_encoder_for_CompressedContentInfo = function (value: CompressedContentInfo, elGetter: $.ASN1Encoder<CompressedContentInfo>): _Element {
+    if (!_cached_encoder_for_CompressedContentInfo) { _cached_encoder_for_CompressedContentInfo = function (value: CompressedContentInfo, _elGetter: $.ASN1Encoder<CompressedContentInfo>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_CompressedContentInfo_contentType(value.contentType, $.BER),

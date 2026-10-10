@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ContentType_ShortForm, _encode_ContentType_ShortForm, ContentType_ShortForm } from "../CompressedDataType/ContentType-ShortForm.ta.mjs";
-// export { ContentType_ShortForm, ContentType_ShortForm_unidentified /* IMPORTED_LONG_NAMED_INTEGER */, unidentified /* IMPORTED_SHORT_NAMED_INTEGER */, ContentType_ShortForm_external /* IMPORTED_LONG_NAMED_INTEGER */, external /* IMPORTED_SHORT_NAMED_INTEGER */, ContentType_ShortForm_p1 /* IMPORTED_LONG_NAMED_INTEGER */, p1 /* IMPORTED_SHORT_NAMED_INTEGER */, ContentType_ShortForm_p3 /* IMPORTED_LONG_NAMED_INTEGER */, p3 /* IMPORTED_SHORT_NAMED_INTEGER */, ContentType_ShortForm_p7 /* IMPORTED_LONG_NAMED_INTEGER */, p7 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ContentType_ShortForm, _encode_ContentType_ShortForm } from "../CompressedDataType/ContentType-ShortForm.ta.mjs";
 
 
 /**
@@ -16,7 +15,10 @@ import { _decode_ContentType_ShortForm, _encode_ContentType_ShortForm, ContentTy
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CompressedContentInfo-contentType ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CompressedContentInfo-contentType ::= CHOICE {
+ *     contentType-ShortForm  [0] IMPLICIT ContentType-ShortForm,
+ *     contentType-OID        [1] IMPLICIT OBJECT IDENTIFIER
+ * }
  * ```
  */
 export

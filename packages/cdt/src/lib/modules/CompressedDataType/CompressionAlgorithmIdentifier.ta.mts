@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_AlgorithmID_ShortForm, _encode_AlgorithmID_ShortForm, AlgorithmID_ShortForm } from "../CompressedDataType/AlgorithmID-ShortForm.ta.mjs";
-// export { AlgorithmID_ShortForm, AlgorithmID_ShortForm_zlibCompress /* IMPORTED_LONG_NAMED_INTEGER */, zlibCompress /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AlgorithmID_ShortForm, _encode_AlgorithmID_ShortForm } from "../CompressedDataType/AlgorithmID-ShortForm.ta.mjs";
 
 
 /**
