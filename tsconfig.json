@@ -220,6 +220,9 @@
       "path": "./packages/mrbtr"
     },
     {
+      "path": "./packages/goose"
+    },
+    {
       "path": "./packages/pkinit"
     },
     {
