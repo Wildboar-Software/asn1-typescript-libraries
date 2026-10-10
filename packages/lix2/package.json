@@ -28,6 +28,11 @@
     "types": "./src/index.d.mts",
     "module": "./src/index.mjs",
     "main": "./src/index.mjs",
+    "exports": {
+        ".": "./src/index.mts",
+        "./IPAccessPDU": "./src/lib/modules/IPAccessPDU/index.mts",
+        "./TS33128Payloads": "./src/lib/modules/TS33128Payloads/index.mts"
+    },
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
     }
