@@ -38,6 +38,7 @@ jobs:
           - "ess"
           - "fast-infoset"
           - "ftam"
+          - "gdt"
           - "gmi-attributemodule"
           - "goose"
           - "guls"
