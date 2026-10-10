@@ -38,34 +38,40 @@ import { SessionConnectionIdentifier, _decode_SessionConnectionIdentifier, _enco
  */
 export
 class CL_UserData_PDU {
+    /**
+     * @summary `reference`.
+     * @description
+     *
+     * Session connection identifier of the presentation
+     * connection. Required. With the two hosts' IP addresses
+     * and UDP ports, it identifies the connection
+     * ([§10.2](https://datatracker.ietf.org/doc/html/rfc1085#section-10.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reference: SessionConnectionIdentifier;
+    /**
+     * @summary `user_data`.
+     * @description
+     *
+     * The remote-operations APDU. Always presentation
+     * context 1
+     * ([Appendix A](https://datatracker.ietf.org/doc/html/rfc1085),
+     * [§9.1](https://datatracker.ietf.org/doc/html/rfc1085#section-9.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_data: _Element;
+
     constructor (
-        /**
-         * @summary `reference`.
-         * @description
-         *
-         * Session connection identifier of the presentation
-         * connection. Required. With the two hosts' IP addresses
-         * and UDP ports, it identifies the connection
-         * ([§10.2](https://datatracker.ietf.org/doc/html/rfc1085#section-10.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reference: SessionConnectionIdentifier,
-        /**
-         * @summary `user_data`.
-         * @description
-         *
-         * The remote-operations APDU. Always presentation
-         * context 1
-         * ([Appendix A](https://datatracker.ietf.org/doc/html/rfc1085),
-         * [§9.1](https://datatracker.ietf.org/doc/html/rfc1085#section-9.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_data: _Element
-    ) {}
+        reference: SessionConnectionIdentifier,
+        user_data: _Element,
+    ) {
+        this.reference = reference;
+        this.user_data = user_data;
+    }
 
     /**
      * @summary Restructures an object into a CL_UserData_PDU

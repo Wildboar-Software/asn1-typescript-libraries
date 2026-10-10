@@ -53,32 +53,38 @@ import { UserData_PDU, _decode_UserData_PDU, _encode_UserData_PDU } from "../RFC
  */
 export
 class ReleaseRequest_PDU {
+    /**
+     * @summary `reference`.
+     * @description
+     *
+     * Session connection identifier. Present only on the
+     * udp-based service (Appendix A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reference: OPTIONAL<SessionConnectionIdentifier>;
+    /**
+     * @summary `user_data`.
+     * @description
+     *
+     * Release user data: one A-RELEASE PDU in presentation
+     * context 3
+     * ([§8.1](https://datatracker.ietf.org/doc/html/rfc1085#section-8.1)
+     * item 2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_data: UserData_PDU;
+
     constructor (
-        /**
-         * @summary `reference`.
-         * @description
-         *
-         * Session connection identifier. Present only on the
-         * udp-based service (Appendix A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reference: OPTIONAL<SessionConnectionIdentifier>,
-        /**
-         * @summary `user_data`.
-         * @description
-         *
-         * Release user data: one A-RELEASE PDU in presentation
-         * context 3
-         * ([§8.1](https://datatracker.ietf.org/doc/html/rfc1085#section-8.1)
-         * item 2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_data: UserData_PDU
-    ) {}
+        reference: OPTIONAL<SessionConnectionIdentifier>,
+        user_data: UserData_PDU,
+    ) {
+        this.reference = reference;
+        this.user_data = user_data;
+    }
 
     /**
      * @summary Restructures an object into a ReleaseRequest_PDU

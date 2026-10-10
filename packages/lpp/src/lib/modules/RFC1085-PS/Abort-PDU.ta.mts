@@ -65,45 +65,53 @@ import { Abort_reason, _decode_Abort_reason, _encode_Abort_reason } from "../RFC
  */
 export
 class Abort_PDU {
+    /**
+     * @summary `reference`.
+     * @description
+     *
+     * Session connection identifier. Present only on the
+     * udp-based service (Appendix A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reference: OPTIONAL<SessionConnectionIdentifier>;
+    /**
+     * @summary `user_data`.
+     * @description
+     *
+     * Abort user data. May be present on a user-initiated
+     * abort: one A-ABORT PDU in presentation context 3
+     * ([§8.2](https://datatracker.ietf.org/doc/html/rfc1085#section-8.2)
+     * item 2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_data: OPTIONAL<UserData_PDU>;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * Provider reason. Always present on a
+     * provider-initiated abort
+     * ([§8.3](https://datatracker.ietf.org/doc/html/rfc1085#section-8.3),
+     * Appendix A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason: OPTIONAL<Abort_reason>;
+
     constructor (
-        /**
-         * @summary `reference`.
-         * @description
-         *
-         * Session connection identifier. Present only on the
-         * udp-based service (Appendix A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reference: OPTIONAL<SessionConnectionIdentifier>,
-        /**
-         * @summary `user_data`.
-         * @description
-         *
-         * Abort user data. May be present on a user-initiated
-         * abort: one A-ABORT PDU in presentation context 3
-         * ([§8.2](https://datatracker.ietf.org/doc/html/rfc1085#section-8.2)
-         * item 2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_data: OPTIONAL<UserData_PDU>,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * Provider reason. Always present on a
-         * provider-initiated abort
-         * ([§8.3](https://datatracker.ietf.org/doc/html/rfc1085#section-8.3),
-         * Appendix A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason: OPTIONAL<Abort_reason>
-    ) {}
+        reference: OPTIONAL<SessionConnectionIdentifier>,
+        user_data: OPTIONAL<UserData_PDU>,
+        reason: OPTIONAL<Abort_reason>,
+    ) {
+        this.reference = reference;
+        this.user_data = user_data;
+        this.reason = reason;
+    }
 
     /**
      * @summary Restructures an object into a Abort_PDU

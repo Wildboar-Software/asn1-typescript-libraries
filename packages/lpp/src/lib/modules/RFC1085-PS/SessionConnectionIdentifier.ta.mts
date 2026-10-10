@@ -46,46 +46,54 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class SessionConnectionIdentifier {
+    /**
+     * @summary `callingSSUserReference`.
+     * @description
+     *
+     * Calling SS-user reference: a local string, for example
+     * `"gonzo"`
+     * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+     * item 14, "user data").
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingSSUserReference: T61String;
+    /**
+     * @summary `commonReference`.
+     * @description
+     *
+     * Common reference: a universal time, for example
+     * `"880109170845"`
+     * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+     * item 14, "common data").
+     *
+     * @public
+     * @readonly
+     */
+    public readonly commonReference: UTCTime;
+    /**
+     * @summary `additionalReferenceInformation`.
+     * @description
+     *
+     * Additional reference information: any string. Optional
+     * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+     * item 14, "additional data").
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalReferenceInformation: OPTIONAL<T61String>;
+
     constructor (
-        /**
-         * @summary `callingSSUserReference`.
-         * @description
-         *
-         * Calling SS-user reference: a local string, for example
-         * `"gonzo"`
-         * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
-         * item 14, "user data").
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingSSUserReference: T61String,
-        /**
-         * @summary `commonReference`.
-         * @description
-         *
-         * Common reference: a universal time, for example
-         * `"880109170845"`
-         * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
-         * item 14, "common data").
-         *
-         * @public
-         * @readonly
-         */
-        readonly commonReference: UTCTime,
-        /**
-         * @summary `additionalReferenceInformation`.
-         * @description
-         *
-         * Additional reference information: any string. Optional
-         * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
-         * item 14, "additional data").
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalReferenceInformation: OPTIONAL<T61String>
-    ) {}
+        callingSSUserReference: T61String,
+        commonReference: UTCTime,
+        additionalReferenceInformation: OPTIONAL<T61String>,
+    ) {
+        this.callingSSUserReference = callingSSUserReference;
+        this.commonReference = commonReference;
+        this.additionalReferenceInformation = additionalReferenceInformation;
+    }
 
     /**
      * @summary Restructures an object into a SessionConnectionIdentifier
