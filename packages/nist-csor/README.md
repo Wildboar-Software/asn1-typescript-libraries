@@ -1,5 +1,9 @@
 # NIST CSOR AES identifiers in TypeScript
 
+UPDATE: This is so small and not even a formal module published by NIST.
+I think this might not be worth even making a module for this. I will
+keep this code here, but I don't think I am going to publish this.
+
 ASN.1 data structures based on the NIST Computer Security Objects Register
 AES algorithm identifiers (`NIST-AES`).
 
