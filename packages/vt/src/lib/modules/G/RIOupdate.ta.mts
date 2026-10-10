@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RIOupdate_Item, _decode_RIOupdate_Item, _encode_RIOupdate_Item } from "../G/RIOupdate-Item.ta.mjs";
-// export { RIOupdate_Item, _decode_RIOupdate_Item, _encode_RIOupdate_Item } from "../G/RIOupdate-Item.ta.mjs";
 
 
 /**

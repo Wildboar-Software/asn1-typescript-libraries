@@ -15,14 +15,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
-// export { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
 import { CommonObjectFlags, _decode_CommonObjectFlags, _encode_CommonObjectFlags } from "../CryptographicInformationFramework/CommonObjectFlags.ta.mjs";
-// export { CommonObjectFlags, CommonObjectFlags_private /* IMPORTED_LONG_NAMED_BIT */, private_ /* IMPORTED_SHORT_NAMED_BIT */, CommonObjectFlags_modifiable /* IMPORTED_LONG_NAMED_BIT */, modifiable /* IMPORTED_SHORT_NAMED_BIT */, CommonObjectFlags_internal /* IMPORTED_LONG_NAMED_BIT */, internal /* IMPORTED_SHORT_NAMED_BIT */, _decode_CommonObjectFlags, _encode_CommonObjectFlags } from "../CryptographicInformationFramework/CommonObjectFlags.ta.mjs";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
 import { AccessControlRule, _decode_AccessControlRule, _encode_AccessControlRule } from "../CryptographicInformationFramework/AccessControlRule.ta.mjs";
 import { cia_ub_userConsent } from "../CryptographicInformationFramework/cia-ub-userConsent.va.mjs";
-// export { AccessControlRule, _decode_AccessControlRule, _encode_AccessControlRule } from "../CryptographicInformationFramework/AccessControlRule.ta.mjs";
 
 
 /**

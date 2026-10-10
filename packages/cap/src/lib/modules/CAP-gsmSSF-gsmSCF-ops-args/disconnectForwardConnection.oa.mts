@@ -11,17 +11,11 @@ import {
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { systemFailure } from "../CAP-errortypes/systemFailure.oa.mjs";
-// export { systemFailure } from "../CAP-errortypes/systemFailure.oa.mjs";
 import { taskRefused } from "../CAP-errortypes/taskRefused.oa.mjs";
-// export { taskRefused } from "../CAP-errortypes/taskRefused.oa.mjs";
 import { unexpectedComponentSequence } from "../CAP-errortypes/unexpectedComponentSequence.oa.mjs";
-// export { unexpectedComponentSequence } from "../CAP-errortypes/unexpectedComponentSequence.oa.mjs";
 import { opcode_disconnectForwardConnection } from "../CAP-operationcodes/opcode-disconnectForwardConnection.va.mjs";
-// export { opcode_disconnectForwardConnection } from "../CAP-operationcodes/opcode-disconnectForwardConnection.va.mjs";
 
 
 /**

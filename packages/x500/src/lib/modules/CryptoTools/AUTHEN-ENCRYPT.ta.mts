@@ -68,14 +68,12 @@ export class AUTHEN_ENCRYPT<ToBeAuth, ToBeEnciphered> {
      * @returns {AUTHEN_ENCRYPT}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof AUTHEN_ENCRYPT<any, any>]: AUTHEN_ENCRYPT<
                     any,
                     any
                 >[_K];
             }
-        >
     ): AUTHEN_ENCRYPT<any, any> {
         return new AUTHEN_ENCRYPT(
             _o.aad,

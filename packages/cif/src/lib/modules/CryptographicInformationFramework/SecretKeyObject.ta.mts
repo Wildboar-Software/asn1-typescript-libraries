@@ -11,11 +11,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CIO, _get_decoder_for_CIO, _get_encoder_for_CIO } from "../CryptographicInformationFramework/CIO.ta.mjs";
-// export { CIO, _get_decoder_for_CIO, _get_encoder_for_CIO } from "../CryptographicInformationFramework/CIO.ta.mjs";
 import { CommonKeyAttributes, _decode_CommonKeyAttributes, _encode_CommonKeyAttributes } from "../CryptographicInformationFramework/CommonKeyAttributes.ta.mjs";
-// export { CommonKeyAttributes, _decode_CommonKeyAttributes, _encode_CommonKeyAttributes } from "../CryptographicInformationFramework/CommonKeyAttributes.ta.mjs";
 import { CommonSecretKeyAttributes, _decode_CommonSecretKeyAttributes, _encode_CommonSecretKeyAttributes } from "../CryptographicInformationFramework/CommonSecretKeyAttributes.ta.mjs";
-// export { CommonSecretKeyAttributes, _decode_CommonSecretKeyAttributes, _encode_CommonSecretKeyAttributes } from "../CryptographicInformationFramework/CommonSecretKeyAttributes.ta.mjs";
 
 
 /**

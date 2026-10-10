@@ -1,80 +1,20 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { BasicServiceList, _decode_BasicServiceList, _encode_BasicServiceList } from "../MAP-MS-DataTypes/BasicServiceList.ta.mjs";
-import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
-import { ZoneCode, _decode_ZoneCode, _encode_ZoneCode } from "../MAP-MS-DataTypes/ZoneCode.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
+import { BasicServiceList, _decode_BasicServiceList, _encode_BasicServiceList } from "../MAP-MS-DataTypes/BasicServiceList.ta.mjs";
+import { EPS_SubscriptionDataWithdraw, _decode_EPS_SubscriptionDataWithdraw, _encode_EPS_SubscriptionDataWithdraw } from "../MAP-MS-DataTypes/EPS-SubscriptionDataWithdraw.ta.mjs";
 import { GPRSSubscriptionDataWithdraw, _decode_GPRSSubscriptionDataWithdraw, _encode_GPRSSubscriptionDataWithdraw } from "../MAP-MS-DataTypes/GPRSSubscriptionDataWithdraw.ta.mjs";
 import { LSAInformationWithdraw, _decode_LSAInformationWithdraw, _encode_LSAInformationWithdraw } from "../MAP-MS-DataTypes/LSAInformationWithdraw.ta.mjs";
-import { SpecificCSI_Withdraw, SpecificCSI_Withdraw_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_ss_csi /* IMPORTED_LONG_NAMED_BIT */, ss_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_tif_csi /* IMPORTED_LONG_NAMED_BIT */, tif_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_mo_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mo_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_m_csi /* IMPORTED_LONG_NAMED_BIT */, m_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_gprs_csi /* IMPORTED_LONG_NAMED_BIT */, gprs_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_o_IM_CSI /* IMPORTED_LONG_NAMED_BIT */, o_IM_CSI /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_d_IM_CSI /* IMPORTED_LONG_NAMED_BIT */, d_IM_CSI /* IMPORTED_SHORT_NAMED_BIT */, SpecificCSI_Withdraw_vt_IM_CSI /* IMPORTED_LONG_NAMED_BIT */, vt_IM_CSI /* IMPORTED_SHORT_NAMED_BIT */, _decode_SpecificCSI_Withdraw, _encode_SpecificCSI_Withdraw } from "../MAP-MS-DataTypes/SpecificCSI-Withdraw.ta.mjs";
-import { EPS_SubscriptionDataWithdraw, _decode_EPS_SubscriptionDataWithdraw, _encode_EPS_SubscriptionDataWithdraw } from "../MAP-MS-DataTypes/EPS-SubscriptionDataWithdraw.ta.mjs";
+import { SpecificCSI_Withdraw, _decode_SpecificCSI_Withdraw, _encode_SpecificCSI_Withdraw } from "../MAP-MS-DataTypes/SpecificCSI-Withdraw.ta.mjs";
+import { ZoneCode, _decode_ZoneCode, _encode_ZoneCode } from "../MAP-MS-DataTypes/ZoneCode.ta.mjs";
+import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
 
 
 /**

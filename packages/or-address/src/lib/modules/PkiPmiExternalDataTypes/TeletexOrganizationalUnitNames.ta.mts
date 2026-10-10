@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TeletexOrganizationalUnitName,
+    type TeletexOrganizationalUnitName,
     _decode_TeletexOrganizationalUnitName,
     _encode_TeletexOrganizationalUnitName,
 } from "../PkiPmiExternalDataTypes/TeletexOrganizationalUnitName.ta.mjs";

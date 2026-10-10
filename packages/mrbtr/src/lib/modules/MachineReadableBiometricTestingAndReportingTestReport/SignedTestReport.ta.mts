@@ -12,16 +12,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MRTDBTRVersion, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_MRTDBTRVersion, _encode_MRTDBTRVersion } from "../MachineReadableBiometricTestingAndReportingTestReport/MRTDBTRVersion.ta.mjs";
-// export { MRTDBTRVersion, MRTDBTRVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_MRTDBTRVersion, _encode_MRTDBTRVersion } from "../MachineReadableBiometricTestingAndReportingTestReport/MRTDBTRVersion.ta.mjs";
 import { EncapsulatedContentInfoSignedTR, _decode_EncapsulatedContentInfoSignedTR, _encode_EncapsulatedContentInfoSignedTR } from "../MachineReadableBiometricTestingAndReportingTestReport/EncapsulatedContentInfoSignedTR.ta.mjs";
-// export { EncapsulatedContentInfoSignedTR, _decode_EncapsulatedContentInfoSignedTR, _encode_EncapsulatedContentInfoSignedTR } from "../MachineReadableBiometricTestingAndReportingTestReport/EncapsulatedContentInfoSignedTR.ta.mjs";
 import { DigestAlgorithmIdentifiers, _decode_DigestAlgorithmIdentifiers, _encode_DigestAlgorithmIdentifiers } from "../CryptographicMessageSyntax-2009/DigestAlgorithmIdentifiers.ta.mjs";
 import { CertificateSet, _decode_CertificateSet, _encode_CertificateSet } from "../CryptographicMessageSyntax-2009/CertificateSet.ta.mjs";
-// export { CertificateSet, _decode_CertificateSet, _encode_CertificateSet } from "../CryptographicMessageSyntax-2009/CertificateSet.ta.mjs";
 import { RevocationInfoChoices, _decode_RevocationInfoChoices, _encode_RevocationInfoChoices } from "../CryptographicMessageSyntax-2009/RevocationInfoChoices.ta.mjs";
-// export { RevocationInfoChoices, _decode_RevocationInfoChoices, _encode_RevocationInfoChoices } from "../CryptographicMessageSyntax-2009/RevocationInfoChoices.ta.mjs";
 import { SignerInfos, _decode_SignerInfos, _encode_SignerInfos } from "../CryptographicMessageSyntax-2009/SignerInfos.ta.mjs";
-// export { SignerInfos, _decode_SignerInfos, _encode_SignerInfos } from "../CryptographicMessageSyntax-2009/SignerInfos.ta.mjs";
 
 
 /**

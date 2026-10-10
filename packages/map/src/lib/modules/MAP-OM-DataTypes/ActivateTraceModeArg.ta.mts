@@ -1,83 +1,22 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
-import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataTypes/TraceType.ta.mjs";
 import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
-import { TraceDepthList, _decode_TraceDepthList, _encode_TraceDepthList } from "../MAP-OM-DataTypes/TraceDepthList.ta.mjs";
-import { TraceNE_TypeList, TraceNE_TypeList_msc_s /* IMPORTED_LONG_NAMED_BIT */, msc_s /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_mgw /* IMPORTED_LONG_NAMED_BIT */, mgw /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_sgsn /* IMPORTED_LONG_NAMED_BIT */, sgsn /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_ggsn /* IMPORTED_LONG_NAMED_BIT */, ggsn /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_rnc /* IMPORTED_LONG_NAMED_BIT */, rnc /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_bm_sc /* IMPORTED_LONG_NAMED_BIT */, bm_sc /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_mme /* IMPORTED_LONG_NAMED_BIT */, mme /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_sgw /* IMPORTED_LONG_NAMED_BIT */, sgw /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_pgw /* IMPORTED_LONG_NAMED_BIT */, pgw /* IMPORTED_SHORT_NAMED_BIT */, TraceNE_TypeList_eNB /* IMPORTED_LONG_NAMED_BIT */, eNB /* IMPORTED_SHORT_NAMED_BIT */, _decode_TraceNE_TypeList, _encode_TraceNE_TypeList } from "../MAP-OM-DataTypes/TraceNE-TypeList.ta.mjs";
-import { TraceInterfaceList, _decode_TraceInterfaceList, _encode_TraceInterfaceList } from "../MAP-OM-DataTypes/TraceInterfaceList.ta.mjs";
-import { TraceEventList, _decode_TraceEventList, _encode_TraceEventList } from "../MAP-OM-DataTypes/TraceEventList.ta.mjs";
 import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
+import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { MDT_Configuration, _decode_MDT_Configuration, _encode_MDT_Configuration } from "../MAP-OM-DataTypes/MDT-Configuration.ta.mjs";
+import { TraceDepthList, _decode_TraceDepthList, _encode_TraceDepthList } from "../MAP-OM-DataTypes/TraceDepthList.ta.mjs";
+import { TraceEventList, _decode_TraceEventList, _encode_TraceEventList } from "../MAP-OM-DataTypes/TraceEventList.ta.mjs";
+import { TraceInterfaceList, _decode_TraceInterfaceList, _encode_TraceInterfaceList } from "../MAP-OM-DataTypes/TraceInterfaceList.ta.mjs";
+import { TraceNE_TypeList, _decode_TraceNE_TypeList, _encode_TraceNE_TypeList } from "../MAP-OM-DataTypes/TraceNE-TypeList.ta.mjs";
+import { TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
+import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
+import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataTypes/TraceType.ta.mjs";
 
 
 /**

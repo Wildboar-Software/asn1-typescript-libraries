@@ -13,9 +13,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReservationLevel, _enum_for_ReservationLevel, _decode_ReservationLevel, _encode_ReservationLevel } from "../DFRAbstractService/ReservationLevel.ta.mjs";
-// export { ReservationLevel, _enum_for_ReservationLevel, ReservationLevel_unreserved /* IMPORTED_LONG_ENUMERATION_ITEM */, unreserved /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReservationLevel_exclusive_write /* IMPORTED_LONG_ENUMERATION_ITEM */, exclusive_write /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReservationLevel_exclusive_access /* IMPORTED_LONG_ENUMERATION_ITEM */, exclusive_access /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReservationLevel_read_only1 /* IMPORTED_LONG_ENUMERATION_ITEM */, read_only1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReservationLevel_read_only2 /* IMPORTED_LONG_ENUMERATION_ITEM */, read_only2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReservationLevel, _encode_ReservationLevel } from "../DFRAbstractService/ReservationLevel.ta.mjs";
 import { ReservationStatus, _enum_for_ReservationStatus, ReservationStatus_uncommitted /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ReservationStatus, _encode_ReservationStatus } from "../DFRAbstractService/ReservationStatus.ta.mjs";
-// export { ReservationStatus, _enum_for_ReservationStatus, ReservationStatus_uncommitted /* IMPORTED_LONG_ENUMERATION_ITEM */, uncommitted /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReservationStatus_committed /* IMPORTED_LONG_ENUMERATION_ITEM */, committed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReservationStatus, _encode_ReservationStatus } from "../DFRAbstractService/ReservationStatus.ta.mjs";
 
 
 /**
