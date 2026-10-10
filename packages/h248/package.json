@@ -30,5 +30,10 @@
     "main": "./src/index.mjs",
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
+    },
+    "exports": {
+        ".": "./src/index.mts",
+        "./MEDIA-GATEWAY-CONTROL": "./src/lib/modules/MEDIA-GATEWAY-CONTROL/index.mts",
+        "./H238V1-SUPPORT": "./src/lib/modules/H238V1-SUPPORT/index.mts"
     }
 }
