@@ -46,6 +46,7 @@ jobs:
           - "iso-9798-3-sasl"
           - "kerberos5"
           - "ldap"
+          - "lix2"
           # - "m3100"
           - "map"
           - "mms"
