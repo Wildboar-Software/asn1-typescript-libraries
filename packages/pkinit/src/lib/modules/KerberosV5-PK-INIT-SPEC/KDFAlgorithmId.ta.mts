@@ -136,7 +136,7 @@ let _cached_encoder_for_KDFAlgorithmId: $.ASN1Encoder<KDFAlgorithmId> | null = n
  */
 export
 function _encode_KDFAlgorithmId (value: KDFAlgorithmId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KDFAlgorithmId) { _cached_encoder_for_KDFAlgorithmId = function (value: KDFAlgorithmId, elGetter: $.ASN1Encoder<KDFAlgorithmId>): _Element {
+    if (!_cached_encoder_for_KDFAlgorithmId) { _cached_encoder_for_KDFAlgorithmId = function (value: KDFAlgorithmId): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeObjectIdentifier, $.BER)(value.kdf_id, $.BER)

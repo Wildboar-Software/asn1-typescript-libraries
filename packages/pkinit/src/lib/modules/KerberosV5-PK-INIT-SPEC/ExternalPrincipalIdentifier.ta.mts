@@ -6,10 +6,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Name, _decode_Name, _encode_Name } from "../PKIX1Explicit88/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../PKIX1Explicit88/Name.ta.mjs";
-import { IssuerAndSerialNumber, _decode_IssuerAndSerialNumber, _encode_IssuerAndSerialNumber } from "../CryptographicMessageSyntax/IssuerAndSerialNumber.ta.mjs";
-// export { IssuerAndSerialNumber, _decode_IssuerAndSerialNumber, _encode_IssuerAndSerialNumber } from "../CryptographicMessageSyntax/IssuerAndSerialNumber.ta.mjs";
+import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
+import { IssuerAndSerialNumber, _decode_IssuerAndSerialNumber, _encode_IssuerAndSerialNumber } from "@wildboar/cms";
 
 
 /**
@@ -186,7 +184,7 @@ let _cached_encoder_for_ExternalPrincipalIdentifier: $.ASN1Encoder<ExternalPrinc
  */
 export
 function _encode_ExternalPrincipalIdentifier (value: ExternalPrincipalIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExternalPrincipalIdentifier) { _cached_encoder_for_ExternalPrincipalIdentifier = function (value: ExternalPrincipalIdentifier, elGetter: $.ASN1Encoder<ExternalPrincipalIdentifier>): _Element {
+    if (!_cached_encoder_for_ExternalPrincipalIdentifier) { _cached_encoder_for_ExternalPrincipalIdentifier = function (value: ExternalPrincipalIdentifier): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_Name, $.BER)(value.subjectName, $.BER),

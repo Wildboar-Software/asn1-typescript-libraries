@@ -4,7 +4,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_pkinit_kdf } from "../KerberosV5-PK-INIT-SPEC/id-pkinit-kdf.va.mjs";
-// export { id_pkinit_kdf } from "../KerberosV5-PK-INIT-SPEC/id-pkinit-kdf.va.mjs";
 
 
 /**

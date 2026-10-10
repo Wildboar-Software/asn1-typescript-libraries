@@ -5,10 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Realm, _decode_Realm, _encode_Realm } from "../KerberosV5Spec2/Realm.ta.mjs";
-// export { Realm, _decode_Realm, _encode_Realm } from "../KerberosV5Spec2/Realm.ta.mjs";
-import { PrincipalName, _decode_PrincipalName, _encode_PrincipalName } from "../KerberosV5Spec2/PrincipalName.ta.mjs";
-// export { PrincipalName, _decode_PrincipalName, _encode_PrincipalName } from "../KerberosV5Spec2/PrincipalName.ta.mjs";
+import { Realm, _decode_Realm, _encode_Realm } from "@wildboar/kerberos5";
+import { PrincipalName, _decode_PrincipalName, _encode_PrincipalName } from "@wildboar/kerberos5";
 
 
 /**
@@ -143,7 +141,7 @@ let _cached_encoder_for_KRB5PrincipalName: $.ASN1Encoder<KRB5PrincipalName> | nu
  */
 export
 function _encode_KRB5PrincipalName (value: KRB5PrincipalName, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KRB5PrincipalName) { _cached_encoder_for_KRB5PrincipalName = function (value: KRB5PrincipalName, elGetter: $.ASN1Encoder<KRB5PrincipalName>): _Element {
+    if (!_cached_encoder_for_KRB5PrincipalName) { _cached_encoder_for_KRB5PrincipalName = function (value: KRB5PrincipalName): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_Realm, $.BER)(value.realm, $.BER),

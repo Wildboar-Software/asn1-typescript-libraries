@@ -6,15 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PKAuthenticator, _decode_PKAuthenticator, _encode_PKAuthenticator } from "../KerberosV5-PK-INIT-SPEC/PKAuthenticator.ta.mjs";
-// export { PKAuthenticator, _decode_PKAuthenticator, _encode_PKAuthenticator } from "../KerberosV5-PK-INIT-SPEC/PKAuthenticator.ta.mjs";
-import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../PKIX1Explicit88/SubjectPublicKeyInfo.ta.mjs";
-// export { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../PKIX1Explicit88/SubjectPublicKeyInfo.ta.mjs";
-import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../PKIX1Explicit88/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../PKIX1Explicit88/AlgorithmIdentifier.ta.mjs";
+import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "@wildboar/pki-stub";
+import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/pki-stub";
 import { DHNonce, _decode_DHNonce, _encode_DHNonce } from "../KerberosV5-PK-INIT-SPEC/DHNonce.ta.mjs";
-// export { DHNonce, _decode_DHNonce, _encode_DHNonce } from "../KerberosV5-PK-INIT-SPEC/DHNonce.ta.mjs";
 import { KDFAlgorithmId, _decode_KDFAlgorithmId, _encode_KDFAlgorithmId } from "../KerberosV5-PK-INIT-SPEC/KDFAlgorithmId.ta.mjs";
-// export { KDFAlgorithmId, _decode_KDFAlgorithmId, _encode_KDFAlgorithmId } from "../KerberosV5-PK-INIT-SPEC/KDFAlgorithmId.ta.mjs";
 
 
 /**
@@ -212,7 +207,7 @@ let _cached_encoder_for_AuthPack: $.ASN1Encoder<AuthPack> | null = null;
  */
 export
 function _encode_AuthPack (value: AuthPack, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthPack) { _cached_encoder_for_AuthPack = function (value: AuthPack, elGetter: $.ASN1Encoder<AuthPack>): _Element {
+    if (!_cached_encoder_for_AuthPack) { _cached_encoder_for_AuthPack = function (value: AuthPack): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_PKAuthenticator, $.BER)(value.pkAuthenticator, $.BER),

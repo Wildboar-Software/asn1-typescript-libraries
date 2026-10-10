@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1OverflowError,
     BIT_STRING,
     INTEGER,
     OPTIONAL,
@@ -7,8 +8,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "../KerberosV5Spec2/KerberosTime.ta.mjs";
-// export { KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "../KerberosV5Spec2/KerberosTime.ta.mjs";
+import { KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "@wildboar/kerberos5";
 
 
 /**
@@ -67,7 +67,12 @@ class KDCDHKeyInfo {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        const nonceNumber = typeof this.nonce === "bigint" ? Number(this.nonce) : this.nonce;
+        if (nonceNumber < 0 || nonceNumber > 4294967295) {
+            throw new ASN1OverflowError("KDCDHKeyInfo.nonce violates INTEGER range");
+        }
+    }
 
     /**
      * @summary Restructures an object into a KDCDHKeyInfo
@@ -176,7 +181,7 @@ let _cached_encoder_for_KDCDHKeyInfo: $.ASN1Encoder<KDCDHKeyInfo> | null = null;
  */
 export
 function _encode_KDCDHKeyInfo (value: KDCDHKeyInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KDCDHKeyInfo) { _cached_encoder_for_KDCDHKeyInfo = function (value: KDCDHKeyInfo, elGetter: $.ASN1Encoder<KDCDHKeyInfo>): _Element {
+    if (!_cached_encoder_for_KDCDHKeyInfo) { _cached_encoder_for_KDCDHKeyInfo = function (value: KDCDHKeyInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeBitString, $.BER)(value.subjectPublicKey, $.BER),

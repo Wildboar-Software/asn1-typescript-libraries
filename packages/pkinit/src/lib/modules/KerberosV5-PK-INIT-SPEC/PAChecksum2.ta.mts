@@ -6,8 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../PKIX1Explicit88/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../PKIX1Explicit88/AlgorithmIdentifier.ta.mjs";
+import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/pki-stub";
 
 
 /**
@@ -145,7 +144,7 @@ let _cached_encoder_for_PAChecksum2: $.ASN1Encoder<PAChecksum2> | null = null;
  */
 export
 function _encode_PAChecksum2 (value: PAChecksum2, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PAChecksum2) { _cached_encoder_for_PAChecksum2 = function (value: PAChecksum2, elGetter: $.ASN1Encoder<PAChecksum2>): _Element {
+    if (!_cached_encoder_for_PAChecksum2) { _cached_encoder_for_PAChecksum2 = function (value: PAChecksum2): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.checksum, $.BER),

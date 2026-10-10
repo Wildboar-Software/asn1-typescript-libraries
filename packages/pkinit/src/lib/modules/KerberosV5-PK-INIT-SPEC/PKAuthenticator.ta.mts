@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1OverflowError,
     INTEGER,
     OCTET_STRING,
     OPTIONAL,
@@ -7,10 +8,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "../KerberosV5Spec2/KerberosTime.ta.mjs";
-// export { KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "../KerberosV5Spec2/KerberosTime.ta.mjs";
+import { KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "@wildboar/kerberos5";
 import { PAChecksum2, _decode_PAChecksum2, _encode_PAChecksum2 } from "../KerberosV5-PK-INIT-SPEC/PAChecksum2.ta.mjs";
-// export { PAChecksum2, _decode_PAChecksum2, _encode_PAChecksum2 } from "../KerberosV5-PK-INIT-SPEC/PAChecksum2.ta.mjs";
 
 
 /**
@@ -92,7 +91,16 @@ class PKAuthenticator {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        const cusecNumber = typeof this.cusec === "bigint" ? Number(this.cusec) : this.cusec;
+        if (cusecNumber < 0 || cusecNumber > 999999) {
+            throw new ASN1OverflowError("PKAuthenticator.cusec violates INTEGER range");
+        }
+        const nonceNumber = typeof this.nonce === "bigint" ? Number(this.nonce) : this.nonce;
+        if (nonceNumber < 0 || nonceNumber > 4294967295) {
+            throw new ASN1OverflowError("PKAuthenticator.nonce violates INTEGER range");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PKAuthenticator
@@ -213,7 +221,7 @@ let _cached_encoder_for_PKAuthenticator: $.ASN1Encoder<PKAuthenticator> | null =
  */
 export
 function _encode_PKAuthenticator (value: PKAuthenticator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PKAuthenticator) { _cached_encoder_for_PKAuthenticator = function (value: PKAuthenticator, elGetter: $.ASN1Encoder<PKAuthenticator>): _Element {
+    if (!_cached_encoder_for_PKAuthenticator) { _cached_encoder_for_PKAuthenticator = function (value: PKAuthenticator): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.cusec, $.BER),

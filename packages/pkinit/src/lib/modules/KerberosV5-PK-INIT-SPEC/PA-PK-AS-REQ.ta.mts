@@ -6,10 +6,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ContentInfo, _decode_ContentInfo, _encode_ContentInfo } from "../CryptographicMessageSyntax/ContentInfo.ta.mjs";
-// export { ContentInfo, _decode_ContentInfo, _encode_ContentInfo } from "../CryptographicMessageSyntax/ContentInfo.ta.mjs";
+import { ContentInfo, _decode_ContentInfo, _encode_ContentInfo } from "@wildboar/cms";
 import { ExternalPrincipalIdentifier, _decode_ExternalPrincipalIdentifier, _encode_ExternalPrincipalIdentifier } from "../KerberosV5-PK-INIT-SPEC/ExternalPrincipalIdentifier.ta.mjs";
-// export { ExternalPrincipalIdentifier, _decode_ExternalPrincipalIdentifier, _encode_ExternalPrincipalIdentifier } from "../KerberosV5-PK-INIT-SPEC/ExternalPrincipalIdentifier.ta.mjs";
 
 
 /**
@@ -189,7 +187,7 @@ let _cached_encoder_for_PA_PK_AS_REQ: $.ASN1Encoder<PA_PK_AS_REQ> | null = null;
  */
 export
 function _encode_PA_PK_AS_REQ (value: PA_PK_AS_REQ, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PA_PK_AS_REQ) { _cached_encoder_for_PA_PK_AS_REQ = function (value: PA_PK_AS_REQ, elGetter: $.ASN1Encoder<PA_PK_AS_REQ>): _Element {
+    if (!_cached_encoder_for_PA_PK_AS_REQ) { _cached_encoder_for_PA_PK_AS_REQ = function (value: PA_PK_AS_REQ): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_ContentInfo, $.BER)(value.signedAuthPack, $.BER),
