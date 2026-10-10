@@ -23,6 +23,7 @@ jobs:
           - "casscam"
           - "cbeff"
           - "ccr"
+          - "cdt"
           - "cif"
           - "cinf"
           - "clacse"
