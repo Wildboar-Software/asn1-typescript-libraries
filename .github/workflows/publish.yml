@@ -21,6 +21,7 @@ jobs:
           - "casscam"
           - "cbeff"
           - "ccr"
+          - "charging"
           - "cif"
           - "cinf"
           - "clacse"
