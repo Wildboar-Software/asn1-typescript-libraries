@@ -9,7 +9,18 @@ import { NegoData_Item, _decode_NegoData_Item, _encode_NegoData_Item } from "../
 /**
  * @summary NegoData
  * @description
- * 
+ *
+ * SPNEGO tokens exchanged while CredSSP authenticates the
+ * client and server over the TLS channel. Each element is one
+ * {@link NegoData_Item}. The peers send a fresh {@link TSRequest}
+ * for each step of the handshake. The confidentiality key that
+ * results is a Kerberos subsession key or an NTLM session key,
+ * and later protects `pubKeyAuth` and `authInfo`.
+ *
+ * [MS-CSSP, section 2.2.1.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/9664994d-0784-4659-b85b-83b8d54c2336)
+ * and
+ * [section 3.1.5](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/385a7489-d46b-464c-b224-f7340e308a5c).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

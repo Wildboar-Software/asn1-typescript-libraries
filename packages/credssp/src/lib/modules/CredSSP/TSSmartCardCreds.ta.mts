@@ -12,7 +12,23 @@ import { TSCspDataDetail, _decode_TSCspDataDetail, _encode_TSCspDataDetail } fro
 /**
  * @summary TSSmartCardCreds
  * @description
- * 
+ *
+ * Smart-card credentials delegated to the server. Carried in
+ * {@link TSCredentials} when `credType` is 2. The PIN is
+ * plaintext at this layer; confidentiality is the SPNEGO wrap
+ * of the enclosing `TSRequest.authInfo`.
+ *
+ * Where a field is text, Windows encodes a
+ * [UNICODE_STRING](https://learn.microsoft.com/en-us/windows/win32/api/ntdef/ns-ntdef-unicode_string)
+ * as UTF-16LE with no BOM
+ * ([glossary](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/97e4a826-1112-4ab4-8662-cfa58418b4c1)).
+ * The [section 4](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/94846575-5a58-44de-b07b-48b90af328fb)
+ * example (a PIN and the CSP names) has no terminating null and
+ * no `Length` / `MaximumLength` prefix. The specification does
+ * not otherwise define a character encoding.
+ *
+ * [MS-CSSP, section 2.2.1.2.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/4251d165-cf01-4513-a5d8-39ee4a98b7a4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,25 +46,36 @@ export
 class TSSmartCardCreds {
     constructor (
         /**
-         * @summary `pin`.
+         * The user's smart-card PIN, in the clear at this layer.
+         *
+         * [MS-CSSP, section 2.2.1.2.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/4251d165-cf01-4513-a5d8-39ee4a98b7a4).
          * @public
          * @readonly
          */
         readonly pin: OCTET_STRING,
         /**
-         * @summary `cspData`.
+         * Cryptographic service provider information used for the
+         * smart-card logon. See {@link TSCspDataDetail}.
+         *
+         * [MS-CSSP, section 2.2.1.2.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/4251d165-cf01-4513-a5d8-39ee4a98b7a4).
          * @public
          * @readonly
          */
         readonly cspData: TSCspDataDetail,
         /**
-         * @summary `userHint`.
+         * Hint for the user's account. Optional.
+         *
+         * [MS-CSSP, section 2.2.1.2.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/4251d165-cf01-4513-a5d8-39ee4a98b7a4).
          * @public
          * @readonly
          */
         readonly userHint: OPTIONAL<OCTET_STRING>,
         /**
-         * @summary `domainHint`.
+         * Domain the user's account belongs to. Optional. This may
+         * be the name the user typed when first prompted for the
+         * PIN.
+         *
+         * [MS-CSSP, section 2.2.1.2.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/4251d165-cf01-4513-a5d8-39ee4a98b7a4).
          * @public
          * @readonly
          */

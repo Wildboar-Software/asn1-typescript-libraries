@@ -13,7 +13,22 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TSCspDataDetail
  * @description
- * 
+ *
+ * Cryptographic service provider (CSP) information used during
+ * smart-card logon. `keySpec` values are not assigned by this
+ * specification. The [section 4](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/94846575-5a58-44de-b07b-48b90af328fb)
+ * example uses `1` and omits `cardName`.
+ *
+ * The name fields are text. Windows encodes a
+ * [UNICODE_STRING](https://learn.microsoft.com/en-us/windows/win32/api/ntdef/ns-ntdef-unicode_string)
+ * as UTF-16LE with no BOM
+ * ([glossary](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/97e4a826-1112-4ab4-8662-cfa58418b4c1)).
+ * The section 4 example has no terminating null and no `Length`
+ * / `MaximumLength` prefix. The specification does not otherwise
+ * define a character encoding. `keySpec` is not text.
+ *
+ * [MS-CSSP, section 2.2.1.2.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/34ee27b3-5791-43bb-9201-076054b58123).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,31 +47,42 @@ export
 class TSCspDataDetail {
     constructor (
         /**
-         * @summary `keySpec`.
+         * Specification of the user's smart card. The protocol
+         * does not define the integer values.
+         *
+         * [MS-CSSP, section 2.2.1.2.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/34ee27b3-5791-43bb-9201-076054b58123).
          * @public
          * @readonly
          */
         readonly keySpec: INTEGER,
         /**
-         * @summary `cardName`.
+         * Name of the smart card. Optional.
+         *
+         * [MS-CSSP, section 2.2.1.2.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/34ee27b3-5791-43bb-9201-076054b58123).
          * @public
          * @readonly
          */
         readonly cardName: OPTIONAL<OCTET_STRING>,
         /**
-         * @summary `readerName`.
+         * Name of the smart-card reader. Optional.
+         *
+         * [MS-CSSP, section 2.2.1.2.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/34ee27b3-5791-43bb-9201-076054b58123).
          * @public
          * @readonly
          */
         readonly readerName: OPTIONAL<OCTET_STRING>,
         /**
-         * @summary `containerName`.
+         * Name of the certificate container. Optional.
+         *
+         * [MS-CSSP, section 2.2.1.2.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/34ee27b3-5791-43bb-9201-076054b58123).
          * @public
          * @readonly
          */
         readonly containerName: OPTIONAL<OCTET_STRING>,
         /**
-         * @summary `cspName`.
+         * Name of the cryptographic service provider. Optional.
+         *
+         * [MS-CSSP, section 2.2.1.2.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/34ee27b3-5791-43bb-9201-076054b58123).
          * @public
          * @readonly
          */

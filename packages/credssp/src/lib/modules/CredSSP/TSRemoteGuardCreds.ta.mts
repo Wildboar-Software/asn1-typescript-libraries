@@ -11,7 +11,24 @@ import { TSRemoteGuardPackageCred, _decode_TSRemoteGuardPackageCred, _encode_TSR
 /**
  * @summary TSRemoteGuardCreds
  * @description
- * 
+ *
+ * Remote Credential Guard credentials. Carried in
+ * {@link TSCredentials} when `credType` is 6. `logonCred` is
+ * passed to the Negotiate package, which passes it to the
+ * default authentication package. `supplementalCreds` are for
+ * other security packages. Each buffer's layout depends on the
+ * package that produced it; Windows layouts are on
+ * {@link TSRemoteGuardPackageCred.credBuffer}.
+ *
+ * After these credentials are delegated, the TLS channel stays
+ * up for redirected authentication
+ * ([MS-RDPEAR](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpear/a32e17ec-5869-4fad-bdae-d35f342fcb6f)).
+ *
+ * Windows supports this structure only on Windows 10 version
+ * 1607 and later clients, and on Windows Server 2016 and later.
+ *
+ * [MS-CSSP, section 2.2.1.2.3](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/7ef8229c-44ea-4c1b-867f-00369b882b38).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,13 +44,22 @@ export
 class TSRemoteGuardCreds {
     constructor (
         /**
-         * @summary `logonCred`.
+         * Logon credential for the user. On Windows the buffer is
+         * a `KERB_TICKET_LOGON`. See
+         * {@link TSRemoteGuardPackageCred.credBuffer}.
+         *
+         * [MS-CSSP, section 2.2.1.2.3](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/7ef8229c-44ea-4c1b-867f-00369b882b38).
          * @public
          * @readonly
          */
         readonly logonCred: TSRemoteGuardPackageCred,
         /**
-         * @summary `supplementalCreds`.
+         * Supplemental credentials for security packages other
+         * than the logon package. Optional. On Windows each buffer
+         * is an `NTLM_REMOTE_SUPPLEMENTAL_CREDENTIAL`. See
+         * {@link TSRemoteGuardPackageCred.credBuffer}.
+         *
+         * [MS-CSSP, section 2.2.1.2.3](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/7ef8229c-44ea-4c1b-867f-00369b882b38).
          * @public
          * @readonly
          */

@@ -13,7 +13,42 @@ import { NegoData, _decode_NegoData, _encode_NegoData } from "../CredSSP/NegoDat
 /**
  * @summary TSRequest
  * @description
- * 
+ *
+ * Every CredSSP message after the TLS handshake. TLS is only a
+ * pipe: the client is anonymous, no common CA is required, and
+ * session resumption is not used. All of the following is sent
+ * on that channel.
+ *
+ * The exchange then runs in order
+ * ([section 3.1.5](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/385a7489-d46b-464c-b224-f7340e308a5c)):
+ *
+ * 1. SPNEGO (or the Kerberos or NTLM messages it selected) in
+ *    `negoTokens`, repeated until a confidentiality key exists.
+ *    `authInfo` is absent. `pubKeyAuth` is absent except on the
+ *    client's last token, which must carry both.
+ * 2. The server's `pubKeyAuth` reply, binding that key to the
+ *    certificate used in the TLS handshake. `authInfo` and
+ *    `negoTokens` are absent. If the server does not support the
+ *    requested version, it should set `errorCode` to
+ *    `STATUS_NOT_SUPPORTED`.
+ * 3. The client's `authInfo`: delegated credentials encrypted
+ *    under the SPNEGO key. `pubKeyAuth` and `negoTokens` are
+ *    absent.
+ *
+ * If SPNEGO fails on the server and the client offered version 3
+ * or greater, the server should return `errorCode` and the
+ * client must then stop. Section 2.2.1 names versions 3, 4, and
+ * 6 for that failure report; section 3.1.5 says version 3 or
+ * greater.
+ *
+ * The client encrypts each `TSRequest` as one block, split only
+ * when TLS itself hits its maximum message length. A Windows
+ * server expects the decrypted input to start with a complete
+ * tag and length, and expects the whole message in that
+ * encryption. Otherwise it returns an error.
+ *
+ * [MS-CSSP, section 2.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/6aac4dea-08ef-47a6-8747-22ea7f6d8685).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,37 +68,131 @@ export
 class TSRequest {
     constructor (
         /**
-         * @summary `version`.
+         * CredSSP version this sender supports. Valid values are
+         * 2, 3, 4, 5, and 6. A higher value than the receiver
+         * understands means the peer is compatible with the
+         * version the receiver implements.
+         *
+         * Versions 2, 3, and 4 bind the TLS certificate by
+         * encrypting its public key. Versions 5 and 6 hash that
+         * key with `clientNonce`. Section 5.1 advises
+         * implementors to support version 5 or higher only.
+         *
+         * Windows XP SP3 through Windows Server 2012 implement
+         * only version 2. Version 5 is in Windows Server version
+         * 1803 and later, and in KB4088776. Group Policy can set
+         * the minimum version a Windows client accepts.
+         *
+         * [MS-CSSP, section 2.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/6aac4dea-08ef-47a6-8747-22ea7f6d8685)
+         * and
+         * [section 5.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/57c0f867-a053-4c11-b47f-dff91c647405).
          * @public
          * @readonly
          */
         readonly version: INTEGER,
         /**
-         * @summary `negoTokens`.
+         * SPNEGO tokens, or the Kerberos or NTLM messages SPNEGO
+         * negotiated. Present on every authentication round-trip.
+         * The client's last authentication message must include
+         * this field and `pubKeyAuth` together. Omitted from the
+         * server's public-key reply and from the credential
+         * message. See {@link NegoData}.
+         *
+         * [MS-CSSP, section 2.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/6aac4dea-08ef-47a6-8747-22ea7f6d8685).
          * @public
          * @readonly
          */
         readonly negoTokens: OPTIONAL<NegoData>,
         /**
-         * @summary `authInfo`.
+         * Delegated user credentials. The plaintext is a DER-encoded
+         * {@link TSCredentials} containing exactly one of
+         * {@link TSPasswordCreds}, {@link TSSmartCardCreds}, or
+         * {@link TSRemoteGuardCreds}. Those octets are encrypted
+         * under the SPNEGO confidentiality key. This field is the
+         * GSS message signature followed by that ciphertext.
+         *
+         * Sent only in the client's final message, after the
+         * public-key check succeeds. That message omits
+         * `negoTokens` and `pubKeyAuth`. If the plaintext is
+         * {@link TSRemoteGuardCreds}, the TLS channel stays up for
+         * redirected authentication
+         * ([MS-RDPEAR](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-rdpear/a32e17ec-5869-4fad-bdae-d35f342fcb6f)).
+         *
+         * [MS-CSSP, section 2.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/6aac4dea-08ef-47a6-8747-22ea7f6d8685)
+         * and
+         * [section 3.1.5](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/385a7489-d46b-464c-b224-f7340e308a5c).
          * @public
          * @readonly
          */
         readonly authInfo: OPTIONAL<OCTET_STRING>,
         /**
-         * @summary `pubKeyAuth`.
+         * Proof that the TLS server certificate belongs to the
+         * authenticated server, encrypted under the SPNEGO key.
+         * The client sends it with the last `negoTokens`. The
+         * server answers with this field alone. It is absent from
+         * the credential message.
+         *
+         * The public key is the ASN.1 `SubjectPublicKey` inside
+         * `SubjectPublicKeyInfo` of the server certificate
+         * ([RFC 3280, section 4.1](https://www.rfc-editor.org/rfc/rfc3280#section-4.1)).
+         *
+         * The client encrypts with `GSS_WrapEx` of the negotiated
+         * mechanism.
+         *
+         * Versions 2, 3, and 4: the client encrypts the public key.
+         * The field is the GSS message signature, then the
+         * ciphertext. The server checks the key, adds one to its
+         * first byte, and encrypts the result. The increment stops
+         * a replay of the client's message. The server's value
+         * need not be valid ASN.1.
+         *
+         * Versions 5 and 6: each side encrypts a SHA-256 hash of
+         * three values concatenated. The process defines the
+         * client hash as
+         * `SHA256(ClientServerHashMagic, clientNonce, SubjectPublicKey)`.
+         * The magic string is `CredSSP Client-To-Server Binding Hash`
+         * and the hash includes its terminating null. The server
+         * hash uses `CredSSP Server-To-Client Binding Hash`, also
+         * with its null, and the nonce from the request. The
+         * sentence above that definition lists the public key
+         * first.
+         *
+         * [MS-CSSP, section 2.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/6aac4dea-08ef-47a6-8747-22ea7f6d8685)
+         * and
+         * [section 3.1.5](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/385a7489-d46b-464c-b224-f7340e308a5c).
          * @public
          * @readonly
          */
         readonly pubKeyAuth: OPTIONAL<OCTET_STRING>,
         /**
-         * @summary `errorCode`.
+         * NTSTATUS
+         * ([MS-ERREF](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781)
+         * section 2.3) reporting why SPNEGO failed, so the client
+         * can show it. A 32-bit value encoded as an `INTEGER`.
+         *
+         * Section 2.2.1 says to send this when the negotiated
+         * version is 3, 4, or 6. Section 3.1.5 says to send it
+         * when the client offered version 3 or greater. On receipt
+         * the client must fail with that status and stop. The
+         * server should use `STATUS_NOT_SUPPORTED` here when it
+         * rejects the requested version.
+         *
+         * Windows XP SP3 through Windows Server 2012 do not
+         * implement this field.
+         *
+         * [MS-CSSP, section 2.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/6aac4dea-08ef-47a6-8747-22ea7f6d8685).
          * @public
          * @readonly
          */
         readonly errorCode: OPTIONAL<INTEGER>,
         /**
-         * @summary `clientNonce`.
+         * 32 cryptographically random bytes, mixed into the
+         * version 5 and version 6 public-key binding hash. The
+         * client sets it before computing `pubKeyAuth`. Unused in
+         * versions 2, 3, and 4. Section 3.1.5 calls this the nonce
+         * field.
+         *
+         * [MS-CSSP, section 2.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/6aac4dea-08ef-47a6-8747-22ea7f6d8685).
          * @public
          * @readonly
          */

@@ -13,7 +13,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TSCredentials
  * @description
- * 
+ *
+ * The user's delegated credentials and which form they take.
+ * This is the plaintext inside {@link TSRequest.authInfo}. It
+ * is not sent in the clear: `authInfo` is that encoding
+ * encrypted under the SPNEGO key. It must contain only one of
+ * {@link TSPasswordCreds}, {@link TSSmartCardCreds}, and
+ * {@link TSRemoteGuardCreds}.
+ *
+ * [MS-CSSP, section 2.2.1.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/94a1ab00-5500-42fd-8d3d-7a84e6c2cf03).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,13 +38,27 @@ export
 class TSCredentials {
     constructor (
         /**
-         * @summary `credType`.
+         * Which structure is DER-encoded in `credentials`.
+         *
+         * | Value | Contents |
+         * | --- | --- |
+         * | 1 | {@link TSPasswordCreds} |
+         * | 2 | {@link TSSmartCardCreds} |
+         * | 6 | {@link TSRemoteGuardCreds} |
+         *
+         * No other values are defined.
+         *
+         * [MS-CSSP, section 2.2.1.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/94a1ab00-5500-42fd-8d3d-7a84e6c2cf03).
          * @public
          * @readonly
          */
         readonly credType: INTEGER,
         /**
-         * @summary `credentials`.
+         * DER encoding of the structure selected by `credType`:
+         * password credentials, smart-card credentials, or Remote
+         * Credential Guard credentials.
+         *
+         * [MS-CSSP, section 2.2.1.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/94a1ab00-5500-42fd-8d3d-7a84e6c2cf03).
          * @public
          * @readonly
          */

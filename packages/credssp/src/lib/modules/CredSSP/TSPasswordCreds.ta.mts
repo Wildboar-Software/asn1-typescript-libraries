@@ -12,7 +12,23 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TSPasswordCreds
  * @description
- * 
+ *
+ * Cleartext password credentials delegated to the server.
+ * Carried in {@link TSCredentials} when `credType` is 1. The
+ * password is plaintext at this layer; confidentiality is the
+ * SPNEGO wrap of the enclosing `TSRequest.authInfo`.
+ *
+ * Where a field is text, Windows encodes a
+ * [UNICODE_STRING](https://learn.microsoft.com/en-us/windows/win32/api/ntdef/ns-ntdef-unicode_string)
+ * as UTF-16LE with no BOM
+ * ([glossary](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/97e4a826-1112-4ab4-8662-cfa58418b4c1)).
+ * The [section 4](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/94846575-5a58-44de-b07b-48b90af328fb)
+ * example has no terminating null and no `Length` /
+ * `MaximumLength` prefix. The specification does not otherwise
+ * define a character encoding.
+ *
+ * [MS-CSSP, section 2.2.1.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/17773cc4-21e9-4a75-a0dd-72706b174fe5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,19 +45,25 @@ export
 class TSPasswordCreds {
     constructor (
         /**
-         * @summary `domainName`.
+         * Name of the user's account domain.
+         *
+         * [MS-CSSP, section 2.2.1.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/17773cc4-21e9-4a75-a0dd-72706b174fe5).
          * @public
          * @readonly
          */
         readonly domainName: OCTET_STRING,
         /**
-         * @summary `userName`.
+         * The user's account name.
+         *
+         * [MS-CSSP, section 2.2.1.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/17773cc4-21e9-4a75-a0dd-72706b174fe5).
          * @public
          * @readonly
          */
         readonly userName: OCTET_STRING,
         /**
-         * @summary `password`.
+         * The user's account password, in the clear at this layer.
+         *
+         * [MS-CSSP, section 2.2.1.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/17773cc4-21e9-4a75-a0dd-72706b174fe5).
          * @public
          * @readonly
          */
