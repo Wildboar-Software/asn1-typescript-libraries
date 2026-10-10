@@ -16,7 +16,10 @@ import { _decode_ContentType_ShortForm, _encode_ContentType_ShortForm, ContentTy
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CompressedContentInfo-contentType ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CompressedContentInfo-contentType ::= CHOICE {
+ *     contentType-ShortForm  [0] IMPLICIT ContentType-ShortForm,
+ *     contentType-OID        [1] IMPLICIT OBJECT IDENTIFIER
+ * }
  * ```
  */
 export
