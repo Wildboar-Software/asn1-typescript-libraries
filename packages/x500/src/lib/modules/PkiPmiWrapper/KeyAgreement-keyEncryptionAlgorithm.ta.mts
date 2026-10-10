@@ -63,11 +63,9 @@ export class KeyAgreement_keyEncryptionAlgorithm {
      * @returns {KeyAgreement_keyEncryptionAlgorithm}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof KeyAgreement_keyEncryptionAlgorithm]: KeyAgreement_keyEncryptionAlgorithm[_K];
             }
-        >
     ): KeyAgreement_keyEncryptionAlgorithm {
         return new KeyAgreement_keyEncryptionAlgorithm(
             _o.algorithm,

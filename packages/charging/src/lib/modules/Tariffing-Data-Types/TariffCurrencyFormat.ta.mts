@@ -1,0 +1,225 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { CommunicationChargeCurrency, _decode_CommunicationChargeCurrency, _encode_CommunicationChargeCurrency } from "../Tariffing-Data-Types/CommunicationChargeCurrency.ta.mjs";
+import { TariffCurrencyFormat_tariffControlIndicators, _decode_TariffCurrencyFormat_tariffControlIndicators, _encode_TariffCurrencyFormat_tariffControlIndicators } from "../Tariffing-Data-Types/TariffCurrencyFormat-tariffControlIndicators.ta.mjs";
+import { CurrencyFactorScale, _decode_CurrencyFactorScale, _encode_CurrencyFactorScale } from "../Tariffing-Data-Types/CurrencyFactorScale.ta.mjs";
+import { maxCommunicationTariffNum } from "../Tariffing-Data-Types/maxCommunicationTariffNum.va.mjs";
+import { minCommunicationTariffNum } from "../Tariffing-Data-Types/minCommunicationTariffNum.va.mjs";
+
+
+/**
+ * @summary TariffCurrencyFormat
+ * @description
+ *
+ * One currency tariff: a communication sequence of one to four
+ * subtariffs, plus optional call-attempt and call-setup charges.
+ * The currency amount of a communication subtariff is per one fixed
+ * time unit agreed by the networks (for example one second). That
+ * unit is not transferred.
+ *
+ * Charging starts at the first subtariff. Each subtariff except the
+ * last has a limited duration; the last may be unlimited (`0`).
+ * When a duration expires, the next subtariff is applied. At the
+ * end of the sequence, `tariffControlIndicators` say whether it
+ * starts again. If the whole sequence is relevant, it is sent
+ * complete. After a call-setup charge has been applied, later
+ * call-attempt and call-setup charges are ignored (clause 6.3.2).
+ *
+ * [ES 201 296 V1.3.1, clauses 6.1.1, 6.3.1, and 9](https://www.etsi.org/deliver/etsi_es/201200_201299/201296/01.03.01_60/es_201296v010301p.pdf).
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * TariffCurrencyFormat ::= SEQUENCE {
+ *     communicationChargeSequenceCurrency     [0] SEQUENCE
+ *         SIZE(minCommunicationTariffNum..maxCommunicationTariffNum)
+ *         OF CommunicationChargeCurrency OPTIONAL ,
+ *     tariffControlIndicators [1] BIT STRING {
+ *     non-cyclicTariff (0) }
+ *     (SIZE(minTariffIndicatorsLen..maxTariffIndicatorsLen)) ,
+ *     callAttemptChargeCurrency    [2] CurrencyFactorScale OPTIONAL ,
+ *     callSetupChargeCurrency        [3] CurrencyFactorScale OPTIONAL }
+ * ```
+ * 
+ * @class
+ */
+export
+class TariffCurrencyFormat {
+    constructor (
+        /**
+         * Successive communication subtariffs, one to four. Applied
+         * from the start of the communication, in order. A product
+         * of zero is free. Omit when this tariff has no
+         * communication charge; if the sequence matters, send all
+         * of it.
+         * @public
+         * @readonly
+         */
+        readonly communicationChargeSequenceCurrency: OPTIONAL<CommunicationChargeCurrency[]>,
+        /**
+         * Whether the communication sequence is applied again after
+         * its last subtariff. See
+         * {@link TariffCurrencyFormat_tariffControlIndicators}.
+         * @public
+         * @readonly
+         */
+        readonly tariffControlIndicators: TariffCurrencyFormat_tariffControlIndicators,
+        /**
+         * Direct charge for an unsuccessful call only. Also sent in
+         * the first next tariff. Not made when the amount is zero
+         * or this field is absent, and not applied again on a later
+         * tariff change.
+         * @public
+         * @readonly
+         */
+        readonly callAttemptChargeCurrency: OPTIONAL<CurrencyFactorScale>,
+        /**
+         * Direct charge taken once at the start of charging. Sent
+         * in the first CRGT and in the first next tariff. Not made
+         * when the amount is zero or this field is absent.
+         * @public
+         * @readonly
+         */
+        readonly callSetupChargeCurrency: OPTIONAL<CurrencyFactorScale>
+    ) {
+        if (
+            communicationChargeSequenceCurrency !== undefined
+            && (
+                communicationChargeSequenceCurrency.length < Number(minCommunicationTariffNum)
+                || communicationChargeSequenceCurrency.length > Number(maxCommunicationTariffNum)
+            )
+        ) {
+            throw new ASN1SizeError("TariffCurrencyFormat.communicationChargeSequenceCurrency violates SIZE constraint");
+        }
+    }
+
+    /**
+     * @summary Restructures an object into a TariffCurrencyFormat
+     * @description
+     * 
+     * This takes an `object` and converts it to a `TariffCurrencyFormat`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `TariffCurrencyFormat`.
+     * @returns {TariffCurrencyFormat}
+     */
+    public static _from_object (_o: { [_K in keyof (TariffCurrencyFormat)]: (TariffCurrencyFormat)[_K] }): TariffCurrencyFormat {
+        return new TariffCurrencyFormat(_o.communicationChargeSequenceCurrency, _o.tariffControlIndicators, _o.callAttemptChargeCurrency, _o.callSetupChargeCurrency);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of TariffCurrencyFormat
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_TariffCurrencyFormat: $.ComponentSpec[] = [
+    new $.ComponentSpec("communicationChargeSequenceCurrency", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("tariffControlIndicators", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("callAttemptChargeCurrency", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("callSetupChargeCurrency", true, $.hasTag(_TagClass.context, 3))
+];
+
+/**
+ * @summary The Trailing Root Component Types of TariffCurrencyFormat
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_TariffCurrencyFormat: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of TariffCurrencyFormat
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_TariffCurrencyFormat: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_TariffCurrencyFormat: $.ASN1Decoder<TariffCurrencyFormat> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) TariffCurrencyFormat
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_TariffCurrencyFormat (el: _Element): TariffCurrencyFormat {
+    if (!_cached_decoder_for_TariffCurrencyFormat) { _cached_decoder_for_TariffCurrencyFormat = function (el: _Element): TariffCurrencyFormat {
+    let communicationChargeSequenceCurrency: OPTIONAL<CommunicationChargeCurrency[]>;
+    let tariffControlIndicators!: TariffCurrencyFormat_tariffControlIndicators;
+    let callAttemptChargeCurrency: OPTIONAL<CurrencyFactorScale>;
+    let callSetupChargeCurrency: OPTIONAL<CurrencyFactorScale>;
+    const callbacks: $.DecodingMap = {
+        "communicationChargeSequenceCurrency": (_el: _Element): void => { communicationChargeSequenceCurrency = $._decode_implicit<CommunicationChargeCurrency[]>(() => $._decodeSequenceOf<CommunicationChargeCurrency>(() => _decode_CommunicationChargeCurrency))(_el); },
+        "tariffControlIndicators": (_el: _Element): void => { tariffControlIndicators = $._decode_implicit<TariffCurrencyFormat_tariffControlIndicators>(() => _decode_TariffCurrencyFormat_tariffControlIndicators)(_el); },
+        "callAttemptChargeCurrency": (_el: _Element): void => { callAttemptChargeCurrency = $._decode_implicit<CurrencyFactorScale>(() => _decode_CurrencyFactorScale)(_el); },
+        "callSetupChargeCurrency": (_el: _Element): void => { callSetupChargeCurrency = $._decode_implicit<CurrencyFactorScale>(() => _decode_CurrencyFactorScale)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_TariffCurrencyFormat,
+        _extension_additions_list_spec_for_TariffCurrencyFormat,
+        _root_component_type_list_2_spec_for_TariffCurrencyFormat,
+        undefined,
+    );
+    return new TariffCurrencyFormat(
+        communicationChargeSequenceCurrency,
+        tariffControlIndicators,
+        callAttemptChargeCurrency,
+        callSetupChargeCurrency
+    );
+}; }
+    return _cached_decoder_for_TariffCurrencyFormat(el);
+}
+
+let _cached_encoder_for_TariffCurrencyFormat: $.ASN1Encoder<TariffCurrencyFormat> | null = null;
+
+/**
+ * @summary Encodes a(n) TariffCurrencyFormat into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The TariffCurrencyFormat, encoded as an ASN.1 Element.
+ */
+export
+function _encode_TariffCurrencyFormat (value: TariffCurrencyFormat, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_TariffCurrencyFormat) { _cached_encoder_for_TariffCurrencyFormat = function (value: TariffCurrencyFormat, _elGetter: $.ASN1Encoder<TariffCurrencyFormat>): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* IF_ABSENT  */ ((value.communicationChargeSequenceCurrency === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeSequenceOf<CommunicationChargeCurrency>(() => _encode_CommunicationChargeCurrency, $.BER), $.BER)(value.communicationChargeSequenceCurrency, $.BER)),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_TariffCurrencyFormat_tariffControlIndicators, $.BER)(value.tariffControlIndicators, $.BER),
+            /* IF_ABSENT  */ ((value.callAttemptChargeCurrency === undefined) ? undefined : $._encode_implicit(_TagClass.context, 2, () => _encode_CurrencyFactorScale, $.BER)(value.callAttemptChargeCurrency, $.BER)),
+            /* IF_ABSENT  */ ((value.callSetupChargeCurrency === undefined) ? undefined : $._encode_implicit(_TagClass.context, 3, () => _encode_CurrencyFactorScale, $.BER)(value.callSetupChargeCurrency, $.BER))
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_TariffCurrencyFormat(value, elGetter);
+}
+
+
+/* eslint-enable */

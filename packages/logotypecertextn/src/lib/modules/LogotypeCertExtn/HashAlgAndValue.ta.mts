@@ -1,0 +1,169 @@
+/* eslint-disable */
+import {
+    OCTET_STRING,
+    ASN1ConstructionError as _ConstructionError,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import {
+    AlgorithmIdentifier,
+    _decode_AlgorithmIdentifier,
+    _encode_AlgorithmIdentifier,
+} from "@wildboar/pki-stub";
+
+
+/**
+ * @summary HashAlgAndValue
+ * @description
+ *
+ * One one-way hash of a referenced image, audio, or `.LTD` file.
+ * `hashAlg` identifies the function and `hashValue` is the digest of
+ * the whole file. Across the enclosing sequence, one entry uses
+ * SHA-1; additional algorithms are optional.
+ *
+ * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1).
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * HashAlgAndValue ::= SEQUENCE {
+ *    hashAlg         AlgorithmIdentifier,
+ *    hashValue       OCTET STRING }
+ * ```
+ * 
+ * @class
+ */
+export
+class HashAlgAndValue {
+    constructor (
+        /**
+         * Hash function that produced `hashValue`. One entry in the
+         * enclosing sequence uses SHA-1 (FIPS 180-1). Appendix B uses
+         * the OID `1.3.14.3.2.26` for that algorithm.
+         *
+         * [RFC 3709, section 4.1](https://www.rfc-editor.org/rfc/rfc3709#section-4.1)
+         * and [Appendix B](https://www.rfc-editor.org/rfc/rfc3709#page-19).
+         * @public
+         * @readonly
+         */
+        readonly hashAlg: AlgorithmIdentifier,
+        /**
+         * Digest of the entire referenced file under `hashAlg`.
+         * @public
+         * @readonly
+         */
+        readonly hashValue: OCTET_STRING
+    ) {}
+
+    /**
+     * @summary Restructures an object into a HashAlgAndValue
+     * @description
+     * 
+     * This takes an `object` and converts it to a `HashAlgAndValue`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `HashAlgAndValue`.
+     * @returns {HashAlgAndValue}
+     */
+    public static _from_object (_o: { [_K in keyof (HashAlgAndValue)]: (HashAlgAndValue)[_K] }): HashAlgAndValue {
+        return new HashAlgAndValue(_o.hashAlg, _o.hashValue);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of HashAlgAndValue
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_HashAlgAndValue: $.ComponentSpec[] = [
+    new $.ComponentSpec("hashAlg", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("hashValue", false, $.hasTag(_TagClass.universal, 4))
+];
+
+/**
+ * @summary The Trailing Root Component Types of HashAlgAndValue
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_HashAlgAndValue: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of HashAlgAndValue
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_HashAlgAndValue: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_HashAlgAndValue: $.ASN1Decoder<HashAlgAndValue> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) HashAlgAndValue
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_HashAlgAndValue (el: _Element): HashAlgAndValue {
+    if (!_cached_decoder_for_HashAlgAndValue) { _cached_decoder_for_HashAlgAndValue = function (el: _Element): HashAlgAndValue {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError("HashAlgAndValue contained only " + sequence.length.toString() + " elements.");
+    }
+    sequence[0].name = "hashAlg";
+    sequence[1].name = "hashValue";
+    const hashAlg: AlgorithmIdentifier = _decode_AlgorithmIdentifier(sequence[0]);
+    const hashValue: OCTET_STRING = $._decodeOctetString(sequence[1]);
+    return new HashAlgAndValue(
+        hashAlg,
+        hashValue,
+
+    );
+}; }
+    return _cached_decoder_for_HashAlgAndValue(el);
+}
+
+let _cached_encoder_for_HashAlgAndValue: $.ASN1Encoder<HashAlgAndValue> | null = null;
+
+/**
+ * @summary Encodes a(n) HashAlgAndValue into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The HashAlgAndValue, encoded as an ASN.1 Element.
+ */
+export
+function _encode_HashAlgAndValue (value: HashAlgAndValue, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_HashAlgAndValue) { _cached_encoder_for_HashAlgAndValue = function (value: HashAlgAndValue): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* REQUIRED   */ _encode_AlgorithmIdentifier(value.hashAlg, $.BER),
+            /* REQUIRED   */ $._encodeOctetString(value.hashValue, $.BER)
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_HashAlgAndValue(value, elGetter);
+}
+
+
+/* eslint-enable */

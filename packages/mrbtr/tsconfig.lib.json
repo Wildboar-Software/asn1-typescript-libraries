@@ -7,7 +7,7 @@
       "node"
     ],
     "rootDir": ".",
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "forceConsistentCasingInFileNames": true
@@ -25,10 +25,13 @@
   ],
   "references": [
     {
-      "path": "../x500/tsconfig.lib.json"
+      "path": "../cms/tsconfig.lib.json"
     },
     {
       "path": "../cbeff/tsconfig.lib.json"
+    },
+    {
+      "path": "../dn/tsconfig.lib.json"
     }
   ]
 }

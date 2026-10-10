@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LegType, _decode_LegType, _encode_LegType } from "../IN-CS2-datatypes/LegType.ta.mjs";
-// export { LegType, _decode_LegType, _encode_LegType } from "../IN-CS2-datatypes/LegType.ta.mjs";
 
 
 /**

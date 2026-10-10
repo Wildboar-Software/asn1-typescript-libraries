@@ -10,9 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { continueSMS } from "../CAP-SMS-ops-args/continueSMS.oa.mjs";
-// export { continueSMS } from "../CAP-SMS-ops-args/continueSMS.oa.mjs";
 import { id_package_smsContinue } from "../CAP-object-identifiers/id-package-smsContinue.va.mjs";
-// export { id_package_smsContinue } from "../CAP-object-identifiers/id-package-smsContinue.va.mjs";
 import { type OPERATION_PACKAGE } from "../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.mjs";
 
 

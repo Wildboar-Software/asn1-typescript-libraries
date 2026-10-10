@@ -61,11 +61,9 @@ export class NonSpecificHierarchicalAgreement {
      * @returns {NonSpecificHierarchicalAgreement}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof NonSpecificHierarchicalAgreement]: NonSpecificHierarchicalAgreement[_K];
             }
-        >
     ): NonSpecificHierarchicalAgreement {
         return new NonSpecificHierarchicalAgreement(
             _o.immediateSuperior,

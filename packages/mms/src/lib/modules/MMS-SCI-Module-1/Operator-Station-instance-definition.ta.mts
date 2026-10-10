@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Operator_Station_instance_definition_details, _decode_Operator_Station_instance_definition_details, _encode_Operator_Station_instance_definition_details } from "../MMS-SCI-Module-1/Operator-Station-instance-definition-details.ta.mjs";
-// export { Operator_Station_instance_definition_details, _decode_Operator_Station_instance_definition_details, _encode_Operator_Station_instance_definition_details } from "../MMS-SCI-Module-1/Operator-Station-instance-definition-details.ta.mjs";
 
 
 /**

@@ -1,77 +1,16 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { CGI_List, _decode_CGI_List, _encode_CGI_List } from "../MAP-OM-DataTypes/CGI-List.ta.mjs";
 import { E_UTRAN_CGI_List, _decode_E_UTRAN_CGI_List, _encode_E_UTRAN_CGI_List } from "../MAP-OM-DataTypes/E-UTRAN-CGI-List.ta.mjs";
-import { RoutingAreaId_List, _decode_RoutingAreaId_List, _encode_RoutingAreaId_List } from "../MAP-OM-DataTypes/RoutingAreaId-List.ta.mjs";
 import { LocationAreaId_List, _decode_LocationAreaId_List, _encode_LocationAreaId_List } from "../MAP-OM-DataTypes/LocationAreaId-List.ta.mjs";
+import { RoutingAreaId_List, _decode_RoutingAreaId_List, _encode_RoutingAreaId_List } from "../MAP-OM-DataTypes/RoutingAreaId-List.ta.mjs";
 import { TrackingAreaId_List, _decode_TrackingAreaId_List, _encode_TrackingAreaId_List } from "../MAP-OM-DataTypes/TrackingAreaId-List.ta.mjs";
-import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
 /**

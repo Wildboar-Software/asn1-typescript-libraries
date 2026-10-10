@@ -14,19 +14,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DimensionParamValues, _decode_DimensionParamValues, _encode_DimensionParamValues } from "../CDS/DimensionParamValues.ta.mjs";
-// export { DimensionParamValues, _decode_DimensionParamValues, _encode_DimensionParamValues } from "../CDS/DimensionParamValues.ta.mjs";
 import { CompoundRepertoireValue, _decode_CompoundRepertoireValue, _encode_CompoundRepertoireValue } from "../CDS/CompoundRepertoireValue.ta.mjs";
-// export { CompoundRepertoireValue, _decode_CompoundRepertoireValue, _encode_CompoundRepertoireValue } from "../CDS/CompoundRepertoireValue.ta.mjs";
 import { CompoundEmphasisValue, _decode_CompoundEmphasisValue, _encode_CompoundEmphasisValue } from "../CDS/CompoundEmphasisValue.ta.mjs";
-// export { CompoundEmphasisValue, _decode_CompoundEmphasisValue, _encode_CompoundEmphasisValue } from "../CDS/CompoundEmphasisValue.ta.mjs";
 import { CompoundColourValue, _decode_CompoundColourValue, _encode_CompoundColourValue } from "../CDS/CompoundColourValue.ta.mjs";
-// export { CompoundColourValue, _decode_CompoundColourValue, _encode_CompoundColourValue } from "../CDS/CompoundColourValue.ta.mjs";
 import { ParameterValues_access, _decode_ParameterValues_access, _encode_ParameterValues_access } from "../CDS/ParameterValues-access.ta.mjs";
-// export { ParameterValues_access, ParameterValues_access_wavar /* IMPORTED_LONG_NAMED_INTEGER */, wavar /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_access_waci /* IMPORTED_LONG_NAMED_INTEGER */, waci /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_access_waca /* IMPORTED_LONG_NAMED_INTEGER */, waca /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ParameterValues_access, _encode_ParameterValues_access } from "../CDS/ParameterValues-access.ta.mjs";
 import { BlockParamValues, _decode_BlockParamValues, _encode_BlockParamValues } from "../CDS/BlockParamValues.ta.mjs";
-// export { BlockParamValues, _decode_BlockParamValues, _encode_BlockParamValues } from "../CDS/BlockParamValues.ta.mjs";
 import { FieldParamValues, _decode_FieldParamValues, _encode_FieldParamValues } from "../CDS/FieldParamValues.ta.mjs";
-// export { FieldParamValues, _decode_FieldParamValues, _encode_FieldParamValues } from "../CDS/FieldParamValues.ta.mjs";
 
 
 /**

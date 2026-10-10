@@ -104,7 +104,7 @@ export class ICV_Total<ToBeProtected> {
      * @returns {ICV_Total}
      */
     public static _from_object(
-        _o: Partial<{ [_K in keyof ICV_Total<any>]: ICV_Total<any>[_K] }>
+        _o: { [_K in keyof ICV_Total<any>]: ICV_Total<any>[_K] }
     ): ICV_Total<any> {
         return new ICV_Total(
             _o.toBeProtected,

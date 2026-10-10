@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InfoDETCurve, _decode_InfoDETCurve, _encode_InfoDETCurve } from "../MachineReadableBiometricTestingAndReportingTestReport/InfoDETCurve.ta.mjs";
-// export { InfoDETCurve, _decode_InfoDETCurve, _encode_InfoDETCurve } from "../MachineReadableBiometricTestingAndReportingTestReport/InfoDETCurve.ta.mjs";
 import { DistributionRealReal, _decode_DistributionRealReal, _encode_DistributionRealReal } from "../MachineReadableBiometricTestingAndReportingTestReport/DistributionRealReal.ta.mjs";
-// export { DistributionRealReal, _decode_DistributionRealReal, _encode_DistributionRealReal } from "../MachineReadableBiometricTestingAndReportingTestReport/DistributionRealReal.ta.mjs";
 
 
 /**

@@ -14,15 +14,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
 import { KeyUsageFlags, _decode_KeyUsageFlags, _encode_KeyUsageFlags } from "../CryptographicInformationFramework/KeyUsageFlags.ta.mjs";
-// export { KeyUsageFlags, KeyUsageFlags_encipher /* IMPORTED_LONG_NAMED_BIT */, encipher /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_decipher /* IMPORTED_LONG_NAMED_BIT */, decipher /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_sign /* IMPORTED_LONG_NAMED_BIT */, sign /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_signRecover /* IMPORTED_LONG_NAMED_BIT */, signRecover /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_keyEncipher /* IMPORTED_LONG_NAMED_BIT */, keyEncipher /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_keyDecipher /* IMPORTED_LONG_NAMED_BIT */, keyDecipher /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_verify /* IMPORTED_LONG_NAMED_BIT */, verify /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_verifyRecover /* IMPORTED_LONG_NAMED_BIT */, verifyRecover /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_derive /* IMPORTED_LONG_NAMED_BIT */, derive /* IMPORTED_SHORT_NAMED_BIT */, KeyUsageFlags_nonRepudiation /* IMPORTED_LONG_NAMED_BIT */, nonRepudiation /* IMPORTED_SHORT_NAMED_BIT */, _decode_KeyUsageFlags, _encode_KeyUsageFlags } from "../CryptographicInformationFramework/KeyUsageFlags.ta.mjs";
 import { KeyAccessFlags, _decode_KeyAccessFlags, _encode_KeyAccessFlags } from "../CryptographicInformationFramework/KeyAccessFlags.ta.mjs";
-// export { KeyAccessFlags, KeyAccessFlags_sensitive /* IMPORTED_LONG_NAMED_BIT */, sensitive /* IMPORTED_SHORT_NAMED_BIT */, KeyAccessFlags_extractable /* IMPORTED_LONG_NAMED_BIT */, extractable /* IMPORTED_SHORT_NAMED_BIT */, KeyAccessFlags_alwaysSensitive /* IMPORTED_LONG_NAMED_BIT */, alwaysSensitive /* IMPORTED_SHORT_NAMED_BIT */, KeyAccessFlags_neverExtractable /* IMPORTED_LONG_NAMED_BIT */, neverExtractable /* IMPORTED_SHORT_NAMED_BIT */, KeyAccessFlags_cardGenerated /* IMPORTED_LONG_NAMED_BIT */, cardGenerated /* IMPORTED_SHORT_NAMED_BIT */, _decode_KeyAccessFlags, _encode_KeyAccessFlags } from "../CryptographicInformationFramework/KeyAccessFlags.ta.mjs";
 import { KeyReference, _decode_KeyReference, _encode_KeyReference } from "../CryptographicInformationFramework/KeyReference.ta.mjs";
-// export { KeyReference, _decode_KeyReference, _encode_KeyReference } from "../CryptographicInformationFramework/KeyReference.ta.mjs";
 import { Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
-// export { Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
 
 
 /**

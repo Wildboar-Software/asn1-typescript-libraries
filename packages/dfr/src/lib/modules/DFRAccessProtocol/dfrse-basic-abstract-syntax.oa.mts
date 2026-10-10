@@ -11,9 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { DFR_PDUs, _decode_DFR_PDUs, _encode_DFR_PDUs } from "../DFRAccessProtocol/DFR-PDUs.ta.mjs";
-// export { DFR_PDUs, _decode_DFR_PDUs, _encode_DFR_PDUs } from "../DFRAccessProtocol/DFR-PDUs.ta.mjs";
 import { id_as_dfrse } from "../DFRProtocolObjectIdentifiers/id-as-dfrse.va.mjs";
-// export { id_as_dfrse } from "../DFRProtocolObjectIdentifiers/id-as-dfrse.va.mjs";
 
 
 /**
@@ -47,7 +45,7 @@ const dfrse_basic_abstract_syntax: ABSTRACT_SYNTAX<DFR_PDUs> = {
     },
     "&id": id_as_dfrse /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-    "&property": undefined,
+    "&property": new Uint8ClampedArray(),
 };
 
 /* eslint-enable */

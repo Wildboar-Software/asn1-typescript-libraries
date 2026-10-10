@@ -1,4 +1,4 @@
-import { INTEGER } from "@wildboar/asn1";
+import type { INTEGER } from "@wildboar/asn1";
 
 /**
  * @summary numOfInfoItems

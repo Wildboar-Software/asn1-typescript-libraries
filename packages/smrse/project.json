@@ -1,0 +1,25 @@
+{
+  "name": "smrse",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/smrse/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/smrse",
+        "tsConfig": "packages/smrse/tsconfig.lib.json",
+        "packageJson": "packages/smrse/package.json",
+        "main": "packages/smrse/src/index.mts",
+        "assets": [
+          "packages/smrse/*.md",
+          "packages/smrse/LICENSE.txt",
+          "packages/smrse/package.json"
+        ]
+      }
+    }
+  }
+}
