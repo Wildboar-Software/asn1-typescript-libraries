@@ -1,6 +1,7 @@
 import {
     ASN1OverflowError,
     ASN1SizeError,
+    ASN1TagClass,
     ObjectIdentifier,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -99,7 +100,10 @@ describe("Tariffing-Data-Types encode/decode round-trips", () => {
         expect(decoded.extensions).toHaveLength(1);
         expect(decoded.extensions?.[0].type_).toEqual({ local: 1 });
         expect(decoded.extensions?.[0].criticality).toBe(CriticalityType_ignore);
-        expect(decoded.extensions?.[0].value.tagNumber).toBe(5);
+        // IMPLICIT TAGS rewrites the open type's NULL tag to context [1].
+        expect(decoded.extensions?.[0].value.tagClass).toBe(ASN1TagClass.context);
+        expect(decoded.extensions?.[0].value.tagNumber).toBe(1);
+        expect(decoded.extensions?.[0].value.value.byteLength).toBe(0);
         expect(decoded.originationIdentification.networkIdentification.toString()).toBe("0.2.1.1.1");
         expect(decoded.originationIdentification.referenceID).toBe(42);
         expect(decoded.destinationIdentification?.networkIdentification.toString()).toBe("0.2.1.1.2");
