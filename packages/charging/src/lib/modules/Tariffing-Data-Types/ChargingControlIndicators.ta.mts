@@ -1,9 +1,12 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1SizeError,
     BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { maxChargingControlIndicatorsLen } from "../Tariffing-Data-Types/maxChargingControlIndicatorsLen.va.mjs";
+import { minChargingControlIndicatorsLen } from "../Tariffing-Data-Types/minChargingControlIndicatorsLen.va.mjs";
 
 
 
@@ -65,35 +68,14 @@ const ChargingControlIndicators_delayUntilStart: number = 2; /* LONG_NAMED_BIT *
  */
 export
 const delayUntilStart: number = ChargingControlIndicators_delayUntilStart; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_ChargingControlIndicators: $.ASN1Decoder<ChargingControlIndicators> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ChargingControlIndicators
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ChargingControlIndicators (el: _Element): ChargingControlIndicators {
-    if (!_cached_decoder_for_ChargingControlIndicators) { _cached_decoder_for_ChargingControlIndicators = $._decodeBitString; }
-    return _cached_decoder_for_ChargingControlIndicators(el);
-}
-
-let _cached_encoder_for_ChargingControlIndicators: $.ASN1Encoder<ChargingControlIndicators> | null = null;
-
-/**
- * @summary Encodes a(n) ChargingControlIndicators into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ChargingControlIndicators, encoded as an ASN.1 Element.
- */
-export
-function _encode_ChargingControlIndicators (value: ChargingControlIndicators, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChargingControlIndicators) { _cached_encoder_for_ChargingControlIndicators = $._encodeBitString; }
-    return _cached_encoder_for_ChargingControlIndicators(value, elGetter);
-}
+export const _decode_ChargingControlIndicators = (el: _Element): ChargingControlIndicators => {
+    const value = $._decodeBitString(el);
+    if (value.length < Number(minChargingControlIndicatorsLen) || value.length > Number(maxChargingControlIndicatorsLen)) {
+        throw new ASN1SizeError("ChargingControlIndicators violates SIZE constraint");
+    }
+    return value;
+};
+export const _encode_ChargingControlIndicators = $._encodeBitString;
 
 
 /* eslint-enable */

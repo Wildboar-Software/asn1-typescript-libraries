@@ -2,15 +2,15 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommunicationChargePulse, _decode_CommunicationChargePulse, _encode_CommunicationChargePulse } from "../Tariffing-Data-Types/CommunicationChargePulse.ta.mjs";
-// export { CommunicationChargePulse, _decode_CommunicationChargePulse, _encode_CommunicationChargePulse } from "../Tariffing-Data-Types/CommunicationChargePulse.ta.mjs";
 import { TariffPulseFormat_tariffControlIndicators, _decode_TariffPulseFormat_tariffControlIndicators, _encode_TariffPulseFormat_tariffControlIndicators } from "../Tariffing-Data-Types/TariffPulseFormat-tariffControlIndicators.ta.mjs";
-// export { TariffPulseFormat_tariffControlIndicators, TariffPulseFormat_tariffControlIndicators_non_cyclicTariff /* IMPORTED_LONG_NAMED_BIT */, non_cyclicTariff /* IMPORTED_SHORT_NAMED_BIT */, _decode_TariffPulseFormat_tariffControlIndicators, _encode_TariffPulseFormat_tariffControlIndicators } from "../Tariffing-Data-Types/TariffPulseFormat-tariffControlIndicators.ta.mjs";
 import { PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
-// export { PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
+import { maxCommunicationTariffNum } from "../Tariffing-Data-Types/maxCommunicationTariffNum.va.mjs";
+import { minCommunicationTariffNum } from "../Tariffing-Data-Types/minCommunicationTariffNum.va.mjs";
 
 
 /**
@@ -60,7 +60,17 @@ class TariffPulseFormat {
          * @readonly
          */
         readonly callSetupChargePulse: OPTIONAL<PulseUnits>
-    ) {}
+    ) {
+        if (
+            communicationChargeSequencePulse !== undefined
+            && (
+                communicationChargeSequencePulse.length < Number(minCommunicationTariffNum)
+                || communicationChargeSequencePulse.length > Number(maxCommunicationTariffNum)
+            )
+        ) {
+            throw new ASN1SizeError("TariffPulseFormat.communicationChargeSequencePulse violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TariffPulseFormat
@@ -171,7 +181,7 @@ let _cached_encoder_for_TariffPulseFormat: $.ASN1Encoder<TariffPulseFormat> | nu
  */
 export
 function _encode_TariffPulseFormat (value: TariffPulseFormat, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TariffPulseFormat) { _cached_encoder_for_TariffPulseFormat = function (value: TariffPulseFormat, elGetter: $.ASN1Encoder<TariffPulseFormat>): _Element {
+    if (!_cached_encoder_for_TariffPulseFormat) { _cached_encoder_for_TariffPulseFormat = function (value: TariffPulseFormat, _elGetter: $.ASN1Encoder<TariffPulseFormat>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.communicationChargeSequencePulse === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeSequenceOf<CommunicationChargePulse>(() => _encode_CommunicationChargePulse, $.BER), $.BER)(value.communicationChargeSequencePulse, $.BER)),

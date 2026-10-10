@@ -1,9 +1,12 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1SizeError,
     BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { maxTariffIndicatorsLen } from "../Tariffing-Data-Types/maxTariffIndicatorsLen.va.mjs";
+import { minTariffIndicatorsLen } from "../Tariffing-Data-Types/minTariffIndicatorsLen.va.mjs";
 
 
 
@@ -14,7 +17,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TariffPulseFormat-tariffControlIndicators ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * TariffPulseFormat-tariffControlIndicators ::= BIT STRING {
+ *     non-cyclicTariff (0)
+ * } (SIZE(minTariffIndicatorsLen..maxTariffIndicatorsLen))
  * ```
  */
 export
@@ -33,35 +38,14 @@ const TariffPulseFormat_tariffControlIndicators_non_cyclicTariff: number = 0; /*
  */
 export
 const non_cyclicTariff: number = TariffPulseFormat_tariffControlIndicators_non_cyclicTariff; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_TariffPulseFormat_tariffControlIndicators: $.ASN1Decoder<TariffPulseFormat_tariffControlIndicators> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) TariffPulseFormat_tariffControlIndicators
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TariffPulseFormat_tariffControlIndicators (el: _Element): TariffPulseFormat_tariffControlIndicators {
-    if (!_cached_decoder_for_TariffPulseFormat_tariffControlIndicators) { _cached_decoder_for_TariffPulseFormat_tariffControlIndicators = $._decodeBitString; }
-    return _cached_decoder_for_TariffPulseFormat_tariffControlIndicators(el);
-}
-
-let _cached_encoder_for_TariffPulseFormat_tariffControlIndicators: $.ASN1Encoder<TariffPulseFormat_tariffControlIndicators> | null = null;
-
-/**
- * @summary Encodes a(n) TariffPulseFormat_tariffControlIndicators into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TariffPulseFormat_tariffControlIndicators, encoded as an ASN.1 Element.
- */
-export
-function _encode_TariffPulseFormat_tariffControlIndicators (value: TariffPulseFormat_tariffControlIndicators, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TariffPulseFormat_tariffControlIndicators) { _cached_encoder_for_TariffPulseFormat_tariffControlIndicators = $._encodeBitString; }
-    return _cached_encoder_for_TariffPulseFormat_tariffControlIndicators(value, elGetter);
-}
+export const _decode_TariffPulseFormat_tariffControlIndicators = (el: _Element): TariffPulseFormat_tariffControlIndicators => {
+    const value = $._decodeBitString(el);
+    if (value.length < Number(minTariffIndicatorsLen) || value.length > Number(maxTariffIndicatorsLen)) {
+        throw new ASN1SizeError("TariffPulseFormat.tariffControlIndicators violates SIZE constraint");
+    }
+    return value;
+};
+export const _encode_TariffPulseFormat_tariffControlIndicators = $._encodeBitString;
 
 
 /* eslint-enable */

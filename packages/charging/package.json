@@ -1,9 +1,7 @@
 {
     "name": "@wildboar/charging",
     "type": "module",
-    "version": "0.1.0",
-    "description": "",
-    "keywords": [],
+    "version": "1.0.0",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"
@@ -28,6 +26,10 @@
     "types": "./src/index.d.mts",
     "module": "./src/index.mjs",
     "main": "./src/index.mjs",
+    "exports": {
+        ".": "./src/index.mts",
+        "./Tariffing-Data-Types": "./src/lib/modules/Tariffing-Data-Types/index.mts"
+    },
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
     }

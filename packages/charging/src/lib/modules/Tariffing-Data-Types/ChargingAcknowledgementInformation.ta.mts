@@ -2,15 +2,14 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChargingAcknowledgementInformation_acknowledgementIndicators, _decode_ChargingAcknowledgementInformation_acknowledgementIndicators, _encode_ChargingAcknowledgementInformation_acknowledgementIndicators } from "../Tariffing-Data-Types/ChargingAcknowledgementInformation-acknowledgementIndicators.ta.mjs";
-// export { ChargingAcknowledgementInformation_acknowledgementIndicators, ChargingAcknowledgementInformation_acknowledgementIndicators_accepted /* IMPORTED_LONG_NAMED_BIT */, accepted /* IMPORTED_SHORT_NAMED_BIT */, _decode_ChargingAcknowledgementInformation_acknowledgementIndicators, _encode_ChargingAcknowledgementInformation_acknowledgementIndicators } from "../Tariffing-Data-Types/ChargingAcknowledgementInformation-acknowledgementIndicators.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Tariffing-Data-Types/ExtensionField.ta.mjs";
-// export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Tariffing-Data-Types/ExtensionField.ta.mjs";
 import { ChargingReferenceIdentification, _decode_ChargingReferenceIdentification, _encode_ChargingReferenceIdentification } from "../Tariffing-Data-Types/ChargingReferenceIdentification.ta.mjs";
-// export { ChargingReferenceIdentification, _decode_ChargingReferenceIdentification, _encode_ChargingReferenceIdentification } from "../Tariffing-Data-Types/ChargingReferenceIdentification.ta.mjs";
+import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs";
 
 
 /**
@@ -59,7 +58,11 @@ class ChargingAcknowledgementInformation {
          * @readonly
          */
         readonly destinationIdentification: ChargingReferenceIdentification
-    ) {}
+    ) {
+        if (extensions !== undefined && (extensions.length < 1 || extensions.length > Number(numOfExtensions))) {
+            throw new ASN1SizeError("ChargingAcknowledgementInformation.extensions violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ChargingAcknowledgementInformation
@@ -170,7 +173,7 @@ let _cached_encoder_for_ChargingAcknowledgementInformation: $.ASN1Encoder<Chargi
  */
 export
 function _encode_ChargingAcknowledgementInformation (value: ChargingAcknowledgementInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChargingAcknowledgementInformation) { _cached_encoder_for_ChargingAcknowledgementInformation = function (value: ChargingAcknowledgementInformation, elGetter: $.ASN1Encoder<ChargingAcknowledgementInformation>): _Element {
+    if (!_cached_encoder_for_ChargingAcknowledgementInformation) { _cached_encoder_for_ChargingAcknowledgementInformation = function (value: ChargingAcknowledgementInformation, _elGetter: $.ASN1Encoder<ChargingAcknowledgementInformation>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ChargingAcknowledgementInformation_acknowledgementIndicators, $.BER)(value.acknowledgementIndicators, $.BER),

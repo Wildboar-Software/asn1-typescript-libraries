@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1OverflowError,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -19,35 +20,15 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type TariffDuration = INTEGER;
-
-let _cached_decoder_for_TariffDuration: $.ASN1Decoder<TariffDuration> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) TariffDuration
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TariffDuration (el: _Element): TariffDuration {
-    if (!_cached_decoder_for_TariffDuration) { _cached_decoder_for_TariffDuration = $._decodeInteger; }
-    return _cached_decoder_for_TariffDuration(el);
-}
-
-let _cached_encoder_for_TariffDuration: $.ASN1Encoder<TariffDuration> | null = null;
-
-/**
- * @summary Encodes a(n) TariffDuration into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TariffDuration, encoded as an ASN.1 Element.
- */
-export
-function _encode_TariffDuration (value: TariffDuration, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TariffDuration) { _cached_encoder_for_TariffDuration = $._encodeInteger; }
-    return _cached_encoder_for_TariffDuration(value, elGetter);
-}
+export const _decode_TariffDuration = (el: _Element): TariffDuration => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? Number(value) : value;
+    if (n < 0 || n > 36000) {
+        throw new ASN1OverflowError("TariffDuration violates INTEGER range");
+    }
+    return value;
+};
+export const _encode_TariffDuration = $._encodeInteger;
 
 
 /* eslint-enable */

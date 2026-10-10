@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CurrencyFactorScale, _decode_CurrencyFactorScale, _encode_CurrencyFactorScale } from "../Tariffing-Data-Types/CurrencyFactorScale.ta.mjs";
-// export { CurrencyFactorScale, _decode_CurrencyFactorScale, _encode_CurrencyFactorScale } from "../Tariffing-Data-Types/CurrencyFactorScale.ta.mjs";
 import { PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
-// export { PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
 
 
 /**
@@ -17,7 +15,10 @@ import { PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AddOnChargingInformation-addOncharge ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AddOnChargingInformation-addOncharge ::= CHOICE {
+ *     addOnChargeCurrency [0] CurrencyFactorScale,
+ *     addOnChargePulse [1] PulseUnits
+ * }
  * ```
  */
 export

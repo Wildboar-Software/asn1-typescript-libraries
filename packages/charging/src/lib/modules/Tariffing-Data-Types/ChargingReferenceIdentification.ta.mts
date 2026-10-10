@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NetworkIdentification, _decode_NetworkIdentification, _encode_NetworkIdentification } from "../Tariffing-Data-Types/NetworkIdentification.ta.mjs";
-// export { NetworkIdentification, _decode_NetworkIdentification, _encode_NetworkIdentification } from "../Tariffing-Data-Types/NetworkIdentification.ta.mjs";
 import { ReferenceID, _decode_ReferenceID, _encode_ReferenceID } from "../Tariffing-Data-Types/ReferenceID.ta.mjs";
-// export { ReferenceID, _decode_ReferenceID, _encode_ReferenceID } from "../Tariffing-Data-Types/ReferenceID.ta.mjs";
 
 
 /**
@@ -142,7 +140,7 @@ let _cached_encoder_for_ChargingReferenceIdentification: $.ASN1Encoder<ChargingR
  */
 export
 function _encode_ChargingReferenceIdentification (value: ChargingReferenceIdentification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChargingReferenceIdentification) { _cached_encoder_for_ChargingReferenceIdentification = function (value: ChargingReferenceIdentification, elGetter: $.ASN1Encoder<ChargingReferenceIdentification>): _Element {
+    if (!_cached_encoder_for_ChargingReferenceIdentification) { _cached_encoder_for_ChargingReferenceIdentification = function (value: ChargingReferenceIdentification, _elGetter: $.ASN1Encoder<ChargingReferenceIdentification>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_NetworkIdentification, $.BER)(value.networkIdentification, $.BER),

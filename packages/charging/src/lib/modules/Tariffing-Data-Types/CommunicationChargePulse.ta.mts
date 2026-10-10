@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
-// export { PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
 import { ChargeUnitTimeInterval, _decode_ChargeUnitTimeInterval, _encode_ChargeUnitTimeInterval } from "../Tariffing-Data-Types/ChargeUnitTimeInterval.ta.mjs";
-// export { ChargeUnitTimeInterval, _decode_ChargeUnitTimeInterval, _encode_ChargeUnitTimeInterval } from "../Tariffing-Data-Types/ChargeUnitTimeInterval.ta.mjs";
 import { TariffDuration, _decode_TariffDuration, _encode_TariffDuration } from "../Tariffing-Data-Types/TariffDuration.ta.mjs";
-// export { TariffDuration, _decode_TariffDuration, _encode_TariffDuration } from "../Tariffing-Data-Types/TariffDuration.ta.mjs";
 
 
 /**
@@ -156,7 +153,7 @@ let _cached_encoder_for_CommunicationChargePulse: $.ASN1Encoder<CommunicationCha
  */
 export
 function _encode_CommunicationChargePulse (value: CommunicationChargePulse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CommunicationChargePulse) { _cached_encoder_for_CommunicationChargePulse = function (value: CommunicationChargePulse, elGetter: $.ASN1Encoder<CommunicationChargePulse>): _Element {
+    if (!_cached_encoder_for_CommunicationChargePulse) { _cached_encoder_for_CommunicationChargePulse = function (value: CommunicationChargePulse, _elGetter: $.ASN1Encoder<CommunicationChargePulse>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_PulseUnits, $.BER)(value.pulseUnits, $.BER),

@@ -2,19 +2,16 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChargingControlIndicators, _decode_ChargingControlIndicators, _encode_ChargingControlIndicators } from "../Tariffing-Data-Types/ChargingControlIndicators.ta.mjs";
-// export { ChargingControlIndicators, ChargingControlIndicators_subscriberCharge /* IMPORTED_LONG_NAMED_BIT */, subscriberCharge /* IMPORTED_SHORT_NAMED_BIT */, ChargingControlIndicators_immediateChangeOfActuallyAppliedTariff /* IMPORTED_LONG_NAMED_BIT */, immediateChangeOfActuallyAppliedTariff /* IMPORTED_SHORT_NAMED_BIT */, ChargingControlIndicators_delayUntilStart /* IMPORTED_LONG_NAMED_BIT */, delayUntilStart /* IMPORTED_SHORT_NAMED_BIT */, _decode_ChargingControlIndicators, _encode_ChargingControlIndicators } from "../Tariffing-Data-Types/ChargingControlIndicators.ta.mjs";
 import { AddOnChargingInformation_addOncharge, _decode_AddOnChargingInformation_addOncharge, _encode_AddOnChargingInformation_addOncharge } from "../Tariffing-Data-Types/AddOnChargingInformation-addOncharge.ta.mjs";
-// export { AddOnChargingInformation_addOncharge, _decode_AddOnChargingInformation_addOncharge, _encode_AddOnChargingInformation_addOncharge } from "../Tariffing-Data-Types/AddOnChargingInformation-addOncharge.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Tariffing-Data-Types/ExtensionField.ta.mjs";
-// export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Tariffing-Data-Types/ExtensionField.ta.mjs";
 import { ChargingReferenceIdentification, _decode_ChargingReferenceIdentification, _encode_ChargingReferenceIdentification } from "../Tariffing-Data-Types/ChargingReferenceIdentification.ta.mjs";
-// export { ChargingReferenceIdentification, _decode_ChargingReferenceIdentification, _encode_ChargingReferenceIdentification } from "../Tariffing-Data-Types/ChargingReferenceIdentification.ta.mjs";
 import { Currency, _decode_Currency, _encode_Currency, _enum_for_Currency } from "../Tariffing-Data-Types/Currency.ta.mjs";
-// export { Currency, _enum_for_Currency, Currency_noIndication /* IMPORTED_LONG_ENUMERATION_ITEM */, noIndication /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_australianDollar /* IMPORTED_LONG_ENUMERATION_ITEM */, australianDollar /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_austrianSchilling /* IMPORTED_LONG_ENUMERATION_ITEM */, austrianSchilling /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_belgianFranc /* IMPORTED_LONG_ENUMERATION_ITEM */, belgianFranc /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_britishPound /* IMPORTED_LONG_ENUMERATION_ITEM */, britishPound /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_czechKoruna /* IMPORTED_LONG_ENUMERATION_ITEM */, czechKoruna /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_danishKrone /* IMPORTED_LONG_ENUMERATION_ITEM */, danishKrone /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_dutchGuilder /* IMPORTED_LONG_ENUMERATION_ITEM */, dutchGuilder /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_euro /* IMPORTED_LONG_ENUMERATION_ITEM */, euro /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_finnishMarkka /* IMPORTED_LONG_ENUMERATION_ITEM */, finnishMarkka /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_frenchFranc /* IMPORTED_LONG_ENUMERATION_ITEM */, frenchFranc /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_germanMark /* IMPORTED_LONG_ENUMERATION_ITEM */, germanMark /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_greekDrachma /* IMPORTED_LONG_ENUMERATION_ITEM */, greekDrachma /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_hungarianForint /* IMPORTED_LONG_ENUMERATION_ITEM */, hungarianForint /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_irishPunt /* IMPORTED_LONG_ENUMERATION_ITEM */, irishPunt /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_italianLira /* IMPORTED_LONG_ENUMERATION_ITEM */, italianLira /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_japaneseYen /* IMPORTED_LONG_ENUMERATION_ITEM */, japaneseYen /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_luxembourgian_Franc /* IMPORTED_LONG_ENUMERATION_ITEM */, luxembourgian_Franc /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_norwegianKrone /* IMPORTED_LONG_ENUMERATION_ITEM */, norwegianKrone /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_polishZloty /* IMPORTED_LONG_ENUMERATION_ITEM */, polishZloty /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_portugeseEscudo /* IMPORTED_LONG_ENUMERATION_ITEM */, portugeseEscudo /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_russianRouble /* IMPORTED_LONG_ENUMERATION_ITEM */, russianRouble /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_slovakKoruna /* IMPORTED_LONG_ENUMERATION_ITEM */, slovakKoruna /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_spanishPeseta /* IMPORTED_LONG_ENUMERATION_ITEM */, spanishPeseta /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_swedishKrone /* IMPORTED_LONG_ENUMERATION_ITEM */, swedishKrone /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_swissFranc /* IMPORTED_LONG_ENUMERATION_ITEM */, swissFranc /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_turkishLira /* IMPORTED_LONG_ENUMERATION_ITEM */, turkishLira /* IMPORTED_SHORT_ENUMERATION_ITEM */, Currency_uSDollar /* IMPORTED_LONG_ENUMERATION_ITEM */, uSDollar /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Currency, _encode_Currency } from "../Tariffing-Data-Types/Currency.ta.mjs";
+import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs";
 
 
 /**
@@ -78,7 +75,11 @@ class AddOnChargingInformation {
          * @readonly
          */
         readonly currency: Currency
-    ) {}
+    ) {
+        if (extensions !== undefined && (extensions.length < 1 || extensions.length > Number(numOfExtensions))) {
+            throw new ASN1SizeError("AddOnChargingInformation.extensions violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a AddOnChargingInformation
@@ -203,7 +204,7 @@ let _cached_encoder_for_AddOnChargingInformation: $.ASN1Encoder<AddOnChargingInf
  */
 export
 function _encode_AddOnChargingInformation (value: AddOnChargingInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AddOnChargingInformation) { _cached_encoder_for_AddOnChargingInformation = function (value: AddOnChargingInformation, elGetter: $.ASN1Encoder<AddOnChargingInformation>): _Element {
+    if (!_cached_encoder_for_AddOnChargingInformation) { _cached_encoder_for_AddOnChargingInformation = function (value: AddOnChargingInformation, _elGetter: $.ASN1Encoder<AddOnChargingInformation>): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ChargingControlIndicators, $.BER)(value.chargingControlIndicators, $.BER),
