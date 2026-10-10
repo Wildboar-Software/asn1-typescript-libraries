@@ -1,9 +1,12 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1SizeError,
     BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { maxAcknowledgementIndicatorsLen } from "../Tariffing-Data-Types/maxAcknowledgementIndicatorsLen.va.mjs";
+import { minAcknowledgementIndicatorsLen } from "../Tariffing-Data-Types/minAcknowledgementIndicatorsLen.va.mjs";
 
 
 
@@ -35,7 +38,13 @@ const ChargingAcknowledgementInformation_acknowledgementIndicators_accepted: num
  */
 export
 const accepted: number = ChargingAcknowledgementInformation_acknowledgementIndicators_accepted; /* SHORT_NAMED_BIT */
-export const _decode_ChargingAcknowledgementInformation_acknowledgementIndicators = $._decodeBitString;
+export const _decode_ChargingAcknowledgementInformation_acknowledgementIndicators = (el: _Element): ChargingAcknowledgementInformation_acknowledgementIndicators => {
+    const value = $._decodeBitString(el);
+    if (value.length < Number(minAcknowledgementIndicatorsLen) || value.length > Number(maxAcknowledgementIndicatorsLen)) {
+        throw new ASN1SizeError("ChargingAcknowledgementInformation.acknowledgementIndicators violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_ChargingAcknowledgementInformation_acknowledgementIndicators = $._encodeBitString;
 
 

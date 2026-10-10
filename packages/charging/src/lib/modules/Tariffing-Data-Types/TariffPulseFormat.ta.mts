@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommunicationChargePulse, _decode_CommunicationChargePulse, _encode_CommunicationChargePulse } from "../Tariffing-Data-Types/CommunicationChargePulse.ta.mjs";
@@ -10,6 +11,8 @@ import { CommunicationChargePulse, _decode_CommunicationChargePulse, _encode_Com
 import { TariffPulseFormat_tariffControlIndicators, _decode_TariffPulseFormat_tariffControlIndicators, _encode_TariffPulseFormat_tariffControlIndicators } from "../Tariffing-Data-Types/TariffPulseFormat-tariffControlIndicators.ta.mjs";
 // export { TariffPulseFormat_tariffControlIndicators, TariffPulseFormat_tariffControlIndicators_non_cyclicTariff /* IMPORTED_LONG_NAMED_BIT */, non_cyclicTariff /* IMPORTED_SHORT_NAMED_BIT */, _decode_TariffPulseFormat_tariffControlIndicators, _encode_TariffPulseFormat_tariffControlIndicators } from "../Tariffing-Data-Types/TariffPulseFormat-tariffControlIndicators.ta.mjs";
 import { PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
+import { maxCommunicationTariffNum } from "../Tariffing-Data-Types/maxCommunicationTariffNum.va.mjs";
+import { minCommunicationTariffNum } from "../Tariffing-Data-Types/minCommunicationTariffNum.va.mjs";
 // export { PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
 
 
@@ -60,7 +63,17 @@ class TariffPulseFormat {
          * @readonly
          */
         readonly callSetupChargePulse: OPTIONAL<PulseUnits>
-    ) {}
+    ) {
+        if (
+            communicationChargeSequencePulse !== undefined
+            && (
+                communicationChargeSequencePulse.length < Number(minCommunicationTariffNum)
+                || communicationChargeSequencePulse.length > Number(maxCommunicationTariffNum)
+            )
+        ) {
+            throw new ASN1SizeError("TariffPulseFormat.communicationChargeSequencePulse violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TariffPulseFormat

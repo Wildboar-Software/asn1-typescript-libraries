@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { StopCharging_stopIndicators, _decode_StopCharging_stopIndicators, _encode_StopCharging_stopIndicators } from "../Tariffing-Data-Types/StopCharging-stopIndicators.ta.mjs";
@@ -12,6 +13,8 @@ import { NetworkIdentification, _decode_NetworkIdentification, _encode_NetworkId
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Tariffing-Data-Types/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Tariffing-Data-Types/ExtensionField.ta.mjs";
 import { ChargingReferenceIdentification, _decode_ChargingReferenceIdentification, _encode_ChargingReferenceIdentification } from "../Tariffing-Data-Types/ChargingReferenceIdentification.ta.mjs";
+import { maxNetworkOperators } from "../Tariffing-Data-Types/maxNetworkOperators.va.mjs";
+import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs";
 // export { ChargingReferenceIdentification, _decode_ChargingReferenceIdentification, _encode_ChargingReferenceIdentification } from "../Tariffing-Data-Types/ChargingReferenceIdentification.ta.mjs";
 
 
@@ -61,7 +64,14 @@ class StopCharging {
          * @readonly
          */
         readonly originationIdentification: ChargingReferenceIdentification
-    ) {}
+    ) {
+        if (networkOperators !== undefined && (networkOperators.length < 1 || networkOperators.length > Number(maxNetworkOperators))) {
+            throw new ASN1SizeError("StopCharging.networkOperators violates SIZE constraint");
+        }
+        if (extensions !== undefined && (extensions.length < 1 || extensions.length > Number(numOfExtensions))) {
+            throw new ASN1SizeError("StopCharging.extensions violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a StopCharging

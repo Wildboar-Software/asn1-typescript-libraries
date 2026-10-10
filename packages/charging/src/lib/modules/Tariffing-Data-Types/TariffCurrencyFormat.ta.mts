@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommunicationChargeCurrency, _decode_CommunicationChargeCurrency, _encode_CommunicationChargeCurrency } from "../Tariffing-Data-Types/CommunicationChargeCurrency.ta.mjs";
@@ -10,6 +11,8 @@ import { CommunicationChargeCurrency, _decode_CommunicationChargeCurrency, _enco
 import { TariffCurrencyFormat_tariffControlIndicators, _decode_TariffCurrencyFormat_tariffControlIndicators, _encode_TariffCurrencyFormat_tariffControlIndicators } from "../Tariffing-Data-Types/TariffCurrencyFormat-tariffControlIndicators.ta.mjs";
 // export { TariffCurrencyFormat_tariffControlIndicators, TariffCurrencyFormat_tariffControlIndicators_non_cyclicTariff /* IMPORTED_LONG_NAMED_BIT */, non_cyclicTariff /* IMPORTED_SHORT_NAMED_BIT */, _decode_TariffCurrencyFormat_tariffControlIndicators, _encode_TariffCurrencyFormat_tariffControlIndicators } from "../Tariffing-Data-Types/TariffCurrencyFormat-tariffControlIndicators.ta.mjs";
 import { CurrencyFactorScale, _decode_CurrencyFactorScale, _encode_CurrencyFactorScale } from "../Tariffing-Data-Types/CurrencyFactorScale.ta.mjs";
+import { maxCommunicationTariffNum } from "../Tariffing-Data-Types/maxCommunicationTariffNum.va.mjs";
+import { minCommunicationTariffNum } from "../Tariffing-Data-Types/minCommunicationTariffNum.va.mjs";
 // export { CurrencyFactorScale, _decode_CurrencyFactorScale, _encode_CurrencyFactorScale } from "../Tariffing-Data-Types/CurrencyFactorScale.ta.mjs";
 
 
@@ -60,7 +63,17 @@ class TariffCurrencyFormat {
          * @readonly
          */
         readonly callSetupChargeCurrency: OPTIONAL<CurrencyFactorScale>
-    ) {}
+    ) {
+        if (
+            communicationChargeSequenceCurrency !== undefined
+            && (
+                communicationChargeSequenceCurrency.length < Number(minCommunicationTariffNum)
+                || communicationChargeSequenceCurrency.length > Number(maxCommunicationTariffNum)
+            )
+        ) {
+            throw new ASN1SizeError("TariffCurrencyFormat.communicationChargeSequenceCurrency violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TariffCurrencyFormat

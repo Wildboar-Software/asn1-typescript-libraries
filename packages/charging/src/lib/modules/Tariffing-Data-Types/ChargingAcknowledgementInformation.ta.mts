@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChargingAcknowledgementInformation_acknowledgementIndicators, _decode_ChargingAcknowledgementInformation_acknowledgementIndicators, _encode_ChargingAcknowledgementInformation_acknowledgementIndicators } from "../Tariffing-Data-Types/ChargingAcknowledgementInformation-acknowledgementIndicators.ta.mjs";
@@ -10,6 +11,7 @@ import { ChargingAcknowledgementInformation_acknowledgementIndicators, _decode_C
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Tariffing-Data-Types/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Tariffing-Data-Types/ExtensionField.ta.mjs";
 import { ChargingReferenceIdentification, _decode_ChargingReferenceIdentification, _encode_ChargingReferenceIdentification } from "../Tariffing-Data-Types/ChargingReferenceIdentification.ta.mjs";
+import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs";
 // export { ChargingReferenceIdentification, _decode_ChargingReferenceIdentification, _encode_ChargingReferenceIdentification } from "../Tariffing-Data-Types/ChargingReferenceIdentification.ta.mjs";
 
 
@@ -59,7 +61,11 @@ class ChargingAcknowledgementInformation {
          * @readonly
          */
         readonly destinationIdentification: ChargingReferenceIdentification
-    ) {}
+    ) {
+        if (extensions !== undefined && (extensions.length < 1 || extensions.length > Number(numOfExtensions))) {
+            throw new ASN1SizeError("ChargingAcknowledgementInformation.extensions violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ChargingAcknowledgementInformation
