@@ -118,35 +118,8 @@ const StreamMode_loopBack: StreamMode = 4; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const loopBack: StreamMode = StreamMode_loopBack; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_StreamMode: $.ASN1Decoder<StreamMode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) StreamMode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_StreamMode (el: _Element): StreamMode {
-    if (!_cached_decoder_for_StreamMode) { _cached_decoder_for_StreamMode = $._decodeEnumerated; }
-    return _cached_decoder_for_StreamMode(el);
-}
-
-let _cached_encoder_for_StreamMode: $.ASN1Encoder<StreamMode> | null = null;
-
-/**
- * @summary Encodes a(n) StreamMode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The StreamMode, encoded as an ASN.1 Element.
- */
-export
-function _encode_StreamMode (value: StreamMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_StreamMode) { _cached_encoder_for_StreamMode = $._encodeEnumerated; }
-    return _cached_encoder_for_StreamMode(value, elGetter);
-}
+export const _decode_StreamMode = $._decodeEnumerated;
+export const _encode_StreamMode = $._encodeEnumerated;
 
 
 /* eslint-enable */

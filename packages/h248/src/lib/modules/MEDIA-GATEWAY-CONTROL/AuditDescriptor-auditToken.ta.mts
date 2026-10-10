@@ -159,35 +159,8 @@ const AuditDescriptor_auditToken_eventBufferToken: number = 9; /* LONG_NAMED_BIT
  */
 export
 const eventBufferToken: number = AuditDescriptor_auditToken_eventBufferToken; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_AuditDescriptor_auditToken: $.ASN1Decoder<AuditDescriptor_auditToken> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AuditDescriptor_auditToken
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AuditDescriptor_auditToken (el: _Element): AuditDescriptor_auditToken {
-    if (!_cached_decoder_for_AuditDescriptor_auditToken) { _cached_decoder_for_AuditDescriptor_auditToken = $._decodeBitString; }
-    return _cached_decoder_for_AuditDescriptor_auditToken(el);
-}
-
-let _cached_encoder_for_AuditDescriptor_auditToken: $.ASN1Encoder<AuditDescriptor_auditToken> | null = null;
-
-/**
- * @summary Encodes a(n) AuditDescriptor_auditToken into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AuditDescriptor_auditToken, encoded as an ASN.1 Element.
- */
-export
-function _encode_AuditDescriptor_auditToken (value: AuditDescriptor_auditToken, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuditDescriptor_auditToken) { _cached_encoder_for_AuditDescriptor_auditToken = $._encodeBitString; }
-    return _cached_encoder_for_AuditDescriptor_auditToken(value, elGetter);
-}
+export const _decode_AuditDescriptor_auditToken = $._decodeBitString;
+export const _encode_AuditDescriptor_auditToken = $._encodeBitString;
 
 
 /* eslint-enable */

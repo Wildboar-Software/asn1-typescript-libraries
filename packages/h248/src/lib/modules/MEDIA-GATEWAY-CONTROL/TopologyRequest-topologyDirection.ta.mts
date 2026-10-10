@@ -102,35 +102,8 @@ const TopologyRequest_topologyDirection_oneway: TopologyRequest_topologyDirectio
  */
 export
 const oneway: TopologyRequest_topologyDirection = TopologyRequest_topologyDirection.oneway; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_TopologyRequest_topologyDirection: $.ASN1Decoder<TopologyRequest_topologyDirection> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) TopologyRequest_topologyDirection
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TopologyRequest_topologyDirection (el: _Element): TopologyRequest_topologyDirection {
-    if (!_cached_decoder_for_TopologyRequest_topologyDirection) { _cached_decoder_for_TopologyRequest_topologyDirection = $._decodeEnumerated; }
-    return _cached_decoder_for_TopologyRequest_topologyDirection(el);
-}
-
-let _cached_encoder_for_TopologyRequest_topologyDirection: $.ASN1Encoder<TopologyRequest_topologyDirection> | null = null;
-
-/**
- * @summary Encodes a(n) TopologyRequest_topologyDirection into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TopologyRequest_topologyDirection, encoded as an ASN.1 Element.
- */
-export
-function _encode_TopologyRequest_topologyDirection (value: TopologyRequest_topologyDirection, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TopologyRequest_topologyDirection) { _cached_encoder_for_TopologyRequest_topologyDirection = $._encodeEnumerated; }
-    return _cached_encoder_for_TopologyRequest_topologyDirection(value, elGetter);
-}
+export const _decode_TopologyRequest_topologyDirection = $._decodeEnumerated;
+export const _encode_TopologyRequest_topologyDirection = $._encodeEnumerated;
 
 
 /* eslint-enable */
