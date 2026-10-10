@@ -31,6 +31,7 @@ jobs:
           - "cmp"
           - "cms"
           - "copp"
+          - "credssp"
           - "crmf"
           - "device-owner-attribute"
           - "dfr"
