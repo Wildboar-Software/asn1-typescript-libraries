@@ -33,35 +33,8 @@ const ChargingAcknowledgementInformation_acknowledgementIndicators_accepted: num
  */
 export
 const accepted: number = ChargingAcknowledgementInformation_acknowledgementIndicators_accepted; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_ChargingAcknowledgementInformation_acknowledgementIndicators: $.ASN1Decoder<ChargingAcknowledgementInformation_acknowledgementIndicators> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ChargingAcknowledgementInformation_acknowledgementIndicators
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ChargingAcknowledgementInformation_acknowledgementIndicators (el: _Element): ChargingAcknowledgementInformation_acknowledgementIndicators {
-    if (!_cached_decoder_for_ChargingAcknowledgementInformation_acknowledgementIndicators) { _cached_decoder_for_ChargingAcknowledgementInformation_acknowledgementIndicators = $._decodeBitString; }
-    return _cached_decoder_for_ChargingAcknowledgementInformation_acknowledgementIndicators(el);
-}
-
-let _cached_encoder_for_ChargingAcknowledgementInformation_acknowledgementIndicators: $.ASN1Encoder<ChargingAcknowledgementInformation_acknowledgementIndicators> | null = null;
-
-/**
- * @summary Encodes a(n) ChargingAcknowledgementInformation_acknowledgementIndicators into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ChargingAcknowledgementInformation_acknowledgementIndicators, encoded as an ASN.1 Element.
- */
-export
-function _encode_ChargingAcknowledgementInformation_acknowledgementIndicators (value: ChargingAcknowledgementInformation_acknowledgementIndicators, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChargingAcknowledgementInformation_acknowledgementIndicators) { _cached_encoder_for_ChargingAcknowledgementInformation_acknowledgementIndicators = $._encodeBitString; }
-    return _cached_encoder_for_ChargingAcknowledgementInformation_acknowledgementIndicators(value, elGetter);
-}
+export const _decode_ChargingAcknowledgementInformation_acknowledgementIndicators = $._decodeBitString;
+export const _encode_ChargingAcknowledgementInformation_acknowledgementIndicators = $._encodeBitString;
 
 
 /* eslint-enable */

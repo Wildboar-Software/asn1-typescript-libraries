@@ -19,35 +19,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CurrencyScale = INTEGER;
-
-let _cached_decoder_for_CurrencyScale: $.ASN1Decoder<CurrencyScale> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CurrencyScale
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CurrencyScale (el: _Element): CurrencyScale {
-    if (!_cached_decoder_for_CurrencyScale) { _cached_decoder_for_CurrencyScale = $._decodeInteger; }
-    return _cached_decoder_for_CurrencyScale(el);
-}
-
-let _cached_encoder_for_CurrencyScale: $.ASN1Encoder<CurrencyScale> | null = null;
-
-/**
- * @summary Encodes a(n) CurrencyScale into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CurrencyScale, encoded as an ASN.1 Element.
- */
-export
-function _encode_CurrencyScale (value: CurrencyScale, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CurrencyScale) { _cached_encoder_for_CurrencyScale = $._encodeInteger; }
-    return _cached_encoder_for_CurrencyScale(value, elGetter);
-}
+export const _decode_CurrencyScale = $._decodeInteger;
+export const _encode_CurrencyScale = $._encodeInteger;
 
 
 /* eslint-enable */
