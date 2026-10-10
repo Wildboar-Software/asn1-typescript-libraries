@@ -1,73 +1,11 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SessionConnectionIdentifier, _decode_SessionConnectionIdentifier, _encode_SessionConnectionIdentifier } from "../RFC1085-PS/SessionConnectionIdentifier.ta.mjs";
-// export { SessionConnectionIdentifier, _decode_SessionConnectionIdentifier, _encode_SessionConnectionIdentifier } from "../RFC1085-PS/SessionConnectionIdentifier.ta.mjs";
 
 
 /**
@@ -94,7 +32,12 @@ class CL_UserData_PDU {
          * @readonly
          */
         readonly reference: SessionConnectionIdentifier,
-// FIXME: readonly user-data: PrefixedType
+        /**
+         * @summary `user_data`.
+         * @public
+         * @readonly
+         */
+        readonly user_data: _Element
     ) {}
 
     /**
@@ -110,7 +53,7 @@ class CL_UserData_PDU {
      * @returns {CL_UserData_PDU}
      */
     public static _from_object (_o: { [_K in keyof (CL_UserData_PDU)]: (CL_UserData_PDU)[_K] }): CL_UserData_PDU {
-        return new CL_UserData_PDU(_o.reference, _o.);
+        return new CL_UserData_PDU(_o.reference, _o.user_data);
     }
 
 
@@ -173,14 +116,11 @@ function _decode_CL_UserData_PDU (el: _Element): CL_UserData_PDU {
     }
     sequence[0].name = "reference";
     sequence[1].name = "user-data";
-    let reference!: SessionConnectionIdentifier;
-    let user_data!: /* FIXME: user-data COULD_NOT_COMPILE_TYPE */;
-    reference = _decode_SessionConnectionIdentifier(sequence[0]);
-    
+    const reference = _decode_SessionConnectionIdentifier(sequence[0]);
+    const user_data = $._decode_explicit<_Element>(() => $._decodeAny)(sequence[1]);
     return new CL_UserData_PDU(
         reference,
-        user_data,
-
+        user_data
     );
 }); }
     return _cached_decoder_for_CL_UserData_PDU(el);
@@ -197,7 +137,7 @@ let _cached_encoder_for_CL_UserData_PDU: $.ASN1Encoder<CL_UserData_PDU> | null =
  */
 export
 function _encode_CL_UserData_PDU (value: CL_UserData_PDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CL_UserData_PDU) { _cached_encoder_for_CL_UserData_PDU = $._encode_implicit(_TagClass.context, 6, () => function (value: CL_UserData_PDU, elGetter: $.ASN1Encoder<CL_UserData_PDU>): _Element {
+    if (!_cached_encoder_for_CL_UserData_PDU) { _cached_encoder_for_CL_UserData_PDU = $._encode_implicit(_TagClass.context, 6, () => function (value: CL_UserData_PDU): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_SessionConnectionIdentifier(value.reference, $.BER),

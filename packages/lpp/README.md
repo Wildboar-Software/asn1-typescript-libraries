@@ -1,6 +1,8 @@
-# lpp
+# Lightweight Presentation Protocol (LPP) in TypeScript
 
-This module is ESM-only.
+ASN.1 data structures based on the ASN.1 definitions in
+[IETF RFC 1085](https://datatracker.ietf.org/doc/html/rfc1085),
+which defines ISO presentation services on top of TCP/IP.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -16,3 +18,12 @@ produced with it are released publicly under the
 If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
+
+## ESM-Only
+
+This module is ESM-only.
+
+## AI Usage Statement
+
+This package was onboarded from the raw ASN.1 compiler outputs using AI
+(Grok 4.7) on 9 October 2026.

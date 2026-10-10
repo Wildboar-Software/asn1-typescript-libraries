@@ -7,13 +7,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ConnectRequest_PDU_version, _decode_ConnectRequest_PDU_version, _encode_ConnectRequest_PDU_version } from "../RFC1085-PS/ConnectRequest-PDU-version.ta.mjs";
-// export { ConnectRequest_PDU_version, ConnectRequest_PDU_version_version_1 /* IMPORTED_LONG_NAMED_INTEGER */, version_1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ConnectRequest_PDU_version, _encode_ConnectRequest_PDU_version } from "../RFC1085-PS/ConnectRequest-PDU-version.ta.mjs";
 import { SessionConnectionIdentifier, _decode_SessionConnectionIdentifier, _encode_SessionConnectionIdentifier } from "../RFC1085-PS/SessionConnectionIdentifier.ta.mjs";
-// export { SessionConnectionIdentifier, _decode_SessionConnectionIdentifier, _encode_SessionConnectionIdentifier } from "../RFC1085-PS/SessionConnectionIdentifier.ta.mjs";
 import { PresentationSelector, _decode_PresentationSelector, _encode_PresentationSelector } from "../RFC1085-PS/PresentationSelector.ta.mjs";
-// export { PresentationSelector, _decode_PresentationSelector, _encode_PresentationSelector } from "../RFC1085-PS/PresentationSelector.ta.mjs";
 import { UserData_PDU, _decode_UserData_PDU, _encode_UserData_PDU } from "../RFC1085-PS/UserData-PDU.ta.mjs";
-// export { UserData_PDU, _decode_UserData_PDU, _encode_UserData_PDU } from "../RFC1085-PS/UserData-PDU.ta.mjs";
 
 
 /**
@@ -195,7 +191,7 @@ let _cached_encoder_for_ConnectRequest_PDU: $.ASN1Encoder<ConnectRequest_PDU> | 
  */
 export
 function _encode_ConnectRequest_PDU (value: ConnectRequest_PDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConnectRequest_PDU) { _cached_encoder_for_ConnectRequest_PDU = $._encode_implicit(_TagClass.context, 0, () => function (value: ConnectRequest_PDU, elGetter: $.ASN1Encoder<ConnectRequest_PDU>): _Element {
+    if (!_cached_encoder_for_ConnectRequest_PDU) { _cached_encoder_for_ConnectRequest_PDU = $._encode_implicit(_TagClass.context, 0, () => function (value: ConnectRequest_PDU): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ConnectRequest_PDU_version, $.BER)(value.version, $.BER),
