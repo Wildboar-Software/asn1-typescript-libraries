@@ -119,15 +119,17 @@ export
 function _decode_HopInfo (el: _Element): HopInfo {
     if (!_cached_decoder_for_HopInfo) { _cached_decoder_for_HopInfo = function (el: _Element): HopInfo {
     const sequence: _Element[] = el.sequence;
-    if (sequence.length < 2) {
+    const currentHopElement: _Element | undefined = sequence[0];
+    const maxHopsElement: _Element | undefined = sequence[1];
+    if (sequence.length < 2 || currentHopElement === undefined || maxHopsElement === undefined) {
         throw new _ConstructionError("HopInfo contained only " + sequence.length.toString() + " elements.");
     }
-    sequence[0].name = "current-hop";
-    sequence[1].name = "max-hops";
+    currentHopElement.name = "current-hop";
+    maxHopsElement.name = "max-hops";
     let current_hop!: INTEGER;
     let max_hops!: INTEGER;
-    current_hop = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    max_hops = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    current_hop = $._decode_implicit<INTEGER>(() => $._decodeInteger)(currentHopElement);
+    max_hops = $._decode_implicit<INTEGER>(() => $._decodeInteger)(maxHopsElement);
     return new HopInfo(
         current_hop,
         max_hops,
