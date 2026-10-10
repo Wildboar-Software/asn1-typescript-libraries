@@ -3,6 +3,11 @@
 ASN.1 data structures for the `GDT` module
 `{iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) 57805}`.
 
+This is for Link-Mink as described [here](https://github.com/link-mink/mink-core).
+I am going to get rid of this module, because this appears to be an abandoned
+project that was never remotely consequential or popular and has virtually no
+documentation on the ASN.1 GDT protocol.
+
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
 that applies to this library and others to learn how to use this module.

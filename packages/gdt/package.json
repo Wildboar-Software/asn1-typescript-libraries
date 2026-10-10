@@ -1,6 +1,11 @@
 {
     "name": "@wildboar/gdt",
     "type": "module",
+    "description": "ASN.1 data structures for Link-Mink Generic Data Transfer (GDT) protocol.",
+    "keywords": [
+        "gdt",
+        "link-mink"
+    ],
     "version": "1.0.0",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {

@@ -65,7 +65,7 @@ done
 ## To Do
 
 - [ ] `sv` package: implement the framing that goes around this too. It's a simple protocol.
-- [ ] Prune `nist-csor` and `lnpdqp`: these modules are stupid. Get rid of them.
+- [ ] Prune `nist-csor`, `lnpdqp`, and `gdt`: these modules are stupid. Get rid of them.
 - [ ] Publish NPM packages with Provenance
 - [ ] Refactor `XSD` into a separate module
 - [ ] Documentation
