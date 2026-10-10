@@ -14,6 +14,7 @@ import { SequenceFlag, _decode_SequenceFlag, _encode_SequenceFlag } from "../GDT
 import { HopInfo, _decode_HopInfo, _encode_HopInfo } from "../GDT/HopInfo.ta.mjs";
 // export { HopInfo, _decode_HopInfo, _encode_HopInfo } from "../GDT/HopInfo.ta.mjs";
 import { ErrorCode, _decode_ErrorCode, _encode_ErrorCode } from "../GDT/ErrorCode.ta.mjs";
+import { EncryptionInfo, _decode_EncryptionInfo, _encode_EncryptionInfo } from "../GDT/EncryptionInfo.ta.mjs";
 // export { ErrorCode, ErrorCode_err_ok /* IMPORTED_LONG_NAMED_INTEGER */, err_ok /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_out_of_sequence /* IMPORTED_LONG_NAMED_INTEGER */, err_out_of_sequence /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unknown_sequence /* IMPORTED_LONG_NAMED_INTEGER */, err_unknown_sequence /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unsupported_version /* IMPORTED_LONG_NAMED_INTEGER */, err_unsupported_version /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_timeout /* IMPORTED_LONG_NAMED_INTEGER */, err_timeout /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unknown_route /* IMPORTED_LONG_NAMED_INTEGER */, err_unknown_route /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_routing_not_supported /* IMPORTED_LONG_NAMED_INTEGER */, err_routing_not_supported /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_max_hops_exceeded /* IMPORTED_LONG_NAMED_INTEGER */, err_max_hops_exceeded /* IMPORTED_SHORT_NAMED_INTEGER */, ErrorCode_err_unknown_error /* IMPORTED_LONG_NAMED_INTEGER */, err_unknown_error /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ErrorCode, _encode_ErrorCode } from "../GDT/ErrorCode.ta.mjs";
 
 
@@ -140,7 +141,7 @@ const _root_component_type_list_1_spec_for_Header: $.ComponentSpec[] = [
     new $.ComponentSpec("uuid", false, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("sequence-num", false, $.hasTag(_TagClass.context, 4)),
     new $.ComponentSpec("sequence-flag", false, $.hasTag(_TagClass.context, 5)),
-    /* FIXME: enc-info COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("enc-info", true, $.hasTag(_TagClass.context, 6)),
     new $.ComponentSpec("hop-info", true, $.hasTag(_TagClass.context, 7)),
     new $.ComponentSpec("status", true, $.hasTag(_TagClass.context, 8))
 ];
