@@ -139,35 +139,8 @@ const ConfigAction_ca_cfg_user_logout: ConfigAction = 6; /* LONG_NAMED_INTEGER_V
  */
 export
 const ca_cfg_user_logout: ConfigAction = ConfigAction_ca_cfg_user_logout; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ConfigAction: $.ASN1Decoder<ConfigAction> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ConfigAction
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ConfigAction (el: _Element): ConfigAction {
-    if (!_cached_decoder_for_ConfigAction) { _cached_decoder_for_ConfigAction = $._decodeInteger; }
-    return _cached_decoder_for_ConfigAction(el);
-}
-
-let _cached_encoder_for_ConfigAction: $.ASN1Encoder<ConfigAction> | null = null;
-
-/**
- * @summary Encodes a(n) ConfigAction into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ConfigAction, encoded as an ASN.1 Element.
- */
-export
-function _encode_ConfigAction (value: ConfigAction, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConfigAction) { _cached_encoder_for_ConfigAction = $._encodeInteger; }
-    return _cached_encoder_for_ConfigAction(value, elGetter);
-}
+export const _decode_ConfigAction = $._decodeInteger;
+export const _encode_ConfigAction = $._encodeInteger;
 
 
 /* eslint-enable */

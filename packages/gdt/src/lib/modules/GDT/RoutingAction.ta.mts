@@ -71,35 +71,8 @@ const RoutingAction_roua_route_result: RoutingAction = 2; /* LONG_NAMED_INTEGER_
  */
 export
 const roua_route_result: RoutingAction = RoutingAction_roua_route_result; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_RoutingAction: $.ASN1Decoder<RoutingAction> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) RoutingAction
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RoutingAction (el: _Element): RoutingAction {
-    if (!_cached_decoder_for_RoutingAction) { _cached_decoder_for_RoutingAction = $._decodeInteger; }
-    return _cached_decoder_for_RoutingAction(el);
-}
-
-let _cached_encoder_for_RoutingAction: $.ASN1Encoder<RoutingAction> | null = null;
-
-/**
- * @summary Encodes a(n) RoutingAction into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RoutingAction, encoded as an ASN.1 Element.
- */
-export
-function _encode_RoutingAction (value: RoutingAction, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RoutingAction) { _cached_encoder_for_RoutingAction = $._encodeInteger; }
-    return _cached_encoder_for_RoutingAction(value, elGetter);
-}
+export const _decode_RoutingAction = $._decodeInteger;
+export const _encode_RoutingAction = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -156,35 +156,8 @@ const SequenceFlag_sf_heartbeat: SequenceFlag = 7; /* LONG_NAMED_INTEGER_VALUE *
  */
 export
 const sf_heartbeat: SequenceFlag = SequenceFlag_sf_heartbeat; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_SequenceFlag: $.ASN1Decoder<SequenceFlag> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) SequenceFlag
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_SequenceFlag (el: _Element): SequenceFlag {
-    if (!_cached_decoder_for_SequenceFlag) { _cached_decoder_for_SequenceFlag = $._decodeInteger; }
-    return _cached_decoder_for_SequenceFlag(el);
-}
-
-let _cached_encoder_for_SequenceFlag: $.ASN1Encoder<SequenceFlag> | null = null;
-
-/**
- * @summary Encodes a(n) SequenceFlag into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SequenceFlag, encoded as an ASN.1 Element.
- */
-export
-function _encode_SequenceFlag (value: SequenceFlag, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SequenceFlag) { _cached_encoder_for_SequenceFlag = $._encodeInteger; }
-    return _cached_encoder_for_SequenceFlag(value, elGetter);
-}
+export const _decode_SequenceFlag = $._decodeInteger;
+export const _encode_SequenceFlag = $._encodeInteger;
 
 
 /* eslint-enable */

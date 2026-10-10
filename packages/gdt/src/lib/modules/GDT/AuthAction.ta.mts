@@ -54,35 +54,8 @@ const AuthAction_aa_auth_result: AuthAction = 1; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const aa_auth_result: AuthAction = AuthAction_aa_auth_result; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_AuthAction: $.ASN1Decoder<AuthAction> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AuthAction
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AuthAction (el: _Element): AuthAction {
-    if (!_cached_decoder_for_AuthAction) { _cached_decoder_for_AuthAction = $._decodeInteger; }
-    return _cached_decoder_for_AuthAction(el);
-}
-
-let _cached_encoder_for_AuthAction: $.ASN1Encoder<AuthAction> | null = null;
-
-/**
- * @summary Encodes a(n) AuthAction into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AuthAction, encoded as an ASN.1 Element.
- */
-export
-function _encode_AuthAction (value: AuthAction, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthAction) { _cached_encoder_for_AuthAction = $._encodeInteger; }
-    return _cached_encoder_for_AuthAction(value, elGetter);
-}
+export const _decode_AuthAction = $._decodeInteger;
+export const _encode_AuthAction = $._encodeInteger;
 
 
 /* eslint-enable */

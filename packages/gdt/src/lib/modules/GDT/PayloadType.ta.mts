@@ -462,35 +462,8 @@ const PayloadType_dmt_mtp2: PayloadType = 23; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const dmt_mtp2: PayloadType = PayloadType_dmt_mtp2; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_PayloadType: $.ASN1Decoder<PayloadType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) PayloadType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PayloadType (el: _Element): PayloadType {
-    if (!_cached_decoder_for_PayloadType) { _cached_decoder_for_PayloadType = $._decodeInteger; }
-    return _cached_decoder_for_PayloadType(el);
-}
-
-let _cached_encoder_for_PayloadType: $.ASN1Encoder<PayloadType> | null = null;
-
-/**
- * @summary Encodes a(n) PayloadType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PayloadType, encoded as an ASN.1 Element.
- */
-export
-function _encode_PayloadType (value: PayloadType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PayloadType) { _cached_encoder_for_PayloadType = $._encodeInteger; }
-    return _cached_encoder_for_PayloadType(value, elGetter);
-}
+export const _decode_PayloadType = $._decodeInteger;
+export const _encode_PayloadType = $._encodeInteger;
 
 
 /* eslint-enable */
