@@ -10,9 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { continueGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/continueGPRS.oa.mjs";
-// export { continueGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/continueGPRS.oa.mjs";
 import { id_package_gprsContinue } from "../CAP-object-identifiers/id-package-gprsContinue.va.mjs";
-// export { id_package_gprsContinue } from "../CAP-object-identifiers/id-package-gprsContinue.va.mjs";
 import { type OPERATION_PACKAGE } from "../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.mjs";
 
 

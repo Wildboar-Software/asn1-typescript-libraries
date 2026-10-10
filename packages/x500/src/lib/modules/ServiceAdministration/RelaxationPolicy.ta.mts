@@ -108,7 +108,7 @@ export class RelaxationPolicy {
      * @method
      */
     public static get _default_value_for_basic(): MRMapping {
-        return MRMapping._from_object({});
+        return MRMapping._from_object({ _unrecognizedExtensionsList: [] });
     }
     /**
      * @summary Getter that returns the default value for `minimum`.

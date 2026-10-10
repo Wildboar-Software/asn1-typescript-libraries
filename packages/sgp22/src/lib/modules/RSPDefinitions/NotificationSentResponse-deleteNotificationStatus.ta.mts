@@ -1,0 +1,105 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    INTEGER
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary NotificationSentResponse_deleteNotificationStatus
+ * @description
+ * 
+ * `ok` (0), `nothingToDelete` (1), or `undefinedError` (127). SGP.22 v3.1
+ * §5.7.11.
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * NotificationSentResponse-deleteNotificationStatus ::= INTEGER {
+ *     ok(0),
+ *     nothingToDelete(1),
+ *     undefinedError(127)
+ * }
+ * ```
+ */
+export
+type NotificationSentResponse_deleteNotificationStatus = INTEGER;
+
+/**
+ * @summary NotificationSentResponse_deleteNotificationStatus_ok
+ * @description
+ * 
+ * The notification with that sequence number was removed. SGP.22 v3.1 §5.7.11.
+ * 
+ * @constant
+ * @type {number}
+ */
+export
+const NotificationSentResponse_deleteNotificationStatus_ok: NotificationSentResponse_deleteNotificationStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary NotificationSentResponse_deleteNotificationStatus_ok
+ * @description
+ * 
+ * The notification with that sequence number was removed. SGP.22 v3.1 §5.7.11.
+ * 
+ * @constant
+ * @type {number}
+ */
+export
+const ok: NotificationSentResponse_deleteNotificationStatus = NotificationSentResponse_deleteNotificationStatus_ok; /* SHORT_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary NotificationSentResponse_deleteNotificationStatus_nothingToDelete
+ * @description
+ * 
+ * No pending notification has that sequence number. SGP.22 v3.1 §5.7.11.
+ * 
+ * @constant
+ * @type {number}
+ */
+export
+const NotificationSentResponse_deleteNotificationStatus_nothingToDelete: NotificationSentResponse_deleteNotificationStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary NotificationSentResponse_deleteNotificationStatus_nothingToDelete
+ * @description
+ * 
+ * No pending notification has that sequence number. SGP.22 v3.1 §5.7.11.
+ * 
+ * @constant
+ * @type {number}
+ */
+export
+const nothingToDelete: NotificationSentResponse_deleteNotificationStatus = NotificationSentResponse_deleteNotificationStatus_nothingToDelete; /* SHORT_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary NotificationSentResponse_deleteNotificationStatus_undefinedError
+ * @description
+ * 
+ * The notification was not removed. SGP.22 v3.1 §5.7.11.
+ * 
+ * @constant
+ * @type {number}
+ */
+export
+const NotificationSentResponse_deleteNotificationStatus_undefinedError: NotificationSentResponse_deleteNotificationStatus = 127; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary NotificationSentResponse_deleteNotificationStatus_undefinedError
+ * @description
+ * 
+ * The notification was not removed. SGP.22 v3.1 §5.7.11.
+ * 
+ * @constant
+ * @type {number}
+ */
+export
+const undefinedError: NotificationSentResponse_deleteNotificationStatus = NotificationSentResponse_deleteNotificationStatus_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_NotificationSentResponse_deleteNotificationStatus = $._decodeInteger;
+export const _encode_NotificationSentResponse_deleteNotificationStatus = $._encodeInteger;
+
+
+/* eslint-enable */

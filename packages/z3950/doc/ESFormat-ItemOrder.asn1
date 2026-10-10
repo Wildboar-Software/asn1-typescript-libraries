@@ -1,0 +1,87 @@
+ESFormat-ItemOrder
+{z39-50-extendedService itemOrder(4)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    InternationalString
+        FROM Z39-50-APDU-2001
+    ;
+
+ItemOrder ::= CHOICE {
+    esRequest       [1] IMPLICIT SEQUENCE {
+        toKeep          [1] ClientPartToKeep OPTIONAL,
+        notToKeep       [2] ClientPartNotToKeep
+    },
+    taskPackage     [2] IMPLICIT SEQUENCE {
+        clientPart      [1] ClientPartToKeep OPTIONAL,
+        serverPart      [2] ServerPart
+    }
+}
+
+ClientPartToKeep ::= SEQUENCE {
+    supplDescription    [1] IMPLICIT EXTERNAL OPTIONAL,
+    contact             [2] IMPLICIT SEQUENCE {
+        name    [1] IMPLICIT InternationalString OPTIONAL,
+        phone   [2] IMPLICIT InternationalString OPTIONAL,
+        email   [3] IMPLICIT InternationalString OPTIONAL
+    } OPTIONAL,
+    addlBilling         [3] IMPLICIT SEQUENCE {
+        paymentMethod       [1] CHOICE {
+            billInvoice                 [0] IMPLICIT NULL,
+            prepay                      [1] IMPLICIT NULL,
+            depositAccount              [2] IMPLICIT NULL,
+            creditCard                  [3] IMPLICIT CreditCardInfo,
+            cardInfoPreviouslySupplied  [4] IMPLICIT NULL,
+            privateKnown                [5] IMPLICIT NULL,
+            privateNotKnown             [6] IMPLICIT EXTERNAL
+        },
+        customerReference   [2] IMPLICIT InternationalString OPTIONAL,
+        --An identifier assigned by the client
+        --to identify the customer.
+        --It could be used when the client want
+        --to search for Item Order task packages
+        --for a specific customer.
+        customerPONumber    [3] IMPLICIT InternationalString OPTIONAL
+        --A purchase order number assigned by the
+        --customer (as opposed to one that might be
+        --assigned by the supplier). Similarly, a client
+        --may search for a task package knowing
+        --only the customer reference.
+    } OPTIONAL
+}
+
+CreditCardInfo ::= SEQUENCE {
+    nameOnCard      [1] IMPLICIT InternationalString,
+    expirationDate  [2] IMPLICIT InternationalString,
+    cardNumber      [3] IMPLICIT InternationalString
+}
+
+ClientPartNotToKeep ::= SEQUENCE {
+    -- Corresponds to 'requestedItem' in service definition
+    -- Must supply at least one, and may supply both.
+    resultSetItem   [1] IMPLICIT SEQUENCE {
+        resultSetId       [1] IMPLICIT InternationalString,
+        item              [2] IMPLICIT INTEGER
+    } OPTIONAL,
+    itemRequest     [2] IMPLICIT EXTERNAL OPTIONAL
+    -- See comment 1.
+}
+
+ServerPart ::= SEQUENCE {
+    itemRequest         [1] IMPLICIT EXTERNAL OPTIONAL,
+    -- When itemRequest is an ILL-Request APDU,
+    -- use OID 1.0.10161.2.1 (as above)
+    statusOrErrorReport [2] IMPLICIT EXTERNAL OPTIONAL,
+    -- When statusOrErrorReport is an ILL Status-Or-Error-Report
+    -- APDU, use OID 1.0.10161.2.1 (as above)
+    auxiliaryStatus     [3] IMPLICIT INTEGER{
+        notReceived              (1),
+        loanQueue                (2),
+        forwarded                (3),
+        unfilledCopyright        (4),
+        filledCopyright          (5)
+    } OPTIONAL
+}
+
+END

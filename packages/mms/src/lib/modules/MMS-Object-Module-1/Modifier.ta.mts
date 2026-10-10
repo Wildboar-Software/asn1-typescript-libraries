@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttachToEventCondition, _decode_AttachToEventCondition, _encode_AttachToEventCondition } from "../ISO-9506-MMS-1/AttachToEventCondition.ta.mjs";
-// export { AttachToEventCondition, _decode_AttachToEventCondition, _encode_AttachToEventCondition } from "../ISO-9506-MMS-1/AttachToEventCondition.ta.mjs";
 import { AttachToSemaphore, _decode_AttachToSemaphore, _encode_AttachToSemaphore } from "../ISO-9506-MMS-1/AttachToSemaphore.ta.mjs";
-// export { AttachToSemaphore, _decode_AttachToSemaphore, _encode_AttachToSemaphore } from "../ISO-9506-MMS-1/AttachToSemaphore.ta.mjs";
 
 
 /**

@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttrId, _decode_AttrId, _encode_AttrId } from "../ISO9041-VTP/AttrId.ta.mjs";
-// export { AttrId, _decode_AttrId, _encode_AttrId } from "../ISO9041-VTP/AttrId.ta.mjs";
 import { AttrExtent, _decode_AttrExtent, _encode_AttrExtent } from "../ISO9041-VTP/AttrExtent.ta.mjs";
-// export { AttrExtent, _decode_AttrExtent, _encode_AttrExtent } from "../ISO9041-VTP/AttrExtent.ta.mjs";
 
 
 /**

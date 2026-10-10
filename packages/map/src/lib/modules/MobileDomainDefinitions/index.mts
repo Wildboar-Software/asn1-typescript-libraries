@@ -7,10 +7,10 @@
  * identified-organization etsi mobileDomain gsm-Network modules` (3GPP TS
  * 29.002 V19.1.0 clauses 17.1.5, 17.3.3 and 17.4).
  */
-export * from "./CommonComponentId.ta.mjs";
 export * from "./ac-Id.va.mjs";
 export * from "./as-Id.va.mjs";
 export * from "./ase-Id.va.mjs";
+export * from "./CommonComponentId.ta.mjs";
 export * from "./er-Id.va.mjs";
 export * from "./gsm-AccessId.va.mjs";
 export * from "./gsm-MessagingId.va.mjs";

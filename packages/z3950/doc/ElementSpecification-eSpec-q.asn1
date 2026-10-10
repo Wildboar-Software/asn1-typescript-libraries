@@ -1,0 +1,37 @@
+ElementSpecification-eSpec-q
+{z39-50-elementSpec eSpec-q(3)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    Term, AttributeList
+        FROM Z39-50-APDU-2001
+    ;
+
+Espec-q ::= SEQUENCE {
+    valueRestrictor [1] IMPLICIT ValueRestrictor,
+    elementSelector [2] IMPLICIT EXTERNAL OPTIONAL}
+
+ValueRestrictor ::= SEQUENCE {
+    attributeSetId          OBJECT IDENTIFIER,
+    nodeSelectionCriteria   RPNStructure}
+
+RPNStructure ::= CHOICE {
+    op          [0] AttributesPlusTerm,
+    rpnRpnOp    [1] IMPLICIT SEQUENCE {
+        rpn1    RPNStructure,
+        rpn2    RPNStructure,
+        op      [46] CHOICE {
+            and     [0] IMPLICIT NULL,
+            or      [1] IMPLICIT NULL,
+            and-not [2] IMPLICIT NULL
+        }
+    }
+}
+
+AttributesPlusTerm ::= [102] IMPLICIT SEQUENCE {
+    attributes  AttributeList,
+    term        Term
+}
+
+END

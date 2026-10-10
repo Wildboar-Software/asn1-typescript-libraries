@@ -200,11 +200,9 @@ export class AdministerPasswordArgumentData implements CommonArguments {
      * @returns {AdministerPasswordArgumentData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof AdministerPasswordArgumentData]: AdministerPasswordArgumentData[_K];
             }
-        >
     ): AdministerPasswordArgumentData {
         return new AdministerPasswordArgumentData(
             _o.object,
@@ -232,7 +230,7 @@ export class AdministerPasswordArgumentData implements CommonArguments {
      * @method
      */
     public static get _default_value_for_serviceControls(): ServiceControls {
-        return ServiceControls._from_object({});
+        return ServiceControls._from_object({ _unrecognizedExtensionsList: [] });
     }
     /**
      * @summary Getter that returns the default value for `operationProgress`.
@@ -244,6 +242,7 @@ export class AdministerPasswordArgumentData implements CommonArguments {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
+            _unrecognizedExtensionsList: [],
         });
     }
     /**

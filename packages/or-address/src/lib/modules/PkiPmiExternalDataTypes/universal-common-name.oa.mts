@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import {
-    UniversalCommonName,
+    type UniversalCommonName,
     _decode_UniversalCommonName,
     _encode_UniversalCommonName,
 } from "../PkiPmiExternalDataTypes/UniversalCommonName.ta.mjs";

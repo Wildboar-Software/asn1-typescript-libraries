@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-// export { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 import { InitializeJournal_Request_limitSpecification, _decode_InitializeJournal_Request_limitSpecification, _encode_InitializeJournal_Request_limitSpecification } from "../ISO-9506-MMS-1/InitializeJournal-Request-limitSpecification.ta.mjs";
-// export { InitializeJournal_Request_limitSpecification, _decode_InitializeJournal_Request_limitSpecification, _encode_InitializeJournal_Request_limitSpecification } from "../ISO-9506-MMS-1/InitializeJournal-Request-limitSpecification.ta.mjs";
 
 
 /**

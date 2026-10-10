@@ -1,0 +1,25 @@
+{
+  "name": "gdt",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/gdt/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/gdt",
+        "tsConfig": "packages/gdt/tsconfig.lib.json",
+        "packageJson": "packages/gdt/package.json",
+        "main": "packages/gdt/src/index.mts",
+        "assets": [
+          "packages/gdt/*.md",
+          "packages/gdt/LICENSE.txt",
+          "packages/gdt/package.json"
+        ]
+      }
+    }
+  }
+}
