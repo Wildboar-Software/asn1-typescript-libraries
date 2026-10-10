@@ -6,6 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EventParamValueV1, _decode_EventParamValueV1, _encode_EventParamValueV1 } from "../H238V1-SUPPORT/EventParamValueV1.ta.mjs";
+import { EventParameterName, _decode_EventParameterName, _encode_EventParameterName } from "../MEDIA-GATEWAY-CONTROL/EventParameterName.ta.mjs";
 // export { EventParamValueV1, _decode_EventParamValueV1, _encode_EventParamValueV1 } from "../H238V1-SUPPORT/EventParamValueV1.ta.mjs";
 
 
@@ -71,7 +72,7 @@ class EventParameterV1 {
  */
 export
 const _root_component_type_list_1_spec_for_EventParameterV1: $.ComponentSpec[] = [
-    /* FIXME: eventParamterName COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("eventParamterName", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("value", false, $.hasTag(_TagClass.context, 1))
 ];
 

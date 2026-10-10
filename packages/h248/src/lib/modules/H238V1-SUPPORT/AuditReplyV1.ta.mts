@@ -6,6 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuditResultV1, _decode_AuditResultV1, _encode_AuditResultV1 } from "../H238V1-SUPPORT/AuditResultV1.ta.mjs";
+import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
 // export { AuditResultV1, _decode_AuditResultV1, _encode_AuditResultV1 } from "../H238V1-SUPPORT/AuditResultV1.ta.mjs";
 
 
@@ -71,7 +72,7 @@ class AuditReplyV1 {
  */
 export
 const _root_component_type_list_1_spec_for_AuditReplyV1: $.ComponentSpec[] = [
-    /* FIXME: terminationID COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("terminationID", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("auditResult", false, $.hasTag(_TagClass.context, 1))
 ];
 

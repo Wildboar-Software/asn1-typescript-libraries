@@ -6,6 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SigParamValueV1, _decode_SigParamValueV1, _encode_SigParamValueV1 } from "../H238V1-SUPPORT/SigParamValueV1.ta.mjs";
+import { SigParameterName, _decode_SigParameterName, _encode_SigParameterName } from "../MEDIA-GATEWAY-CONTROL/SigParameterName.ta.mjs";
 // export { SigParamValueV1, _decode_SigParamValueV1, _encode_SigParamValueV1 } from "../H238V1-SUPPORT/SigParamValueV1.ta.mjs";
 
 
@@ -73,7 +74,7 @@ class SigParameterV1 {
  */
 export
 const _root_component_type_list_1_spec_for_SigParameterV1: $.ComponentSpec[] = [
-    /* FIXME: sigParameterName COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("sigParameterName", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("value", false, $.hasTag(_TagClass.context, 1))
 ];
 
