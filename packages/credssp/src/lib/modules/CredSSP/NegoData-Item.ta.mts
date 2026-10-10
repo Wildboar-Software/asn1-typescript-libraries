@@ -30,24 +30,28 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class NegoData_Item {
+    /**
+     * One SPNEGO token
+     * ([MS-SPNG](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-spng/a2b0e591-fb91-4b9d-a8d5-af82af7e5398)
+     * section 2), or a Kerberos
+     * ([MS-KILE](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-kile/dcd5eecb-e85b-4f62-887f-2999fed3b1ad)
+     * section 2) or NTLM
+     * ([MS-NLMP](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-nlmp/b1242a27-d60e-4c5c-94b6-8626a7a2910f)
+     * section 2) message that SPNEGO selected. The token is
+     * opaque to CredSSP. Windows CredSSP clients do not send
+     * raw Kerberos messages.
+     *
+     * [MS-CSSP, section 2.2.1.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/9664994d-0784-4659-b85b-83b8d54c2336).
+     * @public
+     * @readonly
+     */
+    public readonly negoToken: OCTET_STRING;
+
     constructor (
-        /**
-         * One SPNEGO token
-         * ([MS-SPNG](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-spng/a2b0e591-fb91-4b9d-a8d5-af82af7e5398)
-         * section 2), or a Kerberos
-         * ([MS-KILE](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-kile/dcd5eecb-e85b-4f62-887f-2999fed3b1ad)
-         * section 2) or NTLM
-         * ([MS-NLMP](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-nlmp/b1242a27-d60e-4c5c-94b6-8626a7a2910f)
-         * section 2) message that SPNEGO selected. The token is
-         * opaque to CredSSP. Windows CredSSP clients do not send
-         * raw Kerberos messages.
-         *
-         * [MS-CSSP, section 2.2.1.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/9664994d-0784-4659-b85b-83b8d54c2336).
-         * @public
-         * @readonly
-         */
-        readonly negoToken: OCTET_STRING
-    ) {}
+        negoToken: OCTET_STRING
+    ) {
+        this.negoToken = negoToken;
+    }
 
     /**
      * @summary Restructures an object into a NegoData_Item

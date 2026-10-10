@@ -43,32 +43,40 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class TSPasswordCreds {
+    /**
+     * Name of the user's account domain.
+     *
+     * [MS-CSSP, section 2.2.1.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/17773cc4-21e9-4a75-a0dd-72706b174fe5).
+     * @public
+     * @readonly
+     */
+    public readonly domainName: OCTET_STRING;
+    /**
+     * The user's account name.
+     *
+     * [MS-CSSP, section 2.2.1.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/17773cc4-21e9-4a75-a0dd-72706b174fe5).
+     * @public
+     * @readonly
+     */
+    public readonly userName: OCTET_STRING;
+    /**
+     * The user's account password, in the clear at this layer.
+     *
+     * [MS-CSSP, section 2.2.1.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/17773cc4-21e9-4a75-a0dd-72706b174fe5).
+     * @public
+     * @readonly
+     */
+    public readonly password: OCTET_STRING;
+
     constructor (
-        /**
-         * Name of the user's account domain.
-         *
-         * [MS-CSSP, section 2.2.1.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/17773cc4-21e9-4a75-a0dd-72706b174fe5).
-         * @public
-         * @readonly
-         */
-        readonly domainName: OCTET_STRING,
-        /**
-         * The user's account name.
-         *
-         * [MS-CSSP, section 2.2.1.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/17773cc4-21e9-4a75-a0dd-72706b174fe5).
-         * @public
-         * @readonly
-         */
-        readonly userName: OCTET_STRING,
-        /**
-         * The user's account password, in the clear at this layer.
-         *
-         * [MS-CSSP, section 2.2.1.2.1](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/17773cc4-21e9-4a75-a0dd-72706b174fe5).
-         * @public
-         * @readonly
-         */
-        readonly password: OCTET_STRING
-    ) {}
+        domainName: OCTET_STRING,
+        userName: OCTET_STRING,
+        password: OCTET_STRING
+    ) {
+        this.domainName = domainName;
+        this.userName = userName;
+        this.password = password;
+    }
 
     /**
      * @summary Restructures an object into a TSPasswordCreds

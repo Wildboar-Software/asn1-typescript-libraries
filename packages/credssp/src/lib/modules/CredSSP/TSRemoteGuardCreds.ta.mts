@@ -42,29 +42,35 @@ import { TSRemoteGuardPackageCred, _decode_TSRemoteGuardPackageCred, _encode_TSR
  */
 export
 class TSRemoteGuardCreds {
+    /**
+     * Logon credential for the user. On Windows the buffer is
+     * a `KERB_TICKET_LOGON`. See
+     * {@link TSRemoteGuardPackageCred.credBuffer}.
+     *
+     * [MS-CSSP, section 2.2.1.2.3](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/7ef8229c-44ea-4c1b-867f-00369b882b38).
+     * @public
+     * @readonly
+     */
+    public readonly logonCred: TSRemoteGuardPackageCred;
+    /**
+     * Supplemental credentials for security packages other
+     * than the logon package. Optional. On Windows each buffer
+     * is an `NTLM_REMOTE_SUPPLEMENTAL_CREDENTIAL`. See
+     * {@link TSRemoteGuardPackageCred.credBuffer}.
+     *
+     * [MS-CSSP, section 2.2.1.2.3](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/7ef8229c-44ea-4c1b-867f-00369b882b38).
+     * @public
+     * @readonly
+     */
+    public readonly supplementalCreds: OPTIONAL<TSRemoteGuardPackageCred[]>;
+
     constructor (
-        /**
-         * Logon credential for the user. On Windows the buffer is
-         * a `KERB_TICKET_LOGON`. See
-         * {@link TSRemoteGuardPackageCred.credBuffer}.
-         *
-         * [MS-CSSP, section 2.2.1.2.3](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/7ef8229c-44ea-4c1b-867f-00369b882b38).
-         * @public
-         * @readonly
-         */
-        readonly logonCred: TSRemoteGuardPackageCred,
-        /**
-         * Supplemental credentials for security packages other
-         * than the logon package. Optional. On Windows each buffer
-         * is an `NTLM_REMOTE_SUPPLEMENTAL_CREDENTIAL`. See
-         * {@link TSRemoteGuardPackageCred.credBuffer}.
-         *
-         * [MS-CSSP, section 2.2.1.2.3](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/7ef8229c-44ea-4c1b-867f-00369b882b38).
-         * @public
-         * @readonly
-         */
-        readonly supplementalCreds: OPTIONAL<TSRemoteGuardPackageCred[]>
-    ) {}
+        logonCred: TSRemoteGuardPackageCred,
+        supplementalCreds: OPTIONAL<TSRemoteGuardPackageCred[]>
+    ) {
+        this.logonCred = logonCred;
+        this.supplementalCreds = supplementalCreds;
+    }
 
     /**
      * @summary Restructures an object into a TSRemoteGuardCreds

@@ -36,34 +36,40 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class TSCredentials {
+    /**
+     * Which structure is DER-encoded in `credentials`.
+     *
+     * | Value | Contents |
+     * | --- | --- |
+     * | 1 | {@link TSPasswordCreds} |
+     * | 2 | {@link TSSmartCardCreds} |
+     * | 6 | {@link TSRemoteGuardCreds} |
+     *
+     * No other values are defined.
+     *
+     * [MS-CSSP, section 2.2.1.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/94a1ab00-5500-42fd-8d3d-7a84e6c2cf03).
+     * @public
+     * @readonly
+     */
+    public readonly credType: INTEGER;
+    /**
+     * DER encoding of the structure selected by `credType`:
+     * password credentials, smart-card credentials, or Remote
+     * Credential Guard credentials.
+     *
+     * [MS-CSSP, section 2.2.1.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/94a1ab00-5500-42fd-8d3d-7a84e6c2cf03).
+     * @public
+     * @readonly
+     */
+    public readonly credentials: OCTET_STRING;
+
     constructor (
-        /**
-         * Which structure is DER-encoded in `credentials`.
-         *
-         * | Value | Contents |
-         * | --- | --- |
-         * | 1 | {@link TSPasswordCreds} |
-         * | 2 | {@link TSSmartCardCreds} |
-         * | 6 | {@link TSRemoteGuardCreds} |
-         *
-         * No other values are defined.
-         *
-         * [MS-CSSP, section 2.2.1.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/94a1ab00-5500-42fd-8d3d-7a84e6c2cf03).
-         * @public
-         * @readonly
-         */
-        readonly credType: INTEGER,
-        /**
-         * DER encoding of the structure selected by `credType`:
-         * password credentials, smart-card credentials, or Remote
-         * Credential Guard credentials.
-         *
-         * [MS-CSSP, section 2.2.1.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/94a1ab00-5500-42fd-8d3d-7a84e6c2cf03).
-         * @public
-         * @readonly
-         */
-        readonly credentials: OCTET_STRING
-    ) {}
+        credType: INTEGER,
+        credentials: OCTET_STRING
+    ) {
+        this.credType = credType;
+        this.credentials = credentials;
+    }
 
     /**
      * @summary Restructures an object into a TSCredentials

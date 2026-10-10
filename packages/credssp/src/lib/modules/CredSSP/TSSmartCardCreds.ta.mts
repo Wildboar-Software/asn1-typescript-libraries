@@ -44,43 +44,53 @@ import { TSCspDataDetail, _decode_TSCspDataDetail, _encode_TSCspDataDetail } fro
  */
 export
 class TSSmartCardCreds {
+    /**
+     * The user's smart-card PIN, in the clear at this layer.
+     *
+     * [MS-CSSP, section 2.2.1.2.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/4251d165-cf01-4513-a5d8-39ee4a98b7a4).
+     * @public
+     * @readonly
+     */
+    public readonly pin: OCTET_STRING;
+    /**
+     * Cryptographic service provider information used for the
+     * smart-card logon. See {@link TSCspDataDetail}.
+     *
+     * [MS-CSSP, section 2.2.1.2.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/4251d165-cf01-4513-a5d8-39ee4a98b7a4).
+     * @public
+     * @readonly
+     */
+    public readonly cspData: TSCspDataDetail;
+    /**
+     * Hint for the user's account. Optional.
+     *
+     * [MS-CSSP, section 2.2.1.2.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/4251d165-cf01-4513-a5d8-39ee4a98b7a4).
+     * @public
+     * @readonly
+     */
+    public readonly userHint: OPTIONAL<OCTET_STRING>;
+    /**
+     * Domain the user's account belongs to. Optional. This may
+     * be the name the user typed when first prompted for the
+     * PIN.
+     *
+     * [MS-CSSP, section 2.2.1.2.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/4251d165-cf01-4513-a5d8-39ee4a98b7a4).
+     * @public
+     * @readonly
+     */
+    public readonly domainHint: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * The user's smart-card PIN, in the clear at this layer.
-         *
-         * [MS-CSSP, section 2.2.1.2.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/4251d165-cf01-4513-a5d8-39ee4a98b7a4).
-         * @public
-         * @readonly
-         */
-        readonly pin: OCTET_STRING,
-        /**
-         * Cryptographic service provider information used for the
-         * smart-card logon. See {@link TSCspDataDetail}.
-         *
-         * [MS-CSSP, section 2.2.1.2.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/4251d165-cf01-4513-a5d8-39ee4a98b7a4).
-         * @public
-         * @readonly
-         */
-        readonly cspData: TSCspDataDetail,
-        /**
-         * Hint for the user's account. Optional.
-         *
-         * [MS-CSSP, section 2.2.1.2.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/4251d165-cf01-4513-a5d8-39ee4a98b7a4).
-         * @public
-         * @readonly
-         */
-        readonly userHint: OPTIONAL<OCTET_STRING>,
-        /**
-         * Domain the user's account belongs to. Optional. This may
-         * be the name the user typed when first prompted for the
-         * PIN.
-         *
-         * [MS-CSSP, section 2.2.1.2.2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-cssp/4251d165-cf01-4513-a5d8-39ee4a98b7a4).
-         * @public
-         * @readonly
-         */
-        readonly domainHint: OPTIONAL<OCTET_STRING>
-    ) {}
+        pin: OCTET_STRING,
+        cspData: TSCspDataDetail,
+        userHint: OPTIONAL<OCTET_STRING>,
+        domainHint: OPTIONAL<OCTET_STRING>
+    ) {
+        this.pin = pin;
+        this.cspData = cspData;
+        this.userHint = userHint;
+        this.domainHint = domainHint;
+    }
 
     /**
      * @summary Restructures an object into a TSSmartCardCreds
