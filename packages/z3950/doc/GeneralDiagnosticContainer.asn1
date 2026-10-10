@@ -1,0 +1,13 @@
+GeneralDiagnosticContainer
+{z39-50-diagnosticFormat generalDiagnosticContainer(4)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    DiagRec
+        FROM Z39-50-APDU-2001
+    ;
+
+DiagnosticContainer ::= SEQUENCE OF DiagRec
+
+END

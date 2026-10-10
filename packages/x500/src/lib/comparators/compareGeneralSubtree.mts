@@ -3,7 +3,7 @@ import type EqualityMatcher from "../types/EqualityMatcher.mjs";
 import {
     GeneralSubtree,
 } from "../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
-import compareGeneralName from "./compareGeneralName.mjs";
+import { compareGeneralName } from "@wildboar/gn";
 
 const DEFAULT_MINIMUM: number = GeneralSubtree._default_value_for_minimum as number;
 

@@ -22,13 +22,16 @@
   ],
   "references": [
     {
-      "path": "../x500/tsconfig.lib.json"
+      "path": "../ansi-x9-62/tsconfig.lib.json"
     },
     {
       "path": "../ansi-x9-42/tsconfig.lib.json"
     },
     {
-      "path": "../ansi-x9-62/tsconfig.lib.json"
+      "path": "../dn/tsconfig.lib.json"
+    },
+    {
+      "path": "../gn/tsconfig.lib.json"
     }
   ]
 }

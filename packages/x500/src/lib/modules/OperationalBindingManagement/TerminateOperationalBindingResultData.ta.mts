@@ -119,11 +119,9 @@ export class TerminateOperationalBindingResultData implements CommonResultsSeq {
      * @returns {TerminateOperationalBindingResultData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof TerminateOperationalBindingResultData]: TerminateOperationalBindingResultData[_K];
             }
-        >
     ): TerminateOperationalBindingResultData {
         return new TerminateOperationalBindingResultData(
             _o.bindingID,

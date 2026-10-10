@@ -13,21 +13,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EC_Class, _decode_EC_Class, _encode_EC_Class } from "../MMS-Object-Module-1/EC-Class.ta.mjs";
-// export { EC_Class, EC_Class_network_triggered /* IMPORTED_LONG_NAMED_INTEGER */, network_triggered /* IMPORTED_SHORT_NAMED_INTEGER */, EC_Class_monitored /* IMPORTED_LONG_NAMED_INTEGER */, monitored /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EC_Class, _encode_EC_Class } from "../MMS-Object-Module-1/EC-Class.ta.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
 import { normalPriority } from "../MMS-Object-Module-1/normalPriority.va.mjs";
-// export { normalPriority } from "../MMS-Object-Module-1/normalPriority.va.mjs";
 import { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
-// export { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
 import { normalSeverity } from "../MMS-Object-Module-1/normalSeverity.va.mjs";
-// export { normalSeverity } from "../MMS-Object-Module-1/normalSeverity.va.mjs";
 import { GetEventConditionAttributes_Response_monitoredVariable, _decode_GetEventConditionAttributes_Response_monitoredVariable, _encode_GetEventConditionAttributes_Response_monitoredVariable } from "../ISO-9506-MMS-1/GetEventConditionAttributes-Response-monitoredVariable.ta.mjs";
-// export { GetEventConditionAttributes_Response_monitoredVariable, _decode_GetEventConditionAttributes_Response_monitoredVariable, _encode_GetEventConditionAttributes_Response_monitoredVariable } from "../ISO-9506-MMS-1/GetEventConditionAttributes-Response-monitoredVariable.ta.mjs";
 import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
-// export { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**

@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Named_Variable_instance, _decode_Named_Variable_instance, _encode_Named_Variable_instance } from "../MMS-SCI-Module-1/Named-Variable-instance.ta.mjs";
-// export { Named_Variable_instance, _decode_Named_Variable_instance, _encode_Named_Variable_instance } from "../MMS-SCI-Module-1/Named-Variable-instance.ta.mjs";
 import { Unnamed_Variable_instance, _decode_Unnamed_Variable_instance, _encode_Unnamed_Variable_instance } from "../MMS-SCI-Module-1/Unnamed-Variable-instance.ta.mjs";
-// export { Unnamed_Variable_instance, _decode_Unnamed_Variable_instance, _encode_Unnamed_Variable_instance } from "../MMS-SCI-Module-1/Unnamed-Variable-instance.ta.mjs";
 
 
 /**

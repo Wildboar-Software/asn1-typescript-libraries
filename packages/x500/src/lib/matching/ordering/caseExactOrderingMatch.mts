@@ -1,9 +1,6 @@
-import OrderingMatcher from "../../types/OrderingMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
-import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
+import type { DirectoryStringInput } from "../readValue.mjs";
+import { readDirectoryString } from "../readValue.mjs";
+import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.2
@@ -16,15 +13,41 @@ import directoryStringToString from "../../stringifiers/directoryStringToString.
  * function returns a signed comparison (assertion vs stored).
  *
  * Language-specific collation is outside the scope of X.520.
+ *
+ * Each argument may be an `ASN1Element`, a directory string, or a
+ * JavaScript string.
  */
 export
-const caseExactOrderingMatch: OrderingMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): number => {
-    const a: string = directoryStringToString(_decode_UDS(assertion)).trim();
-    const v: string = directoryStringToString(_decode_UDS(value)).trim();
-    return a.localeCompare(v);
+function caseExactOrderingMatch (
+    assertion: DirectoryStringInput,
+    value: DirectoryStringInput,
+): number {
+    return caseExactOrderingMatchTyped(
+        readDirectoryString(assertion),
+        readDirectoryString(value),
+    );
+}
+
+/**
+ * `caseExactOrderingMatch` on two strings.
+ *
+ * @param assertion Presented string.
+ * @param value Stored string.
+ * @returns Negative when `assertion` is less than `value`. A string that
+ *  fails preparation sorts after any prepared string (`Array.sort`
+ *  treats `NaN` as `+0`, so it cannot be used for this).
+ */
+export
+function caseExactOrderingMatchTyped (assertion: string, value: string): number {
+    const a: string | undefined = prepString(assertion);
+    if (a === undefined) {
+        return 1;
+    }
+    const v: string | undefined = prepString(value);
+    if (v === undefined) {
+        return -1;
+    }
+    return compareCodePoints(a, v);
 }
 
 export default caseExactOrderingMatch;

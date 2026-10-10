@@ -14,7 +14,7 @@ import {
     RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
-} from '@wildboar/pki-stub';
+} from '@wildboar/dn';
 
 /**
  * @summary ProtectionUnit

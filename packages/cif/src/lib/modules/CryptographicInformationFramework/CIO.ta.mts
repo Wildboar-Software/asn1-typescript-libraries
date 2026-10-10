@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommonObjectAttributes, _decode_CommonObjectAttributes, _encode_CommonObjectAttributes } from "../CryptographicInformationFramework/CommonObjectAttributes.ta.mjs";
-// export { CommonObjectAttributes, _decode_CommonObjectAttributes, _encode_CommonObjectAttributes } from "../CryptographicInformationFramework/CommonObjectAttributes.ta.mjs";
 
 
 /**

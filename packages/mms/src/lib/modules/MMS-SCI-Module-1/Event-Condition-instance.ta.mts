@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-// export { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 import { Event_Condition_instance_definition, _decode_Event_Condition_instance_definition, _encode_Event_Condition_instance_definition } from "../MMS-SCI-Module-1/Event-Condition-instance-definition.ta.mjs";
-// export { Event_Condition_instance_definition, _decode_Event_Condition_instance_definition, _encode_Event_Condition_instance_definition } from "../MMS-SCI-Module-1/Event-Condition-instance-definition.ta.mjs";
 
 
 /**

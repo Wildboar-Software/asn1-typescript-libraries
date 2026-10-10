@@ -1,0 +1,14 @@
+RecordSyntax-SUTRS
+{z39-50-recordSyntax sutrs(101)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    InternationalString
+        FROM Z39-50-APDU-2001
+    ;
+
+-- See Comment 1.
+SutrsRecord ::= InternationalString
+
+END

@@ -1,0 +1,26 @@
+ResourceReport-Format-Resource-2
+{z39-50-resourceReport resource-2(2)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    InternationalString, StringOrNumeric, IntUnit
+        FROM Z39-50-APDU-2001
+    ;
+
+ResourceReport ::= SEQUENCE {
+    estimates   [1] IMPLICIT SEQUENCE OF Estimate OPTIONAL,
+    message     [2] IMPLICIT InternationalString OPTIONAL
+}
+
+Estimate ::= SEQUENCE {
+    type    [1] StringOrNumeric,
+    --Numeric values of 1-16 are the same as used in Resource-1.
+    --See Z39.50-1995 Appendix 6, RSC.1
+    value   [2] IMPLICIT IntUnit
+    -- When expressing currency: unitSystem (of Unit) is 'z3950'
+    -- (case insensitive), and unitType is 'iso4217-1990' (case insensitive).
+    -- Unit is currency code from ISO 4217-1990
+}
+
+END
