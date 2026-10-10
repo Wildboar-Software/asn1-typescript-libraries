@@ -44,6 +44,7 @@ jobs:
           - "gmi-attributemodule"
           - "goose"
           - "guls"
+          - "h248"
           - "isis"
           - "iso-9798-3-sasl"
           - "kerberos5"
