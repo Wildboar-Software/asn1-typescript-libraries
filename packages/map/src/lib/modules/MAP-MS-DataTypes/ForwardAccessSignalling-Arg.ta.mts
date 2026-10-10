@@ -1,90 +1,30 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
-import { IntegrityProtectionInformation, _decode_IntegrityProtectionInformation, _encode_IntegrityProtectionInformation } from "../MAP-MS-DataTypes/IntegrityProtectionInformation.ta.mjs";
-import { EncryptionInformation, _decode_EncryptionInformation, _encode_EncryptionInformation } from "../MAP-MS-DataTypes/EncryptionInformation.ta.mjs";
-import { KeyStatus, _enum_for_KeyStatus, KeyStatus_old /* IMPORTED_LONG_ENUMERATION_ITEM */, old /* IMPORTED_SHORT_ENUMERATION_ITEM */, KeyStatus_new_ /* IMPORTED_LONG_ENUMERATION_ITEM */, new_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_KeyStatus, _encode_KeyStatus } from "../MAP-MS-DataTypes/KeyStatus.ta.mjs";
+import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
+import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AllowedGSM_Algorithms, _decode_AllowedGSM_Algorithms, _encode_AllowedGSM_Algorithms } from "../MAP-MS-DataTypes/AllowedGSM-Algorithms.ta.mjs";
 import { AllowedUMTS_Algorithms, _decode_AllowedUMTS_Algorithms, _encode_AllowedUMTS_Algorithms } from "../MAP-MS-DataTypes/AllowedUMTS-Algorithms.ta.mjs";
-import { RadioResourceInformation, _decode_RadioResourceInformation, _encode_RadioResourceInformation } from "../MAP-MS-DataTypes/RadioResourceInformation.ta.mjs";
-import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { RadioResourceList, _decode_RadioResourceList, _encode_RadioResourceList } from "../MAP-MS-DataTypes/RadioResourceList.ta.mjs";
+import { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
+import { AoIPCodecsList, _decode_AoIPCodecsList, _encode_AoIPCodecsList } from "../MAP-MS-DataTypes/AoIPCodecsList.ta.mjs";
 import { BSSMAP_ServiceHandover, _decode_BSSMAP_ServiceHandover, _encode_BSSMAP_ServiceHandover } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandover.ta.mjs";
-import { RANAP_ServiceHandover, _decode_RANAP_ServiceHandover, _encode_RANAP_ServiceHandover } from "../MAP-MS-DataTypes/RANAP-ServiceHandover.ta.mjs";
 import { BSSMAP_ServiceHandoverList, _decode_BSSMAP_ServiceHandoverList, _encode_BSSMAP_ServiceHandoverList } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandoverList.ta.mjs";
 import { Codec, _decode_Codec, _encode_Codec } from "../MAP-MS-DataTypes/Codec.ta.mjs";
+import { EncryptionInformation, _decode_EncryptionInformation, _encode_EncryptionInformation } from "../MAP-MS-DataTypes/EncryptionInformation.ta.mjs";
+import { IntegrityProtectionInformation, _decode_IntegrityProtectionInformation, _encode_IntegrityProtectionInformation } from "../MAP-MS-DataTypes/IntegrityProtectionInformation.ta.mjs";
+import { KeyStatus, _decode_KeyStatus, _encode_KeyStatus, _enum_for_KeyStatus } from "../MAP-MS-DataTypes/KeyStatus.ta.mjs";
+import { RadioResourceInformation, _decode_RadioResourceInformation, _encode_RadioResourceInformation } from "../MAP-MS-DataTypes/RadioResourceInformation.ta.mjs";
+import { RadioResourceList, _decode_RadioResourceList, _encode_RadioResourceList } from "../MAP-MS-DataTypes/RadioResourceList.ta.mjs";
+import { RANAP_ServiceHandover, _decode_RANAP_ServiceHandover, _encode_RANAP_ServiceHandover } from "../MAP-MS-DataTypes/RANAP-ServiceHandover.ta.mjs";
 import { SupportedCodecsList, _decode_SupportedCodecsList, _encode_SupportedCodecsList } from "../MAP-MS-DataTypes/SupportedCodecsList.ta.mjs";
-import { TracePropagationList, _decode_TracePropagationList, _encode_TracePropagationList } from "../MAP-OM-DataTypes/TracePropagationList.ta.mjs";
-import { AoIPCodecsList, _decode_AoIPCodecsList, _encode_AoIPCodecsList } from "../MAP-MS-DataTypes/AoIPCodecsList.ta.mjs";
-import { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
 import { UESBI_Iu, _decode_UESBI_Iu, _encode_UESBI_Iu } from "../MAP-MS-DataTypes/UESBI-Iu.ta.mjs";
-import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
+import { TracePropagationList, _decode_TracePropagationList, _encode_TracePropagationList } from "../MAP-OM-DataTypes/TracePropagationList.ta.mjs";
 
 
 /**

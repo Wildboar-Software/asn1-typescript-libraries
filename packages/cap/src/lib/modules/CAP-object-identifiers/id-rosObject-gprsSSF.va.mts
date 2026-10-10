@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { id_rosObject } from "../CAP-object-identifiers/id-rosObject.va.mjs";
-// export { id_rosObject } from "../CAP-object-identifiers/id-rosObject.va.mjs";
 
 
 /**

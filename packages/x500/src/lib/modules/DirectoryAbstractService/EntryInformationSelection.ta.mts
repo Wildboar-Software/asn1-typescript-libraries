@@ -152,11 +152,9 @@ export class EntryInformationSelection {
      * @returns {EntryInformationSelection}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof EntryInformationSelection]: EntryInformationSelection[_K];
             }
-        >
     ): EntryInformationSelection {
         return new EntryInformationSelection(
             _o.attributes,
@@ -206,7 +204,7 @@ export class EntryInformationSelection {
             memberSelect:
                 FamilyReturn._enum_for_memberSelect.contributingEntriesOnly,
             familySelect: undefined,
-            _unrecognizedExtensionsList: undefined,
+            _unrecognizedExtensionsList: [],
         });
     }
 }

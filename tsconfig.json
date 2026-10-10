@@ -190,9 +190,6 @@
       "path": "./packages/map"
     },
     {
-      "path": "./packages/scpp"
-    },
-    {
       "path": "./packages/csta"
     },
     {
@@ -224,6 +221,48 @@
     },
     {
       "path": "./packages/gdt"
+    },
+    {
+      "path": "./packages/goose"
+    },
+    {
+      "path": "./packages/pkinit"
+    },
+    {
+      "path": "./packages/nist-csor"
+    },
+    {
+      "path": "./packages/novell_pkis"
+    },
+    {
+      "path": "./packages/logotypecertextn"
+    },
+    {
+      "path": "./packages/sgp22"
+    },
+    {
+      "path": "./packages/smrse"
+    },
+    {
+      "path": "./packages/spnego"
+    },
+    {
+      "path": "./packages/sv"
+    },
+    {
+      "path": "./packages/dn"
+    },
+    {
+      "path": "./packages/cif"
+    },
+    {
+      "path": "./packages/gn"
+    },
+    {
+      "path": "./packages/z3950"
+    },
+    {
+      "path": "./packages/lpp"
     }
   ],
   "compilerOptions": {

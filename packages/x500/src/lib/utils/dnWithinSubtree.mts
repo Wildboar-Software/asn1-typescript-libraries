@@ -3,7 +3,7 @@ import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type {
     DistinguishedName,
 } from "../modules/InformationFramework/DistinguishedName.ta.mjs";
-import compareDistinguishedName from "../comparators/compareDistinguishedName.mjs";
+import { compareRDNSequence } from "@wildboar/dn";
 import compareElements from "../comparators/compareElements.mjs";
 
 /**
@@ -39,7 +39,7 @@ function dnWithinSubtree (
         return false;
     }
     // We spread the arrays, because Array.reverse() reverses in-place!
-    return compareDistinguishedName(
+    return compareRDNSequence(
         dit,
         dn.slice(0, dit.length),
         getEqualityMatcher ?? (() => compareElements),

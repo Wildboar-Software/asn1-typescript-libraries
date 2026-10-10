@@ -27,6 +27,9 @@ import {
     _encode_Period_weeks,
 } from "../SelectedAttributeTypes/Period-weeks.ta.mjs";
 import isPositionalInt from "../../utils/isPositionalInt.mjs";
+import { occurrences } from "../../time/period.mjs";
+
+const MAX_GENERALIZED_TIME = new Date(9999, 11, 31, 23, 59, 59, 999);
 
 /**
  * @summary Period
@@ -248,6 +251,51 @@ export class Period {
             _o.years,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Checks if the Period is empty (no years, months, etc. specified)
+     * @description
+     *
+     * This checks if the Period has no times of day, days, weeks, months, or
+     * years. I think this would generally be interpreted to mean "any time."
+     *
+     * @returns {boolean} True if the Period is empty
+     * @public
+     * @method
+     */
+    public isEmpty(): boolean {
+        return this.timesOfDay === undefined
+            && this.days === undefined
+            && this.weeks === undefined
+            && this.months === undefined
+            && this.years === undefined;
+    }
+
+    /**
+     * @summary Iterates over the occurrence timespans of the Period
+     * @description
+     *
+     * This starts iterating over occurrences of the Period from `startInstant`
+     * onwards, and the first occurrence MAY return a timespan that starts
+     * before or after `startInstant`. The end of this timespan MUST be at
+     * or after `startInstant`.
+     * 
+     * If `endInstant` is reached, the iteration stops. The last occurrence
+     * returned MAY end before, at, or after `endInstant` but it MUST NOT
+     * start after `endInstant`.
+     *
+     * @param startInstant The start instant
+     * @param endInstant The end instant
+     * @yields {[Date, Date]} The start and end times (inclusive) of a timespan
+     *  of an occurrence of the period.
+     * @returns An iterator over the occurrences of this period
+     * @public
+     * @method
+     * @generator
+     */
+    public occurrences(startInstant: Date, endInstant: Date = MAX_GENERALIZED_TIME): IterableIterator<[Date, Date]> {
+        return occurrences(this, startInstant, endInstant);
     }
 }
 

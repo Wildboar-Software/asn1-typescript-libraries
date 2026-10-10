@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthKeyAttributes, _decode_AuthKeyAttributes, _encode_AuthKeyAttributes } from "../CryptographicInformationFramework/AuthKeyAttributes.ta.mjs";
-// export { AuthKeyAttributes, _decode_AuthKeyAttributes, _encode_AuthKeyAttributes } from "../CryptographicInformationFramework/AuthKeyAttributes.ta.mjs";
 import { CertBasedAuthenticationAttributes, _decode_CertBasedAuthenticationAttributes, _encode_CertBasedAuthenticationAttributes } from "../CryptographicInformationFramework/CertBasedAuthenticationAttributes.ta.mjs";
-// export { CertBasedAuthenticationAttributes, _decode_CertBasedAuthenticationAttributes, _encode_CertBasedAuthenticationAttributes } from "../CryptographicInformationFramework/CertBasedAuthenticationAttributes.ta.mjs";
 
 
 /**

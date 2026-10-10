@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DestinationRoutingAddress, _decode_DestinationRoutingAddress, _encode_DestinationRoutingAddress } from "../IN-CS2-datatypes/DestinationRoutingAddress.ta.mjs";
-// export { DestinationRoutingAddress, _decode_DestinationRoutingAddress, _encode_DestinationRoutingAddress } from "../IN-CS2-datatypes/DestinationRoutingAddress.ta.mjs";
 
 
 /**

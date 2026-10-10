@@ -166,11 +166,9 @@ export class SearchResultData_searchInfo implements CommonResults {
      * @returns {SearchResultData_searchInfo}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof SearchResultData_searchInfo]: SearchResultData_searchInfo[_K];
             }
-        >
     ): SearchResultData_searchInfo {
         return new SearchResultData_searchInfo(
             _o.name,

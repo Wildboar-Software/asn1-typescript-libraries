@@ -1,0 +1,25 @@
+{
+  "name": "novell_pkis",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/novell_pkis/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/novell_pkis",
+        "tsConfig": "packages/novell_pkis/tsconfig.lib.json",
+        "packageJson": "packages/novell_pkis/package.json",
+        "main": "packages/novell_pkis/src/index.mts",
+        "assets": [
+          "packages/novell_pkis/*.md",
+          "packages/novell_pkis/LICENSE.txt",
+          "packages/novell_pkis/package.json"
+        ]
+      }
+    }
+  }
+}

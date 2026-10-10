@@ -59,11 +59,9 @@ export class DITContextUseInformation {
      * @returns {DITContextUseInformation}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof DITContextUseInformation]: DITContextUseInformation[_K];
             }
-        >
     ): DITContextUseInformation {
         return new DITContextUseInformation(
             _o.mandatoryContexts,

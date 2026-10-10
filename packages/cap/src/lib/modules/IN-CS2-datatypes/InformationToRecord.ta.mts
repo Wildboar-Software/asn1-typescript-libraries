@@ -14,9 +14,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ElementaryMessageID, _decode_ElementaryMessageID, _encode_ElementaryMessageID } from "../IN-CS2-datatypes/ElementaryMessageID.ta.mjs";
-// export { ElementaryMessageID, _decode_ElementaryMessageID, _encode_ElementaryMessageID } from "../IN-CS2-datatypes/ElementaryMessageID.ta.mjs";
 import { InformationToRecord_controlDigits, _decode_InformationToRecord_controlDigits, _encode_InformationToRecord_controlDigits } from "../IN-CS2-datatypes/InformationToRecord-controlDigits.ta.mjs";
-// export { InformationToRecord_controlDigits, _decode_InformationToRecord_controlDigits, _encode_InformationToRecord_controlDigits } from "../IN-CS2-datatypes/InformationToRecord-controlDigits.ta.mjs";
 
 
 /**

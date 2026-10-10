@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import {
-    TeletexOrganizationName,
+    type TeletexOrganizationName,
     _decode_TeletexOrganizationName,
     _encode_TeletexOrganizationName,
 } from "../PkiPmiExternalDataTypes/TeletexOrganizationName.ta.mjs";
