@@ -2,18 +2,27 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "dist",
-    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
+    "outDir": "../../dist/out-tsc",
+    "tsBuildInfoFile": "../../dist/out-tsc/packages/h248/tsconfig.lib.tsbuildinfo",
+    "declaration": true,
     "emitDeclarationOnly": false,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictNullChecks": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "exactOptionalPropertyTypes": true,
+    "useUnknownInCatchVariables": true,
     "importHelpers": true,
     "types": [
       "node"
     ]
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.mts"
   ],
   "references": [],
   "exclude": [
@@ -23,6 +32,8 @@
     "vitest.config.mts",
     "src/**/*.test.ts",
     "src/**/*.spec.ts",
+    "src/**/*.test.mts",
+    "src/**/*.spec.mts",
     "src/**/*.test.tsx",
     "src/**/*.spec.tsx",
     "src/**/*.test.js",
