@@ -14,7 +14,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * StopCharging-stopIndicators ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * StopCharging-stopIndicators ::= BIT STRING {
+ *     callAttemptChargesApplicable (0)
+ * } (SIZE(minStopIndicatorsLen..maxStopIndicatorsLen))
  * ```
  */
 export

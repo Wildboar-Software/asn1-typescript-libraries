@@ -14,7 +14,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TariffPulseFormat-tariffControlIndicators ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * TariffPulseFormat-tariffControlIndicators ::= BIT STRING {
+ *     non-cyclicTariff (0)
+ * } (SIZE(minTariffIndicatorsLen..maxTariffIndicatorsLen))
  * ```
  */
 export

@@ -14,7 +14,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ChargingAcknowledgementInformation-acknowledgementIndicators ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * ChargingAcknowledgementInformation-acknowledgementIndicators ::= BIT STRING {
+ *     accepted (0)
+ * } (SIZE(minAcknowledgementIndicatorsLen..maxAcknowledgementIndicatorsLen))
  * ```
  */
 export

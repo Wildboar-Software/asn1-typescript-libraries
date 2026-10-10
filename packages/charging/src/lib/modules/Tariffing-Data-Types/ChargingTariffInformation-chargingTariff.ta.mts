@@ -17,7 +17,10 @@ import { TariffPulse, _decode_TariffPulse, _encode_TariffPulse } from "../Tariff
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ChargingTariffInformation-chargingTariff ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ChargingTariffInformation-chargingTariff ::= CHOICE {
+ *     tariffCurrency [0] TariffCurrency,
+ *     tariffPulse [1] TariffPulse
+ * }
  * ```
  */
 export
