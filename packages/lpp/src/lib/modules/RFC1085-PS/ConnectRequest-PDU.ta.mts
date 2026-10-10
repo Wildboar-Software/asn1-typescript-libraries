@@ -15,9 +15,53 @@ import { UserData_PDU, _decode_UserData_PDU, _encode_UserData_PDU } from "../RFC
 /**
  * @summary ConnectRequest_PDU
  * @description
- * 
+ *
+ * P-CONNECT request
+ * ([RFC 1085 §7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1),
+ * [§10.3](https://datatracker.ietf.org/doc/html/rfc1085#section-10.3)
+ * IDLE).
+ *
+ * The provider places the P-CONNECT user data in this PDU and
+ * enters WAIT1. On UDP it sets a retransmission counter to a
+ * small value (the memo's example is 2) and starts a small
+ * timer. The memo does not give the timer duration. Each expiry
+ * in WAIT1 decrements the counter. At zero the provider issues
+ * P-CONNECT.CONFIRMATION(-) and returns to IDLE; otherwise it
+ * sends this PDU again.
+ *
+ * If the TCP connection cannot be established, the initiator
+ * issues P-CONNECT.CONFIRMATION(-) with provider-rejection and
+ * remains IDLE.
+ *
+ * The called presentation address on the request may list
+ * several network addresses. The indication carries only the
+ * address actually used. Appendix C is one policy for choosing
+ * it. This PDU carries the presentation selectors only.
+ *
+ * Contexts are fixed. The result list marks both accepted
+ * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+ * items 5 and 6):
+ *
+ * - PCI 1: abstract syntax specific to the application (field
+ *   `asn`); transfer syntax `iso asn.1 abstract transfer`
+ *   (`1.0.8825`).
+ * - PCI 3, DIS ACSE: abstract syntax `acse pci version 1`
+ *   (`2.2.1.0.0`); transfer syntax `1.0.8825`.
+ * - PCI 3, IS ACSE: abstract syntax `acse pci version 1`
+ *   (`2.2.1.0.1`); transfer syntax `asn.1 basic encoding`
+ *   (`2.1.1`).
+ *
+ * Also fixed, and omitted from this PDU: multiple defined
+ * contexts TRUE (DIS presentation service only); no default
+ * context; kernel functional unit only; session requirements
+ * full duplex; no initial synchronization point; no tokens;
+ * session service version 2
+ * ([§5](https://datatracker.ietf.org/doc/html/rfc1085#section-5)).
+ * `transport-mapping` (`tcp-based` or `udp-based`) selects the
+ * transport at the service interface.
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ConnectRequest-PDU ::= [0] IMPLICIT SEQUENCE {
  *     -- version-1 corresponds to to this memo
@@ -30,7 +74,7 @@ import { UserData_PDU, _decode_UserData_PDU, _encode_UserData_PDU } from "../RFC
  *     user-data   UserData-PDU
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -38,36 +82,82 @@ class ConnectRequest_PDU {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * Protocol version. `version-1` (0) is this memo
+         * ([RFC 1085 Appendix A](https://datatracker.ietf.org/doc/html/rfc1085)).
+         *
          * @public
          * @readonly
          */
         readonly version: ConnectRequest_PDU_version,
         /**
          * @summary `reference`.
+         * @description
+         *
+         * Session connection identifier for this presentation
+         * connection
+         * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+         * item 14).
+         * Required on both transport mappings. On UDP the
+         * provider matches a datagram to a connection by IP
+         * address, port, and this value; two connections may
+         * differ only here
+         * ([§10.2](https://datatracker.ietf.org/doc/html/rfc1085#section-10.2)).
+         * Later PDUs repeat it only on the udp-based service.
+         *
          * @public
          * @readonly
          */
         readonly reference: SessionConnectionIdentifier,
         /**
          * @summary `calling`.
+         * @description
+         *
+         * Calling presentation selector. The rest of the calling
+         * presentation address is not in this PDU
+         * ([§5](https://datatracker.ietf.org/doc/html/rfc1085#section-5)).
+         *
          * @public
          * @readonly
          */
         readonly calling: OPTIONAL<PresentationSelector>,
         /**
          * @summary `called`.
+         * @description
+         *
+         * Called presentation selector. Same treatment as
+         * `calling`
+         * ([§5](https://datatracker.ietf.org/doc/html/rfc1085#section-5)).
+         *
          * @public
          * @readonly
          */
         readonly called: OPTIONAL<PresentationSelector>,
         /**
          * @summary `asn`.
+         * @description
+         *
+         * Abstract syntax name for presentation context 1
+         * (Appendix A: "the ASN for PCI #1"). That context
+         * carries ROSE APDUs. PCI 3, the ACSE context, is fixed
+         * by the memo and is not this value
+         * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+         * item 5).
+         *
          * @public
          * @readonly
          */
         readonly asn: OBJECT_IDENTIFIER,
         /**
          * @summary `user_data`.
+         * @description
+         *
+         * P-CONNECT user data: one A-ASSOCIATE PDU in
+         * presentation context 3
+         * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+         * item 15).
+         *
          * @public
          * @readonly
          */

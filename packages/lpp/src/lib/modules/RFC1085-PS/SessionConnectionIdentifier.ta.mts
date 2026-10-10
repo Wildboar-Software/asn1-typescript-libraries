@@ -13,9 +13,27 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SessionConnectionIdentifier
  * @description
- * 
+ *
+ * Session connection identifier mandated by this memo
+ * ([RFC 1085 §7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+ * item 14).
+ *
+ * On the udp-based service it is part of connection identity,
+ * together with the IP addresses and UDP ports of the two
+ * hosts. Two presentation connections may differ only in this
+ * value
+ * ([§10.2](https://datatracker.ietf.org/doc/html/rfc1085#section-10.2)).
+ * On TCP, the provider matches a connection by its local TCP
+ * designator
+ * ([§10.1](https://datatracker.ietf.org/doc/html/rfc1085#section-10.1));
+ * the identifier is still required on `ConnectRequest-PDU`.
+ *
+ * A local convention may disregard the first two octets of
+ * each component before transmission. Those are the tag and
+ * the length, which ASN.1 encoding adds again.
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * SessionConnectionIdentifier ::= [0] SEQUENCE {
  *     callingSSUserReference          T61String,
@@ -23,7 +41,7 @@ import * as $ from "@wildboar/asn1/functional";
  *     additionalReferenceInformation  [0] IMPLICIT T61String OPTIONAL
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -31,18 +49,38 @@ class SessionConnectionIdentifier {
     constructor (
         /**
          * @summary `callingSSUserReference`.
+         * @description
+         *
+         * Calling SS-user reference: a local string, for example
+         * `"gonzo"`
+         * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+         * item 14, "user data").
+         *
          * @public
          * @readonly
          */
         readonly callingSSUserReference: T61String,
         /**
          * @summary `commonReference`.
+         * @description
+         *
+         * Common reference: a universal time, for example
+         * `"880109170845"`
+         * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+         * item 14, "common data").
+         *
          * @public
          * @readonly
          */
         readonly commonReference: UTCTime,
         /**
          * @summary `additionalReferenceInformation`.
+         * @description
+         *
+         * Additional reference information: any string. Optional
+         * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+         * item 14, "additional data").
+         *
          * @public
          * @readonly
          */

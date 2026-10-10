@@ -15,9 +15,35 @@ import { CL_UserData_PDU, _decode_CL_UserData_PDU, _encode_CL_UserData_PDU } fro
 /**
  * @summary PDUs
  * @description
- * 
+ *
+ * Top-level presentation PDUs
+ * ([RFC 1085 Appendix A](https://datatracker.ietf.org/doc/html/rfc1085),
+ * procedures in
+ * [§10.3](https://datatracker.ietf.org/doc/html/rfc1085#section-10.3)).
+ *
+ * - `connectRequest`: P-CONNECT.REQUEST. IDLE moves to WAIT1.
+ * - `connectResponse`: P-CONNECT.RESPONSE. Acceptance moves
+ *   WAIT2 to DATA; user-rejection returns to IDLE.
+ * - `releaseRequest`: P-RELEASE.REQUEST. DATA moves to WAIT3.
+ * - `releaseResponse`: P-RELEASE.RESPONSE. WAIT4 returns to IDLE.
+ * - `abort`: user-initiated P-U-ABORT, or provider-initiated
+ *   P-P-ABORT.
+ * - `userData`: P-DATA on the tcp-based service.
+ * - `cL-userData`: P-DATA on the udp-based service. That service
+ *   exchanges `CL-UserData-PDU` for P-DATA
+ *   ([§10.3](https://datatracker.ietf.org/doc/html/rfc1085#section-10.3)).
+ *
+ * When a non-abort PDU arrives in a state that does not handle
+ * it, the provider sends a provider-initiated abort. In IDLE
+ * the provider stays IDLE. In every other state it also issues
+ * P-P-ABORT.INDICATION and returns to IDLE. A received abort
+ * is already an `Abort-PDU`, so it is not answered with a
+ * further abort. A release collision also ends in a
+ * provider-initiated abort
+ * ([§8.1](https://datatracker.ietf.org/doc/html/rfc1085#section-8.1)).
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * PDUs  ::=  CHOICE {
  *     connectRequest      ConnectRequest-PDU,

@@ -12,9 +12,35 @@ import { UserData_PDU, _decode_UserData_PDU, _encode_UserData_PDU } from "../RFC
 /**
  * @summary ReleaseRequest_PDU
  * @description
- * 
+ *
+ * P-RELEASE request
+ * ([RFC 1085 §8.1](https://datatracker.ietf.org/doc/html/rfc1085#section-8.1),
+ * [§10.3](https://datatracker.ietf.org/doc/html/rfc1085#section-10.3)
+ * DATA).
+ *
+ * Either presentation user may request release. The provider
+ * waits for the serializer to drain, then sends this PDU. On
+ * UDP, data still in transit may be discarded. Transport
+ * resources are released when the connection returns to IDLE.
+ * The service result is always release accepted; this PDU has
+ * no rejection code.
+ *
+ * From DATA the provider enters WAIT3. On UDP it sets a
+ * retransmission counter to a small value (the memo's example
+ * is 2) and starts a small timer. The memo does not give the
+ * timer duration. Expiry in WAIT3 decrements the counter. At
+ * zero the provider sends a provider-initiated abort, issues
+ * P-P-ABORT.INDICATION, and returns to IDLE; otherwise it
+ * sends this PDU again.
+ *
+ * If both sides request release, the collision invokes a
+ * provider-initiated abort. A `ReleaseRequest` received while
+ * already in WAIT3 is not a handled event, so it is treated as
+ * any other unexpected PDU
+ * ([§10.3](https://datatracker.ietf.org/doc/html/rfc1085#section-10.3)).
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ReleaseRequest-PDU ::= [2] IMPLICIT SEQUENCE {
  *     -- present only in the udp-based service
@@ -22,7 +48,7 @@ import { UserData_PDU, _decode_UserData_PDU, _encode_UserData_PDU } from "../RFC
  *     user-data   UserData-PDU
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -30,12 +56,24 @@ class ReleaseRequest_PDU {
     constructor (
         /**
          * @summary `reference`.
+         * @description
+         *
+         * Session connection identifier. Present only on the
+         * udp-based service (Appendix A).
+         *
          * @public
          * @readonly
          */
         readonly reference: OPTIONAL<SessionConnectionIdentifier>,
         /**
          * @summary `user_data`.
+         * @description
+         *
+         * Release user data: one A-RELEASE PDU in presentation
+         * context 3
+         * ([§8.1](https://datatracker.ietf.org/doc/html/rfc1085#section-8.1)
+         * item 2).
+         *
          * @public
          * @readonly
          */

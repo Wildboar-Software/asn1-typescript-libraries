@@ -1,6 +1,13 @@
 {
     "name": "@wildboar/lpp",
     "type": "module",
+    "description": "ASN.1 data structures for Lightweight Presentation Protocol from RFC 1085",
+    "keywords": [
+        "lpp",
+        "rfc1085",
+        "presentation",
+        "osi"
+    ],
     "version": "1.0.0",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {

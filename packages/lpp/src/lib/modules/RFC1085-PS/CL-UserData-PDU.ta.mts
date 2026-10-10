@@ -11,16 +11,29 @@ import { SessionConnectionIdentifier, _decode_SessionConnectionIdentifier, _enco
 /**
  * @summary CL_UserData_PDU
  * @description
- * 
+ *
+ * P-DATA on the udp-based service. Providers exchange this
+ * where the tcp-based service would exchange a top-level
+ * `UserData-PDU`
+ * ([RFC 1085 §9.1](https://datatracker.ietf.org/doc/html/rfc1085#section-9.1),
+ * [§10.3](https://datatracker.ietf.org/doc/html/rfc1085#section-10.3)).
+ *
+ * Each top-level PDU, including this one, is a single UDP
+ * datagram
+ * ([§6](https://datatracker.ietf.org/doc/html/rfc1085#section-6)).
+ * UDP bounds the serialized size at 65536 octets. The memo
+ * recommends keeping datagrams at or under 536 octets
+ * ([§9.1](https://datatracker.ietf.org/doc/html/rfc1085#section-9.1)).
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * CL-UserData-PDU ::= [6] IMPLICIT SEQUENCE {
  *     reference   SessionConnectionIdentifier,
  *     user-data   [0] ANY -- this is the ASN.1 object it is always in PCI #1
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -28,12 +41,26 @@ class CL_UserData_PDU {
     constructor (
         /**
          * @summary `reference`.
+         * @description
+         *
+         * Session connection identifier of the presentation
+         * connection. Required. With the two hosts' IP addresses
+         * and UDP ports, it identifies the connection
+         * ([§10.2](https://datatracker.ietf.org/doc/html/rfc1085#section-10.2)).
+         *
          * @public
          * @readonly
          */
         readonly reference: SessionConnectionIdentifier,
         /**
          * @summary `user_data`.
+         * @description
+         *
+         * The remote-operations APDU. Always presentation
+         * context 1
+         * ([Appendix A](https://datatracker.ietf.org/doc/html/rfc1085),
+         * [§9.1](https://datatracker.ietf.org/doc/html/rfc1085#section-9.1)).
+         *
          * @public
          * @readonly
          */

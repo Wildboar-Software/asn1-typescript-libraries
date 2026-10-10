@@ -12,9 +12,23 @@ import { UserData_PDU, _decode_UserData_PDU, _encode_UserData_PDU } from "../RFC
 /**
  * @summary ReleaseResponse_PDU
  * @description
- * 
+ *
+ * P-RELEASE response
+ * ([RFC 1085 §8.1](https://datatracker.ietf.org/doc/html/rfc1085#section-8.1),
+ * [§10.3](https://datatracker.ietf.org/doc/html/rfc1085#section-10.3)
+ * WAIT3 and WAIT4).
+ *
+ * Sent from WAIT4 for P-RELEASE.RESPONSE; the sender then
+ * enters IDLE. The peer, in WAIT3, cancels its UDP timer on
+ * receipt, issues P-RELEASE.CONFIRMATION, and enters IDLE.
+ * The result parameter is release accepted.
+ *
+ * On TCP the provider leaves the connection open until this
+ * PDU has finished being serialized
+ * ([§10.1](https://datatracker.ietf.org/doc/html/rfc1085#section-10.1)).
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ReleaseResponse-PDU ::= [3] IMPLICIT SEQUENCE {
  *     -- present only in the udp-based service
@@ -22,7 +36,7 @@ import { UserData_PDU, _decode_UserData_PDU, _encode_UserData_PDU } from "../RFC
  *     user-data   UserData-PDU
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -30,12 +44,24 @@ class ReleaseResponse_PDU {
     constructor (
         /**
          * @summary `reference`.
+         * @description
+         *
+         * Session connection identifier. Present only on the
+         * udp-based service (Appendix A).
+         *
          * @public
          * @readonly
          */
         readonly reference: OPTIONAL<SessionConnectionIdentifier>,
         /**
          * @summary `user_data`.
+         * @description
+         *
+         * Release user data: one A-RELEASE PDU in presentation
+         * context 3
+         * ([§8.1](https://datatracker.ietf.org/doc/html/rfc1085#section-8.1)
+         * item 2).
+         *
          * @public
          * @readonly
          */

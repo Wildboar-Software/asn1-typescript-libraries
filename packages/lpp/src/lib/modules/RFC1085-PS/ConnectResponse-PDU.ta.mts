@@ -14,9 +14,23 @@ import { UserData_PDU, _decode_UserData_PDU, _encode_UserData_PDU } from "../RFC
 /**
  * @summary ConnectResponse_PDU
  * @description
- * 
+ *
+ * P-CONNECT response
+ * ([RFC 1085 §7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1),
+ * [§10.3](https://datatracker.ietf.org/doc/html/rfc1085#section-10.3)
+ * WAIT1 and WAIT2).
+ *
+ * The responder sends this from WAIT2 for P-CONNECT.RESPONSE.
+ * User-rejection returns the responder to IDLE; acceptance
+ * enters DATA. The initiator, in WAIT1, cancels its UDP timer
+ * on receipt. Rejection yields P-CONNECT.CONFIRMATION(-) and
+ * IDLE; acceptance yields P-CONNECT.CONFIRMATION(+) and DATA.
+ *
+ * Omit `reason` on acceptance. `reason` is present only when
+ * the connection was rejected (Appendix A).
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * ConnectResponse-PDU ::= [1] IMPLICIT SEQUENCE {
  *     -- present only in the udp-based service
@@ -28,7 +42,7 @@ import { UserData_PDU, _decode_UserData_PDU, _encode_UserData_PDU } from "../RFC
  *     user-data   UserData-PDU OPTIONAL
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -36,24 +50,63 @@ class ConnectResponse_PDU {
     constructor (
         /**
          * @summary `reference`.
+         * @description
+         *
+         * Session connection identifier. Present only on the
+         * udp-based service (Appendix A), where it identifies
+         * the connection
+         * ([§10.2](https://datatracker.ietf.org/doc/html/rfc1085#section-10.2)).
+         *
          * @public
          * @readonly
          */
         readonly reference: OPTIONAL<SessionConnectionIdentifier>,
         /**
          * @summary `responding`.
+         * @description
+         *
+         * Responding presentation selector. At the service, the
+         * responding presentation address equals the called
+         * presentation address of the P-CONNECT indication
+         * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+         * item 3).
+         * This field may be omitted.
+         *
          * @public
          * @readonly
          */
         readonly responding: OPTIONAL<PresentationSelector>,
         /**
          * @summary `reason`.
+         * @description
+         *
+         * Why the connection was rejected. Omit on acceptance.
+         * `rejected-by-responder` is user-rejection; the other
+         * named codes are provider rejections. The service
+         * result is acceptance, user-rejection,
+         * provider-rejection (transient), or
+         * provider-rejection (permanent)
+         * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+         * item 16).
+         * The memo does not say which provider codes are
+         * transient and which are permanent.
+         *
          * @public
          * @readonly
          */
         readonly reason: OPTIONAL<Rejection_reason>,
         /**
          * @summary `user_data`.
+         * @description
+         *
+         * P-CONNECT user data: one A-ASSOCIATE PDU in
+         * presentation context 3
+         * ([§7.1](https://datatracker.ietf.org/doc/html/rfc1085#section-7.1)
+         * item 15).
+         * Allowed only when `reason` is absent or is
+         * `rejected-by-responder` (Appendix A). It may still be
+         * omitted in those cases.
+         *
          * @public
          * @readonly
          */

@@ -13,9 +13,43 @@ import { Abort_reason, _decode_Abort_reason, _encode_Abort_reason } from "../RFC
 /**
  * @summary Abort_PDU
  * @description
- * 
+ *
+ * Abort of the presentation connection
+ * ([RFC 1085 §8.2](https://datatracker.ietf.org/doc/html/rfc1085#section-8.2),
+ * [§8.3](https://datatracker.ietf.org/doc/html/rfc1085#section-8.3),
+ * [Appendix A](https://datatracker.ietf.org/doc/html/rfc1085)).
+ *
+ * User-initiated (P-U-ABORT): `user-data` may be present and is
+ * one A-ABORT PDU in presentation context 3. The presentation
+ * context identifier list is contained in that user data, not
+ * in a separate component. The service flushes the serializer,
+ * sends the abort, and releases the transport. Effects are
+ * unsequenced with respect to earlier service invocations and
+ * may be destructive. On receipt the peer issues
+ * P-U-ABORT.INDICATION and enters IDLE.
+ *
+ * Provider-initiated (P-P-ABORT): `reason` is always present.
+ * The service's abort-data parameter is none. The provider
+ * flushes the serializer and releases the transport. The
+ * provider also builds this abort when a non-abort PDU arrives
+ * in a state that does not handle it
+ * ([§10.3](https://datatracker.ietf.org/doc/html/rfc1085#section-10.3)).
+ * In IDLE it stays IDLE; otherwise it issues
+ * P-P-ABORT.INDICATION and enters IDLE.
+ *
+ * The memo does not say how to classify an abort that carries
+ * both `user-data` and `reason`, or neither.
+ *
+ * On TCP, an abort is queued only when the serializer input
+ * queue is empty and the serializer is idle. Otherwise the
+ * abort is discarded and the serializer is flushed. A queued
+ * abort is guarded by a small timer; the memo does not give
+ * that timer's duration. If the timer expires first, the
+ * serializer is flushed
+ * ([§10.1](https://datatracker.ietf.org/doc/html/rfc1085#section-10.1)).
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * Abort-PDU ::= [4] SEQUENCE {
  *     -- present only in the udp-based service
@@ -26,7 +60,7 @@ import { Abort_reason, _decode_Abort_reason, _encode_Abort_reason } from "../RFC
  *     reason      [1] IMPLICIT Abort-reason OPTIONAL
  * }
  * ```
- * 
+ *
  * @class
  */
 export
@@ -34,18 +68,37 @@ class Abort_PDU {
     constructor (
         /**
          * @summary `reference`.
+         * @description
+         *
+         * Session connection identifier. Present only on the
+         * udp-based service (Appendix A).
+         *
          * @public
          * @readonly
          */
         readonly reference: OPTIONAL<SessionConnectionIdentifier>,
         /**
          * @summary `user_data`.
+         * @description
+         *
+         * Abort user data. May be present on a user-initiated
+         * abort: one A-ABORT PDU in presentation context 3
+         * ([§8.2](https://datatracker.ietf.org/doc/html/rfc1085#section-8.2)
+         * item 2).
+         *
          * @public
          * @readonly
          */
         readonly user_data: OPTIONAL<UserData_PDU>,
         /**
          * @summary `reason`.
+         * @description
+         *
+         * Provider reason. Always present on a
+         * provider-initiated abort
+         * ([§8.3](https://datatracker.ietf.org/doc/html/rfc1085#section-8.3),
+         * Appendix A).
+         *
          * @public
          * @readonly
          */
