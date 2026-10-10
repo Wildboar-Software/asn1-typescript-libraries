@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -61,7 +62,32 @@ class H221NonStandard {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        {
+            const n = typeof t35CountryCode1 === "bigint" ? t35CountryCode1 : BigInt(t35CountryCode1);
+            if (n < 0n || n > 255n) {
+                throw new ASN1OverflowError("H221NonStandard.t35CountryCode1 violates INTEGER range");
+            }
+        }
+        {
+            const n = typeof t35CountryCode2 === "bigint" ? t35CountryCode2 : BigInt(t35CountryCode2);
+            if (n < 0n || n > 255n) {
+                throw new ASN1OverflowError("H221NonStandard.t35CountryCode2 violates INTEGER range");
+            }
+        }
+        {
+            const n = typeof t35Extension === "bigint" ? t35Extension : BigInt(t35Extension);
+            if (n < 0n || n > 255n) {
+                throw new ASN1OverflowError("H221NonStandard.t35Extension violates INTEGER range");
+            }
+        }
+        {
+            const n = typeof manufacturerCode === "bigint" ? manufacturerCode : BigInt(manufacturerCode);
+            if (n < 0n || n > 65535n) {
+                throw new ASN1OverflowError("H221NonStandard.manufacturerCode violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a H221NonStandard

@@ -20,7 +20,11 @@ enum _enum_for_TopologyRequest_topologyDirectionExtension {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TopologyRequest-topologyDirectionExtension ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * TopologyRequest-topologyDirectionExtension ::= ENUMERATED {
+ *     onewayexternal(0),
+ *     onewayboth(1),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

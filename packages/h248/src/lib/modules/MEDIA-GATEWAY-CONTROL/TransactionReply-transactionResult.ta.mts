@@ -17,7 +17,10 @@ import { ActionReply, _decode_ActionReply, _encode_ActionReply } from "../MEDIA-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TransactionReply-transactionResult ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * TransactionReply-transactionResult ::= CHOICE {
+ *     transactionError  [0] ErrorDescriptor,
+ *     actionReplies     [1] SEQUENCE OF ActionReply
+ * }
  * ```
  */
 export

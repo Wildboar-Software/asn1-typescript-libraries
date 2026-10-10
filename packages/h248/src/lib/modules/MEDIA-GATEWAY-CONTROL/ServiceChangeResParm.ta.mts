@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
@@ -75,7 +76,14 @@ class ServiceChangeResParm {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (serviceChangeVersion !== undefined) {
+            const n = typeof serviceChangeVersion === "bigint" ? serviceChangeVersion : BigInt(serviceChangeVersion);
+            if (n < 0n || n > 99n) {
+                throw new ASN1OverflowError("ServiceChangeResParm.serviceChangeVersion violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a ServiceChangeResParm

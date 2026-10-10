@@ -5,7 +5,8 @@ import {
     NULL,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudPropertyParm, _decode_IndAudPropertyParm, _encode_IndAudPropertyParm } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyParm.ta.mjs";
@@ -104,7 +105,14 @@ class ContextAttrAuditRequest {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (selectpriority !== undefined) {
+            const n = typeof selectpriority === "bigint" ? selectpriority : BigInt(selectpriority);
+            if (n < 0n || n > 15n) {
+                throw new ASN1OverflowError("ContextAttrAuditRequest.selectpriority violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a ContextAttrAuditRequest

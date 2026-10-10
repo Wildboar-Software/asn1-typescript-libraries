@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String
+    IA5String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -34,7 +35,11 @@ class ServiceChangeProfile {
          * @readonly
          */
         readonly profileName: IA5String
-    ) {}
+    ) {
+            if (profileName.length < 1 || profileName.length > 67) {
+                throw new ASN1SizeError("ServiceChangeProfile.profileName violates SIZE constraint");
+            }
+    }
 
     /**
      * @summary Restructures an object into a ServiceChangeProfile

@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     IA5String,
     INTEGER,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -73,7 +74,32 @@ class DigitMapValue {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (startTimer !== undefined) {
+            const n = typeof startTimer === "bigint" ? startTimer : BigInt(startTimer);
+            if (n < 0n || n > 99n) {
+                throw new ASN1OverflowError("DigitMapValue.startTimer violates INTEGER range");
+            }
+        }
+        if (shortTimer !== undefined) {
+            const n = typeof shortTimer === "bigint" ? shortTimer : BigInt(shortTimer);
+            if (n < 0n || n > 99n) {
+                throw new ASN1OverflowError("DigitMapValue.shortTimer violates INTEGER range");
+            }
+        }
+        if (longTimer !== undefined) {
+            const n = typeof longTimer === "bigint" ? longTimer : BigInt(longTimer);
+            if (n < 0n || n > 99n) {
+                throw new ASN1OverflowError("DigitMapValue.longTimer violates INTEGER range");
+            }
+        }
+        if (durationTimer !== undefined) {
+            const n = typeof durationTimer === "bigint" ? durationTimer : BigInt(durationTimer);
+            if (n < 0n || n > 99n) {
+                throw new ASN1OverflowError("DigitMapValue.durationTimer violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a DigitMapValue

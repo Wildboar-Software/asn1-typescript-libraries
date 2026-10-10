@@ -4,7 +4,8 @@ import {
     NULL,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceChangeMethod, _decode_ServiceChangeMethod, _encode_ServiceChangeMethod, _enum_for_ServiceChangeMethod } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeMethod.ta.mjs";
@@ -138,7 +139,20 @@ class ServiceChangeParm {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (serviceChangeVersion !== undefined) {
+            const n = typeof serviceChangeVersion === "bigint" ? serviceChangeVersion : BigInt(serviceChangeVersion);
+            if (n < 0n || n > 99n) {
+                throw new ASN1OverflowError("ServiceChangeParm.serviceChangeVersion violates INTEGER range");
+            }
+        }
+        if (serviceChangeDelay !== undefined) {
+            const n = typeof serviceChangeDelay === "bigint" ? serviceChangeDelay : BigInt(serviceChangeDelay);
+            if (n < 0n || n > 4294967295n) {
+                throw new ASN1OverflowError("ServiceChangeParm.serviceChangeDelay violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a ServiceChangeParm

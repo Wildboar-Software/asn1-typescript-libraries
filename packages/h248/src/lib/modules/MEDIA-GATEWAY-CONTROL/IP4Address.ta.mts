@@ -4,7 +4,9 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +43,17 @@ class IP4Address {
          * @readonly
          */
         readonly portNumber: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+            if (address.length !== 4) {
+                throw new ASN1SizeError("IP4Address.address violates SIZE constraint");
+            }
+        if (portNumber !== undefined) {
+            const n = typeof portNumber === "bigint" ? portNumber : BigInt(portNumber);
+            if (n < 0n || n > 65535n) {
+                throw new ASN1OverflowError("IP4Address.portNumber violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a IP4Address

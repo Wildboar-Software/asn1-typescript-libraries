@@ -4,7 +4,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TopologyRequest, _decode_TopologyRequest, _encode_TopologyRequest } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest.ta.mjs";
@@ -86,7 +87,14 @@ class ContextRequest {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (priority !== undefined) {
+            const n = typeof priority === "bigint" ? priority : BigInt(priority);
+            if (n < 0n || n > 15n) {
+                throw new ASN1OverflowError("ContextRequest.priority violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a ContextRequest

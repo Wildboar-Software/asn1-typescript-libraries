@@ -3,7 +3,8 @@ import {
     IA5String,
     OBJECT_IDENTIFIER,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { H221NonStandard, _decode_H221NonStandard, _encode_H221NonStandard } from "../MEDIA-GATEWAY-CONTROL/H221NonStandard.ta.mjs";
@@ -49,7 +50,13 @@ function _decode_NonStandardIdentifier (el: _Element): NonStandardIdentifier {
     "CONTEXT 1": [ "h221NonStandard", $._decode_implicit<H221NonStandard>(() => _decode_H221NonStandard) ],
     "CONTEXT 2": [ "experimental", $._decode_implicit<IA5String>(() => $._decodeIA5String) ]
 }); }
-    return _cached_decoder_for_NonStandardIdentifier(el);
+    const value = _cached_decoder_for_NonStandardIdentifier(el);
+    if (!(value instanceof _Element) && "experimental" in value) {
+        if (value.experimental.length !== 8) {
+            throw new ASN1SizeError("NonStandardIdentifier.experimental violates SIZE constraint");
+        }
+    }
+    return value;
 }
 
 let _cached_encoder_for_NonStandardIdentifier: $.ASN1Encoder<NonStandardIdentifier> | null = null;

@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { WildcardField, _decode_WildcardField, _encode_WildcardField } from "../MEDIA-GATEWAY-CONTROL/WildcardField.ta.mjs";
@@ -48,7 +49,11 @@ class TerminationID {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+            if (id.length < 1 || id.length > 8) {
+                throw new ASN1SizeError("TerminationID.id violates SIZE constraint");
+            }
+    }
 
     /**
      * @summary Restructures an object into a TerminationID

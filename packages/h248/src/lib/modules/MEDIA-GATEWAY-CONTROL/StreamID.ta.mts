@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type StreamID = INTEGER;
-export const _decode_StreamID = $._decodeInteger;
+export const _decode_StreamID = (el: _Element): StreamID => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    if (n < 0n || n > 65535n) {
+        throw new ASN1OverflowError("StreamID violates INTEGER range");
+    }
+    return value;
+};
 export const _encode_StreamID = $._encodeInteger;
 
 

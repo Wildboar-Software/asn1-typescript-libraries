@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudPropertyGroup, _decode_IndAudPropertyGroup, _encode_IndAudPropertyGroup } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyGroup.ta.mjs";
@@ -48,7 +49,14 @@ class IndAudLocalRemoteDescriptor {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (propGroupID !== undefined) {
+            const n = typeof propGroupID === "bigint" ? propGroupID : BigInt(propGroupID);
+            if (n < 0n || n > 65535n) {
+                throw new ASN1OverflowError("IndAudLocalRemoteDescriptor.propGroupID violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a IndAudLocalRemoteDescriptor

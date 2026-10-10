@@ -14,7 +14,18 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AuditDescriptor-auditToken ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * AuditDescriptor-auditToken ::= BIT STRING {
+ *     muxToken(0),
+ *     modemToken(1),
+ *     mediaToken(2),
+ *     eventsToken(3),
+ *     signalsToken(4),
+ *     digitMapToken(5),
+ *     statsToken(6),
+ *     observedEventsToken(7),
+ *     packagesToken(8),
+ *     eventBufferToken(9)
+ * }
  * ```
  */
 export

@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String
+    IA5String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +42,14 @@ class TimeNotation {
          * @readonly
          */
         readonly time: IA5String
-    ) {}
+    ) {
+            if (date.length !== 8) {
+                throw new ASN1SizeError("TimeNotation.date violates SIZE constraint");
+            }
+            if (time.length !== 8) {
+                throw new ASN1SizeError("TimeNotation.time violates SIZE constraint");
+            }
+    }
 
     /**
      * @summary Restructures an object into a TimeNotation

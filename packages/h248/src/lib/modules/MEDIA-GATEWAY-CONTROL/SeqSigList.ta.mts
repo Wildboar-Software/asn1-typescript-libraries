@@ -3,7 +3,8 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Signal, _decode_Signal, _encode_Signal } from "../MEDIA-GATEWAY-CONTROL/Signal.ta.mjs";
@@ -41,7 +42,12 @@ class SeqSigList {
          * @readonly
          */
         readonly signalList: Signal[]
-    ) {}
+    ) {
+            const n = typeof id === "bigint" ? id : BigInt(id);
+            if (n < 0n || n > 65535n) {
+                throw new ASN1OverflowError("SeqSigList.id violates INTEGER range");
+            }
+    }
 
     /**
      * @summary Restructures an object into a SeqSigList

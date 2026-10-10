@@ -2,7 +2,8 @@
 import {
     INTEGER,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IP4Address, _decode_IP4Address, _encode_IP4Address } from "../MEDIA-GATEWAY-CONTROL/IP4Address.ta.mjs";
@@ -64,7 +65,14 @@ function _decode_ServiceChangeAddress (el: _Element): ServiceChangeAddress {
     "CONTEXT 4": [ "deviceName", $._decode_implicit<PathName>(() => _decode_PathName) ],
     "CONTEXT 5": [ "mtpAddress", $._decode_implicit<MtpAddress>(() => _decode_MtpAddress) ]
 }); }
-    return _cached_decoder_for_ServiceChangeAddress(el);
+    const value = _cached_decoder_for_ServiceChangeAddress(el);
+    if (!(value instanceof _Element) && "portNumber" in value) {
+        const n = typeof value.portNumber === "bigint" ? value.portNumber : BigInt(value.portNumber);
+        if (n < 0n || n > 65535n) {
+            throw new ASN1OverflowError("ServiceChangeAddress.portNumber violates INTEGER range");
+        }
+    }
+    return value;
 }
 
 let _cached_encoder_for_ServiceChangeAddress: $.ASN1Encoder<ServiceChangeAddress> | null = null;

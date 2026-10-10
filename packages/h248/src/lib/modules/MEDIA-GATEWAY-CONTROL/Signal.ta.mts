@@ -4,7 +4,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SignalName, _decode_SignalName, _encode_SignalName } from "../MEDIA-GATEWAY-CONTROL/SignalName.ta.mjs";
@@ -117,7 +118,20 @@ class Signal {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (duration !== undefined) {
+            const n = typeof duration === "bigint" ? duration : BigInt(duration);
+            if (n < 0n || n > 65535n) {
+                throw new ASN1OverflowError("Signal.duration violates INTEGER range");
+            }
+        }
+        if (intersigDelay !== undefined) {
+            const n = typeof intersigDelay === "bigint" ? intersigDelay : BigInt(intersigDelay);
+            if (n < 0n || n > 65535n) {
+                throw new ASN1OverflowError("Signal.intersigDelay violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a Signal

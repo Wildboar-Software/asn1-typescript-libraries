@@ -17,7 +17,10 @@ import { Transaction, _decode_Transaction, _encode_Transaction } from "../MEDIA-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Message-messageBody ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Message-messageBody ::= CHOICE {
+ *     messageError   [0] ErrorDescriptor,
+ *     transactions   [1] SEQUENCE OF Transaction
+ * }
  * ```
  */
 export

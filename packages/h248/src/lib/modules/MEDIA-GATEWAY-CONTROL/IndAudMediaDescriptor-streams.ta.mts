@@ -17,7 +17,10 @@ import { IndAudStreamDescriptor, _decode_IndAudStreamDescriptor, _encode_IndAudS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IndAudMediaDescriptor-streams ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * IndAudMediaDescriptor-streams ::= CHOICE {
+ *     oneStream    [0] IndAudStreamParms,
+ *     multiStream  [1] SEQUENCE OF IndAudStreamDescriptor
+ * }
  * ```
  */
 export

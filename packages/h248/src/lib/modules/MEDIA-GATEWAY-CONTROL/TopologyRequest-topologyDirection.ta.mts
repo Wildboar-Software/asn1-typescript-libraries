@@ -13,7 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TopologyRequest-topologyDirection ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * TopologyRequest-topologyDirection ::= ENUMERATED {
+ *     bothway(0),
+ *     isolate(1),
+ *     oneway(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -32,7 +36,11 @@ enum _enum_for_TopologyRequest_topologyDirection {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TopologyRequest-topologyDirection ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * TopologyRequest-topologyDirection ::= ENUMERATED {
+ *     bothway(0),
+ *     isolate(1),
+ *     oneway(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -47,7 +55,11 @@ type TopologyRequest_topologyDirection = _enum_for_TopologyRequest_topologyDirec
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TopologyRequest-topologyDirection ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * TopologyRequest-topologyDirection ::= ENUMERATED {
+ *     bothway(0),
+ *     isolate(1),
+ *     oneway(2)
+ * }
  * ```
  * 
  * @enum {number}
