@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String
+    IA5String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +42,14 @@ class TimeNotation {
          * @readonly
          */
         readonly time: IA5String
-    ) {}
+    ) {
+            if (date.length !== 8) {
+                throw new ASN1SizeError("TimeNotation.date violates SIZE constraint");
+            }
+            if (time.length !== 8) {
+                throw new ASN1SizeError("TimeNotation.time violates SIZE constraint");
+            }
+    }
 
     /**
      * @summary Restructures an object into a TimeNotation
@@ -119,10 +127,8 @@ function _decode_TimeNotation (el: _Element): TimeNotation {
     }
     sequence[0].name = "date";
     sequence[1].name = "time";
-    let date!: IA5String;
-    let time!: IA5String;
-    date = $._decode_implicit<IA5String>(() => $._decodeIA5String)(sequence[0]);
-    time = $._decode_implicit<IA5String>(() => $._decodeIA5String)(sequence[1]);
+    const date: IA5String = $._decode_implicit<IA5String>(() => $._decodeIA5String)(sequence[0]);
+    const time: IA5String = $._decode_implicit<IA5String>(() => $._decodeIA5String)(sequence[1]);
     return new TimeNotation(
         date,
         time,

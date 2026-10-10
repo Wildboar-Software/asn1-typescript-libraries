@@ -3,11 +3,11 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudSignal, _decode_IndAudSignal, _encode_IndAudSignal } from "../MEDIA-GATEWAY-CONTROL/IndAudSignal.ta.mjs";
-// export { IndAudSignal, _decode_IndAudSignal, _encode_IndAudSignal } from "../MEDIA-GATEWAY-CONTROL/IndAudSignal.ta.mjs";
 
 
 /**
@@ -41,7 +41,12 @@ class IndAudSeqSigList {
          * @readonly
          */
         readonly signalList: OPTIONAL<IndAudSignal>
-    ) {}
+    ) {
+            const n = typeof id === "bigint" ? id : BigInt(id);
+            if (n < 0n || n > 65535n) {
+                throw new ASN1OverflowError("IndAudSeqSigList.id violates INTEGER range");
+            }
+    }
 
     /**
      * @summary Restructures an object into a IndAudSeqSigList

@@ -3,13 +3,12 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
-// export { MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
 import { Message_messageBody, _decode_Message_messageBody, _encode_Message_messageBody } from "../MEDIA-GATEWAY-CONTROL/Message-messageBody.ta.mjs";
-// export { Message_messageBody, _decode_Message_messageBody, _encode_Message_messageBody } from "../MEDIA-GATEWAY-CONTROL/Message-messageBody.ta.mjs";
 
 
 /**
@@ -62,7 +61,12 @@ class Message {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+            const n = typeof version === "bigint" ? version : BigInt(version);
+            if (n < 0n || n > 99n) {
+                throw new ASN1OverflowError("Message.version violates INTEGER range");
+            }
+    }
 
     /**
      * @summary Restructures an object into a Message
@@ -142,12 +146,9 @@ function _decode_Message (el: _Element): Message {
     sequence[0].name = "version";
     sequence[1].name = "mId";
     sequence[2].name = "messageBody";
-    let version!: INTEGER;
-    let mId!: MId;
-    let messageBody!: Message_messageBody;
-    version = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    mId = $._decode_explicit<MId>(() => _decode_MId)(sequence[1]);
-    messageBody = $._decode_explicit<Message_messageBody>(() => _decode_Message_messageBody)(sequence[2]);
+    const version: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const mId: MId = $._decode_explicit<MId>(() => _decode_MId)(sequence[1]);
+    const messageBody: Message_messageBody = $._decode_explicit<Message_messageBody>(() => _decode_Message_messageBody)(sequence[2]);
     return new Message(
         version,
         mId,

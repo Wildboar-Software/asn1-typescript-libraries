@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationStateDescriptor, _decode_TerminationStateDescriptor, _encode_TerminationStateDescriptor } from "../MEDIA-GATEWAY-CONTROL/TerminationStateDescriptor.ta.mjs";
-// export { TerminationStateDescriptor, _decode_TerminationStateDescriptor, _encode_TerminationStateDescriptor } from "../MEDIA-GATEWAY-CONTROL/TerminationStateDescriptor.ta.mjs";
 import { MediaDescriptor_streams, _decode_MediaDescriptor_streams, _encode_MediaDescriptor_streams } from "../MEDIA-GATEWAY-CONTROL/MediaDescriptor-streams.ta.mjs";
-// export { MediaDescriptor_streams, _decode_MediaDescriptor_streams, _encode_MediaDescriptor_streams } from "../MEDIA-GATEWAY-CONTROL/MediaDescriptor-streams.ta.mjs";
 
 
 /**
@@ -127,7 +125,7 @@ function _decode_MediaDescriptor (el: _Element): MediaDescriptor {
     if (!_cached_decoder_for_MediaDescriptor) { _cached_decoder_for_MediaDescriptor = function (el: _Element): MediaDescriptor {
     let termStateDescr: OPTIONAL<TerminationStateDescriptor>;
     let streams: OPTIONAL<MediaDescriptor_streams>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "termStateDescr": (_el: _Element): void => { termStateDescr = $._decode_implicit<TerminationStateDescriptor>(() => _decode_TerminationStateDescriptor)(_el); },
         "streams": (_el: _Element): void => { streams = $._decode_explicit<MediaDescriptor_streams>(() => _decode_MediaDescriptor_streams)(_el); }

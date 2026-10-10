@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EventName, _decode_EventName, _encode_EventName } from "../MEDIA-GATEWAY-CONTROL/EventName.ta.mjs";
-// export { EventName, _decode_EventName, _encode_EventName } from "../MEDIA-GATEWAY-CONTROL/EventName.ta.mjs";
 import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
-// export { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
 import { EventParameter, _decode_EventParameter, _encode_EventParameter } from "../MEDIA-GATEWAY-CONTROL/EventParameter.ta.mjs";
-// export { EventParameter, _decode_EventParameter, _encode_EventParameter } from "../MEDIA-GATEWAY-CONTROL/EventParameter.ta.mjs";
 
 
 /**
@@ -134,7 +131,7 @@ function _decode_EventSpec (el: _Element): EventSpec {
     let eventName!: EventName;
     let streamID: OPTIONAL<StreamID>;
     let eventParList!: EventParameter[];
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eventName": (_el: _Element): void => { eventName = $._decode_implicit<EventName>(() => _decode_EventName)(_el); },
         "streamID": (_el: _Element): void => { streamID = $._decode_implicit<StreamID>(() => _decode_StreamID)(_el); },

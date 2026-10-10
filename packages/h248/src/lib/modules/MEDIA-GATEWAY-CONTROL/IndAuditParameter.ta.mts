@@ -5,19 +5,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudMediaDescriptor, _decode_IndAudMediaDescriptor, _encode_IndAudMediaDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudMediaDescriptor.ta.mjs";
-// export { IndAudMediaDescriptor, _decode_IndAudMediaDescriptor, _encode_IndAudMediaDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudMediaDescriptor.ta.mjs";
 import { IndAudEventsDescriptor, _decode_IndAudEventsDescriptor, _encode_IndAudEventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudEventsDescriptor.ta.mjs";
-// export { IndAudEventsDescriptor, _decode_IndAudEventsDescriptor, _encode_IndAudEventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudEventsDescriptor.ta.mjs";
 import { IndAudEventBufferDescriptor, _decode_IndAudEventBufferDescriptor, _encode_IndAudEventBufferDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudEventBufferDescriptor.ta.mjs";
-// export { IndAudEventBufferDescriptor, _decode_IndAudEventBufferDescriptor, _encode_IndAudEventBufferDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudEventBufferDescriptor.ta.mjs";
 import { IndAudSignalsDescriptor, _decode_IndAudSignalsDescriptor, _encode_IndAudSignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudSignalsDescriptor.ta.mjs";
-// export { IndAudSignalsDescriptor, _decode_IndAudSignalsDescriptor, _encode_IndAudSignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudSignalsDescriptor.ta.mjs";
 import { IndAudDigitMapDescriptor, _decode_IndAudDigitMapDescriptor, _encode_IndAudDigitMapDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudDigitMapDescriptor.ta.mjs";
-// export { IndAudDigitMapDescriptor, _decode_IndAudDigitMapDescriptor, _encode_IndAudDigitMapDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudDigitMapDescriptor.ta.mjs";
 import { IndAudStatisticsDescriptor, _decode_IndAudStatisticsDescriptor, _encode_IndAudStatisticsDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudStatisticsDescriptor.ta.mjs";
-// export { IndAudStatisticsDescriptor, _decode_IndAudStatisticsDescriptor, _encode_IndAudStatisticsDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudStatisticsDescriptor.ta.mjs";
 import { IndAudPackagesDescriptor, _decode_IndAudPackagesDescriptor, _encode_IndAudPackagesDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudPackagesDescriptor.ta.mjs";
-// export { IndAudPackagesDescriptor, _decode_IndAudPackagesDescriptor, _encode_IndAudPackagesDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudPackagesDescriptor.ta.mjs";
 
 
 /**

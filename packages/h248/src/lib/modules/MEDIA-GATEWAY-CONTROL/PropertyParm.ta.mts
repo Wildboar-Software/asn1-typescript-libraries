@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
-// export { PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
 import { PropertyID, _decode_PropertyID, _encode_PropertyID } from "../MEDIA-GATEWAY-CONTROL/PropertyID.ta.mjs";
-// export { PropertyID, _decode_PropertyID, _encode_PropertyID } from "../MEDIA-GATEWAY-CONTROL/PropertyID.ta.mjs";
 import { PropertyParm_extraInfo, _decode_PropertyParm_extraInfo, _encode_PropertyParm_extraInfo } from "../MEDIA-GATEWAY-CONTROL/PropertyParm-extraInfo.ta.mjs";
-// export { PropertyParm_extraInfo, _decode_PropertyParm_extraInfo, _encode_PropertyParm_extraInfo } from "../MEDIA-GATEWAY-CONTROL/PropertyParm-extraInfo.ta.mjs";
 
 
 /**
@@ -141,7 +138,7 @@ function _decode_PropertyParm (el: _Element): PropertyParm {
     let propertyName!: PkgdName;
     let value!: PropertyID[];
     let extraInfo: OPTIONAL<PropertyParm_extraInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "propertyName": (_el: _Element): void => { propertyName = $._decode_implicit<PkgdName>(() => _decode_PkgdName)(_el); },
         "value": (_el: _Element): void => { value = $._decode_implicit<PropertyID[]>(() => $._decodeSequenceOf<PropertyID>(() => _decode_PropertyID))(_el); },

@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EventParamValueV1, _decode_EventParamValueV1, _encode_EventParamValueV1 } from "../H238V1-SUPPORT/EventParamValueV1.ta.mjs";
-// export { EventParamValueV1, _decode_EventParamValueV1, _encode_EventParamValueV1 } from "../H238V1-SUPPORT/EventParamValueV1.ta.mjs";
+import { EventParameterName, _decode_EventParameterName, _encode_EventParameterName } from "../MEDIA-GATEWAY-CONTROL/EventParameterName.ta.mjs";
 
 
 /**
@@ -71,7 +71,7 @@ class EventParameterV1 {
  */
 export
 const _root_component_type_list_1_spec_for_EventParameterV1: $.ComponentSpec[] = [
-    /* FIXME: eventParamterName COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("eventParamterName", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("value", false, $.hasTag(_TagClass.context, 1))
 ];
 
@@ -118,10 +118,8 @@ function _decode_EventParameterV1 (el: _Element): EventParameterV1 {
     }
     sequence[0].name = "eventParamterName";
     sequence[1].name = "value";
-    let eventParamterName!: EventParameterName;
-    let value!: EventParamValueV1;
-    eventParamterName = $._decode_implicit<EventParameterName>(() => _decode_EventParameterName)(sequence[0]);
-    value = $._decode_implicit<EventParamValueV1>(() => _decode_EventParamValueV1)(sequence[1]);
+    const eventParamterName: EventParameterName = $._decode_implicit<EventParameterName>(() => _decode_EventParameterName)(sequence[0]);
+    const value: EventParamValueV1 = $._decode_implicit<EventParamValueV1>(() => _decode_EventParamValueV1)(sequence[1]);
     return new EventParameterV1(
         eventParamterName,
         value,

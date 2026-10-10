@@ -42,6 +42,7 @@ jobs:
           - "ftam"
           - "gmi-attributemodule"
           - "guls"
+          - "h248"
           - "isis"
           - "iso-9798-3-sasl"
           - "kerberos5"

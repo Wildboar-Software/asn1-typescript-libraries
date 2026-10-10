@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
-// export { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
 import { ObservedEventsDescriptor, _decode_ObservedEventsDescriptor, _encode_ObservedEventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/ObservedEventsDescriptor.ta.mjs";
-// export { ObservedEventsDescriptor, _decode_ObservedEventsDescriptor, _encode_ObservedEventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/ObservedEventsDescriptor.ta.mjs";
 import { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
-// export { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
 
 
 /**
@@ -134,7 +131,7 @@ function _decode_NotifyRequest (el: _Element): NotifyRequest {
     let terminationID!: TerminationIDList;
     let observedEventsDescriptor!: ObservedEventsDescriptor;
     let errorDescriptor: OPTIONAL<ErrorDescriptor>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "terminationID": (_el: _Element): void => { terminationID = $._decode_implicit<TerminationIDList>(() => _decode_TerminationIDList)(_el); },
         "observedEventsDescriptor": (_el: _Element): void => { observedEventsDescriptor = $._decode_implicit<ObservedEventsDescriptor>(() => _decode_ObservedEventsDescriptor)(_el); },

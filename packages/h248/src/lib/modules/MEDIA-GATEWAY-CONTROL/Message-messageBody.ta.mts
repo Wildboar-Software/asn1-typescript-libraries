@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
-// export { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
 import { Transaction, _decode_Transaction, _encode_Transaction } from "../MEDIA-GATEWAY-CONTROL/Transaction.ta.mjs";
-// export { Transaction, _decode_Transaction, _encode_Transaction } from "../MEDIA-GATEWAY-CONTROL/Transaction.ta.mjs";
 
 
 /**
@@ -17,7 +15,10 @@ import { Transaction, _decode_Transaction, _encode_Transaction } from "../MEDIA-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Message-messageBody ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Message-messageBody ::= CHOICE {
+ *     messageError   [0] ErrorDescriptor,
+ *     transactions   [1] SEQUENCE OF Transaction
+ * }
  * ```
  */
 export

@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
-// export { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
 import { ServiceChangeResParm, _decode_ServiceChangeResParm, _encode_ServiceChangeResParm } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeResParm.ta.mjs";
-// export { ServiceChangeResParm, _decode_ServiceChangeResParm, _encode_ServiceChangeResParm } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeResParm.ta.mjs";
 
 
 /**

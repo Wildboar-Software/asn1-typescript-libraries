@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
-// export { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
 import { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor.ta.mjs";
-// export { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor.ta.mjs";
 import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
-// export { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
 
 
 /**
@@ -133,7 +130,7 @@ function _decode_AuditRequest (el: _Element): AuditRequest {
     let terminationID!: TerminationID;
     let auditDescriptor!: AuditDescriptor;
     let terminationIDList: OPTIONAL<TerminationIDList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "terminationID": (_el: _Element): void => { terminationID = $._decode_implicit<TerminationID>(() => _decode_TerminationID)(_el); },
         "auditDescriptor": (_el: _Element): void => { auditDescriptor = $._decode_implicit<AuditDescriptor>(() => _decode_AuditDescriptor)(_el); },

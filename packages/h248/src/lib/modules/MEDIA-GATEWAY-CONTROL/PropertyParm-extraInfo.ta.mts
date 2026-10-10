@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_Relation, _encode_Relation, Relation } from "../MEDIA-GATEWAY-CONTROL/Relation.ta.mjs";
-// export { Relation, _enum_for_Relation, Relation_greaterThan /* IMPORTED_LONG_ENUMERATION_ITEM */, greaterThan /* IMPORTED_SHORT_ENUMERATION_ITEM */, Relation_smallerThan /* IMPORTED_LONG_ENUMERATION_ITEM */, smallerThan /* IMPORTED_SHORT_ENUMERATION_ITEM */, Relation_unequalTo /* IMPORTED_LONG_ENUMERATION_ITEM */, unequalTo /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Relation, _encode_Relation } from "../MEDIA-GATEWAY-CONTROL/Relation.ta.mjs";
 
 
 /**
@@ -16,7 +15,11 @@ import { _decode_Relation, _encode_Relation, Relation } from "../MEDIA-GATEWAY-C
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PropertyParm-extraInfo ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * PropertyParm-extraInfo ::= CHOICE {
+ *     relation  [0] Relation,
+ *     range     [1] BOOLEAN,
+ *     sublist   [2] BOOLEAN
+ * }
  * ```
  */
 export

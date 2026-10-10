@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudTerminationStateDescriptor, _decode_IndAudTerminationStateDescriptor, _encode_IndAudTerminationStateDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudTerminationStateDescriptor.ta.mjs";
-// export { IndAudTerminationStateDescriptor, _decode_IndAudTerminationStateDescriptor, _encode_IndAudTerminationStateDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudTerminationStateDescriptor.ta.mjs";
 import { IndAudMediaDescriptor_streams, _decode_IndAudMediaDescriptor_streams, _encode_IndAudMediaDescriptor_streams } from "../MEDIA-GATEWAY-CONTROL/IndAudMediaDescriptor-streams.ta.mjs";
-// export { IndAudMediaDescriptor_streams, _decode_IndAudMediaDescriptor_streams, _encode_IndAudMediaDescriptor_streams } from "../MEDIA-GATEWAY-CONTROL/IndAudMediaDescriptor-streams.ta.mjs";
 
 
 /**
@@ -127,7 +125,7 @@ function _decode_IndAudMediaDescriptor (el: _Element): IndAudMediaDescriptor {
     if (!_cached_decoder_for_IndAudMediaDescriptor) { _cached_decoder_for_IndAudMediaDescriptor = function (el: _Element): IndAudMediaDescriptor {
     let termStateDescr: OPTIONAL<IndAudTerminationStateDescriptor>;
     let streams: OPTIONAL<IndAudMediaDescriptor_streams>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "termStateDescr": (_el: _Element): void => { termStateDescr = $._decode_implicit<IndAudTerminationStateDescriptor>(() => _decode_IndAudTerminationStateDescriptor)(_el); },
         "streams": (_el: _Element): void => { streams = $._decode_explicit<IndAudMediaDescriptor_streams>(() => _decode_IndAudMediaDescriptor_streams)(_el); }

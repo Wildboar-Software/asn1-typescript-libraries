@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,35 +20,15 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type TransactionId = INTEGER;
-
-let _cached_decoder_for_TransactionId: $.ASN1Decoder<TransactionId> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) TransactionId
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TransactionId (el: _Element): TransactionId {
-    if (!_cached_decoder_for_TransactionId) { _cached_decoder_for_TransactionId = $._decodeInteger; }
-    return _cached_decoder_for_TransactionId(el);
-}
-
-let _cached_encoder_for_TransactionId: $.ASN1Encoder<TransactionId> | null = null;
-
-/**
- * @summary Encodes a(n) TransactionId into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TransactionId, encoded as an ASN.1 Element.
- */
-export
-function _encode_TransactionId (value: TransactionId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TransactionId) { _cached_encoder_for_TransactionId = $._encodeInteger; }
-    return _cached_encoder_for_TransactionId(value, elGetter);
-}
+export const _decode_TransactionId = (el: _Element): TransactionId => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    if (n < 0n || n > 4294967295n) {
+        throw new ASN1OverflowError("TransactionId violates INTEGER range");
+    }
+    return value;
+};
+export const _encode_TransactionId = $._encodeInteger;
 
 
 /* eslint-enable */

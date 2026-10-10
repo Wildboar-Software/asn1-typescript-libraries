@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SecondEventsDescriptor, _decode_SecondEventsDescriptor, _encode_SecondEventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SecondEventsDescriptor.ta.mjs";
-// export { SecondEventsDescriptor, _decode_SecondEventsDescriptor, _encode_SecondEventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SecondEventsDescriptor.ta.mjs";
 import { SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
-// export { SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
 
 
 /**
@@ -123,7 +121,7 @@ function _decode_RegulatedEmbeddedDescriptor (el: _Element): RegulatedEmbeddedDe
     if (!_cached_decoder_for_RegulatedEmbeddedDescriptor) { _cached_decoder_for_RegulatedEmbeddedDescriptor = function (el: _Element): RegulatedEmbeddedDescriptor {
     let secondEvent: OPTIONAL<SecondEventsDescriptor>;
     let signalsDescriptor: OPTIONAL<SignalsDescriptor>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "secondEvent": (_el: _Element): void => { secondEvent = $._decode_implicit<SecondEventsDescriptor>(() => _decode_SecondEventsDescriptor)(_el); },
         "signalsDescriptor": (_el: _Element): void => { signalsDescriptor = $._decode_implicit<SignalsDescriptor>(() => _decode_SignalsDescriptor)(_el); }

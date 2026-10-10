@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SigParameterName, _decode_SigParameterName, _encode_SigParameterName } from "../MEDIA-GATEWAY-CONTROL/SigParameterName.ta.mjs";
-// export { SigParameterName, _decode_SigParameterName, _encode_SigParameterName } from "../MEDIA-GATEWAY-CONTROL/SigParameterName.ta.mjs";
 import { SigParamValues, _decode_SigParamValues, _encode_SigParamValues } from "../MEDIA-GATEWAY-CONTROL/SigParamValues.ta.mjs";
-// export { SigParamValues, _decode_SigParamValues, _encode_SigParamValues } from "../MEDIA-GATEWAY-CONTROL/SigParamValues.ta.mjs";
 import { SigParameter_extraInfo, _decode_SigParameter_extraInfo, _encode_SigParameter_extraInfo } from "../MEDIA-GATEWAY-CONTROL/SigParameter-extraInfo.ta.mjs";
-// export { SigParameter_extraInfo, _decode_SigParameter_extraInfo, _encode_SigParameter_extraInfo } from "../MEDIA-GATEWAY-CONTROL/SigParameter-extraInfo.ta.mjs";
 
 
 /**
@@ -142,7 +139,7 @@ function _decode_SigParameter (el: _Element): SigParameter {
     let sigParameterName!: SigParameterName;
     let value!: SigParamValues;
     let extraInfo: OPTIONAL<SigParameter_extraInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sigParameterName": (_el: _Element): void => { sigParameterName = $._decode_implicit<SigParameterName>(() => _decode_SigParameterName)(_el); },
         "value": (_el: _Element): void => { value = $._decode_implicit<SigParamValues>(() => _decode_SigParamValues)(_el); },

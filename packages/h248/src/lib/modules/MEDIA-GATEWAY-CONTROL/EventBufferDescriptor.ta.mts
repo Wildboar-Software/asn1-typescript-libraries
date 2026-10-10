@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EventSpec, _decode_EventSpec, _encode_EventSpec } from "../MEDIA-GATEWAY-CONTROL/EventSpec.ta.mjs";
-// export { EventSpec, _decode_EventSpec, _encode_EventSpec } from "../MEDIA-GATEWAY-CONTROL/EventSpec.ta.mjs";
 
 
 /**

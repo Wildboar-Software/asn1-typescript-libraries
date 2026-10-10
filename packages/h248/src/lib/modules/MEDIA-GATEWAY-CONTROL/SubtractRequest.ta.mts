@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
-// export { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
 import { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor.ta.mjs";
-// export { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor.ta.mjs";
 
 
 /**
@@ -123,7 +121,7 @@ function _decode_SubtractRequest (el: _Element): SubtractRequest {
     if (!_cached_decoder_for_SubtractRequest) { _cached_decoder_for_SubtractRequest = function (el: _Element): SubtractRequest {
     let terminationID!: TerminationIDList;
     let auditDescriptor: OPTIONAL<AuditDescriptor>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "terminationID": (_el: _Element): void => { terminationID = $._decode_implicit<TerminationIDList>(() => _decode_TerminationIDList)(_el); },
         "auditDescriptor": (_el: _Element): void => { auditDescriptor = $._decode_implicit<AuditDescriptor>(() => _decode_AuditDescriptor)(_el); }

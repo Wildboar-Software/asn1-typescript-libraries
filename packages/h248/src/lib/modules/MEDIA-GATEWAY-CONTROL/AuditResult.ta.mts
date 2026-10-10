@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
-// export { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
 import { TerminationAudit, _decode_TerminationAudit, _encode_TerminationAudit } from "../MEDIA-GATEWAY-CONTROL/TerminationAudit.ta.mjs";
-// export { TerminationAudit, _decode_TerminationAudit, _encode_TerminationAudit } from "../MEDIA-GATEWAY-CONTROL/TerminationAudit.ta.mjs";
 
 
 /**
@@ -120,10 +118,8 @@ function _decode_AuditResult (el: _Element): AuditResult {
     }
     sequence[0].name = "terminationID";
     sequence[1].name = "terminationAuditResult";
-    let terminationID!: TerminationID;
-    let terminationAuditResult!: TerminationAudit;
-    terminationID = $._decode_implicit<TerminationID>(() => _decode_TerminationID)(sequence[0]);
-    terminationAuditResult = $._decode_implicit<TerminationAudit>(() => _decode_TerminationAudit)(sequence[1]);
+    const terminationID: TerminationID = $._decode_implicit<TerminationID>(() => _decode_TerminationID)(sequence[0]);
+    const terminationAuditResult: TerminationAudit = $._decode_implicit<TerminationAudit>(() => _decode_TerminationAudit)(sequence[1]);
     return new AuditResult(
         terminationID,
         terminationAuditResult,

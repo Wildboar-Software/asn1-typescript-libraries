@@ -3,11 +3,11 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Signal, _decode_Signal, _encode_Signal } from "../MEDIA-GATEWAY-CONTROL/Signal.ta.mjs";
-// export { Signal, _decode_Signal, _encode_Signal } from "../MEDIA-GATEWAY-CONTROL/Signal.ta.mjs";
 
 
 /**
@@ -41,7 +41,12 @@ class SeqSigList {
          * @readonly
          */
         readonly signalList: Signal[]
-    ) {}
+    ) {
+            const n = typeof id === "bigint" ? id : BigInt(id);
+            if (n < 0n || n > 65535n) {
+                throw new ASN1OverflowError("SeqSigList.id violates INTEGER range");
+            }
+    }
 
     /**
      * @summary Restructures an object into a SeqSigList
@@ -119,10 +124,8 @@ function _decode_SeqSigList (el: _Element): SeqSigList {
     }
     sequence[0].name = "id";
     sequence[1].name = "signalList";
-    let id!: INTEGER;
-    let signalList!: Signal[];
-    id = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    signalList = $._decode_implicit<Signal[]>(() => $._decodeSequenceOf<Signal>(() => _decode_Signal))(sequence[1]);
+    const id: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const signalList: Signal[] = $._decode_implicit<Signal[]>(() => $._decodeSequenceOf<Signal>(() => _decode_Signal))(sequence[1]);
     return new SeqSigList(
         id,
         signalList,

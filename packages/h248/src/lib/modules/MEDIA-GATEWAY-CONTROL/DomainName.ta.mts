@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     IA5String,
     INTEGER,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -45,7 +46,14 @@ class DomainName {
          * @readonly
          */
         readonly portNumber: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+        if (portNumber !== undefined) {
+            const n = typeof portNumber === "bigint" ? portNumber : BigInt(portNumber);
+            if (n < 0n || n > 65535n) {
+                throw new ASN1OverflowError("DomainName.portNumber violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a DomainName

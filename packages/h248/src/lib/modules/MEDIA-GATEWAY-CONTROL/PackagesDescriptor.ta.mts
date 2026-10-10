@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PackagesItem, _decode_PackagesItem, _encode_PackagesItem } from "../MEDIA-GATEWAY-CONTROL/PackagesItem.ta.mjs";
-// export { PackagesItem, _decode_PackagesItem, _encode_PackagesItem } from "../MEDIA-GATEWAY-CONTROL/PackagesItem.ta.mjs";
 
 
 /**

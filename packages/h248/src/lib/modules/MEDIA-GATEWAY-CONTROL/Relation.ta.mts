@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -82,35 +81,8 @@ const Relation_unequalTo: Relation = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const unequalTo: Relation = Relation_unequalTo; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Relation: $.ASN1Decoder<Relation> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Relation
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Relation (el: _Element): Relation {
-    if (!_cached_decoder_for_Relation) { _cached_decoder_for_Relation = $._decodeEnumerated; }
-    return _cached_decoder_for_Relation(el);
-}
-
-let _cached_encoder_for_Relation: $.ASN1Encoder<Relation> | null = null;
-
-/**
- * @summary Encodes a(n) Relation into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Relation, encoded as an ASN.1 Element.
- */
-export
-function _encode_Relation (value: Relation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Relation) { _cached_encoder_for_Relation = $._encodeEnumerated; }
-    return _cached_encoder_for_Relation(value, elGetter);
-}
+export const _decode_Relation = $._decodeEnumerated;
+export const _encode_Relation = $._encodeEnumerated;
 
 
 /* eslint-enable */

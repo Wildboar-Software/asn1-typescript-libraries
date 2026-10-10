@@ -5,13 +5,12 @@ import {
     NULL,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudPropertyParm, _decode_IndAudPropertyParm, _encode_IndAudPropertyParm } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyParm.ta.mjs";
-// export { IndAudPropertyParm, _decode_IndAudPropertyParm, _encode_IndAudPropertyParm } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyParm.ta.mjs";
 import { SelectLogic, _decode_SelectLogic, _encode_SelectLogic } from "../MEDIA-GATEWAY-CONTROL/SelectLogic.ta.mjs";
-// export { SelectLogic, _decode_SelectLogic, _encode_SelectLogic } from "../MEDIA-GATEWAY-CONTROL/SelectLogic.ta.mjs";
 
 
 /**
@@ -104,7 +103,14 @@ class ContextAttrAuditRequest {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (selectpriority !== undefined) {
+            const n = typeof selectpriority === "bigint" ? selectpriority : BigInt(selectpriority);
+            if (n < 0n || n > 15n) {
+                throw new ASN1OverflowError("ContextAttrAuditRequest.selectpriority violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a ContextAttrAuditRequest
@@ -191,7 +197,7 @@ function _decode_ContextAttrAuditRequest (el: _Element): ContextAttrAuditRequest
     let selectemergency: OPTIONAL<BOOLEAN>;
     let selectiepscallind: OPTIONAL<BOOLEAN>;
     let selectLogic: OPTIONAL<SelectLogic>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "topology": (_el: _Element): void => { topology = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "emergency": (_el: _Element): void => { emergency = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

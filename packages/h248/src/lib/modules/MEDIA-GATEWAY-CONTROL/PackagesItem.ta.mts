@@ -3,11 +3,11 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Name, _decode_Name, _encode_Name } from "../MEDIA-GATEWAY-CONTROL/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../MEDIA-GATEWAY-CONTROL/Name.ta.mjs";
 
 
 /**
@@ -48,7 +48,12 @@ class PackagesItem {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+            const n = typeof packageVersion === "bigint" ? packageVersion : BigInt(packageVersion);
+            if (n < 0n || n > 99n) {
+                throw new ASN1OverflowError("PackagesItem.packageVersion violates INTEGER range");
+            }
+    }
 
     /**
      * @summary Restructures an object into a PackagesItem
@@ -126,10 +131,8 @@ function _decode_PackagesItem (el: _Element): PackagesItem {
     }
     sequence[0].name = "packageName";
     sequence[1].name = "packageVersion";
-    let packageName!: Name;
-    let packageVersion!: INTEGER;
-    packageName = $._decode_implicit<Name>(() => _decode_Name)(sequence[0]);
-    packageVersion = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const packageName: Name = $._decode_implicit<Name>(() => _decode_Name)(sequence[0]);
+    const packageVersion: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new PackagesItem(
         packageName,
         packageVersion,

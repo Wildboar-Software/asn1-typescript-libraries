@@ -3,11 +3,11 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudPropertyGroup, _decode_IndAudPropertyGroup, _encode_IndAudPropertyGroup } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyGroup.ta.mjs";
-// export { IndAudPropertyGroup, _decode_IndAudPropertyGroup, _encode_IndAudPropertyGroup } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyGroup.ta.mjs";
 
 
 /**
@@ -48,7 +48,14 @@ class IndAudLocalRemoteDescriptor {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (propGroupID !== undefined) {
+            const n = typeof propGroupID === "bigint" ? propGroupID : BigInt(propGroupID);
+            if (n < 0n || n > 65535n) {
+                throw new ASN1OverflowError("IndAudLocalRemoteDescriptor.propGroupID violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a IndAudLocalRemoteDescriptor
@@ -122,7 +129,7 @@ function _decode_IndAudLocalRemoteDescriptor (el: _Element): IndAudLocalRemoteDe
     if (!_cached_decoder_for_IndAudLocalRemoteDescriptor) { _cached_decoder_for_IndAudLocalRemoteDescriptor = function (el: _Element): IndAudLocalRemoteDescriptor {
     let propGroupID: OPTIONAL<INTEGER>;
     let propGrps!: IndAudPropertyGroup;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "propGroupID": (_el: _Element): void => { propGroupID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "propGrps": (_el: _Element): void => { propGrps = $._decode_implicit<IndAudPropertyGroup>(() => _decode_IndAudPropertyGroup)(_el); }

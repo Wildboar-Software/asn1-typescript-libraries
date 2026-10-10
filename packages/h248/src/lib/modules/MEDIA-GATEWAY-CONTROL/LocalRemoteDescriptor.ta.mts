@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PropertyGroup, _decode_PropertyGroup, _encode_PropertyGroup } from "../MEDIA-GATEWAY-CONTROL/PropertyGroup.ta.mjs";
-// export { PropertyGroup, _decode_PropertyGroup, _encode_PropertyGroup } from "../MEDIA-GATEWAY-CONTROL/PropertyGroup.ta.mjs";
 
 
 /**
@@ -116,8 +115,7 @@ function _decode_LocalRemoteDescriptor (el: _Element): LocalRemoteDescriptor {
         throw new _ConstructionError("LocalRemoteDescriptor contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "propGrps";
-    let propGrps!: PropertyGroup[];
-    propGrps = $._decode_implicit<PropertyGroup[]>(() => $._decodeSequenceOf<PropertyGroup>(() => _decode_PropertyGroup))(sequence[0]);
+    const propGrps: PropertyGroup[] = $._decode_implicit<PropertyGroup[]>(() => $._decodeSequenceOf<PropertyGroup>(() => _decode_PropertyGroup))(sequence[0]);
     return new LocalRemoteDescriptor(
         propGrps,
         sequence.slice(1),

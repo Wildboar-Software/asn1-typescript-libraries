@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SignalRequest, _decode_SignalRequest, _encode_SignalRequest } from "../MEDIA-GATEWAY-CONTROL/SignalRequest.ta.mjs";
-// export { SignalRequest, _decode_SignalRequest, _encode_SignalRequest } from "../MEDIA-GATEWAY-CONTROL/SignalRequest.ta.mjs";
 
 
 /**

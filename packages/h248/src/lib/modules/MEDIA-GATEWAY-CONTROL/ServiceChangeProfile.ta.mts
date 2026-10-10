@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String
+    IA5String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -34,7 +35,11 @@ class ServiceChangeProfile {
          * @readonly
          */
         readonly profileName: IA5String
-    ) {}
+    ) {
+            if (profileName.length < 1 || profileName.length > 67) {
+                throw new ASN1SizeError("ServiceChangeProfile.profileName violates SIZE constraint");
+            }
+    }
 
     /**
      * @summary Restructures an object into a ServiceChangeProfile
@@ -110,8 +115,7 @@ function _decode_ServiceChangeProfile (el: _Element): ServiceChangeProfile {
         throw new _ConstructionError("ServiceChangeProfile contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "profileName";
-    let profileName!: IA5String;
-    profileName = $._decode_implicit<IA5String>(() => $._decodeIA5String)(sequence[0]);
+    const profileName: IA5String = $._decode_implicit<IA5String>(() => $._decodeIA5String)(sequence[0]);
     return new ServiceChangeProfile(
         profileName,
 

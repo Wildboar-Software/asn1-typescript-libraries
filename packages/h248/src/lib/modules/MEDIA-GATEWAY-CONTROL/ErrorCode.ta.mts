@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,35 +20,15 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ErrorCode = INTEGER;
-
-let _cached_decoder_for_ErrorCode: $.ASN1Decoder<ErrorCode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ErrorCode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ErrorCode (el: _Element): ErrorCode {
-    if (!_cached_decoder_for_ErrorCode) { _cached_decoder_for_ErrorCode = $._decodeInteger; }
-    return _cached_decoder_for_ErrorCode(el);
-}
-
-let _cached_encoder_for_ErrorCode: $.ASN1Encoder<ErrorCode> | null = null;
-
-/**
- * @summary Encodes a(n) ErrorCode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ErrorCode, encoded as an ASN.1 Element.
- */
-export
-function _encode_ErrorCode (value: ErrorCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ErrorCode) { _cached_encoder_for_ErrorCode = $._encodeInteger; }
-    return _cached_encoder_for_ErrorCode(value, elGetter);
-}
+export const _decode_ErrorCode = (el: _Element): ErrorCode => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    if (n < 0n || n > 65535n) {
+        throw new ASN1OverflowError("ErrorCode violates INTEGER range");
+    }
+    return value;
+};
+export const _encode_ErrorCode = $._encodeInteger;
 
 
 /* eslint-enable */

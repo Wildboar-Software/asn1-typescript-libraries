@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
-// export { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
 import { RequestedEvent, _decode_RequestedEvent, _encode_RequestedEvent } from "../MEDIA-GATEWAY-CONTROL/RequestedEvent.ta.mjs";
-// export { RequestedEvent, _decode_RequestedEvent, _encode_RequestedEvent } from "../MEDIA-GATEWAY-CONTROL/RequestedEvent.ta.mjs";
 
 
 /**
@@ -125,7 +123,7 @@ function _decode_EventsDescriptor (el: _Element): EventsDescriptor {
     if (!_cached_decoder_for_EventsDescriptor) { _cached_decoder_for_EventsDescriptor = function (el: _Element): EventsDescriptor {
     let requestID: OPTIONAL<RequestID>;
     let eventList!: RequestedEvent[];
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "requestID": (_el: _Element): void => { requestID = $._decode_implicit<RequestID>(() => _decode_RequestID)(_el); },
         "eventList": (_el: _Element): void => { eventList = $._decode_implicit<RequestedEvent[]>(() => $._decodeSequenceOf<RequestedEvent>(() => _decode_RequestedEvent))(_el); }

@@ -3,11 +3,11 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { WildcardField, _decode_WildcardField, _encode_WildcardField } from "../MEDIA-GATEWAY-CONTROL/WildcardField.ta.mjs";
-// export { WildcardField, _decode_WildcardField, _encode_WildcardField } from "../MEDIA-GATEWAY-CONTROL/WildcardField.ta.mjs";
 
 
 /**
@@ -48,7 +48,11 @@ class TerminationID {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+            if (id.length < 1 || id.length > 8) {
+                throw new ASN1SizeError("TerminationID.id violates SIZE constraint");
+            }
+    }
 
     /**
      * @summary Restructures an object into a TerminationID
@@ -126,10 +130,8 @@ function _decode_TerminationID (el: _Element): TerminationID {
     }
     sequence[0].name = "wildcard";
     sequence[1].name = "id";
-    let wildcard!: WildcardField[];
-    let id!: OCTET_STRING;
-    wildcard = $._decode_implicit<WildcardField[]>(() => $._decodeSequenceOf<WildcardField>(() => _decode_WildcardField))(sequence[0]);
-    id = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const wildcard: WildcardField[] = $._decode_implicit<WildcardField[]>(() => $._decodeSequenceOf<WildcardField>(() => _decode_WildcardField))(sequence[0]);
+    const id: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new TerminationID(
         wildcard,
         id,

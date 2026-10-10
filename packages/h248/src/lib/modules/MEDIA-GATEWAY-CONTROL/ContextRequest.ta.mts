@@ -4,15 +4,13 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TopologyRequest, _decode_TopologyRequest, _encode_TopologyRequest } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest.ta.mjs";
-// export { TopologyRequest, _decode_TopologyRequest, _encode_TopologyRequest } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest.ta.mjs";
 import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
-// export { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
 import { ContextIDinList, _decode_ContextIDinList, _encode_ContextIDinList } from "../MEDIA-GATEWAY-CONTROL/ContextIDinList.ta.mjs";
-// export { ContextIDinList, _decode_ContextIDinList, _encode_ContextIDinList } from "../MEDIA-GATEWAY-CONTROL/ContextIDinList.ta.mjs";
 
 
 /**
@@ -86,7 +84,14 @@ class ContextRequest {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (priority !== undefined) {
+            const n = typeof priority === "bigint" ? priority : BigInt(priority);
+            if (n < 0n || n > 15n) {
+                throw new ASN1OverflowError("ContextRequest.priority violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a ContextRequest
@@ -167,7 +172,7 @@ function _decode_ContextRequest (el: _Element): ContextRequest {
     let iepscallind: OPTIONAL<BOOLEAN>;
     let contextProp: OPTIONAL<PropertyParm[]>;
     let contextList: OPTIONAL<ContextIDinList[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "priority": (_el: _Element): void => { priority = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "emergency": (_el: _Element): void => { emergency = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

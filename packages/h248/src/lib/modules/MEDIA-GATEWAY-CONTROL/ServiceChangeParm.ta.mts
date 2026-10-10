@@ -4,25 +4,18 @@ import {
     NULL,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceChangeMethod, _decode_ServiceChangeMethod, _encode_ServiceChangeMethod, _enum_for_ServiceChangeMethod } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeMethod.ta.mjs";
-// export { ServiceChangeMethod, _enum_for_ServiceChangeMethod, ServiceChangeMethod_failover /* IMPORTED_LONG_ENUMERATION_ITEM */, failover /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceChangeMethod_forced /* IMPORTED_LONG_ENUMERATION_ITEM */, forced /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceChangeMethod_graceful /* IMPORTED_LONG_ENUMERATION_ITEM */, graceful /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceChangeMethod_restart /* IMPORTED_LONG_ENUMERATION_ITEM */, restart /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceChangeMethod_disconnected /* IMPORTED_LONG_ENUMERATION_ITEM */, disconnected /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceChangeMethod_handOff /* IMPORTED_LONG_ENUMERATION_ITEM */, handOff /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ServiceChangeMethod, _encode_ServiceChangeMethod } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeMethod.ta.mjs";
 import { ServiceChangeAddress, _decode_ServiceChangeAddress, _encode_ServiceChangeAddress } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeAddress.ta.mjs";
-// export { ServiceChangeAddress, _decode_ServiceChangeAddress, _encode_ServiceChangeAddress } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeAddress.ta.mjs";
 import { ServiceChangeProfile, _decode_ServiceChangeProfile, _encode_ServiceChangeProfile } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeProfile.ta.mjs";
-// export { ServiceChangeProfile, _decode_ServiceChangeProfile, _encode_ServiceChangeProfile } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeProfile.ta.mjs";
 import { SCreasonValue, _decode_SCreasonValue, _encode_SCreasonValue } from "../MEDIA-GATEWAY-CONTROL/SCreasonValue.ta.mjs";
-// export { SCreasonValue, _decode_SCreasonValue, _encode_SCreasonValue } from "../MEDIA-GATEWAY-CONTROL/SCreasonValue.ta.mjs";
 import { MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
-// export { MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
 import { TimeNotation, _decode_TimeNotation, _encode_TimeNotation } from "../MEDIA-GATEWAY-CONTROL/TimeNotation.ta.mjs";
-// export { TimeNotation, _decode_TimeNotation, _encode_TimeNotation } from "../MEDIA-GATEWAY-CONTROL/TimeNotation.ta.mjs";
 import { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } from "../MEDIA-GATEWAY-CONTROL/NonStandardData.ta.mjs";
-// export { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } from "../MEDIA-GATEWAY-CONTROL/NonStandardData.ta.mjs";
 import { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor.ta.mjs";
-// export { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor.ta.mjs";
 
 
 /**
@@ -138,7 +131,20 @@ class ServiceChangeParm {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (serviceChangeVersion !== undefined) {
+            const n = typeof serviceChangeVersion === "bigint" ? serviceChangeVersion : BigInt(serviceChangeVersion);
+            if (n < 0n || n > 99n) {
+                throw new ASN1OverflowError("ServiceChangeParm.serviceChangeVersion violates INTEGER range");
+            }
+        }
+        if (serviceChangeDelay !== undefined) {
+            const n = typeof serviceChangeDelay === "bigint" ? serviceChangeDelay : BigInt(serviceChangeDelay);
+            if (n < 0n || n > 4294967295n) {
+                throw new ASN1OverflowError("ServiceChangeParm.serviceChangeDelay violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a ServiceChangeParm
@@ -235,7 +241,7 @@ function _decode_ServiceChangeParm (el: _Element): ServiceChangeParm {
     let nonStandardData: OPTIONAL<NonStandardData>;
     let serviceChangeInfo: OPTIONAL<AuditDescriptor>;
     let serviceChangeIncompleteFlag: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "serviceChangeMethod": (_el: _Element): void => { serviceChangeMethod = $._decode_implicit<ServiceChangeMethod>(() => _decode_ServiceChangeMethod)(_el); },
         "serviceChangeAddress": (_el: _Element): void => { serviceChangeAddress = $._decode_explicit<ServiceChangeAddress>(() => _decode_ServiceChangeAddress)(_el); },

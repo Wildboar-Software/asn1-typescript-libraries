@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -136,35 +135,8 @@ const ServiceChangeMethod_handOff: ServiceChangeMethod = 5; /* LONG_NAMED_ENUMER
  */
 export
 const handOff: ServiceChangeMethod = ServiceChangeMethod_handOff; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ServiceChangeMethod: $.ASN1Decoder<ServiceChangeMethod> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ServiceChangeMethod
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ServiceChangeMethod (el: _Element): ServiceChangeMethod {
-    if (!_cached_decoder_for_ServiceChangeMethod) { _cached_decoder_for_ServiceChangeMethod = $._decodeEnumerated; }
-    return _cached_decoder_for_ServiceChangeMethod(el);
-}
-
-let _cached_encoder_for_ServiceChangeMethod: $.ASN1Encoder<ServiceChangeMethod> | null = null;
-
-/**
- * @summary Encodes a(n) ServiceChangeMethod into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ServiceChangeMethod, encoded as an ASN.1 Element.
- */
-export
-function _encode_ServiceChangeMethod (value: ServiceChangeMethod, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceChangeMethod) { _cached_encoder_for_ServiceChangeMethod = $._encodeEnumerated; }
-    return _cached_encoder_for_ServiceChangeMethod(value, elGetter);
-}
+export const _decode_ServiceChangeMethod = $._decodeEnumerated;
+export const _encode_ServiceChangeMethod = $._encodeEnumerated;
 
 
 /* eslint-enable */

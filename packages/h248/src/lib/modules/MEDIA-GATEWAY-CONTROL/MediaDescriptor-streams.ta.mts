@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { StreamParms, _decode_StreamParms, _encode_StreamParms } from "../MEDIA-GATEWAY-CONTROL/StreamParms.ta.mjs";
-// export { StreamParms, _decode_StreamParms, _encode_StreamParms } from "../MEDIA-GATEWAY-CONTROL/StreamParms.ta.mjs";
 import { StreamDescriptor, _decode_StreamDescriptor, _encode_StreamDescriptor } from "../MEDIA-GATEWAY-CONTROL/StreamDescriptor.ta.mjs";
-// export { StreamDescriptor, _decode_StreamDescriptor, _encode_StreamDescriptor } from "../MEDIA-GATEWAY-CONTROL/StreamDescriptor.ta.mjs";
 
 
 /**
@@ -17,7 +15,10 @@ import { StreamDescriptor, _decode_StreamDescriptor, _encode_StreamDescriptor } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MediaDescriptor-streams ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * MediaDescriptor-streams ::= CHOICE {
+ *     oneStream    [0] StreamParms,
+ *     multiStream  [1] SEQUENCE OF StreamDescriptor
+ * }
  * ```
  */
 export

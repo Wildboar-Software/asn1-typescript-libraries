@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudLocalControlDescriptor, _decode_IndAudLocalControlDescriptor, _encode_IndAudLocalControlDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudLocalControlDescriptor.ta.mjs";
-// export { IndAudLocalControlDescriptor, _decode_IndAudLocalControlDescriptor, _encode_IndAudLocalControlDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudLocalControlDescriptor.ta.mjs";
 import { IndAudLocalRemoteDescriptor, _decode_IndAudLocalRemoteDescriptor, _encode_IndAudLocalRemoteDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudLocalRemoteDescriptor.ta.mjs";
-// export { IndAudLocalRemoteDescriptor, _decode_IndAudLocalRemoteDescriptor, _encode_IndAudLocalRemoteDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudLocalRemoteDescriptor.ta.mjs";
 import { IndAudStatisticsDescriptor, _decode_IndAudStatisticsDescriptor, _encode_IndAudStatisticsDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudStatisticsDescriptor.ta.mjs";
-// export { IndAudStatisticsDescriptor, _decode_IndAudStatisticsDescriptor, _encode_IndAudStatisticsDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudStatisticsDescriptor.ta.mjs";
 
 
 /**
@@ -142,7 +139,7 @@ function _decode_IndAudStreamParms (el: _Element): IndAudStreamParms {
     let localDescriptor: OPTIONAL<IndAudLocalRemoteDescriptor>;
     let remoteDescriptor: OPTIONAL<IndAudLocalRemoteDescriptor>;
     let statisticsDescriptor: OPTIONAL<IndAudStatisticsDescriptor>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "localControlDescriptor": (_el: _Element): void => { localControlDescriptor = $._decode_implicit<IndAudLocalControlDescriptor>(() => _decode_IndAudLocalControlDescriptor)(_el); },
         "localDescriptor": (_el: _Element): void => { localDescriptor = $._decode_implicit<IndAudLocalRemoteDescriptor>(() => _decode_IndAudLocalRemoteDescriptor)(_el); },

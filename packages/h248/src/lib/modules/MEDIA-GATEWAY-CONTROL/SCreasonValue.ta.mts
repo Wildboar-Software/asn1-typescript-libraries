@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SCreasonValueOctetStr, _decode_SCreasonValueOctetStr, _encode_SCreasonValueOctetStr } from "../MEDIA-GATEWAY-CONTROL/SCreasonValueOctetStr.ta.mjs";
-// export { SCreasonValueOctetStr, _decode_SCreasonValueOctetStr, _encode_SCreasonValueOctetStr } from "../MEDIA-GATEWAY-CONTROL/SCreasonValueOctetStr.ta.mjs";
 
 
 /**

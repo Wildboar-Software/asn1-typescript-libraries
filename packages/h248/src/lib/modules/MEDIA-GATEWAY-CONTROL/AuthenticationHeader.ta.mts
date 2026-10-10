@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SecurityParmIndex, _decode_SecurityParmIndex, _encode_SecurityParmIndex } from "../MEDIA-GATEWAY-CONTROL/SecurityParmIndex.ta.mjs";
-// export { SecurityParmIndex, _decode_SecurityParmIndex, _encode_SecurityParmIndex } from "../MEDIA-GATEWAY-CONTROL/SecurityParmIndex.ta.mjs";
 import { SequenceNum, _decode_SequenceNum, _encode_SequenceNum } from "../MEDIA-GATEWAY-CONTROL/SequenceNum.ta.mjs";
-// export { SequenceNum, _decode_SequenceNum, _encode_SequenceNum } from "../MEDIA-GATEWAY-CONTROL/SequenceNum.ta.mjs";
 import { AuthData, _decode_AuthData, _encode_AuthData } from "../MEDIA-GATEWAY-CONTROL/AuthData.ta.mjs";
-// export { AuthData, _decode_AuthData, _encode_AuthData } from "../MEDIA-GATEWAY-CONTROL/AuthData.ta.mjs";
 
 
 /**
@@ -131,12 +128,9 @@ function _decode_AuthenticationHeader (el: _Element): AuthenticationHeader {
     sequence[0].name = "secParmIndex";
     sequence[1].name = "seqNum";
     sequence[2].name = "ad";
-    let secParmIndex!: SecurityParmIndex;
-    let seqNum!: SequenceNum;
-    let ad!: AuthData;
-    secParmIndex = $._decode_implicit<SecurityParmIndex>(() => _decode_SecurityParmIndex)(sequence[0]);
-    seqNum = $._decode_implicit<SequenceNum>(() => _decode_SequenceNum)(sequence[1]);
-    ad = $._decode_implicit<AuthData>(() => _decode_AuthData)(sequence[2]);
+    const secParmIndex: SecurityParmIndex = $._decode_implicit<SecurityParmIndex>(() => _decode_SecurityParmIndex)(sequence[0]);
+    const seqNum: SequenceNum = $._decode_implicit<SequenceNum>(() => _decode_SequenceNum)(sequence[1]);
+    const ad: AuthData = $._decode_implicit<AuthData>(() => _decode_AuthData)(sequence[2]);
     return new AuthenticationHeader(
         secParmIndex,
         seqNum,

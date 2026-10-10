@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DigitMapName, _decode_DigitMapName, _encode_DigitMapName } from "../MEDIA-GATEWAY-CONTROL/DigitMapName.ta.mjs";
-// export { DigitMapName, _decode_DigitMapName, _encode_DigitMapName } from "../MEDIA-GATEWAY-CONTROL/DigitMapName.ta.mjs";
 import { DigitMapValue, _decode_DigitMapValue, _encode_DigitMapValue } from "../MEDIA-GATEWAY-CONTROL/DigitMapValue.ta.mjs";
-// export { DigitMapValue, _decode_DigitMapValue, _encode_DigitMapValue } from "../MEDIA-GATEWAY-CONTROL/DigitMapValue.ta.mjs";
 
 
 /**

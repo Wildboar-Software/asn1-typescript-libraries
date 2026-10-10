@@ -5,15 +5,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AmmRequest, _decode_AmmRequest, _encode_AmmRequest } from "../MEDIA-GATEWAY-CONTROL/AmmRequest.ta.mjs";
-// export { AmmRequest, _decode_AmmRequest, _encode_AmmRequest } from "../MEDIA-GATEWAY-CONTROL/AmmRequest.ta.mjs";
 import { SubtractRequest, _decode_SubtractRequest, _encode_SubtractRequest } from "../MEDIA-GATEWAY-CONTROL/SubtractRequest.ta.mjs";
-// export { SubtractRequest, _decode_SubtractRequest, _encode_SubtractRequest } from "../MEDIA-GATEWAY-CONTROL/SubtractRequest.ta.mjs";
 import { AuditRequest, _decode_AuditRequest, _encode_AuditRequest } from "../MEDIA-GATEWAY-CONTROL/AuditRequest.ta.mjs";
-// export { AuditRequest, _decode_AuditRequest, _encode_AuditRequest } from "../MEDIA-GATEWAY-CONTROL/AuditRequest.ta.mjs";
 import { NotifyRequest, _decode_NotifyRequest, _encode_NotifyRequest } from "../MEDIA-GATEWAY-CONTROL/NotifyRequest.ta.mjs";
-// export { NotifyRequest, _decode_NotifyRequest, _encode_NotifyRequest } from "../MEDIA-GATEWAY-CONTROL/NotifyRequest.ta.mjs";
 import { ServiceChangeRequest, _decode_ServiceChangeRequest, _encode_ServiceChangeRequest } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeRequest.ta.mjs";
-// export { ServiceChangeRequest, _decode_ServiceChangeRequest, _encode_ServiceChangeRequest } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeRequest.ta.mjs";
 
 
 /**

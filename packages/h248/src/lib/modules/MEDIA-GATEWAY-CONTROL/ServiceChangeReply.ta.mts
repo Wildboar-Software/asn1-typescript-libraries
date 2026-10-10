@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
-// export { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
 import { ServiceChangeResult, _decode_ServiceChangeResult, _encode_ServiceChangeResult } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeResult.ta.mjs";
-// export { ServiceChangeResult, _decode_ServiceChangeResult, _encode_ServiceChangeResult } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeResult.ta.mjs";
 
 
 /**
@@ -127,10 +125,8 @@ function _decode_ServiceChangeReply (el: _Element): ServiceChangeReply {
     }
     sequence[0].name = "terminationID";
     sequence[1].name = "serviceChangeResult";
-    let terminationID!: TerminationIDList;
-    let serviceChangeResult!: ServiceChangeResult;
-    terminationID = $._decode_implicit<TerminationIDList>(() => _decode_TerminationIDList)(sequence[0]);
-    serviceChangeResult = $._decode_explicit<ServiceChangeResult>(() => _decode_ServiceChangeResult)(sequence[1]);
+    const terminationID: TerminationIDList = $._decode_implicit<TerminationIDList>(() => _decode_TerminationIDList)(sequence[0]);
+    const serviceChangeResult: ServiceChangeResult = $._decode_explicit<ServiceChangeResult>(() => _decode_ServiceChangeResult)(sequence[1]);
     return new ServiceChangeReply(
         terminationID,
         serviceChangeResult,

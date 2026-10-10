@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuditResultV1, _decode_AuditResultV1, _encode_AuditResultV1 } from "../H238V1-SUPPORT/AuditResultV1.ta.mjs";
-// export { AuditResultV1, _decode_AuditResultV1, _encode_AuditResultV1 } from "../H238V1-SUPPORT/AuditResultV1.ta.mjs";
+import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
 
 
 /**
@@ -71,7 +71,7 @@ class AuditReplyV1 {
  */
 export
 const _root_component_type_list_1_spec_for_AuditReplyV1: $.ComponentSpec[] = [
-    /* FIXME: terminationID COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("terminationID", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("auditResult", false, $.hasTag(_TagClass.context, 1))
 ];
 
@@ -118,10 +118,8 @@ function _decode_AuditReplyV1 (el: _Element): AuditReplyV1 {
     }
     sequence[0].name = "terminationID";
     sequence[1].name = "auditResult";
-    let terminationID!: TerminationID;
-    let auditResult!: AuditResultV1;
-    terminationID = $._decode_implicit<TerminationID>(() => _decode_TerminationID)(sequence[0]);
-    auditResult = $._decode_explicit<AuditResultV1>(() => _decode_AuditResultV1)(sequence[1]);
+    const terminationID: TerminationID = $._decode_implicit<TerminationID>(() => _decode_TerminationID)(sequence[0]);
+    const auditResult: AuditResultV1 = $._decode_explicit<AuditResultV1>(() => _decode_AuditResultV1)(sequence[1]);
     return new AuditReplyV1(
         terminationID,
         auditResult,

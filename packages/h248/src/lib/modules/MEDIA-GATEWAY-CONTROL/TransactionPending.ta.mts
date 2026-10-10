@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MEDIA-GATEWAY-CONTROL/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MEDIA-GATEWAY-CONTROL/TransactionId.ta.mjs";
 
 
 /**
@@ -116,8 +115,7 @@ function _decode_TransactionPending (el: _Element): TransactionPending {
         throw new _ConstructionError("TransactionPending contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "transactionId";
-    let transactionId!: TransactionId;
-    transactionId = $._decode_implicit<TransactionId>(() => _decode_TransactionId)(sequence[0]);
+    const transactionId: TransactionId = $._decode_implicit<TransactionId>(() => _decode_TransactionId)(sequence[0]);
     return new TransactionPending(
         transactionId,
         sequence.slice(1),

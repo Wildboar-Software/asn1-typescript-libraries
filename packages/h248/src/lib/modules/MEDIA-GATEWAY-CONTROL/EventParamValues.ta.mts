@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EventParamValue, _decode_EventParamValue, _encode_EventParamValue } from "../MEDIA-GATEWAY-CONTROL/EventParamValue.ta.mjs";
-// export { EventParamValue, _decode_EventParamValue, _encode_EventParamValue } from "../MEDIA-GATEWAY-CONTROL/EventParamValue.ta.mjs";
 
 
 /**

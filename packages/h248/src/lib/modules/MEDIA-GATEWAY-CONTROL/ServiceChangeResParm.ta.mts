@@ -3,17 +3,14 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
-// export { MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
 import { ServiceChangeAddress, _decode_ServiceChangeAddress, _encode_ServiceChangeAddress } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeAddress.ta.mjs";
-// export { ServiceChangeAddress, _decode_ServiceChangeAddress, _encode_ServiceChangeAddress } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeAddress.ta.mjs";
 import { ServiceChangeProfile, _decode_ServiceChangeProfile, _encode_ServiceChangeProfile } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeProfile.ta.mjs";
-// export { ServiceChangeProfile, _decode_ServiceChangeProfile, _encode_ServiceChangeProfile } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeProfile.ta.mjs";
 import { TimeNotation, _decode_TimeNotation, _encode_TimeNotation } from "../MEDIA-GATEWAY-CONTROL/TimeNotation.ta.mjs";
-// export { TimeNotation, _decode_TimeNotation, _encode_TimeNotation } from "../MEDIA-GATEWAY-CONTROL/TimeNotation.ta.mjs";
 
 
 /**
@@ -75,7 +72,14 @@ class ServiceChangeResParm {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (serviceChangeVersion !== undefined) {
+            const n = typeof serviceChangeVersion === "bigint" ? serviceChangeVersion : BigInt(serviceChangeVersion);
+            if (n < 0n || n > 99n) {
+                throw new ASN1OverflowError("ServiceChangeResParm.serviceChangeVersion violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a ServiceChangeResParm
@@ -155,7 +159,7 @@ function _decode_ServiceChangeResParm (el: _Element): ServiceChangeResParm {
     let serviceChangeVersion: OPTIONAL<INTEGER>;
     let serviceChangeProfile: OPTIONAL<ServiceChangeProfile>;
     let timestamp: OPTIONAL<TimeNotation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "serviceChangeMgcId": (_el: _Element): void => { serviceChangeMgcId = $._decode_explicit<MId>(() => _decode_MId)(_el); },
         "serviceChangeAddress": (_el: _Element): void => { serviceChangeAddress = $._decode_explicit<ServiceChangeAddress>(() => _decode_ServiceChangeAddress)(_el); },

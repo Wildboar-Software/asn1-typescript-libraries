@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,35 +20,15 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type StreamID = INTEGER;
-
-let _cached_decoder_for_StreamID: $.ASN1Decoder<StreamID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) StreamID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_StreamID (el: _Element): StreamID {
-    if (!_cached_decoder_for_StreamID) { _cached_decoder_for_StreamID = $._decodeInteger; }
-    return _cached_decoder_for_StreamID(el);
-}
-
-let _cached_encoder_for_StreamID: $.ASN1Encoder<StreamID> | null = null;
-
-/**
- * @summary Encodes a(n) StreamID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The StreamID, encoded as an ASN.1 Element.
- */
-export
-function _encode_StreamID (value: StreamID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_StreamID) { _cached_encoder_for_StreamID = $._encodeInteger; }
-    return _cached_encoder_for_StreamID(value, elGetter);
-}
+export const _decode_StreamID = (el: _Element): StreamID => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    if (n < 0n || n > 65535n) {
+        throw new ASN1OverflowError("StreamID violates INTEGER range");
+    }
+    return value;
+};
+export const _encode_StreamID = $._encodeInteger;
 
 
 /* eslint-enable */

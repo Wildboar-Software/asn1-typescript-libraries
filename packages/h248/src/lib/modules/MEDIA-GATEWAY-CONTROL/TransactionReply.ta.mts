@@ -7,11 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MEDIA-GATEWAY-CONTROL/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MEDIA-GATEWAY-CONTROL/TransactionId.ta.mjs";
 import { TransactionReply_transactionResult, _decode_TransactionReply_transactionResult, _encode_TransactionReply_transactionResult } from "../MEDIA-GATEWAY-CONTROL/TransactionReply-transactionResult.ta.mjs";
-// export { TransactionReply_transactionResult, _decode_TransactionReply_transactionResult, _encode_TransactionReply_transactionResult } from "../MEDIA-GATEWAY-CONTROL/TransactionReply-transactionResult.ta.mjs";
 import { SegmentNumber, _decode_SegmentNumber, _encode_SegmentNumber } from "../MEDIA-GATEWAY-CONTROL/SegmentNumber.ta.mjs";
-// export { SegmentNumber, _decode_SegmentNumber, _encode_SegmentNumber } from "../MEDIA-GATEWAY-CONTROL/SegmentNumber.ta.mjs";
 
 
 /**
@@ -156,7 +153,7 @@ function _decode_TransactionReply (el: _Element): TransactionReply {
     let transactionResult!: TransactionReply_transactionResult;
     let segmentNumber: OPTIONAL<SegmentNumber>;
     let segmentationComplete: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "transactionId": (_el: _Element): void => { transactionId = $._decode_implicit<TransactionId>(() => _decode_TransactionId)(_el); },
         "immAckRequired": (_el: _Element): void => { immAckRequired = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

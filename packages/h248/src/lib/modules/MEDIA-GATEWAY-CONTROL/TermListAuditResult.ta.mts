@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
-// export { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
 import { TerminationAudit, _decode_TerminationAudit, _encode_TerminationAudit } from "../MEDIA-GATEWAY-CONTROL/TerminationAudit.ta.mjs";
-// export { TerminationAudit, _decode_TerminationAudit, _encode_TerminationAudit } from "../MEDIA-GATEWAY-CONTROL/TerminationAudit.ta.mjs";
 
 
 /**
@@ -127,10 +125,8 @@ function _decode_TermListAuditResult (el: _Element): TermListAuditResult {
     }
     sequence[0].name = "terminationIDList";
     sequence[1].name = "terminationAuditResult";
-    let terminationIDList!: TerminationIDList;
-    let terminationAuditResult!: TerminationAudit;
-    terminationIDList = $._decode_implicit<TerminationIDList>(() => _decode_TerminationIDList)(sequence[0]);
-    terminationAuditResult = $._decode_implicit<TerminationAudit>(() => _decode_TerminationAudit)(sequence[1]);
+    const terminationIDList: TerminationIDList = $._decode_implicit<TerminationIDList>(() => _decode_TerminationIDList)(sequence[0]);
+    const terminationAuditResult: TerminationAudit = $._decode_implicit<TerminationAudit>(() => _decode_TerminationAudit)(sequence[1]);
     return new TermListAuditResult(
         terminationIDList,
         terminationAuditResult,

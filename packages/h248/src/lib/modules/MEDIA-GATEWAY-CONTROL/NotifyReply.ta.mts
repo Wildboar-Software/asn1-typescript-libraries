@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
-// export { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
 import { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
-// export { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
 
 
 /**
@@ -123,7 +121,7 @@ function _decode_NotifyReply (el: _Element): NotifyReply {
     if (!_cached_decoder_for_NotifyReply) { _cached_decoder_for_NotifyReply = function (el: _Element): NotifyReply {
     let terminationID!: TerminationIDList;
     let errorDescriptor: OPTIONAL<ErrorDescriptor>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "terminationID": (_el: _Element): void => { terminationID = $._decode_implicit<TerminationIDList>(() => _decode_TerminationIDList)(_el); },
         "errorDescriptor": (_el: _Element): void => { errorDescriptor = $._decode_implicit<ErrorDescriptor>(() => _decode_ErrorDescriptor)(_el); }

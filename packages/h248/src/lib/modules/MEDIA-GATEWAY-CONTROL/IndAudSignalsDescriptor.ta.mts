@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudSignal, _decode_IndAudSignal, _encode_IndAudSignal } from "../MEDIA-GATEWAY-CONTROL/IndAudSignal.ta.mjs";
-// export { IndAudSignal, _decode_IndAudSignal, _encode_IndAudSignal } from "../MEDIA-GATEWAY-CONTROL/IndAudSignal.ta.mjs";
 import { IndAudSeqSigList, _decode_IndAudSeqSigList, _encode_IndAudSeqSigList } from "../MEDIA-GATEWAY-CONTROL/IndAudSeqSigList.ta.mjs";
-// export { IndAudSeqSigList, _decode_IndAudSeqSigList, _encode_IndAudSeqSigList } from "../MEDIA-GATEWAY-CONTROL/IndAudSeqSigList.ta.mjs";
 
 
 /**

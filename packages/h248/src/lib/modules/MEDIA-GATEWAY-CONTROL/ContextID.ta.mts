@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,35 +20,15 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ContextID = INTEGER;
-
-let _cached_decoder_for_ContextID: $.ASN1Decoder<ContextID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ContextID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ContextID (el: _Element): ContextID {
-    if (!_cached_decoder_for_ContextID) { _cached_decoder_for_ContextID = $._decodeInteger; }
-    return _cached_decoder_for_ContextID(el);
-}
-
-let _cached_encoder_for_ContextID: $.ASN1Encoder<ContextID> | null = null;
-
-/**
- * @summary Encodes a(n) ContextID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ContextID, encoded as an ASN.1 Element.
- */
-export
-function _encode_ContextID (value: ContextID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ContextID) { _cached_encoder_for_ContextID = $._encodeInteger; }
-    return _cached_encoder_for_ContextID(value, elGetter);
-}
+export const _decode_ContextID = (el: _Element): ContextID => {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    if (n < 0n || n > 4294967295n) {
+        throw new ASN1OverflowError("ContextID violates INTEGER range");
+    }
+    return value;
+};
+export const _encode_ContextID = $._encodeInteger;
 
 
 /* eslint-enable */

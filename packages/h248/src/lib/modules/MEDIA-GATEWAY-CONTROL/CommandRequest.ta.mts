@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Command, _decode_Command, _encode_Command } from "../MEDIA-GATEWAY-CONTROL/Command.ta.mjs";
-// export { Command, _decode_Command, _encode_Command } from "../MEDIA-GATEWAY-CONTROL/Command.ta.mjs";
 
 
 /**
@@ -131,7 +130,7 @@ function _decode_CommandRequest (el: _Element): CommandRequest {
     let command!: Command;
     let optional: OPTIONAL<NULL>;
     let wildcardReturn: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "command": (_el: _Element): void => { command = $._decode_explicit<Command>(() => _decode_Command)(_el); },
         "optional": (_el: _Element): void => { optional = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

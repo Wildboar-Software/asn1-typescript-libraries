@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -61,7 +62,32 @@ class H221NonStandard {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        {
+            const n = typeof t35CountryCode1 === "bigint" ? t35CountryCode1 : BigInt(t35CountryCode1);
+            if (n < 0n || n > 255n) {
+                throw new ASN1OverflowError("H221NonStandard.t35CountryCode1 violates INTEGER range");
+            }
+        }
+        {
+            const n = typeof t35CountryCode2 === "bigint" ? t35CountryCode2 : BigInt(t35CountryCode2);
+            if (n < 0n || n > 255n) {
+                throw new ASN1OverflowError("H221NonStandard.t35CountryCode2 violates INTEGER range");
+            }
+        }
+        {
+            const n = typeof t35Extension === "bigint" ? t35Extension : BigInt(t35Extension);
+            if (n < 0n || n > 255n) {
+                throw new ASN1OverflowError("H221NonStandard.t35Extension violates INTEGER range");
+            }
+        }
+        {
+            const n = typeof manufacturerCode === "bigint" ? manufacturerCode : BigInt(manufacturerCode);
+            if (n < 0n || n > 65535n) {
+                throw new ASN1OverflowError("H221NonStandard.manufacturerCode violates INTEGER range");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a H221NonStandard
@@ -143,14 +169,10 @@ function _decode_H221NonStandard (el: _Element): H221NonStandard {
     sequence[1].name = "t35CountryCode2";
     sequence[2].name = "t35Extension";
     sequence[3].name = "manufacturerCode";
-    let t35CountryCode1!: INTEGER;
-    let t35CountryCode2!: INTEGER;
-    let t35Extension!: INTEGER;
-    let manufacturerCode!: INTEGER;
-    t35CountryCode1 = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    t35CountryCode2 = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
-    t35Extension = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[2]);
-    manufacturerCode = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[3]);
+    const t35CountryCode1: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const t35CountryCode2: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const t35Extension: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[2]);
+    const manufacturerCode: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[3]);
     return new H221NonStandard(
         t35CountryCode1,
         t35CountryCode2,
