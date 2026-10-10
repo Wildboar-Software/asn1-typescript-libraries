@@ -118,10 +118,8 @@ function _decode_TSCredentials (el: _Element): TSCredentials {
     }
     sequence[0].name = "credType";
     sequence[1].name = "credentials";
-    let credType!: INTEGER;
-    let credentials!: OCTET_STRING;
-    credType = $._decode_explicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    credentials = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const credType: INTEGER = $._decode_explicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const credentials: OCTET_STRING = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new TSCredentials(
         credType,
         credentials,
@@ -142,7 +140,7 @@ let _cached_encoder_for_TSCredentials: $.ASN1Encoder<TSCredentials> | null = nul
  */
 export
 function _encode_TSCredentials (value: TSCredentials, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSCredentials) { _cached_encoder_for_TSCredentials = function (value: TSCredentials, elGetter: $.ASN1Encoder<TSCredentials>): _Element {
+    if (!_cached_encoder_for_TSCredentials) { _cached_encoder_for_TSCredentials = function (value: TSCredentials): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.credType, $.BER),

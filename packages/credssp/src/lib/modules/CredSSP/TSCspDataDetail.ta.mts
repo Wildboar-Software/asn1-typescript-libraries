@@ -176,7 +176,7 @@ let _cached_encoder_for_TSCspDataDetail: $.ASN1Encoder<TSCspDataDetail> | null =
  */
 export
 function _encode_TSCspDataDetail (value: TSCspDataDetail, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSCspDataDetail) { _cached_encoder_for_TSCspDataDetail = function (value: TSCspDataDetail, elGetter: $.ASN1Encoder<TSCspDataDetail>): _Element {
+    if (!_cached_encoder_for_TSCspDataDetail) { _cached_encoder_for_TSCspDataDetail = function (value: TSCspDataDetail): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.keySpec, $.BER),

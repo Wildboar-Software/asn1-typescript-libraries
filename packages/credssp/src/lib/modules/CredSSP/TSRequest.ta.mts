@@ -8,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NegoData, _decode_NegoData, _encode_NegoData } from "../CredSSP/NegoData.ta.mjs";
-// export { NegoData, _decode_NegoData, _encode_NegoData } from "../CredSSP/NegoData.ta.mjs";
 
 
 /**
@@ -188,7 +187,7 @@ let _cached_encoder_for_TSRequest: $.ASN1Encoder<TSRequest> | null = null;
  */
 export
 function _encode_TSRequest (value: TSRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSRequest) { _cached_encoder_for_TSRequest = function (value: TSRequest, elGetter: $.ASN1Encoder<TSRequest>): _Element {
+    if (!_cached_encoder_for_TSRequest) { _cached_encoder_for_TSRequest = function (value: TSRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.version, $.BER),

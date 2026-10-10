@@ -117,10 +117,8 @@ function _decode_TSRemoteGuardPackageCred (el: _Element): TSRemoteGuardPackageCr
     }
     sequence[0].name = "packageName";
     sequence[1].name = "credBuffer";
-    let packageName!: OCTET_STRING;
-    let credBuffer!: OCTET_STRING;
-    packageName = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    credBuffer = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const packageName: OCTET_STRING = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const credBuffer: OCTET_STRING = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new TSRemoteGuardPackageCred(
         packageName,
         credBuffer,
@@ -141,7 +139,7 @@ let _cached_encoder_for_TSRemoteGuardPackageCred: $.ASN1Encoder<TSRemoteGuardPac
  */
 export
 function _encode_TSRemoteGuardPackageCred (value: TSRemoteGuardPackageCred, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSRemoteGuardPackageCred) { _cached_encoder_for_TSRemoteGuardPackageCred = function (value: TSRemoteGuardPackageCred, elGetter: $.ASN1Encoder<TSRemoteGuardPackageCred>): _Element {
+    if (!_cached_encoder_for_TSRemoteGuardPackageCred) { _cached_encoder_for_TSRemoteGuardPackageCred = function (value: TSRemoteGuardPackageCred): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.packageName, $.BER),

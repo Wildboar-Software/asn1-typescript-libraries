@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TSRemoteGuardPackageCred, _decode_TSRemoteGuardPackageCred, _encode_TSRemoteGuardPackageCred } from "../CredSSP/TSRemoteGuardPackageCred.ta.mjs";
-// export { TSRemoteGuardPackageCred, _decode_TSRemoteGuardPackageCred, _encode_TSRemoteGuardPackageCred } from "../CredSSP/TSRemoteGuardPackageCred.ta.mjs";
 
 
 /**
@@ -142,7 +141,7 @@ let _cached_encoder_for_TSRemoteGuardCreds: $.ASN1Encoder<TSRemoteGuardCreds> | 
  */
 export
 function _encode_TSRemoteGuardCreds (value: TSRemoteGuardCreds, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSRemoteGuardCreds) { _cached_encoder_for_TSRemoteGuardCreds = function (value: TSRemoteGuardCreds, elGetter: $.ASN1Encoder<TSRemoteGuardCreds>): _Element {
+    if (!_cached_encoder_for_TSRemoteGuardCreds) { _cached_encoder_for_TSRemoteGuardCreds = function (value: TSRemoteGuardCreds): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_TSRemoteGuardPackageCred, $.BER)(value.logonCred, $.BER),

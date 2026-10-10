@@ -126,12 +126,9 @@ function _decode_TSPasswordCreds (el: _Element): TSPasswordCreds {
     sequence[0].name = "domainName";
     sequence[1].name = "userName";
     sequence[2].name = "password";
-    let domainName!: OCTET_STRING;
-    let userName!: OCTET_STRING;
-    let password!: OCTET_STRING;
-    domainName = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    userName = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
-    password = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[2]);
+    const domainName: OCTET_STRING = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const userName: OCTET_STRING = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const password: OCTET_STRING = $._decode_explicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[2]);
     return new TSPasswordCreds(
         domainName,
         userName,
@@ -153,7 +150,7 @@ let _cached_encoder_for_TSPasswordCreds: $.ASN1Encoder<TSPasswordCreds> | null =
  */
 export
 function _encode_TSPasswordCreds (value: TSPasswordCreds, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSPasswordCreds) { _cached_encoder_for_TSPasswordCreds = function (value: TSPasswordCreds, elGetter: $.ASN1Encoder<TSPasswordCreds>): _Element {
+    if (!_cached_encoder_for_TSPasswordCreds) { _cached_encoder_for_TSPasswordCreds = function (value: TSPasswordCreds): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.domainName, $.BER),
