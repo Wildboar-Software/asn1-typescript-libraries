@@ -66,6 +66,8 @@ done
 
 - [ ] `sv` package: implement the framing that goes around this too. It's a simple protocol.
 - [ ] Prune `nist-csor`, `lnpdqp`, and `gdt`: these modules are stupid. Get rid of them.
+- [ ] IEC 63047:2018 radiation detector protocol https://webstore.iec.ch/en/publication/28999
+- [ ] ANSI C12.22-2026 Smart Meter Protocol https://webstore.ansi.org/standards/nema/ansic12222026
 - [ ] Publish NPM packages with Provenance
 - [ ] Refactor `XSD` into a separate module
 - [ ] Documentation
