@@ -11,7 +11,12 @@ import { IssuerAndSerialNumber, _decode_IssuerAndSerialNumber, _encode_IssuerAnd
 /**
  * @summary TrustedCA
  * @description
- * 
+ *
+ * One CA hint in {@link PA_PK_AS_REQ_Win2k.trusted_certifiers}.
+ * RFC 4556 does not define this choice. `caName` is a PKIX
+ * `Name`. `issuerAndSerial` is a CMS `IssuerAndSerialNumber`.
+ * The module does not say which alternative to send.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

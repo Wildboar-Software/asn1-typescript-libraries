@@ -13,7 +13,13 @@ import { IssuerAndSerialNumber, _decode_IssuerAndSerialNumber, _encode_IssuerAnd
 /**
  * @summary ExternalPrincipalIdentifier
  * @description
- * 
+ *
+ * Identifies a subject's public key, and thereby the subject.
+ * Used as a client trust-anchor hint, as an invalid certificate,
+ * and as a CA on the path recorded in the issued ticket.
+ *
+ * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,19 +58,40 @@ export
 class ExternalPrincipalIdentifier {
     constructor (
         /**
-         * @summary `subjectName`.
+         * Distinguished name of the certificate subject, a PKIX
+         * `Name` per
+         * [RFC 3280](https://www.rfc-editor.org/rfc/rfc3280).
+         * RFC 4556 requires this when that certificate has a
+         * distinguished subject name. In this module the component
+         * is mandatory: the RFC's `OPTIONAL` survives only inside
+         * an ASN.1 comment.
+         *
+         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
          * @public
          * @readonly
          */
         readonly subjectName: Name,
         /**
-         * @summary `issuerAndSerialNumber`.
+         * CMS `IssuerAndSerialNumber` of one certificate of the
+         * subject. RFC 4556 requires it in
+         * {@link TD_INVALID_CERTIFICATES} and
+         * {@link TD_TRUSTED_CERTIFIERS}. In this module the
+         * component is mandatory for every use; the RFC's
+         * `OPTIONAL` survives only inside an ASN.1 comment.
+         *
+         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
          * @public
          * @readonly
          */
         readonly issuerAndSerialNumber: IssuerAndSerialNumber,
         /**
-         * @summary `subjectKeyIdentifier`.
+         * Key identifier for the subject's public key. For an X.509
+         * certificate this is the `subjectKeyIdentifier` extension.
+         * Other certificate formats must define the match
+         * themselves. Recommended in
+         * {@link TD_TRUSTED_CERTIFIERS}.
+         *
+         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
          * @public
          * @readonly
          */

@@ -15,7 +15,14 @@ import { KDFAlgorithmId, _decode_KDFAlgorithmId, _encode_KDFAlgorithmId } from "
 /**
  * @summary AuthPack
  * @description
- * 
+ *
+ * Signed content of {@link PA_PK_AS_REQ.signedAuthPack}.
+ * `pkAuthenticator` shows that the client recently held the
+ * signing key. `clientPublicValue` is included only when the
+ * client wants the Diffie-Hellman reply-key method.
+ *
+ * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,31 +62,78 @@ export
 class AuthPack {
     constructor (
         /**
-         * @summary `pkAuthenticator`.
+         * Binds this signature to a fresh client timestamp and to
+         * the AS-REQ body. See {@link PKAuthenticator}.
+         *
+         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
          * @public
          * @readonly
          */
         readonly pkAuthenticator: PKAuthenticator,
         /**
-         * @summary `clientPublicValue`.
+         * Present only when the client wants Diffie-Hellman key
+         * agreement. `algorithm` carries the domain parameters
+         * (IEEE 1363). The public value is the `subjectPublicKey`
+         * bit string, encoded as in
+         * [RFC 3279](https://www.rfc-editor.org/rfc/rfc3279).
+         *
+         * Implementations must support Oakley 1024-bit MODP group 2
+         * and 2048-bit MODP group 14, and should support 4096-bit
+         * MODP group 16. For MODP, exponents should have at least
+         * twice as many bits as the symmetric keys derived from
+         * them. If the KDC rejects the parameters it returns
+         * `KDC_ERR_DH_KEY_PARAMETERS_NOT_ACCEPTED` (65) with
+         * {@link TD_DH_PARAMETERS}.
+         *
+         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
          * @public
          * @readonly
          */
         readonly clientPublicValue: OPTIONAL<SubjectPublicKeyInfo>,
         /**
-         * @summary `supportedCMSTypes`.
+         * CMS algorithm identifiers the client supports, most
+         * preferred first. Entries name a key-transport algorithm,
+         * a content-encryption algorithm, or a signature algorithm.
+         * Order among those three classes does not matter. Preference
+         * here overrides CMS type numbers 9 through 15 in the
+         * AS-REQ `etype` field. Those numbers are not Kerberos
+         * enctypes and must not appear in `EncryptedData`. Clients
+         * that want the algorithms in that table should still send
+         * the old numbers.
+         *
+         * On the public-key delivery path, the KDC should pick the
+         * first listed algorithm it supports. If it supports none,
+         * it returns `KDC_ERR_ETYPE_NOSUPP`. An empty sequence may
+         * be omitted or included.
+         *
+         * [RFC 4556, section 3.1.4](https://www.rfc-editor.org/rfc/rfc4556#section-3.1.4)
+         * and
+         * [section 3.2.3.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.2).
          * @public
          * @readonly
          */
         readonly supportedCMSTypes: OPTIONAL<AlgorithmIdentifier[]>,
         /**
-         * @summary `clientDHNonce`.
+         * Present when the client is willing to reuse
+         * Diffie-Hellman keys, or to let the KDC do so. It must be
+         * chosen at random and be as long as the longest symmetric
+         * key type the client supports. The KDC should
+         * not reuse its keys unless this field is present. It is
+         * concatenated into the reply-key seed when keys are
+         * reused; see {@link DHRepInfo}.
+         *
+         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1)
+         * and
+         * [section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
          * @public
          * @readonly
          */
         readonly clientDHNonce: OPTIONAL<DHNonce>,
         /**
-         * @summary `supportedKDFs`.
+         * Key-derivation functions the client offers. RFC 4556 does
+         * not define this field. The module attributes it to
+         * RFC 8636 and does not include that specification's
+         * selection rules.
          * @public
          * @readonly
          */

@@ -14,7 +14,15 @@ import { KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "@wildb
 /**
  * @summary KDCDHKeyInfo
  * @description
- * 
+ *
+ * KDC Diffie-Hellman public key, signed as the content of
+ * {@link DHRepInfo.dhSignedData}. The client checks this
+ * signature per CMS, and validates the KDC certificate as in
+ * [section 3.2.4](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.4).
+ * See {@link id_pkinit_san} and {@link id_pkinit_KPKdc}.
+ *
+ * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,19 +52,35 @@ export
 class KDCDHKeyInfo {
     constructor (
         /**
-         * @summary `subjectPublicKey`.
+         * KDC Diffie-Hellman public value, a bit string encoded as
+         * in [RFC 3279](https://www.rfc-editor.org/rfc/rfc3279).
+         * Must not be used after `dhKeyExpiration` when that field
+         * is present.
+         *
+         * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
          * @public
          * @readonly
          */
         readonly subjectPublicKey: BIT_STRING,
         /**
-         * @summary `nonce`.
+         * {@link PKAuthenticator.nonce} from the request when
+         * Diffie-Hellman keys are not reused, and 0 when they are.
+         *
+         * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
          * @public
          * @readonly
          */
         readonly nonce: INTEGER,
         /**
-         * @summary `dhKeyExpiration`.
+         * Expiration of the KDC's Diffie-Hellman key pair. Present
+         * if and only if those keys are reused. After this time
+         * RFC 4556 treats the signature over the DH reply as
+         * invalid, and {@link DHRepInfo.serverDHNonce} must be
+         * present. If this field is omitted, `serverDHNonce` must
+         * be omitted too. The KDC should not reuse keys unless the
+         * request included {@link AuthPack.clientDHNonce}.
+         *
+         * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
          * @public
          * @readonly
          */

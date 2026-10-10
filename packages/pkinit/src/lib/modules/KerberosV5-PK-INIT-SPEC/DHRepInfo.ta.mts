@@ -13,7 +13,35 @@ import { KDFAlgorithmId, _decode_KDFAlgorithmId, _encode_KDFAlgorithmId } from "
 /**
  * @summary DHRepInfo
  * @description
- * 
+ *
+ * KDC Diffie-Hellman reply, the `dhInfo` alternative of
+ * {@link PA_PK_AS_REP}. The AS reply key is derived as follows.
+ *
+ * For MODP, `DHSharedSecret` is ZZ from
+ * [RFC 2631, section 2.1.1](https://www.rfc-editor.org/rfc/rfc2631#section-2.1.1),
+ * padded with leading zeros to the octet length of the modulus
+ * and written big-endian. Let `K` be the key-generation seed
+ * length of the selected reply-key enctype. Then:
+ *
+ * ```
+ * octetstring2key(x) = random-to-key(K-truncate(
+ *     SHA1(0x00 | x) | SHA1(0x01 | x) | SHA1(0x02 | x) | ...))
+ * ```
+ *
+ * `|` is concatenation. Each counter is one octet.
+ * `K-truncate` keeps the first `K` bits. `random-to-key` is the
+ * operation in that enctype's profile. When keys are reused,
+ * `n_c` is {@link AuthPack.clientDHNonce} and `n_k` is
+ * `serverDHNonce`; otherwise both are empty octet strings. The
+ * reply key is `octetstring2key(DHSharedSecret | n_c | n_k)`.
+ *
+ * Required reply-key enctypes are `aes128-cts-hmac-sha1-96` and
+ * `aes256-cts-hmac-sha1-96`. Either party can cache
+ * `(client public, KDC public, DHSharedSecret)` and reuse the
+ * secret when both public values repeat.
+ *
+ * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,19 +73,45 @@ export
 class DHRepInfo {
     constructor (
         /**
-         * @summary `dhSignedData`.
+         * CMS `ContentInfo` with `contentType` `id-signedData`
+         * (`1.2.840.113549.1.7.2`) and content `SignedData`.
+         * `eContentType` is {@link id_pkinit_DHKeyData}. `eContent`
+         * is the DER encoding of {@link KDCDHKeyInfo}. One
+         * `signerInfo` signs that value. The signed attribute
+         * `content-type` must be present and equal
+         * `id-pkinit-DHKeyData`.
+         *
+         * `certificates` should be enough for the client to build a
+         * path from the KDC certificate to a trust anchor it
+         * accepts, using `trustedCertifiers` as a hint, and must
+         * not contain root CA certificates. The field may be empty
+         * when the key named by {@link PA_PK_AS_REQ.kdcPkId} signed
+         * this value. The KDC must be able to include such a set
+         * when configured to do so.
+         *
+         * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
          * @public
          * @readonly
          */
         readonly dhSignedData: ContentInfo,
         /**
-         * @summary `serverDHNonce`.
+         * Present if and only if
+         * {@link KDCDHKeyInfo.dhKeyExpiration} is present. When the
+         * KDC reuses Diffie-Hellman keys this must be at least as
+         * long as the key that encrypts the AS-REP, and it is
+         * concatenated into the reply-key seed. See the type
+         * description.
+         *
+         * [RFC 4556, section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
          * @public
          * @readonly
          */
         readonly serverDHNonce: OPTIONAL<DHNonce>,
         /**
-         * @summary `kdf`.
+         * Key-derivation function the KDC selected. RFC 4556 does
+         * not define this field and its reply-key calculation does
+         * not use it. The module says RFC 8636 added the field.
+         * This module does not include that specification's rules.
          * @public
          * @readonly
          */

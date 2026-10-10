@@ -9,7 +9,26 @@ import { ExternalPrincipalIdentifier, _decode_ExternalPrincipalIdentifier, _enco
 /**
  * @summary AD_INITIAL_VERIFIED_CAS
  * @description
- * 
+ *
+ * Authorization data the KDC must place in the initial ticket.
+ * The `ad-type` is {@link ad_initial_verified_cas} and `ad-data`
+ * is the DER encoding of this sequence. Each entry is a CA, or
+ * a CA certificate, on the path that validated the client
+ * certificate. The KDC also sets the ticket's `initial` flag.
+ *
+ * An empty sequence is allowed only when the KDC itself vouches
+ * for the client's certificate. When the list meets the realm's
+ * policy, the AS wraps it in `AD-IF-RELEVANT`. That is the
+ * `TRANSITED-POLICY-CHECKED` case. A TGS must copy this
+ * authorization data from a ticket presented in `PA-TGS-REQ`
+ * into the issued ticket. It may wrap the data in
+ * `AD-IF-RELEVANT` when the list meets local policy, and may
+ * unwrap it otherwise. An application server should apply local
+ * policy when this element is not inside `AD-IF-RELEVANT`, and
+ * may apply local policy when it is.
+ *
+ * [RFC 4556, section 3.2.3](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

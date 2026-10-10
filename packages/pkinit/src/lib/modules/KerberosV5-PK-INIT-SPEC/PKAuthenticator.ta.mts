@@ -15,7 +15,16 @@ import { PAChecksum2, _decode_PAChecksum2, _encode_PAChecksum2 } from "../Kerber
 /**
  * @summary PKAuthenticator
  * @description
- * 
+ *
+ * Freshness and binding for the signature over {@link AuthPack}.
+ * `ctime` and `cusec` are the client's clock, checked for replay
+ * and skew as in Kerberos. Failure yields `KRB_AP_ERR_REPEAT` or
+ * `KRB_AP_ERR_SKEW`.
+ *
+ * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1)
+ * and
+ * [section 3.2.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,37 +59,63 @@ export
 class PKAuthenticator {
     constructor (
         /**
-         * @summary `cusec`.
+         * Microseconds, 0..999999, of the client timestamp. Used
+         * with `ctime`.
+         *
+         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
          * @public
          * @readonly
          */
         readonly cusec: INTEGER,
         /**
-         * @summary `ctime`.
+         * Current time on the client. Together with `cusec` this is
+         * the timestamp the KDC checks for replay and skew.
+         *
+         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
          * @public
          * @readonly
          */
         readonly ctime: KerberosTime,
         /**
-         * @summary `nonce`.
+         * Random integer in 0..4294967295. It does not have to equal
+         * the nonce in `KDC-REQ-BODY`. When Diffie-Hellman keys are
+         * not reused, {@link KDCDHKeyInfo.nonce} echoes this value;
+         * when they are reused, that field is 0.
+         *
+         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
          * @public
          * @readonly
          */
         readonly nonce: INTEGER,
         /**
-         * @summary `paChecksum`.
+         * SHA-1 digest of the `KDC-REQ-BODY` of this AS-REQ. A KDC
+         * conforming to RFC 4556 requires it and returns
+         * `KDC_ERR_PA_CHECKSUM_MUST_BE_INCLUDED` (79) when it is
+         * absent. The field is optional in the syntax so a later
+         * exchange can drop SHA-1. RFC 4556 does not define that
+         * exchange.
+         *
+         * [RFC 4556, section 3.2.3](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3).
          * @public
          * @readonly
          */
         readonly paChecksum: OPTIONAL<OCTET_STRING>,
         /**
-         * @summary `freshnessToken`.
+         * Not defined by RFC 4556. The module comment says this is
+         * the `PA_AS_FRESHNESS` padata value received from the KDC,
+         * and that it must be present if the KDC sent one. The
+         * comment does not cite how that value is produced or
+         * checked.
          * @public
          * @readonly
          */
         readonly freshnessToken: OPTIONAL<OCTET_STRING>,
         /**
-         * @summary `paChecksum2`.
+         * Not defined by RFC 4556. The module attributes it to
+         * MS-PKCA v20230920 section 2.2.3 and says Windows Server
+         * 2025 and newer may require it, depending on configuration
+         * and on the algorithms used to sign the `AuthPack`.
+         * See {@link PAChecksum2}.
          * @public
          * @readonly
          */

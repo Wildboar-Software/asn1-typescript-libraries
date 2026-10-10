@@ -9,7 +9,17 @@ import {
 /**
  * @summary id_pkinit_san
  * @description
- * 
+ *
+ * `1.3.6.1.5.2.2`. `type-id` of a subject alternative name
+ * `otherName` whose value is a {@link KRB5PrincipalName}.
+ * Implementations must be able to process this name form.
+ * Appendix C says the Windows release anticipated by RFC 4556
+ * does not put this name on KDC certificates.
+ *
+ * [RFC 4556, section 3.2.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.2)
+ * and
+ * [Appendix C](https://www.rfc-editor.org/rfc/rfc4556#appendix-C).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

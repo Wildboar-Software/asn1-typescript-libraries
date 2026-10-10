@@ -12,7 +12,13 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
 /**
  * @summary PAChecksum2
  * @description
- * 
+ *
+ * Digest of `KDC-REQ-BODY` together with the algorithm that
+ * produced it. Carried in {@link PKAuthenticator.paChecksum2}.
+ * RFC 4556 does not define this type. The module attributes it
+ * to MS-PKCA v20230920 section 2.2.3 and does not include the
+ * rest of that specification.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,13 +37,14 @@ export
 class PAChecksum2 {
     constructor (
         /**
-         * @summary `checksum`.
+         * Checksum computed over `KDC-REQ-BODY`. The module does
+         * not say which encoding of that body is hashed.
          * @public
          * @readonly
          */
         readonly checksum: OCTET_STRING,
         /**
-         * @summary `algorithmIdentifier`.
+         * Digest algorithm used to compute `checksum`.
          * @public
          * @readonly
          */

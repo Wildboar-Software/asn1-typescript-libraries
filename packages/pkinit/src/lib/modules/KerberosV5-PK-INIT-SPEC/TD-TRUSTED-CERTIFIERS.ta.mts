@@ -9,7 +9,20 @@ import { ExternalPrincipalIdentifier, _decode_ExternalPrincipalIdentifier, _enco
 /**
  * @summary TD_TRUSTED_CERTIFIERS
  * @description
- * 
+ *
+ * Typed-data value for `data-type` {@link td_trusted_certifiers}.
+ * It is the e-data of `KDC_ERR_CANT_VERIFY_CERTIFICATE` (70),
+ * sent when the KDC cannot build a certification path for the
+ * client certificate. Each entry is a CA, or a CA certificate,
+ * that the KDC trusts. `issuerAndSerialNumber` is required and
+ * `subjectKeyIdentifier` is recommended.
+ *
+ * The client should retry only with a different set of
+ * certificates that form a path, or a partial path, from one of
+ * these trust anchors to its own certificate.
+ *
+ * [RFC 4556, section 3.2.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

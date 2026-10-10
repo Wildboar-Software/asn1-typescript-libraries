@@ -9,7 +9,23 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
 /**
  * @summary TD_DH_PARAMETERS
  * @description
- * 
+ *
+ * Typed-data value for `data-type` {@link td_dh_parameters}, in
+ * the e-data of `KDC_ERR_DH_KEY_PARAMETERS_NOT_ACCEPTED` (65).
+ * Each `AlgorithmIdentifier` is a Diffie-Hellman domain
+ * parameter set the KDC supports, most preferred first. For
+ * MODP, fill the identifier as in
+ * [RFC 3279, section 2.3.3](https://www.rfc-editor.org/rfc/rfc3279#section-2.3.3).
+ * The client should pick one set and retry.
+ *
+ * Kerberos errors are not integrity protected, so an attacker
+ * can change this list. Local policy can restrict the acceptable
+ * parameters, or refuse to negotiate them.
+ *
+ * [RFC 4556, section 3.2.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.2)
+ * and
+ * [section 4](https://www.rfc-editor.org/rfc/rfc4556#section-4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

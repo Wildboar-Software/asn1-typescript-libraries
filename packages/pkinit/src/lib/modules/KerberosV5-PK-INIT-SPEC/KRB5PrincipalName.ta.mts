@@ -12,7 +12,29 @@ import { PrincipalName, _decode_PrincipalName, _encode_PrincipalName } from "@wi
 /**
  * @summary KRB5PrincipalName
  * @description
- * 
+ *
+ * Kerberos principal carried as the value of a subject
+ * alternative name `otherName` whose `type-id` is
+ * {@link id_pkinit_san}.
+ *
+ * On a client certificate, the KDC uses this name when it has
+ * no other binding from the client's key, or from the
+ * certificate, to the client principal in the AS-REQ. If the
+ * AS-REQ name matches no binding the KDC has, or the KDC finds
+ * no binding, it returns `KDC_ERR_CLIENT_NAME_MISMATCH` (75)
+ * with no e-data.
+ *
+ * On a KDC certificate, unless the client already knows that
+ * the signing key belongs to the KDC of the target realm, this
+ * name must be the ticket-granting service of that realm
+ * ([RFC 4120, section 7.3](https://www.rfc-editor.org/rfc/rfc4120#section-7.3)).
+ * A certificate that carries that TGS name does not also need
+ * the {@link id_pkinit_KPKdc} extended key usage.
+ *
+ * [RFC 4556, section 3.2.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.2)
+ * and
+ * [section 3.2.4](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,13 +50,22 @@ export
 class KRB5PrincipalName {
     constructor (
         /**
-         * @summary `realm`.
+         * Realm of the principal named by this SAN. Microsoft
+         * realm names are domain-style and strictly uppercase.
+         *
+         * [RFC 4556, section 3.2.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.2)
+         * and
+         * [Appendix C](https://www.rfc-editor.org/rfc/rfc4556#appendix-C).
          * @public
          * @readonly
          */
         readonly realm: Realm,
         /**
-         * @summary `principalName`.
+         * Principal named by this SAN. When a KDC certificate uses
+         * the SAN to show that it is a KDC, this is the TGS name of
+         * the target realm.
+         *
+         * [RFC 4556, section 3.2.4](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.4).
          * @public
          * @readonly
          */

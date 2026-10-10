@@ -13,7 +13,16 @@ import { TrustedCA, _decode_TrustedCA, _encode_TrustedCA } from "../KerberosV5-P
 /**
  * @summary PA_PK_AS_REQ_Win2k
  * @description
- * 
+ *
+ * Windows 2000 form of the PKINIT AS-REQ pre-authentication
+ * value. This is not {@link PA_PK_AS_REQ}. RFC 4556 does not
+ * define it, and Appendix C does not give its fields. The
+ * module ASN.1 asks, in a comment, whether `trusted-certifiers`
+ * was meant to be `ExternalPrincipalIdentifier` rather than
+ * {@link TrustedCA}.
+ *
+ * [RFC 4556, Appendix C](https://www.rfc-editor.org/rfc/rfc4556#appendix-C).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,25 +41,32 @@ export
 class PA_PK_AS_REQ_Win2k {
     constructor (
         /**
-         * @summary `signed_auth_pack`.
+         * CMS `ContentInfo`. RFC 4556's rules for
+         * {@link PA_PK_AS_REQ.signedAuthPack} apply to the standard
+         * type. This module does not say whether they apply here.
          * @public
          * @readonly
          */
         readonly signed_auth_pack: ContentInfo,
         /**
-         * @summary `trusted_certifiers`.
+         * Optional CA hints. Each entry is a {@link TrustedCA}, not
+         * an {@link ExternalPrincipalIdentifier}. The module ASN.1
+         * marks that difference with an `XXX` comment and does not
+         * resolve it.
          * @public
          * @readonly
          */
         readonly trusted_certifiers: OPTIONAL<TrustedCA[]>,
         /**
-         * @summary `kdc_cert`.
+         * Opaque octet string. RFC 4556 does not define what is
+         * encoded here.
          * @public
          * @readonly
          */
         readonly kdc_cert: OPTIONAL<OCTET_STRING>,
         /**
-         * @summary `encryption_cert`.
+         * Opaque octet string. RFC 4556 does not define what is
+         * encoded here.
          * @public
          * @readonly
          */

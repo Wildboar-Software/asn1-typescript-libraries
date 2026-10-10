@@ -8,7 +8,12 @@ import {
 /**
  * @summary pa_pk_as_rep
  * @description
- * 
+ *
+ * Pre-authentication type 17. In the AS-REP the padata-value is
+ * the DER encoding of {@link PA_PK_AS_REP}.
+ *
+ * [RFC 4556, section 3.1.3](https://www.rfc-editor.org/rfc/rfc4556#section-3.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

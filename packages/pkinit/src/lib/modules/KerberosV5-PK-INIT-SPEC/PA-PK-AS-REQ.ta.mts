@@ -13,7 +13,24 @@ import { ExternalPrincipalIdentifier, _decode_ExternalPrincipalIdentifier, _enco
 /**
  * @summary PA_PK_AS_REQ
  * @description
- * 
+ *
+ * DER-encoded padata-value for padata-type {@link pa_pk_as_req}
+ * (16) in the AS-REQ. It carries the client's signed
+ * {@link AuthPack} and optional hints about which KDC
+ * certificate to use.
+ *
+ * The KDC advertises PKINIT by returning this padata-type in
+ * the METHOD-DATA of `KDC_ERR_PREAUTH_FAILED`, with an empty
+ * padata-value. Clients ignore any value there.
+ *
+ * Values defined by RFC 4556 are DER. CMS objects inside them
+ * should also be DER; some peers cannot decode indefinite-length
+ * BER.
+ *
+ * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1)
+ * and
+ * [section 3.4](https://www.rfc-editor.org/rfc/rfc4556#section-3.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,19 +72,61 @@ export
 class PA_PK_AS_REQ {
     constructor (
         /**
-         * @summary `signedAuthPack`.
+         * CMS `ContentInfo` whose `contentType` is `id-signedData`
+         * (`1.2.840.113549.1.7.2`) and whose content is `SignedData`.
+         * That `SignedData` has `eContentType`
+         * {@link id_pkinit_authData} and `eContent` equal to the DER
+         * encoding of {@link AuthPack}. `signerInfos` holds one
+         * signature over that `AuthPack`. The signed attribute
+         * `content-type` must be present and equal
+         * `id-pkinit-authData`. Every implementation must support
+         * the signature algorithm `sha-1WithRSAEncryption`. If the
+         * KDC rejects the digest, it returns
+         * `KDC_ERR_DIGEST_IN_SIGNED_DATA_NOT_ACCEPTED` (80) with
+         * TYPED-DATA and no defined data type. A signature that does
+         * not verify is `KDC_ERR_INVALID_SIG` (64), with no e-data.
+         * Any other rejection of the client public key is
+         * `KDC_ERR_CLIENT_NOT_TRUSTED` (62). No e-data is defined
+         * for that code.
+         *
+         * `certificates` holds enough certificates for the KDC to
+         * build a path from the client certificate to a trust anchor
+         * it accepts, and must not contain root CA certificates.
+         * The client must be able to include that set when configured
+         * to do so. An unacceptable CA signature digest is
+         * `KDC_ERR_DIGEST_IN_CERT_NOT_ACCEPTED` (78), again with
+         * TYPED-DATA and no defined data type.
+         *
+         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1)
+         * and
+         * [section 3.1.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.1.1).
          * @public
          * @readonly
          */
         readonly signedAuthPack: ContentInfo,
         /**
-         * @summary `trustedCertifiers`.
+         * CAs the client trusts to certify the KDC. Each entry
+         * identifies a CA or a CA certificate. The KDC should treat
+         * the list as a hint when choosing the chain to return.
+         * An empty sequence may be omitted or included; both mean
+         * the same thing.
+         *
+         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
          * @public
          * @readonly
          */
         readonly trustedCertifiers: OPTIONAL<ExternalPrincipalIdentifier[]>,
         /**
-         * @summary `kdcPkId`.
+         * CMS `SignerIdentifier`
+         * ([RFC 3852](https://www.rfc-editor.org/rfc/rfc3852))
+         * naming a KDC public key the client already has. If the
+         * KDC does not have that key, it ignores this field. When
+         * the named key signs the reply, the KDC may leave the
+         * reply's `certificates` field empty.
+         *
+         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1)
+         * and
+         * [section 3.2.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.2).
          * @public
          * @readonly
          */

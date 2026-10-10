@@ -11,7 +11,56 @@ import { ContentInfo, _decode_ContentInfo, _encode_ContentInfo } from "@wildboar
 /**
  * @summary PA_PK_AS_REP
  * @description
- * 
+ *
+ * DER-encoded padata-value for padata-type {@link pa_pk_as_rep}
+ * (17) in the AS-REP. The alternative selects how the client
+ * obtains the AS reply key, which encrypts `enc-part` of the
+ * AS-REP.
+ *
+ * `dhInfo` is Diffie-Hellman, which every implementation must
+ * support. `encKeyPack` is public-key encryption of the reply
+ * key, which implementations should support. If the client
+ * omitted {@link AuthPack.clientPublicValue} and the KDC cannot
+ * do public-key delivery, the KDC returns
+ * `KDC_ERR_PUBLIC_KEY_ENCRYPTION_NOT_SUPPORTED` (81) and no
+ * e-data.
+ *
+ * The returned ticket's lifetime must not exceed the client's
+ * public-private key pair. For this specification that lifetime
+ * is the certificate validity period, unless configured
+ * otherwise.
+ *
+ * `encKeyPack` is a CMS `ContentInfo` with `contentType`
+ * `id-envelopedData` (`1.2.840.113549.1.7.3`). Its content is
+ * `EnvelopedData`, whose content type is `id-signedData`. The
+ * inner `SignedData`, once decrypted, has `eContentType`
+ * {@link id_pkinit_rkeyData} and `eContent` equal to the DER
+ * encoding of `ReplyKeyPack`. This module does not define
+ * `ReplyKeyPack`. RFC 4556 gives it `replyKey`, the AS reply
+ * key, and `asChecksum`, a checksum of the AS-REQ under that
+ * key with key usage 6. For a "newer" enctype the checksum is
+ * that enctype's required checksum. The client must verify
+ * `asChecksum`. Key usage 6 is also the authenticator checksum
+ * in a `PA-TGS-REQ`; RFC 4556 calls that overlap historical.
+ *
+ * `recipientInfos` contains exactly one
+ * `KeyTransRecipientInfo`. Its `encryptedKey` is a temporary key
+ * encrypted to the client's public key, and that temporary key
+ * encrypts the `EnvelopedData` content. `unprotectedAttrs` and
+ * `originatorInfo` may be present. The signed attribute
+ * `content-type` must be `id-pkinit-rkeyData`. Certificate
+ * rules match {@link DHRepInfo.dhSignedData}. On this path,
+ * `rsaEncryption` (RSAES-PKCS1-v1_5) is required for key
+ * transport and `des-ede3-cbc` is required for content
+ * encryption. RSA keys of at least 2048 bits are recommended.
+ * Using one RSA key pair for both encryption and signing is
+ * permitted here and discouraged by RFC 4556.
+ *
+ * [RFC 4556, section 3.2.3](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3),
+ * [section 3.2.3.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.2),
+ * and
+ * [section 4](https://www.rfc-editor.org/rfc/rfc4556#section-4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

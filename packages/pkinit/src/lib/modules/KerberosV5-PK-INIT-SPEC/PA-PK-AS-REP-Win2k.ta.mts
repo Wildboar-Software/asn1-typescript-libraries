@@ -9,7 +9,13 @@ import { PA_PK_AS_REP, _decode_PA_PK_AS_REP, _encode_PA_PK_AS_REP } from "../Ker
 /**
  * @summary PA_PK_AS_REP_Win2k
  * @description
- * 
+ *
+ * Alias of {@link PA_PK_AS_REP}. RFC 4556 does not define a
+ * separate Windows reply type. This module equates the two, so
+ * the standard `dhInfo` and `encKeyPack` rules apply.
+ *
+ * [RFC 4556, section 3.2.3](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

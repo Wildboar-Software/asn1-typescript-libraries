@@ -9,7 +9,23 @@ import { ExternalPrincipalIdentifier, _decode_ExternalPrincipalIdentifier, _enco
 /**
  * @summary TD_INVALID_CERTIFICATES
  * @description
- * 
+ *
+ * Typed-data value for `data-type`
+ * {@link td_invalid_certificates}. Each entry names a
+ * certificate the client sent whose signature did not verify.
+ * It is the e-data of `KDC_ERR_INVALID_CERTIFICATE` (71). The
+ * same identification is used for
+ * `KDC_ERR_REVOKED_CERTIFICATE` (72) and, when the KDC tried and
+ * could not determine revocation status,
+ * `KDC_ERR_REVOCATION_STATUS_UNKNOWN` (73).
+ *
+ * If several signatures are invalid, the KDC may include one
+ * `IssuerAndSerialNumber` per invalid signature.
+ * `issuerAndSerialNumber` is required on each entry. The list
+ * names only certificates from the request.
+ *
+ * [RFC 4556, section 3.2.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

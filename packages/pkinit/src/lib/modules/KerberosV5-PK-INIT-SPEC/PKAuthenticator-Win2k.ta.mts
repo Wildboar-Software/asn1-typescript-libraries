@@ -15,7 +15,14 @@ import { KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "@wildb
 /**
  * @summary PKAuthenticator_Win2k
  * @description
- * 
+ *
+ * Authenticator used with {@link PA_PK_AS_REQ_Win2k}. RFC 4556
+ * does not define this type. Appendix C describes Windows
+ * certificate contents, not these fields, so the integer ranges
+ * below are only the constraints in this module's ASN.1.
+ *
+ * [RFC 4556, Appendix C](https://www.rfc-editor.org/rfc/rfc4556#appendix-C).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,31 +42,43 @@ export
 class PKAuthenticator_Win2k {
     constructor (
         /**
-         * @summary `kdcName`.
+         * Named `kdcName` in this module. RFC 4556 does not define
+         * the field or say how a peer checks it.
          * @public
          * @readonly
          */
         readonly kdcName: PrincipalName,
         /**
-         * @summary `kdcRealm`.
+         * Named `kdcRealm` in this module. RFC 4556 does not define
+         * the field. Appendix C says Microsoft Kerberos realm names
+         * are domain-style and strictly uppercase.
+         *
+         * [RFC 4556, Appendix C](https://www.rfc-editor.org/rfc/rfc4556#appendix-C).
          * @public
          * @readonly
          */
         readonly kdcRealm: Realm,
         /**
-         * @summary `cusec`.
+         * Integer in 0..4294967295. That is wider than the
+         * 0..999999 range of {@link PKAuthenticator.cusec}.
+         * RFC 4556 does not define this field.
          * @public
          * @readonly
          */
         readonly cusec: INTEGER,
         /**
-         * @summary `ctime`.
+         * RFC 4556 does not define this field, so it does not say
+         * whether the replay checks on
+         * {@link PKAuthenticator.ctime} apply here.
          * @public
          * @readonly
          */
         readonly ctime: KerberosTime,
         /**
-         * @summary `nonce`.
+         * Integer in -2147483648..2147483647, a signed 32-bit
+         * range. {@link PKAuthenticator.nonce} is an unsigned
+         * value in 0..4294967295. RFC 4556 does not define this
+         * field or say whether it must match another nonce.
          * @public
          * @readonly
          */

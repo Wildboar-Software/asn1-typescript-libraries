@@ -9,7 +9,12 @@ import {
 /**
  * @summary id_pkinit
  * @description
- * 
+ *
+ * `1.3.6.1.5.2.3`. Arc for the PKINIT content types and the
+ * PKINIT extended key usages.
+ *
+ * [RFC 4556, Appendix A](https://www.rfc-editor.org/rfc/rfc4556#appendix-A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

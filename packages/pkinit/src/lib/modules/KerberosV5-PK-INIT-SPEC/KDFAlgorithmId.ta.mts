@@ -12,7 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary KDFAlgorithmId
  * @description
- * 
+ *
+ * Object identifier of a key-derivation function. RFC 4556 does
+ * not define this type. The module attributes it to RFC 8636.
+ * Only `kdf-id` is specified here. Further components are an
+ * extension marker, and this module defines none of them.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,7 +33,12 @@ export
 class KDFAlgorithmId {
     constructor (
         /**
-         * @summary `kdf_id`.
+         * OID of the key-derivation function. This module defines
+         * {@link id_pkinit_kdf_ah_sha1},
+         * {@link id_pkinit_kdf_ah_sha256},
+         * {@link id_pkinit_kdf_ah_sha384}, and
+         * {@link id_pkinit_kdf_ah_sha512}. RFC 4556 does not say
+         * which of these a peer must accept.
          * @public
          * @readonly
          */
