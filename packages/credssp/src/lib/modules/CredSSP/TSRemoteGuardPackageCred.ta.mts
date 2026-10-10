@@ -141,7 +141,7 @@ let _cached_encoder_for_TSRemoteGuardPackageCred: $.ASN1Encoder<TSRemoteGuardPac
  */
 export
 function _encode_TSRemoteGuardPackageCred (value: TSRemoteGuardPackageCred, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSRemoteGuardPackageCred) { _cached_encoder_for_TSRemoteGuardPackageCred = function (value: TSRemoteGuardPackageCred, elGetter: $.ASN1Encoder<TSRemoteGuardPackageCred>): _Element {
+    if (!_cached_encoder_for_TSRemoteGuardPackageCred) { _cached_encoder_for_TSRemoteGuardPackageCred = function (value: TSRemoteGuardPackageCred): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.packageName, $.BER),

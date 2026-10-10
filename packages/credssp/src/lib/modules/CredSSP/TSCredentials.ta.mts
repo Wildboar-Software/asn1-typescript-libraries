@@ -142,7 +142,7 @@ let _cached_encoder_for_TSCredentials: $.ASN1Encoder<TSCredentials> | null = nul
  */
 export
 function _encode_TSCredentials (value: TSCredentials, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSCredentials) { _cached_encoder_for_TSCredentials = function (value: TSCredentials, elGetter: $.ASN1Encoder<TSCredentials>): _Element {
+    if (!_cached_encoder_for_TSCredentials) { _cached_encoder_for_TSCredentials = function (value: TSCredentials): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.credType, $.BER),

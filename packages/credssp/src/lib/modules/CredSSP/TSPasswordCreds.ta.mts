@@ -153,7 +153,7 @@ let _cached_encoder_for_TSPasswordCreds: $.ASN1Encoder<TSPasswordCreds> | null =
  */
 export
 function _encode_TSPasswordCreds (value: TSPasswordCreds, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSPasswordCreds) { _cached_encoder_for_TSPasswordCreds = function (value: TSPasswordCreds, elGetter: $.ASN1Encoder<TSPasswordCreds>): _Element {
+    if (!_cached_encoder_for_TSPasswordCreds) { _cached_encoder_for_TSPasswordCreds = function (value: TSPasswordCreds): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.domainName, $.BER),

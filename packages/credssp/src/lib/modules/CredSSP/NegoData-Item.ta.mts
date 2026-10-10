@@ -129,7 +129,7 @@ let _cached_encoder_for_NegoData_Item: $.ASN1Encoder<NegoData_Item> | null = nul
  */
 export
 function _encode_NegoData_Item (value: NegoData_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NegoData_Item) { _cached_encoder_for_NegoData_Item = function (value: NegoData_Item, elGetter: $.ASN1Encoder<NegoData_Item>): _Element {
+    if (!_cached_encoder_for_NegoData_Item) { _cached_encoder_for_NegoData_Item = function (value: NegoData_Item): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.negoToken, $.BER)

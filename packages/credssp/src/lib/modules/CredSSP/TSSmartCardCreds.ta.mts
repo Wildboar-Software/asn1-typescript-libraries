@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TSCspDataDetail, _decode_TSCspDataDetail, _encode_TSCspDataDetail } from "../CredSSP/TSCspDataDetail.ta.mjs";
-// export { TSCspDataDetail, _decode_TSCspDataDetail, _encode_TSCspDataDetail } from "../CredSSP/TSCspDataDetail.ta.mjs";
 
 
 /**
@@ -165,7 +164,7 @@ let _cached_encoder_for_TSSmartCardCreds: $.ASN1Encoder<TSSmartCardCreds> | null
  */
 export
 function _encode_TSSmartCardCreds (value: TSSmartCardCreds, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSSmartCardCreds) { _cached_encoder_for_TSSmartCardCreds = function (value: TSSmartCardCreds, elGetter: $.ASN1Encoder<TSSmartCardCreds>): _Element {
+    if (!_cached_encoder_for_TSSmartCardCreds) { _cached_encoder_for_TSSmartCardCreds = function (value: TSSmartCardCreds): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.pin, $.BER),

@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NegoData_Item, _decode_NegoData_Item, _encode_NegoData_Item } from "../CredSSP/NegoData-Item.ta.mjs";
-// export { NegoData_Item, _decode_NegoData_Item, _encode_NegoData_Item } from "../CredSSP/NegoData-Item.ta.mjs";
 
 
 /**
