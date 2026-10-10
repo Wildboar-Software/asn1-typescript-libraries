@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,21 +21,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SMSAddress = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_SMSAddress: $.ASN1Decoder<SMSAddress> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SMSAddress
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SMSAddress (el: _Element): SMSAddress {
-    if (!_cached_decoder_for_SMSAddress) { _cached_decoder_for_SMSAddress = $._decodeOctetString; }
-    return _cached_decoder_for_SMSAddress(el);
-}
-
-let _cached_encoder_for_SMSAddress: $.ASN1Encoder<SMSAddress> | null = null;
+export const _decode_SMSAddress = (el: _Element): SMSAddress => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 2 || value.length > 12) {
+        throw new ASN1SizeError("SMSAddress violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) SMSAddress into an ASN.1 Element.
@@ -43,11 +42,7 @@ let _cached_encoder_for_SMSAddress: $.ASN1Encoder<SMSAddress> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SMSAddress, encoded as an ASN.1 Element.
  */
-export
-function _encode_SMSAddress (value: SMSAddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMSAddress) { _cached_encoder_for_SMSAddress = $._encodeOctetString; }
-    return _cached_encoder_for_SMSAddress(value, elGetter);
-}
+export const _encode_SMSAddress = $._encodeOctetString;
 
 
 /* eslint-enable */

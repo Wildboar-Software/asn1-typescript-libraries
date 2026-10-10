@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RATRestrictionItem, _decode_RATRestrictionItem, _encode_RATRestrictionItem } from "../TS33128Payloads/RATRestrictionItem.ta.mjs";
-// export { RATRestrictionItem, _decode_RATRestrictionItem, _encode_RATRestrictionItem } from "../TS33128Payloads/RATRestrictionItem.ta.mjs";
 
 
 /**
@@ -31,7 +31,11 @@ let _cached_decoder_for_RATRestrictions: $.ASN1Decoder<RATRestrictions> | null =
 export
 function _decode_RATRestrictions (el: _Element): RATRestrictions {
     if (!_cached_decoder_for_RATRestrictions) { _cached_decoder_for_RATRestrictions = $._decodeSequenceOf<RATRestrictionItem>(() => _decode_RATRestrictionItem); }
-    return _cached_decoder_for_RATRestrictions(el);
+    const _value = _cached_decoder_for_RATRestrictions(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("RATRestrictions violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_RATRestrictions: $.ASN1Encoder<RATRestrictions> | null = null;

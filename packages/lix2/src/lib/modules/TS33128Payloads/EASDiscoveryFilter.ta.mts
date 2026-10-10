@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ACProfiles, _decode_ACProfiles, _encode_ACProfiles } from "../TS33128Payloads/ACProfiles.ta.mjs";
-// export { ACProfiles, _decode_ACProfiles, _encode_ACProfiles } from "../TS33128Payloads/ACProfiles.ta.mjs";
 import { EASsCharacteristics, _decode_EASsCharacteristics, _encode_EASsCharacteristics } from "../TS33128Payloads/EASsCharacteristics.ta.mjs";
-// export { EASsCharacteristics, _decode_EASsCharacteristics, _encode_EASsCharacteristics } from "../TS33128Payloads/EASsCharacteristics.ta.mjs";
 
 
 /**

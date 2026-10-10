@@ -1,6 +1,7 @@
-# lix2
+# Lawful Interception x2 payloads in TypeScript
 
-This module is ESM-only.
+ASN.1 data structures based on ETSI TS 102 232-3 (`IPAccessPDU`) and
+3GPP TS 33.128 (`TS33128Payloads`).
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -16,3 +17,13 @@ produced with it are released publicly under the
 If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
+
+## ESM-Only
+
+This module is ESM-only. Import from `@wildboar/lix2/IPAccessPDU` or
+`@wildboar/lix2/TS33128Payloads`.
+
+## AI Usage Statement
+
+This package was onboarded from the raw Wildboar ASN.1 compiler outputs using
+AI (Grok 4.7) on 10 October 2026.

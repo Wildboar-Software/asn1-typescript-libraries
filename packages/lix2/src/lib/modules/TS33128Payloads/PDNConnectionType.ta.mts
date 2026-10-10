@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -158,21 +156,13 @@ const PDNConnectionType_ethernet: PDNConnectionType = PDNConnectionType.ethernet
 export
 const ethernet: PDNConnectionType = PDNConnectionType.ethernet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PDNConnectionType: $.ASN1Decoder<PDNConnectionType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PDNConnectionType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PDNConnectionType (el: _Element): PDNConnectionType {
-    if (!_cached_decoder_for_PDNConnectionType) { _cached_decoder_for_PDNConnectionType = $._decodeEnumerated; }
-    return _cached_decoder_for_PDNConnectionType(el);
-}
-
-let _cached_encoder_for_PDNConnectionType: $.ASN1Encoder<PDNConnectionType> | null = null;
+export const _decode_PDNConnectionType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PDNConnectionType into an ASN.1 Element.
@@ -181,11 +171,7 @@ let _cached_encoder_for_PDNConnectionType: $.ASN1Encoder<PDNConnectionType> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PDNConnectionType, encoded as an ASN.1 Element.
  */
-export
-function _encode_PDNConnectionType (value: PDNConnectionType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDNConnectionType) { _cached_encoder_for_PDNConnectionType = $._encodeEnumerated; }
-    return _cached_encoder_for_PDNConnectionType(value, elGetter);
-}
+export const _encode_PDNConnectionType = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RejectedSliceCauseValue, _decode_RejectedSliceCauseValue, _encode_RejectedSliceCauseValue } from "../TS33128Payloads/RejectedSliceCauseValue.ta.mjs";
-// export { RejectedSliceCauseValue, _decode_RejectedSliceCauseValue, _encode_RejectedSliceCauseValue } from "../TS33128Payloads/RejectedSliceCauseValue.ta.mjs";
 import { SNSSAI, _decode_SNSSAI, _encode_SNSSAI } from "../TS33128Payloads/SNSSAI.ta.mjs";
-// export { SNSSAI, _decode_SNSSAI, _encode_SNSSAI } from "../TS33128Payloads/SNSSAI.ta.mjs";
 
 
 /**

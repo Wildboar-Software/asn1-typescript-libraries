@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,21 +21,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type IPv6Address = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_IPv6Address: $.ASN1Decoder<IPv6Address> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IPv6Address
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IPv6Address (el: _Element): IPv6Address {
-    if (!_cached_decoder_for_IPv6Address) { _cached_decoder_for_IPv6Address = $._decodeOctetString; }
-    return _cached_decoder_for_IPv6Address(el);
-}
-
-let _cached_encoder_for_IPv6Address: $.ASN1Encoder<IPv6Address> | null = null;
+export const _decode_IPv6Address = (el: _Element): IPv6Address => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 16 || value.length > 16) {
+        throw new ASN1SizeError("IPv6Address violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) IPv6Address into an ASN.1 Element.
@@ -43,11 +42,7 @@ let _cached_encoder_for_IPv6Address: $.ASN1Encoder<IPv6Address> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IPv6Address, encoded as an ASN.1 Element.
  */
-export
-function _encode_IPv6Address (value: IPv6Address, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IPv6Address) { _cached_encoder_for_IPv6Address = $._encodeOctetString; }
-    return _cached_encoder_for_IPv6Address(value, elGetter);
-}
+export const _encode_IPv6Address = $._encodeOctetString;
 
 
 /* eslint-enable */

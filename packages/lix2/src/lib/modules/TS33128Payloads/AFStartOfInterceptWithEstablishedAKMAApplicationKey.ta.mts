@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FQDN, _decode_FQDN, _encode_FQDN } from "../TS33128Payloads/FQDN.ta.mjs";
-// export { FQDN, _decode_FQDN, _encode_FQDN } from "../TS33128Payloads/FQDN.ta.mjs";
 import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
-// export { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 import { AFSecurityParams, _decode_AFSecurityParams, _encode_AFSecurityParams } from "../TS33128Payloads/AFSecurityParams.ta.mjs";
-// export { AFSecurityParams, _decode_AFSecurityParams, _encode_AFSecurityParams } from "../TS33128Payloads/AFSecurityParams.ta.mjs";
 
 
 /**

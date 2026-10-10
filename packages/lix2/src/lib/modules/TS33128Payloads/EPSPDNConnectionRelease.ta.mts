@@ -6,25 +6,15 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EPSSubscriberIDs, _decode_EPSSubscriberIDs, _encode_EPSSubscriberIDs } from "../TS33128Payloads/EPSSubscriberIDs.ta.mjs";
-// export { EPSSubscriberIDs, _decode_EPSSubscriberIDs, _encode_EPSSubscriberIDs } from "../TS33128Payloads/EPSSubscriberIDs.ta.mjs";
 import { IMSIUnauthenticatedIndication, _decode_IMSIUnauthenticatedIndication, _encode_IMSIUnauthenticatedIndication } from "../TS33128Payloads/IMSIUnauthenticatedIndication.ta.mjs";
-// export { IMSIUnauthenticatedIndication, _decode_IMSIUnauthenticatedIndication, _encode_IMSIUnauthenticatedIndication } from "../TS33128Payloads/IMSIUnauthenticatedIndication.ta.mjs";
 import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
-// export { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-// export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 import { GTPTunnelInfo, _decode_GTPTunnelInfo, _encode_GTPTunnelInfo } from "../TS33128Payloads/GTPTunnelInfo.ta.mjs";
-// export { GTPTunnelInfo, _decode_GTPTunnelInfo, _encode_GTPTunnelInfo } from "../TS33128Payloads/GTPTunnelInfo.ta.mjs";
 import { EPSRANNASCause, _decode_EPSRANNASCause, _encode_EPSRANNASCause } from "../TS33128Payloads/EPSRANNASCause.ta.mjs";
-// export { EPSRANNASCause, _decode_EPSRANNASCause, _encode_EPSRANNASCause } from "../TS33128Payloads/EPSRANNASCause.ta.mjs";
 import { PDNConnectionType, _decode_PDNConnectionType, _encode_PDNConnectionType, _enum_for_PDNConnectionType } from "../TS33128Payloads/PDNConnectionType.ta.mjs";
-// export { PDNConnectionType, _enum_for_PDNConnectionType, PDNConnectionType_iPv4 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDNConnectionType_iPv6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDNConnectionType_iPv4v6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv4v6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDNConnectionType_nonIP /* IMPORTED_LONG_ENUMERATION_ITEM */, nonIP /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDNConnectionType_ethernet /* IMPORTED_LONG_ENUMERATION_ITEM */, ethernet /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PDNConnectionType, _encode_PDNConnectionType } from "../TS33128Payloads/PDNConnectionType.ta.mjs";
 import { PDNConnectionIndicationFlags, _decode_PDNConnectionIndicationFlags, _encode_PDNConnectionIndicationFlags } from "../TS33128Payloads/PDNConnectionIndicationFlags.ta.mjs";
-// export { PDNConnectionIndicationFlags, _decode_PDNConnectionIndicationFlags, _encode_PDNConnectionIndicationFlags } from "../TS33128Payloads/PDNConnectionIndicationFlags.ta.mjs";
 import { EPSPDNConnectionReleaseScopeIndication, _decode_EPSPDNConnectionReleaseScopeIndication, _encode_EPSPDNConnectionReleaseScopeIndication } from "../TS33128Payloads/EPSPDNConnectionReleaseScopeIndication.ta.mjs";
-// export { EPSPDNConnectionReleaseScopeIndication, _decode_EPSPDNConnectionReleaseScopeIndication, _encode_EPSPDNConnectionReleaseScopeIndication } from "../TS33128Payloads/EPSPDNConnectionReleaseScopeIndication.ta.mjs";
 import { EPSBearersDeleted, _decode_EPSBearersDeleted, _encode_EPSBearersDeleted } from "../TS33128Payloads/EPSBearersDeleted.ta.mjs";
-// export { EPSBearersDeleted, _decode_EPSBearersDeleted, _encode_EPSBearersDeleted } from "../TS33128Payloads/EPSBearersDeleted.ta.mjs";
 
 
 /**

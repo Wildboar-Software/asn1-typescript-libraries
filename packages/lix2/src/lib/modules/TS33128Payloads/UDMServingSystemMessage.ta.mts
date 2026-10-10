@@ -6,23 +6,14 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
-// export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 import { PEI, _decode_PEI, _encode_PEI } from "../TS33128Payloads/PEI.ta.mjs";
-// export { PEI, _decode_PEI, _encode_PEI } from "../TS33128Payloads/PEI.ta.mjs";
 import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
-// export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 import { GUAMI, _decode_GUAMI, _encode_GUAMI } from "../TS33128Payloads/GUAMI.ta.mjs";
-// export { GUAMI, _decode_GUAMI, _encode_GUAMI } from "../TS33128Payloads/GUAMI.ta.mjs";
 import { GUMMEI, _decode_GUMMEI, _encode_GUMMEI } from "../TS33128Payloads/GUMMEI.ta.mjs";
-// export { GUMMEI, _decode_GUMMEI, _encode_GUMMEI } from "../TS33128Payloads/GUMMEI.ta.mjs";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
-// export { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
 import { UDMServingSystemMethod, _decode_UDMServingSystemMethod, _encode_UDMServingSystemMethod, _enum_for_UDMServingSystemMethod } from "../TS33128Payloads/UDMServingSystemMethod.ta.mjs";
-// export { UDMServingSystemMethod, _enum_for_UDMServingSystemMethod, UDMServingSystemMethod_amf3GPPAccessRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, amf3GPPAccessRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMServingSystemMethod_amfNon3GPPAccessRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, amfNon3GPPAccessRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMServingSystemMethod_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UDMServingSystemMethod, _encode_UDMServingSystemMethod } from "../TS33128Payloads/UDMServingSystemMethod.ta.mjs";
 import { ServiceID, _decode_ServiceID, _encode_ServiceID } from "../TS33128Payloads/ServiceID.ta.mjs";
-// export { ServiceID, _decode_ServiceID, _encode_ServiceID } from "../TS33128Payloads/ServiceID.ta.mjs";
 import { RoamingIndicator, _decode_RoamingIndicator, _encode_RoamingIndicator } from "../TS33128Payloads/RoamingIndicator.ta.mjs";
-// export { RoamingIndicator, _decode_RoamingIndicator, _encode_RoamingIndicator } from "../TS33128Payloads/RoamingIndicator.ta.mjs";
 
 
 /**

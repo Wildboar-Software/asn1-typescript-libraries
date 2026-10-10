@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -20,21 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type PINClientID = UTF8String; // UTF8String
 
-let _cached_decoder_for_PINClientID: $.ASN1Decoder<PINClientID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PINClientID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PINClientID (el: _Element): PINClientID {
-    if (!_cached_decoder_for_PINClientID) { _cached_decoder_for_PINClientID = $._decodeUTF8String; }
-    return _cached_decoder_for_PINClientID(el);
-}
-
-let _cached_encoder_for_PINClientID: $.ASN1Encoder<PINClientID> | null = null;
+export const _decode_PINClientID = $._decodeUTF8String;
 
 /**
  * @summary Encodes a(n) PINClientID into an ASN.1 Element.
@@ -43,11 +34,7 @@ let _cached_encoder_for_PINClientID: $.ASN1Encoder<PINClientID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PINClientID, encoded as an ASN.1 Element.
  */
-export
-function _encode_PINClientID (value: PINClientID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PINClientID) { _cached_encoder_for_PINClientID = $._encodeUTF8String; }
-    return _cached_encoder_for_PINClientID(value, elGetter);
-}
+export const _encode_PINClientID = $._encodeUTF8String;
 
 
 /* eslint-enable */

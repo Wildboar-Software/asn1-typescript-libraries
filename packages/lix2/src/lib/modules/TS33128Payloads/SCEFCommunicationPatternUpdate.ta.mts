@@ -7,27 +7,16 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
-// export { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
 import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
-// export { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 import { PeriodicCommunicationIndicator, _decode_PeriodicCommunicationIndicator, _encode_PeriodicCommunicationIndicator, _enum_for_PeriodicCommunicationIndicator } from "../TS33128Payloads/PeriodicCommunicationIndicator.ta.mjs";
-// export { PeriodicCommunicationIndicator, _enum_for_PeriodicCommunicationIndicator, PeriodicCommunicationIndicator_periodic /* IMPORTED_LONG_ENUMERATION_ITEM */, periodic /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodicCommunicationIndicator_nonPeriodic /* IMPORTED_LONG_ENUMERATION_ITEM */, nonPeriodic /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PeriodicCommunicationIndicator, _encode_PeriodicCommunicationIndicator } from "../TS33128Payloads/PeriodicCommunicationIndicator.ta.mjs";
 import { ScheduledCommunicationTime, _decode_ScheduledCommunicationTime, _encode_ScheduledCommunicationTime } from "../TS33128Payloads/ScheduledCommunicationTime.ta.mjs";
-// export { ScheduledCommunicationTime, _decode_ScheduledCommunicationTime, _encode_ScheduledCommunicationTime } from "../TS33128Payloads/ScheduledCommunicationTime.ta.mjs";
 import { ScheduledCommunicationType, _decode_ScheduledCommunicationType, _encode_ScheduledCommunicationType, _enum_for_ScheduledCommunicationType } from "../TS33128Payloads/ScheduledCommunicationType.ta.mjs";
-// export { ScheduledCommunicationType, _enum_for_ScheduledCommunicationType, ScheduledCommunicationType_downlinkOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, downlinkOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, ScheduledCommunicationType_uplinkOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, uplinkOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, ScheduledCommunicationType_bidirectional /* IMPORTED_LONG_ENUMERATION_ITEM */, bidirectional /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ScheduledCommunicationType, _encode_ScheduledCommunicationType } from "../TS33128Payloads/ScheduledCommunicationType.ta.mjs";
 import { StationaryIndication, _decode_StationaryIndication, _encode_StationaryIndication, _enum_for_StationaryIndication } from "../TS33128Payloads/StationaryIndication.ta.mjs";
-// export { StationaryIndication, _enum_for_StationaryIndication, StationaryIndication_stationary /* IMPORTED_LONG_ENUMERATION_ITEM */, stationary /* IMPORTED_SHORT_ENUMERATION_ITEM */, StationaryIndication_mobile /* IMPORTED_LONG_ENUMERATION_ITEM */, mobile /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_StationaryIndication, _encode_StationaryIndication } from "../TS33128Payloads/StationaryIndication.ta.mjs";
 import { BatteryIndication, _decode_BatteryIndication, _encode_BatteryIndication, _enum_for_BatteryIndication } from "../TS33128Payloads/BatteryIndication.ta.mjs";
-// export { BatteryIndication, _enum_for_BatteryIndication, BatteryIndication_batteryRecharge /* IMPORTED_LONG_ENUMERATION_ITEM */, batteryRecharge /* IMPORTED_SHORT_ENUMERATION_ITEM */, BatteryIndication_batteryReplace /* IMPORTED_LONG_ENUMERATION_ITEM */, batteryReplace /* IMPORTED_SHORT_ENUMERATION_ITEM */, BatteryIndication_batteryNoRecharge /* IMPORTED_LONG_ENUMERATION_ITEM */, batteryNoRecharge /* IMPORTED_SHORT_ENUMERATION_ITEM */, BatteryIndication_batteryNoReplace /* IMPORTED_LONG_ENUMERATION_ITEM */, batteryNoReplace /* IMPORTED_SHORT_ENUMERATION_ITEM */, BatteryIndication_noBattery /* IMPORTED_LONG_ENUMERATION_ITEM */, noBattery /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_BatteryIndication, _encode_BatteryIndication } from "../TS33128Payloads/BatteryIndication.ta.mjs";
 import { TrafficProfile, _decode_TrafficProfile, _encode_TrafficProfile, _enum_for_TrafficProfile } from "../TS33128Payloads/TrafficProfile.ta.mjs";
-// export { TrafficProfile, _enum_for_TrafficProfile, TrafficProfile_singleTransUL /* IMPORTED_LONG_ENUMERATION_ITEM */, singleTransUL /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficProfile_singleTransDL /* IMPORTED_LONG_ENUMERATION_ITEM */, singleTransDL /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficProfile_dualTransULFirst /* IMPORTED_LONG_ENUMERATION_ITEM */, dualTransULFirst /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficProfile_dualTransDLFirst /* IMPORTED_LONG_ENUMERATION_ITEM */, dualTransDLFirst /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficProfile_multiTrans /* IMPORTED_LONG_ENUMERATION_ITEM */, multiTrans /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TrafficProfile, _encode_TrafficProfile } from "../TS33128Payloads/TrafficProfile.ta.mjs";
 import { UMTLocationArea5G, _decode_UMTLocationArea5G, _encode_UMTLocationArea5G } from "../TS33128Payloads/UMTLocationArea5G.ta.mjs";
-// export { UMTLocationArea5G, _decode_UMTLocationArea5G, _encode_UMTLocationArea5G } from "../TS33128Payloads/UMTLocationArea5G.ta.mjs";
 import { SCSASID, _decode_SCSASID, _encode_SCSASID } from "../TS33128Payloads/SCSASID.ta.mjs";
-// export { SCSASID, _decode_SCSASID, _encode_SCSASID } from "../TS33128Payloads/SCSASID.ta.mjs";
 import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
-// export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 
 
 /**

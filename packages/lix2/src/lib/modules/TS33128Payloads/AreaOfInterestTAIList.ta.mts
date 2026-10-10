@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TAI, _decode_TAI, _encode_TAI } from "../TS33128Payloads/TAI.ta.mjs";
-// export { TAI, _decode_TAI, _encode_TAI } from "../TS33128Payloads/TAI.ta.mjs";
 
 
 /**
@@ -31,7 +31,11 @@ let _cached_decoder_for_AreaOfInterestTAIList: $.ASN1Decoder<AreaOfInterestTAILi
 export
 function _decode_AreaOfInterestTAIList (el: _Element): AreaOfInterestTAIList {
     if (!_cached_decoder_for_AreaOfInterestTAIList) { _cached_decoder_for_AreaOfInterestTAIList = $._decodeSequenceOf<TAI>(() => _decode_TAI); }
-    return _cached_decoder_for_AreaOfInterestTAIList(el);
+    const _value = _cached_decoder_for_AreaOfInterestTAIList(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("AreaOfInterestTAIList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_AreaOfInterestTAIList: $.ASN1Encoder<AreaOfInterestTAIList> | null = null;

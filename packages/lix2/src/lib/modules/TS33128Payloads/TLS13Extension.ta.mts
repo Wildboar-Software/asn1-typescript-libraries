@@ -3,11 +3,11 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13ExtensionType, _decode_TLS13ExtensionType, _encode_TLS13ExtensionType, _enum_for_TLS13ExtensionType } from "../TS33128Payloads/TLS13ExtensionType.ta.mjs";
-// export { TLS13ExtensionType, _enum_for_TLS13ExtensionType, TLS13ExtensionType_serverName /* IMPORTED_LONG_ENUMERATION_ITEM */, serverName /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_maxFragmentLength /* IMPORTED_LONG_ENUMERATION_ITEM */, maxFragmentLength /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_statusRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, statusRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_supportedGroups /* IMPORTED_LONG_ENUMERATION_ITEM */, supportedGroups /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_signatureAlgorithms /* IMPORTED_LONG_ENUMERATION_ITEM */, signatureAlgorithms /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_useSRTP /* IMPORTED_LONG_ENUMERATION_ITEM */, useSRTP /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_heartbeat /* IMPORTED_LONG_ENUMERATION_ITEM */, heartbeat /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_applicationLayerProtocolNegotiation /* IMPORTED_LONG_ENUMERATION_ITEM */, applicationLayerProtocolNegotiation /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_signedCertificateTimestamp /* IMPORTED_LONG_ENUMERATION_ITEM */, signedCertificateTimestamp /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_clientCertificateType /* IMPORTED_LONG_ENUMERATION_ITEM */, clientCertificateType /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_serverCertificateType /* IMPORTED_LONG_ENUMERATION_ITEM */, serverCertificateType /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_padding /* IMPORTED_LONG_ENUMERATION_ITEM */, padding /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_presharedKey /* IMPORTED_LONG_ENUMERATION_ITEM */, presharedKey /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_earlyData /* IMPORTED_LONG_ENUMERATION_ITEM */, earlyData /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_supportedVersions /* IMPORTED_LONG_ENUMERATION_ITEM */, supportedVersions /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_cookie /* IMPORTED_LONG_ENUMERATION_ITEM */, cookie /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_pSKKeyExchangeModes /* IMPORTED_LONG_ENUMERATION_ITEM */, pSKKeyExchangeModes /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_certificateAuthorities /* IMPORTED_LONG_ENUMERATION_ITEM */, certificateAuthorities /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_oIDFilters /* IMPORTED_LONG_ENUMERATION_ITEM */, oIDFilters /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_postHandshakeAuth /* IMPORTED_LONG_ENUMERATION_ITEM */, postHandshakeAuth /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_signatureAlgorithmsCert /* IMPORTED_LONG_ENUMERATION_ITEM */, signatureAlgorithmsCert /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13ExtensionType_keyShare /* IMPORTED_LONG_ENUMERATION_ITEM */, keyShare /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLS13ExtensionType, _encode_TLS13ExtensionType } from "../TS33128Payloads/TLS13ExtensionType.ta.mjs";
 
 
 /**
@@ -41,7 +41,11 @@ class TLS13Extension {
          * @readonly
          */
         readonly extensionData: OCTET_STRING
-    ) {}
+    ) {
+        if (this.extensionData !== undefined && (this.extensionData.length < 0 || this.extensionData.length > 65535)) {
+            throw new ASN1SizeError("TLS13Extension.extensionData violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TLS13Extension

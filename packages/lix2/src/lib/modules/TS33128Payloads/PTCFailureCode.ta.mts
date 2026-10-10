@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -98,21 +96,13 @@ const PTCFailureCode_sessionCannotBeModified: PTCFailureCode = PTCFailureCode.se
 export
 const sessionCannotBeModified: PTCFailureCode = PTCFailureCode.sessionCannotBeModified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCFailureCode: $.ASN1Decoder<PTCFailureCode> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PTCFailureCode
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PTCFailureCode (el: _Element): PTCFailureCode {
-    if (!_cached_decoder_for_PTCFailureCode) { _cached_decoder_for_PTCFailureCode = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCFailureCode(el);
-}
-
-let _cached_encoder_for_PTCFailureCode: $.ASN1Encoder<PTCFailureCode> | null = null;
+export const _decode_PTCFailureCode = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PTCFailureCode into an ASN.1 Element.
@@ -121,11 +111,7 @@ let _cached_encoder_for_PTCFailureCode: $.ASN1Encoder<PTCFailureCode> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PTCFailureCode, encoded as an ASN.1 Element.
  */
-export
-function _encode_PTCFailureCode (value: PTCFailureCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCFailureCode) { _cached_encoder_for_PTCFailureCode = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCFailureCode(value, elGetter);
-}
+export const _encode_PTCFailureCode = $._encodeEnumerated;
 
 
 /* eslint-enable */

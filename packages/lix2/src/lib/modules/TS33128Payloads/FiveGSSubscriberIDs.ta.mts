@@ -2,11 +2,11 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FiveGSSubscriberID, _decode_FiveGSSubscriberID, _encode_FiveGSSubscriberID } from "../TS33128Payloads/FiveGSSubscriberID.ta.mjs";
-// export { FiveGSSubscriberID, _decode_FiveGSSubscriberID, _encode_FiveGSSubscriberID } from "../TS33128Payloads/FiveGSSubscriberID.ta.mjs";
 
 
 /**
@@ -33,7 +33,11 @@ class FiveGSSubscriberIDs {
          * @readonly
          */
         readonly fiveGSSubscriberID: FiveGSSubscriberID[]
-    ) {}
+    ) {
+        if (this.fiveGSSubscriberID !== undefined && (this.fiveGSSubscriberID.length < 1)) {
+            throw new ASN1SizeError("FiveGSSubscriberIDs.fiveGSSubscriberID violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a FiveGSSubscriberIDs

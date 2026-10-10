@@ -6,27 +6,21 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../IPAccessPDU/IPAddress.ta.mjs";
 import { AccessEventType, _decode_AccessEventType, _encode_AccessEventType, _enum_for_AccessEventType } from "../IPAccessPDU/AccessEventType.ta.mjs";
-// export { AccessEventType, _enum_for_AccessEventType, AccessEventType_accessAttempt /* IMPORTED_LONG_ENUMERATION_ITEM */, accessAttempt /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_accessAccept /* IMPORTED_LONG_ENUMERATION_ITEM */, accessAccept /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_accessReject /* IMPORTED_LONG_ENUMERATION_ITEM */, accessReject /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_accessFailed /* IMPORTED_LONG_ENUMERATION_ITEM */, accessFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_sessionStart /* IMPORTED_LONG_ENUMERATION_ITEM */, sessionStart /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_sessionEnd /* IMPORTED_LONG_ENUMERATION_ITEM */, sessionEnd /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_interimUpdate /* IMPORTED_LONG_ENUMERATION_ITEM */, interimUpdate /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_startOfInterceptionWithSessionActive /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptionWithSessionActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_accessEnd /* IMPORTED_LONG_ENUMERATION_ITEM */, accessEnd /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_endOfInterceptionWithSessionActive /* IMPORTED_LONG_ENUMERATION_ITEM */, endOfInterceptionWithSessionActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_AccessEventType, _encode_AccessEventType } from "../IPAccessPDU/AccessEventType.ta.mjs";
 import { InternetAccessType, _decode_InternetAccessType, _encode_InternetAccessType, _enum_for_InternetAccessType } from "../IPAccessPDU/InternetAccessType.ta.mjs";
-// export { InternetAccessType, _enum_for_InternetAccessType, InternetAccessType_undefined /* IMPORTED_LONG_ENUMERATION_ITEM */, InternetAccessType_dialUp /* IMPORTED_LONG_ENUMERATION_ITEM */, dialUp /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_xDSL /* IMPORTED_LONG_ENUMERATION_ITEM */, xDSL /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_cableModem /* IMPORTED_LONG_ENUMERATION_ITEM */, cableModem /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_lAN /* IMPORTED_LONG_ENUMERATION_ITEM */, lAN /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_wirelessLAN /* IMPORTED_LONG_ENUMERATION_ITEM */, wirelessLAN /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_fTTx /* IMPORTED_LONG_ENUMERATION_ITEM */, fTTx /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_wIMAX_HIPERMAN /* IMPORTED_LONG_ENUMERATION_ITEM */, wIMAX_HIPERMAN /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_satellite /* IMPORTED_LONG_ENUMERATION_ITEM */, satellite /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_wireless_other /* IMPORTED_LONG_ENUMERATION_ITEM */, wireless_other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InternetAccessType, _encode_InternetAccessType } from "../IPAccessPDU/InternetAccessType.ta.mjs";
 import { IPVersion, _decode_IPVersion, _encode_IPVersion, _enum_for_IPVersion } from "../IPAccessPDU/IPVersion.ta.mjs";
-// export { IPVersion, _enum_for_IPVersion, IPVersion_iPV4 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPVersion_iPV6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPVersion_iPV4andV6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV4andV6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IPVersion, _encode_IPVersion } from "../IPAccessPDU/IPVersion.ta.mjs";
 import { EndReason, _decode_EndReason, _encode_EndReason, _enum_for_EndReason } from "../IPAccessPDU/EndReason.ta.mjs";
-// export { EndReason, _enum_for_EndReason, EndReason_undefined /* IMPORTED_LONG_ENUMERATION_ITEM */, EndReason_regularLogoff /* IMPORTED_LONG_ENUMERATION_ITEM */, regularLogoff /* IMPORTED_SHORT_ENUMERATION_ITEM */, EndReason_connectionLoss /* IMPORTED_LONG_ENUMERATION_ITEM */, connectionLoss /* IMPORTED_SHORT_ENUMERATION_ITEM */, EndReason_connectionTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, connectionTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, EndReason_leaseExpired /* IMPORTED_LONG_ENUMERATION_ITEM */, leaseExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EndReason, _encode_EndReason } from "../IPAccessPDU/EndReason.ta.mjs";
 import { IPIRIIDType, _decode_IPIRIIDType, _encode_IPIRIIDType } from "../IPAccessPDU/IPIRIIDType.ta.mjs";
-// export { IPIRIIDType, _decode_IPIRIIDType, _encode_IPIRIIDType } from "../IPAccessPDU/IPIRIIDType.ta.mjs";
 import { NationalIPIRIParameters, _decode_NationalIPIRIParameters, _encode_NationalIPIRIParameters } from "../IPAccessPDU/NationalIPIRIParameters.ta.mjs";
-// export { NationalIPIRIParameters, _decode_NationalIPIRIParameters, _encode_NationalIPIRIParameters } from "../IPAccessPDU/NationalIPIRIParameters.ta.mjs";
 import { AuthenticationType, _decode_AuthenticationType, _encode_AuthenticationType, _enum_for_AuthenticationType } from "../IPAccessPDU/AuthenticationType.ta.mjs";
-// export { AuthenticationType, _enum_for_AuthenticationType, AuthenticationType_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, AuthenticationType_static /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuthenticationType_radiusAAA /* IMPORTED_LONG_ENUMERATION_ITEM */, radiusAAA /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuthenticationType_dhcpAAA /* IMPORTED_LONG_ENUMERATION_ITEM */, dhcpAAA /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuthenticationType_diameterAAA /* IMPORTED_LONG_ENUMERATION_ITEM */, diameterAAA /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AuthenticationType, _encode_AuthenticationType } from "../IPAccessPDU/AuthenticationType.ta.mjs";
 import { OtherTargetIdentifiers, _decode_OtherTargetIdentifiers, _encode_OtherTargetIdentifiers } from "../IPAccessPDU/OtherTargetIdentifiers.ta.mjs";
-// export { OtherTargetIdentifiers, _decode_OtherTargetIdentifiers, _encode_OtherTargetIdentifiers } from "../IPAccessPDU/OtherTargetIdentifiers.ta.mjs";
 import { FramedRoute, _decode_FramedRoute, _encode_FramedRoute } from "../IPAccessPDU/FramedRoute.ta.mjs";
-// export { FramedRoute, _decode_FramedRoute, _encode_FramedRoute } from "../IPAccessPDU/FramedRoute.ta.mjs";
 
 
 /**
@@ -272,7 +266,41 @@ class IPIRIContents {
          * @readonly
          */
         readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+    ) {
+        if (this.targetNetworkID !== undefined && (this.targetNetworkID.length < 1 || this.targetNetworkID.length > 20)) {
+            throw new ASN1SizeError("IPIRIContents.targetNetworkID violates SIZE constraint");
+        }
+        if (this.targetCPEID !== undefined && (this.targetCPEID.length < 1 || this.targetCPEID.length > 128)) {
+            throw new ASN1SizeError("IPIRIContents.targetCPEID violates SIZE constraint");
+        }
+        if (this.targetLocation !== undefined && (this.targetLocation.length < 1 || this.targetLocation.length > 64)) {
+            throw new ASN1SizeError("IPIRIContents.targetLocation violates SIZE constraint");
+        }
+        if (this.pOPPortNumber !== undefined) {
+            const _n = typeof this.pOPPortNumber === "bigint" ? this.pOPPortNumber : BigInt(this.pOPPortNumber);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("IPIRIContents.pOPPortNumber violates INTEGER range constraint");
+            }
+        }
+        if (this.callBackNumber !== undefined && (this.callBackNumber.length < 1 || this.callBackNumber.length > 20)) {
+            throw new ASN1SizeError("IPIRIContents.callBackNumber violates SIZE constraint");
+        }
+        if (this.octetsReceived !== undefined) {
+            const _n = typeof this.octetsReceived === "bigint" ? this.octetsReceived : BigInt(this.octetsReceived);
+            if (_n < 0n || _n > 18446744073709551615n) {
+                throw new ASN1OverflowError("IPIRIContents.octetsReceived violates INTEGER range constraint");
+            }
+        }
+        if (this.octetsTransmitted !== undefined) {
+            const _n = typeof this.octetsTransmitted === "bigint" ? this.octetsTransmitted : BigInt(this.octetsTransmitted);
+            if (_n < 0n || _n > 18446744073709551615n) {
+                throw new ASN1OverflowError("IPIRIContents.octetsTransmitted violates INTEGER range constraint");
+            }
+        }
+        if (this.pOPPhoneNumber !== undefined && (this.pOPPhoneNumber.length < 1 || this.pOPPhoneNumber.length > 20)) {
+            throw new ASN1SizeError("IPIRIContents.pOPPhoneNumber violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a IPIRIContents
@@ -337,7 +365,7 @@ const _root_component_type_list_1_spec_for_IPIRIContents: $.ComponentSpec[] = [
     new $.ComponentSpec("targetUsername", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("internetAccessType", false, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("iPVersion", false, $.hasTag(_TagClass.context, 3)),
-    /* FIXME: targetIPAddress COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("targetIPAddress", true, $.hasTag(_TagClass.context, 4)),
     new $.ComponentSpec("targetNetworkID", true, $.hasTag(_TagClass.context, 5)),
     new $.ComponentSpec("targetCPEID", true, $.hasTag(_TagClass.context, 6)),
     new $.ComponentSpec("targetLocation", true, $.hasTag(_TagClass.context, 7)),
@@ -377,9 +405,9 @@ const _extension_additions_list_spec_for_IPIRIContents: $.ComponentSpec[] = [
     new $.ComponentSpec("expectedEndTime", true, $.hasTag(_TagClass.context, 16)),
     new $.ComponentSpec("pOPPhoneNumber", true, $.hasTag(_TagClass.context, 17)),
     new $.ComponentSpec("pOPIdentifier", true, $.hasTag(_TagClass.context, 18)),
-    /* FIXME: pOPIPAddress COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("pOPIPAddress", true, $.hasTag(_TagClass.context, 19)),
     new $.ComponentSpec("nationalIPIRIParameters", true, $.hasTag(_TagClass.context, 20)),
-    /* FIXME: additionalIPAddress COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("additionalIPAddress", true, $.hasTag(_TagClass.context, 21)),
     new $.ComponentSpec("authenticationType", true, $.hasTag(_TagClass.context, 22)),
     new $.ComponentSpec("otherTargetIdentifiers", true, $.hasTag(_TagClass.context, 23)),
     new $.ComponentSpec("pOPPortID", true, $.hasTag(_TagClass.context, 25)),

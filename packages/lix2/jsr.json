@@ -1,15 +1,21 @@
 {
   "name": "@wildboar/lix2",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "exports": {
-    ".": "./src/index.mts"
+    ".": "./src/index.mts",
+    "./IPAccessPDU": "./src/lib/modules/IPAccessPDU/index.mts",
+    "./TS33128Payloads": "./src/lib/modules/TS33128Payloads/index.mts"
   },
   "publish": {
     "include": [
       "LICENSE.txt",
       "README.md",
       "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
     ]
   }
 }

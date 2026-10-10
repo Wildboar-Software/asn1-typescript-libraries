@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -158,21 +156,13 @@ const SCEFReleaseCause_unknownCause: SCEFReleaseCause = SCEFReleaseCause.unknown
 export
 const unknownCause: SCEFReleaseCause = SCEFReleaseCause.unknownCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SCEFReleaseCause: $.ASN1Decoder<SCEFReleaseCause> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SCEFReleaseCause
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SCEFReleaseCause (el: _Element): SCEFReleaseCause {
-    if (!_cached_decoder_for_SCEFReleaseCause) { _cached_decoder_for_SCEFReleaseCause = $._decodeEnumerated; }
-    return _cached_decoder_for_SCEFReleaseCause(el);
-}
-
-let _cached_encoder_for_SCEFReleaseCause: $.ASN1Encoder<SCEFReleaseCause> | null = null;
+export const _decode_SCEFReleaseCause = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SCEFReleaseCause into an ASN.1 Element.
@@ -181,11 +171,7 @@ let _cached_encoder_for_SCEFReleaseCause: $.ASN1Encoder<SCEFReleaseCause> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SCEFReleaseCause, encoded as an ASN.1 Element.
  */
-export
-function _encode_SCEFReleaseCause (value: SCEFReleaseCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCEFReleaseCause) { _cached_encoder_for_SCEFReleaseCause = $._encodeEnumerated; }
-    return _cached_encoder_for_SCEFReleaseCause(value, elGetter);
-}
+export const _encode_SCEFReleaseCause = $._encodeEnumerated;
 
 
 /* eslint-enable */

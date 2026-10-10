@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AKMAAFID, _decode_AKMAAFID, _encode_AKMAAFID } from "../TS33128Payloads/AKMAAFID.ta.mjs";
-// export { AKMAAFID, _decode_AKMAAFID, _encode_AKMAAFID } from "../TS33128Payloads/AKMAAFID.ta.mjs";
 import { KAF, _decode_KAF, _encode_KAF } from "../TS33128Payloads/KAF.ta.mjs";
-// export { KAF, _decode_KAF, _encode_KAF } from "../TS33128Payloads/KAF.ta.mjs";
 import { KAFExpiryTime, _decode_KAFExpiryTime, _encode_KAFExpiryTime } from "../TS33128Payloads/KAFExpiryTime.ta.mjs";
-// export { KAFExpiryTime, _decode_KAFExpiryTime, _encode_KAFExpiryTime } from "../TS33128Payloads/KAFExpiryTime.ta.mjs";
 
 
 /**

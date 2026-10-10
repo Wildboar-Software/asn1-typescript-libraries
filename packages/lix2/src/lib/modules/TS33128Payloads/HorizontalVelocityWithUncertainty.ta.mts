@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HorizontalSpeed, _decode_HorizontalSpeed, _encode_HorizontalSpeed } from "../TS33128Payloads/HorizontalSpeed.ta.mjs";
-// export { HorizontalSpeed, _decode_HorizontalSpeed, _encode_HorizontalSpeed } from "../TS33128Payloads/HorizontalSpeed.ta.mjs";
 import { Angle, _decode_Angle, _encode_Angle } from "../TS33128Payloads/Angle.ta.mjs";
-// export { Angle, _decode_Angle, _encode_Angle } from "../TS33128Payloads/Angle.ta.mjs";
 import { SpeedUncertainty, _decode_SpeedUncertainty, _encode_SpeedUncertainty } from "../TS33128Payloads/SpeedUncertainty.ta.mjs";
-// export { SpeedUncertainty, _decode_SpeedUncertainty, _encode_SpeedUncertainty } from "../TS33128Payloads/SpeedUncertainty.ta.mjs";
 
 
 /**

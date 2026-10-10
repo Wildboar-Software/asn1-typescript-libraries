@@ -4,11 +4,12 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RANCGI, _decode_RANCGI, _encode_RANCGI } from "../TS33128Payloads/RANCGI.ta.mjs";
-// export { RANCGI, _decode_RANCGI, _encode_RANCGI } from "../TS33128Payloads/RANCGI.ta.mjs";
 
 
 /**
@@ -70,7 +71,17 @@ class F1Information {
          * @readonly
          */
         readonly extendedGNBCUName: OPTIONAL<UTF8String>
-    ) {}
+    ) {
+        if (this.gNBDUID !== undefined) {
+            const _n = typeof this.gNBDUID === "bigint" ? this.gNBDUID : BigInt(this.gNBDUID);
+            if (_n < 0n || _n > 68719476735n) {
+                throw new ASN1OverflowError("F1Information.gNBDUID violates INTEGER range constraint");
+            }
+        }
+        if (this.gNBDUServedCells !== undefined && (this.gNBDUServedCells.length < 1)) {
+            throw new ASN1SizeError("F1Information.gNBDUServedCells violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a F1Information

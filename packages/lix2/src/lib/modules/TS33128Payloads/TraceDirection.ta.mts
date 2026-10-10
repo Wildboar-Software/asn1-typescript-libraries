@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -138,21 +136,13 @@ const TraceDirection_fromMME: TraceDirection = TraceDirection.fromMME; /* LONG_N
 export
 const fromMME: TraceDirection = TraceDirection.fromMME; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TraceDirection: $.ASN1Decoder<TraceDirection> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceDirection
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TraceDirection (el: _Element): TraceDirection {
-    if (!_cached_decoder_for_TraceDirection) { _cached_decoder_for_TraceDirection = $._decodeEnumerated; }
-    return _cached_decoder_for_TraceDirection(el);
-}
-
-let _cached_encoder_for_TraceDirection: $.ASN1Encoder<TraceDirection> | null = null;
+export const _decode_TraceDirection = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TraceDirection into an ASN.1 Element.
@@ -161,11 +151,7 @@ let _cached_encoder_for_TraceDirection: $.ASN1Encoder<TraceDirection> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TraceDirection, encoded as an ASN.1 Element.
  */
-export
-function _encode_TraceDirection (value: TraceDirection, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TraceDirection) { _cached_encoder_for_TraceDirection = $._encodeEnumerated; }
-    return _cached_encoder_for_TraceDirection(value, elGetter);
-}
+export const _encode_TraceDirection = $._encodeEnumerated;
 
 
 /* eslint-enable */

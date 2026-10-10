@@ -6,25 +6,15 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AMFEventType, _decode_AMFEventType, _encode_AMFEventType, _enum_for_AMFEventType } from "../TS33128Payloads/AMFEventType.ta.mjs";
-// export { AMFEventType, _enum_for_AMFEventType, AMFEventType_locationReport /* IMPORTED_LONG_ENUMERATION_ITEM */, locationReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, AMFEventType_presenceInAOIReport /* IMPORTED_LONG_ENUMERATION_ITEM */, presenceInAOIReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AMFEventType, _encode_AMFEventType } from "../TS33128Payloads/AMFEventType.ta.mjs";
 import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
-// export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 import { AMFEventArea, _decode_AMFEventArea, _encode_AMFEventArea } from "../TS33128Payloads/AMFEventArea.ta.mjs";
-// export { AMFEventArea, _decode_AMFEventArea, _encode_AMFEventArea } from "../TS33128Payloads/AMFEventArea.ta.mjs";
 import { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../TS33128Payloads/TimeZone.ta.mjs";
-// export { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../TS33128Payloads/TimeZone.ta.mjs";
 import { AccessType, _decode_AccessType, _encode_AccessType } from "../TS33128Payloads/AccessType.ta.mjs";
-// export { AccessType, _enum_for_AccessType, AccessType_threeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_nonThreeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, nonThreeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_threeGPPandNonThreeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPandNonThreeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessType, _encode_AccessType } from "../TS33128Payloads/AccessType.ta.mjs";
 import { RMInfo, _decode_RMInfo, _encode_RMInfo } from "../TS33128Payloads/RMInfo.ta.mjs";
-// export { RMInfo, _decode_RMInfo, _encode_RMInfo } from "../TS33128Payloads/RMInfo.ta.mjs";
 import { CMInfo, _decode_CMInfo, _encode_CMInfo } from "../TS33128Payloads/CMInfo.ta.mjs";
-// export { CMInfo, _decode_CMInfo, _encode_CMInfo } from "../TS33128Payloads/CMInfo.ta.mjs";
 import { UEReachability, _decode_UEReachability, _encode_UEReachability, _enum_for_UEReachability } from "../TS33128Payloads/UEReachability.ta.mjs";
-// export { UEReachability, _enum_for_UEReachability, UEReachability_unreachable /* IMPORTED_LONG_ENUMERATION_ITEM */, unreachable /* IMPORTED_SHORT_ENUMERATION_ITEM */, UEReachability_reachable /* IMPORTED_LONG_ENUMERATION_ITEM */, reachable /* IMPORTED_SHORT_ENUMERATION_ITEM */, UEReachability_regulatoryOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, regulatoryOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UEReachability, _encode_UEReachability } from "../TS33128Payloads/UEReachability.ta.mjs";
 import { UserLocation, _decode_UserLocation, _encode_UserLocation } from "../TS33128Payloads/UserLocation.ta.mjs";
-// export { UserLocation, _decode_UserLocation, _encode_UserLocation } from "../TS33128Payloads/UserLocation.ta.mjs";
 import { CellInformation, _decode_CellInformation, _encode_CellInformation } from "../TS33128Payloads/CellInformation.ta.mjs";
-// export { CellInformation, _decode_CellInformation, _encode_CellInformation } from "../TS33128Payloads/CellInformation.ta.mjs";
 
 
 /**

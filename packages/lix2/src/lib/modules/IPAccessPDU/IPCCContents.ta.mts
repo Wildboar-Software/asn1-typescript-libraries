@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPTruncatedPacket, _decode_IPTruncatedPacket, _encode_IPTruncatedPacket } from "../IPAccessPDU/IPTruncatedPacket.ta.mjs";
-// export { IPTruncatedPacket, _decode_IPTruncatedPacket, _encode_IPTruncatedPacket } from "../IPAccessPDU/IPTruncatedPacket.ta.mjs";
 
 
 /**

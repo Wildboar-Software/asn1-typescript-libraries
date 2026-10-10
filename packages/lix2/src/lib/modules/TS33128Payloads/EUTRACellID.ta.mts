@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    BIT_STRING
+    BIT_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,21 +21,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type EUTRACellID = BIT_STRING;
 
-let _cached_decoder_for_EUTRACellID: $.ASN1Decoder<EUTRACellID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EUTRACellID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EUTRACellID (el: _Element): EUTRACellID {
-    if (!_cached_decoder_for_EUTRACellID) { _cached_decoder_for_EUTRACellID = $._decodeBitString; }
-    return _cached_decoder_for_EUTRACellID(el);
-}
-
-let _cached_encoder_for_EUTRACellID: $.ASN1Encoder<EUTRACellID> | null = null;
+export const _decode_EUTRACellID = (el: _Element): EUTRACellID => {
+    const value = $._decodeBitString(el);
+    if (value.length < 28 || value.length > 28) {
+        throw new ASN1SizeError("EUTRACellID violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) EUTRACellID into an ASN.1 Element.
@@ -43,11 +42,7 @@ let _cached_encoder_for_EUTRACellID: $.ASN1Encoder<EUTRACellID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EUTRACellID, encoded as an ASN.1 Element.
  */
-export
-function _encode_EUTRACellID (value: EUTRACellID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EUTRACellID) { _cached_encoder_for_EUTRACellID = $._encodeBitString; }
-    return _cached_encoder_for_EUTRACellID(value, elGetter);
-}
+export const _encode_EUTRACellID = $._encodeBitString;
 
 
 /* eslint-enable */

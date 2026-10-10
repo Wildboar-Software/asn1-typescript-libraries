@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -98,21 +96,13 @@ const KeyGetType_external: KeyGetType = KeyGetType.external; /* LONG_NAMED_ENUME
 export
 const external: KeyGetType = KeyGetType.external; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_KeyGetType: $.ASN1Decoder<KeyGetType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyGetType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_KeyGetType (el: _Element): KeyGetType {
-    if (!_cached_decoder_for_KeyGetType) { _cached_decoder_for_KeyGetType = $._decodeEnumerated; }
-    return _cached_decoder_for_KeyGetType(el);
-}
-
-let _cached_encoder_for_KeyGetType: $.ASN1Encoder<KeyGetType> | null = null;
+export const _decode_KeyGetType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) KeyGetType into an ASN.1 Element.
@@ -121,11 +111,7 @@ let _cached_encoder_for_KeyGetType: $.ASN1Encoder<KeyGetType> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KeyGetType, encoded as an ASN.1 Element.
  */
-export
-function _encode_KeyGetType (value: KeyGetType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KeyGetType) { _cached_encoder_for_KeyGetType = $._encodeEnumerated; }
-    return _cached_encoder_for_KeyGetType(value, elGetter);
-}
+export const _encode_KeyGetType = $._encodeEnumerated;
 
 
 /* eslint-enable */

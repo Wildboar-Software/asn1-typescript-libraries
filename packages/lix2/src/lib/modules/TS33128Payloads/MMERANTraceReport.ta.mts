@@ -6,27 +6,16 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
-// export { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
 import { MMEUES1APID, _decode_MMEUES1APID, _encode_MMEUES1APID } from "../TS33128Payloads/MMEUES1APID.ta.mjs";
-// export { MMEUES1APID, _decode_MMEUES1APID, _encode_MMEUES1APID } from "../TS33128Payloads/MMEUES1APID.ta.mjs";
 import { RANUES1APID, _decode_RANUES1APID, _encode_RANUES1APID } from "../TS33128Payloads/RANUES1APID.ta.mjs";
-// export { RANUES1APID, _decode_RANUES1APID, _encode_RANUES1APID } from "../TS33128Payloads/RANUES1APID.ta.mjs";
 import { TraceRecordType, _decode_TraceRecordType, _encode_TraceRecordType, _enum_for_TraceRecordType } from "../TS33128Payloads/TraceRecordType.ta.mjs";
-// export { TraceRecordType, _enum_for_TraceRecordType, TraceRecordType_traceStart /* IMPORTED_LONG_ENUMERATION_ITEM */, traceStart /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceRecordType_cellTrafficTrace /* IMPORTED_LONG_ENUMERATION_ITEM */, cellTrafficTrace /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceRecordType_traceDataDelivery /* IMPORTED_LONG_ENUMERATION_ITEM */, traceDataDelivery /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceRecordType_traceDeactivation /* IMPORTED_LONG_ENUMERATION_ITEM */, traceDeactivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceRecordType, _encode_TraceRecordType } from "../TS33128Payloads/TraceRecordType.ta.mjs";
 import { TraceDirection, _decode_TraceDirection, _encode_TraceDirection, _enum_for_TraceDirection } from "../TS33128Payloads/TraceDirection.ta.mjs";
-// export { TraceDirection, _enum_for_TraceDirection, TraceDirection_toAMF /* IMPORTED_LONG_ENUMERATION_ITEM */, toAMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDirection_fromAMF /* IMPORTED_LONG_ENUMERATION_ITEM */, fromAMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDirection_toMME /* IMPORTED_LONG_ENUMERATION_ITEM */, toMME /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDirection_fromMME /* IMPORTED_LONG_ENUMERATION_ITEM */, fromMME /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceDirection, _encode_TraceDirection } from "../TS33128Payloads/TraceDirection.ta.mjs";
 import { TraceActivation, _decode_TraceActivation, _encode_TraceActivation } from "../TS33128Payloads/TraceActivation.ta.mjs";
-// export { TraceActivation, _decode_TraceActivation, _encode_TraceActivation } from "../TS33128Payloads/TraceActivation.ta.mjs";
 import { ECGI, _decode_ECGI, _encode_ECGI } from "../TS33128Payloads/ECGI.ta.mjs";
-// export { ECGI, _decode_ECGI, _encode_ECGI } from "../TS33128Payloads/ECGI.ta.mjs";
 import { GlobalRANNodeID, _decode_GlobalRANNodeID, _encode_GlobalRANNodeID } from "../TS33128Payloads/GlobalRANNodeID.ta.mjs";
-// export { GlobalRANNodeID, _decode_GlobalRANNodeID, _encode_GlobalRANNodeID } from "../TS33128Payloads/GlobalRANNodeID.ta.mjs";
 import { TraceCollectionEntityInfo, _decode_TraceCollectionEntityInfo, _encode_TraceCollectionEntityInfo } from "../TS33128Payloads/TraceCollectionEntityInfo.ta.mjs";
-// export { TraceCollectionEntityInfo, _decode_TraceCollectionEntityInfo, _encode_TraceCollectionEntityInfo } from "../TS33128Payloads/TraceCollectionEntityInfo.ta.mjs";
 import { XMLType, _decode_XMLType, _encode_XMLType } from "../TS33128Payloads/XMLType.ta.mjs";
-// export { XMLType, _decode_XMLType, _encode_XMLType } from "../TS33128Payloads/XMLType.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-// export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 
 
 /**

@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AFSecurityParams, _decode_AFSecurityParams, _encode_AFSecurityParams } from "../TS33128Payloads/AFSecurityParams.ta.mjs";
-// export { AFSecurityParams, _decode_AFSecurityParams, _encode_AFSecurityParams } from "../TS33128Payloads/AFSecurityParams.ta.mjs";
 
 
 /**

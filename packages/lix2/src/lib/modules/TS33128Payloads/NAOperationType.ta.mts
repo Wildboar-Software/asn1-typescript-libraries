@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -198,21 +196,13 @@ const NAOperationType_requestDeliveryBoost: NAOperationType = NAOperationType.re
 export
 const requestDeliveryBoost: NAOperationType = NAOperationType.requestDeliveryBoost; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_NAOperationType: $.ASN1Decoder<NAOperationType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NAOperationType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NAOperationType (el: _Element): NAOperationType {
-    if (!_cached_decoder_for_NAOperationType) { _cached_decoder_for_NAOperationType = $._decodeEnumerated; }
-    return _cached_decoder_for_NAOperationType(el);
-}
-
-let _cached_encoder_for_NAOperationType: $.ASN1Encoder<NAOperationType> | null = null;
+export const _decode_NAOperationType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NAOperationType into an ASN.1 Element.
@@ -221,11 +211,7 @@ let _cached_encoder_for_NAOperationType: $.ASN1Encoder<NAOperationType> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NAOperationType, encoded as an ASN.1 Element.
  */
-export
-function _encode_NAOperationType (value: NAOperationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NAOperationType) { _cached_encoder_for_NAOperationType = $._encodeEnumerated; }
-    return _cached_encoder_for_NAOperationType(value, elGetter);
-}
+export const _encode_NAOperationType = $._encodeEnumerated;
 
 
 /* eslint-enable */

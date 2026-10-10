@@ -5,15 +5,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS12UAStarParams, _decode_TLS12UAStarParams, _encode_TLS12UAStarParams } from "../TS33128Payloads/TLS12UAStarParams.ta.mjs";
-// export { TLS12UAStarParams, _decode_TLS12UAStarParams, _encode_TLS12UAStarParams } from "../TS33128Payloads/TLS12UAStarParams.ta.mjs";
 import { GenericUAStarParams, _decode_GenericUAStarParams, _encode_GenericUAStarParams } from "../TS33128Payloads/GenericUAStarParams.ta.mjs";
-// export { GenericUAStarParams, _decode_GenericUAStarParams, _encode_GenericUAStarParams } from "../TS33128Payloads/GenericUAStarParams.ta.mjs";
 import { TLS13UAStarParams, _decode_TLS13UAStarParams, _encode_TLS13UAStarParams } from "../TS33128Payloads/TLS13UAStarParams.ta.mjs";
-// export { TLS13UAStarParams, _decode_TLS13UAStarParams, _encode_TLS13UAStarParams } from "../TS33128Payloads/TLS13UAStarParams.ta.mjs";
 import { DTLS12UAStarParams, _decode_DTLS12UAStarParams, _encode_DTLS12UAStarParams } from "../TS33128Payloads/DTLS12UAStarParams.ta.mjs";
-// export { DTLS12UAStarParams, _decode_DTLS12UAStarParams, _encode_DTLS12UAStarParams } from "../TS33128Payloads/DTLS12UAStarParams.ta.mjs";
 import { DTLS13UAStarParams, _decode_DTLS13UAStarParams, _encode_DTLS13UAStarParams } from "../TS33128Payloads/DTLS13UAStarParams.ta.mjs";
-// export { DTLS13UAStarParams, _decode_DTLS13UAStarParams, _encode_DTLS13UAStarParams } from "../TS33128Payloads/DTLS13UAStarParams.ta.mjs";
 
 
 /**

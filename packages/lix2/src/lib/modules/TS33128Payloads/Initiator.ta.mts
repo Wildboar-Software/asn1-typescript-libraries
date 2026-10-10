@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -118,21 +116,13 @@ const Initiator_unknown: Initiator = Initiator.unknown; /* LONG_NAMED_ENUMERATED
 export
 const unknown: Initiator = Initiator.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_Initiator: $.ASN1Decoder<Initiator> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Initiator
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Initiator (el: _Element): Initiator {
-    if (!_cached_decoder_for_Initiator) { _cached_decoder_for_Initiator = $._decodeEnumerated; }
-    return _cached_decoder_for_Initiator(el);
-}
-
-let _cached_encoder_for_Initiator: $.ASN1Encoder<Initiator> | null = null;
+export const _decode_Initiator = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) Initiator into an ASN.1 Element.
@@ -141,11 +131,7 @@ let _cached_encoder_for_Initiator: $.ASN1Encoder<Initiator> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Initiator, encoded as an ASN.1 Element.
  */
-export
-function _encode_Initiator (value: Initiator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Initiator) { _cached_encoder_for_Initiator = $._encodeEnumerated; }
-    return _cached_encoder_for_Initiator(value, elGetter);
-}
+export const _encode_Initiator = $._encodeEnumerated;
 
 
 /* eslint-enable */

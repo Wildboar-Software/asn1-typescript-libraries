@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -98,21 +96,13 @@ const AerialUESubscriptionIndicator_notAuthorized: AerialUESubscriptionIndicator
 export
 const notAuthorized: AerialUESubscriptionIndicator = AerialUESubscriptionIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AerialUESubscriptionIndicator: $.ASN1Decoder<AerialUESubscriptionIndicator> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AerialUESubscriptionIndicator
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AerialUESubscriptionIndicator (el: _Element): AerialUESubscriptionIndicator {
-    if (!_cached_decoder_for_AerialUESubscriptionIndicator) { _cached_decoder_for_AerialUESubscriptionIndicator = $._decodeEnumerated; }
-    return _cached_decoder_for_AerialUESubscriptionIndicator(el);
-}
-
-let _cached_encoder_for_AerialUESubscriptionIndicator: $.ASN1Encoder<AerialUESubscriptionIndicator> | null = null;
+export const _decode_AerialUESubscriptionIndicator = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AerialUESubscriptionIndicator into an ASN.1 Element.
@@ -121,11 +111,7 @@ let _cached_encoder_for_AerialUESubscriptionIndicator: $.ASN1Encoder<AerialUESub
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AerialUESubscriptionIndicator, encoded as an ASN.1 Element.
  */
-export
-function _encode_AerialUESubscriptionIndicator (value: AerialUESubscriptionIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AerialUESubscriptionIndicator) { _cached_encoder_for_AerialUESubscriptionIndicator = $._encodeEnumerated; }
-    return _cached_encoder_for_AerialUESubscriptionIndicator(value, elGetter);
-}
+export const _encode_AerialUESubscriptionIndicator = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -218,21 +216,13 @@ const MMStatus_unreachable: MMStatus = MMStatus.unreachable; /* LONG_NAMED_ENUME
 export
 const unreachable: MMStatus = MMStatus.unreachable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MMStatus: $.ASN1Decoder<MMStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MMStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MMStatus (el: _Element): MMStatus {
-    if (!_cached_decoder_for_MMStatus) { _cached_decoder_for_MMStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_MMStatus(el);
-}
-
-let _cached_encoder_for_MMStatus: $.ASN1Encoder<MMStatus> | null = null;
+export const _decode_MMStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MMStatus into an ASN.1 Element.
@@ -241,11 +231,7 @@ let _cached_encoder_for_MMStatus: $.ASN1Encoder<MMStatus> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MMStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_MMStatus (value: MMStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMStatus) { _cached_encoder_for_MMStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_MMStatus(value, elGetter);
-}
+export const _encode_MMStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

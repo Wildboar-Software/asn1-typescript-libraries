@@ -6,17 +6,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PASSporT, _decode_PASSporT, _encode_PASSporT } from "../TS33128Payloads/PASSporT.ta.mjs";
-// export { PASSporT, _decode_PASSporT, _encode_PASSporT } from "../TS33128Payloads/PASSporT.ta.mjs";
 import { RCDDisplayInfo, _decode_RCDDisplayInfo, _encode_RCDDisplayInfo } from "../TS33128Payloads/RCDDisplayInfo.ta.mjs";
-// export { RCDDisplayInfo, _decode_RCDDisplayInfo, _encode_RCDDisplayInfo } from "../TS33128Payloads/RCDDisplayInfo.ta.mjs";
 import { ECNAMDisplayInfo, _decode_ECNAMDisplayInfo, _encode_ECNAMDisplayInfo } from "../TS33128Payloads/ECNAMDisplayInfo.ta.mjs";
-// export { ECNAMDisplayInfo, _decode_ECNAMDisplayInfo, _encode_ECNAMDisplayInfo } from "../TS33128Payloads/ECNAMDisplayInfo.ta.mjs";
 import { SHAKENValidationResult, _decode_SHAKENValidationResult, _encode_SHAKENValidationResult, _enum_for_SHAKENValidationResult } from "../TS33128Payloads/SHAKENValidationResult.ta.mjs";
-// export { SHAKENValidationResult, _enum_for_SHAKENValidationResult, SHAKENValidationResult_tNValidationPassed /* IMPORTED_LONG_ENUMERATION_ITEM */, tNValidationPassed /* IMPORTED_SHORT_ENUMERATION_ITEM */, SHAKENValidationResult_tNValidationFailed /* IMPORTED_LONG_ENUMERATION_ITEM */, tNValidationFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */, SHAKENValidationResult_noTNValidation /* IMPORTED_LONG_ENUMERATION_ITEM */, noTNValidation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SHAKENValidationResult, _encode_SHAKENValidationResult } from "../TS33128Payloads/SHAKENValidationResult.ta.mjs";
 import { SHAKENFailureStatusCode, _decode_SHAKENFailureStatusCode, _encode_SHAKENFailureStatusCode } from "../TS33128Payloads/SHAKENFailureStatusCode.ta.mjs";
-// export { SHAKENFailureStatusCode, _decode_SHAKENFailureStatusCode, _encode_SHAKENFailureStatusCode } from "../TS33128Payloads/SHAKENFailureStatusCode.ta.mjs";
 import { SIPMessage, _decode_SIPMessage, _encode_SIPMessage } from "../TS33128Payloads/SIPMessage.ta.mjs";
-// export { SIPMessage, _decode_SIPMessage, _encode_SIPMessage } from "../TS33128Payloads/SIPMessage.ta.mjs";
 
 
 /**

@@ -2,23 +2,17 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
-// export { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
 import { MMEUES1APID, _decode_MMEUES1APID, _encode_MMEUES1APID } from "../TS33128Payloads/MMEUES1APID.ta.mjs";
-// export { MMEUES1APID, _decode_MMEUES1APID, _encode_MMEUES1APID } from "../TS33128Payloads/MMEUES1APID.ta.mjs";
 import { RANUES1APID, _decode_RANUES1APID, _encode_RANUES1APID } from "../TS33128Payloads/RANUES1APID.ta.mjs";
-// export { RANUES1APID, _decode_RANUES1APID, _encode_RANUES1APID } from "../TS33128Payloads/RANUES1APID.ta.mjs";
 import { EPSHandoverType, _decode_EPSHandoverType, _encode_EPSHandoverType } from "../TS33128Payloads/EPSHandoverType.ta.mjs";
-// export { EPSHandoverType, _decode_EPSHandoverType, _encode_EPSHandoverType } from "../TS33128Payloads/EPSHandoverType.ta.mjs";
 import { ERABContextList, _decode_ERABContextList, _encode_ERABContextList } from "../TS33128Payloads/ERABContextList.ta.mjs";
-// export { ERABContextList, _decode_ERABContextList, _encode_ERABContextList } from "../TS33128Payloads/ERABContextList.ta.mjs";
 import { ERABReleaseList, _decode_ERABReleaseList, _encode_ERABReleaseList } from "../TS33128Payloads/ERABReleaseList.ta.mjs";
-// export { ERABReleaseList, _decode_ERABReleaseList, _encode_ERABReleaseList } from "../TS33128Payloads/ERABReleaseList.ta.mjs";
 import { RANTargetToSourceContainer, _decode_RANTargetToSourceContainer, _encode_RANTargetToSourceContainer } from "../TS33128Payloads/RANTargetToSourceContainer.ta.mjs";
-// export { RANTargetToSourceContainer, _decode_RANTargetToSourceContainer, _encode_RANTargetToSourceContainer } from "../TS33128Payloads/RANTargetToSourceContainer.ta.mjs";
 
 
 /**
@@ -87,7 +81,11 @@ class EPSRANHandoverCommand {
          * @readonly
          */
         readonly targetToSourceContainers: RANTargetToSourceContainer[]
-    ) {}
+    ) {
+        if (this.targetToSourceContainers !== undefined && (this.targetToSourceContainers.length < 1)) {
+            throw new ASN1SizeError("EPSRANHandoverCommand.targetToSourceContainers violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a EPSRANHandoverCommand

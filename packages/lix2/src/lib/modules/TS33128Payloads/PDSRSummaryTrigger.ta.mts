@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -158,21 +156,13 @@ const PDSRSummaryTrigger_endOfFlow: PDSRSummaryTrigger = PDSRSummaryTrigger.endO
 export
 const endOfFlow: PDSRSummaryTrigger = PDSRSummaryTrigger.endOfFlow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PDSRSummaryTrigger: $.ASN1Decoder<PDSRSummaryTrigger> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PDSRSummaryTrigger
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PDSRSummaryTrigger (el: _Element): PDSRSummaryTrigger {
-    if (!_cached_decoder_for_PDSRSummaryTrigger) { _cached_decoder_for_PDSRSummaryTrigger = $._decodeEnumerated; }
-    return _cached_decoder_for_PDSRSummaryTrigger(el);
-}
-
-let _cached_encoder_for_PDSRSummaryTrigger: $.ASN1Encoder<PDSRSummaryTrigger> | null = null;
+export const _decode_PDSRSummaryTrigger = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PDSRSummaryTrigger into an ASN.1 Element.
@@ -181,11 +171,7 @@ let _cached_encoder_for_PDSRSummaryTrigger: $.ASN1Encoder<PDSRSummaryTrigger> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PDSRSummaryTrigger, encoded as an ASN.1 Element.
  */
-export
-function _encode_PDSRSummaryTrigger (value: PDSRSummaryTrigger, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDSRSummaryTrigger) { _cached_encoder_for_PDSRSummaryTrigger = $._encodeEnumerated; }
-    return _cached_encoder_for_PDSRSummaryTrigger(value, elGetter);
-}
+export const _encode_PDSRSummaryTrigger = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -358,21 +356,13 @@ const AForASSessionWithQoSResponseCode_serviceUnavailable503: AForASSessionWithQ
 export
 const serviceUnavailable503: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.serviceUnavailable503; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AForASSessionWithQoSResponseCode: $.ASN1Decoder<AForASSessionWithQoSResponseCode> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AForASSessionWithQoSResponseCode
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AForASSessionWithQoSResponseCode (el: _Element): AForASSessionWithQoSResponseCode {
-    if (!_cached_decoder_for_AForASSessionWithQoSResponseCode) { _cached_decoder_for_AForASSessionWithQoSResponseCode = $._decodeEnumerated; }
-    return _cached_decoder_for_AForASSessionWithQoSResponseCode(el);
-}
-
-let _cached_encoder_for_AForASSessionWithQoSResponseCode: $.ASN1Encoder<AForASSessionWithQoSResponseCode> | null = null;
+export const _decode_AForASSessionWithQoSResponseCode = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AForASSessionWithQoSResponseCode into an ASN.1 Element.
@@ -381,11 +371,7 @@ let _cached_encoder_for_AForASSessionWithQoSResponseCode: $.ASN1Encoder<AForASSe
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AForASSessionWithQoSResponseCode, encoded as an ASN.1 Element.
  */
-export
-function _encode_AForASSessionWithQoSResponseCode (value: AForASSessionWithQoSResponseCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AForASSessionWithQoSResponseCode) { _cached_encoder_for_AForASSessionWithQoSResponseCode = $._encodeEnumerated; }
-    return _cached_encoder_for_AForASSessionWithQoSResponseCode(value, elGetter);
-}
+export const _encode_AForASSessionWithQoSResponseCode = $._encodeEnumerated;
 
 
 /* eslint-enable */

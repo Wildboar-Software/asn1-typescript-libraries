@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -20,21 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type DNN = UTF8String; // UTF8String
 
-let _cached_decoder_for_DNN: $.ASN1Decoder<DNN> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DNN
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_DNN (el: _Element): DNN {
-    if (!_cached_decoder_for_DNN) { _cached_decoder_for_DNN = $._decodeUTF8String; }
-    return _cached_decoder_for_DNN(el);
-}
-
-let _cached_encoder_for_DNN: $.ASN1Encoder<DNN> | null = null;
+export const _decode_DNN = $._decodeUTF8String;
 
 /**
  * @summary Encodes a(n) DNN into an ASN.1 Element.
@@ -43,11 +34,7 @@ let _cached_encoder_for_DNN: $.ASN1Encoder<DNN> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DNN, encoded as an ASN.1 Element.
  */
-export
-function _encode_DNN (value: DNN, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DNN) { _cached_encoder_for_DNN = $._encodeUTF8String; }
-    return _cached_encoder_for_DNN(value, elGetter);
-}
+export const _encode_DNN = $._encodeUTF8String;
 
 
 /* eslint-enable */

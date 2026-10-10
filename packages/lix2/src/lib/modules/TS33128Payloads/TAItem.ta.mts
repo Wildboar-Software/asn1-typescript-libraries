@@ -2,15 +2,13 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
-// export { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
 import { BroadcastPLMNItem, _decode_BroadcastPLMNItem, _encode_BroadcastPLMNItem } from "../TS33128Payloads/BroadcastPLMNItem.ta.mjs";
-// export { BroadcastPLMNItem, _decode_BroadcastPLMNItem, _encode_BroadcastPLMNItem } from "../TS33128Payloads/BroadcastPLMNItem.ta.mjs";
 import { RATInformation, _decode_RATInformation, _encode_RATInformation, _enum_for_RATInformation } from "../TS33128Payloads/RATInformation.ta.mjs";
-// export { RATInformation, _enum_for_RATInformation, RATInformation_unlicensed /* IMPORTED_LONG_ENUMERATION_ITEM */, unlicensed /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nBIoT /* IMPORTED_LONG_ENUMERATION_ITEM */, nBIoT /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nRLEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nRLEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nRMEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nRMEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nRGEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nRGEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATInformation_nROTHERSAT /* IMPORTED_LONG_ENUMERATION_ITEM */, nROTHERSAT /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RATInformation, _encode_RATInformation } from "../TS33128Payloads/RATInformation.ta.mjs";
 
 
 /**
@@ -51,7 +49,11 @@ class TAItem {
          * @readonly
          */
         readonly rATinformation: OPTIONAL<RATInformation>
-    ) {}
+    ) {
+        if (this.broadcastPLMNList !== undefined && (this.broadcastPLMNList.length < 1)) {
+            throw new ASN1SizeError("TAItem.broadcastPLMNList violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TAItem

@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -138,21 +136,13 @@ const HandoverType_fiveGStoUTRA: HandoverType = HandoverType.fiveGStoUTRA; /* LO
 export
 const fiveGStoUTRA: HandoverType = HandoverType.fiveGStoUTRA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_HandoverType: $.ASN1Decoder<HandoverType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) HandoverType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_HandoverType (el: _Element): HandoverType {
-    if (!_cached_decoder_for_HandoverType) { _cached_decoder_for_HandoverType = $._decodeEnumerated; }
-    return _cached_decoder_for_HandoverType(el);
-}
-
-let _cached_encoder_for_HandoverType: $.ASN1Encoder<HandoverType> | null = null;
+export const _decode_HandoverType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) HandoverType into an ASN.1 Element.
@@ -161,11 +151,7 @@ let _cached_encoder_for_HandoverType: $.ASN1Encoder<HandoverType> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The HandoverType, encoded as an ASN.1 Element.
  */
-export
-function _encode_HandoverType (value: HandoverType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HandoverType) { _cached_encoder_for_HandoverType = $._encodeEnumerated; }
-    return _cached_encoder_for_HandoverType(value, elGetter);
-}
+export const _encode_HandoverType = $._encodeEnumerated;
 
 
 /* eslint-enable */

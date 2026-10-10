@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -218,21 +216,13 @@ const IMSRegistrationStatus_unregisteredUser: IMSRegistrationStatus = IMSRegistr
 export
 const unregisteredUser: IMSRegistrationStatus = IMSRegistrationStatus.unregisteredUser; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_IMSRegistrationStatus: $.ASN1Decoder<IMSRegistrationStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IMSRegistrationStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IMSRegistrationStatus (el: _Element): IMSRegistrationStatus {
-    if (!_cached_decoder_for_IMSRegistrationStatus) { _cached_decoder_for_IMSRegistrationStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_IMSRegistrationStatus(el);
-}
-
-let _cached_encoder_for_IMSRegistrationStatus: $.ASN1Encoder<IMSRegistrationStatus> | null = null;
+export const _decode_IMSRegistrationStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) IMSRegistrationStatus into an ASN.1 Element.
@@ -241,11 +231,7 @@ let _cached_encoder_for_IMSRegistrationStatus: $.ASN1Encoder<IMSRegistrationStat
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IMSRegistrationStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_IMSRegistrationStatus (value: IMSRegistrationStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IMSRegistrationStatus) { _cached_encoder_for_IMSRegistrationStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_IMSRegistrationStatus(value, elGetter);
-}
+export const _encode_IMSRegistrationStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

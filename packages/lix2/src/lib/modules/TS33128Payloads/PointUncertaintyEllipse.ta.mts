@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../TS33128Payloads/GeographicalCoordinates.ta.mjs";
-// export { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../TS33128Payloads/GeographicalCoordinates.ta.mjs";
 import { UncertaintyEllipse, _decode_UncertaintyEllipse, _encode_UncertaintyEllipse } from "../TS33128Payloads/UncertaintyEllipse.ta.mjs";
-// export { UncertaintyEllipse, _decode_UncertaintyEllipse, _encode_UncertaintyEllipse } from "../TS33128Payloads/UncertaintyEllipse.ta.mjs";
 import { Confidence, _decode_Confidence, _encode_Confidence } from "../TS33128Payloads/Confidence.ta.mjs";
-// export { Confidence, _decode_Confidence, _encode_Confidence } from "../TS33128Payloads/Confidence.ta.mjs";
 
 
 /**

@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
-// export { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
 
 
 /**
@@ -31,7 +31,11 @@ let _cached_decoder_for_RCSDestination: $.ASN1Decoder<RCSDestination> | null = n
 export
 function _decode_RCSDestination (el: _Element): RCSDestination {
     if (!_cached_decoder_for_RCSDestination) { _cached_decoder_for_RCSDestination = $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity); }
-    return _cached_decoder_for_RCSDestination(el);
+    const _value = _cached_decoder_for_RCSDestination(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("RCSDestination violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_RCSDestination: $.ASN1Encoder<RCSDestination> | null = null;

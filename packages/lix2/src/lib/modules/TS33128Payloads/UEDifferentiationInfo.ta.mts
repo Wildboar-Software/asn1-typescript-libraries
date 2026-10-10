@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PeriodicCommunicationIndicator, _decode_PeriodicCommunicationIndicator, _encode_PeriodicCommunicationIndicator, _enum_for_PeriodicCommunicationIndicator } from "../TS33128Payloads/PeriodicCommunicationIndicator.ta.mjs";
-// export { PeriodicCommunicationIndicator, _enum_for_PeriodicCommunicationIndicator, PeriodicCommunicationIndicator_periodic /* IMPORTED_LONG_ENUMERATION_ITEM */, periodic /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodicCommunicationIndicator_nonPeriodic /* IMPORTED_LONG_ENUMERATION_ITEM */, nonPeriodic /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PeriodicCommunicationIndicator, _encode_PeriodicCommunicationIndicator } from "../TS33128Payloads/PeriodicCommunicationIndicator.ta.mjs";
 import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SBIType.ta.mjs";
-// export { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SBIType.ta.mjs";
 
 
 /**

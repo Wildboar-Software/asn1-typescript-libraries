@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -98,21 +96,13 @@ const EMMRegStatus_uENotEMMRegistered: EMMRegStatus = EMMRegStatus.uENotEMMRegis
 export
 const uENotEMMRegistered: EMMRegStatus = EMMRegStatus.uENotEMMRegistered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_EMMRegStatus: $.ASN1Decoder<EMMRegStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EMMRegStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EMMRegStatus (el: _Element): EMMRegStatus {
-    if (!_cached_decoder_for_EMMRegStatus) { _cached_decoder_for_EMMRegStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_EMMRegStatus(el);
-}
-
-let _cached_encoder_for_EMMRegStatus: $.ASN1Encoder<EMMRegStatus> | null = null;
+export const _decode_EMMRegStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) EMMRegStatus into an ASN.1 Element.
@@ -121,11 +111,7 @@ let _cached_encoder_for_EMMRegStatus: $.ASN1Encoder<EMMRegStatus> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EMMRegStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_EMMRegStatus (value: EMMRegStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EMMRegStatus) { _cached_encoder_for_EMMRegStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_EMMRegStatus(value, elGetter);
-}
+export const _encode_EMMRegStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

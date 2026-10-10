@@ -7,17 +7,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
 import { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
-// export { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
 import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
-// export { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
-// export { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
 import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
-// export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 import { SCEFReleaseCause, _decode_SCEFReleaseCause, _encode_SCEFReleaseCause, _enum_for_SCEFReleaseCause } from "../TS33128Payloads/SCEFReleaseCause.ta.mjs";
-// export { SCEFReleaseCause, _enum_for_SCEFReleaseCause, SCEFReleaseCause_mMERelease /* IMPORTED_LONG_ENUMERATION_ITEM */, mMERelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCEFReleaseCause_dNRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, dNRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCEFReleaseCause_hSSRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, hSSRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCEFReleaseCause_localConfigurationPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, localConfigurationPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCEFReleaseCause_unknownCause /* IMPORTED_LONG_ENUMERATION_ITEM */, unknownCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SCEFReleaseCause, _encode_SCEFReleaseCause } from "../TS33128Payloads/SCEFReleaseCause.ta.mjs";
 
 
 /**

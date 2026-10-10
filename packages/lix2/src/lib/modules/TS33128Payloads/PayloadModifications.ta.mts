@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PayloadModification, _decode_PayloadModification, _encode_PayloadModification } from "../TS33128Payloads/PayloadModification.ta.mjs";
-// export { PayloadModification, _decode_PayloadModification, _encode_PayloadModification } from "../TS33128Payloads/PayloadModification.ta.mjs";
 
 
 /**

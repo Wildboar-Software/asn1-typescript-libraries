@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -98,21 +96,13 @@ const TLS13PSKKeyExchangeMode_pSKDHEKE: TLS13PSKKeyExchangeMode = TLS13PSKKeyExc
 export
 const pSKDHEKE: TLS13PSKKeyExchangeMode = TLS13PSKKeyExchangeMode.pSKDHEKE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TLS13PSKKeyExchangeMode: $.ASN1Decoder<TLS13PSKKeyExchangeMode> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TLS13PSKKeyExchangeMode
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TLS13PSKKeyExchangeMode (el: _Element): TLS13PSKKeyExchangeMode {
-    if (!_cached_decoder_for_TLS13PSKKeyExchangeMode) { _cached_decoder_for_TLS13PSKKeyExchangeMode = $._decodeEnumerated; }
-    return _cached_decoder_for_TLS13PSKKeyExchangeMode(el);
-}
-
-let _cached_encoder_for_TLS13PSKKeyExchangeMode: $.ASN1Encoder<TLS13PSKKeyExchangeMode> | null = null;
+export const _decode_TLS13PSKKeyExchangeMode = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TLS13PSKKeyExchangeMode into an ASN.1 Element.
@@ -121,11 +111,7 @@ let _cached_encoder_for_TLS13PSKKeyExchangeMode: $.ASN1Encoder<TLS13PSKKeyExchan
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TLS13PSKKeyExchangeMode, encoded as an ASN.1 Element.
  */
-export
-function _encode_TLS13PSKKeyExchangeMode (value: TLS13PSKKeyExchangeMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TLS13PSKKeyExchangeMode) { _cached_encoder_for_TLS13PSKKeyExchangeMode = $._encodeEnumerated; }
-    return _cached_encoder_for_TLS13PSKKeyExchangeMode(value, elGetter);
-}
+export const _encode_TLS13PSKKeyExchangeMode = $._encodeEnumerated;
 
 
 /* eslint-enable */

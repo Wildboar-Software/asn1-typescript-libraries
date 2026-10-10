@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -86,21 +85,13 @@ const IPVersion_iPV4andV6: IPVersion = 3; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const iPV4andV6: IPVersion = IPVersion_iPV4andV6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_IPVersion: $.ASN1Decoder<IPVersion> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IPVersion
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IPVersion (el: _Element): IPVersion {
-    if (!_cached_decoder_for_IPVersion) { _cached_decoder_for_IPVersion = $._decodeEnumerated; }
-    return _cached_decoder_for_IPVersion(el);
-}
-
-let _cached_encoder_for_IPVersion: $.ASN1Encoder<IPVersion> | null = null;
+export const _decode_IPVersion = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) IPVersion into an ASN.1 Element.
@@ -109,11 +100,7 @@ let _cached_encoder_for_IPVersion: $.ASN1Encoder<IPVersion> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IPVersion, encoded as an ASN.1 Element.
  */
-export
-function _encode_IPVersion (value: IPVersion, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IPVersion) { _cached_encoder_for_IPVersion = $._encodeEnumerated; }
-    return _cached_encoder_for_IPVersion(value, elGetter);
-}
+export const _encode_IPVersion = $._encodeEnumerated;
 
 
 /* eslint-enable */

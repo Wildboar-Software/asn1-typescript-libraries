@@ -4,17 +4,15 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLSPRFAlgorithm, _decode_TLSPRFAlgorithm, _encode_TLSPRFAlgorithm, _enum_for_TLSPRFAlgorithm } from "../TS33128Payloads/TLSPRFAlgorithm.ta.mjs";
-// export { TLSPRFAlgorithm, _enum_for_TLSPRFAlgorithm, TLSPRFAlgorithm_rfc5246 /* IMPORTED_LONG_ENUMERATION_ITEM */, rfc5246 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLSPRFAlgorithm, _encode_TLSPRFAlgorithm } from "../TS33128Payloads/TLSPRFAlgorithm.ta.mjs";
 import { TLSCipherSuite, _decode_TLSCipherSuite, _encode_TLSCipherSuite } from "../TS33128Payloads/TLSCipherSuite.ta.mjs";
-// export { TLSCipherSuite, _decode_TLSCipherSuite, _encode_TLSCipherSuite } from "../TS33128Payloads/TLSCipherSuite.ta.mjs";
 import { TLSCipherType, _decode_TLSCipherType, _encode_TLSCipherType, _enum_for_TLSCipherType } from "../TS33128Payloads/TLSCipherType.ta.mjs";
-// export { TLSCipherType, _enum_for_TLSCipherType, TLSCipherType_stream /* IMPORTED_LONG_ENUMERATION_ITEM */, stream /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLSCipherType_block /* IMPORTED_LONG_ENUMERATION_ITEM */, block /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLSCipherType_aead /* IMPORTED_LONG_ENUMERATION_ITEM */, aead /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLSCipherType, _encode_TLSCipherType } from "../TS33128Payloads/TLSCipherType.ta.mjs";
 import { TLSCompressionAlgorithm, _decode_TLSCompressionAlgorithm, _encode_TLSCompressionAlgorithm, _enum_for_TLSCompressionAlgorithm } from "../TS33128Payloads/TLSCompressionAlgorithm.ta.mjs";
-// export { TLSCompressionAlgorithm, _enum_for_TLSCompressionAlgorithm, TLSCompressionAlgorithm_null /* IMPORTED_LONG_ENUMERATION_ITEM */, null_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLSCompressionAlgorithm_deflate /* IMPORTED_LONG_ENUMERATION_ITEM */, deflate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLSCompressionAlgorithm, _encode_TLSCompressionAlgorithm } from "../TS33128Payloads/TLSCompressionAlgorithm.ta.mjs";
 
 
 /**
@@ -167,7 +165,65 @@ class TLS12UAStarParams {
          * @readonly
          */
         readonly tLSClientExtensions: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (this.preMasterSecret !== undefined && (this.preMasterSecret.length < 48 || this.preMasterSecret.length > 48)) {
+            throw new ASN1SizeError("TLS12UAStarParams.preMasterSecret violates SIZE constraint");
+        }
+        if (this.masterSecret !== undefined && (this.masterSecret.length < 48 || this.masterSecret.length > 48)) {
+            throw new ASN1SizeError("TLS12UAStarParams.masterSecret violates SIZE constraint");
+        }
+        if (this.encKeyLength !== undefined) {
+            const _n = typeof this.encKeyLength === "bigint" ? this.encKeyLength : BigInt(this.encKeyLength);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TLS12UAStarParams.encKeyLength violates INTEGER range constraint");
+            }
+        }
+        if (this.blockLength !== undefined) {
+            const _n = typeof this.blockLength === "bigint" ? this.blockLength : BigInt(this.blockLength);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TLS12UAStarParams.blockLength violates INTEGER range constraint");
+            }
+        }
+        if (this.fixedIVLength !== undefined) {
+            const _n = typeof this.fixedIVLength === "bigint" ? this.fixedIVLength : BigInt(this.fixedIVLength);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TLS12UAStarParams.fixedIVLength violates INTEGER range constraint");
+            }
+        }
+        if (this.recordIVLength !== undefined) {
+            const _n = typeof this.recordIVLength === "bigint" ? this.recordIVLength : BigInt(this.recordIVLength);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TLS12UAStarParams.recordIVLength violates INTEGER range constraint");
+            }
+        }
+        if (this.macLength !== undefined) {
+            const _n = typeof this.macLength === "bigint" ? this.macLength : BigInt(this.macLength);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TLS12UAStarParams.macLength violates INTEGER range constraint");
+            }
+        }
+        if (this.macKeyLength !== undefined) {
+            const _n = typeof this.macKeyLength === "bigint" ? this.macKeyLength : BigInt(this.macKeyLength);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TLS12UAStarParams.macKeyLength violates INTEGER range constraint");
+            }
+        }
+        if (this.clientRandom !== undefined && (this.clientRandom.length < 32 || this.clientRandom.length > 32)) {
+            throw new ASN1SizeError("TLS12UAStarParams.clientRandom violates SIZE constraint");
+        }
+        if (this.serverRandom !== undefined && (this.serverRandom.length < 32 || this.serverRandom.length > 32)) {
+            throw new ASN1SizeError("TLS12UAStarParams.serverRandom violates SIZE constraint");
+        }
+        if (this.sessionID !== undefined && (this.sessionID.length < 0 || this.sessionID.length > 32)) {
+            throw new ASN1SizeError("TLS12UAStarParams.sessionID violates SIZE constraint");
+        }
+        if (this.tLSServerExtensions !== undefined && (this.tLSServerExtensions.length < 0 || this.tLSServerExtensions.length > 65535)) {
+            throw new ASN1SizeError("TLS12UAStarParams.tLSServerExtensions violates SIZE constraint");
+        }
+        if (this.tLSClientExtensions !== undefined && (this.tLSClientExtensions.length < 0 || this.tLSClientExtensions.length > 65535)) {
+            throw new ASN1SizeError("TLS12UAStarParams.tLSClientExtensions violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TLS12UAStarParams

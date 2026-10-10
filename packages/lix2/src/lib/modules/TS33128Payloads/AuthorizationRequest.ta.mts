@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthorizationType, _decode_AuthorizationType, _encode_AuthorizationType, _enum_for_AuthorizationType } from "../TS33128Payloads/AuthorizationType.ta.mjs";
-// export { AuthorizationType, _enum_for_AuthorizationType, AuthorizationType_registration /* IMPORTED_LONG_ENUMERATION_ITEM */, registration /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuthorizationType_deregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, deregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AuthorizationType, _encode_AuthorizationType } from "../TS33128Payloads/AuthorizationType.ta.mjs";
 import { IMPI, _decode_IMPI, _encode_IMPI } from "../TS33128Payloads/IMPI.ta.mjs";
-// export { IMPI, _decode_IMPI, _encode_IMPI } from "../TS33128Payloads/IMPI.ta.mjs";
 
 
 /**

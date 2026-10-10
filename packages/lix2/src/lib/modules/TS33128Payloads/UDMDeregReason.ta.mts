@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -278,21 +276,13 @@ const UDMDeregReason_disasterConditionTerminated: UDMDeregReason = UDMDeregReaso
 export
 const disasterConditionTerminated: UDMDeregReason = UDMDeregReason.disasterConditionTerminated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_UDMDeregReason: $.ASN1Decoder<UDMDeregReason> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UDMDeregReason
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UDMDeregReason (el: _Element): UDMDeregReason {
-    if (!_cached_decoder_for_UDMDeregReason) { _cached_decoder_for_UDMDeregReason = $._decodeEnumerated; }
-    return _cached_decoder_for_UDMDeregReason(el);
-}
-
-let _cached_encoder_for_UDMDeregReason: $.ASN1Encoder<UDMDeregReason> | null = null;
+export const _decode_UDMDeregReason = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) UDMDeregReason into an ASN.1 Element.
@@ -301,11 +291,7 @@ let _cached_encoder_for_UDMDeregReason: $.ASN1Encoder<UDMDeregReason> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UDMDeregReason, encoded as an ASN.1 Element.
  */
-export
-function _encode_UDMDeregReason (value: UDMDeregReason, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UDMDeregReason) { _cached_encoder_for_UDMDeregReason = $._encodeEnumerated; }
-    return _cached_encoder_for_UDMDeregReason(value, elGetter);
-}
+export const _encode_UDMDeregReason = $._encodeEnumerated;
 
 
 /* eslint-enable */

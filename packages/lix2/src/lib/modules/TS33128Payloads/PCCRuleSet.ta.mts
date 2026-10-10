@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PCCRule, _decode_PCCRule, _encode_PCCRule } from "../TS33128Payloads/PCCRule.ta.mjs";
-// export { PCCRule, _decode_PCCRule, _encode_PCCRule } from "../TS33128Payloads/PCCRule.ta.mjs";
 
 
 /**

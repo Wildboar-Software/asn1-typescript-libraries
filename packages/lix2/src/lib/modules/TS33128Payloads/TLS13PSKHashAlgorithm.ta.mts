@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -118,21 +116,13 @@ const TLS13PSKHashAlgorithm_sha512: TLS13PSKHashAlgorithm = TLS13PSKHashAlgorith
 export
 const sha512: TLS13PSKHashAlgorithm = TLS13PSKHashAlgorithm.sha512; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TLS13PSKHashAlgorithm: $.ASN1Decoder<TLS13PSKHashAlgorithm> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TLS13PSKHashAlgorithm
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TLS13PSKHashAlgorithm (el: _Element): TLS13PSKHashAlgorithm {
-    if (!_cached_decoder_for_TLS13PSKHashAlgorithm) { _cached_decoder_for_TLS13PSKHashAlgorithm = $._decodeEnumerated; }
-    return _cached_decoder_for_TLS13PSKHashAlgorithm(el);
-}
-
-let _cached_encoder_for_TLS13PSKHashAlgorithm: $.ASN1Encoder<TLS13PSKHashAlgorithm> | null = null;
+export const _decode_TLS13PSKHashAlgorithm = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TLS13PSKHashAlgorithm into an ASN.1 Element.
@@ -141,11 +131,7 @@ let _cached_encoder_for_TLS13PSKHashAlgorithm: $.ASN1Encoder<TLS13PSKHashAlgorit
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TLS13PSKHashAlgorithm, encoded as an ASN.1 Element.
  */
-export
-function _encode_TLS13PSKHashAlgorithm (value: TLS13PSKHashAlgorithm, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TLS13PSKHashAlgorithm) { _cached_encoder_for_TLS13PSKHashAlgorithm = $._encodeEnumerated; }
-    return _cached_encoder_for_TLS13PSKHashAlgorithm(value, elGetter);
-}
+export const _encode_TLS13PSKHashAlgorithm = $._encodeEnumerated;
 
 
 /* eslint-enable */

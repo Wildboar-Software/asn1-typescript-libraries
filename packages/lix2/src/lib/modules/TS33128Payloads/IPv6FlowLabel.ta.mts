@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,21 +21,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type IPv6FlowLabel = INTEGER;
 
-let _cached_decoder_for_IPv6FlowLabel: $.ASN1Decoder<IPv6FlowLabel> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IPv6FlowLabel
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IPv6FlowLabel (el: _Element): IPv6FlowLabel {
-    if (!_cached_decoder_for_IPv6FlowLabel) { _cached_decoder_for_IPv6FlowLabel = $._decodeInteger; }
-    return _cached_decoder_for_IPv6FlowLabel(el);
-}
-
-let _cached_encoder_for_IPv6FlowLabel: $.ASN1Encoder<IPv6FlowLabel> | null = null;
+export const _decode_IPv6FlowLabel = (el: _Element): IPv6FlowLabel => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 1048575n) {
+        throw new ASN1OverflowError("IPv6FlowLabel violates INTEGER range constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) IPv6FlowLabel into an ASN.1 Element.
@@ -43,11 +43,7 @@ let _cached_encoder_for_IPv6FlowLabel: $.ASN1Encoder<IPv6FlowLabel> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IPv6FlowLabel, encoded as an ASN.1 Element.
  */
-export
-function _encode_IPv6FlowLabel (value: IPv6FlowLabel, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IPv6FlowLabel) { _cached_encoder_for_IPv6FlowLabel = $._encodeInteger; }
-    return _cached_encoder_for_IPv6FlowLabel(value, elGetter);
-}
+export const _encode_IPv6FlowLabel = $._encodeInteger;
 
 
 /* eslint-enable */

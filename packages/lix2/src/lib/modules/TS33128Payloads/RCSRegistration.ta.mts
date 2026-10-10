@@ -2,17 +2,14 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
-// export { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
 import { RCSRegistrationType, _decode_RCSRegistrationType, _encode_RCSRegistrationType, _enum_for_RCSRegistrationType } from "../TS33128Payloads/RCSRegistrationType.ta.mjs";
-// export { RCSRegistrationType, _enum_for_RCSRegistrationType, RCSRegistrationType_registration /* IMPORTED_LONG_ENUMERATION_ITEM */, registration /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSRegistrationType_reRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, reRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSRegistrationType_uEDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, uEDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSRegistrationType_networkDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, networkDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RCSRegistrationType, _encode_RCSRegistrationType } from "../TS33128Payloads/RCSRegistrationType.ta.mjs";
 import { IMSPayload, _decode_IMSPayload, _encode_IMSPayload } from "../TS33128Payloads/IMSPayload.ta.mjs";
-// export { IMSPayload, _decode_IMSPayload, _encode_IMSPayload } from "../TS33128Payloads/IMSPayload.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-// export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 
 
 /**
@@ -67,7 +64,11 @@ class RCSRegistration {
          * @readonly
          */
         readonly location: OPTIONAL<Location>
-    ) {}
+    ) {
+        if (this.rCSTargetIdentities !== undefined && (this.rCSTargetIdentities.length < 1)) {
+            throw new ASN1SizeError("RCSRegistration.rCSTargetIdentities violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a RCSRegistration

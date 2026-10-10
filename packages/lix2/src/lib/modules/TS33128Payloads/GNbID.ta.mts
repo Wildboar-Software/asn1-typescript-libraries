@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    BIT_STRING
+    BIT_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,21 +21,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type GNbID = BIT_STRING;
 
-let _cached_decoder_for_GNbID: $.ASN1Decoder<GNbID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GNbID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GNbID (el: _Element): GNbID {
-    if (!_cached_decoder_for_GNbID) { _cached_decoder_for_GNbID = $._decodeBitString; }
-    return _cached_decoder_for_GNbID(el);
-}
-
-let _cached_encoder_for_GNbID: $.ASN1Encoder<GNbID> | null = null;
+export const _decode_GNbID = (el: _Element): GNbID => {
+    const value = $._decodeBitString(el);
+    if (value.length < 22 || value.length > 32) {
+        throw new ASN1SizeError("GNbID violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) GNbID into an ASN.1 Element.
@@ -43,11 +42,7 @@ let _cached_encoder_for_GNbID: $.ASN1Encoder<GNbID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GNbID, encoded as an ASN.1 Element.
  */
-export
-function _encode_GNbID (value: GNbID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GNbID) { _cached_encoder_for_GNbID = $._encodeBitString; }
-    return _cached_encoder_for_GNbID(value, elGetter);
-}
+export const _encode_GNbID = $._encodeBitString;
 
 
 /* eslint-enable */

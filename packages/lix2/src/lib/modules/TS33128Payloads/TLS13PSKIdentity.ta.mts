@@ -4,7 +4,9 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     INTEGER,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +43,17 @@ class TLS13PSKIdentity {
          * @readonly
          */
         readonly obfuscatedTicketAge: INTEGER
-    ) {}
+    ) {
+        if (this.identity !== undefined && (this.identity.length < 1 || this.identity.length > 65535)) {
+            throw new ASN1SizeError("TLS13PSKIdentity.identity violates SIZE constraint");
+        }
+        if (this.obfuscatedTicketAge !== undefined) {
+            const _n = typeof this.obfuscatedTicketAge === "bigint" ? this.obfuscatedTicketAge : BigInt(this.obfuscatedTicketAge);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("TLS13PSKIdentity.obfuscatedTicketAge violates INTEGER range constraint");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a TLS13PSKIdentity

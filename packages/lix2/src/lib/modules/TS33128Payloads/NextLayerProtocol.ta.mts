@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,21 +21,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type NextLayerProtocol = INTEGER;
 
-let _cached_decoder_for_NextLayerProtocol: $.ASN1Decoder<NextLayerProtocol> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NextLayerProtocol
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NextLayerProtocol (el: _Element): NextLayerProtocol {
-    if (!_cached_decoder_for_NextLayerProtocol) { _cached_decoder_for_NextLayerProtocol = $._decodeInteger; }
-    return _cached_decoder_for_NextLayerProtocol(el);
-}
-
-let _cached_encoder_for_NextLayerProtocol: $.ASN1Encoder<NextLayerProtocol> | null = null;
+export const _decode_NextLayerProtocol = (el: _Element): NextLayerProtocol => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 255n) {
+        throw new ASN1OverflowError("NextLayerProtocol violates INTEGER range constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) NextLayerProtocol into an ASN.1 Element.
@@ -43,11 +43,7 @@ let _cached_encoder_for_NextLayerProtocol: $.ASN1Encoder<NextLayerProtocol> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NextLayerProtocol, encoded as an ASN.1 Element.
  */
-export
-function _encode_NextLayerProtocol (value: NextLayerProtocol, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NextLayerProtocol) { _cached_encoder_for_NextLayerProtocol = $._encodeInteger; }
-    return _cached_encoder_for_NextLayerProtocol(value, elGetter);
-}
+export const _encode_NextLayerProtocol = $._encodeInteger;
 
 
 /* eslint-enable */

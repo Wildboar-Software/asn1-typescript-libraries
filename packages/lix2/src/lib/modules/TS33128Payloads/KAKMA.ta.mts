@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -20,21 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type KAKMA = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_KAKMA: $.ASN1Decoder<KAKMA> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) KAKMA
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_KAKMA (el: _Element): KAKMA {
-    if (!_cached_decoder_for_KAKMA) { _cached_decoder_for_KAKMA = $._decodeOctetString; }
-    return _cached_decoder_for_KAKMA(el);
-}
-
-let _cached_encoder_for_KAKMA: $.ASN1Encoder<KAKMA> | null = null;
+export const _decode_KAKMA = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) KAKMA into an ASN.1 Element.
@@ -43,11 +34,7 @@ let _cached_encoder_for_KAKMA: $.ASN1Encoder<KAKMA> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KAKMA, encoded as an ASN.1 Element.
  */
-export
-function _encode_KAKMA (value: KAKMA, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KAKMA) { _cached_encoder_for_KAKMA = $._encodeOctetString; }
-    return _cached_encoder_for_KAKMA(value, elGetter);
-}
+export const _encode_KAKMA = $._encodeOctetString;
 
 
 /* eslint-enable */

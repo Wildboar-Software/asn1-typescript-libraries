@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -118,21 +116,13 @@ const MDTActivation_immediateMDTandTrace: MDTActivation = MDTActivation.immediat
 export
 const immediateMDTandTrace: MDTActivation = MDTActivation.immediateMDTandTrace; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MDTActivation: $.ASN1Decoder<MDTActivation> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MDTActivation
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MDTActivation (el: _Element): MDTActivation {
-    if (!_cached_decoder_for_MDTActivation) { _cached_decoder_for_MDTActivation = $._decodeEnumerated; }
-    return _cached_decoder_for_MDTActivation(el);
-}
-
-let _cached_encoder_for_MDTActivation: $.ASN1Encoder<MDTActivation> | null = null;
+export const _decode_MDTActivation = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MDTActivation into an ASN.1 Element.
@@ -141,11 +131,7 @@ let _cached_encoder_for_MDTActivation: $.ASN1Encoder<MDTActivation> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MDTActivation, encoded as an ASN.1 Element.
  */
-export
-function _encode_MDTActivation (value: MDTActivation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MDTActivation) { _cached_encoder_for_MDTActivation = $._encodeEnumerated; }
-    return _cached_encoder_for_MDTActivation(value, elGetter);
-}
+export const _encode_MDTActivation = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -3,17 +3,14 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128Payloads/MACAddress.ta.mjs";
-// export { MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128Payloads/MACAddress.ta.mjs";
 import { FlowDescription, _decode_FlowDescription, _encode_FlowDescription } from "../TS33128Payloads/FlowDescription.ta.mjs";
-// export { FlowDescription, _decode_FlowDescription, _encode_FlowDescription } from "../TS33128Payloads/FlowDescription.ta.mjs";
 import { FDir, _decode_FDir, _encode_FDir, _enum_for_FDir } from "../TS33128Payloads/FDir.ta.mjs";
-// export { FDir, _enum_for_FDir, FDir_downlink /* IMPORTED_LONG_ENUMERATION_ITEM */, downlink /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FDir, _encode_FDir } from "../TS33128Payloads/FDir.ta.mjs";
 import { VLANTag, _decode_VLANTag, _encode_VLANTag } from "../TS33128Payloads/VLANTag.ta.mjs";
-// export { VLANTag, _decode_VLANTag, _encode_VLANTag } from "../TS33128Payloads/VLANTag.ta.mjs";
 
 
 /**
@@ -89,7 +86,11 @@ class EthFlowDescription {
          * @readonly
          */
         readonly destMacAddrEnd: OPTIONAL<MACAddress>
-    ) {}
+    ) {
+        if (this.ethType !== undefined && (this.ethType.length < 2 || this.ethType.length > 2)) {
+            throw new ASN1SizeError("EthFlowDescription.ethType violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a EthFlowDescription

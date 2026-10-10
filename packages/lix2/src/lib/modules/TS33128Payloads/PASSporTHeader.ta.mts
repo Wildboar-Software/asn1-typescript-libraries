@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_JWSTokenType, _encode_JWSTokenType, _enum_for_JWSTokenType, JWSTokenType } from "../TS33128Payloads/JWSTokenType.ta.mjs";
-// export { JWSTokenType, _enum_for_JWSTokenType, JWSTokenType_passport /* IMPORTED_LONG_ENUMERATION_ITEM */, passport /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_JWSTokenType, _encode_JWSTokenType } from "../TS33128Payloads/JWSTokenType.ta.mjs";
 
 
 /**

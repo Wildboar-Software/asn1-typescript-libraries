@@ -2,29 +2,20 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
-// export { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
 import { RCSGroupChatSessionID, _decode_RCSGroupChatSessionID, _encode_RCSGroupChatSessionID } from "../TS33128Payloads/RCSGroupChatSessionID.ta.mjs";
-// export { RCSGroupChatSessionID, _decode_RCSGroupChatSessionID, _encode_RCSGroupChatSessionID } from "../TS33128Payloads/RCSGroupChatSessionID.ta.mjs";
 import { RCSDestinations, _decode_RCSDestinations, _encode_RCSDestinations } from "../TS33128Payloads/RCSDestinations.ta.mjs";
-// export { RCSDestinations, _decode_RCSDestinations, _encode_RCSDestinations } from "../TS33128Payloads/RCSDestinations.ta.mjs";
 import { Direction, _decode_Direction, _encode_Direction, _enum_for_Direction } from "../TS33128Payloads/Direction.ta.mjs";
-// export { Direction, _enum_for_Direction, Direction_fromTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, fromTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_toTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, toTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Direction, _encode_Direction } from "../TS33128Payloads/Direction.ta.mjs";
 import { RCSMessageType, _decode_RCSMessageType, _encode_RCSMessageType, _enum_for_RCSMessageType } from "../TS33128Payloads/RCSMessageType.ta.mjs";
-// export { RCSMessageType, _enum_for_RCSMessageType, RCSMessageType_messageWithUserContent /* IMPORTED_LONG_ENUMERATION_ITEM */, messageWithUserContent /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSMessageType_fileTransferMessage /* IMPORTED_LONG_ENUMERATION_ITEM */, fileTransferMessage /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSMessageType_geoLocationPUSHMessage /* IMPORTED_LONG_ENUMERATION_ITEM */, geoLocationPUSHMessage /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSMessageType_iMDNNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, iMDNNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RCSMessageType, _encode_RCSMessageType } from "../TS33128Payloads/RCSMessageType.ta.mjs";
 import { RCSConversationID, _decode_RCSConversationID, _encode_RCSConversationID } from "../TS33128Payloads/RCSConversationID.ta.mjs";
-// export { RCSConversationID, _decode_RCSConversationID, _encode_RCSConversationID } from "../TS33128Payloads/RCSConversationID.ta.mjs";
 import { RCSContributionID, _decode_RCSContributionID, _encode_RCSContributionID } from "../TS33128Payloads/RCSContributionID.ta.mjs";
-// export { RCSContributionID, _decode_RCSContributionID, _encode_RCSContributionID } from "../TS33128Payloads/RCSContributionID.ta.mjs";
 import { IMDNMessageID, _decode_IMDNMessageID, _encode_IMDNMessageID } from "../TS33128Payloads/IMDNMessageID.ta.mjs";
-// export { IMDNMessageID, _decode_IMDNMessageID, _encode_IMDNMessageID } from "../TS33128Payloads/IMDNMessageID.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-// export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 import { RCSPayload, _decode_RCSPayload, _encode_RCSPayload } from "../TS33128Payloads/RCSPayload.ta.mjs";
-// export { RCSPayload, _decode_RCSPayload, _encode_RCSPayload } from "../TS33128Payloads/RCSPayload.ta.mjs";
 
 
 /**
@@ -128,7 +119,14 @@ class RCSMessage {
          * @readonly
          */
         readonly messagePayload: RCSPayload
-    ) {}
+    ) {
+        if (this.rCSTargetIdentities !== undefined && (this.rCSTargetIdentities.length < 1)) {
+            throw new ASN1SizeError("RCSMessage.rCSTargetIdentities violates SIZE constraint");
+        }
+        if (this.originatingIdentity !== undefined && (this.originatingIdentity.length < 1)) {
+            throw new ASN1SizeError("RCSMessage.originatingIdentity violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a RCSMessage

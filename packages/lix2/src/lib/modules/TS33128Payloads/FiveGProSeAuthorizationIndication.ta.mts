@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_FiveGProSeAuthorizationIndicator, _encode_FiveGProSeAuthorizationIndicator, _enum_for_FiveGProSeAuthorizationIndicator, FiveGProSeAuthorizationIndicator } from "../TS33128Payloads/FiveGProSeAuthorizationIndicator.ta.mjs";
-// export { FiveGProSeAuthorizationIndicator, _enum_for_FiveGProSeAuthorizationIndicator, FiveGProSeAuthorizationIndicator_authorized /* IMPORTED_LONG_ENUMERATION_ITEM */, authorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGProSeAuthorizationIndicator_notAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, notAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FiveGProSeAuthorizationIndicator, _encode_FiveGProSeAuthorizationIndicator } from "../TS33128Payloads/FiveGProSeAuthorizationIndicator.ta.mjs";
 
 
 /**

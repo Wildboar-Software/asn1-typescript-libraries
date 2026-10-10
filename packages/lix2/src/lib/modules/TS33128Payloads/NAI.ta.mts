@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -20,21 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type NAI = UTF8String; // UTF8String
 
-let _cached_decoder_for_NAI: $.ASN1Decoder<NAI> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NAI
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NAI (el: _Element): NAI {
-    if (!_cached_decoder_for_NAI) { _cached_decoder_for_NAI = $._decodeUTF8String; }
-    return _cached_decoder_for_NAI(el);
-}
-
-let _cached_encoder_for_NAI: $.ASN1Encoder<NAI> | null = null;
+export const _decode_NAI = $._decodeUTF8String;
 
 /**
  * @summary Encodes a(n) NAI into an ASN.1 Element.
@@ -43,11 +34,7 @@ let _cached_encoder_for_NAI: $.ASN1Encoder<NAI> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NAI, encoded as an ASN.1 Element.
  */
-export
-function _encode_NAI (value: NAI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NAI) { _cached_encoder_for_NAI = $._encodeUTF8String; }
-    return _cached_encoder_for_NAI(value, elGetter);
-}
+export const _encode_NAI = $._encodeUTF8String;
 
 
 /* eslint-enable */

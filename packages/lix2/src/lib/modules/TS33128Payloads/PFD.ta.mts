@@ -7,13 +7,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PFDFlowDescriptions, _decode_PFDFlowDescriptions, _encode_PFDFlowDescriptions } from "../TS33128Payloads/PFDFlowDescriptions.ta.mjs";
-// export { PFDFlowDescriptions, _decode_PFDFlowDescriptions, _encode_PFDFlowDescriptions } from "../TS33128Payloads/PFDFlowDescriptions.ta.mjs";
 import { PFDURLs, _decode_PFDURLs, _encode_PFDURLs } from "../TS33128Payloads/PFDURLs.ta.mjs";
-// export { PFDURLs, _decode_PFDURLs, _encode_PFDURLs } from "../TS33128Payloads/PFDURLs.ta.mjs";
 import { DomainNames, _decode_DomainNames, _encode_DomainNames } from "../TS33128Payloads/DomainNames.ta.mjs";
-// export { DomainNames, _decode_DomainNames, _encode_DomainNames } from "../TS33128Payloads/DomainNames.ta.mjs";
 import { DnProtocol, _decode_DnProtocol, _encode_DnProtocol, _enum_for_DnProtocol } from "../TS33128Payloads/DnProtocol.ta.mjs";
-// export { DnProtocol, _enum_for_DnProtocol, DnProtocol_dnsQname /* IMPORTED_LONG_ENUMERATION_ITEM */, dnsQname /* IMPORTED_SHORT_ENUMERATION_ITEM */, DnProtocol_tlsSni /* IMPORTED_LONG_ENUMERATION_ITEM */, tlsSni /* IMPORTED_SHORT_ENUMERATION_ITEM */, DnProtocol_tlsSan /* IMPORTED_LONG_ENUMERATION_ITEM */, tlsSan /* IMPORTED_SHORT_ENUMERATION_ITEM */, DnProtocol_tlsScn /* IMPORTED_LONG_ENUMERATION_ITEM */, tlsScn /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DnProtocol, _encode_DnProtocol } from "../TS33128Payloads/DnProtocol.ta.mjs";
 
 
 /**

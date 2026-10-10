@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SIPURI, _decode_SIPURI, _encode_SIPURI } from "../TS33128Payloads/SIPURI.ta.mjs";
-// export { SIPURI, _decode_SIPURI, _encode_SIPURI } from "../TS33128Payloads/SIPURI.ta.mjs";
 import { TELURI, _decode_TELURI, _encode_TELURI } from "../TS33128Payloads/TELURI.ta.mjs";
-// export { TELURI, _decode_TELURI, _encode_TELURI } from "../TS33128Payloads/TELURI.ta.mjs";
 
 
 /**

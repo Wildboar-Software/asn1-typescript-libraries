@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,21 +21,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type RANUENGAPID = INTEGER;
 
-let _cached_decoder_for_RANUENGAPID: $.ASN1Decoder<RANUENGAPID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RANUENGAPID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RANUENGAPID (el: _Element): RANUENGAPID {
-    if (!_cached_decoder_for_RANUENGAPID) { _cached_decoder_for_RANUENGAPID = $._decodeInteger; }
-    return _cached_decoder_for_RANUENGAPID(el);
-}
-
-let _cached_encoder_for_RANUENGAPID: $.ASN1Encoder<RANUENGAPID> | null = null;
+export const _decode_RANUENGAPID = (el: _Element): RANUENGAPID => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 4294967295n) {
+        throw new ASN1OverflowError("RANUENGAPID violates INTEGER range constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) RANUENGAPID into an ASN.1 Element.
@@ -43,11 +43,7 @@ let _cached_encoder_for_RANUENGAPID: $.ASN1Encoder<RANUENGAPID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RANUENGAPID, encoded as an ASN.1 Element.
  */
-export
-function _encode_RANUENGAPID (value: RANUENGAPID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RANUENGAPID) { _cached_encoder_for_RANUENGAPID = $._encodeInteger; }
-    return _cached_encoder_for_RANUENGAPID(value, elGetter);
-}
+export const _encode_RANUENGAPID = $._encodeInteger;
 
 
 /* eslint-enable */

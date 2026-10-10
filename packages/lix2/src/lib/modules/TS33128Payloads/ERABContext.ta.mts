@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
-// export { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
 import { ERABQoSParameters, _decode_ERABQoSParameters, _encode_ERABQoSParameters } from "../TS33128Payloads/ERABQoSParameters.ta.mjs";
-// export { ERABQoSParameters, _decode_ERABQoSParameters, _encode_ERABQoSParameters } from "../TS33128Payloads/ERABQoSParameters.ta.mjs";
 import { IPAddr, _decode_IPAddr, _encode_IPAddr } from "../TS33128Payloads/IPAddr.ta.mjs";
-// export { IPAddr, _decode_IPAddr, _encode_IPAddr } from "../TS33128Payloads/IPAddr.ta.mjs";
 import { FTEID, _decode_FTEID, _encode_FTEID } from "../TS33128Payloads/FTEID.ta.mjs";
-// export { FTEID, _decode_FTEID, _encode_FTEID } from "../TS33128Payloads/FTEID.ta.mjs";
 
 
 /**

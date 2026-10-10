@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FTEID, _decode_FTEID, _encode_FTEID } from "../TS33128Payloads/FTEID.ta.mjs";
-// export { FTEID, _decode_FTEID, _encode_FTEID } from "../TS33128Payloads/FTEID.ta.mjs";
 import { FTEIDList, _decode_FTEIDList, _encode_FTEIDList } from "../TS33128Payloads/FTEIDList.ta.mjs";
-// export { FTEIDList, _decode_FTEIDList, _encode_FTEIDList } from "../TS33128Payloads/FTEIDList.ta.mjs";
 import { DLRANTunnelInformation, _decode_DLRANTunnelInformation, _encode_DLRANTunnelInformation } from "../TS33128Payloads/DLRANTunnelInformation.ta.mjs";
-// export { DLRANTunnelInformation, _decode_DLRANTunnelInformation, _encode_DLRANTunnelInformation } from "../TS33128Payloads/DLRANTunnelInformation.ta.mjs";
 
 
 /**

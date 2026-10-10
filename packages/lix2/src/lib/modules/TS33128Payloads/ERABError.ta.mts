@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
-// export { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
 import { EPSRANCause, _decode_EPSRANCause, _encode_EPSRANCause } from "../TS33128Payloads/EPSRANCause.ta.mjs";
-// export { EPSRANCause, _decode_EPSRANCause, _encode_EPSRANCause } from "../TS33128Payloads/EPSRANCause.ta.mjs";
 
 
 /**

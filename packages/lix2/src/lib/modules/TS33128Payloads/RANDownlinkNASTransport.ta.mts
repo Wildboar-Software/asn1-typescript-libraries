@@ -7,25 +7,15 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AMFUENGAPID, _decode_AMFUENGAPID, _encode_AMFUENGAPID } from "../TS33128Payloads/AMFUENGAPID.ta.mjs";
-// export { AMFUENGAPID, _decode_AMFUENGAPID, _encode_AMFUENGAPID } from "../TS33128Payloads/AMFUENGAPID.ta.mjs";
 import { RANUENGAPID, _decode_RANUENGAPID, _encode_RANUENGAPID } from "../TS33128Payloads/RANUENGAPID.ta.mjs";
-// export { RANUENGAPID, _decode_RANUENGAPID, _encode_RANUENGAPID } from "../TS33128Payloads/RANUENGAPID.ta.mjs";
 import { GUAMI, _decode_GUAMI, _encode_GUAMI } from "../TS33128Payloads/GUAMI.ta.mjs";
-// export { GUAMI, _decode_GUAMI, _encode_GUAMI } from "../TS33128Payloads/GUAMI.ta.mjs";
 import { AllowedNSSAI, _decode_AllowedNSSAI, _encode_AllowedNSSAI } from "../TS33128Payloads/AllowedNSSAI.ta.mjs";
-// export { AllowedNSSAI, _decode_AllowedNSSAI, _encode_AllowedNSSAI } from "../TS33128Payloads/AllowedNSSAI.ta.mjs";
 import { MobilityRestrictionList, _decode_MobilityRestrictionList, _encode_MobilityRestrictionList } from "../TS33128Payloads/MobilityRestrictionList.ta.mjs";
-// export { MobilityRestrictionList, _decode_MobilityRestrictionList, _encode_MobilityRestrictionList } from "../TS33128Payloads/MobilityRestrictionList.ta.mjs";
 import { RATFrequencySelectionPriority, _decode_RATFrequencySelectionPriority, _encode_RATFrequencySelectionPriority } from "../TS33128Payloads/RATFrequencySelectionPriority.ta.mjs";
-// export { RATFrequencySelectionPriority, _decode_RATFrequencySelectionPriority, _encode_RATFrequencySelectionPriority } from "../TS33128Payloads/RATFrequencySelectionPriority.ta.mjs";
 import { UEDifferentiationInfo, _decode_UEDifferentiationInfo, _encode_UEDifferentiationInfo } from "../TS33128Payloads/UEDifferentiationInfo.ta.mjs";
-// export { UEDifferentiationInfo, _decode_UEDifferentiationInfo, _encode_UEDifferentiationInfo } from "../TS33128Payloads/UEDifferentiationInfo.ta.mjs";
 import { UERadioCapability, _decode_UERadioCapability, _encode_UERadioCapability } from "../TS33128Payloads/UERadioCapability.ta.mjs";
-// export { UERadioCapability, _decode_UERadioCapability, _encode_UERadioCapability } from "../TS33128Payloads/UERadioCapability.ta.mjs";
 import { TargetNSSAIInfo, _decode_TargetNSSAIInfo, _encode_TargetNSSAIInfo } from "../TS33128Payloads/TargetNSSAIInfo.ta.mjs";
-// export { TargetNSSAIInfo, _decode_TargetNSSAIInfo, _encode_TargetNSSAIInfo } from "../TS33128Payloads/TargetNSSAIInfo.ta.mjs";
 import { MobileIABAuthorizedIndicator, _decode_MobileIABAuthorizedIndicator, _encode_MobileIABAuthorizedIndicator, _enum_for_MobileIABAuthorizedIndicator } from "../TS33128Payloads/MobileIABAuthorizedIndicator.ta.mjs";
-// export { MobileIABAuthorizedIndicator, _enum_for_MobileIABAuthorizedIndicator, MobileIABAuthorizedIndicator_authorized /* IMPORTED_LONG_ENUMERATION_ITEM */, authorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, MobileIABAuthorizedIndicator_notAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, notAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MobileIABAuthorizedIndicator, _encode_MobileIABAuthorizedIndicator } from "../TS33128Payloads/MobileIABAuthorizedIndicator.ta.mjs";
 
 
 /**

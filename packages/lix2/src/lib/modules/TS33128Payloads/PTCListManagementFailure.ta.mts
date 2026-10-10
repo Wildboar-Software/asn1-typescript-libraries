@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -98,21 +96,13 @@ const PTCListManagementFailure_requestUnknown: PTCListManagementFailure = PTCLis
 export
 const requestUnknown: PTCListManagementFailure = PTCListManagementFailure.requestUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCListManagementFailure: $.ASN1Decoder<PTCListManagementFailure> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PTCListManagementFailure
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PTCListManagementFailure (el: _Element): PTCListManagementFailure {
-    if (!_cached_decoder_for_PTCListManagementFailure) { _cached_decoder_for_PTCListManagementFailure = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCListManagementFailure(el);
-}
-
-let _cached_encoder_for_PTCListManagementFailure: $.ASN1Encoder<PTCListManagementFailure> | null = null;
+export const _decode_PTCListManagementFailure = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PTCListManagementFailure into an ASN.1 Element.
@@ -121,11 +111,7 @@ let _cached_encoder_for_PTCListManagementFailure: $.ASN1Encoder<PTCListManagemen
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PTCListManagementFailure, encoded as an ASN.1 Element.
  */
-export
-function _encode_PTCListManagementFailure (value: PTCListManagementFailure, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCListManagementFailure) { _cached_encoder_for_PTCListManagementFailure = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCListManagementFailure(value, elGetter);
-}
+export const _encode_PTCListManagementFailure = $._encodeEnumerated;
 
 
 /* eslint-enable */

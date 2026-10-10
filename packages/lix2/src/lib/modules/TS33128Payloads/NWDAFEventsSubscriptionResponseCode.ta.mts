@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -418,21 +416,13 @@ const NWDAFEventsSubscriptionResponseCode_serviceUnavailable503: NWDAFEventsSubs
 export
 const serviceUnavailable503: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.serviceUnavailable503; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_NWDAFEventsSubscriptionResponseCode: $.ASN1Decoder<NWDAFEventsSubscriptionResponseCode> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NWDAFEventsSubscriptionResponseCode
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NWDAFEventsSubscriptionResponseCode (el: _Element): NWDAFEventsSubscriptionResponseCode {
-    if (!_cached_decoder_for_NWDAFEventsSubscriptionResponseCode) { _cached_decoder_for_NWDAFEventsSubscriptionResponseCode = $._decodeEnumerated; }
-    return _cached_decoder_for_NWDAFEventsSubscriptionResponseCode(el);
-}
-
-let _cached_encoder_for_NWDAFEventsSubscriptionResponseCode: $.ASN1Encoder<NWDAFEventsSubscriptionResponseCode> | null = null;
+export const _decode_NWDAFEventsSubscriptionResponseCode = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NWDAFEventsSubscriptionResponseCode into an ASN.1 Element.
@@ -441,11 +431,7 @@ let _cached_encoder_for_NWDAFEventsSubscriptionResponseCode: $.ASN1Encoder<NWDAF
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NWDAFEventsSubscriptionResponseCode, encoded as an ASN.1 Element.
  */
-export
-function _encode_NWDAFEventsSubscriptionResponseCode (value: NWDAFEventsSubscriptionResponseCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NWDAFEventsSubscriptionResponseCode) { _cached_encoder_for_NWDAFEventsSubscriptionResponseCode = $._encodeEnumerated; }
-    return _cached_encoder_for_NWDAFEventsSubscriptionResponseCode(value, elGetter);
-}
+export const _encode_NWDAFEventsSubscriptionResponseCode = $._encodeEnumerated;
 
 
 /* eslint-enable */

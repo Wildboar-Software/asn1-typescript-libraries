@@ -5,17 +5,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { N3IWFIDSBI, _decode_N3IWFIDSBI, _encode_N3IWFIDSBI } from "../TS33128Payloads/N3IWFIDSBI.ta.mjs";
-// export { N3IWFIDSBI, _decode_N3IWFIDSBI, _encode_N3IWFIDSBI } from "../TS33128Payloads/N3IWFIDSBI.ta.mjs";
 import { GNbID, _decode_GNbID, _encode_GNbID } from "../TS33128Payloads/GNbID.ta.mjs";
-// export { GNbID, _decode_GNbID, _encode_GNbID } from "../TS33128Payloads/GNbID.ta.mjs";
 import { NGENbID, _decode_NGENbID, _encode_NGENbID } from "../TS33128Payloads/NGENbID.ta.mjs";
-// export { NGENbID, _decode_NGENbID, _encode_NGENbID } from "../TS33128Payloads/NGENbID.ta.mjs";
 import { ENbID, _decode_ENbID, _encode_ENbID } from "../TS33128Payloads/ENbID.ta.mjs";
-// export { ENbID, _decode_ENbID, _encode_ENbID } from "../TS33128Payloads/ENbID.ta.mjs";
 import { WAGFID, _decode_WAGFID, _encode_WAGFID } from "../TS33128Payloads/WAGFID.ta.mjs";
-// export { WAGFID, _decode_WAGFID, _encode_WAGFID } from "../TS33128Payloads/WAGFID.ta.mjs";
 import { TNGFID, _decode_TNGFID, _encode_TNGFID } from "../TS33128Payloads/TNGFID.ta.mjs";
-// export { TNGFID, _decode_TNGFID, _encode_TNGFID } from "../TS33128Payloads/TNGFID.ta.mjs";
 
 
 /**

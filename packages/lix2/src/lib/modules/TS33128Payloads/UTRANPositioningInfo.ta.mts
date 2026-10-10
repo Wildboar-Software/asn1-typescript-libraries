@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UTRANPositioningData, _decode_UTRANPositioningData, _encode_UTRANPositioningData } from "../TS33128Payloads/UTRANPositioningData.ta.mjs";
-// export { UTRANPositioningData, _decode_UTRANPositioningData, _encode_UTRANPositioningData } from "../TS33128Payloads/UTRANPositioningData.ta.mjs";
 import { UTRANGANSSPositioningData, _decode_UTRANGANSSPositioningData, _encode_UTRANGANSSPositioningData } from "../TS33128Payloads/UTRANGANSSPositioningData.ta.mjs";
-// export { UTRANGANSSPositioningData, _decode_UTRANGANSSPositioningData, _encode_UTRANGANSSPositioningData } from "../TS33128Payloads/UTRANGANSSPositioningData.ta.mjs";
 import { UTRANAdditionalPositioningData, _decode_UTRANAdditionalPositioningData, _encode_UTRANAdditionalPositioningData } from "../TS33128Payloads/UTRANAdditionalPositioningData.ta.mjs";
-// export { UTRANAdditionalPositioningData, _decode_UTRANAdditionalPositioningData, _encode_UTRANAdditionalPositioningData } from "../TS33128Payloads/UTRANAdditionalPositioningData.ta.mjs";
 
 
 /**

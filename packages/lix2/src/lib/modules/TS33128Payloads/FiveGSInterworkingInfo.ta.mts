@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FiveGSInterworkingIndicator, _decode_FiveGSInterworkingIndicator, _encode_FiveGSInterworkingIndicator } from "../TS33128Payloads/FiveGSInterworkingIndicator.ta.mjs";
-// export { FiveGSInterworkingIndicator, _decode_FiveGSInterworkingIndicator, _encode_FiveGSInterworkingIndicator } from "../TS33128Payloads/FiveGSInterworkingIndicator.ta.mjs";
 import { FiveGSInterworkingWithoutN26, _decode_FiveGSInterworkingWithoutN26, _encode_FiveGSInterworkingWithoutN26 } from "../TS33128Payloads/FiveGSInterworkingWithoutN26.ta.mjs";
-// export { FiveGSInterworkingWithoutN26, _decode_FiveGSInterworkingWithoutN26, _encode_FiveGSInterworkingWithoutN26 } from "../TS33128Payloads/FiveGSInterworkingWithoutN26.ta.mjs";
 import { FiveGCNotRestrictedSupport, _decode_FiveGCNotRestrictedSupport, _encode_FiveGCNotRestrictedSupport } from "../TS33128Payloads/FiveGCNotRestrictedSupport.ta.mjs";
-// export { FiveGCNotRestrictedSupport, _decode_FiveGCNotRestrictedSupport, _encode_FiveGCNotRestrictedSupport } from "../TS33128Payloads/FiveGCNotRestrictedSupport.ta.mjs";
 
 
 /**

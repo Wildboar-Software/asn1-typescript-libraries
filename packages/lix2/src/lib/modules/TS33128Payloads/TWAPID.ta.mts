@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SSID, _decode_SSID, _encode_SSID } from "../TS33128Payloads/SSID.ta.mjs";
-// export { SSID, _decode_SSID, _encode_SSID } from "../TS33128Payloads/SSID.ta.mjs";
 import { BSSID, _decode_BSSID, _encode_BSSID } from "../TS33128Payloads/BSSID.ta.mjs";
-// export { BSSID, _decode_BSSID, _encode_BSSID } from "../TS33128Payloads/BSSID.ta.mjs";
 import { CivicAddressBytes, _decode_CivicAddressBytes, _encode_CivicAddressBytes } from "../TS33128Payloads/CivicAddressBytes.ta.mjs";
-// export { CivicAddressBytes, _decode_CivicAddressBytes, _encode_CivicAddressBytes } from "../TS33128Payloads/CivicAddressBytes.ta.mjs";
 
 
 /**

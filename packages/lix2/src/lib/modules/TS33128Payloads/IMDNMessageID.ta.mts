@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -20,21 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type IMDNMessageID = UTF8String; // UTF8String
 
-let _cached_decoder_for_IMDNMessageID: $.ASN1Decoder<IMDNMessageID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IMDNMessageID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IMDNMessageID (el: _Element): IMDNMessageID {
-    if (!_cached_decoder_for_IMDNMessageID) { _cached_decoder_for_IMDNMessageID = $._decodeUTF8String; }
-    return _cached_decoder_for_IMDNMessageID(el);
-}
-
-let _cached_encoder_for_IMDNMessageID: $.ASN1Encoder<IMDNMessageID> | null = null;
+export const _decode_IMDNMessageID = $._decodeUTF8String;
 
 /**
  * @summary Encodes a(n) IMDNMessageID into an ASN.1 Element.
@@ -43,11 +34,7 @@ let _cached_encoder_for_IMDNMessageID: $.ASN1Encoder<IMDNMessageID> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IMDNMessageID, encoded as an ASN.1 Element.
  */
-export
-function _encode_IMDNMessageID (value: IMDNMessageID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IMDNMessageID) { _cached_encoder_for_IMDNMessageID = $._encodeUTF8String; }
-    return _cached_encoder_for_IMDNMessageID(value, elGetter);
-}
+export const _encode_IMDNMessageID = $._encodeUTF8String;
 
 
 /* eslint-enable */

@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -98,21 +96,13 @@ const VerticalDirection_downward: VerticalDirection = VerticalDirection.downward
 export
 const downward: VerticalDirection = VerticalDirection.downward; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_VerticalDirection: $.ASN1Decoder<VerticalDirection> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) VerticalDirection
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_VerticalDirection (el: _Element): VerticalDirection {
-    if (!_cached_decoder_for_VerticalDirection) { _cached_decoder_for_VerticalDirection = $._decodeEnumerated; }
-    return _cached_decoder_for_VerticalDirection(el);
-}
-
-let _cached_encoder_for_VerticalDirection: $.ASN1Encoder<VerticalDirection> | null = null;
+export const _decode_VerticalDirection = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) VerticalDirection into an ASN.1 Element.
@@ -121,11 +111,7 @@ let _cached_encoder_for_VerticalDirection: $.ASN1Encoder<VerticalDirection> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The VerticalDirection, encoded as an ASN.1 Element.
  */
-export
-function _encode_VerticalDirection (value: VerticalDirection, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_VerticalDirection) { _cached_encoder_for_VerticalDirection = $._encodeEnumerated; }
-    return _cached_encoder_for_VerticalDirection(value, elGetter);
-}
+export const _encode_VerticalDirection = $._encodeEnumerated;
 
 
 /* eslint-enable */

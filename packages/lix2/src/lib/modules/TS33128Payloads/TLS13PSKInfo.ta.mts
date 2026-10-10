@@ -7,11 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13PSKIdentity, _decode_TLS13PSKIdentity, _encode_TLS13PSKIdentity } from "../TS33128Payloads/TLS13PSKIdentity.ta.mjs";
-// export { TLS13PSKIdentity, _decode_TLS13PSKIdentity, _encode_TLS13PSKIdentity } from "../TS33128Payloads/TLS13PSKIdentity.ta.mjs";
 import { TLS13PSKKeyExchangeMode, _decode_TLS13PSKKeyExchangeMode, _encode_TLS13PSKKeyExchangeMode, _enum_for_TLS13PSKKeyExchangeMode } from "../TS33128Payloads/TLS13PSKKeyExchangeMode.ta.mjs";
-// export { TLS13PSKKeyExchangeMode, _enum_for_TLS13PSKKeyExchangeMode, TLS13PSKKeyExchangeMode_pSKKE /* IMPORTED_LONG_ENUMERATION_ITEM */, pSKKE /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13PSKKeyExchangeMode_pSKDHEKE /* IMPORTED_LONG_ENUMERATION_ITEM */, pSKDHEKE /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLS13PSKKeyExchangeMode, _encode_TLS13PSKKeyExchangeMode } from "../TS33128Payloads/TLS13PSKKeyExchangeMode.ta.mjs";
 import { TLS13PSKHashAlgorithm, _decode_TLS13PSKHashAlgorithm, _encode_TLS13PSKHashAlgorithm, _enum_for_TLS13PSKHashAlgorithm } from "../TS33128Payloads/TLS13PSKHashAlgorithm.ta.mjs";
-// export { TLS13PSKHashAlgorithm, _enum_for_TLS13PSKHashAlgorithm, TLS13PSKHashAlgorithm_sha256 /* IMPORTED_LONG_ENUMERATION_ITEM */, sha256 /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13PSKHashAlgorithm_sha384 /* IMPORTED_LONG_ENUMERATION_ITEM */, sha384 /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLS13PSKHashAlgorithm_sha512 /* IMPORTED_LONG_ENUMERATION_ITEM */, sha512 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLS13PSKHashAlgorithm, _encode_TLS13PSKHashAlgorithm } from "../TS33128Payloads/TLS13PSKHashAlgorithm.ta.mjs";
 
 
 /**

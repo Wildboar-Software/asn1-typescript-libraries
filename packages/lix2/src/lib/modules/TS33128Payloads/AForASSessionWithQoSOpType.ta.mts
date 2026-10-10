@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -138,21 +136,13 @@ const AForASSessionWithQoSOpType_dELETE: AForASSessionWithQoSOpType = AForASSess
 export
 const dELETE: AForASSessionWithQoSOpType = AForASSessionWithQoSOpType.dELETE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AForASSessionWithQoSOpType: $.ASN1Decoder<AForASSessionWithQoSOpType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AForASSessionWithQoSOpType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AForASSessionWithQoSOpType (el: _Element): AForASSessionWithQoSOpType {
-    if (!_cached_decoder_for_AForASSessionWithQoSOpType) { _cached_decoder_for_AForASSessionWithQoSOpType = $._decodeEnumerated; }
-    return _cached_decoder_for_AForASSessionWithQoSOpType(el);
-}
-
-let _cached_encoder_for_AForASSessionWithQoSOpType: $.ASN1Encoder<AForASSessionWithQoSOpType> | null = null;
+export const _decode_AForASSessionWithQoSOpType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AForASSessionWithQoSOpType into an ASN.1 Element.
@@ -161,11 +151,7 @@ let _cached_encoder_for_AForASSessionWithQoSOpType: $.ASN1Encoder<AForASSessionW
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AForASSessionWithQoSOpType, encoded as an ASN.1 Element.
  */
-export
-function _encode_AForASSessionWithQoSOpType (value: AForASSessionWithQoSOpType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AForASSessionWithQoSOpType) { _cached_encoder_for_AForASSessionWithQoSOpType = $._encodeEnumerated; }
-    return _cached_encoder_for_AForASSessionWithQoSOpType(value, elGetter);
-}
+export const _encode_AForASSessionWithQoSOpType = $._encodeEnumerated;
 
 
 /* eslint-enable */

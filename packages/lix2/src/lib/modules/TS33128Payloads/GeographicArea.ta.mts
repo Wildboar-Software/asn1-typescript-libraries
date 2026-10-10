@@ -5,19 +5,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Point, _decode_Point, _encode_Point } from "../TS33128Payloads/Point.ta.mjs";
-// export { Point, _decode_Point, _encode_Point } from "../TS33128Payloads/Point.ta.mjs";
 import { PointUncertaintyCircle, _decode_PointUncertaintyCircle, _encode_PointUncertaintyCircle } from "../TS33128Payloads/PointUncertaintyCircle.ta.mjs";
-// export { PointUncertaintyCircle, _decode_PointUncertaintyCircle, _encode_PointUncertaintyCircle } from "../TS33128Payloads/PointUncertaintyCircle.ta.mjs";
 import { PointUncertaintyEllipse, _decode_PointUncertaintyEllipse, _encode_PointUncertaintyEllipse } from "../TS33128Payloads/PointUncertaintyEllipse.ta.mjs";
-// export { PointUncertaintyEllipse, _decode_PointUncertaintyEllipse, _encode_PointUncertaintyEllipse } from "../TS33128Payloads/PointUncertaintyEllipse.ta.mjs";
 import { Polygon, _decode_Polygon, _encode_Polygon } from "../TS33128Payloads/Polygon.ta.mjs";
-// export { Polygon, _decode_Polygon, _encode_Polygon } from "../TS33128Payloads/Polygon.ta.mjs";
 import { PointAltitude, _decode_PointAltitude, _encode_PointAltitude } from "../TS33128Payloads/PointAltitude.ta.mjs";
-// export { PointAltitude, _decode_PointAltitude, _encode_PointAltitude } from "../TS33128Payloads/PointAltitude.ta.mjs";
 import { PointAltitudeUncertainty, _decode_PointAltitudeUncertainty, _encode_PointAltitudeUncertainty } from "../TS33128Payloads/PointAltitudeUncertainty.ta.mjs";
-// export { PointAltitudeUncertainty, _decode_PointAltitudeUncertainty, _encode_PointAltitudeUncertainty } from "../TS33128Payloads/PointAltitudeUncertainty.ta.mjs";
 import { EllipsoidArc, _decode_EllipsoidArc, _encode_EllipsoidArc } from "../TS33128Payloads/EllipsoidArc.ta.mjs";
-// export { EllipsoidArc, _decode_EllipsoidArc, _encode_EllipsoidArc } from "../TS33128Payloads/EllipsoidArc.ta.mjs";
 
 
 /**

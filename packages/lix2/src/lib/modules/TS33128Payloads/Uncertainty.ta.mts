@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,21 +21,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Uncertainty = INTEGER;
 
-let _cached_decoder_for_Uncertainty: $.ASN1Decoder<Uncertainty> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Uncertainty
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Uncertainty (el: _Element): Uncertainty {
-    if (!_cached_decoder_for_Uncertainty) { _cached_decoder_for_Uncertainty = $._decodeInteger; }
-    return _cached_decoder_for_Uncertainty(el);
-}
-
-let _cached_encoder_for_Uncertainty: $.ASN1Encoder<Uncertainty> | null = null;
+export const _decode_Uncertainty = (el: _Element): Uncertainty => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 127n) {
+        throw new ASN1OverflowError("Uncertainty violates INTEGER range constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) Uncertainty into an ASN.1 Element.
@@ -43,11 +43,7 @@ let _cached_encoder_for_Uncertainty: $.ASN1Encoder<Uncertainty> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Uncertainty, encoded as an ASN.1 Element.
  */
-export
-function _encode_Uncertainty (value: Uncertainty, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Uncertainty) { _cached_encoder_for_Uncertainty = $._encodeInteger; }
-    return _cached_encoder_for_Uncertainty(value, elGetter);
-}
+export const _encode_Uncertainty = $._encodeInteger;
 
 
 /* eslint-enable */

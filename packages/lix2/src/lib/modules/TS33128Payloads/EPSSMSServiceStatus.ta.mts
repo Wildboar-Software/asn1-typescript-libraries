@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -138,21 +136,13 @@ const EPSSMSServiceStatus_congestion: EPSSMSServiceStatus = EPSSMSServiceStatus.
 export
 const congestion: EPSSMSServiceStatus = EPSSMSServiceStatus.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_EPSSMSServiceStatus: $.ASN1Decoder<EPSSMSServiceStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EPSSMSServiceStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EPSSMSServiceStatus (el: _Element): EPSSMSServiceStatus {
-    if (!_cached_decoder_for_EPSSMSServiceStatus) { _cached_decoder_for_EPSSMSServiceStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_EPSSMSServiceStatus(el);
-}
-
-let _cached_encoder_for_EPSSMSServiceStatus: $.ASN1Encoder<EPSSMSServiceStatus> | null = null;
+export const _decode_EPSSMSServiceStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) EPSSMSServiceStatus into an ASN.1 Element.
@@ -161,11 +151,7 @@ let _cached_encoder_for_EPSSMSServiceStatus: $.ASN1Encoder<EPSSMSServiceStatus> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EPSSMSServiceStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_EPSSMSServiceStatus (value: EPSSMSServiceStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSSMSServiceStatus) { _cached_encoder_for_EPSSMSServiceStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_EPSSMSServiceStatus(value, elGetter);
-}
+export const _encode_EPSSMSServiceStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPv4Address, _decode_IPv4Address, _encode_IPv4Address } from "../TS33128Payloads/IPv4Address.ta.mjs";
-// export { IPv4Address, _decode_IPv4Address, _encode_IPv4Address } from "../TS33128Payloads/IPv4Address.ta.mjs";
 import { PortRange, _decode_PortRange, _encode_PortRange } from "../TS33128Payloads/PortRange.ta.mjs";
-// export { PortRange, _decode_PortRange, _encode_PortRange } from "../TS33128Payloads/PortRange.ta.mjs";
 
 
 /**

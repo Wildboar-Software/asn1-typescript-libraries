@@ -5,6 +5,8 @@ import {
     NULL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { TCPInformation, _decode_TCPInformation, _encode_TCPInformation } from "../IPAccessPDU/TCPInformation.ta.mjs";
+import { UDPInformation, _decode_UDPInformation, _encode_UDPInformation } from "../IPAccessPDU/UDPInformation.ta.mjs";
 
 
 

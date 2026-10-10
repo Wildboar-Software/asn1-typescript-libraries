@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -158,21 +156,13 @@ const BatteryIndication_noBattery: BatteryIndication = BatteryIndication.noBatte
 export
 const noBattery: BatteryIndication = BatteryIndication.noBattery; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_BatteryIndication: $.ASN1Decoder<BatteryIndication> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) BatteryIndication
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_BatteryIndication (el: _Element): BatteryIndication {
-    if (!_cached_decoder_for_BatteryIndication) { _cached_decoder_for_BatteryIndication = $._decodeEnumerated; }
-    return _cached_decoder_for_BatteryIndication(el);
-}
-
-let _cached_encoder_for_BatteryIndication: $.ASN1Encoder<BatteryIndication> | null = null;
+export const _decode_BatteryIndication = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) BatteryIndication into an ASN.1 Element.
@@ -181,11 +171,7 @@ let _cached_encoder_for_BatteryIndication: $.ASN1Encoder<BatteryIndication> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BatteryIndication, encoded as an ASN.1 Element.
  */
-export
-function _encode_BatteryIndication (value: BatteryIndication, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BatteryIndication) { _cached_encoder_for_BatteryIndication = $._encodeEnumerated; }
-    return _cached_encoder_for_BatteryIndication(value, elGetter);
-}
+export const _encode_BatteryIndication = $._encodeEnumerated;
 
 
 /* eslint-enable */

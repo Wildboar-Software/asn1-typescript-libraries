@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -20,21 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type ApplicationID = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_ApplicationID: $.ASN1Decoder<ApplicationID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ApplicationID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ApplicationID (el: _Element): ApplicationID {
-    if (!_cached_decoder_for_ApplicationID) { _cached_decoder_for_ApplicationID = $._decodeOctetString; }
-    return _cached_decoder_for_ApplicationID(el);
-}
-
-let _cached_encoder_for_ApplicationID: $.ASN1Encoder<ApplicationID> | null = null;
+export const _decode_ApplicationID = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) ApplicationID into an ASN.1 Element.
@@ -43,11 +34,7 @@ let _cached_encoder_for_ApplicationID: $.ASN1Encoder<ApplicationID> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ApplicationID, encoded as an ASN.1 Element.
  */
-export
-function _encode_ApplicationID (value: ApplicationID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ApplicationID) { _cached_encoder_for_ApplicationID = $._encodeOctetString; }
-    return _cached_encoder_for_ApplicationID(value, elGetter);
-}
+export const _encode_ApplicationID = $._encodeOctetString;
 
 
 /* eslint-enable */

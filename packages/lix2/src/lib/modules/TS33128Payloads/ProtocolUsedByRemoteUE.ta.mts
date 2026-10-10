@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -158,21 +156,13 @@ const ProtocolUsedByRemoteUE_ethernet: ProtocolUsedByRemoteUE = ProtocolUsedByRe
 export
 const ethernet: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.ethernet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ProtocolUsedByRemoteUE: $.ASN1Decoder<ProtocolUsedByRemoteUE> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtocolUsedByRemoteUE
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ProtocolUsedByRemoteUE (el: _Element): ProtocolUsedByRemoteUE {
-    if (!_cached_decoder_for_ProtocolUsedByRemoteUE) { _cached_decoder_for_ProtocolUsedByRemoteUE = $._decodeEnumerated; }
-    return _cached_decoder_for_ProtocolUsedByRemoteUE(el);
-}
-
-let _cached_encoder_for_ProtocolUsedByRemoteUE: $.ASN1Encoder<ProtocolUsedByRemoteUE> | null = null;
+export const _decode_ProtocolUsedByRemoteUE = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ProtocolUsedByRemoteUE into an ASN.1 Element.
@@ -181,11 +171,7 @@ let _cached_encoder_for_ProtocolUsedByRemoteUE: $.ASN1Encoder<ProtocolUsedByRemo
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProtocolUsedByRemoteUE, encoded as an ASN.1 Element.
  */
-export
-function _encode_ProtocolUsedByRemoteUE (value: ProtocolUsedByRemoteUE, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProtocolUsedByRemoteUE) { _cached_encoder_for_ProtocolUsedByRemoteUE = $._encodeEnumerated; }
-    return _cached_encoder_for_ProtocolUsedByRemoteUE(value, elGetter);
-}
+export const _encode_ProtocolUsedByRemoteUE = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PFD, _decode_PFD, _encode_PFD } from "../TS33128Payloads/PFD.ta.mjs";
-// export { PFD, _decode_PFD, _encode_PFD } from "../TS33128Payloads/PFD.ta.mjs";
 
 
 /**

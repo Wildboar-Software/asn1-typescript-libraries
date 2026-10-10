@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
-// export { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
 import { RANUEContextModification, _decode_RANUEContextModification, _encode_RANUEContextModification } from "../TS33128Payloads/RANUEContextModification.ta.mjs";
-// export { RANUEContextModification, _decode_RANUEContextModification, _encode_RANUEContextModification } from "../TS33128Payloads/RANUEContextModification.ta.mjs";
 import { RANDownlinkNASTransport, _decode_RANDownlinkNASTransport, _encode_RANDownlinkNASTransport } from "../TS33128Payloads/RANDownlinkNASTransport.ta.mjs";
-// export { RANDownlinkNASTransport, _decode_RANDownlinkNASTransport, _encode_RANDownlinkNASTransport } from "../TS33128Payloads/RANDownlinkNASTransport.ta.mjs";
 
 
 /**

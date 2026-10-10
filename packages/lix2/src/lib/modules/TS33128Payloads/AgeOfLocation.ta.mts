@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,21 +21,20 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type AgeOfLocation = INTEGER;
 
-let _cached_decoder_for_AgeOfLocation: $.ASN1Decoder<AgeOfLocation> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AgeOfLocation
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AgeOfLocation (el: _Element): AgeOfLocation {
-    if (!_cached_decoder_for_AgeOfLocation) { _cached_decoder_for_AgeOfLocation = $._decodeInteger; }
-    return _cached_decoder_for_AgeOfLocation(el);
-}
-
-let _cached_encoder_for_AgeOfLocation: $.ASN1Encoder<AgeOfLocation> | null = null;
+export const _decode_AgeOfLocation = (el: _Element): AgeOfLocation => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 32767n) {
+        throw new ASN1OverflowError("AgeOfLocation violates INTEGER range constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) AgeOfLocation into an ASN.1 Element.
@@ -43,11 +43,7 @@ let _cached_encoder_for_AgeOfLocation: $.ASN1Encoder<AgeOfLocation> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AgeOfLocation, encoded as an ASN.1 Element.
  */
-export
-function _encode_AgeOfLocation (value: AgeOfLocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AgeOfLocation) { _cached_encoder_for_AgeOfLocation = $._encodeInteger; }
-    return _cached_encoder_for_AgeOfLocation(value, elGetter);
-}
+export const _encode_AgeOfLocation = $._encodeInteger;
 
 
 /* eslint-enable */

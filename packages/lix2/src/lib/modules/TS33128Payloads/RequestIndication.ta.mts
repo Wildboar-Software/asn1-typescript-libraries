@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -218,21 +216,13 @@ const RequestIndication_rELDUETO5GANREQUEST: RequestIndication = RequestIndicati
 export
 const rELDUETO5GANREQUEST: RequestIndication = RequestIndication.rELDUETO5GANREQUEST; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RequestIndication: $.ASN1Decoder<RequestIndication> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestIndication
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RequestIndication (el: _Element): RequestIndication {
-    if (!_cached_decoder_for_RequestIndication) { _cached_decoder_for_RequestIndication = $._decodeEnumerated; }
-    return _cached_decoder_for_RequestIndication(el);
-}
-
-let _cached_encoder_for_RequestIndication: $.ASN1Encoder<RequestIndication> | null = null;
+export const _decode_RequestIndication = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RequestIndication into an ASN.1 Element.
@@ -241,11 +231,7 @@ let _cached_encoder_for_RequestIndication: $.ASN1Encoder<RequestIndication> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RequestIndication, encoded as an ASN.1 Element.
  */
-export
-function _encode_RequestIndication (value: RequestIndication, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RequestIndication) { _cached_encoder_for_RequestIndication = $._encodeEnumerated; }
-    return _cached_encoder_for_RequestIndication(value, elGetter);
-}
+export const _encode_RequestIndication = $._encodeEnumerated;
 
 
 /* eslint-enable */

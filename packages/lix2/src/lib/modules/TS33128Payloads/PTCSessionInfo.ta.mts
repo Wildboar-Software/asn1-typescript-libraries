@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PTCSessionType, _decode_PTCSessionType, _encode_PTCSessionType, _enum_for_PTCSessionType } from "../TS33128Payloads/PTCSessionType.ta.mjs";
-// export { PTCSessionType, _enum_for_PTCSessionType, PTCSessionType_ondemand /* IMPORTED_LONG_ENUMERATION_ITEM */, ondemand /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionType_preEstablished /* IMPORTED_LONG_ENUMERATION_ITEM */, preEstablished /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionType_adhoc /* IMPORTED_LONG_ENUMERATION_ITEM */, adhoc /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionType_prearranged /* IMPORTED_LONG_ENUMERATION_ITEM */, prearranged /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCSessionType_groupSession /* IMPORTED_LONG_ENUMERATION_ITEM */, groupSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PTCSessionType, _encode_PTCSessionType } from "../TS33128Payloads/PTCSessionType.ta.mjs";
 
 
 /**

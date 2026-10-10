@@ -7,11 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PTCTargetInformation, _decode_PTCTargetInformation, _encode_PTCTargetInformation } from "../TS33128Payloads/PTCTargetInformation.ta.mjs";
-// export { PTCTargetInformation, _decode_PTCTargetInformation, _encode_PTCTargetInformation } from "../TS33128Payloads/PTCTargetInformation.ta.mjs";
 import { PTCRegistrationRequest, _decode_PTCRegistrationRequest, _encode_PTCRegistrationRequest, _enum_for_PTCRegistrationRequest } from "../TS33128Payloads/PTCRegistrationRequest.ta.mjs";
-// export { PTCRegistrationRequest, _enum_for_PTCRegistrationRequest, PTCRegistrationRequest_register /* IMPORTED_LONG_ENUMERATION_ITEM */, register /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCRegistrationRequest_reRegister /* IMPORTED_LONG_ENUMERATION_ITEM */, reRegister /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCRegistrationRequest_deRegister /* IMPORTED_LONG_ENUMERATION_ITEM */, deRegister /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PTCRegistrationRequest, _encode_PTCRegistrationRequest } from "../TS33128Payloads/PTCRegistrationRequest.ta.mjs";
 import { PTCRegistrationOutcome, _decode_PTCRegistrationOutcome, _encode_PTCRegistrationOutcome, _enum_for_PTCRegistrationOutcome } from "../TS33128Payloads/PTCRegistrationOutcome.ta.mjs";
-// export { PTCRegistrationOutcome, _enum_for_PTCRegistrationOutcome, PTCRegistrationOutcome_success /* IMPORTED_LONG_ENUMERATION_ITEM */, success /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCRegistrationOutcome_failure /* IMPORTED_LONG_ENUMERATION_ITEM */, failure /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PTCRegistrationOutcome, _encode_PTCRegistrationOutcome } from "../TS33128Payloads/PTCRegistrationOutcome.ta.mjs";
 
 
 /**

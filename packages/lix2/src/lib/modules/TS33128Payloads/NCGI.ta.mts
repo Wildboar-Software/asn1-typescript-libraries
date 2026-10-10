@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
-// export { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
 import { NRCellID, _decode_NRCellID, _encode_NRCellID } from "../TS33128Payloads/NRCellID.ta.mjs";
-// export { NRCellID, _decode_NRCellID, _encode_NRCellID } from "../TS33128Payloads/NRCellID.ta.mjs";
 import { NID, _decode_NID, _encode_NID } from "../TS33128Payloads/NID.ta.mjs";
-// export { NID, _decode_NID, _encode_NID } from "../TS33128Payloads/NID.ta.mjs";
 
 
 /**

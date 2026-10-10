@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExternalASNReference, _decode_ExternalASNReference, _encode_ExternalASNReference } from "../TS33128Payloads/ExternalASNReference.ta.mjs";
-// export { ExternalASNReference, _decode_ExternalASNReference, _encode_ExternalASNReference } from "../TS33128Payloads/ExternalASNReference.ta.mjs";
 import { ExternalASNValue, _decode_ExternalASNValue, _encode_ExternalASNValue } from "../TS33128Payloads/ExternalASNValue.ta.mjs";
-// export { ExternalASNValue, _decode_ExternalASNValue, _encode_ExternalASNValue } from "../TS33128Payloads/ExternalASNValue.ta.mjs";
 
 
 /**

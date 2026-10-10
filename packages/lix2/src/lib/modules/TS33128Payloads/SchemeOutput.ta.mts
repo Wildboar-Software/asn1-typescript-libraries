@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -20,21 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SchemeOutput = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_SchemeOutput: $.ASN1Decoder<SchemeOutput> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SchemeOutput
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SchemeOutput (el: _Element): SchemeOutput {
-    if (!_cached_decoder_for_SchemeOutput) { _cached_decoder_for_SchemeOutput = $._decodeOctetString; }
-    return _cached_decoder_for_SchemeOutput(el);
-}
-
-let _cached_encoder_for_SchemeOutput: $.ASN1Encoder<SchemeOutput> | null = null;
+export const _decode_SchemeOutput = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) SchemeOutput into an ASN.1 Element.
@@ -43,11 +34,7 @@ let _cached_encoder_for_SchemeOutput: $.ASN1Encoder<SchemeOutput> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SchemeOutput, encoded as an ASN.1 Element.
  */
-export
-function _encode_SchemeOutput (value: SchemeOutput, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SchemeOutput) { _cached_encoder_for_SchemeOutput = $._encodeOctetString; }
-    return _cached_encoder_for_SchemeOutput(value, elGetter);
-}
+export const _encode_SchemeOutput = $._encodeOctetString;
 
 
 /* eslint-enable */

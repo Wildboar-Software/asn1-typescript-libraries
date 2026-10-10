@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -118,21 +116,13 @@ const LINotificationType_modification: LINotificationType = LINotificationType.m
 export
 const modification: LINotificationType = LINotificationType.modification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_LINotificationType: $.ASN1Decoder<LINotificationType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LINotificationType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LINotificationType (el: _Element): LINotificationType {
-    if (!_cached_decoder_for_LINotificationType) { _cached_decoder_for_LINotificationType = $._decodeEnumerated; }
-    return _cached_decoder_for_LINotificationType(el);
-}
-
-let _cached_encoder_for_LINotificationType: $.ASN1Encoder<LINotificationType> | null = null;
+export const _decode_LINotificationType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LINotificationType into an ASN.1 Element.
@@ -141,11 +131,7 @@ let _cached_encoder_for_LINotificationType: $.ASN1Encoder<LINotificationType> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LINotificationType, encoded as an ASN.1 Element.
  */
-export
-function _encode_LINotificationType (value: LINotificationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LINotificationType) { _cached_encoder_for_LINotificationType = $._encodeEnumerated; }
-    return _cached_encoder_for_LINotificationType(value, elGetter);
-}
+export const _encode_LINotificationType = $._encodeEnumerated;
 
 
 /* eslint-enable */

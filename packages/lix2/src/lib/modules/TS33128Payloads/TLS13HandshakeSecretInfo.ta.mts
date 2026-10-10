@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +42,14 @@ class TLS13HandshakeSecretInfo {
          * @readonly
          */
         readonly transcriptHash: OCTET_STRING
-    ) {}
+    ) {
+        if (this.handshakeSecretValue !== undefined && (this.handshakeSecretValue.length < 1 || this.handshakeSecretValue.length > 65535)) {
+            throw new ASN1SizeError("TLS13HandshakeSecretInfo.handshakeSecretValue violates SIZE constraint");
+        }
+        if (this.transcriptHash !== undefined && (this.transcriptHash.length < 1 || this.transcriptHash.length > 65535)) {
+            throw new ASN1SizeError("TLS13HandshakeSecretInfo.transcriptHash violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TLS13HandshakeSecretInfo

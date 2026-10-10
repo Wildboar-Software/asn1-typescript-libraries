@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -298,21 +296,13 @@ const EstablishmentCause_exceptionData: EstablishmentCause = EstablishmentCause.
 export
 const exceptionData: EstablishmentCause = EstablishmentCause.exceptionData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_EstablishmentCause: $.ASN1Decoder<EstablishmentCause> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EstablishmentCause
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_EstablishmentCause (el: _Element): EstablishmentCause {
-    if (!_cached_decoder_for_EstablishmentCause) { _cached_decoder_for_EstablishmentCause = $._decodeEnumerated; }
-    return _cached_decoder_for_EstablishmentCause(el);
-}
-
-let _cached_encoder_for_EstablishmentCause: $.ASN1Encoder<EstablishmentCause> | null = null;
+export const _decode_EstablishmentCause = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) EstablishmentCause into an ASN.1 Element.
@@ -321,11 +311,7 @@ let _cached_encoder_for_EstablishmentCause: $.ASN1Encoder<EstablishmentCause> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EstablishmentCause, encoded as an ASN.1 Element.
  */
-export
-function _encode_EstablishmentCause (value: EstablishmentCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EstablishmentCause) { _cached_encoder_for_EstablishmentCause = $._encodeEnumerated; }
-    return _cached_encoder_for_EstablishmentCause(value, elGetter);
-}
+export const _encode_EstablishmentCause = $._encodeEnumerated;
 
 
 /* eslint-enable */

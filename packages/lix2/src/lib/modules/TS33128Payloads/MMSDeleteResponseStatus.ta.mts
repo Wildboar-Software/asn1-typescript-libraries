@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -578,21 +576,13 @@ const MMSDeleteResponseStatus_errorPermanentLackOfPrepaid: MMSDeleteResponseStat
 export
 const errorPermanentLackOfPrepaid: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentLackOfPrepaid; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MMSDeleteResponseStatus: $.ASN1Decoder<MMSDeleteResponseStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MMSDeleteResponseStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MMSDeleteResponseStatus (el: _Element): MMSDeleteResponseStatus {
-    if (!_cached_decoder_for_MMSDeleteResponseStatus) { _cached_decoder_for_MMSDeleteResponseStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_MMSDeleteResponseStatus(el);
-}
-
-let _cached_encoder_for_MMSDeleteResponseStatus: $.ASN1Encoder<MMSDeleteResponseStatus> | null = null;
+export const _decode_MMSDeleteResponseStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MMSDeleteResponseStatus into an ASN.1 Element.
@@ -601,11 +591,7 @@ let _cached_encoder_for_MMSDeleteResponseStatus: $.ASN1Encoder<MMSDeleteResponse
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MMSDeleteResponseStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_MMSDeleteResponseStatus (value: MMSDeleteResponseStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSDeleteResponseStatus) { _cached_encoder_for_MMSDeleteResponseStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_MMSDeleteResponseStatus(value, elGetter);
-}
+export const _encode_MMSDeleteResponseStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

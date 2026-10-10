@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CAGID, _decode_CAGID, _encode_CAGID } from "../TS33128Payloads/CAGID.ta.mjs";
-// export { CAGID, _decode_CAGID, _encode_CAGID } from "../TS33128Payloads/CAGID.ta.mjs";
 
 
 /**
@@ -31,7 +31,11 @@ let _cached_decoder_for_CellCAGList: $.ASN1Decoder<CellCAGList> | null = null;
 export
 function _decode_CellCAGList (el: _Element): CellCAGList {
     if (!_cached_decoder_for_CellCAGList) { _cached_decoder_for_CellCAGList = $._decodeSequenceOf<CAGID>(() => _decode_CAGID); }
-    return _cached_decoder_for_CellCAGList(el);
+    const _value = _cached_decoder_for_CellCAGList(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("CellCAGList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_CellCAGList: $.ASN1Encoder<CellCAGList> | null = null;

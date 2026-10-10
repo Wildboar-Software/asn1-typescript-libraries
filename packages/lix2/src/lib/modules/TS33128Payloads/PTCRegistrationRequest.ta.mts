@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -118,21 +116,13 @@ const PTCRegistrationRequest_deRegister: PTCRegistrationRequest = PTCRegistratio
 export
 const deRegister: PTCRegistrationRequest = PTCRegistrationRequest.deRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCRegistrationRequest: $.ASN1Decoder<PTCRegistrationRequest> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PTCRegistrationRequest
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PTCRegistrationRequest (el: _Element): PTCRegistrationRequest {
-    if (!_cached_decoder_for_PTCRegistrationRequest) { _cached_decoder_for_PTCRegistrationRequest = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCRegistrationRequest(el);
-}
-
-let _cached_encoder_for_PTCRegistrationRequest: $.ASN1Encoder<PTCRegistrationRequest> | null = null;
+export const _decode_PTCRegistrationRequest = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PTCRegistrationRequest into an ASN.1 Element.
@@ -141,11 +131,7 @@ let _cached_encoder_for_PTCRegistrationRequest: $.ASN1Encoder<PTCRegistrationReq
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PTCRegistrationRequest, encoded as an ASN.1 Element.
  */
-export
-function _encode_PTCRegistrationRequest (value: PTCRegistrationRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCRegistrationRequest) { _cached_encoder_for_PTCRegistrationRequest = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCRegistrationRequest(value, elGetter);
-}
+export const _encode_PTCRegistrationRequest = $._encodeEnumerated;
 
 
 /* eslint-enable */

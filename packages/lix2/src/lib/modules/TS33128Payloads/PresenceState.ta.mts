@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -138,21 +136,13 @@ const PresenceState_inactive: PresenceState = PresenceState.inactive; /* LONG_NA
 export
 const inactive: PresenceState = PresenceState.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PresenceState: $.ASN1Decoder<PresenceState> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PresenceState
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PresenceState (el: _Element): PresenceState {
-    if (!_cached_decoder_for_PresenceState) { _cached_decoder_for_PresenceState = $._decodeEnumerated; }
-    return _cached_decoder_for_PresenceState(el);
-}
-
-let _cached_encoder_for_PresenceState: $.ASN1Encoder<PresenceState> | null = null;
+export const _decode_PresenceState = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PresenceState into an ASN.1 Element.
@@ -161,11 +151,7 @@ let _cached_encoder_for_PresenceState: $.ASN1Encoder<PresenceState> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PresenceState, encoded as an ASN.1 Element.
  */
-export
-function _encode_PresenceState (value: PresenceState, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PresenceState) { _cached_encoder_for_PresenceState = $._encodeEnumerated; }
-    return _cached_encoder_for_PresenceState(value, elGetter);
-}
+export const _encode_PresenceState = $._encodeEnumerated;
 
 
 /* eslint-enable */

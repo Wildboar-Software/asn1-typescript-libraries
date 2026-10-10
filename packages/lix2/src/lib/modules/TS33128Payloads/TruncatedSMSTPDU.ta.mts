@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,21 +21,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type TruncatedSMSTPDU = OCTET_STRING; // OctetStringType
 
-let _cached_decoder_for_TruncatedSMSTPDU: $.ASN1Decoder<TruncatedSMSTPDU> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TruncatedSMSTPDU
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TruncatedSMSTPDU (el: _Element): TruncatedSMSTPDU {
-    if (!_cached_decoder_for_TruncatedSMSTPDU) { _cached_decoder_for_TruncatedSMSTPDU = $._decodeOctetString; }
-    return _cached_decoder_for_TruncatedSMSTPDU(el);
-}
-
-let _cached_encoder_for_TruncatedSMSTPDU: $.ASN1Encoder<TruncatedSMSTPDU> | null = null;
+export const _decode_TruncatedSMSTPDU = (el: _Element): TruncatedSMSTPDU => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 130) {
+        throw new ASN1SizeError("TruncatedSMSTPDU violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) TruncatedSMSTPDU into an ASN.1 Element.
@@ -43,11 +42,7 @@ let _cached_encoder_for_TruncatedSMSTPDU: $.ASN1Encoder<TruncatedSMSTPDU> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TruncatedSMSTPDU, encoded as an ASN.1 Element.
  */
-export
-function _encode_TruncatedSMSTPDU (value: TruncatedSMSTPDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TruncatedSMSTPDU) { _cached_encoder_for_TruncatedSMSTPDU = $._encodeOctetString; }
-    return _cached_encoder_for_TruncatedSMSTPDU(value, elGetter);
-}
+export const _encode_TruncatedSMSTPDU = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RejectedSNSSAI, _decode_RejectedSNSSAI, _encode_RejectedSNSSAI } from "../TS33128Payloads/RejectedSNSSAI.ta.mjs";
-// export { RejectedSNSSAI, _decode_RejectedSNSSAI, _encode_RejectedSNSSAI } from "../TS33128Payloads/RejectedSNSSAI.ta.mjs";
 
 
 /**

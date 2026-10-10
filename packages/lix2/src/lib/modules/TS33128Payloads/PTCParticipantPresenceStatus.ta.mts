@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PTCTargetInformation, _decode_PTCTargetInformation, _encode_PTCTargetInformation } from "../TS33128Payloads/PTCTargetInformation.ta.mjs";
-// export { PTCTargetInformation, _decode_PTCTargetInformation, _encode_PTCTargetInformation } from "../TS33128Payloads/PTCTargetInformation.ta.mjs";
 import { PTCPresenceType, _decode_PTCPresenceType, _encode_PTCPresenceType, _enum_for_PTCPresenceType } from "../TS33128Payloads/PTCPresenceType.ta.mjs";
-// export { PTCPresenceType, _enum_for_PTCPresenceType, PTCPresenceType_pTCClient /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCClient /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCPresenceType_pTCGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PTCPresenceType, _encode_PTCPresenceType } from "../TS33128Payloads/PTCPresenceType.ta.mjs";
 
 
 /**

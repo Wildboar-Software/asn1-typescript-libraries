@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -98,21 +96,13 @@ const MMSReadStatus_deletedWithoutBeingRead: MMSReadStatus = MMSReadStatus.delet
 export
 const deletedWithoutBeingRead: MMSReadStatus = MMSReadStatus.deletedWithoutBeingRead; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MMSReadStatus: $.ASN1Decoder<MMSReadStatus> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MMSReadStatus
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MMSReadStatus (el: _Element): MMSReadStatus {
-    if (!_cached_decoder_for_MMSReadStatus) { _cached_decoder_for_MMSReadStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_MMSReadStatus(el);
-}
-
-let _cached_encoder_for_MMSReadStatus: $.ASN1Encoder<MMSReadStatus> | null = null;
+export const _decode_MMSReadStatus = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MMSReadStatus into an ASN.1 Element.
@@ -121,11 +111,7 @@ let _cached_encoder_for_MMSReadStatus: $.ASN1Encoder<MMSReadStatus> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MMSReadStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_MMSReadStatus (value: MMSReadStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSReadStatus) { _cached_encoder_for_MMSReadStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_MMSReadStatus(value, elGetter);
-}
+export const _encode_MMSReadStatus = $._encodeEnumerated;
 
 
 /* eslint-enable */

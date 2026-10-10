@@ -3,15 +3,13 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FlowDescription, _decode_FlowDescription, _encode_FlowDescription } from "../TS33128Payloads/FlowDescription.ta.mjs";
-// export { FlowDescription, _decode_FlowDescription, _encode_FlowDescription } from "../TS33128Payloads/FlowDescription.ta.mjs";
 import { EthFlowDescription, _decode_EthFlowDescription, _encode_EthFlowDescription } from "../TS33128Payloads/EthFlowDescription.ta.mjs";
-// export { EthFlowDescription, _decode_EthFlowDescription, _encode_EthFlowDescription } from "../TS33128Payloads/EthFlowDescription.ta.mjs";
 import { FlowDirection, _decode_FlowDirection, _encode_FlowDirection, _enum_for_FlowDirection } from "../TS33128Payloads/FlowDirection.ta.mjs";
-// export { FlowDirection, _enum_for_FlowDirection, FlowDirection_downlinkOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, downlinkOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, FlowDirection_uplinkOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, uplinkOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, FlowDirection_dowlinkAndUplink /* IMPORTED_LONG_ENUMERATION_ITEM */, dowlinkAndUplink /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FlowDirection, _encode_FlowDirection } from "../TS33128Payloads/FlowDirection.ta.mjs";
 
 
 /**
@@ -73,7 +71,17 @@ class FlowInformation {
          * @readonly
          */
         readonly flowDirection: OPTIONAL<FlowDirection>
-    ) {}
+    ) {
+        if (this.tosTrafficClass !== undefined && (this.tosTrafficClass.length < 2 || this.tosTrafficClass.length > 2)) {
+            throw new ASN1SizeError("FlowInformation.tosTrafficClass violates SIZE constraint");
+        }
+        if (this.spi !== undefined && (this.spi.length < 4 || this.spi.length > 4)) {
+            throw new ASN1SizeError("FlowInformation.spi violates SIZE constraint");
+        }
+        if (this.flowLabel !== undefined && (this.flowLabel.length < 3 || this.flowLabel.length > 3)) {
+            throw new ASN1SizeError("FlowInformation.flowLabel violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a FlowInformation

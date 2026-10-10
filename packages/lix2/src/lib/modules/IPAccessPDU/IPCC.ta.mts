@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPCCContents, _decode_IPCCContents, _encode_IPCCContents } from "../IPAccessPDU/IPCCContents.ta.mjs";
-// export { IPCCContents, _decode_IPCCContents, _encode_IPCCContents } from "../IPAccessPDU/IPCCContents.ta.mjs";
 
 
 /**

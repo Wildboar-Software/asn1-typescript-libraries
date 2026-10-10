@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -118,21 +116,13 @@ const ScheduledCommunicationType_bidirectional: ScheduledCommunicationType = Sch
 export
 const bidirectional: ScheduledCommunicationType = ScheduledCommunicationType.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ScheduledCommunicationType: $.ASN1Decoder<ScheduledCommunicationType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ScheduledCommunicationType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ScheduledCommunicationType (el: _Element): ScheduledCommunicationType {
-    if (!_cached_decoder_for_ScheduledCommunicationType) { _cached_decoder_for_ScheduledCommunicationType = $._decodeEnumerated; }
-    return _cached_decoder_for_ScheduledCommunicationType(el);
-}
-
-let _cached_encoder_for_ScheduledCommunicationType: $.ASN1Encoder<ScheduledCommunicationType> | null = null;
+export const _decode_ScheduledCommunicationType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ScheduledCommunicationType into an ASN.1 Element.
@@ -141,11 +131,7 @@ let _cached_encoder_for_ScheduledCommunicationType: $.ASN1Encoder<ScheduledCommu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ScheduledCommunicationType, encoded as an ASN.1 Element.
  */
-export
-function _encode_ScheduledCommunicationType (value: ScheduledCommunicationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ScheduledCommunicationType) { _cached_encoder_for_ScheduledCommunicationType = $._encodeEnumerated; }
-    return _cached_encoder_for_ScheduledCommunicationType(value, elGetter);
-}
+export const _encode_ScheduledCommunicationType = $._encodeEnumerated;
 
 
 /* eslint-enable */

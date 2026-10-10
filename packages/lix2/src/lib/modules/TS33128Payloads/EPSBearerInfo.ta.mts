@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EPSBearers, _decode_EPSBearers, _encode_EPSBearers } from "../TS33128Payloads/EPSBearers.ta.mjs";
-// export { EPSBearers, _decode_EPSBearers, _encode_EPSBearers } from "../TS33128Payloads/EPSBearers.ta.mjs";
 
 
 /**

@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -178,21 +176,13 @@ const TraceDepth_maximumWithoutVendorSpecificExtension: TraceDepth = TraceDepth.
 export
 const maximumWithoutVendorSpecificExtension: TraceDepth = TraceDepth.maximumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TraceDepth: $.ASN1Decoder<TraceDepth> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceDepth
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TraceDepth (el: _Element): TraceDepth {
-    if (!_cached_decoder_for_TraceDepth) { _cached_decoder_for_TraceDepth = $._decodeEnumerated; }
-    return _cached_decoder_for_TraceDepth(el);
-}
-
-let _cached_encoder_for_TraceDepth: $.ASN1Encoder<TraceDepth> | null = null;
+export const _decode_TraceDepth = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TraceDepth into an ASN.1 Element.
@@ -201,11 +191,7 @@ let _cached_encoder_for_TraceDepth: $.ASN1Encoder<TraceDepth> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TraceDepth, encoded as an ASN.1 Element.
  */
-export
-function _encode_TraceDepth (value: TraceDepth, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TraceDepth) { _cached_encoder_for_TraceDepth = $._encodeEnumerated; }
-    return _cached_encoder_for_TraceDepth(value, elGetter);
-}
+export const _encode_TraceDepth = $._encodeEnumerated;
 
 
 /* eslint-enable */

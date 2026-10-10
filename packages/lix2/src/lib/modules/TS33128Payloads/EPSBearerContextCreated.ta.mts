@@ -6,15 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
-// export { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
 import { EPSBearerCreationCauseValue, _decode_EPSBearerCreationCauseValue, _encode_EPSBearerCreationCauseValue } from "../TS33128Payloads/EPSBearerCreationCauseValue.ta.mjs";
-// export { EPSBearerCreationCauseValue, _decode_EPSBearerCreationCauseValue, _encode_EPSBearerCreationCauseValue } from "../TS33128Payloads/EPSBearerCreationCauseValue.ta.mjs";
 import { GTPTunnelInfo, _decode_GTPTunnelInfo, _encode_GTPTunnelInfo } from "../TS33128Payloads/GTPTunnelInfo.ta.mjs";
-// export { GTPTunnelInfo, _decode_GTPTunnelInfo, _encode_GTPTunnelInfo } from "../TS33128Payloads/GTPTunnelInfo.ta.mjs";
 import { EPSBearerQOS, _decode_EPSBearerQOS, _encode_EPSBearerQOS } from "../TS33128Payloads/EPSBearerQOS.ta.mjs";
-// export { EPSBearerQOS, _decode_EPSBearerQOS, _encode_EPSBearerQOS } from "../TS33128Payloads/EPSBearerQOS.ta.mjs";
 import { PDNProtocolConfigurationOptions, _decode_PDNProtocolConfigurationOptions, _encode_PDNProtocolConfigurationOptions } from "../TS33128Payloads/PDNProtocolConfigurationOptions.ta.mjs";
-// export { PDNProtocolConfigurationOptions, _decode_PDNProtocolConfigurationOptions, _encode_PDNProtocolConfigurationOptions } from "../TS33128Payloads/PDNProtocolConfigurationOptions.ta.mjs";
 
 
 /**

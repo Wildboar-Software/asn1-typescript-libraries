@@ -4,11 +4,11 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13UAStarParams, _decode_TLS13UAStarParams, _encode_TLS13UAStarParams } from "../TS33128Payloads/TLS13UAStarParams.ta.mjs";
-// export { TLS13UAStarParams, _decode_TLS13UAStarParams, _encode_TLS13UAStarParams } from "../TS33128Payloads/TLS13UAStarParams.ta.mjs";
 
 
 /**
@@ -75,7 +75,17 @@ class DTLS13UAStarParams {
          * @readonly
          */
         readonly connectionID: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (this.clientSnKey !== undefined && (this.clientSnKey.length < 1 || this.clientSnKey.length > 65535)) {
+            throw new ASN1SizeError("DTLS13UAStarParams.clientSnKey violates SIZE constraint");
+        }
+        if (this.serverSnKey !== undefined && (this.serverSnKey.length < 1 || this.serverSnKey.length > 65535)) {
+            throw new ASN1SizeError("DTLS13UAStarParams.serverSnKey violates SIZE constraint");
+        }
+        if (this.connectionID !== undefined && (this.connectionID.length < 0 || this.connectionID.length > 255)) {
+            throw new ASN1SizeError("DTLS13UAStarParams.connectionID violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a DTLS13UAStarParams

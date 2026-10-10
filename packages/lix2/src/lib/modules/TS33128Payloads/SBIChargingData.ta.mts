@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EncapsulatedSBIChargingData, _decode_EncapsulatedSBIChargingData, _encode_EncapsulatedSBIChargingData } from "../TS33128Payloads/EncapsulatedSBIChargingData.ta.mjs";
-// export { EncapsulatedSBIChargingData, _decode_EncapsulatedSBIChargingData, _encode_EncapsulatedSBIChargingData } from "../TS33128Payloads/EncapsulatedSBIChargingData.ta.mjs";
 
 
 /**

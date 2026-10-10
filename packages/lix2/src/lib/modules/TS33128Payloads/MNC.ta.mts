@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    NumericString
+    NumericString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,21 +21,19 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type MNC = NumericString; // NumericString
 
-let _cached_decoder_for_MNC: $.ASN1Decoder<MNC> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MNC
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MNC (el: _Element): MNC {
-    if (!_cached_decoder_for_MNC) { _cached_decoder_for_MNC = $._decodeNumericString; }
-    return _cached_decoder_for_MNC(el);
-}
-
-let _cached_encoder_for_MNC: $.ASN1Encoder<MNC> | null = null;
+export const _decode_MNC = (el: _Element): MNC => {
+    const value = $._decodeNumericString(el);
+    if (value.length < 2 || value.length > 3) {
+        throw new ASN1SizeError("MNC violates SIZE constraint");
+    }
+    return value;
+};
 
 /**
  * @summary Encodes a(n) MNC into an ASN.1 Element.
@@ -43,11 +42,7 @@ let _cached_encoder_for_MNC: $.ASN1Encoder<MNC> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MNC, encoded as an ASN.1 Element.
  */
-export
-function _encode_MNC (value: MNC, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MNC) { _cached_encoder_for_MNC = $._encodeNumericString; }
-    return _cached_encoder_for_MNC(value, elGetter);
-}
+export const _encode_MNC = $._encodeNumericString;
 
 
 /* eslint-enable */

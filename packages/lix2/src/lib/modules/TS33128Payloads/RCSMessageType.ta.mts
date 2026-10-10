@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -138,21 +136,13 @@ const RCSMessageType_iMDNNotification: RCSMessageType = RCSMessageType.iMDNNotif
 export
 const iMDNNotification: RCSMessageType = RCSMessageType.iMDNNotification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RCSMessageType: $.ASN1Decoder<RCSMessageType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RCSMessageType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RCSMessageType (el: _Element): RCSMessageType {
-    if (!_cached_decoder_for_RCSMessageType) { _cached_decoder_for_RCSMessageType = $._decodeEnumerated; }
-    return _cached_decoder_for_RCSMessageType(el);
-}
-
-let _cached_encoder_for_RCSMessageType: $.ASN1Encoder<RCSMessageType> | null = null;
+export const _decode_RCSMessageType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RCSMessageType into an ASN.1 Element.
@@ -161,11 +151,7 @@ let _cached_encoder_for_RCSMessageType: $.ASN1Encoder<RCSMessageType> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RCSMessageType, encoded as an ASN.1 Element.
  */
-export
-function _encode_RCSMessageType (value: RCSMessageType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RCSMessageType) { _cached_encoder_for_RCSMessageType = $._encodeEnumerated; }
-    return _cached_encoder_for_RCSMessageType(value, elGetter);
-}
+export const _encode_RCSMessageType = $._encodeEnumerated;
 
 
 /* eslint-enable */

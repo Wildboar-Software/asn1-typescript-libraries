@@ -8,17 +8,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PTCTargetInformation, _decode_PTCTargetInformation, _encode_PTCTargetInformation } from "../TS33128Payloads/PTCTargetInformation.ta.mjs";
-// export { PTCTargetInformation, _decode_PTCTargetInformation, _encode_PTCTargetInformation } from "../TS33128Payloads/PTCTargetInformation.ta.mjs";
 import { RTPSetting, _decode_RTPSetting, _encode_RTPSetting } from "../TS33128Payloads/RTPSetting.ta.mjs";
-// export { RTPSetting, _decode_RTPSetting, _encode_RTPSetting } from "../TS33128Payloads/RTPSetting.ta.mjs";
 import { PTCSessionInfo, _decode_PTCSessionInfo, _encode_PTCSessionInfo } from "../TS33128Payloads/PTCSessionInfo.ta.mjs";
-// export { PTCSessionInfo, _decode_PTCSessionInfo, _encode_PTCSessionInfo } from "../TS33128Payloads/PTCSessionInfo.ta.mjs";
 import { PTCPreEstStatus, _decode_PTCPreEstStatus, _encode_PTCPreEstStatus, _enum_for_PTCPreEstStatus } from "../TS33128Payloads/PTCPreEstStatus.ta.mjs";
-// export { PTCPreEstStatus, _enum_for_PTCPreEstStatus, PTCPreEstStatus_established /* IMPORTED_LONG_ENUMERATION_ITEM */, established /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCPreEstStatus_modified /* IMPORTED_LONG_ENUMERATION_ITEM */, modified /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCPreEstStatus_released /* IMPORTED_LONG_ENUMERATION_ITEM */, released /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PTCPreEstStatus, _encode_PTCPreEstStatus } from "../TS33128Payloads/PTCPreEstStatus.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-// export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 import { PTCFailureCode, _decode_PTCFailureCode, _encode_PTCFailureCode, _enum_for_PTCFailureCode } from "../TS33128Payloads/PTCFailureCode.ta.mjs";
-// export { PTCFailureCode, _enum_for_PTCFailureCode, PTCFailureCode_sessionCannotBeEstablished /* IMPORTED_LONG_ENUMERATION_ITEM */, sessionCannotBeEstablished /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCFailureCode_sessionCannotBeModified /* IMPORTED_LONG_ENUMERATION_ITEM */, sessionCannotBeModified /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PTCFailureCode, _encode_PTCFailureCode } from "../TS33128Payloads/PTCFailureCode.ta.mjs";
 
 
 /**

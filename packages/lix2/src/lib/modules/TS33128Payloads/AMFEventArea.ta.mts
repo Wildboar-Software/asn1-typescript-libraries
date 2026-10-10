@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PresenceInfo, _decode_PresenceInfo, _encode_PresenceInfo } from "../TS33128Payloads/PresenceInfo.ta.mjs";
-// export { PresenceInfo, _decode_PresenceInfo, _encode_PresenceInfo } from "../TS33128Payloads/PresenceInfo.ta.mjs";
 import { LADNInfo, _decode_LADNInfo, _encode_LADNInfo } from "../TS33128Payloads/LADNInfo.ta.mjs";
-// export { LADNInfo, _decode_LADNInfo, _encode_LADNInfo } from "../TS33128Payloads/LADNInfo.ta.mjs";
 
 
 /**

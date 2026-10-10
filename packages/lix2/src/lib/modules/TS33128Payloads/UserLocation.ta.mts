@@ -6,15 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EUTRALocation, _decode_EUTRALocation, _encode_EUTRALocation } from "../TS33128Payloads/EUTRALocation.ta.mjs";
-// export { EUTRALocation, _decode_EUTRALocation, _encode_EUTRALocation } from "../TS33128Payloads/EUTRALocation.ta.mjs";
 import { NRLocation, _decode_NRLocation, _encode_NRLocation } from "../TS33128Payloads/NRLocation.ta.mjs";
-// export { NRLocation, _decode_NRLocation, _encode_NRLocation } from "../TS33128Payloads/NRLocation.ta.mjs";
 import { N3GALocation, _decode_N3GALocation, _encode_N3GALocation } from "../TS33128Payloads/N3GALocation.ta.mjs";
-// export { N3GALocation, _decode_N3GALocation, _encode_N3GALocation } from "../TS33128Payloads/N3GALocation.ta.mjs";
 import { UTRALocation, _decode_UTRALocation, _encode_UTRALocation } from "../TS33128Payloads/UTRALocation.ta.mjs";
-// export { UTRALocation, _decode_UTRALocation, _encode_UTRALocation } from "../TS33128Payloads/UTRALocation.ta.mjs";
 import { GERALocation, _decode_GERALocation, _encode_GERALocation } from "../TS33128Payloads/GERALocation.ta.mjs";
-// export { GERALocation, _decode_GERALocation, _encode_GERALocation } from "../TS33128Payloads/GERALocation.ta.mjs";
 
 
 /**

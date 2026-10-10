@@ -3,11 +3,11 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExternalChargingASN, _decode_ExternalChargingASN, _encode_ExternalChargingASN } from "../TS33128Payloads/ExternalChargingASN.ta.mjs";
-// export { ExternalChargingASN, _decode_ExternalChargingASN, _encode_ExternalChargingASN } from "../TS33128Payloads/ExternalChargingASN.ta.mjs";
 
 
 /**
@@ -62,7 +62,32 @@ class TranslatedChargingData {
          * @readonly
          */
         readonly recordData: ExternalChargingASN
-    ) {}
+    ) {
+        if (this.releaseID !== undefined) {
+            const _n = typeof this.releaseID === "bigint" ? this.releaseID : BigInt(this.releaseID);
+            if (_n < 0n || _n > 7n) {
+                throw new ASN1OverflowError("TranslatedChargingData.releaseID violates INTEGER range constraint");
+            }
+        }
+        if (this.versonID !== undefined) {
+            const _n = typeof this.versonID === "bigint" ? this.versonID : BigInt(this.versonID);
+            if (_n < 0n || _n > 31n) {
+                throw new ASN1OverflowError("TranslatedChargingData.versonID violates INTEGER range constraint");
+            }
+        }
+        if (this.specificationNumber !== undefined) {
+            const _n = typeof this.specificationNumber === "bigint" ? this.specificationNumber : BigInt(this.specificationNumber);
+            if (_n < 0n || _n > 31n) {
+                throw new ASN1OverflowError("TranslatedChargingData.specificationNumber violates INTEGER range constraint");
+            }
+        }
+        if (this.releaseIDExtension !== undefined) {
+            const _n = typeof this.releaseIDExtension === "bigint" ? this.releaseIDExtension : BigInt(this.releaseIDExtension);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TranslatedChargingData.releaseIDExtension violates INTEGER range constraint");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a TranslatedChargingData

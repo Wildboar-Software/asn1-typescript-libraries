@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -298,21 +296,13 @@ const MMEFailedProcedureType_pDNDisconnectReject: MMEFailedProcedureType = MMEFa
 export
 const pDNDisconnectReject: MMEFailedProcedureType = MMEFailedProcedureType.pDNDisconnectReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MMEFailedProcedureType: $.ASN1Decoder<MMEFailedProcedureType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MMEFailedProcedureType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_MMEFailedProcedureType (el: _Element): MMEFailedProcedureType {
-    if (!_cached_decoder_for_MMEFailedProcedureType) { _cached_decoder_for_MMEFailedProcedureType = $._decodeEnumerated; }
-    return _cached_decoder_for_MMEFailedProcedureType(el);
-}
-
-let _cached_encoder_for_MMEFailedProcedureType: $.ASN1Encoder<MMEFailedProcedureType> | null = null;
+export const _decode_MMEFailedProcedureType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MMEFailedProcedureType into an ASN.1 Element.
@@ -321,11 +311,7 @@ let _cached_encoder_for_MMEFailedProcedureType: $.ASN1Encoder<MMEFailedProcedure
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MMEFailedProcedureType, encoded as an ASN.1 Element.
  */
-export
-function _encode_MMEFailedProcedureType (value: MMEFailedProcedureType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMEFailedProcedureType) { _cached_encoder_for_MMEFailedProcedureType = $._encodeEnumerated; }
-    return _cached_encoder_for_MMEFailedProcedureType(value, elGetter);
-}
+export const _encode_MMEFailedProcedureType = $._encodeEnumerated;
 
 
 /* eslint-enable */

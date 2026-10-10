@@ -6,15 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PresenceState, _decode_PresenceState, _encode_PresenceState, _enum_for_PresenceState } from "../TS33128Payloads/PresenceState.ta.mjs";
-// export { PresenceState, _enum_for_PresenceState, PresenceState_inArea /* IMPORTED_LONG_ENUMERATION_ITEM */, inArea /* IMPORTED_SHORT_ENUMERATION_ITEM */, PresenceState_outOfArea /* IMPORTED_LONG_ENUMERATION_ITEM */, outOfArea /* IMPORTED_SHORT_ENUMERATION_ITEM */, PresenceState_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, PresenceState_inactive /* IMPORTED_LONG_ENUMERATION_ITEM */, inactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PresenceState, _encode_PresenceState } from "../TS33128Payloads/PresenceState.ta.mjs";
 import { TAI, _decode_TAI, _encode_TAI } from "../TS33128Payloads/TAI.ta.mjs";
-// export { TAI, _decode_TAI, _encode_TAI } from "../TS33128Payloads/TAI.ta.mjs";
 import { ECGI, _decode_ECGI, _encode_ECGI } from "../TS33128Payloads/ECGI.ta.mjs";
-// export { ECGI, _decode_ECGI, _encode_ECGI } from "../TS33128Payloads/ECGI.ta.mjs";
 import { NCGI, _decode_NCGI, _encode_NCGI } from "../TS33128Payloads/NCGI.ta.mjs";
-// export { NCGI, _decode_NCGI, _encode_NCGI } from "../TS33128Payloads/NCGI.ta.mjs";
 import { GlobalRANNodeID, _decode_GlobalRANNodeID, _encode_GlobalRANNodeID } from "../TS33128Payloads/GlobalRANNodeID.ta.mjs";
-// export { GlobalRANNodeID, _decode_GlobalRANNodeID, _encode_GlobalRANNodeID } from "../TS33128Payloads/GlobalRANNodeID.ta.mjs";
 
 
 /**

@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Day, _decode_Day, _encode_Day, _enum_for_Day } from "../TS33128Payloads/Day.ta.mjs";
-// export { Day, _enum_for_Day, Day_monday /* IMPORTED_LONG_ENUMERATION_ITEM */, monday /* IMPORTED_SHORT_ENUMERATION_ITEM */, Day_tuesday /* IMPORTED_LONG_ENUMERATION_ITEM */, tuesday /* IMPORTED_SHORT_ENUMERATION_ITEM */, Day_wednesday /* IMPORTED_LONG_ENUMERATION_ITEM */, wednesday /* IMPORTED_SHORT_ENUMERATION_ITEM */, Day_thursday /* IMPORTED_LONG_ENUMERATION_ITEM */, thursday /* IMPORTED_SHORT_ENUMERATION_ITEM */, Day_friday /* IMPORTED_LONG_ENUMERATION_ITEM */, friday /* IMPORTED_SHORT_ENUMERATION_ITEM */, Day_saturday /* IMPORTED_LONG_ENUMERATION_ITEM */, saturday /* IMPORTED_SHORT_ENUMERATION_ITEM */, Day_sunday /* IMPORTED_LONG_ENUMERATION_ITEM */, sunday /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Day, _encode_Day } from "../TS33128Payloads/Day.ta.mjs";
 import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
-// export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 
 
 /**

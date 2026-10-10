@@ -6,21 +6,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
-// export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 import { PEI, _decode_PEI, _encode_PEI } from "../TS33128Payloads/PEI.ta.mjs";
-// export { PEI, _decode_PEI, _encode_PEI } from "../TS33128Payloads/PEI.ta.mjs";
 import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
-// export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 import { GUAMI, _decode_GUAMI, _encode_GUAMI } from "../TS33128Payloads/GUAMI.ta.mjs";
-// export { GUAMI, _decode_GUAMI, _encode_GUAMI } from "../TS33128Payloads/GUAMI.ta.mjs";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
-// export { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
 import { UDMCancelLocationMethod, _decode_UDMCancelLocationMethod, _encode_UDMCancelLocationMethod, _enum_for_UDMCancelLocationMethod } from "../TS33128Payloads/UDMCancelLocationMethod.ta.mjs";
-// export { UDMCancelLocationMethod, _enum_for_UDMCancelLocationMethod, UDMCancelLocationMethod_aMF3GPPAccessDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, aMF3GPPAccessDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMCancelLocationMethod_aMFNon3GPPAccessDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, aMFNon3GPPAccessDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMCancelLocationMethod_uDMDeregistration /* IMPORTED_LONG_ENUMERATION_ITEM */, uDMDeregistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, UDMCancelLocationMethod_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UDMCancelLocationMethod, _encode_UDMCancelLocationMethod } from "../TS33128Payloads/UDMCancelLocationMethod.ta.mjs";
 import { UDMAMFDeregistrationInfo, _decode_UDMAMFDeregistrationInfo, _encode_UDMAMFDeregistrationInfo } from "../TS33128Payloads/UDMAMFDeregistrationInfo.ta.mjs";
-// export { UDMAMFDeregistrationInfo, _decode_UDMAMFDeregistrationInfo, _encode_UDMAMFDeregistrationInfo } from "../TS33128Payloads/UDMAMFDeregistrationInfo.ta.mjs";
 import { UDMDeregistrationData, _decode_UDMDeregistrationData, _encode_UDMDeregistrationData } from "../TS33128Payloads/UDMDeregistrationData.ta.mjs";
-// export { UDMDeregistrationData, _decode_UDMDeregistrationData, _encode_UDMDeregistrationData } from "../TS33128Payloads/UDMDeregistrationData.ta.mjs";
 
 
 /**

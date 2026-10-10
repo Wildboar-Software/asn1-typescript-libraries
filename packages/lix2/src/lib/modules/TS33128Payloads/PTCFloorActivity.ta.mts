@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -218,21 +216,13 @@ const PTCFloorActivity_tBCPRelease: PTCFloorActivity = PTCFloorActivity.tBCPRele
 export
 const tBCPRelease: PTCFloorActivity = PTCFloorActivity.tBCPRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCFloorActivity: $.ASN1Decoder<PTCFloorActivity> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PTCFloorActivity
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PTCFloorActivity (el: _Element): PTCFloorActivity {
-    if (!_cached_decoder_for_PTCFloorActivity) { _cached_decoder_for_PTCFloorActivity = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCFloorActivity(el);
-}
-
-let _cached_encoder_for_PTCFloorActivity: $.ASN1Encoder<PTCFloorActivity> | null = null;
+export const _decode_PTCFloorActivity = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PTCFloorActivity into an ASN.1 Element.
@@ -241,11 +231,7 @@ let _cached_encoder_for_PTCFloorActivity: $.ASN1Encoder<PTCFloorActivity> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PTCFloorActivity, encoded as an ASN.1 Element.
  */
-export
-function _encode_PTCFloorActivity (value: PTCFloorActivity, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCFloorActivity) { _cached_encoder_for_PTCFloorActivity = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCFloorActivity(value, elGetter);
-}
+export const _encode_PTCFloorActivity = $._encodeEnumerated;
 
 
 /* eslint-enable */

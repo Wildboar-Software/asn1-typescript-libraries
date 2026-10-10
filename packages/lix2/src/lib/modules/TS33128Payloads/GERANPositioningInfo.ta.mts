@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GERANPositioningData, _decode_GERANPositioningData, _encode_GERANPositioningData } from "../TS33128Payloads/GERANPositioningData.ta.mjs";
-// export { GERANPositioningData, _decode_GERANPositioningData, _encode_GERANPositioningData } from "../TS33128Payloads/GERANPositioningData.ta.mjs";
 import { GERANGANSSPositioningData, _decode_GERANGANSSPositioningData, _encode_GERANGANSSPositioningData } from "../TS33128Payloads/GERANGANSSPositioningData.ta.mjs";
-// export { GERANGANSSPositioningData, _decode_GERANGANSSPositioningData, _encode_GERANGANSSPositioningData } from "../TS33128Payloads/GERANGANSSPositioningData.ta.mjs";
 
 
 /**

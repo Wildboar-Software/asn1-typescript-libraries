@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     INTEGER,
-    UTF8String
+    UTF8String,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -47,7 +48,15 @@ function _decode_RawMLPResponse (el: _Element): RawMLPResponse {
     "CONTEXT 1": [ "mLPPositionData", $._decode_implicit<UTF8String>(() => $._decodeUTF8String) ],
     "CONTEXT 2": [ "mLPErrorCode", $._decode_implicit<INTEGER>(() => $._decodeInteger) ]
 }); }
-    return _cached_decoder_for_RawMLPResponse(el);
+    const _value = _cached_decoder_for_RawMLPResponse(el);
+    if (_value !== undefined && typeof _value === "object" && "mLPErrorCode" in _value) {
+        const _i = _value.mLPErrorCode;
+        const _n = typeof _i === "bigint" ? _i : BigInt(_i);
+        if (_n < 1n || _n > 699n) {
+            throw new ASN1OverflowError("RawMLPResponse.mLPErrorCode violates INTEGER range constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_RawMLPResponse: $.ASN1Encoder<RawMLPResponse> | null = null;

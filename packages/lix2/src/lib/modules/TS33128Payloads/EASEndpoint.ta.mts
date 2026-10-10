@@ -7,11 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FQDN, _decode_FQDN, _encode_FQDN } from "../TS33128Payloads/FQDN.ta.mjs";
-// export { FQDN, _decode_FQDN, _encode_FQDN } from "../TS33128Payloads/FQDN.ta.mjs";
 import { IPv4Addresses, _decode_IPv4Addresses, _encode_IPv4Addresses } from "../TS33128Payloads/IPv4Addresses.ta.mjs";
-// export { IPv4Addresses, _decode_IPv4Addresses, _encode_IPv4Addresses } from "../TS33128Payloads/IPv4Addresses.ta.mjs";
 import { IPv6Addresses, _decode_IPv6Addresses, _encode_IPv6Addresses } from "../TS33128Payloads/IPv6Addresses.ta.mjs";
-// export { IPv6Addresses, _decode_IPv6Addresses, _encode_IPv6Addresses } from "../TS33128Payloads/IPv6Addresses.ta.mjs";
 
 
 /**

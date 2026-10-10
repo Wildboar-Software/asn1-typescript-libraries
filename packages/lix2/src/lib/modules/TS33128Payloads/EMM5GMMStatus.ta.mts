@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_EMMRegStatus, _encode_EMMRegStatus, _enum_for_EMMRegStatus, EMMRegStatus } from "../TS33128Payloads/EMMRegStatus.ta.mjs";
-// export { EMMRegStatus, _enum_for_EMMRegStatus, EMMRegStatus_uEEMMRegistered /* IMPORTED_LONG_ENUMERATION_ITEM */, uEEMMRegistered /* IMPORTED_SHORT_ENUMERATION_ITEM */, EMMRegStatus_uENotEMMRegistered /* IMPORTED_LONG_ENUMERATION_ITEM */, uENotEMMRegistered /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EMMRegStatus, _encode_EMMRegStatus } from "../TS33128Payloads/EMMRegStatus.ta.mjs";
 import { _decode_FiveGMMStatus, _encode_FiveGMMStatus, _enum_for_FiveGMMStatus, FiveGMMStatus } from "../TS33128Payloads/FiveGMMStatus.ta.mjs";
-// export { FiveGMMStatus, _enum_for_FiveGMMStatus, FiveGMMStatus_uE5GMMRegistered /* IMPORTED_LONG_ENUMERATION_ITEM */, uE5GMMRegistered /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMMStatus_uENot5GMMRegistered /* IMPORTED_LONG_ENUMERATION_ITEM */, uENot5GMMRegistered /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FiveGMMStatus, _encode_FiveGMMStatus } from "../TS33128Payloads/FiveGMMStatus.ta.mjs";
 
 
 /**

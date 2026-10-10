@@ -5,11 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NGInformation, _decode_NGInformation, _encode_NGInformation } from "../TS33128Payloads/NGInformation.ta.mjs";
-// export { NGInformation, _decode_NGInformation, _encode_NGInformation } from "../TS33128Payloads/NGInformation.ta.mjs";
 import { F1Information, _decode_F1Information, _encode_F1Information } from "../TS33128Payloads/F1Information.ta.mjs";
-// export { F1Information, _decode_F1Information, _encode_F1Information } from "../TS33128Payloads/F1Information.ta.mjs";
 import { S1Information, _decode_S1Information, _encode_S1Information } from "../TS33128Payloads/S1Information.ta.mjs";
-// export { S1Information, _decode_S1Information, _encode_S1Information } from "../TS33128Payloads/S1Information.ta.mjs";
 
 
 /**

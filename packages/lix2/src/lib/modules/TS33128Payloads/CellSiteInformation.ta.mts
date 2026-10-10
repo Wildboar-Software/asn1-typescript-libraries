@@ -4,11 +4,11 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../TS33128Payloads/GeographicalCoordinates.ta.mjs";
-// export { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../TS33128Payloads/GeographicalCoordinates.ta.mjs";
 
 
 /**
@@ -49,7 +49,14 @@ class CellSiteInformation {
          * @readonly
          */
         readonly operatorSpecificInformation: OPTIONAL<UTF8String>
-    ) {}
+    ) {
+        if (this.azimuth !== undefined) {
+            const _n = typeof this.azimuth === "bigint" ? this.azimuth : BigInt(this.azimuth);
+            if (_n < 0n || _n > 359n) {
+                throw new ASN1OverflowError("CellSiteInformation.azimuth violates INTEGER range constraint");
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a CellSiteInformation

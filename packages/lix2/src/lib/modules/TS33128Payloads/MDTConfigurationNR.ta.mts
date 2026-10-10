@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MDTActivation, _decode_MDTActivation, _encode_MDTActivation, _enum_for_MDTActivation } from "../TS33128Payloads/MDTActivation.ta.mjs";
-// export { MDTActivation, _enum_for_MDTActivation, MDTActivation_immediateMDTOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, immediateMDTOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, MDTActivation_loggedMDTOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, loggedMDTOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, MDTActivation_immediateMDTandTrace /* IMPORTED_LONG_ENUMERATION_ITEM */, immediateMDTandTrace /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MDTActivation, _encode_MDTActivation } from "../TS33128Payloads/MDTActivation.ta.mjs";
 import { AreaScopeOfMDT, _decode_AreaScopeOfMDT, _encode_AreaScopeOfMDT } from "../TS33128Payloads/AreaScopeOfMDT.ta.mjs";
-// export { AreaScopeOfMDT, _decode_AreaScopeOfMDT, _encode_AreaScopeOfMDT } from "../TS33128Payloads/AreaScopeOfMDT.ta.mjs";
 import { MDTMode, _decode_MDTMode, _encode_MDTMode } from "../TS33128Payloads/MDTMode.ta.mjs";
-// export { MDTMode, _decode_MDTMode, _encode_MDTMode } from "../TS33128Payloads/MDTMode.ta.mjs";
 import { PLMNList, _decode_PLMNList, _encode_PLMNList } from "../TS33128Payloads/PLMNList.ta.mjs";
-// export { PLMNList, _decode_PLMNList, _encode_PLMNList } from "../TS33128Payloads/PLMNList.ta.mjs";
 
 
 /**

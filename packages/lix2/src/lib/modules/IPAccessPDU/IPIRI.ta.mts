@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPIRIContents, _decode_IPIRIContents, _encode_IPIRIContents } from "../IPAccessPDU/IPIRIContents.ta.mjs";
-// export { IPIRIContents, _decode_IPIRIContents, _encode_IPIRIContents } from "../IPAccessPDU/IPIRIContents.ta.mjs";
 
 
 /**

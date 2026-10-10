@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
-// export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SBIType.ta.mjs";
-// export { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SBIType.ta.mjs";
 import { DPIOperationType, _decode_DPIOperationType, _encode_DPIOperationType, _enum_for_DPIOperationType } from "../TS33128Payloads/DPIOperationType.ta.mjs";
-// export { DPIOperationType, _enum_for_DPIOperationType, DPIOperationType_createDynamicPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, createDynamicPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, DPIOperationType_retrieveDynamicPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, retrieveDynamicPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, DPIOperationType_updateDynamicPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, updateDynamicPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, DPIOperationType_patchDynamicPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, patchDynamicPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, DPIOperationType_destroyDynamicPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, destroyDynamicPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DPIOperationType, _encode_DPIOperationType } from "../TS33128Payloads/DPIOperationType.ta.mjs";
 
 
 /**

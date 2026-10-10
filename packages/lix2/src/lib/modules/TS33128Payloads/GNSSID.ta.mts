@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -218,21 +216,13 @@ const GNSSID_nAVIC: GNSSID = GNSSID.nAVIC; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const nAVIC: GNSSID = GNSSID.nAVIC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_GNSSID: $.ASN1Decoder<GNSSID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GNSSID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GNSSID (el: _Element): GNSSID {
-    if (!_cached_decoder_for_GNSSID) { _cached_decoder_for_GNSSID = $._decodeEnumerated; }
-    return _cached_decoder_for_GNSSID(el);
-}
-
-let _cached_encoder_for_GNSSID: $.ASN1Encoder<GNSSID> | null = null;
+export const _decode_GNSSID = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) GNSSID into an ASN.1 Element.
@@ -241,11 +231,7 @@ let _cached_encoder_for_GNSSID: $.ASN1Encoder<GNSSID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GNSSID, encoded as an ASN.1 Element.
  */
-export
-function _encode_GNSSID (value: GNSSID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GNSSID) { _cached_encoder_for_GNSSID = $._encodeEnumerated; }
-    return _cached_encoder_for_GNSSID(value, elGetter);
-}
+export const _encode_GNSSID = $._encodeEnumerated;
 
 
 /* eslint-enable */

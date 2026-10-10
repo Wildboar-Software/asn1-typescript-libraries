@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -98,21 +96,13 @@ const W5GBANLineType_pON: W5GBANLineType = W5GBANLineType.pON; /* LONG_NAMED_ENU
 export
 const pON: W5GBANLineType = W5GBANLineType.pON; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_W5GBANLineType: $.ASN1Decoder<W5GBANLineType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) W5GBANLineType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_W5GBANLineType (el: _Element): W5GBANLineType {
-    if (!_cached_decoder_for_W5GBANLineType) { _cached_decoder_for_W5GBANLineType = $._decodeEnumerated; }
-    return _cached_decoder_for_W5GBANLineType(el);
-}
-
-let _cached_encoder_for_W5GBANLineType: $.ASN1Encoder<W5GBANLineType> | null = null;
+export const _decode_W5GBANLineType = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) W5GBANLineType into an ASN.1 Element.
@@ -121,11 +111,7 @@ let _cached_encoder_for_W5GBANLineType: $.ASN1Encoder<W5GBANLineType> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The W5GBANLineType, encoded as an ASN.1 Element.
  */
-export
-function _encode_W5GBANLineType (value: W5GBANLineType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_W5GBANLineType) { _cached_encoder_for_W5GBANLineType = $._encodeEnumerated; }
-    return _cached_encoder_for_W5GBANLineType(value, elGetter);
-}
+export const _encode_W5GBANLineType = $._encodeEnumerated;
 
 
 /* eslint-enable */

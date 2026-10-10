@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -378,21 +376,13 @@ const RfChargingEvent_cPDT_Information: RfChargingEvent = RfChargingEvent.cPDT_I
 export
 const cPDT_Information: RfChargingEvent = RfChargingEvent.cPDT_Information; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RfChargingEvent: $.ASN1Decoder<RfChargingEvent> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RfChargingEvent
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RfChargingEvent (el: _Element): RfChargingEvent {
-    if (!_cached_decoder_for_RfChargingEvent) { _cached_decoder_for_RfChargingEvent = $._decodeEnumerated; }
-    return _cached_decoder_for_RfChargingEvent(el);
-}
-
-let _cached_encoder_for_RfChargingEvent: $.ASN1Encoder<RfChargingEvent> | null = null;
+export const _decode_RfChargingEvent = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RfChargingEvent into an ASN.1 Element.
@@ -401,11 +391,7 @@ let _cached_encoder_for_RfChargingEvent: $.ASN1Encoder<RfChargingEvent> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RfChargingEvent, encoded as an ASN.1 Element.
  */
-export
-function _encode_RfChargingEvent (value: RfChargingEvent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RfChargingEvent) { _cached_encoder_for_RfChargingEvent = $._encodeEnumerated; }
-    return _cached_encoder_for_RfChargingEvent(value, elGetter);
-}
+export const _encode_RfChargingEvent = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UUID, _decode_UUID, _encode_UUID } from "../TS33128Payloads/UUID.ta.mjs";
-// export { UUID, _decode_UUID, _encode_UUID } from "../TS33128Payloads/UUID.ta.mjs";
 
 
 /**

@@ -3,17 +3,14 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
 import { IMEI, _decode_IMEI, _encode_IMEI } from "../TS33128Payloads/IMEI.ta.mjs";
-// export { IMEI, _decode_IMEI, _encode_IMEI } from "../TS33128Payloads/IMEI.ta.mjs";
 import { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
-// export { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
 import { GUTI, _decode_GUTI, _encode_GUTI } from "../TS33128Payloads/GUTI.ta.mjs";
-// export { GUTI, _decode_GUTI, _encode_GUTI } from "../TS33128Payloads/GUTI.ta.mjs";
 
 
 /**
@@ -82,7 +79,11 @@ class MMEPositioningInfoTransfer {
          * @readonly
          */
         readonly mMELCSCorrelationId: OCTET_STRING
-    ) {}
+    ) {
+        if (this.mMELCSCorrelationId !== undefined && (this.mMELCSCorrelationId.length < 4 || this.mMELCSCorrelationId.length > 4)) {
+            throw new ASN1SizeError("MMEPositioningInfoTransfer.mMELCSCorrelationId violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a MMEPositioningInfoTransfer

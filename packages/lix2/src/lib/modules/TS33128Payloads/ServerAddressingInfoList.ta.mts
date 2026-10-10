@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServerAddressingInfo, _decode_ServerAddressingInfo, _encode_ServerAddressingInfo } from "../TS33128Payloads/ServerAddressingInfo.ta.mjs";
-// export { ServerAddressingInfo, _decode_ServerAddressingInfo, _encode_ServerAddressingInfo } from "../TS33128Payloads/ServerAddressingInfo.ta.mjs";
 
 
 /**
@@ -31,7 +31,11 @@ let _cached_decoder_for_ServerAddressingInfoList: $.ASN1Decoder<ServerAddressing
 export
 function _decode_ServerAddressingInfoList (el: _Element): ServerAddressingInfoList {
     if (!_cached_decoder_for_ServerAddressingInfoList) { _cached_decoder_for_ServerAddressingInfoList = $._decodeSequenceOf<ServerAddressingInfo>(() => _decode_ServerAddressingInfo); }
-    return _cached_decoder_for_ServerAddressingInfoList(el);
+    const _value = _cached_decoder_for_ServerAddressingInfoList(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("ServerAddressingInfoList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_ServerAddressingInfoList: $.ASN1Encoder<ServerAddressingInfoList> | null = null;

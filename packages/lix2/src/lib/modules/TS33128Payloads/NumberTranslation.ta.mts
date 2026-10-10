@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyIndication, _decode_PartyIndication, _encode_PartyIndication, _enum_for_PartyIndication } from "../TS33128Payloads/PartyIndication.ta.mjs";
-// export { PartyIndication, _enum_for_PartyIndication, PartyIndication_callingParty /* IMPORTED_LONG_ENUMERATION_ITEM */, callingParty /* IMPORTED_SHORT_ENUMERATION_ITEM */, PartyIndication_calledParty /* IMPORTED_LONG_ENUMERATION_ITEM */, calledParty /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PartyIndication, _encode_PartyIndication } from "../TS33128Payloads/PartyIndication.ta.mjs";
 import { TranslationInput, _decode_TranslationInput, _encode_TranslationInput } from "../TS33128Payloads/TranslationInput.ta.mjs";
-// export { TranslationInput, _decode_TranslationInput, _encode_TranslationInput } from "../TS33128Payloads/TranslationInput.ta.mjs";
 
 
 /**

@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GlobalRANNodeID, _decode_GlobalRANNodeID, _encode_GlobalRANNodeID } from "../TS33128Payloads/GlobalRANNodeID.ta.mjs";
-// export { GlobalRANNodeID, _decode_GlobalRANNodeID, _encode_GlobalRANNodeID } from "../TS33128Payloads/GlobalRANNodeID.ta.mjs";
 
 
 /**
@@ -31,7 +31,11 @@ let _cached_decoder_for_AreaOfInterestRANNodeList: $.ASN1Decoder<AreaOfInterestR
 export
 function _decode_AreaOfInterestRANNodeList (el: _Element): AreaOfInterestRANNodeList {
     if (!_cached_decoder_for_AreaOfInterestRANNodeList) { _cached_decoder_for_AreaOfInterestRANNodeList = $._decodeSequenceOf<GlobalRANNodeID>(() => _decode_GlobalRANNodeID); }
-    return _cached_decoder_for_AreaOfInterestRANNodeList(el);
+    const _value = _cached_decoder_for_AreaOfInterestRANNodeList(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("AreaOfInterestRANNodeList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_AreaOfInterestRANNodeList: $.ASN1Encoder<AreaOfInterestRANNodeList> | null = null;

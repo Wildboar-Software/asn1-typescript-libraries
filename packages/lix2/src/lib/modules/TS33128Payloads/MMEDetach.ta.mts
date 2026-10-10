@@ -6,23 +6,14 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMEDirection, _decode_MMEDirection, _encode_MMEDirection, _enum_for_MMEDirection } from "../TS33128Payloads/MMEDirection.ta.mjs";
-// export { MMEDirection, _enum_for_MMEDirection, MMEDirection_networkInitiated /* IMPORTED_LONG_ENUMERATION_ITEM */, networkInitiated /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMEDirection_uEInitiated /* IMPORTED_LONG_ENUMERATION_ITEM */, uEInitiated /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMEDirection, _encode_MMEDirection } from "../TS33128Payloads/MMEDirection.ta.mjs";
 import { EPSDetachType, _decode_EPSDetachType, _encode_EPSDetachType, _enum_for_EPSDetachType } from "../TS33128Payloads/EPSDetachType.ta.mjs";
-// export { EPSDetachType, _enum_for_EPSDetachType, EPSDetachType_ePSDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, ePSDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_iMSIDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, iMSIDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_combinedEPSIMSIDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, combinedEPSIMSIDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_reAttachRequired /* IMPORTED_LONG_ENUMERATION_ITEM */, reAttachRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_reAttachNotRequired /* IMPORTED_LONG_ENUMERATION_ITEM */, reAttachNotRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSDetachType_reserved /* IMPORTED_LONG_ENUMERATION_ITEM */, reserved /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EPSDetachType, _encode_EPSDetachType } from "../TS33128Payloads/EPSDetachType.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
 import { IMEI, _decode_IMEI, _encode_IMEI } from "../TS33128Payloads/IMEI.ta.mjs";
-// export { IMEI, _decode_IMEI, _encode_IMEI } from "../TS33128Payloads/IMEI.ta.mjs";
 import { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
-// export { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
 import { GUTI, _decode_GUTI, _encode_GUTI } from "../TS33128Payloads/GUTI.ta.mjs";
-// export { GUTI, _decode_GUTI, _encode_GUTI } from "../TS33128Payloads/GUTI.ta.mjs";
 import { EMMCause, _decode_EMMCause, _encode_EMMCause } from "../TS33128Payloads/EMMCause.ta.mjs";
-// export { EMMCause, _decode_EMMCause, _encode_EMMCause } from "../TS33128Payloads/EMMCause.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-// export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 import { SwitchOffIndicator, _decode_SwitchOffIndicator, _encode_SwitchOffIndicator, _enum_for_SwitchOffIndicator } from "../TS33128Payloads/SwitchOffIndicator.ta.mjs";
-// export { SwitchOffIndicator, _enum_for_SwitchOffIndicator, SwitchOffIndicator_normalDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, normalDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, SwitchOffIndicator_switchOff /* IMPORTED_LONG_ENUMERATION_ITEM */, switchOff /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SwitchOffIndicator, _encode_SwitchOffIndicator } from "../TS33128Payloads/SwitchOffIndicator.ta.mjs";
 
 
 /**

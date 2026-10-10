@@ -1,7 +1,5 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -98,21 +96,13 @@ const ACREventIDs_aCRComplete: ACREventIDs = ACREventIDs.aCRComplete; /* LONG_NA
 export
 const aCRComplete: ACREventIDs = ACREventIDs.aCRComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ACREventIDs: $.ASN1Decoder<ACREventIDs> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ACREventIDs
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ACREventIDs (el: _Element): ACREventIDs {
-    if (!_cached_decoder_for_ACREventIDs) { _cached_decoder_for_ACREventIDs = $._decodeEnumerated; }
-    return _cached_decoder_for_ACREventIDs(el);
-}
-
-let _cached_encoder_for_ACREventIDs: $.ASN1Encoder<ACREventIDs> | null = null;
+export const _decode_ACREventIDs = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ACREventIDs into an ASN.1 Element.
@@ -121,11 +111,7 @@ let _cached_encoder_for_ACREventIDs: $.ASN1Encoder<ACREventIDs> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ACREventIDs, encoded as an ASN.1 Element.
  */
-export
-function _encode_ACREventIDs (value: ACREventIDs, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ACREventIDs) { _cached_encoder_for_ACREventIDs = $._encodeEnumerated; }
-    return _cached_encoder_for_ACREventIDs(value, elGetter);
-}
+export const _encode_ACREventIDs = $._encodeEnumerated;
 
 
 /* eslint-enable */
