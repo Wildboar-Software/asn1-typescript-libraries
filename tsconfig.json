@@ -275,6 +275,9 @@
     },
     {
       "path": "./packages/lpp"
+    },
+    {
+      "path": "./packages/lawful-intercept"
     }
   ],
   "compilerOptions": {

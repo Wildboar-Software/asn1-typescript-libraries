@@ -1,0 +1,212 @@
+/* eslint-disable */
+import {
+    ASN1ConstructionError as _ConstructionError,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
+// export { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
+import { KAF, _decode_KAF, _encode_KAF } from "../TS33128Payloads/KAF.ta.mjs";
+// export { KAF, _decode_KAF, _encode_KAF } from "../TS33128Payloads/KAF.ta.mjs";
+import { KAFExpiryTime, _decode_KAFExpiryTime, _encode_KAFExpiryTime } from "../TS33128Payloads/KAFExpiryTime.ta.mjs";
+// export { KAFExpiryTime, _decode_KAFExpiryTime, _encode_KAFExpiryTime } from "../TS33128Payloads/KAFExpiryTime.ta.mjs";
+import { UAStarParams, _decode_UAStarParams, _encode_UAStarParams } from "../TS33128Payloads/UAStarParams.ta.mjs";
+// export { UAStarParams, _decode_UAStarParams, _encode_UAStarParams } from "../TS33128Payloads/UAStarParams.ta.mjs";
+
+
+/**
+ * @summary KAFParams
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * KAFParams ::= SEQUENCE
+ * {
+ *     aKID                 [1] NAI,
+ *     kAF                  [2] KAF,
+ *     kAFExpTime           [3] KAFExpiryTime,
+ *     uaStarParams         [4] UAStarParams
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class KAFParams {
+    /**
+     * @summary `aKID`.
+     * @public
+     * @readonly
+     */
+    readonly aKID: NAI;
+    /**
+     * @summary `kAF`.
+     * @public
+     * @readonly
+     */
+    readonly kAF: KAF;
+    /**
+     * @summary `kAFExpTime`.
+     * @public
+     * @readonly
+     */
+    readonly kAFExpTime: KAFExpiryTime;
+    /**
+     * @summary `uaStarParams`.
+     * @public
+     * @readonly
+     */
+    readonly uaStarParams: UAStarParams;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor (
+        aKID: NAI,
+        kAF: KAF,
+        kAFExpTime: KAFExpiryTime,
+        uaStarParams: UAStarParams,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.aKID = aKID;
+        this.kAF = kAF;
+        this.kAFExpTime = kAFExpTime;
+        this.uaStarParams = uaStarParams;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
+
+    /**
+     * @summary Restructures an object into a KAFParams
+     * @description
+     * 
+     * This takes an `object` and converts it to a `KAFParams`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `KAFParams`.
+     * @returns {KAFParams}
+     */
+    public static _from_object (_o: { [_K in keyof (KAFParams)]: (KAFParams)[_K] }): KAFParams {
+        return new KAFParams(_o.aKID, _o.kAF, _o.kAFExpTime, _o.uaStarParams, _o._unrecognizedExtensionsList);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of KAFParams
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_KAFParams: $.ComponentSpec[] = [
+    new $.ComponentSpec("aKID", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("kAF", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("kAFExpTime", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("uaStarParams", false, $.hasTag(_TagClass.context, 4))
+];
+
+/**
+ * @summary The Trailing Root Component Types of KAFParams
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_KAFParams: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of KAFParams
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_KAFParams: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_KAFParams: $.ASN1Decoder<KAFParams> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) KAFParams
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_KAFParams (el: _Element): KAFParams {
+    if (!_cached_decoder_for_KAFParams) { _cached_decoder_for_KAFParams = function (el: _Element): KAFParams {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 4) {
+        throw new _ConstructionError("KAFParams contained only " + sequence.length.toString() + " elements.");
+    }
+    sequence[0].name = "aKID";
+    sequence[1].name = "kAF";
+    sequence[2].name = "kAFExpTime";
+    sequence[3].name = "uaStarParams";
+    let aKID!: NAI;
+    let kAF!: KAF;
+    let kAFExpTime!: KAFExpiryTime;
+    let uaStarParams!: UAStarParams;
+    aKID = $._decode_implicit<NAI>(() => _decode_NAI)(sequence[0]);
+    kAF = $._decode_implicit<KAF>(() => _decode_KAF)(sequence[1]);
+    kAFExpTime = $._decode_implicit<KAFExpiryTime>(() => _decode_KAFExpiryTime)(sequence[2]);
+    uaStarParams = $._decode_explicit<UAStarParams>(() => _decode_UAStarParams)(sequence[3]);
+    return new KAFParams(
+        aKID,
+        kAF,
+        kAFExpTime,
+        uaStarParams,
+        sequence.slice(4),
+    );
+}; }
+    return _cached_decoder_for_KAFParams(el);
+}
+
+let _cached_encoder_for_KAFParams: $.ASN1Encoder<KAFParams> | null = null;
+
+/**
+ * @summary Encodes a(n) KAFParams into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The KAFParams, encoded as an ASN.1 Element.
+ */
+export
+function _encode_KAFParams (value: KAFParams, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_KAFParams) { _cached_encoder_for_KAFParams = function (value: KAFParams, elGetter: $.ASN1Encoder<KAFParams>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_NAI, $.BER)(value.aKID, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_KAF, $.BER)(value.kAF, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 3, () => _encode_KAFExpiryTime, $.BER)(value.kAFExpTime, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_explicit(_TagClass.context, 4, () => _encode_UAStarParams, $.BER)(value.uaStarParams, $.BER);
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_KAFParams(value, elGetter);
+}
+
+
+/* eslint-enable */
