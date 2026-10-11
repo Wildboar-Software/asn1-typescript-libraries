@@ -164,7 +164,7 @@ let _cached_encoder_for_TLS13EarlySecretInfo: $.ASN1Encoder<TLS13EarlySecretInfo
  */
 export
 function _encode_TLS13EarlySecretInfo (value: TLS13EarlySecretInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TLS13EarlySecretInfo) { _cached_encoder_for_TLS13EarlySecretInfo = function (value: TLS13EarlySecretInfo, elGetter: $.ASN1Encoder<TLS13EarlySecretInfo>): _Element {
+    if (!_cached_encoder_for_TLS13EarlySecretInfo) { _cached_encoder_for_TLS13EarlySecretInfo = function (value: TLS13EarlySecretInfo, _elGetter: $.ASN1Encoder<TLS13EarlySecretInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

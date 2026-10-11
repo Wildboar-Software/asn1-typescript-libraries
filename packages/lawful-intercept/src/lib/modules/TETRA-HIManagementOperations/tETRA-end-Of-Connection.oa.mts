@@ -28,12 +28,8 @@ export
 const tETRA_end_Of_Connection: OPERATION = {
     class: "OPERATION",
     decoderFor: {
-        "&ArgumentType": undefined,
-        "&ResultType": undefined,
     },
     encoderFor: {
-        "&ArgumentType": undefined,
-        "&ResultType": undefined,
     },
     "&Errors": [ other_failure_causes ] /* OBJECT_FIELD_SETTING */,
     "&operationCode": {

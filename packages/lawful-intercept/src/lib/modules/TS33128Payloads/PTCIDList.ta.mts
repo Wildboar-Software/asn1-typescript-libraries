@@ -158,7 +158,7 @@ let _cached_encoder_for_PTCIDList: $.ASN1Encoder<PTCIDList> | null = null;
  */
 export
 function _encode_PTCIDList (value: PTCIDList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCIDList) { _cached_encoder_for_PTCIDList = function (value: PTCIDList, elGetter: $.ASN1Encoder<PTCIDList>): _Element {
+    if (!_cached_encoder_for_PTCIDList) { _cached_encoder_for_PTCIDList = function (value: PTCIDList, _elGetter: $.ASN1Encoder<PTCIDList>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

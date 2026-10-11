@@ -208,7 +208,7 @@ let _cached_encoder_for_DirectDiscoveryData: $.ASN1Encoder<DirectDiscoveryData> 
  */
 export
 function _encode_DirectDiscoveryData (value: DirectDiscoveryData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DirectDiscoveryData) { _cached_encoder_for_DirectDiscoveryData = function (value: DirectDiscoveryData, elGetter: $.ASN1Encoder<DirectDiscoveryData>): _Element {
+    if (!_cached_encoder_for_DirectDiscoveryData) { _cached_encoder_for_DirectDiscoveryData = function (value: DirectDiscoveryData, _elGetter: $.ASN1Encoder<DirectDiscoveryData>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

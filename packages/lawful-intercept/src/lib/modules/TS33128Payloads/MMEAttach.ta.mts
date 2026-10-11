@@ -468,7 +468,7 @@ let _cached_encoder_for_MMEAttach: $.ASN1Encoder<MMEAttach> | null = null;
  */
 export
 function _encode_MMEAttach (value: MMEAttach, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMEAttach) { _cached_encoder_for_MMEAttach = function (value: MMEAttach, elGetter: $.ASN1Encoder<MMEAttach>): _Element {
+    if (!_cached_encoder_for_MMEAttach) { _cached_encoder_for_MMEAttach = function (value: MMEAttach, _elGetter: $.ASN1Encoder<MMEAttach>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(21 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -302,7 +302,7 @@ let _cached_encoder_for_AMFUnsuccessfulProcedure: $.ASN1Encoder<AMFUnsuccessfulP
  */
 export
 function _encode_AMFUnsuccessfulProcedure (value: AMFUnsuccessfulProcedure, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFUnsuccessfulProcedure) { _cached_encoder_for_AMFUnsuccessfulProcedure = function (value: AMFUnsuccessfulProcedure, elGetter: $.ASN1Encoder<AMFUnsuccessfulProcedure>): _Element {
+    if (!_cached_encoder_for_AMFUnsuccessfulProcedure) { _cached_encoder_for_AMFUnsuccessfulProcedure = function (value: AMFUnsuccessfulProcedure, _elGetter: $.ASN1Encoder<AMFUnsuccessfulProcedure>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(11 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

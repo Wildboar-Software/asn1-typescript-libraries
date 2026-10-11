@@ -423,7 +423,7 @@ let _cached_encoder_for_MMBoxDescription: $.ASN1Encoder<MMBoxDescription> | null
  */
 export
 function _encode_MMBoxDescription (value: MMBoxDescription, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMBoxDescription) { _cached_encoder_for_MMBoxDescription = function (value: MMBoxDescription, elGetter: $.ASN1Encoder<MMBoxDescription>): _Element {
+    if (!_cached_encoder_for_MMBoxDescription) { _cached_encoder_for_MMBoxDescription = function (value: MMBoxDescription, _elGetter: $.ASN1Encoder<MMBoxDescription>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(19 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

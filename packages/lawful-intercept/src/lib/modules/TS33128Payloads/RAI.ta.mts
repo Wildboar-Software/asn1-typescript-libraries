@@ -174,7 +174,7 @@ let _cached_encoder_for_RAI: $.ASN1Encoder<RAI> | null = null;
  */
 export
 function _encode_RAI (value: RAI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RAI) { _cached_encoder_for_RAI = function (value: RAI, elGetter: $.ASN1Encoder<RAI>): _Element {
+    if (!_cached_encoder_for_RAI) { _cached_encoder_for_RAI = function (value: RAI, _elGetter: $.ASN1Encoder<RAI>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

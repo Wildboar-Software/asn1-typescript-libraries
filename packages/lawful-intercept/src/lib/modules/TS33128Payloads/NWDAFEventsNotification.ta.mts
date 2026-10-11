@@ -178,7 +178,7 @@ let _cached_encoder_for_NWDAFEventsNotification: $.ASN1Encoder<NWDAFEventsNotifi
  */
 export
 function _encode_NWDAFEventsNotification (value: NWDAFEventsNotification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NWDAFEventsNotification) { _cached_encoder_for_NWDAFEventsNotification = function (value: NWDAFEventsNotification, elGetter: $.ASN1Encoder<NWDAFEventsNotification>): _Element {
+    if (!_cached_encoder_for_NWDAFEventsNotification) { _cached_encoder_for_NWDAFEventsNotification = function (value: NWDAFEventsNotification, _elGetter: $.ASN1Encoder<NWDAFEventsNotification>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

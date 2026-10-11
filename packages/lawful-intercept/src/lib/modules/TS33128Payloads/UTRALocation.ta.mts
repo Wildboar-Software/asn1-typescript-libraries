@@ -262,7 +262,7 @@ let _cached_encoder_for_UTRALocation: $.ASN1Encoder<UTRALocation> | null = null;
  */
 export
 function _encode_UTRALocation (value: UTRALocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UTRALocation) { _cached_encoder_for_UTRALocation = function (value: UTRALocation, elGetter: $.ASN1Encoder<UTRALocation>): _Element {
+    if (!_cached_encoder_for_UTRALocation) { _cached_encoder_for_UTRALocation = function (value: UTRALocation, _elGetter: $.ASN1Encoder<UTRALocation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

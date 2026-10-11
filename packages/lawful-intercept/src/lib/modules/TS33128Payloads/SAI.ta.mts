@@ -174,7 +174,7 @@ let _cached_encoder_for_SAI: $.ASN1Encoder<SAI> | null = null;
  */
 export
 function _encode_SAI (value: SAI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SAI) { _cached_encoder_for_SAI = function (value: SAI, elGetter: $.ASN1Encoder<SAI>): _Element {
+    if (!_cached_encoder_for_SAI) { _cached_encoder_for_SAI = function (value: SAI, _elGetter: $.ASN1Encoder<SAI>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

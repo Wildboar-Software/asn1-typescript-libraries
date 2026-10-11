@@ -161,7 +161,7 @@ let _cached_encoder_for_AMFEventArea: $.ASN1Encoder<AMFEventArea> | null = null;
  */
 export
 function _encode_AMFEventArea (value: AMFEventArea, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFEventArea) { _cached_encoder_for_AMFEventArea = function (value: AMFEventArea, elGetter: $.ASN1Encoder<AMFEventArea>): _Element {
+    if (!_cached_encoder_for_AMFEventArea) { _cached_encoder_for_AMFEventArea = function (value: AMFEventArea, _elGetter: $.ASN1Encoder<AMFEventArea>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

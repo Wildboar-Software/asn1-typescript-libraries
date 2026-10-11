@@ -174,7 +174,7 @@ let _cached_encoder_for_AMFID: $.ASN1Encoder<AMFID> | null = null;
  */
 export
 function _encode_AMFID (value: AMFID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFID) { _cached_encoder_for_AMFID = function (value: AMFID, elGetter: $.ASN1Encoder<AMFID>): _Element {
+    if (!_cached_encoder_for_AMFID) { _cached_encoder_for_AMFID = function (value: AMFID, _elGetter: $.ASN1Encoder<AMFID>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

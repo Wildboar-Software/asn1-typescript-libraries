@@ -165,7 +165,7 @@ let _cached_encoder_for_PacketDataHeaderCopy: $.ASN1Encoder<PacketDataHeaderCopy
  */
 export
 function _encode_PacketDataHeaderCopy (value: PacketDataHeaderCopy, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PacketDataHeaderCopy) { _cached_encoder_for_PacketDataHeaderCopy = function (value: PacketDataHeaderCopy, elGetter: $.ASN1Encoder<PacketDataHeaderCopy>): _Element {
+    if (!_cached_encoder_for_PacketDataHeaderCopy) { _cached_encoder_for_PacketDataHeaderCopy = function (value: PacketDataHeaderCopy, _elGetter: $.ASN1Encoder<PacketDataHeaderCopy>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

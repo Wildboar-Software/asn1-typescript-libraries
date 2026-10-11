@@ -196,7 +196,7 @@ let _cached_encoder_for_MDTConfigurationNR: $.ASN1Encoder<MDTConfigurationNR> | 
  */
 export
 function _encode_MDTConfigurationNR (value: MDTConfigurationNR, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MDTConfigurationNR) { _cached_encoder_for_MDTConfigurationNR = function (value: MDTConfigurationNR, elGetter: $.ASN1Encoder<MDTConfigurationNR>): _Element {
+    if (!_cached_encoder_for_MDTConfigurationNR) { _cached_encoder_for_MDTConfigurationNR = function (value: MDTConfigurationNR, _elGetter: $.ASN1Encoder<MDTConfigurationNR>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -223,7 +223,7 @@ let _cached_encoder_for_PointAltitudeUncertainty: $.ASN1Encoder<PointAltitudeUnc
  */
 export
 function _encode_PointAltitudeUncertainty (value: PointAltitudeUncertainty, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PointAltitudeUncertainty) { _cached_encoder_for_PointAltitudeUncertainty = function (value: PointAltitudeUncertainty, elGetter: $.ASN1Encoder<PointAltitudeUncertainty>): _Element {
+    if (!_cached_encoder_for_PointAltitudeUncertainty) { _cached_encoder_for_PointAltitudeUncertainty = function (value: PointAltitudeUncertainty, _elGetter: $.ASN1Encoder<PointAltitudeUncertainty>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

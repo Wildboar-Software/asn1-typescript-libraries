@@ -142,7 +142,7 @@ let _cached_encoder_for_MSRPPath: $.ASN1Encoder<MSRPPath> | null = null;
  */
 export
 function _encode_MSRPPath (value: MSRPPath, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MSRPPath) { _cached_encoder_for_MSRPPath = function (value: MSRPPath, elGetter: $.ASN1Encoder<MSRPPath>): _Element {
+    if (!_cached_encoder_for_MSRPPath) { _cached_encoder_for_MSRPPath = function (value: MSRPPath, _elGetter: $.ASN1Encoder<MSRPPath>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

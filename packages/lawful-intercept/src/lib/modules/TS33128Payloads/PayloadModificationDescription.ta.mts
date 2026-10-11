@@ -158,7 +158,7 @@ let _cached_encoder_for_PayloadModificationDescription: $.ASN1Encoder<PayloadMod
  */
 export
 function _encode_PayloadModificationDescription (value: PayloadModificationDescription, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PayloadModificationDescription) { _cached_encoder_for_PayloadModificationDescription = function (value: PayloadModificationDescription, elGetter: $.ASN1Encoder<PayloadModificationDescription>): _Element {
+    if (!_cached_encoder_for_PayloadModificationDescription) { _cached_encoder_for_PayloadModificationDescription = function (value: PayloadModificationDescription, _elGetter: $.ASN1Encoder<PayloadModificationDescription>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

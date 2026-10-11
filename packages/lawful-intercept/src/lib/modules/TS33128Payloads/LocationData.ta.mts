@@ -302,7 +302,7 @@ let _cached_encoder_for_LocationData: $.ASN1Encoder<LocationData> | null = null;
  */
 export
 function _encode_LocationData (value: LocationData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LocationData) { _cached_encoder_for_LocationData = function (value: LocationData, elGetter: $.ASN1Encoder<LocationData>): _Element {
+    if (!_cached_encoder_for_LocationData) { _cached_encoder_for_LocationData = function (value: LocationData, _elGetter: $.ASN1Encoder<LocationData>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(11 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

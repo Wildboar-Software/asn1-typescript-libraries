@@ -178,7 +178,7 @@ let _cached_encoder_for_PointUncertaintyCircle: $.ASN1Encoder<PointUncertaintyCi
  */
 export
 function _encode_PointUncertaintyCircle (value: PointUncertaintyCircle, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PointUncertaintyCircle) { _cached_encoder_for_PointUncertaintyCircle = function (value: PointUncertaintyCircle, elGetter: $.ASN1Encoder<PointUncertaintyCircle>): _Element {
+    if (!_cached_encoder_for_PointUncertaintyCircle) { _cached_encoder_for_PointUncertaintyCircle = function (value: PointUncertaintyCircle, _elGetter: $.ASN1Encoder<PointUncertaintyCircle>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

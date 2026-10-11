@@ -308,7 +308,7 @@ let _cached_encoder_for_MMERANTraceReport: $.ASN1Encoder<MMERANTraceReport> | nu
  */
 export
 function _encode_MMERANTraceReport (value: MMERANTraceReport, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMERANTraceReport) { _cached_encoder_for_MMERANTraceReport = function (value: MMERANTraceReport, elGetter: $.ASN1Encoder<MMERANTraceReport>): _Element {
+    if (!_cached_encoder_for_MMERANTraceReport) { _cached_encoder_for_MMERANTraceReport = function (value: MMERANTraceReport, _elGetter: $.ASN1Encoder<MMERANTraceReport>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(11 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

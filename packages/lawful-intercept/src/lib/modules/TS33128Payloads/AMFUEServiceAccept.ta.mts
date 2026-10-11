@@ -293,7 +293,7 @@ let _cached_encoder_for_AMFUEServiceAccept: $.ASN1Encoder<AMFUEServiceAccept> | 
  */
 export
 function _encode_AMFUEServiceAccept (value: AMFUEServiceAccept, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFUEServiceAccept) { _cached_encoder_for_AMFUEServiceAccept = function (value: AMFUEServiceAccept, elGetter: $.ASN1Encoder<AMFUEServiceAccept>): _Element {
+    if (!_cached_encoder_for_AMFUEServiceAccept) { _cached_encoder_for_AMFUEServiceAccept = function (value: AMFUEServiceAccept, _elGetter: $.ASN1Encoder<AMFUEServiceAccept>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(10 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

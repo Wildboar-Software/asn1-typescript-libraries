@@ -200,7 +200,7 @@ let _cached_encoder_for_SNSSAI: $.ASN1Encoder<SNSSAI> | null = null;
  */
 export
 function _encode_SNSSAI (value: SNSSAI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SNSSAI) { _cached_encoder_for_SNSSAI = function (value: SNSSAI, elGetter: $.ASN1Encoder<SNSSAI>): _Element {
+    if (!_cached_encoder_for_SNSSAI) { _cached_encoder_for_SNSSAI = function (value: SNSSAI, _elGetter: $.ASN1Encoder<SNSSAI>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

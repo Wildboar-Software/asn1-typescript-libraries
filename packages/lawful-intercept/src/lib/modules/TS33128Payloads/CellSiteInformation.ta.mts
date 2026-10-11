@@ -178,7 +178,7 @@ let _cached_encoder_for_CellSiteInformation: $.ASN1Encoder<CellSiteInformation> 
  */
 export
 function _encode_CellSiteInformation (value: CellSiteInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CellSiteInformation) { _cached_encoder_for_CellSiteInformation = function (value: CellSiteInformation, elGetter: $.ASN1Encoder<CellSiteInformation>): _Element {
+    if (!_cached_encoder_for_CellSiteInformation) { _cached_encoder_for_CellSiteInformation = function (value: CellSiteInformation, _elGetter: $.ASN1Encoder<CellSiteInformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

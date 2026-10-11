@@ -180,7 +180,7 @@ let _cached_encoder_for_MCXCMMessage: $.ASN1Encoder<MCXCMMessage> | null = null;
  */
 export
 function _encode_MCXCMMessage (value: MCXCMMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCXCMMessage) { _cached_encoder_for_MCXCMMessage = function (value: MCXCMMessage, elGetter: $.ASN1Encoder<MCXCMMessage>): _Element {
+    if (!_cached_encoder_for_MCXCMMessage) { _cached_encoder_for_MCXCMMessage = function (value: MCXCMMessage, _elGetter: $.ASN1Encoder<MCXCMMessage>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

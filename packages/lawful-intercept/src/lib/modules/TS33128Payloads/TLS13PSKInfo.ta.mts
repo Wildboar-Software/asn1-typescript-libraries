@@ -201,7 +201,7 @@ let _cached_encoder_for_TLS13PSKInfo: $.ASN1Encoder<TLS13PSKInfo> | null = null;
  */
 export
 function _encode_TLS13PSKInfo (value: TLS13PSKInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TLS13PSKInfo) { _cached_encoder_for_TLS13PSKInfo = function (value: TLS13PSKInfo, elGetter: $.ASN1Encoder<TLS13PSKInfo>): _Element {
+    if (!_cached_encoder_for_TLS13PSKInfo) { _cached_encoder_for_TLS13PSKInfo = function (value: TLS13PSKInfo, _elGetter: $.ASN1Encoder<TLS13PSKInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

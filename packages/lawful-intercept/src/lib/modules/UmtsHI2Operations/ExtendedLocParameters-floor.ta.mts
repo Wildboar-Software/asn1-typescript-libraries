@@ -149,7 +149,7 @@ let _cached_encoder_for_ExtendedLocParameters_floor: $.ASN1Encoder<ExtendedLocPa
  */
 export
 function _encode_ExtendedLocParameters_floor (value: ExtendedLocParameters_floor, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExtendedLocParameters_floor) { _cached_encoder_for_ExtendedLocParameters_floor = function (value: ExtendedLocParameters_floor, elGetter: $.ASN1Encoder<ExtendedLocParameters_floor>): _Element {
+    if (!_cached_encoder_for_ExtendedLocParameters_floor) { _cached_encoder_for_ExtendedLocParameters_floor = function (value: ExtendedLocParameters_floor, _elGetter: $.ASN1Encoder<ExtendedLocParameters_floor>): _Element {
     const _components: _Element[] = new Array(2);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encodePrintableString(value.floor_number, $.BER);

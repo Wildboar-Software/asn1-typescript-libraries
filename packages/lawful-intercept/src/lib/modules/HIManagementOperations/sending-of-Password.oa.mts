@@ -31,11 +31,9 @@ const sending_of_Password: OPERATION<Password_Name> = {
     class: "OPERATION",
     decoderFor: {
         "&ArgumentType": _decode_Password_Name,
-        "&ResultType": undefined,
     },
     encoderFor: {
         "&ArgumentType": _encode_Password_Name,
-        "&ResultType": undefined,
     },
     "&Errors": ErrorsHim /* OBJECT_FIELD_SETTING */,
     "&operationCode": {

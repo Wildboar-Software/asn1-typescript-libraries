@@ -220,7 +220,7 @@ let _cached_encoder_for_ACProfile: $.ASN1Encoder<ACProfile> | null = null;
  */
 export
 function _encode_ACProfile (value: ACProfile, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ACProfile) { _cached_encoder_for_ACProfile = function (value: ACProfile, elGetter: $.ASN1Encoder<ACProfile>): _Element {
+    if (!_cached_encoder_for_ACProfile) { _cached_encoder_for_ACProfile = function (value: ACProfile, _elGetter: $.ASN1Encoder<ACProfile>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

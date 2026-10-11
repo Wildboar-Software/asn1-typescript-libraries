@@ -149,7 +149,7 @@ let _cached_encoder_for_Voip_CC_PDU: $.ASN1Encoder<Voip_CC_PDU> | null = null;
  */
 export
 function _encode_Voip_CC_PDU (value: Voip_CC_PDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Voip_CC_PDU) { _cached_encoder_for_Voip_CC_PDU = function (value: Voip_CC_PDU, elGetter: $.ASN1Encoder<Voip_CC_PDU>): _Element {
+    if (!_cached_encoder_for_Voip_CC_PDU) { _cached_encoder_for_Voip_CC_PDU = function (value: Voip_CC_PDU, _elGetter: $.ASN1Encoder<Voip_CC_PDU>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_VoipLIC_header, $.BER)(value.voipLIC_header, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeOctetString, $.BER)(value.payload, $.BER)

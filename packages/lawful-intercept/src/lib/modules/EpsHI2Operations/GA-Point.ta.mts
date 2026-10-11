@@ -142,7 +142,7 @@ let _cached_encoder_for_GA_Point: $.ASN1Encoder<GA_Point> | null = null;
  */
 export
 function _encode_GA_Point (value: GA_Point, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GA_Point) { _cached_encoder_for_GA_Point = function (value: GA_Point, elGetter: $.ASN1Encoder<GA_Point>): _Element {
+    if (!_cached_encoder_for_GA_Point) { _cached_encoder_for_GA_Point = function (value: GA_Point, _elGetter: $.ASN1Encoder<GA_Point>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

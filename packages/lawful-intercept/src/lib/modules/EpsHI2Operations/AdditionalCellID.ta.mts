@@ -191,7 +191,7 @@ let _cached_encoder_for_AdditionalCellID: $.ASN1Encoder<AdditionalCellID> | null
  */
 export
 function _encode_AdditionalCellID (value: AdditionalCellID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AdditionalCellID) { _cached_encoder_for_AdditionalCellID = function (value: AdditionalCellID, elGetter: $.ASN1Encoder<AdditionalCellID>): _Element {
+    if (!_cached_encoder_for_AdditionalCellID) { _cached_encoder_for_AdditionalCellID = function (value: AdditionalCellID, _elGetter: $.ASN1Encoder<AdditionalCellID>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

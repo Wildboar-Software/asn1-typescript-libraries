@@ -161,7 +161,7 @@ let _cached_encoder_for_SMFServingNetwork: $.ASN1Encoder<SMFServingNetwork> | nu
  */
 export
 function _encode_SMFServingNetwork (value: SMFServingNetwork, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMFServingNetwork) { _cached_encoder_for_SMFServingNetwork = function (value: SMFServingNetwork, elGetter: $.ASN1Encoder<SMFServingNetwork>): _Element {
+    if (!_cached_encoder_for_SMFServingNetwork) { _cached_encoder_for_SMFServingNetwork = function (value: SMFServingNetwork, _elGetter: $.ASN1Encoder<SMFServingNetwork>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -164,7 +164,7 @@ let _cached_encoder_for_NumberTranslation: $.ASN1Encoder<NumberTranslation> | nu
  */
 export
 function _encode_NumberTranslation (value: NumberTranslation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NumberTranslation) { _cached_encoder_for_NumberTranslation = function (value: NumberTranslation, elGetter: $.ASN1Encoder<NumberTranslation>): _Element {
+    if (!_cached_encoder_for_NumberTranslation) { _cached_encoder_for_NumberTranslation = function (value: NumberTranslation, _elGetter: $.ASN1Encoder<NumberTranslation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

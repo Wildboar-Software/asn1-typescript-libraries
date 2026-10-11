@@ -284,7 +284,7 @@ let _cached_encoder_for_MMEDetach: $.ASN1Encoder<MMEDetach> | null = null;
  */
 export
 function _encode_MMEDetach (value: MMEDetach, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMEDetach) { _cached_encoder_for_MMEDetach = function (value: MMEDetach, elGetter: $.ASN1Encoder<MMEDetach>): _Element {
+    if (!_cached_encoder_for_MMEDetach) { _cached_encoder_for_MMEDetach = function (value: MMEDetach, _elGetter: $.ASN1Encoder<MMEDetach>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

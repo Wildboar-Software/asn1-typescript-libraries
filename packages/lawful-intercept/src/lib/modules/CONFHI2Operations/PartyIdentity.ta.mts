@@ -163,7 +163,7 @@ let _cached_encoder_for_PartyIdentity: $.ASN1Encoder<PartyIdentity> | null = nul
  */
 export
 function _encode_PartyIdentity (value: PartyIdentity, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PartyIdentity) { _cached_encoder_for_PartyIdentity = function (value: PartyIdentity, elGetter: $.ASN1Encoder<PartyIdentity>): _Element {
+    if (!_cached_encoder_for_PartyIdentity) { _cached_encoder_for_PartyIdentity = function (value: PartyIdentity, _elGetter: $.ASN1Encoder<PartyIdentity>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

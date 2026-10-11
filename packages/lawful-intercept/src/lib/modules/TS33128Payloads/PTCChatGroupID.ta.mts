@@ -142,7 +142,7 @@ let _cached_encoder_for_PTCChatGroupID: $.ASN1Encoder<PTCChatGroupID> | null = n
  */
 export
 function _encode_PTCChatGroupID (value: PTCChatGroupID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCChatGroupID) { _cached_encoder_for_PTCChatGroupID = function (value: PTCChatGroupID, elGetter: $.ASN1Encoder<PTCChatGroupID>): _Element {
+    if (!_cached_encoder_for_PTCChatGroupID) { _cached_encoder_for_PTCChatGroupID = function (value: PTCChatGroupID, _elGetter: $.ASN1Encoder<PTCChatGroupID>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

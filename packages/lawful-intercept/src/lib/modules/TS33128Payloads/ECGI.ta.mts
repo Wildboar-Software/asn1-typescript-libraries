@@ -176,7 +176,7 @@ let _cached_encoder_for_ECGI: $.ASN1Encoder<ECGI> | null = null;
  */
 export
 function _encode_ECGI (value: ECGI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ECGI) { _cached_encoder_for_ECGI = function (value: ECGI, elGetter: $.ASN1Encoder<ECGI>): _Element {
+    if (!_cached_encoder_for_ECGI) { _cached_encoder_for_ECGI = function (value: ECGI, _elGetter: $.ASN1Encoder<ECGI>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

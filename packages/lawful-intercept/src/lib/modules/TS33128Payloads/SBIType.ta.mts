@@ -158,7 +158,7 @@ let _cached_encoder_for_SBIType: $.ASN1Encoder<SBIType> | null = null;
  */
 export
 function _encode_SBIType (value: SBIType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SBIType) { _cached_encoder_for_SBIType = function (value: SBIType, elGetter: $.ASN1Encoder<SBIType>): _Element {
+    if (!_cached_encoder_for_SBIType) { _cached_encoder_for_SBIType = function (value: SBIType, _elGetter: $.ASN1Encoder<SBIType>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

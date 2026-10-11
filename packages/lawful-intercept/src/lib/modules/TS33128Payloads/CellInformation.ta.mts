@@ -206,7 +206,7 @@ let _cached_encoder_for_CellInformation: $.ASN1Encoder<CellInformation> | null =
  */
 export
 function _encode_CellInformation (value: CellInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CellInformation) { _cached_encoder_for_CellInformation = function (value: CellInformation, elGetter: $.ASN1Encoder<CellInformation>): _Element {
+    if (!_cached_encoder_for_CellInformation) { _cached_encoder_for_CellInformation = function (value: CellInformation, _elGetter: $.ASN1Encoder<CellInformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

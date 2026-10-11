@@ -571,7 +571,7 @@ let _cached_encoder_for_EPSPDNConnectionModification: $.ASN1Encoder<EPSPDNConnec
  */
 export
 function _encode_EPSPDNConnectionModification (value: EPSPDNConnectionModification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSPDNConnectionModification) { _cached_encoder_for_EPSPDNConnectionModification = function (value: EPSPDNConnectionModification, elGetter: $.ASN1Encoder<EPSPDNConnectionModification>): _Element {
+    if (!_cached_encoder_for_EPSPDNConnectionModification) { _cached_encoder_for_EPSPDNConnectionModification = function (value: EPSPDNConnectionModification, _elGetter: $.ASN1Encoder<EPSPDNConnectionModification>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(28 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

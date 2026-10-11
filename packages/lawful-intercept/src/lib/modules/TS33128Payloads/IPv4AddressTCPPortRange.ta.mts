@@ -158,7 +158,7 @@ let _cached_encoder_for_IPv4AddressTCPPortRange: $.ASN1Encoder<IPv4AddressTCPPor
  */
 export
 function _encode_IPv4AddressTCPPortRange (value: IPv4AddressTCPPortRange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IPv4AddressTCPPortRange) { _cached_encoder_for_IPv4AddressTCPPortRange = function (value: IPv4AddressTCPPortRange, elGetter: $.ASN1Encoder<IPv4AddressTCPPortRange>): _Element {
+    if (!_cached_encoder_for_IPv4AddressTCPPortRange) { _cached_encoder_for_IPv4AddressTCPPortRange = function (value: IPv4AddressTCPPortRange, _elGetter: $.ASN1Encoder<IPv4AddressTCPPortRange>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

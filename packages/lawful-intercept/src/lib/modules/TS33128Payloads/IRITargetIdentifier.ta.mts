@@ -167,7 +167,7 @@ let _cached_encoder_for_IRITargetIdentifier: $.ASN1Encoder<IRITargetIdentifier> 
  */
 export
 function _encode_IRITargetIdentifier (value: IRITargetIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IRITargetIdentifier) { _cached_encoder_for_IRITargetIdentifier = function (value: IRITargetIdentifier, elGetter: $.ASN1Encoder<IRITargetIdentifier>): _Element {
+    if (!_cached_encoder_for_IRITargetIdentifier) { _cached_encoder_for_IRITargetIdentifier = function (value: IRITargetIdentifier, _elGetter: $.ASN1Encoder<IRITargetIdentifier>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

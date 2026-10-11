@@ -31,11 +31,9 @@ const sending_of_HI1_Notification: OPERATION<HI1_Operation> = {
     class: "OPERATION",
     decoderFor: {
         "&ArgumentType": _decode_HI1_Operation,
-        "&ResultType": undefined,
     },
     encoderFor: {
         "&ArgumentType": _encode_HI1_Operation,
-        "&ResultType": undefined,
     },
     "&Errors": ErrorHI1Notifications /* OBJECT_FIELD_SETTING */,
     "&operationCode": {

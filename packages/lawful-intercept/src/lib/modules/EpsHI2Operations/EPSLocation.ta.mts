@@ -300,7 +300,7 @@ let _cached_encoder_for_EPSLocation: $.ASN1Encoder<EPSLocation> | null = null;
  */
 export
 function _encode_EPSLocation (value: EPSLocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSLocation) { _cached_encoder_for_EPSLocation = function (value: EPSLocation, elGetter: $.ASN1Encoder<EPSLocation>): _Element {
+    if (!_cached_encoder_for_EPSLocation) { _cached_encoder_for_EPSLocation = function (value: EPSLocation, _elGetter: $.ASN1Encoder<EPSLocation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(10 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

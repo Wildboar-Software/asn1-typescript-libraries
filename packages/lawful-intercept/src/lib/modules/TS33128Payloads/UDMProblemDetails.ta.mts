@@ -146,7 +146,7 @@ let _cached_encoder_for_UDMProblemDetails: $.ASN1Encoder<UDMProblemDetails> | nu
  */
 export
 function _encode_UDMProblemDetails (value: UDMProblemDetails, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UDMProblemDetails) { _cached_encoder_for_UDMProblemDetails = function (value: UDMProblemDetails, elGetter: $.ASN1Encoder<UDMProblemDetails>): _Element {
+    if (!_cached_encoder_for_UDMProblemDetails) { _cached_encoder_for_UDMProblemDetails = function (value: UDMProblemDetails, _elGetter: $.ASN1Encoder<UDMProblemDetails>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

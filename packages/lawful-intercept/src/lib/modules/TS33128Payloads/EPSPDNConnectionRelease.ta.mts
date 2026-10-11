@@ -287,7 +287,7 @@ let _cached_encoder_for_EPSPDNConnectionRelease: $.ASN1Encoder<EPSPDNConnectionR
  */
 export
 function _encode_EPSPDNConnectionRelease (value: EPSPDNConnectionRelease, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSPDNConnectionRelease) { _cached_encoder_for_EPSPDNConnectionRelease = function (value: EPSPDNConnectionRelease, elGetter: $.ASN1Encoder<EPSPDNConnectionRelease>): _Element {
+    if (!_cached_encoder_for_EPSPDNConnectionRelease) { _cached_encoder_for_EPSPDNConnectionRelease = function (value: EPSPDNConnectionRelease, _elGetter: $.ASN1Encoder<EPSPDNConnectionRelease>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(10 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

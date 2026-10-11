@@ -221,7 +221,7 @@ let _cached_encoder_for_F1Information: $.ASN1Encoder<F1Information> | null = nul
  */
 export
 function _encode_F1Information (value: F1Information, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_F1Information) { _cached_encoder_for_F1Information = function (value: F1Information, elGetter: $.ASN1Encoder<F1Information>): _Element {
+    if (!_cached_encoder_for_F1Information) { _cached_encoder_for_F1Information = function (value: F1Information, _elGetter: $.ASN1Encoder<F1Information>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

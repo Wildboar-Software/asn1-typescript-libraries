@@ -156,7 +156,7 @@ let _cached_encoder_for_MMFlags: $.ASN1Encoder<MMFlags> | null = null;
  */
 export
 function _encode_MMFlags (value: MMFlags, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMFlags) { _cached_encoder_for_MMFlags = function (value: MMFlags, elGetter: $.ASN1Encoder<MMFlags>): _Element {
+    if (!_cached_encoder_for_MMFlags) { _cached_encoder_for_MMFlags = function (value: MMFlags, _elGetter: $.ASN1Encoder<MMFlags>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_TokenAction, $.BER)(value.tokenAction, $.BER),
         /* REQUIRED   */ $._encode_explicit(_TagClass.context, 2, () => _encode_EncodedString, $.BER)(value.mmFlagkeywords, $.BER)

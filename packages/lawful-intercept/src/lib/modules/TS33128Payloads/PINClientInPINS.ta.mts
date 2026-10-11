@@ -206,7 +206,7 @@ let _cached_encoder_for_PINClientInPINS: $.ASN1Encoder<PINClientInPINS> | null =
  */
 export
 function _encode_PINClientInPINS (value: PINClientInPINS, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PINClientInPINS) { _cached_encoder_for_PINClientInPINS = function (value: PINClientInPINS, elGetter: $.ASN1Encoder<PINClientInPINS>): _Element {
+    if (!_cached_encoder_for_PINClientInPINS) { _cached_encoder_for_PINClientInPINS = function (value: PINClientInPINS, _elGetter: $.ASN1Encoder<PINClientInPINS>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

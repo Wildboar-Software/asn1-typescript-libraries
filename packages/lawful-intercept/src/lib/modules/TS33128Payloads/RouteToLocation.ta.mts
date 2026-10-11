@@ -158,7 +158,7 @@ let _cached_encoder_for_RouteToLocation: $.ASN1Encoder<RouteToLocation> | null =
  */
 export
 function _encode_RouteToLocation (value: RouteToLocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RouteToLocation) { _cached_encoder_for_RouteToLocation = function (value: RouteToLocation, elGetter: $.ASN1Encoder<RouteToLocation>): _Element {
+    if (!_cached_encoder_for_RouteToLocation) { _cached_encoder_for_RouteToLocation = function (value: RouteToLocation, _elGetter: $.ASN1Encoder<RouteToLocation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

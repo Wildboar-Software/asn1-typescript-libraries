@@ -174,7 +174,7 @@ let _cached_encoder_for_PFDFlowDescription: $.ASN1Encoder<PFDFlowDescription> | 
  */
 export
 function _encode_PFDFlowDescription (value: PFDFlowDescription, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PFDFlowDescription) { _cached_encoder_for_PFDFlowDescription = function (value: PFDFlowDescription, elGetter: $.ASN1Encoder<PFDFlowDescription>): _Element {
+    if (!_cached_encoder_for_PFDFlowDescription) { _cached_encoder_for_PFDFlowDescription = function (value: PFDFlowDescription, _elGetter: $.ASN1Encoder<PFDFlowDescription>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

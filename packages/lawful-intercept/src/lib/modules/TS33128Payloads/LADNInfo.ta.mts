@@ -166,7 +166,7 @@ let _cached_encoder_for_LADNInfo: $.ASN1Encoder<LADNInfo> | null = null;
  */
 export
 function _encode_LADNInfo (value: LADNInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LADNInfo) { _cached_encoder_for_LADNInfo = function (value: LADNInfo, elGetter: $.ASN1Encoder<LADNInfo>): _Element {
+    if (!_cached_encoder_for_LADNInfo) { _cached_encoder_for_LADNInfo = function (value: LADNInfo, _elGetter: $.ASN1Encoder<LADNInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -235,7 +235,7 @@ let _cached_encoder_for_MMEPositioningInfoTransfer: $.ASN1Encoder<MMEPositioning
  */
 export
 function _encode_MMEPositioningInfoTransfer (value: MMEPositioningInfoTransfer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMEPositioningInfoTransfer) { _cached_encoder_for_MMEPositioningInfoTransfer = function (value: MMEPositioningInfoTransfer, elGetter: $.ASN1Encoder<MMEPositioningInfoTransfer>): _Element {
+    if (!_cached_encoder_for_MMEPositioningInfoTransfer) { _cached_encoder_for_MMEPositioningInfoTransfer = function (value: MMEPositioningInfoTransfer, _elGetter: $.ASN1Encoder<MMEPositioningInfoTransfer>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -269,7 +269,7 @@ let _cached_encoder_for_NEFDeviceTriggerReplace: $.ASN1Encoder<NEFDeviceTriggerR
  */
 export
 function _encode_NEFDeviceTriggerReplace (value: NEFDeviceTriggerReplace, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NEFDeviceTriggerReplace) { _cached_encoder_for_NEFDeviceTriggerReplace = function (value: NEFDeviceTriggerReplace, elGetter: $.ASN1Encoder<NEFDeviceTriggerReplace>): _Element {
+    if (!_cached_encoder_for_NEFDeviceTriggerReplace) { _cached_encoder_for_NEFDeviceTriggerReplace = function (value: NEFDeviceTriggerReplace, _elGetter: $.ASN1Encoder<NEFDeviceTriggerReplace>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -211,7 +211,7 @@ let _cached_encoder_for_KMMessage: $.ASN1Encoder<KMMessage> | null = null;
  */
 export
 function _encode_KMMessage (value: KMMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KMMessage) { _cached_encoder_for_KMMessage = function (value: KMMessage, elGetter: $.ASN1Encoder<KMMessage>): _Element {
+    if (!_cached_encoder_for_KMMessage) { _cached_encoder_for_KMMessage = function (value: KMMessage, _elGetter: $.ASN1Encoder<KMMessage>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

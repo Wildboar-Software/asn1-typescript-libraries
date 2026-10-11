@@ -186,7 +186,7 @@ let _cached_encoder_for_UserCSGInformation: $.ASN1Encoder<UserCSGInformation> | 
  */
 export
 function _encode_UserCSGInformation (value: UserCSGInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UserCSGInformation) { _cached_encoder_for_UserCSGInformation = function (value: UserCSGInformation, elGetter: $.ASN1Encoder<UserCSGInformation>): _Element {
+    if (!_cached_encoder_for_UserCSGInformation) { _cached_encoder_for_UserCSGInformation = function (value: UserCSGInformation, _elGetter: $.ASN1Encoder<UserCSGInformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

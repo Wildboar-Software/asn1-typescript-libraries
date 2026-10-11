@@ -161,7 +161,7 @@ let _cached_encoder_for_STIRSHAKENSignatureGeneration: $.ASN1Encoder<STIRSHAKENS
  */
 export
 function _encode_STIRSHAKENSignatureGeneration (value: STIRSHAKENSignatureGeneration, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_STIRSHAKENSignatureGeneration) { _cached_encoder_for_STIRSHAKENSignatureGeneration = function (value: STIRSHAKENSignatureGeneration, elGetter: $.ASN1Encoder<STIRSHAKENSignatureGeneration>): _Element {
+    if (!_cached_encoder_for_STIRSHAKENSignatureGeneration) { _cached_encoder_for_STIRSHAKENSignatureGeneration = function (value: STIRSHAKENSignatureGeneration, _elGetter: $.ASN1Encoder<STIRSHAKENSignatureGeneration>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

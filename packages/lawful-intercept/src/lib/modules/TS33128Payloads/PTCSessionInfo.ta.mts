@@ -163,7 +163,7 @@ let _cached_encoder_for_PTCSessionInfo: $.ASN1Encoder<PTCSessionInfo> | null = n
  */
 export
 function _encode_PTCSessionInfo (value: PTCSessionInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCSessionInfo) { _cached_encoder_for_PTCSessionInfo = function (value: PTCSessionInfo, elGetter: $.ASN1Encoder<PTCSessionInfo>): _Element {
+    if (!_cached_encoder_for_PTCSessionInfo) { _cached_encoder_for_PTCSessionInfo = function (value: PTCSessionInfo, _elGetter: $.ASN1Encoder<PTCSessionInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

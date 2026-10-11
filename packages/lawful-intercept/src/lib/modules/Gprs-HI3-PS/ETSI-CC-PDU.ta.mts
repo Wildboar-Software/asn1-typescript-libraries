@@ -162,7 +162,7 @@ let _cached_encoder_for_ETSI_CC_PDU: $.ASN1Encoder<ETSI_CC_PDU> | null = null;
  */
 export
 function _encode_ETSI_CC_PDU (value: ETSI_CC_PDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ETSI_CC_PDU) { _cached_encoder_for_ETSI_CC_PDU = function (value: ETSI_CC_PDU, elGetter: $.ASN1Encoder<ETSI_CC_PDU>): _Element {
+    if (!_cached_encoder_for_ETSI_CC_PDU) { _cached_encoder_for_ETSI_CC_PDU = function (value: ETSI_CC_PDU, _elGetter: $.ASN1Encoder<ETSI_CC_PDU>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

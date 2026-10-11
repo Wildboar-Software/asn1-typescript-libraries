@@ -170,7 +170,7 @@ let _cached_encoder_for_VLANTag: $.ASN1Encoder<VLANTag> | null = null;
  */
 export
 function _encode_VLANTag (value: VLANTag, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_VLANTag) { _cached_encoder_for_VLANTag = function (value: VLANTag, elGetter: $.ASN1Encoder<VLANTag>): _Element {
+    if (!_cached_encoder_for_VLANTag) { _cached_encoder_for_VLANTag = function (value: VLANTag, _elGetter: $.ASN1Encoder<VLANTag>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -274,7 +274,7 @@ let _cached_encoder_for_PTCPreEstablishedSession: $.ASN1Encoder<PTCPreEstablishe
  */
 export
 function _encode_PTCPreEstablishedSession (value: PTCPreEstablishedSession, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCPreEstablishedSession) { _cached_encoder_for_PTCPreEstablishedSession = function (value: PTCPreEstablishedSession, elGetter: $.ASN1Encoder<PTCPreEstablishedSession>): _Element {
+    if (!_cached_encoder_for_PTCPreEstablishedSession) { _cached_encoder_for_PTCPreEstablishedSession = function (value: PTCPreEstablishedSession, _elGetter: $.ASN1Encoder<PTCPreEstablishedSession>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

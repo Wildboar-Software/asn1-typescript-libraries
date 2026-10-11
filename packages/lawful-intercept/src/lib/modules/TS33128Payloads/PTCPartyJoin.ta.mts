@@ -238,7 +238,7 @@ let _cached_encoder_for_PTCPartyJoin: $.ASN1Encoder<PTCPartyJoin> | null = null;
  */
 export
 function _encode_PTCPartyJoin (value: PTCPartyJoin, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCPartyJoin) { _cached_encoder_for_PTCPartyJoin = function (value: PTCPartyJoin, elGetter: $.ASN1Encoder<PTCPartyJoin>): _Element {
+    if (!_cached_encoder_for_PTCPartyJoin) { _cached_encoder_for_PTCPartyJoin = function (value: PTCPartyJoin, _elGetter: $.ASN1Encoder<PTCPartyJoin>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

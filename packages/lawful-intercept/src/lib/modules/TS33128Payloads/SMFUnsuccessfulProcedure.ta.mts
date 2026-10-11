@@ -474,7 +474,7 @@ let _cached_encoder_for_SMFUnsuccessfulProcedure: $.ASN1Encoder<SMFUnsuccessfulP
  */
 export
 function _encode_SMFUnsuccessfulProcedure (value: SMFUnsuccessfulProcedure, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMFUnsuccessfulProcedure) { _cached_encoder_for_SMFUnsuccessfulProcedure = function (value: SMFUnsuccessfulProcedure, elGetter: $.ASN1Encoder<SMFUnsuccessfulProcedure>): _Element {
+    if (!_cached_encoder_for_SMFUnsuccessfulProcedure) { _cached_encoder_for_SMFUnsuccessfulProcedure = function (value: SMFUnsuccessfulProcedure, _elGetter: $.ASN1Encoder<SMFUnsuccessfulProcedure>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(21 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

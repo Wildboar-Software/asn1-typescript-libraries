@@ -164,7 +164,7 @@ let _cached_encoder_for_TLS13HandshakeSecretInfo: $.ASN1Encoder<TLS13HandshakeSe
  */
 export
 function _encode_TLS13HandshakeSecretInfo (value: TLS13HandshakeSecretInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TLS13HandshakeSecretInfo) { _cached_encoder_for_TLS13HandshakeSecretInfo = function (value: TLS13HandshakeSecretInfo, elGetter: $.ASN1Encoder<TLS13HandshakeSecretInfo>): _Element {
+    if (!_cached_encoder_for_TLS13HandshakeSecretInfo) { _cached_encoder_for_TLS13HandshakeSecretInfo = function (value: TLS13HandshakeSecretInfo, _elGetter: $.ASN1Encoder<TLS13HandshakeSecretInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -176,7 +176,7 @@ let _cached_encoder_for_PANIHeaderInfo: $.ASN1Encoder<PANIHeaderInfo> | null = n
  */
 export
 function _encode_PANIHeaderInfo (value: PANIHeaderInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PANIHeaderInfo) { _cached_encoder_for_PANIHeaderInfo = function (value: PANIHeaderInfo, elGetter: $.ASN1Encoder<PANIHeaderInfo>): _Element {
+    if (!_cached_encoder_for_PANIHeaderInfo) { _cached_encoder_for_PANIHeaderInfo = function (value: PANIHeaderInfo, _elGetter: $.ASN1Encoder<PANIHeaderInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -595,7 +595,7 @@ let _cached_encoder_for_MMSSend: $.ASN1Encoder<MMSSend> | null = null;
  */
 export
 function _encode_MMSSend (value: MMSSend, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSSend) { _cached_encoder_for_MMSSend = function (value: MMSSend, elGetter: $.ASN1Encoder<MMSSend>): _Element {
+    if (!_cached_encoder_for_MMSSend) { _cached_encoder_for_MMSSend = function (value: MMSSend, _elGetter: $.ASN1Encoder<MMSSend>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(30 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

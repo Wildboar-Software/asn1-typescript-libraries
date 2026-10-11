@@ -176,7 +176,7 @@ let _cached_encoder_for_MCXGMMessage: $.ASN1Encoder<MCXGMMessage> | null = null;
  */
 export
 function _encode_MCXGMMessage (value: MCXGMMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCXGMMessage) { _cached_encoder_for_MCXGMMessage = function (value: MCXGMMessage, elGetter: $.ASN1Encoder<MCXGMMessage>): _Element {
+    if (!_cached_encoder_for_MCXGMMessage) { _cached_encoder_for_MCXGMMessage = function (value: MCXGMMessage, _elGetter: $.ASN1Encoder<MCXGMMessage>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -161,7 +161,7 @@ let _cached_encoder_for_HSSIdentities: $.ASN1Encoder<HSSIdentities> | null = nul
  */
 export
 function _encode_HSSIdentities (value: HSSIdentities, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HSSIdentities) { _cached_encoder_for_HSSIdentities = function (value: HSSIdentities, elGetter: $.ASN1Encoder<HSSIdentities>): _Element {
+    if (!_cached_encoder_for_HSSIdentities) { _cached_encoder_for_HSSIdentities = function (value: HSSIdentities, _elGetter: $.ASN1Encoder<HSSIdentities>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -31,11 +31,9 @@ const no_Circuit_Call_related_Services: OPERATION<Content_Report> = {
     class: "OPERATION",
     decoderFor: {
         "&ArgumentType": _decode_Content_Report,
-        "&ResultType": undefined,
     },
     encoderFor: {
         "&ArgumentType": _encode_Content_Report,
-        "&ResultType": undefined,
     },
     "&Errors": OperationErrors /* OBJECT_FIELD_SETTING */,
     "&operationCode": {

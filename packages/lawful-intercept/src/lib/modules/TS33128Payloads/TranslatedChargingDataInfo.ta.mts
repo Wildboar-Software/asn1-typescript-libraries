@@ -143,7 +143,7 @@ let _cached_encoder_for_TranslatedChargingDataInfo: $.ASN1Encoder<TranslatedChar
  */
 export
 function _encode_TranslatedChargingDataInfo (value: TranslatedChargingDataInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TranslatedChargingDataInfo) { _cached_encoder_for_TranslatedChargingDataInfo = function (value: TranslatedChargingDataInfo, elGetter: $.ASN1Encoder<TranslatedChargingDataInfo>): _Element {
+    if (!_cached_encoder_for_TranslatedChargingDataInfo) { _cached_encoder_for_TranslatedChargingDataInfo = function (value: TranslatedChargingDataInfo, _elGetter: $.ASN1Encoder<TranslatedChargingDataInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

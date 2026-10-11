@@ -197,7 +197,7 @@ let _cached_encoder_for_Service_Information: $.ASN1Encoder<Service_Information> 
  */
 export
 function _encode_Service_Information (value: Service_Information, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Service_Information) { _cached_encoder_for_Service_Information = function (value: Service_Information, elGetter: $.ASN1Encoder<Service_Information>): _Element {
+    if (!_cached_encoder_for_Service_Information) { _cached_encoder_for_Service_Information = function (value: Service_Information, _elGetter: $.ASN1Encoder<Service_Information>): _Element {
     const _components: _Element[] = new Array(4);
     let _components_i = 0;
     if (value.high_layer_capability !== undefined) {

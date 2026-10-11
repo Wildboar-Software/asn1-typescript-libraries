@@ -177,7 +177,7 @@ let _cached_encoder_for_PANI_Location: $.ASN1Encoder<PANI_Location> | null = nul
  */
 export
 function _encode_PANI_Location (value: PANI_Location, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PANI_Location) { _cached_encoder_for_PANI_Location = function (value: PANI_Location, elGetter: $.ASN1Encoder<PANI_Location>): _Element {
+    if (!_cached_encoder_for_PANI_Location) { _cached_encoder_for_PANI_Location = function (value: PANI_Location, _elGetter: $.ASN1Encoder<PANI_Location>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -307,7 +307,7 @@ let _cached_encoder_for_NRLocation: $.ASN1Encoder<NRLocation> | null = null;
  */
 export
 function _encode_NRLocation (value: NRLocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NRLocation) { _cached_encoder_for_NRLocation = function (value: NRLocation, elGetter: $.ASN1Encoder<NRLocation>): _Element {
+    if (!_cached_encoder_for_NRLocation) { _cached_encoder_for_NRLocation = function (value: NRLocation, _elGetter: $.ASN1Encoder<NRLocation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(12 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

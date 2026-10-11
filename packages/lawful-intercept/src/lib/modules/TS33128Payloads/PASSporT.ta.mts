@@ -173,7 +173,7 @@ let _cached_encoder_for_PASSporT: $.ASN1Encoder<PASSporT> | null = null;
  */
 export
 function _encode_PASSporT (value: PASSporT, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PASSporT) { _cached_encoder_for_PASSporT = function (value: PASSporT, elGetter: $.ASN1Encoder<PASSporT>): _Element {
+    if (!_cached_encoder_for_PASSporT) { _cached_encoder_for_PASSporT = function (value: PASSporT, _elGetter: $.ASN1Encoder<PASSporT>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

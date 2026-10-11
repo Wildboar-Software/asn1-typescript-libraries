@@ -163,7 +163,7 @@ let _cached_encoder_for_OtherIdentity: $.ASN1Encoder<OtherIdentity> | null = nul
  */
 export
 function _encode_OtherIdentity (value: OtherIdentity, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OtherIdentity) { _cached_encoder_for_OtherIdentity = function (value: OtherIdentity, elGetter: $.ASN1Encoder<OtherIdentity>): _Element {
+    if (!_cached_encoder_for_OtherIdentity) { _cached_encoder_for_OtherIdentity = function (value: OtherIdentity, _elGetter: $.ASN1Encoder<OtherIdentity>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

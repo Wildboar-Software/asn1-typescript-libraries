@@ -303,7 +303,7 @@ let _cached_encoder_for_GERALocation: $.ASN1Encoder<GERALocation> | null = null;
  */
 export
 function _encode_GERALocation (value: GERALocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GERALocation) { _cached_encoder_for_GERALocation = function (value: GERALocation, elGetter: $.ASN1Encoder<GERALocation>): _Element {
+    if (!_cached_encoder_for_GERALocation) { _cached_encoder_for_GERALocation = function (value: GERALocation, _elGetter: $.ASN1Encoder<GERALocation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(12 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

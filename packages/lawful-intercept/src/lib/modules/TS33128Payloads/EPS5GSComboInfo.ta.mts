@@ -197,7 +197,7 @@ let _cached_encoder_for_EPS5GSComboInfo: $.ASN1Encoder<EPS5GSComboInfo> | null =
  */
 export
 function _encode_EPS5GSComboInfo (value: EPS5GSComboInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPS5GSComboInfo) { _cached_encoder_for_EPS5GSComboInfo = function (value: EPS5GSComboInfo, elGetter: $.ASN1Encoder<EPS5GSComboInfo>): _Element {
+    if (!_cached_encoder_for_EPS5GSComboInfo) { _cached_encoder_for_EPS5GSComboInfo = function (value: EPS5GSComboInfo, _elGetter: $.ASN1Encoder<EPS5GSComboInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

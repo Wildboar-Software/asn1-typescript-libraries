@@ -278,7 +278,7 @@ let _cached_encoder_for_AMFUEConfigurationUpdate: $.ASN1Encoder<AMFUEConfigurati
  */
 export
 function _encode_AMFUEConfigurationUpdate (value: AMFUEConfigurationUpdate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFUEConfigurationUpdate) { _cached_encoder_for_AMFUEConfigurationUpdate = function (value: AMFUEConfigurationUpdate, elGetter: $.ASN1Encoder<AMFUEConfigurationUpdate>): _Element {
+    if (!_cached_encoder_for_AMFUEConfigurationUpdate) { _cached_encoder_for_AMFUEConfigurationUpdate = function (value: AMFUEConfigurationUpdate, _elGetter: $.ASN1Encoder<AMFUEConfigurationUpdate>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

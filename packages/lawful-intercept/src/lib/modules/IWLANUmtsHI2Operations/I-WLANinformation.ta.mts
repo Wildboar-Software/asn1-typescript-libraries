@@ -245,7 +245,7 @@ let _cached_encoder_for_I_WLANinformation: $.ASN1Encoder<I_WLANinformation> | nu
  */
 export
 function _encode_I_WLANinformation (value: I_WLANinformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_I_WLANinformation) { _cached_encoder_for_I_WLANinformation = function (value: I_WLANinformation, elGetter: $.ASN1Encoder<I_WLANinformation>): _Element {
+    if (!_cached_encoder_for_I_WLANinformation) { _cached_encoder_for_I_WLANinformation = function (value: I_WLANinformation, _elGetter: $.ASN1Encoder<I_WLANinformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(8 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

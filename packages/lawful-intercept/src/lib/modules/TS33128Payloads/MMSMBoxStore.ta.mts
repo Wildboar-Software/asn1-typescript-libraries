@@ -277,7 +277,7 @@ let _cached_encoder_for_MMSMBoxStore: $.ASN1Encoder<MMSMBoxStore> | null = null;
  */
 export
 function _encode_MMSMBoxStore (value: MMSMBoxStore, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSMBoxStore) { _cached_encoder_for_MMSMBoxStore = function (value: MMSMBoxStore, elGetter: $.ASN1Encoder<MMSMBoxStore>): _Element {
+    if (!_cached_encoder_for_MMSMBoxStore) { _cached_encoder_for_MMSMBoxStore = function (value: MMSMBoxStore, _elGetter: $.ASN1Encoder<MMSMBoxStore>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

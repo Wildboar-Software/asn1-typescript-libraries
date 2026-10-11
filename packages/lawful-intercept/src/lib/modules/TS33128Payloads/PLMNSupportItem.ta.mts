@@ -175,7 +175,7 @@ let _cached_encoder_for_PLMNSupportItem: $.ASN1Encoder<PLMNSupportItem> | null =
  */
 export
 function _encode_PLMNSupportItem (value: PLMNSupportItem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PLMNSupportItem) { _cached_encoder_for_PLMNSupportItem = function (value: PLMNSupportItem, elGetter: $.ASN1Encoder<PLMNSupportItem>): _Element {
+    if (!_cached_encoder_for_PLMNSupportItem) { _cached_encoder_for_PLMNSupportItem = function (value: PLMNSupportItem, _elGetter: $.ASN1Encoder<PLMNSupportItem>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

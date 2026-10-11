@@ -252,7 +252,7 @@ let _cached_encoder_for_NEFPDUSessionRelease: $.ASN1Encoder<NEFPDUSessionRelease
  */
 export
 function _encode_NEFPDUSessionRelease (value: NEFPDUSessionRelease, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NEFPDUSessionRelease) { _cached_encoder_for_NEFPDUSessionRelease = function (value: NEFPDUSessionRelease, elGetter: $.ASN1Encoder<NEFPDUSessionRelease>): _Element {
+    if (!_cached_encoder_for_NEFPDUSessionRelease) { _cached_encoder_for_NEFPDUSessionRelease = function (value: NEFPDUSessionRelease, _elGetter: $.ASN1Encoder<NEFPDUSessionRelease>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(8 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

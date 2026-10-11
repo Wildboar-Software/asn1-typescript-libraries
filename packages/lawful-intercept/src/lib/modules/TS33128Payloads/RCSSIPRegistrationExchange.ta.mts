@@ -156,7 +156,7 @@ let _cached_encoder_for_RCSSIPRegistrationExchange: $.ASN1Encoder<RCSSIPRegistra
  */
 export
 function _encode_RCSSIPRegistrationExchange (value: RCSSIPRegistrationExchange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RCSSIPRegistrationExchange) { _cached_encoder_for_RCSSIPRegistrationExchange = function (value: RCSSIPRegistrationExchange, elGetter: $.ASN1Encoder<RCSSIPRegistrationExchange>): _Element {
+    if (!_cached_encoder_for_RCSSIPRegistrationExchange) { _cached_encoder_for_RCSSIPRegistrationExchange = function (value: RCSSIPRegistrationExchange, _elGetter: $.ASN1Encoder<RCSSIPRegistrationExchange>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

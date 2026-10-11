@@ -288,7 +288,7 @@ let _cached_encoder_for_EESEECRegistration: $.ASN1Encoder<EESEECRegistration> | 
  */
 export
 function _encode_EESEECRegistration (value: EESEECRegistration, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EESEECRegistration) { _cached_encoder_for_EESEECRegistration = function (value: EESEECRegistration, elGetter: $.ASN1Encoder<EESEECRegistration>): _Element {
+    if (!_cached_encoder_for_EESEECRegistration) { _cached_encoder_for_EESEECRegistration = function (value: EESEECRegistration, _elGetter: $.ASN1Encoder<EESEECRegistration>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(10 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

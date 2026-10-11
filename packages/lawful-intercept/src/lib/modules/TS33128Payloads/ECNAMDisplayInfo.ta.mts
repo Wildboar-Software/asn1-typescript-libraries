@@ -160,7 +160,7 @@ let _cached_encoder_for_ECNAMDisplayInfo: $.ASN1Encoder<ECNAMDisplayInfo> | null
  */
 export
 function _encode_ECNAMDisplayInfo (value: ECNAMDisplayInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ECNAMDisplayInfo) { _cached_encoder_for_ECNAMDisplayInfo = function (value: ECNAMDisplayInfo, elGetter: $.ASN1Encoder<ECNAMDisplayInfo>): _Element {
+    if (!_cached_encoder_for_ECNAMDisplayInfo) { _cached_encoder_for_ECNAMDisplayInfo = function (value: ECNAMDisplayInfo, _elGetter: $.ASN1Encoder<ECNAMDisplayInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

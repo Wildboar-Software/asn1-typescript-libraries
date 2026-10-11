@@ -150,7 +150,7 @@ let _cached_encoder_for_AdditionalCGIs: $.ASN1Encoder<AdditionalCGIs> | null = n
  */
 export
 function _encode_AdditionalCGIs (value: AdditionalCGIs, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AdditionalCGIs) { _cached_encoder_for_AdditionalCGIs = function (value: AdditionalCGIs, elGetter: $.ASN1Encoder<AdditionalCGIs>): _Element {
+    if (!_cached_encoder_for_AdditionalCGIs) { _cached_encoder_for_AdditionalCGIs = function (value: AdditionalCGIs, _elGetter: $.ASN1Encoder<AdditionalCGIs>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

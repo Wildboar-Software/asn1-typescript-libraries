@@ -277,7 +277,7 @@ let _cached_encoder_for_PTCStartOfInterception: $.ASN1Encoder<PTCStartOfIntercep
  */
 export
 function _encode_PTCStartOfInterception (value: PTCStartOfInterception, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCStartOfInterception) { _cached_encoder_for_PTCStartOfInterception = function (value: PTCStartOfInterception, elGetter: $.ASN1Encoder<PTCStartOfInterception>): _Element {
+    if (!_cached_encoder_for_PTCStartOfInterception) { _cached_encoder_for_PTCStartOfInterception = function (value: PTCStartOfInterception, _elGetter: $.ASN1Encoder<PTCStartOfInterception>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(10 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

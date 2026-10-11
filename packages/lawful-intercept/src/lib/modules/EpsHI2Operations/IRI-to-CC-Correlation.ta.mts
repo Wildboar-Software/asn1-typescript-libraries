@@ -149,7 +149,7 @@ let _cached_encoder_for_IRI_to_CC_Correlation: $.ASN1Encoder<IRI_to_CC_Correlati
  */
 export
 function _encode_IRI_to_CC_Correlation (value: IRI_to_CC_Correlation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IRI_to_CC_Correlation) { _cached_encoder_for_IRI_to_CC_Correlation = function (value: IRI_to_CC_Correlation, elGetter: $.ASN1Encoder<IRI_to_CC_Correlation>): _Element {
+    if (!_cached_encoder_for_IRI_to_CC_Correlation) { _cached_encoder_for_IRI_to_CC_Correlation = function (value: IRI_to_CC_Correlation, _elGetter: $.ASN1Encoder<IRI_to_CC_Correlation>): _Element {
     const _components: _Element[] = new Array(2);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeSetOf<OCTET_STRING>(() => $._encodeOctetString, $.BER), $.BER)(value.cc, $.BER);

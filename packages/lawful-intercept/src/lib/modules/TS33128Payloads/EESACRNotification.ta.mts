@@ -223,7 +223,7 @@ let _cached_encoder_for_EESACRNotification: $.ASN1Encoder<EESACRNotification> | 
  */
 export
 function _encode_EESACRNotification (value: EESACRNotification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EESACRNotification) { _cached_encoder_for_EESACRNotification = function (value: EESACRNotification, elGetter: $.ASN1Encoder<EESACRNotification>): _Element {
+    if (!_cached_encoder_for_EESACRNotification) { _cached_encoder_for_EESACRNotification = function (value: EESACRNotification, _elGetter: $.ASN1Encoder<EESACRNotification>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

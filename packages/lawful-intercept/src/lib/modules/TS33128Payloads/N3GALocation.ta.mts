@@ -337,7 +337,7 @@ let _cached_encoder_for_N3GALocation: $.ASN1Encoder<N3GALocation> | null = null;
  */
 export
 function _encode_N3GALocation (value: N3GALocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_N3GALocation) { _cached_encoder_for_N3GALocation = function (value: N3GALocation, elGetter: $.ASN1Encoder<N3GALocation>): _Element {
+    if (!_cached_encoder_for_N3GALocation) { _cached_encoder_for_N3GALocation = function (value: N3GALocation, _elGetter: $.ASN1Encoder<N3GALocation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(13 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

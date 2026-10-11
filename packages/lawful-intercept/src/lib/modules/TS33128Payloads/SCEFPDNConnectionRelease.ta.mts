@@ -267,7 +267,7 @@ let _cached_encoder_for_SCEFPDNConnectionRelease: $.ASN1Encoder<SCEFPDNConnectio
  */
 export
 function _encode_SCEFPDNConnectionRelease (value: SCEFPDNConnectionRelease, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCEFPDNConnectionRelease) { _cached_encoder_for_SCEFPDNConnectionRelease = function (value: SCEFPDNConnectionRelease, elGetter: $.ASN1Encoder<SCEFPDNConnectionRelease>): _Element {
+    if (!_cached_encoder_for_SCEFPDNConnectionRelease) { _cached_encoder_for_SCEFPDNConnectionRelease = function (value: SCEFPDNConnectionRelease, _elGetter: $.ASN1Encoder<SCEFPDNConnectionRelease>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

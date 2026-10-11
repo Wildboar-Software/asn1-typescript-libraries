@@ -176,7 +176,7 @@ let _cached_encoder_for_LTENTNTAIInformation: $.ASN1Encoder<LTENTNTAIInformation
  */
 export
 function _encode_LTENTNTAIInformation (value: LTENTNTAIInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LTENTNTAIInformation) { _cached_encoder_for_LTENTNTAIInformation = function (value: LTENTNTAIInformation, elGetter: $.ASN1Encoder<LTENTNTAIInformation>): _Element {
+    if (!_cached_encoder_for_LTENTNTAIInformation) { _cached_encoder_for_LTENTNTAIInformation = function (value: LTENTNTAIInformation, _elGetter: $.ASN1Encoder<LTENTNTAIInformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

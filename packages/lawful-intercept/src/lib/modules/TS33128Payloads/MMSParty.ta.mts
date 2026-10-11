@@ -164,7 +164,7 @@ let _cached_encoder_for_MMSParty: $.ASN1Encoder<MMSParty> | null = null;
  */
 export
 function _encode_MMSParty (value: MMSParty, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSParty) { _cached_encoder_for_MMSParty = function (value: MMSParty, elGetter: $.ASN1Encoder<MMSParty>): _Element {
+    if (!_cached_encoder_for_MMSParty) { _cached_encoder_for_MMSParty = function (value: MMSParty, _elGetter: $.ASN1Encoder<MMSParty>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

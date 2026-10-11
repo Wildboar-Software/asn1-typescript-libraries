@@ -486,7 +486,7 @@ let _cached_encoder_for_SMFMAPDUSessionModification: $.ASN1Encoder<SMFMAPDUSessi
  */
 export
 function _encode_SMFMAPDUSessionModification (value: SMFMAPDUSessionModification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMFMAPDUSessionModification) { _cached_encoder_for_SMFMAPDUSessionModification = function (value: SMFMAPDUSessionModification, elGetter: $.ASN1Encoder<SMFMAPDUSessionModification>): _Element {
+    if (!_cached_encoder_for_SMFMAPDUSessionModification) { _cached_encoder_for_SMFMAPDUSessionModification = function (value: SMFMAPDUSessionModification, _elGetter: $.ASN1Encoder<SMFMAPDUSessionModification>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(23 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -282,7 +282,7 @@ let _cached_encoder_for_Alarm_Indicator: $.ASN1Encoder<Alarm_Indicator> | null =
  */
 export
 function _encode_Alarm_Indicator (value: Alarm_Indicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Alarm_Indicator) { _cached_encoder_for_Alarm_Indicator = function (value: Alarm_Indicator, elGetter: $.ASN1Encoder<Alarm_Indicator>): _Element {
+    if (!_cached_encoder_for_Alarm_Indicator) { _cached_encoder_for_Alarm_Indicator = function (value: Alarm_Indicator, _elGetter: $.ASN1Encoder<Alarm_Indicator>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

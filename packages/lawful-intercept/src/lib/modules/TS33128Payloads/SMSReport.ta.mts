@@ -197,7 +197,7 @@ let _cached_encoder_for_SMSReport: $.ASN1Encoder<SMSReport> | null = null;
  */
 export
 function _encode_SMSReport (value: SMSReport, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMSReport) { _cached_encoder_for_SMSReport = function (value: SMSReport, elGetter: $.ASN1Encoder<SMSReport>): _Element {
+    if (!_cached_encoder_for_SMSReport) { _cached_encoder_for_SMSReport = function (value: SMSReport, _elGetter: $.ASN1Encoder<SMSReport>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

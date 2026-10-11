@@ -210,7 +210,7 @@ let _cached_encoder_for_PTCMediaModification: $.ASN1Encoder<PTCMediaModification
  */
 export
 function _encode_PTCMediaModification (value: PTCMediaModification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCMediaModification) { _cached_encoder_for_PTCMediaModification = function (value: PTCMediaModification, elGetter: $.ASN1Encoder<PTCMediaModification>): _Element {
+    if (!_cached_encoder_for_PTCMediaModification) { _cached_encoder_for_PTCMediaModification = function (value: PTCMediaModification, _elGetter: $.ASN1Encoder<PTCMediaModification>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

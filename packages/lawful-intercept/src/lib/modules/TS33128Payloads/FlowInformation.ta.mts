@@ -232,7 +232,7 @@ let _cached_encoder_for_FlowInformation: $.ASN1Encoder<FlowInformation> | null =
  */
 export
 function _encode_FlowInformation (value: FlowInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FlowInformation) { _cached_encoder_for_FlowInformation = function (value: FlowInformation, elGetter: $.ASN1Encoder<FlowInformation>): _Element {
+    if (!_cached_encoder_for_FlowInformation) { _cached_encoder_for_FlowInformation = function (value: FlowInformation, _elGetter: $.ASN1Encoder<FlowInformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

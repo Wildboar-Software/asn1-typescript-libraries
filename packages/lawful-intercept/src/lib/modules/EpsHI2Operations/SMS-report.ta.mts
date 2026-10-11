@@ -162,7 +162,7 @@ let _cached_encoder_for_SMS_report: $.ASN1Encoder<SMS_report> | null = null;
  */
 export
 function _encode_SMS_report (value: SMS_report, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMS_report) { _cached_encoder_for_SMS_report = function (value: SMS_report, elGetter: $.ASN1Encoder<SMS_report>): _Element {
+    if (!_cached_encoder_for_SMS_report) { _cached_encoder_for_SMS_report = function (value: SMS_report, _elGetter: $.ASN1Encoder<SMS_report>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 3, () => _encode_SMS_report_sMS_Contents, $.BER)(value.sMS_Contents, $.BER)
     ], $.BER);

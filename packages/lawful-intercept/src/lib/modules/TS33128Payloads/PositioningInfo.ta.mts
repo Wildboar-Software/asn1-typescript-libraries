@@ -161,7 +161,7 @@ let _cached_encoder_for_PositioningInfo: $.ASN1Encoder<PositioningInfo> | null =
  */
 export
 function _encode_PositioningInfo (value: PositioningInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PositioningInfo) { _cached_encoder_for_PositioningInfo = function (value: PositioningInfo, elGetter: $.ASN1Encoder<PositioningInfo>): _Element {
+    if (!_cached_encoder_for_PositioningInfo) { _cached_encoder_for_PositioningInfo = function (value: PositioningInfo, _elGetter: $.ASN1Encoder<PositioningInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

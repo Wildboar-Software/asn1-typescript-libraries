@@ -158,7 +158,7 @@ let _cached_encoder_for_EncodedTextString: $.ASN1Encoder<EncodedTextString> | nu
  */
 export
 function _encode_EncodedTextString (value: EncodedTextString, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EncodedTextString) { _cached_encoder_for_EncodedTextString = function (value: EncodedTextString, elGetter: $.ASN1Encoder<EncodedTextString>): _Element {
+    if (!_cached_encoder_for_EncodedTextString) { _cached_encoder_for_EncodedTextString = function (value: EncodedTextString, _elGetter: $.ASN1Encoder<EncodedTextString>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

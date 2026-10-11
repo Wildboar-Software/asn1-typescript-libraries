@@ -215,7 +215,7 @@ let _cached_encoder_for_EPSBearerQOS: $.ASN1Encoder<EPSBearerQOS> | null = null;
  */
 export
 function _encode_EPSBearerQOS (value: EPSBearerQOS, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSBearerQOS) { _cached_encoder_for_EPSBearerQOS = function (value: EPSBearerQOS, elGetter: $.ASN1Encoder<EPSBearerQOS>): _Element {
+    if (!_cached_encoder_for_EPSBearerQOS) { _cached_encoder_for_EPSBearerQOS = function (value: EPSBearerQOS, _elGetter: $.ASN1Encoder<EPSBearerQOS>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

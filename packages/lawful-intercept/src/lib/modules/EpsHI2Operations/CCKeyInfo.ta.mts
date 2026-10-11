@@ -176,7 +176,7 @@ let _cached_encoder_for_CCKeyInfo: $.ASN1Encoder<CCKeyInfo> | null = null;
  */
 export
 function _encode_CCKeyInfo (value: CCKeyInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CCKeyInfo) { _cached_encoder_for_CCKeyInfo = function (value: CCKeyInfo, elGetter: $.ASN1Encoder<CCKeyInfo>): _Element {
+    if (!_cached_encoder_for_CCKeyInfo) { _cached_encoder_for_CCKeyInfo = function (value: CCKeyInfo, _elGetter: $.ASN1Encoder<CCKeyInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

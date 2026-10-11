@@ -312,7 +312,7 @@ let _cached_encoder_for_SCEFPDNConnectionUpdate: $.ASN1Encoder<SCEFPDNConnection
  */
 export
 function _encode_SCEFPDNConnectionUpdate (value: SCEFPDNConnectionUpdate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCEFPDNConnectionUpdate) { _cached_encoder_for_SCEFPDNConnectionUpdate = function (value: SCEFPDNConnectionUpdate, elGetter: $.ASN1Encoder<SCEFPDNConnectionUpdate>): _Element {
+    if (!_cached_encoder_for_SCEFPDNConnectionUpdate) { _cached_encoder_for_SCEFPDNConnectionUpdate = function (value: SCEFPDNConnectionUpdate, _elGetter: $.ASN1Encoder<SCEFPDNConnectionUpdate>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(11 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

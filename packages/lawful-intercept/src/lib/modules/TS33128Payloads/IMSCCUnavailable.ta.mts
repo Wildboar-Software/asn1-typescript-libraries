@@ -160,7 +160,7 @@ let _cached_encoder_for_IMSCCUnavailable: $.ASN1Encoder<IMSCCUnavailable> | null
  */
 export
 function _encode_IMSCCUnavailable (value: IMSCCUnavailable, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IMSCCUnavailable) { _cached_encoder_for_IMSCCUnavailable = function (value: IMSCCUnavailable, elGetter: $.ASN1Encoder<IMSCCUnavailable>): _Element {
+    if (!_cached_encoder_for_IMSCCUnavailable) { _cached_encoder_for_IMSCCUnavailable = function (value: IMSCCUnavailable, _elGetter: $.ASN1Encoder<IMSCCUnavailable>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

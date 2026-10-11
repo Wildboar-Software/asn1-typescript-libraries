@@ -189,7 +189,7 @@ let _cached_encoder_for_NEF5GVNGroupUpdate: $.ASN1Encoder<NEF5GVNGroupUpdate> | 
  */
 export
 function _encode_NEF5GVNGroupUpdate (value: NEF5GVNGroupUpdate, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NEF5GVNGroupUpdate) { _cached_encoder_for_NEF5GVNGroupUpdate = function (value: NEF5GVNGroupUpdate, elGetter: $.ASN1Encoder<NEF5GVNGroupUpdate>): _Element {
+    if (!_cached_encoder_for_NEF5GVNGroupUpdate) { _cached_encoder_for_NEF5GVNGroupUpdate = function (value: NEF5GVNGroupUpdate, _elGetter: $.ASN1Encoder<NEF5GVNGroupUpdate>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -163,7 +163,7 @@ let _cached_encoder_for_PortRange: $.ASN1Encoder<PortRange> | null = null;
  */
 export
 function _encode_PortRange (value: PortRange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PortRange) { _cached_encoder_for_PortRange = function (value: PortRange, elGetter: $.ASN1Encoder<PortRange>): _Element {
+    if (!_cached_encoder_for_PortRange) { _cached_encoder_for_PortRange = function (value: PortRange, _elGetter: $.ASN1Encoder<PortRange>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

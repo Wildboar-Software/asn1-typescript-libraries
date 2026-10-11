@@ -157,7 +157,7 @@ let _cached_encoder_for_ReportInterval: $.ASN1Encoder<ReportInterval> | null = n
  */
 export
 function _encode_ReportInterval (value: ReportInterval, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReportInterval) { _cached_encoder_for_ReportInterval = function (value: ReportInterval, elGetter: $.ASN1Encoder<ReportInterval>): _Element {
+    if (!_cached_encoder_for_ReportInterval) { _cached_encoder_for_ReportInterval = function (value: ReportInterval, _elGetter: $.ASN1Encoder<ReportInterval>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -158,7 +158,7 @@ let _cached_encoder_for_PDUSessionSetupRequestItem: $.ASN1Encoder<PDUSessionSetu
  */
 export
 function _encode_PDUSessionSetupRequestItem (value: PDUSessionSetupRequestItem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDUSessionSetupRequestItem) { _cached_encoder_for_PDUSessionSetupRequestItem = function (value: PDUSessionSetupRequestItem, elGetter: $.ASN1Encoder<PDUSessionSetupRequestItem>): _Element {
+    if (!_cached_encoder_for_PDUSessionSetupRequestItem) { _cached_encoder_for_PDUSessionSetupRequestItem = function (value: PDUSessionSetupRequestItem, _elGetter: $.ASN1Encoder<PDUSessionSetupRequestItem>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

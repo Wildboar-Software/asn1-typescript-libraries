@@ -178,7 +178,7 @@ let _cached_encoder_for_RCSSIPSessionExchange: $.ASN1Encoder<RCSSIPSessionExchan
  */
 export
 function _encode_RCSSIPSessionExchange (value: RCSSIPSessionExchange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RCSSIPSessionExchange) { _cached_encoder_for_RCSSIPSessionExchange = function (value: RCSSIPSessionExchange, elGetter: $.ASN1Encoder<RCSSIPSessionExchange>): _Element {
+    if (!_cached_encoder_for_RCSSIPSessionExchange) { _cached_encoder_for_RCSSIPSessionExchange = function (value: RCSSIPSessionExchange, _elGetter: $.ASN1Encoder<RCSSIPSessionExchange>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

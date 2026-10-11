@@ -227,7 +227,7 @@ let _cached_encoder_for_STIRSHAKENSignatureValidation: $.ASN1Encoder<STIRSHAKENS
  */
 export
 function _encode_STIRSHAKENSignatureValidation (value: STIRSHAKENSignatureValidation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_STIRSHAKENSignatureValidation) { _cached_encoder_for_STIRSHAKENSignatureValidation = function (value: STIRSHAKENSignatureValidation, elGetter: $.ASN1Encoder<STIRSHAKENSignatureValidation>): _Element {
+    if (!_cached_encoder_for_STIRSHAKENSignatureValidation) { _cached_encoder_for_STIRSHAKENSignatureValidation = function (value: STIRSHAKENSignatureValidation, _elGetter: $.ASN1Encoder<STIRSHAKENSignatureValidation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

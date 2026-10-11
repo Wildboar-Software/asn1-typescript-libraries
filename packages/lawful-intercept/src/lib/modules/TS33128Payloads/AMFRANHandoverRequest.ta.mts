@@ -302,7 +302,7 @@ let _cached_encoder_for_AMFRANHandoverRequest: $.ASN1Encoder<AMFRANHandoverReque
  */
 export
 function _encode_AMFRANHandoverRequest (value: AMFRANHandoverRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFRANHandoverRequest) { _cached_encoder_for_AMFRANHandoverRequest = function (value: AMFRANHandoverRequest, elGetter: $.ASN1Encoder<AMFRANHandoverRequest>): _Element {
+    if (!_cached_encoder_for_AMFRANHandoverRequest) { _cached_encoder_for_AMFRANHandoverRequest = function (value: AMFRANHandoverRequest, _elGetter: $.ASN1Encoder<AMFRANHandoverRequest>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(11 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

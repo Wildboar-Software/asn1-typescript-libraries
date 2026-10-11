@@ -196,7 +196,7 @@ let _cached_encoder_for_HorizontalWithVerticalVelocity: $.ASN1Encoder<Horizontal
  */
 export
 function _encode_HorizontalWithVerticalVelocity (value: HorizontalWithVerticalVelocity, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HorizontalWithVerticalVelocity) { _cached_encoder_for_HorizontalWithVerticalVelocity = function (value: HorizontalWithVerticalVelocity, elGetter: $.ASN1Encoder<HorizontalWithVerticalVelocity>): _Element {
+    if (!_cached_encoder_for_HorizontalWithVerticalVelocity) { _cached_encoder_for_HorizontalWithVerticalVelocity = function (value: HorizontalWithVerticalVelocity, _elGetter: $.ASN1Encoder<HorizontalWithVerticalVelocity>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

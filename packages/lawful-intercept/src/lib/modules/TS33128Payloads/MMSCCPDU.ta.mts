@@ -172,7 +172,7 @@ let _cached_encoder_for_MMSCCPDU: $.ASN1Encoder<MMSCCPDU> | null = null;
  */
 export
 function _encode_MMSCCPDU (value: MMSCCPDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSCCPDU) { _cached_encoder_for_MMSCCPDU = function (value: MMSCCPDU, elGetter: $.ASN1Encoder<MMSCCPDU>): _Element {
+    if (!_cached_encoder_for_MMSCCPDU) { _cached_encoder_for_MMSCCPDU = function (value: MMSCCPDU, _elGetter: $.ASN1Encoder<MMSCCPDU>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

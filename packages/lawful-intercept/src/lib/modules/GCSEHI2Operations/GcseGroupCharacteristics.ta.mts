@@ -163,7 +163,7 @@ let _cached_encoder_for_GcseGroupCharacteristics: $.ASN1Encoder<GcseGroupCharact
  */
 export
 function _encode_GcseGroupCharacteristics (value: GcseGroupCharacteristics, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GcseGroupCharacteristics) { _cached_encoder_for_GcseGroupCharacteristics = function (value: GcseGroupCharacteristics, elGetter: $.ASN1Encoder<GcseGroupCharacteristics>): _Element {
+    if (!_cached_encoder_for_GcseGroupCharacteristics) { _cached_encoder_for_GcseGroupCharacteristics = function (value: GcseGroupCharacteristics, _elGetter: $.ASN1Encoder<GcseGroupCharacteristics>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

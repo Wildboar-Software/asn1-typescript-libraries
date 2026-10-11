@@ -156,7 +156,7 @@ let _cached_encoder_for_GenericUAStarParams: $.ASN1Encoder<GenericUAStarParams> 
  */
 export
 function _encode_GenericUAStarParams (value: GenericUAStarParams, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GenericUAStarParams) { _cached_encoder_for_GenericUAStarParams = function (value: GenericUAStarParams, elGetter: $.ASN1Encoder<GenericUAStarParams>): _Element {
+    if (!_cached_encoder_for_GenericUAStarParams) { _cached_encoder_for_GenericUAStarParams = function (value: GenericUAStarParams, _elGetter: $.ASN1Encoder<GenericUAStarParams>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

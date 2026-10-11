@@ -176,7 +176,7 @@ let _cached_encoder_for_TAI: $.ASN1Encoder<TAI> | null = null;
  */
 export
 function _encode_TAI (value: TAI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TAI) { _cached_encoder_for_TAI = function (value: TAI, elGetter: $.ASN1Encoder<TAI>): _Element {
+    if (!_cached_encoder_for_TAI) { _cached_encoder_for_TAI = function (value: TAI, _elGetter: $.ASN1Encoder<TAI>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

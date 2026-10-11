@@ -178,7 +178,7 @@ let _cached_encoder_for_NWDAFRoamingAnalyticsNotification: $.ASN1Encoder<NWDAFRo
  */
 export
 function _encode_NWDAFRoamingAnalyticsNotification (value: NWDAFRoamingAnalyticsNotification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NWDAFRoamingAnalyticsNotification) { _cached_encoder_for_NWDAFRoamingAnalyticsNotification = function (value: NWDAFRoamingAnalyticsNotification, elGetter: $.ASN1Encoder<NWDAFRoamingAnalyticsNotification>): _Element {
+    if (!_cached_encoder_for_NWDAFRoamingAnalyticsNotification) { _cached_encoder_for_NWDAFRoamingAnalyticsNotification = function (value: NWDAFRoamingAnalyticsNotification, _elGetter: $.ASN1Encoder<NWDAFRoamingAnalyticsNotification>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

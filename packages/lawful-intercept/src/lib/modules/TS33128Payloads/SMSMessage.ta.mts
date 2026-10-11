@@ -318,7 +318,7 @@ let _cached_encoder_for_SMSMessage: $.ASN1Encoder<SMSMessage> | null = null;
  */
 export
 function _encode_SMSMessage (value: SMSMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMSMessage) { _cached_encoder_for_SMSMessage = function (value: SMSMessage, elGetter: $.ASN1Encoder<SMSMessage>): _Element {
+    if (!_cached_encoder_for_SMSMessage) { _cached_encoder_for_SMSMessage = function (value: SMSMessage, _elGetter: $.ASN1Encoder<SMSMessage>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(11 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

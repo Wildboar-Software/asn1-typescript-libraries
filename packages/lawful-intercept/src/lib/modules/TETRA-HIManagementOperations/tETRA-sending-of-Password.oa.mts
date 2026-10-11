@@ -31,11 +31,9 @@ const tETRA_sending_of_Password: OPERATION<TETRA_Password_Name> = {
     class: "OPERATION",
     decoderFor: {
         "&ArgumentType": _decode_TETRA_Password_Name,
-        "&ResultType": undefined,
     },
     encoderFor: {
         "&ArgumentType": _encode_TETRA_Password_Name,
-        "&ResultType": undefined,
     },
     "&Errors": ErrorsHim /* OBJECT_FIELD_SETTING */,
     "&operationCode": {

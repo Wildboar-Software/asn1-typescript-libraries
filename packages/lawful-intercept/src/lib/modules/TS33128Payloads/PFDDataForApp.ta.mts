@@ -157,7 +157,7 @@ let _cached_encoder_for_PFDDataForApp: $.ASN1Encoder<PFDDataForApp> | null = nul
  */
 export
 function _encode_PFDDataForApp (value: PFDDataForApp, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PFDDataForApp) { _cached_encoder_for_PFDDataForApp = function (value: PFDDataForApp, elGetter: $.ASN1Encoder<PFDDataForApp>): _Element {
+    if (!_cached_encoder_for_PFDDataForApp) { _cached_encoder_for_PFDDataForApp = function (value: PFDDataForApp, _elGetter: $.ASN1Encoder<PFDDataForApp>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

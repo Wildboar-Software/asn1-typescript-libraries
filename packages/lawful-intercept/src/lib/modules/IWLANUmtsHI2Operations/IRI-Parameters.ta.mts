@@ -392,7 +392,7 @@ let _cached_encoder_for_IRI_Parameters: $.ASN1Encoder<IRI_Parameters> | null = n
  */
 export
 function _encode_IRI_Parameters (value: IRI_Parameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IRI_Parameters) { _cached_encoder_for_IRI_Parameters = function (value: IRI_Parameters, elGetter: $.ASN1Encoder<IRI_Parameters>): _Element {
+    if (!_cached_encoder_for_IRI_Parameters) { _cached_encoder_for_IRI_Parameters = function (value: IRI_Parameters, _elGetter: $.ASN1Encoder<IRI_Parameters>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(15 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

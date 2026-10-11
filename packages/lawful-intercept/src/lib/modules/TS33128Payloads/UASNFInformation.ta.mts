@@ -184,7 +184,7 @@ let _cached_encoder_for_UASNFInformation: $.ASN1Encoder<UASNFInformation> | null
  */
 export
 function _encode_UASNFInformation (value: UASNFInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UASNFInformation) { _cached_encoder_for_UASNFInformation = function (value: UASNFInformation, elGetter: $.ASN1Encoder<UASNFInformation>): _Element {
+    if (!_cached_encoder_for_UASNFInformation) { _cached_encoder_for_UASNFInformation = function (value: UASNFInformation, _elGetter: $.ASN1Encoder<UASNFInformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

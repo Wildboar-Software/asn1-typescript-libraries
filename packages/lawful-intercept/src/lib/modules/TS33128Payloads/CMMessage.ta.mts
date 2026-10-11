@@ -156,7 +156,7 @@ let _cached_encoder_for_CMMessage: $.ASN1Encoder<CMMessage> | null = null;
  */
 export
 function _encode_CMMessage (value: CMMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CMMessage) { _cached_encoder_for_CMMessage = function (value: CMMessage, elGetter: $.ASN1Encoder<CMMessage>): _Element {
+    if (!_cached_encoder_for_CMMessage) { _cached_encoder_for_CMMessage = function (value: CMMessage, _elGetter: $.ASN1Encoder<CMMessage>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -178,7 +178,7 @@ let _cached_encoder_for_PTCInstantPersonalAlert: $.ASN1Encoder<PTCInstantPersona
  */
 export
 function _encode_PTCInstantPersonalAlert (value: PTCInstantPersonalAlert, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCInstantPersonalAlert) { _cached_encoder_for_PTCInstantPersonalAlert = function (value: PTCInstantPersonalAlert, elGetter: $.ASN1Encoder<PTCInstantPersonalAlert>): _Element {
+    if (!_cached_encoder_for_PTCInstantPersonalAlert) { _cached_encoder_for_PTCInstantPersonalAlert = function (value: PTCInstantPersonalAlert, _elGetter: $.ASN1Encoder<PTCInstantPersonalAlert>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

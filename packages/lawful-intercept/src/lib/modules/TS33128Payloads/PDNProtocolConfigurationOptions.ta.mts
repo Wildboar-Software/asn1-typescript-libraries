@@ -211,7 +211,7 @@ let _cached_encoder_for_PDNProtocolConfigurationOptions: $.ASN1Encoder<PDNProtoc
  */
 export
 function _encode_PDNProtocolConfigurationOptions (value: PDNProtocolConfigurationOptions, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDNProtocolConfigurationOptions) { _cached_encoder_for_PDNProtocolConfigurationOptions = function (value: PDNProtocolConfigurationOptions, elGetter: $.ASN1Encoder<PDNProtocolConfigurationOptions>): _Element {
+    if (!_cached_encoder_for_PDNProtocolConfigurationOptions) { _cached_encoder_for_PDNProtocolConfigurationOptions = function (value: PDNProtocolConfigurationOptions, _elGetter: $.ASN1Encoder<PDNProtocolConfigurationOptions>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

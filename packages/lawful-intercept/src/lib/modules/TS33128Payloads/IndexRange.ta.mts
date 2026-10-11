@@ -156,7 +156,7 @@ let _cached_encoder_for_IndexRange: $.ASN1Encoder<IndexRange> | null = null;
  */
 export
 function _encode_IndexRange (value: IndexRange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IndexRange) { _cached_encoder_for_IndexRange = function (value: IndexRange, elGetter: $.ASN1Encoder<IndexRange>): _Element {
+    if (!_cached_encoder_for_IndexRange) { _cached_encoder_for_IndexRange = function (value: IndexRange, _elGetter: $.ASN1Encoder<IndexRange>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

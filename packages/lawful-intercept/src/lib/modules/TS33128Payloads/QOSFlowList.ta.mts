@@ -241,7 +241,7 @@ let _cached_encoder_for_QOSFlowList: $.ASN1Encoder<QOSFlowList> | null = null;
  */
 export
 function _encode_QOSFlowList (value: QOSFlowList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_QOSFlowList) { _cached_encoder_for_QOSFlowList = function (value: QOSFlowList, elGetter: $.ASN1Encoder<QOSFlowList>): _Element {
+    if (!_cached_encoder_for_QOSFlowList) { _cached_encoder_for_QOSFlowList = function (value: QOSFlowList, _elGetter: $.ASN1Encoder<QOSFlowList>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

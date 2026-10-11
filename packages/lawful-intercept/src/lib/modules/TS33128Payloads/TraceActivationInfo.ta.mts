@@ -220,7 +220,7 @@ let _cached_encoder_for_TraceActivationInfo: $.ASN1Encoder<TraceActivationInfo> 
  */
 export
 function _encode_TraceActivationInfo (value: TraceActivationInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TraceActivationInfo) { _cached_encoder_for_TraceActivationInfo = function (value: TraceActivationInfo, elGetter: $.ASN1Encoder<TraceActivationInfo>): _Element {
+    if (!_cached_encoder_for_TraceActivationInfo) { _cached_encoder_for_TraceActivationInfo = function (value: TraceActivationInfo, _elGetter: $.ASN1Encoder<TraceActivationInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

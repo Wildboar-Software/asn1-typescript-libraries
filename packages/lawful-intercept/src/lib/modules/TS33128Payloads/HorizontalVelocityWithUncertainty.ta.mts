@@ -174,7 +174,7 @@ let _cached_encoder_for_HorizontalVelocityWithUncertainty: $.ASN1Encoder<Horizon
  */
 export
 function _encode_HorizontalVelocityWithUncertainty (value: HorizontalVelocityWithUncertainty, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HorizontalVelocityWithUncertainty) { _cached_encoder_for_HorizontalVelocityWithUncertainty = function (value: HorizontalVelocityWithUncertainty, elGetter: $.ASN1Encoder<HorizontalVelocityWithUncertainty>): _Element {
+    if (!_cached_encoder_for_HorizontalVelocityWithUncertainty) { _cached_encoder_for_HorizontalVelocityWithUncertainty = function (value: HorizontalVelocityWithUncertainty, _elGetter: $.ASN1Encoder<HorizontalVelocityWithUncertainty>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

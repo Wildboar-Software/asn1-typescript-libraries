@@ -300,7 +300,7 @@ let _cached_encoder_for_MBMSinformation: $.ASN1Encoder<MBMSinformation> | null =
  */
 export
 function _encode_MBMSinformation (value: MBMSinformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MBMSinformation) { _cached_encoder_for_MBMSinformation = function (value: MBMSinformation, elGetter: $.ASN1Encoder<MBMSinformation>): _Element {
+    if (!_cached_encoder_for_MBMSinformation) { _cached_encoder_for_MBMSinformation = function (value: MBMSinformation, _elGetter: $.ASN1Encoder<MBMSinformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

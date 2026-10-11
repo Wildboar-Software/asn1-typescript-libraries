@@ -146,7 +146,7 @@ let _cached_encoder_for_PTCTargetInformation: $.ASN1Encoder<PTCTargetInformation
  */
 export
 function _encode_PTCTargetInformation (value: PTCTargetInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCTargetInformation) { _cached_encoder_for_PTCTargetInformation = function (value: PTCTargetInformation, elGetter: $.ASN1Encoder<PTCTargetInformation>): _Element {
+    if (!_cached_encoder_for_PTCTargetInformation) { _cached_encoder_for_PTCTargetInformation = function (value: PTCTargetInformation, _elGetter: $.ASN1Encoder<PTCTargetInformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

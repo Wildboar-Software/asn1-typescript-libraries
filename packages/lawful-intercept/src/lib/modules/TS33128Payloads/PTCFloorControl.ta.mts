@@ -293,7 +293,7 @@ let _cached_encoder_for_PTCFloorControl: $.ASN1Encoder<PTCFloorControl> | null =
  */
 export
 function _encode_PTCFloorControl (value: PTCFloorControl, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCFloorControl) { _cached_encoder_for_PTCFloorControl = function (value: PTCFloorControl, elGetter: $.ASN1Encoder<PTCFloorControl>): _Element {
+    if (!_cached_encoder_for_PTCFloorControl) { _cached_encoder_for_PTCFloorControl = function (value: PTCFloorControl, _elGetter: $.ASN1Encoder<PTCFloorControl>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(10 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

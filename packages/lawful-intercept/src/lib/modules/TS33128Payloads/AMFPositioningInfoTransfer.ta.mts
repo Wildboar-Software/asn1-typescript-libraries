@@ -266,7 +266,7 @@ let _cached_encoder_for_AMFPositioningInfoTransfer: $.ASN1Encoder<AMFPositioning
  */
 export
 function _encode_AMFPositioningInfoTransfer (value: AMFPositioningInfoTransfer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFPositioningInfoTransfer) { _cached_encoder_for_AMFPositioningInfoTransfer = function (value: AMFPositioningInfoTransfer, elGetter: $.ASN1Encoder<AMFPositioningInfoTransfer>): _Element {
+    if (!_cached_encoder_for_AMFPositioningInfoTransfer) { _cached_encoder_for_AMFPositioningInfoTransfer = function (value: AMFPositioningInfoTransfer, _elGetter: $.ASN1Encoder<AMFPositioningInfoTransfer>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

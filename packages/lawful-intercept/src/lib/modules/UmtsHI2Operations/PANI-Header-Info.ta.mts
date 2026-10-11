@@ -191,7 +191,7 @@ let _cached_encoder_for_PANI_Header_Info: $.ASN1Encoder<PANI_Header_Info> | null
  */
 export
 function _encode_PANI_Header_Info (value: PANI_Header_Info, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PANI_Header_Info) { _cached_encoder_for_PANI_Header_Info = function (value: PANI_Header_Info, elGetter: $.ASN1Encoder<PANI_Header_Info>): _Element {
+    if (!_cached_encoder_for_PANI_Header_Info) { _cached_encoder_for_PANI_Header_Info = function (value: PANI_Header_Info, _elGetter: $.ASN1Encoder<PANI_Header_Info>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

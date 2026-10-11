@@ -366,7 +366,7 @@ let _cached_encoder_for_SMFPDUSessionRelease: $.ASN1Encoder<SMFPDUSessionRelease
  */
 export
 function _encode_SMFPDUSessionRelease (value: SMFPDUSessionRelease, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMFPDUSessionRelease) { _cached_encoder_for_SMFPDUSessionRelease = function (value: SMFPDUSessionRelease, elGetter: $.ASN1Encoder<SMFPDUSessionRelease>): _Element {
+    if (!_cached_encoder_for_SMFPDUSessionRelease) { _cached_encoder_for_SMFPDUSessionRelease = function (value: SMFPDUSessionRelease, _elGetter: $.ASN1Encoder<SMFPDUSessionRelease>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(16 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

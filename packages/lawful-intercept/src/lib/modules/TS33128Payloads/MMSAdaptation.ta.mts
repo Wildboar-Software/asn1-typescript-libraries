@@ -156,7 +156,7 @@ let _cached_encoder_for_MMSAdaptation: $.ASN1Encoder<MMSAdaptation> | null = nul
  */
 export
 function _encode_MMSAdaptation (value: MMSAdaptation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSAdaptation) { _cached_encoder_for_MMSAdaptation = function (value: MMSAdaptation, elGetter: $.ASN1Encoder<MMSAdaptation>): _Element {
+    if (!_cached_encoder_for_MMSAdaptation) { _cached_encoder_for_MMSAdaptation = function (value: MMSAdaptation, _elGetter: $.ASN1Encoder<MMSAdaptation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

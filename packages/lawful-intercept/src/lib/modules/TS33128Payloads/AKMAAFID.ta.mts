@@ -158,7 +158,7 @@ let _cached_encoder_for_AKMAAFID: $.ASN1Encoder<AKMAAFID> | null = null;
  */
 export
 function _encode_AKMAAFID (value: AKMAAFID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AKMAAFID) { _cached_encoder_for_AKMAAFID = function (value: AKMAAFID, elGetter: $.ASN1Encoder<AKMAAFID>): _Element {
+    if (!_cached_encoder_for_AKMAAFID) { _cached_encoder_for_AKMAAFID = function (value: AKMAAFID, _elGetter: $.ASN1Encoder<AKMAAFID>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

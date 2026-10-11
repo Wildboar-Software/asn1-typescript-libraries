@@ -216,7 +216,7 @@ let _cached_encoder_for_MMSNotificationResponse: $.ASN1Encoder<MMSNotificationRe
  */
 export
 function _encode_MMSNotificationResponse (value: MMSNotificationResponse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSNotificationResponse) { _cached_encoder_for_MMSNotificationResponse = function (value: MMSNotificationResponse, elGetter: $.ASN1Encoder<MMSNotificationResponse>): _Element {
+    if (!_cached_encoder_for_MMSNotificationResponse) { _cached_encoder_for_MMSNotificationResponse = function (value: MMSNotificationResponse, _elGetter: $.ASN1Encoder<MMSNotificationResponse>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

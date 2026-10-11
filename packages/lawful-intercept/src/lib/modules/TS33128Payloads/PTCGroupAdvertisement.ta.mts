@@ -228,7 +228,7 @@ let _cached_encoder_for_PTCGroupAdvertisement: $.ASN1Encoder<PTCGroupAdvertiseme
  */
 export
 function _encode_PTCGroupAdvertisement (value: PTCGroupAdvertisement, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCGroupAdvertisement) { _cached_encoder_for_PTCGroupAdvertisement = function (value: PTCGroupAdvertisement, elGetter: $.ASN1Encoder<PTCGroupAdvertisement>): _Element {
+    if (!_cached_encoder_for_PTCGroupAdvertisement) { _cached_encoder_for_PTCGroupAdvertisement = function (value: PTCGroupAdvertisement, _elGetter: $.ASN1Encoder<PTCGroupAdvertisement>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

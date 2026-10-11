@@ -192,7 +192,7 @@ let _cached_encoder_for_GNSSPositioningMethodAndUsage: $.ASN1Encoder<GNSSPositio
  */
 export
 function _encode_GNSSPositioningMethodAndUsage (value: GNSSPositioningMethodAndUsage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GNSSPositioningMethodAndUsage) { _cached_encoder_for_GNSSPositioningMethodAndUsage = function (value: GNSSPositioningMethodAndUsage, elGetter: $.ASN1Encoder<GNSSPositioningMethodAndUsage>): _Element {
+    if (!_cached_encoder_for_GNSSPositioningMethodAndUsage) { _cached_encoder_for_GNSSPositioningMethodAndUsage = function (value: GNSSPositioningMethodAndUsage, _elGetter: $.ASN1Encoder<GNSSPositioningMethodAndUsage>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

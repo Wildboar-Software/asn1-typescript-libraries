@@ -301,7 +301,7 @@ let _cached_encoder_for_RANDownlinkNASTransport: $.ASN1Encoder<RANDownlinkNASTra
  */
 export
 function _encode_RANDownlinkNASTransport (value: RANDownlinkNASTransport, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RANDownlinkNASTransport) { _cached_encoder_for_RANDownlinkNASTransport = function (value: RANDownlinkNASTransport, elGetter: $.ASN1Encoder<RANDownlinkNASTransport>): _Element {
+    if (!_cached_encoder_for_RANDownlinkNASTransport) { _cached_encoder_for_RANDownlinkNASTransport = function (value: RANDownlinkNASTransport, _elGetter: $.ASN1Encoder<RANDownlinkNASTransport>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(11 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

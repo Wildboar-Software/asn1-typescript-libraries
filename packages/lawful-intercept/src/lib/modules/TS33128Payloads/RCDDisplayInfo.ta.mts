@@ -173,7 +173,7 @@ let _cached_encoder_for_RCDDisplayInfo: $.ASN1Encoder<RCDDisplayInfo> | null = n
  */
 export
 function _encode_RCDDisplayInfo (value: RCDDisplayInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RCDDisplayInfo) { _cached_encoder_for_RCDDisplayInfo = function (value: RCDDisplayInfo, elGetter: $.ASN1Encoder<RCDDisplayInfo>): _Element {
+    if (!_cached_encoder_for_RCDDisplayInfo) { _cached_encoder_for_RCDDisplayInfo = function (value: RCDDisplayInfo, _elGetter: $.ASN1Encoder<RCDDisplayInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

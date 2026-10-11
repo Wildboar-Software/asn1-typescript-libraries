@@ -206,7 +206,7 @@ let _cached_encoder_for_GUTI: $.ASN1Encoder<GUTI> | null = null;
  */
 export
 function _encode_GUTI (value: GUTI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GUTI) { _cached_encoder_for_GUTI = function (value: GUTI, elGetter: $.ASN1Encoder<GUTI>): _Element {
+    if (!_cached_encoder_for_GUTI) { _cached_encoder_for_GUTI = function (value: GUTI, _elGetter: $.ASN1Encoder<GUTI>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

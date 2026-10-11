@@ -176,7 +176,7 @@ let _cached_encoder_for_IMSLocation: $.ASN1Encoder<IMSLocation> | null = null;
  */
 export
 function _encode_IMSLocation (value: IMSLocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IMSLocation) { _cached_encoder_for_IMSLocation = function (value: IMSLocation, elGetter: $.ASN1Encoder<IMSLocation>): _Element {
+    if (!_cached_encoder_for_IMSLocation) { _cached_encoder_for_IMSLocation = function (value: IMSLocation, _elGetter: $.ASN1Encoder<IMSLocation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

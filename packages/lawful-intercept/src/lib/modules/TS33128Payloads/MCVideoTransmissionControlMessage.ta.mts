@@ -179,7 +179,7 @@ let _cached_encoder_for_MCVideoTransmissionControlMessage: $.ASN1Encoder<MCVideo
  */
 export
 function _encode_MCVideoTransmissionControlMessage (value: MCVideoTransmissionControlMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCVideoTransmissionControlMessage) { _cached_encoder_for_MCVideoTransmissionControlMessage = function (value: MCVideoTransmissionControlMessage, elGetter: $.ASN1Encoder<MCVideoTransmissionControlMessage>): _Element {
+    if (!_cached_encoder_for_MCVideoTransmissionControlMessage) { _cached_encoder_for_MCVideoTransmissionControlMessage = function (value: MCVideoTransmissionControlMessage, _elGetter: $.ASN1Encoder<MCVideoTransmissionControlMessage>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

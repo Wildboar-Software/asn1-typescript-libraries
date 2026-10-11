@@ -148,7 +148,7 @@ let _cached_encoder_for_ExtendedLocParameters_altitude: $.ASN1Encoder<ExtendedLo
  */
 export
 function _encode_ExtendedLocParameters_altitude (value: ExtendedLocParameters_altitude, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExtendedLocParameters_altitude) { _cached_encoder_for_ExtendedLocParameters_altitude = function (value: ExtendedLocParameters_altitude, elGetter: $.ASN1Encoder<ExtendedLocParameters_altitude>): _Element {
+    if (!_cached_encoder_for_ExtendedLocParameters_altitude) { _cached_encoder_for_ExtendedLocParameters_altitude = function (value: ExtendedLocParameters_altitude, _elGetter: $.ASN1Encoder<ExtendedLocParameters_altitude>): _Element {
     const _components: _Element[] = new Array(2);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encodePrintableString(value.alt, $.BER);

@@ -159,7 +159,7 @@ let _cached_encoder_for_UERadioCapability: $.ASN1Encoder<UERadioCapability> | nu
  */
 export
 function _encode_UERadioCapability (value: UERadioCapability, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UERadioCapability) { _cached_encoder_for_UERadioCapability = function (value: UERadioCapability, elGetter: $.ASN1Encoder<UERadioCapability>): _Element {
+    if (!_cached_encoder_for_UERadioCapability) { _cached_encoder_for_UERadioCapability = function (value: UERadioCapability, _elGetter: $.ASN1Encoder<UERadioCapability>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

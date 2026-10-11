@@ -181,7 +181,7 @@ let _cached_encoder_for_AssociatePresenceStatus: $.ASN1Encoder<AssociatePresence
  */
 export
 function _encode_AssociatePresenceStatus (value: AssociatePresenceStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AssociatePresenceStatus) { _cached_encoder_for_AssociatePresenceStatus = function (value: AssociatePresenceStatus, elGetter: $.ASN1Encoder<AssociatePresenceStatus>): _Element {
+    if (!_cached_encoder_for_AssociatePresenceStatus) { _cached_encoder_for_AssociatePresenceStatus = function (value: AssociatePresenceStatus, _elGetter: $.ASN1Encoder<AssociatePresenceStatus>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

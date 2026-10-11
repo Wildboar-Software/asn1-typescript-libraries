@@ -228,7 +228,7 @@ let _cached_encoder_for_DTLS13UAStarParams: $.ASN1Encoder<DTLS13UAStarParams> | 
  */
 export
 function _encode_DTLS13UAStarParams (value: DTLS13UAStarParams, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DTLS13UAStarParams) { _cached_encoder_for_DTLS13UAStarParams = function (value: DTLS13UAStarParams, elGetter: $.ASN1Encoder<DTLS13UAStarParams>): _Element {
+    if (!_cached_encoder_for_DTLS13UAStarParams) { _cached_encoder_for_DTLS13UAStarParams = function (value: DTLS13UAStarParams, _elGetter: $.ASN1Encoder<DTLS13UAStarParams>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

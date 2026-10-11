@@ -152,7 +152,7 @@ let _cached_encoder_for_WlanLocationAttributes: $.ASN1Encoder<WlanLocationAttrib
  */
 export
 function _encode_WlanLocationAttributes (value: WlanLocationAttributes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_WlanLocationAttributes) { _cached_encoder_for_WlanLocationAttributes = function (value: WlanLocationAttributes, elGetter: $.ASN1Encoder<WlanLocationAttributes>): _Element {
+    if (!_cached_encoder_for_WlanLocationAttributes) { _cached_encoder_for_WlanLocationAttributes = function (value: WlanLocationAttributes, _elGetter: $.ASN1Encoder<WlanLocationAttributes>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

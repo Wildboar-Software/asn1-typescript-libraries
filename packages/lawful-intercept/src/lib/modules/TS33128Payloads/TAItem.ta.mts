@@ -186,7 +186,7 @@ let _cached_encoder_for_TAItem: $.ASN1Encoder<TAItem> | null = null;
  */
 export
 function _encode_TAItem (value: TAItem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TAItem) { _cached_encoder_for_TAItem = function (value: TAItem, elGetter: $.ASN1Encoder<TAItem>): _Element {
+    if (!_cached_encoder_for_TAItem) { _cached_encoder_for_TAItem = function (value: TAItem, _elGetter: $.ASN1Encoder<TAItem>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

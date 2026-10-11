@@ -174,7 +174,7 @@ let _cached_encoder_for_EASInfo: $.ASN1Encoder<EASInfo> | null = null;
  */
 export
 function _encode_EASInfo (value: EASInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EASInfo) { _cached_encoder_for_EASInfo = function (value: EASInfo, elGetter: $.ASN1Encoder<EASInfo>): _Element {
+    if (!_cached_encoder_for_EASInfo) { _cached_encoder_for_EASInfo = function (value: EASInfo, _elGetter: $.ASN1Encoder<EASInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

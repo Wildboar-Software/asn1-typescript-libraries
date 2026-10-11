@@ -268,7 +268,7 @@ let _cached_encoder_for_ULIC_header: $.ASN1Encoder<ULIC_header> | null = null;
  */
 export
 function _encode_ULIC_header (value: ULIC_header, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ULIC_header) { _cached_encoder_for_ULIC_header = function (value: ULIC_header, elGetter: $.ASN1Encoder<ULIC_header>): _Element {
+    if (!_cached_encoder_for_ULIC_header) { _cached_encoder_for_ULIC_header = function (value: ULIC_header, _elGetter: $.ASN1Encoder<ULIC_header>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(8 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

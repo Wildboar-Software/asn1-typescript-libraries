@@ -343,7 +343,7 @@ let _cached_encoder_for_PDSummaryReport: $.ASN1Encoder<PDSummaryReport> | null =
  */
 export
 function _encode_PDSummaryReport (value: PDSummaryReport, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDSummaryReport) { _cached_encoder_for_PDSummaryReport = function (value: PDSummaryReport, elGetter: $.ASN1Encoder<PDSummaryReport>): _Element {
+    if (!_cached_encoder_for_PDSummaryReport) { _cached_encoder_for_PDSummaryReport = function (value: PDSummaryReport, _elGetter: $.ASN1Encoder<PDSummaryReport>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(14 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

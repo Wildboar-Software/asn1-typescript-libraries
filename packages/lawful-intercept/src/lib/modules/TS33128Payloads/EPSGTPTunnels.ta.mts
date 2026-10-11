@@ -224,7 +224,7 @@ let _cached_encoder_for_EPSGTPTunnels: $.ASN1Encoder<EPSGTPTunnels> | null = nul
  */
 export
 function _encode_EPSGTPTunnels (value: EPSGTPTunnels, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSGTPTunnels) { _cached_encoder_for_EPSGTPTunnels = function (value: EPSGTPTunnels, elGetter: $.ASN1Encoder<EPSGTPTunnels>): _Element {
+    if (!_cached_encoder_for_EPSGTPTunnels) { _cached_encoder_for_EPSGTPTunnels = function (value: EPSGTPTunnels, _elGetter: $.ASN1Encoder<EPSGTPTunnels>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

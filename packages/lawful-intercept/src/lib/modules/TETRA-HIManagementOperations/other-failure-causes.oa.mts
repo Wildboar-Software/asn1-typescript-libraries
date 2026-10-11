@@ -19,10 +19,8 @@ export
 const other_failure_causes: ERROR = {
     class: "ERROR",
     decoderFor: {
-        "&ParameterType": undefined,
     },
     encoderFor: {
-        "&ParameterType": undefined,
     },
     "&errorCode": { local: 0 } /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ParameterType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

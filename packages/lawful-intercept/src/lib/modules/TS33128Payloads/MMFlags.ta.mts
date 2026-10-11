@@ -178,7 +178,7 @@ let _cached_encoder_for_MMFlags: $.ASN1Encoder<MMFlags> | null = null;
  */
 export
 function _encode_MMFlags (value: MMFlags, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMFlags) { _cached_encoder_for_MMFlags = function (value: MMFlags, elGetter: $.ASN1Encoder<MMFlags>): _Element {
+    if (!_cached_encoder_for_MMFlags) { _cached_encoder_for_MMFlags = function (value: MMFlags, _elGetter: $.ASN1Encoder<MMFlags>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

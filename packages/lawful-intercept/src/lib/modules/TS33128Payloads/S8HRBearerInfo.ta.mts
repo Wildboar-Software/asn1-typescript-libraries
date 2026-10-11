@@ -255,7 +255,7 @@ let _cached_encoder_for_S8HRBearerInfo: $.ASN1Encoder<S8HRBearerInfo> | null = n
  */
 export
 function _encode_S8HRBearerInfo (value: S8HRBearerInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_S8HRBearerInfo) { _cached_encoder_for_S8HRBearerInfo = function (value: S8HRBearerInfo, elGetter: $.ASN1Encoder<S8HRBearerInfo>): _Element {
+    if (!_cached_encoder_for_S8HRBearerInfo) { _cached_encoder_for_S8HRBearerInfo = function (value: S8HRBearerInfo, _elGetter: $.ASN1Encoder<S8HRBearerInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(8 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

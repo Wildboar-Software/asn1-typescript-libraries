@@ -158,7 +158,7 @@ let _cached_encoder_for_PLMNID: $.ASN1Encoder<PLMNID> | null = null;
  */
 export
 function _encode_PLMNID (value: PLMNID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PLMNID) { _cached_encoder_for_PLMNID = function (value: PLMNID, elGetter: $.ASN1Encoder<PLMNID>): _Element {
+    if (!_cached_encoder_for_PLMNID) { _cached_encoder_for_PLMNID = function (value: PLMNID, _elGetter: $.ASN1Encoder<PLMNID>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

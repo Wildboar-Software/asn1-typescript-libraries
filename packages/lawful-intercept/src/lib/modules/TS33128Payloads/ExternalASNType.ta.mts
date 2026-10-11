@@ -175,7 +175,7 @@ let _cached_encoder_for_ExternalASNType: $.ASN1Encoder<ExternalASNType> | null =
  */
 export
 function _encode_ExternalASNType (value: ExternalASNType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExternalASNType) { _cached_encoder_for_ExternalASNType = function (value: ExternalASNType, elGetter: $.ASN1Encoder<ExternalASNType>): _Element {
+    if (!_cached_encoder_for_ExternalASNType) { _cached_encoder_for_ExternalASNType = function (value: ExternalASNType, _elGetter: $.ASN1Encoder<ExternalASNType>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

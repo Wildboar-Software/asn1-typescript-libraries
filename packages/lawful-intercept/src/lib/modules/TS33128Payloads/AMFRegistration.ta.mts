@@ -656,7 +656,7 @@ let _cached_encoder_for_AMFRegistration: $.ASN1Encoder<AMFRegistration> | null =
  */
 export
 function _encode_AMFRegistration (value: AMFRegistration, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFRegistration) { _cached_encoder_for_AMFRegistration = function (value: AMFRegistration, elGetter: $.ASN1Encoder<AMFRegistration>): _Element {
+    if (!_cached_encoder_for_AMFRegistration) { _cached_encoder_for_AMFRegistration = function (value: AMFRegistration, _elGetter: $.ASN1Encoder<AMFRegistration>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(33 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

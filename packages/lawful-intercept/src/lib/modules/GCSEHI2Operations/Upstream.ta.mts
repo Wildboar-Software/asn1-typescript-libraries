@@ -165,7 +165,7 @@ let _cached_encoder_for_Upstream: $.ASN1Encoder<Upstream> | null = null;
  */
 export
 function _encode_Upstream (value: Upstream, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Upstream) { _cached_encoder_for_Upstream = function (value: Upstream, elGetter: $.ASN1Encoder<Upstream>): _Element {
+    if (!_cached_encoder_for_Upstream) { _cached_encoder_for_Upstream = function (value: Upstream, _elGetter: $.ASN1Encoder<Upstream>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

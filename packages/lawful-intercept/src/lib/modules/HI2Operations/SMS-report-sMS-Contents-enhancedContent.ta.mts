@@ -167,7 +167,7 @@ let _cached_encoder_for_SMS_report_sMS_Contents_enhancedContent: $.ASN1Encoder<S
  */
 export
 function _encode_SMS_report_sMS_Contents_enhancedContent (value: SMS_report_sMS_Contents_enhancedContent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMS_report_sMS_Contents_enhancedContent) { _cached_encoder_for_SMS_report_sMS_Contents_enhancedContent = function (value: SMS_report_sMS_Contents_enhancedContent, elGetter: $.ASN1Encoder<SMS_report_sMS_Contents_enhancedContent>): _Element {
+    if (!_cached_encoder_for_SMS_report_sMS_Contents_enhancedContent) { _cached_encoder_for_SMS_report_sMS_Contents_enhancedContent = function (value: SMS_report_sMS_Contents_enhancedContent, _elGetter: $.ASN1Encoder<SMS_report_sMS_Contents_enhancedContent>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.content, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_SMS_report_sMS_Contents_enhancedContent_character_encoding, $.BER)(value.character_encoding, $.BER)

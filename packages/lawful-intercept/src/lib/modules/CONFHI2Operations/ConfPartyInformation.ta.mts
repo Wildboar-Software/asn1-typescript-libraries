@@ -164,7 +164,7 @@ let _cached_encoder_for_ConfPartyInformation: $.ASN1Encoder<ConfPartyInformation
  */
 export
 function _encode_ConfPartyInformation (value: ConfPartyInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConfPartyInformation) { _cached_encoder_for_ConfPartyInformation = function (value: ConfPartyInformation, elGetter: $.ASN1Encoder<ConfPartyInformation>): _Element {
+    if (!_cached_encoder_for_ConfPartyInformation) { _cached_encoder_for_ConfPartyInformation = function (value: ConfPartyInformation, _elGetter: $.ASN1Encoder<ConfPartyInformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -142,7 +142,7 @@ let _cached_encoder_for_ERABQoSParameters: $.ASN1Encoder<ERABQoSParameters> | nu
  */
 export
 function _encode_ERABQoSParameters (value: ERABQoSParameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ERABQoSParameters) { _cached_encoder_for_ERABQoSParameters = function (value: ERABQoSParameters, elGetter: $.ASN1Encoder<ERABQoSParameters>): _Element {
+    if (!_cached_encoder_for_ERABQoSParameters) { _cached_encoder_for_ERABQoSParameters = function (value: ERABQoSParameters, _elGetter: $.ASN1Encoder<ERABQoSParameters>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -271,7 +271,7 @@ let _cached_encoder_for_SUCI: $.ASN1Encoder<SUCI> | null = null;
  */
 export
 function _encode_SUCI (value: SUCI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SUCI) { _cached_encoder_for_SUCI = function (value: SUCI, elGetter: $.ASN1Encoder<SUCI>): _Element {
+    if (!_cached_encoder_for_SUCI) { _cached_encoder_for_SUCI = function (value: SUCI, _elGetter: $.ASN1Encoder<SUCI>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

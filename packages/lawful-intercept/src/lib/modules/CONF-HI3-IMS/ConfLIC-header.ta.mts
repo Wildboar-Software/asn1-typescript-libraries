@@ -263,7 +263,7 @@ let _cached_encoder_for_ConfLIC_header: $.ASN1Encoder<ConfLIC_header> | null = n
  */
 export
 function _encode_ConfLIC_header (value: ConfLIC_header, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConfLIC_header) { _cached_encoder_for_ConfLIC_header = function (value: ConfLIC_header, elGetter: $.ASN1Encoder<ConfLIC_header>): _Element {
+    if (!_cached_encoder_for_ConfLIC_header) { _cached_encoder_for_ConfLIC_header = function (value: ConfLIC_header, _elGetter: $.ASN1Encoder<ConfLIC_header>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(8 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

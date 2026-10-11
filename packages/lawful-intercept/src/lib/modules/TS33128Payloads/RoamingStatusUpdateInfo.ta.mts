@@ -161,7 +161,7 @@ let _cached_encoder_for_RoamingStatusUpdateInfo: $.ASN1Encoder<RoamingStatusUpda
  */
 export
 function _encode_RoamingStatusUpdateInfo (value: RoamingStatusUpdateInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RoamingStatusUpdateInfo) { _cached_encoder_for_RoamingStatusUpdateInfo = function (value: RoamingStatusUpdateInfo, elGetter: $.ASN1Encoder<RoamingStatusUpdateInfo>): _Element {
+    if (!_cached_encoder_for_RoamingStatusUpdateInfo) { _cached_encoder_for_RoamingStatusUpdateInfo = function (value: RoamingStatusUpdateInfo, _elGetter: $.ASN1Encoder<RoamingStatusUpdateInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -157,7 +157,7 @@ let _cached_encoder_for_TraceCollectionEntityInfo: $.ASN1Encoder<TraceCollection
  */
 export
 function _encode_TraceCollectionEntityInfo (value: TraceCollectionEntityInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TraceCollectionEntityInfo) { _cached_encoder_for_TraceCollectionEntityInfo = function (value: TraceCollectionEntityInfo, elGetter: $.ASN1Encoder<TraceCollectionEntityInfo>): _Element {
+    if (!_cached_encoder_for_TraceCollectionEntityInfo) { _cached_encoder_for_TraceCollectionEntityInfo = function (value: TraceCollectionEntityInfo, _elGetter: $.ASN1Encoder<TraceCollectionEntityInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

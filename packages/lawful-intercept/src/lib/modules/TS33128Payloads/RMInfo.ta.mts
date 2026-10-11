@@ -170,7 +170,7 @@ let _cached_encoder_for_RMInfo: $.ASN1Encoder<RMInfo> | null = null;
  */
 export
 function _encode_RMInfo (value: RMInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RMInfo) { _cached_encoder_for_RMInfo = function (value: RMInfo, elGetter: $.ASN1Encoder<RMInfo>): _Element {
+    if (!_cached_encoder_for_RMInfo) { _cached_encoder_for_RMInfo = function (value: RMInfo, _elGetter: $.ASN1Encoder<RMInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

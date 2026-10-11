@@ -177,7 +177,7 @@ let _cached_encoder_for_TargetConnectionMethod: $.ASN1Encoder<TargetConnectionMe
  */
 export
 function _encode_TargetConnectionMethod (value: TargetConnectionMethod, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TargetConnectionMethod) { _cached_encoder_for_TargetConnectionMethod = function (value: TargetConnectionMethod, elGetter: $.ASN1Encoder<TargetConnectionMethod>): _Element {
+    if (!_cached_encoder_for_TargetConnectionMethod) { _cached_encoder_for_TargetConnectionMethod = function (value: TargetConnectionMethod, _elGetter: $.ASN1Encoder<TargetConnectionMethod>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

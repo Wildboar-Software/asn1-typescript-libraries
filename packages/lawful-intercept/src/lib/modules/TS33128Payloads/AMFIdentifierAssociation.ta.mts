@@ -251,7 +251,7 @@ let _cached_encoder_for_AMFIdentifierAssociation: $.ASN1Encoder<AMFIdentifierAss
  */
 export
 function _encode_AMFIdentifierAssociation (value: AMFIdentifierAssociation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFIdentifierAssociation) { _cached_encoder_for_AMFIdentifierAssociation = function (value: AMFIdentifierAssociation, elGetter: $.ASN1Encoder<AMFIdentifierAssociation>): _Element {
+    if (!_cached_encoder_for_AMFIdentifierAssociation) { _cached_encoder_for_AMFIdentifierAssociation = function (value: AMFIdentifierAssociation, _elGetter: $.ASN1Encoder<AMFIdentifierAssociation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(8 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

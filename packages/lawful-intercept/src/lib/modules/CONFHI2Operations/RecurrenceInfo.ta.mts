@@ -176,7 +176,7 @@ let _cached_encoder_for_RecurrenceInfo: $.ASN1Encoder<RecurrenceInfo> | null = n
  */
 export
 function _encode_RecurrenceInfo (value: RecurrenceInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RecurrenceInfo) { _cached_encoder_for_RecurrenceInfo = function (value: RecurrenceInfo, elGetter: $.ASN1Encoder<RecurrenceInfo>): _Element {
+    if (!_cached_encoder_for_RecurrenceInfo) { _cached_encoder_for_RecurrenceInfo = function (value: RecurrenceInfo, _elGetter: $.ASN1Encoder<RecurrenceInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

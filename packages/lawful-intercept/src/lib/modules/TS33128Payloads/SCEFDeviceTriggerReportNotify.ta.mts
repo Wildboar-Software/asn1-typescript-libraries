@@ -212,7 +212,7 @@ let _cached_encoder_for_SCEFDeviceTriggerReportNotify: $.ASN1Encoder<SCEFDeviceT
  */
 export
 function _encode_SCEFDeviceTriggerReportNotify (value: SCEFDeviceTriggerReportNotify, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCEFDeviceTriggerReportNotify) { _cached_encoder_for_SCEFDeviceTriggerReportNotify = function (value: SCEFDeviceTriggerReportNotify, elGetter: $.ASN1Encoder<SCEFDeviceTriggerReportNotify>): _Element {
+    if (!_cached_encoder_for_SCEFDeviceTriggerReportNotify) { _cached_encoder_for_SCEFDeviceTriggerReportNotify = function (value: SCEFDeviceTriggerReportNotify, _elGetter: $.ASN1Encoder<SCEFDeviceTriggerReportNotify>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

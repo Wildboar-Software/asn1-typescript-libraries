@@ -163,7 +163,7 @@ let _cached_encoder_for_MMSExpiry: $.ASN1Encoder<MMSExpiry> | null = null;
  */
 export
 function _encode_MMSExpiry (value: MMSExpiry, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSExpiry) { _cached_encoder_for_MMSExpiry = function (value: MMSExpiry, elGetter: $.ASN1Encoder<MMSExpiry>): _Element {
+    if (!_cached_encoder_for_MMSExpiry) { _cached_encoder_for_MMSExpiry = function (value: MMSExpiry, _elGetter: $.ASN1Encoder<MMSExpiry>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

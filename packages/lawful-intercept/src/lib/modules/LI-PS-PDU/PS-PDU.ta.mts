@@ -150,7 +150,7 @@ let _cached_encoder_for_PS_PDU: $.ASN1Encoder<PS_PDU> | null = null;
  */
 export
 function _encode_PS_PDU (value: PS_PDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PS_PDU) { _cached_encoder_for_PS_PDU = function (value: PS_PDU, elGetter: $.ASN1Encoder<PS_PDU>): _Element {
+    if (!_cached_encoder_for_PS_PDU) { _cached_encoder_for_PS_PDU = function (value: PS_PDU, _elGetter: $.ASN1Encoder<PS_PDU>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_PSHeader, $.BER)(value.pSHeader, $.BER),
         /* REQUIRED   */ $._encode_explicit(_TagClass.context, 2, () => _encode_Payload, $.BER)(value.payload, $.BER)

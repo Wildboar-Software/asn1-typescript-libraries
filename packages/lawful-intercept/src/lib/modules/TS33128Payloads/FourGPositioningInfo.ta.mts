@@ -236,7 +236,7 @@ let _cached_encoder_for_FourGPositioningInfo: $.ASN1Encoder<FourGPositioningInfo
  */
 export
 function _encode_FourGPositioningInfo (value: FourGPositioningInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FourGPositioningInfo) { _cached_encoder_for_FourGPositioningInfo = function (value: FourGPositioningInfo, elGetter: $.ASN1Encoder<FourGPositioningInfo>): _Element {
+    if (!_cached_encoder_for_FourGPositioningInfo) { _cached_encoder_for_FourGPositioningInfo = function (value: FourGPositioningInfo, _elGetter: $.ASN1Encoder<FourGPositioningInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

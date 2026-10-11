@@ -176,7 +176,7 @@ let _cached_encoder_for_FiveGSGTPTunnels: $.ASN1Encoder<FiveGSGTPTunnels> | null
  */
 export
 function _encode_FiveGSGTPTunnels (value: FiveGSGTPTunnels, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FiveGSGTPTunnels) { _cached_encoder_for_FiveGSGTPTunnels = function (value: FiveGSGTPTunnels, elGetter: $.ASN1Encoder<FiveGSGTPTunnels>): _Element {
+    if (!_cached_encoder_for_FiveGSGTPTunnels) { _cached_encoder_for_FiveGSGTPTunnels = function (value: FiveGSGTPTunnels, _elGetter: $.ASN1Encoder<FiveGSGTPTunnels>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -645,7 +645,7 @@ let _cached_encoder_for_TLS13UAStarParams: $.ASN1Encoder<TLS13UAStarParams> | nu
  */
 export
 function _encode_TLS13UAStarParams (value: TLS13UAStarParams, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TLS13UAStarParams) { _cached_encoder_for_TLS13UAStarParams = function (value: TLS13UAStarParams, elGetter: $.ASN1Encoder<TLS13UAStarParams>): _Element {
+    if (!_cached_encoder_for_TLS13UAStarParams) { _cached_encoder_for_TLS13UAStarParams = function (value: TLS13UAStarParams, _elGetter: $.ASN1Encoder<TLS13UAStarParams>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(31 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

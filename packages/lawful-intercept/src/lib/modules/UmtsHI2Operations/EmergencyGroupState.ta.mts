@@ -193,7 +193,7 @@ let _cached_encoder_for_EmergencyGroupState: $.ASN1Encoder<EmergencyGroupState> 
  */
 export
 function _encode_EmergencyGroupState (value: EmergencyGroupState, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EmergencyGroupState) { _cached_encoder_for_EmergencyGroupState = function (value: EmergencyGroupState, elGetter: $.ASN1Encoder<EmergencyGroupState>): _Element {
+    if (!_cached_encoder_for_EmergencyGroupState) { _cached_encoder_for_EmergencyGroupState = function (value: EmergencyGroupState, _elGetter: $.ASN1Encoder<EmergencyGroupState>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -158,7 +158,7 @@ let _cached_encoder_for_RATRestrictionItem: $.ASN1Encoder<RATRestrictionItem> | 
  */
 export
 function _encode_RATRestrictionItem (value: RATRestrictionItem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RATRestrictionItem) { _cached_encoder_for_RATRestrictionItem = function (value: RATRestrictionItem, elGetter: $.ASN1Encoder<RATRestrictionItem>): _Element {
+    if (!_cached_encoder_for_RATRestrictionItem) { _cached_encoder_for_RATRestrictionItem = function (value: RATRestrictionItem, _elGetter: $.ASN1Encoder<RATRestrictionItem>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

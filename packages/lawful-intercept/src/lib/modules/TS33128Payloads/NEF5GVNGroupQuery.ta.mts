@@ -174,7 +174,7 @@ let _cached_encoder_for_NEF5GVNGroupQuery: $.ASN1Encoder<NEF5GVNGroupQuery> | nu
  */
 export
 function _encode_NEF5GVNGroupQuery (value: NEF5GVNGroupQuery, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NEF5GVNGroupQuery) { _cached_encoder_for_NEF5GVNGroupQuery = function (value: NEF5GVNGroupQuery, elGetter: $.ASN1Encoder<NEF5GVNGroupQuery>): _Element {
+    if (!_cached_encoder_for_NEF5GVNGroupQuery) { _cached_encoder_for_NEF5GVNGroupQuery = function (value: NEF5GVNGroupQuery, _elGetter: $.ASN1Encoder<NEF5GVNGroupQuery>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -251,7 +251,7 @@ let _cached_encoder_for_UPPathChange: $.ASN1Encoder<UPPathChange> | null = null;
  */
 export
 function _encode_UPPathChange (value: UPPathChange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UPPathChange) { _cached_encoder_for_UPPathChange = function (value: UPPathChange, elGetter: $.ASN1Encoder<UPPathChange>): _Element {
+    if (!_cached_encoder_for_UPPathChange) { _cached_encoder_for_UPPathChange = function (value: UPPathChange, _elGetter: $.ASN1Encoder<UPPathChange>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(8 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

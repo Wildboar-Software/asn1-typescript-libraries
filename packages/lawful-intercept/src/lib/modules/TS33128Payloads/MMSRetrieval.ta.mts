@@ -552,7 +552,7 @@ let _cached_encoder_for_MMSRetrieval: $.ASN1Encoder<MMSRetrieval> | null = null;
  */
 export
 function _encode_MMSRetrieval (value: MMSRetrieval, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSRetrieval) { _cached_encoder_for_MMSRetrieval = function (value: MMSRetrieval, elGetter: $.ASN1Encoder<MMSRetrieval>): _Element {
+    if (!_cached_encoder_for_MMSRetrieval) { _cached_encoder_for_MMSRetrieval = function (value: MMSRetrieval, _elGetter: $.ASN1Encoder<MMSRetrieval>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(27 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

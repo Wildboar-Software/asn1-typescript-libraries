@@ -241,7 +241,7 @@ let _cached_encoder_for_MMSMBoxDelete: $.ASN1Encoder<MMSMBoxDelete> | null = nul
  */
 export
 function _encode_MMSMBoxDelete (value: MMSMBoxDelete, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSMBoxDelete) { _cached_encoder_for_MMSMBoxDelete = function (value: MMSMBoxDelete, elGetter: $.ASN1Encoder<MMSMBoxDelete>): _Element {
+    if (!_cached_encoder_for_MMSMBoxDelete) { _cached_encoder_for_MMSMBoxDelete = function (value: MMSMBoxDelete, _elGetter: $.ASN1Encoder<MMSMBoxDelete>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

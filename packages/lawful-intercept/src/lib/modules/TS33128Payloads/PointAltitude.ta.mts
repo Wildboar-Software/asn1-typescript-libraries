@@ -158,7 +158,7 @@ let _cached_encoder_for_PointAltitude: $.ASN1Encoder<PointAltitude> | null = nul
  */
 export
 function _encode_PointAltitude (value: PointAltitude, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PointAltitude) { _cached_encoder_for_PointAltitude = function (value: PointAltitude, elGetter: $.ASN1Encoder<PointAltitude>): _Element {
+    if (!_cached_encoder_for_PointAltitude) { _cached_encoder_for_PointAltitude = function (value: PointAltitude, _elGetter: $.ASN1Encoder<PointAltitude>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

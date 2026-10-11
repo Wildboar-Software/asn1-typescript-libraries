@@ -533,7 +533,7 @@ let _cached_encoder_for_DetailedCivicAddress: $.ASN1Encoder<DetailedCivicAddress
  */
 export
 function _encode_DetailedCivicAddress (value: DetailedCivicAddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DetailedCivicAddress) { _cached_encoder_for_DetailedCivicAddress = function (value: DetailedCivicAddress, elGetter: $.ASN1Encoder<DetailedCivicAddress>): _Element {
+    if (!_cached_encoder_for_DetailedCivicAddress) { _cached_encoder_for_DetailedCivicAddress = function (value: DetailedCivicAddress, _elGetter: $.ASN1Encoder<DetailedCivicAddress>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(28 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -176,7 +176,7 @@ let _cached_encoder_for_EDNConnectionInfo: $.ASN1Encoder<EDNConnectionInfo> | nu
  */
 export
 function _encode_EDNConnectionInfo (value: EDNConnectionInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EDNConnectionInfo) { _cached_encoder_for_EDNConnectionInfo = function (value: EDNConnectionInfo, elGetter: $.ASN1Encoder<EDNConnectionInfo>): _Element {
+    if (!_cached_encoder_for_EDNConnectionInfo) { _cached_encoder_for_EDNConnectionInfo = function (value: EDNConnectionInfo, _elGetter: $.ASN1Encoder<EDNConnectionInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

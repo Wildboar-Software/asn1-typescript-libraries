@@ -226,7 +226,7 @@ let _cached_encoder_for_PASSporTPayload: $.ASN1Encoder<PASSporTPayload> | null =
  */
 export
 function _encode_PASSporTPayload (value: PASSporTPayload, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PASSporTPayload) { _cached_encoder_for_PASSporTPayload = function (value: PASSporTPayload, elGetter: $.ASN1Encoder<PASSporTPayload>): _Element {
+    if (!_cached_encoder_for_PASSporTPayload) { _cached_encoder_for_PASSporTPayload = function (value: PASSporTPayload, _elGetter: $.ASN1Encoder<PASSporTPayload>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

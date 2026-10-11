@@ -158,7 +158,7 @@ let _cached_encoder_for_EPSBearerContextForRemoval: $.ASN1Encoder<EPSBearerConte
  */
 export
 function _encode_EPSBearerContextForRemoval (value: EPSBearerContextForRemoval, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSBearerContextForRemoval) { _cached_encoder_for_EPSBearerContextForRemoval = function (value: EPSBearerContextForRemoval, elGetter: $.ASN1Encoder<EPSBearerContextForRemoval>): _Element {
+    if (!_cached_encoder_for_EPSBearerContextForRemoval) { _cached_encoder_for_EPSBearerContextForRemoval = function (value: EPSBearerContextForRemoval, _elGetter: $.ASN1Encoder<EPSBearerContextForRemoval>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

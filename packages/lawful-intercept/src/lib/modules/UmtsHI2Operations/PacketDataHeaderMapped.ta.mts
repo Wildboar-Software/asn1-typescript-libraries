@@ -270,7 +270,7 @@ let _cached_encoder_for_PacketDataHeaderMapped: $.ASN1Encoder<PacketDataHeaderMa
  */
 export
 function _encode_PacketDataHeaderMapped (value: PacketDataHeaderMapped, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PacketDataHeaderMapped) { _cached_encoder_for_PacketDataHeaderMapped = function (value: PacketDataHeaderMapped, elGetter: $.ASN1Encoder<PacketDataHeaderMapped>): _Element {
+    if (!_cached_encoder_for_PacketDataHeaderMapped) { _cached_encoder_for_PacketDataHeaderMapped = function (value: PacketDataHeaderMapped, _elGetter: $.ASN1Encoder<PacketDataHeaderMapped>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

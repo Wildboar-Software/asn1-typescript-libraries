@@ -244,7 +244,7 @@ let _cached_encoder_for_ProSeDirectDiscovery: $.ASN1Encoder<ProSeDirectDiscovery
  */
 export
 function _encode_ProSeDirectDiscovery (value: ProSeDirectDiscovery, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProSeDirectDiscovery) { _cached_encoder_for_ProSeDirectDiscovery = function (value: ProSeDirectDiscovery, elGetter: $.ASN1Encoder<ProSeDirectDiscovery>): _Element {
+    if (!_cached_encoder_for_ProSeDirectDiscovery) { _cached_encoder_for_ProSeDirectDiscovery = function (value: ProSeDirectDiscovery, _elGetter: $.ASN1Encoder<ProSeDirectDiscovery>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

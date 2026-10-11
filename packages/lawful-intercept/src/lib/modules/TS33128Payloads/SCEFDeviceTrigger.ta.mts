@@ -284,7 +284,7 @@ let _cached_encoder_for_SCEFDeviceTrigger: $.ASN1Encoder<SCEFDeviceTrigger> | nu
  */
 export
 function _encode_SCEFDeviceTrigger (value: SCEFDeviceTrigger, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCEFDeviceTrigger) { _cached_encoder_for_SCEFDeviceTrigger = function (value: SCEFDeviceTrigger, elGetter: $.ASN1Encoder<SCEFDeviceTrigger>): _Element {
+    if (!_cached_encoder_for_SCEFDeviceTrigger) { _cached_encoder_for_SCEFDeviceTrigger = function (value: SCEFDeviceTrigger, _elGetter: $.ASN1Encoder<SCEFDeviceTrigger>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(10 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

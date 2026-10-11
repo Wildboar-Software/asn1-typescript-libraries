@@ -158,7 +158,7 @@ let _cached_encoder_for_ERABError: $.ASN1Encoder<ERABError> | null = null;
  */
 export
 function _encode_ERABError (value: ERABError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ERABError) { _cached_encoder_for_ERABError = function (value: ERABError, elGetter: $.ASN1Encoder<ERABError>): _Element {
+    if (!_cached_encoder_for_ERABError) { _cached_encoder_for_ERABError = function (value: ERABError, _elGetter: $.ASN1Encoder<ERABError>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

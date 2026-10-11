@@ -351,7 +351,7 @@ let _cached_encoder_for_SMFMAPDUSessionRelease: $.ASN1Encoder<SMFMAPDUSessionRel
  */
 export
 function _encode_SMFMAPDUSessionRelease (value: SMFMAPDUSessionRelease, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMFMAPDUSessionRelease) { _cached_encoder_for_SMFMAPDUSessionRelease = function (value: SMFMAPDUSessionRelease, elGetter: $.ASN1Encoder<SMFMAPDUSessionRelease>): _Element {
+    if (!_cached_encoder_for_SMFMAPDUSessionRelease) { _cached_encoder_for_SMFMAPDUSessionRelease = function (value: SMFMAPDUSessionRelease, _elGetter: $.ASN1Encoder<SMFMAPDUSessionRelease>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(15 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -31,11 +31,9 @@ const tetra_sending_of_IRI: OPERATION<TETRAIRIsContent> = {
     class: "OPERATION",
     decoderFor: {
         "&ArgumentType": _decode_TETRAIRIsContent,
-        "&ResultType": undefined,
     },
     encoderFor: {
         "&ArgumentType": _encode_TETRAIRIsContent,
-        "&ResultType": undefined,
     },
     "&Errors": OperationErrors /* OBJECT_FIELD_SETTING */,
     "&operationCode": {

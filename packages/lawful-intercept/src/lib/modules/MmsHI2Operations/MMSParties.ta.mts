@@ -188,7 +188,7 @@ let _cached_encoder_for_MMSParties: $.ASN1Encoder<MMSParties> | null = null;
  */
 export
 function _encode_MMSParties (value: MMSParties, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSParties) { _cached_encoder_for_MMSParties = function (value: MMSParties, elGetter: $.ASN1Encoder<MMSParties>): _Element {
+    if (!_cached_encoder_for_MMSParties) { _cached_encoder_for_MMSParties = function (value: MMSParties, _elGetter: $.ASN1Encoder<MMSParties>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

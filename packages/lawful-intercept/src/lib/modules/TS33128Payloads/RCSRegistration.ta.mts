@@ -214,7 +214,7 @@ let _cached_encoder_for_RCSRegistration: $.ASN1Encoder<RCSRegistration> | null =
  */
 export
 function _encode_RCSRegistration (value: RCSRegistration, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RCSRegistration) { _cached_encoder_for_RCSRegistration = function (value: RCSRegistration, elGetter: $.ASN1Encoder<RCSRegistration>): _Element {
+    if (!_cached_encoder_for_RCSRegistration) { _cached_encoder_for_RCSRegistration = function (value: RCSRegistration, _elGetter: $.ASN1Encoder<RCSRegistration>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -164,7 +164,7 @@ let _cached_encoder_for_LocalTimeStamp: $.ASN1Encoder<LocalTimeStamp> | null = n
  */
 export
 function _encode_LocalTimeStamp (value: LocalTimeStamp, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LocalTimeStamp) { _cached_encoder_for_LocalTimeStamp = function (value: LocalTimeStamp, elGetter: $.ASN1Encoder<LocalTimeStamp>): _Element {
+    if (!_cached_encoder_for_LocalTimeStamp) { _cached_encoder_for_LocalTimeStamp = function (value: LocalTimeStamp, _elGetter: $.ASN1Encoder<LocalTimeStamp>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeGeneralizedTime, $.BER)(value.generalizedTime, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_LocalTimeStamp_winterSummerIndication, $.BER)(value.winterSummerIndication, $.BER)

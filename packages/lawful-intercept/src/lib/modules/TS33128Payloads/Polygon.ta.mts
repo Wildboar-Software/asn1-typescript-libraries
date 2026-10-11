@@ -146,7 +146,7 @@ let _cached_encoder_for_Polygon: $.ASN1Encoder<Polygon> | null = null;
  */
 export
 function _encode_Polygon (value: Polygon, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Polygon) { _cached_encoder_for_Polygon = function (value: Polygon, elGetter: $.ASN1Encoder<Polygon>): _Element {
+    if (!_cached_encoder_for_Polygon) { _cached_encoder_for_Polygon = function (value: Polygon, _elGetter: $.ASN1Encoder<Polygon>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

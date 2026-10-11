@@ -254,7 +254,7 @@ let _cached_encoder_for_EthFlowDescription: $.ASN1Encoder<EthFlowDescription> | 
  */
 export
 function _encode_EthFlowDescription (value: EthFlowDescription, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EthFlowDescription) { _cached_encoder_for_EthFlowDescription = function (value: EthFlowDescription, elGetter: $.ASN1Encoder<EthFlowDescription>): _Element {
+    if (!_cached_encoder_for_EthFlowDescription) { _cached_encoder_for_EthFlowDescription = function (value: EthFlowDescription, _elGetter: $.ASN1Encoder<EthFlowDescription>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(8 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -218,7 +218,7 @@ let _cached_encoder_for_AccessPolicyType: $.ASN1Encoder<AccessPolicyType> | null
  */
 export
 function _encode_AccessPolicyType (value: AccessPolicyType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccessPolicyType) { _cached_encoder_for_AccessPolicyType = function (value: AccessPolicyType, elGetter: $.ASN1Encoder<AccessPolicyType>): _Element {
+    if (!_cached_encoder_for_AccessPolicyType) { _cached_encoder_for_AccessPolicyType = function (value: AccessPolicyType, _elGetter: $.ASN1Encoder<AccessPolicyType>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

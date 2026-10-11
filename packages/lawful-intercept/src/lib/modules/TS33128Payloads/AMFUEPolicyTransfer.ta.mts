@@ -221,7 +221,7 @@ let _cached_encoder_for_AMFUEPolicyTransfer: $.ASN1Encoder<AMFUEPolicyTransfer> 
  */
 export
 function _encode_AMFUEPolicyTransfer (value: AMFUEPolicyTransfer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFUEPolicyTransfer) { _cached_encoder_for_AMFUEPolicyTransfer = function (value: AMFUEPolicyTransfer, elGetter: $.ASN1Encoder<AMFUEPolicyTransfer>): _Element {
+    if (!_cached_encoder_for_AMFUEPolicyTransfer) { _cached_encoder_for_AMFUEPolicyTransfer = function (value: AMFUEPolicyTransfer, _elGetter: $.ASN1Encoder<AMFUEPolicyTransfer>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

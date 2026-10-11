@@ -31,11 +31,9 @@ const sending_of_IRI: OPERATION<IRIsContent> = {
     class: "OPERATION",
     decoderFor: {
         "&ArgumentType": _decode_IRIsContent,
-        "&ResultType": undefined,
     },
     encoderFor: {
         "&ArgumentType": _encode_IRIsContent,
-        "&ResultType": undefined,
     },
     "&Errors": OperationErrors /* OBJECT_FIELD_SETTING */,
     "&operationCode": {

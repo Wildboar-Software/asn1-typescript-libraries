@@ -161,7 +161,7 @@ let _cached_encoder_for_ResponseStatusText: $.ASN1Encoder<ResponseStatusText> | 
  */
 export
 function _encode_ResponseStatusText (value: ResponseStatusText, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ResponseStatusText) { _cached_encoder_for_ResponseStatusText = function (value: ResponseStatusText, elGetter: $.ASN1Encoder<ResponseStatusText>): _Element {
+    if (!_cached_encoder_for_ResponseStatusText) { _cached_encoder_for_ResponseStatusText = function (value: ResponseStatusText, _elGetter: $.ASN1Encoder<ResponseStatusText>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

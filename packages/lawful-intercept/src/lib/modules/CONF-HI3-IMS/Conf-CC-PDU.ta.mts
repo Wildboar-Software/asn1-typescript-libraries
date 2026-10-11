@@ -149,7 +149,7 @@ let _cached_encoder_for_Conf_CC_PDU: $.ASN1Encoder<Conf_CC_PDU> | null = null;
  */
 export
 function _encode_Conf_CC_PDU (value: Conf_CC_PDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Conf_CC_PDU) { _cached_encoder_for_Conf_CC_PDU = function (value: Conf_CC_PDU, elGetter: $.ASN1Encoder<Conf_CC_PDU>): _Element {
+    if (!_cached_encoder_for_Conf_CC_PDU) { _cached_encoder_for_Conf_CC_PDU = function (value: Conf_CC_PDU, _elGetter: $.ASN1Encoder<Conf_CC_PDU>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_ConfLIC_header, $.BER)(value.confLIC_header, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeOctetString, $.BER)(value.payload, $.BER)

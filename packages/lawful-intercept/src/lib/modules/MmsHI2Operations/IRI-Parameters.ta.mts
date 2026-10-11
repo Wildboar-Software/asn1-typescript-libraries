@@ -975,7 +975,7 @@ let _cached_encoder_for_IRI_Parameters: $.ASN1Encoder<IRI_Parameters> | null = n
  */
 export
 function _encode_IRI_Parameters (value: IRI_Parameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IRI_Parameters) { _cached_encoder_for_IRI_Parameters = function (value: IRI_Parameters, elGetter: $.ASN1Encoder<IRI_Parameters>): _Element {
+    if (!_cached_encoder_for_IRI_Parameters) { _cached_encoder_for_IRI_Parameters = function (value: IRI_Parameters, _elGetter: $.ASN1Encoder<IRI_Parameters>): _Element {
     const _components: _Element[] = new Array(57);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeObjectIdentifier, $.BER)(value.hi2mmsDomainId, $.BER);

@@ -161,7 +161,7 @@ let _cached_encoder_for_BBFTunnelInformation: $.ASN1Encoder<BBFTunnelInformation
  */
 export
 function _encode_BBFTunnelInformation (value: BBFTunnelInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BBFTunnelInformation) { _cached_encoder_for_BBFTunnelInformation = function (value: BBFTunnelInformation, elGetter: $.ASN1Encoder<BBFTunnelInformation>): _Element {
+    if (!_cached_encoder_for_BBFTunnelInformation) { _cached_encoder_for_BBFTunnelInformation = function (value: BBFTunnelInformation, _elGetter: $.ASN1Encoder<BBFTunnelInformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

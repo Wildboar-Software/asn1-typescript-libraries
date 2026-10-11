@@ -188,7 +188,7 @@ let _cached_encoder_for_MCDataFileDownload: $.ASN1Encoder<MCDataFileDownload> | 
  */
 export
 function _encode_MCDataFileDownload (value: MCDataFileDownload, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCDataFileDownload) { _cached_encoder_for_MCDataFileDownload = function (value: MCDataFileDownload, elGetter: $.ASN1Encoder<MCDataFileDownload>): _Element {
+    if (!_cached_encoder_for_MCDataFileDownload) { _cached_encoder_for_MCDataFileDownload = function (value: MCDataFileDownload, _elGetter: $.ASN1Encoder<MCDataFileDownload>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

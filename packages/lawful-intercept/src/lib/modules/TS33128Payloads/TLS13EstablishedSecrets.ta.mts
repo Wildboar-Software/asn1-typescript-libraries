@@ -150,7 +150,7 @@ let _cached_encoder_for_TLS13EstablishedSecrets: $.ASN1Encoder<TLS13EstablishedS
  */
 export
 function _encode_TLS13EstablishedSecrets (value: TLS13EstablishedSecrets, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TLS13EstablishedSecrets) { _cached_encoder_for_TLS13EstablishedSecrets = function (value: TLS13EstablishedSecrets, elGetter: $.ASN1Encoder<TLS13EstablishedSecrets>): _Element {
+    if (!_cached_encoder_for_TLS13EstablishedSecrets) { _cached_encoder_for_TLS13EstablishedSecrets = function (value: TLS13EstablishedSecrets, _elGetter: $.ASN1Encoder<TLS13EstablishedSecrets>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

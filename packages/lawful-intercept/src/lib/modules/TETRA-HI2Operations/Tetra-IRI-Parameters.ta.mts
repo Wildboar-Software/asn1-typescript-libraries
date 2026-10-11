@@ -933,7 +933,7 @@ let _cached_encoder_for_Tetra_IRI_Parameters: $.ASN1Encoder<Tetra_IRI_Parameters
  */
 export
 function _encode_Tetra_IRI_Parameters (value: Tetra_IRI_Parameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Tetra_IRI_Parameters) { _cached_encoder_for_Tetra_IRI_Parameters = function (value: Tetra_IRI_Parameters, elGetter: $.ASN1Encoder<Tetra_IRI_Parameters>): _Element {
+    if (!_cached_encoder_for_Tetra_IRI_Parameters) { _cached_encoder_for_Tetra_IRI_Parameters = function (value: Tetra_IRI_Parameters, _elGetter: $.ASN1Encoder<Tetra_IRI_Parameters>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(45 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

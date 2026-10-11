@@ -327,7 +327,7 @@ let _cached_encoder_for_VoipLIC_header: $.ASN1Encoder<VoipLIC_header> | null = n
  */
 export
 function _encode_VoipLIC_header (value: VoipLIC_header, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_VoipLIC_header) { _cached_encoder_for_VoipLIC_header = function (value: VoipLIC_header, elGetter: $.ASN1Encoder<VoipLIC_header>): _Element {
+    if (!_cached_encoder_for_VoipLIC_header) { _cached_encoder_for_VoipLIC_header = function (value: VoipLIC_header, _elGetter: $.ASN1Encoder<VoipLIC_header>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(11 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

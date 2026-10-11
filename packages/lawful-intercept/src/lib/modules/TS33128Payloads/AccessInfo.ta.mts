@@ -303,7 +303,7 @@ let _cached_encoder_for_AccessInfo: $.ASN1Encoder<AccessInfo> | null = null;
  */
 export
 function _encode_AccessInfo (value: AccessInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccessInfo) { _cached_encoder_for_AccessInfo = function (value: AccessInfo, elGetter: $.ASN1Encoder<AccessInfo>): _Element {
+    if (!_cached_encoder_for_AccessInfo) { _cached_encoder_for_AccessInfo = function (value: AccessInfo, _elGetter: $.ASN1Encoder<AccessInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(10 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -158,7 +158,7 @@ let _cached_encoder_for_PTCParticipantPresence: $.ASN1Encoder<PTCParticipantPres
  */
 export
 function _encode_PTCParticipantPresence (value: PTCParticipantPresence, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCParticipantPresence) { _cached_encoder_for_PTCParticipantPresence = function (value: PTCParticipantPresence, elGetter: $.ASN1Encoder<PTCParticipantPresence>): _Element {
+    if (!_cached_encoder_for_PTCParticipantPresence) { _cached_encoder_for_PTCParticipantPresence = function (value: PTCParticipantPresence, _elGetter: $.ASN1Encoder<PTCParticipantPresence>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

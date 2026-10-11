@@ -204,7 +204,7 @@ let _cached_encoder_for_IMSDataChannelSetup: $.ASN1Encoder<IMSDataChannelSetup> 
  */
 export
 function _encode_IMSDataChannelSetup (value: IMSDataChannelSetup, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IMSDataChannelSetup) { _cached_encoder_for_IMSDataChannelSetup = function (value: IMSDataChannelSetup, elGetter: $.ASN1Encoder<IMSDataChannelSetup>): _Element {
+    if (!_cached_encoder_for_IMSDataChannelSetup) { _cached_encoder_for_IMSDataChannelSetup = function (value: IMSDataChannelSetup, _elGetter: $.ASN1Encoder<IMSDataChannelSetup>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

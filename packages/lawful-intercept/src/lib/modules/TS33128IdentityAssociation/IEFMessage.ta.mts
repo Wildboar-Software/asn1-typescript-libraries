@@ -157,7 +157,7 @@ let _cached_encoder_for_IEFMessage: $.ASN1Encoder<IEFMessage> | null = null;
  */
 export
 function _encode_IEFMessage (value: IEFMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IEFMessage) { _cached_encoder_for_IEFMessage = function (value: IEFMessage, elGetter: $.ASN1Encoder<IEFMessage>): _Element {
+    if (!_cached_encoder_for_IEFMessage) { _cached_encoder_for_IEFMessage = function (value: IEFMessage, _elGetter: $.ASN1Encoder<IEFMessage>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -158,7 +158,7 @@ let _cached_encoder_for_ModifiedSIPMessage: $.ASN1Encoder<ModifiedSIPMessage> | 
  */
 export
 function _encode_ModifiedSIPMessage (value: ModifiedSIPMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ModifiedSIPMessage) { _cached_encoder_for_ModifiedSIPMessage = function (value: ModifiedSIPMessage, elGetter: $.ASN1Encoder<ModifiedSIPMessage>): _Element {
+    if (!_cached_encoder_for_ModifiedSIPMessage) { _cached_encoder_for_ModifiedSIPMessage = function (value: ModifiedSIPMessage, _elGetter: $.ASN1Encoder<ModifiedSIPMessage>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

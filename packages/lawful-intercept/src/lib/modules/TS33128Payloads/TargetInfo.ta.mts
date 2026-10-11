@@ -161,7 +161,7 @@ let _cached_encoder_for_TargetInfo: $.ASN1Encoder<TargetInfo> | null = null;
  */
 export
 function _encode_TargetInfo (value: TargetInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TargetInfo) { _cached_encoder_for_TargetInfo = function (value: TargetInfo, elGetter: $.ASN1Encoder<TargetInfo>): _Element {
+    if (!_cached_encoder_for_TargetInfo) { _cached_encoder_for_TargetInfo = function (value: TargetInfo, _elGetter: $.ASN1Encoder<TargetInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

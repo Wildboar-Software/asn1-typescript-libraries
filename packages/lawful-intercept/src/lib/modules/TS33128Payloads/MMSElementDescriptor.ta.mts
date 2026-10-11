@@ -172,7 +172,7 @@ let _cached_encoder_for_MMSElementDescriptor: $.ASN1Encoder<MMSElementDescriptor
  */
 export
 function _encode_MMSElementDescriptor (value: MMSElementDescriptor, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSElementDescriptor) { _cached_encoder_for_MMSElementDescriptor = function (value: MMSElementDescriptor, elGetter: $.ASN1Encoder<MMSElementDescriptor>): _Element {
+    if (!_cached_encoder_for_MMSElementDescriptor) { _cached_encoder_for_MMSElementDescriptor = function (value: MMSElementDescriptor, _elGetter: $.ASN1Encoder<MMSElementDescriptor>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -182,7 +182,7 @@ let _cached_encoder_for_NetworkIdentifier: $.ASN1Encoder<NetworkIdentifier> | nu
  */
 export
 function _encode_NetworkIdentifier (value: NetworkIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NetworkIdentifier) { _cached_encoder_for_NetworkIdentifier = function (value: NetworkIdentifier, elGetter: $.ASN1Encoder<NetworkIdentifier>): _Element {
+    if (!_cached_encoder_for_NetworkIdentifier) { _cached_encoder_for_NetworkIdentifier = function (value: NetworkIdentifier, _elGetter: $.ASN1Encoder<NetworkIdentifier>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

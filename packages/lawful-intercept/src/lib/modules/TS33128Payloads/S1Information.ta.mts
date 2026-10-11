@@ -235,7 +235,7 @@ let _cached_encoder_for_S1Information: $.ASN1Encoder<S1Information> | null = nul
  */
 export
 function _encode_S1Information (value: S1Information, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_S1Information) { _cached_encoder_for_S1Information = function (value: S1Information, elGetter: $.ASN1Encoder<S1Information>): _Element {
+    if (!_cached_encoder_for_S1Information) { _cached_encoder_for_S1Information = function (value: S1Information, _elGetter: $.ASN1Encoder<S1Information>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

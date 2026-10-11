@@ -158,7 +158,7 @@ let _cached_encoder_for_ForbiddenAreaInformation: $.ASN1Encoder<ForbiddenAreaInf
  */
 export
 function _encode_ForbiddenAreaInformation (value: ForbiddenAreaInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ForbiddenAreaInformation) { _cached_encoder_for_ForbiddenAreaInformation = function (value: ForbiddenAreaInformation, elGetter: $.ASN1Encoder<ForbiddenAreaInformation>): _Element {
+    if (!_cached_encoder_for_ForbiddenAreaInformation) { _cached_encoder_for_ForbiddenAreaInformation = function (value: ForbiddenAreaInformation, _elGetter: $.ASN1Encoder<ForbiddenAreaInformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -161,7 +161,7 @@ let _cached_encoder_for_IPAddr: $.ASN1Encoder<IPAddr> | null = null;
  */
 export
 function _encode_IPAddr (value: IPAddr, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IPAddr) { _cached_encoder_for_IPAddr = function (value: IPAddr, elGetter: $.ASN1Encoder<IPAddr>): _Element {
+    if (!_cached_encoder_for_IPAddr) { _cached_encoder_for_IPAddr = function (value: IPAddr, _elGetter: $.ASN1Encoder<IPAddr>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -202,7 +202,7 @@ let _cached_encoder_for_EESEASDiscoveryNotification: $.ASN1Encoder<EESEASDiscove
  */
 export
 function _encode_EESEASDiscoveryNotification (value: EESEASDiscoveryNotification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EESEASDiscoveryNotification) { _cached_encoder_for_EESEASDiscoveryNotification = function (value: EESEASDiscoveryNotification, elGetter: $.ASN1Encoder<EESEASDiscoveryNotification>): _Element {
+    if (!_cached_encoder_for_EESEASDiscoveryNotification) { _cached_encoder_for_EESEASDiscoveryNotification = function (value: EESEASDiscoveryNotification, _elGetter: $.ASN1Encoder<EESEASDiscoveryNotification>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

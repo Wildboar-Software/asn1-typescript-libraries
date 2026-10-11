@@ -176,7 +176,7 @@ let _cached_encoder_for_ServiceAreaInfo: $.ASN1Encoder<ServiceAreaInfo> | null =
  */
 export
 function _encode_ServiceAreaInfo (value: ServiceAreaInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceAreaInfo) { _cached_encoder_for_ServiceAreaInfo = function (value: ServiceAreaInfo, elGetter: $.ASN1Encoder<ServiceAreaInfo>): _Element {
+    if (!_cached_encoder_for_ServiceAreaInfo) { _cached_encoder_for_ServiceAreaInfo = function (value: ServiceAreaInfo, _elGetter: $.ASN1Encoder<ServiceAreaInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

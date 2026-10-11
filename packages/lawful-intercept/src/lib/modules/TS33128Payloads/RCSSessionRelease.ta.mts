@@ -252,7 +252,7 @@ let _cached_encoder_for_RCSSessionRelease: $.ASN1Encoder<RCSSessionRelease> | nu
  */
 export
 function _encode_RCSSessionRelease (value: RCSSessionRelease, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RCSSessionRelease) { _cached_encoder_for_RCSSessionRelease = function (value: RCSSessionRelease, elGetter: $.ASN1Encoder<RCSSessionRelease>): _Element {
+    if (!_cached_encoder_for_RCSSessionRelease) { _cached_encoder_for_RCSSessionRelease = function (value: RCSSessionRelease, _elGetter: $.ASN1Encoder<RCSSessionRelease>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

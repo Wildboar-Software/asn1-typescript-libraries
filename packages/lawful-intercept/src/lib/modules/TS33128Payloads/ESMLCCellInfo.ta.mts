@@ -158,7 +158,7 @@ let _cached_encoder_for_ESMLCCellInfo: $.ASN1Encoder<ESMLCCellInfo> | null = nul
  */
 export
 function _encode_ESMLCCellInfo (value: ESMLCCellInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ESMLCCellInfo) { _cached_encoder_for_ESMLCCellInfo = function (value: ESMLCCellInfo, elGetter: $.ASN1Encoder<ESMLCCellInfo>): _Element {
+    if (!_cached_encoder_for_ESMLCCellInfo) { _cached_encoder_for_ESMLCCellInfo = function (value: ESMLCCellInfo, _elGetter: $.ASN1Encoder<ESMLCCellInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

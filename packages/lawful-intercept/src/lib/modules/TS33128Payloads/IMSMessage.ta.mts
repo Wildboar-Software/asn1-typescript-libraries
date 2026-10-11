@@ -250,7 +250,7 @@ let _cached_encoder_for_IMSMessage: $.ASN1Encoder<IMSMessage> | null = null;
  */
 export
 function _encode_IMSMessage (value: IMSMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IMSMessage) { _cached_encoder_for_IMSMessage = function (value: IMSMessage, elGetter: $.ASN1Encoder<IMSMessage>): _Element {
+    if (!_cached_encoder_for_IMSMessage) { _cached_encoder_for_IMSMessage = function (value: IMSMessage, _elGetter: $.ASN1Encoder<IMSMessage>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -390,7 +390,7 @@ let _cached_encoder_for_PCCRule: $.ASN1Encoder<PCCRule> | null = null;
  */
 export
 function _encode_PCCRule (value: PCCRule, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PCCRule) { _cached_encoder_for_PCCRule = function (value: PCCRule, elGetter: $.ASN1Encoder<PCCRule>): _Element {
+    if (!_cached_encoder_for_PCCRule) { _cached_encoder_for_PCCRule = function (value: PCCRule, _elGetter: $.ASN1Encoder<PCCRule>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(18 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

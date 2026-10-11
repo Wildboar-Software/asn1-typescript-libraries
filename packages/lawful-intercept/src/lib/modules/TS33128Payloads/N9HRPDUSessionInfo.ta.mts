@@ -242,7 +242,7 @@ let _cached_encoder_for_N9HRPDUSessionInfo: $.ASN1Encoder<N9HRPDUSessionInfo> | 
  */
 export
 function _encode_N9HRPDUSessionInfo (value: N9HRPDUSessionInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_N9HRPDUSessionInfo) { _cached_encoder_for_N9HRPDUSessionInfo = function (value: N9HRPDUSessionInfo, elGetter: $.ASN1Encoder<N9HRPDUSessionInfo>): _Element {
+    if (!_cached_encoder_for_N9HRPDUSessionInfo) { _cached_encoder_for_N9HRPDUSessionInfo = function (value: N9HRPDUSessionInfo, _elGetter: $.ASN1Encoder<N9HRPDUSessionInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

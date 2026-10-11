@@ -158,7 +158,7 @@ let _cached_encoder_for_RTPSetting: $.ASN1Encoder<RTPSetting> | null = null;
  */
 export
 function _encode_RTPSetting (value: RTPSetting, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RTPSetting) { _cached_encoder_for_RTPSetting = function (value: RTPSetting, elGetter: $.ASN1Encoder<RTPSetting>): _Element {
+    if (!_cached_encoder_for_RTPSetting) { _cached_encoder_for_RTPSetting = function (value: RTPSetting, _elGetter: $.ASN1Encoder<RTPSetting>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

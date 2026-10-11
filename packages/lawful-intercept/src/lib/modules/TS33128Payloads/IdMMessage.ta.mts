@@ -156,7 +156,7 @@ let _cached_encoder_for_IdMMessage: $.ASN1Encoder<IdMMessage> | null = null;
  */
 export
 function _encode_IdMMessage (value: IdMMessage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IdMMessage) { _cached_encoder_for_IdMMessage = function (value: IdMMessage, elGetter: $.ASN1Encoder<IdMMessage>): _Element {
+    if (!_cached_encoder_for_IdMMessage) { _cached_encoder_for_IdMMessage = function (value: IdMMessage, _elGetter: $.ASN1Encoder<IdMMessage>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

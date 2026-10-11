@@ -179,7 +179,7 @@ let _cached_encoder_for_AuthorizationRequest: $.ASN1Encoder<AuthorizationRequest
  */
 export
 function _encode_AuthorizationRequest (value: AuthorizationRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthorizationRequest) { _cached_encoder_for_AuthorizationRequest = function (value: AuthorizationRequest, elGetter: $.ASN1Encoder<AuthorizationRequest>): _Element {
+    if (!_cached_encoder_for_AuthorizationRequest) { _cached_encoder_for_AuthorizationRequest = function (value: AuthorizationRequest, _elGetter: $.ASN1Encoder<AuthorizationRequest>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

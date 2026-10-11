@@ -142,7 +142,7 @@ let _cached_encoder_for_ScheduledCommunicationTime: $.ASN1Encoder<ScheduledCommu
  */
 export
 function _encode_ScheduledCommunicationTime (value: ScheduledCommunicationTime, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ScheduledCommunicationTime) { _cached_encoder_for_ScheduledCommunicationTime = function (value: ScheduledCommunicationTime, elGetter: $.ASN1Encoder<ScheduledCommunicationTime>): _Element {
+    if (!_cached_encoder_for_ScheduledCommunicationTime) { _cached_encoder_for_ScheduledCommunicationTime = function (value: ScheduledCommunicationTime, _elGetter: $.ASN1Encoder<ScheduledCommunicationTime>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

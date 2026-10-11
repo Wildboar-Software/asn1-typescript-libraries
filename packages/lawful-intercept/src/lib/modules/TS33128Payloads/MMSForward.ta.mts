@@ -482,7 +482,7 @@ let _cached_encoder_for_MMSForward: $.ASN1Encoder<MMSForward> | null = null;
  */
 export
 function _encode_MMSForward (value: MMSForward, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSForward) { _cached_encoder_for_MMSForward = function (value: MMSForward, elGetter: $.ASN1Encoder<MMSForward>): _Element {
+    if (!_cached_encoder_for_MMSForward) { _cached_encoder_for_MMSForward = function (value: MMSForward, _elGetter: $.ASN1Encoder<MMSForward>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(23 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

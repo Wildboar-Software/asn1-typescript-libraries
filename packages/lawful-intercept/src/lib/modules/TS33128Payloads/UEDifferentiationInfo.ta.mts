@@ -220,7 +220,7 @@ let _cached_encoder_for_UEDifferentiationInfo: $.ASN1Encoder<UEDifferentiationIn
  */
 export
 function _encode_UEDifferentiationInfo (value: UEDifferentiationInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UEDifferentiationInfo) { _cached_encoder_for_UEDifferentiationInfo = function (value: UEDifferentiationInfo, elGetter: $.ASN1Encoder<UEDifferentiationInfo>): _Element {
+    if (!_cached_encoder_for_UEDifferentiationInfo) { _cached_encoder_for_UEDifferentiationInfo = function (value: UEDifferentiationInfo, _elGetter: $.ASN1Encoder<UEDifferentiationInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

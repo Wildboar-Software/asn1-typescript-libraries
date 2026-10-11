@@ -214,7 +214,7 @@ let _cached_encoder_for_TLS13NewSessionTicket: $.ASN1Encoder<TLS13NewSessionTick
  */
 export
 function _encode_TLS13NewSessionTicket (value: TLS13NewSessionTicket, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TLS13NewSessionTicket) { _cached_encoder_for_TLS13NewSessionTicket = function (value: TLS13NewSessionTicket, elGetter: $.ASN1Encoder<TLS13NewSessionTicket>): _Element {
+    if (!_cached_encoder_for_TLS13NewSessionTicket) { _cached_encoder_for_TLS13NewSessionTicket = function (value: TLS13NewSessionTicket, _elGetter: $.ASN1Encoder<TLS13NewSessionTicket>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -174,7 +174,7 @@ let _cached_encoder_for_GUMMEI: $.ASN1Encoder<GUMMEI> | null = null;
  */
 export
 function _encode_GUMMEI (value: GUMMEI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GUMMEI) { _cached_encoder_for_GUMMEI = function (value: GUMMEI, elGetter: $.ASN1Encoder<GUMMEI>): _Element {
+    if (!_cached_encoder_for_GUMMEI) { _cached_encoder_for_GUMMEI = function (value: GUMMEI, _elGetter: $.ASN1Encoder<GUMMEI>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -182,7 +182,7 @@ let _cached_encoder_for_TLS13MasterSecretInfo: $.ASN1Encoder<TLS13MasterSecretIn
  */
 export
 function _encode_TLS13MasterSecretInfo (value: TLS13MasterSecretInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TLS13MasterSecretInfo) { _cached_encoder_for_TLS13MasterSecretInfo = function (value: TLS13MasterSecretInfo, elGetter: $.ASN1Encoder<TLS13MasterSecretInfo>): _Element {
+    if (!_cached_encoder_for_TLS13MasterSecretInfo) { _cached_encoder_for_TLS13MasterSecretInfo = function (value: TLS13MasterSecretInfo, _elGetter: $.ASN1Encoder<TLS13MasterSecretInfo>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

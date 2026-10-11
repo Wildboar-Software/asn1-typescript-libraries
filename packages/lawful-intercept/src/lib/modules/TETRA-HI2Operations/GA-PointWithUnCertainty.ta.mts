@@ -153,7 +153,7 @@ let _cached_encoder_for_GA_PointWithUnCertainty: $.ASN1Encoder<GA_PointWithUnCer
  */
 export
 function _encode_GA_PointWithUnCertainty (value: GA_PointWithUnCertainty, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GA_PointWithUnCertainty) { _cached_encoder_for_GA_PointWithUnCertainty = function (value: GA_PointWithUnCertainty, elGetter: $.ASN1Encoder<GA_PointWithUnCertainty>): _Element {
+    if (!_cached_encoder_for_GA_PointWithUnCertainty) { _cached_encoder_for_GA_PointWithUnCertainty = function (value: GA_PointWithUnCertainty, _elGetter: $.ASN1Encoder<GA_PointWithUnCertainty>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_GeographicalCoordinates, $.BER)(value.geographicalCoordinates, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.uncertaintyCode, $.BER)

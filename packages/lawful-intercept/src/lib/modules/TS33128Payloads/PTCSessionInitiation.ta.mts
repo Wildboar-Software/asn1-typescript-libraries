@@ -278,7 +278,7 @@ let _cached_encoder_for_PTCSessionInitiation: $.ASN1Encoder<PTCSessionInitiation
  */
 export
 function _encode_PTCSessionInitiation (value: PTCSessionInitiation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCSessionInitiation) { _cached_encoder_for_PTCSessionInitiation = function (value: PTCSessionInitiation, elGetter: $.ASN1Encoder<PTCSessionInitiation>): _Element {
+    if (!_cached_encoder_for_PTCSessionInitiation) { _cached_encoder_for_PTCSessionInitiation = function (value: PTCSessionInitiation, _elGetter: $.ASN1Encoder<PTCSessionInitiation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(10 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

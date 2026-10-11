@@ -174,7 +174,7 @@ let _cached_encoder_for_EPSBearers: $.ASN1Encoder<EPSBearers> | null = null;
  */
 export
 function _encode_EPSBearers (value: EPSBearers, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSBearers) { _cached_encoder_for_EPSBearers = function (value: EPSBearers, elGetter: $.ASN1Encoder<EPSBearers>): _Element {
+    if (!_cached_encoder_for_EPSBearers) { _cached_encoder_for_EPSBearers = function (value: EPSBearers, _elGetter: $.ASN1Encoder<EPSBearers>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -236,7 +236,7 @@ let _cached_encoder_for_EllipsoidArc: $.ASN1Encoder<EllipsoidArc> | null = null;
  */
 export
 function _encode_EllipsoidArc (value: EllipsoidArc, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EllipsoidArc) { _cached_encoder_for_EllipsoidArc = function (value: EllipsoidArc, elGetter: $.ASN1Encoder<EllipsoidArc>): _Element {
+    if (!_cached_encoder_for_EllipsoidArc) { _cached_encoder_for_EllipsoidArc = function (value: EllipsoidArc, _elGetter: $.ASN1Encoder<EllipsoidArc>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

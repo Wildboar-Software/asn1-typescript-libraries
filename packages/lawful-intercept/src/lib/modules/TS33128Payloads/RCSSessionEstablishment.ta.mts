@@ -278,7 +278,7 @@ let _cached_encoder_for_RCSSessionEstablishment: $.ASN1Encoder<RCSSessionEstabli
  */
 export
 function _encode_RCSSessionEstablishment (value: RCSSessionEstablishment, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RCSSessionEstablishment) { _cached_encoder_for_RCSSessionEstablishment = function (value: RCSSessionEstablishment, elGetter: $.ASN1Encoder<RCSSessionEstablishment>): _Element {
+    if (!_cached_encoder_for_RCSSessionEstablishment) { _cached_encoder_for_RCSSessionEstablishment = function (value: RCSSessionEstablishment, _elGetter: $.ASN1Encoder<RCSSessionEstablishment>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

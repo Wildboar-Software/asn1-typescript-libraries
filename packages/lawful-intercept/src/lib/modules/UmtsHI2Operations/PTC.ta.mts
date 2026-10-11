@@ -1082,7 +1082,7 @@ let _cached_encoder_for_PTC: $.ASN1Encoder<PTC> | null = null;
  */
 export
 function _encode_PTC (value: PTC, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTC) { _cached_encoder_for_PTC = function (value: PTC, elGetter: $.ASN1Encoder<PTC>): _Element {
+    if (!_cached_encoder_for_PTC) { _cached_encoder_for_PTC = function (value: PTC, _elGetter: $.ASN1Encoder<PTC>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(61 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

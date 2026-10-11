@@ -158,7 +158,7 @@ let _cached_encoder_for_NCGI: $.ASN1Encoder<NCGI> | null = null;
  */
 export
 function _encode_NCGI (value: NCGI, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NCGI) { _cached_encoder_for_NCGI = function (value: NCGI, elGetter: $.ASN1Encoder<NCGI>): _Element {
+    if (!_cached_encoder_for_NCGI) { _cached_encoder_for_NCGI = function (value: NCGI, _elGetter: $.ASN1Encoder<NCGI>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

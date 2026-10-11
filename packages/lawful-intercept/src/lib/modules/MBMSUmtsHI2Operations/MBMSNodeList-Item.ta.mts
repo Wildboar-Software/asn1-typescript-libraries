@@ -148,7 +148,7 @@ let _cached_encoder_for_MBMSNodeList_Item: $.ASN1Encoder<MBMSNodeList_Item> | nu
  */
 export
 function _encode_MBMSNodeList_Item (value: MBMSNodeList_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MBMSNodeList_Item) { _cached_encoder_for_MBMSNodeList_Item = function (value: MBMSNodeList_Item, elGetter: $.ASN1Encoder<MBMSNodeList_Item>): _Element {
+    if (!_cached_encoder_for_MBMSNodeList_Item) { _cached_encoder_for_MBMSNodeList_Item = function (value: MBMSNodeList_Item, _elGetter: $.ASN1Encoder<MBMSNodeList_Item>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

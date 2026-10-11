@@ -218,7 +218,7 @@ let _cached_encoder_for_Current_Previous_Systems: $.ASN1Encoder<Current_Previous
  */
 export
 function _encode_Current_Previous_Systems (value: Current_Previous_Systems, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Current_Previous_Systems) { _cached_encoder_for_Current_Previous_Systems = function (value: Current_Previous_Systems, elGetter: $.ASN1Encoder<Current_Previous_Systems>): _Element {
+    if (!_cached_encoder_for_Current_Previous_Systems) { _cached_encoder_for_Current_Previous_Systems = function (value: Current_Previous_Systems, _elGetter: $.ASN1Encoder<Current_Previous_Systems>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

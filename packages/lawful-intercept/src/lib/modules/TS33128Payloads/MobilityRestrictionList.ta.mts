@@ -206,7 +206,7 @@ let _cached_encoder_for_MobilityRestrictionList: $.ASN1Encoder<MobilityRestricti
  */
 export
 function _encode_MobilityRestrictionList (value: MobilityRestrictionList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MobilityRestrictionList) { _cached_encoder_for_MobilityRestrictionList = function (value: MobilityRestrictionList, elGetter: $.ASN1Encoder<MobilityRestrictionList>): _Element {
+    if (!_cached_encoder_for_MobilityRestrictionList) { _cached_encoder_for_MobilityRestrictionList = function (value: MobilityRestrictionList, _elGetter: $.ASN1Encoder<MobilityRestrictionList>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

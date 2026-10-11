@@ -143,7 +143,7 @@ let _cached_encoder_for_OptionRequest: $.ASN1Encoder<OptionRequest> | null = nul
  */
 export
 function _encode_OptionRequest (value: OptionRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OptionRequest) { _cached_encoder_for_OptionRequest = function (value: OptionRequest, elGetter: $.ASN1Encoder<OptionRequest>): _Element {
+    if (!_cached_encoder_for_OptionRequest) { _cached_encoder_for_OptionRequest = function (value: OptionRequest, _elGetter: $.ASN1Encoder<OptionRequest>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

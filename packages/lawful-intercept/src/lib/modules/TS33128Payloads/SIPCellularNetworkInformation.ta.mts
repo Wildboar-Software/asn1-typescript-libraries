@@ -160,7 +160,7 @@ let _cached_encoder_for_SIPCellularNetworkInformation: $.ASN1Encoder<SIPCellular
  */
 export
 function _encode_SIPCellularNetworkInformation (value: SIPCellularNetworkInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SIPCellularNetworkInformation) { _cached_encoder_for_SIPCellularNetworkInformation = function (value: SIPCellularNetworkInformation, elGetter: $.ASN1Encoder<SIPCellularNetworkInformation>): _Element {
+    if (!_cached_encoder_for_SIPCellularNetworkInformation) { _cached_encoder_for_SIPCellularNetworkInformation = function (value: SIPCellularNetworkInformation, _elGetter: $.ASN1Encoder<SIPCellularNetworkInformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

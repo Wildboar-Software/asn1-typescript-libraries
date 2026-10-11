@@ -248,7 +248,7 @@ let _cached_encoder_for_UUS1_Content: $.ASN1Encoder<UUS1_Content> | null = null;
  */
 export
 function _encode_UUS1_Content (value: UUS1_Content, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UUS1_Content) { _cached_encoder_for_UUS1_Content = function (value: UUS1_Content, elGetter: $.ASN1Encoder<UUS1_Content>): _Element {
+    if (!_cached_encoder_for_UUS1_Content) { _cached_encoder_for_UUS1_Content = function (value: UUS1_Content, _elGetter: $.ASN1Encoder<UUS1_Content>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

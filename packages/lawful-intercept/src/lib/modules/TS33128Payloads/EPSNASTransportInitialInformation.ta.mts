@@ -216,7 +216,7 @@ let _cached_encoder_for_EPSNASTransportInitialInformation: $.ASN1Encoder<EPSNAST
  */
 export
 function _encode_EPSNASTransportInitialInformation (value: EPSNASTransportInitialInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSNASTransportInitialInformation) { _cached_encoder_for_EPSNASTransportInitialInformation = function (value: EPSNASTransportInitialInformation, elGetter: $.ASN1Encoder<EPSNASTransportInitialInformation>): _Element {
+    if (!_cached_encoder_for_EPSNASTransportInitialInformation) { _cached_encoder_for_EPSNASTransportInitialInformation = function (value: EPSNASTransportInitialInformation, _elGetter: $.ASN1Encoder<EPSNASTransportInitialInformation>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;
