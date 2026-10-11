@@ -22,15 +22,16 @@ import * as $ from "@wildboar/asn1/functional";
  * 
  * @enum {number}
  */
-export
-enum _enum_for_PublicTypeOfNumber {
-    unknown = 0,
-    internationalNumber = 1,
-    nationalNumber = 2,
-    networkSpecificNumber = 3,
-    subscriberNumber = 4,
-    abbreviatedNumber = 6,
-}
+export const _enum_for_PublicTypeOfNumber = {
+    unknown: 0,
+    internationalNumber: 1,
+    nationalNumber: 2,
+    networkSpecificNumber: 3,
+    subscriberNumber: 4,
+    abbreviatedNumber: 6,
+} as const;
+
+export type _enum_for_PublicTypeOfNumber = (typeof _enum_for_PublicTypeOfNumber)[keyof typeof _enum_for_PublicTypeOfNumber];
 
 /**
  * @summary PublicTypeOfNumber
@@ -173,7 +174,7 @@ const PublicTypeOfNumber_abbreviatedNumber: PublicTypeOfNumber = PublicTypeOfNum
  */
 export
 const abbreviatedNumber: PublicTypeOfNumber = PublicTypeOfNumber.abbreviatedNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_PublicTypeOfNumber: $.ASN1Decoder<PublicTypeOfNumber> = $._decodeEnumerated;
-export const _encode_PublicTypeOfNumber: $.ASN1Encoder<PublicTypeOfNumber> = $._encodeEnumerated;
+export const _decode_PublicTypeOfNumber: $.ASN1Decoder<PublicTypeOfNumber> = $._decodeEnumerated as $.ASN1Decoder<PublicTypeOfNumber>;
+export const _encode_PublicTypeOfNumber: $.ASN1Encoder<PublicTypeOfNumber> = $._encodeEnumerated as $.ASN1Encoder<PublicTypeOfNumber>;
 
 /* eslint-enable */

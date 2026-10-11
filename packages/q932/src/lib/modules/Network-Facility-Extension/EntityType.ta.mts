@@ -14,11 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * 
  * @enum {number}
  */
-export
-enum _enum_for_EntityType {
-    endPINX = 0,
-    anyTypeOfPINX = 1,
-}
+export const _enum_for_EntityType = {
+    endPINX: 0,
+    anyTypeOfPINX: 1,
+} as const;
+
+export type _enum_for_EntityType = (typeof _enum_for_EntityType)[keyof typeof _enum_for_EntityType];
 
 /**
  * @summary EntityType
@@ -81,7 +82,7 @@ const EntityType_anyTypeOfPINX: EntityType = EntityType.anyTypeOfPINX; /* LONG_N
  */
 export
 const anyTypeOfPINX: EntityType = EntityType.anyTypeOfPINX; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_EntityType: $.ASN1Decoder<EntityType> = $._decodeEnumerated;
-export const _encode_EntityType: $.ASN1Encoder<EntityType> = $._encodeEnumerated;
+export const _decode_EntityType: $.ASN1Decoder<EntityType> = $._decodeEnumerated as $.ASN1Decoder<EntityType>;
+export const _encode_EntityType: $.ASN1Encoder<EntityType> = $._encodeEnumerated as $.ASN1Encoder<EntityType>;
 
 /* eslint-enable */

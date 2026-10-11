@@ -16,15 +16,16 @@ import * as $ from "@wildboar/asn1/functional";
  * 
  * @enum {number}
  */
-export
-enum _enum_for_PrivateTypeOfNumber {
-    unknown = 0,
-    level2RegionalNumber = 1,
-    level1RegionalNumber = 2,
-    pTNSpecificNumber = 3,
-    localNumber = 4,
-    abbreviatedNumber = 6,
-}
+export const _enum_for_PrivateTypeOfNumber = {
+    unknown: 0,
+    level2RegionalNumber: 1,
+    level1RegionalNumber: 2,
+    pTNSpecificNumber: 3,
+    localNumber: 4,
+    abbreviatedNumber: 6,
+} as const;
+
+export type _enum_for_PrivateTypeOfNumber = (typeof _enum_for_PrivateTypeOfNumber)[keyof typeof _enum_for_PrivateTypeOfNumber];
 
 /**
  * @summary PrivateTypeOfNumber
@@ -155,7 +156,7 @@ const PrivateTypeOfNumber_abbreviatedNumber: PrivateTypeOfNumber = PrivateTypeOf
  */
 export
 const abbreviatedNumber: PrivateTypeOfNumber = PrivateTypeOfNumber.abbreviatedNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_PrivateTypeOfNumber: $.ASN1Decoder<PrivateTypeOfNumber> = $._decodeEnumerated;
-export const _encode_PrivateTypeOfNumber: $.ASN1Encoder<PrivateTypeOfNumber> = $._encodeEnumerated;
+export const _decode_PrivateTypeOfNumber: $.ASN1Decoder<PrivateTypeOfNumber> = $._decodeEnumerated as $.ASN1Decoder<PrivateTypeOfNumber>;
+export const _encode_PrivateTypeOfNumber: $.ASN1Encoder<PrivateTypeOfNumber> = $._encodeEnumerated as $.ASN1Encoder<PrivateTypeOfNumber>;
 
 /* eslint-enable */

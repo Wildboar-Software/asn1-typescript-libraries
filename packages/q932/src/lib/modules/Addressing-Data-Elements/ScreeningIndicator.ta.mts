@@ -27,13 +27,14 @@ import * as $ from "@wildboar/asn1/functional";
  * 
  * @enum {number}
  */
-export
-enum _enum_for_ScreeningIndicator {
-    userProvidedNotScreened = 0,
-    userProvidedVerifiedAndPassed = 1,
-    userProvidedVerifiedAndFailed = 2,
-    networkProvided = 3,
-}
+export const _enum_for_ScreeningIndicator = {
+    userProvidedNotScreened: 0,
+    userProvidedVerifiedAndPassed: 1,
+    userProvidedVerifiedAndFailed: 2,
+    networkProvided: 3,
+} as const;
+
+export type _enum_for_ScreeningIndicator = (typeof _enum_for_ScreeningIndicator)[keyof typeof _enum_for_ScreeningIndicator];
 
 /**
  * @summary ScreeningIndicator
@@ -154,7 +155,7 @@ const ScreeningIndicator_networkProvided: ScreeningIndicator = ScreeningIndicato
  */
 export
 const networkProvided: ScreeningIndicator = ScreeningIndicator.networkProvided; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ScreeningIndicator: $.ASN1Decoder<ScreeningIndicator> = $._decodeEnumerated;
-export const _encode_ScreeningIndicator: $.ASN1Encoder<ScreeningIndicator> = $._encodeEnumerated;
+export const _decode_ScreeningIndicator: $.ASN1Decoder<ScreeningIndicator> = $._decodeEnumerated as $.ASN1Decoder<ScreeningIndicator>;
+export const _encode_ScreeningIndicator: $.ASN1Encoder<ScreeningIndicator> = $._encodeEnumerated as $.ASN1Encoder<ScreeningIndicator>;
 
 /* eslint-enable */
