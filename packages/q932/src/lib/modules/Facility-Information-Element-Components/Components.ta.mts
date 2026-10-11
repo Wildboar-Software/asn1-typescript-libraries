@@ -8,7 +8,6 @@ import {
     _decode_ROS,
     _encode_ROS
 } from "../Facility-Information-Element-Components/ROS.ta.mjs";
-// export { ROS, _decode_ROS, _encode_ROS } from "../Facility-Information-Element-Components/ROS.ta.mjs";
 
 /**
  * @summary Components

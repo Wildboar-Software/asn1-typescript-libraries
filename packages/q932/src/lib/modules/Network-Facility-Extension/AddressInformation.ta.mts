@@ -8,7 +8,6 @@ import {
     _decode_PartyNumber,
     _encode_PartyNumber
 } from "../Addressing-Data-Elements/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements/PartyNumber.ta.mjs";
 
 /**
  * @summary AddressInformation

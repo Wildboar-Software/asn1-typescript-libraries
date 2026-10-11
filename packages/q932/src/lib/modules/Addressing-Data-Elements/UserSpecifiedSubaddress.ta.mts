@@ -11,7 +11,6 @@ import {
     _decode_SubaddressInformation,
     _encode_SubaddressInformation
 } from "../Addressing-Data-Elements/SubaddressInformation.ta.mjs";
-// export { SubaddressInformation, _decode_SubaddressInformation, _encode_SubaddressInformation } from "../Addressing-Data-Elements/SubaddressInformation.ta.mjs";
 
 /**
  * @summary UserSpecifiedSubaddress

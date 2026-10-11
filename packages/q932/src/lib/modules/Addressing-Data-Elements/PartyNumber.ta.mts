@@ -9,25 +9,21 @@ import {
     _decode_NumberDigits,
     _encode_NumberDigits
 } from "../Addressing-Data-Elements/NumberDigits.ta.mjs";
-// export { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements/NumberDigits.ta.mjs";
 import {
     PublicPartyNumber,
     _decode_PublicPartyNumber,
     _encode_PublicPartyNumber
 } from "../Addressing-Data-Elements/PublicPartyNumber.ta.mjs";
-// export { PublicPartyNumber, _decode_PublicPartyNumber, _encode_PublicPartyNumber } from "../Addressing-Data-Elements/PublicPartyNumber.ta.mjs";
 import {
     NsapEncodedNumber,
     _decode_NsapEncodedNumber,
     _encode_NsapEncodedNumber
 } from "../Addressing-Data-Elements/NsapEncodedNumber.ta.mjs";
-// export { NsapEncodedNumber, _decode_NsapEncodedNumber, _encode_NsapEncodedNumber } from "../Addressing-Data-Elements/NsapEncodedNumber.ta.mjs";
 import {
     PrivatePartyNumber,
     _decode_PrivatePartyNumber,
     _encode_PrivatePartyNumber
 } from "../Addressing-Data-Elements/PrivatePartyNumber.ta.mjs";
-// export { PrivatePartyNumber, _decode_PrivatePartyNumber, _encode_PrivatePartyNumber } from "../Addressing-Data-Elements/PrivatePartyNumber.ta.mjs";
 
 /**
  * @summary PartyNumber

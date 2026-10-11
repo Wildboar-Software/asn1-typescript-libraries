@@ -8,13 +8,11 @@ import {
     _decode_UserSpecifiedSubaddress,
     _encode_UserSpecifiedSubaddress
 } from "../Addressing-Data-Elements/UserSpecifiedSubaddress.ta.mjs";
-// export { UserSpecifiedSubaddress, _decode_UserSpecifiedSubaddress, _encode_UserSpecifiedSubaddress } from "../Addressing-Data-Elements/UserSpecifiedSubaddress.ta.mjs";
 import {
     NSAPSubaddress,
     _decode_NSAPSubaddress,
     _encode_NSAPSubaddress
 } from "../Addressing-Data-Elements/NSAPSubaddress.ta.mjs";
-// export { NSAPSubaddress, _decode_NSAPSubaddress, _encode_NSAPSubaddress } from "../Addressing-Data-Elements/NSAPSubaddress.ta.mjs";
 
 /**
  * @summary PartySubaddress

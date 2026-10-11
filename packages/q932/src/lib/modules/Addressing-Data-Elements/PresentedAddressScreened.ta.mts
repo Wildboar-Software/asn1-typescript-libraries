@@ -10,7 +10,6 @@ import {
     _decode_AddressScreened,
     _encode_AddressScreened
 } from "../Addressing-Data-Elements/AddressScreened.ta.mjs";
-// export { AddressScreened, _decode_AddressScreened, _encode_AddressScreened } from "../Addressing-Data-Elements/AddressScreened.ta.mjs";
 
 /**
  * @summary PresentedAddressScreened

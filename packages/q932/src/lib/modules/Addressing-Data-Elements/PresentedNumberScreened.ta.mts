@@ -10,7 +10,6 @@ import {
     _decode_NumberScreened,
     _encode_NumberScreened
 } from "../Addressing-Data-Elements/NumberScreened.ta.mjs";
-// export { NumberScreened, _decode_NumberScreened, _encode_NumberScreened } from "../Addressing-Data-Elements/NumberScreened.ta.mjs";
 
 /**
  * @summary PresentedNumberScreened

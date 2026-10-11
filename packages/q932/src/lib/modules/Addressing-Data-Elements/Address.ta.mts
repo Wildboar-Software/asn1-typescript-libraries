@@ -10,13 +10,11 @@ import {
     _decode_PartyNumber,
     _encode_PartyNumber
 } from "../Addressing-Data-Elements/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements/PartyNumber.ta.mjs";
 import {
     PartySubaddress,
     _decode_PartySubaddress,
     _encode_PartySubaddress
 } from "../Addressing-Data-Elements/PartySubaddress.ta.mjs";
-// export { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements/PartySubaddress.ta.mjs";
 
 /**
  * @summary Address
