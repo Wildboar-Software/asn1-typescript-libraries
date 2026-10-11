@@ -1,15 +1,20 @@
 {
   "name": "@wildboar/sgp32",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "exports": {
-    ".": "./src/index.mts"
+    ".": "./src/index.mts",
+    "./SGP32Definitions": "./src/lib/modules/SGP32Definitions/index.mts"
   },
   "publish": {
     "include": [
       "LICENSE.txt",
       "README.md",
       "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.spec.mts",
+      "src/**/*.test.mts"
     ]
   }
 }
