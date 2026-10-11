@@ -154,7 +154,7 @@ let _cached_encoder_for_PairwiseTag: $.ASN1Encoder<PairwiseTag> | null = null;
  */
 export
 function _encode_PairwiseTag (value: PairwiseTag, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PairwiseTag) { _cached_encoder_for_PairwiseTag = function (value: PairwiseTag, elGetter: $.ASN1Encoder<PairwiseTag>): _Element {
+    if (!_cached_encoder_for_PairwiseTag) { _cached_encoder_for_PairwiseTag = function (value: PairwiseTag): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_Kmid(value.kmid, $.BER),

@@ -194,7 +194,7 @@ let _cached_encoder_for_RIParametersDeprecated: $.ASN1Encoder<RIParametersDeprec
  */
 export
 function _encode_RIParametersDeprecated (value: RIParametersDeprecated, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RIParametersDeprecated) { _cached_encoder_for_RIParametersDeprecated = function (value: RIParametersDeprecated, elGetter: $.ASN1Encoder<RIParametersDeprecated>): _Element {
+    if (!_cached_encoder_for_RIParametersDeprecated) { _cached_encoder_for_RIParametersDeprecated = function (value: RIParametersDeprecated): _Element {
     return $._encodeSet(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodePrintableString, $.BER)(value.rI, $.BER),

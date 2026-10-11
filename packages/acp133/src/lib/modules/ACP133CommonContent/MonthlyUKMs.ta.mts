@@ -156,7 +156,7 @@ let _cached_encoder_for_MonthlyUKMs: $.ASN1Encoder<MonthlyUKMs> | null = null;
  */
 export
 function _encode_MonthlyUKMs (value: MonthlyUKMs, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MonthlyUKMs) { _cached_encoder_for_MonthlyUKMs = function (value: MonthlyUKMs, elGetter: $.ASN1Encoder<MonthlyUKMs>): _Element {
+    if (!_cached_encoder_for_MonthlyUKMs) { _cached_encoder_for_MonthlyUKMs = function (value: MonthlyUKMs): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeSequenceOf<UKMEntry>(() => _encode_UKMEntry, $.BER)(value.ukm_entries, $.BER),

@@ -142,7 +142,7 @@ let _cached_encoder_for_UKMEntry: $.ASN1Encoder<UKMEntry> | null = null;
  */
 export
 function _encode_UKMEntry (value: UKMEntry, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UKMEntry) { _cached_encoder_for_UKMEntry = function (value: UKMEntry, elGetter: $.ASN1Encoder<UKMEntry>): _Element {
+    if (!_cached_encoder_for_UKMEntry) { _cached_encoder_for_UKMEntry = function (value: UKMEntry): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_PairwiseTag(value.tag, $.BER),
