@@ -51,6 +51,7 @@ jobs:
           - "iso-9798-3-sasl"
           - "kerberos5"
           - "ldap"
+          - "lawful-intercept"
           - "lpp"
           # - "m3100"
           - "nist-csor"
