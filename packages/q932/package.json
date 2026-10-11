@@ -28,6 +28,14 @@
     "types": "./src/index.d.mts",
     "module": "./src/index.mjs",
     "main": "./src/index.mjs",
+    "exports": {
+        ".": "./src/index.mts",
+        "./Addressing-Data-Elements": "./src/lib/modules/Addressing-Data-Elements/index.mts",
+        "./Facility-Information-Element-Components": "./src/lib/modules/Facility-Information-Element-Components/index.mts",
+        "./Network-Facility-Extension": "./src/lib/modules/Network-Facility-Extension/index.mts",
+        "./Network-Protocol-Profile-component": "./src/lib/modules/Network-Protocol-Profile-component/index.mts",
+        "./Remote-Operations-Information-Objects": "./src/lib/modules/Remote-Operations-Information-Objects/index.mts"
+    },
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
         "@wildboar/rose": "npm:@jsr/wildboar__rose@2.x.x"
