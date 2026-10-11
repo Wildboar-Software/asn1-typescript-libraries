@@ -122,10 +122,8 @@ function _decode_MM (el: _Element): MM {
     }
     sequence[0].name = "mmheading";
     sequence[1].name = "mmbody";
-    let mmheading!: Heading;
-    let mmbody!: Body;
-    mmheading = _decode_Heading(sequence[0]);
-    mmbody = _decode_Body(sequence[1]);
+    const mmheading: Heading = _decode_Heading(sequence[0]);
+    const mmbody: Body = _decode_Body(sequence[1]);
     return new MM(
         mmheading,
         mmbody,
