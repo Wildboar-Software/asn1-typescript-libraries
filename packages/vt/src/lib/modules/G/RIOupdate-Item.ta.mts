@@ -13,9 +13,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RIOupdate_Item_operation, _decode_RIOupdate_Item_operation, _encode_RIOupdate_Item_operation } from "../G/RIOupdate-Item-operation.ta.mjs";
-// export { RIOupdate_Item_operation, RIOupdate_Item_operation_eraseRIO /* IMPORTED_LONG_NAMED_INTEGER */, eraseRIO /* IMPORTED_SHORT_NAMED_INTEGER */, RIOupdate_Item_operation_deleteRecord /* IMPORTED_LONG_NAMED_INTEGER */, deleteRecord /* IMPORTED_SHORT_NAMED_INTEGER */, RIOupdate_Item_operation_createRecord /* IMPORTED_LONG_NAMED_INTEGER */, createRecord /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RIOupdate_Item_operation, _encode_RIOupdate_Item_operation } from "../G/RIOupdate-Item-operation.ta.mjs";
 import { type ObjectUpdate, _decode_ObjectUpdate, _encode_ObjectUpdate } from "../ISO9041-VTP/ObjectUpdate.ta.mjs";
-// export { ObjectUpdate, _decode_ObjectUpdate, _encode_ObjectUpdate } from "../ISO9041-VTP/ObjectUpdate.ta.mjs";
 
 
 /**

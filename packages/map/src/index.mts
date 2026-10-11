@@ -9,4 +9,4 @@
  * Remote Operations types used by MAP (`OPERATION`, `ERROR`, `Code`,
  * `Priority`) are re-exported from `@wildboar/rose`.
  */
-export {};
+export { };

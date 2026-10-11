@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import {
-    UniversalDomainDefinedAttributes,
+    type UniversalDomainDefinedAttributes,
     _decode_UniversalDomainDefinedAttributes,
     _encode_UniversalDomainDefinedAttributes,
 } from "../PkiPmiExternalDataTypes/UniversalDomainDefinedAttributes.ta.mjs";

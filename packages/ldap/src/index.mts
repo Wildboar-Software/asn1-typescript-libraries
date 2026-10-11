@@ -25,14 +25,8 @@
  * 
  * @module
  */
-export { default as destringifyAttributeTypeAndValue } from "./lib/destringifiers/AttributeTypeAndValue.mjs";
-export { default as destringifyFilter } from "./lib/destringifiers/Filter.mjs";
-export { default as destringifyRDNSequence } from "./lib/destringifiers/RDNSequence.mjs";
-export { default as destringifyRelativeDistinguishedName } from "./lib/destringifiers/RelativeDistinguishedName.mjs";
-export { default as stringifyAttributeTypeAndValue } from "./lib/stringifiers/AttributeTypeAndValue.mjs";
-export { default as stringifyFilter } from "./lib/stringifiers/Filter.mjs";
-export { default as stringifyRDNSequence } from "./lib/stringifiers/RDNSequence.mjs";
-export { default as stringifyRelativeDistinguishedName } from "./lib/stringifiers/RelativeDistinguishedName.mjs";
+export { default as filterToString } from "./lib/filterToString.mjs";
+export { default as filterFromString } from "./lib/filterFromString.mjs";
 export type { default as ApproxMatcher } from "./lib/types/ApproxMatcher.mjs";
 export type { default as AttributeTypeAndValue } from "./lib/types/AttributeTypeAndValue.mjs";
 export type { default as EqualityMatcher } from "./lib/types/EqualityMatcher.mjs";

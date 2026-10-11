@@ -14,37 +14,21 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ASQcontent, _decode_ASQcontent, _encode_ASQcontent } from "../ISO9041-VTP/ASQcontent.ta.mjs";
-// export { ASQcontent, _decode_ASQcontent, _encode_ASQcontent } from "../ISO9041-VTP/ASQcontent.ta.mjs";
 import { ASRcontent, _decode_ASRcontent, _encode_ASRcontent } from "../ISO9041-VTP/ASRcontent.ta.mjs";
-// export { ASRcontent, _decode_ASRcontent, _encode_ASRcontent } from "../ISO9041-VTP/ASRcontent.ta.mjs";
 import { _decode_Result2, _encode_Result2, type Result2 } from "../G/Result2.ta.mjs";
-// export { Result2, _decode_Result2, _encode_Result2 } from "../G/Result2.ta.mjs";
 import { _decode_COupdate, _encode_COupdate, COupdate } from "../G/COupdate.ta.mjs";
-// export { COupdate, _decode_COupdate, _encode_COupdate } from "../G/COupdate.ta.mjs";
 import { NDQcontent, _decode_NDQcontent, _encode_NDQcontent } from "../ISO9041-VTP/NDQcontent.ta.mjs";
-// export { NDQcontent, _decode_NDQcontent, _encode_NDQcontent } from "../ISO9041-VTP/NDQcontent.ta.mjs";
 import { BKQcontent, _decode_BKQcontent, _encode_BKQcontent } from "../ISO9041-VTP/BKQcontent.ta.mjs";
-// export { BKQcontent, _decode_BKQcontent, _encode_BKQcontent } from "../ISO9041-VTP/BKQcontent.ta.mjs";
 import { _decode_Profile, _encode_Profile, Profile } from "../G/Profile.ta.mjs";
-// export { Profile, _decode_Profile, _encode_Profile } from "../G/Profile.ta.mjs";
 import { SNRcontent, _decode_SNRcontent, _encode_SNRcontent } from "../ISO9041-VTP/SNRcontent.ta.mjs";
-// export { SNRcontent, _decode_SNRcontent, _encode_SNRcontent } from "../ISO9041-VTP/SNRcontent.ta.mjs";
 import { ENQcontent, _decode_ENQcontent, _encode_ENQcontent } from "../ISO9041-VTP/ENQcontent.ta.mjs";
-// export { ENQcontent, _decode_ENQcontent, _encode_ENQcontent } from "../ISO9041-VTP/ENQcontent.ta.mjs";
 import { ENRcontent, _decode_ENRcontent, _encode_ENRcontent } from "../ISO9041-VTP/ENRcontent.ta.mjs";
-// export { ENRcontent, _decode_ENRcontent, _encode_ENRcontent } from "../ISO9041-VTP/ENRcontent.ta.mjs";
 import { _decode_ParamIdentList, _encode_ParamIdentList, ParamIdentList } from "../G/ParamIdentList.ta.mjs";
-// export { ParamIdentList, _decode_ParamIdentList, _encode_ParamIdentList } from "../G/ParamIdentList.ta.mjs";
 import { _decode_ParamOfferList, _encode_ParamOfferList, ParamOfferList } from "../G/ParamOfferList.ta.mjs";
-// export { ParamOfferList, _decode_ParamOfferList, _encode_ParamOfferList } from "../G/ParamOfferList.ta.mjs";
 import { _decode_ParamValueList, _encode_ParamValueList, ParamValueList } from "../G/ParamValueList.ta.mjs";
-// export { ParamValueList, _decode_ParamValueList, _encode_ParamValueList } from "../G/ParamValueList.ta.mjs";
 import { EXQcontent, _decode_EXQcontent, _encode_EXQcontent } from "../ISO9041-VTP/EXQcontent.ta.mjs";
-// export { EXQcontent, _decode_EXQcontent, _encode_EXQcontent } from "../ISO9041-VTP/EXQcontent.ta.mjs";
 import { SPQ2content, _decode_SPQ2content, _encode_SPQ2content } from "../ISO9041-VTP/SPQ2content.ta.mjs";
-// export { SPQ2content, _decode_SPQ2content, _encode_SPQ2content } from "../ISO9041-VTP/SPQ2content.ta.mjs";
 import { SPR2content, _decode_SPR2content, _encode_SPR2content } from "../ISO9041-VTP/SPR2content.ta.mjs";
-// export { SPR2content, _decode_SPR2content, _encode_SPR2content } from "../ISO9041-VTP/SPR2content.ta.mjs";
 
 
 /**

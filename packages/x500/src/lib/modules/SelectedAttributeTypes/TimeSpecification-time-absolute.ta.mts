@@ -64,11 +64,9 @@ export class TimeSpecification_time_absolute {
      * @returns {TimeSpecification_time_absolute}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof TimeSpecification_time_absolute]: TimeSpecification_time_absolute[_K];
             }
-        >
     ): TimeSpecification_time_absolute {
         return new TimeSpecification_time_absolute(
             _o.startTime,

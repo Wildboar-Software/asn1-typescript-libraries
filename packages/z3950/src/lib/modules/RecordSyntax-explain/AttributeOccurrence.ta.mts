@@ -1,0 +1,216 @@
+/* eslint-disable */
+import {
+    INTEGER,
+    NULL,
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
+import { AttributeOccurrence_attributeValues, _decode_AttributeOccurrence_attributeValues, _encode_AttributeOccurrence_attributeValues } from "../RecordSyntax-explain/AttributeOccurrence-attributeValues.ta.mjs";
+
+
+/**
+ * @summary AttributeOccurrence
+ * @description
+ * 
+ * Legal values for one attribute type inside a combination pattern. REC.1.
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * AttributeOccurrence ::= SEQUENCE {
+ *     -- An AttributeOccurrence lists the legal values for a specific attribute type in a combination
+ *     attributeSet    [0] IMPLICIT AttributeSetId OPTIONAL,
+ *     attributeType   [1] IMPLICIT INTEGER,
+ *     mustBeSupplied  [2] IMPLICIT NULL OPTIONAL,
+ *     attributeValues CHOICE {
+ *         any-or-none     [3] IMPLICIT NULL,
+ *                 -- All supported values are OK
+ *         specific        [4] IMPLICIT SEQUENCE OF StringOrNumeric
+ *         -- Only these values allowed
+ *     }
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class AttributeOccurrence {
+    /**
+     * @summary `attributeSet`.
+     * @description
+     * Attribute set of this type in the combination. The standard does not say
+     * what omission means. REC.1.
+     * @public
+     * @readonly
+     */
+    readonly attributeSet: OPTIONAL<AttributeSetId>;
+    /**
+     * @summary `attributeType`.
+     * @description
+     * Attribute type these values apply to. REC.1.
+     * @public
+     * @readonly
+     */
+    readonly attributeType: INTEGER;
+    /**
+     * @summary `mustBeSupplied`.
+     * @description
+     * Present when this attribute type must be supplied in the combination.
+     * REC.1 does not define the flag further.
+     * @public
+     * @readonly
+     */
+    readonly mustBeSupplied: OPTIONAL<NULL>;
+    /**
+     * @summary `attributeValues`.
+     * @description
+     * `any-or-none` means every supported value is acceptable. `specific` lists
+     * the only values allowed. REC.1.
+     * @public
+     * @readonly
+     */
+    readonly attributeValues: AttributeOccurrence_attributeValues;
+
+    constructor (
+        attributeSet: OPTIONAL<AttributeSetId>,
+        attributeType: INTEGER,
+        mustBeSupplied: OPTIONAL<NULL>,
+        attributeValues: AttributeOccurrence_attributeValues
+    ) {
+        this.attributeSet = attributeSet;
+        this.attributeType = attributeType;
+        this.mustBeSupplied = mustBeSupplied;
+        this.attributeValues = attributeValues;
+    }
+
+    /**
+     * @summary Restructures an object into a AttributeOccurrence
+     * @description
+     * 
+     * This takes an `object` and converts it to a `AttributeOccurrence`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `AttributeOccurrence`.
+     * @returns {AttributeOccurrence}
+     */
+    public static _from_object (_o: { [_K in keyof (AttributeOccurrence)]: (AttributeOccurrence)[_K] }): AttributeOccurrence {
+        return new AttributeOccurrence(_o.attributeSet, _o.attributeType, _o.mustBeSupplied, _o.attributeValues);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of AttributeOccurrence
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_AttributeOccurrence: $.ComponentSpec[] = [
+    new $.ComponentSpec("attributeSet", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("attributeType", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("mustBeSupplied", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("attributeValues", false, $.hasAnyTag)
+];
+
+/**
+ * @summary The Trailing Root Component Types of AttributeOccurrence
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_AttributeOccurrence: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of AttributeOccurrence
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_AttributeOccurrence: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_AttributeOccurrence: $.ASN1Decoder<AttributeOccurrence> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) AttributeOccurrence
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_AttributeOccurrence (el: _Element): AttributeOccurrence {
+    if (!_cached_decoder_for_AttributeOccurrence) { _cached_decoder_for_AttributeOccurrence = function (el: _Element): AttributeOccurrence {
+    let attributeSet: OPTIONAL<AttributeSetId>;
+    let attributeType!: INTEGER;
+    let mustBeSupplied: OPTIONAL<NULL>;
+    let attributeValues!: AttributeOccurrence_attributeValues;
+    const callbacks: $.DecodingMap = {
+        "attributeSet": (_el: _Element): void => { attributeSet = $._decode_implicit<AttributeSetId>(() => _decode_AttributeSetId)(_el); },
+        "attributeType": (_el: _Element): void => { attributeType = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "mustBeSupplied": (_el: _Element): void => { mustBeSupplied = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
+        "attributeValues": (_el: _Element): void => { attributeValues = _decode_AttributeOccurrence_attributeValues(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_AttributeOccurrence,
+        _extension_additions_list_spec_for_AttributeOccurrence,
+        _root_component_type_list_2_spec_for_AttributeOccurrence,
+        undefined,
+    );
+    return new AttributeOccurrence(
+        attributeSet,
+        attributeType,
+        mustBeSupplied,
+        attributeValues
+    );
+}; }
+    return _cached_decoder_for_AttributeOccurrence(el);
+}
+
+let _cached_encoder_for_AttributeOccurrence: $.ASN1Encoder<AttributeOccurrence> | null = null;
+
+/**
+ * @summary Encodes a(n) AttributeOccurrence into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The AttributeOccurrence, encoded as an ASN.1 Element.
+ */
+export
+function _encode_AttributeOccurrence (value: AttributeOccurrence, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_AttributeOccurrence) { _cached_encoder_for_AttributeOccurrence = function (value: AttributeOccurrence, elGetter: $.ASN1Encoder<AttributeOccurrence>): _Element {
+    const _components: _Element[] = new Array(4);
+    let _components_i = 0;
+    if (value.attributeSet !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_AttributeSetId, $.BER)(value.attributeSet, $.BER);
+    }
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.attributeType, $.BER);
+    if (value.mustBeSupplied !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => $._encodeNull, $.BER)(value.mustBeSupplied, $.BER);
+    }
+    _components[_components_i++] = /* REQUIRED   */ _encode_AttributeOccurrence_attributeValues(value.attributeValues, $.BER);
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_AttributeOccurrence(value, elGetter);
+}
+
+
+/* eslint-enable */

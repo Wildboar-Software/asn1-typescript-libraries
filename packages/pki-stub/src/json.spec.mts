@@ -125,11 +125,11 @@ describe("AttCertValidityPeriod JSON", () => {
 });
 
 describe("AttributeTypeAndValue JSON", () => {
-    it("toJSON uses the ASN.1 identifier type", () => {
+    it("toJSON writes the type as a numeric OID and the value as hex BER", () => {
         const value = new AttributeTypeAndValue(commonName, utf8Element("CN"));
         expect(value.toJSON()).toEqual({
             type: "2.5.4.3",
-            value: "CN",
+            value: "#0c02434e",
         });
     });
 });

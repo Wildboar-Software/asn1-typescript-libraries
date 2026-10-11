@@ -1,0 +1,68 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { Permissions_Item, _decode_Permissions_Item, _encode_Permissions_Item } from "../Z39-50-APDU-2001/Permissions-Item.ta.mjs";
+
+
+/**
+ * @summary Permissions
+ * @description
+ * 
+ * Access rights for users other than the package creator (ANSI/NISO Z39.50-2003
+ * §3.2.9.3). The creating user may always apply any ES function, retrieve the
+ * full package, and invoke it. If the client omits permissions on create, only
+ * that user may access the package. A group name, if the server provides
+ * groups, has the same syntax as a user id. This standard does not describe how
+ * group membership is reported.
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * Permissions  ::=  SEQUENCE OF SEQUENCE {
+ *     userId              [1] IMPLICIT InternationalString,
+ *     allowableFunctions  [2] IMPLICIT SEQUENCE OF INTEGER {
+ *         delete              (1),
+ *         modifyContents      (2),
+ *         modifyPermissions   (3),
+ *         present             (4),
+ *         invoke              (5)
+ *     }
+ * }
+ * ```
+ */
+export
+type Permissions = Permissions_Item[]; // SequenceOfType
+
+let _cached_decoder_for_Permissions: $.ASN1Decoder<Permissions> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) Permissions
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_Permissions (el: _Element): Permissions {
+    if (!_cached_decoder_for_Permissions) { _cached_decoder_for_Permissions = $._decodeSequenceOf<Permissions_Item>(() => _decode_Permissions_Item); }
+    return _cached_decoder_for_Permissions(el);
+}
+
+let _cached_encoder_for_Permissions: $.ASN1Encoder<Permissions> | null = null;
+
+/**
+ * @summary Encodes a(n) Permissions into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The Permissions, encoded as an ASN.1 Element.
+ */
+export
+function _encode_Permissions (value: Permissions, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_Permissions) { _cached_encoder_for_Permissions = $._encodeSequenceOf<Permissions_Item>(() => _encode_Permissions_Item, $.BER); }
+    return _cached_encoder_for_Permissions(value, elGetter);
+}
+
+
+/* eslint-enable */

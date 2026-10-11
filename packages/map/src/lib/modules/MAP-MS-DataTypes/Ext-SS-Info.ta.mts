@@ -1,76 +1,14 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_ForwInfo, _decode_Ext_ForwInfo, _encode_Ext_ForwInfo } from "../MAP-MS-DataTypes/Ext-ForwInfo.ta.mjs";
-import { Ext_CallBarInfo, _decode_Ext_CallBarInfo, _encode_Ext_CallBarInfo } from "../MAP-MS-DataTypes/Ext-CallBarInfo.ta.mjs";
-import { CUG_Info, _decode_CUG_Info, _encode_CUG_Info } from "../MAP-MS-DataTypes/CUG-Info.ta.mjs";
-import { Ext_SS_Data, _decode_Ext_SS_Data, _encode_Ext_SS_Data } from "../MAP-MS-DataTypes/Ext-SS-Data.ta.mjs";
 import { EMLPP_Info, _decode_EMLPP_Info, _encode_EMLPP_Info } from "../MAP-CommonDataTypes/EMLPP-Info.ta.mjs";
+import { CUG_Info, _decode_CUG_Info, _encode_CUG_Info } from "../MAP-MS-DataTypes/CUG-Info.ta.mjs";
+import { Ext_CallBarInfo, _decode_Ext_CallBarInfo, _encode_Ext_CallBarInfo } from "../MAP-MS-DataTypes/Ext-CallBarInfo.ta.mjs";
+import { Ext_ForwInfo, _decode_Ext_ForwInfo, _encode_Ext_ForwInfo } from "../MAP-MS-DataTypes/Ext-ForwInfo.ta.mjs";
+import { Ext_SS_Data, _decode_Ext_SS_Data, _encode_Ext_SS_Data } from "../MAP-MS-DataTypes/Ext-SS-Data.ta.mjs";
 
 
 /**

@@ -13,9 +13,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-// export { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 import { ReportSemaphoreEntryStatus_Request_state, _decode_ReportSemaphoreEntryStatus_Request_state, _encode_ReportSemaphoreEntryStatus_Request_state } from "../ISO-9506-MMS-1/ReportSemaphoreEntryStatus-Request-state.ta.mjs";
-// export { ReportSemaphoreEntryStatus_Request_state, ReportSemaphoreEntryStatus_Request_state_queued /* IMPORTED_LONG_NAMED_INTEGER */, queued /* IMPORTED_SHORT_NAMED_INTEGER */, ReportSemaphoreEntryStatus_Request_state_owner /* IMPORTED_LONG_NAMED_INTEGER */, owner /* IMPORTED_SHORT_NAMED_INTEGER */, ReportSemaphoreEntryStatus_Request_state_hung /* IMPORTED_LONG_NAMED_INTEGER */, hung /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ReportSemaphoreEntryStatus_Request_state, _encode_ReportSemaphoreEntryStatus_Request_state } from "../ISO-9506-MMS-1/ReportSemaphoreEntryStatus-Request-state.ta.mjs";
 
 
 /**

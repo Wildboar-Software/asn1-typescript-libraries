@@ -1,0 +1,25 @@
+{
+  "name": "h248",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/h248/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/h248",
+        "tsConfig": "packages/h248/tsconfig.lib.json",
+        "packageJson": "packages/h248/package.json",
+        "main": "packages/h248/src/index.mts",
+        "assets": [
+          "packages/h248/*.md",
+          "packages/h248/LICENSE.txt",
+          "packages/h248/package.json"
+        ]
+      }
+    }
+  }
+}

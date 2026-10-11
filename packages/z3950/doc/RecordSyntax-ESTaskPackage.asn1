@@ -1,0 +1,33 @@
+RecordSyntax-ESTaskPackage
+{z39-50-recordSyntax esTaskPackage(106)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    Permissions, InternationalString, IntUnit, DiagRec
+        FROM Z39-50-APDU-2001
+    ;
+
+TaskPackage ::= SEQUENCE {
+    packageType         [1] IMPLICIT OBJECT IDENTIFIER,
+    -- oid of specific ES definition
+    packageName         [2] IMPLICIT InternationalString OPTIONAL,
+    userId              [3] IMPLICIT InternationalString OPTIONAL,
+    retentionTime       [4] IMPLICIT IntUnit OPTIONAL,
+    permissions         [5] IMPLICIT Permissions OPTIONAL,
+    description         [6] IMPLICIT InternationalString OPTIONAL,
+    serverReference     [7] IMPLICIT OCTET STRING OPTIONAL,
+    creationDateTime    [8] IMPLICIT GeneralizedTime OPTIONAL,
+    taskStatus          [9] IMPLICIT INTEGER {
+        pending  (0),
+        active   (1),
+        complete (2),
+        aborted  (3)
+    },
+    packageDiagnostics      [10] IMPLICIT SEQUENCE OF DiagRec OPTIONAL,
+    taskSpecificParameters  [11] IMPLICIT EXTERNAL
+    -- Use oid for specific ES definition
+    -- (same oid as packageType above) and select [2] "taskPackage."
+}
+
+END

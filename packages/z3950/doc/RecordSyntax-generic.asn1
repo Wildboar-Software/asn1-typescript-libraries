@@ -1,0 +1,130 @@
+-- ASN1.6 Z39.50 ASN.1 Definition for GRS-1
+RecordSyntax-generic
+-- For detailed semantics, see Appendix RET.
+{z39-50-recordSyntax grs-1(105)}
+DEFINITIONS ::=
+BEGIN
+EXPORTS Variant;
+IMPORTS
+
+    IntUnit, Unit, InternationalString, StringOrNumeric, Term
+        FROM Z39-50-APDU-2001
+    ;
+GenericRecord ::= SEQUENCE OF TaggedElement
+
+TaggedElement ::= SEQUENCE {
+    tagType         [1] IMPLICIT INTEGER OPTIONAL,
+    -- If omitted, default should be supplied dynamically by tagSet-M;
+    -- otherwise it should be statically specified by the schema.
+    tagValue        [2] StringOrNumeric,
+    tagOccurrence   [3] IMPLICIT INTEGER OPTIONAL,
+    -- Occurrence within the database record, and relative to the parent.
+    -- No default; if omitted, server not telling or it is irrelevant.
+    -- 1-based. Tags are numbered beginning with 1.
+    content         [4] ElementData,
+    metaData        [5] IMPLICIT ElementMetaData OPTIONAL,
+    appliedVariant  [6] IMPLICIT Variant OPTIONAL
+}
+
+ElementData ::= CHOICE {
+    octets              OCTET STRING,
+    numeric             INTEGER,
+    date                GeneralizedTime,
+    ext                 EXTERNAL,
+    string              InternationalString,
+    -- Note: VisibleString (ASN.1 tag 26) is not supported by GRS-1.
+    -- The tag for ‘string’ must always be 2, even when
+    -- version 2 is in effect and the character repertoire collapses to that of VisibleString.
+    trueOrFalse         BOOLEAN,
+    oid                 OBJECT IDENTIFIER,
+    intUnit             [1] IMPLICIT IntUnit,
+    elementNotThere     [2] IMPLICIT NULL,
+    -- Element requested but not there
+    elementEmpty        [3] IMPLICIT NULL,
+    -- element there, but empty
+    noDataRequested     [4] IMPLICIT NULL,
+    -- Variant request said 'no data'
+    diagnostic          [5] IMPLICIT EXTERNAL,
+    subtree             [6] SEQUENCE OF TaggedElement
+    -- Recursive, for nested tags
+}
+
+ElementMetaData ::= SEQUENCE {
+    seriesOrder         [1] IMPLICIT Order OPTIONAL,
+                                                            -- Only for a non-leaf node
+    usageRight          [2] IMPLICIT Usage OPTIONAL,
+    hits                [3] IMPLICIT SEQUENCE OF HitVector OPTIONAL,
+    displayName         [4] IMPLICIT InternationalString OPTIONAL,
+    -- Name for element that client can use for display
+    supportedVariants   [5] IMPLICIT SEQUENCE OF Variant OPTIONAL,
+    message             [6] IMPLICIT InternationalString OPTIONAL,
+    elementDescriptor   [7] IMPLICIT OCTET STRING OPTIONAL,
+    -- For example, a DTD
+    surrogateFor        [8] IMPLICIT TagPath OPTIONAL,
+    -- The retrieved element is a surrogate for the element given by this path
+    surrogateElement    [9] IMPLICIT TagPath OPTIONAL,
+    -- The element given by this path is a surrogate for the retrieved element
+    -- See comment 1.
+    other               [99] IMPLICIT EXTERNAL OPTIONAL
+}
+
+TagPath ::= SEQUENCE OF SEQUENCE {
+    tagType         [1] IMPLICIT INTEGER OPTIONAL,
+    tagValue        [2]     StringOrNumeric,
+    tagOccurrence   [3] IMPLICIT INTEGER OPTIONAL
+}
+
+Order ::= SEQUENCE {
+    ascending       [1] IMPLICIT BOOLEAN,
+    -- "true" means monotonically increasing (i.e. non-decreasing);
+    -- "false" means monotonically decreasing (i.e. non-increasing).
+    order           [2] IMPLICIT INTEGER
+    -- Same as defined by 'elementOrdering' in tagSet-M, though this may be
+    -- overridden by schema.
+}
+
+Usage ::= SEQUENCE {
+    type        [1] IMPLICIT INTEGER {
+        redistributable (1), -- Element is freely redistributable
+        restricted      (2), -- Restriction contains statement
+        licensePointer  (3) -- Restriction contains license pointer
+    },
+    restriction [2] IMPLICIT InternationalString OPTIONAL
+}
+
+HitVector ::= SEQUENCE {
+    -- Each hit vector points to a fragment within the element, via location and/or token.
+    satisfier           Term OPTIONAL, -- sourceword, etc.
+    offsetIntoElement   [1] IMPLICIT IntUnit OPTIONAL,
+    length              [2] IMPLICIT IntUnit OPTIONAL,
+    hitRank             [3] IMPLICIT INTEGER OPTIONAL,
+    serverToken         [4] IMPLICIT OCTET STRING OPTIONAL
+    -- Client may use token subsequently within a variantRequest
+    -- (in an elementRequest) to retrieve (or to refer to) the fragment.
+}
+
+Variant ::= SEQUENCE {
+    globalVariantSetId  [1] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+    -- Applies to the triples below, when variantSetId omitted.
+    -- If globalVariantSetId omitted, default applies.
+    -- Default may be provided by the tagSet-M element defaultVariantSetId.
+    triples             [2] IMPLICIT SEQUENCE OF SEQUENCE {
+        variantSetId        [0] IMPLICIT OBJECT IDENTIFIER OPTIONAL,
+        -- If omitted, globalVariantSetId (above) applies,
+        -- unless that too is omitted, in which case, default used.
+        class               [1] IMPLICIT INTEGER,
+        type                [2] IMPLICIT INTEGER,
+        value               [3] CHOICE {
+            integer             INTEGER,
+            string              InternationalString,
+            octets              OCTET STRING,
+            oid                 OBJECT IDENTIFIER,
+            bool                BOOLEAN,
+            null                NULL,
+            -- Following need context tags:
+            unit                [1] IMPLICIT Unit,
+            valueAndUnit        [2] IMPLICIT IntUnit
+        }
+    }
+}
+END
