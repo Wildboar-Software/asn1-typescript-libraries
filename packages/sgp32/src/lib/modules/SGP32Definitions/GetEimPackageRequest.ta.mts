@@ -9,7 +9,7 @@ import {
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Octet16, _decode_Octet16, _encode_Octet16 } from "@wildboar/sgp22/RSPDefinitions";
-import { StateChangeCause, _decode_StateChangeCause, _encode_StateChangeCause, undefined /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../SGP32Definitions/StateChangeCause.ta.mjs";
+import { type StateChangeCause, _decode_StateChangeCause, _encode_StateChangeCause } from "../SGP32Definitions/StateChangeCause.ta.mjs";
 
 
 /**

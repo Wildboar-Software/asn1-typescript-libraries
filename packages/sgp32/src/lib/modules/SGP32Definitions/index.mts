@@ -1962,7 +1962,6 @@ export {
     StateChangeCause_deviceChange,
     deviceChange,
     StateChangeCause_undefined,
-    undefined,
     _decode_StateChangeCause,
     _encode_StateChangeCause,
 } from "./StateChangeCause.ta.mjs";
