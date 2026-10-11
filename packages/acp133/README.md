@@ -1,6 +1,7 @@
 # acp133
 
-This module is ESM-only.
+This module is ESM-only. Import from `@wildboar/acp133` or
+`@wildboar/acp133/ACP133CommonContent`.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -16,3 +17,8 @@ produced with it are released publicly under the
 If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
+
+## AI Usage Statement
+
+This package was onboarded from the raw compiler outputs using AI
+(Cursor Grok 4.7) on 11 October 2026.
