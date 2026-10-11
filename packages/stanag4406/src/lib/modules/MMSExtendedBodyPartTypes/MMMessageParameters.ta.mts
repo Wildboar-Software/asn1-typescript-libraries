@@ -5,6 +5,8 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { MessageDeliveryTime, _decode_MessageDeliveryTime, _encode_MessageDeliveryTime } from "@wildboar/x400/MTSAbstractService";
+import { OtherMessageDeliveryFields, _decode_OtherMessageDeliveryFields, _encode_OtherMessageDeliveryFields } from "@wildboar/x400/MTSAbstractService";
 
 
 

@@ -5,6 +5,7 @@ import {
     BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { SupplementaryInformation, _decode_SupplementaryInformation, _encode_SupplementaryInformation } from "@wildboar/x400/MTSAbstractService";
 
 
 

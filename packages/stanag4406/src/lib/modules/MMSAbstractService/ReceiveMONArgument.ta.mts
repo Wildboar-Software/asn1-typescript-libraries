@@ -4,6 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { MessageDeliveryEnvelope, _decode_MessageDeliveryEnvelope, _encode_MessageDeliveryEnvelope } from "@wildboar/x400/MTSAbstractService";
 import { MON, _decode_MON, _encode_MON } from "../MMSInformationObjects/MON.ta.mjs";
 // export { MON, _decode_MON, _encode_MON } from "../MMSInformationObjects/MON.ta.mjs";
 

@@ -6,6 +6,9 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { AutoForwardComment, _decode_AutoForwardComment, _encode_AutoForwardComment } from "@wildboar/x400/IPMSInformationObjects";
+import { Heading, _decode_Heading, _encode_Heading } from "@wildboar/x400/IPMSInformationObjects";
+import { ORName, _decode_ORName, _encode_ORName } from "@wildboar/x400/MTSAbstractService";
 
 
 

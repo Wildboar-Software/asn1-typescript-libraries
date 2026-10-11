@@ -4,6 +4,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { NonReceiptFields, _decode_NonReceiptFields, _encode_NonReceiptFields } from "@wildboar/x400/IPMSInformationObjects";
+import { OtherNotificationTypeFields, _decode_OtherNotificationTypeFields, _encode_OtherNotificationTypeFields } from "@wildboar/x400/IPMSInformationObjects";
+import { ReceiptFields, _decode_ReceiptFields, _encode_ReceiptFields } from "@wildboar/x400/IPMSInformationObjects";
 
 
 

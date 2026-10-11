@@ -5,6 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ReceiptTimeField, _decode_ReceiptTimeField, _encode_ReceiptTimeField } from "@wildboar/x400/IPMSInformationObjects";
 import { Acp127NotificationType, _decode_Acp127NotificationType, _encode_Acp127NotificationType } from "../MMSPerRecipientSpecifierExtensions/Acp127NotificationType.ta.mjs";
 // export { Acp127NotificationType, Acp127NotificationType_acp127_nn /* IMPORTED_LONG_NAMED_BIT */, acp127_nn /* IMPORTED_SHORT_NAMED_BIT */, Acp127NotificationType_acp127_pn /* IMPORTED_LONG_NAMED_BIT */, acp127_pn /* IMPORTED_SHORT_NAMED_BIT */, Acp127NotificationType_acp127_tn /* IMPORTED_LONG_NAMED_BIT */, acp127_tn /* IMPORTED_SHORT_NAMED_BIT */, _decode_Acp127NotificationType, _encode_Acp127NotificationType } from "../MMSPerRecipientSpecifierExtensions/Acp127NotificationType.ta.mjs";
 import { AddressListIndicator, _decode_AddressListIndicator, _encode_AddressListIndicator } from "../MMSOtherNotificationTypeExtensions/AddressListIndicator.ta.mjs";

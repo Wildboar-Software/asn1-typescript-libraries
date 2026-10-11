@@ -4,6 +4,8 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { Body, _decode_Body, _encode_Body } from "@wildboar/x400/IPMSInformationObjects";
+import { Heading, _decode_Heading, _encode_Heading } from "@wildboar/x400/IPMSInformationObjects";
 
 
 

@@ -13,7 +13,7 @@
     ]
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.mts"
   ],
   "references": [],
   "exclude": [
@@ -27,6 +27,8 @@
     "src/**/*.spec.tsx",
     "src/**/*.test.js",
     "src/**/*.spec.js",
+    "src/**/*.test.mts",
+    "src/**/*.spec.mts",
     "src/**/*.test.jsx",
     "src/**/*.spec.jsx"
   ]

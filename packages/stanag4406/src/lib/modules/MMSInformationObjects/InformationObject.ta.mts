@@ -4,6 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { IPM, _decode_IPM, _encode_IPM } from "@wildboar/x400/IPMSInformationObjects";
+import { IPN, _decode_IPN, _encode_IPN } from "@wildboar/x400/IPMSInformationObjects";
 
 
 

@@ -4,6 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ProbeSubmissionIdentifier, _decode_ProbeSubmissionIdentifier, _encode_ProbeSubmissionIdentifier } from "@wildboar/x400/MTSAbstractService";
+import { ProbeSubmissionTime, _decode_ProbeSubmissionTime, _encode_ProbeSubmissionTime } from "@wildboar/x400/MTSAbstractService";
 
 
 

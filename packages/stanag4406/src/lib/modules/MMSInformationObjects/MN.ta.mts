@@ -66,6 +66,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { CommonFields } from "@wildboar/x400/IPMSInformationObjects";
 import { MN_choice, _decode_MN_choice, _encode_MN_choice } from "../MMSInformationObjects/MN-choice.ta.mjs";
 // export { MN_choice, _decode_MN_choice, _encode_MN_choice } from "../MMSInformationObjects/MN-choice.ta.mjs";
 
@@ -182,7 +183,6 @@ function _decode_MN (el: _Element): MN {
     /* END_OF_SET_COMPONENT_DECLARATIONS */
     /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
-        /* COULD_NOT_GENERATE_CALLBACK_FOR_COMPONENTS_OF */,
         "choice": (_el: _Element): void => { choice = $._decode_explicit<MN_choice>(() => _decode_MN_choice)(_el); }
     };
     /* END_OF_CALLBACKS_MAP */

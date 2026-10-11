@@ -4,6 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { MessageSubmissionIdentifier, _decode_MessageSubmissionIdentifier, _encode_MessageSubmissionIdentifier } from "@wildboar/x400/MTSAbstractService";
+import { MessageSubmissionTime, _decode_MessageSubmissionTime, _encode_MessageSubmissionTime } from "@wildboar/x400/MTSAbstractService";
 
 
 
