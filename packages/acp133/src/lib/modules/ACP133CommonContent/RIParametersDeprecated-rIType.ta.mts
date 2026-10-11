@@ -13,7 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RIParametersDeprecated-rIType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * RIParametersDeprecated-rIType ::= ENUMERATED {
+ *     normal(0),
+ *     off-line(1),
+ *     partTimeTerminal(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -32,7 +36,11 @@ enum _enum_for_RIParametersDeprecated_rIType {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RIParametersDeprecated-rIType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * RIParametersDeprecated-rIType ::= ENUMERATED {
+ *     normal(0),
+ *     off-line(1),
+ *     partTimeTerminal(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -47,7 +55,11 @@ type RIParametersDeprecated_rIType = _enum_for_RIParametersDeprecated_rIType;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RIParametersDeprecated-rIType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * RIParametersDeprecated-rIType ::= ENUMERATED {
+ *     normal(0),
+ *     off-line(1),
+ *     partTimeTerminal(2)
+ * }
  * ```
  * 
  * @enum {number}
