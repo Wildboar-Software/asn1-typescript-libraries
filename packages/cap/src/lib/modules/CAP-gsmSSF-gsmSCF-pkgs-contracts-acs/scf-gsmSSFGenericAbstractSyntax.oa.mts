@@ -11,9 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { GenericSCF_gsmSSF_PDUs, _decode_GenericSCF_gsmSSF_PDUs, _encode_GenericSCF_gsmSSF_PDUs } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/GenericSCF-gsmSSF-PDUs.ta.mjs";
-// export { GenericSCF_gsmSSF_PDUs, _decode_GenericSCF_gsmSSF_PDUs, _encode_GenericSCF_gsmSSF_PDUs } from "../CAP-gsmSSF-gsmSCF-pkgs-contracts-acs/GenericSCF-gsmSSF-PDUs.ta.mjs";
 import { id_as_scf_gsmSSFGenericAS } from "../CAP-object-identifiers/id-as-scf-gsmSSFGenericAS.va.mjs";
-// export { id_as_scf_gsmSSFGenericAS } from "../CAP-object-identifiers/id-as-scf-gsmSSFGenericAS.va.mjs";
 
 
 /**
@@ -48,7 +46,7 @@ const scf_gsmSSFGenericAbstractSyntax: ABSTRACT_SYNTAX<GenericSCF_gsmSSF_PDUs> =
     },
     "&id": id_as_scf_gsmSSFGenericAS /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-    "&property": undefined,
+    "&property": new Uint8ClampedArray(),
 };
 
 /* eslint-enable */

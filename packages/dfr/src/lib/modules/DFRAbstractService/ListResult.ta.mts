@@ -14,21 +14,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CommonListSearchResult, _encode_CommonListSearchResult } from "../DFRAbstractService/CommonListSearchResult.ta.mjs";
-// export { CommonListSearchResult, _decode_CommonListSearchResult, _encode_CommonListSearchResult } from "../DFRAbstractService/CommonListSearchResult.ta.mjs";
 import { OrderingRule, _decode_OrderingRule, _encode_OrderingRule } from "../DFRAbstractService/OrderingRule.ta.mjs";
-// export { OrderingRule, _decode_OrderingRule, _encode_OrderingRule } from "../DFRAbstractService/OrderingRule.ta.mjs";
 import { SearchDomain, _decode_SearchDomain, _encode_SearchDomain } from "../DFRAbstractService/SearchDomain.ta.mjs";
-// export { SearchDomain, _decode_SearchDomain, _encode_SearchDomain } from "../DFRAbstractService/SearchDomain.ta.mjs";
 import { SearchCriteria, _decode_SearchCriteria, _encode_SearchCriteria } from "../DFRAbstractService/SearchCriteria.ta.mjs";
-// export { SearchCriteria, _decode_SearchCriteria, _encode_SearchCriteria } from "../DFRAbstractService/SearchCriteria.ta.mjs";
 import { LimitEncountered, _enum_for_LimitEncountered, _decode_LimitEncountered, _encode_LimitEncountered } from "../DFRAbstractService/LimitEncountered.ta.mjs";
-// export { LimitEncountered, _enum_for_LimitEncountered, LimitEncountered_time_limit /* IMPORTED_LONG_ENUMERATION_ITEM */, time_limit /* IMPORTED_SHORT_ENUMERATION_ITEM */, LimitEncountered_count_limit /* IMPORTED_LONG_ENUMERATION_ITEM */, count_limit /* IMPORTED_SHORT_ENUMERATION_ITEM */, LimitEncountered_length_exceeded /* IMPORTED_LONG_ENUMERATION_ITEM */, length_exceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LimitEncountered, _encode_LimitEncountered } from "../DFRAbstractService/LimitEncountered.ta.mjs";
 import { DfrEntryList, _decode_DfrEntryList, _encode_DfrEntryList } from "../DFRAbstractService/DfrEntryList.ta.mjs";
-// export { DfrEntryList, _decode_DfrEntryList, _encode_DfrEntryList } from "../DFRAbstractService/DfrEntryList.ta.mjs";
 import { Warning, _decode_Warning, _encode_Warning } from "../DFRAbstractService/Warning.ta.mjs";
-// export { Warning, _decode_Warning, _encode_Warning } from "../DFRAbstractService/Warning.ta.mjs";
 import { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
-// export { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
 
 
 /**

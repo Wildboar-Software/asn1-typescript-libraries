@@ -6,7 +6,8 @@
         "types": [
             "node"
         ],
-        "rootDir": "."
+        "strictNullChecks": true,
+    "rootDir": "."
     },
     "exclude": [
         "**/*.spec.mts"
@@ -15,8 +16,8 @@
         "**/*.mts"
     ],
     "references": [
-      {
-        "path": "../pki-stub/tsconfig.lib.json"
-      }
+        {
+            "path": "../dn/tsconfig.lib.json"
+        }
     ]
 }

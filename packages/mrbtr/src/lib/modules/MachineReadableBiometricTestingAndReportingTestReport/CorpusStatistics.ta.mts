@@ -13,9 +13,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CorpusCrewBasicStatistics, _decode_CorpusCrewBasicStatistics, _encode_CorpusCrewBasicStatistics } from "../MachineReadableBiometricTestingAndReportingTestReport/CorpusCrewBasicStatistics.ta.mjs";
-// export { CorpusCrewBasicStatistics, _decode_CorpusCrewBasicStatistics, _encode_CorpusCrewBasicStatistics } from "../MachineReadableBiometricTestingAndReportingTestReport/CorpusCrewBasicStatistics.ta.mjs";
 import { SamplesPerIndividual, _decode_SamplesPerIndividual, _encode_SamplesPerIndividual } from "../MachineReadableBiometricTestingAndReportingTestReport/SamplesPerIndividual.ta.mjs";
-// export { SamplesPerIndividual, _decode_SamplesPerIndividual, _encode_SamplesPerIndividual } from "../MachineReadableBiometricTestingAndReportingTestReport/SamplesPerIndividual.ta.mjs";
 
 
 /**

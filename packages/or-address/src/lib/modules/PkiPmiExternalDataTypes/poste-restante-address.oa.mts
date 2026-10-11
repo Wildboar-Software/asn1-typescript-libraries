@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import {
-    PosteRestanteAddress,
+    type PosteRestanteAddress,
     _decode_PosteRestanteAddress,
     _encode_PosteRestanteAddress,
 } from "../PkiPmiExternalDataTypes/PosteRestanteAddress.ta.mjs";

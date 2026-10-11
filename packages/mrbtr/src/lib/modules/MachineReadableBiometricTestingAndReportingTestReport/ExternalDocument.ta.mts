@@ -13,13 +13,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { URI, _decode_URI, _encode_URI } from "../MachineReadableBiometricTestingAndReportingTestReport/URI.ta.mjs";
-// export { URI, _decode_URI, _encode_URI } from "../MachineReadableBiometricTestingAndReportingTestReport/URI.ta.mjs";
 import { TypeDocument, _enum_for_TypeDocument, _decode_TypeDocument, _encode_TypeDocument } from "../MachineReadableBiometricTestingAndReportingTestReport/TypeDocument.ta.mjs";
-// export { TypeDocument, _enum_for_TypeDocument, TypeDocument_article /* IMPORTED_LONG_ENUMERATION_ITEM */, article /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeDocument_technical_report /* IMPORTED_LONG_ENUMERATION_ITEM */, technical_report /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeDocument_in_proceedings /* IMPORTED_LONG_ENUMERATION_ITEM */, in_proceedings /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeDocument_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeDocument_book /* IMPORTED_LONG_ENUMERATION_ITEM */, book /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeDocument_in_book /* IMPORTED_LONG_ENUMERATION_ITEM */, in_book /* IMPORTED_SHORT_ENUMERATION_ITEM */, TypeDocument_collection /* IMPORTED_LONG_ENUMERATION_ITEM */, collection /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TypeDocument, _encode_TypeDocument } from "../MachineReadableBiometricTestingAndReportingTestReport/TypeDocument.ta.mjs";
 import { Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
-// export { Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
 import { Availability, _enum_for_Availability, _decode_Availability, _encode_Availability } from "../MachineReadableBiometricTestingAndReportingTestReport/Availability.ta.mjs";
-// export { Availability, _enum_for_Availability, Availability_public /* IMPORTED_LONG_ENUMERATION_ITEM */, public_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, Availability_restricted /* IMPORTED_LONG_ENUMERATION_ITEM */, restricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, Availability_unavailable /* IMPORTED_LONG_ENUMERATION_ITEM */, unavailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, Availability_superseded /* IMPORTED_LONG_ENUMERATION_ITEM */, superseded /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Availability, _encode_Availability } from "../MachineReadableBiometricTestingAndReportingTestReport/Availability.ta.mjs";
 
 
 /**

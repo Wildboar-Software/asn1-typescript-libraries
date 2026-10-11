@@ -137,6 +137,9 @@
       "@wildboar/ocsp/*": [
         "./ocsp/*"
       ],
+      "@wildboar/or-address/*": [
+        "./or-address/*"
+      ],
       "@wildboar/pc/*": [
         "./pc/*"
       ],

@@ -3,7 +3,9 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "declaration": true,
-    "rootDir": "."
+    "rootDir": ".",
+    "strictNullChecks": true,
+    "erasableSyntaxOnly": true
   },
   "exclude": [
     "**/*.spec.mts",
@@ -22,5 +24,19 @@
   ],
   "include": [
     "**/*.mts"
+  ],
+  "references": [
+    {
+      "path": "../presentation-address/tsconfig.lib.json"
+    },
+    {
+      "path": "../or-address/tsconfig.lib.json"
+    },
+    {
+      "path": "../dn/tsconfig.lib.json"
+    },
+    {
+      "path": "../gn/tsconfig.lib.json"
+    }
   ]
 }

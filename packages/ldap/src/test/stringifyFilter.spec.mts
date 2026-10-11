@@ -4,9 +4,9 @@ import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protoco
 import { AttributeValueAssertion } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/AttributeValueAssertion.ta.mjs";
 import { MatchingRuleAssertion } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.mjs";
 import { SubstringFilter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.mjs";
-import encodeLDAPOID from "../lib/encodeLDAPOID";
+import encodeLDAPOID from "../lib/encodeLDAPOID.mjs";
 import { ObjectIdentifier } from "@wildboar/asn1";
-import stringifyFilter from "../lib/stringifiers/Filter";
+import stringifyFilter from "../lib/filterToString.mjs";
 
 // Filter ::= CHOICE {
 //     and              [0]  SET SIZE (1..MAX) OF filter Filter,

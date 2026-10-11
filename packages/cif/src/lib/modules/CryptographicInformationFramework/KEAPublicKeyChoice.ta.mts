@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { KEAPublicKey, _decode_KEAPublicKey, _encode_KEAPublicKey } from "../CryptographicInformationFramework/KEAPublicKey.ta.mjs";
-// export { KEAPublicKey, _decode_KEAPublicKey, _encode_KEAPublicKey } from "../CryptographicInformationFramework/KEAPublicKey.ta.mjs";
 import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
-// export { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
 
 
 /**

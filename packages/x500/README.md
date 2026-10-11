@@ -258,7 +258,7 @@ are either deprecated or not intended for external use:
 - `groupByOID.mts` - Group items by object identifier
 - `isModificationOperation.mts` - Determine whether an operation is a modification operation
 - `objectClassesWithinRefinement.mts` - Determine whether object classes match a refinement
-- `prepString.mts` - Prepare a string for matching, per ITU Recommendation X.520, Section 7.
+- `prepString.mts` - Re-exports `prepString` from `@wildboar/dn` (X.520 Section 7 string preparation).
 - `selectFromEntry.mts` - Select information from an entry to produce `EntryInformation`
 - `splitIntoMastersAndShadows.mts` - Group access points into masters and shadows
 - `validateObjectClasses.mts` - Validate a set of object classes

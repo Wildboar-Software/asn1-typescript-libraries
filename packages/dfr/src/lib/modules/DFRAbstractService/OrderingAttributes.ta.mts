@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OrderingAttributes_Item, _decode_OrderingAttributes_Item, _encode_OrderingAttributes_Item } from "../DFRAbstractService/OrderingAttributes-Item.ta.mjs";
-// export { OrderingAttributes_Item, _decode_OrderingAttributes_Item, _encode_OrderingAttributes_Item } from "../DFRAbstractService/OrderingAttributes-Item.ta.mjs";
 
 
 /**

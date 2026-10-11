@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, PrintableString } from "@wildboar/asn1";
+import { ASN1Element as _Element, type PrintableString } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type PDSName = PrintableString; // PrintableString
 
 
-export const _decode_PDSName = $._decodePrintableString;
+export const _decode_PDSName: $.ASN1Decoder<PDSName> = $._decodePrintableString;
 
 
-export const _encode_PDSName = $._encodePrintableString;
+export const _encode_PDSName: $.ASN1Encoder<PDSName> = $._encodePrintableString;
 
 
 /* eslint-enable */

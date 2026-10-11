@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { URL_url, _decode_URL_url, _encode_URL_url } from "../CryptographicInformationFramework/URL-url.ta.mjs";
-// export { URL_url, _decode_URL_url, _encode_URL_url } from "../CryptographicInformationFramework/URL-url.ta.mjs";
 import { URL_urlWithDigest, _decode_URL_urlWithDigest, _encode_URL_urlWithDigest } from "../CryptographicInformationFramework/URL-urlWithDigest.ta.mjs";
-// export { URL_urlWithDigest, _decode_URL_urlWithDigest, _encode_URL_urlWithDigest } from "../CryptographicInformationFramework/URL-urlWithDigest.ta.mjs";
 
 
 /**

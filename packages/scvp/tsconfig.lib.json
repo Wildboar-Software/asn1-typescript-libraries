@@ -7,6 +7,7 @@
     "types": [
       "node"
     ],
+    "strictNullChecks": true,
     "rootDir": "."
   },
   "exclude": ["**/*.spec.mts"],
@@ -22,6 +23,9 @@
     },
     {
       "path": "../cms/tsconfig.lib.json"
+    },
+    {
+      "path": "../gn/tsconfig.lib.json"
     }
   ]
 }

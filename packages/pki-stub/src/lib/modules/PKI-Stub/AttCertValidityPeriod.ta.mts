@@ -39,26 +39,36 @@ export type AttCertValidityPeriodJSON = {
  *
  */
 export class AttCertValidityPeriod {
+    /**
+     * @summary `notBeforeTime`.
+     * @public
+     * @readonly
+     */
+    public readonly notBeforeTime: GeneralizedTime;
+
+    /**
+     * @summary `notAfterTime`.
+     * @public
+     * @readonly
+     */
+    public readonly notAfterTime: GeneralizedTime;
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `notBeforeTime`.
-         * @public
-         * @readonly
-         */
-        readonly notBeforeTime: GeneralizedTime,
-        /**
-         * @summary `notAfterTime`.
-         * @public
-         * @readonly
-         */
-        readonly notAfterTime: GeneralizedTime,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        notBeforeTime: GeneralizedTime,
+        notAfterTime: GeneralizedTime,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.notBeforeTime = notBeforeTime;
+        this.notAfterTime = notAfterTime;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AttCertValidityPeriod

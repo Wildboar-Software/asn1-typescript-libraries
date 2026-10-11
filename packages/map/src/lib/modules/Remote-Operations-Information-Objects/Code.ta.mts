@@ -1,5 +1,4 @@
 export {
-    type Code,
     _decode_Code,
-    _encode_Code,
+    _encode_Code, type Code
 } from "@wildboar/rose";

@@ -15,7 +15,6 @@ import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
 import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../CAP-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
 import { ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_resourceAddress, _encode_ConnectToResourceArg_resourceAddress } from "../CAP-gsmSSF-gsmSCF-ops-args/ConnectToResourceArg-resourceAddress.ta.mjs";
-// export { ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_resourceAddress, _encode_ConnectToResourceArg_resourceAddress } from "../CAP-gsmSSF-gsmSCF-ops-args/ConnectToResourceArg-resourceAddress.ta.mjs";
 
 
 /**

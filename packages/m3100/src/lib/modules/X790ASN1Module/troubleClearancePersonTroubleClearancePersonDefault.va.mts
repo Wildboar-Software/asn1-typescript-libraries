@@ -64,7 +64,7 @@ export const troubleClearancePersonTroubleClearancePersonDefault: PersonReach = 
         email: undefined,
         fax: undefined,
         respon: undefined,
-        _unrecognizedExtensionsList: undefined,
+        _unrecognizedExtensionsList: [],
     },
 );
 

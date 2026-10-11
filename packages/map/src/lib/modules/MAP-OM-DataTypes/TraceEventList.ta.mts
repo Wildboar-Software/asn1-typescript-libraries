@@ -1,79 +1,18 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MSC_S_EventList, MSC_S_EventList_mo_mtCall /* IMPORTED_LONG_NAMED_BIT */, mo_mtCall /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_mo_mt_sms /* IMPORTED_LONG_NAMED_BIT */, MSC_S_EventList_lu_imsiAttach_imsiDetach /* IMPORTED_LONG_NAMED_BIT */, lu_imsiAttach_imsiDetach /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_handovers /* IMPORTED_LONG_NAMED_BIT */, handovers /* IMPORTED_SHORT_NAMED_BIT */, MSC_S_EventList_ss /* IMPORTED_LONG_NAMED_BIT */, ss /* IMPORTED_SHORT_NAMED_BIT */, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
-import { MGW_EventList, MGW_EventList_context /* IMPORTED_LONG_NAMED_BIT */, context /* IMPORTED_SHORT_NAMED_BIT */, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
-import { SGSN_EventList, SGSN_EventList_pdpContext /* IMPORTED_LONG_NAMED_BIT */, SGSN_EventList_mo_mt_sms /* IMPORTED_LONG_NAMED_BIT */, SGSN_EventList_rau_gprsAttach_gprsDetach /* IMPORTED_LONG_NAMED_BIT */, rau_gprsAttach_gprsDetach /* IMPORTED_SHORT_NAMED_BIT */, SGSN_EventList_mbmsContext /* IMPORTED_LONG_NAMED_BIT */, _decode_SGSN_EventList, _encode_SGSN_EventList } from "../MAP-OM-DataTypes/SGSN-EventList.ta.mjs";
-import { GGSN_EventList, GGSN_EventList_pdpContext /* IMPORTED_LONG_NAMED_BIT */, GGSN_EventList_mbmsContext /* IMPORTED_LONG_NAMED_BIT */, _decode_GGSN_EventList, _encode_GGSN_EventList } from "../MAP-OM-DataTypes/GGSN-EventList.ta.mjs";
-import { BMSC_EventList, BMSC_EventList_mbmsMulticastServiceActivation /* IMPORTED_LONG_NAMED_BIT */, mbmsMulticastServiceActivation /* IMPORTED_SHORT_NAMED_BIT */, _decode_BMSC_EventList, _encode_BMSC_EventList } from "../MAP-OM-DataTypes/BMSC-EventList.ta.mjs";
-import { MME_EventList, MME_EventList_ue_initiatedPDNconectivityRequest /* IMPORTED_LONG_NAMED_BIT */, ue_initiatedPDNconectivityRequest /* IMPORTED_SHORT_NAMED_BIT */, MME_EventList_serviceRequestts /* IMPORTED_LONG_NAMED_BIT */, serviceRequestts /* IMPORTED_SHORT_NAMED_BIT */, MME_EventList_initialAttachTrackingAreaUpdateDetach /* IMPORTED_LONG_NAMED_BIT */, initialAttachTrackingAreaUpdateDetach /* IMPORTED_SHORT_NAMED_BIT */, MME_EventList_ue_initiatedPDNdisconnection /* IMPORTED_LONG_NAMED_BIT */, ue_initiatedPDNdisconnection /* IMPORTED_SHORT_NAMED_BIT */, MME_EventList_bearerActivationModificationDeletion /* IMPORTED_LONG_NAMED_BIT */, MME_EventList_handover /* IMPORTED_LONG_NAMED_BIT */, handover /* IMPORTED_SHORT_NAMED_BIT */, _decode_MME_EventList, _encode_MME_EventList } from "../MAP-OM-DataTypes/MME-EventList.ta.mjs";
-import { SGW_EventList, SGW_EventList_pdn_connectionCreation /* IMPORTED_LONG_NAMED_BIT */, SGW_EventList_pdn_connectionTermination /* IMPORTED_LONG_NAMED_BIT */, SGW_EventList_bearerActivationModificationDeletion /* IMPORTED_LONG_NAMED_BIT */, _decode_SGW_EventList, _encode_SGW_EventList } from "../MAP-OM-DataTypes/SGW-EventList.ta.mjs";
-import { PGW_EventList, PGW_EventList_pdn_connectionCreation /* IMPORTED_LONG_NAMED_BIT */, PGW_EventList_pdn_connectionTermination /* IMPORTED_LONG_NAMED_BIT */, PGW_EventList_bearerActivationModificationDeletion /* IMPORTED_LONG_NAMED_BIT */, _decode_PGW_EventList, _encode_PGW_EventList } from "../MAP-OM-DataTypes/PGW-EventList.ta.mjs";
+import { BMSC_EventList, _decode_BMSC_EventList, _encode_BMSC_EventList } from "../MAP-OM-DataTypes/BMSC-EventList.ta.mjs";
+import { GGSN_EventList, _decode_GGSN_EventList, _encode_GGSN_EventList } from "../MAP-OM-DataTypes/GGSN-EventList.ta.mjs";
+import { MGW_EventList, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
+import { MME_EventList, _decode_MME_EventList, _encode_MME_EventList } from "../MAP-OM-DataTypes/MME-EventList.ta.mjs";
+import { MSC_S_EventList, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
+import { PGW_EventList, _decode_PGW_EventList, _encode_PGW_EventList } from "../MAP-OM-DataTypes/PGW-EventList.ta.mjs";
+import { SGSN_EventList, _decode_SGSN_EventList, _encode_SGSN_EventList } from "../MAP-OM-DataTypes/SGSN-EventList.ta.mjs";
+import { SGW_EventList, _decode_SGW_EventList, _encode_SGW_EventList } from "../MAP-OM-DataTypes/SGW-EventList.ta.mjs";
 
 
 /**

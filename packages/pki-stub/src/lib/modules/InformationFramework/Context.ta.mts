@@ -46,38 +46,51 @@ export type ContextJSON = {
  *
  */
 export class Context {
+    /**
+     * @summary `contextType`.
+     * @public
+     * @readonly
+     */
+    public readonly contextType: OBJECT_IDENTIFIER;
+
+    /**
+     * @summary `contextValues`.
+     * @public
+     * @readonly
+     */
+    public readonly contextValues: _Element[];
+
+    /**
+     * @summary `fallback`.
+     * @description
+     *
+     * Defaults to `FALSE`. When `TRUE`, this value is selected if a context
+     * assertion of this type matches no other values, and it is kept by a
+     * Modify (reset value) that drops values whose fallback is `FALSE`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fallback?: OPTIONAL<BOOLEAN>;
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `contextType`.
-         * @public
-         * @readonly
-         */
-        readonly contextType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `contextValues`.
-         * @public
-         * @readonly
-         */
-        readonly contextValues: _Element[],
-        /**
-         * @summary `fallback`.
-         * @description
-         *
-         * Defaults to `FALSE`. When `TRUE`, this value is selected if a context
-         * assertion of this type matches no other values, and it is kept by a
-         * Modify (reset value) that drops values whose fallback is `FALSE`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fallback?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        contextType: OBJECT_IDENTIFIER,
+        contextValues: _Element[],
+        fallback?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.contextType = contextType;
+        this.contextValues = contextValues;
+        this.fallback = fallback;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Context

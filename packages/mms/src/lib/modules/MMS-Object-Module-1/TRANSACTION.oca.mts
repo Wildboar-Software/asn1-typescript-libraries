@@ -14,9 +14,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ModifierStep, _decode_ModifierStep, _encode_ModifierStep } from "../MMS-Object-Module-1/ModifierStep.ta.mjs";
-// export { ModifierStep, _decode_ModifierStep, _encode_ModifierStep } from "../MMS-Object-Module-1/ModifierStep.ta.mjs";
 import { ConfirmedServiceRequest, _decode_ConfirmedServiceRequest, _encode_ConfirmedServiceRequest } from "../ISO-9506-MMS-1/ConfirmedServiceRequest.ta.mjs";
-// export { ConfirmedServiceRequest, _decode_ConfirmedServiceRequest, _encode_ConfirmedServiceRequest } from "../ISO-9506-MMS-1/ConfirmedServiceRequest.ta.mjs";
 
 
 /**

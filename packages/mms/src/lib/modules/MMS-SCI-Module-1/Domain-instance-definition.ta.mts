@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Domain_instance_definition_details, _decode_Domain_instance_definition_details, _encode_Domain_instance_definition_details } from "../MMS-SCI-Module-1/Domain-instance-definition-details.ta.mjs";
-// export { Domain_instance_definition_details, _decode_Domain_instance_definition_details, _encode_Domain_instance_definition_details } from "../MMS-SCI-Module-1/Domain-instance-definition-details.ta.mjs";
 
 
 /**

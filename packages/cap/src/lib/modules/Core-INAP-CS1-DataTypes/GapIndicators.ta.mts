@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Duration, _decode_Duration, _encode_Duration } from "../Core-INAP-CS1-DataTypes/Duration.ta.mjs";
-// export { Duration, _decode_Duration, _encode_Duration } from "../Core-INAP-CS1-DataTypes/Duration.ta.mjs";
 import { Interval, _decode_Interval, _encode_Interval } from "../Core-INAP-CS1-DataTypes/Interval.ta.mjs";
-// export { Interval, _decode_Interval, _encode_Interval } from "../Core-INAP-CS1-DataTypes/Interval.ta.mjs";
 
 
 /**

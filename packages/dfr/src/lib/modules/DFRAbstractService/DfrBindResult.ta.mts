@@ -14,15 +14,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthenticationAttribute, _decode_AuthenticationAttribute, _encode_AuthenticationAttribute } from "../DFRAbstractService/AuthenticationAttribute.ta.mjs";
-// export { AuthenticationAttribute, _decode_AuthenticationAttribute, _encode_AuthenticationAttribute } from "../DFRAbstractService/AuthenticationAttribute.ta.mjs";
 import { ConstraintsType, _decode_ConstraintsType, _encode_ConstraintsType } from "../DFRAbstractService/ConstraintsType.ta.mjs";
-// export { ConstraintsType, _decode_ConstraintsType, _encode_ConstraintsType } from "../DFRAbstractService/ConstraintsType.ta.mjs";
 import { TypeAndAttribute, _decode_TypeAndAttribute, _encode_TypeAndAttribute } from "../DFRAbstractService/TypeAndAttribute.ta.mjs";
-// export { TypeAndAttribute, _decode_TypeAndAttribute, _encode_TypeAndAttribute } from "../DFRAbstractService/TypeAndAttribute.ta.mjs";
 import { FunctionSetType, _enum_for_FunctionSetType, _decode_FunctionSetType, _encode_FunctionSetType } from "../DFRAbstractService/FunctionSetType.ta.mjs";
-// export { FunctionSetType, _enum_for_FunctionSetType, FunctionSetType_flat_store /* IMPORTED_LONG_ENUMERATION_ITEM */, flat_store /* IMPORTED_SHORT_ENUMERATION_ITEM */, FunctionSetType_pre_defined_store /* IMPORTED_LONG_ENUMERATION_ITEM */, pre_defined_store /* IMPORTED_SHORT_ENUMERATION_ITEM */, FunctionSetType_full_set /* IMPORTED_LONG_ENUMERATION_ITEM */, full_set /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FunctionSetType, _encode_FunctionSetType } from "../DFRAbstractService/FunctionSetType.ta.mjs";
 import { ROAProtocols, _decode_ROAProtocols, _encode_ROAProtocols } from "../DFRAbstractService/ROAProtocols.ta.mjs";
-// export { ROAProtocols, _decode_ROAProtocols, _encode_ROAProtocols } from "../DFRAbstractService/ROAProtocols.ta.mjs";
 
 
 /**

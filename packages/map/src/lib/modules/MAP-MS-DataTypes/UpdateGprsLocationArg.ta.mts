@@ -1,84 +1,24 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
+import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { SGSN_Capability, _decode_SGSN_Capability, _encode_SGSN_Capability } from "../MAP-MS-DataTypes/SGSN-Capability.ta.mjs";
 import { ADD_Info, _decode_ADD_Info, _encode_ADD_Info } from "../MAP-MS-DataTypes/ADD-Info.ta.mjs";
-import { EPS_Info, _decode_EPS_Info, _encode_EPS_Info } from "../MAP-MS-DataTypes/EPS-Info.ta.mjs";
-import { Used_RAT_Type, _enum_for_Used_RAT_Type, Used_RAT_Type_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_geran /* IMPORTED_LONG_ENUMERATION_ITEM */, geran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_gan /* IMPORTED_LONG_ENUMERATION_ITEM */, gan /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_i_hspa_evolution /* IMPORTED_LONG_ENUMERATION_ITEM */, i_hspa_evolution /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_e_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, e_utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_nb_iot /* IMPORTED_LONG_ENUMERATION_ITEM */, nb_iot /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Used_RAT_Type, _encode_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
-import { UE_SRVCC_Capability, _enum_for_UE_SRVCC_Capability, UE_SRVCC_Capability_ue_srvcc_not_supported /* IMPORTED_LONG_ENUMERATION_ITEM */, ue_srvcc_not_supported /* IMPORTED_SHORT_ENUMERATION_ITEM */, UE_SRVCC_Capability_ue_srvcc_supported /* IMPORTED_LONG_ENUMERATION_ITEM */, ue_srvcc_supported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UE_SRVCC_Capability, _encode_UE_SRVCC_Capability } from "../MAP-MS-DataTypes/UE-SRVCC-Capability.ta.mjs";
-import { EPLMN_List, _decode_EPLMN_List, _encode_EPLMN_List } from "../MAP-MS-DataTypes/EPLMN-List.ta.mjs";
-import { SMSRegisterRequest, _enum_for_SMSRegisterRequest, SMSRegisterRequest_sms_registration_required /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_registration_required /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSRegisterRequest_sms_registration_not_preferred /* IMPORTED_LONG_ENUMERATION_ITEM */, sms_registration_not_preferred /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSRegisterRequest_no_preference /* IMPORTED_LONG_ENUMERATION_ITEM */, no_preference /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMSRegisterRequest, _encode_SMSRegisterRequest } from "../MAP-MS-DataTypes/SMSRegisterRequest.ta.mjs";
-import { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
 import { AdjacentPLMN_List, _decode_AdjacentPLMN_List, _encode_AdjacentPLMN_List } from "../MAP-MS-DataTypes/AdjacentPLMN-List.ta.mjs";
+import { EPLMN_List, _decode_EPLMN_List, _encode_EPLMN_List } from "../MAP-MS-DataTypes/EPLMN-List.ta.mjs";
+import { EPS_Info, _decode_EPS_Info, _encode_EPS_Info } from "../MAP-MS-DataTypes/EPS-Info.ta.mjs";
+import { SGSN_Capability, _decode_SGSN_Capability, _encode_SGSN_Capability } from "../MAP-MS-DataTypes/SGSN-Capability.ta.mjs";
+import { SMSRegisterRequest, _decode_SMSRegisterRequest, _encode_SMSRegisterRequest, _enum_for_SMSRegisterRequest } from "../MAP-MS-DataTypes/SMSRegisterRequest.ta.mjs";
+import { UE_SRVCC_Capability, _decode_UE_SRVCC_Capability, _encode_UE_SRVCC_Capability, _enum_for_UE_SRVCC_Capability } from "../MAP-MS-DataTypes/UE-SRVCC-Capability.ta.mjs";
+import { Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
 
 
 /**

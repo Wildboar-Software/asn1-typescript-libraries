@@ -14,7 +14,7 @@ import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/x500/InformationFramework';
+} from '@wildboar/dn';
 import {
     CompareResult_result,
     _decode_CompareResult_result,

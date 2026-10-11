@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ControlElement, _decode_ControlElement, _encode_ControlElement } from "../ISO-9506-MMS-1/ControlElement.ta.mjs";
-// export { ControlElement, _decode_ControlElement, _encode_ControlElement } from "../ISO-9506-MMS-1/ControlElement.ta.mjs";
 
 
 /**

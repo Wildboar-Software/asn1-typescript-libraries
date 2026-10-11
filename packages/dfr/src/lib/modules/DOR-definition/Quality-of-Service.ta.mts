@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { QoS_level, _decode_QoS_level, _encode_QoS_level } from "../DOR-definition/QoS-level.ta.mjs";
-// export { QoS_level, _decode_QoS_level, _encode_QoS_level } from "../DOR-definition/QoS-level.ta.mjs";
 import { Single_use_of_reference, _decode_Single_use_of_reference, _encode_Single_use_of_reference } from "../DOR-definition/Single-use-of-reference.ta.mjs";
-// export { Single_use_of_reference, _decode_Single_use_of_reference, _encode_Single_use_of_reference } from "../DOR-definition/Single-use-of-reference.ta.mjs";
 
 
 /**

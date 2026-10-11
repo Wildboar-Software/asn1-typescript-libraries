@@ -11,23 +11,14 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CertificateObject, _get_decoder_for_CertificateObject, _get_encoder_for_CertificateObject } from "../CryptographicInformationFramework/CertificateObject.ta.mjs";
-// export { CertificateObject, _get_decoder_for_CertificateObject, _get_encoder_for_CertificateObject } from "../CryptographicInformationFramework/CertificateObject.ta.mjs";
 import { X509CertificateAttributes, _decode_X509CertificateAttributes, _encode_X509CertificateAttributes } from "../CryptographicInformationFramework/X509CertificateAttributes.ta.mjs";
-// export { X509CertificateAttributes, _decode_X509CertificateAttributes, _encode_X509CertificateAttributes } from "../CryptographicInformationFramework/X509CertificateAttributes.ta.mjs";
 import { X509AttributeCertificateAttributes, _decode_X509AttributeCertificateAttributes, _encode_X509AttributeCertificateAttributes } from "../CryptographicInformationFramework/X509AttributeCertificateAttributes.ta.mjs";
-// export { X509AttributeCertificateAttributes, _decode_X509AttributeCertificateAttributes, _encode_X509AttributeCertificateAttributes } from "../CryptographicInformationFramework/X509AttributeCertificateAttributes.ta.mjs";
 import { SPKICertificateAttributes, _decode_SPKICertificateAttributes, _encode_SPKICertificateAttributes } from "../CryptographicInformationFramework/SPKICertificateAttributes.ta.mjs";
-// export { SPKICertificateAttributes, _decode_SPKICertificateAttributes, _encode_SPKICertificateAttributes } from "../CryptographicInformationFramework/SPKICertificateAttributes.ta.mjs";
 import { PGPCertificateAttributes, _decode_PGPCertificateAttributes, _encode_PGPCertificateAttributes } from "../CryptographicInformationFramework/PGPCertificateAttributes.ta.mjs";
-// export { PGPCertificateAttributes, _decode_PGPCertificateAttributes, _encode_PGPCertificateAttributes } from "../CryptographicInformationFramework/PGPCertificateAttributes.ta.mjs";
 import { WTLSCertificateAttributes, _decode_WTLSCertificateAttributes, _encode_WTLSCertificateAttributes } from "../CryptographicInformationFramework/WTLSCertificateAttributes.ta.mjs";
-// export { WTLSCertificateAttributes, _decode_WTLSCertificateAttributes, _encode_WTLSCertificateAttributes } from "../CryptographicInformationFramework/WTLSCertificateAttributes.ta.mjs";
 import { X9_68CertificateAttributes, _decode_X9_68CertificateAttributes, _encode_X9_68CertificateAttributes } from "../CryptographicInformationFramework/X9-68CertificateAttributes.ta.mjs";
-// export { X9_68CertificateAttributes, _decode_X9_68CertificateAttributes, _encode_X9_68CertificateAttributes } from "../CryptographicInformationFramework/X9-68CertificateAttributes.ta.mjs";
 import { CVCertificateAttributes, _decode_CVCertificateAttributes, _encode_CVCertificateAttributes } from "../CryptographicInformationFramework/CVCertificateAttributes.ta.mjs";
-// export { CVCertificateAttributes, _decode_CVCertificateAttributes, _encode_CVCertificateAttributes } from "../CryptographicInformationFramework/CVCertificateAttributes.ta.mjs";
 import { GenericCertificateAttributes, _decode_GenericCertificateAttributes, _encode_GenericCertificateAttributes } from "../CryptographicInformationFramework/GenericCertificateAttributes.ta.mjs";
-// export { GenericCertificateAttributes, _decode_GenericCertificateAttributes, _encode_GenericCertificateAttributes } from "../CryptographicInformationFramework/GenericCertificateAttributes.ta.mjs";
 
 
 /**

@@ -12,11 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
-// export { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
 import { AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange, _decode_AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange, _encode_AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange } from "../ISO-9506-MMS-1/AlternateAccessSelection-selectAlternateAccess-accessSelection-indexRange.ta.mjs";
-// export { AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange, _decode_AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange, _encode_AlternateAccessSelection_selectAlternateAccess_accessSelection_indexRange } from "../ISO-9506-MMS-1/AlternateAccessSelection-selectAlternateAccess-accessSelection-indexRange.ta.mjs";
 
 
 /**

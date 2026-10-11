@@ -69,7 +69,7 @@ export class MRMapping {
      * @returns {MRMapping}
      */
     public static _from_object(
-        _o: Partial<{ [_K in keyof MRMapping]: MRMapping[_K] }>
+        _o: { [_K in keyof MRMapping]: MRMapping[_K] }
     ): MRMapping {
         return new MRMapping(
             _o.mapping,

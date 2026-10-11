@@ -25,6 +25,9 @@
     },
     {
       "path": "../attribute-asn1module/tsconfig.lib.json"
+    },
+    {
+      "path": "../dn/tsconfig.lib.json"
     }
   ]
 }

@@ -1,3 +1,3 @@
 export {
-    type OPERATION,
+    type OPERATION
 } from "@wildboar/rose";

@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Program_Invocation_instance_definition_details, _decode_Program_Invocation_instance_definition_details, _encode_Program_Invocation_instance_definition_details } from "../MMS-SCI-Module-1/Program-Invocation-instance-definition-details.ta.mjs";
-// export { Program_Invocation_instance_definition_details, _decode_Program_Invocation_instance_definition_details, _encode_Program_Invocation_instance_definition_details } from "../MMS-SCI-Module-1/Program-Invocation-instance-definition-details.ta.mjs";
 
 
 /**

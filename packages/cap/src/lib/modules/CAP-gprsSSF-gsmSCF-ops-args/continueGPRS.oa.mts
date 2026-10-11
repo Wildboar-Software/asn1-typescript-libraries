@@ -11,19 +11,12 @@ import {
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ContinueGPRSArg, _decode_ContinueGPRSArg, _encode_ContinueGPRSArg } from "../CAP-gprsSSF-gsmSCF-ops-args/ContinueGPRSArg.ta.mjs";
-// export { ContinueGPRSArg, _decode_ContinueGPRSArg, _encode_ContinueGPRSArg } from "../CAP-gprsSSF-gsmSCF-ops-args/ContinueGPRSArg.ta.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
-// export { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
 import { unknownPDPID } from "../CAP-errortypes/unknownPDPID.oa.mjs";
-// export { unknownPDPID } from "../CAP-errortypes/unknownPDPID.oa.mjs";
 import { unexpectedDataValue } from "../CAP-errortypes/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../CAP-errortypes/unexpectedDataValue.oa.mjs";
 import { opcode_continueGPRS } from "../CAP-operationcodes/opcode-continueGPRS.va.mjs";
-// export { opcode_continueGPRS } from "../CAP-operationcodes/opcode-continueGPRS.va.mjs";
 
 
 /**

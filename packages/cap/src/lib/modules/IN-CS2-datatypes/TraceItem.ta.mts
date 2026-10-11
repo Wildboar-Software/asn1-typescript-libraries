@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ScfID, _decode_ScfID, _encode_ScfID } from "../IN-CS2-datatypes/ScfID.ta.mjs";
-// export { ScfID, _decode_ScfID, _encode_ScfID } from "../IN-CS2-datatypes/ScfID.ta.mjs";
 
 
 /**

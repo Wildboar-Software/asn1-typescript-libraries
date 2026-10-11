@@ -12,11 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
 import { Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
-// export { Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
 import { VersionProduct, _decode_VersionProduct, _encode_VersionProduct } from "../MachineReadableBiometricTestingAndReportingTestReport/VersionProduct.ta.mjs";
-// export { VersionProduct, VersionProduct_v0 /* IMPORTED_LONG_NAMED_INTEGER */, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_VersionProduct, _encode_VersionProduct } from "../MachineReadableBiometricTestingAndReportingTestReport/VersionProduct.ta.mjs";
 
 
 /**

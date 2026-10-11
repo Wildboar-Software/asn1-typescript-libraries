@@ -25,9 +25,12 @@ function groupByOID <T>(
         const oidstr = (typeof oid === "object")
             ? oid.toString()
             : oid;
-        if (!result.has(oidstr))
-            result.set(oidstr, []);
-        result.get(oidstr).push(item);
+        let group = result.get(oidstr);
+        if (!group) {
+            group = [];
+            result.set(oidstr, group);
+        }
+        group.push(item);
     }
     return result;
 };

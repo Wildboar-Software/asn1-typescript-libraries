@@ -20,12 +20,12 @@ import {
   GeneralNames,
   _decode_GeneralNames,
   _encode_GeneralNames,
-} from '@wildboar/x500/CertificateExtensions';
+} from '@wildboar/gn';
 import {
   GeneralName,
   _decode_GeneralName,
   _encode_GeneralName,
-} from '@wildboar/x500/CertificateExtensions';
+} from '@wildboar/gn';
 import {
   Extensions,
   _decode_Extensions,

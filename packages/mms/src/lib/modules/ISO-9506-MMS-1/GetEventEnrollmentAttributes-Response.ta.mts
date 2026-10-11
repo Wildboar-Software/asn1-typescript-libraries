@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EEAttributes, _decode_EEAttributes, _encode_EEAttributes } from "../ISO-9506-MMS-1/EEAttributes.ta.mjs";
-// export { EEAttributes, _decode_EEAttributes, _encode_EEAttributes } from "../ISO-9506-MMS-1/EEAttributes.ta.mjs";
 
 
 /**

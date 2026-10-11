@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CIO, _get_decoder_for_CIO, _get_encoder_for_CIO } from "../CryptographicInformationFramework/CIO.ta.mjs";
-// export { CIO, _get_decoder_for_CIO, _get_encoder_for_CIO } from "../CryptographicInformationFramework/CIO.ta.mjs";
 import { CommonCertificateAttributes, _decode_CommonCertificateAttributes, _encode_CommonCertificateAttributes } from "../CryptographicInformationFramework/CommonCertificateAttributes.ta.mjs";
-// export { CommonCertificateAttributes, _decode_CommonCertificateAttributes, _encode_CommonCertificateAttributes } from "../CryptographicInformationFramework/CommonCertificateAttributes.ta.mjs";
 
 
 /**

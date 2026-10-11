@@ -92,11 +92,9 @@ export class DirectoryInformationServiceElement {
      * @returns {DirectoryInformationServiceElement}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof DirectoryInformationServiceElement]: DirectoryInformationServiceElement[_K];
             }
-        >
     ): DirectoryInformationServiceElement {
         return new DirectoryInformationServiceElement(
             _o.operationType,

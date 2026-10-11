@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Data_Exchange_instance_definition_details, _decode_Data_Exchange_instance_definition_details, _encode_Data_Exchange_instance_definition_details } from "../MMS-SCI-Module-1/Data-Exchange-instance-definition-details.ta.mjs";
-// export { Data_Exchange_instance_definition_details, _decode_Data_Exchange_instance_definition_details, _encode_Data_Exchange_instance_definition_details } from "../MMS-SCI-Module-1/Data-Exchange-instance-definition-details.ta.mjs";
 
 
 /**

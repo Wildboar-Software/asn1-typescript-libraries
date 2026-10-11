@@ -1,75 +1,14 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedCAMEL_SubscriptionInfo, _enum_for_RequestedCAMEL_SubscriptionInfo, RequestedCAMEL_SubscriptionInfo_o_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, o_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_t_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, t_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_vt_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, vt_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_tif_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, tif_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_gprs_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, gprs_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_mo_sms_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, mo_sms_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_ss_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, ss_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_m_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, m_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedCAMEL_SubscriptionInfo_d_csi /* IMPORTED_LONG_ENUMERATION_ITEM */, d_csi /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedCAMEL_SubscriptionInfo, _encode_RequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/RequestedCAMEL-SubscriptionInfo.ta.mjs";
-import { ModificationInstruction, _enum_for_ModificationInstruction, ModificationInstruction_deactivate /* IMPORTED_LONG_ENUMERATION_ITEM */, deactivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModificationInstruction_activate /* IMPORTED_LONG_ENUMERATION_ITEM */, activate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ModificationInstruction, _encode_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AdditionalRequestedCAMEL_SubscriptionInfo, _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo, AdditionalRequestedCAMEL_SubscriptionInfo_mt_sms_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, mt_sms_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalRequestedCAMEL_SubscriptionInfo_mg_csi /* IMPORTED_LONG_ENUMERATION_ITEM */, mg_csi /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalRequestedCAMEL_SubscriptionInfo_o_IM_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, o_IM_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalRequestedCAMEL_SubscriptionInfo_d_IM_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, d_IM_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdditionalRequestedCAMEL_SubscriptionInfo_vt_IM_CSI /* IMPORTED_LONG_ENUMERATION_ITEM */, vt_IM_CSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AdditionalRequestedCAMEL_SubscriptionInfo, _encode_AdditionalRequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/AdditionalRequestedCAMEL-SubscriptionInfo.ta.mjs";
+import { AdditionalRequestedCAMEL_SubscriptionInfo, _decode_AdditionalRequestedCAMEL_SubscriptionInfo, _encode_AdditionalRequestedCAMEL_SubscriptionInfo, _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/AdditionalRequestedCAMEL-SubscriptionInfo.ta.mjs";
+import { ModificationInstruction, _decode_ModificationInstruction, _encode_ModificationInstruction, _enum_for_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
+import { RequestedCAMEL_SubscriptionInfo, _decode_RequestedCAMEL_SubscriptionInfo, _encode_RequestedCAMEL_SubscriptionInfo, _enum_for_RequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/RequestedCAMEL-SubscriptionInfo.ta.mjs";
 
 
 /**

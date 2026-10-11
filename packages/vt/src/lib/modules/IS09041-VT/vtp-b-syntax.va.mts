@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { vtp_b } from "../IS09041-VT/vtp-b.va.mjs";
-// export { vtp_b } from "../IS09041-VT/vtp-b.va.mjs";
 
 
 /**

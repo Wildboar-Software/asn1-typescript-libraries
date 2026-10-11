@@ -1,0 +1,44 @@
+{
+    "name": "@wildboar/h248",
+    "type": "module",
+    "description": "Binary encodings of ITU-T H.248.1 gateway control messages (version 3, ITU-T Rec. H.248.1 (03/2013)).",
+    "keywords": [
+        "h248",
+        "megaco",
+        "h323",
+        "gateway"
+    ],
+    "version": "1.0.0",
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
+    "dependencies": {
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
+    },
+    "exports": {
+        ".": "./src/index.mts",
+        "./MEDIA-GATEWAY-CONTROL": "./src/lib/modules/MEDIA-GATEWAY-CONTROL/index.mts",
+        "./H238V1-SUPPORT": "./src/lib/modules/H238V1-SUPPORT/index.mts"
+    }
+}

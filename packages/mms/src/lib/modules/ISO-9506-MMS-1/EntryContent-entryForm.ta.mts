@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EntryContent_entryForm_data, _decode_EntryContent_entryForm_data, _encode_EntryContent_entryForm_data } from "../ISO-9506-MMS-1/EntryContent-entryForm-data.ta.mjs";
-// export { EntryContent_entryForm_data, _decode_EntryContent_entryForm_data, _encode_EntryContent_entryForm_data } from "../ISO-9506-MMS-1/EntryContent-entryForm-data.ta.mjs";
 import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
-// export { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 
 
 /**

@@ -72,11 +72,9 @@ export class ServiceControls_manageDSAITPlaneRef {
      * @returns {ServiceControls_manageDSAITPlaneRef}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof ServiceControls_manageDSAITPlaneRef]: ServiceControls_manageDSAITPlaneRef[_K];
             }
-        >
     ): ServiceControls_manageDSAITPlaneRef {
         return new ServiceControls_manageDSAITPlaneRef(
             _o.dsaName,

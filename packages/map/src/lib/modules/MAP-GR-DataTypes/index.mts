@@ -6,8 +6,8 @@
  * end-signal, and send group-call info (3GPP TS 29.002 V19.1.0 clauses 17.7.12
  * and 10.4–10.7A).
  */
-export * from "./CODEC-Info.ta.mjs";
 export * from "./CipheringAlgorithm.ta.mjs";
+export * from "./CODEC-Info.ta.mjs";
 export * from "./ForwardGroupCallSignallingArg.ta.mjs";
 export * from "./GroupKeyNumber.ta.mjs";
 export * from "./PrepareGroupCallArg.ta.mjs";

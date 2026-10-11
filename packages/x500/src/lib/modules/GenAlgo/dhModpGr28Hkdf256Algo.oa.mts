@@ -10,6 +10,7 @@ import {
     _decode_Payload28,
     _encode_Payload28,
 } from "../GenAlgo/Payload28.ta.mjs";
+import type { ASN1Encoder } from "@wildboar/asn1/functional";
 import { type ALGORITHM } from "@wildboar/pki-stub";
 /**
  * @summary dhModpGr28Hkdf256Algo
@@ -45,7 +46,7 @@ export const dhModpGr28Hkdf256Algo: ALGORITHM<Group28, Payload28> = {
     },
     encoderFor: {
         "&Type": _encode_Group28,
-        "&DynParms": _encode_Payload28,
+        "&DynParms": _encode_Payload28 as ASN1Encoder<Payload28 | undefined>,
     },
     "&id": id_algo_dhModpGr28Hkdf256Algo /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

@@ -11,19 +11,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PrivateKeyObject, _get_decoder_for_PrivateKeyObject, _get_encoder_for_PrivateKeyObject } from "../CryptographicInformationFramework/PrivateKeyObject.ta.mjs";
-// export { PrivateKeyObject, _get_decoder_for_PrivateKeyObject, _get_encoder_for_PrivateKeyObject } from "../CryptographicInformationFramework/PrivateKeyObject.ta.mjs";
 import { PrivateRSAKeyAttributes, _decode_PrivateRSAKeyAttributes, _encode_PrivateRSAKeyAttributes } from "../CryptographicInformationFramework/PrivateRSAKeyAttributes.ta.mjs";
-// export { PrivateRSAKeyAttributes, _decode_PrivateRSAKeyAttributes, _encode_PrivateRSAKeyAttributes } from "../CryptographicInformationFramework/PrivateRSAKeyAttributes.ta.mjs";
 import { PrivateECKeyAttributes, _decode_PrivateECKeyAttributes, _encode_PrivateECKeyAttributes } from "../CryptographicInformationFramework/PrivateECKeyAttributes.ta.mjs";
-// export { PrivateECKeyAttributes, _decode_PrivateECKeyAttributes, _encode_PrivateECKeyAttributes } from "../CryptographicInformationFramework/PrivateECKeyAttributes.ta.mjs";
 import { PrivateDHKeyAttributes, _decode_PrivateDHKeyAttributes, _encode_PrivateDHKeyAttributes } from "../CryptographicInformationFramework/PrivateDHKeyAttributes.ta.mjs";
-// export { PrivateDHKeyAttributes, _decode_PrivateDHKeyAttributes, _encode_PrivateDHKeyAttributes } from "../CryptographicInformationFramework/PrivateDHKeyAttributes.ta.mjs";
 import { PrivateDSAKeyAttributes, _decode_PrivateDSAKeyAttributes, _encode_PrivateDSAKeyAttributes } from "../CryptographicInformationFramework/PrivateDSAKeyAttributes.ta.mjs";
-// export { PrivateDSAKeyAttributes, _decode_PrivateDSAKeyAttributes, _encode_PrivateDSAKeyAttributes } from "../CryptographicInformationFramework/PrivateDSAKeyAttributes.ta.mjs";
 import { PrivateKEAKeyAttributes, _decode_PrivateKEAKeyAttributes, _encode_PrivateKEAKeyAttributes } from "../CryptographicInformationFramework/PrivateKEAKeyAttributes.ta.mjs";
-// export { PrivateKEAKeyAttributes, _decode_PrivateKEAKeyAttributes, _encode_PrivateKEAKeyAttributes } from "../CryptographicInformationFramework/PrivateKEAKeyAttributes.ta.mjs";
 import { GenericKeyAttributes, _decode_GenericKeyAttributes, _encode_GenericKeyAttributes } from "../CryptographicInformationFramework/GenericKeyAttributes.ta.mjs";
-// export { GenericKeyAttributes, _decode_GenericKeyAttributes, _encode_GenericKeyAttributes } from "../CryptographicInformationFramework/GenericKeyAttributes.ta.mjs";
 
 
 /**

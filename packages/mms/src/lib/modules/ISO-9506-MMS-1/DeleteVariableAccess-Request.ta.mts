@@ -12,11 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DeleteVariableAccess_Request_scopeOfDelete, specific /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeleteVariableAccess_Request_scopeOfDelete, _encode_DeleteVariableAccess_Request_scopeOfDelete } from "../ISO-9506-MMS-1/DeleteVariableAccess-Request-scopeOfDelete.ta.mjs";
-// export { DeleteVariableAccess_Request_scopeOfDelete, DeleteVariableAccess_Request_scopeOfDelete_specific /* IMPORTED_LONG_NAMED_INTEGER */, specific /* IMPORTED_SHORT_NAMED_INTEGER */, DeleteVariableAccess_Request_scopeOfDelete_aa_specific /* IMPORTED_LONG_NAMED_INTEGER */, aa_specific /* IMPORTED_SHORT_NAMED_INTEGER */, DeleteVariableAccess_Request_scopeOfDelete_domain /* IMPORTED_LONG_NAMED_INTEGER */, domain /* IMPORTED_SHORT_NAMED_INTEGER */, DeleteVariableAccess_Request_scopeOfDelete_vmd /* IMPORTED_LONG_NAMED_INTEGER */, vmd /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeleteVariableAccess_Request_scopeOfDelete, _encode_DeleteVariableAccess_Request_scopeOfDelete } from "../ISO-9506-MMS-1/DeleteVariableAccess-Request-scopeOfDelete.ta.mjs";
 import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-// export { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**

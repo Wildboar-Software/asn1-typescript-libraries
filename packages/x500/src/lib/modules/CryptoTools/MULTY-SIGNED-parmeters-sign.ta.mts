@@ -59,11 +59,9 @@ export class MULTY_SIGNED_parmeters_sign<_ToBeSigned> {
      * @returns {MULTY_SIGNED_parmeters_sign}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof MULTY_SIGNED_parmeters_sign<any>]: MULTY_SIGNED_parmeters_sign<any>[_K];
             }
-        >
     ): MULTY_SIGNED_parmeters_sign<any> {
         return new MULTY_SIGNED_parmeters_sign(
             _o.algo,

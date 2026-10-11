@@ -86,81 +86,112 @@ import {
  *
  */
 export class TBSAttributeCertificate {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Shall be v2 (`1`, not `2`) for the current syntax.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: AttCertVersion;
+
+    /**
+     * @summary `holder`.
+     * @public
+     * @readonly
+     */
+    public readonly holder: Holder;
+
+    /**
+     * @summary `issuer`.
+     * @public
+     * @readonly
+     */
+    public readonly issuer: AttCertIssuer;
+
+    /**
+     * @summary `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly signature: AlgorithmIdentifier;
+
+    /**
+     * @summary `serialNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+
+    /**
+     * @summary `attrCertValidityPeriod`.
+     * @public
+     * @readonly
+     */
+    public readonly attrCertValidityPeriod: AttCertValidityPeriod;
+
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * Privileges being certified. May be an empty sequence for an attribute
+     * descriptor certificate.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributes: Attribute[];
+
+    /**
+     * @summary `issuerUniqueID`.
+     * @description
+     *
+     * Deprecated disambiguator for reused issuer names.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerUniqueID?: OPTIONAL<UniqueIdentifier>;
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Shall be v2 (`1`, not `2`) for the current syntax.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: AttCertVersion,
-        /**
-         * @summary `holder`.
-         * @public
-         * @readonly
-         */
-        readonly holder: Holder,
-        /**
-         * @summary `issuer`.
-         * @public
-         * @readonly
-         */
-        readonly issuer: AttCertIssuer,
-        /**
-         * @summary `signature`.
-         * @public
-         * @readonly
-         */
-        readonly signature: AlgorithmIdentifier,
-        /**
-         * @summary `serialNumber`.
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber,
-        /**
-         * @summary `attrCertValidityPeriod`.
-         * @public
-         * @readonly
-         */
-        readonly attrCertValidityPeriod: AttCertValidityPeriod,
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * Privileges being certified. May be an empty sequence for an attribute
-         * descriptor certificate.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributes: Attribute[],
-        /**
-         * @summary `issuerUniqueID`.
-         * @description
-         *
-         * Deprecated disambiguator for reused issuer names.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerUniqueID?: OPTIONAL<UniqueIdentifier>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>
-    ) {}
+        version: AttCertVersion,
+        holder: Holder,
+        issuer: AttCertIssuer,
+        signature: AlgorithmIdentifier,
+        serialNumber: CertificateSerialNumber,
+        attrCertValidityPeriod: AttCertValidityPeriod,
+        attributes: Attribute[],
+        issuerUniqueID?: OPTIONAL<UniqueIdentifier>,
+        _unrecognizedExtensionsList: _Element[] = [],
+        extensions?: OPTIONAL<Extensions>
+    ) {
+        this.version = version;
+        this.holder = holder;
+        this.issuer = issuer;
+        this.signature = signature;
+        this.serialNumber = serialNumber;
+        this.attrCertValidityPeriod = attrCertValidityPeriod;
+        this.attributes = attributes;
+        this.issuerUniqueID = issuerUniqueID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a TBSAttributeCertificate

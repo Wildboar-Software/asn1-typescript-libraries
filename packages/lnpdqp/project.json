@@ -1,0 +1,25 @@
+{
+  "name": "lnpdqp",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/lnpdqp/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/lnpdqp",
+        "tsConfig": "packages/lnpdqp/tsconfig.lib.json",
+        "packageJson": "packages/lnpdqp/package.json",
+        "main": "packages/lnpdqp/src/index.mts",
+        "assets": [
+          "packages/lnpdqp/*.md",
+          "packages/lnpdqp/LICENSE.txt",
+          "packages/lnpdqp/package.json"
+        ]
+      }
+    }
+  }
+}

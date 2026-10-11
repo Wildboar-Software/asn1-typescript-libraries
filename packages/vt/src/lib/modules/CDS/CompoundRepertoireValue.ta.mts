@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RepertoireFontValue, _decode_RepertoireFontValue, _encode_RepertoireFontValue } from "../CDS/RepertoireFontValue.ta.mjs";
-// export { RepertoireFontValue, _decode_RepertoireFontValue, _encode_RepertoireFontValue } from "../CDS/RepertoireFontValue.ta.mjs";
 
 
 /**

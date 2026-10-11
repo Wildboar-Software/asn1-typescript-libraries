@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IntegerOffer_Item_range, _decode_IntegerOffer_Item_range, _encode_IntegerOffer_Item_range } from "../G/IntegerOffer-Item-range.ta.mjs";
-// export { IntegerOffer_Item_range, _decode_IntegerOffer_Item_range, _encode_IntegerOffer_Item_range } from "../G/IntegerOffer-Item-range.ta.mjs";
 
 
 /**

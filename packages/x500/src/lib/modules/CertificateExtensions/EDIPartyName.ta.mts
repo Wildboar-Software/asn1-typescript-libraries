@@ -1,5 +1,5 @@
 /**
- * Re-export of {@link EDIPartyName} from `@wildboar/pki-stub`.
+ * Re-export of {@link EDIPartyName} from `@wildboar/gn`.
  *
  * `nameAssigner` optional; `partyName` required. A GeneralName form that
  * generally does **not** support name-constraint subtrees (only hierarchical
@@ -9,4 +9,4 @@ export {
     EDIPartyName,
     _decode_EDIPartyName,
     _encode_EDIPartyName,
-} from "@wildboar/pki-stub";
+} from "@wildboar/gn";

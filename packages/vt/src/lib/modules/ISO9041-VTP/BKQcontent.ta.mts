@@ -12,11 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BKQcontent_standard, _decode_BKQcontent_standard, _encode_BKQcontent_standard } from "../ISO9041-VTP/BKQcontent-standard.ta.mjs";
-// export { BKQcontent_standard, _decode_BKQcontent_standard, _encode_BKQcontent_standard } from "../ISO9041-VTP/BKQcontent-standard.ta.mjs";
 import { BKQcontent_profile_Item, _decode_BKQcontent_profile_Item, _encode_BKQcontent_profile_Item } from "../ISO9041-VTP/BKQcontent-profile-Item.ta.mjs";
-// export { BKQcontent_profile_Item, _decode_BKQcontent_profile_Item, _encode_BKQcontent_profile_Item } from "../ISO9041-VTP/BKQcontent-profile-Item.ta.mjs";
 import { BKQcontent_stuser_Item, _decode_BKQcontent_stuser_Item, _encode_BKQcontent_stuser_Item } from "../ISO9041-VTP/BKQcontent-stuser-Item.ta.mjs";
-// export { BKQcontent_stuser_Item, _decode_BKQcontent_stuser_Item, _encode_BKQcontent_stuser_Item } from "../ISO9041-VTP/BKQcontent-stuser-Item.ta.mjs";
 
 
 /**

@@ -1,0 +1,41 @@
+ESFormat-ExportSpecification
+{z39-50-extendedService exportSpecification(6)}
+DEFINITIONS ::=
+BEGIN
+EXPORTS ExportSpecification, Destination; IMPORTS
+
+    CompSpec, InternationalString
+        FROM Z39-50-APDU-2001
+    ;
+
+ExportSpecification ::= CHOICE {
+    esRequest       [1] IMPLICIT SEQUENCE {
+        toKeep          [1] ClientPartToKeep,
+        notToKeep       [2] IMPLICIT NULL
+    },
+    taskPackage     [2] IMPLICIT SEQUENCE {
+        clientPart      [1] ClientPartToKeep,
+        serverPart      [2] IMPLICIT NULL
+    }
+}
+
+ClientPartToKeep ::= SEQUENCE {
+    composition         [1] IMPLICIT CompSpec,
+    exportDestination   [2] Destination}
+
+Destination ::= CHOICE {
+    phoneNumber         [1] IMPLICIT InternationalString,
+    faxNumber           [2] IMPLICIT InternationalString,
+    x400address         [3] IMPLICIT InternationalString,
+    emailAddress        [4] IMPLICIT InternationalString,
+    pagerNumber         [5] IMPLICIT InternationalString,
+    ftpAddress          [6] IMPLICIT InternationalString,
+    ftamAddress         [7] IMPLICIT InternationalString,
+    printerAddress      [8] IMPLICIT InternationalString,
+    other               [100] IMPLICIT SEQUENCE {
+        vehicle             [1] IMPLICIT InternationalString OPTIONAL,
+        destination         [2] IMPLICIT InternationalString
+    }
+}
+
+END

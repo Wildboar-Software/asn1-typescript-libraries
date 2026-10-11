@@ -19,7 +19,7 @@
  *
  * Import from `@wildboar/mrbtr`. Per-module subpaths remain available.
  *
- * Directory `Name` is re-exported from `@wildboar/x500`. CMS `CONTENT_TYPE`,
+ * Directory `Name` is re-exported from `@wildboar/dn`. CMS `CONTENT_TYPE`,
  * `CertificateSet`, `RevocationInfoChoices`, and `SignerInfos` are
  * re-exported from `@wildboar/cms`. CBEFF `BiometricType`, `BiometricSubtype`,
  * and `Product` are re-exported from `@wildboar/cbeff`.

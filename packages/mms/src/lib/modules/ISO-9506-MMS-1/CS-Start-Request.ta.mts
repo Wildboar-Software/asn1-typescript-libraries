@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CS_Start_Request_controlling, _decode_CS_Start_Request_controlling, _encode_CS_Start_Request_controlling } from "../ISO-9506-MMS-1/CS-Start-Request-controlling.ta.mjs";
-// export { CS_Start_Request_controlling, _decode_CS_Start_Request_controlling, _encode_CS_Start_Request_controlling } from "../ISO-9506-MMS-1/CS-Start-Request-controlling.ta.mjs";
 
 
 /**

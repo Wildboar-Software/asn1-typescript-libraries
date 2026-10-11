@@ -10,13 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { reservationError_ParameterType, _decode_reservationError_ParameterType, _encode_reservationError_ParameterType } from "../DFRAbstractService/reservationError-ParameterType.ta.mjs";
-// export { reservationError_ParameterType, _decode_reservationError_ParameterType, _encode_reservationError_ParameterType } from "../DFRAbstractService/reservationError-ParameterType.ta.mjs";
 import { id_errcode_reservation_error } from "../DFRAbstractService/id-errcode-reservation-error.va.mjs";
-// export { id_errcode_reservation_error } from "../DFRAbstractService/id-errcode-reservation-error.va.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 

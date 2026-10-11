@@ -20,7 +20,7 @@ import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/x500/InformationFramework';
+} from '@wildboar/dn';
 import { id_at_connection_group_name } from '../MHSRoutingObjectIdentifiers/id-at-connection-group-name.va.mjs';
 /**
  * @summary connectionGroupName

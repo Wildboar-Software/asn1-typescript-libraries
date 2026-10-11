@@ -1,0 +1,33 @@
+RecordSyntax-summary
+{z39-50-recordSyntax summary(103)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    OtherInformation, InternationalString
+        FROM Z39-50-APDU-2001
+    ;
+
+BriefBib ::= SEQUENCE {
+   title                [1]  IMPLICIT InternationalString,
+   author               [2]  IMPLICIT InternationalString OPTIONAL,
+   callNumber           [3]  IMPLICIT InternationalString OPTIONAL,
+   recordType           [4]  IMPLICIT InternationalString OPTIONAL,
+   bibliographicLevel   [5]  IMPLICIT InternationalString OPTIONAL,
+   format               [6]  IMPLICIT SEQUENCE OF FormatSpec OPTIONAL,
+   publicationPlace     [7]  IMPLICIT InternationalString OPTIONAL,
+   publicationDate      [8]  IMPLICIT InternationalString OPTIONAL,
+   targetSystemKey      [9]  IMPLICIT InternationalString OPTIONAL,
+   satisfyingElement    [10] IMPLICIT InternationalString OPTIONAL,
+   rank                 [11] IMPLICIT INTEGER OPTIONAL,
+   documentId           [12] IMPLICIT InternationalString OPTIONAL,
+   abstract             [13] IMPLICIT InternationalString OPTIONAL,
+   otherInfo            OtherInformation OPTIONAL}
+
+FormatSpec  ::=  SEQUENCE {
+    type        [1] IMPLICIT InternationalString,
+    size        [2] IMPLICIT INTEGER OPTIONAL,
+    bestPosn    [3] IMPLICIT INTEGER OPTIONAL
+}
+
+END

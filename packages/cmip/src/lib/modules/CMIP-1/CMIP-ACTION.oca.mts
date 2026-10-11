@@ -67,7 +67,7 @@ export interface CMIP_ACTION<
    * @summary &id
    * @description Unique action type (`ActionTypeId`).
    */
-  readonly '&id'?: ActionTypeId;
+  readonly '&id': ActionTypeId;
   /**
    * @summary &Value
    * @description Argument and reply ASN.1 type for `&id`.

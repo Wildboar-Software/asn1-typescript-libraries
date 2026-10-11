@@ -15,6 +15,9 @@
   "references": [
     {
       "path": "../sio/tsconfig.lib.json"
+    },
+    {
+      "path": "../gn/tsconfig.lib.json"
     }
   ]
 }

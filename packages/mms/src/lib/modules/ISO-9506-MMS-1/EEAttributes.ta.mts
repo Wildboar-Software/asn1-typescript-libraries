@@ -13,25 +13,15 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-// export { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 import { EEAttributes_eventConditionName, _decode_EEAttributes_eventConditionName, _encode_EEAttributes_eventConditionName } from "../ISO-9506-MMS-1/EEAttributes-eventConditionName.ta.mjs";
-// export { EEAttributes_eventConditionName, _decode_EEAttributes_eventConditionName, _encode_EEAttributes_eventConditionName } from "../ISO-9506-MMS-1/EEAttributes-eventConditionName.ta.mjs";
 import { EEAttributes_eventActionName, _decode_EEAttributes_eventActionName, _encode_EEAttributes_eventActionName } from "../ISO-9506-MMS-1/EEAttributes-eventActionName.ta.mjs";
-// export { EEAttributes_eventActionName, _decode_EEAttributes_eventActionName, _encode_EEAttributes_eventActionName } from "../ISO-9506-MMS-1/EEAttributes-eventActionName.ta.mjs";
 import { Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
-// export { Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
-// export { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
 import { EE_Class, _decode_EE_Class, _encode_EE_Class } from "../MMS-Object-Module-1/EE-Class.ta.mjs";
-// export { EE_Class, EE_Class_modifier /* IMPORTED_LONG_NAMED_INTEGER */, modifier /* IMPORTED_SHORT_NAMED_INTEGER */, EE_Class_notification /* IMPORTED_LONG_NAMED_INTEGER */, notification /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EE_Class, _encode_EE_Class } from "../MMS-Object-Module-1/EE-Class.ta.mjs";
 import { EE_Duration, current /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EE_Duration, _encode_EE_Duration } from "../MMS-Object-Module-1/EE-Duration.ta.mjs";
-// export { EE_Duration, EE_Duration_current /* IMPORTED_LONG_NAMED_INTEGER */, current /* IMPORTED_SHORT_NAMED_INTEGER */, EE_Duration_permanent /* IMPORTED_LONG_NAMED_INTEGER */, permanent /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EE_Duration, _encode_EE_Duration } from "../MMS-Object-Module-1/EE-Duration.ta.mjs";
 import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
-// export { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
 import { EEAttributes_displayEnhancement, _decode_EEAttributes_displayEnhancement, _encode_EEAttributes_displayEnhancement } from "../ISO-9506-MMS-1/EEAttributes-displayEnhancement.ta.mjs";
-// export { EEAttributes_displayEnhancement, _decode_EEAttributes_displayEnhancement, _encode_EEAttributes_displayEnhancement } from "../ISO-9506-MMS-1/EEAttributes-displayEnhancement.ta.mjs";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**

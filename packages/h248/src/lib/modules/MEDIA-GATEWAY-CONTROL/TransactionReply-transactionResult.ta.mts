@@ -1,0 +1,73 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
+import { ActionReply, _decode_ActionReply, _encode_ActionReply } from "../MEDIA-GATEWAY-CONTROL/ActionReply.ta.mjs";
+
+
+/**
+ * @summary TransactionReply_transactionResult
+ * @description
+ * 
+ * Result of a TransactionReply: a single error for the transaction, or the
+ * action replies (clause 8.2.2, Annex A).
+ *
+ * `transactionError` is used when the receiver cannot determine a legal
+ * transaction (error 403, "Syntax Error in TransactionRequest") or when another
+ * error applies to the transaction as a whole. `actionReplies` carries one
+ * reply per processed action, in request order.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * TransactionReply-transactionResult ::= CHOICE {
+ *     transactionError  [0] ErrorDescriptor,
+ *     actionReplies     [1] SEQUENCE OF ActionReply
+ * }
+ * ```
+ */
+export
+type TransactionReply_transactionResult =
+    { transactionError: ErrorDescriptor } /* CHOICE_ALT_ROOT */
+    | { actionReplies: ActionReply[] } /* CHOICE_ALT_ROOT */;
+
+let _cached_decoder_for_TransactionReply_transactionResult: $.ASN1Decoder<TransactionReply_transactionResult> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) TransactionReply_transactionResult
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_TransactionReply_transactionResult (el: _Element): TransactionReply_transactionResult {
+    if (!_cached_decoder_for_TransactionReply_transactionResult) { _cached_decoder_for_TransactionReply_transactionResult = $._decode_inextensible_choice<TransactionReply_transactionResult>({
+    "CONTEXT 0": [ "transactionError", $._decode_implicit<ErrorDescriptor>(() => _decode_ErrorDescriptor) ],
+    "CONTEXT 1": [ "actionReplies", $._decode_implicit<ActionReply[]>(() => $._decodeSequenceOf<ActionReply>(() => _decode_ActionReply)) ]
+}); }
+    return _cached_decoder_for_TransactionReply_transactionResult(el);
+}
+
+let _cached_encoder_for_TransactionReply_transactionResult: $.ASN1Encoder<TransactionReply_transactionResult> | null = null;
+
+/**
+ * @summary Encodes a(n) TransactionReply_transactionResult into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The TransactionReply_transactionResult, encoded as an ASN.1 Element.
+ */
+export
+function _encode_TransactionReply_transactionResult (value: TransactionReply_transactionResult, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_TransactionReply_transactionResult) { _cached_encoder_for_TransactionReply_transactionResult = $._encode_choice<TransactionReply_transactionResult>({
+    "transactionError": $._encode_implicit(_TagClass.context, 0, () => _encode_ErrorDescriptor, $.BER),
+    "actionReplies": $._encode_implicit(_TagClass.context, 1, () => $._encodeSequenceOf<ActionReply>(() => _encode_ActionReply, $.BER), $.BER),
+}, $.BER); }
+    return _cached_encoder_for_TransactionReply_transactionResult(value, elGetter);
+}
+
+
+/* eslint-enable */

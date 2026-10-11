@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FCIBillingChargingCharacteristics, _decode_FCIBillingChargingCharacteristics, _encode_FCIBillingChargingCharacteristics } from "../Core-INAP-CS1-DataTypes/FCIBillingChargingCharacteristics.ta.mjs";
-// export { FCIBillingChargingCharacteristics, _decode_FCIBillingChargingCharacteristics, _encode_FCIBillingChargingCharacteristics } from "../Core-INAP-CS1-DataTypes/FCIBillingChargingCharacteristics.ta.mjs";
 
 
 /**

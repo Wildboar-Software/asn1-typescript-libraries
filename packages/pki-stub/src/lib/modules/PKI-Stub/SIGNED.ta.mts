@@ -70,48 +70,66 @@ export class SIGNED<ToBeSigned> {
      */
     public originalDER?: Uint8Array;
 
+    /**
+     * @summary `toBeSigned`.
+     * @public
+     * @readonly
+     */
+    public readonly toBeSigned: ToBeSigned;
+
+    /**
+     * @summary `algorithmIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithmIdentifier: AlgorithmIdentifier;
+
+    /**
+     * @summary `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly signature: BIT_STRING;
+
+    /**
+     * @summary `altAlgorithmIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly altAlgorithmIdentifier?: OPTIONAL<AlgorithmIdentifier>;
+
+    /**
+     * @summary `altSignature`.
+     * @public
+     * @readonly
+     */
+    public readonly altSignature?: OPTIONAL<BIT_STRING>;
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `toBeSigned`.
-         * @public
-         * @readonly
-         */
-        readonly toBeSigned: ToBeSigned,
-        /**
-         * @summary `algorithmIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly algorithmIdentifier: AlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @public
-         * @readonly
-         */
-        readonly signature: BIT_STRING,
-        /**
-         * @summary `altAlgorithmIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly altAlgorithmIdentifier?: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `altSignature`.
-         * @public
-         * @readonly
-         */
-        readonly altSignature?: OPTIONAL<BIT_STRING>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
+        toBeSigned: ToBeSigned,
+        algorithmIdentifier: AlgorithmIdentifier,
+        signature: BIT_STRING,
+        altAlgorithmIdentifier?: OPTIONAL<AlgorithmIdentifier>,
+        altSignature?: OPTIONAL<BIT_STRING>,
+        _unrecognizedExtensionsList: _Element[] = [],
         /**
          * @summary
          */
         originalDER?: _Element
     ) {
+        this.toBeSigned = toBeSigned;
+        this.algorithmIdentifier = algorithmIdentifier;
+        this.signature = signature;
+        this.altAlgorithmIdentifier = altAlgorithmIdentifier;
+        this.altSignature = altSignature;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         this.originalDER = originalDER?.toBytes();
     }
 

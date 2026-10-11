@@ -43,7 +43,7 @@ import {
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
 
 export interface PerMessageAutoForwardFields {
-    readonly originator_name?: OriginatorName;
+    readonly originator_name: OriginatorName;
     readonly content_identifier?: OPTIONAL<ContentIdentifier>;
     readonly priority?: OPTIONAL<Priority>;
     readonly per_message_indicators?: OPTIONAL<PerMessageIndicators>;
@@ -79,7 +79,7 @@ export class PerMessageAutoForwardFields {
          * @public
          * @readonly
          */
-        readonly originator_name?: OriginatorName,
+        readonly originator_name: OriginatorName,
         /**
          * @summary `content_identifier`.
          * @public

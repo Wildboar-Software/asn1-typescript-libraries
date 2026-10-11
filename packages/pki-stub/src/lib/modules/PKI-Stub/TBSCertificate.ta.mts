@@ -91,114 +91,148 @@ import {
  *
  */
 export class TBSCertificate {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Named INTEGER: `v1` is 0, `v2` is 1, `v3` is 2. Defaults to v1.
+     * Unique identifiers require v2 or v3; `extensions` requires v3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+
+    /**
+     * @summary `serialNumber`.
+     * @description
+     *
+     * Unique for this issuer; need not be sequential. See
+     * {@link CertificateSerialNumber} for the negative-INTEGER / RFC 5280
+     * clash.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+
+    /**
+     * @summary `signature`.
+     * @description
+     *
+     * Algorithm used to sign the certificate. Shall equal the
+     * `algorithmIdentifier` of the outer {@link SIGNED}.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signature: AlgorithmIdentifier;
+
+    /**
+     * @summary `issuer`.
+     * @description
+     *
+     * Distinguished name of the issuing CA. Shall be non-empty.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuer: Name;
+
+    /**
+     * @summary `validity`.
+     * @public
+     * @readonly
+     */
+    public readonly validity: Validity;
+
+    /**
+     * @summary `subject`.
+     * @description
+     *
+     * Entity bound to `subjectPublicKey`. May be an empty DN only for an
+     * end-entity certificate that also has a critical `subjectAltName`
+     * extension; otherwise shall be a non-empty DN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subject: Name;
+
+    /**
+     * @summary `subjectPublicKeyInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectPublicKeyInfo: SubjectPublicKeyInfo;
+
+    /**
+     * @summary `issuerUniqueIdentifier`.
+     * @description
+     *
+     * Deprecated disambiguator for reused issuer DNs. Requires version v2
+     * or v3. IETF RFC 5280 forbids this field.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerUniqueIdentifier?: OPTIONAL<UniqueIdentifier>;
+
+    /**
+     * @summary `subjectUniqueIdentifier`.
+     * @description
+     *
+     * Deprecated disambiguator for reused subject DNs. Requires version v2
+     * or v3. IETF RFC 5280 forbids this field.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectUniqueIdentifier?: OPTIONAL<UniqueIdentifier>;
+
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * If present, `version` shall be v3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Named INTEGER: `v1` is 0, `v2` is 1, `v3` is 2. Defaults to v1.
-         * Unique identifiers require v2 or v3; `extensions` requires v3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         *
-         * Unique for this issuer; need not be sequential. See
-         * {@link CertificateSerialNumber} for the negative-INTEGER / RFC 5280
-         * clash.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber,
-        /**
-         * @summary `signature`.
-         * @description
-         *
-         * Algorithm used to sign the certificate. Shall equal the
-         * `algorithmIdentifier` of the outer {@link SIGNED}.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signature: AlgorithmIdentifier,
-        /**
-         * @summary `issuer`.
-         * @description
-         *
-         * Distinguished name of the issuing CA. Shall be non-empty.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuer: Name,
-        /**
-         * @summary `validity`.
-         * @public
-         * @readonly
-         */
-        readonly validity: Validity,
-        /**
-         * @summary `subject`.
-         * @description
-         *
-         * Entity bound to `subjectPublicKey`. May be an empty DN only for an
-         * end-entity certificate that also has a critical `subjectAltName`
-         * extension; otherwise shall be a non-empty DN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subject: Name,
-        /**
-         * @summary `subjectPublicKeyInfo`.
-         * @public
-         * @readonly
-         */
-        readonly subjectPublicKeyInfo: SubjectPublicKeyInfo,
-        /**
-         * @summary `issuerUniqueIdentifier`.
-         * @description
-         *
-         * Deprecated disambiguator for reused issuer DNs. Requires version v2
-         * or v3. IETF RFC 5280 forbids this field.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerUniqueIdentifier?: OPTIONAL<UniqueIdentifier>,
-        /**
-         * @summary `subjectUniqueIdentifier`.
-         * @description
-         *
-         * Deprecated disambiguator for reused subject DNs. Requires version v2
-         * or v3. IETF RFC 5280 forbids this field.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectUniqueIdentifier?: OPTIONAL<UniqueIdentifier>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * If present, `version` shall be v3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: OPTIONAL<Version>,
+        serialNumber: CertificateSerialNumber,
+        signature: AlgorithmIdentifier,
+        issuer: Name,
+        validity: Validity,
+        subject: Name,
+        subjectPublicKeyInfo: SubjectPublicKeyInfo,
+        issuerUniqueIdentifier?: OPTIONAL<UniqueIdentifier>,
+        subjectUniqueIdentifier?: OPTIONAL<UniqueIdentifier>,
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.serialNumber = serialNumber;
+        this.signature = signature;
+        this.issuer = issuer;
+        this.validity = validity;
+        this.subject = subject;
+        this.subjectPublicKeyInfo = subjectPublicKeyInfo;
+        this.issuerUniqueIdentifier = issuerUniqueIdentifier;
+        this.subjectUniqueIdentifier = subjectUniqueIdentifier;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TBSCertificate

@@ -1,0 +1,355 @@
+/* eslint-disable */
+import {
+    INTEGER,
+    OPTIONAL,
+    VisibleString,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
+import { ASDU_smpSynch, _decode_ASDU_smpSynch, _encode_ASDU_smpSynch } from "../IEC61850/ASDU-smpSynch.ta.mjs";
+import { Data, _decode_Data, _encode_Data } from "../IEC61850/Data.ta.mjs";
+import { ASDU_smpMod, _decode_ASDU_smpMod, _encode_ASDU_smpMod } from "../IEC61850/ASDU-smpMod.ta.mjs";
+import { GmidData, _decode_GmidData, _encode_GmidData } from "../IEC61850/GmidData.ta.mjs";
+
+
+/**
+ * @summary ASDU
+ * @description
+ *
+ * One sampled-values application service data unit.
+ * IEC 61850-9-2LE requires `svID`, `smpCnt`, `confRev`,
+ * `smpSynch`, and `seqData` in every ASDU. `datSet`,
+ * `refrTm`, `smpRate`, and `smpMod` may be omitted. The
+ * guide does not define `gmidData`.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * ASDU ::= SEQUENCE {
+ *     svID        [0] IMPLICIT VisibleString,
+ *     datSet        [1] IMPLICIT VisibleString OPTIONAL,
+ *     smpCnt        [2] IMPLICIT INTEGER(0..65535),
+ *     confRev        [3] IMPLICIT INTEGER(0..4294967295),
+ *     refrTm        [4] IMPLICIT UtcTime OPTIONAL,
+ *     smpSynch    [5] IMPLICIT INTEGER{none(0),local(1),global(2)} OPTIONAL,
+ *     smpRate        [6] IMPLICIT INTEGER(0..65535) OPTIONAL,
+ *     seqData        [7] IMPLICIT Data,
+ *     smpMod        [8] IMPLICIT INTEGER{
+ *         samplesPerNormalPeriod(0),
+ *         samplesPerSecond(1),
+ *         secondsPerSample(2)
+ *     } OPTIONAL,
+ *     gmidData    [9] IMPLICIT GmidData OPTIONAL,
+ *     ...
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class ASDU {
+    constructor (
+        /**
+         * @summary `svID`.
+         * @description
+         *
+         * Sampled-values identifier: a user-defined string
+         * subscribers match to select this stream. It must be
+         * unique among publishers. 9-2LE uses `xxxxMUnn01` for
+         * MSVCB01 and `xxxxMUnn02` for MSVCB02, where `xxxxMUnn`
+         * is the logical-device name (clause 7.1.4, Table 8).
+         *
+         * @public
+         * @readonly
+         */
+        readonly svID: VisibleString,
+        /**
+         * @summary `datSet`.
+         * @description
+         *
+         * Reference to the data-set name. Optional. 9-2LE fixes
+         * the set to `xxxxMUnn/LLN0$PhsMeas1` and does not send
+         * this field (`OptFlds` data-set is FALSE; clause 7.1.4).
+         *
+         * @public
+         * @readonly
+         */
+        readonly datSet: OPTIONAL<VisibleString>,
+        /**
+         * @summary `smpCnt`.
+         * @description
+         *
+         * Index of this sampled-values message. While the merging
+         * unit is synchronized, including hold-over, 9-2LE
+         * clause 7.2.2 resets it on the synchronizing pulse.
+         * After hold-over it still wraps on that boundary (3999
+         * for 80 samples per period at 50 Hz).
+         *
+         * @public
+         * @readonly
+         */
+        readonly smpCnt: INTEGER,
+        /**
+         * @summary `confRev`.
+         * @description
+         *
+         * Configuration revision. 9-2LE fixes both the dataset
+         * and the MSVCB contents, so this value is 1
+         * (clause 7.1.4, Table 8).
+         *
+         * @public
+         * @readonly
+         */
+        readonly confRev: INTEGER,
+        /**
+         * @summary `refrTm`.
+         * @description
+         *
+         * Refresh time: a UTC timestamp of the sample. Optional.
+         * 9-2LE may include or omit it (`OptFlds` refresh-time
+         * is TRUE or FALSE; clause 7.1.4). See `UtcTime`.
+         *
+         * @public
+         * @readonly
+         */
+        readonly refrTm: OPTIONAL<UtcTime>,
+        /**
+         * @summary `smpSynch`.
+         * @description
+         *
+         * Clock used to send the sampled values. Optional in
+         * the ASN.1; 9-2LE requires it (`OptFlds` sample
+         * synchronized is TRUE). `0` is none, `1` is a local
+         * clock, and `2` is a global clock. See `ASDU_smpSynch`.
+         *
+         * @public
+         * @readonly
+         */
+        readonly smpSynch: OPTIONAL<ASDU_smpSynch>,
+        /**
+         * @summary `smpRate`.
+         * @description
+         *
+         * Number of samples per nominal period. Optional. When
+         * `smpMod` is present, it selects whether this count is
+         * samples per nominal period, samples per second, or
+         * seconds per sample. 9-2LE preconfigures 80 (MSVCB01)
+         * or 256 (MSVCB02) and does not send this field
+         * (`OptFlds` sample-rate is FALSE; clause 7.1.4).
+         *
+         * @public
+         * @readonly
+         */
+        readonly smpRate: OPTIONAL<INTEGER>,
+        /**
+         * @summary `seqData`.
+         * @description
+         *
+         * Sequence of measured current and voltage values.
+         * Required. See `Data` for the 9-2LE `PhsMeas1` layout,
+         * scaling, and quality bits (Figure 5).
+         *
+         * @public
+         * @readonly
+         */
+        readonly seqData: Data,
+        /**
+         * @summary `smpMod`.
+         * @description
+         *
+         * How `smpRate` relates to the nominal period. Optional.
+         * See `ASDU_smpMod`.
+         *
+         * @public
+         * @readonly
+         */
+        readonly smpMod: OPTIONAL<ASDU_smpMod>,
+        /**
+         * @summary `gmidData`.
+         * @description
+         *
+         * Optional. The IEC 61850-9-2LE guide does not define
+         * this field.
+         *
+         * @public
+         * @readonly
+         */
+        readonly gmidData: OPTIONAL<GmidData>,
+        /**
+         * @summary Extensions that are not recognized.
+         * @public
+         * @readonly
+         */
+        readonly _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        if (typeof smpCnt === "bigint" ? (smpCnt < 0n || smpCnt > 65535n) : (smpCnt < 0 || smpCnt > 65535)) {
+            throw new ASN1OverflowError("ASDU.smpCnt violates INTEGER constraint");
+        }
+        if (typeof confRev === "bigint" ? (confRev < 0n || confRev > 4294967295n) : (confRev < 0 || confRev > 4294967295)) {
+            throw new ASN1OverflowError("ASDU.confRev violates INTEGER constraint");
+        }
+        if (smpRate !== undefined && (typeof smpRate === "bigint" ? (smpRate < 0n || smpRate > 65535n) : (smpRate < 0 || smpRate > 65535))) {
+            throw new ASN1OverflowError("ASDU.smpRate violates INTEGER constraint");
+        }
+    }
+
+    /**
+     * @summary Restructures an object into a ASDU
+     * @description
+     * 
+     * This takes an `object` and converts it to a `ASDU`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `ASDU`.
+     * @returns {ASDU}
+     */
+    public static _from_object (_o: { [_K in keyof (ASDU)]: (ASDU)[_K] }): ASDU {
+        return new ASDU(_o.svID, _o.datSet, _o.smpCnt, _o.confRev, _o.refrTm, _o.smpSynch, _o.smpRate, _o.seqData, _o.smpMod, _o.gmidData, _o._unrecognizedExtensionsList);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of ASDU
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_ASDU: $.ComponentSpec[] = [
+    new $.ComponentSpec("svID", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("datSet", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("smpCnt", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("confRev", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("refrTm", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("smpSynch", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("smpRate", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("seqData", false, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("smpMod", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("gmidData", true, $.hasTag(_TagClass.context, 9))
+];
+
+/**
+ * @summary The Trailing Root Component Types of ASDU
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_ASDU: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of ASDU
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_ASDU: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_ASDU: $.ASN1Decoder<ASDU> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) ASDU
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_ASDU (el: _Element): ASDU {
+    if (!_cached_decoder_for_ASDU) { _cached_decoder_for_ASDU = function (el: _Element): ASDU {
+    let svID!: VisibleString;
+    let datSet: OPTIONAL<VisibleString>;
+    let smpCnt!: INTEGER;
+    let confRev!: INTEGER;
+    let refrTm: OPTIONAL<UtcTime>;
+    let smpSynch: OPTIONAL<ASDU_smpSynch>;
+    let smpRate: OPTIONAL<INTEGER>;
+    let seqData!: Data;
+    let smpMod: OPTIONAL<ASDU_smpMod>;
+    let gmidData: OPTIONAL<GmidData>;
+    const _unrecognizedExtensionsList: _Element[] = [];
+    const callbacks: $.DecodingMap = {
+        "svID": (_el: _Element): void => { svID = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(_el); },
+        "datSet": (_el: _Element): void => { datSet = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(_el); },
+        "smpCnt": (_el: _Element): void => { smpCnt = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "confRev": (_el: _Element): void => { confRev = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "refrTm": (_el: _Element): void => { refrTm = $._decode_implicit<UtcTime>(() => _decode_UtcTime)(_el); },
+        "smpSynch": (_el: _Element): void => { smpSynch = $._decode_implicit<ASDU_smpSynch>(() => _decode_ASDU_smpSynch)(_el); },
+        "smpRate": (_el: _Element): void => { smpRate = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "seqData": (_el: _Element): void => { seqData = $._decode_implicit<Data>(() => _decode_Data)(_el); },
+        "smpMod": (_el: _Element): void => { smpMod = $._decode_implicit<ASDU_smpMod>(() => _decode_ASDU_smpMod)(_el); },
+        "gmidData": (_el: _Element): void => { gmidData = $._decode_implicit<GmidData>(() => _decode_GmidData)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_ASDU,
+        _extension_additions_list_spec_for_ASDU,
+        _root_component_type_list_2_spec_for_ASDU,
+        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
+    );
+    return new ASDU(
+        svID,
+        datSet,
+        smpCnt,
+        confRev,
+        refrTm,
+        smpSynch,
+        smpRate,
+        seqData,
+        smpMod,
+        gmidData,
+        _unrecognizedExtensionsList
+    );
+}; }
+    return _cached_decoder_for_ASDU(el);
+}
+
+let _cached_encoder_for_ASDU: $.ASN1Encoder<ASDU> | null = null;
+
+/**
+ * @summary Encodes a(n) ASDU into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The ASDU, encoded as an ASN.1 Element.
+ */
+export
+function _encode_ASDU (value: ASDU, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ASDU) { _cached_encoder_for_ASDU = function (value: ASDU): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeVisibleString, $.BER)(value.svID, $.BER),
+            /* IF_ABSENT  */ ((value.datSet === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeVisibleString, $.BER)(value.datSet, $.BER)),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER)(value.smpCnt, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 3, () => $._encodeInteger, $.BER)(value.confRev, $.BER),
+            /* IF_ABSENT  */ ((value.refrTm === undefined) ? undefined : $._encode_implicit(_TagClass.context, 4, () => _encode_UtcTime, $.BER)(value.refrTm, $.BER)),
+            /* IF_ABSENT  */ ((value.smpSynch === undefined) ? undefined : $._encode_implicit(_TagClass.context, 5, () => _encode_ASDU_smpSynch, $.BER)(value.smpSynch, $.BER)),
+            /* IF_ABSENT  */ ((value.smpRate === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => $._encodeInteger, $.BER)(value.smpRate, $.BER)),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 7, () => _encode_Data, $.BER)(value.seqData, $.BER),
+            /* IF_ABSENT  */ ((value.smpMod === undefined) ? undefined : $._encode_implicit(_TagClass.context, 8, () => _encode_ASDU_smpMod, $.BER)(value.smpMod, $.BER)),
+            /* IF_ABSENT  */ ((value.gmidData === undefined) ? undefined : $._encode_implicit(_TagClass.context, 9, () => _encode_GmidData, $.BER)(value.gmidData, $.BER))
+        ],
+        (value._unrecognizedExtensionsList ? value._unrecognizedExtensionsList : []),
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_ASDU(value, elGetter);
+}
+
+
+/* eslint-enable */

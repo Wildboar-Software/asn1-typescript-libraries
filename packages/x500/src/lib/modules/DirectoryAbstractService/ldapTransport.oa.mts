@@ -10,7 +10,7 @@ import {
     _encode_LdapArgument,
 } from "../DirectoryAbstractService/LdapArgument.ta.mjs";
 import {
-    LDAPMessage,
+    type LDAPMessage,
     _decode_LDAPMessage,
     _encode_LDAPMessage,
 } from "@wildboar/ldap";

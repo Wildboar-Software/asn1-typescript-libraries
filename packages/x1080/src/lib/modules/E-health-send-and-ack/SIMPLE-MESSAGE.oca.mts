@@ -84,7 +84,7 @@ export interface SIMPLE_MESSAGE<
      * Unique identifier of the simple message. ITU-T Rec.
      * X.1080.1 (10/2011) module E-health-send-and-ack.
      */
-    readonly '&id'?: OBJECT_IDENTIFIER;
+    readonly '&id': OBJECT_IDENTIFIER;
     /**
      * @summary &Type
      * @description
@@ -100,7 +100,7 @@ export interface SIMPLE_MESSAGE<
      * `ERROR` objects that may be reported for this message.
      * ITU-T Rec. X.1080.1 (10/2011) module E-health-send-and-ack.
      */
-    readonly '&Errors'?: ERROR[];
+    readonly '&Errors': ERROR[];
     /**
      * @summary &registration-info
      * @description
@@ -109,7 +109,7 @@ export interface SIMPLE_MESSAGE<
      * `explicit` is a UniversalString. ITU-T Rec. X.1080.1
      * (10/2011) module E-health-send-and-ack.
      */
-    readonly '&registration-info'?:
+    readonly '&registration-info':
         | { implicit: UTF8String }
         | { explicit: UniversalString }
         | _Element;

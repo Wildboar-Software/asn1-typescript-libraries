@@ -56,26 +56,36 @@ export type SubjectPublicKeyInfoJSON = {
  *
  */
 export class SubjectPublicKeyInfo {
+    /**
+     * @summary `algorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: AlgorithmIdentifier;
+
+    /**
+     * @summary `subjectPublicKey`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectPublicKey: PublicKey;
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm: AlgorithmIdentifier,
-        /**
-         * @summary `subjectPublicKey`.
-         * @public
-         * @readonly
-         */
-        readonly subjectPublicKey: PublicKey,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        algorithm: AlgorithmIdentifier,
+        subjectPublicKey: PublicKey,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.algorithm = algorithm;
+        this.subjectPublicKey = subjectPublicKey;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SubjectPublicKeyInfo

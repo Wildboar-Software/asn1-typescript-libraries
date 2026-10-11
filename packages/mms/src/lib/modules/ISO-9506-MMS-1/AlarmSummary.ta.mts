@@ -12,19 +12,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-// export { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 import { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
-// export { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
 import { EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
-// export { EC_State, EC_State_disabled /* IMPORTED_LONG_NAMED_INTEGER */, disabled /* IMPORTED_SHORT_NAMED_INTEGER */, EC_State_idle /* IMPORTED_LONG_NAMED_INTEGER */, EC_State_active /* IMPORTED_LONG_NAMED_INTEGER */, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
 import { AlarmSummary_unacknowledgedState, _decode_AlarmSummary_unacknowledgedState, _encode_AlarmSummary_unacknowledgedState } from "../ISO-9506-MMS-1/AlarmSummary-unacknowledgedState.ta.mjs";
-// export { AlarmSummary_unacknowledgedState, AlarmSummary_unacknowledgedState_none /* IMPORTED_LONG_NAMED_INTEGER */, none /* IMPORTED_SHORT_NAMED_INTEGER */, AlarmSummary_unacknowledgedState_active /* IMPORTED_LONG_NAMED_INTEGER */, AlarmSummary_unacknowledgedState_idle /* IMPORTED_LONG_NAMED_INTEGER */, AlarmSummary_unacknowledgedState_both /* IMPORTED_LONG_NAMED_INTEGER */, both /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AlarmSummary_unacknowledgedState, _encode_AlarmSummary_unacknowledgedState } from "../ISO-9506-MMS-1/AlarmSummary-unacknowledgedState.ta.mjs";
 import { Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
-// export { Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
 import { EN_Additional_Detail, _decode_EN_Additional_Detail, _encode_EN_Additional_Detail } from "../ISO-9506-MMS-1/EN-Additional-Detail.ta.mjs";
-// export { EN_Additional_Detail, _decode_EN_Additional_Detail, _encode_EN_Additional_Detail } from "../ISO-9506-MMS-1/EN-Additional-Detail.ta.mjs";
 import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-Module-1/EventTime.ta.mjs";
-// export { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-Module-1/EventTime.ta.mjs";
 
 
 /**

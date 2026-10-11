@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlterEventEnrollment_Response_currentState, _decode_AlterEventEnrollment_Response_currentState, _encode_AlterEventEnrollment_Response_currentState } from "../ISO-9506-MMS-1/AlterEventEnrollment-Response-currentState.ta.mjs";
-// export { AlterEventEnrollment_Response_currentState, _decode_AlterEventEnrollment_Response_currentState, _encode_AlterEventEnrollment_Response_currentState } from "../ISO-9506-MMS-1/AlterEventEnrollment-Response-currentState.ta.mjs";
 import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-Module-1/EventTime.ta.mjs";
-// export { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-Module-1/EventTime.ta.mjs";
 
 
 /**

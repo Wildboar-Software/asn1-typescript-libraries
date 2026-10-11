@@ -13,11 +13,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CompoundRepertoireIdent, _encode_CompoundRepertoireIdent, CompoundRepertoireIdent } from "../CDS/CompoundRepertoireIdent.ta.mjs";
-// export { CompoundRepertoireIdent, _decode_CompoundRepertoireIdent, _encode_CompoundRepertoireIdent } from "../CDS/CompoundRepertoireIdent.ta.mjs";
 import { _decode_CompoundEmphasisIdent, _encode_CompoundEmphasisIdent, type CompoundEmphasisIdent } from "../CDS/CompoundEmphasisIdent.ta.mjs";
-// export { CompoundEmphasisIdent, _decode_CompoundEmphasisIdent, _encode_CompoundEmphasisIdent } from "../CDS/CompoundEmphasisIdent.ta.mjs";
 import { _decode_CompoundColourIdent, _encode_CompoundColourIdent, CompoundColourIdent } from "../CDS/CompoundColourIdent.ta.mjs";
-// export { CompoundColourIdent, _decode_CompoundColourIdent, _encode_CompoundColourIdent } from "../CDS/CompoundColourIdent.ta.mjs";
 
 
 /**

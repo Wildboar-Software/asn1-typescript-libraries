@@ -34,12 +34,12 @@ function Forward (OperationSet: OPERATION[]): OPERATION[] {
         ...OperationSet,
         ...OperationSet
             .flatMap((op1: OPERATION) => op1["&Linked"]
-                ?.flatMap((op2: OPERATION) => op2["&Linked"] ?? []) ?? []),
+                ?.flatMap((op2: OPERATION) => op2["&Linked"] ?? []) ?? []) ?? [],
         ...OperationSet
             .flatMap((op1: OPERATION) => op1["&Linked"]
                 ?.flatMap((op2: OPERATION) => op2["&Linked"]
                     ?.flatMap((op3: OPERATION) => op3["&Linked"]
-                        ?.flatMap((op4: OPERATION) => op4["&Linked"]) ?? []) ?? []) ?? []),
+                        ?.flatMap((op4: OPERATION) => op4["&Linked"] ?? []) ?? []) ?? []) ?? []) ?? [],
     ];
 }
 

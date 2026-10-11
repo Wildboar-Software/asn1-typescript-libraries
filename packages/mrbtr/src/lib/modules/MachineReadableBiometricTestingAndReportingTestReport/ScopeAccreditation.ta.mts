@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AScopeAccreditation, _enum_for_AScopeAccreditation, _decode_AScopeAccreditation, _encode_AScopeAccreditation } from "../MachineReadableBiometricTestingAndReportingTestReport/AScopeAccreditation.ta.mjs";
-// export { AScopeAccreditation, _enum_for_AScopeAccreditation, AScopeAccreditation_iso_iec19795_1_2006 /* IMPORTED_LONG_ENUMERATION_ITEM */, iso_iec19795_1_2006 /* IMPORTED_SHORT_ENUMERATION_ITEM */, AScopeAccreditation_iso_iec19795_1_2021 /* IMPORTED_LONG_ENUMERATION_ITEM */, iso_iec19795_1_2021 /* IMPORTED_SHORT_ENUMERATION_ITEM */, AScopeAccreditation_iso_iec19795_3 /* IMPORTED_LONG_ENUMERATION_ITEM */, iso_iec19795_3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, AScopeAccreditation_iso_iec30107_4 /* IMPORTED_LONG_ENUMERATION_ITEM */, iso_iec30107_4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AScopeAccreditation, _encode_AScopeAccreditation } from "../MachineReadableBiometricTestingAndReportingTestReport/AScopeAccreditation.ta.mjs";
 
 
 /**

@@ -11,35 +11,20 @@ import {
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { CreateArgument, _decode_CreateArgument, _encode_CreateArgument } from "../DFRAbstractService/CreateArgument.ta.mjs";
-// export { CreateArgument, _decode_CreateArgument, _encode_CreateArgument } from "../DFRAbstractService/CreateArgument.ta.mjs";
 import { CreateResult, _decode_CreateResult, _encode_CreateResult } from "../DFRAbstractService/CreateResult.ta.mjs";
-// export { CreateResult, _decode_CreateResult, _encode_CreateResult } from "../DFRAbstractService/CreateResult.ta.mjs";
 import { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
-// export { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
 import { accessError } from "../DFRAbstractService/accessError.oa.mjs";
-// export { accessError } from "../DFRAbstractService/accessError.oa.mjs";
 import { attributeError } from "../DFRAbstractService/attributeError.oa.mjs";
-// export { attributeError } from "../DFRAbstractService/attributeError.oa.mjs";
 import { interServerAccessError } from "../DFRAbstractService/interServerAccessError.oa.mjs";
-// export { interServerAccessError } from "../DFRAbstractService/interServerAccessError.oa.mjs";
 import { nameError } from "../DFRAbstractService/nameError.oa.mjs";
-// export { nameError } from "../DFRAbstractService/nameError.oa.mjs";
 import { referentAccessError } from "../DFRAbstractService/referentAccessError.oa.mjs";
-// export { referentAccessError } from "../DFRAbstractService/referentAccessError.oa.mjs";
 import { securityError } from "../DFRAbstractService/securityError.oa.mjs";
-// export { securityError } from "../DFRAbstractService/securityError.oa.mjs";
 import { serviceError } from "../DFRAbstractService/serviceError.oa.mjs";
-// export { serviceError } from "../DFRAbstractService/serviceError.oa.mjs";
 import { updateError } from "../DFRAbstractService/updateError.oa.mjs";
-// export { updateError } from "../DFRAbstractService/updateError.oa.mjs";
 import { versionManagementError } from "../DFRAbstractService/versionManagementError.oa.mjs";
-// export { versionManagementError } from "../DFRAbstractService/versionManagementError.oa.mjs";
 import { id_opcode_create } from "../DFRAbstractService/id-opcode-create.va.mjs";
-// export { id_opcode_create } from "../DFRAbstractService/id-opcode-create.va.mjs";
 
 
 /**

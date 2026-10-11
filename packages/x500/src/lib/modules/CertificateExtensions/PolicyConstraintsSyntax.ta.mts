@@ -76,11 +76,9 @@ export class PolicyConstraintsSyntax {
      * @returns {PolicyConstraintsSyntax}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof PolicyConstraintsSyntax]: PolicyConstraintsSyntax[_K];
             }
-        >
     ): PolicyConstraintsSyntax {
         return new PolicyConstraintsSyntax(
             _o.requireExplicitPolicy,

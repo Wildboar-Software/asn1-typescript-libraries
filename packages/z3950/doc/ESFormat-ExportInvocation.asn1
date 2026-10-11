@@ -1,0 +1,52 @@
+ESFormat-ExportInvocation
+{z39-50-extendedService exportInvocation(7)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    InternationalString, IntUnit
+        FROM Z39-50-APDU-2001
+
+    ExportSpecification
+        FROM ESFormat-ExportSpecification
+    ;
+
+ExportInvocation ::= CHOICE {
+    esRequest       [1] IMPLICIT SEQUENCE {
+        toKeep          [1] ClientPartToKeep,
+        notToKeep       [2] ClientPartNotToKeep},
+    taskPackage     [2] IMPLICIT SEQUENCE {
+        clientPart      [1] ClientPartToKeep,
+        serverPart      [2] ServerPart OPTIONAL
+    }
+}
+
+ClientPartToKeep ::= SEQUENCE {
+    exportSpec      [1] CHOICE {
+        packageName     [1] IMPLICIT InternationalString,
+        packageSpec     [2] ExportSpecification
+    },
+    numberOfCopies  [2] IMPLICIT INTEGER
+}
+
+ClientPartNotToKeep ::= SEQUENCE {
+    resultSetId [1] IMPLICIT InternationalString,
+    records     [2] CHOICE {
+        all         [1] IMPLICIT NULL,
+        ranges      [2] IMPLICIT SEQUENCE OF SEQUENCE {
+            start       [1] IMPLICIT INTEGER,
+            count       [2] IMPLICIT INTEGER OPTIONAL
+            -- Count may be omitted only on last range,
+            -- to indicate "all remaining records beginning with 'start'."
+        }
+    }
+}
+
+ServerPart ::= SEQUENCE {
+    estimatedQuantity   [1] IMPLICIT IntUnit OPTIONAL,
+    quantitySoFar       [2] IMPLICIT IntUnit OPTIONAL,
+    estimatedCost       [3] IMPLICIT IntUnit OPTIONAL,
+    costSoFar           [4] IMPLICIT IntUnit OPTIONAL
+}
+
+END

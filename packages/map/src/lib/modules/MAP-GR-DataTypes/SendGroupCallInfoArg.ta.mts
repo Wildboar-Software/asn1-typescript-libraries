@@ -1,81 +1,20 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedInfo, _enum_for_RequestedInfo, RequestedInfo_anchorMSC_AddressAndASCI_CallReference /* IMPORTED_LONG_ENUMERATION_ITEM */, anchorMSC_AddressAndASCI_CallReference /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription /* IMPORTED_LONG_ENUMERATION_ITEM */, imsiAndAdditionalInfoAndAdditionalSubscription /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedInfo, _encode_RequestedInfo } from "../MAP-GR-DataTypes/RequestedInfo.ta.mjs";
-import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
-import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
 import { GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { TMSI, _decode_TMSI, _encode_TMSI } from "../MAP-CommonDataTypes/TMSI.ta.mjs";
-import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
-import { TalkerPriority, _enum_for_TalkerPriority, TalkerPriority_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_privileged /* IMPORTED_LONG_ENUMERATION_ITEM */, privileged /* IMPORTED_SHORT_ENUMERATION_ITEM */, TalkerPriority_emergency /* IMPORTED_LONG_ENUMERATION_ITEM */, emergency /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TalkerPriority, _encode_TalkerPriority } from "../MAP-GR-DataTypes/TalkerPriority.ta.mjs";
-import { Cksn, _decode_Cksn, _encode_Cksn } from "../MAP-MS-DataTypes/Cksn.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
+import { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo, _enum_for_RequestedInfo } from "../MAP-GR-DataTypes/RequestedInfo.ta.mjs";
+import { TalkerPriority, _decode_TalkerPriority, _encode_TalkerPriority, _enum_for_TalkerPriority } from "../MAP-GR-DataTypes/TalkerPriority.ta.mjs";
+import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
+import { Cksn, _decode_Cksn, _encode_Cksn } from "../MAP-MS-DataTypes/Cksn.ta.mjs";
+import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
+import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
 
 
 /**

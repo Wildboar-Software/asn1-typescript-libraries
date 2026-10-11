@@ -11,15 +11,10 @@ import {
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { DfrBindArgument, _decode_DfrBindArgument, _encode_DfrBindArgument } from "../DFRAbstractService/DfrBindArgument.ta.mjs";
-// export { DfrBindArgument, _decode_DfrBindArgument, _encode_DfrBindArgument } from "../DFRAbstractService/DfrBindArgument.ta.mjs";
 import { DfrBindResult, _decode_DfrBindResult, _encode_DfrBindResult } from "../DFRAbstractService/DfrBindResult.ta.mjs";
-// export { DfrBindResult, _decode_DfrBindResult, _encode_DfrBindResult } from "../DFRAbstractService/DfrBindResult.ta.mjs";
 import { dfrBindError } from "../DFRAbstractService/dfrBindError.oa.mjs";
-// export { dfrBindError } from "../DFRAbstractService/dfrBindError.oa.mjs";
 
 
 /**

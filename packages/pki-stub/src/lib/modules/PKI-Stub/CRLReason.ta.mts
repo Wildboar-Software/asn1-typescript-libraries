@@ -12,19 +12,22 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-export enum _enum_for_CRLReason {
-    unspecified = 0,
-    keyCompromise = 1,
-    cACompromise = 2,
-    affiliationChanged = 3,
-    superseded = 4,
-    cessationOfOperation = 5,
-    certificateHold = 6,
-    removeFromCRL = 8,
-    privilegeWithdrawn = 9,
-    aACompromise = 10,
-    weakAlgorithmOrKey = 11,
-}
+export const _enum_for_CRLReason = {
+    unspecified: 0,
+    keyCompromise: 1,
+    cACompromise: 2,
+    affiliationChanged: 3,
+    superseded: 4,
+    cessationOfOperation: 5,
+    certificateHold: 6,
+    removeFromCRL: 8,
+    privilegeWithdrawn: 9,
+    aACompromise: 10,
+    weakAlgorithmOrKey: 11,
+} as const;
+
+export type _enum_for_CRLReason =
+    (typeof _enum_for_CRLReason)[keyof typeof _enum_for_CRLReason];
 
 /**
  * @summary CRLReason

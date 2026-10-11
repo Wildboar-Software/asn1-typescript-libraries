@@ -189,11 +189,9 @@ export class EnhancedCertificateAssertion {
      * @returns {EnhancedCertificateAssertion}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof EnhancedCertificateAssertion]: EnhancedCertificateAssertion[_K];
             }
-        >
     ): EnhancedCertificateAssertion {
         return new EnhancedCertificateAssertion(
             _o.serialNumber,

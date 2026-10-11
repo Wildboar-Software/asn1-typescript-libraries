@@ -21,9 +21,5 @@
   "include": [
     "**/*.mts"
   ],
-  "references": [
-    {
-      "path": "../x500/tsconfig.lib.json"
-    }
-  ]
+  "references": []
 }

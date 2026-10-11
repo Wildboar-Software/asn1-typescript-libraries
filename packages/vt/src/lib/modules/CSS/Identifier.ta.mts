@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identifier_Item, _decode_Identifier_Item, _encode_Identifier_Item } from "../CSS/Identifier-Item.ta.mjs";
-// export { Identifier_Item, _decode_Identifier_Item, _encode_Identifier_Item } from "../CSS/Identifier-Item.ta.mjs";
 
 
 /**

@@ -94,11 +94,9 @@ export class AdministerPasswordResultData implements CommonResultsSeq {
      * @returns {AdministerPasswordResultData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof AdministerPasswordResultData]: AdministerPasswordResultData[_K];
             }
-        >
     ): AdministerPasswordResultData {
         return new AdministerPasswordResultData(
             _o._unrecognizedExtensionsList,

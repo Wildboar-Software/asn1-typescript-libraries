@@ -10,9 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { ALGORITHM_IDENTIFIER } from "../CryptographicInformationFramework/ALGORITHM-IDENTIFIER.oca.mjs";
-// export { ALGORITHM_IDENTIFIER } from "../CryptographicInformationFramework/ALGORITHM-IDENTIFIER.oca.mjs";
 import { DigestAlgorithms_Union0_Intersection0_Element } from "../CryptographicInformationFramework/DigestAlgorithms-Union0-Intersection0-Element.oa.mjs";
-// export { DigestAlgorithms_Union0_Intersection0_Element } from "../CryptographicInformationFramework/DigestAlgorithms-Union0-Intersection0-Element.oa.mjs";
 
 
 /**

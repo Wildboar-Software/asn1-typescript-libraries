@@ -11,13 +11,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { accessError_ParameterType_Item, _decode_accessError_ParameterType_Item, _encode_accessError_ParameterType_Item } from "../DFRAbstractService/accessError-ParameterType-Item.ta.mjs";
-// export { accessError_ParameterType_Item, _decode_accessError_ParameterType_Item, _encode_accessError_ParameterType_Item } from "../DFRAbstractService/accessError-ParameterType-Item.ta.mjs";
 import { id_errcode_access_error } from "../DFRAbstractService/id-errcode-access-error.va.mjs";
-// export { id_errcode_access_error } from "../DFRAbstractService/id-errcode-access-error.va.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 

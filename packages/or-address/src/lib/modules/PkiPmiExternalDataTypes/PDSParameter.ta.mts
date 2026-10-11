@@ -2,9 +2,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
-    PrintableString,
-    TeletexString,
+    type OPTIONAL,
+    type PrintableString,
+    type TeletexString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import teletexToString from "@wildboar/teletex";
@@ -28,20 +28,26 @@ import teletexToString from "@wildboar/teletex";
  *
  */
 export class PDSParameter {
+    /**
+     * @summary `printable_string`.
+     * @public
+     * @readonly
+     */
+    public readonly printable_string?: OPTIONAL<PrintableString>;
+    /**
+     * @summary `teletex_string`.
+     * @public
+     * @readonly
+     */
+    public readonly teletex_string?: OPTIONAL<TeletexString>;
+
     constructor(
-        /**
-         * @summary `printable_string`.
-         * @public
-         * @readonly
-         */
-        readonly printable_string?: OPTIONAL<PrintableString>,
-        /**
-         * @summary `teletex_string`.
-         * @public
-         * @readonly
-         */
-        readonly teletex_string?: OPTIONAL<TeletexString>
-    ) {}
+        printable_string?: OPTIONAL<PrintableString>,
+        teletex_string?: OPTIONAL<TeletexString>
+    ) {
+        this.printable_string = printable_string;
+        this.teletex_string = teletex_string;
+    }
 
     /**
      * @summary Restructures an object into a PDSParameter
@@ -83,7 +89,7 @@ export class PDSParameter {
      * @public
      * @function
      */
-    public toJSON(): { printable_string?: string, teletex_string?: string } {
+    public toJSON(): { printable_string?: string | undefined, teletex_string?: string | undefined } {
         return {
             printable_string: this.printable_string?.toString(),
             teletex_string: this.teletex_string

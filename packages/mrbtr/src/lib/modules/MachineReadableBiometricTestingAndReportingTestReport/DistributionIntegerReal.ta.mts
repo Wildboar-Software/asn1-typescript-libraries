@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExpressionPointIntegerReal, _decode_ExpressionPointIntegerReal, _encode_ExpressionPointIntegerReal } from "../MachineReadableBiometricTestingAndReportingTestReport/ExpressionPointIntegerReal.ta.mjs";
-// export { ExpressionPointIntegerReal, _decode_ExpressionPointIntegerReal, _encode_ExpressionPointIntegerReal } from "../MachineReadableBiometricTestingAndReportingTestReport/ExpressionPointIntegerReal.ta.mjs";
 
 
 /**

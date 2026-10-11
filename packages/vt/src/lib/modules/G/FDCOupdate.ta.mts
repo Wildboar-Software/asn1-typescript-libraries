@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FDCOupdate_Item, _decode_FDCOupdate_Item, _encode_FDCOupdate_Item } from "../G/FDCOupdate-Item.ta.mjs";
-// export { FDCOupdate_Item, _decode_FDCOupdate_Item, _encode_FDCOupdate_Item } from "../G/FDCOupdate-Item.ta.mjs";
 
 
 /**

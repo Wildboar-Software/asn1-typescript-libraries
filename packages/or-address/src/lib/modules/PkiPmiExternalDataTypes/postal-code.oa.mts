@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import {
-    PostalCode,
+    type PostalCode,
     _decode_PostalCode,
     _encode_PostalCode,
 } from "../PkiPmiExternalDataTypes/PostalCode.ta.mjs";

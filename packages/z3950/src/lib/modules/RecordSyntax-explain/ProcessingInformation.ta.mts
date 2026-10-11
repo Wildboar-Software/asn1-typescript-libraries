@@ -1,0 +1,303 @@
+/* eslint-disable */
+import {
+    EXTERNAL,
+    OBJECT_IDENTIFIER,
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
+import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
+import { ProcessingInformation_processingContext, _decode_ProcessingInformation_processingContext, _encode_ProcessingInformation_processingContext } from "../RecordSyntax-explain/ProcessingInformation-processingContext.ta.mjs";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
+
+
+/**
+ * @summary ProcessingInformation
+ * @description
+ * How the server believes the client should process data for presentation to
+ * the user. Instructions are defined externally. For one database and one
+ * processing context there may be several sets, distinguished by name, and each
+ * set may be offered in more than one abstract syntax, distinguished by object
+ * identifier. ANSI/NISO Z39.50-2003 §3.2.10.3.14.
+ * 
+ * Search with ExplainCategory `Processing` (table 2). Keys are DatabaseName,
+ * ProcessingContext, ProcessingName, and ProcessingOID. ProcessingContext terms
+ * are Access, Search, Retrieval, RecordPresentation, and RecordHandling. The
+ * search may also use HumanStringLanguage, DateAdded, DateChanged, or
+ * DateExpires. ANSI/NISO Z39.50-2003 §3.2.10.1.2 and §3.2.10.1.3.
+ * 
+ * There are no non-key brief elements. Element set `description` retrieves
+ * everything except the instructions. The instructions are mandatory in a full
+ * record. ANSI/NISO Z39.50-2003 ASN.1 comment 1.
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * ProcessingInformation ::= SEQUENCE {
+ *     commonInfo          [0] IMPLICIT CommonInfo OPTIONAL,
+ *     -- Key elements follow:
+ *     databaseName        [1] IMPLICIT DatabaseName,
+ * 
+ *     processingContext   [2] IMPLICIT INTEGER {
+ *         access              (0),     -- e.g. choosing databases
+ *         search              (1),     -- e.g. "search strategies" or search
+ *         -- forms
+ *         retrieval           (2),     -- e.g. recommended element
+ *         -- combinations
+ *         record-presentation (3),     -- display of retrieved records
+ *         record-handling     (4)      -- handling (e.g. saving) of retrieved
+ *     -- records
+ *     },
+ *     name                [3] IMPLICIT InternationalString,
+ *     oid                 [4] IMPLICIT OBJECT IDENTIFIER,
+ *     -- No non-key brief elements
+ *     -- Non-brief elements follow:
+ *     description         [5] IMPLICIT HumanString OPTIONAL,
+ *     -- Use element set name 'description' to retrieve all except instructions.
+ *     instructions        [6] IMPLICIT EXTERNAL OPTIONAL
+ *     -- mandatory in full record
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class ProcessingInformation {
+    /**
+     * @summary `commonInfo`.
+     * @description
+     * Dates this Explain record was added and last changed, when it expires,
+     * and the language of its human-readable text. Element set `B` includes
+     * this component except `otherInfo`. DateAdded, DateChanged, and
+     * DateExpires search these dates. ANSI/NISO Z39.50-2003 §3.2.10.3,
+     * §3.2.10.1.3; ASN.1 comment 1.
+     * @public
+     * @readonly
+     */
+    readonly commonInfo: OPTIONAL<CommonInfo>;
+    /**
+     * @summary `databaseName`.
+     * @description
+     * Full name of the database these instructions apply to. Key, searched with
+     * DatabaseName. ANSI/NISO Z39.50-2003 §3.2.10.3.14; Appendix ATR, table 1.
+     * @public
+     * @readonly
+     */
+    readonly databaseName: DatabaseName;
+    /**
+     * @summary `processingContext`.
+     * @description
+     * Context these instructions apply to: access, search, retrieval, record
+     * presentation, or record handling. Key, searched with ProcessingContext.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.14; Appendix ATR, table 3.
+     * @public
+     * @readonly
+     */
+    readonly processingContext: ProcessingInformation_processingContext;
+    /**
+     * @summary `name`.
+     * @description
+     * Name of this set of instructions. Key, searched with ProcessingName.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.14.
+     * @public
+     * @readonly
+     */
+    readonly name: InternationalString;
+    /**
+     * @summary `oid`.
+     * @description
+     * Object identifier of the abstract syntax of the externally defined
+     * instructions. Key, searched with ProcessingOID. As a search term, version
+     * 2 should use a dotted decimal character string; version 3 should use an
+     * object identifier. ANSI/NISO Z39.50-2003 Appendix ATR, note 4.
+     * @public
+     * @readonly
+     */
+    readonly oid: OBJECT_IDENTIFIER;
+    /**
+     * @summary `description`.
+     * @description
+     * Human-readable description of the instructions. Included when the element
+     * set name is `description`. ANSI/NISO Z39.50-2003 §3.2.10.3.14.
+     * @public
+     * @readonly
+     */
+    readonly description: OPTIONAL<HumanString>;
+    /**
+     * @summary `instructions`.
+     * @description
+     * Machine-processable instructions, defined outside this standard, in the
+     * abstract syntax identified by the object identifier. Omitted from element
+     * set `description`. Mandatory in a full record. ANSI/NISO Z39.50-2003
+     * §3.2.10.3.14.
+     * @public
+     * @readonly
+     */
+    readonly instructions: OPTIONAL<EXTERNAL>;
+
+    constructor (
+        commonInfo: OPTIONAL<CommonInfo>,
+        databaseName: DatabaseName,
+        processingContext: ProcessingInformation_processingContext,
+        name: InternationalString,
+        oid: OBJECT_IDENTIFIER,
+        description: OPTIONAL<HumanString>,
+        instructions: OPTIONAL<EXTERNAL>
+    ) {
+        this.commonInfo = commonInfo;
+        this.databaseName = databaseName;
+        this.processingContext = processingContext;
+        this.name = name;
+        this.oid = oid;
+        this.description = description;
+        this.instructions = instructions;
+    }
+
+    /**
+     * @summary Restructures an object into a ProcessingInformation
+     * @description
+     * 
+     * This takes an `object` and converts it to a `ProcessingInformation`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `ProcessingInformation`.
+     * @returns {ProcessingInformation}
+     */
+    public static _from_object (_o: { [_K in keyof (ProcessingInformation)]: (ProcessingInformation)[_K] }): ProcessingInformation {
+        return new ProcessingInformation(_o.commonInfo, _o.databaseName, _o.processingContext, _o.name, _o.oid, _o.description, _o.instructions);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of ProcessingInformation
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_ProcessingInformation: $.ComponentSpec[] = [
+    new $.ComponentSpec("commonInfo", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("databaseName", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("processingContext", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("name", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("oid", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("instructions", true, $.hasTag(_TagClass.context, 6))
+];
+
+/**
+ * @summary The Trailing Root Component Types of ProcessingInformation
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_ProcessingInformation: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of ProcessingInformation
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_ProcessingInformation: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_ProcessingInformation: $.ASN1Decoder<ProcessingInformation> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) ProcessingInformation
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_ProcessingInformation (el: _Element): ProcessingInformation {
+    if (!_cached_decoder_for_ProcessingInformation) { _cached_decoder_for_ProcessingInformation = function (el: _Element): ProcessingInformation {
+    let commonInfo: OPTIONAL<CommonInfo>;
+    let databaseName!: DatabaseName;
+    let processingContext!: ProcessingInformation_processingContext;
+    let name!: InternationalString;
+    let oid!: OBJECT_IDENTIFIER;
+    let description: OPTIONAL<HumanString>;
+    let instructions: OPTIONAL<EXTERNAL>;
+    const callbacks: $.DecodingMap = {
+        "commonInfo": (_el: _Element): void => { commonInfo = $._decode_implicit<CommonInfo>(() => _decode_CommonInfo)(_el); },
+        "databaseName": (_el: _Element): void => { databaseName = $._decode_implicit<DatabaseName>(() => _decode_DatabaseName)(_el); },
+        "processingContext": (_el: _Element): void => { processingContext = $._decode_implicit<ProcessingInformation_processingContext>(() => _decode_ProcessingInformation_processingContext)(_el); },
+        "name": (_el: _Element): void => { name = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); },
+        "oid": (_el: _Element): void => { oid = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
+        "description": (_el: _Element): void => { description = $._decode_implicit<HumanString>(() => _decode_HumanString)(_el); },
+        "instructions": (_el: _Element): void => { instructions = $._decode_implicit<EXTERNAL>(() => $._decodeExternal)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_ProcessingInformation,
+        _extension_additions_list_spec_for_ProcessingInformation,
+        _root_component_type_list_2_spec_for_ProcessingInformation,
+        undefined,
+    );
+    return new ProcessingInformation(
+        commonInfo,
+        databaseName,
+        processingContext,
+        name,
+        oid,
+        description,
+        instructions
+    );
+}; }
+    return _cached_decoder_for_ProcessingInformation(el);
+}
+
+let _cached_encoder_for_ProcessingInformation: $.ASN1Encoder<ProcessingInformation> | null = null;
+
+/**
+ * @summary Encodes a(n) ProcessingInformation into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The ProcessingInformation, encoded as an ASN.1 Element.
+ */
+export
+function _encode_ProcessingInformation (value: ProcessingInformation, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ProcessingInformation) { _cached_encoder_for_ProcessingInformation = function (value: ProcessingInformation, elGetter: $.ASN1Encoder<ProcessingInformation>): _Element {
+    const _components: _Element[] = new Array(7);
+    let _components_i = 0;
+    if (value.commonInfo !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_CommonInfo, $.BER)(value.commonInfo, $.BER);
+    }
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_DatabaseName, $.BER)(value.databaseName, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_ProcessingInformation_processingContext, $.BER)(value.processingContext, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 3, () => _encode_InternationalString, $.BER)(value.name, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 4, () => $._encodeObjectIdentifier, $.BER)(value.oid, $.BER);
+    if (value.description !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 5, () => _encode_HumanString, $.BER)(value.description, $.BER);
+    }
+    if (value.instructions !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 6, () => $._encodeExternal, $.BER)(value.instructions, $.BER);
+    }
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_ProcessingInformation(value, elGetter);
+}
+
+
+/* eslint-enable */

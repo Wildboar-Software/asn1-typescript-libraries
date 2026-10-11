@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { VariableAccessSpecification_listOfVariable_Item, _decode_VariableAccessSpecification_listOfVariable_Item, _encode_VariableAccessSpecification_listOfVariable_Item } from "../ISO-9506-MMS-1/VariableAccessSpecification-listOfVariable-Item.ta.mjs";
-// export { VariableAccessSpecification_listOfVariable_Item, _decode_VariableAccessSpecification_listOfVariable_Item, _encode_VariableAccessSpecification_listOfVariable_Item } from "../ISO-9506-MMS-1/VariableAccessSpecification-listOfVariable-Item.ta.mjs";
 import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-// export { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 
 
 /**

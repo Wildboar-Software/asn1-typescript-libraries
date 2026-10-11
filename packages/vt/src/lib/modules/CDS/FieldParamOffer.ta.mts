@@ -12,13 +12,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FieldParamOffer_capability, _decode_FieldParamOffer_capability, _encode_FieldParamOffer_capability } from "../CDS/FieldParamOffer-capability.ta.mjs";
-// export { FieldParamOffer_capability, FieldParamOffer_capability_yes /* IMPORTED_LONG_NAMED_BIT */, yes /* IMPORTED_SHORT_NAMED_BIT */, FieldParamOffer_capability_no /* IMPORTED_LONG_NAMED_BIT */, no /* IMPORTED_SHORT_NAMED_BIT */, _decode_FieldParamOffer_capability, _encode_FieldParamOffer_capability } from "../CDS/FieldParamOffer-capability.ta.mjs";
 import { FieldParamOffer_maxFields, _decode_FieldParamOffer_maxFields, _encode_FieldParamOffer_maxFields } from "../CDS/FieldParamOffer-maxFields.ta.mjs";
-// export { FieldParamOffer_maxFields, _decode_FieldParamOffer_maxFields, _encode_FieldParamOffer_maxFields } from "../CDS/FieldParamOffer-maxFields.ta.mjs";
 import { FieldParamOffer_maxFieldElements, _decode_FieldParamOffer_maxFieldElements, _encode_FieldParamOffer_maxFieldElements } from "../CDS/FieldParamOffer-maxFieldElements.ta.mjs";
-// export { FieldParamOffer_maxFieldElements, _decode_FieldParamOffer_maxFieldElements, _encode_FieldParamOffer_maxFieldElements } from "../CDS/FieldParamOffer-maxFieldElements.ta.mjs";
 import { FieldParamOffer_accessOutside, _decode_FieldParamOffer_accessOutside, _encode_FieldParamOffer_accessOutside } from "../CDS/FieldParamOffer-accessOutside.ta.mjs";
-// export { FieldParamOffer_accessOutside, FieldParamOffer_accessOutside_allowed /* IMPORTED_LONG_NAMED_BIT */, allowed /* IMPORTED_SHORT_NAMED_BIT */, FieldParamOffer_accessOutside_notAllowed /* IMPORTED_LONG_NAMED_BIT */, notAllowed /* IMPORTED_SHORT_NAMED_BIT */, _decode_FieldParamOffer_accessOutside, _encode_FieldParamOffer_accessOutside } from "../CDS/FieldParamOffer-accessOutside.ta.mjs";
 
 
 /**

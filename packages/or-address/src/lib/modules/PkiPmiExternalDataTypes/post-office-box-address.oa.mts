@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import {
-    PostOfficeBoxAddress,
+    type PostOfficeBoxAddress,
     _decode_PostOfficeBoxAddress,
     _encode_PostOfficeBoxAddress,
 } from "../PkiPmiExternalDataTypes/PostOfficeBoxAddress.ta.mjs";

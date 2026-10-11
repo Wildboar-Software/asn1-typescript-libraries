@@ -51,11 +51,9 @@ export class CertUpdateOK_Item_not_ok {
      * @returns {CertUpdateOK_Item_not_ok}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof CertUpdateOK_Item_not_ok]: CertUpdateOK_Item_not_ok[_K];
             }
-        >
     ): CertUpdateOK_Item_not_ok {
         return new CertUpdateOK_Item_not_ok(
             _o.status,

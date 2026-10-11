@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_Block, _encode_Block, Block } from "../G/Block.ta.mjs";
-// export { Block, _decode_Block, _encode_Block } from "../G/Block.ta.mjs";
 import { _decode_MeasurePair, _encode_MeasurePair, MeasurePair } from "../G/MeasurePair.ta.mjs";
-// export { MeasurePair, _decode_MeasurePair, _encode_MeasurePair } from "../G/MeasurePair.ta.mjs";
 
 
 /**

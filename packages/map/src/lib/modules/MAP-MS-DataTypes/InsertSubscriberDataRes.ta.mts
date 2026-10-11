@@ -1,81 +1,20 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
-import { BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
-import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
-import { ODB_GeneralData, ODB_GeneralData_allOG_CallsBarred /* IMPORTED_LONG_NAMED_BIT */, allOG_CallsBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_internationalOGCallsBarred /* IMPORTED_LONG_NAMED_BIT */, internationalOGCallsBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_internationalOGCallsNotToHPLMN_CountryBarred /* IMPORTED_LONG_NAMED_BIT */, internationalOGCallsNotToHPLMN_CountryBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_interzonalOGCallsBarred /* IMPORTED_LONG_NAMED_BIT */, interzonalOGCallsBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_interzonalOGCallsNotToHPLMN_CountryBarred /* IMPORTED_LONG_NAMED_BIT */, interzonalOGCallsNotToHPLMN_CountryBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_interzonalOGCallsAndInternationalOGCallsNotToHPLMN_CountryBarred /* IMPORTED_LONG_NAMED_BIT */, interzonalOGCallsAndInternationalOGCallsNotToHPLMN_CountryBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_premiumRateInformationOGCallsBarred /* IMPORTED_LONG_NAMED_BIT */, premiumRateInformationOGCallsBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_premiumRateEntertainementOGCallsBarred /* IMPORTED_LONG_NAMED_BIT */, premiumRateEntertainementOGCallsBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_ss_AccessBarred /* IMPORTED_LONG_NAMED_BIT */, ss_AccessBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_allECT_Barred /* IMPORTED_LONG_NAMED_BIT */, allECT_Barred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_chargeableECT_Barred /* IMPORTED_LONG_NAMED_BIT */, chargeableECT_Barred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_internationalECT_Barred /* IMPORTED_LONG_NAMED_BIT */, internationalECT_Barred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_interzonalECT_Barred /* IMPORTED_LONG_NAMED_BIT */, interzonalECT_Barred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_doublyChargeableECT_Barred /* IMPORTED_LONG_NAMED_BIT */, doublyChargeableECT_Barred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_multipleECT_Barred /* IMPORTED_LONG_NAMED_BIT */, multipleECT_Barred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_allPacketOrientedServicesBarred /* IMPORTED_LONG_NAMED_BIT */, allPacketOrientedServicesBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_roamerAccessToHPLMN_AP_Barred /* IMPORTED_LONG_NAMED_BIT */, roamerAccessToHPLMN_AP_Barred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_roamerAccessToVPLMN_AP_Barred /* IMPORTED_LONG_NAMED_BIT */, roamerAccessToVPLMN_AP_Barred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_roamingOutsidePLMNOG_CallsBarred /* IMPORTED_LONG_NAMED_BIT */, roamingOutsidePLMNOG_CallsBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_allIC_CallsBarred /* IMPORTED_LONG_NAMED_BIT */, allIC_CallsBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_roamingOutsidePLMNIC_CallsBarred /* IMPORTED_LONG_NAMED_BIT */, roamingOutsidePLMNIC_CallsBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_roamingOutsidePLMNICountryIC_CallsBarred /* IMPORTED_LONG_NAMED_BIT */, roamingOutsidePLMNICountryIC_CallsBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_roamingOutsidePLMN_Barred /* IMPORTED_LONG_NAMED_BIT */, roamingOutsidePLMN_Barred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_roamingOutsidePLMN_CountryBarred /* IMPORTED_LONG_NAMED_BIT */, roamingOutsidePLMN_CountryBarred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_registrationAllCF_Barred /* IMPORTED_LONG_NAMED_BIT */, registrationAllCF_Barred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_registrationCFNotToHPLMN_Barred /* IMPORTED_LONG_NAMED_BIT */, registrationCFNotToHPLMN_Barred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_registrationInterzonalCF_Barred /* IMPORTED_LONG_NAMED_BIT */, registrationInterzonalCF_Barred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_registrationInterzonalCFNotToHPLMN_Barred /* IMPORTED_LONG_NAMED_BIT */, registrationInterzonalCFNotToHPLMN_Barred /* IMPORTED_SHORT_NAMED_BIT */, ODB_GeneralData_registrationInternationalCF_Barred /* IMPORTED_LONG_NAMED_BIT */, registrationInternationalCF_Barred /* IMPORTED_SHORT_NAMED_BIT */, _decode_ODB_GeneralData, _encode_ODB_GeneralData } from "../MAP-MS-DataTypes/ODB-GeneralData.ta.mjs";
-import { RegionalSubscriptionResponse, _enum_for_RegionalSubscriptionResponse, RegionalSubscriptionResponse_networkNode_AreaRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, networkNode_AreaRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_tooManyZoneCodes /* IMPORTED_LONG_ENUMERATION_ITEM */, tooManyZoneCodes /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_zoneCodesConflict /* IMPORTED_LONG_ENUMERATION_ITEM */, zoneCodesConflict /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegionalSubscriptionResponse_regionalSubscNotSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, regionalSubscNotSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RegionalSubscriptionResponse, _encode_RegionalSubscriptionResponse } from "../MAP-MS-DataTypes/RegionalSubscriptionResponse.ta.mjs";
-import { SupportedCamelPhases, SupportedCamelPhases_phase1 /* IMPORTED_LONG_NAMED_BIT */, phase1 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase2 /* IMPORTED_LONG_NAMED_BIT */, phase2 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase3 /* IMPORTED_LONG_NAMED_BIT */, phase3 /* IMPORTED_SHORT_NAMED_BIT */, SupportedCamelPhases_phase4 /* IMPORTED_LONG_NAMED_BIT */, phase4 /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { OfferedCamel4CSIs, OfferedCamel4CSIs_o_csi /* IMPORTED_LONG_NAMED_BIT */, o_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_d_csi /* IMPORTED_LONG_NAMED_BIT */, d_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_vt_csi /* IMPORTED_LONG_NAMED_BIT */, vt_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_t_csi /* IMPORTED_LONG_NAMED_BIT */, t_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mt_sms_csi /* IMPORTED_LONG_NAMED_BIT */, mt_sms_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_mg_csi /* IMPORTED_LONG_NAMED_BIT */, mg_csi /* IMPORTED_SHORT_NAMED_BIT */, OfferedCamel4CSIs_psi_enhancements /* IMPORTED_LONG_NAMED_BIT */, psi_enhancements /* IMPORTED_SHORT_NAMED_BIT */, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
-import { SupportedFeatures, SupportedFeatures_odb_all_apn /* IMPORTED_LONG_NAMED_BIT */, odb_all_apn /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_odb_HPLMN_APN /* IMPORTED_LONG_NAMED_BIT */, odb_HPLMN_APN /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_odb_VPLMN_APN /* IMPORTED_LONG_NAMED_BIT */, odb_VPLMN_APN /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_odb_all_og /* IMPORTED_LONG_NAMED_BIT */, odb_all_og /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_odb_all_international_og /* IMPORTED_LONG_NAMED_BIT */, odb_all_international_og /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_odb_all_int_og_not_to_HPLMN_country /* IMPORTED_LONG_NAMED_BIT */, odb_all_int_og_not_to_HPLMN_country /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_odb_all_interzonal_og /* IMPORTED_LONG_NAMED_BIT */, odb_all_interzonal_og /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_odb_all_interzonal_og_not_to_HPLMN_country /* IMPORTED_LONG_NAMED_BIT */, odb_all_interzonal_og_not_to_HPLMN_country /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_odb_all_interzonal_og_and_internat_og_not_to_HPLMN_country /* IMPORTED_LONG_NAMED_BIT */, odb_all_interzonal_og_and_internat_og_not_to_HPLMN_country /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_regSub /* IMPORTED_LONG_NAMED_BIT */, regSub /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_trace /* IMPORTED_LONG_NAMED_BIT */, trace /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_lcs_all_PrivExcep /* IMPORTED_LONG_NAMED_BIT */, lcs_all_PrivExcep /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_lcs_universal /* IMPORTED_LONG_NAMED_BIT */, lcs_universal /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_lcs_CallSessionRelated /* IMPORTED_LONG_NAMED_BIT */, lcs_CallSessionRelated /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_lcs_CallSessionUnrelated /* IMPORTED_LONG_NAMED_BIT */, lcs_CallSessionUnrelated /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_lcs_PLMN_operator /* IMPORTED_LONG_NAMED_BIT */, lcs_PLMN_operator /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_lcs_ServiceType /* IMPORTED_LONG_NAMED_BIT */, lcs_ServiceType /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_lcs_all_MOLR_SS /* IMPORTED_LONG_NAMED_BIT */, lcs_all_MOLR_SS /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_lcs_basicSelfLocation /* IMPORTED_LONG_NAMED_BIT */, lcs_basicSelfLocation /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_lcs_autonomousSelfLocation /* IMPORTED_LONG_NAMED_BIT */, lcs_autonomousSelfLocation /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_lcs_transferToThirdParty /* IMPORTED_LONG_NAMED_BIT */, lcs_transferToThirdParty /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_sm_mo_pp /* IMPORTED_LONG_NAMED_BIT */, sm_mo_pp /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_barring_OutgoingCalls /* IMPORTED_LONG_NAMED_BIT */, barring_OutgoingCalls /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_baoc /* IMPORTED_LONG_NAMED_BIT */, baoc /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_boic /* IMPORTED_LONG_NAMED_BIT */, boic /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_boicExHC /* IMPORTED_LONG_NAMED_BIT */, boicExHC /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_localTimeZoneRetrieval /* IMPORTED_LONG_NAMED_BIT */, localTimeZoneRetrieval /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_additionalMsisdn /* IMPORTED_LONG_NAMED_BIT */, additionalMsisdn /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_smsInMME /* IMPORTED_LONG_NAMED_BIT */, smsInMME /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_smsInSGSN /* IMPORTED_LONG_NAMED_BIT */, smsInSGSN /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_ue_Reachability_Notification /* IMPORTED_LONG_NAMED_BIT */, ue_Reachability_Notification /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_state_Location_Information_Retrieval /* IMPORTED_LONG_NAMED_BIT */, state_Location_Information_Retrieval /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_partialPurge /* IMPORTED_LONG_NAMED_BIT */, partialPurge /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_gddInSGSN /* IMPORTED_LONG_NAMED_BIT */, gddInSGSN /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_sgsnCAMELCapability /* IMPORTED_LONG_NAMED_BIT */, sgsnCAMELCapability /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_pcscf_Restoration /* IMPORTED_LONG_NAMED_BIT */, pcscf_Restoration /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_dedicatedCoreNetworks /* IMPORTED_LONG_NAMED_BIT */, dedicatedCoreNetworks /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_non_IP_PDN_Type_APNs /* IMPORTED_LONG_NAMED_BIT */, non_IP_PDN_Type_APNs /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_non_IP_PDP_Type_APNs /* IMPORTED_LONG_NAMED_BIT */, non_IP_PDP_Type_APNs /* IMPORTED_SHORT_NAMED_BIT */, SupportedFeatures_nrAsSecondaryRAT /* IMPORTED_LONG_NAMED_BIT */, nrAsSecondaryRAT /* IMPORTED_SHORT_NAMED_BIT */, _decode_SupportedFeatures, _encode_SupportedFeatures } from "../MAP-MS-DataTypes/SupportedFeatures.ta.mjs";
-import { Ext_SupportedFeatures, Ext_SupportedFeatures_unlicensedSpectrumAsSecondaryRAT /* IMPORTED_LONG_NAMED_BIT */, unlicensedSpectrumAsSecondaryRAT /* IMPORTED_SHORT_NAMED_BIT */, _decode_Ext_SupportedFeatures, _encode_Ext_SupportedFeatures } from "../MAP-MS-DataTypes/Ext-SupportedFeatures.ta.mjs";
+import { BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
+import { Ext_SupportedFeatures, _decode_Ext_SupportedFeatures, _encode_Ext_SupportedFeatures } from "../MAP-MS-DataTypes/Ext-SupportedFeatures.ta.mjs";
+import { ODB_GeneralData, _decode_ODB_GeneralData, _encode_ODB_GeneralData } from "../MAP-MS-DataTypes/ODB-GeneralData.ta.mjs";
+import { OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
+import { RegionalSubscriptionResponse, _decode_RegionalSubscriptionResponse, _encode_RegionalSubscriptionResponse, _enum_for_RegionalSubscriptionResponse } from "../MAP-MS-DataTypes/RegionalSubscriptionResponse.ta.mjs";
+import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
+import { SupportedFeatures, _decode_SupportedFeatures, _encode_SupportedFeatures } from "../MAP-MS-DataTypes/SupportedFeatures.ta.mjs";
+import { TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
+import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
 
 
 /**

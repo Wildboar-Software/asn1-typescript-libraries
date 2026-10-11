@@ -136,11 +136,9 @@ export class ListResultData_listInfo implements CommonResults {
      * @returns {ListResultData_listInfo}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof ListResultData_listInfo]: ListResultData_listInfo[_K];
             }
-        >
     ): ListResultData_listInfo {
         return new ListResultData_listInfo(
             _o.name,

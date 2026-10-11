@@ -1,0 +1,21 @@
+{
+  "name": "@wildboar/h248",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts",
+    "./MEDIA-GATEWAY-CONTROL": "./src/lib/modules/MEDIA-GATEWAY-CONTROL/index.mts",
+    "./H238V1-SUPPORT": "./src/lib/modules/H238V1-SUPPORT/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
+    ]
+  }
+}

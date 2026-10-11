@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DirectoryEntry, _decode_DirectoryEntry, _encode_DirectoryEntry } from "../ISO-9506-MMS-1A/DirectoryEntry.ta.mjs";
-// export { DirectoryEntry, _decode_DirectoryEntry, _encode_DirectoryEntry } from "../ISO-9506-MMS-1A/DirectoryEntry.ta.mjs";
 
 
 /**

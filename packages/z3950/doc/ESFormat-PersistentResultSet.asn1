@@ -1,0 +1,40 @@
+ESFormat-PersistentResultSet
+{z39-50-extendedService persistentResultSet(1)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    InternationalString
+        FROM Z39-50-APDU-2001
+    ;
+
+PersistentResultSet ::= CHOICE{
+    esRequest   [1] IMPLICIT SEQUENCE{
+        toKeep             [1] IMPLICIT NULL,
+        notToKeep          [2] ClientPartNotToKeep OPTIONAL},
+    taskPackage [2] IMPLICIT SEQUENCE{
+        clientPart         [1] IMPLICIT NULL,
+        serverPart         [2] ServerPart OPTIONAL
+    }
+}
+
+ClientPartNotToKeep ::= SEQUENCE{
+    clientSuppliedResultSet [1] IMPLICIT InternationalString OPTIONAL,
+    -- Name of transient result set, supplied on request,
+    -- mandatory unless function is 'delete'
+    replaceOrAppend         [2] IMPLICIT INTEGER { -- Only if function is "modify"
+        replace(1),
+        append(2)
+    } OPTIONAL
+}
+
+ServerPart ::= SEQUENCE{
+    serverSuppliedResultSet [1] IMPLICIT InternationalString OPTIONAL,
+                    --Name of transient result set, supplied by server,
+                    --representing the persistent result set to which
+                    --package pertains. Meaningful only when package is
+                    --presented. (i.e. not on ES response).
+    numberOfRecords         [2] IMPLICIT INTEGER OPTIONAL
+}
+
+END

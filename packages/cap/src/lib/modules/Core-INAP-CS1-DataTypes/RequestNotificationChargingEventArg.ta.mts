@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChargingEvent, _decode_ChargingEvent, _encode_ChargingEvent } from "../Core-INAP-CS1-DataTypes/ChargingEvent.ta.mjs";
-// export { ChargingEvent, _decode_ChargingEvent, _encode_ChargingEvent } from "../Core-INAP-CS1-DataTypes/ChargingEvent.ta.mjs";
 
 
 /**

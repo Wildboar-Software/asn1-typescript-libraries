@@ -3,7 +3,7 @@ import {
     ObjectIdentifier,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttributeTypeAndValue } from "@wildboar/x500/InformationFramework";
+import { AttributeTypeAndValue } from "@wildboar/dn";
 import { BiometricType_finger } from "./lib/modules/CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
 import {
     AccreditationStatus,

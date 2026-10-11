@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import {
-    UniversalExtensionPhysicalDeliveryAddressComponents,
+    type UniversalExtensionPhysicalDeliveryAddressComponents,
     _decode_UniversalExtensionPhysicalDeliveryAddressComponents,
     _encode_UniversalExtensionPhysicalDeliveryAddressComponents,
 } from "../PkiPmiExternalDataTypes/UniversalExtensionPhysicalDeliveryAddressComponents.ta.mjs";
