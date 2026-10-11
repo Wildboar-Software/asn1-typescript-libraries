@@ -1,9 +1,7 @@
 {
     "name": "@wildboar/emrtd",
     "type": "module",
-    "version": "0.1.0",
-    "description": "",
-    "keywords": [],
+    "version": "1.0.0",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"
@@ -31,5 +29,16 @@
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
         "@wildboar/x500": "npm:@jsr/wildboar__x500@^2.0.9"
+    },
+    "exports": {
+        ".": "./src/index.mts",
+        "./AuthenticationFramework": "./src/lib/modules/AuthenticationFramework/index.mts",
+        "./CertificateExtensions": "./src/lib/modules/CertificateExtensions/index.mts",
+        "./CscaMasterList": "./src/lib/modules/CscaMasterList/index.mts",
+        "./DeviationList": "./src/lib/modules/DeviationList/index.mts",
+        "./Doc-9303-Part-11-Module": "./src/lib/modules/Doc-9303-Part-11-Module/index.mts",
+        "./Doc-9303-Part-12-Module": "./src/lib/modules/Doc-9303-Part-12-Module/index.mts",
+        "./EnhancedSecurity": "./src/lib/modules/EnhancedSecurity/index.mts",
+        "./LDSSecurityObjectV1": "./src/lib/modules/LDSSecurityObjectV1/index.mts"
     }
 }
