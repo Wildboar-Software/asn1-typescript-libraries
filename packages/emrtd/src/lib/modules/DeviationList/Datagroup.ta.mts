@@ -311,35 +311,8 @@ const Datagroup_com: Datagroup = 21; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const com: Datagroup = Datagroup_com; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_Datagroup: $.ASN1Decoder<Datagroup> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Datagroup
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Datagroup (el: _Element): Datagroup {
-    if (!_cached_decoder_for_Datagroup) { _cached_decoder_for_Datagroup = $._decodeInteger; }
-    return _cached_decoder_for_Datagroup(el);
-}
-
-let _cached_encoder_for_Datagroup: $.ASN1Encoder<Datagroup> | null = null;
-
-/**
- * @summary Encodes a(n) Datagroup into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Datagroup, encoded as an ASN.1 Element.
- */
-export
-function _encode_Datagroup (value: Datagroup, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Datagroup) { _cached_encoder_for_Datagroup = $._encodeInteger; }
-    return _cached_encoder_for_Datagroup(value, elGetter);
-}
+export const _decode_Datagroup = $._decodeInteger;
+export const _encode_Datagroup = $._encodeInteger;
 
 
 /* eslint-enable */

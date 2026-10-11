@@ -190,35 +190,8 @@ const CertificateBodyField_subjectUniqueID: CertificateBodyField = 9; /* LONG_NA
  */
 export
 const subjectUniqueID: CertificateBodyField = CertificateBodyField_subjectUniqueID; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_CertificateBodyField: $.ASN1Decoder<CertificateBodyField> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CertificateBodyField
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CertificateBodyField (el: _Element): CertificateBodyField {
-    if (!_cached_decoder_for_CertificateBodyField) { _cached_decoder_for_CertificateBodyField = $._decodeInteger; }
-    return _cached_decoder_for_CertificateBodyField(el);
-}
-
-let _cached_encoder_for_CertificateBodyField: $.ASN1Encoder<CertificateBodyField> | null = null;
-
-/**
- * @summary Encodes a(n) CertificateBodyField into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CertificateBodyField, encoded as an ASN.1 Element.
- */
-export
-function _encode_CertificateBodyField (value: CertificateBodyField, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CertificateBodyField) { _cached_encoder_for_CertificateBodyField = $._encodeInteger; }
-    return _cached_encoder_for_CertificateBodyField(value, elGetter);
-}
+export const _decode_CertificateBodyField = $._decodeInteger;
+export const _encode_CertificateBodyField = $._encodeInteger;
 
 
 /* eslint-enable */
