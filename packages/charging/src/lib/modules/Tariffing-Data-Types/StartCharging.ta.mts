@@ -48,31 +48,40 @@ import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs"
  */
 export
 class StartCharging {
+    /**
+     * Operators whose tariffs start. At most six. Required when
+     * more than one charge determination point is configured.
+     * Absent, with only one such point, starts that tariff.
+     * @public
+     * @readonly
+     */
+    public readonly networkOperators: OPTIONAL<NetworkIdentification[]>;
+
+    /**
+     * Network-operator extension. This module allows one.
+     * @public
+     * @readonly
+     */
+    public readonly extensions: OPTIONAL<ExtensionField[]>;
+
+    /**
+     * Charging reference assigned by the connection control
+     * point. The acknowledgement returns this value as its
+     * destination identifier (clause 6.4.2). There is no
+     * destination field on START itself.
+     * @public
+     * @readonly
+     */
+    public readonly originationIdentification: ChargingReferenceIdentification;
+
     constructor (
-        /**
-         * Operators whose tariffs start. At most six. Required when
-         * more than one charge determination point is configured.
-         * Absent, with only one such point, starts that tariff.
-         * @public
-         * @readonly
-         */
-        readonly networkOperators: OPTIONAL<NetworkIdentification[]>,
-        /**
-         * Network-operator extension. This module allows one.
-         * @public
-         * @readonly
-         */
-        readonly extensions: OPTIONAL<ExtensionField[]>,
-        /**
-         * Charging reference assigned by the connection control
-         * point. The acknowledgement returns this value as its
-         * destination identifier (clause 6.4.2). There is no
-         * destination field on START itself.
-         * @public
-         * @readonly
-         */
-        readonly originationIdentification: ChargingReferenceIdentification
+        networkOperators: OPTIONAL<NetworkIdentification[]>,
+        extensions: OPTIONAL<ExtensionField[]>,
+        originationIdentification: ChargingReferenceIdentification
     ) {
+        this.networkOperators = networkOperators;
+        this.extensions = extensions;
+        this.originationIdentification = originationIdentification;
         if (networkOperators !== undefined && (networkOperators.length < 1 || networkOperators.length > Number(maxNetworkOperators))) {
             throw new ASN1SizeError("StartCharging.networkOperators violates SIZE constraint");
         }

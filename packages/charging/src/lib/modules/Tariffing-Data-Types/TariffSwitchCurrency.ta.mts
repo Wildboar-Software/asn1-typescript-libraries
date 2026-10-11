@@ -36,23 +36,30 @@ import { TariffSwitchoverTime, _decode_TariffSwitchoverTime, _encode_TariffSwitc
  */
 export
 class TariffSwitchCurrency {
+    /**
+     * Tariff that becomes active at `tariffSwitchoverTime`.
+     * Include the call-attempt and call-setup charges here on
+     * the first next tariff (clauses 6.1.1.2 and 6.1.1.3).
+     * @public
+     * @readonly
+     */
+    public readonly nextTariffCurrency: TariffCurrencyFormat;
+
+    /**
+     * GMT time of day at which `nextTariffCurrency` replaces
+     * the current tariff. See {@link TariffSwitchoverTime}.
+     * @public
+     * @readonly
+     */
+    public readonly tariffSwitchoverTime: TariffSwitchoverTime;
+
     constructor (
-        /**
-         * Tariff that becomes active at `tariffSwitchoverTime`.
-         * Include the call-attempt and call-setup charges here on
-         * the first next tariff (clauses 6.1.1.2 and 6.1.1.3).
-         * @public
-         * @readonly
-         */
-        readonly nextTariffCurrency: TariffCurrencyFormat,
-        /**
-         * GMT time of day at which `nextTariffCurrency` replaces
-         * the current tariff. See {@link TariffSwitchoverTime}.
-         * @public
-         * @readonly
-         */
-        readonly tariffSwitchoverTime: TariffSwitchoverTime
-    ) {}
+        nextTariffCurrency: TariffCurrencyFormat,
+        tariffSwitchoverTime: TariffSwitchoverTime
+    ) {
+        this.nextTariffCurrency = nextTariffCurrency;
+        this.tariffSwitchoverTime = tariffSwitchoverTime;
+    }
 
     /**
      * @summary Restructures an object into a TariffSwitchCurrency

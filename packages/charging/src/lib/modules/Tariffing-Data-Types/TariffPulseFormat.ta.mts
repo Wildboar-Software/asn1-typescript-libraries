@@ -52,43 +52,55 @@ import { minCommunicationTariffNum } from "../Tariffing-Data-Types/minCommunicat
  */
 export
 class TariffPulseFormat {
+    /**
+     * Successive communication subtariffs, one to four. Applied
+     * from the start of the communication, in order. Zero
+     * pulses means the communication is free. Omit when this
+     * tariff has no communication charge; if the sequence
+     * matters, send all of it.
+     * @public
+     * @readonly
+     */
+    public readonly communicationChargeSequencePulse: OPTIONAL<CommunicationChargePulse[]>;
+
+    /**
+     * Whether the communication sequence is applied again after
+     * its last subtariff. See
+     * {@link TariffPulseFormat_tariffControlIndicators}.
+     * @public
+     * @readonly
+     */
+    public readonly tariffControlIndicators: TariffPulseFormat_tariffControlIndicators;
+
+    /**
+     * Pulses charged only for an unsuccessful call. Also sent in
+     * the first next tariff. Not made when the count is zero or
+     * this field is absent, and not applied again on a later
+     * tariff change.
+     * @public
+     * @readonly
+     */
+    public readonly callAttemptChargePulse: OPTIONAL<PulseUnits>;
+
+    /**
+     * Pulses charged once at the start of charging. Sent in the
+     * first CRGT and in the first next tariff. Not made when the
+     * count is zero or this field is absent.
+     * @public
+     * @readonly
+     */
+    public readonly callSetupChargePulse: OPTIONAL<PulseUnits>;
+
     constructor (
-        /**
-         * Successive communication subtariffs, one to four. Applied
-         * from the start of the communication, in order. Zero
-         * pulses means the communication is free. Omit when this
-         * tariff has no communication charge; if the sequence
-         * matters, send all of it.
-         * @public
-         * @readonly
-         */
-        readonly communicationChargeSequencePulse: OPTIONAL<CommunicationChargePulse[]>,
-        /**
-         * Whether the communication sequence is applied again after
-         * its last subtariff. See
-         * {@link TariffPulseFormat_tariffControlIndicators}.
-         * @public
-         * @readonly
-         */
-        readonly tariffControlIndicators: TariffPulseFormat_tariffControlIndicators,
-        /**
-         * Pulses charged only for an unsuccessful call. Also sent in
-         * the first next tariff. Not made when the count is zero or
-         * this field is absent, and not applied again on a later
-         * tariff change.
-         * @public
-         * @readonly
-         */
-        readonly callAttemptChargePulse: OPTIONAL<PulseUnits>,
-        /**
-         * Pulses charged once at the start of charging. Sent in the
-         * first CRGT and in the first next tariff. Not made when the
-         * count is zero or this field is absent.
-         * @public
-         * @readonly
-         */
-        readonly callSetupChargePulse: OPTIONAL<PulseUnits>
+        communicationChargeSequencePulse: OPTIONAL<CommunicationChargePulse[]>,
+        tariffControlIndicators: TariffPulseFormat_tariffControlIndicators,
+        callAttemptChargePulse: OPTIONAL<PulseUnits>,
+        callSetupChargePulse: OPTIONAL<PulseUnits>
     ) {
+        this.communicationChargeSequencePulse = communicationChargeSequencePulse;
+        this.tariffControlIndicators = tariffControlIndicators;
+        this.callAttemptChargePulse = callAttemptChargePulse;
+        this.callSetupChargePulse = callSetupChargePulse;
         if (
             communicationChargeSequencePulse !== undefined
             && (

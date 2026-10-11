@@ -39,29 +39,39 @@ import { CriticalityType, CriticalityType_ignore /* IMPORTED_LONG_ENUMERATION_IT
  */
 export
 class ExtensionField {
+    /**
+     * {@link Code} of an {@link EXTENSION} in
+     * {@link SupportedExtensions}.
+     * @public
+     * @readonly
+     */
+    public readonly type_: Code;
+
+    /**
+     * What to do if the extension is not applied. Defaults to
+     * {@link ignore}. See {@link CriticalityType}.
+     * @public
+     * @readonly
+     */
+    public readonly criticality: OPTIONAL<CriticalityType>;
+
+    /**
+     * The extension value, open type of the `&ExtensionType`
+     * identified by `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly value: _Element;
+
     constructor (
-        /**
-         * {@link Code} of an {@link EXTENSION} in
-         * {@link SupportedExtensions}.
-         * @public
-         * @readonly
-         */
-        readonly type_: Code,
-        /**
-         * What to do if the extension is not applied. Defaults to
-         * {@link ignore}. See {@link CriticalityType}.
-         * @public
-         * @readonly
-         */
-        readonly criticality: OPTIONAL<CriticalityType>,
-        /**
-         * The extension value, open type of the `&ExtensionType`
-         * identified by `type_`.
-         * @public
-         * @readonly
-         */
-        readonly value: _Element
-    ) {}
+        type_: Code,
+        criticality: OPTIONAL<CriticalityType>,
+        value: _Element
+    ) {
+        this.type_ = type_;
+        this.criticality = criticality;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a ExtensionField
