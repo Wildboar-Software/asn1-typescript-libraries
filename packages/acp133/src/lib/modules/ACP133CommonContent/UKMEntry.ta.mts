@@ -117,10 +117,8 @@ function _decode_UKMEntry (el: _Element): UKMEntry {
     }
     sequence[0].name = "tag";
     sequence[1].name = "ukm";
-    let tag!: PairwiseTag;
-    let ukm!: OCTET_STRING;
-    tag = _decode_PairwiseTag(sequence[0]);
-    ukm = $._decodeOctetString(sequence[1]);
+    const tag = _decode_PairwiseTag(sequence[0]);
+    const ukm = $._decodeOctetString(sequence[1]);
     return new UKMEntry(
         tag,
         ukm,

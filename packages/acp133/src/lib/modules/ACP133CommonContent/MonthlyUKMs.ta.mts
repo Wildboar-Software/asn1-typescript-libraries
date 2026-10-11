@@ -127,12 +127,9 @@ function _decode_MonthlyUKMs (el: _Element): MonthlyUKMs {
     sequence[0].name = "ukm-entries";
     sequence[1].name = "algorithm-identifier";
     sequence[2].name = "encrypted";
-    let ukm_entries!: UKMEntry[];
-    let algorithm_identifier!: AlgorithmIdentifier;
-    let encrypted!: BIT_STRING;
-    ukm_entries = $._decodeSequenceOf<UKMEntry>(() => _decode_UKMEntry)(sequence[0]);
-    algorithm_identifier = _decode_AlgorithmIdentifier(sequence[1]);
-    encrypted = $._decodeBitString(sequence[2]);
+    const ukm_entries = $._decodeSequenceOf<UKMEntry>(() => _decode_UKMEntry)(sequence[0]);
+    const algorithm_identifier = _decode_AlgorithmIdentifier(sequence[1]);
+    const encrypted = $._decodeBitString(sequence[2]);
     return new MonthlyUKMs(
         ukm_entries,
         algorithm_identifier,
