@@ -1,8 +1,11 @@
 /* eslint-disable */
 import {
+    ASN1CharactersError,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1SizeError,
+    ASN1TagClass as _TagClass,
+    isPrintableCharacter,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DocumentTypeListVersion, _decode_DocumentTypeListVersion, _encode_DocumentTypeListVersion } from "../Doc-9303-Part-12-Module/DocumentTypeListVersion.ta.mjs";
@@ -41,7 +44,18 @@ class DocumentTypeListSyntax {
          * @readonly
          */
         readonly docTypeList: DocumentType[]
-    ) {}
+    ) {
+        for (const docType of docTypeList) {
+            if (docType.length < 1 || docType.length > 2) {
+                throw new ASN1SizeError("DocumentType violates SIZE constraint");
+            }
+            for (let i = 0; i < docType.length; i++) {
+                if (!isPrintableCharacter(docType.charCodeAt(i))) {
+                    throw new ASN1CharactersError("DocumentType contains a prohibited character");
+                }
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a DocumentTypeListSyntax

@@ -2,11 +2,13 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
+    ASN1Error,
     ASN1TagClass as _TagClass,
     INTEGER,
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { id_TA } from "../Doc-9303-Part-11-Module/id-TA.va.mjs";
 
 
 
@@ -40,7 +42,11 @@ class TerminalAuthenticationInfo {
          * @readonly
          */
         readonly version: INTEGER
-    ) {}
+    ) {
+        if (!id_TA.isEqualTo(protocol)) {
+            throw new ASN1Error("TerminalAuthenticationInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TerminalAuthenticationInfo

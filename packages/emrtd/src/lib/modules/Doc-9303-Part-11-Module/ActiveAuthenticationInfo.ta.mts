@@ -2,11 +2,13 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
+    ASN1Error,
     ASN1TagClass as _TagClass,
     INTEGER,
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { id_icao_mrtd_security_aaProtocolObject } from "../Doc-9303-Part-11-Module/id-icao-mrtd-security-aaProtocolObject.va.mjs";
 
 
 
@@ -47,7 +49,11 @@ class ActiveAuthenticationInfo {
          * @readonly
          */
         readonly signatureAlgorithm: OBJECT_IDENTIFIER
-    ) {}
+    ) {
+        if (!id_icao_mrtd_security_aaProtocolObject.isEqualTo(protocol)) {
+            throw new ASN1Error("ActiveAuthenticationInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ActiveAuthenticationInfo
