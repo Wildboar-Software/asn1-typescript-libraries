@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PairwiseTag, _decode_PairwiseTag, _encode_PairwiseTag } from "../ACP133CommonContent/PairwiseTag.ta.mjs";
-// export { PairwiseTag, _decode_PairwiseTag, _encode_PairwiseTag } from "../ACP133CommonContent/PairwiseTag.ta.mjs";
 
 
 /**

@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RIParametersDeprecated_rIType, _decode_RIParametersDeprecated_rIType, _encode_RIParametersDeprecated_rIType, _enum_for_RIParametersDeprecated_rIType } from "../ACP133CommonContent/RIParametersDeprecated-rIType.ta.mjs";
-// export { RIParametersDeprecated_rIType, _enum_for_RIParametersDeprecated_rIType, RIParametersDeprecated_rIType_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, RIParametersDeprecated_rIType_off_line /* IMPORTED_LONG_ENUMERATION_ITEM */, off_line /* IMPORTED_SHORT_ENUMERATION_ITEM */, RIParametersDeprecated_rIType_partTimeTerminal /* IMPORTED_LONG_ENUMERATION_ITEM */, partTimeTerminal /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RIParametersDeprecated_rIType, _encode_RIParametersDeprecated_rIType } from "../ACP133CommonContent/RIParametersDeprecated-rIType.ta.mjs";
 import { Classification, _decode_Classification, _encode_Classification, _enum_for_Classification } from "../ACP133CommonContent/Classification.ta.mjs";
-// export { Classification, _enum_for_Classification, Classification_unmarked /* IMPORTED_LONG_ENUMERATION_ITEM */, unmarked /* IMPORTED_SHORT_ENUMERATION_ITEM */, Classification_unclassified /* IMPORTED_LONG_ENUMERATION_ITEM */, unclassified /* IMPORTED_SHORT_ENUMERATION_ITEM */, Classification_restricted /* IMPORTED_LONG_ENUMERATION_ITEM */, restricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, Classification_confidential /* IMPORTED_LONG_ENUMERATION_ITEM */, confidential /* IMPORTED_SHORT_ENUMERATION_ITEM */, Classification_secret /* IMPORTED_LONG_ENUMERATION_ITEM */, secret /* IMPORTED_SHORT_ENUMERATION_ITEM */, Classification_top_secret /* IMPORTED_LONG_ENUMERATION_ITEM */, top_secret /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Classification, _encode_Classification } from "../ACP133CommonContent/Classification.ta.mjs";
 
 
 /**
