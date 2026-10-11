@@ -16,6 +16,21 @@ import {
 /**
  * @summary MLReceiptPolicy
  * @description
+ *
+ * Signed-receipt policy of an address list
+ * (`aLReceiptPolicy`). It supersedes the originator's
+ * request for a signed receipt. See ACP 120. The list
+ * cannot request a receipt the originator did not ask
+ * for.
+ *
+ * `none`: do not create a signed receipt.
+ * `insteadOf`: if a receipt is created, send it to
+ * these parties instead of the originator.
+ * `inAdditionTo`: if a receipt is created, send it to
+ * these parties as well as the originator.
+ *
+ * [draft-dally-acp133-and-ldap-01, section 3.20](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.20).
+ * [RFC 2634, section 4.4](https://www.rfc-editor.org/rfc/rfc2634#section-4.4).
  * 
  * ### ASN.1 Definition:
  * 

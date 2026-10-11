@@ -6,6 +6,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MsgProtocolInfoCapability
  * @description
+ *
+ * Messaging protocol the mailbox for this entry
+ * supports: ACP 127, or ACP 123 (military message
+ * handling). ACP 133 (June 1998), paragraph 101,
+ * defines the directory in support of both.
+ * ACP 133 SUPP-1(A) assigns the two integers.
  * 
  * ### ASN.1 Definition:
  * 
@@ -24,6 +30,12 @@ enum _enum_for_MsgProtocolInfoCapability {
 /**
  * @summary MsgProtocolInfoCapability
  * @description
+ *
+ * Messaging protocol the mailbox for this entry
+ * supports: ACP 127, or ACP 123 (military message
+ * handling). ACP 133 (June 1998), paragraph 101,
+ * defines the directory in support of both.
+ * ACP 133 SUPP-1(A) assigns the two integers.
  * 
  * ### ASN.1 Definition:
  * 
@@ -39,6 +51,12 @@ type MsgProtocolInfoCapability = _enum_for_MsgProtocolInfoCapability;
 /**
  * @summary MsgProtocolInfoCapability
  * @description
+ *
+ * Messaging protocol the mailbox for this entry
+ * supports: ACP 127, or ACP 123 (military message
+ * handling). ACP 133 (June 1998), paragraph 101,
+ * defines the directory in support of both.
+ * ACP 133 SUPP-1(A) assigns the two integers.
  * 
  * ### ASN.1 Definition:
  * 
@@ -52,6 +70,7 @@ export
 const MsgProtocolInfoCapability = _enum_for_MsgProtocolInfoCapability;
 
 /**
+ * The mailbox supports ACP 127.
  * @summary MsgProtocolInfoCapability_acp_127
  * @constant
  * @type {number}
@@ -60,6 +79,7 @@ export
 const MsgProtocolInfoCapability_acp_127: MsgProtocolInfoCapability = MsgProtocolInfoCapability.acp_127; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link MsgProtocolInfoCapability_acp_127}.
  * @summary acp_127
  * @constant
  * @type {number}
@@ -68,6 +88,7 @@ export
 const acp_127: MsgProtocolInfoCapability = MsgProtocolInfoCapability.acp_127; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
+ * The mailbox supports ACP 123.
  * @summary MsgProtocolInfoCapability_acp_123
  * @constant
  * @type {number}
@@ -76,6 +97,7 @@ export
 const MsgProtocolInfoCapability_acp_123: MsgProtocolInfoCapability = MsgProtocolInfoCapability.acp_123; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link MsgProtocolInfoCapability_acp_123}.
  * @summary acp_123
  * @constant
  * @type {number}

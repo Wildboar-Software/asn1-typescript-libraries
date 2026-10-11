@@ -15,9 +15,38 @@ import { RIParametersDeprecated, _decode_RIParametersDeprecated, _encode_RIParam
  * @summary RIParameters
  * @description
  *
- * `ri-parameters` uses {@link UnboundedDirectoryString}. In ASN.1 that
- * component is `DirectoryString`, the same CHOICE with a size parameter that
- * this encoding does not carry.
+ * Properties of a routing indicator (`rIInfo`).
+ * ACP 127 users are named by a plain-language address
+ * (PLA) and delivered to by the RI, the way an X.400
+ * user is named by a directory name and delivered to
+ * by an O/R address.
+ * ACP 133 (June 1998), paragraph 308. Figure 3-2 shows
+ * one value: RI `RUHPZFF`, type normal, minimize
+ * `FALSE`, special-handling designator `A`,
+ * classification unclassified.
+ *
+ * Edition D replaced the SET with a `DirectoryString`
+ * of dollar-separated printable fields, in that same
+ * order: routing indicator, RI type, minimize flag,
+ * special-handling designator, classification. Empty
+ * fields are successive `$` characters. ACP 133
+ * SUPP-1(A) gives `RGABDFE$0$FALSE$RBFDSRF$3`. The
+ * minimize flag is no longer used; the string form
+ * writes it as `FALSE`. The MINIMIZE condition is the
+ * separate `minimize` attribute: when it is set,
+ * originators must not send unnecessary messages.
+ *
+ * `ri_parameters` is that string. In ASN.1 the
+ * component is `DirectoryString`. This encoding uses
+ * {@link UnboundedDirectoryString}, the same CHOICE
+ * without a size constraint.
+ * `ri_parameters_deprecated` is the earlier SET.
+ * This module's CHOICE accepts both forms in one
+ * decoder.
+ *
+ * [draft-dally-acp133-and-ldap-01, section 3.107](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.107)
+ * and
+ * [section 6.16](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-6.16).
  *
  * ### ASN.1 Definition:
  * 

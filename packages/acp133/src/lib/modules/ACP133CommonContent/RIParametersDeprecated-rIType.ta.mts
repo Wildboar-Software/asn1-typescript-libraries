@@ -6,6 +6,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RIParametersDeprecated_rIType
  * @description
+ *
+ * RI type: `normal`, `off-line`, or a part-time
+ * terminal.
+ * ACP 133 (June 1998), Figure 3-2, uses `normal` in
+ * an `rIInfo` example.
+ *
+ * [draft-dally-acp133-and-ldap-01, section 6.16](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-6.16).
  * 
  * ### ASN.1 Definition:
  * 
@@ -29,6 +36,13 @@ enum _enum_for_RIParametersDeprecated_rIType {
 /**
  * @summary RIParametersDeprecated_rIType
  * @description
+ *
+ * RI type: `normal`, `off-line`, or a part-time
+ * terminal.
+ * ACP 133 (June 1998), Figure 3-2, uses `normal` in
+ * an `rIInfo` example.
+ *
+ * [draft-dally-acp133-and-ldap-01, section 6.16](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-6.16).
  * 
  * ### ASN.1 Definition:
  * 
@@ -48,6 +62,13 @@ type RIParametersDeprecated_rIType = _enum_for_RIParametersDeprecated_rIType;
 /**
  * @summary RIParametersDeprecated_rIType
  * @description
+ *
+ * RI type: `normal`, `off-line`, or a part-time
+ * terminal.
+ * ACP 133 (June 1998), Figure 3-2, uses `normal` in
+ * an `rIInfo` example.
+ *
+ * [draft-dally-acp133-and-ldap-01, section 6.16](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-6.16).
  * 
  * ### ASN.1 Definition:
  * 
@@ -65,6 +86,7 @@ export
 const RIParametersDeprecated_rIType = _enum_for_RIParametersDeprecated_rIType;
 
 /**
+ * Normal routing indicator.
  * @summary RIParametersDeprecated_rIType_normal
  * @constant
  * @type {number}
@@ -73,6 +95,7 @@ export
 const RIParametersDeprecated_rIType_normal: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link RIParametersDeprecated_rIType_normal}.
  * @summary normal
  * @constant
  * @type {number}
@@ -81,6 +104,7 @@ export
 const normal: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Off-line routing indicator.
  * @summary RIParametersDeprecated_rIType_off_line
  * @constant
  * @type {number}
@@ -89,6 +113,7 @@ export
 const RIParametersDeprecated_rIType_off_line: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.off_line; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link RIParametersDeprecated_rIType_off_line}.
  * @summary off_line
  * @constant
  * @type {number}
@@ -97,6 +122,7 @@ export
 const off_line: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.off_line; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Part-time terminal.
  * @summary RIParametersDeprecated_rIType_partTimeTerminal
  * @constant
  * @type {number}
@@ -105,6 +131,7 @@ export
 const RIParametersDeprecated_rIType_partTimeTerminal: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.partTimeTerminal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link RIParametersDeprecated_rIType_partTimeTerminal}.
  * @summary partTimeTerminal
  * @constant
  * @type {number}

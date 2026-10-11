@@ -6,6 +6,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Community
  * @description
+ *
+ * Which community an object belongs to: GENSER (general
+ * service, marked R), SI (special intelligence, marked
+ * Y), or both (R/Y).
+ *
+ * [draft-dally-acp133-and-ldap-01, section 3.36](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.36)
+ * and
+ * [section 6.9](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-6.9).
  * 
  * ### ASN.1 Definition:
  * 
@@ -25,6 +33,14 @@ enum _enum_for_Community {
 /**
  * @summary Community
  * @description
+ *
+ * Which community an object belongs to: GENSER (general
+ * service, marked R), SI (special intelligence, marked
+ * Y), or both (R/Y).
+ *
+ * [draft-dally-acp133-and-ldap-01, section 3.36](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.36)
+ * and
+ * [section 6.9](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-6.9).
  * 
  * ### ASN.1 Definition:
  * 
@@ -40,6 +56,14 @@ type Community = _enum_for_Community;
 /**
  * @summary Community
  * @description
+ *
+ * Which community an object belongs to: GENSER (general
+ * service, marked R), SI (special intelligence, marked
+ * Y), or both (R/Y).
+ *
+ * [draft-dally-acp133-and-ldap-01, section 3.36](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.36)
+ * and
+ * [section 6.9](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-6.9).
  * 
  * ### ASN.1 Definition:
  * 
@@ -53,6 +77,7 @@ export
 const Community = _enum_for_Community;
 
 /**
+ * General service (R).
  * @summary Community_genser
  * @constant
  * @type {number}
@@ -61,6 +86,7 @@ export
 const Community_genser: Community = Community.genser; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link Community_genser}.
  * @summary genser
  * @constant
  * @type {number}
@@ -69,6 +95,7 @@ export
 const genser: Community = Community.genser; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Special intelligence (Y).
  * @summary Community_si
  * @constant
  * @type {number}
@@ -77,6 +104,7 @@ export
 const Community_si: Community = Community.si; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link Community_si}.
  * @summary si
  * @constant
  * @type {number}
@@ -85,6 +113,7 @@ export
 const si: Community = Community.si; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Both GENSER and SI (R/Y).
  * @summary Community_both
  * @constant
  * @type {number}
@@ -93,6 +122,7 @@ export
 const Community_both: Community = Community.both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link Community_both}.
  * @summary both
  * @constant
  * @type {number}

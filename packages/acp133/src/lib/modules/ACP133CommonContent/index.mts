@@ -5,9 +5,15 @@
  * `{joint-iso-ccitt(2) country(16) us(840) organization(1) gov(101) dod(2)
  * ds(2) module(0) commonContent(2) editionB(3)}`.
  *
- * The short name `acp127` is omitted from this barrel. It names both an
- * `ACPPreferredDelivery` enumeration and an `ACPLegacyFormat` integer.
- * Import `ACPPreferredDelivery_acp127` or `ACPLegacyFormat_acp127`.
+ * These are the common-content attribute syntaxes.
+ * ACP 133 (June 1998),
+ * paragraph 301, calls this collection the Common Content
+ * and places the specification in Annex B.
+ *
+ * The short name `acp127` is omitted from this barrel. It
+ * names both an `ACPPreferredDelivery` enumeration and an
+ * `ACPLegacyFormat` integer. Import
+ * `ACPPreferredDelivery_acp127` or `ACPLegacyFormat_acp127`.
  */
 export {
     type ACPLegacyFormat,

@@ -12,6 +12,11 @@ import { PairwiseTag, _decode_PairwiseTag, _encode_PairwiseTag } from "../ACP133
 /**
  * @summary UKMEntry
  * @description
+ *
+ * One user-keying-material value and the
+ * {@link PairwiseTag} that identifies which key
+ * material it belongs to. A {@link MonthlyUKMs} value
+ * is a signed sequence of these.
  * 
  * ### ASN.1 Definition:
  * 
@@ -28,13 +33,13 @@ export
 class UKMEntry {
     constructor (
         /**
-         * @summary `tag`.
+         * Which generation of key material `ukm` is.
          * @public
          * @readonly
          */
         readonly tag: PairwiseTag,
         /**
-         * @summary `ukm`.
+         * User keying material identified by `tag`.
          * @public
          * @readonly
          */

@@ -6,6 +6,23 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Classification
  * @description
+ *
+ * Security classification. ACP 133 (June 1998),
+ * paragraph 409.b, lists unclassified, restricted,
+ * confidential, secret, and top secret in ascending
+ * order. A top-secret clearance dominates the lower
+ * clearances unless some other restriction applies.
+ * `unmarked` is a syntax value; paragraph 409.b does
+ * not place it in that order.
+ *
+ * `entryClassification` classifies the directory entry.
+ * `nameClassification` classifies the entry's name.
+ * `rIClassification` is the highest classification of
+ * data a device may process.
+ *
+ * [draft-dally-acp133-and-ldap-01, section 3.44](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.44)
+ * and
+ * [section 6.8](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-6.8).
  * 
  * ### ASN.1 Definition:
  * 
@@ -35,6 +52,23 @@ enum _enum_for_Classification {
 /**
  * @summary Classification
  * @description
+ *
+ * Security classification. ACP 133 (June 1998),
+ * paragraph 409.b, lists unclassified, restricted,
+ * confidential, secret, and top secret in ascending
+ * order. A top-secret clearance dominates the lower
+ * clearances unless some other restriction applies.
+ * `unmarked` is a syntax value; paragraph 409.b does
+ * not place it in that order.
+ *
+ * `entryClassification` classifies the directory entry.
+ * `nameClassification` classifies the entry's name.
+ * `rIClassification` is the highest classification of
+ * data a device may process.
+ *
+ * [draft-dally-acp133-and-ldap-01, section 3.44](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.44)
+ * and
+ * [section 6.8](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-6.8).
  * 
  * ### ASN.1 Definition:
  * 
@@ -57,6 +91,23 @@ type Classification = _enum_for_Classification;
 /**
  * @summary Classification
  * @description
+ *
+ * Security classification. ACP 133 (June 1998),
+ * paragraph 409.b, lists unclassified, restricted,
+ * confidential, secret, and top secret in ascending
+ * order. A top-secret clearance dominates the lower
+ * clearances unless some other restriction applies.
+ * `unmarked` is a syntax value; paragraph 409.b does
+ * not place it in that order.
+ *
+ * `entryClassification` classifies the directory entry.
+ * `nameClassification` classifies the entry's name.
+ * `rIClassification` is the highest classification of
+ * data a device may process.
+ *
+ * [draft-dally-acp133-and-ldap-01, section 3.44](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.44)
+ * and
+ * [section 6.8](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-6.8).
  * 
  * ### ASN.1 Definition:
  * 
@@ -77,6 +128,7 @@ export
 const Classification = _enum_for_Classification;
 
 /**
+ * Not in the paragraph 409.b hierarchy.
  * @summary Classification_unmarked
  * @constant
  * @type {number}
@@ -85,6 +137,7 @@ export
 const Classification_unmarked: Classification = Classification.unmarked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link Classification_unmarked}.
  * @summary unmarked
  * @constant
  * @type {number}
@@ -93,6 +146,7 @@ export
 const unmarked: Classification = Classification.unmarked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Lowest classification in paragraph 409.b.
  * @summary Classification_unclassified
  * @constant
  * @type {number}
@@ -101,6 +155,7 @@ export
 const Classification_unclassified: Classification = Classification.unclassified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link Classification_unclassified}.
  * @summary unclassified
  * @constant
  * @type {number}
@@ -109,6 +164,7 @@ export
 const unclassified: Classification = Classification.unclassified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Above unclassified and below confidential.
  * @summary Classification_restricted
  * @constant
  * @type {number}
@@ -117,6 +173,7 @@ export
 const Classification_restricted: Classification = Classification.restricted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link Classification_restricted}.
  * @summary restricted
  * @constant
  * @type {number}
@@ -125,6 +182,7 @@ export
 const restricted: Classification = Classification.restricted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Above restricted and below secret.
  * @summary Classification_confidential
  * @constant
  * @type {number}
@@ -133,6 +191,7 @@ export
 const Classification_confidential: Classification = Classification.confidential; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link Classification_confidential}.
  * @summary confidential
  * @constant
  * @type {number}
@@ -141,6 +200,7 @@ export
 const confidential: Classification = Classification.confidential; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Above confidential and below top secret.
  * @summary Classification_secret
  * @constant
  * @type {number}
@@ -149,6 +209,7 @@ export
 const Classification_secret: Classification = Classification.secret; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link Classification_secret}.
  * @summary secret
  * @constant
  * @type {number}
@@ -157,6 +218,7 @@ export
 const secret: Classification = Classification.secret; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Dominates the lower classifications in paragraph 409.b.
  * @summary Classification_top_secret
  * @constant
  * @type {number}
@@ -165,6 +227,7 @@ export
 const Classification_top_secret: Classification = Classification.top_secret; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
+ * Short name for {@link Classification_top_secret}.
  * @summary top_secret
  * @constant
  * @type {number}

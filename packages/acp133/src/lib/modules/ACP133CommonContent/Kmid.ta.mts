@@ -9,6 +9,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Kmid
  * @description
+ *
+ * Key-material identifier, imported from SDN.701.
+ * The common-content `alid` attribute uses it as the
+ * address list's key-material identifier.
+ *
+ * [draft-dally-acp133-and-ldap-01, section 3.18](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.18).
  * 
  * ### ASN.1 Definition:
  * 

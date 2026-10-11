@@ -11,6 +11,23 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Addressees
  * @description
+ *
+ * Plain-language addresses, each 1 to 55 characters.
+ *
+ * An address list is a shorthand for a predetermined
+ * set of recipients (ACP 133, June 1998, paragraph
+ * 105.a). This syntax is the membership of an
+ * ACP 127 / JANAP 128 collective: action addressees,
+ * who are expected to act on the message; information
+ * addressees; second-party action PLAs; extra
+ * addressees merged into those lists under circumstances
+ * given in {@link Remarks}; PLAs allowed to originate
+ * to the list; and, for some collectives, one combined
+ * action and information list (`plaAddressees`).
+ *
+ * [draft-dally-acp133-and-ldap-01, section 3.10](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.10)
+ * and
+ * [section 6.5](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-6.5).
  * 
  * ### ASN.1 Definition:
  * 

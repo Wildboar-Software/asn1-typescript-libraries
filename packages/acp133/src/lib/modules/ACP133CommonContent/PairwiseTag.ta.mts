@@ -13,6 +13,16 @@ import { Kmid, _decode_Kmid, _encode_Kmid } from "../ACP133CommonContent/Kmid.ta
 /**
  * @summary PairwiseTag
  * @description
+ *
+ * Identifies a generation of keying material. Imported
+ * from SDN.701. Each {@link UKMEntry} carries one.
+ *
+ * SDN.701 bounds `edition` by `1..ub-edition-size`.
+ * That bound is not applied in this module.
+ * `ub-edition-size` is not defined here. `date` stays
+ * `UTCTime` because the type is imported. ACP 133
+ * (June 1998), paragraph 302, requires GeneralizedTime
+ * only for new time definitions.
  * 
  * ### ASN.1 Definition:
  * 
@@ -29,19 +39,21 @@ export
 class PairwiseTag {
     constructor (
         /**
-         * @summary `kmid`.
+         * Key-material identifier. See {@link Kmid}.
          * @public
          * @readonly
          */
         readonly kmid: Kmid,
         /**
-         * @summary `edition`.
+         * Edition of the key material named by `kmid`.
+         * The SDN.701 bound is not enforced here.
          * @public
          * @readonly
          */
         readonly edition: INTEGER,
         /**
-         * @summary `date`.
+         * When this edition is dated, if the source
+         * supplied a time. The imported field is `UTCTime`.
          * @public
          * @readonly
          */

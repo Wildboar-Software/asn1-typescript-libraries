@@ -17,6 +17,21 @@ import {
 /**
  * @summary MonthlyUKMs
  * @description
+ *
+ * One month of user keying material (UKM), expanded
+ * from `SIGNED { SEQUENCE OF UKMEntry }`. The signed
+ * content is `ukm_entries`. `algorithm_identifier` and
+ * `encrypted` are the signature.
+ *
+ * The `ukms` auxiliary class holds twelve of these,
+ * `janUKMs` through `decUKMs`. Each month's value is
+ * used to build selected CCEB symmetric confidentiality
+ * algorithms. ACP 133 (June 1998), Table 3-2, lists
+ * `ukms` on address lists, messaging gateways,
+ * organizational persons, roles, and units, and does
+ * not mark it mandatory for those applications.
+ *
+ * [draft-dally-acp133-and-ldap-01, section 2.37](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-2.37).
  * 
  * ### ASN.1 Definition:
  * 
@@ -34,19 +49,20 @@ export
 class MonthlyUKMs {
     constructor (
         /**
-         * @summary `ukm_entries`.
+         * UKM values for the month. This is the content
+         * that was signed.
          * @public
          * @readonly
          */
         readonly ukm_entries: UKMEntry[],
         /**
-         * @summary `algorithm_identifier`.
+         * Algorithm that produced `encrypted`.
          * @public
          * @readonly
          */
         readonly algorithm_identifier: AlgorithmIdentifier,
         /**
-         * @summary `encrypted`.
+         * Signature bits over `ukm_entries`.
          * @public
          * @readonly
          */

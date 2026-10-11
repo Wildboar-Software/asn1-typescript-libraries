@@ -10,6 +10,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Remarks
  * @description
+ *
+ * Text kept with a PLA entry. It may be instructions
+ * rather than a description of the entity. Extra
+ * action and second-party addressees are merged into
+ * those lists under circumstances identified here.
+ *
+ * On an Organizational PLA, populate `remarks` when
+ * the directory is publishing ACP 117 (ACP 133,
+ * June 1998, Table 3-14).
+ *
+ * [draft-dally-acp133-and-ldap-01, section 3.105](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.105).
  * 
  * ### ASN.1 Definition:
  * 

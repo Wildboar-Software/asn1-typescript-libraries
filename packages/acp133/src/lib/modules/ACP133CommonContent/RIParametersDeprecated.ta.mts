@@ -13,6 +13,14 @@ import { Classification, _decode_Classification, _encode_Classification, _enum_f
 /**
  * @summary RIParametersDeprecated
  * @description
+ *
+ * Routing-indicator parameters as a SET. ACP 133
+ * edition D deprecated this in favour of the
+ * dollar-separated `DirectoryString` in
+ * {@link RIParameters}. Figure 3-2 of ACP 133
+ * (June 1998) is this shape.
+ *
+ * [draft-dally-acp133-and-ldap-01, section 6.16](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-6.16).
  * 
  * ### ASN.1 Definition:
  * 
@@ -32,31 +40,46 @@ export
 class RIParametersDeprecated {
     constructor (
         /**
-         * @summary `rI`.
+         * Routing indicator the PLA is delivered to. The
+         * `rI` attribute is exactly seven characters.
+         * This component has no size constraint.
+         * Figure 3-2 uses `RUHPZFF`.
+         *
+         * [draft-dally-acp133-and-ldap-01, section 3.107](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.107).
          * @public
          * @readonly
          */
         readonly rI: PrintableString,
         /**
-         * @summary `rIType`.
+         * `normal`, `off-line`, or a part-time terminal.
          * @public
          * @readonly
          */
         readonly rIType: RIParametersDeprecated_rIType,
         /**
-         * @summary `minimize`.
+         * No longer used. The edition D string form
+         * fixes this field as `FALSE`. The MINIMIZE
+         * condition is the separate `minimize`
+         * attribute: when set, originators must not
+         * send unnecessary messages to the recipient.
+         *
+         * [draft-dally-acp133-and-ldap-01, section 3.85](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.85).
          * @public
          * @readonly
          */
         readonly minimize: BOOLEAN,
         /**
-         * @summary `sHD`.
+         * Special handling designator the routing
+         * indicator can support.
+         *
+         * [draft-dally-acp133-and-ldap-01, section 3.118](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.118).
          * @public
          * @readonly
          */
         readonly sHD: PrintableString,
         /**
-         * @summary `classification`.
+         * Classification carried with this routing
+         * indicator. See {@link Classification}.
          * @public
          * @readonly
          */
