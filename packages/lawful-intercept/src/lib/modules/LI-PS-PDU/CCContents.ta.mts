@@ -5,6 +5,20 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as EmailPDU from "../EmailPDU/index.mjs";
+import * as IPAccessPDU from "../IPAccessPDU/index.mjs";
+import * as L2AccessPDU from "../L2AccessPDU/index.mjs";
+import * as TS101909201 from "../TS101909201/index.mjs";
+import * as TS101909202 from "../TS101909202/index.mjs";
+import * as PstnIsdnPDU from "../PstnIsdnPDU/index.mjs";
+import * as IPMultimediaPDU from "../IPMultimediaPDU/index.mjs";
+import * as Umts_HI3_PS from "../Umts-HI3-PS/CC-PDU.ta.mjs";
+import * as Eps_HI3_PS from "../Eps-HI3-PS/CC-PDU.ta.mjs";
+import * as CONF_HI3_IMS from "../CONF-HI3-IMS/Conf-CC-PDU.ta.mjs";
+import * as VoIP_HI3_IMS from "../VoIP-HI3-IMS/Voip-CC-PDU.ta.mjs";
+import * as GCSE_HI3 from "../GCSE-HI3/Gcse-CC-PDU.ta.mjs";
+import * as CSvoice_HI3_IP from "../CSvoice-HI3-IP/CSvoice-CC-PDU.ta.mjs";
+
 // export { Conf_CC_PDU, _decode_Conf_CC_PDU, _encode_Conf_CC_PDU } from "../CONF-HI3-IMS/Conf-CC-PDU.ta.mjs";
 // export { Voip_CC_PDU, _decode_Voip_CC_PDU, _encode_Voip_CC_PDU } from "../VoIP-HI3-IMS/Voip-CC-PDU.ta.mjs";
 // export { Gcse_CC_PDU, _decode_Gcse_CC_PDU, _encode_Gcse_CC_PDU } from "../GCSE-HI3/Gcse-CC-PDU.ta.mjs";

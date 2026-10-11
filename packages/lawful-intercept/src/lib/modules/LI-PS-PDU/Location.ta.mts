@@ -5,6 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as UmtsHI2Operations from "../UmtsHI2Operations/Location.ta.mjs";
+import * as EpsHI2Operations from "../EpsHI2Operations/EPSLocation.ta.mjs";
+import * as HI2Operations from "../HI2Operations/Location.ta.mjs";
+import * as TS33128Payloads from "../TS33128Payloads/UserLocation.ta.mjs";
+
 // export { EPSLocation, _decode_EPSLocation, _encode_EPSLocation } from "../EpsHI2Operations/EPSLocation.ta.mjs";
 import { WlanLocationAttributes, _decode_WlanLocationAttributes, _encode_WlanLocationAttributes } from "../LI-PS-PDU/WlanLocationAttributes.ta.mjs";
 // export { WlanLocationAttributes, _decode_WlanLocationAttributes, _encode_WlanLocationAttributes } from "../LI-PS-PDU/WlanLocationAttributes.ta.mjs";

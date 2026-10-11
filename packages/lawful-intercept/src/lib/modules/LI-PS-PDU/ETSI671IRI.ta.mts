@@ -4,6 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as HI2Operations from "../HI2Operations/index.mjs";
+
 // export { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "../HI2Operations/IRI-Parameters.ta.mjs";
 // export { IRIsContent, _decode_IRIsContent, _encode_IRIsContent } from "../HI2Operations/IRIsContent.ta.mjs";
 

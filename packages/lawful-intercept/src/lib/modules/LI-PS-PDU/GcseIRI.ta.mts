@@ -4,6 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as GCSEHI2Operations from "../GCSEHI2Operations/index.mjs";
+
 // export { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "../GCSEHI2Operations/IRI-Parameters.ta.mjs";
 // export { GcseIRIsContent, _decode_GcseIRIsContent, _encode_GcseIRIsContent } from "../GCSEHI2Operations/GcseIRIsContent.ta.mjs";
 

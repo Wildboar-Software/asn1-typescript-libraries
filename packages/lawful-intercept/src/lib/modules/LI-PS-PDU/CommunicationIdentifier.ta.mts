@@ -7,6 +7,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as UmtsHI2Operations from "../UmtsHI2Operations/CorrelationValues.ta.mjs";
+
 import { NetworkIdentifier, _decode_NetworkIdentifier, _encode_NetworkIdentifier } from "../LI-PS-PDU/NetworkIdentifier.ta.mjs";
 // export { NetworkIdentifier, _decode_NetworkIdentifier, _encode_NetworkIdentifier } from "../LI-PS-PDU/NetworkIdentifier.ta.mjs";
 // export { CorrelationValues, _decode_CorrelationValues, _encode_CorrelationValues } from "../UmtsHI2Operations/CorrelationValues.ta.mjs";

@@ -19,6 +19,6 @@ import { tS33128PayloadsOID } from "../TS33128Payloads/tS33128PayloadsOID.va.mjs
  * @constant
  */
 export
-const lINotificationPayloadOID: RELATIVE_OID = [ tS33128PayloadsOID, /* lINotification */ 5 ];
+const lINotificationPayloadOID: RELATIVE_OID = [ ...tS33128PayloadsOID, /* lINotification */ 5 ];
 
 /* eslint-enable */

@@ -7,6 +7,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { TARGETACTIVITYMONITOR_1, _decode_TARGETACTIVITYMONITOR_1, _encode_TARGETACTIVITYMONITOR_1 } from "../TS101909201/index.mjs";
+import { TARGETACTIVITYMONITORind, _decode_TARGETACTIVITYMONITORind, _encode_TARGETACTIVITYMONITORind, TARGETCOMMSMONITORind, _decode_TARGETCOMMSMONITORind, _encode_TARGETCOMMSMONITORind, TTRAFFICind, _decode_TTRAFFICind, _encode_TTRAFFICind, CTTRAFFICind, _decode_CTTRAFFICind, _encode_CTTRAFFICind, TETRAAddressType, _decode_TETRAAddressType, _encode_TETRAAddressType } from "../EN301040/index.mjs";
 import { Tetra_IRI_Parameters_iRIversion, _decode_Tetra_IRI_Parameters_iRIversion, _encode_Tetra_IRI_Parameters_iRIversion, _enum_for_Tetra_IRI_Parameters_iRIversion } from "../TETRA-HI2Operations/Tetra-IRI-Parameters-iRIversion.ta.mjs";
 // export { Tetra_IRI_Parameters_iRIversion, _enum_for_Tetra_IRI_Parameters_iRIversion, Tetra_IRI_Parameters_iRIversion_version0 /* IMPORTED_LONG_ENUMERATION_ITEM */, version0 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Tetra_IRI_Parameters_iRIversion, _encode_Tetra_IRI_Parameters_iRIversion } from "../TETRA-HI2Operations/Tetra-IRI-Parameters-iRIversion.ta.mjs";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../TETRA-HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
@@ -837,8 +839,8 @@ function _decode_Tetra_IRI_Parameters (el: _Element): Tetra_IRI_Parameters {
         "cTTRAFFICind": (_el: _Element): void => { cTTRAFFICind = $._decode_implicit<CTTRAFFICind>(() => _decode_CTTRAFFICind)(_el); },
         "tETRA-LI-Event": (_el: _Element): void => { tETRA_LI_Event = $._decode_implicit<TETRA_LI_Event>(() => _decode_TETRA_LI_Event)(_el); },
         "dMO-Indicator": (_el: _Element): void => { dMO_Indicator = $._decode_implicit<DMO_Indicator>(() => _decode_DMO_Indicator)(_el); },
-        "tETRA-PartyInformation": (_el: _Element): void => { tETRA_PartyInformation = $._decode_implicit<TETRAAddressType>(() => _decode_TETRAAddressType)(_el); },
-        "tETRA-Other-PartyInformation": (_el: _Element): void => { tETRA_Other_PartyInformation = $._decode_implicit<TETRAAddressType>(() => _decode_TETRAAddressType)(_el); },
+        "tETRA-PartyInformation": (_el: _Element): void => { tETRA_PartyInformation = $._decode_explicit<TETRAAddressType>(() => _decode_TETRAAddressType)(_el); },
+        "tETRA-Other-PartyInformation": (_el: _Element): void => { tETRA_Other_PartyInformation = $._decode_explicit<TETRAAddressType>(() => _decode_TETRAAddressType)(_el); },
         "txGrantedStatus": (_el: _Element): void => { txGrantedStatus = $._decode_implicit<TxGrantedStatus>(() => _decode_TxGrantedStatus)(_el); },
         "groupStatus": (_el: _Element): void => { groupStatus = $._decode_implicit<GroupStatus>(() => _decode_GroupStatus)(_el); },
         "national-HI2-ASN1parameters": (_el: _Element): void => { national_HI2_ASN1parameters = $._decode_implicit<National_HI2_ASN1parameters>(() => _decode_National_HI2_ASN1parameters)(_el); }
@@ -1031,10 +1033,10 @@ function _encode_Tetra_IRI_Parameters (value: Tetra_IRI_Parameters, elGetter: $.
         _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 41, () => _encode_DMO_Indicator, $.BER)(value.dMO_Indicator, $.BER);
     }
     if (value.tETRA_PartyInformation !== undefined) {
-        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 42, () => _encode_TETRAAddressType, $.BER)(value.tETRA_PartyInformation, $.BER);
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 42, () => _encode_TETRAAddressType, $.BER)(value.tETRA_PartyInformation, $.BER);
     }
     if (value.tETRA_Other_PartyInformation !== undefined) {
-        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 43, () => _encode_TETRAAddressType, $.BER)(value.tETRA_Other_PartyInformation, $.BER);
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 43, () => _encode_TETRAAddressType, $.BER)(value.tETRA_Other_PartyInformation, $.BER);
     }
     if (value.txGrantedStatus !== undefined) {
         _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 44, () => _encode_TxGrantedStatus, $.BER)(value.txGrantedStatus, $.BER);

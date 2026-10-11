@@ -19,6 +19,6 @@ import { tS33128PayloadsOID } from "../TS33128Payloads/tS33128PayloadsOID.va.mjs
  * @constant
  */
 export
-const iRIPayloadOID: RELATIVE_OID = [ tS33128PayloadsOID, /* iRI */ 3 ];
+const iRIPayloadOID: RELATIVE_OID = [ ...tS33128PayloadsOID, /* iRI */ 3 ];
 
 /* eslint-enable */

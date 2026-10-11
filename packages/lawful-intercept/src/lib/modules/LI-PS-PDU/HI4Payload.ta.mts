@@ -4,6 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as TS33128Payloads from "../TS33128Payloads/LINotificationPayload.ta.mjs";
+
 // export { LINotificationPayload, _decode_LINotificationPayload, _encode_LINotificationPayload } from "../TS33128Payloads/LINotificationPayload.ta.mjs";
 
 

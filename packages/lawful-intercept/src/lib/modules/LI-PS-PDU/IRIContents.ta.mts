@@ -5,6 +5,14 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as EmailPDU from "../EmailPDU/index.mjs";
+import * as IPAccessPDU from "../IPAccessPDU/index.mjs";
+import * as L2AccessPDU from "../L2AccessPDU/index.mjs";
+import * as TS101909201 from "../TS101909201/index.mjs";
+import * as TS101909202 from "../TS101909202/index.mjs";
+import * as PstnIsdnPDU from "../PstnIsdnPDU/index.mjs";
+import * as IPMultimediaPDU from "../IPMultimediaPDU/index.mjs";
+
 import { UMTSIRI, _decode_UMTSIRI, _encode_UMTSIRI } from "../LI-PS-PDU/UMTSIRI.ta.mjs";
 // export { UMTSIRI, _decode_UMTSIRI, _encode_UMTSIRI } from "../LI-PS-PDU/UMTSIRI.ta.mjs";
 import { ETSI671IRI, _decode_ETSI671IRI, _encode_ETSI671IRI } from "../LI-PS-PDU/ETSI671IRI.ta.mjs";

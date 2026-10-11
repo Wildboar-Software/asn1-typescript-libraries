@@ -4,6 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as IPAccessPDU from "../IPAccessPDU/index.mjs";
+
 import { AMFRegistration, _decode_AMFRegistration, _encode_AMFRegistration } from "../TS33128Payloads/AMFRegistration.ta.mjs";
 // export { AMFRegistration, _decode_AMFRegistration, _encode_AMFRegistration } from "../TS33128Payloads/AMFRegistration.ta.mjs";
 import { AMFDeregistration, _decode_AMFDeregistration, _encode_AMFDeregistration } from "../TS33128Payloads/AMFDeregistration.ta.mjs";

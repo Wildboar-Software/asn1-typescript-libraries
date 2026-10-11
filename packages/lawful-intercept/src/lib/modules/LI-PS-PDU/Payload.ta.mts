@@ -4,6 +4,10 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as HI1NotificationOperations from "../HI1NotificationOperations/HI1-Operation.ta.mjs";
+import * as ThreeGPP_HI1NotificationOperations from "../ThreeGPP-HI1NotificationOperations/ThreeGPP-HI1-Operation.ta.mjs";
+import * as ILHIPDU from "../ILHIPDU/index.mjs";
+
 import { IRIPayload, _decode_IRIPayload, _encode_IRIPayload } from "../TS33128Payloads/IRIPayload.ta.mjs";
 // export { IRIPayload, _decode_IRIPayload, _encode_IRIPayload } from "../TS33128Payloads/IRIPayload.ta.mjs";
 import { CCPayload, _decode_CCPayload, _encode_CCPayload } from "../TS33128Payloads/CCPayload.ta.mjs";

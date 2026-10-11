@@ -4,6 +4,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as UmtsHI2Operations from "../UmtsHI2Operations/index.mjs";
+import * as UmtsCS_HI2Operations from "../UmtsCS-HI2Operations/index.mjs";
+
 // export { UmtsIRIsContent, _decode_UmtsIRIsContent, _encode_UmtsIRIsContent } from "../UmtsHI2Operations/UmtsIRIsContent.ta.mjs";
 // export { UmtsCS_IRIsContent, _decode_UmtsCS_IRIsContent, _encode_UmtsCS_IRIsContent } from "../UmtsCS-HI2Operations/UmtsCS-IRIsContent.ta.mjs";
 
