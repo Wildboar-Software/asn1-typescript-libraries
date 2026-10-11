@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccreditingBody, _decode_AccreditingBody, _encode_AccreditingBody } from "../MachineReadableBiometricTestingAndReportingTestReport/AccreditingBody.ta.mjs";
-// export { AccreditingBody, _decode_AccreditingBody, _encode_AccreditingBody } from "../MachineReadableBiometricTestingAndReportingTestReport/AccreditingBody.ta.mjs";
 import { ScopeAccreditation, _decode_ScopeAccreditation, _encode_ScopeAccreditation } from "../MachineReadableBiometricTestingAndReportingTestReport/ScopeAccreditation.ta.mjs";
-// export { ScopeAccreditation, _decode_ScopeAccreditation, _encode_ScopeAccreditation } from "../MachineReadableBiometricTestingAndReportingTestReport/ScopeAccreditation.ta.mjs";
 
 
 /**

@@ -1,83 +1,23 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NR_CGI, _decode_NR_CGI, _encode_NR_CGI } from "../MAP-CommonDataTypes/NR-CGI.ta.mjs";
-import { E_UTRAN_CGI, _decode_E_UTRAN_CGI, _encode_E_UTRAN_CGI } from "../MAP-CommonDataTypes/E-UTRAN-CGI.ta.mjs";
-import { GeographicalInformation, _decode_GeographicalInformation, _encode_GeographicalInformation } from "../MAP-MS-DataTypes/GeographicalInformation.ta.mjs";
-import { GeodeticInformation, _decode_GeodeticInformation, _encode_GeodeticInformation } from "../MAP-MS-DataTypes/GeodeticInformation.ta.mjs";
-import { FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
-import { TA_Id, _decode_TA_Id, _encode_TA_Id } from "../MAP-CommonDataTypes/TA-Id.ta.mjs";
 import { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
-import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-import { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../MAP-MS-DataTypes/TimeZone.ta.mjs";
-import { Used_RAT_Type, _enum_for_Used_RAT_Type, Used_RAT_Type_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_geran /* IMPORTED_LONG_ENUMERATION_ITEM */, geran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_gan /* IMPORTED_LONG_ENUMERATION_ITEM */, gan /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_i_hspa_evolution /* IMPORTED_LONG_ENUMERATION_ITEM */, i_hspa_evolution /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_e_utran /* IMPORTED_LONG_ENUMERATION_ITEM */, e_utran /* IMPORTED_SHORT_ENUMERATION_ITEM */, Used_RAT_Type_nb_iot /* IMPORTED_LONG_ENUMERATION_ITEM */, nb_iot /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Used_RAT_Type, _encode_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
-import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
+import { E_UTRAN_CGI, _decode_E_UTRAN_CGI, _encode_E_UTRAN_CGI } from "../MAP-CommonDataTypes/E-UTRAN-CGI.ta.mjs";
+import { NR_CGI, _decode_NR_CGI, _encode_NR_CGI } from "../MAP-CommonDataTypes/NR-CGI.ta.mjs";
 import { NR_TA_Id, _decode_NR_TA_Id, _encode_NR_TA_Id } from "../MAP-CommonDataTypes/NR-TA-Id.ta.mjs";
+import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
+import { TA_Id, _decode_TA_Id, _encode_TA_Id } from "../MAP-CommonDataTypes/TA-Id.ta.mjs";
+import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
+import { FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
+import { GeodeticInformation, _decode_GeodeticInformation, _encode_GeodeticInformation } from "../MAP-MS-DataTypes/GeodeticInformation.ta.mjs";
+import { GeographicalInformation, _decode_GeographicalInformation, _encode_GeographicalInformation } from "../MAP-MS-DataTypes/GeographicalInformation.ta.mjs";
+import { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../MAP-MS-DataTypes/TimeZone.ta.mjs";
+import { Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
 
 
 /**

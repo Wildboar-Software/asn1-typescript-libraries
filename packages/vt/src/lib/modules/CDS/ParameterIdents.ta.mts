@@ -13,17 +13,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DimensionParamIdent, _decode_DimensionParamIdent, _encode_DimensionParamIdent } from "../CDS/DimensionParamIdent.ta.mjs";
-// export { DimensionParamIdent, _decode_DimensionParamIdent, _encode_DimensionParamIdent } from "../CDS/DimensionParamIdent.ta.mjs";
 import { CompoundRepertoireIdent, _decode_CompoundRepertoireIdent, _encode_CompoundRepertoireIdent } from "../CDS/CompoundRepertoireIdent.ta.mjs";
-// export { CompoundRepertoireIdent, _decode_CompoundRepertoireIdent, _encode_CompoundRepertoireIdent } from "../CDS/CompoundRepertoireIdent.ta.mjs";
 import { CompoundEmphasisIdent, _decode_CompoundEmphasisIdent, _encode_CompoundEmphasisIdent } from "../CDS/CompoundEmphasisIdent.ta.mjs";
-// export { CompoundEmphasisIdent, _decode_CompoundEmphasisIdent, _encode_CompoundEmphasisIdent } from "../CDS/CompoundEmphasisIdent.ta.mjs";
 import { CompoundColourIdent, _decode_CompoundColourIdent, _encode_CompoundColourIdent } from "../CDS/CompoundColourIdent.ta.mjs";
-// export { CompoundColourIdent, _decode_CompoundColourIdent, _encode_CompoundColourIdent } from "../CDS/CompoundColourIdent.ta.mjs";
 import { BlockParamIdent, _decode_BlockParamIdent, _encode_BlockParamIdent } from "../CDS/BlockParamIdent.ta.mjs";
-// export { BlockParamIdent, _decode_BlockParamIdent, _encode_BlockParamIdent } from "../CDS/BlockParamIdent.ta.mjs";
 import { FieldParamIdent, _decode_FieldParamIdent, _encode_FieldParamIdent } from "../CDS/FieldParamIdent.ta.mjs";
-// export { FieldParamIdent, _decode_FieldParamIdent, _encode_FieldParamIdent } from "../CDS/FieldParamIdent.ta.mjs";
 
 
 /**

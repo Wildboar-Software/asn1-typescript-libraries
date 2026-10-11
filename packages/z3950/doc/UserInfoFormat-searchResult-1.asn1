@@ -1,0 +1,56 @@
+-- ASN1.11. Z39.50 ASN.1 Definition for SearchResult-1
+UserInfoFormat-searchResult-1
+{z39-50-userInfoFormat searchResult-1(1)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    DatabaseName, Term, Query, IntUnit, InternationalString
+        FROM Z39-50-APDU-2001
+    ;
+
+SearchInfoReport ::= SEQUENCE OF SEQUENCE {
+    subqueryId              [1] IMPLICIT InternationalString OPTIONAL,
+    -- Shorthand identifier of subquery
+    fullQuery               [2] IMPLICIT BOOLEAN,
+    -- 'true' means this is the full query; 'false', a sub-query
+    subqueryExpression      [3] QueryExpression OPTIONAL,
+    -- A subquery of the query as submitted.
+    -- May be whole query; if so, "fullQuery" should be 'true'
+    subqueryInterpretation  [4] QueryExpression OPTIONAL,
+    -- How server interpreted subquery
+    subqueryRecommendation  [5] QueryExpression OPTIONAL,
+    -- Server-recommended alternative
+    subqueryCount           [6] IMPLICIT INTEGER OPTIONAL,
+    -- Number of records for thissubQuery, across
+    -- all of the specified databases. (If during search,
+    -- via resource control, number of records so far)
+    subqueryWeight          [7] IMPLICIT IntUnit OPTIONAL,
+    -- Relative weight of this subquery
+    resultsByDB             [8] IMPLICIT ResultsByDB OPTIONAL
+}
+
+ResultsByDB ::= SEQUENCE OF SEQUENCE {
+    databases       [1] CHOICE {
+        all     [1] IMPLICIT NULL,
+        --Applies across all of the databases in Search APDU
+        list    [2] IMPLICIT SEQUENCE OF DatabaseName
+        --Applies across all databases in this list
+    },
+    count           [2] IMPLICIT INTEGER OPTIONAL,
+    --Number of records for query component
+    --(and, as above, if during search, via resource control,
+    -- number of records so far)
+    resultSetName   [3] IMPLICIT InternationalString OPTIONAL
+    --See comment 1.
+}
+
+QueryExpression ::= CHOICE {
+    term        [1] IMPLICIT SEQUENCE {
+        queryTerm   [1] Term,
+        termComment [2] IMPLICIT InternationalString OPTIONAL
+    },
+    query       [2] Query
+}
+
+END

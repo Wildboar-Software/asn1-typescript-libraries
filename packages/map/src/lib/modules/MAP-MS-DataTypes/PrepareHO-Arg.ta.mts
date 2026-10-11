@@ -1,99 +1,39 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
-import { RNCId, _decode_RNCId, _encode_RNCId } from "../MAP-MS-DataTypes/RNCId.ta.mjs";
 import { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
+import { ASCI_CallReference, _decode_ASCI_CallReference, _encode_ASCI_CallReference } from "../MAP-CommonDataTypes/ASCI-CallReference.ta.mjs";
+import { GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
+import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { IntegrityProtectionInformation, _decode_IntegrityProtectionInformation, _encode_IntegrityProtectionInformation } from "../MAP-MS-DataTypes/IntegrityProtectionInformation.ta.mjs";
-import { EncryptionInformation, _decode_EncryptionInformation, _encode_EncryptionInformation } from "../MAP-MS-DataTypes/EncryptionInformation.ta.mjs";
-import { RadioResourceInformation, _decode_RadioResourceInformation, _encode_RadioResourceInformation } from "../MAP-MS-DataTypes/RadioResourceInformation.ta.mjs";
+import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AllowedGSM_Algorithms, _decode_AllowedGSM_Algorithms, _encode_AllowedGSM_Algorithms } from "../MAP-MS-DataTypes/AllowedGSM-Algorithms.ta.mjs";
 import { AllowedUMTS_Algorithms, _decode_AllowedUMTS_Algorithms, _encode_AllowedUMTS_Algorithms } from "../MAP-MS-DataTypes/AllowedUMTS-Algorithms.ta.mjs";
-import { RadioResourceList, _decode_RadioResourceList, _encode_RadioResourceList } from "../MAP-MS-DataTypes/RadioResourceList.ta.mjs";
-import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
+import { AoIPCodecsList, _decode_AoIPCodecsList, _encode_AoIPCodecsList } from "../MAP-MS-DataTypes/AoIPCodecsList.ta.mjs";
 import { BSSMAP_ServiceHandover, _decode_BSSMAP_ServiceHandover, _encode_BSSMAP_ServiceHandover } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandover.ta.mjs";
-import { RANAP_ServiceHandover, _decode_RANAP_ServiceHandover, _encode_RANAP_ServiceHandover } from "../MAP-MS-DataTypes/RANAP-ServiceHandover.ta.mjs";
 import { BSSMAP_ServiceHandoverList, _decode_BSSMAP_ServiceHandoverList, _encode_BSSMAP_ServiceHandoverList } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandoverList.ta.mjs";
-import { ASCI_CallReference, _decode_ASCI_CallReference, _encode_ASCI_CallReference } from "../MAP-CommonDataTypes/ASCI-CallReference.ta.mjs";
-import { GERAN_Classmark, _decode_GERAN_Classmark, _encode_GERAN_Classmark } from "../MAP-MS-DataTypes/GERAN-Classmark.ta.mjs";
 import { Codec, _decode_Codec, _encode_Codec } from "../MAP-MS-DataTypes/Codec.ta.mjs";
+import { CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
+import { EncryptionInformation, _decode_EncryptionInformation, _encode_EncryptionInformation } from "../MAP-MS-DataTypes/EncryptionInformation.ta.mjs";
+import { GERAN_Classmark, _decode_GERAN_Classmark, _encode_GERAN_Classmark } from "../MAP-MS-DataTypes/GERAN-Classmark.ta.mjs";
+import { IntegrityProtectionInformation, _decode_IntegrityProtectionInformation, _encode_IntegrityProtectionInformation } from "../MAP-MS-DataTypes/IntegrityProtectionInformation.ta.mjs";
+import { LCLS_ConfigurationPreference, _decode_LCLS_ConfigurationPreference, _encode_LCLS_ConfigurationPreference } from "../MAP-MS-DataTypes/LCLS-ConfigurationPreference.ta.mjs";
+import { LCLS_GlobalCallReference, _decode_LCLS_GlobalCallReference, _encode_LCLS_GlobalCallReference } from "../MAP-MS-DataTypes/LCLS-GlobalCallReference.ta.mjs";
+import { LCLS_Negotiation, _decode_LCLS_Negotiation, _encode_LCLS_Negotiation } from "../MAP-MS-DataTypes/LCLS-Negotiation.ta.mjs";
+import { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
+import { RadioResourceInformation, _decode_RadioResourceInformation, _encode_RadioResourceInformation } from "../MAP-MS-DataTypes/RadioResourceInformation.ta.mjs";
+import { RadioResourceList, _decode_RadioResourceList, _encode_RadioResourceList } from "../MAP-MS-DataTypes/RadioResourceList.ta.mjs";
+import { RANAP_ServiceHandover, _decode_RANAP_ServiceHandover, _encode_RANAP_ServiceHandover } from "../MAP-MS-DataTypes/RANAP-ServiceHandover.ta.mjs";
+import { RNCId, _decode_RNCId, _encode_RNCId } from "../MAP-MS-DataTypes/RNCId.ta.mjs";
 import { SupportedCodecsList, _decode_SupportedCodecsList, _encode_SupportedCodecsList } from "../MAP-MS-DataTypes/SupportedCodecsList.ta.mjs";
 import { UESBI_Iu, _decode_UESBI_Iu, _encode_UESBI_Iu } from "../MAP-MS-DataTypes/UESBI-Iu.ta.mjs";
-import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
-import { TracePropagationList, _decode_TracePropagationList, _encode_TracePropagationList } from "../MAP-OM-DataTypes/TracePropagationList.ta.mjs";
-import { AoIPCodecsList, _decode_AoIPCodecsList, _encode_AoIPCodecsList } from "../MAP-MS-DataTypes/AoIPCodecsList.ta.mjs";
 import { ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP-MS-DataTypes/ZoneCodeList.ta.mjs";
-import { LCLS_GlobalCallReference, _decode_LCLS_GlobalCallReference, _encode_LCLS_GlobalCallReference } from "../MAP-MS-DataTypes/LCLS-GlobalCallReference.ta.mjs";
-import { LCLS_Negotiation, LCLS_Negotiation_permission_indicator_not_allowed_bit /* IMPORTED_LONG_NAMED_BIT */, permission_indicator_not_allowed_bit /* IMPORTED_SHORT_NAMED_BIT */, LCLS_Negotiation_permission_indicator_spare_bit /* IMPORTED_LONG_NAMED_BIT */, permission_indicator_spare_bit /* IMPORTED_SHORT_NAMED_BIT */, _decode_LCLS_Negotiation, _encode_LCLS_Negotiation } from "../MAP-MS-DataTypes/LCLS-Negotiation.ta.mjs";
-import { LCLS_ConfigurationPreference, LCLS_ConfigurationPreference_forward_data_sending_indicator /* IMPORTED_LONG_NAMED_BIT */, forward_data_sending_indicator /* IMPORTED_SHORT_NAMED_BIT */, LCLS_ConfigurationPreference_backward_data_sending_indicator /* IMPORTED_LONG_NAMED_BIT */, backward_data_sending_indicator /* IMPORTED_SHORT_NAMED_BIT */, LCLS_ConfigurationPreference_forward_data_reception_indicator /* IMPORTED_LONG_NAMED_BIT */, forward_data_reception_indicator /* IMPORTED_SHORT_NAMED_BIT */, LCLS_ConfigurationPreference_backward_data_reception_indicator /* IMPORTED_LONG_NAMED_BIT */, backward_data_reception_indicator /* IMPORTED_SHORT_NAMED_BIT */, _decode_LCLS_ConfigurationPreference, _encode_LCLS_ConfigurationPreference } from "../MAP-MS-DataTypes/LCLS-ConfigurationPreference.ta.mjs";
-import { CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
+import { TracePropagationList, _decode_TracePropagationList, _encode_TracePropagationList } from "../MAP-OM-DataTypes/TracePropagationList.ta.mjs";
 
 
 /**

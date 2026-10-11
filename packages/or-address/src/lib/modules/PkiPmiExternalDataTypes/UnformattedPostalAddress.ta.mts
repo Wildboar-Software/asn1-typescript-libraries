@@ -1,9 +1,9 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
-    PrintableString,
-    TeletexString,
+    type OPTIONAL,
+    type PrintableString,
+    type TeletexString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import teletexToString from "@wildboar/teletex";
@@ -32,20 +32,26 @@ import { unformattedPostalAddressFromString } from "../../parse.mjs";
  *
  */
 export class UnformattedPostalAddress {
+    /**
+     * @summary `printable_address`.
+     * @public
+     * @readonly
+     */
+    public readonly printable_address?: OPTIONAL<PrintableString[]>;
+    /**
+     * @summary `teletex_string`.
+     * @public
+     * @readonly
+     */
+    public readonly teletex_string?: OPTIONAL<TeletexString>;
+
     constructor(
-        /**
-         * @summary `printable_address`.
-         * @public
-         * @readonly
-         */
-        readonly printable_address?: OPTIONAL<PrintableString[]>,
-        /**
-         * @summary `teletex_string`.
-         * @public
-         * @readonly
-         */
-        readonly teletex_string?: OPTIONAL<TeletexString>
-    ) {}
+        printable_address?: OPTIONAL<PrintableString[]>,
+        teletex_string?: OPTIONAL<TeletexString>
+    ) {
+        this.printable_address = printable_address;
+        this.teletex_string = teletex_string;
+    }
 
     /**
      * @summary Restructures an object into a UnformattedPostalAddress
@@ -118,7 +124,7 @@ export class UnformattedPostalAddress {
      * @public
      * @function
      */
-    public toJSON(): { "printable-address"?: string[], "teletex-string"?: string } {
+    public toJSON(): { "printable-address"?: string[] | undefined, "teletex-string"?: string | undefined } {
         return {
             "printable-address": this.printable_address?.map((s) => s.toString()),
             "teletex-string": this.teletex_string ? teletexToString(this.teletex_string) : undefined,

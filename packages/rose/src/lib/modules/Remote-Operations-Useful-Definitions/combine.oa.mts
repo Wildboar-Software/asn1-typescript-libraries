@@ -45,16 +45,16 @@ function combine (
         decoderFor: {},
         encoderFor: {},
         "&Both": [
-            ...ConsumerConsumes["&Both"],
-            ...ConsumerSupplies["&Both"],
+            ...ConsumerConsumes["&Both"] ?? [],
+            ...ConsumerSupplies["&Both"] ?? [],
         ],
         "&Consumer": [
-            ...ConsumerConsumes["&Consumer"],
-            ...ConsumerSupplies["&Supplier"],
+            ...ConsumerConsumes["&Consumer"] ?? [],
+            ...ConsumerSupplies["&Supplier"] ?? [],
         ],
         "&Supplier": [
-            ...ConsumerConsumes["&Supplier"],
-            ...ConsumerSupplies["&Consumer"],
+            ...ConsumerConsumes["&Supplier"] ?? [],
+            ...ConsumerSupplies["&Consumer"] ?? [],
         ],
         "&id": base["&id"],
     };

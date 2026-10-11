@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -106,10 +106,10 @@ export const TerminalType_videotex: TerminalType = 8; /* LONG_NAMED_INTEGER_VALU
 export const videotex: TerminalType = TerminalType_videotex; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_TerminalType = $._decodeInteger;
+export const _decode_TerminalType: $.ASN1Decoder<TerminalType> = $._decodeInteger;
 
 
-export const _encode_TerminalType = $._encodeInteger;
+export const _encode_TerminalType: $.ASN1Encoder<TerminalType> = $._encodeInteger;
 
 
 /* eslint-enable */

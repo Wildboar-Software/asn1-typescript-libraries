@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import {
-    PDSName,
+    type PDSName,
     _decode_PDSName,
     _encode_PDSName,
 } from "../PkiPmiExternalDataTypes/PDSName.ta.mjs";

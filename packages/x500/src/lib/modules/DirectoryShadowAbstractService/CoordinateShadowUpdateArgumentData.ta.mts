@@ -120,11 +120,9 @@ export class CoordinateShadowUpdateArgumentData {
      * @returns {CoordinateShadowUpdateArgumentData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof CoordinateShadowUpdateArgumentData]: CoordinateShadowUpdateArgumentData[_K];
             }
-        >
     ): CoordinateShadowUpdateArgumentData {
         return new CoordinateShadowUpdateArgumentData(
             _o.agreementID,

@@ -1,0 +1,25 @@
+{
+  "name": "lpp",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/lpp/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/lpp",
+        "tsConfig": "packages/lpp/tsconfig.lib.json",
+        "packageJson": "packages/lpp/package.json",
+        "main": "packages/lpp/src/index.mts",
+        "assets": [
+          "packages/lpp/*.md",
+          "packages/lpp/LICENSE.txt",
+          "packages/lpp/package.json"
+        ]
+      }
+    }
+  }
+}

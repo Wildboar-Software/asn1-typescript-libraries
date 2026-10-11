@@ -10,17 +10,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { _enum_for_DialogueMode, structured /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DialogueMode, _encode_DialogueMode } from "../TC-Notation-Extensions/DialogueMode.ta.mjs";
-// export { DialogueMode, _enum_for_DialogueMode, DialogueMode_structured /* IMPORTED_LONG_ENUMERATION_ITEM */, structured /* IMPORTED_SHORT_ENUMERATION_ITEM */, DialogueMode_unstructured /* IMPORTED_LONG_ENUMERATION_ITEM */, unstructured /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DialogueMode, _encode_DialogueMode } from "../TC-Notation-Extensions/DialogueMode.ta.mjs";
 import { _enum_for_Termination, _decode_Termination, _encode_Termination } from "../TC-Notation-Extensions/Termination.ta.mjs";
-// export { Termination, _enum_for_Termination, Termination_basic /* IMPORTED_LONG_ENUMERATION_ITEM */, basic /* IMPORTED_SHORT_ENUMERATION_ITEM */, Termination_prearranged /* IMPORTED_LONG_ENUMERATION_ITEM */, prearranged /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Termination, _encode_Termination } from "../TC-Notation-Extensions/Termination.ta.mjs";
 import { cap3SMS } from "../CAP-smsSSF-gsmSCF-pkgs-contracts-acs/cap3SMS.oa.mjs";
-// export { cap3SMS } from "../CAP-smsSSF-gsmSCF-pkgs-contracts-acs/cap3SMS.oa.mjs";
 import { dialogue_abstract_syntax } from "../TC-Notation-Extensions/dialogue-abstract-syntax.oa.mjs";
-// export { dialogue_abstract_syntax } from "../TC-Notation-Extensions/dialogue-abstract-syntax.oa.mjs";
 import { sms_AbstractSyntax } from "../CAP-smsSSF-gsmSCF-pkgs-contracts-acs/sms-AbstractSyntax.oa.mjs";
-// export { sms_AbstractSyntax } from "../CAP-smsSSF-gsmSCF-pkgs-contracts-acs/sms-AbstractSyntax.oa.mjs";
 import { id_ac_cap3_sms_AC } from "../CAP-object-identifiers/id-ac-cap3-sms-AC.va.mjs";
-// export { id_ac_cap3_sms_AC } from "../CAP-object-identifiers/id-ac-cap3-sms-AC.va.mjs";
 import { type APPLICATION_CONTEXT } from "../TC-Notation-Extensions/APPLICATION-CONTEXT.oca.mjs";
 
 

@@ -1,0 +1,33 @@
+ESFormat-PersistentQuery
+{z39-50-extendedService persistentQuery(2)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    Query, InternationalString, OtherInformation
+        FROM Z39-50-APDU-2001
+    ;
+
+PersistentQuery ::= CHOICE{
+    esRequest       [1] IMPLICIT SEQUENCE{
+        toKeep          [1] ClientPartToKeep OPTIONAL,
+        notToKeep       [2] ClientPartNotToKeep},
+    taskPackage     [2] IMPLICIT SEQUENCE{
+        clientPart      [1] ClientPartToKeep OPTIONAL,
+        serverPart      [2] ServerPart
+    }
+}
+
+ClientPartToKeep ::= SEQUENCE{
+    dbNames                 [2] IMPLICIT SEQUENCE OF InternationalString OPTIONAL,
+    additionalSearchInfo    [3] OtherInformation OPTIONAL
+}
+
+ClientPartNotToKeep ::= CHOICE{
+    package [1] IMPLICIT InternationalString,
+    query   [2] Query
+}
+
+ServerPart ::= Query
+
+END

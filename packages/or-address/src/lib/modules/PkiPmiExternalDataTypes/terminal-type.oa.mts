@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION_ATTRIBUTE } from "../PkiPmiExternalDataTypes/EXTENSION-ATTRIBUTE.oca.mjs";
 import {
-    TerminalType,
+    type TerminalType,
     _decode_TerminalType,
     _encode_TerminalType,
 } from "../PkiPmiExternalDataTypes/TerminalType.ta.mjs";

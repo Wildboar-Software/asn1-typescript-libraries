@@ -1,0 +1,25 @@
+{
+  "name": "spnego",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/spnego/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/spnego",
+        "tsConfig": "packages/spnego/tsconfig.lib.json",
+        "packageJson": "packages/spnego/package.json",
+        "main": "packages/spnego/src/index.mts",
+        "assets": [
+          "packages/spnego/*.md",
+          "packages/spnego/LICENSE.txt",
+          "packages/spnego/package.json"
+        ]
+      }
+    }
+  }
+}

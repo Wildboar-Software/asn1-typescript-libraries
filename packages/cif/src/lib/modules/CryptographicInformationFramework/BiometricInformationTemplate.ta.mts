@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BiometricInformationTemplate_templateAndMaxBitLength, _decode_BiometricInformationTemplate_templateAndMaxBitLength, _encode_BiometricInformationTemplate_templateAndMaxBitLength } from "../CryptographicInformationFramework/BiometricInformationTemplate-templateAndMaxBitLength.ta.mjs";
-// export { BiometricInformationTemplate_templateAndMaxBitLength, _decode_BiometricInformationTemplate_templateAndMaxBitLength, _encode_BiometricInformationTemplate_templateAndMaxBitLength } from "../CryptographicInformationFramework/BiometricInformationTemplate-templateAndMaxBitLength.ta.mjs";
 
 
 /**

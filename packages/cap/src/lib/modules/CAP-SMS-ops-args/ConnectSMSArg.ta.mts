@@ -15,7 +15,6 @@ import { type CalledPartyBCDNumber, _decode_CalledPartyBCDNumber, _encode_Called
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
 import { type SMS_AddressString, _decode_SMS_AddressString, _encode_SMS_AddressString } from "../CAP-datatypes/SMS-AddressString.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 
 
 /**

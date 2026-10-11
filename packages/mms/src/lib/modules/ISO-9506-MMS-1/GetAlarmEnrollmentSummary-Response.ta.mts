@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlarmEnrollmentSummary, _decode_AlarmEnrollmentSummary, _encode_AlarmEnrollmentSummary } from "../ISO-9506-MMS-1/AlarmEnrollmentSummary.ta.mjs";
-// export { AlarmEnrollmentSummary, _decode_AlarmEnrollmentSummary, _encode_AlarmEnrollmentSummary } from "../ISO-9506-MMS-1/AlarmEnrollmentSummary.ta.mjs";
 
 
 /**

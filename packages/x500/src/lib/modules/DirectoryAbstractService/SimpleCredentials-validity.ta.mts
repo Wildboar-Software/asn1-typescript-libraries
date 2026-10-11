@@ -90,11 +90,9 @@ export class SimpleCredentials_validity {
      * @returns {SimpleCredentials_validity}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof SimpleCredentials_validity]: SimpleCredentials_validity[_K];
             }
-        >
     ): SimpleCredentials_validity {
         return new SimpleCredentials_validity(
             _o.time1,

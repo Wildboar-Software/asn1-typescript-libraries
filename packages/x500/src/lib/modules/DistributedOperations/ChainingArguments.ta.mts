@@ -447,6 +447,7 @@ export class ChainingArguments {
         return OperationProgress._from_object({
             nameResolutionPhase:
                 OperationProgress._enum_for_nameResolutionPhase.notStarted,
+            _unrecognizedExtensionsList: [],
         });
     }
     /**
@@ -483,7 +484,7 @@ export class ChainingArguments {
      * @method
      */
     public static get _default_value_for_securityParameters(): SecurityParameters {
-        return SecurityParameters._from_object({});
+        return SecurityParameters._from_object({ _unrecognizedExtensionsList: [] });
     }
     /**
      * @summary Getter that returns the default value for `entryOnly`.

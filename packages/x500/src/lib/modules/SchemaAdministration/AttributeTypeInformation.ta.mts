@@ -125,11 +125,9 @@ export class AttributeTypeInformation {
      * @returns {AttributeTypeInformation}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof AttributeTypeInformation]: AttributeTypeInformation[_K];
             }
-        >
     ): AttributeTypeInformation {
         return new AttributeTypeInformation(
             _o.derivation,

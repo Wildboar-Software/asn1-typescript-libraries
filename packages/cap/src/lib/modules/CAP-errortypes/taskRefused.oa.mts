@@ -10,13 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { taskRefused_ParameterType, _enum_for_taskRefused_ParameterType, _decode_taskRefused_ParameterType, _encode_taskRefused_ParameterType } from "../CAP-errortypes/taskRefused-ParameterType.ta.mjs";
-// export { taskRefused_ParameterType, _enum_for_taskRefused_ParameterType, taskRefused_ParameterType_generic /* IMPORTED_LONG_ENUMERATION_ITEM */, generic /* IMPORTED_SHORT_ENUMERATION_ITEM */, taskRefused_ParameterType_unobtainable /* IMPORTED_LONG_ENUMERATION_ITEM */, unobtainable /* IMPORTED_SHORT_ENUMERATION_ITEM */, taskRefused_ParameterType_congestion /* IMPORTED_LONG_ENUMERATION_ITEM */, congestion /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_taskRefused_ParameterType, _encode_taskRefused_ParameterType } from "../CAP-errortypes/taskRefused-ParameterType.ta.mjs";
 import { errcode_taskRefused } from "../CAP-errorcodes/errcode-taskRefused.va.mjs";
-// export { errcode_taskRefused } from "../CAP-errorcodes/errcode-taskRefused.va.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 

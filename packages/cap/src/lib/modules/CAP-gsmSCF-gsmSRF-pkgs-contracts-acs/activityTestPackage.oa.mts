@@ -10,9 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { activityTest } from "../CAP-gsmSSF-gsmSCF-ops-args/activityTest.oa.mjs";
-// export { activityTest } from "../CAP-gsmSSF-gsmSCF-ops-args/activityTest.oa.mjs";
 import { id_package_activityTest } from "../CAP-object-identifiers/id-package-activityTest.va.mjs";
-// export { id_package_activityTest } from "../CAP-object-identifiers/id-package-activityTest.va.mjs";
 import { type OPERATION_PACKAGE } from "../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.mjs";
 
 

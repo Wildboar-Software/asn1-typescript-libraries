@@ -1,0 +1,218 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
+
+
+/**
+ * @summary CategoryInfo
+ * @description
+ * 
+ * One Explain category the server supports, as listed by the single
+ * CategoryList record. Original term, description, and ASN.1 need appear only
+ * when the server supports a category this standard does not define, or a
+ * revision of one it does. ANSI/NISO Z39.50-2003 §3.2.10.3.17.
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * CategoryInfo ::= SEQUENCE {
+ *     category            [1] IMPLICIT InternationalString,
+ *     originalCategory    [2] IMPLICIT InternationalString OPTIONAL,
+ *     description         [3] IMPLICIT HumanString OPTIONAL,
+ *     asn1Module          [4] IMPLICIT InternationalString OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class CategoryInfo {
+    /**
+     * @summary `category`.
+     * @description
+     * Brief. Search term to use with Use attribute ExplainCategory for records
+     * of this category. ANSI/NISO Z39.50-2003 §3.2.10.3.17.
+     * @public
+     * @readonly
+     */
+    readonly category: InternationalString;
+    /**
+     * @summary `originalCategory`.
+     * @description
+     * Original search term, when the server supports a revision of a category
+     * defined in this standard. The standard says this need appear only for a
+     * category the standard does not define, or such a revision. ANSI/NISO
+     * Z39.50-2003 §3.2.10.3.17.
+     * @public
+     * @readonly
+     */
+    readonly originalCategory: OPTIONAL<InternationalString>;
+    /**
+     * @summary `description`.
+     * @description
+     * Human-readable description. The standard says this need appear only for a
+     * category the standard does not define, or a revision of one it does.
+     * ANSI/NISO Z39.50-2003 §3.2.10.3.17.
+     * @public
+     * @readonly
+     */
+    readonly description: OPTIONAL<HumanString>;
+    /**
+     * @summary `asn1Module`.
+     * @description
+     * ASN.1 definition of the record for this category. The standard says this
+     * need appear only for a category the standard does not define, or a
+     * revision of one it does. ANSI/NISO Z39.50-2003 §3.2.10.3.17.
+     * @public
+     * @readonly
+     */
+    readonly asn1Module: OPTIONAL<InternationalString>;
+
+    constructor (
+        category: InternationalString,
+        originalCategory: OPTIONAL<InternationalString>,
+        description: OPTIONAL<HumanString>,
+        asn1Module: OPTIONAL<InternationalString>
+    ) {
+        this.category = category;
+        this.originalCategory = originalCategory;
+        this.description = description;
+        this.asn1Module = asn1Module;
+    }
+
+    /**
+     * @summary Restructures an object into a CategoryInfo
+     * @description
+     * 
+     * This takes an `object` and converts it to a `CategoryInfo`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `CategoryInfo`.
+     * @returns {CategoryInfo}
+     */
+    public static _from_object (_o: { [_K in keyof (CategoryInfo)]: (CategoryInfo)[_K] }): CategoryInfo {
+        return new CategoryInfo(_o.category, _o.originalCategory, _o.description, _o.asn1Module);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of CategoryInfo
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_CategoryInfo: $.ComponentSpec[] = [
+    new $.ComponentSpec("category", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("originalCategory", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("asn1Module", true, $.hasTag(_TagClass.context, 4))
+];
+
+/**
+ * @summary The Trailing Root Component Types of CategoryInfo
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_CategoryInfo: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of CategoryInfo
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_CategoryInfo: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_CategoryInfo: $.ASN1Decoder<CategoryInfo> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) CategoryInfo
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_CategoryInfo (el: _Element): CategoryInfo {
+    if (!_cached_decoder_for_CategoryInfo) { _cached_decoder_for_CategoryInfo = function (el: _Element): CategoryInfo {
+    let category!: InternationalString;
+    let originalCategory: OPTIONAL<InternationalString>;
+    let description: OPTIONAL<HumanString>;
+    let asn1Module: OPTIONAL<InternationalString>;
+    const callbacks: $.DecodingMap = {
+        "category": (_el: _Element): void => { category = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); },
+        "originalCategory": (_el: _Element): void => { originalCategory = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); },
+        "description": (_el: _Element): void => { description = $._decode_implicit<HumanString>(() => _decode_HumanString)(_el); },
+        "asn1Module": (_el: _Element): void => { asn1Module = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_CategoryInfo,
+        _extension_additions_list_spec_for_CategoryInfo,
+        _root_component_type_list_2_spec_for_CategoryInfo,
+        undefined,
+    );
+    return new CategoryInfo(
+        category,
+        originalCategory,
+        description,
+        asn1Module
+    );
+}; }
+    return _cached_decoder_for_CategoryInfo(el);
+}
+
+let _cached_encoder_for_CategoryInfo: $.ASN1Encoder<CategoryInfo> | null = null;
+
+/**
+ * @summary Encodes a(n) CategoryInfo into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The CategoryInfo, encoded as an ASN.1 Element.
+ */
+export
+function _encode_CategoryInfo (value: CategoryInfo, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_CategoryInfo) { _cached_encoder_for_CategoryInfo = function (value: CategoryInfo, elGetter: $.ASN1Encoder<CategoryInfo>): _Element {
+    const _components: _Element[] = new Array(4);
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_InternationalString, $.BER)(value.category, $.BER);
+    if (value.originalCategory !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => _encode_InternationalString, $.BER)(value.originalCategory, $.BER);
+    }
+    if (value.description !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 3, () => _encode_HumanString, $.BER)(value.description, $.BER);
+    }
+    if (value.asn1Module !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 4, () => _encode_InternationalString, $.BER)(value.asn1Module, $.BER);
+    }
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_CategoryInfo(value, elGetter);
+}
+
+
+/* eslint-enable */

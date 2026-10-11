@@ -145,11 +145,9 @@ export class MasterOrShadowAccessPoint extends AccessPoint {
      * @returns {MasterOrShadowAccessPoint}
      */
     public static override _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof MasterOrShadowAccessPoint]: MasterOrShadowAccessPoint[_K];
             }
-        >
     ): MasterOrShadowAccessPoint {
         return new MasterOrShadowAccessPoint(
             _o.ae_title,

@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DHPublicNumber, _decode_DHPublicNumber, _encode_DHPublicNumber } from "../CryptographicInformationFramework/DHPublicNumber.ta.mjs";
-// export { DHPublicNumber, _decode_DHPublicNumber, _encode_DHPublicNumber } from "../CryptographicInformationFramework/DHPublicNumber.ta.mjs";
 import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
-// export { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
 
 
 /**

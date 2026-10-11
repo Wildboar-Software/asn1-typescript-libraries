@@ -32,7 +32,7 @@ for (const sourceFile of sourceFiles) {
                 const realFunction = bodyText.slice(naughtyIndex + naughtyString.length, terminator);
                 if (realFunction.includes("_")) // Skip $._decode_implicit, for example.
                     continue;
-                fn.replaceWithText(`export const _decode_${typeName} = $._${realFunction};`);
+                fn.replaceWithText(`export const _decode_${typeName}: $.ASN1Decoder<${typeName}> = $._${realFunction};`);
                 try {
                     const variable = sourceFile.getVariableStatement(`_cached_decoder_for_${typeName}`);
                     variable.remove();
@@ -54,7 +54,7 @@ for (const sourceFile of sourceFiles) {
                 const realFunction = bodyText.slice(naughtyIndex + naughtyString.length, terminator);
                 if (realFunction.includes("_")) // Skip $._encode_implicit, for example.
                     continue;
-                fn.replaceWithText(`export const _encode_${typeName} = $._${realFunction};`);
+                fn.replaceWithText(`export const _encode_${typeName}: $.ASN1Encoder<${typeName}> = $._${realFunction};`);
                 try {
                     const variable = sourceFile.getVariableStatement(`_cached_encoder_for_${typeName}`);
                     variable.remove();

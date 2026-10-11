@@ -1,6 +1,6 @@
 {
   "name": "@wildboar/or-address",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "X.400 Message Handling System (MHS) O/R Address in TypeScript",
   "keywords": [

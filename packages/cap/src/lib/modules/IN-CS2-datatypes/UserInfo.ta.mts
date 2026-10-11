@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserInformation, _decode_UserInformation, _encode_UserInformation } from "../IN-CS2-datatypes/UserInformation.ta.mjs";
-// export { UserInformation, _decode_UserInformation, _encode_UserInformation } from "../IN-CS2-datatypes/UserInformation.ta.mjs";
 
 
 /**

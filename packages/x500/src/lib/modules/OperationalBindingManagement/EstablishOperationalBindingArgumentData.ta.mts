@@ -131,11 +131,9 @@ export class EstablishOperationalBindingArgumentData {
      * @returns {EstablishOperationalBindingArgumentData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof EstablishOperationalBindingArgumentData]: EstablishOperationalBindingArgumentData[_K];
             }
-        >
     ): EstablishOperationalBindingArgumentData {
         return new EstablishOperationalBindingArgumentData(
             _o.bindingType,
@@ -156,7 +154,7 @@ export class EstablishOperationalBindingArgumentData {
      * @method
      */
     public static get _default_value_for_valid(): Validity {
-        return Validity._from_object({});
+        return Validity._from_object({ _unrecognizedExtensionsList: [] });
     }
 }
 

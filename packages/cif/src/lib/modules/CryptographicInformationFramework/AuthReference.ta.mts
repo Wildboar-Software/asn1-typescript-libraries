@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthMethod, _decode_AuthMethod, _encode_AuthMethod } from "../CryptographicInformationFramework/AuthMethod.ta.mjs";
-// export { AuthMethod, AuthMethod_secureMessaging /* IMPORTED_LONG_NAMED_BIT */, secureMessaging /* IMPORTED_SHORT_NAMED_BIT */, AuthMethod_extAuthentication /* IMPORTED_LONG_NAMED_BIT */, extAuthentication /* IMPORTED_SHORT_NAMED_BIT */, AuthMethod_userAuthentication /* IMPORTED_LONG_NAMED_BIT */, userAuthentication /* IMPORTED_SHORT_NAMED_BIT */, AuthMethod_always /* IMPORTED_LONG_NAMED_BIT */, always /* IMPORTED_SHORT_NAMED_BIT */, _decode_AuthMethod, _encode_AuthMethod } from "../CryptographicInformationFramework/AuthMethod.ta.mjs";
 
 
 /**

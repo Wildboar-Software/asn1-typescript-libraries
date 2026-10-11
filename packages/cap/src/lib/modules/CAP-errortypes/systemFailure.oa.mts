@@ -11,11 +11,8 @@ import {
 } from "@wildboar/asn1";
 import { UnavailableNetworkResource, _decode_UnavailableNetworkResource, _encode_UnavailableNetworkResource } from "../CAP-datatypes/UnavailableNetworkResource.ta.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { errcode_systemFailure } from "../CAP-errorcodes/errcode-systemFailure.va.mjs";
-// export { errcode_systemFailure } from "../CAP-errorcodes/errcode-systemFailure.va.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 

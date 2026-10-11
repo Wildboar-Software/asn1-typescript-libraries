@@ -14,19 +14,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ParameterValues_typeIdentifier, _decode_ParameterValues_typeIdentifier, _encode_ParameterValues_typeIdentifier } from "../CSS/ParameterValues-typeIdentifier.ta.mjs";
-// export { ParameterValues_typeIdentifier, _decode_ParameterValues_typeIdentifier, _encode_ParameterValues_typeIdentifier } from "../CSS/ParameterValues-typeIdentifier.ta.mjs";
 import { AccessRuleValue, _decode_AccessRuleValue, _encode_AccessRuleValue } from "../CSS/AccessRuleValue.ta.mjs";
-// export { AccessRuleValue, AccessRuleValue_wavar /* IMPORTED_LONG_NAMED_INTEGER */, wavar /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_waci /* IMPORTED_LONG_NAMED_INTEGER */, waci /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_waca /* IMPORTED_LONG_NAMED_INTEGER */, waca /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_nsac /* IMPORTED_LONG_NAMED_INTEGER */, nsac /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_wavar_and_waci /* IMPORTED_LONG_NAMED_INTEGER */, wavar_and_waci /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_wavar_and_waca /* IMPORTED_LONG_NAMED_INTEGER */, wavar_and_waca /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_no_access /* IMPORTED_LONG_NAMED_INTEGER */, no_access /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AccessRuleValue, _encode_AccessRuleValue } from "../CSS/AccessRuleValue.ta.mjs";
 import { ParameterValues_category, _decode_ParameterValues_category, _encode_ParameterValues_category } from "../CSS/ParameterValues-category.ta.mjs";
-// export { ParameterValues_category, ParameterValues_category_character /* IMPORTED_LONG_NAMED_INTEGER */, character /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_category_boolean /* IMPORTED_LONG_NAMED_INTEGER */, boolean_ /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_category_symbolic /* IMPORTED_LONG_NAMED_INTEGER */, symbolic /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_category_integer /* IMPORTED_LONG_NAMED_INTEGER */, integer /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_category_transparent /* IMPORTED_LONG_NAMED_INTEGER */, transparent /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ParameterValues_category, _encode_ParameterValues_category } from "../CSS/ParameterValues-category.ta.mjs";
 import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
-// export { RepertoireAssignment, _decode_RepertoireAssignment, _encode_RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 import { ParameterValues_priority, _decode_ParameterValues_priority, _encode_ParameterValues_priority } from "../CSS/ParameterValues-priority.ta.mjs";
-// export { ParameterValues_priority, ParameterValues_priority_normal /* IMPORTED_LONG_NAMED_INTEGER */, normal /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_priority_high /* IMPORTED_LONG_NAMED_INTEGER */, high /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_priority_urgent /* IMPORTED_LONG_NAMED_INTEGER */, urgent /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ParameterValues_priority, _encode_ParameterValues_priority } from "../CSS/ParameterValues-priority.ta.mjs";
 import { ParameterValues_structure, _decode_ParameterValues_structure, _encode_ParameterValues_structure } from "../CSS/ParameterValues-structure.ta.mjs";
-// export { ParameterValues_structure, _decode_ParameterValues_structure, _encode_ParameterValues_structure } from "../CSS/ParameterValues-structure.ta.mjs";
 import { ElementParamValue, _decode_ElementParamValue, _encode_ElementParamValue } from "../CSS/ElementParamValue.ta.mjs";
-// export { ElementParamValue, _decode_ElementParamValue, _encode_ElementParamValue } from "../CSS/ElementParamValue.ta.mjs";
 
 
 /**

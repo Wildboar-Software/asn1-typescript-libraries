@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FingerPrintInformation_hand, _enum_for_FingerPrintInformation_hand, _decode_FingerPrintInformation_hand, _encode_FingerPrintInformation_hand } from "../CryptographicInformationFramework/FingerPrintInformation-hand.ta.mjs";
-// export { FingerPrintInformation_hand, _enum_for_FingerPrintInformation_hand, FingerPrintInformation_hand_left /* IMPORTED_LONG_ENUMERATION_ITEM */, left /* IMPORTED_SHORT_ENUMERATION_ITEM */, FingerPrintInformation_hand_right /* IMPORTED_LONG_ENUMERATION_ITEM */, right /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FingerPrintInformation_hand, _encode_FingerPrintInformation_hand } from "../CryptographicInformationFramework/FingerPrintInformation-hand.ta.mjs";
 import { FingerPrintInformation_finger, _enum_for_FingerPrintInformation_finger, _decode_FingerPrintInformation_finger, _encode_FingerPrintInformation_finger } from "../CryptographicInformationFramework/FingerPrintInformation-finger.ta.mjs";
-// export { FingerPrintInformation_finger, _enum_for_FingerPrintInformation_finger, FingerPrintInformation_finger_thumb /* IMPORTED_LONG_ENUMERATION_ITEM */, thumb /* IMPORTED_SHORT_ENUMERATION_ITEM */, FingerPrintInformation_finger_pointerFinger /* IMPORTED_LONG_ENUMERATION_ITEM */, pointerFinger /* IMPORTED_SHORT_ENUMERATION_ITEM */, FingerPrintInformation_finger_middleFinger /* IMPORTED_LONG_ENUMERATION_ITEM */, middleFinger /* IMPORTED_SHORT_ENUMERATION_ITEM */, FingerPrintInformation_finger_ringFinger /* IMPORTED_LONG_ENUMERATION_ITEM */, ringFinger /* IMPORTED_SHORT_ENUMERATION_ITEM */, FingerPrintInformation_finger_littleFinger /* IMPORTED_LONG_ENUMERATION_ITEM */, littleFinger /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FingerPrintInformation_finger, _encode_FingerPrintInformation_finger } from "../CryptographicInformationFramework/FingerPrintInformation-finger.ta.mjs";
 
 
 /**

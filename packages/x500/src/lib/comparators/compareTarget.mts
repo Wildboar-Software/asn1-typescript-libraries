@@ -5,7 +5,7 @@ import {
     type Target,
     GeneralSubtree,
 } from "../modules/AttributeCertificateDefinitions/index.mjs";
-import { compareGeneralName } from "./compareGeneralName.mjs";
+import { compareGeneralName } from "@wildboar/gn";
 import { compareIssuerSerial } from "./compareIssuerSerial.mjs";
 import { gnWithinGeneralSubtree } from "../utils/gnWithinGeneralSubtree.mjs";
 

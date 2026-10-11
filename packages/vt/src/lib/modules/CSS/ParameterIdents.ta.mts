@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ElementParamIdent, _decode_ElementParamIdent, _encode_ElementParamIdent } from "../CSS/ElementParamIdent.ta.mjs";
-// export { ElementParamIdent, _decode_ElementParamIdent, _encode_ElementParamIdent } from "../CSS/ElementParamIdent.ta.mjs";
 
 
 /**

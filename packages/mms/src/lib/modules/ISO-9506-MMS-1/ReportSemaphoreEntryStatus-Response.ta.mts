@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SemaphoreEntry, _decode_SemaphoreEntry, _encode_SemaphoreEntry } from "../ISO-9506-MMS-1/SemaphoreEntry.ta.mjs";
-// export { SemaphoreEntry, _decode_SemaphoreEntry, _encode_SemaphoreEntry } from "../ISO-9506-MMS-1/SemaphoreEntry.ta.mjs";
 
 
 /**

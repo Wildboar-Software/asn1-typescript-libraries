@@ -12,15 +12,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue } from "../CryptographicInformationFramework/ObjectValue.ta.mjs";
-// export { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue } from "../CryptographicInformationFramework/ObjectValue.ta.mjs";
 import { ECPublicKeyChoice, _decode_ECPublicKeyChoice, _encode_ECPublicKeyChoice } from "../CryptographicInformationFramework/ECPublicKeyChoice.ta.mjs";
-// export { ECPublicKeyChoice, _decode_ECPublicKeyChoice, _encode_ECPublicKeyChoice } from "../CryptographicInformationFramework/ECPublicKeyChoice.ta.mjs";
 import { KeyInfo, _get_decoder_for_KeyInfo, _get_encoder_for_KeyInfo } from "../CryptographicInformationFramework/KeyInfo.ta.mjs";
-// export { KeyInfo, _get_decoder_for_KeyInfo, _get_encoder_for_KeyInfo } from "../CryptographicInformationFramework/KeyInfo.ta.mjs";
 import { Parameters, _decode_Parameters, _encode_Parameters } from "../ANSI-X9-62/Parameters.ta.mjs";
-// export { Parameters, _decode_Parameters, _encode_Parameters } from "../ANSI-X9-62/Parameters.ta.mjs";
 import { PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOperations } from "../CryptographicInformationFramework/PublicKeyOperations.ta.mjs";
-// export { PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOperations } from "../CryptographicInformationFramework/PublicKeyOperations.ta.mjs";
 
 
 /**

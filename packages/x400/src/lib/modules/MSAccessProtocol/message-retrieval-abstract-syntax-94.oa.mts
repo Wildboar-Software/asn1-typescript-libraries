@@ -45,7 +45,7 @@ export const message_retrieval_abstract_syntax_94: ABSTRACT_SYNTAX<MessageRetrie
     },
     '&id': id_as_mrse_94 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
     '&Type': 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-    '&property': undefined,
+    '&property': new Uint8ClampedArray(),
 };
 
 /* eslint-enable */

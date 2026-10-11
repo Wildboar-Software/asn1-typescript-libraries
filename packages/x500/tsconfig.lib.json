@@ -6,7 +6,7 @@
     "types": [
       "node"
     ],
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "rootDir": "."
   },
   "exclude": [
@@ -29,7 +29,22 @@
   ],
   "references": [
     {
+      "path": "../dn/tsconfig.lib.json"
+    },
+    {
+      "path": "../presentation-address/tsconfig.lib.json"
+    },
+    {
       "path": "../or-address/tsconfig.lib.json"
+    },
+    {
+      "path": "../ldap/tsconfig.lib.json"
+    },
+    {
+      "path": "../pki-stub/tsconfig.lib.json"
+    },
+    {
+      "path": "../gn/tsconfig.lib.json"
     }
   ]
 }

@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Offer_Item, _decode_Offer_Item, _encode_Offer_Item } from "../CSS/Offer-Item.ta.mjs";
-// export { Offer_Item, _decode_Offer_Item, _encode_Offer_Item } from "../CSS/Offer-Item.ta.mjs";
 
 
 /**

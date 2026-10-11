@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-// export { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { LoadData, _decode_LoadData, _encode_LoadData } from "../ISO-9506-MMS-1/LoadData.ta.mjs";
-// export { LoadData, _decode_LoadData, _encode_LoadData } from "../ISO-9506-MMS-1/LoadData.ta.mjs";
 
 
 /**

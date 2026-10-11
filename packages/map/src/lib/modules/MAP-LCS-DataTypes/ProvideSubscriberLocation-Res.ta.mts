@@ -1,86 +1,26 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_GeographicalInformation, _decode_Ext_GeographicalInformation, _encode_Ext_GeographicalInformation } from "../MAP-LCS-DataTypes/Ext-GeographicalInformation.ta.mjs";
 import { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
-import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Add_GeographicalInformation, _decode_Add_GeographicalInformation, _encode_Add_GeographicalInformation } from "../MAP-LCS-DataTypes/Add-GeographicalInformation.ta.mjs";
-import { PositioningDataInformation, _decode_PositioningDataInformation, _encode_PositioningDataInformation } from "../MAP-LCS-DataTypes/PositioningDataInformation.ta.mjs";
-import { UtranPositioningDataInfo, _decode_UtranPositioningDataInfo, _encode_UtranPositioningDataInfo } from "../MAP-LCS-DataTypes/UtranPositioningDataInfo.ta.mjs";
 import { CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
-import { AccuracyFulfilmentIndicator, _enum_for_AccuracyFulfilmentIndicator, AccuracyFulfilmentIndicator_requestedAccuracyFulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedAccuracyFulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedAccuracyNotFulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccuracyFulfilmentIndicator, _encode_AccuracyFulfilmentIndicator } from "../MAP-LCS-DataTypes/AccuracyFulfilmentIndicator.ta.mjs";
-import { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } from "../MAP-LCS-DataTypes/VelocityEstimate.ta.mjs";
+import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
+import { AccuracyFulfilmentIndicator, _decode_AccuracyFulfilmentIndicator, _encode_AccuracyFulfilmentIndicator, _enum_for_AccuracyFulfilmentIndicator } from "../MAP-LCS-DataTypes/AccuracyFulfilmentIndicator.ta.mjs";
+import { Add_GeographicalInformation, _decode_Add_GeographicalInformation, _encode_Add_GeographicalInformation } from "../MAP-LCS-DataTypes/Add-GeographicalInformation.ta.mjs";
+import { Ext_GeographicalInformation, _decode_Ext_GeographicalInformation, _encode_Ext_GeographicalInformation } from "../MAP-LCS-DataTypes/Ext-GeographicalInformation.ta.mjs";
 import { GeranGANSSpositioningData, _decode_GeranGANSSpositioningData, _encode_GeranGANSSpositioningData } from "../MAP-LCS-DataTypes/GeranGANSSpositioningData.ta.mjs";
-import { UtranGANSSpositioningData, _decode_UtranGANSSpositioningData, _encode_UtranGANSSpositioningData } from "../MAP-LCS-DataTypes/UtranGANSSpositioningData.ta.mjs";
+import { PositioningDataInformation, _decode_PositioningDataInformation, _encode_PositioningDataInformation } from "../MAP-LCS-DataTypes/PositioningDataInformation.ta.mjs";
 import { ServingNodeAddress, _decode_ServingNodeAddress, _encode_ServingNodeAddress } from "../MAP-LCS-DataTypes/ServingNodeAddress.ta.mjs";
 import { UtranAdditionalPositioningData, _decode_UtranAdditionalPositioningData, _encode_UtranAdditionalPositioningData } from "../MAP-LCS-DataTypes/UtranAdditionalPositioningData.ta.mjs";
 import { UtranBaroPressureMeas, _decode_UtranBaroPressureMeas, _encode_UtranBaroPressureMeas } from "../MAP-LCS-DataTypes/UtranBaroPressureMeas.ta.mjs";
 import { UtranCivicAddress, _decode_UtranCivicAddress, _encode_UtranCivicAddress } from "../MAP-LCS-DataTypes/UtranCivicAddress.ta.mjs";
+import { UtranGANSSpositioningData, _decode_UtranGANSSpositioningData, _encode_UtranGANSSpositioningData } from "../MAP-LCS-DataTypes/UtranGANSSpositioningData.ta.mjs";
+import { UtranPositioningDataInfo, _decode_UtranPositioningDataInfo, _encode_UtranPositioningDataInfo } from "../MAP-LCS-DataTypes/UtranPositioningDataInfo.ta.mjs";
+import { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } from "../MAP-LCS-DataTypes/VelocityEstimate.ta.mjs";
 
 
 /**

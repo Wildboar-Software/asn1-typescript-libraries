@@ -1,0 +1,200 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+
+
+/**
+ * @summary Volume
+ * @description
+ * 
+ * One volume held (module ASN.1: the parent repeats for each volume held). None
+ * of the components is commented.
+ * 
+ * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+ * semantics.
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * Volume ::= SEQUENCE {
+ *     enumeration        [1]    IMPLICIT InternationalString OPTIONAL,
+ *     chronology         [2]    IMPLICIT InternationalString OPTIONAL,
+ *     enumAndChron       [3]    IMPLICIT InternationalString OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class Volume {
+    /**
+     * @summary `enumeration`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
+     * @public
+     * @readonly
+     */
+    readonly enumeration: OPTIONAL<InternationalString>;
+    /**
+     * @summary `chronology`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
+     * @public
+     * @readonly
+     */
+    readonly chronology: OPTIONAL<InternationalString>;
+    /**
+     * @summary `enumAndChron`.
+     * @description
+     * 
+     * ANSI/NISO Z39.50-2003 removed the OPAC record syntax and gives no further
+     * semantics. The module ASN.1 does not comment this component.
+     * @public
+     * @readonly
+     */
+    readonly enumAndChron: OPTIONAL<InternationalString>;
+
+    constructor (
+        enumeration: OPTIONAL<InternationalString>,
+        chronology: OPTIONAL<InternationalString>,
+        enumAndChron: OPTIONAL<InternationalString>
+    ) {
+        this.enumeration = enumeration;
+        this.chronology = chronology;
+        this.enumAndChron = enumAndChron;
+    }
+
+    /**
+     * @summary Restructures an object into a Volume
+     * @description
+     * 
+     * This takes an `object` and converts it to a `Volume`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `Volume`.
+     * @returns {Volume}
+     */
+    public static _from_object (_o: { [_K in keyof (Volume)]: (Volume)[_K] }): Volume {
+        return new Volume(_o.enumeration, _o.chronology, _o.enumAndChron);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of Volume
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_Volume: $.ComponentSpec[] = [
+    new $.ComponentSpec("enumeration", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("chronology", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("enumAndChron", true, $.hasTag(_TagClass.context, 3))
+];
+
+/**
+ * @summary The Trailing Root Component Types of Volume
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_Volume: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of Volume
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_Volume: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_Volume: $.ASN1Decoder<Volume> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) Volume
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_Volume (el: _Element): Volume {
+    if (!_cached_decoder_for_Volume) { _cached_decoder_for_Volume = function (el: _Element): Volume {
+    let enumeration: OPTIONAL<InternationalString>;
+    let chronology: OPTIONAL<InternationalString>;
+    let enumAndChron: OPTIONAL<InternationalString>;
+    const callbacks: $.DecodingMap = {
+        "enumeration": (_el: _Element): void => { enumeration = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); },
+        "chronology": (_el: _Element): void => { chronology = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); },
+        "enumAndChron": (_el: _Element): void => { enumAndChron = $._decode_implicit<InternationalString>(() => _decode_InternationalString)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_Volume,
+        _extension_additions_list_spec_for_Volume,
+        _root_component_type_list_2_spec_for_Volume,
+        undefined,
+    );
+    return new Volume(
+        enumeration,
+        chronology,
+        enumAndChron
+    );
+}; }
+    return _cached_decoder_for_Volume(el);
+}
+
+let _cached_encoder_for_Volume: $.ASN1Encoder<Volume> | null = null;
+
+/**
+ * @summary Encodes a(n) Volume into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The Volume, encoded as an ASN.1 Element.
+ */
+export
+function _encode_Volume (value: Volume, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_Volume) { _cached_encoder_for_Volume = function (value: Volume, elGetter: $.ASN1Encoder<Volume>): _Element {
+    const _components: _Element[] = new Array(3);
+    let _components_i = 0;
+    if (value.enumeration !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => _encode_InternationalString, $.BER)(value.enumeration, $.BER);
+    }
+    if (value.chronology !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => _encode_InternationalString, $.BER)(value.chronology, $.BER);
+    }
+    if (value.enumAndChron !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 3, () => _encode_InternationalString, $.BER)(value.enumAndChron, $.BER);
+    }
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_Volume(value, elGetter);
+}
+
+
+/* eslint-enable */

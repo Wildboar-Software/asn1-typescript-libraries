@@ -1,0 +1,25 @@
+{
+  "name": "credssp",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/credssp/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/credssp",
+        "tsConfig": "packages/credssp/tsconfig.lib.json",
+        "packageJson": "packages/credssp/package.json",
+        "main": "packages/credssp/src/index.mts",
+        "assets": [
+          "packages/credssp/*.md",
+          "packages/credssp/LICENSE.txt",
+          "packages/credssp/package.json"
+        ]
+      }
+    }
+  }
+}

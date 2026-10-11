@@ -1,16 +1,5 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { ASN1Construction, ASN1Element, unpackBits } from "@wildboar/asn1";
-import { compareBitStrings } from "../../comparators/compareBitStrings.mjs";
 import { Buffer } from "node:buffer";
-
-function lastBits (
-    numberOfTrailingBits: number,
-    lastByte: number,
-): Uint8ClampedArray {
-    return unpackBits(new Uint8Array([ lastByte ]))
-        .slice(0, -numberOfTrailingBits);
-}
-
+import type { ASN1Element, BIT_STRING } from "@wildboar/asn1";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.4 `bitStringMatch`.
@@ -18,61 +7,36 @@ function lastBits (
  * TRUE iff both BIT STRING values have the same number of bits and
  * the bits match bitwise. If the syntax is defined with a
  * `NamedBitList`, trailing zero bits in either value are ignored.
+ *
+ * Each argument may be an `ASN1Element` or a decoded `BIT_STRING`
+ * (`Uint8ClampedArray`, one entry per bit). Constructed encodings
+ * are deconstructed while reading.
  */
 export
-const bitStringMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    if (
-        (assertion.construction === ASN1Construction.primitive)
-        && (value.construction === ASN1Construction.primitive)
-    ) {
-        /**
-         * Short-circuit if the bit strings are obviously not the same.
-         */
-        if (
-            (assertion.value.length !== value.value.length)
-            || (assertion.value[0] !== value.value[0]) // Different number of padding bits.
-        ) {
-            return false;
-        }
+function bitStringMatch (
+    assertion: ASN1Element | BIT_STRING,
+    value: ASN1Element | BIT_STRING,
+): boolean {
+    return bitStringMatchTyped(
+        assertion instanceof Uint8ClampedArray ? assertion : assertion.bitString,
+        value instanceof Uint8ClampedArray ? value : value.bitString,
+    );
+}
 
-        /**
-         * We can compare whole bytes at a time until the final byte, which
-         * might have trailing bits, which can be 1 or 0 in BER, so we can't
-         * trust that the final byte will be the same to encode the same value
-         * if trailing bits are present.
-         */
-        const wholeBytesComparison = Buffer.compare(
-            assertion.value.subarray(0, -1),
-            value.value.subarray(0, -1),
-        );
-        if (wholeBytesComparison) {
-            return false;
-        }
-
-        /**
-         * If there are no trailing bits, we can just compare the last byte
-         * directly.
-         */
-        const numberOfTrailingBits = assertion.value[0];
-        if (numberOfTrailingBits === 0) {
-            return (assertion.value[assertion.value.length - 1] === value.value[value.value.length - 1]);
-        } else {
-            const abits = lastBits(numberOfTrailingBits, assertion.value[assertion.value.length - 1]);
-            const vbits = lastBits(numberOfTrailingBits, value.value[value.value.length - 1]);
-            const trailingBitsCompare = Buffer.compare(
-                Buffer.from(abits.buffer),
-                Buffer.from(vbits.buffer),
-            );
-            return (trailingBitsCompare === 0);
-        }
-    }
-
-    const a = assertion.bitString;
-    const b = value.bitString;
-    return compareBitStrings(a, b);
+/**
+ * `bitStringMatch` on two decoded bit strings. Trailing zero bits
+ * that were not part of the bit string are already absent.
+ *
+ * @param assertion Presented bits.
+ * @param value Stored bits.
+ * @returns `true` when the bit strings are equal.
+ */
+export
+function bitStringMatchTyped (assertion: BIT_STRING, value: BIT_STRING): boolean {
+    return Buffer.compare(
+        Buffer.from(assertion.buffer, assertion.byteOffset, assertion.byteLength),
+        Buffer.from(value.buffer, value.byteOffset, value.byteLength),
+    ) === 0;
 }
 
 export default bitStringMatch;

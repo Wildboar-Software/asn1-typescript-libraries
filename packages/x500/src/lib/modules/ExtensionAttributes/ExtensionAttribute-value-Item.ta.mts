@@ -63,11 +63,9 @@ export class ExtensionAttribute_value_Item {
      * @returns {ExtensionAttribute_value_Item}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof ExtensionAttribute_value_Item]: ExtensionAttribute_value_Item[_K];
             }
-        >
     ): ExtensionAttribute_value_Item {
         return new ExtensionAttribute_value_Item(
             _o.mandatory,

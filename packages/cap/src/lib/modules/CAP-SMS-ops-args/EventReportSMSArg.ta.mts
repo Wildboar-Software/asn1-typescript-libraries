@@ -15,7 +15,6 @@ import { type EventSpecificInformationSMS, _decode_EventSpecificInformationSMS, 
 import { EventTypeSMS, _decode_EventTypeSMS, _encode_EventTypeSMS } from "../CAP-datatypes/EventTypeSMS.ta.mjs";
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
 import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-CS2-datatypes/MiscCallInfo.ta.mjs";
-// export { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-CS2-datatypes/MiscCallInfo.ta.mjs";
 
 
 /**

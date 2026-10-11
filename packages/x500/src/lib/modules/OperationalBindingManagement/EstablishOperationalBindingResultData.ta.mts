@@ -143,11 +143,9 @@ export class EstablishOperationalBindingResultData implements CommonResultsSeq {
      * @returns {EstablishOperationalBindingResultData}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof EstablishOperationalBindingResultData]: EstablishOperationalBindingResultData[_K];
             }
-        >
     ): EstablishOperationalBindingResultData {
         return new EstablishOperationalBindingResultData(
             _o.bindingType,

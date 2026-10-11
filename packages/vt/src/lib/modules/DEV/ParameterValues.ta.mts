@@ -15,23 +15,14 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_AccessRuleValue, _encode_AccessRuleValue, type AccessRuleValue } from "../CSS/AccessRuleValue.ta.mjs";
-// export { AccessRuleValue, AccessRuleValue_wavar /* IMPORTED_LONG_NAMED_INTEGER */, wavar /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_waci /* IMPORTED_LONG_NAMED_INTEGER */, waci /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_waca /* IMPORTED_LONG_NAMED_INTEGER */, waca /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_nsac /* IMPORTED_LONG_NAMED_INTEGER */, nsac /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_wavar_and_waci /* IMPORTED_LONG_NAMED_INTEGER */, wavar_and_waci /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_wavar_and_waca /* IMPORTED_LONG_NAMED_INTEGER */, wavar_and_waca /* IMPORTED_SHORT_NAMED_INTEGER */, AccessRuleValue_no_access /* IMPORTED_LONG_NAMED_INTEGER */, no_access /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AccessRuleValue, _encode_AccessRuleValue } from "../CSS/AccessRuleValue.ta.mjs";
 import { ParameterValues_defaultCOPriority, _decode_ParameterValues_defaultCOPriority, _encode_ParameterValues_defaultCOPriority } from "../DEV/ParameterValues-defaultCOPriority.ta.mjs";
-// export { ParameterValues_defaultCOPriority, ParameterValues_defaultCOPriority_normal /* IMPORTED_LONG_NAMED_INTEGER */, normal /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_defaultCOPriority_high /* IMPORTED_LONG_NAMED_INTEGER */, high /* IMPORTED_SHORT_NAMED_INTEGER */, ParameterValues_defaultCOPriority_urgent /* IMPORTED_LONG_NAMED_INTEGER */, urgent /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ParameterValues_defaultCOPriority, _encode_ParameterValues_defaultCOPriority } from "../DEV/ParameterValues-defaultCOPriority.ta.mjs";
 import { _decode_CompoundRepertoireValue, _encode_CompoundRepertoireValue, CompoundRepertoireValue } from "../CDS/CompoundRepertoireValue.ta.mjs";
-// export { CompoundRepertoireValue, _decode_CompoundRepertoireValue, _encode_CompoundRepertoireValue } from "../CDS/CompoundRepertoireValue.ta.mjs";
 import { _decode_CompoundEmphasisValue, _encode_CompoundEmphasisValue, type CompoundEmphasisValue } from "../CDS/CompoundEmphasisValue.ta.mjs";
-// export { CompoundEmphasisValue, _decode_CompoundEmphasisValue, _encode_CompoundEmphasisValue } from "../CDS/CompoundEmphasisValue.ta.mjs";
 import { _decode_CompoundColourValue, _encode_CompoundColourValue, CompoundColourValue } from "../CDS/CompoundColourValue.ta.mjs";
-// export { CompoundColourValue, _decode_CompoundColourValue, _encode_CompoundColourValue } from "../CDS/CompoundColourValue.ta.mjs";
 import { ParameterValues_terminationEventList_Item, _decode_ParameterValues_terminationEventList_Item, _encode_ParameterValues_terminationEventList_Item } from "../DEV/ParameterValues-terminationEventList-Item.ta.mjs";
-// export { ParameterValues_terminationEventList_Item, _decode_ParameterValues_terminationEventList_Item, _encode_ParameterValues_terminationEventList_Item } from "../DEV/ParameterValues-terminationEventList-Item.ta.mjs";
 import { ParameterValues_terminationLength, _decode_ParameterValues_terminationLength, _encode_ParameterValues_terminationLength } from "../DEV/ParameterValues-terminationLength.ta.mjs";
-// export { ParameterValues_terminationLength, _decode_ParameterValues_terminationLength, _encode_ParameterValues_terminationLength } from "../DEV/ParameterValues-terminationLength.ta.mjs";
 import { ParameterValues_terminationTimeout, _decode_ParameterValues_terminationTimeout, _encode_ParameterValues_terminationTimeout } from "../DEV/ParameterValues-terminationTimeout.ta.mjs";
-// export { ParameterValues_terminationTimeout, _decode_ParameterValues_terminationTimeout, _encode_ParameterValues_terminationTimeout } from "../DEV/ParameterValues-terminationTimeout.ta.mjs";
 import { ParameterValues_defaultCOinitialValue, _decode_ParameterValues_defaultCOinitialValue, _encode_ParameterValues_defaultCOinitialValue } from "../DEV/ParameterValues-defaultCOinitialValue.ta.mjs";
-// export { ParameterValues_defaultCOinitialValue, _decode_ParameterValues_defaultCOinitialValue, _encode_ParameterValues_defaultCOinitialValue } from "../DEV/ParameterValues-defaultCOinitialValue.ta.mjs";
 
 
 /**

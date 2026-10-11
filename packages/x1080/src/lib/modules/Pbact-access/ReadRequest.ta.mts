@@ -22,7 +22,7 @@ import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/x500/InformationFramework';
+} from '@wildboar/dn';
 import {
     InformationSelection,
     _decode_InformationSelection,

@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallResult, _decode_CallResult, _encode_CallResult } from "../Core-INAP-CS1-DataTypes/CallResult.ta.mjs";
-// export { CallResult, _decode_CallResult, _encode_CallResult } from "../Core-INAP-CS1-DataTypes/CallResult.ta.mjs";
 
 
 /**

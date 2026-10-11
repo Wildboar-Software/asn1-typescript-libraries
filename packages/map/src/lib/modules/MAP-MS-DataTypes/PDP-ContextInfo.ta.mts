@@ -1,87 +1,27 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
-import { PDP_Type, _decode_PDP_Type, _encode_PDP_Type } from "../MAP-MS-DataTypes/PDP-Type.ta.mjs";
-import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
-import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
-import { NSAPI, _decode_NSAPI, _encode_NSAPI } from "../MAP-MS-DataTypes/NSAPI.ta.mjs";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MAP-MS-DataTypes/TransactionId.ta.mjs";
-import { TEID, _decode_TEID, _encode_TEID } from "../MAP-MS-DataTypes/TEID.ta.mjs";
 import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-import { Ext_QoS_Subscribed, _decode_Ext_QoS_Subscribed, _encode_Ext_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext-QoS-Subscribed.ta.mjs";
-import { GPRSChargingID, _decode_GPRSChargingID, _encode_GPRSChargingID } from "../MAP-MS-DataTypes/GPRSChargingID.ta.mjs";
-import { ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
+import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
+import { ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
+import { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
+import { Ext_PDP_Type, _decode_Ext_PDP_Type, _encode_Ext_PDP_Type } from "../MAP-MS-DataTypes/Ext-PDP-Type.ta.mjs";
+import { Ext_QoS_Subscribed, _decode_Ext_QoS_Subscribed, _encode_Ext_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext-QoS-Subscribed.ta.mjs";
 import { Ext2_QoS_Subscribed, _decode_Ext2_QoS_Subscribed, _encode_Ext2_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext2-QoS-Subscribed.ta.mjs";
 import { Ext3_QoS_Subscribed, _decode_Ext3_QoS_Subscribed, _encode_Ext3_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext3-QoS-Subscribed.ta.mjs";
 import { Ext4_QoS_Subscribed, _decode_Ext4_QoS_Subscribed, _encode_Ext4_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext4-QoS-Subscribed.ta.mjs";
-import { Ext_PDP_Type, _decode_Ext_PDP_Type, _encode_Ext_PDP_Type } from "../MAP-MS-DataTypes/Ext-PDP-Type.ta.mjs";
+import { GPRSChargingID, _decode_GPRSChargingID, _encode_GPRSChargingID } from "../MAP-MS-DataTypes/GPRSChargingID.ta.mjs";
+import { NSAPI, _decode_NSAPI, _encode_NSAPI } from "../MAP-MS-DataTypes/NSAPI.ta.mjs";
+import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
+import { PDP_Type, _decode_PDP_Type, _encode_PDP_Type } from "../MAP-MS-DataTypes/PDP-Type.ta.mjs";
+import { TEID, _decode_TEID, _encode_TEID } from "../MAP-MS-DataTypes/TEID.ta.mjs";
+import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MAP-MS-DataTypes/TransactionId.ta.mjs";
 
 
 /**

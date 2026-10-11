@@ -1,0 +1,50 @@
+{
+    "name": "@wildboar/dn",
+    "description": "X.500 / LDAP distinguished names (DNs) and related functionality",
+    "keywords": [
+        "x.500",
+        "ldap",
+        "distinguished",
+        "dn"
+    ],
+    "version": "1.0.3",
+    "private": false,
+    "license": "MIT",
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "dependencies": {
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/teletex": "npm:@jsr/wildboar__teletex@^1.0.2"
+    },
+    "type": "module",
+    "main": "./src/index.js",
+    "module": "./src/index.js",
+    "types": "./src/index.d.ts",
+    "exports": {
+        "./package.json": "./package.json",
+        ".": {
+            "development": "./src/index.ts",
+            "types": "./src/index.d.ts",
+            "import": "./src/index.js",
+            "default": "./src/index.js"
+        }
+    }
+}

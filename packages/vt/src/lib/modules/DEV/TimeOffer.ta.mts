@@ -11,7 +11,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TimeOffer_Item, _decode_TimeOffer_Item, _encode_TimeOffer_Item } from "../DEV/TimeOffer-Item.ta.mjs";
-// export { TimeOffer_Item, _decode_TimeOffer_Item, _encode_TimeOffer_Item } from "../DEV/TimeOffer-Item.ta.mjs";
 
 
 /**

@@ -77,11 +77,9 @@ export class NHOBSubordinateToSuperior {
      * @returns {NHOBSubordinateToSuperior}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof NHOBSubordinateToSuperior]: NHOBSubordinateToSuperior[_K];
             }
-        >
     ): NHOBSubordinateToSuperior {
         return new NHOBSubordinateToSuperior(
             _o.accessPoints,

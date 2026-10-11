@@ -78,7 +78,7 @@ export class ICV_Invoke<ToBeProtected> {
      * @returns {ICV_Invoke}
      */
     public static _from_object(
-        _o: Partial<{ [_K in keyof ICV_Invoke<any>]: ICV_Invoke<any>[_K] }>
+        _o: { [_K in keyof ICV_Invoke<any>]: ICV_Invoke<any>[_K] }
     ): ICV_Invoke<any> {
         return new ICV_Invoke(
             _o.toBeProtected,

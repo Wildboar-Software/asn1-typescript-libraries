@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CS_EventNotification, _decode_CS_EventNotification, _encode_CS_EventNotification } from "../ISO-9506-MMS-1/CS-EventNotification.ta.mjs";
-// export { CS_EventNotification, _decode_CS_EventNotification, _encode_CS_EventNotification } from "../ISO-9506-MMS-1/CS-EventNotification.ta.mjs";
 
 
 /**

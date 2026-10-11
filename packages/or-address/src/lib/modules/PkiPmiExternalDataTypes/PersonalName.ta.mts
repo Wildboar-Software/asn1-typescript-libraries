@@ -2,8 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
-    PrintableString,
+    type OPTIONAL,
+    type PrintableString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { escape_oraddress_attribute_value, isPrintableString } from "../../utils.mjs";
@@ -53,32 +53,41 @@ function isAlpha(c: number): boolean {
  *
  */
 export class PersonalName {
+    /**
+     * @summary `surname`.
+     * @public
+     * @readonly
+     */
+    public readonly surname: PrintableString;
+    /**
+     * @summary `given_name`.
+     * @public
+     * @readonly
+     */
+    public readonly given_name?: OPTIONAL<PrintableString>;
+    /**
+     * @summary `initials`.
+     * @public
+     * @readonly
+     */
+    public readonly initials?: OPTIONAL<PrintableString>;
+    /**
+     * @summary `generation_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly generation_qualifier?: OPTIONAL<PrintableString>;
+
     constructor(
-        /**
-         * @summary `surname`.
-         * @public
-         * @readonly
-         */
-        readonly surname: PrintableString,
-        /**
-         * @summary `given_name`.
-         * @public
-         * @readonly
-         */
-        readonly given_name?: OPTIONAL<PrintableString>,
-        /**
-         * @summary `initials`.
-         * @public
-         * @readonly
-         */
-        readonly initials?: OPTIONAL<PrintableString>,
-        /**
-         * @summary `generation_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly generation_qualifier?: OPTIONAL<PrintableString>
+        surname: PrintableString,
+        given_name?: OPTIONAL<PrintableString>,
+        initials?: OPTIONAL<PrintableString>,
+        generation_qualifier?: OPTIONAL<PrintableString>
     ) {
+        this.surname = surname;
+        this.given_name = given_name;
+        this.initials = initials;
+        this.generation_qualifier = generation_qualifier;
         if (surname.length > ub_surname_length) {
             throw new Error("PersonalName.surname must be 40 characters or less");
         }

@@ -11,7 +11,7 @@ import {
 import {
     id_at_organizationName,
 } from "../../src/lib/modules/SelectedAttributeTypes/id-at-organizationName.va.mjs";
-import compareRDNSequence from "../../src/lib/comparators/compareRDNSequence.mjs";
+import { compareRDNSequence } from "@wildboar/dn";
 
 describe("Comparators", () => {
     const issuerCN = "Bigboi";

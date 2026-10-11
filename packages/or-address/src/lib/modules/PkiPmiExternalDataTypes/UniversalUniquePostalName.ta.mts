@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    UniversalPDSParameter,
+    type UniversalPDSParameter,
     _decode_UniversalPDSParameter,
     _encode_UniversalPDSParameter,
 } from "../PkiPmiExternalDataTypes/UniversalPDSParameter.ta.mjs";

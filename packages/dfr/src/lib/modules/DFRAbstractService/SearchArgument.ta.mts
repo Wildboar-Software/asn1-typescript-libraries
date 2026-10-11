@@ -13,31 +13,18 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SearchArgument_search_mode, _decode_SearchArgument_search_mode, _encode_SearchArgument_search_mode } from "../DFRAbstractService/SearchArgument-search-mode.ta.mjs";
-// export { SearchArgument_search_mode, _decode_SearchArgument_search_mode, _encode_SearchArgument_search_mode } from "../DFRAbstractService/SearchArgument-search-mode.ta.mjs";
 import { _decode_CommonListSearchArguments, _encode_CommonListSearchArguments } from "../DFRAbstractService/CommonListSearchArguments.ta.mjs";
-// export { CommonListSearchArguments, _decode_CommonListSearchArguments, _encode_CommonListSearchArguments } from "../DFRAbstractService/CommonListSearchArguments.ta.mjs";
 import { SearchDomain, _decode_SearchDomain, _encode_SearchDomain } from "../DFRAbstractService/SearchDomain.ta.mjs";
-// export { SearchDomain, _decode_SearchDomain, _encode_SearchDomain } from "../DFRAbstractService/SearchDomain.ta.mjs";
 import { SearchCriteria, _decode_SearchCriteria, _encode_SearchCriteria } from "../DFRAbstractService/SearchCriteria.ta.mjs";
-// export { SearchCriteria, _decode_SearchCriteria, _encode_SearchCriteria } from "../DFRAbstractService/SearchCriteria.ta.mjs";
 import { _decode_CommonArguments, _encode_CommonArguments } from "../DFRAbstractService/CommonArguments.ta.mjs";
-// export { CommonArguments, _decode_CommonArguments, _encode_CommonArguments } from "../DFRAbstractService/CommonArguments.ta.mjs";
 import { Limits, _decode_Limits, _encode_Limits } from "../DFRAbstractService/Limits.ta.mjs";
-// export { Limits, _decode_Limits, _encode_Limits } from "../DFRAbstractService/Limits.ta.mjs";
 import { AttributeSelection, _decode_AttributeSelection, _encode_AttributeSelection } from "../DFRAbstractService/AttributeSelection.ta.mjs";
-// export { AttributeSelection, _decode_AttributeSelection, _encode_AttributeSelection } from "../DFRAbstractService/AttributeSelection.ta.mjs";
 import { OrderingRule, _decode_OrderingRule, _encode_OrderingRule } from "../DFRAbstractService/OrderingRule.ta.mjs";
-// export { OrderingRule, _decode_OrderingRule, _encode_OrderingRule } from "../DFRAbstractService/OrderingRule.ta.mjs";
 import { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
-// export { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
 import { Reservation, _decode_Reservation, _encode_Reservation } from "../DFRAbstractService/Reservation.ta.mjs";
-// export { Reservation, _decode_Reservation, _encode_Reservation } from "../DFRAbstractService/Reservation.ta.mjs";
 import { ErrorHandlingMode, _decode_ErrorHandlingMode, _encode_ErrorHandlingMode } from "../DFRAbstractService/ErrorHandlingMode.ta.mjs";
-// export { ErrorHandlingMode, _decode_ErrorHandlingMode, _encode_ErrorHandlingMode } from "../DFRAbstractService/ErrorHandlingMode.ta.mjs";
 import { Priority, _enum_for_Priority, Priority_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Priority, _encode_Priority } from "../DFRAbstractService/Priority.ta.mjs";
-// export { Priority, _enum_for_Priority, Priority_low /* IMPORTED_LONG_ENUMERATION_ITEM */, low /* IMPORTED_SHORT_ENUMERATION_ITEM */, Priority_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, medium /* IMPORTED_SHORT_ENUMERATION_ITEM */, Priority_high /* IMPORTED_LONG_ENUMERATION_ITEM */, high /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Priority, _encode_Priority } from "../DFRAbstractService/Priority.ta.mjs";
 import { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstractService/Privileges.ta.mjs";
-// export { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstractService/Privileges.ta.mjs";
 
 
 /**

@@ -76,7 +76,7 @@ export class Signed<ToBeSigned> {
      * @returns {Signed}
      */
     public static _from_object(
-        _o: Partial<{ [_K in keyof Signed<any>]: Signed<any>[_K] }>
+        _o: { [_K in keyof Signed<any>]: Signed<any>[_K] }
     ): Signed<any> {
         return new Signed(
             _o.toBeSigned,

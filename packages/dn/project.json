@@ -1,0 +1,25 @@
+{
+  "name": "dn",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/dn/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/dn",
+        "tsConfig": "packages/dn/tsconfig.lib.json",
+        "packageJson": "packages/dn/package.json",
+        "main": "packages/dn/src/index.ts",
+        "assets": [
+          "packages/dn/*.md",
+          "packages/dn/LICENSE.txt",
+          "packages/dn/package.json"
+        ]
+      }
+    }
+  }
+}

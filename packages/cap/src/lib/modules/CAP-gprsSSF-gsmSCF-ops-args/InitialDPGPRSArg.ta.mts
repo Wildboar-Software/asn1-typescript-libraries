@@ -22,21 +22,13 @@ import { QualityOfService, _decode_QualityOfService, _encode_QualityOfService } 
 import { type SGSNCapabilities, _decode_SGSNCapabilities, _encode_SGSNCapabilities } from "../CAP-datatypes/SGSNCapabilities.ta.mjs";
 import { type TimeAndTimezone, _decode_TimeAndTimezone, _encode_TimeAndTimezone } from "../CAP-datatypes/TimeAndTimezone.ta.mjs";
 import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
-// export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
 import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-// export { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-// export { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { GPRSMSClass, _decode_GPRSMSClass, _encode_GPRSMSClass } from "../MAP-MS-DataTypes/GPRSMSClass.ta.mjs";
-// export { GPRSMSClass, _decode_GPRSMSClass, _encode_GPRSMSClass } from "../MAP-MS-DataTypes/GPRSMSClass.ta.mjs";
 import { RAIdentity, _decode_RAIdentity, _encode_RAIdentity } from "../MAP-CommonDataTypes/RAIdentity.ta.mjs";
-// export { RAIdentity, _decode_RAIdentity, _encode_RAIdentity } from "../MAP-CommonDataTypes/RAIdentity.ta.mjs";
 import { GPRSChargingID, _decode_GPRSChargingID, _encode_GPRSChargingID } from "../MAP-MS-DataTypes/GPRSChargingID.ta.mjs";
-// export { GPRSChargingID, _decode_GPRSChargingID, _encode_GPRSChargingID } from "../MAP-MS-DataTypes/GPRSChargingID.ta.mjs";
 import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-// export { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
-// export { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 
 
 /**

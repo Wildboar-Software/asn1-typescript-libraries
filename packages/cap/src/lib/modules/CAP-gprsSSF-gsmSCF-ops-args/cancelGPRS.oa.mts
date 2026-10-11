@@ -11,19 +11,12 @@ import {
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { CancelGPRSArg, _decode_CancelGPRSArg, _encode_CancelGPRSArg } from "../CAP-gprsSSF-gsmSCF-ops-args/CancelGPRSArg.ta.mjs";
-// export { CancelGPRSArg, _decode_CancelGPRSArg, _encode_CancelGPRSArg } from "../CAP-gprsSSF-gsmSCF-ops-args/CancelGPRSArg.ta.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
-// export { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
 import { taskRefused } from "../CAP-errortypes/taskRefused.oa.mjs";
-// export { taskRefused } from "../CAP-errortypes/taskRefused.oa.mjs";
 import { unknownPDPID } from "../CAP-errortypes/unknownPDPID.oa.mjs";
-// export { unknownPDPID } from "../CAP-errortypes/unknownPDPID.oa.mjs";
 import { opcode_cancelGPRS } from "../CAP-operationcodes/opcode-cancelGPRS.va.mjs";
-// export { opcode_cancelGPRS } from "../CAP-operationcodes/opcode-cancelGPRS.va.mjs";
 
 
 /**

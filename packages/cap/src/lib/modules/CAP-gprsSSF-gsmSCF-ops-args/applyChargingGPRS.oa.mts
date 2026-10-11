@@ -11,29 +11,17 @@ import {
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ApplyChargingGPRSArg, _decode_ApplyChargingGPRSArg, _encode_ApplyChargingGPRSArg } from "../CAP-gprsSSF-gsmSCF-ops-args/ApplyChargingGPRSArg.ta.mjs";
-// export { ApplyChargingGPRSArg, _decode_ApplyChargingGPRSArg, _encode_ApplyChargingGPRSArg } from "../CAP-gprsSSF-gsmSCF-ops-args/ApplyChargingGPRSArg.ta.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
-// export { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";
 import { unexpectedComponentSequence } from "../CAP-errortypes/unexpectedComponentSequence.oa.mjs";
-// export { unexpectedComponentSequence } from "../CAP-errortypes/unexpectedComponentSequence.oa.mjs";
 import { unexpectedParameter } from "../CAP-errortypes/unexpectedParameter.oa.mjs";
-// export { unexpectedParameter } from "../CAP-errortypes/unexpectedParameter.oa.mjs";
 import { unexpectedDataValue } from "../CAP-errortypes/unexpectedDataValue.oa.mjs";
-// export { unexpectedDataValue } from "../CAP-errortypes/unexpectedDataValue.oa.mjs";
 import { parameterOutOfRange } from "../CAP-errortypes/parameterOutOfRange.oa.mjs";
-// export { parameterOutOfRange } from "../CAP-errortypes/parameterOutOfRange.oa.mjs";
 import { systemFailure } from "../CAP-errortypes/systemFailure.oa.mjs";
-// export { systemFailure } from "../CAP-errortypes/systemFailure.oa.mjs";
 import { taskRefused } from "../CAP-errortypes/taskRefused.oa.mjs";
-// export { taskRefused } from "../CAP-errortypes/taskRefused.oa.mjs";
 import { unknownPDPID } from "../CAP-errortypes/unknownPDPID.oa.mjs";
-// export { unknownPDPID } from "../CAP-errortypes/unknownPDPID.oa.mjs";
 import { opcode_applyChargingGPRS } from "../CAP-operationcodes/opcode-applyChargingGPRS.va.mjs";
-// export { opcode_applyChargingGPRS } from "../CAP-operationcodes/opcode-applyChargingGPRS.va.mjs";
 
 
 /**

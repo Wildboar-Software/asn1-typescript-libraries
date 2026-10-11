@@ -68,11 +68,9 @@ export class ClassAttributeSelection {
      * @returns {ClassAttributeSelection}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof ClassAttributeSelection]: ClassAttributeSelection[_K];
             }
-        >
     ): ClassAttributeSelection {
         return new ClassAttributeSelection(_o.class_, _o.classAttributes);
     }

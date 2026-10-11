@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Event_Action_instance_definition_details, _decode_Event_Action_instance_definition_details, _encode_Event_Action_instance_definition_details } from "../MMS-SCI-Module-1/Event-Action-instance-definition-details.ta.mjs";
-// export { Event_Action_instance_definition_details, _decode_Event_Action_instance_definition_details, _encode_Event_Action_instance_definition_details } from "../MMS-SCI-Module-1/Event-Action-instance-definition-details.ta.mjs";
 
 
 /**

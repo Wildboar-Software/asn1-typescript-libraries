@@ -1,10 +1,6 @@
-import SubstringsMatcher from "../../types/SubstringsMatcher.mjs";
 import SubstringSelection from "../../types/SubstringSelection.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
-import {
-    _decode_UnboundedDirectoryString as _decode_UDS,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";;
+import type { DirectoryStringInput } from "../readValue.mjs";
+import { readDirectoryString } from "../readValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.3
@@ -13,17 +9,40 @@ import directoryStringToString from "../../stringifiers/directoryStringToString.
  * Same as `caseExactSubstringsMatch` except upper-case is folded
  * during string preparation (clause 7.2). `control` elements are
  * ignored.
+ *
+ * `assertion` and `value` may each be an element, a directory
+ * string, or a JavaScript string.
  */
 export
-const caseIgnoreSubstringsMatch: SubstringsMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
+function caseIgnoreSubstringsMatch (
+    assertion: DirectoryStringInput,
+    value: DirectoryStringInput,
     selection?: SubstringSelection,
-): boolean => {
-    const sel: SubstringSelection = selection ?? SubstringSelection.any_;
-    const a: string = directoryStringToString(_decode_UDS(assertion)).toLowerCase();
-    const v: string = directoryStringToString(_decode_UDS(value)).toLowerCase();
-    switch (sel) {
+): boolean {
+    return caseIgnoreSubstringsMatchTyped(
+        readDirectoryString(assertion),
+        readDirectoryString(value),
+        selection ?? SubstringSelection.any_,
+    );
+}
+
+/**
+ * `caseIgnoreSubstringsMatch` on two strings. Case is folded here.
+ *
+ * @param assertion Presented substring.
+ * @param value Stored string.
+ * @param selection Which part of `value` must contain `assertion`.
+ * @returns `true` when the selected containment holds.
+ */
+export
+function caseIgnoreSubstringsMatchTyped (
+    assertion: string,
+    value: string,
+    selection: SubstringSelection,
+): boolean {
+    const a: string = assertion.toLowerCase();
+    const v: string = value.toLowerCase();
+    switch (selection) {
         case (SubstringSelection.initial): {
             return v.startsWith(a);
         }
@@ -37,7 +56,6 @@ const caseIgnoreSubstringsMatch: SubstringsMatcher = (
             return false;
         }
     }
-
 }
 
 export default caseIgnoreSubstringsMatch;

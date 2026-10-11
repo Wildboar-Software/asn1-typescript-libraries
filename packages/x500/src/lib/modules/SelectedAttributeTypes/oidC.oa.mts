@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { INTEGER } from "@wildboar/asn1";
+import type { INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import {

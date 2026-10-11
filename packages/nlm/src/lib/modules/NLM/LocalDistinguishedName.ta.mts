@@ -18,7 +18,7 @@ import {
 import {
     _decode_RDNSequence,
     _encode_RDNSequence,
-} from "@wildboar/pki-stub";
+} from "@wildboar/dn";
 
 
 /**

@@ -9,9 +9,7 @@ import type {
 import type {
     OBJECT_CLASS,
 } from "../modules/InformationFramework/OBJECT-CLASS.oca.mjs";
-import {
-    default as compareDN,
-} from "../comparators/compareDistinguishedName.mjs";
+import { compareRDNSequence as compareDN } from "@wildboar/dn";
 import {
     objectClassesWithinRefinement as withinRefinement,
 } from "./objectClassesWithinRefinement.mjs";

@@ -11,7 +11,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { dorx } from "../DOR-definition/dorx.va.mjs";
-// export { dorx } from "../DOR-definition/dorx.va.mjs";
 
 
 /**

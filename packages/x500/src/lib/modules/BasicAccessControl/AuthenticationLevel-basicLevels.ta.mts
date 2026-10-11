@@ -73,11 +73,9 @@ export class AuthenticationLevel_basicLevels {
      * @returns {AuthenticationLevel_basicLevels}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof AuthenticationLevel_basicLevels]: AuthenticationLevel_basicLevels[_K];
             }
-        >
     ): AuthenticationLevel_basicLevels {
         return new AuthenticationLevel_basicLevels(
             _o.level,

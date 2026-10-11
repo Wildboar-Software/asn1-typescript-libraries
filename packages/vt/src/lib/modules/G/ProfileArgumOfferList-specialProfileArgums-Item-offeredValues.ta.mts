@@ -13,9 +13,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean, _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean, _encode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean } from "../G/ProfileArgumOfferList-specialProfileArgums-Item-offeredValues-boolean.ta.mjs";
-// export { ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean, ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean_false_bit /* IMPORTED_LONG_NAMED_BIT */, false_bit /* IMPORTED_SHORT_NAMED_BIT */, ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean_true_bit /* IMPORTED_LONG_NAMED_BIT */, true_bit /* IMPORTED_SHORT_NAMED_BIT */, _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean, _encode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean } from "../G/ProfileArgumOfferList-specialProfileArgums-Item-offeredValues-boolean.ta.mjs";
 import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
-// export { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 
 
 /**

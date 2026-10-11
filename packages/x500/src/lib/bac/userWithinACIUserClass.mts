@@ -1,4 +1,4 @@
-import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER, compareBitStrings } from "@wildboar/asn1";
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
 import type {
     DistinguishedName,
@@ -13,8 +13,7 @@ import type {
     AuthenticationLevel,
 } from "../modules/BasicAccessControl/AuthenticationLevel.ta.mjs";
 import type ACDFTuple from "../types/ACDFTuple.mjs";
-import compareDistinguishedName from "../comparators/compareDistinguishedName.mjs";
-import compareBitStrings from "../comparators/compareBitStrings.mjs";
+import { compareRDNSequence } from "@wildboar/dn";
 import dnWithinSubtreeSpecification from "../utils/dnWithinSubtreeSpecification.mjs";
 import compareAuthenticationLevel from "../comparators/compareAuthenticationLevel.mjs";
 import deniesAccess from "./deniesAccess.mjs";
@@ -113,14 +112,14 @@ async function userWithinACIUserClass (
     let couldNotDetermineGroupMembership: boolean = false;
     if (
         (userClass.thisEntry === null)
-        && compareDistinguishedName(user.dn, entryDN, getEqualityMatcher)
+        && compareRDNSequence(user.dn, entryDN, getEqualityMatcher)
     ) {
         return 4;
     }
     if (
         (userClass.name && (userClass.name.length > 0))
         && (userClass.name.some((n) => (
-            compareDistinguishedName(user.dn, n.dn, getEqualityMatcher)
+            compareRDNSequence(user.dn, n.dn, getEqualityMatcher)
             && (
                 !n.uid // If there is no uid, all entries with this name are relevant.
                 || (user.uid && compareBitStrings(user.uid, n.uid))

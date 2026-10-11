@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ExtendedNetworkAddress,
+    type ExtendedNetworkAddress,
     _decode_ExtendedNetworkAddress,
     _encode_ExtendedNetworkAddress,
 } from "../PkiPmiExternalDataTypes/ExtendedNetworkAddress.ta.mjs";

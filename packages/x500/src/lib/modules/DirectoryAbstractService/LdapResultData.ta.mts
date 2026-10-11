@@ -22,7 +22,7 @@ import {
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
-    LDAPMessage,
+    type LDAPMessage,
     _decode_LDAPMessage,
     _encode_LDAPMessage,
 } from "@wildboar/ldap";

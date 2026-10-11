@@ -10,13 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { cancelFailed_ParameterType, _decode_cancelFailed_ParameterType, _encode_cancelFailed_ParameterType } from "../CAP-errortypes/cancelFailed-ParameterType.ta.mjs";
-// export { cancelFailed_ParameterType, _decode_cancelFailed_ParameterType, _encode_cancelFailed_ParameterType } from "../CAP-errortypes/cancelFailed-ParameterType.ta.mjs";
 import { errcode_cancelFailed } from "../CAP-errorcodes/errcode-cancelFailed.va.mjs";
-// export { errcode_cancelFailed } from "../CAP-errorcodes/errcode-cancelFailed.va.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 

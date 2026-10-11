@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TimeOffer_Item_value, _decode_TimeOffer_Item_value, _encode_TimeOffer_Item_value } from "../DEV/TimeOffer-Item-value.ta.mjs";
-// export { TimeOffer_Item_value, _decode_TimeOffer_Item_value, _encode_TimeOffer_Item_value } from "../DEV/TimeOffer-Item-value.ta.mjs";
 import { TimeOffer_Item_range, _decode_TimeOffer_Item_range, _encode_TimeOffer_Item_range } from "../DEV/TimeOffer-Item-range.ta.mjs";
-// export { TimeOffer_Item_range, _decode_TimeOffer_Item_range, _encode_TimeOffer_Item_range } from "../DEV/TimeOffer-Item-range.ta.mjs";
 
 
 /**

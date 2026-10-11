@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RSAPublicKey, _decode_RSAPublicKey, _encode_RSAPublicKey } from "../CryptographicInformationFramework/RSAPublicKey.ta.mjs";
-// export { RSAPublicKey, _decode_RSAPublicKey, _encode_RSAPublicKey } from "../CryptographicInformationFramework/RSAPublicKey.ta.mjs";
 import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
-// export { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
 
 
 /**

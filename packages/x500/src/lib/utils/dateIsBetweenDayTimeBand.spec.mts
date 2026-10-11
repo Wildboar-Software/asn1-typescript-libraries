@@ -2,7 +2,6 @@ import { DayTimeBand } from "../modules/SelectedAttributeTypes/DayTimeBand.ta.mj
 import { DayTime } from "../modules/SelectedAttributeTypes/DayTime.ta.mjs";
 import { Period } from "../modules/SelectedAttributeTypes/Period.ta.mjs";
 import dateIsBetweenDayTimeBand from "./dateIsBetweenDayTimeBand.mjs";
-import boundariesOfPeriodOccurrence from "./boundariesOfPeriodOccurrence.mjs";
 
 describe("dateIsBetweenDayTimeBand", () => {
     it("matches a same-day band inclusively", () => {
@@ -28,8 +27,6 @@ describe("dateIsBetweenDayTimeBand", () => {
         expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 6, 0, 0))).toBe(false);
         expect(dateIsBetweenDayTimeBand(dtb, new Date(2021, 0, 1, 12, 0, 0))).toBe(false);
         const p = new Period([ dtb ]);
-        expect(boundariesOfPeriodOccurrence(p, new Date(2021, 5, 10, 23, 0, 0))).toBeNull();
-        expect(boundariesOfPeriodOccurrence(p, new Date(2021, 5, 11, 3, 0, 0))).toBeNull();
     });
 
     // Overnight `between` with `entirely` TRUE is covered (skipped) in

@@ -14,9 +14,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { alg_id_sha1 } from "../CryptographicInformationFramework/alg-id-sha1.va.mjs";
-// export { alg_id_sha1 } from "../CryptographicInformationFramework/alg-id-sha1.va.mjs";
 
 
 /**

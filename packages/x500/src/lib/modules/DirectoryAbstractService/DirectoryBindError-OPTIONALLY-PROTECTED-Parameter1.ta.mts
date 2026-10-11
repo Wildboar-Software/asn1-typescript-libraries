@@ -94,11 +94,9 @@ export class DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1 {
      * @returns {DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1]: DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1[_K];
             }
-        >
     ): DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1 {
         return new DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1(
             _o.versions,

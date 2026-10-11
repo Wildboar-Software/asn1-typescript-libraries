@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CollectedDigits, _decode_CollectedDigits, _encode_CollectedDigits } from "../IN-CS2-datatypes/CollectedDigits.ta.mjs";
-// export { CollectedDigits, _decode_CollectedDigits, _encode_CollectedDigits } from "../IN-CS2-datatypes/CollectedDigits.ta.mjs";
 
 
 /**

@@ -1,0 +1,13 @@
+UserInfoFormat-userInfo-1
+{z39-50-userInfoFormat userInfo-1(3)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    OtherInformation
+        FROM Z39-50-APDU-2001
+    ;
+
+UserInfo-1 ::= OtherInformation
+
+END

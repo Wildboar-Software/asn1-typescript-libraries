@@ -8,10 +8,10 @@ import {
 } from "@wildboar/presentation-address";
 import {
     ORAddress,
-    CountryName,
+    type CountryName,
     PersonalName,
-    AdministrationDomainName,
-    PrivateDomainName,
+    type AdministrationDomainName,
+    type PrivateDomainName,
     _decode_BuiltInDomainDefinedAttributes,
     _encode_BuiltInDomainDefinedAttributes,
     _decode_BuiltInStandardAttributes,
@@ -64,16 +64,16 @@ import {
     UniversalOrBMPString,
     UnformattedPostalAddress,
     UniversalDomainDefinedAttribute,
-    NetworkAddress,
-    TerminalIdentifier,
-    OrganizationName,
-    NumericUserIdentifier,
-    OrganizationalUnitNames,
+    type NetworkAddress,
+    type TerminalIdentifier,
+    type OrganizationName,
+    type NumericUserIdentifier,
+    type OrganizationalUnitNames,
     BuiltInStandardAttributes,
     ExtendedNetworkAddress_e163_4_address,
     ExtensionAttribute,
-    EXTENSION_ATTRIBUTE,
-    UniversalPDSParameter,
+    type EXTENSION_ATTRIBUTE,
+    type UniversalPDSParameter,
 } from "./modules/PkiPmiExternalDataTypes/index.mjs";
 import { isPrintableCharacter } from "@wildboar/asn1";
 import {

@@ -10,9 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { resetTimerGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/resetTimerGPRS.oa.mjs";
-// export { resetTimerGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/resetTimerGPRS.oa.mjs";
 import { id_package_gprsTimer } from "../CAP-object-identifiers/id-package-gprsTimer.va.mjs";
-// export { id_package_gprsTimer } from "../CAP-object-identifiers/id-package-gprsTimer.va.mjs";
 import { type OPERATION_PACKAGE } from "../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.mjs";
 
 

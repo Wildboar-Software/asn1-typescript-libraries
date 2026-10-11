@@ -12,11 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OperationState, _decode_OperationState, _encode_OperationState } from "../ISO-9506-MMS-1/OperationState.ta.mjs";
-// export { OperationState, OperationState_idle /* IMPORTED_LONG_NAMED_INTEGER */, idle /* IMPORTED_SHORT_NAMED_INTEGER */, OperationState_loaded /* IMPORTED_LONG_NAMED_INTEGER */, loaded /* IMPORTED_SHORT_NAMED_INTEGER */, OperationState_ready /* IMPORTED_LONG_NAMED_INTEGER */, ready /* IMPORTED_SHORT_NAMED_INTEGER */, OperationState_executing /* IMPORTED_LONG_NAMED_INTEGER */, executing /* IMPORTED_SHORT_NAMED_INTEGER */, OperationState_motion_paused /* IMPORTED_LONG_NAMED_INTEGER */, motion_paused /* IMPORTED_SHORT_NAMED_INTEGER */, OperationState_manualInterventionRequired /* IMPORTED_LONG_NAMED_INTEGER */, manualInterventionRequired /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_OperationState, _encode_OperationState } from "../ISO-9506-MMS-1/OperationState.ta.mjs";
 import { ExtendedStatus, _decode_ExtendedStatus, _encode_ExtendedStatus } from "../ISO-9506-MMS-1/ExtendedStatus.ta.mjs";
-// export { ExtendedStatus, ExtendedStatus_safetyInterlocksViolated /* IMPORTED_LONG_NAMED_BIT */, safetyInterlocksViolated /* IMPORTED_SHORT_NAMED_BIT */, ExtendedStatus_anyPhysicalResourcePowerOn /* IMPORTED_LONG_NAMED_BIT */, anyPhysicalResourcePowerOn /* IMPORTED_SHORT_NAMED_BIT */, ExtendedStatus_allPhysicalResourcesCalibrated /* IMPORTED_LONG_NAMED_BIT */, allPhysicalResourcesCalibrated /* IMPORTED_SHORT_NAMED_BIT */, ExtendedStatus_localControl /* IMPORTED_LONG_NAMED_BIT */, localControl /* IMPORTED_SHORT_NAMED_BIT */, _decode_ExtendedStatus, _encode_ExtendedStatus } from "../ISO-9506-MMS-1/ExtendedStatus.ta.mjs";
 import { CS_Status_Response_fullResponse_selectedProgramInvocation, _decode_CS_Status_Response_fullResponse_selectedProgramInvocation, _encode_CS_Status_Response_fullResponse_selectedProgramInvocation } from "../ISO-9506-MMS-1/CS-Status-Response-fullResponse-selectedProgramInvocation.ta.mjs";
-// export { CS_Status_Response_fullResponse_selectedProgramInvocation, _decode_CS_Status_Response_fullResponse_selectedProgramInvocation, _encode_CS_Status_Response_fullResponse_selectedProgramInvocation } from "../ISO-9506-MMS-1/CS-Status-Response-fullResponse-selectedProgramInvocation.ta.mjs";
 
 
 /**

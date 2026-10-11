@@ -1,0 +1,16 @@
+AccessControlFormat-des-1
+{z39-50-accessControlFormat des-1 (2)} DEFINITIONS ::=
+BEGIN
+
+DES-RN-Object ::= CHOICE {
+    challenge               [1] IMPLICIT DRNType,
+    response                [2] IMPLICIT DRNType
+}
+
+DRNType ::= SEQUENCE{
+    userId                  [1] IMPLICIT OCTET STRING OPTIONAL,
+    salt                    [2] IMPLICIT OCTET STRING OPTIONAL,
+    randomNumber            [3] IMPLICIT OCTET STRING
+}
+
+END

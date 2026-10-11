@@ -1,0 +1,25 @@
+{
+  "name": "pkinit",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/pkinit/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/pkinit",
+        "tsConfig": "packages/pkinit/tsconfig.lib.json",
+        "packageJson": "packages/pkinit/package.json",
+        "main": "packages/pkinit/src/index.mts",
+        "assets": [
+          "packages/pkinit/*.md",
+          "packages/pkinit/LICENSE.txt",
+          "packages/pkinit/package.json"
+        ]
+      }
+    }
+  }
+}

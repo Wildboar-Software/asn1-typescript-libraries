@@ -1,6 +1,6 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import { ASN1Element, DERElement, FALSE_BIT, OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import compareName from "../../comparators/compareName.mjs";
+import { compareName } from "@wildboar/dn";
 import {
     EnhancedCertificateAssertion,
     _decode_EnhancedCertificateAssertion,
@@ -60,7 +60,7 @@ import {
     AltNameType_builtinNameForm_registeredId,
 } from "../../modules/CertificateExtensions/AltNameType-builtinNameForm.ta.mjs";
 import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier.mjs";
-import compareGeneralName from "../../comparators/compareGeneralName.mjs";
+import { compareGeneralName } from "@wildboar/gn";
 import { getDateFromTime } from "@wildboar/pki-stub";
 import {
     CertificatePoliciesSyntax,
@@ -74,7 +74,6 @@ import {
     anyPolicy,
 } from "../../modules/CertificateExtensions/anyPolicy.va.mjs";
 import dnWithinSubtree from "../../utils/dnWithinSubtree.mjs";
-import compareGeneralNames from "../../comparators/compareGeneralNames.mjs";
 import { Buffer } from "node:buffer";
 
 const AKI_OID: string = id_ce_authorityKeyIdentifier.toString();
@@ -110,7 +109,7 @@ function evaluateEnhancedCertificateAssertion (
     }
     if (assertion.subjectKeyIdentifier) {
         const ski: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectKeyIdentifier)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectKeyIdentifier)));
         if (!ski) {
             return false;
         }
@@ -122,7 +121,7 @@ function evaluateEnhancedCertificateAssertion (
     }
     if (assertion.authorityKeyIdentifier) {
         const aki: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_authorityKeyIdentifier)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_authorityKeyIdentifier)));
         if (!aki) {
             return false;
         }
@@ -148,7 +147,7 @@ function evaluateEnhancedCertificateAssertion (
 
     if (assertion.privateKeyValid) {
         const pkupExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_privateKeyUsagePeriod)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_privateKeyUsagePeriod)));
         if (pkupExt) {
             const el: DERElement = new DERElement();
             el.fromBytes(pkupExt.extnValue);
@@ -176,7 +175,7 @@ function evaluateEnhancedCertificateAssertion (
 
     if (assertion.keyUsage) {
         const kuExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_keyUsage)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_keyUsage)));
         if (!kuExt) {
             return false;
         }
@@ -191,21 +190,23 @@ function evaluateEnhancedCertificateAssertion (
         }
     }
 
-    if (assertion.subjectAltName) {
+    const subjectAltName = assertion.subjectAltName;
+    if (subjectAltName) {
         const sanExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
         if (!sanExt) {
             return false;
         }
         const el: DERElement = new DERElement();
         el.fromBytes(sanExt.extnValue);
         const sans: GeneralNames = _decode_GeneralNames(el);
-        if (assertion.subjectAltName.altNameValue) {
-            if (!sans.some((san): boolean => compareGeneralName(san, assertion.subjectAltName.altNameValue, getEqualityMatcher))) {
+        const altNameValue = subjectAltName.altNameValue;
+        if (altNameValue) {
+            if (!sans.some((san): boolean => compareGeneralName(san, altNameValue, getEqualityMatcher))) {
                 return false;
             }
-        } else if ("builtinNameForm" in assertion.subjectAltName.altnameType) {
-            const altNameType: number = assertion.subjectAltName.altnameType.builtinNameForm;
+        } else if ("builtinNameForm" in subjectAltName.altnameType) {
+            const altNameType: number = subjectAltName.altnameType.builtinNameForm;
             switch (altNameType) {
             case (AltNameType_builtinNameForm_rfc822Name as number): {
                 if (!sans.some((san): boolean => ("rfc822Name" in san))) {
@@ -256,16 +257,14 @@ function evaluateEnhancedCertificateAssertion (
                 break;
             }
             }
-        } else if ("otherNameForm" in assertion.subjectAltName.altnameType) {
+        } else if ("otherNameForm" in subjectAltName.altnameType) {
+            const otherName = subjectAltName.altnameType.otherNameForm;
             if (!sans.some((san): boolean => {
-                if (!("otherNameForm" in assertion.subjectAltName.altnameType)) {
-                    return false;
-                }
-                const otherName: OBJECT_IDENTIFIER = assertion.subjectAltName.altnameType.otherNameForm;
                 if (!("otherName" in san)) {
                     return false;
                 }
-                return (san.otherName.directReference.isEqualTo(otherName));
+                const directReference = san.otherName.directReference;
+                return !!directReference && directReference.isEqualTo(otherName);
             })) {
                 return false;
             }
@@ -276,7 +275,7 @@ function evaluateEnhancedCertificateAssertion (
 
     if (assertion.policy) {
         const cpExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_certificatePolicies)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_certificatePolicies)));
         if (!cpExt) {
             return false;
         }
@@ -298,7 +297,7 @@ function evaluateEnhancedCertificateAssertion (
 
     if (assertion.pathToName) {
         const ncExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_nameConstraints)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_nameConstraints)));
         if (ncExt) {
             const el: DERElement = new DERElement();
             el.fromBytes(ncExt.extnValue);
@@ -379,7 +378,7 @@ function evaluateEnhancedCertificateAssertion (
         }
 
         const sanExt: Extension | undefined = tbs.extensions
-            .find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
+            ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_subjectAltName)));
         if (sanExt) {
             const el: DERElement = new DERElement();
             el.fromBytes(sanExt.extnValue);
@@ -428,6 +427,12 @@ function evaluateEnhancedCertificateAssertion (
 }
 
 /**
+ * `enhancedCertificateMatch` on a decoded assertion and certificate.
+ * Alias of {@link evaluateEnhancedCertificateAssertion}.
+ */
+export const enhancedCertificateMatchTyped = evaluateEnhancedCertificateAssertion;
+
+/**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.10
  * `enhancedCertificateMatch`.
  *
@@ -438,13 +443,16 @@ function evaluateEnhancedCertificateAssertion (
  * assertions may be combined in a search filter with AND/OR.
  */
 export
-const enhancedCertificateMatch: EqualityMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-): boolean => {
-    const a: EnhancedCertificateAssertion = _decode_EnhancedCertificateAssertion(assertion);
-    const v: Certificate = _decode_Certificate(value);
-    return evaluateEnhancedCertificateAssertion(a, v);
+function enhancedCertificateMatch (
+    assertion: ASN1Element | EnhancedCertificateAssertion,
+    value: ASN1Element | Certificate,
+    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+): boolean {
+    return enhancedCertificateMatchTyped(
+        ASN1Element.isElement(assertion) ? _decode_EnhancedCertificateAssertion(assertion) : assertion,
+        ASN1Element.isElement(value) ? _decode_Certificate(value) : value,
+        getEqualityMatcher,
+    );
 }
 
 export default enhancedCertificateMatch;

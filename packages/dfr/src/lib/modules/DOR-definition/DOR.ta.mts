@@ -13,13 +13,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AE_Identifier, _decode_AE_Identifier, _encode_AE_Identifier } from "../DOR-definition/AE-Identifier.ta.mjs";
-// export { AE_Identifier, _decode_AE_Identifier, _encode_AE_Identifier } from "../DOR-definition/AE-Identifier.ta.mjs";
 import { Local_reference, _decode_Local_reference, _encode_Local_reference } from "../DOR-definition/Local-reference.ta.mjs";
-// export { Local_reference, _decode_Local_reference, _encode_Local_reference } from "../DOR-definition/Local-reference.ta.mjs";
 import { Quality_of_Service, _decode_Quality_of_Service, _encode_Quality_of_Service } from "../DOR-definition/Quality-of-Service.ta.mjs";
-// export { Quality_of_Service, _decode_Quality_of_Service, _encode_Quality_of_Service } from "../DOR-definition/Quality-of-Service.ta.mjs";
 import { Token, _decode_Token, _encode_Token } from "../DOR-definition/Token.ta.mjs";
-// export { Token, _decode_Token, _encode_Token } from "../DOR-definition/Token.ta.mjs";
 
 
 /**

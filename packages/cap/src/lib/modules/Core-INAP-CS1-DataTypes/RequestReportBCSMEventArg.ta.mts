@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BCSMEvent, _decode_BCSMEvent, _encode_BCSMEvent } from "../Core-INAP-CS1-DataTypes/BCSMEvent.ta.mjs";
-// export { BCSMEvent, _decode_BCSMEvent, _encode_BCSMEvent } from "../Core-INAP-CS1-DataTypes/BCSMEvent.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
-// export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 
 /**

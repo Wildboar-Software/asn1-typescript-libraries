@@ -2,8 +2,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     BERElement,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { X213NetworkAddress } from "@wildboar/nsap-address";
@@ -36,15 +36,15 @@ export type PresentationAddressStrings = {
     /**
      * The presentation-layer selector as a string.
      */
-    pSelector?: string;
+    pSelector?: string | undefined;
     /**
      * The session-layer selector as a string.
      */
-    sSelector?: string;
+    sSelector?: string | undefined;
     /**
      * The transport-layer selector as a string.
      */
-    tSelector?: string;
+    tSelector?: string | undefined;
     /**
      * The network-layer addresses as strings.
      */
@@ -157,6 +157,12 @@ function selectorFromRfc1278String(s: string): OCTET_STRING | string {
 *
 */
 export class PresentationAddress {
+    public readonly pSelector: OPTIONAL<OCTET_STRING>;
+    public readonly sSelector: OPTIONAL<OCTET_STRING>;
+    public readonly tSelector: OPTIONAL<OCTET_STRING>;
+    public readonly nAddresses: OCTET_STRING[];
+    public readonly _unrecognizedExtensionsList: _Element[] = [];
+
     /**
      * @summary Constructs a new `PresentationAddress` from its parts
      * @param pSelector The presentation-layer selector.
@@ -168,37 +174,18 @@ export class PresentationAddress {
      * @constructor
      */
     constructor(
-        /**
-         * @summary `pSelector`: presentation-layer selector.
-         * @public
-         * @readonly
-         */
-        readonly pSelector: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `sSelector`: session-layer selector.
-         * @public
-         * @readonly
-         */
-        readonly sSelector: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `tSelector`: transport-layer selector.
-         * @public
-         * @readonly
-         */
-        readonly tSelector: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `nAddresses`: network-layer addresses.
-         * @public
-         * @readonly
-         */
-        readonly nAddresses: OCTET_STRING[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) { }
+        pSelector: OPTIONAL<OCTET_STRING>,
+        sSelector: OPTIONAL<OCTET_STRING>,
+        tSelector: OPTIONAL<OCTET_STRING>,
+        nAddresses: OCTET_STRING[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.pSelector = pSelector;
+        this.sSelector = sSelector;
+        this.tSelector = tSelector;
+        this.nAddresses = nAddresses;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Converts the PresentationAddress to the ASN.1 string representation.
@@ -495,9 +482,9 @@ export class PresentationAddress {
             && (selectors.length < 3)
             && (
                 // Selectors can be empty or...
-                !parts[0][0]
+                !parts[0]![0]
                 // ...start with these characters.
-                || ["'", '"', "#"].includes(parts[0][0])
+                || ["'", '"', "#"].includes(parts[0]![0])
             )
         ) {
             const part = parts.shift()!;
@@ -629,7 +616,7 @@ export class PresentationAddress {
         if (this.nAddresses.length === 1) {
             return other.nAddresses.some((naddr) => !Buffer.compare(
                 naddr,
-                this.nAddresses[0],
+                this.nAddresses[0]!,
             ));
         }
         const othern = new Set(
@@ -680,8 +667,8 @@ export class PresentationAddress {
         }
         if (this.nAddresses.length === 1) {
             return !Buffer.compare(
-                other.nAddresses[0],
-                this.nAddresses[0],
+                other.nAddresses[0]!,
+                this.nAddresses[0]!,
             );
         }
         const selfn = new Set(

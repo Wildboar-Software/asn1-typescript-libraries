@@ -13,7 +13,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionField_criticality, _enum_for_ExtensionField_criticality, ExtensionField_criticality_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ExtensionField_criticality, _encode_ExtensionField_criticality } from "../Core-INAP-CS1-DataTypes/ExtensionField-criticality.ta.mjs";
-// export { ExtensionField_criticality, _enum_for_ExtensionField_criticality, ExtensionField_criticality_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, ignore /* IMPORTED_SHORT_ENUMERATION_ITEM */, ExtensionField_criticality_abort /* IMPORTED_LONG_ENUMERATION_ITEM */, abort /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ExtensionField_criticality, _encode_ExtensionField_criticality } from "../Core-INAP-CS1-DataTypes/ExtensionField-criticality.ta.mjs";
 
 
 /**

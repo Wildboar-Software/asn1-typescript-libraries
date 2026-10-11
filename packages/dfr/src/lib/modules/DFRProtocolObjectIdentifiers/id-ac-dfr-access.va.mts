@@ -10,9 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { ID, _decode_ID, _encode_ID } from "../DFRProtocolObjectIdentifiers/ID.ta.mjs";
-// export { ID, _decode_ID, _encode_ID } from "../DFRProtocolObjectIdentifiers/ID.ta.mjs";
 import { id_ac } from "../DFRProtocolObjectIdentifiers/id-ac.va.mjs";
-// export { id_ac } from "../DFRProtocolObjectIdentifiers/id-ac.va.mjs";
 
 
 /**

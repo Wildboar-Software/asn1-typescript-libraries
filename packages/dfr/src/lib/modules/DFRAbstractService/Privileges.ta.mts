@@ -12,7 +12,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PrivilegeAttributeCertificate, _decode_PrivilegeAttributeCertificate, _encode_PrivilegeAttributeCertificate } from "../DFRAbstractService/PrivilegeAttributeCertificate.ta.mjs";
-// export { PrivilegeAttributeCertificate, _decode_PrivilegeAttributeCertificate, _encode_PrivilegeAttributeCertificate } from "../DFRAbstractService/PrivilegeAttributeCertificate.ta.mjs";
 
 
 /**

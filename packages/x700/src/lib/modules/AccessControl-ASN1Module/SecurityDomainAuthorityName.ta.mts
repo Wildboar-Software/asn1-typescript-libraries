@@ -14,7 +14,7 @@ import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/cmip';
+} from '@wildboar/dn';
 import {
     Proxy,
     _decode_Proxy,

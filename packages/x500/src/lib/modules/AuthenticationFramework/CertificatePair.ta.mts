@@ -74,6 +74,26 @@ export class CertificatePair {
             _o._unrecognizedExtensionsList
         );
     }
+
+    /**
+     * @summary Whether both certificates are absent.
+     * @description
+     *
+     * X.509 requires at least one of `issuedToThisCA` and
+     * `issuedByThisCA`. A pair with neither is empty and is not a
+     * candidate for `certificatePairMatch`.
+     *
+     * @public
+     * @method
+     * @returns {boolean} `true` if both certificates are absent.
+     * @author Grok 4.7
+     */
+    public isEmpty(): boolean {
+        return (
+            this.issuedToThisCA === undefined
+            && this.issuedByThisCA === undefined
+        );
+    }
 }
 
 /**

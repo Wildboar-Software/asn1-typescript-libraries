@@ -93,11 +93,9 @@ export class DITContextUseDescription {
      * @returns {DITContextUseDescription}
      */
     public static _from_object(
-        _o: Partial<
-            {
+        _o: {
                 [_K in keyof DITContextUseDescription]: DITContextUseDescription[_K];
             }
-        >
     ): DITContextUseDescription {
         return new DITContextUseDescription(
             _o.identifier,

@@ -11,9 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { CAP_GPRS_ReferenceNumber, _decode_CAP_GPRS_ReferenceNumber, _encode_CAP_GPRS_ReferenceNumber } from "../CAP-GPRS-ReferenceNumber/CAP-GPRS-ReferenceNumber.ta.mjs";
-// export { CAP_GPRS_ReferenceNumber, _decode_CAP_GPRS_ReferenceNumber, _encode_CAP_GPRS_ReferenceNumber } from "../CAP-GPRS-ReferenceNumber/CAP-GPRS-ReferenceNumber.ta.mjs";
 import { id_CAP_GPRS_ReferenceNumber } from "../CAP-GPRS-ReferenceNumber/id-CAP-GPRS-ReferenceNumber.va.mjs";
-// export { id_CAP_GPRS_ReferenceNumber } from "../CAP-GPRS-ReferenceNumber/id-CAP-GPRS-ReferenceNumber.va.mjs";
 
 
 /**
@@ -46,7 +44,7 @@ const cAP_GPRS_ReferenceNumber_Abstract_Syntax: ABSTRACT_SYNTAX<CAP_GPRS_Referen
     },
     "&id": id_CAP_GPRS_ReferenceNumber /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
-    "&property": undefined,
+    "&property": new Uint8ClampedArray(),
 };
 
 /* eslint-enable */

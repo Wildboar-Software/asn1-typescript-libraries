@@ -14,7 +14,7 @@ import {
     DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
-} from '@wildboar/cmip';
+} from '@wildboar/dn';
 import {
     AE_title,
     _decode_AE_title,

@@ -14,7 +14,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UnitTime, _enum_for_UnitTime, _decode_UnitTime, _encode_UnitTime } from "../MachineReadableBiometricTestingAndReportingTestReport/UnitTime.ta.mjs";
-// export { UnitTime, _enum_for_UnitTime, UnitTime_millisecond /* IMPORTED_LONG_ENUMERATION_ITEM */, millisecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnitTime_second /* IMPORTED_LONG_ENUMERATION_ITEM */, second /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UnitTime, _encode_UnitTime } from "../MachineReadableBiometricTestingAndReportingTestReport/UnitTime.ta.mjs";
 
 
 /**

@@ -34,6 +34,8 @@
     "module": "./src/index.mjs",
     "main": "./src/index.mjs",
     "dependencies": {
+        "@wildboar/gn": "npm:@jsr/wildboar__gn@1.x.x",
+        "@wildboar/dn": "npm:@jsr/wildboar__dn@1.x.x",
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
         "@wildboar/x500": "npm:@jsr/wildboar__x500@2.x.x"
     }

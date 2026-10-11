@@ -12,9 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProfileArgumOfferList_specialProfileArgums_Item, _decode_ProfileArgumOfferList_specialProfileArgums_Item, _encode_ProfileArgumOfferList_specialProfileArgums_Item } from "../G/ProfileArgumOfferList-specialProfileArgums-Item.ta.mjs";
-// export { ProfileArgumOfferList_specialProfileArgums_Item, _decode_ProfileArgumOfferList_specialProfileArgums_Item, _encode_ProfileArgumOfferList_specialProfileArgums_Item } from "../G/ProfileArgumOfferList-specialProfileArgums-Item.ta.mjs";
 import { ParamOfferList, _decode_ParamOfferList, _encode_ParamOfferList } from "../G/ParamOfferList.ta.mjs";
-// export { ParamOfferList, _decode_ParamOfferList, _encode_ParamOfferList } from "../G/ParamOfferList.ta.mjs";
 
 
 /**

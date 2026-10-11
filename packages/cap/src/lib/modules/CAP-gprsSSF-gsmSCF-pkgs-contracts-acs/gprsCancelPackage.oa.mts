@@ -10,9 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { cancelGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/cancelGPRS.oa.mjs";
-// export { cancelGPRS } from "../CAP-gprsSSF-gsmSCF-ops-args/cancelGPRS.oa.mjs";
 import { id_package_gprsCancel } from "../CAP-object-identifiers/id-package-gprsCancel.va.mjs";
-// export { id_package_gprsCancel } from "../CAP-object-identifiers/id-package-gprsCancel.va.mjs";
 import { type OPERATION_PACKAGE } from "../Remote-Operations-Information-Objects/OPERATION-PACKAGE.oca.mjs";
 
 

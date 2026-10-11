@@ -15,7 +15,7 @@ import {
     DistinguishedName,
     _decode_DistinguishedName,
 } from "../modules/InformationFramework/DistinguishedName.ta.mjs";
-import compareDistinguishedName from "../comparators/compareDistinguishedName.mjs";
+import { compareRDNSequence } from "@wildboar/dn";
 import { evaluateFilter, EvaluateFilterSettings } from "../utils/evaluateFilter.mjs";
 import {
     EntryInformation,
@@ -60,7 +60,7 @@ function itemIsProtected (
             return false;
         }
     } else if ("attributeType" in request) {
-        return (
+        return Boolean(
             (
                 (protectedItems.allUserAttributeTypes === null)
                 && !request.operational
@@ -73,7 +73,8 @@ function itemIsProtected (
             )
         );
     } else if ("value" in request) {
-        return (
+        const contexts = request.contexts;
+        return Boolean(
             protectedItems.allAttributeValues
                 ?.some((av) => request.value.type_.isEqualTo(av))
             || (
@@ -102,7 +103,7 @@ function itemIsProtected (
                         const dn: DistinguishedName = valueIsNameAndOptionalUID
                             ? _decode_NameAndOptionalUID(request.value.value).dn
                             : _decode_DistinguishedName(request.value.value);
-                        return compareDistinguishedName(
+                        return compareRDNSequence(
                             dn,
                             requester.dn,
                             settings.getEqualityMatcher,
@@ -139,10 +140,10 @@ function itemIsProtected (
             // || protectedItems.restrictedBy // Probably will never support this.
             //     ?.some((rb) => rb.type_.toString() === request.value.type_.toString())
             || (
-                request.contexts?.length
+                contexts?.length
                 && protectedItems.contexts?.every((ca) => evaluateContextAssertion(
                     ca,
-                    request.contexts,
+                    contexts,
                     settings.getContextMatcher,
                     settings.determineAbsentMatch,
                 )))

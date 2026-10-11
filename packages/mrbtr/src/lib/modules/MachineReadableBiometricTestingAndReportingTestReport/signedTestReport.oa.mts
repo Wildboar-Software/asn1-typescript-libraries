@@ -10,9 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import { SignedTestReport, _decode_SignedTestReport, _encode_SignedTestReport } from "../MachineReadableBiometricTestingAndReportingTestReport/SignedTestReport.ta.mjs";
-// export { SignedTestReport, _decode_SignedTestReport, _encode_SignedTestReport } from "../MachineReadableBiometricTestingAndReportingTestReport/SignedTestReport.ta.mjs";
 import { id_signedTestReport } from "../MachineReadableBiometricTestingAndReportingTestReport/id-signedTestReport.va.mjs";
-// export { id_signedTestReport } from "../MachineReadableBiometricTestingAndReportingTestReport/id-signedTestReport.va.mjs";
 import { type CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.mjs";
 
 

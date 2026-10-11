@@ -1,90 +1,30 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
     NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { CUG_CheckInfo, _decode_CUG_CheckInfo, _encode_CUG_CheckInfo } from "../MAP-CH-DataTypes/CUG-CheckInfo.ta.mjs";
-import { NumberOfForwarding, _decode_NumberOfForwarding, _encode_NumberOfForwarding } from "../MAP-CH-DataTypes/NumberOfForwarding.ta.mjs";
-import { InterrogationType, _enum_for_InterrogationType, InterrogationType_basicCall /* IMPORTED_LONG_ENUMERATION_ITEM */, basicCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, InterrogationType_forwarding /* IMPORTED_LONG_ENUMERATION_ITEM */, forwarding /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InterrogationType, _encode_InterrogationType } from "../MAP-CH-DataTypes/InterrogationType.ta.mjs";
-import { OR_Phase, _decode_OR_Phase, _encode_OR_Phase } from "../MAP-CH-DataTypes/OR-Phase.ta.mjs";
-import { CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
-import { ForwardingReason, _enum_for_ForwardingReason, ForwardingReason_notReachable /* IMPORTED_LONG_ENUMERATION_ITEM */, notReachable /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingReason_busy /* IMPORTED_LONG_ENUMERATION_ITEM */, busy /* IMPORTED_SHORT_ENUMERATION_ITEM */, ForwardingReason_noReply /* IMPORTED_LONG_ENUMERATION_ITEM */, noReply /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ForwardingReason, _encode_ForwardingReason } from "../MAP-CH-DataTypes/ForwardingReason.ta.mjs";
-import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-import { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
-import { CamelInfo, _decode_CamelInfo, _encode_CamelInfo } from "../MAP-CH-DataTypes/CamelInfo.ta.mjs";
-import { SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
-import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
-import { SupportedCCBS_Phase, _decode_SupportedCCBS_Phase, _encode_SupportedCCBS_Phase } from "../MAP-CH-DataTypes/SupportedCCBS-Phase.ta.mjs";
-import { Ext_ExternalSignalInfo, _decode_Ext_ExternalSignalInfo, _encode_Ext_ExternalSignalInfo } from "../MAP-CommonDataTypes/Ext-ExternalSignalInfo.ta.mjs";
-import { IST_SupportIndicator, _enum_for_IST_SupportIndicator, IST_SupportIndicator_basicISTSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, basicISTSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, IST_SupportIndicator_istCommandSupported /* IMPORTED_LONG_ENUMERATION_ITEM */, istCommandSupported /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IST_SupportIndicator, _encode_IST_SupportIndicator } from "../MAP-MS-DataTypes/IST-SupportIndicator.ta.mjs";
 import { CallDiversionTreatmentIndicator, _decode_CallDiversionTreatmentIndicator, _encode_CallDiversionTreatmentIndicator } from "../MAP-CH-DataTypes/CallDiversionTreatmentIndicator.ta.mjs";
-import { SuppressMTSS, SuppressMTSS_suppressCUG /* IMPORTED_LONG_NAMED_BIT */, suppressCUG /* IMPORTED_SHORT_NAMED_BIT */, SuppressMTSS_suppressCCBS /* IMPORTED_LONG_NAMED_BIT */, suppressCCBS /* IMPORTED_SHORT_NAMED_BIT */, _decode_SuppressMTSS, _encode_SuppressMTSS } from "../MAP-CH-DataTypes/SuppressMTSS.ta.mjs";
+import { CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
+import { CamelInfo, _decode_CamelInfo, _encode_CamelInfo } from "../MAP-CH-DataTypes/CamelInfo.ta.mjs";
+import { CUG_CheckInfo, _decode_CUG_CheckInfo, _encode_CUG_CheckInfo } from "../MAP-CH-DataTypes/CUG-CheckInfo.ta.mjs";
+import { ForwardingReason, _decode_ForwardingReason, _encode_ForwardingReason, _enum_for_ForwardingReason } from "../MAP-CH-DataTypes/ForwardingReason.ta.mjs";
+import { InterrogationType, _decode_InterrogationType, _encode_InterrogationType, _enum_for_InterrogationType } from "../MAP-CH-DataTypes/InterrogationType.ta.mjs";
+import { NumberOfForwarding, _decode_NumberOfForwarding, _encode_NumberOfForwarding } from "../MAP-CH-DataTypes/NumberOfForwarding.ta.mjs";
+import { OR_Phase, _decode_OR_Phase, _encode_OR_Phase } from "../MAP-CH-DataTypes/OR-Phase.ta.mjs";
+import { SupportedCCBS_Phase, _decode_SupportedCCBS_Phase, _encode_SupportedCCBS_Phase } from "../MAP-CH-DataTypes/SupportedCCBS-Phase.ta.mjs";
+import { SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
+import { SuppressMTSS, _decode_SuppressMTSS, _encode_SuppressMTSS } from "../MAP-CH-DataTypes/SuppressMTSS.ta.mjs";
+import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
 import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
+import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
+import { Ext_ExternalSignalInfo, _decode_Ext_ExternalSignalInfo, _encode_Ext_ExternalSignalInfo } from "../MAP-CommonDataTypes/Ext-ExternalSignalInfo.ta.mjs";
+import { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
+import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
+import { IST_SupportIndicator, _decode_IST_SupportIndicator, _encode_IST_SupportIndicator, _enum_for_IST_SupportIndicator } from "../MAP-MS-DataTypes/IST-SupportIndicator.ta.mjs";
 
 
 /**
