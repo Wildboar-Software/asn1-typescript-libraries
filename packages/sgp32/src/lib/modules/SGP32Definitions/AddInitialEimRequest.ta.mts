@@ -107,8 +107,7 @@ function _decode_AddInitialEimRequest (el: _Element): AddInitialEimRequest {
         throw new _ConstructionError("AddInitialEimRequest contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "eimConfigurationDataList";
-    let eimConfigurationDataList!: EimConfigurationData[];
-    eimConfigurationDataList = $._decode_implicit<EimConfigurationData[]>(() => $._decodeSequenceOf<EimConfigurationData>(() => _decode_EimConfigurationData))(sequence[0]);
+    const eimConfigurationDataList: EimConfigurationData[] = $._decode_implicit<EimConfigurationData[]>(() => $._decodeSequenceOf<EimConfigurationData>(() => _decode_EimConfigurationData))(sequence[0]);
     return new AddInitialEimRequest(
         eimConfigurationDataList,
 

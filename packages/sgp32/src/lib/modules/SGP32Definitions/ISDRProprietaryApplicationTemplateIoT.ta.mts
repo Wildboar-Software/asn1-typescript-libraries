@@ -110,8 +110,7 @@ function _decode_ISDRProprietaryApplicationTemplateIoT (el: _Element): ISDRPropr
         throw new _ConstructionError("ISDRProprietaryApplicationTemplateIoT contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "euiccConfiguration";
-    let euiccConfiguration!: ISDRProprietaryApplicationTemplateIoT_euiccConfiguration;
-    euiccConfiguration = _decode_ISDRProprietaryApplicationTemplateIoT_euiccConfiguration(sequence[0]);
+    const euiccConfiguration: ISDRProprietaryApplicationTemplateIoT_euiccConfiguration = _decode_ISDRProprietaryApplicationTemplateIoT_euiccConfiguration(sequence[0]);
     return new ISDRProprietaryApplicationTemplateIoT(
         euiccConfiguration,
 

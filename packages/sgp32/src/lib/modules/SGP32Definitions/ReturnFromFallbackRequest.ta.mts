@@ -108,8 +108,7 @@ function _decode_ReturnFromFallbackRequest (el: _Element): ReturnFromFallbackReq
         throw new _ConstructionError("ReturnFromFallbackRequest contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "refreshFlag";
-    let refreshFlag!: BOOLEAN;
-    refreshFlag = $._decodeBoolean(sequence[0]);
+    const refreshFlag: BOOLEAN = $._decodeBoolean(sequence[0]);
     return new ReturnFromFallbackRequest(
         refreshFlag,
 

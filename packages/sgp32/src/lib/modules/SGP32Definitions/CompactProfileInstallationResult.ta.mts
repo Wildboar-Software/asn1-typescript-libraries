@@ -117,10 +117,8 @@ function _decode_CompactProfileInstallationResult (el: _Element): CompactProfile
     }
     sequence[0].name = "compactProfileInstallationResultData";
     sequence[1].name = "euiccSignPIR";
-    let compactProfileInstallationResultData!: CompactProfileInstallationResultData;
-    let euiccSignPIR!: EuiccSignPIR;
-    compactProfileInstallationResultData = $._decode_implicit<CompactProfileInstallationResultData>(() => _decode_CompactProfileInstallationResultData)(sequence[0]);
-    euiccSignPIR = _decode_EuiccSignPIR(sequence[1]);
+    const compactProfileInstallationResultData: CompactProfileInstallationResultData = $._decode_implicit<CompactProfileInstallationResultData>(() => _decode_CompactProfileInstallationResultData)(sequence[0]);
+    const euiccSignPIR: EuiccSignPIR = _decode_EuiccSignPIR(sequence[1]);
     return new CompactProfileInstallationResult(
         compactProfileInstallationResultData,
         euiccSignPIR,

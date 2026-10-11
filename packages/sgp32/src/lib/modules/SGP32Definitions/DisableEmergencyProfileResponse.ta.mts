@@ -113,8 +113,7 @@ function _decode_DisableEmergencyProfileResponse (el: _Element): DisableEmergenc
         throw new _ConstructionError("DisableEmergencyProfileResponse contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "disableEmergencyProfileResult";
-    let disableEmergencyProfileResult!: DisableEmergencyProfileResponse_disableEmergencyProfileResult;
-    disableEmergencyProfileResult = $._decode_implicit<DisableEmergencyProfileResponse_disableEmergencyProfileResult>(() => _decode_DisableEmergencyProfileResponse_disableEmergencyProfileResult)(sequence[0]);
+    const disableEmergencyProfileResult: DisableEmergencyProfileResponse_disableEmergencyProfileResult = $._decode_implicit<DisableEmergencyProfileResponse_disableEmergencyProfileResult>(() => _decode_DisableEmergencyProfileResponse_disableEmergencyProfileResult)(sequence[0]);
     return new DisableEmergencyProfileResponse(
         disableEmergencyProfileResult,
 

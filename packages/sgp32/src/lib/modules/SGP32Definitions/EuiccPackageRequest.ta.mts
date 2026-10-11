@@ -117,10 +117,8 @@ function _decode_EuiccPackageRequest (el: _Element): EuiccPackageRequest {
     }
     sequence[0].name = "euiccPackageSigned";
     sequence[1].name = "eimSignature";
-    let euiccPackageSigned!: EuiccPackageSigned;
-    let eimSignature!: OCTET_STRING;
-    euiccPackageSigned = _decode_EuiccPackageSigned(sequence[0]);
-    eimSignature = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const euiccPackageSigned: EuiccPackageSigned = _decode_EuiccPackageSigned(sequence[0]);
+    const eimSignature: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new EuiccPackageRequest(
         euiccPackageSigned,
         eimSignature,

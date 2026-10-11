@@ -147,16 +147,11 @@ function _decode_EuiccSigned1 (el: _Element): EuiccSigned1 {
     sequence[2].name = "serverChallenge";
     sequence[3].name = "euiccInfo2";
     sequence[4].name = "ctxParams1";
-    let transactionId!: TransactionId;
-    let serverAddress!: UTF8String;
-    let serverChallenge!: Octet16;
-    let euiccInfo2!: EUICCInfo2;
-    let ctxParams1!: CtxParams1;
-    transactionId = $._decode_implicit<TransactionId>(() => _decode_TransactionId)(sequence[0]);
-    serverAddress = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(sequence[1]);
-    serverChallenge = $._decode_implicit<Octet16>(() => _decode_Octet16)(sequence[2]);
-    euiccInfo2 = $._decode_implicit<EUICCInfo2>(() => _decode_EUICCInfo2)(sequence[3]);
-    ctxParams1 = _decode_CtxParams1(sequence[4]);
+    const transactionId: TransactionId = $._decode_implicit<TransactionId>(() => _decode_TransactionId)(sequence[0]);
+    const serverAddress: UTF8String = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(sequence[1]);
+    const serverChallenge: Octet16 = $._decode_implicit<Octet16>(() => _decode_Octet16)(sequence[2]);
+    const euiccInfo2: EUICCInfo2 = $._decode_implicit<EUICCInfo2>(() => _decode_EUICCInfo2)(sequence[3]);
+    const ctxParams1: CtxParams1 = _decode_CtxParams1(sequence[4]);
     return new EuiccSigned1(
         transactionId,
         serverAddress,

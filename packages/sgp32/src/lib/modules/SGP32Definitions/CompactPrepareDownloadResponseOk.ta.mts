@@ -117,10 +117,8 @@ function _decode_CompactPrepareDownloadResponseOk (el: _Element): CompactPrepare
     }
     sequence[0].name = "compactEuiccSigned2";
     sequence[1].name = "euiccSignature2";
-    let compactEuiccSigned2!: CompactEuiccSigned2;
-    let euiccSignature2!: OCTET_STRING;
-    compactEuiccSigned2 = _decode_CompactEuiccSigned2(sequence[0]);
-    euiccSignature2 = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const compactEuiccSigned2: CompactEuiccSigned2 = _decode_CompactEuiccSigned2(sequence[0]);
+    const euiccSignature2: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new CompactPrepareDownloadResponseOk(
         compactEuiccSigned2,
         euiccSignature2,

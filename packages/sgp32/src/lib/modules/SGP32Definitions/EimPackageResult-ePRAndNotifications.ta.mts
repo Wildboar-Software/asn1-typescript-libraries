@@ -117,10 +117,8 @@ function _decode_EimPackageResult_ePRAndNotifications (el: _Element): EimPackage
     }
     sequence[0].name = "euiccPackageResult";
     sequence[1].name = "notificationList";
-    let euiccPackageResult!: EuiccPackageResult;
-    let notificationList!: PendingNotificationList;
-    euiccPackageResult = $._decode_implicit<EuiccPackageResult>(() => _decode_EuiccPackageResult)(sequence[0]);
-    notificationList = $._decode_implicit<PendingNotificationList>(() => _decode_PendingNotificationList)(sequence[1]);
+    const euiccPackageResult: EuiccPackageResult = $._decode_implicit<EuiccPackageResult>(() => _decode_EuiccPackageResult)(sequence[0]);
+    const notificationList: PendingNotificationList = $._decode_implicit<PendingNotificationList>(() => _decode_PendingNotificationList)(sequence[1]);
     return new EimPackageResult_ePRAndNotifications(
         euiccPackageResult,
         notificationList,

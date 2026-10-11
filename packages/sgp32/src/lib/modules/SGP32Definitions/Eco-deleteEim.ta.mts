@@ -108,8 +108,7 @@ function _decode_Eco_deleteEim (el: _Element): Eco_deleteEim {
         throw new _ConstructionError("Eco-deleteEim contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "eimId";
-    let eimId!: UTF8String;
-    eimId = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(sequence[0]);
+    const eimId: UTF8String = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(sequence[0]);
     return new Eco_deleteEim(
         eimId,
 

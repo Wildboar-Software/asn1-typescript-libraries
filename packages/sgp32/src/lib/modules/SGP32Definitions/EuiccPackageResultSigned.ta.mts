@@ -117,10 +117,8 @@ function _decode_EuiccPackageResultSigned (el: _Element): EuiccPackageResultSign
     }
     sequence[0].name = "euiccPackageResultDataSigned";
     sequence[1].name = "euiccSignEPR";
-    let euiccPackageResultDataSigned!: EuiccPackageResultDataSigned;
-    let euiccSignEPR!: OCTET_STRING;
-    euiccPackageResultDataSigned = _decode_EuiccPackageResultDataSigned(sequence[0]);
-    euiccSignEPR = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const euiccPackageResultDataSigned: EuiccPackageResultDataSigned = _decode_EuiccPackageResultDataSigned(sequence[0]);
+    const euiccSignEPR: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new EuiccPackageResultSigned(
         euiccPackageResultDataSigned,
         euiccSignEPR,

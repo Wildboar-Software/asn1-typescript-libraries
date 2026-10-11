@@ -136,14 +136,10 @@ function _decode_AuthenticateResponseOk (el: _Element): AuthenticateResponseOk {
     sequence[1].name = "euiccSignature1";
     sequence[2].name = "euiccCertificate";
     sequence[3].name = "eumCertificate";
-    let euiccSigned1!: EuiccSigned1;
-    let euiccSignature1!: OCTET_STRING;
-    let euiccCertificate!: Certificate;
-    let eumCertificate!: Certificate;
-    euiccSigned1 = _decode_EuiccSigned1(sequence[0]);
-    euiccSignature1 = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
-    euiccCertificate = _decode_Certificate(sequence[2]);
-    eumCertificate = _decode_Certificate(sequence[3]);
+    const euiccSigned1: EuiccSigned1 = _decode_EuiccSigned1(sequence[0]);
+    const euiccSignature1: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const euiccCertificate: Certificate = _decode_Certificate(sequence[2]);
+    const eumCertificate: Certificate = _decode_Certificate(sequence[3]);
     return new AuthenticateResponseOk(
         euiccSigned1,
         euiccSignature1,

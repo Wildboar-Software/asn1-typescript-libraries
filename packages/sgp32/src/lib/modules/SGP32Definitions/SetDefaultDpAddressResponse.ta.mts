@@ -107,8 +107,7 @@ function _decode_SetDefaultDpAddressResponse (el: _Element): SetDefaultDpAddress
         throw new _ConstructionError("SetDefaultDpAddressResponse contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "setDefaultDpAddressResult";
-    let setDefaultDpAddressResult!: SetDefaultDpAddressResponse_setDefaultDpAddressResult;
-    setDefaultDpAddressResult = _decode_SetDefaultDpAddressResponse_setDefaultDpAddressResult(sequence[0]);
+    const setDefaultDpAddressResult: SetDefaultDpAddressResponse_setDefaultDpAddressResult = _decode_SetDefaultDpAddressResponse_setDefaultDpAddressResult(sequence[0]);
     return new SetDefaultDpAddressResponse(
         setDefaultDpAddressResult,
 

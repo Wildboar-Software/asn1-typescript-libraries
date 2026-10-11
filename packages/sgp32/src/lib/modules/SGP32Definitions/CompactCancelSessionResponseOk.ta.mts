@@ -117,10 +117,8 @@ function _decode_CompactCancelSessionResponseOk (el: _Element): CompactCancelSes
     }
     sequence[0].name = "compactEuiccCancelSessionSigned";
     sequence[1].name = "euiccCancelSessionSignature";
-    let compactEuiccCancelSessionSigned!: CompactEuiccCancelSessionSigned;
-    let euiccCancelSessionSignature!: OCTET_STRING;
-    compactEuiccCancelSessionSigned = _decode_CompactEuiccCancelSessionSigned(sequence[0]);
-    euiccCancelSessionSignature = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const compactEuiccCancelSessionSigned: CompactEuiccCancelSessionSigned = _decode_CompactEuiccCancelSessionSigned(sequence[0]);
+    const euiccCancelSessionSignature: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new CompactCancelSessionResponseOk(
         compactEuiccCancelSessionSigned,
         euiccCancelSessionSignature,

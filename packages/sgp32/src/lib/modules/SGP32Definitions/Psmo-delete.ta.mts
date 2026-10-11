@@ -107,8 +107,7 @@ function _decode_Psmo_delete (el: _Element): Psmo_delete {
         throw new _ConstructionError("Psmo-delete contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "iccid";
-    let iccid!: Iccid;
-    iccid = $._decode_implicit<Iccid>(() => _decode_Iccid)(sequence[0]);
+    const iccid: Iccid = $._decode_implicit<Iccid>(() => _decode_Iccid)(sequence[0]);
     return new Psmo_delete(
         iccid,
 

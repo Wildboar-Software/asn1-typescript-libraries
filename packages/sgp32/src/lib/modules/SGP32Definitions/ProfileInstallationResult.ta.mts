@@ -117,10 +117,8 @@ function _decode_ProfileInstallationResult (el: _Element): ProfileInstallationRe
     }
     sequence[0].name = "profileInstallationResultData";
     sequence[1].name = "euiccSignPIR";
-    let profileInstallationResultData!: ProfileInstallationResultData;
-    let euiccSignPIR!: EuiccSignPIR;
-    profileInstallationResultData = $._decode_implicit<ProfileInstallationResultData>(() => _decode_ProfileInstallationResultData)(sequence[0]);
-    euiccSignPIR = _decode_EuiccSignPIR(sequence[1]);
+    const profileInstallationResultData: ProfileInstallationResultData = $._decode_implicit<ProfileInstallationResultData>(() => _decode_ProfileInstallationResultData)(sequence[0]);
+    const euiccSignPIR: EuiccSignPIR = _decode_EuiccSignPIR(sequence[1]);
     return new ProfileInstallationResult(
         profileInstallationResultData,
         euiccSignPIR,

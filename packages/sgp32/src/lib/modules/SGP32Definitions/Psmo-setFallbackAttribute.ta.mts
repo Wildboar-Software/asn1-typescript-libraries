@@ -107,8 +107,7 @@ function _decode_Psmo_setFallbackAttribute (el: _Element): Psmo_setFallbackAttri
         throw new _ConstructionError("Psmo-setFallbackAttribute contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "iccid";
-    let iccid!: Iccid;
-    iccid = $._decode_implicit<Iccid>(() => _decode_Iccid)(sequence[0]);
+    const iccid: Iccid = $._decode_implicit<Iccid>(() => _decode_Iccid)(sequence[0]);
     return new Psmo_setFallbackAttribute(
         iccid,
 

@@ -117,10 +117,8 @@ function _decode_GetBoundProfilePackageRequestEsipa (el: _Element): GetBoundProf
     }
     sequence[0].name = "transactionId";
     sequence[1].name = "prepareDownloadResponse";
-    let transactionId!: TransactionId;
-    let prepareDownloadResponse!: PrepareDownloadResponse;
-    transactionId = $._decode_implicit<TransactionId>(() => _decode_TransactionId)(sequence[0]);
-    prepareDownloadResponse = $._decode_implicit<PrepareDownloadResponse>(() => _decode_PrepareDownloadResponse)(sequence[1]);
+    const transactionId: TransactionId = $._decode_implicit<TransactionId>(() => _decode_TransactionId)(sequence[0]);
+    const prepareDownloadResponse: PrepareDownloadResponse = $._decode_implicit<PrepareDownloadResponse>(() => _decode_PrepareDownloadResponse)(sequence[1]);
     return new GetBoundProfilePackageRequestEsipa(
         transactionId,
         prepareDownloadResponse,

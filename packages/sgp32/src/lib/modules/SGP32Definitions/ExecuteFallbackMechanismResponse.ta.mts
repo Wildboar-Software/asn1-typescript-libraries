@@ -115,8 +115,7 @@ function _decode_ExecuteFallbackMechanismResponse (el: _Element): ExecuteFallbac
         throw new _ConstructionError("ExecuteFallbackMechanismResponse contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "executeFallbackMechanismResult";
-    let executeFallbackMechanismResult!: ExecuteFallbackMechanismResponse_executeFallbackMechanismResult;
-    executeFallbackMechanismResult = $._decode_implicit<ExecuteFallbackMechanismResponse_executeFallbackMechanismResult>(() => _decode_ExecuteFallbackMechanismResponse_executeFallbackMechanismResult)(sequence[0]);
+    const executeFallbackMechanismResult: ExecuteFallbackMechanismResponse_executeFallbackMechanismResult = $._decode_implicit<ExecuteFallbackMechanismResponse_executeFallbackMechanismResult>(() => _decode_ExecuteFallbackMechanismResponse_executeFallbackMechanismResult)(sequence[0]);
     return new ExecuteFallbackMechanismResponse(
         executeFallbackMechanismResult,
 

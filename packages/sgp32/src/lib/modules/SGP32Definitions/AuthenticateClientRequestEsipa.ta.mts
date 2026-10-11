@@ -117,10 +117,8 @@ function _decode_AuthenticateClientRequestEsipa (el: _Element): AuthenticateClie
     }
     sequence[0].name = "transactionId";
     sequence[1].name = "authenticateServerResponse";
-    let transactionId!: TransactionId;
-    let authenticateServerResponse!: AuthenticateServerResponse;
-    transactionId = $._decode_implicit<TransactionId>(() => _decode_TransactionId)(sequence[0]);
-    authenticateServerResponse = $._decode_implicit<AuthenticateServerResponse>(() => _decode_AuthenticateServerResponse)(sequence[1]);
+    const transactionId: TransactionId = $._decode_implicit<TransactionId>(() => _decode_TransactionId)(sequence[0]);
+    const authenticateServerResponse: AuthenticateServerResponse = $._decode_implicit<AuthenticateServerResponse>(() => _decode_AuthenticateServerResponse)(sequence[1]);
     return new AuthenticateClientRequestEsipa(
         transactionId,
         authenticateServerResponse,

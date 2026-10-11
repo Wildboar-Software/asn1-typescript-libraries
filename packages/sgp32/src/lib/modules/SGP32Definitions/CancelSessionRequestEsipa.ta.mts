@@ -117,10 +117,8 @@ function _decode_CancelSessionRequestEsipa (el: _Element): CancelSessionRequestE
     }
     sequence[0].name = "transactionId";
     sequence[1].name = "cancelSessionResponse";
-    let transactionId!: TransactionId;
-    let cancelSessionResponse!: CancelSessionResponse;
-    transactionId = _decode_TransactionId(sequence[0]);
-    cancelSessionResponse = _decode_CancelSessionResponse(sequence[1]);
+    const transactionId: TransactionId = _decode_TransactionId(sequence[0]);
+    const cancelSessionResponse: CancelSessionResponse = _decode_CancelSessionResponse(sequence[1]);
     return new CancelSessionRequestEsipa(
         transactionId,
         cancelSessionResponse,

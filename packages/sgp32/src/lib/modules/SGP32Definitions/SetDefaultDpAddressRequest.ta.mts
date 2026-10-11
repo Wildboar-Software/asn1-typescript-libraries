@@ -108,8 +108,7 @@ function _decode_SetDefaultDpAddressRequest (el: _Element): SetDefaultDpAddressR
         throw new _ConstructionError("SetDefaultDpAddressRequest contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "defaultDpAddress";
-    let defaultDpAddress!: UTF8String;
-    defaultDpAddress = $._decodeUTF8String(sequence[0]);
+    const defaultDpAddress: UTF8String = $._decodeUTF8String(sequence[0]);
     return new SetDefaultDpAddressRequest(
         defaultDpAddress,
 

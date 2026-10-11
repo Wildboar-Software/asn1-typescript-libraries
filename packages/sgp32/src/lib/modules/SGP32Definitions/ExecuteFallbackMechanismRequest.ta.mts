@@ -108,8 +108,7 @@ function _decode_ExecuteFallbackMechanismRequest (el: _Element): ExecuteFallback
         throw new _ConstructionError("ExecuteFallbackMechanismRequest contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "refreshFlag";
-    let refreshFlag!: BOOLEAN;
-    refreshFlag = $._decodeBoolean(sequence[0]);
+    const refreshFlag: BOOLEAN = $._decodeBoolean(sequence[0]);
     return new ExecuteFallbackMechanismRequest(
         refreshFlag,
 

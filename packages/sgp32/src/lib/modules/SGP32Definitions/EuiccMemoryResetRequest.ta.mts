@@ -115,8 +115,7 @@ function _decode_EuiccMemoryResetRequest (el: _Element): EuiccMemoryResetRequest
         throw new _ConstructionError("EuiccMemoryResetRequest contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "resetOptions";
-    let resetOptions!: EuiccMemoryResetRequest_resetOptions;
-    resetOptions = $._decode_implicit<EuiccMemoryResetRequest_resetOptions>(() => _decode_EuiccMemoryResetRequest_resetOptions)(sequence[0]);
+    const resetOptions: EuiccMemoryResetRequest_resetOptions = $._decode_implicit<EuiccMemoryResetRequest_resetOptions>(() => _decode_EuiccMemoryResetRequest_resetOptions)(sequence[0]);
     return new EuiccMemoryResetRequest(
         resetOptions,
 

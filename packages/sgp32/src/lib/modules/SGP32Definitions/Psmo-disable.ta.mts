@@ -107,8 +107,7 @@ function _decode_Psmo_disable (el: _Element): Psmo_disable {
         throw new _ConstructionError("Psmo-disable contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "iccid";
-    let iccid!: Iccid;
-    iccid = $._decode_implicit<Iccid>(() => _decode_Iccid)(sequence[0]);
+    const iccid: Iccid = $._decode_implicit<Iccid>(() => _decode_Iccid)(sequence[0]);
     return new Psmo_disable(
         iccid,
 

@@ -116,10 +116,8 @@ function _decode_GetCertsResponse_certs (el: _Element): GetCertsResponse_certs {
     }
     sequence[0].name = "eumCertificate";
     sequence[1].name = "euiccCertificate";
-    let eumCertificate!: Certificate;
-    let euiccCertificate!: Certificate;
-    eumCertificate = $._decode_implicit<Certificate>(() => _decode_Certificate)(sequence[0]);
-    euiccCertificate = $._decode_implicit<Certificate>(() => _decode_Certificate)(sequence[1]);
+    const eumCertificate: Certificate = $._decode_implicit<Certificate>(() => _decode_Certificate)(sequence[0]);
+    const euiccCertificate: Certificate = $._decode_implicit<Certificate>(() => _decode_Certificate)(sequence[1]);
     return new GetCertsResponse_certs(
         eumCertificate,
         euiccCertificate,

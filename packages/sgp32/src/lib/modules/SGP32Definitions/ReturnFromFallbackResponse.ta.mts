@@ -113,8 +113,7 @@ function _decode_ReturnFromFallbackResponse (el: _Element): ReturnFromFallbackRe
         throw new _ConstructionError("ReturnFromFallbackResponse contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "returnFromFallbackResult";
-    let returnFromFallbackResult!: ReturnFromFallbackResponse_returnFromFallbackResult;
-    returnFromFallbackResult = $._decode_implicit<ReturnFromFallbackResponse_returnFromFallbackResult>(() => _decode_ReturnFromFallbackResponse_returnFromFallbackResult)(sequence[0]);
+    const returnFromFallbackResult: ReturnFromFallbackResponse_returnFromFallbackResult = $._decode_implicit<ReturnFromFallbackResponse_returnFromFallbackResult>(() => _decode_ReturnFromFallbackResponse_returnFromFallbackResult)(sequence[0]);
     return new ReturnFromFallbackResponse(
         returnFromFallbackResult,
 

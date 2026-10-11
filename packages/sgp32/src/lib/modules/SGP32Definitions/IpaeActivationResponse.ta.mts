@@ -107,8 +107,7 @@ function _decode_IpaeActivationResponse (el: _Element): IpaeActivationResponse {
         throw new _ConstructionError("IpaeActivationResponse contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "ipaeActivationResult";
-    let ipaeActivationResult!: IpaeActivationResponse_ipaeActivationResult;
-    ipaeActivationResult = _decode_IpaeActivationResponse_ipaeActivationResult(sequence[0]);
+    const ipaeActivationResult: IpaeActivationResponse_ipaeActivationResult = _decode_IpaeActivationResponse_ipaeActivationResult(sequence[0]);
     return new IpaeActivationResponse(
         ipaeActivationResult,
 

@@ -112,8 +112,7 @@ function _decode_ConfigureImmediateProfileEnablingResponse (el: _Element): Confi
         throw new _ConstructionError("ConfigureImmediateProfileEnablingResponse contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "configImmediateEnableResult";
-    let configImmediateEnableResult!: ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult;
-    configImmediateEnableResult = $._decode_implicit<ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult>(() => _decode_ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult)(sequence[0]);
+    const configImmediateEnableResult: ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult = $._decode_implicit<ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult>(() => _decode_ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult)(sequence[0]);
     return new ConfigureImmediateProfileEnablingResponse(
         configImmediateEnableResult,
 

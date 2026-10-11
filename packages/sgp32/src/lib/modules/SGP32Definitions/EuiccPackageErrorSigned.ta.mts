@@ -117,10 +117,8 @@ function _decode_EuiccPackageErrorSigned (el: _Element): EuiccPackageErrorSigned
     }
     sequence[0].name = "euiccPackageErrorDataSigned";
     sequence[1].name = "euiccSignEPE";
-    let euiccPackageErrorDataSigned!: EuiccPackageErrorDataSigned;
-    let euiccSignEPE!: OCTET_STRING;
-    euiccPackageErrorDataSigned = _decode_EuiccPackageErrorDataSigned(sequence[0]);
-    euiccSignEPE = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const euiccPackageErrorDataSigned: EuiccPackageErrorDataSigned = _decode_EuiccPackageErrorDataSigned(sequence[0]);
+    const euiccSignEPE: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new EuiccPackageErrorSigned(
         euiccPackageErrorDataSigned,
         euiccSignEPE,

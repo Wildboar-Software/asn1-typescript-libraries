@@ -113,8 +113,7 @@ function _decode_ImmediateEnableResponse (el: _Element): ImmediateEnableResponse
         throw new _ConstructionError("ImmediateEnableResponse contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "immediateEnableResult";
-    let immediateEnableResult!: ImmediateEnableResponse_immediateEnableResult;
-    immediateEnableResult = $._decode_implicit<ImmediateEnableResponse_immediateEnableResult>(() => _decode_ImmediateEnableResponse_immediateEnableResult)(sequence[0]);
+    const immediateEnableResult: ImmediateEnableResponse_immediateEnableResult = $._decode_implicit<ImmediateEnableResponse_immediateEnableResult>(() => _decode_ImmediateEnableResponse_immediateEnableResult)(sequence[0]);
     return new ImmediateEnableResponse(
         immediateEnableResult,
 
