@@ -8,6 +8,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "strictNullChecks": true,
+    "erasableSyntaxOnly": true,
     "importHelpers": true,
     "types": [
       "node"
