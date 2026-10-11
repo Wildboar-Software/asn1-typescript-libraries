@@ -66,6 +66,7 @@ jobs:
           # - "pki-stub"
           - "presentation-address"
           - "sgp22"
+          - "sgp32"
           - "smrse"
           - "spnego"
           - "sv"
