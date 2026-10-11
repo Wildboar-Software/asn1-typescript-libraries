@@ -19,6 +19,7 @@ import { EUICCInfo2_treProperties, _decode_EUICCInfo2_treProperties, _encode_EUI
 import { IpaMode, _decode_IpaMode, _encode_IpaMode } from "../SGP32Definitions/IpaMode.ta.mjs";
 // export { IpaMode, IpaMode_ipad /* IMPORTED_LONG_NAMED_INTEGER */, ipad /* IMPORTED_SHORT_NAMED_INTEGER */, IpaMode_ipae /* IMPORTED_LONG_NAMED_INTEGER */, ipae /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_IpaMode, _encode_IpaMode } from "../SGP32Definitions/IpaMode.ta.mjs";
 import { IoTSpecificInfo, _decode_IoTSpecificInfo, _encode_IoTSpecificInfo } from "../SGP32Definitions/IoTSpecificInfo.ta.mjs";
+import { type UICCCapability, _decode_UICCCapability, _encode_UICCCapability } from "@wildboar/sgp22/PEDefinitions";
 // export { IoTSpecificInfo, _decode_IoTSpecificInfo, _encode_IoTSpecificInfo } from "../SGP32Definitions/IoTSpecificInfo.ta.mjs";
 
 
@@ -250,7 +251,7 @@ const _root_component_type_list_1_spec_for_EUICCInfo2: $.ComponentSpec[] = [
     new $.ComponentSpec("svn", false, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("euiccFirmwareVer", false, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("extCardResource", false, $.hasTag(_TagClass.context, 4)),
-    /* FIXME: uiccCapability COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("uiccCapability", false, $.hasTag(_TagClass.context, 5)),
     new $.ComponentSpec("ts102241Version", true, $.hasTag(_TagClass.context, 6)),
     new $.ComponentSpec("globalplatformVersion", true, $.hasTag(_TagClass.context, 7)),
     new $.ComponentSpec("rspCapability", false, $.hasTag(_TagClass.context, 8)),
