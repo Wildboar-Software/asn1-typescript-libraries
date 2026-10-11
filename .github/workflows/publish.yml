@@ -68,6 +68,7 @@ jobs:
           - "sgp22"
           - "smrse"
           - "spnego"
+          - "stanag4406"
           - "sv"
           - "z3950"
           # - "qc"
