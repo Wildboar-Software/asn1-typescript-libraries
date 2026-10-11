@@ -7,8 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Octet16.ta.mjs";
-// export { Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Octet16.ta.mjs";
+import { type Octet16, _decode_Octet16, _encode_Octet16 } from "@wildboar/sgp22/RSPDefinitions";
 import { StateChangeCause, _decode_StateChangeCause, _encode_StateChangeCause, undefined /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../SGP32Definitions/StateChangeCause.ta.mjs";
 // export { StateChangeCause, StateChangeCause_otherEim /* IMPORTED_LONG_NAMED_INTEGER */, otherEim /* IMPORTED_SHORT_NAMED_INTEGER */, StateChangeCause_fallback /* IMPORTED_LONG_NAMED_INTEGER */, fallback /* IMPORTED_SHORT_NAMED_INTEGER */, StateChangeCause_emergencyProfile /* IMPORTED_LONG_NAMED_INTEGER */, emergencyProfile /* IMPORTED_SHORT_NAMED_INTEGER */, StateChangeCause_local /* IMPORTED_LONG_NAMED_INTEGER */, local /* IMPORTED_SHORT_NAMED_INTEGER */, StateChangeCause_reset /* IMPORTED_LONG_NAMED_INTEGER */, reset /* IMPORTED_SHORT_NAMED_INTEGER */, StateChangeCause_immediateEnableProfile /* IMPORTED_LONG_NAMED_INTEGER */, immediateEnableProfile /* IMPORTED_SHORT_NAMED_INTEGER */, StateChangeCause_deviceChange /* IMPORTED_LONG_NAMED_INTEGER */, deviceChange /* IMPORTED_SHORT_NAMED_INTEGER */, StateChangeCause_undefined /* IMPORTED_LONG_NAMED_INTEGER */, undefined /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_StateChangeCause, _encode_StateChangeCause } from "../SGP32Definitions/StateChangeCause.ta.mjs";
 

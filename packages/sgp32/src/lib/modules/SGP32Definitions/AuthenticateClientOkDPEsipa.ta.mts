@@ -6,16 +6,12 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
 import { StoreMetadataRequest, _decode_StoreMetadataRequest, _encode_StoreMetadataRequest } from "../SGP32Definitions/StoreMetadataRequest.ta.mjs";
 // export { StoreMetadataRequest, _decode_StoreMetadataRequest, _encode_StoreMetadataRequest } from "../SGP32Definitions/StoreMetadataRequest.ta.mjs";
-import { SmdpSigned2, _decode_SmdpSigned2, _encode_SmdpSigned2 } from "../RSPDefinitions/SmdpSigned2.ta.mjs";
-// export { SmdpSigned2, _decode_SmdpSigned2, _encode_SmdpSigned2 } from "../RSPDefinitions/SmdpSigned2.ta.mjs";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
-// export { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
-import { Octet32, _decode_Octet32, _encode_Octet32 } from "../RSPDefinitions/Octet32.ta.mjs";
-// export { Octet32, _decode_Octet32, _encode_Octet32 } from "../RSPDefinitions/Octet32.ta.mjs";
+import { SmdpSigned2, _decode_SmdpSigned2, _encode_SmdpSigned2 } from "@wildboar/sgp22/RSPDefinitions";
+import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
+import { type Octet32, _decode_Octet32, _encode_Octet32 } from "@wildboar/sgp22/RSPDefinitions";
 
 
 /**

@@ -10,8 +10,7 @@ import { IpaEuiccDataRequest_searchCriteriaNotification, _decode_IpaEuiccDataReq
 // export { IpaEuiccDataRequest_searchCriteriaNotification, _decode_IpaEuiccDataRequest_searchCriteriaNotification, _encode_IpaEuiccDataRequest_searchCriteriaNotification } from "../SGP32Definitions/IpaEuiccDataRequest-searchCriteriaNotification.ta.mjs";
 import { IpaEuiccDataRequest_searchCriteriaEuiccPackageResult, _decode_IpaEuiccDataRequest_searchCriteriaEuiccPackageResult, _encode_IpaEuiccDataRequest_searchCriteriaEuiccPackageResult } from "../SGP32Definitions/IpaEuiccDataRequest-searchCriteriaEuiccPackageResult.ta.mjs";
 // export { IpaEuiccDataRequest_searchCriteriaEuiccPackageResult, _decode_IpaEuiccDataRequest_searchCriteriaEuiccPackageResult, _encode_IpaEuiccDataRequest_searchCriteriaEuiccPackageResult } from "../SGP32Definitions/IpaEuiccDataRequest-searchCriteriaEuiccPackageResult.ta.mjs";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
 
 
 /**

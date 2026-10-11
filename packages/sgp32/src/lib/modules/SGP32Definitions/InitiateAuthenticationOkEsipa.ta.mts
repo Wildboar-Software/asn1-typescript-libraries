@@ -7,14 +7,10 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-import { ServerSigned1, _decode_ServerSigned1, _encode_ServerSigned1 } from "../RSPDefinitions/ServerSigned1.ta.mjs";
-// export { ServerSigned1, _decode_ServerSigned1, _encode_ServerSigned1 } from "../RSPDefinitions/ServerSigned1.ta.mjs";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
-// export { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
-import { CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefinitions/CtxParams1.ta.mjs";
-// export { CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefinitions/CtxParams1.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
+import { ServerSigned1, _decode_ServerSigned1, _encode_ServerSigned1 } from "@wildboar/sgp22/RSPDefinitions";
+import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
+import { type CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "@wildboar/sgp22/RSPDefinitions";
 
 
 /**

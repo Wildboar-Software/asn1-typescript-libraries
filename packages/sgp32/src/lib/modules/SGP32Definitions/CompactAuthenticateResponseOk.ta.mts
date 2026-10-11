@@ -8,8 +8,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { CompactAuthenticateResponseOk_signedData, _decode_CompactAuthenticateResponseOk_signedData, _encode_CompactAuthenticateResponseOk_signedData } from "../SGP32Definitions/CompactAuthenticateResponseOk-signedData.ta.mjs";
 // export { CompactAuthenticateResponseOk_signedData, _decode_CompactAuthenticateResponseOk_signedData, _encode_CompactAuthenticateResponseOk_signedData } from "../SGP32Definitions/CompactAuthenticateResponseOk-signedData.ta.mjs";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
-// export { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
+import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
 
 
 /**

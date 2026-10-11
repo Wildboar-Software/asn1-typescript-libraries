@@ -16,10 +16,8 @@ import { EimConfigurationData_trustedPublicKeyDataTls, _decode_EimConfigurationD
 // export { EimConfigurationData_trustedPublicKeyDataTls, _decode_EimConfigurationData_trustedPublicKeyDataTls, _encode_EimConfigurationData_trustedPublicKeyDataTls } from "../SGP32Definitions/EimConfigurationData-trustedPublicKeyDataTls.ta.mjs";
 import { EimSupportedProtocol, _decode_EimSupportedProtocol, _encode_EimSupportedProtocol } from "../SGP32Definitions/EimSupportedProtocol.ta.mjs";
 // export { EimSupportedProtocol, EimSupportedProtocol_eimRetrieveHttps /* IMPORTED_LONG_NAMED_BIT */, eimRetrieveHttps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimRetrieveCoaps /* IMPORTED_LONG_NAMED_BIT */, eimRetrieveCoaps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimInjectHttps /* IMPORTED_LONG_NAMED_BIT */, eimInjectHttps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimInjectCoaps /* IMPORTED_LONG_NAMED_BIT */, eimInjectCoaps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimProprietary /* IMPORTED_LONG_NAMED_BIT */, eimProprietary /* IMPORTED_SHORT_NAMED_BIT */, _decode_EimSupportedProtocol, _encode_EimSupportedProtocol } from "../SGP32Definitions/EimSupportedProtocol.ta.mjs";
-import { SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "../PKIX1Implicit88/SubjectKeyIdentifier.ta.mjs";
-// export { SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "../PKIX1Implicit88/SubjectKeyIdentifier.ta.mjs";
-import { VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
-// export { VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
+import { type SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "@wildboar/x500/CertificateExtensions";
+import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "@wildboar/sgp22/RSPDefinitions";
 
 
 /**

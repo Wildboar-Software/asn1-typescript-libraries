@@ -5,8 +5,7 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_CancelSessionReason, _encode_CancelSessionReason, CancelSessionReason } from "../RSPDefinitions/CancelSessionReason.ta.mjs";
-// export { CancelSessionReason, CancelSessionReason_endUserRejection /* IMPORTED_LONG_NAMED_INTEGER */, endUserRejection /* IMPORTED_SHORT_NAMED_INTEGER */, CancelSessionReason_postponed /* IMPORTED_LONG_NAMED_INTEGER */, postponed /* IMPORTED_SHORT_NAMED_INTEGER */, CancelSessionReason_timeout /* IMPORTED_LONG_NAMED_INTEGER */, timeout /* IMPORTED_SHORT_NAMED_INTEGER */, CancelSessionReason_pprNotAllowed /* IMPORTED_LONG_NAMED_INTEGER */, pprNotAllowed /* IMPORTED_SHORT_NAMED_INTEGER */, CancelSessionReason_metadataMismatch /* IMPORTED_LONG_NAMED_INTEGER */, metadataMismatch /* IMPORTED_SHORT_NAMED_INTEGER */, CancelSessionReason_loadBppExecutionError /* IMPORTED_LONG_NAMED_INTEGER */, loadBppExecutionError /* IMPORTED_SHORT_NAMED_INTEGER */, CancelSessionReason_undefinedReason /* IMPORTED_LONG_NAMED_INTEGER */, undefinedReason /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CancelSessionReason, _encode_CancelSessionReason } from "../RSPDefinitions/CancelSessionReason.ta.mjs";
+import { _decode_CancelSessionReason, _encode_CancelSessionReason, type CancelSessionReason } from "@wildboar/sgp22/RSPDefinitions";
 
 
 /**

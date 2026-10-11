@@ -11,18 +11,14 @@ import { PendingNotificationList, _decode_PendingNotificationList, _encode_Pendi
 // export { PendingNotificationList, _decode_PendingNotificationList, _encode_PendingNotificationList } from "../SGP32Definitions/PendingNotificationList.ta.mjs";
 import { EuiccPackageResultList, _decode_EuiccPackageResultList, _encode_EuiccPackageResultList } from "../SGP32Definitions/EuiccPackageResultList.ta.mjs";
 // export { EuiccPackageResultList, _decode_EuiccPackageResultList, _encode_EuiccPackageResultList } from "../SGP32Definitions/EuiccPackageResultList.ta.mjs";
-import { EUICCInfo1, _decode_EUICCInfo1, _encode_EUICCInfo1 } from "../RSPDefinitions/EUICCInfo1.ta.mjs";
-// export { EUICCInfo1, _decode_EUICCInfo1, _encode_EUICCInfo1 } from "../RSPDefinitions/EUICCInfo1.ta.mjs";
+import { EUICCInfo1, _decode_EUICCInfo1, _encode_EUICCInfo1 } from "@wildboar/sgp22/RSPDefinitions";
 import { EUICCInfo2, _decode_EUICCInfo2, _encode_EUICCInfo2 } from "../SGP32Definitions/EUICCInfo2.ta.mjs";
 // export { EUICCInfo2, _decode_EUICCInfo2, _encode_EUICCInfo2 } from "../SGP32Definitions/EUICCInfo2.ta.mjs";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
-// export { Certificate, _decode_Certificate, _encode_Certificate } from "../PKIX1Explicit88/Certificate.ta.mjs";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
 import { IpaCapabilities, _decode_IpaCapabilities, _encode_IpaCapabilities } from "../SGP32Definitions/IpaCapabilities.ta.mjs";
 // export { IpaCapabilities, _decode_IpaCapabilities, _encode_IpaCapabilities } from "../SGP32Definitions/IpaCapabilities.ta.mjs";
-import { DeviceInfo, _decode_DeviceInfo, _encode_DeviceInfo } from "../RSPDefinitions/DeviceInfo.ta.mjs";
-// export { DeviceInfo, _decode_DeviceInfo, _encode_DeviceInfo } from "../RSPDefinitions/DeviceInfo.ta.mjs";
+import { DeviceInfo, _decode_DeviceInfo, _encode_DeviceInfo } from "@wildboar/sgp22/RSPDefinitions";
 
 
 /**

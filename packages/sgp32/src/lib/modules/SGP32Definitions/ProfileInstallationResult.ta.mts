@@ -5,10 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProfileInstallationResultData, _decode_ProfileInstallationResultData, _encode_ProfileInstallationResultData } from "../RSPDefinitions/ProfileInstallationResultData.ta.mjs";
-// export { ProfileInstallationResultData, _decode_ProfileInstallationResultData, _encode_ProfileInstallationResultData } from "../RSPDefinitions/ProfileInstallationResultData.ta.mjs";
-import { EuiccSignPIR, _decode_EuiccSignPIR, _encode_EuiccSignPIR } from "../RSPDefinitions/EuiccSignPIR.ta.mjs";
-// export { EuiccSignPIR, _decode_EuiccSignPIR, _encode_EuiccSignPIR } from "../RSPDefinitions/EuiccSignPIR.ta.mjs";
+import { ProfileInstallationResultData, _decode_ProfileInstallationResultData, _encode_ProfileInstallationResultData } from "@wildboar/sgp22/RSPDefinitions";
+import { type EuiccSignPIR, _decode_EuiccSignPIR, _encode_EuiccSignPIR } from "@wildboar/sgp22/RSPDefinitions";
 
 
 /**

@@ -6,8 +6,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { AuthenticateResponseOk, _decode_AuthenticateResponseOk, _encode_AuthenticateResponseOk } from "../SGP32Definitions/AuthenticateResponseOk.ta.mjs";
 // export { AuthenticateResponseOk, _decode_AuthenticateResponseOk, _encode_AuthenticateResponseOk } from "../SGP32Definitions/AuthenticateResponseOk.ta.mjs";
-import { AuthenticateResponseError, _decode_AuthenticateResponseError, _encode_AuthenticateResponseError } from "../RSPDefinitions/AuthenticateResponseError.ta.mjs";
-// export { AuthenticateResponseError, _decode_AuthenticateResponseError, _encode_AuthenticateResponseError } from "../RSPDefinitions/AuthenticateResponseError.ta.mjs";
+import { AuthenticateResponseError, _decode_AuthenticateResponseError, _encode_AuthenticateResponseError } from "@wildboar/sgp22/RSPDefinitions";
 import { CompactAuthenticateResponseOk, _decode_CompactAuthenticateResponseOk, _encode_CompactAuthenticateResponseOk } from "../SGP32Definitions/CompactAuthenticateResponseOk.ta.mjs";
 // export { CompactAuthenticateResponseOk, _decode_CompactAuthenticateResponseOk, _encode_CompactAuthenticateResponseOk } from "../SGP32Definitions/CompactAuthenticateResponseOk.ta.mjs";
 

@@ -5,8 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Octet16.ta.mjs";
-// export { Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Octet16.ta.mjs";
+import { type Octet16, _decode_Octet16, _encode_Octet16 } from "@wildboar/sgp22/RSPDefinitions";
 import { EimPackageResult, _decode_EimPackageResult, _encode_EimPackageResult } from "../SGP32Definitions/EimPackageResult.ta.mjs";
 // export { EimPackageResult, _decode_EimPackageResult, _encode_EimPackageResult } from "../SGP32Definitions/EimPackageResult.ta.mjs";
 

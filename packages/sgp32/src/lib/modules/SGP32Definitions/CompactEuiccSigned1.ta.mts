@@ -6,8 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefinitions/CtxParams1.ta.mjs";
-// export { CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefinitions/CtxParams1.ta.mjs";
+import { type CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "@wildboar/sgp22/RSPDefinitions";
 
 
 /**

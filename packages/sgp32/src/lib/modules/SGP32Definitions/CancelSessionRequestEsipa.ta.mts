@@ -5,8 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
 import { CancelSessionResponse, _decode_CancelSessionResponse, _encode_CancelSessionResponse } from "../SGP32Definitions/CancelSessionResponse.ta.mjs";
 // export { CancelSessionResponse, _decode_CancelSessionResponse, _encode_CancelSessionResponse } from "../SGP32Definitions/CancelSessionResponse.ta.mjs";
 

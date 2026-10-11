@@ -7,8 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-// export { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
 import { EuiccPackageErrorCode, _decode_EuiccPackageErrorCode, _encode_EuiccPackageErrorCode } from "../SGP32Definitions/EuiccPackageErrorCode.ta.mjs";
 // export { EuiccPackageErrorCode, EuiccPackageErrorCode_invalidEid /* IMPORTED_LONG_NAMED_INTEGER */, invalidEid /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccPackageErrorCode_replayError /* IMPORTED_LONG_NAMED_INTEGER */, replayError /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccPackageErrorCode_counterValueOutOfRange /* IMPORTED_LONG_NAMED_INTEGER */, counterValueOutOfRange /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccPackageErrorCode_sizeOverflow /* IMPORTED_LONG_NAMED_INTEGER */, sizeOverflow /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccPackageErrorCode_ecallActive /* IMPORTED_LONG_NAMED_INTEGER */, ecallActive /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccPackageErrorCode_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EuiccPackageErrorCode, _encode_EuiccPackageErrorCode } from "../SGP32Definitions/EuiccPackageErrorCode.ta.mjs";
 

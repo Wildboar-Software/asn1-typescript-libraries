@@ -6,8 +6,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ProfileInstallationResult, _decode_ProfileInstallationResult, _encode_ProfileInstallationResult } from "../SGP32Definitions/ProfileInstallationResult.ta.mjs";
 // export { ProfileInstallationResult, _decode_ProfileInstallationResult, _encode_ProfileInstallationResult } from "../SGP32Definitions/ProfileInstallationResult.ta.mjs";
-import { OtherSignedNotification, _decode_OtherSignedNotification, _encode_OtherSignedNotification } from "../RSPDefinitions/OtherSignedNotification.ta.mjs";
-// export { OtherSignedNotification, _decode_OtherSignedNotification, _encode_OtherSignedNotification } from "../RSPDefinitions/OtherSignedNotification.ta.mjs";
+import { OtherSignedNotification, _decode_OtherSignedNotification, _encode_OtherSignedNotification } from "@wildboar/sgp22/RSPDefinitions";
 import { CompactProfileInstallationResult, _decode_CompactProfileInstallationResult, _encode_CompactProfileInstallationResult } from "../SGP32Definitions/CompactProfileInstallationResult.ta.mjs";
 // export { CompactProfileInstallationResult, _decode_CompactProfileInstallationResult, _encode_CompactProfileInstallationResult } from "../SGP32Definitions/CompactProfileInstallationResult.ta.mjs";
 import { CompactOtherSignedNotification, _decode_CompactOtherSignedNotification, _encode_CompactOtherSignedNotification } from "../SGP32Definitions/CompactOtherSignedNotification.ta.mjs";

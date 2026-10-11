@@ -10,8 +10,7 @@ import { Psmo_disable, _decode_Psmo_disable, _encode_Psmo_disable } from "../SGP
 // export { Psmo_disable, _decode_Psmo_disable, _encode_Psmo_disable } from "../SGP32Definitions/Psmo-disable.ta.mjs";
 import { Psmo_delete, _decode_Psmo_delete, _encode_Psmo_delete } from "../SGP32Definitions/Psmo-delete.ta.mjs";
 // export { Psmo_delete, _decode_Psmo_delete, _encode_Psmo_delete } from "../SGP32Definitions/Psmo-delete.ta.mjs";
-import { ProfileInfoListRequest, _decode_ProfileInfoListRequest, _encode_ProfileInfoListRequest } from "../RSPDefinitions/ProfileInfoListRequest.ta.mjs";
-// export { ProfileInfoListRequest, _decode_ProfileInfoListRequest, _encode_ProfileInfoListRequest } from "../RSPDefinitions/ProfileInfoListRequest.ta.mjs";
+import { ProfileInfoListRequest, _decode_ProfileInfoListRequest, _encode_ProfileInfoListRequest } from "@wildboar/sgp22/RSPDefinitions";
 import { Psmo_getRAT, _decode_Psmo_getRAT, _encode_Psmo_getRAT } from "../SGP32Definitions/Psmo-getRAT.ta.mjs";
 // export { Psmo_getRAT, _decode_Psmo_getRAT, _encode_Psmo_getRAT } from "../SGP32Definitions/Psmo-getRAT.ta.mjs";
 import { Psmo_configureImmediateEnable, _decode_Psmo_configureImmediateEnable, _encode_Psmo_configureImmediateEnable } from "../SGP32Definitions/Psmo-configureImmediateEnable.ta.mjs";
