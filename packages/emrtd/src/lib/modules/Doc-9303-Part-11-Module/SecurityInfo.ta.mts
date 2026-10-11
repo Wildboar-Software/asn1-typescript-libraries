@@ -94,8 +94,18 @@ class SecurityInfo {
          * @readonly
          */
         readonly protocol: OBJECT_IDENTIFIER,
-// FIXME: readonly requiredData: AnyType,
-// FIXME: readonly optionalData: AnyType
+        /**
+         * @summary `requiredData`.
+         * @public
+         * @readonly
+         */
+        readonly requiredData: _Element,
+        /**
+         * @summary `optionalData`.
+         * @public
+         * @readonly
+         */
+        readonly optionalData: OPTIONAL<_Element>,
     ) {}
 
     /**
@@ -111,7 +121,7 @@ class SecurityInfo {
      * @returns {SecurityInfo}
      */
     public static _from_object (_o: { [_K in keyof (SecurityInfo)]: (SecurityInfo)[_K] }): SecurityInfo {
-        return new SecurityInfo(_o.protocol, _o., _o.);
+        return new SecurityInfo(_o.protocol, _o.requiredData, _o.optionalData);
     }
 
 
@@ -170,8 +180,8 @@ export
 function _decode_SecurityInfo (el: _Element): SecurityInfo {
     if (!_cached_decoder_for_SecurityInfo) { _cached_decoder_for_SecurityInfo = function (el: _Element): SecurityInfo {
     let protocol!: OBJECT_IDENTIFIER;
-    let requiredData!: /* FIXME: requiredData COULD_NOT_COMPILE_TYPE */;
-    let optionalData: OPTIONAL</* FIXME: optionalData COULD_NOT_COMPILE_TYPE */>;
+    let requiredData!: _Element;
+    let optionalData: OPTIONAL<_Element>;
     const callbacks: $.DecodingMap = {
         "protocol": (_el: _Element): void => { protocol = $._decodeObjectIdentifier(_el); },
         "requiredData": (_el: _Element): void => { requiredData = $._decodeAny(_el); },
