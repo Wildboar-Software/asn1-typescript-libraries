@@ -133,12 +133,9 @@ function _decode_ActiveAuthenticationInfo (el: _Element): ActiveAuthenticationIn
     sequence[0].name = "protocol";
     sequence[1].name = "version";
     sequence[2].name = "signatureAlgorithm";
-    let protocol!: OBJECT_IDENTIFIER;
-    let version!: INTEGER;
-    let signatureAlgorithm!: OBJECT_IDENTIFIER;
-    protocol = $._decodeObjectIdentifier(sequence[0]);
-    version = $._decodeInteger(sequence[1]);
-    signatureAlgorithm = $._decodeObjectIdentifier(sequence[2]);
+    const protocol: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const version: INTEGER = $._decodeInteger(sequence[1]);
+    const signatureAlgorithm: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[2]);
     return new ActiveAuthenticationInfo(
         protocol,
         version,

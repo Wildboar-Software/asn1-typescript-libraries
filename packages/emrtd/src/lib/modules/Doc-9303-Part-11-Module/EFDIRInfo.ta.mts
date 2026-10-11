@@ -124,10 +124,8 @@ function _decode_EFDIRInfo (el: _Element): EFDIRInfo {
     }
     sequence[0].name = "protocol";
     sequence[1].name = "eFDIR";
-    let protocol!: OBJECT_IDENTIFIER;
-    let eFDIR!: OCTET_STRING;
-    protocol = $._decodeObjectIdentifier(sequence[0]);
-    eFDIR = $._decodeOctetString(sequence[1]);
+    const protocol: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const eFDIR: OCTET_STRING = $._decodeOctetString(sequence[1]);
     return new EFDIRInfo(
         protocol,
         eFDIR,

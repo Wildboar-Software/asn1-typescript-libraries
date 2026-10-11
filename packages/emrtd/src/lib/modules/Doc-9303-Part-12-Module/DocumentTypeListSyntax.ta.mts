@@ -133,10 +133,8 @@ function _decode_DocumentTypeListSyntax (el: _Element): DocumentTypeListSyntax {
     }
     sequence[0].name = "version";
     sequence[1].name = "docTypeList";
-    let version!: DocumentTypeListVersion;
-    let docTypeList!: DocumentType[];
-    version = _decode_DocumentTypeListVersion(sequence[0]);
-    docTypeList = $._decodeSetOf<DocumentType>(() => _decode_DocumentType)(sequence[1]);
+    const version: DocumentTypeListVersion = _decode_DocumentTypeListVersion(sequence[0]);
+    const docTypeList: DocumentType[] = $._decodeSetOf<DocumentType>(() => _decode_DocumentType)(sequence[1]);
     return new DocumentTypeListSyntax(
         version,
         docTypeList,

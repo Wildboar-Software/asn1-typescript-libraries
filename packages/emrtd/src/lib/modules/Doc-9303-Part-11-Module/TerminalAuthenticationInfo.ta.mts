@@ -124,10 +124,8 @@ function _decode_TerminalAuthenticationInfo (el: _Element): TerminalAuthenticati
     }
     sequence[0].name = "protocol";
     sequence[1].name = "version";
-    let protocol!: OBJECT_IDENTIFIER;
-    let version!: INTEGER;
-    protocol = $._decodeObjectIdentifier(sequence[0]);
-    version = $._decodeInteger(sequence[1]);
+    const protocol: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const version: INTEGER = $._decodeInteger(sequence[1]);
     return new TerminalAuthenticationInfo(
         protocol,
         version,

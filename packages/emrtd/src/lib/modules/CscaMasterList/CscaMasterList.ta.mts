@@ -119,10 +119,8 @@ function _decode_CscaMasterList (el: _Element): CscaMasterList {
     }
     sequence[0].name = "version";
     sequence[1].name = "certList";
-    let version!: CscaMasterListVersion;
-    let certList!: Certificate[];
-    version = _decode_CscaMasterListVersion(sequence[0]);
-    certList = $._decodeSetOf<Certificate>(() => _decode_Certificate)(sequence[1]);
+    const version: CscaMasterListVersion = _decode_CscaMasterListVersion(sequence[0]);
+    const certList: Certificate[] = $._decodeSetOf<Certificate>(() => _decode_Certificate)(sequence[1]);
     return new CscaMasterList(
         version,
         certList,

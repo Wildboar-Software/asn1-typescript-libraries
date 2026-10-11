@@ -117,10 +117,8 @@ function _decode_LDSVersionInfo (el: _Element): LDSVersionInfo {
     }
     sequence[0].name = "ldsVersion";
     sequence[1].name = "unicodeVersion";
-    let ldsVersion!: PrintableString;
-    let unicodeVersion!: PrintableString;
-    ldsVersion = $._decodePrintableString(sequence[0]);
-    unicodeVersion = $._decodePrintableString(sequence[1]);
+    const ldsVersion: PrintableString = $._decodePrintableString(sequence[0]);
+    const unicodeVersion: PrintableString = $._decodePrintableString(sequence[1]);
     return new LDSVersionInfo(
         ldsVersion,
         unicodeVersion,
