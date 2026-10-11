@@ -64,7 +64,6 @@ export {
 export * from "./ACPNoAttachments.ta.mjs";
 export {
     _enum_for_ACPPreferredDelivery,
-    type ACPPreferredDelivery,
     ACPPreferredDelivery,
     _decode_ACPPreferredDelivery,
     _encode_ACPPreferredDelivery,
