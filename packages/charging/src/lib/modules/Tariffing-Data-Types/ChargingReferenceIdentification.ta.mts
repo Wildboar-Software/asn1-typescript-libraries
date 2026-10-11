@@ -41,22 +41,29 @@ import { ReferenceID, _decode_ReferenceID, _encode_ReferenceID } from "../Tariff
  */
 export
 class ChargingReferenceIdentification {
+    /**
+     * Network that assigned this reference. See
+     * {@link NetworkIdentification}.
+     * @public
+     * @readonly
+     */
+    public readonly networkIdentification: NetworkIdentification;
+
+    /**
+     * Reference assigned by that exchange. Not reused
+     * immediately after release. See {@link ReferenceID}.
+     * @public
+     * @readonly
+     */
+    public readonly referenceID: ReferenceID;
+
     constructor (
-        /**
-         * Network that assigned this reference. See
-         * {@link NetworkIdentification}.
-         * @public
-         * @readonly
-         */
-        readonly networkIdentification: NetworkIdentification,
-        /**
-         * Reference assigned by that exchange. Not reused
-         * immediately after release. See {@link ReferenceID}.
-         * @public
-         * @readonly
-         */
-        readonly referenceID: ReferenceID
-    ) {}
+        networkIdentification: NetworkIdentification,
+        referenceID: ReferenceID
+    ) {
+        this.networkIdentification = networkIdentification;
+        this.referenceID = referenceID;
+    }
 
     /**
      * @summary Restructures an object into a ChargingReferenceIdentification

@@ -39,25 +39,32 @@ import { TariffSwitchCurrency, _decode_TariffSwitchCurrency, _encode_TariffSwitc
  */
 export
 class TariffCurrency {
+    /**
+     * Tariff applied at the start of charging, or the
+     * replacement when the current tariff changes. A CRGT that
+     * only carries this component deletes a stored next tariff
+     * and its switch-over time (clause 6.1.2.3).
+     * @public
+     * @readonly
+     */
+    public readonly currentTariffCurrency: OPTIONAL<TariffCurrencyFormat>;
+
+    /**
+     * Next tariff and the GMT time it becomes active. The two
+     * are always sent together. Omit this component to delete a
+     * previously stored next tariff (clause 6.1.2.3).
+     * @public
+     * @readonly
+     */
+    public readonly tariffSwitchCurrency: OPTIONAL<TariffSwitchCurrency>;
+
     constructor (
-        /**
-         * Tariff applied at the start of charging, or the
-         * replacement when the current tariff changes. A CRGT that
-         * only carries this component deletes a stored next tariff
-         * and its switch-over time (clause 6.1.2.3).
-         * @public
-         * @readonly
-         */
-        readonly currentTariffCurrency: OPTIONAL<TariffCurrencyFormat>,
-        /**
-         * Next tariff and the GMT time it becomes active. The two
-         * are always sent together. Omit this component to delete a
-         * previously stored next tariff (clause 6.1.2.3).
-         * @public
-         * @readonly
-         */
-        readonly tariffSwitchCurrency: OPTIONAL<TariffSwitchCurrency>
-    ) {}
+        currentTariffCurrency: OPTIONAL<TariffCurrencyFormat>,
+        tariffSwitchCurrency: OPTIONAL<TariffSwitchCurrency>
+    ) {
+        this.currentTariffCurrency = currentTariffCurrency;
+        this.tariffSwitchCurrency = tariffSwitchCurrency;
+    }
 
     /**
      * @summary Restructures an object into a TariffCurrency

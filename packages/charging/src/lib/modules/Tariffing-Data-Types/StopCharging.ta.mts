@@ -50,37 +50,49 @@ import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs"
  */
 export
 class StopCharging {
+    /**
+     * Whether the call-attempt charge applies as tariffing
+     * stops. See {@link StopCharging_stopIndicators}.
+     * @public
+     * @readonly
+     */
+    public readonly stopIndicators: StopCharging_stopIndicators;
+
+    /**
+     * Operators whose tariffs stop. At most six. Required when
+     * more than one charge determination point is configured.
+     * Absent, with only one such point, stops that tariff.
+     * @public
+     * @readonly
+     */
+    public readonly networkOperators: OPTIONAL<NetworkIdentification[]>;
+
+    /**
+     * Network-operator extension. This module allows one.
+     * @public
+     * @readonly
+     */
+    public readonly extensions: OPTIONAL<ExtensionField[]>;
+
+    /**
+     * Charging reference assigned by the connection control
+     * point. The acknowledgement returns this value as its
+     * destination identifier (clause 6.4.2).
+     * @public
+     * @readonly
+     */
+    public readonly originationIdentification: ChargingReferenceIdentification;
+
     constructor (
-        /**
-         * Whether the call-attempt charge applies as tariffing
-         * stops. See {@link StopCharging_stopIndicators}.
-         * @public
-         * @readonly
-         */
-        readonly stopIndicators: StopCharging_stopIndicators,
-        /**
-         * Operators whose tariffs stop. At most six. Required when
-         * more than one charge determination point is configured.
-         * Absent, with only one such point, stops that tariff.
-         * @public
-         * @readonly
-         */
-        readonly networkOperators: OPTIONAL<NetworkIdentification[]>,
-        /**
-         * Network-operator extension. This module allows one.
-         * @public
-         * @readonly
-         */
-        readonly extensions: OPTIONAL<ExtensionField[]>,
-        /**
-         * Charging reference assigned by the connection control
-         * point. The acknowledgement returns this value as its
-         * destination identifier (clause 6.4.2).
-         * @public
-         * @readonly
-         */
-        readonly originationIdentification: ChargingReferenceIdentification
+        stopIndicators: StopCharging_stopIndicators,
+        networkOperators: OPTIONAL<NetworkIdentification[]>,
+        extensions: OPTIONAL<ExtensionField[]>,
+        originationIdentification: ChargingReferenceIdentification
     ) {
+        this.stopIndicators = stopIndicators;
+        this.networkOperators = networkOperators;
+        this.extensions = extensions;
+        this.originationIdentification = originationIdentification;
         if (networkOperators !== undefined && (networkOperators.length < 1 || networkOperators.length > Number(maxNetworkOperators))) {
             throw new ASN1SizeError("StopCharging.networkOperators violates SIZE constraint");
         }

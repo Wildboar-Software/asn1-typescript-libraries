@@ -26,11 +26,12 @@ import * as $ from "@wildboar/asn1/functional";
  * 
  * @enum {number}
  */
-export
-enum _enum_for_CriticalityType {
-    ignore = 0,
-    abort = 1,
-}
+export const _enum_for_CriticalityType = {
+    ignore: 0,
+    abort: 1,
+} as const;
+
+export type _enum_for_CriticalityType = (typeof _enum_for_CriticalityType)[keyof typeof _enum_for_CriticalityType];
 
 /**
  * @summary CriticalityType
@@ -121,8 +122,10 @@ const CriticalityType_abort: CriticalityType = CriticalityType.abort; /* LONG_NA
  */
 export
 const abort: CriticalityType = CriticalityType.abort; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_CriticalityType = $._decodeEnumerated;
-export const _encode_CriticalityType = $._encodeEnumerated;
+export const _decode_CriticalityType: $.ASN1Decoder<CriticalityType> =
+    $._decodeEnumerated as $.ASN1Decoder<CriticalityType>;
+export const _encode_CriticalityType: $.ASN1Encoder<CriticalityType> =
+    $._encodeEnumerated as $.ASN1Encoder<CriticalityType>;
 
 
 /* eslint-enable */

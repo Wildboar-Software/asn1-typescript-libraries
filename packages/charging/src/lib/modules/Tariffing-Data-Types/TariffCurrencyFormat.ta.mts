@@ -51,43 +51,55 @@ import { minCommunicationTariffNum } from "../Tariffing-Data-Types/minCommunicat
  */
 export
 class TariffCurrencyFormat {
+    /**
+     * Successive communication subtariffs, one to four. Applied
+     * from the start of the communication, in order. A product
+     * of zero is free. Omit when this tariff has no
+     * communication charge; if the sequence matters, send all
+     * of it.
+     * @public
+     * @readonly
+     */
+    public readonly communicationChargeSequenceCurrency: OPTIONAL<CommunicationChargeCurrency[]>;
+
+    /**
+     * Whether the communication sequence is applied again after
+     * its last subtariff. See
+     * {@link TariffCurrencyFormat_tariffControlIndicators}.
+     * @public
+     * @readonly
+     */
+    public readonly tariffControlIndicators: TariffCurrencyFormat_tariffControlIndicators;
+
+    /**
+     * Direct charge for an unsuccessful call only. Also sent in
+     * the first next tariff. Not made when the amount is zero
+     * or this field is absent, and not applied again on a later
+     * tariff change.
+     * @public
+     * @readonly
+     */
+    public readonly callAttemptChargeCurrency: OPTIONAL<CurrencyFactorScale>;
+
+    /**
+     * Direct charge taken once at the start of charging. Sent
+     * in the first CRGT and in the first next tariff. Not made
+     * when the amount is zero or this field is absent.
+     * @public
+     * @readonly
+     */
+    public readonly callSetupChargeCurrency: OPTIONAL<CurrencyFactorScale>;
+
     constructor (
-        /**
-         * Successive communication subtariffs, one to four. Applied
-         * from the start of the communication, in order. A product
-         * of zero is free. Omit when this tariff has no
-         * communication charge; if the sequence matters, send all
-         * of it.
-         * @public
-         * @readonly
-         */
-        readonly communicationChargeSequenceCurrency: OPTIONAL<CommunicationChargeCurrency[]>,
-        /**
-         * Whether the communication sequence is applied again after
-         * its last subtariff. See
-         * {@link TariffCurrencyFormat_tariffControlIndicators}.
-         * @public
-         * @readonly
-         */
-        readonly tariffControlIndicators: TariffCurrencyFormat_tariffControlIndicators,
-        /**
-         * Direct charge for an unsuccessful call only. Also sent in
-         * the first next tariff. Not made when the amount is zero
-         * or this field is absent, and not applied again on a later
-         * tariff change.
-         * @public
-         * @readonly
-         */
-        readonly callAttemptChargeCurrency: OPTIONAL<CurrencyFactorScale>,
-        /**
-         * Direct charge taken once at the start of charging. Sent
-         * in the first CRGT and in the first next tariff. Not made
-         * when the amount is zero or this field is absent.
-         * @public
-         * @readonly
-         */
-        readonly callSetupChargeCurrency: OPTIONAL<CurrencyFactorScale>
+        communicationChargeSequenceCurrency: OPTIONAL<CommunicationChargeCurrency[]>,
+        tariffControlIndicators: TariffCurrencyFormat_tariffControlIndicators,
+        callAttemptChargeCurrency: OPTIONAL<CurrencyFactorScale>,
+        callSetupChargeCurrency: OPTIONAL<CurrencyFactorScale>
     ) {
+        this.communicationChargeSequenceCurrency = communicationChargeSequenceCurrency;
+        this.tariffControlIndicators = tariffControlIndicators;
+        this.callAttemptChargeCurrency = callAttemptChargeCurrency;
+        this.callSetupChargeCurrency = callSetupChargeCurrency;
         if (
             communicationChargeSequenceCurrency !== undefined
             && (

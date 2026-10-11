@@ -35,30 +35,40 @@ import { TariffDuration, _decode_TariffDuration, _encode_TariffDuration } from "
  */
 export
 class CommunicationChargePulse {
+    /**
+     * Pulses applied each {@link ChargeUnitTimeInterval}. Zero
+     * means this part of the communication is free.
+     * @public
+     * @readonly
+     */
+    public readonly pulseUnits: PulseUnits;
+
+    /**
+     * Interval between pulse applications. `0` is no periodic
+     * metering, which is how a pulse-format minimum charge is
+     * marked.
+     * @public
+     * @readonly
+     */
+    public readonly chargeUnitTimeInterval: ChargeUnitTimeInterval;
+
+    /**
+     * Seconds this subtariff stays in force. `0` is unlimited
+     * and is only for the last subtariff of the sequence.
+     * @public
+     * @readonly
+     */
+    public readonly tariffDuration: TariffDuration;
+
     constructor (
-        /**
-         * Pulses applied each {@link ChargeUnitTimeInterval}. Zero
-         * means this part of the communication is free.
-         * @public
-         * @readonly
-         */
-        readonly pulseUnits: PulseUnits,
-        /**
-         * Interval between pulse applications. `0` is no periodic
-         * metering, which is how a pulse-format minimum charge is
-         * marked.
-         * @public
-         * @readonly
-         */
-        readonly chargeUnitTimeInterval: ChargeUnitTimeInterval,
-        /**
-         * Seconds this subtariff stays in force. `0` is unlimited
-         * and is only for the last subtariff of the sequence.
-         * @public
-         * @readonly
-         */
-        readonly tariffDuration: TariffDuration
-    ) {}
+        pulseUnits: PulseUnits,
+        chargeUnitTimeInterval: ChargeUnitTimeInterval,
+        tariffDuration: TariffDuration
+    ) {
+        this.pulseUnits = pulseUnits;
+        this.chargeUnitTimeInterval = chargeUnitTimeInterval;
+        this.tariffDuration = tariffDuration;
+    }
 
     /**
      * @summary Restructures an object into a CommunicationChargePulse
