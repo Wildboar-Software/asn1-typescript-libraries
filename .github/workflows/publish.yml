@@ -65,6 +65,7 @@ jobs:
           # - "pkcs"
           # - "pki-stub"
           - "presentation-address"
+          - "q932"
           - "sgp22"
           - "smrse"
           - "spnego"
