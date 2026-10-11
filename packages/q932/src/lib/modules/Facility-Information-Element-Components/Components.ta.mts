@@ -3,9 +3,12 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ROS, _decode_ROS, _encode_ROS } from "../Facility-Information-Element-Components/ROS.ta.mjs";
+import {
+    ROS,
+    _decode_ROS,
+    _encode_ROS
+} from "../Facility-Information-Element-Components/ROS.ta.mjs";
 // export { ROS, _decode_ROS, _encode_ROS } from "../Facility-Information-Element-Components/ROS.ta.mjs";
-
 
 /**
  * @summary Components
@@ -58,6 +61,5 @@ function _encode_Components (value: Components, elGetter: $.ASN1Encoder<any>): _
 }, $.BER); }
     return _cached_encoder_for_Components(value, elGetter);
 }
-
 
 /* eslint-enable */

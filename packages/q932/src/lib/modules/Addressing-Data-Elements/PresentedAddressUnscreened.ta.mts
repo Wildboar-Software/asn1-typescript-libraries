@@ -5,9 +5,12 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Address, _decode_Address, _encode_Address } from "../Addressing-Data-Elements/Address.ta.mjs";
+import {
+    Address,
+    _decode_Address,
+    _encode_Address
+} from "../Addressing-Data-Elements/Address.ta.mjs";
 // export { Address, _decode_Address, _encode_Address } from "../Addressing-Data-Elements/Address.ta.mjs";
-
 
 /**
  * @summary PresentedAddressUnscreened
@@ -69,6 +72,5 @@ function _encode_PresentedAddressUnscreened (value: PresentedAddressUnscreened, 
 }, $.BER); }
     return _cached_encoder_for_PresentedAddressUnscreened(value, elGetter);
 }
-
 
 /* eslint-enable */

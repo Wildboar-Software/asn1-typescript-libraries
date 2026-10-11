@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary NSAPSubaddress
  * @description
@@ -28,6 +26,5 @@ export function _decode_NSAPSubaddress (el: _Element): NSAPSubaddress {
     return value;
 }
 export const _encode_NSAPSubaddress: $.ASN1Encoder<NSAPSubaddress> = $._encodeOctetString;
-
 
 /* eslint-enable */

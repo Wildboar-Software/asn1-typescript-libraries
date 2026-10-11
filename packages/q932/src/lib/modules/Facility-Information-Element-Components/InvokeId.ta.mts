@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary InvokeId
  * @description
@@ -59,6 +57,5 @@ function _encode_InvokeId (value: InvokeId, elGetter: $.ASN1Encoder<any>): _Elem
 }, $.BER); }
     return _cached_encoder_for_InvokeId(value, elGetter);
 }
-
 
 /* eslint-enable */

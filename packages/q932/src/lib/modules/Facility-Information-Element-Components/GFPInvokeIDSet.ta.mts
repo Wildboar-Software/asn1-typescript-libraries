@@ -5,9 +5,12 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
+import {
+    InvokeId,
+    _decode_InvokeId,
+    _encode_InvokeId
+} from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
 // export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
-
 
 /**
  * @summary GFPInvokeIDSet
@@ -60,6 +63,5 @@ function _encode_GFPInvokeIDSet (value: GFPInvokeIDSet, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_GFPInvokeIDSet) { _cached_encoder_for_GFPInvokeIDSet = _encode_InvokeId; }
     return _cached_encoder_for_GFPInvokeIDSet(value, elGetter);
 }
-
 
 /* eslint-enable */

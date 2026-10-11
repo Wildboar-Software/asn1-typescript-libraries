@@ -5,9 +5,12 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements/PartyNumber.ta.mjs";
+import {
+    PartyNumber,
+    _decode_PartyNumber,
+    _encode_PartyNumber
+} from "../Addressing-Data-Elements/PartyNumber.ta.mjs";
 // export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements/PartyNumber.ta.mjs";
-
 
 /**
  * @summary PresentedNumberUnscreened
@@ -69,6 +72,5 @@ function _encode_PresentedNumberUnscreened (value: PresentedNumberUnscreened, el
 }, $.BER); }
     return _cached_encoder_for_PresentedNumberUnscreened(value, elGetter);
 }
-
 
 /* eslint-enable */

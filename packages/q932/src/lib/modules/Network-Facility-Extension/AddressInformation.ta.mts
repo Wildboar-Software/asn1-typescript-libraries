@@ -3,9 +3,12 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements/PartyNumber.ta.mjs";
+import {
+    PartyNumber,
+    _decode_PartyNumber,
+    _encode_PartyNumber
+} from "../Addressing-Data-Elements/PartyNumber.ta.mjs";
 // export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements/PartyNumber.ta.mjs";
-
 
 /**
  * @summary AddressInformation
@@ -48,6 +51,5 @@ function _encode_AddressInformation (value: AddressInformation, elGetter: $.ASN1
     if (!_cached_encoder_for_AddressInformation) { _cached_encoder_for_AddressInformation = _encode_PartyNumber; }
     return _cached_encoder_for_AddressInformation(value, elGetter);
 }
-
 
 /* eslint-enable */

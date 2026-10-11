@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary NumberDigits
  * @description
@@ -28,6 +26,5 @@ export function _decode_NumberDigits (el: _Element): NumberDigits {
     return value;
 }
 export const _encode_NumberDigits: $.ASN1Encoder<NumberDigits> = $._encodeNumericString;
-
 
 /* eslint-enable */

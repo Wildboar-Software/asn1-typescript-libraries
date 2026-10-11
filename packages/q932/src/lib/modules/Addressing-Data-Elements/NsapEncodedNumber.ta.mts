@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary NsapEncodedNumber
  * @description
@@ -28,6 +26,5 @@ export function _decode_NsapEncodedNumber (el: _Element): NsapEncodedNumber {
     return value;
 }
 export const _encode_NsapEncodedNumber: $.ASN1Encoder<NsapEncodedNumber> = $._encodeOctetString;
-
 
 /* eslint-enable */

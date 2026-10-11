@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ScreeningIndicator
@@ -160,6 +156,5 @@ export
 const networkProvided: ScreeningIndicator = ScreeningIndicator.networkProvided; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ScreeningIndicator: $.ASN1Decoder<ScreeningIndicator> = $._decodeEnumerated;
 export const _encode_ScreeningIndicator: $.ASN1Encoder<ScreeningIndicator> = $._encodeEnumerated;
-
 
 /* eslint-enable */

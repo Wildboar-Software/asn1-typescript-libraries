@@ -5,9 +5,12 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AddressScreened, _decode_AddressScreened, _encode_AddressScreened } from "../Addressing-Data-Elements/AddressScreened.ta.mjs";
+import {
+    AddressScreened,
+    _decode_AddressScreened,
+    _encode_AddressScreened
+} from "../Addressing-Data-Elements/AddressScreened.ta.mjs";
 // export { AddressScreened, _decode_AddressScreened, _encode_AddressScreened } from "../Addressing-Data-Elements/AddressScreened.ta.mjs";
-
 
 /**
  * @summary PresentedAddressScreened
@@ -69,6 +72,5 @@ function _encode_PresentedAddressScreened (value: PresentedAddressScreened, elGe
 }, $.BER); }
     return _cached_encoder_for_PresentedAddressScreened(value, elGetter);
 }
-
 
 /* eslint-enable */

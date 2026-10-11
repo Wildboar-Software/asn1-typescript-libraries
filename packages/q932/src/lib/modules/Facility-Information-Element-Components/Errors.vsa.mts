@@ -1,4 +1,6 @@
-import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
+import {
+    type ERROR
+} from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 /**
  * @summary Errors

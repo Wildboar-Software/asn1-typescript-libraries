@@ -1,7 +1,8 @@
 /* eslint-disable */
-import { InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
+import {
+    InvokeId
+} from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
 // export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
-
 
 /**
  * @summary noInvokeId

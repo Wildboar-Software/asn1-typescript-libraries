@@ -5,14 +5,25 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
+import {
+    InvokeId,
+    _decode_InvokeId,
+    _encode_InvokeId
+} from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
 // export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
 // export { RejectProblem, RejectProblem_general_unrecognizedPDU /* IMPORTED_LONG_NAMED_INTEGER */, general_unrecognizedPDU /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_general_mistypedPDU /* IMPORTED_LONG_NAMED_INTEGER */, general_mistypedPDU /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_general_badlyStructuredPDU /* IMPORTED_LONG_NAMED_INTEGER */, general_badlyStructuredPDU /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_duplicateInvocation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_duplicateInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_unrecognizedOperation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_unrecognizedOperation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_mistypedArgument /* IMPORTED_LONG_NAMED_INTEGER */, invoke_mistypedArgument /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_resourceLimitation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_resourceLimitation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_releaseInProgress /* IMPORTED_LONG_NAMED_INTEGER */, invoke_releaseInProgress /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_unrecognizedLinkedId /* IMPORTED_LONG_NAMED_INTEGER */, invoke_unrecognizedLinkedId /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_linkedResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */, invoke_linkedResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_unexpectedLinkedOperation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_unexpectedLinkedOperation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnResult_unrecognizedInvocation /* IMPORTED_LONG_NAMED_INTEGER */, returnResult_unrecognizedInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnResult_resultResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */, returnResult_resultResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnResult_mistypedResult /* IMPORTED_LONG_NAMED_INTEGER */, returnResult_mistypedResult /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_unrecognizedInvocation /* IMPORTED_LONG_NAMED_INTEGER */, returnError_unrecognizedInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_errorResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */, returnError_errorResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_unrecognizedError /* IMPORTED_LONG_NAMED_INTEGER */, returnError_unrecognizedError /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_unexpectedError /* IMPORTED_LONG_NAMED_INTEGER */, returnError_unexpectedError /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_mistypedParameter /* IMPORTED_LONG_NAMED_INTEGER */, returnError_mistypedParameter /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RejectProblem, _encode_RejectProblem } from "../Facility-Information-Element-Components/RejectProblem.ta.mjs";
-import { Invoke_linkedId, _decode_Invoke_linkedId, _encode_Invoke_linkedId } from "../Facility-Information-Element-Components/Invoke-linkedId.ta.mjs";
-import { type Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
+import {
+    Invoke_linkedId,
+    _decode_Invoke_linkedId,
+    _encode_Invoke_linkedId
+} from "../Facility-Information-Element-Components/Invoke-linkedId.ta.mjs";
+import {
+    type Code,
+    _decode_Code,
+    _encode_Code
+} from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 // export { Invoke_linkedId, _decode_Invoke_linkedId, _encode_Invoke_linkedId } from "../Facility-Information-Element-Components/Invoke-linkedId.ta.mjs";
 // export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-
 
 /**
  * @summary Invoke
@@ -112,7 +123,6 @@ class Invoke {
         return new Invoke(_o.invokeId, _o.linkedId, _o.opcode, _o.argument);
     }
 
-
 }
 
 /**
@@ -205,7 +215,7 @@ let _cached_encoder_for_Invoke: $.ASN1Encoder<Invoke> | null = null;
  */
 export
 function _encode_Invoke (value: Invoke, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Invoke) { _cached_encoder_for_Invoke = function (value: Invoke, elGetter: $.ASN1Encoder<Invoke>): _Element {
+    if (!_cached_encoder_for_Invoke) { _cached_encoder_for_Invoke = function (value: Invoke): _Element {
     const _components: _Element[] = new Array(4);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER);
@@ -221,6 +231,5 @@ function _encode_Invoke (value: Invoke, elGetter: $.ASN1Encoder<any>): _Element 
 }; }
     return _cached_encoder_for_Invoke(value, elGetter);
 }
-
 
 /* eslint-enable */

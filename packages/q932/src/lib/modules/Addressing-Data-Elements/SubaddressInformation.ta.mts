@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary SubaddressInformation
  * @description
@@ -28,6 +26,5 @@ export function _decode_SubaddressInformation (el: _Element): SubaddressInformat
     return value;
 }
 export const _encode_SubaddressInformation: $.ASN1Encoder<SubaddressInformation> = $._encodeOctetString;
-
 
 /* eslint-enable */

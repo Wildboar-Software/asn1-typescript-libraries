@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary InvokeProblem
@@ -152,6 +149,5 @@ export
 const unexpectedLinkedOperation: InvokeProblem = InvokeProblem_unexpectedLinkedOperation; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_InvokeProblem: $.ASN1Decoder<InvokeProblem> = $._decodeInteger;
 export const _encode_InvokeProblem: $.ASN1Encoder<InvokeProblem> = $._encodeInteger;
-
 
 /* eslint-enable */

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PresentationAllowedIndicator
@@ -21,6 +18,5 @@ export
 type PresentationAllowedIndicator = BOOLEAN; // BooleanType
 export const _decode_PresentationAllowedIndicator: $.ASN1Decoder<PresentationAllowedIndicator> = $._decodeBoolean;
 export const _encode_PresentationAllowedIndicator: $.ASN1Encoder<PresentationAllowedIndicator> = $._encodeBoolean;
-
 
 /* eslint-enable */

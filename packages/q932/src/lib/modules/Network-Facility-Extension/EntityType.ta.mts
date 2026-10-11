@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary EntityType
@@ -87,6 +83,5 @@ export
 const anyTypeOfPINX: EntityType = EntityType.anyTypeOfPINX; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EntityType: $.ASN1Decoder<EntityType> = $._decodeEnumerated;
 export const _encode_EntityType: $.ASN1Encoder<EntityType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

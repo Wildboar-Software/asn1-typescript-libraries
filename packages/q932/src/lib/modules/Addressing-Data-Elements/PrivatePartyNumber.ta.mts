@@ -5,11 +5,19 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PrivateTypeOfNumber, _decode_PrivateTypeOfNumber, _encode_PrivateTypeOfNumber, _enum_for_PrivateTypeOfNumber } from "../Addressing-Data-Elements/PrivateTypeOfNumber.ta.mjs";
+import {
+    PrivateTypeOfNumber,
+    _decode_PrivateTypeOfNumber,
+    _encode_PrivateTypeOfNumber,
+    _enum_for_PrivateTypeOfNumber
+} from "../Addressing-Data-Elements/PrivateTypeOfNumber.ta.mjs";
 // export { PrivateTypeOfNumber, _enum_for_PrivateTypeOfNumber, PrivateTypeOfNumber_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivateTypeOfNumber_level2RegionalNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, level2RegionalNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivateTypeOfNumber_level1RegionalNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, level1RegionalNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivateTypeOfNumber_pTNSpecificNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, pTNSpecificNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivateTypeOfNumber_localNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, localNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivateTypeOfNumber_abbreviatedNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, abbreviatedNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PrivateTypeOfNumber, _encode_PrivateTypeOfNumber } from "../Addressing-Data-Elements/PrivateTypeOfNumber.ta.mjs";
-import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements/NumberDigits.ta.mjs";
+import {
+    NumberDigits,
+    _decode_NumberDigits,
+    _encode_NumberDigits
+} from "../Addressing-Data-Elements/NumberDigits.ta.mjs";
 // export { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements/NumberDigits.ta.mjs";
-
 
 /**
  * @summary PrivatePartyNumber
@@ -155,7 +163,7 @@ let _cached_encoder_for_PrivatePartyNumber: $.ASN1Encoder<PrivatePartyNumber> | 
  */
 export
 function _encode_PrivatePartyNumber (value: PrivatePartyNumber, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PrivatePartyNumber) { _cached_encoder_for_PrivatePartyNumber = function (value: PrivatePartyNumber, elGetter: $.ASN1Encoder<PrivatePartyNumber>): _Element {
+    if (!_cached_encoder_for_PrivatePartyNumber) { _cached_encoder_for_PrivatePartyNumber = function (value: PrivatePartyNumber): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PrivateTypeOfNumber(value.privateTypeOfNumber, $.BER),
         /* REQUIRED   */ _encode_NumberDigits(value.privateNumberDigits, $.BER)
@@ -163,6 +171,5 @@ function _encode_PrivatePartyNumber (value: PrivatePartyNumber, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_PrivatePartyNumber(value, elGetter);
 }
-
 
 /* eslint-enable */

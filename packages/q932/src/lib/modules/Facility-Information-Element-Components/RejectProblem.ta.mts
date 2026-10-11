@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RejectProblem
@@ -336,6 +333,5 @@ export
 const returnError_mistypedParameter: RejectProblem = RejectProblem_returnError_mistypedParameter; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RejectProblem: $.ASN1Decoder<RejectProblem> = $._decodeInteger;
 export const _encode_RejectProblem: $.ASN1Encoder<RejectProblem> = $._encodeInteger;
-
 
 /* eslint-enable */
