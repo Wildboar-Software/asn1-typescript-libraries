@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary MMSSubject
@@ -23,6 +20,5 @@ type MMSSubject = UTF8String; // UTF8String
 export const _decode_MMSSubject: $.ASN1Decoder<MMSSubject> = $._decodeUTF8String;
 
 export const _encode_MMSSubject: $.ASN1Encoder<MMSSubject> = $._encodeUTF8String;
-
 
 /* eslint-enable */

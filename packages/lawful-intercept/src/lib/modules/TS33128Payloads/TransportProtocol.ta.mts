@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TransportProtocol
@@ -101,6 +97,5 @@ const tCP: TransportProtocol = TransportProtocol.tCP; /* SHORT_NAMED_ENUMERATED_
 export const _decode_TransportProtocol: $.ASN1Decoder<TransportProtocol> = $._decodeEnumerated;
 
 export const _encode_TransportProtocol: $.ASN1Encoder<TransportProtocol> = $._encodeEnumerated;
-
 
 /* eslint-enable */

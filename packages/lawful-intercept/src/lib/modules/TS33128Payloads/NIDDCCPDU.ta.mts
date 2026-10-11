@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary NIDDCCPDU
@@ -23,6 +20,5 @@ type NIDDCCPDU = OCTET_STRING; // OctetStringType
 export const _decode_NIDDCCPDU: $.ASN1Decoder<NIDDCCPDU> = $._decodeOctetString;
 
 export const _encode_NIDDCCPDU: $.ASN1Encoder<NIDDCCPDU> = $._encodeOctetString;
-
 
 /* eslint-enable */

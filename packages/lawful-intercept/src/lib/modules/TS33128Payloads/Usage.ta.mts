@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary Usage
@@ -161,6 +157,5 @@ const successMethodNotDetermined: Usage = Usage.successMethodNotDetermined; /* S
 export const _decode_Usage: $.ASN1Decoder<Usage> = $._decodeEnumerated;
 
 export const _encode_Usage: $.ASN1Encoder<Usage> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary NCI
@@ -23,6 +20,5 @@ type NCI = BIT_STRING;
 export const _decode_NCI: $.ASN1Decoder<NCI> = $._decodeBitString;
 
 export const _encode_NCI: $.ASN1Encoder<NCI> = $._encodeBitString;
-
 
 /* eslint-enable */

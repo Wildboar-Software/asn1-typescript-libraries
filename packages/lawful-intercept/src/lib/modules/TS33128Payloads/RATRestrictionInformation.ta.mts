@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    BIT_STRING
+    BIT_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RATRestrictionInformation
@@ -23,6 +20,5 @@ type RATRestrictionInformation = BIT_STRING;
 export const _decode_RATRestrictionInformation: $.ASN1Decoder<RATRestrictionInformation> = $._decodeBitString;
 
 export const _encode_RATRestrictionInformation: $.ASN1Encoder<RATRestrictionInformation> = $._encodeBitString;
-
 
 /* eslint-enable */

@@ -21,7 +21,6 @@ import { EncryptionContainer, _decode_EncryptionContainer, _encode_EncryptionCon
 import { HI4Payload, _decode_HI4Payload, _encode_HI4Payload } from "../LI-PS-PDU/HI4Payload.ta.mjs";
 // export { HI4Payload, _decode_HI4Payload, _encode_HI4Payload } from "../LI-PS-PDU/HI4Payload.ta.mjs";
 
-
 /**
  * @summary Payload
  * @description
@@ -104,6 +103,5 @@ function _encode_Payload (value: Payload, elGetter: $.ASN1Encoder<any>): _Elemen
 }, $.BER); }
     return _cached_encoder_for_Payload(value, elGetter);
 }
-
 
 /* eslint-enable */

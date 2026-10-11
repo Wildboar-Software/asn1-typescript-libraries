@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_MBMSinformation_mbmsLeavingReason {
@@ -68,6 +65,5 @@ const bMSCorNetworkTerminated: MBMSinformation_mbmsLeavingReason = MBMSinformati
 export const _decode_MBMSinformation_mbmsLeavingReason: $.ASN1Decoder<MBMSinformation_mbmsLeavingReason> = $._decodeEnumerated;
 
 export const _encode_MBMSinformation_mbmsLeavingReason: $.ASN1Encoder<MBMSinformation_mbmsLeavingReason> = $._encodeEnumerated;
-
 
 /* eslint-enable */

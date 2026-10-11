@@ -15,7 +15,6 @@ import { WlanLocationAttributes, _decode_WlanLocationAttributes, _encode_WlanLoc
 // export { WlanLocationAttributes, _decode_WlanLocationAttributes, _encode_WlanLocationAttributes } from "../LI-PS-PDU/WlanLocationAttributes.ta.mjs";
 // export { UserLocation, _decode_UserLocation, _encode_UserLocation } from "../TS33128Payloads/UserLocation.ta.mjs";
 
-
 /**
  * @summary Location
  * @description
@@ -107,7 +106,6 @@ class Location {
     public static _from_object (_o: { [_K in keyof (Location)]: (Location)[_K] }): Location {
         return new Location(_o.umtsHI2Location, _o.epsLocation, _o.wlanLocationAttributes, _o.eTSI671HI2Location, _o.threeGPP33128UserLocation, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -235,6 +233,5 @@ function _encode_Location (value: Location, elGetter: $.ASN1Encoder<any>): _Elem
 }; }
     return _cached_encoder_for_Location(value, elGetter);
 }
-
 
 /* eslint-enable */

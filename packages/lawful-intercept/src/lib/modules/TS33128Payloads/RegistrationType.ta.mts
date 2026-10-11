@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RegistrationType
@@ -121,6 +117,5 @@ const deregistration: RegistrationType = RegistrationType.deregistration; /* SHO
 export const _decode_RegistrationType: $.ASN1Decoder<RegistrationType> = $._decodeEnumerated;
 
 export const _encode_RegistrationType: $.ASN1Encoder<RegistrationType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

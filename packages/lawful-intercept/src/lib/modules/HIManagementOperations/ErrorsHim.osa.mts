@@ -9,7 +9,6 @@ import { unknown_parameter } from "../HIManagementOperations/unknown-parameter.o
 import { erroneous_parameter } from "../HIManagementOperations/erroneous-parameter.oa.mjs";
 // export { erroneous_parameter } from "../HIManagementOperations/erroneous-parameter.oa.mjs";
 
-
 /**
  * @summary ErrorsHim
  * @description

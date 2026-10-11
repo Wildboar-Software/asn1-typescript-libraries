@@ -9,7 +9,6 @@ import * as EpsHI2Operations from "../EpsHI2Operations/index.mjs";
 // export { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "../EpsHI2Operations/IRI-Parameters.ta.mjs";
 // export { EpsIRIsContent, _decode_EpsIRIsContent, _encode_EpsIRIsContent } from "../EpsHI2Operations/EpsIRIsContent.ta.mjs";
 
-
 /**
  * @summary EPSIRI
  * @description
@@ -66,6 +65,5 @@ function _encode_EPSIRI (value: EPSIRI, elGetter: $.ASN1Encoder<any>): _Element 
 }, $.BER); }
     return _cached_encoder_for_EPSIRI(value, elGetter);
 }
-
 
 /* eslint-enable */

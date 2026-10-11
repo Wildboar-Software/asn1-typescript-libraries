@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary HSMFURI
@@ -23,6 +20,5 @@ type HSMFURI = UTF8String; // UTF8String
 export const _decode_HSMFURI: $.ASN1Decoder<HSMFURI> = $._decodeUTF8String;
 
 export const _encode_HSMFURI: $.ASN1Encoder<HSMFURI> = $._encodeUTF8String;
-
 
 /* eslint-enable */

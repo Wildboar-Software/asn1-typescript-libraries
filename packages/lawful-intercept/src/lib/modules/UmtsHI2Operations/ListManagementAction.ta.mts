@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_ListManagementAction {
@@ -122,6 +119,5 @@ const notify: ListManagementAction = ListManagementAction_notify; /* SHORT_NAMED
 export const _decode_ListManagementAction: $.ASN1Decoder<ListManagementAction> = $._decodeEnumerated;
 
 export const _encode_ListManagementAction: $.ASN1Encoder<ListManagementAction> = $._encodeEnumerated;
-
 
 /* eslint-enable */

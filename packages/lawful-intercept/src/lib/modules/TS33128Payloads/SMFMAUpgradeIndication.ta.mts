@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    BOOLEAN
+    BOOLEAN,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SMFMAUpgradeIndication
@@ -23,6 +20,5 @@ type SMFMAUpgradeIndication = BOOLEAN; // BooleanType
 export const _decode_SMFMAUpgradeIndication: $.ASN1Decoder<SMFMAUpgradeIndication> = $._decodeBoolean;
 
 export const _encode_SMFMAUpgradeIndication: $.ASN1Encoder<SMFMAUpgradeIndication> = $._encodeBoolean;
-
 
 /* eslint-enable */

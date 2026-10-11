@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_GcseEvent {
@@ -158,6 +155,5 @@ const deactivationOfGcseGroupComms: GcseEvent = GcseEvent_deactivationOfGcseGrou
 export const _decode_GcseEvent: $.ASN1Decoder<GcseEvent> = $._decodeEnumerated;
 
 export const _encode_GcseEvent: $.ASN1Encoder<GcseEvent> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary UDMInfoRequestType
@@ -121,6 +117,5 @@ const other: UDMInfoRequestType = UDMInfoRequestType.other; /* SHORT_NAMED_ENUME
 export const _decode_UDMInfoRequestType: $.ASN1Decoder<UDMInfoRequestType> = $._decodeEnumerated;
 
 export const _encode_UDMInfoRequestType: $.ASN1Encoder<UDMInfoRequestType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

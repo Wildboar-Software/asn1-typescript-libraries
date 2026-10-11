@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary GNbID
@@ -23,6 +20,5 @@ type GNbID = BIT_STRING;
 export const _decode_GNbID: $.ASN1Decoder<GNbID> = $._decodeBitString;
 
 export const _encode_GNbID: $.ASN1Encoder<GNbID> = $._encodeBitString;
-
 
 /* eslint-enable */

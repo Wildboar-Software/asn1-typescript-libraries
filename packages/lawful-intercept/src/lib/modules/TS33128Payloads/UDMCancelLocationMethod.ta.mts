@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary UDMCancelLocationMethod
@@ -141,6 +137,5 @@ const unknown: UDMCancelLocationMethod = UDMCancelLocationMethod.unknown; /* SHO
 export const _decode_UDMCancelLocationMethod: $.ASN1Decoder<UDMCancelLocationMethod> = $._decodeEnumerated;
 
 export const _encode_UDMCancelLocationMethod: $.ASN1Encoder<UDMCancelLocationMethod> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary UDMDefinedCause
@@ -161,6 +157,5 @@ const other: UDMDefinedCause = UDMDefinedCause.other; /* SHORT_NAMED_ENUMERATED_
 export const _decode_UDMDefinedCause: $.ASN1Decoder<UDMDefinedCause> = $._decodeEnumerated;
 
 export const _encode_UDMDefinedCause: $.ASN1Encoder<UDMDefinedCause> = $._encodeEnumerated;
-
 
 /* eslint-enable */

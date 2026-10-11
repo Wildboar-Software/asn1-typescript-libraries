@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_PayloadDirection {
@@ -126,6 +123,5 @@ const notapplicable: PayloadDirection = PayloadDirection_notapplicable; /* SHORT
 export const _decode_PayloadDirection: $.ASN1Decoder<PayloadDirection> = $._decodeEnumerated;
 
 export const _encode_PayloadDirection: $.ASN1Encoder<PayloadDirection> = $._encodeEnumerated;
-
 
 /* eslint-enable */

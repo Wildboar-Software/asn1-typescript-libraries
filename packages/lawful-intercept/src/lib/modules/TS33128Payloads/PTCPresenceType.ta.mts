@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PTCPresenceType
@@ -101,6 +97,5 @@ const pTCGroup: PTCPresenceType = PTCPresenceType.pTCGroup; /* SHORT_NAMED_ENUME
 export const _decode_PTCPresenceType: $.ASN1Decoder<PTCPresenceType> = $._decodeEnumerated;
 
 export const _encode_PTCPresenceType: $.ASN1Encoder<PTCPresenceType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

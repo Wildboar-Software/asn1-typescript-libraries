@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_MediaModification {
@@ -104,6 +101,5 @@ const unknown: MediaModification = MediaModification_unknown; /* SHORT_NAMED_ENU
 export const _decode_MediaModification: $.ASN1Decoder<MediaModification> = $._decodeEnumerated;
 
 export const _encode_MediaModification: $.ASN1Encoder<MediaModification> = $._encodeEnumerated;
-
 
 /* eslint-enable */

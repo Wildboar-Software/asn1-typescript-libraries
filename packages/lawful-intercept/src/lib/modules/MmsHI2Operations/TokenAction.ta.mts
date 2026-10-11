@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_TokenAction {
@@ -87,6 +84,5 @@ const filterToken: TokenAction = TokenAction_filterToken; /* SHORT_NAMED_ENUMERA
 export const _decode_TokenAction: $.ASN1Decoder<TokenAction> = $._decodeEnumerated;
 
 export const _encode_TokenAction: $.ASN1Encoder<TokenAction> = $._encodeEnumerated;
-
 
 /* eslint-enable */

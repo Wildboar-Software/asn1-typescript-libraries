@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TLS13KDFAlgorithm
@@ -81,6 +77,5 @@ const rfc5869: TLS13KDFAlgorithm = TLS13KDFAlgorithm.rfc5869; /* SHORT_NAMED_ENU
 export const _decode_TLS13KDFAlgorithm: $.ASN1Decoder<TLS13KDFAlgorithm> = $._decodeEnumerated;
 
 export const _encode_TLS13KDFAlgorithm: $.ASN1Encoder<TLS13KDFAlgorithm> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RCSSessionEndpoints
@@ -121,6 +117,5 @@ const localAndRemote: RCSSessionEndpoints = RCSSessionEndpoints.localAndRemote; 
 export const _decode_RCSSessionEndpoints: $.ASN1Decoder<RCSSessionEndpoints> = $._decodeEnumerated;
 
 export const _encode_RCSSessionEndpoints: $.ASN1Encoder<RCSSessionEndpoints> = $._encodeEnumerated;
-
 
 /* eslint-enable */

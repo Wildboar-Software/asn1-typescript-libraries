@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SCEFFailureCause
@@ -181,6 +177,5 @@ const portNotAssociatedWithSpecifiedApplication: SCEFFailureCause = SCEFFailureC
 export const _decode_SCEFFailureCause: $.ASN1Decoder<SCEFFailureCause> = $._decodeEnumerated;
 
 export const _encode_SCEFFailureCause: $.ASN1Encoder<SCEFFailureCause> = $._encodeEnumerated;
-
 
 /* eslint-enable */

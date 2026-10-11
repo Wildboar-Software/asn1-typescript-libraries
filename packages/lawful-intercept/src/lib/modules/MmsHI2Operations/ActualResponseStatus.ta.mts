@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_ActualResponseStatus {
@@ -501,6 +498,5 @@ const errorPermanentLackOfPrepaid: ActualResponseStatus = ActualResponseStatus_e
 export const _decode_ActualResponseStatus: $.ASN1Decoder<ActualResponseStatus> = $._decodeEnumerated;
 
 export const _encode_ActualResponseStatus: $.ASN1Encoder<ActualResponseStatus> = $._encodeEnumerated;
-
 
 /* eslint-enable */

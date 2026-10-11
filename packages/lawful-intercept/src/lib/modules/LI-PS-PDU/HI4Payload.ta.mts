@@ -8,7 +8,6 @@ import * as TS33128Payloads from "../TS33128Payloads/LINotificationPayload.ta.mj
 
 // export { LINotificationPayload, _decode_LINotificationPayload, _encode_LINotificationPayload } from "../TS33128Payloads/LINotificationPayload.ta.mjs";
 
-
 /**
  * @summary HI4Payload
  * @description
@@ -60,6 +59,5 @@ function _encode_HI4Payload (value: HI4Payload, elGetter: $.ASN1Encoder<any>): _
 }, $.BER); }
     return _cached_encoder_for_HI4Payload(value, elGetter);
 }
-
 
 /* eslint-enable */

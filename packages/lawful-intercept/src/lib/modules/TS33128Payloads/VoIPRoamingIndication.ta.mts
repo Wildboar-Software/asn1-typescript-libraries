@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary VoIPRoamingIndication
@@ -121,6 +117,5 @@ const roamingN9HR: VoIPRoamingIndication = VoIPRoamingIndication.roamingN9HR; /*
 export const _decode_VoIPRoamingIndication: $.ASN1Decoder<VoIPRoamingIndication> = $._decodeEnumerated;
 
 export const _encode_VoIPRoamingIndication: $.ASN1Encoder<VoIPRoamingIndication> = $._encodeEnumerated;
-
 
 /* eslint-enable */

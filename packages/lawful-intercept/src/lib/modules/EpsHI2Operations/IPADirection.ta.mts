@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_IPADirection {
@@ -68,6 +65,5 @@ const fromTarget: IPADirection = IPADirection_fromTarget; /* SHORT_NAMED_ENUMERA
 export const _decode_IPADirection: $.ASN1Decoder<IPADirection> = $._decodeEnumerated;
 
 export const _encode_IPADirection: $.ASN1Encoder<IPADirection> = $._encodeEnumerated;
-
 
 /* eslint-enable */

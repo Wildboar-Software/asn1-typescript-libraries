@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TLS13ExtensionType
@@ -501,6 +497,5 @@ const keyShare: TLS13ExtensionType = TLS13ExtensionType.keyShare; /* SHORT_NAMED
 export const _decode_TLS13ExtensionType: $.ASN1Decoder<TLS13ExtensionType> = $._decodeEnumerated;
 
 export const _encode_TLS13ExtensionType: $.ASN1Encoder<TLS13ExtensionType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

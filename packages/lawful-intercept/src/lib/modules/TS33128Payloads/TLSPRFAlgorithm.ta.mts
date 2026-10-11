@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TLSPRFAlgorithm
@@ -81,6 +77,5 @@ const rfc5246: TLSPRFAlgorithm = TLSPRFAlgorithm.rfc5246; /* SHORT_NAMED_ENUMERA
 export const _decode_TLSPRFAlgorithm: $.ASN1Decoder<TLSPRFAlgorithm> = $._decodeEnumerated;
 
 export const _encode_TLSPRFAlgorithm: $.ASN1Encoder<TLSPRFAlgorithm> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -10,7 +10,6 @@ import * as UmtsCS_HI2Operations from "../UmtsCS-HI2Operations/index.mjs";
 // export { UmtsIRIsContent, _decode_UmtsIRIsContent, _encode_UmtsIRIsContent } from "../UmtsHI2Operations/UmtsIRIsContent.ta.mjs";
 // export { UmtsCS_IRIsContent, _decode_UmtsCS_IRIsContent, _encode_UmtsCS_IRIsContent } from "../UmtsCS-HI2Operations/UmtsCS-IRIsContent.ta.mjs";
 
-
 /**
  * @summary UMTSIRI
  * @description
@@ -75,6 +74,5 @@ function _encode_UMTSIRI (value: UMTSIRI, elGetter: $.ASN1Encoder<any>): _Elemen
 }, $.BER); }
     return _cached_encoder_for_UMTSIRI(value, elGetter);
 }
-
 
 /* eslint-enable */

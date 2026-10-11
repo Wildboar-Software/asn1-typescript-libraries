@@ -5,9 +5,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import * as Common_Parameters from "../Common-Parameters/index.mjs";
 
-
-
-
 /**
  * @summary LawfulInterceptionIdentifier
  * @description
@@ -49,6 +46,5 @@ function _encode_LawfulInterceptionIdentifier (value: LawfulInterceptionIdentifi
     if (!_cached_encoder_for_LawfulInterceptionIdentifier) { _cached_encoder_for_LawfulInterceptionIdentifier = Common_Parameters._encode_LIID; }
     return _cached_encoder_for_LawfulInterceptionIdentifier(value, elGetter);
 }
-
 
 /* eslint-enable */

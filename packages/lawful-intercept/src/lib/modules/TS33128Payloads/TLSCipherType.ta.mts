@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TLSCipherType
@@ -121,6 +117,5 @@ const aead: TLSCipherType = TLSCipherType.aead; /* SHORT_NAMED_ENUMERATED_VALUE 
 export const _decode_TLSCipherType: $.ASN1Decoder<TLSCipherType> = $._decodeEnumerated;
 
 export const _encode_TLSCipherType: $.ASN1Encoder<TLSCipherType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

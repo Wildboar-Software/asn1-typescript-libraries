@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_IMSevent {
@@ -269,6 +266,5 @@ const locationInformationRequest: IMSevent = IMSevent_locationInformationRequest
 export const _decode_IMSevent: $.ASN1Decoder<IMSevent> = $._decodeEnumerated;
 
 export const _encode_IMSevent: $.ASN1Encoder<IMSevent> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -9,7 +9,6 @@ import * as ProSeHI2Operations from "../ProSeHI2Operations/index.mjs";
 // export { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "../ProSeHI2Operations/IRI-Parameters.ta.mjs";
 // export { ProSeIRIsContent, _decode_ProSeIRIsContent, _encode_ProSeIRIsContent } from "../ProSeHI2Operations/ProSeIRIsContent.ta.mjs";
 
-
 /**
  * @summary ProSeIRI
  * @description
@@ -66,6 +65,5 @@ function _encode_ProSeIRI (value: ProSeIRI, elGetter: $.ASN1Encoder<any>): _Elem
 }, $.BER); }
     return _cached_encoder_for_ProSeIRI(value, elGetter);
 }
-
 
 /* eslint-enable */

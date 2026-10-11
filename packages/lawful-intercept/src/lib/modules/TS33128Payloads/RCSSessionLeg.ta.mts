@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RCSSessionLeg
@@ -101,6 +97,5 @@ const localLeg: RCSSessionLeg = RCSSessionLeg.localLeg; /* SHORT_NAMED_ENUMERATE
 export const _decode_RCSSessionLeg: $.ASN1Decoder<RCSSessionLeg> = $._decodeEnumerated;
 
 export const _encode_RCSSessionLeg: $.ASN1Encoder<RCSSessionLeg> = $._encodeEnumerated;
-
 
 /* eslint-enable */

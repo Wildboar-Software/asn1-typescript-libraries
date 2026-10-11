@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_StoreStatus {
@@ -86,6 +83,5 @@ const high: StoreStatus = StoreStatus_high; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_StoreStatus: $.ASN1Decoder<StoreStatus> = $._decodeEnumerated;
 
 export const _encode_StoreStatus: $.ASN1Encoder<StoreStatus> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary UASNFProcedure
@@ -201,6 +197,5 @@ const authenticationNotification: UASNFProcedure = UASNFProcedure.authentication
 export const _decode_UASNFProcedure: $.ASN1Decoder<UASNFProcedure> = $._decodeEnumerated;
 
 export const _encode_UASNFProcedure: $.ASN1Encoder<UASNFProcedure> = $._encodeEnumerated;
-
 
 /* eslint-enable */

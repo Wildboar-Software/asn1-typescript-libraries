@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PTCFloorActivity
@@ -221,6 +217,5 @@ const tBCPRelease: PTCFloorActivity = PTCFloorActivity.tBCPRelease; /* SHORT_NAM
 export const _decode_PTCFloorActivity: $.ASN1Decoder<PTCFloorActivity> = $._decodeEnumerated;
 
 export const _encode_PTCFloorActivity: $.ASN1Encoder<PTCFloorActivity> = $._encodeEnumerated;
-
 
 /* eslint-enable */

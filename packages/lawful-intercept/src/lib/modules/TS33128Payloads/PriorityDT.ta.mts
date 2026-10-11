@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PriorityDT
@@ -101,6 +97,5 @@ const priority: PriorityDT = PriorityDT.priority; /* SHORT_NAMED_ENUMERATED_VALU
 export const _decode_PriorityDT: $.ASN1Decoder<PriorityDT> = $._decodeEnumerated;
 
 export const _encode_PriorityDT: $.ASN1Encoder<PriorityDT> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary YesNo
@@ -23,6 +20,5 @@ type YesNo = BOOLEAN; // BooleanType
 export const _decode_YesNo: $.ASN1Decoder<YesNo> = $._decodeBoolean;
 
 export const _encode_YesNo: $.ASN1Encoder<YesNo> = $._encodeBoolean;
-
 
 /* eslint-enable */

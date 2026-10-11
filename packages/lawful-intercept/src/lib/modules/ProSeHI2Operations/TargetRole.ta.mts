@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_TargetRole {
@@ -68,6 +65,5 @@ const monitoringUE: TargetRole = TargetRole_monitoringUE; /* SHORT_NAMED_ENUMERA
 export const _decode_TargetRole: $.ASN1Decoder<TargetRole> = $._decodeEnumerated;
 
 export const _encode_TargetRole: $.ASN1Encoder<TargetRole> = $._encodeEnumerated;
-
 
 /* eslint-enable */

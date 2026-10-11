@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_PTCType {
@@ -518,6 +515,5 @@ const pTCEncryption: PTCType = PTCType_pTCEncryption; /* SHORT_NAMED_ENUMERATED_
 export const _decode_PTCType: $.ASN1Decoder<PTCType> = $._decodeEnumerated;
 
 export const _encode_PTCType: $.ASN1Encoder<PTCType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

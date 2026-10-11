@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_CCLink_State {
@@ -107,6 +104,5 @@ const lack_of_resource: CCLink_State = CCLink_State_lack_of_resource; /* SHORT_N
 export const _decode_CCLink_State: $.ASN1Decoder<CCLink_State> = $._decodeEnumerated;
 
 export const _encode_CCLink_State: $.ASN1Encoder<CCLink_State> = $._encodeEnumerated;
-
 
 /* eslint-enable */

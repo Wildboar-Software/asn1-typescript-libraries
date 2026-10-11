@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_PreEstStatus {
@@ -86,6 +83,5 @@ const released: PreEstStatus = PreEstStatus_released; /* SHORT_NAMED_ENUMERATED_
 export const _decode_PreEstStatus: $.ASN1Decoder<PreEstStatus> = $._decodeEnumerated;
 
 export const _encode_PreEstStatus: $.ASN1Encoder<PreEstStatus> = $._encodeEnumerated;
-
 
 /* eslint-enable */

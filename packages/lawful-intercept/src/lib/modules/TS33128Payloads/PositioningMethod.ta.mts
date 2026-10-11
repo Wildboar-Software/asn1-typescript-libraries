@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PositioningMethod
@@ -441,6 +437,5 @@ const sLRT: PositioningMethod = PositioningMethod.sLRT; /* SHORT_NAMED_ENUMERATE
 export const _decode_PositioningMethod: $.ASN1Decoder<PositioningMethod> = $._decodeEnumerated;
 
 export const _encode_PositioningMethod: $.ASN1Encoder<PositioningMethod> = $._encodeEnumerated;
-
 
 /* eslint-enable */

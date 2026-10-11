@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_InterceptionType {
@@ -139,6 +136,5 @@ const voiceAndDataIriOnly: InterceptionType = InterceptionType_voiceAndDataIriOn
 export const _decode_InterceptionType: $.ASN1Decoder<InterceptionType> = $._decodeEnumerated;
 
 export const _encode_InterceptionType: $.ASN1Encoder<InterceptionType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

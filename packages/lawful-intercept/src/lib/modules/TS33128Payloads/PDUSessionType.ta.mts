@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PDUSessionType
@@ -161,6 +157,5 @@ const ethernet: PDUSessionType = PDUSessionType.ethernet; /* SHORT_NAMED_ENUMERA
 export const _decode_PDUSessionType: $.ASN1Decoder<PDUSessionType> = $._decodeEnumerated;
 
 export const _encode_PDUSessionType: $.ASN1Encoder<PDUSessionType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

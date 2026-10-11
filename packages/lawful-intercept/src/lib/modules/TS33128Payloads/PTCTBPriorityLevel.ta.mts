@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PTCTBPriorityLevel
@@ -141,6 +137,5 @@ const listenOnly: PTCTBPriorityLevel = PTCTBPriorityLevel.listenOnly; /* SHORT_N
 export const _decode_PTCTBPriorityLevel: $.ASN1Decoder<PTCTBPriorityLevel> = $._decodeEnumerated;
 
 export const _encode_PTCTBPriorityLevel: $.ASN1Encoder<PTCTBPriorityLevel> = $._encodeEnumerated;
-
 
 /* eslint-enable */

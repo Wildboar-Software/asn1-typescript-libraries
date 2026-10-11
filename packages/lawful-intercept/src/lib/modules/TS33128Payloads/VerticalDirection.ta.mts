@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary VerticalDirection
@@ -101,6 +97,5 @@ const downward: VerticalDirection = VerticalDirection.downward; /* SHORT_NAMED_E
 export const _decode_VerticalDirection: $.ASN1Decoder<VerticalDirection> = $._decodeEnumerated;
 
 export const _encode_VerticalDirection: $.ASN1Encoder<VerticalDirection> = $._encodeEnumerated;
-
 
 /* eslint-enable */

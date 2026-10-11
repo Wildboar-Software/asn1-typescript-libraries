@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SMSNFType
@@ -121,6 +117,5 @@ const sMSRouter: SMSNFType = SMSNFType.sMSRouter; /* SHORT_NAMED_ENUMERATED_VALU
 export const _decode_SMSNFType: $.ASN1Decoder<SMSNFType> = $._decodeEnumerated;
 
 export const _encode_SMSNFType: $.ASN1Encoder<SMSNFType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

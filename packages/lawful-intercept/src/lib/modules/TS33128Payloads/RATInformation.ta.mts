@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RATInformation
@@ -181,6 +177,5 @@ const nROTHERSAT: RATInformation = RATInformation.nROTHERSAT; /* SHORT_NAMED_ENU
 export const _decode_RATInformation: $.ASN1Decoder<RATInformation> = $._decodeEnumerated;
 
 export const _encode_RATInformation: $.ASN1Encoder<RATInformation> = $._encodeEnumerated;
-
 
 /* eslint-enable */

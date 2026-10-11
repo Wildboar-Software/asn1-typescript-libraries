@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_RegistrationOutcome {
@@ -68,6 +65,5 @@ const failure: RegistrationOutcome = RegistrationOutcome_failure; /* SHORT_NAMED
 export const _decode_RegistrationOutcome: $.ASN1Decoder<RegistrationOutcome> = $._decodeEnumerated;
 
 export const _encode_RegistrationOutcome: $.ASN1Encoder<RegistrationOutcome> = $._encodeEnumerated;
-
 
 /* eslint-enable */

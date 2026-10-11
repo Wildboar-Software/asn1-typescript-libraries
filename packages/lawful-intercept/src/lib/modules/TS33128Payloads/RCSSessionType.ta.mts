@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RCSSessionType
@@ -101,6 +97,5 @@ const oneTo1Chat: RCSSessionType = RCSSessionType.oneTo1Chat; /* SHORT_NAMED_ENU
 export const _decode_RCSSessionType: $.ASN1Decoder<RCSSessionType> = $._decodeEnumerated;
 
 export const _encode_RCSSessionType: $.ASN1Encoder<RCSSessionType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

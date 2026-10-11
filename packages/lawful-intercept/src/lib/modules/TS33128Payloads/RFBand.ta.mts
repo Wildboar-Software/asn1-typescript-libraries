@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    UTF8String
+    UTF8String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RFBand
@@ -23,6 +20,5 @@ type RFBand = UTF8String; // UTF8String
 export const _decode_RFBand: $.ASN1Decoder<RFBand> = $._decodeUTF8String;
 
 export const _encode_RFBand: $.ASN1Encoder<RFBand> = $._encodeUTF8String;
-
 
 /* eslint-enable */

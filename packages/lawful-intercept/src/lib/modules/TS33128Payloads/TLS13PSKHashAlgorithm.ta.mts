@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TLS13PSKHashAlgorithm
@@ -121,6 +117,5 @@ const sha512: TLS13PSKHashAlgorithm = TLS13PSKHashAlgorithm.sha512; /* SHORT_NAM
 export const _decode_TLS13PSKHashAlgorithm: $.ASN1Decoder<TLS13PSKHashAlgorithm> = $._decodeEnumerated;
 
 export const _encode_TLS13PSKHashAlgorithm: $.ASN1Encoder<TLS13PSKHashAlgorithm> = $._encodeEnumerated;
-
 
 /* eslint-enable */

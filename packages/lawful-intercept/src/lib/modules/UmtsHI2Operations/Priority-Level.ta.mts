@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_Priority_Level {
@@ -104,6 +101,5 @@ const listen_only: Priority_Level = Priority_Level_listen_only; /* SHORT_NAMED_E
 export const _decode_Priority_Level: $.ASN1Decoder<Priority_Level> = $._decodeEnumerated;
 
 export const _encode_Priority_Level: $.ASN1Encoder<Priority_Level> = $._encodeEnumerated;
-
 
 /* eslint-enable */

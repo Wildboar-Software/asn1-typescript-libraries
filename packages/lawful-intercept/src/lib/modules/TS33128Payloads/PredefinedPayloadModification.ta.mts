@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PredefinedPayloadModification
@@ -361,6 +357,5 @@ const threeGPP2SMSUserDataRedaction: PredefinedPayloadModification = PredefinedP
 export const _decode_PredefinedPayloadModification: $.ASN1Decoder<PredefinedPayloadModification> = $._decodeEnumerated;
 
 export const _encode_PredefinedPayloadModification: $.ASN1Encoder<PredefinedPayloadModification> = $._encodeEnumerated;
-
 
 /* eslint-enable */

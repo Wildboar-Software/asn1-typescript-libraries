@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_ListManagementType {
@@ -122,6 +119,5 @@ const requestSuccessful: ListManagementType = ListManagementType_requestSuccessf
 export const _decode_ListManagementType: $.ASN1Decoder<ListManagementType> = $._decodeEnumerated;
 
 export const _encode_ListManagementType: $.ASN1Encoder<ListManagementType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

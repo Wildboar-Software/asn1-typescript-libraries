@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PeriodicCommunicationIndicator
@@ -101,6 +97,5 @@ const nonPeriodic: PeriodicCommunicationIndicator = PeriodicCommunicationIndicat
 export const _decode_PeriodicCommunicationIndicator: $.ASN1Decoder<PeriodicCommunicationIndicator> = $._decodeEnumerated;
 
 export const _encode_PeriodicCommunicationIndicator: $.ASN1Encoder<PeriodicCommunicationIndicator> = $._encodeEnumerated;
-
 
 /* eslint-enable */

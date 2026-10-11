@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_IPAddress_iP_type {
@@ -68,6 +65,5 @@ const iPV6: IPAddress_iP_type = IPAddress_iP_type_iPV6; /* SHORT_NAMED_ENUMERATE
 export const _decode_IPAddress_iP_type: $.ASN1Decoder<IPAddress_iP_type> = $._decodeEnumerated;
 
 export const _encode_IPAddress_iP_type: $.ASN1Encoder<IPAddress_iP_type> = $._encodeEnumerated;
-
 
 /* eslint-enable */

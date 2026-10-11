@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RemoteUEIDFormat
@@ -101,6 +97,5 @@ const sixtyFourBitString: RemoteUEIDFormat = RemoteUEIDFormat.sixtyFourBitString
 export const _decode_RemoteUEIDFormat: $.ASN1Decoder<RemoteUEIDFormat> = $._decodeEnumerated;
 
 export const _encode_RemoteUEIDFormat: $.ASN1Encoder<RemoteUEIDFormat> = $._encodeEnumerated;
-
 
 /* eslint-enable */

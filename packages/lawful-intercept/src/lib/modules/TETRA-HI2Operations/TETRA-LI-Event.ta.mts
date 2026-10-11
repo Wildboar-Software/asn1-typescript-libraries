@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_TETRA_LI_Event {
@@ -355,6 +352,5 @@ const dMO: TETRA_LI_Event = TETRA_LI_Event_dMO; /* SHORT_NAMED_ENUMERATED_VALUE 
 export const _decode_TETRA_LI_Event: $.ASN1Decoder<TETRA_LI_Event> = $._decodeEnumerated;
 
 export const _encode_TETRA_LI_Event: $.ASN1Encoder<TETRA_LI_Event> = $._encodeEnumerated;
-
 
 /* eslint-enable */

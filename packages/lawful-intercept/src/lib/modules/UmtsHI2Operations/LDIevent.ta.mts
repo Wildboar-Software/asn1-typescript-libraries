@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_LDIevent {
@@ -68,6 +65,5 @@ const targetLeavesIA: LDIevent = LDIevent_targetLeavesIA; /* SHORT_NAMED_ENUMERA
 export const _decode_LDIevent: $.ASN1Decoder<LDIevent> = $._decodeEnumerated;
 
 export const _encode_LDIevent: $.ASN1Encoder<LDIevent> = $._encodeEnumerated;
-
 
 /* eslint-enable */

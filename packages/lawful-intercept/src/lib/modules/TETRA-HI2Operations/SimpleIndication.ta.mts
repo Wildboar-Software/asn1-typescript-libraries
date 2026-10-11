@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_SimpleIndication {
@@ -165,6 +162,5 @@ const answer_Indication: SimpleIndication = SimpleIndication_answer_Indication; 
 export const _decode_SimpleIndication: $.ASN1Decoder<SimpleIndication> = $._decodeEnumerated;
 
 export const _encode_SimpleIndication: $.ASN1Encoder<SimpleIndication> = $._encodeEnumerated;
-
 
 /* eslint-enable */

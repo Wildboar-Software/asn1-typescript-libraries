@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_I_WLANEvent {
@@ -141,6 +138,5 @@ const packetDataHeaderInformation: I_WLANEvent = I_WLANEvent_packetDataHeaderInf
 export const _decode_I_WLANEvent: $.ASN1Decoder<I_WLANEvent> = $._decodeEnumerated;
 
 export const _encode_I_WLANEvent: $.ASN1Encoder<I_WLANEvent> = $._encodeEnumerated;
-
 
 /* eslint-enable */

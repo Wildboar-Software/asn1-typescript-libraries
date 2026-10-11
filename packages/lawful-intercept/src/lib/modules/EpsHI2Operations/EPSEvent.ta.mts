@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_EPSEvent {
@@ -934,6 +931,5 @@ const scefRequestednonIPPDNDisconnection: EPSEvent = EPSEvent_scefRequestednonIP
 export const _decode_EPSEvent: $.ASN1Decoder<EPSEvent> = $._decodeEnumerated;
 
 export const _encode_EPSEvent: $.ASN1Encoder<EPSEvent> = $._encodeEnumerated;
-
 
 /* eslint-enable */

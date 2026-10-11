@@ -401,7 +401,6 @@ import { IMSDataChannelApplicationResponse, _decode_IMSDataChannelApplicationRes
 import { UASNFInformation, _decode_UASNFInformation, _encode_UASNFInformation } from "../TS33128Payloads/UASNFInformation.ta.mjs";
 // export { UASNFInformation, _decode_UASNFInformation, _encode_UASNFInformation } from "../TS33128Payloads/UASNFInformation.ta.mjs";
 
-
 /**
  * @summary XIRIEvent
  * @description
@@ -1353,6 +1352,5 @@ function _encode_XIRIEvent (value: XIRIEvent, elGetter: $.ASN1Encoder<any>): _El
 }, $.BER); }
     return _cached_encoder_for_XIRIEvent(value, elGetter);
 }
-
 
 /* eslint-enable */

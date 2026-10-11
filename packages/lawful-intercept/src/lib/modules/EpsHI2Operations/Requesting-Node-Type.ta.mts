@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_Requesting_Node_Type {
@@ -122,6 +119,5 @@ const sGSN: Requesting_Node_Type = Requesting_Node_Type_sGSN; /* SHORT_NAMED_ENU
 export const _decode_Requesting_Node_Type: $.ASN1Decoder<Requesting_Node_Type> = $._decodeEnumerated;
 
 export const _encode_Requesting_Node_Type: $.ASN1Encoder<Requesting_Node_Type> = $._encodeEnumerated;
-
 
 /* eslint-enable */

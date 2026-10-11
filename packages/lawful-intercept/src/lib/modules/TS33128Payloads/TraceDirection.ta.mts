@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TraceDirection
@@ -141,6 +137,5 @@ const fromMME: TraceDirection = TraceDirection.fromMME; /* SHORT_NAMED_ENUMERATE
 export const _decode_TraceDirection: $.ASN1Decoder<TraceDirection> = $._decodeEnumerated;
 
 export const _encode_TraceDirection: $.ASN1Encoder<TraceDirection> = $._encodeEnumerated;
-
 
 /* eslint-enable */

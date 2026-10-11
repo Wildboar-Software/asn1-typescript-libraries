@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ABNFRuleLocation
@@ -23,6 +20,5 @@ type ABNFRuleLocation = UTF8String; // UTF8String
 export const _decode_ABNFRuleLocation: $.ASN1Decoder<ABNFRuleLocation> = $._decodeUTF8String;
 
 export const _encode_ABNFRuleLocation: $.ASN1Encoder<ABNFRuleLocation> = $._encodeUTF8String;
-
 
 /* eslint-enable */

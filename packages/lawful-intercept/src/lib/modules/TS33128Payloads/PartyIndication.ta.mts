@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PartyIndication
@@ -101,6 +97,5 @@ const calledParty: PartyIndication = PartyIndication.calledParty; /* SHORT_NAMED
 export const _decode_PartyIndication: $.ASN1Decoder<PartyIndication> = $._decodeEnumerated;
 
 export const _encode_PartyIndication: $.ASN1Encoder<PartyIndication> = $._encodeEnumerated;
-
 
 /* eslint-enable */

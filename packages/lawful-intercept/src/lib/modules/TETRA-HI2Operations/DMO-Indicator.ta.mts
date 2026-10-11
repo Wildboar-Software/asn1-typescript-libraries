@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_DMO_Indicator {
@@ -140,6 +137,5 @@ const dMOSTATETTXINHIBITC: DMO_Indicator = DMO_Indicator_dMOSTATETTXINHIBITC; /*
 export const _decode_DMO_Indicator: $.ASN1Decoder<DMO_Indicator> = $._decodeEnumerated;
 
 export const _encode_DMO_Indicator: $.ASN1Encoder<DMO_Indicator> = $._encodeEnumerated;
-
 
 /* eslint-enable */

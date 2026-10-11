@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ProtocolUsedByRemoteUE
@@ -161,6 +157,5 @@ const ethernet: ProtocolUsedByRemoteUE = ProtocolUsedByRemoteUE.ethernet; /* SHO
 export const _decode_ProtocolUsedByRemoteUE: $.ASN1Decoder<ProtocolUsedByRemoteUE> = $._decodeEnumerated;
 
 export const _encode_ProtocolUsedByRemoteUE: $.ASN1Encoder<ProtocolUsedByRemoteUE> = $._encodeEnumerated;
-
 
 /* eslint-enable */

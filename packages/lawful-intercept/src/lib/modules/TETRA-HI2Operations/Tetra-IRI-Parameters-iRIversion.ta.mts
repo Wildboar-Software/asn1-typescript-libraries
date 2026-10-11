@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_Tetra_IRI_Parameters_iRIversion {
@@ -50,6 +47,5 @@ const version0: Tetra_IRI_Parameters_iRIversion = Tetra_IRI_Parameters_iRIversio
 export const _decode_Tetra_IRI_Parameters_iRIversion: $.ASN1Decoder<Tetra_IRI_Parameters_iRIversion> = $._decodeEnumerated;
 
 export const _encode_Tetra_IRI_Parameters_iRIversion: $.ASN1Encoder<Tetra_IRI_Parameters_iRIversion> = $._encodeEnumerated;
-
 
 /* eslint-enable */

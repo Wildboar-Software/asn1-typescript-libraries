@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary UnfulfilledACProfileReason
@@ -101,6 +97,5 @@ const requirementsUnfulfilled: UnfulfilledACProfileReason = UnfulfilledACProfile
 export const _decode_UnfulfilledACProfileReason: $.ASN1Decoder<UnfulfilledACProfileReason> = $._decodeEnumerated;
 
 export const _encode_UnfulfilledACProfileReason: $.ASN1Encoder<UnfulfilledACProfileReason> = $._encodeEnumerated;
-
 
 /* eslint-enable */

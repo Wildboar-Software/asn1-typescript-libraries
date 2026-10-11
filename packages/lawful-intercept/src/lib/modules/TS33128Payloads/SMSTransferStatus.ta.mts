@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SMSTransferStatus
@@ -121,6 +117,5 @@ const undefined: SMSTransferStatus = SMSTransferStatus.undefined; /* SHORT_NAMED
 export const _decode_SMSTransferStatus: $.ASN1Decoder<SMSTransferStatus> = $._decodeEnumerated;
 
 export const _encode_SMSTransferStatus: $.ASN1Encoder<SMSTransferStatus> = $._encodeEnumerated;
-
 
 /* eslint-enable */

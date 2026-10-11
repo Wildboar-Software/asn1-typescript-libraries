@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TargetIdentifierProvenance
@@ -141,6 +137,5 @@ const other: TargetIdentifierProvenance = TargetIdentifierProvenance.other; /* S
 export const _decode_TargetIdentifierProvenance: $.ASN1Decoder<TargetIdentifierProvenance> = $._decodeEnumerated;
 
 export const _encode_TargetIdentifierProvenance: $.ASN1Encoder<TargetIdentifierProvenance> = $._encodeEnumerated;
-
 
 /* eslint-enable */

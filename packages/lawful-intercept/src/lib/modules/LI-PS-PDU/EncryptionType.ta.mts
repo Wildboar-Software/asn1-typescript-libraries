@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_EncryptionType {
@@ -165,6 +162,5 @@ const threedes_cbc: EncryptionType = EncryptionType_threedes_cbc; /* SHORT_NAMED
 export const _decode_EncryptionType: $.ASN1Decoder<EncryptionType> = $._decodeEnumerated;
 
 export const _encode_EncryptionType: $.ASN1Encoder<EncryptionType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

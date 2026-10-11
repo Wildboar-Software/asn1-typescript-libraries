@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SwitchOffIndicator
@@ -101,6 +97,5 @@ const switchOff: SwitchOffIndicator = SwitchOffIndicator.switchOff; /* SHORT_NAM
 export const _decode_SwitchOffIndicator: $.ASN1Decoder<SwitchOffIndicator> = $._decodeEnumerated;
 
 export const _encode_SwitchOffIndicator: $.ASN1Encoder<SwitchOffIndicator> = $._encodeEnumerated;
-
 
 /* eslint-enable */

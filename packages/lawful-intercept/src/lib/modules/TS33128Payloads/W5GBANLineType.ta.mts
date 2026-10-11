@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary W5GBANLineType
@@ -101,6 +97,5 @@ const pON: W5GBANLineType = W5GBANLineType.pON; /* SHORT_NAMED_ENUMERATED_VALUE 
 export const _decode_W5GBANLineType: $.ASN1Decoder<W5GBANLineType> = $._decodeEnumerated;
 
 export const _encode_W5GBANLineType: $.ASN1Encoder<W5GBANLineType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

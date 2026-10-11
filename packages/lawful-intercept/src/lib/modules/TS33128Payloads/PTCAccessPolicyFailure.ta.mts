@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PTCAccessPolicyFailure
@@ -101,6 +97,5 @@ const requestUnknown: PTCAccessPolicyFailure = PTCAccessPolicyFailure.requestUnk
 export const _decode_PTCAccessPolicyFailure: $.ASN1Decoder<PTCAccessPolicyFailure> = $._decodeEnumerated;
 
 export const _encode_PTCAccessPolicyFailure: $.ASN1Encoder<PTCAccessPolicyFailure> = $._encodeEnumerated;
-
 
 /* eslint-enable */

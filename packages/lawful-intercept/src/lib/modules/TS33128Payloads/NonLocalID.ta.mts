@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary NonLocalID
@@ -101,6 +97,5 @@ const nonLocal: NonLocalID = NonLocalID.nonLocal; /* SHORT_NAMED_ENUMERATED_VALU
 export const _decode_NonLocalID: $.ASN1Decoder<NonLocalID> = $._decodeEnumerated;
 
 export const _encode_NonLocalID: $.ASN1Encoder<NonLocalID> = $._encodeEnumerated;
-
 
 /* eslint-enable */

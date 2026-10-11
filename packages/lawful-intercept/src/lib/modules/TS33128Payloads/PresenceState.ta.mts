@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PresenceState
@@ -141,6 +137,5 @@ const inactive: PresenceState = PresenceState.inactive; /* SHORT_NAMED_ENUMERATE
 export const _decode_PresenceState: $.ASN1Decoder<PresenceState> = $._decodeEnumerated;
 
 export const _encode_PresenceState: $.ASN1Encoder<PresenceState> = $._encodeEnumerated;
-
 
 /* eslint-enable */

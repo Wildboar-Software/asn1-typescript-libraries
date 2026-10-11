@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_MMSState {
@@ -123,6 +120,5 @@ const forwarded: MMSState = MMSState_forwarded; /* SHORT_NAMED_ENUMERATED_VALUE 
 export const _decode_MMSState: $.ASN1Decoder<MMSState> = $._decodeEnumerated;
 
 export const _encode_MMSState: $.ASN1Encoder<MMSState> = $._encodeEnumerated;
-
 
 /* eslint-enable */

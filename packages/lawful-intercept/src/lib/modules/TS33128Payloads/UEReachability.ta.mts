@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary UEReachability
@@ -121,6 +117,5 @@ const regulatoryOnly: UEReachability = UEReachability.regulatoryOnly; /* SHORT_N
 export const _decode_UEReachability: $.ASN1Decoder<UEReachability> = $._decodeEnumerated;
 
 export const _encode_UEReachability: $.ASN1Encoder<UEReachability> = $._encodeEnumerated;
-
 
 /* eslint-enable */

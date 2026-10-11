@@ -9,7 +9,6 @@ import * as GCSEHI2Operations from "../GCSEHI2Operations/index.mjs";
 // export { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "../GCSEHI2Operations/IRI-Parameters.ta.mjs";
 // export { GcseIRIsContent, _decode_GcseIRIsContent, _encode_GcseIRIsContent } from "../GCSEHI2Operations/GcseIRIsContent.ta.mjs";
 
-
 /**
  * @summary GcseIRI
  * @description
@@ -66,6 +65,5 @@ function _encode_GcseIRI (value: GcseIRI, elGetter: $.ASN1Encoder<any>): _Elemen
 }, $.BER); }
     return _cached_encoder_for_GcseIRI(value, elGetter);
 }
-
 
 /* eslint-enable */

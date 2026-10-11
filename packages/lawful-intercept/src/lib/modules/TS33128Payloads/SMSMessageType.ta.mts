@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SMSMessageType
@@ -241,6 +237,5 @@ const reserved: SMSMessageType = SMSMessageType.reserved; /* SHORT_NAMED_ENUMERA
 export const _decode_SMSMessageType: $.ASN1Decoder<SMSMessageType> = $._decodeEnumerated;
 
 export const _encode_SMSMessageType: $.ASN1Encoder<SMSMessageType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

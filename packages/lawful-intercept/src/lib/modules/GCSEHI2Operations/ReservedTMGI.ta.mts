@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ReservedTMGI
@@ -23,6 +20,5 @@ type ReservedTMGI = OCTET_STRING; // OctetStringType
 export const _decode_ReservedTMGI: $.ASN1Decoder<ReservedTMGI> = $._decodeOctetString;
 
 export const _encode_ReservedTMGI: $.ASN1Encoder<ReservedTMGI> = $._encodeOctetString;
-
 
 /* eslint-enable */

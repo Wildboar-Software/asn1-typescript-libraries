@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_Version {
@@ -92,6 +89,5 @@ const lastVersion: Version = Version_lastVersion; /* SHORT_NAMED_ENUMERATED_VALU
 export const _decode_Version: $.ASN1Decoder<Version> = $._decodeEnumerated;
 
 export const _encode_Version: $.ASN1Encoder<Version> = $._encodeEnumerated;
-
 
 /* eslint-enable */

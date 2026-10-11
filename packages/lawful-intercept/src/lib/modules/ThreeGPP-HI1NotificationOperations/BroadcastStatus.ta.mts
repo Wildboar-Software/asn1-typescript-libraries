@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_BroadcastStatus {
@@ -70,6 +67,5 @@ const unsuccesfull: BroadcastStatus = BroadcastStatus_unsuccesfull; /* SHORT_NAM
 export const _decode_BroadcastStatus: $.ASN1Decoder<BroadcastStatus> = $._decodeEnumerated;
 
 export const _encode_BroadcastStatus: $.ASN1Encoder<BroadcastStatus> = $._encodeEnumerated;
-
 
 /* eslint-enable */

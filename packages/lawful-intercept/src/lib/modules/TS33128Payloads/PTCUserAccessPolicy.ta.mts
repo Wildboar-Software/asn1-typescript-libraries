@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PTCUserAccessPolicy
@@ -141,6 +137,5 @@ const allowOverrideManualAnswerMode: PTCUserAccessPolicy = PTCUserAccessPolicy.a
 export const _decode_PTCUserAccessPolicy: $.ASN1Decoder<PTCUserAccessPolicy> = $._decodeEnumerated;
 
 export const _encode_PTCUserAccessPolicy: $.ASN1Encoder<PTCUserAccessPolicy> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PTCPreEstStatus
@@ -121,6 +117,5 @@ const released: PTCPreEstStatus = PTCPreEstStatus.released; /* SHORT_NAMED_ENUME
 export const _decode_PTCPreEstStatus: $.ASN1Decoder<PTCPreEstStatus> = $._decodeEnumerated;
 
 export const _encode_PTCPreEstStatus: $.ASN1Encoder<PTCPreEstStatus> = $._encodeEnumerated;
-
 
 /* eslint-enable */

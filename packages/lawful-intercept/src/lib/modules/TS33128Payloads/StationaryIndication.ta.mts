@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary StationaryIndication
@@ -101,6 +97,5 @@ const mobile: StationaryIndication = StationaryIndication.mobile; /* SHORT_NAMED
 export const _decode_StationaryIndication: $.ASN1Decoder<StationaryIndication> = $._decodeEnumerated;
 
 export const _encode_StationaryIndication: $.ASN1Encoder<StationaryIndication> = $._encodeEnumerated;
-
 
 /* eslint-enable */

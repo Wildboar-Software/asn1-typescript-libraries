@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_Content_Report_initiator {
@@ -104,6 +101,5 @@ const undefined_party: Content_Report_initiator = Content_Report_initiator_undef
 export const _decode_Content_Report_initiator: $.ASN1Decoder<Content_Report_initiator> = $._decodeEnumerated;
 
 export const _encode_Content_Report_initiator: $.ASN1Encoder<Content_Report_initiator> = $._encodeEnumerated;
-
 
 /* eslint-enable */

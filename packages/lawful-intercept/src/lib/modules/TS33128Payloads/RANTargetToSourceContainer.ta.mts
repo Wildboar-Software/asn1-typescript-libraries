@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RANTargetToSourceContainer
@@ -23,6 +20,5 @@ type RANTargetToSourceContainer = OCTET_STRING; // OctetStringType
 export const _decode_RANTargetToSourceContainer: $.ASN1Decoder<RANTargetToSourceContainer> = $._decodeOctetString;
 
 export const _encode_RANTargetToSourceContainer: $.ASN1Encoder<RANTargetToSourceContainer> = $._encodeOctetString;
-
 
 /* eslint-enable */

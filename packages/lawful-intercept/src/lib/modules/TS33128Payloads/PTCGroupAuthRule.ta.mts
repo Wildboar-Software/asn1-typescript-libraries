@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PTCGroupAuthRule
@@ -261,6 +257,5 @@ const forbidAnonymity: PTCGroupAuthRule = PTCGroupAuthRule.forbidAnonymity; /* S
 export const _decode_PTCGroupAuthRule: $.ASN1Decoder<PTCGroupAuthRule> = $._decodeEnumerated;
 
 export const _encode_PTCGroupAuthRule: $.ASN1Encoder<PTCGroupAuthRule> = $._encodeEnumerated;
-
 
 /* eslint-enable */

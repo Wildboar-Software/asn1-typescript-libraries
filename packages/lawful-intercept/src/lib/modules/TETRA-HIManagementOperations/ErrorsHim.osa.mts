@@ -9,7 +9,6 @@ import { unknown_parameter } from "../TETRA-HIManagementOperations/unknown-param
 import { erroneous_parameter } from "../TETRA-HIManagementOperations/erroneous-parameter.oa.mjs";
 // export { erroneous_parameter } from "../TETRA-HIManagementOperations/erroneous-parameter.oa.mjs";
 
-
 /**
  * @summary ErrorsHim
  * @description

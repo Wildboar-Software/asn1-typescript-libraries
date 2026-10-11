@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary UDMDeregReason
@@ -281,6 +277,5 @@ const disasterConditionTerminated: UDMDeregReason = UDMDeregReason.disasterCondi
 export const _decode_UDMDeregReason: $.ASN1Decoder<UDMDeregReason> = $._decodeEnumerated;
 
 export const _encode_UDMDeregReason: $.ASN1Encoder<UDMDeregReason> = $._encodeEnumerated;
-
 
 /* eslint-enable */

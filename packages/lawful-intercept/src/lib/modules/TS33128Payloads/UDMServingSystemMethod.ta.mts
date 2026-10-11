@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary UDMServingSystemMethod
@@ -121,6 +117,5 @@ const unknown: UDMServingSystemMethod = UDMServingSystemMethod.unknown; /* SHORT
 export const _decode_UDMServingSystemMethod: $.ASN1Decoder<UDMServingSystemMethod> = $._decodeEnumerated;
 
 export const _encode_UDMServingSystemMethod: $.ASN1Encoder<UDMServingSystemMethod> = $._encodeEnumerated;
-
 
 /* eslint-enable */

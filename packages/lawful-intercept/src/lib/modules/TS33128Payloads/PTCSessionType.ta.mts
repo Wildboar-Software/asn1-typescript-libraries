@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PTCSessionType
@@ -161,6 +157,5 @@ const groupSession: PTCSessionType = PTCSessionType.groupSession; /* SHORT_NAMED
 export const _decode_PTCSessionType: $.ASN1Decoder<PTCSessionType> = $._decodeEnumerated;
 
 export const _encode_PTCSessionType: $.ASN1Encoder<PTCSessionType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

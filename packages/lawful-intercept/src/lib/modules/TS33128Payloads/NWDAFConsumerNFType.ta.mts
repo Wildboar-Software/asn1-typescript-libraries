@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary NWDAFConsumerNFType
@@ -281,6 +277,5 @@ const cEF: NWDAFConsumerNFType = NWDAFConsumerNFType.cEF; /* SHORT_NAMED_ENUMERA
 export const _decode_NWDAFConsumerNFType: $.ASN1Decoder<NWDAFConsumerNFType> = $._decodeEnumerated;
 
 export const _encode_NWDAFConsumerNFType: $.ASN1Encoder<NWDAFConsumerNFType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

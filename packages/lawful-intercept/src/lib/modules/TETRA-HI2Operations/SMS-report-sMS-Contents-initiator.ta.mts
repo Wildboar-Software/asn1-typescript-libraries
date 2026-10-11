@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_SMS_report_sMS_Contents_initiator {
@@ -87,6 +84,5 @@ const undefined_party: SMS_report_sMS_Contents_initiator = SMS_report_sMS_Conten
 export const _decode_SMS_report_sMS_Contents_initiator: $.ASN1Decoder<SMS_report_sMS_Contents_initiator> = $._decodeEnumerated;
 
 export const _encode_SMS_report_sMS_Contents_initiator: $.ASN1Encoder<SMS_report_sMS_Contents_initiator> = $._encodeEnumerated;
-
 
 /* eslint-enable */

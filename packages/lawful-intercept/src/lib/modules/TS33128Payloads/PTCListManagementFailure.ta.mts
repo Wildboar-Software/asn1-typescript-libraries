@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PTCListManagementFailure
@@ -101,6 +97,5 @@ const requestUnknown: PTCListManagementFailure = PTCListManagementFailure.reques
 export const _decode_PTCListManagementFailure: $.ASN1Decoder<PTCListManagementFailure> = $._decodeEnumerated;
 
 export const _encode_PTCListManagementFailure: $.ASN1Encoder<PTCListManagementFailure> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -9,7 +9,6 @@ import { unknown_parameter } from "../TETRA-HI1NotificationOperations/unknown-pa
 import { erroneous_parameter } from "../TETRA-HI1NotificationOperations/erroneous-parameter.oa.mjs";
 // export { erroneous_parameter } from "../TETRA-HI1NotificationOperations/erroneous-parameter.oa.mjs";
 
-
 /**
  * @summary ErrorHI1Notifications
  * @description

@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PTCFailureCode
@@ -101,6 +97,5 @@ const sessionCannotBeModified: PTCFailureCode = PTCFailureCode.sessionCannotBeMo
 export const _decode_PTCFailureCode: $.ASN1Decoder<PTCFailureCode> = $._decodeEnumerated;
 
 export const _encode_PTCFailureCode: $.ASN1Encoder<PTCFailureCode> = $._encodeEnumerated;
-
 
 /* eslint-enable */

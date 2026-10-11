@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SMSOverNASIndicator
@@ -101,6 +97,5 @@ const sMSOverNASAllowed: SMSOverNASIndicator = SMSOverNASIndicator.sMSOverNASAll
 export const _decode_SMSOverNASIndicator: $.ASN1Decoder<SMSOverNASIndicator> = $._decodeEnumerated;
 
 export const _encode_SMSOverNASIndicator: $.ASN1Encoder<SMSOverNASIndicator> = $._encodeEnumerated;
-
 
 /* eslint-enable */

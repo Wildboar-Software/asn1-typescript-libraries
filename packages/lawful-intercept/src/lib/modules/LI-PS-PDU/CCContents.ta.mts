@@ -25,7 +25,6 @@ import * as CSvoice_HI3_IP from "../CSvoice-HI3-IP/CSvoice-CC-PDU.ta.mjs";
 // export { CSvoice_CC_PDU, _decode_CSvoice_CC_PDU, _encode_CSvoice_CC_PDU } from "../CSvoice-HI3-IP/CSvoice-CC-PDU.ta.mjs";
 // export { CCPayload, _decode_CCPayload, _encode_CCPayload } from "../TS33128Payloads/CCPayload.ta.mjs";
 
-
 /**
  * @summary CCContents
  * @description
@@ -158,6 +157,5 @@ function _encode_CCContents (value: CCContents, elGetter: $.ASN1Encoder<any>): _
 }, $.BER); }
     return _cached_encoder_for_CCContents(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_VoIPRoamingIndication {
@@ -67,6 +64,5 @@ const roamingS8HR: VoIPRoamingIndication = VoIPRoamingIndication_roamingS8HR; /*
 export const _decode_VoIPRoamingIndication: $.ASN1Decoder<VoIPRoamingIndication> = $._decodeEnumerated;
 
 export const _encode_VoIPRoamingIndication: $.ASN1Encoder<VoIPRoamingIndication> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_LocalTimeStamp_winterSummerIndication {
@@ -86,6 +83,5 @@ const summerTime: LocalTimeStamp_winterSummerIndication = LocalTimeStamp_winterS
 export const _decode_LocalTimeStamp_winterSummerIndication: $.ASN1Decoder<LocalTimeStamp_winterSummerIndication> = $._decodeEnumerated;
 
 export const _encode_LocalTimeStamp_winterSummerIndication: $.ASN1Encoder<LocalTimeStamp_winterSummerIndication> = $._encodeEnumerated;
-
 
 /* eslint-enable */

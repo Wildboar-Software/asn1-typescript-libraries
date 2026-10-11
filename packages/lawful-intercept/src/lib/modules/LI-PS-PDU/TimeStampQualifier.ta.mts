@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_TimeStampQualifier {
@@ -104,6 +101,5 @@ const timeOfAggregation: TimeStampQualifier = TimeStampQualifier_timeOfAggregati
 export const _decode_TimeStampQualifier: $.ASN1Decoder<TimeStampQualifier> = $._decodeEnumerated;
 
 export const _encode_TimeStampQualifier: $.ASN1Encoder<TimeStampQualifier> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_PresenceType {
@@ -69,6 +66,5 @@ const pTCGroup: PresenceType = PresenceType_pTCGroup; /* SHORT_NAMED_ENUMERATED_
 export const _decode_PresenceType: $.ASN1Decoder<PresenceType> = $._decodeEnumerated;
 
 export const _encode_PresenceType: $.ASN1Encoder<PresenceType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

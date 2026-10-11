@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    UTF8String
+    UTF8String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SIPEndpoint
@@ -23,6 +20,5 @@ type SIPEndpoint = UTF8String; // UTF8String
 export const _decode_SIPEndpoint: $.ASN1Decoder<SIPEndpoint> = $._decodeUTF8String;
 
 export const _encode_SIPEndpoint: $.ASN1Encoder<SIPEndpoint> = $._encodeUTF8String;
-
 
 /* eslint-enable */

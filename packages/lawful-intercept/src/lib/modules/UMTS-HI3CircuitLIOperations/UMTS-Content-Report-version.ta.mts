@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_UMTS_Content_Report_version {
@@ -69,6 +66,5 @@ const version8: UMTS_Content_Report_version = UMTS_Content_Report_version_versio
 export const _decode_UMTS_Content_Report_version: $.ASN1Decoder<UMTS_Content_Report_version> = $._decodeEnumerated;
 
 export const _encode_UMTS_Content_Report_version: $.ASN1Encoder<UMTS_Content_Report_version> = $._encodeEnumerated;
-
 
 /* eslint-enable */

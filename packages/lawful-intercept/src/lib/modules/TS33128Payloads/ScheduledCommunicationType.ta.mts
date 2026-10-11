@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ScheduledCommunicationType
@@ -121,6 +117,5 @@ const bidirectional: ScheduledCommunicationType = ScheduledCommunicationType.bid
 export const _decode_ScheduledCommunicationType: $.ASN1Decoder<ScheduledCommunicationType> = $._decodeEnumerated;
 
 export const _encode_ScheduledCommunicationType: $.ASN1Encoder<ScheduledCommunicationType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

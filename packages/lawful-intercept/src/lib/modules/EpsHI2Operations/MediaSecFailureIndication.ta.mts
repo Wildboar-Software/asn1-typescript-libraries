@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_MediaSecFailureIndication {
@@ -50,6 +47,5 @@ const genericFailure: MediaSecFailureIndication = MediaSecFailureIndication_gene
 export const _decode_MediaSecFailureIndication: $.ASN1Decoder<MediaSecFailureIndication> = $._decodeEnumerated;
 
 export const _encode_MediaSecFailureIndication: $.ASN1Encoder<MediaSecFailureIndication> = $._encodeEnumerated;
-
 
 /* eslint-enable */

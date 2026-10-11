@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_TargetType {
@@ -194,6 +191,5 @@ const iMPI: TargetType = TargetType_iMPI; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TargetType: $.ASN1Decoder<TargetType> = $._decodeEnumerated;
 
 export const _encode_TargetType: $.ASN1Encoder<TargetType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

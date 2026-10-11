@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RATType
@@ -721,6 +717,5 @@ const nREREDCAP: RATType = RATType.nREREDCAP; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RATType: $.ASN1Decoder<RATType> = $._decodeEnumerated;
 
 export const _encode_RATType: $.ASN1Encoder<RATType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

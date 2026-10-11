@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_DataType {
@@ -86,6 +83,5 @@ const iLHI: DataType = DataType_iLHI; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_DataType: $.ASN1Decoder<DataType> = $._decodeEnumerated;
 
 export const _encode_DataType: $.ASN1Encoder<DataType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

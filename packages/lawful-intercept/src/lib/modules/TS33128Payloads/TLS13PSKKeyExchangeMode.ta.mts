@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TLS13PSKKeyExchangeMode
@@ -101,6 +97,5 @@ const pSKDHEKE: TLS13PSKKeyExchangeMode = TLS13PSKKeyExchangeMode.pSKDHEKE; /* S
 export const _decode_TLS13PSKKeyExchangeMode: $.ASN1Decoder<TLS13PSKKeyExchangeMode> = $._decodeEnumerated;
 
 export const _encode_TLS13PSKKeyExchangeMode: $.ASN1Encoder<TLS13PSKKeyExchangeMode> = $._encodeEnumerated;
-
 
 /* eslint-enable */

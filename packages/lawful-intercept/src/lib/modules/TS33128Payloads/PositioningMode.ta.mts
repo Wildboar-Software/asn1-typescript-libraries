@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PositioningMode
@@ -121,6 +117,5 @@ const conventional: PositioningMode = PositioningMode.conventional; /* SHORT_NAM
 export const _decode_PositioningMode: $.ASN1Decoder<PositioningMode> = $._decodeEnumerated;
 
 export const _encode_PositioningMode: $.ASN1Encoder<PositioningMode> = $._encodeEnumerated;
-
 
 /* eslint-enable */

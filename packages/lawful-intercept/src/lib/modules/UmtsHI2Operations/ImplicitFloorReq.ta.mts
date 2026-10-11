@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_ImplicitFloorReq {
@@ -87,6 +84,5 @@ const release: ImplicitFloorReq = ImplicitFloorReq_release; /* SHORT_NAMED_ENUME
 export const _decode_ImplicitFloorReq: $.ASN1Decoder<ImplicitFloorReq> = $._decodeEnumerated;
 
 export const _encode_ImplicitFloorReq: $.ASN1Encoder<ImplicitFloorReq> = $._encodeEnumerated;
-
 
 /* eslint-enable */

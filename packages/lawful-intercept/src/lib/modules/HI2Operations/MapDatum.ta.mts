@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_MapDatum {
@@ -88,6 +85,5 @@ const eD50: MapDatum = MapDatum_eD50; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MapDatum: $.ASN1Decoder<MapDatum> = $._decodeEnumerated;
 
 export const _encode_MapDatum: $.ASN1Encoder<MapDatum> = $._encodeEnumerated;
-
 
 /* eslint-enable */

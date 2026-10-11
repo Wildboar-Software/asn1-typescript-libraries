@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary NRCellID
@@ -23,6 +20,5 @@ type NRCellID = BIT_STRING;
 export const _decode_NRCellID: $.ASN1Decoder<NRCellID> = $._decodeBitString;
 
 export const _encode_NRCellID: $.ASN1Encoder<NRCellID> = $._encodeBitString;
-
 
 /* eslint-enable */

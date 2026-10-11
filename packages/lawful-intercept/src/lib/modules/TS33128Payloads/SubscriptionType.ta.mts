@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SubscriptionType
@@ -121,6 +117,5 @@ const unsubscription: SubscriptionType = SubscriptionType.unsubscription; /* SHO
 export const _decode_SubscriptionType: $.ASN1Decoder<SubscriptionType> = $._decodeEnumerated;
 
 export const _encode_SubscriptionType: $.ASN1Encoder<SubscriptionType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

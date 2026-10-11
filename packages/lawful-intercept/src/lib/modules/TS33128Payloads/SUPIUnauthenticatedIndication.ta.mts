@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    BOOLEAN
+    BOOLEAN,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SUPIUnauthenticatedIndication
@@ -23,6 +20,5 @@ type SUPIUnauthenticatedIndication = BOOLEAN; // BooleanType
 export const _decode_SUPIUnauthenticatedIndication: $.ASN1Decoder<SUPIUnauthenticatedIndication> = $._decodeBoolean;
 
 export const _encode_SUPIUnauthenticatedIndication: $.ASN1Encoder<SUPIUnauthenticatedIndication> = $._encodeBoolean;
-
 
 /* eslint-enable */

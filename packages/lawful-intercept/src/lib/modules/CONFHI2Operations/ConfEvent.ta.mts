@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_ConfEvent {
@@ -266,6 +263,5 @@ const confServUpdate: ConfEvent = ConfEvent_confServUpdate; /* SHORT_NAMED_ENUME
 export const _decode_ConfEvent: $.ASN1Decoder<ConfEvent> = $._decodeEnumerated;
 
 export const _encode_ConfEvent: $.ASN1Encoder<ConfEvent> = $._encodeEnumerated;
-
 
 /* eslint-enable */

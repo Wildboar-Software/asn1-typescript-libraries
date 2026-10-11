@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_MBMSEvent {
@@ -141,6 +138,5 @@ const startofInterceptWithMBMSServiceActive: MBMSEvent = MBMSEvent_startofInterc
 export const _decode_MBMSEvent: $.ASN1Decoder<MBMSEvent> = $._decodeEnumerated;
 
 export const _encode_MBMSEvent: $.ASN1Encoder<MBMSEvent> = $._encodeEnumerated;
-
 
 /* eslint-enable */

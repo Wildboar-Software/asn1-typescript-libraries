@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_Umts_Cs_Event {
@@ -266,6 +263,5 @@ const location_Information_Request: Umts_Cs_Event = Umts_Cs_Event_location_Infor
 export const _decode_Umts_Cs_Event: $.ASN1Decoder<Umts_Cs_Event> = $._decodeEnumerated;
 
 export const _encode_Umts_Cs_Event: $.ASN1Encoder<Umts_Cs_Event> = $._encodeEnumerated;
-
 
 /* eslint-enable */

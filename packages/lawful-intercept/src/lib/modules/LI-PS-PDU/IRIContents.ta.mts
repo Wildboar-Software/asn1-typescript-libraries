@@ -27,7 +27,6 @@ import { GcseIRI, _decode_GcseIRI, _encode_GcseIRI } from "../LI-PS-PDU/GcseIRI.
 // export { GcseIRI, _decode_GcseIRI, _encode_GcseIRI } from "../LI-PS-PDU/GcseIRI.ta.mjs";
 // export { IRIPayload, _decode_IRIPayload, _encode_IRIPayload } from "../TS33128Payloads/IRIPayload.ta.mjs";
 
-
 /**
  * @summary IRIContents
  * @description
@@ -147,6 +146,5 @@ function _encode_IRIContents (value: IRIContents, elGetter: $.ASN1Encoder<any>):
 }, $.BER); }
     return _cached_encoder_for_IRIContents(value, elGetter);
 }
-
 
 /* eslint-enable */

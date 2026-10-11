@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_Direction_Indication {
@@ -104,6 +101,5 @@ const direction_unknown: Direction_Indication = Direction_Indication_direction_u
 export const _decode_Direction_Indication: $.ASN1Decoder<Direction_Indication> = $._decodeEnumerated;
 
 export const _encode_Direction_Indication: $.ASN1Encoder<Direction_Indication> = $._encodeEnumerated;
-
 
 /* eslint-enable */

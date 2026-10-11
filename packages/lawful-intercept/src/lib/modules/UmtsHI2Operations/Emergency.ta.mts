@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_Emergency {
@@ -87,6 +84,5 @@ const cancel: Emergency = Emergency_cancel; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Emergency: $.ASN1Decoder<Emergency> = $._decodeEnumerated;
 
 export const _encode_Emergency: $.ASN1Encoder<Emergency> = $._encodeEnumerated;
-
 
 /* eslint-enable */

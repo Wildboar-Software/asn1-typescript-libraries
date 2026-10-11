@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RemoteUEIDType
@@ -141,6 +137,5 @@ const iMEISV: RemoteUEIDType = RemoteUEIDType.iMEISV; /* SHORT_NAMED_ENUMERATED_
 export const _decode_RemoteUEIDType: $.ASN1Decoder<RemoteUEIDType> = $._decodeEnumerated;
 
 export const _encode_RemoteUEIDType: $.ASN1Encoder<RemoteUEIDType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

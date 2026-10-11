@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_Intercepted_Call_State {
@@ -90,6 +87,5 @@ const connected: Intercepted_Call_State = Intercepted_Call_State_connected; /* S
 export const _decode_Intercepted_Call_State: $.ASN1Decoder<Intercepted_Call_State> = $._decodeEnumerated;
 
 export const _encode_Intercepted_Call_State: $.ASN1Encoder<Intercepted_Call_State> = $._encodeEnumerated;
-
 
 /* eslint-enable */

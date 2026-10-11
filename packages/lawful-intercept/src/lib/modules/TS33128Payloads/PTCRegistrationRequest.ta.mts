@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PTCRegistrationRequest
@@ -121,6 +117,5 @@ const deRegister: PTCRegistrationRequest = PTCRegistrationRequest.deRegister; /*
 export const _decode_PTCRegistrationRequest: $.ASN1Decoder<PTCRegistrationRequest> = $._decodeEnumerated;
 
 export const _encode_PTCRegistrationRequest: $.ASN1Encoder<PTCRegistrationRequest> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_TypeOfBearer {
@@ -68,6 +65,5 @@ const dedicatedBearer: TypeOfBearer = TypeOfBearer_dedicatedBearer; /* SHORT_NAM
 export const _decode_TypeOfBearer: $.ASN1Decoder<TypeOfBearer> = $._decodeEnumerated;
 
 export const _encode_TypeOfBearer: $.ASN1Encoder<TypeOfBearer> = $._encodeEnumerated;
-
 
 /* eslint-enable */

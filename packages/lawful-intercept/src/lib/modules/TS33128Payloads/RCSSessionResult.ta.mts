@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RCSSessionResult
@@ -181,6 +177,5 @@ const legRemovalComplete: RCSSessionResult = RCSSessionResult.legRemovalComplete
 export const _decode_RCSSessionResult: $.ASN1Decoder<RCSSessionResult> = $._decodeEnumerated;
 
 export const _encode_RCSSessionResult: $.ASN1Encoder<RCSSessionResult> = $._encodeEnumerated;
-
 
 /* eslint-enable */

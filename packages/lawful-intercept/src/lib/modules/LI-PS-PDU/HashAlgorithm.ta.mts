@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_HashAlgorithm {
@@ -105,6 +102,5 @@ const sHA_512: HashAlgorithm = HashAlgorithm_sHA_512; /* SHORT_NAMED_ENUMERATED_
 export const _decode_HashAlgorithm: $.ASN1Decoder<HashAlgorithm> = $._decodeEnumerated;
 
 export const _encode_HashAlgorithm: $.ASN1Encoder<HashAlgorithm> = $._encodeEnumerated;
-
 
 /* eslint-enable */

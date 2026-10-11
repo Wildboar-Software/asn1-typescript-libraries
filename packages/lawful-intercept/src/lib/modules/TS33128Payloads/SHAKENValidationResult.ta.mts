@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SHAKENValidationResult
@@ -121,6 +117,5 @@ const noTNValidation: SHAKENValidationResult = SHAKENValidationResult.noTNValida
 export const _decode_SHAKENValidationResult: $.ASN1Decoder<SHAKENValidationResult> = $._decodeEnumerated;
 
 export const _encode_SHAKENValidationResult: $.ASN1Encoder<SHAKENValidationResult> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode
@@ -421,6 +417,5 @@ const serviceUnavailable503: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSu
 export const _decode_NWDAFEventsSubscriptionResponseCode: $.ASN1Decoder<NWDAFEventsSubscriptionResponseCode> = $._decodeEnumerated;
 
 export const _encode_NWDAFEventsSubscriptionResponseCode: $.ASN1Encoder<NWDAFEventsSubscriptionResponseCode> = $._encodeEnumerated;
-
 
 /* eslint-enable */

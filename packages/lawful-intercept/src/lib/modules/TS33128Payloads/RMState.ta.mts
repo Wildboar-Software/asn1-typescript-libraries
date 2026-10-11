@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RMState
@@ -101,6 +97,5 @@ const deregistered: RMState = RMState.deregistered; /* SHORT_NAMED_ENUMERATED_VA
 export const _decode_RMState: $.ASN1Decoder<RMState> = $._decodeEnumerated;
 
 export const _encode_RMState: $.ASN1Encoder<RMState> = $._encodeEnumerated;
-
 
 /* eslint-enable */

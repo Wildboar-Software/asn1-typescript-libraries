@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RCSRegistrationType
@@ -141,6 +137,5 @@ const networkDeregistration: RCSRegistrationType = RCSRegistrationType.networkDe
 export const _decode_RCSRegistrationType: $.ASN1Decoder<RCSRegistrationType> = $._decodeEnumerated;
 
 export const _encode_RCSRegistrationType: $.ASN1Encoder<RCSRegistrationType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

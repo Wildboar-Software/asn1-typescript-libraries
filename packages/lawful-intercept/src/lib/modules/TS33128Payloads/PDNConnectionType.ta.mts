@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PDNConnectionType
@@ -161,6 +157,5 @@ const ethernet: PDNConnectionType = PDNConnectionType.ethernet; /* SHORT_NAMED_E
 export const _decode_PDNConnectionType: $.ASN1Decoder<PDNConnectionType> = $._decodeEnumerated;
 
 export const _encode_PDNConnectionType: $.ASN1Encoder<PDNConnectionType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

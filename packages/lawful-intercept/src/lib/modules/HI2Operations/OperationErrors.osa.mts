@@ -9,7 +9,6 @@ import { unknown_parameter_value } from "../HI2Operations/unknown-parameter-valu
 import { unknown_parameter } from "../HI2Operations/unknown-parameter.oa.mjs";
 // export { unknown_parameter } from "../HI2Operations/unknown-parameter.oa.mjs";
 
-
 /**
  * @summary OperationErrors
  * @description

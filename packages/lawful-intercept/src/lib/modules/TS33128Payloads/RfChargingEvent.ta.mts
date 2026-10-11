@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RfChargingEvent
@@ -381,6 +377,5 @@ const cPDT_Information: RfChargingEvent = RfChargingEvent.cPDT_Information; /* S
 export const _decode_RfChargingEvent: $.ASN1Decoder<RfChargingEvent> = $._decodeEnumerated;
 
 export const _encode_RfChargingEvent: $.ASN1Encoder<RfChargingEvent> = $._encodeEnumerated;
-
 
 /* eslint-enable */

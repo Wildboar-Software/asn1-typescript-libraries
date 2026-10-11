@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RoamerInOut
@@ -101,6 +97,5 @@ const out_bound: RoamerInOut = RoamerInOut.out_bound; /* SHORT_NAMED_ENUMERATED_
 export const _decode_RoamerInOut: $.ASN1Decoder<RoamerInOut> = $._decodeEnumerated;
 
 export const _encode_RoamerInOut: $.ASN1Encoder<RoamerInOut> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary FiveGSInterworkingIndicator
@@ -23,6 +20,5 @@ type FiveGSInterworkingIndicator = BOOLEAN; // BooleanType
 export const _decode_FiveGSInterworkingIndicator: $.ASN1Decoder<FiveGSInterworkingIndicator> = $._decodeBoolean;
 
 export const _encode_FiveGSInterworkingIndicator: $.ASN1Encoder<FiveGSInterworkingIndicator> = $._encodeBoolean;
-
 
 /* eslint-enable */

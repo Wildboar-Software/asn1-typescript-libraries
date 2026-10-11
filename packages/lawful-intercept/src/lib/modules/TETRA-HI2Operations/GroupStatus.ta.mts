@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary GroupStatus
@@ -23,6 +20,5 @@ type GroupStatus = BOOLEAN; // BooleanType
 export const _decode_GroupStatus: $.ASN1Decoder<GroupStatus> = $._decodeBoolean;
 
 export const _encode_GroupStatus: $.ASN1Encoder<GroupStatus> = $._encodeBoolean;
-
 
 /* eslint-enable */

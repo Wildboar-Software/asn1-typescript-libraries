@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_EmergencyGroupState_groupEmergencyState {
@@ -106,6 +103,5 @@ const cancelResponse: EmergencyGroupState_groupEmergencyState = EmergencyGroupSt
 export const _decode_EmergencyGroupState_groupEmergencyState: $.ASN1Decoder<EmergencyGroupState_groupEmergencyState> = $._decodeEnumerated;
 
 export const _encode_EmergencyGroupState_groupEmergencyState: $.ASN1Encoder<EmergencyGroupState_groupEmergencyState> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_InitiationCause {
@@ -88,6 +85,5 @@ const pTCOriginatingId: InitiationCause = InitiationCause_pTCOriginatingId; /* S
 export const _decode_InitiationCause: $.ASN1Decoder<InitiationCause> = $._decodeEnumerated;
 
 export const _encode_InitiationCause: $.ASN1Encoder<InitiationCause> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary V2XUEAuthorizationIndicator
@@ -101,6 +97,5 @@ const notAuthorized: V2XUEAuthorizationIndicator = V2XUEAuthorizationIndicator.n
 export const _decode_V2XUEAuthorizationIndicator: $.ASN1Decoder<V2XUEAuthorizationIndicator> = $._decodeEnumerated;
 
 export const _encode_V2XUEAuthorizationIndicator: $.ASN1Encoder<V2XUEAuthorizationIndicator> = $._encodeEnumerated;
-
 
 /* eslint-enable */

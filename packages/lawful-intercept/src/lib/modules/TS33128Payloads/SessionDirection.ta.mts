@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SessionDirection
@@ -141,6 +137,5 @@ const indeterminate: SessionDirection = SessionDirection.indeterminate; /* SHORT
 export const _decode_SessionDirection: $.ASN1Decoder<SessionDirection> = $._decodeEnumerated;
 
 export const _encode_SessionDirection: $.ASN1Encoder<SessionDirection> = $._encodeEnumerated;
-
 
 /* eslint-enable */

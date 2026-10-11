@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary HFCNodeID
@@ -23,6 +20,5 @@ type HFCNodeID = UTF8String; // UTF8String
 export const _decode_HFCNodeID: $.ASN1Decoder<HFCNodeID> = $._decodeUTF8String;
 
 export const _encode_HFCNodeID: $.ASN1Encoder<HFCNodeID> = $._encodeUTF8String;
-
 
 /* eslint-enable */

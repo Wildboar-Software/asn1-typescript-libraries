@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary IMDNMessageID
@@ -23,6 +20,5 @@ type IMDNMessageID = UTF8String; // UTF8String
 export const _decode_IMDNMessageID: $.ASN1Decoder<IMDNMessageID> = $._decodeUTF8String;
 
 export const _encode_IMDNMessageID: $.ASN1Encoder<IMDNMessageID> = $._encodeUTF8String;
-
 
 /* eslint-enable */

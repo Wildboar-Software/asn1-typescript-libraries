@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_CSREvent {
@@ -50,6 +47,5 @@ const cSREventMessage: CSREvent = CSREvent_cSREventMessage; /* SHORT_NAMED_ENUME
 export const _decode_CSREvent: $.ASN1Decoder<CSREvent> = $._decodeEnumerated;
 
 export const _encode_CSREvent: $.ASN1Encoder<CSREvent> = $._encodeEnumerated;
-
 
 /* eslint-enable */

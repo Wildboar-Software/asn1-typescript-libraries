@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TrafficProfile
@@ -161,6 +157,5 @@ const multiTrans: TrafficProfile = TrafficProfile.multiTrans; /* SHORT_NAMED_ENU
 export const _decode_TrafficProfile: $.ASN1Decoder<TrafficProfile> = $._decodeEnumerated;
 
 export const _encode_TrafficProfile: $.ASN1Encoder<TrafficProfile> = $._encodeEnumerated;
-
 
 /* eslint-enable */

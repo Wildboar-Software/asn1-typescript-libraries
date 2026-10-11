@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    UTF8String
+    UTF8String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary WAGFID
@@ -23,6 +20,5 @@ type WAGFID = UTF8String; // UTF8String
 export const _decode_WAGFID: $.ASN1Decoder<WAGFID> = $._decodeUTF8String;
 
 export const _encode_WAGFID: $.ASN1Encoder<WAGFID> = $._encodeUTF8String;
-
 
 /* eslint-enable */

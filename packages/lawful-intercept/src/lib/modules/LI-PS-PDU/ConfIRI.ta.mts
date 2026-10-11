@@ -9,7 +9,6 @@ import * as CONFHI2Operations from "../CONFHI2Operations/index.mjs";
 // export { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "../CONFHI2Operations/IRI-Parameters.ta.mjs";
 // export { ConfIRIsContent, _decode_ConfIRIsContent, _encode_ConfIRIsContent } from "../CONFHI2Operations/ConfIRIsContent.ta.mjs";
 
-
 /**
  * @summary ConfIRI
  * @description
@@ -66,6 +65,5 @@ function _encode_ConfIRI (value: ConfIRI, elGetter: $.ASN1Encoder<any>): _Elemen
 }, $.BER); }
     return _cached_encoder_for_ConfIRI(value, elGetter);
 }
-
 
 /* eslint-enable */

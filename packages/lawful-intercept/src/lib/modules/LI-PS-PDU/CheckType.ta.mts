@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_CheckType {
@@ -70,6 +67,5 @@ const signature: CheckType = CheckType_signature; /* SHORT_NAMED_ENUMERATED_VALU
 export const _decode_CheckType: $.ASN1Decoder<CheckType> = $._decodeEnumerated;
 
 export const _encode_CheckType: $.ASN1Encoder<CheckType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RCSMessageType
@@ -141,6 +137,5 @@ const iMDNNotification: RCSMessageType = RCSMessageType.iMDNNotification; /* SHO
 export const _decode_RCSMessageType: $.ASN1Decoder<RCSMessageType> = $._decodeEnumerated;
 
 export const _encode_RCSMessageType: $.ASN1Encoder<RCSMessageType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

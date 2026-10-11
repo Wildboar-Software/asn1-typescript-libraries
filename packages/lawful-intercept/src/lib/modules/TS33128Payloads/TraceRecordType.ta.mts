@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TraceRecordType
@@ -141,6 +137,5 @@ const traceDeactivation: TraceRecordType = TraceRecordType.traceDeactivation; /*
 export const _decode_TraceRecordType: $.ASN1Decoder<TraceRecordType> = $._decodeEnumerated;
 
 export const _encode_TraceRecordType: $.ASN1Encoder<TraceRecordType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

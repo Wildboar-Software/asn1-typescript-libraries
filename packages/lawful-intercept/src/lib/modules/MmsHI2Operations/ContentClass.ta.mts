@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_ContentClass {
@@ -177,6 +174,5 @@ const content_rich: ContentClass = ContentClass_content_rich; /* SHORT_NAMED_ENU
 export const _decode_ContentClass: $.ASN1Decoder<ContentClass> = $._decodeEnumerated;
 
 export const _encode_ContentClass: $.ASN1Encoder<ContentClass> = $._encodeEnumerated;
-
 
 /* eslint-enable */

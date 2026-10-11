@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_EncryptedPayloadType {
@@ -183,6 +180,5 @@ const part1: EncryptedPayloadType = EncryptedPayloadType_part1; /* SHORT_NAMED_E
 export const _decode_EncryptedPayloadType: $.ASN1Decoder<EncryptedPayloadType> = $._decodeEnumerated;
 
 export const _encode_EncryptedPayloadType: $.ASN1Encoder<EncryptedPayloadType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

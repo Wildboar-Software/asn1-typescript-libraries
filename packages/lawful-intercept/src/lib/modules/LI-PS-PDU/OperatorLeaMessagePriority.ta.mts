@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_OperatorLeaMessagePriority {
@@ -72,6 +69,5 @@ const informational: OperatorLeaMessagePriority = OperatorLeaMessagePriority_inf
 export const _decode_OperatorLeaMessagePriority: $.ASN1Decoder<OperatorLeaMessagePriority> = $._decodeEnumerated;
 
 export const _encode_OperatorLeaMessagePriority: $.ASN1Encoder<OperatorLeaMessagePriority> = $._encodeEnumerated;
-
 
 /* eslint-enable */

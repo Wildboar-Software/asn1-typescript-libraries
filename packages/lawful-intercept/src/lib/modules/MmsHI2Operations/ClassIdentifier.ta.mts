@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_ClassIdentifier {
@@ -104,6 +101,5 @@ const auto: ClassIdentifier = ClassIdentifier_auto; /* SHORT_NAMED_ENUMERATED_VA
 export const _decode_ClassIdentifier: $.ASN1Decoder<ClassIdentifier> = $._decodeEnumerated;
 
 export const _encode_ClassIdentifier: $.ASN1Encoder<ClassIdentifier> = $._encodeEnumerated;
-
 
 /* eslint-enable */

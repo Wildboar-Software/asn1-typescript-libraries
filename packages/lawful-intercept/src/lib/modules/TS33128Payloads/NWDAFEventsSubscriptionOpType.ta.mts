@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary NWDAFEventsSubscriptionOpType
@@ -121,6 +117,5 @@ const dELETE: NWDAFEventsSubscriptionOpType = NWDAFEventsSubscriptionOpType.dELE
 export const _decode_NWDAFEventsSubscriptionOpType: $.ASN1Decoder<NWDAFEventsSubscriptionOpType> = $._decodeEnumerated;
 
 export const _encode_NWDAFEventsSubscriptionOpType: $.ASN1Encoder<NWDAFEventsSubscriptionOpType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_ICE_type {
@@ -140,6 +137,5 @@ const ePDG: ICE_type = ICE_type_ePDG; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ICE_type: $.ASN1Decoder<ICE_type> = $._decodeEnumerated;
 
 export const _encode_ICE_type: $.ASN1Encoder<ICE_type> = $._encodeEnumerated;
-
 
 /* eslint-enable */

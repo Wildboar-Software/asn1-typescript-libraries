@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ReRegRequiredIndicator
@@ -101,6 +97,5 @@ const reRegistrationNotRequired: ReRegRequiredIndicator = ReRegRequiredIndicator
 export const _decode_ReRegRequiredIndicator: $.ASN1Decoder<ReRegRequiredIndicator> = $._decodeEnumerated;
 
 export const _encode_ReRegRequiredIndicator: $.ASN1Encoder<ReRegRequiredIndicator> = $._encodeEnumerated;
-
 
 /* eslint-enable */

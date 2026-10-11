@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    BOOLEAN
+    BOOLEAN,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PGWRNSI
@@ -23,6 +20,5 @@ type PGWRNSI = BOOLEAN; // BooleanType
 export const _decode_PGWRNSI: $.ASN1Decoder<PGWRNSI> = $._decodeBoolean;
 
 export const _encode_PGWRNSI: $.ASN1Encoder<PGWRNSI> = $._encodeBoolean;
-
 
 /* eslint-enable */

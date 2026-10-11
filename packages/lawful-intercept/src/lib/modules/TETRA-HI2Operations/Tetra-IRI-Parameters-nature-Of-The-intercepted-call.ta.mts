@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call {
@@ -208,6 +205,5 @@ const lTE_circuit_call: Tetra_IRI_Parameters_nature_Of_The_intercepted_call = Te
 export const _decode_Tetra_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Decoder<Tetra_IRI_Parameters_nature_Of_The_intercepted_call> = $._decodeEnumerated;
 
 export const _encode_Tetra_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Encoder<Tetra_IRI_Parameters_nature_Of_The_intercepted_call> = $._encodeEnumerated;
-
 
 /* eslint-enable */

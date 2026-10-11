@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SCEFReleaseCause
@@ -161,6 +157,5 @@ const unknownCause: SCEFReleaseCause = SCEFReleaseCause.unknownCause; /* SHORT_N
 export const _decode_SCEFReleaseCause: $.ASN1Decoder<SCEFReleaseCause> = $._decodeEnumerated;
 
 export const _encode_SCEFReleaseCause: $.ASN1Encoder<SCEFReleaseCause> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PTCSessionEndCause
@@ -181,6 +177,5 @@ const allMediaTypesInactive: PTCSessionEndCause = PTCSessionEndCause.allMediaTyp
 export const _decode_PTCSessionEndCause: $.ASN1Decoder<PTCSessionEndCause> = $._decodeEnumerated;
 
 export const _encode_PTCSessionEndCause: $.ASN1Encoder<PTCSessionEndCause> = $._encodeEnumerated;
-
 
 /* eslint-enable */

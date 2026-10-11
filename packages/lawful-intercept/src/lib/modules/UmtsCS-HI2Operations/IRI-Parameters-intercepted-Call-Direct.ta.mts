@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    ENUMERATED,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_IRI_Parameters_intercepted_Call_Direct {
@@ -86,6 +83,5 @@ const terminating_Target: IRI_Parameters_intercepted_Call_Direct = IRI_Parameter
 export const _decode_IRI_Parameters_intercepted_Call_Direct: $.ASN1Decoder<IRI_Parameters_intercepted_Call_Direct> = $._decodeEnumerated;
 
 export const _encode_IRI_Parameters_intercepted_Call_Direct: $.ASN1Encoder<IRI_Parameters_intercepted_Call_Direct> = $._encodeEnumerated;
-
 
 /* eslint-enable */

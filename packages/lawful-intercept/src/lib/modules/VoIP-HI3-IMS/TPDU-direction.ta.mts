@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TPDU_direction
@@ -141,6 +137,5 @@ const unknown: TPDU_direction = TPDU_direction.unknown; /* SHORT_NAMED_ENUMERATE
 export const _decode_TPDU_direction: $.ASN1Decoder<TPDU_direction> = $._decodeEnumerated;
 
 export const _encode_TPDU_direction: $.ASN1Encoder<TPDU_direction> = $._encodeEnumerated;
-
 
 /* eslint-enable */

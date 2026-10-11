@@ -9,7 +9,6 @@ import { unknown_parameter } from "../HI1NotificationOperations/unknown-paramete
 import { erroneous_parameter } from "../HI1NotificationOperations/erroneous-parameter.oa.mjs";
 // export { erroneous_parameter } from "../HI1NotificationOperations/erroneous-parameter.oa.mjs";
 
-
 /**
  * @summary ErrorHI1Notifications
  * @description

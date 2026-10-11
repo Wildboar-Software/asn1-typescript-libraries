@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RequestIndication
@@ -221,6 +217,5 @@ const rELDUETO5GANREQUEST: RequestIndication = RequestIndication.rELDUETO5GANREQ
 export const _decode_RequestIndication: $.ASN1Decoder<RequestIndication> = $._decodeEnumerated;
 
 export const _encode_RequestIndication: $.ASN1Encoder<RequestIndication> = $._encodeEnumerated;
-
 
 /* eslint-enable */

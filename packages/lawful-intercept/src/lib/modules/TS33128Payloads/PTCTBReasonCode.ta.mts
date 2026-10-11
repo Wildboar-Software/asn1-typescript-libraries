@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PTCTBReasonCode
@@ -161,6 +157,5 @@ const tBPrevented: PTCTBReasonCode = PTCTBReasonCode.tBPrevented; /* SHORT_NAMED
 export const _decode_PTCTBReasonCode: $.ASN1Decoder<PTCTBReasonCode> = $._decodeEnumerated;
 
 export const _encode_PTCTBReasonCode: $.ASN1Encoder<PTCTBReasonCode> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary NEFReleaseCause
@@ -181,6 +177,5 @@ const unknownCause: NEFReleaseCause = NEFReleaseCause.unknownCause; /* SHORT_NAM
 export const _decode_NEFReleaseCause: $.ASN1Decoder<NEFReleaseCause> = $._decodeEnumerated;
 
 export const _encode_NEFReleaseCause: $.ASN1Encoder<NEFReleaseCause> = $._encodeEnumerated;
-
 
 /* eslint-enable */

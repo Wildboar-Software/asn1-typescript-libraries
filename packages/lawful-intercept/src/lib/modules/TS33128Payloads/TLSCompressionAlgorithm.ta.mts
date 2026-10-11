@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TLSCompressionAlgorithm
@@ -101,6 +97,5 @@ const deflate: TLSCompressionAlgorithm = TLSCompressionAlgorithm.deflate; /* SHO
 export const _decode_TLSCompressionAlgorithm: $.ASN1Decoder<TLSCompressionAlgorithm> = $._decodeEnumerated;
 
 export const _encode_TLSCompressionAlgorithm: $.ASN1Encoder<TLSCompressionAlgorithm> = $._encodeEnumerated;
-
 
 /* eslint-enable */

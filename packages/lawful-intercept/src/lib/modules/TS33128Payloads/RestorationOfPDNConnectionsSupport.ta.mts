@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    BOOLEAN
+    BOOLEAN,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RestorationOfPDNConnectionsSupport
@@ -23,6 +20,5 @@ type RestorationOfPDNConnectionsSupport = BOOLEAN; // BooleanType
 export const _decode_RestorationOfPDNConnectionsSupport: $.ASN1Decoder<RestorationOfPDNConnectionsSupport> = $._decodeBoolean;
 
 export const _encode_RestorationOfPDNConnectionsSupport: $.ASN1Encoder<RestorationOfPDNConnectionsSupport> = $._encodeBoolean;
-
 
 /* eslint-enable */

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_ProSeTargetType {
@@ -68,6 +65,5 @@ const pRoSeUEtoNwRelay: ProSeTargetType = ProSeTargetType_pRoSeUEtoNwRelay; /* S
 export const _decode_ProSeTargetType: $.ASN1Decoder<ProSeTargetType> = $._decodeEnumerated;
 
 export const _encode_ProSeTargetType: $.ASN1Encoder<ProSeTargetType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

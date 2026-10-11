@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TraceDepth
@@ -181,6 +177,5 @@ const maximumWithoutVendorSpecificExtension: TraceDepth = TraceDepth.maximumWith
 export const _decode_TraceDepth: $.ASN1Decoder<TraceDepth> = $._decodeEnumerated;
 
 export const _encode_TraceDepth: $.ASN1Encoder<TraceDepth> = $._encodeEnumerated;
-
 
 /* eslint-enable */

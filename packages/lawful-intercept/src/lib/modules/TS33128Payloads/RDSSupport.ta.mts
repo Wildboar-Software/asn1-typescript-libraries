@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    BOOLEAN
+    BOOLEAN,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RDSSupport
@@ -23,6 +20,5 @@ type RDSSupport = BOOLEAN; // BooleanType
 export const _decode_RDSSupport: $.ASN1Decoder<RDSSupport> = $._decodeBoolean;
 
 export const _encode_RDSSupport: $.ASN1Encoder<RDSSupport> = $._encodeBoolean;
-
 
 /* eslint-enable */

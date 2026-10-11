@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_AccessType {
@@ -68,6 +65,5 @@ const ePS_Multicast: AccessType = AccessType_ePS_Multicast; /* SHORT_NAMED_ENUME
 export const _decode_AccessType: $.ASN1Decoder<AccessType> = $._decodeEnumerated;
 
 export const _encode_AccessType: $.ASN1Encoder<AccessType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 export
 enum _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding {
@@ -158,6 +155,5 @@ const other: SMS_report_sMS_Contents_enhancedContent_character_encoding = SMS_re
 export const _decode_SMS_report_sMS_Contents_enhancedContent_character_encoding: $.ASN1Decoder<SMS_report_sMS_Contents_enhancedContent_character_encoding> = $._decodeEnumerated;
 
 export const _encode_SMS_report_sMS_Contents_enhancedContent_character_encoding: $.ASN1Encoder<SMS_report_sMS_Contents_enhancedContent_character_encoding> = $._encodeEnumerated;
-
 
 /* eslint-enable */

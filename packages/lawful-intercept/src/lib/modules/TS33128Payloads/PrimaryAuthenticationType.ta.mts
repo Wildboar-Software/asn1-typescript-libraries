@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary PrimaryAuthenticationType
@@ -241,6 +237,5 @@ const uMTSAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.uMTSAKA; /*
 export const _decode_PrimaryAuthenticationType: $.ASN1Decoder<PrimaryAuthenticationType> = $._decodeEnumerated;
 
 export const _encode_PrimaryAuthenticationType: $.ASN1Encoder<PrimaryAuthenticationType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

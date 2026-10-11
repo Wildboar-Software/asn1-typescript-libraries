@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary S8HRMessageCause
@@ -221,6 +217,5 @@ const hRLIEnabled: S8HRMessageCause = S8HRMessageCause.hRLIEnabled; /* SHORT_NAM
 export const _decode_S8HRMessageCause: $.ASN1Decoder<S8HRMessageCause> = $._decodeEnumerated;
 
 export const _encode_S8HRMessageCause: $.ASN1Encoder<S8HRMessageCause> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SMFFailedProcedureType
@@ -121,6 +117,5 @@ const pDUSessionRelease: SMFFailedProcedureType = SMFFailedProcedureType.pDUSess
 export const _decode_SMFFailedProcedureType: $.ASN1Decoder<SMFFailedProcedureType> = $._decodeEnumerated;
 
 export const _encode_SMFFailedProcedureType: $.ASN1Encoder<SMFFailedProcedureType> = $._encodeEnumerated;
-
 
 /* eslint-enable */

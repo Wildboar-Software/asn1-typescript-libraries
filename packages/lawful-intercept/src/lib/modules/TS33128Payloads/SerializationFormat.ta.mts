@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SerializationFormat
@@ -121,6 +117,5 @@ const cbor: SerializationFormat = SerializationFormat.cbor; /* SHORT_NAMED_ENUME
 export const _decode_SerializationFormat: $.ASN1Decoder<SerializationFormat> = $._decodeEnumerated;
 
 export const _encode_SerializationFormat: $.ASN1Encoder<SerializationFormat> = $._encodeEnumerated;
-
 
 /* eslint-enable */

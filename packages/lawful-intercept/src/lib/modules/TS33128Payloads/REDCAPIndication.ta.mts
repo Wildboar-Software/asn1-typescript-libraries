@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary REDCAPIndication
@@ -81,6 +77,5 @@ const redCAP: REDCAPIndication = REDCAPIndication.redCAP; /* SHORT_NAMED_ENUMERA
 export const _decode_REDCAPIndication: $.ASN1Decoder<REDCAPIndication> = $._decodeEnumerated;
 
 export const _encode_REDCAPIndication: $.ASN1Encoder<REDCAPIndication> = $._encodeEnumerated;
-
 
 /* eslint-enable */

@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary RDSAction
@@ -101,6 +97,5 @@ const releasePort: RDSAction = RDSAction.releasePort; /* SHORT_NAMED_ENUMERATED_
 export const _decode_RDSAction: $.ASN1Decoder<RDSAction> = $._decodeEnumerated;
 
 export const _encode_RDSAction: $.ASN1Encoder<RDSAction> = $._encodeEnumerated;
-
 
 /* eslint-enable */

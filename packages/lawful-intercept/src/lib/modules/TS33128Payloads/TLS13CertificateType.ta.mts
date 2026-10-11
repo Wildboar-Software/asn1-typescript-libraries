@@ -1,10 +1,6 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
+
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary TLS13CertificateType
@@ -101,6 +97,5 @@ const rawPublicKey: TLS13CertificateType = TLS13CertificateType.rawPublicKey; /*
 export const _decode_TLS13CertificateType: $.ASN1Decoder<TLS13CertificateType> = $._decodeEnumerated;
 
 export const _encode_TLS13CertificateType: $.ASN1Encoder<TLS13CertificateType> = $._encodeEnumerated;
-
 
 /* eslint-enable */
