@@ -17,7 +17,33 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operation
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PartyInformation-partyIdentity ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PartyInformation-partyIdentity ::= SEQUENCE
+ * {
+ *     mSISDN                    [1] OCTET STRING OPTIONAL,
+ *     -- MSISDN, based on the value of
+ *     -- global-phone-number found in the MMS (see OMA Multimedia Messaging
+ *     -- Service Encapsulation Protocol [90]).
+ *     mMSAddress                [2] OCTET STRING OPTIONAL,
+ *     -- See clause 8 of OMA Multimedia Messaging Service Encapsulation Protocol [90]. It
+ *     -- may be each value of a user defined identifier, that will be an external
+ *     -- representation of an address processed by the MMS Proxy Relay.
+ *     mMSAddressNonLocalID    [3] OCTET STRING OPTIONAL,
+ *     -- see table 15.3.6.1.2: Mapping between Events information and IRI information
+ *     e-Mail                    [4] OCTET STRING OPTIONAL,
+ *     -- it is described in section 3.4 of IETF RFC 2822 [92], but excluding the obsolete
+ *     -- definitions as indicated by the "obs-"prefix.(see clause 8 of Multimedia Messaging
+ *     -- Service Encapsulation Protocol OMA-TS-MMS_ENC-V1_3-20110913-A [90].)
+ *     e164-Format                [5] OCTET STRING (SIZE (1 .. 25)) OPTIONAL,
+ *     -- E164 address but based on value of global-phone-number the found in the MMS.
+ *     iPAddress                 [6] IPAddress OPTIONAL,
+ *     -- IP Address may be an IPv4 or IPv6.
+ *     alphanum-Shortcode         [8] OCTET STRING OPTIONAL,
+ *     -- see clause 8 of OMA Multimedia Messaging Service Encapsulation Protocol [90].
+ *     num-Shortcode            [9] OCTET STRING OPTIONAL,
+ *     -- see clause 8 of OMA Multimedia Messaging Service Encapsulation Protocol [90].
+ *     iMSI                    [10] OCTET STRING OPTIONAL,
+ *     ...
+ * }
  * ```
  * 
  * @class

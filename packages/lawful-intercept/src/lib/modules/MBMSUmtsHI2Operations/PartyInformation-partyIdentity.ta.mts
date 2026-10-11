@@ -16,7 +16,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PartyInformation-partyIdentity ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PartyInformation-partyIdentity ::= SEQUENCE
+ * {
+ *     imsi                    [1] OCTET STRING (SIZE (3..8)) OPTIONAL,
+ *     -- See MAP format [4] International Mobile
+ *     -- Station Identity E.212 number beginning with Mobile Country Code
+ *     ...
+ * }
  * ```
  * 
  * @class

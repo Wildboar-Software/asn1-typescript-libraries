@@ -15,7 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ExtendedLocParameters-mapData ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ExtendedLocParameters-mapData ::= CHOICE         {
+ *     base64Map     [0] PrintableString,     -- clause 5.3.12
+ *     url         [1] PrintableString     -- clause 5.3.138
+ * }
  * ```
  */
 export

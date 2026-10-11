@@ -22,7 +22,46 @@ import { PartyInformation_partyIdentity_party_Validity, _decode_PartyInformation
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PartyInformation-partyIdentity ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PartyInformation-partyIdentity ::= SEQUENCE
+ * {
+ *     imei                [1] OCTET STRING (SIZE (8)) OPTIONAL,
+ *     -- See MAP format TS GSM 09.02 [32]
+ *     tei                    [2] OCTET STRING (SIZE (1..15)) OPTIONAL,
+ *     -- ISDN-based Terminal Equipment Identity
+ *     imsi                [3] OCTET STRING (SIZE (3..8)) OPTIONAL,
+ *     -- See MAP format TS GSM 09.02 [32] International Mobile
+ *     -- Station Identity E.212 number beginning with Mobile Country Code
+ *     callingPartyNumber    [4] CallingPartyNumber OPTIONAL,
+ *     -- The calling party format is used to transmit the identity of a calling party
+ *     calledPartyNumber    [5] CalledPartyNumber OPTIONAL,
+ *     -- The called party format is used to transmit the identity of a called party or
+ *     -- a forwarded to party.
+ *     msISDN                [6] OCTET STRING (SIZE (1..9)) OPTIONAL,
+ *     -- MSISDN of the target, encoded in the same format as the AddressString
+ *     -- parameters defined in MAP format TS GSM 09.02 [32]
+ *     ...,
+ *     e164-Format            [7] OCTET STRING (SIZE (1..25)) OPTIONAL,
+ *     -- E164 address of the node in international format. Coded in the same format as
+ *     -- the calling party number parameter of the ISUP (parameter part: EN 300 356 [5])
+ *     sip-uri                [8] OCTET STRING OPTIONAL,
+ *     -- Session Initiation Protocol - Uniform Resource Identifier. See RFC 3261 [59].
+ *     -- This parameter is duplicated from 3GPP TS 33.108 [61].
+ *     tel-url                [9] OCTET STRING OPTIONAL,
+ *     -- See "URLs for Telephone Calls", RFC 3966 [68].
+ *     -- This parameter is duplicated from 3GPP TS 33.108 [61].
+ *     party-Validity        [10] ENUMERATED
+ *     {
+ *         trusted(0),
+ *         -- The operator has assured the party identity
+ *         untrusted(1),
+ *         -- The operator does not assure the party identity
+ *         operator-added(2),
+ *         -- The party identity is added by the operator, e.g. the roaming number
+ *         ...
+ *     } OPTIONAL,
+ *     alphanumeric    [11] UTF8String OPTIONAL
+ *     -- see clause A.3.3 on usage of this parameter
+ * }
  * ```
  * 
  * @class

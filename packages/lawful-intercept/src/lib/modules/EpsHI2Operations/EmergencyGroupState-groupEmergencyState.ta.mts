@@ -22,7 +22,16 @@ enum _enum_for_EmergencyGroupState_groupEmergencyState {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EmergencyGroupState-groupEmergencyState ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * EmergencyGroupState-groupEmergencyState ::= ENUMERATED
+ * {
+ *     -- in case of MCPTT group call, indicates if there is a group emergency or
+ *     -- a response from the Target to indicate current Client state of emergency.
+ *     inForm            (1),
+ *     reSponse        (2),
+ *     cancelInform     (3),
+ *     cancelResponse    (4),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

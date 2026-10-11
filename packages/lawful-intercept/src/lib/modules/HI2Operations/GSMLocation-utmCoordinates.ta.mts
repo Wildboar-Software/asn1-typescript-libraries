@@ -18,7 +18,18 @@ import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GSMLocation-utmCoordinates ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GSMLocation-utmCoordinates ::= SEQUENCE
+ * {
+ *     utm-East    [1] PrintableString (SIZE(10)),
+ *     utm-North    [2] PrintableString (SIZE(7)),
+ *     -- Universal Transverse Mercator
+ *     -- example    utm-East    32U0439955
+ *     --             utm-North    5540736
+ *     mapDatum    [3] MapDatum DEFAULT wGS84,
+ *     ...,
+ *     azimuth        [4] INTEGER (0..359) OPTIONAL
+ *     -- The azimuth is the bearing, relative to true north
+ * }
  * ```
  * 
  * @class

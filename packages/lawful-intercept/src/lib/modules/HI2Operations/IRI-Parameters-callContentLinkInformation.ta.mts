@@ -16,7 +16,16 @@ import { CallContentLinkCharacteristics, _decode_CallContentLinkCharacteristics,
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IRI-Parameters-callContentLinkInformation ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * IRI-Parameters-callContentLinkInformation ::= SEQUENCE
+ * {
+ *     cCLink1Characteristics        [1] CallContentLinkCharacteristics OPTIONAL,
+ *     -- Information concerning the Content of Communication Link Tx channel established
+ *     -- toward the LEMF (or the sum signal channel, in case of mono mode).
+ *     cCLink2Characteristics        [2] CallContentLinkCharacteristics OPTIONAL,
+ *     -- Information concerning the Content of Communication Link Rx channel established
+ *     -- toward the LEMF.
+ *     ...
+ * }
  * ```
  * 
  * @class

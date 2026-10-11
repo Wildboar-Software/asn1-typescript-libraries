@@ -17,7 +17,13 @@ import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GSMLocation-utmRefCoordinates ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GSMLocation-utmRefCoordinates ::= SEQUENCE
+ * {
+ *     utmref-string    PrintableString (SIZE(13)),
+ *     mapDatum        MapDatum DEFAULT wGS84,
+ *     ...
+ * }
+ * -- example 32UPU91294045
  * ```
  * 
  * @class

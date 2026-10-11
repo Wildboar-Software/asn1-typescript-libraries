@@ -21,7 +21,16 @@ enum _enum_for_PartyInformation_partyIdentity_party_Validity {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PartyInformation-partyIdentity-party-Validity ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * PartyInformation-partyIdentity-party-Validity ::= ENUMERATED
+ * {
+ *     trusted(0),
+ *     -- The operator has assured the party identity
+ *     untrusted(1),
+ *     -- The operator does not assure the party identity
+ *     operator-added(2),
+ *     -- The party identity is added by the operator, e.g. the roaming number
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

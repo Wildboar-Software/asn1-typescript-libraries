@@ -22,7 +22,14 @@ enum _enum_for_UMTS_Content_Report_initiator {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * UMTS-Content-Report-initiator ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * UMTS-Content-Report-initiator ::= ENUMERATED
+ * {
+ *     originating-party(0),
+ *     terminating-party(1),
+ *     forwarded-to-party(2),
+ *     undefined-party(3),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

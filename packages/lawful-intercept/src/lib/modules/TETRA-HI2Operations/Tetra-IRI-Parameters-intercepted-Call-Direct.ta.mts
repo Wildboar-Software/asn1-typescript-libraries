@@ -21,7 +21,17 @@ enum _enum_for_Tetra_IRI_Parameters_intercepted_Call_Direct {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Tetra-IRI-Parameters-intercepted-Call-Direct ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Tetra-IRI-Parameters-intercepted-Call-Direct ::= ENUMERATED
+ * {
+ *     not-Available(0),
+ *     originating-Target(1),
+ *     -- In case of GPRS, this indicates that the PDP context activation, modification
+ *     -- or deactivation is MS requested
+ *     terminating-Target(2),
+ *     -- In case of GPRS, this indicates that the PDP context activation, modification
+ *     -- or deactivation is network initiated
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

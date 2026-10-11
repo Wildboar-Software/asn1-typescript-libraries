@@ -16,7 +16,19 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PartyInformation-partyIdentity ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PartyInformation-partyIdentity ::= SEQUENCE
+ * {
+ *     imsi                    [2] OCTET STRING (SIZE (3..8)) OPTIONAL,
+ *     -- See MAP format [4] International Mobile
+ *     -- Station Identity E.212 number beginning with Mobile Country Code
+ *     msISDN                    [3] OCTET STRING (SIZE (1..9)) OPTIONAL,
+ *     -- MSISDN of the target, encoded in the same format as the AddressString
+ *     -- parameters defined in MAP format document TS 29.002 [4]
+ *     nai                        [7]  OCTET STRING  OPTIONAL,
+ *     -- NAI of the target, encoded in the same format as
+ *     -- defined in 3GPP TS 29.234 [41].
+ *     ...
+ * }
  * ```
  * 
  * @class

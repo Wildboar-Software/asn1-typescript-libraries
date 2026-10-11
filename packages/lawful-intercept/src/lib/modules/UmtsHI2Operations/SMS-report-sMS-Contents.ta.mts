@@ -22,7 +22,35 @@ import { SMS_report_sMS_Contents_other_message, _decode_SMS_report_sMS_Contents_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMS-report-sMS-Contents ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SMS-report-sMS-Contents ::= SEQUENCE
+ * {
+ *     sms-initiator        [1] ENUMERATED     -- party which sent the  SMS
+ *     {
+ *         target            (0),
+ *         server            (1),
+ *         undefined-party    (2),
+ *         ...
+ *     },
+ *     transfer-status        [2] ENUMERATED
+ *     {
+ *         succeed-transfer    (0),         -- the transfer of the SMS message succeeds
+ *         not-succeed-transfer(1),
+ *         undefined            (2),
+ *         ...
+ *     } OPTIONAL,
+ *     other-message        [3] ENUMERATED     -- in case of terminating call, indicates if
+ *     -- the server will send other SMS
+ *     {
+ *         yes            (0),
+ *         no            (1),
+ *         undefined    (2),
+ *         ...
+ *     } OPTIONAL,
+ *     content                [4] OCTET STRING (SIZE (1 .. 270)) OPTIONAL,
+ *     -- Encoded in the format defined for the SMS mobile
+ *     ...,
+ *     sMSContentRemovedIndicator [5] BOOLEAN OPTIONAL
+ * }
  * ```
  * 
  * @class

@@ -22,7 +22,20 @@ enum _enum_for_IRI_Parameters_initiator {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IRI-Parameters-initiator ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IRI-Parameters-initiator ::= ENUMERATED
+ * {
+ *     not-Available        (0),
+ *     originating-Target    (1),
+ *     -- in case of MBMS, this indicates that the MBMS UE has initiated the MBMS session
+ *     -- or initiated the subscription management event.
+ *     network-initiated    (2),
+ *     -- in case of MBMS, this indicates that the MBMS has initiated the MBMS session.
+ *     off-online-action   (3),
+ *     -- in case of MBMS, this indicates a subscription management event has occurred as the
+ *     -- result of an MBMS operator customer services function or other subscription updates
+ *     -- not initiated by the MBMS UE.
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

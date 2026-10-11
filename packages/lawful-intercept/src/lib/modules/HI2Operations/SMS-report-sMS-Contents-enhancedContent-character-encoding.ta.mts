@@ -25,7 +25,17 @@ enum _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMS-report-sMS-Contents-enhancedContent-character-encoding ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMS-report-sMS-Contents-enhancedContent-character-encoding ::= ENUMERATED
+ * {
+ *     gsm-7-bit-ascii(0),
+ *     eight-bit-ascii(1),
+ *     eight-bit-binary(2),
+ *     ucs-2(3),
+ *     utf-8(4),
+ *     utf-16(5),
+ *     other(6),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

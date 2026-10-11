@@ -20,7 +20,12 @@ enum _enum_for_MBMSinformation_mbms_Mode {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSinformation-mbms-Mode ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSinformation-mbms-Mode ::= ENUMERATED
+ * {
+ *     multicast    (0),
+ *     broadcast    (1),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

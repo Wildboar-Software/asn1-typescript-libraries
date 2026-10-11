@@ -18,7 +18,25 @@ import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GSMLocation-geoCoordinates ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GSMLocation-geoCoordinates ::= SEQUENCE
+ * {
+ *     latitude        [1]    PrintableString (SIZE(7..10)),
+ *     -- format :     XDDMMSS.SS
+ *     longitude        [2]    PrintableString (SIZE(8..11)),
+ *     -- format :     XDDDMMSS.SS
+ *     mapDatum        [3]    MapDatum DEFAULT wGS84,
+ *     ...,
+ *     azimuth            [4]    INTEGER (0..359) OPTIONAL
+ *     -- The azimuth is the bearing, relative to true north.
+ * }
+ * -- format :     XDDDMMSS.SS
+ * --                 X             : N(orth), S(outh), E(ast), W(est)
+ * --                DD or DDD     : degrees (numeric characters)
+ * --                MM            : minutes (numeric characters)
+ * --                SS.SS         : seconds, the second part (.SS) is optionnal
+ * -- Example :
+ * --            latitude short form        N502312
+ * --            longitude long form        E1122312.18
  * ```
  * 
  * @class

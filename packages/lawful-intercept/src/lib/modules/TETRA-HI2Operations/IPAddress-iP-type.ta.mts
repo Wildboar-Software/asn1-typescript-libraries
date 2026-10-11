@@ -20,7 +20,12 @@ enum _enum_for_IPAddress_iP_type {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IPAddress-iP-type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IPAddress-iP-type ::= ENUMERATED
+ * {
+ *     iPV4(0),
+ *     iPV6(1),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

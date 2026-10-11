@@ -16,7 +16,12 @@ import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operation
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EPSLocation-uELocationTimestamp ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * EPSLocation-uELocationTimestamp ::= CHOICE
+ * {
+ *     timestamp            [0]    TimeStamp,
+ *     timestampUnknown    [1]    NULL,
+ *     ...
+ * }
  * ```
  */
 export

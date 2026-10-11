@@ -19,7 +19,11 @@ enum _enum_for_Tetra_IRI_Parameters_iRIversion {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Tetra-IRI-Parameters-iRIversion ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Tetra-IRI-Parameters-iRIversion ::= ENUMERATED
+ * {
+ *     version0(0),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

@@ -21,7 +21,13 @@ enum _enum_for_IRI_Parameters_intercepted_Call_Direct {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IRI-Parameters-intercepted-Call-Direct ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IRI-Parameters-intercepted-Call-Direct ::= ENUMERATED
+ * {
+ *     not-Available(0),
+ *     originating-Target(1),
+ *     terminating-Target(2),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

@@ -19,7 +19,11 @@ enum _enum_for_PartyInformation_party_Qualifier {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PartyInformation-party-Qualifier ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * PartyInformation-party-Qualifier ::= ENUMERATED
+ * {
+ *     mMS-Target(1),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

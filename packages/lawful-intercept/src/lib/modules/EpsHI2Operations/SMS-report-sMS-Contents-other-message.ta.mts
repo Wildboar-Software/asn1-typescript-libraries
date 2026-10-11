@@ -21,7 +21,14 @@ enum _enum_for_SMS_report_sMS_Contents_other_message {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMS-report-sMS-Contents-other-message ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMS-report-sMS-Contents-other-message ::= ENUMERATED     -- in case of terminating call, indicates if
+ * -- the server will send other SMS
+ * {
+ *     yes            (0),
+ *     no            (1),
+ *     undefined    (2),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

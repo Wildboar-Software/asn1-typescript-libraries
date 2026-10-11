@@ -23,7 +23,18 @@ enum _enum_for_IRI_Parameters_iRIversion {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IRI-Parameters-iRIversion ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IRI-Parameters-iRIversion ::= ENUMERATED
+ * {
+ *     version2 (2),
+ *     ...,
+ *     version3 (3),
+ *     version4 (4),
+ *     -- note that version5 (5) cannot be used as it was missed in the version 5 of this
+ *     -- ASN.1 module.
+ *     version6 (6),
+ *     -- vesion7(7) was ommited to align with ETSI TS 101 671.
+ *     lastVersion (8)
+ * }
  * ```
  * 
  * @enum {number}

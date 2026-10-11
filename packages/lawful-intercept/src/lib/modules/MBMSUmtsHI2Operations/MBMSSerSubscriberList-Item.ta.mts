@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSSerSubscriberList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSSerSubscriberList-Item ::= SEQUENCE
+ * {
+ *     mBMSSERSUBSCRIBERLIST    [1]    UTF8String,
+ *     ...
+ * }
  * ```
  * 
  * @class

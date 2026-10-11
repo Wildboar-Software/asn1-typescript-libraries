@@ -22,7 +22,23 @@ enum _enum_for_PartyInformation_party_Qualifier {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PartyInformation-party-Qualifier ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * PartyInformation-party-Qualifier ::= ENUMERATED
+ * {
+ *     originating-Party(0),
+ *     -- In this case, the partyInformation parameter provides the identities related to
+ *     -- the originating party and all information provided by this party.
+ *     -- This parameter provides also all the information concerning the redirecting
+ *     -- party when a forwarded call reaches a target.
+ *     terminating-Party(1),
+ *     -- In this case, the partyInformation parameter provides the identities related to
+ *     -- the terminating party and all information provided by this party.
+ *     forwarded-to-Party(2),
+ *     -- In this case, the partyInformation parameter provides the identities related to
+ *     -- the forwarded to party and parties beyond this one and all information
+ *     -- provided by this parties, including the call forwarding reason.
+ *     gPRS-Target(3),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

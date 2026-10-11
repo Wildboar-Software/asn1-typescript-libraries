@@ -16,7 +16,16 @@ import { MBMSNodeList_Item_mBMSNODELIST, _decode_MBMSNodeList_Item_mBMSNODELIST,
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSNodeList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSNodeList-Item ::= SEQUENCE
+ * {
+ *     mBMSNODELIST    [1]    SEQUENCE
+ *     {
+ *         mbmsnodeIPAdress    [1]      IPAddress     OPTIONAL,
+ *         mbmsnodeName        [2]        UTF8String    OPTIONAL,
+ *         ...
+ *     },
+ *     ...
+ * }
  * ```
  * 
  * @class
