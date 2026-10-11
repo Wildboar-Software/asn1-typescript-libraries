@@ -102,35 +102,8 @@ const ACPPreferredDelivery_mhs: ACPPreferredDelivery = ACPPreferredDelivery.mhs;
  */
 export
 const mhs: ACPPreferredDelivery = ACPPreferredDelivery.mhs; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ACPPreferredDelivery: $.ASN1Decoder<ACPPreferredDelivery> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ACPPreferredDelivery
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ACPPreferredDelivery (el: _Element): ACPPreferredDelivery {
-    if (!_cached_decoder_for_ACPPreferredDelivery) { _cached_decoder_for_ACPPreferredDelivery = $._decodeEnumerated; }
-    return _cached_decoder_for_ACPPreferredDelivery(el);
-}
-
-let _cached_encoder_for_ACPPreferredDelivery: $.ASN1Encoder<ACPPreferredDelivery> | null = null;
-
-/**
- * @summary Encodes a(n) ACPPreferredDelivery into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ACPPreferredDelivery, encoded as an ASN.1 Element.
- */
-export
-function _encode_ACPPreferredDelivery (value: ACPPreferredDelivery, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ACPPreferredDelivery) { _cached_encoder_for_ACPPreferredDelivery = $._encodeEnumerated; }
-    return _cached_encoder_for_ACPPreferredDelivery(value, elGetter);
-}
+export const _decode_ACPPreferredDelivery = $._decodeEnumerated;
+export const _encode_ACPPreferredDelivery = $._encodeEnumerated;
 
 
 /* eslint-enable */

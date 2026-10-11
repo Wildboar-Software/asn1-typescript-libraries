@@ -102,35 +102,8 @@ const RIParametersDeprecated_rIType_partTimeTerminal: RIParametersDeprecated_rIT
  */
 export
 const partTimeTerminal: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.partTimeTerminal; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_RIParametersDeprecated_rIType: $.ASN1Decoder<RIParametersDeprecated_rIType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) RIParametersDeprecated_rIType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RIParametersDeprecated_rIType (el: _Element): RIParametersDeprecated_rIType {
-    if (!_cached_decoder_for_RIParametersDeprecated_rIType) { _cached_decoder_for_RIParametersDeprecated_rIType = $._decodeEnumerated; }
-    return _cached_decoder_for_RIParametersDeprecated_rIType(el);
-}
-
-let _cached_encoder_for_RIParametersDeprecated_rIType: $.ASN1Encoder<RIParametersDeprecated_rIType> | null = null;
-
-/**
- * @summary Encodes a(n) RIParametersDeprecated_rIType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RIParametersDeprecated_rIType, encoded as an ASN.1 Element.
- */
-export
-function _encode_RIParametersDeprecated_rIType (value: RIParametersDeprecated_rIType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RIParametersDeprecated_rIType) { _cached_encoder_for_RIParametersDeprecated_rIType = $._encodeEnumerated; }
-    return _cached_encoder_for_RIParametersDeprecated_rIType(value, elGetter);
-}
+export const _decode_RIParametersDeprecated_rIType = $._decodeEnumerated;
+export const _encode_RIParametersDeprecated_rIType = $._encodeEnumerated;
 
 
 /* eslint-enable */

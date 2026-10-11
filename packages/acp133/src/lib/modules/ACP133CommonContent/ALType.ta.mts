@@ -99,35 +99,8 @@ const ALType_dag: ALType = 4; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const dag: ALType = ALType_dag; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ALType: $.ASN1Decoder<ALType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ALType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ALType (el: _Element): ALType {
-    if (!_cached_decoder_for_ALType) { _cached_decoder_for_ALType = $._decodeInteger; }
-    return _cached_decoder_for_ALType(el);
-}
-
-let _cached_encoder_for_ALType: $.ASN1Encoder<ALType> | null = null;
-
-/**
- * @summary Encodes a(n) ALType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ALType, encoded as an ASN.1 Element.
- */
-export
-function _encode_ALType (value: ALType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ALType) { _cached_encoder_for_ALType = $._encodeInteger; }
-    return _cached_encoder_for_ALType(value, elGetter);
-}
+export const _decode_ALType = $._decodeInteger;
+export const _encode_ALType = $._encodeInteger;
 
 
 /* eslint-enable */
