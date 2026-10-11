@@ -13,6 +13,12 @@ import { SigParameterName, _decode_SigParameterName, _encode_SigParameterName } 
  * @summary SigParameterV1
  * @description
  * 
+ * Version 1 signal parameter: a name and one octet-string value, with no
+ * `extraInfo` choice (`doc/h248v1support.asn1`).
+ *
+ * Version 3 carries a sequence of values and an optional relation, range, or
+ * sub-list.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +38,21 @@ class SigParameterV1 {
     constructor (
         /**
          * @summary `sigParameterName`.
+         * @description
+         *
+         * Parameter name, a two-octet `Name`.
+         *
          * @public
          * @readonly
          */
         readonly sigParameterName: SigParameterName,
         /**
          * @summary `value`.
+         * @description
+         *
+         * Single double-wrapped parameter value. Version 3 uses a sequence of
+         * such octet strings.
+         *
          * @public
          * @readonly
          */

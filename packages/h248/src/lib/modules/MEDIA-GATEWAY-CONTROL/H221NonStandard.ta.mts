@@ -14,6 +14,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary H221NonStandard
  * @description
  * 
+ * H.221 non-standard identifier: T.35 country codes, a nationally assigned
+ * extension, and a nationally assigned manufacturer code (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,30 +37,51 @@ class H221NonStandard {
     constructor (
         /**
          * @summary `t35CountryCode1`.
+         * @description
+         *
+         * First T.35 country-code octet, 0 to 255.
+         *
          * @public
          * @readonly
          */
         readonly t35CountryCode1: INTEGER,
         /**
          * @summary `t35CountryCode2`.
+         * @description
+         *
+         * Second T.35 country-code octet, 0 to 255 (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly t35CountryCode2: INTEGER,
         /**
          * @summary `t35Extension`.
+         * @description
+         *
+         * Nationally assigned extension, 0 to 255.
+         *
          * @public
          * @readonly
          */
         readonly t35Extension: INTEGER,
         /**
          * @summary `manufacturerCode`.
+         * @description
+         *
+         * Nationally assigned manufacturer code, 0 to 65535.
+         *
          * @public
          * @readonly
          */
         readonly manufacturerCode: INTEGER,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

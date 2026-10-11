@@ -12,6 +12,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SegmentNumber
  * @description
  * 
+ * Segment number of a segmented TransactionReply, 0 to 65535 (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

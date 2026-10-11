@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SelectLogic
  * @description
  * 
+ * How multiple audit selection criteria combine (Annex A).
+ *
+ * `andAUDITSelect` keeps a context only when every filter matches.
+ * `orAUDITSelect` keeps it when at least one filter matches. Omitted on the
+ * audit request, the logic is AND.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

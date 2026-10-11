@@ -12,6 +12,17 @@ import { _decode_Relation, _encode_Relation, Relation } from "../MEDIA-GATEWAY-C
  * @summary PropertyParm_extraInfo
  * @description
  * 
+ * How a property value sequence is to be read (ITU-T Rec. H.248.1 (03/2013)
+ * Annex A).
+ *
+ * `relation` is legal only for a one-element sequence. It tells the MG to
+ * choose a value bearing that relation to the given value, for example
+ * greater-than. `range` is legal only for a two-element sequence and means an
+ * inclusive range from the first element to the second. `sublist` means the
+ * sequence is one list-valued property rather than a set of alternatives. Annex
+ * A does not define a separate meaning for the boolean TRUE or FALSE inside
+ * `range` or `sublist`; selecting the alternative is what carries the meaning.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

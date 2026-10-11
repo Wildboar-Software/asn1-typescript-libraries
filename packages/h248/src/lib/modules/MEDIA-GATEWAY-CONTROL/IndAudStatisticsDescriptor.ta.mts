@@ -12,6 +12,10 @@ import { PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-C
  * @summary IndAudStatisticsDescriptor
  * @description
  * 
+ * Individual audit of one statistic (clause 7.2.5). The statistic is not reset.
+ * A stream-level statistic is selected by placing this item under the Media
+ * descriptor with a StreamID.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +32,10 @@ class IndAudStatisticsDescriptor {
     constructor (
         /**
          * @summary `statName`.
+         * @description
+         *
+         * Package and statistic identifier to return.
+         *
          * @public
          * @readonly
          */

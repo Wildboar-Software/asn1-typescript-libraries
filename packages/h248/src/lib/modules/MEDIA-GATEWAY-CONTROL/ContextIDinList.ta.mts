@@ -12,6 +12,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ContextIDinList
  * @description
  * 
+ * One ContextID inside a context list. Same numeric range and the same
+ * distinguished values as `ContextID` (0 NULL, 4294967294 CHOOSE, 4294967295
+ * ALL).
+ *
+ * The compiled module uses this type, rather than `ContextID`, for
+ * `ContextRequest.contextList`, following the Wireshark adjustment in
+ * `doc/h248v3.asn1`. The Recommendation's Annex A types that field as `SEQUENCE
+ * OF ContextID`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

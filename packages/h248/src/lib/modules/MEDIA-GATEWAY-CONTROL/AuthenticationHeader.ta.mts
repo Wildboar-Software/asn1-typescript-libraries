@@ -14,6 +14,10 @@ import { AuthData, _decode_AuthData, _encode_AuthData } from "../MEDIA-GATEWAY-C
  * @summary AuthenticationHeader
  * @description
  * 
+ * Interim authentication header carried in front of a `Message` when IPsec is
+ * not available below the application (ITU-T Rec. H.248.1 (03/2013) clause
+ * 10.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +36,38 @@ class AuthenticationHeader {
     constructor (
         /**
          * @summary `secParmIndex`.
+         * @description
+         *
+         * Security Parameters Index, four octets, identifying the security
+         * association used to compute `ad`. Same role as the SPI field of IETF
+         * RFC 2402.
+         *
          * @public
          * @readonly
          */
         readonly secParmIndex: SecurityParmIndex,
         /**
          * @summary `seqNum`.
+         * @description
+         *
+         * Sequence number, four octets. Same role as the sequence-number field
+         * of IETF RFC 2402. The interim scheme does not itself provide
+         * anti-replay protection (clause 10.2).
+         *
          * @public
          * @readonly
          */
         readonly seqNum: SequenceNum,
         /**
          * @summary `ad`.
+         * @description
+         *
+         * Integrity check value, 12 to 32 octets. Calculated over the
+         * concatenated transactions prefixed by a synthesized 32-bit source
+         * address, 32-bit destination address, and 16-bit destination port,
+         * encoded as 20 hex digits (clause 10.2). When TCP is the transport,
+         * that port is the TCP port.
+         *
          * @public
          * @readonly
          */

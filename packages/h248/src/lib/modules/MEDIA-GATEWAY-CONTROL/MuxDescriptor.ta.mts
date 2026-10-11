@@ -14,6 +14,17 @@ import { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } fro
  * @summary MuxDescriptor
  * @description
  * 
+ * Associates a multiplexing termination with the bearer terminations that carry
+ * its frame (ITU-T Rec. H.248.1 (03/2013) clauses 6.2 and 7.1.3).
+ *
+ * The bearer terminations are listed in the order they are assembled into the
+ * frame. On Add, bearers named here that are not yet in the context are added
+ * as if by separate Add commands; a failure of that implied Add is error 471
+ * ("Implied Add for Multiplex failure") and processing of the command stops. On
+ * Modify, bearers newly listed are added and bearers no longer listed are
+ * subtracted. Subtracting or moving the multiplexing termination does the same
+ * to its bearers.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +44,46 @@ class MuxDescriptor {
     constructor (
         /**
          * @summary `muxType`.
+         * @description
+         *
+         * Multiplex: H.221, H.223, H.226, V.76, or Nx64K (clause 7.1.3).
+         * Further types are extensions.
+         *
          * @public
          * @readonly
          */
         readonly muxType: MuxType,
         /**
          * @summary `termList`.
+         * @description
+         *
+         * Bearer terminations, in frame order. For Nx64K, each implied bearer
+         * takes the multiplex termination's stream parameters except that its
+         * bandwidth is 64 kbit/s (clause 7.1.3).
+         *
          * @public
          * @readonly
          */
         readonly termList: TerminationID[],
         /**
          * @summary `nonStandardData`.
+         * @description
+         *
+         * Non-standard multiplex data, identified either by an object
+         * identifier, an H.221 non-standard identifier, or an experimental
+         * string (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly nonStandardData: OPTIONAL<NonStandardData>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

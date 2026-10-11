@@ -12,6 +12,9 @@ import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../
  * @summary TransactionAck
  * @description
  * 
+ * Acknowledgement of one transaction identifier, or of a contiguous range of
+ * identifiers (Annex A, Annex B `transactionAck`).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +32,22 @@ class TransactionAck {
     constructor (
         /**
          * @summary `firstAck`.
+         * @description
+         *
+         * First transaction identifier covered by this acknowledgement. When
+         * `lastAck` is omitted, only this identifier is acknowledged.
+         *
          * @public
          * @readonly
          */
         readonly firstAck: TransactionId,
         /**
          * @summary `lastAck`.
+         * @description
+         *
+         * Last transaction identifier of an inclusive range beginning at
+         * `firstAck`. Omitted to acknowledge a single identifier.
+         *
          * @public
          * @readonly
          */

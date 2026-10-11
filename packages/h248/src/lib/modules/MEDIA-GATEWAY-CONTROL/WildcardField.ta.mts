@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary WildcardField
  * @description
  * 
+ * One octet of wildcard mask in front of a TerminationID (clause A.1).
+ *
+ * Bit 7 (the most significant bit) is 1 for ALL and 0 for CHOOSE. Bit 6 is 0
+ * for a single naming level and 1 for that level and all lower levels. Bits 0
+ * through 5 are the bit position in the TerminationID at which the wildcard
+ * starts.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary StreamID
  * @description
  * 
+ * 16-bit stream identifier, 0 to 65535.
+ *
+ * Media streams use 1 to 65535 (clause 7.1.4). The value 0 on an event or a
+ * signal means the item is not tied to one stream (clauses 7.1.9.2 and
+ * 7.1.11.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

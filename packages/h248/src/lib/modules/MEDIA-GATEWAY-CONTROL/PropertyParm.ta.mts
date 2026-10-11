@@ -14,6 +14,21 @@ import { PropertyParm_extraInfo, _decode_PropertyParm_extraInfo, _encode_Propert
  * @summary PropertyParm
  * @description
  * 
+ * One packaged property, or one signal or event parameter value when the same
+ * encoding is reused (ITU-T Rec. H.248.1 (03/2013) Annex A).
+ *
+ * `value` is a sequence of octet strings. Each octet string is a BER encoding
+ * of the package's native type (integer, string, boolean, enumeration, and so
+ * on), wrapped again as an octet string. Annex A, note 3, gives the mapping.
+ * The compiled field is named `propertyName` rather than `name`, and each
+ * element is typed `PropertyID`, following `doc/h248v3.asn1`.
+ *
+ * An empty sequence means CHOOSE. One element is a single value. A longer
+ * sequence is a list of alternatives, most preferred first, unless `extraInfo`
+ * selects `sublist`, in which case every element is part of one list-valued
+ * property. Only an AuditCapability reply from the MG may contain several
+ * values, a range, or a relation.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,24 +55,47 @@ class PropertyParm {
     constructor (
         /**
          * @summary `propertyName`.
+         * @description
+         *
+         * Package and property identifier, four octets. The Recommendation
+         * calls this field `name`. See `PkgdName` for wildcarding and for the
+         * Annex C native-tag convention.
+         *
          * @public
          * @readonly
          */
         readonly propertyName: PkgdName,
         /**
          * @summary `value`.
+         * @description
+         *
+         * Property values, each double-wrapped as an octet string (Annex A).
+         * Empty means CHOOSE. The MG chooses one element unless `sublist` is
+         * selected. Order is descending preference.
+         *
          * @public
          * @readonly
          */
         readonly value: PropertyID[],
         /**
          * @summary `extraInfo`.
+         * @description
+         *
+         * Relation, inclusive range, or sub-list. See the Annex A rules
+         * restated on `PropertyParm-extraInfo`. Omitted for a plain single
+         * value or a plain list of alternatives.
+         *
          * @public
          * @readonly
          */
         readonly extraInfo: OPTIONAL<PropertyParm_extraInfo>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

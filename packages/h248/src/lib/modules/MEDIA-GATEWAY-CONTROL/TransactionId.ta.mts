@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TransactionId
  * @description
  * 
+ * 32-bit transaction identifier, 0 to 4294967295, assigned by the sender and
+ * unique within that sender.
+ *
+ * A reply that reports a missing TransactionID uses the value 0 (ITU-T Rec.
+ * H.248.1 (03/2013) clause 8.1.1). A reply that cannot determine a legal
+ * transaction also uses a NULL TransactionID with error 403 (clause 8.2.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

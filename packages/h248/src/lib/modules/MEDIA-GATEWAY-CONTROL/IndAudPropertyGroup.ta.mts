@@ -10,6 +10,9 @@ import { IndAudPropertyParm, _decode_IndAudPropertyParm, _encode_IndAudPropertyP
  * @summary IndAudPropertyGroup
  * @description
  * 
+ * Properties selected inside one Local or Remote property group on an
+ * individual audit (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

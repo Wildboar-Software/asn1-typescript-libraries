@@ -13,6 +13,14 @@ import { ActionRequest, _decode_ActionRequest, _encode_ActionRequest } from "../
  * @summary TransactionRequest
  * @description
  * 
+ * Request invocation of one transaction: its identifier and one or more
+ * actions. There is one request invocation per transaction (ITU-T Rec. H.248.1
+ * (03/2013) clause 8.2.1).
+ *
+ * The sender should keep an application timer per transaction. Expiry
+ * retransmits the request. A reply cancels the timer. A pending indication
+ * restarts it (clause 8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +39,36 @@ class TransactionRequest {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         *
+         * Identifier used to correlate this request with its reply and with any
+         * TransactionPending (clause 8.2.1).
+         *
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `actions`.
+         * @description
+         *
+         * Actions to execute, in order. Each action is confined to one context.
+         * On the first failing command that is not marked optional, later
+         * commands in the transaction are not attempted, and the gateway
+         * restores the state from before that command as far as it can (clause
+         * 8).
+         *
          * @public
          * @readonly
          */
         readonly actions: ActionRequest[],
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

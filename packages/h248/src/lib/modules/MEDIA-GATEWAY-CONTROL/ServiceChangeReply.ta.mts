@@ -13,6 +13,10 @@ import { ServiceChangeResult, _decode_ServiceChangeResult, _encode_ServiceChange
  * @summary ServiceChangeReply
  * @description
  * 
+ * Reply to ServiceChange. Empty except when the command addressed Root, in
+ * which case the reply carries the parameters of clause 7.2.8.1.11: address,
+ * controlling MGC, profile, and version, as required.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +35,32 @@ class ServiceChangeReply {
     constructor (
         /**
          * @summary `terminationID`.
+         * @description
+         *
+         * Termination the ServiceChange referred to.
+         *
          * @public
          * @readonly
          */
         readonly terminationID: TerminationIDList,
         /**
          * @summary `serviceChangeResult`.
+         * @description
+         *
+         * Either an error, or the response parameters. No response parameter is
+         * individually mandatory (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly serviceChangeResult: ServiceChangeResult,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

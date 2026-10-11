@@ -14,6 +14,15 @@ import { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } fro
  * @summary NotifyRequest
  * @description
  * 
+ * Notify, sent by the MG to report events the active Events descriptor asked
+ * for (ITU-T Rec. H.248.1 (03/2013) clause 7.2.7).
+ *
+ * The TerminationID is fully qualified. The observed events are in detection
+ * order and must have been requested by the Events descriptor that carried this
+ * RequestID, or by an embedded descriptor, unless RequestID is zero. Procedures
+ * for RequestID zero are for further study. Error 518 ("Event buffer full") may
+ * be reported in the error descriptor.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +42,45 @@ class NotifyRequest {
     constructor (
         /**
          * @summary `terminationID`.
+         * @description
+         *
+         * Termination that detected the events. A fully qualified name, not a
+         * wildcard (clause 7.2.7).
+         *
          * @public
          * @readonly
          */
         readonly terminationID: TerminationIDList,
         /**
          * @summary `observedEventsDescriptor`.
+         * @description
+         *
+         * RequestID of the Events descriptor that triggered the notification,
+         * the events in detection order, and any parameters and detection
+         * times.
+         *
          * @public
          * @readonly
          */
         readonly observedEventsDescriptor: ObservedEventsDescriptor,
         /**
          * @summary `errorDescriptor`.
+         * @description
+         *
+         * Optional error accompanying the notification, used for error 518
+         * ("Event buffer full") (clause 7.2.7).
+         *
          * @public
          * @readonly
          */
         readonly errorDescriptor: OPTIONAL<ErrorDescriptor>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

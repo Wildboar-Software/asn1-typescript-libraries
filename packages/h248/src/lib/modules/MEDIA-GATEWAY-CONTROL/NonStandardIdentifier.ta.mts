@@ -14,6 +14,11 @@ import { H221NonStandard, _decode_H221NonStandard, _encode_H221NonStandard } fro
  * @summary NonStandardIdentifier
  * @description
  * 
+ * Owner of a block of non-standard data (Annex A).
+ *
+ * `experimental` is eight characters and should begin with "X-" or "X+".
+ * `h221NonStandard` is the T.35 country and manufacturer code used by H.221.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

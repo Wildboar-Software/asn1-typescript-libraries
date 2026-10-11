@@ -14,6 +14,9 @@ import { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWA
  * @summary IndAudSignal
  * @description
  * 
+ * Individual audit of one signal (clause 7.2.5, Annex A). `signalRequestID`
+ * distinguishes instances when several signals share a SignalID.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +36,43 @@ class IndAudSignal {
     constructor (
         /**
          * @summary `signalName`.
+         * @description
+         *
+         * Package and signal to audit. No wildcard is used in a SignalID
+         * (clause 7.1.11.3).
+         *
          * @public
          * @readonly
          */
         readonly signalName: PkgdName,
         /**
          * @summary `streamID`.
+         * @description
+         *
+         * Stream the signal was applied to. 0 means every stream.
+         *
          * @public
          * @readonly
          */
         readonly streamID: OPTIONAL<StreamID>,
         /**
          * @summary `signalRequestID`.
+         * @description
+         *
+         * Request identifier of one instance, used when several signals of the
+         * same SignalID were requested (clause 7.1.11.5).
+         *
          * @public
          * @readonly
          */
         readonly signalRequestID: OPTIONAL<RequestID>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

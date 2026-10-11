@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TopologyRequest_topologyDirection
  * @description
  * 
+ * Base topology association between two terminations (ITU-T Rec. H.248.1
+ * (03/2013) clause 7.1.18.3).
+ *
+ * Bothway, isolate, or oneway. Superseded when `topologyDirectionExtension` is
+ * also present (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,8 +27,22 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_TopologyRequest_topologyDirection {
+    /**
+     * Each side receives the other's media. A termination that matches both T1
+     * and T2 does not loop back to itself (clause 7.1.18.3). This is the
+     * default association for a termination added to a context.
+     */
     bothway = 0,
+    /**
+     * Neither side receives media from the other (clause 7.1.18.3).
+     */
     isolate = 1,
+    /**
+     * Terminations matching T2 receive media from terminations matching T1, and
+     * not the reverse. ALL may match one side without matching the other.
+     * Implemented so that other terminations in the context do not observe the
+     * change (clauses 7.1.18.3 and 7.1.18.6).
+     */
     oneway = 2,
 }
 
@@ -30,6 +50,12 @@ enum _enum_for_TopologyRequest_topologyDirection {
  * @summary TopologyRequest_topologyDirection
  * @description
  * 
+ * Base topology association between two terminations (ITU-T Rec. H.248.1
+ * (03/2013) clause 7.1.18.3).
+ *
+ * Bothway, isolate, or oneway. Superseded when `topologyDirectionExtension` is
+ * also present (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,6 +75,12 @@ type TopologyRequest_topologyDirection = _enum_for_TopologyRequest_topologyDirec
  * @summary TopologyRequest_topologyDirection
  * @description
  * 
+ * Base topology association between two terminations (ITU-T Rec. H.248.1
+ * (03/2013) clause 7.1.18.3).
+ *
+ * Bothway, isolate, or oneway. Superseded when `topologyDirectionExtension` is
+ * also present (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +98,12 @@ const TopologyRequest_topologyDirection = _enum_for_TopologyRequest_topologyDire
 
 /**
  * @summary TopologyRequest_topologyDirection_bothway
+ * @description
+ *
+ * Each side receives the other's media. A termination that matches both T1 and
+ * T2 does not loop back to itself (clause 7.1.18.3). This is the default
+ * association for a termination added to a context.
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +120,10 @@ const bothway: TopologyRequest_topologyDirection = TopologyRequest_topologyDirec
 
 /**
  * @summary TopologyRequest_topologyDirection_isolate
+ * @description
+ *
+ * Neither side receives media from the other (clause 7.1.18.3).
+ *
  * @constant
  * @type {number}
  */
@@ -98,6 +140,13 @@ const isolate: TopologyRequest_topologyDirection = TopologyRequest_topologyDirec
 
 /**
  * @summary TopologyRequest_topologyDirection_oneway
+ * @description
+ *
+ * Terminations matching T2 receive media from terminations matching T1, and not
+ * the reverse. ALL may match one side without matching the other. Implemented
+ * so that other terminations in the context do not observe the change (clauses
+ * 7.1.18.3 and 7.1.18.6).
+ *
  * @constant
  * @type {number}
  */

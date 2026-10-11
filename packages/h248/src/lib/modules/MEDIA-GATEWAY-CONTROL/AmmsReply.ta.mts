@@ -13,6 +13,13 @@ import { TerminationAudit, _decode_TerminationAudit, _encode_TerminationAudit } 
  * @summary AmmsReply
  * @description
  * 
+ * Reply shared by Add, Move, Modify, and Subtract (ITU-T Rec. H.248.1 (03/2013)
+ * clauses 7.2.1 to 7.2.4).
+ *
+ * The MG returns descriptors whose parameters it had to choose, and any
+ * descriptor named by the Audit descriptor. Subtract returns Statistics unless
+ * an Audit descriptor, possibly empty, says otherwise.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +38,35 @@ class AmmsReply {
     constructor (
         /**
          * @summary `terminationID`.
+         * @description
+         *
+         * Termination the reply concerns. When the request used CHOOSE, this is
+         * the identifier the MG selected. When the MG cannot substitute a
+         * concrete identifier for a wildcard, it echoes the wildcard (clause
+         * 8).
+         *
          * @public
          * @readonly
          */
         readonly terminationID: TerminationIDList,
         /**
          * @summary `terminationAudit`.
+         * @description
+         *
+         * Descriptors and individual items actually returned for this
+         * termination.
+         *
          * @public
          * @readonly
          */
         readonly terminationAudit: OPTIONAL<TerminationAudit>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

@@ -10,6 +10,11 @@ import { AuditReturnParameter, _decode_AuditReturnParameter, _encode_AuditReturn
  * @summary TerminationAudit
  * @description
  * 
+ * The descriptors and individual items returned for a termination on an Add,
+ * Move, Modify, Subtract, or Audit reply (Annex A). An empty descriptor is
+ * represented by its name with no list (clause 7.1), which is the
+ * `emptyDescriptors` arm of `AuditReturnParameter`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

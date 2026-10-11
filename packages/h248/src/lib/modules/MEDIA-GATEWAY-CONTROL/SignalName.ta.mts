@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SignalName
  * @description
  * 
+ * Package and signal identifier. Typed as `PkgdName` in Annex A: four octets,
+ * package then signal. A SignalID is not wildcarded (clause 7.1.11.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

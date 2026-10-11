@@ -21,6 +21,16 @@ import { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWA
  * @summary Signal
  * @description
  * 
+ * One signal applied to a termination (ITU-T Rec. H.248.1 (03/2013) clause
+ * 7.1.11).
+ *
+ * Signals are defined in packages. The signal proceeds from the termination
+ * toward the outside of the context unless direction says otherwise. If the MG
+ * cannot produce the requested direction it returns error 501 ("Not
+ * implemented"). Overriding the signal type does not change the signal's
+ * meaning. A type overridden to timeout requires `duration`. Duration on an
+ * on/off signal is ignored.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,66 +57,131 @@ class Signal {
     constructor (
         /**
          * @summary `signalName`.
+         * @description
+         *
+         * Package and signal identifier. No wildcard is used in a SignalID
+         * (clause 7.1.11.3).
+         *
          * @public
          * @readonly
          */
         readonly signalName: SignalName,
         /**
          * @summary `streamID`.
+         * @description
+         *
+         * Stream the signal is applied to. Omitted or 0 applies it to every
+         * stream, including one created by the same command (clause 7.1.11.4).
+         *
          * @public
          * @readonly
          */
         readonly streamID: OPTIONAL<StreamID>,
         /**
          * @summary `sigType`.
+         * @description
+         *
+         * Overrides the package's default type: brief, on/off, or timeout
+         * (clause 7.1.11.7). Omitted, the package default is used.
+         *
          * @public
          * @readonly
          */
         readonly sigType: OPTIONAL<SignalType>,
         /**
          * @summary `duration`.
+         * @description
+         *
+         * Length of a timeout signal, in hundredths of a second, 0 to 65535
+         * (clause 7.1.11.6). Required when the type is overridden to timeout.
+         * Ignored on an on/off signal.
+         *
          * @public
          * @readonly
          */
         readonly duration: OPTIONAL<INTEGER>,
         /**
          * @summary `notifyCompletion`.
+         * @description
+         *
+         * Reasons for which signal completion should be notified. If this field
+         * is omitted, a completion notification is generated only when the
+         * signal stopped, or never started, for some other reason (clause
+         * 7.1.11.5). Reporting also requires the Signal Completion event of
+         * clause E.1.2 in the active Events descriptor.
+         *
          * @public
          * @readonly
          */
         readonly notifyCompletion: OPTIONAL<NotifyCompletion>,
         /**
          * @summary `keepActive`.
+         * @description
+         *
+         * On a replacement descriptor, a signal that is already playing and
+         * carries this flag continues. A signal that is not already playing is
+         * ignored when the flag is set (clause 7.1.11.11).
+         *
          * @public
          * @readonly
          */
         readonly keepActive: OPTIONAL<BOOLEAN>,
         /**
          * @summary `sigParList`.
+         * @description
+         *
+         * Package-defined parameters of the signal.
+         *
          * @public
          * @readonly
          */
         readonly sigParList: SigParameter[],
         /**
          * @summary `direction`.
+         * @description
+         *
+         * Where the signal is sent. External is toward the outside of the
+         * context, which is the default. Internal plays into the context. Both
+         * does both. The base direction takes precedence over a package-defined
+         * direction parameter when both are present (clause 7.1.11.9).
+         *
          * @public
          * @readonly
          */
         readonly direction: OPTIONAL<SignalDirection>,
         /**
          * @summary `requestID`.
+         * @description
+         *
+         * Correlates this signal instance with its Signal Completion
+         * ObservedEvent when several signals share a SignalID. Included only
+         * together with `notifyCompletion` (clause 7.1.11.5).
+         *
          * @public
          * @readonly
          */
         readonly requestID: OPTIONAL<RequestID>,
         /**
          * @summary `intersigDelay`.
+         * @description
+         *
+         * Delay applied after this signal when it is not the last signal in a
+         * sequential list, 0 to 65535. The delay is part of the signal's
+         * duration for that list. On a signal that is not in a list, or is the
+         * last element of a list, the delay is ignored (clause 7.1.11.8). The
+         * Recommendation does not state the unit of this integer.
+         *
          * @public
          * @readonly
          */
         readonly intersigDelay: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

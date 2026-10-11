@@ -13,6 +13,18 @@ import { DigitMapValue, _decode_DigitMapValue, _encode_DigitMapValue } from "../
  * @summary DigitMapDescriptor
  * @description
  * 
+ * Defines, replaces, or deletes a digit map on the terminations named by the
+ * command (ITU-T Rec. H.248.1 (03/2013) clause 7.1.14.1).
+ *
+ * A new name creates a map; the value is then present. A new value for an
+ * existing name updates it, but terminations already using the map keep the old
+ * definition until a later Events descriptor names it. An empty value deletes
+ * the name; current users likewise keep the old definition. A map defined on
+ * Root is available on every termination that does not have a map of the same
+ * name of its own. A completion event may name a map that is defined by a
+ * DigitMap descriptor in the same command, whatever the order of the
+ * descriptors.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +42,22 @@ class DigitMapDescriptor {
     constructor (
         /**
          * @summary `digitMapName`.
+         * @description
+         *
+         * Name of the map, two octets (`Name`). Omitted when the map is
+         * supplied only for immediate use and is not stored under a name.
+         *
          * @public
          * @readonly
          */
         readonly digitMapName: OPTIONAL<DigitMapName>,
         /**
          * @summary `digitMapValue`.
+         * @description
+         *
+         * Body of the map, and optional timer overrides. Empty, for a name that
+         * already exists, deletes the map (clause 7.1.14.1).
+         *
          * @public
          * @readonly
          */

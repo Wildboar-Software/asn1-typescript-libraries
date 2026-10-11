@@ -13,6 +13,8 @@ import { IndAudStreamParms, _decode_IndAudStreamParms, _encode_IndAudStreamParms
  * @summary IndAudStreamDescriptor
  * @description
  * 
+ * Individual audit of one stream, identified by StreamID (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +32,21 @@ class IndAudStreamDescriptor {
     constructor (
         /**
          * @summary `streamID`.
+         * @description
+         *
+         * Stream to audit. Streams use 1 to 65535 (clause 7.1.4).
+         *
          * @public
          * @readonly
          */
         readonly streamID: StreamID,
         /**
          * @summary `streamParms`.
+         * @description
+         *
+         * Which of LocalControl, Local, Remote, and Statistics to return for
+         * that stream.
+         *
          * @public
          * @readonly
          */

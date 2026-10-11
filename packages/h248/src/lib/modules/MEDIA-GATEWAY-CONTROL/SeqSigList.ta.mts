@@ -14,6 +14,15 @@ import { Signal, _decode_Signal, _encode_Signal } from "../MEDIA-GATEWAY-CONTROL
  * @summary SeqSigList
  * @description
  * 
+ * Signals played one after another (ITU-T Rec. H.248.1 (03/2013) clause
+ * 7.1.11.8).
+ *
+ * Only the last signal in the list may be on/off. The duration of the list is
+ * the sum of the signal durations and the inter-signal delays. Support of
+ * sequential lists is optional. A replacement Signals descriptor that repeats
+ * the same list identifier does not interrupt the list and does not change its
+ * type or sequence.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +40,22 @@ class SeqSigList {
     constructor (
         /**
          * @summary `id`.
+         * @description
+         *
+         * List identifier, 0 to 65535. A replacement list with the same
+         * identifier continues the list already playing (clause 7.1.11.11).
+         *
          * @public
          * @readonly
          */
         readonly id: INTEGER,
         /**
          * @summary `signalList`.
+         * @description
+         *
+         * Signals in play order. Every element except the last is brief or
+         * timeout, not on/off (clause 7.1.11.8).
+         *
          * @public
          * @readonly
          */

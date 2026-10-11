@@ -10,6 +10,9 @@ import { SigParamValue, _decode_SigParamValue, _encode_SigParamValue } from "../
  * @summary SigParamValues
  * @description
  * 
+ * Sequence of octet strings forming a signal-parameter value. The Wireshark
+ * splitting of Annex A's `Value` (`doc/h248v3.asn1`).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

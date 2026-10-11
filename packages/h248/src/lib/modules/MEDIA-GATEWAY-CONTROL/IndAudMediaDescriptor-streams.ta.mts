@@ -12,6 +12,10 @@ import { IndAudStreamDescriptor, _decode_IndAudStreamDescriptor, _encode_IndAudS
  * @summary IndAudMediaDescriptor_streams
  * @description
  * 
+ * Stream portion of an individual Media audit. `oneStream` is the single-stream
+ * convenience form (StreamID 1). `multiStream` lists streams by StreamID
+ * (clause 7.1.4, Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

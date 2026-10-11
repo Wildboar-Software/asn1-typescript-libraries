@@ -13,6 +13,16 @@ import { ErrorText, _decode_ErrorText, _encode_ErrorText } from "../MEDIA-GATEWA
  * @summary ErrorDescriptor
  * @description
  * 
+ * An error at the level where it belongs: message, transaction, action,
+ * command, or descriptor (ITU-T Rec. H.248.1 (03/2013) clause 7.1.20).
+ *
+ * The code is an IANA-registered value. ITU-T H.248.8 lists them. The
+ * descriptor is placed at the deepest level that still describes the failure
+ * and that parsing of the request allows. It may describe a larger construct
+ * than the one it sits in; error 422 ("Syntax Error in Action") can appear
+ * inside a command. A Notify request may carry one, in particular error 518
+ * ("Event buffer full").
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +40,34 @@ class ErrorDescriptor {
     constructor (
         /**
          * @summary `errorCode`.
+         * @description
+         *
+         * Registered error code, 0 to 65535. The meanings are in ITU-T H.248.8.
+         * Clause 14.2 is the registration procedure. Codes this Recommendation
+         * itself cites include 401 (Protocol Error), 403 (Syntax Error in
+         * TransactionRequest), 406 (Version Not Supported), 410 (Incorrect
+         * identifier), 411 (Unknown ContextID), 413 (Too many transactions),
+         * 421 (Unknown or illegal combination of actions), 422 (Syntax Error in
+         * Action), 431 (No TerminationID matched a wildcard), 435
+         * (TerminationID is not in the specified context), 442 (Syntax Error in
+         * Command), 444 (Unsupported or unknown descriptor), 457 (Missing
+         * parameter in signal or event), 460 (Unable to set statistic on
+         * stream), 471 (Implied Add for Multiplex failure), 501 (Not
+         * implemented), 506 (Number of TransactionPendings exceeded), 510
+         * (Insufficient resources), and 518 (Event buffer full).
+         *
          * @public
          * @readonly
          */
         readonly errorCode: ErrorCode,
         /**
          * @summary `errorText`.
+         * @description
+         *
+         * Optional human-readable explanation. For error 444 the text may be
+         * the name of the descriptor the MG does not support, such as
+         * "Topology" (clause 7.1.18.1).
+         *
          * @public
          * @readonly
          */

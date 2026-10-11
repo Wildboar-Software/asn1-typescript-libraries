@@ -12,6 +12,17 @@ import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../
  * @summary TransactionPending
  * @description
  * 
+ * Indication that a transaction is still being processed. It stops the sender
+ * treating the request as lost (ITU-T Rec. H.248.1 (03/2013) clause 8.2.3).
+ *
+ * The Root properties `normalMGExecutionTime` and `normalMGCExecutionTime`
+ * bound how soon a reply is expected, excluding network delay.
+ * `MGProvisionalResponseTimerValue` and `MGCProvisionalResponseTimerValue`
+ * bound how soon a pending is expected. `MGOriginatedPendingLimit` and
+ * `MGCOriginatedPendingLimit` bound how many pendings may be sent; beyond that
+ * limit the responder stops the transaction and returns error 506 ("Number of
+ * TransactionPendings Exceeded").
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +40,24 @@ class TransactionPending {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         *
+         * Same identifier as the TransactionRequest this pending refers to
+         * (clause 8.2.3). A duplicate request received while pending may be
+         * answered with another pending immediately, or left until the
+         * provisional timer fires.
+         *
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

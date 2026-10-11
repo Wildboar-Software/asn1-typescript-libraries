@@ -10,6 +10,9 @@ import { TransactionAck, _decode_TransactionAck, _encode_TransactionAck } from "
  * @summary TransactionResponseAck
  * @description
  * 
+ * List of transaction-response acknowledgements. Whether acks are used depends
+ * on the underlying transport (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

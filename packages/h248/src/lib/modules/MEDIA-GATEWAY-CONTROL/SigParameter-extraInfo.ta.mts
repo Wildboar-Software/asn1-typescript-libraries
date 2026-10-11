@@ -12,6 +12,9 @@ import { _decode_Relation, _encode_Relation, Relation } from "../MEDIA-GATEWAY-C
  * @summary SigParameter_extraInfo
  * @description
  * 
+ * Relation, inclusive range, or sub-list for a signal parameter. The rules are
+ * those of `PropertyParm` in Annex A.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

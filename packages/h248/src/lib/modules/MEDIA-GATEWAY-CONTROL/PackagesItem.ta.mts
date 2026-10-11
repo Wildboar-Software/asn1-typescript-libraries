@@ -14,6 +14,9 @@ import { Name, _decode_Name, _encode_Name } from "../MEDIA-GATEWAY-CONTROL/Name.
  * @summary PackagesItem
  * @description
  * 
+ * One package the termination realizes, with the version it implements (clause
+ * 6.2.3). Package versions are not tied to the protocol version (clause 12).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +35,31 @@ class PackagesItem {
     constructor (
         /**
          * @summary `packageName`.
+         * @description
+         *
+         * Two-octet package identifier (`Name`).
+         *
          * @public
          * @readonly
          */
         readonly packageName: Name,
         /**
          * @summary `packageVersion`.
+         * @description
+         *
+         * Package version, 0 to 99.
+         *
          * @public
          * @readonly
          */
         readonly packageVersion: INTEGER,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

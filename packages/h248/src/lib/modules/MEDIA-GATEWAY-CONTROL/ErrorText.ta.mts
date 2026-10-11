@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ErrorText
  * @description
  * 
+ * Optional IA5String explanation attached to an error code (clause 7.1.20). Not
+ * a substitute for the registered code.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

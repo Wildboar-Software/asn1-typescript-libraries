@@ -12,6 +12,10 @@ import { StreamDescriptor, _decode_StreamDescriptor, _encode_StreamDescriptor } 
  * @summary MediaDescriptor_streams
  * @description
  * 
+ * Streams inside a Media descriptor. `oneStream` supplies stream parameters
+ * with no StreamID and means stream 1 (clause 7.1.4). `multiStream` is an
+ * explicit list of stream descriptors.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

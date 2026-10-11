@@ -15,6 +15,14 @@ import { SegmentNumber, _decode_SegmentNumber, _encode_SegmentNumber } from "../
  * @summary TransactionReply
  * @description
  * 
+ * The single reply to a TransactionRequest, possibly segmented across messages.
+ * It contains a result for every command that was executed. Commands after the
+ * failure point are omitted, unless the failing command was marked optional
+ * (ITU-T Rec. H.248.1 (03/2013) clause 8.2.2).
+ *
+ * The reply is sent when every action has been processed, or when a
+ * non-optional error stops the transaction.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,36 +48,69 @@ class TransactionReply {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         *
+         * Same identifier as the corresponding request (clause 8.2.2). Zero
+         * when the request's identifier was missing (clause 8.1.1).
+         *
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `immAckRequired`.
+         * @description
+         *
+         * Present when the sender of this reply requires an immediate
+         * transaction-response acknowledgement. Use of response
+         * acknowledgements depends on the transport (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly immAckRequired: OPTIONAL<NULL>,
         /**
          * @summary `transactionResult`.
+         * @description
+         *
+         * Either a transaction-level `ErrorDescriptor`, or the action replies.
+         * Error 413 ("Number of transactions in message exceeds maximum") is
+         * returned when the request message contained more transactions than
+         * the receiver can process (clause 8.2.2).
+         *
          * @public
          * @readonly
          */
         readonly transactionResult: TransactionReply_transactionResult,
         /**
          * @summary `segmentNumber`.
+         * @description
+         *
+         * Segment number when this reply is one piece of a segmented
+         * TransactionReply, 0 to 65535 (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly segmentNumber: OPTIONAL<SegmentNumber>,
         /**
          * @summary `segmentationComplete`.
+         * @description
+         *
+         * Present on the segment that completes a segmented TransactionReply
+         * (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly segmentationComplete: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

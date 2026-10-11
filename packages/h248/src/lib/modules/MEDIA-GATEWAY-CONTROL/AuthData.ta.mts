@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AuthData
  * @description
  * 
+ * Integrity check value of the interim authentication header, 12 to 32 octets
+ * (clause 10.2, Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

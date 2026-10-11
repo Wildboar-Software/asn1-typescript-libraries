@@ -15,6 +15,16 @@ import { CommandRequest, _decode_CommandRequest, _encode_CommandRequest } from "
  * @summary ActionRequest
  * @description
  * 
+ * One action inside a transaction. An action is confined to a single context:
+ * context-attribute changes, a context audit, and commands on terminations in
+ * that context (ITU-T Rec. H.248.1 (03/2013) clause 8).
+ *
+ * Two cases omit a specific ContextID: modifying a termination that is outside
+ * any context (the NULL context), and asking the gateway to create a context
+ * (ContextID CHOOSE). Wildcarded ContextID and TerminationID combinations are
+ * specified in clause 6.3. Commands in the action run in order for one
+ * ContextID instance before the next instance is considered.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +44,53 @@ class ActionRequest {
     constructor (
         /**
          * @summary `contextId`.
+         * @description
+         *
+         * Context this action applies to. 0 is NULL, 4294967294 (0xFFFFFFFE) is
+         * CHOOSE (create a context), and 4294967295 (0xFFFFFFFF) is ALL, which
+         * does not include NULL. Partially specified ContextIDs are not used
+         * (clauses 8.1.2 and A.1).
+         *
          * @public
          * @readonly
          */
         readonly contextId: ContextID,
         /**
          * @summary `contextRequest`.
+         * @description
+         *
+         * Context attributes to set: priority, emergency, topology, IEPS call
+         * indication, packaged context properties, and an optional context-id
+         * list. Omitted attributes keep their previous values (clause 6.1.1). A
+         * new ContextAttribute setting replaces the previous one entirely
+         * (clause 7.1.19).
+         *
          * @public
          * @readonly
          */
         readonly contextRequest: OPTIONAL<ContextRequest>,
         /**
          * @summary `contextAttrAuditReq`.
+         * @description
+         *
+         * Request to audit context attributes. If the same action also changes
+         * those attributes, the returned values are the values after the change
+         * (clause 7.2.9). An audit combined with only AuditValue or
+         * AuditCapability does not itself count as a new setting of the
+         * attributes (clause 7.1.19).
+         *
          * @public
          * @readonly
          */
         readonly contextAttrAuditReq: OPTIONAL<ContextAttrAuditRequest>,
         /**
          * @summary `commandRequests`.
+         * @description
+         *
+         * Commands executed in order on this context. The first command that
+         * fails stops the rest of the transaction unless that command is marked
+         * optional (clause 8).
+         *
          * @public
          * @readonly
          */

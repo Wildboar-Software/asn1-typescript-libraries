@@ -13,6 +13,20 @@ import { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } fro
  * @summary SubtractRequest
  * @description
  * 
+ * Subtract disconnects a termination from its context and, by default, returns
+ * statistics for the time it spent there (ITU-T Rec. H.248.1 (03/2013) clause
+ * 7.2.3).
+ *
+ * The last termination leaving a context deletes the context. Subtract from the
+ * NULL context is not allowed. CHOOSE is an error. ALL as both ContextID and
+ * TerminationID deletes every context, destroys every ephemeral termination,
+ * and returns every physical termination to NULL. Subtracting a multiplexing
+ * termination also subtracts the bearer terminations named in its Mux
+ * descriptor.
+ *
+ * A provisioned termination, once subtracted, reverts to the provisioned value
+ * of each descriptor, or to the protocol default where nothing was provisioned.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +45,34 @@ class SubtractRequest {
     constructor (
         /**
          * @summary `terminationID`.
+         * @description
+         *
+         * Terminations to subtract. May be wildcarded. CHOOSE is an error
+         * (clause 7.2.3).
+         *
          * @public
          * @readonly
          */
         readonly terminationID: TerminationIDList,
         /**
          * @summary `auditDescriptor`.
+         * @description
+         *
+         * Items to return instead of the default Statistics descriptor. An
+         * empty Audit descriptor returns only the TerminationID, which
+         * suppresses statistics. Omitted, Statistics is returned.
+         *
          * @public
          * @readonly
          */
         readonly auditDescriptor: OPTIONAL<AuditDescriptor>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

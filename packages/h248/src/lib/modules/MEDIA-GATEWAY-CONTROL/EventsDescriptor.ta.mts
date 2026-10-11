@@ -13,6 +13,19 @@ import { RequestedEvent, _decode_RequestedEvent, _encode_RequestedEvent } from "
  * @summary EventsDescriptor
  * @description
  * 
+ * Events the MG detects on a termination, and what it does when one is
+ * recognized (ITU-T Rec. H.248.1 (03/2013) clause 7.1.9).
+ *
+ * The default action is a Notify carrying this `requestID`. Notification can be
+ * suppressed or deferred by NotifyBehaviour, by an active digit map, or by
+ * LockStep buffering. A new Events descriptor replaces the previous one; an
+ * event already being notified is finished, and later events use the new
+ * descriptor. An empty descriptor disables all recognition. Unless the
+ * descriptor is replaced, it stays active after an event is recognized.
+ *
+ * `requestID` is required when `eventList` is not empty (Annex A). It is
+ * omitted when the descriptor is empty.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +46,35 @@ class EventsDescriptor {
     constructor (
         /**
          * @summary `requestID`.
+         * @description
+         *
+         * Correlates this request with the Notify it produces. Required when
+         * `eventList` is not empty. Omitted on an empty descriptor (clause
+         * 7.1.9.1). On an AuditCapability reply that returns every event, ALL
+         * is encoded as 0xFFFFFFFF (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly requestID: OPTIONAL<RequestID>,
         /**
          * @summary `eventList`.
+         * @description
+         *
+         * Events to detect. The ALL wildcard may be used as the event
+         * identifier inside a package (clause 7.1.9.2).
+         *
          * @public
          * @readonly
          */
         readonly eventList: RequestedEvent[],
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

@@ -14,6 +14,10 @@ import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-C
  * @summary IndAudEventsDescriptor
  * @description
  * 
+ * Individual audit of one requested event (clause 7.2.5). AuditValue returns
+ * the event's actions and parameters. AuditCapability returns the possible
+ * values of those parameters. RequestID may be given to pick one request.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +37,42 @@ class IndAudEventsDescriptor {
     constructor (
         /**
          * @summary `requestID`.
+         * @description
+         *
+         * Events descriptor request to match. Optional.
+         *
          * @public
          * @readonly
          */
         readonly requestID: OPTIONAL<RequestID>,
         /**
          * @summary `pkgdName`.
+         * @description
+         *
+         * Package and event to audit. The ALL wildcard may be used for the
+         * event identifier (clause 7.1.9.2).
+         *
          * @public
          * @readonly
          */
         readonly pkgdName: PkgdName,
         /**
          * @summary `streamID`.
+         * @description
+         *
+         * Stream of the event. Omitted means not limited to one stream.
+         *
          * @public
          * @readonly
          */
         readonly streamID: OPTIONAL<StreamID>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

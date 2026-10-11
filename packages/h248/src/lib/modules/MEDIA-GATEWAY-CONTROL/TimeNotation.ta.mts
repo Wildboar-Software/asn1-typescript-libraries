@@ -14,6 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TimeNotation
  * @description
  * 
+ * A timestamp with a precision of hundredths of a second (ITU-T Rec. H.248.1
+ * (03/2013) Annex A, citing ISO 8601:2004).
+ *
+ * Used for observed-event detection times and for the ServiceChange timestamp.
+ * The ServiceChange timestamp is the sender's clock and need not be civil time;
+ * it establishes the origin for later timestamps from that sender during the
+ * association (clause 7.2.8.1.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +40,21 @@ class TimeNotation {
     constructor (
         /**
          * @summary `date`.
+         * @description
+         *
+         * Date as eight characters, `yyyymmdd` (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly date: IA5String,
         /**
          * @summary `time`.
+         * @description
+         *
+         * Time of day as eight characters, `hhmmssss`, with the last two digits
+         * hundredths of a second (Annex A).
+         *
          * @public
          * @readonly
          */

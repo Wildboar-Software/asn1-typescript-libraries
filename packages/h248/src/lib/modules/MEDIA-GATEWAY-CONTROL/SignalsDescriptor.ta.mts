@@ -10,6 +10,16 @@ import { SignalRequest, _decode_SignalRequest, _encode_SignalRequest } from "../
  * @summary SignalsDescriptor
  * @description
  * 
+ * Signals and sequential signal lists to apply to a termination (ITU-T Rec.
+ * H.248.1 (03/2013) clause 7.1.11).
+ *
+ * An empty descriptor stops signals that are already playing, except a signal
+ * that reappears with KeepActive and has not finished. Signals and lists in one
+ * descriptor are played at the same time. Support of sequential lists is
+ * optional. A new descriptor replaces the previous one. A list whose identifier
+ * matches a list already playing keeps playing; the type and signal sequence in
+ * the replacement are ignored.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

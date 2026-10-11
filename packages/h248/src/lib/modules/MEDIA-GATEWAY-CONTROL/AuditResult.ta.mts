@@ -13,6 +13,9 @@ import { TerminationAudit, _decode_TerminationAudit, _encode_TerminationAudit } 
  * @summary AuditResult
  * @description
  * 
+ * Audit result for a single termination: its identifier and the descriptors or
+ * items that were requested (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +33,20 @@ class AuditResult {
     constructor (
         /**
          * @summary `terminationID`.
+         * @description
+         *
+         * Termination this audit result describes.
+         *
          * @public
          * @readonly
          */
         readonly terminationID: TerminationID,
         /**
          * @summary `terminationAuditResult`.
+         * @description
+         *
+         * Returned descriptors and individual audit items for that termination.
+         *
          * @public
          * @readonly
          */

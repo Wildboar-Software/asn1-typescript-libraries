@@ -13,6 +13,14 @@ import { SecondRequestedEvent, _decode_SecondRequestedEvent, _encode_SecondReque
  * @summary SecondEventsDescriptor
  * @description
  * 
+ * Embedded Events descriptor, activated when the enclosing event is recognized
+ * (clause 7.1.9.8).
+ *
+ * It replaces the current Events descriptor. It must not contain another
+ * embedded Events descriptor. It may contain an embedded Signals descriptor, on
+ * the individual second events. For event-buffer purposes, activating this
+ * descriptor is the same as receiving a new Events descriptor.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +39,35 @@ class SecondEventsDescriptor {
     constructor (
         /**
          * @summary `requestID`.
+         * @description
+         *
+         * Request identifier of the embedded descriptor. Same presence rule as
+         * on `EventsDescriptor`: required when the event list is not empty
+         * (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly requestID: OPTIONAL<RequestID>,
         /**
          * @summary `eventList`.
+         * @description
+         *
+         * Events detected once this descriptor is active. These are
+         * `SecondRequestedEvent`s, which cannot embed a further Events
+         * descriptor.
+         *
          * @public
          * @readonly
          */
         readonly eventList: SecondRequestedEvent[],
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

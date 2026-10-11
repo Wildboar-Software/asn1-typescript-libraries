@@ -12,6 +12,9 @@ import { SeqSigList, _decode_SeqSigList, _encode_SeqSigList } from "../MEDIA-GAT
  * @summary SignalRequest
  * @description
  * 
+ * One entry in a Signals descriptor: a single signal, or a sequential list
+ * (clause 7.1.11.2). Entries in the same descriptor are played simultaneously.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

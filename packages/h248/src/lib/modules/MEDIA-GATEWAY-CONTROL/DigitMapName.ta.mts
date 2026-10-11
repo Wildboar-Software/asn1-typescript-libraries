@@ -10,6 +10,8 @@ import { Name, _decode_Name, _encode_Name } from "../MEDIA-GATEWAY-CONTROL/Name.
  * @summary DigitMapName
  * @description
  * 
+ * Name of a digit map. A `Name`: two octets (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

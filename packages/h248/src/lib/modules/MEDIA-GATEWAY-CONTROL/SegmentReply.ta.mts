@@ -14,6 +14,9 @@ import { SegmentNumber, _decode_SegmentNumber, _encode_SegmentNumber } from "../
  * @summary SegmentReply
  * @description
  * 
+ * Acknowledgement of one segment of a segmented TransactionReply (ITU-T Rec.
+ * H.248.1 (03/2013) Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +36,42 @@ class SegmentReply {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         *
+         * Transaction whose segment is being acknowledged.
+         *
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `segmentNumber`.
+         * @description
+         *
+         * Segment number, 0 to 65535.
+         *
          * @public
          * @readonly
          */
         readonly segmentNumber: SegmentNumber,
         /**
          * @summary `segmentationComplete`.
+         * @description
+         *
+         * Present when this acknowledgement covers the segment that completed
+         * the reply.
+         *
          * @public
          * @readonly
          */
         readonly segmentationComplete: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SCreasonValueOctetStr
  * @description
  * 
+ * One octet string in the double-wrapped ServiceChange reason. The reason text
+ * is BER-encoded as an IA5String, and that encoding is the contents of this
+ * octet string (Annex A). `ServiceChangeReasonStr` is that IA5String before
+ * wrapping.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

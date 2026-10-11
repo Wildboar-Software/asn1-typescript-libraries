@@ -10,6 +10,13 @@ import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../
  * @summary TerminationIDList
  * @description
  * 
+ * Several termination identifiers in one command (clause 6.2.2).
+ *
+ * Prefer a list when the identifier hierarchy cannot express the set and
+ * separate commands are undesirable. Root and non-Root identifiers should not
+ * appear in the same list. For wildcard procedures, a list of more than one
+ * identifier is treated as a wildcarded TerminationID (clause 6.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

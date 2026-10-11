@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SequenceNum
  * @description
  * 
+ * Four-octet sequence number for the interim authentication header (clause
+ * 10.2, Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

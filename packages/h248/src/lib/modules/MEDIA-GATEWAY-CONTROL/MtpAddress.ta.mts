@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MtpAddress
  * @description
  * 
+ * MTP3 point-code address, 2 to 4 octets, used as a message identifier.
+ *
+ * Fourteen bits of point code are defined for international use, with national
+ * options of 16 or 24 bits, plus a 2-bit network indicator. The most
+ * significant bits are zero so the value is octet-aligned (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

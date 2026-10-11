@@ -13,6 +13,16 @@ import { ObservedEvent, _decode_ObservedEvent, _encode_ObservedEvent } from "../
  * @summary ObservedEventsDescriptor
  * @description
  * 
+ * Events the MG detected, in detection order (ITU-T Rec. H.248.1 (03/2013)
+ * clause 7.1.17).
+ *
+ * On Notify, `requestId` is the RequestID of the Events descriptor that caused
+ * the report. On AuditValue, the descriptor returns events still sitting in the
+ * event buffer. If a digit map is active, the audited descriptor also includes
+ * a completion event that shows the current dial string and does not show a
+ * termination method. Detection time, when present, has a precision of
+ * hundredths of a second.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +40,21 @@ class ObservedEventsDescriptor {
     constructor (
         /**
          * @summary `requestId`.
+         * @description
+         *
+         * RequestID of the Events descriptor that triggered these events
+         * (clause 7.2.7). Used to correlate the Notify with the request.
+         *
          * @public
          * @readonly
          */
         readonly requestId: RequestID,
         /**
          * @summary `observedEventLst`.
+         * @description
+         *
+         * Events in the order they were detected.
+         *
          * @public
          * @readonly
          */

@@ -17,6 +17,10 @@ import { IndAudPackagesDescriptor, _decode_IndAudPackagesDescriptor, _encode_Ind
  * @summary IndAuditParameter
  * @description
  * 
+ * One individual item inside an Audit descriptor (clause 7.2.5, Annex A). Each
+ * arm names the descriptor and the identifier of the property, event, signal,
+ * statistic, digit map, or package to return.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

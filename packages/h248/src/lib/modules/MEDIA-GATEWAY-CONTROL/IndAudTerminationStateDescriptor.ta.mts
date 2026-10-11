@@ -14,6 +14,11 @@ import { ServiceState, _decode_ServiceState, _encode_ServiceState, _enum_for_Ser
  * @summary IndAudTerminationStateDescriptor
  * @description
  * 
+ * Individual audit of TerminationState (Annex A).
+ *
+ * Do not send both `serviceState` and `serviceStateSel`. If both are present,
+ * only `serviceStateSel` is honoured.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,30 +39,53 @@ class IndAudTerminationStateDescriptor {
     constructor (
         /**
          * @summary `propertyParms`.
+         * @description
+         *
+         * Packaged termination-state properties to return.
+         *
          * @public
          * @readonly
          */
         readonly propertyParms: IndAudPropertyParm[],
         /**
          * @summary `eventBufferControl`.
+         * @description
+         *
+         * Present to return the current EventBufferControl.
+         *
          * @public
          * @readonly
          */
         readonly eventBufferControl: OPTIONAL<NULL>,
         /**
          * @summary `serviceState`.
+         * @description
+         *
+         * Present to return the current ServiceStates.
+         *
          * @public
          * @readonly
          */
         readonly serviceState: OPTIONAL<NULL>,
         /**
          * @summary `serviceStateSel`.
+         * @description
+         *
+         * Return TerminationState only where ServiceStates equals this value.
+         * Mutually exclusive with `serviceState`; this one wins if both are
+         * present (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly serviceStateSel: OPTIONAL<ServiceState>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

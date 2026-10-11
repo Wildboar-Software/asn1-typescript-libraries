@@ -13,6 +13,15 @@ import { MediaDescriptor_streams, _decode_MediaDescriptor_streams, _encode_Media
  * @summary MediaDescriptor
  * @description
  * 
+ * All media streams of a termination, plus the termination properties that are
+ * not stream-specific (ITU-T Rec. H.248.1 (03/2013) clause 7.1.4).
+ *
+ * `streams` may be omitted and LocalControl, Local, Remote, or Statistics
+ * placed so that they apply to stream 1. That convenience form is the
+ * `oneStream` alternative. Streams of one termination are synchronized with
+ * each other. Setting a new copy of a subsidiary descriptor replaces the
+ * previous copy entirely (clauses 7.1.7 and 7.1.8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +44,34 @@ class MediaDescriptor {
     constructor (
         /**
          * @summary `termStateDescr`.
+         * @description
+         *
+         * Properties that apply to the whole termination: ServiceStates,
+         * EventBufferControl, and packaged properties that are not stream
+         * specific (clause 7.1.5).
+         *
          * @public
          * @readonly
          */
         readonly termStateDescr: OPTIONAL<TerminationStateDescriptor>,
         /**
          * @summary `streams`.
+         * @description
+         *
+         * One stream or many. `oneStream` is the convenience form and means
+         * StreamID 1 (clause 7.1.4). `multiStream` identifies each stream.
+         *
          * @public
          * @readonly
          */
         readonly streams: OPTIONAL<MediaDescriptor_streams>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

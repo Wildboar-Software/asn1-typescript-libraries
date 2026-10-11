@@ -14,6 +14,14 @@ import { TermListAuditResult, _decode_TermListAuditResult, _encode_TermListAudit
  * @summary AuditReply
  * @description
  * 
+ * Reply to AuditValue or AuditCapability (ITU-T Rec. H.248.1 (03/2013) clauses
+ * 7.2.5 and 7.2.6, Annex A).
+ *
+ * `contextAuditResult` is the condensed TerminationID list used when an empty
+ * audit is wildcarded. `error` is a command-level error. `auditResult` is the
+ * result for one termination. `auditResultTermList` returns one audit body for
+ * a list of terminations.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

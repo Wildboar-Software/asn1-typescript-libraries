@@ -15,6 +15,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DomainName
  * @description
  * 
+ * Domain name of an MG or MGC, optionally with a port. The name starts with an
+ * alphanumeric character, then alphanumerics, hyphens, and dots, with no two
+ * dots in a row (Annex A). It is not directly routable; the sender resolves it
+ * before use (clause 7.2.8.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +41,22 @@ class DomainName {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         *
+         * Domain name. Starts with an alphanumeric character, followed by
+         * alphanumerics, hyphens, and dots. No two dots occur consecutively
+         * (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly name: IA5String,
         /**
          * @summary `portNumber`.
+         * @description
+         *
+         * Port, 0 to 65535. Omitted when the name alone identifies the entity.
+         *
          * @public
          * @readonly
          */

@@ -15,6 +15,15 @@ import { SegmentReply, _decode_SegmentReply, _encode_SegmentReply } from "../MED
  * @summary Transaction
  * @description
  * 
+ * One transaction. Commands inside a transaction run in order. Distinct
+ * transactions are not ordered and may run simultaneously, but when a message
+ * contains both replies and requests the replies are executed first (ITU-T Rec.
+ * H.248.1 (03/2013) clause 8).
+ *
+ * `transactionResponseAck` is used only when the underlying transport needs it
+ * (Annex A). For a transport that uses application-level framing, this choice
+ * may be redefined by that transport's annex.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

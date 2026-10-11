@@ -13,6 +13,10 @@ import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MED
  * @summary IndAudPropertyParm
  * @description
  * 
+ * One property on an individual audit (Annex A). The nested `propertyParms`
+ * value, when present, is a selection criterion on the current value rather
+ * than a request for every value.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +35,34 @@ class IndAudPropertyParm {
     constructor (
         /**
          * @summary `name`.
+         * @description
+         *
+         * Package and property, event, signal, or statistic identifier. Four
+         * octets: package, then item. Wildcarding rules are those of
+         * `PkgdName`.
+         *
          * @public
          * @readonly
          */
         readonly name: PkgdName,
         /**
          * @summary `propertyParms`.
+         * @description
+         *
+         * Value used as a selection criterion for this property (Annex A).
+         * AND/OR combination of several criteria is specified at context level.
+         *
          * @public
          * @readonly
          */
         readonly propertyParms: OPTIONAL<PropertyParm>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

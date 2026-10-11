@@ -16,6 +16,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IP4Address
  * @description
  * 
+ * IPv4 address, optionally with a port, used as a message identifier or as a
+ * ServiceChange address (clauses 8.3 and 7.2.8.1.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +36,22 @@ class IP4Address {
     constructor (
         /**
          * @summary `address`.
+         * @description
+         *
+         * Four-octet IPv4 address.
+         *
          * @public
          * @readonly
          */
         readonly address: OCTET_STRING,
         /**
          * @summary `portNumber`.
+         * @description
+         *
+         * UDP, TCP, or SCTP port, 0 to 65535. Omitted when only the address is
+         * being identified. For IP transports, a ServiceChangeAddress may be a
+         * full address or only a port (clause 7.2.8.1.3).
+         *
          * @public
          * @readonly
          */

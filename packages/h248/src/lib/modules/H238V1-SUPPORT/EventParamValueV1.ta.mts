@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EventParamValueV1
  * @description
  * 
+ * The single octet-string value of a version 1 event parameter
+ * (`doc/h248v1support.asn1`). Version 3 uses a sequence of octet strings
+ * (`EventParamValues`).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

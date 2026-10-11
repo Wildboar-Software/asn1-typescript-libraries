@@ -17,6 +17,13 @@ import { MtpAddress, _decode_MtpAddress, _encode_MtpAddress } from "../MEDIA-GAT
  * @summary ServiceChangeAddress
  * @description
  * 
+ * New destination for transaction requests inside the current association
+ * (clause 7.2.8.1.3).
+ *
+ * `portNumber` is only a UDP, TCP, or SCTP port; the address is unchanged. The
+ * other arms are a full address or a name. For IP transports the receiver has
+ * to accept either a full address or a bare port.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,6 +14,12 @@ import { IndAudPropertyGroup, _decode_IndAudPropertyGroup, _encode_IndAudPropert
  * @summary IndAudLocalRemoteDescriptor
  * @description
  * 
+ * Individual audit of a Local or Remote descriptor (clause 7.2.5).
+ *
+ * GroupID 1 is the first reserved property group (session description), group 2
+ * the next, and so on. The group is meaningful when ReserveGroup caused more
+ * than one group to be reserved.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +38,32 @@ class IndAudLocalRemoteDescriptor {
     constructor (
         /**
          * @summary `propGroupID`.
+         * @description
+         *
+         * Property group to audit, 0 to 65535. Group 1 is the first group the
+         * MG reserved (clause 7.2.5).
+         *
          * @public
          * @readonly
          */
         readonly propGroupID: OPTIONAL<INTEGER>,
         /**
          * @summary `propGrps`.
+         * @description
+         *
+         * Properties inside that group to return.
+         *
          * @public
          * @readonly
          */
         readonly propGrps: IndAudPropertyGroup,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

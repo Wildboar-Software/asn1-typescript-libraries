@@ -14,6 +14,19 @@ import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList
  * @summary AuditRequest
  * @description
  * 
+ * AuditValue or AuditCapability request (ITU-T Rec. H.248.1 (03/2013) clauses
+ * 7.2.5 and 7.2.6).
+ *
+ * AuditValue returns current values. AuditCapability returns possible values.
+ * CHOOSE is an error. A wildcarded response (see
+ * `CommandRequest.wildcardReturn`) returns one union of all matches.
+ *
+ * An empty Audit descriptor returns only the TerminationID, which is how an MGC
+ * lists terminations. Auditing Root in the NULL context returns gateway state
+ * and events. ContextID ALL with Root lists every ContextID, either as one
+ * action reply per context or, if the request included a context list, as one
+ * compact list.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +46,44 @@ class AuditRequest {
     constructor (
         /**
          * @summary `terminationID`.
+         * @description
+         *
+         * Termination to audit. When `terminationIDList` is used, this field
+         * carries the first termination in that list (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly terminationID: TerminationID,
         /**
          * @summary `auditDescriptor`.
+         * @description
+         *
+         * What to return. An empty descriptor returns only the TerminationID
+         * (clause 7.2.5).
+         *
          * @public
          * @readonly
          */
         readonly auditDescriptor: AuditDescriptor,
         /**
          * @summary `terminationIDList`.
+         * @description
+         *
+         * Additional terminations to audit in the same request. The first
+         * element of the list is also placed in `terminationID` (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly terminationIDList: OPTIONAL<TerminationIDList>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

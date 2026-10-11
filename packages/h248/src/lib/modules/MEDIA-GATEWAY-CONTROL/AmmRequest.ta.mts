@@ -13,6 +13,15 @@ import { AmmDescriptor, _decode_AmmDescriptor, _encode_AmmDescriptor } from "../
  * @summary AmmRequest
  * @description
  * 
+ * Parameter block shared by Add, Move, and Modify (ITU-T Rec. H.248.1 (03/2013)
+ * clauses 7.2.1, 7.2.2, and 7.2.4).
+ *
+ * At most one descriptor of each type appears in `descriptors` (Annex A).
+ * Descriptors are processed in the order they appear (clause 7.2). A descriptor
+ * that is omitted entirely leaves that descriptor's previous values in place. A
+ * partially specified descriptor resets the omitted read/write properties to
+ * their defaults, unless the package says otherwise (clause 6.2.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +42,36 @@ class AmmRequest {
     constructor (
         /**
          * @summary `terminationID`.
+         * @description
+         *
+         * Terminations the command acts on. CHOOSE on Add asks the MG to pick
+         * or create a termination, and the chosen identifier is returned.
+         * CHOOSE on Move or Modify is an error. ALL does not match Root
+         * (clauses 6.2.2, 7.2.1, and 7.2.2).
+         *
          * @public
          * @readonly
          */
         readonly terminationID: TerminationIDList,
         /**
          * @summary `descriptors`.
+         * @description
+         *
+         * Descriptors applied to those terminations, at most one of each kind.
+         * An underspecified or overspecified parameter causes the MG to return
+         * the descriptor with the value it chose (clause 7.1.1).
+         *
          * @public
          * @readonly
          */
         readonly descriptors: AmmDescriptor[],
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

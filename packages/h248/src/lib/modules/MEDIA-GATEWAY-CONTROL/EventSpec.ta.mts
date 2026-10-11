@@ -14,6 +14,10 @@ import { EventParameter, _decode_EventParameter, _encode_EventParameter } from "
  * @summary EventSpec
  * @description
  * 
+ * One event the MG detects and buffers while LockStep is active (clause
+ * 7.1.10). Parameters, when present, are those of the package that defines the
+ * event.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +37,41 @@ class EventSpec {
     constructor (
         /**
          * @summary `eventName`.
+         * @description
+         *
+         * Package and event to buffer. See `PkgdName`.
+         *
          * @public
          * @readonly
          */
         readonly eventName: EventName,
         /**
          * @summary `streamID`.
+         * @description
+         *
+         * Stream of the buffered event. 0 means not stream-specific.
+         *
          * @public
          * @readonly
          */
         readonly streamID: OPTIONAL<StreamID>,
         /**
          * @summary `eventParList`.
+         * @description
+         *
+         * Parameters that qualify the buffered event.
+         *
          * @public
          * @readonly
          */
         readonly eventParList: EventParameter[],
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

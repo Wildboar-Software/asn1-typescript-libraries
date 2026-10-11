@@ -10,6 +10,13 @@ import { EventSpec, _decode_EventSpec, _encode_EventSpec } from "../MEDIA-GATEWA
  * @summary EventBufferDescriptor
  * @description
  * 
+ * Events the MG queues while EventBufferControl is LockStep (ITU-T Rec. H.248.1
+ * (03/2013) clause 7.1.10).
+ *
+ * An empty descriptor clears the queue and disables accumulation. The only
+ * events then reported are those that occur while an Events descriptor is
+ * active. The queue is a FIFO of events and detection times (clause 7.1.9.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

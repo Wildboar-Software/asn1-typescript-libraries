@@ -15,6 +15,15 @@ import { EventParameter, _decode_EventParameter, _encode_EventParameter } from "
  * @summary RequestedEvent
  * @description
  * 
+ * One event the MG is asked to detect (ITU-T Rec. H.248.1 (03/2013) clause
+ * 7.1.9.2).
+ *
+ * The event name is a package identifier plus an event identifier. The ALL
+ * wildcard may be used for the event identifier, meaning every event in that
+ * package. Parameters specialize the event. If a digit-map completion event is
+ * included or implied, `eventAction.eventDM` carries the map name or the map
+ * itself.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,30 +45,56 @@ class RequestedEvent {
     constructor (
         /**
          * @summary `eventName`.
+         * @description
+         *
+         * Package and event. The Recommendation calls this field `pkgdName`.
+         * The compiled name is `eventName` (`doc/h248v3.asn1`). Four octets;
+         * see `PkgdName`.
+         *
          * @public
          * @readonly
          */
         readonly eventName: EventName,
         /**
          * @summary `streamID`.
+         * @description
+         *
+         * Stream the event applies to. Omitted or 0 means the event is not tied
+         * to one stream (clause 7.1.9.2).
+         *
          * @public
          * @readonly
          */
         readonly streamID: OPTIONAL<StreamID>,
         /**
          * @summary `eventAction`.
+         * @description
+         *
+         * KeepActive, digit map, embedded Events or Signals descriptor,
+         * notification behaviour, and ResetEventsDescriptor. At most one level
+         * of embedding is allowed (clause 7.1.9.8).
+         *
          * @public
          * @readonly
          */
         readonly eventAction: OPTIONAL<RequestedActions>,
         /**
          * @summary `evParList`.
+         * @description
+         *
+         * Parameters of the event, as defined by its package.
+         *
          * @public
          * @readonly
          */
         readonly evParList: EventParameter[],
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

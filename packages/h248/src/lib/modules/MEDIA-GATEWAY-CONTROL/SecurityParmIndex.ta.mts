@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SecurityParmIndex
  * @description
  * 
+ * Four-octet Security Parameters Index for the interim authentication header
+ * (clause 10.2, Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

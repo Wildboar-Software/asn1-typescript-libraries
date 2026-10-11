@@ -13,6 +13,9 @@ import { NonStandardIdentifier, _decode_NonStandardIdentifier, _encode_NonStanda
  * @summary NonStandardData
  * @description
  * 
+ * Vendor-specific data attached to a Modem or Mux descriptor (Annex A). The
+ * identifier says who assigned `data`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +33,22 @@ class NonStandardData {
     constructor (
         /**
          * @summary `nonStandardIdentifier`.
+         * @description
+         *
+         * Who defined `data`: an object identifier, an H.221/T.35 manufacturer
+         * code, or an eight-character experimental string starting with "X-" or
+         * "X+".
+         *
          * @public
          * @readonly
          */
         readonly nonStandardIdentifier: NonStandardIdentifier,
         /**
          * @summary `data`.
+         * @description
+         *
+         * The non-standard octets, interpreted by the owner of the identifier.
+         *
          * @public
          * @readonly
          */

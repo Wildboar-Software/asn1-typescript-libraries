@@ -12,6 +12,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RequestID
  * @description
  * 
+ * 32-bit correlation token, 0 to 4294967295 (ITU-T Rec. H.248.1 (03/2013)
+ * clause 7.1.9.1).
+ *
+ * It ties an Events descriptor to the Notify that descriptor produces, and ties
+ * a signal instance to its completion event. On an AuditCapability reply that
+ * returns every event, ALL is 0xFFFFFFFF (Annex A). Procedures for a Notify
+ * whose RequestID is 0 are for further study (clause 7.2.7).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

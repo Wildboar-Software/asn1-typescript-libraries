@@ -13,6 +13,14 @@ import { EventParameterName, _decode_EventParameterName, _encode_EventParameterN
  * @summary EventParameterV1
  * @description
  * 
+ * Version 1 event parameter: a name and one octet-string value, with no
+ * `extraInfo` choice.
+ *
+ * Recorded in `doc/h248v1support.asn1` as a difference from the version 3
+ * parameter, which carries a sequence of values plus an optional relation,
+ * range, or sub-list. The field name `eventParamterName` keeps the spelling of
+ * that module.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +38,22 @@ class EventParameterV1 {
     constructor (
         /**
          * @summary `eventParamterName`.
+         * @description
+         *
+         * Parameter name. The support module spells the field
+         * `eventParamterName`.
+         *
          * @public
          * @readonly
          */
         readonly eventParamterName: EventParameterName,
         /**
          * @summary `value`.
+         * @description
+         *
+         * Single double-wrapped parameter value. Version 3 uses a sequence of
+         * such octet strings.
+         *
          * @public
          * @readonly
          */

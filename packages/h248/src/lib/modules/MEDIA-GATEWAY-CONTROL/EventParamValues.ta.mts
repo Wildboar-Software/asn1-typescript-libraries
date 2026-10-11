@@ -10,6 +10,11 @@ import { EventParamValue, _decode_EventParamValue, _encode_EventParamValue } fro
  * @summary EventParamValues
  * @description
  * 
+ * The sequence of octet strings that Annex A calls `Value` on an event
+ * parameter. Split out by the Wireshark module `doc/h248v3.asn1`. An empty
+ * sequence means CHOOSE; a longer sequence is alternatives or a sub-list, as
+ * for `PropertyParm`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

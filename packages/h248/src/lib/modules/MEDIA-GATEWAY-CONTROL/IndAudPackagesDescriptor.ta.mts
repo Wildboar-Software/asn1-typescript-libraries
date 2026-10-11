@@ -14,6 +14,11 @@ import { Name, _decode_Name, _encode_Name } from "../MEDIA-GATEWAY-CONTROL/Name.
  * @summary IndAudPackagesDescriptor
  * @description
  * 
+ * Individual audit of one package realized by the termination (clause 7.2.5).
+ * Packages is not legal in AuditCapability. The reply for a package audit
+ * includes the properties, signals, events, and statistics that package
+ * defines, with their current values.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +37,31 @@ class IndAudPackagesDescriptor {
     constructor (
         /**
          * @summary `packageName`.
+         * @description
+         *
+         * Package to audit, two octets (clause 12).
+         *
          * @public
          * @readonly
          */
         readonly packageName: Name,
         /**
          * @summary `packageVersion`.
+         * @description
+         *
+         * Package version, 0 to 99.
+         *
          * @public
          * @readonly
          */
         readonly packageVersion: INTEGER,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

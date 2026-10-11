@@ -14,6 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceChangeProfile
  * @description
  * 
+ * Profile proposed or accepted for the control association (clause 7.2.8.1.5).
+ * The name includes the profile version. Absence of the whole parameter means
+ * "NoProfile".
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +35,12 @@ class ServiceChangeProfile {
     constructor (
         /**
          * @summary `profileName`.
+         * @description
+         *
+         * Profile name and version, 1 to 67 characters: up to 64 characters of
+         * name, a "/", and two version digits, matching the text encoding
+         * (Annex A).
+         *
          * @public
          * @readonly
          */

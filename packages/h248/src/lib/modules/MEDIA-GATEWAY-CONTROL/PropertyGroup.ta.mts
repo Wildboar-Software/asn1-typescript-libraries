@@ -10,6 +10,11 @@ import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MED
  * @summary PropertyGroup
  * @description
  * 
+ * One alternative media group inside a Local or Remote descriptor (Annex A). In
+ * the text encoding this is one SDP session description (clause 7.1.7.1.2). The
+ * MG treats the order of groups, and of values inside a group, as descending
+ * preference.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

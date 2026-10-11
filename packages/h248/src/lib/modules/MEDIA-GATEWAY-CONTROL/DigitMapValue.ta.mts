@@ -15,6 +15,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DigitMapValue
  * @description
  * 
+ * A digit map and the timers that override the MG's provisioned defaults (ITU-T
+ * Rec. H.248.1 (03/2013) clause 7.1.14 and Annex A).
+ *
+ * Start (T), short (S), and long (L) timers are in seconds, from 1 to 99,
+ * except that start may be 0, which disables it and waits indefinitely for the
+ * first digit. `durationTimer` is in hundreds of milliseconds, from 100 ms to
+ * 9.9 s. The body is one or more alternative event sequences; the formal syntax
+ * in Annex A.3 is illustrative and Annex B wins if they differ.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,36 +49,71 @@ class DigitMapValue {
     constructor (
         /**
          * @summary `startTimer`.
+         * @description
+         *
+         * Start timer T, in seconds, 0 to 99. Zero disables it. Used before any
+         * digit has been collected (clause 7.1.14.2).
+         *
          * @public
          * @readonly
          */
         readonly startTimer: OPTIONAL<INTEGER>,
         /**
          * @summary `shortTimer`.
+         * @description
+         *
+         * Short inter-event timer S, in seconds, 0 to 99. Applied when the
+         * digits already match a pattern but a longer pattern is still possible
+         * (clause 7.1.14.2).
+         *
          * @public
          * @readonly
          */
         readonly shortTimer: OPTIONAL<INTEGER>,
         /**
          * @summary `longTimer`.
+         * @description
+         *
+         * Long inter-event timer L, in seconds, 0 to 99. Applied when at least
+         * one more digit is required to match any pattern (clause 7.1.14.2).
+         *
          * @public
          * @readonly
          */
         readonly longTimer: OPTIONAL<INTEGER>,
         /**
          * @summary `digitMapBody`.
+         * @description
+         *
+         * The map. Digits 0-9 and letters A-K are events. `x` is any digit 0-9.
+         * A dot repeats the preceding selector. `S` and `L` override the
+         * inter-event timer, `Z` requires a long-duration event, and `|`
+         * separates alternatives (clauses 7.1.14.3 and A.3). An example is
+         * `(0|00|[1-7]xxx|8xxxxxxx|Fxxxxxxx|Exx|91xxxxxxxxxx|9011x.)`.
+         *
          * @public
          * @readonly
          */
         readonly digitMapBody: IA5String,
         /**
          * @summary `durationTimer`.
+         * @description
+         *
+         * Long-duration threshold used by `Z`, in hundreds of milliseconds, 0
+         * to 99, so 100 ms to 9.9 s (Annex A). Overrides the value provisioned
+         * in the MG.
+         *
          * @public
          * @readonly
          */
         readonly durationTimer: OPTIONAL<INTEGER>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

@@ -8,14 +8,41 @@ import * as $ from "@wildboar/asn1/functional";
 
 export
 enum _enum_for_ModemType {
+    /**
+     * ITU-T V.18 (clause 7.1.2). The Modem descriptor itself is deprecated.
+     */
     v18 = 0,
+    /**
+     * ITU-T V.22 (clause 7.1.2).
+     */
     v22 = 1,
+    /**
+     * ITU-T V.22 bis (clause 7.1.2).
+     */
     v22bis = 2,
+    /**
+     * ITU-T V.32 (clause 7.1.2).
+     */
     v32 = 3,
+    /**
+     * ITU-T V.32 bis (clause 7.1.2).
+     */
     v32bis = 4,
+    /**
+     * ITU-T V.34 (clause 7.1.2).
+     */
     v34 = 5,
+    /**
+     * ITU-T V.90 (clause 7.1.2).
+     */
     v90 = 6,
+    /**
+     * ITU-T V.91 (clause 7.1.2).
+     */
     v91 = 7,
+    /**
+     * Synchronous ISDN modem (clause 7.1.2).
+     */
     synchISDN = 8,
 }
 
@@ -23,6 +50,11 @@ enum _enum_for_ModemType {
  * @summary ModemType
  * @description
  * 
+ * One modem type in a deprecated Modem descriptor (clause 7.1.2).
+ *
+ * V.18, V.22, V.22 bis, V.32, V.32 bis, V.34, V.90, V.91, and synchronous ISDN.
+ * Extensions use the extensible enumeration.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +80,10 @@ type ModemType = _enum_for_ModemType | ENUMERATED;
 
 /**
  * @summary ModemType_v18
+ * @description
+ *
+ * ITU-T V.18 (clause 7.1.2). The Modem descriptor itself is deprecated.
+ *
  * @constant
  * @type {number}
  */
@@ -64,6 +100,10 @@ const v18: ModemType = ModemType_v18; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v22
+ * @description
+ *
+ * ITU-T V.22 (clause 7.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +120,10 @@ const v22: ModemType = ModemType_v22; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v22bis
+ * @description
+ *
+ * ITU-T V.22 bis (clause 7.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -96,6 +140,10 @@ const v22bis: ModemType = ModemType_v22bis; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v32
+ * @description
+ *
+ * ITU-T V.32 (clause 7.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -112,6 +160,10 @@ const v32: ModemType = ModemType_v32; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v32bis
+ * @description
+ *
+ * ITU-T V.32 bis (clause 7.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -128,6 +180,10 @@ const v32bis: ModemType = ModemType_v32bis; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v34
+ * @description
+ *
+ * ITU-T V.34 (clause 7.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -144,6 +200,10 @@ const v34: ModemType = ModemType_v34; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v90
+ * @description
+ *
+ * ITU-T V.90 (clause 7.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -160,6 +220,10 @@ const v90: ModemType = ModemType_v90; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v91
+ * @description
+ *
+ * ITU-T V.91 (clause 7.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -176,6 +240,10 @@ const v91: ModemType = ModemType_v91; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_synchISDN
+ * @description
+ *
+ * Synchronous ISDN modem (clause 7.1.2).
+ *
  * @constant
  * @type {number}
  */

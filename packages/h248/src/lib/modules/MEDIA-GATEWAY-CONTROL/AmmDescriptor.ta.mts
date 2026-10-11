@@ -19,6 +19,14 @@ import { StatisticsDescriptor, _decode_StatisticsDescriptor, _encode_StatisticsD
  * @summary AmmDescriptor
  * @description
  * 
+ * One descriptor that may be supplied on Add, Move, or Modify (ITU-T Rec.
+ * H.248.1 (03/2013) clause 7.2.1).
+ *
+ * The Modem descriptor is deprecated: it shall not be sent, and a receiver
+ * ignores it or processes it at its option (clause 7.1.2). ObservedEvents,
+ * Statistics, Packages, and EventBuffer come back only when the Audit
+ * descriptor asked for them.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

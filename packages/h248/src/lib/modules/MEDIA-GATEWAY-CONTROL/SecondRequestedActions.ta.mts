@@ -16,6 +16,12 @@ import { NotifyBehaviour, _decode_NotifyBehaviour, _encode_NotifyBehaviour } fro
  * @summary SecondRequestedActions
  * @description
  * 
+ * Actions of an event that is itself inside an embedded Events descriptor
+ * (clause 7.1.9.8).
+ *
+ * There is no further embedded Events descriptor. An embedded Signals
+ * descriptor is still allowed.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,36 +43,68 @@ class SecondRequestedActions {
     constructor (
         /**
          * @summary `keepActive`.
+         * @description
+         *
+         * When true, signals keep playing when this embedded event is
+         * recognized (clause 7.1.9.5). Not combined with an embedded Signals
+         * descriptor.
+         *
          * @public
          * @readonly
          */
         readonly keepActive: OPTIONAL<BOOLEAN>,
         /**
          * @summary `eventDM`.
+         * @description
+         *
+         * Digit map for a completion event activated by the embedded descriptor
+         * (clause 7.1.14.6).
+         *
          * @public
          * @readonly
          */
         readonly eventDM: OPTIONAL<EventDM>,
         /**
          * @summary `signalsDescriptor`.
+         * @description
+         *
+         * Signals descriptor installed when this embedded event is recognized.
+         *
          * @public
          * @readonly
          */
         readonly signalsDescriptor: OPTIONAL<SignalsDescriptor>,
         /**
          * @summary `notifyBehaviour`.
+         * @description
+         *
+         * Notification behaviour for this embedded event. With regulated
+         * notification, a suppressed Notify activates the regulated embedded
+         * descriptor instead of this one (clause 7.1.9.6).
+         *
          * @public
          * @readonly
          */
         readonly notifyBehaviour: OPTIONAL<NotifyBehaviour>,
         /**
          * @summary `resetEventsDescriptor`.
+         * @description
+         *
+         * Reset flag, with the same NULL-context rules as on `RequestedActions`
+         * (clause 7.1.9.7). On an embedded descriptor, reset restores the
+         * Events descriptor from before the embedded one was activated.
+         *
          * @public
          * @readonly
          */
         readonly resetEventsDescriptor: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

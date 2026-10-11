@@ -11,6 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Value
  * @description
  * 
+ * A sequence of octet strings used where Annex A double-wraps a package value:
+ * each element is the BER encoding of the real type (Annex A, note 3).
+ *
+ * An empty sequence on a property means CHOOSE. Statistics that are sub-lists
+ * use more than one element (Annex A, on `StatisticsParameter`).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

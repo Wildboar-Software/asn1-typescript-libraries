@@ -15,6 +15,14 @@ import { ServiceChangeRequest, _decode_ServiceChangeRequest, _encode_ServiceChan
  * @summary Command
  * @description
  * 
+ * A command on a termination, or on the gateway via the Root termination (ITU-T
+ * Rec. H.248.1 (03/2013) clause 7).
+ *
+ * Add, Modify, Move, Subtract, AuditValue, and AuditCapability are sent by the
+ * MGC. Notify is sent by the MG. ServiceChange is sent by either side. Add,
+ * Move, and Modify share one parameter structure; Subtract, the two audits,
+ * Notify, and ServiceChange each have their own.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

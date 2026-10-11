@@ -15,6 +15,14 @@ import { MtpAddress, _decode_MtpAddress, _encode_MtpAddress } from "../MEDIA-GAT
  * @summary MId
  * @description
  * 
+ * Message identifier of an MG or MGC. A routable address (IPv4, IPv6, or MTP3)
+ * can be placed directly in the transport PDU. A domain name or device name has
+ * to be resolved first (ITU-T Rec. H.248.1 (03/2013) clauses 7.2.8.1.3 and
+ * 8.3).
+ *
+ * The same MID is used in every message an entity originates for the life of
+ * the control association.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

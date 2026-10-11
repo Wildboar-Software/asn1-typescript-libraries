@@ -13,6 +13,10 @@ import { Command, _decode_Command, _encode_Command } from "../MEDIA-GATEWAY-CONT
  * @summary CommandRequest
  * @description
  * 
+ * One command inside an action, plus the flags that change what happens when it
+ * fails or when it matches many terminations (ITU-T Rec. H.248.1 (03/2013)
+ * clause 8).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +36,47 @@ class CommandRequest {
     constructor (
         /**
          * @summary `command`.
+         * @description
+         *
+         * The command to execute (clause 7.2).
+         *
          * @public
          * @readonly
          */
         readonly command: Command,
         /**
          * @summary `optional`.
+         * @description
+         *
+         * Present when a failure of this command must not stop the rest of the
+         * transaction (clause 8). The reply still includes the error.
+         *
          * @public
          * @readonly
          */
         readonly optional: OPTIONAL<NULL>,
         /**
          * @summary `wildcardReturn`.
+         * @description
+         *
+         * Present to request one wildcard union response instead of a reply per
+         * matching termination. Duplicate values are suppressed. If some
+         * matches fail, the union of the successes is returned first (empty if
+         * none succeeded), followed by an individual error for each failure.
+         * Later commands in the transaction are still not executed unless this
+         * command is optional (clause 6.3.4).
+         *
          * @public
          * @readonly
          */
         readonly wildcardReturn: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

@@ -10,6 +10,8 @@ import { Name, _decode_Name, _encode_Name } from "../MEDIA-GATEWAY-CONTROL/Name.
  * @summary EventParameterName
  * @description
  * 
+ * Two-octet name of an event parameter, a `Name` (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

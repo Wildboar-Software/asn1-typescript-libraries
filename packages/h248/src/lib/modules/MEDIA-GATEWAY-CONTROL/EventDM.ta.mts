@@ -12,6 +12,12 @@ import { DigitMapValue, _decode_DigitMapValue, _encode_DigitMapValue } from "../
  * @summary EventDM
  * @description
  * 
+ * Digit map associated with a digit-map completion event, either by name or by
+ * supplying the map (clause 7.1.14).
+ *
+ * A completion event whose requested actions omit this choice is error 457
+ * ("Missing parameter in signal or event").
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

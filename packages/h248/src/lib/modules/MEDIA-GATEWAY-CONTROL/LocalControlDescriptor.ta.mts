@@ -14,6 +14,19 @@ import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MED
  * @summary LocalControlDescriptor
  * @description
  * 
+ * Stream properties that concern the MG and the MGC, rather than the remote
+ * peer (ITU-T Rec. H.248.1 (03/2013) clause 7.1.7).
+ *
+ * A new LocalControl descriptor replaces the previous one, so anything that
+ * must survive is sent again. Mode controls media flow at the edge of the
+ * context and takes precedence over any mode written into Local or Remote
+ * session descriptions. The default mode is Inactive, so a session description
+ * that names a mode does nothing until LocalControl mode is set explicitly.
+ * Signals and events are unaffected by mode. Statistics are affected only when
+ * the statistic's own meaning involves the direction that mode enables.
+ *
+ * ReserveValue and ReserveGroup default to false.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,30 +47,59 @@ class LocalControlDescriptor {
     constructor (
         /**
          * @summary `streamMode`.
+         * @description
+         *
+         * Direction of media for this stream across the edge of the context.
+         * Default Inactive. Also called Mode in the prose of the
+         * Recommendation; the two names are the same property (clause 7.1.7).
+         *
          * @public
          * @readonly
          */
         readonly streamMode: OPTIONAL<StreamMode>,
         /**
          * @summary `reserveValue`.
+         * @description
+         *
+         * True: reserve as many alternative property values as the MG can
+         * within the selected group, or within each group if ReserveGroup is
+         * also true. False: reserve one set. Default false (clause 7.1.7.1.3).
+         *
          * @public
          * @readonly
          */
         readonly reserveValue: OPTIONAL<BOOLEAN>,
         /**
          * @summary `reserveGroup`.
+         * @description
+         *
+         * True: reserve as many Local/Remote property groups as the MG can.
+         * False: reserve one group from Local and one from Remote. Default
+         * false (clause 7.1.7.1.2). A property group is one `PropertyGroup`, or
+         * one SDP session description in the text encoding.
+         *
          * @public
          * @readonly
          */
         readonly reserveGroup: OPTIONAL<BOOLEAN>,
         /**
          * @summary `propertyParms`.
+         * @description
+         *
+         * Packaged properties that are stream-specific and meaningful between
+         * MG and MGC (clause 7.1.7).
+         *
          * @public
          * @readonly
          */
         readonly propertyParms: PropertyParm[],
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

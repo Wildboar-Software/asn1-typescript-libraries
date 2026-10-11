@@ -13,6 +13,17 @@ import { StreamParms, _decode_StreamParms, _encode_StreamParms } from "../MEDIA-
  * @summary StreamDescriptor
  * @description
  * 
+ * Parameters of one bidirectional stream (ITU-T Rec. H.248.1 (03/2013) clause
+ * 7.1.6).
+ *
+ * StreamIDs are assigned by the MGC and are local to the MG-MGC association.
+ * Inside a context, streams with the same StreamID are connected. A stream is
+ * created by using a new StreamID on a termination in the context. It is
+ * deleted by setting empty Local and Remote descriptors, with ReserveGroup and
+ * ReserveValue both false, on every termination in the context that had
+ * supported it. Moving a termination carries its StreamIDs into the destination
+ * context as if it had been added with those identifiers.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +41,22 @@ class StreamDescriptor {
     constructor (
         /**
          * @summary `streamID`.
+         * @description
+         *
+         * Stream identifier. Values 1 to 65535 identify a media stream. 0 is
+         * used on events and signals to mean "not a particular stream", not as
+         * a stream in this descriptor (clauses 7.1.4 and 7.1.9.2).
+         *
          * @public
          * @readonly
          */
         readonly streamID: StreamID,
         /**
          * @summary `streamParms`.
+         * @description
+         *
+         * LocalControl, Local, Remote, and Statistics for this stream.
+         *
          * @public
          * @readonly
          */

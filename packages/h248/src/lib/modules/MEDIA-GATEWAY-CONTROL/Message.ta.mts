@@ -15,6 +15,14 @@ import { Message_messageBody, _decode_Message_messageBody, _encode_Message_messa
  * @summary Message
  * @description
  * 
+ * One gateway-control message. Transactions in a message are independent: there
+ * is no message-level acknowledgement and no implied order. Replies need not
+ * travel in the same message, or the same grouping, as the requests (ITU-T Rec.
+ * H.248.1 (03/2013) clause 8.3).
+ *
+ * The version on the initial registration ServiceChange, and on its reply, is
+ * version 1 even when a higher version is being negotiated (clause 11.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +47,47 @@ class Message {
     constructor (
         /**
          * @summary `version`.
+         * @description
+         *
+         * Protocol version, 0 to 99. Version 1 is ITU-T Rec. H.248.1
+         * (03/2002). Version 2 includes Corrigendum 1 (03/2004). Version
+         * 3 is the 09/2005 and 03/2013 publications (clause 1). This
+         * module defines version 3.
+         *
          * @public
          * @readonly
          */
         readonly version: INTEGER,
         /**
          * @summary `mId`.
+         * @description
+         *
+         * Identity of the entity that originated the message. An MG or MGC uses
+         * the same MID for the whole control association (clause 8.3). Domain
+         * name is the suggested default.
+         *
          * @public
          * @readonly
          */
         readonly mId: MId,
         /**
          * @summary `messageBody`.
+         * @description
+         *
+         * Either a message-level `ErrorDescriptor`, or the transactions
+         * concatenated in this message (clause 8.3, Annex A).
+         *
          * @public
          * @readonly
          */
         readonly messageBody: Message_messageBody,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

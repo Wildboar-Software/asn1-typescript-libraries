@@ -15,6 +15,12 @@ import { TimeNotation, _decode_TimeNotation, _encode_TimeNotation } from "../MED
  * @summary ObservedEvent
  * @description
  * 
+ * One detected event (ITU-T Rec. H.248.1 (03/2013) clause 7.1.17).
+ *
+ * If the MGC requested the event on a specific stream, the MG returns that
+ * StreamID. If the MGC requested it at termination level, the MG may omit the
+ * StreamID or include it, according to the event's meaning.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,30 +41,54 @@ class ObservedEvent {
     constructor (
         /**
          * @summary `eventName`.
+         * @description
+         *
+         * Package and event that was detected.
+         *
          * @public
          * @readonly
          */
         readonly eventName: EventName,
         /**
          * @summary `streamID`.
+         * @description
+         *
+         * Stream on which the event was detected, when the event is
+         * stream-specific (clause 7.1.17).
+         *
          * @public
          * @readonly
          */
         readonly streamID: OPTIONAL<StreamID>,
         /**
          * @summary `eventParList`.
+         * @description
+         *
+         * Parameters observed with the event.
+         *
          * @public
          * @readonly
          */
         readonly eventParList: EventParameter[],
         /**
          * @summary `timeNotation`.
+         * @description
+         *
+         * Detection time, to hundredths of a second (clause 7.1.17). When the
+         * event was buffered under LockStep, the Notify carries the time of
+         * detection, not the time the buffer was drained (clause 7.1.9.4).
+         *
          * @public
          * @readonly
          */
         readonly timeNotation: OPTIONAL<TimeNotation>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

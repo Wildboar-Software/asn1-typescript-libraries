@@ -13,6 +13,12 @@ import { SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor
  * @summary RegulatedEmbeddedDescriptor
  * @description
  * 
+ * Alternate embedded Events and Signals descriptors used only when a regulated
+ * Notify is suppressed (clause 7.1.9.6).
+ *
+ * If the Notify is sent, the event's ordinary embedded descriptors are used
+ * instead of these.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +37,33 @@ class RegulatedEmbeddedDescriptor {
     constructor (
         /**
          * @summary `secondEvent`.
+         * @description
+         *
+         * Events descriptor activated when the regulated notification is
+         * suppressed.
+         *
          * @public
          * @readonly
          */
         readonly secondEvent: OPTIONAL<SecondEventsDescriptor>,
         /**
          * @summary `signalsDescriptor`.
+         * @description
+         *
+         * Signals descriptor activated when the regulated notification is
+         * suppressed.
+         *
          * @public
          * @readonly
          */
         readonly signalsDescriptor: OPTIONAL<SignalsDescriptor>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

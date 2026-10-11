@@ -8,7 +8,17 @@ import * as $ from "@wildboar/asn1/functional";
 
 export
 enum _enum_for_TopologyRequest_topologyDirectionExtension {
+    /**
+     * T2 receives the media that T1 sends externally, and not the reverse. ALL
+     * is not used for T1 (clause 7.1.18.3). When this extension is present it
+     * replaces `topologyDirection`.
+     */
     onewayexternal = 0,
+    /**
+     * T2 receives both the media T1 sends externally and the media T1 receives
+     * from outside, and not the reverse. ALL is not used for T1 or T2 (clause
+     * 7.1.18.3).
+     */
     onewayboth = 1,
 }
 
@@ -16,6 +26,12 @@ enum _enum_for_TopologyRequest_topologyDirectionExtension {
  * @summary TopologyRequest_topologyDirectionExtension
  * @description
  * 
+ * Additional topology directions (ITU-T Rec. H.248.1 (03/2013) clause
+ * 7.1.18.3).
+ *
+ * When present on a `TopologyRequest`, this value is the association that
+ * applies and the base `topologyDirection` is ignored (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +49,12 @@ type TopologyRequest_topologyDirectionExtension = _enum_for_TopologyRequest_topo
 
 /**
  * @summary TopologyRequest_topologyDirectionExtension_onewayexternal
+ * @description
+ *
+ * T2 receives the media that T1 sends externally, and not the reverse. ALL is
+ * not used for T1 (clause 7.1.18.3). When this extension is present it replaces
+ * `topologyDirection`.
+ *
  * @constant
  * @type {number}
  */
@@ -49,6 +71,11 @@ const onewayexternal: TopologyRequest_topologyDirectionExtension = TopologyReque
 
 /**
  * @summary TopologyRequest_topologyDirectionExtension_onewayboth
+ * @description
+ *
+ * T2 receives both the media T1 sends externally and the media T1 receives from
+ * outside, and not the reverse. ALL is not used for T1 or T2 (clause 7.1.18.3).
+ *
  * @constant
  * @type {number}
  */

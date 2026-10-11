@@ -8,8 +8,20 @@ import * as $ from "@wildboar/asn1/functional";
 
 export
 enum _enum_for_Relation {
+    /**
+     * The MG chooses a value strictly greater than the single supplied value
+     * (Annex A).
+     */
     greaterThan = 0,
+    /**
+     * The MG chooses a value strictly smaller than the single supplied value
+     * (Annex A).
+     */
     smallerThan = 1,
+    /**
+     * The MG chooses a value different from the single supplied value (Annex
+     * A).
+     */
     unequalTo = 2,
 }
 
@@ -17,6 +29,12 @@ enum _enum_for_Relation {
  * @summary Relation
  * @description
  * 
+ * Comparison the MG applies when choosing a property value (Annex A).
+ *
+ * Legal only when the value sequence has one element. `greaterThan` asks for a
+ * value greater than the given one, `smallerThan` for a value smaller than it,
+ * and `unequalTo` for any other value.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +54,11 @@ type Relation = _enum_for_Relation | ENUMERATED;
 
 /**
  * @summary Relation_greaterThan
+ * @description
+ *
+ * The MG chooses a value strictly greater than the single supplied value (Annex
+ * A).
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +75,11 @@ const greaterThan: Relation = Relation_greaterThan; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary Relation_smallerThan
+ * @description
+ *
+ * The MG chooses a value strictly smaller than the single supplied value (Annex
+ * A).
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +96,10 @@ const smallerThan: Relation = Relation_smallerThan; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary Relation_unequalTo
+ * @description
+ *
+ * The MG chooses a value different from the single supplied value (Annex A).
+ *
  * @constant
  * @type {number}
  */

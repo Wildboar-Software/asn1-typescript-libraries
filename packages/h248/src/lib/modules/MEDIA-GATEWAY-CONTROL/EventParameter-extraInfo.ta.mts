@@ -12,6 +12,10 @@ import { _decode_Relation, _encode_Relation, Relation } from "../MEDIA-GATEWAY-C
  * @summary EventParameter_extraInfo
  * @description
  * 
+ * Relation, inclusive range, or sub-list for an event parameter value. The
+ * rules are those given for `PropertyParm` in Annex A. See
+ * `PropertyParm-extraInfo`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

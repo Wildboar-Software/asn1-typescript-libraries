@@ -14,6 +14,11 @@ import { StatisticsDescriptor, _decode_StatisticsDescriptor, _encode_StatisticsD
  * @summary StreamParms
  * @description
  * 
+ * The four subsidiary descriptors of one stream: LocalControl, Local, Remote,
+ * and Statistics (clause 7.1.4). Any of them may be omitted. An omitted Local
+ * or Remote descriptor means "keep using whatever was last specified", and is
+ * ignored if nothing was (clause 7.1.8.2.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,30 +39,59 @@ class StreamParms {
     constructor (
         /**
          * @summary `localControlDescriptor`.
+         * @description
+         *
+         * Mode, reserve behaviour, and packaged properties of interest between
+         * MG and MGC. A new setting replaces the previous one entirely (clause
+         * 7.1.7).
+         *
          * @public
          * @readonly
          */
         readonly localControlDescriptor: OPTIONAL<LocalControlDescriptor>,
         /**
          * @summary `localDescriptor`.
+         * @description
+         *
+         * Media the MG receives from the remote entity. Empty means release
+         * resources reserved for that received flow (clauses 7.1.8 and
+         * 7.1.8.2.2).
+         *
          * @public
          * @readonly
          */
         readonly localDescriptor: OPTIONAL<LocalRemoteDescriptor>,
         /**
          * @summary `remoteDescriptor`.
+         * @description
+         *
+         * Media the MG sends to the remote entity. Empty means release
+         * resources reserved for that sent flow (clauses 7.1.8 and 7.1.8.2.2).
+         *
          * @public
          * @readonly
          */
         readonly remoteDescriptor: OPTIONAL<LocalRemoteDescriptor>,
         /**
          * @summary `statisticsDescriptor`.
+         * @description
+         *
+         * Statistics collected for this stream. Setting a new descriptor
+         * overrides the previous one; statistics that are repeated keep their
+         * values, and a statistic that is removed and later put back is reset
+         * (clause 7.1.15).
+         *
          * @public
          * @readonly
          */
         readonly statisticsDescriptor: OPTIONAL<StatisticsDescriptor>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

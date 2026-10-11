@@ -13,6 +13,19 @@ import { IndAuditParameter, _decode_IndAuditParameter, _encode_IndAuditParameter
  * @summary AuditDescriptor
  * @description
  * 
+ * Names the information a command must return (ITU-T Rec. H.248.1 (03/2013)
+ * clause 7.1.12).
+ *
+ * It may be attached to any command to force the current value of a descriptor
+ * to come back, even when that descriptor was not in the command. An empty
+ * Audit descriptor returns nothing; on Subtract that suppresses the default
+ * Statistics reply. In commands other than Subtract, a missing Audit descriptor
+ * is equivalent to an empty one (clause 7.1.1).
+ *
+ * `auditToken` selects whole descriptors. `auditPropertyToken` selects
+ * individual properties, events, signals, statistics, digit maps, or packages
+ * (clause 7.2.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,18 +56,36 @@ class AuditDescriptor {
     constructor (
         /**
          * @summary `auditToken`.
+         * @description
+         *
+         * Whole descriptors to return: Mux, Modem, Media, Events, Signals,
+         * DigitMap, Statistics, ObservedEvents, Packages, EventBuffer. Modem is
+         * deprecated (clause 7.1.2).
+         *
          * @public
          * @readonly
          */
         readonly auditToken: OPTIONAL<AuditDescriptor_auditToken>,
         /**
          * @summary `auditPropertyToken`.
+         * @description
+         *
+         * Individual items to return, including filters. Several criteria
+         * combine with AND unless the audit also carries OR logic (clause
+         * 7.2.5). GroupID, where used, numbers Local/Remote property groups
+         * from 1 in reservation order.
+         *
          * @public
          * @readonly
          */
         readonly auditPropertyToken: OPTIONAL<IndAuditParameter[]>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

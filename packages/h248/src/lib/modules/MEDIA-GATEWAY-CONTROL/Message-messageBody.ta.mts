@@ -12,6 +12,14 @@ import { Transaction, _decode_Transaction, _encode_Transaction } from "../MEDIA-
  * @summary Message_messageBody
  * @description
  * 
+ * Body of a `Message`: a message-level error, or the transactions carried in
+ * the message (clause 8.3).
+ *
+ * `messageError` reports a failure that prevents the transactions from being
+ * processed as a message. `transactions` is the normal case. When a transport
+ * uses application-level framing, the definition of `Transaction` may differ;
+ * the transport annex or H.248.x Recommendation then applies (Annex A, note 1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

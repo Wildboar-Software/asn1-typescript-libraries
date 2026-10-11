@@ -12,6 +12,9 @@ import { ServiceChangeResParm, _decode_ServiceChangeResParm, _encode_ServiceChan
  * @summary ServiceChangeResult
  * @description
  * 
+ * Result of a ServiceChange on Root: an error, or the response parameters the
+ * MGC (or MG) returns (clause 7.2.8.1.11, Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

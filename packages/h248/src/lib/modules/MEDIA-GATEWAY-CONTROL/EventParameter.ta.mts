@@ -14,6 +14,14 @@ import { EventParameter_extraInfo, _decode_EventParameter_extraInfo, _encode_Eve
  * @summary EventParameter
  * @description
  * 
+ * One parameter of a requested or observed event (ITU-T Rec. H.248.1 (03/2013)
+ * Annex A).
+ *
+ * The value uses the same double wrapping and the same relation, range, and
+ * sub-list rules as `PropertyParm`. The compiled module stores the value as
+ * `EventParamValues`, a sequence of octet strings, which is the Wireshark
+ * splitting of Annex A's `Value`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,24 +51,45 @@ class EventParameter {
     constructor (
         /**
          * @summary `eventParameterName`.
+         * @description
+         *
+         * Parameter name. Two octets, the package-local name (`Name`). The
+         * Recommendation calls the field `eventParameterName` of type `Name`.
+         *
          * @public
          * @readonly
          */
         readonly eventParameterName: EventParameterName,
         /**
          * @summary `eventParamValue`.
+         * @description
+         *
+         * Parameter values, each an octet string holding a BER-encoded package
+         * value (Annex A, note 3). Several elements are alternatives, or one
+         * sub-list when `extraInfo` says so.
+         *
          * @public
          * @readonly
          */
         readonly eventParamValue: EventParamValues,
         /**
          * @summary `extraInfo`.
+         * @description
+         *
+         * Same relation, range, and sub-list rules as a property value. See
+         * `PropertyParm-extraInfo`.
+         *
          * @public
          * @readonly
          */
         readonly extraInfo: OPTIONAL<EventParameter_extraInfo>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

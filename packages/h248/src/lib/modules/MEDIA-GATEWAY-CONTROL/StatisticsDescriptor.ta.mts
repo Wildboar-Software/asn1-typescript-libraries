@@ -10,6 +10,24 @@ import { StatisticsParameter, _decode_StatisticsParameter, _encode_StatisticsPar
  * @summary StatisticsDescriptor
  * @description
  * 
+ * Statistics to collect on a termination or on one stream (ITU-T Rec. H.248.1
+ * (03/2013) clause 7.1.15).
+ *
+ * By default, statistics are per termination and the set collected is whatever
+ * the realized packages define. Sending this descriptor replaces the previous
+ * set. Statistics that are included again are not reset. A statistic that is
+ * dropped keeps its value until Subtract, but is reset if a later descriptor
+ * turns it back on. An empty descriptor collects nothing. A single statistic
+ * with package and statistic both wildcarded (ALL) reactivates every statistic;
+ * package specified and statistic wildcarded reactivates that package.
+ *
+ * Statistics are cumulative: reporting them does not reset them. They reset
+ * when the termination is subtracted or returns to the NULL context. Subtract
+ * reports them unless the command carries an empty Audit descriptor. A
+ * termination-level value is the sum of the stream-level values unless the
+ * package defines a different combination. A statistic the stream cannot
+ * support is error 460 ("Unable to set statistic on stream").
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

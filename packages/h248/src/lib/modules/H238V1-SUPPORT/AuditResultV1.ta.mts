@@ -13,6 +13,12 @@ import { TerminationAudit, _decode_TerminationAudit, _encode_TerminationAudit } 
  * @summary AuditResultV1
  * @description
  * 
+ * Version 1 audit result, from `doc/h248v1support.asn1`.
+ *
+ * `contectAuditResult` (the module's spelling) is a single TerminationID, where
+ * version 3 uses a TerminationID list for the context-audit result.
+ * `terminationAuditResult` is the same `TerminationAudit` as in version 3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

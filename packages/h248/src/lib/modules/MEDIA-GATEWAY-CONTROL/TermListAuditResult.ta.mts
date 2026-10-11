@@ -13,6 +13,10 @@ import { TerminationAudit, _decode_TerminationAudit, _encode_TerminationAudit } 
  * @summary TermListAuditResult
  * @description
  * 
+ * Audit result covering a list of terminations with one shared audit body
+ * (Annex A). Used when the request asked for a wildcard union or named several
+ * terminations.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +35,33 @@ class TermListAuditResult {
     constructor (
         /**
          * @summary `terminationIDList`.
+         * @description
+         *
+         * Terminations this single audit body covers.
+         *
          * @public
          * @readonly
          */
         readonly terminationIDList: TerminationIDList,
         /**
          * @summary `terminationAuditResult`.
+         * @description
+         *
+         * Returned descriptors and items. In a wildcard union, values that
+         * differ across terminations are all present, with duplicates removed
+         * (clause 6.3.4).
+         *
          * @public
          * @readonly
          */
         readonly terminationAuditResult: TerminationAudit,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

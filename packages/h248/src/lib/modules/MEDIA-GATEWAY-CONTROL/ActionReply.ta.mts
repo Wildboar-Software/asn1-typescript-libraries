@@ -15,6 +15,14 @@ import { CommandReply, _decode_CommandReply, _encode_CommandReply } from "../MED
  * @summary ActionReply
  * @description
  * 
+ * Reply to one action. Command replies appear in the same order as the commands
+ * in the request (ITU-T Rec. H.248.1 (03/2013) clause 8).
+ *
+ * If the ContextID parsed but processing the action failed, the reply is that
+ * ContextID plus error 422 ("Syntax Error in Action"). If the end of an action
+ * cannot be found but some commands parsed, those commands are processed and
+ * 422 is then sent as the last action (clause 8.2.2).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +42,46 @@ class ActionReply {
     constructor (
         /**
          * @summary `contextId`.
+         * @description
+         *
+         * Context the reply applies to. May be a specific identifier, ALL, or
+         * NULL (clause 8.2.2). When a context list is returned, this identifier
+         * is the one from the matching ActionRequest (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly contextId: ContextID,
         /**
          * @summary `errorDescriptor`.
+         * @description
+         *
+         * Action-level error. Used when the failure is the action rather than
+         * one command, for example error 422 (clauses 7.1.20 and 8.2.2).
+         *
          * @public
          * @readonly
          */
         readonly errorDescriptor: OPTIONAL<ErrorDescriptor>,
         /**
          * @summary `contextReply`.
+         * @description
+         *
+         * Context attributes after the action, returned for an audit or to
+         * report the effect of changing them (clause 7.2.9). Encoded with the
+         * same structure as `ContextRequest`.
+         *
          * @public
          * @readonly
          */
         readonly contextReply: OPTIONAL<ContextRequest>,
         /**
          * @summary `commandReply`.
+         * @description
+         *
+         * Replies to the commands that were executed, in request order. No
+         * reply is generated for a command that was not reached (clause 8.2.2).
+         *
          * @public
          * @readonly
          */

@@ -12,6 +12,10 @@ import { DigitMapName, _decode_DigitMapName, _encode_DigitMapName } from "../MED
  * @summary IndAudDigitMapDescriptor
  * @description
  * 
+ * Individual audit of a digit map by name (clause 7.2.5). DigitMap is not legal
+ * in AuditCapability. AuditValue of DigitMap on TerminationID ALL returns every
+ * digit map in the gateway.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +32,11 @@ class IndAudDigitMapDescriptor {
     constructor (
         /**
          * @summary `digitMapName`.
+         * @description
+         *
+         * Digit map to return. Omitted, the audit asks for the current digit
+         * map of the termination without naming it.
+         *
          * @public
          * @readonly
          */

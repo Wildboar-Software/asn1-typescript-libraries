@@ -14,6 +14,9 @@ import { IndAudStatisticsDescriptor, _decode_IndAudStatisticsDescriptor, _encode
  * @summary IndAudStreamParms
  * @description
  * 
+ * Individual audit of the four subsidiary stream descriptors (Annex A). A NULL
+ * or nested audit item asks for that subsidiary descriptor.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,30 +37,56 @@ class IndAudStreamParms {
     constructor (
         /**
          * @summary `localControlDescriptor`.
+         * @description
+         *
+         * LocalControl items: mode, reserve flags, and packaged stream
+         * properties. Do not send both `streamMode` and `streamModeSel`; if
+         * both appear, only `streamModeSel` is honoured (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly localControlDescriptor: OPTIONAL<IndAudLocalControlDescriptor>,
         /**
          * @summary `localDescriptor`.
+         * @description
+         *
+         * Local descriptor items. `propGroupID` selects one reserved property
+         * group; group 1 is the first group reserved (clause 7.2.5).
+         *
          * @public
          * @readonly
          */
         readonly localDescriptor: OPTIONAL<IndAudLocalRemoteDescriptor>,
         /**
          * @summary `remoteDescriptor`.
+         * @description
+         *
+         * Remote descriptor items. Same group numbering as the Local
+         * descriptor.
+         *
          * @public
          * @readonly
          */
         readonly remoteDescriptor: OPTIONAL<IndAudLocalRemoteDescriptor>,
         /**
          * @summary `statisticsDescriptor`.
+         * @description
+         *
+         * One stream-level statistic to return. The statistic is not reset by
+         * the audit (clause 7.2.5).
+         *
          * @public
          * @readonly
          */
         readonly statisticsDescriptor: OPTIONAL<IndAudStatisticsDescriptor>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

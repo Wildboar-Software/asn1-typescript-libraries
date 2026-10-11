@@ -1,9 +1,20 @@
 /**
  * @description
  *
- * ASN.1 module `MEDIA-GATEWAY-CONTROL` from ITU-T H.248.1 version 3
- * (09/2005), with the tags and Wireshark corrections in `doc/h248v3.asn1`.
- * The module is compiled as `IMPLICIT TAGS`.
+ * Binary encoding of the gateway control protocol, ASN.1 module
+ * `MEDIA-GATEWAY-CONTROL` (ITU-T Rec. H.248.1 (03/2013)
+ * Annex A). Protocol version 3.
+ * `ServiceChangeVersion` value 3 covers both the 09/2005 and
+ * 03/2013 publications of that version (clause 1).
+ *
+ * The compiled module follows `doc/h248v3.asn1`: explicit context
+ * tags and `IMPLICIT TAGS`, plus the Wireshark names called out on
+ * the affected types (`propertyName`, `ContextIDinList`,
+ * `EventParamValues`, `SCreasonValue`, and `PropertyID`).
+ *
+ * A message is one or more transactions. A transaction is an ordered
+ * list of actions. An action operates on one context and contains
+ * context attributes and commands on terminations (clauses 6 to 8).
  */
 export * from "./ActionReply.ta.mjs";
 export * from "./ActionRequest.ta.mjs";

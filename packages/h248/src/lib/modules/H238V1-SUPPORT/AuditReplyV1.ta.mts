@@ -13,6 +13,16 @@ import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../
  * @summary AuditReplyV1
  * @description
  * 
+ * Version 1 audit reply: one termination and one result, encoded as
+ * a sequence.
+ *
+ * `ServiceChangeVersion` 1 means ITU-T Rec. H.248.1 (03/2002)
+ * (clause 1). The registration ServiceChange and its reply are
+ * encoded as version 1 even when a higher version is negotiated
+ * (clause 11.3). This shape is the version 1 difference recorded in
+ * `doc/h248v1support.asn1`. The 03/2013 Annex A defines `AuditReply`
+ * as a choice.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +40,21 @@ class AuditReplyV1 {
     constructor (
         /**
          * @summary `terminationID`.
+         * @description
+         *
+         * Termination the version 1 audit reply describes.
+         *
          * @public
          * @readonly
          */
         readonly terminationID: TerminationID,
         /**
          * @summary `auditResult`.
+         * @description
+         *
+         * Either a context-audit termination identifier, or the termination
+         * audit. The arm is spelled `contectAuditResult` in the support module.
+         *
          * @public
          * @readonly
          */

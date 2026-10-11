@@ -22,6 +22,15 @@ import { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } fro
  * @summary ServiceChangeParm
  * @description
  * 
+ * Parameters of a ServiceChange command (ITU-T Rec. H.248.1 (03/2013) clause
+ * 7.2.8.1 and Annex F).
+ *
+ * `serviceChangeAddress` and `serviceChangeMgcId` must not both be present. The
+ * address is a new destination inside the association being negotiated. The MGC
+ * identity is a different controller to contact. On registration, TimeStamp is
+ * required. ServiceChangeVersion is mandatory on the initial registration and
+ * is not sent on a non-registration command (Annex F.5.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,72 +70,156 @@ class ServiceChangeParm {
     constructor (
         /**
          * @summary `serviceChangeMethod`.
+         * @description
+         *
+         * What is happening to the termination or the gateway: failover,
+         * forced, graceful, restart, disconnected, or handoff (clause
+         * 7.2.8.1.1). Another mutually understood value may be carried as an
+         * extension.
+         *
          * @public
          * @readonly
          */
         readonly serviceChangeMethod: ServiceChangeMethod,
         /**
          * @summary `serviceChangeAddress`.
+         * @description
+         *
+         * Address for subsequent transaction requests within this association.
+         * May be a full address or, for IP transports, only a port. Must not
+         * appear together with `serviceChangeMgcId`. Replies still go to the
+         * source of the matching request (clauses 7.2.8.1.3 and 9). Only legal
+         * on Root (Annex F.5.4).
+         *
          * @public
          * @readonly
          */
         readonly serviceChangeAddress: OPTIONAL<ServiceChangeAddress>,
         /**
          * @summary `serviceChangeVersion`.
+         * @description
+         *
+         * Protocol version proposed for the association, 0 to 99 (clauses
+         * 7.2.8.1.6 and 11.3). Mandatory on initial registration. Not sent on a
+         * command that is not a registration (Annex F.5.6).
+         *
          * @public
          * @readonly
          */
         readonly serviceChangeVersion: OPTIONAL<INTEGER>,
         /**
          * @summary `serviceChangeProfile`.
+         * @description
+         *
+         * Profile, and profile version, proposed for the association. Omitted
+         * means "NoProfile" (clause 7.2.8.1.5). Sent only on registration or
+         * re-registration (Annex F.5.5). The name is 1 to 67 characters so that
+         * 64 characters of name, a slash, and two version digits fit the text
+         * encoding.
+         *
          * @public
          * @readonly
          */
         readonly serviceChangeProfile: OPTIONAL<ServiceChangeProfile>,
         /**
          * @summary `serviceChangeReason`.
+         * @description
+         *
+         * Decimal reason code and optional text, double-wrapped as for package
+         * values: the IA5String is BER-encoded, and that encoding is the
+         * contents of an octet string (Annex A). Registered codes and the
+         * methods they may accompany are in Table F.1. See `SCreasonValue`.
+         *
          * @public
          * @readonly
          */
         readonly serviceChangeReason: SCreasonValue,
         /**
          * @summary `serviceChangeDelay`.
+         * @description
+         *
+         * Delay in seconds, 0 to 4294967295, before the command takes effect.
+         * The reply is sent as if execution happened on receipt; the service
+         * state actually changes when the delay expires (Annex F.5.3). Absent
+         * or zero is a null delay. For Graceful, a null delay means the MG does
+         * not mark the termination OutOfService until it is in the NULL context
+         * (clause 7.2.8.1.4).
+         *
          * @public
          * @readonly
          */
         readonly serviceChangeDelay: OPTIONAL<INTEGER>,
         /**
          * @summary `serviceChangeMgcId`.
+         * @description
+         *
+         * Another MGC to contact. Must not appear together with
+         * `serviceChangeAddress` (clause 7.2.8.1.3). On a handoff this is the
+         * controller that takes over.
+         *
          * @public
          * @readonly
          */
         readonly serviceChangeMgcId: OPTIONAL<MId>,
         /**
          * @summary `timeStamp`.
+         * @description
+         *
+         * Sender's clock, to hundredths of a second. Not necessarily civil
+         * time; it is the origin against which later timestamps from this
+         * sender are compared (clause 7.2.8.1.7). Required on a registration
+         * command and its reply. It does not change how the command executes
+         * (Annex F.5.8).
+         *
          * @public
          * @readonly
          */
         readonly timeStamp: OPTIONAL<TimeNotation>,
         /**
          * @summary `nonStandardData`.
+         * @description
+         *
+         * Extension data whose meaning is agreed by MG and MGC. The value
+         * "X-SC" is reserved for version-3 ServiceChange parameters sent inside
+         * an initial version-1 registration when ServiceChangeVersion is 3 or
+         * greater (clause 7.2.8.1.8). The flag `SIC` inside that extension is
+         * the version-1 encoding of `serviceChangeIncompleteFlag`.
+         *
          * @public
          * @readonly
          */
         readonly nonStandardData: OPTIONAL<NonStandardData>,
         /**
          * @summary `serviceChangeInfo`.
+         * @description
+         *
+         * Package, property, signal, event, or statistic that caused the
+         * ServiceChange, carried as an Audit descriptor (clause 7.2.8.1.9).
+         *
          * @public
          * @readonly
          */
         readonly serviceChangeInfo: OPTIONAL<AuditDescriptor>,
         /**
          * @summary `serviceChangeIncompleteFlag`.
+         * @description
+         *
+         * Further ServiceChange commands will follow before the MG has finished
+         * reporting termination state. Used only on Root with method Restart.
+         * While it is present the MGC sends no commands except to Root. The
+         * flag is omitted from the last such command (clause 7.2.8.1.10).
+         *
          * @public
          * @readonly
          */
         readonly serviceChangeIncompleteFlag: OPTIONAL<NULL>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

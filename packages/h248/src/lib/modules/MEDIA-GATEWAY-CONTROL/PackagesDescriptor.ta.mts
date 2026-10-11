@@ -10,6 +10,15 @@ import { PackagesItem, _decode_PackagesItem, _encode_PackagesItem } from "../MED
  * @summary PackagesDescriptor
  * @description
  * 
+ * Packages a termination realizes, returned by AuditValue (ITU-T Rec. H.248.1
+ * (03/2013) clause 7.1.16). Not legal in AuditCapability.
+ *
+ * Publishing a package means the MG recognizes every property, signal, event,
+ * statistic, and parameter in it. Unimplemented behaviour behind those names is
+ * error 501 ("Not implemented"), not an unknown-identifier error (clause
+ * 6.2.3). An extended package may be published together with its base package,
+ * except where the base package is defined as "designed to be extended only".
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

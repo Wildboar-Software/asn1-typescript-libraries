@@ -12,6 +12,18 @@ import { RegulatedEmbeddedDescriptor, _decode_RegulatedEmbeddedDescriptor, _enco
  * @summary NotifyBehaviour
  * @description
  * 
+ * Whether a recognized event produces a Notify (ITU-T Rec. H.248.1 (03/2013)
+ * clause 7.1.9.6).
+ *
+ * `notifyImmediate` sends it at once; this is the default when the flag is
+ * omitted. `neverNotify` does not send it. `notifyRegulated` lets the MG send
+ * or suppress it according to MGC load, as detailed by the Notification
+ * Behaviour package in clause E.15. If a regulated Notify is suppressed, the
+ * second event and signals in `RegulatedEmbeddedDescriptor` are activated
+ * instead of the ordinary embedded descriptors. If it is not suppressed, or if
+ * the behaviour is immediate or never, the ordinary embedded descriptor is
+ * used.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

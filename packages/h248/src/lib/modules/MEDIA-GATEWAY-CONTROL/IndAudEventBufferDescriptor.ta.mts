@@ -13,6 +13,10 @@ import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-C
  * @summary IndAudEventBufferDescriptor
  * @description
  * 
+ * Individual audit of one event in the EventBuffer descriptor (clause 7.2.5).
+ * The reply lists the events currently enabled there, with their parameter
+ * values.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +35,31 @@ class IndAudEventBufferDescriptor {
     constructor (
         /**
          * @summary `eventName`.
+         * @description
+         *
+         * Package and event enabled in the event buffer.
+         *
          * @public
          * @readonly
          */
         readonly eventName: PkgdName,
         /**
          * @summary `streamID`.
+         * @description
+         *
+         * Stream of that buffered event, if the event is stream-specific.
+         *
          * @public
          * @readonly
          */
         readonly streamID: OPTIONAL<StreamID>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

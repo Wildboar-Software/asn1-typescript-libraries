@@ -14,6 +14,13 @@ import { ServiceChangeReply, _decode_ServiceChangeReply, _encode_ServiceChangeRe
  * @summary CommandReply
  * @description
  * 
+ * Reply to one command. Add, Move, Modify, and Subtract share one reply
+ * structure. Any reply may carry an Error Descriptor even though the choice
+ * arms do not all show it separately (clause 7.2).
+ *
+ * Descriptors in a successful reply are returned in the order they were
+ * received (clause 7.1).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

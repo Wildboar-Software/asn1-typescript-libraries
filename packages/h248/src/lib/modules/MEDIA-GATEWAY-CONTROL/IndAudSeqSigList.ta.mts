@@ -14,6 +14,9 @@ import { IndAudSignal, _decode_IndAudSignal, _encode_IndAudSignal } from "../MED
  * @summary IndAudSeqSigList
  * @description
  * 
+ * Individual audit of a sequential signal list (clause 7.2.5). The identifier
+ * matches `SeqSigList.id`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +34,21 @@ class IndAudSeqSigList {
     constructor (
         /**
          * @summary `id`.
+         * @description
+         *
+         * Signal list identifier, 0 to 65535.
+         *
          * @public
          * @readonly
          */
         readonly id: INTEGER,
         /**
          * @summary `signalList`.
+         * @description
+         *
+         * One signal inside the list to audit. Omitted, the audit names the
+         * list rather than a single signal in it.
+         *
          * @public
          * @readonly
          */

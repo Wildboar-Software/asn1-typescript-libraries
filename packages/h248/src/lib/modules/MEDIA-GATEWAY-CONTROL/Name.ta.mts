@@ -12,6 +12,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Name
  * @description
  * 
+ * Two-octet identifier: a package name, a digit-map name, or the package-local
+ * half of a parameter name (Annex A). Digit-map names use this length as well
+ * (`DigitMapName`).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

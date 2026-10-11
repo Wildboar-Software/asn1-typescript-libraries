@@ -14,6 +14,12 @@ import { SigParameter_extraInfo, _decode_SigParameter_extraInfo, _encode_SigPara
  * @summary SigParameter
  * @description
  * 
+ * One package-defined parameter of a signal (Annex A).
+ *
+ * Values are double-wrapped octet strings, with the same relation, range, and
+ * sub-list rules as `PropertyParm`. The compiled module uses `SigParamValues`
+ * for Annex A's `Value`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,24 +47,42 @@ class SigParameter {
     constructor (
         /**
          * @summary `sigParameterName`.
+         * @description
+         *
+         * Parameter name, a two-octet `Name`.
+         *
          * @public
          * @readonly
          */
         readonly sigParameterName: SigParameterName,
         /**
          * @summary `value`.
+         * @description
+         *
+         * Parameter values, each a BER-encoded package value wrapped as an
+         * octet string (Annex A, note 3).
+         *
          * @public
          * @readonly
          */
         readonly value: SigParamValues,
         /**
          * @summary `extraInfo`.
+         * @description
+         *
+         * Relation, range, or sub-list. Same rules as `PropertyParm-extraInfo`.
+         *
          * @public
          * @readonly
          */
         readonly extraInfo: OPTIONAL<SigParameter_extraInfo>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

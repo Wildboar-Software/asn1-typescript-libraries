@@ -22,6 +22,13 @@ import { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } fro
  * @summary AuditReturnParameter
  * @description
  * 
+ * One item in a termination audit or command reply (Annex A).
+ *
+ * `emptyDescriptors` carries an Audit descriptor naming descriptors whose
+ * contents are empty. The other arms return the descriptor itself. An error
+ * that belongs to one descriptor is returned in that descriptor's place (clause
+ * 7.1.20).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

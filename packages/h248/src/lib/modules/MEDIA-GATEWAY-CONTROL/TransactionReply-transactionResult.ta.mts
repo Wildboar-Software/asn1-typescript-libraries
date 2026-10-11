@@ -12,6 +12,14 @@ import { ActionReply, _decode_ActionReply, _encode_ActionReply } from "../MEDIA-
  * @summary TransactionReply_transactionResult
  * @description
  * 
+ * Result of a TransactionReply: a single error for the transaction, or the
+ * action replies (clause 8.2.2, Annex A).
+ *
+ * `transactionError` is used when the receiver cannot determine a legal
+ * transaction (error 403, "Syntax Error in TransactionRequest") or when another
+ * error applies to the transaction as a whole. `actionReplies` carries one
+ * reply per processed action, in request order.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

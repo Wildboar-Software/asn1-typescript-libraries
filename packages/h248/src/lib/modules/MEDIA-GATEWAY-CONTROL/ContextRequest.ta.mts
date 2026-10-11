@@ -17,6 +17,14 @@ import { ContextIDinList, _decode_ContextIDinList, _encode_ContextIDinList } fro
  * @summary ContextRequest
  * @description
  * 
+ * Context-level attributes set on an action, or returned as the context reply.
+ * Applies to the context rather than to one termination (ITU-T Rec. H.248.1
+ * (03/2013) clauses 6.1.1, 7.1.18, and 7.1.19).
+ *
+ * Omitting an attribute leaves the context's previous value in place. Sending a
+ * new ContextAttribute descriptor replaces the previous setting entirely, so
+ * retained properties have to be repeated.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,42 +52,86 @@ class ContextRequest {
     constructor (
         /**
          * @summary `priority`.
+         * @description
+         *
+         * Precedence of the context, 0 (lowest) through 15 (highest). Lets the
+         * MGC steer which contexts the MG handles first when many are in play
+         * at once, for example during a restart (clause 6.1.1).
+         *
          * @public
          * @readonly
          */
         readonly priority: OPTIONAL<INTEGER>,
         /**
          * @summary `emergency`.
+         * @description
+         *
+         * Present and true when the context carries an emergency call, so the
+         * MG can give it preference (clause 6.1.1).
+         *
          * @public
          * @readonly
          */
         readonly emergency: OPTIONAL<BOOLEAN>,
         /**
          * @summary `topologyReq`.
+         * @description
+         *
+         * Flow directions between terminations in the context. Optional to
+         * implement; an MG that does not support topology returns error 444
+         * ("Unsupported or unknown descriptor") and may put "Topology" in the
+         * error text (clause 7.1.18.1). The default, when no descriptor is
+         * given, is bothway among every termination.
+         *
          * @public
          * @readonly
          */
         readonly topologyReq: OPTIONAL<TopologyRequest[]>,
         /**
          * @summary `iepscallind`.
+         * @description
+         *
+         * Present and true when the context is an International Emergency
+         * Preference Scheme call, so the MG can apply the behaviour of ITU-T
+         * E.106 and E.107 (clause 6.1.1).
+         *
          * @public
          * @readonly
          */
         readonly iepscallind: OPTIONAL<BOOLEAN>,
         /**
          * @summary `contextProp`.
+         * @description
+         *
+         * Packaged properties that apply to the context as a whole. Termination
+         * properties are not valid here (clause 7.1.19). Values may be
+         * underspecified as in clause 7.1.1.
+         *
          * @public
          * @readonly
          */
         readonly contextProp: OPTIONAL<PropertyParm[]>,
         /**
          * @summary `contextList`.
+         * @description
+         *
+         * Compact list of ContextIDs. Include it on a request to ask for the
+         * same compact form in the reply, instead of one action reply per
+         * context (clauses 7.1.19 and 7.2.5). When a list is returned, the
+         * action reply's own ContextID stays the identifier from the request
+         * (Annex A).
+         *
          * @public
          * @readonly
          */
         readonly contextList: OPTIONAL<ContextIDinList[]>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

@@ -13,6 +13,18 @@ import { ServiceChangeParm, _decode_ServiceChangeParm, _encode_ServiceChangeParm
  * @summary ServiceChangeRequest
  * @description
  * 
+ * ServiceChange, sent by either the MG or the MGC (ITU-T Rec. H.248.1 (03/2013)
+ * clause 7.2.8 and Annex F).
+ *
+ * On Root it registers the gateway, announces a restart or failover, or hands
+ * the association to another controller. On any other termination it takes that
+ * termination into or out of service. CHOOSE is not used. A TerminationIDList
+ * is not valid in the initial version-1 registration command. A message that
+ * registers Root with method Restart or Failover contains no other commands.
+ *
+ * The registration message itself is encoded as version 1, whatever version is
+ * being negotiated (clause 11.3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +43,32 @@ class ServiceChangeRequest {
     constructor (
         /**
          * @summary `terminationID`.
+         * @description
+         *
+         * Terminations affected. Root means the whole gateway. Wildcarding is
+         * allowed; CHOOSE is not (clause 7.2.8).
+         *
          * @public
          * @readonly
          */
         readonly terminationID: TerminationIDList,
         /**
          * @summary `serviceChangeParms`.
+         * @description
+         *
+         * Method, reason, and the optional parameters of clause 7.2.8.1.
+         *
          * @public
          * @readonly
          */
         readonly serviceChangeParms: ServiceChangeParm,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

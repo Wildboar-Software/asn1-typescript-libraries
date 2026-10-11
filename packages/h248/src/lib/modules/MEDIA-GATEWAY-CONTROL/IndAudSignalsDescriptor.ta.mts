@@ -12,6 +12,13 @@ import { IndAudSeqSigList, _decode_IndAudSeqSigList, _encode_IndAudSeqSigList } 
  * @summary IndAudSignalsDescriptor
  * @description
  * 
+ * Individual audit of one signal or one sequential signal list (clause 7.2.5).
+ *
+ * On AuditValue, a signal is returned with its parameters only while it is
+ * active, including KeepActive, type, duration, completion indication, and
+ * package parameters. On AuditCapability those four base items are not
+ * returned; the possible package-parameter values are.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

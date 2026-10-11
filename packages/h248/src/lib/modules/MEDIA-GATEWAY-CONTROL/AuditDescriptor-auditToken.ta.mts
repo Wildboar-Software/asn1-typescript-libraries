@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AuditDescriptor_auditToken
  * @description
  * 
+ * Bit flags naming whole descriptors to return on an audit (clause 7.1.12,
+ * Annex A). A set bit requests that descriptor.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +35,10 @@ type AuditDescriptor_auditToken = BIT_STRING;
 
 /**
  * @summary AuditDescriptor_auditToken_muxToken
+ * @description
+ *
+ * Return the Mux descriptor (clause 7.1.12).
+ *
  * @constant
  */
 export
@@ -46,6 +53,11 @@ const muxToken: number = AuditDescriptor_auditToken_muxToken; /* SHORT_NAMED_BIT
 
 /**
  * @summary AuditDescriptor_auditToken_modemToken
+ * @description
+ *
+ * Return the Modem descriptor. The descriptor is deprecated (clauses 7.1.2 and
+ * 7.1.12).
+ *
  * @constant
  */
 export
@@ -60,6 +72,10 @@ const modemToken: number = AuditDescriptor_auditToken_modemToken; /* SHORT_NAMED
 
 /**
  * @summary AuditDescriptor_auditToken_mediaToken
+ * @description
+ *
+ * Return the Media descriptor (clause 7.1.12).
+ *
  * @constant
  */
 export
@@ -74,6 +90,10 @@ const mediaToken: number = AuditDescriptor_auditToken_mediaToken; /* SHORT_NAMED
 
 /**
  * @summary AuditDescriptor_auditToken_eventsToken
+ * @description
+ *
+ * Return the Events descriptor (clause 7.1.12).
+ *
  * @constant
  */
 export
@@ -88,6 +108,10 @@ const eventsToken: number = AuditDescriptor_auditToken_eventsToken; /* SHORT_NAM
 
 /**
  * @summary AuditDescriptor_auditToken_signalsToken
+ * @description
+ *
+ * Return the Signals descriptor (clause 7.1.12).
+ *
  * @constant
  */
 export
@@ -102,6 +126,10 @@ const signalsToken: number = AuditDescriptor_auditToken_signalsToken; /* SHORT_N
 
 /**
  * @summary AuditDescriptor_auditToken_digitMapToken
+ * @description
+ *
+ * Return the DigitMap descriptor (clause 7.1.12).
+ *
  * @constant
  */
 export
@@ -116,6 +144,10 @@ const digitMapToken: number = AuditDescriptor_auditToken_digitMapToken; /* SHORT
 
 /**
  * @summary AuditDescriptor_auditToken_statsToken
+ * @description
+ *
+ * Return the Statistics descriptor (clause 7.1.12).
+ *
  * @constant
  */
 export
@@ -130,6 +162,10 @@ const statsToken: number = AuditDescriptor_auditToken_statsToken; /* SHORT_NAMED
 
 /**
  * @summary AuditDescriptor_auditToken_observedEventsToken
+ * @description
+ *
+ * Return the ObservedEvents descriptor (clause 7.1.12).
+ *
  * @constant
  */
 export
@@ -144,6 +180,10 @@ const observedEventsToken: number = AuditDescriptor_auditToken_observedEventsTok
 
 /**
  * @summary AuditDescriptor_auditToken_packagesToken
+ * @description
+ *
+ * Return the Packages descriptor (clause 7.1.12).
+ *
  * @constant
  */
 export
@@ -158,6 +198,10 @@ const packagesToken: number = AuditDescriptor_auditToken_packagesToken; /* SHORT
 
 /**
  * @summary AuditDescriptor_auditToken_eventBufferToken
+ * @description
+ *
+ * Return the EventBuffer descriptor (clause 7.1.12).
+ *
  * @constant
  */
 export

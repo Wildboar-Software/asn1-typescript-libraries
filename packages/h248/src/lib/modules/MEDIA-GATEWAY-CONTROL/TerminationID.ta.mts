@@ -14,6 +14,21 @@ import { WildcardField, _decode_WildcardField, _encode_WildcardField } from "../
  * @summary TerminationID
  * @description
  * 
+ * Identity of a termination, possibly wildcarded (ITU-T Rec. H.248.1 (03/2013)
+ * clauses 6.2.2 and A.1).
+ *
+ * The identifier is at most eight octets (64 bits), assigned by the MG for an
+ * ephemeral termination and provisioned for a physical one. Root is the eight
+ * octets 0xFFFFFFFFFFFFFFFF and refers to the gateway itself. Root may appear
+ * in Modify, Notify, AuditValue, AuditCapability, and ServiceChange. Any other
+ * use is error 410 ("Incorrect identifier").
+ *
+ * Wildcard fields, if any, precede `id`. Bit 7 of a wildcard octet is 1 for ALL
+ * and 0 for CHOOSE. Bit 6 is 0 to wildcard one level and 1 to wildcard that
+ * level and every lower level. Bits 0 to 5 are the bit position in `id` at
+ * which wildcarding starts. Bits covered by the wildcard are ignored by the
+ * receiver. ALL does not match Root.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +47,34 @@ class TerminationID {
     constructor (
         /**
          * @summary `wildcard`.
+         * @description
+         *
+         * Zero or more wildcard octets that partially mask `id`. See clause A.1
+         * for the bit layout. Absent when the identifier is fully specified.
+         *
          * @public
          * @readonly
          */
         readonly wildcard: WildcardField[],
         /**
          * @summary `id`.
+         * @description
+         *
+         * Termination identifier, 1 to 8 octets. 0xFFFFFFFFFFFFFFFF is Root
+         * (Annex A). Hierarchy, such as trunk group and trunk, is provisioned
+         * in the MG.
+         *
          * @public
          * @readonly
          */
         readonly id: OCTET_STRING,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

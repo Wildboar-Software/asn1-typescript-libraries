@@ -13,6 +13,8 @@ import { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } fro
  * @summary NotifyReply
  * @description
  * 
+ * Reply to Notify. The MGC may return an error descriptor (Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +33,31 @@ class NotifyReply {
     constructor (
         /**
          * @summary `terminationID`.
+         * @description
+         *
+         * Termination the Notify referred to.
+         *
          * @public
          * @readonly
          */
         readonly terminationID: TerminationIDList,
         /**
          * @summary `errorDescriptor`.
+         * @description
+         *
+         * Present when the MGC rejects the notification.
+         *
          * @public
          * @readonly
          */
         readonly errorDescriptor: OPTIONAL<ErrorDescriptor>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

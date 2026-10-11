@@ -14,6 +14,14 @@ import { ServiceState, _decode_ServiceState, _encode_ServiceState, _enum_for_Ser
  * @summary TerminationStateDescriptor
  * @description
  * 
+ * Properties of a termination that are not specific to one stream (ITU-T Rec.
+ * H.248.1 (03/2013) clause 7.1.5).
+ *
+ * ServiceStates defaults to InService. EventBufferControl defaults to Off. The
+ * MGC may set ServiceStates to or from Test only with Modify. Changing between
+ * InService and OutOfService is done with ServiceChange; a Modify that tries it
+ * is error 401 ("Protocol Error") (Annex F.6).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +41,45 @@ class TerminationStateDescriptor {
     constructor (
         /**
          * @summary `propertyParms`.
+         * @description
+         *
+         * Packaged properties scoped to the termination rather than to a
+         * stream. Values may be a single value, a list of alternatives, a
+         * range, a relation, or CHOOSE (clause 7.1.5).
+         *
          * @public
          * @readonly
          */
         readonly propertyParms: PropertyParm[],
         /**
          * @summary `eventBufferControl`.
+         * @description
+         *
+         * LockStep buffers events after one is detected. Off processes them
+         * immediately. Default Off (clause 7.1.5.1.2).
+         *
          * @public
          * @readonly
          */
         readonly eventBufferControl: OPTIONAL<EventBufferControl>,
         /**
          * @summary `serviceState`.
+         * @description
+         *
+         * InService, OutOfService, or Test. Default InService. See
+         * `ServiceState` for which command may cause each transition.
+         *
          * @public
          * @readonly
          */
         readonly serviceState: OPTIONAL<ServiceState>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

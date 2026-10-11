@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SigParamValueV1
  * @description
  * 
+ * The single octet-string value of a version 1 signal parameter
+ * (`doc/h248v1support.asn1`). Version 3 uses `SigParamValues`.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

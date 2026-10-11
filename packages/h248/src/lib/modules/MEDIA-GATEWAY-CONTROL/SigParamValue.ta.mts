@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SigParamValue
  * @description
  * 
+ * One octet string of a double-wrapped signal-parameter value (Annex A, note
+ * 3).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

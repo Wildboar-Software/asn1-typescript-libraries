@@ -13,6 +13,9 @@ import { IndAudMediaDescriptor_streams, _decode_IndAudMediaDescriptor_streams, _
  * @summary IndAudMediaDescriptor
  * @description
  * 
+ * Individual audit of the Media descriptor: termination state, one stream, or
+ * several streams (clause 7.2.5, Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +38,34 @@ class IndAudMediaDescriptor {
     constructor (
         /**
          * @summary `termStateDescr`.
+         * @description
+         *
+         * TerminationState items to return: packaged properties, and either the
+         * current or the possible ServiceStates and EventBufferControl.
+         *
          * @public
          * @readonly
          */
         readonly termStateDescr: OPTIONAL<IndAudTerminationStateDescriptor>,
         /**
          * @summary `streams`.
+         * @description
+         *
+         * Stream items to return. `oneStream` audits the stream whose StreamID
+         * is taken to be 1, matching the convenience form of the Media
+         * descriptor (clause 7.1.4). `multiStream` names streams explicitly.
+         *
          * @public
          * @readonly
          */
         readonly streams: OPTIONAL<IndAudMediaDescriptor_streams>,
         /**
          * @summary Extensions that are not recognized.
+         * @description
+         *
+         * Extension additions this version does not define. Kept so a later
+         * peer can still carry them (ITU-T Rec. H.248.1 (03/2013) clause 11.7).
+         *
          * @public
          * @readonly
          */

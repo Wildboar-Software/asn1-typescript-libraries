@@ -13,6 +13,15 @@ import { Message, _decode_Message, _encode_Message } from "../MEDIA-GATEWAY-CONT
  * @summary MegacoMessage
  * @description
  * 
+ * Top-level PDU. An optional interim authentication header followed by one
+ * `Message`.
+ *
+ * The interim header is the application-level stand-in for IPsec AH when the
+ * stack cannot insert AH itself. It is not used when the network layer already
+ * provides IPsec, and IPv6 implementations do not use it. It does not protect
+ * against eavesdropping or replay (ITU-T Rec. H.248.1 (03/2013) clauses 8.3 and
+ * 10.2, Annex A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +39,27 @@ class MegacoMessage {
     constructor (
         /**
          * @summary `authHeader`.
+         * @description
+         *
+         * Interim AH header: security parameters index, sequence number, and
+         * authentication data, with the same field meanings as the transport
+         * mode of IETF RFC 2402. The integrity check covers the concatenated
+         * transactions prefixed by a synthesized header of source address,
+         * destination address, and destination port (ITU-T Rec. H.248.1
+         * (03/2013) clause 10.2).
+         *
          * @public
          * @readonly
          */
         readonly authHeader: OPTIONAL<AuthenticationHeader>,
         /**
          * @summary `mess`.
+         * @description
+         *
+         * Protocol message: version, sender identity, and either a
+         * message-level error or one or more independent transactions (ITU-T
+         * Rec. H.248.1 (03/2013) clause 8.3).
+         *
          * @public
          * @readonly
          */
