@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  *
  * Version 1 shapes that differ from the version 3 module, as captured

@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  *
  * Binary encoding of the gateway control protocol, ASN.1 module

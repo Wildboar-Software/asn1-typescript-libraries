@@ -1,5 +1,6 @@
 /**
- * @packageDocumentation
+ * @module
+ * @description
  *
  * Binary encodings of ITU-T H.248.1 gateway control messages
  * (version 3, ITU-T Rec. H.248.1 (03/2013)).

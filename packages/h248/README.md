@@ -1,7 +1,7 @@
 # H.248 Media Gateway Control
 
 ASN.1 data structures and PDUs for the gateway control protocol in
-ITU-T Recommendation H.248.1.
+ITU-T Recommendation H.248.1. This module is ESM-only.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -18,9 +18,32 @@ If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
 
-## ESM-Only
+## Example Usage
 
-This module is ESM-only.
+```typescript
+const termination = new TerminationID(
+    [Uint8Array.from([0xff])],
+    Uint8Array.from([0x01, 0x02, 0x03, 0x04]),
+);
+const add = new AmmRequest([termination], []);
+const command = new CommandRequest({ addReq: add }, undefined, undefined);
+const action = new ActionRequest(1, undefined, undefined, [command]);
+const request = new TransactionRequest(7, [action]);
+const original = new MegacoMessage(
+    new AuthenticationHeader(
+        Uint8Array.from([0x00, 0x00, 0x00, 0x01]),
+        Uint8Array.from([0x00, 0x00, 0x00, 0x02]),
+        Uint8Array.from(Array.from({ length: 12 }, (_, i) => i + 1)),
+    ),
+    new Message(
+        3,
+        { ip4Address: new IP4Address(Uint8Array.from([192, 0, 2, 10]), 2944) },
+        { transactions: [{ transactionRequest: request }] },
+    ),
+);
+
+const encoded = _encode_MegacoMessage(original, $.BER).toBytes();
+```
 
 ## AI Usage Statement
 

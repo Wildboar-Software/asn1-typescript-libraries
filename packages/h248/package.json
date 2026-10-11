@@ -1,6 +1,13 @@
 {
     "name": "@wildboar/h248",
     "type": "module",
+    "description": "Binary encodings of ITU-T H.248.1 gateway control messages (version 3, ITU-T Rec. H.248.1 (03/2013)).",
+    "keywords": [
+        "h248",
+        "megaco",
+        "h323",
+        "gateway"
+    ],
     "version": "1.0.0",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
