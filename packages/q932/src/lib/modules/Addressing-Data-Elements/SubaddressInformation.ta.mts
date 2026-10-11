@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1SizeError,
     OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -19,7 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type SubaddressInformation = OCTET_STRING; // OctetStringType
-export const _decode_SubaddressInformation: $.ASN1Decoder<SubaddressInformation> = $._decodeOctetString;
+export function _decode_SubaddressInformation (el: _Element): SubaddressInformation {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 20) {
+        throw new ASN1SizeError("SubaddressInformation violates SIZE constraint");
+    }
+    return value;
+}
 export const _encode_SubaddressInformation: $.ASN1Encoder<SubaddressInformation> = $._encodeOctetString;
 
 

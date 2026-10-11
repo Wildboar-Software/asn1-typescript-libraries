@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
     INTEGER
 } from "@wildboar/asn1";
@@ -64,7 +65,12 @@ let _cached_decoder_for_NetworkProtocolProfile: $.ASN1Decoder<NetworkProtocolPro
 export
 function _decode_NetworkProtocolProfile (el: _Element): NetworkProtocolProfile {
     if (!_cached_decoder_for_NetworkProtocolProfile) { _cached_decoder_for_NetworkProtocolProfile = $._decode_implicit<NetworkProtocolProfile>(() => $._decodeInteger); }
-    return _cached_decoder_for_NetworkProtocolProfile(el);
+    const value = _cached_decoder_for_NetworkProtocolProfile(el);
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    if (n < 0n || n > 254n) {
+        throw new ASN1OverflowError("NetworkProtocolProfile violates INTEGER range");
+    }
+    return value;
 }
 
 let _cached_encoder_for_NetworkProtocolProfile: $.ASN1Encoder<NetworkProtocolProfile> | null = null;
